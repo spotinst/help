@@ -1,0 +1,14 @@
+.DS_Store
+.cache
+.idea
+!.idea/dictionaries
+.vscode
+.idea/
+node_modules
+build/
+public/
+test/e2e/output
+test-results.xml
+*.log*
+npm-debug.log
+package-lock.json
