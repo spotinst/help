@@ -38,15 +38,16 @@
         loc.protocol +
         "//" +
         loc.hostname +
-        (loc.port ? ":" + l.port : "") +
+        (loc.port ? ":" + loc.port : "") +
         loc.pathname
           .split("/")
           .slice(0, 1 + segmentCount)
           .join("/") +
         "/?p=/" +
-        encodeURIComponent(loc.pathname.slice(1).split("/").slice(segmentCount).join("/")) +
-        (loc.search ? "&q=" + encodeURIComponent(loc.search.slice(1)) : "") +
+        loc.pathname.slice(1).split("/").slice(segmentCount).join("/").replace(/&/g, "~and~") +
+        (loc.search ? "&q=" + loc.search.slice(1).replace(/&/g, "~and~") : "") +
         loc.hash;
+
       loc.replace(url);
     </script>
   </head>
