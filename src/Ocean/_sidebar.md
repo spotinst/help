@@ -2,4 +2,4 @@
 
 - Ocean
 
-  - [Ocean Overview - Kubernetes](Ocean Overview (Kubernetes))
+  - [Ocean Overview - Kubernetes](/ocean-overview-kubernetes)
