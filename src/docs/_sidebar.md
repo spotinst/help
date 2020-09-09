@@ -1,6 +1,7 @@
 <!-- Table of Contents -->
 
 - Connect your Cloud provider
+
   - [Connect AWS Account](connect-your-cloud-provider/connect-aws-account)
   - [Connect Azure Account](connect-your-cloud-provider/connect-azure-account)
   - [Connect GCP Project](connect-your-cloud-provider/connect-gcp-project)
