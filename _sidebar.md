@@ -41,6 +41,6 @@
   - [Troubleshooting](resources/troubleshooting)
   - [Support](resources/support)
 
-- Ocean
+- [Ocean](ocean)
 
   - [Ocean Overview (Kubernetes)](ocean/ocean-overview-kubernetes)
