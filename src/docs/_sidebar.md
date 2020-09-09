@@ -2,13 +2,15 @@
 
 - Connect your Cloud provider
 
-  - [Connect AWS Account](connect-your-cloud-provider/aws-account)
-  - [Connect Azure Account](connect-your-cloud-provider/azure-account)
-  - [Connect GCP Project](connect-your-cloud-provider/gcp-project)
+  - [Introduction to Spot](connect-your-cloud-provider/introduction-to-spot)
+  - [AWS Account](connect-your-cloud-provider/aws-account)
+  - [Azure Account](connect-your-cloud-provider/azure-account)
+  - [GCP Project](connect-your-cloud-provider/gcp-project)
 
 - Ocean
 
-  - [Ocean Overview (Kubernetes)](ocean/overview-kubernetes)
+  - [Overview (Kubernetes)](ocean/overview-kubernetes)
+  - [Overview (ECS)](ocean/overview-ecs)
 
 - Welcome
 
