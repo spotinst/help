@@ -11,6 +11,16 @@
 
   - [Overview (Kubernetes)](ocean/overview-kubernetes)
   - [Overview (ECS)](ocean/overview-ecs)
+  - [Getting Started](ocean/getting-started/)
+    - [EKS](ocean/getting-started/eks/)
+      - [Join an Existing Cluster](ocean/getting-started/eks/join-an-existing-cluster)
+      - [Create a New Cluster](ocean/getting-started/eks/create-a-new-cluster)
+      - [eksctl](ocean/getting-started/eks/eksctl)
+      - [Terraform](ocean/getting-started/eks/terraform)
+      - [CloudFormation](https://aws.amazon.com/quickstart/architecture/spotinst-ocean-eks/)
+    - [Kops](ocean/getting-started/kops)
+    - [GKE](ocean/getting-started/gke)
+    - [ECS](ocean/getting-started/ecs)
 
 - Welcome
 
