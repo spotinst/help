@@ -2,7 +2,7 @@
 
 Using the Spot SaaS platform, you can easily provision, manage, and scale your compute infrastructure on your chosen cloud provider.  
 
-<img src="/connect-your-cloud-provicer/_media/introduction-to-spot.png" />
+<img src="/connect-your-cloud-provider/_media/introduction-to-spot.png" />
 
 The Spot platform can predict interruptions of spot instances 15 minutes prior to their occurrence, allowing enough time to drain and migrate the interrupted machine to a different instance, and therefore ensuring 100% application uptime.
 
@@ -25,4 +25,4 @@ However, when there is a rise in demand for a particular instance type, the clou
 This obstacle has revolted users from leveraging the excess resources, due to the many challenges it brought them in terms of adjusting applications to handle interruptions and automating the failover process, in case the cloud provider terminates the instance.
 
 ## What's Next?
-Connect your Cloud provider account to Spot: [AWS](aws-account.md), [GCP](gcp-project.md), [Azure](azure-account.md)
+Connect your Cloud provider account to Spot: [AWS](connect-your-cloud-provider/aws-account.md), [GCP](connect-your-cloud-provider/gcp-project.md), [Azure](connect-your-cloud-provider/azure-account.md)
