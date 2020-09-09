@@ -17,5 +17,5 @@ Ocean’s SaaS layer aggregates the metrics from the Spot Kubernetes Controller 
 <img src="/ocean/_media/ocean-k8s-architecture.png" />
 
 ## What’s Next?
-* If you have not already connected your cloud provider account, connect to Spot: [AWS](aws-account.md), [GCP](gcp-project.md), [Azure](azure-account.md)
+* If you have not already connected your cloud provider account, connect to Spot: [AWS](connect-your-cloud-provider/aws-account.md), [GCP](connect-your-cloud-provider/gcp-project.md), [Azure](connect-your-cloud-provider/azure-account.md)
 * Get started with an Ocean cluster.
