@@ -1,5 +1,14 @@
 <!-- Table of Contents -->
 
+- Connect your Cloud provider
+  - [Connect AWS Account](connect-your-cloud-provider/connect-aws-account)
+  - [Connect Azure Account](connect-your-cloud-provider/connect-azure-account)
+  - [Connect GCP Project](connect-your-cloud-provider/connect-gcp-project)
+
+- Ocean
+
+  - [Ocean Overview (Kubernetes)](ocean/ocean-overview-kubernetes)
+
 - Welcome
 
   - [Getting Started](welcome/getting-started)
@@ -40,7 +49,3 @@
 
   - [Troubleshooting](resources/troubleshooting)
   - [Support](resources/support)
-
-- [Ocean](ocean)
-
-  - [Ocean Overview (Kubernetes)](ocean/ocean-overview-kubernetes)
