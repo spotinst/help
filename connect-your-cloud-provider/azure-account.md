@@ -27,7 +27,7 @@ This procedure covers authenticating your Spot account with Azure, which gives S
 
 3. Set description and expiration of never expired:
 
-<img src="/connect-your-cloud-provider/_media/azure4-768x424.png" width="327" height="180" />
+<img src="/connect-your-cloud-provider/_media/azure4-768x424.png" width="490" height="270" />
 
 4. Make sure to copy the Secret Key and set it aside. It won’t appear again after you leave the Key settings.
 
