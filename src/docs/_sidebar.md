@@ -21,6 +21,23 @@
     - [Kops](ocean/getting-started/kops)
     - [GKE](ocean/getting-started/gke)
     - [ECS](ocean/getting-started/ecs)
+  - [Features](ocean/features/)
+  - [Tutorials](tutorials)
+  - [Tools & Integrations](ocean/tools-and-integrations/)
+
+- Elastigroup
+
+- Managed Instance
+
+- Eco
+
+- Cloud Analyzer
+
+- Administration
+
+- Tools & Provisioning
+
+- [Spot API](https://help.spot.io/spotinst-api/)
 
 - Welcome
 
