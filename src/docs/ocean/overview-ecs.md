@@ -18,4 +18,4 @@ The result of the Ocean features is an optimally utilized and cost-efficient clu
 
 ## What’s Next?
 * If you have not already connected your AWS account, [Connect your AWS Account](ocean/connect-your-cloud-provider/aws-account.md).
-* [Get started with an Ocean Cluster](getting-started/ecs.md).
+* [Get started with an Ocean Cluster](ocean/getting-started/ecs.md).
