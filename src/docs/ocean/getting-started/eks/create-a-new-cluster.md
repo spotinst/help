@@ -77,6 +77,6 @@ Before you can continue to the next step, CloudFormation must complete creation 
 That’s it! Ocean will now manage the worker nodes, optimizing cluster resource utilization and maximizing savings with Spot instances.
 
 ## Troubleshooting
-If you receive the error `"aws-iam-authenticator": executable file not found in $PATH`, then your kubectl is not configured for Amazon EKS. For more information, see Configure kubectl for Amazon EKS.
+If you receive the error "aws-iam-authenticator": executable file not found in $PATH, then your kubectl is not configured for Amazon EKS. For more information, see Configure kubectl for Amazon EKS.
 You can list your cluster nodes with the following command:
 `kubectl get nodes`.
