@@ -25,4 +25,4 @@ However, when there is a rise in demand for a particular instance type, the clou
 This obstacle has revolted users from leveraging the excess resources, due to the many challenges it brought them in terms of adjusting applications to handle interruptions and automating the failover process, in case the cloud provider terminates the instance.
 
 ## What's Next?
-Connect your Cloud provider account to Spot: [AWS](connect-your-cloud-provider/aws-account.md), [GCP](connect-your-cloud-provider/gcp-project.md), [Azure](connect-your-cloud-provider/azure-account.md)
+Connect your Cloud provider account to Spot: [AWS](connect-your-cloud-provider/aws-account.md), [Azure](connect-your-cloud-provider/azure-account.md), [GCP](connect-your-cloud-provider/gcp-project.md)

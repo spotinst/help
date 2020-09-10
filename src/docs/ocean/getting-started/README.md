@@ -13,6 +13,7 @@ To get started with an Ocean cluster, connect your Cloud account now: [AWS](conn
 * [GKE](getting-started/gke.md)
 * [ECS](getting-started/ecs.md)
 * OpenShift
+
 ## What’s Next?
 * Learn more about specific Ocean Features.
 * Try out some of the Ocean features using one of the Tutorials.
