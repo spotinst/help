@@ -5,7 +5,8 @@ This procedure covers authenticating your Spot account with Azure, which gives S
 ## Prerequisites
 * An activated Azure subscription
 * A registered Spot account
-## Step 1: Create an Active Directory Application (Service Principal)
+
+## Step 1: Create an Active Directory Application
 1. Log in to your Azure console and go to Azure’s Active Directory service.
 2. In Azure’s Active Directory service click on App registrations.
 3. Click New Registration.
@@ -26,7 +27,7 @@ This procedure covers authenticating your Spot account with Azure, which gives S
 
 3. Set description and expiration of never expired:
 
-<img src="/connect-your-cloud-provider/_media/azure4-768x424.png" />
+<img src="/connect-your-cloud-provider/_media/azure4-768x424.png" width="327" height="180" />
 
 4. Make sure to copy the Secret Key and set it aside. It won’t appear again after you leave the Key settings.
 
@@ -35,7 +36,7 @@ This procedure covers authenticating your Spot account with Azure, which gives S
 ## Step 3: Retrieve Your Directory ID
 Under your Active Directory’s main menu, go to Properties, copy the Directory ID (a.k.a Tenant ID), and set it aside.
 
-<img src="/connect-your-cloud-provider/_media/azure1-1024x481.png" />
+<img src="/connect-your-cloud-provider/_media/azure6-1024x481.png" />
 
 ## Step 4: Provide Permissions to the Active Directory Application
 1. Now that you’ve created an Active Directory Application you’ll provide it with Contributor permissions.
