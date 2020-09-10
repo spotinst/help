@@ -5,27 +5,33 @@ Ocean is a managed infrastructure service for Kubernetes that automatically adju
 In this procedure, you will use the [Spot console](http://console.spotinst.com/) to join an existing EKS cluster to Ocean.
 
 ## Prerequisites
+
 * [Connect your AWS account to Spot](connect-your-cloud-provider/aws-account.md).
 * Have an EKS cluster up and running.
+
 ## Get Started
+
 1. In the left menu of the Spot console, click Ocean/Cloud Clusters, and click Create Cluster.
 
-<img src="/getting-started/eks/_media/create-cluster.png" />
+<img src="/eks/_media/create-cluster.png" />
 
 2. When the Create Ocean Cluster page appears, you will need to choose a use case template. Under Join an Existing Cluster, click From EKS Worker Nodes.
 
-<img src="/getting-started/eks/_media/from-eks-worker-nodes.png" />
+<img src="/eks/_media/from-eks-worker-nodes.png" />
 
 ## Step 1: General
+
 1. In the General page, enter a Cluster Name and Cluster Identifier and click the region where the cluster is running.
    * Cluster Name is the name of the Ocean entity that will be created.
    * Cluster Identifier is the unique key used to connect between the Ocean Saas and the Kubernetes cluster. The Cluster Identifier is automatically generated according to the Cluster Name entered.
 2. Choose the autoscaling group or a specific instance from which you will import the compute configurations.
 
-<img src="/getting-started/eks/_media/general.png" />
+<img src="/eks/_media/general.png" />
 
 3. Click Next.
+
 ## Step 2: Compute
+
 1. Ocean imports the compute configuration from your EKS cluster and displays it in the Compute page. Confirm or change the configuration if needed:
    * Cluster Network:
      * VPC
@@ -39,10 +45,12 @@ In this procedure, you will use the [Spot console](http://console.spotinst.com/)
      * Key Pair
      * User Data (Startup Script)
 
-<img src="/getting-started/eks/_media/compute.png" />
+<img src="/eks/_media/compute.png" />
 
 2. Click next.
+
 ## Step 3: Connectivity
+
 The Connectivity page provides steps for you to install the Spot Kubernetes Controller and establish the connection between the Ocean SaaS and the cluster. Complete the steps as described on the page and summarized below.
 
 1. Create a Spot token (or use an existing one) and copy it to the text box.
@@ -51,10 +59,12 @@ The Connectivity page provides steps for you to install the Spot Kubernetes Cont
 4. Click Next.
 
 ## Step 4: Review
+
 Review all the Ocean settings you have configured. Click Create to finish or use the JSON or Terraform generated templates  to create the Ocean cluster using other tooling.
 
 You’re all set! Ocean will now ensure the most cost-effective capacity and sizing possible for your cluster.
 
 ## What’s Next?
+
 * Migrate your Workloads to Ocean.
 * Learn more about importing multiple workload types in the same cluster by using Launch Specifications.
