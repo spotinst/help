@@ -2,7 +2,7 @@
 
 In this procedure, you will connect your cloud provider account to Spot in order to provide the Spot platform with a set of permissions to manage instances on your behalf.
 
-Click [here](https://help.spot.io/spotinst-video-tutorials/elastigroup/account-setup/) to watch the step-by-step video tutorial on connecting your AWS account to Spot.
+Click [here](https://youtu.be/csPmq3JZlgU/) to watch the step-by-step video tutorial on connecting your AWS account to Spot.
 
 1. Log in to the Spot dashboard.
 2. Select Amazon Web Services as the cloud provider in which your account resides.
@@ -29,5 +29,6 @@ You can automate the connection using a Cloudformation template as well.
 Elastigroup for AWS:
 * Create an Elastigroup Cluster from ASG (Auto-Scaling Group)
 * Create an Elastigroup Cluster from ELB (Elastic Load Balancer)
+
 Ocean for AWS:
 * Get Started
