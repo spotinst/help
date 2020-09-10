@@ -27,8 +27,8 @@ You can automate the connection using a Cloudformation template as well.
 
 ## What’s Next?
 Elastigroup for AWS:
-* Create an Elastigroup Cluster from ASG (Auto-Scaling Group)
-* Create an Elastigroup Cluster from ELB (Elastic Load Balancer)
+* Create an Elastigroup cluster from an autoscaling group (ASG).
+* Create an Elastigroup cluster from an Elastic Load Balancer (ELB).
 
 Ocean for AWS:
-* Get Started
+* Get Started with an Ocean cluster.
