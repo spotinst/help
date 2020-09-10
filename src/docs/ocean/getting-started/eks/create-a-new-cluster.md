@@ -16,6 +16,8 @@ In this procedure, you complete the steps to create an Amazon EKS cluster direct
 
 <img src="/getting-started/eks/_media/create-cluster.png" />
 
+<img src="/welcome/_media/eksctl-cover.png" />
+
 2. When the Create Ocean Cluster page appears, you will need to choose a use case template. Under Create a New Cluster, click Create an EKS Cluster.
 
 <img src="/eks/_media/create-new-eks.png" />
