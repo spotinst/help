@@ -14,7 +14,7 @@ In this procedure, you complete the steps to create an Amazon EKS cluster direct
 ## Get Started
 1. In the left menu of the Spot console, click Ocean/Cloud Clusters, and click Create Cluster.
 
-<img src="_media/create-cluster.png" />
+<img src="/getting-started/eks/_media/create-cluster.png" />
 
 2. When the Create Ocean Cluster page appears, you will need to choose a use case template. Under Create a New Cluster, click Create an EKS Cluster.
 
