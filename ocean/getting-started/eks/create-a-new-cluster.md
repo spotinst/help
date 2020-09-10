@@ -6,7 +6,7 @@ In this procedure, you complete the steps to create an Amazon EKS cluster direct
 
 ## Prerequisites
 * Ensure you have an IAM user in your AWS account with both Console and Programmatic Access credentials. If you do not have one,  you can follow this [AWS procedure](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html) to create one or refer to your account administrator for the necessary permissions.
-* [Connect your AWS account to Spot]((connect-your-cloud-provider/aws-account.md)).
+* [Connect your AWS account to Spot](connect-your-cloud-provider/aws-account.md).
 * Install [awscli](https://docs.aws.amazon.com/cli/latest/userguide/installing.html) 1.16.18+ and configure [AWS credentials](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html#cli-configure-quickstart-config).
 * Install [kubectl](https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html) (Amazon EKS-vended).
 * Install [aws-iam-authenticator](https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html) (only for awscli versions below 1.16.156).
@@ -76,7 +76,7 @@ Before you can continue to the next step, CloudFormation must complete creation 
 
 That’s it! Ocean will now manage the worker nodes, optimizing cluster resource utilization and maximizing savings with Spot instances.
 
-Troubleshooting
+## Troubleshooting
 If you receive the error "aws-iam-authenticator": executable file not found in $PATH, then your kubectl is not configured for Amazon EKS. For more information, see Configure kubectl for Amazon EKS.
 You can list your cluster nodes with the following command:
 `kubectl get nodes`.
