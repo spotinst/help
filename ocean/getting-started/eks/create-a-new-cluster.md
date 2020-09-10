@@ -2,7 +2,7 @@
 
 In this procedure, you complete the steps to create an Amazon EKS cluster directly from the Spot console and an Ocean object to manage the cluster worker nodes.
 
-[embed]https://youtu.be/h7off6kX6OI[/embed]
+[Video Tutorial](https://youtu.be/h7off6kX6OI)
 
 ## Prerequisites
 * Ensure you have an IAM user in your AWS account with both Console and Programmatic Access credentials. If you do not have one,  you can follow this [AWS procedure](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html) to create one or refer to your account administrator for the necessary permissions.
@@ -14,7 +14,7 @@ In this procedure, you complete the steps to create an Amazon EKS cluster direct
 ## Get Started
 1. In the left menu of the Spot console, click Ocean/Cloud Clusters, and click Create Cluster.
 
-<img src="/eks/_media/create-cluster.png" />
+<img src="_media/create-cluster.png" />
 
 2. When the Create Ocean Cluster page appears, you will need to choose a use case template. Under Create a New Cluster, click Create an EKS Cluster.
 
@@ -77,6 +77,7 @@ Before you can continue to the next step, CloudFormation must complete creation 
 That’s it! Ocean will now manage the worker nodes, optimizing cluster resource utilization and maximizing savings with Spot instances.
 
 ## Troubleshooting
+
 If you receive the error "aws-iam-authenticator": executable file not found in $PATH, then your kubectl is not configured for Amazon EKS. For more information, see Configure kubectl for Amazon EKS.
 You can list your cluster nodes with the following command:
 `kubectl get nodes`.
