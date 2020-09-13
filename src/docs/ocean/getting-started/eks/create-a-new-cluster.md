@@ -18,7 +18,7 @@ In this procedure, you complete the steps to create an Amazon EKS cluster direct
 
 2. When the Create Ocean Cluster page appears, you will need to choose a use case template. Under Create a New Cluster, click Create an EKS Cluster.
 
-<img src="/ocean/_media/create-new-eks.png" />
+<img src="/ocean/_media/create-new-eks.png" width="500" height="320" />
 
 Complete the steps described in the Create Cluster page. The steps are also described below.
 
@@ -30,7 +30,7 @@ Click Generate Token or use an existing Spot token. If you already have a token,
 ## Step 2: Set The Generated EKS Cluster Parameters
 Fill in general details including Cluster Name, Region, and the Key Pair used for the EC2 instances.
 
-<img src="/ocean/_media/new-eks-step2.png" />
+<img src="/ocean/_media/new-eks-step2.png" width="600" height="196" />
 
 ## Step 3: Provision Resources
 Provision the cluster resources using a CloudFormation template.

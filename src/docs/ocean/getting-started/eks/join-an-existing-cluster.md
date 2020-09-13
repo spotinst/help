@@ -26,7 +26,7 @@ In this procedure, you will use the [Spot console](http://console.spotinst.com/)
    * Cluster Identifier is the unique key used to connect between the Ocean Saas and the Kubernetes cluster. The Cluster Identifier is automatically generated according to the Cluster Name entered.
 2. Choose the autoscaling group or a specific instance from which you will import the compute configurations.
 
-<img src="/ocean/_media/general.png" />
+<img src="/ocean/_media/general.png" width="500" height="510" />
 
 3. Click Next.
 
