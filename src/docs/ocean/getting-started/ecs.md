@@ -25,7 +25,7 @@ In this procedure, you will join an existing ECS cluster to Ocean using the [Spo
    * Ocean Name is the name of the Ocean entity that will be created.
    * ECS Cluster Name is the ECS cluster to import the compute configuration from.
 
-<img src="/ocean/_media/ecs-general.png" />
+<img src="/ocean/_media/ecs-general.png" width="500" height="381" />
 
 2. Click Next.
 
@@ -53,7 +53,7 @@ In this procedure, you will join an existing ECS cluster to Ocean using the [Spo
 
 <img src="/ocean/_media/ecs-compute.png" />
 
-3. Click Next.
+2. Click Next.
 
 ## Step 4: Review
 
@@ -63,5 +63,5 @@ You’re all set! Ocean will now ensure the most cost-effective capacity and siz
 
 ## What’s Next?
 
-* Manually scale down your existing ECS nodes in the node pools you migrated to get Ocean to provision pod-driven optimized infrastructure for your existing workloads.
+* [Manually scale down](https://docs.aws.amazon.com/cli/latest/reference/ecs/update-container-instances-state.html#update-container-instances-state) your existing ECS nodes in the node pools you migrated to get Ocean to provision pod-driven optimized infrastructure for your existing workloads.
 * Import Fargate services to Ocean clusters using the Spot APIs.
