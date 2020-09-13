@@ -12,7 +12,7 @@ To get started with an Ocean cluster, connect your Cloud account now: [AWS](conn
 * [Kops](kops.md)
 * [GKE](gke.md)
 * [ECS](ecs.md)
-* [OpenShift](tool-and-integrations/openshift/README.md)
+* [OpenShift](tools-and-integrations/openshift/README.md)
 
 ## What’s Next?
 * Learn more about specific Ocean Features.
