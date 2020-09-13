@@ -61,8 +61,8 @@
       - [Migrate Cluster](ocean/tools-and-integrations/kops/migrate-cluster)
       - [Metadata Labels](ocean/tools-and-integrations/kops/metadata-labels)
     - [OpenShift](ocean/tools-and-integrations/openshift/)
-      - (ocean/tools-and-integrations/openshift/create-cluster-v4x)
-      - (ocean/tools-and-integrations/openshift/create-cluster-v311)
+      - [Create Ocean Cluster from OpenShift (v4.x)](ocean/tools-and-integrations/openshift/create-cluster-v4x)
+      - [Create Ocean Cluster from OpenShift (v4.11)](ocean/tools-and-integrations/openshift/create-cluster-v311)
 
 
 - Elastigroup
