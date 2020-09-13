@@ -13,7 +13,7 @@ In this procedure, you will use the [Spot console](http://console.spotinst.com/)
 
 1. In the left menu of the Spot console, click Ocean/Cloud Clusters, and click Create Cluster.
 
-<img src="/_media/create-cluster.png" />
+<img src="/ocean/_media/create-cluster.png" />
 
 2. When the Create Ocean Cluster page appears, you will need to choose a use case template. Under Join an Existing Cluster, click From EKS Worker Nodes.
 
