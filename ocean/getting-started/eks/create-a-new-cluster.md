@@ -14,25 +14,23 @@ In this procedure, you complete the steps to create an Amazon EKS cluster direct
 ## Get Started
 1. In the left menu of the Spot console, click Ocean/Cloud Clusters, and click Create Cluster.
 
-<img src="/eks/_media/create-cluster.png" />
-
-<img src="/welcome/_media/eksctl-cover.png" />
+<img src="/ocean/_media/create-cluster.png" />
 
 2. When the Create Ocean Cluster page appears, you will need to choose a use case template. Under Create a New Cluster, click Create an EKS Cluster.
 
-<img src="/_media/create-new-eks.png" />
+<img src="/ocean/_media/create-new-eks.png" />
 
 Complete the steps described in the Create Cluster page. The steps are also described below.
 
 ## Step 1: Create A Spotinst Token Or Use An Existing One
 Click Generate Token or use an existing Spot token. If you already have a token, you can paste it in the text box. The Spot token will be used later in the process to authenticate the Spot Kubernetes Controller with Ocean SaaS, so be sure to save a copy in a safe place.
 
-<img src="/eks/_media/new-eks-step1.png" />
+<img src="/ocean/_media/new-eks-step1.png" />
 
 ## Step 2: Set The Generated EKS Cluster Parameters
 Fill in general details including Cluster Name, Region, and the Key Pair used for the EC2 instances.
 
-<img src="/eks/_media/new-eks-step2.png" />
+<img src="/ocean/_media/new-eks-step2.png" />
 
 ## Step 3: Provision Resources
 Provision the cluster resources using a CloudFormation template.
@@ -40,11 +38,11 @@ Provision the cluster resources using a CloudFormation template.
 1. Use existing VPC & Subnets. Mark this box to launch CloudFormation with your existing VPC & Subnets. Leave unchecked to launch within a new VPC that CloudFormation will create for you.
 2.Click Launch CloudFormation Stack.
 
-<img src="/eks/_media/new-eks-step3.png" />
+<img src="/ocean/_media/new-eks-step3.png" />
 
 To launch the stack mark the checkbox at the bottom confirming CloudFormation will create IAM resources, and click Create stack.
 
-<img src="/eks/_media/new-eks-step3-a.png" />
+<img src="/ocean/_media/new-eks-step3-a.png" />
 
 Before you can continue to the next step, CloudFormation must complete creation of all of the resources in the EKS stack. You can check the status on the CloudFormation page that opens.
 
@@ -55,13 +53,13 @@ Before you can continue to the next step, CloudFormation must complete creation 
 
 ---
 
-<img src="/eks/_media/new-eks-step4.png" />
+<img src="/ocean/_media/new-eks-step4.png" />
 
 2. Verify that kubectl is connected to your EKS cluster by running the next command shown:
    `kubectl get svc`
 3. To install the controller on the EKS cluster, run the predefined script from your command line.
 
-<img src="/eks/_media/new-eks-step4-a.png" />
+<img src="/ocean/_media/new-eks-step4-a.png" />
 
 ## Step 5: Update AWS Authentication Config-Map
 1. Download the AWS authenticator configuration map:
@@ -74,7 +72,7 @@ Before you can continue to the next step, CloudFormation must complete creation 
 
 ---
 
-<img src="/eks/_media/new-eks-step5.png" />
+<img src="/ocean/_media/new-eks-step5.png" />
 
 That’s it! Ocean will now manage the worker nodes, optimizing cluster resource utilization and maximizing savings with Spot instances.
 
