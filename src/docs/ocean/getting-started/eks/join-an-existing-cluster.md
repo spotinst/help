@@ -17,7 +17,7 @@ In this procedure, you will use the [Spot console](http://console.spotinst.com/)
 
 2. When the Create Ocean Cluster page appears, you will need to choose a use case template. Under Join an Existing Cluster, click From EKS Worker Nodes.
 
-<img src="/ocean/_media/from-eks-worker-nodes.png" />
+<img src="/ocean/_media/from-eks-worker-nodes1.png" width="600" height="160" />
 
 ## Step 1: General
 
