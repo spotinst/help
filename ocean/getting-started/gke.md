@@ -22,7 +22,7 @@ In the left menu of the Spot console, click Ocean/Cloud Clusters, and click Crea
    * Location Type can be either Zonal or Regional.
 2. Select the GKE cluster to import the configuration from.
 
-<img src="/ocean/_media/gke-general.png" />
+<img src="/ocean/_media/gke-general.png" width="400" height="384" />
 
 3. Click Next.
 
@@ -37,7 +37,7 @@ In the left menu of the Spot console, click Ocean/Cloud Clusters, and click Crea
    * Additional Configurations
      * Draining Timeout
 
-<img src="/ocean/_media/gke-compute.png" />
+<img src="/ocean/_media/gke-compute.png" width="400" height="290" />
 
 2. Optionally, you can import all GKE node pools into Ocean as launch specifications. (The default node pool will be automatically imported.)
 3. Click Next.
@@ -77,6 +77,6 @@ You’re all set! Ocean will now ensure the most cost-effective capacity and siz
 
 Manually scale down your existing GKE nodes in the node pools you migrated to get Ocean to provision pod-driven optimized infrastructure for your existing workloads. To do this, you can use the following command:
 
-`gcloud container clusters resize <cluster_name> --num-nodes=0 --region=<region/zone> --node-pool <node_pool_name>``
+`gcloud container clusters resize <cluster_name> --num-nodes=0 --region=<region/zone> --node-pool <node_pool_name>`
 
 To avoid unnecessary down time, the scale down of existing nodes should be gradual. For example, run the above command several times, reducing the value of `num-nodes` gradually. Use `num-nodes=0` only on the last time you run the command.
