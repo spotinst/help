@@ -55,14 +55,17 @@
       - [Controller Version History](ocean/tutorials/spot-kubernetes-controller/controller-version-history)
   - [Tools & Integrations](ocean/tools-and-integrations/)
     - [Kops](ocean/tools-and-integrations/kops/)
-      - [Install-Kops](ocean/tools-and-integrations/kops/)
+      - [Install-Kops](ocean/tools-and-integrations/kops/install-kops/)
+        - [Kops 1.14](ocean/tools-and-integrations/kops/install-kops/kops-114)
+        - [Kops 1.13](ocean/tools-and-integrations/kops/install-kops/kops-113)
+        - [Kops 1.12](ocean/tools-and-integrations/kops/install-kops/kops-112)
       - [Get Started](ocean/tools-and-integrations/kops/get-started)
       - [Create a Cluster](https://kops.sigs.k8s.io/getting_started/aws/#creating-your-first-cluster)
       - [Migrate Cluster](ocean/tools-and-integrations/kops/migrate-cluster)
       - [Metadata Labels](ocean/tools-and-integrations/kops/metadata-labels)
     - [OpenShift](ocean/tools-and-integrations/openshift/)
-      - [Create Ocean Cluster from OpenShift (v4.x)](ocean/tools-and-integrations/openshift/create-cluster-v4x)
-      - [Create Ocean Cluster from OpenShift (v4.11)](ocean/tools-and-integrations/openshift/create-cluster-v311)
+      - [Create Ocean Cluster from v4.x](ocean/tools-and-integrations/openshift/create-cluster-v4x)
+      - [Create Ocean Cluster from v4.11](ocean/tools-and-integrations/openshift/create-cluster-v311)
 
 
 - Elastigroup
