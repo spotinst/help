@@ -9,7 +9,7 @@ Each node in the cluster is monitored by the master nodes and assigned with a co
 * DiskPressure
 * NetworkUnavailable
 
-Each condition type is assigned with a status:
+Each condition type is assigned a status:
 * False
 * True
 * Unknown
@@ -26,7 +26,7 @@ Every Container Instance within the Amazon ECS cluster has the following two par
   * INACTIVE
   * DEREGISTERING
   * DRAINING
-  
+
 * agentConnected – This parameter returns the following:
   * True - If the agent is connected to Amazon ECS.
   * False - If there are registered instances with an agent that may be unhealthy or stopped.
