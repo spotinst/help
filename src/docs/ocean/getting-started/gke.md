@@ -39,13 +39,13 @@ In the left menu of the Spot console, click Ocean/Cloud Clusters, and click Crea
 
 <img src="/ocean/_media/gke-compute.png" width="400" height="290" />
 
-2. Optionally, you can import all GKE node pools into Ocean as launch specifications. (The default node pool will be automatically imported.)
+2. Optionally, you can import all GKE node pools into Ocean as [launch specifications](features/launch-specifications.md). (The default node pool will be automatically imported.)
 3. Click Next.
 
 ## Step 3: Connectivity
 
 1. Create a Spotinst token or use an existing one.
-2. Install the Spotinst Controller. You can do this using Helm or by running kubectl commands.
+2. Install the Spotinst Controller. You can do this using [Helm](tutorials/spot-kubernetes-controller/install-with-helm.md) or by running [kubectl](tutorials/spot-kubernetes-controller/install-with-kubectl.md) commands.
 3. Click Test Connectivity to ensure the controller functionality.
 
 <img src="/ocean/_media/gke-connectivity.png" />
