@@ -66,5 +66,5 @@ You’re all set! Ocean will now ensure the most cost-effective capacity and siz
 
 ## What’s Next?
 
-* Migrate your Workloads to Ocean.
-* Learn more about importing multiple workload types in the same cluster by using Launch Specifications.
+* [Migrate your Workloads](/tutorials/migrate-workload.md) to Ocean.
+* Learn more about importing multiple workload types in the same cluster by using [Launch Specifications](features/launch-specifications.md).
