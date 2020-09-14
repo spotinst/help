@@ -31,4 +31,4 @@ Elastigroup for AWS:
 * Create an Elastigroup cluster from an Elastic Load Balancer (ELB).
 
 Ocean for AWS:
-* [Get Started with an Ocean cluster](ocean/getting-started).
+* [Get Started with an Ocean cluster](ocean/getting-started/).
