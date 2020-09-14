@@ -12,9 +12,9 @@ Ocean makes sure that all pods in the cluster have a place and capacity to run, 
 
 ## Scale Up
 
-Ocean continuously checks for unschedulable pods. A pod is unschedulable when the Kubernetes scheduler is unable to find a node that can accommodate the pod, this can be happening due to insufficient CPU, Memory, GPU or custom Resource.
+Ocean continuously checks for unschedulable pods. A pod is unschedulable when the Kubernetes scheduler is unable to find a node that can accommodate the pod, this can be happening due to insufficient CPU, Memory, GPU or [custom resource](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/).
 For example, When a pod request more CPU than what is available on any of the cluster nodes. Unschedulable pods are recognized by their PodCondition. Whenever a Kubernetes scheduler fails to find a place to run a pod, it sets “schedulable” PodCondition to false and reason to “unschedulable“.
-Ocean calculates and aggregates the number of unschedulable Pods waiting to be placed and finds the optimal nodes for the job. Ocean makes sure that all the pods will have enough resources to be placed, it also makes sure to distribute the Pods on the most efficient number of VMs from the desired cloud provider. In some scenarios, it will prefer to provide a distribution of certain machines types and sizes based on the Pods requirements and the Spot / Preemptible VMs prices in the relevant region.
+Ocean calculates and aggregates the number of unschedulable pods waiting to be placed and finds the optimal nodes for the job. Ocean makes sure that all the pods will have enough resources to be placed, it also makes sure to distribute the Pods on the most efficient number of VMs from the desired cloud provider. In some scenarios, it will prefer to provide a distribution of certain machines types and sizes based on the pods requirements and the spot/preemptible VM prices in the relevant region.
 It may take a few moments before the created nodes join the Kubernetes cluster, in order to minimize this time (to zero) you can read more about Cluster Headroom.
 
 <img src="/ocean/_media/features-scaling-k8s-01.png" />
@@ -46,7 +46,7 @@ Node Termination process is as follows:
 2. Scan All the pods and mark the ones that need to be rescheduled
    * Mark all the pods that don’t have PDB configured, and start evicting them in parallel
 3. For pods with PDB, Ocean performs the eviction in chunks and makes sure that  it won’t interfere with the minimal budget configured (For example a PDB .spec.minAvailable is 3, while there are 5 pods, 4 of them run on the node that is about to get scaled down; Ocean will evict 2 pods, wait for health signal and move to the next 2.
-4. An eviction is not completed until Ocean gets health signal from the new pod readiness\liveness probe (when configured) and the old pod was successfully terminated (wait for grace-period or after pre Stop command)
+4. An eviction is not completed until Ocean gets health signal from the new pod [readiness\liveness](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/) probe (when configured) and the old pod was successfully terminated ([wait for grace-period or after pre Stop command](https://kubernetes.io/docs/concepts/workloads/pods/pod/#termination-of-pods))
 5. Ocean provides draining timeout of 120 seconds by default (configurable) for every Pod before terminating it.
 
 <img src="/ocean/_media/features-scaling-k8s-02.png" />
@@ -58,7 +58,7 @@ Ocean optimally manages the headroom to provide the best possible cost/performan
 
 In addition, cluster headroom may be  further customized by using a separate headroom configuration per Launch Specification.  Custom Headroom units per Launch Specification are enabled when using headroom in Manual configuration mode, and are accessible via Launch Specification API.
 When custom Headroom units are specified on one Launch Specification or more, Ocean will maintain a buffer of spare capacity that matches the constraints defined in that Launch Specification (node labels, taints, etc.), in addition to the Cluster level Headroom units.
-For example, if the cluster level Headroom is configured to maintain 2 headroom units of 2048 MiB and 2000 CPU, and a specific Launch Specification is configured to maintain 2 Headroom unit of the same size, that means a total of 4 headroom units will be maintained at all times, 2 of them matching the Launch Specification’s constraints.
+For example, if the cluster level Headroom is configured to maintain 2 headroom units of 2048 MiB and 2000 CPU, and a specific Launch Specification is configured to maintain 2 Headroom unit of the same size, that means a total of 4 headroom units will be maintained at all times, 2 of them matching the [Launch Specification’s](launch-specifications.md) constraints.
 
 ## Resource Limits
 
