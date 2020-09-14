@@ -1,1 +1,1 @@
-# Create an Cluster using eksctl
+# Create an Ocean Cluster using eksctl

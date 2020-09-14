@@ -1,11 +1,12 @@
-# Get Started with Kops
+# Getting Started with Kops
 
-To get started with Kops on Ocean, complete the Getting Started procedures on the Kubernetes page:
+Kubernetes Operations, or [Kops](https://github.com/kubernetes/Kops), is an open source project used to set up Kubernetes clusters. The project describes itself as kubectl for clusters. Kops enables deployment of highly available Kubernetes clusters on AWS.
 
-Getting Started with Kops on Spot Ocean.
+It is really easy to get started with Ocean using Kops, as it provides a simple flow to create an EKS cluster.
 
-What’s Next?
-After you have completed the Getting Started procedures, you can go ahead with the following:
+To get started, complete the procedures in [Getting Started with KOPS on Spot Ocean](https://kops.sigs.k8s.io/getting_started/spot-ocean/).
 
-Create a Cluster in Ocean
-Learn about Metadata Labels
+## What’s Next?
+
+* [Migrate a Cluster](tools-and-integrations/kops/migrate-cluster.md)
+* Learn more about [Metadata Labels](tools-and-integrations/kops/metadata-labels.md)
