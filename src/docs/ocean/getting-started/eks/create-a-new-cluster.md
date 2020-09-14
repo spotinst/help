@@ -64,7 +64,7 @@ Before you can continue to the next step, CloudFormation must complete creation 
 ## Step 5: Update AWS Authentication Config-Map
 1. Download the AWS authenticator configuration map:
    `curl -O https://amazon-eks.s3-us-west-2.amazonaws.com/1.10.3/2018-06-05/aws-auth-cm.yaml`
-2. In the `aws-auth-cm.yaml` file, replace the ``<ARN of instance role (not instance profile)>`` snippet with the `NodeInstanceRole` value from the Outputs tab of EKS cluster CloudFormation Stack.
+2. In the `aws-auth-cm.yaml` file, replace the `<ARN of instance role (not instance profile)>` snippet with the `NodeInstanceRole` value from the Outputs tab of EKS cluster CloudFormation Stack.
 3. Apply the updated `aws-auth-cm.yaml` to the cluster:
    `kubectl apply -f aws-auth-cm.yaml`
 ---
@@ -78,6 +78,6 @@ That’s it! Ocean will now manage the worker nodes, optimizing cluster resource
 
 ## Troubleshooting
 
-If you receive the error "aws-iam-authenticator": executable file not found in $PATH, then your kubectl is not configured for Amazon EKS. For more information, see Configure kubectl for Amazon EKS.
+If you receive the error "aws-iam-authenticator": executable file not found in $PATH, then your kubectl is not configured for Amazon EKS. For more information, see [Configure kubectl for Amazon EKS](https://docs.aws.amazon.com/eks/latest/userguide/configure-kubectl.html).
 You can list your cluster nodes with the following command:
 `kubectl get nodes`.
