@@ -71,10 +71,10 @@
 
   - [Getting Started](elastigroup/getting-started/)
     - [Elastigroup for AWS](elastigroup/getting-started/elastigroup-for-aws)
-    - [Elastigroup for GCP](elastigroup/getting-started/elastigroup-for-gcp)
-    - [Elastigroup for Azure](elastigroup/getting-started/elastigroup-for-azure)
     - [Create an Elastigroup for AWS](elastigroup/getting-started/create-an-elastigroup-for-aws)
+    - [Elastigroup for GCP](elastigroup/getting-started/elastigroup-for-gcp)
     - [Create an Elastigroup for GCP](elastigroup/getting-started/create-an-elastigroup-for-gcp)
+    - [Elastigroup for Azure](elastigroup/getting-started/elastigroup-for-azure)
     - [Create an Elastigroup for Azure](elastigroup/getting-started/create-an-elastigroup-for-azure)
 
   - [Features](elastigroup/features/)
