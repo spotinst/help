@@ -28,7 +28,7 @@ Ocean assigns a status to each stage of the roll process. A roll can have one of
 **Tip**: In the UI, a specific batch may appear with “Pending” state. This means that even though the roll process has started, that batch has not yet started to replace its nodes.
 
 ---
-## Log Messages
+### Log Messages
 
 The following messages are recorded in the log:
 
@@ -45,9 +45,9 @@ The following are possible reasons for failure:
 * There may be constraint mismatches or configuration mismatches such as labels, selectors, taints, or affinity rules.
 * There may be one or more unhealthy nodes.
 
-## Restrict Scale Down during Roll
+### Restrict Scale Down during Roll
 
-The roll does not consider the restrict-scale-down label. Ocean will replace a node even if a task or pod uses this label. As mentioned above, Ocean’s autoscaler takes into consideration all relevant constraints in place before the roll.
+The roll does not consider the [restrict-scale-down](./scaling-kubernetes.md) label. Ocean will replace a node even if a task or pod uses this label. As mentioned above, Ocean’s autoscaler takes into consideration all relevant constraints in place before the roll.
 
 ## Roll per Node or Launch Specification
 
@@ -64,19 +64,19 @@ For example, you can use:
 * The `instanceIds` parameter (for Ocean for K8s on AWS and ECS) or `instanceNames` (for Ocean GKE) to initiate a roll of one or more specific nodes.
 * The `launchSpecIds` parameter to initiate a roll of one or more launch specifications in the cluster. When you specify a launch specification ID, all the nodes in that launch specification are rolled.
 
-For more information about the specific APIs, see Initiate Cluster Roll: K8s on AWS, ECS, GKE
+For more information about the specific APIs, see Initiate Cluster Roll: [K8s on AWS](https://help.spot.io/spotinst-api/ocean/ocean-cloud-api/ocean-for-aws/roll-cluster/create/), [ECS](https://help.spot.io/spotinst-api/ocean/ocean-cloud-api/ocean-for-ecs/roll-cluster/create/), [GKE](https://help.spot.io/spotinst-api/ocean/ocean-cloud-api/ocean-for-gke/roll-cluster/create/)
 
 ## Create A Roll
 
 In your Ocean cluster, go to Actions and click Cluster Roll.
 
-
+<img src="/ocean/_media/features-roll-01.png" />
 
 1. Enter the following information:
    * Batch Size. Indicates how much will be rolled at a time. This value is a percentage of the cluster’s target capacity.
    * Comment. A brief note indicating the reason for the roll.
 
-
+<img src="/ocean/_media/features-roll-02.png" />
 
 2. Click Roll.
 
@@ -85,3 +85,5 @@ In your Ocean cluster, go to Actions and click Cluster Roll.
 After you have created the roll, click the Cluster Roll tab.
 
 In this tab you can see the details of the roll you created in Step 1, and you can follow the progress of the roll.
+
+<img src="/ocean/_media/features-roll-03.png" />
