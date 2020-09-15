@@ -10,10 +10,10 @@ To get started with an Ocean cluster, connect your Cloud account now: [AWS](conn
   * [Terraform](/ocean/getting-started/eks/terraform.md)
   * [CloudFormation](https://aws.amazon.com/quickstart/architecture/spotinst-ocean-eks/)
 * [Kops](/ocean/tools-and-integrations/kops/)
-* [GKE](/ocean/getting-started/gke.md)
+* [GKE](./gke.md)
 * [ECS](/ocean/getting-started/ecs.md)
 * [OpenShift](/ocean/tools-and-integrations/openshift/)
 
 ## What’s Next?
-* Learn more about specific [Ocean Features](ocean/features/).
+* Learn more about specific [Ocean Features](../features/).
 * Try out some of the Ocean features using one of the [Tutorials](/ocean/tutorials/).
