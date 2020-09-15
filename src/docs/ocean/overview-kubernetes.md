@@ -12,7 +12,7 @@ Ocean integration with Kubernetes clusters consists of two components, the Spot 
 
 ## Spot Kubernetes Controller
 
-The [Spot Kubernetes Controller](./tutorials/spot-kubernetes-controller/) is a pod that resides within the Kubernetes cluster, collects metrics and events, and executes cluster operations on behalf of the Ocean SaaS platform. The events are pushed by a one-way secured link to the Ocean SaaS for business logic and capacity scaling activities.
+The [Spot Kubernetes Controller](ocean/tutorials/spot-kubernetes-controller/) is a pod that resides within the Kubernetes cluster, collects metrics and events, and executes cluster operations on behalf of the Ocean SaaS platform. The events are pushed by a one-way secured link to the Ocean SaaS for business logic and capacity scaling activities.
 
 ## Ocean SaaS
 
@@ -23,4 +23,4 @@ Ocean’s SaaS layer aggregates the metrics from the Spot Kubernetes Controller 
 ## What’s Next?
 
 * If you have not already connected your cloud provider account, connect to Spot: [AWS](connect-your-cloud-provider/aws-account.md), [Azure](connect-your-cloud-provider/azure-account.md), [GCP](connect-your-cloud-provider/gcp-project.md)
-* [Get started with an Ocean cluster](./getting-started/).
+* [Get started with an Ocean cluster](ocean/getting-started/).
