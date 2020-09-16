@@ -1,7 +1,6 @@
 <!-- Table of Contents -->
 
 - [Connect your Cloud provider](connect-your-cloud-provider/)
-  - [Introduction to Spot](connect-your-cloud-provider/introduction-to-spot)
   - [AWS Account](connect-your-cloud-provider/aws-account)
   - [Azure Account](connect-your-cloud-provider/azure-account)
   - [GCP Project](connect-your-cloud-provider/gcp-project)
