@@ -1,10 +1,10 @@
 <!-- Table of Contents -->
 
-- [Connect your Cloud provider](connect-your-cloud-provider/)
+- [**CONNECT YOUR CLOUD PROVIDER**](connect-your-cloud-provider/)
   - [AWS Account](connect-your-cloud-provider/aws-account)
   - [Azure Account](connect-your-cloud-provider/azure-account)
   - [GCP Project](connect-your-cloud-provider/gcp-project)
-- [Ocean](ocean/)
+- [**OCEAN**](ocean/)
   - [Overview (Kubernetes)](ocean/overview-kubernetes)
   - [Overview (ECS)](ocean/overview-ecs)
   - [Getting Started](ocean/getting-started/)
