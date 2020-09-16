@@ -1,6 +1,6 @@
 <!-- Table of Contents -->
 
-- Connect your Cloud provider
+- Connect your Cloud Provider
 
   - [Introduction to Spot](connect-your-cloud-provider/introduction-to-spot)
   - [AWS Account](connect-your-cloud-provider/aws-account)
