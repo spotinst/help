@@ -1,1 +1,1 @@
-# Introduction to ELASTIGROUP
+# Introduction to Elastigroup
