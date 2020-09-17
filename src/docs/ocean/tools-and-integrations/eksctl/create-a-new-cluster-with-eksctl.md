@@ -13,6 +13,7 @@ In this procedure, you will create an Ocean Kubernetes cluster with eksctl and m
 ## Configure Your Spot Credentials
 
 To configure your Spot credentials using environment variables, run the following commands.
+
 `$ export SPOTINST_TOKEN=<spotinst_token>
 $ export SPOTINST_ACCOUNT=<spotinst_account>`
 
@@ -21,6 +22,7 @@ Alternatively, you can configure your Spot credentials using a spotctl command o
 ## Configure Your AWS Credentials
 
 To use environment variables, run the following commands.
+
 `$ export AWS_ACCESS_KEY_ID=<aws_access_key>
 $ export AWS_SECRET_ACCESS_KEY=<aws_secret_access_key>`
 
@@ -29,12 +31,15 @@ Alternatively, you can use the AWS credentials file. For more information, see [
 ## Install Eksctl
 
 1. Download and extract the eksctl binary with the following command.
+
 `$ curl -sfL https://spotinst-public.s3.amazonaws.com/integrations/kubernetes/eksctl/eksctl.sh | sh`
 
 2. Move the extracted binary.
+
 `$ sudo mv ./bin/eksctl /usr/local/bin && rm -rf ./bin`
 
 3. Test that your installation was successful with the following command.
+
 `$ eksctl version`
 ---
 **Tip**: The version should be 0.15.0 or later. If not, check your terminal output for any installation errors, or manually download an archive of the release for your operating system from the releases page, extract eksctl, and then execute it.
@@ -44,6 +49,7 @@ Alternatively, you can use the AWS credentials file. For more information, see [
 ### Using command-line flags
 
 Create your cluster and worker nodes with the following command. Replace the example values with your own values.
+
 `$ eksctl create cluster \
    --name prod \
    --nodegroup-name standard-workers \
@@ -116,6 +122,7 @@ nodeGroups:
 Perform the following steps to verify your kubectl and Ocean controller installations. These steps are optional.
 
 1. When your cluster is ready, enter the command below to test that your kubectl configuration is correct.
+
 `$ kubectl get svc
 NAME             TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
 svc/kubernetes   ClusterIP   10.100.0.1   <none>        443/TCP   1m`
@@ -124,6 +131,7 @@ svc/kubernetes   ClusterIP   10.100.0.1   <none>        443/TCP   1m`
 
 ---
 2. Enter the command below to test the installation of the Ocean controller.
+
 `$ kubectl get deployment --namespace kube-system
 NAME                                     READY   UP-TO-DATE   AVAILABLE   AGE
 spotinst-kubernetes-cluster-controller   1/1     1            1           5m`
