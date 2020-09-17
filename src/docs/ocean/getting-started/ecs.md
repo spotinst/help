@@ -29,7 +29,7 @@ In this procedure, you will join an existing ECS cluster to Ocean using the [Spo
 
 2. Click Next.
 
-## Step 3: Compute
+## Step 2: Compute
 
 1. Ocean imports the compute configuration from your ECS cluster and displays it in the Compute page. Confirm or edit the configuration if needed:
    * Cluster Network
@@ -55,7 +55,7 @@ In this procedure, you will join an existing ECS cluster to Ocean using the [Spo
 
 2. Click Next.
 
-## Step 4: Review
+## Step 3: Review
 
 Review all the Ocean settings you have configured. Click Create to finish or use the JSON or Terraform generated templates to create the Ocean cluster using other tooling.
 
