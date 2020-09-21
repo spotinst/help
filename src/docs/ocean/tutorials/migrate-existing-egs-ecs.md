@@ -40,9 +40,9 @@ The next step is to configure the Ocean cluster to handle all the different attr
 1. Navigate to the Ocean cluster you created in Step 2.
 2. Click the Actions menu and select Launch Specifications.
 3. For each of the Elastigroups running container instances:
-   a. Click Add Launch Specification.
-   b. Add the Attribute sets gathered as part of the prerequisites.
-   c. Set the matching User-Data and AMI.
+   1. Click Add Launch Specification.
+   2. Add the Attribute sets gathered as part of the prerequisites.
+   3. Set the matching User-Data and AMI.
 4. Click Update to commit changes.
 
 ### Step 3: Disable Autoscaling On The Imported Elastigroups

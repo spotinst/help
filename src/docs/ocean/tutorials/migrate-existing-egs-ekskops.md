@@ -35,7 +35,7 @@ To complete this tutorial, gather the following information:
 
 * List the Elastigroups connected to the target Kubernetes Cluster.
 * For each of the Elastigroups, note the following data for future use:
-  *  Autoscaler labels
+  * Autoscaler labels
   * User-data script
   * AMI ID
 * Ensure all the Elastigroups in the cluster use the same Cluster Identifier (ID). This is used to connect the existing Spot Controller installed on the Kubernetes cluster to Ocean.
@@ -51,9 +51,9 @@ Configure the Ocean cluster to handle all the different label sets configured on
 1. Navigate to your Ocean cluster.
 2. Click Actions and select Custom Launch Specifications.
 3. For each of the remaining Elastigroups running worker nodes do the following:
-   a. Click Add Specification.
-   b. Add the Label sets gathered as part of the prerequisites.
-   c. Set the matching User-Data and AMI.
+   1. Click Add Specification.
+   2. Add the Label sets gathered as part of the prerequisites.
+   3. Set the matching User-Data and AMI.
 4. Click Save Changes to commit changes.
 
 ### Step 3: Disable Autoscaling on the Imported Elastigroups
