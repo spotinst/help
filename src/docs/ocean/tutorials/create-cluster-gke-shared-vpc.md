@@ -12,8 +12,10 @@ Ensure that you have a running GKE cluster with a [shared VPC configured](https:
 
 Grant Compute Network User role to the Spot Service Account you created when you first created your Spot Account.
 
-1. Browse to your GCP project shared VPC page:
-https://console.cloud.google.com/networking/xpn/details?project=<HOST_PROJECT_ID>
+1. Browse to the shared VPC page in your GCP project.
+
+`https://console.cloud.google.com/networking/xpn/details?project=<HOST_PROJECT_ID>`
+
 2. Choose the desired host project and click Add Members from the menu to the right.
 
 <img src="/ocean/_media/tutorials-shared-vpc-01.png" />
