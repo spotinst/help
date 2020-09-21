@@ -23,11 +23,11 @@ The Ocean dashboard includes the following main areas:
 
 The summary line provides insights into your recent node usage and potential savings you could achieve with further optimization.
 
-<img src="/ocean/_media/features-ocean-dashboard-01.png" />
+<img src="/ocean/_media/tutorials-ocean-dashboard-01.png" />
 
 * Ocean Managed Nodes. Shows the number of instances managed by Ocean vs. the total number of instances in your cloud infrastructure registered to the kubernetes clusters. To see a breakdown per cluster, click on the numbers. This provides detailed information and an easy pathway to migrating unmanaged nodes into Ocean.
 
-<img src="/ocean/_media/features-ocean-dashboard-02.png" />
+<img src="/ocean/_media/tutorials-ocean-dashboard-02.png" />
 
 * Month to Date Savings Percentage. Shows average percent savings achieved in the current month by managing your instances in Ocean.
 * Month to Date Total Saved. Shows total savings dollar amount achieved in the current month by managing your instances in Ocean.
@@ -39,7 +39,7 @@ This part of the dashboard enables you to see breakdowns of costs across all you
 
 The cost analysis is presented in two formats, a bar chart and a detailed breakdown table.  There are several ways to filter and group the data to create a view that best fits your analysis requirements.
 
-<img src="/ocean/_media/features-ocean-dashboard-03.png" />
+<img src="/ocean/_media/tutorials-ocean-dashboard-03.png" />
 
 ### Filter And Groupings
 
@@ -74,7 +74,7 @@ The breakdown table presents an itemization of costs per component (e.g., cluste
 
 To see the detailed cost analysis for a specific component (e.g., cluster, label or annotation), click on the name in the breakdown table. Ocean will display the detailed Cost Analysis page for that component.
 
-<img src="/ocean/_media/features-ocean-dashboard-04.png" />
+<img src="/ocean/_media/tutorials-ocean-dashboard-04.png" />
 
 ## Top Right-Sizing Recommendations
 
@@ -83,14 +83,14 @@ The dashboard displays a summary of top right-sizing recommendations. This inclu
 * A trend summary of the recommendations that you have activated in the last 30 days.
 * A description of the top 10 recommendations yet to be implemented.
 
-<img src="/ocean/_media/features-ocean-dashboard-05.png" />
+<img src="/ocean/_media/tutorials-ocean-dashboard-05.png" />
 
 Ocean sorts the list of recommendations so that the most cost effective ones in dollar value appear at the top. “Most cost effective” means an instance that has the potential for the most dollar savings by right-sizing the CPU and memory resources. For each instance, Ocean calculates a “weighted average delta” which represents the recommended changes in CPU and memory. The instance with the greatest weighted average delta has the potential for the most dollar savings.
 
 ## Pending Recommendations By Cluster
 This table shows a summary of recommendations per cluster that have not yet been implemented. The clusters are listed by default in order of least to most efficient.
 
-<img src="/ocean/_media/features-ocean-dashboard-06.png" />
+<img src="/ocean/_media/tutorials-ocean-dashboard-06.png" />
 
 The table includes the following information:
 
