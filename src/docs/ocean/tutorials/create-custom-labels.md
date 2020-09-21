@@ -28,11 +28,12 @@ Ensure that your pods are labeled properly. See the [Kubernetes documentation](h
 
 ## Step 3: Add Labels to the Nodes
 
-### Add Labels to EKS:
+### Add Labels to EKS
 
 Add labels to the nodes by using the user data:
 
 `--kubelet-extra-args --node-labels=mykey=myvalue,mykey2=myvalue2`
+
 For example:
 ```sh
 #!/bin/bash
@@ -41,9 +42,9 @@ set -o xtrace
 For all of the above, new nodes will be launched with new labels.
 ```
 
-### Add Labels to Spot-KOPS:
+### Add Labels to Kops Clusters
 
-These are clusters that were created by KOPS natively.
+These are clusters that were created by Kops natively.
 
 1. Recognize the IG name you originally created (“nodes” in the following example):
 2. Run `kops edit ig nodes` and add the relevant label.
