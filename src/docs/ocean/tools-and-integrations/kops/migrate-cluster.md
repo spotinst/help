@@ -63,7 +63,7 @@ spec:
 
 3. Run KOPS Update. KOPS will now identify and create the Ocean Cluster along with the Ocean launch specifications for each labeled instance group.
 4. Workload Migration. Do one of the following:
-      * Spot Automated Workload Migration
+      * [Spot Automated Workload Migration](ocean/tutorials/migrate-workload.md)
       * Gradually scale down your existing Auto Scaling Groups to zero. Ocean will automatically provision the required instances to ensure your pods are scheduled.
 5. Clean up (optional):
    1. Delete imported Auto Scaling Groups.
@@ -101,7 +101,7 @@ spec:
 
 3. Run KOPS Update. KOPS will now identify and create the Ocean Cluster along with the Ocean launch specifications for each labeled instance group.
 4. Workload Migration. Do one of the following:
-   * Spot Automated Workload Migration
+   * [Spot Automated Workload Migration](ocean/tutorials/migrate-workload.md)
    * Gradually scale down your existing Auto Scaling Groups to zero. Ocean will automatically provision the required instances to ensure your pods are scheduled.
 5. Clean up (optional):
    1. Delete imported Auto Scaling Groups.
