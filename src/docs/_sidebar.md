@@ -43,7 +43,6 @@
     - [Migrate Existing Elastigroups to Ocean (EKS, Kops)](ocean/tutorials/migrate-existing-egs-ekskops)
     - [Migrate Existing Elastigroups to Ocean (ECS)](ocean/tutorials/migrate-existing-egs-ecs)
     - [Spot Kubernetes Controller](ocean/tutorials/spot-kubernetes-controller/)
-      - [Install the Controller](ocean/tutorials/spot-kubernetes-controller/install-controller)
       - [Install with Helm](ocean/tutorials/spot-kubernetes-controller/install-with-helm)
       - [Install with Kubectl](ocean/tutorials/spot-kubernetes-controller/install-with-kubectl)
       - [Install with Terraform](ocean/tutorials/spot-kubernetes-controller/install-with-terraform)
