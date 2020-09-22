@@ -58,7 +58,7 @@
         - [Kops 1.14](ocean/tools-and-integrations/kops/install-kops/kops-114)
         - [Kops 1.13](ocean/tools-and-integrations/kops/install-kops/kops-113)
         - [Kops 1.12](ocean/tools-and-integrations/kops/install-kops/kops-112)
-      - [Create a Cluster](https://kops.sigs.k8s.io/getting_started/aws/#creating-your-first-cluster)
+      - [Create a Cluster](https://kops.sigs.k8s.io/https://kops.sigs.k8s.io/getting_started/spot-ocean/#creating-a-cluster)
       - [Migrate Cluster](ocean/tools-and-integrations/kops/migrate-cluster)
       - [Metadata Labels](ocean/tools-and-integrations/kops/metadata-labels)
     - [OpenShift](ocean/tools-and-integrations/openshift/)
