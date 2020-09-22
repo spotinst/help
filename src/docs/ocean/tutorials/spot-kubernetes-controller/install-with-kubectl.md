@@ -26,9 +26,7 @@ data:
 3. Load the parameters into the cluster configuration:
    `kubectl apply -f configMap.yaml`
 
-4. Install the controller and its dependencies.
-
-If you are using Kubernetes version 1.9.x or above, use the following:
+4. Install the controller and its dependencies. If you are using Kubernetes version 1.9.x or above, use the following:
 
 `kubectl apply -f https://s3.amazonaws.com/spotinst-public/integrations/kubernetes/cluster-controller/spotinst-kubernetes-cluster-controller-ga.yaml`
 
