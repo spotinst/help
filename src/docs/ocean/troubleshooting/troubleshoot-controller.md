@@ -6,7 +6,7 @@ If the banner below appears at the top of your Ocean dashboard, your Spot Contro
 
 To troubleshoot the issue, complete each step below until you find the issue.
 
-## Step 1: Check the configuration
+## Step 1: Check the Configuration
 
 Check the configuration of your configMap.yaml and ensure the parameters are set correctly:
 
@@ -26,9 +26,9 @@ data:
 
 To see if the controller is running, run the following command on your kubectl enabled terminal:
 
-`kubectl get pods -n kube-system | grep spotinst,
+`kubectl get pods -n kube-system | grep spotinst`
 
-## Step 3: Single Controller Pod in Cluster?
+## Step 3: One Controller Pod in Cluster?
 
 Ensure there is only one Spot controller pod in the cluster. If there is more than one, do the following:
 
@@ -38,7 +38,7 @@ Ensure there is only one Spot controller pod in the cluster. If there is more th
 
 2. [Reinstall the controller](ocean/tutorials/spot-kubernetes-controller/).
 
-## Step 4: Controller Running but not Responding
+## Step 4: Controller Running but not Responding?
 
 If the controller pod appears to be running, but is not responding, do the following:
 
