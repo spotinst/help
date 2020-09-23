@@ -8,4 +8,4 @@ To get started, complete the procedures described in the [Spot Ocean Amazon EKS 
 
 ## What’s Next
 
-Learn more about using Terraform with Ocean in our Terraform documentation.
+Learn more about using Terraform with Ocean in our [Terraform](tools-and-provisioning/terraform/) documentation.
