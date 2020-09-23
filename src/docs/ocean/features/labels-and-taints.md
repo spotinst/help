@@ -17,7 +17,7 @@ Label Key | Valid Values | Description
 ---|---|---
  spotinst.io/restrict-scale-down | true | When a node is running a pod with such a label, it will not be scaled down by the Spot autoscaler.
  spotinst.io/node-lifecycle | od |  Pods which contain this node selector are forced to run on an on-demand instance.
- spotinst.io/gpu-type | nvidia-tesla-v100, nvidia-tesla-p100, nvidia-tesla-k80, nvidia-tesla-p4, nvidia-tesla-t4 | Sets the GPU accelerator. This setting applies only to GKE clusters.
+ spotinst.io/gpu-type | nvidia-tesla-v100<br>nvidia-tesla-p100<br>nvidia-tesla-k80<br>nvidia-tesla-p4<br>nvidia-tesla-t4 | Sets the GPU accelerator. This setting applies only to GKE clusters.
 
 ---
  **Tip**: Avoid adding Spot labels under the launch specification node labels section. These labels should to be added in your pod configuration only.
