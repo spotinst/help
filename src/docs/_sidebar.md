@@ -225,7 +225,6 @@
     - [Import a Managed Instance from AWS](managed-instance/tutorials/import-a-managed-instance-from-aws)
 - [**ECO**](eco/)
   - [Getting Started](eco/getting-started/)
-    - [Eco for AWS](eco/getting-started/eco-for-aws)
     - [Connect your AWS Account](eco/getting-started/connect-your-aws-account)
     - [Connect Account: Customer working with MSP](eco/getting-started/connect-account-customer-working-with-msp)
     - [Connect Account: Multiple Organizations to Single Master Payer](eco/getting-started/connect-account-multiple-organizations-to-single-master-payer)
