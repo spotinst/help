@@ -207,8 +207,10 @@ Support permissions allow Eco to create tickets if it hits any reserved instance
 
 The following permissions are used to review account organization information if necessary.
 
-`"organizations:List*"
-"organizations:Describe*"`
+```json
+"organizations:List*"
+"organizations:Describe*"
+```
 
 ## Copy Permissions
 
