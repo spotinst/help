@@ -85,4 +85,4 @@ Below the chart, you can find the spend analysis breakdown in table format which
 
 ## What's Next?
 
-[View Trends and Notifications]()
+[View Trends and Notifications](cloud-analyzer/tutorials/view-trends-notifications/)
