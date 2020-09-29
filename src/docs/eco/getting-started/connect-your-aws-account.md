@@ -28,7 +28,7 @@ Log in to your AWS Master Payer account.
  Set up Cost and Usage Reports.
 
 ---
-Important:
+**Important**:
 * If your account is not managed by an MSP, complete Step 2 and continue with the setup.
 * If your Account is managed by an MSP, your MSP must set up the Cost and Usage reports as described [here](eco/getting-started/connect-account-customer-working-with-msp.md). Skip Steps 2 and 3 and continue with Step 4.
 

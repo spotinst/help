@@ -5,12 +5,9 @@ If your account is managed by an MSP and you do not have access to the billing f
 ## Cost And Usage Report Extraction Setup
 
 There are three major steps to configuring the CUR Extraction:
-
-Step 1. Set up Cost and Usage Reports: This should be done from a root user account.
-
-Step 2. Link your Cost and Usage Report with Athena.
-
-Step 3. Set up the Cost and Usage Extractor.
+1. Set up Cost and Usage Reports: This should be done from a root user account.
+2. Link your Cost and Usage Report with Athena.
+3. Set up the Cost and Usage Extractor.
 
 ### Procedure Notes
 * AWS Region. All actions in this procedure should be made in the US-East-1 (Northern Virginia) AWS region.
@@ -38,8 +35,6 @@ Step 3. Set up the Cost and Usage Extractor.
 5. The review screen should appear as shown below.
 
 <img src="/eco/_media/gettingstarted-aws-connect-msp-01.png" />
-
-<img src="/eco/_media/gettingstarted-aws-connect-msp-02.png" />
 
 6. Scroll all the way down and click Review and Complete.
 
