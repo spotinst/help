@@ -1,6 +1,6 @@
 # Containers
 
-In the Cloud Analyzer Optimization page, the Containers tab provides an overview of the containerized environments across your connected cloud accounts and recommends potential optimizations.
+In the Cloud Analyzer [Optimization](cloud-analyzer/tutorials/use-optimization-dashboard/) dashboard, the Containers tab provides an overview of the containerized environments across your connected cloud accounts and recommends potential optimizations.
 
 ## Summary Line
 
