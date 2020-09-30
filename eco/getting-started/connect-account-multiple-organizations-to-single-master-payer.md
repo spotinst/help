@@ -84,9 +84,9 @@ Once you have sent the crawler.yml file, it may take up to 48 hours before you r
 1. Log into your AWS account, then click on the link provided by Spotinst.
 2. On the CloudFormation page, click Next at the bottom right.
 3. Some of the parameters have been filled in already. Do not change them. Fill in the following parameters:
-   1. Account List: You may leave this blank, but if you would like to send Cost and Usage reports only for certain account numbers, enter them into this field separated by commas. Do not add spaces.
-   2. Stack Name: You can set this to a name you like.
-   3. CURBucketName: Set this to the name of the S3 bucket that you chose in the previous steps for Cost and Usage Reports to write to.
+   * Account List: You may leave this blank, but if you would like to send Cost and Usage reports only for certain account numbers, enter them into this field separated by commas. Do not add spaces.
+   * Stack Name: You can set this to a name you like.
+   * CURBucketName: Set this to the name of the S3 bucket that you chose in the previous steps for Cost and Usage Reports to write to.
 4. Click Next. Scroll all the way down and click Next again.
 5. Scroll all the way down and under the Capabilities section, check the box that says “I acknowledge that AWS CloudFormation might create IAM resources.”
 6. The Review screen should appear as follows:
