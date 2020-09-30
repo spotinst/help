@@ -4,8 +4,8 @@ Use the procedure on this page if you are an existing Spot customer and want to 
 
 ## Prerequisites
 
-Organization administration permissions in Cloud Analyzer are required to register an organization to Cloud Analyzer.
-Getting started with Cloud Analyzer on AWS requires read-only permissions to the Cost and Usage Reports, which are located in the Master Payer account.
+* Organization administration permissions in Cloud Analyzer are required to register an organization to Cloud Analyzer.
+* Getting started with Cloud Analyzer on AWS requires read-only permissions to the Cost and Usage Reports, which are located in the Master Payer account.
 
 ## AWS Region
 
@@ -28,9 +28,10 @@ From here, follow the steps on screen to connect your account.
 Log in to your AWS Master Payer account.
 
 ---
-Important:
+**Important**:
+
 If your account is not managed by an MSP, complete Step 2 and continue with the setup.
-If your Account is managed by an MSP, your MSP must set up the Cost and Usage reports as described here. Skip Steps 2 and 3 and continue with Step 4.
+If your Account is managed by an MSP, your MSP must set up the Cost and Usage reports as described [here](cloud-analyzer/getting-started/connect-account-customer-working-with-msp.md). Skip Steps 2 and 3 and continue with Step 4.
 
 ---
 
@@ -39,7 +40,7 @@ If your Account is managed by an MSP, your MSP must set up the Cost and Usage re
 Set up Cost and Usage Reports.
 * To go to AWS Cost and Usage Report setup, click [here](https://console.aws.amazon.com/billing/home?#/reports).
 * To create a new report, follow the illustrations below. Important guidelines:
-  * Include Resource IDs under Additional report details”
+  * Include Resource IDs under Additional Report Details
   * Enable Data refresh settings.
   * Time granularity Units should be Hourly.
   * Enable report data integration for Amazon Athena.
