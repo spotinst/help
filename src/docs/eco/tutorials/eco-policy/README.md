@@ -74,9 +74,9 @@ The policy grants the following permissions for operating the Eco system.
 * Access to retrieve billing reports using APIs and S3 for the Detailed Billing Report, the Cost Explorer, and the Cost & Usage Report.
 * Read-only permissions (on the master payer only) for the Amazon services that offer reserved capacity, such as EC2, RDS, RedShift, Elasticache, ElasticSearch, and DynamoDB.
 * Access to Support & Trusted Advisor for monitoring and changes to the reserved instance service limit.
-Explanation Of Permissions In Policy
 
-## S3 Billing Bucket
+## Explanation Of Permissions In Policy
+### S3 Billing Bucket
 The following are permissions for the CloudFormation script to read the S3 billing bucket names.
 
 ```json
@@ -86,7 +86,7 @@ The following are permissions for the CloudFormation script to read the S3 billi
 "cloudformation:ListStackResources"
 ```
 
-## Reserved Capacity Reservations
+### Reserved Capacity Reservations
 
 The following are read-only permissions for the reserved capacity reservations.
 
@@ -104,25 +104,25 @@ The following are read-only permissions for the reserved capacity reservations.
 "redshift:Describe*"
 ```
 
-## Cost & Usage Report
+### Cost & Usage Report
 
 The following provides access to the Cost and Usage Report (CUR).
 
 `"cur:*"`
 
-## CostExplorer Data
+### CostExplorer Data
 
 The following provides access to CostExplorer data.
 
 `"ce:*"`
 
-## Service Limit
+### Service Limit
 
 The following provides access to Service Limit information.
 
 `"trustedadvisor:*"`
 
-## S3 Bucket Billing Data
+### S3 Bucket Billing Data
 
 ```json
 "s3:List*"
@@ -136,7 +136,7 @@ Support permissions allow Eco to create tickets if it hits any reserved instance
 
 `"support:*"`
 
-## Account Organization
+### Account Organization
 
 The following permissions are used to review account organization information if necessary.
 
@@ -145,7 +145,7 @@ The following permissions are used to review account organization information if
 "organizations:Describe*"
 ```
 
-## Copy Permissions
+### Copy Permissions
 
 The following permissions are required to write information from your AWS Cost & Usage report to the Eco account. These are used to synchronize the Cost & Usage report and are required for the system to work. Do not remove these lines from the policy.
 
@@ -163,7 +163,7 @@ The following permissions are required to write information from your AWS Cost &
            }
 ```
 
-## IAM Role
+### IAM Role
 
 This role and the corresponding permissions are issued to the Eco production and DR accounts.
 
