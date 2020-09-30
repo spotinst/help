@@ -41,9 +41,9 @@ To create a new event definition, do the following:
   * Detect Irregularities for: Choose the relevant Tag Key.
   * Tag Value: The desired values that go with the Tag Keys.
   * Scope: The time frame in which metrics are compared. The following time frames are used:
-  * Monthly: The analysis is performed comparing the last 30 days with the previous four 30-day periods.
-  * Weekly: The analysis is performed comparing the last 7 days with the previous four 7-day periods.
-  * Daily: The analysis is performed comparing the last day with the same day a week ago, two weeks ago, three weeks ago, and four weeks ago.
-    For example: If today is Monday, data is compared from today (i.e., the last 24 hours) and from the same period on the previous Monday, two Mondays ago, three Mondays ago, and four Mondays ago.
+    * Monthly: The analysis is performed comparing the last 30 days with the previous four 30-day periods.
+    * Weekly: The analysis is performed comparing the last 7 days with the previous four 7-day periods.
+    * Daily: The analysis is performed comparing the last day with the same day a week ago, two weeks ago, three weeks ago, and four weeks ago.
+      For example: If today is Monday, data is compared from today (i.e., the last 24 hours) and from the same period on the previous Monday, two Mondays ago, three Mondays ago, and four Mondays ago.
   * Threshold: Percent increase over the expected value. When this value is exceeded, an event is recorded.
   * Ignore Cost Decrease: Mark this checkbox if you do not want to get an alert for a decrease in cost.
