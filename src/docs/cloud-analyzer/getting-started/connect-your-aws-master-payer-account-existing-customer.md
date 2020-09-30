@@ -13,15 +13,15 @@ All actions in this procedure should be made in the US-East-1 (Northern Virginia
 
 ## Get Started
 
-Once you log into the Spot console, go to the Cloud Analyzer Cost Analysis dashboard. You will see the following message:
+1. Once you log into the Spot console, go to the Cloud Analyzer Cost Analysis dashboard. You will see the following message:
 
 <img src="/cloud-analyzer/_media/gettingstarted-connect-master-existing-01.png" />
 
-Click Add Permissions to start the connection wizard.
+2. Click Add Permissions to start the connection wizard.
 
 <img src="/cloud-analyzer/_media/gettingstarted-connect-master-existing-02.png" />
 
-From here, follow the steps on screen to connect your account.
+3. From here, follow the steps on screen to connect your account.
 
 ## Step 1
 
@@ -30,8 +30,8 @@ Log in to your AWS Master Payer account.
 ---
 **Important**:
 
-If your account is not managed by an MSP, complete Step 2 and continue with the setup.
-If your Account is managed by an MSP, your MSP must set up the Cost and Usage reports as described [here](cloud-analyzer/getting-started/connect-account-customer-working-with-msp.md). Skip Steps 2 and 3 and continue with Step 4.
+* If your account is not managed by an MSP, complete Step 2 and continue with the setup.
+* If your Account is managed by an MSP, your MSP must set up the Cost and Usage reports as described [here](cloud-analyzer/getting-started/connect-account-customer-working-with-msp.md). Skip Steps 2 and 3 and continue with Step 4.
 
 ---
 
