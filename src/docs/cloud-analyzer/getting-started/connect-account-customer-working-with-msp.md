@@ -57,6 +57,7 @@ It will take 24 hours for AWS to start dropping reports into the S3 bucket you c
    * The customer’s Spot OrgIDs
 
 Continue with the steps below.
+
 4. Copy the “Object Url” at the bottom as shown in the image below.
 
 <img src="/cloud-analyzer/_media/gettingstarted-connect-msp-04.png" />
@@ -80,6 +81,7 @@ Continue with the steps below.
 Once you have sent the crawler.yml file, it may take up to 48 hours before you receive the link you need for Step 3.
 
 ## Step 3: Set Up Cost And Usage Extractor
+
 1. Log into your AWS account, then click on the link provided by Spot.
 2. On the CloudFormation page, click Next at the bottom right.
 3. Some of the parameters have been filled in already. Do not change them. Fill in the following parameters:

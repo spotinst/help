@@ -242,7 +242,6 @@
     - [Connect Master Payer Account: First Registration](cloud-analyzer/getting-started/connect-master-payer-account-first-registration)
     - [Connect Account: Customer working with MSP](cloud-analyzer/getting-started/connect-account-customer-working-with-msp)
     - [Connect Account: Multiple Organizations to Single Master Payer](cloud-analyzer/getting-started/connect-account-multiple-organizations-to-single-master-payer)
-    - [Cloud Analyzer Policy](cloud-analyzer/getting-started/cloud-analyzer-policy)
   - [Tutorials](cloud-analyzer/tutorials/)
     - [Analyze your Costs](cloud-analyzer/tutorials/analyze-your-costs)
     - [View Trends & Notifications](cloud-analyzer/tutorials/view-trends-notifications/)
