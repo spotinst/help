@@ -308,7 +308,7 @@ The policy below allows Cloud Analyzer to get the newly created role ARN. The ro
  }
 ```
 
-## Get Accound ID and Token
+## Get Account ID and Token
 
 * You can find the account ID at the following location:
 https://console.spotinst.com/spt/settings/account/general
