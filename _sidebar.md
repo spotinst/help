@@ -238,7 +238,6 @@
     - [Eco FAQ](eco/troubleshooting/eco-faq)
 - [**CLOUD ANALYZER**](cloud-analyzer/)
   - [Getting Started](cloud-analyzer/getting-started/)
-    - [Cloud Analyzer](cloud-analyzer/getting-started/cloud-analyzer)
     - [Connect your AWS Master Payer Account: Existing Customer](cloud-analyzer/getting-started/connect-your-aws-master-payer-account-existing-customer)
     - [Connect Master Payer Account: First Registration](cloud-analyzer/getting-started/connect-master-payer-account-first-registration)
     - [Connect Account: Customer working with MSP](cloud-analyzer/getting-started/connect-account-customer-working-with-msp)
