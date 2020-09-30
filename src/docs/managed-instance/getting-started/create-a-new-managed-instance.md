@@ -6,7 +6,7 @@ Running single instance workloads on Managed Instance will provide you with a si
 
 ## Prerequisites
 
-Before you can create a managed instance, you will need to do the following:
+Before you can create a managed instance, you need to do the following:
 
 * Ensure your AWS account is connected to your [Spot account](connect-your-cloud-provider/aws-account.md).
 * Ensure your [Spot Policy](elastigroup/tutorials/elastigroup-tasks/update-spot-policy.md) is up to date.
