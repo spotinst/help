@@ -1,4 +1,4 @@
-# Join an Existing AWS Managed INSTANCE
+# Join an Existing AWS Managed Instance
 
 This procedure describes how to import a managed instance from AWS to your account in Spot. This will enable you to have full control of your managed instance directly in Spot and take advantage of all of the optimization features available in Spot.
 
@@ -12,7 +12,7 @@ Before you can create a managed instance, you need to do the following:
 * Ensure your [Spot Policy](elastigroup/tutorials/elastigroup-tasks/update-spot-policy.md) is up to date.
 * Memory utilization graphs require the Cloudwatch agent. For more information, see the [AWS documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/mon-scripts.html).
 
-## Import Your Managed Instance
+## Import your Managed Instance
 
 1. To import your stateful single instance from AWS, go to the Managed Instance dashboard on the Spot console and click New Instance on the top right.
 
