@@ -1,1 +1,1 @@
-# Empty Page
+# Get Started with CloudFormation
