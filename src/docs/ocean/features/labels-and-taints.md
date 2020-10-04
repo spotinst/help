@@ -1,11 +1,12 @@
 # Labels and Taints
 
-To make scheduling more efficient and compatible with Kubernetes, Ocean supports all of the Kubernetes constraint mechanisms for scheduling pods:
+To make scheduling more efficient and compatible with Kubernetes, Ocean supports the following [Kubernetes constraint mechanisms](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/) for scheduling pods:
 
 * Node Selector – Constrains pods to nodes with particular labels.
 * Node Affinity – Constrains which nodes your pod is eligible to be scheduled on based on labels on the node. Spot supports hard and soft affinity (requiredDuringSchedulingIgnoredDuringExecution,  preferredDuringSchedulingIgnoredDuringExecution)
 * Pod Affinity and Pod Anti-Affinity – Schedules a Pod based on which other Pods are or are not running on a node.
 * Pod Port Restrictions – Validates that each pod will have required ports available on the machine.
+* [Well-Known Labels](https://kubernetes.io/docs/reference/kubernetes-api/labels-annotations-taints/)
 
 ## Spot Labels
 
