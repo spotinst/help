@@ -4,9 +4,9 @@ Cloud Analyzer is your cloud management and optimization dashboard. It is design
 
 Cloud Analyzer is designed to help with the following major challenges:
 
-* Tracking and monitoring of your cloud expenses
-* Identifying waste and potential optimization points
-* Delivering executable action items
+- Tracking and monitoring of your cloud expenses
+- Identifying waste and potential optimization points
+- Delivering executable action items
 
 Cloud Analyzer meets these challenges by providing concrete data and recommendations in the dashboards described below.
 

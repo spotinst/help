@@ -13,6 +13,7 @@ Ocean enables you to assign an elastic IP pool to the instances created in a spe
 Launch specifications allow you to configure your workloads (i.e., instances and instance groups) on an Ocean cluster. Within the launch specification you can define the elastic IPs to be applied.
 
 This is done by adding the elasticIpPool object, and a tag selector (using a key and optionally a value) which all desired EIPs to use are tagged with. This way there is no need to explicitly manage the EIP address pool in Ocean on top of managing it in AWS. All tagged EIP objects will automatically get assigned on instances provisioned by the Ocean launch specification.
+
 ```json
         "elasticIpPool": {
             "tagSelector": {
@@ -25,8 +26,9 @@ This is done by adding the elasticIpPool object, and a tag selector (using a key
 ## When Scaling Up
 
 The elastic IP should be assigned to the instance prior to scheduling pods on it. we recommend the following best practices:
-* Ensure that user_data requires that an EIP is attached to the node.
-* It is useful (not necessary) to add a health check in user data that will ensure EIP registration before the node attempts to perform tasks that require network connectivity.  
+
+- Ensure that user_data requires that an EIP is attached to the node.
+- It is useful (not necessary) to add a health check in user data that will ensure EIP registration before the node attempts to perform tasks that require network connectivity.
 
 ## When Scaling Down
 
@@ -34,5 +36,5 @@ When scaling down, Ocean will remove the elastic IP address only after all pods 
 
 ## What’s Next?
 
-* Learn more about Ocean [Launch Specifications](ocean/features/launch-specifications.md).
-* Learn more about the Ocean [API for Launch Specifications](https://help.spot.io/spotinst-api/ocean/ocean-cloud-api/ocean-for-aws/launch-specifications/create/).
+- Learn more about Ocean [Launch Specifications](ocean/features/launch-specifications.md).
+- Learn more about the Ocean [API for Launch Specifications](https://help.spot.io/spotinst-api/ocean/ocean-cloud-api/ocean-for-aws/launch-specifications/create/).

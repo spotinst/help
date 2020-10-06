@@ -10,9 +10,9 @@ A summary line appears at the top of the page.
 
 The summary line includes the following information:
 
-* Monthly Costs: The actual cost of the recognized event
-* Expected Costs: The expected range of cost based on cost data from previous periods
-* Cost Change: Comparison of expected cost to actual cost as a percent
+- Monthly Costs: The actual cost of the recognized event
+- Expected Costs: The expected range of cost based on cost data from previous periods
+- Cost Change: Comparison of expected cost to actual cost as a percent
 
 ## Anomaly Trends
 

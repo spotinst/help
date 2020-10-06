@@ -1,6 +1,6 @@
 # Install with Helm
 
-## For Helm Versions 2.* and Earlier
+## For Helm Versions 2.\* and Earlier
 
 1. Grant Tiller access to create resources in the `kube-system` namespace (see Tiller and Role-based Access Control):
 
@@ -40,12 +40,14 @@ $ helm install spotinst*_controller spotinst*/spotinst-kubernetes-cluster-contro
 --set spotinst.account=[ACCOUNT_ID] \
 --set spotinst.clusterIdentifier=[IDENTIFIER]
 ```
+
 ---
+
 **Tip**: Configure all chart values using the `set` command line argument or a values.yaml file.
 
 ---
 
-4. In case you want to upgrade the Spotinst  controller’s version:
+4. In case you want to upgrade the Spotinst controller’s version:
 
 ```Shellscript
 $ helm upgrade spotinst-kubernetes-cluster-controller spotinst/spotinst-kubernetes-cluster-controller \

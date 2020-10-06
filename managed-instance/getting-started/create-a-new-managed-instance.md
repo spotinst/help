@@ -8,9 +8,9 @@ Running single instance workloads on Managed Instance will provide you with a si
 
 Before you can create a managed instance, you need to do the following:
 
-* Ensure your AWS account is connected to your [Spot account](connect-your-cloud-provider/aws-account.md).
-* Ensure your [Spot Policy](elastigroup/tutorials/elastigroup-tasks/update-spot-policy.md) is up to date.
-* Memory utilization graphs require the Cloudwatch agent. For more information, see the [AWS documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/mon-scripts.html).
+- Ensure your AWS account is connected to your [Spot account](connect-your-cloud-provider/aws-account.md).
+- Ensure your [Spot Policy](elastigroup/tutorials/elastigroup-tasks/update-spot-policy.md) is up to date.
+- Memory utilization graphs require the Cloudwatch agent. For more information, see the [AWS documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/mon-scripts.html).
 
 ## Get Started
 
@@ -26,7 +26,7 @@ Before you can create a managed instance, you need to do the following:
 
 ## Step 1: Configuration Tab
 
-1. Enter a name and  a description for your Managed Instance:
+1. Enter a name and a description for your Managed Instance:
 
 <img src="/managed-instance/_media/gettingstarted-create-new-03.png" />
 
@@ -41,7 +41,7 @@ Before you can create a managed instance, you need to do the following:
 
 <img src="/managed-instance/_media/gettingstarted-create-new-05.png" />
 
-   Once VPC, Subnets, Product, Image and Preferred Instance type are selected, Spotinst will automatically preselect optional similar Spot Markets to ensure optimized cost efficiency. The Spot Market Scoring Table on the right side will be populated:
+Once VPC, Subnets, Product, Image and Preferred Instance type are selected, Spotinst will automatically preselect optional similar Spot Markets to ensure optimized cost efficiency. The Spot Market Scoring Table on the right side will be populated:
 
 <img src="/managed-instance/_media/gettingstarted-create-new-06.png" />
 
@@ -74,8 +74,8 @@ The creation of a Managed Instance requires at least one of the following persis
 
 2. Root Volume Persistence is preselected by default, but can be toggled.
 3. Choose Data Volume Persistence options. Data Volume Persistence comes in one of two methods:
-   * Snapshots Backups: Incremental snapshots of the data volumes are continuously saved, and are restored upon instance replacement.
-   * Re-Attach: Data volumes are kept through instance termination and are re-attached when a new instance is launched.
+   - Snapshots Backups: Incremental snapshots of the data volumes are continuously saved, and are restored upon instance replacement.
+   - Re-Attach: Data volumes are kept through instance termination and are re-attached when a new instance is launched.
 
 <img src="/managed-instance/_media/gettingstarted-create-new-11.png" />
 
@@ -84,6 +84,7 @@ The creation of a Managed Instance requires at least one of the following persis
 Private IP can be persisted by maintaining the Instance’s ENI across replacements. Optionally, specify a particular Private IP to maintain.
 
 ---
+
 **Tip**:
 
 Persisting Private IP will limit the Managed Instance to a single AZ.
@@ -96,35 +97,35 @@ Public IP can be persisted by selecting an Elastic IP.
 
 ### Configure Load Balancing.
 
-* You can set the Managed Instance to receive traffic from Route 53 or a Load Balancer.
-* For Load Balancers, select your Elastic Load Balancer, ALB Target Group or MLB Target Set:
+- You can set the Managed Instance to receive traffic from Route 53 or a Load Balancer.
+- For Load Balancers, select your Elastic Load Balancer, ALB Target Group or MLB Target Set:
 
 <img src="/managed-instance/_media/gettingstarted-create-new-13.png" />
 
-* For Route 53 select your Hosted Zone, Record Sets and Public IP registration, then click “Add a Record”.
+- For Route 53 select your Hosted Zone, Record Sets and Public IP registration, then click “Add a Record”.
 
 <img src="/managed-instance/_media/gettingstarted-create-new-14.png" />
 
 ### Configure Maintenance and Auto Healing options.
 
-* The Maintenance Window will determine when a Managed Instance may perform proactive replacements, meant to adjust the instance type to your preference, or to revert back to Spot in case a fall-back to On-Demand was made.
-* Auto Healing will perform replacements of instances deemed unhealthy according to the selected health check type.
-* Grace Period is the time (in seconds) to allow an instance to fully boot and applications to start before the first health check.
-* Unhealthy Duration is the amount of time (in seconds) that an instance deemed unhealthy will be kept before it is terminated and replaced with a new one.
+- The Maintenance Window will determine when a Managed Instance may perform proactive replacements, meant to adjust the instance type to your preference, or to revert back to Spot in case a fall-back to On-Demand was made.
+- Auto Healing will perform replacements of instances deemed unhealthy according to the selected health check type.
+- Grace Period is the time (in seconds) to allow an instance to fully boot and applications to start before the first health check.
+- Unhealthy Duration is the amount of time (in seconds) that an instance deemed unhealthy will be kept before it is terminated and replaced with a new one.
 
 <img src="/managed-instance/_media/gettingstarted-create-new-15.png" />
 
 ### Configure Scheduled Actions
 
-* You can choose one of two options – predetermined Running hours, or custom scheduled actions.
-  * With the “Run instance only during these hours” option, once you configure the time window the managed instance will be “Paused” outside of it. At the beginning of the next window, it will be automatically “Resumed” along with its persisted resources.
+- You can choose one of two options – predetermined Running hours, or custom scheduled actions.
+  - With the “Run instance only during these hours” option, once you configure the time window the managed instance will be “Paused” outside of it. At the beginning of the next window, it will be automatically “Resumed” along with its persisted resources.
 
 <img src="/managed-instance/_media/gettingstarted-create-new-16.png" />
 
-  * Alternatively you can schedule individual actions, with custom CRON expressions. The following actions are supported:
-    * Pause
-    * Resume
-    * Recycle
+- Alternatively you can schedule individual actions, with custom CRON expressions. The following actions are supported:
+  - Pause
+  - Resume
+  - Recycle
 
 <img src="/managed-instance/_media/gettingstarted-create-new-17.png" />
 

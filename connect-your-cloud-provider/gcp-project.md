@@ -8,12 +8,15 @@ In order to allow Spot to manage GCP resources, it is necessary to authenticate 
 <img src="/connect-your-cloud-provider/_media/welcome-to-spot-1024x341.png" />
 
 3. Choose one of the methods to connect your account, manual or automatic (via gcloud).
+
 ---
+
 **Tip**: In order for the connection with your GCP project to work, the Identity and Access Management (IAM) API should be enabled for the project. You may refer to [Enabling and Disabling Services](https://cloud.google.com/service-usage/docs/enable-disable) by Google Cloud to enable the IAM API for your project.
 
 ---
 
 ## Manual Method
+
 ### Step 1
 
 Log in to the Google Cloud project you would like Spot to connect to. Use the button for quick navigation.
@@ -57,10 +60,11 @@ Click Connect to finish the process.
 We’ll check connectivity to your GCP account, and you’re all set to create your first Elastigroup!
 
 ## Automatic Method
+
 ### Prerequisites:
 
-* Have gcloud installed.
-* Have permissions to create a service account.
+- Have gcloud installed.
+- Have permissions to create a service account.
 
 ### Step 1
 

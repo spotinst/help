@@ -150,8 +150,8 @@ Change deployment reporting interval
 
 Added
 
-* Report pod priority and priorityClassName
-* Report node ephemeral storage
+- Report pod priority and priorityClassName
+- Report node ephemeral storage
 
 ## [1.0.36] – 2019-04-15
 
@@ -218,7 +218,6 @@ Fixed
 Fix conversion bugs in reported pods
 
 ## [1.0.26] – 2019-01-04
-
 
 Fixed
 Fix the auto update process in controllers that were installed via the kops
