@@ -26,7 +26,7 @@ There are several ways to create an Ocean-managed cluster. Choose the method tha
 - [ECS](/ocean/getting-started/ecs.md)
 - [OpenShift](/ocean/tools-and-integrations/openshift/)
 
-## Next Steps
+## What's Next?
 
 - Get a high-level overview of Ocean:
   - [Ocean Overview (Kubernetes)](ocean/overview-kubernetes.md)
