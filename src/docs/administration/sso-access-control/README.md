@@ -51,7 +51,7 @@ When you want to determine different user roles per account, you can choose the 
 Configure the IDP to create a SAML response with the parameter “OrgAndRole”.
 This configuration will generate another screen which will let the user choose an organization and role:
 
-<img src="/administration/_media/sss-access-control-02.png" />
+<img src="/administration/_media/sss-access-control-02.jpg" />
 
 ## Usage
 
