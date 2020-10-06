@@ -4,8 +4,6 @@
 
 Ocean seamlessly integrates with your existing nodegroups, as a drop-in replacement for AWS Auto Scaling groups, and allows you to streamline and optimize the entire workflow, from initially creating your cluster to managing and optimizing it on an ongoing basis.
 
-<img src="/welcome/_media/eksctl-cover.png" />
-
 ## Features
 
 - **Simplify Cluster Management** —
