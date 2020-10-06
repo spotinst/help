@@ -3,21 +3,24 @@
 Use this procedure if you need to connect multiple Spot organizations to a single Master Payer Account. This procedure enables Cloud Analyzer to access your billing file and provide you with visibility into your cloud expenditures.
 
 ## Prerequisite
+
 Organization administration permissions in Cloud Analyzer are required to register an organization to Cloud Analyzer.
 
 ## Cost And Usage Report Extraction Setup
 
 There are three major steps to configuring the CUR Extraction:
+
 1. Set up Cost and Usage Reports: This should be done from a root user account.
 2. Link your Cost and Usage Report with Athena.
 3. Set up the Cost and Usage Extractor.
 
 ### Procedure Notes
 
-* AWS Region. All actions in this procedure should be made in the US-East-1 (Northern Virginia) AWS region.
-* IAM Role. The IAM role should be the one of the end-customer master payer account.
+- AWS Region. All actions in this procedure should be made in the US-East-1 (Northern Virginia) AWS region.
+- IAM Role. The IAM role should be the one of the end-customer master payer account.
 
 ## Step 1: Set Up Cost And Usage Reports
+
 1. Log in to your root AWS account, then click [here](https://console.aws.amazon.com/billing/home#/reports).
 2. Click Create Report.
 3. Under the first menu, Report Content, do the following:
@@ -41,7 +44,7 @@ There are three major steps to configuring the CUR Extraction:
 
 <img src="/cloud-analyzer/_media/gettingstarted-connect-multiple-02.png" />
 
-   7. Scroll all the way down and click Review and Complete.
+7.  Scroll all the way down and click Review and Complete.
 
 ## Step 2: Link Your Cost And Usage Report With Athena
 
@@ -52,13 +55,13 @@ It will take 24 hours for AWS to start dropping reports into the S3 bucket you c
 1. Click [here](https://s3.console.aws.amazon.com/s3/home), go to the S3 bucket you chose and navigate to: spotinst_eco/spotinst-cur-report
 2. Click on the file called “crawler-cfn.yml”.
 3. Download the file and contact your Spot sales representative. (If you do not have a sales representative, contact Spot Support.) Please include the following in your email:
-   * The crawler file
-   * AWS account number of master payer account
-   * Account ID of the customer’s master payer account
-   * CUR bucket name
-   * Stack name
-   * Prefix
-   * The customer’s Spot OrgIDs
+   - The crawler file
+   - AWS account number of master payer account
+   - Account ID of the customer’s master payer account
+   - CUR bucket name
+   - Stack name
+   - Prefix
+   - The customer’s Spot OrgIDs
 
 Continue with the steps below.
 
@@ -85,12 +88,13 @@ Continue with the steps below.
 Once you have sent the crawler.yml file, it may take up to 48 hours before you receive the link you need for Step 3.
 
 ## Step 3: Set Up Cost And Usage Extractor
+
 1. Log into your AWS account, then click on the link provided by Spot.
 2. On the CloudFormation page, click Next at the bottom right.
 3. Some of the parameters have been filled in already. Do not change them. Fill in the following parameters:
-   * Account List: You may leave this blank, but if you would like to send Cost and Usage reports only for certain account numbers, enter them into this field separated by commas. Do not add spaces.
-   * Stack Name: You can set this to a name you like.
-   * CURBucketName: Set this to the name of the S3 bucket that you chose in the previous steps for Cost and Usage Reports to write to.
+   - Account List: You may leave this blank, but if you would like to send Cost and Usage reports only for certain account numbers, enter them into this field separated by commas. Do not add spaces.
+   - Stack Name: You can set this to a name you like.
+   - CURBucketName: Set this to the name of the S3 bucket that you chose in the previous steps for Cost and Usage Reports to write to.
 4. Click Next. Scroll all the way down and click Next again.
 5. Scroll all the way down and under the Capabilities section, check the box that says “I acknowledge that AWS CloudFormation might create IAM resources.”
 6. The Review screen should appear as follows:

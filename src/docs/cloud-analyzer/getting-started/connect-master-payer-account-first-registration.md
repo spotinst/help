@@ -3,8 +3,9 @@
 Use the procedure on this page if you are connecting to Spot for the first time. If you are an existing Spot customer and just want to connect your AWS Cost and Usage Reports to start using Cloud Analyzer, use the following procedure: [Connect your AWS Master Payer Account: Existing Customer](cloud-analyzer/getting-started/connect-your-aws-master-payer-account-existing-customer).
 
 ## Prerequisites
-* Organization administration permissions in Cloud Analyzer are required to register an organization to Cloud Analyzer.
-* Getting started with Cloud Analyzer on AWS requires read-only permissions to the Cost and Usage Reports, which are located in the Master Payer account.
+
+- Organization administration permissions in Cloud Analyzer are required to register an organization to Cloud Analyzer.
+- Getting started with Cloud Analyzer on AWS requires read-only permissions to the Cost and Usage Reports, which are located in the Master Payer account.
 
 ## AWS Region
 
@@ -13,6 +14,7 @@ All actions in this procedure should be made in the US-East-1 (Northern Virginia
 ## Get Started
 
 To start the connection wizard, do the following:
+
 1. Log in to the Spot console.
 2. Click AWS. The connection wizard appears as shown below.
 
@@ -29,24 +31,26 @@ Mark whether you are connecting from AWS China.
 Log in to your AWS Master Payer account.
 
 ---
+
 **Important**:
 
-* If your account is not managed by an MSP, complete Step 3 and continue with the setup.
-* If your Account is managed by an MSP, your MSP must set up the Cost and Usage reports as described [here](https://console.aws.amazon.com/billing/home?#/reports). Skip Step 3 and continue with Step 4.
+- If your account is not managed by an MSP, complete Step 3 and continue with the setup.
+- If your Account is managed by an MSP, your MSP must set up the Cost and Usage reports as described [here](https://console.aws.amazon.com/billing/home?#/reports). Skip Step 3 and continue with Step 4.
 
-___
+---
 
 ## Step 3
 
 1. Select the Spot products your CloudFormation template will include.
 2. Set up Cost and Usage Reports and enter the bucket name where the report is located.
 
-  * To go to AWS Cost and Usage Report setup, click here.
-  * To create a new report, follow the illustrations below. Important guidelines:
-    * Include Resource IDs under Additional report details
-    * Enable Data refresh settings.
-    * Time granularity Units should be Hourly.
-    * Enable report data integration for Amazon Athena.
+- To go to AWS Cost and Usage Report setup, click here.
+- To create a new report, follow the illustrations below. Important guidelines:
+  - Include Resource IDs under Additional report details
+  - Enable Data refresh settings.
+  - Time granularity Units should be Hourly.
+  - Enable report data integration for Amazon Athena.
+
 3. Mark the checkboxes as shown below.
 
 <img src="/cloud-analyzer/_media/gettingstarted-firstregistration-02.png" />

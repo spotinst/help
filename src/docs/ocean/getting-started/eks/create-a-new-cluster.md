@@ -6,11 +6,11 @@ In this procedure, you complete the steps to create an Amazon EKS cluster direct
 
 ## Prerequisites
 
-* Ensure you have an IAM user in your AWS account with both Console and Programmatic Access credentials. If you do not have one,  you can follow this [AWS procedure](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html) to create one or refer to your account administrator for the necessary permissions.
-* [Connect your AWS account to Spot](connect-your-cloud-provider/aws-account.md).
-* Install [awscli](https://docs.aws.amazon.com/cli/latest/userguide/installing.html) 1.16.18+ and configure [AWS credentials](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html#cli-configure-quickstart-config).
-* Install [kubectl](https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html) (Amazon EKS-vended).
-* Install [aws-iam-authenticator](https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html) (only for awscli versions below 1.16.156).
+- Ensure you have an IAM user in your AWS account with both Console and Programmatic Access credentials. If you do not have one, you can follow this [AWS procedure](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html) to create one or refer to your account administrator for the necessary permissions.
+- [Connect your AWS account to Spot](connect-your-cloud-provider/aws-account.md).
+- Install [awscli](https://docs.aws.amazon.com/cli/latest/userguide/installing.html) 1.16.18+ and configure [AWS credentials](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html#cli-configure-quickstart-config).
+- Install [kubectl](https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html) (Amazon EKS-vended).
+- Install [aws-iam-authenticator](https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html) (only for awscli versions below 1.16.156).
 
 ## Get Started
 
@@ -41,7 +41,7 @@ Fill in general details including Cluster Name, Region, and the Key Pair used fo
 Provision the cluster resources using a CloudFormation template.
 
 1. Use existing VPC & Subnets. Mark this box to launch CloudFormation with your existing VPC & Subnets. Leave unchecked to launch within a new VPC that CloudFormation will create for you.
-2.Click Launch CloudFormation Stack.
+   2.Click Launch CloudFormation Stack.
 
 <img src="/ocean/_media/new-eks-step3.png" />
 
@@ -56,6 +56,7 @@ Before you can continue to the next step, CloudFormation must complete creation 
 1. Connect your workstation to the EKS cluster by copying the command shown in Step 4 of the Create page and running it in your command-line interface. Note that the command must include the Ocean Cluster Name that you entered previously.
 
 ---
+
 **Tip**: Just click on the command to copy it.
 
 ---
@@ -77,6 +78,7 @@ Before you can continue to the next step, CloudFormation must complete creation 
    `kubectl apply -f aws-auth-cm.yaml`
 
 ---
+
 **Note**: Do not modify any other lines in this file.
 
 ---
@@ -87,6 +89,6 @@ That’s it! Ocean will now manage the worker nodes, optimizing cluster resource
 
 ## Troubleshooting
 
-If you receive the error "aws-iam-authenticator": executable file not found in $PATH, then your kubectl is not configured for Amazon EKS. For more information, see [Configure kubectl for Amazon EKS](https://docs.aws.amazon.com/eks/latest/userguide/configure-kubectl.html).
+If you receive the error "aws-iam-authenticator": executable file not found in \$PATH, then your kubectl is not configured for Amazon EKS. For more information, see [Configure kubectl for Amazon EKS](https://docs.aws.amazon.com/eks/latest/userguide/configure-kubectl.html).
 You can list your cluster nodes with the following command:
 `kubectl get nodes`.

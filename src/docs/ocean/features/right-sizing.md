@@ -20,7 +20,7 @@ Once every 5 minutes, the controller queries the Metrics Server for pod utilizat
 
 The result is that every 5 minutes, we get a single datapoint (i.e., a single point for CPU and a single point for memory) for each deployment representing the average CPU and memory utilization for the pods of each deployment at a single point in time.
 
-Ocean makes recommendations based on a mechanism that tries to even out peaks and troughs in resource demand. Currently, Ocean generates recommendations  for Kubernetes deployments, statefulsets, and daemonsets.
+Ocean makes recommendations based on a mechanism that tries to even out peaks and troughs in resource demand. Currently, Ocean generates recommendations for Kubernetes deployments, statefulsets, and daemonsets.
 
 ### Kubernetes Usage Notes
 

@@ -2,8 +2,8 @@
 
 The following tutorial covers migration of existing Elastigroups running a Kubernetes cluster to Ocean.
 
-* If your cluster has only one Elastigroup, refer to Use Case 1.
-* If your cluster consists of multiple Elastigroups, refer to Use Case 2.
+- If your cluster has only one Elastigroup, refer to Use Case 1.
+- If your cluster consists of multiple Elastigroups, refer to Use Case 2.
 
 ## Use Case 1: A Single Elastigroup
 
@@ -17,6 +17,7 @@ If you have one Elastigroup that you would like to upgrade to Ocean, do the foll
 Wait for the confirmation message to validate that the upgrade process is complete.
 
 ---
+
 **Tip**: For Kubernetes Elastigroups created via KOPS, see the following [tutorial](ocean/tools-and-integrations/kops/migrate-cluster.md).
 
 ---
@@ -33,12 +34,12 @@ Ocean manages the entirety of the Kubernetes cluster nodes. If the nodes are dis
 
 To complete this tutorial, gather the following information:
 
-* List the Elastigroups connected to the target Kubernetes Cluster.
-* For each of the Elastigroups, note the following data for future use:
-  * Autoscaler labels
-  * User-data script
-  * AMI ID
-* Ensure all the Elastigroups in the cluster use the same Cluster Identifier (ID). This is used to connect the existing Spot Controller installed on the Kubernetes cluster to Ocean.
+- List the Elastigroups connected to the target Kubernetes Cluster.
+- For each of the Elastigroups, note the following data for future use:
+  - Autoscaler labels
+  - User-data script
+  - AMI ID
+- Ensure all the Elastigroups in the cluster use the same Cluster Identifier (ID). This is used to connect the existing Spot Controller installed on the Kubernetes cluster to Ocean.
 
 ### Step 1: Create the Ocean Cluster
 

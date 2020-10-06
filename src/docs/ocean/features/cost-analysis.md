@@ -44,7 +44,7 @@ Ocean Cost analysis reflects Persistent Volume (PV) storage costs that result fr
 
 1. Ocean collects hourly usage information such as the storage volume size, the volume ID, and the price per hour.
 2. Ocean calculates Persistent Volume Claims (PVC) costs.
-   a. Ocean considers all pods in the cluster that have PVCs and calculates the relevant cost for each pod as (pod run time)*(storage pricing) using the corresponding PV object and its mapped storage volume. The storage pricing is taken from the information collected in Step 1.
+   a. Ocean considers all pods in the cluster that have PVCs and calculates the relevant cost for each pod as (pod run time)\*(storage pricing) using the corresponding PV object and its mapped storage volume. The storage pricing is taken from the information collected in Step 1.
    b. Ocean adds up the PVC costs for the given pod.
 3. Ocean shows the storage costs broken down per workload, per hour. For the standalone pods, it calculates and shows the aggregated costs for standalone pods in the cluster.
 

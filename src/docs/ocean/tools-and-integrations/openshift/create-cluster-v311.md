@@ -6,8 +6,8 @@ This tutorial covers the creation of an Ocean cluster using [Spot](https://conso
 
 ## Prerequisites
 
-* OpenShift is installed and configured on AWS or GCP.
-* At least one worker node is up and running, with a primed image and user-data. To set up the primed image and user data, you may follow the procedures below.
+- OpenShift is installed and configured on AWS or GCP.
+- At least one worker node is up and running, with a primed image and user-data. To set up the primed image and user data, you may follow the procedures below.
 
 ### Create Primed Image
 
@@ -46,7 +46,9 @@ runcmd:
 - [ systemctl, start, atomic-openshift-node]
 EOF
 ```
+
 ---
+
 **Tip**: If you don’t use an autoscaler in the OpenShift cluster yet and don’t have an AWS auto-scaling group, do not create an autoscaling group.
 
 ---
@@ -57,8 +59,8 @@ EOF
 
 The tag values are:
 
-* shared  – The resource is shared with other systems.
-* owned – The node belongs exclusively to the cluster.
+- shared – The resource is shared with other systems.
+- owned – The node belongs exclusively to the cluster.
 
 Once the instance is up and running, a new `csr` request will be waiting:
 
@@ -79,11 +81,12 @@ When the new instance with the correct user data, image, and tags is joined to t
 <img src="/ocean/_media/tools-openshift-4x-01.png" />
 
 2. Click Create Cluster.
-3. Click  the use case for OpenShift, “Join an Existing OpenShift Cluster”.
+3. Click the use case for OpenShift, “Join an Existing OpenShift Cluster”.
 
 <img src="/ocean/_media/tools-openshift-4x-02.png" />
 
 ## Step 1: Enter General Information
+
 1. Enter a Cluster Name and Identifier and choose a Region.
 2. Choose an Auto Scaling Group or worker node Instance to import the cluster configuration from.
 

@@ -4,8 +4,8 @@ Use the procedure on this page if you are an existing Spot customer and want to 
 
 ## Prerequisites
 
-* Organization administration permissions in Cloud Analyzer are required to register an organization to Cloud Analyzer.
-* Getting started with Cloud Analyzer on AWS requires read-only permissions to the Cost and Usage Reports, which are located in the Master Payer account.
+- Organization administration permissions in Cloud Analyzer are required to register an organization to Cloud Analyzer.
+- Getting started with Cloud Analyzer on AWS requires read-only permissions to the Cost and Usage Reports, which are located in the Master Payer account.
 
 ## AWS Region
 
@@ -28,22 +28,24 @@ All actions in this procedure should be made in the US-East-1 (Northern Virginia
 Log in to your AWS Master Payer account.
 
 ---
+
 **Important**:
 
-* If your account is not managed by an MSP, complete Step 2 and continue with the setup.
-* If your Account is managed by an MSP, your MSP must set up the Cost and Usage reports as described [here](cloud-analyzer/getting-started/connect-account-customer-working-with-msp.md). Skip Steps 2 and 3 and continue with Step 4.
+- If your account is not managed by an MSP, complete Step 2 and continue with the setup.
+- If your Account is managed by an MSP, your MSP must set up the Cost and Usage reports as described [here](cloud-analyzer/getting-started/connect-account-customer-working-with-msp.md). Skip Steps 2 and 3 and continue with Step 4.
 
 ---
 
 ## Step 2
 
 Set up Cost and Usage Reports.
-* To go to AWS Cost and Usage Report setup, click [here](https://console.aws.amazon.com/billing/home?#/reports).
-* To create a new report, follow the illustrations below. Important guidelines:
-  * Include Resource IDs under Additional Report Details
-  * Enable Data refresh settings.
-  * Time granularity Units should be Hourly.
-  * Enable report data integration for Amazon Athena.
+
+- To go to AWS Cost and Usage Report setup, click [here](https://console.aws.amazon.com/billing/home?#/reports).
+- To create a new report, follow the illustrations below. Important guidelines:
+  - Include Resource IDs under Additional Report Details
+  - Enable Data refresh settings.
+  - Time granularity Units should be Hourly.
+  - Enable report data integration for Amazon Athena.
 
 Mark the checkboxes as shown below.
 
@@ -62,7 +64,7 @@ Mark the checkboxes as shown below.
 
 ## Step 4
 
-Open the linked Cloudformation Template.  
+Open the linked Cloudformation Template.
 
 <img src="/cloud-analyzer/_media/gettingstarted-connect-master-existing-06.png" />
 
@@ -79,7 +81,7 @@ Mark the checkbox acknowledging that CloudFormation will create IAM resources, a
 <img src="/cloud-analyzer/_media/gettingstarted-connect-master-existing-08.png" />
 
 2. Paste the Spot Role ARN in the wizard.
-   * If your account is not managed by an MSP, Click Done. Your registration is complete.
-   * If your account is managed by an MSP, contact Spot Support.
+   - If your account is not managed by an MSP, Click Done. Your registration is complete.
+   - If your account is managed by an MSP, contact Spot Support.
 
 Once your Organization is connected to the Spot Cloud Analyzer, initial data processing will take up to 48 hours. You will be notified via email when your dashboards are ready.

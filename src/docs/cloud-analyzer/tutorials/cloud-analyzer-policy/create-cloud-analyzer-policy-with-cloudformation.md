@@ -8,16 +8,13 @@ Use the Cloud Analyzer policy below if you are creating a policy with CloudForma
   "Outputs": {
     "CARoleArn": {
       "Value": {
-        "Fn::GetAtt": [
-          "CloudAnalyzerRole",
-          "Arn"
-        ]
+        "Fn::GetAtt": ["CloudAnalyzerRole", "Arn"]
       }
     }
   },
   "Parameters": {
     "AccountId": {
-      "Type":  "String"
+      "Type": "String"
     },
     "Token": {
       "Type": "String"
@@ -70,33 +67,23 @@ Use the Cloud Analyzer policy below if you are creating a policy with CloudForma
                 "organizations:List*",
                 "organizations:Describe*"
               ],
-              "Resource": [
-                "*"
-              ]
+              "Resource": ["*"]
             },
             {
               "Sid": "S3SyncPermissions",
               "Effect": "Allow",
-              "Action": [
-                "s3:PutObject",
-                "s3:ListBucket",
-                "s3:PutObjectTagging",
-                "s3:PutObjectAcl"
-              ],
+              "Action": ["s3:PutObject", "s3:ListBucket", "s3:PutObjectTagging", "s3:PutObjectAcl"],
               "Resource": "arn:aws:s3:::sc-customer-*"
             },
             {
               "Sid": "S3BillingDBR",
               "Effect": "Allow",
-              "Action": [
-                "s3:get*"
-              ],
+              "Action": ["s3:get*"],
               "Resource": [
-                { "Fn::Join" : [ "", [ "arn:aws:s3:::", { "Ref" : "DetailedBillingReportBucket" },"/*"]]},
-                { "Fn::Join" : [ "", [ "arn:aws:s3:::", { "Ref" : "CostAndUsageBucket" },"/*"]]}
+                { "Fn::Join": ["", ["arn:aws:s3:::", { "Ref": "DetailedBillingReportBucket" }, "/*"]] },
+                { "Fn::Join": ["", ["arn:aws:s3:::", { "Ref": "CostAndUsageBucket" }, "/*"]] }
               ]
             }
-
           ]
         }
       }
@@ -110,8 +97,7 @@ Use the Cloud Analyzer policy below if you are creating a policy with CloudForma
             {
               "Effect": "Allow",
               "Principal": {
-                "AWS": ["arn:aws:iam::627743545735:root",
-                        "arn:aws:iam::884866656237:root"]
+                "AWS": ["arn:aws:iam::627743545735:root", "arn:aws:iam::884866656237:root"]
               },
               "Action": "sts:AssumeRole"
             }
@@ -141,10 +127,7 @@ Use the Cloud Analyzer policy below if you are creating a policy with CloudForma
           "Ref": "CostAndUsageBucket"
         },
         "IamCloudAnalyzerRoleArn": {
-          "Fn::GetAtt": [
-            "CloudAnalyzerRole",
-            "Arn"
-          ]
+          "Fn::GetAtt": ["CloudAnalyzerRole", "Arn"]
         }
       }
     }
@@ -156,11 +139,12 @@ Use the Cloud Analyzer policy below if you are creating a policy with CloudForma
 
 The policy grants the following permissions for operating the Cloud Analyzer system.
 
-* Access to retrieve billing reports using APIs and S3 for the Detailed Billing Report, the Cost Explorer, and the Cost & Usage Report.
-* Read-only permissions (on the master payer only) for the Amazon services that offer reserved capacity, such as EC2, RDS, RedShift, Elasticache, ElasticSearch, and DynamoDB.
-* Access to Support & Trusted Advisor for monitoring and changes to the reserved instance service limit.
+- Access to retrieve billing reports using APIs and S3 for the Detailed Billing Report, the Cost Explorer, and the Cost & Usage Report.
+- Read-only permissions (on the master payer only) for the Amazon services that offer reserved capacity, such as EC2, RDS, RedShift, Elasticache, ElasticSearch, and DynamoDB.
+- Access to Support & Trusted Advisor for monitoring and changes to the reserved instance service limit.
 
 ## Explanation Of Permissions In Policy
+
 ### S3 Billing Bucket
 
 The following are permissions for the CloudFormation script to read the S3 billing bucket names.
@@ -217,7 +201,8 @@ The following provides access to Service Limit information.
 "s3:AbortMultipartUpload"
 "s3:ListMultipartUploadParts"
 ```
- Support permissions allow Cloud Analyzer to create tickets if it hits any reserved instance related service limits.
+
+Support permissions allow Cloud Analyzer to create tickets if it hits any reserved instance related service limits.
 
 `"support:*"`
 
@@ -236,16 +221,11 @@ The following permissions are required to write information from your AWS Cost &
 
 ```json
 {
-             "Sid": "S3SyncPermissions",
-             "Effect": "Allow",
-             "Action": [
-               "s3:PutObject",
-               "s3:ListBucket",
-               "s3:PutObjectTagging",
-               "s3:PutObjectAcl"
-             ],
-             "Resource": "arn:aws:s3:::sc-customer-*"
-           }
+  "Sid": "S3SyncPermissions",
+  "Effect": "Allow",
+  "Action": ["s3:PutObject", "s3:ListBucket", "s3:PutObjectTagging", "s3:PutObjectAcl"],
+  "Resource": "arn:aws:s3:::sc-customer-*"
+}
 ```
 
 ### IAM Role
@@ -281,6 +261,7 @@ This role and the corresponding permissions are issued to the Cloud Analyzer pro
 ```
 
 ### Role ARN
+
 The policy below allows Cloud Analyzer to get the newly created role ARN. The role ARN is what allows Cloud Analyzer to access your AWS account.
 
 ```json
@@ -310,9 +291,9 @@ The policy below allows Cloud Analyzer to get the newly created role ARN. The ro
 
 ## Get Account ID and Token
 
-* You can find the account ID at the following location:
-https://console.spotinst.com/spt/settings/account/general
-* You can create a token at the following location:
-https://console.spotinst.com/spt/settings/tokens/permanent
+- You can find the account ID at the following location:
+  https://console.spotinst.com/spt/settings/account/general
+- You can create a token at the following location:
+  https://console.spotinst.com/spt/settings/tokens/permanent
 
 The user creating the token must have admin permissions.

@@ -25,22 +25,25 @@ From here, follow the steps on screen to connect your account.
 Log in to your AWS Master Payer account.
 
 ## Step 2
- Set up Cost and Usage Reports.
+
+Set up Cost and Usage Reports.
 
 ---
+
 **Important**:
-* If your account is not managed by an MSP, complete Step 2 and continue with the setup.
-* If your Account is managed by an MSP, your MSP must set up the Cost and Usage reports as described [here](eco/getting-started/connect-account-customer-working-with-msp.md). Skip Steps 2 and 3 and continue with Step 4.
+
+- If your account is not managed by an MSP, complete Step 2 and continue with the setup.
+- If your Account is managed by an MSP, your MSP must set up the Cost and Usage reports as described [here](eco/getting-started/connect-account-customer-working-with-msp.md). Skip Steps 2 and 3 and continue with Step 4.
 
 ---
 
-* To go to AWS Cost and Usage Report setup, click [here](https://console.aws.amazon.com/billing/home?#/reports).
-* To create a new report, follow the illustrations below. Important guidelines:
-  * Include Resource IDs under “Additional report details”
-  * Enable Data refresh settings.
-  * Time granularity Units should be Hourly.
-  * Enable report data integration for Amazon Athena.
-* Mark the checkboxes as shown below.
+- To go to AWS Cost and Usage Report setup, click [here](https://console.aws.amazon.com/billing/home?#/reports).
+- To create a new report, follow the illustrations below. Important guidelines:
+  - Include Resource IDs under “Additional report details”
+  - Enable Data refresh settings.
+  - Time granularity Units should be Hourly.
+  - Enable report data integration for Amazon Athena.
+- Mark the checkboxes as shown below.
 
 <img src="/eco/_media/gettingstarted-aws-connect-03.png" />
 
@@ -57,7 +60,7 @@ Log in to your AWS Master Payer account.
 
 ## Step 4
 
-Open the linked Cloudformation Template.  
+Open the linked Cloudformation Template.
 
 <img src="/eco/_media/gettingstarted-aws-connect-06.png" />
 
@@ -74,7 +77,7 @@ Mark the checkbox acknowledging that CloudFormation will create IAM resources, a
 <img src="/eco/_media/gettingstarted-aws-connect-08.png" />
 
 2. Paste the Spot Role ARN in the wizard.
-   * If your account is not managed by an MSP, click Done. Your registration is complete.
-   * If your account is managed by an MSP, contact Spot Support.
+   - If your account is not managed by an MSP, click Done. Your registration is complete.
+   - If your account is managed by an MSP, contact Spot Support.
 
 Once your Organization is connected to Eco, initial data processing will take up to 48 hours. You will be notified via email when your dashboards are ready.

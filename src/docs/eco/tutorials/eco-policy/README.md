@@ -71,12 +71,14 @@ The policy below is relevant only for customers who have not yet signed a contra
 
 The policy grants the following permissions for operating the Eco system.
 
-* Access to retrieve billing reports using APIs and S3 for the Detailed Billing Report, the Cost Explorer, and the Cost & Usage Report.
-* Read-only permissions (on the master payer only) for the Amazon services that offer reserved capacity, such as EC2, RDS, RedShift, Elasticache, ElasticSearch, and DynamoDB.
-* Access to Support & Trusted Advisor for monitoring and changes to the reserved instance service limit.
+- Access to retrieve billing reports using APIs and S3 for the Detailed Billing Report, the Cost Explorer, and the Cost & Usage Report.
+- Read-only permissions (on the master payer only) for the Amazon services that offer reserved capacity, such as EC2, RDS, RedShift, Elasticache, ElasticSearch, and DynamoDB.
+- Access to Support & Trusted Advisor for monitoring and changes to the reserved instance service limit.
 
 ## Explanation Of Permissions In Policy
+
 ### S3 Billing Bucket
+
 The following are permissions for the CloudFormation script to read the S3 billing bucket names.
 
 ```json
@@ -151,16 +153,11 @@ The following permissions are required to write information from your AWS Cost &
 
 ```json
 {
-             "Sid": "S3SyncPermissions",
-             "Effect": "Allow",
-             "Action": [
-               "s3:PutObject",
-               "s3:ListBucket",
-               "s3:PutObjectTagging",
-               "s3:PutObjectAcl"
-             ],
-             "Resource": "arn:aws:s3:::sc-customer-*"
-           }
+  "Sid": "S3SyncPermissions",
+  "Effect": "Allow",
+  "Action": ["s3:PutObject", "s3:ListBucket", "s3:PutObjectTagging", "s3:PutObjectAcl"],
+  "Resource": "arn:aws:s3:::sc-customer-*"
+}
 ```
 
 ### IAM Role

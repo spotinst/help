@@ -1,6 +1,6 @@
 # Introduction to Spot
 
-Using the Spot SaaS platform, you can easily provision, manage, and scale your compute infrastructure on your chosen cloud provider.  
+Using the Spot SaaS platform, you can easily provision, manage, and scale your compute infrastructure on your chosen cloud provider.
 
 <img src="/connect-your-cloud-provider/_media/introduction-to-spot.png" />
 
@@ -10,8 +10,8 @@ On top of that, Spot will run workloads on a mix of instance pricing options suc
 
 In order to handle the various workload types, Spot offers two products that answer the compute needs of engineering teams:
 
-* Elastigroup is suitable for running Web applications (autoscaling groups, ELB, and ALB)
-* Ocean is designed for running containers (Kubernetes and ECS)
+- Elastigroup is suitable for running Web applications (autoscaling groups, ELB, and ALB)
+- Ocean is designed for running containers (Kubernetes and ECS)
 
 ## Cloud Excess Capacity
 
@@ -19,7 +19,7 @@ As the majority of businesses are transitioning their workloads to the public cl
 
 The fact that not all resources are utilized most of the time has created a situation of excess capacity, idle resources that are not being used.
 
-In order to encourage utilizing the excess capacity, AKA *spot instances*, Cloud providers are re-selling those spare resources back to the market at a significant discount (up to 90%).
+In order to encourage utilizing the excess capacity, AKA _spot instances_, Cloud providers are re-selling those spare resources back to the market at a significant discount (up to 90%).
 
 However, when there is a rise in demand for a particular instance type, the cloud providers will terminate the discounted instance (with a 2-minute notification) and transfer it to a customer who is willing to pay more.
 

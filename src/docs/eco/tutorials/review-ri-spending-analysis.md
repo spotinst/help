@@ -6,14 +6,14 @@ Once Eco is connected to your cloud account, a period of data aggregation begins
 
 The Analysis page presents the following information:
 
-* Analysis
-  * Potential Yearly Savings: The yearly amount that could be saved by using the reserved instance recommendations.
-  * All time Waste: Amount wasted on unused reserved instances.
-  * Last Week Missed Savings: The amount you could have saved with a cost-optimized workload.
-  * Current RI Commitment: The monthly amount of reserved instance compute capacity you are currently committed to.
-  * Recommended RI Commitment: The monthly amount recommended for your workload following the Eco analysis.
-* Reserved Instance Total Waste: A chart that breaks down the potential yearly savings per service.
-* Potential Yearly Savings per AWS Service: A chart that shows the yearly savings that can be achieved with reserved instances per AWS service.
+- Analysis
+  - Potential Yearly Savings: The yearly amount that could be saved by using the reserved instance recommendations.
+  - All time Waste: Amount wasted on unused reserved instances.
+  - Last Week Missed Savings: The amount you could have saved with a cost-optimized workload.
+  - Current RI Commitment: The monthly amount of reserved instance compute capacity you are currently committed to.
+  - Recommended RI Commitment: The monthly amount recommended for your workload following the Eco analysis.
+- Reserved Instance Total Waste: A chart that breaks down the potential yearly savings per service.
+- Potential Yearly Savings per AWS Service: A chart that shows the yearly savings that can be achieved with reserved instances per AWS service.
 
 <img src="/eco/_media/tutorials-review-ri-spending-01.png" />
 
