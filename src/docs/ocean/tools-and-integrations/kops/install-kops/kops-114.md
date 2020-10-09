@@ -17,6 +17,7 @@ Download the proper  binary file for your operating system:
 * [windows_amd64](https://spotinst-public.s3.amazonaws.com/integrations/kubernetes/kops/v1.14.1-8aeefa9a4/windows/amd64/kops.exe)
 
 You can track and download the latest Kops versions using the below link :
+
 [Kops releases](https://github.com/spotinst/kubernetes-kops/releases)
 
 Make sure the kops binary file is executable
