@@ -1,0 +1,1 @@
+# Spot Policy in GCP
