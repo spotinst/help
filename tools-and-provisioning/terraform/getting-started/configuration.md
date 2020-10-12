@@ -1,6 +1,6 @@
 # Configuration
 
-##Provider Configuration
+## Provider Configuration
 
 For Terraform to work with Spot, configure the Spot provider and create an AWS group.
 

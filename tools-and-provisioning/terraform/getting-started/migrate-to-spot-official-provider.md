@@ -55,6 +55,7 @@ The Provider can also be added as described [here](https://support.spot.io/provi
 2. Execute the following command:
 `terraform import spotinst_elastigroup_aws.<name of the resource> <group-id>`
 3. The updated `terraform.tfstate` should now contain your desired elastigroups in addition to the previous resource with the `-IMPORT` suffix.
+
 Remove the resource with the `-IMPORT` suffix.
 
 ---
@@ -62,7 +63,6 @@ Remove the resource with the `-IMPORT` suffix.
 You must delete the “-IMPORT” resource to prevent your Elastigroup from being destroyed.
 
 ---
-
 4. Perform a `terraform plan` to ensure the state file has changed successfully. You are supposed to see a log of the changes.
 
 These changes will be addressed in the next step.
@@ -82,5 +82,4 @@ More examples provided within the following links:
 Do not run `terraform apply` until you fully migrate the Terraform schema to the new provider.
 
 ---
-
 3. Perform terraform applyto successfully apply your changes.
