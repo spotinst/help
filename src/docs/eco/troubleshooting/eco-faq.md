@@ -1,6 +1,7 @@
 # Eco FAQ
 
 ## Question: Savings Calculation
+
 When I purchase reserved instances, how are savings calculated?
 
 ### Answer:
@@ -13,9 +14,9 @@ The calculation of each purchase is multiplied by the number of instances.
 
 Example:
 
-* Eco purchases one reserved instance at a price of $24 for a duration of one year (amounting to two dollars per month).
-* Running an on-demand instance would cost three dollars per month.
-* Therefore, Eco saves the customer one dollar per month, and your are charged based on one dollar savings each month.
+- Eco purchases one reserved instance at a price of \$24 for a duration of one year (amounting to two dollars per month).
+- Running an on-demand instance would cost three dollars per month.
+- Therefore, Eco saves the customer one dollar per month, and your are charged based on one dollar savings each month.
 
 ## Question: Selling Fees
 
@@ -65,10 +66,10 @@ Why don’t I see data in my dashboard?
 
 There are several reasons why data might not appear in the dashboard. Please check possibilities below.
 
-* Data appears for the first time 48 hours after registration. If 48 hours have not passed yet, please try again when this period has finished.
-* S3 bucket name is missing. Verify that the bucket name you inserted during your registration to Eco appears in the AWS Cost and Usage report list.
+- Data appears for the first time 48 hours after registration. If 48 hours have not passed yet, please try again when this period has finished.
+- S3 bucket name is missing. Verify that the bucket name you inserted during your registration to Eco appears in the AWS Cost and Usage report list.
 
 <img src="/eco/_media/troubleshooting-faq-01.png" />
 
-* If data still does not appear, the IAMRole permissions may be missing or incorrect. Verify that your permissions are complete and the same as in the [Eco Policy](eco/tutorials/eco-policy/).
-* If you have checked the items above and still cannot see data in your dashboard, please contact the Spot support team.
+- If data still does not appear, the IAMRole permissions may be missing or incorrect. Verify that your permissions are complete and the same as in the [Eco Policy](eco/tutorials/eco-policy/).
+- If you have checked the items above and still cannot see data in your dashboard, please contact the Spot support team.

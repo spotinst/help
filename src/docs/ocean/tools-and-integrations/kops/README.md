@@ -8,5 +8,5 @@ To get started, complete the procedures in [Getting Started with KOPS on Spot Oc
 
 ## What’s Next?
 
-* [Migrate a Cluster](ocean/tools-and-integrations/kops/migrate-cluster.md)
-* Learn more about [Metadata Labels](ocean/tools-and-integrations/kops/metadata-labels.md)
+- [Migrate a Cluster](ocean/tools-and-integrations/kops/migrate-cluster.md)
+- Learn more about [Metadata Labels](ocean/tools-and-integrations/kops/metadata-labels.md)

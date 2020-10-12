@@ -1,11 +1,12 @@
 # Labels and Taints
 
-To make scheduling more efficient and compatible with Kubernetes, Ocean supports all of the Kubernetes constraint mechanisms for scheduling pods:
+To make scheduling more efficient and compatible with Kubernetes, Ocean supports the following [Kubernetes constraint mechanisms](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/) for scheduling pods:
 
-* Node Selector – Constrains pods to nodes with particular labels.
-* Node Affinity – Constrains which nodes your pod is eligible to be scheduled on based on labels on the node. Spot supports hard and soft affinity (requiredDuringSchedulingIgnoredDuringExecution,  preferredDuringSchedulingIgnoredDuringExecution)
-* Pod Affinity and Pod Anti-Affinity – Schedules a Pod based on which other Pods are or are not running on a node.
-* Pod Port Restrictions – Validates that each pod will have required ports available on the machine.
+- Node Selector – Constrains pods to nodes with particular labels.
+- Node Affinity – Constrains which nodes your pod is eligible to be scheduled on based on labels on the node. Spot supports hard and soft affinity (requiredDuringSchedulingIgnoredDuringExecution, preferredDuringSchedulingIgnoredDuringExecution)
+- Pod Affinity and Pod Anti-Affinity – Schedules a Pod based on which other Pods are or are not running on a node.
+- Pod Port Restrictions – Validates that each pod will have required ports available on the machine.
+- [Well-Known Labels](https://kubernetes.io/docs/reference/kubernetes-api/labels-annotations-taints/)
 
 ## Spot Labels
 
@@ -13,17 +14,17 @@ Spot labels allow you to adjust the default behavior of scaling in Ocean, by add
 
 The table below describes the Spot labels available.
 
-Label Key | Valid Values | Description
----|---|---
- spotinst.io/restrict-scale-down | true | When a node is running a pod with such a label, it will not be scaled down by the Spot autoscaler.
- spotinst.io/node-lifecycle | od |  Pods which contain this node selector are forced to run on an on-demand instance.
- spotinst.io/gpu-type | nvidia-tesla-v100, <br>nvidia-tesla-p100, <br>nvidia-tesla-k80, <br>nvidia-tesla-p4, <br>nvidia-tesla-t4 | Sets the GPU accelerator. This setting applies only to GKE clusters.
-
----
- **Tip**: Avoid adding Spot labels under the launch specification node labels section. These labels should to be added in your pod configuration only.
+| Label Key                       | Valid Values                                                                                             | Description                                                                                        |
+| ------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| spotinst.io/restrict-scale-down | true                                                                                                     | When a node is running a pod with such a label, it will not be scaled down by the Spot autoscaler. |
+| spotinst.io/node-lifecycle      | od                                                                                                       | Pods which contain this node selector are forced to run on an on-demand instance.                  |
+| spotinst.io/gpu-type            | nvidia-tesla-v100, <br>nvidia-tesla-p100, <br>nvidia-tesla-k80, <br>nvidia-tesla-p4, <br>nvidia-tesla-t4 | Sets the GPU accelerator. This setting applies only to GKE clusters.                               |
 
 ---
 
+**Tip**: Avoid adding Spot labels under the launch specification node labels section. These labels should to be added in your pod configuration only.
+
+---
 
 ## Examples
 

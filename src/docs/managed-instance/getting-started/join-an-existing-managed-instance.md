@@ -8,9 +8,9 @@ Running single instance workloads on Managed Instance will provide you with a si
 
 Before you can create a managed instance, you need to do the following:
 
-* Ensure your AWS account is connected to your [Spot account](connect-your-cloud-provider/aws-account.md).
-* Ensure your [Spot Policy](elastigroup/tutorials/elastigroup-tasks/update-spot-policy.md) is up to date.
-* Memory utilization graphs require the Cloudwatch agent. For more information, see the [AWS documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/mon-scripts.html).
+- Ensure your AWS account is connected to your [Spot account](connect-your-cloud-provider/aws-account.md).
+- Ensure your [Spot Policy](elastigroup/tutorials/elastigroup-tasks/update-spot-policy.md) is up to date.
+- Memory utilization graphs require the Cloudwatch agent. For more information, see the [AWS documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/mon-scripts.html).
 
 ## Import your Managed Instance
 
@@ -24,10 +24,10 @@ Before you can create a managed instance, you need to do the following:
 
 3. Complete the information in the form as described below.
 
-   * Region. Select the correct region from the list.
-   * Instance ID. Enter the ID of the AWS instance to import.
-   * Use the same Private IP. Choose this if you want the private IP in Spot to be the same as the one you used in AWS. When you choose this option, the existing instance in AWS will be terminated automatically after the migration is completed.
-   * Use a new Private ID. Choose this if you want the private IP in Spot to be different from the one you used in AWS. An available IP will be chosen from the subnet.
-   * Terminate existing instance. When you mark this option, the existing AWS instance will be terminated automatically after Spot has completed creation of the imported image.
+   - Region. Select the correct region from the list.
+   - Instance ID. Enter the ID of the AWS instance to import.
+   - Use the same Private IP. Choose this if you want the private IP in Spot to be the same as the one you used in AWS. When you choose this option, the existing instance in AWS will be terminated automatically after the migration is completed.
+   - Use a new Private ID. Choose this if you want the private IP in Spot to be different from the one you used in AWS. An available IP will be chosen from the subnet.
+   - Terminate existing instance. When you mark this option, the existing AWS instance will be terminated automatically after Spot has completed creation of the imported image.
 
 4. Click Select.

@@ -65,7 +65,7 @@
       - [Create Ocean Cluster from v4.x](ocean/tools-and-integrations/openshift/create-cluster-v4x)
       - [Create Ocean Cluster from v4.11](ocean/tools-and-integrations/openshift/create-cluster-v311)
   - [Troubleshooting](ocean/troubleshooting/)
-    - [Troubleshoot Controller](ocean/troubleshooting/troubleshoot-controller)      
+    - [Troubleshoot Controller](ocean/troubleshooting/troubleshoot-controller)
 - [**ELASTIGROUP**](elastigroup/)
   - [Getting Started](elastigroup/getting-started/)
     - [Elastigroup for AWS](elastigroup/getting-started/elastigroup-for-aws)

@@ -6,8 +6,8 @@ This tutorial covers the creation of an Ocean cluster using [Spot](https://conso
 
 ## Prerequisites
 
-* OpenShift is installed and configured on AWS or GCP
-* At least one worker node is up and running
+- OpenShift is installed and configured on AWS or GCP
+- At least one worker node is up and running
 
 ## Get Started
 
@@ -17,7 +17,7 @@ This tutorial covers the creation of an Ocean cluster using [Spot](https://conso
 <img src="/ocean/_media/tools-openshift-4x-01.png" />
 
 3. Click Create Cluster.
-4. Click  the use case for OpenShift, “Join an Existing OpenShift Cluster”.
+4. Click the use case for OpenShift, “Join an Existing OpenShift Cluster”.
 
 <img src="/ocean/_media/tools-openshift-4x-02.png" />
 

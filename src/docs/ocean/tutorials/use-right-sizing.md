@@ -10,10 +10,10 @@ This tutorial is relevant for Kubernetes users.
 
 Before performing the procedures in this tutorial, you will need the following:
 
-* A Spot account
-* An AWS account
-* [Metric Server](https://github.com/kubernetes-incubator/metrics-server#deployment) installed in your Kubernetes cluster
-* An [Ocean cluster](ocean/getting-started/eks/create-a-new-cluster.md) managing your Kubernetes worker nodes
+- A Spot account
+- An AWS account
+- [Metric Server](https://github.com/kubernetes-incubator/metrics-server#deployment) installed in your Kubernetes cluster
+- An [Ocean cluster](ocean/getting-started/eks/create-a-new-cluster.md) managing your Kubernetes worker nodes
 
 ## Step 1: Monitor Deployment Resource Consumption
 
@@ -46,9 +46,9 @@ Modify your deployment resource requirements by running the following from the c
 
 In addition to the above content, the Right Sizing tab may display one of several notification messages, determined by the status of the Metrics Server reports and the Right Sizing service. The messages indicate one of the following:
 
-* The Metrics Server pod is not yet installed on your cluster and must be installed.
-* The Metrics Server is installed, but the system has not received any reports.
-* The last report from the Metrics Server is more than three hours old.
-* The Metrics Server is installed and data is being collected by the Right Sizing service. The progress bar reflects the amount of data left to collect before suggestions can be displayed.
-* Data collection works as intended. There are no suggestions to make, or all previous suggestions have been applied or dismissed.
-* The Metrics Server is installed, but the system is still collecting data.
+- The Metrics Server pod is not yet installed on your cluster and must be installed.
+- The Metrics Server is installed, but the system has not received any reports.
+- The last report from the Metrics Server is more than three hours old.
+- The Metrics Server is installed and data is being collected by the Right Sizing service. The progress bar reflects the amount of data left to collect before suggestions can be displayed.
+- Data collection works as intended. There are no suggestions to make, or all previous suggestions have been applied or dismissed.
+- The Metrics Server is installed, but the system is still collecting data.

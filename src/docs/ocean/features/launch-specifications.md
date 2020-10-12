@@ -11,8 +11,8 @@ Launch specifications enable you to configure multiple workload types on the sam
 5. Name your Launch Specification (for ECS).
 6. Add the labels or attributes which identify your nodes or container instances
 7. Set the user data script and make sure to label your instances according to your label selection:
-   * For Kubernetes user data, refer to this [tutorial](ocean/tutorials/create-custom-labels.md).
-   * For ECS user data, refer to Example 2 in this tutorial.
+   - For Kubernetes user data, refer to this [tutorial](ocean/tutorials/create-custom-labels.md).
+   - For ECS user data, refer to Example 2 in this tutorial.
 8. Optional: Set Custom AMI, Instance Profile, and Security Groups for the launch specification.
 
 ## Example: Running a Windows-based Node in a Linux-based Cluster
@@ -20,6 +20,7 @@ Launch specifications enable you to configure multiple workload types on the sam
 In this scenario, the default Ocean AMI will include a Linux OS, but for a specific pod, WinPod a Windows image is required. To ensure that the WinPod pod is using a Windows image, perform the following steps:
 
 1. Configure your WinPod pod with a dedicated nodeSelector.
+
 ```json
 apiVersion: v1
 kind: Pod
@@ -39,8 +40,8 @@ spec:
    b. Navigate to your Ocean cluster.
    c. Click on the Actions menu and select Launch Specifications.
    d. Click Add Specification and add the following label:
-      Key: runOnWin
-      Value: true
+   Key: runOnWin
+   Value: true
    e. Set the User Data script and label your nodes with the above label.
    f. Set the custom launch specification AMI to Windows OS.
 
@@ -53,4 +54,5 @@ resources:
         limits:
           nvidia.com/gpu: 1
 ```
+
 You don’t need to add any extra label for GPU support. You can use taints that require your GPU-based pods to select a specific launch specification which contains the GPU AMI.

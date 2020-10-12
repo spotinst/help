@@ -8,7 +8,7 @@ This tutorial is relevant for Kubernetes on AWS.
 
 ## Description
 
-Using Run Workloads,  you can completely adjust and manage Kubernetes clusters from the Ocean dashboard without the overhead in provisioning pods via the cluster itself. This will allow both the infrastructure and the pod provisioning to be handled by Ocean.
+Using Run Workloads, you can completely adjust and manage Kubernetes clusters from the Ocean dashboard without the overhead in provisioning pods via the cluster itself. This will allow both the infrastructure and the pod provisioning to be handled by Ocean.
 
 This feature enables you to manage the cluster configuration and run operations such as the creation of workloads. You can achieve this easily by using the Spot console and gaining the full picture of your cluster provided by Ocean.
 
@@ -28,8 +28,8 @@ Under the Form tab, complete the information in the form.
 
 <img src="/ocean/_media/tutorials-run-workload-02.png" />
 
-* Namespace. Drop down list of namespaces imported from the cluster by the Spot controller.
-* Kind. Run workloads supports running workloads of Deployment, Daemonset, Pod.
+- Namespace. Drop down list of namespaces imported from the cluster by the Spot controller.
+- Kind. Run workloads supports running workloads of Deployment, Daemonset, Pod.
 
 Additional parameters are related to environmental variables, resource requests, and constraints such as Node Selector and Pod Affinity.
 

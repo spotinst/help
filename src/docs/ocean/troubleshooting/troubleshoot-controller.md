@@ -2,8 +2,6 @@
 
 If the banner below appears at the top of your Ocean dashboard, your Spot Controller is not reporting a heartbeat to the Ocean cluster.
 
-
-
 To troubleshoot the issue, complete each step below until you find the issue.
 
 ## Step 1: Check the Configuration
@@ -20,7 +18,7 @@ data:
  spotinst.token: <API_TOKEN>
  spotinst.account: <ACCOUNT_ID>
  spotinst.cluster-identifier: <CLUSTER_ID>
- ```
+```
 
 ## Step 2: Is the Controller Running?
 
@@ -64,7 +62,7 @@ If the steps above do not solve your issue, get the controller logs using the st
 
 `kubectl exec -ti spotinst-kubernetes-cluster-controller-68b75c4794-bkmm7 bash -n kube-system`
 
-3. Change the path:  `cd log/spotinst`
+3. Change the path: `cd log/spotinst`
 4. To get the logs, run the command:
 
 `cat spotinst-kubernetes-controller.log`

@@ -35,6 +35,7 @@ Add labels to the nodes by using the user data:
 `--kubelet-extra-args --node-labels=mykey=myvalue,mykey2=myvalue2`
 
 For example:
+
 ```sh
 #!/bin/bash
 set -o xtrace
