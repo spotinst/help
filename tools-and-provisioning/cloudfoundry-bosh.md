@@ -51,7 +51,7 @@ vm_types:
         _product: Linux/UNIX
         _risk: 100
         ```
-
+        
 `spotinst_product` **[String, optional]**: Product name. Defaults to `Linux/UNIX` (can be set to `Linux/UNIX (Amazon VPC)` if your account has both EC2 VPC and EC2 Classic platforms).
 `spotinst_risk` **[Integer, optional]**: The percentage of Spot instances that would spin up from the target capacity. Set to 0 to use On-Demand instances. Defaults to `100` (all instances should be Spot).
 `spotinst_disabled` **[Boolean, optional**]: Set to `true` to disable the Spot CPI for a specific deployment. Defaults to `false` (use Spot CPI always).
