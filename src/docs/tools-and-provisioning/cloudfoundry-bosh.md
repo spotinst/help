@@ -51,7 +51,7 @@ vm_types:
         _product: Linux/UNIX
         _risk: 100
         ```
-        
+
 `spotinst_product` **[String, optional]**: Product name. Defaults to `Linux/UNIX` (can be set to `Linux/UNIX (Amazon VPC)` if your account has both EC2 VPC and EC2 Classic platforms).
 `spotinst_risk` **[Integer, optional]**: The percentage of Spot instances that would spin up from the target capacity. Set to 0 to use On-Demand instances. Defaults to `100` (all instances should be Spot).
 `spotinst_disabled` **[Boolean, optional**]: Set to `true` to disable the Spot CPI for a specific deployment. Defaults to `false` (use Spot CPI always).
@@ -80,7 +80,7 @@ export AWS_ELASTIC_IP="1.2.3.4"
 export SSH_PRIVATE_KEY="/path/to/private.key"
 ```
 
-### Step 6. Create a New Environment
+## Step 6. Create a New Environment
 
 Finally, create the environment using bosh `create-env`.
 
@@ -105,7 +105,7 @@ $ source .envrc && bosh create-env deployment/bosh.yml \ --state state/state.jso
 --var-file private_key=$SSH_PRIVATE_KEY
 ```
 
-### Step 7. Configure an Alias for Your Environment
+## Step 7. Configure an Alias for Your Environment
 
 Once the instance with BOSH Director is running, point your CLI to it, saving the environment with the alias.
 
