@@ -2,12 +2,13 @@
 
 Ocean is a managed infrastructure service for Kubernetes that automatically adjusts infrastructure capacity and size to meet the needs of pods, containers, and applications.
 
-In this procedure, you will  join an existing GKE cluster to Ocean using the [Spot Console](http://console.spotinst.com/).
+In this procedure, you will join an existing GKE cluster to Ocean using the [Spot Console](http://console.spotinst.com/).
 
 ## Prerequisites
-* [Connect your GCP project to Spot](connect-your-cloud-provider/gcp-project.md). If you have done this already, go on to the next step. If you don’t have a GCP project, go to the [Manage Resources](https://console.cloud.google.com/cloud-resource-manager?_ga=2.24189306.-1955943244.1544264785) page.
-* Ensure that billing is enabled for your project: Learn how to [enable billing](https://cloud.google.com/billing/docs/how-to/modify-project).
-* Ensure that you have enabled the Google Kubernetes Engine API: Enable the [GKE API](https://console.cloud.google.com/apis/library/container.googleapis.com?q=kubernetes%20engine&_ga=2.13270391.-1955943244.1544264785).
+
+- [Connect your GCP project to Spot](connect-your-cloud-provider/gcp-project.md). If you have done this already, go on to the next step. If you don’t have a GCP project, go to the [Manage Resources](https://console.cloud.google.com/cloud-resource-manager?_ga=2.24189306.-1955943244.1544264785) page.
+- Ensure that billing is enabled for your project: Learn how to [enable billing](https://cloud.google.com/billing/docs/how-to/modify-project).
+- Ensure that you have enabled the Google Kubernetes Engine API: Enable the [GKE API](https://console.cloud.google.com/apis/library/container.googleapis.com?q=kubernetes%20engine&_ga=2.13270391.-1955943244.1544264785).
 
 ## Get Started
 
@@ -18,8 +19,8 @@ In the left menu of the Spot console, click Ocean/Cloud Clusters, and click Crea
 ## Step 1: General
 
 1. In the General page, enter a Cluster Name and the Location Type and click the Region where the cluster is running.
-   * Cluster Name is the name of the Ocean entity that will be created.
-   * Location Type can be either Zonal or Regional.
+   - Cluster Name is the name of the Ocean entity that will be created.
+   - Location Type can be either Zonal or Regional.
 2. Select the GKE cluster to import the configuration from.
 
 <img src="/ocean/_media/gke-general.png" width="400" height="384" />
@@ -29,13 +30,13 @@ In the left menu of the Spot console, click Ocean/Cloud Clusters, and click Crea
 ## Step 2: Compute
 
 1. Ocean imports the compute configuration from your GKE cluster and displays it in the Compute page. Confirm or edit the configuration if need:
-   * Machine Types.
+   - Machine Types.
      All types are selected by default to grant Ocean the most freedom of operation possible. Click Customize if an adjustment is required.
-   * Resource Limit
-     * Max vCPUs
-     * Max Memory (GB)
-   * Additional Configurations
-     * Draining Timeout
+   - Resource Limit
+     - Max vCPUs
+     - Max Memory (GB)
+   - Additional Configurations
+     - Draining Timeout
 
 <img src="/ocean/_media/gke-compute.png" width="400" height="290" />
 
@@ -69,7 +70,7 @@ For any change in the original node pool please contact us.
 
 ## Step 4: Review
 
-Review all the Ocean settings you have configured. Click Create to finish or use the  generated JSON template to create the Ocean cluster using other tooling.
+Review all the Ocean settings you have configured. Click Create to finish or use the generated JSON template to create the Ocean cluster using other tooling.
 
 You’re all set! Ocean will now ensure the most cost-effective capacity and sizing possible for your cluster.
 

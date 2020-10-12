@@ -6,20 +6,20 @@ Large-scale compute clusters are expensive, so it is important to use them well.
 
 The ECS topology is built on clusters, where each cluster has services (which can be referred to as applications), and services run tasks. Each task has a task definition which tells the scheduler how many resources the task requires.
 
-For example, if a cluster runs 10 machines of c3.large (2 vCPUs and 3.8 GiB of RAM) and 10 machines of c4.xlarge (4 vCPUs and 7.5 GiB of RAM), the total vCPUs is 60*1024 = 61,440 CPU Units and the total RAM is 113 GiB.
+For example, if a cluster runs 10 machines of c3.large (2 vCPUs and 3.8 GiB of RAM) and 10 machines of c4.xlarge (4 vCPUs and 7.5 GiB of RAM), the total vCPUs is 60\*1024 = 61,440 CPU Units and the total RAM is 113 GiB.
 
 The issue here is that if a single task requires more RAM than the individual instance has, it can’t be scheduled. In the example above, a task with 16 GiB of RAM won’t start, despite the total available RAM being 113 GiB. Ocean matches the task with the appropriate instance type and size while requiring zero overhead or management.
 
-Ocean dynamically scales the cluster up and down to ensure there are always sufficient resources to run all tasks and at the same time maximizes resource allocation in the cluster. It does so by optimizing task placement across the cluster in a process we call Tetris Scaling, and by automatically managing headroom, a buffer of spare capacity (in terms of both memory and CPU) that ensures that when you want to quickly scale  more containers, you don’t have to wait for new VMs (i.e., instances) to be provisioned.
+Ocean dynamically scales the cluster up and down to ensure there are always sufficient resources to run all tasks and at the same time maximizes resource allocation in the cluster. It does so by optimizing task placement across the cluster in a process we call Tetris Scaling, and by automatically managing headroom, a buffer of spare capacity (in terms of both memory and CPU) that ensures that when you want to quickly scale more containers, you don’t have to wait for new VMs (i.e., instances) to be provisioned.
 
 ## Scale Up Behavior
 
 Ocean keeps track of tasks that cannot be scheduled and employs the following process for scaling up.
 
-* Ocean continuously looks for unsatisfied ECS services, i.e., services for which the count of running tasks is lower than the desired task count.
-* For those services, Ocean simulates placement of the desired tasks on the cluster’s current container instances, including instances that were just launched and not yet registered as container instances (for example, according to previous scale up activity).
+- Ocean continuously looks for unsatisfied ECS services, i.e., services for which the count of running tasks is lower than the desired task count.
+- For those services, Ocean simulates placement of the desired tasks on the cluster’s current container instances, including instances that were just launched and not yet registered as container instances (for example, according to previous scale up activity).
 
-* If the simulation results in no container instances that are able to host all pending tasks, Ocean will scale up for the remaining tasks. During the scale up, Ocean uses its launch specifications to consider all placement constraints.
+- If the simulation results in no container instances that are able to host all pending tasks, Ocean will scale up for the remaining tasks. During the scale up, Ocean uses its launch specifications to consider all placement constraints.
 
 When the process is completed, all tasks are scheduled and running. Ocean continues to monitor for unsatisfied ECS services, as described in Step 1 above, and will initiate additional scale up if it becomes necessary.
 
@@ -47,15 +47,16 @@ In order to use this feature, you will need `ecs:putAttributes` permissions in y
 
 Ocean monitors the cluster and runs bin-packing algorithms that simulate different permutations of task placement across the available container instances. A container instance is considered for scale down when:
 
-* All the running tasks on the particular instance are schedulable on other instances.
-* The instance’s removal won’t reduce the headroom below the target.
-* Ocean will prefer to downscale the least utilized instances first.
+- All the running tasks on the particular instance are schedulable on other instances.
+- The instance’s removal won’t reduce the headroom below the target.
+- Ocean will prefer to downscale the least utilized instances first.
 
 When an instance is chosen for scale-down it will be drained. Its running tasks are rescheduled on other instances, and the instance is then terminated.
 
 ### Usage Notes:
-* Ensure that permission for `ecs:stopTask` is included in your Spot policy. The `stopTask` action is required for the drain process and used to stop tasks that are still not drained after the draining timeout has passed.
-* Scale-Down actions are limited by default to 10% of the cluster size at a time. This parameter is configurable.
+
+- Ensure that permission for `ecs:stopTask` is included in your Spot policy. The `stopTask` action is required for the drain process and used to stop tasks that are still not drained after the draining timeout has passed.
+- Scale-Down actions are limited by default to 10% of the cluster size at a time. This parameter is configurable.
 
 ### Scale Down Prevention
 

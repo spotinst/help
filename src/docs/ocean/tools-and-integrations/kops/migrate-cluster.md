@@ -2,9 +2,9 @@
 
 ## Prerequisites
 
-* Ensure that you are in the correct cluster context for kubectl.
-* If you are importing a cluster, the cluster name must be the same as the primary instance group name.
-* Before doing a workload migration, ensure that there are no unscheduled pods. If there are unscheduled pods, the migration will stop.
+- Ensure that you are in the correct cluster context for kubectl.
+- If you are importing a cluster, the cluster name must be the same as the primary instance group name.
+- Before doing a workload migration, ensure that there are no unscheduled pods. If there are unscheduled pods, the migration will stop.
 
 ## Option 1: Hybrid – Migrate Part of an Existing Cluster Managed by AWS Auto Scaling Groups to Ocean
 
@@ -23,6 +23,7 @@ This section describes how to perform a hybrid migration. This enables you to mi
 ### Worker Node Migration
 
 In the case of multiple worker node Instance Groups:
+
 1. On your primary Instance Group, set the following labels:
 
 `spotinst.io/ocean-default-launchspec: "true"`  
@@ -44,7 +45,7 @@ spec:
 ```
 
 2. Label the rest of the instance groups you want to migrate to Ocean with the label:
-`spotinst.io/hybrid: "true"`.
+   `spotinst.io/hybrid: "true"`.
 
 Example:
 
@@ -63,8 +64,8 @@ spec:
 
 3. Run KOPS Update. KOPS will now identify and create the Ocean Cluster along with the Ocean launch specifications for each labeled instance group.
 4. Workload Migration. Do one of the following:
-      * [Spot Automated Workload Migration](ocean/tutorials/migrate-workload.md)
-      * Gradually scale down your existing Auto Scaling Groups to zero. Ocean will automatically provision the required instances to ensure your pods are scheduled.
+   - [Spot Automated Workload Migration](ocean/tutorials/migrate-workload.md)
+   - Gradually scale down your existing Auto Scaling Groups to zero. Ocean will automatically provision the required instances to ensure your pods are scheduled.
 5. Clean up (optional):
    1. Delete imported Auto Scaling Groups.
    2. Delete all Launch Configurations.
@@ -78,8 +79,9 @@ The migration of existing deployment will consist of two separate layers: master
 `export KOPS_FEATURE_FLAGS="+Spotinst,SpotinstOcean"`
 
 2. Ensure that Spot environment variables are defined on the KOPS management server:
-* `SPOTINST_TOKEN`
-* `SPOTINST_ACCOUNT`
+
+- `SPOTINST_TOKEN`
+- `SPOTINST_ACCOUNT`
 
 ### Worker Nodes
 
@@ -101,8 +103,8 @@ spec:
 
 3. Run KOPS Update. KOPS will now identify and create the Ocean Cluster along with the Ocean launch specifications for each labeled instance group.
 4. Workload Migration. Do one of the following:
-   * [Spot Automated Workload Migration](ocean/tutorials/migrate-workload.md)
-   * Gradually scale down your existing Auto Scaling Groups to zero. Ocean will automatically provision the required instances to ensure your pods are scheduled.
+   - [Spot Automated Workload Migration](ocean/tutorials/migrate-workload.md)
+   - Gradually scale down your existing Auto Scaling Groups to zero. Ocean will automatically provision the required instances to ensure your pods are scheduled.
 5. Clean up (optional):
    1. Delete imported Auto Scaling Groups.
    2. Delete all Launch Configurations.

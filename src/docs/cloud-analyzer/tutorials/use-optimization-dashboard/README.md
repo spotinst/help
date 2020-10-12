@@ -8,24 +8,24 @@ The dashboard includes several tabs which are described below.
 
 At the top, you will find a summary line which displays the following:
 
-* Last Week Spot Missed Savings: The amount you could have saved over the past week by optimizing workloads across the selected accounts.
-* Last Week RI Missed Savings: The amount you could have saved with a cost-optimized RI workload.
-* Monthly Spot Potential Savings: The amount of money that could be saved by migrating suitable workloads to run on spot instances rather than on-demand.
-* Monthly RI Potential Savings: The amount of money that could be saved by migrating suitable workloads to run on reserved Instances rather than on-demand.
+- Last Week Spot Missed Savings: The amount you could have saved over the past week by optimizing workloads across the selected accounts.
+- Last Week RI Missed Savings: The amount you could have saved with a cost-optimized RI workload.
+- Monthly Spot Potential Savings: The amount of money that could be saved by migrating suitable workloads to run on spot instances rather than on-demand.
+- Monthly RI Potential Savings: The amount of money that could be saved by migrating suitable workloads to run on reserved Instances rather than on-demand.
 
 Below the summary line, you will find the following graphs:
 
-* Spot Estimated Potential Savings: A chart that demonstrates the potential monthly savings attainable using spot instances broken down per cloud account.
-* RI Estimated Potential Savings:  The potential monthly savings attainable using reserved instances broken down per cloud account.
-* Lifecycle Breakdown: A pie chart that demonstrates how compute hours across all accounts are spread out across different lifecycles (pricing models): Spot, RI and On-Demand.
-* Cost Efficiency over Time: A graph showing the aggregated cost efficiency of all your provider accounts (connected and not connected to the platform) over time.
-* Efficiency % = (Current Savings/Potential savings)*100.
+- Spot Estimated Potential Savings: A chart that demonstrates the potential monthly savings attainable using spot instances broken down per cloud account.
+- RI Estimated Potential Savings: The potential monthly savings attainable using reserved instances broken down per cloud account.
+- Lifecycle Breakdown: A pie chart that demonstrates how compute hours across all accounts are spread out across different lifecycles (pricing models): Spot, RI and On-Demand.
+- Cost Efficiency over Time: A graph showing the aggregated cost efficiency of all your provider accounts (connected and not connected to the platform) over time.
+- Efficiency % = (Current Savings/Potential savings)\*100.
 
 At the bottom of the Compute Overview, you will find the Use-cases Breakdown. This section provides previews of the other Optimization tabs:
 
-* [Containers](cloud-analyzer/tutorials/use-optimization-dashboard/containers.md): Recommendation and estimate of savings if you would run your container workload on spot instances instead of on-demand instances
-* [Elastic Applications](cloud-analyzer/tutorials/use-optimization-dashboard/elastic-applications.md): Recommendation and estimate of savings if you would run your application workload on spot instances instead of on-demand instances
-* [Reservations](cloud-analyzer/tutorials/use-optimization-dashboard/reservations.md): Recommendation and estimate of savings if you would run your workload on reserved instances instead of on-demand instances
+- [Containers](cloud-analyzer/tutorials/use-optimization-dashboard/containers.md): Recommendation and estimate of savings if you would run your container workload on spot instances instead of on-demand instances
+- [Elastic Applications](cloud-analyzer/tutorials/use-optimization-dashboard/elastic-applications.md): Recommendation and estimate of savings if you would run your application workload on spot instances instead of on-demand instances
+- [Reservations](cloud-analyzer/tutorials/use-optimization-dashboard/reservations.md): Recommendation and estimate of savings if you would run your workload on reserved instances instead of on-demand instances
 
 Each preview contains the number of instances in that category currently running, an estimation of additional savings that can be obtained using optimization, and the current savings percentage.
 

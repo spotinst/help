@@ -8,5 +8,5 @@ To get started, complete the procedures in [Getting Started with KOPS on Spot Oc
 
 ## What’s Next?
 
-* Migrate a Cluster
-* Learn more about Metadata Labels
+- Migrate a Cluster
+- Learn more about Metadata Labels

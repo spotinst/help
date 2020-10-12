@@ -10,8 +10,8 @@ The Running Hours feature is recommended for non-production environments (e.g., 
 
 The example above shows a weekly schedule with running hours indicated in blue and off hours in gray. On Mondays the cluster runs 24 hours, on Tuesdays from 8 am to 6 pm, and on Wednesdays not at all.
 
-* You can define running hours in minimum chunks of 30 minutes.
-* The schedule appears in your local time, but Ocean uses UTC time zone internally.
+- You can define running hours in minimum chunks of 30 minutes.
+- The schedule appears in your local time, but Ocean uses UTC time zone internally.
 
 ## Scaling Behavior (Ocean For Kubernetes)
 

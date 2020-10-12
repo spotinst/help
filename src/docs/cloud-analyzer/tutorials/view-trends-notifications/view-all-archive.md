@@ -23,8 +23,8 @@ You can filter the events displayed in the table by tags and attributes or searc
 
 On this page, you can also do the following:
 
-* Archive: Archive events you do not want to see in the Trends & Notifications summary table
-* Reactivate: Unarchive events so that they may appear in the Trends & Notifications summary table
-* Event Definition: [Define new criteria](cloud-analyzer/tutorials/view-trends-notifications/view-all-archive.md) for the system to recognize new irregular events
+- Archive: Archive events you do not want to see in the Trends & Notifications summary table
+- Reactivate: Unarchive events so that they may appear in the Trends & Notifications summary table
+- Event Definition: [Define new criteria](cloud-analyzer/tutorials/view-trends-notifications/view-all-archive.md) for the system to recognize new irregular events
 
 <img src="/cloud-analyzer/_media/tutorials-trends-view-all-03.png" />

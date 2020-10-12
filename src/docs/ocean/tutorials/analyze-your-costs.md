@@ -16,22 +16,22 @@ The bar chart shows the cost of your workloads over time. The default display is
 
 The breakdown table presents an itemization of costs per namespace and costs within each namespace. Items include the following:
 
-* Namespace: Name of the namespace
-* % of total costs: Cost of the namespace as a portion of the total of the entire cluster
-* Compute Cost: The portion of the cost for computing
-* Storage Cost: The portion of the cost for Kubernetes persistent volumes and instance volumes
-* Total Cost: Total cost of that namespace
+- Namespace: Name of the namespace
+- % of total costs: Cost of the namespace as a portion of the total of the entire cluster
+- Compute Cost: The portion of the cost for computing
+- Storage Cost: The portion of the cost for Kubernetes persistent volumes and instance volumes
+- Total Cost: Total cost of that namespace
 
 <img src="/ocean/_media/tutorials-analyze-your-costs-02.png" />
 
 Double-click on the arrow to show a breakdown of the workloads within the namespace. For each workload, you can see the following details:
 
-* Name: Name of the workload in the namespace
-* Kind: The Kubernetes kind, such as deployment, daemonSet, statefulSet, cronJob
-* % of Namespace Costs: Cost of the workload as a portion of the all the workloads in the namespace
-* Compute Cost: The portion of the cost for computing
-* Storage Cost: The portion of the cost for data storage
-* Total Cost: The total cost of that workload
+- Name: Name of the workload in the namespace
+- Kind: The Kubernetes kind, such as deployment, daemonSet, statefulSet, cronJob
+- % of Namespace Costs: Cost of the workload as a portion of the all the workloads in the namespace
+- Compute Cost: The portion of the cost for computing
+- Storage Cost: The portion of the cost for data storage
+- Total Cost: The total cost of that workload
 
 ## Grouping Options
 
@@ -41,11 +41,11 @@ You can define the time period for which the analysis is presented and set your 
 
 Click on Time to open the calendar. You can choose from the following time periods:
 
-* 7D: The last seven days. This is the default display.
-* 14D: The last 14 days.
-* MTD: From the first of the month to the present day.
-* 1M: The last 30 days.
-* Custom: In addition, you can create a custom time period by clicking on the start date and end date in the calendar.
+- 7D: The last seven days. This is the default display.
+- 14D: The last 14 days.
+- MTD: From the first of the month to the present day.
+- 1M: The last 30 days.
+- Custom: In addition, you can create a custom time period by clicking on the start date and end date in the calendar.
 
 The example below shows a custom definition for the days February 5 – 8.
 
@@ -57,11 +57,11 @@ After you change the time period, Ocean will recalculate the presentation of the
 
 The default grouping is by namespace. To choose a different grouping, click Group By and choose one of the groupings which include:
 
-* Namespace
-* Label (Namespace)
-* Annotation (Namespace)
-* Label (Resource)
-* Annotation (Resource)
+- Namespace
+- Label (Namespace)
+- Annotation (Namespace)
+- Label (Resource)
+- Annotation (Resource)
 
 Once you have chosen a grouping, choose the Key from the list of keys in your cluster.
 

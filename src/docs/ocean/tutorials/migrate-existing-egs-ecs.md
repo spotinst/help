@@ -2,8 +2,8 @@
 
 The following tutorial covers importing any existing Elastigroups running an ECS cluster to Ocean.
 
-* To migrate a cluster with only one Elastigroup, refer to Use Case 1.
-* To migrate a cluster with multiple Elastigroups, refer to Use Case 2.
+- To migrate a cluster with only one Elastigroup, refer to Use Case 1.
+- To migrate a cluster with multiple Elastigroups, refer to Use Case 2.
 
 ## Use Case 1: Single Elastigroup
 
@@ -23,11 +23,11 @@ Ocean manages the entirety of the ECS cluster’s container-instances. If the in
 
 To complete this tutorial, gather the following information:
 
-* List the Elastigroups connected with the target ECS Cluster.
-* For each of the Elastigroups, save the following data for future use:
-  * Autoscaler Custom Attributes
-  * User-Data scripts
-  * AMI ID
+- List the Elastigroups connected with the target ECS Cluster.
+- For each of the Elastigroups, save the following data for future use:
+  - Autoscaler Custom Attributes
+  - User-Data scripts
+  - AMI ID
 
 ### Step 1: Create the Ocean Cluster
 
