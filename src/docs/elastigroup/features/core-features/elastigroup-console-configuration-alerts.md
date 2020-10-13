@@ -5,7 +5,7 @@ Configuration alerts allow more visibility and control of group configuration an
 ## What Do We Validate?
 * Resources exist in AWS
 * Block Device Mapping
-  * If Block Device Mapping is configured for the root device, the BDM snapshot Id should be identical to the Image snapshot ID
+  * If Block Device Mapping is configured for the root device, the BDM snapshot ID should be identical to the Image snapshot ID
   * The BDM volume size must be greater than the Image volume size.
 * Integration connection passes
 
