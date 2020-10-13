@@ -37,7 +37,7 @@ The algorithm assigns weights to each of the parameters stated above, calculates
 
 ## Newest Instance Policy
 
-This policy will change the behavior of the default policy’s Times Considerations (parameter #5 described above) to prefer the newest instances in the group.
+This policy will change the behavior of the default policy’s Time Considerations to prefer the newest instances in the group.
 
 Using the newest instances policy enables you to extend as much as possible the functional and stable instances.
 
