@@ -86,7 +86,7 @@ Body
 
 Body
 
-```YAML
+```yaml
 SpectrumAlert:
     Type: Custom::spectrumAlert
     Properties:
