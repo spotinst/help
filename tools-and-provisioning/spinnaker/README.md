@@ -1,4 +1,4 @@
-# Spinnaker Overview
+# Spinnaker
 
 Spinnaker is an open source, multi-cloud, continuous delivery platform for releasing software changes with confidence and high velocity.
 
