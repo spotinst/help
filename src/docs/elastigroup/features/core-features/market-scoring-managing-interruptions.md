@@ -1,6 +1,6 @@
 # Market Scoring & Managing Interruptions
 
-This article explains how Elastigroup manages the replacement of instances in spot markets with predicted interruptions to ensure that your workloads remain available, as well as how Elastigroup handles the process of ranking (scoring) Spot instance markets.
+This article explains how Elastigroup manages the replacement of instances in spot markets with predicted interruptions to ensure that your workloads remain available, as well as how Elastigroup handles the process of ranking (scoring) spot instance markets.
 
 ## How Interruption Management Works
 
@@ -16,7 +16,7 @@ The flow chart below shows an overview of how the spot instance replacement take
 
 ## Fix Strategy
 
-Elastigroup continuously monitors spot markets to identify available markets for workloads currently running on On-Demand instances. When a Spot market becomes available, a new Spot instance is launched and the old On-Demand instance is drained and terminated.
+Elastigroup continuously monitors spot markets to identify available markets for workloads currently running on On-Demand instances. When a spot market becomes available, a new spot instance is launched and the old On-Demand instance is drained and terminated.
 
 <img src="/elastigroup/_media/corefeatures-interruptions-02.png" />
 
