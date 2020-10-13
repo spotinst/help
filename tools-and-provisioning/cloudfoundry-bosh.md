@@ -141,5 +141,8 @@ Then, we need to download the Zookeeper deployment.
 And finally, we can run deploy by providing a path to deployment manifest.
 
 `$ bosh -e spotinst -d zookeeper deploy zookeeper.yml`
+<<<<<<< Updated upstream
 
  
+=======
+>>>>>>> Stashed changes
