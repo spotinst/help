@@ -28,9 +28,7 @@ An existing Placement Group configured in your AWS account.
 ## Using the API
 
 1. Add the Placement Group property using the Update or [Create API](https://api.spotinst.com/elastigroup/amazon-web-services/create/).
-
 2. In the case of creating a group, add the “placementGroupName”to the Availability zone setting
-
 3. In the case of updating a group, use the following Body in your request:
 
 ```json
