@@ -11,7 +11,7 @@ Creating scheduling tasks with cron expressions can be done through the Console 
 
 ---
 
-The cron expression should include numerical values only. You can validate your cron expression http://crontab.guru/.
+The cron expression should include numerical values only. You can validate your cron expression at:  http://crontab.guru/.
 
 ### Example
 
