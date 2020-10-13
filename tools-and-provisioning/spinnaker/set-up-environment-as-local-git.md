@@ -72,7 +72,7 @@ To finish setting up the environment, complete the following steps:
 ~/dev/spinnaker/scripts/clouddriver-start.sh~/dev/spinnaker/scripts/orca-start.sh~/dev/spinnaker/scripts/echo-start.sh~/dev/spinnaker/scripts/deck-start.sh
 ```
 
-5. Open the Spinnaker browser URL: [http://localhost:9000/]
+5. Open the Spinnaker browser URL: [http://localhost:9000/](http://localhost:9000/#/applications/spotapp/clusters/instanceDetails/spot/i-0b473d5302ae60464)
 
 In the Spinnaker browser, you should see the Spot information as shown in the example below on the Applications page (see spotapp-prod-v001 on the right side).
 
