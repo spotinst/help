@@ -1,4 +1,4 @@
-# Spinnaker
+# Spinnaker Overview
 
 Spinnaker is an open source, multi-cloud, continuous delivery platform for releasing software changes with confidence and high velocity.
 
@@ -10,6 +10,8 @@ By integrating Spinnaker with Spot, you will be able to use Elastigroup’s nume
 Spinnaker has a modular architecture, and each Spinnaker service has its dedicated purpose.
 
 The overview below relates only to services relevant to the integration with Spot.
+
+<img src="/tools-and-provisioning/_media/spinnaker overview_1.png" />
 
 * Deck is the browser-based UI.
 * Orca is the orchestration engine. It handles all ad-hoc operations and pipelines. (For more information, see [Orca Internals Overview](https://support.spot.io/provisioning-and-cicd/provisioning-and-cicd/spinnaker/spinnaker/).)
