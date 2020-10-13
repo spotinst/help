@@ -13,7 +13,7 @@ Elastigroup supports the following Health Check types:
 * TARGET_GROUP – AWS Application Load Balancer health check.
 * EC2 – AWS EC2 Status check.
 * [HCS](elastigroup/tools-integrations/custom-health-check-service.md) – Spot’s health check.
-* [ECS](elastigroup/tutorials/configure-health-checks-and autohealing.md) – ECS Cluster Instance Health check.
+* [ECS](elastigroup/tutorials/configure-health-checks-and-autohealing.md) – ECS Cluster Instance Health check.
 * [K8S_NODE](elastigroup/tools-integrations/kubernetes-with-elastigroup/configure-autohealing-for-kubernetes.md) – Kubernetes Status check. Requires integration with a Kubernetes cluster.
 * NOMAD_NODE – Nomad Status check. Requires integration with a Nomad cluster.
 * MLB – Multai Load Balancer health check service.
@@ -25,6 +25,6 @@ Elastigroup supports the following Health Check types:
 * Unhealthy Duration – Specify the amount of time (in seconds) you want to keep existing instances that are deemed unhealthy before the instance is terminated and replaced with a new one. Only valid after an instance was healthy at least once.
 
 ---
-**Tip**: If during the configured grace period, a healthy instance becomes unhealthy,  the auto scaler will not terminate the instance. Only after the grace period is over, the unhealthy duration period will begin, and the autoscaler will terminate the unhealthy instance.
+**Tip**: If during the configured grace period, a healthy instance becomes unhealthy,  the autoscaler will not terminate the instance. Only after the grace period is over, the unhealthy duration period will begin, and the autoscaler will terminate the unhealthy instance.
 
 ---
