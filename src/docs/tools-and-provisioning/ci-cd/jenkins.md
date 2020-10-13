@@ -6,6 +6,9 @@ The Spot Jenkins plug-in enables you to run a lower powered Jenkins server and s
 
 Jenkins is an open-source continuous integration software tool for testing and reporting on isolated changes in a larger code base. Jenkins enables developers to find and solve defects in a code base rapidly and to automate testing of their builds. Jenkins has a “master/slave“ mode, where the workload of building projects are delegated to multiple “slave” nodes, allowing a single Jenkins installation to host a large number of projects, or to provide different environments needed for builds/tests. This document describes this mode and how it’s used with the Spot Plugin to provide compute at 80% off of the standard cost.
 
+
+<img src="/tools-and-provisioning/_media/Jenkins_1.png" />
+
 ## How It Works
 
 The Spot Jenkins plug-in (1) automatically scales instances up & down based on the number of jobs in its queue. Nodes are (2) provisioned across multiple instance types and AZs to optimize savings while still guaranteeing availability. The nodes that are provisioned (3) run a startup script to connect as Slave nodes to the Master and immediately start running jobs.
@@ -20,6 +23,9 @@ The Spot Jenkins plug-in (1) automatically scales instances up & down based on t
 ### Jenkins on AWS
 
 Create an Elastigroup with your preferred Region, AMI, and Instance Types. In the General tab under Advanced set the Capacity Unit to *vCPU*.
+
+
+<img src="/tools-and-provisioning/_media/Jenkins_2.png" />
 
 Add the following startup script:
 
@@ -183,6 +189,9 @@ By default, the Slaves try to connect on a random JNLP port. Therefore, the fire
 1. To configure a fixed JNLP port for the Jenkins Slaves, navigate to Manage Jenkins >> Global Security>>Agents and set a static TCP port for JNLP agents.
 2. Configure the network to be available exclusively for this port.
 
+
+<img src="/tools-and-provisioning/_media/Jenkins_3.png" />
+
 ## Step 4: Install the Spot Plugin for Jenkins
 
 1. Login to the Jenkins console, install the Spot Plugin from the available Plugins list.
@@ -190,9 +199,15 @@ By default, the Slaves try to connect on a random JNLP port. Therefore, the fire
 3. Navigate to Manage Jenkins >> Configure System, scroll down to the Spot section and add the API Token generated in Step 1, along with an appropriate Account ID (will be used as a global Account ID in case no Account ID is specified for every cloud added in the next step).
 4. Click on Validate Token to ensure that the token is valid.
 
+
+<img src="/tools-and-provisioning/_media/Jenkins_4.png" />
+
 Once the Spot Token is set, scroll down towards the bottom to the “Cloud” section. Click on Add a new cloud and select the cloud provider connected to the Spot account being used (you can more than one cloud, each specifying it’s own Elastigroup and Account IDs).
 
 There should now be more fields to choose from. For more information on each field hover over the information button on the right side of each field. Specify the Elastigroup ID for the Elastigroup created in Step 2, the appropriate Account ID associated with that Elastigroup and Idle Minutes Before Termination to determine how long Elastigroup should wait before terminating an idle instance.
+
+
+<img src="/tools-and-provisioning/_media/Jenkins_5.png" />
 
 ## Configuration Notes
 
