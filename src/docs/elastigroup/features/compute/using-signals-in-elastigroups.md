@@ -11,6 +11,7 @@ A detach action is required prior to sending an INSTANCE_READY_TO_SHUTDOWN signa
 Once the instance is detached, the instance goes to the Handle_shutdown_script stage. In this step, the shutdown script will be executed. If you need the instance to drain and only then execute the shutdown script, you should address it within the shutdown script (for example, with the Sleep command).
 
 ## Signal Definition
+
 You need to define the expected signals for your Elastigroup in the group configuration.
 
 To add this to the Elastigroup configuration you can use the “Review” tab in the Elastigroup configuration wizard or use the Update group API and add the signal under “strategy” as shown below:
@@ -54,7 +55,9 @@ To send the signal, the [Create Instance Signal API](https://api.spotinst.com/sp
 
 ### Available Body Parameters
 * instanceId – string – (required) The instance ID the signal refers to.
-* signal – string – (required) The specific signal you want to trigger. Valid Values: INSTANCE_READY, INSTANCE_READY_TO_SHUTDOWN
+* signal – string – (required) The specific signal you want to trigger. Valid Values:
+  * INSTANCE_READY
+  * INSTANCE_READY_TO_SHUTDOWN
 
 ### Request
 
