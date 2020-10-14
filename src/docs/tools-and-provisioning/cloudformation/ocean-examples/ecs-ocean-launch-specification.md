@@ -73,4 +73,4 @@ Resources:
         attributes:
         - key: 'Description'
           value: 'Test Launch config For Ocean Ecs'
-          ```
+```
