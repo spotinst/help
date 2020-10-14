@@ -2,11 +2,11 @@
 
 ## Introduction
 
-AWS Key Management Service (KMS) is a service that makes it easy for you to create and control the encryption keys used to encrypt your data. You can easily use encrypted volumes with spot instances provisioned by Spotinst. In order for Spot to be able to utilize your encrypted volumes, you need to grant permissions to access the custom KMS used to encrypt the volumes.
+AWS Key Management Service (KMS) is a service that makes it easy for you to create and control the encryption keys used to encrypt your data. You can easily use encrypted volumes with spot instances provisioned by Spot. In order for Spot to be able to utilize your encrypted volumes, you need to grant permissions to access the custom KMS used to encrypt the volumes.
 
 ### How to use custom keys with Spot?
 
-Using custom keys requires adjusting the custom keys permissions to include the spotinst required roles.
+Using custom keys requires adjusting the custom keys permissions to include the spot required roles.
 
 ## Step 1: Login to your AWS KMS Console
 
@@ -31,7 +31,7 @@ You should add two roles to this custom key:
 * **AWSServiceRoleForEC2Spot** (Linked-Service role that AWS creates automatically for each account)
 * **Spotinst cross-account IAM role** (The one you created when entering credentials to Spot)
 
-You can find your Spotinst cross-account IAM role in the Spotinst settings under the Account menu available via this link: https://console.spotinst.com/#/settings/account/general
+You can find your Spot cross-account IAM role in the Spot settings under the Account menu available via this link: https://console.spotinst.com/#/settings/account/general
 
 <img src="/elastigroup/_media/create-encryption-key_5.png" />
 
