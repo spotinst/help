@@ -5,12 +5,19 @@ Elastigroups that utilize the [Stateful Spot Instances](elastigroup/features/sta
 Elastigroups allows you to set Jobs based on a Cron expression. This means you can trigger a change in capacity. Each line of a cron expression represents a job and looks like this:
 
 ┌───────────── minute (0 – 59)
+
 │ ┌───────────── hour (0 – 23)
+
 │ │ ┌───────────── day of month (1 – 31)
+
 │ │ │ ┌───────────── month (1 – 12)
+
 │ │ │ │ ┌───────────── day of week (0 – 6) (Sunday to Saturday;
+
 │ │ │ │ │ 7 is also Sunday on some systems)
+
 │ │ │ │ │
+
 │ │ │ │ │
 
 For example:
