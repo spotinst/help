@@ -29,6 +29,7 @@ shutdown -r -t 00
 }
 </powershell>
 ```
+
 The following values need to be changed to match your specifications:
 
 * `$dnsserver`
