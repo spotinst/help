@@ -38,7 +38,7 @@ Example of shutdown script:
 "Goodbye old instance"
 ```
 
-## Usate Notes
+## Usage Notes
 * Spot agent uses pip (Python 2.7 Package Manager).
 * Shutdown scripts must start with the #! characters and the path to the interpreter you want to read the script (e.g. /bin/bash)
 * Shutdown scripts are  executed as the root user, sudo is not required in the script. Remember that any files you create will be owned by root. For non-root permissions to files, modify permissions accordingly.
