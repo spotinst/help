@@ -9,7 +9,7 @@ Predictive autoscaling allows you to enjoy seamless prediction of when your Elas
 
 ## How it Works
 
-Once predictive autoscaling is set on an Elastigroup, a backend process for predicting this metric begins. Spot uses Machine Learning algorithms to predict and determine the value of the scaling metric for up to 2 days in advanced.
+Once predictive autoscaling is set on an Elastigroup, a backend process for predicting this metric begins. Spot uses Machine Learning algorithms to predict and determine the value of the scaling metric for up to two days in advanced.
 
 Once the metric value is determined, an effective-minimum calculation begins to determine the minimum amount of instances required to handle the predicted load. This, allows your application to be ready for any workload bursts in advanced.
 
