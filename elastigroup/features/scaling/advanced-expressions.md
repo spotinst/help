@@ -43,6 +43,6 @@ The fields below accept these expressions:
 |scaling.up.action.minimum	|String	|Mathematical expression|
 |scaling.down.action.adjustment	|String	|Mathematical expression|
 |scaling.down.action.maxTargetCapacity	|String	|Mathematical expression|
-|scaling.down.action.target	|String	Mathematical expression|
+|scaling.down.action.target	|String	|Mathematical expression|
 |scaling.down.action.maximum	|String	|Mathematical expression|
 |scaling.down.action.maximum	|String	|Mathematical expression|
