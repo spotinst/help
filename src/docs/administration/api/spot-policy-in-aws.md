@@ -5,7 +5,7 @@ The latest Spot policy in AWS appears below.
 * You can [restrict your Spot Policy](elastigroup/tutorials/elastigroup-tasks/restrict-your-spot-iam-policy.md) using custom AWS IAM Condition Statements.
 * Ensure that your policy is always up to date with the latest JSON.
 
-For additional information, see: [Updating the Spot Policy](elastigroup/tutorials/elastigroup-tasks/update-spot-policy.md).
+For additional information, see: [Update the Spot Policy](elastigroup/tutorials/elastigroup-tasks/update-spot-policy.md).
 
 ```json
 {
