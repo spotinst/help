@@ -6,10 +6,9 @@ The Spot Jenkins plug-in enables you to run a lower powered Jenkins server and s
 
 Jenkins is an open-source continuous integration software tool for testing and reporting on isolated changes in a larger code base. Jenkins enables developers to find and solve defects in a code base rapidly and to automate testing of their builds. Jenkins has a “master/slave“ mode, where the workload of building projects are delegated to multiple “slave” nodes, allowing a single Jenkins installation to host a large number of projects, or to provide different environments needed for builds/tests. This document describes this mode and how it’s used with the Spot Plugin to provide compute at 80% off of the standard cost.
 
+## How It Works
 
 <img src="/tools-and-provisioning/_media/Jenkins_1.png" />
-
-## How It Works
 
 The Spot Jenkins plug-in (1) automatically scales instances up & down based on the number of jobs in its queue. Nodes are (2) provisioned across multiple instance types and AZs to optimize savings while still guaranteeing availability. The nodes that are provisioned (3) run a startup script to connect as Slave nodes to the Master and immediately start running jobs.
 
@@ -31,7 +30,7 @@ Add the following startup script:
 
 **Linux user-data:**
 
-```
+```bash
 #!/bin/bash
 install_deps() {
   log_info "Installing dependencies"
@@ -70,11 +69,16 @@ java -jar /tmp/slave.jar -jnlpCredentials user:password/token -jnlpUrl http://${
 
 The jnlpCredentials flag is used for authenticating to Jenkins, pass the username and password or token (such as the GitHub access token if GitHub is the hosting service which is being used for the authentication process).
 
+----
+
 **Tip:**
 For optimal performance we recommend using the Amazon Standard AMI (CentOS based).
 
+---
+
 **Windows user-data:**
-```
+
+```powershell
 <powershell>
 $EC2_INSTANCE_ID = Invoke-RestMethod -uri http://169.254.169.254/latest/meta-data/instance-id
 $JENKINS_MASTER_IP = “JenkinsMaster:port”
@@ -129,14 +133,13 @@ curl http://${JENKINS_MASTER_IP}/jnlpJars/slave.jar --output /tmp/slave.jar
 # Run the Jenkins Slave JAR
 java -jar /tmp/slave.jar -jnlpCredentials user:1234 -jnlpUrl http://${JENKINS_MASTER_IP}/computer/${INSTANCE_NAME}/slave-agent.jnlp &
 ```
-
-#### Jenkins on Azure
+### Jenkins on Azure
 
 Create an Elastigroup, with the desired VM types, region and other configurations for the Jenkins Slaves. In the Compute tab, under Additional Configurations add the following user-data.
 
 **Linux User-Data:**
 
-```
+```bash
 #!/bin/bash
 ﻿
 install_deps() {
