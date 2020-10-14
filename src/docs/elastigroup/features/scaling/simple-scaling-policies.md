@@ -3,6 +3,7 @@
 Simple scaling policies provide the ability to accommodate increased workloads or alternatively scale down to maximize cost efficiency during quiet hours. Set as many policies as needed to maximize the Elastigroup’s efficiency.
 
 ## Scaling Policy Parameters
+
 Each Simple Scaling Policy has the following set of parameters:
 * Policy Name: The name to assign to the policy. It’s recommended using a meaningful name to help you understand scaling actions better in the future.
 * Source: The scaling policy can utilize metrics from either AWS CloudWatch or Spot Spectrum.
