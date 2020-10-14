@@ -10,11 +10,15 @@ Before starting this tutorial, make sure to have an account in Spot with valid c
 
 ## Step 1: Create Elastigroup
 
+
 <img src="/elastigroup/_media/wordpress-on-spot-step-by-step-guide_1.png" />
+
 
 Select an appropriate use case for your Elastigroup and click on “Launch” – This should take care of some initial settings for you. Select the ‘Empty template’ option:
 
+
 <img src="/elastigroup/_media/wordpress-on-spot-step-by-step-guide_2.png" />
+
 
 Your Elastigroup’s general information.
 
@@ -53,6 +57,7 @@ It is recommended to choose as many AZs as possible, it will enable higher diver
 * **Selecting subnets** – Select the desired subnet in each availability zone.
 
 ### Spot Types
+
 Select the Spot instance types within your Elastigroup. After selecting your desired spot types you will also see the SpotMarket Scoring – giving you a notion of how the markets are going top behave- the higher the score the better!
 
 ---
@@ -80,7 +85,9 @@ You can add scaling policies to your group to help you adjust computing capacity
 
 1. Once your instance is running, you can now test your WordPress website. Find the Public IP for your instance under ‘instances’ in your Elastigroup:
 
+
 <img src="/elastigroup/_media/wordpress-on-spot-step-by-step-guide_4.png" />
+
 
 2. Copy the Public IPinto a new tab in your web browser, and you should see a Hello World blog page appear.
 
@@ -90,15 +97,21 @@ Now that you have your WordPress site up and running, it’s time to log into it
 
 1. Switch back to your EC2 management console in your web browser. Select WordPress instance, and click the Actions button. In the drop down menu, select Instance Setting, and choose Get System Log.
 
+
 <img src="/elastigroup/_media/wordpress-on-spot-step-by-step-guide_5.png" />
+
 
 2. In the system log window, scroll through to the bottom to find the password that’s surrounded by hash marks.
 
+
 <img src="/elastigroup/_media/wordpress-on-spot-step-by-step-guide_6.png" />
+
 
 3. Now that you have your password, switch back to the tab that you used to access the WordPress Hello World page. Add /admin to the end of the URL so it looks something like 54.192.32.144/admin. Hit enter. Enter the Username user and the Password that you read from the log file.
 
-<img src="/elastigroup/_media/wordpress-on-spot-step-by-step-guide_7.png" />
+
+<img src="/elastigroup/_media/wordpress-on-spot-step-by-step-guide_7.png" width="219" height="259”/>
+
 
 Congratulations! You now have your WordPress site up and running. You can now manage, customise, and configure it as you like.
 
