@@ -109,9 +109,7 @@ Now that you have your WordPress site up and running, it’s time to log into it
 
 3. Now that you have your password, switch back to the tab that you used to access the WordPress Hello World page. Add /admin to the end of the URL so it looks something like 54.192.32.144/admin. Hit enter. Enter the Username user and the Password that you read from the log file.
 
-
 <img src="/elastigroup/_media/wordpress-on-spot-step-by-step-guide_7.png" width="219" height="259”/>
-
 
 Congratulations! You now have your WordPress site up and running. You can now manage, customise, and configure it as you like.
 
