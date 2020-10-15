@@ -29,11 +29,11 @@ While creating a new Elastigroup or Editing an existing Elastigorup configuratio
 2. Make sure that you select a target capacity that will match (or is a multiple of) the amount of AZs
 3. In the Review tab, enable “Edit Mode” and edit the JSON
 
-<img src="/elastigroup/_media/corefeatures-equalaz-01.png" />
+<img src="/elastigroup/_media/corefeatures-equalaz-01.png" width="600" height="224" />
 
 4. Set the value of “availabilityVsCost” to:”equalAzDistribution”
 
-<img src="/elastigroup/_media/corefeatures-equalaz-02.png" />
+<img src="/elastigroup/_media/corefeatures-equalaz-02.png" width="600" height="346" />
 
 ### Using the API:
 While creating an Elastigorup – Use the “equalAzDistribution” in the availabilityVsCost field in the Elastigroup JSON
