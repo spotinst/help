@@ -48,14 +48,14 @@ It will take 24 hours for AWS to start dropping reports into the S3 bucket you c
 
 1. Click here, go to the S3 bucket you chose and navigate to: spotinst_eco/spotinst-cur-report
 2. Click on the file called “crawler-cfn.yml”.
-3. Download the file and contact your Spotinst sales representative. (If you do not have a sales representative, contact Spotinst Support.) Please include the following in your email:
+3. Download the file and contact your Spot sales representative. (If you do not have a sales representative, contact Spot Support.) Please include the following in your email:
    - The crawler file
    - AWS account number of MSP
    - Account ID of the customer’s master payer account
    - CUR bucket name
    - Stack name
    - Prefix
-   - The customer’s Spotinst OrgIDs
+   - The customer’s Spot OrgIDs
 
 Continue with the steps below.
 
@@ -83,7 +83,7 @@ Once you have sent the crawler.yml file, it may take up to 48 hours before you r
 
 ## Step 3: Set Up Cost And Usage Extractor
 
-1. Log into your AWS account, then click on the link provided by Spotinst.
+1. Log into your AWS account, then click on the link provided by Spot.
 2. On the CloudFormation page, click Next at the bottom right.
 3. Some of the parameters have been filled in already. Do not change them. Fill in the following parameters:
    - Account List: You may leave this blank, but if you would like to send Cost and Usage reports only for certain account numbers, enter them into this field separated by commas. Do not add spaces.
