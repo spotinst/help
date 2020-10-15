@@ -20,7 +20,7 @@ Before you can create a managed instance, you need to do the following:
 
 2. When the New Managed Instance form appears, mark the use case Create a New Managed Instance from and Existing One.
 
-<img src="/managed-instance/_media/gettingstarted-join-existing-02.png" />
+<img src="/managed-instance/_media/gettingstarted-join-existing-02.png" width="440" height="317" />
 
 3. Complete the information in the form as described below.
 
