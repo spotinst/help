@@ -9,7 +9,7 @@ The following tutorial covers importing any existing Elastigroups running an ECS
 
 If you have a single Elastigroup for your ECS cluster, click Upgrade to Ocean at the top-right of the Elastigroup.
 
-<img src="/ocean/_media/tutorials-migrate-existingeg-forecs-01.png" width="500" height="197" />
+<img src="/ocean/_media/tutorials-migrate-existingeg-forecs-01.png" />
 
 ## Use Case 2: Multiple Elastigroups in the Same Cluster
 
