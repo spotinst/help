@@ -24,7 +24,7 @@ In this procedure, you complete the steps to create an Amazon EKS cluster direct
 
 Complete the steps described in the Create Cluster page. The steps are also described below.
 
-## Step 1: Create A Spotinst Token Or Use An Existing One
+## Step 1: Create A Spot Token Or Use An Existing One
 
 Click Generate Token or use an existing Spot token. If you already have a token, you can paste it in the text box. The Spot token will be used later in the process to authenticate the Spot Kubernetes Controller with Ocean SaaS, so be sure to save a copy in a safe place.
 

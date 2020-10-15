@@ -41,7 +41,7 @@ Before you can create a managed instance, you need to do the following:
 
 <img src="/managed-instance/_media/gettingstarted-create-new-05.png" width="451" height="494" />
 
-Once VPC, Subnets, Product, Image and Preferred Instance type are selected, Spotinst will automatically preselect optional similar Spot Markets to ensure optimized cost efficiency. The Spot Market Scoring Table on the right side will be populated:
+Once VPC, Subnets, Product, Image and Preferred Instance type are selected, Spot will automatically preselect optional similar Spot Markets to ensure optimized cost efficiency. The Spot Market Scoring Table on the right side will be populated:
 
 <img src="/managed-instance/_media/gettingstarted-create-new-06.png" />
 

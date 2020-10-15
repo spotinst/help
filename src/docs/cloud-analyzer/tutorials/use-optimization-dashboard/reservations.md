@@ -1,6 +1,6 @@
 # Reservations
 
-In the Cloud Analyzer [Optimization](cloud-analyzer/tutorials/use-optimization-dashboard/) dashboard, the Reservations tab provides information and recommendations about optimizing the use of reserved instances. The page displays a summary line at the top and several graphs providing a picture of your current waste and potential savings to be achieved with Spotinst optimization.
+In the Cloud Analyzer [Optimization](cloud-analyzer/tutorials/use-optimization-dashboard/) dashboard, the Reservations tab provides information and recommendations about optimizing the use of reserved instances. The page displays a summary line at the top and several graphs providing a picture of your current waste and potential savings to be achieved with Spot optimization.
 
 ## Summary Line
 
