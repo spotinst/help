@@ -29,6 +29,10 @@ In the left menu of the Spot console, click Ocean/Cloud Clusters, and click Crea
 
 <img src="/elastigroup/_media/wordpress-on-spot-step-by-step-guide_7.png" width="219" height="259” />
 
+<img src="/elastigroup/_media/wordpress-on-spot-step-by-step-guide_7.png" />
+
+<img src="/elastigroup/_media/wordpress-on-spot-step-by-step-guide_7.png" width="220" height="260” />
+
 3. Click Next.
 
 ## Step 2: Compute
