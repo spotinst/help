@@ -20,7 +20,7 @@ To schedule your running hours, do the following:
 
 2. Click Cluster Running Hours.
 
-<img src="/ocean/_media/tutorials-set-running-hours-02.png" />
+<img src="/ocean/_media/tutorials-set-running-hours-02.png" width="400" height="293" />
 
 3. Set your running hours by clicking or dragging the mouse in the timetable.
 4. Click Update.

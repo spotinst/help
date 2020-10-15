@@ -12,7 +12,7 @@ If you have one Elastigroup that you would like to upgrade to Ocean, do the foll
 1. Open the Elastigroup, and click Upgrade to Ocean on the top right.
 2. Click Upgrade in the pop-up window.
 
-<img src="/ocean/_media/tutorials-migrate-existingeg-foreks-01.png" />
+<img src="/ocean/_media/tutorials-migrate-existingeg-foreks-01.png" width="400" height="160" />
 
 Wait for the confirmation message to validate that the upgrade process is complete.
 
