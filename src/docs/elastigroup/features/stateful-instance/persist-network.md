@@ -27,7 +27,7 @@ Stateful Spot Instances (SSIs) are created according to the group target capacit
 
 A Private IP Pool can be defined for your Stateful Elastigroup in the Stateful Creation Wizard, under the Persistence tab’s Network Persistency section. When you select the Maintain private IP option, you may also select specific Private IPs under Private IP Pool:
 
-<img src="/elastigroup/_media/stateful-persistnetwork-01.png" />
+<img src="/elastigroup/_media/stateful-persistnetwork-01.png" width="490" height="215" />
 
 When assigning several Private IPs, the group creates a Stateful Spot Instance (SSI) in a Paused state for each Private IP. The instances can then be launched by using the [Resume action](elastigroup/features/stateful-instance/stateful-instance-actions.md). If one of the SSIs in the group is deallocated, a new Paused SSI is created to replace it automatically, in order to maintain the association between the instances and the Private IP Pool. If the requested number of instances exceeds the number of provided IPs, random IPs are taken from the subnet ID to cover the additional instances.
 
