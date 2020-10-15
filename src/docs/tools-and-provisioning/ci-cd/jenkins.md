@@ -31,7 +31,7 @@ Add the following startup script:
 
 **Linux user-data:**
 
-```
+```bash
 #!/bin/bash
 install_deps() {
   log_info "Installing dependencies"
