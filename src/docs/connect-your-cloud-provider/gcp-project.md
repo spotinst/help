@@ -41,11 +41,11 @@ On GCP console:
 
 1. Grant your service account Editor permissions.
 
-<img src="/connect-your-cloud-provider/_media/gcp-step4.png" width="327" height="140" />
+<img src="/connect-your-cloud-provider/_media/gcp-step4.png" width="403" height="312" />
 
 2. Create a JSON key.
 
-<img src="/connect-your-cloud-provider/_media/gcp-step4-a.png" width="389" height="286" />
+<img src="/connect-your-cloud-provider/_media/gcp-step4-a.png" width="327" height="140" />
 
 3. Save the JSON file.
 
