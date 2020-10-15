@@ -4,7 +4,7 @@
 
 The Spot Jenkins plug-in enables you to run a lower powered Jenkins server and spin up Jenkins Slaves as needed while saving up to 80% of your compute costs. Slave instances are scaled in an Elastigroup to match the number of jobs to be completed.
 
-Jenkins is an open-source continuous integration software tool for testing and reporting on isolated changes in a larger code base. Jenkins enables developers to find and solve defects in a code base rapidly and to automate testing of their builds. Jenkins has a “master/slave“ mode, where the workload of building projects are delegated to multiple “slave” nodes, allowing a single Jenkins installation to host a large number of projects, or to provide different environments needed for builds/tests. This document describes this mode and how it’s used with the Spot Plugin to provide compute at 80% off of the standard cost.
+Jenkins is an open-source continuous integration software tool for testing and reporting on isolated changes in a larger code base. Jenkins enables developers to find and solve defects in a code base rapidly and to automate testing of their builds. Jenkins has a “master/slave“ mode, where the workload of building projects are delegated to multiple “slave” nodes, allowing a single Jenkins installation to host a large number of projects, or to provide different environments needed for builds/tests. This document describes this mode and how it’s used with the Spot Plugin to provide compute at 80% off of the standard cost
 
 ## How It Works
 
@@ -68,8 +68,6 @@ java -jar /tmp/slave.jar -jnlpCredentials user:password/token -jnlpUrl http://${
 ```
 
 The jnlpCredentials flag is used for authenticating to Jenkins, pass the username and password or token (such as the GitHub access token if GitHub is the hosting service which is being used for the authentication process).
-
-----
 
 **Tip:**
 For optimal performance we recommend using the Amazon Standard AMI (CentOS based).

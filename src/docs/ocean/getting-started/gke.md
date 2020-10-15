@@ -25,6 +25,16 @@ In the left menu of the Spot console, click Ocean/Cloud Clusters, and click Crea
 
 <img src="/ocean/_media/gke-general.png" width="400" height="384" />
 
+<img src="/elastigroup/_media/wordpress-on-spot-step-by-step-guide_7.png" width="219" height="259”/>
+
+<img src="/elastigroup/_media/wordpress-on-spot-step-by-step-guide_7.png" width="219" height="259” />
+
+<img src="/elastigroup/_media/wordpress-on-spot-step-by-step-guide_7.png" />
+
+<img src="/elastigroup/_media/wordpress-on-spot-step-by-step-guide_7.png" width="400" height="472" />
+
+<img src="/elastigroup/_media/wordpress-on-spot-step-by-step-guide_7.png" width="200" height="236" />
+
 3. Click Next.
 
 ## Step 2: Compute
