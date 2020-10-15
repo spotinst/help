@@ -15,7 +15,7 @@ All actions in this procedure should be made in the US-East-1 (Northern Virginia
 
 1. Once you log into the Spot console, go to the Cloud Analyzer Cost Analysis dashboard. You will see the following message:
 
-<img src="/cloud-analyzer/_media/gettingstarted-connect-master-existing-01.png" />
+<img src="/cloud-analyzer/_media/gettingstarted-connect-master-existing-01.png" width="300" height="212" />
 
 2. Click Add Permissions to start the connection wizard.
 
@@ -27,16 +27,13 @@ All actions in this procedure should be made in the US-East-1 (Northern Virginia
 
 Log in to your AWS Master Payer account.
 
----
-
-**Important**:
-
-- If your account is not managed by an MSP, complete Step 2 and continue with the setup.
-- If your Account is managed by an MSP, your MSP must set up the Cost and Usage reports as described [here](cloud-analyzer/getting-started/connect-account-customer-working-with-msp.md). Skip Steps 2 and 3 and continue with Step 4.
-
----
-
 ## Step 2
+
+Ensure that IAM user and role access to the Billing and Cost Management console is activated according to the instructions in the [AWS procedure](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/control-access-billing.html#ControllingAccessWebsite-Activate).
+
+<img src="/cloud-analyzer/_media/gettingstarted-connect-master-existing-02a.png" />
+
+## Step 3
 
 Set up Cost and Usage Reports.
 
@@ -53,7 +50,7 @@ Mark the checkboxes as shown below.
 
 <img src="/cloud-analyzer/_media/gettingstarted-connect-master-existing-04.png" />
 
-## Step 3
+## Step 4
 
 1. In your AWS account, go to the Cost and Usage Reports page.
 2. Under Delivery Options, copy the S3 Bucket value.
@@ -62,23 +59,23 @@ Mark the checkboxes as shown below.
 
 3. Return to your account in the Spot console and paste the name of the S3 bucket where the hourly cost and usage reports are stored.
 
-## Step 4
+## Step 5
 
 Open the linked Cloudformation Template.
 
 <img src="/cloud-analyzer/_media/gettingstarted-connect-master-existing-06.png" />
 
-## Step 5
+## Step 6
 
 Mark the checkbox acknowledging that CloudFormation will create IAM resources, and hit create.
 
 <img src="/cloud-analyzer/_media/gettingstarted-connect-master-existing-07.png" />
 
-## Step 6
+## Step 7
 
 1. Once the stack is created, copy the Spot Role ARN from the CloudFormation stack Outputs tab.
 
-<img src="/cloud-analyzer/_media/gettingstarted-connect-master-existing-08.png" />
+<img src="/cloud-analyzer/_media/gettingstarted-connect-master-existing-08.png" width="450" height="371" />
 
 2. Paste the Spot Role ARN in the wizard.
    - If your account is not managed by an MSP, Click Done. Your registration is complete.
