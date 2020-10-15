@@ -76,13 +76,13 @@ For more information about the specific APIs, see Initiate Cluster Roll: [K8s on
 
 In your Ocean cluster, go to Actions and click Cluster Roll.
 
-<img src="/ocean/_media/features-roll-01.png" />
+<img src="/ocean/_media/features-roll-01.png" width="200" height="213" />
 
 1. Enter the following information:
    - Batch Size. Indicates how much will be rolled at a time. This value is a percentage of the cluster’s target capacity.
    - Comment. A brief note indicating the reason for the roll.
 
-<img src="/ocean/_media/features-roll-02.png" />
+<img src="/ocean/_media/features-roll-02.png" width="259" height="159" />
 
 2. Click Roll.
 
