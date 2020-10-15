@@ -12,7 +12,7 @@ All actions in this procedure should be made in the US-East-1 (Northern Virginia
 
 Once you log into the Spot console, go to the Eco dashboard. You will see the following message:
 
-<img src="/eco/_media/gettingstarted-aws-connect-01.png" />
+<img src="/eco/_media/gettingstarted-aws-connect-01.png" width="300" height="212" />
 
 Click Add Permissions to start the connection wizard.
 
@@ -54,7 +54,7 @@ Set up Cost and Usage Reports.
 1. In your AWS account, go to the Cost and Usage Reports page.
 2. Under Delivery Options, copy the S3 Bucket value.
 
-<img src="/eco/_media/gettingstarted-aws-connect-05.png" />
+<img src="/eco/_media/gettingstarted-aws-connect-05.png" width="450" height="126" />
 
 3. Return to your account in the Spot Console and paste the name of the S3 bucket where the hourly cost and usage reports are stored.
 
@@ -74,7 +74,7 @@ Mark the checkbox acknowledging that CloudFormation will create IAM resources, a
 
 1. Once the stack is created, copy the Spot Role ARN from the CloudFormation stack Outputs tab.
 
-<img src="/eco/_media/gettingstarted-aws-connect-08.png" />
+<img src="/eco/_media/gettingstarted-aws-connect-08.png" width="546" height="484" />
 
 2. Paste the Spot Role ARN in the wizard.
    - If your account is not managed by an MSP, click Done. Your registration is complete.

@@ -19,7 +19,7 @@ The Summary Line is at the top of the page and includes:
 
 ## Top Account Spend Efficiency
 
-<img src="/cloud-analyzer/_media/tutorials-analyze-costs-02.png" />
+<img src="/cloud-analyzer/_media/tutorials-analyze-costs-02.png" width="495" height="301" />
 
 The top 10 accounts in your organization are listed according to the greatest amount of Estimated Additional Savings (shown in US dollars).
 
@@ -40,7 +40,7 @@ You can take the following actions to further optimize your accounts:
 
 This is a bar graph showing your top ten accounts by cost. The graph is based on the last 30 days of spend activity.
 
-<img src="/cloud-analyzer/_media/tutorials-analyze-costs-03.png" />
+<img src="/cloud-analyzer/_media/tutorials-analyze-costs-03.png" width="495" height="392" />
 
 ## Spend Analysis
 
