@@ -73,7 +73,7 @@ Choose one of the following types of images:
 
 You can define additional network interfaces as needed.
 
-<img src="/elastigroup/_media/gettingstarted-eg-azure-04.png" />
+<img src="/elastigroup/_media/gettingstarted-eg-azure-04.png" width="450" height="400" />
 
 ### Login
 * User Name. Specify the user name you wish to SSH the VM’s with.

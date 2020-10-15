@@ -17,7 +17,7 @@ Under  “Elastigroups” view:
 
 The affected Elastigroup’s dashboard displays the following message at the top of the page:
 
-<img src="/elastigroup/_media/corefeatures-config-alerts-02.png" />
+<img src="/elastigroup/_media/corefeatures-config-alerts-02.png" width="400" height="62" />
 
 Resolution: Remove the invalid ELB from the group configuration.
 
