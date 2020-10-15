@@ -69,14 +69,14 @@ java -jar /tmp/slave.jar -jnlpCredentials user:password/token -jnlpUrl http://${
 
 The jnlpCredentials flag is used for authenticating to Jenkins, pass the username and password or token (such as the GitHub access token if GitHub is the hosting service which is being used for the authentication process).
 
----
 **Tip:**
 For optimal performance we recommend using the Amazon Standard AMI (CentOS based).
 
 ---
 
 **Windows user-data:**
-```
+
+```powershell
 <powershell>
 $EC2_INSTANCE_ID = Invoke-RestMethod -uri http://169.254.169.254/latest/meta-data/instance-id
 $JENKINS_MASTER_IP = “JenkinsMaster:port”
@@ -131,8 +131,7 @@ curl http://${JENKINS_MASTER_IP}/jnlpJars/slave.jar --output /tmp/slave.jar
 # Run the Jenkins Slave JAR
 java -jar /tmp/slave.jar -jnlpCredentials user:1234 -jnlpUrl http://${JENKINS_MASTER_IP}/computer/${INSTANCE_NAME}/slave-agent.jnlp &
 ```
-
-#### Jenkins on Azure
+### Jenkins on Azure
 
 Create an Elastigroup, with the desired VM types, region and other configurations for the Jenkins Slaves. In the Compute tab, under Additional Configurations add the following user-data.
 
