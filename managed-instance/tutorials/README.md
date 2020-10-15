@@ -1,4 +1,4 @@
-# Managed Instace Tutorials
+# Managed Instance Tutorials
 
 This section includes procedures and other information for using Managed Instance.
 

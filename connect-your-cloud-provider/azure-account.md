@@ -45,7 +45,7 @@ Under your Active Directory’s main menu, go to Properties, copy the Directory 
 ## Step 4: Provide Permissions to the Active Directory Application
 
 1. Now that you’ve created an Active Directory Application you’ll provide it with Contributor permissions.
-   Under All Services select Subscriptions. Choose the subscription you’d like to provide Spotinst with a role in.
+   Under All Services select Subscriptions. Choose the subscription you’d like to provide Spot with a role in.
    In the Subscription menu select Access Control (IAM). Click Add and under Role choose Contributor.
    Search for the name of the Active Directory Application you created in Step 1 and click Save.
 

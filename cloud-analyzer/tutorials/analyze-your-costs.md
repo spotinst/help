@@ -34,7 +34,7 @@ Each cloud account is assigned an efficiency score based on current and addition
 You can take the following actions to further optimize your accounts:
 
 - View: To view a detailed breakdown of a specific account, click View. The Optimization page will appear showing detailed information to help you optimize the account.
-- Connect: To connect an account that is not yet managed by Spotinst, click Connect. You will be directed to the wizard that connects the account.
+- Connect: To connect an account that is not yet managed by Spot, click Connect. You will be directed to the wizard that connects the account.
 
 ## Top Accounts
 
