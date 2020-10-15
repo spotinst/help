@@ -12,7 +12,7 @@ This article explains how Elastigroup manages the replacement of instances in sp
 
 The flow chart below shows an overview of how the spot instance replacement takes place.
 
-<img src="/elastigroup/_media/corefeatures-interruptions-01.png" />
+<img src="/elastigroup/_media/corefeatures-interruptions-01.png" width="448" height="507" />
 
 ## Fix Strategy
 
