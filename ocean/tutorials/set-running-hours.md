@@ -16,7 +16,7 @@ To schedule your running hours, do the following:
 
 1. In your Ocean cluster, click Actions and choose Customize Scaling.
 
-<img src="/ocean/_media/tutorials-set-running-hours-01.png" />
+<img src="/ocean/_media/tutorials-set-running-hours-01.png" width="220" height="205" />
 
 2. Click Cluster Running Hours.
 
