@@ -78,19 +78,19 @@ When the new instance with the correct user data, image, and tags is joined to t
 
 1. In the side menu of the console, click Ocean/Cloud Clusters.
 
-<img src="/ocean/_media/tools-openshift-4x-01.png" />
+<img src="/ocean/_media/tools-openshift-4x-01.png" width="220" height="133" />
 
 2. Click Create Cluster.
 3. Click the use case for OpenShift, “Join an Existing OpenShift Cluster”.
 
-<img src="/ocean/_media/tools-openshift-4x-02.png" />
+<img src="/ocean/_media/tools-openshift-4x-02.png" width="300" height="385" />
 
 ## Step 1: Enter General Information
 
 1. Enter a Cluster Name and Identifier and choose a Region.
 2. Choose an Auto Scaling Group or worker node Instance to import the cluster configuration from.
 
-<img src="/ocean/_media/tools-openshift-4x-03.png" />
+<img src="/ocean/_media/tools-openshift-4x-03.png" width="450" height="349" />
 
 Step 2: Review Compute Settings
 Confirm or change the settings imported by the Ocean Creation Wizard.

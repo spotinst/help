@@ -22,7 +22,7 @@ Grant Compute Network User role to the Spot Service Account you created when you
 
 3. Click Add Members.
 
-<img src="/ocean/_media/tutorials-shared-vpc-02.png" />
+<img src="/ocean/_media/tutorials-shared-vpc-02.png" width="330" height="184" />
 
 4. Fill in the desired service account and grant it Compute Network User role.
 
