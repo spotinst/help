@@ -51,7 +51,7 @@ The Spot CPI exposes several cloud properties that can be configured in the VM T
          availability_zone: us-east-1a
          spotinst_product: Linux/UNIX
          spotinst_risk: 100
-         ```
+```
 
  `spotinst_product` **[String, optional]**: Product name. Defaults to `Linux/UNIX` (can be set to `Linux/UNIX (Amazon VPC)` if your account has both EC2 VPC and EC2 Classic platforms).
  `spotinst_risk` **[Integer, optional]**: The percentage of Spot instances that would spin up from the target capacity. Set to 0 to use On-Demand instances. Defaults to `100` (all instances should be Spot).
@@ -143,6 +143,6 @@ And finally, we can run deploy by providing a path to deployment manifest.
 `$ bosh -e spotinst -d zookeeper deploy zookeeper.yml`
 <<<<<<< Updated upstream
 
- 
+
 =======
 >>>>>>> Stashed changes

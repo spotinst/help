@@ -86,7 +86,7 @@ Body
 
 Body
 
-```yaml
+```YML
 SpectrumAlert:
     Type: Custom::spectrumAlert
     Properties:
@@ -130,4 +130,4 @@ SpectrumAlert:
           - Ref: SpectrumErrorAction
           criticalActionIds:
           - Ref: SpectrumCriticalAction
-          ```
+```
