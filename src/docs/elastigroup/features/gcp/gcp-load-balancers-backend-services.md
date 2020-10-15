@@ -4,7 +4,7 @@ The GCP Load Balancer is a software defined globally distributed load balancing 
 
 It enables GCP users to distribute applications across the world and scale compute up and down with very little configuration and cost.
 
-<img src="/elastigroup/_media/gcp-loadbalancers-01.png" />
+<img src="/elastigroup/_media/gcp-loadbalancers-01.png" width="620" height="349" />
 
 ## Global Backend Service
 
