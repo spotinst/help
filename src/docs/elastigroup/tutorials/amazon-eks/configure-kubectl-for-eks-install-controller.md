@@ -1,6 +1,7 @@
 # Configure Kubectl for EKS & Install Controller
 
 ## Prerequisites
+
 Complete the following prerequisites, unless you started with [Running Elastigroup For EKS](https://help.dev.spot.io/elastigroup/tutorials/amazon-eks/create-elastigroup-eks-cluster):
 
 * [kubectl (Amazon EKS-vended)](https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html)
