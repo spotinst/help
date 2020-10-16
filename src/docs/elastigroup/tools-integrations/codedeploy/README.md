@@ -62,6 +62,8 @@ chmod +x ./install
 1. Scroll down the Compute tab and expand the Integrations section.
 2. Enable CodeDeploy integration and select your application and deployment group resources. The application and deployment group resources should already exist in your AWS account.
 
+<img src="/elastigroup/_media/codedeployREADME_1.png" />
+
 * **cleanupOnFailure** – While true we delete the temporary group created. If False we don’t delete the temporary deployment group in case of failure (so the user can view the logs of the group and the deployment).
 * **terminateInstanceOnFailure** – while true, we terminate the instance that failed. If false, we keep the instances that failed.
 
