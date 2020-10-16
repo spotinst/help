@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Using Gitlab [Runner’s autoscaling](https://docs.gitlab.com/runner/executors/docker_machine.html) feature you can now configure Docker Machine to provision Spot instances on Elastigroup. This gives both the cost savings of Spot instances and the 100% availability that Elastigroup provides. All while retaining full control over your CI/CD with Gitlab Runners.
+Using [Gitlab Runner’s autoscaling](https://docs.gitlab.com/runner/executors/docker_machine.html) feature you can now configure Docker Machine to provision Spot instances on Elastigroup. This gives both the cost savings of Spot instances and the 100% availability that Elastigroup provides. All while retaining full control over your CI/CD with Gitlab Runners.
 
 ## What’s Covered
 
