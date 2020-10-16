@@ -30,7 +30,7 @@ Select the ‘Join Existing EKS Cluster’ rubric from the Elastigroup use case 
   ```
   kubectl get svc
   ```
-* Install the Kubernetes Controller
+* Install the [Kubernetes Controller](https://help.dev.spot.io/ocean/tutorials/spot-kubernetes-controller/)
 
 ## Step 3: Update AWS Authentication Config-Map
 
