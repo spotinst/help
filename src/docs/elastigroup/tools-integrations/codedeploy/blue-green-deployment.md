@@ -17,7 +17,7 @@ Elastigroups with Code deploy integration offers an option to utilize the B/G de
 * In Spot console – make sure your AMI has the Code Deploy agent installed or install it via your [user-data script](https://docs.aws.amazon.com/codedeploy/latest/userguide/codedeploy-agent-operations-install.html).
 * In Spot console – make sure you have associated the Code Deploy IAM Role in the Elastigroup configuration.
 
-Configuring a Blue-Green Deployment
+## Configuring a Blue-Green Deployment
 
 1. Go to Spot Console and select the Elastigroup.
 
