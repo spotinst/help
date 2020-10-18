@@ -13,16 +13,16 @@ The following rules apply to programmatic users:
 
 Adding a programmatic user to an organization is similar to adding a UI user.
 
-1. In the console, go to <img src="/administration/_media/user-icon.png" width="25" height="25" /> and click Settings. Under the Organization tab, click Programmatic Users.
-2. Click ADD PROGRAMMATIC USER. Fill in the form with the Name, Description, Account Role, and Accounts. You can add one or multiple accounts.
+1. In the console, click the User icon and click Settings. Under the Organization tab, click Programmatic Users.
+2. Click Add Programmatic User. Fill in the form with the Name, Description, Account Role, and Accounts. You can add one or multiple accounts.
 3. When the token is generated, copy it and save it in a secure place.
 
 ## Add Programmatic User to Account
 
 Adding a programmatic user to an account is similar to adding a UI user to an account.
 
-1. In the console, go to <img src="/administration/_media/user-icon.png" width="25" height="25" /> and click Settings. Under the Account tab, click Programmatic Users.
-2. Click ADD PROGRAMMATIC USER. Fill in the form with the Name, Description, and Account Role. If you choose a Policy Based account role, choose the applicable policies.
+1. In the console, click the User icon and click Settings. Under the Account tab, click Programmatic Users.
+2. Click Add Programmatic User. Fill in the form with the Name, Description, and Account Role. If you choose a Policy Based account role, choose the applicable policies.
 3. When the token is generated, copy it and save it in a secure place.
 
 ## Token for Programmatic User
