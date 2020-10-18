@@ -2,7 +2,7 @@
 
 ## Introduction
 
-KMS Keys are fine as long as you are using a single AWS account. What if you need to use volumes from different accounts?
+[KMS Keys](elastigroup/tutorials/elastigroup-tasks/create-encryption-key) are fine as long as you are using a single AWS account. What if you need to use volumes from different accounts?
 
 Let’s start with a few assumptions:
 
