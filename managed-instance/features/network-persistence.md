@@ -20,7 +20,7 @@ Public IP persistence maintains the instances Elastic IP. To enable Elastic IP p
 3. Under the Persistent Resources tab’s Network section, select a specific Elastic IP to associate with the instance.
 4. A Managed Instance launched with the associated Elastic IP will then persist that IP during recycles and replacements.
 
-<img src="/managed-instance/_media/network-persistence-01.png" />
+<img src="/managed-instance/_media/network-persistence-02.png" />
 
 ## Backend Actions
 
