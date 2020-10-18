@@ -30,9 +30,7 @@ The system supports the following identity providers:
 
 **Metadata** – Data provided by the identity provider in order to sync our settings properly.
 
-**User Default Organization Role** – The role which is given to users who logged in via the Identity Provider (Viewer/Editor)
-
-For further information, see User Roles.
+**User Default Organization Role** – The role which is given to users who logged in via the Identity Provider (Viewer/Editor). For further information, see [User Roles](administration/users/).
 
 **User Allowed Accounts** – The accounts which the user will have access to (Default Account or All Accounts)
 
