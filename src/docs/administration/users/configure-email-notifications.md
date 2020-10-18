@@ -2,7 +2,7 @@
 
 ## Configure Custom Email Notifications
 
-By default,  Spotinst will notify all the users in your account for every error or warning event (Unless they unsubscribe from the service). You can customize Elastigroup Notifications to send notifications for the events that matter to you.
+By default,  Spot will notify all the users in your account for every error or warning event (Unless they unsubscribe from the service). You can customize Elastigroup Notifications to send notifications for the events that matter to you.
 
 ## Enable Custom Email Notifications per User
 1. Open the settings menu, navigate to the Account tab and select Personal Notifications
