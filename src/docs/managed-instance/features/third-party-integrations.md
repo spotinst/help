@@ -19,9 +19,13 @@ In order to configure the Managed Instance to receive traffic from either Route5
 
      Select your desired Load Balancer from the dropdown menu.
 
+<img src="/managed-instance/_media/third-party-integrations-01.png" />
+
    * For Route 53 integration:
      1. Select Route 53 from the dropdown menu.
      2. Select the Hosted Zone ID.
      3. Select Record Sets.
      4. If needed, check the “Register Public IP” option.
      5. Click “Add a Record”.
+
+<img src="/managed-instance/_media/third-party-integrations-02.png" />
