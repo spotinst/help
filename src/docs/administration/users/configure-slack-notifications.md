@@ -14,4 +14,4 @@ You can configure which notifications will be published:
 
 ## What’s Next?
 
-Learn how to create custom [Email Notifications](administration/users/configure-email-notifications.md)
+Learn how to create custom [Email Notifications](administration/users/configure-email-notifications.md).
