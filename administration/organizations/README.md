@@ -2,9 +2,10 @@
 
 When you set up your Spot account, you create an Organization and one or more Account entities. You will most likely need only one Organization, but you can set up multiple organizations if required. Within an Organization, you can define multiple accounts for different teams or projects with the Organization. Each account can be set up to use any supported cloud provider and cloud provider account.
 
-<img src="/administration/_media/organizations-accounts-01.png" />
+<img src="/administration/_media/organizations-accounts-01.png" width="500" height="281" />
 
 ## Organization
+
 When you register to Spot, the registration wizard automatically creates an Organization. An Organization holds your initial company account and is identified by name or by name and division (for example, Spot or Spot-USA).
 
 The Organization holds one or more Spot accounts which can be associated with your cloud account. The purpose of the Organization is to help you manage in one place all of your settings across multiple accounts.
@@ -21,7 +22,7 @@ In the Organization, you can define the following:
 1. In the console, click on the User icon and click Settings.
 2. Under the Organization tab, click General. The Organization ID is displayed.
 
-<img src="/administration/_media/organizations-accounts-02.png" />
+<img src="/administration/_media/organizations-accounts-02.png" width="400" height="155" />
 
 ## Linked Organizations
 
@@ -32,7 +33,7 @@ In case you need multiple organizations, e.g., for multiple divisions or units i
 
 ## Add an Organization
 
-<img src="/administration/_media/organizations-accounts-03.png" />
+<img src="/administration/_media/organizations-accounts-03.png" width="150" height="93" />
 
 1. In the console, click the Organization and click Add Organization.
 2. Enter the name of the new organization and click CREATE.
@@ -52,7 +53,7 @@ In the Account, you can define the following:
 
 ## Add an Account using the Console
 
-<img src="/administration/_media/organizations-accounts-04.png" />
+<img src="/administration/_media/organizations-accounts-04.png" width="300" height="140" />
 
 1. In the console, click the Account and click Add Account.
 2. Enter the name of the new account and click CREATE.
@@ -70,6 +71,6 @@ The Account ID is required for API and SDK interactions with the Elastigroup con
 2. In the console, click  and click Settings.
 3. Under the Account tab, click General. The Organization ID is displayed.
 
-<img src="/administration/_media/organizations-accounts-05.png" />
+<img src="/administration/_media/organizations-accounts-05.png" width="400" height="117" />
 
 The Account ID is required for any API call or SDK call unless it is for the default Account.
