@@ -6,7 +6,7 @@ In Big Data, a large volume of data is used. Regarding data, we have two main ch
 
 Implementing a messaging system is a common solution for those challenges.
 
-Kafka is one of the most popular messaging system today, it is designed for distributed high throughput systems to manage the queue and the data flow.
+Kafka is one of the most popular messaging systems today. It is designed for distributed, high-throughput systems to manage the queue and the data flow.
 
 Kafka’s architecture is designed based on several components and each component has his unique role.
 
