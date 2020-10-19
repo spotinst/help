@@ -29,7 +29,7 @@ For each policy in the list, you can see the Policy Name, Description, Affected 
 3. For Account Role, choose Policy Based.
 4. In the Policies list, add or change the relevant policies for the user.
 
-<img src="/administration/_media/manage-access-policies-02.png" />
+<img src="/administration/_media/manage-access-policies-02.png" width="300" height="184" />
 
 ## Edit an Access Policy
 
@@ -38,7 +38,7 @@ To make changes to an existing access policy, do the following:
 2. Click the Pencil icon on the policy you want to edit.
 3. Make your changes, validate the changes, and click Update.
 
-<img src="/administration/_media/manage-access-policies-03.png" />
+<img src="/administration/_media/manage-access-policies-03.png" width="300" height="398" />
 
 ## Delete an Access Policy
 1. In the console, click the User icon and click Settings. Under the Account tab, click Access Policies.
