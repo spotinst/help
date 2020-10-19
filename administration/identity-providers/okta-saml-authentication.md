@@ -12,7 +12,7 @@ SSO support makes it easy to manage your accounts and works with the most popula
 4. Make a copy of the Relay State value.
 5. Go to your Okta dashboard and add the Spot app to your account:
 
-<img src="/administration/_media/okta-saml-02.png" />
+<img src="/administration/_media/okta-saml-02.png" width="348" height="221" />
 
 6. In Okta, go to the admin panel and edit the new Spot app you just added. There, select the Sign On tab, then click Edit.
    1. Enter the Relay State value you copied earlier into the Default Relay State field.

@@ -25,9 +25,9 @@ We expect the following attributes to be sent to the SAML response:
 1. Login to your Spot account as an Admin.
 2. Click on the user icon on the top right side of the screen and click Settings.
 
-<img src="/administration/_media/custom-saml-01.png" />
+<img src="/administration/_media/custom-saml-01.png" width="298" height="300" />
 
 3. Click on the Security tab on the top and then select Identity Providers.
 4. Click BROWSE, Select your metadata file, and click SAVE.
 
-<img src="/administration/_media/custom-saml-02.png" />
+<img src="/administration/_media/custom-saml-02.png" width="484" height="302" />
