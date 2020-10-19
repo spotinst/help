@@ -21,4 +21,4 @@ Your password must have at least eight characters and contain:
 1. In the console, click Settings.
 2. Click the Security tab and update your password.
 
-<img src="/administration/_media/set-password-02.png" />
+<img src="/administration/_media/set-password-02.png" width="150" height="251" />
