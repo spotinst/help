@@ -30,4 +30,4 @@ This role allows the user to modify and change settings within the Account. The 
 
 This role enables you to assign a custom policy to a user. A policy can define user permissions per resource and per action. For more information about defining policies, see [Access Policies](administration/access-policies/).
 
-<img src="/administration/_media/users-and-roles-02.png" />
+<img src="/administration/_media/users-and-roles-02.png" width="300" height="332" />

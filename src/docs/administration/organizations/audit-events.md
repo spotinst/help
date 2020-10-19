@@ -12,7 +12,7 @@ For each event, you have the option to view additional details such as the Paylo
 
 ## View the Audit List
 
-To view the Audit list, click  in the console and choose Audit. The Audit list appears as shown in the example below.
+To view the Audit list, click the User icon in the console and choose Audit. The Audit list appears as shown in the example below.
 
 <img src="/administration/_media/audit-events-01.png" />
 
@@ -38,4 +38,4 @@ You can search for events by entering free text in the Search filter or by enter
 1. In the Audit page, click in the Search filter.
 2. Choose one of the attributes displayed, e.g., User or Event Type, and then choose one of the values for that attribute, e.g., a specific user or a specific Event Type. Alternatively, you can search by just typing free text in
 
-<img src="/administration/_media/audit-events-04.png" />
+<img src="/administration/_media/audit-events-04.png" width="250" height="230" />
