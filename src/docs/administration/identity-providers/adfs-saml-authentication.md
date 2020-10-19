@@ -11,7 +11,7 @@ Active Directory Federation Services (ADFS) is one of the leading Identity Provi
 1. Open the Active Directory Federation Services (ADFS) Management Console.
 2. Right click Relying Party Trusts and click Add Relying Party Trust.
 
-<img src="/administration/_media/adfs-saml-01.png" />
+<img src="/administration/_media/adfs-saml-01.png" width="250" height="289" />
 
 3. Choose Claims-aware and click Start.
 

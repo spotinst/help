@@ -6,7 +6,7 @@ You can set up a credit card as a payment method in your Spot account. Using the
 
 1. In the console, go to Settings.
 
-<img src="/administration/_media/configure-payment-details-01.png" width="150" height="251" />
+<img src="/administration/_media/configure-payment-details-01.png" width="250" height="150" />
 
 2. Go to the Organization tab and select Payments.
 
