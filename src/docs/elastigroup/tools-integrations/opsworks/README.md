@@ -5,14 +5,14 @@ AWS OpsWorks is a configuration management service that uses Chef, an automation
 This procedure will cover the simple steps you need to perform in order to allow Spot Elastigroup to provision and manage the instances running in your Opsworks environment.
 
 ## Prerequisites
-* An up-to-date Spot Policy
+* An up-to-date [Spot Policy](administration/api/spot-policy-in-aws.md)
 * A live Opsworks Stack and Layer with a running instance
-* Cancel the auto-healing feature in OpsWorks (for more information click here).
+* Cancel the [auto-healing feature](https://docs.aws.amazon.com/opsworks/latest/userguide/workinginstances-autohealing.html) in OpsWorks.
 
 ## Step 1: Configure IAM Role for OpsWorks
 
 In order to register your Spot instances into OpsWorks, you need to create an IAM role first and associate it with your Elastigroup. The IAM role will allow your Instances to perform operations and attach themselves to the OpsWorks stack.
-1. Sign in to the AWS Management Console and open the IAM console.
+1. Sign in to the AWS Management Console and open the [IAM console](https://console.aws.amazon.com/iam/).
 2. In the navigation pane of the console, click Roles and search for aws-opsworks-ec2-role.
 3. Click on the role name, and then in the Permissions tab click on “Attach Policy“.
 4. Search for the policies AWSOpsWorksCMServiceRole, AWSOpsWorksInstanceRegistration and AWSOpsWorksRegisterCLI.
