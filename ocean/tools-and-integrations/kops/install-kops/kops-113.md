@@ -7,7 +7,7 @@ Download the proper  binary file for your operating system:
 * [darwin_amd64](https://spotinst-public.s3.amazonaws.com/integrations/kubernetes/kops/v1.13.0-513761255/darwin/amd64/kops)
 * [windows_amd64](https://spotinst-public.s3.amazonaws.com/integrations/kubernetes/kops/v1.13.0-513761255/windows/amd64/kops.exe)
 
-Make sure the kops binary file is executable
+Make sure the Kops binary file is executable.
 
 ```
 chmod 755 kops && mv kops /usr/local/bin/kops
