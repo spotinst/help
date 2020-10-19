@@ -30,10 +30,11 @@ When a job is launched in Nomad, The Nomad master scheduler tries to find free c
 
 In such a case, the job will have queued allocations, and the job metrics will show that the job can’t run due to exhausted nodes. Some of the reasons for node exhaustion are:
 
-Dimension “cpu exhausted” exhausted on 1 node
-Dimension “memory exhausted” exhausted on 1 node
-Dimension “network: reserved port collision” exhausted on 1 node
-No nodes were eligible for evaluation
+* Dimension “cpu exhausted” exhausted on 1 node
+* Dimension “memory exhausted” exhausted on 1 node
+* Dimension “network: reserved port collision” exhausted on 1 node
+* No nodes were eligible for evaluation
+
 The Nomad Autoscaler automatically detects those states and launch additional instances when required.
 
 <img src="/elastigroup/_media/nomad-autoscaling-02.png" />
@@ -41,6 +42,7 @@ The Nomad Autoscaler automatically detects those states and launch additional in
 ## Down Scaling
 
 Once the Nomad Autoscaler is enabled on a group, Elastigroup monitors the Nomad Cluster for idle instances. An instance is considered idle if it has less than 40% CPU and Memory utilization.
+
 When an instance is found idle for the specified amount of consecutive periods, Elastigroup will find spare capacity in other instances, Drain the instance jobs, reschedule those on other instances and terminate the idle instance.
 
 <img src="/elastigroup/_media/nomad-autoscaling-03.png" />
