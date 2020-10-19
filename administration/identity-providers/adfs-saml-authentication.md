@@ -60,7 +60,7 @@ https://<yourADFSserver>/federationmetadata/2007-06/federationmetadata.xml
 
 6. Click on the Security tab and then select Identity Providers.
 
-<img src="/administration/_media/adfs-saml-06.png" />
+<img src="/administration/_media/adfs-saml-07.png" />
 
 7. Click BROWSE, select your metadata file, and click SAVE.
 
