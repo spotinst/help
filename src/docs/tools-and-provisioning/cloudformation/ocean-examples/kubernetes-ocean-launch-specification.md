@@ -13,9 +13,9 @@ The full body attribute list is available on the [Create](https://docs.spot.io/s
 
 ## Request
 
-```
-Body
+### Body
 
+```
 {
   "Resources": {
     "SpotinstOcean": {
