@@ -4,14 +4,15 @@ Kubernetes is a container cluster management software that makes it easy to mana
 
 Elastigroup integrates with Kubernetes via our autonomous Managed Container Service (MCS). MCS manages the infrastructure on which Kubernetes schedules the container workloads.
 
-Prerequisite
+## Prerequisite
+
 Before you start using this integration, please make sure to have an active Spot account. To create a new account sign up [here](https://console.spotinst.com/#/auth/signUp).
 
 ## Handling Instance Failures
 
 The diagram below illustrates how MCS handles instance failures. Utilizing prediction algorithms and monitoring services, Elastigroup (1) preemptively provisions EC2 instances and identifies instance failures within the K8s cluster, (2) provisions new instances in parallel as the failures occur, and (3) communicates with the K8s master to mark “bad” instances as Unscheduled `{“spec”:{“unschedulable”:true}}` in order to drain existing running pods and reschedule them on different hosts across the cluster.
 
-<img src="/elastigroup/_media/kubernetes-with-elastigroupREADME_1.png" />
+<img src="/elastigroup/_media/kubernetes-with-elastigroupREADME_1.jpg" />
 
 ## Key Features
 
