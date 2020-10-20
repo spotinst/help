@@ -25,7 +25,7 @@ To modify an event definition do the following:
 2. When the Event Definition box appears, click Edit.
 3. Make your changes and click Save.
 
-<img src="/cloud-analyzer/_media/tutorials-event-def-02.png" />
+<img src="/cloud-analyzer/_media/tutorials-event-def-02.png" width="350" height="399" />
 
 ## Create a New Event Definition
 
@@ -36,7 +36,7 @@ To create a new event definition, do the following:
 1. In the Event Definition page, click Create New Definition.
    2.Complete the information in the Create New Event Definition form and click Create.
 
-<img src="/cloud-analyzer/_media/tutorials-event-def-03.png" />
+<img src="/cloud-analyzer/_media/tutorials-event-def-03.png" width="350" height="596" />
 
 3. In the form, you will need to complete the following information:
 

@@ -4,6 +4,7 @@ To create an Elastigroup in the same template that creates a Beanstalk environme
 
 1. Create a new beanstalk environment.
 2. Create a new elastigroup which is dependent on the new Beanstalk Environment.
+
 `"DependsOn": "SampleEnv"`
 
 3. Under the Elastigroup Beanstalk property, use `EnvironmentName` parameter instead of `environmentId`, and reference (ref) to the new environment name.

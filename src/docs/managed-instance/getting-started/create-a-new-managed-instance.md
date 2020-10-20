@@ -20,7 +20,7 @@ Before you can create a managed instance, you need to do the following:
 
 2. Mark the use case Create a New Managed Instance, as shown below, and click Select.
 
-<img src="/managed-instance/_media/gettingstarted-create-new-02.png" />
+<img src="/managed-instance/_media/gettingstarted-create-new-02.png" width="400" height="319" />
 
 3. Complete the steps in the Create Managed Instance wizard as described below.
 
@@ -39,9 +39,9 @@ Before you can create a managed instance, you need to do the following:
 5. Choose the Product type and the AMI used to launch the instance. You can specify your our own AMI, or select one of the images suggested in the common images menu.
 6. Select a Preferred Instance type. The instance type selected here will be the preferred type for Spot instances, and also used as an On-Demand type to fall back to in case no suitable Spot capacity is available.
 
-<img src="/managed-instance/_media/gettingstarted-create-new-05.png" />
+<img src="/managed-instance/_media/gettingstarted-create-new-05.png" width="451" height="494" />
 
-Once VPC, Subnets, Product, Image and Preferred Instance type are selected, Spotinst will automatically preselect optional similar Spot Markets to ensure optimized cost efficiency. The Spot Market Scoring Table on the right side will be populated:
+Once VPC, Subnets, Product, Image and Preferred Instance type are selected, Spot will automatically preselect optional similar Spot Markets to ensure optimized cost efficiency. The Spot Market Scoring Table on the right side will be populated:
 
 <img src="/managed-instance/_media/gettingstarted-create-new-06.png" />
 
@@ -56,7 +56,7 @@ Once VPC, Subnets, Product, Image and Preferred Instance type are selected, Spot
 
 10. Add any custom Instance Tags by typing in the Key and Value and clicking “Add”:
 
-<img src="/managed-instance/_media/gettingstarted-create-new-09.png" />
+<img src="/managed-instance/_media/gettingstarted-create-new-09.png" width="438" height="154" />
 
 11. Fill out any additional settings such as detailed monitoring for Amazon CloudWatch, EBS optimization, Burstable CPU for T2 or 3 instances, IPv6 assignment and Public IP assignment.
 

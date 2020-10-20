@@ -23,18 +23,26 @@ Select the ‘Join Existing EKS Cluster’ rubric from the Elastigroup use case 
 ## Step 2: Configure Worker Nodes to join the EKS Cluster
 
 * Download the EKS cluster configuration using the following command:
-  `aws eks update-kubeconfig --name $CLUSTER_NAME`
+  ```
+  aws eks update-kubeconfig --name $CLUSTER_NAME
+  ```
 * Connect kubectl to your EKS cluster
-  `kubectl get svc`
-* Install the Kubernetes Controller
+  ```
+  kubectl get svc
+  ```
+* Install the [Kubernetes Controller](https://help.dev.spot.io/ocean/tutorials/spot-kubernetes-controller/)
 
 ## Step 3: Update AWS Authentication Config-Map
 
 * Download the AWS authenticator configuration map
-  `curl -O https://amazon-eks.s3-us-west-2.amazonaws.com/1.10.3/2018-06-05/aws-auth-cm.yaml`
+  ```
+  curl -O https://amazon-eks.s3-us-west-2.amazonaws.com/1.10.3/2018-06-05/aws-auth-cm.yaml
+  ```
 * In the aws-auth-cm.yaml file, replace the `<ARN of instance role (not instance profile)>` snippet with the `NodeInstanceRole` value from the Outputs tab of EKS cluster CloudFormation Stack.
 * Apply the updated aws-auth-cm.yaml to the cluster.
-  `kubectl apply -f aws-auth-cm.yaml`
+  ```
+  kubectl apply -f aws-auth-cm.yaml
+  ```
 
 Do not modify any other lines in this file.
 
@@ -45,4 +53,6 @@ In case of a previously existing cluster, we recommend down-scaling existing ASG
 
 * If you receive the error `"aws-iam-authenticator": executable file not found in $PATH`, then your kubectl is not configured for Amazon EKS. For more information, see [Configure kubectl for Amazon EKS](https://docs.aws.amazon.com/eks/latest/userguide/configure-kubectl.html).
 * You can list your cluster nodes with the following command:
-  `kubectl get nodes`
+  ```
+  kubectl get nodes
+  ```

@@ -8,7 +8,7 @@ Set as many policies as needed to maximize the Elastigroup’s efficiency.
 
 Each Simple Scaling Policy has the following set of parameters:
 * Policy Name: The name to assign to the policy. It’s recommended using a meaningful name to help you understand scaling actions better in the future.
-* Source: The scaling policy can utilize metrics from either GCP Stackdriver or Spotinst Spectrum.
+* Source: The scaling policy can utilize metrics from either GCP Stackdriver or Spot Spectrum.
 * Namespace: A container for metrics. If the source chosen is Spectrum, the namespace is custom, while for Stackdriver the available namespaces are ‘compute’ or ‘pubsub’
 * Scale based on:
   * Trigger:

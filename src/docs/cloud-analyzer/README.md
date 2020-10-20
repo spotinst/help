@@ -20,7 +20,7 @@ The Trends & Notifications tool continuously identifies trends and irregularitie
 
 ## Optimization
 
-The Optimization dashboard serves as a doorway to other tools in the Spot platform. The dashboard displays a complete cross-account savings summary, identifies workloads that can be optimized using Spotinst optimization solutions, and provides detailed recommendations that you can implement and automate with the click of a button.
+The Optimization dashboard serves as a doorway to other tools in the Spot platform. The dashboard displays a complete cross-account savings summary, identifies workloads that can be optimized using Spot optimization solutions, and provides detailed recommendations that you can implement and automate with the click of a button.
 
 ## What's Next?
 

@@ -7,15 +7,15 @@ In the console, you can enable single sign-on (SSO) for your organization.
 The system supports the following identity providers:
 
 * [ADFS SAML](administration/identity-providers/adfs-saml-authentication.md)
-* Azure AD Integration
-* Bitium SAML
-* Custom SAMLs
-* Okta SAML
-* OneLogin SAML
+* [Azure AD Integration](administration/identity-providers/azure-active-directory-integration.md)
+* [Bitium SAML](administration/identity-providers/bitium-saml-authentication.md)
+* [Custom SAMLs](administration/identity-providers/custom-saml-idp-configuration.md)
+* [Okta SAML](administration/identity-providers/okta-saml-authentication.md)
+* [OneLogin SAML](administration/identity-providers/onelogin-saml-authentication.md)
 
 ## Set up SAML SSO in the Console
 
-1. Login to the Spotinst account as an administrator: [spotinst console](https://console.spotinst.com/#/dashboard)
+1. Login to the Spot account as an administrator: [Spot console](https://console.spotinst.com/#/dashboard)
 2. Click on the user icon and choose Settings.
 3. Click on the “SECURITY” tab at the top and select Identity Providers.
 4. Complete the required information in the form and save.
@@ -28,19 +28,11 @@ The system supports the following identity providers:
 
 **Provider type** – Currently the only supported standard is SAML (Security Assertion Markup Language)
 
-**Metadata** – Data provided by the identity provider in order to sync our settings properly. For further information see the documentation for your Identity Provider:
+**Metadata** – Data provided by the identity provider in order to sync our settings properly.
 
-* ADFS SAML
-* Bitium SAML
-* Custom SAMLs
-* Okta SAML
-* OneLogin SAML
+**User Default Organization Role** – The role which is given to users who logged in via the Identity Provider (Viewer/Editor). For further information, see [User Roles](administration/users/).
 
-User Default Organization Role – The role which is given to users who logged in via the Identity Provider (Viewer/Editor)
-
-For further information, see User Roles.
-
-User Allowed Accounts – The accounts which the user will have access to (Default Account or All Accounts)
+**User Allowed Accounts** – The accounts which the user will have access to (Default Account or All Accounts)
 
 For further information, see Organizations and Accounts.
 
@@ -57,7 +49,6 @@ This configuration will generate another screen which will let the user choose a
 
 Roles can be defined only by organization or by account, not both.
 
-For further information, see:
-
-* Organization Level SSO
-* Account Level SSO
+## What's Next?
+* [Organization Level SSO](administration/sso-access-control/organization-level-sso.md)
+* [Account Level SSO](administration/sso-access-control/account-level-sso.md)

@@ -35,17 +35,17 @@ On Spot console:
 
 On GCP console:
 
-<img src="/connect-your-cloud-provider/_media/gcp-step3-a.png" />
+<img src="/connect-your-cloud-provider/_media/gcp-step3-a.png" width="389" height="286" />
 
 ### Step 4
 
 1. Grant your service account Editor permissions.
 
-<img src="/connect-your-cloud-provider/_media/gcp-step4.png" />
+<img src="/connect-your-cloud-provider/_media/gcp-step4.png" width="403" height="312" />
 
 2. Create a JSON key.
 
-<img src="/connect-your-cloud-provider/_media/gcp-step4-a.png" />
+<img src="/connect-your-cloud-provider/_media/gcp-step4-a.png" width="327" height="140" />
 
 3. Save the JSON file.
 
@@ -89,4 +89,4 @@ We’ll check connectivity to your GCP account, and you’re all set.
 
 ## What's Next?
 
-[Create your first Elastigroup](elastigroup/getting-started/create-an-elastigroup-for gcp.md).
+[Create your first Elastigroup](elastigroup/getting-started/create-an-elastigroup-for-gcp.md).

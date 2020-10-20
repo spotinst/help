@@ -6,7 +6,7 @@
 
 2. The Spot Console provides both permanent and temporary tokens. Select your preferred token type and click Generate Token.
 
-<img src="/administration/_media/api-create-api-token-02.png" />
+<img src="/administration/_media/api-create-api-token-02.png" width="429" height="236" />
 
 3. Give your token a name and click Generate. Your access token will appear in the window.
 
