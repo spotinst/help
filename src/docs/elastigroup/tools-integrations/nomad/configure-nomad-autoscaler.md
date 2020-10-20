@@ -51,7 +51,7 @@ You can add the following arguments to the Elastigroup configuration with an API
 
 You can also use the Review Tab in the Elastigroup configuration and edit the JSON:
 
-<img src="/elastigroup/_media/configure-nomad-autoscaler-02.png" width"558" height"768" />
+<img src="/elastigroup/_media/configure-nomad-autoscaler-02.png" width"436" height"600" />
 
 And add the following to the Elastigroup JSON:
 
