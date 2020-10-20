@@ -18,7 +18,7 @@ To start, let’s build a new DC/OS environment with the very convenient AWS Clo
 
 You’ll find a link to the cloud formation template at the top of the page. Select the region and click on “Launch Stack” link for “Single Master”.
 
-<img src="/elastigroup/_media/mesosphere-01.png" />
+<img src="/elastigroup/_media/mesosphere-01.png" width="600" height="204" />
 
 ## Step 2
 

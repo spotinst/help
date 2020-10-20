@@ -13,7 +13,7 @@ This integration provides the ability to use Route 53 as a load balancer for the
 1. Enter the Creation Wizard and complete the General tab.
 2. In the third-party integration section (under the Compute tab), choose Route 53 and click on the plus icon:
 
-<img src="/elastigroup/_media/route53-01.png" />
+<img src="/elastigroup/_media/route53-01.png" width="600" height="222" />
 
 3. Add the required Domains Hosted Zone Id and RecordSets while specifying the Name and usage of public IP:
 
