@@ -14,6 +14,7 @@ The diagram below illustrates how MCS handles instance failures. Utilizing predi
 
 <img src="/elastigroup/_media/kubernetes-with-elastigroupREADME_1.jpg" />
 
+
 ## Key Features
 
 [MCS Automatic Autoscaler](elastigroup/tools-integrations/kubernetes-with-elastigroup/kubernetes-cluster-autoscaling): MCS monitors the cluster workloads and provisions, manages and scales Kubernetes nodes to optimally handle pending tasks, while also detecting underutilized nodes and scaling them down.
