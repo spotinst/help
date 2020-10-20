@@ -82,7 +82,7 @@ write_files:
    2. Access Key & Secret key (which you just created in the previous step above -> in Step 1)
    3. When the instances are launched you should see that they are labeled with “spotinst.instanceId”:
 
-<img src="/elastigroup/_media/rancher-before-20-05.png" />
+<img src="/elastigroup/_media/rancher-before-20-05.png" width="600" height="326" />
 
 ---
 **Tip**: For security reasons, ensure that the Rancher Master Security-Group is open specifically for the whitelisted Spot server IP addresses listed here: [Spot Whitelist IPs](administration/api/whitelist-ips.md)
