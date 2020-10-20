@@ -34,8 +34,7 @@ Body
 ## Request: Cloud Formation – YAML
 
 Body
-
-```YAML
+```YML
 SpectrumAction:
     Type: Custom::spectrumAction
     Properties:
@@ -51,4 +50,4 @@ SpectrumAction:
         type: EMAIL
         params:
           email: noreply@spotinst.com
-          ```
+```

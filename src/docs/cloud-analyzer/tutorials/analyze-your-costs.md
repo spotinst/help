@@ -19,7 +19,7 @@ The Summary Line is at the top of the page and includes:
 
 ## Top Account Spend Efficiency
 
-<img src="/cloud-analyzer/_media/tutorials-analyze-costs-02.png" />
+<img src="/cloud-analyzer/_media/tutorials-analyze-costs-02.png" width="495" height="301" />
 
 The top 10 accounts in your organization are listed according to the greatest amount of Estimated Additional Savings (shown in US dollars).
 
@@ -34,13 +34,13 @@ Each cloud account is assigned an efficiency score based on current and addition
 You can take the following actions to further optimize your accounts:
 
 - View: To view a detailed breakdown of a specific account, click View. The Optimization page will appear showing detailed information to help you optimize the account.
-- Connect: To connect an account that is not yet managed by Spotinst, click Connect. You will be directed to the wizard that connects the account.
+- Connect: To connect an account that is not yet managed by Spot, click Connect. You will be directed to the wizard that connects the account.
 
 ## Top Accounts
 
 This is a bar graph showing your top ten accounts by cost. The graph is based on the last 30 days of spend activity.
 
-<img src="/cloud-analyzer/_media/tutorials-analyze-costs-03.png" />
+<img src="/cloud-analyzer/_media/tutorials-analyze-costs-03.png" width="495" height="392" />
 
 ## Spend Analysis
 

@@ -79,7 +79,7 @@ Download OS respective binary: https://github.com/Azure/aks-engine/releases/tag/
 ### Spot-aks-engine
 Download OS respective binary:
 
-**Linux***: [[386](https://spotinst-public.s3.amazonaws.com/integrations/kubernetes/aks-engine/v0.1.4/spotinst-aks-engine-linux-386)] [[amd64](https://spotinst-public.s3.amazonaws.com/integrations/kubernetes/aks-engine/v0.1.4/spotinst-aks-engine-linux-amd64)]
+**Linux**: [[386](https://spotinst-public.s3.amazonaws.com/integrations/kubernetes/aks-engine/v0.1.4/spotinst-aks-engine-linux-386)] [[amd64](https://spotinst-public.s3.amazonaws.com/integrations/kubernetes/aks-engine/v0.1.4/spotinst-aks-engine-linux-amd64)]
 
 **Darwin**: [[386](https://spotinst-public.s3.amazonaws.com/integrations/kubernetes/aks-engine/v0.1.4/spotinst-aks-engine-darwin-386)] [[amd64](https://spotinst-public.s3.amazonaws.com/integrations/kubernetes/aks-engine/v0.1.4/spotinst-aks-engine-darwin-amd64)]
 

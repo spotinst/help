@@ -24,7 +24,7 @@ $ kubectl patch deployment tiller-deploy \
 
 ## For Helm Versions 3.0 and Later
 
-1. Add Spotinst’s Helm charts repository:
+1. Add Spot’s Helm charts repository:
 
 `$ helm repo add spotinst https://spotinst.github.io/spotinst-kubernetes-helm-charts`
 
@@ -32,7 +32,7 @@ $ kubectl patch deployment tiller-deploy \
 
 `$ helm repo update`
 
-3. Install the Spotinst Kubernetes cluster controller:
+3. Install the Spot Kubernetes cluster controller:
 
 ```Shellscript
 $ helm install spotinst*_controller spotinst*/spotinst-kubernetes-cluster-controller \

@@ -26,13 +26,13 @@ Adding the agent installation at boot time adds to the amount of time it takes t
 
 It is recommended to adjust the draining timeout for instances to 120 seconds in the General Tab of the Creation Wizard under Advanced settings.
 
-<img src="/elastigroup/_media/compute-shutdown-01.png" />
+<img src="/elastigroup/_media/compute-shutdown-01.png" width="573" height="514" />
 
 ## Add a Shutdown Script
 
 Navigate to the Compute Tab and open the Advanced settings.
 
-<img src="/elastigroup/_media/compute-shutdown-02.png" />
+<img src="/elastigroup/_media/compute-shutdown-02.png" width="431" height="404" />
 
 ### Step 1
 

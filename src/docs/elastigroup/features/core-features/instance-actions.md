@@ -22,7 +22,7 @@ You can Lock specific instances to prevent them from being scaled down during au
 
 You can then define the time for the instance to be locked.
 
-<img src="/elastigroup/_media/corefeatures-instance-actions-04.png" />
+<img src="/elastigroup/_media/corefeatures-instance-actions-04.png" width="400" height="190" />
 
 ---
 **Tip**: This will protect the instance from Scaling action – however, this will not prevent a spot interruption if one occurs.

@@ -21,7 +21,7 @@ The AMI Auto-Backup provides several options for the frequency in which the back
 1. In the Elastigroup Creation Wizard (or group configuration) go to the Compute tab. Under Additional Configurations select the AMI auto-backup feature:
 2. Next, select the image creation frequency:
 
-<img src="/elastigroup/_media/compute-ami-autobackup-01.png" />
+<img src="/elastigroup/_media/compute-ami-autobackup-01.png" width="396" height="429" />
 
 You’re all set! Elastigroup will now automatically create backup images.
 
