@@ -22,12 +22,12 @@ In order to register your Spot instances into OpsWorks, you need to create an IA
 
 Under Elastigroups, click Create Elastigroup, and choose “Opsworks” from the use-cases screen.
 
-<img src="/elastigroup/_media/opsworks-integration-01.png" />
+<img src="/elastigroup/_media/opsworks-integration-01.png" width="176" height="257" />
 
 1. Select your Opsworks region, Stack type, Stack name and layer from the dropdown.
 2. Select a running instance from your layer, which will be used to import the configurations into the Elastigroup.
 
-<img src="/elastigroup/_media/opsworks-integration-02.png" />
+<img src="/elastigroup/_media/opsworks-integration-02.png" width="443" height="231" />
 
 ## Step 3: Verify Configurations
 

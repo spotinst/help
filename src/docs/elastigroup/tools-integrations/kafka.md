@@ -10,7 +10,7 @@ Kafka is one of the most popular messaging systems today. It is designed for dis
 
 Kafka’s architecture is designed based on several components and each component has his unique role.
 
-<img src="/elastigroup/_media/kafka-01.png" />
+<img src="/elastigroup/_media/kafka-01.png" width="600" height="434" />
 
 * Broker – A Kafka cluster is made up of multiple Kafka Brokers. Each Kafka Broker has a unique ID. Kafka Brokers contain topic log partitions. Connecting to one broker bootstraps a client to the entire Kafka cluster.
 
