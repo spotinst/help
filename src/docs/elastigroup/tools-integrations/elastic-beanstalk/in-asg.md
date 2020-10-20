@@ -37,18 +37,18 @@ Infrastructure configuration changes are changes made in the Beanstalk environme
 
 Maintenance mode allows you to perform configuration changes to your infrastructure related resources which require a rolling update. This includes the following changes:
 
-**Namespace: aws:autoscaling:launchconfiguration** | **Namespace: aws:ec2:vpc**
--------------------------------------------------- | --------------------------
-EC2KeyName  |
-IamInstanceProfile |
-ImageId |
-MonitoringInterval | VPCId
-SecurityGroups | Subnets
-SSHSourceRestriction | ELBSubnets
-BlockDeviceMappings | ELBScheme
-RootVolumeType | DBSubnets AssociatePublicIpAddress
-RootVolumeSize |
-RootVolumeIOPS |
+|**Namespace: aws:autoscaling:launchconfiguration** | **Namespace: aws:ec2:vpc**|
+|---|---|
+|EC2KeyName|VPCId
+|IamInstanceProfile|Subnets
+|ImageId|ELBSubnets
+|MonitoringInterval|ELBScheme
+|SecurityGroups|DBSubnets
+|SSHSourceRestriction|AssociatePublicIpAddress
+|BlockDeviceMappings|
+|RootVolumeType|
+|RootVolumeSize|
+|RootVolumeIOPS|
 
 ---
 
