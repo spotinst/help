@@ -14,7 +14,7 @@ The overview below relates only to services relevant to the integration with Spo
 <img src="/tools-and-provisioning/_media/spinnaker overview_1.png" />
 
 * Deck is the browser-based UI.
-* Orca is the orchestration engine. It handles all ad-hoc operations and pipelines. (For more information, see [Orca Internals Overview](https://support.spot.io/provisioning-and-cicd/provisioning-and-cicd/spinnaker/spinnaker/).)
+* Orca is the orchestration engine. It handles all ad-hoc operations and pipelines. (For more information, see [Orca Internals Overview](https://spinnaker.io/guides/developer/service-overviews/orca/).)
 * Clouddriver is responsible for all mutating calls to the cloud providers and for indexing and caching of deployed resources.
 * Halyard is Spinnaker’s configuration service. Halyard manages the lifecycle of each of the above services. It interacts with these services only during Spinnaker startup, updates, and rollbacks.
 
@@ -22,12 +22,12 @@ The overview below relates only to services relevant to the integration with Spo
 
 The Spinnaker integration with Spot includes the following tasks:
 
-1. [Install Halyard](https://support.spot.io/provisioning-and-cicd/provisioning-and-cicd/spinnaker/install-configure/)
-2. [Add Spot as a Cloud Provider](https://support.spot.io/provisioning-and-cicd/provisioning-and-cicd/spinnaker/install-configure/)
-3. [Set up Environment as a Local Git](https://support.spot.io/provisioning-and-cicd/provisioning-and-cicd/spinnaker/set-up-environment-as-local-git/)
+1. [Install Halyard](tools-and-provisioning/spinnaker/install-configure)
+2. [Add Spot as a Cloud Provider](tools-and-provisioning/spinnaker/install-configure)
+3. [Set up Environment as a Local Git](tools-and-provisioning/spinnaker/set-up-environment-as-local-git)
 
 Once you have completed these steps, you will be able to use the Spot features directly from Spinnaker.
 
 ## What’s Next?
 
-Go to the [Install and Configure](https://support.spot.io/provisioning-and-cicd/provisioning-and-cicd/spinnaker/install-configure/) procedures and get started with your Spinnaker integration.
+Go to the [Install and Configure](tools-and-provisioning/spinnaker/install-configure) procedures and get started with your Spinnaker integration.
