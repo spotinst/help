@@ -6,7 +6,7 @@
 
 Let’s start with a few assumptions:
 
-* You’ve done the key creation as specified in [Create Encryption Key](https://help.dev.spot.io/elastigroup/tutorials/elastigroup-tasks/create-encryption-key).
+* You’ve done the key creation as specified in [Create Encryption Key](elastigroup/tutorials/elastigroup-tasks/create-encryption-key).
 * Account actKey will represent the account that holds the KMS key.
 * Account actInst will represent the account that will run the Instances.
 * Key and Instances must be in the same region
