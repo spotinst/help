@@ -8,6 +8,8 @@ Jenkins is an open-source continuous integration software tool for testing and r
 
 ## How It Works
 
+<img src="/tools-and-provisioning/_media/Jenkins_1.png" />
+
 The Spot Jenkins plug-in (1) automatically scales instances up & down based on the number of jobs in its queue. Nodes are (2) provisioned across multiple instance types and AZs to optimize savings while still guaranteeing availability. The nodes that are provisioned (3) run a startup script to connect as Slave nodes to the Master and immediately start running jobs.
 
 ## Step 1: Generate a Spot API Access Token
@@ -21,11 +23,14 @@ The Spot Jenkins plug-in (1) automatically scales instances up & down based on t
 
 Create an Elastigroup with your preferred Region, AMI, and Instance Types. In the General tab under Advanced set the Capacity Unit to *vCPU*.
 
+
+<img src="/tools-and-provisioning/_media/Jenkins_2.png" />
+
 Add the following startup script:
 
 **Linux user-data:**
 
-```
+```bash
 #!/bin/bash
 install_deps() {
   log_info "Installing dependencies"
@@ -67,8 +72,11 @@ The jnlpCredentials flag is used for authenticating to Jenkins, pass the usernam
 **Tip:**
 For optimal performance we recommend using the Amazon Standard AMI (CentOS based).
 
+---
+
 **Windows user-data:**
-```
+
+```powershell
 <powershell>
 $EC2_INSTANCE_ID = Invoke-RestMethod -uri http://169.254.169.254/latest/meta-data/instance-id
 $JENKINS_MASTER_IP = “JenkinsMaster:port”
@@ -86,7 +94,7 @@ Start-Process -FilePath ‘C:\Program Files\Java\jre1.8.0_151\bin\java’ -Argum
 
 Create an Elastigroup, with the desired instance types, region and other configurations for the Jenkins Slaves. In the Compute tab, under Startup Script add the following.
 
-```
+```bash
 #!/bin/bash
 install_deps() {  
   echo "Installing dependencies"
@@ -124,13 +132,13 @@ curl http://${JENKINS_MASTER_IP}/jnlpJars/slave.jar --output /tmp/slave.jar
 java -jar /tmp/slave.jar -jnlpCredentials user:1234 -jnlpUrl http://${JENKINS_MASTER_IP}/computer/${INSTANCE_NAME}/slave-agent.jnlp &
 ```
 
-#### Jenkins on Azure
+### Jenkins on Azure
 
 Create an Elastigroup, with the desired VM types, region and other configurations for the Jenkins Slaves. In the Compute tab, under Additional Configurations add the following user-data.
 
 **Linux User-Data:**
 
-```
+```bash
 #!/bin/bash
 ﻿
 install_deps() {
@@ -183,6 +191,8 @@ By default, the Slaves try to connect on a random JNLP port. Therefore, the fire
 1. To configure a fixed JNLP port for the Jenkins Slaves, navigate to Manage Jenkins >> Global Security>>Agents and set a static TCP port for JNLP agents.
 2. Configure the network to be available exclusively for this port.
 
+<img src="/tools-and-provisioning/_media/Jenkins_3.png" />
+
 ## Step 4: Install the Spot Plugin for Jenkins
 
 1. Login to the Jenkins console, install the Spot Plugin from the available Plugins list.
@@ -190,9 +200,14 @@ By default, the Slaves try to connect on a random JNLP port. Therefore, the fire
 3. Navigate to Manage Jenkins >> Configure System, scroll down to the Spot section and add the API Token generated in Step 1, along with an appropriate Account ID (will be used as a global Account ID in case no Account ID is specified for every cloud added in the next step).
 4. Click on Validate Token to ensure that the token is valid.
 
+<img src="/tools-and-provisioning/_media/Jenkins_4.png" />
+
 Once the Spot Token is set, scroll down towards the bottom to the “Cloud” section. Click on Add a new cloud and select the cloud provider connected to the Spot account being used (you can more than one cloud, each specifying it’s own Elastigroup and Account IDs).
 
 There should now be more fields to choose from. For more information on each field hover over the information button on the right side of each field. Specify the Elastigroup ID for the Elastigroup created in Step 2, the appropriate Account ID associated with that Elastigroup and Idle Minutes Before Termination to determine how long Elastigroup should wait before terminating an idle instance.
+
+
+<img src="/tools-and-provisioning/_media/Jenkins_5.png" />
 
 ## Configuration Notes
 

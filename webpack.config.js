@@ -1,32 +1,32 @@
-const path              = require("path");
+const path = require("path");
 const { ProvidePlugin } = require("webpack");
-const CleanPlugin       = require("clean-webpack-plugin");
-const CopyPlugin        = require("copy-webpack-plugin");
-const HtmlPlugin        = require("html-webpack-plugin");
-const srcDirectory      = path.resolve(__dirname, "src");
-const buildDirectory    = path.resolve(__dirname, "build");
-const port              = 3000;
+const CleanPlugin = require("clean-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
+const HtmlPlugin = require("html-webpack-plugin");
+const srcDirectory = path.resolve(__dirname, "src");
+const buildDirectory = path.resolve(__dirname, "build");
+const port = 3000;
 
 module.exports = {
-  mode:      "development",
+  mode: "development",
   devServer: {
-    contentBase:        buildDirectory,
+    contentBase: buildDirectory,
     historyApiFallback: true,
     port,
   },
-  entry:     "./src/index.js",
-  output:    {
+  entry: "./src/index.js",
+  output: {
     filename: "bundle.js",
-    path:     buildDirectory,
+    path: buildDirectory,
   },
-  module:    {
+  module: {
     rules: [
       {
         test: /\.pcss$/,
-        use:  [
+        use: [
           "style-loader", // creates style nodes from JS strings
           {
-            loader:  "css-loader", // translates CSS into CommonJS
+            loader: "css-loader", // translates CSS into CommonJS
             options: {
               importLoaders: 1,
             },
@@ -35,38 +35,34 @@ module.exports = {
         ],
       },
       {
-        test:   /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
         loader: "file-loader",
       },
     ],
   },
-  plugins:   [
+  plugins: [
     new CleanPlugin([buildDirectory]),
     new CopyPlugin({
       patterns: [
         {
           from: path.resolve(__dirname, srcDirectory, "docs"),
-          to:   buildDirectory,
+          to: buildDirectory,
         },
         {
           from: path.resolve(__dirname, srcDirectory, ".nojekyll"),
-          to:   buildDirectory,
-        },
-        {
-          from: path.resolve(__dirname, srcDirectory, "CNAME"),
-          to:   buildDirectory,
+          to: buildDirectory,
         },
       ],
     }),
     new HtmlPlugin({
       template: "src/index.html",
       filename: "index.html",
-      inject:   false,
+      inject: false,
     }),
     new HtmlPlugin({
       template: "src/404.html",
       filename: "404.html",
-      inject:   false,
+      inject: false,
     }),
     new ProvidePlugin({
       $: "jquery",

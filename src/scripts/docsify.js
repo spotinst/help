@@ -4,7 +4,7 @@ window.$docsify = {
   // GENERAL
   // ---------------------------------------------------------------------------
   name: `<div class="logo"><img src="/_media/images/logos/spot.svg"/></div>`,
-  homepage: "/welcome/getting-started.md",
+  homepage: "/connect-your-cloud-provider/README.md",
   formatUpdated: "{MM}/{DD}, {HH}:{mm}",
   ga: "UA-68573156-10",
 

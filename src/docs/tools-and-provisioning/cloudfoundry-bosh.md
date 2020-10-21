@@ -40,51 +40,54 @@ Then, download the `Spot CPI manifest`.
 
 `# wget http://-public.s3.amazonaws.com/integrations/bosh/aws/cpi.yml`
 
-The Spot CPI exposes several cloud properties that can be configured in the VM Types section. For example:
+The Spot CPI exposes several cloud properties that can be configured in the VM Types section.
+ For example:
 
+ ```json
+ vm_types:
+     - name: default
+         cloud_properties:
+         instance_type: m3.medium
+         availability_zone: us-east-1a
+         spotinst_product: Linux/UNIX
+         spotinst_risk: 100
 ```
-vm_types:
-    - name: default
-        cloud_properties:
-        instance_type: m3.medium
-        availability_zone: us-east-1a
-        _product: Linux/UNIX
-        _risk: 100
-        ```
 
-`spotinst_product` **[String, optional]**: Product name. Defaults to `Linux/UNIX` (can be set to `Linux/UNIX (Amazon VPC)` if your account has both EC2 VPC and EC2 Classic platforms).
-`spotinst_risk` **[Integer, optional]**: The percentage of Spot instances that would spin up from the target capacity. Set to 0 to use On-Demand instances. Defaults to `100` (all instances should be Spot).
-`spotinst_disabled` **[Boolean, optional**]: Set to `true` to disable the Spot CPI for a specific deployment. Defaults to `false` (use Spot CPI always).
+ `spotinst_product` **[String, optional]**: Product name. Defaults to `Linux/UNIX` (can be set to `Linux/UNIX (Amazon VPC)` if your account has both EC2 VPC and EC2 Classic platforms).
+ 
+ `spotinst_risk` **[Integer, optional]**: The percentage of Spot instances that would spin up from the target capacity. Set to 0 to use On-Demand instances. Defaults to `100` (all instances should be Spot).
+ 
+ `spotinst_disabled` **[Boolean, optional]**: Set to `true` to disable the Spot CPI for a specific deployment. Defaults to `false` (use Spot CPI always).
 
 ## Step 4. Create a New State Directory
 
-Create a new state directory. This state is used by BOSH to store information about your BOSH Director, keep track of both managed infrastructure and configuration.
+ Create a new state directory. This state is used by BOSH to store information about your BOSH Director, keep track of both managed infrastructure and configuration.
 
-`$ mkdir state`
+ `$ mkdir state`
 
 ## Step 5. Create a New Variable File
 
-Create a new variables file. For example, `.envrc`.
+ Create a new variables file. For example,`.envrc`.
 
-```
-export _TOKEN="redacted"
-export _ACCOUNT="act-12345"
-export AWS_ACCESS_KEY="AKI..."
-export AWS_SECRET_ACCESS_KEY="redacted"
-export AWS_REGION="us-west-2"
-export AWS_ZONE="us-west-2a"
-export AWS_KEY_NAME="key"
-export AWS_SECURITY_GROUPS="[bosh]"
-export AWS_SUBNET_ID="subnet-12345"
-export AWS_ELASTIC_IP="1.2.3.4"
-export SSH_PRIVATE_KEY="/path/to/private.key"
-```
+ ```json
+ export SPOTINST_TOKEN="redacted"
+ export SPOTINST_ACCOUNT="act-12345"
+ export AWS_ACCESS_KEY="AKI..."
+ export AWS_SECRET_ACCESS_KEY="redacted"
+ export AWS_REGION="us-west-2"
+ export AWS_ZONE="us-west-2a"
+ export AWS_KEY_NAME="key"
+ export AWS_SECURITY_GROUPS="[bosh]"
+ export AWS_SUBNET_ID="subnet-12345"
+ export AWS_ELASTIC_IP="1.2.3.4"
+ export SSH_PRIVATE_KEY="/path/to/private.key"
+ ```
 
 ## Step 6. Create a New Environment
 
-Finally, create the environment using bosh `create-env`.
+Finally, create the environment using `bosh create-env`.
 
-```
+```json
 $ source .envrc && bosh create-env deployment/bosh.yml \ --state state/state.json \
 --vars-store state/creds.yml \
 -o cpi.yml \
@@ -93,8 +96,8 @@ $ source .envrc && bosh create-env deployment/bosh.yml \ --state state/state.jso
 -v internal_cidr=10.0.0.0/24 \
 -v internal_gw=10.0.0.1 \
 -v internal_ip=10.0.0.6 \
--v _token=$_TOKEN \
--v _account=$_ACCOUNT \
+-v spotinst_token=$SPOTINST_TOKEN \
+-v spotinst_account=$SPOTINST_ACCOUNT \
 -v access_key_id=$AWS_ACCESS_KEY \
 -v secret_access_key=$AWS_SECRET_ACCESS_KEY \
 -v region=$AWS_REGION \
@@ -107,41 +110,41 @@ $ source .envrc && bosh create-env deployment/bosh.yml \ --state state/state.jso
 
 ## Step 7. Configure an Alias for Your Environment
 
-Once the instance with BOSH Director is running, point your CLI to it, saving the environment with the alias.
+Once the instance with BOSH Director is running, point your CLI to it, saving the environment with the alias `spotinst`.
 
-```
-$ bosh -e $AWS_ELASTIC_IP alias-env  --ca-cert <(bosh int state/ creds.yml --path /director_ssl/ca)
-```
+`$ bosh -e $AWS_ELASTIC_IP alias-env spotinst --ca-cert <(bosh int state/ creds.yml --path /director_ssl/ca)`
 
 ## Step 8. Log in to Your Director
 
 ```
 $ export BOSH_CLIENT=admin
 $ export BOSH_CLIENT_SECRET=$(bosh int state/creds.yml --path / admin_password)
-$ bosh -e  login
+$ bosh -e spotinst login
 ```
-
-Follow these [instructions](https://bosh.io/docs/cloud-config/#update) to update your cloud config on the Director.
+Follow these [instructions](https://bosh.io/docs/cloud-config.html#update) to update your cloud configuration on the Director.
 
 Now we are ready to deploy!
 
 ## Step 9. Deploy
 
 Each BOSH deployment needs to provide a specially structured configuration file – deployment manifest. This file defines what resources are going to be deployed, what services are going to be running on each of resources and properties that will be passed to services configuration files.
-
 Here is an example to deploy a simple `Zookeeper` service.
 
 First, we need to upload Stemcell. A Stemcell is an operating system image that BOSH uses to create VMs.
 
 ```
 $ wget --content-disposition https://s3.amazonaws.com/bosh-aws-light-stemcells/light-bosh-stemcell-3541.2-aws-xen-hvm-ubuntu-trusty-go_agent.tgz
-$ bosh -e  upload-stemcell light-bosh-stemcell-3541.2-aws-xen-hvm- ubuntu-trusty-go_agent.tgz
+$ bosh -e spotinst upload-stemcell light-bosh-stemcell-3541.2-aws-xen-hvm- ubuntu-trusty-go_agent.tgz
 ```
 
 Then, we need to download the Zookeeper deployment.
 
-`$ wget https://raw.githubusercontent.com/cppforlife/zookeeper-release/master/manifests/zookeeper.yml`
+```
+$ wget https://raw.githubusercontent.com/cppforlife/zookeeper-release/master/manifests/zookeeper.yml
+```
 
 And finally, we can run deploy by providing a path to deployment manifest.
 
-`$ bosh -e  -d zookeeper deploy zookeeper.yml`
+```
+$ bosh -e spotinst -d zookeeper deploy zookeeper.yml
+```
