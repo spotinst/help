@@ -2,7 +2,7 @@
 
 AWS CloudFormation allows customizing templates and inputting custom values to templates when creating or updating a stack. When creating a template, define a default value which will be used to provision the stack unless a different value is provided. Define the parameter value in the parameter block and use it in the resources block.
 
-Below are several examples where we defined parameters to use inside the Spotinst resources, but any field is definable as a parameter.
+Below are several examples where we defined parameters to use inside the Spot resources, but any field is definable as a parameter.
 
 ## Defining a parameter:
 
