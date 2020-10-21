@@ -8,7 +8,7 @@ Spot technology uses machine learning and analytics algorithms that enable you t
 
 <img src="/connect-your-cloud-provider/_media/introduction-to-spot-01.png" width="500" height="326" />
 
-## We Enable Developer, Cloud Operations Agility and Speed
+## Cloud Operations Agility
 
 Spot uses application-driven provisioning to effortlessly and affordably scale any workload, from stateful single instances to cloud-native VM-based or Kubernetes clusters. Spot uses the ideal mix of cloud compute resources, from on-demand to reserved and spot instances, based on the dynamic needs of the application.
 
