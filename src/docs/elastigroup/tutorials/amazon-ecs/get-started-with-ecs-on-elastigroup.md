@@ -67,4 +67,4 @@ Initialize-ECSAgent -Cluster CLUSTER_NAME -EnableTaskIAMRole -LoggingDrivers '["
 
 ## What’s Next?
 
-Now that you have created an ECS-integrated Elastigroup, learn more about the [ECS Auto-Scaler](https://help.dev.spot.io/elastigroup/features/amazon-ecs/automatic-autoscaler-for-ecs) and how it efficiently and automatically scales your cluster.
+Now that you have created an ECS-integrated Elastigroup, learn more about the [ECS Auto-Scaler](elastigroup/features/amazon-ecs/automatic-autoscaler-for-ecs) and how it efficiently and automatically scales your cluster.
