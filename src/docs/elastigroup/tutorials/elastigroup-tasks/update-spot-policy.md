@@ -11,7 +11,7 @@ https://console.spotinst.com/#/settings/account/general
 
 **Tip**:
 
-It is important to keep this policy updated with the latest version listed here – [Spot Policy](https://help.spot.io/spotinst-api/administration/spotinst-policy/).
+It is important to keep this policy updated with the latest version listed here – [Spot Policy](administration/api/spot-policy-in-aws).
 
 ---
 
