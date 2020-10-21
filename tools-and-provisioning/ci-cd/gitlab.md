@@ -14,7 +14,7 @@ The following tutorial covers how to start running Gitlab Runner’s autoscaling
 
 ## Procedure
 
-1. Create an Elastigroup in your account with the following parameters (The complete Elastigroup tutorial can be found [here](https://docs.spot.io/elastigroup-for-aws/tutorials/create-an-elastigroup-from-scratch/)):
+1. [Create an Elastigroup](elastigroup/tutorials/elastigroup-tasks/create-an-elastigroup-from-scratch.md) in your account with the following parameters:
 2. [Docker-Machine Supported OS AMI](https://docs.docker.com/machine/drivers/os-base/)
 3. Create Security Group with inbound SSH (22) and Docker-Machine (2376) ports open
 4. Install [Git Runner on Linux machine](https://docs.gitlab.com/runner/install/index.html)
@@ -22,8 +22,10 @@ The following tutorial covers how to start running Gitlab Runner’s autoscaling
 6. Install Spot driver on Docker-Machine. The driver can be found here:
 https://github.com/spotinst/docker-machine-driver-spotinst/releases
 7. [Register your Runner](https://docs.gitlab.com/runner/register/index.html#gnu-linux).
-8. [Open the Gitlab Runner configuration file](https://docs.gitlab.com/runner/configuration/advanced-configuration.html:
-`:/etc/gitlab-runner/config.toml`
+8. [Open the Gitlab Runner configuration file](https://docs.gitlab.com/runner/configuration/advanced-configuration.html)
+
+   `:/etc/gitlab-runner/config.toml`
+
 9. Add configuration of Spot provider under `[runners.machine]`:
 
 ```
@@ -44,12 +46,12 @@ The following table covers the MachineOptions parameters used above. Note that t
 
 |**Option Name** | **Description** |
 |---|---|
-| `--spotinst-account`| Spotinst Account ID |
+| `--spotinst-account`| Spot Account ID |
 | `--spotinst-elastigroup-id` | Elastigroup ID in the relevant account to fill in servers |
-| `--spotinst-token` | Spotinst token from your organization |
+| `--spotinst-token` | Spot token from your organization |
 | `--spotinst-sshkey-path` | Local path to the pem file of the Elastigroup |
 
-You just configured Docker-Machine to provision instances through Elastigroup, congrats!
+You just configured Docker-Machine to provision instances through Elastigroup.
 
 ## What’s Next?
 
