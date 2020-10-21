@@ -43,7 +43,7 @@ Then, download the `Spot CPI manifest`.
 The Spot CPI exposes several cloud properties that can be configured in the VM Types section.
  For example:
 
- ```
+ ```json
  vm_types:
      - name: default
          cloud_properties:
@@ -54,8 +54,10 @@ The Spot CPI exposes several cloud properties that can be configured in the VM T
 ```
 
  `spotinst_product` **[String, optional]**: Product name. Defaults to `Linux/UNIX` (can be set to `Linux/UNIX (Amazon VPC)` if your account has both EC2 VPC and EC2 Classic platforms).
+ 
  `spotinst_risk` **[Integer, optional]**: The percentage of Spot instances that would spin up from the target capacity. Set to 0 to use On-Demand instances. Defaults to `100` (all instances should be Spot).
- `spotinst_disabled` **[Boolean, optional]**: Set to `true` to disable the Spotinst CPI for a specific deployment. Defaults to `false` (use Spotinst CPI always).
+ 
+ `spotinst_disabled` **[Boolean, optional]**: Set to `true` to disable the Spot CPI for a specific deployment. Defaults to `false` (use Spot CPI always).
 
 ## Step 4. Create a New State Directory
 
@@ -67,7 +69,7 @@ The Spot CPI exposes several cloud properties that can be configured in the VM T
 
  Create a new variables file. For example,`.envrc`.
 
- ```
+ ```json
  export SPOTINST_TOKEN="redacted"
  export SPOTINST_ACCOUNT="act-12345"
  export AWS_ACCESS_KEY="AKI..."
@@ -85,7 +87,7 @@ The Spot CPI exposes several cloud properties that can be configured in the VM T
 
 Finally, create the environment using `bosh create-env`.
 
-```
+```json
 $ source .envrc && bosh create-env deployment/bosh.yml \ --state state/state.json \
 --vars-store state/creds.yml \
 -o cpi.yml \
@@ -119,11 +121,12 @@ $ export BOSH_CLIENT=admin
 $ export BOSH_CLIENT_SECRET=$(bosh int state/creds.yml --path / admin_password)
 $ bosh -e spotinst login
 ```
-Follow these [instructions]https://bosh.io/docs/cloud-config/#update(https://bosh.io/docs/cloud-config/#update) to update your cloud config on the Director.
+Follow these [instructions](https://bosh.io/docs/cloud-config/#update(https://bosh.io/docs/cloud-config/#update) to update your cloud configuration on the Director.
 
 Now we are ready to deploy!
 
 ## Step 9. Deploy
+
 Each BOSH deployment needs to provide a specially structured configuration file – deployment manifest. This file defines what resources are going to be deployed, what services are going to be running on each of resources and properties that will be passed to services configuration files.
 Here is an example to deploy a simple `Zookeeper` service.
 
@@ -136,13 +139,12 @@ $ bosh -e spotinst upload-stemcell light-bosh-stemcell-3541.2-aws-xen-hvm- ubunt
 
 Then, we need to download the Zookeeper deployment.
 
-`$ wget https://raw.githubusercontent.com/cppforlife/zookeeper-release/master/manifests/zookeeper.yml`
+```
+$ wget https://raw.githubusercontent.com/cppforlife/zookeeper-release/master/manifests/zookeeper.yml
+```
 
 And finally, we can run deploy by providing a path to deployment manifest.
 
-`$ bosh -e spotinst -d zookeeper deploy zookeeper.yml`
-<<<<<<< Updated upstream
-
-
-=======
->>>>>>> Stashed changes
+```
+$ bosh -e spotinst -d zookeeper deploy zookeeper.yml
+```
