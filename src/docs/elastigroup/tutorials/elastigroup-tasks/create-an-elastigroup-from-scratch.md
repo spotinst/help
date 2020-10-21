@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This tutorial covers the general creation of an Elastigroup, using an empty template. The Empty Template is Available under Uses Cases in the [Creation Wizard](https://console.spotinst.com/spt/auth/signIn). To create an Elastigroup based on an existing workload such as AWS’s Elastic Beanstalk or AutoScaling Groups, select your workload type under [Use Cases](https://console.spotinst.com/#/aws/ec2/elastigroup/create/setup) and import a copy of your workload. To create an Elastigroup from scratch from the Onboarding Wizard select Create an Elastigroup from Scratch.
+This tutorial covers the general creation of an Elastigroup, using an empty template. The Empty Template is Available under Uses Cases in the [Creation Wizard](https://console.spotinst.com/#/aws/ec2/elastigroup/create/setup). To create an Elastigroup based on an existing workload such as AWS’s Elastic Beanstalk or AutoScaling Groups, select your workload type under Use Cases and import a copy of your workload. To create an Elastigroup from scratch from the Onboarding Wizard select Create an Elastigroup from Scratch.
 
 ## Step 1: General Settings
 
@@ -25,10 +25,10 @@ We highly recommend selecting Multiple Availability Zones and multiple instance 
 * Choose an Image, Security Groups and (optionally) the Key Pair to use for your instances.
 
 ## Step 3: (Optional) Configure Scaling Policies
-Optionally, create a [Simple Scaling Policy](https://support.spot.io/elastigroup-for-aws/features-elastigroup-for-aws/elastigroup-for-aws/features-elastigroup-for-aws/scaling-features/simple-scaling-policies/) or a [Target Scaling Policy](https://support.spot.io/elastigroup-for-aws/features-elastigroup-for-aws/elastigroup-for-aws/features-elastigroup-for-aws/scaling-features/target-scaling/).
+Optionally, create a [Simple Scaling Policy](elastigroup/features/scaling/simple-scaling-policies) and [Target Scaling Policy](elastigroup/features/scaling/target-scaling).
 
 ## Step 4: Review and Create
 All that’s left to do is review your settings and launch your Elastigroup!
 
 ## What’s Next?
-Learn more about the features and integrations supported in [Elastigroup for AWS](https://support.spot.io/elastigroup-for-aws/).
+Learn more about the features and integrations supported in [Elastigroup for AWS](elastigroup/getting-started/elastigroup-for-aws).
