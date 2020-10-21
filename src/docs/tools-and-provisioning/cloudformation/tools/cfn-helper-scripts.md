@@ -6,41 +6,28 @@ In order to use cfn helper scripts in Elastigroup user-data, you will need to sp
 
 ## How to use CFN Helper Scripts in Elastigroup User-Data
 
-# Step 1: Create a new IAM Policy
+### Step 1: Create a new IAM Policy
 
 1. Login to your AWS console and navigate to the [IAM](https://console.aws.amazon.com/iam) page.
-
 2. Click Policies in the side menu, and then Create Policy.
 
-<img src="/tools-and-provisioning/_media/cfn-helper-scripts_1.png" />
+<img src="/tools-and-provisioning/_media/cfn-helper-scripts_1.png" width="476" height="321" />
 
 3. Switch to JSON view and add this snippet to the policy.
 
-```jason
+```json
 {
-﻿
    "Version": "2012-10-17",
-﻿
    "Statement": [
-﻿
        {
-﻿
            "Effect": "Allow",
-﻿
            "Action": [
-﻿
                "cloudformation:SignalResource",
-﻿
                "cloudformation:DescribeStackResource"
-﻿
            ],
-﻿
            "Resource": "*"
-﻿
        }
-﻿
    ]
-﻿
 }
 ```
 
@@ -50,26 +37,22 @@ In order to use cfn helper scripts in Elastigroup user-data, you will need to sp
 
 <img src="/tools-and-provisioning/_media/cfn-helper-scripts_3.png" />
 
-
-## Step 2: Attach the IAM Policy to your IAM Role
+### Step 2: Attach the IAM Policy to your IAM Role
 
 1. Under Roles from the side menu, locate the IAM role used by your elastigroup and click on it:
 
-<img src="/tools-and-provisioning/_media/cfn-helper-scripts_4.png" />
+<img src="/tools-and-provisioning/_media/cfn-helper-scripts_4.png" width="381" height="267" />
 
 2. Search your newly created policy, and click Attach Policy:
 
 <img src="/tools-and-provisioning/_media/cfn-helper-scripts_5.png" />
 
 ---
-
-**Tip:**
-
-Beanstalk Elastigroups do not need to modify their user-data.
+**Tip**: Beanstalk Elastigroups do not need to modify their user-data.
 
 ---
 
-## Step 3: Modify your Elastigroup User-Data (Non-Beanstalk Elastigroups)
+### Step 3: Modify your Elastigroup User-Data (Non-Beanstalk Elastigroups)
 
 Modify your user-data to invoke CFN helper scripts using the role name. Note: If your Instance profile name is different than the role name attached to it, use the role name in the user-data script.
 
