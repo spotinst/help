@@ -43,3 +43,5 @@ jobs:
           REPOSITORY_NAME: spotinst/docs
           BRANCH: gh-pages
           FOLDER: build
+          CLEAN: true
+          CLEAN_EXCLUDE: "['CNAME', '.nojekyll', 'api']"
