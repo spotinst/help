@@ -6,7 +6,7 @@ Supports Update Policy:
 
 `shouldUpdateTargetCapacity`
 
-For more information on UpdatePolicy, see [Parameters](https://support.spot.io/provisioning-and-cicd/cloudformation/provisioning-and-cicd/cloudformation/template-structure/parameters-2/).
+For more information on UpdatePolicy, see [Parameters](tools-and-provisioning/cloudformation/template-structure/parameters).
 
 The full body attribute list is available on the [Create](https://docs.spot.io/spotinst-api/ocean/ocean-cloud-api/ocean-for-aws/create/) page of the API documentation.
 
@@ -82,7 +82,7 @@ Body
 
 Body
 
-```YML
+```yaml
 Resources:
   SpotinstOcean:
     Type: Custom::oceanEcs
