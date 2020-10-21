@@ -26,7 +26,7 @@ For SNS select aws-sns as the Protocol Type and the SNS Topic ARN the notificati
 
 <img src="/elastigroup/_media/create-notifications_3.png" />
 
-Setting up Notifications for additional Platforms such as “email” and “email-json” are currently only available via our [API](https://docs.spot.io/spotinst-api/administration/notifications-service/subscriptions/subscribe/)
+Setting up Notifications for additional Platforms such as “email” and “email-json” are currently only available via our [API](https://docs.spot.io/spotinst-api/administration/notifications-service/subscriptions/subscribe/).
 
 ## Step 3: Event Types
 
