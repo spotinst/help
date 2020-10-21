@@ -37,9 +37,9 @@ We recommend using a deployment policy that is supported by the in-ASG approach 
 
 ---
 
-Tip:
+**Tip:**
 
-Before starting, verify that the most up-to-date [Spot IAM policy](https://docs.spot.io/spotinst-policy/) is configured in your AWS account
+Before starting, verify that the most up-to-date [Spot IAM policy](administration/api/spot-policy-in-aws) is configured in your AWS account.
 
 ---
 

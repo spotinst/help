@@ -174,5 +174,5 @@ The following is a list of values that can be in the “reason” field and an e
 
 ## What’s Next?
 
-* Configure [Slack Notifications](https://docs.spot.io/elastigroup-for-aws/tutorials/elastigroup-actions-menu/notifications/)
+* Configure [Slack Notifications](administration/users/configure-slack-notifications)
 * Configure [Email Notifications](administration/users/configure-email-notifications)
