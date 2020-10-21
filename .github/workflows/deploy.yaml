@@ -5,7 +5,7 @@ on:
     branches:
       - master
     tags-ignore:
-      - '*.*'
+      - "*.*"
 
 jobs:
   build-and-deploy:
@@ -16,8 +16,8 @@ jobs:
 
       - uses: actions/setup-node@v1
         with:
-          node-version: '12'
-          registry-url: 'https://registry.npmjs.org'
+          node-version: 14
+          registry-url: https://registry.npmjs.org
 
       - name: Install Yarn
         run: npm install -g yarn
@@ -27,9 +27,18 @@ jobs:
           yarn install
           yarn build
 
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@3.5.9
+      - name: Deploy Local
+        uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: build # The folder the action should deploy.
+          BRANCH: gh-pages
+          FOLDER: build
+
+      - name: Deploy Upstream
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          REPOSITORY_NAME: spotinst/docs
+          BRANCH: gh-pages
+          FOLDER: build
