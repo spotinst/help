@@ -4,7 +4,7 @@
 
 When combined with Elastigroup, AWS Batch clusters inherit the full power of cost efficient spot instance management and scale.
 
-<img src="/elastigroup/_media/aws-batch_1.png" />
+<img src="/elastigroup/_media/aws-batch_1.jpg" />
 
 ## Components of AWS Batch
 
@@ -42,12 +42,11 @@ Go to Spot and simply enable the Elastigroup integration with AWS Batch.
 
 For an existing Elastigroup that already uses ECS, go to Edit Configuration and choose a batch queue:
 
-<img src="/elastigroup/_media/aws-batch_3.png" />
-
+<img src="/elastigroup/_media/aws-batch_3.png" width="384" height="191" />
 
 View tasks pending in Elastgroup overview:
 
-<img src="/elastigroup/_media/aws-batch_4.png" />
+<img src="/elastigroup/_media/aws-batch_4.png" width="384" height="191" />
 
 ## New Elastigroup
 
