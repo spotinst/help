@@ -6,7 +6,7 @@ Optional: Describes the values that are returned when viewing the stack properti
 
 ### Body
 
-```
+```json
 {
     "AWSTemplateFormatVersion": "2010-09-09",
     "Resources": -{
