@@ -51,11 +51,11 @@ At least one persistence feature has to be selected in this step.
 ## Step 4: Instance Details
 
 * Select launched instance details, like IAM role, tenancy, whether to apply detailed monitoring EBS optimization or EC2 auto-healing.
-* Fill in any [user data or shutdown scripts](https://help.dev.spot.io/elastigroup/features/compute/shutdown-scripts) you would like to run upon instance starting or terminating.
+* Fill in any [user data or shutdown scripts](elastigroup/features/compute/shutdown-scripts) you would like to run upon instance starting or terminating.
 
 ## Step 5: (Optional) Scaling Policies
 
-Optionally create a [Simple Scaling Policy](https://help.dev.spot.io/elastigroup/features/scaling/simple-scaling-policies) or a [Target Scaling Policy](https://help.dev.spot.io/elastigroup/features/scaling/target-scaling).
+Optionally create a [Simple Scaling Policy](elastigroup/features/scaling/simple-scaling-policies) or a [Target Scaling Policy](elastigroup/features/scaling/target-scaling).
 
 ## Step 6: Review
 
