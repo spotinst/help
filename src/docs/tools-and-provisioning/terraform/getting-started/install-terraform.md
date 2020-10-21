@@ -5,7 +5,7 @@
 Spot has two Terraform provider versions:
 
 * An official provider available for download from Hashicorp
-* Spot provider which can be found on [Installation Links](https://support.spot.io/provisioning-and-cicd/terraform/provisioning-and-cicd/terraform/getting-started-terraform/installation-links/).
+* Spot provider which can be found on [Installation Links](tools-and-provisioning/terraform/getting-started/installation-links).
 
 Both are fully maintained.
 
@@ -21,11 +21,11 @@ The installation can be done via:
 Procedure:
 
 1. Get the latest [Terraform binary](https://www.terraform.io/downloads.html) build.
-2. Create a template.tf that includes the [Spotinst Provider Configuration](https://support.spot.io/provisioning-and-cicd/terraform/provisioning-and-cicd/terraform/getting-started-terraform/configuration/).
+2. Create a template.tf that includes the [Spot Provider Configuration](tools-and-provisioning/terraform/getting-started/configuration).
 3. Run `terraform init`
   If command fails, continue below to manual installation.
 4. The latest [Change Log](https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/CHANGELOG.md) release version of the Spot provider should be downloaded.
-5. Visit the [Terraform Spotinst Provider](https://support.spot.io/provisioning-and-cicd/terraform/provisioning-and-cicd/terraform/getting-started-terraform/installation-procedure/) documentation page for official provider documentation.
+5. Visit the [Terraform Spot Provider](tools-and-provisioning/terraform/getting-started/install-terraform) documentation page for official provider documentation.
 
 After running  `terraform init`, the provider binary is located under
 
