@@ -8,7 +8,7 @@ Generate a [Spot API Token](https://console.spotinst.com/settings/tokens/permane
 
 For each custom resource created by Spot Lambda function, the following steps need to be configured:
 
-1. Resource type – `“Custom::elasticgroup“`. For other Spotinst services, check the [Resource Type](https://help.dev.spot.io/tools-and-provisioning/cloudformation/getting-started/resource-types) in the resources section.
+1. Resource type – `“Custom::elasticgroup“`. For other Spotinst services, check the [Resource Type](tools-and-provisioning/cloudformation/getting-started/resource-types) in the resources section.
 2. Service Token – Use Spotinst Lambda.
 
 For example:
