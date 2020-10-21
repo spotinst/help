@@ -1,0 +1,239 @@
+.sidebar {
+  /* Reorder sidebar */
+  overflow: hidden;
+
+  .search {
+    position: absolute;
+    width: 100%;
+    max-height: 100%;
+    top: 120px;
+    border-top: 1px solid #eeeeee;
+    z-index: 10;
+    background-color: #ffffff;
+    overflow-y: auto; /* make only the search results scrollable */
+    padding: var(--unit) 0;
+
+    &::-webkit-scrollbar {
+      width: 2px; /* width of the entire scrollbar */
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 20px; /* roundness of the scroll thumb */
+      border: 3px solid var(--text-color-tertiary); /* creates padding around scroll thumb */
+    }
+
+    .search-keyword,
+    a:hover {
+      color: var(--theme-color-primary);
+    }
+
+    input {
+      font-weight: 500;
+      padding-left: calc(var(--unit) * 5);
+    }
+
+    input:focus {
+      border: 1px solid white !important;
+      box-shadow: none !important;
+    }
+
+    .matching-post {
+      padding: calc(var(--unit) * 2.5);
+
+      h2 {
+        font-size: 14px;
+        margin: 10px 0 0 0;
+        color: var(--text-color-tertiary);
+      }
+
+      p {
+        margin: 10px 0 10px 0;
+        color: var(--text-color-tertiary);
+      }
+    }
+  }
+
+  h1 {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100%;
+  }
+
+  .sidebar-nav {
+    position: absolute;
+    width: calc(100% - calc(var(--unit) * 5));
+    top: 170px;
+    overflow-y: auto; /* make only the nav scrollable */
+    height: calc(100% - 168px); /* top (130px) + toggle (38px) */
+    box-sizing: content-box;
+    padding-left: calc(var(--unit) * 5);
+  }
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      height: 60px;
+      margin-right: 8px;
+    }
+  }
+
+  /* Reorder sidebar */
+
+  /* For collapsing all but current page */
+  font-family: var(--font-family);
+
+  .collapse ul {
+    display: none;
+  }
+
+  li {
+    margin: 0;
+
+    a {
+      height: 28px;
+    }
+  }
+
+  /* Top-level ul */
+
+  .sidebar-nav > ul {
+    margin: 0;
+
+    > li:nth-child(1) {
+      margin-top: calc(var(--unit) * 3);
+    }
+
+    > li {
+      margin: var(--unit) 0;
+
+      > a {
+        color: var(--color-blue-gray) !important;
+      }
+
+      a {
+        font-weight: 500;
+        color: var(--text-color-tertiary);
+      }
+
+      > p {
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-top: 22px;
+        color: var(--color-blue-gray);
+      }
+    }
+  }
+
+  /* Sub-level ul */
+
+  .sidebar-nav > ul ul {
+    border-left: 1px solid rgba(0, 0, 0, 0.07);
+    margin: 0;
+
+    > li {
+      padding-left: 15px;
+
+      a {
+        font-size: 14px;
+      }
+    }
+  }
+
+  /* For highlighting the currently selected page */
+
+  ul li.active > a {
+    border-right: calc(var(--unit) / 2.25) solid;
+    color: var(--theme-color-primary) !important;
+    font-weight: 600;
+  }
+
+  /* Provide some differentiation between section headings and sub-pages in the sidebar */
+
+  .section-link {
+    font-style: italic;
+  }
+
+  ul li a {
+    font-size: 14px;
+
+    &:hover {
+      color: var(--theme-color-primary);
+    }
+  }
+
+  .app-sub-sidebar li:before {
+    display: none;
+  }
+
+  .search .clear-button {
+    cursor: pointer;
+  }
+}
+
+.sidebar-toggle {
+  background: none;
+  top: 6.3rem;
+  left: calc(300px + 1rem);
+  cursor: pointer;
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0;
+  transition: left 0.25s ease-out;
+
+  :hover {
+    opacity: 0.8;
+  }
+
+  .sidebar-toggle-button:hover {
+    opacity: 1;
+  }
+
+  span {
+    background-color: var(--theme-color-primary);
+    height: calc(var(--unit) / 2.25);
+    width: 1.5rem;
+    position: absolute;
+    left: 0;
+    margin: 0;
+    transform-origin: 0;
+    border-radius: 1px;
+
+    &:nth-child(1) {
+      top: 0;
+    }
+
+    &:nth-child(2) {
+      top: 0.5rem;
+    }
+
+    &:nth-child(3) {
+      top: 1rem;
+    }
+  }
+}
+
+body.close .sidebar-toggle {
+  transition: left 0.25s ease-out;
+  width: 1.5rem;
+  height: 1.5rem;
+  left: 1.5rem;
+
+  span {
+    transform-origin: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body .sidebar-toggle {
+    left: 1rem;
+  }
+
+  body.close .sidebar-toggle {
+    left: calc(300px + 1.5rem);
+  }
+}
