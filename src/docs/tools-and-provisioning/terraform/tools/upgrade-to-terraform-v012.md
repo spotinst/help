@@ -16,9 +16,8 @@ Follow according to your use case:
 
 ## Use Case 1: Upgrade from v0.11 to v0.12
 
-In order to upgrade to TF v0.12, you can follow the Hashicorp [documentation](https://support.spot.io/provisioning-and-cicd/terraform/provisioning-and-cicd/terraform/v3-v0-12/upgrade-to-terraform-v0-12/
-).
-Once you have upgraded to TF v0.12, you will need to [Update your Configuration](https://www.terraform.io/upgrade-guides/0-12.html#upgrading-terraform-configuration) to the new schema.  To that end, Terraform v0.12 includes a new [command](https://support.spot.io/provisioning-and-cicd/terraform/provisioning-and-cicd/terraform/v3-v0-12/upgrade-to-terraform-v0-12/) that will read the configuration files for a module written for Terraform 0.11 and update them in-place to use the cleaner Terraform 0.12 syntax.
+In order to upgrade to TF v0.12, you can follow the Hashicorp [documentation](tools-and-provisioning/terraform/tools/upgrade-to-terraform-v012).
+Once you have upgraded to TF v0.12, you will need to [Update your Configuration](https://www.terraform.io/upgrade-guides/0-12.html#upgrading-terraform-configuration) to the new schema.  To that end, Terraform v0.12 includes a new [command](tools-and-provisioning/terraform/tools/upgrade-to-terraform-v012) that will read the configuration files for a module written for Terraform 0.11 and update them in-place to use the cleaner Terraform 0.12 syntax.
 
 To use the command you need to:
 
