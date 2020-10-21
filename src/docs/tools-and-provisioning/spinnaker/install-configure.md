@@ -48,4 +48,4 @@ To add Spot to Spinnaker as a cloud provider, complete the steps below. This pro
 
 ## What’s Next?
 
-Continue to the next task: [Set up Environment as Local Git](https://support.spot.io/provisioning-and-cicd/provisioning-and-cicd/spinnaker/set-up-environment-as-local-git/).
+Continue to the next task: [Set up Environment as Local Git](tools-and-provisioning/spinnaker/set-up-environment-as-local-git).
