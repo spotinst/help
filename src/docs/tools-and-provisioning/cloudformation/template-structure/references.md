@@ -5,13 +5,13 @@ AWS CloudFormation provides a built-in function that helps to reuse parameters a
 * When specifying the logical name of a parameter, the value of the parameter is returned.
 * When specifying the logical name of a resource, it returns a value that can be used to refer to that resource, such as a physical ID.
 
-To set-Up, use:  “Ref”: “logical-name”
+To set up, use:  `“Ref”: “logical-name”`
 
 ## Using Parameters
 
 Define a parameter:
 
-```
+```json
 "Parameters": {
   "accountId": {
     "Type": "String",
@@ -22,7 +22,7 @@ Define a parameter:
 
 Reference the parameter as a resource property:
 
-```
+```json
 "accountId":  { "Ref": "accountId" }
 ```
 
@@ -31,7 +31,8 @@ Reference the parameter as a resource property:
 Create a custom resource: `SpotinstElastigroup`
 
 
-```{
+```json
+{
   "SpotinstElastigroup": {
     "Type": "Custom::elasticgroup",
     "Properties": {}
@@ -41,13 +42,13 @@ Create a custom resource: `SpotinstElastigroup`
 
 Create a subscription to the group which was created, while referencing the group ID:
 
-```
+```json
 "resourceId": { "Ref": "SpotinstElastigroup" }
 ```
 
 Request: Create Elastigroup and notification by references
 
-```
+```json
 {
     "AWSTemplateFormatVersion": "2010-09-09",
     "Parameters": -{
@@ -197,18 +198,16 @@ Request: Create Elastigroup and notification by references
 This procedure describes how to create a dependent resource.
 
 To create an Elastigroup in the same template that creates your Beanstalk environment, create the following in your template:
-
 1. Create a new beanstalk environment.
-
 2. Create a new custom resource::elastigroup, which is dependent on the new Beanstalk Environment:
 
-```
+```json
 "DependsOn": "SampleEnv"
 ```
 
 3. Under the Elastigroup Beanstalk property, reference the Beanstalk EnvironmentName
 
-```
+```json
 {
   "beanstalk": {
     "environmentName": {
