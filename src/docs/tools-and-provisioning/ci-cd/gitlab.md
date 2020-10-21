@@ -44,7 +44,7 @@ The following table covers the MachineOptions parameters used above. Note that t
 
 |**Option Name**|**Description**|
 |---|---|
-| `--spotinst-account`| Spotinst Account ID |
+|`--spotinst-account`| Spotinst Account ID |
 | `--spotinst-elastigroup-id` | Elastigroup ID in the relevant account to fill in servers |
 | `--spotinst-token` | Spotinst token from your organization |
 | `--spotinst-sshkey-path` | Local path to the pem file of the Elastigroup |
