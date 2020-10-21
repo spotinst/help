@@ -15,7 +15,7 @@ The full body attribute list is available on the [Create](https://help.spot.io/s
 
 Body
 
-```JSON
+```json
 {  
    "Resources":{
     "SpotinstOcean": {
@@ -99,7 +99,7 @@ Body
 
 Body
 
-```YML
+```yaml
 Resources:
   SpotinstOcean:
     Type: "Custom::ocean"
