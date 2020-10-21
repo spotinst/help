@@ -121,7 +121,7 @@ $ export BOSH_CLIENT=admin
 $ export BOSH_CLIENT_SECRET=$(bosh int state/creds.yml --path / admin_password)
 $ bosh -e spotinst login
 ```
-Follow these [instructions](https://bosh.io/docs/cloud-config/#update(https://bosh.io/docs/cloud-config/#update) to update your cloud configuration on the Director.
+Follow these [instructions](https://bosh.io/docs/cloud-config.html#update) to update your cloud configuration on the Director.
 
 Now we are ready to deploy!
 
