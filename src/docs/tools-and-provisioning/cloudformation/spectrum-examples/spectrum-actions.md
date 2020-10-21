@@ -34,7 +34,7 @@ Body
 ## Request: Cloud Formation – YAML
 
 Body
-```YML
+```yaml
 SpectrumAction:
     Type: Custom::spectrumAction
     Properties:
