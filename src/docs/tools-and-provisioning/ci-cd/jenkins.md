@@ -4,7 +4,7 @@
 
 The Spot Jenkins plug-in enables you to run a lower powered Jenkins server and spin up Jenkins Slaves as needed while saving up to 80% of your compute costs. Slave instances are scaled in an Elastigroup to match the number of jobs to be completed.
 
-Jenkins is an open-source continuous integration software tool for testing and reporting on isolated changes in a larger code base. Jenkins enables developers to find and solve defects in a code base rapidly and to automate testing of their builds. Jenkins has a “master/slave“ mode, where the workload of building projects are delegated to multiple “slave” nodes, allowing a single Jenkins installation to host a large number of projects, or to provide different environments needed for builds/tests. This document describes this mode and how it’s used with the Spot Plugin to provide compute at 80% off of the standard cost
+Jenkins is an open-source continuous integration software tool for testing and reporting on isolated changes in a larger code base. Jenkins enables developers to find and solve defects in a code base rapidly and to automate testing of their builds. Jenkins has a “master/slave“ mode, where the workload of building projects are delegated to multiple “slave” nodes, allowing a single Jenkins installation to host a large number of projects, or to provide different environments needed for builds/tests. This document describes this mode and how it’s used with the Spot Plugin to provide compute at 80% off of the standard cost.
 
 ## How It Works
 
@@ -94,7 +94,7 @@ Start-Process -FilePath ‘C:\Program Files\Java\jre1.8.0_151\bin\java’ -Argum
 
 Create an Elastigroup, with the desired instance types, region and other configurations for the Jenkins Slaves. In the Compute tab, under Startup Script add the following.
 
-```
+```bash
 #!/bin/bash
 install_deps() {  
   echo "Installing dependencies"
@@ -131,6 +131,7 @@ curl http://${JENKINS_MASTER_IP}/jnlpJars/slave.jar --output /tmp/slave.jar
 # Run the Jenkins Slave JAR
 java -jar /tmp/slave.jar -jnlpCredentials user:1234 -jnlpUrl http://${JENKINS_MASTER_IP}/computer/${INSTANCE_NAME}/slave-agent.jnlp &
 ```
+
 ### Jenkins on Azure
 
 Create an Elastigroup, with the desired VM types, region and other configurations for the Jenkins Slaves. In the Compute tab, under Additional Configurations add the following user-data.
@@ -190,7 +191,6 @@ By default, the Slaves try to connect on a random JNLP port. Therefore, the fire
 1. To configure a fixed JNLP port for the Jenkins Slaves, navigate to Manage Jenkins >> Global Security>>Agents and set a static TCP port for JNLP agents.
 2. Configure the network to be available exclusively for this port.
 
-
 <img src="/tools-and-provisioning/_media/Jenkins_3.png" />
 
 ## Step 4: Install the Spot Plugin for Jenkins
@@ -199,7 +199,6 @@ By default, the Slaves try to connect on a random JNLP port. Therefore, the fire
 2. After installing the plugin, Restart Jenkins.
 3. Navigate to Manage Jenkins >> Configure System, scroll down to the Spot section and add the API Token generated in Step 1, along with an appropriate Account ID (will be used as a global Account ID in case no Account ID is specified for every cloud added in the next step).
 4. Click on Validate Token to ensure that the token is valid.
-
 
 <img src="/tools-and-provisioning/_media/Jenkins_4.png" />
 
