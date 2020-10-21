@@ -20,8 +20,7 @@ The following tutorial covers how to start running Gitlab Runner’s autoscaling
 4. Install [Git Runner on Linux machine](https://docs.gitlab.com/runner/install/index.html)
 5. On the same machine, install [Docker-Machine](https://docs.docker.com/machine/install-machine/).
 6. Install Spot driver on Docker-Machine. The driver can be found here:
-
-(https://github.com/spotinst/docker-machine-driver-spotinst/releases)
+https://github.com/spotinst/docker-machine-driver-spotinst/releases
 7. [Register your Runner](https://docs.gitlab.com/runner/register/index.html#gnu-linux).
 8. [Open the Gitlab Runner configuration file](https://docs.gitlab.com/runner/configuration/advanced-configuration.html:
 `:/etc/gitlab-runner/config.toml`
@@ -43,8 +42,8 @@ The following tutorial covers how to start running Gitlab Runner’s autoscaling
 
 The following table covers the MachineOptions parameters used above. Note that these parameters are all required. The full parameter documentation can be found [here](https://github.com/spotinst/docker-machine-driver-spotinst).
 
-| Option Name | Description |
-|-------------|------------|
+|**Option Name**|**Description**|
+|---|---|
 | `--spotinst-account`| Spotinst Account ID |
 | `--spotinst-elastigroup-id` | Elastigroup ID in the relevant account to fill in servers |
 | `--spotinst-token` | Spotinst token from your organization |
