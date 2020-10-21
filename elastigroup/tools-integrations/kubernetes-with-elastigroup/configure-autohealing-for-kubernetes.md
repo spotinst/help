@@ -10,8 +10,8 @@ The MCS Auto Healing checks for the node’s status. The status of each Kubernet
 
 ## Configuring Auto-Healing
 
-* `Health Check Grace Period`: The time to wait after the instance is launched before the first health check. This is the expected “warm up” period for the instance.
-* `Unhealthy Duration`: The Ready condition may be temporarily False or Unknown for a wide variety of reasons. The Unhealthy Duration period is the amount of time that the instance is found to be unhealthy before a replacement is triggered, ensuring that instances aren’t unnecessarily replaced. Since the health checks occur every 30 seconds, the Unhealthy Duration should be a minimum of 60 seconds.
+- `Health Check Grace Period`: The time to wait after the instance is launched before the first health check. This is the expected “warm up” period for the instance.
+- `Unhealthy Duration`: The Ready condition may be temporarily False or Unknown for a wide variety of reasons. The Unhealthy Duration period is the amount of time that the instance is found to be unhealthy before a replacement is triggered, ensuring that instances aren’t unnecessarily replaced. Since the health checks occur every 30 seconds, the Unhealthy Duration should be a minimum of 60 seconds.
 
 ## In the Spot Console
 

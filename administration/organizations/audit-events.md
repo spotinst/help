@@ -2,11 +2,11 @@
 
 You can view an audit list of events in your Elastigroups. The Audit page shows a list of events and enables tracking and visibility of actions on your resources. For each event, the following parameters are displayed:
 
-* Event Timestamp
-* Event Type, e.g., Update, Create, Detach Instances, Deploy Instances
-* Resources Type, e.g., Elastigroup, Ocean
-* Resource ID
-* User Name
+- Event Timestamp
+- Event Type, e.g., Update, Create, Detach Instances, Deploy Instances
+- Resources Type, e.g., Elastigroup, Ocean
+- Resource ID
+- User Name
 
 For each event, you have the option to view additional details such as the Payload of the action.
 

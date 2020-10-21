@@ -3,6 +3,7 @@
 Ocean automates cloud infrastructure for containers. It continuously analyzes how your containers are using infrastructure, automatically scaling compute resources to maximize utilization and availability, and utilizing the optimal blend of spot, reserved, and on-demand compute instances.
 
 Ocean enables you to:
+
 - Automate container infrastructure – continuously managing scaling and sizing of your cluster infrastructure based on container resource needs.
 - Understand your costs – providing real-time insight into infrastructure costs by services, applications, and tasks to enable showback and accountability.
 - Deliver on SLAs – ensuring availability and performance by predicting and automatically addressing resource needs and instance interruptions.

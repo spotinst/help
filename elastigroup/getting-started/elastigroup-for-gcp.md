@@ -16,5 +16,5 @@ Note that you can take a Demo tour of the console before actually connecting you
 
 ## What's Next?
 
-* [Connect your GCP project](connect-your-cloud-provider/gcp-project.md)
-* [Create an Elastigroup](elastigroup/getting-started/create-an-elastigroup-for-gcp.md)
+- [Connect your GCP project](connect-your-cloud-provider/gcp-project.md)
+- [Create an Elastigroup](elastigroup/getting-started/create-an-elastigroup-for-gcp.md)

@@ -5,9 +5,10 @@ The RightScale Universal Cloud Management Platform allows customers to orchestra
 ## RightScale
 
 Before we dive into the integration, let’s first go over a few vocabulary terms utilized by RightScale.
-* ServerTemplate –  A server configuration template that defines a virtual machine that can be launched in any supported cloud provider. This template is defined in a somewhat generic manner to ensure support across multiple cloud providers.
-* ServerInstance – Virtual machine instance that is launched via the RightScale “ServerTemplate” configuration template as noted above.
-* Instance – a standalone Virtual machine instance that was launched by the cloud provider console (EC2 console for example).
+
+- ServerTemplate – A server configuration template that defines a virtual machine that can be launched in any supported cloud provider. This template is defined in a somewhat generic manner to ensure support across multiple cloud providers.
+- ServerInstance – Virtual machine instance that is launched via the RightScale “ServerTemplate” configuration template as noted above.
+- Instance – a standalone Virtual machine instance that was launched by the cloud provider console (EC2 console for example).
 
 ## How it Works
 

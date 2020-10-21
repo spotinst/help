@@ -11,14 +11,16 @@ When you register to Spot, the registration wizard automatically creates an Orga
 The Organization holds one or more Spot accounts which can be associated with your cloud account. The purpose of the Organization is to help you manage in one place all of your settings across multiple accounts.
 
 In the Organization, you can define the following:
-* User Managment – Create, manage, delete, and associate users to accounts
-* API Tokens – Generate and delete personal and temporary tokens
-* MFA Authentication – Enable and disable two-factor authentication for your Spot users
-* Identity Provider (SAML) – Connect your Organization to an IDP, or use a Custom SAML
-* Billing – Generate billing reports for your Organization
-* Spot Plan – View your Spot plan and activate your Organization
+
+- User Managment – Create, manage, delete, and associate users to accounts
+- API Tokens – Generate and delete personal and temporary tokens
+- MFA Authentication – Enable and disable two-factor authentication for your Spot users
+- Identity Provider (SAML) – Connect your Organization to an IDP, or use a Custom SAML
+- Billing – Generate billing reports for your Organization
+- Spot Plan – View your Spot plan and activate your Organization
 
 ## Get your Organization ID
+
 1. In the console, click on the User icon and click Settings.
 2. Under the Organization tab, click General. The Organization ID is displayed.
 
@@ -28,8 +30,8 @@ In the Organization, you can define the following:
 
 In case you need multiple organizations, e.g., for multiple divisions or units in your company, you can create linked organizations which can share settings and configuration such as:
 
-* Billing Information (can be separate if needed)
-* Master Dashboards and Reports
+- Billing Information (can be separate if needed)
+- Master Dashboards and Reports
 
 ## Add an Organization
 
@@ -47,9 +49,10 @@ When you register to Spot, the registration wizard automatically creates an Acco
 A Spot Account is an equivalent to an AWS account.
 
 In the Account, you can define the following:
-* Cloud Provider Account – Connect your Spot account to your Cloud Provider account. (This is not mandatory. You can have an account that is not associated with a Cloud provider.)
-* Attach Users – Attach existing users in your Organization to the account. Users must be created at the Organization level.
-* Notifications – Define Email and Slack notifications for your Organization.
+
+- Cloud Provider Account – Connect your Spot account to your Cloud Provider account. (This is not mandatory. You can have an account that is not associated with a Cloud provider.)
+- Attach Users – Attach existing users in your Organization to the account. Users must be created at the Organization level.
+- Notifications – Define Email and Slack notifications for your Organization.
 
 ## Add an Account using the Console
 
@@ -68,7 +71,7 @@ To add an account through the API, go to [Spot API – Create Account](https://d
 The Account ID is required for API and SDK interactions with the Elastigroup configuration.
 
 1. Log in to the Organization and select the required Account.
-2. In the console, click  and click Settings.
+2. In the console, click and click Settings.
 3. Under the Account tab, click General. The Organization ID is displayed.
 
 <img src="/administration/_media/organizations-accounts-05.png" width="400" height="117" />

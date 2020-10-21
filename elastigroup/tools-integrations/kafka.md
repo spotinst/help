@@ -1,8 +1,9 @@
 # Kafka
 
 In Big Data, a large volume of data is used. Regarding data, we have two main challenges:
-* How to collect a large volume of data.
-* Analyzing the collected data.
+
+- How to collect a large volume of data.
+- Analyzing the collected data.
 
 Implementing a messaging system is a common solution for those challenges.
 
@@ -12,13 +13,13 @@ Kafka’s architecture is designed based on several components and each componen
 
 <img src="/elastigroup/_media/kafka-01.png" width="600" height="434" />
 
-* Broker – A Kafka cluster is made up of multiple Kafka Brokers. Each Kafka Broker has a unique ID. Kafka Brokers contain topic log partitions. Connecting to one broker bootstraps a client to the entire Kafka cluster.
+- Broker – A Kafka cluster is made up of multiple Kafka Brokers. Each Kafka Broker has a unique ID. Kafka Brokers contain topic log partitions. Connecting to one broker bootstraps a client to the entire Kafka cluster.
 
-* ZooKeeper – A resource that is required for leadership election of Kafka Broker and Topic Partition pairs. Kafka uses Zookeeper to manage service discovery for Kafka Brokers that form the cluster. Zookeeper sends changes of the topology to Kafka, so every node in the cluster knows when a new broker joined, a Broker died, a topic was removed or a topic was added, etc.
+- ZooKeeper – A resource that is required for leadership election of Kafka Broker and Topic Partition pairs. Kafka uses Zookeeper to manage service discovery for Kafka Brokers that form the cluster. Zookeeper sends changes of the topology to Kafka, so every node in the cluster knows when a new broker joined, a Broker died, a topic was removed or a topic was added, etc.
 
-* Producer – Producers push data to brokers. When the new broker is started, all the producers discover it and automatically sends a message to that new broker.
+- Producer – Producers push data to brokers. When the new broker is started, all the producers discover it and automatically sends a message to that new broker.
 
-* Consumer –  Consumers fetch data from the brokers. Kafka consumer divides partitions over consumer instances within a consumer group. Each consumer in the consumer group is an exclusive consumer of a “fair share” of partitions. This is how Kafka does load balancing of consumers in a consumer group. Consumer membership within a consumer group is handled by the Kafka protocol dynamically. If new consumers join a consumer group, it gets a share of partitions. If a consumer dies, its partitions are split among the remaining live consumers in the consumer group. This is how Kafka does fail over of consumers in a consumer group.
+- Consumer – Consumers fetch data from the brokers. Kafka consumer divides partitions over consumer instances within a consumer group. Each consumer in the consumer group is an exclusive consumer of a “fair share” of partitions. This is how Kafka does load balancing of consumers in a consumer group. Consumer membership within a consumer group is handled by the Kafka protocol dynamically. If new consumers join a consumer group, it gets a share of partitions. If a consumer dies, its partitions are split among the remaining live consumers in the consumer group. This is how Kafka does fail over of consumers in a consumer group.
 
 ## Elastigroup Configuration
 
@@ -28,7 +29,7 @@ To provide availability of the Kafka clusters on EC2 Spot instances, Elastigroup
 
 The purpose of adding replication in Kafka is for stronger durability and higher availability. We want to guarantee that any successfully published message will not be lost and can be consumed, even when there are server failures
 
-The parameter of the replication factor located at the server.properties file with the value “offsets.topic.replication.factor=2”, replication factor 2 means 3 copies of the data as the diagram below shows, once we have 3 copies that are spread on different A-Z’s, this will be configured by using different Rack ID’s and explained at the next section,  we are safe from data failure.
+The parameter of the replication factor located at the server.properties file with the value “offsets.topic.replication.factor=2”, replication factor 2 means 3 copies of the data as the diagram below shows, once we have 3 copies that are spread on different A-Z’s, this will be configured by using different Rack ID’s and explained at the next section, we are safe from data failure.
 
 ## Shard aware Location – Rack ID
 

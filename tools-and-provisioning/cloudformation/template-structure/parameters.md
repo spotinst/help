@@ -21,17 +21,17 @@ Below are several examples where we defined parameters to use inside the Spot re
 "accountId":  { "Ref": "accountId" }
 ```
 
-|**Parameter** | **Type** | **Description**|
-|---|---|---|
-|shouldRoll|**Boolean**|Determines if the group should perform a blue-green deployment after an update to the cloud formationExample: `True`|
-|shouldUpdateTargetCapacity|**Boolean**|Determines if the groups target should update upon configuration updates.Example: `True`|
-|shouldResumeStateful|**Boolean**|Determines if the group’s stateful instances should resume upon capacity changes.Example: `True`|
-|shouldDeleteSnapshots|**Boolean**|Determines if the group’s EBS Volume snapshots collected from instances should be deleted once the group is deleted.Example: `True`|
-|shouldDeleteVolumes|**Boolean**|Determines if the group’s EBS Volumes collected from instances should be deleted once the group is deletedExample: `True`|
-|shouldDeleteNetworkInterfaces|**Boolean**|Determines if the Elastic Network Interfaces  associated with the instances should be deleted once the group is deletedExample: `True` Default: `True`|
-|ServiceToken|**String**|use the Spot LambdaExample: `Arn:aws:lambda:ca-central-1:178579023202:function:spotinst-cloudformation`|
-|accessToken|**String**|your Spot API access token|
-|accountId|**String**|your Spot account IDExample: `act-12345`|
+| **Parameter**                 | **Type**    | **Description**                                                                                                                                       |
+| ----------------------------- | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| shouldRoll                    | **Boolean** | Determines if the group should perform a blue-green deployment after an update to the cloud formationExample: `True`                                  |
+| shouldUpdateTargetCapacity    | **Boolean** | Determines if the groups target should update upon configuration updates.Example: `True`                                                              |
+| shouldResumeStateful          | **Boolean** | Determines if the group’s stateful instances should resume upon capacity changes.Example: `True`                                                      |
+| shouldDeleteSnapshots         | **Boolean** | Determines if the group’s EBS Volume snapshots collected from instances should be deleted once the group is deleted.Example: `True`                   |
+| shouldDeleteVolumes           | **Boolean** | Determines if the group’s EBS Volumes collected from instances should be deleted once the group is deletedExample: `True`                             |
+| shouldDeleteNetworkInterfaces | **Boolean** | Determines if the Elastic Network Interfaces associated with the instances should be deleted once the group is deletedExample: `True` Default: `True` |
+| ServiceToken                  | **String**  | use the Spot LambdaExample: `Arn:aws:lambda:ca-central-1:178579023202:function:spotinst-cloudformation`                                               |
+| accessToken                   | **String**  | your Spot API access token                                                                                                                            |
+| accountId                     | **String**  | your Spot account IDExample: `act-12345`                                                                                                              |
 
 ## Request Example: “shouldUpdateTargetCapacity”
 
@@ -39,43 +39,40 @@ Below are several examples where we defined parameters to use inside the Spot re
 
 ```json
 {
-    "AWSTemplateFormatVersion": "2010-09-09",
-    "Parameters": -{
-        "shouldRoll": -{
-            "Type": "String",
-            "Default": "false",
-            "Description": "Should roll when updating"
-        },
-        "shouldUpdateTargetCapacity": -{
-            "Type": "String",
-            "Default": "true",
-            "AllowedValues": -[
-                "false",
-                "true"
-            ],
-            "Description": "Should update target capacity on group update"
-        }
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Parameters": -{
+    "shouldRoll": -{
+      "Type": "String",
+      "Default": "false",
+      "Description": "Should roll when updating"
     },
-    "Resources": -{
-        "SpotinstElastigroup": -{
-            "Type": "Custom::elasticgroup",
-            "Properties": -{
-                "updatePolicy": -{
-                    "shouldRoll": -{
-                        "Ref": "shouldRoll"
-                    },
-                    "rollConfig": -{
-                        "batchSizePercentage": 50,
-                        "gracePeriod": 600
-                    },
-                    "shouldUpdateTargetCapacity": -{
-                        "Ref": "shouldUpdateTargetCapacity"
-                    }
-                },
-                "group": {}
-            }
-        }
+    "shouldUpdateTargetCapacity": -{
+      "Type": "String",
+      "Default": "true",
+      "AllowedValues": -["false", "true"],
+      "Description": "Should update target capacity on group update"
     }
+  },
+  "Resources": -{
+    "SpotinstElastigroup": -{
+      "Type": "Custom::elasticgroup",
+      "Properties": -{
+        "updatePolicy": -{
+          "shouldRoll": -{
+            "Ref": "shouldRoll"
+          },
+          "rollConfig": -{
+            "batchSizePercentage": 50,
+            "gracePeriod": 600
+          },
+          "shouldUpdateTargetCapacity": -{
+            "Ref": "shouldUpdateTargetCapacity"
+          }
+        },
+        "group": {}
+      }
+    }
+  }
 }
 ```
 
@@ -172,43 +169,40 @@ Below are several examples where we defined parameters to use inside the Spot re
 
 ```json
 {
-    "AWSTemplateFormatVersion": "2010-09-09",
-    "Parameters": -{
-        "shouldRoll": -{
-            "Type": "String",
-            "Default": "false",
-            "Description": "Should roll when updating"
-        },
-        "shouldUpdateTargetCapacity": -{
-            "Type": "String",
-            "Default": "true",
-            "AllowedValues": -[
-                "false",
-                "true"
-            ],
-            "Description": "Should update target capacity on group update"
-        }
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Parameters": -{
+    "shouldRoll": -{
+      "Type": "String",
+      "Default": "false",
+      "Description": "Should roll when updating"
     },
-    "Resources": -{
-        "SpotinstElastigroup": -{
-            "Type": "Custom::elasticgroup",
-            "Properties": -{
-                "updatePolicy": -{
-                    "shouldRoll": -{
-                        "Ref": "shouldRoll"
-                    },
-                    "rollConfig": -{
-                        "batchSizePercentage": 50,
-                        "gracePeriod": 600
-                    },
-                    "shouldUpdateTargetCapacity": -{
-                        "Ref": "shouldUpdateTargetCapacity"
-                    }
-                },
-                "autoTag": true,
-                "group": {}
-            }
-        }
+    "shouldUpdateTargetCapacity": -{
+      "Type": "String",
+      "Default": "true",
+      "AllowedValues": -["false", "true"],
+      "Description": "Should update target capacity on group update"
     }
+  },
+  "Resources": -{
+    "SpotinstElastigroup": -{
+      "Type": "Custom::elasticgroup",
+      "Properties": -{
+        "updatePolicy": -{
+          "shouldRoll": -{
+            "Ref": "shouldRoll"
+          },
+          "rollConfig": -{
+            "batchSizePercentage": 50,
+            "gracePeriod": 600
+          },
+          "shouldUpdateTargetCapacity": -{
+            "Ref": "shouldUpdateTargetCapacity"
+          }
+        },
+        "autoTag": true,
+        "group": {}
+      }
+    }
+  }
 }
 ```

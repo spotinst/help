@@ -2,11 +2,11 @@
 
 There are two methods to set a budget for an Elastigroup:
 
-* From the Elastigroup Dashboard
+- From the Elastigroup Dashboard
 
 <img src="/elastigroup/_media/configure-budgets_1.png" />
 
-* From the Budgets Dashboard
+- From the Budgets Dashboard
   In the EG dashboard, browse to the “Costs” tab, there you will find a new icon “Set Budget”.
 
   <img src="/elastigroup/_media/configure-budgets_2.png" />
@@ -23,10 +23,10 @@ In the table-view list, Spot will present all the Elastigroups that are part of 
 
 The table will present the Elastrigroups with the following fields:
 
-* Elastigroup Name
-* Elastigroup ID
-* Last Month Spend – Operational costs of the EG last month
-* Month to Date Spend – Operational costs of the EG so far
+- Elastigroup Name
+- Elastigroup ID
+- Last Month Spend – Operational costs of the EG last month
+- Month to Date Spend – Operational costs of the EG so far
 
 <img src="/elastigroup/_media/configure-budgets_5.png" />
 
@@ -34,7 +34,7 @@ In order to set a budget for one of the EG in the list, click on the “Set Budg
 
 In the “Set Budget” screen, you are required to configure 2 variables:
 
-1. Desired Monthly Budget of the EG in USD $.
+1. Desired Monthly Budget of the EG in USD \$.
 2. Thresholds
 
 <img src="/elastigroup/_media/configure-budgets_6.png" />
@@ -45,9 +45,9 @@ Once you click on “Add Threshold”, the following screen will open:
 
 For a threshold you have the option to define 2 types of variables:
 
-* Percentage of the budget: For example, 75% of the budget.
-  * A threshold can be over 100%. For example 150% of the budget
-* Dollars: For example, 200$.
+- Percentage of the budget: For example, 75% of the budget.
+  - A threshold can be over 100%. For example 150% of the budget
+- Dollars: For example, 200\$.
 
 In addition to that, for each threshold you configure, you have the option to select the alerting type, either email or SMS.
 

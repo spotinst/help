@@ -3,12 +3,14 @@
 It is easy to manage your accounts with the most popular identity providers. Let’s walk through how this integration works with Bitium.
 
 ## In your Bitium Account
+
 1. Log into your Bitium account as an administrator.
 2. Go to Manage Apps.
 3. Select Spot from the list of installed apps.
 4. Navigate to the Single Sign-On Tab
 
 ## In the Spot Console
+
 1. As an admin, navigate to Settings > Security > Identity Providers.
 
 <img src="/administration/_media/bitium-01.png" />

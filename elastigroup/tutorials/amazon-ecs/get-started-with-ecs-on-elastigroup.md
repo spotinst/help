@@ -14,8 +14,8 @@ With this Quick Start, Spot Elastigroup deployment takes about 7 minutes. The de
 
 ## Prerequisites: Create an ECS IAM Role
 
-* Before the Amazon ECS agent can register container instance into a cluster, the agent must have IAM Role with appropriate account credentials.
-* If you haven’t done this already, here’s how to create an ECS IAM Role.
+- Before the Amazon ECS agent can register container instance into a cluster, the agent must have IAM Role with appropriate account credentials.
+- If you haven’t done this already, here’s how to create an ECS IAM Role.
   1. Navigate to your IAM console
   2. Go to – Roles.
   3. Create a new Role and name it “ECS-ContainerInstance”
@@ -34,8 +34,8 @@ In order to register to your ECS cluster, each instance in your Elastigroup need
 
 1. Under the Compute tab go to Additional Configurations.
 2. Under Public IP choose one of the following:
-   * Associate public IP
-   * Subnet default
+   - Associate public IP
+   - Subnet default
 
 ## Step 3: Update your User Data (Startup Script) to join the ECS Cluster
 
@@ -62,9 +62,9 @@ Initialize-ECSAgent -Cluster CLUSTER_NAME -EnableTaskIAMRole -LoggingDrivers '["
 
 ## Step 4: Set the ECS Integration
 
-* In the Compute tab, under the Integrations section, select ECS and provide your Cluster Name.
-* Continue with the Creation Wizard and create your Elastigroup.
+- In the Compute tab, under the Integrations section, select ECS and provide your Cluster Name.
+- Continue with the Creation Wizard and create your Elastigroup.
 
 ## What’s Next?
 
-Now that you have created an ECS-integrated Elastigroup, learn more about the [ECS Auto-Scaler](https://help.dev.spot.io/elastigroup/features/amazon-ecs/automatic-autoscaler-for-ecs) and how it efficiently and automatically scales your cluster.
+Now that you have created an ECS-integrated Elastigroup, learn more about the [ECS Auto-Scaler](elastigroup/features/amazon-ecs/automatic-autoscaler-for-ecs) and how it efficiently and automatically scales your cluster.

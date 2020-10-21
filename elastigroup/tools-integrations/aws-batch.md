@@ -1,6 +1,6 @@
 # AWS Batch
 
-[AWS Batch](https://aws.amazon.com/batch/) has quickly become one of the most sought after ways to run batch computing in the cloud. Powered by AWS ECS, AWS Batch provides scheduling and queuing capabilities that enable developers, scientists, and engineers to easily and efficiently run hundreds of thousands of batch computing jobs.  The service offers managed compute environments, provisioning and scheduling work for you.
+[AWS Batch](https://aws.amazon.com/batch/) has quickly become one of the most sought after ways to run batch computing in the cloud. Powered by AWS ECS, AWS Batch provides scheduling and queuing capabilities that enable developers, scientists, and engineers to easily and efficiently run hundreds of thousands of batch computing jobs. The service offers managed compute environments, provisioning and scheduling work for you.
 
 When combined with Elastigroup, AWS Batch clusters inherit the full power of cost efficient spot instance management and scale.
 
@@ -30,9 +30,9 @@ The following diagram illustrates how Spot scales an Elastigroup in accordance w
 
 <img src="/elastigroup/_media/aws-batch_2.png" />
 
-* The Spot Autoscaler launches the best fit instances to support jobs requirements.
-* Elastigroup continues to monitor jobs and resources.
-* When jobs finish, Elastigroup will react and scale down the environment.
+- The Spot Autoscaler launches the best fit instances to support jobs requirements.
+- Elastigroup continues to monitor jobs and resources.
+- When jobs finish, Elastigroup will react and scale down the environment.
 
 ## Get Started
 

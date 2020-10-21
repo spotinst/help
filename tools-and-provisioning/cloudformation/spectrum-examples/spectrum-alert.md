@@ -1,6 +1,6 @@
 # Spectrum Alert
 
-Spectrum Alerts trigger when a metric passes a defined threshold.  Triggers can be linked to [Spectrum Actions](https://support.spot.io/provisioning-and-cicd/cloudformation/provisioning-and-cicd/cloudformation/spectrum-examples/spectrum-actions/).
+Spectrum Alerts trigger when a metric passes a defined threshold. Triggers can be linked to [Spectrum Actions](https://support.spot.io/provisioning-and-cicd/cloudformation/provisioning-and-cicd/cloudformation/spectrum-examples/spectrum-actions/).
 
 For a complete list of parameters, see the [Spectrum Alert API](https://docs.spot.io/spotinst-api/spectrum/alerts/create-alert/).
 
@@ -80,7 +80,7 @@ Body
       }
     }
   }
-  ```
+```
 
 ## Request: CloudFormation – YAML
 

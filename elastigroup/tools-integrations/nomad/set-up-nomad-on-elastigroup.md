@@ -6,9 +6,9 @@ To learn more about how Elastigroup’s Nomad integration works see our Nomad in
 
 ## Prerequisites
 
-* A valid Spot Account
-* A Nomad Cluster
-* Add the following to your AMI and replace the <NomadServerElasticIP> with the Elastic IP of the master:
+- A valid Spot Account
+- A Nomad Cluster
+- Add the following to your AMI and replace the <NomadServerElasticIP> with the Elastic IP of the master:
 
 ```
 # Setup data dir
@@ -22,6 +22,7 @@ client {
 ```
 
 ## Step 1: Open the Creation Wizard
+
 1. Enter the Elastigroup Creation Wizard.
 2. Under the Compute tab, open the third-party integration section and select Nomad.
 

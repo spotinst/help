@@ -127,15 +127,9 @@ Body
             "maxVersion": "TLS12",
             "sessionTicketsDisabled": true,
             "preferServerCipherSuites": true,
-            "cipherSuites": [
-              "TLS_RSA_WITH_AES_256_CBC_SHA",
-              "TLS_RSA_WITH_AES_128_CBC_SHA256"
-            ],
+            "cipherSuites": ["TLS_RSA_WITH_AES_256_CBC_SHA", "TLS_RSA_WITH_AES_128_CBC_SHA256"],
             "insecureSkipVerify": false,
-            "certificateIds": [
-              "ce-12345",
-              "ce-67890"
-            ]
+            "certificateIds": ["ce-12345", "ce-67890"]
           },
           "tags": [
             {
@@ -150,9 +144,7 @@ Body
           "id": "70ca76ff-9a50-4ff6-b868-1f311372a791"
         }
       },
-      "DependsOn": [
-        "balancer01"
-      ]
+      "DependsOn": ["balancer01"]
     },
     "deployment01": {
       "Type": "Custom::mlb-deployment",
@@ -224,10 +216,7 @@ Body
           "id": "70ca76ff-9a50-4ff6-b868-1f311372a791"
         }
       },
-      "DependsOn": [
-        "balancer01",
-        "listener01"
-      ]
+      "DependsOn": ["balancer01", "listener01"]
     },
     "routingRule01": {
       "Type": "Custom::mlb-routingRule",
@@ -270,11 +259,7 @@ Body
           "id": "aee4b053-31e9-4652-ae12-c770a55789fb"
         }
       },
-      "DependsOn": [
-        "balancer01",
-        "listener01",
-        "targetSet01"
-      ]
+      "DependsOn": ["balancer01", "listener01", "targetSet01"]
     }
   }
 }

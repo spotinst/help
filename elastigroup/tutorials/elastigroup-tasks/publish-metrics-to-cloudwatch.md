@@ -4,12 +4,12 @@ Elastigroup can optionally publish custom metrics to CloudWatch. These metrics c
 
 Elastigroup reports the following metrics per AWS account:
 
-* Number of instances (OD and Spot) per instance type
-* CPU
-* Memory
-* Disk
-* NetworkIn
-* NetworkOut
+- Number of instances (OD and Spot) per instance type
+- CPU
+- Memory
+- Disk
+- NetworkIn
+- NetworkOut
 
 The custom namespace of these metrics is ‘Spotinst‘ with 2 dimensions of Elastigroup ID and instance type.
 

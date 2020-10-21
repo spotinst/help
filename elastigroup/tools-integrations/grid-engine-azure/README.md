@@ -6,7 +6,7 @@ Elastigroup supports Grid Engine workloads using a proprietary controller that m
 
 In order to integrate Grid Engine with Elastigroup, do the following:
 
-1. [Create Token](https://docs.spot.io/spotinst-api/administration/create-an-api-token/)
+1. [Create Token](administration/api/create-api-token)
 2. Copy Account ID from the console:
 
 <img src="/elastigroup/_media/grid-engine-azureREADME_1.png" />

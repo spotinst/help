@@ -14,7 +14,6 @@ The diagram below illustrates how MCS handles instance failures. Utilizing predi
 
 <img src="/elastigroup/_media/kubernetes-with-elastigroupREADME_1.jpg" />
 
-
 ## Key Features
 
 [MCS Automatic Autoscaler](elastigroup/tools-integrations/kubernetes-with-elastigroup/kubernetes-cluster-autoscaling): MCS monitors the cluster workloads and provisions, manages and scales Kubernetes nodes to optimally handle pending tasks, while also detecting underutilized nodes and scaling them down.
@@ -31,8 +30,8 @@ The diagram below illustrates how MCS handles instance failures. Utilizing predi
 
 **Integrations with Managed Kubernetes Services**: MCS integrates with existing Kubernetes clusters on the following Managed Kubernetes Services:
 
-  * Google Kubernetes Engine
-  * Amazon EKS
-  * Rancher
+- Google Kubernetes Engine
+- Amazon EKS
+- Rancher
 
-**Support for KOPS**: Any cluster provisioned by Kubernetes Operations (KOPS) can be run on infrastructure managed by MCS with MCS’s own KOPS distribution. To get started with KOPS on MCS see the tutorial [here](https://api.spotinst.com/container-management/kubernetes/kops/).
+**Support for KOPS**: Any cluster provisioned by Kubernetes Operations (KOPS) can be run on infrastructure managed by MCS with MCS’s own KOPS distribution. To get started with KOPS on MCS see the tutorial [here](ocean/tools-and-integrations/kops/).

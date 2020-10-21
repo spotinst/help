@@ -8,15 +8,17 @@ Our Chef integration uses Chef API calls to trigger register and deregister oper
 
 ## Step 1: Create a Security Group
 
-* On your AWS account, create a security group that allows inbound traffic specifically from Spot servers
-  * IP Addresses available here: [Spot Whitelist IPs](administration/api/whitelist-ips.md)
-  * Ports: `80, 443, 9683`
+- On your AWS account, create a security group that allows inbound traffic specifically from Spot servers
+  - IP Addresses available here: [Spot Whitelist IPs](administration/api/whitelist-ips.md)
+  - Ports: `80, 443, 9683`
 
 ## Step 2: Create a User
-* On your Chef server, create a user that will serve the integration, the user must be granted ‘delete’ and ‘Update’ permissions.
+
+- On your Chef server, create a user that will serve the integration, the user must be granted ‘delete’ and ‘Update’ permissions.
 
 ## Step 3: Configure Instance Registration
-* Add the following script to your Elastigroup’s User Data, located under Advanced Settings in the Creation Wizard’s Compute tab or in Elastigroup’s API. Make sure you add your own SPOTINST_TOKEN and RSA.
+
+- Add the following script to your Elastigroup’s User Data, located under Advanced Settings in the Creation Wizard’s Compute tab or in Elastigroup’s API. Make sure you add your own SPOTINST_TOKEN and RSA.
 
 ```bash
 #!/bin/bash

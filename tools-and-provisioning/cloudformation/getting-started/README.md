@@ -12,6 +12,7 @@ For each custom resource created by Spot Lambda function, the following steps ne
 2. Service Token – Use Spotinst Lambda.
 
 For example:
+
 ```
 Arn:aws:lambda:REGION:178579023202:function:spotinst-cloudformation
 ```

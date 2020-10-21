@@ -2,10 +2,10 @@
 
 AWS CloudFormation provides a built-in function that helps to reuse parameters and different resources managed by the stack:
 
-* When specifying the logical name of a parameter, the value of the parameter is returned.
-* When specifying the logical name of a resource, it returns a value that can be used to refer to that resource, such as a physical ID.
+- When specifying the logical name of a parameter, the value of the parameter is returned.
+- When specifying the logical name of a resource, it returns a value that can be used to refer to that resource, such as a physical ID.
 
-To set up, use:  `“Ref”: “logical-name”`
+To set up, use: `“Ref”: “logical-name”`
 
 ## Using Parameters
 
@@ -29,7 +29,6 @@ Reference the parameter as a resource property:
 ## Using Resource IDs
 
 Create a custom resource: `SpotinstElastigroup`
-
 
 ```json
 {
@@ -72,10 +71,7 @@ Request: Create Elastigroup and notification by references
     "shouldUpdateTargetCapacity": {
       "Type": "String",
       "Default": "true",
-      "AllowedValues": [
-        "false",
-        "true"
-      ],
+      "AllowedValues": ["false", "true"],
       "Description": "Should update target capacity on group update"
     }
   },
@@ -135,12 +131,7 @@ Request: Create Elastigroup and notification by references
           "compute": {
             "instanceTypes": {
               "ondemand": "m3.large",
-              "spot": [
-                "m3.large",
-                "m4.large",
-                "c3.large",
-                "c4.large"
-              ]
+              "spot": ["m3.large", "m4.large", "c3.large", "c4.large"]
             },
             "availabilityZones": [
               {
@@ -152,9 +143,7 @@ Request: Create Elastigroup and notification by references
               "monitoring": false,
               "imageId": "ami-12345",
               "keyPair": "Assignment",
-              "securityGroupIds": [
-                "sg-12345"
-              ]
+              "securityGroupIds": ["sg-12345"]
             },
             "product": "Linux/UNIX"
           },

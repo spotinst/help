@@ -4,16 +4,16 @@
 
 Complete all the procedures in this article including:
 
-* Configure Tortuga and Grid Engine
-* Install the Spot Controller
-* Create an Elastigroup
-* Submit a Test Job
+- Configure Tortuga and Grid Engine
+- Install the Spot Controller
+- Create an Elastigroup
+- Submit a Test Job
 
 ## Configure Tortuga And Grid Engine
 
 ### Step 1: Create Elastigroup Hardware Profile
 
-Tortuga uses hardware profiles to manage node registration.  For elastigroup a remote hardware profile with permission to control the name-format will be created so that Spot can manage VMs.
+Tortuga uses hardware profiles to manage node registration. For elastigroup a remote hardware profile with permission to control the name-format will be created so that Spot can manage VMs.
 
 ```
 > create-hardware-profile --name elastigroup
@@ -22,6 +22,7 @@ Tortuga uses hardware profiles to manage node registration.  For elastigroup a r
 ﻿
 > update-hardware-profile --name elastigroup --name-format "*"
 ```
+
 ### Step 2: Create Elastigroup Software Profile
 
 ```
@@ -47,7 +48,7 @@ Tortuga uses hardware profiles to manage node registration.  For elastigroup a r
 
 #### Create a Queue
 
-The first command will launch an editor with the queue name configured.  Save this template.
+The first command will launch an editor with the queue name configured. Save this template.
 
 ```
 > qconf -aq burst.q
@@ -78,11 +79,11 @@ bash
 
 ### Cluster Name
 
-All clusters must be uniquely identified with a Spot Account.  To do this set SGE_CLUSTER_NAME during the install of the Spot Controller.  Retain this value, which will be used again when creating the Elastigroup.
+All clusters must be uniquely identified with a Spot Account. To do this set SGE_CLUSTER_NAME during the install of the Spot Controller. Retain this value, which will be used again when creating the Elastigroup.
 
 ### Create an Elastigroup
 
-When creating a Spot Elastigroup there are a few properties that must be set for nodes to register with Tortuga and the Grid Engine master.  The following are recommended settings that are compatible with most UGE installations.
+When creating a Spot Elastigroup there are a few properties that must be set for nodes to register with Tortuga and the Grid Engine master. The following are recommended settings that are compatible with most UGE installations.
 
 ### Capacity
 
@@ -104,19 +105,19 @@ When creating a Spot Elastigroup there are a few properties that must be set for
 
 ### Required Tags
 
-Tag | Description
---- | -----------
-installerHostName | Hostname of the master [**get-node-list**]
-installerIpAddress | IP Address of the Master [**ifconfig -a**]
-cfmPassword | Password for the cfmUser. Can be found with: **cat $TORTUGA_ROOT/private/.cfmsecret**
+| Tag                | Description                                                                            |
+| ------------------ | -------------------------------------------------------------------------------------- |
+| installerHostName  | Hostname of the master [**get-node-list**]                                             |
+| installerIpAddress | IP Address of the Master [**ifconfig -a**]                                             |
+| cfmPassword        | Password for the cfmUser. Can be found with: **cat \$TORTUGA_ROOT/private/.cfmsecret** |
 
 ### Optional Tags
 
-Tag | Default | Description
---- | -------|  -----------
-port| 8443 | Port the master is listening on
-cfmUser | cfm | The admin user for UGE
-dns_nameservers | **installerIpAddress** | 	Where the Tortuga DNS server is installed.  Defaults to the value set for **installerIpAddress**.
+| Tag             | Default                | Description                                                                                      |
+| --------------- | ---------------------- | ------------------------------------------------------------------------------------------------ |
+| port            | 8443                   | Port the master is listening on                                                                  |
+| cfmUser         | cfm                    | The admin user for UGE                                                                           |
+| dns_nameservers | **installerIpAddress** | Where the Tortuga DNS server is installed. Defaults to the value set for **installerIpAddress**. |
 
 ### User Data
 

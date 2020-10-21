@@ -18,7 +18,7 @@ Before starting, ensure your Spot policy is up-to-date with the latest permissio
 "Statement" : [
     {
       "Effect" : "Allow",
-      "Action" : [    
+      "Action" : [
         "codedeploy:*"
       ],
     }
@@ -32,13 +32,13 @@ So you need to create an Instance Profile Role with the Following permissions:
 "Statement" : [
     {
       "Effect" : "Allow",
-      "Action" : [    
+      "Action" : [
         "s3:Get*",
         "s3:List*"
       ],
     }
   ]
-  ```
+```
 
 Associate the Elastigroup with your CodeDeploy IAM Instance Role.
 
@@ -64,7 +64,7 @@ chmod +x ./install
 
 <img src="/elastigroup/_media/codedeployREADME_1.png" />
 
-   * **cleanupOnFailure** – While true we delete the temporary group created. If False we don’t delete the temporary deployment group in case of failure (so the user can view the logs of the group and the deployment).
-   * **terminateInstanceOnFailure** – while true, we terminate the instance that failed. If false, we keep the instances that failed.
+- **cleanupOnFailure** – While true we delete the temporary group created. If False we don’t delete the temporary deployment group in case of failure (so the user can view the logs of the group and the deployment).
+- **terminateInstanceOnFailure** – while true, we terminate the instance that failed. If false, we keep the instances that failed.
 
 3. Proceed with the Elastigroup creation.

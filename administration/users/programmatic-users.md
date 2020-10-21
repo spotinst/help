@@ -5,9 +5,10 @@ Programmatic users are users defined to access the system through an API instead
 Programmatic user credentials are defined separately from UI user credentials. This enables us to know which type of user made a specific action. Like UI users, API users have definitions at the organization level and the account level. The organization level provides API access to actions operating on resources managed for the entire organization. The account level provides API access to resources managed in specific accounts.
 
 The following rules apply to programmatic users:
-* A programmatic user does not have access to the UI.
-* Only an admin user can create a programmatic user.
-* When you create a programmatic user, the system automatically creates a token for the user. The token is visible immediately.
+
+- A programmatic user does not have access to the UI.
+- Only an admin user can create a programmatic user.
+- When you create a programmatic user, the system automatically creates a token for the user. The token is visible immediately.
 
 ## Add Programmatic User to Organization
 
@@ -30,6 +31,7 @@ Adding a programmatic user to an account is similar to adding a UI user to an ac
 Remember to keep your tokens secret and treat them just like passwords. The tokens act on your behalf when interacting with the API.
 
 The following practices are recommended:
-* Do not share your personal access tokens with anyone outside your organization.
-* Do not hard-code tokens into your programs or scripts.
-* Use tokens as environment variables.
+
+- Do not share your personal access tokens with anyone outside your organization.
+- Do not hard-code tokens into your programs or scripts.
+- Use tokens as environment variables.

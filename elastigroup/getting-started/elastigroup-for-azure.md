@@ -16,5 +16,5 @@ Note that you can take a Demo tour of the console before actually connecting you
 
 ## What's Next?
 
-* [Connect your Azure account](connect-your-cloud-provider/azure-account.md)
-* [Create an Elastigroup](elastigroup/getting-started/create-an-elastigroup-for-azure.md)
+- [Connect your Azure account](connect-your-cloud-provider/azure-account.md)
+- [Create an Elastigroup](elastigroup/getting-started/create-an-elastigroup-for-azure.md)

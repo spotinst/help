@@ -14,11 +14,12 @@ Before you start this procedure, you must complete the following:
 
 ## Usage Notes
 
-* It is highly recommended to have a Spot account that contains only Elastigroups managed in Spinnaker.
-* Ensure that all of your Elastigroups are named according to the Spinnaker naming convention: application_name-stack-infrastructure_version
-* Using the Spinnaker dashboard to create Elastigroups is not currently supported.
+- It is highly recommended to have a Spot account that contains only Elastigroups managed in Spinnaker.
+- Ensure that all of your Elastigroups are named according to the Spinnaker naming convention: application_name-stack-infrastructure_version
+- Using the Spinnaker dashboard to create Elastigroups is not currently supported.
 
 ## Install Halyard
+
 Use the commands below to install Halyard from the Git repository:
 
 `git clone https://github.com/spotinst/spinnaker-halyard.gitgit checkout add_spot_provider`
@@ -35,7 +36,8 @@ To add Spot to Spinnaker as a cloud provider, complete the steps below. This pro
 
 `./gradlew halyard-web:run`
 
-  The halyard service is running and can interact with the halyard client.
+The halyard service is running and can interact with the halyard client.
+
 3. Open a new terminal and move to the same directory as before:
 
 `cd ./halyard-cli`
@@ -48,4 +50,4 @@ To add Spot to Spinnaker as a cloud provider, complete the steps below. This pro
 
 ## What’s Next?
 
-Continue to the next task: [Set up Environment as Local Git](https://support.spot.io/provisioning-and-cicd/provisioning-and-cicd/spinnaker/set-up-environment-as-local-git/).
+Continue to the next task: [Set up Environment as Local Git](tools-and-provisioning/spinnaker/set-up-environment-as-local-git).

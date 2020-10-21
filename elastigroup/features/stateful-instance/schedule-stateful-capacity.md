@@ -25,6 +25,7 @@ For example:
 `5 21 * * 1-5 = (At 21:05 on every day-of-week from Monday through Friday)`
 
 ---
+
 **Tip**: We recommend using https://crontab.guru/ to create and verify your Cron expressions.
 
 ---
@@ -34,10 +35,12 @@ For example:
 A change in capacity for a Stateful Spot Instance (SSI) triggers the following set of actions. For capacity-reducing scheduled actions, the instance is paused and the EBS volumes and Elastic Network Interface are detached and are kept in an available state until the capacity increase. Capacity increases resume the paused instances, with the existing resources attached to the new instances as they launch.
 
 For SSI, we support the following options:
-* Update capacity
-* Recycle
+
+- Update capacity
+- Recycle
 
 ## Update Capacity
+
 1. Edit the Elastigroup configuration via the Actions menu or create a new Elastigroup.
 2. In the general Elastigroup Creation Wizard, under the General tab scroll to locate Scheduling and expand it. In the Stateful Creation Wizard, Scheduling can be found under the Scaling tab.
 3. Click on Add Task

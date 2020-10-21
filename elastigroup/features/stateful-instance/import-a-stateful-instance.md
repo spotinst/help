@@ -37,6 +37,7 @@ Another way to import a stateful instance is to start from scratch using an empt
 <img src="/elastigroup/_media/stateful-import-05.png" />
 
 ### Step 2: Select the Instance to Import
+
 1. In the bottom left, click Import.
 2. Click Existing Stateful Instance.
 

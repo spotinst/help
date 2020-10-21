@@ -6,7 +6,7 @@ Large-scale compute clusters are expensive, so it is important to use them well.
 
 The ECS topology is built on Clusters, where each cluster has Services (which can be referred to as applications), and services run Tasks. Each Task has a Task definition which tells the scheduler how much resources the Task requires.
 
-For example, if a cluster runs 10 machines of c3.large (2 vCPUs and 3.8 GiB of RAM) and 10 machines of c4.xlarge (4 vCPUs and 7.5 GiB of RAM), the total vCPUs is 60*1024 = 61,440 CPU Units and the total RAM is 113 GiB.
+For example, if a cluster runs 10 machines of c3.large (2 vCPUs and 3.8 GiB of RAM) and 10 machines of c4.xlarge (4 vCPUs and 7.5 GiB of RAM), the total vCPUs is 60\*1024 = 61,440 CPU Units and the total RAM is 113 GiB.
 
 The issue here is that if a single Task requires more RAM than the individual instance has, it can’t be scheduled. In the example above, a task with 16 GiB of RAM won’t start, despite the total available RAM being 113 GiB. Elastigroup matches the Task with the appropriate Instance Type / Size, with zero overhead or management.
 
@@ -15,13 +15,15 @@ Elastigroup dynamically scales the cluster up and down to ensure there are alway
 ## Scale Down Behavior
 
 Elastigroup monitors the Cluster and runs bin-packing algorithms that simulate different permutations of task placement across the available container instances. A container instance is considered for scale down when:
-* All the running tasks on the particular instance are schedulable on other instances.
-* The instance’s removal won’t reduce the headroom below the target.
-* Elastigroup will prefer to downscale the least utilized instances first.
+
+- All the running tasks on the particular instance are schedulable on other instances.
+- The instance’s removal won’t reduce the headroom below the target.
+- Elastigroup will prefer to downscale the least utilized instances first.
 
 When an instance is chosen for scale-down it will be drained. Its running tasks are rescheduled on other instances, and the instance is then terminated.
 
 ---
+
 **Tip**: Scale-Down actions are limited to 10% of the cluster size at a time.
 
 ---
@@ -33,10 +35,12 @@ Elastigroup supports built-in and custom Task placement constraints within the s
 ## Daemon Tasks
 
 Daemon tasks run on each instance or on a selected set of instances in an Amazon ECS cluster and can be used to provide common functionality, such as logging and monitoring. Elastigroup automatically identifies and accounts for Daemon Tasks when optimizing capacity allocation to make sure the launched instances has enough capacity for both the daemon services and the pending tasks. It also monitors for new container instances in the cluster and adds the Daemon Tasks to them. Elastigroup supports and considers Daemon services and tasks, both for scale down and scale up behavior.
-* Scale down: Daemon task which was a part of a scaled-down instance won’t initialize a launch of a new instance and will not be placed on a different container instance.
-* Scale up: In case there is a Daemon scheduling strategy configured to one of the cluster services, Elastigroup will consider all newly launched instances to have enough spare capacity available in order to run the Daemon task properly in addition to other pending tasks.
+
+- Scale down: Daemon task which was a part of a scaled-down instance won’t initialize a launch of a new instance and will not be placed on a different container instance.
+- Scale up: In case there is a Daemon scheduling strategy configured to one of the cluster services, Elastigroup will consider all newly launched instances to have enough spare capacity available in order to run the Daemon task properly in addition to other pending tasks.
 
 ## What’s Next?
-* [Set up the automatic autoscaler](elastigroup/tutorials/amazon-ecs/enable-autoscaling-for-ecs.md).
-* [Configure custom attributes](elastigroup/tutorials/amazon-ecs/configure-attributes-for-task-placement-constraints.md) for task placement constraints.
-* Learn how the autoscaler utilizes [Tetris scaling](elastigroup/features/amazon-ecs/autoscaler-tetris-scaling.md).
+
+- [Set up the automatic autoscaler](elastigroup/tutorials/amazon-ecs/enable-autoscaling-for-ecs.md).
+- [Configure custom attributes](elastigroup/tutorials/amazon-ecs/configure-attributes-for-task-placement-constraints.md) for task placement constraints.
+- Learn how the autoscaler utilizes [Tetris scaling](elastigroup/features/amazon-ecs/autoscaler-tetris-scaling.md).

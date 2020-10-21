@@ -4,7 +4,7 @@ Assign Account Permissions with SAML Attribute. For account level login, it is p
 
 ## Account and Role
 
-Login to an account with a specific role is defined with an Account and Role combination.  The combination is configured using the following IDP format:
+Login to an account with a specific role is defined with an Account and Role combination. The combination is configured using the following IDP format:
 
 ```
 <Attribute Name="AccAndRole" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
@@ -33,13 +33,13 @@ The format is shown below:
 </Attribute>
 ```
 
-* Multiple PolicyIds for the same account are separated with a comma.
-* All PolicyIds provided in the configuration must exist for the relevant AccountId.
+- Multiple PolicyIds for the same account are separated with a comma.
+- All PolicyIds provided in the configuration must exist for the relevant AccountId.
 
 The attribute value is in the format:
 `SPOTINST-<AccountId>:<PolicyId>`
 
-* The <AccountId> and <PolicyId> are separated by a colon.
+- The <AccountId> and <PolicyId> are separated by a colon.
 
 If multiple policies are applied to an account, the format is as follows:
 
@@ -53,6 +53,6 @@ The example below from Onelogin shows entries in the Custom Fields for both AccA
 
 ## Usage Notes
 
-* For a given user, an attribute may be assigned by itself (i.e., just an AccAndRole definition or just an AccAndPolicyIds definition). If the user is accessing multiple accounts, both the attributes  AccAndRole and AccAndPolicyIds may be specified.
-* AccAndRole and AccAndPolicyIds cannot be used for the same account of the same user.
-* For AccAndRole and AccAndPolicyIds, the attribute name and the attribute value are case sensitive.
+- For a given user, an attribute may be assigned by itself (i.e., just an AccAndRole definition or just an AccAndPolicyIds definition). If the user is accessing multiple accounts, both the attributes AccAndRole and AccAndPolicyIds may be specified.
+- AccAndRole and AccAndPolicyIds cannot be used for the same account of the same user.
+- For AccAndRole and AccAndPolicyIds, the attribute name and the attribute value are case sensitive.

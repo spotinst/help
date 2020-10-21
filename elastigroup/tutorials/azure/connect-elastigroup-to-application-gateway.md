@@ -16,7 +16,6 @@ Under the Compute tab open the Load Balancers section and select the desired Bac
 
 <img src="/elastigroup/_media/create-elastigroup-eks-cluster_1.png" />
 
-
 ## Step 3: Create the Elastigroup
 
 Complete the Elastigroup Creation Wizard and create the Elastigroup.

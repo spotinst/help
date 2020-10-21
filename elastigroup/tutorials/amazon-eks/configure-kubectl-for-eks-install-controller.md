@@ -4,10 +4,10 @@
 
 Complete the following prerequisites, unless you started with [Running Elastigroup For EKS](elastigroup/tutorials/amazon-eks/create-elastigroup-eks-cluster):
 
-* [kubectl (Amazon EKS-vended)](https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html)
-* [awscli 1.16.18+](https://docs.aws.amazon.com/cli/latest/userguide/installing.html)
-* [aws-iam-authenticator](https://docs.aws.amazon.com/eks/latest/userguide/configure-kubectl.html)
-* Amazon EKS cluster on ElastiGroup exists
+- [kubectl (Amazon EKS-vended)](https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html)
+- [awscli 1.16.18+](https://docs.aws.amazon.com/cli/latest/userguide/installing.html)
+- [aws-iam-authenticator](https://docs.aws.amazon.com/eks/latest/userguide/configure-kubectl.html)
+- Amazon EKS cluster on ElastiGroup exists
   If cluster not present, please create using step 1 from [this guide](elastigroup/tutorials/amazon-eks/create-elastigroup-eks-cluster)
 
 ## Mac Version
@@ -79,7 +79,8 @@ echo "Finished configuring kubectl and installing Spotinst k8s controller"
 ```
 
 ## Troubleshooting
-If you receive the error `"aws-iam-authenticator": executable file not found` in $PATH, then your kubectl is not configured for Amazon EKS.
+
+If you receive the error `"aws-iam-authenticator": executable file not found` in \$PATH, then your kubectl is not configured for Amazon EKS.
 
 You can list your cluster nodes with the following command:
 `kubectl get nodes`

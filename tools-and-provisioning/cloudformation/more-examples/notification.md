@@ -18,7 +18,7 @@ Add a new notification to an existing elastigroup by creating a new stack and re
        "eventType": "AWS_EC2_INSTANCE_TERMINATE"
      }
    }
-   ```
+```
 
 ## Request: Create a Notification and an Elastigroup
 

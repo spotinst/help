@@ -20,10 +20,10 @@ Once an Elastigroup is created with the Beanstalk integration, the following pro
 4. Auto Scaling Group scaling policies are removed
 5. Existing instances (original ASG instances) are detached
 6. The Following ASG processes are suspended:
-   * Launch
-   * Terminate
-   * HealthCheck
-   * ReplaceUnhealthy
+   - Launch
+   - Terminate
+   - HealthCheck
+   - ReplaceUnhealthy
 
 ## Application Updates and Deployment
 
@@ -37,18 +37,18 @@ Infrastructure configuration changes are changes made in the Beanstalk environme
 
 Maintenance mode allows you to perform configuration changes to your infrastructure related resources which require a rolling update. This includes the following changes:
 
-|**Namespace: aws:autoscaling:launchconfiguration** | **Namespace: aws:ec2:vpc**|
-|---|---|
-|EC2KeyName|VPCId
-|IamInstanceProfile|Subnets
-|ImageId|ELBSubnets
-|MonitoringInterval|ELBScheme
-|SecurityGroups|DBSubnets
-|SSHSourceRestriction|AssociatePublicIpAddress
-|BlockDeviceMappings|
-|RootVolumeType|
-|RootVolumeSize|
-|RootVolumeIOPS|
+| **Namespace: aws:autoscaling:launchconfiguration** | **Namespace: aws:ec2:vpc** |
+| -------------------------------------------------- | -------------------------- |
+| EC2KeyName                                         | VPCId                      |
+| IamInstanceProfile                                 | Subnets                    |
+| ImageId                                            | ELBSubnets                 |
+| MonitoringInterval                                 | ELBScheme                  |
+| SecurityGroups                                     | DBSubnets                  |
+| SSHSourceRestriction                               | AssociatePublicIpAddress   |
+| BlockDeviceMappings                                |
+| RootVolumeType                                     |
+| RootVolumeSize                                     |
+| RootVolumeIOPS                                     |
 
 ---
 
@@ -74,7 +74,7 @@ It’s crucial that all capacity changes are done via Elastigroup. Failing to do
 
 ## Transition from Beanstalk Independent to Beanstalk In-ASG Elastigroup
 
-The In-ASG integration type requires an initialization process that differs from that of the Independent Elastigroup integration.  The following steps recreate the Elastigroup for your Beanstalk environment:
+The In-ASG integration type requires an initialization process that differs from that of the Independent Elastigroup integration. The following steps recreate the Elastigroup for your Beanstalk environment:
 
 1. Delete the Elastigroup.
 2. Perform the changes in the Elastic Beanstalk console to adjust to In-ASG: change the environment to be load balanced, or change the deployment type to one that is supported by the In-ASG integration.

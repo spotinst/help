@@ -4,8 +4,8 @@
 
 Spot has two Terraform provider versions:
 
-* An official provider available for download from Hashicorp
-* Spot provider which can be found on [Installation Links](https://support.spot.io/provisioning-and-cicd/terraform/provisioning-and-cicd/terraform/getting-started-terraform/installation-links/).
+- An official provider available for download from Hashicorp
+- Spot provider which can be found on [Installation Links](tools-and-provisioning/terraform/getting-started/installation-links).
 
 Both are fully maintained.
 
@@ -13,21 +13,21 @@ The reason that Spot manages two providers is that we want to allow our Terrafor
 
 The installation can be done via:
 
-* Hashicorp binaries
-* Spot Resources
+- Hashicorp binaries
+- Spot Resources
 
 ## Official Provider Installation: HashiCorp
 
 Procedure:
 
 1. Get the latest [Terraform binary](https://www.terraform.io/downloads.html) build.
-2. Create a template.tf that includes the [Spotinst Provider Configuration](https://support.spot.io/provisioning-and-cicd/terraform/provisioning-and-cicd/terraform/getting-started-terraform/configuration/).
+2. Create a template.tf that includes the [Spot Provider Configuration](tools-and-provisioning/terraform/getting-started/configuration).
 3. Run `terraform init`
-  If command fails, continue below to manual installation.
+   If command fails, continue below to manual installation.
 4. The latest [Change Log](https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/CHANGELOG.md) release version of the Spot provider should be downloaded.
-5. Visit the [Terraform Spotinst Provider](https://support.spot.io/provisioning-and-cicd/terraform/provisioning-and-cicd/terraform/getting-started-terraform/installation-procedure/) documentation page for official provider documentation.
+5. Visit the [Terraform Spot Provider](tools-and-provisioning/terraform/getting-started/install-terraform) documentation page for official provider documentation.
 
-After running  `terraform init`, the provider binary is located under
+After running `terraform init`, the provider binary is located under
 
 `.terraform/plugins/<platform>/terraform-provider-spotinst_v1.x.x`
 
@@ -39,7 +39,7 @@ We strive to always have the latest features available for our customers reflect
 
 Place the plugin executable (`terraform-provider-spotinst`) in one of the following locations depending on the host operating system:
 
-**Windows systems** – create a file named `terraform.rc` in the sub-path `terraform.d/plugins` beneath your user’s “Application Data” ` %APPDATA%` directory:
+**Windows systems** – create a file named `terraform.rc` in the sub-path `terraform.d/plugins` beneath your user’s “Application Data” `%APPDATA%` directory:
 
 `%APPDATA%/terraform.rc`
 

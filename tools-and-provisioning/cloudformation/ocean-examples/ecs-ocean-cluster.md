@@ -107,19 +107,19 @@ Resources:
           maximum: 1000
         compute:
           subnetIds:
-          - subnet-1234
+            - subnet-1234
           instanceTypes: {}
           launchSpecification:
             imageId: ami-12345
-            userData: ''
+            userData: ""
             securityGroupIds:
-            - sg-1234
+              - sg-1234
             iamInstanceProfile:
-              arn: !GetAtt 'ECSInstanceProfile.Arn'
+              arn: !GetAtt "ECSInstanceProfile.Arn"
             tags:
-            - tagKey: Description
-              tagValue: This instance is the part of the Auto Scaling group which was created
-                through ECS Console
+              - tagKey: Description
+                tagValue: This instance is the part of the Auto Scaling group which was created
+                  through ECS Console
             monitoring: true
             associatePublicIpAddress: true
         strategy:

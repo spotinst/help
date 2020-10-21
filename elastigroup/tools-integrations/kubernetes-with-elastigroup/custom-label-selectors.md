@@ -19,6 +19,7 @@ In the Spot Console add the relevant `labels` with key/value in Compute tab -> I
 ### Step 3: Add Labels to the Nodes
 
 #### Add Labels to EKS
+
 Add to user data:
 
 ```

@@ -4,13 +4,14 @@ Target scaling policies are autoscaling policies that track a specified metric r
 
 ## How it Works
 
-* You assign a metric that best describes the load of your application, and set a target value.
-* Elastigroup takes over and manages your capacity for you, keeping your desired metric at the selected target value.
-* Elastigroup will manage scaling policies for you in real time to ensure your target metric at, or close to, the specified target value.
+- You assign a metric that best describes the load of your application, and set a target value.
+- Elastigroup takes over and manages your capacity for you, keeping your desired metric at the selected target value.
+- Elastigroup will manage scaling policies for you in real time to ensure your target metric at, or close to, the specified target value.
 
 For example, you could use target tracking scaling to:
-* Configure a target tracking scaling policy to keep the average aggregate CPU utilization of your Elastigroup instances at 50%.
-* Configure a target tracking scaling policy to keep the incoming traffic at 1000000 bytes per second to each of your instances.
+
+- Configure a target tracking scaling policy to keep the average aggregate CPU utilization of your Elastigroup instances at 50%.
+- Configure a target tracking scaling policy to keep the incoming traffic at 1000000 bytes per second to each of your instances.
 
 ## Which Metrics should I use?
 
@@ -21,6 +22,7 @@ For example, the CPU utilization of an Auto Scaling group (i.e., the Amazon Clou
 Note that the time frame the metric is aggregated for depends on whether you have Detailed Monitoring enabled for the group or not. If you do – the time frame is 1 minute. Otherwise, it is 5 minutes.
 
 ## Configure Target Scaling
+
 1. Edit or create an Elastigroup.
 2. Navigate to the Scaling tab.
 3. Add a Target scaling policy.
@@ -28,6 +30,7 @@ Note that the time frame the metric is aggregated for depends on whether you hav
 5. Input the target value and you’re ready to go.
 
 ---
+
 **Tip**: Some experimentation may be required to achieve the right target value. We encourage you to test your target value in order to find that sweet balance between over-provisioning and cost optimization.
 
 ---

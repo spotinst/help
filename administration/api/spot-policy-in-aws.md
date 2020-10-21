@@ -1,9 +1,10 @@
 # Spot Policy in AWS
 
 The latest Spot policy in AWS appears below.
-* You can find and modify your Spot Policy in the [AWS IAM Console](https://console.aws.amazon.com/iam/home#/policies).
-* You can [restrict your Spot Policy](elastigroup/tutorials/elastigroup-tasks/restrict-your-spot-iam-policy.md) using custom AWS IAM Condition Statements.
-* Ensure that your policy is always up to date with the latest JSON.
+
+- You can find and modify your Spot Policy in the [AWS IAM Console](https://console.aws.amazon.com/iam/home#/policies).
+- You can [restrict your Spot Policy](elastigroup/tutorials/elastigroup-tasks/restrict-your-spot-iam-policy.md) using custom AWS IAM Condition Statements.
+- Ensure that your policy is always up to date with the latest JSON.
 
 For additional information, see: [Update the Spot Policy](elastigroup/tutorials/elastigroup-tasks/update-spot-policy.md).
 
@@ -50,9 +51,7 @@ For additional information, see: [Update the Spot Policy](elastigroup/tutorials/
         "iam:SimulatePrincipalPolicy"
       ],
       "Effect": "Allow",
-      "Resource": [
-        "*"
-      ]
+      "Resource": ["*"]
     },
     {
       "Sid": "AccessELB",
@@ -66,9 +65,7 @@ For additional information, see: [Update the Spot Policy](elastigroup/tutorials/
         "elasticloadbalancing:DisableAvailabilityZonesForLoadBalancer"
       ],
       "Effect": "Allow",
-      "Resource": [
-        "*"
-      ]
+      "Resource": ["*"]
     },
     {
       "Sid": "AccessCloudWatch",
@@ -83,9 +80,7 @@ For additional information, see: [Update the Spot Policy](elastigroup/tutorials/
         "cloudwatch:PutMetricAlarm"
       ],
       "Effect": "Allow",
-      "Resource": [
-        "*"
-      ]
+      "Resource": ["*"]
     },
     {
       "Sid": "AccessSNS",
@@ -98,9 +93,7 @@ For additional information, see: [Update the Spot Policy](elastigroup/tutorials/
         "sns:Subscribe"
       ],
       "Effect": "Allow",
-      "Resource": [
-        "*"
-      ]
+      "Resource": ["*"]
     },
     {
       "Sid": "AccessIAM",
@@ -123,9 +116,7 @@ For additional information, see: [Update the Spot Policy](elastigroup/tutorials/
         "iam:ListRolePolicies"
       ],
       "Effect": "Allow",
-      "Resource": [
-        "*"
-      ]
+      "Resource": ["*"]
     },
     {
       "Sid": "GeneralAccessElaticBeanstalk",
@@ -147,40 +138,25 @@ For additional information, see: [Update the Spot Policy](elastigroup/tutorials/
         "logs:createLogGroup"
       ],
       "Effect": "Allow",
-      "Resource": [
-        "*"
-      ]
+      "Resource": ["*"]
     },
     {
       "Sid": "AccessAutoScalingGroups",
-      "Action": [
-        "autoscaling:*"
-      ],
+      "Action": ["autoscaling:*"],
       "Effect": "Allow",
-      "Resource": [
-        "*"
-      ]
+      "Resource": ["*"]
     },
     {
       "Sid": "AccessEks",
-      "Action": [
-        "eks:ListClusters"
-      ],
+      "Action": ["eks:ListClusters"],
       "Effect": "Allow",
-      "Resource": [
-        "*"
-      ]
+      "Resource": ["*"]
     },
     {
       "Sid": "AccessEMR",
-      "Action": [
-        "elasticmapreduce:*",
-        "s3:GetObject"
-      ],
+      "Action": ["elasticmapreduce:*", "s3:GetObject"],
       "Effect": "Allow",
-      "Resource": [
-        "*"
-      ]
+      "Resource": ["*"]
     },
     {
       "Sid": "AccessECS",
@@ -196,20 +172,13 @@ For additional information, see: [Update the Spot Policy](elastigroup/tutorials/
         "application-autoscaling:Describe*"
       ],
       "Effect": "Allow",
-      "Resource": [
-        "*"
-      ]
+      "Resource": ["*"]
     },
     {
       "Sid": "AccessBatch",
-      "Action": [
-        "batch:List*",
-        "batch:Describe*"
-      ],
+      "Action": ["batch:List*", "batch:Describe*"],
       "Effect": "Allow",
-      "Resource": [
-        "*"
-      ]
+      "Resource": ["*"]
     },
     {
       "Sid": "AccessOpsWorks",
@@ -220,63 +189,37 @@ For additional information, see: [Update the Spot Policy](elastigroup/tutorials/
         "opsworks:DescribeLayers"
       ],
       "Effect": "Allow",
-      "Resource": [
-        "*"
-      ]
+      "Resource": ["*"]
     },
     {
       "Sid": "AccessCodeDeploy",
-      "Action": [
-        "codedeploy:*"
-      ],
+      "Action": ["codedeploy:*"],
       "Effect": "Allow",
-      "Resource": [
-        "*"
-      ]
+      "Resource": ["*"]
     },
     {
       "Sid": "AccessGeneralS3",
-      "Action": [
-        "s3:GetObject",
-        "s3:List*",
-        "s3:GetBucketLocation"
-      ],
+      "Action": ["s3:GetObject", "s3:List*", "s3:GetBucketLocation"],
       "Effect": "Allow",
-      "Resource": [
-        "*"
-      ]
+      "Resource": ["*"]
     },
     {
       "Sid": "AccessRoute53",
-      "Action": [
-        "route53:ListHostedZones",
-        "route53:ListResourceRecordSets",
-        "route53:ChangeResourceRecordSets"
-      ],
+      "Action": ["route53:ListHostedZones", "route53:ListResourceRecordSets", "route53:ChangeResourceRecordSets"],
       "Effect": "Allow",
-      "Resource": [
-        "*"
-      ]
+      "Resource": ["*"]
     },
     {
       "Sid": "AccesS3forElasticBeanstalk",
       "Effect": "Allow",
-      "Action": [
-        "s3:*"
-      ],
-      "Resource": [
-        "arn:aws:s3:::elasticbeanstalk*"
-      ]
+      "Action": ["s3:*"],
+      "Resource": ["arn:aws:s3:::elasticbeanstalk*"]
     },
     {
       "Sid": "ElasticFileSystemAccess",
       "Effect": "Allow",
-      "Action": [
-        "elasticfilesystem:DescribeFileSystems"
-      ],
-      "Resource": [
-        "*"
-      ]
+      "Action": ["elasticfilesystem:DescribeFileSystems"],
+      "Resource": ["*"]
     },
     {
       "Sid": "DockerBasedBeanstalkEnvironments",
@@ -293,9 +236,7 @@ For additional information, see: [Update the Spot Policy](elastigroup/tutorials/
         "ecs:SubmitTaskStateChange"
       ],
       "Effect": "Allow",
-      "Resource": [
-        "*"
-      ]
+      "Resource": ["*"]
     }
   ]
 }

@@ -6,7 +6,7 @@ Elastigroup’s notifications allow you to receive notifications for different e
 
 ## Prerequisites
 
-* A running Elastigroup
+- A running Elastigroup
 
 ## Step 1: Open the Notifications Module
 
@@ -40,7 +40,7 @@ Setting up Notifications for additional Platforms such as “email” and “ema
 
 **Instance Launch Failed**: Triggers a notification when an attempt to launch an instance in the Elastigroup fails.
 
-**Instance Terminate**: Triggers a notification when an instance is marked for termination. This notification is issued prior to *Instance Terminated*.
+**Instance Terminate**: Triggers a notification when an instance is marked for termination. This notification is issued prior to _Instance Terminated_.
 
 **Instance Terminated**: Triggers a notification when one of the instances is terminated.
 
@@ -54,7 +54,7 @@ Setting up Notifications for additional Platforms such as “email” and “ema
 
 In the “Format” field you can optionally change the default output of the notification.
 
-The format of the notification content supports the following variables: event, instance-id,  resource-id, resource-name, subnet-id, availability-zone, reason.
+The format of the notification content supports the following variables: event, instance-id, resource-id, resource-name, subnet-id, availability-zone, reason.
 
 To use variables in custom formats, please wrap the variable name with a percentage sign. For example: %resource-id%
 
@@ -145,22 +145,23 @@ To use variables in custom formats, please wrap the variable name with a percent
 
 The following is a list of values that can be in the “reason” field and an explanation for each one.
 
-* `Scale down` – Terminated due to target capacity change by user.
-* `Auto Scale` – Detached by any Autoscaler (K8S, ECS…).
-* `Manual detach of old instances` – After a deployment was Stopped.
-* `Manual detach of new instances` – After a deployment was Stopped.
-* `Detach as part of deployment` – Standard detach of “Blue” instances in a deployment.
-* `Instance replacement` – Spot Interruption / instance terminated on AWS / User detached without decrementing capacity.
-* `Replacement has finished` – In case of “replacement finished with Error”, the new instances will be detached with this reason / Detached as a part of a proactive replacement (when not covered by any of the following reasons).
-* `Replacement of type ‘Fixing Strategy’ has finished`
-* `Replacement of type ‘Preventive’ has finished`
-* `Replacement of type ‘Unhealthy Instance’ has finished`
-* `Replacement of type ‘Signal Timeout’ has finished`
-* `Replacement of type ‘Spot Type Preference’ has finished`
-* `Replacement of type ‘Reserved Instance Utilization’ has finished`
-* `Replacement of type ‘Expensive Spot’ has finished`
+- `Scale down` – Terminated due to target capacity change by user.
+- `Auto Scale` – Detached by any Autoscaler (K8S, ECS…).
+- `Manual detach of old instances` – After a deployment was Stopped.
+- `Manual detach of new instances` – After a deployment was Stopped.
+- `Detach as part of deployment` – Standard detach of “Blue” instances in a deployment.
+- `Instance replacement` – Spot Interruption / instance terminated on AWS / User detached without decrementing capacity.
+- `Replacement has finished` – In case of “replacement finished with Error”, the new instances will be detached with this reason / Detached as a part of a proactive replacement (when not covered by any of the following reasons).
+- `Replacement of type ‘Fixing Strategy’ has finished`
+- `Replacement of type ‘Preventive’ has finished`
+- `Replacement of type ‘Unhealthy Instance’ has finished`
+- `Replacement of type ‘Signal Timeout’ has finished`
+- `Replacement of type ‘Spot Type Preference’ has finished`
+- `Replacement of type ‘Reserved Instance Utilization’ has finished`
+- `Replacement of type ‘Expensive Spot’ has finished`
 
 ### Instance Terminated
+
 ```
 {
  "default": "spotinst:notification:instance",
@@ -174,5 +175,5 @@ The following is a list of values that can be in the “reason” field and an e
 
 ## What’s Next?
 
-* Configure [Slack Notifications](https://docs.spot.io/elastigroup-for-aws/tutorials/elastigroup-actions-menu/notifications/)
-* Configure [Email Notifications](administration/users/configure-email-notifications)
+- Configure [Slack Notifications](administration/users/configure-slack-notifications)
+- Configure [Email Notifications](administration/users/configure-email-notifications)

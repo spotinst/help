@@ -6,24 +6,24 @@ A task placement constraint is a rule that is considered during task placement. 
 
 For further information about ECS task placement and ECS task placement constraints see AWS’s ECS documentation here:
 
-* [ECS Task Placement](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-placement.html)
-* [ECS Task Placement Constraints](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-placement-constraints.html)
+- [ECS Task Placement](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-placement.html)
+- [ECS Task Placement Constraints](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-placement-constraints.html)
 
 There are two type of attributes which a task placement constraint can use when evaluating where to place a task:
 
-* ECS’s built-in container attributes. When using the built-in container attributes simply configure the constraints on the tasks, Elastigroup will automatically recognize the constraints and use the built-in attributes to evaluate them.
-* Custom attributes, which are added to your desired instances and Elastigroup.
+- ECS’s built-in container attributes. When using the built-in container attributes simply configure the constraints on the tasks, Elastigroup will automatically recognize the constraints and use the built-in attributes to evaluate them.
+- Custom attributes, which are added to your desired instances and Elastigroup.
 
 ## Operators
 
 Elastigroup for ECS supports the following operators in constraints on both Built-In and Custom attributes:
 
-* Equal
-* Not equal
-* In
-* Not in
-* Match
-* Not match
+- Equal
+- Not equal
+- In
+- Not in
+- Match
+- Not match
 
 ## Configure a Built-in Attribute
 

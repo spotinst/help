@@ -11,6 +11,7 @@ If, for example, the first instance has 2 whole free headroom units (in our exam
 However, if the first instance will have 2 free units, the second instance will have 3 free units but the third will have only 4 free units, then the cluster will have a total of 9 free units, and the group requires 10 free units, so a scale up activity will be triggered.
 
 ---
+
 **Tip**: Headroom takes precedence over scaling operations.
 
 ---

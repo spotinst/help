@@ -8,29 +8,29 @@ If you want your Elastigroup to persist even after you delete the CloudFormation
 
 Headers
 
-  ```jason
-  "SpotinstASG": {
-    "Type": "Custom::importAsg",
-    "Properties": {
-      "ServiceToken": "!Sub arn:aws:lambda:${AWS::Region}:178579023202:function:spotinst-cloudformation",
-      "accessToken": "YOUR SPOTINST API TOKEN",
-      "accountId": "YOUR SPOTINST ACCOUNT ID",
-      "asgName": "NAME OF THE ASG YOU WANT TO IMPORT",
-      "region": "REGION WHERE ASG IS LOCATED",
-      "group":{
-        "product": "IMAGE TYPE",
-        "spotInstanceTypes": [
-          "ARRAY OF INSTANCE TYPES"
-        ],
-        "name": "NAME OF NEW ELASTIGROUP TO CREATE"
-      },
-      "deletePolicy": {
-        "asgScaleTarget": NUMBER
-      },
-      "groupConfig": {}
-    }
+```jason
+"SpotinstASG": {
+  "Type": "Custom::importAsg",
+  "Properties": {
+    "ServiceToken": "!Sub arn:aws:lambda:${AWS::Region}:178579023202:function:spotinst-cloudformation",
+    "accessToken": "YOUR SPOTINST API TOKEN",
+    "accountId": "YOUR SPOTINST ACCOUNT ID",
+    "asgName": "NAME OF THE ASG YOU WANT TO IMPORT",
+    "region": "REGION WHERE ASG IS LOCATED",
+    "group":{
+      "product": "IMAGE TYPE",
+      "spotInstanceTypes": [
+        "ARRAY OF INSTANCE TYPES"
+      ],
+      "name": "NAME OF NEW ELASTIGROUP TO CREATE"
+    },
+    "deletePolicy": {
+      "asgScaleTarget": NUMBER
+    },
+    "groupConfig": {}
   }
-  ```
+}
+```
 
 ## Request: CloudFormation – YAML
 

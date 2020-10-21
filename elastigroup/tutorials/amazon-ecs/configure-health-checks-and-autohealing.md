@@ -6,17 +6,17 @@ Health-Check for ECS is a process which detects the status of your ECS instance 
 
 ECS Health Check is based on two parameters:
 
-* Instance status (`active`/`draining`/`inactive`)
-* ECS agent connectivity status (`true`/`false`)
+- Instance status (`active`/`draining`/`inactive`)
+- ECS agent connectivity status (`true`/`false`)
 
 Based on these parameters the Health Check status is evaluated and can return one of the following:
 
-* **HEALTHY**: The ECS Agent is connected and active, and the container instance status is either `draining` or `active`.
-* **UNKNOWN**: The API call ECS Describe Container Instances returned an error for the cluster. Alternatively, the API call may have failed.
-* **UNHEALTHY**: The unhealthy status might be a result of one of the following situations:
-    * The Instance was not registered to the ECS cluster properly.
-    * The ECS Agent isn’t connected.
-    * The Instance status is neither `draining` nor `active`.
+- **HEALTHY**: The ECS Agent is connected and active, and the container instance status is either `draining` or `active`.
+- **UNKNOWN**: The API call ECS Describe Container Instances returned an error for the cluster. Alternatively, the API call may have failed.
+- **UNHEALTHY**: The unhealthy status might be a result of one of the following situations:
+  - The Instance was not registered to the ECS cluster properly.
+  - The ECS Agent isn’t connected.
+  - The Instance status is neither `draining` nor `active`.
 
 <img src="/elastigroup/_media/configure-health-checks-and-autohealing_1.png" />
 
@@ -38,9 +38,9 @@ Auto Healing is configured in the Compute view of the Creation Wizard, under Loa
 
 ## Step 2: Set Health Check Grace Period and Unhealthy Duration
 
-* **Health Check Grace Period**: Specify the time (in seconds) to allow an instance to boot and applications to fully start before the first health check. If an instance fails the health check after the given delay, it will be terminated and replaced with a new instance.
-* **Unhealthy Duration**: Specify the amount of time (in seconds) you want to keep existing instances that are deemed unhealthy before the instance is terminated and replaced with a new one.
+- **Health Check Grace Period**: Specify the time (in seconds) to allow an instance to boot and applications to fully start before the first health check. If an instance fails the health check after the given delay, it will be terminated and replaced with a new instance.
+- **Unhealthy Duration**: Specify the amount of time (in seconds) you want to keep existing instances that are deemed unhealthy before the instance is terminated and replaced with a new one.
 
 ## What’s Next?
 
-Learn more about [Elastigroup Integration with ECS clusters](https://help.dev.spot.io/elastigroup/features/amazon-ecs/elastigroup-for-ecs).
+Learn more about [Elastigroup Integration with ECS clusters](elastigroup/features/amazon-ecs/elastigroup-for-ecs).

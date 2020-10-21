@@ -21,11 +21,13 @@ Equivalent to rebooting or restarting the machine, initiates Pause then Resume o
 ## Deallocate
 
 Deletes the stateful instance resources (configurable) and terminates the instance.
-* Spot keeps the root volume and the last snapshot for 96 hours and then remove them (configurable).
-* In case which “Reattach” is selected for “Persist Data Volumes” – the data volumes will be kept as well.
-* On machine deallocation, its data will be lost.
+
+- Spot keeps the root volume and the last snapshot for 96 hours and then remove them (configurable).
+- In case which “Reattach” is selected for “Persist Data Volumes” – the data volumes will be kept as well.
+- On machine deallocation, its data will be lost.
 
 ---
+
 **Tip**: Downsizing the Elastigroup capacity without deallocating the instances may result in some resources not being deleted, despite the instance termination. To properly downsize the capacity, deallocate the relevant instances using the instances tab.
 
 ---

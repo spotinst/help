@@ -37,6 +37,7 @@ Navigate to the Compute Tab and open the Advanced settings.
 ### Step 1
 
 Install the Spot agent. For ease of use, we recommend adding this at the end of your user data script.
+
 1. [Get your account ID](https://console.spotinst.com/#/settings/account/general) from the Account settings in your console.
 2. [Get a Token](https://console.spotinst.com/#/settings/tokens/permanent).
 3. Add your account ID and token to your script.
@@ -73,6 +74,7 @@ Start-Service SpotinstAgent</powershell>
 ```
 
 ### Step 2
+
 Add your shell script to the shutdown script box. Windows scripts should start with the <powershell> tag.
 
 Linux:
@@ -84,6 +86,7 @@ Linux:
 ```
 
 Windows:
+
 ```powershell
 <powershell> Write-Host "Goodbye old instance"
 ```

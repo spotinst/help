@@ -3,12 +3,13 @@
 Mesosphere DC/OS is based on the production-proven Apache Mesos distributed systems kernel and provides APIs for resource management and scheduling across the entire data center and cloud environments.
 
 ## Benefits of using the Spot Mesosphere Integration
-* Spot will automatically provision instances for you for the best availability and cost. You can even use scaling metrics or custom API scripts to automate this even further.
-* Running Spot instances manually on a production workload is unpredictable. You will need to carefully consider all scenarios in which your Spot instances can be interrupted and you also have to compensate for sudden market fluctuations.
-  * The Spot algorithm will predict when fluctuations in the market will occur and pre-emptively provision new instances for you well before the interruption.
-* The Spot API integration will automatically communicate with your DC/OS Master and send a connection draining signal to all instances affected. This ensures that new tasks are not added to servers that are about to go down. This feature sounds simple, but it makes the process of managing nodes completely automated!
-* You have both the availability your production workloads require and you get to save money.
-* Spot can provision a heterogeneous cluster for your entire DC/OS environment. Do you want to have exactly 30 vCPUs and don’t care about instances types? We can do that as well with our cluster weighting option.
+
+- Spot will automatically provision instances for you for the best availability and cost. You can even use scaling metrics or custom API scripts to automate this even further.
+- Running Spot instances manually on a production workload is unpredictable. You will need to carefully consider all scenarios in which your Spot instances can be interrupted and you also have to compensate for sudden market fluctuations.
+  - The Spot algorithm will predict when fluctuations in the market will occur and pre-emptively provision new instances for you well before the interruption.
+- The Spot API integration will automatically communicate with your DC/OS Master and send a connection draining signal to all instances affected. This ensures that new tasks are not added to servers that are about to go down. This feature sounds simple, but it makes the process of managing nodes completely automated!
+- You have both the availability your production workloads require and you get to save money.
+- Spot can provision a heterogeneous cluster for your entire DC/OS environment. Do you want to have exactly 30 vCPUs and don’t care about instances types? We can do that as well with our cluster weighting option.
 
 ## How it Works
 
@@ -45,6 +46,7 @@ Expand the “Outputs” and “Resources” sections.
 ## Step 7
 
 Now let’s get the Master’s external IP address, go back to “Resources” from step 6.
+
 1. Scroll down to “ElasticLoadBalancer” and click on the link.
 2. Click on the “Instances” tab and then click on the instance ID for the master.
 3. Copy the public IP of the master into a text editor for later.
@@ -54,6 +56,7 @@ Now let’s get the Master’s external IP address, go back to “Resources” f
 <img src="/elastigroup/_media/mesosphere-02a.png" />
 
 ## Step 8
+
 1. Log in to the DC/OS console.
 2. Take the IP you copied back in 8.3 above and paste this into your web browser.
 3. It will ask you to configure authentication. You should see at least three nodes (depends on your CF Parameters in step two above).
@@ -63,6 +66,7 @@ Now let’s get the Master’s external IP address, go back to “Resources” f
 ## Step 9
 
 Now that the cluster is up and running let’s configure some Spot instances via the Elastigroup integration.
+
 1. Log into the Spot console at http://console.spotinst.com (free trial at http://spotinst.com/signup).
 2. Click on the “Create” button to create a new Elastigroup.
 3. At the bottom left of the screen click on the red “Import” button, then select “Auto Scaling Group” from the menu.
@@ -70,7 +74,7 @@ Now that the cluster is up and running let’s configure some Spot instances via
 
 <img src="/elastigroup/_media/mesosphere-04.png" />
 
-5. Pick a descriptive name for your  Elastigroup and click next at the bottom right of the screen.
+5. Pick a descriptive name for your Elastigroup and click next at the bottom right of the screen.
 6. Select “Linux/Unix” as the Product type.
 7. Configure the strategy and configuration as you see fit, I recommend a target of two instances for testing purposes.
 8. Scroll down to “Spot Types” and select m3.large, m3.xlarge, m4.large, m4.xlarge.

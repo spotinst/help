@@ -1,15 +1,17 @@
 # Add Users
+
 ## Organization Tab
 
 Under the Organization tab, you can manage all users including:
 
-* Admins – Users who hold editor permissions to all the accounts in the organization
-* Users – Editors and Viewers
-* Programmatic Users – Users that interface through the API
+- Admins – Users who hold editor permissions to all the accounts in the organization
+- Users – Editors and Viewers
+- Programmatic Users – Users that interface through the API
 
 <img src="/administration/_media/add-users-01.png" width="300" height="146" />
 
 ## Add a User to the Organization
+
 1. Under the Organization tab, click the appropriate user type, Users or Progammatic Users.
 2. Click ADD USER and enter the requested user information.
 
@@ -28,10 +30,11 @@ In the Account tab, you can also manage access policies and notifications.
 <img src="/administration/_media/add-users-04.png" width="300" height="217" />
 
 ## Add a User to an Account
+
 1. Under the Account tab, click the appropriate user type, Users or Progammatic Users.
 2. Click ADD USER and enter the requested user information.
 
 <img src="/administration/_media/add-users-05.png" width="300" height="332" />
 
-* If the user is already defined in the organization, choose Add Existing User.
-* If you are adding a user to the account who does not already exist in the organization, the user will automatically be added to the organization when it is added to the account.
+- If the user is already defined in the organization, choose Add Existing User.
+- If you are adding a user to the account who does not already exist in the organization, the user will automatically be added to the organization when it is added to the account.

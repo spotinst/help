@@ -36,11 +36,12 @@ until [ "$DATA_STATE" == "attached" ]; do
                 Name=attachment.device,Values=$DEVICE_NAME \
                 --query Volumes[].Attachments[].State \
                 --output text)
-        echo $DATA_STATE      
+        echo $DATA_STATE
         sleep 5
 done
 echo "volume is ready"
 ```
+
 ## Configure Data Volume Persistence Using the API
 
 Add the following attribute to your elastigroup configuration:
@@ -49,13 +50,13 @@ strategy.persistence.blockDevicesMode – string – (Optional) determine the wa
 
 ## Backend Actions
 
-* Running stateful instance –
-  * Reattach + One AZ- The data volume is preserved, attached and detached in every spot replacement.
-  * Reattach + Multi AZ- A snapshot is taken for each data volume every 5 minutes and the latest 3 Snapshots are kept (incremental backup).
-  * Snapshot backups- A snapshot is taken for each data volume every 5 minutes and the latest 3 Snapshots are kept (incremental backup).
-* Paused stateful instance – Only the latest Snapshot for each volume is kept.
-* Resumed stateful instance-
-  * Snapshot backups- New volumes are created from the latest snapshots while the instance launch.
-  * Reattach + the instance is launched in the same AZ as the previous instance- The existing volumes are attached to the new instance.
-  * Reattach + the instance is launched in a different AZ as the previous instance- New volumes are created in the same AZ as the new instance and attached.
-* Once a stateful instance is deallocated. The data (Images, Volumes and Snapshots) is kept for 4 days by default. Can be configured on an hourly basis.
+- Running stateful instance –
+  - Reattach + One AZ- The data volume is preserved, attached and detached in every spot replacement.
+  - Reattach + Multi AZ- A snapshot is taken for each data volume every 5 minutes and the latest 3 Snapshots are kept (incremental backup).
+  - Snapshot backups- A snapshot is taken for each data volume every 5 minutes and the latest 3 Snapshots are kept (incremental backup).
+- Paused stateful instance – Only the latest Snapshot for each volume is kept.
+- Resumed stateful instance-
+  - Snapshot backups- New volumes are created from the latest snapshots while the instance launch.
+  - Reattach + the instance is launched in the same AZ as the previous instance- The existing volumes are attached to the new instance.
+  - Reattach + the instance is launched in a different AZ as the previous instance- New volumes are created in the same AZ as the new instance and attached.
+- Once a stateful instance is deallocated. The data (Images, Volumes and Snapshots) is kept for 4 days by default. Can be configured on an hourly basis.

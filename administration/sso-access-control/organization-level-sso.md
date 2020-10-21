@@ -15,10 +15,10 @@ The SAML attribute `OrgAndRole` (ignore case) allows the organization ID to be s
 This attribute will allow login into different organizations with the same user and the same IDP app while setting the organization ID dynamically.
 
 ## Usage Notes
-* If OrgAndRole exists, the system overrides the RelayState and the Role (if the Role is provided as a different attribute).
-* The OrgAndRole attribute and attribute value are case sensitive.
-* If a user logs in through SSO with a Role attribute, the role of that user will be set accordingly, which means that these settings will affect both existing users and new users, i.e., an xml attribute:
 
+- If OrgAndRole exists, the system overrides the RelayState and the Role (if the Role is provided as a different attribute).
+- The OrgAndRole attribute and attribute value are case sensitive.
+- If a user logs in through SSO with a Role attribute, the role of that user will be set accordingly, which means that these settings will affect both existing users and new users, i.e., an xml attribute:
 
 ```
 <saml:Attribute NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic" Name="Role">
@@ -27,8 +27,9 @@ This attribute will allow login into different organizations with the same user 
 ```
 
 ## Supported Role Attributes
-* ADMIN – Equivalent to Account Editor
-* VIEWER – Account viewer
-* NO_ACCESS – No access to console
+
+- ADMIN – Equivalent to Account Editor
+- VIEWER – Account viewer
+- NO_ACCESS – No access to console
 
 In this case, an Account Admin role is provided, meaning an Account Editor. This is not an Organization Admin.

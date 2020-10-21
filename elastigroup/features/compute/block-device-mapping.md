@@ -12,7 +12,7 @@ Block Device Mapping settings can be added or managed using the API while creati
 
 <img src="/elastigroup/_media/compute-blockdevice-01.png" />
 
-2. Add the  Block device mappings JSON block in the `launchSpecification` object `( compute.launchSpecification.blockDeviceMappings )`.
+2. Add the Block device mappings JSON block in the `launchSpecification` object `( compute.launchSpecification.blockDeviceMappings )`.
 
 Example: 'blockDeviceMappings' object overriding the settings for the drives: /dev/sdf , /dev/sdm , /dev/sda1. In this case, the root volume is `sda1`. The root volume can also be `xvda`.
 

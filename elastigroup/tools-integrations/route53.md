@@ -3,6 +3,7 @@
 This integration provides the ability to use Route 53 as a load balancer for the EC2 resources provisioned by the Elastigorup, allowing to define multiple recordset domain names (FQDN) for each Elastigroup. EC2 instances will be registered and deregister to and from all domains configured for instance launch and termination respectively.
 
 ## Prerequisites
+
 1. Make sure you have existing domains (record sets).
 2. Only domain record set type A (IP) is supported.
 3. Record set aliases are not supported.

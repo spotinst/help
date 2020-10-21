@@ -12,17 +12,15 @@ Elastigroup automatically and seamlessly predicts and replaces Spot Instances be
 
 ## Prerequisites
 
-* Connected AWS account to Spot console
-* Updated Spot policy. Learn more about updating the [Spot policy](https://help.dev.spot.io/elastigroup/tutorials/elastigroup-tasks/update-spot-policy).
-* Make sure you have the ecsInstanceRole. [If not, create a new one](https://docs.aws.amazon.com/batch/latest/userguide/instance_IAM_role.html).
+- Connected AWS account to Spot console
+- Updated Spot policy. Learn more about updating the [Spot policy](elastigroup/tutorials/elastigroup-tasks/update-spot-policy).
+- Make sure you have the ecsInstanceRole. [If not, create a new one](https://docs.aws.amazon.com/batch/latest/userguide/instance_IAM_role.html).
 
 ## Step 1: Choose Use Case
 
 Select the “Existing Fargate/ECS” Use case from the use case screen.
 
-
 <img src="/elastigroup/_media/import-fargate-services-to-ecs-elastigroup_1.png" />
-
 
 ## Step 2: Select your ECS Fargate Cluster and Services
 
@@ -30,17 +28,13 @@ Fill in your desired Elastigroup name, as well as the region and name of your EC
 
 You will be shown with a list of detected services, from which to select which Fargate services you would like to import into Elastigroup.
 
-
 <img src="/elastigroup/_media/import-fargate-services-to-ecs-elastigroup_2.png" />
-
 
 The import process does not affect any existing services. Selected Fargate Tasks and Services are cloned by Spot and their settings are imported into an Elastigroup.
 
 Last step before starting the import process will be to review your Elastigroup configuration and click the the “Create” button:
 
-
 <img src="/elastigroup/_media/import-fargate-services-to-ecs-elastigroup_3.png" />
-
 
 On completion you’ll see the Success message.
 
@@ -48,9 +42,7 @@ On completion you’ll see the Success message.
 
 Once your Elastigroup is created, you can track the fargate service import process by clicking the ‘details’ link in the banner that appears in the elastigroup overview screen.
 
-
 <img src="/elastigroup/_media/import-fargate-services-to-ecs-elastigroup_4.png" />
-
 
 You will be able to see which services are currently being imported, and in what state they are currently in.
 

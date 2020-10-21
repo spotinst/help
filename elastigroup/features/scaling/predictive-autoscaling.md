@@ -3,9 +3,10 @@
 Predictive autoscaling allows you to enjoy seamless prediction of when your Elastigroup would experience load and scale the number of instances in advanced to meet business needs.
 
 ## Concepts
-* Target – The active instance value that Elastigroup should have at a given moment.
-* Effective-minimum – The minimum target value depicts the minimum amount of instances Elastigroup should have in order to accommodate the load required by the predicted metric. When this value is greater than Elastigroup’s target value, Elastigroup will scale up instances in order to meet the Effective-minimum, depending on your predictive scaling configuration.
-* Predicted Metric – The metric which Elastigroup actively predicts, in order to determine future load and scaling requirements for the group.
+
+- Target – The active instance value that Elastigroup should have at a given moment.
+- Effective-minimum – The minimum target value depicts the minimum amount of instances Elastigroup should have in order to accommodate the load required by the predicted metric. When this value is greater than Elastigroup’s target value, Elastigroup will scale up instances in order to meet the Effective-minimum, depending on your predictive scaling configuration.
+- Predicted Metric – The metric which Elastigroup actively predicts, in order to determine future load and scaling requirements for the group.
 
 ## How it Works
 
@@ -15,7 +16,7 @@ Once the metric value is determined, an effective-minimum calculation begins to 
 
 ## Configure Predictive Autoscaling
 
-1. When using [target-based scaling](elastigroup/features/scaling/predictive-autoscaling.md),  some metrics will offer you to use predictive autoscaling.
+1. When using [target-based scaling](elastigroup/features/scaling/predictive-autoscaling.md), some metrics will offer you to use predictive autoscaling.
 2. Once selected, you can choose to either use a prediction-only mode, or predict and scale mode.
 3. Choosing either mode will start a metric prediction process that uses machine learning to determine the expected target metric value within the next two days, based on past behavior and other scaling activities throughout the system.
 4. In both settings, a new graph will appear in the UI, showing the predicted metric, target, and effective-minimum values

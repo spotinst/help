@@ -32,11 +32,11 @@ shutdown -r -t 00
 
 The following values need to be changed to match your specifications:
 
-* `$dnsserver`
-* `$domain`
-* `$password`
-* `$username` – just the ‘myUserAccount’ part
-* `$ou`
+- `$dnsserver`
+- `$domain`
+- `$password`
+- `$username` – just the ‘myUserAccount’ part
+- `$ou`
 
 The value `$ou` is optional. If not required, delete this line and remove the ou flag and value from the Add-Computer command.
 

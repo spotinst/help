@@ -10,8 +10,8 @@ Spot is able to analyze artifacts produced by aks-engine and provision an Elasti
 
 There are two methods to get running with Kubernetes and Elastigroup on Azure.
 
-* **Quick Start** – This procedure provisions and imports configurations to Spot with a single command.
-* **AKS Engine Import** – This explains how to run aks-engine followed by spot-aks-engine import with fine   grained control of build options.
+- **Quick Start** – This procedure provisions and imports configurations to Spot with a single command.
+- **AKS Engine Import** – This explains how to run aks-engine followed by spot-aks-engine import with fine grained control of build options.
 
 These are described below.
 
@@ -23,9 +23,9 @@ When the container is executed with the proper environment variables both aks-en
 
 Before running this image you will need:
 
-* Azure subscription_id, client_id and client_secret – The Application Registration will need permission to create a resource group within the Subscription
-* Spot Token – Will be used to create the integrated Elastigroup
-* Create an output directory in the current working path to store aks-engine artifacts
+- Azure subscription_id, client_id and client_secret – The Application Registration will need permission to create a resource group within the Subscription
+- Spot Token – Will be used to create the integrated Elastigroup
+- Create an output directory in the current working path to store aks-engine artifacts
 
 ```
 docker run -it --rm \
@@ -41,6 +41,7 @@ docker run -it --rm \
 ```
 
 ---
+
 **Tip:**
 
 AKS_DNS_PREFIX must be unique for the subscription (account).
@@ -66,7 +67,7 @@ INFO[0263] Finished ARM Deployment (spotinst-aks-engine-demo-1874602557). Succee
 Spotinst Elastigroup sig-2dd2ddbe successfully created
 ```
 
-A new Azure resource group will contain the new Kubernetes cluster with a scale set managed by Spotinst.  It is safe to scale the set created by aks-engine to zero.
+A new Azure resource group will contain the new Kubernetes cluster with a scale set managed by Spotinst. It is safe to scale the set created by aks-engine to zero.
 
 Proceed to Expected Output below.
 
@@ -77,6 +78,7 @@ Proceed to Expected Output below.
 Download OS respective binary: https://github.com/Azure/aks-engine/releases/tag/v0.46.3
 
 ### Spot-aks-engine
+
 Download OS respective binary:
 
 **Linux**: [[386](https://spotinst-public.s3.amazonaws.com/integrations/kubernetes/aks-engine/v0.1.4/spotinst-aks-engine-linux-386)] [[amd64](https://spotinst-public.s3.amazonaws.com/integrations/kubernetes/aks-engine/v0.1.4/spotinst-aks-engine-linux-amd64)]
@@ -91,14 +93,14 @@ It is possible to customize the api-model of aks-engine but the following settin
 
 1. Enable Standard Load Balancer:
    orchestratorProfile.kubernetesConfig.loadBalancerSku = “Standard”
-2. Use *azure* networking plugin:
+2. Use _azure_ networking plugin:
    orchestratorProfile.kubernetesConfig.networkPlugin = “azure”
 
 The full instructions for aks-engine can be found [on GitHub](https://github.com/Azure/aks-engine/blob/master/docs/README.md).
 
 Minimally a cluster can be created with the [api model](https://github.com/spotinst/spotinst-aks-engine-tools/blob/master/models/k8s-azurenet.json) that is used in the simple setup above.
 
-The deploy process of aks-engine will save all relevant cluster information to an output folder.  This location is needed to integrate with Elastigroup.
+The deploy process of aks-engine will save all relevant cluster information to an output folder. This location is needed to integrate with Elastigroup.
 
 ### Run spot-aks-engine
 
@@ -116,6 +118,7 @@ Flags:
       --set stringToString        Set extra Elastigroup configuration properties (default [])
   -s, --subscription string       Azure subscription used for the account / aks deployment
 ```
+
 To scale the Elastigroup on import provide the min, max and target as extra options:
 
 ```
@@ -128,13 +131,14 @@ spotinst-aks-engine import\
 --set capacity.target=TARGET
 ```
 
-When complete a new resource group will contain the new Kubernetes cluster with a scale set managed by Spot.  It is safe to scale the set created by aks-engine to zero.
+When complete a new resource group will contain the new Kubernetes cluster with a scale set managed by Spot. It is safe to scale the set created by aks-engine to zero.
 
 ## Expected Output
 
-After following the directions for either the Quick Start or the import, the following resources will be present.  
+After following the directions for either the Quick Start or the import, the following resources will be present.
 
 ### Aks-engine Output
+
 The output directory will contain everything needed to manage the Kubernetes deployment, including SSH keys and the kubeconfig needed to connect to the cluster.
 
 ### Spot Elastigroup
@@ -147,7 +151,7 @@ apiserver.key      ca.crt        etcdclient.crt      etcdserver.crt      kubectl
 azuredeploy.json    ca.key        etcdclient.key      etcdserver.key
 ```
 
-When spot-aks-engine import completes an ID is returned.  This ID is the group that manages the worker nodes for Kubernetes and can be viewed in the Spot Console.
+When spot-aks-engine import completes an ID is returned. This ID is the group that manages the worker nodes for Kubernetes and can be viewed in the Spot Console.
 
 `Spotinst Elastigroup sig-2dd2ddbe successfully created.`
 

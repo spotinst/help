@@ -3,6 +3,7 @@
 SSO support makes it easy to manage your accounts and works with the most popular identity providers. Let’s walk through how this integration works with Okta. We borrowed the following instructions from the Okta help site to help you get started.
 
 ## Configure Okta with SAML 2.0
+
 1. Login to your Spot account as an administrator.
 2. In the console, choose Settings.
 3. Click the Security tab and select Identity Providers.
@@ -20,7 +21,7 @@ SSO support makes it easy to manage your accounts and works with the most popula
 
 <img src="/administration/_media/okta-saml-03.png" />
 
-   3. Download the metadata document by clicking on ‘Identity Provider metadata‘ link:
+3.  Download the metadata document by clicking on ‘Identity Provider metadata‘ link:
 
 <img src="/administration/_media/okta-saml-04.png" />
 
@@ -29,11 +30,13 @@ SSO support makes it easy to manage your accounts and works with the most popula
 9. Done! Login back into Spot via your Okta account!
 
 ---
+
 **Tip**: IDP-initiated flows, SP-initiated flows, and Just In Time provisioning are all supported.
 
 ---
 
 ## For SP Initiated Flows
+
 1. Go to https://console.spotinst.com/#/auth/signIn.
 2. Type your email address and click outside the form.
 3. Click SIGN IN WITH SSO.

@@ -10,7 +10,7 @@ The following tutorial covers how to start running Gitlab Runner’s autoscaling
 
 ## Prerequisites
 
-* A verified Spot Elastigroup account. For more information on getting started with Spot’s Elastigroup head [here](https://spot.io/products/elastigroup/).
+- A verified Spot Elastigroup account. For more information on getting started with Spot’s Elastigroup head [here](https://spot.io/products/elastigroup/).
 
 ## Procedure
 
@@ -39,19 +39,19 @@ The following tutorial covers how to start running Gitlab Runner’s autoscaling
    MachineName = "runner-%s"
 ﻿
    MachineOptions = [ "spotinst-account=<Account-ID>", "spotinst-token=<Token>", "spotinst-elastigroup-id=<ElastigroupId>", "spotinst-sshkey-path=<LocalPath>"]
-   ```
+```
 
 The following table covers the MachineOptions parameters used above. Note that these parameters are all required. The full parameter documentation can be found [here](https://github.com/spotinst/docker-machine-driver-spotinst).
 
-|**Option Name** | **Description** |
-|---|---|
-| `--spotinst-account`| Spot Account ID |
+| **Option Name**             | **Description**                                           |
+| --------------------------- | --------------------------------------------------------- |
+| `--spotinst-account`        | Spot Account ID                                           |
 | `--spotinst-elastigroup-id` | Elastigroup ID in the relevant account to fill in servers |
-| `--spotinst-token` | Spot token from your organization |
-| `--spotinst-sshkey-path` | Local path to the pem file of the Elastigroup |
+| `--spotinst-token`          | Spot token from your organization                         |
+| `--spotinst-sshkey-path`    | Local path to the pem file of the Elastigroup             |
 
 You just configured Docker-Machine to provision instances through Elastigroup.
 
 ## What’s Next?
 
-* To learn more about the Elastigroup Docker-Machine integration click [here](https://github.com/spotinst/docker-machine-driver-spotinst).
+- To learn more about the Elastigroup Docker-Machine integration click [here](https://github.com/spotinst/docker-machine-driver-spotinst).

@@ -10,12 +10,12 @@ Elastigroups with Code deploy integration offers an option to utilize the B/G de
 
 ## Prerequisites
 
-* In the AWS Console, edit the desired deployment group and under Environment configuration ensure that Amazon EC2 instances is selected.
+- In the AWS Console, edit the desired deployment group and under Environment configuration ensure that Amazon EC2 instances is selected.
 
 <img src="/elastigroup/_media/blue-green-deployment_1.png" />
 
-* In Spot console – make sure your AMI has the Code Deploy agent installed or install it via your [user-data script](https://docs.aws.amazon.com/codedeploy/latest/userguide/codedeploy-agent-operations-install.html).
-* In Spot console – make sure you have associated the Code Deploy IAM Role in the Elastigroup configuration.
+- In Spot console – make sure your AMI has the Code Deploy agent installed or install it via your [user-data script](https://docs.aws.amazon.com/codedeploy/latest/userguide/codedeploy-agent-operations-install.html).
+- In Spot console – make sure you have associated the Code Deploy IAM Role in the Elastigroup configuration.
 
 ## Configuring a Blue-Green Deployment
 
@@ -25,7 +25,7 @@ Elastigroups with Code deploy integration offers an option to utilize the B/G de
 
 2. Go to the CODEDEPLOY B/G tab:
 3. Choose the Deployment Group, set the Deployment Timeout (the amount of time the deployment can take before we fail the deployment, in seconds), Add the Keys and Values for the ‘Green’ tags and click Start Deployment Mode:
-The Green and Blue Instances must have the same tag key but different tag value.
+   The Green and Blue Instances must have the same tag key but different tag value.
 
 <img src="/elastigroup/_media/blue-green-deployment_3.png" />
 

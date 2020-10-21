@@ -8,22 +8,24 @@ Elastigroup’s Stateful feature is designed to support any fault-tolerant appli
 ## Common Use Cases
 
 Every fault-tolerant application that requires data persistency can benefit from the Stateful feature.
-* Single Non-prod Server Database: In non-production environments databases can typically tolerate a ‘maintenance window’ once in a while. This is a perfect use case for Elastigroup’s Stateful feature.
-* Cassandra: If the Cassandra node is replaced Elastigroup clones the instance and brings it back. The Cassandra cluster will behave as if the instance was down for some time. Bringing up a clone of the previous instance ensures that cluster IOPs are not wasted on bringing a new instance up.
-* Development instances: Non-production instances can be run on Spot Instances with occasional downtime. Instances that are interrupted are brought back automatically within a few minutes.
-* Elastic.co: Elasticsearch node recovery will take a fraction of the time required to provision a brand new instance. From the standpoint of the Elasticsearch cluster the instance was only down for a period of time (depending on the size of the data volumes attached). No changes are necessary for the cluster to provision this as long as it has enough instances for quorum.
-* Kafka: Kafka’s architecture is designed based on several components and each component has its unique role. Elastigroup’s Stateful feature supports Brokers and ZooKeeper clusters, as well as the consumers, which Elastigroup can run seamlessly on Spot Instances.
-* MongoDB: When running a MongoDB cluster, it’s important to preserve the data, when the data is missing a “rebuild” process is initiated and the data is resynced in its whole. As part of the stateful feature, Elastigroup allows retaining the data volumes of the machine, Any EBS volume that is attached to the instance will be continuously snapshotted while the machine is running and will be used as the block device mapping configuration upon replacement.
+
+- Single Non-prod Server Database: In non-production environments databases can typically tolerate a ‘maintenance window’ once in a while. This is a perfect use case for Elastigroup’s Stateful feature.
+- Cassandra: If the Cassandra node is replaced Elastigroup clones the instance and brings it back. The Cassandra cluster will behave as if the instance was down for some time. Bringing up a clone of the previous instance ensures that cluster IOPs are not wasted on bringing a new instance up.
+- Development instances: Non-production instances can be run on Spot Instances with occasional downtime. Instances that are interrupted are brought back automatically within a few minutes.
+- Elastic.co: Elasticsearch node recovery will take a fraction of the time required to provision a brand new instance. From the standpoint of the Elasticsearch cluster the instance was only down for a period of time (depending on the size of the data volumes attached). No changes are necessary for the cluster to provision this as long as it has enough instances for quorum.
+- Kafka: Kafka’s architecture is designed based on several components and each component has its unique role. Elastigroup’s Stateful feature supports Brokers and ZooKeeper clusters, as well as the consumers, which Elastigroup can run seamlessly on Spot Instances.
+- MongoDB: When running a MongoDB cluster, it’s important to preserve the data, when the data is missing a “rebuild” process is initiated and the data is resynced in its whole. As part of the stateful feature, Elastigroup allows retaining the data volumes of the machine, Any EBS volume that is attached to the instance will be continuously snapshotted while the machine is running and will be used as the block device mapping configuration upon replacement.
 
 ## Stateful Persistency Options
 
 Elastigroup’s Stateful feature provides a combination of snapshots, volumes and ENIs to ensure data persistency.
-* [Persist root volume](elastigroup/features/stateful-instance/persist-root-volume.md): Selecting to persist the root volume ensures that Operating System and root volume configurations are maintained during instance replacements.
-* [Persist data volumes](elastigroup/features/stateful-instance/persist-data-volumes.md): Data devices are maintained using one of the following methods:
-  * Reattach Volumes: The same EBS volumes are detached from the original instance and reattached to the new instance.
-  * Snapshot Backups: During the launch of a new instance, new EBS volumes are created and attached to it.
-* [Persist private IP](elastigroup/features/stateful-instance/persist-network.md): New instances are provisioned with the same private IP using the same Elastic Network Interface.
-  * Private IP Pool – Specify a pool of private IPs to be used by the Stateful instances.
+
+- [Persist root volume](elastigroup/features/stateful-instance/persist-root-volume.md): Selecting to persist the root volume ensures that Operating System and root volume configurations are maintained during instance replacements.
+- [Persist data volumes](elastigroup/features/stateful-instance/persist-data-volumes.md): Data devices are maintained using one of the following methods:
+  - Reattach Volumes: The same EBS volumes are detached from the original instance and reattached to the new instance.
+  - Snapshot Backups: During the launch of a new instance, new EBS volumes are created and attached to it.
+- [Persist private IP](elastigroup/features/stateful-instance/persist-network.md): New instances are provisioned with the same private IP using the same Elastic Network Interface.
+  - Private IP Pool – Specify a pool of private IPs to be used by the Stateful instances.
 
 ## Importing a Stateful Instance
 

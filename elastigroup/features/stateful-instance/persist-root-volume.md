@@ -16,6 +16,7 @@ Periodic snapshots of the root volume are taken continuously while the instance 
 ## Change the Image of Existing Stateful Instances
 
 Changing the image in an Elastigroup only affects Stateful instances with root persistence that were created after the change.To change the image of an existing Stateful instance use the steps below.
+
 1. Remove the root persistence and update the Elastigroup with the new image.
 2. Recycle the Stateful instance.
 3. Re-enable the root persistence in the Elastigroup configuration.
@@ -23,11 +24,13 @@ Changing the image in an Elastigroup only affects Stateful instances with root p
 ## Backend Actions
 
 Elastigroup automatically performs various backend actions for different states of the Stateful instance to ensure root volume persistency.
-* Paused: Images (AMI) are created each time the Stateful instance is Paused using the latest root volume snapshot which was taken after the instance termination. Elastigroup only keeps the latest Snapshot for each volume.
-* Running: While the instance is running, a Snapshot is taken for the root volume every 5 minutes and the latest 3 Snapshots are kept (incremental backup).
-* Deallocated: The data (Images, Volumes and Snapshots) are kept for 4 days by default.
+
+- Paused: Images (AMI) are created each time the Stateful instance is Paused using the latest root volume snapshot which was taken after the instance termination. Elastigroup only keeps the latest Snapshot for each volume.
+- Running: While the instance is running, a Snapshot is taken for the root volume every 5 minutes and the latest 3 Snapshots are kept (incremental backup).
+- Deallocated: The data (Images, Volumes and Snapshots) are kept for 4 days by default.
 
 ---
+
 **Tip**: Data storage can be configured on an hourly basis.
 
 ---

@@ -51,14 +51,14 @@ Set the Health Check configuration in the Elastigroup:
 
 <img src="/elastigroup/_media/custom-health-check-service_3.png" width="250" height="371" />
 
-   * **Name**: Name your Health Check for convenience.
-   * **ProxyAddress**: The public host/IP of your selected instance you installed service on in `section 2`. This will be set like http://publicip
-   * **Protocol**: Which protocol will Spot use to check the healthiness of your instances. Supported for now are: http / https.
-   * **Endpoint**: The path of the Health Check in each instance.
-   * **Interval**: The interval (in seconds) between the checks. Minimum of 10.
-   * **Timeout**: The timeout (in seconds) to wait for each instance to answer the check. If it did not answer, we mark this attempt as `unhealthy`
-   * **UnhealthyThreshold**: The number of consecutive failed health checks that must occur before declaring an instance `unhealthy`
-   * **HealthyThreshold**: The number of consecutive successful health checks that must occur before declaring an instance `healthy`
+- **Name**: Name your Health Check for convenience.
+- **ProxyAddress**: The public host/IP of your selected instance you installed service on in `section 2`. This will be set like http://publicip
+- **Protocol**: Which protocol will Spot use to check the healthiness of your instances. Supported for now are: http / https.
+- **Endpoint**: The path of the Health Check in each instance.
+- **Interval**: The interval (in seconds) between the checks. Minimum of 10.
+- **Timeout**: The timeout (in seconds) to wait for each instance to answer the check. If it did not answer, we mark this attempt as `unhealthy`
+- **UnhealthyThreshold**: The number of consecutive failed health checks that must occur before declaring an instance `unhealthy`
+- **HealthyThreshold**: The number of consecutive successful health checks that must occur before declaring an instance `healthy`
 
 ## Step 4
 
@@ -79,7 +79,6 @@ Now – the health check is running, and Spot’s monitor service will send HCS 
 The healthiness should be available shortly through the Instances table list:
 
 <img src="/elastigroup/_media/custom-health-check-service_4.png" />
-
 
 In the case of an Instance failure – the HCS service will trigger a replacement operation to launch a new instance and terminate the unhealthy one.
 

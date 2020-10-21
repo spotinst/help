@@ -9,34 +9,41 @@ This tutorial covers the creation of a Load Balanced Elastigroup from scratch. T
 The creation template is available under “Use Cases” in the Creation Wizard:
 
 1. In the [Spot console](https://console.spotinst.com/), on the lefthand menu, select Elastigroups.
-2. Click the  “Create Elastigroup” button on the top right.
+2. Click the “Create Elastigroup” button on the top right.
 3. Choose the “Load Balancing” use case:
 
 The creation wizard will assist you with creating an Elastigroup with all the required resources.
 
 ## Step 1: General Settings
+
 ### Elastigroup Details
+
 1. Enter a name for the group (required).
 2. Enter a group Description (optional).
 
 ### Strategy
+
 1. Select the percentage of Preemptible instances in the Elastigroup. The remaining percentage will be On-Demand instances.
 2. Alternatively, define the exact number of On-Demand instances required in the Elastigroup.
 
 ### Capacity
-* Target is the number of instances the Elastigroup should maintain.
-* The Minimum and Maximum are the boundaries within which the Elastigroup can scale.
+
+- Target is the number of instances the Elastigroup should maintain.
+- The Minimum and Maximum are the boundaries within which the Elastigroup can scale.
 
 <img src="/elastigroup/_media/gettingstarted-eg-gcp-02.png" />
 
 ## Step 2: Compute Settings
+
 ### Regions & Zones
+
 1. Select your desired zones according to region. Clicking on region will open its zones.
 2. You can add multiple zones and regions to the group.
 
 <img src="/elastigroup/_media/gettingstarted-eg-gcp-03.png" />
 
 ### Network Settings
+
 1. Select your desired Network and Subnets to run your Elastigroup in.
 2. (Optional) Select your desired Service Account.
 3. (Optional) Check the “Add Ephemeral Public IP” checkbox if you wish to assign an Ephemeral Public IP.
@@ -52,6 +59,7 @@ The creation wizard will assist you with creating an Elastigroup with all the re
 4. If you wish to size the instance type yourself – choose the “Custom Instance” and set the vCPU and Memory bars accordingly. For more on custom instance size specifications, see the [GCP documentation](https://cloud.google.com/compute/docs/machine-types).
 
 ### Fallback to On-demand
+
 1. The Fallback mechanism ensures you won’t suffer from outage when no preemptible market is available.
 2. In a scale-up operation – if we can’t get an available preemptible market we would fallback to an on-demand instance, according to your selected instance type.
 3. Set “Allow fall back to on-demand” checkbox to activate the fallback to OD.
@@ -59,6 +67,7 @@ The creation wizard will assist you with creating an Elastigroup with all the re
 <img src="/elastigroup/_media/gettingstarted-eg-gcp-05.png" />
 
 ### Launch Specification
+
 1. Specify your settings for instance launch.
 2. Choose OS image from “Common Images” list or browse for your custom image.
 3. Set disk type and size.
@@ -66,33 +75,37 @@ The creation wizard will assist you with creating an Elastigroup with all the re
 5. Startup scripts can perform many actions, such as installing software, performing updates, turning on services, and any other tasks defined in the script. You can use startup scripts in order to easily and programmatically customize your virtual machine instances, including on new instances at creation time.
 
 ### Backend Services
+
 1. In order to add a Backend Service click on the “Add” button.
 2. Set your required backend service Type (Load Balancer): Global / Regional.
-   * For Global choose the backend service from the list.
-   * For Regional choose the Scheme Type and than the backend service from the list.
+   - For Global choose the backend service from the list.
+   - For Regional choose the Scheme Type and than the backend service from the list.
 3. You can add named ports, e.g.:
-   * Name: “HTTPS”
-   * Ports: “[443, 8443]”
+   - Name: “HTTPS”
+   - Ports: “[443, 8443]”
 
 ### Integrations
 
 Setup an integration from the list of available integrations:
 
 Docker Swarm:
+
 1. Click on Docker Swarm button, and set integration properties.
-2. Set docker swarm properties to connect: Swarm Manager IP  + Swarm Port.
+2. Set docker swarm properties to connect: Swarm Manager IP + Swarm Port.
 3. Click on “Test Connectivity” to validate integration is working properly.
 4. Learn more about our integration with [Docker Swarm](elastigroup/tools-integrations/docker-swarm/).
 
 <img src="/elastigroup/_media/gettingstarted-eg-gcp-06.png" />
 
 ### Labels
+
 1. Expand the section by clicking the arrow on the right.
 2. Add labels to your Elastigroup by setting key and value, and click on Add.
 
 ### Metadata
+
 1. Expand the section by clicking the arrow on the right.
-2.  Add GCP custom metadata to the instances.
+2. Add GCP custom metadata to the instances.
 
 ## Step 3: Scaling Settings (Optional)
 

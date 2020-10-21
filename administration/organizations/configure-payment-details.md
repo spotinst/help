@@ -19,6 +19,7 @@ You can set up a credit card as a payment method in your Spot account. Using the
 ## Credit Cards Accepted
 
 The following credit cards are accepted:
-* American Express
-* MasterCard
-* Visa
+
+- American Express
+- MasterCard
+- Visa

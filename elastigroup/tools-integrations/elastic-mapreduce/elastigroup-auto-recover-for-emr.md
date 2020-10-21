@@ -14,7 +14,6 @@ When a change in instance group capacity is applied, a process will monitor its 
 
 The original instance group will be “banned” for 2 hours and all actions of launching new instances will be applied in the new instance group. i.e. – if in the original instance group there were 3 missing instances that were requested to be launched, they will be launched as part of the new instance group.
 
-
 ---
 
 **Note:**

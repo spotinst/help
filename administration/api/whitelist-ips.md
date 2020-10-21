@@ -4,4 +4,4 @@ Spot whitelist IP addresses are required for integrations to work as expected. T
 
 Ensure that your whitelist IPs are always up-to-date with the latest list.
 
-* 34.226.61.134/32
+- 34.226.61.134/32

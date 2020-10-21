@@ -7,6 +7,7 @@ Supports Update Policy:
 ```
 shouldUpdateTargetCapacity
 ```
+
 For more information on UpdatePolicy, see [Parameters](tools-and-provisioning/cloudformation/template-structure/parameters).
 
 The full body attribute list is available on the [Create](https://help.spot.io/spotinst-api/ocean/ocean-cloud-api/ocean-for-aws/create-2/) page of the API documentation.
@@ -16,8 +17,8 @@ The full body attribute list is available on the [Create](https://help.spot.io/s
 Body
 
 ```json
-{  
-   "Resources":{
+{
+  "Resources": {
     "SpotinstOcean": {
       "Type": "Custom::ocean",
       "Properties": {
@@ -27,62 +28,56 @@ Body
         "accessToken": "Spotinst Token",
         "accountId": "Spotinst Account ID",
         "autoTag": true,
-      	"updatePolicy": {
-        	"shouldUpdateTargetCapacity": false
+        "updatePolicy": {
+          "shouldUpdateTargetCapacity": false
         },
-        "ocean":{
+        "ocean": {
           "name": "Your Ocean Name",
           "controllerClusterId": "ocean.k8s",
           "region": {
-            "AWS::Sub":["${AWS::Region}"]
+            "AWS::Sub": ["${AWS::Region}"]
           },
-          "autoScaler":{
+          "autoScaler": {
             "isEnabled": true,
             "cooldown": 180,
-            "resourceLimits":{
+            "resourceLimits": {
               "maxMemoryGib": 1500,
               "maxVCpu": 750
             },
-            "down":{
+            "down": {
               "evaluationPeriods": 3
             },
-            "headroom":{
+            "headroom": {
               "cpuPerUnit": 2000,
               "memoryPerUnit": 0,
               "numOfUnits": 4
             },
             "isAutoConfig": false
           },
-          "capacity":{
+          "capacity": {
             "minimum": 0,
             "maximum": 1,
             "target": 1
           },
-          "strategy":{
+          "strategy": {
             "spotPercentage": 100,
             "fallbackToOd": true,
             "utilizeReservedInstances": false
           },
-          "compute":{
-            "subnetIds":[
-              ""
-            ],
-            "instanceTypes":{
-              "whitelist":[
-                "c4.8xlarge"
-              ]
+          "compute": {
+            "subnetIds": [""],
+            "instanceTypes": {
+              "whitelist": ["c4.8xlarge"]
             },
-            "launchSpecification":{
+            "launchSpecification": {
               "imageId": "",
               "userData": "12345678987654321",
-              "securityGroupIds":[
-                ""
-              ],
-              "iamInstanceProfile":{
+              "securityGroupIds": [""],
+              "iamInstanceProfile": {
                 "arn": ""
               },
               "keyPair": "",
-              "tags":{
+              "tags": {
                 "tagKey": "creator",
                 "tagValue": "test"
               }

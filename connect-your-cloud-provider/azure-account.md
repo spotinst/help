@@ -50,6 +50,7 @@ Under your Active Directory’s main menu, go to Properties, copy the Directory 
    Search for the name of the Active Directory Application you created in Step 1 and click Save.
 
 ---
+
 **Note**: If your application doesn’t appear in the Select autocomplete list enter the application name there anyway.
 
 ---

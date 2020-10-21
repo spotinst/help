@@ -7,20 +7,22 @@ First, we’ll start by creating a new Elastigroup, selecting ‘Stateful’ und
 
 ## Step 1: General Settings
 
-* Enter a Name for your Elastigroup and select a Region.
-* Set the initial capacity for your group.
- - You can choose to measure capacity either in number of instances or via a total count of vCPUs
-* Select your desired VPC to run your Elastigroup in, as well as the Product type and the Image you wish all instances to be instantiated from.
-* Select the security groups to be attached to the instances and the key-pairs associated with them.
-* Lastly, you can optionally choose to add tags to your stateful group’s instances.
+- Enter a Name for your Elastigroup and select a Region.
+- Set the initial capacity for your group.
+
+* You can choose to measure capacity either in number of instances or via a total count of vCPUs
+
+- Select your desired VPC to run your Elastigroup in, as well as the Product type and the Image you wish all instances to be instantiated from.
+- Select the security groups to be attached to the instances and the key-pairs associated with them.
+- Lastly, you can optionally choose to add tags to your stateful group’s instances.
 
 <img src="/elastigroup/_media/create-a-stateful-elastigroup-from-scratch_1.png" />
 
 ## Step 2: Instance Type
 
-* Select the On-Demand instance type you would like to be used in case there aren’t any spot instances found for your instance type.
-* Select the Availability Zones you’d like Elastigroup to consider when launching your instances. To maximize your savings Elastigroup calculates the cost of launching Spot instances in the selected Availability Zones. We recommend selecting multiple Availability Zones to increase the number of Spot instance markets available for Elastigroup to consider.
-* Select the instance types you would like Elastigroup to consider when launching your spot instances. We recommend selecting multiple instance types to provide Elastigroup with as many Spot instance market options as possible.
+- Select the On-Demand instance type you would like to be used in case there aren’t any spot instances found for your instance type.
+- Select the Availability Zones you’d like Elastigroup to consider when launching your instances. To maximize your savings Elastigroup calculates the cost of launching Spot instances in the selected Availability Zones. We recommend selecting multiple Availability Zones to increase the number of Spot instance markets available for Elastigroup to consider.
+- Select the instance types you would like Elastigroup to consider when launching your spot instances. We recommend selecting multiple instance types to provide Elastigroup with as many Spot instance market options as possible.
 
 ---
 
@@ -50,8 +52,8 @@ At least one persistence feature has to be selected in this step.
 
 ## Step 4: Instance Details
 
-* Select launched instance details, like IAM role, tenancy, whether to apply detailed monitoring EBS optimization or EC2 auto-healing.
-* Fill in any [user data or shutdown scripts](elastigroup/features/compute/shutdown-scripts) you would like to run upon instance starting or terminating.
+- Select launched instance details, like IAM role, tenancy, whether to apply detailed monitoring EBS optimization or EC2 auto-healing.
+- Fill in any [user data or shutdown scripts](elastigroup/features/compute/shutdown-scripts) you would like to run upon instance starting or terminating.
 
 ## Step 5: (Optional) Scaling Policies
 

@@ -17,17 +17,14 @@ In order to use cfn helper scripts in Elastigroup user-data, you will need to sp
 
 ```json
 {
-   "Version": "2012-10-17",
-   "Statement": [
-       {
-           "Effect": "Allow",
-           "Action": [
-               "cloudformation:SignalResource",
-               "cloudformation:DescribeStackResource"
-           ],
-           "Resource": "*"
-       }
-   ]
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": ["cloudformation:SignalResource", "cloudformation:DescribeStackResource"],
+      "Resource": "*"
+    }
+  ]
 }
 ```
 
@@ -48,6 +45,7 @@ In order to use cfn helper scripts in Elastigroup user-data, you will need to sp
 <img src="/tools-and-provisioning/_media/cfn-helper-scripts_5.png" />
 
 ---
+
 **Tip**: Beanstalk Elastigroups do not need to modify their user-data.
 
 ---

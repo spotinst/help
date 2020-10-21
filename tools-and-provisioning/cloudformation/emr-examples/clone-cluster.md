@@ -2,10 +2,10 @@
 
 Clone an existing EMR Cluster into an Elastigroup.
 
-|**Parameter**|**Type**|**Description**|
-|---|---|---|
-|`originClusterId`|**String**|The EMR cluster ID<br>Example: `j-12345`|
-|`strategy`|**String**|EMR group type- clone or wrap<br>Example: `cloning`|
+| **Parameter**     | **Type**   | **Description**                                     |
+| ----------------- | ---------- | --------------------------------------------------- |
+| `originClusterId` | **String** | The EMR cluster ID<br>Example: `j-12345`            |
+| `strategy`        | **String** | EMR group type- clone or wrap<br>Example: `cloning` |
 
 ## Request
 
@@ -38,15 +38,11 @@ Body
             "instanceGroups": {
               "masterGroup": {
                 "target": 1,
-                "instanceTypes": [
-                  "c3.xlarge"
-                ],
+                "instanceTypes": ["c3.xlarge"],
                 "lifeCycle": "SPOT"
               },
               "coreGroup": {
-                "instanceTypes": [
-                  "c3.xlarge"
-                ],
+                "instanceTypes": ["c3.xlarge"],
                 "lifeCycle": "SPOT",
                 "capacity": {
                   "target": 1,
@@ -55,9 +51,7 @@ Body
                 }
               },
               "taskGroup": {
-                "instanceTypes": [
-                  "c3.xlarge"
-                ],
+                "instanceTypes": ["c3.xlarge"],
                 "capacity": {
                   "target": 1,
                   "minimum": 0,

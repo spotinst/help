@@ -8,5 +8,5 @@ Elastigroup for AWS seamlessly integrates with several AWS services, such as ALB
 
 ## What's Next?
 
-* [Connect your AWS account](connect-your-cloud-provider/aws-account.md)
-* [Create an Elastigroup](elastigroup/getting-started/create-an-elastigroup-for-aws.md)
+- [Connect your AWS account](connect-your-cloud-provider/aws-account.md)
+- [Create an Elastigroup](elastigroup/getting-started/create-an-elastigroup-for-aws.md)

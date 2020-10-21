@@ -28,8 +28,8 @@ Login to your AWS console and navigate to the Key Management Service (KMS) conso
 
 You should add two roles to this custom key:
 
-* **AWSServiceRoleForEC2Spot** (Linked-Service role that AWS creates automatically for each account)
-* **Spotinst cross-account IAM role** (The one you created when entering credentials to Spot)
+- **AWSServiceRoleForEC2Spot** (Linked-Service role that AWS creates automatically for each account)
+- **Spotinst cross-account IAM role** (The one you created when entering credentials to Spot)
 
 You can find your Spot cross-account IAM role in the Spot settings under the Account menu available via this link: https://console.spotinst.com/#/settings/account/general
 
@@ -37,7 +37,7 @@ You can find your Spot cross-account IAM role in the Spot settings under the Acc
 
 ## Step 5: Configuring the Key in the Elastigroup Block Device Mapping
 
-You can add the required key to the Elastigorup block device mapping configuration. For more information see [Block Device Mapping](https://help.dev.spot.io/elastigroup/features/compute/block-device-mapping).
+You can add the required key to the Elastigorup block device mapping configuration. For more information see [Block Device Mapping](elastigroup/features/compute/block-device-mapping).
 
 Adding the following:
 

@@ -3,15 +3,16 @@
 Configuration alerts allow more visibility and control of group configuration and integration healthiness.
 
 ## What Do We Validate?
-* Resources exist in AWS
-* Block Device Mapping
-  * If Block Device Mapping is configured for the root device, the BDM snapshot ID should be identical to the Image snapshot ID
-  * The BDM volume size must be greater than the Image volume size.
-* Integration connection passes
+
+- Resources exist in AWS
+- Block Device Mapping
+  - If Block Device Mapping is configured for the root device, the BDM snapshot ID should be identical to the Image snapshot ID
+  - The BDM volume size must be greater than the Image volume size.
+- Integration connection passes
 
 ## Example 1: An ELB is configured but it does not exist in AWS
 
-Under  “Elastigroups” view:
+Under “Elastigroups” view:
 
 <img src="/elastigroup/_media/corefeatures-config-alerts-01.png" />
 

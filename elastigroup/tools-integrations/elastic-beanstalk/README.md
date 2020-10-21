@@ -18,16 +18,16 @@ Once configured, the Beanstalk environment is highly dependent on its provisione
 
 Due to the fact that the Elastic Beanstalk environment is dependent on its provisioned resources (i.e., CloudFormation, ELB and ASG), it is necessary to keep those in place and integrate only with the underlying ASG.
 
-Elastic Beanstalk uses several strategies for rolling deployments:  `All at once`, `Rolling`, `Rolling with additional batch`, `Immutable`.
+Elastic Beanstalk uses several strategies for rolling deployments: `All at once`, `Rolling`, `Rolling with additional batch`, `Immutable`.
 
 Depending on the Deployment Policy configured in the Elastic Beanstalk environment, Elastigroup will identify it and use one of the following approaches to manage the cluster: in-ASG or Independent Elastigroup.
 
-**Elastic Beanstalk Deployment Policy** | 	**Spot Integration Method**
---------------------------------------- |   ---------------------------
-`All at once`	| in-ASG
-`Rolling` |	in-ASG
-`Rolling with additional batch`	| Independent Elastigroup
-`Immutable`	| Independent Elastigroup
+| **Elastic Beanstalk Deployment Policy** | **Spot Integration Method** |
+| --------------------------------------- | --------------------------- |
+| `All at once`                           | in-ASG                      |
+| `Rolling`                               | in-ASG                      |
+| `Rolling with additional batch`         | Independent Elastigroup     |
+| `Immutable`                             | Independent Elastigroup     |
 
 Single-instance environments will be integrated with Independent Elastigroup method, regardless of the deployment policy.
 
@@ -37,9 +37,9 @@ We recommend using a deployment policy that is supported by the in-ASG approach 
 
 ---
 
-Tip:
+**Tip:**
 
-Before starting, verify that the most up-to-date [Spot IAM policy](https://docs.spot.io/spotinst-policy/) is configured in your AWS account
+Before starting, verify that the most up-to-date [Spot IAM policy](administration/api/spot-policy-in-aws) is configured in your AWS account.
 
 ---
 
@@ -47,5 +47,5 @@ Before starting, verify that the most up-to-date [Spot IAM policy](https://docs.
 
 The following sections explain how each integration mode works to help you better understand the concepts behind Elastigroup for Elastic Beanstalk as well as debugging in case of a potential failure in the setup and scale process.
 
-* [In-ASG integration](elastigroup/tools-integrations/elastic-beanstalk/in-asg). This is the recommended approach whenever possible.
-* [Independent Elastigroup integration](elastigroup/tools-integrations/elastic-beanstalk/independent-elastigroup-integration).
+- [In-ASG integration](elastigroup/tools-integrations/elastic-beanstalk/in-asg). This is the recommended approach whenever possible.
+- [Independent Elastigroup integration](elastigroup/tools-integrations/elastic-beanstalk/independent-elastigroup-integration).

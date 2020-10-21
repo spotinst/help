@@ -8,8 +8,8 @@ The main purpose of Elastigroup is to get pending pods a place to run while dyna
 
 Spot Elastigroup consists of two components:
 
-* Spot Controller (*SPT-CTL*): A pod that lives within your k8s cluster, responsible for collecting metrics and events. The events are being pushed via one way secured link to the second component for business logic and capacity scale up/down activities.
-* Spot Elastigroup SaaS: The SaaS is responsible to aggregate the metrics from the SPT-CTL and build the cluster topology. Using the aggregated metrics, the SaaS component is applying other business logic algorithms such as Spot Instances availability prediction and Instance size/type recommendation to increase performance and optimize costs via workload density instance pricing models (across On-Demand / Reserved and Spot Instances).
+- Spot Controller (_SPT-CTL_): A pod that lives within your k8s cluster, responsible for collecting metrics and events. The events are being pushed via one way secured link to the second component for business logic and capacity scale up/down activities.
+- Spot Elastigroup SaaS: The SaaS is responsible to aggregate the metrics from the SPT-CTL and build the cluster topology. Using the aggregated metrics, the SaaS component is applying other business logic algorithms such as Spot Instances availability prediction and Instance size/type recommendation to increase performance and optimize costs via workload density instance pricing models (across On-Demand / Reserved and Spot Instances).
 
 <img src="/elastigroup/_media/kubernetes-cluster-autoscaling_1.jpg" />
 
@@ -23,8 +23,8 @@ Metric-based cluster autoscalers don’t care about `Pods` when scaling up and d
 
 Elastigroup increases the size of the cluster when
 
-* There are pods that failed to schedule on any of the current nodes due to insufficient resources.
-* When some nodes are consistently unneeded for a significant amount of time. A node is unneeded when it has low utilization and all of its important pods can be moved elsewhere.
+- There are pods that failed to schedule on any of the current nodes due to insufficient resources.
+- When some nodes are consistently unneeded for a significant amount of time. A node is unneeded when it has low utilization and all of its important pods can be moved elsewhere.
 
 ## Scale Up
 
@@ -40,8 +40,8 @@ It may take up to a few minutes before the created nodes appear in Kubernetes, i
 Elastigroup constantly checks which nodes are unneeded in the cluster.
 A node is considered for removal when:
 
-* All pods running on the node (except these that run on all nodes by default, like manifest-run pods or pods created by daemonsets) can be moved to other nodes in the cluster.
-* The sum of cpu and memory requests of all pods running on this node is smaller than 50% of the node’s allocatable (not node capacity )
+- All pods running on the node (except these that run on all nodes by default, like manifest-run pods or pods created by daemonsets) can be moved to other nodes in the cluster.
+- The sum of cpu and memory requests of all pods running on this node is smaller than 50% of the node’s allocatable (not node capacity )
 
 Elastigroup simulates the cluster’s topology and state “post” the scale down activity and decides whether the action can be executed or not.
 
@@ -49,11 +49,11 @@ Elastigroup simulates the cluster’s topology and state “post” the scale do
 
 To make scheduling more efficient and compatible with Kubernetes, the Elastigroup supports all of the Kubernetes constraint mechanisms for scheduling pods:
 
-* Node Selector – Constrain Pods to nodes with particular labels.
-* Node Affinity – Constrain which nodes your Pod is eligible to be scheduled on based on labels on the node.
+- Node Selector – Constrain Pods to nodes with particular labels.
+- Node Affinity – Constrain which nodes your Pod is eligible to be scheduled on based on labels on the node.
   We support hard / soft affinity (requiredDuringSchedulingIgnoredDuringExecution /preferredDuringSchedulingIgnoredDuringExecution)
-* Pod Affinity and Pod Anti-Affinity – Schedules a Pod based on which other Pods are or are not running on a node.
-* Pod Port Restrictions – We validate that each pod will have required ports available on the machine
+- Pod Affinity and Pod Anti-Affinity – Schedules a Pod based on which other Pods are or are not running on a node.
+- Pod Port Restrictions – We validate that each pod will have required ports available on the machine
 
 ## Pods and Node Draining Process (Graceful Termination)
 
@@ -61,21 +61,21 @@ When a node is being scaled down due to low utilization or Spot Instance interru
 
 1. Identify the node that is marked for scale down / Spot Instance is predicted to be interrupted
 2. In the event of a Spot predicted Interruption — Elastigroup launches a replacement Instance approximately 15 minutes ahead of time
-3. Elastigroup locates  the running Pods & Containers on the node that is marked for termination
-4. Elastigroup sends an Evict signal to the Pods – one by one and grants each one of the pods with `120 seconds`  ([Elastigroup Draining Timeout configuration](https://docs.spot.io/spotinst-api/elastigroup/amazon-web-services/create/#strategy.drainingTimeout)) of draining timeout
+3. Elastigroup locates the running Pods & Containers on the node that is marked for termination
+4. Elastigroup sends an Evict signal to the Pods – one by one and grants each one of the pods with `120 seconds` ([Elastigroup Draining Timeout configuration](https://docs.spot.io/spotinst-api/elastigroup/amazon-web-services/create/#strategy.drainingTimeout)) of draining timeout
    a. The eviction process is responsible for re-scheduling each Pod on a new node in the cluster
    b. The eviction process waits until the draining timeout expires and then terminates the Pod
 5. Once all the containers & Pods have been successfully rescheduled on a different node(s) in the cluster, Elastigroup sends a command to terminate the actual node.
 
 ## Scale Down Prevention
 
-* Pods with restrictive PodDisruptionBudget. (Read more)
-* `Kube-system Pods` that:
-   * are not run on the node by default, *
-   * don’t have PDB or their PDB is too restrictive
-* Pods that are not backed by a controller object (so not created by deployment, replica set, job, stateful set etc). *
-* Pods with local storage. *
-* Pods that cannot be moved elsewhere due to various constraints (lack of resources, non-matching `node selectors` or `affinity`, matching `anti-affinity`, etc)
+- Pods with restrictive PodDisruptionBudget. (Read more)
+- `Kube-system Pods` that:
+  - are not run on the node by default, \*
+  - don’t have PDB or their PDB is too restrictive
+- Pods that are not backed by a controller object (so not created by deployment, replica set, job, stateful set etc). \*
+- Pods with local storage. \*
+- Pods that cannot be moved elsewhere due to various constraints (lack of resources, non-matching `node selectors` or `affinity`, matching `anti-affinity`, etc)
 
 ## How does Horizontal Pod Autoscaler (HPA) work with Spot Elastigroup?
 

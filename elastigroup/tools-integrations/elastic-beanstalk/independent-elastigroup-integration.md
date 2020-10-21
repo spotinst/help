@@ -10,8 +10,8 @@ Once an Elastigroup is created with Beanstalk `Independent` integration, the fol
 2. The new instances are registered to the Elastic Beanstalk environment.
 3. The new instances are registered to the Load Balancer.
 
-
 ---
+
 **Note:**
 
 As a policy, the system avoids downscaling pre-existing workloads. Downscaling the original auto-scaling group can be done manually once the integration process is completed and the Elastigroup is running.
@@ -31,4 +31,4 @@ For non-capacity changes only. In the following steps the Beanstalk environment 
 <img src="/elastigroup/_media/independent-elastigroup-integration_1.png" />
 
 2. Open the Beanstalk environment in AWS and deploy the new version there.
-3. Approximately 5 minutes after the new version is deployed to the Beanstalk environment, an [automatic Blue-Green deployment](https://help.dev.spot.io/elastigroup/tutorials/elastigroup-actions-menu/deploy-or-roll-elastigroup) will start in the linked Elastigroup. This will replace the instances with new instances running the latest version.
+3. Approximately 5 minutes after the new version is deployed to the Beanstalk environment, an [automatic Blue-Green deployment](elastigroup/tutorials/elastigroup-actions-menu/deploy-or-roll-elastigroup) will start in the linked Elastigroup. This will replace the instances with new instances running the latest version.

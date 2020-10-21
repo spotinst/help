@@ -1,27 +1,31 @@
 # Custom SAML IDP Configuration
 
-Configuring an IDP to authenticate using SAML  requires the following information:
-* Service Provider Information
-* Attributes
-* Spot Configuration
+Configuring an IDP to authenticate using SAML requires the following information:
+
+- Service Provider Information
+- Attributes
+- Spot Configuration
 
 ## Service Provider Information
-* Single Sign-On URL (ACS URL):	https://console.spotinst.com/auth/saml
-* Recipient URL:	https://console.spotinst.com/auth/saml
-* RelayState (Used in IDP Initiated SSO):		
+
+- Single Sign-On URL (ACS URL): https://console.spotinst.com/auth/saml
+- Recipient URL: https://console.spotinst.com/auth/saml
+- RelayState (Used in IDP Initiated SSO):
   1. Login to your Spot account as an Admin.Click the user icon on the top right side of the screen and click Settings.
   2. Click the Security tab on the top and then select Identity Providers.Make a copy of the Relay State value.
 
-The Relay State should be used while setting up the IDP. Google users should enter this value (as is) to the  “start url” field under Service Provider Details.
+The Relay State should be used while setting up the IDP. Google users should enter this value (as is) to the “start url” field under Service Provider Details.
 
 ## Attributes
 
 We expect the following attributes to be sent to the SAML response:
-* Email
-* FirstName
-* LastName
+
+- Email
+- FirstName
+- LastName
 
 ## Spot Configuration
+
 1. Login to your Spot account as an Admin.
 2. Click on the user icon on the top right side of the screen and click Settings.
 

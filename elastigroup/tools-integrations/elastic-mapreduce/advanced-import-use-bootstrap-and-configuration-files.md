@@ -23,7 +23,7 @@ Referencing the following JSON body example while Cloning the Cluster:
           "bucket": "emr-test",
           "key": "emr_bootstrap.json"
         }
-      },  
+      },
       "instanceGroups": {...},
       "configurations": {
         "file": {

@@ -39,7 +39,6 @@ Another option is to use the Review Tab in the Elastigroup configuration and edi
 
 <img src="/elastigroup/_media/docker-swarmREADME_3.png" />
 
-
 ## User Data Script
 
 The following script needs to be provided in the Elastigorup configuration in order to register the node as a worker and set its labels: (make sure to replace the script arguments)

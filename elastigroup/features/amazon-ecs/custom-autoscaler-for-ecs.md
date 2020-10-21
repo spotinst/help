@@ -9,9 +9,10 @@ The Spot ECS autoscaler dynamically scales your cluster up to ensure there are a
 ## Enable ECS AutoScaler in Custom Mode
 
 In Elastigroup’s Creation Wizard, under the Compute tab scroll down to the Integrations section and enable the ECS AutoScaler. Once the Autoscaler is enabled select Custom mode and configure the following settings:
-* Autoscaler cooldown time: Cooldown is the number of seconds between one scaling activity to the next one.
-* Evaluation periods: The number of consecutive periods that should pass before the scaling action is triggered. The default is 5 evaluation periods (1 evaluation period = 1 minute).
-* Headroom units count: Headroom is a buffer of spare capacity (in terms of both memory and CPU) that makes sure that when you want to scale more tasks, you don’t have to wait for new instances to launch while preventing instances from being over-utilized.
+
+- Autoscaler cooldown time: Cooldown is the number of seconds between one scaling activity to the next one.
+- Evaluation periods: The number of consecutive periods that should pass before the scaling action is triggered. The default is 5 evaluation periods (1 evaluation period = 1 minute).
+- Headroom units count: Headroom is a buffer of spare capacity (in terms of both memory and CPU) that makes sure that when you want to scale more tasks, you don’t have to wait for new instances to launch while preventing instances from being over-utilized.
 
 ## What's Next?
 

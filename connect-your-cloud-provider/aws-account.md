@@ -10,6 +10,7 @@ Watch a step-by-step [video tutorial](https://youtu.be/csPmq3JZlgU/) on connecti
 <img src="/connect-your-cloud-provider/_media/welcome-to-spot-1024x341.png" />
 
 ---
+
 **Tip**: Prior to connecting your AWS account, you can access a demo system to get familiar with the dashboard. In the Spot console, click Get a Console Walkthrough.
 
 ---
@@ -19,6 +20,7 @@ Watch a step-by-step [video tutorial](https://youtu.be/csPmq3JZlgU/) on connecti
 <img src="/connect-your-cloud-provider/_media/connect-aws-account-1024x709.png" />
 
 ---
+
 **Tip**: You can automate the connection using a Cloudformation template as well.
 
 ---

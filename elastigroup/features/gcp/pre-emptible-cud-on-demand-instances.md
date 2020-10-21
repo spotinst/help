@@ -19,5 +19,6 @@ Preemptible VMs offer the same machine types and options as regular compute inst
 GCE offers a discount of 37-55% in exchange for a long-term commitment. The exact discount depends on the length of commitment (1 or 3 years), the instance type and region.
 
 ## What’s Next?
-* [Launching your first Elastigroup](elastigroup/getting-started/create-an-elastigroup-for-gcp.md).
-* Learn more about [Elastigroups](elastigroup/getting-started/elastigroup-for-gcp.md).
+
+- [Launching your first Elastigroup](elastigroup/getting-started/create-an-elastigroup-for-gcp.md).
+- Learn more about [Elastigroups](elastigroup/getting-started/elastigroup-for-gcp.md).

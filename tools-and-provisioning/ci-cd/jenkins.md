@@ -21,8 +21,7 @@ The Spot Jenkins plug-in (1) automatically scales instances up & down based on t
 
 ### Jenkins on AWS
 
-Create an Elastigroup with your preferred Region, AMI, and Instance Types. In the General tab under Advanced set the Capacity Unit to *vCPU*.
-
+Create an Elastigroup with your preferred Region, AMI, and Instance Types. In the General tab under Advanced set the Capacity Unit to _vCPU_.
 
 <img src="/tools-and-provisioning/_media/Jenkins_2.png" />
 
@@ -96,7 +95,7 @@ Create an Elastigroup, with the desired instance types, region and other configu
 
 ```bash
 #!/bin/bash
-install_deps() {  
+install_deps() {
   echo "Installing dependencies"
   # Install deps.
   packages=$1
@@ -206,13 +205,12 @@ Once the Spot Token is set, scroll down towards the bottom to the “Cloud” se
 
 There should now be more fields to choose from. For more information on each field hover over the information button on the right side of each field. Specify the Elastigroup ID for the Elastigroup created in Step 2, the appropriate Account ID associated with that Elastigroup and Idle Minutes Before Termination to determine how long Elastigroup should wait before terminating an idle instance.
 
-
 <img src="/tools-and-provisioning/_media/Jenkins_5.png" />
 
 ## Configuration Notes
 
-* As noted in Step 4, Jenkins must be restarted after installing the Spot plugin.
-* The connection between the Jenkins’ Slaves and Master is vital, make sure that this connection is working properly.
-* Executors per instance- By default, the number of executors per Slave (the number of parallel jobs that a node can run) is based in the number of vCpu of the instance. You can override this configuration by setting the Instance type weight. For each instance type that you define in the Elastigroup, add the desired number of executors.
+- As noted in Step 4, Jenkins must be restarted after installing the Spot plugin.
+- The connection between the Jenkins’ Slaves and Master is vital, make sure that this connection is working properly.
+- Executors per instance- By default, the number of executors per Slave (the number of parallel jobs that a node can run) is based in the number of vCpu of the instance. You can override this configuration by setting the Instance type weight. For each instance type that you define in the Elastigroup, add the desired number of executors.
 
 That’s all! From now on, the Jenkins Master will automatically launch new instances through the Spot API, and will terminate them as they get unused.

@@ -24,7 +24,7 @@ You can add the following arguments to the Elastigroup configuration with an API
         "autoScale": {
           "isEnabled": true,
           "cooldown": 300,
-         "headroom": {
+          "headroom": {
             "cpuPerUnit": 1000,
             "memoryPerUnit": 2000,
             "numOfUnits": 1
@@ -33,14 +33,14 @@ You can add the following arguments to the Elastigroup configuration with an API
             "evaluationPeriods": 5
           },
           "constraints": [
-           {
-             "key":"${meta.myKey}",
-             "value": "myValue"
-           },
-           {
-            "key":"${attr.kernel.name}",
-             "value": "linux"
-           }
+            {
+              "key": "${meta.myKey}",
+              "value": "myValue"
+            },
+            {
+              "key": "${attr.kernel.name}",
+              "value": "linux"
+            }
           ]
         }
       }
@@ -102,7 +102,7 @@ For example, let’s say that you want to run your jobs only on nodes that are m
 job "myJob" {
     .
     .
-    .   
+    .
     constraint {
         attribute = "${meta.owner}"
         value     = "Spot"
@@ -123,7 +123,7 @@ data_dir = "/tmp/client1"
 # Enable the client
 client {
     enabled = true
-    servers = ["<NomadServerElasticIP>"]    
+    servers = ["<NomadServerElasticIP>"]
     meta {
     "owner" = "Spot"
   }

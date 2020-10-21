@@ -10,12 +10,12 @@ Under this section you define custom resources, for example: `SpotinstElastigrou
 
 ```json
 {
-    "AWSTemplateFormatVersion": "2010-09-09",
-    "Resources": -{
-        "SpotinstElastigroup": -{
-            "Type": "Custom::elasticgroup",
-            "Properties": {}
-        }
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Resources": -{
+    "SpotinstElastigroup": -{
+      "Type": "Custom::elasticgroup",
+      "Properties": {}
     }
+  }
 }
 ```

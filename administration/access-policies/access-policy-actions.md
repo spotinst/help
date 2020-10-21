@@ -3,7 +3,7 @@
 The following table lists the available actions for use in the Access Policies.
 
 | Action                                     | Included in role    |
-|--------------------------------------------|---------------------|
+| ------------------------------------------ | ------------------- |
 | elastigroup:createBudget                   | Account Editor      |
 | elastigroup:createBudgetAlarm              | Account Editor      |
 | elastigroup:createClusterRoll              | Account Editor      |

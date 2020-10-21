@@ -6,15 +6,15 @@
 
 Let’s start with a few assumptions:
 
-* You’ve done the key creation as specified in [Create Encryption Key](https://help.dev.spot.io/elastigroup/tutorials/elastigroup-tasks/create-encryption-key).
-* Account actKey will represent the account that holds the KMS key.
-* Account actInst will represent the account that will run the Instances.
-* Key and Instances must be in the same region
+- You’ve done the key creation as specified in [Create Encryption Key](elastigroup/tutorials/elastigroup-tasks/create-encryption-key).
+- Account actKey will represent the account that holds the KMS key.
+- Account actInst will represent the account that will run the Instances.
+- Key and Instances must be in the same region
 
 ## Step 1: Create a Key
 
-1. Create KMS key in account *actKey*
-2. Add Account *actInst* account number in External Accounts inside the key properties and save the changes:
+1. Create KMS key in account _actKey_
+2. Add Account _actInst_ account number in External Accounts inside the key properties and save the changes:
 
 <img src="/elastigroup/_media/use-cross-account-kms-key-to-encrypt-ebs-volumes_1.png" />
 
@@ -96,15 +96,15 @@ aws kms create-grant --key-id <b><i><<mark class="hilite term-0">KMS</mark> <mar
 
 That’s it! You can now add your KMS key-id to the BDM section in Elastigroup’s configuration:
 
- ```
- "blockDeviceMappings": [
-    {
-      "deviceName": "/dev/sdf",
-      "ebs": {
-        "encrypted": true,
-        "kmsKeyId": "",
-        "volumeSize": 20
-      }
-    }
-  ]
-  ```
+```
+"blockDeviceMappings": [
+   {
+     "deviceName": "/dev/sdf",
+     "ebs": {
+       "encrypted": true,
+       "kmsKeyId": "",
+       "volumeSize": 20
+     }
+   }
+ ]
+```

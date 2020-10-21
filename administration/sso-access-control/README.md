@@ -6,12 +6,12 @@ In the console, you can enable single sign-on (SSO) for your organization.
 
 The system supports the following identity providers:
 
-* [ADFS SAML](administration/identity-providers/adfs-saml-authentication.md)
-* [Azure AD Integration](administration/identity-providers/azure-active-directory-integration.md)
-* [Bitium SAML](administration/identity-providers/bitium-saml-authentication.md)
-* [Custom SAMLs](administration/identity-providers/custom-saml-idp-configuration.md)
-* [Okta SAML](administration/identity-providers/okta-saml-authentication.md)
-* [OneLogin SAML](administration/identity-providers/onelogin-saml-authentication.md)
+- [ADFS SAML](administration/identity-providers/adfs-saml-authentication.md)
+- [Azure AD Integration](administration/identity-providers/azure-active-directory-integration.md)
+- [Bitium SAML](administration/identity-providers/bitium-saml-authentication.md)
+- [Custom SAMLs](administration/identity-providers/custom-saml-idp-configuration.md)
+- [Okta SAML](administration/identity-providers/okta-saml-authentication.md)
+- [OneLogin SAML](administration/identity-providers/onelogin-saml-authentication.md)
 
 ## Set up SAML SSO in the Console
 
@@ -24,7 +24,7 @@ The system supports the following identity providers:
 
 <img src="/administration/_media/sss-access-control-01.png" />
 
-**Relay state** – The Organization ID –  Used as the Relay State configuration for the identity provider (Used in IDP Initiated SSO)
+**Relay state** – The Organization ID – Used as the Relay State configuration for the identity provider (Used in IDP Initiated SSO)
 
 **Provider type** – Currently the only supported standard is SAML (Security Assertion Markup Language)
 
@@ -50,5 +50,6 @@ This configuration will generate another screen which will let the user choose a
 Roles can be defined only by organization or by account, not both.
 
 ## What's Next?
-* [Organization Level SSO](administration/sso-access-control/organization-level-sso.md)
-* [Account Level SSO](administration/sso-access-control/account-level-sso.md)
+
+- [Organization Level SSO](administration/sso-access-control/organization-level-sso.md)
+- [Account Level SSO](administration/sso-access-control/account-level-sso.md)
