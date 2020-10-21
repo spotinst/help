@@ -12,13 +12,13 @@ Spot technology uses machine learning and analytics algorithms that enable you t
 
 Spot uses application-driven provisioning to effortlessly and affordably scale any workload, from stateful single instances to cloud-native VM-based or Kubernetes clusters. Spot uses the ideal mix of cloud compute resources, from on-demand to reserved and spot instances, based on the dynamic needs of the application.
 
-<img src="/connect-your-cloud-provider/_media/introduction-to-spot-02a.png" width="500" height="326" />
+<img src="/connect-your-cloud-provider/_media/introduction-to-spot-02a.png" width="500" height="258" />
 
 ## We fit in your delivery pipeline​
 
 Spot extends your Continuous Integration/Continuous Deployment (CI/CD) pipeline of choice with Continuous Optimization (CO) to complete the application delivery pipeline.
 
-<img src="/connect-your-cloud-provider/_media/introduction-to-spot-03a.png" width="500" height="326" />
+<img src="/connect-your-cloud-provider/_media/introduction-to-spot-03a.png" width="500" height="177" />
 
 ## Get Started
 * Connect your cloud provider account to Spot: [AWS](connect-your-cloud-provider/aws-account.md), [Azure](connect-your-cloud-provider/azure-account.md), [GCP](connect-your-cloud-provider/gcp-project.md)
