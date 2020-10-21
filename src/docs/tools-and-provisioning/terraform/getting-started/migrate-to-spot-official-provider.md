@@ -18,7 +18,7 @@ provider "spotinst" {
 resource "spotinst_elastigroup_aws" "TFtest1" {}
   ```
 
-The Provider can also be added as described [here](https://support.spot.io/provisioning-and-cicd/terraform/provisioning-and-cicd/terraform/getting-started-terraform/installation-procedure/).
+The Provider can also be added as described [here](tools-and-provisioning/terraform/getting-started/install-terraform).
 
 * `terraform.tfstate`– a file which contains the following skeleton:
 
