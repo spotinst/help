@@ -2,7 +2,7 @@
 
 In this tutorial, you will learn how to clone your Elastic MapReduce (EMR) clusters into an Elastigroup. AWS EMR provides a managed Big Data framework that enables you to easily add/remove cluster capacity to meet your requirements. EMR supports Hadoop, Apache Spark and other popular distributed frameworks. Running your EMR clusters on Elastigroup provides you with the significant discounts that Spot instances offer while maintaining 100% availability.
 
-This tutorial focuses on cloning an existing EMR into Elastigroup. Elastigroup also enables you to wrap your existing cluster with Spot instances task nodes. Head to our tutorial on [Wrapping EMR Clusters](https://help.dev.spot.io/elastigroup/tools-integrations/elastic-mapreduce/advanced-import-use-bootstrap-and-configuration-files) to learn more.
+This tutorial focuses on cloning an existing EMR into Elastigroup. Elastigroup also enables you to wrap your existing cluster with Spot instances task nodes. Head to our tutorial on [Wrapping EMR Clusters](elastigroup/tools-integrations/elastic-mapreduce/advanced-import-use-bootstrap-and-configuration-files) to learn more.
 
 ## Prerequisites
 1. A verified Spot Account.
@@ -63,6 +63,6 @@ You’ve now created an EMR on Elastigroup, congrats! You’re now in the Elasti
 ## What’s Next?
 
 * Create a Wrapped EMR Cluster on Elastigroup to run tasks nodes for your existing EMR cluster on Spot instances.
-* Configure Elastigroup’s [Scaling Policies for EMR](https://help.dev.spot.io/elastigroup/tools-integrations/elastic-mapreduce/scaling-policies-for-emr) Core and Task nodes.
+* Configure Elastigroup’s [Scaling Policies for EMR](elastigroup/tools-integrations/elastic-mapreduce/scaling-policies-for-emr) Core and Task nodes.
 * Check out our API Docs here to learn how to clone your EMR into an Elastigroup using RESTful APIs.
-* AWS’s Elastic MapReduce (EMR) can occasionally get stuck with a Resizing status during changes in an instance group capacity. In these cases, the actual number of running instances won’t match the request number. Learn how [Elastigroup EMR Auto-Recovery](https://api.spotinst.com/integration-docs/elastigroup/services-integrations/elastic-mapreduce/elastigroup-auto-recover-for-emr/) process handles these situations.
+* AWS’s Elastic MapReduce (EMR) can occasionally get stuck with a Resizing status during changes in an instance group capacity. In these cases, the actual number of running instances won’t match the request number. Learn how [Elastigroup EMR Auto-Recovery](elastigroup/tools-integrations/elastic-mapreduce/elastigroup-auto-recover-for-emr) process handles these situations.
