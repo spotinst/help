@@ -9,7 +9,7 @@ Our Chef integration uses Chef API calls to trigger register and deregister oper
 ## Step 1: Create a Security Group
 
 * On your AWS account, create a security group that allows inbound traffic specifically from Spot servers
-  * IP Addresses available here: [Spotinst Whitelist IPs](https://docs.spot.io/spotinst-api/administration/whitelist-ips/)
+  * IP Addresses available here: [Spot Whitelist IPs](administration/api/whitelist-ips.md)
   * Ports: `80, 443, 9683`
 
 ## Step 2: Create a User
@@ -70,11 +70,11 @@ EC2_INSTANCE_ID=$(curl -s http://169.254.169.254/latest/meta-data/instance-id) \
 bash
 ```
 
-For self-signed auth, one should inject its crt file to `etc/chef/trusted_certs/chef_nexar_mobi.crt`
+For self-signed authentication, you should inject its crt file to `etc/chef/trusted_certs/chef_nexar_mobi.crt`.
 
 ## Step 4: Configure Instance Deregistration
 
-While creating your Elastigroup, on the compute screen, you will find a ‘3rd Party Integrations’ section. Check the Chef integration and enter the following data:
+While creating your Elastigroup, on the Compute screen, you will find a ‘3rd Party Integrations’ section. Check the Chef integration and enter the following data:
 
 `API Server` – Public DNS record or Public IP (e.g., ec2-52-206-204-15.compute-1.amazonaws.com or 52.206.204.1)
 `Organization` – Organization name (e.g. myOrg)
