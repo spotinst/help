@@ -13,7 +13,7 @@ In case you are already running an EMR cluster on AWS, you have the option to ch
 
 ## Prerequisites
 
-1. A verified Spotinst account.
+1. A verified Spot account.
 2. AWS Key Pair.
 
 ## Step 1: Open the Creation Wizard
@@ -21,7 +21,7 @@ In case you are already running an EMR cluster on AWS, you have the option to ch
 - Login to the [Elastigroup Console](http://console.spotinst.com/) and navigate to the Creation Wizard by clicking on the Create button in the Elastigroups tab.
 - In the Creation Wizard select EMR (Create a new cluster).
 
-  <img src="/elastigroup/_media/create-a-new-emr-cluster_1.png" />
+<img src="/elastigroup/_media/create-a-new-emr-cluster_1.png" width="234" height="100" />
 
 ## Step 2: General Details
 
@@ -97,6 +97,6 @@ Read more on [scheduling in Elastigroup](elastigroup/features/core-features/sche
 
 All that's left to do is review your settings and launch your new EMR cluster!
 
-<img src="/elastigroup/_media/create-a-new-emr-cluster_6.png" />
+<img src="/elastigroup/_media/create-a-new-emr-cluster_6.png" width="258" height="100" /
 
 Learn more on EMR cluster on Elastigroup here.
