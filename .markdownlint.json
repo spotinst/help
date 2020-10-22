@@ -1,0 +1,8 @@
+{
+  "line-length": false,
+  "no-bare-urls": false,
+  "no-duplicate-heading": false,
+  "no-trailing-punctuation": {
+    "punctuation": ".,;:"
+  }
+}

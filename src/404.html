@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Single Page Apps for GitHub Pages</title>
+    <script type="text/javascript">
+      /**
+       * Single Page Apps for GitHub Pages
+       *
+       * Ref: https://github.com/rafrex/spa-github-pages
+       * Copyright (c) 2016 Rafael Pedicini, licensed under the MIT License
+       *
+       * This script takes the current URL, converts the path and query
+       * string into just a query string, and then redirects the browser
+       * to the new URL with only a query string and hash fragment.
+       *
+       * For example:
+       *   http://www.foo.tld/one/two?a=b&c=d#qwe
+       *   [BECOMES]
+       *   http://www.foo.tld/?p=/one/two&q=a=b~and~c=d#qwe
+       *
+       * Note: This 404.html file must be at least 512 bytes for it to work
+       * with Internet Explorer (it is currently > 512 bytes).
+       *
+       * Note: If you are setting up a GitHub Pages site and not using a
+       * custom domain (i.e. your site's address is username.github.io/repo-name),
+       * then you need to set `segmentCount` to 1 in order to keep `/repo-name`
+       * in the path after the redirect.
+       *
+       * For example:
+       *   https://username.github.io/repo-name/one/two?a=b&c=d#qwe
+       *   [BECOMES]
+       *   https://username.github.io/repo-name/?p=/one/two&q=a=b~and~c=d#qwe
+       */
+      let segmentCount = 0;
+      let loc = window.location;
+      let url =
+        loc.protocol +
+        "//" +
+        loc.hostname +
+        (loc.port ? ":" + loc.port : "") +
+        loc.pathname
+          .split("/")
+          .slice(0, 1 + segmentCount)
+          .join("/") +
+        "/?p=/" +
+        loc.pathname.slice(1).split("/").slice(segmentCount).join("/").replace(/&/g, "~and~") +
+        (loc.search ? "&q=" + loc.search.slice(1).replace(/&/g, "~and~") : "") +
+        loc.hash;
+
+      loc.replace(url);
+    </script>
+  </head>
+  <body></body>
+</html>
