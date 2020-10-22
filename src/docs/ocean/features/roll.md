@@ -8,7 +8,7 @@ The Roll feature enables you to perform changes in order to align cluster infras
 
 ---
 
-In Ocean you can roll your cluster with a single click. The roll feature takes into consideration the actual workloads running the in cluster. Ocean freezes scale-down activity in the cluster and launches new compute capacity to match the workload requirements. While the new nodes are starting up, the “old” nodes are still able to scale up if necessary and will scale down only after the new nodes are healthy.
+In Ocean you can roll your cluster with a single click. The roll feature takes into consideration the actual workloads running the in cluster. Ocean freezes scale-down activity in the cluster and launches new compute capacity to match the workload requirements. While the new nodes are starting up, the `old` nodes are still able to scale up if necessary and will scale down only after the new nodes are healthy.
 
 ## How It Works
 
@@ -30,7 +30,7 @@ Ocean assigns a status to each stage of the roll process. A roll can have one of
 
 ---
 
-**Tip**: In the UI, a specific batch may appear with “Pending” state. This means that even though the roll process has started, that batch has not yet started to replace its nodes.
+**Tip**: In the UI, a specific batch may appear with `Pending` state. This means that even though the roll process has started, that batch has not yet started to replace its nodes.
 
 ---
 

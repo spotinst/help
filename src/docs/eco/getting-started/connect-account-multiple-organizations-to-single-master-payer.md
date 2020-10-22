@@ -20,20 +20,20 @@ There are three major steps to configuring the CUR Extraction:
 1. Log in to your root AWS account, then click [here](https://console.aws.amazon.com/billing/home#/reports).
 2. Click Create Report.
 3. Under the first menu, Report Content, do the following:
-   1. For the report name, enter (i.e., paste) the following: “spotinst-cur-report”. You must use the same name for the S3 bucket name.
-   2. Check the box that says “Include resource IDs”.
+   1. For the report name, enter (i.e., paste) the following: `spotinst-cur-report`. You must use the same name for the S3 bucket name.
+   2. Check the box that says `Include resource IDs`.
    3. Click Next.
 4. Under the second menu, Delivery Options, do the following:
    1. Under S3 Bucket, click Configure, then do the following:
-      1. For the name for the S3 bucket that CUR reports will be dumped into, paste in the following: “spotinst-cur-report”. This name must be the same as the report name that you entered previously.
+      1. For the name for the S3 bucket that CUR reports will be dumped into, paste in the following: `spotinst-cur-report`. This name must be the same as the report name that you entered previously.
       2. Only change the bucket's region if necessary.
       3. Click Next.
-      4. Check the box that says “I have confirmed that this policy is correct”.
+      4. Check the box that says `I have confirmed that this policy is correct`.
       5. Click Save.
-   2. Under Report Path Prefix, enter “spotinst_eco”.
+   2. Under Report Path Prefix, enter `spotinst_eco`.
    3. Under Time Granularity, enter Hourly.
-   4. Under Enable report data integration for, check the box that says “Amazon Athena”.
-   5. Click “next”.
+   4. Under Enable report data integration for, check the box that says `Amazon Athena`.
+   5. Click `next`.
    6. The review screen should appear as shown below.
 
 <img src="/eco/_media/gettingstarted-aws-connect-multiple-01.png" />
@@ -42,12 +42,12 @@ There are three major steps to configuring the CUR Extraction:
 
 ## Step 2: Link Your Cost And Usage Report With Athena
 
-It will take 24 hours for AWS to start dropping reports into the S3 bucket you chose. Before proceeding with this step, click here and make sure that “Data last refreshed” has a date and doesn't say “N/A”. Here's what it should look like:
+It will take 24 hours for AWS to start dropping reports into the S3 bucket you chose. Before proceeding with this step, click here and make sure that `Data last refreshed` has a date and doesn't say `N/A`. Here's what it should look like:
 
 <img src="/eco/_media/gettingstarted-aws-connect-multiple-03.png" />
 
 1. Click here, go to the S3 bucket you chose and navigate to: spotinst_eco/spotinst-cur-report
-2. Click on the file called “crawler-cfn.yml”.
+2. Click on the file called `crawler-cfn.yml`.
 3. Download the file and contact your Spot sales representative. (If you do not have a sales representative, contact Spot Support.) Please include the following in your email:
    - The crawler file
    - AWS account number of master payer account
@@ -59,18 +59,18 @@ It will take 24 hours for AWS to start dropping reports into the S3 bucket you c
 
 Continue with the steps below.
 
-4. Copy the “Object Url” at the bottom as shown in the image below.
+4. Copy the `Object Url` at the bottom as shown in the image below.
 
 <img src="/eco/_media/gettingstarted-aws-connect-multiple-04.png" />
 
-5. Click here and paste that object url into the field “Amazon S3 URL” as shown in the image below.
+5. Click here and paste that object url into the field `Amazon S3 URL` as shown in the image below.
 
 <img src="/eco/_media/gettingstarted-aws-connect-multiple-05.png" />
 
 6. Click Next.
-7. Enter “Spotinst Eco Stack” and click Next.
+7. Enter `Spot Eco Stack` and click Next.
 8. Scroll all the way down and click Next again.
-9. Scroll all the way down, and under the Capabilities section, mark the box that says “I acknowledge that AWS CloudFormation might create IAM resources.”
+9. Scroll all the way down, and under the Capabilities section, mark the box that says `I acknowledge that AWS CloudFormation might create IAM resources.`
 10. Click Create Stack.
 11. Click [here](https://console.aws.amazon.com/glue/home?region=us-east-1#catalog:tab=crawlers), and find the crawler you just created. The name will appear as follows: AWSCURCrawler-[name of your cur report]. Click on the crawler to bring up its properties.
 12. Click Edit.
@@ -90,7 +90,7 @@ Once you have sent the crawler.yml file, it may take up to 48 hours before you r
    - Stack Name: You can set this to a name you like.
    - CURBucketName: Set this to the name of the S3 bucket that you chose in the previous steps for Cost and Usage Reports to write to.
 4. Click Next. Scroll all the way down and click Next again.
-5. Scroll all the way down and under the Capabilities section, check the box that says “I acknowledge that AWS CloudFormation might create IAM resources.”
+5. Scroll all the way down and under the Capabilities section, check the box that says `I acknowledge that AWS CloudFormation might create IAM resources.`
 6. The Review screen should appear as follows:
 
 <img src="/eco/_media/gettingstarted-aws-connect-multiple-06.png" />

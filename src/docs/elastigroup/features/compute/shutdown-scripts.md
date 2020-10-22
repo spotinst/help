@@ -69,7 +69,7 @@ For Windows:
 Invoke-WebRequest https://s3.amazonaws.com/spotinst-public/services/spotinst-windows-agent/SpotinstWindowsAgent-Latest.zip -OutFile "C:\Program Files\Spotinst\SpotinstAgent.zip"
 Add-Type -AssemblyName System.IO.Compression.FileSystem
 [System.IO.Compression.ZipFile]::ExtractToDirectory("C:\Program Files\Spotinst\SpotinstAgent.zip","c:\program files\spotinst\")
-New-Service SpotinstAgent """C:\Program Files\Spotinst\Agent.exe"" <ACCOUNT_ID> <YOUR_API_TOKEN>" -DisplayName "Spotinst Agent Service" -StartupType auto
+New-Service SpotinstAgent """C:\Program Files\Spotinst\Agent.exe"" <ACCOUNT_ID> <YOUR_API_TOKEN>" -DisplayName "Spot Agent Service" -StartupType auto
 Start-Service SpotinstAgent</powershell>
 ```
 

@@ -4,7 +4,7 @@ Launch specifications enable you to configure multiple workload types on the sam
 
 ## Configuration
 
-1. Log in to the [Spot console](https://console.spotinst.com/).
+1. Log in to the [Spot Console](https://console.spotinst.com/).
 2. Navigate to your Ocean cluster.
 3. Click the Actions menu and select Launch Specifications.
 4. Click Add Launch Specification.
@@ -36,7 +36,7 @@ spec:
 ```
 
 2. Configure your Ocean cluster with a launch specification that serves the WinPod nodeSelector label.
-   a. Log in to the Spot console.
+   a. Log in to the Spot Console.
    b. Navigate to your Ocean cluster.
    c. Click on the Actions menu and select Launch Specifications.
    d. Click Add Specification and add the following label:

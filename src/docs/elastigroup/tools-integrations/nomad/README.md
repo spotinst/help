@@ -11,7 +11,7 @@ Nomad Autoscaler monitors the usage of all nodes. If a node is not needed for an
 
 A buffer of spare capacity (in terms of both memory and CPU) to make sure that when we want to scale more jobs, we don't have to wait for new instances, and also to prevent instances from being over-utilized.
 
-Each headroom unit consists of 2 definitions: one for CPU “cpuPerUnit” (in MHz) and one for Memory “memoryPerUnit” (in MiB). Also, a number of headroom units to reserve in the cluster can be defined.
+Each headroom unit consists of 2 definitions: one for CPU `cpuPerUnit` (in MHz) and one for Memory `memoryPerUnit` (in MiB). Also, a number of headroom units to reserve in the cluster can be defined.
 
 For example, Let's say that we define the headroom unit to consist of 512 MiB of Memory and 1000 MHz, and require a total of 10 units. In addition, let's assume that the cluster consists of 3 instances. The AutoScaler will verify the total sum of units throughout the entire cluster and check if it meets the required number configured in the group.
 
@@ -31,9 +31,9 @@ When a job is launched in Nomad, The Nomad master scheduler tries to find free c
 
 In such a case, the job will have queued allocations, and the job metrics will show that the job can't run due to exhausted nodes. Some of the reasons for node exhaustion are:
 
-- Dimension “cpu exhausted” exhausted on 1 node
-- Dimension “memory exhausted” exhausted on 1 node
-- Dimension “network: reserved port collision” exhausted on 1 node
+- Dimension `cpu exhausted` exhausted on 1 node
+- Dimension `memory exhausted` exhausted on 1 node
+- Dimension `network: reserved port collision` exhausted on 1 node
 - No nodes were eligible for evaluation
 
 The Nomad Autoscaler automatically detects those states and launch additional instances when required.

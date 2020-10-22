@@ -7,7 +7,7 @@ The RightScale Universal Cloud Management Platform allows customers to orchestra
 Before we dive into the integration, let's first go over a few vocabulary terms utilized by RightScale.
 
 - ServerTemplate – A server configuration template that defines a virtual machine that can be launched in any supported cloud provider. This template is defined in a somewhat generic manner to ensure support across multiple cloud providers.
-- ServerInstance – Virtual machine instance that is launched via the RightScale “ServerTemplate” configuration template as noted above.
+- ServerInstance – Virtual machine instance that is launched via the RightScale `ServerTemplate` configuration template as noted above.
 - Instance – a standalone Virtual machine instance that was launched by the cloud provider console (EC2 console for example).
 
 ## How it Works
@@ -28,7 +28,7 @@ When we terminate an instance launched by an Elastigroup we'll automatically rem
 
 ## Enable the Integration
 
-To enable this integration simply go into the “Compute” tab of your Elastigroup and enter your RightScale.
+To enable this integration simply go into the `Compute` tab of your Elastigroup and enter your RightScale.
 RefreshToken – that will be used to generate the access token to your RightScale account. You will also need to enter the corresponding the Account ID.
 
 <img src="/elastigroup/_media/rightscale-02.png" />

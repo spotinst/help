@@ -15,7 +15,7 @@ All actions in this procedure should be made in the US-East-1 (Northern Virginia
 
 To start the connection wizard, do the following:
 
-1. Log in to the Spot console.
+1. Log in to the Spot Console.
 2. Click AWS. The connection wizard appears as shown below.
 
 <img src="/cloud-analyzer/_media/gettingstarted-firstregistration-01.png" />
@@ -62,7 +62,7 @@ Log in to your AWS Master Payer account.
 
 <img src="/cloud-analyzer/_media/gettingstarted-firstregistration-04.png" />
 
-6. Return to your account in the Spot console and paste the name of the S3 bucket where the hourly cost and usage reports are stored.
+6. Return to your account in the Spot Console and paste the name of the S3 bucket where the hourly cost and usage reports are stored.
 
 ## Step 4
 

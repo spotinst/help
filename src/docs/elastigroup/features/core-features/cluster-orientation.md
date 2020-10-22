@@ -30,7 +30,7 @@ Optimize towards the continuity of your instances. While using the high availabi
 
 Additionally, in the case of fall back to On-Demand instances – the Elastigroup will keep these instances running and will not revert back to spot instances automatically (as it does with balanced and cost orientations).
 
-The Availability orientation use case is primarily suitable for “jobs” or “batch” computing with a high importance of running a single machine for a limited amount of time, as well as NoSQL DBs such as Cassandra or MongoDB, when they are part of a fault tolerant architecture.
+The Availability orientation use case is primarily suitable for `jobs` or `batch` computing with a high importance of running a single machine for a limited amount of time, as well as NoSQL DBs such as Cassandra or MongoDB, when they are part of a fault tolerant architecture.
 
 ---
 

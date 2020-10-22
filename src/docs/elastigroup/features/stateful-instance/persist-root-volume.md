@@ -4,7 +4,7 @@ Root Volume Persistence maintains the data stored in your root volume, such as O
 
 ## How Root Volume Persistence Works
 
-Periodic snapshots of the root volume are taken continuously while the instance is running. When a Spot interruption occurs, a “final” snapshot is taken only after the original instance is terminated and the root volume changes to an “available” state. Once the original instance is terminated, an image is registered using the final snapshot and the new instance is launched from this image.
+Periodic snapshots of the root volume are taken continuously while the instance is running. When a Spot interruption occurs, a `final` snapshot is taken only after the original instance is terminated and the root volume changes to an `available` state. Once the original instance is terminated, an image is registered using the final snapshot and the new instance is launched from this image.
 
 ## Enable Root Volume Persistence
 

@@ -19,7 +19,7 @@ Kafka's architecture is designed based on several components and each component 
 
 - Producer – Producers push data to brokers. When the new broker is started, all the producers discover it and automatically sends a message to that new broker.
 
-- Consumer – Consumers fetch data from the brokers. Kafka consumer divides partitions over consumer instances within a consumer group. Each consumer in the consumer group is an exclusive consumer of a “fair share” of partitions. This is how Kafka does load balancing of consumers in a consumer group. Consumer membership within a consumer group is handled by the Kafka protocol dynamically. If new consumers join a consumer group, it gets a share of partitions. If a consumer dies, its partitions are split among the remaining live consumers in the consumer group. This is how Kafka does fail over of consumers in a consumer group.
+- Consumer – Consumers fetch data from the brokers. Kafka consumer divides partitions over consumer instances within a consumer group. Each consumer in the consumer group is an exclusive consumer of a `fair share` of partitions. This is how Kafka does load balancing of consumers in a consumer group. Consumer membership within a consumer group is handled by the Kafka protocol dynamically. If new consumers join a consumer group, it gets a share of partitions. If a consumer dies, its partitions are split among the remaining live consumers in the consumer group. This is how Kafka does fail over of consumers in a consumer group.
 
 ## Elastigroup Configuration
 
@@ -29,7 +29,7 @@ To provide availability of the Kafka clusters on EC2 Spot instances, Elastigroup
 
 The purpose of adding replication in Kafka is for stronger durability and higher availability. We want to guarantee that any successfully published message will not be lost and can be consumed, even when there are server failures
 
-The parameter of the replication factor located at the server.properties file with the value “offsets.topic.replication.factor=2”, replication factor 2 means 3 copies of the data as the diagram below shows, once we have 3 copies that are spread on different A-Z's, this will be configured by using different Rack ID's and explained at the next section, we are safe from data failure.
+The parameter of the replication factor located at the server.properties file with the value `offsets.topic.replication.factor=2`, replication factor 2 means 3 copies of the data as the diagram below shows, once we have 3 copies that are spread on different A-Z's, this will be configured by using different Rack ID's and explained at the next section, we are safe from data failure.
 
 ## Shard aware Location – Rack ID
 
@@ -47,20 +47,20 @@ You can specify that a broker belongs to a particular rack by adding a property 
 Location -
 config/server.properties
 Value -
-broker.rack=my-rack-id #example “broker.rack=1”>
+broker.rack=my-rack-id #example `broker.rack=1`>
 ```
 
 The most powerful feature, in this case, is the Elasitgroup Stateful feature. We don't need to wait for the cluster to rebalance because the broker will come back from failure with the volume disk attached with the data updated to the moment the server has terminated.
 
 In order not to sync all the data from the start to another broker we recommend to increase the max delay time of replication between brokers to 5 minutes (in that time we will create a new instance to the cluster and the instance will be ready to be back in the cluster).
 
-Add to the server.properties file the value: “Replica.lag.time.max.ms=300000”
+Add to the server.properties file the value: `Replica.lag.time.max.ms=300000`
 
 ## Consumer
 
-When running consumer on EC2 Spot instances you will need to make sure that the consumer server will rejoin to the same group upon replacement, so the value “group.id” in the consumer config file must be correct.
+When running consumer on EC2 Spot instances you will need to make sure that the consumer server will rejoin to the same group upon replacement, so the value `group.id` in the consumer config file must be correct.
 
-It can be done either by using the ‘USER DATA' script or by preserving the instance root volume.
+It can be done either by using the 'USER DATA' script or by preserving the instance root volume.
 
 ## Consumers are Stateless
 

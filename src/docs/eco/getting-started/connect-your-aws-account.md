@@ -10,7 +10,7 @@ All actions in this procedure should be made in the US-East-1 (Northern Virginia
 
 ## Get Started
 
-Once you log into the Spot console, go to the Eco dashboard. You will see the following message:
+Once you log into the Spot Console, go to the Eco dashboard. You will see the following message:
 
 <img src="/eco/_media/gettingstarted-aws-connect-01.png" width="300" height="212" />
 
@@ -39,7 +39,7 @@ Set up Cost and Usage Reports.
 
 - To go to AWS Cost and Usage Report setup, click [here](https://console.aws.amazon.com/billing/home?#/reports).
 - To create a new report, follow the illustrations below. Important guidelines:
-  - Include Resource IDs under “Additional report details”
+  - Include Resource IDs under `Additional report details`
   - Enable Data refresh settings.
   - Time granularity Units should be Hourly.
   - Enable report data integration for Amazon Athena.

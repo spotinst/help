@@ -6,7 +6,7 @@ Ocean improves on the foundation of our tried-and-true Kubernetes Autoscaler and
 
 When adding a node to an OpenShift cluster, a Certificate Signing Request (CSR) is created and waits for approval before adding the node into the cluster. Ocean supports this mechanism, and as part of its integration into the Kubernetes cluster infrastructure, will ensure that pending CSRs launched by Ocean will be approved (based on their identifier at the launch time).
 
-Ocean now officially supports OpenShift v3.11 and later, leveraging its security and management advantages. Using Ocean, OpenShift users can now enjoy the “Serverless Containers” experience.
+Ocean now officially supports OpenShift v3.11 and later, leveraging its security and management advantages. Using Ocean, OpenShift users can now enjoy the `Serverless Containers` experience.
 
 ## What's Next?
 

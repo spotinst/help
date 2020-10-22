@@ -23,7 +23,7 @@ Body
       },
       "alert": {
         "enabled": true,
-        "name": "Spotinst Test | spot_instances",
+        "name": "Spot Test | spot_instances",
         "description": "Test for spot instances",
         "documentation": "test for number of spot instances",
         "namespace": "elastigroup",
@@ -98,7 +98,7 @@ SpectrumAlert:
         Ref: SpotinstAccountId
       alert:
         enabled: true
-        name: Spotinst Test | spot_instances
+        name: Spot Test | spot_instances
         description: Test for spot instances
         documentation: test for number of spot instances
         namespace: elastigroup

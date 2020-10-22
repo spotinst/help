@@ -10,7 +10,7 @@ This tutorial is relevant for Kubernetes on AWS.
 
 Using Run Workloads, you can completely adjust and manage Kubernetes clusters from the Ocean dashboard without the overhead in provisioning pods via the cluster itself. This will allow both the infrastructure and the pod provisioning to be handled by Ocean.
 
-This feature enables you to manage the cluster configuration and run operations such as the creation of workloads. You can achieve this easily by using the Spot console and gaining the full picture of your cluster provided by Ocean.
+This feature enables you to manage the cluster configuration and run operations such as the creation of workloads. You can achieve this easily by using the Spot Console and gaining the full picture of your cluster provided by Ocean.
 
 This feature is available for customers using Spot Controller version 1.0.38 and later. If you are using an older version, you must [update your controller](ocean/tutorials/spot-kubernetes-controller/update-controller.md).
 

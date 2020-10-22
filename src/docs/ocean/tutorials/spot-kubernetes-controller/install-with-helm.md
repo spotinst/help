@@ -47,7 +47,7 @@ $ helm install spotinst*_controller spotinst*/spotinst-kubernetes-cluster-contro
 
 ---
 
-4. In case you want to upgrade the Spotinst controller's version:
+4. In case you want to upgrade the Spot controller's version:
 
 ```Shellscript
 $ helm upgrade spotinst-kubernetes-cluster-controller spotinst/spotinst-kubernetes-cluster-controller \
@@ -55,7 +55,7 @@ $ helm upgrade spotinst-kubernetes-cluster-controller spotinst/spotinst-kubernet
 --version <VERSION>
 ```
 
-In order to discover the available Spotinst controller versions, use the following command:
+In order to discover the available Spot controller versions, use the following command:
 
 ```Shellscript
 $ helm search spotinst/spotinst-kubernetes-cluster-controller \

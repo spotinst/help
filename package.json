@@ -1,6 +1,6 @@
 {
-  "name": "spot-help",
-  "description": "Spot by NetApp Docs",
+  "name": "help",
+  "description": "Spot Docs",
   "private": true,
   "repository": {
     "type": "git",

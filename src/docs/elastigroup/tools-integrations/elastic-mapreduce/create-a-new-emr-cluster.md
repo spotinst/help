@@ -97,6 +97,6 @@ Read more on [scheduling in Elastigroup](elastigroup/features/core-features/sche
 
 All that's left to do is review your settings and launch your new EMR cluster!
 
-<img src="/elastigroup/_media/create-a-new-emr-cluster_6.png" width="258" height="100" /
+<img src="/elastigroup/_media/create-a-new-emr-cluster_6.png" width="258" height="100" />
 
 Learn more on EMR cluster on Elastigroup here.

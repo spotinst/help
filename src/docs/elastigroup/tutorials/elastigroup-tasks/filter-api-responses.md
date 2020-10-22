@@ -20,7 +20,7 @@ https://api.spotinst.io/aws/ec2/group |
 jq '.response|.items[]|select(.compute|.launchSpecification|.tags[]|.tagValue| test("staging"))'
 ```
 
-This will show the Elastigroups configurations that have a tag value equal to “staging“.
+This will show the Elastigroups configurations that have a tag value equal to `staging`.
 
 ## Example 2
 
@@ -30,6 +30,6 @@ https://api.spotinst.io/aws/ec2/group |
 jq '.response|.items[]|select(.compute|.launchSpecification|.tags[]|.tagValue| test("TagValue") ) | {name: .name, id: .id}'
 ```
 
-This will show the name and ID for Elastigroups that have a tag value equal to “TagValue“.
+This will show the name and ID for Elastigroups that have a tag value equal to `TagValue`.
 
 For more operators and additional options please see: https://stedolan.github.io/jq/tutorial/.

@@ -4,7 +4,7 @@ This article explains how Custom ECS Autoscaler works and includes a guide on ho
 
 ## How it Works
 
-The Spot ECS autoscaler dynamically scales your cluster up to ensure there are always sufficient resources to run all tasks. With the “Custom” option the Spot ECS autoscaler analyzes your ECS cluster topology and according to your specified buffer of spare capacity, called Headroom [link to headroom concept], configures your cluster's autoscaling for optimized performance and costs.
+The Spot ECS autoscaler dynamically scales your cluster up to ensure there are always sufficient resources to run all tasks. With the `Custom` option the Spot ECS autoscaler analyzes your ECS cluster topology and according to your specified buffer of spare capacity, called Headroom [link to headroom concept], configures your cluster's autoscaling for optimized performance and costs.
 
 ## Enable ECS AutoScaler in Custom Mode
 

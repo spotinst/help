@@ -12,7 +12,7 @@ Configuration alerts allow more visibility and control of group configuration an
 
 ## Example 1: An ELB is configured but it does not exist in AWS
 
-Under “Elastigroups” view:
+Under `Elastigroups` view:
 
 <img src="/elastigroup/_media/corefeatures-config-alerts-01.png" />
 

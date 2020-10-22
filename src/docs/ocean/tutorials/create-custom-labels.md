@@ -47,7 +47,7 @@ For all of the above, new nodes will be launched with new labels.
 
 These are clusters that were created by Kops natively.
 
-1. Recognize the IG name you originally created (“nodes” in the following example):
+1. Recognize the IG name you originally created (`nodes` in the following example):
 2. Run `kops edit ig nodes` and add the relevant label.
 
 <img src="/ocean/_media/tutorials-create-custom-label-02.png" />

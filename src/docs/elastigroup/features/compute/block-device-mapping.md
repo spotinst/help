@@ -108,7 +108,7 @@ With BDM you can manage the volume type/size dynamically by modifying the size/t
 ## Remove a Block Device Mapping
 
 1. In case you have a Block Device Mapping setting in your Elastigroup, and you would like to disable it, go to the relevant ElastiGroup ID –> Actions –> Edit configuration –> Review.
-2. Click the “Edit Mode” toggle, and now simply replace the values under the "blockDeviceMappings" key with null:
+2. Click the `Edit Mode` toggle, and now simply replace the values under the "blockDeviceMappings" key with null:
 
 `"blockDeviceMappings": null,`
 

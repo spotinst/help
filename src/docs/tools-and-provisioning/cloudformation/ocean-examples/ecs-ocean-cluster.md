@@ -23,8 +23,8 @@ Body
         "ServiceToken": {
           "Fn::Sub": "arn:aws:lambda:${Region}:178579023202:function:spotinst-cloudformation"
         },
-        "accessToken": "Spotinst Token",
-        "accountId": "Spotinst Account ID",
+        "accessToken": "Spot Token",
+        "accountId": "Spot Account ID",
         "updatePolicy": {
           "shouldUpdateTargetCapacity": false
         },
@@ -44,16 +44,12 @@ Body
             "maximum": 1000
           },
           "compute": {
-            "subnetIds": [
-              "subnet-1234"
-            ],
+            "subnetIds": ["subnet-1234"],
             "instanceTypes": {},
             "launchSpecification": {
               "imageId": "ami-12345",
               "userData": "",
-              "securityGroupIds": [
-                "sg-1234"
-              ],
+              "securityGroupIds": ["sg-1234"],
               "iamInstanceProfile": {
                 "arn": "Instance Profile ARN"
               },

@@ -13,7 +13,7 @@ In this procedure, you will join an existing ECS cluster to Ocean using the [Spo
 
 ## Get Started
 
-1. In the left menu of the Spot console, click Ocean/Cloud Clusters, and click Create Cluster.
+1. In the left menu of the Spot Console, click Ocean/Cloud Clusters, and click Create Cluster.
 
 <img src="/ocean/_media/ecs-create-cluster.png" />
 

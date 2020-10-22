@@ -29,7 +29,7 @@ Login to your AWS console and navigate to the Key Management Service (KMS) conso
 You should add two roles to this custom key:
 
 - **AWSServiceRoleForEC2Spot** (Linked-Service role that AWS creates automatically for each account)
-- **Spotinst cross-account IAM role** (The one you created when entering credentials to Spot)
+- **Spot cross-account IAM role** (The one you created when entering credentials to Spot)
 
 You can find your Spot cross-account IAM role in the Spot settings under the Account menu available via this link: https://console.spotinst.com/#/settings/account/general
 

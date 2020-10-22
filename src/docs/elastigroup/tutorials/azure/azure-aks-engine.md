@@ -64,7 +64,7 @@ $ docker run -it --rm \
 WARN[0003] apimodel: missing masterProfile.dnsPrefix will use "spotinst-aks-engine-demo"
 INFO[0022] Starting ARM Deployment (spotinst-aks-engine-demo-1874602557). This will take some time...
 INFO[0263] Finished ARM Deployment (spotinst-aks-engine-demo-1874602557). Succeeded
-Spotinst Elastigroup sig-2dd2ddbe successfully created
+Spot Elastigroup sig-2dd2ddbe successfully created
 ```
 
 A new Azure resource group will contain the new Kubernetes cluster with a scale set managed by Spotinst. It is safe to scale the set created by aks-engine to zero.
@@ -92,9 +92,9 @@ Download OS respective binary:
 It is possible to customize the api-model of aks-engine but the following settings are required for full use of external load balancing and persistent volume claims with Azure Scale Sets:
 
 1. Enable Standard Load Balancer:
-   orchestratorProfile.kubernetesConfig.loadBalancerSku = “Standard”
+   orchestratorProfile.kubernetesConfig.loadBalancerSku = `Standard`
 2. Use _azure_ networking plugin:
-   orchestratorProfile.kubernetesConfig.networkPlugin = “azure”
+   orchestratorProfile.kubernetesConfig.networkPlugin = `azure`
 
 The full instructions for aks-engine can be found [on GitHub](https://github.com/Azure/aks-engine/blob/master/docs/README.md).
 
@@ -153,7 +153,7 @@ azuredeploy.json    ca.key        etcdclient.key      etcdserver.key
 
 When spot-aks-engine import completes an ID is returned. This ID is the group that manages the worker nodes for Kubernetes and can be viewed in the Spot Console.
 
-`Spotinst Elastigroup sig-2dd2ddbe successfully created.`
+`Spot Elastigroup sig-2dd2ddbe successfully created.`
 
 ### Console View
 

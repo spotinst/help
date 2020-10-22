@@ -27,7 +27,7 @@ To schedule your running hours, do the following:
 
 ## During Off Hours
 
-If you need to change the schedule during the off hours, you can do so without causing the cluster to “wake up” instantly. The cluster will wake up only when you activate it manually by making a capacity change.
+If you need to change the schedule during the off hours, you can do so without causing the cluster to `wake up` instantly. The cluster will wake up only when you activate it manually by making a capacity change.
 
 ## Using The API
 

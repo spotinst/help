@@ -18,10 +18,10 @@ With this Quick Start, Spot Elastigroup deployment takes about 7 minutes. The de
 - If you haven't done this already, here's how to create an ECS IAM Role.
   1. Navigate to your IAM console
   2. Go to – Roles.
-  3. Create a new Role and name it “ECS-ContainerInstance”
-  4. Under “AWS Service Roles” choose: “Amazon EC2 Role for EC2 Container Service”
+  3. Create a new Role and name it `ECS-ContainerInstance`
+  4. Under `AWS Service Roles` choose: `Amazon EC2 Role for EC2 Container Service`
   5. Attach the policy and create the Role.
-  6. On the Elastigroup setup, you should specify the newly created IAM Role under “Launch Specification”
+  6. On the Elastigroup setup, you should specify the newly created IAM Role under `Launch Specification`
 
 ## Step 1: Select your ECS Optimized AMI
 
