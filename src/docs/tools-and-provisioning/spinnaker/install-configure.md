@@ -48,6 +48,6 @@ The halyard service is running and can interact with the halyard client.
 ./hal config provider spot edit --api-token <SPOT_API_TOKEN>./hal config provider spot account add <SPOT_ACC_NAME> --account-id <SPOT_ACC_ID>./hal config provider spot enable
 ```
 
-## What’s Next?
+## What's Next?
 
 Continue to the next task: [Set up Environment as Local Git](tools-and-provisioning/spinnaker/set-up-environment-as-local-git).

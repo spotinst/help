@@ -30,7 +30,7 @@ There are three major steps to configuring the CUR Extraction:
 4. Under the second menu, Delivery Options, do the following:
    1. Under S3 Bucket, click Configure, then do the following:
       1. For the name for the S3 bucket that CUR reports will be dumped into, paste in the following: “spotinst-cur-report”. This name must be the same as the report name that you entered previously.
-      2. Only change the bucket’s region if necessary.
+      2. Only change the bucket's region if necessary.
       3. Click Next.
       4. Check the box that says “I have confirmed that this policy is correct”.
       5. Click Save.
@@ -48,7 +48,7 @@ There are three major steps to configuring the CUR Extraction:
 
 ## Step 2: Link Your Cost And Usage Report With Athena
 
-It will take 24 hours for AWS to start dropping reports into the S3 bucket you chose. Before proceeding with this step, click here and make sure that “Data last refreshed” has a date and doesn’t say “N/A”. Here’s what it should look like:
+It will take 24 hours for AWS to start dropping reports into the S3 bucket you chose. Before proceeding with this step, click here and make sure that “Data last refreshed” has a date and doesn't say “N/A”. Here's what it should look like:
 
 <img src="/cloud-analyzer/_media/gettingstarted-connect-multiple-03.png" />
 
@@ -57,11 +57,11 @@ It will take 24 hours for AWS to start dropping reports into the S3 bucket you c
 3. Download the file and contact your Spot sales representative. (If you do not have a sales representative, contact Spot Support.) Please include the following in your email:
    - The crawler file
    - AWS account number of master payer account
-   - Account ID of the customer’s master payer account
+   - Account ID of the customer's master payer account
    - CUR bucket name
    - Stack name
    - Prefix
-   - The customer’s Spot OrgIDs
+   - The customer's Spot OrgIDs
 
 Continue with the steps below.
 

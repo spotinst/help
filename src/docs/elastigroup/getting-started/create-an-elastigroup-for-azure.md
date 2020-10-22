@@ -89,7 +89,7 @@ You can define additional network interfaces as needed.
 
 ### Login
 
-- User Name. Specify the user name you wish to SSH the VM’s with.
+- User Name. Specify the user name you wish to SSH the VM's with.
 - Windows Password. The password you use for your Windows login.
 
 ### Additional Configuration (optional)

@@ -16,7 +16,7 @@ Each condition type is assigned a status:
 - True
 - Unknown
 
-To ensure optimal performances, Ocean monitors the nodes’ status every 30 seconds and in case it identifies that the Ready condition is False or Unknown, it considers this node as Unhealthy and triggers a replacement.
+To ensure optimal performances, Ocean monitors the nodes' status every 30 seconds and in case it identifies that the Ready condition is False or Unknown, it considers this node as Unhealthy and triggers a replacement.
 
 ## ECS Clusters
 

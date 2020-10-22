@@ -36,11 +36,11 @@ Last step before starting the import process will be to review your Elastigroup 
 
 <img src="/elastigroup/_media/import-fargate-services-to-ecs-elastigroup_3.png" />
 
-On completion you’ll see the Success message.
+On completion you'll see the Success message.
 
 ## Step 3: Begin the Import Process
 
-Once your Elastigroup is created, you can track the fargate service import process by clicking the ‘details’ link in the banner that appears in the elastigroup overview screen.
+Once your Elastigroup is created, you can track the fargate service import process by clicking the ‘details' link in the banner that appears in the elastigroup overview screen.
 
 <img src="/elastigroup/_media/import-fargate-services-to-ecs-elastigroup_4.png" />
 

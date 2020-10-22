@@ -1,6 +1,6 @@
 # Use Right Sizing
 
-In this tutorial you will learn about Ocean resizing suggestions and how to use them. This feature will help you define better resource requirements, based on actual consumption, in order to avoid over- or under-provisioning a cluster and increase the cluster’s efficiency.
+In this tutorial you will learn about Ocean resizing suggestions and how to use them. This feature will help you define better resource requirements, based on actual consumption, in order to avoid over- or under-provisioning a cluster and increase the cluster's efficiency.
 
 ## Relevance
 

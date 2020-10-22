@@ -6,7 +6,7 @@ This article explains how Elastigroup manages the replacement of instances in sp
 
 1. Elastigroup detects an unstable spot market, based on patterns in past interruptions and real-time market analytics.
 2. If other spot markets are available, a new instance is launched in the least expensive market and the old instance is drained and terminated.
-3. If other spot markets aren’t available, Elastigroup activates the Fallback to On-Demand process in which an On-Demand instance is launched and the old instance is drained and terminated.
+3. If other spot markets aren't available, Elastigroup activates the Fallback to On-Demand process in which an On-Demand instance is launched and the old instance is drained and terminated.
 
 ## Spot Instance Replacement
 

@@ -24,7 +24,7 @@ All capacity changes must be done via Elastigroup. Failing to do so may result i
 
 ## Application Updates and Deployment
 
-For non-capacity changes only. In the following steps the Beanstalk environment is updated, then the new version is imported and a blue/green deployment is initiated to gracefully replace the existing Elastigroup’s instances with new, updated instances.
+For non-capacity changes only. In the following steps the Beanstalk environment is updated, then the new version is imported and a blue/green deployment is initiated to gracefully replace the existing Elastigroup's instances with new, updated instances.
 
 1. Configure the Blue-Green deployment settings – Edit the group configuration and navigate to the Compute tab. In the bottom of the screen under Integrations, configure Strategy, Grace Period, and Batch Size. These settings will apply in the deployment that will start in step 3.
 

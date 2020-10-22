@@ -85,7 +85,7 @@ In case you are already running an EMR cluster on AWS, you have the option to ch
 
 ## Scheduled Actions
 
-Configure scheduling actions in order to scale your cluster’s capacity during specific time frames.
+Configure scheduling actions in order to scale your cluster's capacity during specific time frames.
 
 Time frames can be once or periodic. define time range by cron expression.
 
@@ -95,7 +95,7 @@ Read more on [scheduling in Elastigroup](elastigroup/features/core-features/sche
 
 ## Step 5: Review & Create
 
-All that’s left to do is review your settings and launch your new EMR cluster!
+All that's left to do is review your settings and launch your new EMR cluster!
 
 <img src="/elastigroup/_media/create-a-new-emr-cluster_6.png" />
 

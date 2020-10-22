@@ -2,7 +2,7 @@
 
 ## Update the Elastigroup Capacity Configuration
 
-The Manage Capacity option in the Elastigroup’s Actions menu simplifies the process of updating the Elastigroup Target, Minimum and Maximum configurations.
+The Manage Capacity option in the Elastigroup's Actions menu simplifies the process of updating the Elastigroup Target, Minimum and Maximum configurations.
 
 ## Before Updating the Elastigroup Capacity
 

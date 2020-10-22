@@ -19,7 +19,7 @@ Afterwards, select Elastigroups.
 
 <img src="/elastigroup/_media/configure-budgets_4.png" />
 
-In the table-view list, Spot will present all the Elastigroups that are part of your account, and which don’t have a budget configured yet.
+In the table-view list, Spot will present all the Elastigroups that are part of your account, and which don't have a budget configured yet.
 
 The table will present the Elastrigroups with the following fields:
 
@@ -55,4 +55,4 @@ According to your requirements, you can define several thresholds for an EG.
 
 After you have completed the budget configuration, click on “Set Budget” on the bottom right corner.
 
-That’s It! Your Budget is all set!
+That's It! Your Budget is all set!

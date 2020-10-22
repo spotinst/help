@@ -2,9 +2,9 @@
 
 ## Introduction
 
-AWS’s Elastic MapReduce (EMR) can occasionally get stuck with a Resizing status during changes in an instance group capacity. In these cases, the actual number of running instances won’t match the request number. Elastigroup’s EMR Auto-Recovery process is designed to handle this situation.
+AWS's Elastic MapReduce (EMR) can occasionally get stuck with a Resizing status during changes in an instance group capacity. In these cases, the actual number of running instances won't match the request number. Elastigroup's EMR Auto-Recovery process is designed to handle this situation.
 
-Here’s what a stuck EMR looks like without Elastigroup’s EMR Auto-Recover:
+Here's what a stuck EMR looks like without Elastigroup's EMR Auto-Recover:
 
 <img src="/elastigroup/_media/elastigroup-auto-recover-for-emr_1.png" />
 
@@ -24,12 +24,12 @@ In order to prevent Elastigroups from scaling rapidly while a resize process is 
 
 Once the resizing process is finished, scaling operations will be resumed.
 
-Here’s a diagram of the Auto-Recovery process:
+Here's a diagram of the Auto-Recovery process:
 
 <img src="/elastigroup/_media/elastigroup-auto-recover-for-emr_2.png" />
 
-## What’s Next?
+## What's Next?
 
 Create a [Wrapped EMR Cluster](elastigroup/tools-integrations/elastic-mapreduce/import-elastic-mapreduce-task-nodes) on Elastigroup to run tasks nodes for your existing EMR cluster on Spot instances.
 Clone your [existing EMR cluster] into an Elastigroup.
-Learn about Elastigroup’s [Scaling Policies for EMR](elastigroup/tools-integrations/elastic-mapreduce/scaling-policies-for-emr).
+Learn about Elastigroup's [Scaling Policies for EMR](elastigroup/tools-integrations/elastic-mapreduce/scaling-policies-for-emr).

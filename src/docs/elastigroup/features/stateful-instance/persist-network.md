@@ -28,7 +28,7 @@ Stateful Spot Instances (SSIs) are created according to the group target capacit
 
 ## Private IP Pools
 
-A Private IP Pool can be defined for your Stateful Elastigroup in the Stateful Creation Wizard, under the Persistence tab’s Network Persistency section. When you select the Maintain private IP option, you may also select specific Private IPs under Private IP Pool:
+A Private IP Pool can be defined for your Stateful Elastigroup in the Stateful Creation Wizard, under the Persistence tab's Network Persistency section. When you select the Maintain private IP option, you may also select specific Private IPs under Private IP Pool:
 
 <img src="/elastigroup/_media/stateful-persistnetwork-01.png" width="490" height="215" />
 
@@ -43,7 +43,7 @@ When an IP is removed from the pool (or the option is deselected entirely) any S
 Spot Stateful works by persisting the network interface, so it can be used to persist both a private IP and an Elastic IP associated with the instance.
 
 1. Enter the Stateful Creation Wizard.
-2. Under the Persistence tab’s Network Persistency section, create an Elastic IP pool by selecting one or more Elastic IPs to associate with the instances launched in the Elastigroup.
+2. Under the Persistence tab's Network Persistency section, create an Elastic IP pool by selecting one or more Elastic IPs to associate with the instances launched in the Elastigroup.
 3. Instances launched with an associated Elastic IP will then persist that IP during recycles and replacements.
 
 <img src="/elastigroup/_media/stateful-persistnetwork-02.png" />

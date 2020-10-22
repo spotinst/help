@@ -17,7 +17,7 @@ Under the Organization tab, you can manage all users including:
 
 <img src="/administration/_media/add-users-02.png" width="300" height="399" />
 
-The required information includes the user’s name, email address, organization role, account role, and one or more accounts the user will be in. The new user’s initial password is generated and displayed.
+The required information includes the user's name, email address, organization role, account role, and one or more accounts the user will be in. The new user's initial password is generated and displayed.
 
 ## Account Tab
 

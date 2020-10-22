@@ -18,7 +18,7 @@ In order to change the AMI used to launch a particular Managed Instance with Roo
 
 1. Remove the root persistence and update the Managed Instance with the new AMI.
 2. Recycle the Managed Instance.
-3. Re-enable the Root Volume Persistence in the Managed Instance’s configuration.
+3. Re-enable the Root Volume Persistence in the Managed Instance's configuration.
 
 ## Backend Actions
 
@@ -32,7 +32,7 @@ Managed Instance automatically performs various backend actions for different st
 
 When using the persist root volume option with Windows images, images created from snapshots as part of the recycle processes, will have a Platform parameter value of “Other Linux” (default behavior of AWS). This behavior can cause issues while trying to connect to the instance.
 
-The following user data script can be added to the Managed Instance’s configuration to create a new user and password as the machine boots up, which will later be used to connect to the instance:
+The following user data script can be added to the Managed Instance's configuration to create a new user and password as the machine boots up, which will later be used to connect to the instance:
 
 ```powershell
 <powershell>

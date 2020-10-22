@@ -42,7 +42,7 @@ The Creation Wizard imports the configuration of one of the instances in your st
 
 After reviewing the configuration click create. Elastigroup will launch an instance and register it into the Opswork Layer.
 
-That’s It! Elastigroup is now managing and provisioning Spot instances for the Opsworks environment. You can review your instances in the Elastigroup management view along with their OpsWorks healthiness.
+That's It! Elastigroup is now managing and provisioning Spot instances for the Opsworks environment. You can review your instances in the Elastigroup management view along with their OpsWorks healthiness.
 
 <img src="/elastigroup/_media/opsworks-integration-03.png" />
 

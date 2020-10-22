@@ -1,8 +1,8 @@
 # Set up Nomad on Elastigroup
 
-This procedure covers integrating Elastigroup with Nomad clusters. Managing a Nomad cluster while keeping costs down can be quite a challenge, especially when it comes to heterogeneous environments (made up from different instance types, and sizes). Elastigroup’s Nomad integration increases the cluster’s efficiency by choosing the right instance size and type for a specific workload, as well as utilizing Spot Instances to minimize costs.
+This procedure covers integrating Elastigroup with Nomad clusters. Managing a Nomad cluster while keeping costs down can be quite a challenge, especially when it comes to heterogeneous environments (made up from different instance types, and sizes). Elastigroup's Nomad integration increases the cluster's efficiency by choosing the right instance size and type for a specific workload, as well as utilizing Spot Instances to minimize costs.
 
-To learn more about how Elastigroup’s Nomad integration works see our Nomad integration overview here.
+To learn more about how Elastigroup's Nomad integration works see our Nomad integration overview here.
 
 ## Prerequisites
 
@@ -33,7 +33,7 @@ client {
 
 ## Step 3: Add User Data Script
 
-In the User Data section of the Compute tab’s Additional Configurations section add the following user data script:
+In the User Data section of the Compute tab's Additional Configurations section add the following user data script:
 
 ```bash
 #!/bin/bash
@@ -42,6 +42,6 @@ sudo nomad agent -config client.hcl -node <CustomNodeName> &
 
 The user data script will register new resources with the existing Nomad lead master-server. Upon execution, the instance will be fully integrated into the current Nomad cluster. During startup, the node name of the instance will be overwritten in order to identify the Instance. The address of the Nomad master-server should be injected into the configuration in order for the instance to register itself with the server. Upon instance termination, when an instance is about to be detached from the group, Elastigroup will fetch the slave-clients and filter the id according to the hostname and instigate a draining procedure before the resource is detached in order to ensure complete draining and graceful termination.
 
-## What’s Next?
+## What's Next?
 
-Head to Elastigroup’s [Use Cases](https://console.spotinst.com/#/aws/ec2/elastigroup/create/setup) to explore other supported services and integrations.
+Head to Elastigroup's [Use Cases](https://console.spotinst.com/#/aws/ec2/elastigroup/create/setup) to explore other supported services and integrations.

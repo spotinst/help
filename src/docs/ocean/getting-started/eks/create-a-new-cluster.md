@@ -85,7 +85,7 @@ Before you can continue to the next step, CloudFormation must complete creation 
 
 <img src="/ocean/_media/new-eks-step5.png" />
 
-That’s it! Ocean will now manage the worker nodes, optimizing cluster resource utilization and maximizing savings with Spot instances.
+That's it! Ocean will now manage the worker nodes, optimizing cluster resource utilization and maximizing savings with Spot instances.
 
 ## Troubleshooting
 

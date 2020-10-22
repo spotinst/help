@@ -6,7 +6,7 @@ In this procedure, you will join an existing GKE cluster to Ocean using the [Spo
 
 ## Prerequisites
 
-- [Connect your GCP project to Spot](connect-your-cloud-provider/gcp-project.md). If you have done this already, go on to the next step. If you don’t have a GCP project, go to the [Manage Resources](https://console.cloud.google.com/cloud-resource-manager?_ga=2.24189306.-1955943244.1544264785) page.
+- [Connect your GCP project to Spot](connect-your-cloud-provider/gcp-project.md). If you have done this already, go on to the next step. If you don't have a GCP project, go to the [Manage Resources](https://console.cloud.google.com/cloud-resource-manager?_ga=2.24189306.-1955943244.1544264785) page.
 - Ensure that billing is enabled for your project: Learn how to [enable billing](https://cloud.google.com/billing/docs/how-to/modify-project).
 - Ensure that you have enabled the Google Kubernetes Engine API: Enable the [GKE API](https://console.cloud.google.com/apis/library/container.googleapis.com?q=kubernetes%20engine&_ga=2.13270391.-1955943244.1544264785).
 
@@ -72,9 +72,9 @@ For any change in the original node pool please contact us.
 
 Review all the Ocean settings you have configured. Click Create to finish or use the generated JSON template to create the Ocean cluster using other tooling.
 
-You’re all set! Ocean will now ensure the most cost-effective capacity and sizing possible for your cluster.
+You're all set! Ocean will now ensure the most cost-effective capacity and sizing possible for your cluster.
 
-## What’s Next?
+## What's Next?
 
 Manually scale down your existing GKE nodes in the node pools you migrated to get Ocean to provision pod-driven optimized infrastructure for your existing workloads. To do this, you can use the following command:
 

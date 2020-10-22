@@ -64,7 +64,7 @@ chmod +x ./install
 
 <img src="/elastigroup/_media/codedeployREADME_1.png" />
 
-- **cleanupOnFailure** – While true we delete the temporary group created. If False we don’t delete the temporary deployment group in case of failure (so the user can view the logs of the group and the deployment).
+- **cleanupOnFailure** – While true we delete the temporary group created. If False we don't delete the temporary deployment group in case of failure (so the user can view the logs of the group and the deployment).
 - **terminateInstanceOnFailure** – while true, we terminate the instance that failed. If false, we keep the instances that failed.
 
 3. Proceed with the Elastigroup creation.

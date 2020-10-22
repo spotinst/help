@@ -47,7 +47,7 @@ In this example we can see one policy with two different metrics statements. The
 
 The second metrics statement is based on AppsPending. In this way, we can identify an idle cluster with no running or pending jobs for 15 minutes. If such a cluster exists, Spot terminates the cluster.
 
-## What’s Next?
+## What's Next?
 
 - To clone an existing EMR into an Elastigroup, check out the EMR tutorial [here](elastigroup/tools-integrations/elastic-mapreduce/).
 - To run Task nodes on Spot instances managed by Elastigroup, go to the tutorial [here](elastigroup/tools-integrations/elastic-mapreduce/import-elastic-mapreduce-task-nodes).

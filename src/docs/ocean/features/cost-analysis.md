@@ -18,7 +18,7 @@ In order to provide a cost breakdown for the cluster, Ocean performs the followi
 2. Ocean calculates the overall managed infrastructure costs across spot, reserved, and on-demand instances.
 3. Based on the infrastructure costs and the workload information, Ocean calculates the costs of the individual workloads according to their weights.
 
-For example, if a workload requests 20% of the total cluster allocatable resources, and the cluster cost was $100, then that workload’s cost is calculated as $20.
+For example, if a workload requests 20% of the total cluster allocatable resources, and the cluster cost was $100, then that workload's cost is calculated as $20.
 
 ### Resource Allocation in Detail
 
@@ -36,7 +36,7 @@ In other words, the workload used 25% of the total cluster allocatable resources
 
 ### Idle Resources
 
-Remaining infrastructure resources that are not allocated to workloads are also reflected. They are included in the total cost of the cluster, and therefore, they are distributed among all the workloads in a way that represents the workload’s consumption.
+Remaining infrastructure resources that are not allocated to workloads are also reflected. They are included in the total cost of the cluster, and therefore, they are distributed among all the workloads in a way that represents the workload's consumption.
 
 ### Storage Costs
 
@@ -77,7 +77,7 @@ The breakdown also gives you cost information about different Kubernetes element
 
 Ocean captures and displays data only from instances (nodes) that are managed by Ocean. If you have instances in your cluster that are not managed by Ocean, they are not included in the analysis.
 
-## What’s Next?
+## What's Next?
 
 Learn about the charts, views, and reports you can create in Ocean in [Analyze Your Costs](ocean/tutorials/analyze-your-costs.md).
 Learn how to [Create a Cost Analysis Filter](ocean/tutorials/create-a-cost-filter.md) and customize the information displayed.

@@ -7,7 +7,7 @@ This proceduree covers integrating Elastigroup with Rancher. Once completed Elas
 Before you start using this integration, please make sure to have:
 
 - An active Spot account.
-- A Rancher account with ‘rancher/server:v0.46.0-rc1’ version or above.
+- A Rancher account with ‘rancher/server:v0.46.0-rc1' version or above.
 
 ## Step 1: Create an API Key Within Rancher
 

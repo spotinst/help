@@ -80,6 +80,6 @@ The last step is to downscale the existing worker nodes and allow Ocean to launc
 3. Reduce the target capacity. It is highly recommended to reduce the target capacity in batches of 10-20% and repeat this step until downscale is complete.
 4. Navigate to your Ocean Cluster. Verify that it is spinning up the required resources and handles the pending pods.
 
-Sit back and relax. Ocean’s got you covered!
+Sit back and relax. Ocean's got you covered!
 
 In case of any issues, please contact our support engineers via chat or email.

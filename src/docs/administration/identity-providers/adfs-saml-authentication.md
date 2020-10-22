@@ -107,7 +107,7 @@ To configure IDP Initiated SSO, additional settings must be configured as follow
 When creating a temporary token, the user credentials are validated at the IDP.
 
 1. To create a temporary token, you provide a SAML assertion generated from your IDP. In order to get a SAML assertion from ADFS, follow [these instructions](https://docs.microsoft.com/bs-latn-ba/azure/active-directory/develop/v2-saml-bearer-assertion#get-the-saml-assertion-from-adfs).
-2. Run the following request. Replace ‘<>’ with the SAML assertion response, as plain XML body (without json wrappers).
+2. Run the following request. Replace ‘<>' with the SAML assertion response, as plain XML body (without json wrappers).
 
 ```
 curl -X POST -H "Content-Type: application/xml" -d

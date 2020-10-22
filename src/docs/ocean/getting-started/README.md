@@ -15,7 +15,7 @@ To get started with an Ocean cluster, connect your Cloud account now: [AWS](conn
 - [ECS](/ocean/getting-started/ecs.md)
 - [OpenShift](/ocean/tools-and-integrations/openshift/)
 
-## What’s Next?
+## What's Next?
 
 - Learn more about specific [Ocean Features](/ocean/features/).
 - Try out some of the Ocean features using one of the [Tutorials](/ocean/tutorials/).

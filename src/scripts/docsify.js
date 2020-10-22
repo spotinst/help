@@ -5,6 +5,7 @@ window.$docsify = {
   // ---------------------------------------------------------------------------
   name: `<div class="logo"><img src="/_media/images/logos/spot.svg"/></div>`,
   homepage: "/connect-your-cloud-provider/README.md",
+  notFoundPage: true,
   formatUpdated: "{MM}/{DD}, {HH}:{mm}",
   ga: "UA-68573156-10",
 

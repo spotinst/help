@@ -4,7 +4,7 @@ In this procedure, you will connect your cloud provider account to Spot in order
 
 Watch a step-by-step [video tutorial](https://youtu.be/csPmq3JZlgU/) on connecting your AWS account to Spot.
 
-1. Log in to the Spot console.
+1. Log in to [Spot Console](http://console.spotinst.com/).
 2. Select Amazon Web Services as the cloud provider in which your account resides.
 
 <img src="/connect-your-cloud-provider/_media/welcome-to-spot-1024x341.png" />
@@ -25,7 +25,7 @@ Watch a step-by-step [video tutorial](https://youtu.be/csPmq3JZlgU/) on connecti
 
 ---
 
-## What’s Next?
+## What's Next?
 
 - [Get started with Elastigroup](elastigroup/getting-started/).
 - [Get Started with an Ocean cluster](ocean/getting-started/).

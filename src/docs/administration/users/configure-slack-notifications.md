@@ -12,6 +12,6 @@ You can configure which notifications will be published:
 
 <img src="/administration/_media/configure-slack-02.png" />
 
-## What’s Next?
+## What's Next?
 
 Learn how to create custom [Email Notifications](administration/users/configure-email-notifications.md).

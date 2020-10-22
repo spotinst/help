@@ -6,7 +6,7 @@ With blue/green CodeDeploy deployments, a new set of instances are provisioned, 
 
 ## How Does it Work
 
-Elastigroups with Code deploy integration offers an option to utilize the B/G deployment mechanism. The Elastigroup will provision new instances in the Elastigroup with ‘green’ tags (user configurable) after the Tags are added to the instances, the user may start the deployment from AWS Code Deploy console. Once completed, Elastigroup will detach the old, ‘blue’ instances.
+Elastigroups with Code deploy integration offers an option to utilize the B/G deployment mechanism. The Elastigroup will provision new instances in the Elastigroup with ‘green' tags (user configurable) after the Tags are added to the instances, the user may start the deployment from AWS Code Deploy console. Once completed, Elastigroup will detach the old, ‘blue' instances.
 
 ## Prerequisites
 
@@ -24,13 +24,13 @@ Elastigroups with Code deploy integration offers an option to utilize the B/G de
 <img src="/elastigroup/_media/blue-green-deployment_2.png" />
 
 2. Go to the CODEDEPLOY B/G tab:
-3. Choose the Deployment Group, set the Deployment Timeout (the amount of time the deployment can take before we fail the deployment, in seconds), Add the Keys and Values for the ‘Green’ tags and click Start Deployment Mode:
+3. Choose the Deployment Group, set the Deployment Timeout (the amount of time the deployment can take before we fail the deployment, in seconds), Add the Keys and Values for the ‘Green' tags and click Start Deployment Mode:
    The Green and Blue Instances must have the same tag key but different tag value.
 
 <img src="/elastigroup/_media/blue-green-deployment_3.png" />
 
 4. Elastigroup will then provision new instances and tag them with the Green Tags.
-5. Once instances were launched, you may go to your AWS console and start a CodeDeploy deployment. Make sure to choose ‘Amazon EC2 Instances’ in the ‘Identify instances to include in the new environment’ and use the same ‘Green’ tags provided in step 3.
+5. Once instances were launched, you may go to your AWS console and start a CodeDeploy deployment. Make sure to choose ‘Amazon EC2 Instances' in the ‘Identify instances to include in the new environment' and use the same ‘Green' tags provided in step 3.
 
 <img src="/elastigroup/_media/blue-green-deployment_4.png" />
 

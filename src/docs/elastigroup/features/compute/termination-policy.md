@@ -10,7 +10,7 @@ Supported termination policies are:
 The following are features related to termination process:
 
 - Detach instances. You can also decide which instance to terminate manually by using the detach option.
-- Lock instances. If you have some instances that are running jobs and you don’t want to terminate them you can also use the lock/protect option.
+- Lock instances. If you have some instances that are running jobs and you don't want to terminate them you can also use the lock/protect option.
 - Unlock instances. Release the instance from the protection.
 
 ---
@@ -31,7 +31,7 @@ The following parameters are taken into consideration:
 - Spot availability prediction. The system continuously monitors and predicts spot markets performance.
   We prefer to terminate first instances from volatile markets so we could keep instances in stable and better markets.
 - Strategy questions. How many reserved instances, how many on demand instances etc.
-  According to defined strategy on Elastigroup, we check if On-Demand count was set – we won’t terminate them. We prefer to terminate first the spot instances before RIs and ODs.
+  According to defined strategy on Elastigroup, we check if On-Demand count was set – we won't terminate them. We prefer to terminate first the spot instances before RIs and ODs.
 - AMI status. Prefer to scale down first the instances with older AMI version.
 - Time considerations (Newest vs Oldest). Like AMI status, we are checking instance uptime. Prefer to terminate first the oldest instances.
 
@@ -39,8 +39,8 @@ The algorithm assigns weights to each of the parameters stated above, calculates
 
 ## Newest Instance Policy
 
-This policy will change the behavior of the default policy’s Time Considerations to prefer the newest instances in the group.
+This policy will change the behavior of the default policy's Time Considerations to prefer the newest instances in the group.
 
 Using the newest instances policy enables you to extend as much as possible the functional and stable instances.
 
-Also, this policy can be useful when you are testing a new launch configuration, but you don’t want to keep it in production.
+Also, this policy can be useful when you are testing a new launch configuration, but you don't want to keep it in production.

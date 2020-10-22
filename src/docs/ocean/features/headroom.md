@@ -14,14 +14,14 @@ Headroom can be configured using one of two mechanisms, automatic or manual.
 
 ## Automatic Headroom
 
-Automatic refers to headroom that is dynamic and designed to accommodate the next scale up of services in the cluster. It is limited by a percent of the overall resources requested by the cluster’s workloads.
+Automatic refers to headroom that is dynamic and designed to accommodate the next scale up of services in the cluster. It is limited by a percent of the overall resources requested by the cluster's workloads.
 
 When you configure automatic headroom, Ocean calculates the total amount of resources (CPU, memory, and GPU) deployed in the cluster and then allocates a certain percent of that to be available as spare capacity. The default is 5%, but the value is user configurable.
 
 Ocean continually monitors the cluster and creates headroom according to the following process, in order to prepare the cluster for the next workload scale out:
 
-1. According to historical workload behavior that is monitored continuously, Ocean sorts the cluster’s workloads according to their chance and scope of scaling out.
-2. Based on the top 5 workloads’ request size, Ocean provisions infrastructure that is able to facilitate a scale out of those workloads, considering all of their constraints.
+1. According to historical workload behavior that is monitored continuously, Ocean sorts the cluster's workloads according to their chance and scope of scaling out.
+2. Based on the top 5 workloads' request size, Ocean provisions infrastructure that is able to facilitate a scale out of those workloads, considering all of their constraints.
 3. As per the total amount of headroom, Ocean continually balances so that it matches the percentage of resources defined by the user.
 
 As these steps are repeated, the desired percent of headroom is maintained at all times.
@@ -40,7 +40,7 @@ In order to set those units for different workloads with different constraints, 
 
 For example, a launch specification is configured to maintain two headroom units of 2048 MiB and 2000 CPU, and another launch specification is configured to maintain two headroom units of the same size. Then, a total of four headroom units will be maintained at all times, where two units each will match each of the corresponding launch specifications.
 
-## What’s Next?
+## What's Next?
 
 - Learn more about [Launch Specifications](ocean/features/launch-specifications.md).
 - Learn more about the Launch Specification APIs: [AWS](https://help.spot.io/spotinst-api/ocean/ocean-cloud-api/ocean-for-aws/launch-specifications/create/), [ECS](https://help.spot.io/spotinst-api/ocean/ocean-cloud-api/ocean-for-ecs/launch-specifications/create/), [GKE](https://help.spot.io/spotinst-api/ocean/ocean-cloud-api/ocean-for-gke/launch-specifications/create/)

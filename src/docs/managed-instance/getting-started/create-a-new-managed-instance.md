@@ -81,7 +81,7 @@ The creation of a Managed Instance requires at least one of the following persis
 
 ### Proceed to Network Options.
 
-Private IP can be persisted by maintaining the Instance’s ENI across replacements. Optionally, specify a particular Private IP to maintain.
+Private IP can be persisted by maintaining the Instance's ENI across replacements. Optionally, specify a particular Private IP to maintain.
 
 ---
 

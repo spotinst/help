@@ -10,7 +10,7 @@ Once you have connected your account, you are ready to create your first Elastig
 - [Create an Elastigroup for Azure](elastigroup/getting-started/create-an-elastigroup-for-azure.md)
 - [Create an Elastigroup for GCP](elastigroup/getting-started/create-an-elastigroup-for-gcp.md)
 
-## What’s Next?
+## What's Next?
 
 - Learn more about specific [Elastigroup Features](/elastigroup/features/).
 - Try out some of the Elastigroup features using one of the [Tutorials](/elastigroup/tutorials/).
