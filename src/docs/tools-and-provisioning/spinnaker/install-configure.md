@@ -8,9 +8,9 @@ The procedures for setting up and completing the Spinnaker integration with Spot
 
 Before you start this procedure, you must complete the following:
 
-1. Open a Spot account and connect your cloud provider. ([See Connect Your Cloud Provider Account](https://help.spot.io/connect-your-cloud-provider-account/).)
-2. Get an API token. (See [Create an API Token](https://docs.spot.io/spotinst-api/administration/create-an-api-token/).)
-3. Use the Spot console to create your Elastigroups.
+1. Open a Spot account and connect your cloud provider. ([See Connect Your Cloud Provider Account](connect-your-cloud-provider/aws-account).)
+2. Get an API token. (See [Create an API Token](administration/api/create-api-token).)
+3. Use the Spot Console to create your Elastigroups.
 
 ## Usage Notes
 
