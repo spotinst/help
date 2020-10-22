@@ -46,7 +46,7 @@ For an existing Elastigroup that already uses ECS, go to Edit Configuration and 
 
 View tasks pending in Elastgroup overview:
 
-<img src="/elastigroup/_media/aws-batch_4.png" width="384" height="191" />
+<img src="/elastigroup/_media/aws-batch_4.png" width="420" height="200" />
 
 ## New Elastigroup
 
