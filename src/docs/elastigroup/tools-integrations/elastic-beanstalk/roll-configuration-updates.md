@@ -25,7 +25,7 @@ The tutorial covers In-ASG and Independent Beanstalk integration methods in sepa
 
 - A healthy Beanstalk environment in your AWS account
 - Elastigroup is synced with Beanstalk environment.
-- The most up-to-date [Spot IAM policy](https://docs.spot.io/spotinst-api/administration/spotinst-policy/) is configured in your AWS account
+- The most up-to-date [Spot IAM policy](administration/api/spot-policy-in-aws) is configured in your AWS account
 
 ## In-ASG Beanstalk Integration Method
 
