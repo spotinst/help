@@ -63,8 +63,8 @@ When a node is being scaled down due to low utilization or Spot Instance interru
 2. In the event of a Spot predicted Interruption — Elastigroup launches a replacement Instance approximately 15 minutes ahead of time
 3. Elastigroup locates the running Pods & Containers on the node that is marked for termination
 4. Elastigroup sends an Evict signal to the Pods – one by one and grants each one of the pods with `120 seconds` ([Elastigroup Draining Timeout configuration](https://docs.spot.io/spotinst-api/elastigroup/amazon-web-services/create/#strategy.drainingTimeout)) of draining timeout
-   * The eviction process is responsible for re-scheduling each Pod on a new node in the cluster
-   * The eviction process waits until the draining timeout expires and then terminates the Pod
+   - The eviction process is responsible for re-scheduling each Pod on a new node in the cluster
+   - The eviction process waits until the draining timeout expires and then terminates the Pod
 5. Once all the containers & Pods have been successfully rescheduled on a different node(s) in the cluster, Elastigroup sends a command to terminate the actual node.
 
 ## Scale Down Prevention

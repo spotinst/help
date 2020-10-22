@@ -44,16 +44,12 @@ Body
             "maximum": 1000
           },
           "compute": {
-            "subnetIds": [
-              "subnet-1234"
-            ],
+            "subnetIds": ["subnet-1234"],
             "instanceTypes": {},
             "launchSpecification": {
               "imageId": "ami-12345",
               "userData": "",
-              "securityGroupIds": [
-                "sg-1234"
-              ],
+              "securityGroupIds": ["sg-1234"],
               "iamInstanceProfile": {
                 "arn": "Instance Profile ARN"
               },

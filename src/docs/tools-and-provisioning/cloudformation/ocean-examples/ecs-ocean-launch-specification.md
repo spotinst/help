@@ -62,15 +62,15 @@ Resources:
       accessToken: !Ref AccessToken
       accountId: "act-1234"
       oceanLaunchSpec:
-        oceanId: 'o-12345'
-        imageId: 'ami-1234'
+        oceanId: "o-12345"
+        imageId: "ami-1234"
         name: "Test launch config"
-        userData: ''
+        userData: ""
         securityGroupIds:
-        - sg-1234
+          - sg-1234
         iamInstanceProfile:
           arn:
         attributes:
-        - key: 'Description'
-          value: 'Test Launch config For Ocean Ecs'
+          - key: "Description"
+            value: "Test Launch config For Ocean Ecs"
 ```

@@ -54,9 +54,11 @@ The Provider can also be added as described [here](tools-and-provisioning/terraf
 
 1. Open the terminal and run `terraform initin` order to download the official Spot provider to the same folder from the previous step.
 2. Execute the following command:
+
 ```
 terraform import spotinst_elastigroup_aws.<name of the resource> <group-id>
 ```
+
 3. The updated `terraform.tfstate` should now contain your desired elastigroups in addition to the previous resource with the `-IMPORT` suffix.
 
 Remove the resource with the `-IMPORT` suffix.

@@ -30,6 +30,6 @@ Here's a diagram of the Auto-Recovery process:
 
 ## What's Next?
 
-* Create a [Wrapped EMR Cluster](elastigroup/tools-integrations/elastic-mapreduce/import-elastic-mapreduce-task-nodes) on Elastigroup to run tasks nodes for your existing EMR cluster on Spot instances.
-* Clone your [existing EMR cluster](elastigroup/tools-integrations/elastic-mapreduce/) into an Elastigroup.
-* Learn about Elastigroup's [Scaling Policies for EMR](elastigroup/tools-integrations/elastic-mapreduce/scaling-policies-for-emr).
+- Create a [Wrapped EMR Cluster](elastigroup/tools-integrations/elastic-mapreduce/import-elastic-mapreduce-task-nodes) on Elastigroup to run tasks nodes for your existing EMR cluster on Spot instances.
+- Clone your [existing EMR cluster](elastigroup/tools-integrations/elastic-mapreduce/) into an Elastigroup.
+- Learn about Elastigroup's [Scaling Policies for EMR](elastigroup/tools-integrations/elastic-mapreduce/scaling-policies-for-emr).
