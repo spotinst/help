@@ -52,7 +52,7 @@ Body
 
 Body
 
-```YML
+```yaml
 Resources:
   SpotinstOcean:
     Type: Custom::oceanEcsLaunchSpec
