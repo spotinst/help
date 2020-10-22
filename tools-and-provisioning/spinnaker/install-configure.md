@@ -14,9 +14,9 @@ Before you start this procedure, you must complete the following:
 
 ## Usage Notes
 
-* It is highly recommended to have a Spot account that contains only Elastigroups managed in Spinnaker.
-* Ensure that all of your Elastigroups are named according to the Spinnaker naming convention: application_name-stack-infrastructure_version
-* Using the Spinnaker dashboard to create Elastigroups is not currently supported.
+- It is highly recommended to have a Spot account that contains only Elastigroups managed in Spinnaker.
+- Ensure that all of your Elastigroups are named according to the Spinnaker naming convention: application_name-stack-infrastructure_version
+- Using the Spinnaker dashboard to create Elastigroups is not currently supported.
 
 ## Install Halyard
 
