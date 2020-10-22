@@ -1,6 +1,6 @@
 # Set Health Checks
 
-## Configure Elastigroup’s Custom Health Checks
+## Configure Elastigroup's Custom Health Checks
 
 Spot offers an option for you to use our own custom Health Check Service (HCS) in your Elastigroup. You can read all about it right here: [Custom Health Check Service](elastigroup/tools-integrations/custom-health-check-service). After setting up HCS in your VPC you can reference it for the desired Elastigroup. To get started enter the Management view of the desired Elastigroup and under the Actions menu select Set Health Check.
 

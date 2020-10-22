@@ -51,7 +51,7 @@ A roll is required once the update may affect the instance configuration, specif
 ## Behavior Notes
 
 - One failed batch is enough to fail the deployment. Make sure you provide ample “Grace Period” for the instances to become healthy.
-- Your Elastigroup won’t perform new rolls or any scale down activities until the failed roll will be completely stopped or resolved.
+- Your Elastigroup won't perform new rolls or any scale down activities until the failed roll will be completely stopped or resolved.
 - Scaling behaviour – The scaling down policy will be suspended until the deployment is finished. We have created this mechanism to allow you scaling up in case needed and avoid losing servers at the same time.
 
 ## Roll Failure
@@ -66,4 +66,4 @@ There are several reasons why a roll may fail. Some of the more common issues ar
 
 If a deployment fails the instance remain running for troubleshooting. Some instances in the Elastigroup may have the old configuration, while the rest may have the new configuration. To fix the failed roll, _stop_ and _Detach_ the old/new instances. Update the Elastigroup configuration and _re-deploy_ to apply the configuration updates.
 
-Elastigroup won’t perform new rolls or any scale down activities until the failed roll is completely stopped or resolved.
+Elastigroup won't perform new rolls or any scale down activities until the failed roll is completely stopped or resolved.

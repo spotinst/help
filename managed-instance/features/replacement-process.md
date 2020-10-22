@@ -4,11 +4,11 @@ In case the underlying EC2 instance has to be replaced for any reason, the Manag
 
 ## Pause Stage
 
-At first, as the Managed instance is Paused. Once the underlying EC2 instance has gracefully completed it’s shutdown process, it’s persisted resources can be maintained:
+At first, as the Managed instance is Paused. Once the underlying EC2 instance has gracefully completed it's shutdown process, it's persisted resources can be maintained:
 
 - A final Root volume snapshot can be taken, from which a new AMI can be created, which will be used to launch the next instance upon Resume.
 - The Data volume can be maintained, as configured in the Data persistence settings:
-  - Snapshot backups: A final Data volume snapshot is taken, which is used in the next instance’s Block Device Mapping configuration.
+  - Snapshot backups: A final Data volume snapshot is taken, which is used in the next instance's Block Device Mapping configuration.
   - Reattach + Multi AZ: A final Data volume snapshot is created, and used to create a new volume to be attached once the next instance is launched in a new AZ.
   - Reattach + Single AZ: The same Data Volume is retained as is, containing the absolute latest data written to it.
 - The ENI of the instance is made available to be used for the next instance upon Resume.
@@ -21,7 +21,7 @@ Directly following the completion of the state maintenance, the Managed Instance
 - Persisted Data volumes are created on launch from snapshots used in the launch requests Block Device Mapping, or reattached post launch.
 - The persisted ENI is used in the network configuration of the new instance.
 
-The whole process can take as little as 1-2 minutes, but generally depends on variables such as instance termination time, volume sizes and the amount of data written since the last snapshot (only the first snapshot of a volume covers it’s full size, while subsequent snapshots are incremental and take less time).
+The whole process can take as little as 1-2 minutes, but generally depends on variables such as instance termination time, volume sizes and the amount of data written since the last snapshot (only the first snapshot of a volume covers it's full size, while subsequent snapshots are incremental and take less time).
 
 ## Replacement Scenarios
 

@@ -2,7 +2,7 @@
 
 The Spot Controller is a pod that resides within your k8s cluster, enabling the integration with the Spot platform. It is responsible for collecting metrics and events that are pushed via a secured link to the Spot SaaS platform for the purpose of capacity scaling activities as well as additional features of the Spot Kubernetes integration.
 
-This page describes the permissions required by the Spot Controller. All permissions listed here can be viewed and edited in the controller’s YAML file used in its installation process.
+This page describes the permissions required by the Spot Controller. All permissions listed here can be viewed and edited in the controller's YAML file used in its installation process.
 
 The permissions are divided into the following sections:
 

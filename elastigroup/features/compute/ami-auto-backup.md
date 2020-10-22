@@ -25,7 +25,7 @@ The AMI Auto-Backup provides several options for the frequency in which the back
 
 <img src="/elastigroup/_media/compute-ami-autobackup-01.png" width="396" height="429" />
 
-You’re all set! Elastigroup will now automatically create backup images.
+You're all set! Elastigroup will now automatically create backup images.
 
 ## Manually Change an AMI
 
@@ -42,6 +42,6 @@ In order to manually update the AMI of an Elastigroup that has AMI Auto Backup e
 
 ---
 
-**Note**: Without disabling AMI Auto-Backup, an update to the group’s AMI config will be overwritten without affecting the instances.
+**Note**: Without disabling AMI Auto-Backup, an update to the group's AMI config will be overwritten without affecting the instances.
 
 ---

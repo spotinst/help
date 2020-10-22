@@ -17,7 +17,7 @@ Spot Elastigroup consists of two components:
 
 Elastigroup makes sure that all pods in the cluster have a place to run, no matter if there is any CPU load or not. Moreover, it tries to ensure that there are no unneeded nodes in the cluster.
 
-Metric-based cluster autoscalers don’t care about `Pods` when scaling up and down. As a result, they may add a node that will not have any Pods, or remove a node that has some system-critical pods on it, like `kube-dns`. Usage of these autoscalers with Kubernetes is discouraged.
+Metric-based cluster autoscalers don't care about `Pods` when scaling up and down. As a result, they may add a node that will not have any Pods, or remove a node that has some system-critical pods on it, like `kube-dns`. Usage of these autoscalers with Kubernetes is discouraged.
 
 ## Changing the Size of the Kubernetes Cluster
 
@@ -41,9 +41,9 @@ Elastigroup constantly checks which nodes are unneeded in the cluster.
 A node is considered for removal when:
 
 - All pods running on the node (except these that run on all nodes by default, like manifest-run pods or pods created by daemonsets) can be moved to other nodes in the cluster.
-- The sum of cpu and memory requests of all pods running on this node is smaller than 50% of the node’s allocatable (not node capacity )
+- The sum of cpu and memory requests of all pods running on this node is smaller than 50% of the node's allocatable (not node capacity )
 
-Elastigroup simulates the cluster’s topology and state “post” the scale down activity and decides whether the action can be executed or not.
+Elastigroup simulates the cluster's topology and state “post” the scale down activity and decides whether the action can be executed or not.
 
 ## Constraints and Labels
 
@@ -72,14 +72,14 @@ When a node is being scaled down due to low utilization or Spot Instance interru
 - Pods with restrictive PodDisruptionBudget. (Read more)
 - `Kube-system Pods` that:
   - are not run on the node by default, \*
-  - don’t have PDB or their PDB is too restrictive
+  - don't have PDB or their PDB is too restrictive
 - Pods that are not backed by a controller object (so not created by deployment, replica set, job, stateful set etc). \*
 - Pods with local storage. \*
 - Pods that cannot be moved elsewhere due to various constraints (lack of resources, non-matching `node selectors` or `affinity`, matching `anti-affinity`, etc)
 
 ## How does Horizontal Pod Autoscaler (HPA) work with Spot Elastigroup?
 
-Horizontal Pod Autoscaler changes the deployment’s or replicaset’s number of replicas based on CPU load or other custom metrics. If the load increases, HPA will create new replicas, for which there may or may not be enough space in the cluster.
+Horizontal Pod Autoscaler changes the deployment's or replicaset's number of replicas based on CPU load or other custom metrics. If the load increases, HPA will create new replicas, for which there may or may not be enough space in the cluster.
 If there are not enough resources, Spot Elastigroup will try to bring up new nodes, so that the HPA-created pods have a place to run. If the load decreases, HPA will stop some of the replicas. As a result, some nodes may become underutilized or completely empty, and then Spot Elastigroup will delete such unneeded nodes.
 
 ## Scale to 0
@@ -98,4 +98,4 @@ Before starting to delete a node, Elastigroup makes sure that `PodDisruptionBudg
 
 The status of each Kubernetes node is represented as a “condition” object, that describes the status of different aspects of the node. The conditions types are: `OutOfDisk`, `Ready`, `MemoryPressure`, `DiskPressure`, `NetworkUnavailable`. Each condition type has a status `False` / `True` / `Unknown`
 
-Elastigroup monitors the nodes’ status every 30 seconds and in case it identifies that the `Ready` condition is set to `False` or `Unknown` it will consider this instance as Unhealthy and will trigger a replacement to replace it with a new healthy node.
+Elastigroup monitors the nodes' status every 30 seconds and in case it identifies that the `Ready` condition is set to `False` or `Unknown` it will consider this instance as Unhealthy and will trigger a replacement to replace it with a new healthy node.

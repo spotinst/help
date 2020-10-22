@@ -20,7 +20,7 @@ When you create a new user or add an existing user to an account, you must assig
 
 **Viewer**
 
-This role allows read-only access. The user is able to view all data regarding the account’s Elastigroups and relevant statistics, but is not able to apply any actions.
+This role allows read-only access. The user is able to view all data regarding the account's Elastigroups and relevant statistics, but is not able to apply any actions.
 
 **Editor**
 

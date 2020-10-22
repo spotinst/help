@@ -1,14 +1,14 @@
 # Simple Scaling Policies
 
-Simple scaling policies provide the ability to accommodate increased workloads or alternatively scale down to maximize cost efficiency during quiet hours. Set as many policies as needed to maximize the Elastigroup’s efficiency.
+Simple scaling policies provide the ability to accommodate increased workloads or alternatively scale down to maximize cost efficiency during quiet hours. Set as many policies as needed to maximize the Elastigroup's efficiency.
 
 ## Scaling Policy Parameters
 
 Each Simple Scaling Policy has the following set of parameters:
 
-- Policy Name: The name to assign to the policy. It’s recommended using a meaningful name to help you understand scaling actions better in the future.
+- Policy Name: The name to assign to the policy. It's recommended using a meaningful name to help you understand scaling actions better in the future.
 - Source: The scaling policy can utilize metrics from either AWS CloudWatch or Spot Spectrum.
-- Auto Scale Based On: The metric used to trigger the policy’s scaling action. Available options:
+- Auto Scale Based On: The metric used to trigger the policy's scaling action. Available options:
   - EC2 – CPU Utilization
   - ELB – Latency
   - EC2 – Network Out
@@ -24,8 +24,8 @@ Each Simple Scaling Policy has the following set of parameters:
   - Remove: The default value for down scaling. Remove the specified amount of instances or vCPU units.
   - Set maximum of: Set a new maximum capacity value for the Elastigroup.
   - Decrease: Decrease capacity by a specified percentage.
-- Amount: How many instances or vCPU will be scaled (you can also specify expressions). If the adjustment isn’t whole, Elastigroup rounds it to the nearest whole.
-- Dimensions: Specify the name of the dimension used and it’s value. If no dimension is specified, the default is the average of instances in the group, divided into instance types. Meaning an average value of the sampled metric is calculated for each instance type currently running in the group, and the first value to cross the threshold will trigger the policy. In the case of scaling up, it’s likely to be the smallest instance type, as it will be the first to become loaded, while in scaling down the trigger will likely be the largest instance type.
+- Amount: How many instances or vCPU will be scaled (you can also specify expressions). If the adjustment isn't whole, Elastigroup rounds it to the nearest whole.
+- Dimensions: Specify the name of the dimension used and it's value. If no dimension is specified, the default is the average of instances in the group, divided into instance types. Meaning an average value of the sampled metric is calculated for each instance type currently running in the group, and the first value to cross the threshold will trigger the policy. In the case of scaling up, it's likely to be the smallest instance type, as it will be the first to become loaded, while in scaling down the trigger will likely be the largest instance type.
 
 ## Advanced Parameters
 

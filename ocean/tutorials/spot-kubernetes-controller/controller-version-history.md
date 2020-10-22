@@ -8,7 +8,7 @@ Align node with launchSpec labels once on startup.
 
 Changed
 
-Deployment.yaml : added ‘readinessProbe’
+Deployment.yaml : added ‘readinessProbe'
 
 ## [1.0.63] – 2020-08-06
 
@@ -99,8 +99,8 @@ Performance improvement
 
 ## [1.0.48] – 2019-11-20
 
-Added ‘horizontalpodautoscalers’ reporting
-Support ‘disable-auto-update’ parameter via configMap
+Added ‘horizontalpodautoscalers' reporting
+Support ‘disable-auto-update' parameter via configMap
 
 ## [1.0.47] – 2019-10-22
 

@@ -16,7 +16,7 @@ Under “Elastigroups” view:
 
 <img src="/elastigroup/_media/corefeatures-config-alerts-01.png" />
 
-The affected Elastigroup’s dashboard displays the following message at the top of the page:
+The affected Elastigroup's dashboard displays the following message at the top of the page:
 
 <img src="/elastigroup/_media/corefeatures-config-alerts-02.png" width="400" height="62" />
 
@@ -36,7 +36,7 @@ BDM in group configuration (JSON):
 
 <img src="/elastigroup/_media/corefeatures-config-alerts-05.png" />
 
-Resolution: Remove the BDM configuration block from the group’s JSON.
+Resolution: Remove the BDM configuration block from the group's JSON.
 
 ## What's Next?
 

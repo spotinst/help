@@ -59,7 +59,7 @@ The spot-ocean command-line flag enables Ocean integration.
 Alternatively, you can create a cluster using configuration files.
 
 1. Create a cluster.yaml file to hold your cluster and worker nodes configuration.
-   The `spotOcean: {}` section below enables Ocean integration. This section can remain empty, using all defaults, or if you’d like to configure your Ocean integration, create a `cluster.yaml` file with the following configuration:
+   The `spotOcean: {}` section below enables Ocean integration. This section can remain empty, using all defaults, or if you'd like to configure your Ocean integration, create a `cluster.yaml` file with the following configuration:
 
 ```yaml
 apiVersion: eksctl.io/v1alpha5
@@ -136,8 +136,8 @@ Perform the following steps to verify your kubectl and Ocean controller installa
 
 `$ kubectl get deployment --namespace kube-system NAME READY UP-TO-DATE AVAILABLE AGE spotinst-kubernetes-cluster-controller 1/1 1 1 5m`
 
-That’s it! Your Ocean cluster is up and will now ensure the most cost-effective capacity and sizing possible for your cluster.
+That's it! Your Ocean cluster is up and will now ensure the most cost-effective capacity and sizing possible for your cluster.
 
-## What’s Next?
+## What's Next?
 
 Learn how to [Join an Existing Cluster](ocean/tools-and-integrations/eksctl/join-an-existing-cluster.md) to Ocean using eksctl.

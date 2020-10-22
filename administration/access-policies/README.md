@@ -57,7 +57,7 @@ The following rules apply to policies:
 - An action that is not explicitly allowed by a policy is denied by default.
 - A policy-based user with no policies is equivalent to a viewer user.
   Organization Administrators, Account Editors, and policy-based users with the proper permissions are able to grant permissions.
-- All API tokens belonging to the user will be affected by the user’s current policy.
+- All API tokens belonging to the user will be affected by the user's current policy.
 - Permissions to create objects (for example: elastigroup:create\*) do not grant permissions on the created objects themselves.
 
 ## What's Next?

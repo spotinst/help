@@ -29,22 +29,22 @@ Elastigroup also enables you to clone your existing EMR cluster into an Elastigr
 
 ## Step 4: Scaling Policies (Optional)
 
-- Elastigroup offers a wide variety of scaling options for EMR, both for Core and Task nodes. Learn more about Elastigroup’s scaling policies for EMR [here](elastigroup/tools-integrations/elastic-mapreduce/scaling-policies-for-emr).
+- Elastigroup offers a wide variety of scaling options for EMR, both for Core and Task nodes. Learn more about Elastigroup's scaling policies for EMR [here](elastigroup/tools-integrations/elastic-mapreduce/scaling-policies-for-emr).
 - Click Next.
 
 ## Step 5: Review and Create
 
-The Creation Wizard prepares a json template to launch an Elastigroup with the EMR configuration. All that’s left to do is click Create!
+The Creation Wizard prepares a json template to launch an Elastigroup with the EMR configuration. All that's left to do is click Create!
 
 <img src="/elastigroup/_media/import-elastic-mapreduce-task-nodes_2.png" />
 
-## That’s It!
+## That's It!
 
-Elastigroup is now running Task nodes for your EMR cluster, congrats! You’re now in the Elastigroup Manager view, where you can review, manage and monitor your running Elastigroup.
+Elastigroup is now running Task nodes for your EMR cluster, congrats! You're now in the Elastigroup Manager view, where you can review, manage and monitor your running Elastigroup.
 
-## What’s Next?
+## What's Next?
 
 - [Clone your EMR cluster](elastigroup/tools-integrations/elastic-mapreduce/) into an Elastigroup.
 - Create Scaling Policies for EMR Core and Task nodes.
-- AWS’s EMR can occasionally get stuck in Resizing status. Elastigroup has an EMR Auto-Recovery process that monitors the resizing process and if necessary launches a replacement instance group. To learn more about Elastigroup’s EMR Auto-Recovery click [here](elastigroup/tools-integrations/elastic-mapreduce/).
+- AWS's EMR can occasionally get stuck in Resizing status. Elastigroup has an EMR Auto-Recovery process that monitors the resizing process and if necessary launches a replacement instance group. To learn more about Elastigroup's EMR Auto-Recovery click [here](elastigroup/tools-integrations/elastic-mapreduce/).
 - Check out our [API Docs](https://docs.spot.io/spotinst-api/) to learn how to create an Elastigroup to run your Task nodes using RESTful APIs

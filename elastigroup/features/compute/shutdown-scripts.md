@@ -16,7 +16,7 @@ Shutdown scripts must start with the #! characters and the path to the interpret
 
 ### Root User
 
-Scripts entered as shutdown scripts are executed as the root user. It is not necessary to use sudo in the script. Remember that any files you create will be owned by root; if you need non-root users to have file access, you should modify the permissions accordingly in the script. Also, because the script doesn’t run interactively, you cannot include commands that require user feedback (such as rm without the -f flag).
+Scripts entered as shutdown scripts are executed as the root user. It is not necessary to use sudo in the script. Remember that any files you create will be owned by root; if you need non-root users to have file access, you should modify the permissions accordingly in the script. Also, because the script doesn't run interactively, you cannot include commands that require user feedback (such as rm without the -f flag).
 
 ### Last Step in User Data
 

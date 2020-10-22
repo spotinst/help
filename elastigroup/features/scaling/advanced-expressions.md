@@ -2,7 +2,7 @@
 
 The scaling action to be performed can also be defined as a mathematical expression.
 
-If you don’t want to use a static value for scaling, you can specify a scaling action parameter using expressions which will be calculated on-the-fly.
+If you don't want to use a static value for scaling, you can specify a scaling action parameter using expressions which will be calculated on-the-fly.
 
 ## Variables
 

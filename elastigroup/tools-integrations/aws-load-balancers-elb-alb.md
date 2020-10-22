@@ -6,7 +6,7 @@ Elastigroup launches the target capacity in multiple uncorrelated Spot Markets, 
 
 <img src="/elastigroup/_media/aws-load-balancers-elb-alb_1.png" />
 
-To ensure that the load balancer stops sending requests to instances that are marked for termination, Elastigroup will de-register and drain the instances a few minutes before the instance gets a shutdown signal from AWS. At the same time, Elastigroup will begin spinning up new instances in parallel to ensure your desired capacity won’t be degraded.
+To ensure that the load balancer stops sending requests to instances that are marked for termination, Elastigroup will de-register and drain the instances a few minutes before the instance gets a shutdown signal from AWS. At the same time, Elastigroup will begin spinning up new instances in parallel to ensure your desired capacity won't be degraded.
 
 Specify one or more load balancers, and Elastigroup will register every instance with the load balancer. Elastigroup also de-registers instances from the load balancer upon termination and sends a `SNS\Email notifications`.
 
@@ -17,7 +17,7 @@ Specify one or more load balancers, and Elastigroup will register every instance
 
    - **Amazon Load Balancer** – The ELB or ALB Target Group.
    - **Auto Healing** – Select which health check service will automatically perform health checks on your EC2 instances. If an instance fails the health check, it is automatically removed from the Elastigroup and will be replaced with a new instance.
-     - **ELB** – Use amazon’s Elastic load balancer health check.
+     - **ELB** – Use amazon's Elastic load balancer health check.
      - **TARGET Group** – Use the AWS Application load balancer health check.
      - **EC2** – Use the AWS EC2 Status check.
      - **HCS** – Use Spot health check. You can read more about it here: [Spot HCS service](elastigroup/tools-integrations/custom-health-check-service).

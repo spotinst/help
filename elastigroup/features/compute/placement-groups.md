@@ -55,7 +55,7 @@ An existing Placement Group configured in your AWS account.
   - Memory optimized: cr1.8xlarge, r3.large, r3.xlarge, r3.2xlarge, r3.4xlarge, r3.8xlarge| r4.large, r4.xlarge, r4.2xlarge, r4.4xlarge, r4.8xlarge, r4.16xlarge, x1.16xlarge, x1.32xlarge
   - Storage optimized: d2.xlarge, d2.2xlarge, d2.4xlarge, d2.8xlarge, hi1.4xlarge, hs1.8xlarge, i2.xlarge, i2.2xlarge, i2.4xlarge, i2.8xlarge, i3.large, i3.xlarge, i3.2xlarge, i3.4xlarge, i3.8xlarge, i3.16xlarge
   - Accelerated computing: cg1.4xlarge, f1.2xlarge, f1.16xlarge, g2.2xlarge, g2.8xlarge, p2.xlarge, p2.8xlarge, p2.16xlarge
-- You can’t associate an existing instance into a placement group. You must create a new instance in the placement group.
+- You can't associate an existing instance into a placement group. You must create a new instance in the placement group.
 - Capacity reservation (via Reserved instances) can be used by instances in a placement group that are assigned to the same Availability Zone. However, it is not possible to explicitly reserve capacity for a placement group.
 - Members of the placement group must address each other via their private IP addresses.
 - When using on-demand instances, if you stop and then start an instance, in some cases AWS will fail to find the required capacity causing the Elastigroup.

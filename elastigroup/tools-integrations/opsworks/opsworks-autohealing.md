@@ -5,12 +5,12 @@ Various Elastigroup integrations offer autohealing of instances using health-che
 OpsWorks Health Check is based on the following parameters:
 
 - OpsWorks Instance Status
-- Layer Membership Verification (if an instance is a part of the OpsWorks ‘layer’ or not)
+- Layer Membership Verification (if an instance is a part of the OpsWorks ‘layer' or not)
 
 Based on these parameters, the Health Check status is evaluated and can return one of the following:
 
 - Healthy: The Instance a part of the OpsWorks integrated layer.
-- Unknown: The instance’s unknown health status might be a result of the following:
+- Unknown: The instance's unknown health status might be a result of the following:
   - The instance OpsWorks status is in one of the following states:
     - booting
     - pending

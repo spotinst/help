@@ -1,6 +1,6 @@
 # Scheduling
 
-Elastigroup provides a cron-based scheduling tool to schedule scaling actions, capacity changes and deployments. Schedule scale up processes in advance of anticipated holiday traffic, keep your costs down by terminating dev environments over weekends or schedule a deployment to minimize the potential impact on your users. Automate your regular scaling processes with Elastigroup and ensure that you’re paying only for the resources that you need.
+Elastigroup provides a cron-based scheduling tool to schedule scaling actions, capacity changes and deployments. Schedule scale up processes in advance of anticipated holiday traffic, keep your costs down by terminating dev environments over weekends or schedule a deployment to minimize the potential impact on your users. Automate your regular scaling processes with Elastigroup and ensure that you're paying only for the resources that you need.
 
 ## How It Works
 
@@ -20,6 +20,6 @@ The cron expression: `30 16 * * 1-5` will repeat at 16:30 UTC on Monday-Friday.
 
 <img src="/elastigroup/_media/corefeatures-scheduling-01.png" />
 
-## What’s Next?
+## What's Next?
 
 Schedule tasks using the [Elastigroup API](https://docs.spot.io/spotinst-api/elastigroup/amazon-web-services/create/).

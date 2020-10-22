@@ -2,7 +2,7 @@
 
 ## Integrate Chef with Elastigroup
 
-One of the greatest challenges of using Chef in the Cloud is when using it in dynamic workloads that scale up and down. While on-demand instances can be stopped gracefully and guarantee to run infinitely, Spot Instances are more likely to be terminated over time. The Chef server is unaware of Spot Instance interruptions, which cause a ‘Zombie’ scenario and potential errors.
+One of the greatest challenges of using Chef in the Cloud is when using it in dynamic workloads that scale up and down. While on-demand instances can be stopped gracefully and guarantee to run infinitely, Spot Instances are more likely to be terminated over time. The Chef server is unaware of Spot Instance interruptions, which cause a ‘Zombie' scenario and potential errors.
 
 Our Chef integration uses Chef API calls to trigger register and deregister operations for instances that were created via Elastigroup.
 
@@ -14,11 +14,11 @@ Our Chef integration uses Chef API calls to trigger register and deregister oper
 
 ## Step 2: Create a User
 
-- On your Chef server, create a user that will serve the integration, the user must be granted ‘delete’ and ‘Update’ permissions.
+- On your Chef server, create a user that will serve the integration, the user must be granted ‘delete' and ‘Update' permissions.
 
 ## Step 3: Configure Instance Registration
 
-- Add the following script to your Elastigroup’s User Data, located under Advanced Settings in the Creation Wizard’s Compute tab or in Elastigroup’s API. Make sure you add your own SPOTINST_TOKEN and RSA.
+- Add the following script to your Elastigroup's User Data, located under Advanced Settings in the Creation Wizard's Compute tab or in Elastigroup's API. Make sure you add your own SPOTINST_TOKEN and RSA.
 
 ```bash
 #!/bin/bash
@@ -76,7 +76,7 @@ For self-signed authentication, you should inject its crt file to `etc/chef/trus
 
 ## Step 4: Configure Instance Deregistration
 
-While creating your Elastigroup, on the Compute screen, you will find a ‘3rd Party Integrations’ section. Check the Chef integration and enter the following data:
+While creating your Elastigroup, on the Compute screen, you will find a ‘3rd Party Integrations' section. Check the Chef integration and enter the following data:
 
 `API Server` – Public DNS record or Public IP (e.g., ec2-52-206-204-15.compute-1.amazonaws.com or 52.206.204.1)
 `Organization` – Organization name (e.g. myOrg)
@@ -84,4 +84,4 @@ While creating your Elastigroup, on the Compute screen, you will find a ‘3rd P
 `User` – Enter the name of the user you have created in step #2
 `Pem Key` – Please enter the new user key
 
-That’s it. Your Chef integration is all set.
+That's it. Your Chef integration is all set.

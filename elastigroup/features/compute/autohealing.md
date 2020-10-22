@@ -9,10 +9,10 @@ Autohealing enables you to select which health check service will be used to det
 Elastigroup supports the following Health Check types:
 
 - None – No replacement will happen – Unhealthy instances will remain in the group.
-- ELB – Amazon’s Elastic Load Balancer (Classic load balancer) health check.
+- ELB – Amazon's Elastic Load Balancer (Classic load balancer) health check.
 - TARGET_GROUP – AWS Application Load Balancer health check.
 - EC2 – AWS EC2 Status check.
-- [HCS](elastigroup/tools-integrations/custom-health-check-service.md) – Spot’s health check.
+- [HCS](elastigroup/tools-integrations/custom-health-check-service.md) – Spot's health check.
 - [ECS](elastigroup/tutorials/configure-health-checks-and-autohealing.md) – ECS Cluster Instance Health check.
 - [K8S_NODE](elastigroup/tools-integrations/kubernetes-with-elastigroup/configure-autohealing-for-kubernetes.md) – Kubernetes Status check. Requires integration with a Kubernetes cluster.
 - NOMAD_NODE – Nomad Status check. Requires integration with a Nomad cluster.

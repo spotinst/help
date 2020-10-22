@@ -60,7 +60,7 @@ Please contact your account executive for more information.
 
 ## Question: No Data In Dashboard
 
-Why don’t I see data in my dashboard?
+Why don't I see data in my dashboard?
 
 ### Answer:
 

@@ -1,6 +1,6 @@
 # Bitium SAML Authentication
 
-It is easy to manage your accounts with the most popular identity providers. Let’s walk through how this integration works with Bitium.
+It is easy to manage your accounts with the most popular identity providers. Let's walk through how this integration works with Bitium.
 
 ## In your Bitium Account
 

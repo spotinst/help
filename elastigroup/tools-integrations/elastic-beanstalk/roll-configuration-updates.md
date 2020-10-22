@@ -36,7 +36,7 @@ While in Maintenance Mode, the service remains available and your instances are 
 <img src="/elastigroup/_media/roll-configuration-updates_1.png" />
 
 2. Perform the changes to the Beanstalk environment in the [AWS Console](https://console.aws.amazon.com/).
-3. After making the changes, select Roll Updates to initiate a blue/green deployment that gracefully replaces the Elastigroup’s instances with new instances containing the configuration changes. To learn more about deployments and rolling in Elastigroup, click [here](elastigroup/tutorials/elastigroup-actions-menu/deploy-or-roll-elastigroup).
+3. After making the changes, select Roll Updates to initiate a blue/green deployment that gracefully replaces the Elastigroup's instances with new instances containing the configuration changes. To learn more about deployments and rolling in Elastigroup, click [here](elastigroup/tutorials/elastigroup-actions-menu/deploy-or-roll-elastigroup).
 
 ## Independent Integration Method
 

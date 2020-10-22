@@ -8,16 +8,16 @@ The ECS topology is built on clusters, where each cluster has services (which ca
 
 For example, if a cluster runs 10 machines of c3.large (2 vCPUs and 3.8 GiB of RAM) and 10 machines of c4.xlarge (4 vCPUs and 7.5 GiB of RAM), the total vCPUs is 60\*1024 = 61,440 CPU Units and the total RAM is 113 GiB.
 
-The issue here is that if a single task requires more RAM than the individual instance has, it can’t be scheduled. In the example above, a task with 16 GiB of RAM won’t start, despite the total available RAM being 113 GiB. Ocean matches the task with the appropriate instance type and size while requiring zero overhead or management.
+The issue here is that if a single task requires more RAM than the individual instance has, it can't be scheduled. In the example above, a task with 16 GiB of RAM won't start, despite the total available RAM being 113 GiB. Ocean matches the task with the appropriate instance type and size while requiring zero overhead or management.
 
-Ocean dynamically scales the cluster up and down to ensure there are always sufficient resources to run all tasks and at the same time maximizes resource allocation in the cluster. It does so by optimizing task placement across the cluster in a process we call Tetris Scaling, and by automatically managing headroom, a buffer of spare capacity (in terms of both memory and CPU) that ensures that when you want to quickly scale more containers, you don’t have to wait for new VMs (i.e., instances) to be provisioned.
+Ocean dynamically scales the cluster up and down to ensure there are always sufficient resources to run all tasks and at the same time maximizes resource allocation in the cluster. It does so by optimizing task placement across the cluster in a process we call Tetris Scaling, and by automatically managing headroom, a buffer of spare capacity (in terms of both memory and CPU) that ensures that when you want to quickly scale more containers, you don't have to wait for new VMs (i.e., instances) to be provisioned.
 
 ## Scale Up Behavior
 
 Ocean keeps track of tasks that cannot be scheduled and employs the following process for scaling up.
 
 - Ocean continuously looks for unsatisfied ECS services, i.e., services for which the count of running tasks is lower than the desired task count.
-- For those services, Ocean simulates placement of the desired tasks on the cluster’s current container instances, including instances that were just launched and not yet registered as container instances (for example, according to previous scale up activity).
+- For those services, Ocean simulates placement of the desired tasks on the cluster's current container instances, including instances that were just launched and not yet registered as container instances (for example, according to previous scale up activity).
 
 - If the simulation results in no container instances that are able to host all pending tasks, Ocean will scale up for the remaining tasks. During the scale up, Ocean uses its launch specifications to consider all placement constraints.
 
@@ -48,7 +48,7 @@ In order to use this feature, you will need `ecs:putAttributes` permissions in y
 Ocean monitors the cluster and runs bin-packing algorithms that simulate different permutations of task placement across the available container instances. A container instance is considered for scale down when:
 
 - All the running tasks on the particular instance are schedulable on other instances.
-- The instance’s removal won’t reduce the headroom below the target.
+- The instance's removal won't reduce the headroom below the target.
 - Ocean will prefer to downscale the least utilized instances first.
 
 When an instance is chosen for scale-down it will be drained. Its running tasks are rescheduled on other instances, and the instance is then terminated.
@@ -81,7 +81,7 @@ For more information about tagging in ECS, see [Tagging Your Amazon EC2 Resource
 
 Daemon tasks run on each instance or on a selected set of instances in an Amazon ECS cluster and can be used to provide common functionality, such as logging and monitoring. Ocean automatically identifies and accounts for Daemon Tasks when optimizing capacity allocation to make sure the launched instances have enough capacity for both the daemon services and the pending tasks. It also monitors for new container instances in the cluster and adds the Daemon Tasks to them. Ocean supports and considers Daemon services and tasks, both for scale down and scale up behavior.
 
-Scale down: A Daemon task which was part of a scaled-down instance won’t initialize a launch of a new instance and will not be placed on a different container instance.
+Scale down: A Daemon task which was part of a scaled-down instance won't initialize a launch of a new instance and will not be placed on a different container instance.
 
 Scale up: In case there is a Daemon scheduling strategy configured to one of the cluster services, Elastigroup will consider all newly launched instances to have enough spare capacity available in order to run the Daemon task properly in addition to other pending tasks.
 

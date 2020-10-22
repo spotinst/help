@@ -75,7 +75,7 @@ You can do steps 3 and 4 via our API. For more information go to [the API wiki](
 
 ---
 
-Now – the health check is running, and Spot’s monitor service will send HCS requests according to the specified interval.
+Now – the health check is running, and Spot's monitor service will send HCS requests according to the specified interval.
 The healthiness should be available shortly through the Instances table list:
 
 <img src="/elastigroup/_media/custom-health-check-service_4.png" />

@@ -4,9 +4,9 @@
 
 [KMS Keys](elastigroup/tutorials/elastigroup-tasks/create-encryption-key) are fine as long as you are using a single AWS account. What if you need to use volumes from different accounts?
 
-Let’s start with a few assumptions:
+Let's start with a few assumptions:
 
-- You’ve done the key creation as specified in [Create Encryption Key](elastigroup/tutorials/elastigroup-tasks/create-encryption-key).
+- You've done the key creation as specified in [Create Encryption Key](elastigroup/tutorials/elastigroup-tasks/create-encryption-key).
 - Account actKey will represent the account that holds the KMS key.
 - Account actInst will represent the account that will run the Instances.
 - Key and Instances must be in the same region
@@ -94,7 +94,7 @@ aws kms create-grant --key-id <b><i><<mark class="hilite term-0">KMS</mark> <mar
 aws kms create-grant --key-id <b><i><<mark class="hilite term-0">KMS</mark> <mark class="hilite term-1">key</mark>-ARN></i></b> --grantee-principal <b><i><AWSServiceRoleForEC2Spot ARN></i></b> --operations "Encrypt" "Decrypt" "RetireGrant" "DescribeKey" "GenerateDataKey" "GenerateDataKeyWithoutPlaintext" "ReEncryptFrom" "ReEncryptTo" "CreateGrant" --name spot-grant
 ```
 
-That’s it! You can now add your KMS key-id to the BDM section in Elastigroup’s configuration:
+That's it! You can now add your KMS key-id to the BDM section in Elastigroup's configuration:
 
 ```
 "blockDeviceMappings": [

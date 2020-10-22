@@ -2,7 +2,7 @@
 
 ## Introduction
 
-While setting up your Spot Account – we use a cloud formation stack to register our IAM Role Policy in your AWS account. This Policy holds permissions that are needed for Spot’s account to handle your AWS resources.
+While setting up your Spot Account – we use a cloud formation stack to register our IAM Role Policy in your AWS account. This Policy holds permissions that are needed for Spot's account to handle your AWS resources.
 
 Refer the link below for the AWS ARN of your IAM role:
 https://console.spotinst.com/#/settings/account/general

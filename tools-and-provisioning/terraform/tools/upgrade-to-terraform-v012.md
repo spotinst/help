@@ -30,7 +30,7 @@ To use the command you need to:
 
 - When the updates are done, you can use your version control tool to review any proposed changes and then run `terraform plan` to see the effect of the changes that were made. In most cases, `terraform plan` should report that no changes are required because the updated configuration is equivalent to the previous one.
 
-- Once you’re happy with the updated configuration, commit it to version control in the usual way and `terraform apply` it with Terraform 0.12.
+- Once you're happy with the updated configuration, commit it to version control in the usual way and `terraform apply` it with Terraform 0.12.
 
 ## Use Case 2: Stay with v0.11 and the Latest Provider
 

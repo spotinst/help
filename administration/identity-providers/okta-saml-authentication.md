@@ -1,6 +1,6 @@
 # Okta SAML Authentication
 
-SSO support makes it easy to manage your accounts and works with the most popular identity providers. Let’s walk through how this integration works with Okta. We borrowed the following instructions from the Okta help site to help you get started.
+SSO support makes it easy to manage your accounts and works with the most popular identity providers. Let's walk through how this integration works with Okta. We borrowed the following instructions from the Okta help site to help you get started.
 
 ## Configure Okta with SAML 2.0
 

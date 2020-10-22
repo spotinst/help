@@ -7,7 +7,7 @@ Once Eco is enabled for the account and you have chosen your reserved instance [
 The Overview dashboard includes a summary line which displays the following information:
 
 - Total Saved: Total amount saved as a result of reserved instance utilization.
-- Current Commitment:The amount currently committed to reserved instances. The lower the commitment, the more flexible and dynamic the account’s compute resources can be.
+- Current Commitment:The amount currently committed to reserved instances. The lower the commitment, the more flexible and dynamic the account's compute resources can be.
 - Additional Potential Savings: The amount of additional potential savings in USD on top of existing RIs.
 - Current EC2 Commitment: The current percentage of On-Demand instances in the account that are covered by reservations.
 - Max EC2 Commitment: Maximum potential committed amount.
@@ -27,4 +27,4 @@ The graphs and charts can be filtered according to the items in the legend.
 
 <img src="/eco/_media/tutorials-view-savings-01.png" />
 
-As Eco manages the account’s RI pool, the commitment over time graph will begin to gradually indicate shorter commitment terms, while savings will increase towards their maximum potential.
+As Eco manages the account's RI pool, the commitment over time graph will begin to gradually indicate shorter commitment terms, while savings will increase towards their maximum potential.
