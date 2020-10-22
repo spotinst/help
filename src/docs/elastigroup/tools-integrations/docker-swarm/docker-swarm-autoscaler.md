@@ -25,3 +25,5 @@ When a task is launched in Docker Swarm cluster, The manager node tries to find 
 When a task is failed to start, an error is issued. See the API response below for an example:
 
 <img src="/elastigroup/_media/docker-swarm-autoscaler_1.png" />
+
+The Docker Swarm Auto-scaler automatically detects these errors and launches additional instances when required.
