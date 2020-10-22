@@ -6,7 +6,7 @@ To create a service account token for the Spot Kubernetes integration, follow th
 
 Create a .yaml file with the Spot token as in the following example:
 
-```
+```yaml
 apiVersion: v1
 kind: ServiceAccount
 metadata:
@@ -55,6 +55,6 @@ Run the command `kubectl describe secret spotinst-secret` to view the token and 
 
 To delete the token run the following command:
 
-```
+```yaml
 kubectl delete -f spotinst.yaml
 ```
