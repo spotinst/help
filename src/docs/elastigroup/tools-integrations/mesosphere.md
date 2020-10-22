@@ -9,15 +9,15 @@ Mesosphere DC/OS is based on the production-proven Apache Mesos distributed syst
   - The Spot algorithm will predict when fluctuations in the market will occur and pre-emptively provision new instances for you well before the interruption.
 - The Spot API integration will automatically communicate with your DC/OS Master and send a connection draining signal to all instances affected. This ensures that new tasks are not added to servers that are about to go down. This feature sounds simple, but it makes the process of managing nodes completely automated!
 - You have both the availability your production workloads require and you get to save money.
-- Spot can provision a heterogeneous cluster for your entire DC/OS environment. Do you want to have exactly 30 vCPUs and don’t care about instances types? We can do that as well with our cluster weighting option.
+- Spot can provision a heterogeneous cluster for your entire DC/OS environment. Do you want to have exactly 30 vCPUs and don't care about instances types? We can do that as well with our cluster weighting option.
 
 ## How it Works
 
-To start, let’s build a new DC/OS environment with the very convenient AWS Cloud Formation Template that can be found at the top of the [installation guide](https://downloads.dcos.io/dcos/stable/aws.html). If you have a cluster already, you can skip down to step 7.
+To start, let's build a new DC/OS environment with the very convenient AWS Cloud Formation Template that can be found at the top of the [installation guide](https://downloads.dcos.io/dcos/stable/aws.html). If you have a cluster already, you can skip down to step 7.
 
 ## Step 1
 
-You’ll find a link to the cloud formation template at the top of the page. Select the region and click on “Launch Stack” link for “Single Master”.
+You'll find a link to the cloud formation template at the top of the page. Select the region and click on “Launch Stack” link for “Single Master”.
 
 <img src="/elastigroup/_media/mesosphere-01.png" width="600" height="204" />
 
@@ -27,7 +27,7 @@ You will need to fill in parameters for the template on the launch wizard like t
 
 ## Step 3
 
-The template will take about 10 minutes to deploy so go enjoy a nice cup of coffee or tea while you’re waiting.
+The template will take about 10 minutes to deploy so go enjoy a nice cup of coffee or tea while you're waiting.
 
 ## Step 4
 
@@ -45,7 +45,7 @@ Expand the “Outputs” and “Resources” sections.
 
 ## Step 7
 
-Now let’s get the Master’s external IP address, go back to “Resources” from step 6.
+Now let's get the Master's external IP address, go back to “Resources” from step 6.
 
 1. Scroll down to “ElasticLoadBalancer” and click on the link.
 2. Click on the “Instances” tab and then click on the instance ID for the master.
@@ -65,7 +65,7 @@ Now let’s get the Master’s external IP address, go back to “Resources” f
 
 ## Step 9
 
-Now that the cluster is up and running let’s configure some Spot instances via the Elastigroup integration.
+Now that the cluster is up and running let's configure some Spot instances via the Elastigroup integration.
 
 1. Log into the Spot console at http://console.spotinst.com (free trial at http://spotinst.com/signup).
 2. Click on the “Create” button to create a new Elastigroup.

@@ -1,6 +1,6 @@
 # Shutdown Script in Elastigroup for Azure
 
-Running Low-Priority VMs (LPVMs) in Azure reduces the infrastructure costs by 80%. However, LPVMs might get terminated by Azure within a very short notice of 0 to 30 seconds. With Elastigroup, there’s a way to run workloads in a reliable, and efficient manner, maintaining High-Availability while reducing 80% of the VM costs.
+Running Low-Priority VMs (LPVMs) in Azure reduces the infrastructure costs by 80%. However, LPVMs might get terminated by Azure within a very short notice of 0 to 30 seconds. With Elastigroup, there's a way to run workloads in a reliable, and efficient manner, maintaining High-Availability while reducing 80% of the VM costs.
 
 DevOps and IT Engineers, want to have control over a clean and graceful shutdown process when a VM is being terminated. Elastigroup enables two important features for LPVMs:
 
@@ -30,7 +30,7 @@ bash" |  at now + 5 minute
 1. Go into the Spot console, and edit the configuration for your Elastigroup.
 2. Navigate to Compute tab, and open the Additional Configuration.
 3. Under shutdown script, add your desired shell script.
-4. Click Next -> Update, and you’re done!
+4. Click Next -> Update, and you're done!
 
 Example of shutdown script:
 
@@ -45,7 +45,7 @@ Example of shutdown script:
 - Spot agent uses pip (Python 2.7 Package Manager).
 - Shutdown scripts must start with the #! characters and the path to the interpreter you want to read the script (e.g. /bin/bash)
 - Shutdown scripts are executed as the root user, sudo is not required in the script. Remember that any files you create will be owned by root. For non-root permissions to files, modify permissions accordingly.
-- Shutdown script doesn’t run interactively, you cannot include commands that require user feedback (such as rm without the -f flag).
+- Shutdown script doesn't run interactively, you cannot include commands that require user feedback (such as rm without the -f flag).
 
 ---
 

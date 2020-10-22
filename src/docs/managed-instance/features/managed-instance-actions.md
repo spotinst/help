@@ -6,7 +6,7 @@ The Managed Instance actions change the instance state while maintaining its Roo
 
 ## Pause
 
-Can only be performed on a Running instance, otherwise it is greyed out. Equivalent to stopping the an On-Demand EC2 instance. The instance’s state is saved (according to the persisted resources configuration). The actual Spot instance will be terminated and when the Managed Instance will be resumed, it will be in the exact same state in terms of data, tags and network interfaces.
+Can only be performed on a Running instance, otherwise it is greyed out. Equivalent to stopping the an On-Demand EC2 instance. The instance's state is saved (according to the persisted resources configuration). The actual Spot instance will be terminated and when the Managed Instance will be resumed, it will be in the exact same state in terms of data, tags and network interfaces.
 
 ## Resume
 

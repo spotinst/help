@@ -2,7 +2,7 @@
 
 This article provides a brief overview of the three most common pricing models on GCP, nevertheless all cloud providers offer the same three pricing models with different terms.
 
-Elastigroup utilizes these pricing models to ensure that your computing cluster is always cost-optimized. To learn more about your cloud provider’s pricing visit their website.
+Elastigroup utilizes these pricing models to ensure that your computing cluster is always cost-optimized. To learn more about your cloud provider's pricing visit their website.
 
 ## On-Demand
 
@@ -18,7 +18,7 @@ Preemptible VMs offer the same machine types and options as regular compute inst
 
 GCE offers a discount of 37-55% in exchange for a long-term commitment. The exact discount depends on the length of commitment (1 or 3 years), the instance type and region.
 
-## What’s Next?
+## What's Next?
 
 - [Launching your first Elastigroup](elastigroup/getting-started/create-an-elastigroup-for-gcp.md).
 - Learn more about [Elastigroups](elastigroup/getting-started/elastigroup-for-gcp.md).

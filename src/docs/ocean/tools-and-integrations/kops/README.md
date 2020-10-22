@@ -6,7 +6,7 @@ It is really easy to get started with Ocean using Kops, as it provides a simple 
 
 To get started, complete the procedures in [Getting Started with KOPS on Spot Ocean](https://kops.sigs.k8s.io/getting_started/spot-ocean/).
 
-## What’s Next?
+## What's Next?
 
 - [Migrate a Cluster](ocean/tools-and-integrations/kops/migrate-cluster.md)
 - Learn more about [Metadata Labels](ocean/tools-and-integrations/kops/metadata-labels.md)

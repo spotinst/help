@@ -55,4 +55,4 @@ resources:
           nvidia.com/gpu: 1
 ```
 
-You don’t need to add any extra label for GPU support. You can use taints that require your GPU-based pods to select a specific launch specification which contains the GPU AMI.
+You don't need to add any extra label for GPU support. You can use taints that require your GPU-based pods to select a specific launch specification which contains the GPU AMI.

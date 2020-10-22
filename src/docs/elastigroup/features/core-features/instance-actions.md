@@ -6,13 +6,13 @@ You can simply check a specific instance or multiple instances you want to detac
 
 <img src="/elastigroup/_media/corefeatures-instance-actions-01.png" />
 
-In the dialog, make sure to keep “Decrement Group’s Capacity” unchecked if you want replacement instances to be launched.
+In the dialog, make sure to keep “Decrement Group's Capacity” unchecked if you want replacement instances to be launched.
 
 <img src="/elastigroup/_media/corefeatures-instance-actions-02.png" />
 
 Draining Timeout – Specify the time to keep the instance active before terminating it.
 
-Decrement Group’s Capacity – Change the group Instance count Target reducing it by a single instance – This will mean no replacement instance will be launched.
+Decrement Group's Capacity – Change the group Instance count Target reducing it by a single instance – This will mean no replacement instance will be launched.
 
 ## Lock an Instance
 

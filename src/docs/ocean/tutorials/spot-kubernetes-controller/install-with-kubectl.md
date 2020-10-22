@@ -22,7 +22,7 @@ data:
    Note the following:
 
    - `proxy-url` and is an optional parameter in case you want to use a proxy in your cluster, and it is supported in Controller Version 1.0.45 and above.
-   - `disable-auto-update` is an optional parameter (set to “false” by default). In case you want to disable the controller’s auto-update functionality you can set it to “true”.
+   - `disable-auto-update` is an optional parameter (set to “false” by default). In case you want to disable the controller's auto-update functionality you can set it to “true”.
 
 3. Load the parameters into the cluster configuration:
    `kubectl apply -f configMap.yaml`

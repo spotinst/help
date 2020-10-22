@@ -21,7 +21,7 @@ The Kubernetes Controller monitors Pods for Persistent Volume Claims, ensuring t
 - The `spot-controller` routinely searches for Pods that are pending scheduling.
 - The `spot-controller` looks for any Persistent Volume Claims associated with the Pods.
 - If PVCs are found, scaling is limited to the Availability Zones (AZs) in which the requested PVs are located.
-- Scale up activities limited to specific AZs by Persistent Volume Claims are logged in the Spot Console’s Elastilog:
+- Scale up activities limited to specific AZs by Persistent Volume Claims are logged in the Spot Console's Elastilog:
 
 <img src="/elastigroup/_media/persistent-volume-support_1.png" />
 

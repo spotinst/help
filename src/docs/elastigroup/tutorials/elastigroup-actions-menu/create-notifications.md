@@ -1,8 +1,8 @@
 # Create Notifications
 
-## Set up Elastigroup’s Notifications
+## Set up Elastigroup's Notifications
 
-Elastigroup’s notifications allow you to receive notifications for different events in the Elastigroup based on SNS or other subscriptions such as Email or HTTP endpoints. This article covers getting started with Elastigroup’s Notifications and customizing the notifications content to meet your needs.
+Elastigroup's notifications allow you to receive notifications for different events in the Elastigroup based on SNS or other subscriptions such as Email or HTTP endpoints. This article covers getting started with Elastigroup's Notifications and customizing the notifications content to meet your needs.
 
 ## Prerequisites
 
@@ -18,7 +18,7 @@ Click the Subscribe or Subscribe to a Notification button.
 
 <img src="/elastigroup/_media/create-notifications_2.png" />
 
-Existing notifications can’t be modified. To make changes create a new notification and remove the old one.
+Existing notifications can't be modified. To make changes create a new notification and remove the old one.
 
 ## Step 2: Configure Notification
 
@@ -152,13 +152,13 @@ The following is a list of values that can be in the “reason” field and an e
 - `Detach as part of deployment` – Standard detach of “Blue” instances in a deployment.
 - `Instance replacement` – Spot Interruption / instance terminated on AWS / User detached without decrementing capacity.
 - `Replacement has finished` – In case of “replacement finished with Error”, the new instances will be detached with this reason / Detached as a part of a proactive replacement (when not covered by any of the following reasons).
-- `Replacement of type ‘Fixing Strategy’ has finished`
-- `Replacement of type ‘Preventive’ has finished`
-- `Replacement of type ‘Unhealthy Instance’ has finished`
-- `Replacement of type ‘Signal Timeout’ has finished`
-- `Replacement of type ‘Spot Type Preference’ has finished`
-- `Replacement of type ‘Reserved Instance Utilization’ has finished`
-- `Replacement of type ‘Expensive Spot’ has finished`
+- `Replacement of type ‘Fixing Strategy' has finished`
+- `Replacement of type ‘Preventive' has finished`
+- `Replacement of type ‘Unhealthy Instance' has finished`
+- `Replacement of type ‘Signal Timeout' has finished`
+- `Replacement of type ‘Spot Type Preference' has finished`
+- `Replacement of type ‘Reserved Instance Utilization' has finished`
+- `Replacement of type ‘Expensive Spot' has finished`
 
 ### Instance Terminated
 
@@ -173,7 +173,7 @@ The following is a list of values that can be in the “reason” field and an e
 }
 ```
 
-## What’s Next?
+## What's Next?
 
 - Configure [Slack Notifications](administration/users/configure-slack-notifications)
 - Configure [Email Notifications](administration/users/configure-email-notifications)

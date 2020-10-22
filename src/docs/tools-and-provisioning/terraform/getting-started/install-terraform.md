@@ -39,7 +39,7 @@ We strive to always have the latest features available for our customers reflect
 
 Place the plugin executable (`terraform-provider-spotinst`) in one of the following locations depending on the host operating system:
 
-**Windows systems** – create a file named `terraform.rc` in the sub-path `terraform.d/plugins` beneath your user’s “Application Data” `%APPDATA%` directory:
+**Windows systems** – create a file named `terraform.rc` in the sub-path `terraform.d/plugins` beneath your user's “Application Data” `%APPDATA%` directory:
 
 `%APPDATA%/terraform.rc`
 

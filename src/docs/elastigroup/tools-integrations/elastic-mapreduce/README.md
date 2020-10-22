@@ -13,7 +13,7 @@ This tutorial focuses on cloning an existing EMR into Elastigroup. Elastigroup a
 
 Login to the Spot console and under Elastigroups navigate to the Creation Wizard by hitting the Create button:
 
-Choose ‘EMR’ to launch the EMR creation wizard:
+Choose ‘EMR' to launch the EMR creation wizard:
 
 ## Step 2: Add Elastigroup Description
 
@@ -51,19 +51,19 @@ Decreasing root volume size is not recommended and might affect the proper launc
 
 ## (Optional) Step 4: Scaling Policies
 
-Elastigroup offers a wide variety of scaling options for EMR, both for Core and Task nodes. Learn more about setting Elastigroup’s scaling policies for EMR [here](https://api.spotinst.com/integration-docs/elastigroup/services-integrations/elastic-mapreduce/scaling-policies-for-emr/). Click Next.
+Elastigroup offers a wide variety of scaling options for EMR, both for Core and Task nodes. Learn more about setting Elastigroup's scaling policies for EMR [here](https://api.spotinst.com/integration-docs/elastigroup/services-integrations/elastic-mapreduce/scaling-policies-for-emr/). Click Next.
 
 ## Step 5: Review and Create
 
-The Creation Wizard prepares a JSON template to launch an Elastigroup with the EMR configuration. All that’s left to do is click Create.
+The Creation Wizard prepares a JSON template to launch an Elastigroup with the EMR configuration. All that's left to do is click Create.
 
 ## Congratulations!
 
-You’ve now created an EMR on Elastigroup, congrats! You’re now in the Elastigroup Manager view, where you can review, manage and monitor your running Elastigroup.
+You've now created an EMR on Elastigroup, congrats! You're now in the Elastigroup Manager view, where you can review, manage and monitor your running Elastigroup.
 
-## What’s Next?
+## What's Next?
 
 - Create a Wrapped EMR Cluster on Elastigroup to run tasks nodes for your existing EMR cluster on Spot instances.
-- Configure Elastigroup’s [Scaling Policies for EMR](elastigroup/tools-integrations/elastic-mapreduce/scaling-policies-for-emr) Core and Task nodes.
+- Configure Elastigroup's [Scaling Policies for EMR](elastigroup/tools-integrations/elastic-mapreduce/scaling-policies-for-emr) Core and Task nodes.
 - Check out our API Docs here to learn how to clone your EMR into an Elastigroup using RESTful APIs.
-- AWS’s Elastic MapReduce (EMR) can occasionally get stuck with a Resizing status during changes in an instance group capacity. In these cases, the actual number of running instances won’t match the request number. Learn how [Elastigroup EMR Auto-Recovery](elastigroup/tools-integrations/elastic-mapreduce/elastigroup-auto-recover-for-emr) process handles these situations.
+- AWS's Elastic MapReduce (EMR) can occasionally get stuck with a Resizing status during changes in an instance group capacity. In these cases, the actual number of running instances won't match the request number. Learn how [Elastigroup EMR Auto-Recovery](elastigroup/tools-integrations/elastic-mapreduce/elastigroup-auto-recover-for-emr) process handles these situations.

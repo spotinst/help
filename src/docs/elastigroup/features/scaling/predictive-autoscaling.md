@@ -5,7 +5,7 @@ Predictive autoscaling allows you to enjoy seamless prediction of when your Elas
 ## Concepts
 
 - Target – The active instance value that Elastigroup should have at a given moment.
-- Effective-minimum – The minimum target value depicts the minimum amount of instances Elastigroup should have in order to accommodate the load required by the predicted metric. When this value is greater than Elastigroup’s target value, Elastigroup will scale up instances in order to meet the Effective-minimum, depending on your predictive scaling configuration.
+- Effective-minimum – The minimum target value depicts the minimum amount of instances Elastigroup should have in order to accommodate the load required by the predicted metric. When this value is greater than Elastigroup's target value, Elastigroup will scale up instances in order to meet the Effective-minimum, depending on your predictive scaling configuration.
 - Predicted Metric – The metric which Elastigroup actively predicts, in order to determine future load and scaling requirements for the group.
 
 ## How it Works
@@ -33,6 +33,6 @@ Elastigroup will scale up instances, and change its target value to meet the eff
 
 When selecting this mode, Elastigroup will present its predicted data, but will scale instances normally, according to the regular target-based scaling behavior.
 
-This allows you to observe Elastigroup’s prediction and predicted metric values, without scaling the group according to these values.
+This allows you to observe Elastigroup's prediction and predicted metric values, without scaling the group according to these values.
 
 <img src="/elastigroup/_media/scaling-predictive-autoscaling-02.png" />

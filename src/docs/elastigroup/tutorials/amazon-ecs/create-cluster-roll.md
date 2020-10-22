@@ -12,7 +12,7 @@ On the top right corner, select “Actions” and then choose “Create Cluster 
 
 <img src="/elastigroup/_media/create-cluster-roll_1.png" />
 
-In the pop-up window, select the batch size which will be rolled at the same time. The value is percentage of the cluster’s size.
+In the pop-up window, select the batch size which will be rolled at the same time. The value is percentage of the cluster's size.
 
 <img src="/elastigroup/_media/create-cluster-roll_2.png" />
 

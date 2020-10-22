@@ -10,7 +10,7 @@ If you are using a K8s version before 1.9, run the following command:
 
 ## Option 2: Kubernetes Version 1.9 and Later
 
-If you are using K8’s version 1.9 and later, you will need to install the GA version of the controller.
+If you are using K8's version 1.9 and later, you will need to install the GA version of the controller.
 
 1. Before upgrading the latest GA controller version, you must delete any non-GA version controllers. To do this, collect the details of all of the Spot deployments:
 

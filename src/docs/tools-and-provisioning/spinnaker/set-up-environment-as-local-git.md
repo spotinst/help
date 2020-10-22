@@ -78,6 +78,6 @@ In the Spinnaker browser, you should see the Spot information as shown in the ex
 
 <img src="/tools-and-provisioning/_media/set up environment as local git_1.png" />
 
-## What’s Next?
+## What's Next?
 
 Now you are ready to start using Elastigroups within the Spinnaker environment and take advantage of all the Spot optimization, scaling, and cost-saving features.

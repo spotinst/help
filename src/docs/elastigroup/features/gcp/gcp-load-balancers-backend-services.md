@@ -23,7 +23,7 @@ For regional backend service, we utilize Scheme configuration to identify type o
 
 ## Backend Services with Elastigroup
 
-If you are running an application or service behind GCP’s Backend Services (Load Balancers), Elastigroup provides the freedom to run blended cluster from multiple instance types, sizes
+If you are running an application or service behind GCP's Backend Services (Load Balancers), Elastigroup provides the freedom to run blended cluster from multiple instance types, sizes
 ({n1-standard,n1-highmem,n1-highcpu,n1-ultramem}-{2,4,8,16,etc..})
 and purchasing options (Preemtive, On-Demand).
 
@@ -31,12 +31,12 @@ Elastigroup launches the target capacity for Preemptible VMs, to ensure a predic
 
 <img src="/elastigroup/_media/gcp-loadbalancers-02.png" />
 
-To ensure that the backend service stops sending requests to instances that are marked for termination, Elastigroup will de-register and drain the instances a few minutes before the instance gets a preemption signal from GCE. At the same time, Elastigroup will begin spinning up new instances in parallel to ensure your desired capacity won’t be degraded.
+To ensure that the backend service stops sending requests to instances that are marked for termination, Elastigroup will de-register and drain the instances a few minutes before the instance gets a preemption signal from GCE. At the same time, Elastigroup will begin spinning up new instances in parallel to ensure your desired capacity won't be degraded.
 
 ## Integrate a Backend Service
 
 1. Enter the Creation Wizard to create a new Elastigroup or select Edit Configuration to integrate a backend service with an existing Elastigroup.
-2. In the Compute Tab under Backend Services click on ‘Add’.
+2. In the Compute Tab under Backend Services click on ‘Add'.
 3. Set your required backend service (LB): Global / Regional.
 4. For Global, just choose the backend service from the list. You can add named ports, e.g.:
    - Name: “HTTPS”

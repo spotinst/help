@@ -49,7 +49,7 @@ EOF
 
 ---
 
-**Tip**: If you don’t use an autoscaler in the OpenShift cluster yet and don’t have an AWS auto-scaling group, do not create an autoscaling group.
+**Tip**: If you don't use an autoscaler in the OpenShift cluster yet and don't have an AWS auto-scaling group, do not create an autoscaling group.
 
 ---
 
@@ -68,7 +68,7 @@ Once the instance is up and running, a new `csr` request will be waiting:
 
 This request will output all the pending CSRs.
 
-Use the following request to approve the one that is relevant to the instance you’ve launched.
+Use the following request to approve the one that is relevant to the instance you've launched.
 
 `oc approve csr csrname`
 
@@ -100,7 +100,7 @@ Confirm or change the settings imported by the Ocean Creation Wizard.
 Step 3: Set up Connectivity
 
 1. Create a Spot token or use an existing one.
-2. Install the Spot Controller Pod. Learn more about the Spot Controller Pod and Ocean’s anatomy here.
+2. Install the Spot Controller Pod. Learn more about the Spot Controller Pod and Ocean's anatomy here.
 3. Ensure enable-csr-approval is set to True.
 4. Click Test Connectivity to ensure the controller functionality.
 
@@ -118,8 +118,8 @@ bash
 
 5. When the connectivity test is complete, click Create.
 
-You’re all set! Ocean will now ensure the most cost-effective capacity and size possible for your cluster.
+You're all set! Ocean will now ensure the most cost-effective capacity and size possible for your cluster.
 
-## What’s Next?
+## What's Next?
 
 Learn more about Ocean scaling and optimization [features](ocean/features/).

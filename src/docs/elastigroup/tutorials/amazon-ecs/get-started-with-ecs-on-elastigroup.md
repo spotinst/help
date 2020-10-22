@@ -6,7 +6,7 @@ This Quick Start deploys Spot Elastigroup for Amazon Elastic Container Service (
 
 Spot Elastigroup enables the use of production-grade Spot Instances by leveraging a prediction algorithm to predict the Spot Instance interruption 15 minutes ahead of time. Elastigroup then immediately spins up a new node in a different Spot capacity pool. As soon as that new node is healthy, Elastigroup starts to drain the instance that is marked for an interruption. Elastigroup then terminates the instance after draining is completed.
 
-This Quick Start is for organizations that want to use Spot Elastigroup’s capabilities to ensure availability and to efficiently scale Amazon ECS clusters that are running as Spot Instances at a discount of roughly 80% compared to On-Demand Instances, with additional savings from automatic task-based scaling.
+This Quick Start is for organizations that want to use Spot Elastigroup's capabilities to ensure availability and to efficiently scale Amazon ECS clusters that are running as Spot Instances at a discount of roughly 80% compared to On-Demand Instances, with additional savings from automatic task-based scaling.
 
 You can also import an existing ECS cluster – this action will fetch all the data needed in order to create a new ECS cluster on Elastigroup based on the configuration of the imported ECS cluster.Elastigroup for ECS is available via the Amazon QuickStart guides: https://aws.amazon.com/quickstart/architecture/spotinst-elastigroup/
 
@@ -15,7 +15,7 @@ With this Quick Start, Spot Elastigroup deployment takes about 7 minutes. The de
 ## Prerequisites: Create an ECS IAM Role
 
 - Before the Amazon ECS agent can register container instance into a cluster, the agent must have IAM Role with appropriate account credentials.
-- If you haven’t done this already, here’s how to create an ECS IAM Role.
+- If you haven't done this already, here's how to create an ECS IAM Role.
   1. Navigate to your IAM console
   2. Go to – Roles.
   3. Create a new Role and name it “ECS-ContainerInstance”
@@ -65,6 +65,6 @@ Initialize-ECSAgent -Cluster CLUSTER_NAME -EnableTaskIAMRole -LoggingDrivers '["
 - In the Compute tab, under the Integrations section, select ECS and provide your Cluster Name.
 - Continue with the Creation Wizard and create your Elastigroup.
 
-## What’s Next?
+## What's Next?
 
 Now that you have created an ECS-integrated Elastigroup, learn more about the [ECS Auto-Scaler](elastigroup/features/amazon-ecs/automatic-autoscaler-for-ecs) and how it efficiently and automatically scales your cluster.

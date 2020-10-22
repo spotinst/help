@@ -96,7 +96,7 @@ The Nomad Autoscaler now supports job-level constraints. In your job configurati
 
 In order to support job constraints in your Nomad Autoscaler, you should create an Elastigroup for each combination of constraints, and integrate it with your master host as shown below. Under your Nomad Autoscaler integration, you can add multiple constraints in a key-value definition (Up to 30 constraints). The key format must be identical to the constraint definition in your job configuration.
 
-For example, let’s say that you want to run your jobs only on nodes that are marked as owned by Spot. In your job configuration in Nomad, it will look like this:
+For example, let's say that you want to run your jobs only on nodes that are marked as owned by Spot. In your job configuration in Nomad, it will look like this:
 
 ```JSON
 job "myJob" {
@@ -130,4 +130,4 @@ client {
 }
 ```
 
-If you require constraints support in your Nomad Autoscaler, make sure you create an Elastigroup for each of your constraints combinations, because each group will be responsible for auto-scaling the nodes relevant for this constraints combination only. If you’ll have jobs without constraints, make sure to create an Elastigroup without constraints which will be responsible for auto-scaling these jobs only.
+If you require constraints support in your Nomad Autoscaler, make sure you create an Elastigroup for each of your constraints combinations, because each group will be responsible for auto-scaling the nodes relevant for this constraints combination only. If you'll have jobs without constraints, make sure to create an Elastigroup without constraints which will be responsible for auto-scaling these jobs only.

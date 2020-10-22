@@ -17,7 +17,7 @@ If you have multiple Elastigroups in the same ECS cluster, follow the instructio
 
 ### Considerations
 
-Ocean manages the entirety of the ECS cluster’s container-instances. If the instances are distributed across multiple Elastigroups, all of these Elastigroups should be migrated at once.
+Ocean manages the entirety of the ECS cluster's container-instances. If the instances are distributed across multiple Elastigroups, all of these Elastigroups should be migrated at once.
 
 ### Prerequisites
 
@@ -66,6 +66,6 @@ The last step is to downscale the container instances in any secondary Elastigro
 3. Reduce the target capacity. It is highly recommended to reduce the target capacity in batches of 10-20% and repeat this step until downscale is complete.
 4. Navigate to your Ocean Cluster. Verify that it spins up the required resources and handles the cluster tasks.
 
-Sit back and relax. Ocean’s got you covered!
+Sit back and relax. Ocean's got you covered!
 
 If you any issues, contact our support engineers via chat or email.

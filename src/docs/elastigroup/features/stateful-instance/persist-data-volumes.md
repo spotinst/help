@@ -4,18 +4,18 @@ Data volume persistency maintains the data volumes during Spot instance replacem
 
 ## Configure Data Volume Persistency
 
-1. To configure data volume persistency head to the Elastigroup’s Creation Wizard, select Compute and open the Stateful option.
+1. To configure data volume persistency head to the Elastigroup's Creation Wizard, select Compute and open the Stateful option.
 2. Under Persist Data Volumes select a persistence method.
 
 Elastigroup provides the data volume persistency methods described below.
 
 ### Reattach Volumes (recommended for large data volumes)
 
-The same EBS volume is detached from the original instance and reattached to the newly launched instance. If the new instance is launched in a different AZ, we create a new volume from the latest snapshot and attach it to the new instance (as volumes can’t be migrated between AZ’s). Volumes can be created based on the AMI’s Block Device Mapping on the first resume of the Stateful instance or can be attached through AWS console. We maintain the same volumes as long as the instance is launched in the same Availability Zone.
+The same EBS volume is detached from the original instance and reattached to the newly launched instance. If the new instance is launched in a different AZ, we create a new volume from the latest snapshot and attach it to the new instance (as volumes can't be migrated between AZ's). Volumes can be created based on the AMI's Block Device Mapping on the first resume of the Stateful instance or can be attached through AWS console. We maintain the same volumes as long as the instance is launched in the same Availability Zone.
 
 ### Snapshot Backups
 
-Periodic snapshots of the data volume are taken while the instance is running. For each data volume, 3 snapshots are kept. Upon Spot instance replacement, a new EBS volume is created from the latest snapshot and is attached to the new instance by updating the AMI’s Block Device Mapping configuration.
+Periodic snapshots of the data volume are taken while the instance is running. For each data volume, 3 snapshots are kept. Upon Spot instance replacement, a new EBS volume is created from the latest snapshot and is attached to the new instance by updating the AMI's Block Device Mapping configuration.
 
 ## Suspend User Data Execution Until Volumes are Available
 
@@ -46,7 +46,7 @@ echo "volume is ready"
 
 Add the following attribute to your elastigroup configuration:
 
-strategy.persistence.blockDevicesMode – string – (Optional) determine the way data volumes are attached to the instance. Valid values: ‘reattach’ and ‘onLaunch’.
+strategy.persistence.blockDevicesMode – string – (Optional) determine the way data volumes are attached to the instance. Valid values: ‘reattach' and ‘onLaunch'.
 
 ## Backend Actions
 

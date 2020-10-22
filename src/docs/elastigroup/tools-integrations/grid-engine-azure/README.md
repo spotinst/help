@@ -2,7 +2,7 @@
 
 Grid Engine software manages workload placement automatically, maximizes shared resources, supports extreme scale, provides enterprise-grade dependability and accelerates deployment of any container, application or service in any technology environment, on-premise or in the cloud.
 
-Elastigroup supports Grid Engine workloads using a proprietary controller that monitors the Grid Engine queue and launches Low-Priorty VM’s once there is a pending Jobs in the queue.
+Elastigroup supports Grid Engine workloads using a proprietary controller that monitors the Grid Engine queue and launches Low-Priorty VM's once there is a pending Jobs in the queue.
 
 In order to integrate Grid Engine with Elastigroup, do the following:
 

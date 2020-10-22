@@ -4,7 +4,7 @@ Ocean automates cloud infrastructure for containers. It continuously analyzes ho
 
 Ocean monitors for pending Kubernetes pods and automatically adjusts the size of the cluster based on the workload [constraints and labels](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/). Ocean ensures that the cluster resources are utilized and scales down underutilized nodes to ensure maximal cost optimization.
 
-In addition to the smart container-driven autoscaling and the use of spot instances, Ocean provides a rich feature set that aims to optimize other aspects of container cluster management. For example, when you configure [headroom](/ocean/features/headroom.md), a buffer of spare capacity is maintained, based on the cluster’s most common services to scale out . The headroom allows for incoming tasks to be scheduled immediately, eliminating the wait time until new instances spin up and register to the cluster.
+In addition to the smart container-driven autoscaling and the use of spot instances, Ocean provides a rich feature set that aims to optimize other aspects of container cluster management. For example, when you configure [headroom](/ocean/features/headroom.md), a buffer of spare capacity is maintained, based on the cluster's most common services to scale out . The headroom allows for incoming tasks to be scheduled immediately, eliminating the wait time until new instances spin up and register to the cluster.
 
 The result of the Ocean features is an optimally utilized and cost-efficient Kubernetes cluster.
 
@@ -16,11 +16,11 @@ The [Spot Kubernetes Controller](ocean/tutorials/spot-kubernetes-controller/) is
 
 ## Ocean SaaS
 
-Ocean’s SaaS layer aggregates the metrics from the Spot Kubernetes Controller and builds the cluster topology. Using the aggregated metrics, the SaaS component applies other business logic algorithms such as spot-preemptible instances availability, prediction, and recommendation of instance size and type . These algorithms increase performance and optimize costs by using workload density pricing models across on-demand, reserved, and excess capacity nodes (i.e., spot instances or preemptible VMs).
+Ocean's SaaS layer aggregates the metrics from the Spot Kubernetes Controller and builds the cluster topology. Using the aggregated metrics, the SaaS component applies other business logic algorithms such as spot-preemptible instances availability, prediction, and recommendation of instance size and type . These algorithms increase performance and optimize costs by using workload density pricing models across on-demand, reserved, and excess capacity nodes (i.e., spot instances or preemptible VMs).
 
 <img src="/ocean/_media/ocean-k8s-architecture.png" />
 
-## What’s Next?
+## What's Next?
 
 - If you have not already connected your cloud provider account, connect to Spot: [AWS](connect-your-cloud-provider/aws-account.md), [Azure](connect-your-cloud-provider/azure-account.md), [GCP](connect-your-cloud-provider/gcp-project.md)
-- [Get started with an Ocean cluster](ocean/getting-started/).
+- [Get started with an Ocean Cluster](ocean/getting-started/).

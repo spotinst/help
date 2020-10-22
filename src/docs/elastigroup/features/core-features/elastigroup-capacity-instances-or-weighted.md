@@ -2,7 +2,7 @@
 
 Each Elastigroup has a dedicated setting to control the group Capacity. The Capacity of the group provides the option to control the minimal, maximal and the target numerical value representing the number of instances in the group. The amount can be a direct number of instances or a weighted representation of vCPUs.
 
-When you launch an Elastigroup, you can define the capacity units that each instance type would contribute to your application’s performance and availability. By using Instance Weighting you can now define more flexible scaling rules and to maximize overall cost efficiency while putting zero DevOps efforts.
+When you launch an Elastigroup, you can define the capacity units that each instance type would contribute to your application's performance and availability. By using Instance Weighting you can now define more flexible scaling rules and to maximize overall cost efficiency while putting zero DevOps efforts.
 
 Normally, when an application scales, it typically does that in instance units, meaning, one or more Instances at a time. In most of the cases – it is the same instance type or size, for example, my application scales from 5 instances of c3.2xlarge to 15 instances of c3.2xlarge at peak hours.
 
@@ -17,7 +17,7 @@ When you use the Elastigroup weighting feature, you can define a target vCPU cap
 
 <img src="/elastigroup/_media/corefeatures-capacity-01.png" />
 
-Elastigroup calculates the number of instances to launch by dividing the target capacity by the instance weight. In case that the result isn’t an integer, Elastigroup rounds it up to the next integer, so that the size of your cluster is not below its target capacity. But, first and foremost, Elastigroup will pick up the best server size or family according to their overall availability, pricing, and durability.
+Elastigroup calculates the number of instances to launch by dividing the target capacity by the instance weight. In case that the result isn't an integer, Elastigroup rounds it up to the next integer, so that the size of your cluster is not below its target capacity. But, first and foremost, Elastigroup will pick up the best server size or family according to their overall availability, pricing, and durability.
 
 You can now run, scale and manage heterogeneous clusters with ease.
 

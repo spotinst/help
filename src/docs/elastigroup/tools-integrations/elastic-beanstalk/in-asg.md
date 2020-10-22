@@ -1,6 +1,6 @@
 # In-ASG
 
-Once Beanstalk integration is configured, Elastigroup takes control of instance provisioning, scaling and deploying. The Amazon ASG becomes passive, Beanstalk’s `min` `capacity` is set to 0 and max capacity is set to double the original `max capacity`.
+Once Beanstalk integration is configured, Elastigroup takes control of instance provisioning, scaling and deploying. The Amazon ASG becomes passive, Beanstalk's `min` `capacity` is set to 0 and max capacity is set to double the original `max capacity`.
 
 ---
 
@@ -15,7 +15,7 @@ Instances in the Beanstalk environment must be managed exclusively by Elastigrou
 Once an Elastigroup is created with the Beanstalk integration, the following process takes place:
 
 1. The Elastigroup instances are launched
-2. The new instances are registered to Beanstalk’s ELB
+2. The new instances are registered to Beanstalk's ELB
 3. Beanstalk capacity range is updated
 4. Auto Scaling Group scaling policies are removed
 5. Existing instances (original ASG instances) are detached
@@ -31,7 +31,7 @@ When updating the application version or deploying a new application, no additio
 
 ## Infrastructure Configuration Changes
 
-Infrastructure configuration changes are changes made in the Beanstalk environment settings that require new EC2 instances to be provisioned. This includes changes to the launch configuration such as key pair settings and changes to VPC. In these cases, it is crucial to put the Elastigroup in `Maintenance Mode` before changing your Elastic Beanstalk configuration. In a rolling update, a blue-green deployment is launched and all the group’s instances are gracefully replaced to apply changes.
+Infrastructure configuration changes are changes made in the Beanstalk environment settings that require new EC2 instances to be provisioned. This includes changes to the launch configuration such as key pair settings and changes to VPC. In these cases, it is crucial to put the Elastigroup in `Maintenance Mode` before changing your Elastic Beanstalk configuration. In a rolling update, a blue-green deployment is launched and all the group's instances are gracefully replaced to apply changes.
 
 ## Maintenance Mode
 
@@ -70,7 +70,7 @@ Elastigroup allows you to configure multiple instance types for the same environ
 
 ### Capacity Changes
 
-It’s crucial that all capacity changes are done via Elastigroup. Failing to do so may result in unexpected behavior. This includes detaching instances, Elastigroup/Beanstalk environment termination, scaling policies, and manual capacity changes.
+It's crucial that all capacity changes are done via Elastigroup. Failing to do so may result in unexpected behavior. This includes detaching instances, Elastigroup/Beanstalk environment termination, scaling policies, and manual capacity changes.
 
 ## Transition from Beanstalk Independent to Beanstalk In-ASG Elastigroup
 

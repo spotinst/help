@@ -2,7 +2,7 @@
 
 In order to allow Spot to manage GCP resources, it is necessary to authenticate Spot with a relevant GCP Project.
 
-1. Go to the [Spot console](http://console.spotinst.com/).
+1. Log in to [Spot Console](http://console.spotinst.com/).
 2. In the Welcome page, click Google Cloud Platform.
 
 <img src="/connect-your-cloud-provider/_media/welcome-to-spot-1024x341.png" />
@@ -57,7 +57,7 @@ Upload a Service Account Key. Browse the JSON file previously created.
 
 Click Connect to finish the process.
 
-We’ll check connectivity to your GCP account, and you’re all set to create your first Elastigroup!
+We'll check connectivity to your GCP account, and you're all set to create your first Elastigroup!
 
 ## Automatic Method
 
@@ -80,12 +80,12 @@ Copy the provided script and run it on a local terminal with gcloud available. T
 
 ### Step 3
 
-The script will output a spotinst_key.json file. Select it using the Browse button.
+The script will output a `spotinst_key.json` file. Select it using the Browse button.
 
 <img src="/connect-your-cloud-provider/_media/gcp-automatic-step3.png" />
 
 Click on Connect to finish the process.
-We’ll check connectivity to your GCP account, and you’re all set.
+We'll check connectivity to your GCP account, and you're all set.
 
 ## What's Next?
 

@@ -44,7 +44,7 @@ This is a bar graph showing your top ten accounts by cost. The graph is based on
 
 ## Spend Analysis
 
-The Spend Analysis chart and table provide a breakdown of your organization’s costs. These tools help you govern your organizational, account, departmental or project costs by providing a detailed view of the historical, current, and projected costs.
+The Spend Analysis chart and table provide a breakdown of your organization's costs. These tools help you govern your organizational, account, departmental or project costs by providing a detailed view of the historical, current, and projected costs.
 
 <img src="/cloud-analyzer/_media/tutorials-analyze-costs-04.png" />
 

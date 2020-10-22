@@ -69,7 +69,7 @@ For k8s enter:
 
 ## Step 4: Deploy the Spot Controller
 
-Last, follow these steps to deploy Spot’s Controller in the Kubernetes cluster. Once this is deployed Spot scales and manages Kubernetes nodes, and interacts with Rancher to ensure that available and cordoned instances are rolled and cleaned correctly.
+Last, follow these steps to deploy Spot's Controller in the Kubernetes cluster. Once this is deployed Spot scales and manages Kubernetes nodes, and interacts with Rancher to ensure that available and cordoned instances are rolled and cleaned correctly.
 
 Until this step is complete, warnings for both the Controller and Rancher will be displayed in the Elastigroup Console.
 
@@ -81,4 +81,4 @@ Installing the Spot Controller requires the following:
 
 Complete the [Spot Controller Installation Tutorial](ocean/tutorials/spot-kubernetes-tutorial/).
 
-That’s it! Elastigroup can now manage the underlying nodes of your Kubernetes cluster and communicate with Rancher.
+That's it! Elastigroup can now manage the underlying nodes of your Kubernetes cluster and communicate with Rancher.

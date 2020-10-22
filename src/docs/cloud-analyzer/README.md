@@ -12,7 +12,7 @@ Cloud Analyzer meets these challenges by providing concrete data and recommendat
 
 ## Cost Analysis
 
-Cloud Analyzer provides a detailed cost analysis of past, present, and estimated spend, providing deep cross-cloud and cross-account visibility. The Cost Analysis dashboard delivers a clear view of your organization’s entire cloud expenses and a drill down into individual workloads, accounts, and services.
+Cloud Analyzer provides a detailed cost analysis of past, present, and estimated spend, providing deep cross-cloud and cross-account visibility. The Cost Analysis dashboard delivers a clear view of your organization's entire cloud expenses and a drill down into individual workloads, accounts, and services.
 
 ## Trends & Notifications
 

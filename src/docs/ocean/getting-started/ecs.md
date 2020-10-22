@@ -61,9 +61,9 @@ In this procedure, you will join an existing ECS cluster to Ocean using the [Spo
 
 Review all the Ocean settings you have configured. Click Create to finish or use the JSON or Terraform generated templates to create the Ocean cluster using other tooling.
 
-You’re all set! Ocean will now ensure the most cost-effective capacity and sizing possible for your cluster.
+You're all set! Ocean will now ensure the most cost-effective capacity and sizing possible for your cluster.
 
-## What’s Next?
+## What's Next?
 
 - [Manually scale down](https://docs.aws.amazon.com/cli/latest/reference/ecs/update-container-instances-state.html#update-container-instances-state) your existing ECS nodes in the node pools you migrated to get Ocean to provision pod-driven optimized infrastructure for your existing workloads.
 - [Import Fargate services](https://help.spot.io/spotinst-api/ocean/ocean-cloud-api/ocean-for-ecs/import-fargate-service/) to Ocean clusters using the Spot APIs.

@@ -48,6 +48,6 @@ Remove the nodes by deleting the unmanaged nodegroup with the following command:
 
 `$ eksctl delete nodegroup \ --cluster <cluster-name> \ --nodegroup-name <unmanaged-nodegroup-name>`
 
-## What’s Next?
+## What's Next?
 
 Learn more about [Ocean features](ocean/features/).
