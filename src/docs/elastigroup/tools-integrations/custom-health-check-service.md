@@ -49,7 +49,7 @@ Set the Health Check configuration in the Elastigroup:
 
 2. Define the Health Check properties:
 
-<img src="/elastigroup/_media/custom-health-check-service_3.png" width="250" height="371" />
+<img src="/elastigroup/_media/custom-health-check-service_3.png" width="325" height="420" />
 
 - **Name**: Name your Health Check for convenience.
 - **ProxyAddress**: The public host/IP of your selected instance you installed service on in `section 2`. This will be set like http://publicip
