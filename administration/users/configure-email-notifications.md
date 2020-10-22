@@ -20,5 +20,5 @@ The default account notification policy is available only for users who didn't d
 
 ## What's Next?
 
-- Create Elastigroup [Email Notifications](elastigroup/tutorials/elastigroup-actions-menu/create-notifications.md)
-- Add Elastigroup [Notifications for Slack](administration/users/configure-slack-notifications.md)
+- Create Elastigroup [Email Notifications](elastigroup/tutorials/elastigroup-actions-menu/create-notifications)
+- Add Elastigroup [Notifications for Slack](administration/users/configure-slack-notifications)

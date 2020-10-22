@@ -16,4 +16,4 @@ In Elastigroup's Creation Wizard, under the Compute tab scroll down to the Integ
 
 ## What's Next?
 
-Learn more about [Autoscaler Headroom](elastigroup/features/amazon-ecs/autoscaler-headroom.md).
+Learn more about [Autoscaler Headroom](elastigroup/features/amazon-ecs/autoscaler-headroom).

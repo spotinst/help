@@ -6,7 +6,7 @@ This procedure will cover the simple steps you need to perform in order to allow
 
 ## Prerequisites
 
-- An up-to-date [Spot Policy](administration/api/spot-policy-in-aws.md)
+- An up-to-date [Spot Policy](administration/api/spot-policy-in-aws)
 - A live Opsworks Stack and Layer with a running instance
 - Cancel the [auto-healing feature](https://docs.aws.amazon.com/opsworks/latest/userguide/workinginstances-autohealing.html) in OpsWorks.
 

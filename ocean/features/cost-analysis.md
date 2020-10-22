@@ -32,7 +32,7 @@ In other words, the workload used 25% of the total cluster allocatable resources
 
 ### Headroom
 
-[Ocean Headroom](ocean/features/headroom.md) is also accounted for in the cost analysis. Note that headroom appears as a separate line item in the analysis and is independent of idle resources.
+[Ocean Headroom](ocean/features/headroom) is also accounted for in the cost analysis. Note that headroom appears as a separate line item in the analysis and is independent of idle resources.
 
 ### Idle Resources
 
@@ -79,5 +79,5 @@ Ocean captures and displays data only from instances (nodes) that are managed by
 
 ## What's Next?
 
-Learn about the charts, views, and reports you can create in Ocean in [Analyze Your Costs](ocean/tutorials/analyze-your-costs.md).
-Learn how to [Create a Cost Analysis Filter](ocean/tutorials/create-a-cost-filter.md) and customize the information displayed.
+Learn about the charts, views, and reports you can create in Ocean in [Analyze Your Costs](ocean/tutorials/analyze-your-costs).
+Learn how to [Create a Cost Analysis Filter](ocean/tutorials/create-a-cost-filter) and customize the information displayed.

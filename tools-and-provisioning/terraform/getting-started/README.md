@@ -7,4 +7,4 @@ It is really easy to get started with Ocean using Terraform, as it provides a si
 To get started, you can:
 
 - Complete the procedures described in the [Spot Ocean Amazon EKS Terraform](https://github.com/spotinst/terraform-spotinst-ocean-eks#spotinst-ocean-amazon-eks-terraform-module) module and use Terraform with Ocean.
-- [Install](tools-and-provisioning/terraform/getting-started/install-terraform.md) and [configure](<(tools-and-provisioning/terraform/getting-started/configuration.md)>) Terraform.
+- [Install](tools-and-provisioning/terraform/getting-started/install-terraform) and [configure](<(tools-and-provisioning/terraform/getting-started/configuration)>) Terraform.

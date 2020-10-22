@@ -8,8 +8,8 @@ Running single instance workloads on Managed Instance will provide you with a si
 
 Before you can create a managed instance, you need to do the following:
 
-- Ensure your AWS account is connected to your [Spot account](connect-your-cloud-provider/aws-account.md).
-- Ensure your [Spot Policy](elastigroup/tutorials/elastigroup-tasks/update-spot-policy.md) is up to date.
+- Ensure your AWS account is connected to your [Spot account](connect-your-cloud-provider/aws-account).
+- Ensure your [Spot Policy](elastigroup/tutorials/elastigroup-tasks/update-spot-policy) is up to date.
 - Memory utilization graphs require the Cloudwatch agent. For more information, see the [AWS documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/mon-scripts.html).
 
 ## Get Started

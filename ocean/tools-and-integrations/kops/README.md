@@ -1,4 +1,4 @@
-# Getting Started with Kops
+# Getting Started with KOPS
 
 Kubernetes Operations, or [kops](https://github.com/kubernetes/kops), is an open source project used to set up Kubernetes clusters. The project describes itself as kubectl for clusters. `kops` enables deployment of highly available Kubernetes clusters on AWS.
 
@@ -8,5 +8,5 @@ To get started, complete the procedures in [Getting Started with kops on Spot Oc
 
 ## What's Next?
 
-- [Migrate a Cluster](ocean/tools-and-integrations/kops/migrate-cluster.md)
-- Learn more about [Metadata Labels](ocean/tools-and-integrations/kops/metadata-labels.md)
+- [Migrate a Cluster](ocean/tools-and-integrations/kops/migrate-cluster)
+- Learn more about [Metadata Labels](ocean/tools-and-integrations/kops/metadata-labels)

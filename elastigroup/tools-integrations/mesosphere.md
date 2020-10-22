@@ -51,7 +51,7 @@ Now let's get the Master's external IP address, go back to `Resources` from step
 2. Click on the `Instances` tab and then click on the instance ID for the master.
 3. Copy the public IP of the master into a text editor for later.
 4. You should see two security groups for the master, click on the MasterSecurityGroup.
-5. In the Security Group console, add a new inbound TCP rule for the MasterSecurityGroup as shown below. (Inbound Custom TCP Rule for port 5050 and the [whitelist IPs](administration/api/whitelist-ips.md).)
+5. In the Security Group console, add a new inbound TCP rule for the MasterSecurityGroup as shown below. (Inbound Custom TCP Rule for port 5050 and the [whitelist IPs](administration/api/whitelist-ips).)
 
 <img src="/elastigroup/_media/mesosphere-02a.png" />
 

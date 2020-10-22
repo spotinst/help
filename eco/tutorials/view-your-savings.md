@@ -1,6 +1,6 @@
 # View your Savings
 
-Once Eco is enabled for the account and you have chosen your reserved instance [Strategy](eco/tutorials/choose-a-strategy.md), you can view information about your savings in the Overview dashboard.
+Once Eco is enabled for the account and you have chosen your reserved instance [Strategy](eco/tutorials/choose-a-strategy), you can view information about your savings in the Overview dashboard.
 
 ## Summary Line
 

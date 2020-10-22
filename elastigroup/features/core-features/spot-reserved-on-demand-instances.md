@@ -16,5 +16,5 @@ AWS offers a discount of 31-75% in exchange for a long-term commitment. The exac
 
 ## What's Next?
 
-- Get started and [launch your first Elastigroup](elastigroup/getting-started/create-an-elastigroup-for-aws.md).
-- Learn more about [how Spot works](elastigroup/features/core-features/market-scoring-managing-interruptions.md).
+- Get started and [launch your first Elastigroup](elastigroup/getting-started/create-an-elastigroup-for-aws).
+- Learn more about [how Spot works](elastigroup/features/core-features/market-scoring-managing-interruptions).

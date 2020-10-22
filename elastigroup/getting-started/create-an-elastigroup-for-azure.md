@@ -4,7 +4,7 @@ This procedure describes how to create an Elastigroup from scratch in Azure.
 
 ## Prerequisite
 
-Before you can start, you must connect your Azure account to Spot. For more information, see [Connect your Azure Account](connect-your-cloud-provider/azure-account.md).
+Before you can start, you must connect your Azure account to Spot. For more information, see [Connect your Azure Account](connect-your-cloud-provider/azure-account).
 
 ## Get Started
 
@@ -97,7 +97,7 @@ You can define additional network interfaces as needed.
 - Managed Identity. Select the Managed Identity for your VMSS instances.
 - Tags. Add tag keys and values you want associated with the Elastigroup VMs.
 - Custom Data. Custom data is useful for launching VMs with all required configurations and software installations. Elastigroup can load custom user data (i.e., custom scripts) during the provisioning of VMs.
-- Shutdown Script. You can configure a shutdown script, but this requires an agent to be installed on the instance. [Learn more](elastigroup/features/azure/shutdown-script-in-elastigroup-for-azure.md).
+- Shutdown Script. You can configure a shutdown script, but this requires an agent to be installed on the instance. [Learn more](elastigroup/features/azure/shutdown-script-in-elastigroup-for-azure).
 
 <img src="/elastigroup/_media/gettingstarted-eg-azure-05.png" />
 

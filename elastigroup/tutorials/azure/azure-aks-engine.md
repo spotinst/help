@@ -96,7 +96,7 @@ It is possible to customize the api-model of aks-engine but the following settin
 2. Use _azure_ networking plugin:
    orchestratorProfile.kubernetesConfig.networkPlugin = `azure`
 
-The full instructions for aks-engine can be found [on GitHub](https://github.com/Azure/aks-engine/blob/master/docs/README.md).
+The full instructions for aks-engine can be found [on GitHub](https://github.com/Azure/aks-engine/blob/master/docs/README).
 
 Minimally a cluster can be created with the [api model](https://github.com/spotinst/spotinst-aks-engine-tools/blob/master/models/k8s-azurenet.json) that is used in the simple setup above.
 

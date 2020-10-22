@@ -3,10 +3,10 @@
 The latest Spot policy in AWS appears below.
 
 - You can find and modify your Spot Policy in the [AWS IAM Console](https://console.aws.amazon.com/iam/home#/policies).
-- You can [restrict your Spot Policy](elastigroup/tutorials/elastigroup-tasks/restrict-your-spot-iam-policy.md) using custom AWS IAM Condition Statements.
+- You can [restrict your Spot Policy](elastigroup/tutorials/elastigroup-tasks/restrict-your-spot-iam-policy) using custom AWS IAM Condition Statements.
 - Ensure that your policy is always up to date with the latest JSON.
 
-For additional information, see: [Update the Spot Policy](elastigroup/tutorials/elastigroup-tasks/update-spot-policy.md).
+For additional information, see: [Update the Spot Policy](elastigroup/tutorials/elastigroup-tasks/update-spot-policy).
 
 ```json
 {

@@ -32,7 +32,7 @@ A Private IP Pool can be defined for your Stateful Elastigroup in the Stateful C
 
 <img src="/elastigroup/_media/stateful-persistnetwork-01.png" width="490" height="215" />
 
-When assigning several Private IPs, the group creates a Stateful Spot Instance (SSI) in a Paused state for each Private IP. The instances can then be launched by using the [Resume action](elastigroup/features/stateful-instance/stateful-instance-actions.md). If one of the SSIs in the group is deallocated, a new Paused SSI is created to replace it automatically, in order to maintain the association between the instances and the Private IP Pool. If the requested number of instances exceeds the number of provided IPs, random IPs are taken from the subnet ID to cover the additional instances.
+When assigning several Private IPs, the group creates a Stateful Spot Instance (SSI) in a Paused state for each Private IP. The instances can then be launched by using the [Resume action](elastigroup/features/stateful-instance/stateful-instance-actions). If one of the SSIs in the group is deallocated, a new Paused SSI is created to replace it automatically, in order to maintain the association between the instances and the Private IP Pool. If the requested number of instances exceeds the number of provided IPs, random IPs are taken from the subnet ID to cover the additional instances.
 
 ## Remove an IP from the Private IP Pool
 

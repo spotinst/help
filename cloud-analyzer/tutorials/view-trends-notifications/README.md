@@ -12,9 +12,9 @@ The Top Trends graph shows cloud account spending over time and highlights irreg
 
 The summary table includes the following columns:
 
-- Event ID: Identifier assigned by Cloud Analyzer when the event is created. You can see more detailed information about an event by clicking on the [Event ID](cloud-analyzer/tutorials/view-trends-notifications/view-event-details.md).
+- Event ID: Identifier assigned by Cloud Analyzer when the event is created. You can see more detailed information about an event by clicking on the [Event ID](cloud-analyzer/tutorials/view-trends-notifications/view-event-details).
 - Account: The account name to which the event belongs
-- Resource: A tag or service name which is customer-defined on the [Event Definition](cloud-analyzer/tutorials/view-trends-notifications/manage-event-definitions.md) page
+- Resource: A tag or service name which is customer-defined on the [Event Definition](cloud-analyzer/tutorials/view-trends-notifications/manage-event-definitions) page
 - Trend Scope: The time frame in which metrics are compared. The following time frames are used:
   - Monthly: The analysis is performed comparing the last 30 days with the previous four 30-day periods.
   - Weekly: The analysis is performed comparing the last 7 days with the previous four 7-day periods.
@@ -29,6 +29,6 @@ The summary table includes the following columns:
 
 From the Trends & Notifications page, you can access additional information and perform the following actions:
 
-- [Define New Events](cloud-analyzer/tutorials/view-trends-notifications/manage-event-definitions.md)
-- [View Event Details](cloud-analyzer/tutorials/view-trends-notifications/view-event-details.md)
-- [Archive Events](cloud-analyzer/tutorials/view-trends-notifications/view-all-archive.md)
+- [Define New Events](cloud-analyzer/tutorials/view-trends-notifications/manage-event-definitions)
+- [View Event Details](cloud-analyzer/tutorials/view-trends-notifications/view-event-details)
+- [Archive Events](cloud-analyzer/tutorials/view-trends-notifications/view-all-archive)

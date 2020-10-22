@@ -7,7 +7,7 @@ This integration provides the ability to use Route 53 as a load balancer for the
 1. Make sure you have existing domains (record sets).
 2. Only domain record set type A (IP) is supported.
 3. Record set aliases are not supported.
-4. Make sure you are using the latest [Spot policy](administration/api/spot-policy-in-aws.md).
+4. Make sure you are using the latest [Spot policy](administration/api/spot-policy-in-aws).
 
 ## Create a New Elastigroup
 

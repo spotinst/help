@@ -11,7 +11,7 @@ Launch specifications enable you to configure multiple workload types on the sam
 5. Name your Launch Specification (for ECS).
 6. Add the labels or attributes which identify your nodes or container instances
 7. Set the user data script and make sure to label your instances according to your label selection:
-   - For Kubernetes user data, refer to this [tutorial](ocean/tutorials/create-custom-labels.md).
+   - For Kubernetes user data, refer to this [tutorial](ocean/tutorials/create-custom-labels).
    - For ECS user data, refer to Example 2 in this tutorial.
 8. Optional: Set Custom AMI, Instance Profile, and Security Groups for the launch specification.
 

@@ -16,7 +16,7 @@ Once the metric value is determined, an effective-minimum calculation begins to 
 
 ## Configure Predictive Autoscaling
 
-1. When using [target-based scaling](elastigroup/features/scaling/predictive-autoscaling.md), some metrics will offer you to use predictive autoscaling.
+1. When using [target-based scaling](elastigroup/features/scaling/predictive-autoscaling), some metrics will offer you to use predictive autoscaling.
 2. Once selected, you can choose to either use a prediction-only mode, or predict and scale mode.
 3. Choosing either mode will start a metric prediction process that uses machine learning to determine the expected target metric value within the next two days, based on past behavior and other scaling activities throughout the system.
 4. In both settings, a new graph will appear in the UI, showing the predicted metric, target, and effective-minimum values

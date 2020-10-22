@@ -21,5 +21,5 @@ Elastigroup automatically scales the infrastructure cluster up and down based on
 
 ## What's Next?
 
-- Learn more about the [automatic autoscaler for ECS](elastigroup/features/amazon-ecs/automatic-autoscaler-for-ecs.md).
-- Start integrating your [ECS cluster with Elastigroup](elastigroup/tutorials/amazon-ecs/get-started-with-ecs-on-elastigroup.md).
+- Learn more about the [automatic autoscaler for ECS](elastigroup/features/amazon-ecs/automatic-autoscaler-for-ecs).
+- Start integrating your [ECS cluster with Elastigroup](elastigroup/tutorials/amazon-ecs/get-started-with-ecs-on-elastigroup).

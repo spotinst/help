@@ -9,7 +9,7 @@ To create an Elastigroup in the same template that creates a Beanstalk environme
 
 3. Under the Elastigroup Beanstalk property, use `EnvironmentName` parameter instead of `environmentId`, and reference (ref) to the new environment name.
 
-In order to view the full list of all available Beanstalk parameters, please follow this [link](tools-and-provisioning/cloudformation/beanstalk-examples/use-existing-environment.md).
+In order to view the full list of all available Beanstalk parameters, please follow this [link](tools-and-provisioning/cloudformation/beanstalk-examples/use-existing-environment).
 
 ```json
 {

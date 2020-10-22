@@ -65,5 +65,5 @@ You're all set! Your Azure account is now connected to Spot.
 
 ## What's Next?
 
-- [Create your first Elastigroup](elastigroup/getting-started/create-an-elastigroup-for-azure.md).
+- [Create your first Elastigroup](elastigroup/getting-started/create-an-elastigroup-for-azure).
 - Check out the [Elastigroup for Azure API](https://help.spot.io/spotinst-api/elastigroup/microsoft-azure/create/).

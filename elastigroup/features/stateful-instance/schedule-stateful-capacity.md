@@ -1,6 +1,6 @@
 # Schedule Stateful Capacity
 
-Elastigroups that utilize the [Stateful Spot Instances](elastigroup/features/stateful-instance/stateful-instances.md) can schedule capacity changes, for example for QA environments that need to launch instances in the morning and terminate them at night or the weekend.
+Elastigroups that utilize the [Stateful Spot Instances](elastigroup/features/stateful-instance/stateful-instances) can schedule capacity changes, for example for QA environments that need to launch instances in the morning and terminate them at night or the weekend.
 
 Elastigroups allows you to set Jobs based on a Cron expression. This means you can trigger a change in capacity. Each line of a cron expression represents a job and looks like this:
 

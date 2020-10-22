@@ -1,6 +1,6 @@
 # Create an Elastigroup for GCP
 
-This tutorial covers the creation of a Load Balanced Elastigroup from scratch. To learn more, read about how Elastigroup works with [GCP Load Balancers and Backend Services](elastigroup/features/gcp/gcp-load-balancers-backend-services.md).
+This tutorial covers the creation of a Load Balanced Elastigroup from scratch. To learn more, read about how Elastigroup works with [GCP Load Balancers and Backend Services](elastigroup/features/gcp/gcp-load-balancers-backend-services).
 
 ## Get Started
 
@@ -109,7 +109,7 @@ Docker Swarm:
 
 ## Step 3: Scaling Settings (Optional)
 
-Optionally, create up-scaling or down-scaling Policies. For more information, see [Scaling Policies for Elastigroup GCP](elastigroup/features/gcp/scaling-policies-for-gcp-elastigroup.md).
+Optionally, create up-scaling or down-scaling Policies. For more information, see [Scaling Policies for Elastigroup GCP](elastigroup/features/gcp/scaling-policies-for-gcp-elastigroup).
 
 To create a policy (up scaling or down scaling) perform following steps:
 

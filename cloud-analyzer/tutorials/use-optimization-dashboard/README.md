@@ -23,9 +23,9 @@ Below the summary line, you will find the following graphs:
 
 At the bottom of the Compute Overview, you will find the Use-cases Breakdown. This section provides previews of the other Optimization tabs:
 
-- [Containers](cloud-analyzer/tutorials/use-optimization-dashboard/containers.md): Recommendation and estimate of savings if you would run your container workload on spot instances instead of on-demand instances
-- [Elastic Applications](cloud-analyzer/tutorials/use-optimization-dashboard/elastic-applications.md): Recommendation and estimate of savings if you would run your application workload on spot instances instead of on-demand instances
-- [Reservations](cloud-analyzer/tutorials/use-optimization-dashboard/reservations.md): Recommendation and estimate of savings if you would run your workload on reserved instances instead of on-demand instances
+- [Containers](cloud-analyzer/tutorials/use-optimization-dashboard/containers): Recommendation and estimate of savings if you would run your container workload on spot instances instead of on-demand instances
+- [Elastic Applications](cloud-analyzer/tutorials/use-optimization-dashboard/elastic-applications): Recommendation and estimate of savings if you would run your application workload on spot instances instead of on-demand instances
+- [Reservations](cloud-analyzer/tutorials/use-optimization-dashboard/reservations): Recommendation and estimate of savings if you would run your workload on reserved instances instead of on-demand instances
 
 Each preview contains the number of instances in that category currently running, an estimation of additional savings that can be obtained using optimization, and the current savings percentage.
 

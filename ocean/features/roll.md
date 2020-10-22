@@ -53,7 +53,7 @@ The following are possible reasons for failure:
 
 ### Restrict Scale Down during Roll
 
-The roll does not consider the [restrict-scale-down](./scaling-kubernetes.md) label. Ocean will replace a node even if a task or pod uses this label. As mentioned above, Ocean's autoscaler takes into consideration all relevant constraints in place before the roll.
+The roll does not consider the [restrict-scale-down](./scaling-kubernetes) label. Ocean will replace a node even if a task or pod uses this label. As mentioned above, Ocean's autoscaler takes into consideration all relevant constraints in place before the roll.
 
 ## Roll per Node or Launch Specification
 

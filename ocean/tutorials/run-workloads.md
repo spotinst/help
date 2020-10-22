@@ -12,7 +12,7 @@ Using Run Workloads, you can completely adjust and manage Kubernetes clusters fr
 
 This feature enables you to manage the cluster configuration and run operations such as the creation of workloads. You can achieve this easily by using the Spot Console and gaining the full picture of your cluster provided by Ocean.
 
-This feature is available for customers using Spot Controller version 1.0.38 and later. If you are using an older version, you must [update your controller](ocean/tutorials/spot-kubernetes-controller/update-controller.md).
+This feature is available for customers using Spot Controller version 1.0.38 and later. If you are using an older version, you must [update your controller](ocean/tutorials/spot-kubernetes-controller/update-controller).
 
 ## Step 1: Run Workload
 

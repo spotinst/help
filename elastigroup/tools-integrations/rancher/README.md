@@ -11,5 +11,5 @@ Before you start using this integration, ensure you have:
 
 ## What's next?
 
-- Get started with [Rancher versions 2.0 and later](elastigroup/tools-integrations/rancher/rancher-versions-20-and-later.md).
-- Get started with [Rancher versions before 2.0](elastigroup/tools-integrations/rancher/rancher-versions-before-20.md).
+- Get started with [Rancher versions 2.0 and later](elastigroup/tools-integrations/rancher/rancher-versions-20-and-later).
+- Get started with [Rancher versions before 2.0](elastigroup/tools-integrations/rancher/rancher-versions-before-20).

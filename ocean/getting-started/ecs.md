@@ -8,7 +8,7 @@ In this procedure, you will join an existing ECS cluster to Ocean using the [Spo
 
 ## Prerequisites
 
-- [Connect your AWS account to Spot](connect-your-cloud-provider/aws-account.md).
+- [Connect your AWS account to Spot](connect-your-cloud-provider/aws-account).
 - Have an ECS cluster with at least a single container instance running.
 
 ## Get Started

@@ -24,7 +24,7 @@ Procedure:
 2. Create a template.tf that includes the [Spot Provider Configuration](tools-and-provisioning/terraform/getting-started/configuration).
 3. Run `terraform init`
    If command fails, continue below to manual installation.
-4. The latest [Change Log](https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/CHANGELOG.md) release version of the Spot provider should be downloaded.
+4. The latest [Change Log](https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/CHANGELOG) release version of the Spot provider should be downloaded.
 5. Visit the [Terraform Spot Provider](tools-and-provisioning/terraform/getting-started/install-terraform) documentation page for official provider documentation.
 
 After running `terraform init`, the provider binary is located under

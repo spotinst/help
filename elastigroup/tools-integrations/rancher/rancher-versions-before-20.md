@@ -91,7 +91,7 @@ write_files:
 
 ---
 
-**Tip**: For security reasons, ensure that the Rancher Master Security-Group is open specifically for the whitelisted Spot server IP addresses listed here: [Spot Whitelist IPs](administration/api/whitelist-ips.md)
+**Tip**: For security reasons, ensure that the Rancher Master Security-Group is open specifically for the whitelisted Spot server IP addresses listed here: [Spot Whitelist IPs](administration/api/whitelist-ips)
 
 ---
 

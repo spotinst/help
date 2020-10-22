@@ -46,4 +46,4 @@ In addition to basic cost optimization of moving workloads from on-demand to spo
 
 ## What's Next?
 
-- [Create an Elastigroup](elastigroup/getting-started/create-an-elastigroup-for-aws.md).
+- [Create an Elastigroup](elastigroup/getting-started/create-an-elastigroup-for-aws).

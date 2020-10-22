@@ -14,7 +14,7 @@ The following tutorial covers how to start running Gitlab Runner's autoscaling f
 
 ## Procedure
 
-1. [Create an Elastigroup](elastigroup/tutorials/elastigroup-tasks/create-an-elastigroup-from-scratch.md) in your account with the following parameters:
+1. [Create an Elastigroup](elastigroup/tutorials/elastigroup-tasks/create-an-elastigroup-from-scratch) in your account with the following parameters:
 2. [Docker-Machine Supported OS AMI](https://docs.docker.com/machine/drivers/os-base/)
 3. Create Security Group with inbound SSH (22) and Docker-Machine (2376) ports open
 4. Install [Git Runner on Linux machine](https://docs.gitlab.com/runner/install/index.html)

@@ -13,7 +13,7 @@ Before performing the procedures in this tutorial, you will need the following:
 - A Spot account
 - An AWS account
 - [Metric Server](https://github.com/kubernetes-incubator/metrics-server#deployment) installed in your Kubernetes cluster
-- An [Ocean cluster](ocean/getting-started/eks/create-a-new-cluster.md) managing your Kubernetes worker nodes
+- An [Ocean cluster](ocean/getting-started/eks/create-a-new-cluster) managing your Kubernetes worker nodes
 
 ## Step 1: Monitor Deployment Resource Consumption
 

@@ -4,6 +4,6 @@ The Spot Controller is a pod that resides within your Kubernetes cluster, enabli
 
 There are several ways to install the Controller. Choose one of the procedures below:
 
-- [Install Controller with Kubectl](ocean/tutorials/spot-kubernetes-controller/install-with-kubectl.md)
-- [Install Controller with Terraform](ocean/tutorials/spot-kubernetes-controller/install-with-terraform.md)
-- [Install Controller with Helm](ocean/tutorials/spot-kubernetes-controller/install-with-helm.md)
+- [Install Controller with Kubectl](ocean/tutorials/spot-kubernetes-controller/install-with-kubectl)
+- [Install Controller with Terraform](ocean/tutorials/spot-kubernetes-controller/install-with-terraform)
+- [Install Controller with Helm](ocean/tutorials/spot-kubernetes-controller/install-with-helm)

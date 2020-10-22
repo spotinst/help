@@ -36,7 +36,7 @@ As a best-practice, we highly recommend leaving Auto-Update enabled due to the f
 
 If you wish to disable the auto-update, do the following:
 
-1. Edit your Spot controller configMap.yaml file (spotinst-kubernetes-cluster-controller-config), as shown [here](ocean/tutorials/spot-kubernetes-controller/install-with-kubectl.md).
+1. Edit your Spot controller configMap.yaml file (spotinst-kubernetes-cluster-controller-config), as shown [here](ocean/tutorials/spot-kubernetes-controller/install-with-kubectl).
 
 2. Add the following line to the file, under the `data` section:
 

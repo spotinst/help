@@ -6,12 +6,12 @@ In the console, you can enable single sign-on (SSO) for your organization.
 
 The system supports the following identity providers:
 
-- [ADFS SAML](administration/identity-providers/adfs-saml-authentication.md)
-- [Azure AD Integration](administration/identity-providers/azure-active-directory-integration.md)
-- [Bitium SAML](administration/identity-providers/bitium-saml-authentication.md)
-- [Custom SAMLs](administration/identity-providers/custom-saml-idp-configuration.md)
-- [Okta SAML](administration/identity-providers/okta-saml-authentication.md)
-- [OneLogin SAML](administration/identity-providers/onelogin-saml-authentication.md)
+- [ADFS SAML](administration/identity-providers/adfs-saml-authentication)
+- [Azure AD Integration](administration/identity-providers/azure-active-directory-integration)
+- [Bitium SAML](administration/identity-providers/bitium-saml-authentication)
+- [Custom SAMLs](administration/identity-providers/custom-saml-idp-configuration)
+- [Okta SAML](administration/identity-providers/okta-saml-authentication)
+- [OneLogin SAML](administration/identity-providers/onelogin-saml-authentication)
 
 ## Set up SAML SSO in the Console
 
@@ -51,5 +51,5 @@ Roles can be defined only by organization or by account, not both.
 
 ## What's Next?
 
-- [Organization Level SSO](administration/sso-access-control/organization-level-sso.md)
-- [Account Level SSO](administration/sso-access-control/account-level-sso.md)
+- [Organization Level SSO](administration/sso-access-control/organization-level-sso)
+- [Account Level SSO](administration/sso-access-control/account-level-sso)

@@ -4,4 +4,4 @@ Using your existing Terraform templates, you can take full advantage of the Spot
 
 ## Prerequisite:
 
-You already have a Spot account and have completed the Spot Terraform [Installation](tools-and-provisioning/terraform/getting-started/install-terraform.md) and [Configuration](tools-and-provisioning/terraform/getting-started/configuration.md).
+You already have a Spot account and have completed the Spot Terraform [Installation](tools-and-provisioning/terraform/getting-started/install-terraform) and [Configuration](tools-and-provisioning/terraform/getting-started/configuration).

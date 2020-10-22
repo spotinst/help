@@ -23,9 +23,9 @@ Every fault-tolerant application that requires data persistency can benefit from
 
 Managed Instances utilize a combination of snapshots, volumes and ENIs to ensure state persistence.
 
-- [Persist root volume](managed-instance/features/root-volume-persistence.md): Selecting to persist the root volume ensures that Operating System and root volume configurations are maintained during instance replacements.
-- [Persist data volumes](managed-instance/features/data-volume-persistence.md): Data devices are maintained using one of the following methods:
+- [Persist root volume](managed-instance/features/root-volume-persistence): Selecting to persist the root volume ensures that Operating System and root volume configurations are maintained during instance replacements.
+- [Persist data volumes](managed-instance/features/data-volume-persistence): Data devices are maintained using one of the following methods:
   - Reattach Volumes: The same EBS volumes are detached from the original instance and reattached to the new instance.
   - Snapshot Backups: During the launch of a new instance, new EBS volumes are created and attached to it as part of the launch specifications.
-- [Persist Network Interface](managed-instance/features/network-persistence.md): New instances are provisioned with the same private IP using the same Elastic Network Interface.
+- [Persist Network Interface](managed-instance/features/network-persistence): New instances are provisioned with the same private IP using the same Elastic Network Interface.
   - Private IP Pool – Specify a pool of private IPs to be used by the Stateful instances.

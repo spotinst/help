@@ -26,5 +26,5 @@ The figure below shows how the Spot Infrastructure-aware Scheduler deals with va
 
 ## What's Next?
 
-- [Get started with Elastigroup for Amazon ECS](elastigroup/tutorials/amazon-ecs/get-started-with-ecs-on-elastigroup.md).
-- Learn about easy task placement in your cluster by using [ECS constraints](elastigroup/tutorials/amazon-ecs/configure-attributes-for-task-placement-constraints.md).
+- [Get started with Elastigroup for Amazon ECS](elastigroup/tutorials/amazon-ecs/get-started-with-ecs-on-elastigroup).
+- Learn about easy task placement in your cluster by using [ECS constraints](elastigroup/tutorials/amazon-ecs/configure-attributes-for-task-placement-constraints).

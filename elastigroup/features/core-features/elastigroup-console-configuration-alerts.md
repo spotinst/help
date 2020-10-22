@@ -40,4 +40,4 @@ Resolution: Remove the BDM configuration block from the group's JSON.
 
 ## What's Next?
 
-Learn more about [Block Device Mapping](elastigroup/features/compute/block-device-mapping.md).
+Learn more about [Block Device Mapping](elastigroup/features/compute/block-device-mapping).

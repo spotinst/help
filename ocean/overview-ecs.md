@@ -10,7 +10,7 @@ As tasks and services are deployed via the Amazon CLI, API or Console UI, Ocean 
 
 At the same time, the Autoscaler constantly runs simulations of the cluster, looking to optimize the resource allocations via bin-packing algorithms. When an instance is identified whose tasks may be distributed across the cluster, a scale-down is triggered, and the instance is drained and terminated.
 
-In addition to the smart container-driven autoscaling and the use of spot instances, Ocean provides a rich feature set that aims to optimize other aspects of container cluster management. For example, when you configure [headroom](ocean/features/headroom.md), a buffer of spare capacity is maintained, based on the cluster's most common services to scale out . The headroom allows for incoming tasks to be scheduled immediately, eliminating the wait time until new instances spin up and register to the cluster.
+In addition to the smart container-driven autoscaling and the use of spot instances, Ocean provides a rich feature set that aims to optimize other aspects of container cluster management. For example, when you configure [headroom](ocean/features/headroom), a buffer of spare capacity is maintained, based on the cluster's most common services to scale out . The headroom allows for incoming tasks to be scheduled immediately, eliminating the wait time until new instances spin up and register to the cluster.
 
 The result of the Ocean features is an optimally utilized and cost-efficient cluster of container instances.
 
@@ -18,5 +18,5 @@ The result of the Ocean features is an optimally utilized and cost-efficient clu
 
 ## What's Next?
 
-- If you have not already connected your AWS account, [Connect your AWS Account](connect-your-cloud-provider/aws-account.md).
-- [Get started with an Ocean Cluster](ocean/getting-started/ecs.md).
+- If you have not already connected your AWS account, [Connect your AWS Account](connect-your-cloud-provider/aws-account).
+- [Get started with an Ocean Cluster](ocean/getting-started/ecs).

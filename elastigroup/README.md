@@ -10,7 +10,7 @@ Elastigroup enables you to:
 
 ## Connect Your Cloud Provider Account
 
-If you have not yet connected Spot with your Cloud provider account, go ahead and Connect your Account now: [AWS](connect-your-cloud-provider/aws-account.md), [Azure](connect-your-cloud-provider/azure-account.md), [GCP](connect-your-cloud-provider/gcp-project.md). Once you have connected your account, get started with an Ocean cluster.
+If you have not yet connected Spot with your Cloud provider account, go ahead and Connect your Account now: [AWS](connect-your-cloud-provider/aws-account), [Azure](connect-your-cloud-provider/azure-account), [GCP](connect-your-cloud-provider/gcp-project). Once you have connected your account, get started with an Ocean cluster.
 
 ## What's Next?
 

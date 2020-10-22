@@ -1,4 +1,4 @@
-# Join an Existing EKS Cluster
+# Join an existing EKS Cluster
 
 Ocean is a managed infrastructure service for Kubernetes that automatically adjusts infrastructure capacity and size to meet the needs of pods, containers, and applications.
 
@@ -6,7 +6,7 @@ In this procedure, you will use the [Spot Console](http://console.spotinst.com/)
 
 ## Prerequisites
 
-- [Connect your AWS account to Spot](connect-your-cloud-provider/aws-account.md).
+- [Connect your AWS account to Spot](connect-your-cloud-provider/aws-account).
 - Have an EKS cluster up and running.
 
 ## Get Started
@@ -66,5 +66,5 @@ You're all set! Ocean will now ensure the most cost-effective capacity and sizin
 
 ## What's Next?
 
-- [Migrate your Workloads](ocean/tutorials/migrate-workload.md) to Ocean.
-- Learn more about importing multiple workload types in the same cluster by using [Launch Specifications](ocean/features/launch-specifications.md).
+- [Migrate your Workloads](ocean/tutorials/migrate-workload) to Ocean.
+- Learn more about importing multiple workload types in the same cluster by using [Launch Specifications](ocean/features/launch-specifications).

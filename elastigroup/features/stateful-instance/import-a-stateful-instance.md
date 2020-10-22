@@ -47,4 +47,4 @@ Another way to import a stateful instance is to start from scratch using an empt
 
 ## What's Next?
 
-Use the [Stateful Instance Actions](elastigroup/features/stateful-instance/stateful-instance-actions.md) menu to manage the new stateful instance on Elastigroup.
+Use the [Stateful Instance Actions](elastigroup/features/stateful-instance/stateful-instance-actions) menu to manage the new stateful instance on Elastigroup.

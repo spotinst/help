@@ -31,4 +31,4 @@ At the end of the off time, the autoscaler launches the appropriate types and nu
 
 ## What's Next?
 
-Learn how to [Set Running Hours](ocean/tutorials/set-running-hours.md)
+Learn how to [Set Running Hours](ocean/tutorials/set-running-hours)

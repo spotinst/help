@@ -12,12 +12,12 @@ Elastigroup supports the following Health Check types:
 - ELB – Amazon's Elastic Load Balancer (Classic load balancer) health check.
 - TARGET_GROUP – AWS Application Load Balancer health check.
 - EC2 – AWS EC2 Status check.
-- [HCS](elastigroup/tools-integrations/custom-health-check-service.md) – Spot's health check.
-- [ECS](elastigroup/tutorials/configure-health-checks-and-autohealing.md) – ECS Cluster Instance Health check.
-- [K8S_NODE](elastigroup/tools-integrations/kubernetes-with-elastigroup/configure-autohealing-for-kubernetes.md) – Kubernetes Status check. Requires integration with a Kubernetes cluster.
+- [HCS](elastigroup/tools-integrations/custom-health-check-service) – Spot's health check.
+- [ECS](elastigroup/tutorials/configure-health-checks-and-autohealing) – ECS Cluster Instance Health check.
+- [K8S_NODE](elastigroup/tools-integrations/kubernetes-with-elastigroup/configure-autohealing-for-kubernetes) – Kubernetes Status check. Requires integration with a Kubernetes cluster.
 - NOMAD_NODE – Nomad Status check. Requires integration with a Nomad cluster.
 - MLB – Multai Load Balancer health check service.
-- [OpsWorks](elastigroup/tools-integrations/opsworks/opsworks-autohealing.md) – OpsWorks layer membership verification.
+- [OpsWorks](elastigroup/tools-integrations/opsworks/opsworks-autohealing) – OpsWorks layer membership verification.
 
 ## Additional Health Check Settings
 

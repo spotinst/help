@@ -61,7 +61,7 @@ We'll check connectivity to your GCP account, and you're all set to create your 
 
 ## Automatic Method
 
-### Prerequisites:
+### Prerequisites
 
 - Have gcloud installed.
 - Have permissions to create a service account.
@@ -89,4 +89,4 @@ We'll check connectivity to your GCP account, and you're all set.
 
 ## What's Next?
 
-[Create your first Elastigroup](elastigroup/getting-started/create-an-elastigroup-for-gcp.md).
+[Create your first Elastigroup](elastigroup/getting-started/create-an-elastigroup-for-gcp).

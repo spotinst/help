@@ -41,6 +41,6 @@ Daemon tasks run on each instance or on a selected set of instances in an Amazon
 
 ## What's Next?
 
-- [Set up the automatic autoscaler](elastigroup/tutorials/amazon-ecs/enable-autoscaling-for-ecs.md).
-- [Configure custom attributes](elastigroup/tutorials/amazon-ecs/configure-attributes-for-task-placement-constraints.md) for task placement constraints.
-- Learn how the autoscaler utilizes [Tetris scaling](elastigroup/features/amazon-ecs/autoscaler-tetris-scaling.md).
+- [Set up the automatic autoscaler](elastigroup/tutorials/amazon-ecs/enable-autoscaling-for-ecs).
+- [Configure custom attributes](elastigroup/tutorials/amazon-ecs/configure-attributes-for-task-placement-constraints) for task placement constraints.
+- Learn how the autoscaler utilizes [Tetris scaling](elastigroup/features/amazon-ecs/autoscaler-tetris-scaling).

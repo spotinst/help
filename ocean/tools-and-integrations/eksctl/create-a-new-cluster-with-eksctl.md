@@ -5,7 +5,7 @@ In this procedure, you will create an Ocean Kubernetes cluster with `eksctl` and
 ## Prerequisites
 
 - Ensure you have an [IAM user](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html) in your AWS account with both Console and Programmatic Access credentials.
-- [Connect your AWS account to Spot](connect-your-cloud-provider/aws-account.md).
+- [Connect your AWS account to Spot](connect-your-cloud-provider/aws-account).
 - Install [awscli](https://docs.aws.amazon.com/cli/latest/userguide/installing.html) v1.16.18 or later and [configure AWS credentials](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html#cli-configure-quickstart-config).
 - Install [kubectl](https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html) (provided by Amazon EKS).
 - If you are going to use `spotctl` commands, [install spotctl](https://github.com/spotinst/spotctl#getting-started).
@@ -158,4 +158,4 @@ That's it! Your Ocean cluster is up and will now ensure the most cost-effective 
 
 ## What's Next?
 
-Learn how to [Join an Existing Cluster](ocean/tools-and-integrations/eksctl/join-an-existing-cluster.md) to Ocean using eksctl.
+Learn how to [Join an Existing Cluster](ocean/tools-and-integrations/eksctl/join-an-existing-cluster) to Ocean using eksctl.

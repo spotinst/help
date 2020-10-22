@@ -62,4 +62,4 @@ The following rules apply to policies:
 
 ## What's Next?
 
-See the full list of [access policy actions](administration/access-policies/access-policy-actions.md).
+See the full list of [access policy actions](administration/access-policies/access-policy-actions).

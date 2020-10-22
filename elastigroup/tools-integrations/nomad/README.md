@@ -56,4 +56,4 @@ When an instance is found idle for the specified amount of consecutive periods, 
 
 ## What's Next?
 
-To learn how to configure the Elastigroup Integration with Nomad Autoscaler, see [Configure Nomad Autoscaler](elastigroup/tools-integrations/nomad/configure-nomad-autoscaler.md).
+To learn how to configure the Elastigroup Integration with Nomad Autoscaler, see [Configure Nomad Autoscaler](elastigroup/tools-integrations/nomad/configure-nomad-autoscaler).

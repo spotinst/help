@@ -20,5 +20,5 @@ GCE offers a discount of 37-55% in exchange for a long-term commitment. The exac
 
 ## What's Next?
 
-- [Launching your first Elastigroup](elastigroup/getting-started/create-an-elastigroup-for-gcp.md).
-- Learn more about [Elastigroups](elastigroup/getting-started/elastigroup-for-gcp.md).
+- [Launching your first Elastigroup](elastigroup/getting-started/create-an-elastigroup-for-gcp).
+- Learn more about [Elastigroups](elastigroup/getting-started/elastigroup-for-gcp).

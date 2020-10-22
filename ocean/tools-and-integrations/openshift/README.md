@@ -12,5 +12,5 @@ Ocean now officially supports OpenShift v3.11 and later, leveraging its security
 
 Learn how to migrate your OpenShift clusters to Ocean:
 
-- [Create Ocean Cluster from OpenShift (v4.x)](ocean/tools-and-integrations/openshift/create-cluster-v4x.md)
-- [Create Ocean Cluster from OpenShift (v3.11+)](ocean/tools-and-integrations/openshift/create-cluster-v311.md)
+- [Create Ocean Cluster from OpenShift (v4.x)](ocean/tools-and-integrations/openshift/create-cluster-v4x)
+- [Create Ocean Cluster from OpenShift (v3.11+)](ocean/tools-and-integrations/openshift/create-cluster-v311)

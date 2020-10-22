@@ -28,4 +28,4 @@ Grant Compute Network User role to the Spot Service Account you created when you
 
 ## Step 3: Create Ocean Cluster
 
-To create an Ocean cluster that will manage your GKE cluster, use [this procedure](ocean/getting-started/gke.md).
+To create an Ocean cluster that will manage your GKE cluster, use [this procedure](ocean/getting-started/gke).

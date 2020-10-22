@@ -25,7 +25,7 @@ Ocean makes recommendations based on a mechanism that tries to even out peaks an
 ### Kubernetes Usage Notes
 
 Right-Sizing is available for Ocean users running Spot Controller Ver. 1.0.37 and later.
-For Ocean Kubernetes clusters, Right Sizing relies on the Kubernetes Metrics Server. For more information about the Metrics Server, see the [tutorial](ocean/tutorials/use-right-sizing.md).
+For Ocean Kubernetes clusters, Right Sizing relies on the Kubernetes Metrics Server. For more information about the Metrics Server, see the [tutorial](ocean/tutorials/use-right-sizing).
 
 ## How It Works (Ocean For ECS)
 

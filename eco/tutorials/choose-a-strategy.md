@@ -1,6 +1,6 @@
 # Choose a Strategy
 
-After you click Choose Strategy in the [Analysis](eco/tutorials/review-ri-spending-analysis.md) page, you will choose a reserved instance strategy in the Strategy Selection page, shown below.
+After you click Choose Strategy in the [Analysis](eco/tutorials/review-ri-spending-analysis) page, you will choose a reserved instance strategy in the Strategy Selection page, shown below.
 
 <img src="/eco/_media/tutorials-choose-strategy-01.png" />
 

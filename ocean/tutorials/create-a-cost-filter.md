@@ -1,6 +1,6 @@
 # Create a Cost Filter
 
-Sometimes it is useful to create a [Cost Analysis](ocean/features/cost-analysis.md) that takes only certain workloads into consideration. You can do this by adding a filter.
+Sometimes it is useful to create a [Cost Analysis](ocean/features/cost-analysis) that takes only certain workloads into consideration. You can do this by adding a filter.
 
 ## Relevance
 

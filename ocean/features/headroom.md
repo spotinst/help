@@ -42,5 +42,5 @@ For example, a launch specification is configured to maintain two headroom units
 
 ## What's Next?
 
-- Learn more about [Launch Specifications](ocean/features/launch-specifications.md).
+- Learn more about [Launch Specifications](ocean/features/launch-specifications).
 - Learn more about the Launch Specification APIs: [AWS](https://help.spot.io/spotinst-api/ocean/ocean-cloud-api/ocean-for-aws/launch-specifications/create/), [ECS](https://help.spot.io/spotinst-api/ocean/ocean-cloud-api/ocean-for-ecs/launch-specifications/create/), [GKE](https://help.spot.io/spotinst-api/ocean/ocean-cloud-api/ocean-for-gke/launch-specifications/create/)

@@ -20,13 +20,13 @@ Every fault-tolerant application that requires data persistency can benefit from
 
 Elastigroup's Stateful feature provides a combination of snapshots, volumes and ENIs to ensure data persistency.
 
-- [Persist root volume](elastigroup/features/stateful-instance/persist-root-volume.md): Selecting to persist the root volume ensures that Operating System and root volume configurations are maintained during instance replacements.
-- [Persist data volumes](elastigroup/features/stateful-instance/persist-data-volumes.md): Data devices are maintained using one of the following methods:
+- [Persist root volume](elastigroup/features/stateful-instance/persist-root-volume): Selecting to persist the root volume ensures that Operating System and root volume configurations are maintained during instance replacements.
+- [Persist data volumes](elastigroup/features/stateful-instance/persist-data-volumes): Data devices are maintained using one of the following methods:
   - Reattach Volumes: The same EBS volumes are detached from the original instance and reattached to the new instance.
   - Snapshot Backups: During the launch of a new instance, new EBS volumes are created and attached to it.
-- [Persist private IP](elastigroup/features/stateful-instance/persist-network.md): New instances are provisioned with the same private IP using the same Elastic Network Interface.
+- [Persist private IP](elastigroup/features/stateful-instance/persist-network): New instances are provisioned with the same private IP using the same Elastic Network Interface.
   - Private IP Pool – Specify a pool of private IPs to be used by the Stateful instances.
 
 ## Importing a Stateful Instance
 
-Elastigroup provides the ability to import an existing stateful instance, with the original root and data volumes. Importing stateful instances is also available using the [API](https://api.spotinst.com/spotinst-api/stateful-api/import-stateful-instance/). Learn how to [import an existing stateful instance](elastigroup/features/stateful-instance/import-a-stateful-instance.md).
+Elastigroup provides the ability to import an existing stateful instance, with the original root and data volumes. Importing stateful instances is also available using the [API](https://api.spotinst.com/spotinst-api/stateful-api/import-stateful-instance/). Learn how to [import an existing stateful instance](elastigroup/features/stateful-instance/import-a-stateful-instance).
