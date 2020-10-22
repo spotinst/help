@@ -12,7 +12,7 @@ In this procedure, you will join an existing GKE cluster to Ocean using the [Spo
 
 ## Get Started
 
-In the left menu of the Spot console, click Ocean/Cloud Clusters, and click Create Cluster.
+In the left menu of the Spot Console, click Ocean/Cloud Clusters, and click Create Cluster.
 
 <img src="/ocean/_media/gke-create-cluster.png" />
 

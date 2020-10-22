@@ -15,7 +15,7 @@ The system supports the following identity providers:
 
 ## Set up SAML SSO in the Console
 
-1. Login to the Spot account as an administrator: [Spot console](https://console.spotinst.com/#/dashboard)
+1. Login to the Spot account as an administrator: [Spot Console](https://console.spotinst.com/#/dashboard)
 2. Click on the user icon and choose Settings.
 3. Click on the `SECURITY` tab at the top and select Identity Providers.
 4. Complete the required information in the form and save.

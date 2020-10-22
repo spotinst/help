@@ -2,7 +2,7 @@
 
 Ocean is a managed infrastructure service for Kubernetes that automatically adjusts infrastructure capacity and size to meet the needs of pods, containers, and applications.
 
-In this procedure, you will use the [Spot console](http://console.spotinst.com/) to join an existing EKS cluster to Ocean.
+In this procedure, you will use the [Spot Console](http://console.spotinst.com/) to join an existing EKS cluster to Ocean.
 
 ## Prerequisites
 
@@ -11,7 +11,7 @@ In this procedure, you will use the [Spot console](http://console.spotinst.com/)
 
 ## Get Started
 
-1. In the left menu of the Spot console, click Ocean/Cloud Clusters, and click Create Cluster.
+1. In the left menu of the Spot Console, click Ocean/Cloud Clusters, and click Create Cluster.
 
 <img src="/ocean/_media/create-cluster.png" />
 

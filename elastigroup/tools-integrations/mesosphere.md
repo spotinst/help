@@ -67,7 +67,7 @@ Now let's get the Master's external IP address, go back to `Resources` from step
 
 Now that the cluster is up and running let's configure some Spot instances via the Elastigroup integration.
 
-1. Log into the Spot console at http://console.spotinst.com (free trial at http://spotinst.com/signup).
+1. Log into the Spot Console at http://console.spotinst.com (free trial at http://spotinst.com/signup).
 2. Click on the `Create` button to create a new Elastigroup.
 3. At the bottom left of the screen click on the red `Import` button, then select `Auto Scaling Group` from the menu.
 4. Select the same region you used in step 1, and select the Auto Scaling Group with the name `-SlaveServerGroup-`.

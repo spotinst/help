@@ -26,7 +26,7 @@ Using this option will guarantee capacity even if there are no spot instances av
 
 This option is available via the API or the `Edit Configuration` option in the UI.
 
-### Using the Spot console:
+### Using the Spot Console:
 
 While creating a new Elastigroup or Editing an existing Elastigorup configuration:
 

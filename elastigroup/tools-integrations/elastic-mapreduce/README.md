@@ -11,7 +11,7 @@ This tutorial focuses on cloning an existing EMR into Elastigroup. Elastigroup a
 
 ## Step 1: Open the EMR Creation Wizard
 
-Login to the Spot console and under Elastigroups navigate to the Creation Wizard by hitting the Create button:
+Login to the Spot Console and under Elastigroups navigate to the Creation Wizard by hitting the Create button:
 
 Choose 'EMR' to launch the EMR creation wizard:
 

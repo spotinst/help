@@ -27,7 +27,7 @@ bash" |  at now + 5 minute
 
 ## Add the Shutdown Script
 
-1. Go into the Spot console, and edit the configuration for your Elastigroup.
+1. Go into the Spot Console, and edit the configuration for your Elastigroup.
 2. Navigate to Compute tab, and open the Additional Configuration.
 3. Under shutdown script, add your desired shell script.
 4. Click Next -> Update, and you're done!

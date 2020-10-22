@@ -11,7 +11,7 @@ Watch a step-by-step [video tutorial](https://youtu.be/csPmq3JZlgU/) on connecti
 
 ---
 
-**Tip**: Prior to connecting your AWS account, you can access a demo system to get familiar with the dashboard. In the Spot console, click Get a Console Walkthrough.
+**Tip**: Prior to connecting your AWS account, you can access a demo system to get familiar with the dashboard. In the Spot Console, click Get a Console Walkthrough.
 
 ---
 

@@ -13,7 +13,7 @@ All actions in this procedure should be made in the US-East-1 (Northern Virginia
 
 ## Get Started
 
-1. Once you log into the Spot console, go to the Cloud Analyzer Cost Analysis dashboard. You will see the following message:
+1. Once you log into the Spot Console, go to the Cloud Analyzer Cost Analysis dashboard. You will see the following message:
 
 <img src="/cloud-analyzer/_media/gettingstarted-connect-master-existing-01.png" width="300" height="212" />
 
@@ -57,7 +57,7 @@ Mark the checkboxes as shown below.
 
 <img src="/cloud-analyzer/_media/gettingstarted-connect-master-existing-05.png" />
 
-3. Return to your account in the Spot console and paste the name of the S3 bucket where the hourly cost and usage reports are stored.
+3. Return to your account in the Spot Console and paste the name of the S3 bucket where the hourly cost and usage reports are stored.
 
 ## Step 5
 
