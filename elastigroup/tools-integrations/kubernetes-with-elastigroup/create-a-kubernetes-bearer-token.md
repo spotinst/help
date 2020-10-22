@@ -13,7 +13,7 @@ metadata:
   name: spotinst
   namespace: default
 secrets:
-- name: spotinst-secret
+  - name: spotinst-secret
 ---
 apiVersion: v1
 kind: Secret
@@ -28,9 +28,9 @@ kind: ClusterRole
 metadata:
   name: spotinst-role
 rules:
-- apiGroups: [""]
-  resources: ["pods", "nodes", "replicationcontrollers", "events", "limitranges", "services"]
-  verbs: ["get", "delete", "list", "patch", "update"]
+  - apiGroups: [""]
+    resources: ["pods", "nodes", "replicationcontrollers", "events", "limitranges", "services"]
+    verbs: ["get", "delete", "list", "patch", "update"]
 ---
 apiVersion: rbac.authorization.k8s.io/v1beta1
 kind: ClusterRoleBinding
@@ -41,9 +41,9 @@ roleRef:
   name: spotinst-role
   apiGroup: rbac.authorization.k8s.io
 subjects:
-- kind: ServiceAccount
-  name: spotinst
-  namespace: default
+  - kind: ServiceAccount
+    name: spotinst
+    namespace: default
 ```
 
 ## Step 2: Run the Commands

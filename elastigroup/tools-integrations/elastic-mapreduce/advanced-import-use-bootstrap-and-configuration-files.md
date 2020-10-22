@@ -43,11 +43,7 @@ The required structure for Bootstrap actions files should hold a JSON of the fol
   {
     "name": "cluster_conf",
     "scriptPath": "s3://test.dev/bootstrap.sh",
-    "args": [
-      "s3://test.dev/bootstrap.properties",
-      "bootstrap.properties"
-    ]
-
+    "args": ["s3://test.dev/bootstrap.properties", "bootstrap.properties"]
   },
   {
     "name": "bootstrap_clone",
@@ -55,7 +51,6 @@ The required structure for Bootstrap actions files should hold a JSON of the fol
     "args": []
   }
 ]
-
 ```
 
 The required structure for Configuration file should hold a JSON of the following format:
