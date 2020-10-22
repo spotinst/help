@@ -31,13 +31,21 @@ git clone https://github.com/spotinst/spinnaker-halyard.gitgit checkout add_spot
 To add Spot to Spinnaker as a cloud provider, complete the steps below. This procedure is for MacOSX.
 
 1. Move to the folder of the git repository and change directories as follows:
-`cd ./halyard-cli`
+```
+cd ./halyard-cli
+``
 2. Run the local command `gradlew` that is located in the folder.
-`./gradlew halyard-web:run`
-   The halyard service is running and can interact with the halyard client.
+```
+./gradlew halyard-web:run
+```
+The halyard service is running and can interact with the halyard client.
 3. Open a new terminal and move to the same directory as before:
-`cd ./halyard-cli`
+
+```
+cd ./halyard-cli
+```
 4. Run the following commands to add Spot as a cloud provider and register to your Spot Account:
+
 ```
 ./hal config provider spot edit --api-token <SPOT_API_TOKEN>./hal config provider spot account add <SPOT_ACC_NAME> --account-id <SPOT_ACC_ID>./hal config provider spot enable
 ```
