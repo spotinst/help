@@ -4,8 +4,7 @@ While cloning an EMR cluster you can also specify Bootstrap actions and Configur
 
 Referencing the following JSON body example while Cloning the Cluster:
 
-```
-
+```json
 {
   "mrScaler": {
     "name": "my MRScaler",
@@ -35,13 +34,11 @@ Referencing the following JSON body example while Cloning the Cluster:
     "scaling": {...}
   }
 }
-
 ```
 
 The required structure for Bootstrap actions files should hold a JSON of the following format:
 
-```
-
+```json
 [
   {
     "name": "cluster_conf",
@@ -63,8 +60,7 @@ The required structure for Bootstrap actions files should hold a JSON of the fol
 
 The required structure for Configuration file should hold a JSON of the following format:
 
-```
-
+```json
 [
   {
     "classification": "hive",
@@ -81,5 +77,4 @@ The required structure for Configuration file should hold a JSON of the followin
     }
   }
 ]
-
 ```
