@@ -14,7 +14,7 @@ Before you can create a managed instance, you need to do the following:
 
 ## Get Started
 
-1. To create a new Managed Instance from scratch, go to the Managed Instance dashboard on the Spot console and click New Instance on the top right.
+1. To create a new Managed Instance from scratch, go to the Managed Instance dashboard on the Spot Console and click New Instance on the top right.
 
 <img src="/managed-instance/_media/gettingstarted-create-new-01.png" />
 

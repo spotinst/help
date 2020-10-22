@@ -10,7 +10,7 @@ All actions in this procedure should be made in the US-East-1 (Northern Virginia
 
 ## Get Started
 
-Once you log into the Spot console, go to the Eco dashboard. You will see the following message:
+Once you log into the Spot Console, go to the Eco dashboard. You will see the following message:
 
 <img src="/eco/_media/gettingstarted-aws-connect-01.png" width="300" height="212" />
 

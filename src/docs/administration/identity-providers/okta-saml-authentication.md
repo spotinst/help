@@ -25,7 +25,7 @@ SSO support makes it easy to manage your accounts and works with the most popula
 
 <img src="/administration/_media/okta-saml-04.png" />
 
-7. Go back to the Spot console, click BROWSE and upload the metadata.xml file you just downloaded.
+7. Go back to the Spot Console, click BROWSE and upload the metadata.xml file you just downloaded.
 8. Click SUBMIT.
 9. Done! Login back into Spot via your Okta account!
 

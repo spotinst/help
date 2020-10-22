@@ -14,7 +14,7 @@ Before you can create a managed instance, you need to do the following:
 
 ## Import your Managed Instance
 
-1. To import your stateful single instance from AWS, go to the Managed Instance dashboard on the Spot console and click New Instance on the top right.
+1. To import your stateful single instance from AWS, go to the Managed Instance dashboard on the Spot Console and click New Instance on the top right.
 
 <img src="/managed-instance/_media/gettingstarted-join-existing-01.png" />
 

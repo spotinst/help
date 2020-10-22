@@ -8,7 +8,7 @@ This tutorial covers the creation of a Load Balanced Elastigroup from scratch. T
 
 The creation template is available under `Use Cases` in the Creation Wizard:
 
-1. In the [Spot console](https://console.spotinst.com/), on the lefthand menu, select Elastigroups.
+1. In the [Spot Console](https://console.spotinst.com/), on the lefthand menu, select Elastigroups.
 2. Click the `Create Elastigroup` button on the top right.
 3. Choose the `Load Balancing` use case:
 

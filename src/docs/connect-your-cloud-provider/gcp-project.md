@@ -29,7 +29,7 @@ Navigate to Service Account and select your project.
 
 Create a service account for Spot actions. Name it as described in the wizard:
 
-On Spot console:
+On Spot Console:
 
 <img src="/connect-your-cloud-provider/_media/gcp-step3.png" />
 
