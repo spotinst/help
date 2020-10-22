@@ -11,7 +11,7 @@ Elastigroup reports the following metrics per AWS account:
 - NetworkIn
 - NetworkOut
 
-The custom namespace of these metrics is ‘Spotinst‘ with 2 dimensions of Elastigroup ID and instance type.
+The custom namespace of these metrics is 'Spotinst' with 2 dimensions of Elastigroup ID and instance type.
 
 To publish these metrics to CloudWatch add the following permission to the IAM Policy:
 
@@ -20,4 +20,4 @@ cloudWatch:PutMetricData
 
 ```
 
-Once this is done, contact your account manager to have Spotinst begin publishing the Elastigroup metrics for you. At Spotinst, your data privacy is of utmost importance, which is why we require your confirmation before publishing data of any kind to third-party tools such as CloudWatch.
+Once this is done, contact your account manager to have Spot begin publishing the Elastigroup metrics for you. At Spotinst, your data privacy is of utmost importance, which is why we require your confirmation before publishing data of any kind to third-party tools such as CloudWatch.

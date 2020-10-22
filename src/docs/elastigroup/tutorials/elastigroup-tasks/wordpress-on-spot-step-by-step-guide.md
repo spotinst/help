@@ -12,7 +12,7 @@ Before starting this tutorial, make sure to have an account in Spot with valid c
 
 <img src="/elastigroup/_media/wordpress-on-spot-step-by-step-guide_1.png" />
 
-Select an appropriate use case for your Elastigroup and click on “Launch” – This should take care of some initial settings for you. Select the ‘Empty template' option:
+Select an appropriate use case for your Elastigroup and click on `Launch` – This should take care of some initial settings for you. Select the 'Empty template' option:
 
 <img src="/elastigroup/_media/wordpress-on-spot-step-by-step-guide_2.png" />
 
@@ -27,16 +27,16 @@ Your Elastigroup's general information.
 Setting the desired capacity of the Elastigroup.
 
 - **Target** – Number of running instances/vCPU weight in your Elastigroup
-- **Minimum** – In the case of a ‘scale down' policy action, this is the minimum number of running instances/vCPU weight in the group.
-- **Maximum** – In the case of a ‘scale up' policy action, this is the maximum number of running instances/vCPU weight in the group.
+- **Minimum** – In the case of a 'scale down' policy action, this is the minimum number of running instances/vCPU weight in the group.
+- **Maximum** – In the case of a 'scale up' policy action, this is the maximum number of running instances/vCPU weight in the group.
 
 ### Compute Tab
 
 This is where we can set up the Compute related specification, including Network and the launch configuration.
 
 - **VPC** – Choose your VPC network
-- **Product** – Select your OS, if you're unsure please choose “Linux/UNIX”. Please note that if you have both EC2-Classic and VPC networks enabled in your account, you must explicitly choose it in this field as “Amazon VPC”
-- **On-Demand Type** – Choose your default On-Demand instance type. This will also allow Elastigroup to benchmark the best Spot types based on price and performance. This will also be the instance type that will be used in case “Fallback to On-Demand” option is enabled in the Strategy tab.
+- **Product** – Select your OS, if you're unsure please choose `Linux/UNIX`. Please note that if you have both EC2-Classic and VPC networks enabled in your account, you must explicitly choose it in this field as `Amazon VPC`
+- **On-Demand Type** – Choose your default On-Demand instance type. This will also allow Elastigroup to benchmark the best Spot types based on price and performance. This will also be the instance type that will be used in case `Fallback to On-Demand` option is enabled in the Strategy tab.
 
 After setting the VPC you can move on to selecting the AZ's you would like to use.
 
@@ -78,7 +78,7 @@ You can add scaling policies to your group to help you adjust computing capacity
 
 ## Step 2: Test your Environment
 
-1. Once your instance is running, you can now test your WordPress website. Find the Public IP for your instance under ‘instances' in your Elastigroup:
+1. Once your instance is running, you can now test your WordPress website. Find the Public IP for your instance under 'instances' in your Elastigroup:
 
 <img src="/elastigroup/_media/wordpress-on-spot-step-by-step-guide_4.png" />
 

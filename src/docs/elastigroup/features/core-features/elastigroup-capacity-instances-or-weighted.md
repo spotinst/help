@@ -11,8 +11,8 @@ When you use the Elastigroup weighting feature, you can define a target vCPU cap
 ## How to enable Weighted Configuration
 
 1. Create a new Elastigroup
-2. Move to the “General” configuration Tab
-3. Expand the “ADVANCED” option menu
+2. Move to the `General` configuration Tab
+3. Expand the `ADVANCED` option menu
 4. Change the Capacity Unit to vCPU
 
 <img src="/elastigroup/_media/corefeatures-capacity-01.png" />
@@ -23,7 +23,7 @@ You can now run, scale and manage heterogeneous clusters with ease.
 
 ---
 
-**Tip**: Using weighted “vCPU” capacity units is not supported for Autoscaler enabled Elastigroups (e.g., Kubernetes, ECS, Nomad).
+**Tip**: Using weighted `vCPU` capacity units is not supported for Autoscaler enabled Elastigroups (e.g., Kubernetes, ECS, Nomad).
 
 ---
 

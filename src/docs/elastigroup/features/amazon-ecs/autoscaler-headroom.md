@@ -2,7 +2,7 @@
 
 Headroom is a buffer of spare capacity (in terms of both memory and CPU) that makes sure that when you want to scale more tasks, you don't have to wait for new instances to launch while preventing instances from being over-utilized.
 
-Each headroom unit consists of 2 definitions: one for CPU units “cpuPerUnit” (1024 units = 1 vCPU) and one for Memory “memoryPerUnit” (in MiB). In addition, you can define the number of headroom units to reserve in your cluster.
+Each headroom unit consists of 2 definitions: one for CPU units `cpuPerUnit` (1024 units = 1 vCPU) and one for Memory `memoryPerUnit` (in MiB). In addition, you can define the number of headroom units to reserve in your cluster.
 
 For example, Let's say that you define a headroom unit to consist 512 MiB of Memory and 1024 CPU units, and require a total of 10 units. In addition, let's say that the cluster consists of 3 instances. The AutoScaler will verify the total sum of units throughout the entire cluster and check if it meets the required number configured in the group.
 

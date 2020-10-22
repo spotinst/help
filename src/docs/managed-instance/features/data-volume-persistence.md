@@ -4,7 +4,7 @@ Data volume persistence maintains the data volumes during Spot instance replacem
 
 ## Configure Data Volume Persistence
 
-To configure data volume persistence head to the Managed Instance's configuration, select “Persistent Resources”, check the “Persist Data Volumes” option, and then select a persistence method.
+To configure data volume persistence head to the Managed Instance's configuration, select `Persistent Resources`, check the `Persist Data Volumes` option, and then select a persistence method.
 
 <img src="/managed-instance/_media/data-volume-persistence-01.png" />
 

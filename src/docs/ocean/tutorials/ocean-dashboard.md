@@ -85,7 +85,7 @@ The dashboard displays a summary of top right-sizing recommendations. This inclu
 
 <img src="/ocean/_media/tutorials-ocean-dashboard-05.png" width="300" height="358" />
 
-Ocean sorts the list of recommendations so that the most cost effective ones in dollar value appear at the top. “Most cost effective” means an instance that has the potential for the most dollar savings by right-sizing the CPU and memory resources. For each instance, Ocean calculates a “weighted average delta” which represents the recommended changes in CPU and memory. The instance with the greatest weighted average delta has the potential for the most dollar savings.
+Ocean sorts the list of recommendations so that the most cost effective ones in dollar value appear at the top. `Most cost effective` means an instance that has the potential for the most dollar savings by right-sizing the CPU and memory resources. For each instance, Ocean calculates a `weighted average delta` which represents the recommended changes in CPU and memory. The instance with the greatest weighted average delta has the potential for the most dollar savings.
 
 ## Pending Recommendations By Cluster
 

@@ -16,13 +16,13 @@ Complete the following prerequisites, unless you started with [Running Elastigro
 #!/bin/bash
 # Configure the following parameters
 export CLUSTER_NAME="" # Name of the EKS cluster
-export SPOTINST_TOKEN="" # Spotinst Token
-export SPOTINST_ACCOUNT="" # Spotinst Account ID
+export SPOTINST_TOKEN="" # Spot Token
+export SPOTINST_ACCOUNT="" # Spot Account ID
 export INSTANCE_ROLE_ARN="" # The full ARN of the instance role created (not instance profile
 echo "Configuring kubectl to work with the EKS Cluster"
 aws eks update-kubeconfig --name $CLUSTER_NAME
 kubectl get svc
-echo "Installing Spotinst Kuberenets Controller"
+echo "Installing Spot Kuberenets Controller"
 # Downloading and updating configMap.yaml
 # This link should be in spotinst public s3 bucket
 curl -o configMap.yaml https://s3.amazonaws.com/spotinst-public/integrations/kubernetes/cluster-controller/templates/spotinst-kubernetes-controller-config-map.yaml
@@ -41,7 +41,7 @@ kubectl apply -f aws-auth-cm.yaml
 echo "Printing cluster Nodes"
 sleep 15s
 kubectl get nodes
-echo "Finished configuring kubectl and installing Spotinst k8s controller"
+echo "Finished configuring kubectl and installing Spot k8s controller"
 ```
 
 ## Linux Version
@@ -50,13 +50,13 @@ echo "Finished configuring kubectl and installing Spotinst k8s controller"
 #!/bin/bash
 # Configure the following parameters
 export CLUSTER_NAME="" # Name of the EKS cluster
-export SPOTINST_TOKEN="" # Spotinst Token
-export SPOTINST_ACCOUNT="" # Spotinst Account ID
+export SPOTINST_TOKEN="" # Spot Token
+export SPOTINST_ACCOUNT="" # Spot Account ID
 export INSTANCE_ROLE_ARN="" # The full ARN of the instance role created (not instance profile)
 echo "Configuring kubectl to work with the EKS Cluster"
 aws eks update-kubeconfig --name $CLUSTER_NAME
 kubectl get svc
-echo "Installing Spotinst Kuberenets Controller"
+echo "Installing Spot Kuberenets Controller"
 # Downloading and updating configMap.yaml
 # This link should be in spotinst public s3 bucket
 curl -o configMap.yaml https://s3.amazonaws.com/spotinst-public/integrations/kubernetes/cluster-controller/templates/spotinst-kubernetes-controller-config-map.yaml
@@ -75,7 +75,7 @@ kubectl apply -f aws-auth-cm.yaml
 echo "Printing cluster Nodes"
 sleep 15s
 kubectl get nodes
-echo "Finished configuring kubectl and installing Spotinst k8s controller"
+echo "Finished configuring kubectl and installing Spot k8s controller"
 ```
 
 ## Troubleshooting

@@ -65,7 +65,7 @@ The default grouping is by namespace. To choose a different grouping, click Grou
 
 Once you have chosen a grouping, choose the Key from the list of keys in your cluster.
 
-The example below shows the grouping by Label (Resource) with Key equal to “Family”. The table details all of the values for the Label Key “Family” that exist in the cluster.
+The example below shows the grouping by Label (Resource) with Key equal to `Family`. The table details all of the values for the Label Key `Family` that exist in the cluster.
 
 <img src="/ocean/_media/tutorials-analyze-your-costs-04.png" />
 

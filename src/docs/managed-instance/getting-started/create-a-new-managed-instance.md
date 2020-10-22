@@ -50,11 +50,11 @@ Once VPC, Subnets, Product, Image and Preferred Instance type are selected, Spot
 <img src="/managed-instance/_media/gettingstarted-create-new-07.png" />
 
 8. Fill in any User Data or Shutdown Scripts you would like to run upon instance launch or termination.
-9. Shutdown Script requires an Agent to be installed via the User Data. Clicking on the “Add Agent installation to User Data” link will automatically add the required bash script to the User Data section.
+9. Shutdown Script requires an Agent to be installed via the User Data. Clicking on the `Add Agent installation to User Data` link will automatically add the required bash script to the User Data section.
 
 <img src="/managed-instance/_media/gettingstarted-create-new-08.png" />
 
-10. Add any custom Instance Tags by typing in the Key and Value and clicking “Add”:
+10. Add any custom Instance Tags by typing in the Key and Value and clicking `Add`:
 
 <img src="/managed-instance/_media/gettingstarted-create-new-09.png" width="438" height="154" />
 
@@ -102,7 +102,7 @@ Public IP can be persisted by selecting an Elastic IP.
 
 <img src="/managed-instance/_media/gettingstarted-create-new-13.png" />
 
-- For Route 53 select your Hosted Zone, Record Sets and Public IP registration, then click “Add a Record”.
+- For Route 53 select your Hosted Zone, Record Sets and Public IP registration, then click `Add a Record`.
 
 <img src="/managed-instance/_media/gettingstarted-create-new-14.png" />
 
@@ -118,7 +118,7 @@ Public IP can be persisted by selecting an Elastic IP.
 ### Configure Scheduled Actions
 
 - You can choose one of two options – predetermined Running hours, or custom scheduled actions.
-  - With the “Run instance only during these hours” option, once you configure the time window the managed instance will be “Paused” outside of it. At the beginning of the next window, it will be automatically “Resumed” along with its persisted resources.
+  - With the `Run instance only during these hours` option, once you configure the time window the managed instance will be `Paused` outside of it. At the beginning of the next window, it will be automatically `Resumed` along with its persisted resources.
 
 <img src="/managed-instance/_media/gettingstarted-create-new-16.png" />
 

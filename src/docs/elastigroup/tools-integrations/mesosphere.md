@@ -17,7 +17,7 @@ To start, let's build a new DC/OS environment with the very convenient AWS Cloud
 
 ## Step 1
 
-You'll find a link to the cloud formation template at the top of the page. Select the region and click on “Launch Stack” link for “Single Master”.
+You'll find a link to the cloud formation template at the top of the page. Select the region and click on `Launch Stack` link for `Single Master`.
 
 <img src="/elastigroup/_media/mesosphere-01.png" width="600" height="204" />
 
@@ -31,7 +31,7 @@ The template will take about 10 minutes to deploy so go enjoy a nice cup of coff
 
 ## Step 4
 
-Once the deployment has completed, you should now see the status change to “CREATE_COMPLETE” as you can see below. If you do not see this, make sure you are in the Cloud Formation console for the correct AWS region.
+Once the deployment has completed, you should now see the status change to `CREATE_COMPLETE` as you can see below. If you do not see this, make sure you are in the Cloud Formation console for the correct AWS region.
 
 <img src="/elastigroup/_media/mesosphere-02.png" />
 
@@ -41,14 +41,14 @@ Click on the stack name to see details of the deployment.
 
 ## Step 6
 
-Expand the “Outputs” and “Resources” sections.
+Expand the `Outputs` and `Resources` sections.
 
 ## Step 7
 
-Now let's get the Master's external IP address, go back to “Resources” from step 6.
+Now let's get the Master's external IP address, go back to `Resources` from step 6.
 
-1. Scroll down to “ElasticLoadBalancer” and click on the link.
-2. Click on the “Instances” tab and then click on the instance ID for the master.
+1. Scroll down to `ElasticLoadBalancer` and click on the link.
+2. Click on the `Instances` tab and then click on the instance ID for the master.
 3. Copy the public IP of the master into a text editor for later.
 4. You should see two security groups for the master, click on the MasterSecurityGroup.
 5. In the Security Group console, add a new inbound TCP rule for the MasterSecurityGroup as shown below. (Inbound Custom TCP Rule for port 5050 and the [whitelist IPs](administration/api/whitelist-ips.md).)
@@ -68,20 +68,20 @@ Now let's get the Master's external IP address, go back to “Resources” from 
 Now that the cluster is up and running let's configure some Spot instances via the Elastigroup integration.
 
 1. Log into the Spot console at http://console.spotinst.com (free trial at http://spotinst.com/signup).
-2. Click on the “Create” button to create a new Elastigroup.
-3. At the bottom left of the screen click on the red “Import” button, then select “Auto Scaling Group” from the menu.
-4. Select the same region you used in step 1, and select the Auto Scaling Group with the name “-SlaveServerGroup-“.
+2. Click on the `Create` button to create a new Elastigroup.
+3. At the bottom left of the screen click on the red `Import` button, then select `Auto Scaling Group` from the menu.
+4. Select the same region you used in step 1, and select the Auto Scaling Group with the name `-SlaveServerGroup-`.
 
 <img src="/elastigroup/_media/mesosphere-04.png" />
 
 5. Pick a descriptive name for your Elastigroup and click next at the bottom right of the screen.
-6. Select “Linux/Unix” as the Product type.
+6. Select `Linux/Unix` as the Product type.
 7. Configure the strategy and configuration as you see fit, I recommend a target of two instances for testing purposes.
-8. Scroll down to “Spot Types” and select m3.large, m3.xlarge, m4.large, m4.xlarge.
+8. Scroll down to `Spot Types` and select m3.large, m3.xlarge, m4.large, m4.xlarge.
 9. Select the checkbox for Mesosphere DC/OS in the integration section. Paste in the API server from 7.3 above as port :5050 as you can see below. Click on test connection (you should see a green checkbox if successful). Note: set as http rather than https.
-10. Click “Next” at the bottom right of the screen.
-11. Leave scaling policies as they are and click “Next” at the bottom right of the screen.
-12. Review the JSON file and click “Create” to create your new Elastigroup configured with DC/OS.
+10. Click `Next` at the bottom right of the screen.
+11. Leave scaling policies as they are and click `Next` at the bottom right of the screen.
+12. Review the JSON file and click `Create` to create your new Elastigroup configured with DC/OS.
 13. In about 10 minutes two new Spot instances should be created and automatically added as a node to your DC/OS cluster.
 
 **Before**:

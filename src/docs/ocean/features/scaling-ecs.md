@@ -35,7 +35,7 @@ Ocean optimally manages the headroom to provide the best possible cost/performan
 
 Ocean supports built-in and custom task placement constraints within the scaling logic. Task placement constraints give you the ability to control where tasks are scheduled, such as in a specific availability zone or on instances of a specific type. You can utilize the built-in ECS container attributes or create your own custom key-value attribute and add a constraint to place your tasks based on the desired attribute.
 
-Ocean provides a custom placement restraint which enables you to control how specific tasks are scheduled. For example, if you have mission critical tasks that cannot run on spot instances, you can use the placement restraint `“spotinst.io/container-instance-lifecycle”` to schedule tasks only on on-demand instances. The format of the placement restraint is shown below:
+Ocean provides a custom placement restraint which enables you to control how specific tasks are scheduled. For example, if you have mission critical tasks that cannot run on spot instances, you can use the placement restraint `spotinst.io/container-instance-lifecycle` to schedule tasks only on on-demand instances. The format of the placement restraint is shown below:
 
 `"attribute:spotinst.io/container-instance-lifecycle==od"`
 

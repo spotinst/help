@@ -1,6 +1,6 @@
 # Metadata Labels
 
-Spot supports metadata labels to be configured by using the Spot instance group to configure various Ocean settings. All labels marked with “\*” must be configured on the same instance group that contains `spotinst.io/ocean-default-launchspec: “true”`. Below is a list of supported metadata labels and the default values.
+Spot supports metadata labels to be configured by using the Spot instance group to configure various Ocean settings. All labels marked with `\*` must be configured on the same instance group that contains `spotinst.io/ocean-default-launchspec: `true``. Below is a list of supported metadata labels and the default values.
 
 | Label                                                   | Description                                                                                                          | Default |
 | ------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | ------- |

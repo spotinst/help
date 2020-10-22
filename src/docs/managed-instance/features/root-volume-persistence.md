@@ -4,11 +4,11 @@ Root Volume Persistence maintains the data stored in your root volume, such as O
 
 ## How Root Volume Persistence Works
 
-Periodic snapshots of the root volume are taken continuously while the instance is running. When a Spot interruption occurs, a “final” snapshot is taken only after the original instance is terminated and the root volume changes to an “available” state. Once the original instance is terminated, an image is registered using the final snapshot and a new instance is launched from this image.
+Periodic snapshots of the root volume are taken continuously while the instance is running. When a Spot interruption occurs, a `final` snapshot is taken only after the original instance is terminated and the root volume changes to an `available` state. Once the original instance is terminated, an image is registered using the final snapshot and a new instance is launched from this image.
 
 ## Enable Root Volume Persistence
 
-Enter the Managed Instance configuration wizard. Under the “Persistent Resources” tab select “Persist Root Volume”:
+Enter the Managed Instance configuration wizard. Under the `Persistent Resources` tab select `Persist Root Volume`:
 
 <img src="/managed-instance/_media/root-volume-persistence-01.png" />
 
@@ -30,7 +30,7 @@ Managed Instance automatically performs various backend actions for different st
 
 ## Persist Root on Windows Platform
 
-When using the persist root volume option with Windows images, images created from snapshots as part of the recycle processes, will have a Platform parameter value of “Other Linux” (default behavior of AWS). This behavior can cause issues while trying to connect to the instance.
+When using the persist root volume option with Windows images, images created from snapshots as part of the recycle processes, will have a Platform parameter value of `Other Linux` (default behavior of AWS). This behavior can cause issues while trying to connect to the instance.
 
 The following user data script can be added to the Managed Instance's configuration to create a new user and password as the machine boots up, which will later be used to connect to the instance:
 

@@ -21,7 +21,7 @@ SSO support makes it easy to manage your accounts and works with the most popula
 
 <img src="/administration/_media/okta-saml-03.png" />
 
-3.  Download the metadata document by clicking on ‘Identity Provider metadata‘ link:
+3.  Download the metadata document by clicking on 'Identity Provider metadata' link:
 
 <img src="/administration/_media/okta-saml-04.png" />
 

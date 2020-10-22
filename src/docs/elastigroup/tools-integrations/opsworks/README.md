@@ -16,13 +16,13 @@ In order to register your Spot instances into OpsWorks, you need to create an IA
 
 1. Sign in to the AWS Management Console and open the [IAM console](https://console.aws.amazon.com/iam/).
 2. In the navigation pane of the console, click Roles and search for aws-opsworks-ec2-role.
-3. Click on the role name, and then in the Permissions tab click on “Attach Policy“.
+3. Click on the role name, and then in the Permissions tab click on `Attach Policy`.
 4. Search for the policies AWSOpsWorksCMServiceRole, AWSOpsWorksInstanceRegistration and AWSOpsWorksRegisterCLI.
-5. Click on the policies to select them and then click “Attach Policy“.
+5. Click on the policies to select them and then click `Attach Policy`.
 
 ## Step 2: Open the Creation Wizard
 
-Under Elastigroups, click Create Elastigroup, and choose “Opsworks” from the use-cases screen.
+Under Elastigroups, click Create Elastigroup, and choose `Opsworks` from the use-cases screen.
 
 <img src="/elastigroup/_media/opsworks-integration-01.png" width="176" height="257" />
 

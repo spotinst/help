@@ -386,7 +386,7 @@ if __name__ == "__main__":
 
 ### Third-party Integration
 
-Add the “HPC Grid Engine” Integration:
+Add the `HPC Grid Engine` Integration:
 
 <img src="/elastigroup/_media/configure-tortuga-unicloud-grid-engine_1.png" />
 

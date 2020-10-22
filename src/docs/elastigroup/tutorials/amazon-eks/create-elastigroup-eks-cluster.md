@@ -14,7 +14,7 @@ To create an EKS cluster and an Elastigroup, launch the CloudFormation template 
 
 ### For existing EKS Clusters
 
-Select the ‘Join Existing EKS Cluster' rubric from the Elastigroup use case creation page. Fill in the required details:
+Select the 'Join Existing EKS Cluster' rubric from the Elastigroup use case creation page. Fill in the required details:
 
 - Elastigroup name
 - Select the AWS Region your EKS cluster resides in

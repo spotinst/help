@@ -80,7 +80,7 @@ The next steps will be performed in account actInst using AWS CLI, please note t
 3. Run the following command in a terminal (grant for the Spot role):
 
 ```
-aws kms create-grant --key-id <b><i><<mark class="hilite term-0">KMS</mark> <mark class="hilite term-1">key</mark>-ARN></i></b> --grantee-principal <b><i><Spotinst role ARN></i></b> --operations "Encrypt" "Decrypt" "RetireGrant" "DescribeKey" "GenerateDataKey" "GenerateDataKeyWithoutPlaintext" "ReEncryptFrom" "ReEncryptTo" "CreateGrant" --name spotinst-grant
+aws kms create-grant --key-id <b><i><<mark class="hilite term-0">KMS</mark> <mark class="hilite term-1">key</mark>-ARN></i></b> --grantee-principal <b><i><Spot role ARN></i></b> --operations "Encrypt" "Decrypt" "RetireGrant" "DescribeKey" "GenerateDataKey" "GenerateDataKeyWithoutPlaintext" "ReEncryptFrom" "ReEncryptTo" "CreateGrant" --name spotinst-grant
 
 ```
 

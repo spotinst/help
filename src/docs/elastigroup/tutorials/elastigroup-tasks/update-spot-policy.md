@@ -31,7 +31,7 @@ Search for Spot policy and select it.
 
 ## Step 3: Edit the Policy
 
-In the Policy screen – select the “Permissions” tab, view the JSON and click on “Edit Policy”:
+In the Policy screen – select the `Permissions` tab, view the JSON and click on `Edit Policy`:
 
 <img src="/elastigroup/_media/update-spot-policy_3.png" />
 

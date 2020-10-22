@@ -50,7 +50,7 @@ View tasks pending in Elastgroup overview:
 
 ## New Elastigroup
 
-For a new Elastigroup, open the creation wizard and choose the “Batch” use case:
+For a new Elastigroup, open the creation wizard and choose the `Batch` use case:
 
 <img src="/elastigroup/_media/aws-batch_5.png" />
 

@@ -12,7 +12,7 @@ Here's what a stuck EMR looks like without Elastigroup's EMR Auto-Recover:
 
 When a change in instance group capacity is applied, a process will monitor its status and if the time limit of 30 minutes is exceeded, Spot Elastigroup will automatically stop the resizing process on the specific instance group and will create a new instance group with the same configuration which we will fall back to.
 
-The original instance group will be “banned” for 2 hours and all actions of launching new instances will be applied in the new instance group. i.e. – if in the original instance group there were 3 missing instances that were requested to be launched, they will be launched as part of the new instance group.
+The original instance group will be `banned` for 2 hours and all actions of launching new instances will be applied in the new instance group. i.e. – if in the original instance group there were 3 missing instances that were requested to be launched, they will be launched as part of the new instance group.
 
 ---
 

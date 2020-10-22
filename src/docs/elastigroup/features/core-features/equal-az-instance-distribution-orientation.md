@@ -18,13 +18,13 @@ Using this option will guarantee capacity even if there are no spot instances av
 
 ---
 
-**Tip**: When using this strategy, the “Spot Instance Percentage” or “On-Demand Count” settings will apply per AZ and not for the whole group. So for example, a group with 2 AZs and a “Spot Instance Percentage” of 50%, when launching its first 2 instances – they will both be spots, 1 in each AZ.
+**Tip**: When using this strategy, the `Spot Instance Percentage` or `On-Demand Count` settings will apply per AZ and not for the whole group. So for example, a group with 2 AZs and a `Spot Instance Percentage` of 50%, when launching its first 2 instances – they will both be spots, 1 in each AZ.
 
 ---
 
 ## Enabling Equal AZ Orientation
 
-This option is available via the API or the “Edit Configuration” option in the UI.
+This option is available via the API or the `Edit Configuration` option in the UI.
 
 ### Using the Spot console:
 
@@ -32,17 +32,17 @@ While creating a new Elastigroup or Editing an existing Elastigorup configuratio
 
 1. Set up your group
 2. Make sure that you select a target capacity that will match (or is a multiple of) the amount of AZs
-3. In the Review tab, enable “Edit Mode” and edit the JSON
+3. In the Review tab, enable `Edit Mode` and edit the JSON
 
 <img src="/elastigroup/_media/corefeatures-equalaz-01.png" width="600" height="224" />
 
-4. Set the value of “availabilityVsCost” to:”equalAzDistribution”
+4. Set the value of `availabilityVsCost` to:`equalAzDistribution`
 
 <img src="/elastigroup/_media/corefeatures-equalaz-02.png" width="600" height="346" />
 
 ### Using the API:
 
-While creating an Elastigorup – Use the “equalAzDistribution” in the availabilityVsCost field in the Elastigroup JSON
+While creating an Elastigorup – Use the `equalAzDistribution` in the availabilityVsCost field in the Elastigroup JSON
 
 While updating an Elastigroup – Update the strategy of the Elastigroup. The following is an example JSON:
 

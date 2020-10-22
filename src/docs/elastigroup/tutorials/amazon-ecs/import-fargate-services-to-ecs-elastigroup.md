@@ -18,7 +18,7 @@ Elastigroup automatically and seamlessly predicts and replaces Spot Instances be
 
 ## Step 1: Choose Use Case
 
-Select the “Existing Fargate/ECS” Use case from the use case screen.
+Select the `Existing Fargate/ECS` Use case from the use case screen.
 
 <img src="/elastigroup/_media/import-fargate-services-to-ecs-elastigroup_1.png" />
 
@@ -32,7 +32,7 @@ You will be shown with a list of detected services, from which to select which F
 
 The import process does not affect any existing services. Selected Fargate Tasks and Services are cloned by Spot and their settings are imported into an Elastigroup.
 
-Last step before starting the import process will be to review your Elastigroup configuration and click the the “Create” button:
+Last step before starting the import process will be to review your Elastigroup configuration and click the the `Create` button:
 
 <img src="/elastigroup/_media/import-fargate-services-to-ecs-elastigroup_3.png" />
 
@@ -40,7 +40,7 @@ On completion you'll see the Success message.
 
 ## Step 3: Begin the Import Process
 
-Once your Elastigroup is created, you can track the fargate service import process by clicking the ‘details' link in the banner that appears in the elastigroup overview screen.
+Once your Elastigroup is created, you can track the fargate service import process by clicking the 'details' link in the banner that appears in the elastigroup overview screen.
 
 <img src="/elastigroup/_media/import-fargate-services-to-ecs-elastigroup_4.png" />
 

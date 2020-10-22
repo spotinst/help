@@ -8,7 +8,7 @@ Using Cluster roll, you can now roll your ECS cluster (all instances belonging t
 
 ## Step 1: Create Cluster Roll
 
-On the top right corner, select “Actions” and then choose “Create Cluster Roll”
+On the top right corner, select `Actions` and then choose `Create Cluster Roll`
 
 <img src="/elastigroup/_media/create-cluster-roll_1.png" />
 
@@ -20,7 +20,7 @@ In the pop-up window, select the batch size which will be rolled at the same tim
 
 After initiating the cluster roll, you can monitor and follow the process in real-time, as well as viewing previous roll processes made.
 
-Under “Deployments” tab, you will see the details of the Cluster Roll you created in step 1.
+Under `Deployments` tab, you will see the details of the Cluster Roll you created in step 1.
 
 <img src="/elastigroup/_media/create-cluster-roll_3.png" />
 

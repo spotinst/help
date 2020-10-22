@@ -7,7 +7,7 @@ Managed Instance Network Persistence works by maintaining the EC2 instance's Ela
 Private IP Persistence maintains the same private IP address for the instance during Spot Instance replacements. To Enable Private IP Persistence:
 
 1. Enter the Managed Instance's Configuration Wizard.
-2. Under the Persistent Resources tab's Network section, check “Persist Private IP”.
+2. Under the Persistent Resources tab's Network section, check `Persist Private IP`.
 3. Optionally, specify a particular private IP to be used by the Managed Instance, otherwise a random IP is chosen from the Subnet.
 4. The Private IP is retained in every instance replacement.
 
@@ -18,7 +18,7 @@ Private IP Persistence maintains the same private IP address for the instance du
 Public IP persistence maintains the instances Elastic IP. To enable Elastic IP persistence:
 
 1. Enter the Managed Instance's Configuration Wizard.
-2. Under the Configuration tab's Advanced section, make sure the “Public IP Assignment” setting is configured to assign a public IP (can also be set to “According to Subnet Default” if subnet is configured to assign a public IP).
+2. Under the Configuration tab's Advanced section, make sure the `Public IP Assignment` setting is configured to assign a public IP (can also be set to `According to Subnet Default` if subnet is configured to assign a public IP).
 3. Under the Persistent Resources tab's Network section, select a specific Elastic IP to associate with the instance.
 4. A Managed Instance launched with the associated Elastic IP will then persist that IP during recycles and replacements.
 

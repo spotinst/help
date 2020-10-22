@@ -43,7 +43,7 @@ Alternatively, you can configure use the following user data script to install d
 
 Set the Health Check configuration in the Elastigroup:
 
-1. Go to your Elastigroup and click on the “Actions” menu at the top left. Click on “Set Health Check” from the menu:
+1. Go to your Elastigroup and click on the `Actions` menu at the top left. Click on `Set Health Check` from the menu:
 
 <img src="/elastigroup/_media/custom-health-check-service_2.png" width="228" height="341" />
 
@@ -62,7 +62,7 @@ Set the Health Check configuration in the Elastigroup:
 
 ## Step 4
 
-In the Compute part select “HCS” as HealthCheck Type.
+In the Compute part select `HCS` as HealthCheck Type.
 
 1. Go to your Elastigroup and click on Actions > Edit Configuration.
 2. On the Compute tab, in the Launch Specification section, under Auto Healing set the Auto Healing type to `HCS` and update the group.

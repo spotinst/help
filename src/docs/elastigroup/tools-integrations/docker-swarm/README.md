@@ -16,7 +16,7 @@ You can create your cluster of swarm easily through Spot Elastigroup. You will h
 
 When creating a new group, or when updating a group, you need to specify the Manager node by providing: masterHost (specifies the domain/ip of the docker master host), masterPort (specifies the port).
 
-Expand the “Integrations” portion in the Compute tab and enable the Docker Swarm integration. Enter the Swarm Manager IP and Swarm Manager port:
+Expand the `Integrations` portion in the Compute tab and enable the Docker Swarm integration. Enter the Swarm Manager IP and Swarm Manager port:
 
 <img src="/elastigroup/_media/docker-swarmREADME_2.png" />
 

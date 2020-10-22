@@ -128,7 +128,7 @@ Perform the following steps to verify your kubectl and Ocean controller installa
 
 ---
 
-**Tip**: If you receive the error “aws-iam-authenticator”: executable file not found in \$PATH, your kubectl is not configured for Amazon EKS. For more information, see [Installing aws-iam-authenticator](https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html).
+**Tip**: If you receive the error `aws-iam-authenticator`: executable file not found in \$PATH, your kubectl is not configured for Amazon EKS. For more information, see [Installing aws-iam-authenticator](https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html).
 
 ---
 
