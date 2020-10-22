@@ -14,7 +14,7 @@ The full body attribute list is available on the [Create](https://docs.spot.io/s
 
 Body
 
-```JSON
+```json
 {
   "Resources": {
     "SpotinstOcean": {
