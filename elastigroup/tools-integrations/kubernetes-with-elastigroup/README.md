@@ -34,4 +34,4 @@ The diagram below illustrates how MCS handles instance failures. Utilizing predi
 - Amazon EKS
 - Rancher
 
-**Support for KOPS**: Any cluster provisioned by Kubernetes Operations (KOPS) can be run on infrastructure managed by MCS with MCS's own KOPS distribution. To get started with KOPS on MCS see the tutorial [here](ocean/tools-and-integrations/kops/).
+**Support for `kops`**: Any cluster provisioned by Kubernetes Operations (`kops`) can be run on infrastructure managed by MCS with MCS's own `kops` distribution. To get started with `kops` on MCS see the tutorial [here](ocean/tools-and-integrations/kops/).

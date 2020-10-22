@@ -1,6 +1,6 @@
 # Metadata Labels
 
-Spot supports metadata labels to be configured by using the Spot instance group to configure various Ocean settings. All labels marked with `\*` must be configured on the same instance group that contains `spotinst.io/ocean-default-launchspec: `true``. Below is a list of supported metadata labels and the default values.
+Spot supports metadata labels to be configured by using the Spot instance group to configure various Ocean settings. All labels marked with `\*` must be configured on the same instance group that contains `spotinst.io/ocean-default-launchspec: "true"`. Below is a list of supported metadata labels and the default values.
 
 | Label                                                   | Description                                                                                                          | Default |
 | ------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | ------- |
@@ -23,21 +23,20 @@ Spot supports metadata labels to be configured by using the Spot instance group 
 
 ## Example
 
-```json
+```yaml
 apiVersion: kops/v1alpha2
 kind: InstanceGroup
 metadata:
 labels:
   kops.k8s.io/cluster: kops.k8s.com
-  spotinst.io/fallback-to-ondemand: "false"          # defaults to true
-  spotinst.io/utilize-reserved-instances: "false"   # defaults to true
-  spotinst.io/autoscaler-disabled: "true"                # defaults to false
-  spotinst.io/autoscaler-default-node-labels: "true" # defaults to false
-  spotinst.io/ocean-default-launchspec: "true" # defaults to false
+  spotinst.io/ocean-default-launchspec: "true"
+  spotinst.io/fallback-to-ondemand: "false"
+  spotinst.io/utilize-reserved-instances: "false"
+  spotinst.io/autoscaler-disabled: "true"
+  spotinst.io/autoscaler-default-node-labels: "true"
   spotinst.io/autoscaler-headroom-cpu-per-unit: "250"
   spotinst.io/autoscaler-headroom-mem-per-unit: "1000"
   spotinst.io/autoscaler-headroom-num-of-units: "5"
 name: nodes
 spec:
-...
 ```

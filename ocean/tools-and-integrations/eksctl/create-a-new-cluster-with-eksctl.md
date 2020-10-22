@@ -1,6 +1,6 @@
-# Create a New Cluster with eksctl
+# Create a new Cluster with eksctl
 
-In this procedure, you will create an Ocean Kubernetes cluster with eksctl and migrate existing unmanaged nodegroups into Ocean-managed ones so you can spend more time with other tasks instead of managing infrastructure.
+In this procedure, you will create an Ocean Kubernetes cluster with `eksctl` and migrate existing unmanaged nodegroups into Ocean-managed ones so you can spend more time with other tasks instead of managing infrastructure.
 
 ## Prerequisites
 
@@ -8,57 +8,72 @@ In this procedure, you will create an Ocean Kubernetes cluster with eksctl and m
 - [Connect your AWS account to Spot](connect-your-cloud-provider/aws-account.md).
 - Install [awscli](https://docs.aws.amazon.com/cli/latest/userguide/installing.html) v1.16.18 or later and [configure AWS credentials](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html#cli-configure-quickstart-config).
 - Install [kubectl](https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html) (provided by Amazon EKS).
-- If you are going to use spotctl commands, [install spotctl](https://github.com/spotinst/spotctl#getting-started).
+- If you are going to use `spotctl` commands, [install spotctl](https://github.com/spotinst/spotctl#getting-started).
 
-## Configure Your Spot Credentials
+## Configure your Spot Credentials
 
 To configure your Spot credentials using environment variables, run the following commands.
 
-`$ export SPOTINST_TOKEN=<spotinst_token> $ export SPOTINST_ACCOUNT=<spotinst_account>`
+```sh
+$ export SPOTINST_TOKEN=<spotinst_token>
+$ export SPOTINST_ACCOUNT=<spotinst_account>
+```
 
-Alternatively, you can configure your Spot credentials using a spotctl command or manually create an INI formatted file. For more information, see the spotctl [Getting Started](https://github.com/spotinst/spotctl#getting-started).
+Alternatively, you can configure your Spot credentials using a `spotctl` command or manually create an INI formatted file. For more information, see the `spotctl` [Getting Started](https://github.com/spotinst/spotctl#getting-started).
 
-## Configure Your AWS Credentials
+## Configure your AWS Credentials
 
 To use environment variables, run the following commands.
 
-`$ export AWS_ACCESS_KEY_ID=<aws_access_key> $ export AWS_SECRET_ACCESS_KEY=<aws_secret_access_key>`
+```sh
+$ export AWS_ACCESS_KEY_ID=<aws_access_key>
+$ export AWS_SECRET_ACCESS_KEY=<aws_secret_access_key>
+```
 
 Alternatively, you can use the AWS credentials file. For more information, see [Quick Configuration](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html#cli-configure-quickstart-config) with aws configure.
 
-## Install Eksctl
+## Install eksctl
 
-1. Download and extract the eksctl binary with the following command.
+1. Download and extract the `eksctl` binary with the following command.
 
-`$ curl -sfL https://spotinst-public.s3.amazonaws.com/integrations/kubernetes/eksctl/eksctl.sh | sh`
+```sh
+$ curl -sfL https://spotinst-public.s3.amazonaws.com/integrations/kubernetes/eksctl/eksctl.sh | sh
+```
 
 2. Move the extracted binary.
 
-`$ sudo mv ./bin/eksctl /usr/local/bin && rm -rf ./bin`
+```sh
+$ sudo mv ./bin/eksctl /usr/local/bin && rm -rf ./bin
+```
 
 3. Test that your installation was successful with the following command.
 
-## `$ eksctl version`
-
-**Tip**: The version should be 0.15.0 or later. If not, check your terminal output for any installation errors, or manually download an archive of the release for your operating system from the releases page, extract eksctl, and then execute it.
+```sh
+$ eksctl version
+```
 
 ---
 
-## Create Your EKS Cluster And Worker Nodes
+## Create your EKS Cluster and Worker Nodes
 
-### Using command-line flags
+### Using CLI Flags
 
 Create your cluster and worker nodes with the following command. Replace the example values with your own values.
 
-`$ eksctl create cluster \ --name prod \ --nodegroup-name standard-workers \ --spot-ocean`
+```sh
+$ eksctl create cluster \
+    --name prod \
+    --nodegroup-name standard-workers \
+    --spot-ocean
+```
 
 The spot-ocean command-line flag enables Ocean integration.
 
-### Using configuration files
+### Using Config Files
 
 Alternatively, you can create a cluster using configuration files.
 
-1. Create a cluster.yaml file to hold your cluster and worker nodes configuration.
+1. Create a `cluster.yaml` file to hold your cluster and worker nodes configuration.
    The `spotOcean: {}` section below enables Ocean integration. This section can remain empty, using all defaults, or if you'd like to configure your Ocean integration, create a `cluster.yaml` file with the following configuration:
 
 ```yaml
@@ -67,7 +82,7 @@ kind: ClusterConfig
 metadata:
  name: prod
  tags:
-   creator: liran
+   creator: bob
    environment: prod
 nodeGroups:
  - name: standard-workers
@@ -110,31 +125,34 @@ nodeGroups:
 ```
 
 2. Create your Amazon EKS cluster and worker nodes with the following command.
-   `$ eksctl create cluster -f cluster.yaml`
 
----
+```sh
+$ eksctl create cluster -f cluster.yaml
+```
 
-**Tip**: Cluster provisioning usually takes between 10 and 15 minutes.
-
----
+> Cluster provisioning usually takes between 10 and 15 minutes.
 
 ## Verifications
 
-Perform the following steps to verify your kubectl and Ocean controller installations. These steps are optional.
+Perform the following steps to verify your `kubectl` and Ocean controller installations. These steps are optional.
 
-1. When your cluster is ready, enter the command below to test that your kubectl configuration is correct.
+1. When your cluster is ready, enter the command below to test that your `kubectl` configuration is correct.
 
-`$ kubectl get svc NAME TYPE CLUSTER-IP EXTERNAL-IP PORT(S) AGE svc/kubernetes ClusterIP 10.100.0.1 <none> 443/TCP 1m`
+```sh
+$ kubectl get svc
+NAME           TYPE      CLUSTER-IP EXTERNAL-IP PORT(S) AGE
+svc/kubernetes ClusterIP 10.100.0.1 <none>      443/TCP 1m
+```
 
----
-
-**Tip**: If you receive the error `aws-iam-authenticator`: executable file not found in \$PATH, your kubectl is not configured for Amazon EKS. For more information, see [Installing aws-iam-authenticator](https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html).
-
----
+**Tip**: If you receive the error `aws-iam-authenticator`: executable file not found in `$PATH`, your `kubectl` is not configured for Amazon EKS. For more information, see [Installing aws-iam-authenticator](https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html).
 
 2. Enter the command below to test the installation of the Ocean controller.
 
-`$ kubectl get deployment --namespace kube-system NAME READY UP-TO-DATE AVAILABLE AGE spotinst-kubernetes-cluster-controller 1/1 1 1 5m`
+```sh
+$ kubectl get deployment --namespace kube-system
+NAME                                   READY UP-TO-DATE AVAILABLE AGE
+spotinst-kubernetes-cluster-controller 1/1   1          1         5m
+```
 
 That's it! Your Ocean cluster is up and will now ensure the most cost-effective capacity and sizing possible for your cluster.
 

@@ -18,7 +18,7 @@ Wait for the confirmation message to validate that the upgrade process is comple
 
 ---
 
-**Tip**: For Kubernetes Elastigroups created via KOPS, see the following [tutorial](ocean/tools-and-integrations/kops/migrate-cluster.md).
+**Tip**: For Kubernetes Elastigroups created via `kops`, see the following [tutorial](ocean/tools-and-integrations/kops/migrate-cluster.md).
 
 ---
 
