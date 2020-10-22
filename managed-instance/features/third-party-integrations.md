@@ -14,7 +14,7 @@ In order to configure the Managed Instance to receive traffic from either Route5
 
 1. Enter the Managed Instance's Configuration Wizard.
 2. Head over to the Persisted Resources tab.
-3. Under Network, check the “Receive Traffic From” checkbox.
+3. Under Network, check the `Receive Traffic From` checkbox.
 4. Choose your source:
 
    - For a Load Balancer Integration:
@@ -27,7 +27,7 @@ In order to configure the Managed Instance to receive traffic from either Route5
   1.  Select Route 53 from the dropdown menu.
   2.  Select the Hosted Zone ID.
   3.  Select Record Sets.
-  4.  If needed, check the “Register Public IP” option.
-  5.  Click “Add a Record”.
+  4.  If needed, check the `Register Public IP` option.
+  5.  Click `Add a Record`.
 
 <img src="/managed-instance/_media/third-party-integrations-02.png" />

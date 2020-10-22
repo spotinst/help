@@ -17,7 +17,7 @@ The system supports the following identity providers:
 
 1. Login to the Spot account as an administrator: [Spot console](https://console.spotinst.com/#/dashboard)
 2. Click on the user icon and choose Settings.
-3. Click on the “SECURITY” tab at the top and select Identity Providers.
+3. Click on the `SECURITY` tab at the top and select Identity Providers.
 4. Complete the required information in the form and save.
 
 ## Identity Provider Information
@@ -40,7 +40,7 @@ For further information, see Organizations and Accounts.
 
 When you want to determine different user roles per account, you can choose the organization and role the user will sign in with when signing in with SSO.
 
-Configure the IDP to create a SAML response with the parameter “OrgAndRole”.
+Configure the IDP to create a SAML response with the parameter `OrgAndRole`.
 This configuration will generate another screen which will let the user choose an organization and role:
 
 <img src="/administration/_media/sss-access-control-02.jpg" />

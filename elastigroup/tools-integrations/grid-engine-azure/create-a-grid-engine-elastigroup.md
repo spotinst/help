@@ -12,8 +12,8 @@ In the Elastigroups view, select Create to open the Creation Wizard.
 - Region: Select an Azure Region the Elastigroup will run in.
   Elastigroup Capacity
   - Target: The number of Low Priority VM's in your Elastigroup.
-  - Minimum: In the case of a ‘scale down' policy action, this is the minimum number of running Low Priority VM's in the group.The minimum acceptable value is 0.
-  - Maximum: In the case of a ‘scale up' policy action, this is the maximum number of running Low Priority VM's in the group. The minimum acceptable value is 0.
+  - Minimum: In the case of a 'scale down' policy action, this is the minimum number of running Low Priority VM's in the group.The minimum acceptable value is 0.
+  - Maximum: In the case of a 'scale up' policy action, this is the maximum number of running Low Priority VM's in the group. The minimum acceptable value is 0.
 
 ## Step 3: Compute
 

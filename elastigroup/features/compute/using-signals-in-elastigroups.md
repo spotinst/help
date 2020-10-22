@@ -15,7 +15,7 @@ Once the instance is detached, the instance goes to the Handle_shutdown_script s
 
 You need to define the expected signals for your Elastigroup in the group configuration.
 
-To add this to the Elastigroup configuration you can use the “Review” tab in the Elastigroup configuration wizard or use the Update group API and add the signal under “strategy” as shown below:
+To add this to the Elastigroup configuration you can use the `Review` tab in the Elastigroup configuration wizard or use the Update group API and add the signal under `strategy` as shown below:
 
 ```json
 {

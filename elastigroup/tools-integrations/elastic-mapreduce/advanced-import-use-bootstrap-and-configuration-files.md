@@ -8,7 +8,7 @@ Referencing the following JSON body example while Cloning the Cluster:
 {
   "mrScaler": {
     "name": "my MRScaler",
-    "description": "Spotinst MRScaler",
+    "description": "Spot MRScaler",
     "region": "us-west-2",
     "strategy": {
       "cloning": {

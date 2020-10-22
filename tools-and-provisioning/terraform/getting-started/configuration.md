@@ -5,7 +5,7 @@
 For Terraform to work with Spot, configure the Spot provider and create an AWS group.
 
 ```
-# Configure the Spotinst provider
+# Configure the Spot provider
 provider "spotinst" {
 token         = "${var.spotinst_token}"
 account       = "${var.spotinst_account}"

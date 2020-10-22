@@ -2,7 +2,7 @@
 
 Allows you to create an Elastigroup based on the setup of an ASG. For the full API, see [Import ASG](https://api.spotinst.com/spotinst-api/elastigroup/amazon-web-services/import-asg/) in the API documentation.
 
-If you want your Elastigroup to persist even after you delete the CloudFormation Stack, add the section “DeletionPolicy”:”retain” to the JSON or YAML.
+If you want your Elastigroup to persist even after you delete the CloudFormation Stack, add the section `DeletionPolicy`:`retain` to the JSON or YAML.
 
 ## Request: CloudFormation – JSON
 
@@ -41,8 +41,8 @@ Headers
     Type: Custom::importAsg
     Properties:
       ServiceToken: !Sub arn:aws:lambda:${AWS::Region}:178579023202:function:spotinst-cloudformation
-      accessToken: Your Spotinst API Token
-      accountId: Your Spotinst Account ID
+      accessToken: Your Spot API Token
+      accountId: Your Spot Account ID
       asgName: Name of ASG to Import
       region: Region where ASG is located
       group:

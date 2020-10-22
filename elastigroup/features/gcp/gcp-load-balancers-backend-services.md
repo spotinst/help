@@ -36,9 +36,9 @@ To ensure that the backend service stops sending requests to instances that are 
 ## Integrate a Backend Service
 
 1. Enter the Creation Wizard to create a new Elastigroup or select Edit Configuration to integrate a backend service with an existing Elastigroup.
-2. In the Compute Tab under Backend Services click on ‘Add'.
+2. In the Compute Tab under Backend Services click on 'Add'.
 3. Set your required backend service (LB): Global / Regional.
 4. For Global, just choose the backend service from the list. You can add named ports, e.g.:
-   - Name: “HTTPS”
-   - Ports: “[443, 8443]”
+   - Name: `HTTPS`
+   - Ports: `[443, 8443]`
 5. For Regional, choose the scheme type and then the backend service from the list.

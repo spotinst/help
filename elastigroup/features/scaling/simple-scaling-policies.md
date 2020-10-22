@@ -16,7 +16,7 @@ Each Simple Scaling Policy has the following set of parameters:
 - Threshold: The numerical value used to set the point of scaling.
 - Action Type: The action to take when the trigger defined under Auto Scale Based On is met. Available options:
   - Set Capacity Range: Set a new Target-Minimum-Maximum configuration for the Elastigroup.
-  - Add: The default value for up scaling. Add a specified amount of instances or vCPU units (according to the group “capacity unit”, configured under General tab, Advanced section).
+  - Add: The default value for up scaling. Add a specified amount of instances or vCPU units (according to the group `capacity unit`, configured under General tab, Advanced section).
   - Set minimum of: Set a new minimum capacity value for the Elastigroup.
   - Increase: Increase capacity by a specified percentage.
 - Downscaling options:

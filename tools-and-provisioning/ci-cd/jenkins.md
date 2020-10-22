@@ -4,7 +4,7 @@
 
 The Spot Jenkins plug-in enables you to run a lower powered Jenkins server and spin up Jenkins Slaves as needed while saving up to 80% of your compute costs. Slave instances are scaled in an Elastigroup to match the number of jobs to be completed.
 
-Jenkins is an open-source continuous integration software tool for testing and reporting on isolated changes in a larger code base. Jenkins enables developers to find and solve defects in a code base rapidly and to automate testing of their builds. Jenkins has a “master/slave“ mode, where the workload of building projects are delegated to multiple “slave” nodes, allowing a single Jenkins installation to host a large number of projects, or to provide different environments needed for builds/tests. This document describes this mode and how it's used with the Spot Plugin to provide compute at 80% off of the standard cost.
+Jenkins is an open-source continuous integration software tool for testing and reporting on isolated changes in a larger code base. Jenkins enables developers to find and solve defects in a code base rapidly and to automate testing of their builds. Jenkins has a `master/slave` mode, where the workload of building projects are delegated to multiple `slave` nodes, allowing a single Jenkins installation to host a large number of projects, or to provide different environments needed for builds/tests. This document describes this mode and how it's used with the Spot Plugin to provide compute at 80% off of the standard cost.
 
 ## How It Works
 
@@ -75,19 +75,19 @@ For optimal performance we recommend using the Amazon Standard AMI (CentOS based
 
 **Windows user-data:**
 
-```powershell
+````powershell
 <powershell>
 $EC2_INSTANCE_ID = Invoke-RestMethod -uri http://169.254.169.254/latest/meta-data/instance-id
-$JENKINS_MASTER_IP = “JenkinsMaster:port”
+$JENKINS_MASTER_IP = `JenkinsMaster:port`
 #Install java
 Invoke-RestMethod -uri http://javadl.oracle.com/webapps/download/AutoDL?BundleId=227552_e758a0de34e24606bca991d704f6dcbf -OutFile jre_install.exe
-Start-Process ‘jre_install.exe' -ArgumentList ‘/s' -Wait
+Start-Process 'jre_install.exe' -ArgumentList '/s' -Wait
 #Get Slave jar from Jenkins
 Invoke-RestMethod -uri http://${JENKINS_MASTER_IP}/jnlpJars/slave.jar -OutFile C:\slave.jar
 #Run slave
-Start-Process -FilePath ‘C:\Program Files\Java\jre1.8.0_151\bin\java' -ArgumentList “-jar C:\slave.jar -jnlpCredentials USER:PASSWORD/TOKEN -jnlpUrl `"http://${JENKINS_MASTER_IP}/computer/${EC2_INSTANCE_ID}/slave-agent.jnlp`“” -RedirectStandardError “slave-error.txt” -RedirectStandardOutput “slave-output.txt”
+Start-Process -FilePath 'C:\Program Files\Java\jre1.8.0_151\bin\java' -ArgumentList `-jar C:\slave.jar -jnlpCredentials USER:PASSWORD/TOKEN -jnlpUrl `"http://${JENKINS_MASTER_IP}/computer/${EC2_INSTANCE_ID}/slave-agent.jnlp``` -RedirectStandardError `slave-error.txt` -RedirectStandardOutput `slave-output.txt`
 </powershell>
-```
+````
 
 ### Jenkins on GCP
 
@@ -201,7 +201,7 @@ By default, the Slaves try to connect on a random JNLP port. Therefore, the fire
 
 <img src="/tools-and-provisioning/_media/Jenkins_4.png" />
 
-Once the Spot Token is set, scroll down towards the bottom to the “Cloud” section. Click on Add a new cloud and select the cloud provider connected to the Spot account being used (you can more than one cloud, each specifying it's own Elastigroup and Account IDs).
+Once the Spot Token is set, scroll down towards the bottom to the `Cloud` section. Click on Add a new cloud and select the cloud provider connected to the Spot account being used (you can more than one cloud, each specifying it's own Elastigroup and Account IDs).
 
 There should now be more fields to choose from. For more information on each field hover over the information button on the right side of each field. Specify the Elastigroup ID for the Elastigroup created in Step 2, the appropriate Account ID associated with that Elastigroup and Idle Minutes Before Termination to determine how long Elastigroup should wait before terminating an idle instance.
 

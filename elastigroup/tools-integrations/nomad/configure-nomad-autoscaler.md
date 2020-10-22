@@ -4,7 +4,7 @@ This procedure provides the steps necessary to set up your Nomad Autoscaler.
 
 ## Configure the Nomad Integration
 
-In the Spot console, set the fields in the Integration portion under the “Compute” tab of the Elastigroup creation wizard:
+In the Spot console, set the fields in the Integration portion under the `Compute` tab of the Elastigroup creation wizard:
 
 <img src="/elastigroup/_media/configure-nomad-autoscaler-01.png" />
 

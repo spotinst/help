@@ -13,7 +13,7 @@ This tutorial focuses on cloning an existing EMR into Elastigroup. Elastigroup a
 
 Login to the Spot console and under Elastigroups navigate to the Creation Wizard by hitting the Create button:
 
-Choose ‘EMR' to launch the EMR creation wizard:
+Choose 'EMR' to launch the EMR creation wizard:
 
 ## Step 2: Add Elastigroup Description
 
@@ -21,7 +21,7 @@ Set the name and region of the Elastigroup. Click Next.
 
 ## Step 3: Configure Strategy and Compute
 
-- Under Strategy select Clone and provide an “Origin Cluster” for Elastigroup to Clone.
+- Under Strategy select Clone and provide an `Origin Cluster` for Elastigroup to Clone.
 - For the Master, Core and Task nodes select the Instance Types, Lifecycle (Spot/On-Demand), Target and Minimum/Maximum number of instances. To ensure Spot availability select multiple Instance Types.
 
 ---

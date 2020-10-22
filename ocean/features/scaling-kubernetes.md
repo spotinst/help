@@ -14,7 +14,7 @@ Ocean makes sure that all pods in the cluster have a place and capacity to run, 
 
 Ocean continuously checks for unschedulable pods. A pod is unschedulable when the Kubernetes scheduler is unable to find a node that can accommodate the pod, this can be happening due to insufficient CPU, Memory, GPU or [custom resource](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/).
 
-For example, When a pod request more CPU than what is available on any of the cluster nodes. Unschedulable pods are recognized by their PodCondition. Whenever a Kubernetes scheduler fails to find a place to run a pod, it sets “schedulable” PodCondition to false and reason to “unschedulable“.
+For example, When a pod request more CPU than what is available on any of the cluster nodes. Unschedulable pods are recognized by their PodCondition. Whenever a Kubernetes scheduler fails to find a place to run a pod, it sets `schedulable` PodCondition to false and reason to `unschedulable`.
 Ocean calculates and aggregates the number of unschedulable pods waiting to be placed and finds the optimal nodes for the job. Ocean makes sure that all the pods will have enough resources to be placed, it also makes sure to distribute the Pods on the most efficient number of VMs from the desired cloud provider. In some scenarios, it will prefer to provide a distribution of certain machines types and sizes based on the pods requirements and the spot/preemptible VM prices in the relevant region.
 
 It may take a few moments before the created nodes join the Kubernetes cluster, in order to minimize this time (to zero) you can read more about Cluster Headroom.
@@ -29,21 +29,21 @@ Ocean constantly checks which nodes are unneeded in the cluster. A node is consi
 - The node's removal won't reduce the headroom below the target.
 - Ocean will prefer to downscale the least utilized nodes first
 
-Ocean simulates the cluster's topology and state “post” the scale-down activity and decides whether the action can be executed or not.
+Ocean simulates the cluster's topology and state `post` the scale-down activity and decides whether the action can be executed or not.
 
 ### Scale down prevention
 
 - Pods with restrictive PodDisruptionBudget will be evicted gradually if the scale down will cause a violation of the disruption budget, Ocean will not scale down the node.
 - Pods that are not backed by a controller object (so not created by deployment, replica set, job, stateful set)
 - Pods that cannot be moved elsewhere due to various constraints (lack of resources, non-matching node selectors or affinity, matching anti-affinity)
-- Pods that have the following label: “spotinst.io/restrict-scale-down”:”true”.
+- Pods that have the following label: `spotinst.io/restrict-scale-down`:`true`.
 
 ### Pods & Nodes Draining Process
 
 Ocean ensures that pods and nodes are gracefully terminated in a case of scale-down or an instance replacement.
 Node Termination process is as follows:
 
-1. Check for scale-down restriction label (“spotinst.io/restrict-scale-down”:”true”) on node's pods
+1. Check for scale-down restriction label (`spotinst.io/restrict-scale-down`:`true`) on node's pods
    - If found, the node is not eligible for scale-down
 2. Scan All the pods and mark the ones that need to be rescheduled
    - Mark all the pods that don't have PDB configured, and start evicting them in parallel

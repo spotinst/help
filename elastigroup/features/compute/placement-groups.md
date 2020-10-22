@@ -10,9 +10,9 @@ An existing Placement Group configured in your AWS account.
 
 1. Open the Elastigroup where you wish to add the Placement Group.
 2. Click on the Actions menu.
-3. Select ” Edit Configuration”
-4. Navigate to the “Review” Tab from the top navigation bar.
-5. Enable “Edit Mode” and add the placementGroupName property to the Availability zone setting.
+3. Select ` Edit Configuration`
+4. Navigate to the `Review` Tab from the top navigation bar.
+5. Enable `Edit Mode` and add the placementGroupName property to the Availability zone setting.
 
 ```json
 "availabilityZones": [
@@ -29,7 +29,7 @@ An existing Placement Group configured in your AWS account.
 ## Using the API
 
 1. Add the Placement Group property using the Update or [Create API](https://api.spotinst.com/elastigroup/amazon-web-services/create/).
-2. In the case of creating a group, add the “placementGroupName”to the Availability zone setting
+2. In the case of creating a group, add the `placementGroupName`to the Availability zone setting
 3. In the case of updating a group, use the following Body in your request:
 
 ```json

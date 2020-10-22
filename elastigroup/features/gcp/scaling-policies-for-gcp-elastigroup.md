@@ -10,7 +10,7 @@ Each Simple Scaling Policy has the following set of parameters:
 
 - Policy Name: The name to assign to the policy. It's recommended using a meaningful name to help you understand scaling actions better in the future.
 - Source: The scaling policy can utilize metrics from either GCP Stackdriver or Spot Spectrum.
-- Namespace: A container for metrics. If the source chosen is Spectrum, the namespace is custom, while for Stackdriver the available namespaces are ‘compute' or ‘pubsub'
+- Namespace: A container for metrics. If the source chosen is Spectrum, the namespace is custom, while for Stackdriver the available namespaces are 'compute' or 'pubsub'
 - Scale based on:
   - Trigger:
     - Statistic: The type of statistic you will utilize. Options are:
@@ -19,9 +19,9 @@ Each Simple Scaling Policy has the following set of parameters:
       - minimum
       - Sum
     - Metric Name: The metric used to trigger the policy's scaling action. Available options:
-      - If the chosen namespace is ‘compute':
+      - If the chosen namespace is 'compute':
         - instance/cpu/utilization
-      - If the chosen namespace is ‘pubsub':
+      - If the chosen namespace is 'pubsub':
         - subscription/num_outstanding_messages
         - subscription/backlog_bytes
         - subscription/num_undelivered_messages
@@ -33,7 +33,7 @@ Each Simple Scaling Policy has the following set of parameters:
     - Operator: Setting the relation between the threshold and the sampled value.
     - Threshold: The numerical value used to set the point of scaling.
     - Unit
-    - Dimensions: Specify the name of the dimension used and it's value. For example, if you'd like to scale upon pubsub metrics, the metric's key would be ‘subscription_id' and the metric's value would be the subscription's id in pubsub.
+    - Dimensions: Specify the name of the dimension used and it's value. For example, if you'd like to scale upon pubsub metrics, the metric's key would be 'subscription_id' and the metric's value would be the subscription's id in pubsub.
   - Duration:
     - Evaluation Periods & Period: The length of time to collect and evaluate the metric. Sets the length of a single period, and the amount of periods.
   - Action:

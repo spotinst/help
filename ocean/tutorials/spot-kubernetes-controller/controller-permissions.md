@@ -7,7 +7,7 @@ This page describes the permissions required by the Spot Controller. All permiss
 The permissions are divided into the following sections:
 
 - Read-Only: Permissions for fetching data – required for functional operation of Ocean/Elastigroup integrations.
-- Node/Pod Manipulation: Permissions to update nodes and evict pods – this section is required for draining purposes, updating nodes as “unschedulable” and evicting pods.
+- Node/Pod Manipulation: Permissions to update nodes and evict pods – this section is required for draining purposes, updating nodes as `unschedulable` and evicting pods.
 - Controller Resource Manipulation: This section gives the controller permissions to update its deployment/role. This is required only for the auto_update feature. You can safely remove this section if you would like to opt-out of the controller auto_update feature (Click here to learn more about controller updates).
 - Full CRUD for Resources: Currently the resources are: pods, deployments, and daemonsets. This is required for the Run Workloads. You can safely remove this section if you would like to opt-out the Run Workloads feature.
 

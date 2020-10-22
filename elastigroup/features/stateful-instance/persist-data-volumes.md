@@ -46,7 +46,7 @@ echo "volume is ready"
 
 Add the following attribute to your elastigroup configuration:
 
-strategy.persistence.blockDevicesMode – string – (Optional) determine the way data volumes are attached to the instance. Valid values: ‘reattach' and ‘onLaunch'.
+strategy.persistence.blockDevicesMode – string – (Optional) determine the way data volumes are attached to the instance. Valid values: 'reattach' and 'onLaunch'.
 
 ## Backend Actions
 

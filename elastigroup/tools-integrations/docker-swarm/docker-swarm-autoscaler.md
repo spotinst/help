@@ -5,7 +5,7 @@
 You can scale up and down the instances in your cluster according to CPU and memory reservations needed for your nodes to work properly on top of EC2 instances.
 The auto-scaler supports headroom units that will be available as free resources to handle peak in tasks in the cluster.
 
-Without the utilization of headroom, there will be a “wait time” until the instance launches and registers before it can handle the incoming tasks properly.
+Without the utilization of headroom, there will be a `wait time` until the instance launches and registers before it can handle the incoming tasks properly.
 
 With Docker Swarm auto-scaler you set an upfront spare capacity available to handle your incoming tasks if needed.
 
@@ -13,7 +13,7 @@ With Docker Swarm auto-scaler you set an upfront spare capacity available to han
 
 A buffer of spare capacity (in terms of both memory and CPU) to make sure that when we want to scale more tasks, we don't have to wait for new instances, and also to prevent instances from being over-utilized.
 
-Each headroom unit consists of 2 definitions: one for CPU units “cpuPerUnit” (nanoCPU) and one for Memory “memoryPerUnit” (memory bytes). Also, a number of headroom units to reserve in the cluster can be defined.
+Each headroom unit consists of 2 definitions: one for CPU units `cpuPerUnit` (nanoCPU) and one for Memory `memoryPerUnit` (memory bytes). Also, a number of headroom units to reserve in the cluster can be defined.
 
 For example, Let's say that we define the headroom unit to consist of 100,000,000 bytes of Memory and 100,000,000 nanoCPU units, and require a total of 10 units. In addition, let's assume that the cluster consists of 3 instances. The AutoScaler will verify the total sum of units throughout the entire cluster and check if it meets the required number configured in the group.
 

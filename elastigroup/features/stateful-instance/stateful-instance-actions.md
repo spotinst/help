@@ -23,7 +23,7 @@ Equivalent to rebooting or restarting the machine, initiates Pause then Resume o
 Deletes the stateful instance resources (configurable) and terminates the instance.
 
 - Spot keeps the root volume and the last snapshot for 96 hours and then remove them (configurable).
-- In case which “Reattach” is selected for “Persist Data Volumes” – the data volumes will be kept as well.
+- In case which `Reattach` is selected for `Persist Data Volumes` – the data volumes will be kept as well.
 - On machine deallocation, its data will be lost.
 
 ---

@@ -7,7 +7,7 @@ This proceduree covers integrating Elastigroup with Rancher. Once completed Elas
 Before you start using this integration, please make sure to have:
 
 - An active Spot account.
-- A Rancher account with ‘rancher/server:v0.46.0-rc1' version or above.
+- A Rancher account with 'rancher/server:v0.46.0-rc1' version or above.
 
 ## Step 1: Create an API Key Within Rancher
 
@@ -85,7 +85,7 @@ write_files:
 3. In the 3rd party section select Rancher and enter the following:
    1. Rancher master – Your rancher url (e.g. http://myRancher.myDomain:8080/v1)
    2. Access Key & Secret key (which you just created in the previous step above -> in Step 1)
-   3. When the instances are launched you should see that they are labeled with “spotinst.instanceId”:
+   3. When the instances are launched you should see that they are labeled with `spotinst.instanceId`:
 
 <img src="/elastigroup/_media/rancher-before-20-05.png" width="600" height="326" />
 

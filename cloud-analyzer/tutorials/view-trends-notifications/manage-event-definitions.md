@@ -11,7 +11,7 @@ To view the event definitions, do the following:
 
 The Event Definition table shows a list of events defined in the system, including three predefined (default) events. The table includes the following:
 
-- Name: The name of the event. The three default events have the prefix “predefined”.
+- Name: The name of the event. The three default events have the prefix `predefined`.
 - Description: A brief statement with the event scope describing the event rule
 - Creator Name: Name of the user who created the rule
 - Creation Time: Date and time the rule was created

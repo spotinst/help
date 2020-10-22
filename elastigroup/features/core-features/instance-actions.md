@@ -6,7 +6,7 @@ You can simply check a specific instance or multiple instances you want to detac
 
 <img src="/elastigroup/_media/corefeatures-instance-actions-01.png" />
 
-In the dialog, make sure to keep “Decrement Group's Capacity” unchecked if you want replacement instances to be launched.
+In the dialog, make sure to keep `Decrement Group's Capacity` unchecked if you want replacement instances to be launched.
 
 <img src="/elastigroup/_media/corefeatures-instance-actions-02.png" />
 

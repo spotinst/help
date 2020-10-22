@@ -33,7 +33,7 @@ Below are several examples where we defined parameters to use inside the Spot re
 | accessToken                   | **String**  | your Spot API access token                                                                                                                            |
 | accountId                     | **String**  | your Spot account IDExample: `act-12345`                                                                                                              |
 
-## Request Example: “shouldUpdateTargetCapacity”
+## Request Example: `shouldUpdateTargetCapacity`
 
 ### Body
 

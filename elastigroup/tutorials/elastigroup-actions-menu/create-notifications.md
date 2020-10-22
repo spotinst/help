@@ -26,7 +26,7 @@ For SNS select aws-sns as the Protocol Type and the SNS Topic ARN the notificati
 
 <img src="/elastigroup/_media/create-notifications_3.png" />
 
-Setting up Notifications for additional Platforms such as “email” and “email-json” are currently only available via our [API](https://docs.spot.io/spotinst-api/administration/notifications-service/subscriptions/subscribe/).
+Setting up Notifications for additional Platforms such as `email` and `email-json` are currently only available via our [API](https://docs.spot.io/spotinst-api/administration/notifications-service/subscriptions/subscribe/).
 
 ## Step 3: Event Types
 
@@ -52,7 +52,7 @@ Setting up Notifications for additional Platforms such as “email” and “ema
 
 ## Step 4: Format (Optional)
 
-In the “Format” field you can optionally change the default output of the notification.
+In the `Format` field you can optionally change the default output of the notification.
 
 The format of the notification content supports the following variables: event, instance-id, resource-id, resource-name, subnet-id, availability-zone, reason.
 
@@ -104,7 +104,7 @@ To use variables in custom formats, please wrap the variable name with a percent
                     "short": true
                 }
             ],
-            "footer": "Spotinst API",
+            "footer": "Spot API",
             "footer_icon": "https://s3.amazonaws.com/spotinst-console/client-logos/spotinst-logo-blue.png",
             "mrkdwn_in": [
                 "text",
@@ -143,22 +143,22 @@ To use variables in custom formats, please wrap the variable name with a percent
 
 ### Reason Values and Explanations
 
-The following is a list of values that can be in the “reason” field and an explanation for each one.
+The following is a list of values that can be in the `reason` field and an explanation for each one.
 
 - `Scale down` – Terminated due to target capacity change by user.
 - `Auto Scale` – Detached by any Autoscaler (K8S, ECS…).
 - `Manual detach of old instances` – After a deployment was Stopped.
 - `Manual detach of new instances` – After a deployment was Stopped.
-- `Detach as part of deployment` – Standard detach of “Blue” instances in a deployment.
+- `Detach as part of deployment` – Standard detach of `Blue` instances in a deployment.
 - `Instance replacement` – Spot Interruption / instance terminated on AWS / User detached without decrementing capacity.
-- `Replacement has finished` – In case of “replacement finished with Error”, the new instances will be detached with this reason / Detached as a part of a proactive replacement (when not covered by any of the following reasons).
-- `Replacement of type ‘Fixing Strategy' has finished`
-- `Replacement of type ‘Preventive' has finished`
-- `Replacement of type ‘Unhealthy Instance' has finished`
-- `Replacement of type ‘Signal Timeout' has finished`
-- `Replacement of type ‘Spot Type Preference' has finished`
-- `Replacement of type ‘Reserved Instance Utilization' has finished`
-- `Replacement of type ‘Expensive Spot' has finished`
+- `Replacement has finished` – In case of `replacement finished with Error`, the new instances will be detached with this reason / Detached as a part of a proactive replacement (when not covered by any of the following reasons).
+- `Replacement of type 'Fixing Strategy' has finished`
+- `Replacement of type 'Preventive' has finished`
+- `Replacement of type 'Unhealthy Instance' has finished`
+- `Replacement of type 'Signal Timeout' has finished`
+- `Replacement of type 'Spot Type Preference' has finished`
+- `Replacement of type 'Reserved Instance Utilization' has finished`
+- `Replacement of type 'Expensive Spot' has finished`
 
 ### Instance Terminated
 

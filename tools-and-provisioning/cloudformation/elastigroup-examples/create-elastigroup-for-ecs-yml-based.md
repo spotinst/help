@@ -14,7 +14,7 @@ Metadata:
         Parameters:
           - ECSName
       - Label:
-          default: Spotinst Configuraiton
+          default: Spot Configuraiton
         Parameters:
           - AccountID
           - AccessToken
@@ -50,7 +50,7 @@ Metadata:
       AccessToken:
         default: Spotint Access Token
       AccountID:
-        default: Spotinst Account ID
+        default: Spot Account ID
       ClusterOrientation:
         default: Cluster Orientation
       SpotPercentage:
@@ -97,10 +97,10 @@ Parameters:
     Description: Provide a Name for the Elastigroup
   AccessToken:
     Type: String
-    Description: Provide Spotinst API Token
+    Description: Provide Spot API Token
   AccountID:
     Type: String
-    Description: Provide Spotinst Account ID
+    Description: Provide Spot Account ID
   ShouldRoll:
     Type: String
     Description: Should roll when updating
@@ -488,7 +488,7 @@ Outputs:
     Value:
       Ref: ECSName
   SpotinstGroupId:
-    Description: A reference to Spotinst Elastigroup Id
+    Description: A reference to Spot Elastigroup Id
     Value:
       Ref: SpotinstElastigroup
 ```

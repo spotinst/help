@@ -18,13 +18,13 @@ Active Directory Federation Services (ADFS) is one of the leading Identity Provi
 
 <img src="/administration/_media/adfs-saml-02.png" />
 
-4. Choose “Enter data about the relying party manually” and click Next.
+4. Choose `Enter data about the relying party manually` and click Next.
 
 <img src="/administration/_media/adfs-saml-03.png" />
 
 5. Choose a Name for the RP and click Next.
 6. When asked for a certificate, click Next.
-7. Check “Enable support for the SAML 2.0 WebSSO protocol”.
+7. Check `Enable support for the SAML 2.0 WebSSO protocol`.
 8. Enter the following URL: https://console.spotinst.com/auth/samlz
 
 <img src="/administration/_media/adfs-saml-04.png" />
@@ -107,7 +107,7 @@ To configure IDP Initiated SSO, additional settings must be configured as follow
 When creating a temporary token, the user credentials are validated at the IDP.
 
 1. To create a temporary token, you provide a SAML assertion generated from your IDP. In order to get a SAML assertion from ADFS, follow [these instructions](https://docs.microsoft.com/bs-latn-ba/azure/active-directory/develop/v2-saml-bearer-assertion#get-the-saml-assertion-from-adfs).
-2. Run the following request. Replace ‘<>' with the SAML assertion response, as plain XML body (without json wrappers).
+2. Run the following request. Replace '<>' with the SAML assertion response, as plain XML body (without json wrappers).
 
 ```
 curl -X POST -H "Content-Type: application/xml" -d

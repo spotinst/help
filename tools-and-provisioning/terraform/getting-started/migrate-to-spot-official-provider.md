@@ -66,7 +66,7 @@ Remove the resource with the `-IMPORT` suffix.
 ---
 
 **Important:**
-You must delete the “-IMPORT” resource to prevent your Elastigroup from being destroyed.
+You must delete the `-IMPORT` resource to prevent your Elastigroup from being destroyed.
 
 ---
 

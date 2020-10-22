@@ -15,7 +15,7 @@ For example, you could use target tracking scaling to:
 
 ## Which Metrics should I use?
 
-When assigning a metric, take note that not all metrics are suited for target tracking scaling policies. The metric must be a valid utilization metric that describes how ‘busy' an instance is running your workload. The metric value must be affected by a number of instances in your Elastigroup with a proportional correlation to your application's load, so that the metric data can be used to scale out or in the number of instances.
+When assigning a metric, take note that not all metrics are suited for target tracking scaling policies. The metric must be a valid utilization metric that describes how 'busy' an instance is running your workload. The metric value must be affected by a number of instances in your Elastigroup with a proportional correlation to your application's load, so that the metric data can be used to scale out or in the number of instances.
 
 For example, the CPU utilization of an Auto Scaling group (i.e., the Amazon Cloudwatch metric `CPUUtilization`) works, if the load on the Auto Scaling group is distributed evenly across the instances.
 

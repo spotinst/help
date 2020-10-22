@@ -25,8 +25,8 @@ Body
         "ServiceToken": {
           "AWS::Sub": ["arn:aws:lambda:${Region}:178579023202:function:spotinst-cloudformation"]
         },
-        "accessToken": "Spotinst Token",
-        "accountId": "Spotinst Account ID",
+        "accessToken": "Spot Token",
+        "accountId": "Spot Account ID",
         "autoTag": true,
         "updatePolicy": {
           "shouldUpdateTargetCapacity": false

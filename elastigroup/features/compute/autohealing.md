@@ -1,6 +1,6 @@
 # Autohealing
 
-Autohealing enables you to select which health check service will be used to determine if an Instance needs to be replaced due to unhealthiness. If an instance fails the health check selected, it is automatically replaced with a new instance. Autohealing is configurable as part of the “AUTO HEALING” settings in the Compute tab of the Creation Wizard.
+Autohealing enables you to select which health check service will be used to determine if an Instance needs to be replaced due to unhealthiness. If an instance fails the health check selected, it is automatically replaced with a new instance. Autohealing is configurable as part of the `AUTO HEALING` settings in the Compute tab of the Creation Wizard.
 
 <img src="/elastigroup/_media/compute-autohealing-01.png" />
 

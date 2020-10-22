@@ -29,7 +29,7 @@ Elastigroup increases the size of the cluster when
 ## Scale Up
 
 Elastigroup continuously checks for any unschedulable pods. A pod is unschedulable when the Kubernetes scheduler is unable to find a node that can accommodate the pod.
-For example, a pod can request more CPU that is available on any of the cluster nodes. Unschedulable pods are recognized by their `PodCondition`. Whenever a Kubernetes scheduler fails to find a place to run a pod, it sets “`schedulable`” PodCondition to false and reason to “`unschedulable`“.
+For example, a pod can request more CPU that is available on any of the cluster nodes. Unschedulable pods are recognized by their `PodCondition`. Whenever a Kubernetes scheduler fails to find a place to run a pod, it sets `schedulable` PodCondition to false and reason to `unschedulable`.
 
 Elastigroup calculates and aggregates the number of unschedulable Pods waiting to be placed and finds the optimal distribution of nodes. Elastigroup makes sure that the biggest Pod will have enough resources to be placed, it also makes sure to distribute the Pods on the most efficient number of VMs from the desired cloud provider. In some scenarios, it will prefer to provision a distribution of certain 8xl & medium machines based on the Pods requirements and the Spot prices in the relevant region.
 
@@ -43,7 +43,7 @@ A node is considered for removal when:
 - All pods running on the node (except these that run on all nodes by default, like manifest-run pods or pods created by daemonsets) can be moved to other nodes in the cluster.
 - The sum of cpu and memory requests of all pods running on this node is smaller than 50% of the node's allocatable (not node capacity )
 
-Elastigroup simulates the cluster's topology and state “post” the scale down activity and decides whether the action can be executed or not.
+Elastigroup simulates the cluster's topology and state `post` the scale down activity and decides whether the action can be executed or not.
 
 ## Constraints and Labels
 
@@ -96,6 +96,6 @@ Before starting to delete a node, Elastigroup makes sure that `PodDisruptionBudg
 
 ## Node Health Check and Auto-healing
 
-The status of each Kubernetes node is represented as a “condition” object, that describes the status of different aspects of the node. The conditions types are: `OutOfDisk`, `Ready`, `MemoryPressure`, `DiskPressure`, `NetworkUnavailable`. Each condition type has a status `False` / `True` / `Unknown`
+The status of each Kubernetes node is represented as a `condition` object, that describes the status of different aspects of the node. The conditions types are: `OutOfDisk`, `Ready`, `MemoryPressure`, `DiskPressure`, `NetworkUnavailable`. Each condition type has a status `False` / `True` / `Unknown`
 
 Elastigroup monitors the nodes' status every 30 seconds and in case it identifies that the `Ready` condition is set to `False` or `Unknown` it will consider this instance as Unhealthy and will trigger a replacement to replace it with a new healthy node.

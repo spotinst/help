@@ -35,7 +35,7 @@ Once you have defined the filter conditions, check the summary statement at the 
 
 ## Filter Example
 
-In the example below, the filter will operate on Kubernetes resources. The filter will include labels that have the key “codename” with value “kafkanamo” and the labels with key “Family” and value “production”.
+In the example below, the filter will operate on Kubernetes resources. The filter will include labels that have the key `codename` with value `kafkanamo` and the labels with key `Family` and value `production`.
 
 <img src="/ocean/_media/tutorials-create-cost-filter-02.png" />
 
