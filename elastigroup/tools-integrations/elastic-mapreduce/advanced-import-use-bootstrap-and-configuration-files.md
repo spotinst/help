@@ -78,15 +78,13 @@ The required structure for steps file should hold a JSON of the following format
 
 ```json
 [
-	{
-		"hadoopJarStep": {
-			"jar":"s3://us-west-2.elasticmapreduce/libs/script-runner/script-runner.jar",
-			"args":[
-				"s3://datapipeline-us-west-2/us-west-2/bootstrap-actions/latest/TaskRunner/install-remote-runner-v2"
-            ]
-		},
-		"actionOnFailure":"TERMINATE_CLUSTER",
-		"name":"Install TaskRunner"
-	}
+  {
+    "hadoopJarStep": {
+      "jar": "s3://us-west-2.elasticmapreduce/libs/script-runner/script-runner.jar",
+      "args": ["s3://datapipeline-us-west-2/us-west-2/bootstrap-actions/latest/TaskRunner/install-remote-runner-v2"]
+    },
+    "actionOnFailure": "TERMINATE_CLUSTER",
+    "name": "Install TaskRunner"
+  }
 ]
 ```
