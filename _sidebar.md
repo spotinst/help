@@ -17,7 +17,7 @@
     - [KOPS](ocean/tools-and-integrations/kops/)
     - [GKE](ocean/getting-started/gke)
     - [ECS](ocean/getting-started/ecs)
-    - [OpenShift](ocean/tools-and-integrations/openshift)
+    - [OpenShift](ocean/tools-and-integrations/openshift/)
   - [Features](ocean/features/)
     - [Scaling (Kubernetes)](ocean/features/scaling-kubernetes)
     - [Scaling (ECS)](ocean/features/scaling-ecs)
