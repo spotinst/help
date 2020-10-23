@@ -1,6 +1,6 @@
 # Create a new Cluster with eksctl
 
-In this procedure, you will create an Ocean Kubernetes cluster with `eksctl` and migrate existing unmanaged nodegroups into Ocean-managed ones so you can spend more time with other tasks instead of managing infrastructure.
+In this procedure, you will create an Ocean Kubernetes cluster with [eksctl](https://eksctl.io/) and migrate existing unmanaged nodegroups into Ocean-managed ones so you can spend more time with other tasks instead of managing infrastructure.
 
 ## Prerequisites
 
