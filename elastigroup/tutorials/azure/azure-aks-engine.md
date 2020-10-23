@@ -109,7 +109,7 @@ Once aks-engine has created the cluster, import the configuration to Spot with s
 ```
 Usage:
   spotinst-aks-engine import [flags]
-﻿
+
 Flags:
       --dry-run                   Dump Elastigroup Config and exit
   -h, --help                      help for import

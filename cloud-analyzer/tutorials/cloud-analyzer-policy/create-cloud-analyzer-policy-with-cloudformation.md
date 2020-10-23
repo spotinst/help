@@ -149,7 +149,7 @@ The policy grants the following permissions for operating the Cloud Analyzer sys
 
 The following are permissions for the CloudFormation script to read the S3 billing bucket names.
 
-```json
+```
 "cloudformation:DescribeStacks"
 "cloudformation:GetStackPolicy"
 "cloudformation:GetTemplate"
@@ -160,7 +160,7 @@ The following are permissions for the CloudFormation script to read the S3 billi
 
 The following are read-only permissions for the reserved capacity reservations.
 
-```json
+```
 "dynamodb:List*"
 "dynamodb:Describe*"
 "ec2:Describe*"
@@ -194,7 +194,7 @@ The following provides access to Service Limit information.
 
 ### S3 Bucket Billing Data
 
-```json
+```
 "s3:List*"
 "s3:GetBucketLocation"
 "s3:ListBucketMultipartUploads"
@@ -210,7 +210,7 @@ Support permissions allow Cloud Analyzer to create tickets if it hits any reserv
 
 The following permissions are used to review account organization information if necessary.
 
-```json
+```
 "organizations:List*"
 "organizations:Describe*"
 ```
@@ -219,7 +219,7 @@ The following permissions are used to review account organization information if
 
 The following permissions are required to write information from your AWS Cost & Usage report to the Cloud Analyzer account. These are used to synchronize the Cost & Usage report.
 
-```json
+```
 {
   "Sid": "S3SyncPermissions",
   "Effect": "Allow",
@@ -233,31 +233,33 @@ The following permissions are required to write information from your AWS Cost &
 This role and the corresponding permissions are issued to the Cloud Analyzer production and DR accounts.
 
 ```json
-"CloudAnalyzerRole": {
-     "Type": "AWS::IAM::Role",
-     "Properties": {
-       "AssumeRolePolicyDocument": {
-         "Version": "2012-10-17",
-         "Statement": [
-           {
-             "Effect": "Allow",
-             "Principal": {
-               "AWS": ["arn:aws:iam::627743545735:root",
-                       "arn:aws:iam::884866656237:root"]
-             },
-             "Action": "sts:AssumeRole"
-           }
-         ]
-       },
-       "ManagedPolicyArns": [
-         {
-           "Ref": "CloudAnalyzerManagedPolicy"
-         },
-         "arn:aws:iam::aws:policy/job-function/Billing",
-         "arn:aws:iam::aws:policy/AWSCloudFormationReadOnlyAccess",
-         "arn:aws:iam::aws:policy/AmazonEC2ReadOnlyAccess"
-       ]
-     }
+{
+  "CloudAnalyzerRole": {
+    "Type": "AWS::IAM::Role",
+    "Properties": {
+      "AssumeRolePolicyDocument": {
+        "Version": "2012-10-17",
+        "Statement": [
+          {
+            "Effect": "Allow",
+            "Principal": {
+              "AWS": ["arn:aws:iam::627743545735:root", "arn:aws:iam::884866656237:root"]
+            },
+            "Action": "sts:AssumeRole"
+          }
+        ]
+      },
+      "ManagedPolicyArns": [
+        {
+          "Ref": "CloudAnalyzerManagedPolicy"
+        },
+        "arn:aws:iam::aws:policy/job-function/Billing",
+        "arn:aws:iam::aws:policy/AWSCloudFormationReadOnlyAccess",
+        "arn:aws:iam::aws:policy/AmazonEC2ReadOnlyAccess"
+      ]
+    }
+  }
+}
 ```
 
 ### Role ARN
@@ -265,28 +267,26 @@ This role and the corresponding permissions are issued to the Cloud Analyzer pro
 The policy below allows Cloud Analyzer to get the newly created role ARN. The role ARN is what allows Cloud Analyzer to access your AWS account.
 
 ```json
-"SetCredentials": {
-     "Type": "Custom::spotinst-set-credentials",
-     "Properties": {
-       "ServiceToken": "arn:aws:lambda:us-east-1:178579023202:function:spotinst-set-credentials",
-       "AccountId": {
-         "Ref": "AccountId"
-       },
-       "Token": {
-         "Ref": "Token"
-       },
-       "s3BucketNameCloudAnalyzer": {
-         "Ref": "CostAndUsageBucket"
-       },
-       "IamCloudAnalyzerRoleArn": {
-         "Fn::GetAtt": [
-           "CloudAnalyzerRole",
-           "Arn"
-         ]
-       }
-     }
-   }
- }
+{
+  "SetCredentials": {
+    "Type": "Custom::spotinst-set-credentials",
+    "Properties": {
+      "ServiceToken": "arn:aws:lambda:us-east-1:178579023202:function:spotinst-set-credentials",
+      "AccountId": {
+        "Ref": "AccountId"
+      },
+      "Token": {
+        "Ref": "Token"
+      },
+      "s3BucketNameCloudAnalyzer": {
+        "Ref": "CostAndUsageBucket"
+      },
+      "IamCloudAnalyzerRoleArn": {
+        "Fn::GetAtt": ["CloudAnalyzerRole", "Arn"]
+      }
+    }
+  }
+}
 ```
 
 ## Get Account ID and Token

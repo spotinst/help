@@ -12,10 +12,12 @@ To set up, use: `` Ref`: `logical-name ``
 Define a parameter:
 
 ```json
-"Parameters": {
-  "accountId": {
-    "Type": "String",
-    "Default": "act-12345"
+{
+  "Parameters": {
+    "accountId": {
+      "Type": "String",
+      "Default": "act-12345"
+    }
   }
 }
 ```
@@ -23,7 +25,7 @@ Define a parameter:
 Reference the parameter as a resource property:
 
 ```json
-"accountId":  { "Ref": "accountId" }
+{ "accountId": { "Ref": "accountId" } }
 ```
 
 ## Using Resource IDs
@@ -42,7 +44,7 @@ Create a custom resource: `SpotinstElastigroup`
 Create a subscription to the group which was created, while referencing the group ID:
 
 ```json
-"resourceId": { "Ref": "SpotinstElastigroup" }
+{ "resourceId": { "Ref": "SpotinstElastigroup" } }
 ```
 
 Request: Create Elastigroup and notification by references

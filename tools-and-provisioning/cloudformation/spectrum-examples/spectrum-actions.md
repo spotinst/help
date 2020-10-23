@@ -4,10 +4,9 @@ Spectrum Actions add purpose to Alerts by sending messages to SNS, Email, and Sl
 
 ## Request: Cloud Formation – JSON
 
-Body
-
 ```json
-"SpectrumAction": {
+{
+  "SpectrumAction": {
     "Type": "Custom::spectrumAction",
     "Properties": {
       "ServiceToken": {
@@ -29,11 +28,10 @@ Body
       }
     }
   }
+}
 ```
 
 ## Request: Cloud Formation – YAML
-
-Body
 
 ```yaml
 SpectrumAction:

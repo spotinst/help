@@ -13,7 +13,7 @@ To learn more about how Elastigroup's Nomad integration works see our Nomad inte
 ```
 # Setup data dir
 data_dir = "/tmp/client1"
-﻿
+
 # Enable the client
 client {
     enabled = true

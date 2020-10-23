@@ -43,7 +43,7 @@ Then, download the `Spot CPI manifest`.
 The Spot CPI exposes several cloud properties that can be configured in the VM Types section.
 For example:
 
-```json
+```yaml
 vm_types:
     - name: default
         cloud_properties:
@@ -69,7 +69,7 @@ Create a new state directory. This state is used by BOSH to store information ab
 
 Create a new variables file. For example,`.envrc`.
 
-```json
+```sh
 export SPOTINST_TOKEN="redacted"
 export SPOTINST_ACCOUNT="act-12345"
 export AWS_ACCESS_KEY="AKI..."
@@ -87,7 +87,7 @@ export SSH_PRIVATE_KEY="/path/to/private.key"
 
 Finally, create the environment using `bosh create-env`.
 
-```json
+```sh
 $ source .envrc && bosh create-env deployment/bosh.yml \ --state state/state.json \
 --vars-store state/creds.yml \
 -o cpi.yml \

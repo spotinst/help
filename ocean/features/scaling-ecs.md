@@ -65,12 +65,14 @@ It is possible to mark a resource so that it will not be scaled down. You can us
 The following is an example of the tag that you add to the task definition or the service:
 
 ```json
-"tags": [
-   {
-     "key": "spotinst.io/restrict-scale-down",
-     "value": "true"
-   }
- ]
+{
+  "tags": [
+    {
+      "key": "spotinst.io/restrict-scale-down",
+      "value": "true"
+    }
+  ]
+}
 ```
 
 When you add a new tag in a task definition, you must create a new revision. Otherwise, the new tag will not be visible.

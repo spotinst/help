@@ -3,7 +3,7 @@
 To create an Elastigroup in the same template that creates a Beanstalk environment, create the following in your template:
 
 1. Create a new beanstalk environment.
-2. Create a new elastigroup which is dependent on the new Beanstalk Environment.
+2. Create a new Elastigroup which is dependent on the new Beanstalk Environment.
 
 `"DependsOn": "SampleEnv"`
 
@@ -26,8 +26,6 @@ In order to view the full list of all available Beanstalk parameters, please fol
 | `environmentName` | String | The new Beanstalk Environment name Example: `SampleEnv` |
 
 ## Request
-
-Body
 
 ```json
 {

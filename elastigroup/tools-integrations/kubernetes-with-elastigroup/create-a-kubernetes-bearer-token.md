@@ -55,6 +55,6 @@ Run the command `kubectl describe secret spotinst-secret` to view the token and 
 
 To delete the token run the following command:
 
-```yaml
+```sh
 kubectl delete -f spotinst.yaml
 ```

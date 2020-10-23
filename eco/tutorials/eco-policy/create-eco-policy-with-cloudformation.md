@@ -134,7 +134,7 @@ The policy grants the following permissions for operating the Eco system.
 
 The following are permissions for the CloudFormation script to read the S3 billing bucket names.
 
-```json
+```
 "cloudformation:DescribeStacks"
 "cloudformation:GetStackPolicy"
 "cloudformation:GetTemplate"
@@ -145,7 +145,7 @@ The following are permissions for the CloudFormation script to read the S3 billi
 
 The following are read-only permissions for the reserved capacity reservations.
 
-```json
+```
 "dynamodb:List*"
 "dynamodb:Describe*"
 "ec2:Describe*"
@@ -179,7 +179,7 @@ The following provides access to Service Limit information.
 
 ### S3 Bucket Billing Data
 
-```json
+```
 "s3:List*"
 "s3:GetBucketLocation"
 "s3:ListBucketMultipartUploads"
@@ -195,7 +195,7 @@ Support permissions allow Eco to create tickets if it hits any reserved instance
 
 The following permissions are used to review account organization information if necessary.
 
-```json
+```
 "organizations:List*"
 "organizations:Describe*"
 ```
@@ -206,13 +206,9 @@ The following permissions are required to write information from your AWS Cost &
 
 ```json
 {
-             "Sid": "S3SyncPermissions",
-             "Effect": "Allow",
-             "Action": [
-               "s3:PutObject",
-               "s3:ListBucket",
-               "s3:PutObjectTagging",
-               "s3:PutObjectAcl"
-             ],
-             "Resource": "arn:aws:s3:::sc-customer-*"
+  "Sid": "S3SyncPermissions",
+  "Effect": "Allow",
+  "Action": ["s3:PutObject", "s3:ListBucket", "s3:PutObjectTagging", "s3:PutObjectAcl"],
+  "Resource": "arn:aws:s3:::sc-customer-*"
+}
 ```

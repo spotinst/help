@@ -8,8 +8,6 @@ The full body attribute list is available on the [Create](https://help.spot.io/e
 
 ## Request
 
-Body
-
 ```json
 {
   "AWSTemplateFormatVersion": "2010-09-09",

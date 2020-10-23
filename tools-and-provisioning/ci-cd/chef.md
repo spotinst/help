@@ -22,53 +22,53 @@ Our Chef integration uses Chef API calls to trigger register and deregister oper
 
 ```bash
 #!/bin/bash
-﻿
+
 chef_role="role"
-﻿
+
 chef_environment="env"
-﻿
+
 chef_organization="org"
-﻿
+
 chef_server_ip="12.34.56.78"
-﻿
+
 chef_version="11.4.4"
-﻿
+
 chef_validation_client_name="spotinst-user"
-﻿
+
 chef_validation_key="
-﻿
+
 -----BEGIN RSA PRIVATE KEY-----
-﻿
+
 MIIEpQIBAAKCAQ.....69qqJC/564=
-﻿
+
 -----END RSA PRIVATE KEY-----
-﻿
+
 "
-﻿
+
 echo "spotinst_chef : Installing Python 2.7"
-﻿
+
 (apt-get install python jq curl -y -q || yum install python curl jq -y) 2>/dev/null
-﻿
+
 curl -sL https://bootstrap.pypa.io/get-pip.py | python
-﻿
+
 curl -fsSL https://s3.amazonaws.com/spotinst-labs/integrations/chef/v1/init.sh | \
-﻿
+
 SPOTINST_TOKEN="$spotinst_token" \
-﻿
+
 CHEF_VERSION="$chef_version" \
-﻿
+
 CHEF_ROLE="$chef_role" \
-﻿
+
 CHEF_ENVIRONMENT="$chef_environment" \
-﻿
+
 CHEF_SERVER_IP="$chef_server_ip" \
-﻿
+
 CHEF_VALIDATION_KEY="$chef_validation_key" \
-﻿
+
 CHEF_VALIDATION_CLIENT_NAME="$chef_validation_client_name" \
-﻿
+
 EC2_INSTANCE_ID=$(curl -s http://169.254.169.254/latest/meta-data/instance-id) \
-﻿
+
 bash
 ```
 

@@ -40,7 +40,7 @@ On completion you'll see the Success message.
 
 ## Step 3: Begin the Import Process
 
-Once your Elastigroup is created, you can track the fargate service import process by clicking the 'details' link in the banner that appears in the elastigroup overview screen.
+Once your Elastigroup is created, you can track the fargate service import process by clicking the 'details' link in the banner that appears in the Elastigroup overview screen.
 
 <img src="/elastigroup/_media/import-fargate-services-to-ecs-elastigroup_4.png" />
 
@@ -48,7 +48,7 @@ You will be able to see which services are currently being imported, and in what
 
 ## Step 4: Import Complete
 
-Once elastigroup is finished importing all of your fargate services, the elastigroup auto-scaler will start spinning up spot instances according to the services imported, making sure that the instances being spun are optimal according to the service size definition.
+Once Elastigroup is finished importing all of your fargate services, the Elastigroup auto-scaler will start spinning up spot instances according to the services imported, making sure that the instances being spun are optimal according to the service size definition.
 
 You can gradually scale down your previous Fargate services, and switch to using the same containerized services using elastigroup.
 

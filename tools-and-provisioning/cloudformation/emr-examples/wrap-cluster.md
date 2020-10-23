@@ -16,14 +16,12 @@ Use the same template and change the strategy to the following:
 }
 ```
 
-| **Parameter**     | **Type**   | **Description**                                      |
-| ----------------- | ---------- | ---------------------------------------------------- |
-| `sourceClusterId` | **String** | The EMR cluster ID<br>Example: `j-12345`             |
-| `strategy`        | **String** | EMR group type: clone or wrap<br>Example: `wrapping` |
+| **Parameter**     | **Type**   | **Description**                                        |
+| ----------------- | ---------- | ------------------------------------------------------ |
+| `sourceClusterId` | **String** | The EMR cluster ID. Example: `j-12345`                 |
+| `strategy`        | **String** | EMR group type: `clone` or `wrap`. Example: `wrapping` |
 
 ## Request
-
-Body
 
 ```json
 {

@@ -8,8 +8,6 @@ The product value should be `Linux/UNIX (Amazon VPC)` for accounts that support 
 
 ## Request
 
-Body
-
 ```json
 {
   "AWSTemplateFormatVersion": "2010-09-09",

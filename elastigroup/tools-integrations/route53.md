@@ -26,26 +26,28 @@ Your Elastigroup is up and running with a Route53 load balancer.
 
 ## (Optional) Cross-account Route53 Integration
 
-Optionally, you can configure your elastigroup to utilize a Route53 record-set that is managed in one of your other AWS accounts.
+Optionally, you can configure your Elastigroup to utilize a Route53 record-set that is managed in one of your other AWS accounts.
 
 After configuring your Route53 integration, go to the Spot JSON review tab, and edit it.
 To utilize cross-account Route53 integration, edit the JSON as follows:
 
 ```json
-"thirdPartiesIntegration": {
-        "route53": {
-                "domains": [
-                   {
-                        "hostedZoneId": "<Hosted Zone ID>",
-                        "spotinstAccountId":"act-1234567",
-                        "recordSets": [
-                           {
-                                "name": "<record.domain.com>",
-                                "usePublicIp": "<false/true>"
-                           }
-                         ]
-                    }
-                ]
-          }
+{
+  "thirdPartiesIntegration": {
+    "route53": {
+      "domains": [
+        {
+          "hostedZoneId": "<Hosted Zone ID>",
+          "spotinstAccountId": "act-1234567",
+          "recordSets": [
+            {
+              "name": "<record.domain.com>",
+              "usePublicIp": "<false/true>"
+            }
+          ]
+        }
+      ]
+    }
+  }
 }
 ```

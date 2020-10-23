@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This tutorial covers how to create a stateful elastigroup using the [Stateful Creation Wizard](https://console.spotinst.com/spt/aws/ec2/elastigroup/stateful/create/general), that is able to persist Volumes, Elastic IPs, Private IPs and more, across spot interruptions. Using Stateful Elastigroups allows you to run a variety of stateful workloads using managed and SLA driven Spot Instances.
+This tutorial covers how to create a stateful Elastigroup using the [Stateful Creation Wizard](https://console.spotinst.com/spt/aws/ec2/elastigroup/stateful/create/general), that is able to persist Volumes, Elastic IPs, Private IPs and more, across spot interruptions. Using Stateful Elastigroups allows you to run a variety of stateful workloads using managed and SLA driven Spot Instances.
 First, we'll start by creating a new Elastigroup, selecting 'Stateful' under the [Use Cases](https://console.spotinst.com/spt/aws/ec2/elastigroup/create/setup) tab.
 
 ## Step 1: General Settings
@@ -34,17 +34,17 @@ We highly recommend selecting multiple Availability Zones and multiple instance 
 
 ## Step 3: Persistence
 
-In this step, you are required to choose which type of persistence you would like your elastigroup to maintain.
+In this step, you are required to choose which type of persistence you would like your Elastigroup to maintain.
 
 ### Storage Persistence
 
-Choose whether you would like elastigroup to persist your instance root volume or data volumes, upon interruption.
+Choose whether you would like Elastigroup to persist your instance root volume or data volumes, upon interruption.
 
 You can also pick the type of method in which data volumes are maintained, connected, and backed up.
 
 ### Network Persistence
 
-Choose whether you would like elastigroup to persist network settings, such as Instance private IPs.
+Choose whether you would like Elastigroup to persist network settings, such as Instance private IPs.
 
 <img src="/elastigroup/_media/create-a-stateful-elastigroup-from-scratch_2.png" />
 

@@ -52,11 +52,11 @@ echo ECS_CLUSTER=CLUSTER_NAME >> /etc/ecs/ecs.config
 
 ```
 <powershell>
-﻿
+
 Import-Module ECSTools
-﻿
+
 Initialize-ECSAgent -Cluster CLUSTER_NAME -EnableTaskIAMRole -LoggingDrivers '["json-file","awslogs"]'
-﻿
+
 </powershell>
 ```
 

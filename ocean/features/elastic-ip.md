@@ -15,12 +15,14 @@ Launch specifications allow you to configure your workloads (i.e., instances and
 This is done by adding the elasticIpPool object, and a tag selector (using a key and optionally a value) which all desired EIPs to use are tagged with. This way there is no need to explicitly manage the EIP address pool in Ocean on top of managing it in AWS. All tagged EIP objects will automatically get assigned on instances provisioned by the Ocean launch specification.
 
 ```json
-        "elasticIpPool": {
-            "tagSelector": {
-                "tagKey": "myEIPPoolTagKey",
-                "tagValue": "myEIPPoolTagValue"
-            }
-        },
+{
+  "elasticIpPool": {
+    "tagSelector": {
+      "tagKey": "myEIPPoolTagKey",
+      "tagValue": "myEIPPoolTagValue"
+    }
+  }
+}
 ```
 
 ## When Scaling Up

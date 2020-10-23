@@ -15,29 +15,28 @@ In order to get Spot Elastigroup and AWS CodeDeploy integrated, please follow th
 Before starting, ensure your Spot policy is up-to-date with the latest permissions. You can either get the entire JSON from our API docs to replace the Policy or simply add the following to your policy:
 
 ```json
-"Statement" : [
+{
+  "Statement": [
     {
-      "Effect" : "Allow",
-      "Action" : [
-        "codedeploy:*"
-      ],
+      "Effect": "Allow",
+      "Action": ["codedeploy:*"]
     }
   ]
+}
 ```
 
 In case of Revision that is being pulled from S3, The EC2 instances need to be launched with proper permissions to access files from S3 buckets.
 So you need to create an Instance Profile Role with the Following permissions:
 
 ```json
-"Statement" : [
+{
+  "Statement": [
     {
-      "Effect" : "Allow",
-      "Action" : [
-        "s3:Get*",
-        "s3:List*"
-      ],
+      "Effect": "Allow",
+      "Action": ["s3:Get*", "s3:List*"]
     }
   ]
+}
 ```
 
 Associate the Elastigroup with your CodeDeploy IAM Instance Role.

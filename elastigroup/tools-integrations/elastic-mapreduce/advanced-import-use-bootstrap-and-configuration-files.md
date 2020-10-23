@@ -16,14 +16,14 @@ Referencing the following JSON body example while Cloning the Cluster:
       }
     },
     "compute": {
-      "availabilityZones": [...],
+      "availabilityZones": ["..."],
       "bootstrapActions": {
         "file": {
           "bucket": "emr-test",
           "key": "emr_bootstrap.json"
         }
       },
-      "instanceGroups": {...},
+      "instanceGroups": {},
       "configurations": {
         "file": {
           "bucket": "emr-test",
@@ -31,7 +31,7 @@ Referencing the following JSON body example while Cloning the Cluster:
         }
       }
     },
-    "scaling": {...}
+    "scaling": {}
   }
 }
 ```

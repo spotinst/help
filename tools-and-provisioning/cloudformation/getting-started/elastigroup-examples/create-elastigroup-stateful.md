@@ -13,131 +13,131 @@ Body
 ```
 {
     "AWSTemplateFormatVersion": "2010-09-09",
-    "Parameters": -{
-        "shouldUpdateTargetCapacity": -{
+    "Parameters": {
+        "shouldUpdateTargetCapacity": {
             "Type": "String",
             "Default": "true",
-            "AllowedValues": -[
+            "AllowedValues": [
                 "false",
                 "true"
             ],
             "Description": "Should update target capacity on group update"
         },
-        "shouldResumeStateful": -{
+        "shouldResumeStateful": {
             "Type": "String",
             "Default": "false",
-            "AllowedValues": -[
+            "AllowedValues": [
                 "false",
                 "true"
             ],
             "Description": "Should resume stateful instances on group update"
         },
-        "shouldDeleteImages": -{
+        "shouldDeleteImages": {
             "Type": "String",
             "Default": "false",
-            "AllowedValues": -[
+            "AllowedValues": [
                 "false",
                 "true"
             ],
             "Description": "Should delete images for stateful instances on group delete"
         },
-        "shouldDeleteNetworkInterfaces": -{
+        "shouldDeleteNetworkInterfaces": {
             "Type": "String",
             "Default": "false",
-            "AllowedValues": -[
+            "AllowedValues": [
                 "false",
                 "true"
             ],
             "Description": "Should delete network interfaces for stateful instances on group delete"
         },
-        "shouldDeleteVolumes": -{
+        "shouldDeleteVolumes": {
             "Type": "String",
             "Default": "false",
-            "AllowedValues": -[
+            "AllowedValues": [
                 "false",
                 "true"
             ],
             "Description": "Should delete volumes for stateful instances on group delete"
         },
-        "shouldDeleteSnapshots": -{
+        "shouldDeleteSnapshots": {
             "Type": "String",
             "Default": "false",
-            "AllowedValues": -[
+            "AllowedValues": [
                 "false",
                 "true"
             ],
             "Description": "Should delete snapshots for stateful instances on group delete"
         }
     },
-    "Resources": -{
-        "SpotinstElastigroup": -{
+    "Resources": {
+        "SpotinstElastigroup": {
             "Type": "Custom::elasticgroup",
-            "Properties": -{
+            "Properties": {
                 "ServiceToken": "arn:aws:lambda:us-west-1:178579023202:function:spotinst-cloudformation",
                 "accessToken": "YOUR_TOKEN_HERE",
                 "accountId": "act-12345",
-                "updatePolicy": -{
-                    "shouldResumeStateful": -{
+                "updatePolicy": {
+                    "shouldResumeStateful": {
                         "Ref": "shouldResumeStateful"
                     },
-                    "shouldUpdateTargetCapacity": -{
+                    "shouldUpdateTargetCapacity": {
                         "Ref": "shouldUpdateTargetCapacity"
                     }
                 },
-                "deletePolicy": -{
-                    "shouldDeleteImages": -{
+                "deletePolicy": {
+                    "shouldDeleteImages": {
                         "Ref": "shouldDeleteImages"
                     },
-                    "shouldDeleteNetworkInterfaces": -{
+                    "shouldDeleteNetworkInterfaces": {
                         "Ref": "shouldDeleteNetworkInterfaces"
                     },
-                    "shouldDeleteVolumes": -{
+                    "shouldDeleteVolumes": {
                         "Ref": "shouldDeleteVolumes"
                     },
-                    "shouldDeleteSnapshots": -{
+                    "shouldDeleteSnapshots": {
                         "Ref": "shouldDeleteSnapshots"
                     }
                 },
-                "group": -{
+                "group": {
                     "name": "CloudFormation-Stateful",
-                    "strategy": -{
+                    "strategy": {
                         "risk": 100,
                         "availabilityVsCost": "costOriented",
                         "fallbackToOd": true,
-                        "persistence": -{
+                        "persistence": {
                             "blockDevicesMode": "reattach",
                             "shouldPersistRootDevice": true,
                             "shouldPersistBlockDevices": true,
                             "shouldPersistPrivateIp": true
                         }
                     },
-                    "capacity": -{
+                    "capacity": {
                         "target": 1,
                         "minimum": 1,
                         "maximum": 1
                     },
                     "scaling": {},
-                    "compute": -{
-                        "instanceTypes": -{
+                    "compute": {
+                        "instanceTypes": {
                             "ondemand": "m3.large",
-                            "spot": -[
+                            "spot": [
                                 "m3.large",
                                 "m4.large",
                                 "c3.large",
                                 "c4.large"
                             ]
                         },
-                        "availabilityZones": -[
-                           -{
+                        "availabilityZones": [
+                           {
                                 "name": "us-west-1c",
                                 "subnetId": "subnet-12345"
                             }
                         ],
-                        "launchSpecification": -{
+                        "launchSpecification": {
                             "monitoring": false,
                             "imageId": "ami-12345",
                             "keyPair": "Assignment",
-                            "securityGroupIds": -[
+                            "securityGroupIds": [
                                 "sg-12345"
                             ]
                         },
@@ -149,9 +149,9 @@ Body
             }
         }
     },
-    "Outputs": -{
-        "groupId": -{
-            "Value": -{
+    "Outputs": {
+        "groupId": {
+            "Value": {
                 "Ref": "SpotinstElastigroup"
             }
         }

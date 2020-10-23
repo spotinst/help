@@ -9,8 +9,6 @@ Clone an existing EMR Cluster into an Elastigroup.
 
 ## Request
 
-Body
-
 ```json
 {
   "AWSTemplateFormatVersion": "2010-09-09",

@@ -44,7 +44,7 @@ echo "volume is ready"
 
 ## Configure Data Volume Persistence Using the API
 
-Add the following attribute to your elastigroup configuration:
+Add the following attribute to your Elastigroup configuration:
 
 strategy.persistence.blockDevicesMode – string – (Optional) determine the way data volumes are attached to the instance. Valid values: 'reattach' and 'onLaunch'.
 

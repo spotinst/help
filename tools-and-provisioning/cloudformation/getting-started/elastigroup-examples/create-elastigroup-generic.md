@@ -13,58 +13,58 @@ Body
 ```
 {
     "AWSTemplateFormatVersion": "2010-09-09",
-    "Parameters": -{
-        "shouldRoll": -{
+    "Parameters": {
+        "shouldRoll": {
             "Type": "String",
             "Default": "false",
             "Description": "Should roll when updating"
         },
-        "shouldUpdateTargetCapacity": -{
+        "shouldUpdateTargetCapacity": {
             "Type": "String",
             "Default": "true",
-            "AllowedValues": -[
+            "AllowedValues": [
                 "false",
                 "true"
             ],
             "Description": "Should update target capacity on group update"
         }
     },
-    "Resources": -{
-        "SpotinstElastigroup": -{
+    "Resources": {
+        "SpotinstElastigroup": {
             "Type": "Custom::elasticgroup",
-            "Properties": -{
+            "Properties": {
                 "ServiceToken": "arn:aws:lambda:us-west-1:178579023202:function:spotinst-cloudformation",
                 "accessToken": "YOUR_TOKEN_HERE",
                 "accountId": "act-12345",
-                "updatePolicy": -{
-                    "shouldRoll": -{
+                "updatePolicy": {
+                    "shouldRoll": {
                         "Ref": "shouldRoll"
                     },
-                    "rollConfig": -{
+                    "rollConfig": {
                         "batchSizePercentage": 50,
                         "gracePeriod": 600
                     },
-                    "shouldUpdateTargetCapacity": -{
+                    "shouldUpdateTargetCapacity": {
                         "Ref": "shouldUpdateTargetCapacity"
                     }
                 },
-                "group": -{
+                "group": {
                     "name": "CloudFormation-stateless",
-                    "strategy": -{
+                    "strategy": {
                         "risk": 100,
                         "onDemandCount": 0,
                         "availabilityVsCost": "costOriented",
                         "utilizeReservedInstances": false,
                         "fallbackToOd": true
                     },
-                    "capacity": -{
+                    "capacity": {
                         "target": 1,
                         "minimum": 1,
                         "maximum": 1
                     },
-                    "scaling": -{
-                        "target": -[
-                           -{
+                    "scaling": {
+                        "target": [
+                           {
                                 "policyName": "target_policy_1",
                                 "metricName": "CPUUtilization",
                                 "statistic": "average",
@@ -76,35 +76,35 @@ Body
                             }
                         ]
                     },
-                    "compute": -{
-                        "instanceTypes": -{
+                    "compute": {
+                        "instanceTypes": {
                             "ondemand": "m3.large",
-                            "spot": -[
+                            "spot": [
                                 "m3.large",
                                 "m4.large",
                                 "c3.large",
                                 "c4.large"
                             ]
                         },
-                        "availabilityZones": -[
-                           -{
+                        "availabilityZones": [
+                           {
                                 "name": "us-west-1c",
                                 "subnetId": "subnet-85e0dddd"
                             }
                         ],
-                        "launchSpecification": -{
+                        "launchSpecification": {
                             "monitoring": false,
                             "imageId": "ami-12345",
                             "keyPair": "Assignment",
-                            "securityGroupIds": -[
+                            "securityGroupIds": [
                                 "sg-12345"
                             ]
                         },
                         "product": "Linux/UNIX"
                     },
-                    "scheduling": -{
-                        "tasks": -[
-                           -{
+                    "scheduling": {
+                        "tasks": [
+                           {
                                 "frequency": "hourly",
                                 "taskType": "backup_ami"
                             }
@@ -115,9 +115,9 @@ Body
             }
         }
     },
-    "Outputs": -{
-        "groupId": -{
-            "Value": -{
+    "Outputs": {
+        "groupId": {
+            "Value": {
                 "Ref": "SpotinstElastigroup"
             }
         }

@@ -4,8 +4,6 @@ Create an Ocean Launch Spec with the following CloudFormation template. The full
 
 ## Request
 
-Body
-
 ```json
 {
   "Resources": {

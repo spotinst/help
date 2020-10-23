@@ -6,10 +6,9 @@ For a complete list of parameters, see the [Spectrum Alert API](https://docs.spo
 
 ## Request: CloudFormation – JSON
 
-Body
-
 ```json
-"SpectrumAlert": {
+{
+  "SpectrumAlert": {
     "Type": "Custom::spectrumAlert",
     "Properties": {
       "ServiceToken": {
@@ -55,12 +54,8 @@ Body
         },
         "actionsEnabled": true,
         "actions": {
-          "unknownActionIds": [
-
-          ],
-          "okActionIds": [
-
-          ],
+          "unknownActionIds": [],
+          "okActionIds": [],
           "warningActionIds": [
             {
               "Ref": "SpectrumWarningAction"
@@ -80,54 +75,53 @@ Body
       }
     }
   }
+}
 ```
 
 ## Request: CloudFormation – YAML
 
-Body
-
-```YML
+```yaml
 SpectrumAlert:
-    Type: Custom::spectrumAlert
-    Properties:
-      ServiceToken:
-        Ref: SpotinstServiceToken
-      accessToken:
-        Ref: SpotinstToken
-      accoundId:
-        Ref: SpotinstAccountId
-      alert:
-        enabled: true
-        name: Spot Test | spot_instances
-        description: Test for spot instances
-        documentation: test for number of spot instances
-        namespace: elastigroup
-        metricName: spot_instances
-        dimensions:
+  Type: Custom::spectrumAlert
+  Properties:
+    ServiceToken:
+      Ref: SpotinstServiceToken
+    accessToken:
+      Ref: SpotinstToken
+    accoundId:
+      Ref: SpotinstAccountId
+    alert:
+      enabled: true
+      name: Spot Test | spot_instances
+      description: Test for spot instances
+      documentation: test for number of spot instances
+      namespace: elastigroup
+      metricName: spot_instances
+      dimensions:
         - name: group_id
           value:
             Ref: ElastigroupId
-        period: 1h
-        consecutivePeriods: 2
-        statistic: count
-        conditions:
-          warning:
-            threshold: 2
-            operator: lt
-          error:
-            threshold: 1
-            operator: le
-          critical:
-            threshold: 0
-            operator: le
-        actionsEnabled: true
-        actions:
-          unknownActionIds: []
-          okActionIds: []
-          warningActionIds:
+      period: 1h
+      consecutivePeriods: 2
+      statistic: count
+      conditions:
+        warning:
+          threshold: 2
+          operator: lt
+        error:
+          threshold: 1
+          operator: le
+        critical:
+          threshold: 0
+          operator: le
+      actionsEnabled: true
+      actions:
+        unknownActionIds: []
+        okActionIds: []
+        warningActionIds:
           - Ref: SpectrumWarningAction
-          errorActionIds:
+        errorActionIds:
           - Ref: SpectrumErrorAction
-          criticalActionIds:
+        criticalActionIds:
           - Ref: SpectrumCriticalAction
 ```

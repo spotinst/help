@@ -15,15 +15,15 @@ An existing Placement Group configured in your AWS account.
 5. Enable `Edit Mode` and add the placementGroupName property to the Availability zone setting.
 
 ```json
-"availabilityZones": [
-        {
-          "name": "us-west-2b",
-          "placementGroupName": "Your_Placement_Group",
-          "subnetIds": [
-            "subnet-1234567"
-          ]
-        }
-      ],
+{
+  "availabilityZones": [
+    {
+      "name": "us-west-2b",
+      "placementGroupName": "Your_Placement_Group",
+      "subnetIds": ["subnet-1234567"]
+    }
+  ]
+}
 ```
 
 ## Using the API

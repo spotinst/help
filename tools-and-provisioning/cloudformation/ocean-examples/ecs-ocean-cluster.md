@@ -12,8 +12,6 @@ The full body attribute list is available on the [Create](https://docs.spot.io/s
 
 ## Request: JSON Example
 
-Body
-
 ```json
 {
   "Resources": {
@@ -74,9 +72,7 @@ Body
 }
 ```
 
-## Request: YML Example
-
-Body
+## Request: YAML Example
 
 ```yaml
 Resources:

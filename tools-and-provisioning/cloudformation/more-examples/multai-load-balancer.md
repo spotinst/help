@@ -4,8 +4,6 @@ Create a new Multai Load Balancer (MLB), a listener, a deployment group, a targe
 
 ## Request
 
-Body
-
 ```json
 {
   "AWSTemplateFormatVersion": "2010-09-09",

@@ -71,7 +71,7 @@ The policy grants the following permissions for operating the Cloud Analyzer sys
 
 The following are permissions for the CloudFormation script to read the S3 billing bucket names.
 
-```json
+```
 "cloudformation:DescribeStacks"
 "cloudformation:GetStackPolicy"
 "cloudformation:GetTemplate"
@@ -82,7 +82,7 @@ The following are permissions for the CloudFormation script to read the S3 billi
 
 The following are read-only permissions for the reserved capacity reservations.
 
-```json
+```
 "dynamodb:List*"
 "dynamodb:Describe*"
 "ec2:Describe*"
@@ -116,7 +116,7 @@ The following provides access to Service Limit information.
 
 ### S3 Bucket Billing Data
 
-```json
+```
 "s3:List*"
 "s3:GetBucketLocation"
 "s3:ListBucketMultipartUploads"
@@ -132,7 +132,7 @@ Support permissions allow Cloud Analyzer to create tickets if it hits any reserv
 
 The following permissions are used to review account organization information if necessary.
 
-```json
+```
 "organizations:List*"
 "organizations:Describe*"
 ```

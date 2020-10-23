@@ -6,7 +6,6 @@ The full body attribute list is available on the [Create](https://docs.spot.io/s
 ## Request: JSON Example
 
 ```json
-Body
 {
   "Resources": {
     "SpotinstOcean": {
@@ -20,9 +19,7 @@ Body
           "imageId": "ami-1234",
           "name": "Test launch config",
           "userData": "",
-          "securityGroupIds": [
-            "sg-1234"
-          ],
+          "securityGroupIds": ["sg-1234"],
           "iamInstanceProfile": {
             "arn": "Instance Profile ARN"
           },
@@ -48,9 +45,7 @@ Body
 }
 ```
 
-## Request: YML Example
-
-Body
+## Request: YAML Example
 
 ```yaml
 Resources:

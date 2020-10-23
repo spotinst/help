@@ -1,29 +1,31 @@
 # Notification
 
-Add a new notification to an existing elastigroup by creating a new stack and referring to existing groupId, or create a new elastigroup together with a notification.
+Add a new notification to an existing Elastigroup by creating a new stack and referring to existing groupId, or create a new Elastigroup together with a notification.
 
 `More` protocol and `eventType` options are available in the [Subscribe API](https://help.spot.io/spotinst-api/administration/notifications-service/subscriptions/subscribe/).
 
 ```json
-"ElastigroupSubscription": {
-   "Type": "Custom::subscription",
-   "Properties": {
-       "ServiceToken": { "Ref": "ServiceToken" } ,
-       "accessToken": { "Ref": "accessToken" } ,
-       "accountId":  { "Ref": "accountId" },
-     "subscription": {
-       "resourceId": { "Ref": "SpotinstElastigroup" },
-       "protocol": "aws-sns",
-       "endpoint": "arn:aws:sns:us-west-1:842422002533:yael-topic",
-       "eventType": "AWS_EC2_INSTANCE_TERMINATE"
-     }
-   }
+{
+  "ElastigroupSubscription": {
+    "Type": "Custom::subscription",
+    "Properties": {
+      "ServiceToken": { "Ref": "ServiceToken" },
+      "accessToken": { "Ref": "accessToken" },
+      "accountId": { "Ref": "accountId" },
+      "subscription": {
+        "resourceId": { "Ref": "SpotinstElastigroup" },
+        "protocol": "aws-sns",
+        "endpoint": "arn:aws:sns:us-west-1:842422002533:yael-topic",
+        "eventType": "AWS_EC2_INSTANCE_TERMINATE"
+      }
+    }
+  }
+}
 ```
 
 ## Request: Create a Notification and an Elastigroup
 
 ```json
-Body
 {
   "AWSTemplateFormatVersion": "2010-09-09",
   "Parameters": {
@@ -47,10 +49,7 @@ Body
     "shouldUpdateTargetCapacity": {
       "Type": "String",
       "Default": "true",
-      "AllowedValues": [
-        "false",
-        "true"
-      ],
+      "AllowedValues": ["false", "true"],
       "Description": "Should update target capacity on group update"
     }
   },
@@ -110,12 +109,7 @@ Body
           "compute": {
             "instanceTypes": {
               "ondemand": "m3.large",
-              "spot": [
-                "m3.large",
-                "m4.large",
-                "c3.large",
-                "c4.large"
-              ]
+              "spot": ["m3.large", "m4.large", "c3.large", "c4.large"]
             },
             "availabilityZones": [
               {
@@ -127,9 +121,7 @@ Body
               "monitoring": false,
               "imageId": "ami-12345",
               "keyPair": "Assignment",
-              "securityGroupIds": [
-                "sg-12345"
-              ]
+              "securityGroupIds": ["sg-12345"]
             },
             "product": "Linux/UNIX"
           },

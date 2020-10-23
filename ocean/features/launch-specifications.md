@@ -1,6 +1,6 @@
 # Launch Specifications
 
-Launch specifications enable you to configure multiple workload types on the same ocean cluster. With Ocean launch specifications, you can configure sets of labels and taints (Kubernetes) or attributes (ECS) to go along with a custom AMI, Instance Profile , Security Groups, and User Data script that will be used for the nodes or container instances that will serve your labeled workloads. If a pod or task has no node-selector labels or attributes configured, the default AMI and user data configured on the Ocean cluster will be used.
+Launch specifications enable you to configure multiple workload types on the same Ocean cluster. With Ocean launch specifications, you can configure sets of labels and taints (Kubernetes) or attributes (ECS) to go along with a custom AMI, Instance Profile , Security Groups, and User Data script that will be used for the nodes or container instances that will serve your labeled workloads. If a pod or task has no node-selector labels or attributes configured, the default AMI and user data configured on the Ocean cluster will be used.
 
 ## Configuration
 
@@ -21,16 +21,16 @@ In this scenario, the default Ocean AMI will include a Linux OS, but for a speci
 
 1. Configure your WinPod pod with a dedicated nodeSelector.
 
-```json
+```yaml
 apiVersion: v1
 kind: Pod
 metadata:
 name: WinPod
 spec:
   containers:
-  - name: WinPodCon
-    image: WinPodCon
-    imagePullPolicy: IfNotPresent
+    - name: WinPodCon
+      image: WinPodCon
+      imagePullPolicy: IfNotPresent
   nodeSelector:
     runOnWin: true
 ```
@@ -49,10 +49,10 @@ spec:
 
 If a pod requires a GPU instance, add the relevant GPU AMI in the custom launch specification section. Ocean will spin up instances accordingly. Specific labels are not required in this case. Example:
 
-```json
+```yaml
 resources:
-        limits:
-          nvidia.com/gpu: 1
+  limits:
+    nvidia.com/gpu: 1
 ```
 
 You don't need to add any extra label for GPU support. You can use taints that require your GPU-based pods to select a specific launch specification which contains the GPU AMI.

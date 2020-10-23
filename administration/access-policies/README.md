@@ -28,7 +28,7 @@ A statement contains the following elements:
   - `elastigroup:*` will allow all Elastigroup actions.
 - Resources – An array of resources to which the actions and effect apply (Using camelCase). Each one represents a Spot resource (e.g., Ocean cluster, Elastigroup). A resource is defined by the pattern: [serviceName]:[ResourceId]. Wildcards (\*) are supported in [serviceName] and [actionName]. Examples:
   - `–` all resources.
-  - `elastigroup:*` – all elastigroup resources.
+  - `elastigroup:*` – all Elastigroup resources.
   - `elastigroup:sig-214*` – all groups starting with `sig-214`.
 - Condition – Allows resource selection by name. Example:
   `"name": "prod-*"` – All resources whose name starts with `prod-`.

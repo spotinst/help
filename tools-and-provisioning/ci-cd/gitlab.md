@@ -29,15 +29,15 @@ The following tutorial covers how to start running Gitlab Runner's autoscaling f
 
 ```
  [runners.machine]
-﻿
+
    IdleCount = 0
-﻿
+
    IdleTime = 1800
-﻿
+
    MachineDriver = "spotinst"
-﻿
+
    MachineName = "runner-%s"
-﻿
+
    MachineOptions = [ "spotinst-account=<Account-ID>", "spotinst-token=<Token>", "spotinst-elastigroup-id=<ElastigroupId>", "spotinst-sshkey-path=<LocalPath>"]
 ```
 

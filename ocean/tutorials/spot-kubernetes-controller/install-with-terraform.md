@@ -4,7 +4,7 @@ Spot provides a [Terraform Module](https://github.com/spotinst/terraform-spotins
 
 The module uses the official Kubernetes provider to provision the required cluster resources.
 
-```json
+```hcl
 provider "kubernetes" {
   // add your provider configs
 }

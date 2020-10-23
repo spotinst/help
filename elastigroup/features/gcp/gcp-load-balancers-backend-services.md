@@ -24,7 +24,7 @@ For regional backend service, we utilize Scheme configuration to identify type o
 ## Backend Services with Elastigroup
 
 If you are running an application or service behind GCP's Backend Services (Load Balancers), Elastigroup provides the freedom to run blended cluster from multiple instance types, sizes
-({n1-standard,n1-highmem,n1-highcpu,n1-ultramem}-{2,4,8,16,etc..})
+({n1-standard,n1-highmem,n1-highcpu,n1-ultramem}{2,4,8,16,etc..})
 and purchasing options (Preemtive, On-Demand).
 
 Elastigroup launches the target capacity for Preemptible VMs, to ensure a predictable and stable workload. Its unique value proposition is its ability to add resiliency to workloads that otherwise would not be suitable to run as Preemptible VMs.

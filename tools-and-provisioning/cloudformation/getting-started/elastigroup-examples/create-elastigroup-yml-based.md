@@ -1,4 +1,4 @@
-# Create Elastigroup – YML Based
+# Create Elastigroup – YAML Based
 
 Create a new Elastigroup.
 
@@ -6,7 +6,7 @@ The full body attribute list is available on the [Create](http://api.spotinst.co
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
-Description: YML based CFN template
+Description: YAML based CFN template
 Parameters:
   DesiredCapacityAtStart:
     Type: Number
@@ -58,7 +58,7 @@ Parameters:
   SpotinstAccountId:
     Type: String
     Default: "act-12345"
-﻿
+
 Resources:
   SpotinstElastigroup:
     Type: 'Custom::elasticgroup'

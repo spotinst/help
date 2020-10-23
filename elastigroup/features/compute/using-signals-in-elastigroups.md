@@ -68,7 +68,7 @@ To send the signal, the [Create Instance Signal API](https://api.spotinst.com/sp
 
 Headers:
 
-```json
+```
 Content-Type: application/json
 Authorization: Bearer ${token}
 ```

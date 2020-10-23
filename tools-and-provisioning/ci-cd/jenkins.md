@@ -59,7 +59,7 @@ EC2_INSTANCE_ID="$(curl http://169.254.169.254/latest/meta-data/instance-id)"
 JENKINS_MASTER_IP="IP:PORT"
 # Install Java If not already installed
 install_deps "jre"
-﻿
+
 # Get The Jenkins Slave JAR file
 curl http://${JENKINS_MASTER_IP}/jnlpJars/slave.jar --output /tmp/slave.jar
 # Run the Jenkins slave JAR
@@ -139,7 +139,7 @@ Create an Elastigroup, with the desired VM types, region and other configuration
 
 ```bash
 #!/bin/bash
-﻿
+
 install_deps() {
   echo "Installing dependencies"
   # Install deps.
@@ -164,20 +164,20 @@ install_deps() {
     fi
   done
 }
-﻿
-﻿
+
+
 export INSTANCE_ID=`curl -H Metadata:true "http://169.254.169.254/metadata/instance/compute/vmId?api-version=2017-08-01&format=text"`
 export JENKINS_MASTER_IP="MASTER_IP:PORT"
-﻿
+
 # Install Java If not already installed
 install_deps "jre"
-﻿
+
 yum -y install java-1.8.0
 yum -y remove java-1.7.0-openjdk
-﻿
+
 # Get The Jenkins Slave JAR file
 curl http://${JENKINS_MASTER_IP}/jnlpJars/slave.jar --output /tmp/slave.jar
-﻿
+
 # Run the Jenkins Slave JAR
 java -jar /tmp/slave.jar -jnlpCredentials user:/password/token -jnlpUrl http://${JENKINS_MASTER_IP}/computer/${INSTANCE_ID}/slave-agent.jnlp &
 ```

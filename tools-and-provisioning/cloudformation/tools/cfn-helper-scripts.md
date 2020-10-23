@@ -36,7 +36,7 @@ In order to use cfn helper scripts in Elastigroup user-data, you will need to sp
 
 ### Step 2: Attach the IAM Policy to your IAM Role
 
-1. Under Roles from the side menu, locate the IAM role used by your elastigroup and click on it:
+1. Under Roles from the side menu, locate the IAM role used by your Elastigroup and click on it:
 
 <img src="/tools-and-provisioning/_media/cfn-helper-scripts_4.png" width="381" height="267" />
 

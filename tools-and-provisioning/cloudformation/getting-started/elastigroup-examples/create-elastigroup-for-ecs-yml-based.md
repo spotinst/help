@@ -1,4 +1,4 @@
-# Create Elastigroup for ECS – YML Based
+# Create Elastigroup for ECS – YAML Based
 
 Create a new Elastigroup for ECS cluster.
 

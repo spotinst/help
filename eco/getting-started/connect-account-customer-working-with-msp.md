@@ -72,7 +72,7 @@ Continue with the steps below.
 8. Scroll all the way down and click Next again.
 9. Scroll all the way down, and under the Capabilities section, mark the box that says `I acknowledge that AWS CloudFormation might create IAM resources.`
 10. Click Create Stack.
-11. Click here, and find the crawler you just created. The name will appear as follows: AWSCURCrawler-[name of your cur report]. Click on the crawler to bring up its properties.
+11. Click here, and find the crawler you just created. The name will appear as follows: `AWSCURCrawler-[name of your cur report]`. Click on the crawler to bring up its properties.
 12. Click Edit.
 13. On the left side of the screen, click Schedule.
 14. In the Frequency dropdown box, choose Daily.

@@ -15,7 +15,7 @@ provider "spotinst" {
   token = "xxxxxxxxxxxxxxxxxxxxxxx"
   account = "act-1exxxx40"
 }
-﻿
+
 resource "spotinst_elastigroup_aws" "TFtest1" {}
 ```
 

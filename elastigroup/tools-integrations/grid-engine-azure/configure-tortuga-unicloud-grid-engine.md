@@ -13,13 +13,11 @@ Complete all the procedures in this article including:
 
 ### Step 1: Create Elastigroup Hardware Profile
 
-Tortuga uses hardware profiles to manage node registration. For elastigroup a remote hardware profile with permission to control the name-format will be created so that Spot can manage VMs.
+Tortuga uses hardware profiles to manage node registration. For Elastigroup a remote hardware profile with permission to control the name-format will be created so that Spot can manage VMs.
 
 ```
 > create-hardware-profile --name elastigroup
-﻿
 > update-hardware-profile --name elastigroup --location remote
-﻿
 > update-hardware-profile --name elastigroup --name-format "*"
 ```
 
@@ -34,7 +32,6 @@ Tortuga uses hardware profiles to manage node registration. For elastigroup a re
 
 ```
 > enable-component --software-profile execd-elastigroup --no-sync execd
-﻿
 > uge-cluster update default --add-execd-swprofile execd-elastigroup
 ```
 
@@ -52,7 +49,6 @@ The first command will launch an editor with the queue name configured. Save thi
 
 ```
 > qconf -aq burst.q
-﻿
 > qconf -mattr queue hostlist "@elastigroup" burst.q
 ```
 
@@ -69,8 +65,8 @@ Finally, associate the hostgroup with the Tortuga software-profile:
 ## Install the Spot Controller
 
 ```bash
-> source $SGE_ROOT/default/common/settings.sh
-> curl -fsSL https://spotinst-public.s3.amazonaws.com/integrations/hpc/gridengine/controller/scripts/install.sh | \
+$ source $SGE_ROOT/default/common/settings.sh
+$ curl -fsSL https://spotinst-public.s3.amazonaws.com/integrations/hpc/gridengine/controller/scripts/install.sh | \
 SPOTINST_TOKEN=redacted \
 SPOTINST_ACCOUNT=redacted \
 SGE_CLUSTER_NAME="tortuga-uge-cluster" \
@@ -123,7 +119,7 @@ When creating a Spot Elastigroup there are a few properties that must be set for
 
 ```python
 #!/usr/bin/env python
-﻿
+
 import sys
 import subprocess
 import platform
@@ -135,7 +131,7 @@ import ssl
 import json
 import os
 import signal
-﻿
+
 installerHostName = None
 installerIpAddress = None
 port = 8443
@@ -145,19 +141,19 @@ override_dns_domain = True
 dns_search = ''
 dns_domain = ''
 dns_nameservers = []
-﻿
-﻿
+
+
 def bootstrapFromMetadataTags():
   url = 'http://169.254.169.254/metadata/instance/compute/tags?api-version=2018-10-01&format=text'
-﻿
+
   request = urllib2.Request(url, headers={"Metadata" : "true"})
   contents = urllib2.urlopen(request).read()
-﻿
+
   tags = contents.split(";")
-﻿
+
   for tag in tags:
     keyval = tag.split(":", 1)
-﻿
+
     if keyval[0] == "installerHostName":
       global installerHostName
       installerHostName = keyval[1]
@@ -187,93 +183,93 @@ def bootstrapFromMetadataTags():
       dns_ary = keyval[1].split(",")
       dns_ary.append(installerIpAddress)
       dns_nameservers = dns_ary
-﻿
+
 def runCommand(cmd, retries=1):
     for nRetry in range(retries):
         p = subprocess.Popen(cmd, shell=True)
-﻿
+
         retval = p.wait()
         if retval == 0:
             break
-﻿
+
         time.sleep(5 + 2 ** (nRetry * 0.75))
     else:
         return -1
-﻿
+
     return retval
-﻿
-﻿
+
+
 def _installPackage(pkgList, yumopts=None, retries=10):
     cmd = 'yum'
-﻿
+
     if yumopts:
         cmd += ' ' + yumopts
-﻿
+
     cmd += ' -y install %s' % (pkgList)
-﻿
+
     retval = runCommand(cmd, retries)
     if retval != 0:
         raise Exception('Error installing package [%s]' % (pkgList))
-﻿
-﻿
+
+
 def installEPEL(vers):
     epelbaseurl = ('http://dl.fedoraproject.org/pub/epel'
                    '/epel-release-latest-%s.noarch.rpm' % (vers))
-﻿
+
     runCommand('rpm -ivh %s' % (epelbaseurl))
-﻿
-﻿
+
+
 def _isPackageInstalled(pkgName):
     return (runCommand('rpm -q --quiet %s' % (pkgName)) == 0)
-﻿
-﻿
+
+
 def installPuppet(vers):
     pkgname = 'puppetlabs-release-pc1'
-﻿
+
     url = 'http://yum.puppetlabs.com/%s-el-%s.noarch.rpm' % (pkgname, vers)
-﻿
+
     bRepoInstalled = _isPackageInstalled(pkgname)
-﻿
+
     if not bRepoInstalled:
         retval = runCommand('rpm -ivh %s' % (url), 5)
         if retval != 0:
             sys.stderr.write(
                 'Error: unable to install package \"{0}\"\n'.format(pkgname))
-﻿
+
             sys.exit(1)
-﻿
+
     # Attempt to install puppet
     if not _isPackageInstalled('puppet-agent'):
         _installPackage('puppet-agent')
-﻿
-﻿
+
+
 def bootstrapPuppet():
     cmd = ('/opt/puppetlabs/bin/puppet agent'
            ' --logdest /tmp/puppet_bootstrap.log'
            ' --onetime --server %s --waitforcert 120' % (installerHostName))
-﻿
+
     runCommand(cmd)
-﻿
-﻿
+
+
 def get_default_dns_domain():
     results = installerHostName.rstrip().split('.', 1)
-﻿
+
     return results[1] if len(results) == 2 else None
-﻿
-﻿
+
+
 def update_resolv_conf():
     with open('/etc/resolv.conf', 'w') as fp:
         if dns_search:
             fp.write('search %s\n' % dns_search)
-﻿
+
         fp.write('nameserver %s\n' % installerIpAddress)
-﻿
+
 def update_network_configuration():
     nameserver_found = False
     domain_found = False
-﻿
+
     fn = '/etc/sysconfig/network-scripts/ifcfg-eth0'
-﻿
+
     with open(fn) as fp:
         with open(fn + '.NEW', 'w') as fpOut:
             for buf in fp.readlines():
@@ -288,32 +284,32 @@ def update_network_configuration():
                     domain_found = True
                     fpOut.write('DOMIAN={0}\n'.format(dns_search))
                     continue
-﻿
+
                 fpOut.write(buf)
-﻿
+
             if not nameserver_found:
                 fpOut.write('DNS1={0}\n'.format(installerIpAddress))
-﻿
+
             if not domain_found:
                 fpOut.write('DOMAIN={0}\n'.format(dns_search))
-﻿
+
     shutil.move(fn, fn + '.orig')
     shutil.move(fn + '.NEW', fn)
-﻿
+
 def setHostName():
     url = 'https://%s:%s/v1/identify-node' % (installerIpAddress, port)
-﻿
+
     req = urllib2.Request(url)
-﻿
+
     req.add_header(
         'Authorization',
         'Basic ' + base64.standard_b64encode(
             '%s:%s' % (cfmUser, cfmPassword)))
-﻿
+
     ctx = ssl.create_default_context()
     ctx.check_hostname = False
     ctx.verify_mode = ssl.CERT_NONE
-﻿
+
     for nCount in range(300):
         try:
             response = urllib2.urlopen(req, context=ctx)
@@ -324,63 +320,63 @@ def setHostName():
                     'Invalid Tortuga webservice credentials')
         except:
             print("Registration error. Retrying...")
-﻿
+
         time.sleep(5)
     else:
         raise Exception('Unable to communicate with Tortuga webservice')
-﻿
+
     d = json.load(response)
-﻿
+
     if response.code != 200:
         if 'error' in d:
             errmsg = 'Tortuga webservice error: msg=[%s]' % (
                 error['message'])
         else:
             errmsg = 'Tortuga webservice internal error'
-﻿
+
         raise Exception(errmsg)
-﻿
+
     h = d['node']['name']
-﻿
+
     runCommand('hostname %s' % h)
-﻿
+
     with open('/etc/hostname', 'a') as fp:
         fp.write('%s\n' % h)
-﻿
+
     return h
-﻿
-﻿
+
+
 def main():
     runCommand('setenforce permissive')
-﻿
+
     bootstrapFromMetadataTags()
-﻿
+
     setHostName()
-﻿
+
     update_resolv_conf()
-﻿
+
     # update_network_configuration()
-﻿
-﻿
+
+
     vals = platform.dist()
-﻿
+
     vers = vals[1].split('.')[0]
-﻿
+
     # Install EPEL repository, if necessary
     if not _isPackageInstalled('epel-release'):
         installEPEL(vers)
-﻿
+
     with open('/etc/hosts', 'a+') as fp:
         fp.write('%s\t%s\n' % (installerIpAddress, installerHostName))
-﻿
+
     installPuppet(vers)
-﻿
+
     update_resolv_conf()
-﻿
+
     bootstrapPuppet()
-﻿
+
 if __name__ == "__main__":
-﻿
+
     main()
 ```
 

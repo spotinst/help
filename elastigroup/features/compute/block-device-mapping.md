@@ -4,7 +4,7 @@ You have the option to configure Block Device Mapping settings for an Elastigrou
 
 For additional information, you can check out the [AWS documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html).
 
-Block Device Mapping settings can be added or managed using the API while creating an elastigroup or as an update to an elastigroup, or using the UI at the last step of the Creation Wizard – in the Review Tab.
+Block Device Mapping settings can be added or managed using the API while creating an Elastigroup or as an update to an elastigroup, or using the UI at the last step of the Creation Wizard – in the Review Tab.
 
 ## Implement Block Device Mapping
 
@@ -17,33 +17,35 @@ Block Device Mapping settings can be added or managed using the API while creati
 Example: 'blockDeviceMappings' object overriding the settings for the drives: /dev/sdf , /dev/sdm , /dev/sda1. In this case, the root volume is `sda1`. The root volume can also be `xvda`.
 
 ```json
-"blockDeviceMappings": [
-  {
-    "deviceName": "/dev/sdm",
-    "ebs": {
-      "deleteOnTermination": true,
-      "volumeSize": 80,
-      "volumeType": "gp2"
+{
+  "blockDeviceMappings": [
+    {
+      "deviceName": "/dev/sdm",
+      "ebs": {
+        "deleteOnTermination": true,
+        "volumeSize": 80,
+        "volumeType": "gp2"
+      }
+    },
+    {
+      "deviceName": "/dev/sdf",
+      "ebs": {
+        "deleteOnTermination": true,
+        "snapshotId": "snap-09e8dccc6a7512345",
+        "volumeSize": 500,
+        "volumeType": "gp2"
+      }
+    },
+    {
+      "deviceName": "/dev/sda1",
+      "ebs": {
+        "deleteOnTermination": true,
+        "volumeSize": 48,
+        "volumeType": "gp2"
+      }
     }
-  },
- {
-    "deviceName": "/dev/sdf",
-    "ebs": {
-      "deleteOnTermination": true,
-      "snapshotId": "snap-09e8dccc6a7512345",
-      "volumeSize": 500,
-      "volumeType": "gp2"
-    }
-  },
-  {
-    "deviceName": "/dev/sda1",
-    "ebs": {
-      "deleteOnTermination": true,
-      "volumeSize": 48,
-      "volumeType": "gp2"
-    }
-  }
-]
+  ]
+}
 ```
 
 Alternatively, you can use the Update API with the following Body:
@@ -99,8 +101,8 @@ With BDM you can manage the volume type/size dynamically by modifying the size/t
   "deviceName": "/dev/sda1",
   "ebs": {
     "deleteOnTermination": "true",
-    "volumeSize": 24, <---- Setting the volume size
-    "volumeType": "gp2" <---- Setting the Volume type
+    "volumeSize": 24,
+    "volumeType": "gp2"
   }
 }
 ```

@@ -1,4 +1,4 @@
-# Create Elastigroup – YML Based
+# Create Elastigroup – YAML Based
 
 Create a new Elastigroup.
 
@@ -6,7 +6,7 @@ The full body attribute list is available on the [Create](https://help.spot.io/e
 
 ```yml
 AWSTemplateFormatVersion: 2010-09-09
-Description: YML based CFN template
+Description: YAML based CFN template
 Parameters:
   DesiredCapacityAtStart:
     Type: Number

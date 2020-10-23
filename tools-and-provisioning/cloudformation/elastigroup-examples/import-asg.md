@@ -7,6 +7,7 @@ If you want your Elastigroup to persist even after you delete the CloudFormation
 ## Request - CloudFormation - JSON
 
 ```json
+{
   "SpotinstASG": {
     "Type": "Custom::importAsg",
     "Properties": {
@@ -15,37 +16,36 @@ If you want your Elastigroup to persist even after you delete the CloudFormation
       "accountId": "YOUR SPOTINST ACCOUNT ID",
       "asgName": "NAME OF THE ASG YOU WANT TO IMPORT",
       "region": "REGION WHERE ASG IS LOCATED",
-      "group":{
+      "group": {
         "product": "IMAGE TYPE",
-        "spotInstanceTypes": [
-        	"ARRAY OF INSTANCE TYPES"
-        ],
+        "spotInstanceTypes": ["ARRAY OF INSTANCE TYPES"],
         "name": "NAME OF NEW ELASTIGROUP TO CREATE"
       },
       "deletePolicy": {
-        "asgScaleTarget": NUMBER
+        "asgScaleTarget": "NUMBER"
       },
       "groupConfig": {}
     }
   }
+}
 ```
 
 ## Request - CloudFormation - YAML
 
 ```yaml
-  SpotinstASG:
-    Type: Custom::importAsg
-    Properties:
-      ServiceToken: !Sub arn:aws:lambda:${AWS::Region}:178579023202:function:spotinst-cloudformation
-      accessToken: Your Spot API Token
-      accountId: Your Spot Account ID
-      asgName: Name of ASG to Import
-      region: Region where ASG is located
-      group:
-        product: Image Type
-        spotInstanceTypes:
-			- Array of instance types
-        name: Name of New Elastigroup Created
+SpotinstASG:
+Type: Custom::importAsg
+Properties:
+  ServiceToken: !Sub arn:aws:lambda:${AWS::Region}:178579023202:function:spotinst-cloudformation
+  accessToken: Your Spot API Token
+  accountId: Your Spot Account ID
+  asgName: Name of ASG to Import
+  region: Region where ASG is located
+  group:
+    product: Image Type
+    spotInstanceTypes:
+      - Array of instance types
+    name: Name of New Elastigroup Created
 ```
 
 ## Request - Import ASG and Scale Once

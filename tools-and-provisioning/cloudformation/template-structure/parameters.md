@@ -18,7 +18,7 @@ Below are several examples where we defined parameters to use inside the Spot re
 ## Using a parameter value:
 
 ```json
-"accountId":  { "Ref": "accountId" }
+{ "accountId": { "Ref": "accountId" } }
 ```
 
 | **Parameter**                 | **Type**    | **Description**                                                                                                                                       |
@@ -40,32 +40,32 @@ Below are several examples where we defined parameters to use inside the Spot re
 ```json
 {
   "AWSTemplateFormatVersion": "2010-09-09",
-  "Parameters": -{
-    "shouldRoll": -{
+  "Parameters": {
+    "shouldRoll": {
       "Type": "String",
       "Default": "false",
       "Description": "Should roll when updating"
     },
-    "shouldUpdateTargetCapacity": -{
+    "shouldUpdateTargetCapacity": {
       "Type": "String",
       "Default": "true",
-      "AllowedValues": -["false", "true"],
+      "AllowedValues": ["false", "true"],
       "Description": "Should update target capacity on group update"
     }
   },
-  "Resources": -{
-    "SpotinstElastigroup": -{
+  "Resources": {
+    "SpotinstElastigroup": {
       "Type": "Custom::elasticgroup",
-      "Properties": -{
-        "updatePolicy": -{
-          "shouldRoll": -{
+      "Properties": {
+        "updatePolicy": {
+          "shouldRoll": {
             "Ref": "shouldRoll"
           },
-          "rollConfig": -{
+          "rollConfig": {
             "batchSizePercentage": 50,
             "gracePeriod": 600
           },
-          "shouldUpdateTargetCapacity": -{
+          "shouldUpdateTargetCapacity": {
             "Ref": "shouldUpdateTargetCapacity"
           }
         },
@@ -82,84 +82,81 @@ Below are several examples where we defined parameters to use inside the Spot re
 
 ```json
 {
-    "AWSTemplateFormatVersion": "2010-09-09",
-    "Parameters": -{
-        "ServiceToken": -{
-            "Type": "String",
-            "Default": "arn:aws:lambda:us-west-1:178579023202:function:spotinst-cloudformation"
-        },
-        "accessToken": -{
-            "NoEcho": "true",
-            "Type": "String"
-        },
-        "accountId": -{
-            "Type": "String",
-            "Default": "act-12345"
-        },
-        "shouldRoll": -{
-            "Type": "String",
-            "Default": "false",
-            "Description": "Should roll when updating"
-        },
-        "shouldUpdateTargetCapacity": -{
-            "Type": "String",
-            "Default": "true",
-            "AllowedValues": -[
-                "false",
-                "true"
-            ],
-            "Description": "Should update target capacity on group update"
-        }
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Parameters": {
+    "ServiceToken": {
+      "Type": "String",
+      "Default": "arn:aws:lambda:us-west-1:178579023202:function:spotinst-cloudformation"
     },
-    "Resources": -{
-        "SpotinstElastigroup": -{
-            "Type": "Custom::elasticgroup",
-            "Properties": -{
-                "ServiceToken": -{
-                    "Ref": "ServiceToken"
-                },
-                "accessToken": -{
-                    "Ref": "accessToken"
-                },
-                "accountId": -{
-                    "Ref": "accountId"
-                },
-                "updatePolicy": -{
-                    "shouldRoll": -{
-                        "Ref": "shouldRoll"
-                    },
-                    "rollConfig": -{
-                        "batchSizePercentage": 50,
-                        "gracePeriod": 600
-                    },
-                    "shouldUpdateTargetCapacity": -{
-                        "Ref": "shouldUpdateTargetCapacity"
-                    }
-                },
-                "group": {}
-            }
-        },
-        "ElastigroupSubscription": -{
-            "Type": "Custom::subscription",
-            "Properties": -{
-                "ServiceToken": -{
-                    "Ref": "ServiceToken"
-                },
-                "accessToken": -{
-                    "Ref": "accessToken"
-                },
-                "accountId": -{
-                    "Ref": "accountId"
-                },
-                "subscription": -{
-                    "resourceId": +{1 item},
-                    "protocol": "aws-sns",
-                    "endpoint": "arn:aws:sns:us-west-1:842422002533:my-topic",
-                    "eventType": "AWS_EC2_INSTANCE_TERMINATE"
-                }
-            }
-        }
+    "accessToken": {
+      "NoEcho": "true",
+      "Type": "String"
+    },
+    "accountId": {
+      "Type": "String",
+      "Default": "act-12345"
+    },
+    "shouldRoll": {
+      "Type": "String",
+      "Default": "false",
+      "Description": "Should roll when updating"
+    },
+    "shouldUpdateTargetCapacity": {
+      "Type": "String",
+      "Default": "true",
+      "AllowedValues": ["false", "true"],
+      "Description": "Should update target capacity on group update"
     }
+  },
+  "Resources": {
+    "SpotinstElastigroup": {
+      "Type": "Custom::elasticgroup",
+      "Properties": {
+        "ServiceToken": {
+          "Ref": "ServiceToken"
+        },
+        "accessToken": {
+          "Ref": "accessToken"
+        },
+        "accountId": {
+          "Ref": "accountId"
+        },
+        "updatePolicy": {
+          "shouldRoll": {
+            "Ref": "shouldRoll"
+          },
+          "rollConfig": {
+            "batchSizePercentage": 50,
+            "gracePeriod": 600
+          },
+          "shouldUpdateTargetCapacity": {
+            "Ref": "shouldUpdateTargetCapacity"
+          }
+        },
+        "group": {}
+      }
+    },
+    "ElastigroupSubscription": {
+      "Type": "Custom::subscription",
+      "Properties": {
+        "ServiceToken": {
+          "Ref": "ServiceToken"
+        },
+        "accessToken": {
+          "Ref": "accessToken"
+        },
+        "accountId": {
+          "Ref": "accountId"
+        },
+        "subscription": {
+          "resourceId": "...",
+          "protocol": "aws-sns",
+          "endpoint": "arn:aws:sns:us-west-1:842422002533:my-topic",
+          "eventType": "AWS_EC2_INSTANCE_TERMINATE"
+        }
+      }
+    }
+  }
 }
 ```
 
@@ -170,32 +167,32 @@ Below are several examples where we defined parameters to use inside the Spot re
 ```json
 {
   "AWSTemplateFormatVersion": "2010-09-09",
-  "Parameters": -{
-    "shouldRoll": -{
+  "Parameters": {
+    "shouldRoll": {
       "Type": "String",
       "Default": "false",
       "Description": "Should roll when updating"
     },
-    "shouldUpdateTargetCapacity": -{
+    "shouldUpdateTargetCapacity": {
       "Type": "String",
       "Default": "true",
-      "AllowedValues": -["false", "true"],
+      "AllowedValues": ["false", "true"],
       "Description": "Should update target capacity on group update"
     }
   },
-  "Resources": -{
-    "SpotinstElastigroup": -{
+  "Resources": {
+    "SpotinstElastigroup": {
       "Type": "Custom::elasticgroup",
-      "Properties": -{
-        "updatePolicy": -{
-          "shouldRoll": -{
+      "Properties": {
+        "updatePolicy": {
+          "shouldRoll": {
             "Ref": "shouldRoll"
           },
-          "rollConfig": -{
+          "rollConfig": {
             "batchSizePercentage": 50,
             "gracePeriod": 600
           },
-          "shouldUpdateTargetCapacity": -{
+          "shouldUpdateTargetCapacity": {
             "Ref": "shouldUpdateTargetCapacity"
           }
         },

@@ -31,7 +31,7 @@ In the case of multiple worker node Instance Groups:
 
 Example:
 
-```json
+```yaml
 apiVersion: kops/v1alpha2
 kind: InstanceGroup
 metadata:
@@ -41,7 +41,6 @@ labels:
   spotinst.io/ocean-default-launchspec: "true"
 name: nodes
 spec:
-...
 ```
 
 2. Label the rest of the instance groups you want to migrate to Ocean with the label:
@@ -49,17 +48,16 @@ spec:
 
 Example:
 
-```json
+```yaml
 apiVersion: kops/v1alpha2
 kind: InstanceGroup
 metadata:
- creationTimestamp: null
- labels:
-   kops.k8s.io/cluster: kops.ek8s.com
-   spotinst.io/hybrid: "true"
- name: nodes
+  creationTimestamp: null
+  labels:
+    kops.k8s.io/cluster: kops.ek8s.com
+    spotinst.io/hybrid: "true"
+  name: nodes
 spec:
-...
 ```
 
 3. Run `kops update`. `kops` will now identify and create the Ocean Cluster along with the Ocean launch specifications for each labeled instance group.
@@ -89,7 +87,7 @@ The migration of existing deployment will consist of two separate layers: master
 
 Example:
 
-```json
+```yaml
 apiVersion: kops/v1alpha2
 kind: InstanceGroup
 metadata:
@@ -98,7 +96,6 @@ labels:
   spotinst.io/ocean-default-launchspec: "true"
 name: nodes
 spec:
-...
 ```
 
 3. Run `kops update`. `kops` will now identify and create the Ocean Cluster along with the Ocean launch specifications for each labeled instance group.

@@ -116,10 +116,10 @@ Then, in your Elastigroup Nomad integration, you should have the following:
 
 You will have to add appropriate meta-data configuration in your client.hcl so the launched instances will support the required constraints. It should look like this:
 
-```json
+```hcl
 # Setup data dir
 data_dir = "/tmp/client1"
-﻿
+
 # Enable the client
 client {
     enabled = true
