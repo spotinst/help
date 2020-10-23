@@ -12,3 +12,4 @@ test-results.xml
 *.log*
 npm-debug.log
 package-lock.json
+help.iml
