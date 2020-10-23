@@ -14,21 +14,21 @@ Each Simple Scaling Policy has the following set of parameters:
 - Scale based on:
   - Trigger:
     - Statistic: The type of statistic you will utilize. Options are:
-      - average
-      - maximum
-      - minimum
-      - Sum
+      - `average`
+      - `maximum`
+      - `minimum`
+      - `sum`
     - Metric Name: The metric used to trigger the policy's scaling action. Available options:
       - If the chosen namespace is 'compute':
-        - instance/cpu/utilization
+        - `instance/cpu/utilization`
       - If the chosen namespace is 'pubsub':
-        - subscription/num_outstanding_messages
-        - subscription/backlog_bytes
-        - subscription/num_undelivered_messages
-        - subscription/oldest_retained_acked_message_age_by_region
-        - subscription/oldest_unacked_message_age
-        - subscription/unacked_bytes_by_region
-        - subscription/oldest_unacked_message_age_by_region
+        - `subscription/num_outstanding_messages`
+        - `subscription/backlog_bytes`
+        - `subscription/num_undelivered_messages`
+        - `subscription/oldest_retained_acked_message_age_by_region`
+        - `subscription/oldest_unacked_message_age`
+        - `subscription/unacked_bytes_by_region`
+        - `subscription/oldest_unacked_message_age_by_region`
   - Behavior:
     - Operator: Setting the relation between the threshold and the sampled value.
     - Threshold: The numerical value used to set the point of scaling.
