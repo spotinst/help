@@ -66,4 +66,4 @@ You're all set! Ocean will now ensure the most cost-effective capacity and sizin
 ## What's Next?
 
 - [Manually scale down](https://docs.aws.amazon.com/cli/latest/reference/ecs/update-container-instances-state.html#update-container-instances-state) your existing ECS nodes in the node pools you migrated to get Ocean to provision pod-driven optimized infrastructure for your existing workloads.
-- [Import Fargate services](https://help.spot.io/spotinst-api/ocean/ocean-cloud-api/ocean-for-ecs/import-fargate-service/) to Ocean clusters using the Spot APIs.
+- [Import Fargate services](https://docs.spot.io/api/#operation/oceanEcsFargateImportToNew) to Ocean clusters using the Spot APIs.
