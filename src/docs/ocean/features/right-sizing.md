@@ -47,7 +47,7 @@ The Right Sizing engine runs every three hours in order to generate new recommen
 
 You can get the Right Sizing recommendations through the API using one of the following calls:
 
-Get Right Sizing Recommendations: Ocean for [ECS](https://help.spot.io/spotinst-api/ocean/ocean-cloud-api/ocean-for-ecs/get-right-sizing-recommendations/), [K8s AWS](https://help.spot.io/spotinst-api/ocean/ocean-cloud-api/ocean-for-aws/get-right-sizing-recommendations/), [GKE](https://help.spot.io/spotinst-api/ocean/ocean-cloud-api/ocean-for-gke/get-right-sizing-recommendations/)
+Get Right Sizing Recommendations: Ocean for [ECS](https://docs.spot.io/api/#operation/oceanEcsGetRightSizingRecommend), [K8s AWS](https://docs.spot.io/api/#operation/oceanAwsFilterRightSizing), [GKE](https://docs.spot.io/api/#operation/oceanGkeGetRightSizingRecommendations)
 
 You can also view Right Sizing recommendations on your Ocean console, under the Right Sizing tab, and under the tabs for Kubernetes Deployments or ECS Services.
 
