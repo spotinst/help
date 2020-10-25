@@ -39,4 +39,4 @@ When scaling down, Ocean will remove the elastic IP address only after all pods 
 ## What's Next?
 
 - Learn more about Ocean [Launch Specifications](ocean/features/launch-specifications).
-- Learn more about the Ocean [API for Launch Specifications](https://help.spot.io/spotinst-api/ocean/ocean-cloud-api/ocean-for-aws/launch-specifications/create/).
+- Learn more about the Ocean [API for Launch Specifications](https://docs.spot.io/api/#operation/OceanAWSLaunchSpecCreate).
