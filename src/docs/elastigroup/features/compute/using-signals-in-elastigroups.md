@@ -55,7 +55,7 @@ For instance termination, the system behaves in the following way:
 
 ## API
 
-To send the signal, the [Create Instance Signal API](https://api.spotinst.com/spotinst-api/elastigroup/amazon-web-services/create-instance-signal/) should be used.
+To send the signal, the [Create Instance Signal API](https://docs.spot.io/api/#operation/elastigroupAwsCreateInstanceSignal) should be used.
 
 ### Available Body Parameters
 
