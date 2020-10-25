@@ -63,7 +63,7 @@ In order to relate the storage costs to the breakdowns of your workloads, Ocean 
    a. Ocean identifies pods using EFS storage by identifying certain properties defined on the PVC they are connected to. For a Kubernetes deployment, the PVC is the same for all replicas, and therefore, the storage cost per pod is split between the number of replicas run that hour.
    b. For the relevant pods identified, Ocean evenly spreads the cost between the different workloads that were using the EFS. In cases where a single EFS serves multiple applications (workloads) in the cluster or across different clusters, Ocean also spreads the cost evenly between the different workloads.
 
-To retrieve the necessary EFS information, Ocean requires the following permission in the [Access Policy](administration/spot-policy-in-aws.md):
+To retrieve the necessary EFS information, Ocean requires the following permission in the [Access Policy](administration/api/spot-policy-in-aws.md):
 
 `elasticfilesystem:DescribeFileSystems`
 
