@@ -29,4 +29,4 @@ Elastigroup's Stateful feature provides a combination of snapshots, volumes and 
 
 ## Importing a Stateful Instance
 
-Elastigroup provides the ability to import an existing stateful instance, with the original root and data volumes. Importing stateful instances is also available using the [API](https://api.spotinst.com/spotinst-api/stateful-api/import-stateful-instance/). Learn how to [import an existing stateful instance](elastigroup/features/stateful-instance/import-a-stateful-instance).
+Elastigroup provides the ability to import an existing stateful instance, with the original root and data volumes. Importing stateful instances is also available using the [API](https://docs.spot.io/api/#operation/importStatefulInstance). Learn how to [import an existing stateful instance](elastigroup/features/stateful-instance/import-a-stateful-instance).

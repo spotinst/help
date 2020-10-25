@@ -20,7 +20,7 @@ The table below describes the Spot labels available.
 | `spotinst.io/node-lifecycle`      | `od`                                                                                               | Pods which contain this node selector are forced to run on an on-demand instance.                  |
 | `spotinst.io/gpu-type`            | `nvidia-tesla-v100`, `nvidia-tesla-p100`, `nvidia-tesla-k80`, `nvidia-tesla-p4`, `nvidia-tesla-t4` | Sets the GPU accelerator. This setting applies only to GKE clusters.                               |
 
-> Avoid adding Spot labels under the launch specification node labels section. These labels should to be added in your pod configuration only.
+> Avoid adding Spot labels under the launch specification node labels section. These labels should be added in your pod configuration only.
 
 ## Examples
 

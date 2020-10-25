@@ -22,4 +22,4 @@ The cron expression: `30 16 * * 1-5` will repeat at 16:30 UTC on Monday-Friday.
 
 ## What's Next?
 
-Schedule tasks using the [Elastigroup API](https://docs.spot.io/spotinst-api/elastigroup/amazon-web-services/create/).
+Schedule tasks using the [Elastigroup API](https://docs.spot.io/api/#operation/elastigroupAwsCreate).
