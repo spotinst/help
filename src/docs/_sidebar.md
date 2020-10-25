@@ -265,6 +265,7 @@
   - [API](administration/api/)
     - [Create an API Token](administration/api/create-api-token)
     - [Spot Policy in AWS](administration/api/spot-policy-in-aws)
+    - [Spot Policy in Azure](administration/api/spot-policy-in-azure)
     - [Spot Policy in GCP](administration/api/spot-policy-in-gcp)
     - [Whitelist IPs](administration/api/whitelist-ips)
 - [**Tools & Provisioning**](tools-and-provisioning/)
