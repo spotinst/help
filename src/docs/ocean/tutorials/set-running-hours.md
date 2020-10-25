@@ -41,4 +41,4 @@ You can also configure running hours using the API parameter cluster.scheduling.
 
 ## What's Next?
 
-Have a look at the Create Cluster in Ocean APIs: [K8s AWS](https://help.spot.io/spotinst-api/ocean/ocean-cloud-api/ocean-for-aws/create-2/), [ECS](https://help.spot.io/spotinst-api/ocean/ocean-cloud-api/ocean-for-ecs/create/), [GKE](https://help.spot.io/spotinst-api/ocean/ocean-cloud-api/ocean-for-gke/create/)
+Have a look at the Create Cluster in Ocean APIs: [K8s AWS](https://docs.spot.io/api/#operation/OceanAWSClusterCreate), [ECS](https://docs.spot.io/api/#operation/OceanECSClusterCreate), [GKE](https://docs.spot.io/api/#operation/OceanGKEClusterCreate)
