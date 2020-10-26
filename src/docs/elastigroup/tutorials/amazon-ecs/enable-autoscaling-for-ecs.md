@@ -11,5 +11,5 @@ This tutorial covers the setup for an automatic Elastigroup Instance autoscaling
 
 ## What's Next?
 
-- Head to an overview of running ECS on Elastigroup by clicking [here](elastigroup/features/amazon-ecs/elastigroup-for-ecs).
-- Learn more about how the Autoscaler works [here](elastigroup/features/amazon-ecs/automatic-autoscaler-for-ecs).
+- Head to an overview of running ECS on Elastigroup by clicking [here](elastigroup/features/amazon-ecs/elastigroup-for-ecs.md).
+- Learn more about how the Autoscaler works [here](elastigroup/features/amazon-ecs/automatic-autoscaler-for-ecs.md).

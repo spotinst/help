@@ -43,4 +43,4 @@ Auto Healing is configured in the Compute view of the Creation Wizard, under Loa
 
 ## What's Next?
 
-Learn more about [Elastigroup Integration with ECS clusters](elastigroup/features/amazon-ecs/elastigroup-for-ecs).
+Learn more about [Elastigroup Integration with ECS clusters](elastigroup/features/amazon-ecs/elastigroup-for-ecs.md).
