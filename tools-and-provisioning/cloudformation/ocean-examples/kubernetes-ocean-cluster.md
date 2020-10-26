@@ -10,7 +10,7 @@ shouldUpdateTargetCapacity
 
 For more information on UpdatePolicy, see [Parameters](tools-and-provisioning/cloudformation/template-structure/parameters).
 
-The full body attribute list is available on the [Create](https://help.spot.io/spotinst-api/ocean/ocean-cloud-api/ocean-for-aws/create-2/) page of the API documentation.
+The full body attribute list is available on the [Create](https://docs.spot.io/api/#operation/OceanAWSClusterCreate) page of the API documentation.
 
 ## Request: JSON Example
 
