@@ -2,13 +2,12 @@
 
 ## Prerequisites
 
-Complete the following prerequisites, unless you started with [Running Elastigroup For EKS](elastigroup/tutorials/amazon-eks/create-elastigroup-eks-cluster):
+Complete the following prerequisites, unless you started with [Running Elastigroup For EKS](elastigroup/tutorials/amazon-eks/create-elastigroup-eks-cluster.md):
 
 - [kubectl (Amazon EKS-vended)](https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html)
 - [awscli 1.16.18+](https://docs.aws.amazon.com/cli/latest/userguide/installing.html)
 - [aws-iam-authenticator](https://docs.aws.amazon.com/eks/latest/userguide/configure-kubectl.html)
-- Amazon EKS cluster on ElastiGroup exists
-  If cluster not present, please create using step 1 from [this guide](elastigroup/tutorials/amazon-eks/create-elastigroup-eks-cluster)
+- Amazon EKS cluster on ElastiGroup exists. If cluster not present, please create using step 1 from [this guide](elastigroup/tutorials/amazon-eks/create-elastigroup-eks-cluster.md).
 
 ## Mac Version
 
