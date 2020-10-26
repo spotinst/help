@@ -2,9 +2,9 @@
 
 Create a new Elastigroup – Stateful configuration.
 
-You should make sure to specify the stateful deallocation configuration under the `deletePolicy` section. For more information about the parameters, see [Delete](https://docs.spot.io/spotinst-api/elastigroup/amazon-web-services/delete/) Elastigroup in the API documentation.
+You should make sure to specify the stateful deallocation configuration under the `deletePolicy` section. For more information about the parameters, see [Delete](https://docs.spot.io/api/#operation/elastigroupAwsDelete) Elastigroup in the API documentation.
 
-The full body attribute list is available on the [Create](https://docs.spot.io/spotinst-api/elastigroup/amazon-web-services/create/) page in the API documentation.
+The full body attribute list is available on the [Create](https://docs.spot.io/api/#operation/elastigroupAwsCreate) page in the API documentation.
 
 ## Request
 

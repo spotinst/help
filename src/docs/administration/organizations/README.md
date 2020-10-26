@@ -64,7 +64,7 @@ In the Account, you can define the following:
 
 ## Add an Account using the API
 
-To add an account through the API, go to [Spot API – Create Account](https://docs.spot.io/spotinst-api/administration/organization-accounts/create-account/).
+To add an account through the API, go to [Spot API – Create Account](https://docs.spot.io/api/#operation/OrganizationsAndAccountsCreateAccount).
 
 ## Get your Account ID
 
