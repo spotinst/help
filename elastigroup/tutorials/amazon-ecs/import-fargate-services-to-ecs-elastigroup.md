@@ -13,7 +13,7 @@ Elastigroup automatically and seamlessly predicts and replaces Spot Instances be
 ## Prerequisites
 
 - Connected AWS account to Spot Console
-- Updated Spot policy. Learn more about updating the [Spot policy](elastigroup/tutorials/elastigroup-tasks/update-spot-policy).
+- Updated Spot policy. Learn more about updating the [Spot policy](elastigroup/tutorials/elastigroup-tasks/update-spot-policy.md).
 - Make sure you have the ecsInstanceRole. [If not, create a new one](https://docs.aws.amazon.com/batch/latest/userguide/instance_IAM_role.html).
 
 ## Step 1: Choose Use Case
