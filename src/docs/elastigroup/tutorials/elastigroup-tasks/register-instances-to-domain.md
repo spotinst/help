@@ -11,7 +11,7 @@ The script does the following:
 
 Add the following User Data (the below example applies to Windows machines):
 
-```
+```powershell
 <powershell>
 $isMember = (Get-WmiObject -Class Win32_ComputerSystem).PartOfDomain
 if (!$isMember)
