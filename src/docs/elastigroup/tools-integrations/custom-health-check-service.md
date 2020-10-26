@@ -17,7 +17,7 @@ When an instance is marked as unhealthy, and the Elastigroup Health Check type i
 
 ### Step 1
 
-Create a Spott Elastigroup if you do not have one already.
+Create a Spot Elastigroup if you do not have one already.
 
 ### Step 2
 
@@ -71,7 +71,7 @@ In the Compute part select `HCS` as HealthCheck Type.
 
 **Note:**
 
-You can do steps 3 and 4 via our API. For more information go to [the API wiki](https://api.spotinst.com/spotinst-api/administration/health-check-service/).
+You can do steps 3 and 4 via our API. For more information go to the [API Reference](https://docs.spot.io/api/#tag/Health-Check-Service).
 
 ---
 

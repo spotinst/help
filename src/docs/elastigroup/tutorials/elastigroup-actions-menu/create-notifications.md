@@ -26,11 +26,11 @@ For SNS select aws-sns as the Protocol Type and the SNS Topic ARN the notificati
 
 <img src="/elastigroup/_media/create-notifications_3.png" />
 
-Setting up Notifications for additional Platforms such as `email` and `email-json` are currently only available via our [API](https://docs.spot.io/spotinst-api/administration/notifications-service/subscriptions/subscribe/).
+Setting up Notifications for additional Platforms such as `email` and `email-json` are currently only available via our [API](https://docs.spot.io/api/#operation/notificationsServiceSubscriptionsSubscribe).
 
 ## Step 3: Event Types
 
-**Group Deployment Completed**: Triggers a notification when a deployment process has finished successfully (for more information see [Deploy](elastigroup/tutorials/elastigroup-actions-menu/deploy-or-roll-elastigroup)).
+**Group Deployment Completed**: Triggers a notification when a deployment process has finished successfully (for more information see [Deploy](elastigroup/tutorials/elastigroup-actions-menu/deploy-or-roll-elastigroup.md)).
 
 **Group Deployment Failed**: Triggers a notification when a deployment process has failed to finish with errors.
 

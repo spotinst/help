@@ -14,7 +14,7 @@ It is possible to define multiple policies. There is no dependency between them.
 
 ## Example
 
-```
+```json
 "terminationPolicies": [
            {
            	"statements": [
