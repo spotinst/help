@@ -2,7 +2,7 @@
 
 Create a new Elastigroup for ECS cluster.
 
-The full body attributes list is available on the [Create](https://help.spot.io/elastigroup/amazon-web-services/create/) page of the API documentation.
+The full body attributes list is available on the [https://docs.spot.io/api/#operation/elastigroupAwsCreate) page of the API documentation.
 
 ```yml
 AWSTemplateFormatVersion: "2010-09-09"
