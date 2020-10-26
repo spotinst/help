@@ -8,11 +8,11 @@ Spot Elastigroup enables the use of production-grade Spot Instances by leveragin
 
 This Quick Start is for organizations that want to use Spot Elastigroup's capabilities to ensure availability and to efficiently scale Amazon ECS clusters that are running as Spot Instances at a discount of roughly 80% compared to On-Demand Instances, with additional savings from automatic task-based scaling.
 
-You can also import an existing ECS cluster – this action will fetch all the data needed in order to create a new ECS cluster on Elastigroup based on the configuration of the imported ECS cluster.Elastigroup for ECS is available via the Amazon QuickStart guides: https://aws.amazon.com/quickstart/architecture/spotinst-elastigroup/
+You can also import an existing ECS cluster – this action will fetch all the data needed in order to create a new ECS cluster on Elastigroup based on the configuration of the imported ECS cluster.Elastigroup for ECS is available via the [Amazon QuickStart](https://aws.amazon.com/quickstart/architecture/spotinst-elastigroup/) guides.
 
 With this Quick Start, Spot Elastigroup deployment takes about 7 minutes. The deployment is automated by AWS CloudFormation templates.
 
-## Prerequisites: Create an ECS IAM Role
+## Prerequisite: Create an ECS IAM Role
 
 - Before the Amazon ECS agent can register container instance into a cluster, the agent must have IAM Role with appropriate account credentials.
 - If you haven't done this already, here's how to create an ECS IAM Role.
@@ -67,4 +67,4 @@ Initialize-ECSAgent -Cluster CLUSTER_NAME -EnableTaskIAMRole -LoggingDrivers '["
 
 ## What's Next?
 
-Now that you have created an ECS-integrated Elastigroup, learn more about the [ECS Auto-Scaler](elastigroup/features/amazon-ecs/automatic-autoscaler-for-ecs) and how it efficiently and automatically scales your cluster.
+Now that you have created an ECS-integrated Elastigroup, learn more about the [ECS Auto-Scaler](elastigroup/features/amazon-ecs/automatic-autoscaler-for-ecs.md) and how it efficiently and automatically scales your cluster.
