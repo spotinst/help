@@ -18,7 +18,7 @@ The structure and options for scaling up or scaling down are the same.
 
 ## Example
 
-Here's an example of an Up Scaling Policy, using the YARNMemoryAvailablePercentage metric from the ElasticMapReduce namespace. When the average YARNMemoryAvailablePercentage is below 40 percent for 2 consecutive periods of 5 minutes the Action is triggered and 2 instances are added. The Scaling Policy then enters a Cooldown period of 120 seconds before resuming.
+Here's an example of an Up Scaling Policy, using the YARNMemoryAvailablePercentage metric from the ElasticMapReduce namespace. When the average YARNMemoryAvailablePercentage is below 40 percent for 2 consecutive periods of 5 minutes the Action is triggered and 2 instances are added. The Scaling Policy then enters a cool down period of 120 seconds before resuming.
 
 ## What's Next?
 
