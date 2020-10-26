@@ -2,7 +2,7 @@
 
 Create a new Elastigroup – generic with basic scaling.
 
-The full body attribute list is available on the [Create page](https://help.spot.io/elastigroup/amazon-web-services/create/) of the API documentation.
+The full body attribute list is available on the [Create page](https://docs.spot.io/api/#operation/elastigroupAwsCreate) of the API documentation.
 
 The product value should be `Linux/UNIX (Amazon VPC)` for accounts that support EC2-classic (AWS accounts created before 2013-12-04).
 
