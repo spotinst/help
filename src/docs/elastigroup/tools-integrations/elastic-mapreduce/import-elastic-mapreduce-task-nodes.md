@@ -47,4 +47,4 @@ Elastigroup is now running Task nodes for your EMR cluster, congrats! You're now
 - [Clone your EMR cluster](elastigroup/tools-integrations/elastic-mapreduce/) into an Elastigroup.
 - Create Scaling Policies for EMR Core and Task nodes.
 - AWS's EMR can occasionally get stuck in Resizing status. Elastigroup has an EMR Auto-Recovery process that monitors the resizing process and if necessary launches a replacement instance group. To learn more about Elastigroup's EMR Auto-Recovery click [here](elastigroup/tools-integrations/elastic-mapreduce/).
-- Check out our [API Docs](https://docs.spot.io/spotinst-api/) to learn how to create an Elastigroup to run your Task nodes using RESTful APIs
+- Check out our [API Reference](https://docs.spot.io/api/) to learn how to create an Elastigroup to run your Task nodes using RESTful APIs.
