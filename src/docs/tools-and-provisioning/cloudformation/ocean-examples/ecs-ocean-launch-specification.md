@@ -1,7 +1,7 @@
 # ECS Ocean Launch Spec
 
 Create an ECS Ocean Launch Spec with the following CloudFormation template.
-The full body attribute list is available on the [Create](https://docs.spot.io/spotinst-api/ocean/ocean-cloud-api/ocean-for-aws/create/) page of the API documentation.
+The full body attribute list is available on the [Create](https://docs.spot.io/api/#operation/OceanECSLaunchSpecCreate) page of the API documentation.
 
 ## Request: JSON Example
 
