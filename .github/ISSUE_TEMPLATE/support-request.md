@@ -1,9 +1,7 @@
 ---
 name: Support request
 about: Support request or question relating to `help`
-title: ""
-labels: ""
-assignees: ""
+labels: kind/support
 ---
 
 <!--

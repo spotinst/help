@@ -1,9 +1,7 @@
 ---
 name: Bug report
 about: Report a bug encountered while operating `help`
-title: ""
-labels: ""
-assignees: ""
+labels: kind/bug
 ---
 
 <!-- Please use this template while reporting a bug and provide as much info as possible. Not doing so may result in your bug not being addressed in a timely manner. Thanks!

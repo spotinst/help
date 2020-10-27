@@ -1,9 +1,7 @@
 ---
 name: Enhancement request
 about: Suggest an enhancement to the `help`
-title: ""
-labels: ""
-assignees: ""
+labels: kind/feature
 ---
 
 <!-- Please only use this template for submitting enhancement requests -->
