@@ -24,7 +24,7 @@
     - [Headroom](ocean/features/headroom)
     - [Health Checks & Auto-Healing](ocean/features/health-checks-and-autohealing)
     - [Labels & Taints](ocean/features/labels-and-taints)
-    - [Launch Specifications](ocean/features/launch-specifications)
+    - [Virtual Node Groups](ocean/features/launch-specifications)
     - [Cost Analysis](ocean/features/cost-analysis)
     - [Elastic IP](ocean/features/elastic-ip)
     - [Roll](ocean/features/roll)
