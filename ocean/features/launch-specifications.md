@@ -1,58 +1,54 @@
-# Launch Specifications
+# Virtual Node Groups
 
-Launch specifications enable you to configure multiple workload types on the same Ocean cluster. With Ocean launch specifications, you can configure sets of labels and taints (Kubernetes) or attributes (ECS) to go along with a custom AMI, Instance Profile , Security Groups, and User Data script that will be used for the nodes or container instances that will serve your labeled workloads. If a pod or task has no node-selector labels or attributes configured, the default AMI and user data configured on the Ocean cluster will be used.
+Virtual Node Groups (VNGs) provide a single layer of abstraction that allows users to manage different types of workloads on the same cluster.
 
-## Configuration
+Previously named launch specifications in the Ocean console, VNGs define cloud infrastructure properties and offer a wider feature set for governance mechanisms, scaling attributes, and networking definitions. VNGs give users more visibility into resource allocation with a new layer of monitoring. VNGs also provide more flexibility to edit and manage settings like headroom, block device mapping, and maximum nodes.
 
-1. Log in to the [Spot Console](https://console.spotinst.com/).
-2. Navigate to your Ocean cluster.
-3. Click the Actions menu and select Launch Specifications.
-4. Click Add Launch Specification.
-5. Name your Launch Specification (for ECS).
-6. Add the labels or attributes which identify your nodes or container instances
-7. Set the user data script and make sure to label your instances according to your label selection:
-   - For Kubernetes user data, refer to this [tutorial](ocean/tutorials/create-custom-labels).
-   - For ECS user data, refer to Example 2 in this tutorial.
-8. Optional: Set Custom AMI, Instance Profile, and Security Groups for the launch specification.
+### Note on Terminology
 
-## Example: Running a Windows-based Node in a Linux-based Cluster
+A VNG is the same as a launch specification. Spot uses the term VNG in the context of AWS Kubernetes implementation. Launch specification continues to be used for ECS, GKE, and in Spot API calls. Equivalent terms that are used in the industry include node groups and node pools.
 
-In this scenario, the default Ocean AMI will include a Linux OS, but for a specific pod, WinPod a Windows image is required. To ensure that the WinPod pod is using a Windows image, perform the following steps:
+<img src="/ocean/_media/features-vngs-01.png" />
 
-1. Configure your WinPod pod with a dedicated nodeSelector.
+## What’s a VNG?
 
-```yaml
-apiVersion: v1
-kind: Pod
-metadata:
-name: WinPod
-spec:
-  containers:
-    - name: WinPodCon
-      image: WinPodCon
-      imagePullPolicy: IfNotPresent
-  nodeSelector:
-    runOnWin: true
-```
+A VNG is a subset of nodes on a cluster that you can configure for a specific purpose. VNGs allow you to configure multiple types of infrastructure configuration on the same Ocean cluster. Below are some examples of common uses for VNGs.
 
-2. Configure your Ocean cluster with a launch specification that serves the WinPod nodeSelector label.
-   a. Log in to the Spot Console.
-   b. Navigate to your Ocean cluster.
-   c. Click on the Actions menu and select Launch Specifications.
-   d. Click Add Specification and add the following label:
-   Key: runOnWin
-   Value: true
-   e. Set the User Data script and label your nodes with the above label.
-   f. Set the custom launch specification AMI to Windows OS.
+Example 1: The default image for nodes in your Ocean cluster is for Linux. However, you need some nodes in the cluster to run Windows. You can use a VNG to set this up. Your VNG nodes will run Windows, while the rest of the Ocean cluster remains on Linux.
 
-## GPU Instance
+Example 2: You have some applications in your cluster that have significantly different usage requirements from the rest of the cluster, e.g., performance, scaling, and security requirements. You can create a VNG that configures nodes suitable for the pods these applications are running on.
 
-If a pod requires a GPU instance, add the relevant GPU AMI in the custom launch specification section. Ocean will spin up instances accordingly. Specific labels are not required in this case. Example:
+## How it works
 
-```yaml
-resources:
-  limits:
-    nvidia.com/gpu: 1
-```
+To create a VNG in Ocean, you configure sets of labels and taints (Kubernetes) or attributes (ECS) to go along with a custom image, instance profile, security groups, and a user data script that will be used for the nodes that will serve your labeled workloads.
 
-You don't need to add any extra label for GPU support. You can use taints that require your GPU-based pods to select a specific launch specification which contains the GPU AMI.
+For pods without constraints configured, Ocean will choose the VNG with the most chances to serve other pods in the future (meaning the VNG with the most labels). If no VNG is able to serve such a pod, Ocean will use the internal configuration set on the Ocean cluster object.
+
+In addition, any configuration parameter that is not configured explicitly in a VNG will be inherited from the internal configuration.
+
+## VNG Creation
+
+You can create new VNGs or reconfigure existing ones at any time after the cluster is created. In addition, it is possible to import an autoscaling group configuration from AWS and create a VNG in your Ocean cluster using that configuration.
+
+## Attributes and Actions per VNG
+
+As a node group in the cluster, many of the attributes that you apply to your cluster can be applied specifically per VNG. This enables you to organize and manage customized workload types within the same cluster. For example, you can customize the following types of attributes:
+* User Data
+* Instance Types
+* Block Device Mappings
+* Headroom
+* Security Group IDs
+* Subnet IDs
+* Elastic IPs
+* Labels
+* Taints
+* Tags
+* Spot % to use within the VNG
+
+For example, you could use the Labels and Taints attributes to instruct Ocean which labels and taints are applied on the nodes using the user data, and effectively connect between the cloud infrastructure properties and Kubernetes node labels that will be used on applications using node affinity.
+
+In addition, you can initiate a roll per VNG. This is useful when you need to apply changes to a VNG or restart the VNG for any reason without impacting other instances in the Ocean cluster. For more information, see [Initiate Roll per launchSpecIds](https://docs.spot.io/api/#operation/oceanAwsRollInit).
+
+## What’s next?
+
+Learn more about the VNGs in the APIs: [AWS Kubernetes](https://docs.spot.io/api/#operation/OceanAWSClusterCreate), [ECS](https://docs.spot.io/api/#operation/OceanECSClusterCreate), [GKE](https://docs.spot.io/api/#operation/OceanGKEClusterCreate)
