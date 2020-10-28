@@ -1,5 +1,29 @@
 # Controller Version History
 
+## [1.0.68] - 2020-10-25
+
+Added
+* Support for Spark scheduled applications
+* Support DaemonSet affinities
+
+## [1.0.67] – 2020-09-22
+
+Added
+
+Upgraded Kubernetes SDK
+
+## [1.0.66] – 2020-09-08
+
+Added
+
+Support spotinst-token and spotinst-account in secret
+
+## [1.0.65] – 2020-09-07
+
+Added
+* Overall stability improvement
+* Added OpenShift CSR Approval required permissions
+
 ## [1.0.64] – 2020-08-18
 
 Added
