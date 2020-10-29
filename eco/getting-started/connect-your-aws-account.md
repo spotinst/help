@@ -72,12 +72,8 @@ Mark the checkbox acknowledging that CloudFormation will create IAM resources, a
 
 ## Step 6
 
-1. Once the stack is created, copy the Spot Role ARN from the CloudFormation stack Outputs tab.
+Once the stack is created, copy the Spot Role ARN from the CloudFormation stack Outputs tab.
 
 <img src="/eco/_media/gettingstarted-aws-connect-08.png" width="546" height="484" />
-
-2. Paste the Spot Role ARN in the wizard.
-   - If your account is not managed by an MSP, click Done. Your registration is complete.
-   - If your account is managed by an MSP, contact Spot Support.
 
 Once your Organization is connected to Eco, initial data processing will take up to 48 hours. You will be notified via email when your dashboards are ready.
