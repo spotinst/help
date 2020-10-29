@@ -1,6 +1,6 @@
 const path = require("path");
 const { ProvidePlugin } = require("webpack");
-const CleanPlugin = require("clean-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 const HtmlPlugin = require("html-webpack-plugin");
 const srcDirectory = path.resolve(__dirname, "src");
@@ -42,7 +42,7 @@ module.exports = {
     ],
   },
   plugins: [
-    new CleanPlugin([buildDirectory]),
+    new CleanWebpackPlugin(), // **/* relative to webpack's output.path directory
     new CopyPlugin({
       patterns: [
         {
