@@ -3,7 +3,7 @@ import { pageEditPlugin, tocPlugin, featherPlugin, searchFocusPlugin } from "./p
 window.$docsify = {
   // General
   // ---------------------------------------------------------------------------
-  name: `<div class="logo"><img src="/_media/images/logos/spot.svg"/></div>`,
+  name: `<div class="logo"><img src="/_media/images/spot.png"/></div>`,
   homepage: "/connect-your-cloud-provider/README.md",
   notFoundPage: true,
   formatUpdated: "{MM}/{DD}, {HH}:{mm}",

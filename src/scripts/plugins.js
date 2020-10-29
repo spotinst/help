@@ -113,5 +113,5 @@ const renderEditLink = (file) => {
     }
   };
 
-  return `<div class="edit-link"><a class="github-link" onclick="editDocHandler(event)"><img class="github-icon" src="/_media/images/logos/github.png" /> Edit on GitHub</a></div>`;
+  return `<div class="edit-link"><a class="github-link" onclick="editDocHandler(event)"><img class="github-icon" src="/_media/images/github.png" /> Edit on GitHub</a></div>`;
 };
