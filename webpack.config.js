@@ -1,8 +1,8 @@
 const path = require("path");
 const { ProvidePlugin } = require("webpack");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const CopyPlugin = require("copy-webpack-plugin");
-const HtmlPlugin = require("html-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 const srcDirectory = path.resolve(__dirname, "src");
 const buildDirectory = path.resolve(__dirname, "build");
 const port = 3000;
@@ -43,7 +43,7 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(), // **/* relative to webpack's output.path directory
-    new CopyPlugin({
+    new CopyWebpackPlugin({
       patterns: [
         {
           from: path.resolve(__dirname, srcDirectory, "docs"),
@@ -55,12 +55,12 @@ module.exports = {
         },
       ],
     }),
-    new HtmlPlugin({
+    new HtmlWebpackPlugin({
       template: "src/index.html",
       filename: "index.html",
       inject: false,
     }),
-    new HtmlPlugin({
+    new HtmlWebpackPlugin({
       template: "src/404.html",
       filename: "404.html",
       inject: false,
