@@ -3,8 +3,9 @@
 ## [1.0.68] - 2020-10-25
 
 Added
-* Support for Spark scheduled applications
-* Support DaemonSet affinities
+
+- Support for Spark scheduled applications
+- Support DaemonSet affinities
 
 ## [1.0.67] – 2020-09-22
 
@@ -21,8 +22,9 @@ Support spotinst-token and spotinst-account in secret
 ## [1.0.65] – 2020-09-07
 
 Added
-* Overall stability improvement
-* Added OpenShift CSR Approval required permissions
+
+- Overall stability improvement
+- Added OpenShift CSR Approval required permissions
 
 ## [1.0.64] – 2020-08-18
 

@@ -33,17 +33,18 @@ You can create new VNGs or reconfigure existing ones at any time after the clust
 ## Attributes and Actions per VNG
 
 As a node group in the cluster, many of the attributes that you apply to your cluster can be applied specifically per VNG. This enables you to organize and manage customized workload types within the same cluster. For example, you can customize the following types of attributes:
-* User Data
-* Instance Types
-* Block Device Mappings
-* Headroom
-* Security Group IDs
-* Subnet IDs
-* Elastic IPs
-* Labels
-* Taints
-* Tags
-* Spot % to use within the VNG
+
+- User Data
+- Instance Types
+- Block Device Mappings
+- Headroom
+- Security Group IDs
+- Subnet IDs
+- Elastic IPs
+- Labels
+- Taints
+- Tags
+- Spot % to use within the VNG
 
 For example, you could use the Labels and Taints attributes to instruct Ocean which labels and taints are applied on the nodes using the user data, and effectively connect between the cloud infrastructure properties and Kubernetes node labels that will be used on applications using node affinity.
 
