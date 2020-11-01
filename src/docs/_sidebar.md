@@ -124,6 +124,8 @@
     - [Elastigroup Tasks](elastigroup/tutorials/elastigroup-tasks/)
       - [Create an Elastigroup from Scratch](elastigroup/tutorials/elastigroup-tasks/create-an-elastigroup-from-scratch)
       - [Create a Stateful Elastigroup from Scratch](elastigroup/tutorials/elastigroup-tasks/create-a-stateful-elastigroup-from-scratch)
+      - [Join an Existing ASG](elastigroup/tutorials/elastigroup-tasks/join-an-existing-asg)
+      - [Join an Existing ELB](elastigroup/tutorials/elastigroup-tasks/join-an-existing-elb)
       - [Publish Metrics to CloudWatch](elastigroup/tutorials/elastigroup-tasks/publish-metrics-to-cloudwatch)
       - [WordPress on Spot: Step-by-Step Guide](elastigroup/tutorials/elastigroup-tasks/wordpress-on-spot-step-by-step-guide)
       - [Create Encryption Key](elastigroup/tutorials/elastigroup-tasks/create-encryption-key)
