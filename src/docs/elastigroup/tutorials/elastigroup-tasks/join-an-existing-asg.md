@@ -72,11 +72,6 @@ In the Compute tab, verify that the imported values are correct or modify as nec
 
 Under the Scaling tab, you can configure scaling and termination policies, in cases that you will need to scale instances to support the load of your web application.
 
-For more information about Elastigroup’s scaling policies, see:
-Target Scaling Policies
-Simple Scaling Policies
-Termination Policy
-
 ## Review Tab
 
 In the Review tab under Summary, you can review the final configuration of your Elastigroup. In addition, the Spot automatically generates a template of your Elastigroup to be used by Cloudformation or Terraform.
@@ -84,3 +79,5 @@ In the Review tab under Summary, you can review the final configuration of your 
 When you are finished reviewing and making modifications to the configuration, click Create. Spot will create your Elastigroup.
 
 ## What's Next?
+* For more information about the General settings, read about [Cluster Orientation](elastigroup/features/core-features/cluster-orientation.md), [Maintenance Windows](elastigroup/features/core-features/maintenance-windows.md), and [Capacity Units](elastigroup/features/core-features/elastigroup-capacity-instances-or-weighted.md).
+* For more information about Scaling, read about [Target Scaling Policies](elastigroup/features/scaling/target-scaling.md), [Simple Scaling Policies](elastigroup/features/scaling/simple-scaling-policies.md), and [Termination Policy](elastigroup/features/compute/termination-policy.md).
