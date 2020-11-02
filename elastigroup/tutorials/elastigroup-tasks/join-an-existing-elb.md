@@ -10,13 +10,13 @@ In this procedure, you will import the configuration of an existing AWS Elastic 
 1. In the left menu of the Spot Console, click Elastigroup/Groups, and click Create Elastigroup.
 2. Click Elastic Load Balancer and choose Create an Elastigroup from an existing AWS Load Balancer.
 
-<img src="/elastigroup/_media/tasks-join-existing-elb-01.png" />
+<img src="/elastigroup/_media/tasks-join-existing-elb-01.png" width="443" height="255" />
 
 3. Choose the Region, the Load Balancer Type, and then choose the Balancer you will use to create an Elastigroup cluster. Click Select.
 
 Spot creates the Elastigroup based on the load balancer parameters imported from AWS. A summary of the parameters appears with the Review tab open. You can review the list of parameters.
 
-<img src="/elastigroup/_media/tasks-join-existing-elb-02.png" />
+<img src="/elastigroup/_media/tasks-join-existing-elb-02.png" width="502" height="556" />
 
 ## General Tab
 
@@ -69,7 +69,7 @@ In the Compute tab, verify that the imported values are correct or modify as nec
 * Stateful: You can specify details for a stateful instance.
 * Load Balancers: Verify that the load balancer you chose previously is selected.
 
-<img src="/elastigroup/_media/tasks-join-existing-elb-05.png" />
+<img src="/elastigroup/_media/tasks-join-existing-elb-05.png" width="336" height="95" />
 
 * Auto-Healing: In this section, you can configure which type of health checks will be performed on the instance.
 * Integrations: You can add an integration tool to use with the cluster.
