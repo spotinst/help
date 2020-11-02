@@ -35,6 +35,7 @@ You can create new VNGs or reconfigure existing ones at any time after the clust
 Many of the attributes that you apply to your cluster can be applied specifically per VNG. This enables you to organize and manage customized workload types within the same cluster. For example, you can customize the attributes listed below:
 
 - Available in the UI and API:
+
   - Block Device Mappings
   - Headroom
   - Labels
