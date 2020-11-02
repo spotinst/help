@@ -1,4 +1,5 @@
 import { pageEditPlugin, tocPlugin, featherPlugin, searchFocusPlugin } from "./plugins";
+import { aliases } from "./aliases";
 
 window.$docsify = {
   // General
@@ -13,6 +14,9 @@ window.$docsify = {
   // ---------------------------------------------------------------------------
   routerMode: "history", // default: 'hash'
   alias: {
+    // routing rules for backwards compatibility
+    ...aliases,
+
     // ensures there's only ever one single sidebar (see #301)
     "/.*/_sidebar.md": "/_sidebar.md",
   },
