@@ -147,38 +147,24 @@
     }
   }
 
-  .token.variable,
-  .token.atrule,
-  .token.regex,
-  .token.statement,
-  .token.tag,
-  .token.keyword {
-    color: var(--color-blue);
-  }
+  .lang-yaml,
+  .lang-bash,
+  .lang-ini {
+    .token.variable,
+    .token.atrule,
+    .token.regex,
+    .token.statement,
+    .token.tag,
+    .token.keyword {
+      color: var(--color-blue);
+    }
 
-  .token.string,
-  .token.number,
-  .token.punctuation,
-  .token.boolean {
-    color: inherit;
-  }
-
-  .token.function,
-  .token.property {
-    color: var(--theme-color-primary);
-  }
-
-  .token.boolean,
-  .token.number {
-    color: var(--theme-color-primary);
-  }
-
-  .token.string {
-    color: #42b983;
-  }
-
-  .docsify-copy-code-button {
-    font-size: 0.7em !important;
+    .token.string,
+    .token.number,
+    .token.punctuation,
+    .token.boolean {
+      color: inherit;
+    }
   }
 
   h2 {
@@ -234,7 +220,7 @@
 @media screen and (max-width: 768px) {
   .markdown-section {
     padding: 30px 0 0 20px;
-    max-width: 80% !important;
+    max-width: 80%;
 
     .docsify-pagination-container {
       .pagination-item {
