@@ -8,9 +8,8 @@ In this procedure, you will import the configuration of an existing AWS Autoscal
 - A Spot account connected to an AWS account
 
 ## Get Started
-
-1. In the left menu of the Spot Console, click Elastigroup/Groups, and click Autoscaling Group.
-2. Click Create an Elastigroup from an existing Auto Scaling Group.
+1. In the left menu of the Spot Console, click Elastigroup/Groups, and click Create Elastigroup.
+2. Click Autoscaling Group and choose Create an Elastigroup from an existing Auto Scaling Group.
 3. Choose the Region and then choose the ASG you will use to create an Elastigroup cluster. Click Select.
 
 Spot creates the Elastigroup based on the ASG parameters imported from AWS. A summary of the parameters appears with the Review tab open. You can review the list of parameters.
