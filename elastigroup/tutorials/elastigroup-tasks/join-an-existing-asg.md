@@ -14,7 +14,7 @@ In this procedure, you will import the configuration of an existing AWS Autoscal
 
 Spot creates the Elastigroup based on the ASG parameters imported from AWS. A summary of the parameters appears with the Review tab open. You can review the list of parameters.
 
-<img src="/elastigroup/_media/tasks-join-existing-asg-01.png" />
+<img src="/elastigroup/_media/tasks-join-existing-asg-01.png" width="602" height="667"/>
 
 ## General Tab
 
