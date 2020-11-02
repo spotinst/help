@@ -59,7 +59,7 @@ Under your Active Directory's main menu, go to Properties, copy the Directory ID
 
 ## Step 5: Open The Elastigroup Console
 
-Go to [https://console.spotinst.com](console.spotinst.com), select Azure as your cloud provider and paste your Application ID, Application Key, Directory ID (a.k.a Tenant ID), and your Subscription ID into their respective fields. Validate your connection and save it.
+Go to the Spot [console](https://console.spotinst.com), select Azure as your cloud provider and paste your Application ID, Application Key, Directory ID (a.k.a Tenant ID), and your Subscription ID into their respective fields. Validate your connection and save it.
 
 You're all set! Your Azure account is now connected to Spot.
 

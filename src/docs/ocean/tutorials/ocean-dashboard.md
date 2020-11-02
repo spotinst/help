@@ -74,7 +74,7 @@ The breakdown table presents an itemization of costs per component (e.g., cluste
 
 To see the detailed cost analysis for a specific component (e.g., cluster, label or annotation), click on the name in the breakdown table. Ocean will display the detailed Cost Analysis page for that component.
 
-<img src="/ocean/_media/tutorials-ocean-dashboard-04.png" />
+<img src="/ocean/_media/tutorials-ocean-dashboard-04.png" width="475" height="164" />
 
 ## Top Right-Sizing Recommendations
 
@@ -83,7 +83,7 @@ The dashboard displays a summary of top right-sizing recommendations. This inclu
 - A trend summary of the recommendations that you have activated in the last 30 days.
 - A description of the top 10 recommendations yet to be implemented.
 
-<img src="/ocean/_media/tutorials-ocean-dashboard-05.png" width="300" height="358" />
+<img src="/ocean/_media/tutorials-ocean-dashboard-05.png" width="512" height="299" />
 
 Ocean sorts the list of recommendations so that the most cost effective ones in dollar value appear at the top. `Most cost effective` means an instance that has the potential for the most dollar savings by right-sizing the CPU and memory resources. For each instance, Ocean calculates a `weighted average delta` which represents the recommended changes in CPU and memory. The instance with the greatest weighted average delta has the potential for the most dollar savings.
 
@@ -91,7 +91,7 @@ Ocean sorts the list of recommendations so that the most cost effective ones in 
 
 This table shows a summary of recommendations per cluster that have not yet been implemented. The clusters are listed by default in order of least to most efficient.
 
-<img src="/ocean/_media/tutorials-ocean-dashboard-06.png" />
+<img src="/ocean/_media/tutorials-ocean-dashboard-06.png" width="300" height="358" />
 
 The table includes the following information:
 
