@@ -55,5 +55,5 @@ For example, you could use the Labels and Taints attributes to instruct Ocean wh
 In addition, you can initiate a roll per VNG. This is useful when you need to apply changes to a VNG or restart the VNG for any reason without impacting other instances in the Ocean cluster. For more information, see [Initiate Roll per launchSpecIds](https://docs.spot.io/api/#operation/oceanAwsRollInit).
 
 ## What’s next?
-
-Learn more about the VNGs in the APIs: [AWS Kubernetes](https://docs.spot.io/api/#operation/OceanAWSClusterCreate), [ECS](https://docs.spot.io/api/#operation/OceanECSClusterCreate), [GKE](https://docs.spot.io/api/#operation/OceanGKEClusterCreate)
+* Learn how to [Manage Virtual Node Groups](ocean/tutorials/manage-virtual-node-groups.md).
+* Learn more about the VNGs in the APIs: [AWS Kubernetes](https://docs.spot.io/api/#operation/OceanAWSClusterCreate), [ECS](https://docs.spot.io/api/#operation/OceanECSClusterCreate), [GKE](https://docs.spot.io/api/#operation/OceanGKEClusterCreate)

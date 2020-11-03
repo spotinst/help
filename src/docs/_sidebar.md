@@ -37,6 +37,7 @@
     - [Migrate the Workload to Ocean](ocean/tutorials/migrate-workload)
     - [Run Workloads](ocean/tutorials/run-workloads)
     - [Create Custom Labels](ocean/tutorials/create-custom-labels)
+    - [Manage Virtual Node Groups](ocean/tutorials/manage-virtual-node-groups)
     - [Use Right Sizing](ocean/tutorials/use-right-sizing)
     - [Set Running Hours](ocean/tutorials/set-running-hours)
     - [Create a Cluster for GKE using Shared VPC](ocean/tutorials/create-cluster-gke-shared-vpc)
