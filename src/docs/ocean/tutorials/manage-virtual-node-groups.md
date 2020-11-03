@@ -18,7 +18,7 @@ This procedure describes how to create a VNG from scratch.
 1. In the console, go to Ocean/Cloud Clusters and click the Ocean Cluster you want to add a VNG to.
 2. Click the Virtual Node Groups tab.
 
-<img src="/ocean/_media/tutorials-manage-vngs-02.png" />
+<img src="/ocean/_media/tutorials-manage-vngs-02.png" width="719" height="262" />
 
 3. Click Create New Virtual Node Group.
 
@@ -27,7 +27,7 @@ This procedure describes how to create a VNG from scratch.
 4. Click Configure Manually (or [Import from an Autoscaling Group](ocean/tutorials/manage-virtual-node-groups?id=create-a-vng-from-an-asg)) and Continue.
 5. In the New Virtual Node Group page, enter the VNG parameters and click Save. The VNG parameters are described below.
 
-<img src="/ocean/_media/tutorials-manage-vngs-02a.png" width="741" height="572" />
+<img src="/ocean/_media/tutorials-manage-vngs-02a.png" width="518" height="400" />
 
 ## Configuration Parameters
 * Name: The name you assign to the new VNG.
@@ -87,7 +87,8 @@ spec:
       Key: runOnWin
       Value: true
       ```
-    3. Set the User Data script and label your nodes with the above label.
+
+   3. Set the User Data script and label your nodes with the above label.
 
 ## Example 2: GPU Instance
 
