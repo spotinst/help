@@ -20,14 +20,14 @@ This procedure describes how to create a VNG from scratch.
 
 <img src="/ocean/_media/tutorials-manage-vngs-02.png" />
 
-3. Click Create a Virtual Node Group.
+3. Click Create New Virtual Node Group.
 
 <img src="/ocean/_media/tutorials-manage-vngs-03.png" />
 
-4. Click Configure Manually (or Import from an Autoscaling Group) and Continue.
+4. Click Configure Manually (or [Import from an Autoscaling Group](ocean/tutorials/manage-virtual-node-groups?id=create-a-vng-from-an-asg)) and Continue.
 5. In the New Virtual Node Group page, enter the VNG parameters and click Save. The VNG parameters are described below.
 
-<img src="/ocean/_media/tutorials-manage-vngs-02a.png" />
+<img src="/ocean/_media/tutorials-manage-vngs-02a.png" width="741" height="572" />
 
 ## Configuration Parameters
 * Name: The name you assign to the new VNG.
@@ -80,7 +80,7 @@ spec:
     runOnWin: true
 ```
 
-2. Configure your Ocean cluster with a VNG that serves the WinPod nodeSelector label. (See the steps above in [Create a VNG]().)
+2. Configure your Ocean cluster with a VNG that serves the WinPod nodeSelector label. (See the steps above in [Create a VNG](ocean/tutorials/manage-virtual-node-groups?id=create-a-vng).)
    1. In the VNG configuration, set the image to Windows OS.
    2. In the VNG configuration, go to Node Selection and define the following node label:
       ```
@@ -106,10 +106,10 @@ You don't need to add any extra label for GPU support. You can use taints that r
 The following procedure describes how to create a VNG in an Ocean cluster using the configuration from an existing Amazon autoscaling group. This process is referred to as importing a VNG from an ASG.
 1. In the console, go to Ocean/Cloud Clusters and click the Cluster Name you want to add a VNG to.
 2. In the summary page for the cluster, click Virtual Node Groups.
-3. Click Create a Virtual Node Group.
+3. Click Create New Virtual Node Group.
 4. Choose Import configurations from an Autoscaling Group, choose the Autoscaling Group in the dropdown list, and click Continue.
 
-<img src="/ocean/_media/tutorials-manage-vngs-04.png" />
+<img src="/ocean/_media/tutorials-manage-vngs-04.png" width="394" height="226" />
 
 5. When the New Virtual Node Group page appears, you will see the fields populated with the values from the Autoscaling Group you chose. Review all of the parameters and update them if necessary.
 6. When you are finished reviewing and updating the imported configuration, click Save.
@@ -141,7 +141,7 @@ You can change the sort order in the table by clicking on the column headings.
 
 To choose which columns to display in the table, click the three dots on the right.
 
-<img src="/ocean/_media/tutorials-manage-vngs-06.png" />
+<img src="/ocean/_media/tutorials-manage-vngs-06.png" width="705" height="215" />
 
 ### Filter List
 
