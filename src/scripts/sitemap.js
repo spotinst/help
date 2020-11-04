@@ -2,6 +2,7 @@
 
 const fs = require("fs").promises;
 const path = require("path");
+const glob = require("glob");
 const { SitemapStream, streamToPromise } = require("sitemap");
 const { Readable } = require("stream");
 
@@ -41,25 +42,21 @@ const sitemapFile = path.join(srcDir, "sitemap.xml");
 const apiRef = "/api";
 
 /**
- * Walks the file tree rooted at root and returns all walked regular files.
+ * XML tag definitions.
  *
- * @param root
- * @returns {Promise<*>}
+ * @type {{priority: number, changefreq: string}}
  */
-const walk = async (root) => {
-  let files = await fs.readdir(root);
-
-  files = await Promise.all(
-    files.map(async (file) => {
-      const filePath = path.join(root, file);
-      const stats = await fs.stat(filePath);
-      if (stats.isDirectory()) return walk(filePath);
-      else if (stats.isFile()) return { path: filePath, ...stats };
-    })
-  );
-
-  return files.reduce((all, folderContents) => all.concat(folderContents), []);
+const tags = {
+  changefreq: "weekly",
+  priority: 0.5,
 };
+
+/**
+ * Language/region codes.
+ *
+ * @type {string[]}
+ */
+const langs = ["x-default", "en-us"];
 
 /**
  * Returns a boolean indicates whether a file is of type Markdown.
@@ -82,37 +79,34 @@ const isDocsifyFile = (file) => path.basename(file).startsWith("_");
  *
  * @param hostname
  * @param dir
- * @returns {Promise<Buffer>}
+ * @returns {Promise<string>}
  */
 const generateSitemap = async (hostname, dir) => {
   // Find all regular files.
-  const files = await walk(dir);
+  const files = glob.sync(`${dir}/**/*.md`);
 
-  // Filter out both non-markdown and internal files.
-  const contentFiles = files.filter((file) => isMarkdownFile(file.path) && !isDocsifyFile(file.path));
+  // Filter out both non-markdown and Docsify internal files.
+  const contentFiles = [apiRef].concat(files.filter((file) => isMarkdownFile(file) && !isDocsifyFile(file)));
 
-  // Map files to sitemap objects.
-  const links = [
-    {
-      url: apiRef,
-      changefreq: "daily",
-    },
-  ].concat(
-    ...contentFiles.map((file) => ({
-      url: file.path.replace(dir, "").replace(".md", "").replace("/README", ""),
-      lastmod: file.mtime,
-    }))
-  );
+  // Map files to URL entries.
+  const urls = contentFiles.map((file) => {
+    let url = file.replace(dir, "").replace(".md", "").replace("/README", "");
+    let links = langs.map((lang) => ({ url, lang }));
+    return { url, links, ...tags };
+  });
 
   // Create a stream to write to.
   const stream = new SitemapStream({ hostname });
 
-  // Generate the XML string.
-  return streamToPromise(Readable.from(links).pipe(stream)).then((data) => data.toString());
+  // Generate.
+  const xml = await streamToPromise(Readable.from(urls).pipe(stream));
+
+  // Return the generated XML as a string.
+  return xml.toString();
 };
 
 (async () => {
-  // Generate the XML string.
+  // Generate sitemap.
   const sitemapXML = await generateSitemap(hostname, docsDir);
 
   // Write the generated sitemap.
