@@ -48,10 +48,17 @@ module.exports = {
         {
           from: path.resolve(__dirname, srcDirectory, "docs"),
           to: buildDirectory,
+          noErrorOnMissing: false,
         },
         {
           from: path.resolve(__dirname, srcDirectory, ".nojekyll"),
           to: buildDirectory,
+          noErrorOnMissing: false,
+        },
+        {
+          from: path.resolve(__dirname, srcDirectory, "sitemap.xml"),
+          to: buildDirectory,
+          noErrorOnMissing: true,
         },
       ],
     }),
