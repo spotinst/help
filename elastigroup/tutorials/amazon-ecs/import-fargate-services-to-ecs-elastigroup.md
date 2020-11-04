@@ -1,4 +1,4 @@
-# Import Fargate Servies to ECS Elastigroup
+# Import Fargate Services to ECS Elastigroup
 
 ## Introduction
 
