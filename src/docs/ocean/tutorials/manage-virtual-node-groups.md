@@ -153,9 +153,8 @@ Use the search box to filter items in the table or search for a specific VNG.
 To see the configuration details of a VNG, click on the Name of the VNG.
 
 ## Edit a VNG
-
-To edit the configuration of a VNG, go to the Virtual Node Groups tab and click on the Name of the VNG.
-Make the required changes in the configuration and click Save.
+1. To edit the configuration of a VNG, go to the Virtual Node Groups tab and click on the Name of the VNG.
+2. Make the required changes in the configuration and click Save.
 
 ## Delete a VNG
 1. To delete a VNG, go to the Virtual Node Groups tab.
