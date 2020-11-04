@@ -14,13 +14,23 @@ Applying the changes suggested by those notifications helps utilize resources in
 
 ## How It Works (Ocean For Kubernetes)
 
-For Ocean Kubernetes clusters, Right Sizing relies on the Metrics Server and displays data after an initial 4-day data collection period.
+For Ocean Kubernetes clusters, Right Sizing relies on the Metrics Server and initializes recommendations after an initial data collection of four full days.
 
-Once every 5 minutes, the controller queries the Metrics Server for pod utilization (the equivalent of kubectl top pods). The output produces a single point in time data point for each pod. Ocean then aggregates the data of the pods per deployment, i.e., averaging all the data points for pods of the same deployment.
+Once every 5 minutes, the controller queries the Metrics Server for pod utilization (the equivalent of kubectl top pods).
 
-The result is that every 5 minutes, we get a single datapoint (i.e., a single point for CPU and a single point for memory) for each deployment representing the average CPU and memory utilization for the pods of each deployment at a single point in time.
+<img src="/ocean/_media/features-rightsizing-01a.png" width="497" height="212" />
 
-Ocean makes recommendations based on a mechanism that tries to even out peaks and troughs in resource demand. Currently, Ocean generates recommendations for Kubernetes deployments, statefulsets, and daemonsets.
+The output produces a single point in time data point for each pod. Ocean then aggregates the data of the pods per workload.
+
+The aggregation is made twice to include both maximum and mean resource utilization values (e.g., max_memory_utilization and mean_memory_utilization), which will be used in the recommendation generation process to ensure that each pod’s utilization is considered properly.
+
+Using the per-workload aggregated data points, Ocean makes recommendations based on a mechanism that tries to even out peaks and troughs in resource demand.
+* Recommendations for decreasing resource requests are based on the above calculation using the maximum resource utilization data collected (e.g., max_memory_utilization).
+* Recommendations for increasing resource requests are based on the above calculation using the mean resource utilization data collected (e.g., mean_memory_utilization).
+
+
+Currently, Ocean generates recommendations for Kubernetes deployments, statefulsets, and daemonsets.
+
 
 ### Kubernetes Usage Notes
 
