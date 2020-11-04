@@ -28,9 +28,7 @@ Using the per-workload aggregated data points, Ocean makes recommendations based
 * Recommendations for decreasing resource requests are based on the above calculation using the maximum resource utilization data collected (e.g., max_memory_utilization).
 * Recommendations for increasing resource requests are based on the above calculation using the mean resource utilization data collected (e.g., mean_memory_utilization).
 
-
 Currently, Ocean generates recommendations for Kubernetes deployments, statefulsets, and daemonsets.
-
 
 ### Kubernetes Usage Notes
 
