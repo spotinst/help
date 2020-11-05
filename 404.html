@@ -17,43 +17,42 @@
        * For example:
        *   http://www.foo.tld/one/two?a=b&c=d#qwe
        *   [BECOMES]
-       *   http://www.foo.tld/?p=/one/two&q=a=b~and~c=d#qwe
+       *   http://www.foo.tld/?/one/two&q=a=b~and~c=d#qwe
        *
        * Note: This 404.html file must be at least 512 bytes for it to work
        * with Internet Explorer (it is currently > 512 bytes).
        *
        * Note: If you are setting up a GitHub Pages site and not using a
        * custom domain (i.e. your site's address is username.github.io/repo-name),
-       * then you need to set `segmentCount` to 1 in order to keep `/repo-name`
-       * in the path after the redirect.
+       * then you need to set `pathSegmentsToKeep` to 1 in order to keep `/repo-name`
+       * in the path after the redirect. Otherwise, leave pathSegmentsToKeep as 0.
        *
        * For example:
        *   https://username.github.io/repo-name/one/two?a=b&c=d#qwe
        *   [BECOMES]
-       *   https://username.github.io/repo-name/?p=/one/two&q=a=b~and~c=d#qwe
+       *   https://username.github.io/repo-name/?/one/two&q=a=b~and~c=d#qwe
        */
-      let segmentCount = 0;
-      let loc = window.location;
-      let url =
-        loc.protocol +
-        "//" +
-        loc.hostname +
-        (loc.port ? ":" + loc.port : "") +
-        loc.pathname
-          .split("/")
-          .slice(0, 1 + segmentCount)
-          .join("/") +
-        "/?p=/" +
-        loc.pathname
-          .slice(1)
-          .split("/")
-          .slice(segmentCount)
-          .join("/")
-          .replace(/&/g, "~and~") +
-        (loc.search ? "&q=" + loc.search.slice(1).replace(/&/g, "~and~") : "") +
-        loc.hash;
-
-      loc.replace(url);
+      let pathSegmentsToKeep = 0;
+      let l = window.location;
+      l.replace(
+        l.protocol +
+          "//" +
+          l.hostname +
+          (l.port ? ":" + l.port : "") +
+          l.pathname
+            .split("/")
+            .slice(0, 1 + pathSegmentsToKeep)
+            .join("/") +
+          "/?/" +
+          l.pathname
+            .slice(1)
+            .split("/")
+            .slice(pathSegmentsToKeep)
+            .join("/")
+            .replace(/&/g, "~and~") +
+          (l.search ? "&" + l.search.slice(1).replace(/&/g, "~and~") : "") +
+          l.hash
+      );
     </script>
   </head>
   <body></body>
