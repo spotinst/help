@@ -12,19 +12,40 @@
     />
 
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/_media/favicon/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/_media/favicon/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/_media/favicon/favicon-16x16.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/_media/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/_media/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/_media/favicon/favicon-16x16.png"
+    />
     <link rel="manifest" href="/_media/favicon/site.webmanifest" />
-    <link rel="mask-icon" href="/_media/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+    <link
+      rel="mask-icon"
+      href="/_media/favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
 
+    <!-- Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap"
+    />
+
     <!-- Theme -->
     <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css" />
-
-    <!-- Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" />
   </head>
 
   <body>
@@ -59,7 +80,11 @@
               q[a[0]] = a.slice(1).join("=").replace(/~and~/g, "&");
             });
           if (q.p !== undefined) {
-            let url = loc.pathname.slice(0, -1) + (q.p || "") + (q.q ? "?" + q.q : "") + loc.hash;
+            let url =
+              loc.pathname.slice(0, -1) +
+              (q.p || "") +
+              (q.q ? "?" + q.q : "") +
+              loc.hash;
             window.history.replaceState(null, null, url);
           }
         }
@@ -70,30 +95,72 @@
     <script type="text/javascript" src="/bundle.js"></script>
 
     <!-- Vue -->
-    <script type="text/javascript" src="//unpkg.com/vue/dist/vue.min.js"></script>
+    <script
+      type="text/javascript"
+      src="//unpkg.com/vue/dist/vue.min.js"
+    ></script>
 
     <!-- Icons -->
     <script type="text/javascript" src="//unpkg.com/feather-icons"></script>
 
     <!-- Docsify -->
-    <script type="text/javascript" src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+    <script
+      type="text/javascript"
+      src="//unpkg.com/docsify/lib/docsify.min.js"
+    ></script>
 
     <!-- Docsify Plugins -->
-    <script type="text/javascript" src="//unpkg.com/prismjs/components/prism-bash.min.js"></script>
-    <script type="text/javascript" src="//unpkg.com/prismjs/components/prism-json.min.js"></script>
-    <script type="text/javascript" src="//unpkg.com/prismjs/components/prism-yaml.min.js"></script>
-    <script type="text/javascript" src="//unpkg.com/prismjs/components/prism-markdown.min.js"></script>
-    <script type="text/javascript" src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>
-    <script type="text/javascript" src="//unpkg.com/docsify/lib/plugins/external-script.min.js"></script>
-    <script type="text/javascript" src="//unpkg.com/docsify-copy-code@2"></script>
-    <script type="text/javascript" src="//unpkg.com/docsify-page-toc/dist/docsify-page-toc.js"></script>
-    <script type="text/javascript" src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
-    <script type="text/javascript" src="//unpkg.com/docsify-scroll-to-top/dist/docsify-scroll-to-top.min.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
+    <script
+      type="text/javascript"
+      src="//unpkg.com/prismjs/components/prism-bash.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//unpkg.com/prismjs/components/prism-json.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//unpkg.com/prismjs/components/prism-yaml.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//unpkg.com/prismjs/components/prism-markdown.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//unpkg.com/docsify/lib/plugins/search.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//unpkg.com/docsify/lib/plugins/external-script.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//unpkg.com/docsify-copy-code@2"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//unpkg.com/docsify-page-toc/dist/docsify-page-toc.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//unpkg.com/docsify-scroll-to-top/dist/docsify-scroll-to-top.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/docsify-tabs@1"
+    ></script>
     <script
       type="text/javascript"
       src="//unpkg.com/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"
     ></script>
-    <script type="text/javascript" src="//unpkg.com/docsify/lib/plugins/ga.min.js"></script>
+    <script
+      type="text/javascript"
+      src="//unpkg.com/docsify/lib/plugins/ga.min.js"
+    ></script>
   </body>
 </html>

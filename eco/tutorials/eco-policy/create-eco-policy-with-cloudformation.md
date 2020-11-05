@@ -69,7 +69,12 @@ Use the policy below to if you are creating an Eco policy with Cloudformation.
             {
               "Sid": "S3SyncPermissions",
               "Effect": "Allow",
-              "Action": ["s3:PutObject", "s3:ListBucket", "s3:PutObjectTagging", "s3:PutObjectAcl"],
+              "Action": [
+                "s3:PutObject",
+                "s3:ListBucket",
+                "s3:PutObjectTagging",
+                "s3:PutObjectAcl"
+              ],
               "Resource": "arn:aws:s3:::sc-customer-*"
             },
             {
@@ -77,8 +82,22 @@ Use the policy below to if you are creating an Eco policy with Cloudformation.
               "Effect": "Allow",
               "Action": ["s3:get*"],
               "Resource": [
-                { "Fn::Join": ["", ["arn:aws:s3:::", { "Ref": "DetailedBillingReportBucket" }, "/*"]] },
-                { "Fn::Join": ["", ["arn:aws:s3:::", { "Ref": "CostAndUsageBucket" }, "/*"]] }
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "arn:aws:s3:::",
+                      { "Ref": "DetailedBillingReportBucket" },
+                      "/*"
+                    ]
+                  ]
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    ["arn:aws:s3:::", { "Ref": "CostAndUsageBucket" }, "/*"]
+                  ]
+                }
               ]
             },
             {
@@ -100,7 +119,10 @@ Use the policy below to if you are creating an Eco policy with Cloudformation.
             {
               "Effect": "Allow",
               "Principal": {
-                "AWS": ["arn:aws:iam::884866656237:root", "arn:aws:iam::627743545735:root"]
+                "AWS": [
+                  "arn:aws:iam::884866656237:root",
+                  "arn:aws:iam::627743545735:root"
+                ]
               },
               "Action": "sts:AssumeRole"
             }
@@ -208,7 +230,12 @@ The following permissions are required to write information from your AWS Cost &
 {
   "Sid": "S3SyncPermissions",
   "Effect": "Allow",
-  "Action": ["s3:PutObject", "s3:ListBucket", "s3:PutObjectTagging", "s3:PutObjectAcl"],
+  "Action": [
+    "s3:PutObject",
+    "s3:ListBucket",
+    "s3:PutObjectTagging",
+    "s3:PutObjectAcl"
+  ],
   "Resource": "arn:aws:s3:::sc-customer-*"
 }
 ```

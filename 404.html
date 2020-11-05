@@ -44,7 +44,12 @@
           .slice(0, 1 + segmentCount)
           .join("/") +
         "/?p=/" +
-        loc.pathname.slice(1).split("/").slice(segmentCount).join("/").replace(/&/g, "~and~") +
+        loc.pathname
+          .slice(1)
+          .split("/")
+          .slice(segmentCount)
+          .join("/")
+          .replace(/&/g, "~and~") +
         (loc.search ? "&q=" + loc.search.slice(1).replace(/&/g, "~and~") : "") +
         loc.hash;
 

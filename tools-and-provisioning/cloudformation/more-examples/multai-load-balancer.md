@@ -125,7 +125,10 @@ Create a new Multai Load Balancer (MLB), a listener, a deployment group, a targe
             "maxVersion": "TLS12",
             "sessionTicketsDisabled": true,
             "preferServerCipherSuites": true,
-            "cipherSuites": ["TLS_RSA_WITH_AES_256_CBC_SHA", "TLS_RSA_WITH_AES_128_CBC_SHA256"],
+            "cipherSuites": [
+              "TLS_RSA_WITH_AES_256_CBC_SHA",
+              "TLS_RSA_WITH_AES_128_CBC_SHA256"
+            ],
             "insecureSkipVerify": false,
             "certificateIds": ["ce-12345", "ce-67890"]
           },
