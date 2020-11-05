@@ -56,6 +56,11 @@ module.exports = {
           noErrorOnMissing: false,
         },
         {
+          from: path.resolve(__dirname, srcDirectory, "robots.txt"),
+          to: buildDirectory,
+          noErrorOnMissing: false,
+        },
+        {
           from: path.resolve(__dirname, srcDirectory, "sitemap.xml"),
           to: buildDirectory,
           noErrorOnMissing: true,

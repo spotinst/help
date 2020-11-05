@@ -5,6 +5,7 @@ const path = require("path");
 const glob = require("glob");
 const { SitemapStream, streamToPromise } = require("sitemap");
 const { Readable } = require("stream");
+const xmlformatter = require("xml-formatter");
 
 /**
  * Hostname.
@@ -92,7 +93,8 @@ const generateSitemap = async (hostname, dir) => {
 
   // Map files to URL entries.
   const urls = contentFiles.map((file) => {
-    let url = file.replace(dir, "").replace(".md", "").replace("/README", "");
+    let url = file.replace(dir, "").replace(".md", "").replace("/README", "/");
+    if (url !== apiRef) url = `?${url}`; // https://git.io/JTpz9
     let links = langs.map((lang) => ({ url, lang }));
     return { url, links, ...tags };
   });
@@ -111,6 +113,11 @@ const generateSitemap = async (hostname, dir) => {
   // Generate sitemap.
   const sitemapXML = await generateSitemap(hostname, docsDir);
 
+  // Convert the XML into a human readable format (pretty print).
+  const sitemapXMLFormatted = xmlformatter(sitemapXML, {
+    collapseContent: true,
+  });
+
   // Write the generated sitemap.
-  await fs.writeFile(sitemapFile, sitemapXML);
+  await fs.writeFile(sitemapFile, sitemapXMLFormatted);
 })();
