@@ -28,7 +28,7 @@ You will need to choose an existing Ocean cluster to add the Fargate services to
 
 The import process may take a few minutes (e.g. 3 - 6 minutes) to complete. An indicator window displays the progress of the import including the completion of each stage.
 
-<img src="/ocean/_media/tutorials-fargate-03.png" />
+<img src="/ocean/_media/tutorials-fargate-03.png" width="303" height="216" />
 
 Upon completion, Ocean will display a message indicating the successful import.
 
