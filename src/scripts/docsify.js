@@ -1,4 +1,9 @@
-import { pageEditPlugin, tocPlugin, featherPlugin, searchFocusPlugin } from "./plugins";
+import {
+  pageEditPlugin,
+  tocPlugin,
+  featherPlugin,
+  searchFocusPlugin,
+} from "./plugins";
 import { aliases } from "./aliases";
 
 window.$docsify = {

@@ -86,7 +86,9 @@ const generateSitemap = async (hostname, dir) => {
   const files = glob.sync(`${dir}/**/*.md`);
 
   // Filter out both non-markdown and Docsify internal files.
-  const contentFiles = [apiRef].concat(files.filter((file) => isMarkdownFile(file) && !isDocsifyFile(file)));
+  const contentFiles = [apiRef].concat(
+    files.filter((file) => isMarkdownFile(file) && !isDocsifyFile(file))
+  );
 
   // Map files to URL entries.
   const urls = contentFiles.map((file) => {

@@ -42,7 +42,12 @@ Use this policy only if you know the Role ARN associated with Cloud Analyzer.
       "Sid": "FullPolicy"
     },
     {
-      "Action": ["s3:PutObject", "s3:ListBucket", "s3:PutObjectTagging", "s3:PutObjectAcl"],
+      "Action": [
+        "s3:PutObject",
+        "s3:ListBucket",
+        "s3:PutObjectTagging",
+        "s3:PutObjectAcl"
+      ],
       "Resource": "arn:aws:s3:::sc-customer-*",
       "Effect": "Allow",
       "Sid": "S3SyncPermissions"
@@ -145,7 +150,12 @@ The following permissions are required to write information from your AWS Cost &
 {
   "Sid": "S3SyncPermissions",
   "Effect": "Allow",
-  "Action": ["s3:PutObject", "s3:ListBucket", "s3:PutObjectTagging", "s3:PutObjectAcl"],
+  "Action": [
+    "s3:PutObject",
+    "s3:ListBucket",
+    "s3:PutObjectTagging",
+    "s3:PutObjectAcl"
+  ],
   "Resource": "arn:aws:s3:::sc-customer-*"
 }
 ```

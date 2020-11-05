@@ -21,7 +21,9 @@ The full body attribute list is available on the [Create](https://docs.spot.io/a
       "Type": "Custom::ocean",
       "Properties": {
         "ServiceToken": {
-          "AWS::Sub": ["arn:aws:lambda:${Region}:178579023202:function:spotinst-cloudformation"]
+          "AWS::Sub": [
+            "arn:aws:lambda:${Region}:178579023202:function:spotinst-cloudformation"
+          ]
         },
         "accessToken": "Spot Token",
         "accountId": "Spot Account ID",

@@ -110,7 +110,8 @@ Resources:
               arn: !GetAtt "ECSInstanceProfile.Arn"
             tags:
               - tagKey: Description
-                tagValue: This instance is the part of the Auto Scaling group which was created
+                tagValue:
+                  This instance is the part of the Auto Scaling group which was created
                   through ECS Console
             monitoring: true
             associatePublicIpAddress: true

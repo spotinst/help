@@ -243,27 +243,32 @@ Parameters:
       - "true"
       - "false"
   AutoScalerCooldown:
-    Description: Provide the time in seconds, between scaling activities (Ignore if
+    Description:
+      Provide the time in seconds, between scaling activities (Ignore if
       not using AutoScaler)
     Type: String
     Default: "180"
   AutoScalerEvaluationPeriods:
-    Description: Provide the number of consecutive periods that should pass before
+    Description:
+      Provide the number of consecutive periods that should pass before
       scaling down (Ignore if not using AutoScaler)
     Type: String
     Default: "3"
   AutoScalerHeadroomUnitCount:
-    Description: Provide the number of Headroom units to keep available at all times
+    Description:
+      Provide the number of Headroom units to keep available at all times
       (Ignore if not using AutoScaler)
     Type: String
     Default: "0"
   AutoScalerHeadroomCPU:
-    Description: Provide the amount of CPU units reserved in each Headroom unit (Ignore
+    Description:
+      Provide the amount of CPU units reserved in each Headroom unit (Ignore
       if not using AutoScaler)
     Type: String
     Default: "0"
   AutoScalerHeadroomRAM:
-    Description: Provide the amount in memory (in MB) reserved in each Headroom unit
+    Description:
+      Provide the amount in memory (in MB) reserved in each Headroom unit
       (Ignore if not using AutoScaler)
     Type: String
     Default: "0"
