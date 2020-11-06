@@ -1,5 +1,4 @@
 const path = require("path");
-const { ProvidePlugin } = require("webpack");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
@@ -76,9 +75,6 @@ module.exports = {
       template: path.resolve(__dirname, srcDirectory, "404.html"),
       filename: "404.html",
       inject: false,
-    }),
-    new ProvidePlugin({
-      $: "jquery",
     }),
   ],
 };
