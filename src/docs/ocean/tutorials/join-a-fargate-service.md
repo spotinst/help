@@ -8,9 +8,9 @@ This tutorial is relevant for users of Ocean for ECS.
 
 ## Prerequisites
 
-- An AWS account connected to Spot
-- One or more AWS Fargate-enabled ECS clusters
-- An Ocean cluster up and running
+* An AWS account connected to Spot
+* ECS cluster having Fargate enabled services
+* An Ocean cluster running and managing the ECS cluster
 
 ## Choose an Ocean Cluster
 
@@ -29,15 +29,15 @@ You will need to choose an existing Ocean cluster to add the Fargate services to
 
 <img src="/ocean/_media/tutorials-fargate-02.png" />
 
-The import process may take a few minutes (e.g. 3 - 6 minutes) to complete. An indicator window displays the progress of the import including the completion of each stage.
+The import process may take several minutes to complete depending on the number of services being imported. An indicator window displays the progress of the import including the completion of each stage.
 
 <img src="/ocean/_media/tutorials-fargate-03.png" width="303" height="216" />
 
-Upon completion, Ocean will display a message indicating the successful import.
+There is no need to leave the progress popup open. When closed, a banner will be displayed as long as the process is still running. Upon completion, Ocean will display a message indicating the successful import.
 
 ## View an Imported Service
 
-You can view a summary and details about the Fargate services you imported.
+You can view a summary and details about the Fargate services you imported and are now of type EC2.
 
 1. Click on the Services tab in the Ocean cluster.
 

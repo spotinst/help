@@ -1,55 +1,68 @@
-# Import Fargate Services to ECS Elastigroup
+# Join a Fargate Service
 
-## Introduction
+You can import an [ECS Fargate](https://aws.amazon.com/fargate/?whats-new-cards.sort-by=item.additionalFields.postDateTime&whats-new-cards.sort-order=desc&fargate-blogs.sort-by=item.additionalFields.createdDate&fargate-blogs.sort-order=desc) service into an existing Ocean ECS cluster. Upon Fargate service import, Spot clones the selected Fargate services and runs them with the same VPC and subnet settings on EC2 spot Instances. This enables you to focus on your applications and enjoy all the optimization and scaling features of Ocean without having to manage the underlying infrastructure.
 
-This tutorial covers importing Fargate-enabled ECS clusters into Spot Elastigroups. Spot Elastigroups provision, manage and scale the instances and clusters required to run your containers in the most cost-efficient way possible.
+## Relevance
 
-This makes Elastigroups an obvious choice for those looking to cut the costs of their AWS Fargate-enabled ECS clusters and still retain their focus on the applications without having to manage the underlying infrastructure.
-
-To import a Fargate-enabled ECS cluster, Spot clones the selected Fargate services and runs them with the same VPC & Subnet settings on EC2 Spot Instances.
-
-Elastigroup automatically and seamlessly predicts and replaces Spot Instances before they are interrupted, ensuring the uptime of the cluster and providing cost-savings of up to 90% over Fargate-enabled ECS clusters.
+This tutorial is relevant for users of Ocean for ECS.
 
 ## Prerequisites
+* An AWS account connected to Spot
+* ECS cluster having Fargate enabled services
+* An Ocean cluster running and managing the ECS cluster
 
-- Connected AWS account to Spot Console
-- Updated Spot policy. Learn more about updating the [Spot policy](elastigroup/tutorials/elastigroup-tasks/update-spot-policy.md).
-- Make sure you have the ecsInstanceRole. [If not, create a new one](https://docs.aws.amazon.com/batch/latest/userguide/instance_IAM_role.html).
+## Choose an Ocean Cluster
 
-## Step 1: Choose Use Case
+You will need to choose an existing Ocean cluster to add the Fargate services to.
+1. In the left menu of the Spot Console, click Ocean/Cloud Clusters.
+2. Click on the name of an Ocean cluster.
 
-Select the `Existing Fargate/ECS` Use case from the use case screen.
+## Import Fargate Services
+1. In the Ocean cluster Overview, click Actions and click Import Fargate Services. This item will appear in the Actions menu only if there are Fargate services running in the ECS cluster.
 
-<img src="/elastigroup/_media/import-fargate-services-to-ecs-elastigroup_1.png" />
+<img src="/ocean/_media/tutorials-fargate-01.png" />
 
-## Step 2: Select your ECS Fargate Cluster and Services
+2. Choose one or more Fargate services in the dropdown list and click Import.
 
-Fill in your desired Elastigroup name, as well as the region and name of your ECS cluster running Fargate tasks.
+<img src="/ocean/_media/tutorials-fargate-02.png" />
 
-You will be shown with a list of detected services, from which to select which Fargate services you would like to import into Elastigroup.
+The import process may take several minutes to complete depending on the number of services being imported. An indicator window displays the progress of the import including the completion of each stage.
 
-<img src="/elastigroup/_media/import-fargate-services-to-ecs-elastigroup_2.png" />
+<img src="/ocean/_media/tutorials-fargate-03.png" width="303" height="216" />
 
-The import process does not affect any existing services. Selected Fargate Tasks and Services are cloned by Spot and their settings are imported into an Elastigroup.
+There is no need to leave the progress popup open. When closed, a banner will be displayed as long as the process is still running. Upon completion, Ocean will display a message indicating the successful import.
 
-Last step before starting the import process will be to review your Elastigroup configuration and click the the `Create` button:
+## View an Imported Service
 
-<img src="/elastigroup/_media/import-fargate-services-to-ecs-elastigroup_3.png" />
+You can view a summary and details about the Fargate services you imported and are now of type EC2.
+1. Click on the Services tab in the Ocean cluster.
 
-On completion you'll see the Success message.
+<img src="/ocean/_media/tutorials-fargate-04.png" />
 
-## Step 3: Begin the Import Process
+2. In the list of services, click a Fargate service.
 
-Once your Elastigroup is created, you can track the fargate service import process by clicking the 'details' link in the banner that appears in the Elastigroup overview screen.
+<img src="/ocean/_media/tutorials-fargate-05.png" />
 
-<img src="/elastigroup/_media/import-fargate-services-to-ecs-elastigroup_4.png" />
+The service overview appears as shown below.
 
-You will be able to see which services are currently being imported, and in what state they are currently in.
+<img src="/ocean/_media/tutorials-fargate-06.png" />
 
-## Step 4: Import Complete
+The service overview displays the following details:
+* Config: Click the link to view the JSON configuration.
+* [Network Mode](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html): The Docker networking mode used for the containers in the ECS task.
+* Running Tasks: Number of tasks currently running.
+* Requested Tasks: Number of tasks currently requested.
+* Pending Tasks: Number of tasks currently pending.
+* Running Tasks Over Time: A graph showing the number of tasks running over a defined time period.
+* Tasks: A table describing the tasks running in the service.
+  * Task ID
+  * Container Instance
+  * Type
+  * Launch Time
+  * Status
 
-Once Elastigroup is finished importing all of your fargate services, the Elastigroup auto-scaler will start spinning up spot instances according to the services imported, making sure that the instances being spun are optimal according to the service size definition.
+## What’s Next?
 
-You can gradually scale down your previous Fargate services, and switch to using the same containerized services using elastigroup.
-
-<img src="/elastigroup/_media/import-fargate-services-to-ecs-elastigroup_5.png" />
+Learn more about using the APIs to import Fargate services to Ocean:
+* [Import Fargate to Existing Ocean Cluster](https://docs.spot.io/api/#operation/oceanEcsFargateImportToExist)
+* [Import Fargate to New Ocean Cluster](https://docs.spot.io/api/#operation/oceanEcsFargateImportToNew)
