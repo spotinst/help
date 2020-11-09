@@ -205,7 +205,11 @@ For additional information, see: [Update the Spot Policy](elastigroup/tutorials/
     },
     {
       "Sid": "AccessRoute53",
-      "Action": ["route53:ListHostedZones", "route53:ListResourceRecordSets", "route53:ChangeResourceRecordSets"],
+      "Action": [
+        "route53:ListHostedZones",
+        "route53:ListResourceRecordSets",
+        "route53:ChangeResourceRecordSets"
+      ],
       "Effect": "Allow",
       "Resource": ["*"]
     },

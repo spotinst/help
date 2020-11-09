@@ -72,7 +72,12 @@ Use the Cloud Analyzer policy below if you are creating a policy with CloudForma
             {
               "Sid": "S3SyncPermissions",
               "Effect": "Allow",
-              "Action": ["s3:PutObject", "s3:ListBucket", "s3:PutObjectTagging", "s3:PutObjectAcl"],
+              "Action": [
+                "s3:PutObject",
+                "s3:ListBucket",
+                "s3:PutObjectTagging",
+                "s3:PutObjectAcl"
+              ],
               "Resource": "arn:aws:s3:::sc-customer-*"
             },
             {
@@ -80,8 +85,22 @@ Use the Cloud Analyzer policy below if you are creating a policy with CloudForma
               "Effect": "Allow",
               "Action": ["s3:get*"],
               "Resource": [
-                { "Fn::Join": ["", ["arn:aws:s3:::", { "Ref": "DetailedBillingReportBucket" }, "/*"]] },
-                { "Fn::Join": ["", ["arn:aws:s3:::", { "Ref": "CostAndUsageBucket" }, "/*"]] }
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "arn:aws:s3:::",
+                      { "Ref": "DetailedBillingReportBucket" },
+                      "/*"
+                    ]
+                  ]
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    ["arn:aws:s3:::", { "Ref": "CostAndUsageBucket" }, "/*"]
+                  ]
+                }
               ]
             }
           ]
@@ -97,7 +116,10 @@ Use the Cloud Analyzer policy below if you are creating a policy with CloudForma
             {
               "Effect": "Allow",
               "Principal": {
-                "AWS": ["arn:aws:iam::627743545735:root", "arn:aws:iam::884866656237:root"]
+                "AWS": [
+                  "arn:aws:iam::627743545735:root",
+                  "arn:aws:iam::884866656237:root"
+                ]
               },
               "Action": "sts:AssumeRole"
             }
@@ -243,7 +265,10 @@ This role and the corresponding permissions are issued to the Cloud Analyzer pro
           {
             "Effect": "Allow",
             "Principal": {
-              "AWS": ["arn:aws:iam::627743545735:root", "arn:aws:iam::884866656237:root"]
+              "AWS": [
+                "arn:aws:iam::627743545735:root",
+                "arn:aws:iam::884866656237:root"
+              ]
             },
             "Action": "sts:AssumeRole"
           }

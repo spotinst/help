@@ -1,5 +1,4 @@
 const path = require("path");
-const { ProvidePlugin } = require("webpack");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
@@ -15,7 +14,7 @@ module.exports = {
     host: "0.0.0.0",
     port,
   },
-  entry: "./src/index.js",
+  entry: path.resolve(__dirname, srcDirectory, "index.js"),
   output: {
     filename: "bundle.js",
     path: buildDirectory,
@@ -23,13 +22,13 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.pcss$/,
+        test: /\.(p)css$/,
         use: [
           "style-loader", // creates style nodes from JS strings
           {
             loader: "css-loader", // translates CSS into CommonJS
             options: {
-              importLoaders: 1,
+              importLoaders: 1, // run `postcss-loader` on each CSS `@import`
             },
           },
           "postcss-loader", // compiles PostCSS to CSS
@@ -48,25 +47,34 @@ module.exports = {
         {
           from: path.resolve(__dirname, srcDirectory, "docs"),
           to: buildDirectory,
+          noErrorOnMissing: false,
         },
         {
           from: path.resolve(__dirname, srcDirectory, ".nojekyll"),
           to: buildDirectory,
+          noErrorOnMissing: false,
+        },
+        {
+          from: path.resolve(__dirname, srcDirectory, "robots.txt"),
+          to: buildDirectory,
+          noErrorOnMissing: false,
+        },
+        {
+          from: path.resolve(__dirname, srcDirectory, "sitemap.xml"),
+          to: buildDirectory,
+          noErrorOnMissing: true,
         },
       ],
     }),
     new HtmlWebpackPlugin({
-      template: "src/index.html",
+      template: path.resolve(__dirname, srcDirectory, "index.html"),
       filename: "index.html",
       inject: false,
     }),
     new HtmlWebpackPlugin({
-      template: "src/404.html",
+      template: path.resolve(__dirname, srcDirectory, "404.html"),
       filename: "404.html",
       inject: false,
-    }),
-    new ProvidePlugin({
-      $: "jquery",
     }),
   ],
 };

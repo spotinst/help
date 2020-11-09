@@ -21,7 +21,10 @@ In order to use cfn helper scripts in Elastigroup user-data, you will need to sp
   "Statement": [
     {
       "Effect": "Allow",
-      "Action": ["cloudformation:SignalResource", "cloudformation:DescribeStackResource"],
+      "Action": [
+        "cloudformation:SignalResource",
+        "cloudformation:DescribeStackResource"
+      ],
       "Resource": "*"
     }
   ]

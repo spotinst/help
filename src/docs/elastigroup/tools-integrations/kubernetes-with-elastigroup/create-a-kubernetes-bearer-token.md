@@ -29,7 +29,15 @@ metadata:
   name: spotinst-role
 rules:
   - apiGroups: [""]
-    resources: ["pods", "nodes", "replicationcontrollers", "events", "limitranges", "services"]
+    resources:
+      [
+        "pods",
+        "nodes",
+        "replicationcontrollers",
+        "events",
+        "limitranges",
+        "services",
+      ]
     verbs: ["get", "delete", "list", "patch", "update"]
 ---
 apiVersion: rbac.authorization.k8s.io/v1beta1

@@ -12,7 +12,10 @@ export const searchFocusPlugin = (hook) => {
     if (inputElements && inputElements.length) {
       const searchInput = inputElements[0];
       const handleKeyDown = (event) => {
-        if (event.key === "/" && searchInput.current !== document.activeElement) {
+        if (
+          event.key === "/" &&
+          searchInput.current !== document.activeElement
+        ) {
           event.preventDefault();
           searchInput.focus();
         }

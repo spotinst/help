@@ -25,8 +25,9 @@ The output produces a single point in time data point for each pod. Ocean then a
 The aggregation is made twice to include both maximum and mean resource utilization values (e.g., max_memory_utilization and mean_memory_utilization), which will be used in the recommendation generation process to ensure that each pod’s utilization is considered properly.
 
 Using the per-workload aggregated data points, Ocean makes recommendations based on a mechanism that tries to even out peaks and troughs in resource demand.
-* Recommendations for decreasing resource requests are based on the above calculation using the maximum resource utilization data collected (e.g., max_memory_utilization).
-* Recommendations for increasing resource requests are based on the above calculation using the mean resource utilization data collected (e.g., mean_memory_utilization).
+
+- Recommendations for decreasing resource requests are based on the above calculation using the maximum resource utilization data collected (e.g., max_memory_utilization).
+- Recommendations for increasing resource requests are based on the above calculation using the mean resource utilization data collected (e.g., mean_memory_utilization).
 
 Currently, Ocean generates recommendations for Kubernetes deployments, statefulsets, and daemonsets.
 

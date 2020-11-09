@@ -35,6 +35,7 @@ You can create new VNGs or reconfigure existing ones at any time after the clust
 Many of the attributes that you apply to your cluster can be applied specifically per VNG. This enables you to organize and manage customized workload types within the same cluster. For example, you can customize the attributes listed below:
 
 - Available in the UI and API:
+
   - Block Device Mappings
   - Headroom
   - Labels
@@ -54,5 +55,6 @@ For example, you could use the Labels and Taints attributes to instruct Ocean wh
 In addition, you can initiate a roll per VNG. This is useful when you need to apply changes to a VNG or restart the VNG for any reason without impacting other instances in the Ocean cluster. For more information, see [Initiate Roll per launchSpecIds](https://docs.spot.io/api/#operation/oceanAwsRollInit).
 
 ## What’s next?
-* Learn how to [Manage Virtual Node Groups](ocean/tutorials/manage-virtual-node-groups.md).
-* Learn more about the VNGs in the APIs: [AWS Kubernetes](https://docs.spot.io/api/#operation/OceanAWSClusterCreate), [ECS](https://docs.spot.io/api/#operation/OceanECSClusterCreate), [GKE](https://docs.spot.io/api/#operation/OceanGKEClusterCreate)
+
+- Learn how to [Manage Virtual Node Groups](ocean/tutorials/manage-virtual-node-groups.md).
+- Learn more about the VNGs in the APIs: [AWS Kubernetes](https://docs.spot.io/api/#operation/OceanAWSClusterCreate), [ECS](https://docs.spot.io/api/#operation/OceanECSClusterCreate), [GKE](https://docs.spot.io/api/#operation/OceanGKEClusterCreate)

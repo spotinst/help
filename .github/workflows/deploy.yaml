@@ -27,6 +27,7 @@ jobs:
       - name: Install and Build
         run: |
           yarn install
+          yarn sitemap
           yarn build
 
       - name: Deploy Local

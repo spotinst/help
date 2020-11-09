@@ -1,3 +1,9 @@
 module.exports = {
-  plugins: [require("autoprefixer"), require("postcss-mixins"), require("postcss-nested")],
+  plugins: [
+    require("postcss-import"),
+    require("postcss-preset-env"),
+    require("postcss-nested"),
+    require("postcss-mixins"),
+    require("autoprefixer"),
+  ],
 };
