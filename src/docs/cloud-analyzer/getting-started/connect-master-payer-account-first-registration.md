@@ -30,6 +30,7 @@ Mark whether you are connecting from AWS China.
 
 Log in to your AWS Master Payer account.
 
+<!-- This is commented out.
 ---
 
 **Important**:
@@ -38,6 +39,7 @@ Log in to your AWS Master Payer account.
 - If your Account is managed by an MSP, your MSP must set up the Cost and Usage reports as described [here](https://console.aws.amazon.com/billing/home?#/reports). Skip Step 3 and continue with Step 4.
 
 ---
+-->
 
 ## Step 3
 
