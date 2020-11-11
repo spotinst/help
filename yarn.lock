@@ -7276,10 +7276,10 @@ xdg-basedir@^3.0.0:
   resolved "https://registry.yarnpkg.com/xdg-basedir/-/xdg-basedir-3.0.0.tgz#496b2cc109eca8dbacfe2dc72b603c17c5870ad4"
   integrity sha1-SWsswQnsqNus/i3HK2A8F8WHCtQ=
 
-xml-formatter@^2.3.1:
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/xml-formatter/-/xml-formatter-2.3.1.tgz#79201637dad4fe4b2e58fbd6bf1524ac830ea505"
-  integrity sha512-jvqmM7aowtzgi05LfvWjXLqajeRNu50/dX6Q26a4jwdpMwuCz6FRYRkvqvPBThe7bordClp35jiR/zxRrtM0NQ==
+xml-formatter@^2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/xml-formatter/-/xml-formatter-2.4.0.tgz#c956ea6c5345240c0829da86a5e81d44ed4cb9c7"
+  integrity sha512-xTQ2IfbkCQKn0DGN5SD5KUgTgVohWiolyOXTLUHKJczIuSeGonN0BPduB9VQR5HOEuT1KOHQsOHSmTpU76zpUA==
   dependencies:
     xml-parser-xo "^3.1.1"
 
