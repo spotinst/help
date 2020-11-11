@@ -40,8 +40,13 @@ Log in to your AWS Master Payer account.
 
 ---
 -->
-
 ## Step 3
+
+Ensure that IAM user and role access to the Billing and Cost Management console is activated according to the instructions in the [AWS procedure](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/control-access-billing.html#ControllingAccessWebsite-Activate).
+
+<img src="/cloud-analyzer/_media/gettingstarted-connect-master-existing-02a.png" />
+
+## Step 4
 
 1. Select the Spot products your CloudFormation template will include.
 2. Set up Cost and Usage Reports and enter the bucket name where the report is located.
@@ -66,14 +71,14 @@ Log in to your AWS Master Payer account.
 
 6. Return to your account in the Spot Console and paste the name of the S3 bucket where the hourly cost and usage reports are stored.
 
-## Step 4
+## Step 5
 
 1. Open the linked Cloudformation Template and create the required IAM Role and Policy.
 2. Mark the checkbox acknowledging that CloudFormation will create IAM resources, and click create.
 
 <img src="/cloud-analyzer/_media/gettingstarted-firstregistration-05.png" />
 
-## Step 5
+## Step 6
 
 1. Once the stack is created, copy the Spot Role ARNs from the CloudFormation stack Outputs tab.
 
