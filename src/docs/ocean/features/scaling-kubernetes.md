@@ -12,14 +12,19 @@ Ocean makes sure that all pods in the cluster have a place and capacity to run, 
 
 ## Scale Up
 
-Ocean continuously checks for unschedulable pods. A pod is unschedulable when the Kubernetes scheduler is unable to find a node that can accommodate the pod, this can be happening due to insufficient CPU, Memory, GPU or [custom resource](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/).
+Ocean continuously checks for unschedulable pods. A pod is unschedulable when the Kubernetes scheduler is unable to find a node that can accommodate the pod. This can happen due to insufficient CPU, Memory, GPU or [custom resource](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/), for example, when a pod requests more CPU than what is available on any of the cluster nodes.
 
-For example, When a pod request more CPU than what is available on any of the cluster nodes. Unschedulable pods are recognized by their PodCondition. Whenever a Kubernetes scheduler fails to find a place to run a pod, it sets `schedulable` PodCondition to false and reason to `unschedulable`.
-Ocean calculates and aggregates the number of unschedulable pods waiting to be placed and finds the optimal nodes for the job. Ocean makes sure that all the pods will have enough resources to be placed, it also makes sure to distribute the Pods on the most efficient number of VMs from the desired cloud provider. In some scenarios, it will prefer to provide a distribution of certain machines types and sizes based on the pods requirements and the spot/preemptible VM prices in the relevant region.
+Unschedulable pods are recognized by their PodCondition. Whenever a Kubernetes scheduler fails to find a place to run a pod, it sets the `schedulable` PodCondition to false and the reason to `unschedulable`.
+Ocean calculates and aggregates the number of unschedulable pods waiting to be placed and finds the optimal nodes for the job. Ocean ensures that all the pods will have enough resources to be placed. It also distributes the Pods on the most efficient number of VMs from the desired cloud provider. In some scenarios, it will provide a distribution of certain machine types and sizes based on the pod requirements and the spot/preemptible VM prices in the relevant region.
 
-It may take a few moments before the created nodes join the Kubernetes cluster, in order to minimize this time (to zero) you can read more about Cluster Headroom.
+It may take a few moments before the created nodes join the Kubernetes cluster. In order to minimize this time (to zero), learn more about cluster [Headroom](ocean/features/headroom.md).
 
 <img src="/ocean/_media/features-scaling-k8s-01.png" />
+
+---
+**Tip**: In the [affinity syntax](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#resources-that-support-set-based-requirements), Ocean supports `matchExpressions` only. `matchLabels` syntax is not supported.
+
+---
 
 ## Scale Down
 
