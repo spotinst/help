@@ -51,7 +51,7 @@ Decreasing root volume size is not recommended and might affect the proper launc
 
 ## (Optional) Step 4: Scaling Policies
 
-Elastigroup offers a wide variety of scaling options for EMR, both for Core and Task nodes. Learn more about setting Elastigroup's scaling policies for EMR [here](https://api.spotinst.com/integration-docs/elastigroup/services-integrations/elastic-mapreduce/scaling-policies-for-emr/). Click Next.
+Elastigroup offers a wide variety of scaling options for EMR, both for Core and Task nodes. Learn more about setting Elastigroup's scaling policies for EMR [here](https://api.spotinst.com/integration-docs/elastigroup/services-integrations/elastic-mapreduce/scaling-policies-for-emr.md). Click Next.
 
 ## Step 5: Review and Create
 
