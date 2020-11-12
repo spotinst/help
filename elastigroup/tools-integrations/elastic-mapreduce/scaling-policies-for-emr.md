@@ -1,7 +1,5 @@
 # Scaling Policies for EMR
 
-## Elastigroup Scaling Policies for EMR
-
 Elastigroup provides scale up and scale down policy (rule) options for Core and Task nodes managed by Elastigroup. Scaling policies are based on Cloudwatch metrics such as ContainerPending or YARNMemoryAvailablePercentage.
 
 ## How Elastigroup's Scaling Policies for EMR are Used
