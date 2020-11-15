@@ -32,38 +32,46 @@ Add the following startup script:
 ```bash
 #!/bin/bash
 install_deps() {
-  log_info "Installing dependencies"
+  echo "Installing dependencies"
   # Install deps.
   packages=$1
   for package in $packages; do
     installed=$(which $package)
     not_found=$(echo $(expr index "$installed" "no $package in"))
     if [ -z $installed ] && [ "$not_found" == "0" ]; then
-      log_info "Installing $package"
+      echo "Installing $package"
       if [ -f /etc/redhat-release ] || [ -f /etc/system-release ]; then
         yum install -y $package
-      elif [ -f /etc/arch-release ]; then
-        pacman install -y $package
-      elif [ -f /etc/gentoo-release ]; then
-        emerge install -y $package
-      elif [ -f /etc/SuSE-release ]; then
-        zypp install -y $package
       elif [ -f /etc/debian_version ]; then
         apt-get install -y $package
       fi
-      log_info "$package successfully installed"
+      echo "$package successfully installed"
     fi
   done
 }
-EC2_INSTANCE_ID="$(curl http://169.254.169.254/latest/meta-data/instance-id)"
-JENKINS_MASTER_IP="IP:PORT"
-# Install Java If not already installed
-install_deps "jre"
 
-# Get The Jenkins Slave JAR file
-curl http://${JENKINS_MASTER_IP}/jnlpJars/slave.jar --output /tmp/slave.jar
-# Run the Jenkins slave JAR
-java -jar /tmp/slave.jar -jnlpCredentials user:password/token -jnlpUrl http://${JENKINS_MASTER_IP}/computer/${EC2_INSTANCE_ID}/slave-agent.jnlp &
+remove_deps() {
+  echo "Removing dependencies"
+  # Remove deps.
+  packages=$1
+  for package in $packages; do
+    echo "Removing $package"
+    if [ -f /etc/redhat-release ] || [ -f /etc/system-release ]; then
+      if yum list installed $package >/dev/null 2>&1; then
+        yum remove -y $package
+      fi
+    elif [ -f /etc/debian_version ]; then
+      if dpkg -s $name &> /dev/null ; then
+        apt-get remove -y $package
+      fi
+    fi
+    echo "$package successfully removed"
+    # fi
+  done
+}
+
+# Install Java 8 If not already installed
+# for yum supported distro uncomment below row
 ```
 
 The jnlpCredentials flag is used for authenticating to Jenkins, pass the username and password or token (such as the GitHub access token if GitHub is the hosting service which is being used for the authentication process).
