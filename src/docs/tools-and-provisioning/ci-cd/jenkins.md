@@ -72,6 +72,21 @@ remove_deps() {
 
 # Install Java 8 If not already installed
 # for yum supported distro uncomment below row
+install_deps "java-1.8.0"
+# for ubuntu(16+) uncomment below row
+# install_deps "openjdk-8-jdk"
+# for yum supported distro uncomment below row
+remove_deps "java-1.7.0-openjdk"
+
+# Get EC2 instance id
+EC2_INSTANCE_ID="$(curl http://169.254.169.254/latest/meta-data/instance-id)"
+# Set Jenkins master ip
+JENKINS_MASTER_IP="IP:PORT"
+# Get The Jenkins Slave JAR file
+curl http://${JENKINS_MASTER_IP}/jnlpJars/slave.jar --output /tmp/slave.jar
+# Run the Jenkins slave JAR
+JENKINS_SLAVE_SECRET="$(curl -L -s -u user:password/token -X GET http://${JENKINS_MASTER_IP}/computer/${EC2_INSTANCE_ID}/slave-agent.jnlp | sed "s/.*<application-desc main-class=\"hudson.remoting.jnlp.Main\"><argument>\([a-z0-9]*\).*/\1/")"
+java -jar /tmp/slave.jar -secret ${JENKINS_SLAVE_SECRET} -jnlpUrl http://${JENKINS_MASTER_IP}/computer/${EC2_INSTANCE_ID}/slave-agent.jnlp &
 ```
 
 The jnlpCredentials flag is used for authenticating to Jenkins, pass the username and password or token (such as the GitHub access token if GitHub is the hosting service which is being used for the authentication process).
