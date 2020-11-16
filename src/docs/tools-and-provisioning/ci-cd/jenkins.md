@@ -91,14 +91,15 @@ java -jar /tmp/slave.jar -secret ${JENKINS_SLAVE_SECRET} -jnlpUrl http://${JENKI
 
 The jnlpCredentials flag is used for authenticating to Jenkins, pass the username and password or token (such as the GitHub access token if GitHub is the hosting service which is being used for the authentication process).
 
+---
 **Tip:**
-For optimal performance we recommend using the Amazon Standard AMI (CentOS based).
+For optimal performance, we recommend using the Amazon Standard AMI (CentOS based).
 
 ---
 
 **Windows user-data:**
 
-````powershell
+```powershell
 <powershell>
 $EC2_INSTANCE_ID = Invoke-RestMethod -uri http://169.254.169.254/latest/meta-data/instance-id
 $JENKINS_MASTER_IP = `JenkinsMaster:port`
@@ -110,7 +111,7 @@ Invoke-RestMethod -uri http://${JENKINS_MASTER_IP}/jnlpJars/slave.jar -OutFile C
 #Run slave
 Start-Process -FilePath 'C:\Program Files\Java\jre1.8.0_151\bin\java' -ArgumentList `-jar C:\slave.jar -jnlpCredentials USER:PASSWORD/TOKEN -jnlpUrl `"http://${JENKINS_MASTER_IP}/computer/${EC2_INSTANCE_ID}/slave-agent.jnlp``` -RedirectStandardError `slave-error.txt` -RedirectStandardOutput `slave-output.txt`
 </powershell>
-````
+```
 
 ### Jenkins on GCP
 
@@ -124,17 +125,11 @@ install_deps() {
   packages=$1
   for package in $packages; do
     installed=$(which $package)
-    not_found=$(echo `expr index "$installed" "no $package in")
+    not_found=$(echo $(expr index "$installed" "no $package in"))
     if [ -z $installed ] && [ "$not_found" == "0" ]; then
-      log_info "Installing $package"
+      echo "Installing $package"
       if [ -f /etc/redhat-release ] || [ -f /etc/system-release ]; then
         yum install -y $package
-      elif [ -f /etc/arch-release ]; then
-        pacman install -y $package
-      elif [ -f /etc/gentoo-release ]; then
-        emerge install -y $package
-      elif [ -f /etc/SuSE-release ]; then
-        zypp install -y $package
       elif [ -f /etc/debian_version ]; then
         apt-get install -y $package
       fi
@@ -142,16 +137,44 @@ install_deps() {
     fi
   done
 }
-export INSTANCE_NAME="hostname export JENKINS_MASTER_IP="52.37.106.17:8080"
 
-# Install Java If not already installed
-install_deps "jre" yum -y install java-1.8.0 yum -y remove java-1.7.0-openjdk
+remove_deps() {
+  echo "Removing dependencies"
+  # Remove deps.
+  packages=$1
+  for package in $packages; do
+    echo "Removing $package"
+    if [ -f /etc/redhat-release ] || [ -f /etc/system-release ]; then
+      if yum list installed $package >/dev/null 2>&1; then
+        yum remove -y $package
+      fi
+    elif [ -f /etc/debian_version ]; then
+      if dpkg -s $name &> /dev/null ; then
+        apt-get remove -y $package
+      fi
+    fi
+    echo "$package successfully removed"
+    # fi
+  done
+}
 
+# Install Java 8 If not already installed
+# for yum supported distro uncomment below row
+install_deps "java-1.8.0"
+# for ubuntu(16+) uncomment below row
+# install_deps "openjdk-8-jdk"
+# for yum supported distro uncomment below row
+remove_deps "java-1.7.0-openjdk"
+
+# Get EC2 instance id
+EC2_INSTANCE_ID="$(curl http://169.254.169.254/latest/meta-data/instance-id)"
+# Set Jenkins master ip
+JENKINS_MASTER_IP="IP:PORT"
 # Get The Jenkins Slave JAR file
 curl http://${JENKINS_MASTER_IP}/jnlpJars/slave.jar --output /tmp/slave.jar
-
-# Run the Jenkins Slave JAR
-java -jar /tmp/slave.jar -jnlpCredentials user:1234 -jnlpUrl http://${JENKINS_MASTER_IP}/computer/${INSTANCE_NAME}/slave-agent.jnlp &
+# Run the Jenkins slave JAR
+JENKINS_SLAVE_SECRET="$(curl -L -s -u user:password/token -X GET http://${JENKINS_MASTER_IP}/computer/${EC2_INSTANCE_ID}/slave-agent.jnlp | sed "s/.*<application-desc main-class=\"hudson.remoting.jnlp.Main\"><argument>\([a-z0-9]*\).*/\1/")"
+java -jar /tmp/slave.jar -secret ${JENKINS_SLAVE_SECRET} -jnlpUrl http://${JENKINS_MASTER_IP}/computer/${EC2_INSTANCE_ID}/slave-agent.jnlp &
 ```
 
 ### Jenkins on Azure
@@ -162,24 +185,17 @@ Create an Elastigroup, with the desired VM types, region and other configuration
 
 ```bash
 #!/bin/bash
-
 install_deps() {
   echo "Installing dependencies"
   # Install deps.
   packages=$1
   for package in $packages; do
     installed=$(which $package)
-    not_found=$(echo `expr index "$installed" "no $package in"`)
+    not_found=$(echo $(expr index "$installed" "no $package in"))
     if [ -z $installed ] && [ "$not_found" == "0" ]; then
-      log_info "Installing $package"
+      echo "Installing $package"
       if [ -f /etc/redhat-release ] || [ -f /etc/system-release ]; then
         yum install -y $package
-      elif [ -f /etc/arch-release ]; then
-        pacman install -y $package
-      elif [ -f /etc/gentoo-release ]; then
-        emerge install -y $package
-      elif [ -f /etc/SuSE-release ]; then
-        zypp install -y $package
       elif [ -f /etc/debian_version ]; then
         apt-get install -y $package
       fi
@@ -188,21 +204,43 @@ install_deps() {
   done
 }
 
+remove_deps() {
+  echo "Removing dependencies"
+  # Remove deps.
+  packages=$1
+  for package in $packages; do
+    echo "Removing $package"
+    if [ -f /etc/redhat-release ] || [ -f /etc/system-release ]; then
+      if yum list installed $package >/dev/null 2>&1; then
+        yum remove -y $package
+      fi
+    elif [ -f /etc/debian_version ]; then
+      if dpkg -s $name &> /dev/null ; then
+        apt-get remove -y $package
+      fi
+    fi
+    echo "$package successfully removed"
+    # fi
+  done
+}
 
-export INSTANCE_ID=`curl -H Metadata:true "http://169.254.169.254/metadata/instance/compute/vmId?api-version=2017-08-01&format=text"`
-export JENKINS_MASTER_IP="MASTER_IP:PORT"
+# Install Java 8 If not already installed
+# for yum supported distro uncomment below row
+install_deps "java-1.8.0"
+# for ubuntu(16+) uncomment below row
+# install_deps "openjdk-8-jdk"
+# for yum supported distro uncomment below row
+remove_deps "java-1.7.0-openjdk"
 
-# Install Java If not already installed
-install_deps "jre"
-
-yum -y install java-1.8.0
-yum -y remove java-1.7.0-openjdk
-
+# Get EC2 instance id
+EC2_INSTANCE_ID="$(curl http://169.254.169.254/latest/meta-data/instance-id)"
+# Set Jenkins master ip
+JENKINS_MASTER_IP="IP:PORT"
 # Get The Jenkins Slave JAR file
 curl http://${JENKINS_MASTER_IP}/jnlpJars/slave.jar --output /tmp/slave.jar
-
-# Run the Jenkins Slave JAR
-java -jar /tmp/slave.jar -jnlpCredentials user:/password/token -jnlpUrl http://${JENKINS_MASTER_IP}/computer/${INSTANCE_ID}/slave-agent.jnlp &
+# Run the Jenkins slave JAR
+JENKINS_SLAVE_SECRET="$(curl -L -s -u user:password/token -X GET http://${JENKINS_MASTER_IP}/computer/${EC2_INSTANCE_ID}/slave-agent.jnlp | sed "s/.*<application-desc main-class=\"hudson.remoting.jnlp.Main\"><argument>\([a-z0-9]*\).*/\1/")"
+java -jar /tmp/slave.jar -secret ${JENKINS_SLAVE_SECRET} -jnlpUrl http://${JENKINS_MASTER_IP}/computer/${EC2_INSTANCE_ID}/slave-agent.jnlp &
 ```
 
 ## Step 3: Change the Default Slave Connection Port
