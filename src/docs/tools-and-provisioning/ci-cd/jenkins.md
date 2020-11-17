@@ -92,7 +92,7 @@ java -jar /tmp/slave.jar -secret ${JENKINS_SLAVE_SECRET} -jnlpUrl http://${JENKI
 The jnlpCredentials flag is used for authenticating to Jenkins, pass the username and password or token (such as the GitHub access token if GitHub is the hosting service which is being used for the authentication process).
 
 ---
-**Tip:**
+**Tip**:
 For optimal performance, we recommend using the Amazon Standard AMI (CentOS based).
 
 ---
