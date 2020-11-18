@@ -8,7 +8,7 @@ With Low-Priority VMs, Microsoft effectively lets you `borrow` unused capacity f
 
 Based on historical and statistical data, Spot's Elastigroup predicts preemptions ahead of time and automatically migrate instances into different machine Types, Zones or fall back to regular priority (on-demand VMs) in order to ensure high availability and consistency. Elastigroup will also make sure that the preemption is done gradually to ensure service uptime.
 
-<img src="/elastigroup/_media/gettingstarted-elastigroup-arch-azure-01.png" />
+<img src="/elastigroup/_media/gettingstarted-elastigroup-arch-azure-01.png" width="537" height="310" />
 
 To get started with Spot Elastigroup on Azure, begin by connecting your Spot Account with Azure.
 

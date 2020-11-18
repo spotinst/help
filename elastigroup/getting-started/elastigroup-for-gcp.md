@@ -8,7 +8,7 @@ Preemptible VMs are highly affordable, short-lived compute instances suitable fo
 
 Based on historical and statistical data, Spot's Elastigroup predicts preemptions ahead of time and automatically migrate instances into different machine Types, Zones or fall back to On-Demand in order to ensure high availability and consistency. Elastigroup will also make sure that the preemption is done gradually to ensure service uptime.
 
-<img src="/elastigroup/_media/gettingstarted-elastigroup-arch-gcp-01.png" />
+<img src="/elastigroup/_media/gettingstarted-elastigroup-arch-gcp-01.png" width="640" height="370" />
 
 To get started with Spot Elastigroup on GCP, begin by connecting your GCP Project to your Spot Account.
 
