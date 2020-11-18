@@ -14,7 +14,7 @@
       - [eksctl](ocean/tools-and-integrations/eksctl/)
       - [Terraform](ocean/getting-started/eks/terraform)
       - [CloudFormation](https://aws.amazon.com/quickstart/architecture/spotinst-ocean-eks/)
-    - [KOPS](ocean/tools-and-integrations/kops/)
+    - [Kops](ocean/getting-started/kops)
     - [GKE](ocean/getting-started/gke)
     - [ECS](ocean/getting-started/ecs)
     - [OpenShift](ocean/tools-and-integrations/openshift/)
