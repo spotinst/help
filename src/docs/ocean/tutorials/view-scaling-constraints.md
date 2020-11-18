@@ -13,8 +13,8 @@ This tutorial is relevant for users of Ocean Kubernetes on AWS and GKE.
 ## Scaling Constraints
 
 Ocean supports the following scaling constraints and displays them if they have been applied to pods in a cluster.
-* [Node Lifecycle](https://docs.spot.io/ocean/features/labels-and-taints?id=spot-labels): Controls whether spot of on-demand instances can be used for a given application.
-* [Restrict Scale Down](https://docs.spot.io/ocean/features/labels-and-taints?id=spot-labels): Controls whether a node can be scaled down when underutilized.
+* [Node Lifecycle](ocean/features/labels-and-taints?id=spot-labels): Controls whether spot of on-demand instances can be used for a given application.
+* [Restrict Scale Down](ocean/features/labels-and-taints?id=spot-labels): Controls whether a node can be scaled down when underutilized.
 * [Zone affinity](https://kubernetes.io/docs/reference/kubernetes-api/labels-annotations-taints/#topologykubernetesiozone): Controls which availability zone a pod can run in.
 * [Instance Type affinity](https://kubernetes.io/docs/reference/kubernetes-api/labels-annotations-taints/#nodekubernetesioinstance-type): Controls which nodes a pod is eligible to be scheduled on based on node labels.
 
@@ -44,7 +44,7 @@ For a drill-down of more detail about the constraints in a specific node, click 
 * In the node details, a summary line appears under Pods showing the number of each kind of constraint applied to the pods in that node.
 * An arrow appears by each pod with constraints applied. Click on the arrow to see the constraints.
 
-<img src="/ocean/_media/tutorials-scaling-constraints-03.png" />
+<img src="/ocean/_media/tutorials-scaling-constraints-03.png" width="488" height="321" />
 
 ## Pods Tab
 
@@ -52,14 +52,14 @@ In an Ocean cluster, you can also see information in the Pods tab about scaling 
 * When the Pods tab opens, a banner at the top indicates if there are constraints on the pods.
 * In the overview table, an arrow appears by each pod with constraints applied. Click on the arrow to see the constraints.
 
-<img src="/ocean/_media/tutorials-scaling-constraints-04.png" />
+<img src="/ocean/_media/tutorials-scaling-constraints-04.png" width="541" height="366" />
 
 ### Pod Details
 
 For a drill-down of more detail about the constraints on a specific pod, click on the Pod Name. In the pod details, you will see a list of scaling restrictions applied to that pod.
 
-<img src="/ocean/_media/tutorials-scaling-constraints-05.png" />
+<img src="/ocean/_media/tutorials-scaling-constraints-05.png" width="422" height="303" />
 
 ## What’s Next?
 
-Learn more about the [constraints](https://docs.spot.io/ocean/features/labels-and-taints.md) supported by Ocean.
+Learn more about the [constraints](ocean/features/labels-and-taints.md) supported by Ocean.
