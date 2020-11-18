@@ -4,7 +4,7 @@ Elastigroup for Azure is an IaaS Optimization platform in which the user can pro
 
 Microsoft Azure Low-priority VMs are allocated from Microsoft Azure's excess compute capacity, enabling workloads to run for a reduced cost of up to 85% less.
 
-With Low-Priority VMs, Microsoft effectively lets you `borrow` unused capacity for a great price. However, this capacity can be reclaimed at a moment's notice due to higher priority allocations. This makes Low-Priority VMs a less-than-ideal candidate for production workloads. Elastigroup for Azure changes that.
+With Low-Priority VMs, Microsoft effectively lets you borrow unused capacity for a great price. However, this capacity can be reclaimed at a moment's notice due to higher priority allocations. This makes Low-Priority VMs a less-than-ideal candidate for production workloads. Elastigroup for Azure changes that.
 
 Based on historical and statistical data, Spot's Elastigroup predicts preemptions ahead of time and automatically migrate instances into different machine Types, Zones or fall back to regular priority (on-demand VMs) in order to ensure high availability and consistency. Elastigroup will also make sure that the preemption is done gradually to ensure service uptime.
 
