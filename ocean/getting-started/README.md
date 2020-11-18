@@ -7,7 +7,7 @@ To get started with an Ocean cluster, connect your Cloud account now: [AWS](conn
 ## Choose the Right Method
 
 - [EKS](/ocean/getting-started/eks/)
-- [KOPS](/ocean/tools-and-integrations/kops/)
+- [Kops](/ocean/tools-and-integrations/kops/)
 - [GKE](/ocean/getting-started/gke)
 - [ECS](/ocean/getting-started/ecs)
 - [OpenShift](/ocean/tools-and-integrations/openshift/)
