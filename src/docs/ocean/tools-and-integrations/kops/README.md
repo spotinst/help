@@ -1,6 +1,6 @@
 # Getting Started with Kops
 
-Kubernetes Operations, or [Kops](https://github.com/kubernetes/kops), is an open source project used to set up Kubernetes clusters. The project describes itself as kubectl for clusters. `kops` enables deployment of highly available Kubernetes clusters on AWS.
+Kubernetes Operations, or [Kops](https://github.com/kubernetes/kops), is an open source project used to set up Kubernetes clusters. The project describes itself as kubectl for clusters. Kops enables deployment of highly available Kubernetes clusters on AWS.
 
 It is really easy to get started with Ocean using Kops, as it provides a simple flow to create an EKS cluster.
 
