@@ -39,6 +39,7 @@
     - [Create Custom Labels](ocean/tutorials/create-custom-labels)
     - [Manage Virtual Node Groups](ocean/tutorials/manage-virtual-node-groups)
     - [Use Right Sizing](ocean/tutorials/use-right-sizing)
+    - [View Scaling Constraints](ocean/tutorials/view-scaling-constraints)
     - [Set Running Hours](ocean/tutorials/set-running-hours)
     - [Create a Cluster for GKE using Shared VPC](ocean/tutorials/create-cluster-gke-shared-vpc)
     - [Migrate Existing Elastigroups to Ocean (EKS, kops)](ocean/tutorials/migrate-existing-egs-ekskops)
