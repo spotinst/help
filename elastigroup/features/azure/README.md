@@ -1,6 +1,6 @@
 # Azure
 
-Elastigroup for Microsoft Azure enables you to take control of your GCP cloud spend,
+Elastigroup for Microsoft Azure enables you to take control of your Azure cloud spend,
 drive extreme cost-efficiency, and simplify infrastructure management. This includes:
 * Advanced automation - intelligent management and continuous optimization of cloud infrastructure
 * Streamlined scaling - easy definition of autoscaling for heterogenous groups of VMs
@@ -11,4 +11,4 @@ Elastigroup uses machine learning and analytics to automate and optimize cloud i
 
 ## What's Next?
 * This section describes Elastigroup features relating specifically to use with the Microsoft Azure platform. To learn more, choose a topic in the sidebar on the left.
-* To learn more about general Elastigroup features that are available with all the major cloud providers (AWS, Azure, and GCP, unless otherwise specified), read about Elastigroup [Core](elastigroup/features/core-features/), [Compute](elastigroup/features/compute/), and [Scaling](elastigroup/features/scaling/) features.
+* To learn more about general Elastigroup features that are available with the major cloud providers (AWS, Azure, and GCP, unless otherwise specified), read about Elastigroup [Core](elastigroup/features/core-features/), [Compute](elastigroup/features/compute/), and [Scaling](elastigroup/features/scaling/) features.
