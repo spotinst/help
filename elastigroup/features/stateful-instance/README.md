@@ -5,5 +5,5 @@ The concept of data integrity and consistency is crucial when managing workloads
 This section describes Elastigroup Stateful Instance features in detail.
 
 ## What's Next?
-
-To learn more, choose a topic in the sidebar on the left.
+* To learn more, choose a topic in the sidebar on the left.
+* To learn more about other Elastigroup features, read about Elastigroup [Core](elastigroup/features/core-features/), [Compute](elastigroup/features/compute/), and [Scaling](elastigroup/features/scaling/) features.

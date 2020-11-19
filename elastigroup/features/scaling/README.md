@@ -5,5 +5,5 @@ Elastigroup’s predictive autoscaling simplifies the process of defining scalin
 This section describes Elastigroup Scaling features in detail.
 
 ## What's Next?
-
-To learn more, choose a topic in the sidebar on the left.
+* To learn more, choose a topic in the sidebar on the left.
+* To learn more about other Elastigroup features, read about Elastigroup [Core](elastigroup/features/core-features/), [Compute](elastigroup/features/compute/), and [Stateful](elastigroup/features/stateful-instance/) features.
