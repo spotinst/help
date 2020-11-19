@@ -1,5 +1,9 @@
 # Elastigroup Tasks
 
-This section includes procedures and other information to help you perform various management and optimization tasks in Elastigroup.
+Elastigroup matches infrastructure behavior to the type of workload you are running. Register and deregister servers from load balancers, use a variety of health checks to monitor health, or run stateful workloads on excess capacity without worrying about data integrity.
 
-To learn more, choose a tutorial in the sidebar on the left.
+This section includes procedures and other information to help you run Elastigroup to fit your requirements.
+
+## What's Next?
+
+To learn more, choose a topic in the sidebar on the left.

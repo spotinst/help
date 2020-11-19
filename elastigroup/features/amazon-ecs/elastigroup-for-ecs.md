@@ -3,6 +3,7 @@
 Amazon's Elastic Container Service (Amazon ECS) is a highly scalable, high-performance container orchestration service that supports Docker containers and allows you to easily run and scale containerized applications on AWS.
 
 Elastigroup handles the provisioning, managing, and scaling of the underlying cluster on which your containers run and provides a Container Driven Auto Scaling – meaning that it will scale the infrastructure up and down based on the ECS Tasks requirements.
+
 By utilizing Spot instances for your cluster, Elastigroup delivers savings of up to 80% on your compute costs.
 
 ## Sophisticated Cluster Scheduling
