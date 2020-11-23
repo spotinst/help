@@ -191,6 +191,12 @@ export const aliases = (() => {
       "/tools-and-provisioning/terraform",
 
     "/spotinst-policy": "/administration/api/spot-policy-in-aws",
+
+    "/elastigroup-for-aws/tutorials/publish-elastigroup-metrics":
+      "/elastigroup/tutorials/elastigroup-tasks/publish-metrics-to-cloudwatch",
+
+    "/spotinst-api/elastigroup/amazon-web-services/get-elastilog-entries-from-group":
+      "/api/#operation/elastigroupAwsGetLogs",
   };
 
   for (let [key, value] of Object.entries(map)) {
