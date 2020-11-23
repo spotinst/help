@@ -266,7 +266,7 @@
     - [Custom SAML IDP Configuration](administration/identity-providers/custom-saml-idp-configuration)
     - [Okta SAML Authentication](administration/identity-providers/okta-saml-authentication)
     - [OneLogin SAML Authentication](administration/identity-providers/onelogin-saml-authentication)
-  - [API](administration/api/)
+  - [API Administration](administration/api/)
     - [Create an API Token](administration/api/create-api-token)
     - [Spot Policy in AWS](administration/api/spot-policy-in-aws)
     - [Spot Policy in Azure](administration/api/spot-policy-in-azure)
