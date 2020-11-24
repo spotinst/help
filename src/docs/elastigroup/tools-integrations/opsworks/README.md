@@ -48,7 +48,7 @@ That's It! Elastigroup is now managing and provisioning Spot instances for the O
 
 ## Usage Notes and Tips
 
-- For regional OpsWorks stacks, the Elastigroup must be in the same region as the stack.
+- For regional OpsWorks stacks, the Elastigroup must be in the same region and VPC as the stack.
 - Do not change the instances hostname, as it is used to identify the instance in OpsWorks.
 - Ensure that you have cancelled the auto-healing feature of OpsWorks. Failure to do so will cause the creation of new instances by OpsWorks once an Elastigroup terminates an instance (For scale down for example).
 - The AMI used in the Elastigroup should have Python installed (part of OpsWorks requirements)
