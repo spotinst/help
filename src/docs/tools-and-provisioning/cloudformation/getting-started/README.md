@@ -21,3 +21,7 @@ For other regions, only change the region name as indicated in the above example
 
 1. Access Token – Use your Spot API access token.
 2. Account ID – Your Spot account ID. If you have only one account in your organization, this is not mandatory.
+
+## What's Next?
+* Learn more about the CloudFormation [template structure](tools-and-provisioning/cloudformation/template-structure/) and [tools](tools-and-provisioning/cloudformation/tools/) available.
+* Try out one of the many example templates available.
