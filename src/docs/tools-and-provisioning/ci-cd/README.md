@@ -1,6 +1,6 @@
 # CI/CD
 
-Spot easily plugs into your delivery pipeline, including major CI/CD platforms such as Jenkins, Chef, and GitLab, and extends your Continuous Integration/Continuous Deployment (CI/CD) pipeline of choice with Continuous Optimization (CO) to complete the application delivery pipeline.
+Spot easily plugs into your delivery pipeline, including major CI/CD platforms such as [Jenkins](tools-and-provisioning/ci-cd/jenkins.md), [Chef](tools-and-provisioning/ci-cd/chef.md), and [GitLab](tools-and-provisioning/ci-cd/gitlab.md), and extends your Continuous Integration/Continuous Deployment (CI/CD) pipeline of choice with Continuous Optimization (CO) to complete the application delivery pipeline.
 
 <img src="/connect-your-cloud-provider/_media/introduction-to-spot-03a.png" width="500" height="177" />
 
