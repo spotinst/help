@@ -4,7 +4,7 @@ Spot easily plugs into your delivery pipeline, including major CI/CD platforms s
 
 <img src="/connect-your-cloud-provider/_media/introduction-to-spot-03a.png" width="500" height="177" />
 
-Below are just two of the many ways Spot turns CI/CD into CI/CD/CO.
+Below are just two examples of the many ways Spot turns CI/CD into CI/CD/CO.
 
 ## CI/CD, Kubernetes, and Spot
 
