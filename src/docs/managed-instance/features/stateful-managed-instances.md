@@ -1,14 +1,14 @@
 # Stateful Managed Instances
 
-Run Stateful Applications On Managed Instances. Managed Instances utilize Spot Instances while providing persistence for the root volume, data volumes and network interface, in addition to other launch specifications during instance replacements.
+Run stateful applications on managed instances. Managed Instances utilize spot instances while providing persistence for the root volume, data volumes and network interface, in addition to other launch specifications during instance replacements.
 
-Spot Instances are transient and can be interrupted at any moment by AWS. While this is not an issue for stateless applications as they are designed to easily scale horizontally, it brings a great challenge to stateful applications.
+Spot instances are transient and can be interrupted at any moment by AWS. While this is not an issue for stateless applications as they are designed to easily scale horizontally, it brings a great challenge to stateful applications.
 
-Spot Managed Instances are designed to support any fault-tolerant applications, such as databases and stream-processing servers. If you have a stateful application or an application that is designed to withstand node failure, you may have decided in the past that Spot instances were not the best use case for you. With Managed Instances you can maintain your configurations with 0 data loss while taking advantage of the cost savings provided by Spot Instances.
+Spot Managed Instances are designed to support any fault-tolerant applications, such as databases and stream-processing servers. If you have a stateful application or an application that is designed to withstand node failure, you may have decided in the past that Spot instances were not the best use case for you. With Managed Instances you can maintain your configurations with 0 data loss while taking advantage of the cost savings provided by spot Instances.
 
 ## Common Use Cases
 
-Every fault-tolerant application that requires data persistency can benefit from the Stateful capabilities offered by Managed Instances.
+Every fault-tolerant application that requires data persistency can benefit from the stateful capabilities offered by Managed Instances.
 
 - Single Non-prod Server Database: In non-production environments, databases can typically tolerate a 'maintenance window' once in a while. This is a perfect use case for Managed Instances.
 - Cassandra: If the Cassandra node is replaced, Managed Instance clones the resources and brings the node back. The Cassandra cluster the node is connected to will behave as if the instance was down for some time. Bringing up a clone of the previous instance ensures that cluster IOPs are not wasted on bringing a new instance up.
