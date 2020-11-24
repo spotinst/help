@@ -19,3 +19,7 @@ Spot uses `Custom::Resource` in your Cloud Formation templates which use a trigg
 This Lambda function is hosted by Spot and can be invoked by every Spot customer
 
 <img src="/tools-and-provisioning/_media/AWS-lambda-function.png" />
+
+## What's Next?
+
+[Get started](tools-and-provisioning/cloudformation/getting-started/) with CloudFormation.
