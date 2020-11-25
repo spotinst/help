@@ -13,7 +13,7 @@
       - [Create a New Cluster](ocean/getting-started/eks/create-a-new-cluster)
       - [eksctl](ocean/tools-and-integrations/eksctl/)
       - [Terraform](ocean/getting-started/eks/terraform)
-      - <a href="https://aws.amazon.com/quickstart/architecture/spotinst-ocean-eks/" target="_blank"><strong>CloudFormation <i data-feather="external-link"></i></strong></a>
+      - [CloudFormation](https://aws.amazon.com/quickstart/architecture/spotinst-ocean-eks/)
     - [Kops](ocean/getting-started/kops)
     - [GKE](ocean/getting-started/gke)
     - [ECS](ocean/getting-started/ecs)
