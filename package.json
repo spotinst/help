@@ -21,7 +21,7 @@
     "sitemap": "src/scripts/sitemap.js"
   },
   "dependencies": {
-    "docsify-cli": "^4.4.1"
+    "docsify-cli": "^4.4.2"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^3.9.1",
