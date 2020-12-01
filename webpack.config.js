@@ -9,7 +9,7 @@ const port = 3000;
 module.exports = {
   mode: "development",
   devServer: {
-    contentBase: buildDirectory,
+    static: buildDirectory,
     historyApiFallback: true,
     host: "0.0.0.0",
     port,
