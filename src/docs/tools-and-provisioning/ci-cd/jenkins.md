@@ -92,6 +92,7 @@ java -jar /tmp/slave.jar -secret ${JENKINS_SLAVE_SECRET} -jnlpUrl http://${JENKI
 The jnlpCredentials flag is used for authenticating to Jenkins, pass the username and password or token (such as the GitHub access token if GitHub is the hosting service which is being used for the authentication process).
 
 ---
+
 **Tip**:
 For optimal performance, we recommend using the Amazon Standard AMI (CentOS based).
 
@@ -99,7 +100,7 @@ For optimal performance, we recommend using the Amazon Standard AMI (CentOS base
 
 **Windows user-data:**
 
-```powershell
+````powershell
 <powershell>
 $EC2_INSTANCE_ID = Invoke-RestMethod -uri http://169.254.169.254/latest/meta-data/instance-id
 $JENKINS_MASTER_IP = `JenkinsMaster:port`
@@ -111,7 +112,7 @@ Invoke-RestMethod -uri http://${JENKINS_MASTER_IP}/jnlpJars/slave.jar -OutFile C
 #Run slave
 Start-Process -FilePath 'C:\Program Files\Java\jre1.8.0_151\bin\java' -ArgumentList `-jar C:\slave.jar -jnlpCredentials USER:PASSWORD/TOKEN -jnlpUrl `"http://${JENKINS_MASTER_IP}/computer/${EC2_INSTANCE_ID}/slave-agent.jnlp``` -RedirectStandardError `slave-error.txt` -RedirectStandardOutput `slave-output.txt`
 </powershell>
-```
+````
 
 ### Jenkins on GCP
 

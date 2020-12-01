@@ -6,5 +6,5 @@ This section describes some of the key concepts and features that Elastigroup us
 
 ## What's Next?
 
-* To learn more, choose a topic in the sidebar on the left.
-* To learn more about other Elastigroup features, read about Elastigroup [Compute](elastigroup/features/compute/), [Scaling](elastigroup/features/scaling/), and [Stateful](elastigroup/features/stateful-instance/) features.
+- To learn more, choose a topic in the sidebar on the left.
+- To learn more about other Elastigroup features, read about Elastigroup [Compute](elastigroup/features/compute/), [Scaling](elastigroup/features/scaling/), and [Stateful](elastigroup/features/stateful-instance/) features.
