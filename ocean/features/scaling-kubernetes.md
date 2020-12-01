@@ -22,6 +22,7 @@ It may take a few moments before the created nodes join the Kubernetes cluster. 
 <img src="/ocean/_media/features-scaling-k8s-01.png" />
 
 ---
+
 **Tip**: In the [affinity syntax](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#resources-that-support-set-based-requirements), Ocean supports `matchExpressions` only. The `matchLabels` selector is not supported.
 
 ---
