@@ -1503,6 +1503,8 @@ export const aliases = (() => {
       "/ocean/getting-started/ecs",
 
     "/ocean/tutorials/ocean-for-ecs/": "/ocean/tutorials/",
+
+    "/ocean/concepts/ocean-cloud/ecs-scaling-2/": "/ocean/features/scaling-ecs",
   };
 
   for (let [key, value] of Object.entries(map)) {
