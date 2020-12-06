@@ -1226,6 +1226,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/tutorials/azure/connect-elastigroup-to-application-gateway"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/elastigroup/tutorials/azure/deploy-an-elastigroup</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/tutorials/azure/deploy-an-elastigroup"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/tutorials/azure/deploy-an-elastigroup"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/elastigroup/tutorials/azure/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
