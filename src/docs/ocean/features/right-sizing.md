@@ -10,6 +10,8 @@ Ocean monitors workload utilization in real-time and provides recommendations fo
 
 Ocean continuously monitors the cluster CPU and Memory usage and provides recommendations when a workload consumes significantly more or less resources than it requested.
 
+Right Sizing recommendations are provided per container and summarized for the entire workload for easy presentation at a high level. Recommendations per container enable you to easily understand exactly which applications require changes in resource requests and implement those changes quickly. 
+
 Applying the changes suggested by those notifications helps utilize resources in the cluster in a more precise manner and lower chances of cluster issues as resulting from under- or over-utilization of resources.
 
 ## How It Works (Ocean For Kubernetes)
