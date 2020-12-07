@@ -1,4 +1,4 @@
-# Configure Health Checks and Autohealing
+# Set Health Checks and Autohealing
 
 ## Elastigroup Health Checks For ECS
 
