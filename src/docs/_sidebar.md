@@ -150,7 +150,7 @@
       - [Monitor Budgets](elastigroup/tutorials/elastigroup-budgets/monitor-budgets)
     - [Amazon ECS](elastigroup/tutorials/amazon-ecs/)
       - [Get Started with ECS on Elastigroup](elastigroup/tutorials/amazon-ecs/get-started-with-ecs-on-elastigroup)
-      - [Configure Health Checks and Autohealing](elastigroup/tutorials/amazon-ecs/configure-health-checks-and-autohealing)
+      - [Set Health Checks and Autohealing](elastigroup/tutorials/amazon-ecs/configure-health-checks-and-autohealing)
       - [Configure Attributes for Task Placement Constraints](elastigroup/tutorials/amazon-ecs/configure-attributes-for-task-placement-constraints)
       - [Create Cluster Roll](elastigroup/tutorials/amazon-ecs/create-cluster-roll)
       - [Enable Autoscaling for ECS](elastigroup/tutorials/amazon-ecs/enable-autoscaling-for-ecs)
