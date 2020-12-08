@@ -6,7 +6,7 @@ In this tutorial you will learn how to use custom labels with Ocean Launch Speci
 
 This tutorial is relevant for Kubernetes users.
 
-## Lable Definition
+## Label Definition
 
 Labels are key and value pairs that are attached to objects such as pods. Labels enable you to constrain a pod to run only on particular nodes or have a preference for a particular node.
 
