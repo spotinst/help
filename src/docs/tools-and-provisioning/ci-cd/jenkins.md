@@ -182,66 +182,45 @@ java -jar /tmp/slave.jar -secret ${JENKINS_SLAVE_SECRET} -jnlpUrl http://${JENKI
 
 Create an Elastigroup, with the desired VM types, region and other configurations for the Jenkins Slaves. In the Compute tab, under Additional Configurations add the following user-data.
 
-**Linux User-Data:**
+**Azure Spot VMs Linux User Data:**
 
 ```bash
 #!/bin/bash
-install_deps() {
-  echo "Installing dependencies"
-  # Install deps.
-  packages=$1
-  for package in $packages; do
-    installed=$(which $package)
-    not_found=$(echo $(expr index "$installed" "no $package in"))
-    if [ -z $installed ] && [ "$not_found" == "0" ]; then
-      echo "Installing $package"
-      if [ -f /etc/redhat-release ] || [ -f /etc/system-release ]; then
-        yum install -y $package
-      elif [ -f /etc/debian_version ]; then
-        apt-get install -y $package
-      fi
-      echo "$package successfully installed"
-    fi
-  done
-}
-
-remove_deps() {
-  echo "Removing dependencies"
-  # Remove deps.
-  packages=$1
-  for package in $packages; do
-    echo "Removing $package"
-    if [ -f /etc/redhat-release ] || [ -f /etc/system-release ]; then
-      if yum list installed $package >/dev/null 2>&1; then
-        yum remove -y $package
-      fi
-    elif [ -f /etc/debian_version ]; then
-      if dpkg -s $name &> /dev/null ; then
-        apt-get remove -y $package
-      fi
-    fi
-    echo "$package successfully removed"
-    # fi
-  done
-}
-
-# Install Java 8 If not already installed
-# for yum supported distro uncomment below row
-install_deps "java-1.8.0"
-# for ubuntu(16+) uncomment below row
-# install_deps "openjdk-8-jdk"
-# for yum supported distro uncomment below row
-remove_deps "java-1.7.0-openjdk"
-
-# Get EC2 instance id
-EC2_INSTANCE_ID="$(curl http://169.254.169.254/latest/meta-data/instance-id)"
-# Set Jenkins master ip
+sudo add-apt-repository -y ppa:openjdk-r/ppa
+sudo apt-get -y update
+sudo apt-get install -y openjdk-8-jdk
+sudo apt-get -y update --fix-missing
+sudo apt-get install -y openjdk-8-jdk
+sudo echo "retrieving VM ID"
+INSTANCE_ID="$(sudo curl 'http://169.254.169.254/metadata/instance/compute/name?api-version=2017-08-01&format=text' -H 'Metadata: true')"
 JENKINS_MASTER_IP="IP:PORT"
-# Get The Jenkins Slave JAR file
-curl http://${JENKINS_MASTER_IP}/jnlpJars/slave.jar --output /tmp/slave.jar
-# Run the Jenkins slave JAR
-JENKINS_SLAVE_SECRET="$(curl -L -s -u user:password/token -X GET http://${JENKINS_MASTER_IP}/computer/${EC2_INSTANCE_ID}/slave-agent.jnlp | sed "s/.*<application-desc main-class=\"hudson.remoting.jnlp.Main\"><argument>\([a-z0-9]*\).*/\1/")"
-java -jar /tmp/slave.jar -secret ${JENKINS_SLAVE_SECRET} -jnlpUrl http://${JENKINS_MASTER_IP}/computer/${EC2_INSTANCE_ID}/slave-agent.jnlp &
+sudo echo "Downloading slave.jar from main node"
+sudo curl http://${JENKINS_MASTER_IP}/jnlpJars/slave.jar --output /tmp/slave.jar
+sudo echo "Getting agent secret from main node"
+JENKINS_AGENT_SECRET="$(curl -L -s -u user:password/token -X GET http://${JENKINS_MASTER_IP}/computer/${INSTANCE_ID}/slave-agent.jnlp | sed "s/.*<application-desc main-class=\"hudson.remoting.jnlp.Main\"><argument>\([a-z0-9]*\).*/\1/")"
+sudo echo "Connecting Jenkins agent to main node"
+sudo java -jar /tmp/slave.jar -secret ${JENKINS_AGENT_SECRET} -jnlpUrl http://${JENKINS_MASTER_IP}/computer/${INSTANCE_ID}/slave-agent.jnlp &
+```
+
+**Azure Low-Priority VMs Linux User Data:**
+
+```bash
+sudo echo "Updating apt-get"
+sudo apt-get update
+sudo echo "Adding repo ppa:webupd8team/java"
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt update
+sudo echo "Installing openjdk-8-jdk"
+sudo apt-get install -y "openjdk-8-jdk"
+sudo echo "retrieving VM ID"
+INSTANCE_ID="$(sudo curl 'http://169.254.169.254/metadata/instance/compute/vmId?api-version=2017-08-01&format=text' -H 'Metadata: true')"
+JENKINS_MASTER_IP="IP:PORT"
+sudo echo "Downloading slave.jar from main node"
+sudo curl http://${JENKINS_MASTER_IP}/jnlpJars/slave.jar --output /tmp/slave.jar
+sudo echo "Getting agent secret from main node"
+JENKINS_AGENT_SECRET="$(curl -L -s -u user:password/token -X GET http://${JENKINS_MASTER_IP}/computer/${INSTANCE_ID}/slave-agent.jnlp | sed "s/.*<application-desc main-class=\"hudson.remoting.jnlp.Main\"><argument>\([a-z0-9]*\).*/\1/")"
+sudo echo "Connecting Jenkins agent to main node"
+sudo java -jar /tmp/slave.jar -secret ${JENKINS_AGENT_SECRET} -jnlpUrl http://${JENKINS_MASTER_IP}/computer/${INSTANCE_ID}/slave-agent.jnlp &
 ```
 
 ## Step 3: Change the Default Slave Connection Port
