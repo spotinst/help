@@ -15,7 +15,7 @@ You will need to run a deployment whenever one of the following cases applies:
 * You have upgraded application versions in your cluster.
 * You have made changes to the Elastigroup that affect the VM configuration. In this case, you will be prompted automatically to create a new deployment after updating the configuration.
 
-<img src="/elastigroup/_media/tutorials-azure-deploy-eg-00.png" />
+<img src="/elastigroup/_media/tutorials-azure-deploy-eg-00.png" width="406" height="247" />
 
 Use the procedure below to create the new deployment starting from Step 3.
 
@@ -33,7 +33,7 @@ If you need to create a new deployment and you have not received the prompt show
 
 3. Complete the information in the Deployment dialog:
 
-<img src="/elastigroup/_media/tutorials-azure-deploy-eg-03.png" />
+<img src="/elastigroup/_media/tutorials-azure-deploy-eg-03.png" width="419" height="220" />
 
    * Batch size: The size of each batch in the deployment as a percent of the total number of VMs in the group. For example, a group with 20% will deploy VMs in five separate batches.
    * Grace period: The amount of time to wait for a VM to be deemed healthy according to the health check setting before the deployment starts the next batch. The grace period must be at least 120 seconds.
