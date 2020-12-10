@@ -97,4 +97,11 @@ To customize the scaling configuration:
 2. Click Actions on the top right side of the screen to open the actions menu.
 3. Click Customize Scaling.
 
-<img src="/ocean/_media/features-scaling-k8s-03.png" />
+<img src="/ocean/_media/features-scaling-k8s-03a.png" />
+
+---
+**Caution**
+
+Under normal operation, Auto-scaling should be enabled, and it is not recommended to disable this function. When Auto-scaling is disabled, Ocean does not scale up or down, and cannot maintain headroom. In addition, the Cluster Shutdown Hours feature will not work properly when scaling the cluster back to its desired state.
+
+---
