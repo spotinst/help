@@ -97,7 +97,7 @@ To customize the scaling configuration:
 2. Click Actions on the top right side of the screen to open the actions menu.
 3. Click Customize Scaling.
 
-<img src="/ocean/_media/features-scaling-k8s-03a.png" />
+<img src="/ocean/_media/features-scaling-k8s-03.png" />
 
 ---
 **Caution**
