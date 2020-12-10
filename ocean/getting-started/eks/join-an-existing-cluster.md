@@ -22,8 +22,14 @@ In this procedure, you will use the [Spot Console](http://console.spotinst.com/)
 ## Step 1: General
 
 1. In the General page, enter a Cluster Name and Cluster Identifier and click the region where the cluster is running.
-   - Cluster Name is the name of the Ocean entity that will be created.
-   - Cluster Identifier is the unique key used to connect between the Ocean Saas and the Kubernetes cluster. The Cluster Identifier is automatically generated according to the Cluster Name entered.
+   * Cluster Name: The name of the Ocean entity that will be created.
+   * Cluster Identifier: The unique key used to connect between the Ocean SaaS and the Kubernetes cluster. The Cluster Identifier is automatically generated according to the Cluster Name entered, however, you can change the name when you are creating the cluster.
+
+---
+**Tip**: To ensure the reliable flow of data reported back to the SaaS, do not change the Cluster Identifier after you have created the Ocean cluster.
+
+---
+
 2. Choose the autoscaling group or a specific instance from which you will import the compute configurations.
 
 <img src="/ocean/_media/general.png" width="500" height="510" />
