@@ -3,7 +3,7 @@
 Spot supports metadata labels to be configured by using the Spot instance group to configure various Ocean settings. All labels marked with `\*` must be configured on the same instance group that contains `spotinst.io/ocean-default-launchspec: "true"`. Below is a list of supported metadata labels and the default values.
 
 | Label                                                   | Description                                                                                                          | Default |
-| ------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | ------- |
+| ------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | ------- | --- |
 | spotinst.io/spot-percentage \*                          | Specify the percentage of Spot instances that should spin up from the target capacity.                               | 100     |
 | spotinst.io/utilize-reserved-instances \*               | Specify whether reserved instances should be utilized.                                                               | true    |
 | spotinst.io/fallback-to-ondemand \*                     | Specify whether fallback to on-demand instances should be enabled.                                                   | true    |
