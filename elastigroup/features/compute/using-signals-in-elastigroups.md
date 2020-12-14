@@ -82,7 +82,7 @@ Body
 }
 ```
 
-An example of user data script that can be used in an Elastigroup for the Load balancer Signal:
+An example of a user data script that can be used in an Elastigroup for the Load balancer Signal:
 
 ```bash
 instanceid=$( curl http://169.254.169.254/latest/meta-data/instance-id )
@@ -101,3 +101,15 @@ echo $instance_signal > instance_signal
 token=<YOUR API TOKEN>
 curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer ${token}" -d @instance_signal https://api.spotinst.io/aws/ec2/instance/signal?accountId={ACCOUNT_ID}
 ```
+
+## Remove a Signal
+
+If you have a signal configured in your Elastigroup and you would like to disable it, do the following:
+1. Go to the relevant ElastiGroup and click Actions/Edit Configuration/Review.
+2. Click Edit Mode, and simply replace the value for the "signals" key with null.
+
+```
+"signals": null,
+```
+
+3. Click Update to apply the changes. You may also need to roll your group after making the change.
