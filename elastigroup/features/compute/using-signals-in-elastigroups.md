@@ -113,3 +113,5 @@ If you have a signal configured in your Elastigroup and you would like to disabl
 ```
 
 3. Click Update to apply the changes. You may also need to roll your group after making the change.
+
+You can also make this configuration change using the API.
