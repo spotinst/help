@@ -182,7 +182,7 @@ java -jar /tmp/slave.jar -secret ${JENKINS_SLAVE_SECRET} -jnlpUrl http://${JENKI
 
 Create an Elastigroup, with the desired VM types, region and other configurations for the Jenkins Slaves. In the Compute tab, under Additional Configurations add the following user-data.
 
-**Azure Spot VMs Linux User Data:**
+**Azure Spot VMs Linux Custom Data:**
 
 ```bash
 #!/bin/bash
