@@ -11,7 +11,7 @@ Spot is able to analyze artifacts produced by aks-engine and provision an Elasti
 There are two methods to get running with Kubernetes and Elastigroup on Azure.
 
 - **Quick Start** – This procedure automatically provisions and imports configurations to Spot with a single command.
-- **AKS Engine Import** – This procedure manually run aks-engine followed by spotinst-aks-engine import with fine grained control of build options.
+- **AKS Engine Import** – This procedure manually runs aks-engine followed by spotinst-aks-engine import with fine-grained control of build options.
 
 ---
 **Tip**: In order to edit the group configuration before creating it, you must use the manual option (i.e., AKS Engine Import) with the `--dry-run` flag.
