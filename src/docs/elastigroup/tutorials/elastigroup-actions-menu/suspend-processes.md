@@ -6,7 +6,7 @@ Suspend processes gives you the option to easily put any scaling or auto-healing
 
 Simply select to pause or play the scaling activities or auto-healing instance replacements.
 
-<img src="/elastigroup/_media/suspend-processes_2.png" />
+<img src="/elastigroup/_media/suspend-processes_2.png" width="359" height="134" />
 
 ---
 
