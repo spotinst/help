@@ -27,6 +27,6 @@ This chart shows the yearly savings that can be achieved with reserved instances
 
 <img src="/eco/_media/tutorials-choose-strategy-02.png" />
 
-\*\* Apply Strategy
+## Apply Strategy
 
 Once you have marked a strategy, click Apply Strategy. Eco will then analyze your strategy and start managing your reserved instances.
