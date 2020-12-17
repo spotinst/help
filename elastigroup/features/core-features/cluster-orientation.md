@@ -2,19 +2,20 @@
 
 Elastigroup is designed to take advantage of costs savings without compromising availability.
 
-You can optionally choose to have Elastigroup take a more aggressive cost-savings approach by proactively replacing instances whenever a less expensive option becomes available, or conversely replace instances only when the cloud provider interrupts services.
+You can choose to have Elastigroup take a more aggressive cost-savings approach by proactively replacing instances whenever a less expensive option becomes available, or conversely replace instances only when the cloud provider interrupts services.
 
 ## Elastigroup Orientations
 
-Elastigroup supports the Following Orientations:
+Elastigroup supports the following Orientations:
 
 - Balanced
 - Availability
 - Cost
+- Cheapest
 
 ### Balanced (Default)
 
-Optimize towards both continuity and cost-effective infrastructure – We highly recommend using this orientation, which provides the optimal balance between cost-savings and availability.
+Optimize towards both continuity and cost-effective infrastructure. We highly recommend using this orientation, which provides the optimal balance between cost-savings and availability.
 
 ---
 
@@ -26,11 +27,9 @@ Optimize towards both continuity and cost-effective infrastructure – We highly
 
 Optimize towards the continuity of your instances. While using the high availability orientation an Elastigroup will abstain from replacing spot instances due to interruptions or cost optimization for as long as possible.
 
-Optimize towards the continuity of your instances. While using the high availability orientation an Elastigroup will abstain from replacing spot instances due to interruptions or cost optimization for as long as possible.
-
 Additionally, in the case of fall back to On-Demand instances – the Elastigroup will keep these instances running and will not revert back to spot instances automatically (as it does with balanced and cost orientations).
 
-The Availability orientation use case is primarily suitable for `jobs` or `batch` computing with a high importance of running a single machine for a limited amount of time, as well as NoSQL DBs such as Cassandra or MongoDB, when they are part of a fault tolerant architecture.
+The Availability orientation is primarily suitable for `jobs` or `batch` computing with a high importance of running a single machine for a limited amount of time, as well as NoSQL databases such as Cassandra or MongoDB, when they are part of a fault tolerant architecture.
 
 ---
 
@@ -42,7 +41,11 @@ The Availability orientation use case is primarily suitable for `jobs` or `batch
 
 Optimize towards the most cost-effective infrastructure.
 
-In addition to basic cost optimization of moving workloads from on-demand to spot, Elastigroup will take an aggressive approach to cost-savings by replacing Spot instances with less expensive instances whenever a less expensive market becomes available, even when no interruption is anticipated.
+In addition to basic cost optimization of moving workloads from on-demand to spot, Elastigroup will take an aggressive approach to cost-savings by replacing spot instances with less expensive instances whenever a less expensive market becomes available, even when no interruption is anticipated.
+
+### Cheapest
+
+When Spot brings up an Elastigroup, it searches all the markets defined in the group and looks for the lowest price for the spot type defined in the group. Spot then brings up instances only in the markets that have the minimum price.
 
 ## What's Next?
 
