@@ -288,6 +288,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/cloud-analyzer/tutorials/"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/cloud-analyzer/tutorials/save-analysis-reports</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/cloud-analyzer/tutorials/save-analysis-reports"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/cloud-analyzer/tutorials/save-analysis-reports"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/cloud-analyzer/tutorials/use-optimization-dashboard/containers</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
