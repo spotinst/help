@@ -19,7 +19,7 @@ By default, the items above include all of your AWS services. However, you can u
 By default, all services are included. Below, you will find the following graphs:
 
 - Savings over Time: A bar graph showing the amount of savings each month broken down per service.
-- Commitment over Time: A bar graph showing your reserved instance commitment per month broken down into Standard, \* \* Convertible, and Pending instances.
+- Commitment over Time: A bar graph showing your reserved instance commitment per month broken down into Standard, Convertible, and Pending instances.
 - Commitment per Service: A pie chart showing the current reserved instance commitment broken down into the different services.
 - Commitment per Region: A pie chart showing the current reserved instance commitment broken down by region.
 
