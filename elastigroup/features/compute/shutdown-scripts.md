@@ -4,15 +4,15 @@ When you launch an instance in Amazon EC2, you have the option of passing user d
 
 ## How It Works
 
-To enable the shutdown script, an agent must be installed on the instance during startup. This is done via the user-data entry and will have the agent up and running on the instance within a few seconds. Your shutdown script will be deployed to every new instance on your elastigroup. Our agent will sample the API for updates every 10 seconds to figure out if the script should run. Once we determine we are going to remove or replace the instance we will notify the agent so the script can execute. This means that the script will have around 10 minutes to execute prior to the instance termination.
+To enable the shutdown script, an agent must be installed on the instance during startup. This is done via the user-data entry and will have the agent up and running on the instance within a few seconds. Your shutdown script will be deployed to every new instance on your Elastigroup. Our agent will sample the API for updates every 10 seconds to figure out if the script should run. Once we determine we are going to remove or replace the instance we will notify the agent so the script can execute. This means that the script will have around 10 minutes to execute prior to the instance termination.
 
 ### PIP
 
-The script will install pip (Python 2.7 Package Manager) automatically, in order for the Spot agent to be installed and for your shutdown scripts to function properly.
+The script will install PIP automatically in order for the Spot agent to be installed and for your shutdown scripts to function properly.
 
 ### Start Line of Script
 
-Shutdown scripts must start with the #! characters and the path to the interpreter you want to read the script (commonly `/bin/bash`).
+Shutdown scripts must start with the characters `#!` and the path to the interpreter you want to read the script (commonly `/bin/bash`).
 
 ### Root User
 
@@ -42,21 +42,21 @@ Install the Spot agent. For ease of use, we recommend adding this at the end of 
 2. [Get a Token](https://console.spotinst.com/#/settings/tokens/permanent).
 3. Add your account ID and token to your script.
 
-For Linux:
+For Linux and Debian (Python 3):
 
 ```bash
 #!/usr/bin/env bash
-curl -fsSL https://s3.amazonaws.com/spotinst-public/services/agent/elastigroup-agent-init.sh | \
+curl -fsSL https://s3.amazonaws.com/spotinst-public/services/spotinst-agent-2/elastigroup-agent-init.sh | \
 SPOTINST_ACCOUNT_ID="" \
 SPOTINST_TOKEN="" \
 bash
 ```
 
-For Debian:
+For Linux and Debian (Python 2.7):
 
 ```bash
 #!/usr/bin/env bash
-wget -q -O- https://s3.amazonaws.com/spotinst-public/services/agent/elastigroup-agent-init.sh | \
+curl -fsSL https://s3.amazonaws.com/spotinst-public/services/agent/elastigroup-agent-init.sh | \
 SPOTINST_ACCOUNT_ID="" \
 SPOTINST_TOKEN="" \
 bash

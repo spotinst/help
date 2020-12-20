@@ -1,6 +1,6 @@
 # Shutdown Scripts
 
-When you launch an instance in Google cloud, you have the option of passing user data to the instance that can be used to perform common automated configuration tasks and even run scripts after the instance starts.
+When you launch an instance in Google Cloud, you have the option of passing user data to the instance that can be used to perform common automated configuration tasks and even run scripts after the instance starts.
 
 ## How It Works
 
@@ -12,8 +12,8 @@ Once we determine we are going to remove or replace the instance we will notify 
 
 ## Usage Notes
 
-- The script will install pip (Python 2.7 Package Manager) automatically, in order for Spot agent to be installed and for your shutdown scripts to function properly.
-- Shutdown scripts must start with the #! characters and the path to the interpreter you want to read the script (commonly /bin/bash).
+- The script will install PIP automatically in order for the Spot agent to be installed and for your shutdown scripts to function properly.
+- Shutdown scripts must start with the characters `#!` and the path to the interpreter you want to read the script (commonly /bin/bash).
 - Scripts entered as Shutdown scripts are executed as the root user, it is not necessary to use sudo in the script. Remember that any files you create will be owned by root; if you need non-root users to have file access, you should modify the permissions accordingly in the script. Also, because the script doesn't run interactively, you cannot include commands that require user feedback (such as rm without the -f flag).
 - Adding the agent installation at boot time adds to the amount of time it takes to boot the instance. Make sure the shutdown script installation code is the last step in your user-data. You should allow a few minutes of extra time for the tasks to complete before you test that the user script has finished successfully.
 
@@ -29,23 +29,23 @@ Install the Spot agent. For ease of use, we recommend adding this at the end of 
 2. [Get a Token](https://console.spotinst.com/#/settings/tokens/permanent).
 3. Add your account ID and token to your script.
 
-For Linux:
+For Linux and Debian (Python 3):
 
 ```bash
 #!/usr/bin/env bash
-curl -fsSL https://s3.amazonaws.com/spotinst-public/services/agent/gcp-elastigroup-agent-init.sh | \
+curl -fsSL https://s3.amazonaws.com/spotinst-public/services/spotinst-agent-2/elastigroup-agent-init.sh | \
 SPOTINST_ACCOUNT_ID="" \
 SPOTINST_TOKEN="" \
 bash
 ```
 
-For Debian
+For Linux and Debian (Python 2.7):
 
 ```bash
 #!/usr/bin/env bash
-wget -q -O- https://s3.amazonaws.com/spotinst-public/services/agent/gcp-elastigroup-agent-init.sh | \
+curl -fsSL https://s3.amazonaws.com/spotinst-public/services/agent/elastigroup-agent-init.sh | \
 SPOTINST_ACCOUNT_ID="" \
-SPOTINST_TOKEN= "" \
+SPOTINST_TOKEN="" \
 bash
 ```
 
