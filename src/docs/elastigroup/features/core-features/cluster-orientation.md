@@ -45,7 +45,7 @@ In addition to basic cost optimization of moving workloads from on-demand to spo
 
 ### Cheapest
 
-When Spot brings up an Elastigroup, it searches all the markets defined in the group and looks for the lowest price for the spot type defined in the group. Spot then brings up instances only in the markets that have the minimum price.
+When Spot launches instances, it searches all the markets defined in the Elastigroup and looks for the lowest price for the spot type defined in the group. Spot then brings up instances only in the markets that have the minimum price.
 
 ## What's Next?
 
