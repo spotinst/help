@@ -1,10 +1,16 @@
 # Autohealing
 
-Autohealing enables you to select which health check service will be used to determine if an Instance needs to be replaced due to unhealthiness. If an instance fails the health check selected, it is automatically replaced with a new instance. Autohealing is configurable as part of the `AUTO HEALING` settings in the Compute tab of the Creation Wizard.
+Autohealing enables you to select which health check service will be used to determine if an Instance needs to be replaced due to unhealthiness. If an instance fails the health check selected, it is automatically replaced with a new instance.
 
-<img src="/elastigroup/_media/compute-autohealing-01.png" />
+## Relevance
+
+This tutorial is relevant for users of Elastigroup with AWS. For Elastigroup with Azure, see [Set Health Checks and Autohealing](elastigroup/tutorials/azure/set-health-checks-and-autohealing).
 
 ## Configure Autohealing Health Check Type
+
+Autohealing is configurable as part of the `AUTO HEALING` settings in the Compute tab of the Creation Wizard.
+
+<img src="/elastigroup/_media/compute-autohealing-01.png" />
 
 Elastigroup supports the following Health Check types:
 
