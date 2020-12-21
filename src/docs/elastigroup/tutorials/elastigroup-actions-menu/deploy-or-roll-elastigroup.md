@@ -1,6 +1,14 @@
 # Deploy or Roll Elastigroup
 
-This tutorial covers executing a Blue/Green deployment for an Elastigroup. Deployments can be performed from the [Spot Console](http://console.spotinst.com/) by selecting Deploy under the Actions menu in the Management view of the desired Elastigroup.
+This tutorial covers executing a Blue/Green deployment for an Elastigroup.
+
+## Relevance
+
+This tutorial is relevant for users of Elastigroup with AWS. For Elastigroup with Azure, see [Deploy an Elastigroup](elastigroup/tutorials/azure/deploy-an-elastigroup.md).
+
+## Procedure
+
+Deployments can be performed from the [Spot Console](http://console.spotinst.com/) by selecting Deploy under the Actions menu in the Management view of the desired Elastigroup.
 
 <img src="/elastigroup/_media/deploy-or-roll-elastigroup_1.png" />
 

@@ -6,7 +6,7 @@ When you activate Elastigroup’s Auto Healing feature, Health Check and Auto He
 
 ## Relevance
 
-This tutorial is relevant for users of Spot with Microsoft Azure.
+This tutorial is relevant for users of Elastigroup with Microsoft Azure.
 
 ## Define Health Check
 
