@@ -1,5 +1,11 @@
 # Controller Version History
 
+## [1.0.69] - 2020-12-15
+
+Added
+
+- Support for big data CRDs
+
 ## [1.0.68] - 2020-10-25
 
 Added
