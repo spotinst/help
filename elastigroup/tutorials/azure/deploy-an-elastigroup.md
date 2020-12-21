@@ -99,5 +99,5 @@ This area displays the details of the deployment selected in the summary table. 
 - Events: An accounting of each event occurring in deployment, listed in chronological order.
 
 ## What’s Next?
-
-Learn more about using the API to [set up health checks](https://docs.spot.io/api/#operation/elastigroupAzureSpotVmsCreate) for your Elastigroup.
+* Learn how to [Set Health Checks and Autohealing](elastigroup/tutorials/azure/set-health-checks-and-autohealing.md).
+* Learn more about using the API to [set up health checks](https://docs.spot.io/api/#operation/elastigroupAzureSpotVmsCreate) for your Elastigroup.
