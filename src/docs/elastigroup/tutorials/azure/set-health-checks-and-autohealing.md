@@ -47,7 +47,7 @@ You can view the health status of VMs in the Elastigroup. To view the status, do
 
 2. In the Health column, hover the cursor over a specific icon. A detailed summary of the health checks for that VM appears.
 
-<img src="/elastigroup/_media/tutorials-azure-set-health-check-04.png" />
+<img src="/elastigroup/_media/tutorials-azure-set-health-check-04.png" width="309" height="298" />
 
 In order of increasing severity, the possible statuses are:
 * Healthy
