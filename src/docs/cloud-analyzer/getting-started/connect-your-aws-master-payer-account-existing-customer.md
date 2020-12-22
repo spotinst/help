@@ -9,7 +9,12 @@ Use the procedure on this page if you are an existing Spot customer and want to 
 
 ## AWS Region
 
-All actions in this procedure should be made in the US-East-1 (Northern Virginia) AWS region. (This includes generating the CUR file into a bucket in us-east-1.) If there is a problem doing this, please contact Support.
+We recommend that you perform all actions in this procedure in the us-east-1 (Northern Virginia) AWS region. This includes generating the CUR file into a bucket in us-east-1.
+Additional regions supported in this procedure appear in the [AWS documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-available-regions). Use only regions where Opt-in Status is "Not required".
+
+<img src="/cloud-analyzer/_media/gettingstarted-connect-master-existing-00.png" />
+
+If there is a problem completing this step, please contact Support.
 
 ## Get Started
 
