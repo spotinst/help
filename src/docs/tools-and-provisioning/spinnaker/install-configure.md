@@ -23,7 +23,8 @@ Before you start this procedure, you must complete the following:
 Use the commands below to install Halyard from the Git repository:
 
 ```
-git clone https://github.com/spotinst/spinnaker-halyard.gitgit checkout add_spot_provider
+git clone https://github.com/spotinst/spinnaker-halyard.git
+git checkout add_spot_provider
 ```
 
 ## Add Spot as a Cloud Provider
@@ -37,7 +38,9 @@ To add Spot to Spinnaker as a cloud provider, complete the steps below. This pro
 4. Run the following commands to add Spot as a cloud provider and register to your Spot Account:
 
 ```
-./hal config provider spot edit --api-token <SPOT_API_TOKEN>./hal config provider spot account add <SPOT_ACC_NAME> --account-id <SPOT_ACC_ID>./hal config provider spot enable
+./hal config provider spot edit --api-token <SPOT_API_TOKEN>
+./hal config provider spot account add <SPOT_ACC_NAME> --account-id <SPOT_ACC_ID>
+./hal config provider spot enable
 ```
 
 ## What’s Next?
