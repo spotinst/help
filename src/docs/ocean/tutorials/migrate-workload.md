@@ -106,7 +106,7 @@ When a migration status is Failed, a reason for the failure is written in the Oc
 
 | Ocean Log Failure Message | Additional Information |
 |-|-|
-| The migration has stopped due to connectivity issues. Make sure the Spotinst controller is installed and working properly. | See more information about troubleshooting the Controller. |
+| The migration has stopped due to connectivity issues. Make sure the Spotinst controller is installed and working properly. | See more information about [troubleshooting the Controller](ocean/troubleshooting/troubleshoot-controller.md). |
 | The migration has stopped due to inability to spin up enough new instances. Make sure all required Launch Specifications are configured. | Please review all the requirements of your workloads and ensure that the required virtual node groups exist to suit those requirements. |
 | The migration has stopped due to technical timeout. | Try running the migration with smaller groups of nodes. Group the nodes according to labels or by similar types of configuration requirements. |
 | The migration has stopped due to failure to schedule pods on new nodes. | This failure occurs if there are unscheduled or unready pods in the cluster after the time threshold for draining has passed. Verify that no new workloads are manually created during the migration. |
