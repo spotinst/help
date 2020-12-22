@@ -64,7 +64,7 @@ To finish setting up the environment, complete the following steps:
 
 3. Use the following command to change branch in the git repository:
 
-`git checkout remotes/origin/smartthings_poc`
+`git checkout remotes/origin/poc`
 
 4. Run the following commands to start the modified Spinnaker services:
 
