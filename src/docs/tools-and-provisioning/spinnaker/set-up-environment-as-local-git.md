@@ -69,7 +69,10 @@ To finish setting up the environment, complete the following steps:
 4. Run the following commands to start the modified Spinnaker services:
 
 ```
-~/dev/spinnaker/scripts/clouddriver-start.sh~/dev/spinnaker/scripts/orca-start.sh~/dev/spinnaker/scripts/echo-start.sh~/dev/spinnaker/scripts/deck-start.sh
+~/dev/spinnaker/scripts/clouddriver-start.sh
+~/dev/spinnaker/scripts/orca-start.sh
+~/dev/spinnaker/scripts/echo-start.sh
+~/dev/spinnaker/scripts/deck-start.sh
 ```
 
 5. Open the Spinnaker browser URL: [http://localhost:9000/](http://localhost:9000/#/applications/spotapp/clusters/instanceDetails/spot/i-0b473d5302ae60464)
