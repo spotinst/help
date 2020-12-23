@@ -44,11 +44,11 @@ Many of the attributes that you apply to your cluster can be applied specificall
   - Tags
   - Taints
   - User Data
+  - Spot % to use within the VNG
 
 - Available in the API:
   - Elastic IPs
   - Instance Types (These must be a subset of the instance types defined for the Ocean cluster.)
-  - Spot % to use within the VNG
 
 For example, you could use the Labels and Taints attributes to instruct Ocean which labels and taints are applied on the nodes using the user data, and effectively connect between the cloud infrastructure properties and Kubernetes node labels that will be used on applications using node affinity.
 
