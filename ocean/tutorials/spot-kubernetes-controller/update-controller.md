@@ -50,7 +50,7 @@ If an auto-update stopped before completion, a banner will appear in the console
 
 <img src="/ocean/_media/tutorials-update-the-controller-01.png" />
 
-You can update the controller manually as described in the [procedure above](link to Install the Latest Version).
+You can update the controller manually as described in the [procedure above](ocean/tutorials/spot-kubernetes-controller/update-controller?id=install-the-latest-version).
 
 ## What’s Next?
 
