@@ -10,17 +10,15 @@ Watch a step-by-step [video tutorial](https://youtu.be/csPmq3JZlgU/) on connecti
 <img src="/connect-your-cloud-provider/_media/welcome-to-spot-1024x341.png" />
 
 ---
-
 **Tip**: Prior to connecting your AWS account, you can access a demo system to get familiar with the dashboard. In the Spot Console, click Get a Console Walkthrough.
 
 ---
 
-3. Complete the process as described in the steps online:
+3. Complete the steps as shown in the online form. The example below shows the form for a new Spot customer. If you have already connected Cloud Analyzer or Eco, the form will be shorter than the one below.
 
-<img src="/connect-your-cloud-provider/_media/connect-aws-account-1024x709.png" />
+<img src="/connect-your-cloud-provider/_media/connect-aws-account-02a.png" />
 
 ---
-
 **Tip**: You can automate the connection using a Cloudformation template as well.
 
 ---
