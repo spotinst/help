@@ -62,6 +62,6 @@ While updating an Elastigroup – Update the strategy of the Elastigroup. The fo
 
 ---
 
-**Tip**: Equal AZ Distribution is not supported in conjunction with Reserved Instances Utilization or with Elastigroups that utilize Autoscalers (e.g., Kubernetes, ECS, and Nomad)[.](elastigroup/_media/z-test-picture-01.png)
+**Tip**: Equal AZ Distribution is not supported in conjunction with Reserved Instances Utilization or with Elastigroups that utilize Autoscalers (e.g., Kubernetes, ECS, and Nomad)[.](elastigroup/features/core-features/diagram-rebalancing-flow.md)
 
 ---
