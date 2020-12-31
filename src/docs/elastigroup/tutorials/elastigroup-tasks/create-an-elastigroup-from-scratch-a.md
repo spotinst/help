@@ -68,7 +68,7 @@ In this part you define your workload capacity as described below.
 
 In this part you define your optimization strategy as described below.
 
-<img src="/elastigroup/_media/tutorials-create-eg-from-scratch-06.png" width="263" height="335" />
+<img src="/elastigroup/_media/tutorials-create-eg-from-scratch-06.png" width="270" height="344" />
 
 * Fallback to On-Demand: If no spot instances are available, an on-demand instance will be provisioned to meet the capacity requirement.
 * Utilize Commitment Plans: Elastigroup will automatically provision on-demand instances if there are any vacant Savings Plans or reserved instances that match any instance type defined in the Compute page. The utilization order is: RIs, EC2 SP, Compute SP.
@@ -82,7 +82,7 @@ In this part you define your optimization strategy as described below.
 
 In this part you can choose the optimization method.
 
-<img src="/elastigroup/_media/tutorials-create-eg-from-scratch-07.png" width="263" height="335" />
+<img src="/elastigroup/_media/tutorials-create-eg-from-scratch-07.png" width="267" height="246" />
 
 * Continuous Optimization: If fallback to on-demand instances has occurred, you can choose when your workload should be returned to spot instances or moved to an instance type that has already-purchased an available reserved capacity. Switch this On (default) to return the instances automatically.
 * Choose one of the following:
@@ -95,7 +95,7 @@ This option enables you to define availability preferences and gain visibility i
 * Display the resulting market scoring chart showing the probabilities of meeting your specifications.
 * Deploy instances that have the highest probability of matching your specifications.
 
-<img src="/elastigroup/_media/corefeatures-predictive-rebalancing-02.png" width="407" height="481" />
+<img src="/elastigroup/_media/corefeatures-predictive-rebalancing-02.png" />
 
 Specify the following:
 * Minimum Instance Lifetime: The desired amount of time you wish your workloads to run without any interruption to their underlying instances. The shorter the lifetime you choose, the more accurate the market scoring will be.
@@ -113,7 +113,7 @@ Optionally, you can create a [Simple Scaling Policy](elastigroup/features/scalin
 
 When you have finished filling in the information in the template, you can review the configuration and edit it in JSON, CloudFormation or Terraform formats.
 
-<img src="/elastigroup/_media/tutorials-create-eg-from-scratch-10.png" />
+<img src="/elastigroup/_media/tutorials-create-eg-from-scratch-10.png" width="509" height="602" />
 
 After reviewing and making any required changes, click Next and launch your Elastigroup.
 
