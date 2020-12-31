@@ -13,7 +13,7 @@ This procedure describes how to create an Elastigroup using an empty template. T
 
 2. When the Use Cases page appears, you will need to choose a use case template. Under Empty Template, click Start from Scratch.
 
-<img src="/elastigroup/_media/tutorials-create-eg-from-scratch-02.png" />
+<img src="/elastigroup/_media/tutorials-create-eg-from-scratch-02.png" width="552" height="432" />
 
 ## Step 1: General
 1. On the General page, enter the following information:
@@ -54,7 +54,7 @@ The configuration of predictive rebalancing includes the major parts described b
 
 In this part you define your workload capacity as described below.
 
-<img src="/elastigroup/_media/tutorials-create-eg-from-scratch-05.png" />
+<img src="/elastigroup/_media/tutorials-create-eg-from-scratch-05.png" width="263" height="335" />
 
 * Capacity Unit: The units of the number of servers required, either in Instances (default) or vCPU.
 * Target: The desired number of instances or vCPUs under normal operation.
@@ -68,7 +68,7 @@ In this part you define your workload capacity as described below.
 
 In this part you define your optimization strategy as described below.
 
-<img src="/elastigroup/_media/tutorials-create-eg-from-scratch-06.png" />
+<img src="/elastigroup/_media/tutorials-create-eg-from-scratch-06.png" width="263" height="335" />
 
 * Fallback to On-Demand: If no spot instances are available, an on-demand instance will be provisioned to meet the capacity requirement.
 * Utilize Commitment Plans: Elastigroup will automatically provision on-demand instances if there are any vacant Savings Plans or reserved instances that match any instance type defined in the Compute page. The utilization order is: RIs, EC2 SP, Compute SP.
@@ -82,7 +82,7 @@ In this part you define your optimization strategy as described below.
 
 In this part you can choose the optimization method.
 
-<img src="/elastigroup/_media/tutorials-create-eg-from-scratch-07.png" />
+<img src="/elastigroup/_media/tutorials-create-eg-from-scratch-07.png" width="263" height="335" />
 
 * Continuous Optimization: If fallback to on-demand instances has occurred, you can choose when your workload should be returned to spot instances or moved to an instance type that has already-purchased an available reserved capacity. Switch this On (default) to return the instances automatically.
 * Choose one of the following:
@@ -95,7 +95,7 @@ This option enables you to define availability preferences and gain visibility i
 * Display the resulting market scoring chart showing the probabilities of meeting your specifications.
 * Deploy instances that have the highest probability of matching your specifications.
 
-<img src="/elastigroup/_media/corefeatures-predictive-rebalancing-02.png" />
+<img src="/elastigroup/_media/corefeatures-predictive-rebalancing-02.png" width="407" height="481" />
 
 Specify the following:
 * Minimum Instance Lifetime: The desired amount of time you wish your workloads to run without any interruption to their underlying instances. The shorter the lifetime you choose, the more accurate the market scoring will be.
