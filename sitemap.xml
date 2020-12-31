@@ -610,6 +610,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/features/core-features/diagram-rebalancing-flow"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/elastigroup/features/core-features/diagram-revert-from-on-demand-to-spot-instance</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/features/core-features/diagram-revert-from-on-demand-to-spot-instance"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/features/core-features/diagram-revert-from-on-demand-to-spot-instance"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/elastigroup/features/core-features/elastigroup-capacity-instances-or-weighted</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
@@ -650,6 +657,13 @@
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/features/core-features/market-scoring-managing-interruptions"/>
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/features/core-features/market-scoring-managing-interruptions"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/elastigroup/features/core-features/predictive-rebalancing</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/features/core-features/predictive-rebalancing"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/features/core-features/predictive-rebalancing"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/elastigroup/features/core-features/</loc>
@@ -1336,6 +1350,13 @@
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/tutorials/elastigroup-tasks/create-a-stateful-elastigroup-from-scratch"/>
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/tutorials/elastigroup-tasks/create-a-stateful-elastigroup-from-scratch"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/elastigroup/tutorials/elastigroup-tasks/create-an-elastigroup-from-scratch-a</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/tutorials/elastigroup-tasks/create-an-elastigroup-from-scratch-a"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/tutorials/elastigroup-tasks/create-an-elastigroup-from-scratch-a"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/elastigroup/tutorials/elastigroup-tasks/create-an-elastigroup-from-scratch</loc>
