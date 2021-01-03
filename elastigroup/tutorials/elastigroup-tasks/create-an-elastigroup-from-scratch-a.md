@@ -113,7 +113,7 @@ Optionally, you can create a [Simple Scaling Policy](elastigroup/features/scalin
 
 When you have finished filling in the information in the template, you can review the configuration and edit it in JSON, CloudFormation or Terraform formats.
 
-<img src="/elastigroup/_media/tutorials-create-eg-from-scratch-10.png" width="509" height="602" />
+<img src="/elastigroup/_media/tutorials-create-eg-from-scratch-10.png" width="458" height="542" />
 
 After reviewing and making any required changes, click Next and launch your Elastigroup.
 
