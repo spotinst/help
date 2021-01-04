@@ -12,19 +12,19 @@ Once you have set the desired filters and grouping options, you can save the Spe
 1. Above the bar chart, click Save Report.
 2. Enter a name for your report and click Save.
 
-<img src="/cloud-analyzer/_media/tutorials-save-analysis-reports-02.png" />
+<img src="/cloud-analyzer/_media/tutorials-save-analysis-reports-02.png" width="259" height="154" />
 
 ## Open a Saved Report
 
 To open a saved report, do the following:
 1. Above the Spend Analysis chart, click Select.
 
-<img src="/cloud-analyzer/_media/tutorials-save-analysis-reports-03.png" />
+<img src="/cloud-analyzer/_media/tutorials-save-analysis-reports-03.png" width="235" height="26" />
 
 2. When the list opens, click the report you want to see.
 3. If you do not see the report name you need, type the name in the Search box. The autocomplete will find the report as you type. Click your report name when it appears.
 
-<img src="/cloud-analyzer/_media/tutorials-save-analysis-reports-04.png" />
+<img src="/cloud-analyzer/_media/tutorials-save-analysis-reports-04.png" width="235" height="263" />
 
 ## Edit a Report Name
 
