@@ -26,6 +26,7 @@ In practical terms, you can reliably run an even broader range of applications o
 This alignment of predictions with application needs ensures uptime, scale, and successful workload execution for any situation. To see example flows illustrating how the predictions are used in different cases, click on the links below.
 * [Rebalancing Flow](elastigroup/features/core-features/diagram-rebalancing-flow.md)
 * [Revert from On-Demand to Spot Instance](elastigroup/features/core-features/diagram-revert-from-on-demand-to-spot-instance.md)
+* [Predictive Scale Up Flow](elastigroup/features/core-features/diagram-predictive-scale-up-flow.md)
 
 To learn more about how replacement works, see [Market Scoring & Managing Interruptions](elastigroup/features/core-features/market-scoring-managing-interruptions.md).  
 
