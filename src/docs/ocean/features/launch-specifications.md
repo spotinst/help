@@ -8,7 +8,7 @@ Previously named launch specifications in the Ocean console, VNGs define cloud i
 
 A VNG is the same as a launch specification. Spot uses the term VNG in the context of AWS Kubernetes implementation. Launch specification continues to be used for ECS, GKE, and in Spot API calls. Equivalent terms that are used in the industry include node groups and node pools.
 
-<img src="/ocean/_media/features-vngs-01.png" />
+<img src="/ocean/_media/features-vngs-01.png" width="693" height="83" />
 
 ## What’s a VNG?
 
@@ -49,10 +49,22 @@ Many of the attributes that you apply to your cluster can be applied specificall
 - Available in the API:
   - Elastic IPs
   - Instance Types (These must be a subset of the instance types defined for the Ocean cluster.)
+  - Restrict Scale Down
 
 For example, you could use the Labels and Taints attributes to instruct Ocean which labels and taints are applied on the nodes using the user data, and effectively connect between the cloud infrastructure properties and Kubernetes node labels that will be used on applications using node affinity.
 
+### Roll per VNG
+
 In addition, you can initiate a roll per VNG. This is useful when you need to apply changes to a VNG or restart the VNG for any reason without impacting other instances in the Ocean cluster. For more information, see [Initiate Roll per launchSpecIds](https://docs.spot.io/api/#operation/oceanAwsRollInit).
+
+### Restrict Scale Down per VNGs
+
+The `restrict-scale-down` label is a [Spot label](ocean/features/labels-and-taints?id=spot-labels) that can be applied on a Kubernetes pod or an ECS task and forces Ocean to not scale down the node or container instance running it. It is also possible to restrict scale down at the VNG level using a boolean property with the same name.
+
+A possible use case is protecting a 100% On-demand VNG from any scale down activity, as Ocean will treat the nodes or container instances in this VNG as if all pods or tasks running on them have the `restrict-scale-down` label. This will ensure that scale down will not cause interruptions to sensitive workloads.
+
+For more information about the Scale Down feature, see Scaling ([Kubernetes](ocean/features/scaling-kubernetes?id=scale-down) or [ECS](ocean/features/scaling-ecs?id=scale-down-behavior)).
+
 
 ## What’s next?
 
