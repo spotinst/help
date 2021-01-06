@@ -8,7 +8,7 @@ Previously named launch specifications in the Ocean console, VNGs define cloud i
 
 A VNG is the same as a launch specification. Spot uses the term VNG in the context of AWS Kubernetes implementation. Launch specification continues to be used for ECS, GKE, and in Spot API calls. Equivalent terms that are used in the industry include node groups and node pools.
 
-<img src="/ocean/_media/features-vngs-01.png" width="693" height="83" />
+<img src="/ocean/_media/features-vngs-01.png" width="578" height="69" />
 
 ## What’s a VNG?
 
