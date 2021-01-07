@@ -105,6 +105,7 @@ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer ${tok
 ## Remove a Signal
 
 If you have a signal configured in your Elastigroup and you would like to disable it, do the following:
+
 1. Go to the relevant ElastiGroup and click Actions/Edit Configuration/Review.
 2. Click Edit Mode, and simply replace the value for the "signals" key with null.
 

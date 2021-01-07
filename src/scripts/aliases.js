@@ -1517,3 +1517,12 @@ export const aliases = (() => {
 
   return map;
 })();
+
+/**
+ * Deprecated API reference routes.
+ *
+ * All routes starting with `/spotinst-api` should be redirected to OpenAPI
+ * specification website.
+ */
+window.location.pathname.startsWith("/spotinst-api") &&
+  window.location.replace("https://docs.spot.io/api");

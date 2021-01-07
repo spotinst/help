@@ -3,6 +3,7 @@ import {
   tocPlugin,
   featherPlugin,
   searchFocusPlugin,
+  expandActivePlugin,
 } from "./plugins";
 import { aliases } from "./aliases";
 
@@ -47,7 +48,13 @@ window.$docsify = {
 
   // Local Plugins
   // ---------------------------------------------------------------------------
-  plugins: [pageEditPlugin, tocPlugin, featherPlugin, searchFocusPlugin],
+  plugins: [
+    pageEditPlugin,
+    tocPlugin,
+    featherPlugin,
+    searchFocusPlugin,
+    expandActivePlugin,
+  ],
 
   // Plugin: @spotinst/help
   // ---------------------------------------------------------------------------

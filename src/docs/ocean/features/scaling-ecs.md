@@ -42,6 +42,7 @@ Ocean provides a custom placement restraint which enables you to control how spe
 <img src="/ocean/_media/features-scaling-ecs-01.png" />
 
 In order to use this feature, you will need to do the following:
+
 1. Add `ecs:putAttributes` permissions to your AWS IAM role (see [Spot Policy for AWS](administration/api/spot-policy-in-aws.md)). As soon as Spot sees pending tasks that ask for this placement constraint, auto scaler will scale up an on-demand instance and use the `ecs:putAttributes` permissions to add this attribute to the on-demand instance spun up by the auto scaler.
 2. Contact the Spot support team via chat or email, and request to enable the ECS lifecycle support per service. Once enabled, the label above will take effect.
 
@@ -102,6 +103,7 @@ To customize the scaling configuration:
 <img src="/ocean/_media/features-scaling-k8s-03.png" />
 
 ---
+
 **Caution**
 
 Under normal operation, Auto-scaling should be enabled, and it is not recommended to disable this function. When Auto-scaling is disabled, Ocean does not scale up or down, and cannot maintain headroom. In addition, the Cluster Shutdown Hours feature will not work properly when scaling the cluster back to its desired state.
