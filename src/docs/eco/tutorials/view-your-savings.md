@@ -36,14 +36,15 @@ Below the overview graphs and pie charts, you can see a table with detailed info
 <img src="/eco/_media/tutorials-view-savings-02.png" />
 
 The table includes the following information:
-* Instance type
-* Quantity: The number of instances in the batch.
-* Service
-* Region
-* OS
-* Offering class: Indicates whether the RIs are Standard or Convertible.
-* Payment option: Indicates how you have opted to pay for the RIs: All upfront, partial upfront, or no upfront payment.
-* Start date: The date on which this batch of RIs was purchased.
-* End date: The date on which this purchase commitment will end.
-* Source: Indicates whether the RIs were purchased by Eco or not.
-Generated savings: Savings generated due to the use of reservations.
+
+- Instance type
+- Quantity: The number of instances in the batch.
+- Service
+- Region
+- OS
+- Offering class: Indicates whether the RIs are Standard or Convertible.
+- Payment option: Indicates how you have opted to pay for the RIs: All upfront, partial upfront, or no upfront payment.
+- Start date: The date on which this batch of RIs was purchased.
+- End date: The date on which this purchase commitment will end.
+- Source: Indicates whether the RIs were purchased by Eco or not.
+  Generated savings: Savings generated due to the use of reservations.
