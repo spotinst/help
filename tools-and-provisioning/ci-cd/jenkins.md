@@ -2,15 +2,15 @@
 
 ## Run Jenkins with the Spot Plugin
 
-The Spot Jenkins plug-in enables you to run a lower powered Jenkins server and spin up Jenkins Slaves as needed while saving up to 80% of your compute costs. Slave instances are scaled in an Elastigroup to match the number of jobs to be completed.
+The Spot Jenkins plug-in enables you to run a lower powered Jenkins server and spin up Jenkins agents as needed while saving up to 80% of your compute costs. Agent-instances are scaled in an Elastigroup to match the number of jobs to be completed.
 
-Jenkins is an open-source continuous integration software tool for testing and reporting on isolated changes in a larger code base. Jenkins enables developers to find and solve defects in a code base rapidly and to automate testing of their builds. Jenkins has a `master/slave` mode, where the workload of building projects are delegated to multiple `slave` nodes, allowing a single Jenkins installation to host a large number of projects, or to provide different environments needed for builds/tests. This document describes this mode and how it's used with the Spot Plugin to provide compute at 80% off of the standard cost.
+Jenkins is an open-source continuous integration software tool for testing and reporting on isolated changes in a larger code base. Jenkins enables developers to find and solve defects in a code base rapidly and to automate testing of their builds. Jenkins has a `master/agent` mode, where the workload of building projects are delegated to multiple `agent` nodes, allowing a single Jenkins installation to host a large number of projects, or to provide different environments needed for builds/tests. This document describes this mode and how it's used with the Spot Plugin to provide compute at 80% off of the standard cost.
 
 ## How It Works
 
 <img src="/tools-and-provisioning/_media/Jenkins_1.png" />
 
-The Spot Jenkins plug-in (1) automatically scales instances up & down based on the number of jobs in its queue. Nodes are (2) provisioned across multiple instance types and AZs to optimize savings while still guaranteeing availability. The nodes that are provisioned (3) run a startup script to connect as Slave nodes to the Master and immediately start running jobs.
+The Spot Jenkins plug-in (1) automatically scales instances up & down based on the number of jobs in its queue. Nodes are (2) provisioned across multiple instance types and AZs to optimize savings while still guaranteeing availability. The nodes that are provisioned (3) run a startup script to connect as agent nodes to the Master/Controller and immediately start running jobs.
 
 ## Step 1: Generate a Spot API Access Token
 
@@ -82,9 +82,9 @@ remove_deps "java-1.7.0-openjdk"
 EC2_INSTANCE_ID="$(curl http://169.254.169.254/latest/meta-data/instance-id)"
 # Set Jenkins master ip
 JENKINS_MASTER_IP="IP:PORT"
-# Get The Jenkins Slave JAR file
+# Get The Jenkins agent JAR file
 curl http://${JENKINS_MASTER_IP}/jnlpJars/slave.jar --output /tmp/slave.jar
-# Run the Jenkins slave JAR
+# Run the Jenkins agent JAR
 JENKINS_SLAVE_SECRET="$(curl -L -s -u user:password/token -X GET http://${JENKINS_MASTER_IP}/computer/${EC2_INSTANCE_ID}/slave-agent.jnlp | sed "s/.*<application-desc main-class=\"hudson.remoting.jnlp.Main\"><argument>\([a-z0-9]*\).*/\1/")"
 java -jar /tmp/slave.jar -secret ${JENKINS_SLAVE_SECRET} -jnlpUrl http://${JENKINS_MASTER_IP}/computer/${EC2_INSTANCE_ID}/slave-agent.jnlp &
 ```
@@ -107,16 +107,16 @@ $JENKINS_MASTER_IP = `JenkinsMaster:port`
 #Install java
 Invoke-RestMethod -uri http://javadl.oracle.com/webapps/download/AutoDL?BundleId=227552_e758a0de34e24606bca991d704f6dcbf -OutFile jre_install.exe
 Start-Process 'jre_install.exe' -ArgumentList '/s' -Wait
-#Get Slave jar from Jenkins
+#Get agent jar from Jenkins
 Invoke-RestMethod -uri http://${JENKINS_MASTER_IP}/jnlpJars/slave.jar -OutFile C:\slave.jar
-#Run slave
+#Run agent
 Start-Process -FilePath 'C:\Program Files\Java\jre1.8.0_151\bin\java' -ArgumentList `-jar C:\slave.jar -jnlpCredentials USER:PASSWORD/TOKEN -jnlpUrl `"http://${JENKINS_MASTER_IP}/computer/${EC2_INSTANCE_ID}/slave-agent.jnlp``` -RedirectStandardError `slave-error.txt` -RedirectStandardOutput `slave-output.txt`
 </powershell>
 ````
 
 ### Jenkins on GCP
 
-Create an Elastigroup, with the desired instance types, region and other configurations for the Jenkins Slaves. In the Compute tab, under Startup Script add the following.
+Create an Elastigroup, with the desired instance types, region and other configurations for the Jenkins agents. In the Compute tab, under Startup Script add the following.
 
 ```bash
 #!/bin/bash
@@ -171,16 +171,16 @@ remove_deps "java-1.7.0-openjdk"
 EC2_INSTANCE_ID="$(curl http://169.254.169.254/latest/meta-data/instance-id)"
 # Set Jenkins master ip
 JENKINS_MASTER_IP="IP:PORT"
-# Get The Jenkins Slave JAR file
+# Get The Jenkins agent JAR file
 curl http://${JENKINS_MASTER_IP}/jnlpJars/slave.jar --output /tmp/slave.jar
-# Run the Jenkins slave JAR
+# Run the Jenkins agent JAR
 JENKINS_SLAVE_SECRET="$(curl -L -s -u user:password/token -X GET http://${JENKINS_MASTER_IP}/computer/${EC2_INSTANCE_ID}/slave-agent.jnlp | sed "s/.*<application-desc main-class=\"hudson.remoting.jnlp.Main\"><argument>\([a-z0-9]*\).*/\1/")"
 java -jar /tmp/slave.jar -secret ${JENKINS_SLAVE_SECRET} -jnlpUrl http://${JENKINS_MASTER_IP}/computer/${EC2_INSTANCE_ID}/slave-agent.jnlp &
 ```
 
 ### Jenkins on Azure
 
-Create an Elastigroup, with the desired VM types, region and other configurations for the Jenkins Slaves. In the Compute tab, under Additional Configurations add the following user-data.
+Create an Elastigroup, with the desired VM types, region and other configurations for the Jenkins agents. In the Compute tab, under Additional Configurations add the following user-data.
 
 **Azure Spot VMs Linux Custom Data:**
 
@@ -223,12 +223,12 @@ sudo echo "Connecting Jenkins agent to main node"
 sudo java -jar /tmp/slave.jar -secret ${JENKINS_AGENT_SECRET} -jnlpUrl http://${JENKINS_MASTER_IP}/computer/${INSTANCE_ID}/slave-agent.jnlp &
 ```
 
-## Step 3: Change the Default Slave Connection Port
+## Step 3: Change the Default Agent Connection Port
 
-The Slave – Master connection is based on JNLP protocol.
-By default, the Slaves try to connect on a random JNLP port. Therefore, the firewall rules need to be reconfigured in order to allow all ports to be open to ensure successful communications from Slave to Master.
+The Agent – Master connection is based on the JNLP protocol.
+By default, the agents try to connect on a random JNLP port. Therefore, the firewall rules need to be reconfigured in order to allow all ports to be open to ensure successful communications from Agent to Master.
 
-1. To configure a fixed JNLP port for the Jenkins Slaves, navigate to Manage Jenkins >> Global Security>>Agents and set a static TCP port for JNLP agents.
+1. To configure a fixed JNLP port for the Jenkins agents, navigate to Manage Jenkins >> Global Security >> Agents and set a static TCP port for JNLP agents.
 2. Configure the network to be available exclusively for this port.
 
 <img src="/tools-and-provisioning/_media/Jenkins_3.png" />
@@ -251,7 +251,7 @@ There should now be more fields to choose from. For more information on each fie
 ## Configuration Notes
 
 - As noted in Step 4, Jenkins must be restarted after installing the Spot plugin.
-- The connection between the Jenkins' Slaves and Master is vital, make sure that this connection is working properly.
-- Executors per instance- By default, the number of executors per Slave (the number of parallel jobs that a node can run) is based in the number of vCpu of the instance. You can override this configuration by setting the Instance type weight. For each instance type that you define in the Elastigroup, add the desired number of executors.
+- The connection between the Jenkins' agents and Master is vital, make sure that this connection is working properly.
+- Executors per instance- By default, the number of executors per agent (the number of parallel jobs that a node can run) is based in the number of vCpu of the instance. You can override this configuration by setting the Instance type weight. For each instance type that you define in the Elastigroup, add the desired number of executors.
 
 That's all! From now on, the Jenkins Master will automatically launch new instances through the Spot API, and will terminate them as they get unused.
