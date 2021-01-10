@@ -57,7 +57,7 @@ Now that you have created an Active Directory Application, you will create a cus
    * In the Subscription menu, select Access Control (IAM).
    * Click Roles, Add, and Add Custom Role.
    * Select JSON.
-   * Copy and paste the Policy from Step 4. [Spot Policy in Azure](https://docs.spot.io/administration/api/spot-policy-in-azure)
+   * Copy and paste the Policy from Step 4. [Spot Policy in Azure](administration/api/spot-policy-in-azure)
    * Review and click Create.
 
 2. Attach the Role
