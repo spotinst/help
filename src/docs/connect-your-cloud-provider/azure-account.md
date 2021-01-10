@@ -42,34 +42,34 @@ Under your Active Directory's main menu, go to Properties, copy the Directory ID
 
 <img src="/connect-your-cloud-provider/_media/azure6-1024x481.png" />
 
-## Step 4: Open The Spot.io Console
+## Step 4: Enter your Information in the Spot Console
 
-* Go to the Spot [console](https://console.spotinst.com), select the desired account then select Azure as your cloud provider. 
-* Paste your Application ID (From Step 1), Directory ID (From Step 3), Application Key (From step 2), and your Subscription ID into their respective fields.
-* Select View and Copy Policy, Copy Policy to clipboard.
-
+1. Go to the Spot [console](https://console.spotinst.com), select the desired account, and select Azure as your cloud provider.
+2. Paste your Application ID (from Step 1), Directory ID (from Step 3), Application Key (from step 2), and your Subscription ID into their respective fields.
+3. Select View and Copy Policy, and Copy Policy to clipboard.
 
 ## Step 5: Provide Permissions to the Active Directory Application
 
-Now that you've created an Active Directory Application you'll create a custom role and attach it to the Application.
+Now that you have created an Active Directory Application, you will create a custom role and attach it to the application.
 
 1. Create a Custom Role
-   * Under All Services select Subscriptions. Choose the subscription you'd like to provide Spot access
-   * In the Subscription menu select Access Control (IAM)
-   * Click Roles, Add, Add Custom Role
-   * Select JSON
-   * Copy and paste the Policy from Step 4. [Spot Policy in Azure](https://docs.spot.io/administration/api/spot-policy-in-azure) 
-   * Review and Create
+   * Under All Services, select Subscriptions. Choose the subscription you would Spot to access.
+   * In the Subscription menu, select Access Control (IAM).
+   * Click Roles, Add, and Add Custom Role.
+   * Select JSON.
+   * Copy and paste the Policy from Step 4. [Spot Policy in Azure](https://docs.spot.io/administration/api/spot-policy-in-azure)
+   * Review and click Create.
 
 2. Attach the Role
-   * Click Role Assignments, Add, Add Role Assignment
-   * Enter the custom role created above
-   * Enter and select the Application created in Step 1
-  
+   * Click Role Assignments, Add, and Add Role Assignment.
+   * Enter the custom role created above.
+   * Enter and select the application created in Step 1.
+
 ---
-**Note**: If your application doesn't appear in the Select autocomplete list enter the application name there anyway.
+**Note**: If your application does not appear in the Select autocomplete list, enter the application name there anyway.
+
 ---   
-  
+
 ## Step 6: Validate in Spot Console
 
 Click connect to validate your connection and save it.
