@@ -1,4 +1,4 @@
-# Connect your Azure Account to Spot
+# Connect your Azure Subscription to Spot
 
 This procedure covers authenticating your Spot account with Azure, which gives Spot the necessary permissions to launch and manage Azure resources on your behalf.
 
@@ -42,24 +42,37 @@ Under your Active Directory's main menu, go to Properties, copy the Directory ID
 
 <img src="/connect-your-cloud-provider/_media/azure6-1024x481.png" />
 
-## Step 4: Provide Permissions to the Active Directory Application
+## Step 4: Open The Spot.io Console
 
-1. Now that you've created an Active Directory Application you'll provide it with Contributor permissions.
-   Under All Services select Subscriptions. Choose the subscription you'd like to provide Spot with a role in.
-   In the Subscription menu select Access Control (IAM). Click Add and under Role choose Contributor.
-   Search for the name of the Active Directory Application you created in Step 1 and click Save.
+* Go to the Spot [console](https://console.spotinst.com), select the desired account then select Azure as your cloud provider. 
+* Paste your Application ID (From Step 1), Directory ID (From Step 3), Application Key (From step 2), and your Subscription ID into their respective fields.
+* Select View and Copy Policy, Copy Policy to clipboard.
 
+
+## Step 5: Provide Permissions to the Active Directory Application
+
+Now that you've created an Active Directory Application you'll create a custom role and attach it to the Application.
+
+1. Create a Custom Role
+   * Under All Services select Subscriptions. Choose the subscription you'd like to provide Spot access
+   * In the Subscription menu select Access Control (IAM)
+   * Click Roles, Add, Add Custom Role
+   * Select JSON
+   * Copy and paste the Policy from Step 4. [Spot Policy in Azure](https://docs.spot.io/administration/api/spot-policy-in-azure) 
+   * Review and Create
+
+2. Attach the Role
+   * Click Role Assignments, Add, Add Role Assignment
+   * Enter the custom role created above
+   * Enter and select the Application created in Step 1
+  
 ---
-
 **Note**: If your application doesn't appear in the Select autocomplete list enter the application name there anyway.
+---   
+  
+## Step 6: Validate in Spot Console
 
----
-
-2. In the Role Assignment menu click on your application and copy the Object ID (aka subscription ID) and set it aside.
-
-## Step 5: Open The Elastigroup Console
-
-Go to the Spot [console](https://console.spotinst.com), select Azure as your cloud provider and paste your Application ID, Application Key, Directory ID (a.k.a Tenant ID), and your Subscription ID into their respective fields. Validate your connection and save it.
+Click connect to validate your connection and save it.
 
 You're all set! Your Azure account is now connected to Spot.
 
