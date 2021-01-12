@@ -11,9 +11,9 @@ It is easy to manage your accounts with the most popular identity providers. Let
 
 ## In the Spot Console
 
-1. As an admin, navigate to Settings > Security > Identity Providers.
+1. As an admin, navigate to My Organizations > Security > Identity Providers.
 
-<img src="/administration/_media/bitium-01.png" />
+<img src="/administration/_media/okta-saml-01.png" />
 
 2. Copy the Relay State from Spot. Paste this into the SAML Relay State field in Bitium.
 3. Ensure Provider Type is set to SAML.
