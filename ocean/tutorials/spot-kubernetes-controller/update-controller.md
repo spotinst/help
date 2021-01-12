@@ -3,6 +3,7 @@
 In this tutorial, you will learn how to update the Spot controller in your Kubernetes cluster.
 
 ## Prerequisites
+
 1. Before upgrading the latest controller version, you must delete any non-GA version controllers. To do this, collect the details of all of the Spot deployments:
 
 `kubectl get deploy --namespace kube-system`
@@ -28,6 +29,7 @@ As a best-practice, we highly recommend leaving Auto-Update enabled due to the f
 ### Disable Auto-Update
 
 If you wish to disable the auto-update, do the following:
+
 1. Edit your Spot controller configMap.yaml file (spotinst-kubernetes-cluster-controller-config), as shown [here](ocean/tutorials/spot-kubernetes-controller/install-with-kubectl.md).
 2. Add the following line to the file, under the data section:
 
@@ -42,9 +44,10 @@ If you wish to disable the auto-update, do the following:
 The process of pushing a new controller version involves a change in the end user environment, and therefore, is monitored by the Spot team. The upgrade is pushed gradually over a period of up to several days.
 
 If any of the conditions below apply at the time of a new version push, the auto-update process will stop in order to prevent any unexpected behavior, and the controller will remain in its current version:
-* The currently running controller is not reporting back to SaaS.
-* The cluster is in its scheduled shutdown hours.
-* The controller application was installed with a different name than the name provided out of the box.
+
+- The currently running controller is not reporting back to SaaS.
+- The cluster is in its scheduled shutdown hours.
+- The controller application was installed with a different name than the name provided out of the box.
 
 If an auto-update stopped before completion, a banner will appear in the console with the message below and the latest version number to be installed.
 

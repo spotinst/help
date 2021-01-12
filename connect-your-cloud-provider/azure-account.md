@@ -53,22 +53,24 @@ Under your Active Directory's main menu, go to Properties, copy the Directory ID
 Now that you have created an Active Directory Application, you will create a custom role and attach it to the application.
 
 1. Create a Custom Role
-   * Under All Services, select Subscriptions. Choose the subscription you would Spot to access.
-   * In the Subscription menu, select Access Control (IAM).
-   * Click Roles, Add, and Add Custom Role.
-   * Select JSON.
-   * Copy and paste the Policy from Step 4. [Spot Policy in Azure](administration/api/spot-policy-in-azure)
-   * Review and click Create.
+
+   - Under All Services, select Subscriptions. Choose the subscription you would Spot to access.
+   - In the Subscription menu, select Access Control (IAM).
+   - Click Roles, Add, and Add Custom Role.
+   - Select JSON.
+   - Copy and paste the Policy from Step 4. [Spot Policy in Azure](administration/api/spot-policy-in-azure)
+   - Review and click Create.
 
 2. Attach the Role
-   * Click Role Assignments, Add, and Add Role Assignment.
-   * Enter the custom role created above.
-   * Enter and select the application created in Step 1.
+   - Click Role Assignments, Add, and Add Role Assignment.
+   - Enter the custom role created above.
+   - Enter and select the application created in Step 1.
 
 ---
+
 **Note**: If your application does not appear in the Select autocomplete list, enter the application name there anyway.
 
----   
+---
 
 ## Step 6: Validate in Spot Console
 

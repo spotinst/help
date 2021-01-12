@@ -85,5 +85,6 @@ In addition to a breakdown of costs in the past and in the current month, the Sp
 Below the chart, you can find the spend analysis breakdown in table format which can be exported to CSV.
 
 ## What's Next?
-* Learn how to [save your Spend Analysis reports](cloud-analyzer/tutorials/save-analysis-reports.md) and manage them for convenient future reference.
-* [View Trends and Notifications](cloud-analyzer/tutorials/view-trends-notifications/)
+
+- Learn how to [save your Spend Analysis reports](cloud-analyzer/tutorials/save-analysis-reports.md) and manage them for convenient future reference.
+- [View Trends and Notifications](cloud-analyzer/tutorials/view-trends-notifications/)
