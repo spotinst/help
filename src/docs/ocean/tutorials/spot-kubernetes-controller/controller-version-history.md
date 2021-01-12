@@ -1,5 +1,12 @@
 # Controller Version History
 
+## [1.0.70] - 2021-01-12
+
+Added
+
+- Support multi arch builds
+- Set 'dnsPolicy: Default' on Deployment.yaml
+
 ## [1.0.69] - 2020-12-15
 
 Added
