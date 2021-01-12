@@ -19,7 +19,7 @@ In the left menu of the Spot Console, click Ocean/Cloud Clusters, and click Crea
 ## Step 1: General
 
 1. In the General page, enter a Cluster Name and the Location Type and click the Region where the cluster is running.
-   - Cluster Name is the name of the Ocean entity that will be created.
+   - Cluster Name is the name of the Ocean entity that will be created. For a cluster that you are importing, we recommend that you give it the same name as the original GKE cluster. This will make it easier to identify related entities in each system.
    - Location Type can be either Zonal or Regional.
 2. Select the GKE cluster to import the configuration from.
 
