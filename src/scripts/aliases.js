@@ -1505,6 +1505,16 @@ export const aliases = (() => {
     "/ocean/tutorials/ocean-for-ecs/": "/ocean/tutorials/",
 
     "/ocean/concepts/ocean-cloud/ecs-scaling-2/": "/ocean/features/scaling-ecs",
+
+    "/ocean/concepts/ocean-cloud/right-sizing/": "/ocean/features/right-sizing",
+
+    "/ocean/concepts/ocean-cloud/launch-specifications-2/": "/ocean/features/launch-specifications",
+
+    "/ocean-tutorials-ocean-for-aws-run-workloads/": "/ocean/tutorials/run-workloads",
+
+    "/container-management/kubernetes/autoscaler/": "/elastigroup/tools-integrations/kubernetes-with-elastigroup/kubernetes-cluster-autoscaling",
+
+    "/account-user-management/user-management/access-policies/": "/administration/access-policies/",
   };
 
   for (let [key, value] of Object.entries(map)) {
