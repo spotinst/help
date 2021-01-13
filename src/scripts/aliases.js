@@ -1509,8 +1509,7 @@ export const aliases = (() => {
     "/spotinst-api/administration/whitelist-ips":
       "administration/api/whitelist-ips",
 
-    "/ocean/concepts/ocean-cloud/right-sizing/":
-      "/ocean/features/right-sizing",
+    "/ocean/concepts/ocean-cloud/right-sizing/": "/ocean/features/right-sizing",
 
     "/ocean/concepts/ocean-cloud/launch-specifications-2/":
       "/ocean/features/launch-specifications",
