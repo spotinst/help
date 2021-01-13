@@ -9,6 +9,7 @@ The result is a process that takes the unique requirements of each workload into
 ## How it Works
 
 Based on historical data that Spot collects, the algorithm predicts which markets will have fewer market interruptions.
+
 1. Spot collects data from instance capacity pools all over the globe, each uniquely defined by its region/availability zone, instance type, size, and operating system.
 2. Spot then uses the data on both historical behavior and current consumption to determine which instances will have greater longevity and which are about to be terminated.
 3. When Spot predicts that an interruption will occur within the next hour, it triggers a replacement enough time before the interruption.
@@ -24,11 +25,12 @@ Predictive Rebalancing expands the ability to utilize spot capacity for producti
 In practical terms, you can reliably run an even broader range of applications on spot capacity, even those that are more sensitive to interruptions. For example, applications that have long draining times can run on inexpensive EC2 spot instances without concern for downtime or performance degradation.
 
 This alignment of predictions with application needs ensures uptime, scale, and successful workload execution for any situation. To see example flows illustrating how the predictions are used in different cases, click on the links below.
-* [Rebalancing Flow](elastigroup/features/core-features/diagram-rebalancing-flow.md)
-* [Revert from On-Demand to Spot Instance](elastigroup/features/core-features/diagram-revert-from-on-demand-to-spot-instance.md)
-* [Predictive Scale Up Flow](elastigroup/features/core-features/diagram-predictive-scale-up-flow.md)
 
-To learn more about how replacement works, see [Market Scoring & Managing Interruptions](elastigroup/features/core-features/market-scoring-managing-interruptions.md).  
+- [Rebalancing Flow](elastigroup/features/core-features/diagram-rebalancing-flow.md)
+- [Revert from On-Demand to Spot Instance](elastigroup/features/core-features/diagram-revert-from-on-demand-to-spot-instance.md)
+- [Predictive Scale Up Flow](elastigroup/features/core-features/diagram-predictive-scale-up-flow.md)
+
+To learn more about how replacement works, see [Market Scoring & Managing Interruptions](elastigroup/features/core-features/market-scoring-managing-interruptions.md).
 
 ## Configure Predictive Rebalancing
 
@@ -37,10 +39,11 @@ You can configure predictive rebalancing in the Predictive Rebalancing tab when 
 <img src="/elastigroup/_media/corefeatures-predictive-rebalancing-01.png" />
 
 The major parts of the setup include:
-* Workload Capacity
-* Optimization Strategy
-* Continuous Optimization
-* Instance Availability
+
+- Workload Capacity
+- Optimization Strategy
+- Continuous Optimization
+- Instance Availability
 
 The detailed procedure and parameter definitions for configuring predictive rebalancing are described in [Create an Elastigroup from Scratch](elastigroup/tutorials/elastigroup-tasks/create-an-elastigroup-from-scratch-a.md).
 

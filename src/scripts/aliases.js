@@ -1515,6 +1515,9 @@ export const aliases = (() => {
     "/container-management/kubernetes/autoscaler/": "/elastigroup/tools-integrations/kubernetes-with-elastigroup/kubernetes-cluster-autoscaling",
 
     "/account-user-management/user-management/access-policies/": "/administration/access-policies/",
+
+    "/spotinst-api/administration/whitelist-ips":
+      "administration/api/whitelist-ips",
   };
 
   for (let [key, value] of Object.entries(map)) {
@@ -1534,5 +1537,11 @@ export const aliases = (() => {
  * All routes starting with `/spotinst-api` should be redirected to OpenAPI
  * specification website.
  */
-window.location.pathname.startsWith("/spotinst-api") &&
-  window.location.replace("https://docs.spot.io/api");
+(() => {
+  if (
+    window.location.pathname.indexOf("/spotinst-api") === 0 &&
+    window.location.pathname.indexOf("/administration/whitelist-ips") === -1
+  ) {
+    window.location.replace("https://docs.spot.io/api");
+  }
+})();
