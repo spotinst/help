@@ -21,7 +21,7 @@ This process is for one MPA. If more than one MPA needs to be registered, this p
         * The Account ID of your MPA.
         * The following table in .csv or .xlsx format. 
 
-<img src="/design-documents/_media/msp-enrollment-01.png" />
+<img src="/design-documents/_media/msp-enrollment-01.png" width="212" height="75" />
 
    2. Set up your billing workflows. Let us know about the customer billing workflows you offer and the order in which you process billing. You may have one or more sets of billing workflows.  
 
@@ -42,10 +42,10 @@ This process is for one MPA. If more than one MPA needs to be registered, this p
       1. Update your table with Subset Names and Billing Workflow Names 
       2. Allow us approximately a week to configure this. We will ask for your review and approval.
 
-<img src="/design-documents/_media/msp-enrollment-02.png" />
+<img src="/design-documents/_media/msp-enrollment-02.png" width="278" height="68" />
 
    4. End Customer Association. Begin the process of [setting up your End Customer console](https://console.spotinst.com/spt/auth/signUp) by creating a distinct, Spot Organization for each End Customer.
       1. Update the spreadsheet with the Spot Console email and the SPOT org ID. You can locate the org ID by clicking the "user" icon in the upper right-hand corner of the Spot console while logged into the org and then click "My Organization."
       2. Allow us approximately a week to configure this. We will ask for your review and approval.
 
-<img src="/design-documents/_media/msp-enrollment-03.png" />
+<img src="/design-documents/_media/msp-enrollment-03.png" width="310" height="77" />
