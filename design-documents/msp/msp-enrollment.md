@@ -24,13 +24,16 @@ This process is for one MPA. If more than one MPA needs to be registered, this p
 <img src="/design-documents/_media/msp-enrollment-01.png" />
 
    2. Set up your billing workflows. Let us know about the customer billing workflows you offer and the order in which you process billing. You may have one or more sets of billing workflows.  
-      1. **Example Billing Workflow Name 1:**
+
+#### Example Billing Workflow Name 1:
+
          1. Replace RI Discount with Public on-demand price when Ris are puchased by <accountID>
          2. Replace Savings Plan Discount  with Public on-demand price when Ris are puchased by <accountID>
          3. Remove EDP Discount so it is not shared with customer
          4. Uplift the price of all services by 3%
 
-      2. **Example Billing Workflow Name 2:**
+#### Example Billing Workflow Name 2:
+
          1. Replace RI Discount with public on-demand price when Ris are purchased by any account
          2. Replace free tier usage with the first, billable rate
          3. Discount <serviceName> by 2% when the usage occurs on Tuesdays in any US-East data center in the summer months of an odd-numbered year.  (Yes, this is an absurd example, but the point is that you may have billing rules in mind which we may never have dreamed of.)  
