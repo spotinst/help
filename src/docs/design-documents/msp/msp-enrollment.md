@@ -15,7 +15,7 @@ This process is for one MPA. If more than one MPA needs to be registered, this p
       2. Four to six weeks of ‘Ramp Up’ to learn usage patterns, compare with AWS historical data, and start increasing coverage
 
 3. Email conversations to configure your environment:
-   1. For "Subsets" capabilities (the ability to create groupings of customer accounts), wait until your data appears as expected then contact your account representative and `ben.swoboda@netapp.com` to request access to the feature. Include the accountIDs and the name of associated subset in your request.
+   1. For "Subsets" capabilities (the ability to create groupings of customer accounts), wait until your data appears as expected then contact your account representative and [Ben Swoboda](ben.swoboda@netapp.com) to request access to the feature. Include the accountIDs and the name of associated subset in your request.
       * If you want more than just Subsets and wish to also process custom billing rules, skip to step 4.b.
       * If you just want Subsets but no billing rules, send this information with your request:
         * The Account ID of your MPA.
