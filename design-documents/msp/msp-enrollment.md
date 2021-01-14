@@ -51,10 +51,12 @@ Example Billing Workflow Name 2:
 ### Associate Billing Workflows to Subsets
 
 If you are comfortable with it, you may include this information with step four.  
+
 1. Update your table with Subset Names and Billing Workflow Names
 
 <img src="/design-documents/_media/msp-enrollment-02.png" width="464" height="114" />
  
+
 2. Allow us approximately a week to configure this. We will ask for your review and approval.
 
 ### End Customer Association
