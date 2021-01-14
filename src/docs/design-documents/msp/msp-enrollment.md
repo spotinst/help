@@ -8,11 +8,14 @@ Thank you for your patience during this "design partner" phase. Some of the enro
 
 This procedure is for one MPA. If more than one MPA needs to be registered, this process will need to be repeated for each.
 
-## Step 1. [Sign up](https://console.spotinst.com/spt/auth/signUp) with Spot.  
+## Step 1. Sign up with Spot
 
-## Step 2. [Connect your Master Payer](https://docs.spot.io/cloud-analyzer/getting-started/connect-your-aws-master-payer-account-existing-customer).
-1. Wait up to 48 hours for data generation. After that, Cloud Analyzer and a minimal, ECO dashboard will be available to you.
-2. For full ECO, schedule a strategy call with Spot Cost specialists
+Use the [registration procedure](https://console.spotinst.com/spt/auth/signUp) in Spot.
+
+## Step 2. Connect your Master Payer Account
+1. Complete this [procedure](https://docs.spot.io/cloud-analyzer/getting-started/connect-your-aws-master-payer-account-existing-customer).
+2. Wait up to 48 hours for data generation. After that, Cloud Analyzer and a minimal, ECO dashboard will be available to you.
+3. For full ECO, schedule a strategy call with Spot Cost specialists
    1. Convert to a paying, ECO customer by scheduling a strategy call.
    2. Four to six weeks of ‘Ramp Up’ to learn usage patterns, compare with AWS historical data, and start increasing coverage
 
