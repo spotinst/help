@@ -27,25 +27,25 @@ This process is for one MPA. If more than one MPA needs to be registered, this p
 
 #### Example Billing Workflow Name 1:
 
-         1. Replace RI Discount with Public on-demand price when Ris are puchased by <accountID>
-         2. Replace Savings Plan Discount  with Public on-demand price when Ris are puchased by <accountID>
-         3. Remove EDP Discount so it is not shared with customer
-         4. Uplift the price of all services by 3%
+       1. Replace RI Discount with Public on-demand price when Ris are puchased by <accountID>
+       2. Replace Savings Plan Discount  with Public on-demand price when Ris are puchased by <accountID>
+       3. Remove EDP Discount so it is not shared with customer
+       4. Uplift the price of all services by 3%
 
 #### Example Billing Workflow Name 2:
 
-         1. Replace RI Discount with public on-demand price when Ris are purchased by any account
-         2. Replace free tier usage with the first, billable rate
-         3. Discount <serviceName> by 2% when the usage occurs on Tuesdays in any US-East data center in the summer months of an odd-numbered year.  (Yes, this is an absurd example, but the point is that you may have billing rules in mind which we may never have dreamed of.)  
+       1. Replace RI Discount with public on-demand price when Ris are purchased by any account
+       2. Replace free tier usage with the first, billable rate
+       3. Discount <serviceName> by 2% when the usage occurs on Tuesdays in any US-East data center in the summer months of an odd-numbered year.  (Yes, this is an absurd example, but the point is that you may have billing rules in mind which we may never have dreamed of.)  
 
-   3. Associate Billing Workflows to Subsets. If you are comfortable with it, you may include this information with step four.  
-      1. Update your table with Subset Names and Billing Workflow Names 
-      2. Allow us approximately a week to configure this. We will ask for your review and approval.
+     3. Associate Billing Workflows to Subsets. If you are comfortable with it, you may include this information with step four.  
+        1. Update your table with Subset Names and Billing Workflow Names 
+        2. Allow us approximately a week to configure this. We will ask for your review and approval.
 
 <img src="/design-documents/_media/msp-enrollment-02.png" width="464" height="114" />
 
-   4. End Customer Association. Begin the process of [setting up your End Customer console](https://console.spotinst.com/spt/auth/signUp) by creating a distinct, Spot Organization for each End Customer.
-      1. Update the spreadsheet with the Spot Console email and the SPOT org ID. You can locate the org ID by clicking the "user" icon in the upper right-hand corner of the Spot console while logged into the org and then click "My Organization."
-      2. Allow us approximately a week to configure this. We will ask for your review and approval.
+     4. End Customer Association. Begin the process of [setting up your End Customer console](https://console.spotinst.com/spt/auth/signUp) by creating a distinct, Spot Organization for each End Customer.
+        1. Update the spreadsheet with the Spot Console email and the SPOT org ID. You can locate the org ID by clicking the "user" icon in the upper right-hand corner of the Spot console while logged into the org and then click "My Organization."
+        2. Allow us approximately a week to configure this. We will ask for your review and approval.
 
 <img src="/design-documents/_media/msp-enrollment-03.png" width="517" height="115" />
