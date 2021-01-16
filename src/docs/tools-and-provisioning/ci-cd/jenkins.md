@@ -2,24 +2,53 @@
 
 ## Run Jenkins with the Spot Plugin
 
-The Spot Jenkins plug-in enables you to run a lower powered Jenkins server and spin up Jenkins agents as needed while saving up to 80% of your compute costs. Agent-instances are scaled in an Elastigroup to match the number of jobs to be completed.
+The Spot Jenkins plugin enables you to run a lower powered Jenkins server and spin up Jenkins agents as needed while saving up to 90% on compute costs. Agent-instances are scaled in an Elastigroup to match the demand for jobs to be completed. Spot's Jenkins plugin supports AWS Spot instances, GCP preemptible instances, and Azure Spot VMs.
 
-Jenkins is an open-source continuous integration software tool for testing and reporting on isolated changes in a larger code base. Jenkins enables developers to find and solve defects in a code base rapidly and to automate testing of their builds. Jenkins has a `master/agent` mode, where the workload of building projects are delegated to multiple `agent` nodes, allowing a single Jenkins installation to host a large number of projects, or to provide different environments needed for builds/tests. This document describes this mode and how it's used with the Spot Plugin to provide compute at 80% off of the standard cost.
+Jenkins is an open-source continuous integration software tool for testing and reporting on isolated changes in a larger code base. Jenkins enables developers to find and solve defects in a code base rapidly and to automate testing of their builds. Jenkins has a `controller/agent` (formerly `master/slave`) mode, where the workload of building projects are delegated to multiple `agent` nodes, allowing a single Jenkins installation to host a large number of projects, or to provide different environments needed for builds/tests.
 
-## How It Works
+## How it Works: High Level Overview
 
 <img src="/tools-and-provisioning/_media/Jenkins_1.png" />
 
-The Spot Jenkins plug-in (1) automatically scales instances up & down based on the number of jobs in its queue. Nodes are (2) provisioned across multiple instance types and AZs to optimize savings while still guaranteeing availability. The nodes that are provisioned (3) run a startup script to connect as agent nodes to the Master/Controller and immediately start running jobs.
+The Spot Jenkins plug-in (1) automatically scales instances up & down based on the number of jobs in its queue. Nodes are (2) provisioned across multiple instance types and AZs to optimize savings while still guaranteeing availability. The nodes provisioned (3) run a startup script to connect as agent nodes to the controller node and immediately start running jobs.
 
-## Step 1: Generate a Spot API Access Token
+## Common Setup Steps
 
-1. Login to the [Spot Console](https://console.spotinst.com/spt/auth/signIn) and then go to Settings >> API >> [Permanent Token](https://console.spotinst.com/spt/auth/signIn).
-2. Generate a permanent API access token, then save it for later use in the Jenkins configuration.
+The Spot Jenkins plugin supports connecting agents to the controller using the two most common methods — SSH and JNLP:
 
-## Step 2: Create an Elastigroup with a Proper Startup Script
+1. SSH: In this mode, the controller initiates the connection with agents via SSH.
+2. JNLP: In this mode, the launched agents use a custom startup-script and initiate the connection to the controller via JNLP (Java Network Launch Protocol).
 
-### Jenkins on AWS
+The Elastigroup/plugin setup for each one of the modes differs, but there are some common steps:
+
+### Step 1: Generate a Spot API Access Token
+
+1. Login to the [Spot Console](https://console.spotinst.com/spt/auth/signIn) and then go to Settings -> API -> [Permanent Tokens](https://console.spotinst.com/spt/settings/tokens/permanent).
+2. Generate a permanent API access token and save it for later use in the Jenkins configuration.
+
+### Step 2: Install the Spot Plugin for Jenkins
+
+1. Login to the Jenkins console, install the Spot Plugin from the available Plugins list.
+2. After installing the plugin, Restart Jenkins.
+3. Navigate to `Manage Jenkins` -> `Configure System`, scroll down to the Spot section and add the API Token generated in Step 1, alongside an appropriate Account ID (will be used as a global Account ID in case no Account ID is specified for a Cloud added in the next step).
+4. Click on `Validate Token` to ensure that the token is valid.
+
+<img src="/tools-and-provisioning/_media/Jenkins_4.png" />
+
+### Choose Conneciton Method
+
+To be taken to the right configuration-steps, choose how you'd like your Spot agents to connect:
+
+- [SSH](#ssh-setup)
+- [JNLP](#jnlp-setup)
+
+## SSH Setup
+
+## JNLP Setup
+
+### Step 3: Create an Elastigroup with a Proper Startup Script
+
+#### Jenkins on AWS
 
 Create an Elastigroup with your preferred Region, AMI, and Instance Types. In the General tab under Advanced set the Capacity Unit to _vCPU_.
 
@@ -114,7 +143,7 @@ Start-Process -FilePath 'C:\Program Files\Java\jre1.8.0_151\bin\java' -ArgumentL
 </powershell>
 ````
 
-### Jenkins on GCP
+#### Jenkins on GCP
 
 Create an Elastigroup, with the desired instance types, region and other configurations for the Jenkins agents. In the Compute tab, under Startup Script add the following.
 
@@ -178,7 +207,7 @@ JENKINS_SLAVE_SECRET="$(curl -L -s -u user:password/token -X GET http://${JENKIN
 java -jar /tmp/slave.jar -secret ${JENKINS_SLAVE_SECRET} -jnlpUrl http://${JENKINS_MASTER_IP}/computer/${EC2_INSTANCE_ID}/slave-agent.jnlp &
 ```
 
-### Jenkins on Azure
+#### Jenkins on Azure
 
 Create an Elastigroup, with the desired VM types, region and other configurations for the Jenkins agents. In the Compute tab, under Additional Configurations add the following user-data.
 
@@ -223,24 +252,18 @@ sudo echo "Connecting Jenkins agent to main node"
 sudo java -jar /tmp/slave.jar -secret ${JENKINS_AGENT_SECRET} -jnlpUrl http://${JENKINS_MASTER_IP}/computer/${INSTANCE_ID}/slave-agent.jnlp &
 ```
 
-## Step 3: Change the Default Agent Connection Port
+### Step 4: Change the Default Agent Connection Port
 
-The Agent – Master connection is based on the JNLP protocol.
-By default, the agents try to connect on a random JNLP port. Therefore, the firewall rules need to be reconfigured in order to allow all ports to be open to ensure successful communications from Agent to Master.
+The agent-controller connection is based on the JNLP protocol. By default, the agents try to connect on a random JNLP port. Therefore, the firewall rules need to be reconfigured in order to allow all ports to be open and ensure successful communications from agents to the controller.
 
-1. To configure a fixed JNLP port for the Jenkins agents, navigate to Manage Jenkins >> Global Security >> Agents and set a static TCP port for JNLP agents.
+1. To configure a fixed JNLP port for the Jenkins agents, navigate to `Manage Jenkins` -> `Global Security` -> `Agents` and set a static TCP port for JNLP agents.
 2. Configure the network to be available exclusively for this port.
 
 <img src="/tools-and-provisioning/_media/Jenkins_3.png" />
 
-## Step 4: Install the Spot Plugin for Jenkins
+### Step 5: Configure a Cloud
 
-1. Login to the Jenkins console, install the Spot Plugin from the available Plugins list.
-2. After installing the plugin, Restart Jenkins.
-3. Navigate to Manage Jenkins >> Configure System, scroll down to the Spot section and add the API Token generated in Step 1, along with an appropriate Account ID (will be used as a global Account ID in case no Account ID is specified for every cloud added in the next step).
-4. Click on Validate Token to ensure that the token is valid.
-
-<img src="/tools-and-provisioning/_media/Jenkins_4.png" />
+<!-- TODO shibel: no scroll down -->
 
 Once the Spot Token is set, scroll down towards the bottom to the `Cloud` section. Click on Add a new cloud and select the cloud provider connected to the Spot account being used (you can more than one cloud, each specifying it's own Elastigroup and Account IDs).
 
@@ -248,10 +271,10 @@ There should now be more fields to choose from. For more information on each fie
 
 <img src="/tools-and-provisioning/_media/Jenkins_5.png" />
 
-## Configuration Notes
+That's all! From now on, the Jenkins controller will automatically launch new instances with the Spot plugin and terminate them according to your configuration.
 
-- As noted in Step 4, Jenkins must be restarted after installing the Spot plugin.
+## Important Configuration Notes
+
+- Jenkins must be restarted after installing the Spot plugin.
 - The connection between the Jenkins' agents and Master is vital, make sure that this connection is working properly.
 - Executors per instance- By default, the number of executors per agent (the number of parallel jobs that a node can run) is based in the number of vCpu of the instance. You can override this configuration by setting the Instance type weight. For each instance type that you define in the Elastigroup, add the desired number of executors.
-
-That's all! From now on, the Jenkins Master will automatically launch new instances through the Spot API, and will terminate them as they get unused.
