@@ -24,14 +24,14 @@ Use the [registration procedure](https://console.spotinst.com/spt/auth/signUp) i
 ### Subsets Capability
 
 For "Subsets" capabilities (the ability to create groupings of customer accounts), wait until your data appears as expected then contact your account representative and ben.swoboda@netapp.com to request access to the feature. Include the accountIDs and the name of associated subset in your request.
-   * If you want more than just Subsets and wish to also process custom billing rules, skip to “Set up your billing workflows".
+   * If you want more than just Subsets and wish to also process custom billing rules, skip to “Set up your Billing Workflows".
    * If you just want Subsets but no billing rules, send this information with your request:
      * The Account ID of your MPA.
      * The following table in .csv or .xlsx format. 
 
 <img src="/design-documents/_media/msp-enrollment-01.png" width="321" height="114" />
 
-### Set up your billing workflows
+### Set up your Billing Workflows
 
 Let us know about the customer billing workflows you offer and the order in which you process billing. You may have one or more sets of billing workflows.  
 
