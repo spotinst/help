@@ -1,10 +1,10 @@
 # MSP Enrollment
 
-DRAFT VERSION
+BETA RELEASE
 
 There are several use cases for MSP enrollment. This use case is for AWS MSPs with administrative access to their MPA.  
 
-Thank you for your patience during this "design partner" phase. Some of the enrollment steps are manual. We are actively working to make this process a streamlined, self-service experience for future users.  
+Thank you for your patience during this "beta" phase. Some of the enrollment steps are manual. We are actively working to make this process a streamlined, self-service experience for future users.  
 
 This procedure is for one MPA. If more than one MPA needs to be registered, this process will need to be repeated for each.
 
@@ -24,7 +24,7 @@ Use the [registration procedure](https://console.spotinst.com/spt/auth/signUp) i
 ### Subsets Capability
 
 For "Subsets" capabilities (the ability to create groupings of customer accounts), wait until your data appears as expected then contact your account representative and ben.swoboda@netapp.com to request access to the feature. Include the accountIDs and the name of associated subset in your request.
-   * If you want more than just Subsets and wish to also process custom billing rules, skip to step 4.b.
+   * If you want more than just Subsets and wish to also process custom billing rules, skip to “Set up your billing workflows".
    * If you just want Subsets but no billing rules, send this information with your request:
      * The Account ID of your MPA.
      * The following table in .csv or .xlsx format. 
@@ -46,11 +46,11 @@ Example Billing Workflow Name 2:
 
 1. Replace RI Discount with public on-demand price when Ris are purchased by any account
 2. Replace free tier usage with the first, billable rate
-3. Discount <serviceName> by 2% when the usage occurs on Tuesdays in any US-East data center in the summer months of an odd-numbered year.  (Yes, this is an absurd example, but the point is that you may have billing rules in mind which we may never have dreamed of.)  
+3. Discount <serviceName> by 2% when the usage occurs on Tuesdays in any US-East data center in the summer months of an odd-numbered year.  (You may have billing rules in mind which we may have never dreamed of.)  
 
 ### Associate Billing Workflows to Subsets
 
-If you are comfortable with it, you may include this information with step four.  
+If you are comfortable with it, you may include this information with previous steps.  
 
 1. Update your table with Subset Names and Billing Workflow Names
 
