@@ -2,7 +2,7 @@
 
 ## Run Jenkins with the Spot Plugin
 
-The Spot Jenkins plugin enables you to run a lower powered Jenkins server and spin up Jenkins agents as needed while saving up to 90% on compute costs. Agent-instances are scaled in an Elastigroup to match the demand for jobs to be completed. Spot's Jenkins plugin supports AWS Spot instances, GCP preemptible instances, and Azure Spot VMs.
+The Spot Jenkins plugin enables you to run a lower powered Jenkins server (controller) and spin up Jenkins agents as needed while saving up to 90% on compute costs. Agent-instances are scaled in an Elastigroup to match the demand for jobs to be completed. Spot's Jenkins plugin supports AWS Spot instances, GCP preemptible instances, and Azure Spot VMs.
 
 Jenkins is an open-source continuous integration software tool for testing and reporting on isolated changes in a larger code base. Jenkins enables developers to find and solve defects in a code base rapidly and to automate testing of their builds. Jenkins has a `controller/agent` (formerly `master/slave`) mode, where the workload of building projects are delegated to multiple `agent` nodes, allowing a single Jenkins installation to host a large number of projects, or to provide different environments needed for builds/tests.
 
@@ -14,23 +14,23 @@ The Spot Jenkins plug-in (1) automatically scales instances up & down based on t
 
 ## Common Setup Steps
 
-The Spot Jenkins plugin supports connecting agents to the controller using the two most common methods — SSH and JNLP:
+The Spot Jenkins plugin supports connecting agents to the controller using the two most common methods:
 
 1. SSH: In this mode, the controller initiates the connection with agents via SSH.
-2. JNLP: In this mode, the launched agents use a custom startup-script and initiate the connection to the controller via JNLP (Java Network Launch Protocol).
+2. JNLP: In this mode, the launched agents use a custom startup-script to initiate the connection to the controller via JNLP (Java Network Launch Protocol).
 
-The Elastigroup/plugin setup for each one of the modes differs, but there are some common steps:
+The Elastigroup/plugin setup for each one of the modes is different; here are the common setup steps:
 
 ### Step 1: Generate a Spot API Access Token
 
-1. Login to the [Spot Console](https://console.spotinst.com/spt/auth/signIn) and then go to Settings -> API -> [Permanent Tokens](https://console.spotinst.com/spt/settings/tokens/permanent).
+1. Login to the [Spot Console](https://console.spotinst.com/spt/auth/signIn) and then go to Settings &rarr; API &rarr; [Permanent Tokens](https://console.spotinst.com/spt/settings/tokens/permanent).
 2. Generate a permanent API access token and save it for later use in the Jenkins configuration.
 
 ### Step 2: Install the Spot Plugin for Jenkins
 
-1. Login to the Jenkins console, install the Spot Plugin from the available Plugins list.
+1. Log in to the Jenkins console and install the Spot Plugin from the available Plugins list.
 2. After installing the plugin, Restart Jenkins.
-3. Navigate to `Manage Jenkins` -> `Configure System`, scroll down to the Spot section and add the API Token generated in Step 1, alongside an appropriate Account ID (will be used as a global Account ID in case no Account ID is specified for a Cloud added in the next step).
+3. Navigate to `Manage Jenkins` &rarr; `Configure System`, scroll down to the Spot section and add the API Token generated in Step 1, alongside an appropriate Account ID - this will be the default account ID in case no Account ID is specified for a specific Cloud (detailed in the next steps).
 4. Click on `Validate Token` to ensure that the token is valid.
 
 <img src="/tools-and-provisioning/_media/Jenkins_4.png" />
@@ -43,6 +43,69 @@ To be taken to the right configuration-steps, choose how you'd like your Spot ag
 - [JNLP](#jnlp-setup)
 
 ## SSH Setup
+
+### Step 3: Obtain/Generate a valid SSH Key-Pair
+
+Either obtain or generate a valid SSH key-pair; in this section we'll assume no such key-pair exists. You may generate a pair with the following command:
+
+```
+ssh-keygen -t rsa -f “jenkinsSSH”
+```
+
+You can keep the passphrase blank as your agents will be launched programmatically, or you can choose to utilize a passphrase and have Jenkins fill it for you (see credentials section below).
+
+The output will be two files, one is your public key (`jenkinsSSH.pub`), and the other is the private key (`jenkinsSSH`).
+
+It's a good idea to adjust permissions on the generated files to avoid "permissions too open" errors:
+
+```
+chmod 400 jenkinsSSH
+chmod 644 jenkinsSSH.pub
+```
+
+### Step 4: Create an Elastigroup with a Proper Startup Script
+
+Create an Elastigroup with the desired instance types, region and other configurations for the Jenkins agents.
+
+The configuration of your Elastigroup startup-script (`Compute` &rarr; `Additional Configurations` &rarr; `User Data`) will depened on the Host-Key Verification Strategy that you will use in Jenkins for establishing trust between your Jenkins controller and the agents. You can read more about host-key verification strategies [here](https://support.cloudbees.com/hc/en-us/articles/115000073552-Host-Key-Verification-for-SSH-Agents) but this guide assumes that `Manually trusted key Verification Strategy` is used. The following section will detail where this setting is found in the Jenkins Clouds section.
+
+The following startup-script is for EC2 Amazon Linux instances, but you can easily adjust it for Azure Spot VMs and GCP:
+
+```bash
+#!/bin/bash
+SSH_PUBLIC_KEY="**COPY CONTENTS OF PUBLIC KEY (jenkinsSSH.pub) HERE**"
+
+echo "Beginning Spot Startup Script"
+echo "Copying SSH Keys"
+echo $SSH_PUBLIC_KEY >> /home/ec2-user/.ssh/authorized_keys
+echo "Setting permissions for SSH folder and files"
+chmod 700 /home/ec2-user/.ssh
+chmod 600 /home/ec2-user/.ssh/authorized_keys
+# make sure remote working directory exists, and connecting user has write permissions
+sudo mkdir /var/jenkins/
+sudo chown -R ec2-user /var/jenkins/
+
+sudo echo "Installing Java"
+sudo yum install java-1.8.0 -y
+```
+
+### Step 5: Configure a Cloud
+
+After your Elastigroup has been created, head to the `Clouds` section in Jenkins: `Manage Jenkins` &rarr; `Configure Nodes and Clouds` &rarr; `Configure Clouds` in the left pane. In this example, we'll choose to create an AWS Spot Elastigroup Cloud:
+
+<img src="/tools-and-provisioning/_media/jenkins-ssh-setup.png" />
+
+For more information on each field hover over the information button on the right side of it. Specify the Elastigroup ID for the Elastigroup created in Step 4, the appropriate Account ID associated with that Elastigroup, and idle minutes before termination to determine how long the Spot plugin should wait before terminating an idle instance. Fill all other options you'd like to utilize.
+
+As described in the screenshot, setting the Remote Root Directory is a must for SSH clouds. Note that the path in the example (`/var/jenkins`) matches the one we assign to the user (`ec2-user`) in the startup-script in the previous section.
+
+If you haven't configured the needed credentials yet, you can use the `Add` button near the credentials dropdown:
+
+<img src="/tools-and-provisioning/_media/jenkins-ssh-credentials.png" />
+
+Notice that the username (`ec2-user`) must be an existing user in the agent machine.
+
+That's all! From now on, the Jenkins controller will automatically launch new instances with the Spot plugin and terminate them according to your configuration.
 
 ## JNLP Setup
 
@@ -109,7 +172,7 @@ remove_deps "java-1.7.0-openjdk"
 
 # Get EC2 instance id
 EC2_INSTANCE_ID="$(curl http://169.254.169.254/latest/meta-data/instance-id)"
-# Set Jenkins master ip
+# Set Jenkins controller ip
 JENKINS_MASTER_IP="IP:PORT"
 # Get The Jenkins agent JAR file
 curl http://${JENKINS_MASTER_IP}/jnlpJars/slave.jar --output /tmp/slave.jar
@@ -132,7 +195,7 @@ For optimal performance, we recommend using the Amazon Standard AMI (CentOS base
 ````powershell
 <powershell>
 $EC2_INSTANCE_ID = Invoke-RestMethod -uri http://169.254.169.254/latest/meta-data/instance-id
-$JENKINS_MASTER_IP = `JenkinsMaster:port`
+$JENKINS_MASTER_IP = `JenkinsController:port`
 #Install java
 Invoke-RestMethod -uri http://javadl.oracle.com/webapps/download/AutoDL?BundleId=227552_e758a0de34e24606bca991d704f6dcbf -OutFile jre_install.exe
 Start-Process 'jre_install.exe' -ArgumentList '/s' -Wait
@@ -198,7 +261,7 @@ remove_deps "java-1.7.0-openjdk"
 
 # Get EC2 instance id
 EC2_INSTANCE_ID="$(curl http://169.254.169.254/latest/meta-data/instance-id)"
-# Set Jenkins master ip
+# Set Jenkins controller ip
 JENKINS_MASTER_IP="IP:PORT"
 # Get The Jenkins agent JAR file
 curl http://${JENKINS_MASTER_IP}/jnlpJars/slave.jar --output /tmp/slave.jar
@@ -256,18 +319,16 @@ sudo java -jar /tmp/slave.jar -secret ${JENKINS_AGENT_SECRET} -jnlpUrl http://${
 
 The agent-controller connection is based on the JNLP protocol. By default, the agents try to connect on a random JNLP port. Therefore, the firewall rules need to be reconfigured in order to allow all ports to be open and ensure successful communications from agents to the controller.
 
-1. To configure a fixed JNLP port for the Jenkins agents, navigate to `Manage Jenkins` -> `Global Security` -> `Agents` and set a static TCP port for JNLP agents.
+1. To configure a fixed JNLP port for the Jenkins agents, navigate to `Manage Jenkins` &rarr; `Global Security` &rarr; `Agents` and set a static TCP port for JNLP agents.
 2. Configure the network to be available exclusively for this port.
 
 <img src="/tools-and-provisioning/_media/Jenkins_3.png" />
 
 ### Step 5: Configure a Cloud
 
-<!-- TODO shibel: no scroll down -->
+Go to `Manage Jenkins` &rarr; `Configure Nodes and Clouds` and then `Configure Clouds` in the left pane. Click on Add a new cloud and select the cloud provider connected to the Spot account being used (you can more than one cloud, each specifying its own Elastigroup and Account IDs).
 
-Once the Spot Token is set, scroll down towards the bottom to the `Cloud` section. Click on Add a new cloud and select the cloud provider connected to the Spot account being used (you can more than one cloud, each specifying it's own Elastigroup and Account IDs).
-
-There should now be more fields to choose from. For more information on each field hover over the information button on the right side of each field. Specify the Elastigroup ID for the Elastigroup created in Step 2, the appropriate Account ID associated with that Elastigroup and Idle Minutes Before Termination to determine how long Elastigroup should wait before terminating an idle instance.
+There should now be more fields to choose from. For more information on each field hover over the information button on the right side of each field. Specify the Elastigroup ID for the Elastigroup created in Step 3, the appropriate Account ID associated with that Elastigroup and Idle Minutes Before Termination to determine how long Elastigroup should wait before terminating an idle instance.
 
 <img src="/tools-and-provisioning/_media/Jenkins_5.png" />
 
@@ -276,5 +337,5 @@ That's all! From now on, the Jenkins controller will automatically launch new in
 ## Important Configuration Notes
 
 - Jenkins must be restarted after installing the Spot plugin.
-- The connection between the Jenkins' agents and Master is vital, make sure that this connection is working properly.
+- The connection between the Jenkins' agents and controller is vital, make sure that this connection is working properly.
 - Executors per instance- By default, the number of executors per agent (the number of parallel jobs that a node can run) is based in the number of vCpu of the instance. You can override this configuration by setting the Instance type weight. For each instance type that you define in the Elastigroup, add the desired number of executors.
