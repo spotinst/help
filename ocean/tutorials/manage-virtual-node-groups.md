@@ -48,7 +48,6 @@ This section enables you to inform Ocean about the labels and taints that are se
 - Node [Taints](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/): Triplets of Key, Value, and Effect defined on the Kubernetes nodes.
 
 ---
-
 **Tip**: Be sure to label your instances according to your label selection:
 For Kubernetes user data, see [Create Custom Labels](https://docs.spot.io/ocean/tutorials/create-custom-labels).
 
@@ -166,6 +165,16 @@ To see the configuration details of a VNG, click on the Name of the VNG.
 
 1. To edit the configuration of a VNG, go to the Virtual Node Groups tab and click on the Name of the VNG.
 2. Make the required changes in the configuration and click Save.
+
+### Edit in JSON Format
+
+In the console, you can also review and edit the configuration directly in JSON format. This provides more flexibility and enables you to utilize VNG features that are supported in the API without leaving the Ocean console. (These are usually new features that have been implemented in the API, but are not yet accessible in the UI.)
+1. To review and edit a VNG in JSON format, go to the Virtual Node Groups tab and click on the Name of the VNG.
+2. Click JSON on the upper right.
+
+<img src="/ocean/_media/tutorials-manage-vngs-07.png" />
+
+In this view, you can see the full JSON configuration of the VNG. If you would like to edit the JSON, just click Edit Mode, make your changes, and click Save.
 
 ## Delete a VNG
 
