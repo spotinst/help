@@ -9,10 +9,10 @@ Each Simple Scaling Policy has the following set of parameters:
 - Policy Name: The name to assign to the policy. It's recommended using a meaningful name to help you understand scaling actions better in the future.
 - Source: The scaling policy can utilize metrics from either AWS CloudWatch or Spot Spectrum.
 - Auto Scale Based On: The metric used to trigger the policy's scaling action. Available options:
-  - `EC2` – CPU Utilization
-  - `ELB` – Latency
-  - `EC2` – Network Out
-  - `Other` (used for custom metrics)
+  - EC2 – CPU Utilization
+  - ELB – Latency
+  - EC2 – Network Out
+  - Other - (used for custom metrics)
 - Threshold: The numerical value used to set the point of scaling.
 - Action Type: The action to take when the trigger defined under Auto Scale Based On is met. Available options:
   - Set Capacity Range: Set a new Target-Minimum-Maximum configuration for the Elastigroup.
@@ -30,13 +30,13 @@ Each Simple Scaling Policy has the following set of parameters:
 ## Advanced Parameters
 
 - Statistic: The type of statistic you will utilize. Options are:
-  - `average`
-  - `maximum`
-  - `minimum`
-  - `sampleCount`
-  - `sum`
+  - average
+  - maximu
+  - minimum`
+  - sampleCount
+  - sum
 - Operator: Setting the relation between the threshold and the sampled value.
-  For / Period: The length of time to collect and evaluate the metric. Sets the length of a single period, and the amount of periods.
+- For / Period: The length of time to collect and evaluate the metric. Sets the length of a single period, and the amount of periods.
 - Cooldown: The time (in seconds) that any new scaling activities for this scaling policy will be suspended after the scaling policy is triggered. For example, if scaling policy A has Cooldown set to 60 sec. and a scale-down is triggered, then no new scale down will start due to policy A for the next minute. (However, this does not prevent a scale down action from starting on a different policy.)
 
-> The consecutive periods setting directly affects the responsiveness of your scaling policy. The threshold must be crossed consistently for the entire duration of the number of consecutive periods for the policy to take effect.
+> The Consecutive Periods setting directly affects the responsiveness of your scaling policy. The threshold must be crossed consistently for the entire duration of the number of consecutive periods for the policy to take effect.
