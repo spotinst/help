@@ -1522,6 +1522,9 @@ export const aliases = (() => {
 
     "/account-user-management/user-management/access-policies/":
       "/administration/access-policies/",
+
+    "/container-management/kubernetes/kops/1_12/instance-groups/":
+      "/ocean/tools-and-integrations/kops/metadata-labels",
   };
 
   for (let [key, value] of Object.entries(map)) {
