@@ -1,6 +1,6 @@
 # Spot Kubernetes Controller
 
-The Spot Controller is a pod that resides within your Kubernetes cluster, enabling the integration with the Spot platform. The Controller collects metrics and events that are pushed via a secured link to the Spot SaaS platform to support capacity scaling activities and other functions of the Spot Kubernetes integration.
+The Spot Controller is a pod that resides within your Kubernetes cluster, enabling the integration with the Spot platform. The Controller collects metrics and events that are pushed via a secured link to the Spot SaaS platform to support capacity scaling activities and other functions of the Spot Kubernetes integration. The Spot Controller is able to run on ARM64 as well as x86 based architectures.
 
 There are several ways to install the Controller. Choose one of the procedures below:
 
