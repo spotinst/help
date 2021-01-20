@@ -631,6 +631,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/features/core-features/diagram-revert-from-on-demand-to-spot-instance"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/elastigroup/features/core-features/elastigroup-capacity-instances-or-weighted-a</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/features/core-features/elastigroup-capacity-instances-or-weighted-a"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/features/core-features/elastigroup-capacity-instances-or-weighted-a"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/elastigroup/features/core-features/elastigroup-capacity-instances-or-weighted</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
@@ -664,6 +671,13 @@
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/features/core-features/maintenance-windows"/>
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/features/core-features/maintenance-windows"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/elastigroup/features/core-features/market-scoring-managing-interruptions-a</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/features/core-features/market-scoring-managing-interruptions-a"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/features/core-features/market-scoring-managing-interruptions-a"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/elastigroup/features/core-features/market-scoring-managing-interruptions</loc>
