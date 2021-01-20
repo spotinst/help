@@ -23,5 +23,3 @@ Elastigroup continuously monitors spot markets to identify available markets for
 ## Spot Market Scoring
 
 Spot markets are defined as the supply and demand for a specific instance type, at a specific spot price in a specific Availability Zone, for a specific product (Linux/Windows). Spot markets are ranked by Elastigroup based on real-time and historical data on availability and cost, enabling Elastigroup to predict interruptions to instances in a market up to an hour in advance during peak business hours. This advance notification on upcoming interruptions is what triggers the spot instance replacement and ensures the continuous availability of your workloads.
-
-Our updated algorithms for Predictive Rebalancing can accurately predict and replace spot instances, with an 85% level of accuracy, up to an hour ahead of an interruption during peak business hours.
