@@ -4,7 +4,7 @@
 
 Added
 
-- Support multi arch builds
+- Support for multiple architectures, such as ARM64
 - Set 'dnsPolicy: Default' on Deployment.yaml
 
 ## [1.0.69] - 2020-12-15
