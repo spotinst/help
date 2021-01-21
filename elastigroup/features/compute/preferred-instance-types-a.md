@@ -16,7 +16,7 @@ In cases that any of the preferred types are not available, Elastigroup will use
 ## Step 2: Select your Preferred Instance Types
 
 1. In the Predictive Rebalancing tab, scroll down to Instance Availability.
-2. Under Additional Configurations, the Preferred Spot Types combo box will now be populated with your allowed spot types. Mark your preferred types in this list.
+2. The Preferred Spot Types combo box will now be populated with your allowed spot types. Mark your preferred types in this list.
 
 <img src="/elastigroup/_media/compute-preferred-instance-types-02.png" />
 
