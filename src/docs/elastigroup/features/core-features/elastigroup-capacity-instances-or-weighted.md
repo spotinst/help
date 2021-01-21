@@ -22,6 +22,7 @@ Elastigroup calculates the number of instances to launch by dividing the target 
 You can now run, scale and manage heterogeneous clusters with ease.
 
 ---
+
 **Tip**: Using weighted `vCPU` capacity units is not supported for Autoscaler enabled Elastigroups (e.g., Kubernetes, ECS, Nomad).
 
 ---
