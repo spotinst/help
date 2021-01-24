@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Elastigroup Capacity: Instances or Weighted
 
 Each Elastigroup has a dedicated setting to control the group Capacity. The Capacity of the group provides the option to control the minimal, maximal and the target numerical value representing the number of instances in the group. The amount can be a direct number of instances or a weighted representation of vCPUs.

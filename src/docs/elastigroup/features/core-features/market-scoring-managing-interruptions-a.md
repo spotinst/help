@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Market Scoring & Managing Interruptions
 
 This article explains how Elastigroup manages the replacement of instances in spot markets with predicted interruptions to ensure that your workloads remain available, as well as how Elastigroup handles the process of ranking (scoring) spot instance markets.
