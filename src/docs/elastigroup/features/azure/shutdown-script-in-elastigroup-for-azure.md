@@ -47,8 +47,4 @@ Example of shutdown script:
 - Shutdown scripts are executed as the root user, sudo is not required in the script. Remember that any files you create will be owned by root. For non-root permissions to files, modify permissions accordingly.
 - Shutdown script doesn't run interactively, you cannot include commands that require user feedback (such as rm without the -f flag).
 
----
-
-**Tip**: It is recommended to define at least 120 seconds as the Draining Timeout under Elastigroup -> Edit -> General -> Advanced.
-
----
+> **Tip**: It is recommended to define at least 120 seconds as the Draining Timeout under Elastigroup -> Edit -> General -> Advanced.
