@@ -9,11 +9,7 @@ In order to allow Spot to manage GCP resources, it is necessary to authenticate 
 
 3. Choose one of the methods to connect your account, manual or automatic (via gcloud).
 
----
-
-**Tip**: In order for the connection with your GCP project to work, the Identity and Access Management (IAM) API should be enabled for the project. You may refer to [Enabling and Disabling Services](https://cloud.google.com/service-usage/docs/enable-disable) by Google Cloud to enable the IAM API for your project.
-
----
+> **Tip**: In order for the connection with your GCP project to work, the Identity and Access Management (IAM) API should be enabled for the project. You may refer to [Enabling and Disabling Services](https://cloud.google.com/service-usage/docs/enable-disable) by Google Cloud to enable the IAM API for your project.
 
 ## Manual Method
 

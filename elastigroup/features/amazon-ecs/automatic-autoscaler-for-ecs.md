@@ -22,11 +22,7 @@ Elastigroup monitors the Cluster and runs bin-packing algorithms that simulate d
 
 When an instance is chosen for scale-down it will be drained. Its running tasks are rescheduled on other instances, and the instance is then terminated.
 
----
-
-**Tip**: Scale-Down actions are limited to 10% of the cluster size at a time.
-
----
+> **Tip**: Scale-Down actions are limited to 10% of the cluster size at a time.
 
 ## Labels and Constraints
 

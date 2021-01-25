@@ -6,11 +6,7 @@ To reset your password, click this link: [Reset Password](https://console.spotin
 
 <img src="/administration/_media/set-password-01.png" />
 
----
-
-**Tip**: SAML or SSO users who want to create an API Token will have to reset their password first.
-
----
+> **Tip**: SAML or SSO users who want to create an API Token will have to reset their password first.
 
 Your password must have at least eight characters and contain:
 
