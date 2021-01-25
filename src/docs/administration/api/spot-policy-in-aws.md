@@ -47,11 +47,12 @@ For additional information, see: [Update the Spot Policy](elastigroup/tutorials/
         "ec2:CreateReservedInstancesListing",
         "ec2:CancelReservedInstancesListing",
         "ec2:ModifyNetworkInterfaceAttribute",
-        "ec2:DeleteNetworkInterface",
-        "iam:SimulatePrincipalPolicy"
+        "ec2:DeleteNetworkInterface"
       ],
       "Effect": "Allow",
-      "Resource": ["*"]
+      "Resource": [
+        "*"
+      ]
     },
     {
       "Sid": "AccessELB",
@@ -62,10 +63,13 @@ For additional information, see: [Update the Spot Policy](elastigroup/tutorials/
         "elasticloadbalancing:RemoveTags",
         "elasticloadbalancing:RegisterTargets",
         "elasticloadbalancing:EnableAvailabilityZonesForLoadBalancer",
-        "elasticloadbalancing:DisableAvailabilityZonesForLoadBalancer"
+        "elasticloadbalancing:DisableAvailabilityZonesForLoadBalancer",
+        "elasticloadbalancing:DescribeTags"
       ],
       "Effect": "Allow",
-      "Resource": ["*"]
+      "Resource": [
+        "*"
+      ]
     },
     {
       "Sid": "AccessCloudWatch",
@@ -80,7 +84,9 @@ For additional information, see: [Update the Spot Policy](elastigroup/tutorials/
         "cloudwatch:PutMetricAlarm"
       ],
       "Effect": "Allow",
-      "Resource": ["*"]
+      "Resource": [
+        "*"
+      ]
     },
     {
       "Sid": "AccessSNS",
@@ -93,7 +99,9 @@ For additional information, see: [Update the Spot Policy](elastigroup/tutorials/
         "sns:Subscribe"
       ],
       "Effect": "Allow",
-      "Resource": ["*"]
+      "Resource": [
+        "*"
+      ]
     },
     {
       "Sid": "AccessIAM",
@@ -113,10 +121,13 @@ For additional information, see: [Update the Spot Policy](elastigroup/tutorials/
         "iam:PutRolePolicy",
         "iam:GetInstanceProfile",
         "iam:GetRolePolicy",
-        "iam:ListRolePolicies"
+        "iam:ListRolePolicies",
+        "iam:SimulatePrincipalPolicy"
       ],
       "Effect": "Allow",
-      "Resource": ["*"]
+      "Resource": [
+        "*"
+      ]
     },
     {
       "Sid": "GeneralAccessElaticBeanstalk",
@@ -135,28 +146,44 @@ For additional information, see: [Update the Spot Policy](elastigroup/tutorials/
         "cloudformation:UpdateStack",
         "cloudformation:DescribeStackEvents",
         "logs:PutRetentionPolicy",
-        "logs:createLogGroup"
+        "logs:createLogGroup",
+        "elasticbeanstalk:ListTagsForResource"
       ],
       "Effect": "Allow",
-      "Resource": ["*"]
+      "Resource": [
+        "*"
+      ]
     },
     {
       "Sid": "AccessAutoScalingGroups",
-      "Action": ["autoscaling:*"],
+      "Action": [
+        "autoscaling:*"
+      ],
       "Effect": "Allow",
-      "Resource": ["*"]
+      "Resource": [
+        "*"
+      ]
     },
     {
       "Sid": "AccessEks",
-      "Action": ["eks:ListClusters"],
+      "Action": [
+        "eks:ListClusters"
+      ],
       "Effect": "Allow",
-      "Resource": ["*"]
+      "Resource": [
+        "*"
+      ]
     },
     {
       "Sid": "AccessEMR",
-      "Action": ["elasticmapreduce:*", "s3:GetObject"],
+      "Action": [
+        "elasticmapreduce:*",
+        "s3:GetObject"
+      ],
       "Effect": "Allow",
-      "Resource": ["*"]
+      "Resource": [
+        "*"
+      ]
     },
     {
       "Sid": "AccessECS",
@@ -169,16 +196,24 @@ For additional information, see: [Update the Spot Policy](elastigroup/tutorials/
         "ecs:CreateService",
         "application-autoscaling:PutScalingPolicy",
         "application-autoscaling:RegisterScalableTarget",
-        "application-autoscaling:Describe*"
+        "application-autoscaling:Describe*",
+        "ecs:putAttributes"
       ],
       "Effect": "Allow",
-      "Resource": ["*"]
+      "Resource": [
+        "*"
+      ]
     },
     {
       "Sid": "AccessBatch",
-      "Action": ["batch:List*", "batch:Describe*"],
+      "Action": [
+        "batch:List*",
+        "batch:Describe*"
+      ],
       "Effect": "Allow",
-      "Resource": ["*"]
+      "Resource": [
+        "*"
+      ]
     },
     {
       "Sid": "AccessOpsWorks",
@@ -189,19 +224,31 @@ For additional information, see: [Update the Spot Policy](elastigroup/tutorials/
         "opsworks:DescribeLayers"
       ],
       "Effect": "Allow",
-      "Resource": ["*"]
+      "Resource": [
+        "*"
+      ]
     },
     {
       "Sid": "AccessCodeDeploy",
-      "Action": ["codedeploy:*"],
+      "Action": [
+        "codedeploy:*"
+      ],
       "Effect": "Allow",
-      "Resource": ["*"]
+      "Resource": [
+        "*"
+      ]
     },
     {
       "Sid": "AccessGeneralS3",
-      "Action": ["s3:GetObject", "s3:List*", "s3:GetBucketLocation"],
+      "Action": [
+        "s3:GetObject",
+        "s3:List*",
+        "s3:GetBucketLocation"
+      ],
       "Effect": "Allow",
-      "Resource": ["*"]
+      "Resource": [
+        "*"
+      ]
     },
     {
       "Sid": "AccessRoute53",
@@ -211,19 +258,19 @@ For additional information, see: [Update the Spot Policy](elastigroup/tutorials/
         "route53:ChangeResourceRecordSets"
       ],
       "Effect": "Allow",
-      "Resource": ["*"]
+      "Resource": [
+        "*"
+      ]
     },
     {
       "Sid": "AccesS3forElasticBeanstalk",
       "Effect": "Allow",
-      "Action": ["s3:*"],
-      "Resource": ["arn:aws:s3:::elasticbeanstalk*"]
-    },
-    {
-      "Sid": "ElasticFileSystemAccess",
-      "Effect": "Allow",
-      "Action": ["elasticfilesystem:DescribeFileSystems"],
-      "Resource": ["*"]
+      "Action": [
+        "s3:*"
+      ],
+      "Resource": [
+        "arn:aws:s3:::elasticbeanstalk*"
+      ]
     },
     {
       "Sid": "DockerBasedBeanstalkEnvironments",
@@ -240,7 +287,50 @@ For additional information, see: [Update the Spot Policy](elastigroup/tutorials/
         "ecs:SubmitTaskStateChange"
       ],
       "Effect": "Allow",
-      "Resource": ["*"]
+      "Resource": [
+        "*"
+      ]
+    },
+    {
+      "Sid": "ElasticFileSystem",
+      "Action": [
+        "elasticfilesystem:DescribeFileSystems"
+      ],
+      "Effect": "Allow",
+      "Resource": [
+        "*"
+      ]
+    },
+    {
+      "Sid": "Pricing",
+      "Action": [
+        "pricing:GetProducts"
+      ],
+      "Effect": "Allow",
+      "Resource": [
+        "*"
+      ]
+    },
+    {
+      "Sid": "SavingsPlan",
+       "Action": [
+          "savingsplans:Describe*",
+          "savingsplans:List*"
+      ],
+      "Effect": "Allow",
+      "Resource": [
+        "*"
+      ]
+    },
+    {
+      "Sid": "Lambda",
+       "Action": [
+          "lambda:ListFunctions"
+      ],
+      "Effect": "Allow",
+      "Resource": [
+        "*"
+      ]
     }
   ]
 }
