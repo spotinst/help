@@ -13,11 +13,7 @@ The following are features related to termination process:
 - Lock instances. If you have some instances that are running jobs and you don't want to terminate them you can also use the lock/protect option.
 - Unlock instances. Release the instance from the protection.
 
----
-
-**Tip**: Termination policies will only apply to unlocked instances. Instance lock enables you to protect specific instance from termination.
-
----
+> **Tip**: Termination policies will only apply to unlocked instances. Instance lock enables you to protect specific instance from termination.
 
 For more info, see Instance Actions. Learn how to lock an instance, or unlock an instance using the API.
 

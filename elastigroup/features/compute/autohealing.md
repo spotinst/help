@@ -30,8 +30,4 @@ Elastigroup supports the following Health Check types:
 - Health Check Grace Period – Specify the time (in seconds) to allow an instance to boot and applications to fully start. As soon as an instance becomes Healthy the grace period is over and will not be referenced again. If an instance is unhealthy after the given grace period, it will be replaced with a new instance with a blue-green deployment approach.
 - Unhealthy Duration – Specify the amount of time (in seconds) you want to keep existing instances that are deemed unhealthy before the instance is terminated and replaced with a new one. Only valid after an instance was healthy at least once.
 
----
-
-**Tip**: If during the configured grace period, a healthy instance becomes unhealthy, the autoscaler will not terminate the instance. Only after the grace period is over, the unhealthy duration period will begin, and the autoscaler will terminate the unhealthy instance.
-
----
+> **Tip**: If during the configured grace period, a healthy instance becomes unhealthy, the autoscaler will not terminate the instance. Only after the grace period is over, the unhealthy duration period will begin, and the autoscaler will terminate the unhealthy instance.

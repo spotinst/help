@@ -23,11 +23,7 @@ Elastigroup calculates the number of instances to launch by dividing the target 
 
 You can now run, scale, and manage heterogeneous clusters with ease.
 
----
-
-**Tip**: Using weighted vCPU capacity units is not supported for Autoscaler enabled Elastigroups (e.g., Kubernetes, ECS, Nomad).
-
----
+> **Tip**: Using weighted vCPU capacity units is not supported for Autoscaler enabled Elastigroups (e.g., Kubernetes, ECS, Nomad).
 
 ## Advanced Custom Weights
 
@@ -35,11 +31,7 @@ To allow this option, the Group Capacity should be set using the vCPU unit.
 
 If you want instances to be weighted based on custom units – you can add the weights parameter to the Elastigroup configuration JSON. This will allow you to gain higher accuracy in selecting the instances that will operate the workload. This can be based on ECU or available Memory.
 
----
-
-**Tip**: If a running instance is not configured with a custom weight, its weight will be determined by the number of its vCPUs.
-
----
+> **Tip**: If a running instance is not configured with a custom weight, its weight will be determined by the number of its vCPUs.
 
 Elastigroup configuration Example:
 
