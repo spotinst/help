@@ -6,11 +6,7 @@ Elastigroup provides a cron-based scheduling tool to schedule scaling actions, c
 
 Creating scheduling tasks with cron expressions can be done through the Console UI or via API. To set it using the console, enter the Creation Wizard or edit an existing Elastigroup configuration and under Scheduling in the General tab add a scheduling task. You can add multiple tasks to change the target, min and max instance capacity of the group or to schedule deployments.
 
----
-
-**Tip**: The time zone used for cron expressions is UTC – Coordinated Universal Time.
-
----
+> **Tip**: The time zone used for cron expressions is UTC – Coordinated Universal Time.
 
 The cron expression should include numerical values only. You can validate your cron expression at: http://crontab.guru/.
 

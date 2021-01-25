@@ -29,8 +29,4 @@ Note that the time frame the metric is aggregated for depends on whether you hav
 4. Select a metric from the predefined options.
 5. Input the target value and you're ready to go.
 
----
-
-**Tip**: Some experimentation may be required to achieve the right target value. We encourage you to test your target value in order to find that sweet balance between over-provisioning and cost optimization.
-
----
+> **Tip**: Some experimentation may be required to achieve the right target value. We encourage you to test your target value in order to find that sweet balance between over-provisioning and cost optimization.

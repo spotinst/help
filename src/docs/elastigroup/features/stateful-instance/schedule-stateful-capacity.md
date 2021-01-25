@@ -24,11 +24,7 @@ For example:
 
 `5 21 * * 1-5 = (At 21:05 on every day-of-week from Monday through Friday)`
 
----
-
-**Tip**: We recommend using https://crontab.guru/ to create and verify your Cron expressions.
-
----
+> **Tip**: We recommend using https://crontab.guru/ to create and verify your Cron expressions.
 
 ## How Stateful Scheduling Works
 

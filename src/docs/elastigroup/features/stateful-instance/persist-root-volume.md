@@ -29,11 +29,7 @@ Elastigroup automatically performs various backend actions for different states 
 - Running: While the instance is running, a Snapshot is taken for the root volume every 5 minutes and the latest 3 Snapshots are kept (incremental backup).
 - Deallocated: The data (Images, Volumes and Snapshots) are kept for 4 days by default.
 
----
-
-**Tip**: Data storage can be configured on an hourly basis.
-
----
+> **Tip**: Data storage can be configured on an hourly basis.
 
 ## Persist Root on Windows Platform
 

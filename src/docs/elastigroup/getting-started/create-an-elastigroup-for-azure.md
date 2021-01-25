@@ -58,11 +58,7 @@ When you have completed the information in the General tab, click Next to contin
 - On-Demand VM-Sizes. Choose the regular priority VMs sizes within the Elastigroup. These are used in the event that no Low-Priority VMs are available in the sizes requested. Ensure the selected VMs are available in the desired region.
 - Spot-VM Sizes. Select the low priority VM sizes to be available for the Elastigroup. Ensure the selected VM size is available in the desired Region.
 
----
-
-**Tip**: To maximize cost savings, provide the Elastigroup with all possible low-priority VM sizes compatible with the expected workload. The more VM sizes, the better the odds Elastigroup will find an available low-priority VM to run on.
-
----
+> **Tip**: To maximize cost savings, provide the Elastigroup with all possible low-priority VM sizes compatible with the expected workload. The more VM sizes, the better the odds Elastigroup will find an available low-priority VM to run on.
 
 <img src="/elastigroup/_media/gettingstarted-eg-azure-03.png" />
 
