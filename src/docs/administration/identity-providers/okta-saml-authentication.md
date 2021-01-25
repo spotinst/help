@@ -29,11 +29,7 @@ SSO support makes it easy to manage your accounts and works with the most popula
 8. Click SUBMIT.
 9. Done! Login back into Spot via your Okta account!
 
----
-
-**Tip**: IDP-initiated flows, SP-initiated flows, and Just In Time provisioning are all supported.
-
----
+> **Tip**: IDP-initiated flows, SP-initiated flows, and Just In Time provisioning are all supported.
 
 ## For SP Initiated Flows
 
