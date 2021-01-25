@@ -20,11 +20,7 @@ Elastigroup provides the following options for IP persistence:
 Once the Elastigroup is configured to persist the Private IP address,
 Stateful Spot Instances (SSIs) are created according to the group target capacity, each one holding a random IP chosen from the subnet ID of the Elastigroup. An Elastic Network Interface (ENI) is created the first time the SSI is resumed and is associated with the newly created instance. The ENI is kept throughout the entire SSI lifecycle, including in points where the Stateful instance is paused. This is designed to make sure that the IP address remains available when the SSI is resumed after an interruption.
 
----
-
-**Tip**: The ENI is required to maintain the stateful instance. Do not delete it directly from AWS.
-
----
+> **Tip**: The ENI is required to maintain the stateful instance. Do not delete it directly from AWS.
 
 ## Private IP Pools
 

@@ -31,10 +31,4 @@ In the Compute tab under Integrations, Beanstalk is preselected and includes the
 
 Elastigroup is now managing and provisioning Spot instances for the Beanstalk environment. Once the Elastigroup is created, the instances running can be seen in the Elastigroup Management View which opens after the Creation Wizard is completed.
 
----
-
-**Tip:**
-
-If you're using the [Independent Elastigroup Integration](elastigroup/tools-integrations/elastic-beanstalk/independent-elastigroup-integration) mode, you can downscale the original Autoscaling group manually at this point.
-
----
+> **Tip:** If you're using the [Independent Elastigroup Integration](elastigroup/tools-integrations/elastic-beanstalk/independent-elastigroup-integration) mode, you can downscale the original Autoscaling group manually at this point.
