@@ -29,7 +29,7 @@ This label sets the GPU accelerator and applies only to GKE clusters. Valid valu
 * `nvidia-tesla-p4`
 * `nvidia-tesla-t4`
 
-> Avoid adding Spot labels under the launch specification node labels section. These labels should be added in your pod configuration only.
+> **Tip**: Avoid adding Spot labels under the launch specification node labels section. These labels should be added in your pod configuration only.
 
 ## Examples
 
