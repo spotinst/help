@@ -21,8 +21,30 @@ It may take a few moments before the created nodes join the Kubernetes cluster. 
 
 <img src="/ocean/_media/features-scaling-k8s-01.png" />
 
----
+### Affinity and Anti-affinity
 
+You may wish to have multiple replicas of a pod running in the cluster, but ensure that each pod does not run on the same node as other replicas of itself. In order to distribute the replicas properly, you can set an anti-affinity across availability zones. The autoscaler will then automatically launch instances satisfying the pod requirements.
+
+Example: Anti-affinity across availability zones:
+
+```json
+spec:
+  replicas: 3
+  affinity:
+    podAntiAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        weight: 100
+        podAffinityTerm:
+          labelSelector:
+            matchExpressions:
+              key: test
+              operator: In
+              values:
+                antiaffinity
+          topologyKey: failure-domain.beta.kubernetes.io/zone
+```
+
+---
 **Tip**: In the [affinity syntax](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#resources-that-support-set-based-requirements), Ocean supports `matchExpressions` only. The `matchLabels` selector is not supported.
 
 ---
