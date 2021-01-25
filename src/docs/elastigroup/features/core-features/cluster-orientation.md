@@ -17,11 +17,7 @@ Elastigroup supports the following Orientations:
 
 Optimize towards both continuity and cost-effective infrastructure. We highly recommend using this orientation, which provides the optimal balance between cost-savings and availability.
 
----
-
-**Tip**: We highly recommend the Balanced Cluster Orientation.
-
----
+> **Tip**: We highly recommend the Balanced Cluster Orientation.
 
 ### Availability
 
@@ -31,11 +27,7 @@ Additionally, in the case of fall back to On-Demand instances – the Elastigrou
 
 The Availability orientation is primarily suitable for `jobs` or `batch` computing with a high importance of running a single machine for a limited amount of time, as well as NoSQL databases such as Cassandra or MongoDB, when they are part of a fault tolerant architecture.
 
----
-
-**Tip**: No instance replacement will take place – neither while replacing On-demand instances nor replacement of expensive spot Instances.
-
----
+> **Tip**: No instance replacement will take place – neither while replacing On-demand instances nor replacement of expensive spot Instances.
 
 ### Cost
 

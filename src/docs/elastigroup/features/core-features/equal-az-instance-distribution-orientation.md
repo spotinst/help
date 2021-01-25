@@ -4,11 +4,7 @@ Elastigroups support a high-availability deployment structure to allow you to ev
 
 Using this option will guarantee capacity even if there are no spot instances available. While no Spot instances are available the Elastigroup will launch on-demand instances instead.
 
----
-
-**Tip**: The target capacity of the group will apply for the entire group. For example, if you want to use X AZs, select a target capacity that is a multiple of X.
-
----
+> **Tip**: The target capacity of the group will apply for the entire group. For example, if you want to use X AZs, select a target capacity that is a multiple of X.
 
 ## How this works
 
@@ -16,11 +12,7 @@ Using this option will guarantee capacity even if there are no spot instances av
 
 2. On Scale down – According to the current spread of instances across the AZs we will detach instances in a way that they remain equally divided.
 
----
-
-**Tip**: When using this strategy, the `Spot Instance Percentage` or `On-Demand Count` settings will apply per AZ and not for the whole group. So for example, a group with 2 AZs and a `Spot Instance Percentage` of 50%, when launching its first 2 instances – they will both be spots, 1 in each AZ.
-
----
+> **Tip**: When using this strategy, the `Spot Instance Percentage` or `On-Demand Count` settings will apply per AZ and not for the whole group. So for example, a group with 2 AZs and a `Spot Instance Percentage` of 50%, when launching its first 2 instances – they will both be spots, 1 in each AZ.
 
 ## Enabling Equal AZ Orientation
 
@@ -60,8 +52,4 @@ While updating an Elastigroup – Update the strategy of the Elastigroup. The fo
 }
 ```
 
----
-
-**Tip**: Equal AZ Distribution is not supported in conjunction with Reserved Instances Utilization or with Elastigroups that utilize Autoscalers (e.g., Kubernetes, ECS, and Nomad).
-
----
+> **Tip**: Equal AZ Distribution is not supported in conjunction with Reserved Instances Utilization or with Elastigroups that utilize Autoscalers (e.g., Kubernetes, ECS, and Nomad).
