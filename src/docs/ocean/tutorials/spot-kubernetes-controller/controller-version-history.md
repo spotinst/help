@@ -1,5 +1,16 @@
 # Controller Version History
 
+## [1.0.72] - 2021-01-27
+Added
+
+- Improvements in GCP preemption handling
+
+## [1.0.71] - 2021-01-20
+Added
+
+- Support CSI volumes 'allowed topologies'
+- Support BigData crd for wave application
+
 ## [1.0.70] - 2021-01-12
 
 Added
