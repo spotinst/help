@@ -1,6 +1,6 @@
 # Predictive Autoscaling
 
-Predictive autoscaling allows you to enjoy seamless prediction of when your Elastigroup would experience load and scale the number of instances in advanced to meet business needs.
+Predictive autoscaling allows you to enjoy seamless prediction of when your Elastigroup would experience load and scale the number of instances in advance to meet business needs.
 
 ## Concepts
 
@@ -10,9 +10,9 @@ Predictive autoscaling allows you to enjoy seamless prediction of when your Elas
 
 ## How it Works
 
-Once predictive autoscaling is set on an Elastigroup, a backend process for predicting this metric begins. Spot uses Machine Learning algorithms to predict and determine the value of the scaling metric for up to two days in advanced.
+Once predictive autoscaling is set on an Elastigroup, a backend process for predicting this metric begins. Spot uses Machine Learning algorithms to predict and determine the value of the scaling metric for up to two days in advance.
 
-Once the metric value is determined, an effective-minimum calculation begins to determine the minimum amount of instances required to handle the predicted load. This, allows your application to be ready for any workload bursts in advanced.
+Once the metric value is determined, an effective-minimum calculation begins to determine the minimum amount of instances required to handle the predicted load. This, allows your application to be ready for any workload bursts in advance.
 
 ## Configure Predictive Autoscaling
 
@@ -25,7 +25,7 @@ Once the metric value is determined, an effective-minimum calculation begins to 
 
 ## Predict and Scale Mode
 
-When you select this mode, Elastigroup will present its future-predicted metric values and predicted effective-minimum values, as well as the actual metric measured and aggregated by Elastigroup. Once the metric is predicted, a effective-minimum value is calculated.
+When you select this mode, Elastigroup will present its future-predicted metric values and predicted effective-minimum values, as well as the actual metric measured and aggregated by Elastigroup. Once the metric is predicted, an effective-minimum value is calculated.
 
 Elastigroup will scale up instances, and change its target value to meet the effective-minimum value, making sure you have enough instances at predicted loads.
 
