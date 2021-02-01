@@ -42,13 +42,7 @@ After setting the VPC you can move on to selecting the AZ's you would like to us
 
 - **Availability Zones** – Select in which availability zones you would like to launch your instances. You can select one or more AZs for your Elastigroup.
 
----
-
-**Tip:**
-
-It is recommended to choose as many AZs as possible, it will enable higher diversity and available markets for our algorithm to bid on.
-
----
+> **Tip**: It is recommended to choose as many AZs as possible, it will enable higher diversity and available markets for our algorithm to bid on.
 
 - **Selecting subnets** – Select the desired subnet in each availability zone.
 
@@ -56,13 +50,7 @@ It is recommended to choose as many AZs as possible, it will enable higher diver
 
 Select the Spot instance types within your Elastigroup. After selecting your desired spot types you will also see the SpotMarket Scoring – giving you a notion of how the markets are going top behave- the higher the score the better!
 
----
-
-**Tip:**
-
-It is recommended to **choose as many instance types as possible**, it will enable higher diversity and available markets for our algorithm to bid on.
-
----
+> **Tip**: It is recommended to **choose as many instance types as possible**, it will enable higher diversity and available markets for our algorithm to bid on.
 
 - **Image** – Log in to your AWS account, and go to AMI marketplace. Choose the following AMI, and paste the specific ID for your region:
 
