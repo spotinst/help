@@ -35,13 +35,7 @@ To learn more about Elastic Beanstalk deployment methods, see the following AWS 
 
 We recommend using a deployment policy that is supported by the in-ASG approach whenever possible.
 
----
-
-**Tip:**
-
-Before starting, verify that the most up-to-date [Spot IAM policy](administration/api/spot-policy-in-aws) is configured in your AWS account.
-
----
+> **Tip:** Before starting, verify that the most up-to-date [Spot IAM policy](administration/api/spot-policy-in-aws) is configured in your AWS account.
 
 ## What's Next?
 

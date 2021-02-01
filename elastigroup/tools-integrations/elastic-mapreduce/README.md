@@ -24,13 +24,7 @@ Set the name and region of the Elastigroup. Click Next.
 - Under Strategy select Clone and provide an `Origin Cluster` for Elastigroup to Clone.
 - For the Master, Core and Task nodes select the Instance Types, Lifecycle (Spot/On-Demand), Target and Minimum/Maximum number of instances. To ensure Spot availability select multiple Instance Types.
 
----
-
-**Tip:**
-
-EMR Master and Core node instance groups must always have at least 1 instance running to avoid cluster termination. It is therefore highly recommended to avoid running them on a single Spot instance by either setting the Target capacities to more than 1 instance or setting the Lifecycle to On-Demand.
-
----
+> **Tip:** EMR Master and Core node instance groups must always have at least 1 instance running to avoid cluster termination. It is therefore highly recommended to avoid running them on a single Spot instance by either setting the Target capacities to more than 1 instance or setting the Lifecycle to On-Demand.
 
 - To ensure widespread deployment, select as many Availability Zones (AZ) as possible and select Subnets within each AZ.
 - (Optional) Assign tags to the Elastigroup.
@@ -39,13 +33,7 @@ EMR Master and Core node instance groups must always have at least 1 instance ru
 
 - Set a Root Volume Size (GB)
 
----
-
-**Tip:**
-
-Decreasing root volume size is not recommended and might affect the proper launch of the instance group or the cluster.
-
----
+> **Tip:** Decreasing root volume size is not recommended and might affect the proper launch of the instance group or the cluster.
 
 - Include EMR Steps. This adds any steps configured in the original cluster to the clone in Elastigroup.
 
