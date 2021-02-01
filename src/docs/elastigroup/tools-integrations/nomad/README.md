@@ -17,11 +17,7 @@ For example, Let's say that we define the headroom unit to consist of 512 MiB of
 
 If for example, the first instance has 2 whole free headroom units (in our example it means at least 1024 MiB and 2000 MHz), the second instance has 3 whole units and the third has 5 whole units, then the cluster has a total of 10 free headroom units, as configured in the group, and no scale up will be performed. However, if the first instance will have 2 free units, the second instance will have 3 free units but the third will have only 4 free units, then the cluster will have a total of 9 free units, and the group requires 10 free units, so a scale up activity will be triggered.
 
----
-
-**Tip**: Headroom takes precedence over scale-down operations.
-
----
+> **Tip**: Headroom takes precedence over scale-down operations.
 
 <img src="/elastigroup/_media/nomad-autoscaling-01.png" />
 
@@ -48,11 +44,7 @@ When an instance is found idle for the specified amount of consecutive periods, 
 
 <img src="/elastigroup/_media/nomad-autoscaling-03.png" />
 
----
-
-**Tip**: Scale-Down actions are limited to 10% of the cluster size at a time.
-
----
+> **Tip**: Scale-Down actions are limited to 10% of the cluster size at a time.
 
 ## What's Next?
 
