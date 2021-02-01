@@ -33,11 +33,7 @@ If you need to change the schedule during the off hours, you can do so without c
 
 You can also configure running hours using the API parameter cluster.scheduling.shutdownHours. Unlike the UI however, the API works by defining the off hours instead of the actual running hours. The time range defined represents the ranges in which the cluster will be scaled to zero. The API uses this mechanism in order to reduce chances of a human error that would cause an undesired scale-down to zero.
 
----
-
-**Tip**: The value defined in the `shutdownHours.timeWindows` field is effective only when the `shutdownHours.isEnabled` field is set to `true`.
-
----
+> **Tip**: The value defined in the `shutdownHours.timeWindows` field is effective only when the `shutdownHours.isEnabled` field is set to `true`.
 
 ## What's Next?
 

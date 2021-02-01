@@ -28,11 +28,7 @@ v0.10.6, v0.10.7, v0.10.8, v0.11.0, v0.11.1, v0.11.3, v0.11.4
 
 ## Terraform Provider Binaries for v0.8-v0.9
 
----
-
-**Tip**: The schema between v0.8-v0.9 and latest provider version contains breaking changes. If you are new to Spot Terraform provider, we encourage you to use the latest version.
-
----
+> **Tip**: The schema between v0.8-v0.9 and latest provider version contains breaking changes. If you are new to Spot Terraform provider, we encourage you to use the latest version.
 
 v0.8.8, v0.9.2, v0.9.5, v0.9.8, v0.9.11
 

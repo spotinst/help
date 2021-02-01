@@ -52,8 +52,6 @@ $ sudo mv ./bin/eksctl /usr/local/bin && rm -rf ./bin
 $ eksctl version
 ```
 
----
-
 ## Create your EKS Cluster and Worker Nodes
 
 ### Using CLI Flags
@@ -130,7 +128,7 @@ nodeGroups:
 $ eksctl create cluster -f cluster.yaml
 ```
 
-> Cluster provisioning usually takes between 10 and 15 minutes.
+> **Tip**: Cluster provisioning usually takes between 10 and 15 minutes.
 
 ## Verifications
 
@@ -144,7 +142,7 @@ NAME           TYPE      CLUSTER-IP EXTERNAL-IP PORT(S) AGE
 svc/kubernetes ClusterIP 10.100.0.1 <none>      443/TCP 1m
 ```
 
-**Tip**: If you receive the error `aws-iam-authenticator`: executable file not found in `$PATH`, your `kubectl` is not configured for Amazon EKS. For more information, see [Installing aws-iam-authenticator](https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html).
+> **Tip**: If you receive the error `aws-iam-authenticator`: executable file not found in `$PATH`, your `kubectl` is not configured for Amazon EKS. For more information, see [Installing aws-iam-authenticator](https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html).
 
 2. Enter the command below to test the installation of the Ocean controller.
 

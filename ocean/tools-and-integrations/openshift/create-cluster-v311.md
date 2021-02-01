@@ -47,11 +47,7 @@ runcmd:
 EOF
 ```
 
----
-
-**Tip**: If you don't use an autoscaler in the OpenShift cluster yet and don't have an AWS auto-scaling group, do not create an autoscaling group.
-
----
+> **Tip**: If you don't use an autoscaler in the OpenShift cluster yet and don't have an AWS auto-scaling group, do not create an autoscaling group.
 
 3. Launch an instance based on the created prime image together with the user data built on the cluster and ensure all your OpenShift AWS resources are tagged with the following tag:
 

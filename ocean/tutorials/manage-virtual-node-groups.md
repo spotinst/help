@@ -47,12 +47,7 @@ This section enables you to inform Ocean about the labels and taints that are se
 - Node Labels: Key/Value pairs defined on the Kubernetes nodes.
 - Node [Taints](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/): Triplets of Key, Value, and Effect defined on the Kubernetes nodes.
 
----
-
-**Tip**: Be sure to label your instances according to your label selection:
-For Kubernetes user data, see [Create Custom Labels](https://docs.spot.io/ocean/tutorials/create-custom-labels).
-
----
+> **Tip**: Be sure to label your instances according to your label selection: For Kubernetes user data, see [Create Custom Labels](https://docs.spot.io/ocean/tutorials/create-custom-labels).
 
 ## Advanced Parameters
 
