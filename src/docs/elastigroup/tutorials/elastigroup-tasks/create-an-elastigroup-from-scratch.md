@@ -15,13 +15,7 @@ This tutorial covers the general creation of an Elastigroup, using an empty temp
 - Select the Availability Zones you'd like Elastigroup to consider when launching your instances. To maximize your savings Elastigroup calculates the cost of launching Spot instances in the selected Availability Zones. We recommend selecting multiple Availability Zones to increase the number of Spot instance markets available for Elastigroup to consider.
 - Select the instance types you'd like Elastigroup to consider when launching your instances. We recommend selecting multiple instance types to provide Elastigroup with as many Spot instance market options as possible.
 
----
-
-**Tip:**
-
-We highly recommend selecting Multiple Availability Zones and multiple instance types, which provide Elastigroup with more Spot markets and result in lower prices and greater availability.
-
----
+> **Tip**: We highly recommend selecting Multiple Availability Zones and multiple instance types, which provide Elastigroup with more Spot markets and result in lower prices and greater availability.
 
 - Choose an Image, Security Groups and (optionally) the Key Pair to use for your instances.
 
