@@ -41,11 +41,7 @@ This procedure describes how to create an Elastigroup using an empty template. T
 
 <img src="/elastigroup/_media/tutorials-create-eg-from-scratch-04.png" />
 
----
-
-**Tip**: We highly recommend selecting Multiple Availability Zones and multiple instance types, which provide Elastigroup with more Spot markets and result in lower prices and greater availability.
-
----
+> **Tip**: We highly recommend selecting Multiple Availability Zones and multiple instance types, which provide Elastigroup with more Spot markets and result in lower prices and greater availability.
 
 5. Launch Specification: Define the parameters below.
    - Image: Choose the AMI to use for your Elastigroup. The AMI should be based in the same region as your Elastigroup.

@@ -31,11 +31,7 @@ When the Managed Instance is configured to persist the Public or Private IP addr
 - An Elastic Network Interface (ENI) is created the first time the instance is Resumed and is associated with the newly created instance.
 - The ENI is kept throughout the entire SMI lifecycle, including while the instance is Paused. This is designed to make sure that the IP addresses remain available when the SMI is Resumed.
 
----
-
-**Tip**: The persisted ENI is required to maintain the stateful instance. Do not delete it directly from AWS.
-
----
+> **Tip**: The persisted ENI is required to maintain the stateful instance. Do not delete it directly from AWS.
 
 ## Example Use Cases
 

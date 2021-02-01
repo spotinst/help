@@ -51,19 +51,11 @@ In the Compute tab, verify that the imported values are correct or modify as nec
 - On-Demand Type: Select the On-Demand Instance type that the Elastigroup will fall-back to if the spot market is unavailable.
 - Availability Zones: Select the availability zones in which the Elastigroup cluster will be able to run, and select the relevant Subnet(s).
 
----
-
-**Tip**: In order to have a more diverse Spot market, it is recommended to select multiple availability zones and their corresponding subnets.
-
----
+> **Tip**: In order to have a more diverse Spot market, it is recommended to select multiple availability zones and their corresponding subnets.
 
 - Spot Types: Select the eligible instance types you wish to have in your Elastigroup.
 
----
-
-**Tip**: It is recommended to select multiple instance types in order to increase the spot market scoring.
-
----
+> **Tip**: It is recommended to select multiple instance types in order to increase the spot market scoring.
 
 - Launch Specification: In this section, you can configure which image the instance will launch with, Security groups, Key-Pairs and related AWS tags.
 - Additional Configurations: In this section, you can configure additional items related to your Elastigroup.
