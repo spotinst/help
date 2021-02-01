@@ -25,11 +25,7 @@ In this procedure, you will use the [Spot Console](http://console.spotinst.com/)
    - Cluster Name: The name of the Ocean entity that will be created. For a cluster that you are importing, we recommend that you give it the same name as the original cluster. This will make it easier to identify related entities in each system.
    - Cluster Identifier: The unique key used to connect between the Ocean SaaS and the Kubernetes cluster. The Cluster Identifier is automatically generated according to the Cluster Name entered, however, you can change the name when you are creating the cluster.
 
----
-
-**Tip**: To ensure the reliable flow of data reported back to the SaaS, do not change the Cluster Identifier after you have created the Ocean cluster.
-
----
+> **Tip**: To ensure the reliable flow of data reported back to the SaaS, do not change the Cluster Identifier after you have created the Ocean cluster.
 
 2. Choose the autoscaling group or a specific instance from which you will import the compute configurations.
 

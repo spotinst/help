@@ -17,11 +17,7 @@ Before you start the procedure in this tutorial, you need the following:
 - Spot Controller version 1.0.44 installed in the cluster
 - Kubernetes Cluster Autoscaler Deactivated
 
----
-
-**Tip**: If the Kubernetes Autoscaler is active, there will be inconsistency in spinning up new nodes.
-
----
+> **Tip**: If the Kubernetes Autoscaler is active, there will be inconsistency in spinning up new nodes.
 
 ## Step 1: Get Started with Workload Migration
 
@@ -47,11 +43,7 @@ Select your preferred Workload Migration process by selecting the relevant check
 - Evict stand-alone Pods – Ocean will terminate pods that do not belong to a Kubernetes deployment. This means that you would need to launch the pod manually (after the migration) due to the fact that there is no object that would do it automatically.
 - Force PDB covered Pod Eviction – By selecting this checkbox, Ocean will force the Pod eviction from the instance, even if the distributed budget is not satisfied.
 
----
-
-**Tip**: If you have Stand-Alone pods and you have not selected Evict stand-alone pods, you will be required to manually evict those pods at the end of the migration process.
-
----
+> **Tip**: If you have Stand-Alone pods and you have not selected Evict stand-alone pods, you will be required to manually evict those pods at the end of the migration process.
 
 ## Step 4: Start Migration
 

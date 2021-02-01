@@ -41,11 +41,7 @@ $ helm install spotinst*_controller spotinst*/spotinst-kubernetes-cluster-contro
 --set spotinst.clusterIdentifier=[IDENTIFIER]
 ```
 
----
-
-**Tip**: Configure all chart values using the `set` command line argument or a values.yaml file.
-
----
+> **Tip**: Configure all chart values using the `set` command line argument or a values.yaml file.
 
 4. In case you want to upgrade the Spot controller's version:
 

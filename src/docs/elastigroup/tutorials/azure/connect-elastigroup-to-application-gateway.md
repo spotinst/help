@@ -20,4 +20,4 @@ Under the Compute tab open the Load Balancers section and select the desired Bac
 
 Complete the Elastigroup Creation Wizard and create the Elastigroup.
 
-> **Tip:** To avoid data transfer costs, collocate the Elastigroup in the same Region as the Application Gateway.
+> **Tip**: To avoid data transfer costs, collocate the Elastigroup in the same Region as the Application Gateway.

@@ -42,7 +42,7 @@ docker run -it --rm \
   spotinst/spotinst-aks-engine-tools create-simple
 ```
 
-> **Tip:** AKS_DNS_PREFIX must be unique for the subscription (account).
+> **Tip**: AKS_DNS_PREFIX must be unique for the subscription (account).
 
 On completion the Elastigroup SIG will be returned:
 

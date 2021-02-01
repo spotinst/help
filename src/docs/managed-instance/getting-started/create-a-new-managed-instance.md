@@ -83,13 +83,7 @@ The creation of a Managed Instance requires at least one of the following persis
 
 Private IP can be persisted by maintaining the Instance's ENI across replacements. Optionally, specify a particular Private IP to maintain.
 
----
-
-**Tip**:
-
-Persisting Private IP will limit the Managed Instance to a single AZ.
-
----
+> **Tip**: Persisting Private IP will limit the Managed Instance to a single AZ.
 
 Public IP can be persisted by selecting an Elastic IP.
 
