@@ -66,11 +66,7 @@ Now that you have created an Active Directory Application, you will create a cus
    - Enter the custom role created above.
    - Enter and select the application created in Step 1.
 
----
-
-**Note**: If your application does not appear in the Select autocomplete list, enter the application name there anyway.
-
----
+> **Tip**: If your application does not appear in the Select autocomplete list, enter the application name there anyway.
 
 ## Step 6: Validate in Spot Console
 
