@@ -2,13 +2,7 @@
 
 Once Beanstalk integration is configured, Elastigroup takes control of instance provisioning, scaling and deploying. The Amazon ASG becomes passive, Beanstalk's `min` `capacity` is set to 0 and max capacity is set to double the original `max capacity`.
 
----
-
-**Note:**
-
-Instances in the Beanstalk environment must be managed exclusively by Elastigroup.
-
----
+> **Tip**: Instances in the Beanstalk environment must be managed exclusively by Elastigroup.
 
 ## Group Initialization Process
 
@@ -50,13 +44,7 @@ Maintenance mode allows you to perform configuration changes to your infrastruct
 | RootVolumeSize                                     |
 | RootVolumeIOPS                                     |
 
----
-
-**Note:**
-
-While in Maintenance Mode, the service remains available and your instances are still running.
-
----
+> **Tip**: While in Maintenance Mode, the service remains available, and your instances are still running.
 
 Once Maintenance is completed and the necessary Elastic Beanstalk configuration changes are made, a `blue-green` deployment is forced where a graceful replacement of existing instances with new, updated instances (that contain the new configuration change) takes place.
 

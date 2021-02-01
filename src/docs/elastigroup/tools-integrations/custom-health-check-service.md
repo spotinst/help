@@ -67,13 +67,7 @@ In the Compute part select `HCS` as HealthCheck Type.
 1. Go to your Elastigroup and click on Actions > Edit Configuration.
 2. On the Compute tab, in the Launch Specification section, under Auto Healing set the Auto Healing type to `HCS` and update the group.
 
----
-
-**Note:**
-
-You can do steps 3 and 4 via our API. For more information go to the [API Reference](https://docs.spot.io/api/#tag/Health-Check-Service).
-
----
+> **Tip:** You can do steps 3 and 4 via our API. For more information go to the [API Reference](https://docs.spot.io/api/#tag/Health-Check-Service).
 
 Now – the health check is running, and Spot's monitor service will send HCS requests according to the specified interval.
 The healthiness should be available shortly through the Instances table list:
