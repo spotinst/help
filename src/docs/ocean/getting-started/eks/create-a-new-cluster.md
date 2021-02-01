@@ -55,9 +55,7 @@ Before you can continue to the next step, CloudFormation must complete creation 
 
 1. Connect your workstation to the EKS cluster by copying the command shown in Step 4 of the Create page and running it in your command-line interface. Note that the command must include the Ocean Cluster Name that you entered previously.
 
----
-
-## **Tip**: Just click on the command to copy it.
+> **Tip**: Just click on the command to copy it.
 
 <img src="/ocean/_media/new-eks-step4.png" />
 
@@ -75,11 +73,7 @@ Before you can continue to the next step, CloudFormation must complete creation 
 3. Apply the updated `aws-auth-cm.yaml` to the cluster:
    `kubectl apply -f aws-auth-cm.yaml`
 
----
-
-**Note**: Do not modify any other lines in this file.
-
----
+> **Note**: Do not modify any other lines in this file.
 
 <img src="/ocean/_media/new-eks-step5.png" />
 

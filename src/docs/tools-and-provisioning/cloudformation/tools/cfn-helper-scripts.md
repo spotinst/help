@@ -47,11 +47,7 @@ In order to use cfn helper scripts in Elastigroup user-data, you will need to sp
 
 <img src="/tools-and-provisioning/_media/cfn-helper-scripts_5.png" />
 
----
-
-**Tip**: Beanstalk Elastigroups do not need to modify their user-data.
-
----
+> **Tip**: Beanstalk Elastigroups do not need to modify their user-data.
 
 ### Step 3: Modify your Elastigroup User-Data (Non-Beanstalk Elastigroups)
 

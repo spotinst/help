@@ -24,7 +24,7 @@ First, we'll start by creating a new Elastigroup, selecting 'Stateful' under the
 - Select the Availability Zones you'd like Elastigroup to consider when launching your instances. To maximize your savings Elastigroup calculates the cost of launching Spot instances in the selected Availability Zones. We recommend selecting multiple Availability Zones to increase the number of Spot instance markets available for Elastigroup to consider.
 - Select the instance types you would like Elastigroup to consider when launching your spot instances. We recommend selecting multiple instance types to provide Elastigroup with as many Spot instance market options as possible.
 
-> **Tip:** We highly recommend selecting multiple Availability Zones and multiple instance types, which provide Elastigroup with more Spot markets and result in lower prices and greater availability.
+> **Tip**: We highly recommend selecting multiple Availability Zones and multiple instance types, which provide Elastigroup with more Spot markets and result in lower prices and greater availability.
 
 ## Step 3: Persistence
 
