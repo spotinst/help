@@ -21,13 +21,7 @@ In the Elastigroups view, select Create to open the Creation Wizard.
 - Elastigroup Resource Group: Elastigroup launches Virtual Machine Scale Sets (VMSS) to manage your Low priority VMs. Select the Resource Group for Elastigroup to launch these VMSS's into.
 - Low priority Sizes: Select the Low Priority VMs sizes to be available for the Elastigroup. Make sure the selected VM size is available in the desired Region.
 
----
-
-**Tip:**
-
-To maximize cost savings, provide the Elastigroup with all possible Low-Priority VM sizes compatible with the expected workload. The more VM sizes, the better the odds Elastigroup will find an available Low-Priority VM to run on.
-
----
+> **Tip:** To maximize cost savings, provide the Elastigroup with all possible Low-Priority VM sizes compatible with the expected workload. The more VM sizes, the better the odds Elastigroup will find an available Low-Priority VM to run on.
 
 - On-Demand Sizes: Select the Regular Priority VMs sizes within the Elastigroup. These are used in the event that no Low-Priority VMs are available in the sizes requested. Make sure the selected VMs are available in the desired Region.
 - Image:
