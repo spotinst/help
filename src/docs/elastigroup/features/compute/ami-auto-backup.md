@@ -2,11 +2,7 @@
 
 The AMI Auto-Backup provides a continuously updated point-in-time backup for the Elastigroup. This feature creates an image from the latest running instance in the Elastigroup and updates the group with the newly created image. By default, Elastigroup stores the last three images taken by the AMI auto backup. During Spot replacements, Elastigroup recovers from the latest image automatically.
 
----
-
-**Note**: The coexistence of AMI Auto-Backup and data persistence (stateful) is not allowed.
-
----
+> **Tip**: The coexistence of AMI Auto-Backup and data persistence (stateful) is not allowed.
 
 ## Image Creation Frequency
 
@@ -40,8 +36,4 @@ In order to manually update the AMI of an Elastigroup that has AMI Auto Backup e
 5. Edit the Elastigroup configuration again and this time re-enable AMI Auto Backup.
 6. Apply the Update.
 
----
-
-**Note**: Without disabling AMI Auto-Backup, an update to the group's AMI config will be overwritten without affecting the instances.
-
----
+> **Tip**: Without disabling AMI Auto-Backup, an update to the group's AMI config will be overwritten without affecting the instances.

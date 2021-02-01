@@ -14,11 +14,7 @@ Elastigroup continuously monitors for Spot market availability. The Once Availab
 
 In the event of a fallback to On-Demand, when the Elastigroup launches On-Demand instances due to no spot market availability, the On-Demand instances in the Elastigroup will not be replaced with spot instances.
 
----
-
-**Note**: In certain cases, the Never option may result in an Elastigroup running entirely on On-Demand instances.
-
----
+> **Tip**: In certain cases, the Never option may result in an Elastigroup running entirely on On-Demand instances.
 
 ## Custom
 

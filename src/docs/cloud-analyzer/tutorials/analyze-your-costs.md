@@ -25,11 +25,7 @@ The top 10 accounts in your organization are listed according to the greatest am
 
 Each cloud account is assigned an efficiency score based on current and additional potential savings. The bars displayed indicate the efficiency score per account. The Estimated Additional Savings indicates how much can be further saved by leveraging the use of spot and reserved instances.
 
----
-
-**Note**: Efficiency is calculated as follows: Efficiency % = (Current Savings/Potential savings)\*100
-
----
+> **Note**: Efficiency is calculated as follows: Efficiency % = (Current Savings/Potential savings)\*100
 
 You can take the following actions to further optimize your accounts:
 
