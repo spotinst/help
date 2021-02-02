@@ -26,7 +26,9 @@ Managed Instance automatically performs various backend actions for different st
 
 - Paused: Images (AMIs) are created each time the Managed Instance is Paused using the latest root volume snapshot which was taken after the instance termination. Only the latest Snapshot is kept for each volume.
 - Running: While the instance is running, a Snapshot is taken for the root volume every 5 minutes and the latest 3 Snapshots are kept (incremental backup)..
-- Deallocated: The data (Images, Volumes and Snapshots) are kept for 4 days by default. Note: Data storage time can be configured on an hourly basis, by reaching out to the Customer Support team.
+- Deallocated: The data (Images, Volumes and Snapshots) are kept for 4 days by default.
+
+> **Tip**: Data storage time can be configured on an hourly basis. For more information, reach out to the Customer Support team.
 
 ## Persist Root on Windows Platform
 

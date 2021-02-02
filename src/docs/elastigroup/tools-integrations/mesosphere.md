@@ -78,7 +78,10 @@ Now that the cluster is up and running let's configure some Spot instances via t
 6. Select `Linux/Unix` as the Product type.
 7. Configure the strategy and configuration as you see fit, I recommend a target of two instances for testing purposes.
 8. Scroll down to `Spot Types` and select m3.large, m3.xlarge, m4.large, m4.xlarge.
-9. Select the checkbox for Mesosphere DC/OS in the integration section. Paste in the API server from 7.3 above as port :5050 as you can see below. Click on test connection (you should see a green checkbox if successful). Note: set as http rather than https.
+9. Select the checkbox for Mesosphere DC/OS in the integration section. Paste in the API server from 7.3 above as port :5050 as you can see below. Click on test connection (you should see a green checkbox if successful).
+
+> **Tip**: Set as http rather than https.
+
 10. Click `Next` at the bottom right of the screen.
 11. Leave scaling policies as they are and click `Next` at the bottom right of the screen.
 12. Review the JSON file and click `Create` to create your new Elastigroup configured with DC/OS.

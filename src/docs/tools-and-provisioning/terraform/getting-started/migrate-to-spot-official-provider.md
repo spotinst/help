@@ -84,11 +84,6 @@ These changes will be addressed in the next step.
 
 2. Occasionally perform `terraform plan` to verify which fields need to modify on the schema without actually changing the group via the Spot API.
 
----
-
-**Note:**
-Do not run `terraform apply` until you fully migrate the Terraform schema to the new provider.
-
----
+> **Note**: Do not run `terraform apply` until you fully migrate the Terraform schema to the new provider.
 
 3. Perform terraform applyto successfully apply your changes.
