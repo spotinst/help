@@ -568,6 +568,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/features/compute/placement-groups"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/elastigroup/features/compute/preferred-availability-zones</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/features/compute/preferred-availability-zones"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/features/compute/preferred-availability-zones"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/elastigroup/features/compute/preferred-instance-types-a</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>

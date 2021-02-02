@@ -2,7 +2,7 @@
 
 The Roll feature enables you to perform changes in order to align cluster infrastructure with a new image, user data or security groups without having to disable the Ocean autoscaler or manually detach nodes in the cluster.
 
-> **Tip**: Where this page uses Kubernetes terms such as node and pod, the ECS equivalents such as container instance and task are also applicable.
+> **Note**: Where this page uses Kubernetes terms such as node and pod, the ECS equivalents such as container instance and task are also applicable.
 
 In Ocean you can roll your cluster with a single click. The roll feature takes into consideration the actual workloads running the in cluster. Ocean freezes scale-down activity in the cluster and launches new compute capacity to match the workload requirements. While the new nodes are starting up, the `old` nodes are still able to scale up if necessary and will scale down only after the new nodes are healthy.
 
