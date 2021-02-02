@@ -49,4 +49,4 @@ When scaling, Elastigroup will distribute the instances across different availab
 
 ## What's Next?
 
-Elastigroup gives you the ability to optimize your data-transfer costs by selecting Preferred Availability Zones. Learn more about [Preferred Availability Zones](https://docs.spot.io/api/#operation/elastigroupAwsCreate) in the API.
+Elastigroup gives you the ability to optimize your data-transfer costs by selecting Preferred Availability Zones. Learn more about configuring [Preferred Availability Zones](elastigroup/features/compute/preferred-availability-zones.md) in the console and in the [API](https://docs.spot.io/api/#operation/elastigroupAwsCreate).
