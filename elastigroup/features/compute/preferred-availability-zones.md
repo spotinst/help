@@ -8,7 +8,7 @@ In general, it is good practice to simply allow all the AZs existing in that reg
 
 However, you may have specific use cases in which it is advantageous to use only certain AZs. For example, you might want to use a reduced number or only a single AZ for the following reasons:
 * You want to reduce network costs by minimizing the number of times you change zones and transfer data from one zone to another.
-* You want to improve application performance by confining all your computing to a minimum geographic area (i.e., to only one or two AZs) where all of your workloads run.
+* You want to improve application performance by confining all your computing to a minimum geographic area, i.e., to only one AZ where all of your workloads run.
 
 You can configure this in Elastigroup using the Preferred Availability Zones feature. When you define Preferred Availability Zones, Spot will always look in those AZs first when it needs to start up a new spot instance, and it will try to launch all of your instances in those AZs only. If no instances exist in the preferred AZs, Spot will then consider available instances in the other AZs you have allowed.
 
