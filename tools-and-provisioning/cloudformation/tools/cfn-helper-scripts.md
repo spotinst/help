@@ -51,7 +51,9 @@ In order to use cfn helper scripts in Elastigroup user-data, you will need to sp
 
 ### Step 3: Modify your Elastigroup User-Data (Non-Beanstalk Elastigroups)
 
-Modify your user-data to invoke CFN helper scripts using the role name. Note: If your Instance profile name is different than the role name attached to it, use the role name in the user-data script.
+Modify your user-data to invoke CFN helper scripts using the role name.
+
+> **Tip**: If your Instance profile name is different from the role name attached to it, use the role name in the user-data script.
 
 For example, for a cfn-init call add the role:
 

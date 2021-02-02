@@ -10,13 +10,7 @@ Once an Elastigroup is created with Beanstalk `Independent` integration, the fol
 2. The new instances are registered to the Elastic Beanstalk environment.
 3. The new instances are registered to the Load Balancer.
 
----
-
-**Note:**
-
-As a policy, the system avoids downscaling pre-existing workloads. Downscaling the original auto-scaling group can be done manually once the integration process is completed and the Elastigroup is running.
-
----
+> **Tip**: As a policy, the system avoids downscaling pre-existing workloads. Downscaling the original auto-scaling group can be done manually once the integration process is completed and the Elastigroup is running.
 
 ## Capacity Management
 

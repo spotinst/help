@@ -59,4 +59,6 @@ Managed Instance automatically performs various backend actions for different st
   - Reattach + the instance is launched in the same AZ as the previous instance: The existing volumes are being reattached to the new instance post launch.
   - Reattach + the instance is launched in a different AZ from the previous instance: New volumes are created in the same AZ as the new instance and are attached post launch.
 - Deallocated:
-  - Once a stateful instance is deallocated, ENI is deleted immediately, while data (Images, Volumes and Snapshots) is being kept for 4 days by default (Note: Data storage time can be configured on an hourly basis, by reaching out to the Customer Support team.)
+  - Once a stateful instance is deallocated, ENI is deleted immediately, while data (Images, Volumes and Snapshots) is being kept for 4 days by default.
+
+> **Tip**: Data storage time can be configured on an hourly basis. For more information, reach out to the Customer Support team.
