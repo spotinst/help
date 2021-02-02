@@ -6,8 +6,7 @@ The Manage Capacity option in the Elastigroup's Actions menu simplifies the proc
 
 ## Before Updating the Elastigroup Capacity
 
-1. If the group has an unexpected capacity configuration, check for scheduled tasks that may have triggered capacity updates.
-2. Note that capacity updates affect the limits that the Elastigroup is able to scale to.
+Capacity updates affect the limits that the Elastigroup is able to scale to. If the group has an unexpected capacity configuration, check for scheduled tasks that may have triggered capacity updates.
 
 ## Updating Elastigroup Capacity
 
