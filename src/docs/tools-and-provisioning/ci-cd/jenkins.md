@@ -49,7 +49,7 @@ To be taken to the right configuration-steps, choose how you'd like your Spot ag
 Either obtain or generate a valid SSH key-pair; in this section we'll assume no such key-pair exists. You may generate a pair with the following command:
 
 ```
-ssh-keygen -t rsa -f “jenkinsSSH”
+ssh-keygen -t rsa -f jenkinsSSH
 ```
 
 You can keep the passphrase blank as your agents will be launched programmatically, or you can choose to utilize a passphrase and have Jenkins fill it for you (see credentials section below).
