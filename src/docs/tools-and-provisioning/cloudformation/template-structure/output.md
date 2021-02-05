@@ -1,11 +1,10 @@
 # Output
 
-Optional: Describes the values that are returned when viewing the stack properties.
+Optional: Describes the values that are returned when viewing the stack properties. 
 
-## Request
+Each custom resource has an optional output that will return the ID of the created resource
 
-### Body
-
+## Request JSON Example
 ```json
 {
   "AWSTemplateFormatVersion": "2010-09-09",
