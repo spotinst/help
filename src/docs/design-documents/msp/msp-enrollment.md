@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # MSP Enrollment
 
 BETA RELEASE
