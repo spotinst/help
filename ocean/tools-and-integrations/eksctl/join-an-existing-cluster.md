@@ -8,7 +8,7 @@ If you have an existing EKS cluster managed by eksctl and would like to join it 
 
 Create a new Ocean-managed nodegroup of worker nodes with the following command. Replace the example values with your own values.
 
-`$ eksctl create nodegroup \ --cluster <cluster-name> \ --nodegroup-name <ocean-nodegroup-name> \ --spot-ocean`
+`eksctl create nodegroup \ --cluster <cluster-name> \ --name <ocean-nodegroup-name> \ --spot-ocean`
 
 The spot-ocean command-line flag enables Ocean integration.
 
@@ -34,19 +34,19 @@ The `spotOcean: {}` section enables Ocean integration and uses all defaults.
 
 2. Apply the changes to create a new Ocean-managed nodegroup with the following command:
 
-`$ eksctl create nodegroup -f cluster.yaml`
+`eksctl create nodegroup -f cluster.yaml`
 
 ## Step 2. Migrate Your Workload
 
 Safely evict all of your pods from the nodes of the unmanaged nodegroup with the following command:
 
-`$ eksctl drain nodegroup \ --cluster <cluster-name> \ --nodegroup-name <unmanaged-nodegroup-name>`
+`eksctl drain nodegroup \ --cluster <cluster-name> \ --name <unmanaged-nodegroup-name>`
 
 ## Step 3. Delete The Unmanaged Nodegroup [Optional]
 
 Remove the nodes by deleting the unmanaged nodegroup with the following command:
 
-`$ eksctl delete nodegroup \ --cluster <cluster-name> \ --nodegroup-name <unmanaged-nodegroup-name>`
+`eksctl delete nodegroup \ --cluster <cluster-name> \ --name <unmanaged-nodegroup-name>`
 
 ## What's Next?
 
