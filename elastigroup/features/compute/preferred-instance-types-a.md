@@ -28,12 +28,12 @@ In cases that any of the preferred types are not available, Elastigroup will use
 
 Preferred spot types divide the selected spot instance types into two groups:
 
-- Tier1: Preferred Spot types
-- Tier2: Spot types that were NOT selected as Preferred Spot types
+- Tier1: Preferred spot types
+- Tier2: Spot types that were NOT selected as preferred spot types
 
-When scaling, Elastigroup will distribute the instances across different availability zones and instance types (markets) to ensure availability. When there aren't sufficient available preferred markets it will distribute a minimal amount of instances to non-preferred markets.
+When scaling, Elastigroup will distribute the instances across different availability zones and instance types based on the configuration you defined to ensure availability. When there aren't sufficient available preferred markets, Elastigroup will distribute a minimal number of instances to non-preferred markets.
 
-### Example 1: Group with 12 instances and 4 preferred markets
+### Example 1: Group with 12 instances and 4 preferred spot types
 
 | Preferred Markets | Other Markets |
 | ----------------- | ------------- |
