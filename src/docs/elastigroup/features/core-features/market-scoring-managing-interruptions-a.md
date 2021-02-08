@@ -12,13 +12,13 @@ This article explains how Elastigroup manages the replacement of instances in sp
 
 ## Spot Instance Replacement
 
-The flow chart below shows an overview of how the spot instance replacement takes place.
+The flow chart below shows an overview of how the spot instance replacement takes place. The process repeats continuously.
 
 <img src="/elastigroup/_media/corefeatures-interruptions-01.png" width="448" height="507" />
 
 ## Fix Strategy
 
-Elastigroup continuously monitors spot markets to identify available markets for workloads currently running on On-Demand instances. When a spot market becomes available, a new spot instance is launched and the old On-Demand instance is drained and terminated.
+Whenever the Spot Instance Replacement flow (described above) requires a fallback to an on-demand instance, then the Fix Strategy flow is triggered. Elastigroup continuously monitors spot markets to identify available markets for the workloads that are running on on-demand instances. When a spot market becomes available, a new spot instance is launched and the old on-demand instance is drained and terminated.
 
 <img src="/elastigroup/_media/corefeatures-interruptions-02.png" />
 
