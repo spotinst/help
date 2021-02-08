@@ -10,10 +10,7 @@ Elastigroup related:
 - Spot Elastigroup for Amazon EMR – `Custom::mrScaler`
 - Spot Health Check Service (HCS) – `Custom::healthCheck`
 
-MLB related:
+Ocean related:
 
-- Multai Load Balancer – `Custom::mlb-balancer`
-- Listener – `Custom::mlb-listener`
-- Deployment – `Custom::mlb-deployment`
-- Target Set – `Custom::mlb-targetSet`
-- Routing Rule – `Custom::mlb-routingRule`
+- Spot Ocean - `Custom::ocean`
+- Spot Ocean (ECS) - `Custom::oceanEcs`
