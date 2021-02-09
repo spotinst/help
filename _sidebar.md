@@ -222,7 +222,7 @@
     - [Connect your AWS Account](eco/getting-started/connect-your-aws-account)
   - [Tutorials](eco/tutorials/)
     - [Review RI Spending Analysis](eco/tutorials/review-ri-spending-analysis)
-    - [Choose a Strategy](eco/tutorials/choose-a-strategy)
+    - [Choose RI Strategy](eco/tutorials/choose-a-strategy)
     - [View your Savings](eco/tutorials/view-your-savings)
     - [Eco Policy](eco/tutorials/eco-policy/)
       - [Create Eco Policy with CloudFormation](eco/tutorials/eco-policy/create-eco-policy-with-cloudformation)

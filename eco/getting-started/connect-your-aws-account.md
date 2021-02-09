@@ -2,7 +2,12 @@
 
 ## Prerequisite
 
-Getting started with Eco on AWS requires read-only permissions to the Cost and Usage Reports, which are located in the Master Payer account.
+Getting started with Eco on AWS usually requires read-only permissions to the Cost and Usage Reports, which are located in the Management account. Choose one of the following methods:
+- Read data from your Direct-to-AWS Management Account and connect as described below.
+- Read data for all AWS MSP/Reseller customer accounts, connect as described below, and submit a support ticket.
+- Read data for limited AWS MSP/Reseller customer accounts and submit a support ticket.
+- Read data provided by CloudHealth and submit a support ticket.
+- Read data from a member-account's Cost and Usage Report and submit a support ticket.
 
 ## AWS Region
 
