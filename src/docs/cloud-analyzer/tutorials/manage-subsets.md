@@ -21,11 +21,11 @@ You must have the Subsets feature enabled. Please contact technical support to s
 
 2. Enter a name for the subset and then click Assign Accounts.
 
-<img src="/eco/_media/tutorials-manage-subsets-02.png" width="1068" height="552" />
+<img src="/eco/_media/tutorials-manage-subsets-02.png" width="534" height="276" />
 
 3. Mark the accounts to be included in the subset and click Assign.
 
-<img src="/eco/_media/tutorials-manage-subsets-03.png" width="258" height="140" />
+<img src="/eco/_media/tutorials-manage-subsets-03.png" width="516" height="280" />
 
 4. Click Create. The new subset will now be visible in the list on the Subsets page.
 
