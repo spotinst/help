@@ -1,6 +1,20 @@
 # Analyze your Costs
 
-The Cost Analysis page provides insights on past, current, and future cloud costs. Cost Analysis includes the following areas:
+The Cost Analysis page provides insights on past, current, and future cloud costs.
+
+## View per Subset
+If you have [Subsets](cloud-analyzer/tutorials/manage-subsets.md) enabled, the top of the Cost Analysis page will appear as shown below.
+
+<img src="/cloud-analyzer/_media/tutorials-analyze-costs-00.png" />
+
+- To see analysis information for all accounts in your organization, leave the default setting as No Subsets.
+- To see the analysis for a specific subset of accounts, click the Subsets box and choose a subset from the list. All of the information in the page will apply specifically to the subset you chose.
+
+>Tip: If you do not have Subsets enabled and would like to use this feature, please contact the Support team and make a request.
+
+## Parts of the Cost Analysis
+
+The Cost Analysis includes the following areas:
 
 - Summary Line
 - Account Efficiency Indicators
