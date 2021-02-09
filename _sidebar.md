@@ -235,6 +235,7 @@
   - [Tutorials](cloud-analyzer/tutorials/)
     - [Analyze your Costs](cloud-analyzer/tutorials/analyze-your-costs)
       - [Save Analysis Reports](cloud-analyzer/tutorials/save-analysis-reports)
+    - [Manage Subsets](cloud-analyzer/tutorials/manage-subsets)
     - [View Trends & Notifications](cloud-analyzer/tutorials/view-trends-notifications/)
       - [Manage Event Definitions](cloud-analyzer/tutorials/view-trends-notifications/manage-event-definitions)
       - [View Event Details](cloud-analyzer/tutorials/view-trends-notifications/view-event-details)
