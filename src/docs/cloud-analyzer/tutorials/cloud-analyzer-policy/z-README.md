@@ -9,8 +9,6 @@ Use this policy only if you know the Role ARN associated with Cloud Analyzer.
   "Version": "2012-10-17",
   "Statement": [
     {
-      "Sid": "FullPolicy",
-      "Effect": "Allow",
       "Action": [
         "cloudformation:DescribeStacks",
         "cloudformation:GetStackPolicy",
@@ -18,15 +16,12 @@ Use this policy only if you know the Role ARN associated with Cloud Analyzer.
         "cloudformation:ListStackResources",
         "dynamodb:List*",
         "dynamodb:Describe*",
-        "savingsplans:*",
         "ec2:Describe*",
         "ec2:List*",
         "ec2:GetHostReservationPurchasePreview",
         "ec2:GetReservedInstancesExchangeQuote",
         "elasticache:List*",
         "elasticache:Describe*",
-        "es:List*",
-        "es:Describe*",
         "cur:*",
         "ce:*",
         "rds:Describe*",
@@ -42,37 +37,26 @@ Use this policy only if you know the Role ARN associated with Cloud Analyzer.
         "organizations:List*",
         "organizations:Describe*"
       ],
-      "Resource": [
-        "*"
-      ]
+      "Resource": ["*"],
+      "Effect": "Allow",
+      "Sid": "FullPolicy"
     },
     {
-      "Sid": "S3SyncPermissions",
-      "Effect": "Allow",
       "Action": [
         "s3:PutObject",
         "s3:ListBucket",
         "s3:PutObjectTagging",
         "s3:PutObjectAcl"
       ],
-      "Resource": "arn:aws:s3:::sc-customer-*"
+      "Resource": "arn:aws:s3:::sc-customer-*",
+      "Effect": "Allow",
+      "Sid": "S3SyncPermissions"
     },
     {
-      "Sid": "S3BillingDBR",
+      "Action": ["s3:get*"],
+      "Resource": ["arn:aws:s3:::/*", "arn:aws:s3:::<Customer Bucket>/*"],
       "Effect": "Allow",
-      "Action": [
-        "s3:get*"
-      ],
-      "Resource": [
-        { "Fn::Join" : [ "", [ "arn:aws:s3:::", { "Ref" : "DetailedBillingReportBucket" },"/*"]]},
-        { "Fn::Join" : [ "", [ "arn:aws:s3:::", { "Ref" : "CostAndUsageBucket" },"/*"]]}
-      ]
-    },
-    {
-      "Sid": "ServiceQuotas",
-      "Effect": "Allow",
-      "Action": "servicequotas:*",
-      "Resource": "*"
+      "Sid": "S3BillingDBR"
     }
   ]
 }
