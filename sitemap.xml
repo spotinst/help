@@ -498,6 +498,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/eco/tutorials/view-your-savings"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/elastigroup/azure/getting-started/import-an-existing-azure-resource</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/azure/getting-started/import-an-existing-azure-resource"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/azure/getting-started/import-an-existing-azure-resource"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/elastigroup/features/amazon-ecs/automatic-autoscaler-for-ecs</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>

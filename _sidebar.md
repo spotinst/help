@@ -158,6 +158,7 @@
       - [Create Elastigroup EKS Cluster](elastigroup/tutorials/amazon-eks/create-elastigroup-eks-cluster)
       - [Configure Kubectl for EKS & Install Controller](elastigroup/tutorials/amazon-eks/configure-kubectl-for-eks-install-controller)
     - [Azure](elastigroup/tutorials/azure/)
+      - [Import an Existing Azure Resource](elastigroup/azure/getting-started/import-an-existing-azure-resource)
       - [Connect Elastigroup to Application Gateway](elastigroup/tutorials/azure/connect-elastigroup-to-application-gateway)
       - [Deploy an Elastigroup](elastigroup/tutorials/azure/deploy-an-elastigroup)
       - [Set Health Checks and Autohealing](elastigroup/tutorials/azure/set-health-checks-and-autohealing)
