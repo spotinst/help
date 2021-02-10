@@ -22,13 +22,13 @@ To import an existing Azure resource, you must first complete the following:
 
 3. In the Import dialog, choose the type of Azure configuration to import.
 
-<img src="/elastigroup/_media/azure-import-existing-resource-02.png" />
+<img src="/elastigroup/_media/azure-import-existing-resource-02.png" width="303" height="287" />
 
 4. Click Continue, and follow the relevant procedure below.
-   - [Import Scale Set](link to heading below)
-   - [Import Application Gateway](link to heading below)
-   - [Import Classic Load Balancer](link to heading below)
-   - [Import VM](link to heading below)
+   - [Import Scale Set](elastigroup/azure/getting-started/import-an-existing-azure-resource?id=import-scale-set)
+   - [Import Application Gateway](elastigroup/azure/getting-started/import-an-existing-azure-resource?id=import-application-gateway)
+   - [Import Classic Load Balancer](elastigroup/azure/getting-started/import-an-existing-azure-resource?id=import-classic-load-balancer)
+   - [Import VM](elastigroup/azure/getting-started/import-an-existing-azure-resource?id=import-vm)
 
 ## Import Scale Set
 
@@ -36,7 +36,7 @@ In the Import dialog, complete the following:
 1. Select a Resource Group.
 2. Select a Scale Set.
 
-<img src="/elastigroup/_media/azure-import-existing-resource-03.png" />
+<img src="/elastigroup/_media/azure-import-existing-resource-03.png" width="313" height="307" />
 
 3. If the resource has a password associated with it in Azure, it cannot be passed to Elastigroup. You will be prompted for a password. You may enter the existing password or a new password.
 4. Click Continue.
@@ -51,7 +51,7 @@ In the Import dialog, complete the following:
 2. Select an Application Gateway.
 3. Select a Backend Pool.
 
-<img src="/elastigroup/_media/azure-import-existing-resource-04.png" />
+<img src="/elastigroup/_media/azure-import-existing-resource-04.png" width="313" height="369" />
 
 4. If the resource has a password associated with it in Azure, it cannot be passed to Elastigroup. You will be prompted for a password. You may enter the existing password or a new password.
 5. Click Continue.
@@ -66,7 +66,7 @@ In the Import dialog, complete the following:
 2. Select a Load Balancer.
 3. Select a Backend Pool.
 
-<img src="/elastigroup/_media/azure-import-existing-resource-05.png" />
+<img src="/elastigroup/_media/azure-import-existing-resource-05.png" width="312" height="369" />
 
 4. If the resource has a password associated with it in Azure, it cannot be passed to Elastigroup. You will be prompted for a password. You may enter the existing password or a new password.
 5. Click Continue.
@@ -80,7 +80,7 @@ In the Import dialog, complete the following:
 1. Select a Resource Group.
 2. Select a VM.
 
-<img src="/elastigroup/_media/azure-import-existing-resource-06.png" />
+<img src="/elastigroup/_media/azure-import-existing-resource-06.png" width="311" height="302" />
 
 3. If the resource has a password associated with it in Azure, it cannot be passed to Elastigroup. You will be prompted for a password. You may enter the existing password or a new password.
 4. Click Continue.
