@@ -5,61 +5,7 @@ The Eco policy is shown below.
 The policy below is relevant only for customers who have not yet signed a contract for Eco. If you have signed a contract and need the Eco policy, please contact Spot Support.
 
 ```json
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Action": [
-        "cloudformation:DescribeStacks",
-        "cloudformation:GetStackPolicy",
-        "cloudformation:GetTemplate",
-        "cloudformation:ListStackResources",
-        "dynamodb:List*",
-        "dynamodb:Describe*",
-        "ec2:Describe*",
-        "ec2:List*",
-        "ec2:GetHostReservationPurchasePreview",
-        "ec2:GetReservedInstancesExchangeQuote",
-        "elasticache:List*",
-        "elasticache:Describe*",
-        "cur:*",
-        "ce:*",
-        "rds:Describe*",
-        "rds:ListTagsForResource",
-        "redshift:Describe*",
-        "trustedadvisor:*",
-        "s3:List*",
-        "s3:GetBucketLocation",
-        "s3:ListBucketMultipartUploads",
-        "s3:AbortMultipartUpload",
-        "s3:ListMultipartUploadParts",
-        "support:*",
-        "organizations:List*",
-        "organizations:Describe*"
-      ],
-      "Resource": ["*"],
-      "Effect": "Allow",
-      "Sid": "FullPolicy"
-    },
-    {
-      "Action": [
-        "s3:PutObject",
-        "s3:ListBucket",
-        "s3:PutObjectTagging",
-        "s3:PutObjectAcl"
-      ],
-      "Resource": "arn:aws:s3:::sc-customer-*",
-      "Effect": "Allow",
-      "Sid": "S3SyncPermissions"
-    },
-    {
-      "Action": ["s3:get*"],
-      "Resource": ["arn:aws:s3:::/*", "arn:aws:s3:::<Customer Bucket>/*"],
-      "Effect": "Allow",
-      "Sid": "S3BillingDBR"
-    }
-  ]
-}
+Update the policy definition
 ```
 
 ## Policy Overview
