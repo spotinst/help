@@ -1,6 +1,6 @@
-# Connect Master Payer Account: First Registration
+# Connect Management Account: First Registration
 
-Use the procedure on this page if you are connecting to Spot for the first time. If you are an existing Spot customer and just want to connect your AWS Cost and Usage Reports to start using Cloud Analyzer, use the following procedure: [Connect your AWS Master Payer Account: Existing Customer](cloud-analyzer/getting-started/connect-your-aws-master-payer-account-existing-customer).
+Use the procedure on this page if you are connecting to Spot for the first time. If you are an existing Spot customer and just want to connect your AWS Cost and Usage Reports to start using Cloud Analyzer, use the following procedure: [Connect your AWS Management Account: Existing Customer](cloud-analyzer/getting-started/connect-your-aws-master-payer-account-existing-customer).
 
 ## Prerequisites
 
@@ -39,7 +39,7 @@ Mark whether you are connecting from AWS China.
 
 ## Step 2
 
-Log in to your AWS Master Payer account.
+Log in to your AWS Management account.
 
 ## Step 3
 

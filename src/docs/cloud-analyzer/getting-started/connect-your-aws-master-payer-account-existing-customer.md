@@ -1,11 +1,11 @@
-# Connect Master Payer Account: Existing Customer
+# Connect Management Account: Existing Customer
 
-Use the procedure on this page if you are an existing Spot customer and want to connect your AWS Cost and Usage Reports to start using Cloud Analyzer. If you are a new customer and are connecting to Spot for the first time, use the following procedure: [Connect your AWS Master Payer Account: First Registration](cloud-analyzer/getting-started/connect-master-payer-account-first-registration).
+Use the procedure on this page if you are an existing Spot customer and want to connect your AWS Cost and Usage Reports to start using Cloud Analyzer. If you are a new customer and are connecting to Spot for the first time, use the following procedure: [Connect your AWS Management Account: First Registration](cloud-analyzer/getting-started/connect-master-payer-account-first-registration).
 
 ## Prerequisites
 
 - Organization administration permissions in Cloud Analyzer are required to register an organization to Cloud Analyzer.
-- Getting started with Cloud Analyzer on AWS requires read-only permissions to the Cost and Usage Reports, which are located in the Master Payer account.
+- Getting started with Cloud Analyzer on AWS requires read-only permissions to the Cost and Usage Reports, which are located in the Management account.
 
 ## AWS Region
 
@@ -31,7 +31,7 @@ If there is a problem completing this step, please contact Support.
 
 ## Step 1
 
-Log in to your AWS Master Payer account.
+Log in to your AWS Management account.
 
 ## Step 2
 
