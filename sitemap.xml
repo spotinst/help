@@ -281,13 +281,6 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/cloud-analyzer/tutorials/cloud-analyzer-policy/"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/cloud-analyzer/tutorials/cloud-analyzer-policy/z-create-cloud-analyzer-policy-with-cloudformation</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/cloud-analyzer/tutorials/cloud-analyzer-policy/z-create-cloud-analyzer-policy-with-cloudformation"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/cloud-analyzer/tutorials/cloud-analyzer-policy/z-create-cloud-analyzer-policy-with-cloudformation"/>
-    </url>
-    <url>
         <loc>https://docs.spot.io/?/cloud-analyzer/tutorials/cloud-analyzer-policy/z-README</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>

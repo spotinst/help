@@ -6,16 +6,19 @@ Use the Cloud Analyzer policy below if you are creating a policy with CloudForma
 {
   "AWSTemplateFormatVersion": "2010-09-09",
   "Outputs": {
-    "SCRoleArn": {
+    "CARoleArn": {
       "Value": {
-        "Fn::GetAtt": [
-          "StratCloudRole",
-          "Arn"
-        ]
+        "Fn::GetAtt": ["CloudAnalyzerRole", "Arn"]
       }
     }
   },
   "Parameters": {
+    "AccountId": {
+      "Type": "String"
+    },
+    "Token": {
+      "Type": "String"
+    },
     "CostAndUsageBucket": {
       "Type": "String",
       "Description": "The bucket name of where the *HOURLY* Cost and Usage Report is located. https://console.aws.amazon.com/billing/home?#/reports"
@@ -26,10 +29,10 @@ Use the Cloud Analyzer policy below if you are creating a policy with CloudForma
     }
   },
   "Resources": {
-    "StratCloudManagedPolicy": {
+    "CloudAnalyzerManagedPolicy": {
       "Type": "AWS::IAM::ManagedPolicy",
       "Properties": {
-        "Description": "SC Account Policy",
+        "Description": "Cloud Analyzer Account Policy",
         "PolicyDocument": {
           "Version": "2012-10-17",
           "Statement": [
@@ -103,7 +106,7 @@ Use the Cloud Analyzer policy below if you are creating a policy with CloudForma
         }
       }
     },
-    "StratCloudRole": {
+    "CloudAnalyzerRole": {
       "Type": "AWS::IAM::Role",
       "Properties": {
         "AssumeRolePolicyDocument": {
@@ -112,8 +115,10 @@ Use the Cloud Analyzer policy below if you are creating a policy with CloudForma
             {
               "Effect": "Allow",
               "Principal": {
-                "AWS": ["arn:aws:iam::884866656237:root",
-                        "arn:aws:iam::627743545735:root"]
+                "AWS": [
+                  "arn:aws:iam::627743545735:root",
+                  "arn:aws:iam::884866656237:root"
+                ]
               },
               "Action": "sts:AssumeRole"
             }
@@ -121,12 +126,30 @@ Use the Cloud Analyzer policy below if you are creating a policy with CloudForma
         },
         "ManagedPolicyArns": [
           {
-            "Ref": "StratCloudManagedPolicy"
+            "Ref": "CloudAnalyzerManagedPolicy"
           },
           "arn:aws:iam::aws:policy/job-function/Billing",
           "arn:aws:iam::aws:policy/AWSCloudFormationReadOnlyAccess",
-          "arn:aws:iam::aws:policy/ServiceQuotasFullAccess"
+          "arn:aws:iam::aws:policy/AmazonEC2ReadOnlyAccess"
         ]
+      }
+    },
+    "SetCredentials": {
+      "Type": "Custom::spotinst-set-credentials",
+      "Properties": {
+        "ServiceToken": "arn:aws:lambda:us-east-1:178579023202:function:spotinst-set-credentials",
+        "AccountId": {
+          "Ref": "AccountId"
+        },
+        "Token": {
+          "Ref": "Token"
+        },
+        "s3BucketNameCloudAnalyzer": {
+          "Ref": "CostAndUsageBucket"
+        },
+        "IamCloudAnalyzerRoleArn": {
+          "Fn::GetAtt": ["CloudAnalyzerRole", "Arn"]
+        }
       }
     }
   }
