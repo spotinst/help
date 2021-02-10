@@ -27,7 +27,7 @@ From here, follow the steps on screen to connect your account.
 
 ## Step 1
 
-Log in to your AWS Master Payer account.
+Log in to your AWS management account.
 
 ## Step 2
 
