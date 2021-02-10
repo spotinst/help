@@ -14,7 +14,7 @@ This procedure is for one MPA. If more than one MPA needs to be registered, this
 
 Use the [registration procedure](https://console.spotinst.com/spt/auth/signUp) in Spot.
 
-## Step 2. Connect your Master Payer Account
+## Step 2. Connect your Management Account
 
 1. Complete this [procedure](https://docs.spot.io/cloud-analyzer/getting-started/connect-your-aws-master-payer-account-existing-customer).
 2. Wait up to 48 hours for data generation. After that, Cloud Analyzer and a minimal, ECO dashboard will be available to you.

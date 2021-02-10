@@ -13,7 +13,7 @@ There are three major steps to configuring the CUR Extraction:
 ### Procedure Notes
 
 - AWS Region. All actions in this procedure should be made in the US-East-1 (Northern Virginia) AWS region.
-- IAM Role. The IAM role should be the one of the end-customer master payer account.
+- IAM Role. The IAM role should be the one of the end-customer m  anagement account.
 
 ## Step 1: Set Up Cost And Usage Reports
 
@@ -51,7 +51,7 @@ It will take 24 hours for AWS to start dropping reports into the S3 bucket you c
 3. Download the file and contact your Spot sales representative. (If you do not have a sales representative, contact Spot Support.) Please include the following in your email:
    - The crawler file
    - AWS account number of MSP
-   - Account ID of the customer's master payer account
+   - Account ID of the customer's management account
    - CUR bucket name
    - Stack name
    - Prefix
