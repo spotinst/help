@@ -18,7 +18,8 @@ Use this policy only if you know the Role ARN associated with Cloud Analyzer.
         "cloudformation:ListStackResources",
         "dynamodb:List*",
         "dynamodb:Describe*",
-        "savingsplans:*",
+        "savingsplans:List*",
+        "savingsplans:Describe*",
         "ec2:Describe*",
         "ec2:List*",
         "ec2:GetHostReservationPurchasePreview",
@@ -106,6 +107,8 @@ The following are read-only permissions for the reserved capacity reservations.
 ```
 "dynamodb:List*"
 "dynamodb:Describe*"
+"savingsplans:List*",
+"savingsplans:Describe*",
 "ec2:Describe*"
 "ec2:List*"
 "ec2:GetHostReservationPurchasePreview"
