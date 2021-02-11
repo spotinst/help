@@ -6,9 +6,12 @@ Use the policy below to if you are creating an Eco policy with Cloudformation.
 {
   "AWSTemplateFormatVersion": "2010-09-09",
   "Outputs": {
-    "SCRoleArn": {
+    "SpotFinOpsRoleArn": {
       "Value": {
-        "Fn::GetAtt": ["StratCloudRole", "Arn"]
+        "Fn::GetAtt": [
+          "SpotFinOpsRole",
+          "Arn"
+        ]
       }
     }
   },
@@ -16,14 +19,10 @@ Use the policy below to if you are creating an Eco policy with Cloudformation.
     "CostAndUsageBucket": {
       "Type": "String",
       "Description": "The bucket name of where the *HOURLY* Cost and Usage Report is located. https://console.aws.amazon.com/billing/home?#/reports"
-    },
-    "DetailedBillingReportBucket": {
-      "Type": "String",
-      "Description": "The bucket name of where the Detailed Billing Report. It is listed here: https://console.aws.amazon.com/billing/home?#/preference"
     }
   },
   "Resources": {
-    "StratCloudManagedPolicy": {
+    "SpotFinOpsManagedPolicy": {
       "Type": "AWS::IAM::ManagedPolicy",
       "Properties": {
         "Description": "SC Account Policy",
@@ -40,7 +39,8 @@ Use the policy below to if you are creating an Eco policy with Cloudformation.
                 "cloudformation:ListStackResources",
                 "dynamodb:List*",
                 "dynamodb:Describe*",
-                "savingsplans:*",
+                "savingsplans:List*",
+                "savingsplans:Describe*",
                 "ec2:Describe*",
                 "ec2:List*",
                 "ec2:GetHostReservationPurchasePreview",
@@ -64,7 +64,9 @@ Use the policy below to if you are creating an Eco policy with Cloudformation.
                 "organizations:List*",
                 "organizations:Describe*"
               ],
-              "Resource": ["*"]
+              "Resource": [
+                "*"
+              ]
             },
             {
               "Sid": "S3SyncPermissions",
@@ -80,24 +82,11 @@ Use the policy below to if you are creating an Eco policy with Cloudformation.
             {
               "Sid": "S3BillingDBR",
               "Effect": "Allow",
-              "Action": ["s3:get*"],
+              "Action": [
+                "s3:get*"
+              ],
               "Resource": [
-                {
-                  "Fn::Join": [
-                    "",
-                    [
-                      "arn:aws:s3:::",
-                      { "Ref": "DetailedBillingReportBucket" },
-                      "/*"
-                    ]
-                  ]
-                },
-                {
-                  "Fn::Join": [
-                    "",
-                    ["arn:aws:s3:::", { "Ref": "CostAndUsageBucket" }, "/*"]
-                  ]
-                }
+                { "Fn::Join" : [ "", [ "arn:aws:s3:::", { "Ref" : "CostAndUsageBucket" },"/*"]]}
               ]
             },
             {
@@ -110,7 +99,7 @@ Use the policy below to if you are creating an Eco policy with Cloudformation.
         }
       }
     },
-    "StratCloudRole": {
+    "SpotFinOpsRole": {
       "Type": "AWS::IAM::Role",
       "Properties": {
         "AssumeRolePolicyDocument": {
@@ -119,10 +108,8 @@ Use the policy below to if you are creating an Eco policy with Cloudformation.
             {
               "Effect": "Allow",
               "Principal": {
-                "AWS": [
-                  "arn:aws:iam::884866656237:root",
-                  "arn:aws:iam::627743545735:root"
-                ]
+                "AWS": ["arn:aws:iam::884866656237:root",
+                        "arn:aws:iam::627743545735:root"]
               },
               "Action": "sts:AssumeRole"
             }
@@ -130,7 +117,7 @@ Use the policy below to if you are creating an Eco policy with Cloudformation.
         },
         "ManagedPolicyArns": [
           {
-            "Ref": "StratCloudManagedPolicy"
+            "Ref": "SpotFinOpsManagedPolicy"
           },
           "arn:aws:iam::aws:policy/job-function/Billing",
           "arn:aws:iam::aws:policy/AWSCloudFormationReadOnlyAccess",
@@ -170,6 +157,8 @@ The following are read-only permissions for the reserved capacity reservations.
 ```
 "dynamodb:List*"
 "dynamodb:Describe*"
+"savingsplans:List*"
+"savingsplans:Describe*"
 "ec2:Describe*"
 "ec2:List*"
 "ec2:GetHostReservationPurchasePreview"
