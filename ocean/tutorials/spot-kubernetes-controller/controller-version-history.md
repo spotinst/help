@@ -1,5 +1,10 @@
 # Controller Version History
 
+## [1.0.73] - 2021-02-14
+Added
+
+- Support for GKE shielded nodes
+
 ## [1.0.72] - 2021-01-27
 Added
 
