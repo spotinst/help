@@ -4,6 +4,6 @@ Running single instance workloads on Managed Instance will provide you with a si
 
 There are several ways to create a managed instance. Choose the method right for you.
 
-- [Join an existing AWS managed instance](managed-instance/getting-started/join-an-existing-managed-instance)
+- [Import an existing AWS managed instance](managed-instance/getting-started/join-an-existing-managed-instance)
 - [Create a new managed instance from scratch](managed-instance/getting-started/create-a-new-managed-instance)
 - [Upgrade an existing Elastigroup to a managed instance](managed-instance/tutorials/upgrade-an-existing-elastigroup-to-managed-instance)

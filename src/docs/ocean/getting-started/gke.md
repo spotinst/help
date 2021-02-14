@@ -1,8 +1,8 @@
-# Join an existing GKE Cluster
+# Connect an existing GKE Cluster
 
 Ocean is a managed infrastructure service for Kubernetes that automatically adjusts infrastructure capacity and size to meet the needs of pods, containers, and applications.
 
-In this procedure, you will join an existing GKE cluster to Ocean using the [Spot Console](http://console.spotinst.com/).
+In this procedure, you will connect an existing GKE cluster to Ocean using the [Spot Console](http://console.spotinst.com/).
 
 ## Prerequisites
 

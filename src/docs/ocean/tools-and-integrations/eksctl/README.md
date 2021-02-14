@@ -17,5 +17,5 @@ Integration with eksctl enables you to streamline and optimize the entire EKS pr
 ## What's Next?
 
 - [Create a New Cluster with eksctl](ocean/tools-and-integrations/eksctl/create-a-new-cluster-with-eksctl).
-- [Join an Existing Cluster](ocean/tools-and-integrations/eksctl/join-an-existing-cluster) to Ocean using eksctl.
+- [Connect an Existing Cluster](ocean/tools-and-integrations/eksctl/join-an-existing-cluster) to Ocean using eksctl.
 - Learn more about [eksctl](https://github.com/spotinst/weaveworks-eksctl).

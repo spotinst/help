@@ -1,6 +1,6 @@
-# Join an Existing Cluster using eksctl
+# Connect an Existing Cluster using eksctl
 
-If you have an existing EKS cluster managed by eksctl and would like to join it with Ocean, complete the procedure below.
+If you have an existing EKS cluster managed by eksctl and would like to connect it to Ocean, complete the procedure below.
 
 ## Step 1. Create A New Ocean-Managed Nodegroup
 
