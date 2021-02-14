@@ -18,7 +18,7 @@ If you have not yet connected Spot with your Cloud provider account, go ahead an
 There are several ways to create an Ocean-managed cluster. Choose the method that is right for you.
 
 - EKS
-  - [Join an Existing Cluster](/ocean/getting-started/eks/join-an-existing-cluster)
+  - [Connect an Existing Cluster](/ocean/getting-started/eks/join-an-existing-cluster)
   - [Create a New Cluster](/ocean/getting-started/eks/create-a-new-cluster)
   - [eksctl](/ocean/tools-and-integrations/eksctl/)
   - [Terraform](/ocean/getting-started/eks/terraform)

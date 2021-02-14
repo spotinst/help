@@ -1,8 +1,8 @@
-# Join an existing EKS Cluster
+# Connect an existing EKS Cluster
 
 Ocean is a managed infrastructure service for Kubernetes that automatically adjusts infrastructure capacity and size to meet the needs of pods, containers, and applications.
 
-In this procedure, you will use the [Spot Console](http://console.spotinst.com/) to join an existing EKS cluster to Ocean.
+In this procedure, you will use the [Spot Console](http://console.spotinst.com/) to connect an existing EKS cluster to Ocean.
 
 ## Prerequisites
 
@@ -15,7 +15,7 @@ In this procedure, you will use the [Spot Console](http://console.spotinst.com/)
 
 <img src="/ocean/_media/create-cluster.png" />
 
-2. When the Create Ocean Cluster page appears, you will need to choose a use case template. Under Join an Existing Cluster, click From EKS Worker Nodes.
+2. When the Create Ocean Cluster page appears, you will need to choose a use case template. Under connect an Existing Cluster, click From EKS Worker Nodes.
 
 <img src="/ocean/_media/from-eks-worker-nodes1.png" width="600" height="160" />
 
