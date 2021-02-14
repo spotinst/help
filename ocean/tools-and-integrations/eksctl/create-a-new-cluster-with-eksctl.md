@@ -156,4 +156,4 @@ That's it! Your Ocean cluster is up and will now ensure the most cost-effective 
 
 ## What's Next?
 
-Learn how to [Join an Existing Cluster](ocean/tools-and-integrations/eksctl/join-an-existing-cluster) to Ocean using eksctl.
+Learn how to [Connect an Existing Cluster](ocean/tools-and-integrations/eksctl/join-an-existing-cluster) to Ocean using eksctl.

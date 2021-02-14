@@ -1,4 +1,4 @@
-# Join an Existing Elastic Load Balancer
+# Import an Existing Elastic Load Balancer
 
 In this procedure, you will import the configuration of an existing AWS Elastic Load Balancer (ELB) to Spot so that the ELB can be managed as an Elastigroup in Spot.
 
