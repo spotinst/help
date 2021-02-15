@@ -13,7 +13,7 @@ There are three major steps to configuring the CUR Extraction:
 ### Procedure Notes
 
 - AWS Region. All actions in this procedure should be made in the US-East-1 (Northern Virginia) AWS region.
-- IAM Role. The IAM role should be the one of the end-customer m  anagement account.
+- IAM Role. The IAM role should be the one of the end-customer m anagement account.
 
 ## Step 1: Set Up Cost And Usage Reports
 

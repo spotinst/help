@@ -42,9 +42,7 @@ Use this policy only if you know the Role ARN associated with Cloud Analyzer.
         "organizations:List*",
         "organizations:Describe*"
       ],
-      "Resource": [
-        "*"
-      ]
+      "Resource": ["*"]
     },
     {
       "Sid": "S3SyncPermissions",
@@ -60,12 +58,20 @@ Use this policy only if you know the Role ARN associated with Cloud Analyzer.
     {
       "Sid": "S3BillingDBR",
       "Effect": "Allow",
-      "Action": [
-        "s3:get*"
-      ],
+      "Action": ["s3:get*"],
       "Resource": [
-        { "Fn::Join" : [ "", [ "arn:aws:s3:::", { "Ref" : "DetailedBillingReportBucket" },"/*"]]},
-        { "Fn::Join" : [ "", [ "arn:aws:s3:::", { "Ref" : "CostAndUsageBucket" },"/*"]]}
+        {
+          "Fn::Join": [
+            "",
+            ["arn:aws:s3:::", { "Ref": "DetailedBillingReportBucket" }, "/*"]
+          ]
+        },
+        {
+          "Fn::Join": [
+            "",
+            ["arn:aws:s3:::", { "Ref": "CostAndUsageBucket" }, "/*"]
+          ]
+        }
       ]
     },
     {
