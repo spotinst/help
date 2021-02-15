@@ -23,11 +23,12 @@ If you have workloads that you do not want to run on spot instances at all, you 
 ### spotinst.io/gpu-type
 
 This label sets the GPU accelerator and applies only to GKE clusters. Valid values are:
-* `nvidia-tesla-v100`
-* `nvidia-tesla-p100`
-* `nvidia-tesla-k80`
-* `nvidia-tesla-p4`
-* `nvidia-tesla-t4`
+
+- `nvidia-tesla-v100`
+- `nvidia-tesla-p100`
+- `nvidia-tesla-k80`
+- `nvidia-tesla-p4`
+- `nvidia-tesla-t4`
 
 > **Tip**: Avoid adding Spot labels under the launch specification node labels section. These labels should be added in your pod configuration only.
 
