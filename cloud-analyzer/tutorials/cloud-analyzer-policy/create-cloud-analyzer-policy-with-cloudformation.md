@@ -70,9 +70,7 @@ Use the Cloud Analyzer policy below if you are creating a policy with CloudForma
                 "organizations:List*",
                 "organizations:Describe*"
               ],
-              "Resource": [
-                "*"
-              ]
+              "Resource": ["*"]
             },
             {
               "Sid": "S3SyncPermissions",
@@ -88,12 +86,24 @@ Use the Cloud Analyzer policy below if you are creating a policy with CloudForma
             {
               "Sid": "S3BillingDBR",
               "Effect": "Allow",
-              "Action": [
-                "s3:get*"
-              ],
+              "Action": ["s3:get*"],
               "Resource": [
-                { "Fn::Join" : [ "", [ "arn:aws:s3:::", { "Ref" : "DetailedBillingReportBucket" },"/*"]]},
-                { "Fn::Join" : [ "", [ "arn:aws:s3:::", { "Ref" : "CostAndUsageBucket" },"/*"]]}
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "arn:aws:s3:::",
+                      { "Ref": "DetailedBillingReportBucket" },
+                      "/*"
+                    ]
+                  ]
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    ["arn:aws:s3:::", { "Ref": "CostAndUsageBucket" }, "/*"]
+                  ]
+                }
               ]
             },
             {
