@@ -35,7 +35,7 @@ $ kubectl patch deployment tiller-deploy \
 3. Install the Spot Kubernetes cluster controller:
 
 ```Shellscript
-$ helm install spotinst*_controller spotinst*/spotinst-kubernetes-cluster-controller \
+$ helm install spotinst_controller spotinst/spotinst-kubernetes-cluster-controller \
 --set spotinst.token=[TOKEN] \
 --set spotinst.account=[ACCOUNT_ID] \
 --set spotinst.clusterIdentifier=[IDENTIFIER]
