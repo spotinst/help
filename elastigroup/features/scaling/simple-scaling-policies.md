@@ -37,6 +37,6 @@ Each Simple Scaling Policy has the following set of parameters:
   - sum
 - Operator: Setting the relation between the threshold and the sampled value.
 - For / Period: The length of time to collect and evaluate the metric. Sets the length of a single period, and the amount of periods.
-- Cooldown: The time (in seconds) that any new scaling activities for this scaling policy will be suspended after the scaling policy is triggered. For example, if scaling policy A has Cooldown set to 60 sec. and a scale-down is triggered, then no new scale down will start due to policy A for the next minute. In addition, no new policies can go into effect while policy A is in cooldown.
+- Cooldown: The time (in seconds) that all scaling activities will be suspended after a scaling policy is triggered. For example, if scaling policy A has Cooldown set to 60 sec. and a scale-down is triggered, then no new scale down will start due to policy A for the next minute. In addition, no new policies can go into effect while policy A is in cooldown.
 
 > The Consecutive Periods setting directly affects the responsiveness of your scaling policy. The threshold must be crossed consistently for the entire duration of the number of consecutive periods for the policy to take effect.
