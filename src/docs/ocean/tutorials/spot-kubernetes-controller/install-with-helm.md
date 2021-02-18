@@ -4,7 +4,7 @@
 
 1. Grant Tiller access to create resources in the `kube-system` namespace (see Tiller and Role-based Access Control):
 
-```Shellscript
+```sh
 # Create a ServiceAccount for Tiller
 $ kubectl create serviceaccount tiller \
 --namespace=kube-system
@@ -34,8 +34,8 @@ $ kubectl patch deployment tiller-deploy \
 
 3. Install the Spot Kubernetes cluster controller:
 
-```Shellscript
-$ helm install spotinst_controller spotinst/spotinst-kubernetes-cluster-controller \
+```sh
+$ helm install spot-controller spotinst/spotinst-kubernetes-cluster-controller \
 --set spotinst.token=[TOKEN] \
 --set spotinst.account=[ACCOUNT_ID] \
 --set spotinst.clusterIdentifier=[IDENTIFIER]
@@ -45,15 +45,15 @@ $ helm install spotinst_controller spotinst/spotinst-kubernetes-cluster-controll
 
 4. In case you want to upgrade the Spot controller's version:
 
-```Shellscript
-$ helm upgrade spotinst-kubernetes-cluster-controller spotinst/spotinst-kubernetes-cluster-controller \
+```sh
+$ helm upgrade spot-controller spotinst/spotinst-kubernetes-cluster-controller \
 --reuse-values \
 --version <VERSION>
 ```
 
 In order to discover the available Spot controller versions, use the following command:
 
-```Shellscript
+```sh
 $ helm search spotinst/spotinst-kubernetes-cluster-controller \
 --versions
 ```
