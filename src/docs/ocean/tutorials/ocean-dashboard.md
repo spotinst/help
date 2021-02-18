@@ -8,7 +8,7 @@ The dashboard also provides an easy pathway to the actions you can take to imple
 
 The dashboard is currently available to Kubernetes users only.
 
-## View The Dashboard
+## View the Dashboard
 
 In the main menu of the Ocean console, click Dashboard.
 
