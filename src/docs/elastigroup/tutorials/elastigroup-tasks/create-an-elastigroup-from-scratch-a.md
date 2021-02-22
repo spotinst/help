@@ -65,7 +65,7 @@ In this part you define your workload capacity as described below.
 - Maximum: The highest number of instances or vCPUs that can be available.
 - Choose one of the following:
   - Set by % of spot instances: Percent of total instances that should be spot instances. The rest will be on-demand instances.
-  - Set by specific On-Demand count: A specific number of instances that must be On-Demand. The rest will be spot instances.
+  - Set by specific On-Demand count: A specific number of instances that must be On-Demand. The rest will be spot instances. If you chose vCPU as the capacity unit, Elastigroup will choose on-demand instance types that provide the total number of vCPUs requested. For example, if you requested four vCPUs, Elastigroup may choose two instance types with two vCPUs on each (or any other combination meeting the requirement), making a total of four vCPUs.
 
 ### Optimization Strategy
 
