@@ -2,7 +2,8 @@
 
 Scaling Nomad nodes has always been difficult, our solution is our own proprietary Nomad Autoscaler which will allow our customers to scale Nomad workloads economically based on Spot prices and trends based on aggregated node utilization.
 
-How Nomad Autoscaler Works
+## How Nomad Autoscaler Works
+
 Nomad Autoscaler periodically checks whether there are Jobs that have queued allocations and if there is enough capacity to schedule these allocations. If there isn't enough capacity, a scale up event will be triggered.
 
 Nomad Autoscaler monitors the usage of all nodes. If a node is not needed for an extended period and is not highly utilized, the Jobs will be scheduled elsewhere and the node will be terminated.
