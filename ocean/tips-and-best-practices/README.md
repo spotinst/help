@@ -49,7 +49,7 @@ Alternatively, depending on the sensitivity of your workloads and the general si
 
 ## Minimize Service Interruptions using Spot Labels
 
-Ways to reduce interruptions of workloads using the `restrict-scale-down` and `node-lifecycle` labels are described in detail in [Spot Labels](https://docs.spot.io/ocean/features/labels-and-taints). Note that setting the workload to run on OD instances does not prevent Ocean from bin packing the cluster by scaling down. Therefore, to ensure workloads running on OD instances are not interrupted by scale down, You can use  both these labels together. This will ensure that Ocean will not scale down OD instances running critical applications due to efficiency considerations.
+Ways to reduce interruptions of workloads using the `restrict-scale-down` and `node-lifecycle` labels are described in detail in [Spot Labels](ocean/features/labels-and-taints). Note that setting the workload to run on OD instances does not prevent Ocean from bin packing the cluster by scaling down. Therefore, to ensure workloads running on OD instances are not interrupted by scale down, You can use  both these labels together. This will ensure that Ocean will not scale down OD instances running critical applications due to efficiency considerations.
 
 ## Match Kubernetes Version and Built-in Labels
 
@@ -59,4 +59,4 @@ For example, `beta.kubernetes.io/instance-type` applies to Kubernetes version 1.
 
 ## What’s Next?
 
-Learn more about some useful [troubleshooting](ocean/troubleshooting/troubleshoot-controller) techniques.
+Learn more about some useful [troubleshooting](ocean/troubleshooting/troubleshoot-controller) techniques in Ocean.
