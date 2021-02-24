@@ -83,7 +83,7 @@ The migration of existing deployment will consist of two separate layers: master
 
 ### Worker Nodes
 
-1. In a case of a single Instance Group there is no need to add any labels and you may skip this step. Set the Ocean default launch specification label: `spotinst.io/ocean-default-launchspec: `true`` on your primary Instance Group.
+1. In a case of a single Instance Group there is no need to add any labels and you may skip this step. Set the Ocean default launch specification label: `spotinst.io/ocean-default-launchspec: true` on your primary Instance Group.
 
 Example:
 
