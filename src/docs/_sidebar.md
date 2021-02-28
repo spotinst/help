@@ -70,6 +70,8 @@
   - [Troubleshooting](ocean/troubleshooting/)
     - [Troubleshoot Controller](ocean/troubleshooting/troubleshoot-controller)
   - [Tips & Best Practices](ocean/tips-and-best-practices/)
+- [**Wave**](wave/)
+    - [Getting Started](wave/aws/getting-started/)
 - [**Elastigroup**](elastigroup/)
   - [Getting Started](elastigroup/getting-started/)
     - [Elastigroup for AWS](elastigroup/getting-started/elastigroup-for-aws)
