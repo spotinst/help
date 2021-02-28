@@ -77,7 +77,7 @@ When the new instance with the correct user data, image, and tags is joined to t
 <img src="/ocean/_media/tools-openshift-4x-01.png" width="220" height="133" />
 
 2. Click Create Cluster.
-3. Click the use case for OpenShift, `Join an Existing OpenShift Cluster`.
+3. Click the use case for OpenShift, `Connect an Existing OpenShift Cluster`.
 
 <img src="/ocean/_media/tools-openshift-4x-02.png" width="300" height="385" />
 

@@ -18,7 +18,8 @@ Use this policy only if you know the Role ARN associated with Cloud Analyzer.
         "cloudformation:ListStackResources",
         "dynamodb:List*",
         "dynamodb:Describe*",
-        "savingsplans:*",
+        "savingsplans:List*",
+        "savingsplans:Describe*",
         "ec2:Describe*",
         "ec2:List*",
         "ec2:GetHostReservationPurchasePreview",
@@ -42,9 +43,7 @@ Use this policy only if you know the Role ARN associated with Cloud Analyzer.
         "organizations:List*",
         "organizations:Describe*"
       ],
-      "Resource": [
-        "*"
-      ]
+      "Resource": ["*"]
     },
     {
       "Sid": "S3SyncPermissions",
@@ -60,12 +59,20 @@ Use this policy only if you know the Role ARN associated with Cloud Analyzer.
     {
       "Sid": "S3BillingDBR",
       "Effect": "Allow",
-      "Action": [
-        "s3:get*"
-      ],
+      "Action": ["s3:get*"],
       "Resource": [
-        { "Fn::Join" : [ "", [ "arn:aws:s3:::", { "Ref" : "DetailedBillingReportBucket" },"/*"]]},
-        { "Fn::Join" : [ "", [ "arn:aws:s3:::", { "Ref" : "CostAndUsageBucket" },"/*"]]}
+        {
+          "Fn::Join": [
+            "",
+            ["arn:aws:s3:::", { "Ref": "DetailedBillingReportBucket" }, "/*"]
+          ]
+        },
+        {
+          "Fn::Join": [
+            "",
+            ["arn:aws:s3:::", { "Ref": "CostAndUsageBucket" }, "/*"]
+          ]
+        }
       ]
     },
     {
@@ -106,6 +113,8 @@ The following are read-only permissions for the reserved capacity reservations.
 ```
 "dynamodb:List*"
 "dynamodb:Describe*"
+"savingsplans:List*",
+"savingsplans:Describe*",
 "ec2:Describe*"
 "ec2:List*"
 "ec2:GetHostReservationPurchasePreview"

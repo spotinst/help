@@ -3,6 +3,7 @@
 You can join an existing Azure resource to Elastigroup by importing its configuration. This enables you to manage your resources completely in Elastigroup and enjoy all the optimization and cost benefits that Elastigroup provides.
 
 You can import the following types of Azure resources:
+
 - Scale Set
 - Application Gateway
 - Classic Load Balancer
@@ -11,10 +12,12 @@ You can import the following types of Azure resources:
 ## Prerequisites
 
 To import an existing Azure resource, you must first complete the following:
+
 - [Connect your Azure subscription](connect-your-cloud-provider/azure-account.md) to Spot.
 - Have the relevant Azure resource up and running (e.g., Scale Set, Application Gateway, Classic Load Balancer, VM).
 
 ## Get Started
+
 1. In the left menu of the Spot console, click Elastigroup/Groups.
 2. Click Create Elastigroup/Import.
 
@@ -33,6 +36,7 @@ To import an existing Azure resource, you must first complete the following:
 ## Import Scale Set
 
 In the Import dialog, complete the following:
+
 1. Select a Resource Group.
 2. Select a Scale Set.
 
@@ -47,6 +51,7 @@ In the Import dialog, complete the following:
 ## Import Application Gateway
 
 In the Import dialog, complete the following:
+
 1. Select a Resource Group.
 2. Select an Application Gateway.
 3. Select a Backend Pool.
@@ -62,6 +67,7 @@ In the Import dialog, complete the following:
 ## Import Classic Load Balancer
 
 In the Import dialog, complete the following:
+
 1. Select a Resource Group.
 2. Select a Load Balancer.
 3. Select a Backend Pool.
@@ -77,6 +83,7 @@ In the Import dialog, complete the following:
 ## Import VM
 
 In the Import dialog, complete the following:
+
 1. Select a Resource Group.
 2. Select a VM.
 

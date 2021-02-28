@@ -37,7 +37,7 @@ In order to register to your ECS cluster, each instance in your Elastigroup need
    - Associate public IP
    - Subnet default
 
-## Step 3: Update your User Data (Startup Script) to join the ECS Cluster
+## Step 3: Update your User Data (Startup Script) to import the ECS Cluster
 
 By default, your container instances will launch into your default cluster. If you want to launch into a different cluster, use the following script for the User Data field in the Additional Configurations section of the Compute tab, replacing `CLUSTER_NAME` with the name of your desired cluster.
 
