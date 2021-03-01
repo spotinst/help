@@ -7,6 +7,7 @@ This page presents a collection of tips, suggestions, and recommendations to hel
 If you have [reserved instances](elastigroup/features/core-features/spot-reserved-on-demand-instances) (RIs) and they are available, Ocean will utilize them by default before purchasing spot instances, (i.e., the API attribute `utilizeReservedInstances` is set to True by default upon Ocean creation). If you would like to change this, set this attribute to False using this [API](https://docs.spot.io/api/#operation/OceanAWSClusterCreate). In addition, if you would like to take advantage of [AWS Savings Plans](https://aws.amazon.com/savingsplans/pricing/), you can opt in using the API.
 
 If you are using RI sharing across multiple AWS accounts, you can take advantage of the Cross RI Utilization feature to further optimize your RI usage. This feature will consider RI contracts and consumption across all relevant accounts. This is useful when a single account cannot consume the full RI capacity. Additional accounts can then use the excess capacity up to the maximum capacity of the RI. To activate this feature, do the following:
+
 1. [Connect](https://docs.spot.io/connect-your-cloud-provider/aws-account) all the accounts with RI contracts to the Spot platform. (This can also be done using a read-only policy.)
 2. Reach out to Spot Support and request enablement of Cross RI Utilization for your Spot organization.
 
@@ -29,14 +30,17 @@ If you have a reason not to use certain machine types, you can simply deselect t
 <img src="/ocean/_media/tips-image-types-01.png" />
 
 You can use the `instanceTypes` attribute in the API to specify machine types that are allowed or not allowed in the cluster. The following options are available:
+
 - `instanceTypes.blacklist` - Specify instance types to avoid in the cluster.
 - `instanceTypes.whitelist` - Specify instance types that are allowed in the cluster.
 
 The following rules apply to these:
+
 - Whitelist and blacklist may not be used at the same time.
 - If no instance types are defined for both options, then all instance types are available.
 
 ### Set Instance Size Ranges
+
 In some use cases, it is a good practice to increase the minimum CPU or RAM of the individual nodes Ocean launches for your containerized workloads.
 
 For example, you may want to increase the minimum machine size if you run many DaemonSets (that require a lot of resources) or you have any DaemonSets that are licensed based on machine count.
@@ -49,7 +53,7 @@ Alternatively, depending on the sensitivity of your workloads and the general si
 
 ## Minimize Service Interruptions using Spot Labels
 
-Ways to reduce interruptions of workloads using the `restrict-scale-down` and `node-lifecycle` labels are described in detail in [Spot Labels](ocean/features/labels-and-taints). Note that setting the workload to run on OD instances does not prevent Ocean from bin packing the cluster by scaling down. Therefore, to ensure workloads running on OD instances are not interrupted by scale down, You can use  both these labels together. This will ensure that Ocean will not scale down OD instances running critical applications due to efficiency considerations.
+Ways to reduce interruptions of workloads using the `restrict-scale-down` and `node-lifecycle` labels are described in detail in [Spot Labels](ocean/features/labels-and-taints). Note that setting the workload to run on OD instances does not prevent Ocean from bin packing the cluster by scaling down. Therefore, to ensure workloads running on OD instances are not interrupted by scale down, You can use both these labels together. This will ensure that Ocean will not scale down OD instances running critical applications due to efficiency considerations.
 
 ## Match Kubernetes Version and Built-in Labels
 

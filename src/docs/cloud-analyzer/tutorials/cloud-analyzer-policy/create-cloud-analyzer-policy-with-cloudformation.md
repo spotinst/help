@@ -8,10 +8,7 @@ Use the Cloud Analyzer policy below if you are creating a policy with CloudForma
   "Outputs": {
     "SpotFinOpsRoleArn": {
       "Value": {
-        "Fn::GetAtt": [
-          "SpotFinOpsRole",
-          "Arn"
-        ]
+        "Fn::GetAtt": ["SpotFinOpsRole", "Arn"]
       }
     }
   },
@@ -82,9 +79,12 @@ Use the Cloud Analyzer policy below if you are creating a policy with CloudForma
               "Effect": "Allow",
               "Action": ["s3:get*"],
               "Resource": [
-
-                { "Fn::Join" : [ "", [ "arn:aws:s3:::", { "Ref" : "CostAndUsageBucket" },"/*"]]}
-
+                {
+                  "Fn::Join": [
+                    "",
+                    ["arn:aws:s3:::", { "Ref": "CostAndUsageBucket" }, "/*"]
+                  ]
+                }
               ]
             },
             {
@@ -106,8 +106,10 @@ Use the Cloud Analyzer policy below if you are creating a policy with CloudForma
             {
               "Effect": "Allow",
               "Principal": {
-                "AWS": ["arn:aws:iam::884866656237:root",
-                        "arn:aws:iam::627743545735:root"]
+                "AWS": [
+                  "arn:aws:iam::884866656237:root",
+                  "arn:aws:iam::627743545735:root"
+                ]
               },
               "Action": "sts:AssumeRole"
             }
@@ -126,7 +128,6 @@ Use the Cloud Analyzer policy below if you are creating a policy with CloudForma
   }
 }
 ```
-
 
 ## Get Account ID and Token
 

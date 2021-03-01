@@ -8,10 +8,7 @@ Use the policy below to if you are creating an Eco policy with Cloudformation.
   "Outputs": {
     "SpotFinOpsRoleArn": {
       "Value": {
-        "Fn::GetAtt": [
-          "SpotFinOpsRole",
-          "Arn"
-        ]
+        "Fn::GetAtt": ["SpotFinOpsRole", "Arn"]
       }
     }
   },
@@ -64,9 +61,7 @@ Use the policy below to if you are creating an Eco policy with Cloudformation.
                 "organizations:List*",
                 "organizations:Describe*"
               ],
-              "Resource": [
-                "*"
-              ]
+              "Resource": ["*"]
             },
             {
               "Sid": "S3SyncPermissions",
@@ -82,11 +77,14 @@ Use the policy below to if you are creating an Eco policy with Cloudformation.
             {
               "Sid": "S3BillingDBR",
               "Effect": "Allow",
-              "Action": [
-                "s3:get*"
-              ],
+              "Action": ["s3:get*"],
               "Resource": [
-                { "Fn::Join" : [ "", [ "arn:aws:s3:::", { "Ref" : "CostAndUsageBucket" },"/*"]]}
+                {
+                  "Fn::Join": [
+                    "",
+                    ["arn:aws:s3:::", { "Ref": "CostAndUsageBucket" }, "/*"]
+                  ]
+                }
               ]
             },
             {
@@ -108,8 +106,10 @@ Use the policy below to if you are creating an Eco policy with Cloudformation.
             {
               "Effect": "Allow",
               "Principal": {
-                "AWS": ["arn:aws:iam::884866656237:root",
-                        "arn:aws:iam::627743545735:root"]
+                "AWS": [
+                  "arn:aws:iam::884866656237:root",
+                  "arn:aws:iam::627743545735:root"
+                ]
               },
               "Action": "sts:AssumeRole"
             }
