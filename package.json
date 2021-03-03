@@ -42,7 +42,7 @@
     "husky": "^5.1.2",
     "lint-staged": "^10.5.4",
     "markdownlint": "^0.23.1",
-    "markdownlint-cli": "^0.26.0",
+    "markdownlint-cli": "^0.27.1",
     "postcss": "^8.2.6",
     "postcss-import": "^14.0.0",
     "postcss-loader": "^5.0.0",
