@@ -103,3 +103,11 @@ To customize the scaling configuration:
 <img src="/ocean/_media/features-scaling-k8s-03.png" />
 
 > **Caution**: Under normal operation, Auto-scaling should be enabled, and it is not recommended to disable this function. When Auto-scaling is disabled, Ocean does not scale up or down, and cannot maintain headroom. In addition, the Cluster Shutdown Hours feature will not work properly when scaling the cluster back to its desired state.
+
+## Supported Operating Systems
+
+Ocean supports launching of instances using any ECS supported operating system (OS), including container-optimized OSs such as AWS Bottlerocket.
+
+## What’s Next?
+
+Learn more about how Ocean manages [headroom](ocean/features/headroom).
