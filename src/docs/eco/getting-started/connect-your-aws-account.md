@@ -2,10 +2,11 @@
 
 ## Prerequisite
 
-Getting started with Eco on AWS usually requires read-only permissions to the Cost and Usage Reports, which are located in the Management account. Choose one of the following methods:
+Getting started with Eco on AWS usually requires read-only permissions to the Cost and Usage Reports, which are located in the Management account, or in specially configured [member accounts](https://aws.amazon.com/about-aws/whats-new/2020/12/cost-and-usage-report-now-available-to-member-linked-accounts/). Choose one of the following methods:
 
 - Read data from your Direct-to-AWS Management Account and connect as described below.
-- Read data for all AWS MSP/Reseller customer accounts, connect as described below, and submit a support ticket.
+- Read data from a single AWS MSP/Reseller customer account and connect as described below.
+- Read data for multiple AWS MSP/Reseller customer accounts, connect as described below, and submit a support ticket.
 - Read data for limited AWS MSP/Reseller customer accounts and submit a support ticket.
 - Read data provided by CloudHealth and submit a support ticket.
 - Read data from a member-account's Cost and Usage Report and submit a support ticket.
@@ -28,28 +29,19 @@ From here, follow the steps on screen to connect your account.
 
 ## Step 1
 
-Log in to your AWS management account.
+Log into your AWS management account (or single, member account if you are an MSP end customer).
 
 ## Step 2
 
-Set up Cost and Usage Reports.
+Set up Cost and Usage Reports as described below.
 
----
-
-**Important**:
-
-- If your account is not managed by an MSP, complete Step 2 and continue with the setup.
-- If your Account is managed by an MSP, your MSP must set up the Cost and Usage reports as described [here](eco/getting-started/connect-account-customer-working-with-msp). Skip Steps 2 and 3 and continue with Step 4.
-
----
-
-- To go to AWS Cost and Usage Report setup, click [here](https://console.aws.amazon.com/billing/home?#/reports).
-- To create a new report, follow the illustrations below. Important guidelines:
-  - Include Resource IDs under `Additional report details`
-  - Enable Data refresh settings.
-  - Time granularity Units should be Hourly.
-  - Enable report data integration for Amazon Athena.
-- Mark the checkboxes as shown below.
+1. To go to AWS Cost and Usage Report setup, click [here](https://console.aws.amazon.com/billing/home?#/reports).
+2. To create a new report, follow the illustrations below. Important guidelines:
+   - Include Resource IDs under `Additional report details`
+   - Enable Data refresh settings.
+   - Time granularity Units should be Hourly.
+   - Enable report data integration for Amazon Athena.
+3.  Mark the checkboxes as shown below.
 
 <img src="/eco/_media/gettingstarted-aws-connect-03.png" />
 
