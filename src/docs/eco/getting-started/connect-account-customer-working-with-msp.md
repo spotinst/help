@@ -1,6 +1,8 @@
 # Connect Account: Customer Working with MSP
 
-If your account is managed by an MSP and you do not have access to the billing file, the MSP must complete the procedure in this article in order to retrieve the billing information. This procedure enables Eco to access your billing file and provide you with visibility into your cloud expenditures.
+If more than one of your accounts is managed by an MSP and you do not have access to the billing file, the MSP must complete the procedure in this article in order to retrieve the billing information. This procedure enables Eco to access your billing file and provide you with visibility into your cloud expenditures.
+
+If you only have a single, member account to connect, then perform the steps in [Connect your AWS Account](eco/getting-started/connect-your-aws-account).
 
 ## Cost And Usage Report Extraction Setup
 
