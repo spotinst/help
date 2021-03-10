@@ -19,7 +19,7 @@ There are three major steps to configuring the CUR Extraction:
 
 ## Step 1: Set Up Cost And Usage Reports
 
-1. Log in to your root AWS account, then click here.
+1. Log in to your root AWS account, and go to [AWS Cost and Usage Reports](https://console.aws.amazon.com/billing/home?#/reports).
 2. Click Create Report.
 3. Under the first menu, Report Content, do the following:
    1. For the report name, enter (i.e., paste) the following: `spotinst-cur-report`. You must use the same name for the S3 bucket name.
