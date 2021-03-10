@@ -106,7 +106,7 @@ To customize the scaling configuration:
 
 ## Supported Operating Systems
 
-Ocean supports launching of instances using any ECS supported operating system (OS), including container-optimized OSs such as AWS Bottlerocket.
+Ocean supports launching of instances using any ECS supported operating system (OS), including container-optimized OSs such as Bottlerocket OS.
 
 ## What’s Next?
 
