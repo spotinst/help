@@ -113,7 +113,7 @@ To customize the scaling configuration:
 
 ## Supported Operating Systems
 
-Ocean supports launching instances using any operating system (OS) type, including container-optimized OSs such as AWS Bottlerocket, GCP Container Optimized OS, and RancherOS.
+Ocean supports launching instances using any operating system (OS) type, including container-optimized OSs such as Bottlerocket OS, Container Optimized OS, and RancherOS.
 
 ## What’s Next?
 

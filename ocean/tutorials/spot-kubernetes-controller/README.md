@@ -16,7 +16,7 @@ There are several ways to install the Controller. Choose one of the procedures b
 
 ## Supported Operating Systems
 
-The Spot Kubernetes Controller can run on a number of Linux distributions, including container-optimized operating systems such as AWS Bottlerocket, GCP Container Optimized OS, and RancherOS.
+The Spot Kubernetes Controller can run on a number of Linux distributions, including container-optimized operating systems such as Bottlerocket OS, Container Optimized OS, and RancherOS.
 
 ## What’s Next?
 
