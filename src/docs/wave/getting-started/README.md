@@ -115,10 +115,12 @@ After you enter the creation command, the following major events take place:
 To view the state of the newly created cluster, do the following:
 1. Get the cluster-id by running the command below. A list of all the Wave clusters appears.
 
-`$ spotctl wave get cluster
+```
+$ spotctl wave get cluster
 ID NAME STATE CREATED UPDATED
 wc-ade635c8e90542d4 natef-1615242717 AVAILABLE 3 days ago 9 seconds ago
-`
+```
+
 2. In the list of clusters, find the one just created and copy the cluster-id.
 3. Enter the command below using the relevant cluster-id, for example:
 
@@ -298,5 +300,5 @@ CLUSTER_ID is the ID of your Wave cluster.
 The certificate has been issued from the Wave cluster and is unique to this endpoint. The self-signed cert is created with [cert-manager](https://cert-manager.io/docs/) running in the cluster. When you try to reach the page, some browser warnings may appear, which you should cancel.
 
 ## What’s Next?
-- Learn how to Manage your Wave clusters.
+- Learn how to [Manage your Wave clusters](wave/features/cluster-management).
 - Learn more about the information available in the [Wave Cluster Overview](wave/wave-overview).
