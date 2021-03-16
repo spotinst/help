@@ -24,7 +24,7 @@ Wave is the ideal solution for cloud-native big data. With Wave, you can bring i
 
 Wave utilizes Ocean’s serverless architecture, enabling you to run Spark workloads on Kubernetes without worrying about the underlying infrastructure. The diagram below shows an overview of the Wave architecture.
 
-<img src="/wave/_media/overview-01.png" width="793" height="550" />
+<img src="/wave/_media/overview-01.png" width="476" height="330" />
 
 - Wave UI Control Plane: Provides the user full visibility of monitoring, system health, and cost analysis data and enables management of Wave clusters.
 - Wave Cluster: Kubernetes cluster environment including the Wave and Ocean execution components.
