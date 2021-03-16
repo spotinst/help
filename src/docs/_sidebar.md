@@ -71,7 +71,7 @@
     - [Troubleshoot Controller](ocean/troubleshooting/troubleshoot-controller)
   - [Tips & Best Practices](ocean/tips-and-best-practices/)
 - [**Wave**](wave/)
-  - [Wave Overview](wave/wave-overview)
+  - [Overview](wave/wave-overview)
   - [Getting Started](wave/getting-started/)
   - [Features](wave/features/)
     - [Cluster Management](wave/features/cluster-management)

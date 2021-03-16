@@ -35,7 +35,7 @@ To disconnect a cluster you don’t need any more, do the following:
 1. Click Remove in the Action column.
 2. Enter the name of the cluster to confirm, and click Remove Cluster.
 
-<img src="/wave/_media/tutorials-wave-clusters-02.png" width="301" height="238" />
+<img src="/wave/_media/tutorials-wave-clusters-02.png" width="338" height="268" />
 
 ## What’s Next?
 

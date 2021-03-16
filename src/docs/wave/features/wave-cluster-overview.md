@@ -10,7 +10,7 @@ To get to the Wave Cluster Overview tab, do the following:
 
 The Wave Cluster page opens with the Overview tab open and the cluster name at the top. Next to the cluster name, a status icon indicates the cluster status as one of the following:
 
-<img src="/wave/_media/tutorials-clusters-00.png" width="246" height="47" />
+<img src="/wave/_media/tutorials-clusters-00.png" width="328" height="63" />
 
 The Wave Cluster Overview includes the following main areas:
 - Cluster Stats
