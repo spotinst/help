@@ -73,6 +73,7 @@
 - [**Wave**](wave/)
   - [Wave Overview](wave/wave-overview)
   - [Getting Started](wave/getting-started/)
+  - [Features](wave/features/)
 - [**Elastigroup**](elastigroup/)
   - [Getting Started](elastigroup/getting-started/)
     - [Elastigroup for AWS](elastigroup/getting-started/elastigroup-for-aws)
