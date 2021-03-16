@@ -2507,6 +2507,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/wave/features/"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/wave/features/wave-cluster-overview</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/wave/features/wave-cluster-overview"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/wave/features/wave-cluster-overview"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/wave/getting-started/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
