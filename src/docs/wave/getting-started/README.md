@@ -1,4 +1,4 @@
-## Get Started with Wave
+# Get Started with Wave
 
 The Wave environment includes the Wave components installed in a Kubernetes cluster integrated with Spot Ocean. The cluster creation and deployment of the whole stack is really simple using the spotctl command-line tool.
 
@@ -197,7 +197,7 @@ Try out the system by using spark-submit to initiate a job in cluster mode. This
 
 Usually, your Spark Scala code is included in the Docker image that you are using.  In this case, a Spark-3.0.0 Docker image is hosted in a public NetApp repository.  You can run one of the Spark examples found there.
 
-The Wave installation is configured with a namespace `spark-jobs`, with a serviceAccount `Spark` that has the required Kubernetes access rights. Enter the following:
+The Wave installation is configured with namespace `spark-jobs` and a serviceAccount `Spark` that has the required Kubernetes access rights. Enter the following:
 
 ```
 spark-submit \
