@@ -8,7 +8,7 @@ To get to the Wave Cluster Cost Analysis tab, do the following:
 
 The Cost Analysis tab opens and shows the cluster name at the top.
 
-<img src="/wave/_media/tutorial-wave-cost-analysis-01.png" />
+<img src="/wave/_media/tutorial-wave-cost-analysis-01.png" width="365" height="352" />
 
 ## Spark App Cost over Time
 
