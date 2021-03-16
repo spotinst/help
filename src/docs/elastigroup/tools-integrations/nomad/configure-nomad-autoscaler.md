@@ -112,7 +112,7 @@ job "myJob" {
 
 Then, in your Elastigroup Nomad integration, you should have the following:
 
-<img src="/elastigroup/_media/configure-nomad-autoscaler-03.png" />
+
 
 You will have to add appropriate meta-data configuration in your client.hcl so the launched instances will support the required constraints. It should look like this:
 
