@@ -14,6 +14,6 @@ The application optimization engine uses AI in order to choose the best infrastr
 ## What’s Next?
 
 Learn more about features in the Wave console including:
-- Cluster Management
-- Wave Cluster Overview
-- Cost Analysis
+- [Cluster Management](wave/features/cluster-management)
+- [Wave Cluster Overview](wave/features/wave-cluster-overview)
+- [Cost Analysis](wave/features/cost-analysis)

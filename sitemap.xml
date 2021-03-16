@@ -2500,6 +2500,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/wave/features/cluster-management"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/wave/features/cost-analysis</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/wave/features/cost-analysis"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/wave/features/cost-analysis"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/wave/features/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
