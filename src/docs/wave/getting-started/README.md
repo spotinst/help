@@ -299,4 +299,4 @@ The certificate has been issued from the Wave cluster and is unique to this endp
 
 ## What’s Next?
 - Learn how to Manage your Wave clusters.
-- Learn more about the information available in the [Wave Cluster Overview](wave/aws/wave-overview).
+- Learn more about the information available in the [Wave Cluster Overview](wave/wave-overview).

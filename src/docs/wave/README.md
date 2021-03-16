@@ -13,5 +13,5 @@ Wave enables the teams responsible for deploying and operating big data solution
 - Enjoy rich observability into resource utilization - Robust cost metrics and analysis uncovers the true cost of data applications and pipelines in the cloud.
 
 ## What’s Next?
-- Learn more about Wave in the [Wave Overview](wave/aws/wave-overview).
-- Get Started with Wave.
+- Learn more about Wave in the [Wave Overview](wave/wave-overview).
+- [Get Started with Wave](wave/getting-started/).
