@@ -73,7 +73,7 @@ Upon successful validation, you will advance to the Compute stage of the wizard 
    - Node Labels (Key/Value pairs)
    - Node Taints (Key/Value/Effect triplets)
 
-<img src="/ocean/_media/gettingstarted-join-existing-aks-02.png" />
+<img src="/ocean/_media/gettingstarted-join-existing-aks-02.png" width="454" height="538" />
 
 2. Click Next.
 
@@ -81,7 +81,7 @@ Upon successful validation, you will advance to the Compute stage of the wizard 
 
 1. In the Review tab, you can review all the Ocean settings you have imported or configured.
 
-<img src="/ocean/_media/gettingstarted-join-existing-aks-03.png" />
+<img src="/ocean/_media/gettingstarted-join-existing-aks-03.png" width="415" height="356" />
 
 2. To view or edit the configuration in JSON format, click JSON on the upper right.
 3. To finish, click Create.
