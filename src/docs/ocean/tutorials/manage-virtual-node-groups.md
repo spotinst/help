@@ -25,8 +25,14 @@ This procedure describes how to create a VNG from scratch.
 
 <img src="/ocean/_media/tutorials-manage-vngs-03.png" />
 
-4. Click Configure Manually (or [Import from an Autoscaling Group](ocean/tutorials/manage-virtual-node-groups?id=create-a-vng-from-an-asg)) and Continue.
-5. In the New Virtual Node Group page, enter the VNG parameters and click Save. The VNG parameters are described below.
+4. Click Configure Manually or choose to import from an existing [Autoscaling Group](ocean/tutorials/manage-virtual-node-groups?id=create-a-vng-from-an-asg) (AWS) or Node Pool (AKS and GKE).
+5. Click Continue.
+
+When you choose Import, a one-time process occurs. Import copies values from the cloud provider node group entity to the Ocean configuration. Afterwards, there is no active connection between these two entities. Ocean will provision new VMs, not as part of a managed Kubernetes service of node group entities.
+
+### New Virtual Node Group Page
+
+In the New Virtual Node Group page, enter the VNG parameters and click Save. The VNG parameters are described below.
 
 <img src="/ocean/_media/tutorials-manage-vngs-02a.png" width="518" height="400" />
 
