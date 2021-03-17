@@ -15,6 +15,7 @@
       - [Terraform](ocean/getting-started/eks/terraform)
       - [CloudFormation](https://aws.amazon.com/quickstart/architecture/spotinst-ocean-eks/)
     - [Kops](ocean/getting-started/kops)
+    - [AKS](ocean/getting-started/aks)
     - [GKE](ocean/getting-started/gke)
     - [ECS](ocean/getting-started/ecs)
     - [OpenShift](ocean/getting-started/openshift)
