@@ -36,7 +36,7 @@ The following major features are currently supported in Ocean for GKE:
 ## Ocean for ECS
 
 The following major features are currently supported in Ocean for ECS:
-- [Scaling for ECS]
+- [Scaling for ECS](ocean/features/scaling-ecs)
 - [Headroom](ocean/features/headroom)
 - [Right Sizing](ocean/features/right-sizing)
 - [Cluster Roll](ocean/features/roll)
