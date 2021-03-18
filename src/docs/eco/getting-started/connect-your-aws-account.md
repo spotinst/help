@@ -7,8 +7,7 @@ Getting started with Eco on AWS usually requires read-only permissions to the Co
 - Read data from your Direct-to-AWS Management Account and connect as described below.
 - Read data from a single AWS MSP/Reseller customer account and connect as described below.
 - Read data for multiple AWS MSP/Reseller customer accounts, connect as described below, and submit a support ticket.
-- Read data for limited AWS MSP/Reseller customer accounts and submit a support ticket.
-- Read data provided by CloudHealth and submit a support ticket.
+- Read data for limited AWS MSP/Reseller customer accounts and connect as described in [Connect Account: Customer Working with MSP](eco/getting-started/connect-account-customer-working-with-msp).
 
 ## AWS Region
 
