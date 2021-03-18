@@ -5,12 +5,12 @@ Use the procedure on this page if you are connecting to Spot for the first time.
 ## Prerequisites
 
 - Organization administration permissions in Cloud Analyzer are required to register an organization to Cloud Analyzer.
-- Getting started usually requires read-only permissions to the Cost and Usage Reports, which are located in the Management account. Choose one of the following methods:
+- Getting started usually requires read-only permissions to the Cost and Usage Reports, which are located in the Management account, or in specially configured [member accounts](https://aws.amazon.com/about-aws/whats-new/2020/12/cost-and-usage-report-now-available-to-member-linked-accounts/). Choose one of the following methods:
   - Read data from your Direct-to-AWS Management Account and connect as described below.
-  - Read data for all AWS MSP/Reseller customer accounts, connect as described below, and submit a support ticket.
-  - Read data for limited AWS MSP/Reseller customer accounts and submit a support ticket.
+  - Read data from a single AWS MSP/Reseller customer account and connect as described below.
+  - Read data for multiple AWS MSP/Reseller customer accounts, connect as described below, and submit a support ticket.
+  - Read data for limited AWS MSP/Reseller customer accounts and connect as described in [Connect Account: Customer Working with MSP](eco/getting-started/connect-account-customer-working-with-msp).
   - Read data provided by CloudHealth and submit a support ticket.
-  - Read data from a member-account's Cost and Usage Report and submit a support ticket.
 
 ## AWS Region
 
@@ -39,7 +39,7 @@ Mark whether you are connecting from AWS China.
 
 ## Step 2
 
-Log in to your AWS Management account.
+Log in to your AWS Management account (or single-member account if you are an MSP end customer).
 
 ## Step 3
 
