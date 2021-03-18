@@ -69,7 +69,7 @@ Continue with the steps below.
 
 4. Copy the `Object Url` at the bottom as shown in the image below.
 
-<img src="/eco/_media/gettingstarted-aws-connect-msp-04.png" />
+<img src="/eco/_media/gettingstarted-aws-connect-msp-04.png" width="512" height="494" />
 
 5. Click here and paste that object url into the field `Amazon S3 URL` as shown in the image below.
 
@@ -116,7 +116,7 @@ Typically, this method requires coordination between the end-customer and the ad
 
 ### Requirements
 
-After a sync with the specified files, the following folders should exist under the destination bucket:
+After a sync with the specified files, the following folders and files should exist under the destination bucket:
 - `cur_data`, recognizable in the format: `[eco_s3_bucket]/RawCURReports/cur/[account]/yyyymmdd-yyyymmdd/[assembly_id]/[cur_data]`
 
   Ideally, the data should be organized according to the schema below.
