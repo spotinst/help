@@ -39,7 +39,7 @@ Mark whether you are connecting from AWS China.
 
 ## Step 2
 
-Log in to your AWS Management account (or single-member account if you are an MSP end customer).
+Log in to your AWS Management account (or single, member account if you are an MSP end customer).
 
 ## Step 3
 
