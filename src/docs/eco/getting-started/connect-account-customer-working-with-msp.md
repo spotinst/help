@@ -7,8 +7,8 @@ If you only have a single, member account to connect, then perform the steps in 
 ## Access to Cost and Usage Data
 
 Eco needs to access the Cost and Usage data in your AWS account. To set this up, choose one of the following methods:
-- [Option 1: Cost And Usage Report Extraction](). This method uses native AWS tools to allow Eco access to Cost and Usage data for agreed-upon accounts.
-- [Option 2: Alternative Cost and Usage Generator](). With this method, a partner can use its own tools to allow Eco access to agreed-upon accounts, as long as the the partner meets Spot requirements. For example, a partner may use CloudHealth to generate the files in the manner required for Spot.
+- [Option 1: Cost And Usage Report Extraction](eco/getting-started/connect-account-customer-working-with-msp?id=option-1-cost-and-usage-report-extraction). This method uses native AWS tools to allow Eco access to Cost and Usage data for agreed-upon accounts.
+- [Option 2: Alternative Cost and Usage Generator](eco/getting-started/connect-account-customer-working-with-msp?id=option-2-alternative-cost-and-usage-generator). With this method, a partner can use its own tools to allow Eco access to agreed-upon accounts, as long as the the partner meets Spot requirements. For example, a partner may use CloudHealth to generate the files in the manner required for Spot.
 
 ## Option 1: Cost And Usage Report Extraction
 
@@ -111,8 +111,8 @@ Typically, this method requires coordination between the end-customer and the ad
 
 ### Responsibilities
 
-- The Partner (AWS MSP, Management Account Admin, or Admin of the CUR-generating tool) is responsible for CUR generation in the proper format.
-- The End Customer and the Partner must agree on a destination S3 Bucket to locate their version of the CUR.
+- The *Partner* (AWS MSP, Management Account Admin, or Admin of the CUR-generating tool) is responsible for CUR generation in the proper format.
+- The *End Customer* and the *Partner* must agree on a destination bucket to locate their version of the CUR.
 
 ### Requirements
 
@@ -129,7 +129,7 @@ Once the files exist in the correct format, you just need to provide access to t
 
 The following is an example of an ideal Eco schema.
 
-```JSON
+```json
 {
 	"columns": [
 		{"column_name":"bill_bill_type", "data_type":"string"},
