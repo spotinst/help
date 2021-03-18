@@ -1,4 +1,4 @@
-# Choose a Strategy
+# Choose RI Strategy
 
 After you click Choose Strategy in the [Analysis](eco/tutorials/review-ri-spending-analysis) page, you will choose a reserved instance strategy in the Strategy Selection page, shown below.
 
@@ -30,3 +30,7 @@ This chart shows the yearly savings that can be achieved with reserved instances
 ## Apply Strategy
 
 Once you have marked a strategy, click Apply Strategy. Eco will then analyze your strategy and start managing your reserved instances.
+
+## What's Next?
+
+Learn about the Eco's dashboard, where you can [View your Savings](eco/tutorials/view-your-savings) and get the full picture on your RI commitments. 
