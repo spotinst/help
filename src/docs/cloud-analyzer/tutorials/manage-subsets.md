@@ -18,7 +18,7 @@ You must have the Subsets feature enabled. Please contact technical support to s
 
 ## Create a Subset
 
-1. In the left sidebar, click Subsets and then click Create new subset.
+1. In the left sidebar, go to Eco/Subsets and then click Create new subset.
 
 <img src="/eco/_media/tutorials-manage-subsets-01.png" />
 
