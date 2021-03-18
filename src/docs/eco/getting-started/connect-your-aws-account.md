@@ -28,7 +28,7 @@ From here, follow the steps on screen to connect your account.
 
 ## Step 1
 
-Log in to your AWS management account (or single-member account if you are an MSP end customer).
+Log in to your AWS management account (or single, member account if you are an MSP end customer).
 
 ## Step 2
 
