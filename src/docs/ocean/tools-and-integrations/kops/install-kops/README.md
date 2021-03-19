@@ -4,9 +4,15 @@
 
 Download [kops](https://github.com/kubernetes/kops/releases). Ensure the binary file is executable:
 
-```
+```sh
 $ chmod 755 kops && mv kops /usr/local/bin/kops
 ```
+
+Kops is also available via Homebrew, this will install kubectl as well as a dependency.
+
+```sh
+$ brew update && brew install kops
+``` 
 
 ## Install kubectl
 
@@ -14,6 +20,12 @@ Download [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/). Ens
 
 ```sh
 $ chmod 755 kubectl && mv kubectl /usr/local/bin/kubectl
+```
+
+kubectl is also available via Homebrew. It should automatically be installed if you install kops using Homebrew.
+
+```sh
+$ brew update && brew install kubernetes-cli
 ```
 
 ## (Optional) Installing AWS CLI
