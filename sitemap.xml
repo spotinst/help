@@ -477,6 +477,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/eco/tutorials/eco-policy/"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/eco/tutorials/manage-workflows</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/eco/tutorials/manage-workflows"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/eco/tutorials/manage-workflows"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/eco/tutorials/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
@@ -489,6 +496,13 @@
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/eco/tutorials/review-ri-spending-analysis"/>
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/eco/tutorials/review-ri-spending-analysis"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/eco/tutorials/view-workflow-details</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/eco/tutorials/view-workflow-details"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/eco/tutorials/view-workflow-details"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/eco/tutorials/view-your-savings</loc>
