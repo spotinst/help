@@ -112,11 +112,14 @@ Typically, this method requires coordination between the end-customer and the ad
 ### Responsibilities
 
 - The *Partner* (AWS MSP, Management Account Admin, or Admin of the CUR-generating tool) is responsible for CUR generation in the proper format.
-- The *End Customer* and the *Partner* must agree on a destination bucket to locate their version of the CUR.
+- The *End Customer* and the *Partner* will agree on a target S3 bucket to locate their version of the CUR.
+- The *End Customer* and the *Partner* will agree on the method of providing the Partner access to the target bucket.
+- The *Partner* will deliver the export files to the target bucket.
+- The *End Customer* will provide Eco access to the exported CUR.
 
 ### Requirements
 
-After a sync with the specified files, the following folders and files should exist under the destination bucket:
+After a sync with the specified files, the following folders and files should exist under the target bucket:
 - `cur_data`, recognizable in the format: `[eco_s3_bucket]/RawCURReports/cur/[account]/yyyymmdd-yyyymmdd/[assembly_id]/[cur_data]`
 
   Ideally, the data should be organized according to the schema below.
