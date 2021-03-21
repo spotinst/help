@@ -78,7 +78,7 @@ In general, these margin opportunities represent savings given by AWS for volume
 
   You may charge the "top rate" (the first, non-free rate AWS would change) for all usage.  If you do not mind sharing some volume discounts, only charge top rate to prevent free usage.
 
-- Remove RI Volume Discounts:
+- Remove [RI Volume Discounts](https://aws.amazon.com/ec2/pricing/reserved-instances/pricing/#Amazon_EC2_Standard_Reserved_Instance_Volume_Discounts):
 
   When these volume discounts occur, you may elect to retain them for margin.
 

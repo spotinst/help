@@ -237,6 +237,7 @@
     - [View your Savings](eco/tutorials/view-your-savings)
     - [Manage Subsets](cloud-analyzer/tutorials/manage-subsets)
     - [Manage Workflows](eco/tutorials/manage-workflows)
+    - [View Workflow Details](eco/tutorials/view-workflow-details)
     - [Eco Policy](eco/tutorials/eco-policy/)
       - [Create Eco Policy with CloudFormation](eco/tutorials/eco-policy/create-eco-policy-with-cloudformation)
   - [Troubleshooting](eco/troubleshooting/)
