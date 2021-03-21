@@ -32,7 +32,7 @@ If you have a long list of workflows, you can use the filter above the list to f
 To create a new workflow, do the following:
 1. In the upper right, click Create new workflow.
 
-<img src="/eco/_media/tutorials-manage-workflows-02.png" />
+<img src="/eco/_media/tutorials-manage-workflows-02.png" width="320" height="368" />
 
 2. Enter a name for the workflow.
 3. Activate the billing rules you need and mark the options relevant to each rule. Enter any additional information required by the rule. (See below for detailed descriptions.)
