@@ -20,7 +20,7 @@ The workflow summary includes the following details:
 - Creation date: Date the workflow was created.
 - Selected billing rules: The rules you defined in the workflow.
 
-<img src="/eco/_media/tutorials-view-workflow-details-02.png" />
+<img src="/eco/_media/tutorials-view-workflow-details-02.png" width="357" height="315" />
 
 ## Reports Table
 
@@ -38,7 +38,7 @@ The Reports table provides a convenient overview of past reports created for thi
 To create a new workflow report, do the following:
 1. On the upper right of the Reports table, click Generate report.
 
-<img src="/eco/_media/tutorials-view-workflow-details-04.png" />
+<img src="/eco/_media/tutorials-view-workflow-details-04.png" width="720" height="260" />
 
 2. In the Generate report popup, complete the following information:
    - Name: Enter a name that will help you remember the purpose of this report.
@@ -51,7 +51,7 @@ To create a new workflow report, do the following:
 
 A report that was successfully created is downloadable for a limited period of time. On the right side of the Reports table, click the Download icon.
 
-<img src="/eco/_media/tutorials-view-workflow-details-05.png" />
+<img src="/eco/_media/tutorials-view-workflow-details-05.png" width="713" height="146" />
 
 ## Example Report
 
