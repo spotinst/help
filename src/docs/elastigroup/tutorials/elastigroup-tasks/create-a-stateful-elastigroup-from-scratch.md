@@ -1,20 +1,15 @@
 # Create a Stateful Elastigroup from Scratch
 
-## Introduction
-
-This tutorial covers how to create a stateful Elastigroup using the [Stateful Creation Wizard](https://console.spotinst.com/spt/aws/ec2/elastigroup/stateful/create/general), that is able to persist Volumes, Elastic IPs, Private IPs and more, across spot interruptions. Using Stateful Elastigroups allows you to run a variety of stateful workloads using managed and SLA driven Spot Instances.
+This procedure describes how to create a stateful Elastigroup using the [Stateful Creation Wizard](https://console.spotinst.com/spt/aws/ec2/elastigroup/stateful/create/general), that is able to persist Volumes, Elastic IPs, Private IPs and more, across spot interruptions. Using Stateful Elastigroups allows you to run a variety of stateful workloads using managed and SLA driven Spot Instances.
 First, we'll start by creating a new Elastigroup, selecting 'Stateful' under the [Use Cases](https://console.spotinst.com/spt/aws/ec2/elastigroup/create/setup) tab.
 
 ## Step 1: General Settings
 
 - Enter a Name for your Elastigroup and select a Region.
-- Set the initial capacity for your group.
-
-* You can choose to measure capacity either in number of instances or via a total count of vCPUs
-
+- Set the initial capacity for your group. You can choose to measure capacity either in number of instances or via a total count of vCPUs
 - Select your desired VPC to run your Elastigroup in, as well as the Product type and the Image you wish all instances to be instantiated from.
 - Select the security groups to be attached to the instances and the key-pairs associated with them.
-- Lastly, you can optionally choose to add tags to your stateful group's instances.
+- Optionally, you can choose to add tags to your stateful group's instances.
 
 <img src="/elastigroup/_media/create-a-stateful-elastigroup-from-scratch_1.png" />
 
