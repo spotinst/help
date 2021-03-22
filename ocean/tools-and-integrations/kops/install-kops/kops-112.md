@@ -4,7 +4,7 @@
 
 Download the proper binary file for your operating system:
 
-``kops` v1.12.1`
+## Kops V1.12.1
 
 - [linux_amd64](https://spotinst-public.s3.amazonaws.com/integrations/kubernetes/kops/v1.12.2-6ab92d392/linux/amd64/kops)
 - [darwin_amd64](https://spotinst-public.s3.amazonaws.com/integrations/kubernetes/kops/v1.12.2-6ab92d392/darwin/amd64/kops)
