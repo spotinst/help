@@ -71,7 +71,9 @@ The latest Spot policy in Azure appears below.
         "Microsoft.Network/virtualNetworks/virtualMachines/read",
         "Microsoft.Network/virtualNetworks/subnets/write",
         "Microsoft.Resources/tags/write",
-        "Microsoft.Resources/subscriptions/resourceGroups/read"
+        "Microsoft.Resources/subscriptions/resourceGroups/read",
+        "Microsoft.ContainerService/managedClusters/read",
+        "Microsoft.ContainerService/managedClusters/agentPools/read"
       ]
     }
   ]
