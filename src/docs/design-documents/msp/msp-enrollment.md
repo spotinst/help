@@ -51,7 +51,7 @@ Example Billing Workflow Name 2:
 
 1. Send email with spreadsheet associating the subsets with Billing Workflows. 
 
-<img src="/design-documents/_media/msp-enrollment-02a.png" />
+<img src="/design-documents/_media/msp-enrollment-02a.png" width="255" height="100" />
  
 
 2. Allow us approximately a week to configure this. We will ask for your review and approval.
@@ -62,6 +62,6 @@ Begin the process of [setting up your End Customer console](https://console.spot
 
 1. Update the spreadsheet with the Spot console email and the Spot org ID. You can locate the org ID by clicking the "user" icon in the upper right corner of the Spot console while logged into the org and then click "My Organization."
 
-<img src="/design-documents/_media/msp-enrollment-03a.png" />
+<img src="/design-documents/_media/msp-enrollment-03a.png" width="457" height="99" />
 
 2. Allow us approximately a week to configure this. We will ask for your review and approval.
