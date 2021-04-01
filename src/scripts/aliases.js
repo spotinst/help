@@ -1525,6 +1525,9 @@ export const aliases = (() => {
 
     "/container-management/kubernetes/kops/1_12/instance-groups/":
       "/ocean/tools-and-integrations/kops/metadata-labels",
+
+    "/container-management/kubernetes/kubernetes-tutorials/installing-kubernetes-controller/":
+      "/ocean/tutorials/spot-kubernetes-controller/",
   };
 
   for (let [key, value] of Object.entries(map)) {

@@ -9,6 +9,8 @@ Use this policy only if you know the Role ARN associated with Cloud Analyzer.
   "Version": "2012-10-17",
   "Statement": [
     {
+      "Sid": "FullPolicy",
+      "Effect": "Allow",
       "Action": [
         "cloudformation:DescribeStacks",
         "cloudformation:GetStackPolicy",
@@ -16,12 +18,16 @@ Use this policy only if you know the Role ARN associated with Cloud Analyzer.
         "cloudformation:ListStackResources",
         "dynamodb:List*",
         "dynamodb:Describe*",
+        "savingsplans:List*",
+        "savingsplans:Describe*",
         "ec2:Describe*",
         "ec2:List*",
         "ec2:GetHostReservationPurchasePreview",
         "ec2:GetReservedInstancesExchangeQuote",
         "elasticache:List*",
         "elasticache:Describe*",
+        "es:List*",
+        "es:Describe*",
         "cur:*",
         "ce:*",
         "rds:Describe*",
@@ -37,26 +43,43 @@ Use this policy only if you know the Role ARN associated with Cloud Analyzer.
         "organizations:List*",
         "organizations:Describe*"
       ],
-      "Resource": ["*"],
-      "Effect": "Allow",
-      "Sid": "FullPolicy"
+      "Resource": ["*"]
     },
     {
+      "Sid": "S3SyncPermissions",
+      "Effect": "Allow",
       "Action": [
         "s3:PutObject",
         "s3:ListBucket",
         "s3:PutObjectTagging",
         "s3:PutObjectAcl"
       ],
-      "Resource": "arn:aws:s3:::sc-customer-*",
-      "Effect": "Allow",
-      "Sid": "S3SyncPermissions"
+      "Resource": "arn:aws:s3:::sc-customer-*"
     },
     {
-      "Action": ["s3:get*"],
-      "Resource": ["arn:aws:s3:::/*", "arn:aws:s3:::<Customer Bucket>/*"],
+      "Sid": "S3BillingDBR",
       "Effect": "Allow",
-      "Sid": "S3BillingDBR"
+      "Action": ["s3:get*"],
+      "Resource": [
+        {
+          "Fn::Join": [
+            "",
+            ["arn:aws:s3:::", { "Ref": "DetailedBillingReportBucket" }, "/*"]
+          ]
+        },
+        {
+          "Fn::Join": [
+            "",
+            ["arn:aws:s3:::", { "Ref": "CostAndUsageBucket" }, "/*"]
+          ]
+        }
+      ]
+    },
+    {
+      "Sid": "ServiceQuotas",
+      "Effect": "Allow",
+      "Action": "servicequotas:*",
+      "Resource": "*"
     }
   ]
 }
@@ -67,7 +90,7 @@ Use this policy only if you know the Role ARN associated with Cloud Analyzer.
 The policy grants the following permissions for operating the Cloud Analyzer system.
 
 - Access to retrieve billing reports using APIs and S3 for the Detailed Billing Report, the Cost Explorer, and the Cost & Usage Report.
-- Read-only permissions (on the master payer only) for the Amazon services that offer reserved capacity, such as EC2, RDS, RedShift, Elasticache, ElasticSearch, and DynamoDB.
+- Read-only permissions (on the management account only) for the Amazon services that offer reserved capacity, such as EC2, RDS, RedShift, Elasticache, ElasticSearch, and DynamoDB.
 - Access to Support & Trusted Advisor for monitoring and changes to the reserved instance service limit.
 
 ## Explanation Of Permissions In Policy
@@ -90,6 +113,8 @@ The following are read-only permissions for the reserved capacity reservations.
 ```
 "dynamodb:List*"
 "dynamodb:Describe*"
+"savingsplans:List*",
+"savingsplans:Describe*",
 "ec2:Describe*"
 "ec2:List*"
 "ec2:GetHostReservationPurchasePreview"

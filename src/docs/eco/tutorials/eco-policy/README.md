@@ -16,12 +16,16 @@ The policy below is relevant only for customers who have not yet signed a contra
         "cloudformation:ListStackResources",
         "dynamodb:List*",
         "dynamodb:Describe*",
+        "savingsplans:List*",
+        "savingsplans:Describe*",
         "ec2:Describe*",
         "ec2:List*",
         "ec2:GetHostReservationPurchasePreview",
         "ec2:GetReservedInstancesExchangeQuote",
         "elasticache:List*",
         "elasticache:Describe*",
+        "es:List*",
+        "es:Describe*",
         "cur:*",
         "ce:*",
         "rds:Describe*",
@@ -67,7 +71,7 @@ The policy below is relevant only for customers who have not yet signed a contra
 The policy grants the following permissions for operating the Eco system.
 
 - Access to retrieve billing reports using APIs and S3 for the Detailed Billing Report, the Cost Explorer, and the Cost & Usage Report.
-- Read-only permissions (on the master payer only) for the Amazon services that offer reserved capacity, such as EC2, RDS, RedShift, Elasticache, ElasticSearch, and DynamoDB.
+- Read-only permissions (on the management account only) for the Amazon services that offer reserved capacity, such as EC2, RDS, RedShift, Elasticache, ElasticSearch, and DynamoDB.
 - Access to Support & Trusted Advisor for monitoring and changes to the reserved instance service limit.
 
 ## Explanation Of Permissions In Policy
@@ -96,6 +100,8 @@ The following are read-only permissions for the reserved capacity reservations.
 "ec2:GetReservedInstancesExchangeQuote"
 "elasticache:List*"
 "elasticache:Describe*"
+"es:List*"
+"es:Describe*"
 "rds:Describe*"
 "rds:ListTagsForResource"
 "redshift:Describe*"

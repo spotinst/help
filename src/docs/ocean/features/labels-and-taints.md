@@ -12,7 +12,7 @@ To make scheduling more efficient and compatible with Kubernetes, Ocean supports
 
 Spot labels allow you to adjust the default behavior of scaling in Ocean, by adding Spot labels to your pods you can control the node termination process or its life cycle. The Spot labels are described below.
 
-### spotisnt.io/restrict-scale-down
+### spotinst.io/restrict-scale-down
 
 Some workloads are not as resilient to spot instance replacements as others, so you may wish to lower the frequency of replacing the nodes they are running on as much as possible, while still getting the benefit of spot instance pricing. For these workloads, use the `spotinst.io/restrict-scale-down` label (set to `true`) to block the proactive scaling down of the instance for the purposes of more efficient bin packing. This will leave the instance running as long as possible. The instance will be replaced only if it goes into an unhealthy state or if forced by a cloud provider interruption.
 
@@ -23,11 +23,12 @@ If you have workloads that you do not want to run on spot instances at all, you 
 ### spotinst.io/gpu-type
 
 This label sets the GPU accelerator and applies only to GKE clusters. Valid values are:
-* `nvidia-tesla-v100`
-* `nvidia-tesla-p100`
-* `nvidia-tesla-k80`
-* `nvidia-tesla-p4`
-* `nvidia-tesla-t4`
+
+- `nvidia-tesla-v100`
+- `nvidia-tesla-p100`
+- `nvidia-tesla-k80`
+- `nvidia-tesla-p4`
+- `nvidia-tesla-t4`
 
 > **Tip**: Avoid adding Spot labels under the launch specification node labels section. These labels should be added in your pod configuration only.
 

@@ -46,6 +46,12 @@ spec:
 
 > **Tip**: In the [affinity syntax](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#resources-that-support-set-based-requirements), Ocean supports `matchExpressions` only. The `matchLabels` selector is not supported.
 
+### Support for Shielded GKE Nodes (GKE only)
+
+[Shielded GKE Nodes](https://cloud.google.com/kubernetes-engine/docs/how-to/shielded-gke-nodes) is a security feature intended to prevent attacks based on impersonating a node in the cluster. The GKE mechanism achieves this by requiring a certification procedure before a new node can be registered to the cluster.
+
+In order to enable import of GKE clusters to Ocean and registration of new nodes in the cluster, the [Spot Kubernetes Controller](ocean/tutorials/spot-kubernetes-controller/) will function as the approver of the signing requests instead of the GKE mechanism. This allows the Kubernetes mechanism to sign the request and let the node be registered to the cluster. The result is that Ocean can seamlessly scale up nodes in your Ocean-managed GKE cluster, and the nodes will benefit from the protection provided by the Shielded GKE Nodes feature.
+
 ## Scale Down
 
 Ocean constantly checks which nodes are unneeded in the cluster. A node is considered for removal when:
@@ -104,3 +110,11 @@ To customize the scaling configuration:
 <img src="/ocean/_media/features-scaling-k8s-03.png" />
 
 > **Caution**: Under normal operation, Auto-scaling should be enabled, and it is not recommended to disable this function. When Auto-scaling is disabled, Ocean does not scale up or down, and cannot maintain headroom. In addition, the Cluster Shutdown Hours feature will not work properly when scaling the cluster back to its desired state.
+
+## Supported Operating Systems
+
+Ocean supports launching instances using any operating system (OS) type, including container-optimized OSs such as Bottlerocket OS, Container Optimized OS, and RancherOS.
+
+## What’s Next?
+
+Learn more about how Ocean manages [headroom](ocean/features/headroom).

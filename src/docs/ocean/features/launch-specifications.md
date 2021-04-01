@@ -34,28 +34,49 @@ You can create new VNGs or reconfigure existing ones at any time after the clust
 
 Many of the attributes that you apply to your cluster can be applied specifically per VNG. This enables you to organize and manage customized workload types within the same cluster. For example, you can customize the attributes listed below:
 
-- Available in the UI and API:
+### Ocean for AWS
 
-  - Block Device Mappings
-  - Headroom
-  - Labels
-  - Security Group IDs
-  - Subnet IDs
-  - Tags
-  - Taints
-  - User Data
-  - Spot % to use within the VNG
-
-- Available in the API:
-  - Elastic IPs
-  - Instance Types (These must be a subset of the instance types defined for the Ocean cluster.)
-  - Restrict Scale Down
+The following is a list of attributes customizable per VNG in Ocean for AWS.
+- Block Device Mappings
+- Elastic IPs
+- Headroom
+- Instance Types (These must be a subset of the instance types defined for the Ocean cluster.)
+- Labels
+- Maximum Nodes
+- Restrict scale down
+- Security Group IDs
+- Spot% to use within the VNG
+- Subnet IDs
+- Tags
+- Taints
+- User Data
 
 For example, you could use the Labels and Taints attributes to instruct Ocean which labels and taints are applied on the nodes using the user data, and effectively connect between the cloud infrastructure properties and Kubernetes node labels that will be used on applications using node affinity.
 
+### Ocean for AKS
+
+The following is a list of attributes customizable per VNG in Ocean for AKS.
+- Headroom
+- Labels
+- Maximum Nodes
+- OS Disk Type and Size
+- Tags
+- Taints
+
+### Ocean for GKE
+
+The following is a list of attributes customizable per VNG in Ocean for GKE.
+- Headroom (API only)
+- Instance Types (API only. These must be a subset of the instance types defined for the Ocean cluster.)
+- Labels
+- Maximum Nodes (API only)
+- Restrict scale down (API only)
+- Root Volume size
+- Taints
+
 ### Roll per VNG
 
-In addition, you can initiate a roll per VNG. This is useful when you need to apply changes to a VNG or restart the VNG for any reason without impacting other instances in the Ocean cluster. For more information, see [Initiate Roll per launchSpecIds](https://docs.spot.io/api/#operation/oceanAwsRollInit).
+You can initiate a roll per VNG. This is useful when you need to apply changes to a VNG or restart the VNG for any reason without impacting other instances in the Ocean cluster. For more information, see Initiate Roll per launchSpecIds ([AWS](https://docs.spot.io/api/#operation/oceanAwsRollInit), [GKE](https://docs.spot.io/api/#operation/oceanGkeRollInit)).
 
 ### Restrict Scale Down per VNGs
 

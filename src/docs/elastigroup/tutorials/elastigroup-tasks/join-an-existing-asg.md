@@ -1,4 +1,4 @@
-# Join an Existing Autoscaling Group
+# Import an Existing Autoscaling Group
 
 In this procedure, you will import the configuration of an existing AWS Autoscaling Group (ASG) to Spot so that the ASG can be managed as an Elastigroup in Spot.
 

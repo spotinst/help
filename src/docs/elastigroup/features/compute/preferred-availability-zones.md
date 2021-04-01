@@ -7,8 +7,9 @@ In general, it is good practice to simply allow all the AZs existing in that reg
 <img src="/elastigroup/_media/compute-preferred-azs-00.png" />
 
 However, you may have specific use cases in which it is advantageous to use only certain AZs. For example, you might want to use a reduced number or only a single AZ for the following reasons:
-* You want to reduce network costs by minimizing the number of times you change zones and transfer data from one zone to another.
-* You want to improve application performance by confining all your computing to a minimum geographic area, i.e., to only one AZ where all of your workloads run.
+
+- You want to reduce network costs by minimizing the number of times you change zones and transfer data from one zone to another.
+- You want to improve application performance by confining all your computing to a minimum geographic area, i.e., to only one AZ where all of your workloads run.
 
 You can configure this in Elastigroup using the Preferred Availability Zones feature. When you define Preferred Availability Zones, Spot will always look in those AZs first when it needs to start up a new spot instance, and it will try to launch all of your instances in those AZs only. If no instances exist in the preferred AZs, Spot will then consider available instances in the other AZs you have allowed.
 
@@ -25,6 +26,7 @@ To set up preferred AZs, follow the steps below.
 <img src="/elastigroup/_media/compute-preferred-azs-01.png" />
 
 ## Step 2: Select your Preferred Availability Zones
+
 1. Go to the Predictive Rebalancing tab and scroll down to Availability Zones.
 2. The Preferred Availability Zones combo box will now be populated with the allowed AZs you marked in the Compute tab. Mark your preferred AZs in this list.
 
@@ -35,6 +37,7 @@ To set up preferred AZs, follow the steps below.
 ## What’s Next?
 
 You may want to learn more about:
+
 - [Equal AZ Instance Distribution](elastigroup/features/core-features/equal-az-instance-distribution-orientation.md)
 - Configuring [Preferred Instance Types](elastigroup/features/compute/preferred-instance-types-a.md)
 - All the options available in [Predictive Rebalancing](elastigroup/features/core-features/predictive-rebalancing.md)

@@ -6,9 +6,9 @@ Use the policy below to if you are creating an Eco policy with Cloudformation.
 {
   "AWSTemplateFormatVersion": "2010-09-09",
   "Outputs": {
-    "SCRoleArn": {
+    "SpotFinOpsRoleArn": {
       "Value": {
-        "Fn::GetAtt": ["StratCloudRole", "Arn"]
+        "Fn::GetAtt": ["SpotFinOpsRole", "Arn"]
       }
     }
   },
@@ -16,14 +16,10 @@ Use the policy below to if you are creating an Eco policy with Cloudformation.
     "CostAndUsageBucket": {
       "Type": "String",
       "Description": "The bucket name of where the *HOURLY* Cost and Usage Report is located. https://console.aws.amazon.com/billing/home?#/reports"
-    },
-    "DetailedBillingReportBucket": {
-      "Type": "String",
-      "Description": "The bucket name of where the Detailed Billing Report. It is listed here: https://console.aws.amazon.com/billing/home?#/preference"
     }
   },
   "Resources": {
-    "StratCloudManagedPolicy": {
+    "SpotFinOpsManagedPolicy": {
       "Type": "AWS::IAM::ManagedPolicy",
       "Properties": {
         "Description": "SC Account Policy",
@@ -40,7 +36,8 @@ Use the policy below to if you are creating an Eco policy with Cloudformation.
                 "cloudformation:ListStackResources",
                 "dynamodb:List*",
                 "dynamodb:Describe*",
-                "savingsplans:*",
+                "savingsplans:List*",
+                "savingsplans:Describe*",
                 "ec2:Describe*",
                 "ec2:List*",
                 "ec2:GetHostReservationPurchasePreview",
@@ -85,16 +82,6 @@ Use the policy below to if you are creating an Eco policy with Cloudformation.
                 {
                   "Fn::Join": [
                     "",
-                    [
-                      "arn:aws:s3:::",
-                      { "Ref": "DetailedBillingReportBucket" },
-                      "/*"
-                    ]
-                  ]
-                },
-                {
-                  "Fn::Join": [
-                    "",
                     ["arn:aws:s3:::", { "Ref": "CostAndUsageBucket" }, "/*"]
                   ]
                 }
@@ -110,7 +97,7 @@ Use the policy below to if you are creating an Eco policy with Cloudformation.
         }
       }
     },
-    "StratCloudRole": {
+    "SpotFinOpsRole": {
       "Type": "AWS::IAM::Role",
       "Properties": {
         "AssumeRolePolicyDocument": {
@@ -130,7 +117,7 @@ Use the policy below to if you are creating an Eco policy with Cloudformation.
         },
         "ManagedPolicyArns": [
           {
-            "Ref": "StratCloudManagedPolicy"
+            "Ref": "SpotFinOpsManagedPolicy"
           },
           "arn:aws:iam::aws:policy/job-function/Billing",
           "arn:aws:iam::aws:policy/AWSCloudFormationReadOnlyAccess",
@@ -147,7 +134,7 @@ Use the policy below to if you are creating an Eco policy with Cloudformation.
 The policy grants the following permissions for operating the Eco system.
 
 - Access to retrieve billing reports using APIs and S3 for the Detailed Billing Report, the Cost Explorer, and the Cost & Usage Report.
-- Read-only permissions (on the master payer only) for the Amazon services that offer reserved capacity, such as EC2, RDS, RedShift, Elasticache, ElasticSearch, and DynamoDB.
+- Read-only permissions (on the management account only) for the Amazon services that offer reserved capacity, such as EC2, RDS, RedShift, Elasticache, ElasticSearch, and DynamoDB.
 - Access to Support & Trusted Advisor for monitoring and changes to the reserved instance service limit.
 
 ## Explanation Of Permissions In Policy
@@ -170,6 +157,8 @@ The following are read-only permissions for the reserved capacity reservations.
 ```
 "dynamodb:List*"
 "dynamodb:Describe*"
+"savingsplans:List*"
+"savingsplans:Describe*"
 "ec2:Describe*"
 "ec2:List*"
 "ec2:GetHostReservationPurchasePreview"
