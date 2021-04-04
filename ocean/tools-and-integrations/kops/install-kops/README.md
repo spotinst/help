@@ -12,7 +12,7 @@ Kops is also available via Homebrew, this will install kubectl as well as a depe
 
 ```sh
 $ brew update && brew install kops
-``` 
+```
 
 ## Install kubectl
 

@@ -63,5 +63,6 @@ You can customize the columns that appear in this table. The following column he
 - Generated savings: Savings generated due to the use of reservations.
 
 ## What’s Next?
+
 - Learn how to [Manage Subsets](cloud-analyzer/tutorials/manage-subsets).
 - Learn more about analyzing and tracking all of your cloud compute expenses with [Cloud Analyzer](cloud-analyzer/).

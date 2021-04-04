@@ -16,6 +16,7 @@ Wave meets you where you are. Wave includes pre-built integrations with Spark Op
 ## Kubernetes for Spark
 
 Wave is the ideal solution for cloud-native big data. With Wave, you can bring infrastructure management under the same roof with Kubernetes as your big data cluster orchestrator:
+
 - Deploying multiple workloads on the same Spark cluster
 - Reducing dependency management when moving workloads to different environments
 - Maximizing node utilization and cluster efficiency
