@@ -18,7 +18,8 @@
     "serve": "webpack serve --mode development --env development",
     "lint": "eslint --ext .js,.ts,.md,.html ./src",
     "format": "prettier --write 'src/{**/,}*.{html,json,js,pcss,md,yaml}'",
-    "sitemap": "src/scripts/sitemap.js"
+    "sitemap": "src/scripts/sitemap.js",
+    "prepare": "husky install"
   },
   "dependencies": {
     "docsify-cli": "^4.4.3"
