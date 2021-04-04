@@ -39,7 +39,7 @@ Set up Cost and Usage Reports as described below.
    - Enable Data refresh settings.
    - Time granularity Units should be Hourly.
    - Enable report data integration for Amazon Athena.
-3.  Mark the checkboxes as shown below.
+3. Mark the checkboxes as shown below.
 
 <img src="/eco/_media/gettingstarted-aws-connect-03.png" />
 

@@ -3,6 +3,7 @@
 Wave provides full visibility into the cost of your wave cluster, including a cost analysis over time per Spark application, a detailed cost drill down on each application, and your total cost for the Wave cluster.
 
 To get to the Wave Cluster Cost Analysis tab, do the following:
+
 1. In the Spot console, go to Wave in the menu tree and click Clusters.
 2. In the list of Clusters, click on a Cluster Name and click the Cost Analysis tab.
 
@@ -17,6 +18,7 @@ The first part of the cost analysis is a bar chart showing your Spark applicatio
 <img src="/wave/_media/tutorial-wave-cost-analysis-02.png" />
 
 Each bar shows the total cost of the Wave cluster for that time increment and is broken down to show the cost of each application in the cluster.
+
 - You can include or exclude applications from the display by clicking on the application names in the key above the bars.
 - To see a subtotal for a particular application, click on its color in a bar.
 
@@ -27,6 +29,7 @@ Below the bar chart, a table summarizes your top spend applications in the clust
 <img src="/wave/_media/tutorial-wave-cost-analysis-03.png" />
 
 The table includes the following information for each application:
+
 - Application
 - % of Total Costs
 - Compute Cost
@@ -44,6 +47,7 @@ In the Top Spend Summary, you can see a breakdown of costs per driver for each a
 <img src="/wave/_media/tutorial-wave-cost-analysis-04.png" />
 
 The breakdown per application shows the following details:
+
 - Driver
 - % of App Costs
 - Namespace

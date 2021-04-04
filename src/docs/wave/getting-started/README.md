@@ -5,6 +5,7 @@ The Wave environment includes the Wave components installed in a Kubernetes clus
 ## Stages of Wave Setup
 
 The Wave setup has the following major parts:
+
 - Prerequisites
 - Create a Wave Cluster
 - Submit Spark Application with Spark-submit
@@ -17,6 +18,7 @@ Each of these parts is described below.
 ## Prerequisites
 
 Before you can start the set up a Wave cluster, you will need to have the following in place:
+
 - Your AWS account connected to Spot
 - Kubernetes [kubectl](https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html) (provided by Amazon EKS) installed
 - Command-line tool spotctl installed (See instructions below)
@@ -106,6 +108,7 @@ nodeGroups:
 ### Creation Process in Background
 
 After you enter the creation command, the following major events take place:
+
 1. EKS Cluster Creation. The entire cluster creation process takes 20-25 minutes. You will see a moving bar on the right indicating that the process is progressing in the background and the EKS cluster is being created. If you examine your AWS console, you will see CloudFormation activity.
 2. Controller Installation. After the EKS cluster is created, the Spot Kubernetes Controller is installed. The cluster is registered with Spot and will be visible in the Spot console.
 3. Wave Operator Installation. The wave-operator is installed and the wave components are registered.
@@ -113,6 +116,7 @@ After you enter the creation command, the following major events take place:
 ### View Cluster State
 
 To view the state of the newly created cluster, do the following:
+
 1. Get the cluster-id by running the command below. A list of all the Wave clusters appears.
 
 ```
@@ -126,8 +130,7 @@ wc-ade635c8e90542d4 natef-1615242717 AVAILABLE 3 days ago 9 seconds ago
 
 `spotctl wave describe cluster --cluster-id wc-ade635c8e90542d4`
 
-This will return a full JSON descriptor of the cluster.
-4. To see component information as shown in the table below, use the following command:
+This will return a full JSON descriptor of the cluster. 4. To see component information as shown in the table below, use the following command:
 
 `spotctl wave describe components --cluster-id wc-ade635c8e90542d4`
 
@@ -170,7 +173,7 @@ The enterprise-gateway and the spark-history-server show properties such as the 
 
 ### View Cluster State with Helm
 
-You can also check the status of the system with Helm.  There are six charts installed by wave.
+You can also check the status of the system with Helm. There are six charts installed by wave.
 
 ```
 ❯ helm list -A
@@ -185,7 +188,7 @@ wave-sparkoperator        sparkoperator-0.8.4          v1beta2-1.2.0-3.0.0
 
 The Spark History Server has created an S3 bucket to store spark application event logs.
 
-Check for a spark history bucket for your cluster by running: `aws s3 ls`  
+Check for a spark history bucket for your cluster by running: `aws s3 ls`
 
 The name of the bucket will be: `spark-history-[cluster name from yaml file]`
 
@@ -195,7 +198,7 @@ When you create a Spark application from any heritage, the driver pod has a seco
 
 Try out the system by using spark-submit to initiate a job in cluster mode. This example runs the trivial “spark-pi” computation that is included in the [Spark GitHub repository](https://github.com/apache/spark/blob/master/examples/src/main/java/org/apache/spark/examples/JavaSparkPi.java). You will also need the Kubernetes master API endpoint.
 
-Usually, your Spark Scala code is included in the Docker image that you are using.  In this case, a Spark-3.0.0 Docker image is hosted in a public NetApp repository.  You can run one of the Spark examples found there.
+Usually, your Spark Scala code is included in the Docker image that you are using. In this case, a Spark-3.0.0 Docker image is hosted in a public NetApp repository. You can run one of the Spark examples found there.
 
 The Wave installation is configured with namespace `spark-jobs` and a serviceAccount `Spark` that has the required Kubernetes access rights. Enter the following:
 
@@ -251,6 +254,7 @@ This yaml definition can be applied to the cluster using the following kubectl c
 `kubectl apply -f spark-pi.yaml`
 
 ## Install Jupyter Notebook
+
 ### Use pip
 
 The easiest way to get started with Jupyter is to install it with pip according to the [instructions](https://jupyter.org/install).
@@ -259,15 +263,16 @@ The easiest way to get started with Jupyter is to install it with pip according 
 
 ### Connect Enterprise Gateway
 
-Once you have the notebook client, you can connect to the enterprise gateway in the Wave cluster.  
-1. Get the endpoint for the gateway using the `spotctl wave describe` command.  
+Once you have the notebook client, you can connect to the enterprise gateway in the Wave cluster.
+
+1. Get the endpoint for the gateway using the `spotctl wave describe` command.
 2. Use the command below to connect.
 
 `export GATEWAY=http://ab6178bfbe4a54c98a259523c4a9bc98-875627885.us-west-2.elb.amazonaws.com/gateway`
 
 ### Use Existing Notebook
 
-Alternatively, you can use a notebook that already exists on your local machine.  (For more information, see this [example](https://gist.github.com/ntfrnzn/7c5befcde7d659988c03db9cc365f16c).)  
+Alternatively, you can use a notebook that already exists on your local machine. (For more information, see this [example](https://gist.github.com/ntfrnzn/7c5befcde7d659988c03db9cc365f16c).)
 
 Navigate to the folder containing the notebook and run:
 
@@ -283,7 +288,7 @@ The GatewayClient.request_timeout parameter specifies how long Jupyter will wait
 
 Now the notebook interface is running in your browser, and is communicating with a Jupyter server running on localhost.
 
-When you open or start a Spark notebook, Jupyter communicates with the enterprise gateway and starts the kernel in a driver pod in the cluster. As you step through the notebook, the spark driver and executors will perform operations.  
+When you open or start a Spark notebook, Jupyter communicates with the enterprise gateway and starts the kernel in a driver pod in the cluster. As you step through the notebook, the spark driver and executors will perform operations.
 
 To exit the notebook and terminate the Spark application, go to the File menu and select Close and Halt.
 
@@ -300,5 +305,6 @@ CLUSTER_ID is the ID of your Wave cluster.
 The certificate has been issued from the Wave cluster and is unique to this endpoint. The self-signed cert is created with [cert-manager](https://cert-manager.io/docs/) running in the cluster. When you try to reach the page, some browser warnings may appear, which you should cancel.
 
 ## What’s Next?
+
 - Learn how to [Manage your Wave clusters](wave/features/cluster-management).
 - Learn more about the information available in the [Wave Cluster Overview](wave/wave-overview).

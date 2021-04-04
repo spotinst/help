@@ -5,6 +5,7 @@ Ocean is a managed infrastructure service for Kubernetes that automatically adju
 In this procedure, you will use the [Spot Console](http://console.spotinst.com/) to connect an existing AKS cluster to Ocean.
 
 ## Prerequisites
+
 - Your [Azure subscription](connect-your-cloud-provider/azure-account) connected to Spot
 - A Kubernetes cluster on AKS running at least one node
 - The Kubernetes command-line tool, kubectl, installed on your workstation and configured to work with the relevant AKS cluster
@@ -18,6 +19,7 @@ In this procedure, you will use the [Spot Console](http://console.spotinst.com/)
 2. Complete the stages of the connection procedure as described below.
 
 ## General
+
 1. In the General stage, choose the following from the dropdown lists:
    - Resource Group: The Azure resource group that contains the AKS cluster
    - Import from AKS: The AKS cluster to import
@@ -34,15 +36,17 @@ The Connectivity stage provides steps for you to install the [Spot Kubernetes Co
 ### Procedure
 
 Complete the steps as described on the page and summarized below.
+
 1. Create a Spot token (or use an existing one) and copy it to the text box.
 2. Enter or automatically generate the Cluster Controller ID.
-3. Run the displayed script on a workstation with `kube config` set to the AKS cluster context.  To confirm that the Spot Kubernetes Controller is functioning in the cluster, click Check Connectivity. Allow approximately two minutes for the test to complete.
+3. Run the displayed script on a workstation with `kube config` set to the AKS cluster context. To confirm that the Spot Kubernetes Controller is functioning in the cluster, click Check Connectivity. Allow approximately two minutes for the test to complete.
 4. Run the displayed script on a workstation with `kube config` set to the AKS cluster context to kick off the import process from the AKS cluster to Ocean as described below in detail.
 5. Click Next.
 
 ### Import Process Overview
 
 The script provided (in Step 4) is executed by the user. The script creates a Kubernetes job that will run once in the cluster and fetch the following:
+
 - Cluster OS disk size and type
 - Node pool tags, labels, taints, and OS disk size and type
 - Networking and security configuration necessary for the successful registration of a VM as a node in the cluster. The Ocean cluster uses this data when provisioning VMs in Azure.

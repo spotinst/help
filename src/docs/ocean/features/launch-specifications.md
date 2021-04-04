@@ -37,6 +37,7 @@ Many of the attributes that you apply to your cluster can be applied specificall
 ### Ocean for AWS
 
 The following is a list of attributes customizable per VNG in Ocean for AWS.
+
 - Block Device Mappings
 - Elastic IPs
 - Headroom
@@ -56,6 +57,7 @@ For example, you could use the Labels and Taints attributes to instruct Ocean wh
 ### Ocean for AKS
 
 The following is a list of attributes customizable per VNG in Ocean for AKS.
+
 - Headroom
 - Labels
 - Maximum Nodes
@@ -66,6 +68,7 @@ The following is a list of attributes customizable per VNG in Ocean for AKS.
 ### Ocean for GKE
 
 The following is a list of attributes customizable per VNG in Ocean for GKE.
+
 - Headroom (API only)
 - Instance Types (API only. These must be a subset of the instance types defined for the Ocean cluster.)
 - Labels
