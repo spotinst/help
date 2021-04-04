@@ -5,383 +5,19 @@
  */
 export const aliases = (() => {
   const map = {
-    "/account-user-management/user-management/access-policies-2":
-      "/administration/access-policies/",
-
-    "/account-user-management/user-management/sso-access-control/organization-level-sso":
-      "/administration/sso-access-control/organization-level-sso",
-
-    "/authentication": "/administration/api/create-api-token",
-
-    "/cloud-analyzer/connect-your-aws-account-2":
-      "/cloud-analyzer/getting-started/connect-your-aws-master-payer-account-existing-customer",
-
-    "/container-management/amazon-ecs": "/elastigroup/features/amazon-ecs/",
-
-    "/container-management/amazon-ecs/tutorials/import-fargate-services-ecs-elastigroup":
-      "/elastigroup/tutorials/amazon-ecs/import-fargate-services-to-ecs-elastigroup",
-
-    "/container-management/docker-swarm":
-      "/elastigroup/tools-integrations/docker-swarm/",
-
-    "/container-management/kubernetes": "/ocean/getting-started/",
-
-    "/container-management/kubernetes-2/eks":
-      "/ocean/getting-started/eks/join-an-existing-cluster",
-
-    "/container-management/kubernetes/gke": "/ocean/getting-started/gke",
-
-    "/container-management/kubernetes/kops/1_14":
-      "/ocean/tools-and-integrations/kops/",
-
-    "/container-management/kubernetes/kubernetes-tutorials/spotinst-kubernetes-controller/updating-kubernetes-controller":
-      "/ocean/tutorials/spot-kubernetes-controller/update-controller",
-
-    "/container-management/nomad/nomad-integration-with-elastigroup":
-      "/elastigroup/tools-integrations/nomad/",
-
-    "/container-management/openshift-2":
-      "/ocean/tools-and-integrations/openshift/",
-
-    "/container-management/rancher": "/elastigroup/tools-integrations/rancher/",
-
-    "/eco/connect-your-aws-account":
-      "/eco/getting-started/connect-your-aws-account",
-
-    "/eco/eco-link-account": "/eco/getting-started/",
-
-    "/elastigroup-for-aws/concepts/compute-concepts/shutdown-scripts":
-      "/elastigroup/features/compute/shutdown-scripts",
-
-    "/elastigroup-for-aws/concepts/compute-concepts/termination-policy":
-      "/elastigroup/features/compute/termination-policy",
-
-    "/elastigroup-for-aws/concepts/scaling-concepts/advanced-expressions":
-      "/elastigroup/features/scaling/advanced-expressions",
-
-    "/elastigroup-for-aws/concepts/scaling-concepts/target-scaling":
-      "/elastigroup/features/scaling/target-scaling",
-
-    "/elastigroup-for-aws/concepts/stateful-concepts":
-      "/elastigroup/features/stateful-instance/",
-
-    "/elastigroup-for-aws/services-integrations/aws-batch":
-      "/elastigroup/tools-integrations/aws-batch",
-
-    "/elastigroup-for-aws/services-integrations/awss-load-balancers-elb-and-alb":
-      "/elastigroup/tools-integrations/aws-load-balancers-elb-alb",
-
-    "/elastigroup-for-aws/services-integrations/codedeploy":
-      "/elastigroup/tools-integrations/codedeploy/",
-
-    "/elastigroup-for-aws/services-integrations/elastic-beanstalk":
-      "/elastigroup/tools-integrations/elastic-beanstalk/",
-
-    "/elastigroup-for-aws/services-integrations/elastic-beanstalk/in-asg":
-      "/elastigroup/tools-integrations/elastic-beanstalk/in-asg",
-
-    "/elastigroup-for-aws/services-integrations/elastic-mapreduce":
-      "/elastigroup/tools-integrations/elastic-mapreduce/",
-
-    "/elastigroup-for-aws/services-integrations/kafka":
-      "/elastigroup/tools-integrations/kafka",
-
-    "/elastigroup-for-aws/services-integrations/mesosphere":
-      "/elastigroup/tools-integrations/mesosphere",
-
-    "/elastigroup-for-aws/services-integrations/opsworks":
-      "/elastigroup/tools-integrations/opsworks/",
-
-    "/elastigroup-for-aws/services-integrations/rightscale":
-      "/elastigroup/tools-integrations/rightscale",
-
-    "/elastigroup-for-aws/services-integrations/route53":
-      "/elastigroup/tools-integrations/route53",
-
-    "/elastigroup-for-aws/tutorials/stateful-tutorials/create-a-stateful-elastigroup-from-scratch":
-      "/elastigroup/tutorials/elastigroup-tasks/create-a-stateful-elastigroup-from-scratch",
-
-    "/elastigroup-for-azure/create-a-new-elastigroup-in-azure":
-      "/elastigroup/getting-started/create-an-elastigroup-for-azure",
-
-    "/elastigroup-for-azure/hpc":
-      "/elastigroup/tools-integrations/grid-engine-azure/",
-
-    "/elastigroup-for-azure/shutdown-script-in-elastigroup":
-      "/elastigroup/features/azure/shutdown-script-in-elastigroup-for-azure",
-
-    "/elastigroup-for-google-cloud/concepts/compute-concepts/shutdown-scripts":
-      "/elastigroup/features/gcp/shutdown-scripts",
-
-    "/elastigroup-for-google-cloud/create-an-elastigroup-from-scratch":
-      "/elastigroup/getting-started/create-an-elastigroup-for-gcp",
-
-    "/getting-started-create-an-elastigroup-cluster-from-an-existing-asg-auto-scaling-group":
-      "/elastigroup/tutorials/elastigroup-tasks/join-an-existing-asg",
-
-    "/getting-started-create-an-elastigroup-cluster-from-an-existing-elb":
-      "elastigroup/tutorials/elastigroup-tasks/join-an-existing-elb",
-
-    "/getting-started-with-elastigroup": "/elastigroup/getting-started/",
-
-    "/integration-docs/elastic-beanstalk/introduction":
-      "/elastigroup/tools-integrations/elastic-beanstalk/",
-
-    "/integration-docs/gitlab": "/tools-and-provisioning/ci-cd/gitlab",
-
-    "/integration-docs/kubernetes": "/ocean/getting-started/",
-
-    "/integration-docs/kubernetes-2": "/ocean/getting-started/",
-
-    "/integration-docs/kubernetes/autoscaler":
-      "/elastigroup/tools-integrations/kubernetes-with-elastigroup/kubernetes-cluster-autoscaling",
-
-    "/integration-docs/kubernetes/eks": "/ocean/getting-started/eks/",
-
-    "/integration-docs/kubernetes/gke": "/ocean/getting-started/gke",
-
-    "/integration-docs/kubernetes/installing-kubernetes-controller":
-      "/ocean/tutorials/spot-kubernetes-controller/",
-
-    "/integration-docs/kubernetes/introduction": "/ocean/getting-started/",
-
-    "/integration-docs/kubernetes/kops/add-prerequisites":
-      "/ocean/tutorials/spot-kubernetes-controller/controller-permissions",
-
-    "/integration-docs/kubernetes/updating-kubernetes-controller":
-      "/ocean/tutorials/spot-kubernetes-controller/update-controller",
-
-    "/managed-instances/concepts/introduction":
-      "managed-instance/getting-started/",
-
-    "/ocean-aws/kubernetes/concepts/ocean-cloud/introduction":
-      "/ocean/overview-kubernetes",
-
-    "/ocean/kubernetes/concepts/ocean-cloud/introduction":
-      "/ocean/overview-kubernetes",
-
-    "/ocean/tutorials/ocean-for-aws/create-eks":
-      "/ocean/getting-started/eks/create-a-new-cluster",
-
-    "/ocean/tutorials/ocean-for-ecs": "/ocean/overview-ecs",
-
-    "/ocean/tutorials/ocean-for-ecs/create-an-ocean-cloud-cluster":
-      "/ocean/getting-started/ecs",
-
-    "/ocean/tutorials/spotinst-kubernetes-controller/installing-kubernetes-controller":
-      "/ocean/tutorials/spot-kubernetes-controller/",
-
-    "/provisioning-ci-cd-sdk/ci-cd/chef": "/tools-and-provisioning/ci-cd/chef",
-
-    "/provisioning-ci-cd-sdk/ci-cd/jenkins":
-      "/tools-and-provisioning/ci-cd/jenkins",
-
-    "/provisioning-ci-cd-sdk/provisioning-tools": "/tools-and-provisioning/",
-
-    "/provisioning-ci-cd-sdk/provisioning-tools/cloudformation":
-      "/tools-and-provisioning/cloudformation/",
-
-    "/provisioning-ci-cd-sdk/provisioning-tools/cloudformation/cfn-helper":
-      "/tools-and-provisioning/cloudformation/tools/cfn-helper-scripts",
-
-    "/provisioning-ci-cd-sdk/provisioning-tools/terraform":
-      "/tools-and-provisioning/terraform",
-
-    "/spotinst-policy": "/administration/api/spot-policy-in-aws",
-
-    "/elastigroup-for-aws/tutorials/publish-elastigroup-metrics":
-      "/elastigroup/tutorials/elastigroup-tasks/publish-metrics-to-cloudwatch",
-
-    "/account-user-management/user-management/access-policies-2/":
-      "/administration/access-policies/",
-
-    "/account-user-management/user-management/access-policies-actions/":
-      "/administration/access-policies/access-policy-actions",
-
-    "/account-user-management/gcp-policy/":
-      "/administration/api/spot-policy-in-gcp",
-
-    "/account-user-management/user-management/identity-providers/adfs-saml-authentication/":
-      "/administration/identity-providers/adfs-saml-authentication",
-
-    "/account-user-management/user-management/sso-access-control/organization-level-sso/":
-      "/administration/sso-access-control/organization-level-sso",
-
-    "/account-user-management/customizing-email-notifications/":
-      "/administration/users/configure-email-notifications",
-
-    "/cloud-analyzer/": "/cloud-analyzer/",
-
-    "/cloud-analyzer/policy-2/":
-      "/cloud-analyzer/tutorials/cloud-analyzer-policy/create-cloud-analyzer-policy-with-cloudformation",
-
-    "/cloud-analyzer/optimization/":
-      "/cloud-analyzer/tutorials/use-optimization-dashboard/",
-
-    "/eco/eco-faq/": "/eco/troubleshooting/eco-faq",
-
-    "/eco/strategy-selection/": "/eco/tutorials/choose-a-strategy",
-
-    "/eco/eco-policy-2/":
-      "/eco/tutorials/eco-policy/create-eco-policy-with-cloudformation",
-
-    "/eco/overview-dashboard-2/": "/eco/tutorials/view-your-savings",
-
-    "/container-management/amazon-ecs/elastigroup-for-ecs-concepts/autoscaling/":
-      "/elastigroup/features/amazon-ecs/automatic-autoscaler-for-ecs",
-
-    "/elastigroup-for-azure/shutdown-script-in-elastigroup/":
-      "/elastigroup/features/azure/shutdown-script-in-elastigroup-for-azure",
-
-    "/elastigroup-for-aws/concepts/compute-concepts/preferred-instance-types/":
-      "/elastigroup/features/compute/preferred-instance-types",
-
-    "/elastigroup-for-aws/concepts/compute-concepts/termination-policy/":
-      "/elastigroup/features/compute/termination-policy",
-
-    "/elastigroup-for-aws/concepts/compute-concepts/using-signals-in-elastigroups/":
-      "/elastigroup/features/compute/using-signals-in-elastigroups",
-
-    "/elastigroup-for-aws/concepts/general-concepts/elastigroup-console-configuration-alerts/":
-      "/elastigroup/features/core-features/elastigroup-console-configuration-alerts",
-
-    "/elastigroup-for-aws/concepts/general-concepts/market-scoring-managing-interruptions/":
-      "/elastigroup/features/core-features/market-scoring-managing-interruptions",
-
-    "/elastigroup-for-aws/concepts/general-concepts/spot-reserved-on-demand/":
-      "/elastigroup/features/core-features/spot-reserved-on-demand-instances",
-
-    "/elastigroup-for-google-cloud/concepts/general-concepts/gcp-load-balancers-backend-services/":
-      "/elastigroup/features/gcp/gcp-load-balancers-backend-services",
-
-    "/elastigroup-for-google-cloud/concepts/compute-concepts/scaling-policies-for-gcp-elastigroup/":
-      "/elastigroup/features/gcp/scaling-policies-for-gcp-elastigroup",
-
-    "/elastigroup-for-aws/concepts/stateful-concepts/scheduling-stateful-capacity/":
-      "/elastigroup/features/stateful-instance/schedule-stateful-capacity",
-
-    "/elastigroup-for-aws/concepts/stateful-concepts/introduction/":
-      "/elastigroup/features/stateful-instance/stateful-instances",
-
-    "/integration-docs/mlb/install-general/":
-      "/elastigroup/tools-integrations/aws-load-balancers-elb-alb",
-
-    "/mlb/": "/elastigroup/tools-integrations/aws-load-balancers-elb-alb",
-
-    "/mlb/attach-elastigroup/":
-      "/elastigroup/tools-integrations/aws-load-balancers-elb-alb",
-
-    "/mlb/install/":
-      "/elastigroup/tools-integrations/aws-load-balancers-elb-alb",
-
-    "/mlb/install/aws/":
-      "/elastigroup/tools-integrations/aws-load-balancers-elb-alb",
-
-    "/mlb/install/general/":
-      "/elastigroup/tools-integrations/aws-load-balancers-elb-alb",
-
-    "/mlb/introduction/":
-      "/elastigroup/tools-integrations/aws-load-balancers-elb-alb",
-
-    "/mlb/routing-rules/":
-      "/elastigroup/tools-integrations/aws-load-balancers-elb-alb",
-
-    "/mlb/ssl-certificate/":
-      "/elastigroup/tools-integrations/aws-load-balancers-elb-alb",
-
-    "/elastigroup-for-aws/services-integrations/codedeploy/codedeploy-blue-green-deployment/":
-      "/elastigroup/tools-integrations/codedeploy/blue-green-deployment",
-
-    "/elastigroup-for-aws/services-integrations/elastic-beanstalk/":
-      "/elastigroup/tools-integrations/elastic-beanstalk/",
-
-    "/elastigroup-for-aws/services-integrations/elastic-beanstalk/beanstalk-tutorials/import-a-beanstalk-environment/":
-      "/elastigroup/tools-integrations/elastic-beanstalk/import-a-beanstalk-environment",
-
-    "/elastigroup-for-aws/services-integrations/elastic-beanstalk/independent/":
-      "/elastigroup/tools-integrations/elastic-beanstalk/independent-elastigroup-integration",
-
-    "/elastigroup-for-aws/services-integrations/elastic-mapreduce/import-an-emr-cluster/advanced/":
-      "/elastigroup/tools-integrations/elastic-mapreduce/advanced-import-use-bootstrap-and-configuration-files",
-
-    "/container-management/kubernetes/kubernetes-tutorials/create-a-kubernetes-bearer-token/":
-      "/elastigroup/tools-integrations/kubernetes-with-elastigroup/create-a-kubernetes-bearer-token",
-
-    "/container-management/kubernetes/kubernetes-concepts/pod-driven-autoscaling/":
-      "/elastigroup/tools-integrations/kubernetes-with-elastigroup/kubernetes-cluster-autoscaling",
-
-    "/container-management/nomad/nomad-autoscaler-setup/":
-      "/elastigroup/tools-integrations/nomad/configure-nomad-autoscaler",
-
-    "/elastigroup-for-aws/services-integrations/route53/":
-      "/elastigroup/tools-integrations/route53",
-
-    "/container-management/amazon-ecs/tutorials/configure-attributes-for-task-placement-constraints/":
-      "/elastigroup/tutorials/amazon-ecs/configure-attributes-for-task-placement-constraints",
-
-    "/container-management/kubernetes/eks/create-elastigroup-based-eks-cluster/":
-      "/elastigroup/tutorials/amazon-eks/create-elastigroup-eks-cluster",
-
-    "/elastigroup-for-aws/tutorials/kms-encryption-and-spotinst/":
-      "/elastigroup/tutorials/elastigroup-tasks/create-encryption-key",
-
-    "/getting-started-create-an-elastigroup-cluster-from-an-existing-elb/":
-      "/elastigroup/tutorials/elastigroup-tasks/join-an-existing-elb",
-
-    "/elastigroup-for-aws/tutorials/restrict-your-spotinst-iam-policy/":
-      "/elastigroup/tutorials/elastigroup-tasks/restrict-your-spot-iam-policy",
-
-    "/elastigroup-for-aws/tutorials/wordpress-on-spot-step-by-step-guide/":
-      "/elastigroup/tutorials/elastigroup-tasks/wordpress-on-spot-step-by-step-guide",
-
-    "/managed-instances/tutorials/managed-instance-creation/":
-      "/managed-instance/getting-started/",
-
-    "/getting-started-spotinst-ocean-aws-gcp": "/ocean/getting-started/",
-
-    "/create-eks/": "/ocean/getting-started/eks/create-a-new-cluster",
-
-    "/ocean/ocean-overview-ecs/": "/ocean/overview-ecs",
-
-    "/ocean/ocean-overview-k8s/": "/ocean/overview-kubernetes",
-
-    "/ocean/tools-and-integrations/kops/get-started-with-kops/":
-      "/ocean/tools-and-integrations/kops/",
-
-    "/container-management/kubernetes/kops/clusters/":
-      "/ocean/tools-and-integrations/kops/migrate-cluster",
-
-    "/ocean/tools-and-integrations/openshift/openshift-v3-11/":
-      "/ocean/tools-and-integrations/openshift/create-cluster-v311",
-
-    "/ocean/tutorials/migrate-elastigroups/":
-      "/ocean/tutorials/migrate-existing-egs-ekskops",
-
-    "/ocean/tutorials/spotinst-kubernetes-controller/installing-kubernetes-controller-helm/":
-      "/ocean/tutorials/spot-kubernetes-controller/install-with-helm",
-
-    "/container-management/kubernetes/kubernetes-tutorials/spotinst-kubernetes-controller/installing-kubernetes-controller/installing-kubernetes-controller-kubectl/":
-      "/ocean/tutorials/spot-kubernetes-controller/install-with-kubectl",
-
-    "/ocean/tutorials/spotinst-kubernetes-controller/installing-kubernetes-controller-kubectl/":
-      "/ocean/tutorials/spot-kubernetes-controller/install-with-kubectl",
-
-    "/ocean/tutorials/spotinst-kubernetes-controller/install-with-terraform/":
-      "/ocean/tutorials/spot-kubernetes-controller/install-with-terraform",
-
-    "/provisioning-ci-cd-sdk/provisioning-tools/ansible/":
-      "/tools-and-provisioning/ansible",
-
-    "/provisioning-ci-cd-sdk/provisioning-tools/cloudformation/troposphere/":
-      "/tools-and-provisioning/cloudformation/tools/troposphere",
-
     "/account-user-management-user-management-scim-okta-scim/":
       "/administration/identity-providers/okta-saml-authentication",
 
     "/account-user-management/": "/administration/",
 
+    "/account-user-management/customizing-email-notifications/":
+      "/administration/users/configure-email-notifications",
+
     "/account-user-management/elastigroup-notifications-for-slack/":
       "/administration/users/configure-slack-notifications",
+
+    "/account-user-management/gcp-policy/":
+      "/administration/api/spot-policy-in-gcp",
 
     "/account-user-management/organization-management/":
       "/administration/organizations/",
@@ -400,11 +36,26 @@ export const aliases = (() => {
 
     "/account-user-management/user-management/": "/administration/users/",
 
+    "/account-user-management/user-management/access-policies-2":
+      "/administration/access-policies/",
+
+    "/account-user-management/user-management/access-policies-2/":
+      "/administration/access-policies/",
+
+    "/account-user-management/user-management/access-policies-actions/":
+      "/administration/access-policies/access-policy-actions",
+
+    "/account-user-management/user-management/access-policies/":
+      "/administration/access-policies/",
+
     "/account-user-management/user-management/adding-users-2/":
       "/administration/users/add-users",
 
     "/account-user-management/user-management/identity-providers/":
       "/administration/identity-providers/",
+
+    "/account-user-management/user-management/identity-providers/adfs-saml-authentication/":
+      "/administration/identity-providers/adfs-saml-authentication",
 
     "/account-user-management/user-management/identity-providers/azure-active-directory-integration/":
       "/administration/identity-providers/azure-active-directory-integration",
@@ -439,8 +90,21 @@ export const aliases = (() => {
     "/account-user-management/user-management/sso-access-control/defining-single-sign-on-sso/":
       "/administration/sso-access-control/",
 
+    "/account-user-management/user-management/sso-access-control/organization-level-sso":
+      "/administration/sso-access-control/organization-level-sso",
+
+    "/account-user-management/user-management/sso-access-control/organization-level-sso/":
+      "/administration/sso-access-control/organization-level-sso",
+
     "/account-user-management/user-management/user-roles-2/":
       "/administration/users/",
+
+    "/authentication": "/administration/api/create-api-token",
+
+    "/cloud-analyzer/": "/cloud-analyzer/",
+
+    "/cloud-analyzer/connect-your-aws-account-2":
+      "/cloud-analyzer/getting-started/connect-your-aws-master-payer-account-existing-customer",
 
     "/cloud-analyzer/connect-your-aws-account-2/":
       "/cloud-analyzer/getting-started/connect-your-aws-master-payer-account-existing-customer",
@@ -457,6 +121,9 @@ export const aliases = (() => {
 
     "/cloud-analyzer/msp-registration/": "/cloud-analyzer/getting-started/",
 
+    "/cloud-analyzer/optimization/":
+      "/cloud-analyzer/tutorials/use-optimization-dashboard/",
+
     "/cloud-analyzer/optimization/containers/":
       "/cloud-analyzer/tutorials/use-optimization-dashboard/containers",
 
@@ -465,6 +132,9 @@ export const aliases = (() => {
 
     "/cloud-analyzer/optimization/reservations/":
       "/cloud-analyzer/tutorials/use-optimization-dashboard/reservations",
+
+    "/cloud-analyzer/policy-2/":
+      "/cloud-analyzer/tutorials/cloud-analyzer-policy/create-cloud-analyzer-policy-with-cloudformation",
 
     "/cloud-analyzer/policy/":
       "/cloud-analyzer/tutorials/cloud-analyzer-policy/",
@@ -485,6 +155,8 @@ export const aliases = (() => {
 
     "/container-management/": "/ocean/",
 
+    "/container-management/amazon-ecs": "/elastigroup/features/amazon-ecs/",
+
     "/container-management/amazon-ecs/": "/elastigroup/features/amazon-ecs/",
 
     "/container-management/amazon-ecs/autoscaling/":
@@ -498,6 +170,9 @@ export const aliases = (() => {
 
     "/container-management/amazon-ecs/elastigroup-for-ecs-concepts/autoscaler-tetris-scaling/":
       "/elastigroup/features/amazon-ecs/autoscaler-tetris-scaling",
+
+    "/container-management/amazon-ecs/elastigroup-for-ecs-concepts/autoscaling/":
+      "/elastigroup/features/amazon-ecs/automatic-autoscaler-for-ecs",
 
     "/container-management/amazon-ecs/elastigroup-for-ecs/":
       "/elastigroup/features/amazon-ecs/elastigroup-for-ecs",
@@ -514,6 +189,9 @@ export const aliases = (() => {
     "/container-management/amazon-ecs/tutorials/automatic-autoscaler-for-ecs/":
       "/elastigroup/tutorials/amazon-ecs/enable-autoscaling-for-ecs",
 
+    "/container-management/amazon-ecs/tutorials/configure-attributes-for-task-placement-constraints/":
+      "/elastigroup/tutorials/amazon-ecs/configure-attributes-for-task-placement-constraints",
+
     "/container-management/amazon-ecs/tutorials/create-cluster-roll/":
       "/elastigroup/tutorials/amazon-ecs/create-cluster-roll",
 
@@ -523,8 +201,14 @@ export const aliases = (() => {
     "/container-management/amazon-ecs/tutorials/elastigroup-for-ecs-health-checks-and-autohealing/":
       "/elastigroup/tutorials/amazon-ecs/configure-health-checks-and-autohealing",
 
+    "/container-management/amazon-ecs/tutorials/import-fargate-services-ecs-elastigroup":
+      "/elastigroup/tutorials/amazon-ecs/import-fargate-services-to-ecs-elastigroup",
+
     "/container-management/amazon-ecs/tutorials/import-fargate-services-ecs-elastigroup/":
       "/elastigroup/tutorials/amazon-ecs/import-fargate-services-to-ecs-elastigroup",
+
+    "/container-management/docker-swarm":
+      "/elastigroup/tools-integrations/docker-swarm/",
 
     "/container-management/docker-swarm/":
       "/elastigroup/tools-integrations/docker-swarm/",
@@ -535,10 +219,18 @@ export const aliases = (() => {
     "/container-management/docker-swarm/docker-swarm-integration/":
       "/elastigroup/tools-integrations/docker-swarm/",
 
+    "/container-management/kubernetes": "/ocean/getting-started/",
+
+    "/container-management/kubernetes-2/eks":
+      "/ocean/getting-started/eks/join-an-existing-cluster",
+
     "/container-management/kubernetes/": "/ocean/overview-kubernetes",
 
     "/container-management/kubernetes/aks-engine/":
       "/elastigroup/tutorials/azure/azure-aks-engine",
+
+    "/container-management/kubernetes/autoscaler/":
+      "/elastigroup/tools-integrations/kubernetes-with-elastigroup/kubernetes-cluster-autoscaling",
 
     "/container-management/kubernetes/eks/":
       "/elastigroup/tutorials/amazon-eks/",
@@ -546,16 +238,42 @@ export const aliases = (() => {
     "/container-management/kubernetes/eks/configure-kubectl-for-eks-and-install-spotinst-controller/":
       "/elastigroup/tutorials/amazon-eks/configure-kubectl-for-eks-install-controller",
 
+    "/container-management/kubernetes/eks/create-elastigroup-based-eks-cluster/":
+      "/elastigroup/tutorials/amazon-eks/create-elastigroup-eks-cluster",
+
+    "/container-management/kubernetes/gke": "/ocean/getting-started/gke",
+
     "/container-management/kubernetes/gke/": "/ocean/getting-started/gke",
 
     "/container-management/kubernetes/introduction/":
       "/elastigroup/tools-integrations/kubernetes-with-elastigroup/",
+
+    "/container-management/kubernetes/kops/":
+      "ocean/tools-and-integrations/kops/",
+
+    "/container-management/kubernetes/kops/1_12/instance-groups/":
+      "/ocean/tools-and-integrations/kops/metadata-labels",
+
+    "/container-management/kubernetes/kops/1_14":
+      "/ocean/tools-and-integrations/kops/",
+
+    "/container-management/kubernetes/kops/clusters/":
+      "/ocean/tools-and-integrations/kops/migrate-cluster",
+
+    "/container-management/kubernetes/kops/instance-groups/":
+      "/ocean/tools-and-integrations/kops/metadata-labels",
+
+    "/container-management/kubernetes/kubernetes-concepts/autoscaler/":
+      "/ocean/features/scaling-kubernetes",
 
     "/container-management/kubernetes/kubernetes-concepts/":
       "/elastigroup/tools-integrations/kubernetes-with-elastigroup/",
 
     "/container-management/kubernetes/kubernetes-concepts/persistent-volumes-support/":
       "/elastigroup/tools-integrations/kubernetes-with-elastigroup/persistent-volume-support",
+
+    "/container-management/kubernetes/kubernetes-concepts/pod-driven-autoscaling/":
+      "/elastigroup/tools-integrations/kubernetes-with-elastigroup/kubernetes-cluster-autoscaling",
 
     "/container-management/kubernetes/kubernetes-concepts/spotinst-labels/":
       "/ocean/features/labels-and-taints",
@@ -566,10 +284,16 @@ export const aliases = (() => {
     "/container-management/kubernetes/kubernetes-tutorials/configure-auto-healing-for-kubernetes/":
       "/elastigroup/tools-integrations/kubernetes-with-elastigroup/configure-autohealing-for-kubernetes",
 
+    "/container-management/kubernetes/kubernetes-tutorials/create-a-kubernetes-bearer-token/":
+      "/elastigroup/tools-integrations/kubernetes-with-elastigroup/create-a-kubernetes-bearer-token",
+
     "/container-management/kubernetes/kubernetes-tutorials/custom-labels-selector/":
       "/elastigroup/tools-integrations/kubernetes-with-elastigroup/custom-label-selectors",
 
     "/container-management/kubernetes/kubernetes-tutorials/drift/":
+      "/ocean/tutorials/spot-kubernetes-controller/",
+
+    "/container-management/kubernetes/kubernetes-tutorials/installing-kubernetes-controller/":
       "/ocean/tutorials/spot-kubernetes-controller/",
 
     "/container-management/kubernetes/kubernetes-tutorials/spotinst-kubernetes-controller/":
@@ -590,16 +314,42 @@ export const aliases = (() => {
     "/container-management/kubernetes/kubernetes-tutorials/spotinst-kubernetes-controller/installing-kubernetes-controller/installing-kubernetes-controller-helm-v3/":
       "/ocean/tutorials/spot-kubernetes-controller/install-with-helm",
 
+    "/container-management/kubernetes/kubernetes-tutorials/spotinst-kubernetes-controller/installing-kubernetes-controller/installing-kubernetes-controller-kubectl/":
+      "/ocean/tutorials/spot-kubernetes-controller/install-with-kubectl",
+
+    "/container-management/kubernetes/kubernetes-tutorials/spotinst-kubernetes-controller/updating-kubernetes-controller":
+      "/ocean/tutorials/spot-kubernetes-controller/update-controller",
+
     "/container-management/kubernetes/kubernetes-tutorials/spotinst-kubernetes-controller/updating-kubernetes-controller/":
       "/ocean/tutorials/spot-kubernetes-controller/update-controller",
 
     "/container-management/nomad/": "/elastigroup/tools-integrations/nomad/",
 
+    "/container-management/nomad/nomad-autoscaler-setup/":
+      "/elastigroup/tools-integrations/nomad/configure-nomad-autoscaler",
+
     "/container-management/nomad/nomad-autoscaling-concepts/":
+      "/elastigroup/tools-integrations/nomad/",
+
+    "/container-management/nomad/nomad-integration-with-elastigroup":
       "/elastigroup/tools-integrations/nomad/",
 
     "/container-management/nomad/nomad-integration-with-elastigroup/":
       "/elastigroup/tools-integrations/nomad/set-up-nomad-on-elastigroup",
+
+    "/container-management/openshift-2":
+      "/ocean/tools-and-integrations/openshift/",
+
+    "/container-management/openshift-2/":
+      "/ocean/tools-and-integrations/openshift/create-cluster-v311",
+
+    "/container-management/openshift-2/openshift-v3-11/":
+      "/ocean/tools-and-integrations/openshift/create-cluster-v311",
+
+    "/container-management/openshift-2/openshift-v4-x/":
+      "/ocean/tools-and-integrations/openshift/create-cluster-v4x",
+
+    "/container-management/rancher": "/elastigroup/tools-integrations/rancher/",
 
     "/container-management/rancher/":
       "/elastigroup/tools-integrations/rancher/",
@@ -614,12 +364,24 @@ export const aliases = (() => {
 
     "/create-an-ocean-cloud-cluster/": "/ocean/getting-started/gke",
 
+    "/create-eks/": "/ocean/getting-started/eks/create-a-new-cluster",
+
     "/eco/": "/eco/",
+
+    "/eco/connect-your-aws-account":
+      "/eco/getting-started/connect-your-aws-account",
 
     "/eco/connect-your-aws-account/":
       "/eco/getting-started/connect-your-aws-account",
 
+    "/eco/eco-faq/": "/eco/troubleshooting/eco-faq",
+
+    "/eco/eco-link-account": "/eco/getting-started/",
+
     "/eco/eco-overview-2/": "/eco/",
+
+    "/eco/eco-policy-2/":
+      "/eco/tutorials/eco-policy/create-eco-policy-with-cloudformation",
 
     "/eco/eco-policy/": "/eco/tutorials/eco-policy/",
 
@@ -627,7 +389,11 @@ export const aliases = (() => {
 
     "/eco/msp-registration/": "/eco/getting-started/",
 
+    "/eco/overview-dashboard-2/": "/eco/tutorials/view-your-savings",
+
     "/eco/reservation-analysis/": "/eco/tutorials/review-ri-spending-analysis",
+
+    "/eco/strategy-selection/": "/eco/tutorials/choose-a-strategy",
 
     "/elastigroup-for-aws/": "/elastigroup/",
 
@@ -648,8 +414,23 @@ export const aliases = (() => {
     "/elastigroup-for-aws/concepts/compute-concepts/placement-groups/":
       "/elastigroup/features/compute/placement-groups",
 
+    "/elastigroup-for-aws/concepts/compute-concepts/preferred-instance-types/":
+      "/elastigroup/features/compute/preferred-instance-types",
+
+    "/elastigroup-for-aws/concepts/compute-concepts/shutdown-scripts":
+      "/elastigroup/features/compute/shutdown-scripts",
+
     "/elastigroup-for-aws/concepts/compute-concepts/shutdown-scripts/":
       "/elastigroup/features/compute/shutdown-scripts",
+
+    "/elastigroup-for-aws/concepts/compute-concepts/termination-policy":
+      "/elastigroup/features/compute/termination-policy",
+
+    "/elastigroup-for-aws/concepts/compute-concepts/termination-policy/":
+      "/elastigroup/features/compute/termination-policy",
+
+    "/elastigroup-for-aws/concepts/compute-concepts/using-signals-in-elastigroups/":
+      "/elastigroup/features/compute/using-signals-in-elastigroups",
 
     "/elastigroup-for-aws/concepts/general-concepts/": "/elastigroup/features/",
 
@@ -658,6 +439,9 @@ export const aliases = (() => {
 
     "/elastigroup-for-aws/concepts/general-concepts/elastigroup-capacity-instances-or-weighted/":
       "/elastigroup/features/core-features/elastigroup-capacity-instances-or-weighted",
+
+    "/elastigroup-for-aws/concepts/general-concepts/elastigroup-console-configuration-alerts/":
+      "/elastigroup/features/core-features/elastigroup-console-configuration-alerts",
 
     "/elastigroup-for-aws/concepts/general-concepts/equal-az-distribution/":
       "/elastigroup/features/core-features/equal-az-instance-distribution-orientation",
@@ -668,11 +452,20 @@ export const aliases = (() => {
     "/elastigroup-for-aws/concepts/general-concepts/maintenance-windows/":
       "/elastigroup/features/core-features/maintenance-windows",
 
+    "/elastigroup-for-aws/concepts/general-concepts/market-scoring-managing-interruptions/":
+      "/elastigroup/features/core-features/market-scoring-managing-interruptions",
+
     "/elastigroup-for-aws/concepts/general-concepts/scheduling/":
       "/elastigroup/features/core-features/scheduling",
 
+    "/elastigroup-for-aws/concepts/general-concepts/spot-reserved-on-demand/":
+      "/elastigroup/features/core-features/spot-reserved-on-demand-instances",
+
     "/elastigroup-for-aws/concepts/scaling-concepts/":
       "/elastigroup/features/scaling/",
+
+    "/elastigroup-for-aws/concepts/scaling-concepts/advanced-expressions":
+      "/elastigroup/features/scaling/advanced-expressions",
 
     "/elastigroup-for-aws/concepts/scaling-concepts/advanced-expressions/":
       "/elastigroup/features/scaling/advanced-expressions",
@@ -683,8 +476,14 @@ export const aliases = (() => {
     "/elastigroup-for-aws/concepts/scaling-concepts/simple-scaling-policies/":
       "/elastigroup/features/scaling/simple-scaling-policies",
 
+    "/elastigroup-for-aws/concepts/scaling-concepts/target-scaling":
+      "/elastigroup/features/scaling/target-scaling",
+
     "/elastigroup-for-aws/concepts/scaling-concepts/target-scaling/":
       "/elastigroup/features/scaling/target-scaling",
+
+    "/elastigroup-for-aws/concepts/stateful-concepts":
+      "/elastigroup/features/stateful-instance/",
 
     "/elastigroup-for-aws/concepts/stateful-concepts/":
       "/elastigroup/features/stateful-instance/",
@@ -695,11 +494,17 @@ export const aliases = (() => {
     "/elastigroup-for-aws/concepts/stateful-concepts/import-a-stateful-instance/":
       "/elastigroup/features/stateful-instance/import-a-stateful-instance",
 
+    "/elastigroup-for-aws/concepts/stateful-concepts/introduction/":
+      "/elastigroup/features/stateful-instance/stateful-instances",
+
     "/elastigroup-for-aws/concepts/stateful-concepts/maintain-root/":
       "/elastigroup/features/stateful-instance/persist-root-volume",
 
     "/elastigroup-for-aws/concepts/stateful-concepts/network-persistency/":
       "/elastigroup/features/stateful-instance/persist-network",
+
+    "/elastigroup-for-aws/concepts/stateful-concepts/scheduling-stateful-capacity/":
+      "/elastigroup/features/stateful-instance/schedule-stateful-capacity",
 
     "/elastigroup-for-aws/concepts/stateful-concepts/stateful-actions/":
       "/elastigroup/features/stateful-instance/stateful-instance-actions",
@@ -707,29 +512,59 @@ export const aliases = (() => {
     "/elastigroup-for-aws/services-integrations/":
       "/elastigroup/tools-integrations/",
 
+    "/elastigroup-for-aws/services-integrations/aws-batch":
+      "/elastigroup/tools-integrations/aws-batch",
+
     "/elastigroup-for-aws/services-integrations/aws-batch/":
       "/elastigroup/tools-integrations/aws-batch",
+
+    "/elastigroup-for-aws/services-integrations/awss-load-balancers-elb-and-alb":
+      "/elastigroup/tools-integrations/aws-load-balancers-elb-alb",
 
     "/elastigroup-for-aws/services-integrations/awss-load-balancers-elb-and-alb/":
       "/elastigroup/tools-integrations/aws-load-balancers-elb-alb",
 
+    "/elastigroup-for-aws/services-integrations/codedeploy":
+      "/elastigroup/tools-integrations/codedeploy/",
+
     "/elastigroup-for-aws/services-integrations/codedeploy/":
       "/elastigroup/tools-integrations/codedeploy/",
+
+    "/elastigroup-for-aws/services-integrations/codedeploy/codedeploy-blue-green-deployment/":
+      "/elastigroup/tools-integrations/codedeploy/blue-green-deployment",
 
     "/elastigroup-for-aws/services-integrations/codedeploy/codedeploy-setup/":
       "/elastigroup/tools-integrations/codedeploy/",
 
+    "/elastigroup-for-aws/services-integrations/elastic-beanstalk":
+      "/elastigroup/tools-integrations/elastic-beanstalk/",
+
+    "/elastigroup-for-aws/services-integrations/elastic-beanstalk/":
+      "/elastigroup/tools-integrations/elastic-beanstalk/",
+
     "/elastigroup-for-aws/services-integrations/elastic-beanstalk/beanstalk-tutorials/":
       "/elastigroup/tools-integrations/elastic-beanstalk/",
+
+    "/elastigroup-for-aws/services-integrations/elastic-beanstalk/beanstalk-tutorials/import-a-beanstalk-environment/":
+      "/elastigroup/tools-integrations/elastic-beanstalk/import-a-beanstalk-environment",
 
     "/elastigroup-for-aws/services-integrations/elastic-beanstalk/beanstalk-tutorials/roll-configuration-updates/":
       "/elastigroup/tools-integrations/elastic-beanstalk/roll-configuration-updates",
 
+    "/elastigroup-for-aws/services-integrations/elastic-beanstalk/in-asg":
+      "/elastigroup/tools-integrations/elastic-beanstalk/in-asg",
+
     "/elastigroup-for-aws/services-integrations/elastic-beanstalk/in-asg/":
       "/elastigroup/tools-integrations/elastic-beanstalk/in-asg",
 
+    "/elastigroup-for-aws/services-integrations/elastic-beanstalk/independent/":
+      "/elastigroup/tools-integrations/elastic-beanstalk/independent-elastigroup-integration",
+
     "/elastigroup-for-aws/services-integrations/elastic-beanstalk/introduction/":
       "/elastigroup/tools-integrations/elastic-beanstalk/",
+
+    "/elastigroup-for-aws/services-integrations/elastic-mapreduce":
+      "/elastigroup/tools-integrations/elastic-mapreduce/",
 
     "/elastigroup-for-aws/services-integrations/elastic-mapreduce/":
       "/elastigroup/tools-integrations/elastic-mapreduce/",
@@ -740,17 +575,32 @@ export const aliases = (() => {
     "/elastigroup-for-aws/services-integrations/elastic-mapreduce/elastigroup-auto-recover-for-emr/":
       "/elastigroup/tools-integrations/elastic-mapreduce/elastigroup-auto-recover-for-emr",
 
+    "/elastigroup-for-aws/services-integrations/elastic-mapreduce/import-an-emr-cluster":
+      "/elastigroup/tools-integrations/elastic-mapreduce/",
+
+    "/elastigroup-for-aws/services-integrations/elastic-mapreduce/import-an-emr-cluster/advanced/":
+      "/elastigroup/tools-integrations/elastic-mapreduce/advanced-import-use-bootstrap-and-configuration-files",
+
     "/elastigroup-for-aws/services-integrations/elastic-mapreduce/import-elastic-mapreduce-task-nodes-wrap/":
       "/elastigroup/tools-integrations/elastic-mapreduce/import-elastic-mapreduce-task-nodes",
 
     "/elastigroup-for-aws/services-integrations/elastic-mapreduce/scaling-policies-for-emr/":
       "/elastigroup/tools-integrations/elastic-mapreduce/scaling-policies-for-emr",
 
+    "/elastigroup-for-aws/services-integrations/kafka":
+      "/elastigroup/tools-integrations/kafka",
+
     "/elastigroup-for-aws/services-integrations/kafka/":
       "/elastigroup/tools-integrations/kafka",
 
+    "/elastigroup-for-aws/services-integrations/mesosphere":
+      "/elastigroup/tools-integrations/mesosphere",
+
     "/elastigroup-for-aws/services-integrations/mesosphere/":
       "/elastigroup/tools-integrations/mesosphere",
+
+    "/elastigroup-for-aws/services-integrations/opsworks":
+      "/elastigroup/tools-integrations/opsworks/",
 
     "/elastigroup-for-aws/services-integrations/opsworks/":
       "/elastigroup/tools-integrations/opsworks/",
@@ -761,8 +611,17 @@ export const aliases = (() => {
     "/elastigroup-for-aws/services-integrations/opsworks/opsworks-setup/":
       "/elastigroup/tools-integrations/opsworks/",
 
+    "/elastigroup-for-aws/services-integrations/rightscale":
+      "/elastigroup/tools-integrations/rightscale",
+
     "/elastigroup-for-aws/services-integrations/rightscale/":
       "/elastigroup/tools-integrations/rightscale",
+
+    "/elastigroup-for-aws/services-integrations/route53":
+      "/elastigroup/tools-integrations/route53",
+
+    "/elastigroup-for-aws/services-integrations/route53/":
+      "/elastigroup/tools-integrations/route53",
 
     "/elastigroup-for-aws/services-integrations/spinnaker/":
       "/tools-and-provisioning/spinnaker/",
@@ -820,8 +679,14 @@ export const aliases = (() => {
     "/elastigroup-for-aws/tutorials/filtering-api-responses-based-on-group-parameters/":
       "/elastigroup/tutorials/elastigroup-tasks/filter-api-responses",
 
+    "/elastigroup-for-aws/tutorials/kms-encryption-and-spotinst/":
+      "/elastigroup/tutorials/elastigroup-tasks/create-encryption-key",
+
     "/elastigroup-for-aws/tutorials/link-an-ec2-classic-instance-to-a-vpc/":
       "/elastigroup/tutorials/elastigroup-tasks/link-ec2-classic-instance-to-vpc",
+
+    "/elastigroup-for-aws/tutorials/publish-elastigroup-metrics":
+      "/elastigroup/tutorials/elastigroup-tasks/publish-metrics-to-cloudwatch",
 
     "/elastigroup-for-aws/tutorials/publish-elastigroup-metrics/":
       "/elastigroup/tutorials/elastigroup-tasks/publish-metrics-to-cloudwatch",
@@ -829,8 +694,14 @@ export const aliases = (() => {
     "/elastigroup-for-aws/tutorials/registering-instances-to-domain/":
       "/elastigroup/tutorials/elastigroup-tasks/register-instances-to-domain",
 
+    "/elastigroup-for-aws/tutorials/restrict-your-spotinst-iam-policy/":
+      "/elastigroup/tutorials/elastigroup-tasks/restrict-your-spot-iam-policy",
+
     "/elastigroup-for-aws/tutorials/stateful-tutorials/":
       "/elastigroup/tutorials/elastigroup-tasks/",
+
+    "/elastigroup-for-aws/tutorials/stateful-tutorials/create-a-stateful-elastigroup-from-scratch":
+      "/elastigroup/tutorials/elastigroup-tasks/create-a-stateful-elastigroup-from-scratch",
 
     "/elastigroup-for-aws/tutorials/stateful-tutorials/create-a-stateful-elastigroup-from-scratch/":
       "/elastigroup/tutorials/elastigroup-tasks/create-a-stateful-elastigroup-from-scratch",
@@ -841,17 +712,26 @@ export const aliases = (() => {
     "/elastigroup-for-aws/tutorials/using-cross-account-kms-key-to-encrypt-ebs-volumes-with-spotinst/":
       "/elastigroup/tutorials/elastigroup-tasks/use-cross-account-kms-key-to-encrypt-ebs-volumes",
 
+    "/elastigroup-for-aws/tutorials/wordpress-on-spot-step-by-step-guide/":
+      "/elastigroup/tutorials/elastigroup-tasks/wordpress-on-spot-step-by-step-guide",
+
     "/elastigroup-for-azure/":
       "/elastigroup/getting-started/elastigroup-for-azure",
 
     "/elastigroup-for-azure/connect-elastigroup-to-application-gateway/":
       "/elastigroup/tutorials/azure/connect-elastigroup-to-application-gateway",
 
+    "/elastigroup-for-azure/create-a-new-elastigroup-in-azure":
+      "/elastigroup/getting-started/create-an-elastigroup-for-azure",
+
     "/elastigroup-for-azure/creating-an-elastigroup-in-azure/":
       "/elastigroup/getting-started/create-an-elastigroup-for-azure",
 
     "/elastigroup-for-azure/getting-started-with-elastigroup/":
       "/connect-your-cloud-provider/azure-account",
+
+    "/elastigroup-for-azure/hpc":
+      "/elastigroup/tools-integrations/grid-engine-azure/",
 
     "/elastigroup-for-azure/hpc/":
       "/elastigroup/tools-integrations/grid-engine-azure/",
@@ -865,6 +745,12 @@ export const aliases = (() => {
     "/elastigroup-for-azure/hpc/tortuga-unicloud-grid-engine/":
       "/elastigroup/tools-integrations/grid-engine-azure/configure-tortuga-unicloud-grid-engine",
 
+    "/elastigroup-for-azure/shutdown-script-in-elastigroup":
+      "/elastigroup/features/azure/shutdown-script-in-elastigroup-for-azure",
+
+    "/elastigroup-for-azure/shutdown-script-in-elastigroup/":
+      "/elastigroup/features/azure/shutdown-script-in-elastigroup-for-azure",
+
     "/elastigroup-for-azure/shutdown-script/":
       "/elastigroup/features/azure/shutdown-script-in-elastigroup-for-azure",
 
@@ -876,14 +762,26 @@ export const aliases = (() => {
     "/elastigroup-for-google-cloud/concepts/compute-concepts/":
       "/elastigroup/features/gcp/",
 
+    "/elastigroup-for-google-cloud/concepts/compute-concepts/scaling-policies-for-gcp-elastigroup/":
+      "/elastigroup/features/gcp/scaling-policies-for-gcp-elastigroup",
+
+    "/elastigroup-for-google-cloud/concepts/compute-concepts/shutdown-scripts":
+      "/elastigroup/features/gcp/shutdown-scripts",
+
     "/elastigroup-for-google-cloud/concepts/compute-concepts/shutdown-scripts/":
       "/elastigroup/features/compute/shutdown-scripts",
 
     "/elastigroup-for-google-cloud/concepts/general-concepts/":
       "/elastigroup/features/gcp/",
 
+    "/elastigroup-for-google-cloud/concepts/general-concepts/gcp-load-balancers-backend-services/":
+      "/elastigroup/features/gcp/gcp-load-balancers-backend-services",
+
     "/elastigroup-for-google-cloud/concepts/general-concepts/preemptible-cud-od-instances/":
       "/elastigroup/features/gcp/pre-emptible-cud-on-demand-instances",
+
+    "/elastigroup-for-google-cloud/create-an-elastigroup-from-scratch":
+      "/elastigroup/getting-started/create-an-elastigroup-for-gcp",
 
     "/elastigroup-for-google-cloud/tutorials/": "/elastigroup/getting-started/",
 
@@ -901,8 +799,17 @@ export const aliases = (() => {
     "/getting-started-connecting-your-aws-account/":
       "/connect-your-cloud-provider/aws-account",
 
+    "/getting-started-create-an-elastigroup-cluster-from-an-existing-asg-auto-scaling-group":
+      "/elastigroup/tutorials/elastigroup-tasks/join-an-existing-asg",
+
     "/getting-started-create-an-elastigroup-cluster-from-an-existing-asg-auto-scaling-group/":
       "/elastigroup/tutorials/elastigroup-tasks/join-an-existing-asg",
+
+    "/getting-started-create-an-elastigroup-cluster-from-an-existing-elb":
+      "elastigroup/tutorials/elastigroup-tasks/join-an-existing-elb",
+
+    "/getting-started-create-an-elastigroup-cluster-from-an-existing-elb/":
+      "/elastigroup/tutorials/elastigroup-tasks/join-an-existing-elb",
 
     "/getting-started-elastigroup": "/elastigroup/getting-started/",
 
@@ -914,10 +821,17 @@ export const aliases = (() => {
     "/getting-started-spotinst-elastigroup-aws/":
       "/elastigroup/getting-started/elastigroup-for-aws",
 
+    "/getting-started-spotinst-ocean-aws-gcp": "/ocean/getting-started/",
+
+    "/getting-started-with-elastigroup": "/elastigroup/getting-started/",
+
     "/getting-started-with-spotinst/": "/connect-your-cloud-provider/",
 
     "/import-an-eks-based-ocean-cluster/":
       "/ocean/getting-started/eks/join-an-existing-cluster",
+
+    "/integration-docs/elastic-beanstalk/introduction":
+      "/elastigroup/tools-integrations/elastic-beanstalk/",
 
     "/integration-docs/elastigroup/concepts/general-concepts/notifications/customizing-email-notifications/":
       "/administration/users/configure-email-notifications",
@@ -937,6 +851,33 @@ export const aliases = (() => {
     "/integration-docs/elastigroup/quickstarts/elastigroup-for-aws/":
       "/elastigroup/getting-started/elastigroup-for-aws",
 
+    "/integration-docs/gitlab": "/tools-and-provisioning/ci-cd/gitlab",
+
+    "/integration-docs/kubernetes": "/ocean/getting-started/",
+
+    "/integration-docs/kubernetes-2": "/ocean/getting-started/",
+
+    "/integration-docs/kubernetes/autoscaler":
+      "/elastigroup/tools-integrations/kubernetes-with-elastigroup/kubernetes-cluster-autoscaling",
+
+    "/integration-docs/kubernetes/eks": "/ocean/getting-started/eks/",
+
+    "/integration-docs/kubernetes/gke": "/ocean/getting-started/gke",
+
+    "/integration-docs/kubernetes/installing-kubernetes-controller":
+      "/ocean/tutorials/spot-kubernetes-controller/",
+
+    "/integration-docs/kubernetes/introduction": "/ocean/getting-started/",
+
+    "/integration-docs/kubernetes/kops/add-prerequisites":
+      "/ocean/tutorials/spot-kubernetes-controller/controller-permissions",
+
+    "/integration-docs/kubernetes/updating-kubernetes-controller":
+      "/ocean/tutorials/spot-kubernetes-controller/update-controller",
+
+    "/integration-docs/mlb/install-general/":
+      "/elastigroup/tools-integrations/aws-load-balancers-elb-alb",
+
     "/introducing-elastigroup/": "/elastigroup/",
 
     "/managed-instances/": "/managed-instance/",
@@ -948,6 +889,9 @@ export const aliases = (() => {
 
     "/managed-instances/concepts/how-it-works/":
       "/managed-instance/features/stateful-managed-instances",
+
+    "/managed-instances/concepts/introduction":
+      "managed-instance/getting-started/",
 
     "/managed-instances/concepts/introduction/": "/managed-instance/",
 
@@ -977,6 +921,38 @@ export const aliases = (() => {
     "/managed-instances/tutorials/managed-instance-creation-2/":
       "/managed-instance/tutorials/upgrade-an-existing-elastigroup-to-managed-instance",
 
+    "/managed-instances/tutorials/managed-instance-creation/":
+      "/managed-instance/getting-started/",
+
+    "/mlb/": "/elastigroup/tools-integrations/aws-load-balancers-elb-alb",
+
+    "/mlb/attach-elastigroup/":
+      "/elastigroup/tools-integrations/aws-load-balancers-elb-alb",
+
+    "/mlb/install/":
+      "/elastigroup/tools-integrations/aws-load-balancers-elb-alb",
+
+    "/mlb/install/aws/":
+      "/elastigroup/tools-integrations/aws-load-balancers-elb-alb",
+
+    "/mlb/install/general/":
+      "/elastigroup/tools-integrations/aws-load-balancers-elb-alb",
+
+    "/mlb/introduction/":
+      "/elastigroup/tools-integrations/aws-load-balancers-elb-alb",
+
+    "/mlb/routing-rules/":
+      "/elastigroup/tools-integrations/aws-load-balancers-elb-alb",
+
+    "/mlb/ssl-certificate/":
+      "/elastigroup/tools-integrations/aws-load-balancers-elb-alb",
+
+    "/ocean-aws/kubernetes/concepts/ocean-cloud/introduction":
+      "/ocean/overview-kubernetes",
+
+    "/ocean-tutorials-ocean-for-aws-run-workloads/":
+      "/ocean/tutorials/run-workloads",
+
     "/ocean/": "/ocean/",
 
     "/ocean/concepts/": "/ocean/features/",
@@ -995,13 +971,47 @@ export const aliases = (() => {
     "/ocean/concepts/launch-specifications/":
       "/ocean/features/launch-specifications",
 
+    "/ocean/concepts/ocean-cloud/cost-analysis/":
+      "/ocean/features/cost-analysis",
+
+    "/ocean/concepts/ocean-cloud/create-cluster-roll-2/":
+      "/ocean/features/roll",
+
+    "/ocean/concepts/ocean-cloud/ecs-scaling-2/": "/ocean/features/scaling-ecs",
+
+    "/ocean/concepts/ocean-cloud/ecs-scaling/": "/ocean/features/scaling-ecs",
+
+    "/ocean/concepts/ocean-cloud/elastic-ip/": "/ocean/features/elastic-ip",
+
     "/ocean/concepts/ocean-cloud/headroom/": "/ocean/features/headroom",
+
+    "/ocean/concepts/ocean-cloud/health-checks-auto-healing/":
+      "/ocean/features/health-checks-and-autohealing",
+
+    "/ocean/concepts/ocean-cloud/introduction/": "/ocean/overview-kubernetes",
 
     "/ocean/concepts/ocean-cloud/kubernetes-scaling/":
       "/ocean/features/scaling-kubernetes",
 
+    "/ocean/concepts/ocean-cloud/launch-specifications-2-2/":
+      "/ocean/features/launch-specifications",
+
+    "/ocean/concepts/ocean-cloud/launch-specifications-2/":
+      "/ocean/features/launch-specifications",
+
     "/ocean/concepts/ocean-cloud/launch-specifications/":
       "/ocean/features/launch-specifications",
+
+    "/ocean/concepts/ocean-cloud/right-sizing-2/":
+      "/ocean/features/right-sizing",
+
+    "/ocean/concepts/ocean-cloud/right-sizing/": "/ocean/features/right-sizing",
+
+    "/ocean/concepts/ocean-cloud/running-hours/":
+      "/ocean/features/running-hours",
+
+    "/ocean/concepts/ocean-cloud/spotinst-labels-taints/":
+      "/ocean/features/labels-and-taints",
 
     "/ocean/concepts/right-sizing/": "/ocean/features/right-sizing",
 
@@ -1018,8 +1028,15 @@ export const aliases = (() => {
 
     "/ocean/getting-started-eks/": "/ocean/getting-started/eks/",
 
+    "/ocean/kubernetes/concepts/ocean-cloud/introduction":
+      "/ocean/overview-kubernetes",
+
     "/ocean/kubernetes/concepts/ocean-cloud/introduction/":
       "/ocean/overview-kubernetes",
+
+    "/ocean/ocean-overview-ecs/": "/ocean/overview-ecs",
+
+    "/ocean/ocean-overview-k8s/": "/ocean/overview-kubernetes",
 
     "/ocean/tools-and-integrations/": "/ocean/tools-and-integrations/",
 
@@ -1036,6 +1053,9 @@ export const aliases = (() => {
 
     "/ocean/tools-and-integrations/kops/clusters/":
       "/ocean/tools-and-integrations/kops/migrate-cluster",
+
+    "/ocean/tools-and-integrations/kops/get-started-with-kops/":
+      "/ocean/tools-and-integrations/kops/",
 
     "/ocean/tools-and-integrations/kops/install/":
       "/ocean/tools-and-integrations/kops/install-kops/",
@@ -1055,6 +1075,9 @@ export const aliases = (() => {
     "/ocean/tools-and-integrations/openshift/":
       "/ocean/tools-and-integrations/openshift/",
 
+    "/ocean/tools-and-integrations/openshift/openshift-v3-11/":
+      "/ocean/tools-and-integrations/openshift/create-cluster-v311",
+
     "/ocean/tools-and-integrations/openshift/openshift-v4-x/":
       "/ocean/tools-and-integrations/openshift/create-cluster-v4x",
 
@@ -1070,19 +1093,43 @@ export const aliases = (() => {
     "/ocean/tutorials/import-a-gke-cluster-using-shared-vpc/":
       "/ocean/tutorials/create-cluster-gke-shared-vpc",
 
+    "/ocean/tutorials/migrate-elastigroups/":
+      "/ocean/tutorials/migrate-existing-egs-ekskops",
+
     "/ocean/tutorials/migrating-existing-ecs-clusters-from-elastigroup/":
       "/ocean/tutorials/migrate-existing-egs-ecs",
 
     "/ocean/tutorials/ocean-dashboard/": "/ocean/tutorials/ocean-dashboard",
 
+    "/ocean/tutorials/ocean-for-aws/create-a-cost-analysis-filter/":
+      "/ocean/tutorials/create-a-cost-filter",
+
+    "/ocean/tutorials/ocean-for-aws/create-eks":
+      "/ocean/getting-started/eks/create-a-new-cluster",
+
     "/ocean/tutorials/ocean-for-aws/create-eks/":
       "/ocean/getting-started/eks/create-a-new-cluster",
+
+    "/ocean/tutorials/ocean-for-aws/custom-labels/":
+      "/ocean/tutorials/create-custom-labels",
+
+    "/ocean/tutorials/ocean-for-aws/import-an-eks-based-ocean-cluster/":
+      "/ocean/getting-started/eks/join-an-existing-cluster",
+
+    "/ocean/tutorials/ocean-for-aws/migrate-elastigroups/":
+      "/ocean/tutorials/migrate-existing-egs-ekskops",
+
+    "/ocean/tutorials/ocean-for-aws/ocean-dashboard/":
+      "/ocean/tutorials/ocean-dashboard",
 
     "/ocean/tutorials/ocean-for-aws/ocean-tutorials-ocean-for-aws-run-workloads/":
       "/ocean/tutorials/run-workloads",
 
     "/ocean/tutorials/ocean-for-aws/ocean-tutorials-ocean-for-aws-workload-migration/":
       "/ocean/tutorials/migrate-workload",
+
+    "/ocean/tutorials/ocean-for-aws/right-sizing-usage/":
+      "/ocean/tutorials/use-right-sizing",
 
     "/ocean/tutorials/ocean-for-aws/set-running-hours/":
       "/ocean/tutorials/set-running-hours",
@@ -1092,6 +1139,25 @@ export const aliases = (() => {
 
     "/ocean/tutorials/ocean-for-aws/upgrade-elastigroup-to-ocean-using-kops/":
       "/ocean/getting-started/kops",
+
+    "/ocean/tutorials/ocean-for-ecs": "/ocean/overview-ecs",
+
+    "/ocean/tutorials/ocean-for-ecs/": "/ocean/tutorials/",
+
+    "/ocean/tutorials/ocean-for-ecs/create-an-ocean-cloud-cluster":
+      "/ocean/getting-started/ecs",
+
+    "/ocean/tutorials/ocean-for-ecs/create-an-ocean-cloud-cluster/":
+      "/ocean/getting-started/ecs",
+
+    "/ocean/tutorials/ocean-for-ecs/migrating-existing-ecs-clusters-from-elastigroup/":
+      "/ocean/tutorials/migrate-existing-egs-ecs",
+
+    "/ocean/tutorials/ocean-for-gke/create-an-ocean-cloud-cluster/":
+      "/ocean/getting-started/gke",
+
+    "/ocean/tutorials/ocean-for-gke/import-a-gke-cluster-using-shared-vpc/":
+      "/ocean/tutorials/create-cluster-gke-shared-vpc",
 
     "/ocean/tutorials/ocean-tutorials-ocean-for-aws-run-workloads/":
       "/ocean/tutorials/run-workloads",
@@ -1112,8 +1178,29 @@ export const aliases = (() => {
     "/ocean/tutorials/spotinst-kubernetes-controller/controller-permissions/":
       "/ocean/tutorials/spot-kubernetes-controller/controller-permissions",
 
+    "/ocean/tutorials/spotinst-kubernetes-controller/install-with-terraform/":
+      "/ocean/tutorials/spot-kubernetes-controller/install-with-terraform",
+
+    "/ocean/tutorials/spotinst-kubernetes-controller/installing-kubernetes-controller":
+      "/ocean/tutorials/spot-kubernetes-controller/",
+
+    "/ocean/tutorials/spotinst-kubernetes-controller/installing-kubernetes-controller-helm/":
+      "/ocean/tutorials/spot-kubernetes-controller/install-with-helm",
+
+    "/ocean/tutorials/spotinst-kubernetes-controller/installing-kubernetes-controller-kubectl/":
+      "/ocean/tutorials/spot-kubernetes-controller/install-with-kubectl",
+
     "/ocean/tutorials/spotinst-kubernetes-controller/installing-kubernetes-controller/":
       "/ocean/tutorials/spot-kubernetes-controller/",
+
+    "/ocean/tutorials/spotinst-kubernetes-controller/installing-kubernetes-controller/install-with-terraform/":
+      "/ocean/tutorials/spot-kubernetes-controller/install-with-terraform",
+
+    "/ocean/tutorials/spotinst-kubernetes-controller/installing-kubernetes-controller/installing-kubernetes-controller-helm/":
+      "/ocean/tutorials/spot-kubernetes-controller/install-with-helm",
+
+    "/ocean/tutorials/spotinst-kubernetes-controller/installing-kubernetes-controller/installing-kubernetes-controller-kubectl/":
+      "/ocean/tutorials/spot-kubernetes-controller/install-with-kubectl",
 
     "/ocean/tutorials/spotinst-kubernetes-controller/updating-kubernetes-controller/":
       "/ocean/tutorials/spot-kubernetes-controller/update-controller",
@@ -1122,18 +1209,34 @@ export const aliases = (() => {
 
     "/provisioning-ci-cd-sdk/ci-cd/": "/tools-and-provisioning/ci-cd/",
 
+    "/provisioning-ci-cd-sdk/ci-cd/chef": "/tools-and-provisioning/ci-cd/chef",
+
     "/provisioning-ci-cd-sdk/ci-cd/chef/": "/tools-and-provisioning/ci-cd/chef",
 
     "/provisioning-ci-cd-sdk/ci-cd/gitlab/":
       "/tools-and-provisioning/ci-cd/gitlab",
 
+    "/provisioning-ci-cd-sdk/ci-cd/jenkins":
+      "/tools-and-provisioning/ci-cd/jenkins",
+
     "/provisioning-ci-cd-sdk/ci-cd/jenkins/":
       "/tools-and-provisioning/ci-cd/jenkins",
 
+    "/provisioning-ci-cd-sdk/provisioning-tools": "/tools-and-provisioning/",
+
     "/provisioning-ci-cd-sdk/provisioning-tools/": "/tools-and-provisioning/",
+
+    "/provisioning-ci-cd-sdk/provisioning-tools/ansible/":
+      "/tools-and-provisioning/ansible",
+
+    "/provisioning-ci-cd-sdk/provisioning-tools/cloudformation":
+      "/tools-and-provisioning/cloudformation/",
 
     "/provisioning-ci-cd-sdk/provisioning-tools/cloudformation/":
       "/tools-and-provisioning/cloudformation/",
+
+    "/provisioning-ci-cd-sdk/provisioning-tools/cloudformation/cfn-helper":
+      "/tools-and-provisioning/cloudformation/tools/cfn-helper-scripts",
 
     "/provisioning-ci-cd-sdk/provisioning-tools/cloudformation/cfn-helper/":
       "/tools-and-provisioning/cloudformation/tools/cfn-helper-scripts",
@@ -1240,8 +1343,14 @@ export const aliases = (() => {
     "/provisioning-ci-cd-sdk/provisioning-tools/cloudformation/template-structure/resources/":
       "/tools-and-provisioning/cloudformation/template-structure/resources",
 
+    "/provisioning-ci-cd-sdk/provisioning-tools/cloudformation/troposphere/":
+      "/tools-and-provisioning/cloudformation/tools/troposphere",
+
     "/provisioning-ci-cd-sdk/provisioning-tools/cloudfoundry-bosh/":
       "/tools-and-provisioning/cloudfoundry-bosh",
+
+    "/provisioning-ci-cd-sdk/provisioning-tools/terraform":
+      "/tools-and-provisioning/terraform",
 
     "/provisioning-ci-cd-sdk/provisioning-tools/terraform/":
       "/tools-and-provisioning/terraform/",
@@ -1368,6 +1477,11 @@ export const aliases = (() => {
     "/spotinst-api/administration/organization-accounts/":
       "/administration/organizations/",
 
+    "/spotinst-api/administration/whitelist-ips":
+      "administration/api/whitelist-ips",
+
+    "/spotinst-policy": "/administration/api/spot-policy-in-aws",
+
     "/spotinst-policy/": "/administration/api/spot-policy-in-aws",
 
     "/spotinst-video-tutorials/": "/connect-your-cloud-provider/",
@@ -1417,117 +1531,6 @@ export const aliases = (() => {
 
     "/spotinst-video-tutorials/ocean/workload-migration/":
       "/connect-your-cloud-provider/",
-
-    "lastigroup-for-aws/services-integrations/elastic-mapreduce/import-an-emr-cluster":
-      "/elastigroup/tools-integrations/elastic-mapreduce/",
-
-    "/ocean/concepts/ocean-cloud/introduction/": "/ocean/overview-kubernetes",
-
-    "/ocean/concepts/ocean-cloud/ecs-scaling/": "/ocean/features/scaling-ecs",
-
-    "/ocean/concepts/ocean-cloud/health-checks-auto-healing/":
-      "/ocean/features/health-checks-and-autohealing",
-
-    "/ocean/concepts/ocean-cloud/spotinst-labels-taints/":
-      "/ocean/features/labels-and-taints",
-
-    "/ocean/concepts/ocean-cloud/launch-specifications-2-2/":
-      "/ocean/features/launch-specifications",
-
-    "/ocean/concepts/ocean-cloud/cost-analysis/":
-      "/ocean/features/cost-analysis",
-
-    "/ocean/concepts/ocean-cloud/elastic-ip/": "/ocean/features/elastic-ip",
-
-    "/ocean/concepts/ocean-cloud/create-cluster-roll-2/":
-      "/ocean/features/roll",
-
-    "/ocean/concepts/ocean-cloud/right-sizing-2/":
-      "/ocean/features/right-sizing",
-
-    "/ocean/concepts/ocean-cloud/running-hours/":
-      "/ocean/features/running-hours",
-
-    "/ocean/tutorials/ocean-for-aws/ocean-dashboard/":
-      "/ocean/tutorials/ocean-dashboard",
-
-    "/ocean/tutorials/ocean-for-aws/create-a-cost-analysis-filter/":
-      "/ocean/tutorials/create-a-cost-filter",
-
-    "/ocean/tutorials/ocean-for-aws/custom-labels/":
-      "/ocean/tutorials/create-custom-labels",
-
-    "/ocean/tutorials/ocean-for-aws/right-sizing-usage/":
-      "/ocean/tutorials/use-right-sizing",
-
-    "/ocean/tutorials/ocean-for-gke/import-a-gke-cluster-using-shared-vpc/":
-      "/ocean/tutorials/create-cluster-gke-shared-vpc",
-
-    "/ocean/tutorials/ocean-for-aws/migrate-elastigroups/":
-      "/ocean/tutorials/migrate-existing-egs-ekskops",
-
-    "/ocean/tutorials/ocean-for-ecs/migrating-existing-ecs-clusters-from-elastigroup/":
-      "/ocean/tutorials/migrate-existing-egs-ecs",
-
-    "/ocean/tutorials/spotinst-kubernetes-controller/installing-kubernetes-controller/installing-kubernetes-controller-kubectl/":
-      "/ocean/tutorials/spot-kubernetes-controller/install-with-kubectl",
-
-    "/ocean/tutorials/spotinst-kubernetes-controller/installing-kubernetes-controller/install-with-terraform/":
-      "/ocean/tutorials/spot-kubernetes-controller/install-with-terraform",
-
-    "/ocean/tutorials/spotinst-kubernetes-controller/installing-kubernetes-controller/installing-kubernetes-controller-helm/":
-      "/ocean/tutorials/spot-kubernetes-controller/install-with-helm",
-
-    "/container-management/kubernetes/kops/":
-      "ocean/tools-and-integrations/kops/",
-
-    "/container-management/openshift-2/":
-      "/ocean/tools-and-integrations/openshift/create-cluster-v311",
-
-    "/container-management/kubernetes/kops/instance-groups/":
-      "/ocean/tools-and-integrations/kops/metadata-labels",
-
-    "/container-management/openshift-2/openshift-v4-x/":
-      "/ocean/tools-and-integrations/openshift/create-cluster-v4x",
-
-    "/container-management/openshift-2/openshift-v3-11/":
-      "/ocean/tools-and-integrations/openshift/create-cluster-v311",
-
-    "/ocean/tutorials/ocean-for-gke/create-an-ocean-cloud-cluster/":
-      "/ocean/getting-started/gke",
-
-    "/ocean/tutorials/ocean-for-aws/import-an-eks-based-ocean-cluster/":
-      "/ocean/getting-started/eks/join-an-existing-cluster",
-
-    "/ocean/tutorials/ocean-for-ecs/create-an-ocean-cloud-cluster/":
-      "/ocean/getting-started/ecs",
-
-    "/ocean/tutorials/ocean-for-ecs/": "/ocean/tutorials/",
-
-    "/ocean/concepts/ocean-cloud/ecs-scaling-2/": "/ocean/features/scaling-ecs",
-
-    "/spotinst-api/administration/whitelist-ips":
-      "administration/api/whitelist-ips",
-
-    "/ocean/concepts/ocean-cloud/right-sizing/": "/ocean/features/right-sizing",
-
-    "/ocean/concepts/ocean-cloud/launch-specifications-2/":
-      "/ocean/features/launch-specifications",
-
-    "/ocean-tutorials-ocean-for-aws-run-workloads/":
-      "/ocean/tutorials/run-workloads",
-
-    "/container-management/kubernetes/autoscaler/":
-      "/elastigroup/tools-integrations/kubernetes-with-elastigroup/kubernetes-cluster-autoscaling",
-
-    "/account-user-management/user-management/access-policies/":
-      "/administration/access-policies/",
-
-    "/container-management/kubernetes/kops/1_12/instance-groups/":
-      "/ocean/tools-and-integrations/kops/metadata-labels",
-
-    "/container-management/kubernetes/kubernetes-tutorials/installing-kubernetes-controller/":
-      "/ocean/tutorials/spot-kubernetes-controller/",
   };
 
   for (let [key, value] of Object.entries(map)) {
