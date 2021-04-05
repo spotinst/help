@@ -44,7 +44,7 @@ Setting up Notifications for additional Platforms such as `email` and `email-jso
 
 **Instance Terminated**: Triggers a notification when one of the instances is terminated.
 
-**Scale Failed – Group Max Capacity**: Triggers a notification when the group hits the max capacity defined in the Elastigroup, preventing additional scale up actions from taking place.
+**Scale Failed – Group Max Capacity**: Triggers a notification when the group hits the max capacity defined in the Elastigroup, preventing additional scale up actions from taking place. This event does not include scale-up attempts by the ECS or Kubernetes autoscaler.
 
 **Signal Timeout– Instance Not Ready**: Triggers a notification when a signal reaches its timeout. For more on configuring signals for Elastigroups click [here](elastigroup/features/compute/using-signals-in-elastigroups).
 
