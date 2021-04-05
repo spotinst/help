@@ -16,12 +16,16 @@ The policy below is relevant only for customers who have not yet signed a contra
         "cloudformation:ListStackResources",
         "dynamodb:List*",
         "dynamodb:Describe*",
+        "savingsplans:List*",
+        "savingsplans:Describe*",
         "ec2:Describe*",
         "ec2:List*",
         "ec2:GetHostReservationPurchasePreview",
         "ec2:GetReservedInstancesExchangeQuote",
         "elasticache:List*",
         "elasticache:Describe*",
+        "es:List*",
+        "es:Describe*",
         "cur:*",
         "ce:*",
         "rds:Describe*",
@@ -96,6 +100,8 @@ The following are read-only permissions for the reserved capacity reservations.
 "ec2:GetReservedInstancesExchangeQuote"
 "elasticache:List*"
 "elasticache:Describe*"
+"es:List*"
+"es:Describe*"
 "rds:Describe*"
 "rds:ListTagsForResource"
 "redshift:Describe*"
