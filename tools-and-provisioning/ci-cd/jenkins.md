@@ -115,7 +115,7 @@ That's all! From now on, the Jenkins controller will automatically launch new in
 
 #### Jenkins on AWS
 
-Create an Elastigroup with your preferred Region, AMI, and Instance Types. In the General tab under Advanced set the Capacity Unit to _vCPU_.
+Create an Elastigroup with your preferred Region, AMI, and Instance Types. In the General tab under Capacity Settings, set the Capacity Unit to _vCPU_.
 
 <img src="/tools-and-provisioning/_media/Jenkins_2.png" />
 
