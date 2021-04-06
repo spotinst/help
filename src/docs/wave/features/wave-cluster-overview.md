@@ -3,6 +3,7 @@
 The Wave Cluster Overview tab gives you quick access to insights and summary data over the entire cluster. You can obtain an overview of your current cost efficiency status, detailed cluster information, a Spark application overview, and tracking of cluster analytics.
 
 To get to the Wave Cluster Overview tab, do the following:
+
 1. In the Spot console, go to Wave in the menu tree and click Clusters.
 2. In the list of Clusters, click on a Cluster Name.
 
@@ -13,6 +14,7 @@ The Wave Cluster page opens with the Overview tab open and the cluster name at t
 <img src="/wave/_media/tutorials-clusters-00.png" width="328" height="63" />
 
 The Wave Cluster Overview includes the following main areas:
+
 - Cluster Stats
 - Cluster Info
 - Spark App History
@@ -21,6 +23,7 @@ The Wave Cluster Overview includes the following main areas:
 ## Cluster Stats
 
 Cluster Stats is a summary line providing insights into your cluster usage. The default display shows statistics from the first of the month to the current date. You can also see the numbers for the last seven days and the last 30 days. The following information is presented:
+
 - Spark Cluster Cost Savings
   - Potential On-Demand Cost: The cost if you had run all of your jobs using on-demand instances.
   - Actual Spot Cost: The actual cost of running your jobs on spot instances.
@@ -38,6 +41,7 @@ The Cluster Info area gives you a quick point of reference for vital information
 <img src="/wave/_media/tutorials-cluster-02.png" />
 
 The following details and references are provided:
+
 - Cluster Info
   - Link to view cluster in Ocean
   - Region
@@ -64,6 +68,7 @@ The Spark App History table provides an overview of your Spark application runs 
 <img src="/wave/_media/tutorials-cluster-03.png" />
 
 The table includes the following information for each application run:
+
 - App Name: The name of the application run. You can click on the App Name to see more detailed information about the application.
 - App ID: The ID of the application given by Wave.
 - Started: Time the application run started.
@@ -82,6 +87,7 @@ The table includes the following information for each application run:
 ## Cluster Analytics
 
 Wave provides detailed analytics about the cluster. You can view the following graphs and charts:
+
 - App Success/Failure Trend: A histogram showing the number of successful and failed application runs over time.
 - Node Distribution: A graph showing the number of nodes running over time. The graph shows a line for each region and node type.
 - Node Activity: A graph showing the number of nodes running over time, broken down by lifecycle, i.e., reserved, on-demand, and spot.

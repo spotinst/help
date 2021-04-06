@@ -33,4 +33,4 @@ Once you have marked a strategy, click Apply Strategy. Eco will then analyze you
 
 ## What's Next?
 
-Learn about the Eco dashboard, where you can [View your Savings](eco/tutorials/view-your-savings) and get the full picture on your RI commitments. 
+Learn about the Eco dashboard, where you can [View your Savings](eco/tutorials/view-your-savings) and get the full picture on your RI commitments.

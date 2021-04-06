@@ -51,7 +51,7 @@ Ensure that IAM user and role access to the Billing and Cost Management console 
 1. Select the Spot products your CloudFormation template will include.
 2. Set up Cost and Usage Reports and enter the bucket name where the report is located.
 
-- To go to AWS Cost and Usage Report setup, click here.
+- To go to AWS Cost and Usage Report setup, click [here](https://console.aws.amazon.com/billing/home?#/reports).
 - To create a new report, follow the illustrations below. Important guidelines:
   - Include Resource IDs under Additional report details
   - Enable Data refresh settings.

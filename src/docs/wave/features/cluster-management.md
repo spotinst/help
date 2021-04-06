@@ -9,6 +9,7 @@ To manage your clusters in the Spot console, go to Wave in the menu tree and cli
 ## View List of Clusters
 
 The list of Wave clusters gives you a quick view of your clusters and basic information including:
+
 - Cluster Name: The user-given name of the cluster.
 - Cluster ID: The ID that Wave assigned to the cluster upon creation.
 - Region: The AWS region where the cluster is located.
@@ -23,6 +24,7 @@ The list of Wave clusters gives you a quick view of your clusters and basic info
 To get detailed information statistics and operational information about a cluster, click on the Cluster Name. This will open the [Cluster Overview](wave/features/wave-cluster-overview) tab for that cluster which serves as your operational dashboard for the cluster.
 
 ## Filter Cluster List
+
 If you have a long list of clusters, you can use the filter above the list to find one or multiple clusters. Just enter a tag, an attribute, a keyword or simply a string of text into the filter box and type enter.
 
 ## Add Cluster
@@ -32,6 +34,7 @@ To add a cluster, click Add Cluster above the cluster list and complete the proc
 ## Remove Cluster
 
 To disconnect a cluster you don’t need any more, do the following:
+
 1. Click Remove in the Action column.
 2. Enter the name of the cluster to confirm, and click Remove Cluster.
 

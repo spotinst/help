@@ -49,7 +49,7 @@ Example Billing Workflow Name 2:
 
 ## Step 6. Associate Billing Workflows to Subsets
 
-1. Send email with spreadsheet associating the subsets with Billing Workflows. 
+1. Send email with spreadsheet associating the subsets with Billing Workflows.
 
 <img src="/design-documents/_media/msp-enrollment-02a.png" width="255" height="100" />
  

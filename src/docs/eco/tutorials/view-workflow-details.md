@@ -5,17 +5,20 @@ For each [Workflow](eco/tutorials/manage-workflows) you create, you can view a s
 Reports are provided as a part of your workflow so that, as you build workflows, you can easily validate the results against your existing processes.
 
 To get to the Workflow Details page, do the following:
+
 1. In the left sidebar of the console, click Subsets.
 2. Click the Workflows tab, and click the name of a workflow.
 
 <img src="/eco/_media/tutorials-view-workflow-details-01.png" />
 
 The Workflow Details page includes the following areas:
+
 - Workflow Summary
 - List of Reports
 - Workflow Summary
 
 The workflow summary includes the following details:
+
 - Name: The user-given name of the workflow.
 - Creation date: Date the workflow was created.
 - Selected billing rules: The rules you defined in the workflow.
@@ -25,6 +28,7 @@ The workflow summary includes the following details:
 ## Reports Table
 
 The Reports table provides a convenient overview of past reports created for this workflow. The includes:
+
 - Name: The user-given name of the report.
 - Report Period: The time frame covered in the report.
 - Subset Assignment: The subsets included in the report.
@@ -36,6 +40,7 @@ The Reports table provides a convenient overview of past reports created for thi
 ## Generate a Workflow Report
 
 To create a new workflow report, do the following:
+
 1. On the upper right of the Reports table, click Generate report.
 
 <img src="/eco/_media/tutorials-view-workflow-details-04.png" width="600" height="217" />

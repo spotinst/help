@@ -11,6 +11,7 @@ Unless specifically stated otherwise, all of the features described in this sect
 ## Ocean for Kubernetes (AKS)
 
 We are in the process of adding several Ocean features for use with AKS. The following major features are currently supported:
+
 - [Scaling for Kubernetes](ocean/features/scaling-kubernetes)
 - [Headroom](ocean/features/headroom)
 - [Labels and Taints](ocean/features/labels-and-taints)
@@ -25,6 +26,7 @@ We are in the process of adding several Ocean features for use with AKS. The fol
 ## Ocean for Kubernetes (GKE)
 
 The following major features are currently supported in Ocean for GKE:
+
 - [Scaling for Kubernetes](ocean/features/scaling-kubernetes)
 - [Headroom](ocean/features/headroom)
 - [Labels and Taints](ocean/features/labels-and-taints)
@@ -36,6 +38,7 @@ The following major features are currently supported in Ocean for GKE:
 ## Ocean for ECS
 
 The following major features are currently supported in Ocean for ECS:
+
 - [Scaling for ECS](ocean/features/scaling-ecs)
 - [Headroom](ocean/features/headroom)
 - [Right Sizing](ocean/features/right-sizing)
