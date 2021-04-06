@@ -132,7 +132,7 @@ Once the files exist in the correct format, you will need to configure the accou
 1. Get the S3 bucket name and the Role ARN as described in Step 3 and Step 6 of the procedure.
 2. Copy the bucket name and role ARN into a support ticket along with the following message:
 
-   "I am requesting a manual onboarding of an account per the instructions [Connect your AWS Account](https://docs.spot.io/eco/getting-started/connect-your-aws-account)."
+   "I am requesting a manual onboarding of an account per the instructions in [Connect Account: Customer Working with MSP](https://docs.spot.io/eco/getting-started/connect-account-customer-working-with-msp)."
 
 You do not need to complete the enrollment process through the UI and can cancel out of that.
 
