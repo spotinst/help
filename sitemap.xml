@@ -897,11 +897,11 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/features/stateful-instance/stateful-instance-actions"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/elastigroup/features/stateful-instance/stateful-instances</loc>
+        <loc>https://docs.spot.io/?/elastigroup/features/stateful-instance/z-stateful-instances</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/features/stateful-instance/stateful-instances"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/features/stateful-instance/stateful-instances"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/features/stateful-instance/z-stateful-instances"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/features/stateful-instance/z-stateful-instances"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/elastigroup/getting-started/create-an-elastigroup-for-aws</loc>
