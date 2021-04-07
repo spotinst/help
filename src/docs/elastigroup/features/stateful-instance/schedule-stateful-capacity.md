@@ -1,59 +1,62 @@
 # Schedule Stateful Capacity
 
-Elastigroups that utilize the [Stateful Spot Instances](elastigroup/features/stateful-instance/stateful-instances) can schedule capacity changes, for example for QA environments that need to launch instances in the morning and terminate them at night or the weekend.
+Elastigroups that utilize the [Stateful Spot Instances](elastigroup/features/stateful-instance/) can schedule capacity changes, for example, for QA environments that need to launch instances in the morning and terminate them at night or the weekend.
 
-Elastigroups allows you to set Jobs based on a Cron expression. This means you can trigger a change in capacity. Each line of a cron expression represents a job and looks like this:
+In Elastigroup, you can schedule jobs based on a cron expression. This means that you can trigger a change in capacity.
 
-┌───────────── minute (0 – 59)
+Each line of a cron expression represents a job. The cron expression consists of five fields as described below.
+- Minute (0 - 59)
+- Hour (0 - 23)
+- Day of month (1 - 31)
+- Month (1 - 12)
+- Day of week (0 - 6; Sunday through Saturday)
 
-│ ┌───────────── hour (0 – 23)
+For example, the expression 5  21  *  *  1-5  runs a job at 21:05 on every day from Monday through Friday. The asterisks indicate that this applies to all days of the month in all months of the year.
 
-│ │ ┌───────────── day of month (1 – 31)
-
-│ │ │ ┌───────────── month (1 – 12)
-
-│ │ │ │ ┌───────────── day of week (0 – 6) (Sunday to Saturday;
-
-│ │ │ │ │ 7 is also Sunday on some systems)
-
-│ │ │ │ │
-
-│ │ │ │ │
-
-For example:
-
-`5 21 * * 1-5 = (At 21:05 on every day-of-week from Monday through Friday)`
-
-> **Tip**: We recommend using https://crontab.guru/ to create and verify your Cron expressions.
+> **Tip**: We recommend using [Crontab Guru](https://crontab.guru/) to create and verify your Cron expressions.
 
 ## How Stateful Scheduling Works
 
-A change in capacity for a Stateful Spot Instance (SSI) triggers the following set of actions. For capacity-reducing scheduled actions, the instance is paused and the EBS volumes and Elastic Network Interface are detached and are kept in an available state until the capacity increase. Capacity increases resume the paused instances, with the existing resources attached to the new instances as they launch.
+A change in capacity for a stateful spot instance (SSI) triggers the following:
+- For capacity-reducing scheduled actions,
+  - The instance is paused
+  - The EBS volumes and Elastic Network Interface are detached and are kept in an available state until the capacity increases
+- Capacity increases resume the paused instances with the existing resources attached to the new instances as they launch.
 
-For SSI, we support the following options:
+For SSIs, Elastigroup supports the following actions:
+- Set Stateful Capacity Range: Changes the stateful instances from Paused to Resuming until the number of running SSIs equals the scheduled action target. If there are no SSIs, then a new SSI is launched. (Do not choose *Set Capacity Range*, as this does not apply to stateful Elastigroups.)
+- Stateful Recycle: Equivalent to rebooting or restarting the machine; initiates Pause then Resume operations.
 
-- Update capacity
-- Recycle
+## Set Stateful Capacity Range
 
-## Update Capacity
+You can set the stateful capacity range when creating a new Elastigroup or by editing an existing group. The steps below are for creating a new Elastigroup.
+1. In the Scaling tab, scroll down to Scheduling and click Add Task. (If you are editing an existing stateful Elastigroup, go to the Actions menu, click Edit Configuration, and then go to the Scaling tab.)
+2. Click Set Stateful Capacity Range.
 
-1. Edit the Elastigroup configuration via the Actions menu or create a new Elastigroup.
-2. In the general Elastigroup Creation Wizard, under the General tab scroll to locate Scheduling and expand it. In the Stateful Creation Wizard, Scheduling can be found under the Scaling tab.
-3. Click on Add Task
-4. Set the Action type to Set Stateful Capacity Range (or Update Capacity in the Stateful Creation Wizard).
-5. Select the new Target, Min and Max limits (optional)
-6. Provide the Cron expression that sets the time the Action will take place.
-7. Add more scheduling rules as needed, then Update or Create the Elastigroup.
+<img src="/elastigroup/_media/stateful-scheduling-01.png" />
 
-<img src="/elastigroup/_media/stateful-schedulecapacity-01.png" />
+3. Enter the Target, Minimum, and Maximum limits.
+4. Enter the cron expression that defines when the action will take place.
 
-## Recycle
+<img src="/elastigroup/_media/stateful-scheduling-02.png" />
 
-1. Edit the Elastigroup configuration via the Actions menu or create a new Elastigroup.
-2. In the Stateful Creation/Edit Wizard, Scheduling can be found under the Scaling tab.
-3. Click on Add Task
-4. Set the Action type to Recycle.
-5. Provide the Cron expression that sets the time the Action will take place.
-6. Add more scheduling rules as needed, then Update or Create the Elastigroup.
+5. If needed, add more scheduling rules, and then click Create.
 
-Only group SSIs that are currently active will be recycled. Paused and error instances will be ignored.
+## Stateful Recycle
+
+You can schedule a stateful recycle when creating a new Elastigroup or by editing an existing group. The steps below are for creating a new Elastigroup.
+1. In the Scaling tab, scroll down to Scheduling and click Add Task. (If you are editing an existing stateful Elastigroup, go to the Actions menu, click Edit Configuration, and then go to the Scaling tab.)
+2. Click Stateful Recycle.
+
+<img src="/elastigroup/_media/stateful-scheduling-03.png" />
+
+3. Enter the cron expression that defines when the action will take place.
+4. If needed, add more scheduling rules, and then click Create.
+
+Only SSIs that are currently active will be recycled. Paused and error instances will be ignored.
+
+## What’s Next?
+
+Learn more about:
+- [Stateful Instance Actions](elastigroup/features/stateful-instance/stateful-instance-actions)
+- How to [Create a Stateful Elastigroup from Scratch](elastigroup/tutorials/elastigroup-tasks/create-a-stateful-elastigroup-from-scratch)
