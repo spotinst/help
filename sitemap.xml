@@ -883,6 +883,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/features/stateful-instance/schedule-stateful-capacity"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/elastigroup/features/stateful-instance/stateful-elastigroup-flow</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/features/stateful-instance/stateful-elastigroup-flow"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/features/stateful-instance/stateful-elastigroup-flow"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/elastigroup/features/stateful-instance/stateful-instance-actions</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
