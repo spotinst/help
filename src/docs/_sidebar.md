@@ -107,7 +107,6 @@
       - [Placement Groups](elastigroup/features/compute/placement-groups)
       - [Block Device Mapping](elastigroup/features/compute/block-device-mapping)
     - [Stateful Instance](elastigroup/features/stateful-instance/)
-      - [Stateful Instances](elastigroup/features/stateful-instance/stateful-instances)
       - [Import a Stateful Instance](elastigroup/features/stateful-instance/import-a-stateful-instance)
       - [Persist Root Volume](elastigroup/features/stateful-instance/persist-root-volume)
       - [Persist Data Volumes](elastigroup/features/stateful-instance/persist-data-volumes)
