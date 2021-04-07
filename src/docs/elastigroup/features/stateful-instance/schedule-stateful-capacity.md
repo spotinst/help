@@ -33,7 +33,7 @@ You can set the stateful capacity range when creating a new Elastigroup or by ed
 1. In the Scaling tab, scroll down to Scheduling and click Add Task. (If you are editing an existing stateful Elastigroup, go to the Actions menu, click Edit Configuration, and then go to the Scaling tab.)
 2. Click Set Stateful Capacity Range.
 
-<img src="/elastigroup/_media/stateful-scheduling-01.png" />
+<img src="/elastigroup/_media/stateful-scheduling-01.png" width="309" height="271" />
 
 3. Enter the Target, Minimum, and Maximum limits.
 4. Enter the cron expression that defines when the action will take place.
@@ -48,7 +48,7 @@ You can schedule a stateful recycle when creating a new Elastigroup or by editin
 1. In the Scaling tab, scroll down to Scheduling and click Add Task. (If you are editing an existing stateful Elastigroup, go to the Actions menu, click Edit Configuration, and then go to the Scaling tab.)
 2. Click Stateful Recycle.
 
-<img src="/elastigroup/_media/stateful-scheduling-03.png" />
+<img src="/elastigroup/_media/stateful-scheduling-03.png" width="255" height="265" />
 
 3. Enter the cron expression that defines when the action will take place.
 4. If needed, add more scheduling rules, and then click Create.
