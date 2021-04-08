@@ -174,7 +174,7 @@
       - [Azure AKS Engine](elastigroup/tutorials/azure/azure-aks-engine)
   - [Tools & Integrations](elastigroup/tools-integrations/)
     - [AWS Batch](elastigroup/tools-integrations/aws-batch)
-    - [AWS Load Balancers: ELB & ALB](elastigroup/tools-integrations/aws-load-balancers-elb-alb)
+    - [AWS Load Balancers & Autohealing](elastigroup/tools-integrations/aws-load-balancers-elb-alb)
     - [CodeDeploy](elastigroup/tools-integrations/codedeploy/)
       - [Blue-Green Deployment](elastigroup/tools-integrations/codedeploy/blue-green-deployment)
     - [Custom Health Check Service](elastigroup/tools-integrations/custom-health-check-service)

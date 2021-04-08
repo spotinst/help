@@ -1,28 +1,27 @@
-# AWS Load Balancers: ELB & ALB
+# AWS Load Balancers & Autohealing
 
-If you are running an application or service behind AWS Elastic Load Balancer (ELB) or Application Load Balancer (ALB), Elastigroup provides the freedom to run blended cluster from multiple instance types, sizes (`{M3,M4,C3,C4}.{Large,Xlarge,etc..}`) and purchasing options (`Spot`, `On-Demand`, `Reserved`).
+If you are running an application or service behind AWS Elastic Load Balancer (ELB) such as Application Load Balancer (ALB), Elastigroup provides the freedom to run a blended cluster of multiple instance types (e.g., M3, M4, C3) and sizes (e.g., large, xlarge).
 
-Elastigroup launches the target capacity in multiple uncorrelated Spot Markets, to ensure a predictable and stable workload. Its unique value proposition is its ability to add resiliency to workloads that otherwise would not be suitable to run on the spot market.
+Elastigroup launches the target capacity in multiple uncorrelated spot markets to ensure a predictable and stable workload. Elastigroup’s unique value proposition is its ability to add resilience to workloads that otherwise would not be suitable to run on the spot market.
 
-<img src="/elastigroup/_media/aws-load-balancers-elb-alb_1.png" />
+To ensure that the load balancer stops sending requests to instances that are marked for termination, Elastigroup de-registers and drains the instances a few minutes before the instance receives a shutdown signal from AWS. At the same time, Elastigroup begins spinning up new instances to ensure your desired capacity will not be degraded.
 
-To ensure that the load balancer stops sending requests to instances that are marked for termination, Elastigroup will de-register and drain the instances a few minutes before the instance gets a shutdown signal from AWS. At the same time, Elastigroup will begin spinning up new instances in parallel to ensure your desired capacity won't be degraded.
+When you specify one or more load balancers, Elastigroup registers every instance with the load balancer. Elastigroup also de-registers instances from the load balancer upon termination and sends [SNS](https://aws.amazon.com/sns/?whats-new-cards.sort-by=item.additionalFields.postDateTime&whats-new-cards.sort-order=desc) or email notifications.
 
-Specify one or more load balancers, and Elastigroup will register every instance with the load balancer. Elastigroup also de-registers instances from the load balancer upon termination and sends a `SNS\Email notifications`.
+## Connect a Load Balancer
 
-## Integrate a Load Balancer
+Choose one of the following methods to connect a load balancer to an Elastigroup:
+- [Edit an existing Elastigroup](link to Edit Existing Elastigroup below)
+- [Create Elastigroup using Existing Load Balancer](elastigroup/tutorials/elastigroup-tasks/join-an-existing-elb)
 
-1. Enter the Creation Wizard to create a new Elastigroup or select Edit Configuration to integrate a load balancer with an existing Elastigroup.
-2. In the Compute Tab under Load Balancers select the load balancer to attach from the drop-down selection.
+## Edit Existing Elastigroup
 
-   - **Amazon Load Balancer** – The ELB or ALB Target Group.
-   - **Auto Healing** – Select which health check service will automatically perform health checks on your EC2 instances. If an instance fails the health check, it is automatically removed from the Elastigroup and will be replaced with a new instance.
-     - **ELB** – Use amazon's Elastic load balancer health check.
-     - **TARGET Group** – Use the AWS Application load balancer health check.
-     - **EC2** – Use the AWS EC2 Status check.
-     - **HCS** – Use Spot health check. You can read more about it here: [Spot HCS service](elastigroup/tools-integrations/custom-health-check-service).
-     - **MLB** – Use the Multai Load Balancer health check service.
-   - **Health Check Grace Period** – Specify the timeout (in seconds) until newly launched instances become healthy. If an instance fails the health check after the given grace period, it will be terminated and replaced with a new one.
-   - **Unhealthy Duration** – Specify the amount of time (in seconds) you want to keep existing instances that are deemed unhealthy before the instance is terminated and replaced with a new one.
+To connect a load balancer to an existing Elastigroup, do the following:
+1. In the left menu of the Spot console, click Elastigroup/Groups, and click on the name of an Elastigroup.
+2. When the Elastigroup page opens, go to the Actions menu and click Edit Configuration.
+3. Go to the Compute tab and scroll down to Load Balancers. Complete the Load Balancer and Autohealing configurations as described in [Import an Existing Elastic Load Balancer](elastigroup/tutorials/elastigroup-tasks/join-an-existing-elb).
+4. Save your updates to the configuration.
 
-3. Complete the Creation Wizard.
+## What’s Next?
+
+Learn more about Elastigroup [Capacity Management](elastigroup/features/core-features/elastigroup-capacity-instances-or-weighted).
