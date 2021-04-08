@@ -1532,8 +1532,8 @@ export const aliases = (() => {
     "/spotinst-video-tutorials/ocean/workload-migration/":
       "/connect-your-cloud-provider/",
 
-    "elastigroup/features/stateful-instance/stateful-instances":
-      "elastigroup/features/stateful-instance/",  
+    "/elastigroup/features/stateful-instance/stateful-instances":
+      "/elastigroup/features/stateful-instance/",
   };
 
   for (let [key, value] of Object.entries(map)) {
