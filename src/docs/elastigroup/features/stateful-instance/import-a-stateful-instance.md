@@ -1,50 +1,46 @@
 # Import a Stateful Instance
 
-The system allows you to import any instance from an AWS account to a stateful Spot instance managed by Elastigroup. The spot instance will have the same state as the original instance, this includes the root and data volumes and (optionally) the private IP of the original instance.
+You can import an instance from your AWS account to a stateful spot instance managed by Elastigroup. The spot instance will have the same state as the original instance. This includes the rood and data volumes and, optionally, the private IP of the original instance.
 
-### Step 1: Open Stateful Import Window
+## Prerequisites
+- A Spot account connected to your AWS account
+- A running instance in your AWS account
 
-1. In the console, click Create Elastigroup, and under the Use Cases tab, go down to Stateful Applications.
+## Get Started
 
-<img src="/elastigroup/_media/stateful-import-01.png" width="450" height="102" />
+1. In the left menu of the Spot console, click Elastigroup/Groups, and click Create Elastigroup.
 
-2. Click the application, Elastigroup or Managed Instance, to which your stateful instance will be imported.
+<img src="/elastigroup/_media/tutorials-create-eg-from-scratch-01.png" />
 
-<img src="/elastigroup/_media/stateful-import-02.png" width="300" height="231" />
+2. In the Use Cases page, go down to Empty Template and click Start from Scratch.
 
-### Step 2: Select the Instance to Import
+<img src="/elastigroup/_media/stateful-import-01a.png" />
 
-Enter the region and the instance ID of the instance to import.
+3. When the empty Elastigroup template opens up, click Import and choose Existing Stateful Instance.
 
-<img src="/elastigroup/_media/stateful-import-03.png" width="350" height="314" />
+<img src="/elastigroup/_media/stateful-import-02a.png" />
 
-### Step 3: (Optional) Use the Same Private IP
+> Tip: Instead of steps 2 and 3 above, in the Use Cases tab you can go down to Stateful Applications and click Go to Elastigroup.
 
-Using the same Private IP as the original instance requires the original instance to be terminated. The termination can be done automatically with the launch of the Elastigroup. If you do not choose automatic termination, a prompt is presented during the Elastigroup initialization requesting to terminate the original instance in order to proceed.
+## Choose the Stateful Instance
 
-## Alternative Procedure: Start From Scratch
+Complete the information in the Stateful Instance popup as described below, and click Select.
 
-Another way to import a stateful instance is to start from scratch using an empty Elastigroup template. Use the following procedure.
+<img src="/elastigroup/_media/stateful-import-03a.png" />
 
-### Step 1: Open the Empty Template
+- Region: Choose the AWS region of the instance to import.
+- Instance ID: Enter the AWS Instance ID of the instance to import.
+- Use the same Private IP: Mark this if you would like to use the same private IP.
+  - Terminate Instance Automatically: Using the same Private IP as the original instance requires the original instance to be terminated. The termination can be done automatically with the launch of the Elastigroup. If you do not choose automatic termination, you will be prompted during the Elastigroup initialization to terminate the original instance.
 
-1. In the console, click Create Elastigroup, and under the Use Cases tab, go down to Stateful Applications.
+## Review Configuration
 
-<img src="/elastigroup/_media/stateful-import-04.png" />
+After completing the Stateful Instance information, the Review tab appears. Review the parameters and click Create.
 
-2. Click Start from Scratch. An empty Elastigroup template opens up.
-
-<img src="/elastigroup/_media/stateful-import-05.png" />
-
-### Step 2: Select the Instance to Import
-
-1. In the bottom left, click Import.
-2. Click Existing Stateful Instance.
-
-<img src="/elastigroup/_media/stateful-import-06.png" width="150" height="249" />
-
-3. Enter the instance information as described in Steps 2 and 3 of the procedure above.
+<img src="/elastigroup/_media/stateful-import-04a.png" />
 
 ## What's Next?
 
-Use the [Stateful Instance Actions](elastigroup/features/stateful-instance/stateful-instance-actions) menu to manage the new stateful instance on Elastigroup.
+Learn how to:
+- Change the instance state using [Stateful Instance Actions](elastigroup/features/stateful-instance/stateful-instance-actions).
+- [Edit a Stateful Instance](elastigroup/features/stateful-instance/edit-a-stateful-instance) configuration.
