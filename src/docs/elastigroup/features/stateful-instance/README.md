@@ -9,6 +9,7 @@ Stateful is designed to support any fault-tolerant application, such as database
 ## Common Use Cases
 
 Every fault-tolerant application that requires data persistency can benefit from the Stateful feature.
+
 - Single Non-prod Server Database: In non-production environments databases can typically tolerate a maintenance window once in a while. This is a perfect use case for Elastigroup's Stateful feature.
 - Cassandra: If the Cassandra node is replaced, Elastigroup clones the instance and brings it back. The Cassandra cluster will behave as if the instance was down for some time. Bringing up a clone of the previous instance ensures that cluster IOPs are not wasted on bringing a new instance up.
 - Development instances: Non-production instances can be run on spot instances with occasional downtime. Interrupted instances are brought back automatically within a few minutes.
@@ -23,6 +24,7 @@ The [flow diagram](elastigroup/features/stateful-instance/stateful-elastigroup-f
 ## Stateful Persistence Options
 
 Elastigroup's Stateful feature provides a combination of snapshots, volumes, and ENIs to ensure data persistence.
+
 - [Persist root volume](elastigroup/features/stateful-instance/persist-root-volume): Choosing to persist the root volume ensures that operating system and root volume configurations are maintained during instance replacements.
 - [Persist data volumes](elastigroup/features/stateful-instance/persist-data-volumes): Data devices are maintained using one of the following methods:
   - Reattach Volumes: The same EBS volumes are detached from the original instance and reattached to the new instance.
@@ -33,5 +35,6 @@ Elastigroup's Stateful feature provides a combination of snapshots, volumes, and
 ## What’s Next?
 
 Elastigroup provides the ability to import an existing stateful instance with the original root and data volumes.
+
 - Learn how to [import an existing stateful instance](elastigroup/features/stateful-instance/import-a-stateful-instance).
 - Import stateful instances using the [API](https://docs.spot.io/api/#operation/importStatefulInstance).
