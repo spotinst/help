@@ -11,7 +11,7 @@ When you specify one or more load balancers, Elastigroup registers every instanc
 ## Connect a Load Balancer
 
 Choose one of the following methods to connect a load balancer to an Elastigroup:
-- [Edit an existing Elastigroup](link to Edit Existing Elastigroup below)
+- [Edit an existing Elastigroup](elastigroup/tools-integrations/aws-load-balancers-elb-alb?id=edit-existing-elastigroup)
 - [Create Elastigroup using Existing Load Balancer](elastigroup/tutorials/elastigroup-tasks/join-an-existing-elb)
 
 ## Edit Existing Elastigroup
