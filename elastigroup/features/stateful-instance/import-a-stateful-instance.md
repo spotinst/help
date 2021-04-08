@@ -3,6 +3,7 @@
 You can import an instance from your AWS account to a stateful spot instance managed by Elastigroup. The spot instance will have the same state as the original instance. This includes the rood and data volumes and, optionally, the private IP of the original instance.
 
 ## Prerequisites
+
 - A Spot account connected to your AWS account
 - A running instance in your AWS account
 
@@ -42,5 +43,6 @@ After completing the Stateful Instance information, the Review tab appears. Revi
 ## What's Next?
 
 Learn how to:
+
 - Change the instance state using [Stateful Instance Actions](elastigroup/features/stateful-instance/stateful-instance-actions).
 - [Edit a Stateful Instance](elastigroup/features/stateful-instance/edit-a-stateful-instance) configuration.

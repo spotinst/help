@@ -15,6 +15,7 @@ Once you have [created](elastigroup/tutorials/elastigroup-tasks/create-a-statefu
 ## Edit the Elastigroup Parameters
 
 You can edit parameters in each of the Stateful tabs as necessary. The following tabs are included with editable attributes under each tab:
+
 - General:
   - Name
   - Initial Capacity

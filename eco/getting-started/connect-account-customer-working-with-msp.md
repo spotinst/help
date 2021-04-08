@@ -129,6 +129,7 @@ After a sync with the specified files, the following folders and files should ex
 - A manifest file, recognizable with the format: `[eco_s3_bucket]/manifests/yyyymmdd-yyyymmdd/[report_id]-Manifest.json`
 
 Once the files exist in the correct format, you will need to configure the account as in the steps for [Connecting to a Management Account](eco/getting-started/connect-your-aws-account). However, do the following:
+
 1. Get the S3 bucket name and the Role ARN as described in Step 3 and Step 6 of the procedure.
 2. Copy the bucket name and role ARN into a support ticket along with the following message:
 
@@ -138,7 +139,7 @@ You do not need to complete the enrollment process through the UI and can cancel
 
 Please allow up to 24 business hours for us to complete this process and the standard 48 hours for the data to show in the UI.
 
-### Ideal Eco Schema  
+### Ideal Eco Schema
 
 The following is an example of an ideal Eco schema.
 
