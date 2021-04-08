@@ -13,20 +13,20 @@ In this procedure, you will import the configuration of an existing AWS Elastic 
 
 2. In the Use Cases page, click Elastic Load Balancer.
 
-<img src="/elastigroup/_media/aws-load-balancers-elb-alb-2.png" />
+<img src="/elastigroup/_media/aws-load-balancers-elb-alb-2.png" width="838" height="214" />
 
 3. In the AWS Load Balancer popup, choose Create an Elastigroup from an existing AWS Load Balancer, and complete the following information:
-- Region: The AWS region where the balancer is located.
-- Load Balancer Type: You can choose either Classic or Application/Network.
-- Balancers: Choose a balancer.
+   - Region: The AWS region where the balancer is located.
+   - Load Balancer Type: You can choose either Classic or Application/Network.
+   - Balancers: Choose a balancer.
 
-<img src="/elastigroup/_media/aws-load-balancers-elb-alb-3.png" />
+<img src="/elastigroup/_media/aws-load-balancers-elb-alb-3.png" width="436" height="219" />
 
 > **Tip**: Elastigroup supports importing of target groups only of type Instance.
 
 Spot creates the Elastigroup based on the load balancer parameters imported from AWS.
 
-After the initial creation of the Elastigroup, you can choose to keep the original configuration parameters or modify them if necessary. For a general description of the Elastigroup configuration parameters, see [Create an Elastigroup from Scratch](https://docs.spot.io/elastigroup/tutorials/elastigroup-tasks/create-an-elastigroup-from-scratch).
+After the initial creation of the Elastigroup, you can choose to keep the original configuration parameters or modify them if necessary. For a general description of the Elastigroup configuration parameters, see [Create an Elastigroup from Scratch](elastigroup/tutorials/elastigroup-tasks/create-an-elastigroup-from-scratch).
 
 ## Review the Configuration
 
@@ -58,5 +58,5 @@ After you import a target group, this target group will be selected as the load 
 ## What's Next?
 
 Learn more about:
-- AWS [Load Balancers and Autohealing](elastigroup/tools-integrations/aws-load-balancers-elb-alb)
+- [AWS Load Balancers & Autohealing](elastigroup/tools-integrations/aws-load-balancers-elb-alb)
 - [Elastigroup Instance Actions](elastigroup/features/core-features/instance-actions)
