@@ -37,7 +37,7 @@ Complete the information in the Stateful Instance popup as described below, and 
 
 After completing the Stateful Instance information, the Review tab appears. Review the parameters and click Create.
 
-<img src="/elastigroup/_media/stateful-import-04a.png" width="341" height="103" />
+<img src="/elastigroup/_media/stateful-import-04a.png" width="383" height="566" />
 
 ## What's Next?
 
