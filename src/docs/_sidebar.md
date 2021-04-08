@@ -108,6 +108,7 @@
       - [Block Device Mapping](elastigroup/features/compute/block-device-mapping)
     - [Stateful Instance](elastigroup/features/stateful-instance/)
       - [Import a Stateful Instance](elastigroup/features/stateful-instance/import-a-stateful-instance)
+      - [Edit a Stateful Instance](elastigroup/features/stateful-instance/edit-a-stateful-instance)
       - [Persist Root Volume](elastigroup/features/stateful-instance/persist-root-volume)
       - [Persist Data Volumes](elastigroup/features/stateful-instance/persist-data-volumes)
       - [Persist Network](elastigroup/features/stateful-instance/persist-network)
