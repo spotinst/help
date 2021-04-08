@@ -18,7 +18,7 @@ You can import an instance from your AWS account to a stateful spot instance man
 
 3. When the empty Elastigroup template opens up, click Import and choose Existing Stateful Instance.
 
-<img src="/elastigroup/_media/stateful-import-02a.png" />
+<img src="/elastigroup/_media/stateful-import-02a.png" width="170" height="275" />
 
 > Tip: Instead of steps 2 and 3 above, in the Use Cases tab you can go down to Stateful Applications and click Go to Elastigroup.
 
@@ -26,7 +26,7 @@ You can import an instance from your AWS account to a stateful spot instance man
 
 Complete the information in the Stateful Instance popup as described below, and click Select.
 
-<img src="/elastigroup/_media/stateful-import-03a.png" />
+<img src="/elastigroup/_media/stateful-import-03a.png" width="439" height="236" />
 
 - Region: Choose the AWS region of the instance to import.
 - Instance ID: Enter the AWS Instance ID of the instance to import.
@@ -37,7 +37,7 @@ Complete the information in the Stateful Instance popup as described below, and 
 
 After completing the Stateful Instance information, the Review tab appears. Review the parameters and click Create.
 
-<img src="/elastigroup/_media/stateful-import-04a.png" />
+<img src="/elastigroup/_media/stateful-import-04a.png" width="341" height="103" />
 
 ## What's Next?
 
