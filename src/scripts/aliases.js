@@ -263,11 +263,11 @@ export const aliases = (() => {
     "/container-management/kubernetes/kops/instance-groups/":
       "/ocean/tools-and-integrations/kops/metadata-labels",
 
-    "/container-management/kubernetes/kubernetes-concepts/autoscaler/":
-      "/ocean/features/scaling-kubernetes",
-
     "/container-management/kubernetes/kubernetes-concepts/":
       "/elastigroup/tools-integrations/kubernetes-with-elastigroup/",
+
+    "/container-management/kubernetes/kubernetes-concepts/autoscaler/":
+      "/ocean/features/scaling-kubernetes",
 
     "/container-management/kubernetes/kubernetes-concepts/persistent-volumes-support/":
       "/elastigroup/tools-integrations/kubernetes-with-elastigroup/persistent-volume-support",
@@ -793,6 +793,9 @@ export const aliases = (() => {
 
     "/elastigroup/amazon-web-services/":
       "/elastigroup/getting-started/elastigroup-for-aws",
+
+    "/elastigroup/features/stateful-instance/stateful-instances":
+      "/elastigroup/features/stateful-instance/",
 
     "/elastigroup/tutorials/": "/elastigroup/tutorials/",
 
@@ -1531,9 +1534,6 @@ export const aliases = (() => {
 
     "/spotinst-video-tutorials/ocean/workload-migration/":
       "/connect-your-cloud-provider/",
-
-    "/elastigroup/features/stateful-instance/stateful-instances":
-      "/elastigroup/features/stateful-instance/",
   };
 
   for (let [key, value] of Object.entries(map)) {
