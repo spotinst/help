@@ -10,7 +10,7 @@ Once you have [created](elastigroup/tutorials/elastigroup-tasks/create-a-statefu
 
 2. In the Elastigroup Overview page, go to the Actions menu and click Edit Configuration. The Stateful editing wizard opens as shown below.
 
-<img src="/elastigroup/_media/stateful-edit-02.png" />
+<img src="/elastigroup/_media/stateful-edit-02.png" width="478" height="389" />
 
 ## Edit the Elastigroup Parameters
 
@@ -60,7 +60,7 @@ When you have finished editing, click Update to save the changes.
 
 The Stateful editing wizard is different from the main Elastigroup wizard. To edit parameters in the full Elastigroup wizard, go to the bottom of the page and click Switch to Full Edit Wizard.
 
-<img src="/elastigroup/_media/stateful-edit-03.png" />
+<img src="/elastigroup/_media/stateful-edit-03.png" width="463" height="183" />
 
 ## What’s Next?
 
