@@ -6,7 +6,7 @@ The Trends and Notifications dashboard identifies trends and irregularities in c
 
 The Top Trends graph shows cloud account spending over time and highlights irregular events. The graph represents each cloud account selected in the Accounts dropdown with a different color and can be filtered by timeframe.
 
-<img src="/cloud-analyzer/_media/tutorials-view-trends-01.png" />
+<img src="/cloud-analyzer/_media/tutorials-view-trends-01a.png" />
 
 ## Summary Table
 

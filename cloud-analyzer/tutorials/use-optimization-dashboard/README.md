@@ -29,4 +29,4 @@ At the bottom of the Compute Overview, you will find the Use-cases Breakdown. Th
 
 Each preview contains the number of instances in that category currently running, an estimation of additional savings that can be obtained using optimization, and the current savings percentage.
 
-<img src="/cloud-analyzer/_media/tutorials-optimization-01.png" />
+<img src="/cloud-analyzer/_media/tutorials-optimization-01a.png" />
