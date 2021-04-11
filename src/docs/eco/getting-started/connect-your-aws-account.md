@@ -45,6 +45,8 @@ Set up Cost and Usage Reports as described below.
 
 <img src="/eco/_media/gettingstarted-aws-connect-04.png" />
 
+> **Note**: An administrator of your account or your organization may have restricted your user's right to define the CUR, and this should be addressed with the administrator. For example, if you see errors stating that you cannot perform the 'putReportDefinition' operation, you will need to address this with your administrator.
+
 ## Step 3
 
 1. In your AWS account, go to the Cost and Usage Reports page.
