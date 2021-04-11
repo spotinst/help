@@ -51,4 +51,4 @@ In the Workloads table, you can also do the following:
 - Include in Spot: Returns excluded workloads back to the potential savings calculations. The item will no longer appear grayed out.
 - Export: Exports the data in the Workloads table to a CSV file.
 
-<img src="/cloud-analyzer/_media/tutorials-optimization-elasticapp-01.png" />
+<img src="/cloud-analyzer/_media/tutorials-optimization-elasticapp-01a.png" />
