@@ -71,6 +71,8 @@ Ensure that IAM user and role access to the Billing and Cost Management console 
 
 6. Return to your account in the Spot Console and paste the name of the S3 bucket where the hourly cost and usage reports are stored.
 
+> **Note**: An administrator of your account or your organization may have restricted your user's right to define the CUR, and this should be addressed with the administrator. For example, if you see errors stating that you cannot perform the 'putReportDefinition' operation, you will need to address this with your administrator.
+
 ## Step 5
 
 1. Open the linked Cloudformation Template and create the required IAM Role and Policy.
