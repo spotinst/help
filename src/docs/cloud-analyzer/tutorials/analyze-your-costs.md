@@ -8,8 +8,8 @@ If you have [Subsets](cloud-analyzer/tutorials/manage-subsets.md) enabled, the t
 
 <img src="/cloud-analyzer/_media/tutorials-analyze-costs-00.png" />
 
-- To see analysis information for all accounts in your organization, leave the default setting as No Subsets.
-- To see the analysis for a specific subset of accounts, click the Subsets box and choose a subset from the list. All of the information in the page will apply specifically to the subset you chose.
+- To see analysis information for all accounts in your organization, leave the default setting as No Subsets. This view will not contain any billing workflows you may have associated with subsets.
+- To see the analysis for a specific subset of accounts, click the Subsets box and choose a subset from the list. All of the information in the page will apply specifically to the subset you chose. If a billing workflow has been associated with the subset, the data shown will contain the relevant adjustments.
 
 > Tip: If you do not have Subsets enabled and would like to use this feature, please contact the Support team and make a request.
 
