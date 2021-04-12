@@ -73,6 +73,7 @@ The following is a list of attributes customizable per VNG in Ocean for GKE.
 - Instance Types (API only. These must be a subset of the instance types defined for the Ocean cluster.)
 - Labels
 - Maximum Nodes (API only)
+- Preemptible% to use within the VNG
 - Restrict scale down (API only)
 - Root Volume size
 - Taints
