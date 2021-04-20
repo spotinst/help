@@ -21,7 +21,7 @@ The list of Wave clusters gives you a quick view of your clusters and basic info
 
 ## View Cluster Details
 
-To get detailed information statistics and operational information about a cluster, click on the Cluster Name. This will open the [Cluster Overview](wave/features/wave-cluster-overview) tab for that cluster which serves as your operational dashboard for the cluster.
+To get detailed information, statistics, and operational information about a cluster, click on the Cluster Name. This will open the [Cluster Overview](wave/features/wave-cluster-overview) tab for that cluster which serves as your operational dashboard for the cluster.
 
 ## Filter Cluster List
 
