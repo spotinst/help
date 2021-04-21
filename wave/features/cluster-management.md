@@ -19,13 +19,13 @@ The list of Wave clusters gives you a quick view of your clusters and basic info
 - Status: The health status of the cluster (up or down).
 - Action: An option to remove the cluster from Wave.
 
-## View Cluster Details
-
-To get detailed information, statistics, and operational information about a cluster, click on the Cluster Name. This will open the [Cluster Overview](wave/features/wave-cluster-overview) tab for that cluster which serves as your operational dashboard for the cluster.
-
 ## Filter Cluster List
 
 If you have a long list of clusters, you can use the filter above the list to find one or multiple clusters. Just enter a tag, an attribute, a keyword or simply a string of text into the filter box and type enter.
+
+## View Cluster Details
+
+To get detailed information, statistics, and operational information about a cluster, click on the Cluster Name. This will open the [Cluster Overview](wave/features/wave-cluster-overview) tab for that cluster which serves as your operational dashboard for the cluster.
 
 ## Add Cluster
 
