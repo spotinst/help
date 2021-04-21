@@ -6,7 +6,12 @@ To troubleshoot the issue, complete each step below until you find the issue.
 
 ## Step 1: Check the Configuration
 
-Check the configuration of your configMap.yaml and ensure the parameters are set correctly:
+Check the configuration of your configMap.yaml and ensure the parameters are set correctly. 
+In order to view the controller configmap currently applied to your cluster, run the following command:
+
+`kubectl describe configmap spotinst-kubernetes-cluster-controller-config -n kube-system`
+
+Controller ConfigMap template:
 
 ```YAML
 kind: ConfigMap
@@ -62,7 +67,8 @@ If the steps above do not solve your issue, get the controller logs using the st
 
 `kubectl exec -ti spotinst-kubernetes-cluster-controller-68b75c4794-bkmm7 bash -n kube-system`
 
-3. Change the path: `cd log/spotinst`
+3. Change the path: `cd controller/log/spotinst`
+
 4. To get the logs, run the command:
 
 `cat spotinst-kubernetes-controller.log`
