@@ -8,7 +8,10 @@ Use the Cloud Analyzer policy below if you are creating a policy with CloudForma
   "Outputs": {
     "SpotFinOpsRoleArn": {
       "Value": {
-        "Fn::GetAtt": ["SpotFinOpsRole", "Arn"]
+        "Fn::GetAtt": [
+          "SpotFinOpsRole",
+          "Arn"
+        ]
       }
     }
   },
@@ -52,22 +55,24 @@ Use the Cloud Analyzer policy below if you are creating a policy with CloudForma
                 "rds:ListTagsForResource",
                 "redshift:Describe*",
                 "trustedadvisor:*",
-                "s3:List*",
-                "s3:GetBucketLocation",
-                "s3:ListBucketMultipartUploads",
-                "s3:AbortMultipartUpload",
-                "s3:ListMultipartUploadParts",
                 "support:*",
                 "organizations:List*",
                 "organizations:Describe*"
               ],
-              "Resource": ["*"]
+              "Resource": [
+                "*"
+              ]
             },
             {
               "Sid": "S3SyncPermissions",
               "Effect": "Allow",
               "Action": [
+                "s3:GetBucketLocation",
+                "s3:ListBucketMultipartUploads",
+                "s3:AbortMultipartUpload",
+                "s3:ListMultipartUploadParts",
                 "s3:PutObject",
+                "s3:List*",
                 "s3:ListBucket",
                 "s3:PutObjectTagging",
                 "s3:PutObjectAcl"
@@ -77,14 +82,17 @@ Use the Cloud Analyzer policy below if you are creating a policy with CloudForma
             {
               "Sid": "S3BillingDBR",
               "Effect": "Allow",
-              "Action": ["s3:get*"],
+              "Action": [
+                "s3:GetBucketLocation",
+                "s3:ListBucketMultipartUploads",
+                "s3:AbortMultipartUpload",
+                "s3:ListMultipartUploadParts",
+                "s3:List*",
+                "s3:get*"
+              ],
               "Resource": [
-                {
-                  "Fn::Join": [
-                    "",
-                    ["arn:aws:s3:::", { "Ref": "CostAndUsageBucket" }, "/*"]
-                  ]
-                }
+                { "Fn::Join" : [ "", [ "arn:aws:s3:::", { "Ref" : "CostAndUsageBucket" },"*"]]},
+                { "Fn::Join" : [ "", [ "arn:aws:s3:::", { "Ref" : "CostAndUsageBucket" },"/*"]]}
               ]
             },
             {
@@ -106,10 +114,8 @@ Use the Cloud Analyzer policy below if you are creating a policy with CloudForma
             {
               "Effect": "Allow",
               "Principal": {
-                "AWS": [
-                  "arn:aws:iam::884866656237:root",
-                  "arn:aws:iam::627743545735:root"
-                ]
+                "AWS": ["arn:aws:iam::884866656237:root",
+                        "arn:aws:iam::627743545735:root"]
               },
               "Action": "sts:AssumeRole"
             }
