@@ -18,14 +18,14 @@ The workflow wizard is designed to be an easy way to get started, but our billin
 
 Example Billing Workflow 1:
 
-1. Replace RI Discount with Public on-demand price when RIs are puchased by.
-2. Replace Savings Plan Discount with Public on-demand price when RIs are puchased by.
-3. Remove EDP Discount so it is not shared with customer.
+1. Replace RI Discount with Public on-demand price when RIs are puchased by account <########>.
+2. Replace Savings Plan Discount with Public on-demand price when RIs are puchased by account <########>.
+3. Remove EDP Discount so it is not shared with the customer.
 4. Uplift the price of all services by 3%.
 
 Example Billing Workflow 2:
 
-1. Replace RI Discount with public on-demand price when RIs are purchased by any account
+1. Replace RI Discount with public on-demand price when RIs are purchased by any account.
 2. Replace free tier usage with the first billable rate.
 3. Discount by 2% when the usage occurs on Tuesdays in any US-East data center in the summer months of an odd-numbered year. (This is an unusual example, but you may have billing rules in mind which we have never dreamed of.)
 
