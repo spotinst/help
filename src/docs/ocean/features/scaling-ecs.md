@@ -23,7 +23,7 @@ Ocean keeps track of tasks that cannot be scheduled and employs the following pr
 
 When the process is completed, all tasks are scheduled and running. Ocean continues to monitor for unsatisfied ECS services, as described in Step 1 above, and will initiate additional scale up if it becomes necessary.
 
-## Headroom
+### Headroom
 
 Ocean provides the option to include a buffer of spare capacity (vCPU and memory resources) known as headroom. Headroom ensures that the cluster has the capacity to quickly scale more tasks without waiting for new container instances to be provisioned. The headroom capacity is kept across the cluster and as separate units in order to support scheduling of new pods.
 
@@ -31,7 +31,7 @@ You can configure headroom in specific amounts of vCPU and memory or specify hea
 
 Ocean optimally manages the headroom to provide the best possible cost/performance balance. However, headroom may also be manually configured to support any use case.
 
-## Placement Constraints
+### Placement Constraints
 
 Ocean supports built-in and custom task placement constraints within the scaling logic. Task placement constraints give you the ability to control where tasks are scheduled, such as in a specific availability zone or on instances of a specific type. You can utilize the built-in ECS container attributes or create your own custom key-value attribute and add a constraint to place your tasks based on the desired attribute.
 
@@ -45,6 +45,12 @@ In order to use this feature, you will need to do the following:
 
 1. Add `ecs:putAttributes` permissions to your AWS IAM role (see [Spot Policy for AWS](administration/api/spot-policy-in-aws.md)). As soon as Spot sees pending tasks that ask for this placement constraint, auto scaler will scale up an on-demand instance and use the `ecs:putAttributes` permissions to add this attribute to the on-demand instance spun up by the auto scaler.
 2. Contact the Spot support team via chat or email, and request to enable the ECS lifecycle support per service. Once enabled, the label above will take effect.
+
+### Scaling Block Mechanism
+
+Since tasks are created only after the proper infrastructure exists (meaning that Ocean actually scales for an unsatisfied ECS service), there is a potential for an infinite scaling to occur. This could happen, for example, if there is a task that keeps failing and the service continues to be unsatisfied.
+
+In order to prevent a situation of infinite scaling, Ocean will stop scaling for an unsatisfied service after 120 minutes as long as no changes were made to the service. If such a stop occurs, the user should update the service to allow Ocean to scale again.
 
 ## Scale Down Behavior
 
