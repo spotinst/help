@@ -3,10 +3,12 @@
 In this procedure, you will import the configuration of an existing AWS Elastic Load Balancer (ELB) to Spot so that the ELB can be managed as an Elastigroup in Spot.
 
 ## Prerequisites
+
 - A Spot account connected to your AWS account
 - At least one running instance connected to an AWS load balancer
 
 ## Get Started
+
 1. In the left menu of the Spot console, click Elastigroup/Groups, and click Create Elastigroup.
 
 <img src="/elastigroup/_media/tutorials-create-eg-from-scratch-01.png" />
@@ -39,6 +41,7 @@ When you are finished reviewing and making any modifications required in the con
 After you import a target group, this target group will be selected as the load balancer in the group, but no autohealing will be configured. You need to configure the autohealing in the group.
 
 1. In the Compute tab, scroll down to Autohealing and choose the service that will perform health checks on your EC2 instances. Depending on which load balancers you chose, the following options may appear:
+
    - ELB: AWS Elastic Load Balancer health check.
    - EC2: AWS EC2 Status check.
    - Target Group: AWS Application Load Balancer health check.
@@ -58,5 +61,6 @@ After you import a target group, this target group will be selected as the load 
 ## What's Next?
 
 Learn more about:
+
 - [AWS Load Balancers & Autohealing](elastigroup/tools-integrations/aws-load-balancers-elb-alb)
 - [Elastigroup Instance Actions](elastigroup/features/core-features/instance-actions)
