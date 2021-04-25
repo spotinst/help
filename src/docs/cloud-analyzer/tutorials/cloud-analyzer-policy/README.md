@@ -10,10 +10,7 @@ Use this policy only if you know the Role ARN associated with Cloud Analyzer.
   "Outputs": {
     "SpotFinOpsRoleArn": {
       "Value": {
-        "Fn::GetAtt": [
-          "SpotFinOpsRole",
-          "Arn"
-        ]
+        "Fn::GetAtt": ["SpotFinOpsRole", "Arn"]
       }
     }
   },
@@ -61,9 +58,7 @@ Use this policy only if you know the Role ARN associated with Cloud Analyzer.
                 "organizations:List*",
                 "organizations:Describe*"
               ],
-              "Resource": [
-                "*"
-              ]
+              "Resource": ["*"]
             },
             {
               "Sid": "S3SyncPermissions",
@@ -93,8 +88,18 @@ Use this policy only if you know the Role ARN associated with Cloud Analyzer.
                 "s3:get*"
               ],
               "Resource": [
-                { "Fn::Join" : [ "", [ "arn:aws:s3:::", { "Ref" : "CostAndUsageBucket" },"*"]]},
-                { "Fn::Join" : [ "", [ "arn:aws:s3:::", { "Ref" : "CostAndUsageBucket" },"/*"]]}
+                {
+                  "Fn::Join": [
+                    "",
+                    ["arn:aws:s3:::", { "Ref": "CostAndUsageBucket" }, "*"]
+                  ]
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    ["arn:aws:s3:::", { "Ref": "CostAndUsageBucket" }, "/*"]
+                  ]
+                }
               ]
             },
             {
@@ -116,8 +121,10 @@ Use this policy only if you know the Role ARN associated with Cloud Analyzer.
             {
               "Effect": "Allow",
               "Principal": {
-                "AWS": ["arn:aws:iam::884866656237:root",
-                        "arn:aws:iam::627743545735:root"]
+                "AWS": [
+                  "arn:aws:iam::884866656237:root",
+                  "arn:aws:iam::627743545735:root"
+                ]
               },
               "Action": "sts:AssumeRole"
             }
