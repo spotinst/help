@@ -6,3 +6,6 @@ updates:
       interval: "daily"
     labels:
       - "area/dependency"
+    commit_message:
+      prefix: "chore"
+      include_scope: true
