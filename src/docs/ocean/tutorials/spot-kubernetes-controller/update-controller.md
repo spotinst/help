@@ -26,7 +26,7 @@ The Spot Kubernetes Controller supports auto-update. When a new version of the c
 
 As a best-practice, we highly recommend leaving Auto-Update enabled due to the fact that the update procedure is silent and requires no downtime. In addition, every controller version update improves stability and performance, collects new metrics, and supports new K8s versions.
 
-The configurations of the controller and its dependencies are overwritten by the default configuration Spot provides during the auto-update process. If manual changes are needed (e.g., to add labels or rename objects), you must disable Auto-Update in order to persist those changes.
+The configurations of the controller deployment and the clusterRole it is binded to are overwritten by the default configuration Spot provides during the auto-update process. If manual changes are needed (e.g., to add labels or adjust permission rules), you must disable Auto-Update in order to persist those changes.
 
 ### Disable Auto-Update
 
