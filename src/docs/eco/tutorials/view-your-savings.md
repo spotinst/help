@@ -50,11 +50,11 @@ Below the overview graphs and pie charts, you can see a table with detailed info
 You can filter the data displayed according to several criteria available.
 1. Place your cursor in the filter and click a parameter.
 
-<img src="/eco/_media/tutorials-view-savings-03.png" />
+<img src="/eco/_media/tutorials-view-savings-03.png" width="242" height="219" />
 
 2. Choose the specific value(s) to be displayed by typing them or selecting from the list.
 
-<img src="/eco/_media/tutorials-view-savings-04.png" />
+<img src="/eco/_media/tutorials-view-savings-04.png" width="244" height="223" />
 
 ### Display Columns
 
