@@ -31,6 +31,7 @@
     - [Roll](ocean/features/roll)
     - [Right Sizing](ocean/features/right-sizing)
     - [Running Hours](ocean/features/running-hours)
+    - [Auto-Update Process (GKE)](ocean/features/auto-update-process-gke)
   - [Tutorials](ocean/tutorials/)
     - [Ocean Dashboard](ocean/tutorials/ocean-dashboard)
     - [Analyze Your Costs](ocean/tutorials/analyze-your-costs)
