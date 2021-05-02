@@ -39,13 +39,26 @@ Eco provides summary graphs and charts to give you wide visibility of your savin
 - Commitment per Service: A pie chart showing the current reserved instance commitment broken down into the different services.
 - Commitment per Region: A pie chart showing the current reserved instance commitment broken down by region.
 
-## Commitments over Time Report
+## Reservation Details Report
 
 Below the overview graphs and pie charts, you can see a table with detailed information about your reserved instances, including your total generated savings at the bottom of the table.
 
 <img src="/eco/_media/tutorials-view-savings-02.png" />
 
-You can customize the columns that appear in this table. The following column headings are available:
+### Filter data
+
+You can filter the data displayed according to several criteria available.
+1. Place your cursor in the filter and click a parameter.
+
+<img src="/eco/_media/tutorials-view-savings-03.png" />
+
+2. Choose the specific value(s) to be displayed by typing them or selecting from the list.
+
+<img src="/eco/_media/tutorials-view-savings-04.png" />
+
+### Display Columns
+
+You can customize the columns that appear in the table. The following column headings are available:
 
 - Commitment type
 - Instance type
@@ -61,6 +74,11 @@ You can customize the columns that appear in this table. The following column he
 - Generated savings: The amount the commitment saved over using strictly on-demand instances.
 - Source: Indicates whether the RIs were purchased by Eco or not.
 - Generated savings: Savings generated due to the use of reservations.
+- ARN: The unique AWS ID for each reservation. This column is available only when you export data.
+
+### Export Data
+
+To export the Reservation Details report to a CSV file, click Export above the table. The exported data will include the ARN for each reservation.
 
 ## What’s Next?
 
