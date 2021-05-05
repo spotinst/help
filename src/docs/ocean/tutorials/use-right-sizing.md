@@ -22,9 +22,13 @@ Ocean collects usage metrics for all deployments in the cluster periodically, e.
 Resizing suggestions and the graphs described below display data after at least four days of deployment metrics collection.
 
 1. Open your Ocean cluster console.
-2. Under Namespaces, click on the deployment you wish to review to find CPU Utilization and Memory Utilization charts.
+2. Under Namespaces, click on the deployment (i.e., Resource) you wish to review to find CPU Utilization and Memory Utilization charts.
 
 <img src="/ocean/_media/tutorials-use-rightsizing-01.png" />
+
+The CPU and memory utilization charts for that resource appears on the right. If the deployment shows recommendations for multiple containers, click on the container to see the relevant charts.
+
+<img src="/ocean/_media/tutorials-use-rightsizing-02.png" />
 
 ## Step 2: Adjust Resource Allocation according to Actual Consumption
 
@@ -32,7 +36,7 @@ Resource suggestions will be provided to help you adjust deployment requests to 
 
 In your Ocean cluster, go to the Right Sizing tab.
 
-<img src="/ocean/_media/tutorials-use-rightsizing-02.png" />
+<img src="/ocean/_media/tutorials-use-rightsizing-03.png" />
 
 Review the suggested resources offered for all your deployments.
 
