@@ -45,7 +45,7 @@ Below the overview graphs and pie charts, you can see a table with detailed info
 
 <img src="/eco/_media/tutorials-view-savings-02.png" />
 
-### Filter data
+### Filter Data
 
 You can filter the data displayed according to several criteria available.
 1. Place your cursor in the filter and click a parameter.
