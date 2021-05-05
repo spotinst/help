@@ -64,6 +64,12 @@ You can also view Right Sizing recommendations on your Ocean console, under the 
 
 <img src="/ocean/_media/features-rightsizing-02.png" />
 
-### Recommendations:
+### Recommendations
+
+The Recommendations table shows a list of resources with recommendations for optimization. The default display lists the resources according to the potential impact of the optimization. Resources with the highest potential impact are at the top.
 
 <img src="/ocean/_media/features-rightsizing-03.png" />
+
+For a given resource, you can see the specific recommendations per container by clicking on its Impact (e.g., High).
+
+<img src="/ocean/_media/features-rightsizing-04.png" />
