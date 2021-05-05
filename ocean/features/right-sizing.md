@@ -6,7 +6,7 @@ However, estimating the proper amount of CPU and Memory when assigning resource 
 
 Ocean monitors workload utilization in real-time and provides recommendations for adjusting the resource requirements for different workload types.
 
-<img src="/ocean/_media/features-rightsizing-01.png" width="360" height="138" />
+<img src="/ocean/_media/features-rightsizing-01.png" width="364" height="215" />
 
 Ocean continuously monitors the cluster CPU and Memory usage and provides recommendations when a workload consumes significantly more or less resources than it requested.
 
