@@ -85,7 +85,7 @@ Elastigroup will automatically provision on-demand instances if there are any va
 
 > Tip: When you choose Utilize Commitment Plans, ensure that your RoleARN is updated with the [latest policy](administration/api/spot-policy-in-aws).
 
-<img src="/elastigroup/_media/tutorials-create-eg-from-scratch-06a.png" width="366" height="308" />
+<img src="/elastigroup/_media/tutorials-create-eg-from-scratch-06a.png" width="275" height="231" />
 
 #### Cluster Orientation
 
