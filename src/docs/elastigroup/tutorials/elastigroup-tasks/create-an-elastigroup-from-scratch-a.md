@@ -73,9 +73,23 @@ In this part you define your optimization strategy as described below.
 
 <img src="/elastigroup/_media/tutorials-create-eg-from-scratch-06.png" width="270" height="344" />
 
-- Fallback to On-Demand: If no spot instances are available, an on-demand instance will be provisioned to meet the capacity requirement.
-- Utilize Commitment Plans: Elastigroup will automatically provision on-demand instances if there are any vacant Savings Plans or reserved instances that match any instance type defined in the Compute page. The utilization order is: RIs, EC2 SP, Compute SP.
-- Cluster Orientation: Specify which prediction algorithm to use:
+#### Fallback to On-Demand
+
+If no spot instances are available, an on-demand instance will be provisioned to meet the capacity requirement.
+
+#### Utilize Commitment Plans
+
+Elastigroup will automatically provision on-demand instances if there are any vacant Savings Plans or reserved instances that match any instance type defined in the Compute page. The utilization order is: RIs, EC2 SP, Compute SP. Choose one of the following:
+- Reserved Instances
+- Reserved Instances and Savings Plans
+
+> Tip: When you choose Utilize Commitment Plans, ensure that your RoleARN is updated with the [latest policy](administration/api/spot-policy-in-aws).
+
+<img src="/elastigroup/_media/tutorials-create-eg-from-scratch-06a.png" width="270" height="344" />
+
+#### Cluster Orientation
+
+Specify which prediction algorithm to use:
   - Balanced (recommended)
   - Availability
   - Cost
