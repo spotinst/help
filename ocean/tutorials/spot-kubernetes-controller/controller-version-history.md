@@ -1,5 +1,11 @@
 # Controller Version History
 
+## [1.0.75] - TBD
+
+Added
+
+- Upgraded k8s SDK
+
 ## [1.0.74] - 2021-04-22
 
 Added
