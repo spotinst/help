@@ -91,14 +91,7 @@ nodeGroups:
 
             # Number of units to retain as headroom, where each unit has the
             # defined CPU and memory.
-            numOfUnits: 2
-      compute:
-        instanceTypes:
-          # Instance types allowed in the Ocean cluster. Cannot be configured
-          # if the blacklist is configured.
-          whitelist: # OR blacklist
-            - t2.large
-            - c5.large
+            numOfUnits: 2      
 ```
 
 2. To create the cluster, enter the following command:
