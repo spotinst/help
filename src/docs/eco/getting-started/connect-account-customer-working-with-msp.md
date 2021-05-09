@@ -51,11 +51,11 @@ There are three major steps to configuring the CUR Extraction:
 
 ### Step 2: Link Your Cost And Usage Report With Athena
 
-It will take 24 hours for AWS to start dropping reports into the S3 bucket you chose. Before proceeding with this step, click here and make sure that `Data last refreshed` has a date and doesn't say `N/A`. Here's what it should look like:
+It will take 24 hours for AWS to start dropping reports into the S3 bucket you chose. Before proceeding with this step, click [here: Cost and Usage Reports](https://console.aws.amazon.com/billing/home?region=us-east-1#/reports) and make sure that `Data last refreshed` has a date and doesn't say `N/A`. Here's what it should look like:
 
 <img src="/eco/_media/gettingstarted-aws-connect-msp-03.png" />
 
-1. Click here, go to the S3 bucket you chose and navigate to: spotinst_eco/spotinst-cur-report
+1. Click [here: S3 Buckets](https://console.aws.amazon.com/s3/home?region=us-east-1), go to the S3 bucket you chose and navigate to: spotinst_eco/spotinst-cur-report
 2. Click on the file called `crawler-cfn.yml`.
 3. Download the file and contact your Spot sales representative. (If you do not have a sales representative, contact Spot Support.) Please include the following in your email:
    - The crawler file
@@ -72,16 +72,16 @@ Continue with the steps below.
 
 <img src="/eco/_media/gettingstarted-aws-connect-msp-04.png" width="512" height="494" />
 
-5. Click here and paste that object url into the field `Amazon S3 URL` as shown in the image below.
+5. Click [here: Create Stack](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/create/template) and paste that object url into the field `Amazon S3 URL` as shown in the image below.
 
 <img src="/eco/_media/gettingstarted-aws-connect-msp-05.png" />
 
 6. Click Next.
-7. Enter `Spot Eco Stack` and click Next.
+7. Enter `SpotEcoStack` for the Stack Name and click Next.
 8. Scroll all the way down and click Next again.
 9. Scroll all the way down, and under the Capabilities section, mark the box that says `I acknowledge that AWS CloudFormation might create IAM resources.`
 10. Click Create Stack.
-11. Click here, and find the crawler you just created. The name will appear as follows: `AWSCURCrawler-[name of your cur report]`. Click on the crawler to bring up its properties.
+11. Click [here: AWS Glue Crawlers](https://console.aws.amazon.com/glue/home?region=us-east-1#catalog:tab=crawlers), and find the crawler you just created. The name will appear as follows: `AWSCURCrawler-[name of your cur report]`. Click on the crawler to bring up its properties.
 12. Click Edit.
 13. On the left side of the screen, click Schedule.
 14. In the Frequency dropdown box, choose Daily.
