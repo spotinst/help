@@ -75,8 +75,9 @@ Ensure that IAM user and role access to the Billing and Cost Management console 
 
 ## Step 5
 
-1. Open the linked Cloudformation Template and create the required IAM Role and Policy.
-2. Mark the checkbox acknowledging that CloudFormation will create IAM resources, and click create.
+1. Check the desired products in Spot Console step 3 you wish to enable.
+2. Select "Run Template" in Spot Console step 4 to open the linked Cloudformation Template and create the required IAM Role and Policy.
+3. Mark the checkbox acknowledging that CloudFormation will create IAM resources, and click create.
 
 <img src="/cloud-analyzer/_media/gettingstarted-firstregistration-05.png" />
 
