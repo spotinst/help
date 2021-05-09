@@ -42,10 +42,6 @@ Review the suggested resources offered for all your deployments.
 
 To deep dive into a specific deployment and review resource suggestion, click on the requested deployment.
 
-Modify your deployment resource requirements by running the following from the command line:
-
-`kubectl set resources MyDeployment --requests=cpu=XXX,memory=XXX`
-
 ## Right Sizing Notifications
 
 In addition to the above content, the Right Sizing tab may display one of several notification messages, determined by the status of the Metrics Server reports and the Right Sizing service. The messages indicate one of the following:
