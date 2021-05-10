@@ -53,8 +53,8 @@ nodeGroups:
       metadata:
         # these metadata fields will be deprecated in the future, but
         # are necessary for autoscaling today
-    	 defaultLaunchSpec: true
-    	 useAsTemplateOnly: false
+        defaultLaunchSpec: true
+        useAsTemplateOnly: false
 
 
       strategy:
@@ -91,7 +91,7 @@ nodeGroups:
 
             # Number of units to retain as headroom, where each unit has the
             # defined CPU and memory.
-            numOfUnits: 2      
+            numOfUnits: 2
 ```
 
 2. To create the cluster, enter the following command:
