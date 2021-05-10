@@ -294,6 +294,24 @@ To exit the notebook and terminate the Spark application, go to the File menu an
 
 ## View Spark History
 
+Wave creates an S3 bucket for event logs during the cluster creation process. The name of the bucket follows the XXX-event-logs pattern.
+
+The cluster nodes are also set up with an IAM role to allow them to write to S3. 
+
+The history server installed on the Wave cluster serves event logs from this bucket.
+
+You can enable event log syncing via an annotation on the driver pod: XXX
+
+- Spark submit example
+- Spark operator example
+- Jupyter notebook example
+
+If this annotation is set, Wave will transparently write event logs to the S3 bucket. No need to configure the application to write event logs to 
+a specific location, and no need to include S3 dependencies in your image if they are not needed.
+
+
+
+
 The event logs for all the spark applications have been saved to an S3 bucket, and the history server is reading from that bucket. The history server is exposed through an AWS load-balancer, with a self-signed certificate.
 
 To see the endpoint, username, and password, enter the command:
