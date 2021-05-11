@@ -200,7 +200,7 @@ spark-submit \
 --master k8s://${K8S_ENDPOINT} \
 --deploy-mode cluster \
 --name spark-submit-pi \
---conf spark.executor.instances=1 \
+--conf spark.executor.instances=2 \
 --conf spark.executor.memory=512m \
 --conf spark.kubernetes.container.image=public.ecr.aws/l8m2k1n1/netapp/spark:3.0.0 \
 --conf spark.kubernetes.authenticate.driver.serviceAccountName=spark \
