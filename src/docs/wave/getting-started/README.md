@@ -287,25 +287,30 @@ To exit the notebook and terminate the Spark application, go to the File menu an
 
 ## View Spark History
 
-Wave creates an S3 bucket for event logs during the cluster creation process. The name of the bucket follows the XXX-event-logs pattern.
+Wave creates an S3 bucket for Spark application event logs during the cluster creation process. The name of the bucket follows the `spark-history-${CLUSTERNAME}` pattern. For example, the bucket created for the cluster specified above would be called *spark-history-wave-abcde*. The history server installed on the Wave cluster serves the Spark UI from event log files present in this bucket.
 
-The cluster nodes are also set up with an IAM role to allow them to write to S3. 
+You can enable event log file syncing to S3 by setting an annotation on the Spark driver pod:
 
-The history server installed on the Wave cluster serves event logs from this bucket.
+```
+"wave.spot.io/synceventlogs": "true"
+```
 
-You can enable event log syncing via an annotation on the driver pod: XXX
+If running a Spark application with the Spark Operator, add the following to the `sparkConf` section of the Spark application YAML definition:
 
-- Spark submit example
-- Spark operator example
-- Jupyter notebook example
+```YAML
+sparkConf:
+    "spark.kubernetes.driver.annotation.wave.spot.io/synceventlogs": "true"
+```
 
-If this annotation is set, Wave will transparently write event logs to the S3 bucket. No need to configure the application to write event logs to 
-a specific location, and no need to include S3 dependencies in your image if they are not needed.
+If running a Spark application via spark-submit, add the following configuration argument:
 
+```BASH
+--conf spark.kubernetes.driver.annotation.wave.spot.io/synceventlogs=true
+```
 
+If the annotation is set to true, Wave will automatically write event logs to the S3 bucket, to be served by the history server.
 
-
-The event logs for all the spark applications have been saved to an S3 bucket, and the history server is reading from that bucket. The history server is exposed through an AWS load-balancer, with a self-signed certificate.
+The history server is exposed through an AWS load-balancer, with a self-signed certificate.
 
 To see the endpoint, username, and password, enter the command:
 
