@@ -185,13 +185,13 @@ Check for a spark history bucket for your cluster by running: `aws s3 ls`
 
 The name of the bucket will be: `spark-history-[cluster name from yaml file]`
 
-When you submit a Spark application you can set the following annotation on the driver pod: `wave.spot.io/synceventlogs=true`. The driver pod will get a second container that writes event logs to S3. When the Spark application completes, there should be a new file in your S3 bucket subdirectory.
+When you submit a Spark application to the cluster you can set the following annotation on the driver pod: `wave.spot.io/synceventlogs=true`. The driver pod will get a second container that writes event logs to S3. When the Spark application completes, there should be a new file in your S3 bucket subdirectory.
 
 ## Submit Spark Application with Spark-submit
 
 Try out the system by using spark-submit to initiate a job in cluster mode. This example runs the trivial “spark-pi” computation that is included in the [Spark GitHub repository](https://github.com/apache/spark/blob/master/examples/src/main/java/org/apache/spark/examples/JavaSparkPi.java). You will also need the Kubernetes master API endpoint.
 
-Usually, your Spark Scala code is included in the Docker image that you are using. In this case, a Spark-3.0.0 Docker image is hosted in a public NetApp repository. You can run one of the Spark examples found there.
+Usually, your Spark code is included in the Docker image that you are using. In this case, a Spark-3.0.0 Docker image is hosted in a public NetApp repository. You can run one of the Spark examples found there.
 
 The Wave installation is configured with namespace `spark-jobs` and a serviceAccount `spark` that has the required Kubernetes access rights. Enter the following:
 
