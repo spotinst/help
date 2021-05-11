@@ -185,7 +185,7 @@ Check for a spark history bucket for your cluster by running: `aws s3 ls`
 
 The name of the bucket will be: `spark-history-[cluster name from yaml file]`
 
-When you create a Spark application from any heritage, the driver pod has a second container that writes event logs to S3. When the Spark application completes, there should be a new file in your S3 bucket subdirectory.
+When you submit a Spark application you can set the following annotation on the driver pod: `wave.spot.io/synceventlogs=true`. The driver pod will get a second container that writes event logs to S3. When the Spark application completes, there should be a new file in your S3 bucket subdirectory.
 
 ## Submit Spark Application with Spark-submit
 
@@ -193,7 +193,7 @@ Try out the system by using spark-submit to initiate a job in cluster mode. This
 
 Usually, your Spark Scala code is included in the Docker image that you are using. In this case, a Spark-3.0.0 Docker image is hosted in a public NetApp repository. You can run one of the Spark examples found there.
 
-The Wave installation is configured with namespace `spark-jobs` and a serviceAccount `Spark` that has the required Kubernetes access rights. Enter the following:
+The Wave installation is configured with namespace `spark-jobs` and a serviceAccount `spark` that has the required Kubernetes access rights. Enter the following:
 
 ```
 spark-submit \
@@ -205,6 +205,7 @@ spark-submit \
 --conf spark.kubernetes.container.image=public.ecr.aws/l8m2k1n1/netapp/spark:3.0.0 \
 --conf spark.kubernetes.authenticate.driver.serviceAccountName=spark \
 --conf spark.kubernetes.namespace=spark-jobs \
+--conf spark.kubernetes.driver.annotation.wave.spot.io/synceventlogs=true \
 --class org.apache.spark.examples.SparkPi \
 local:///opt/spark/examples/jars/spark-examples_2.12-3.0.0.jar 20000
 ```
@@ -227,6 +228,8 @@ spec:
   mainClass: org.apache.spark.examples.SparkPi
   mainApplicationFile: "local:///opt/spark/examples/jars/spark-examples_2.12-3.0.0.jar"
   sparkVersion: "3.0.0"
+  sparkConf:
+    "spark.kubernetes.driver.annotation.wave.spot.io/synceventlogs": "true"
   arguments:
   - "20000"
   restartPolicy:
