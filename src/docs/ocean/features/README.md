@@ -20,7 +20,6 @@ We are in the process of adding several Ocean features for use with AKS. The fol
 ### AKS Notes:
 
 - Ocean initiates actions in the Azure account. These actions are bound by the [Azure subscription limits and quotas](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/azure-subscription-service-limits) provided in the account.
-- Ocean for AKS currently supports [kubenet](https://kubernetes.io/docs/concepts/extend-kubernetes/compute-storage-net/network-plugins/#kubenet)-based clusters only.
 - Ocean for AKS currently supports import of Linux-based node pools only.
 
 ## Ocean for Kubernetes (GKE)
