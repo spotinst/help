@@ -18,11 +18,11 @@ This tutorial focuses on creating an EMR cluster from scratch and integrating it
 
 2. In the Use Cases page, click EMR.
 
-<img src="/elastigroup/_media/create-a-new-emr-cluster-01.png" width="234" height="100" />
+<img src="/elastigroup/_media/create-a-new-emr-cluster-01.png" width="274" height="82" />
 
 3. Choose Create a New Cluster, and click Select.
 
-<img src="/elastigroup/_media/create-a-new-emr-cluster-02.png" />
+<img src="/elastigroup/_media/create-a-new-emr-cluster-02.png" width="174" height="142" />
 
 ## Step 1: General
 1. On the General page, enter the following information:
@@ -31,7 +31,7 @@ This tutorial focuses on creating an EMR cluster from scratch and integrating it
    - Tags: Key and value pairs of any tags you want to give to the group
 2. Click Next
 
-<img src="/elastigroup/_media/create-a-new-emr-cluster-03.png" />
+<img src="/elastigroup/_media/create-a-new-emr-cluster-03.png" width="469" height="275" />
 
 ## Step 2: Compute
 
@@ -64,12 +64,12 @@ Enter the Compute settings as described below and then click Next.
   - Core & Task Security Group: Choose a core and task security group from the dropdown list.
 
 ### Instance Groups
-####Master
+#### Master
 - Instance Type: Choose one or more instance types from the dropdown list. Elastigroup will consider these types first when looking for an instance to bring up.
 - Target: The default is one instance for the master node. If you need multiple instances for the master node, see the instructions below.
 - Life Cycle: Choose Spot or On Demand.
 
-<img src="/elastigroup/_media/create-a-new-emr-cluster-05a.png" />
+<img src="/elastigroup/_media/create-a-new-emr-cluster-05a.png" width="189" height="139" />
 
 #### Add Multiple Master Nodes
 
@@ -84,7 +84,7 @@ The following conditions apply:
 - It is recommended to set terminationProtection to false in order terminate a multiple master node cluster after the EG is deleted. (This is not required for a single master node cluster.)
 
 Do the following:
-1. After you have entered all the information in the Compute and Scaling tabs, go to the [Review tab JSON view]() and click Edit Mode.
+1. After you have entered all the information in the Compute and Scaling tabs, go to the [Review tab JSON view](elastigroup/tools-integrations/elastic-mapreduce/create-a-new-emr-cluster?id=step-4-review-amp-create) and click Edit Mode.
 2. Under the attribute mrScaler.compute.instanceGroups.masterGroup,  change target to 3 and lifeCycle to ON_DEMAND.
 
 <img src="/elastigroup/_media/create-a-new-emr-cluster-06.png" />
@@ -134,7 +134,7 @@ In the Scaling tab, you can add Up Scaling and Down Scaling policies. For each p
   - Evaluation Periods: The number of consecutive periods to be evaluated before triggering a scale action.
   - Period: Choose the amount of time in a single period.
 
-<img src="/elastigroup/_media/create-a-new-emr-cluster-08.png" />
+<img src="/elastigroup/_media/create-a-new-emr-cluster-08.png" width="421" height="426" />
 
 - Action
   - Action Type: Choose the type of action to be taken.
@@ -142,7 +142,7 @@ In the Scaling tab, you can add Up Scaling and Down Scaling policies. For each p
 - Cooldown
   - Wait Period: After a scaling action, there will be no new scaling action until this amount of time (seconds) has passed.
 
-<img src="/elastigroup/_media/create-a-new-emr-cluster-09.png" />
+<img src="/elastigroup/_media/create-a-new-emr-cluster-09.png" width="417" height="214" />
 
 ### Scheduled Actions
 
@@ -163,9 +163,9 @@ For more information, see [Scheduling in Elastigroup](elastigroup/features/core-
 
 ## Step 4: Review & Create
 1. Review your settings in the Review tab.
-2. If you need to make any changes, such as [adding multiple master nodes](), switch to Edit mode and edit the JSON configuration.
+2. If you need to make any changes, such as [adding multiple master nodes](elastigroup/tools-integrations/elastic-mapreduce/create-a-new-emr-cluster?id=add-multiple-master-nodes), switch to Edit mode and edit the JSON configuration.
 
-<img src="/elastigroup/_media/create-a-new-emr-cluster-10.png" />
+<img src="/elastigroup/_media/create-a-new-emr-cluster-10.png" width="368" height="280" />
 
 3. Click Create and launch your new EMR cluster.
 
