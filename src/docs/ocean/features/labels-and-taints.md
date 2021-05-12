@@ -18,7 +18,7 @@ Some workloads are not as resilient to spot instance replacements as others, so 
 
 ### spotinst.io/node-lifecycle
 
-Ocean labels all nodes it manages with a label key spotinst.io/node-lifecycle. The label value is either `od` (on-demand) or `spot`, according to the lifecycle of the instance, and can assist when monitoring the cluster’s nodes in different scenarios.
+Ocean labels all nodes it manages with a label key `spotinst.io/node-lifecycle`. The label value is either `od` (on-demand) or `spot`, according to the lifecycle of the instance, and can assist when monitoring the cluster’s nodes in different scenarios.
 
 Some workloads are mission-critical and are not resilient to spot instance interruptions. These workloads have to run on on-demand instances at all times. To ensure that, apply node affinity to the `spotinst.io/node-lifecycle` label with value `od`. Unless that affinity is applied, Ocean continues to try to provide excess compute capacity (spot instances) for all workloads in the cluster.
 
