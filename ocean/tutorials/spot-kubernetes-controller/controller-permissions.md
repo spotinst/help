@@ -15,7 +15,7 @@ The permissions are divided into the following sections:
 
 Below you can see the permissions section of the Spot Controller YAML:
 
-```YAML
+```yaml
 # ------------------------------------------
 # Cluster Role
 # ------------------------------------------
@@ -98,7 +98,7 @@ In the example below, `list` and `get` permissions are given on CRD objects call
 
 The permissions expressed in the clusterRole called spotinst-kubernetes-cluster-controller-extentions are connected to the Spot controller using the clusterRoleBinding.
 
-```YAML
+```yaml
 spotinst-kubernetes-cluster-controller-extentions-binding.
 kind: ClusterRole
 apiVersion: rbac.authorization.k8s.io/v1
