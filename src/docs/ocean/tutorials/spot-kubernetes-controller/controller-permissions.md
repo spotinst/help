@@ -88,15 +88,15 @@ Some use cases require expanding the permissions granted to the Spot controller.
 
 Adding permission rules directly into the spotinst-kubernetes-cluster-controller clusterRole will not persist when the controller-auto update feature is enabled.
 
-In order to persist the permission rules, you need to do the following:
-Add a new clusterRole object in the cluster that includes the additional permissions. The permissions should be expressed by their API groups, resource names, and verbs.
-Add a clusterRoleBinding object in order to connect the new clusterRole and the Spot controller application. You may use the example below as a starting point and use it as a template.
+In order to persist the permission rules, do the following:
+1. Add a new clusterRole object in the cluster that includes the additional permissions. The permissions should be expressed by their API groups, resource names, and verbs.
+2. Add a clusterRoleBinding object in order to connect the new clusterRole and the Spot controller application. You may use the example below as a starting point and use the YAML text as a template.
 
 ### Example
 
 In the example below, `list` and `get` permissions are given on CRD objects called `customResource1` and `customResource2` that belong to an API group called `myCustomAPIGroupName.api.k8s.io`.
 
-The permissions expressed in the clusterRole called spotinst-kubernetes-cluster-controller-extentions are connected to the Spot controller using the clusterRoleBinding
+The permissions expressed in the clusterRole called spotinst-kubernetes-cluster-controller-extentions are connected to the Spot controller using the clusterRoleBinding.
 
 ```YAML
 spotinst-kubernetes-cluster-controller-extentions-binding.
