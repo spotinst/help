@@ -4,6 +4,8 @@ The Spot Controller is a pod that resides within your k8s cluster, enabling the 
 
 This page describes the permissions required by the Spot Controller. All permissions listed here can be viewed and edited in the controller's YAML file used in its installation process.
 
+## Permission Sections
+
 The permissions are divided into the following sections:
 
 - Read-Only: Permissions for fetching data – required for functional operation of Ocean/Elastigroup integrations.
@@ -80,3 +82,54 @@ rules:
   resources: ["pods"]
   verbs: ["get", "list", "patch", "update", "create", "delete"]
 ```
+
+## Cluster Role and Cluster Role Binding
+Some use cases require expanding the permissions granted to the Spot controller. For example, collecting Kubernetes Custom Resource Objects for cost analysis purposes. As CRDs extend the Kubernetes API, the controller must be aware of the specific extension name in order to query and collect the relevant data.
+
+Adding permission rules directly into the spotinst-kubernetes-cluster-controller clusterRole will not persist when the controller-auto update feature is enabled.
+
+In order to persist the permission rules, you need to do the following:
+Add a new clusterRole object in the cluster that includes the additional permissions. The permissions should be expressed by their API groups, resource names, and verbs.
+Add a clusterRoleBinding object in order to connect the new clusterRole and the Spot controller application. You may use the example below as a starting point and use it as a template.
+
+### Example
+
+In the example below, `list` and `get` permissions are given on CRD objects called `customResource1` and `customResource2` that belong to an API group called `myCustomAPIGroupName.api.k8s.io`.
+
+The permissions expressed in the clusterRole called spotinst-kubernetes-cluster-controller-extentions are connected to the Spot controller using the clusterRoleBinding
+
+```YAML
+spotinst-kubernetes-cluster-controller-extentions-binding.
+kind: ClusterRole
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: spotinst-kubernetes-cluster-controller-extentions
+rules:
+  # ----------------------------------------------------------------------------
+  # User to add relevant CRD permissions here
+  # example:
+  # - apiGroups: ["myCustomAPIGroupName.api.k8s.io"]
+  #   resources: ["customResource1", "customResource2"]
+  #   verbs: ["get", "list"]
+  # ----------------------------------------------------------------------------
+---
+# ------------------------------------------------------------------------------
+# Cluster Role Binding
+# ------------------------------------------------------------------------------
+kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: spotinst-kubernetes-cluster-controller-extentions-binding
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: spotinst-kubernetes-cluster-controller-extentions
+subjects:
+- kind: ServiceAccount
+  name: spotinst-kubernetes-cluster-controller
+  namespace: kube-system
+```
+
+## What's Next?
+- Learn how to [Update the Controller](ocean/tutorials/spot-kubernetes-controller/update-controller).
+- Learn about the latest updates in the [Controller Version History](ocean/tutorials/spot-kubernetes-controller/controller-version-history).
