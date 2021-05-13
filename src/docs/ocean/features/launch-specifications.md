@@ -77,6 +77,7 @@ The following is a list of attributes customizable per VNG in Ocean for GKE.
 - Restrict scale down (API only)
 - Root Volume size
 - Taints
+- Disk Type (API only)
 
 ### Roll per VNG
 
