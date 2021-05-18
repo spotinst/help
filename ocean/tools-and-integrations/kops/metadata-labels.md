@@ -9,6 +9,7 @@ Spot supports metadata labels to be configured by using the Spot instance group 
 | spotinst.io/fallback-to-ondemand \*                     | Specify whether fallback to on-demand instances should be enabled.                                                   | true    |
 | spotinst.io/grace-period \*                             | Specify a period of time, in seconds, that Ocean should wait before applying instance health checks.                 | none    |
 | spotinst.io/ocean-default-launchspec                    | Specify whether to use the InstanceGroup's spec as the default Launch Spec for the Ocean cluster.                    | none    |
+| spotinst.io/ocean-instance-types \*                     | Specify desired node type for the VNG                                                                                | none    |
 | spotinst.io/ocean-instance-types-whitelist \*           | Specify whether to whitelist specific instance types.                                                                | none    |
 | spotinst.io/ocean-instance-types-blacklist \*           | Specify whether to blacklist specific instance types.                                                                | none    |
 | spotinst.io/autoscaler-disabled \*                      | Specify whether the auto scaler should be disabled.                                                                  | false   |
