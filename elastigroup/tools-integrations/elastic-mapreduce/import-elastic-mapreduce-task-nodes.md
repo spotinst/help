@@ -1,50 +1,104 @@
-# Import Elastic MapReduce Task Nodes
+# Import an Existing EMR Cluster
 
-## Run your Task Nodes on Spot Instances with Elastigroup
+You can import an existing EMR cluster to Elastigroup. Elastigroup then manages the cluster, enabling you to take advantage of numerous optimization features and significant cost savings.
 
-This tutorial covers how to use Elastigroup to wrap your existing Master and Core nodes with Task nodes running on Spot instances while retaining Task node availability. Task nodes are optional additional nodes that provide additional parallel computing power. With Elastigroup you can run your Task nodes on Spot instances while retaining 100% availability.
+You can choose from two different strategies of importing the EMR cluster:
 
-Elastigroup also enables you to clone your existing EMR cluster into an Elastigroup, significantly increasing your potential savings. Learn how to clone your EMR cluster into an Elastigroup [here](elastigroup/tools-integrations/elastic-mapreduce/).
+*Clone*: Elastigroup copies the configuration of an existing environment (including terminated environments) and creates a new cluster with this configuration.
+
+*Wrap*: Elastigroup manages scaling of only the task nodes of an existing EMR cluster.
+
+The procedures below describe each import strategy in detail.
 
 ## Prerequisites
+- A verified Spot account
+- A running EMR cluster
 
-- A verified Elastigroup account.
-- A running EMR cluster.
+## Get Started
 
-## Step 1: Open the Creation Wizard
+1. In the left menu of the Spot console, click Elastigroup/Groups, and click Create Elastigroup.
 
-- Log in to the [Elastigroup Console](http://console.spotinst.com/) and navigate to the Creation Wizard by clicking on the Create button in the Elastigroups tab.
-- In the Creation Wizard, select EMR.
+<img src="/elastigroup/_media/tutorials-create-eg-from-scratch-01.png" />
 
-## Step 2: Add Elastigroup Description
+2. In the Use Cases page, click EMR.
 
-- Set the name and region of the Elastigroup. Click Next.
+<img src="/elastigroup/_media/create-a-new-emr-cluster-01.png" />
 
-## Step 3: Strategy and Configuration
+3. Choose Use an Existing Cluster, and click Select.
 
-- Under Strategy select Wrap.
-- Under Task nodes select the Instance Types, Lifecycle (Spot/On-Demand), Target and Minimum/Maximum number of instances. To ensure Spot availability select multiple Instance Types.
+<img src="/elastigroup/_media/import-emr-01.png" />
 
-<img src="/elastigroup/_media/import-elastic-mapreduce-task-nodes_1.png" />
+## General
 
-## Step 4: Scaling Policies (Optional)
+1. In the General tab, complete the following information:
+   - Name: The display name of the cluster
+   - Region: The AWS region of the instances in the cluster
+   - Description: A few words identifying the purpose of the cluster
+2. Click Next.
 
-- Elastigroup offers a wide variety of scaling options for EMR, both for Core and Task nodes. Learn more about Elastigroup's scaling policies for EMR [here](elastigroup/tools-integrations/elastic-mapreduce/scaling-policies-for-emr).
-- Click Next.
+## Strategy & Compute
+### Strategy
 
-## Step 5: Review and Create
+Choose the import strategy you would like to use and enter the relevant Origin Cluster or Source Cluster.
 
-The Creation Wizard prepares a json template to launch an Elastigroup with the EMR configuration. All that's left to do is click Create!
+<img src="/elastigroup/_media/import-emr-02.png" />
 
-<img src="/elastigroup/_media/import-elastic-mapreduce-task-nodes_2.png" />
+### Instance Groups
 
-## That's It!
+If you are cloning an environment, define your instance groups as follows:
 
-Elastigroup is now running Task nodes for your EMR cluster, congrats! You're now in the Elastigroup Manager view, where you can review, manage and monitor your running Elastigroup.
+Master
+- Instance Types: Choose one or more preferred instance types for the master.
+- Life Cycle: Choose Spot or On-Demand.
 
-## What's Next?
+Core
+- Instance Types: Choose one or more preferred instance types for the core.
+- Life Cycle: Choose Spot or On-Demand.
+- Target
+- Minimum
+- Maximum
+- Capacity Unit
 
-- [Clone your EMR cluster](elastigroup/tools-integrations/elastic-mapreduce/) into an Elastigroup.
-- Create Scaling Policies for EMR Core and Task nodes.
-- AWS's EMR can occasionally get stuck in Resizing status. Elastigroup has an EMR Auto-Recovery process that monitors the resizing process and if necessary launches a replacement instance group. To learn more about Elastigroup's EMR Auto-Recovery click [here](elastigroup/tools-integrations/elastic-mapreduce/).
-- Check out our [API Reference](https://docs.spot.io/api/) to learn how to create an Elastigroup to run your Task nodes using RESTful APIs.
+Task
+- Instance Types: Choose one or more preferred instance types for the task instances.
+- Life Cycle: Choose Spot or On-Demand.
+- Target
+- Minimum
+- Maximum
+- Capacity Unit
+
+<img src="/elastigroup/_media/import-emr-03.png" />
+
+> Tip: EMR Master and Core node instance groups must always have at least one instance running to avoid cluster termination. It is highly recommended to avoid running them on single spot instances by either setting the Target capacities to more than one instance or setting the Lifecycle to On-Demand.
+
+If you are wrapping an environment, you only need to configure the Task Instance Groups.
+
+### Tags
+
+If you are cloning an environment, you can define tags in the Tags section.
+
+### Scheduling
+
+You can schedule actions for the Task Instance Groups. For more information, see [Scheduled Actions](elastigroup/tools-integrations/elastic-mapreduce/create-a-new-emr-cluster?id=scheduled-actions).
+
+### Advanced
+
+If you are cloning an environment, you can define Advanced parameters as described below.
+
+- Set a Root Volume Size (GB)
+
+> Tip: Decreasing root volume size is not recommended and might affect the proper launch of the instance group or the cluster.
+
+- Include EMR Steps. This adds any steps configured in the original cluster to the clone in Elastigroup.
+
+## Scaling (Optional)
+
+You can define scaling policies as described in [Create a New EMR Cluster](elastigroup/tools-integrations/elastic-mapreduce/create-a-new-emr-cluster).
+
+## Review
+
+In the Review tab, you can review your EMR cluster configuration in the JSON format that Elastigroup will use to create the Elastigroup. If you need to make changes, you can go back to the other tabs and edit, or you can make your changes directly in the JSON. When you are finished reviewing, click Create.
+
+## What’s Next?
+- Amazon EMR can occasionally get stuck with a Resizing status during changes in an instance group capacity. In this case, the actual number of running instances will not match the request number. Learn how [Elastigroup EMR Auto-Recovery](elastigroup/tools-integrations/elastic-mapreduce/elastigroup-auto-recover-for-emr) process handles these situations.
+- Check out our [API Reference](https://docs.spot.io/api/) and learn how to create an Elastigroup to run your task nodes using RESTful APIs.
