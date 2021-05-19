@@ -22,11 +22,11 @@ The procedures below describe each import strategy in detail.
 
 2. In the Use Cases page, click EMR.
 
-<img src="/elastigroup/_media/create-a-new-emr-cluster-01.png" />
+<img src="/elastigroup/_media/create-a-new-emr-cluster-01.png" width="274" height="82" />
 
 3. Choose Use an Existing Cluster, and click Select.
 
-<img src="/elastigroup/_media/import-emr-01.png" />
+<img src="/elastigroup/_media/import-emr-01.png" width="174" height="142" />
 
 ## General
 
