@@ -41,6 +41,11 @@ If you wish to disable the auto-update, do the following:
 
 `kubectl apply -f configMap.yaml`
 
+4. Restart the controller pod in order to load the new changes:
+
+`kubectl -n kube-system delete pod <controller_pod_name>`
+
+
 ### Troubleshooting
 
 The process of pushing a new controller version involves a change in the end user environment, and therefore, is monitored by the Spot team. The upgrade is pushed gradually over a period of up to several days.
