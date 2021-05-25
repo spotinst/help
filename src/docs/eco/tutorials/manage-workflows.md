@@ -99,7 +99,7 @@ This enables you to pass a reservation's cost to accounts proportionate to the d
 
 ### Cross Account Savings Plan Cost Sharing
 
-This cost sharing option has the same type of cost distribution as shown above for Reservations, but for Savings Plans.
+This cost sharing option has the same type of cost distribution as shown above for reservations, but for savings plans.
 
 ### Remove Volume Discounts
 
