@@ -90,6 +90,17 @@ There are a variety of financial benefits from working with AWS which a business
 - Solution Provider Program
 - Other Credits (Any credits not addressed by the above.)
 
+### Cross Account RI Cost Sharing
+
+This enables you to pass a reservation's cost to accounts proportionate to the discounts they consume. You have the option to pass the cost in the following ways:
+- Effective Cost: Pass both the ongoing, monthly fees for RIs and the amortized, up-front costs.
+- Amortized Up-front: Pass only the amortized, up-front costs of reservations.
+- Recurring Cost: Pass only the ongoing, monthly fees for RIs.
+
+### Cross Account Savings Plan Cost Sharing
+
+This cost sharing option has the same type of cost distribution as shown above for Reservations, but for Savings Plans.
+
 ### Remove Volume Discounts
 
 In general, these margin opportunities represent savings given by AWS for volume consumption. Your business may opt to share these savings with end customers or retain them as margin.
