@@ -25,7 +25,7 @@ Some workloads are mission-critical and are not resilient to spot instance inter
 
 ### spotinst.io/gpu-type
 
-This label helps creating direct affinity to specific types of GPU hardware, freeing the user from the need to explicitly set and manage a list of VMs that contain the required hardware. Ocean automatically matches the relevant VMs (currently over AWS and GCP) for workloads having affinity rules using this label. 
+This label helps create direct affinity to specific types of GPU hardware, freeing the user from the need to explicitly set and manage a list of VMs that contain the required hardware. Ocean automatically matches the relevant VMs (currently with AWS and GCP) for workloads having affinity rules using this label. 
 Valid label values are:
 
 - `nvidia-tesla-v100`
