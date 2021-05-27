@@ -25,15 +25,19 @@ Some workloads are mission-critical and are not resilient to spot instance inter
 
 ### spotinst.io/gpu-type
 
-This label sets the GPU accelerator and applies only to GKE clusters. Valid values are:
+This label helps creating direct affinity to specific types of GPU hardware, freeing the user from the need to explicitly set and manage a list of VMs that contain the required hardware. Ocean automatically matches the relevant VMs (currently over AWS and GCP) for workloads having affinity rules using this label. 
+Valid label values are:
 
 - `nvidia-tesla-v100`
 - `nvidia-tesla-p100`
 - `nvidia-tesla-k80`
 - `nvidia-tesla-p4`
 - `nvidia-tesla-t4`
+- `nvidia-tesla-a100`
+- `nvidia-tesla-m60`
+- `amd-radeon-v520`
 
-> **Tip**: Avoid adding Spot labels under the launch specification node labels section. These labels should be added in your pod configuration only.
+> **Tip**: Avoid adding Spot labels under the virtual node group (launch specification) node labels section. These labels should be added in your pod configuration only.
 
 ## Examples
 
