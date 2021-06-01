@@ -132,4 +132,6 @@ To create a scaling policy, complete the following steps.
 
 ## What's Next?
 
-Learn how to [import existing Azure resources](elastigroup/azure/getting-started/import-an-existing-azure-resource.md) such as a Scale Set, an Application Gateway, a Classic Load Balancer or a VM.
+Learn how to:
+- [Import Existing Azure Resources](elastigroup/azure/getting-started/import-an-existing-azure-resource.md) such as a Scale Set, an Application Gateway, a Classic Load Balancer or a VM.
+- [Clone an Existing Elastigroup](elastigroup/tutorials/azure/clone-an-existing-elastigroup).

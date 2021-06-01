@@ -1338,6 +1338,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/tutorials/azure/azure-aks-engine"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/elastigroup/tutorials/azure/clone-an-existing-elastigroup</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/tutorials/azure/clone-an-existing-elastigroup"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/tutorials/azure/clone-an-existing-elastigroup"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/elastigroup/tutorials/azure/connect-elastigroup-to-application-gateway</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
