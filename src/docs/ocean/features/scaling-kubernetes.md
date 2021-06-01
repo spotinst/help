@@ -80,7 +80,7 @@ Node Termination process is as follows:
    - Mark all the pods that don't have PDB configured, and start evicting them in parallel
 3. For pods with PDB, Ocean performs the eviction in chunks and makes sure that it won't interfere with the minimal budget configured (For example a PDB .spec.minAvailable is 3, while there are 5 pods, 4 of them run on the node that is about to get scaled down; Ocean will evict 2 pods, wait for health signal and move to the next 2.
 4. An eviction is not completed until Ocean gets health signal from the new pod [readiness\liveness](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/) probe (when configured) and the old pod was successfully terminated ([wait for grace-period or after pre Stop command](https://kubernetes.io/docs/concepts/workloads/pods/pod/#termination-of-pods))
-5. Ocean provides draining timeout of 120 seconds by default (configurable) for every Pod before terminating it.
+5. Ocean provides draining timeout of 300 seconds by default (configurable) for every Pod before terminating it.
 
 <img src="/ocean/_media/features-scaling-k8s-02.png" />
 
