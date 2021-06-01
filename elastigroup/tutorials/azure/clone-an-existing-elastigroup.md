@@ -19,13 +19,13 @@ Before starting this procedure, you must have:
    - Clone from: Choose Elastigroup.
    - Select an existing Elastigroup: Choose an Elastigroup from the dropdown list.
 
-<img src="/elastigroup/_media/azure-clone-an-existing-eg-02.png" />
+<img src="/elastigroup/_media/azure-clone-an-existing-eg-02.png" width="305" height="210" />
 
 2. If the existing Elastigroup has a password configured, you will be prompted to enter a password. Enter the user credentials if prompted.
    - User Name: The administrator user name for the VMs in Azure. Cannot include reserved words.
    - Password: The administrator password to be used for the Azure VMs. The password may be Linux or Windows depending on the OS of the VM. The password you enter must comply with the relevant OS password rules.
 
-<img src="/elastigroup/_media/azure-clone-an-existing-eg-03.png" />
+<img src="/elastigroup/_media/azure-clone-an-existing-eg-03.png" width="295" height="176" />
 
 3. Click Continue.
 
@@ -33,7 +33,7 @@ Before starting this procedure, you must have:
 
 On the Review page, you can see all the configuration parameters that were copied directly from the existing Elastigroup.
 
-<img src="/elastigroup/_media/azure-clone-an-existing-eg-04.png" />
+<img src="/elastigroup/_media/azure-clone-an-existing-eg-04.png" width="311" height="336" />
 
 After viewing the summary of the configuration, just click Create to produce an exact copy of the existing Elastigroup.
 
