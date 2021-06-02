@@ -185,7 +185,7 @@ Check for a spark history bucket for your cluster by running: `aws s3 ls`
 
 The name of the bucket will be: `spark-history-[cluster name from yaml file]`
 
-When you submit a Spark application to the cluster you can set the following annotation on the driver pod: `wave.spot.io/synceventlogs=true`. The driver pod will get a second container that writes event logs to S3. When the Spark application completes, there should be a new file in your S3 bucket subdirectory.
+When you submit a Spark application to the cluster you can set the following annotation on the driver pod: `wave.spot.io/sync-event-logs=true`. The driver pod will get a second container that writes event logs to S3. When the Spark application completes, there should be a new file in your S3 bucket subdirectory.
 
 ## Submit Spark Application with Spark-submit
 
@@ -205,7 +205,7 @@ spark-submit \
 --conf spark.kubernetes.container.image=public.ecr.aws/l8m2k1n1/netapp/spark:3.0.0 \
 --conf spark.kubernetes.authenticate.driver.serviceAccountName=spark \
 --conf spark.kubernetes.namespace=spark-jobs \
---conf spark.kubernetes.driver.annotation.wave.spot.io/synceventlogs=true \
+--conf spark.kubernetes.driver.annotation.wave.spot.io/sync-event-logs=true \
 --class org.apache.spark.examples.SparkPi \
 local:///opt/spark/examples/jars/spark-examples_2.12-3.0.0.jar 20000
 ```
@@ -229,7 +229,7 @@ spec:
   mainApplicationFile: "local:///opt/spark/examples/jars/spark-examples_2.12-3.0.0.jar"
   sparkVersion: "3.0.0"
   sparkConf:
-    "spark.kubernetes.driver.annotation.wave.spot.io/synceventlogs": "true"
+    "spark.kubernetes.driver.annotation.wave.spot.io/sync-event-logs": "true"
   arguments:
   - "20000"
   restartPolicy:
@@ -295,20 +295,20 @@ Wave creates an S3 bucket for Spark application event logs during the cluster cr
 You can enable event log file syncing to S3 by setting an annotation on the Spark driver pod:
 
 ```
-"wave.spot.io/synceventlogs": "true"
+"wave.spot.io/sync-event-logs": "true"
 ```
 
 If running a Spark application with the Spark Operator, add the following to the `sparkConf` section of the Spark application YAML definition:
 
 ```YAML
 sparkConf:
-    "spark.kubernetes.driver.annotation.wave.spot.io/synceventlogs": "true"
+    "spark.kubernetes.driver.annotation.wave.spot.io/sync-event-logs": "true"
 ```
 
 If running a Spark application via spark-submit, add the following configuration argument:
 
 ```BASH
---conf spark.kubernetes.driver.annotation.wave.spot.io/synceventlogs=true
+--conf spark.kubernetes.driver.annotation.wave.spot.io/sync-event-logs=true
 ```
 
 If the annotation is set to true, Wave will automatically write event logs to the S3 bucket, to be served by the history server.
