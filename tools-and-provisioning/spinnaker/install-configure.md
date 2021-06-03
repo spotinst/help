@@ -39,8 +39,8 @@ $ /var/lib/dpkg/info/ca-certificates-java.postinst configure
 ## Add Spot as a Cloud Provider
 
 To add Spot to Spinnaker as a cloud provider, complete the steps below.
-1. Open a new terminal in addition to the one above (CMD+D) and ssh again.
-2. Run the following commands to add Spot as a cloud provider and register to your Spot Account:
+1. Open a new terminal in addition to the one above (CMD+D) and SSH again.
+2. Run the following commands to add Spot as a cloud provider and register to your Spot account:
 
 ```
 $ sudo su -
