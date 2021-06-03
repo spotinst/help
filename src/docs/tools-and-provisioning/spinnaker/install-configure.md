@@ -32,7 +32,7 @@ $ /var/lib/dpkg/info/ca-certificates-java.postinst configure
 
 3. The halyard service is running and can interact with the halyard client. At the end of this step, verify that you see Started Main as shown below.
 
-
+<img src="/tools-and-provisioning/_media/spinnaker-install-configure-01.png" />
 
 > **Tip**: You may see that the execution is less than 100% (as shown above). That is OK. Do not close the terminal window and do not stop the command.
 
