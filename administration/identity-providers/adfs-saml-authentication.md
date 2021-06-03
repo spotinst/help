@@ -25,7 +25,7 @@ Active Directory Federation Services (ADFS) is one of the leading Identity Provi
 5. Choose a Name for the RP and click Next.
 6. When asked for a certificate, click Next.
 7. Check `Enable support for the SAML 2.0 WebSSO protocol`.
-8. Enter the following URL: https://console.spotinst.com/auth/samlz
+8. Enter the following URL: https://console.spotinst.com/auth/saml
 
 <img src="/administration/_media/adfs-saml-04.png" />
 
