@@ -44,14 +44,14 @@ Create an Ubuntu instance with the following definitions:
 ## Install Software Tools
 
 1. Before setting up the Git, use the commands below to install the following:
-- git
-- curl
-- netcat
-- redis-server
-- openjdk-11-jdk
-- emacs
-- awscli
-- nginx
+   - git
+   - curl
+   - netcat
+   - redis-server
+   - openjdk-11-jdk
+   - emacs
+   - awscli
+   - nginx
 
 ```
 $ sudo su -
@@ -84,7 +84,6 @@ To set up SSH on the Git, complete the following steps:
 2. Add the newly created SSH Key as a trusted SSH Key:
 
 `$ ssh-add ~/.ssh/id_rsa`
-
    If you can’t add the key, run the following command and try again.
 
 ```
@@ -97,4 +96,4 @@ $ cat < ~/.ssh/id_rsa.pub
 
 ## What’s Next?
 
-Continue to the next stage of the Spinnaker integration where you will [set up Halyard and expose Spinnaker](tools-and-provisioning/spinnaker/install-configure).
+Continue to the next stage of the Spinnaker integration where you will [set up Halyard](tools-and-provisioning/spinnaker/install-configure) and expose Spinnaker to external users.
