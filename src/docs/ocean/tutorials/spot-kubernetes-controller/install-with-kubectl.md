@@ -33,7 +33,7 @@ data:
   proxy-url: <Proxy-URL> i.e http://hello-world.com:82/
   disable-auto-update: <"true"/"false">
   ```
-**Note:** As an alternative for using a secret - Create a yaml file configMap.yaml with all the relevant parameters (Token, Account_ID, Identifier):
+**Note:** As an alternative for using a secret, create yaml file configMap.yaml with all the relevant parameters (Token, Account_ID, Identifier):
 
 ```yaml
 kind: ConfigMap
@@ -62,6 +62,6 @@ Load the parameters into the cluster configuration:
 
 `kubectl apply -f https://s3.amazonaws.com/spotinst-public/integrations/kubernetes/cluster-controller/spotinst-kubernetes-cluster-controller-ga.yaml`
 
-Always download the YAML file from the Spot s3 bucket, the file is updated frequently.
+Always download the YAML file from the Spot S3 bucket. The file is updated frequently.
 
-The Controller is now installed and should be reporting its heartbeat to Spot.io
+The controller is now installed and should be reporting its heartbeat to Spot.io.
