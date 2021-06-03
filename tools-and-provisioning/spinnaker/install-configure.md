@@ -133,6 +133,7 @@ $ echo "host: 0.0.0.0" | tee \
 $ ./hal config security ui edit --override-base-url http://<INSTANCE_PUBLIC_DNS_NAME OR IP>:9000
 $ ./hal config security api edit --override-base-url http://<INSTANCE_PUBLIC_DNS_NAME OR IP>:8084
 $ ./hal config security api edit --cors-access-pattern http://<INSTANCE_PUBLIC_DNS_NAME OR IP>
+```
 
 8. Deploy the Spinnaker configuration for the second time.
 
