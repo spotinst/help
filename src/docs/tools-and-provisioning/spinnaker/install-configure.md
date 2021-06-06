@@ -147,7 +147,7 @@ $ ./hal config security api edit --cors-access-pattern http://<INSTANCE_PUBLIC_D
    - Deck
 
 ```
-$ ~/dev/spinnaker/logs
+$ cd ~/dev/spinnaker/logs
 $ less front50.log
 $ less gate.log
 $ less clouddriver.log
