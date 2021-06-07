@@ -80,6 +80,7 @@
     - [Cluster Management](wave/features/cluster-management)
     - [Wave Cluster Overview](wave/features/wave-cluster-overview)
     - [Cost Analysis](wave/features/cost-analysis)
+    - [Configuration](wave/features/configuration)
 - [**Elastigroup**](elastigroup/)
   - [Getting Started](elastigroup/getting-started/)
     - [Elastigroup for AWS](elastigroup/getting-started/elastigroup-for-aws)
