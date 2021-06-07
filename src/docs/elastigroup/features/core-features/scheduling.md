@@ -24,7 +24,7 @@ Spot uses a standard cron expression to schedule the action. The cron expression
 
 The cron expression `30 16 * * 1-5` defines a recurring Scale Up task that repeats at 16:30 UTC, Monday through Friday.
 
-<img src="/elastigroup/_media/corefeatures-scheduling-00.png" />
+<img src="/elastigroup/_media/corefeatures-scheduling-01.png" />
 
 ## Schedule a Task
 
@@ -32,12 +32,12 @@ You can schedule one or more tasks in Elastigroup when you create a new Elastigr
 
 1. In the overview page for an Elastigroup, open the Actions menu and click Edit Configuration.
 
-<img src="/elastigroup/_media/corefeatures-scheduling-00a.png" />
+<img src="/elastigroup/_media/corefeatures-scheduling-00.png" />
 
 2. Click the Scaling tab.
 3. Go down to the Scheduling area and click Add Task.
 
-<img src="/elastigroup/_media/corefeatures-scheduling-01.png" />
+<img src="/elastigroup/_media/corefeatures-scheduling-00a.png" width="514" height="144" />
 
 4. Choose the Action Type and fill in the additional information associated with that action type.
 5. Fill in the cron expression to schedule the action.
