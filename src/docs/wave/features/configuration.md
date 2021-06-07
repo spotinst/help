@@ -144,4 +144,9 @@ If an instance type is set, the pod will be run on an instance of that type. If 
 
 If the configuration option is not set, an appropriate instance type will be selected automatically.
 
+If an invalid instance type is specified it will be ignored. Valid instance types are:
+
+- Available in the cluster's region
+- Allowed according to the underlying Ocean cluster's instance type white- and blacklist configuration.
+
 If a node affinity rule specifying the allowed instance type(s) has been set on the pod through some other means, this configuration value will have no effect.
