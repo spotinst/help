@@ -140,13 +140,13 @@ Example
 - `"spark.kubernetes.driver.annotation.wave.spot.io/instance-type": "m5.2xlarge"`
 - `"spark.kubernetes.executor.annotation.wave.spot.io/instance-type": "r5,m5"`
 
-If an instance type is set, the pod will be run on an instance of that type. If an instance type family is set, the pod will be run on an instance from that family. If multiple instance types / instance type families are specified, the pod will be run on one of the allowed instance types.
+If an instance type is set, the pod will be run on an instance of that type. If an instance type family is set, the pod will be run on an instance type from that family. If multiple instance types / instance type families are set, the pod will be run on one of the allowed instance types.
 
 If the configuration option is not set, an appropriate instance type will be selected automatically.
 
 If an invalid instance type is specified it will be ignored. Valid instance types are:
 
 - Available in the cluster's region
-- Allowed according to the underlying Ocean cluster's instance type white- and blacklist configuration.
+- Allowed according to the Ocean cluster's instance type white- and blacklist configuration.
 
 If a node affinity rule specifying the allowed instance type(s) has been set on the pod through some other means, this configuration value will have no effect.
