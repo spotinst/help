@@ -38,7 +38,7 @@ The following messages are recorded in the log:
 The following are possible reasons for failure:
 
 - The roll has been stuck in the same roll status for too long.
-- The Kubernetes controller is not active.
+- The Ocean Controller is not active.
 - More than 50 percent of nodes could not be replaced.
 - There may be constraint mismatches or configuration mismatches such as labels, selectors, taints, or affinity rules.
 - There may be one or more unhealthy nodes.

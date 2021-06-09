@@ -1,6 +1,6 @@
 # Install with Terraform
 
-Spot provides a [Terraform Module](https://github.com/spotinst/terraform-spotinst-ocean-controller) to install and manage the Kubernetes controller.
+Spot provides a [Terraform Module](https://github.com/spotinst/terraform-spotinst-ocean-controller) to install and manage the Ocean Controller.
 
 The module uses the official Kubernetes provider to provision the required cluster resources.
 

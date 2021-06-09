@@ -48,7 +48,7 @@
     - [Migrate Existing Elastigroups to Ocean (EKS, kops)](ocean/tutorials/migrate-existing-egs-ekskops)
     - [Migrate Existing Elastigroups to Ocean (ECS)](ocean/tutorials/migrate-existing-egs-ecs)
     - [Connect a Fargate Service](elastigroup/tutorials/amazon-ecs/import-fargate-services-to-ecs-elastigroup)
-    - [Spot Kubernetes Controller](ocean/tutorials/spot-kubernetes-controller/)
+    - [Ocean Controller](ocean/tutorials/spot-kubernetes-controller/)
       - [Install with Helm](ocean/tutorials/spot-kubernetes-controller/install-with-helm)
       - [Install with Kubectl](ocean/tutorials/spot-kubernetes-controller/install-with-kubectl)
       - [Install with Terraform](ocean/tutorials/spot-kubernetes-controller/install-with-terraform)

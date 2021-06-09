@@ -1,6 +1,6 @@
 # Install with kubectl
 
-To install the Spot Kubernetes Controller, follow the steps below.
+To install the Ocean Controller, follow the steps below.
 
 1. Create a yaml file secret.yaml with the following parameters:
   ```yaml
@@ -12,7 +12,7 @@ To install the Spot Kubernetes Controller, follow the steps below.
   type: Opaque
   data:
     token: <TOKEN_encoded_base64>
-    account: <ACCOUNT_ID_encoded_base64> 
+    account: <ACCOUNT_ID_encoded_base64>
 ```
 Replace <TOKEN_encoded_base64>, <ACCOUNT_ID_encoded_base64> with the appropriate values.
 You may use the following command ran via terminal to get the relevant encoded outputs: ```echo -n 'input' | openssl base64```.

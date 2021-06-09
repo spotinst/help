@@ -5,7 +5,7 @@
 Complete all the procedures in this article including:
 
 - Configure Tortuga and Grid Engine
-- Install the Spot Controller
+- Install the Ocean Controller
 - Create an Elastigroup
 - Submit a Test Job
 
@@ -62,7 +62,7 @@ Finally, associate the hostgroup with the Tortuga software-profile:
 > echo "@elastigroup" >$SGE_ROOT/$SGE_CELL/common/config.execd-elastigroup
 ```
 
-## Install the Spot Controller
+## Install the Ocean Controller
 
 ```bash
 $ source $SGE_ROOT/default/common/settings.sh
@@ -75,7 +75,7 @@ bash
 
 ### Cluster Name
 
-All clusters must be uniquely identified with a Spot Account. To do this set SGE_CLUSTER_NAME during the install of the Spot Controller. Retain this value, which will be used again when creating the Elastigroup.
+All clusters must be uniquely identified with a Spot Account. To do this set SGE_CLUSTER_NAME during the install of the Ocean Controller. Retain this value, which will be used again when creating the Elastigroup.
 
 ### Create an Elastigroup
 
