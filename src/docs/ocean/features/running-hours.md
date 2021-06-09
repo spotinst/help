@@ -15,9 +15,9 @@ The example above shows a weekly schedule with running hours indicated in blue a
 
 ## Scaling Behavior (Ocean For Kubernetes)
 
-When a period of running time ends, Ocean automatically scales down the entire cluster to 0. During the off time, all nodes are down, the Spot controller is down, and it does not report any information to the autoscaler.
+When a period of running time ends, Ocean automatically scales down the entire cluster to 0. During the off time, all nodes are down, the Ocean Controller is down, and it does not report any information to the autoscaler.
 
-At the end of the off time, Ocean starts a single node from the default launch specification. Once the node is launched and registered to the Kubernetes cluster, the Spot controller is scheduled on that node. (Ocean always schedules the controller first in order to report the cluster state to the autoscaler.)
+At the end of the off time, Ocean starts a single node from the default launch specification. Once the node is launched and registered to the Kubernetes cluster, the Ocean Controller is scheduled on that node. (Ocean always schedules the controller first in order to report the cluster state to the autoscaler.)
 
 The controller immediately reports the unscheduled pods in the cluster to Ocean's autoscaler, and the autoscaler launches the appropriate types and number of nodes to provide the resources required by the current unscheduled pods.
 

@@ -14,7 +14,7 @@ Before you start the procedure in this tutorial, you need the following:
 
 - A K8s cluster running on AWS infrastructure
 - A K8s cluster connected to an Ocean cluster
-- Spot Controller version 1.0.44 installed in the cluster
+- Ocean Controller version 1.0.44 installed in the cluster
 - Kubernetes Cluster Autoscaler Deactivated
 
 > **Tip**: If the Kubernetes Autoscaler is active, there will be inconsistency in spinning up new nodes.

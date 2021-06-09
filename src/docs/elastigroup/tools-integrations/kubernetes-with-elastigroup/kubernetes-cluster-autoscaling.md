@@ -8,7 +8,7 @@ The main purpose of Elastigroup is to get pending pods a place to run while dyna
 
 Spot Elastigroup consists of two components:
 
-- Spot Controller (_SPT-CTL_): A pod that lives within your k8s cluster, responsible for collecting metrics and events. The events are being pushed via one way secured link to the second component for business logic and capacity scale up/down activities.
+- Ocean Controller (_SPT-CTL_): A pod that lives within your k8s cluster, responsible for collecting metrics and events. The events are being pushed via one way secured link to the second component for business logic and capacity scale up/down activities.
 - Spot Elastigroup SaaS: The SaaS is responsible to aggregate the metrics from the SPT-CTL and build the cluster topology. Using the aggregated metrics, the SaaS component is applying other business logic algorithms such as Spot Instances availability prediction and Instance size/type recommendation to increase performance and optimize costs via workload density instance pricing models (across On-Demand / Reserved and Spot Instances).
 
 <img src="/elastigroup/_media/kubernetes-cluster-autoscaling_1.jpg" />

@@ -103,7 +103,7 @@ nodeGroups:
 After you enter the creation command, the following major events take place:
 
 1. EKS Cluster Creation. The entire cluster creation process takes 20-25 minutes. You will see a moving bar on the right indicating that the process is progressing in the background and the EKS cluster is being created. If you examine your AWS console, you will see CloudFormation activity.
-2. Controller Installation. After the EKS cluster is created, the Spot Kubernetes Controller is installed. The cluster is registered with Spot and will be visible in the Spot console.
+2. Controller Installation. After the EKS cluster is created, the Ocean Controller is installed. The cluster is registered with Spot and will be visible in the Spot console.
 3. Wave Operator Installation. The wave-operator is installed and the wave components are registered.
 
 ### View Cluster State

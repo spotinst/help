@@ -47,7 +47,7 @@ helm install spot-controller spotinst/spotinst-kubernetes-cluster-controller \
 
 > **Tip**: Configure all chart values using the `set` command line argument or a values.yaml file.
 
-4. In case you want to upgrade the Spot controller's version:
+4. In case you want to upgrade the Ocean Controller's version:
 
 ```sh
 helm upgrade spot-controller spotinst/spotinst-kubernetes-cluster-controller \
@@ -55,7 +55,7 @@ helm upgrade spot-controller spotinst/spotinst-kubernetes-cluster-controller \
 	--version <VERSION>
 ```
 
-In order to discover the available Spot controller versions, use the following command:
+In order to discover the available Ocean Controller versions, use the following command:
 
 ```sh
 helm search spotinst/spotinst-kubernetes-cluster-controller \

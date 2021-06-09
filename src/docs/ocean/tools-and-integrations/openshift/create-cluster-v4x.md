@@ -37,7 +37,7 @@ Confirm or change the settings imported by the Ocean Creation Wizard.
 ## Step 3: Connectivity
 
 1. Create a Spot token or use an existing one.
-2. Install the Spot Controller Pod. Learn more about the Spot Controller Pod and Ocean's anatomy here.
+2. Install the Ocean Controller Pod. Learn more about the Ocean Controller Pod and Ocean's anatomy here.
 3. Ensure enable-csr-approval is set to True.
 4. Click Test Connectivity to ensure the controller functionality.
 

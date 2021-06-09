@@ -19,7 +19,7 @@ The procedures are described below.
 
 ## Quick Start
 
-Spot provides a docker image that packages all dependencies necessary to run aks-engine, create and integrate Elastigroup resources and launch the Spot Kubernetes Controller automatically.
+Spot provides a docker image that packages all dependencies necessary to run aks-engine, create and integrate Elastigroup resources and launch the Ocean Controller automatically.
 
 When the container is executed with the proper environment variables both aks-engine and spot-aks-engine import will create a fully provisioned Kubernetes cluster.
 

@@ -4,4 +4,4 @@ This section includes information to help you troubleshoot and resolve issues th
 
 ## What's Next?
 
-Learn about [troubleshooting the Spot Controller](ocean/troubleshooting/troubleshoot-controller.md).
+Learn about [troubleshooting the Ocean Controller](ocean/troubleshooting/troubleshoot-controller.md).

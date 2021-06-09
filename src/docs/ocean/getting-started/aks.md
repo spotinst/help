@@ -31,7 +31,7 @@ In this procedure, you will use the [Spot Console](http://console.spotinst.com/)
 
 ## Connectivity
 
-The Connectivity stage provides steps for you to install the [Spot Kubernetes Controller](ocean/tutorials/spot-kubernetes-controller/) and establish the connection between the Ocean SaaS backend and your cluster. In addition, this is where the import from the AKS cluster to Ocean starts.
+The Connectivity stage provides steps for you to install the [Ocean Controller](ocean/tutorials/spot-kubernetes-controller/) and establish the connection between the Ocean SaaS backend and your cluster. In addition, this is where the import from the AKS cluster to Ocean starts.
 
 ### Procedure
 
@@ -39,7 +39,7 @@ Complete the steps as described on the page and summarized below.
 
 1. Create a Spot token (or use an existing one) and copy it to the text box.
 2. Enter or automatically generate the Cluster Controller ID.
-3. Run the displayed script on a workstation with `kube config` set to the AKS cluster context. To confirm that the Spot Kubernetes Controller is functioning in the cluster, click Check Connectivity. Allow approximately two minutes for the test to complete.
+3. Run the displayed script on a workstation with `kube config` set to the AKS cluster context. To confirm that the Ocean Controller is functioning in the cluster, click Check Connectivity. Allow approximately two minutes for the test to complete.
 4. Run the displayed script on a workstation with `kube config` set to the AKS cluster context to kick off the import process from the AKS cluster to Ocean as described below in detail.
 5. Click Next.
 

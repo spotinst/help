@@ -2,13 +2,13 @@
 
 ## Introduction
 
-The Kubernetes controller supports [Persistent Volumes (PV)](https://kubernetes.io/docs/tasks/configure-pod-container/configure-persistent-volume-storage/#create-a-persistentvolume) and [Persistent Volume Claims (PVC)](https://kubernetes.io/docs/tasks/configure-pod-container/configure-persistent-volume-storage/#create-a-persistentvolumeclaim). Persistent Volumes are Kubernetes storage resources, while Persistent Volumes Claims are requests for storage resources which consume PVs. Pods using Persistent Volume Claims to request Persistent Volumes are placed only on nodes in the same Availability Zone as the Persistent Volume. You can utilize Persistent Volumes already created or create them dynamically by using storage classes.
+The Ocean Controller supports [Persistent Volumes (PV)](https://kubernetes.io/docs/tasks/configure-pod-container/configure-persistent-volume-storage/#create-a-persistentvolume) and [Persistent Volume Claims (PVC)](https://kubernetes.io/docs/tasks/configure-pod-container/configure-persistent-volume-storage/#create-a-persistentvolumeclaim). Persistent Volumes are Kubernetes storage resources, while Persistent Volumes Claims are requests for storage resources which consume PVs. Pods using Persistent Volume Claims to request Persistent Volumes are placed only on nodes in the same Availability Zone as the Persistent Volume. You can utilize Persistent Volumes already created or create them dynamically by using storage classes.
 
 > **Tip**: Currently we recommend using `storageClass` PVCs, which provision the PVs dynamically if needed and ensure that Pods can always be scheduled.
 
 ## How it Works
 
-The Kubernetes Controller monitors Pods for Persistent Volume Claims, ensuring that the [Autoscaler](elastigroup/tools-integrations/kubernetes-with-elastigroup/kubernetes-cluster-autoscaling) respects the PVCs during scaling events.
+The Ocean Controller monitors Pods for Persistent Volume Claims, ensuring that the [Autoscaler](elastigroup/tools-integrations/kubernetes-with-elastigroup/kubernetes-cluster-autoscaling) respects the PVCs during scaling events.
 
 ## When Scaling Up
 

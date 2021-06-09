@@ -26,7 +26,7 @@ Complete the steps described in the Create Cluster page. The steps are also desc
 
 ## Step 1: Create a Spot Token or Use an Existing One
 
-Click Generate Token or use an existing Spot token. If you already have a token, you can paste it in the text box. The Spot token will be used later in the process to authenticate the Spot Kubernetes Controller with Ocean SaaS, so be sure to save a copy in a safe place.
+Click Generate Token or use an existing Spot token. If you already have a token, you can paste it in the text box. The Spot token will be used later in the process to authenticate the Ocean Controller with Ocean SaaS, so be sure to save a copy in a safe place.
 
 <img src="/ocean/_media/new-eks-step1.png" />
 
@@ -51,7 +51,7 @@ To launch the stack mark the checkbox at the bottom confirming CloudFormation wi
 
 Before you can continue to the next step, CloudFormation must complete creation of all of the resources in the EKS stack. You can check the status on the CloudFormation page that opens.
 
-## Step 4: Install the Spot Kubernetes Controller on the Newly Created EKS Cluster
+## Step 4: Install the Ocean Controller on the Newly Created EKS Cluster
 
 1. Connect your workstation to the EKS cluster by copying the command shown in Step 4 of the Create page and running it in your command-line interface. Note that the command must include the Ocean Cluster Name that you entered previously.
 
