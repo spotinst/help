@@ -6,9 +6,6 @@ It is really easy to get started with Ocean using Terraform, as it provides a si
 
 To get started, complete the procedures described in the [Spot Ocean Amazon EKS Terraform](https://github.com/spotinst/terraform-spotinst-ocean-eks#spotinst-ocean-amazon-eks-terraform-module) module or click below to view the video tutorial.
 
-[![Terraform and Spot Ocean](http://img.youtube.com/vi/ffGmMlpPsPE/0.jpg)](http://www.youtube.com/watch?v=ffGmMlpPsPE "Terraform and Spot Ocean")
-
-
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ffGmMlpPsPE?start=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## What's Next
