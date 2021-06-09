@@ -4,15 +4,12 @@ Terraform is a tool for building, changing, and versioning infrastructure safely
 
 It is really easy to get started with Ocean using Terraform, as it provides a simple flow to create an EKS cluster.
 
-To get started, complete the procedures described in the [Spot Ocean Amazon EKS Terraform](https://github.com/spotinst/terraform-spotinst-ocean-eks#spotinst-ocean-amazon-eks-terraform-module) module or view the video tutorial.
+To get started, complete the procedures described in the [Spot Ocean Amazon EKS Terraform](https://github.com/spotinst/terraform-spotinst-ocean-eks#spotinst-ocean-amazon-eks-terraform-module) module or click below to view the video tutorial.
 
 [![Terraform and Spot Ocean](http://img.youtube.com/vi/ffGmMlpPsPE/0.jpg)](http://www.youtube.com/watch?v=ffGmMlpPsPE "Terraform and Spot Ocean")
 
 
-[![Terraform and Spot Ocean](ocean/_media/video-terraform-and-spot-ocean.png)](https://youtu.be/ffGmMlpPsPE "Terraform and Spot Ocean")
-
-
-[![Terraform and Spot Ocean](ocean/_media/video-terraform-and-spot-ocean.png)](http://www.youtube.com/watch?v=ffGmMlpPsPE "Terraform and Spot Ocean")
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ffGmMlpPsPE?start=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## What's Next
 
