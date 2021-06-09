@@ -35,7 +35,7 @@ To complete this tutorial, gather the following information:
   - Autoscaler labels
   - User-data script
   - AMI ID
-- Ensure all the Elastigroups in the cluster use the same Cluster Identifier (ID). This is used to connect the existing Spot Controller installed on the Kubernetes cluster to Ocean.
+- Ensure all the Elastigroups in the cluster use the same Cluster Identifier (ID). This is used to connect the existing Ocean Controller installed on the Kubernetes cluster to Ocean.
 
 ### Step 1: Create the Ocean Cluster
 

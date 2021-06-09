@@ -1,6 +1,6 @@
 # Update the Controller
 
-In this tutorial, you will learn how to update the Spot controller in your Kubernetes cluster.
+In this tutorial, you will learn how to update the Ocean Controller in your Kubernetes cluster.
 
 ## Prerequisites
 
@@ -22,7 +22,7 @@ If the controller is already installed, this action will start a roll in the clu
 
 ## Controller Auto-Update
 
-The Spot Kubernetes Controller supports auto-update. When a new version of the controller is available, it will automatically be updated. By default, the auto-update is enabled.
+The Ocean Controller supports auto-update. When a new version of the controller is available, it will automatically be updated. By default, the auto-update is enabled.
 
 As a best-practice, we highly recommend leaving Auto-Update enabled due to the fact that the update procedure is silent and requires no downtime. In addition, every controller version update improves stability and performance, collects new metrics, and supports new K8s versions.
 
@@ -32,7 +32,7 @@ The configurations of the controller deployment and the clusterRole it is bound 
 
 If you wish to disable the auto-update, do the following:
 
-1. Edit your Spot controller configMap.yaml file (spotinst-kubernetes-cluster-controller-config), as shown [here](ocean/tutorials/spot-kubernetes-controller/install-with-kubectl.md).
+1. Edit your Ocean Controller configMap.yaml file (spotinst-kubernetes-cluster-controller-config), as shown [here](ocean/tutorials/spot-kubernetes-controller/install-with-kubectl.md).
 2. Add the following line to the file, under the data section:
 
 `disable-auto-update: "true"`

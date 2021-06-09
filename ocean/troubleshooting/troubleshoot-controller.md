@@ -1,6 +1,6 @@
 # Troubleshoot Controller
 
-If the banner below appears at the top of your Ocean dashboard, your Spot Controller is not reporting a heartbeat to the Ocean cluster.
+If the banner below appears at the top of your Ocean dashboard, your Ocean Controller is not reporting a heartbeat to the Ocean cluster.
 
 To troubleshoot the issue, complete each step below until you find the issue.
 
@@ -33,7 +33,7 @@ To see if the controller is running, run the following command on your kubectl e
 
 ## Step 3: One Controller Pod in Cluster?
 
-Ensure there is only one Spot controller pod in the cluster. If there is more than one, do the following:
+Ensure there is only one Ocean Controller pod in the cluster. If there is more than one, do the following:
 
 1. Delete the old deployment using the command below.
 

@@ -30,7 +30,7 @@ Select 'Connect Existing EKS Cluster' from the creation use case page. Fill in t
   ```
   kubectl get svc
   ```
-- Install the [Kubernetes Controller](ocean/tutorials/spot-kubernetes-controller/)
+- Install the [Ocean Controller](ocean/tutorials/spot-kubernetes-controller/)
 
 ## Step 3: Update AWS Authentication Config-Map
 

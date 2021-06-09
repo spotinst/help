@@ -46,7 +46,7 @@ In the left menu of the Spot Console, click Ocean/Cloud Clusters, and click Crea
 ## Step 3: Connectivity
 
 1. Create a Spot token or use an existing one.
-2. Install the Spot Controller. You can do this using [Helm](tutorials/spot-kubernetes-controller/install-with-helm) or by running [kubectl](tutorials/spot-kubernetes-controller/install-with-kubectl) commands.
+2. Install the Ocean Controller. You can do this using [Helm](tutorials/spot-kubernetes-controller/install-with-helm) or by running [kubectl](tutorials/spot-kubernetes-controller/install-with-kubectl) commands.
 3. Click Test Connectivity to ensure the controller functionality.
 
 <img src="/ocean/_media/gke-connectivity.png" />
@@ -55,7 +55,7 @@ In the left menu of the Spot Console, click Ocean/Cloud Clusters, and click Crea
 
 ### For a Private GKE Cluster
 
-1. For a private GKE cluster, install the Spot Kubernetes Controller with the following command:
+1. For a private GKE cluster, install the Ocean Controller with the following command:
 
 ```sh
 kubectl apply -f https://spotinst-public.s3.amazonaws.com/integrations/kubernetes/cluster-controller/spotinst-kubernetes-cluster-controller-gcr.yaml

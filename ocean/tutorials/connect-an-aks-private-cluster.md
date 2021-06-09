@@ -80,14 +80,14 @@ Use the automatically generated Cluster Controller ID or enter a new one.
 ### Step 3: Install Controller
 
 Instead of Step 3 on the Connectivity page, complete a procedure that consists of the following parts:
-- Create Kubernetes Controller configMap
+- Create Ocean Controller configMap
 - Install the Controller
 
-The steps are described below.
+The steps are described below.                    
 
-#### Create Kubernetes Controller configMap
+#### Create Ocean Controller configMap
 
-The purpose of this procedure is to populate the environment variables needed for the Spot Kubernetes Controller to run.
+The purpose of this procedure is to populate the environment variables needed for the Ocean Controller to run.
 
 1. Create a configMap.yaml file in the format shown below. Descriptions of the attributes are also provided below.
 
@@ -120,7 +120,7 @@ data:
 
 #### Install the Controller
 
-This procedure applies the Spot Kubernetes Controller template which creates the following Kubernetes resources in the cluster:
+This procedure applies the Ocean Controller template which creates the following Kubernetes resources in the cluster:
 - Deployment
 - ClusterRole
 - ClusterRoleBinding
