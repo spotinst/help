@@ -1535,8 +1535,7 @@ export const aliases = (() => {
     "/spotinst-video-tutorials/ocean/workload-migration/":
       "/connect-your-cloud-provider/",
 
-    "/design-documents/msp/msp-enrollment":
-      "/eco/tutorials/msp-enrollment",
+    "/design-documents/msp/msp-enrollment": "/eco/tutorials/msp-enrollment",
   };
 
   for (let [key, value] of Object.entries(map)) {

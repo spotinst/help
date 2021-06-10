@@ -93,6 +93,7 @@ There are a variety of financial benefits from working with AWS which a business
 ### Cross Account RI Cost Sharing
 
 This enables you to pass a reservation's cost to accounts proportionate to the discounts they consume. You have the option to pass the cost in the following ways:
+
 - Effective Cost: Pass both the ongoing, monthly fees for RIs and the amortized, up-front costs.
 - Amortized Up-front: Pass only the amortized, up-front costs of reservations.
 - Recurring Cost: Pass only the ongoing, monthly fees for RIs.

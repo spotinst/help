@@ -5,16 +5,19 @@ You can create a new Elastigroup in Spot by cloning an existing Elastigroup. The
 ## Prerequisites
 
 Before starting this procedure, you must have:
+
 - An [Azure subscription connected to Spot](connect-your-cloud-provider/azure-account)
 - At least one [Elastigroup in your Spot account](elastigroup/getting-started/create-an-elastigroup-for-azure)
 
 ## Get Started
+
 1. In the Spot console under Elastigroup, click Groups.
 2. On the upper right of the Elastigroups page, click Create Elastigroup and choose Clone.
 
 <img src="/elastigroup/_media/azure-clone-an-existing-eg-01.png" />
 
 ## Choose Elastigroup
+
 1. In the Clone popup, complete the following:
    - Clone from: Choose Elastigroup.
    - Select an existing Elastigroup: Choose an Elastigroup from the dropdown list.

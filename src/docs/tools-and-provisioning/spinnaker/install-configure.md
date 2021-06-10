@@ -3,6 +3,7 @@
 This page describes the second part of the Spinnaker integration which includes installing Halyard and setting up Spot as a cloud provider in Spinnaker. Halyard is the configuration service which manages the lifecycle of Spinnaker services.
 
 Complete the following procedures as described below:
+
 - Install Halyard
 - Add Spot as a Cloud Provider
 - Define Time Zone
@@ -14,6 +15,7 @@ Complete the following procedures as described below:
 Before starting the procedures on this page, you must complete the procedures on [Set up Environment as Local Git](tools-and-provisioning/spinnaker/set-up-environment-as-local-git).
 
 ## Install Halyard
+
 1. Use the commands below to install Git and the Spot environment:
 
 ```
@@ -39,6 +41,7 @@ $ /var/lib/dpkg/info/ca-certificates-java.postinst configure
 ## Add Spot as a Cloud Provider
 
 To add Spot to Spinnaker as a cloud provider, complete the steps below.
+
 1. Open a new terminal in addition to the one above (CMD+D) and SSH again.
 2. Run the following commands to add Spot as a cloud provider and register to your Spot account:
 
@@ -65,6 +68,7 @@ For example, if you wish to change the time zone to UTC, enter:
 ## Complete Environment Setup
 
 To finish setting up the environment, complete the following steps:
+
 1. Set up Halyard environment from a local git using the following command:
 
 ```

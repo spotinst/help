@@ -3,6 +3,7 @@
 This page describes the prerequisites and procedures for setting up the local Git environment for using Spinnaker.
 
 The required procedures include:
+
 - Set up Ubuntu Instance
 - Install Software Tools
 - Set up Git SSH
@@ -14,6 +15,7 @@ Once you have completed these procedures, continue to the next page, [Set up Hal
 The procedures for setting up and completing the Spinnaker integration with Spot assume a working knowledge of and experience working with Spinnaker.
 
 Before you start this procedure, you must have the following:
+
 - Spot account ID
 - Spot token
 
@@ -36,6 +38,7 @@ In addition, the Elastigroup must include a load balancer.
 The procedures and commands in this document are written for use on an Ubuntu instance. If you set up an instance using a different OS, you will need to make the appropriate adjustments to the commands used.
 
 Create an Ubuntu instance with the following definitions:
+
 - Security group with two inbound rules for allowing an SSH connection and an inbound rule with your IP address.
 - Instance with at least 30 GB in root volume.
 - Instance type m5.2xlarge recommended.
@@ -77,6 +80,7 @@ $ npm install -g yarn
 ## Set up Git SSH
 
 To set up SSH on the Git, complete the following steps:
+
 1. Generate a new SSH key with the following command and supply your email address:
 
 `$ ssh-keygen -t rsa -b 4096 -C "<EMAIL_ADDRESS>"`
@@ -84,7 +88,7 @@ To set up SSH on the Git, complete the following steps:
 2. Add the newly created SSH Key as a trusted SSH Key:
 
 `$ ssh-add ~/.ssh/id_rsa`
-   If you can’t add the key, run the following command and try again.
+If you can’t add the key, run the following command and try again.
 
 ```
 $ eval "$(ssh-agent)"

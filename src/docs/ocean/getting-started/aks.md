@@ -93,5 +93,6 @@ Upon successful validation, you will advance to the Compute stage of the wizard 
 You’re all set! Ocean will now ensure the most cost-effective capacity and sizing possible for your cluster.
 
 ## What’s Next?
+
 - Learn how to [Connect an AKS Private Cluster](ocean/tutorials/connect-an-aks-private-cluster).
 - Learn more about Ocean’s [scaling](ocean/features/scaling-kubernetes) and [headroom](ocean/features/headroom) features.

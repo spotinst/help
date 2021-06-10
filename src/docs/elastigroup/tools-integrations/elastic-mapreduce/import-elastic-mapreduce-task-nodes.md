@@ -4,13 +4,14 @@ You can import an existing EMR cluster to Elastigroup. Elastigroup then manages 
 
 You can choose from two different strategies of importing the EMR cluster:
 
-*Clone*: Elastigroup copies the configuration of an existing environment (including terminated environments) and creates a new cluster with this configuration.
+_Clone_: Elastigroup copies the configuration of an existing environment (including terminated environments) and creates a new cluster with this configuration.
 
-*Wrap*: Elastigroup manages scaling of only the task nodes of an existing EMR cluster.
+_Wrap_: Elastigroup manages scaling of only the task nodes of an existing EMR cluster.
 
 The procedures below describe each import strategy in detail.
 
 ## Prerequisites
+
 - A verified Spot account
 - A running EMR cluster
 
@@ -37,6 +38,7 @@ The procedures below describe each import strategy in detail.
 2. Click Next.
 
 ## Strategy & Compute
+
 ### Strategy
 
 Choose the import strategy you would like to use and enter the relevant Origin Cluster or Source Cluster.
@@ -48,10 +50,12 @@ Choose the import strategy you would like to use and enter the relevant Origin C
 If you are cloning an environment, define your instance groups as follows:
 
 Master
+
 - Instance Types: Choose one or more preferred instance types for the master.
 - Life Cycle: Choose Spot or On-Demand.
 
 Core
+
 - Instance Types: Choose one or more preferred instance types for the core.
 - Life Cycle: Choose Spot or On-Demand.
 - Target
@@ -60,6 +64,7 @@ Core
 - Capacity Unit
 
 Task
+
 - Instance Types: Choose one or more preferred instance types for the task instances.
 - Life Cycle: Choose Spot or On-Demand.
 - Target
@@ -100,5 +105,6 @@ You can define scaling policies as described in [Create a New EMR Cluster](elast
 In the Review tab, you can review your EMR cluster configuration in the JSON format that Elastigroup will use to create the Elastigroup. If you need to make changes, you can go back to the other tabs and edit, or you can make your changes directly in the JSON. When you are finished reviewing, click Create.
 
 ## What’s Next?
+
 - Amazon EMR can occasionally get stuck with a Resizing status during changes in an instance group capacity. In this case, the actual number of running instances will not match the request number. Learn how [Elastigroup EMR Auto-Recovery](elastigroup/tools-integrations/elastic-mapreduce/elastigroup-auto-recover-for-emr) process handles these situations.
 - Check out our [API Reference](https://docs.spot.io/api/) and learn how to create an Elastigroup to run your task nodes using RESTful APIs.
