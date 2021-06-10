@@ -2,7 +2,7 @@
 
 In this procedure, you complete the steps to create an Amazon EKS cluster directly from the Spot Console and an Ocean object to manage the cluster worker nodes.
 
-[Video Tutorial](https://youtu.be/h7off6kX6OI)
+<iframe width="350" height="350" src="https://www.youtube.com/embed/h7off6kX6OI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Prerequisites
 
