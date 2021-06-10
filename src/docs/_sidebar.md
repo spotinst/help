@@ -238,6 +238,7 @@
     - [Review RI Spending Analysis](eco/tutorials/review-ri-spending-analysis)
     - [Choose RI Strategy](eco/tutorials/choose-a-strategy)
     - [View your Savings](eco/tutorials/view-your-savings)
+    - [MSP Enrollment](eco/tutorials/msp-enrollment)
     - [Manage Subsets](cloud-analyzer/tutorials/manage-subsets)
     - [Manage Workflows](eco/tutorials/manage-workflows)
     - [View Workflow Details](eco/tutorials/view-workflow-details)

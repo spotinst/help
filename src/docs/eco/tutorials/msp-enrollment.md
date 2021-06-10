@@ -2,7 +2,7 @@
 
 There are several use cases for MSP enrollment. This use case is for AWS MSPs with administrative access to their MPA.
 
-Some of the enrollment steps are manual. We are actively working to make this process a streamlined, self-service experience for future users.
+Although some of the enrollment steps are manual, we are actively working to make this process a streamlined, self-service experience for future users.
 
 This procedure is for one MPA. If more than one MPA needs to be registered, this process will need to be repeated for each.
 
@@ -55,6 +55,6 @@ Once you have validated the billing workflows and are comfortable with them, you
 
 > Please associate the following end-customer organizations with these subsets, going forward. We would like our end customers to be able to log into the Spot console. Once you have confirmed, we will create their users and manage access.
 >
-> \<Subset name\> : \<Spot console email\> : < Spot Org ID>
+> \<Subset name\> : \<Spot console email\> : \<Spot Org ID\>
 >
-> \<Subset name\> : \<Spot console email\> : < Spot Org ID>
+> \<Subset name\> : \<Spot console email\> : \<Spot Org ID\>
