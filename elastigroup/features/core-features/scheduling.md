@@ -7,6 +7,7 @@ Automate your regular scaling processes with Elastigroup and ensure that you are
 ## Action Types
 
 You can schedule a number of different action types. Schedulable action types include:
+
 - Set Capacity Range: Update the capacity settings for the Elastigroup including Target, Minimum, and Maximum.
 - Automatic Deployment: Start a [deployment](elastigroup/tutorials/elastigroup-actions-menu/deploy-or-roll-elastigroup) at a defined time. You also specify the Batch Size (as a percent of the total deployment) and Grace Period (in seconds).
 - Scale Up: Specify the number of new instances to launch.

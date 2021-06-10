@@ -99,6 +99,7 @@ Ocean provides a serverless experience in which the specific instances don’t m
 Ocean serves such use cases with the ability to define a list of preferred instance types, out of all types allowed in the VNG. When your preferences are defined, Ocean takes them into consideration alongside other considerations when scaling up. In this way, Ocean strives towards a well-distributed and highly available spot-instance based VNG that uses preferred types as broadly as possible.
 
 In each scale up action, Ocean provisions the new instances from the preferred types, using:
+
 - 100% of the new instances, if three or more different preferred types are defined.
 - 0-80% of the new instances, when 0-2 different preferred types are defined.
 

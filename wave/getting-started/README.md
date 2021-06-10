@@ -290,7 +290,7 @@ To exit the notebook and terminate the Spark application, go to the File menu an
 
 ## View Spark History
 
-Wave creates an S3 bucket for Spark application event logs during the cluster creation process. The name of the bucket follows the `spark-history-${CLUSTERNAME}` pattern. For example, the bucket created for the cluster specified above would be called *spark-history-wave-abcde*. The history server installed on the Wave cluster serves the Spark UI from event log files present in this bucket.
+Wave creates an S3 bucket for Spark application event logs during the cluster creation process. The name of the bucket follows the `spark-history-${CLUSTERNAME}` pattern. For example, the bucket created for the cluster specified above would be called _spark-history-wave-abcde_. The history server installed on the Wave cluster serves the Spark UI from event log files present in this bucket.
 
 You can enable event log file syncing to S3 by setting an annotation on the Spark driver pod:
 

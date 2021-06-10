@@ -7,6 +7,7 @@ Amazon EMR provides a managed big data framework that enables you to easily add 
 This tutorial focuses on creating an EMR cluster from scratch and integrating it into Elastigroup. If you already run an EMR cluster on AWS, you can [import the cluster to Elastigroup](elastigroup/tools-integrations/elastic-mapreduce/import-elastic-mapreduce-task-nodes) by either wrapping your existing cluster with spot instance task nodes or cloning the cluster to an Elastigroup.
 
 ## Prerequisites
+
 - A verified Spot account
 - AWS Key Pair
 
@@ -25,6 +26,7 @@ This tutorial focuses on creating an EMR cluster from scratch and integrating it
 <img src="/elastigroup/_media/create-a-new-emr-cluster-02.png" width="174" height="142" />
 
 ## Step 1: General
+
 1. On the General page, enter the following information:
    - Name: The name of your Elastigroup
    - Description: A few words describing the purpose of the Elastigroup
@@ -38,12 +40,14 @@ This tutorial focuses on creating an EMR cluster from scratch and integrating it
 Enter the Compute settings as described below and then click Next.
 
 ### Region/Availability Zone
+
 - Region: Click on the AWS region for the Elastigroup.
 - Availability Zone: Choose one or more availability zones (AZs) in the dropdown for the chosen region.
 
 <img src="/elastigroup/_media/create-a-new-emr-cluster-04.png" />
 
 ### EMR Cluster Details
+
 - EMR Version: Choose the version to use from the dropdown list.
 - Security Options
   - Key Pair
@@ -57,6 +61,7 @@ Enter the Compute settings as described below and then click Next.
 <img src="/elastigroup/_media/create-a-new-emr-cluster-05.png" />
 
 ### Network
+
 - VPC: Choose a VPC from the dropdown list.
 - Subnets: Choose one or more subnets from the dropdown list.
 - Security Groups
@@ -64,7 +69,9 @@ Enter the Compute settings as described below and then click Next.
   - Core & Task Security Group: Choose a core and task security group from the dropdown list.
 
 ### Instance Groups
+
 #### Master
+
 - Instance Type: Choose one or more instance types from the dropdown list. Elastigroup will consider these types first when looking for an instance to bring up.
 - Target: The default is one instance for the master node. If you need multiple instances for the master node, see the instructions below.
 - Life Cycle: Choose Spot or On Demand.
@@ -76,6 +83,7 @@ Enter the Compute settings as described below and then click Next.
 If you need to use multiple master nodes, you can configure this in the JSON configuration in the Review tab. Do this after you have finished filling out all the other tabs.
 
 The following conditions apply:
+
 - EC2 cannot be Classic.
 - The EMR version must be 5.23.0 or higher.
 - You can use one or three master nodes. These are the only valid options.
@@ -84,8 +92,9 @@ The following conditions apply:
 - It is recommended to set terminationProtection to false in order terminate a multiple master node cluster after the EG is deleted. (This is not required for a single master node cluster.)
 
 Do the following:
+
 1. After you have entered all the information in the Compute and Scaling tabs, go to the [Review tab JSON view](elastigroup/tools-integrations/elastic-mapreduce/create-a-new-emr-cluster?id=step-4-review-amp-create) and click Edit Mode.
-2. Under the attribute mrScaler.compute.instanceGroups.masterGroup,  change target to 3 and lifeCycle to ON_DEMAND.
+2. Under the attribute mrScaler.compute.instanceGroups.masterGroup, change target to 3 and lifeCycle to ON_DEMAND.
 
 <img src="/elastigroup/_media/create-a-new-emr-cluster-06.png" />
 
@@ -95,6 +104,7 @@ Do the following:
 > Tip: You can also use [elastigroupAwsEmrCreate](https://docs.spot.io/api/#operation/elastigroupAwsEmrCreate) in OpenAPI to create the cluster and configure multiple master nodes as described above.
 
 #### Core
+
 - Instance Type: Choose one or more instance types from the dropdown list. Elastigroup will consider these types first when looking for an instance to bring up.
 - Capacity Unit: Choose Instance or vCPU.
 - Target: The desired number of instances or vCPU to run most of the time.
@@ -103,6 +113,7 @@ Do the following:
 - Life Cycle: Choose Spot or On Demand.
 
 #### Task
+
 - Instance Type: Choose one or more instance types from the dropdown list. Elastigroup will consider these types first when looking for an instance to bring up.
 - Capacity Unit: Choose Instance or vCPU.
 - Target: The desired number of instances or vCPU to run most of the time.
@@ -115,6 +126,7 @@ Do the following:
 In the Scaling tab, you can add Up Scaling and Down Scaling policies. For each policy, complete the General and Based-on information described below. You can create multiple policies.
 
 ### General Policy Information
+
 - Policy Type: Choose Core or Task instance group.
 - Policy Name: Enter a name for the policy.
 - Namespace: Choose from the list. The default is AWS/ElasticMapReduce.
@@ -122,6 +134,7 @@ In the Scaling tab, you can add Up Scaling and Down Scaling policies. For each p
 <img src="/elastigroup/_media/create-a-new-emr-cluster-07.png" />
 
 ### Scale Based on:
+
 - Trigger
   - Statistic: Choose from the list the type of value that will be evaluated.
   - Metric Name: Enter the specific metric to be evaluated.
@@ -151,6 +164,7 @@ You can schedule actions in order to scale cluster capacity during specific time
 Scheduled actions apply only to Task instance groups. Whenever your scheduled action takes place, the entire action is performed at once, and not divided into batches. For example, if you have 50 instances running, and schedule a task to change the capacity to zero at 10 UTC on Sunday, then all 50 instances will be dropped at that time.
 
 You can configure one or multiple Scheduled Actions. Do the following:
+
 1. Click Add Scheduled Action.
 2. Choose the Action Type and enter any information required for the specific Action Type. For example, if the Action Type is Set Capacity Range, you enter the Target, Minimum, and Maximum.
 
@@ -162,6 +176,7 @@ You can configure one or multiple Scheduled Actions. Do the following:
 For more information, see [Scheduling in Elastigroup](elastigroup/features/core-features/scheduling).
 
 ## Step 4: Review & Create
+
 1. Review your settings in the Review tab.
 2. If you need to make any changes, such as [adding multiple master nodes](elastigroup/tools-integrations/elastic-mapreduce/create-a-new-emr-cluster?id=add-multiple-master-nodes), switch to Edit mode and edit the JSON configuration.
 
@@ -172,9 +187,11 @@ For more information, see [Scheduling in Elastigroup](elastigroup/features/core-
 ## What’s Next?
 
 Learn more about:
+
 - [Scaling Policies for EMR](elastigroup/tools-integrations/elastic-mapreduce/scaling-policies-for-emr)
 - [Termination policies for EMR](elastigroup/tools-integrations/elastic-mapreduce/termination-policies-for-emr)
 
 Apache Airflow is a platform created to programmatically author, schedule, and monitor workflows, and it is now integrated with EMR. Learn more about:
+
 - Using Spot [operators](https://github.com/spotinst/spotinst-examples/tree/master/Airflow/spark_submit_airflow/dags/spot_plugins/operators) for the Airflow integration with EMR, and
 - How you plug them into an [Apache Spark Submit Python file](https://github.com/spotinst/spotinst-examples/blob/master/Airflow/spark_submit_airflow/dags/spark_submit_airflow.py).

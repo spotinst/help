@@ -9,6 +9,7 @@ Once you have connected your AKS private cluster to Ocean, your cluster will ben
 ### Access the Private AKS Cluster
 
 You need to have terminal access to the cluster API in order to apply new resources and run scripts. When running a private cluster, you can use any of the following access methods:
+
 - Create a VM in the same Azure Virtual Network (VNet) as the AKS cluster.
 - Use a VM in a separate network and set up virtual network peering.
 - Use an Express Route or a VPN connection.
@@ -19,6 +20,7 @@ Procedures in this tutorial require CLI commands and use the Azure AKS Run Comma
 > **Tip**: If you already have access to your AKS cluster API (kubectl) through a VM/VPN, complete the procedures in [Connect an Existing AKS Cluster](ocean/getting-started/aks). Otherwise, use the procedures on this page.
 
 ## Prerequisites
+
 - Your [Azure subscription](connect-your-cloud-provider/azure-account) connected to Spot
 - A Kubernetes private cluster on AKS running at least one node
 - The Kubernetes command-line tool, kubectl, installed on your workstation and configured to work with the relevant AKS cluster
@@ -26,9 +28,10 @@ Procedures in this tutorial require CLI commands and use the Azure AKS Run Comma
 ### Example: Registration Using AKS Run Command Feature
 
 If you are using the AKS Run Command feature, complete the steps below.
+
 1. Run the following command:
 
-   `az feature register --namespace "Microsoft.ContainerService" --name "RunCommandPreview"`  
+   `az feature register --namespace "Microsoft.ContainerService" --name "RunCommandPreview"`
 
    This triggers a registration process that takes a few minutes.
 
@@ -43,6 +46,7 @@ If you are using the AKS Run Command feature, complete the steps below.
 3. To propagate the change, run the following command:
 
    `az provider register --namespace Microsoft.ContainerService`
+
 4. Get the cluster credentials:
 
    `az aks get-credentials --resource-group <resource_group_name> --name <cluster_name>`
@@ -65,6 +69,7 @@ In the left menu of the Spot console, click Ocean/Cloud Clusters, and click Crea
 3. Click Next.
 
 ## Connectivity
+
 ### Step 1: Spot Token
 
 On the Connectivity page, create a Spot token (or use an existing one) and copy it to the text box. You may also want to copy it to a safe place so that you can use it again.
@@ -80,10 +85,11 @@ Use the automatically generated Cluster Controller ID or enter a new one.
 ### Step 3: Install Controller
 
 Instead of Step 3 on the Connectivity page, complete a procedure that consists of the following parts:
+
 - Create Ocean Controller configMap
 - Install the Controller
 
-The steps are described below.                    
+The steps are described below.
 
 #### Create Ocean Controller configMap
 
@@ -112,6 +118,7 @@ data:
    `az aks command invoke -g <resource_group_name -n <cluster_name> -c "kubectl apply -f configMap.yaml" -f configMap.yaml`
 
 #### Configuration Attribute Descriptions
+
 `spotinst.token` - The token is used in order to have programmatic access to the Spot platform. If you don’t already have a token, see [Create an API Token](administration/api/create-api-token).
 `spotinst.account` - Spot Account ID. To find your account ID, click on the User icon on the upper right of the Spot console and click My Account.
 `spotinst.cluster-identifier` - A unique identifier (at the Account level) that will bind the Controller to the Ocean resource.
@@ -121,12 +128,14 @@ data:
 #### Install the Controller
 
 This procedure applies the Ocean Controller template which creates the following Kubernetes resources in the cluster:
+
 - Deployment
 - ClusterRole
 - ClusterRoleBinding
 - ServiceAccount
 
 Complete the following steps:
+
 1. Run the command:
 
    `az aks command invoke -g <resource_group_name> -n <cluster_name> -c "kubectl apply -f https://s3.amazonaws.com/spotinst-public/integrations/kubernetes/cluster-controller/spotinst-kubernetes-cluster-controller-ga.yaml"`
@@ -157,11 +166,12 @@ This procedure runs a job in the AKS cluster that imports the configurations req
 
 <img src="/ocean/_media/tutorials-connect-aks-private-cluster-03.png" />
 
-   The other variables are derived automatically from the controller configMap.
+The other variables are derived automatically from the controller configMap.
 
 3. Apply the job using the following command:
 
    `az aks command invoke -g <resource_group_name> -n <cluster_name> -c "kubectl apply -f spot-aks-connector.yaml" -f spot-aks-connector.yaml`
+
 4. Verify that the job completed successfully:
 
    `az aks command invoke -g <resource_group_name> -n <cluster_name> -c "kubectl get pods -A | grep get-waagent"`
@@ -177,6 +187,7 @@ This procedure runs a job in the AKS cluster that imports the configurations req
 1. Delete the job:
 
    `az aks command invoke -g <resource_group_name> -n <cluster_name> -c "kubectl delete -f spot-aks-connector.yaml" -f spot-aks-connector.yaml`
+
 2. Update the yaml file with the new SPOT_ACD_IDENTIFIER.
 3. Run the job again:
 
@@ -205,6 +216,7 @@ It is recommended to migrate the existing nodes to Ocean by draining them and al
 ## Alternative Ways to Create Ocean Cluster
 
 Once you have completed all the procedures in the Connectivity section, there are alternative methods of creating the Ocean Cluster. Instead of using the procedures in the Compute and Review sections above, you could choose one of the following:
+
 - Spot APIs: Use the Spot APIs available on the Spot OpenAPI site. You will need to create both an Ocean cluster and a virtual node group using the following APIs:
   - [Ocean AKS Cluster Create](https://docs.spot.io/api/#operation/oceanAKSClusterCreate)
   - [Ocean AKS Virtual Node Group Create](https://docs.spot.io/api/#operation/oceanAKSVirtualNodeGroupCreate)

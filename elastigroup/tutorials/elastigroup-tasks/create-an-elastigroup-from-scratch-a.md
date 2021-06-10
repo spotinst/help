@@ -80,6 +80,7 @@ If no spot instances are available, an on-demand instance will be provisioned to
 #### Utilize Commitment Plans
 
 Elastigroup will automatically provision on-demand instances if there are any vacant Savings Plans or reserved instances that match any instance type defined in the Compute page. The utilization order is: RIs, EC2 SP, Compute SP. Choose one of the following:
+
 - Reserved Instances
 - Reserved Instances and Savings Plans
 
@@ -90,10 +91,11 @@ Elastigroup will automatically provision on-demand instances if there are any va
 #### Cluster Orientation
 
 Specify which prediction algorithm to use:
-  - Balanced (recommended)
-  - Availability
-  - Cost
-  - Cheapest
+
+- Balanced (recommended)
+- Availability
+- Cost
+- Cheapest
 
 ### Continuous Optimization
 
