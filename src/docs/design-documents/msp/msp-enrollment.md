@@ -34,21 +34,31 @@ Once the Subsets feature has been enabled, create your subsets as described in [
 
 Create your billing workflows as described in [Manage Workflows](eco/tutorials/manage-workflows).
 
-## Step 6. Associate Billing Workflows to Subsets
+## Step 6. Validate Your Workflow
 
-1. Send email with spreadsheet associating the subsets with Billing Workflows.
+Run reports on existing data sets in a variety of ways with [Workflow details reports](eco/tutorials/view-workflow-details).
 
-<img src="/design-documents/_media/msp-enrollment-02a.png" width="255" height="100" />
- 
+## Step 7. Associate Billing Workflows to Subsets
 
-2. Allow us approximately a week to configure this. We will ask for your review and approval.
+Once you have validated the billing workflows and are comfortable with them, you may want to us to process the workflows indefinitely and embed them in the Subsets List and Cloud Analyzer.
 
-## Step 7. End-Customer Association
+1. Send a support ticket associating the subsets with the billing workflows. In the ticket, please include the following message and information:
 
-Begin the process of [setting up your End Customer console](https://console.spotinst.com/spt/auth/signUp) by creating a distinct, Spot Organization for each End Customer.
+*Please associate the Eco for MSP billing workflow(s), below, with the subset(s), going forward. We would like processed workflow to be embedded in Cloud Analyzer and shown as charges in our Subsets List.
 
-1. Update the spreadsheet with the Spot console email and the Spot org ID. You can locate the org ID by clicking the "user" icon in the upper right corner of the Spot console while logged into the org and then click "My Organization."
+<Subset Name> : <Billing Workflow Name>
 
-<img src="/design-documents/_media/msp-enrollment-03a.png" width="457" height="99" />
+<Subset Name> : <Billing Workflow Name>*
 
-2. Allow us approximately a week to configure this. We will ask for your review and approval.
+2. Allow us approximately four days for configuration and for the data to refresh.
+
+## Step 8. End-Customer Association
+
+1. Begin the process of setting up your End Customer console by creating a distinct Spot Organization for each End Customer.
+2. Send a support ticket with the Spot console email and the Spot organization ID. You can locate the organization ID by clicking the User icon in the upper right of the Spot console while logged into the organization, and then click My Organization. In the ticket, please include the following message and information:
+
+*Please associate the following end-customer organizations with these subsets, going forward. We would like our end customers to be able to log into the Spot console. Once you have confirmed, we will create their users and manage access.
+
+<Subset name> : <Spot console email> : < Spot Org ID>
+
+<Subset name> : <Spot console email> : < Spot Org ID>*
