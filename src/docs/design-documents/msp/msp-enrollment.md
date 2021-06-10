@@ -46,9 +46,9 @@ Once you have validated the billing workflows and are comfortable with them, you
 
 > Please associate the Eco for MSP billing workflow(s), below, with the subset(s), going forward. We would like processed workflow to be embedded in Cloud Analyzer and shown as charges in our Subsets List.
 >
-> <Subset Name> : <Billing Workflow Name>
+> [Subset Name] : [Billing Workflow Name]
 >
-> <Subset Name> : <Billing Workflow Name>
+> <<Subset Name>> : <<Billing Workflow Name>>
 
 2. Allow us approximately four days for configuration and for the data to refresh.
 
