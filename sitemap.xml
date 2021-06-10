@@ -484,6 +484,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/eco/tutorials/manage-workflows"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/eco/tutorials/msp-enrollment</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/eco/tutorials/msp-enrollment"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/eco/tutorials/msp-enrollment"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/eco/tutorials/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
