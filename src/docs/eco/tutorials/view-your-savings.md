@@ -31,11 +31,18 @@ The Overview dashboard includes a summary line which displays the following info
 
 Eco provides summary graphs and charts to give you wide visibility of your savings and commitments. The graphs and charts can be filtered according to the items in the legend. The following graphs are displayed:
 
-- Savings over time: A bar graph showing the amount of savings each month broken down by type of savings. This graph will allow you to visualize savings from reservations and savings plans. The graph will respond to the filters at the top of the page, but also to “source” filters specific to the graph itself.
+- Savings over time: A bar graph showing the amount of savings each month broken down by type of savings. This graph will allow you to visualize savings from reservations and savings plans. You can use the filters at the top of the page and source filters specific to each graph.
   - All
   - Eco
   - Non-Eco
+
+<img src="/eco/_media/tutorials-view-savings-01c.png" />
+
 - Commitment over Time: A bar graph showing your reserved instance commitment per month broken down into Standard, Convertible, and Pending instances.
+- Coverage Over Time: A line graph that breaks down the story of how reservations, savings plan coverage, and commitments relate to your overall savings. The left chart is the simplest, showing the difference between your actual spend and what could have been your costs for reservable services without a savings strategy (on-demand dollar equivalent). On the right, you see the same data, but with your actual spend explained as the combination of commitment cost and uncovered spend.
+
+<img src="/eco/_media/tutorials-view-savings-01d.png" />
+
 - Commitment per Service: A pie chart showing the current reserved instance commitment broken down into the different services.
 - Commitment per Region: A pie chart showing the current reserved instance commitment broken down by region.
 
