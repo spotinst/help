@@ -40,7 +40,7 @@ Once you have validated the billing workflows and are comfortable with them, you
 
 1. Send a support ticket associating the subsets with the billing workflows. In the ticket, please include the following message and information:
 
-> Please associate the Eco for MSP billing workflow(s), below, with the subset(s), going forward. We would like processed workflow to be embedded in Cloud Analyzer and shown as charges in our Subsets List.
+> Please associate the Eco for MSP billing workflow(s), below, with the subset(s), going forward. We would like the processed workflow to be embedded in Cloud Analyzer and shown as charges in our Subsets List.
 >
 > \<Subset Name\> : \<Billing Workflow Name\>
 >
