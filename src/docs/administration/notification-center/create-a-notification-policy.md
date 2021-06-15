@@ -7,7 +7,7 @@ This page describes the procedures to create a new notification policy in Spot c
 To access the Notification Center, do the following:
 1. In the upper right, click on the User icon, and then click My Account in the menu.
 
-<img src="/administration/_media/create-new-notification-policy-01.png" />
+<img src="/administration/_media/notification-center-00.png" />
 
 2. In the left menu, click Notification Center. The Notification Center dashboard appears.
 3. In the upper right, click Create Policy.
@@ -16,7 +16,7 @@ To access the Notification Center, do the following:
 
 In the Create New Policy popup, your user name (i.e., your company email address) appears in the Owner field.
 
-<img src="/administration/_media/create-new-notification-policy-02.png" />
+<img src="/administration/_media/create-new-notification-policy-01.png" />
 
 1. Complete the following information:
    - Policy Name: Give the policy a name.
@@ -32,7 +32,7 @@ To complete the policy definition, you will need to complete all parts of the wi
 
 Choose one of the options determining which resources will be monitored. The options are described below.
 
-<img src="/administration/_media/create-new-notification-policy-02a.png" />
+<img src="/administration/_media/create-new-notification-policy-02.png" />
 
 ### All Resources
 
@@ -45,6 +45,8 @@ When you choose Rule-Based Resources, you define criteria for monitoring in a Co
 A *Condition Set* is a group of one or more Conditions. When there are multiple condition sets, they relate to each other with an OR operation.
 
 A *Condition* is a rule within a condition set. Multiple conditions within a condition set, relate to each other with an AND operation.
+
+<img src="/administration/_media/create-new-notification-policy-02a.png" />
 
 Each condition contains the following:
 - Identifier: The resource type to be monitored, such as the following:
@@ -70,7 +72,7 @@ Any new resources added to the account that match the defined criteria will auto
 
 When you choose Manual Resources, you then select from a list of existing resources. Only those resources will be monitored for notifications. Any new resources added to the account in the future will not be included unless you edit the policy and add them to the monitoring list.
 
-<img src="/administration/_media/create-new-notification-policy-3.png" />
+<img src="/administration/_media/create-new-notification-policy-03.png" />
 
 You can filter the list and search for a resource by entering a type, a name, an ID in the filter box, or you can just type in string and search.
 
