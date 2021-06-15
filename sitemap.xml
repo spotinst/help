@@ -120,6 +120,27 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/administration/identity-providers/"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/administration/notification-center/create-a-notification-policy</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/administration/notification-center/create-a-notification-policy"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/administration/notification-center/create-a-notification-policy"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/administration/notification-center/edit-a-notification-policy</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/administration/notification-center/edit-a-notification-policy"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/administration/notification-center/edit-a-notification-policy"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/administration/notification-center/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/administration/notification-center/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/administration/notification-center/"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/administration/organizations/audit-events</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
