@@ -32,7 +32,7 @@ These are described in detail below.
 
 1. To modify the Overview information, click on the Edit icon above the overview.
 
-<img src="/administration/_media/edit-a-notification-policy-02.png" />
+<img src="/administration/_media/edit-a-notification-policy-02.png" width="377" height="120" />
 
 2. Edit the name, owner, and description, as needed, and click Update. (Only an Admin user can change the owner.)
 
@@ -52,7 +52,7 @@ If the policy is set to monitor all resources, then there is no need to modify t
 
 For rule-based resources, you can modify, add, and delete conditions and condition sets.
 
-<img src="/administration/_media/edit-a-notification-policy-03.png" />
+<img src="/administration/_media/edit-a-notification-policy-03.png" width="604" height="420" />
 
 ### Manual Resources
 
@@ -76,7 +76,7 @@ To modify the list of registered users, do the following:
 1. Click the Edit icon above the Registered Users list.
 2. In the list of users, add, delete, or modify as needed, and click Update.
 
-<img src="/administration/_media/edit-a-notification-policy-04.png" />
+<img src="/administration/_media/edit-a-notification-policy-04.png" width="451" height="214" />
 
 ## Additional Actions
 

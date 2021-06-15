@@ -16,7 +16,7 @@ To access the Notification Center, do the following:
 
 In the Create New Policy popup, your user name (i.e., your company email address) appears in the Owner field.
 
-<img src="/administration/_media/create-new-notification-policy-01.png" />
+<img src="/administration/_media/create-new-notification-policy-01.png" width="450" height="219" />
 
 1. Complete the following information:
    - Policy Name: Give the policy a name.
@@ -72,20 +72,20 @@ Any new resources added to the account that match the defined criteria will auto
 
 When you choose Manual Resources, you then select from a list of existing resources. Only those resources will be monitored for notifications. Any new resources added to the account in the future will not be included unless you edit the policy and add them to the monitoring list.
 
-<img src="/administration/_media/create-new-notification-policy-03.png" />
+<img src="/administration/_media/create-new-notification-policy-03.png" width="472" height="211" />
 
 You can filter the list and search for a resource by entering a type, a name, an ID in the filter box, or you can just type in string and search.
 
 ## Step 2: Select Events
 Choose the types of events you want to receive notifications about. You can use the filter box to search for a specific event type.
 
-<img src="/administration/_media/create-new-notification-policy-04.png" />
+<img src="/administration/_media/create-new-notification-policy-04.png" width="507" height="245" />
 
 ## Step 3: Select Integrations
 
 If you (an Admin user) are configuring a policy at the Account level, you can select one or more integrations. The integrations determine how the notifications will be delivered.
 
-<img src="/administration/_media/create-new-notification-policy-05.png" />
+<img src="/administration/_media/create-new-notification-policy-05.png" width="506" height="264" />
 
 The following integrations are available:
 - External Email: Add email addresses that will receive notifications.
