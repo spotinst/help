@@ -82,5 +82,5 @@ The following is a summary of the privileges that Spot users have with regard to
 ## What’s Next?
 
 Learn how to:
-- [Create a New Policy]()
-- [Edit an Existing Policy]()
+- [Create a New Policy](administration/notification-center/create-a-notification-policy)
+- [Edit an Existing Policy](administration/notification-center/edit-a-notification-policy)
