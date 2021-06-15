@@ -7,7 +7,7 @@ This page describes the procedures to create a new notification policy in Spot c
 To access the Notification Center, do the following:
 1. In the upper right, click on the User icon, and then click My Account in the menu.
 
-<img src="/administration/_media/notification-center-00.png" />
+<img src="/administration/_media/notification-center-00.png" width="315" height="68" />
 
 2. In the left menu, click Notification Center. The Notification Center dashboard appears.
 3. In the upper right, click Create Policy.
