@@ -85,7 +85,7 @@ Choose one of the following types of images:
 
 - Application Security Group: Provides security micro-segmentation virtual networks in Azure and enables you to define network security policies based on workloads (i.e., applications) instead of explicit IP addresses. Choose one or more application security groups the Elastigroup should belong to.
 
-<img src="/elastigroup/_media/gettingstarted-eg-azure-03c.png" width="207" height="107" />
+<img src="/elastigroup/_media/gettingstarted-eg-azure-03c.png" width="331" height="171" />
 
   Note that the items appearing in the list of application security groups depend on the Virtual Network that you choose and may be different in each network.
 - Assign Public IP. Mark this checkbox if you want VMs in this Elastigroup to launch with a Public IP. Choose Basic or Standard.
