@@ -69,19 +69,28 @@ Choose one of the following types of images:
 - Marketplace. An image available in the Azure Marketplace.
 - Custom. One of your custom made VM Images.
 
-### Network Interfaces
+### Network
 
 - Vnet Resource Group. Select the Vnet Resource group you want your Elastigroup Scale Sets to be a part of.
 - Virtual Network. Select the specific Virtual Network (VN) for your Elastigroup.
+
+<img src="/elastigroup/_media/gettingstarted-eg-azure-03a.png" width="450" height="400" />
+
 - Set as Primary. The main network interface attached to the VM.
 - Subnet ID. Select the specific Subnet inside your VN.
 - Resource Group. The resource group where the network interface will be created.
-- Security Group. The network security group to associate with the VM.
+- Network Security Group. The network security group to associate with the VM.
+
+<img src="/elastigroup/_media/gettingstarted-eg-azure-03b.png" width="450" height="400" />
+
+- Application Security Group: Provides security micro-segmentation virtual networks in Azure and enables you to define network security policies based on workloads (i.e., applications) instead of explicit IP addresses. Choose one or more application security groups the Elastigroup should belong to.
+
+<img src="/elastigroup/_media/gettingstarted-eg-azure-03c.png" width="450" height="400" />
+
+  Note that the items appearing in the list of application security groups depend on the Virtual Network that you choose and may be different in each network.
 - Assign Public IP. Mark this checkbox if you want VMs in this Elastigroup to launch with a Public IP. Choose Basic or Standard.
 
 You can define additional network interfaces as needed.
-
-<img src="/elastigroup/_media/gettingstarted-eg-azure-04.png" width="450" height="400" />
 
 ### Login
 
