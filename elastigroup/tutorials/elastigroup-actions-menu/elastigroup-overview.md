@@ -6,7 +6,7 @@ To get to the Elastigroup Overview tab, do the following:
 1. In the Spot console, go to Elastigroup in the menu tree and click Groups.
 2. In the [list of Elastigroups](elastigroup/tutorials/elastigroup-actions-menu/elastigroup-management), click on an Elastigroup Name.
 
-<img src="/elastigroup/_media/tutorials-elastigroup-dashboard-01.png" />
+<img src="/elastigroup/_media/tutorials-elastigroup-overview-01.png" />
 
 The Elastigroup page opens with the Overview tab open and the group name at the top.
 
@@ -30,7 +30,7 @@ Elastigroup Stats is a summary line providing insights into your group usage. Th
 
 The Elastigroup Info area gives you a quick point of reference for vital information about the group.
 
-<img src="/elastigroup/_media/tutorials-elastigroup-dashboard-02.png" />
+<img src="/elastigroup/_media/tutorials-elastigroup-overview-02.png" />
 
 The list of items appearing in this area may vary according to the specific features and integrations (such as load balancers) you have enabled in your Elastigroup configuration. Typically, the following items will appear:
 - Name
@@ -48,18 +48,18 @@ If you do not have predictive autoscaling enabled, the following charts are disp
 - Instance Count: This chart shows the number of active instances over time and enables you to see events that triggered a scale up or a scale down.
 - Distribution: This chart shows the number of your instances in each market. Elastigroup distributes instances among different markets to increase high-availability.
 
-<img src="/elastigroup/_media/tutorials-elastigroup-dashboard-03.png" />
+<img src="/elastigroup/_media/tutorials-elastigroup-overview-03.png" />
 
 ## Predictive Autoscaling Analytics
 
 When you have predictive autoscaling enabled, you will see the following graphs:
 - Activity & Prediction: Shows the instance counts and events over time along with the forecast of the number of instances that will be required at any time.
 
-<img src="/elastigroup/_media/tutorials-elastigroup-dashboard-04.png" />
+<img src="/elastigroup/_media/tutorials-elastigroup-overview-04.png" />
 
 - Predicted vs. Actual: The predicted sum of vCPUs vs. the exact count of vCPUs in the group at that time.
 
-<img src="/elastigroup/_media/tutorials-elastigroup-dashboard-05.png" />
+<img src="/elastigroup/_media/tutorials-elastigroup-overview-05.png" />
 
 - Distribution: The number of your instances in each market.
 - CPU Utilization: The CPU utilization in the group. This is presented as the sum of CPU utilization per instance type in the group. (For example, if there are two m5.2xalrge instances with a CPU utilizaiton of 2 percent each, then the value in this graph will be 4.)
