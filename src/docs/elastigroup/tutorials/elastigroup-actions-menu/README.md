@@ -1,4 +1,4 @@
-# Elastigroup Actions
+# Elastigroup Overview & Actions
 
 With AI-driven prediction of spot instance interruptions and advanced workload rebalancing, you can enjoy extreme cost reduction in AWS, Azure, and GCP for even your production and mission-critical workloads.
 
