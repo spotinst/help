@@ -1415,6 +1415,27 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/tutorials/elastigroup-actions-menu/deploy-or-roll-elastigroup"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/elastigroup/tutorials/elastigroup-actions-menu/elastigroup-dashboard</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/tutorials/elastigroup-actions-menu/elastigroup-dashboard"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/tutorials/elastigroup-actions-menu/elastigroup-dashboard"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/elastigroup/tutorials/elastigroup-actions-menu/elastigroup-management</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/tutorials/elastigroup-actions-menu/elastigroup-management"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/tutorials/elastigroup-actions-menu/elastigroup-management"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/elastigroup/tutorials/elastigroup-actions-menu/elastigroup-overview</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/tutorials/elastigroup-actions-menu/elastigroup-overview"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/tutorials/elastigroup-actions-menu/elastigroup-overview"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/elastigroup/tutorials/elastigroup-actions-menu/manage-group-capacity</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
