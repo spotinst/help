@@ -29,6 +29,7 @@ Enter the information described below. Required fields are indicated with an ast
 - Elastigroup Name. Enter a name for the Elastigroup. We recommend using a naming convention based on the specific workload the Elastigroup will manage, for example dev-eu1-worker.
 - Azure Region. Choose a region the Elastigroup will run in.
 - Resource Group. Choose a resource group.
+- Description. Enter a few words describing the purpose of the Elastigroup.
 
 <img src="/elastigroup/_media/gettingstarted-eg-azure-02.png" />
 
@@ -46,7 +47,16 @@ Choose one of the following:
 ### Availability Settings
 
 - Draining Timeout. Set the amount of time (seconds) that Elastigroup will allow to de-register and drain VMs before termination.
+- Cluster Orientation. Specify the prediction algorithm strategy. You can choose for the following:
+  - Availability. Ensures multiple markets for your servers, but may result in lower cost savings.
+  - Cost. Enables best monthly cost savings, but may result in more frequent server replacements.
+  - Cheapest. Ensures the lowest price for the spot VM type defined in the group.
 - Fallback to On-Demand. Elastigroup provides a fallback mechanism in case no Spot-VMs are available. Mark this option if you would like the option to automatically fall back to an on-demand instance in such a case.
+- Continuous Optimization. Choose when Elastigroup may move workloads from on-demand to spot VMs. You may choose from:
+  - Once Available. Elastigroup moves the workloads when your spot VM types become available.
+  - Custom. Define one or more time windows in which you allow the move.
+
+<img src="/elastigroup/_media/gettingstarted-eg-azure-02b.png" />
 
 When you have completed the information in the General tab, click Next to continue.
 
