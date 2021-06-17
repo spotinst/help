@@ -51,7 +51,7 @@ Choose one of the following:
   - Availability. Ensures multiple markets for your servers, but may result in lower cost savings.
   - Cost. Enables best monthly cost savings, but may result in more frequent server replacements.
   - Cheapest. Ensures the lowest price for the spot VM type defined in the group.
-- Fallback to On-Demand. Elastigroup provides a fallback mechanism in case no Spot-VMs are available. Mark this option if you would like the option to automatically fall back to an on-demand instance in such a case.
+- Fallback to On-Demand. Elastigroup provides a fallback mechanism in case no spot VMs are available. Mark this option if you would like the option to automatically fall back to an on-demand VM in such a case.
 - Continuous Optimization. Choose when Elastigroup may move workloads from on-demand to spot VMs. You may choose from:
   - Once Available. Elastigroup moves the workloads when your spot VM types become available.
   - Custom. Define one or more time windows in which you allow the move.
