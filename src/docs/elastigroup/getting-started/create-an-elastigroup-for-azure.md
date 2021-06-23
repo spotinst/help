@@ -27,9 +27,7 @@ Enter the information described below. Required fields are indicated with an ast
 ### Basic Settings
 
 - Elastigroup Name. Enter a name for the Elastigroup. We recommend using a naming convention based on the specific workload the Elastigroup will manage, for example dev-eu1-worker.
-- Azure Region. Choose a region the Elastigroup will run in.
-- Resource Group. Choose a resource group.
-- Description. Enter a few words describing the purpose of the Elastigroup.
+- Description: Add a few words indicating the purpose of this Elastigroup.
 
 <img src="/elastigroup/_media/gettingstarted-eg-azure-02.png" />
 
@@ -48,9 +46,9 @@ Choose one of the following:
 
 - Draining Timeout. Set the amount of time (seconds) that Elastigroup will allow to de-register and drain VMs before termination.
 - Cluster Orientation. Specify the prediction algorithm strategy. You can choose for the following:
-  - Availability. Ensures multiple markets for your servers, but may result in lower cost savings.
-  - Cost. Enables best monthly cost savings, but may result in more frequent server replacements.
-  - Cheapest. Ensures the lowest price for the spot VM type defined in the group.
+  - Availability. VM selection will be performed to ensure the best market availability within your Elastigroup.
+  - Cost. VM types will be prioritized by their costs so the selection is based on this list using availability considerations.
+  - Cheapest. VM selection will be performed by launching the cheapest instances at any time.
 - Fallback to On-Demand. Elastigroup provides a fallback mechanism in case no spot VMs are available. Mark this option if you would like the option to automatically fall back to an on-demand VM in such a case.
 - Continuous Optimization. Choose when Elastigroup may move workloads from on-demand to spot VMs. You may choose from:
   - Once Available. Elastigroup moves the workloads when your spot VM types become available.
@@ -64,13 +62,16 @@ When you have completed the information in the General tab, click Next to contin
 
 ### Operating System and VM Sizes
 
+- Resource Group. Choose a resource group.
 - Operating System. Choose the OS that will run on your VMs.
+- Region. Choose the Azure region the VMS will run in.
+- Availability Zones. Choose one or more availability zones where your VMs will be allowed to run. It is highly recommended to choose multiple availability zones to further diversify the spot markets available to the Elastigroup.
 - On-Demand VM-Sizes. Choose the regular priority VMs sizes within the Elastigroup. These are used in the event that no Low-Priority VMs are available in the sizes requested. Ensure the selected VMs are available in the desired region.
 - Spot-VM Sizes. Select the low priority VM sizes to be available for the Elastigroup. Ensure the selected VM size is available in the desired Region.
 
 > **Tip**: To maximize cost savings, provide the Elastigroup with all possible low-priority VM sizes compatible with the expected workload. The more VM sizes, the better the odds Elastigroup will find an available low-priority VM to run on.
 
-<img src="/elastigroup/_media/gettingstarted-eg-azure-03.png" />
+<img src="/elastigroup/_media/gettingstarted-eg-azure-02a.png" />
 
 ### Image
 
