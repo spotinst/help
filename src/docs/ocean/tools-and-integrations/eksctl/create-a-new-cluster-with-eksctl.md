@@ -6,7 +6,7 @@ In this procedure, you will create an Ocean Kubernetes cluster with [eksctl](htt
 
 - Ensure you have an [IAM user](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html) in your AWS account with both Console and Programmatic Access credentials.
 - [Connect your AWS account to Spot](connect-your-cloud-provider/aws-account).
-- Install [awscli](https://docs.aws.amazon.com/cli/latest/userguide/installing.html) v1.16.18 or later and [configure AWS credentials](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html#cli-configure-quickstart-config).
+- Install [awscli](https://docs.aws.amazon.com/cli/latest/userguide/installing.html) v2.0 or later and [configure AWS credentials](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html#cli-configure-quickstart-config). If you already have awscli installed, run `aws --version` to verify the version.
 - Install [kubectl](https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html) (provided by Amazon EKS).
 - If you are going to use `spotctl` commands, [install spotctl](https://github.com/spotinst/spotctl#getting-started).
 
