@@ -109,6 +109,12 @@ As preferred instance type is a soft requirement, the general spot instance avai
 
 For information about defining preferred instance types in the Spot API (using the `preferredSpotTypes` attribute under `launchSpec.instanceTypes`) , see [Create Virtual Node Group](https://docs.spot.io/api/#operation/OceanAWSLaunchSpecCreate) (AWS).
 
+## Local SSD Support
+
+Ocean for GKE allows the utilization of local [SSD disks](https://cloud.google.com/local-ssd), high-performance local disks which are useful with specific workloads such as those that heavily use caching. You can define SSD disks in your Ocean VNG configuration by using `localSsdCount` to configure the number of SSD disks to be connected to each VM in the VNG.
+
+Once configured, whenever the Ocean autoscaler scales up, Ocean will automatically connect the local SSDs to the new VM. Note that local SSDs are limited to specific machine types. Ocean will automatically filter out the machine types that are not compatible. For information about the API, see Local SSD in the [Spot API](https://docs.spot.io/api/#operation/OceanGKELaunchSpecCreate).
+
 ## What’s next?
 
 - Learn how to [Manage Virtual Node Groups](ocean/tutorials/manage-virtual-node-groups.md).
