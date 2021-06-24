@@ -2,7 +2,7 @@
 
 ## Kubernetes Clusters
 
-Each node in the cluster is monitored by the master nodes and assigned with a condition (state), that describes the status of different aspects of the node. The conditions types are:
+Each node in the cluster is monitored by the primary nodes and assigned with a condition (state), that describes the status of different aspects of the node. The conditions types are:
 
 - OutOfDisk
 - Ready

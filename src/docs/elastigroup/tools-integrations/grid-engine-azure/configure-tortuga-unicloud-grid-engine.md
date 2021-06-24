@@ -79,7 +79,7 @@ All clusters must be uniquely identified with a Spot Account. To do this set SGE
 
 ### Create an Elastigroup
 
-When creating a Spot Elastigroup there are a few properties that must be set for nodes to register with Tortuga and the Grid Engine master. The following are recommended settings that are compatible with most UGE installations.
+When creating a Spot Elastigroup there are a few properties that must be set for nodes to register with Tortuga and the Grid Engine primary. The following are recommended settings that are compatible with most UGE installations.
 
 ### Capacity
 
@@ -97,21 +97,21 @@ When creating a Spot Elastigroup there are a few properties that must be set for
 
 **User Name**: centos
 **Authentication Type**: SSH Public Key
-**Public Key**: [public key of root user on master]
+**Public Key**: [public key of root user on primary]
 
 ### Required Tags
 
 | Tag                | Description                                                                            |
 | ------------------ | -------------------------------------------------------------------------------------- |
-| installerHostName  | Hostname of the master [**get-node-list**]                                             |
-| installerIpAddress | IP Address of the Master [**ifconfig -a**]                                             |
+| installerHostName  | Hostname of the primary [**get-node-list**]                                             |
+| installerIpAddress | IP Address of the primary [**ifconfig -a**]                                             |
 | cfmPassword        | Password for the cfmUser. Can be found with: **cat \$TORTUGA_ROOT/private/.cfmsecret** |
 
 ### Optional Tags
 
 | Tag             | Default                | Description                                                                                      |
 | --------------- | ---------------------- | ------------------------------------------------------------------------------------------------ |
-| port            | 8443                   | Port the master is listening on                                                                  |
+| port            | 8443                   | Port the primary is listening on                                                                  |
 | cfmUser         | cfm                    | The admin user for UGE                                                                           |
 | dns_nameservers | **installerIpAddress** | Where the Tortuga DNS server is installed. Defaults to the value set for **installerIpAddress**. |
 

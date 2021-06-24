@@ -49,9 +49,9 @@ Choose the import strategy you would like to use and enter the relevant Origin C
 
 If you are cloning an environment, define your instance groups as follows:
 
-Master
+Primary
 
-- Instance Types: Choose one or more preferred instance types for the master.
+- Instance Types: Choose one or more preferred instance types for the primary.
 - Life Cycle: Choose Spot or On-Demand.
 
 Core
@@ -74,7 +74,7 @@ Task
 
 <img src="/elastigroup/_media/import-emr-03.png" />
 
-> Tip: EMR Master and Core node instance groups must always have at least one instance running to avoid cluster termination. It is highly recommended to avoid running them on single spot instances by either setting the Target capacities to more than one instance or setting the Lifecycle to On-Demand.
+> Tip: EMR Primary and Core node instance groups must always have at least one instance running to avoid cluster termination. It is highly recommended to avoid running them on single spot instances by either setting the Target capacities to more than one instance or setting the Lifecycle to On-Demand.
 
 If you are wrapping an environment, you only need to configure the Task Instance Groups.
 

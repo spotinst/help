@@ -24,7 +24,7 @@ If for example, the first instance has 2 whole free headroom units (in our examp
 
 ## Tetris Scaling
 
-When a job is launched in Nomad, The Nomad master scheduler tries to find free capacity for the job to run, in some cases, there aren't enough resources to meet the job's demands.
+When a job is launched in Nomad, The Nomad main scheduler tries to find free capacity for the job to run, in some cases, there aren't enough resources to meet the job's demands.
 
 In such a case, the job will have queued allocations, and the job metrics will show that the job can't run due to exhausted nodes. Some of the reasons for node exhaustion are:
 

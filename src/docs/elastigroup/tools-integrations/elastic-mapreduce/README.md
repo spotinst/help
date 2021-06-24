@@ -7,7 +7,7 @@ Amazon EMR is the industry-leading cloud big data platform for processing vast a
 There are several advantages to running EMR with Spot including:
 
 - Optimization between cost reduction and processing time
-- Support of an on-demand instance as master
+- Support of an on-demand instance as primary
 - In some cases, Spot creates more than one task instance group resulting in further cost reduction.
 
 ## What’s Next?

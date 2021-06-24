@@ -36,7 +36,7 @@ Eco is a tool for management and optimization of reserved instances. The project
 
 ## Question: Reserved Instances Existing At Purchase
 
-If my master account already has reserved instances when I install Eco, how are the savings calculated?
+If my management account already has reserved instances when I install Eco, how are the savings calculated?
 
 ### Answer:
 

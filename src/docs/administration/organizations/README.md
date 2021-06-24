@@ -12,7 +12,7 @@ The Organization holds one or more Spot accounts which can be associated with yo
 
 In the Organization, you can define the following:
 
-- User Managment – Create, manage, delete, and associate users to accounts
+- User Management – Create, manage, delete, and associate users to accounts
 - API Tokens – Generate and delete personal and temporary tokens
 - MFA Authentication – Enable and disable two-factor authentication for your Spot users
 - Identity Provider (SAML) – Connect your Organization to an IDP, or use a Custom SAML
@@ -31,7 +31,7 @@ In the Organization, you can define the following:
 In case you need multiple organizations, e.g., for multiple divisions or units in your company, you can create linked organizations which can share settings and configuration such as:
 
 - Billing Information (can be separate if needed)
-- Master Dashboards and Reports
+- Management Dashboards and Reports
 
 ## Add an Organization
 
