@@ -8,7 +8,7 @@ To access the Notification Center, do the following:
 
 1. In the upper right, click on the User icon, and then click My Account in the menu.
 
-<img src="/administration/_media/notification-center-00.png" width="315" height="68" />
+<img src="/administration/_media/notification-center-00.png" width="331" height="68" />
 
 2. In the left menu, click Notification Center. The Notification Center dashboard appears.
 3. In the dashboard, click the name of the policy you need to edit. The Policy Details page for that policy will appear.
