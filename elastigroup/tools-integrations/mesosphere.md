@@ -7,7 +7,7 @@ Mesosphere DC/OS is based on the production-proven Apache Mesos distributed syst
 - Spot will automatically provision instances for you for the best availability and cost. You can even use scaling metrics or custom API scripts to automate this even further.
 - Running Spot instances manually on a production workload is unpredictable. You will need to carefully consider all scenarios in which your Spot instances can be interrupted and you also have to compensate for sudden market fluctuations.
   - The Spot algorithm will predict when fluctuations in the market will occur and pre-emptively provision new instances for you well before the interruption.
-- The Spot API integration will automatically communicate with your DC/OS Master and send a connection draining signal to all instances affected. This ensures that new tasks are not added to servers that are about to go down. This feature sounds simple, but it makes the process of managing nodes completely automated!
+- The Spot API integration will automatically communicate with your DC/OS Primary and send a connection draining signal to all instances affected. This ensures that new tasks are not added to servers that are about to go down. This feature sounds simple, but it makes the process of managing nodes completely automated!
 - You have both the availability your production workloads require and you get to save money.
 - Spot can provision a heterogeneous cluster for your entire DC/OS environment. Do you want to have exactly 30 vCPUs and don't care about instances types? We can do that as well with our cluster weighting option.
 
@@ -23,7 +23,7 @@ You'll find a link to the cloud formation template at the top of the page. Selec
 
 ## Step 2
 
-You will need to fill in parameters for the template on the launch wizard like the key pair, slave node count, and OAuthEnabled. I kept everything to the bare minimum for simplicity sake.
+You will need to fill in parameters for the template on the launch wizard like the key pair, agent node count, and OAuthEnabled. I kept everything to the bare minimum for simplicity sake.
 
 ## Step 3
 
@@ -45,13 +45,13 @@ Expand the `Outputs` and `Resources` sections.
 
 ## Step 7
 
-Now let's get the Master's external IP address, go back to `Resources` from step 6.
+Now let's get the Primary's external IP address, go back to `Resources` from step 6.
 
 1. Scroll down to `ElasticLoadBalancer` and click on the link.
-2. Click on the `Instances` tab and then click on the instance ID for the master.
-3. Copy the public IP of the master into a text editor for later.
-4. You should see two security groups for the master, click on the MasterSecurityGroup.
-5. In the Security Group console, add a new inbound TCP rule for the MasterSecurityGroup as shown below. (Inbound Custom TCP Rule for port 5050 and the [whitelist IPs](administration/api/whitelist-ips).)
+2. Click on the `Instances` tab and then click on the instance ID for the primary.
+3. Copy the public IP of the primary into a text editor for later.
+4. You should see two security groups for the primary, click on the MasterSecurityGroup.
+5. In the Security Group console, add a new inbound TCP rule for the MasterSecurityGroup as shown below. (Inbound Custom TCP Rule for port 5050 and the [Permit List IPs](administration/api/whitelist-ips).)
 
 <img src="/elastigroup/_media/mesosphere-02a.png" />
 

@@ -17,7 +17,7 @@ To create the primed image, complete the [Red Hat procedure](https://docs.opensh
 
 To create user data, follow the Red Hat steps below. (These steps are taken from a [Red Hat procedure](https://docs.openshift.com/container-platform/3.11/admin_guide/cluster-autoscaler.html#creating-LC-and-ASG-cluster-auto-scaler-cluster-auto-scaler).)
 
-1. Create the bootstrap.kubeconfig file by generating it from a master node.
+1. Create the bootstrap.kubeconfig file by generating it from a primary node.
 
 `$ ssh master "sudo oc serviceaccounts create-kubeconfig -n openshift-infra node-bootstrapper" > ~/bootstrap.kubeconfig`
 
