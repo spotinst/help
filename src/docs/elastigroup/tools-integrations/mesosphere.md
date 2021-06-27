@@ -23,7 +23,7 @@ You'll find a link to the cloud formation template at the top of the page. Selec
 
 ## Step 2
 
-You will need to fill in parameters for the template on the launch wizard like the key pair, slave node count, and OAuthEnabled. I kept everything to the bare minimum for simplicity sake.
+You will need to fill in parameters for the template on the launch wizard like the key pair, agent node count, and OAuthEnabled. I kept everything to the bare minimum for simplicity sake.
 
 ## Step 3
 
