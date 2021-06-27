@@ -36,7 +36,7 @@ You can use the `instanceTypes` attribute in the API to specify machine types th
 
 The following rules apply to these:
 
-- Whitelist and blacklist may not be used at the same time.
+- The permit list and the deny list may not be used at the same time.
 - If no instance types are defined for both options, then all instance types are available.
 
 ### Set Instance Size Ranges

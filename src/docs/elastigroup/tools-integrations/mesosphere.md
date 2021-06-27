@@ -51,7 +51,7 @@ Now let's get the Primary's external IP address, go back to `Resources` from ste
 2. Click on the `Instances` tab and then click on the instance ID for the primary.
 3. Copy the public IP of the primary into a text editor for later.
 4. You should see two security groups for the primary, click on the MasterSecurityGroup.
-5. In the Security Group console, add a new inbound TCP rule for the MasterSecurityGroup as shown below. (Inbound Custom TCP Rule for port 5050 and the [whitelist IPs](administration/api/whitelist-ips).)
+5. In the Security Group console, add a new inbound TCP rule for the MasterSecurityGroup as shown below. (Inbound Custom TCP Rule for port 5050 and the [Permit List IPs](administration/api/whitelist-ips).)
 
 <img src="/elastigroup/_media/mesosphere-02a.png" />
 

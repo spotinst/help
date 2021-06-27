@@ -89,7 +89,7 @@ write_files:
 
 <img src="/elastigroup/_media/rancher-before-20-05.png" width="600" height="326" />
 
-> **Tip**: For security reasons, ensure that the Rancher Primary Security-Group is open specifically for the whitelisted Spot server IP addresses listed here: [Spot Whitelist IPs](administration/api/whitelist-ips)
+> **Tip**: For security reasons, ensure that the Rancher Primary Security-Group is open specifically for the permit-listed Spot server IP addresses listed here: [Spot Permit List IPs](administration/api/whitelist-ips)
 
 Whenever Spot performs an instance replacement, it will automatically communicate with Rancher API to:
 
