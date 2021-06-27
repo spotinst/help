@@ -1,6 +1,12 @@
 # Controller Version History
 
-## [1.0.76] - TBD
+## [1.0.77] - TBD
+
+Added
+
+- Support for k8s 1.22 deprecated apis
+
+## [1.0.76] - 2021-06-27
 
 Added
 
