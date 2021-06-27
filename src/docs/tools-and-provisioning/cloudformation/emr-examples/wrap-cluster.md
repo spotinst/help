@@ -2,7 +2,7 @@
 
 The Spot Elastigroup integration with EMR clusters can help you quickly Wrap your existing cluster with Spot instances as Task nodes.
 
-This option lets you keep the original EMR Master and Core configuration, and launch task nodes as part of the elastigroup.
+This option lets you keep the original EMR Primary and Core configuration, and launch task nodes as part of the elastigroup.
 
 Use the same template and change the strategy to the following:
 

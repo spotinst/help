@@ -60,7 +60,7 @@ The creation wizard will assist you with creating an Elastigroup with all the re
 
 ### Fallback to On-demand
 
-1. The Fallback mechanism ensures you won't suffer from outage when no preemptible market is available.
+1. The Fallback mechanism ensures no outage will occur when no preemptible market is available.
 2. In a scale-up operation – if we can't get an available preemptible market we would fallback to an on-demand instance, according to your selected instance type.
 3. Set `Allow fall back to on-demand` checkbox to activate the fallback to OD.
 

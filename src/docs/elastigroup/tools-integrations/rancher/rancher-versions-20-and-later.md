@@ -51,11 +51,11 @@ write_files:
 
 ## Step 3: Rancher Integration
 
-Once the userData is set, the next step is to configure the Rancher 2.0 Elastigroup integration. For Rancher 2.0+ Elastigroup needs to integrate with both the Rancher master server as well as the underlying Kubernetes cluster.
+Once the userData is set, the next step is to configure the Rancher 2.0 Elastigroup integration. For Rancher 2.0+ Elastigroup needs to integrate with both the Rancher primary server as well as the underlying Kubernetes cluster.
 
 For Rancher enter:
 
-- Host: URL to the host of the Rancher 2.0 master. Remove any path or trailing forward slash. Example: https://myrancherhost.com
+- Host: URL to the host of the Rancher 2.0 primary. Remove any path or trailing forward slash. Example: https://myrancherhost.com
 - Access Key: copied from key creation above
 - Secret Key: copied from key creation above
 

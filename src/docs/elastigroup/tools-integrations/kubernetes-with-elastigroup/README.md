@@ -10,7 +10,7 @@ Before you start using this integration, please make sure to have an active Spot
 
 ## Handling Instance Failures
 
-The diagram below illustrates how MCS handles instance failures. Utilizing prediction algorithms and monitoring services, Elastigroup (1) preemptively provisions EC2 instances and identifies instance failures within the K8s cluster, (2) provisions new instances in parallel as the failures occur, and (3) communicates with the K8s master to mark `bad` instances as Unscheduled `{`spec`:{`unschedulable`:true}}` in order to drain existing running pods and reschedule them on different hosts across the cluster.
+The diagram below illustrates how MCS handles instance failures. Utilizing prediction algorithms and monitoring services, Elastigroup (1) preemptively provisions EC2 instances and identifies instance failures within the K8s cluster, (2) provisions new instances in parallel as the failures occur, and (3) communicates with the K8s primary to mark `bad` instances as Unscheduled `{`spec`:{`unschedulable`:true}}` in order to drain existing running pods and reschedule them on different hosts across the cluster.
 
 <img src="/elastigroup/_media/kubernetes-with-elastigroupREADME_1.jpg" />
 

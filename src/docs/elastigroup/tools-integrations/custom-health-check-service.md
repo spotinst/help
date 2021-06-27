@@ -24,7 +24,7 @@ Create a Spot Elastigroup if you do not have one already.
 Install the Spot Health Check Service on an instance ( we recommend a dedicated On-Demand instance) within your secured VPC.
 
 1. Choose one of your instances that will act as the `proxy`, on which you should later install the docker.
-2. Create a Security Group and attach it to the instance. This Security Group allows input traffic from Spot Health Check Service in `Port TCP 80` with Spot IP range whitelisted as listed in the following link: [Spot Whitelist IPs](administration/api/whitelist-ips)
+2. Create a Security Group and attach it to the instance. This Security Group allows input traffic from Spot Health Check Service in `Port TCP 80` with Spot IP range permit listed as in the following link: [Spot Permit List IPs](administration/api/whitelist-ips)
 3. SSH into your EC2 Instance and Install the Health Check service:
    a. Install Docker first.
    b. Run the following command to pull the docker image:

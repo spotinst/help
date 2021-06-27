@@ -9,7 +9,7 @@ Our Chef integration uses Chef API calls to trigger register and deregister oper
 ## Step 1: Create a Security Group
 
 - On your AWS account, create a security group that allows inbound traffic specifically from Spot servers
-  - IP Addresses available here: [Spot Whitelist IPs](administration/api/whitelist-ips)
+  - IP Addresses available here: [Spot Permit List IPs](administration/api/whitelist-ips)
   - Ports: `80, 443, 9683`
 
 ## Step 2: Create a User

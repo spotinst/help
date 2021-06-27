@@ -10,7 +10,7 @@
 
 This procedure requires `kops` version 1.15 or later.
 
-This section describes how to perform a hybrid migration. This enables you to migrate only some or all of the worker instance groups, while leaving the master nodes, and any remaining worker node groups to be managed in an AWS ASG.
+This section describes how to perform a hybrid migration. This enables you to migrate only some or all of the worker instance groups, while leaving the primary nodes, and any remaining worker node groups to be managed in an AWS ASG.
 
 1. Enable Spot support by toggling the feature flag on the management station where `kops` commands are run:
 
@@ -68,9 +68,9 @@ spec:
    1. Delete imported Auto Scaling Groups.
    2. Delete all Launch Configurations.
 
-## Option 2: Migrate Master and Worker Nodes of an Existing Cluster Managed by AWS Auto Scaling Groups to Ocean
+## Option 2: Migrate Primary and Worker Nodes of an Existing Cluster Managed by AWS Auto Scaling Groups to Ocean
 
-The migration of existing deployment will consist of two separate layers: master nodes and worker nodes' Instance Group(s). Both will be imported.
+The migration of existing deployment will consist of two separate layers: primary nodes and worker nodes' Instance Group(s). Both will be imported.
 
 1. Enable Spot support by toggling the feature flag. On the management station where `kops` commands are run:
 

@@ -4,7 +4,7 @@ This page is relevant for users of Ocean for Kubernetes on AWS.
 
 Typically the ingress and egress traffic management for containerized applications is defined and configured by mechanisms provided by the container orchestration system such as Kubernetes services and ingress controllers. However, some cases require traffic to be routed through the infrastructure, meaning the actual instances underneath the container cluster nodes. For example, there are cases when custom business logic must be applied on the ingress traffic before it reaches the application, and regular TCP load balancers are not capable of processing that traffic.
 
-In addition, specific use cases require persistence of the IP address exposed to the end users, for example, as a whitelist of address for use. In such cases, an elastic IP is used to persist the same public IP address for a specific instance over time. If an instance with an elastic IP goes down or is terminated, the same IP address is maintained for when another instance is started to replace the previous one.
+In addition, specific use cases require persistence of the IP address exposed to the end users, for example, as a permit list of addresses for use. In such cases, an elastic IP is used to persist the same public IP address for a specific instance over time. If an instance with an elastic IP goes down or is terminated, the same IP address is maintained for when another instance is started to replace the previous one.
 
 Ocean enables you to assign an elastic IP pool to the instances created in a specific launch specification. Those instances have a pre-defined public IP so that the requests could be effectively routed and processed through them.
 

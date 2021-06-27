@@ -14,7 +14,7 @@ You can create your cluster of swarm easily through Spot Elastigroup. You will h
 
 ## Setting up Docker Swarm
 
-When creating a new group, or when updating a group, you need to specify the Manager node by providing: masterHost (specifies the domain/ip of the docker master host), masterPort (specifies the port).
+When creating a new group, or when updating a group, you need to specify the Manager node by providing: masterHost (specifies the domain/ip of the docker masterHost), masterPort (specifies the port).
 
 Expand the `Integrations` portion in the Compute tab and enable the Docker Swarm integration. Enter the Swarm Manager IP and Swarm Manager port:
 
@@ -58,7 +58,7 @@ chmod 777 joinDockerSwarm.sh
 bash
 ```
 
-In order to fill in the workerToken and the masterHost you should go inside the docker swarm master node and write the below command:
+In order to fill in the workerToken and the masterHost you should go inside the docker swarm primary node and write the below command:
 
 ```
 docker swarm join-token worker

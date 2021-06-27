@@ -11,7 +11,7 @@ In order to integrate Grid Engine with Elastigroup, do the following:
 
 <img src="/elastigroup/_media/grid-engine-azureREADME_1.png" />
 
-3. Install the controller on Master host server using the following commands using the Token and Account ID from the previous steps:
+3. Install the controller on Primary host server using the following commands using the Token and Account ID from the previous steps:
 
 ```bash
 > source $SGE_ROOT/default/common/settings.sh

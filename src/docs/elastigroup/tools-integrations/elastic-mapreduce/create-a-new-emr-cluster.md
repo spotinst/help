@@ -65,31 +65,31 @@ Enter the Compute settings as described below and then click Next.
 - VPC: Choose a VPC from the dropdown list.
 - Subnets: Choose one or more subnets from the dropdown list.
 - Security Groups
-  - Master Security Group: Choose a master security group from the dropdown list.
+  - Primary Security Group: Choose a primary security group from the dropdown list.
   - Core & Task Security Group: Choose a core and task security group from the dropdown list.
 
 ### Instance Groups
 
-#### Master
+#### Primary
 
 - Instance Type: Choose one or more instance types from the dropdown list. Elastigroup will consider these types first when looking for an instance to bring up.
-- Target: The default is one instance for the master node. If you need multiple instances for the master node, see the instructions below.
+- Target: The default is one instance for the primary node. If you need multiple instances for the primary node, see the instructions below.
 - Life Cycle: Choose Spot or On Demand.
 
 <img src="/elastigroup/_media/create-a-new-emr-cluster-05a.png" width="189" height="139" />
 
-#### Add Multiple Master Nodes
+#### Add Multiple Primary Nodes
 
-If you need to use multiple master nodes, you can configure this in the JSON configuration in the Review tab. Do this after you have finished filling out all the other tabs.
+If you need to use multiple primary nodes, you can configure this in the JSON configuration in the Review tab. Do this after you have finished filling out all the other tabs.
 
 The following conditions apply:
 
 - EC2 cannot be Classic.
 - The EMR version must be 5.23.0 or higher.
-- You can use one or three master nodes. These are the only valid options.
-- The number of master nodes is not editable. You can set it only when you create the cluster (using the UI or the API).
-- When using multiple master nodes, all of them must have Life Cycle as On Demand.
-- It is recommended to set terminationProtection to false in order terminate a multiple master node cluster after the EG is deleted. (This is not required for a single master node cluster.)
+- You can use one or three primary nodes. These are the only valid options.
+- The number of primary nodes is not editable. You can set it only when you create the cluster (using the UI or the API).
+- When using multiple primary nodes, all of them must have Life Cycle as On Demand.
+- It is recommended to set terminationProtection to false in order terminate a multiple primary node cluster after the EG is deleted. (This is not required for a single primary node cluster.)
 
 Do the following:
 
@@ -101,7 +101,7 @@ Do the following:
 3. (Optional) Under mrScaler.cluster, it is recommended to set terminationProtection to false. If this is not set, it will be impossible to delete the mrScaler because Spot will not be able to terminate the cluster in AWS.
 4. Click Create.
 
-> Tip: You can also use [elastigroupAwsEmrCreate](https://docs.spot.io/api/#operation/elastigroupAwsEmrCreate) in OpenAPI to create the cluster and configure multiple master nodes as described above.
+> Tip: You can also use [elastigroupAwsEmrCreate](https://docs.spot.io/api/#operation/elastigroupAwsEmrCreate) in OpenAPI to create the cluster and configure multiple primary nodes as described above.
 
 #### Core
 
@@ -178,7 +178,7 @@ For more information, see [Scheduling in Elastigroup](elastigroup/features/core-
 ## Step 4: Review & Create
 
 1. Review your settings in the Review tab.
-2. If you need to make any changes, such as [adding multiple master nodes](elastigroup/tools-integrations/elastic-mapreduce/create-a-new-emr-cluster?id=add-multiple-master-nodes), switch to Edit mode and edit the JSON configuration.
+2. If you need to make any changes, such as [adding multiple primary nodes](elastigroup/tools-integrations/elastic-mapreduce/create-a-new-emr-cluster?id=add-multiple-primary-nodes), switch to Edit mode and edit the JSON configuration.
 
 <img src="/elastigroup/_media/create-a-new-emr-cluster-10.png" width="368" height="280" />
 
