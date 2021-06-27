@@ -53,7 +53,7 @@ Select your preferred Workload Migration process by selecting the relevant check
 
 2. Click Start Migration to officially begin the migration process.
 
-Once you have started the migration, you will have the option to stop it. However, note that workloads that have been migrated to Spot will remain under the new instances which are managed by Spot. This means that when aborting the process, Spot will finish scheduling all unscheduled pods of the current batch, and instances that were not drained yet will become schedulable again.
+Once you have started the migration, you will have the option to stop it. However, note that workloads that have been migrated to Spot will remain under the new instances which are managed by Spot. This means that when stopping the process, Spot will finish scheduling all unscheduled pods of the current batch, and instances that were not drained yet will become schedulable again.
 
 ## Step 5: View Workload Migration Dashboard
 
@@ -65,7 +65,7 @@ The information diplayed is described below.
 
 - The overall status of the migration process:
   - Running – The migration process is concurrent and pods are being migrated.
-  - Stopping – The migration process has been aborted by the user, and Spot is gracefully completing the current batch.
+  - Stopping – The migration process has been interrupted by the user, and Spot is gracefully completing the current batch.
   - Stopped – The migration process has officially stopped, after completing the stopping phase.
   - Completed – The migration process has completed successfully.
   - Failed – The migration process has failed due to technical fault during the process.
@@ -87,10 +87,10 @@ The information diplayed is described below.
 
 If you wish to review previous migrations, click Previous Migrations on the top right corner of the Workload Migration screen.
 
-## Abort Migration
+## Stop Migration
 
-If you wish to abort the migration process, click Stop Migration.
-The following window will pop up. Mark Terminate Drained Instances if you want Ocean to terminate the already drained instances before aborting the entire process, then click Yes and Stop.
+If you wish to stop the migration process, click Stop Migration.
+The following window will pop up. Mark Terminate Drained Instances if you want Ocean to terminate the already drained instances before stopping the entire process, then click Yes and Stop.
 
 ## Migration Failure Reasons
 
