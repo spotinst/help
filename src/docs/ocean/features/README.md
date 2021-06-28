@@ -14,6 +14,7 @@ We are in the process of adding several Ocean features for use with AKS. The fol
 
 - [Scaling for Kubernetes](ocean/features/scaling-kubernetes)
 - [Headroom](ocean/features/headroom)
+- [Right Sizing](ocean/features/right-sizing)
 - [Labels and Taints](ocean/features/labels-and-taints)
 - [Virtual Node Groups](ocean/features/launch-specifications)
 
