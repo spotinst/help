@@ -83,4 +83,4 @@ Once the stack is created, copy the Spot Role ARN from the CloudFormation stack 
 
 <img src="/cloud-analyzer/_media/gettingstarted-connect-master-existing-08.png" width="450" height="371" />
 
-Once your Organization is connected to the Spot Cloud Analyzer, initial data processing will take up to 48 hours. You will be notified via email when your dashboards are ready.
+Once your Organization is connected to the Spot Cloud Analyzer, initial data processing will take up to 72 hours. You will be notified via email when your dashboards are ready.
