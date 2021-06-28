@@ -85,7 +85,7 @@ Continue with the steps below.
 15. For Start Hour (UTC), choose 00, and for Start Minute, choose 00.
 16. Click Next, click Next again, scroll down, and click Finish.
 
-Once you have sent the crawler.yml file, it may take up to 48 hours before you receive the link you need for Step 3.
+Once you have sent the crawler.yml file, it may take up to 72 hours before you receive the link you need for Step 3.
 
 ## Step 3: Set Up Cost And Usage Extractor
 
