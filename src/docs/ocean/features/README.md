@@ -29,9 +29,9 @@ The following major features are currently supported in Ocean for GKE:
 
 - [Scaling for Kubernetes](ocean/features/scaling-kubernetes)
 - [Headroom](ocean/features/headroom)
+- [Right Sizing](ocean/features/right-sizing)
 - [Labels and Taints](ocean/features/labels-and-taints)
 - [Virtual Node Groups](ocean/features/launch-specifications)
-- [Right Sizing](ocean/features/right-sizing)
 - [Cluster Roll](ocean/features/roll)
 - [Shutdown Hours](ocean/features/running-hours)
 
