@@ -89,4 +89,4 @@ Ensure that IAM user and role access to the Billing and Cost Management console 
 
 2. Paste the Spot Role ARNs in the wizard.
 
-Once your Organization is connected to the Spot Cloud Analyzer, initial data processing will take up to 48 hours. You will be notified via email when your dashboards are ready.
+Once your Organization is connected to the Spot Cloud Analyzer, initial data processing will take up to 72 hours. You will be notified via email when your dashboards are ready.
