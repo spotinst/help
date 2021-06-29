@@ -36,7 +36,7 @@ Eco provides summary graphs and charts to give you wide visibility of your savin
   - Eco
   - Non-Eco
 
-<img src="/eco/_media/tutorials-view-savings-01c.png" />
+<img src="/eco/_media/tutorials-view-savings-01c2.png" />
 
 - Commitment over Time: A bar graph showing your reserved instance commitment per month broken down into Standard, Convertible, and Pending instances.
 - Coverage Over Time: A line graph that breaks down the story of how reservations, savings plan coverage, and commitments relate to your overall savings. The left chart is the simplest, showing the difference between your actual spend and what could have been your costs for reservable services without a savings strategy (on-demand dollar equivalent). On the right, you see the same data, but with your actual spend explained as the combination of commitment cost and uncovered spend.
