@@ -2,7 +2,7 @@
 
 Ocean is a managed infrastructure service for ECS that automatically adjusts infrastructure capacity and size to meet the needs of all tasks, containers, and applications.
 
-[Video Tutorial](https://youtu.be/FJMKCB0_vAA)
+<iframe width="350" height="350" src="https://www.youtube.com/embed/FJMKCB0_vAA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 In this procedure, you will connect an existing ECS cluster to Ocean using the [Spot Console](http://console.spotinst.com/).
 
