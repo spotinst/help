@@ -33,7 +33,7 @@ You will need to configure several items as described below.
 3. When choosing which policies to attach the newly created role, select AWSDenyAll (The custom public type does not need to access any resources in your AWS account.)
 4. After the role has been created, verify that its trust-relationship with CloudFormation service exactly matches the following:
 
-```YAML
+```yaml
 {
  "Version": "2012-10-17",
  "Statement": [
