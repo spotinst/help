@@ -1,12 +1,12 @@
-# Get Started with CloudFormation
+# Get Started with Lambda
 
 ## Step 1. Generate Token
 
 Generate a [Spot API Token](https://console.spotinst.com/settings/tokens/permanent).
 
-## Step 2. Create and Manage Templates with Spot Lambda
+## Step 2. Create and Manage Templates with AWS Lambda
 
-For each custom resource created by Spot Lambda function, the following steps need to be configured:
+For each custom resource created by the Lambda function, the following steps need to be configured:
 
 1. Resource type – `Custom::elasticgroup`. For other Spot services, check the [Resource Type](tools-and-provisioning/cloudformation/getting-started/resource-types) in the resources section.
 2. Service Token – Use Spot Lambda.
