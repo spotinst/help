@@ -24,7 +24,7 @@ This second option provides two important benefits:
 
 This means that you can easily use CloudFormation to provision cloud infrastructure through Spot Elastigroup, helping you save more time and optimize your cloud cost and utilization.
 
-For more information, see [Activate a Resource in CloudFormation Public Extensions Registry](tools-and-provisioning/cloudformation/activate-a-resource-in-publick-extensions-registry).
+For more information, see [Activate a Resource in CloudFormation Public Extensions Registry](tools-and-provisioning/cloudformation/activate-a-resource-in-public-extensions-registry).
 
 ## AWS Lambda-Backed Custom Resources
 
@@ -40,4 +40,5 @@ This Lambda function is hosted by Spot and can be invoked by every Spot customer
 
 ## What's Next?
 
-[Get started](tools-and-provisioning/cloudformation/getting-started/) with CloudFormation.
+- [Activate a Resource in CloudFormation Public Extensions Registry](tools-and-provisioning/cloudformation/activate-a-resource-in-public-extensions-registry)
+- [Get started](tools-and-provisioning/cloudformation/getting-started/) with AWS Lambda.
