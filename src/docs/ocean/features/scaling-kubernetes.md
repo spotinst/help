@@ -69,6 +69,10 @@ Ocean simulates the cluster's topology and state `post` the scale-down activity 
 - Pods that cannot be moved elsewhere due to various constraints (lack of resources, non-matching node selectors or affinity, matching anti-affinity)
 - Pods that have the following label: `spotinst.io/restrict-scale-down`:`true`.
 
+### Scale down suspention
+- During roll (per cluster/ VNG/ specific instance) we would suspend the scale down at the cluster level
+- During workload migration
+
 ### Pods & Nodes Draining Process
 
 Ocean ensures that pods and nodes are gracefully terminated in a case of scale-down or an instance replacement.
