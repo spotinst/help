@@ -2227,6 +2227,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/tools-and-provisioning/ci-cd/"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/tools-and-provisioning/cloudformation/activate-a-resource-in-public-extensions-registry</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/tools-and-provisioning/cloudformation/activate-a-resource-in-public-extensions-registry"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/tools-and-provisioning/cloudformation/activate-a-resource-in-public-extensions-registry"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/tools-and-provisioning/cloudformation/beanstalk-examples/create-new-environment</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
