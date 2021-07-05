@@ -103,15 +103,15 @@ When creating a Spot Elastigroup there are a few properties that must be set for
 
 | Tag                | Description                                                                            |
 | ------------------ | -------------------------------------------------------------------------------------- |
-| installerHostName  | Hostname of the primary [**get-node-list**]                                             |
-| installerIpAddress | IP Address of the primary [**ifconfig -a**]                                             |
+| installerHostName  | Hostname of the primary [**get-node-list**]                                            |
+| installerIpAddress | IP Address of the primary [**ifconfig -a**]                                            |
 | cfmPassword        | Password for the cfmUser. Can be found with: **cat \$TORTUGA_ROOT/private/.cfmsecret** |
 
 ### Optional Tags
 
 | Tag             | Default                | Description                                                                                      |
 | --------------- | ---------------------- | ------------------------------------------------------------------------------------------------ |
-| port            | 8443                   | Port the primary is listening on                                                                  |
+| port            | 8443                   | Port the primary is listening on                                                                 |
 | cfmUser         | cfm                    | The admin user for UGE                                                                           |
 | dns_nameservers | **installerIpAddress** | Where the Tortuga DNS server is installed. Defaults to the value set for **installerIpAddress**. |
 

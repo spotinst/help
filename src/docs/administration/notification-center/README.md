@@ -1,6 +1,7 @@
 # Notification Center
 
 With the Notification Center, the Spot console provides a robust and flexible tool for configuring and managing notifications. The notification center uses a system of user definable policies, providing granular management of notifications and customization to fit different business cases. This includes the ability to customize notification policies per:
+
 - Resources monitored
 - Events to be notified
 - Notification media such as Slack, email, and SNS
@@ -9,6 +10,7 @@ With the Notification Center, the Spot console provides a robust and flexible to
 ## Get Started
 
 To access the Notification Center, do the following:
+
 1. In the upper right, click on the User icon, and then click My Account in the menu.
 
 <img src="/administration/_media/notification-center-00.png" width="331" height="68" />
@@ -22,12 +24,14 @@ The Notification Center dashboard provides an overview of notification policies 
 <img src="/administration/_media/notification-center-01.png" />
 
 The overview includes the following main areas:
+
 - Summary Line
 - Policy List
 
 ### Summary Line
 
 A summary line at the top includes the following information:
+
 - Personal policies: The number of personal policies I have defined.
 - Account policies: The number of account policies available in the list.
 - Policies I’m registered to: The number of policies I have subscribed to and will receive notifications for.
@@ -36,6 +40,7 @@ A summary line at the top includes the following information:
 ### Policy List
 
 The policy list includes the following information for each policy:
+
 - Name: The user-defined name of the policy. You can click on the policy name to see more detailed information about the policy.
 - Policy ID: A unique identification code that Spot gives the policy.
 - Owner: The user who created the policy.
@@ -62,6 +67,7 @@ To create a new policy, click Create Policy on the top right.
 The following is a summary of the privileges that Spot users have with regard to notification policies.
 
 ### Admin
+
 - View and edit Personal policies owned by that user. (Cannot view or edit Personal policies owned by other users.)
 - Edit any Account policy.
 - Add and remove registered users.
@@ -70,11 +76,13 @@ The following is a summary of the privileges that Spot users have with regard to
 - Add integrations.
 
 ### Editor
+
 - View Personal policies owned by that user and all Account policies.
 - Edit Personal and Account policies owned by that user.
 - Create new Personal and Account policies.
 
 ### Viewer
+
 - View Account policies that the user is registered to.
 - Can register and unregister to any Account policy available.
 - Cannot create new policies.
@@ -82,5 +90,6 @@ The following is a summary of the privileges that Spot users have with regard to
 ## What’s Next?
 
 Learn how to:
+
 - [Create a New Policy](administration/notification-center/create-a-notification-policy)
 - [Edit an Existing Policy](administration/notification-center/edit-a-notification-policy)
