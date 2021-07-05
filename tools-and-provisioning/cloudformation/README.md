@@ -15,10 +15,12 @@ Custom resources require one property, the service token, which specifies where 
 ## Resource Creation Options
 
 There are two options available for creating resources:
+
 - AWS Lambda (See below for additional information.)
 - CloudFormation Public Extensions Registry
 
 This second option provides two important benefits:
+
 - Installation is simplified, as it is no longer necessary to manually add Spot by NetApp’s custom private registry/resource type.
 - Maintenance and version update overhead is greatly reduced so customers receive the latest Spot feature without delay.
 

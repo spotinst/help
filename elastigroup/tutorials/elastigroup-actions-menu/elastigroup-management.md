@@ -10,6 +10,7 @@ To manage your Elastigroups in the Spot console, go to Elastigroup in the menu t
 
 The list of Elastigroups gives you a quick view of your groups and basic information including:
 Elastigroup Name: The user-given name of the group.
+
 - ID: The ID that Elastigroup assigned to the group upon creation.
 - Integrations: If the group has any integrations, they are indicated with icons in this column.
 - Instances: The number of active instances in the Elastigroup.
@@ -36,6 +37,7 @@ To [create a new Elastigroup](elastigroup/tutorials/elastigroup-tasks/create-an-
 ## Delete Group
 
 To delete an Elastigroup you don’t need any more, do the following:
+
 1. Mark one or more Elastigroups in the list.
 2. On the upper right, click Actions and Delete Group.
 3. Complete the requested information and click .

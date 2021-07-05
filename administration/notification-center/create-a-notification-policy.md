@@ -5,6 +5,7 @@ This page describes the procedures to create a new notification policy in Spot c
 ## Get Started
 
 To access the Notification Center, do the following:
+
 1. In the upper right, click on the User icon, and then click My Account in the menu.
 
 <img src="/administration/_media/notification-center-00.png" width="331" height="68" />
@@ -42,13 +43,14 @@ When you choose All Resources, all the resources in the account will be monitore
 
 When you choose Rule-Based Resources, you define criteria for monitoring in a Condition and a Condition Set.
 
-A *Condition Set* is a group of one or more Conditions. When there are multiple condition sets, they relate to each other with an OR operation.
+A _Condition Set_ is a group of one or more Conditions. When there are multiple condition sets, they relate to each other with an OR operation.
 
-A *Condition* is a rule within a condition set. Multiple conditions within a condition set, relate to each other with an AND operation.
+A _Condition_ is a rule within a condition set. Multiple conditions within a condition set, relate to each other with an AND operation.
 
 <img src="/administration/_media/create-new-notification-policy-02a.png" />
 
 Each condition contains the following:
+
 - Identifier: The resource type to be monitored, such as the following:
   - Name
   - Region
@@ -77,6 +79,7 @@ When you choose Manual Resources, you then select from a list of existing resour
 You can filter the list and search for a resource by entering a type, a name, an ID in the filter box, or you can just type in string and search.
 
 ## Step 2: Select Events
+
 Choose the types of events you want to receive notifications about. You can use the filter box to search for a specific event type.
 
 <img src="/administration/_media/create-new-notification-policy-04.png" width="507" height="245" />
@@ -88,6 +91,7 @@ If you (an Admin user) are configuring a policy at the Account level, you can se
 <img src="/administration/_media/create-new-notification-policy-05.png" width="506" height="264" />
 
 The following integrations are available:
+
 - External Email: Add email addresses that will receive notifications.
 - Webhook: Add webhooks to applications.
 - SNS: Add an SNS ARN to receive notifications in AWS.
