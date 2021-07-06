@@ -17,47 +17,40 @@ The full body attribute list is available on the [Create](https://docs.spot.io/a
 ```json
 {
   "Resources": {
-    "SpotinstOcean": {
+    "SpotOcean": {
       "Type": "Custom::ocean",
       "Properties": {
         "ServiceToken": {
-          "AWS::Sub": [
-            "arn:aws:lambda:${Region}:178579023202:function:spotinst-cloudformation"
-          ]
+          "Fn::Sub": "arn:aws:lambda:${AWS::Region}:178579023202:function:spotinst-cloudformation"
         },
-        "accessToken": "Spot Token",
-        "accountId": "Spot Account ID",
+        "accessToken": {"Ref": "token"},
+        "accountId": {"Ref": "accountId"},
         "autoTag": true,
         "updatePolicy": {
           "shouldUpdateTargetCapacity": false
         },
         "ocean": {
           "name": "Your Ocean Name",
-          "controllerClusterId": "ocean.k8s",
+          "controllerClusterId": "Your Ocean Name",
           "region": {
-            "AWS::Sub": ["${AWS::Region}"]
+            "Fn::Sub": "${AWS::Region}"
           },
           "autoScaler": {
             "isEnabled": true,
-            "cooldown": 180,
-            "resourceLimits": {
-              "maxMemoryGib": 1500,
-              "maxVCpu": 750
-            },
             "down": {
-              "evaluationPeriods": 3
+              "maxScaleDownPercentage": 50
             },
-            "headroom": {
-              "cpuPerUnit": 2000,
-              "memoryPerUnit": 0,
-              "numOfUnits": 4
-            },
-            "isAutoConfig": false
+            "autoHeadroomPercentage": 5,
+            "isAutoConfig": true,
+            "resourceLimits": {
+              "maxMemoryGib": 100000,
+              "maxVCpu": 20000
+            }
           },
           "capacity": {
+            "target": 0,
             "minimum": 0,
-            "maximum": 1,
-            "target": 1
+            "maximum": 1000
           },
           "strategy": {
             "spotPercentage": 100,
@@ -65,22 +58,45 @@ The full body attribute list is available on the [Create](https://docs.spot.io/a
             "utilizeReservedInstances": false
           },
           "compute": {
-            "subnetIds": [""],
+            "subnetIds": [
+              "subnet-123456789",
+              "subnet-123456789"
+            ],
             "instanceTypes": {
-              "whitelist": ["c4.8xlarge"]
-            },
+              "blacklist": ["c5.16xlarge"]
+            },            
             "launchSpecification": {
-              "imageId": "",
-              "userData": "12345678987654321",
-              "securityGroupIds": [""],
-              "iamInstanceProfile": {
-                "arn": ""
+              "imageId": "ami-123456789",
+              "userData": {
+                "Fn::Base64" : {
+                  "Fn::Join": ["", [
+                    "#!/bin/bash",
+                    "/etc/eks/bootstrap.sh mycluster"
+                  ]]
+                }
               },
-              "keyPair": "",
-              "tags": {
-                "tagKey": "creator",
-                "tagValue": "test"
-              }
+              "securityGroupIds": [
+                "sg-123456789",
+                "sg-123456789"
+              ],
+              "iamInstanceProfile": {
+                "arn": "arn:aws:iam::123456789:instance-profile/eks-worker-123456789"
+              },
+              "tags": [
+                {
+                  "tagKey": "Application",
+                  "tagValue": "kubernetes"
+                },
+                {
+                  "tagKey": "env",
+                  "tagValue": "dev"
+                },
+                {
+                  "tagKey": "kubernetes.io/cluster/mycluster",
+                  "tagValue": "owned"
+                }
+              ],
+              "rootVolumeSize": 20
             }
           }
         }
@@ -106,7 +122,7 @@ Resources:
       ocean:
         name: !Ref OceanName
         controllerClusterId: "ocean.k8s"
-        region: !Sub ${AWS::Region}
+        region: !Ref: "AWS::Region"
         autoScaler:
           isEnabled: true
           cooldown: 180
@@ -122,8 +138,8 @@ Resources:
           isAutoConfig: false
         capacity:
           minimum: 0
-          maximum: 1
-          target: 1
+          maximum: 1000
+          target: 0
         strategy:
           spotPercentage: 100
           fallbackToOd: true
@@ -136,7 +152,11 @@ Resources:
               - "c4.8xlarge"
           launchSpecification:
             imageId: ""
-            userData: "12345678987654321"
+            userData: 
+              Fn::Base64:
+                !Sub |
+                  #!/bin/bash -xe
+                  yum update -y aws-cfn-bootstrap
             securityGroupIds:
               - ""
             iamInstanceProfile:

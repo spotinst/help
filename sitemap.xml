@@ -2318,48 +2318,6 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/tools-and-provisioning/cloudformation/emr-examples/wrap-cluster"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/tools-and-provisioning/cloudformation/getting-started/elastigroup-examples/create-elastigroup-for-ecs-yml-based</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/tools-and-provisioning/cloudformation/getting-started/elastigroup-examples/create-elastigroup-for-ecs-yml-based"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/tools-and-provisioning/cloudformation/getting-started/elastigroup-examples/create-elastigroup-for-ecs-yml-based"/>
-    </url>
-    <url>
-        <loc>https://docs.spot.io/?/tools-and-provisioning/cloudformation/getting-started/elastigroup-examples/create-elastigroup-generic</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/tools-and-provisioning/cloudformation/getting-started/elastigroup-examples/create-elastigroup-generic"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/tools-and-provisioning/cloudformation/getting-started/elastigroup-examples/create-elastigroup-generic"/>
-    </url>
-    <url>
-        <loc>https://docs.spot.io/?/tools-and-provisioning/cloudformation/getting-started/elastigroup-examples/create-elastigroup-stateful</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/tools-and-provisioning/cloudformation/getting-started/elastigroup-examples/create-elastigroup-stateful"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/tools-and-provisioning/cloudformation/getting-started/elastigroup-examples/create-elastigroup-stateful"/>
-    </url>
-    <url>
-        <loc>https://docs.spot.io/?/tools-and-provisioning/cloudformation/getting-started/elastigroup-examples/create-elastigroup-yml-based</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/tools-and-provisioning/cloudformation/getting-started/elastigroup-examples/create-elastigroup-yml-based"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/tools-and-provisioning/cloudformation/getting-started/elastigroup-examples/create-elastigroup-yml-based"/>
-    </url>
-    <url>
-        <loc>https://docs.spot.io/?/tools-and-provisioning/cloudformation/getting-started/elastigroup-examples/import-asg</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/tools-and-provisioning/cloudformation/getting-started/elastigroup-examples/import-asg"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/tools-and-provisioning/cloudformation/getting-started/elastigroup-examples/import-asg"/>
-    </url>
-    <url>
-        <loc>https://docs.spot.io/?/tools-and-provisioning/cloudformation/getting-started/elastigroup-examples/</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/tools-and-provisioning/cloudformation/getting-started/elastigroup-examples/"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/tools-and-provisioning/cloudformation/getting-started/elastigroup-examples/"/>
-    </url>
-    <url>
         <loc>https://docs.spot.io/?/tools-and-provisioning/cloudformation/getting-started/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
@@ -2379,13 +2337,6 @@
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/tools-and-provisioning/cloudformation/more-examples/create-hcs-on-existing-elastigroup"/>
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/tools-and-provisioning/cloudformation/more-examples/create-hcs-on-existing-elastigroup"/>
-    </url>
-    <url>
-        <loc>https://docs.spot.io/?/tools-and-provisioning/cloudformation/more-examples/multai-load-balancer</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/tools-and-provisioning/cloudformation/more-examples/multai-load-balancer"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/tools-and-provisioning/cloudformation/more-examples/multai-load-balancer"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/tools-and-provisioning/cloudformation/more-examples/notification</loc>
@@ -2442,27 +2393,6 @@
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/tools-and-provisioning/cloudformation/"/>
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/tools-and-provisioning/cloudformation/"/>
-    </url>
-    <url>
-        <loc>https://docs.spot.io/?/tools-and-provisioning/cloudformation/spectrum-examples/</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/tools-and-provisioning/cloudformation/spectrum-examples/"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/tools-and-provisioning/cloudformation/spectrum-examples/"/>
-    </url>
-    <url>
-        <loc>https://docs.spot.io/?/tools-and-provisioning/cloudformation/spectrum-examples/spectrum-actions</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/tools-and-provisioning/cloudformation/spectrum-examples/spectrum-actions"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/tools-and-provisioning/cloudformation/spectrum-examples/spectrum-actions"/>
-    </url>
-    <url>
-        <loc>https://docs.spot.io/?/tools-and-provisioning/cloudformation/spectrum-examples/spectrum-alert</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/tools-and-provisioning/cloudformation/spectrum-examples/spectrum-alert"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/tools-and-provisioning/cloudformation/spectrum-examples/spectrum-alert"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/tools-and-provisioning/cloudformation/template-structure/output</loc>
