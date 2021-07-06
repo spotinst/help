@@ -95,7 +95,7 @@
     margin: 0;
 
     a {
-      height: 28px;
+      height: calc(var(--unit) * 4);
     }
   }
 
@@ -112,6 +112,7 @@
       margin: var(--unit) 0;
 
       > a {
+        font-weight: 600 !important;
         color: var(--text-color-primary) !important;
       }
 
@@ -120,9 +121,19 @@
         color: var(--text-color-secondary);
       }
 
+      a.sidebar-home {
+        font-weight: 500 !important;
+        color: var(--text-color-secondary) !important;
+        margin-left: calc(var(--unit) * -2);
+
+        .sidebar-back-icon {
+          margin: 0 2px -2px 0;
+        }
+      }
+
       > p {
         font-size: 12px;
-        font-weight: 700;
+        font-weight: 600;
         text-transform: uppercase;
         margin-top: 22px;
         color: var(--text-color-primary);
