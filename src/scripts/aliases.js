@@ -1536,6 +1536,8 @@ export const aliases = (() => {
       "/connect-your-cloud-provider/",
 
     "/design-documents/msp/msp-enrollment": "/eco/tutorials/msp-enrollment",
+
+    "/wave/wave-overview": "/wave/overview",
   };
 
   for (let [key, value] of Object.entries(map)) {
