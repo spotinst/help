@@ -14,5 +14,5 @@ Wave enables the teams responsible for deploying and operating big data solution
 
 ## What’s Next?
 
-- Learn more about Wave in the [Wave Overview](wave/wave-overview).
+- Learn more about Wave in the [Wave Overview](wave/overview).
 - [Get Started with Wave](wave/getting-started/).

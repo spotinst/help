@@ -23,8 +23,8 @@ The full body attribute list is available on the [Create](https://docs.spot.io/a
         "ServiceToken": {
           "Fn::Sub": "arn:aws:lambda:${AWS::Region}:178579023202:function:spotinst-cloudformation"
         },
-        "accessToken": {"Ref": "token"},
-        "accountId": {"Ref": "accountId"},
+        "accessToken": { "Ref": "token" },
+        "accountId": { "Ref": "accountId" },
         "autoTag": true,
         "updatePolicy": {
           "shouldUpdateTargetCapacity": false
@@ -58,27 +58,21 @@ The full body attribute list is available on the [Create](https://docs.spot.io/a
             "utilizeReservedInstances": false
           },
           "compute": {
-            "subnetIds": [
-              "subnet-123456789",
-              "subnet-123456789"
-            ],
+            "subnetIds": ["subnet-123456789", "subnet-123456789"],
             "instanceTypes": {
               "blacklist": ["c5.16xlarge"]
-            },            
+            },
             "launchSpecification": {
               "imageId": "ami-123456789",
               "userData": {
-                "Fn::Base64" : {
-                  "Fn::Join": ["", [
-                    "#!/bin/bash",
-                    "/etc/eks/bootstrap.sh mycluster"
-                  ]]
+                "Fn::Base64": {
+                  "Fn::Join": [
+                    "",
+                    ["#!/bin/bash", "/etc/eks/bootstrap.sh mycluster"]
+                  ]
                 }
               },
-              "securityGroupIds": [
-                "sg-123456789",
-                "sg-123456789"
-              ],
+              "securityGroupIds": ["sg-123456789", "sg-123456789"],
               "iamInstanceProfile": {
                 "arn": "arn:aws:iam::123456789:instance-profile/eks-worker-123456789"
               },
@@ -152,11 +146,10 @@ Resources:
               - "c4.8xlarge"
           launchSpecification:
             imageId: ""
-            userData: 
-              Fn::Base64:
-                !Sub |
-                  #!/bin/bash -xe
-                  yum update -y aws-cfn-bootstrap
+            userData:
+              Fn::Base64: !Sub |
+                #!/bin/bash -xe
+                yum update -y aws-cfn-bootstrap
             securityGroupIds:
               - ""
             iamInstanceProfile:
