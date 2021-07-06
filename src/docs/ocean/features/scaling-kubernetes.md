@@ -19,7 +19,7 @@ Ocean calculates and aggregates the number of unschedulable pods waiting to be p
 
 It may take a few moments before the created nodes join the Kubernetes cluster. In order to minimize this time (to zero), learn more about cluster [Headroom](ocean/features/headroom.md).
 
-<img src="/ocean/_media/features-scaling-k8s-01.png" />
+<img src="/ocean/_media/features-scaling-k8s-01.png"/>
 
 ### Affinity and Anti-affinity
 
@@ -68,6 +68,12 @@ Ocean simulates the cluster's topology and state `post` the scale-down activity 
 - Pods that are not backed by a controller object (so not created by deployment, replica set, job, stateful set)
 - Pods that cannot be moved elsewhere due to various constraints (lack of resources, non-matching node selectors or affinity, matching anti-affinity)
 - Pods that have the following label: `spotinst.io/restrict-scale-down`:`true`.
+
+### Scale down suspension
+- During roll (per cluster/ VNG/ specific instance) we will suspend the scale down on the cluster level
+- During workload migration
+- Once we fail to launch an instance due to a technical reason (for example in case there is no capacity for OD in a specific market), we will suspend the scale down per the specific VNG. The reason we suspend the scale down is that the cluster is not in optimal condition and pods are unscheduled. Here is the log that will be presented on the Elastilog:
+`"Could not scale up for pending pod ${KUBERNETES_POD_NAME} due to technical failure to launch required instances. Scale down has been disabled in VNG ${LAUNCHSPEC_NAME_AND_ID} until pod is scheduled."`
 
 ### Pods & Nodes Draining Process
 
