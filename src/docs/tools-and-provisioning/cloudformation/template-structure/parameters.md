@@ -21,22 +21,21 @@ Below are several examples where we defined parameters to use inside the Spot re
 { "accountId": { "Ref": "accountId" } }
 ```
 
+## Common Spot Parameters
+
 | **Parameter**                 | **Type**    | **Description**                                                                                                                                       |
 | ----------------------------- | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| shouldRoll                    | **Boolean** | Determines if the group should perform a blue-green deployment after an update to the cloud formationExample: `True`                                  |
-| shouldUpdateTargetCapacity    | **Boolean** | Determines if the groups target should update upon configuration updates.Example: `True`                                                              |
-| shouldResumeStateful          | **Boolean** | Determines if the group's stateful instances should resume upon capacity changes.Example: `True`                                                      |
-| shouldDeleteSnapshots         | **Boolean** | Determines if the group's EBS Volume snapshots collected from instances should be deleted once the group is deleted.Example: `True`                   |
-| shouldDeleteVolumes           | **Boolean** | Determines if the group's EBS Volumes collected from instances should be deleted once the group is deletedExample: `True`                             |
-| shouldDeleteNetworkInterfaces | **Boolean** | Determines if the Elastic Network Interfaces associated with the instances should be deleted once the group is deletedExample: `True` Default: `True` |
-| ServiceToken                  | **String**  | use the Spot LambdaExample: `Arn:aws:lambda:ca-central-1:178579023202:function:spotinst-cloudformation`                                               |
-| accessToken                   | **String**  | your Spot API access token                                                                                                                            |
-| accountId                     | **String**  | your Spot account IDExample: `act-12345`                                                                                                              |
+| shouldRoll                    | **Boolean** | Determines if the group should perform a blue-green deployment after an update to the cloud formation. Example: `True`                                  |
+| shouldUpdateTargetCapacity    | **Boolean** | Determines if the groups target should update upon configuration updates. Example: `True`                                                              |
+| shouldResumeStateful          | **Boolean** | Determines if the group's stateful instances should resume upon capacity changes. Example: `True`                                                      |
+| shouldDeleteSnapshots         | **Boolean** | Determines if the group's EBS Volume snapshots collected from instances should be deleted once the group is deleted. Example: `True`                   |
+| shouldDeleteVolumes           | **Boolean** | Determines if the group's EBS Volumes collected from instances should be deleted once the group is deleted. Example: `True`                             |
+| shouldDeleteNetworkInterfaces | **Boolean** | Determines if the Elastic Network Interfaces associated with the instances should be deleted once the group is deleted. Example: `True` Default: `True` |
+| ServiceToken                  | **String**  | Use the Spot Lambda. Example: `Arn:aws:lambda:ca-central-1:178579023202:function:spotinst-cloudformation`                                               |
+| accessToken                   | **String**  | Spot API access token                                                                                                                            |
+| accountId                     | **String**  | Spot account ID. Example: `act-12345`                                                                                                              |
 
-## Request Example: `shouldUpdateTargetCapacity`
-
-### Body
-
+## Request JSON Example: 
 ```json
 {
   "AWSTemplateFormatVersion": "2010-09-09",
@@ -76,9 +75,7 @@ Below are several examples where we defined parameters to use inside the Spot re
 }
 ```
 
-## Request Example: Using sensitive information as parameters in multiple resources
-
-### Body
+## Request JSON Example: Using sensitive information as parameters in multiple resources
 
 ```json
 {
@@ -160,9 +157,7 @@ Below are several examples where we defined parameters to use inside the Spot re
 }
 ```
 
-## Request Example: Adding Auto Tags to Elastigroup
-
-### Body
+## Request JSON Example: Adding Auto Tags to Elastigroup
 
 ```json
 {
