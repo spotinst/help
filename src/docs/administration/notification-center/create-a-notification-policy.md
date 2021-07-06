@@ -94,7 +94,7 @@ The following integrations are available:
 
 - External Email: Add email addresses that will receive notifications.
 - Webhook: Add webhooks to applications.
-- SNS: Add an SNS ARN to receive notifications in AWS.
+- SNS: Add an SNS topic ARN to receive notifications in AWS.
 - Slack: Add the webhook for a slack channel.
 
 ## Select Users
