@@ -65,14 +65,15 @@ Ocean simulates the cluster's topology and state `post` the scale-down activity 
 ### Scale Down Prevention
 
 - Pods with restrictive PodDisruptionBudget will be evicted gradually if the scale down will cause a violation of the disruption budget, Ocean will not scale down the node.
-- Pods that are not backed by a controller object (so not created by deployment, replica set, job, stateful set)
-- Pods that cannot be moved elsewhere due to various constraints (lack of resources, non-matching node selectors or affinity, matching anti-affinity)
+- Pods that are not backed by a controller object (so not created by deployment, replica set, job, stateful set).
+- Pods that cannot be moved elsewhere due to various constraints (lack of resources, non-matching node selectors or affinity, matching anti-affinity).
 - Pods that have the following label: `spotinst.io/restrict-scale-down`:`true`.
 
 ### Scale Down Suspension
 - During roll (per cluster, VNG or specific instance), Ocean suspends the scale down on the cluster level.
-- During workload migration
+- During workload migration, a scale down is suspended.
 - Once Ocean fails to launch an instance due to a technical reason (for example, if there is no capacity for OD in a specific market), Ocean suspends the scale down per the specific VNG. Ocean suspends the scale down because the cluster is not in optimal condition and pods are unscheduled. The following message is posted on the Elastilog:
+
 `"Could not scale up for pending pod ${KUBERNETES_POD_NAME} due to technical failure to launch required instances. Scale down has been disabled in VNG ${LAUNCHSPEC_NAME_AND_ID} until pod is scheduled."`
 
 ### Pods & Nodes Draining Process
@@ -80,20 +81,19 @@ Ocean simulates the cluster's topology and state `post` the scale-down activity 
 Ocean ensures that pods and nodes are gracefully terminated in a case of scale-down or an instance replacement.
 Node Termination process is as follows:
 
-1. Check for scale-down restriction label (`spotinst.io/restrict-scale-down`:`true`) on node's pods
-   - If found, the node is not eligible for scale-down
-2. Scan All the pods and mark the ones that need to be rescheduled
-   - Mark all the pods that don't have PDB configured, and start evicting them in parallel
+1. Check for scale-down restriction label (`spotinst.io/restrict-scale-down`:`true`) on node's pods.
+   - If found, the node is not eligible for scale-down.
+2. Scan All the pods and mark the ones that need to be rescheduled.
+   - Mark all the pods that don't have PDB configured, and start evicting them in parallel.
 3. For pods with PDB, Ocean performs the eviction in chunks and makes sure that it won't interfere with the minimal budget configured (For example a PDB .spec.minAvailable is 3, while there are 5 pods, 4 of them run on the node that is about to get scaled down; Ocean will evict 2 pods, wait for health signal and move to the next 2.
-4. An eviction is not completed until Ocean gets health signal from the new pod [readiness\liveness](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/) probe (when configured) and the old pod was successfully terminated ([wait for grace-period or after pre Stop command](https://kubernetes.io/docs/concepts/workloads/pods/pod/#termination-of-pods))
+4. An eviction is not completed until Ocean gets health signal from the new pod [readiness\liveness](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/) probe (when configured) and the old pod was successfully terminated ([wait for grace-period or after pre Stop command](https://kubernetes.io/docs/concepts/workloads/pods/pod/#termination-of-pods)).
 5. Ocean provides draining timeout of 300 seconds by default (configurable) for every Pod before terminating it.
 
 <img src="/ocean/_media/features-scaling-k8s-02.png" />
 
 ## Headroom
 
-Ocean provides the option to include a buffer of spare capacity (vCPU and memory resources) known as headroom. Headroom ensures that the cluster has the capacity to quickly scale more Pods without waiting for new nodes to be provisioned.
-Ocean optimally manages the headroom to provide the best possible cost/performance balance. However, headroom may also be manually configured to support any use case.
+Ocean provides the option to include a buffer of spare capacity (vCPU and memory resources) known as headroom. Headroom ensures that the cluster has the capacity to quickly scale more Pods without waiting for new nodes to be provisioned. Ocean optimally manages the headroom to provide the best possible cost/performance balance. However, headroom may also be manually configured to support any use case.
 
 In addition, cluster headroom may be further customized by using a separate headroom configuration per [Launch Specification](./launch-specifications). Custom Headroom units per Launch Specification are enabled when using headroom in Manual configuration mode, and are accessible via Launch Specification [API](https://docs.spot.io/api/#operation/OceanAWSLaunchSpecCreate).
 
