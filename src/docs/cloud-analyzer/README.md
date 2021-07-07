@@ -1,4 +1,4 @@
-# Cloud Analyzer Overview
+# Cloud Analyzer
 
 Cloud Analyzer is your cloud management and optimization dashboard. It is designed to be the first step within the Spot platform and provides a gateway to the other tools you can use to optimize your cloud spending.
 

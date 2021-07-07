@@ -1,4 +1,4 @@
-# Eco Overview
+# Eco
 
 Eco is a flexible reserved capacity management service that allows AWS users to plan, buy, and sell reserved instances effortlessly.
 

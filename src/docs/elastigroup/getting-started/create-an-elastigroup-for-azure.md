@@ -98,7 +98,8 @@ Choose one of the following types of images:
 
 <img src="/elastigroup/_media/gettingstarted-eg-azure-03c.png" width="331" height="171" />
 
-  Note that the items appearing in the list of application security groups depend on the Virtual Network that you choose and may be different in each network.
+Note that the items appearing in the list of application security groups depend on the Virtual Network that you choose and may be different in each network.
+
 - Assign Public IP. Mark this checkbox if you want VMs in this Elastigroup to launch with a Public IP. Choose Basic or Standard.
 
 You can define additional network interfaces as needed.

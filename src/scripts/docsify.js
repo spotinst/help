@@ -19,13 +19,7 @@ window.$docsify = {
   // Navigation
   // ---------------------------------------------------------------------------
   routerMode: "history", // default: 'hash'
-  alias: {
-    // routing rules for backwards compatibility
-    ...aliases,
-
-    // ensures there's only ever one single sidebar (see #301)
-    "/.*/_sidebar.md": "/_sidebar.md",
-  },
+  alias: { ...aliases }, // routing rules for backwards compatibility
   maxLevel: 1,
   subMaxLevel: 1,
   loadSidebar: true,

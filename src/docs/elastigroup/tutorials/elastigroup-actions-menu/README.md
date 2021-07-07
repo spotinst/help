@@ -7,6 +7,7 @@ Elastigroup frees your team to focus on core activities with our simplified infr
 ## Elastigroup Dashboard & Management
 
 In this section, you will learn where to go for top-level information about your account and individual elastigroups. Tutorial topics include:
+
 - [Elastigroup Dashboard](elastigroup/tutorials/elastigroup-actions-menu/elastigroup-dashboard): Your top-level view of insights and summary data over all the Elastigroups in your Spot account.
 
 <img src="/elastigroup/_media/tutorials-getting-to-know-00.png" />

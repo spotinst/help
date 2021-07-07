@@ -10,7 +10,9 @@ Create an Ocean Launch Spec with the following CloudFormation template. The full
     "SpotinstOcean": {
       "Type": "Custom::oceanLaunchSpec",
       "Properties": {
-        "ServiceToken": "arn:aws:lambda:${Region}:178579023202:function:spotinst-cloudformation",
+        "ServiceToken": {
+          "Fn::Sub": "arn:aws:lambda:${AWS::Region}:178579023202:function:spotinst-cloudformation"
+        },
         "accessToken": "YOUR TOKEN",
         "accountId": "YOUR ACCOUNT ID",
         "oceanLaunchSpec": {

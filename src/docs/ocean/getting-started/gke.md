@@ -1,4 +1,4 @@
-# Connect an existing GKE Cluster
+# Connect an Existing GKE Cluster
 
 Ocean is a managed infrastructure service for Kubernetes that automatically adjusts infrastructure capacity and size to meet the needs of pods, containers, and applications.
 
