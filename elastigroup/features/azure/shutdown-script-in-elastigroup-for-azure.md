@@ -65,7 +65,7 @@ Once you have added the script for installing the Spot Agent, you can add the ac
 - Spot agent uses pip (Python 2.x and 3.x Package Manager).
 - Shutdown scripts must start with the #! characters and the path to the interpreter you want to read the script (e.g. /bin/bash)
 - Shutdown scripts are executed as the root user, sudo is not required in the script. Remember that any files you create will be owned by root. For non-root permissions to files, modify permissions accordingly.
-- Shutdown script doesn't run interactively, you cannot include commands that require user feedback (such as rm without the -f flag).
+- The shutdown script does not run interactively, and you cannot include commands that require user feedback (such as rm without the -f flag).
 
 > **Tip**: It is recommended to define at least 120 seconds as the Draining Timeout under Elastigroup -> Edit -> General -> Advanced.
 
