@@ -17,8 +17,6 @@ Spot will then switch to the organization you chose.
 <details>
   <summary markdown="span">Virtual Node Groups in AKS</summary>
 
-  This is the detailed text.
-
   ## AKS bla bla bla
 
   We can still use markdown, but we need to take the additional step of using the `parse_block_html` option as described in the [Mix HTML + Markdown Markup section](#mix-html--markdown-markup).
@@ -28,8 +26,6 @@ Spot will then switch to the organization you chose.
 
 <details>
   <summary markdown="span">Virtual Node Groups in GKE</summary>
-
-  This is the detailed text.
 
   ## GKE bla bla bla
 
