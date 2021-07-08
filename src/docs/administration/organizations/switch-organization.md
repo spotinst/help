@@ -6,7 +6,7 @@ If your user is mapped to more than one organization, you can easily switch from
 
 <img src="/administration/_media/switch-organization-01a.png" />
 
-2. Choose the the name of the organization from the dropdown list. If you do not see the name in the list, enter the first few characters of the organization until the name appears in the list, and then click the name.
+2. Choose the the name of the organization from the dropdown list. If you do not see the name in the list, you can scroll down or enter the first few characters of the name in the Search box. Click the name when it appears in the list.
 
 <img src="/administration/_media/switch-organization-02.png" width="370" height="128" />
 
@@ -17,8 +17,6 @@ Spot will then switch to the organization you chose.
 <details>
   <summary markdown="span">Virtual Node Groups in AKS</summary>
 
-  This is the detailed text.
-
   ## AKS bla bla bla
 
   We can still use markdown, but we need to take the additional step of using the `parse_block_html` option as described in the [Mix HTML + Markdown Markup section](#mix-html--markdown-markup).
@@ -28,8 +26,6 @@ Spot will then switch to the organization you chose.
 
 <details>
   <summary markdown="span">Virtual Node Groups in GKE</summary>
-
-  This is the detailed text.
 
   ## GKE bla bla bla
 
