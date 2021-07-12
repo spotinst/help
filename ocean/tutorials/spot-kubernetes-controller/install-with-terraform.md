@@ -1,18 +1,22 @@
 # Install with Terraform
 
-Spot provides a [Terraform Module](https://github.com/spotinst/terraform-spotinst-ocean-controller) to install and manage the Ocean Controller.
+Spot provides a [Terraform Module](https://github.com/spotinst/terraform-spotinst-ocean-controller) to install and manage the Ocean Controller. This module uses the official Kubernetes provider to provision all cluster resources required by the controller.
 
-The module uses the official Kubernetes provider to provision the required cluster resources.
+## Usage Example
 
 ```hcl
 provider "kubernetes" {
-  // add your provider configs
+  config_path = "~/.kube/config"
 }
-module "spotinst_ocean_controller" {
-  source = "github.com/spotinst/terraform-spotinst-modules//spotinst_ocean_controller
 
-  spotinst_account = "act-123456"
-  spotinst_token = "<my_token>"
-  spotinst_cluster_identifier = ""
+module "ocean-controller" {
+  source = "spotinst/ocean-controller/spotinst"
+
+  # Credentials.
+  spotinst_token   = "redacted"
+  spotinst_account = "redacted"
+
+  # Configuration.
+  cluster_identifier = "example"
 }
 ```
