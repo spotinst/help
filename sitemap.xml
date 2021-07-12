@@ -1415,6 +1415,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/tutorials/azure/set-health-checks-and-autohealing"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/elastigroup/tutorials/elastigroup-actions-menu/analyze-your-costs</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/tutorials/elastigroup-actions-menu/analyze-your-costs"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/tutorials/elastigroup-actions-menu/analyze-your-costs"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/elastigroup/tutorials/elastigroup-actions-menu/create-notifications</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
@@ -1476,6 +1483,20 @@
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/tutorials/elastigroup-actions-menu/suspend-processes"/>
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/tutorials/elastigroup-actions-menu/suspend-processes"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/elastigroup/tutorials/elastigroup-actions-menu/view-load-balancers</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/tutorials/elastigroup-actions-menu/view-load-balancers"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/tutorials/elastigroup-actions-menu/view-load-balancers"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/elastigroup/tutorials/elastigroup-actions-menu/view-spot-markets</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/tutorials/elastigroup-actions-menu/view-spot-markets"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/tutorials/elastigroup-actions-menu/view-spot-markets"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/elastigroup/tutorials/elastigroup-budgets/budgets</loc>
