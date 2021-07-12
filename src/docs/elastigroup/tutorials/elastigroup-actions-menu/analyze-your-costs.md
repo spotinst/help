@@ -28,7 +28,7 @@ This chart shows the cost of the entire Elastigroup cluster per day. Costs inclu
 
 The circle chart shows your total compute cost over the time period and breaks it down per lifecycle pricing option, including spot, on demand, and reserved instance. Hover your mouse over the circle to see the details for each pricing option, including the portion (as a percent or your total spend) you pay for each option.
 
-<img src="/elastigroup/_media/tutorials-analyze-your-costs-04.png" />
+<img src="/elastigroup/_media/tutorials-analyze-your-costs-04.png" width="364" height="238" />
 
 ## What’s Next?
 
