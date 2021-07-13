@@ -1,36 +1,31 @@
 # Placement Groups
 
-A placement group is a logical grouping of instances within a single Availability Zone. Placement groups are recommended for applications that benefit from low network latency, high network throughput, or both. To provide the lowest latency, and the highest packet-per-second network performance for your placement group, choose an instance type that supports enhanced networking. For more information on Placement Groups, see the [AWS documentation](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html).
+A placement group is a logical set of interdependent instances that are distributed on the underlying hardware in a way that meets the needs of your workload while minimizing the chance of correlated failures. Depending on the type of workload, you can create a placement group using placement strategies such as Cluster, Partition, and Spread. These placement strategies are described in detail in the [AWS documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html).
 
-## Prerequisites
+Placement groups are recommended for applications that benefit from low network latency, high network throughput, or both. To provide the lowest latency and the highest packet-per-second network performance for your placement group, you would also want to choose an instance type that supports enhanced networking.
 
-An existing Placement Group configured in your AWS account.
+## Configure a Placement Group on Spot Instances
 
-## Configure Using Spot Console
+If you have an existing placement group configured in your AWS account, you can set it up to run on spot instances.
 
-1. Open the Elastigroup where you wish to add the Placement Group.
-2. Click on the Actions menu.
-3. Select ` Edit Configuration`
-4. Navigate to the `Review` Tab from the top navigation bar.
-5. Enable `Edit Mode` and add the placementGroupName property to the Availability zone setting.
+### Using the Spot Console
 
-```json
-{
-  "availabilityZones": [
-    {
-      "name": "us-west-2b",
-      "placementGroupName": "Your_Placement_Group",
-      "subnetIds": ["subnet-1234567"]
-    }
-  ]
-}
-```
+You can add a placement group when you create a new Elastigroup or when you edit an existing one. The procedure below is for editing an existing Elastigroup.
+1. Open the Elastigroup where you wish to add the placement group.
+2. Click the Actions menu and select Edit Configuration.
+3. Go to the Review tab and click JSON.
 
-## Using the API
+<img src="/elastigroup/_media/features-placement-group-01.png" />
 
-1. Add the Placement Group property using the Update or [Create API](https://api.spotinst.com/elastigroup/amazon-web-services/create/).
-2. In the case of creating a group, add the `placementGroupName`to the Availability zone setting
-3. In the case of updating a group, use the following Body in your request:
+4. Click Edit Mode and add the placementGroupName property to the Availability Zone (AZ) setting.
+
+<img src="/elastigroup/_media/features-placement-group-02.png" />
+
+### Using the API
+
+Add the Placement Group property using the [Update](https://docs.spot.io/api/#operation/elastigroupAwsUpdate) or the [Create](https://docs.spot.io/api/#operation/elastigroupAwsCreate) API.
+- In the Create API, add the placementGroupName to the AZ setting.
+- In the Update API, use the following body in your request:
 
 ```json
 {
@@ -48,16 +43,14 @@ An existing Placement Group configured in your AWS account.
 
 ## Placement Group Rules
 
-- Placement Group cannot be distributed across Availability zones (All the associated members must be of the same Availability Zone)
-- Instance types supported for placement are limited to the following:
-  - General purpose: m4.large, m4.xlarge, m4.2xlarge, m4.4xlarge, m4.10xlarge, m4.16xlarge
-  - Compute-optimized: c4.large, c4.xlarge, c4.2xlarge, c4.4xlarge, c4.8xlarge, c3.large, c3.xlarge, c3.2xlarge, c3.4xlarge, c3.8xlarge, cc2.8xlarge
-  - Memory optimized: cr1.8xlarge, r3.large, r3.xlarge, r3.2xlarge, r3.4xlarge, r3.8xlarge| r4.large, r4.xlarge, r4.2xlarge, r4.4xlarge, r4.8xlarge, r4.16xlarge, x1.16xlarge, x1.32xlarge
-  - Storage optimized: d2.xlarge, d2.2xlarge, d2.4xlarge, d2.8xlarge, hi1.4xlarge, hs1.8xlarge, i2.xlarge, i2.2xlarge, i2.4xlarge, i2.8xlarge, i3.large, i3.xlarge, i3.2xlarge, i3.4xlarge, i3.8xlarge, i3.16xlarge
-  - Accelerated computing: cg1.4xlarge, f1.2xlarge, f1.16xlarge, g2.2xlarge, g2.8xlarge, p2.xlarge, p2.8xlarge, p2.16xlarge
-- You can't associate an existing instance into a placement group. You must create a new instance in the placement group.
-- Capacity reservation (via Reserved instances) can be used by instances in a placement group that are assigned to the same Availability Zone. However, it is not possible to explicitly reserve capacity for a placement group.
-- Members of the placement group must address each other via their private IP addresses.
-- When using on-demand instances, if you stop and then start an instance, in some cases AWS will fail to find the required capacity causing the Elastigroup.
-- The best practice while setting up Placement Groups is to set up a single AZ, with similar instance types.
-- In the case of lacking capacity in the specific Placement Group configured – we will launch instances in the AZ.
+The following principles apply for setting up placement groups.
+- To configure a placement group, you must assign it to an AZ.
+- Elastigroup supports only one placement group per AZ.
+- You cannot associate an existing instance to a placement group. You must create a new instance in the placement group.
+- Capacity reservation (using reserved instances) can be used by instances in a placement group that are assigned to the same AZ. However, it is not possible to explicitly reserve capacity for a placement group.
+- Members of the placement group must address each other using their private IP addresses.
+- If there is not enough capacity in the specific placement group configured within an AZ, then Elastigroup will launch new instances in the AZ.
+
+## What’s Next?
+
+Learn more about [availability zones](elastigroup/features/compute/preferred-availability-zones) and [preferred instance types](elastigroup/features/compute/preferred-instance-types).
