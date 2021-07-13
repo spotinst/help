@@ -19,7 +19,7 @@ You can add a placement group when you create a new Elastigroup or when you edit
 
 4. Click Edit Mode and add the placementGroupName property to the Availability Zone (AZ) setting.
 
-<img src="/elastigroup/_media/features-placement-group-02.png" />
+<img src="/elastigroup/_media/features-placement-group-02.png" width="376" height="205" />
 
 ### Using the API
 
