@@ -1,6 +1,6 @@
 <!-- Table of Contents -->
 
-- <a href="/" class="sidebar-home"><i data-feather="arrow-left" class="sidebar-back-icon"></i>Back</a>
+- <a href="/" class="sidebar-home"><i data-feather="arrow-left" class="sidebar-back-icon"></i>Back to Main Tree</a>
 - [Managed Instance](managed-instance/)
   - [Getting Started](managed-instance/getting-started/)
     - [Import an Existing Managed Instance](managed-instance/getting-started/join-an-existing-managed-instance)
