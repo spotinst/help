@@ -1,6 +1,6 @@
 <!-- Table of Contents -->
 
-- <a href="/" class="sidebar-home"><i data-feather="arrow-left" class="sidebar-back-icon"></i>Back</a>
+- <a href="/" class="sidebar-home"><i data-feather="arrow-left" class="sidebar-back-icon"></i>Back to Main Tree</a>
 - [Elastigroup](elastigroup/)
   - [Getting Started](elastigroup/getting-started/)
     - [Elastigroup for AWS](elastigroup/getting-started/elastigroup-for-aws)

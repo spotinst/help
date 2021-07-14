@@ -1,6 +1,6 @@
 <!-- Table of Contents -->
 
-- <a href="/" class="sidebar-home"><i data-feather="arrow-left" class="sidebar-back-icon"></i>Back</a>
+- <a href="/" class="sidebar-home"><i data-feather="arrow-left" class="sidebar-back-icon"></i>Back to Main Tree</a>
 - [Cloud Analyzer](cloud-analyzer/)
   - [Getting Started](cloud-analyzer/getting-started/)
     - [Connect your AWS Management Account: Existing Customer](cloud-analyzer/getting-started/connect-your-aws-master-payer-account-existing-customer)

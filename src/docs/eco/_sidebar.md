@@ -1,6 +1,6 @@
 <!-- Table of Contents -->
 
-- <a href="/" class="sidebar-home"><i data-feather="arrow-left" class="sidebar-back-icon"></i>Back</a>
+- <a href="/" class="sidebar-home"><i data-feather="arrow-left" class="sidebar-back-icon"></i>Back to Main Tree</a>
 - [Eco](eco/)
   - [Getting Started](eco/getting-started/)
     - [Connect your AWS Account](eco/getting-started/connect-your-aws-account)
