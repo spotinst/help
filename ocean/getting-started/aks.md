@@ -40,8 +40,18 @@ Complete the steps as described on the page and summarized below.
 1. Create a Spot token (or use an existing one) and copy it to the text box.
 2. Enter or automatically generate the Cluster Controller ID.
 3. Run the displayed script on a workstation with `kube config` set to the AKS cluster context. To confirm that the Ocean Controller is functioning in the cluster, click Check Connectivity. Allow approximately two minutes for the test to complete.
+
+<img src="/ocean/_media/gettingstarted-join-existing-aks-011.png" />
+
 4. Run the displayed script on a workstation with `kube config` set to the AKS cluster context to kick off the import process from the AKS cluster to Ocean as described below in detail.
-5. Click Next.
+
+<img src="/ocean/_media/gettingstarted-join-existing-aks-012.png" />
+
+5. (Kubenet-based AKS clusters only.) Run the displayed script on a workstation with an Owner permissions token for the Azure environment. This will adjust the permissions needed in the Azure managed service identity (MSI) for Ocean to use when provisioning new nodes.
+
+<img src="/ocean/_media/gettingstarted-join-existing-aks-013.png" />
+
+6. Click Next.
 
 ### Import Process Overview
 
@@ -58,6 +68,16 @@ This fetched data is temporarily saved in the [Ocean SaaS](ocean/overview-kubern
 When you click Next, the identifier (e.g., acd-b397b108) that was provided as part of the script is used to validate the import process against the Ocean SaaS.
 
 Upon successful validation, you will advance to the Compute stage of the wizard where the imported data can be edited. Otherwise, the script should be run again. Note that Ocean regenerates a new identifier for each import attempt, so be sure to also copy the script again. In addition, as a new Kubernetes job is created, the job installed in the previous attempt should first be deleted.
+
+### Additional Steps for Kubenet-based Clusters
+
+When you use the [Kubenet](https://docs.microsoft.com/en-us/azure/aks/configure-kubenet) network interface in an AKS cluster, it is crucial to make sure nodes provisioned by Ocean are successfully registered and added into the Kubenet network. To verify that, Ocean manually adds node IP addresses into the routing table upon creation.
+
+This process requires that each VM have relevant permissions to edit the routing table used in the cluster. This is achieved by using the Azure MSI attached to the VMs.
+
+The script mentioned in Step 5 above assigns the required role to the MSI in Azure. The script should be run by an Azure user with Owner permissions to the route table.
+
+In addition, when Ocean imports a Kubenet-based AKS cluster, the MSI details are imported as well and saved in the Ocean configuration so that each new node will have the MSI attached.
 
 ## Compute
 
