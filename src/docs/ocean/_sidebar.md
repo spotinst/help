@@ -5,6 +5,7 @@
   - [Overview (Kubernetes)](ocean/overview-kubernetes)
   - [Overview (ECS)](ocean/overview-ecs)
   - [Getting Started](ocean/getting-started/)
+    - [Insights](ocean/getting-started/insights)
     - [EKS](ocean/getting-started/eks/)
       - [Connect an Existing Cluster](ocean/getting-started/eks/join-an-existing-cluster)
       - [Create a New Cluster](ocean/getting-started/eks/create-a-new-cluster)

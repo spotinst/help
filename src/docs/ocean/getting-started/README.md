@@ -13,7 +13,7 @@ To get started with an Ocean cluster, connect your Cloud account now: [AWS](conn
 - [ECS](/ocean/getting-started/ecs)
 - [OpenShift](/ocean/tools-and-integrations/openshift/)
 
-Ocean Insights
+## Ocean Insights
 
 Ocean Insights is an analysis tool that demonstrates optimizations and savings that Ocean can apply on your Kubernetes cluster. An Insights analysis is an optional step you can take towards connecting to the Ocean engine and migrating your workloads into Ocean management.
 
