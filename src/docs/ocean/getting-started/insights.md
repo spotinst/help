@@ -112,4 +112,4 @@ The Review page presents a summary of all the information you entered to connect
 
 ## What’s Next?
 - [Migrate your Workloads](ocean/tutorials/migrate-workload) to Ocean.
-- Learn more about importing multiple workload types in the same cluster by using [Launch Specifications](ocean/features/launch-specifications).
+- Learn more about importing multiple workload types in the same cluster by using [Virtual Node Groups](ocean/features/launch-specifications).
