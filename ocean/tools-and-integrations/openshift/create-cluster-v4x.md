@@ -42,8 +42,7 @@ Confirm or change the settings imported by the Ocean Creation Wizard.
 4. Click Test Connectivity to ensure the controller functionality.
 
 ```bash
-#!/usr/bin/env bash
-curl -fsSL http://spotinst-public.s3.amazonaws.com/integrations/kubernetes/cluster-controller/scripts/init.sh | \
+curl -fsSL https://spotinst-public.s3.amazonaws.com/integrations/kubernetes/cluster-controller/scripts/init.sh | \
 SPOTINST_TOKEN=<ENTER YOUR TOKEN HERE> \
 SPOTINST_ACCOUNT=act-54c5d1ab \
 SPOTINST_CLUSTER_IDENTIFIER=open-shift \
