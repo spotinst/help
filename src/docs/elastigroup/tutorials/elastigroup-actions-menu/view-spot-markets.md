@@ -5,6 +5,7 @@ The Spot Markets page provides insights about the status of your chosen instance
 ## Go to the Spot Markets Tab
 
 To get to the Spot Markets tab:
+
 1. In the Spot console, go to Elastigroup and click Groups.
 2. Click on the name of the Elastigroup and click the Spot Markets tab.
 
@@ -30,7 +31,7 @@ You can use this graph to compare your own rate of interruptions to that of the 
 
 ## Spot Instance Lifetime
 
-In this chart, each bar represents a market, and the height of the bar indicates the average duration of an instance in that market. The chart includes a bar for each market configured in the Elastigroup. Using this chart, you can understand which markets are more stable, and you may want to use this information to define these as preferred markets.  
+In this chart, each bar represents a market, and the height of the bar indicates the average duration of an instance in that market. The chart includes a bar for each market configured in the Elastigroup. Using this chart, you can understand which markets are more stable, and you may want to use this information to define these as preferred markets.
 
 <img src="/elastigroup/_media/tutorials-view-spot-markets-04.png" />
 

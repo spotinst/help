@@ -75,14 +75,14 @@ The Ocean internal architecture utilizes the Elastigroup engine, a core componen
 <details>
   <summary markdown="span">Utilize Reserved Instances (For AWS users)</summary>
 
-  ## Utilize Reserved Instances (For AWS users)
+## Utilize Reserved Instances (For AWS users)
 
-  If you have [reserved instances](elastigroup/features/core-features/spot-reserved-on-demand-instances) (RIs) and they are available, Ocean will utilize them by default before purchasing spot instances, (i.e., the API attribute `utilizeReservedInstances` is set to True by default upon Ocean creation). If you would like to change this, set this attribute to False using this [API](https://docs.spot.io/api/#operation/OceanAWSClusterCreate). In addition, if you would like to take advantage of [AWS Savings Plans](https://aws.amazon.com/savingsplans/pricing/), you can opt in using the API.
+If you have [reserved instances](elastigroup/features/core-features/spot-reserved-on-demand-instances) (RIs) and they are available, Ocean will utilize them by default before purchasing spot instances, (i.e., the API attribute `utilizeReservedInstances` is set to True by default upon Ocean creation). If you would like to change this, set this attribute to False using this [API](https://docs.spot.io/api/#operation/OceanAWSClusterCreate). In addition, if you would like to take advantage of [AWS Savings Plans](https://aws.amazon.com/savingsplans/pricing/), you can opt in using the API.
 
-  If you are using RI sharing across multiple AWS accounts, you can take advantage of the Cross RI Utilization feature to further optimize your RI usage. This feature will consider RI contracts and consumption across all relevant accounts. This is useful when a single account cannot consume the full RI capacity. Additional accounts can then use the excess capacity up to the maximum capacity of the RI. To activate this feature, do the following:
+If you are using RI sharing across multiple AWS accounts, you can take advantage of the Cross RI Utilization feature to further optimize your RI usage. This feature will consider RI contracts and consumption across all relevant accounts. This is useful when a single account cannot consume the full RI capacity. Additional accounts can then use the excess capacity up to the maximum capacity of the RI. To activate this feature, do the following:
 
-  1. [Connect](https://docs.spot.io/connect-your-cloud-provider/aws-account) all the accounts with RI contracts to the Spot platform. (This can also be done using a read-only policy.)
-  2. Reach out to Spot Support and request enablement of Cross RI Utilization for your Spot organization.
+1. [Connect](https://docs.spot.io/connect-your-cloud-provider/aws-account) all the accounts with RI contracts to the Spot platform. (This can also be done using a read-only policy.)
+2. Reach out to Spot Support and request enablement of Cross RI Utilization for your Spot organization.
 
 </details>
 

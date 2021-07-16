@@ -5,6 +5,7 @@ Ocean Insights provides a convenient way for you to see how Ocean can reduce you
 ## Get Started
 
 To connect Ocean Insights to your Kubernetes cluster:
+
 1. Go to Ocean in the Spot console and click Insights.
 
 <img src="/ocean/_media/gettingstarted-insights-01.png" />
@@ -24,12 +25,18 @@ This step will install the Ocean Controller in your Kubernetes cluster. Working 
 
 1. Copy the script appearing in the Spot UI and run it on a machine that has the kubectl command-line tool installed and configured. Ensure that the correct context is defined in kube config.
 
-<img src="/ocean/_media/gettingstarted-insights-03.png" />
+```shell
+curl -fsSL https://spotinst-public.s3.amazonaws.com/integrations/kubernetes/cluster-controller/scripts/init.sh |
+	SPOTINST_TOKEN="<redacted>" \
+	SPOTINST_ACCOUNT="<redacted>" \
+	SPOTINST_CLUSTER_IDENTIFIER="<redacted>" \
+	bash
+```
 
 2. After the script has completed successfully, return to the same page in the Spot UI and click Connect Connectivity. Ocean will verify that communication with the controller is working as expected. This could take a couple of minutes.
 3. When Connectivity Status shows a green checkmark, click Connect Insights on the bottom right.
 
-Ocean needs a few minutes to generate a summary based on the collected and analyzed data.  
+Ocean needs a few minutes to generate a summary based on the collected and analyzed data.
 
 ## View Cluster Insights
 
@@ -38,6 +45,7 @@ When the analysis is ready, the Insights analysis page appears with the name of 
 ### Cluster Details
 
 The cluster details include:
+
 - Last Heartbeat
 - Kubernetes Version
 - Running Pods
@@ -47,10 +55,11 @@ The cluster details include:
 ### Savings Potential
 
 This area shows your:
+
 - Estimated Current Costs: An estimate based on the instances detected in the cluster and relevant attributes such as instance type, size, and lifecycle (e.g., on demand or spot).
 - Estimated Potential Costs: This estimate is based on two parts:
   - Converting all on-demand instances to spot instances. (If you do not plan to use spot instances, click the toggle switch in the upper right. This will show an estimate based on bin packing only.)
-  - Optimizing the allocation of compute infrastructure by workloads using  Ocean’s bin packing abilities.
+  - Optimizing the allocation of compute infrastructure by workloads using Ocean’s bin packing abilities.
 
 <img src="/ocean/_media/gettingstarted-insights-04.png" />
 
@@ -77,6 +86,7 @@ Once your Insights analysis is created, it is saved and added to a list of clust
 ## Connect to Ocean
 
 Once you have reviewed the Insights analysis of your Kubernetes cluster, we make it really easy for you to go ahead and connect your cluster to Ocean so you can start saving costs and optimizing the cluster.
+
 1. On the cluster Insights page, click Connect as Ocean Cluster. (You can also do this from the list of Insights clusters.)
 2. Complete the information requested in the connection wizard (described below).
 3. Review the configuration and click Connect.
@@ -111,5 +121,6 @@ In the General page of the connection wizard, complete the following:
 The Review page presents a summary of all the information you entered to connect the cluster to Ocean. You can review and modify information if necessary. Click Connect to connect the cluster to Ocean. Ocean will then add the cluster to the list of Ocean clusters and start optimization and management of the cluster on spot instances. You can now migrate your workloads to the cluster.
 
 ## What’s Next?
+
 - [Migrate your Workloads](ocean/tutorials/migrate-workload) to Ocean.
 - Learn more about importing multiple workload types in the same cluster by using [Virtual Node Groups](ocean/features/launch-specifications).

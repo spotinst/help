@@ -5,6 +5,7 @@ When your cloud cluster uses a combination of spot, on-demand, and reserved inst
 ## Go to the Costs Tab
 
 To view a breakdown of your Elastigroup costs:
+
 1. In the Spot console, go to Elastigroup and click Groups.
 2. Click on the name of the Elastigroup and click the Costs tab.
 

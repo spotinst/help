@@ -70,6 +70,7 @@ Ocean simulates the cluster's topology and state `post` the scale-down activity 
 - Pods that have the following label: `spotinst.io/restrict-scale-down`:`true`.
 
 ### Scale Down Suspension
+
 - During roll (per cluster, VNG or specific instance), Ocean suspends the scale down on the cluster level.
 - During workload migration, a scale down is suspended.
 - Once Ocean fails to launch an instance due to a technical reason (for example, if there is no capacity for OD in a specific market), Ocean suspends the scale down per the specific VNG. Ocean suspends the scale down because the cluster is not in optimal condition and pods are unscheduled. The following message is posted on the Elastilog:

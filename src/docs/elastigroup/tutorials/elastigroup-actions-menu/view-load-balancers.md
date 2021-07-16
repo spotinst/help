@@ -5,13 +5,16 @@ When you have load balancers configured in your Elastigroup, the Load Balancers 
 ## Go to the Load Balancers Tab
 
 To get to the Load Balancers tab:
+
 1. In the Spot console, go to Elastigroup and click Groups.
 2. Click on the name of the Elastigroup and click the Load Balancers tab.
 
 <img src="/elastigroup/_media/tutorials-load-balancers-01.png" />
 
 ## List of Load Balancers
+
 The list of load balancers provides an overview of all the load balancers currently integrated in the group. Metrics appearing in the table are taken from the last minute.
+
 - Name: Name the load balancer or target group configured in the Elastigroup.
 - Healthy Instances: Number of healthy instances out of all instances connected to the load balancer.
 - Requests: Number of requests received by the load balancer or target group in the last minute.
@@ -26,6 +29,7 @@ The list of load balancers provides an overview of all the load balancers curren
 ## Metrics and Trends
 
 Metrics and trend charts present data about your load balancer activities to help you understand the traffic status and identify possible issues. You can filter the data presented in the following ways:
+
 - In the list of load balances, mark the load balances and target groups that you want to see in the charts.
 - For each chart, you choose a timeframe of six hours, one day or seven days.
 
@@ -52,5 +56,6 @@ This is a trend chart showing the percent CPU utilization for each instance in t
 ## What’s Next?
 
 Learn how to:
+
 - [Create a New Elastigroup](elastigroup/tutorials/elastigroup-tasks/create-an-elastigroup-from-scratch).
 - Get an [Overview](elastigroup/tutorials/elastigroup-actions-menu/elastigroup-overview) of your Elastigroup details.

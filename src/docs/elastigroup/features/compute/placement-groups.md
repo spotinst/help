@@ -11,6 +11,7 @@ If you have an existing placement group configured in your AWS account, you can 
 ### Using the Spot Console
 
 You can add a placement group when you create a new Elastigroup or when you edit an existing one. The procedure below is for editing an existing Elastigroup.
+
 1. Open the Elastigroup where you wish to add the placement group.
 2. Click the Actions menu and select Edit Configuration.
 3. Go to the Review tab and click JSON.
@@ -24,6 +25,7 @@ You can add a placement group when you create a new Elastigroup or when you edit
 ### Using the API
 
 Add the Placement Group property using the [Update](https://docs.spot.io/api/#operation/elastigroupAwsUpdate) or the [Create](https://docs.spot.io/api/#operation/elastigroupAwsCreate) API.
+
 - In the Create API, add the placementGroupName to the AZ setting.
 - In the Update API, use the following body in your request:
 
@@ -44,6 +46,7 @@ Add the Placement Group property using the [Update](https://docs.spot.io/api/#op
 ## Placement Group Rules
 
 The following principles apply for setting up placement groups.
+
 - To configure a placement group, you must assign it to an AZ.
 - Elastigroup supports only one placement group per AZ.
 - You cannot associate an existing instance to a placement group. You must create a new instance in the placement group.
