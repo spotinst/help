@@ -97,6 +97,18 @@ The following integrations are available:
 - SNS: Add an SNS topic ARN to receive notifications in AWS.
 - Slack: Add the webhook for a slack channel. In order to define the Channel, create a webhook URL [here](https://spinnakerteam.slack.com/apps/A0F7XDUAZ-incoming-webhooks).
 
+The following attributes will be sent as part of the JSON message via Webhook, SNS or Slack:
+
+- default
+- accountId
+- resourceId
+- organizationName
+- trigger_policies
+- accountName
+- resourceName
+- title
+- message
+
 ## Select Users
 
 Once you (an Admin user) have created an Account level policy, only you are registered to the policy. You can now edit the policy and determine which Spot users will receive notifications. See [Edit Registered Users](administration/notification-center/edit-a-notification-policy?id=edit-registered-users).
