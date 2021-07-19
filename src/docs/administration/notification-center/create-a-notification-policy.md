@@ -97,7 +97,7 @@ The following integrations are available:
 - SNS: Add an SNS topic ARN to receive notifications in AWS.
 - Slack: Add the webhook for a slack channel. In order to define the Channel, create a webhook URL [here](https://spinnakerteam.slack.com/apps/A0F7XDUAZ-incoming-webhooks).
 
-The following attributes will be sent as part of the JSON message via webhook/SNS/Slack:
+The following attributes will be sent as part of the JSON message via Webhook, SNS or Slack:
 
 - default
 - accountId
