@@ -29,7 +29,7 @@ The following rules apply to these:
 
 ### Set Instance Size Ranges
 
-In some use cases, it is a good practice to increase the minimum CPU or RAM of the individual nodes Ocean launches for your containerized workloads.
+In some use cases, it is good practice to increase the minimum CPU or RAM of the individual nodes Ocean launches for your containerized workloads.
 
 For example, you may want to increase the minimum machine size if you run many DaemonSets (that require a lot of resources) or you have any DaemonSets that are licensed based on machine count.
 
@@ -39,7 +39,7 @@ Alternatively, depending on the sensitivity of your workloads and the general si
 
 <img src="/ocean/_media/tips-image-types-02.png" /><br><br>
 
-</details>
+</details><br>
 
 <details>
   <summary markdown="span">Match Kubernetes Version and Built-in Labels</summary>
@@ -70,7 +70,7 @@ The Ocean internal architecture utilizes the Elastigroup engine, a core componen
 
 <img src="/ocean/_media/tips-underlying-eg-01.png" /><br><br>
 
-</details>
+</details><br>
 
 <details>
   <summary markdown="span">Utilize Reserved Instances (For AWS users)</summary>
@@ -84,7 +84,7 @@ If you are using RI sharing across multiple AWS accounts, you can take advantage
 1. [Connect](https://docs.spot.io/connect-your-cloud-provider/aws-account) all the accounts with RI contracts to the Spot platform. (This can also be done using a read-only policy.)
 2. Reach out to Spot Support and request enablement of Cross RI Utilization for your Spot organization.
 
-</details>
+</details><br>
 
 ## What’s Next?
 
