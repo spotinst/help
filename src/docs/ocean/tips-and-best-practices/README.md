@@ -37,7 +37,7 @@ Increasing the minimum machine size helps to limit the node count by not allowin
 
 Alternatively, depending on the sensitivity of your workloads and the general size of your cluster, you may wish to decrease the maximum CPU or RAM per node to limit the number of containers that will be affected in the event of a node replacement.
 
-<img src="/ocean/_media/tips-image-types-02.png" />
+<img src="/ocean/_media/tips-image-types-02.png" /><br><br>
 
 </details>
 
@@ -50,7 +50,7 @@ Ocean obeys Kubernetes labels wherever you apply them. However, labels are speci
 
 For example, `beta.kubernetes.io/instance-type` applies to Kubernetes version 1.16 and before, while `nodes.kubernetes.io/instance-type` applies to Kubernetes version 1.17 and later.
 
-</details>
+</details><br>
 
 <details>
   <summary markdown="span">Minimize Service Interruptions using Spot Labels</summary>
@@ -59,7 +59,7 @@ For example, `beta.kubernetes.io/instance-type` applies to Kubernetes version 1.
 
 Ways to reduce interruptions of workloads using the `restrict-scale-down` and `node-lifecycle` labels are described in detail in [Spot Labels](ocean/features/labels-and-taints). Note that setting the workload to run on OD instances does not prevent Ocean from bin packing the cluster by scaling down. Therefore, to ensure workloads running on OD instances are not interrupted by scale down, You can use both these labels together. This will ensure that Ocean will not scale down OD instances running critical applications due to efficiency considerations.
 
-</details>
+</details><br>
 
 <details>
   <summary markdown="span">Underlying Elastigroup</summary>
@@ -68,7 +68,7 @@ Ways to reduce interruptions of workloads using the `restrict-scale-down` and `n
 
 The Ocean internal architecture utilizes the Elastigroup engine, a core component of the Spot platform. Therefore, whenever an Ocean cluster is created, an underlying Elastigroup is also created. Although this underlying Elastigroup still appears in the Elastigroup area of the Spot console, management of the Ocean cluster is not allowed there. The cluster is managed only in the Ocean area of the console.
 
-<img src="/ocean/_media/tips-underlying-eg-01.png" />
+<img src="/ocean/_media/tips-underlying-eg-01.png" /><br><br>
 
 </details>
 
