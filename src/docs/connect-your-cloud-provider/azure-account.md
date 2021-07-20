@@ -28,9 +28,9 @@ This procedure covers authenticating your Spot account with Azure, which gives S
 
 <img src="/connect-your-cloud-provider/_media/azure3-768x240.png" />
 
-3. Set description and expiration of never expired:
+3. Enter a brief description of the secret and define a validity period that includes a start date and end date:
 
-<img src="/connect-your-cloud-provider/_media/azure4-768x424.png" width="441" height="243" />
+<img src="/connect-your-cloud-provider/_media/azure4-768x424a.png" width="338" height="151" />
 
 4. Make sure to copy the Secret Key and set it aside. It won't appear again after you leave the Key settings.
 
