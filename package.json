@@ -26,7 +26,7 @@
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.28.3",
-    "@typescript-eslint/parser": "^4.28.3",
+    "@typescript-eslint/parser": "^4.28.4",
     "autoprefixer": "^10.3.1",
     "clean-webpack-plugin": "3.0.0",
     "concurrently": "^6.2.0",
