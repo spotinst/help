@@ -4,7 +4,7 @@
 
 Added
 
-- Support for k8s 1.22 deprecated apis
+- Support for Kubernetes 1.22 deprecated APIs
 
 ## [1.0.76] - 2021-06-27
 
@@ -16,13 +16,13 @@ Added
 
 Added
 
-- Upgraded k8s SDK
+- Upgraded Kubernetes SDK
 
 ## [1.0.74] - 2021-04-22
 
 Added
 
-- Support for k8s 1.19 deprecated apis
+- Support for Kubernetes 1.19 deprecated APIs
 
 ## [1.0.73] - 2021-02-14
 
