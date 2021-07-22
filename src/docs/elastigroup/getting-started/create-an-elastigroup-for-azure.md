@@ -76,9 +76,28 @@ When you have completed the information in the General tab, click Next to contin
 ### Image
 
 Choose one of the following types of images:
+- [Marketplace](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/cli-ps-findimage). An image available in the Azure Marketplace. You will need to select options from each of the following dropdowns:
+  - Publisher. The organization that created the image.
+  - Offer. The name of a group of related images created by a publisher. Examples: UbuntuServer, WindowsServer.
+  - SKU. An instance of an offer, such as a major release of a distribution. Examples: 18.04-LTS, 2019-Datacenter.
+- Custom. One of your custom made VM Images. You will need to select options from each of the following dropdowns:
+  - Image Resource Group. A list of Resource Groups associated with your subscription.
+  - [Image Name](https://docs.microsoft.com/en-us/dynamics-nav/how-to--get-the-microsoft-azure-image-name). This is the label that is assigned to the image.
+- [Shared Image](https://docs.microsoft.com/en-us/azure/virtual-machines/shared-image-galleries). Enables you to create an Elastigroup with an image from your organization’s Shared Image Gallery. You will need to select options from each of the following dropdowns:
+  - Image Resource Group. A list of Resource Groups associated with your subscription.
+  - Gallery Name. The list of shared gallery names associated with the selected Resource Group.
+  - Image Name. List of shared images associated with the selected Gallery. See below for more information.
+  - Version. The available versions of the selected Image.  These will be versions that are available in your selected region. If you need the most recent version, choose Latest from the list.
 
-- Marketplace. An image available in the Azure Marketplace.
-- Custom. One of your custom made VM Images.
+<img src="/elastigroup/_media/gettingstarted-eg-azure-031.png" />
+
+#### Image Name
+
+All of the image names in the dropdown list have the OS that you chose under Operating System and VM Sizes.
+
+Images are indicated as Generalized or Specialized. When you choose a Specialized image, the following applies:
+- You will not specify Login information for the image.
+- Custom Data will not be available.
 
 ### Network
 
@@ -109,11 +128,13 @@ You can define additional network interfaces as needed.
 - User Name. Specify the user name you wish to SSH the VM's with.
 - Windows Password. The password you use for your Windows login.
 
+> **Note**: When a Specialized Shared [Image](elastigroup/getting-started/create-an-elastigroup-for-azure?id=image) is specified, you do not need to specify login information.
+
 ### Additional Configuration (optional)
 
 - Managed Identity. Select the Managed Identity for your VMSS instances.
 - Tags. Add tag keys and values you want associated with the Elastigroup VMs.
-- Custom Data. Custom data is useful for launching VMs with all required configurations and software installations. Elastigroup can load custom user data (i.e., custom scripts) during the provisioning of VMs.
+- Custom Data. Custom data is useful for launching VMs with all required configurations and software installations. Elastigroup can load custom user data (i.e., custom scripts) during the provisioning of VMs. When a Specialized Shared Image is specified, Custom Data is not available.
 - Shutdown Script. You can configure a shutdown script, but this requires an agent to be installed on the instance. [Learn more](elastigroup/features/azure/shutdown-script-in-elastigroup-for-azure).
 
 <img src="/elastigroup/_media/gettingstarted-eg-azure-05.png" />
