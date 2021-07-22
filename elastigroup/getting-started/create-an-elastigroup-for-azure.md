@@ -128,7 +128,7 @@ You can define additional network interfaces as needed.
 - User Name. Specify the user name you wish to SSH the VM's with.
 - Windows Password. The password you use for your Windows login.
 
-> **Note**: When a Specialized Shared [Image](elastigroup/getting-started/create-an-elastigroup-for-azure?id=image) is specified, you do not need to specify login information.
+> **Tip**: When a Specialized Shared [Image](elastigroup/getting-started/create-an-elastigroup-for-azure?id=image) is specified, you do not need to specify login information.
 
 ### Additional Configuration (optional)
 
