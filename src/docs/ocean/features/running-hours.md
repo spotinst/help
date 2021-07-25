@@ -1,14 +1,14 @@
-# Running Hours
+# Shutdown Hours
 
-Another way to achieve cost savings with Ocean is to use the Running Hours feature. In Ocean, you can build a weekly schedule defining the hours in which your cluster will be up and running. You are charged only for the running hours. In the hours you don't specify, the cluster is down, i.e., the underlying instances of the cluster's nodes are scaled down to zero. You are not charged during this time.
+Another way to achieve cost savings with Ocean is to use the Shutdown Hours feature. In Ocean, you can build a weekly schedule defining the hours in which your cluster will be up and running. You are charged only for the running hours. In the hours you don't specify, the cluster is down, i.e., the underlying instances of the cluster's nodes are scaled down to zero. You are not charged during this time.
 
-The Running Hours feature is recommended for non-production environments (e.g., development, testing, staging) where you are sure you do not require 24 x 7 availability.
+The Shutdown Hours feature is recommended for non-production environments (e.g., development, testing, staging) where you are sure you do not require 24 x 7 availability.
 
 ## Sample Weekly Schedule
 
-<img src="/ocean/_media/features-running-hours.png" />
+<img src="/ocean/_media/features-running-hours-00.png" />
 
-The example above shows a weekly schedule with running hours indicated in blue and off hours in gray. On Mondays the cluster runs 24 hours, on Tuesdays from 8 am to 6 pm, and on Wednesdays not at all.
+The example above shows a weekly schedule with running hours indicated in blue and off hours in gray.
 
 - You can define running hours in minimum chunks of 30 minutes.
 - The schedule appears in your local time, but Ocean uses UTC time zone internally.
@@ -31,4 +31,4 @@ At the end of the off time, the autoscaler launches the appropriate types and nu
 
 ## What's Next?
 
-Learn how to [Set Running Hours](ocean/tutorials/set-running-hours)
+Learn how to [Set Shutdown Hours](ocean/tutorials/set-running-hours)
