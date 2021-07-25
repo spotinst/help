@@ -18,6 +18,10 @@ There are several ways to install the Controller. Choose one of the procedures b
 
 The Ocean Controller can run on a number of Linux distributions, including container-optimized operating systems such as Bottlerocket OS, Container Optimized OS, and RancherOS.
 
+## Seamless Operation with Kubernetes API
+
+The Ocean Controller is designed for seamless operation with the Kubernetes API, ensuring the smooth flow of requests between the components at all times. The controller is capable of sending two queries per second (QPS) to the Kubernetes API with a maximum of two concurrent queries. The concurrency maximum ensures that the Controller cannot overload the Kubernetes API.
+
 ## What’s Next?
 
 Find out about the latest updates in [Controller Version History](ocean/tutorials/spot-kubernetes-controller/controller-version-history).
