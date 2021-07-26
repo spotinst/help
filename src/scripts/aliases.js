@@ -1538,6 +1538,24 @@ export const aliases = (() => {
     "/design-documents/msp/msp-enrollment": "/eco/tutorials/msp-enrollment",
 
     "/wave/wave-overview": "/wave/overview",
+
+    "/tools-and-provisioning/cloudformation/elastigroup-examples/":
+      "/tools-and-provisioning/cloudformation/",
+
+    "/tools-and-provisioning/cloudformation/elastigroup-examples/create-elastigroup-for-ecs-yml-based":
+        "/tools-and-provisioning/cloudformation/",
+
+    "/tools-and-provisioning/cloudformation/elastigroup-examples/create-elastigroup-generic":
+          "/tools-and-provisioning/cloudformation/",
+
+    "/tools-and-provisioning/cloudformation/elastigroup-examples/create-elastigroup-stateful":
+            "/tools-and-provisioning/cloudformation/",
+
+    "/tools-and-provisioning/cloudformation/elastigroup-examples/create-elastigroup-yml-based":
+              "/tools-and-provisioning/cloudformation/",
+
+    "/tools-and-provisioning/cloudformation/elastigroup-examples/import-asg":
+                "/tools-and-provisioning/cloudformation/",
   };
 
   for (let [key, value] of Object.entries(map)) {
