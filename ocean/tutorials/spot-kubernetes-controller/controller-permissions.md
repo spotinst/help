@@ -8,90 +8,123 @@ This page describes the permissions required by the Ocean Controller. All permis
 
 The permissions are divided into the following sections:
 
-- Read-Only: Permissions for fetching data – required for functional operation of Ocean/Elastigroup integrations.
-- Node/Pod Manipulation: Permissions to update nodes and evict pods – this section is required for draining purposes, updating nodes as `unschedulable` and evicting pods.
-- Controller Resource Manipulation: This section gives the controller permissions to update its deployment/role. This is required only for the auto_update feature. You can safely remove this section if you would like to opt-out of the controller auto_update feature (Click here to learn more about controller updates).
-- Full CRUD for Resources: Currently the resources are: pods, deployments, and daemonsets. This is required for the Run Workloads. You can safely remove this section if you would like to opt-out the Run Workloads feature.
+- Read-Only: Permissions for fetching data. Required for functional operation of Ocean and Elastigroup integrations.
+- Node/Pod Manipulation: Permissions to update nodes and evict pods. This section is required for draining purposes, updating nodes as unschedulable, and evicting pods.
+- CleanUp Feature: Required for Ocean AKS-Engine integration.
+- CSR Approval: Required for the CSR approval feature.
+- Auto-update: This section gives the controller permissions to update its deployment (or roll). This is required only for the auto-update feature. You can safely remove this section if you would like to opt out of the controller auto-update feature.
+- Full CRUD for Resources: Currently the resources include pods, deployments, and daemonsets. This is required for the Run Workloads feature. You can safely remove this section if you would like to opt out of the Run Workloads feature.
+- Wave: Required by the Spot Big Data feature.
 
 Below you can see the permissions section of the Ocean Controller YAML:
 
 ```yaml
-# ------------------------------------------
+# ------------------------------------------------------------------------------
 # Cluster Role
-# ------------------------------------------
+# ------------------------------------------------------------------------------
 kind: ClusterRole
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
   name: spotinst-kubernetes-cluster-controller
-  namespace: kube-system
 rules:
-  ##### READ-ONLY : REQUIRED FOR FUNCTIONAL OPERATION #####
-  - apiGroups: [""]
-    resources:
-      [
-        "pods",
-        "nodes",
-        "services",
-        "namespaces",
-        "replicationcontrollers",
-        "limitranges",
-        "events",
-        "persistentvolumes",
-        "persistentvolumeclaims",
-      ]
-    verbs: ["get", "list"]
-  - apiGroups: ["apps"]
-    resources: ["deployments", "daemonsets", "statefulsets"]
-    verbs: ["get", "list"]
-  - apiGroups: ["storage.k8s.io"]
-    resources: ["storageclasses"]
-    verbs: ["get", "list"]
-  - apiGroups: ["batch"]
-    resources: ["jobs"]
-    verbs: ["get", "list"]
-  - apiGroups: ["extensions"]
-    resources: ["replicasets", "daemonsets"]
-    verbs: ["get", "list"]
-  - apiGroups: ["policy"]
-    resources: ["poddisruptionbudgets"]
-    verbs: ["get", "list"]
-  - apiGroups: ["metrics.k8s.io"]
-    resources: ["pods"]
-    verbs: ["get", "list"]
-  - apiGroups: ["autoscaling"]
-    resources: ["horizontalpodautoscalers"]
-    verbs: ["get", "list"]
-  - nonResourceURLs: ["/version/", "/version"]
-    verbs: ["get"]
-  ##### NODE/PODS MANIPULATION : REQUIRED FOR DRAINING & FUNCTIONAL OPERATION #####
-  - apiGroups: [""]
-    resources: ["nodes"]
-    verbs: ["patch", "update"]
-  - apiGroups: [""]
-    resources: ["pods"]
-    verbs: ["delete"]
-  - apiGroups: [""]
-    resources: ["pods/eviction"]
-    verbs: ["create"]
-  ##### CONTROLLER RESOURCE MANIPULATION : REQUIRED FOR AUTO-UPDATE FEATURE #####
-  - apiGroups: ["rbac.authorization.k8s.io"]
-    resources: ["clusterroles"]
-    resourceNames: ["spotinst-kubernetes-cluster-controller"]
-    verbs: ["patch", "update", "escalate"]
-  - apiGroups: ["apps"]
-    resources: ["deployments"]
-    resourceNames: ["spotinst-kubernetes-cluster-controller"]
-    verbs: ["patch", "update"]
-  ##### FULL CRUD: REQUIRED FOR SPOTINST-APPLY FEATURE #####
-  - apiGroups: ["apps"]
-    resources: ["deployments", "daemonsets"]
-    verbs: ["get", "list", "patch", "update", "create", "delete"]
-  - apiGroups: ["extensions"]
-    resources: ["daemonsets"]
-    verbs: ["get", "list", "patch", "update", "create", "delete"]
-  - apiGroups: [""]
-    resources: ["pods"]
-    verbs: ["get", "list", "patch", "update", "create", "delete"]
+  # ----------------------------------------------------------------------------
+  # Readonly: Required for functional operation.
+  # ----------------------------------------------------------------------------
+- apiGroups: [""]
+  resources: ["pods", "nodes", "services", "namespaces", "replicationcontrollers", "limitranges", "events", "persistentvolumes", "persistentvolumeclaims"]
+  verbs: ["get", "list"]
+- apiGroups: ["apps"]
+  resources: ["deployments", "daemonsets", "statefulsets", "replicasets"]
+  verbs: ["get","list"]
+- apiGroups: ["storage.k8s.io"]
+  resources: ["storageclasses"]
+  verbs: ["get", "list"]
+- apiGroups: ["batch"]
+  resources: ["jobs"]
+  verbs: ["get", "list"]
+- apiGroups: ["extensions"]
+  resources: ["replicasets", "daemonsets"]
+  verbs: ["get","list"]
+- apiGroups: ["policy"]
+  resources: ["poddisruptionbudgets"]
+  verbs: ["get", "list"]
+- apiGroups: ["metrics.k8s.io"]
+  resources: ["pods"]
+  verbs: ["get", "list"]
+- apiGroups: ["autoscaling"]
+  resources: ["horizontalpodautoscalers"]
+  verbs: ["get", "list"]
+- nonResourceURLs: ["/version/", "/version"]
+  verbs: ["get"]
+- apiGroups: ["apiextensions.k8s.io"]
+  resources: ["customresourcedefinitions"]
+  verbs: ["list", "get"]
+  # ----------------------------------------------------------------------------
+  # Node/Pod Manipulation: Required by the draining feature and for functional operation.
+  # ----------------------------------------------------------------------------
+- apiGroups: [""]
+  resources: ["nodes"]
+  verbs: ["patch", "update"]
+- apiGroups: [""]
+  resources: ["pods"]
+  verbs: ["delete"]
+- apiGroups: [""]
+  resources: ["pods/eviction"]
+  verbs: ["create"]
+  # ----------------------------------------------------------------------------
+  # Required by the Spot CleanUp feature.
+  # ----------------------------------------------------------------------------
+- apiGroups: [""]
+  resources: ["nodes"]
+  verbs: ["delete"]
+  # ----------------------------------------------------------------------------
+  # Required by the Spot CSR Approval feature.
+  # ----------------------------------------------------------------------------
+- apiGroups: ["certificates.k8s.io"]
+  resources: ["certificatesigningrequests"]
+  verbs: ["get", "list", "delete", "create"]
+- apiGroups: ["certificates.k8s.io"]
+  resources: ["certificatesigningrequests/approval"]
+  verbs: ["patch", "update"]
+- apiGroups: ["certificates.k8s.io"]
+  resources: ["signers"]
+  resourceNames: ["kubernetes.io/kubelet-serving", "kubernetes.io/kube-apiserver-client-kubelet"]
+  verbs: ["approve"]
+  # ----------------------------------------------------------------------------
+  # Required by the Spot Auto-Update feature.
+  # ----------------------------------------------------------------------------
+- apiGroups: ["rbac.authorization.k8s.io"]
+  resources: ["clusterroles"]
+  resourceNames: ["spotinst-kubernetes-cluster-controller"]
+  verbs: ["patch", "update", "escalate"]
+- apiGroups: ["apps"]
+  resources: ["deployments"]
+  resourceNames: ["spotinst-kubernetes-cluster-controller"]
+  verbs: ["patch","update"]
+  # ----------------------------------------------------------------------------
+  # Full CRUD: Required by the Spot Apply feature.
+  # ----------------------------------------------------------------------------
+- apiGroups: ["apps"]
+  resources: ["deployments", "daemonsets"]
+  verbs: ["get", "list", "patch","update","create","delete"]
+- apiGroups: ["extensions"]
+  resources: ["daemonsets"]
+  verbs: ["get", "list", "patch","update","create","delete"]
+- apiGroups: [""]
+  resources: ["pods"]
+  verbs: ["get", "list", "patch", "update", "create", "delete"]
+- apiGroups: ["batch"]
+  resources: ["jobs"]
+  verbs: ["get", "list", "patch","update","create","delete"]
+  # ----------------------------------------------------------------------------
+  # Wave: Required by the Spot Big Data feature
+  # ----------------------------------------------------------------------------
+- apiGroups: ["sparkoperator.k8s.io"]
+  resources: ["sparkapplications", "scheduledsparkapplications"]
+  verbs: ["get", "list", "create"]
+- apiGroups: ["wave.spot.io"]
+  resources: ["sparkapplications", "wavecomponents", "waveenvironments"]
+  verbs: ["get", "list"]
 ```
 
 ## Cluster Role and Cluster Role Binding
