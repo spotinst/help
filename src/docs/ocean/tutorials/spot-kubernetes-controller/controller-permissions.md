@@ -8,13 +8,13 @@ This page describes the permissions required by the Ocean Controller. All permis
 
 The permissions are divided into the following sections:
 
-- Read-Only: Permissions for fetching data – required for functional operation of Ocean/Elastigroup integrations.
-- Node/Pod Manipulation: Permissions to update nodes and evict pods – this section is required for draining purposes, updating nodes as `unschedulable` and evicting pods.
-- CleanUp feature: required for Ocean AKS-Engine integration
-- CSR Approval: required for CSR approval feature
-- Auto-update: This section gives the controller permissions to update its deployment/role. This is required only for the auto_update feature. You can safely remove this section if you would like to opt-out of the controller auto_update feature (Click here to learn more about controller updates).
-- Full CRUD for Resources: Currently the resources are: pods, deployments, and daemonsets. This is required for the Run Workloads. You can safely remove this section if you would like to opt-out the Run Workloads feature.
-- Spotinst Big Data: required for Wave
+- Read-Only: Permissions for fetching data. Required for functional operation of Ocean and Elastigroup integrations.
+- Node/Pod Manipulation: Permissions to update nodes and evict pods. This section is required for draining purposes, updating nodes as unschedulable, and evicting pods.
+- CleanUp Feature: Required for Ocean AKS-Engine integration.
+- CSR Approval: Required for the CSR approval feature.
+- Auto-update: This section gives the controller permissions to update its deployment (or roll). This is required only for the auto-update feature. You can safely remove this section if you would like to opt out of the controller auto-update feature.
+- Full CRUD for Resources: Currently the resources include pods, deployments, and daemonsets. This is required for the Run Workloads feature. You can safely remove this section if you would like to opt out of the Run Workloads feature.
+- Wave: Required by the Spot Big Data feature.
 
 Below you can see the permissions section of the Ocean Controller YAML:
 
@@ -72,13 +72,13 @@ rules:
   resources: ["pods/eviction"]
   verbs: ["create"]
   # ----------------------------------------------------------------------------
-  # Required by the Spotinst CleanUp feature.
+  # Required by the Spot CleanUp feature.
   # ----------------------------------------------------------------------------
 - apiGroups: [""]
   resources: ["nodes"]
   verbs: ["delete"]
   # ----------------------------------------------------------------------------
-  # Required by the Spotinst CSR Approval feature.
+  # Required by the Spot CSR Approval feature.
   # ----------------------------------------------------------------------------
 - apiGroups: ["certificates.k8s.io"]
   resources: ["certificatesigningrequests"]
@@ -91,7 +91,7 @@ rules:
   resourceNames: ["kubernetes.io/kubelet-serving", "kubernetes.io/kube-apiserver-client-kubelet"]
   verbs: ["approve"]
   # ----------------------------------------------------------------------------
-  # Required by the Spotinst Auto Update feature.
+  # Required by the Spot Auto-Update feature.
   # ----------------------------------------------------------------------------
 - apiGroups: ["rbac.authorization.k8s.io"]
   resources: ["clusterroles"]
@@ -102,7 +102,7 @@ rules:
   resourceNames: ["spotinst-kubernetes-cluster-controller"]
   verbs: ["patch","update"]
   # ----------------------------------------------------------------------------
-  # Full CRUD: Required by the Spotinst Apply feature.
+  # Full CRUD: Required by the Spot Apply feature.
   # ----------------------------------------------------------------------------
 - apiGroups: ["apps"]
   resources: ["deployments", "daemonsets"]
@@ -117,7 +117,7 @@ rules:
   resources: ["jobs"]
   verbs: ["get", "list", "patch","update","create","delete"]
   # ----------------------------------------------------------------------------
-  # Wave: Required by the Spotinst Big Data feature
+  # Wave: Required by the Spot Big Data feature
   # ----------------------------------------------------------------------------
 - apiGroups: ["sparkoperator.k8s.io"]
   resources: ["sparkapplications", "scheduledsparkapplications"]
