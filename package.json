@@ -48,7 +48,7 @@
     "postcss-import": "^14.0.2",
     "postcss-loader": "^6.1.1",
     "postcss-mixins": "^8.1.0",
-    "postcss-nested": "^5.0.5",
+    "postcss-nested": "^5.0.6",
     "postcss-preset-env": "^6.7.0",
     "prettier": "^2.3.2",
     "sitemap": "^7.0.0",
