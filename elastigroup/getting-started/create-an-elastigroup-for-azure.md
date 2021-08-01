@@ -101,6 +101,8 @@ Images are indicated as Generalized or Specialized. When you choose a Specialize
 
 ### Network
 
+Enter the information for your network interface. You can define additional network interfaces as needed.
+
 - Vnet Resource Group. Select the Vnet Resource group you want your Elastigroup Scale Sets to be a part of.
 - Virtual Network. Select the specific Virtual Network (VN) for your Elastigroup.
 
@@ -115,13 +117,20 @@ Images are indicated as Generalized or Specialized. When you choose a Specialize
 
 - Application Security Group: Provides security micro-segmentation virtual networks in Azure and enables you to define network security policies based on workloads (i.e., applications) instead of explicit IP addresses. Choose one or more application security groups the Elastigroup should belong to.
 
-<img src="/elastigroup/_media/gettingstarted-eg-azure-03c.png" width="331" height="171" />
+  <img src="/elastigroup/_media/gettingstarted-eg-azure-03c.png" width="331" height="171" />
 
-Note that the items appearing in the list of application security groups depend on the Virtual Network that you choose and may be different in each network.
+  Note that the items appearing in the list of application security groups depend on the Virtual Network that you choose and may be different in each network.
 
-- Assign Public IP. Mark this checkbox if you want VMs in this Elastigroup to launch with a Public IP. Choose Basic or Standard.
+- Assign Public IP. Mark this checkbox if you want VMs in this Elastigroup to launch with a Public IP. Choose Basic or Standard. You will then need to choose one or more Static Public IPs from the dropdown list. The list will include IPs only from AZs that you have chosen for the Elastigroup.
 
-You can define additional network interfaces as needed.
+<img src="/elastigroup/_media/gettingstarted-eg-azure-03d.png" width="205" height="271" />
+
+#### More on Choosing Public IPs
+
+In order to minimize ad hoc creation of new IPs on VM launchers, the following is recommended:
+- Choose IPs that are indicated as No zone/Zone redundant. These will ensure the most AZ flexibility.
+- The optimal number of public IPs for the pool is twice your maximum capacity. For example, if your maximum capacity is 6 VMs, then choose at least 12 public IP addresses.
+- If you choose zonal IPs (e.g., in zones 1, 2, 3), then distribute them equally across the zones.
 
 ### Login
 
