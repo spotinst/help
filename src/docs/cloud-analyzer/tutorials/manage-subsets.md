@@ -40,13 +40,20 @@ To view a list of your subsets and manage them, click Subsets in the left sideba
 
 <img src="/eco/_media/tutorials-manage-subsets-04.png" />
 
-The Subsets page displays the following information:
+To customize the columns in the table, click the configuration icon on the right.
+
+<img src="/eco/_media/tutorials-manage-subsets-04a.png" />
+
+The Subsets page may display the following information:
 
 - Name: The name you gave to the subset. To see more details about the subset, click the name. The Subset Details page will appear.
 - Accounts in subset: Number of accounts in the subset.
 - Last month cost: Amount you paid the cloud provider (AWS) for this subset in the last full month.
 - MTD cost: Amount you owe the cloud provider for this subset from the first of the current month until now.
 - Expected monthly cost: Estimated amount you will owe the cloud provider for this subset at the end of the current month.
+- Last month charge: If you have assigned a workflow to this subset, last month’s resulting output of the workflow.
+- MTD charge: If you have assigned a workflow to this subset, the output of the workflow from the first of the month to the current day.
+- Expected charge: If you have assigned a workflow to this subset, the average daily charge extrapolated to the end of the month.
 - Subset info: To see more information about the subset, click View Spend Details. This will open the [Cost Analysis](cloud-analyzer/tutorials/analyze-your-costs.md) page and display the accounts in this subset.
 
 ## View and Edit Subset Details
