@@ -123,7 +123,7 @@ Enter the information for your network interface. You can define additional netw
 
 - Assign Public IP. Mark this checkbox if you want VMs in this Elastigroup to launch with a Public IP. Choose Basic or Standard. You will then need to choose one or more Static Public IPs from the dropdown list. The list will include IPs only from AZs that you have chosen for the Elastigroup.
 
-<img src="/elastigroup/_media/gettingstarted-eg-azure-03d.png" width="205" height="271" />
+<img src="/elastigroup/_media/gettingstarted-eg-azure-03d.png" width="273" height="362" />
 
 #### More on Choosing Public IPs
 
