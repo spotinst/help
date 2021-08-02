@@ -75,7 +75,7 @@ If necessary, you can also use advance parameters to define the scaling criteria
   - Minimum`
   - sampleCount
   - Sum
-- Operator: This the relation between the threshold and the sampled value.
+- Operator: This is the relation between the threshold and the sampled value.
 - Consecutive Periods: The number of periods in a row to be evaluated before triggering a scale action.
 - Period: Choose the amount of time in a single period.
 - Cooldown: The time (in seconds) that all scaling activities will be suspended after a scaling policy is triggered. For example, if scaling policy A has Cooldown set to 60 sec. and a scale-down is triggered, then no new scale down will start due to policy A for the next minute. In addition, no new policies can go into effect while policy A is in cooldown.
