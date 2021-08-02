@@ -99,7 +99,7 @@ Predictive Autoscaling is configured in a Target Scaling Policy. You can enable 
    - Predict and scale
    - Predict only
 
-<img src="/elastigroup/_media/scaling-target-scaling-policy-02a.png" />
+<img src="/elastigroup/_media/scaling-target-scaling-policy-02a.png" width="660" height="174" />
 
 5. To save the configuration, click Next, and then click Create or Update at the bottom of the Review tab.
 
