@@ -14,7 +14,7 @@ You can configure a simple scaling policy when you create an Elastigroup or by e
 1. In the Elastigroup, go to the Scaling tab.
 2. Under Simple Scaling Policies/Up Scaling Policies, click Add, and then click on the policy name to open the form.
 
-<img src="/elastigroup/_media/scaling-simple-scaling-01.png" />
+<img src="/elastigroup/_media/scaling-simple-scaling-01.png" width="521" height="298" />
 
 3. Complete the following parameters in the form:
    - Policy Name: Enter the name to assign to the policy. It is recommended to use a meaningful name to help you understand scaling actions better in the future.
@@ -89,7 +89,7 @@ You can configure simple scaling to use multiple metrics when you create an Elas
 2. Under Simple Scaling Policies, click Up Scaling Policies or Down Scaling Policies.
 3. Click Add, and then click on the policy name to open the form.
 
-<img src="/elastigroup/_media/scaling-simple-scaling-04.png" />
+<img src="/elastigroup/_media/scaling-simple-scaling-04.png" width="522" height="299" />
 
 4. Complete the following in the form:
    - Policy Name: Enter a name identifying your policy.
