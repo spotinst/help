@@ -118,7 +118,7 @@ You can configure target scaling to use multiple metrics when you create an Elas
 3. Complete the following in the form:
    - Policy Name: Enter a name identifying your policy.
    - Policy Type: Choose Multiple Metric Scaling.
-   - Expression: Enter an expression that uses one or more of the metrics you defined in the [Metric List](elastigroup-features-scaling-multiple-metrics?id=view-metric-list).
+   - Expression: Enter an expression that uses one or more of the metrics you defined in the [Metric List](elastigroup/features/scaling/multiple-metrics?id=view-metric-list).
    - Target Value: The desired average value of the evaluated expression that will be tracked.
    - Cooldown: Enter the cooldown duration in seconds.
 4. This policy will be saved when you finish creating or updating the Elastigroup (and you click Create or Update at the bottom of the Review tab).

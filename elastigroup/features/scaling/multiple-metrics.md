@@ -11,8 +11,6 @@ On a high level, Elastigroup uses scaling policies with multiple metrics accordi
 2. You go to either [Simple Scaling Policies](elastigroup/features/scaling/simple-scaling-policies) or [Target Scaling Policies](elastigroup/features/scaling/target-scaling) and set up an autoscaling policy. In the policy, you define the Policy Type as Multiple Metric Scaling, and then define an expression that Elastigroup will use to evaluate a threshold.
 3. Once the scaling policy is active, Elastigroup continually tracks the metrics and evaluates the expression you defined. When the expression surpasses your defined threshold, then a scaling action is triggered.
 
-#### Examples
-
 For example, you could create a scaling action based on the ratio of average CPU utilization to average memory utilization or an action based on the ratio of CPU utilization to 400 errors.
 
 ## Create a New Metric
@@ -25,7 +23,7 @@ To create a new metric, do the following:
 
 2. Complete the information in the popup form as described below, and then click Add New Metric at the bottom.
 
-<img src="/elastigroup/_media/scaling-multiple-metrics-02.png" />
+<img src="/elastigroup/_media/scaling-multiple-metrics-02.png" width="574" height="247" />
 
 ### Metric Details
 
@@ -37,7 +35,7 @@ To create a new metric, do the following:
 - Unit: Choose the unit of measurement.
 - Dimensions: (Optional) Choose from a list and set a value.
 
-<img src="/elastigroup/_media/scaling-multiple-metrics-03.png" />
+<img src="/elastigroup/_media/scaling-multiple-metrics-03.png" width="572" height="341" />
 
 ## View Metric List
 
@@ -78,9 +76,9 @@ The following types of comparison operators are supported:
 - ==
 - !=
 - <=
-- >=
+- \>=
 - <
-- >
+- \>
 
 ### Logical Operators
 
