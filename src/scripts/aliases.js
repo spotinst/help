@@ -1556,6 +1556,9 @@ export const aliases = (() => {
 
     "/tools-and-provisioning/cloudformation/elastigroup-examples/import-asg":
       "/tools-and-provisioning/cloudformation/",
+
+    "/elastigroup/features/scaling/predictive-autoscaling":
+      "/elastigroup/features/scaling/target-scaling",
   };
 
   for (let [key, value] of Object.entries(map)) {
