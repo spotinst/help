@@ -855,6 +855,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/features/scaling/advanced-expressions"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/elastigroup/features/scaling/multiple-metrics</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/features/scaling/multiple-metrics"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/features/scaling/multiple-metrics"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/elastigroup/features/scaling/predictive-autoscaling</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>

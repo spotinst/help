@@ -40,6 +40,7 @@
     - [Scaling](elastigroup/features/scaling/)
       - [Simple Scaling Policies](elastigroup/features/scaling/simple-scaling-policies)
       - [Target Scaling](elastigroup/features/scaling/target-scaling)
+      - [Multiple Metrics](elastigroup/features/scaling/multiple-metrics)
       - [Predictive Autoscaling](elastigroup/features/scaling/predictive-autoscaling)
       - [Advanced Expressions](elastigroup/features/scaling/advanced-expressions)
     - [Amazon ECS](elastigroup/features/amazon-ecs/)
