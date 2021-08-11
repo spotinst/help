@@ -99,13 +99,13 @@ Predictive Autoscaling is configured in a Target Scaling Policy. You can enable 
    - Predict and scale
    - Predict only
 
-<img src="/elastigroup/_media/scaling-target-scaling-policy-02a.png" width="660" height="174" />
+<img src="/elastigroup/_media/scaling-target-scaling-policy-03.png" />
 
 5. To save the configuration, click Next, and then click Create or Update at the bottom of the Review tab.
 
 After you enable the scaling policy with predictive autoscaling, additional graphs will appear in the Elastigroup [Overview](elastigroup/tutorials/elastigroup-actions-menu/elastigroup-overview) page that show Activity & Prediction.
 
-<img src="/elastigroup/_media/scaling-target-scaling-policy-03.png" />
+<img src="/elastigroup/_media/scaling-target-scaling-policy-04.png" />
 
 ## Configure Target Scaling with Multiple Metrics
 
@@ -113,7 +113,7 @@ You can configure target scaling to use multiple metrics when you create an Elas
 1. In the Elastigroup, go to the Scaling tab.
 2. Under Target Scaling Policies, click Add, and then click on the policy name to open the form.
 
-<img src="/elastigroup/_media/scaling-target-scaling-policy-04.png" />
+<img src="/elastigroup/_media/scaling-target-scaling-policy-02a.png" width="660" height="174" />
 
 3. Complete the following in the form:
    - Policy Name: Enter a name identifying your policy.
