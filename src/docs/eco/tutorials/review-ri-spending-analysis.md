@@ -16,7 +16,7 @@ The Analysis page presents the following information:
 - Savings Plan All-Time Waste: A chart that provides a monthly view of wasted ongoing savings plan investments, stacked by service.
 - Potential Yearly Savings per AWS Service: A chart that shows the yearly savings that can be achieved with reserved instances per AWS service.
 
-<img src="/eco/_media/tutorials-review-ri-spending-01.png" />
+<img src="/eco/_media/tutorials-review-ri-spending-01a.png" />
 
 Your next step is to click Choose Strategy. Eco will produce recommendations for an optimized RI portfolio, and you will specify your preferred commitment length.
 
