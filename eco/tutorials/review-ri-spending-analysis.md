@@ -12,7 +12,8 @@ The Analysis page presents the following information:
   - Last Week Missed Savings: The amount you could have saved with a cost-optimized workload.
   - Current RI Commitment: The monthly amount of reserved instance compute capacity you are currently committed to.
   - Recommended RI Commitment: The monthly amount recommended for your workload following the Eco analysis.
-- Reserved Instance Total Waste: A chart that breaks down the potential yearly savings per service.
+- Reserved Instance All-Time Waste: A chart that provides a monthly view of wasted, amortized RI investments, stacked by service.
+- Savings Plan All-Time Waste: A chart that provides a monthly view of wasted ongoing savings plan investments, stacked by service.
 - Potential Yearly Savings per AWS Service: A chart that shows the yearly savings that can be achieved with reserved instances per AWS service.
 
 <img src="/eco/_media/tutorials-review-ri-spending-01.png" />

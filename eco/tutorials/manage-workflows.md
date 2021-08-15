@@ -125,6 +125,14 @@ After all the other rules have been applied, the charges are increased or decrea
 - Uplift by: Enter the percent to increase.
 - Discount by: Enter the percent to discount.
 
+### Eco Cost Sharing
+
+You may chose to share the cost of Eco RI or savings plan-related savings with consumers of the savings. 
+
+The percentage option allows you to add a charge to each subset relative to the overall savings provided by Eco. You may enter the exact same percentage as your contract with Spot, or you may enter a different percentage depending on your business model.
+
+The Flat Fee option allows you to add a fee to each subset or account. The fee will be the same each month.
+
 ## What’s Next?
 
 Learn about the [Workflow Details](eco/tutorials/view-workflow-details) summary and how to create a workflow report.
