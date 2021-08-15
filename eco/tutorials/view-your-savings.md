@@ -31,33 +31,44 @@ The Overview dashboard includes a summary line which displays the following info
 
 Eco provides summary graphs and charts to give you wide visibility of your savings and commitments. The graphs and charts can be filtered according to the items in the legend. The following graphs are displayed:
 
-- Savings over time: A bar graph showing the amount of savings each month broken down by type of savings. This graph will allow you to visualize savings from reservations and savings plans. You can use the filters at the top of the page and source filters specific to each graph.
+### Savings over time
+
+A bar graph showing the amount of savings each month broken down by type of savings. This graph will allow you to visualize savings from reservations and savings plans. You can use the filters at the top of the page and source filters specific to each graph.
   - All
   - Eco
   - Non-Eco
 
 <img src="/eco/_media/tutorials-view-savings-01c2.png" width="531" height="405" />
 
-- Monthly Commitment over Time: A stacked bar graph showing your reserved instance and savings plan commitment per month broken down into Standard, Convertible, and Pending reservations, plus Compute and EC2 savings plans. Use the toggle switches to include or exclude recurring fees or show up-front fees from an amortized view.
+### Monthly Commitment over Time
+
+A stacked bar graph showing your reserved instance and savings plan commitment per month broken down into Standard, Convertible, and Pending reservations, plus Compute and EC2 savings plans. Use the toggle switches to include or exclude recurring fees or show up-front fees from an amortized view.
 
 <img src="/eco/_media/tutorials-view-savings-01c3.png" />
 
 The export from this table provides an amortization report, which breaks down each commitment as a CSV file with the following headers.
+- Amortized Commitment: The amortized amount for the month. If there was no upfront commitment, this will be zero.
+- ARN: The AWS Resource Name unique to the commitment.
+- Date: The year and month of the amortized amount.
+- Duration: The number of seconds used in the calculation for which the investment should provide discounts with consideration for RI marketplace transactions.
+- Expiration: The expiration date of the commitment.
+- Instance Family or Type: The instance family of the reservation or type of the savings plan.
+- Region: The region in which the commitment was purchased.
+- Upfront Commitment: The basis for the amortized commitment. If there was no upfront commitment, this will be zero.
 
-  - Amortized Commitment: The amortized amount for the month. If there was no upfront commitment, this will be zero.
-  - ARN: The AWS Resource Name unique to the commitment.
-  - Date: The year and month of the amortized amount.
-  - Duration: The number of seconds used in the calculation for which the investment should provide discounts with consideration for RI marketplace transactions.
-  - Expiration: The expiration date of the commitment.
-  - Instance Family or Type: The instance family of the reservation or type of the savings plan.
-  - Region: The region in which the commitment was purchased.
-  - Upfront Commitment: The basis for the amortized commitment. If there was no upfront commitment, this will be zero.
-- Coverage over Time: A line graph that breaks down the story of how reservations, savings plan coverage, and commitments relate to your overall savings. The left chart is the simplest, showing the difference between your actual spend and what could have been your costs for reservable services without a savings strategy. On the right, you see the same data, but with your actual spend explained as the combination of commitment cost and uncovered spend. The coverage calculation considers dollars or your investment used instead of hours, which is different from AWS cost explorer. For actual spend, the calculation only considers what is reservable for a service (e.g., Eco only uses the on-demand purchase option, with the Running Hours usage type groups and the Usage charge type).
+### Coverage over Time
+
+A line graph that breaks down the story of how reservations, savings plan coverage, and commitments relate to your overall savings. The left chart is the simplest, showing the difference between your actual spend and what could have been your costs for reservable services without a savings strategy. On the right, you see the same data, but with your actual spend explained as the combination of commitment cost and uncovered spend. The coverage calculation considers dollars or your investment used instead of hours, which is different from AWS cost explorer. For actual spend, the calculation only considers what is reservable for a service (e.g., Eco only uses the on-demand purchase option, with the Running Hours usage type groups and the Usage charge type).
 
 <img src="/eco/_media/tutorials-view-savings-01d.png" />
 
-- Commitment per Service: A pie chart showing the current reserved instance commitment broken down into the different services.
-- Commitment per Region: A pie chart showing the current reserved instance commitment broken down by region.
+### Commitment per Service
+
+A pie chart showing the current reserved instance commitment broken down into the different services.
+
+### Commitment per Region
+
+A pie chart showing the current reserved instance commitment broken down by region.
 
 ## Reservation Details Report
 
