@@ -40,7 +40,7 @@ In the left menu of the Spot Console, click Ocean/Cloud Clusters, and click Crea
 
 <img src="/ocean/_media/gke-compute.png" width="400" height="290" />
 
-2. Optionally, you can import all GKE node pools into Ocean as [launch specifications](features/launch-specifications). (The default node pool will be automatically imported.)
+2. Optionally, you can import all GKE node pools into Ocean as [virtual node groups](ocean/features/launch-specifications). (The default node pool will be automatically imported.)
 3. Click Next.
 
 ## Step 3: Connectivity
