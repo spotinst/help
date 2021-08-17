@@ -1,4 +1,4 @@
-# Review RI Spending Analysis
+# Review Commitment Spending Analysis
 
 The Analysis page appears to new customers who have connected an AWS account to Spot, but have not yet committed to a reserved instance strategy.
 
