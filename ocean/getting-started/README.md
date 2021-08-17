@@ -21,6 +21,8 @@ In addition to connecting a first cluster to Ocean, you may want to run Insights
 
 There is no charge for running Ocean Insights and it does not require any changes on the existing infrastructure other than deploying the [Ocean Controller](ocean/tutorials/spot-kubernetes-controller/). To learn how to analyze your Kubernetes cluster with Ocean Insights, see [Connect Ocean Insights](ocean/getting-started/insights). Insights is currently available to Ocean for AWS users.
 
+> **Note**: Insights can be connected only to clusters that are not managed by Ocean.
+
 ## What's Next?
 
 Learn more about scaling, headroom, virtual node groups, and many other [Ocean Features](/ocean/features/).
