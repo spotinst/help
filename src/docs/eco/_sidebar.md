@@ -6,7 +6,7 @@
     - [Connect your AWS Account](eco/getting-started/connect-your-aws-account)
     - [Connect Account: Customer Working with MSP](eco/getting-started/connect-account-customer-working-with-msp)
   - [Tutorials](eco/tutorials/)
-    - [Review RI Spending Analysis](eco/tutorials/review-ri-spending-analysis)
+    - [Review Commitment Spending Analysis](eco/tutorials/review-ri-spending-analysis)
     - [Choose RI Strategy](eco/tutorials/choose-a-strategy)
     - [View your Savings](eco/tutorials/view-your-savings)
     - [MSP Enrollment](eco/tutorials/msp-enrollment)
