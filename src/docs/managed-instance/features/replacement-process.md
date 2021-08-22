@@ -7,9 +7,10 @@ If the underlying EC2 instance has to be replaced for any reason, Managed Instan
 The pause process terminates the existing instance after it saves all the relevant data.
 1. A final [root volume snapshot](managed-instance/features/root-volume-persistence) is taken, from which a new AMI is created. The new AMI will be used to launch the new instance upon resume.
 2. The Data volume is maintained, as configured in the [data persistence settings](managed-instance/features/data-volume-persistence):
-   a. Snapshot backups: A final data volume snapshot is taken, which is used in the next instance's block device mapping configuration.
-   b. Reattach + Multi AZ: A final data volume snapshot is created and used to create a new volume to be attached once the next instance is launched in a new AZ.
-   c. Reattach + Single AZ: The same data volume is retained as is, containing the latest data written to it.
+   1. Snapshot backups: A final data volume snapshot is taken, which is used in the next instance's block device mapping configuration.
+   2. Reattach + Multi AZ: A final data volume snapshot is created and used to create a new volume to be attached once the next instance is launched in a new AZ.
+   3. Reattach + Single AZ: The same data volume is retained as is, containing the latest data written to it.
+
 3. The ENI of the instance is made available for the next instance upon resume.
 
 ## Resume Action
