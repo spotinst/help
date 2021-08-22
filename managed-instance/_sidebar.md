@@ -12,6 +12,6 @@
     - [Network Persistence](managed-instance/features/network-persistence)
     - [Third-Party Integrations](managed-instance/features/third-party-integrations)
     - [Managed Instance Actions](managed-instance/features/managed-instance-actions)
-    - [Replacement Process](managed-instance/features/replacement-process)
+    - [Recycle Process](managed-instance/features/replacement-process)
   - [Tutorials](managed-instance/tutorials/)
     - [Upgrade an Existing Elastigroup to Managed Instance](managed-instance/tutorials/upgrade-an-existing-elastigroup-to-managed-instance)
