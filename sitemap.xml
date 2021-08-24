@@ -1793,6 +1793,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean/features/launch-specifications"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/ocean/features/log-integration-with-s3</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean/features/log-integration-with-s3"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean/features/log-integration-with-s3"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/ocean/features/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
