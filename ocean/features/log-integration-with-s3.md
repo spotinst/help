@@ -38,7 +38,7 @@ To set up the integration in Ocean, do the following:
     },
     "items": [
       {
-        "id": "**di-123**",
+        "id": "di-123",
         "vendor": "s3",
         "name": "my-s3-integration",
         "status": "enabled",
@@ -64,7 +64,7 @@ Use either the [Create Cluster](https://docs.spot.io/api/#operation/OceanAWSClus
     "logging": {
       "export": {
         "s3": {
-          "id": "**di-123**"
+          "id": "di-123"
         }
       }
     }
