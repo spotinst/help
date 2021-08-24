@@ -40,15 +40,15 @@ To set up the integration in Ocean, do the following:
       {
         "id": "di-123",
         "vendor": "s3",
-        "name": "my-s3-integration",
+        "name": "production-logs",
         "status": "enabled",
         "health": "valid",
         "code": 200,
         "message": "ok",
         "lastHealthCheck": "2021-08-1T10:00:00.000Z",
         "config": {
-          "bucketName": "mybucket",
-          "subdir": "dev"
+          "bucketName": "my-bucket-name",
+          "subdir": "dev-423a"
         }
       }
     ],
