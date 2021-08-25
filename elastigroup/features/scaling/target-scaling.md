@@ -109,21 +109,7 @@ After you enable the scaling policy with predictive autoscaling, additional grap
 
 ## Configure Target Scaling with Multiple Metrics
 
-You can configure target scaling to use multiple metrics when you create an Elastigroup or by editing an existing Elastigroup. Do the following:
-1. In the Elastigroup, go to the Scaling tab.
-2. Under Target Scaling Policies, click Add, and then click on the policy name to open the form.
-
-<img src="/elastigroup/_media/scaling-target-scaling-policy-02a.png" width="660" height="174" />
-
-3. Complete the following in the form:
-   - Policy Name: Enter a name identifying your policy.
-   - Policy Type: Choose Multiple Metric Scaling.
-   - Expression: Enter an expression that uses one or more of the metrics you defined in the [Metric List](elastigroup/features/scaling/multiple-metrics?id=view-metric-list).
-   - Target Value: The desired average value of the evaluated expression that will be tracked.
-   - Cooldown: Enter the cooldown duration in seconds.
-4. This policy will be saved when you finish creating or updating the Elastigroup (and you click Create or Update at the bottom of the Review tab).
-
-> **Tip**: See a list of the [expressions and operators supported](elastigroup/features/scaling/multiple-metrics?id=expressions-and-operators-supported).
+You can configure target scaling to use multiple metrics when you create an Elastigroup or by editing an existing Elastigroup. For the detailed procedure, see [Use Multiple Metrics with Target Scaling](elastigroup/features/scaling/multiple-metrics?id=use-multiple-metrics-with-target-scaling).
 
 ## What’s Next?
 
