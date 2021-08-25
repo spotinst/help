@@ -4,6 +4,21 @@ There are several ways to view the Ocean logs, for example, you can view them di
 
 This page describes Ocean’s log integration with AWS S3. You can configure Ocean to export its logs to an S3 bucket. You can then use your central monitoring tool to access the logs in the S3 bucket. This enables you to read and troubleshoot the Ocean logs in the same central interface where you access all of your other logs. An example of a specific case would be to use [AWS Lambda to send logs from S3](https://docs.newrelic.com/docs/logs/enable-log-management-new-relic/enable-log-monitoring-new-relic/aws-lambda-sending-logs-s3/) to the New Relic monitoring application.
 
+## Prerequisite
+
+You will need to add to the Spot policy permissions to write to your S3 bucket. For example:
+
+```json
+{
+            "Sid": "statement1",
+            "Effect": "Allow",
+            "Action": [
+            "s3:PutObject"
+            ],
+            "Resource": "arn:aws:s3:::awsexamplebucket1/*"
+        }
+```
+
 ## Setup in Ocean
 
 The integration consists of two parts:
@@ -57,8 +72,7 @@ To set up the integration in Ocean, do the following:
 
 Use either the [Create Cluster](https://docs.spot.io/api/#operation/OceanAWSClusterCreate) or [Update Cluster](https://docs.spot.io/api/#operation/OceanAWSClusterUpdate) (if your cluster already exists) API to enter the integration ID in the Ocean cluster that you want to export. (This is the ID that you copied in Step 2.)
 
-
-```jason
+```json
 {
   "cluster": {
     "logging": {
