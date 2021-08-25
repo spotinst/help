@@ -156,10 +156,16 @@ For additional information, see: [Update the Spot Policy](elastigroup/tutorials/
       "Resource": ["*"]
     },
     {
-      "Sid": "AccessEks",
-      "Action": ["eks:ListClusters"],
-      "Effect": "Allow",
-      "Resource": ["*"]
+          "Sid": "AccessEks",
+          "Action": [
+            "eks:ListClusters",
+            "eks:DescribeNodegroup",
+            "eks:ListNodegroups"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "*"
+          ]
     },
     {
       "Sid": "AccessEMR",
