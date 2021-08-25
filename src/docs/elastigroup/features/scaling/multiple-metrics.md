@@ -86,6 +86,46 @@ The following types of logical operators are supported:
 - AND or &&
 - OR or ||
 
+## Use Multiple Metrics with Simple Scaling
+
+You can configure simple scaling to use multiple metrics when you create an Elastigroup or by editing an existing Elastigroup. To create a new simple scaling policy, do the following:
+1. In the Elastigroup, go to the Scaling tab.
+2. Under Simple Scaling Policies, click Up Scaling Policies or Down Scaling Policies.
+3. Click Add Policy.
+
+<img src="/elastigroup/_media/scaling-simple-scaling-04.png" width="522" height="299" />
+
+4. Complete the following in the form:
+   - Policy Name: Enter a name identifying your policy.
+   - Policy Type: Choose Multiple Metric Scaling.
+   - Expression: Enter an expression that uses one or more of the metrics you defined in the Metric List.
+   - Operator: Choose the criterion for evaluating the metric, e.g., greater than, less than.
+   - Threshold: Enter the numerical limit for the metric.
+   - Consecutive Periods: The number of periods in a row to be evaluated before triggering a scale action.
+   - Period: Choose the amount of time in a single period.
+   - Action: Choose the type of action to be taken.
+   - Amount: Set the number of instances that fits the expression. This depends on the Action Type you choose.
+   - Cooldown: Enter the cooldown duration in seconds.
+
+This policy will be saved when you finish creating or updating the Elastigroup (i.e., when you click Create or Update at the bottom of the Review tab).
+
+## Use Multiple Metrics with Target Scaling
+
+You can configure target scaling to use multiple metrics when you create an Elastigroup or by editing an existing Elastigroup. To create a new policy, do the following:
+1. In the Elastigroup, go to the Scaling tab.
+2. Under Target Scaling Policies, click Add Policy.
+
+<img src="/elastigroup/_media/scaling-target-scaling-policy-02a.png" width="660" height="174" />
+
+3. Complete the following in the form:
+   - Policy Name: Enter a name identifying your policy.
+   - Policy Type: Choose Multiple Metric Scaling.
+   - Expression: Enter an expression that uses one or more of the metrics you defined in the Metric List.
+   - Target Value: The desired average value of the evaluated expression that will be tracked.
+   - Cooldown: Enter the cooldown duration in seconds.
+
+This policy will be saved when you finish creating or updating the Elastigroup (and you click Create or Update at the bottom of the Review tab).
+
 ## What’s Next?
 
 Learn how to create a scaling policy that uses multiple metrics in:
