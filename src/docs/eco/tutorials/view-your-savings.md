@@ -4,7 +4,7 @@ Once Eco has been enabled for your organization and you have chosen your reserve
 
 To view the Eco dashboard in the console, go to Eco on the left side and click Dashboard.
 
-<img src="/eco/_media/tutorials-view-savings-01b.png" />
+<img src="/eco/_media/tutorials-view-savings-01ba.png" />
 
 ## Filters
 
