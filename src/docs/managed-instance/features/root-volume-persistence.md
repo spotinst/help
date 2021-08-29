@@ -23,7 +23,7 @@ Managed Instance performs various backend actions for different states of the in
 1. Enter the Managed Instance configuration wizard.
 2. Under the Persistent Resources tab select Persist Root Volume.
 
-<img src="/managed-instance/_media/root-volume-persistence" />
+<img src="/managed-instance/_media/root-volume-persistence-01.png" />
 
 ## Change the Image of Existing Managed Instances
 

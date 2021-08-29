@@ -1,17 +1,25 @@
 # Data Volume Persistence
 
-Data volume persistence maintains the data volumes during Spot instance replacement. All the data on the volumes that were attached at the time of the previous instance termination will be present on the new instance, using the same BlockDeviceMapping configuration upon instance replacement.
+Data volume persistence maintains the data volumes during spot instance replacement. The data on the volumes that were attached at the time of the previous instance termination will be present on the new instance, using the same BlockDeviceMapping configuration upon instance replacement.
+
+The [flow diagram](elastigroup/features/stateful-instance/stateful-elastigroup-flow) describes on a high level how Spot manages the persistence of managed instances.
 
 ## Configure Data Volume Persistence
 
-To configure data volume persistence head to the Managed Instance's configuration, select `Persistent Resources`, check the `Persist Data Volumes` option, and then select a persistence method.
+1. To configure data volume persistence, go to the Managed Instance configuration and select Persistent Resources.
+2. Mark the Persist Data Volumes option and select a persistence method.
 
 <img src="/managed-instance/_media/data-volume-persistence-01.png" />
 
-Managed Instances provide the following methods for data volume persistence:
+Managed Instance provides the methods described below for data volume persistence.
 
-- Snapshot Backups: Periodic snapshots of any data volumes are taken while the instance is running. For each data volume, 3 snapshots are kept. Upon Spot instance replacement, a new EBS volume is created from the latest snapshot and is attached to the new instance upon launch by updating the it's launch specification's Block Device Mapping.
-- Reattach: Recommended for large data volumes. The same EBS volume is detached from the original instance and reattached to the newly launched instance. If the new instance is launched in a different AZ, a snapshot is used to create a new volume and attach it to the new instance (as volumes can't be migrated between AZ's). Initially, volumes can be created based on the AMI's Block Device Mapping upon the Managed Instance's first Resume, or attached via the AWS console. The same volumes are maintained as long as the instance is launched within the same Availability Zone.
+### Snapshot Backups
+
+Periodic snapshots of data volumes are taken while the instance is running. Upon spot instance replacement, a new EBS volume is created from the latest snapshot and is attached to the new instance upon launch by updating the block device mapping in the configuration.
+
+### Reattach
+
+This method is recommended for large data volumes. The same EBS volume is detached from the original instance and reattached to the newly launched instance. If the new instance is launched in a different availability zone, a snapshot is used to create a new volume and attach it to the new instance (as volumes cannot be migrated between availability zones). Initially, volumes can be created based on the AMI block device mapping upon the managed instance's first Resume, or attached via the AWS console. The same volumes are maintained as long as the instance is launched within the same availability zone.
 
 ## Suspend User Data Execution Until Volumes are Available
 
@@ -44,21 +52,33 @@ done
 echo "volume is ready"
 ```
 
-## Backend Actions
+## Managed Instance Actions
 
-Managed Instance automatically performs various backend actions for different states of the instance to ensure Data volume persistence:
+Managed Instance performs various backend actions for different states of the instance to ensure data volume persistence.
 
-- Running:
-  - Reattach + One AZ: The data volumes are being preserved, detached and attached on every instance replacement.
-  - Snapshot backups or Reattach + Multi AZ: A snapshot is being taken for each data volume every 5 minutes and the latest 3 Snapshots are kept (incremental backup).
-- Paused:
-  - Reattach + One AZ: The original EBS volumes are maintained.
-  - Snapshot backups or Reattach + Multi AZ: Only the latest Snapshot for each volume is being kept.
-- Resume:
-  - Snapshot backups: New volumes are created from the latest snapshots upon instance launch.
-  - Reattach + the instance is launched in the same AZ as the previous instance: The existing volumes are being reattached to the new instance post launch.
-  - Reattach + the instance is launched in a different AZ from the previous instance: New volumes are created in the same AZ as the new instance and are attached post launch.
-- Deallocated:
-  - Once a stateful instance is deallocated, ENI is deleted immediately, while data (Images, Volumes and Snapshots) is being kept for 4 days by default.
+### Running
+- Reattach + One AZ: The data volumes are preserved, detached, and attached on every instance replacement.
+- Snapshot backups or Reattach + Multi AZ: A snapshot is taken for each data volume every five minutes.
+
+### Paused
+- Reattach + One AZ: The original EBS volumes are maintained.
+- Snapshot backups or Reattach + Multi AZ: Only the latest snapshot for each volume is kept.
+
+### Resume
+- Snapshot backups: New volumes are created from the latest snapshots upon instance launch.
+- Reattach + instance launch in same AZ as previous instance: The existing volumes are reattached to the new instance post launch.
+- Reattach + instance launch in different AZ from previous instance: New volumes are created in the same AZ as the new instance and are attached post launch.
+
+### Deallocated
+
+- When you delete a managed instance, you can choose which parts to delete.
+  - If you select all parts, then they will be deleted immediately.
+  - If you select only some of the parts for deletion, then those parts will be kept for four days and then deleted.
+
+<img src="/managed-instance/_media/data-volume-persistence-02.png" />
 
 > **Tip**: Data storage time can be configured on an hourly basis. For more information, reach out to the Customer Support team.
+
+## What’s Next?
+
+Learn more about [network persistence](managed-instance/features/network-persistence).
