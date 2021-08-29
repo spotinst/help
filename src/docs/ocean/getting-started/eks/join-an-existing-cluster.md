@@ -27,9 +27,12 @@ In this procedure, you will use the [Spot Console](http://console.spotinst.com/)
 
 > **Tip**: To ensure the reliable flow of data reported back to the SaaS, do not change the Cluster Identifier after you have created the Ocean cluster.
 
-2. Choose the autoscaling group or a specific instance from which you will import the compute configurations.
+2. Under Import Cluster, complete the following:
+   - Import from: In most cases, you will choose the default, EKS Node Group.
+   - EKS Cluster Name: This is a list of cluster names in the region you chose. Select the EKS Cluster Name that your node group is in.
+   - Node Group: This is the list of auto-scaling groups in the cluster you chose. Select the auto-scaling group you want to import.
 
-<img src="/ocean/_media/general.png" width="500" height="510" />
+<img src="/ocean/_media/getting-started-eks-connect-existing-eks-01.png />
 
 3. Click Next.
 
