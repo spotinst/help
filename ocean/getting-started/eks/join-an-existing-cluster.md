@@ -32,7 +32,7 @@ In this procedure, you will use the [Spot Console](http://console.spotinst.com/)
    - EKS Cluster Name: This is a list of cluster names in the region you chose. Select the EKS Cluster Name that your node group is in.
    - Node Group: This is the list of auto-scaling groups in the cluster you chose. Select the auto-scaling group you want to import.
 
-<img src="/ocean/_media/getting-started-eks-connect-existing-eks-01.png />
+<img src="/ocean/_media/getting-started-eks-connect-existing-eks-01.png" />
 
 3. Click Next.
 
