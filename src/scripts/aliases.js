@@ -1559,6 +1559,12 @@ export const aliases = (() => {
 
     "/elastigroup/features/scaling/predictive-autoscaling":
       "/elastigroup/features/scaling/target-scaling",
+
+    "/administration/users/configure-email-notifications":
+      "/administration/notification-center/",
+
+    "/administration/users/configure-slack-notifications":
+      "/administration/notification-center/",
   };
 
   for (let [key, value] of Object.entries(map)) {
