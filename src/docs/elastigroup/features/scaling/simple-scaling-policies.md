@@ -15,7 +15,7 @@ Complete the steps below:
 1. In the Elastigroup, go to the Scaling tab.
 2. Under Simple Scaling Policies/Up Scaling Policies, click Add Policy.
 
-<img src="/elastigroup/_media/scaling-simple-scaling-01.png" />
+<img src="/elastigroup/_media/scaling-simple-scaling-01.png" width="651" height="372" />
 
 3. Complete the following parameters in the form:
    - Policy Name: Enter the name to assign to the policy. It is recommended to use a meaningful name to help you understand scaling actions better in the future.
@@ -97,7 +97,7 @@ You can configure step scaling when you create a new Elastigroup or when you edi
 2. Open an existing policy or click the plus to create a new policy.
 3. To enable step scaling, click the toggle switch, then fill in the parameters for each of the steps you want to define.
 
-<img src="/elastigroup/_media/scaling-simple-scaling-02b.png" />
+<img src="/elastigroup/_media/scaling-simple-scaling-02b.png" width="654" height="256" />
 
 ### Step Scaling Parameters
 
