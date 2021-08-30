@@ -6,8 +6,6 @@
     - [Add Users](administration/users/add-users)
     - [Set Password](administration/users/set-password)
     - [Programmatic Users](administration/users/programmatic-users)
-    - [Configure Email Notifications](administration/users/configure-email-notifications)
-    - [Configure Slack Notifications](administration/users/configure-slack-notifications)
   - [Organizations & Accounts](administration/organizations/)
     - [Switch Organization](administration/organizations/switch-organization)
     - [Audit Events](administration/organizations/audit-events)
