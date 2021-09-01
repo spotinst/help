@@ -7,6 +7,7 @@ The latest Spot policy in Azure appears below.
     "permissions": [
       {
         "actions": [
+          "Microsoft.Authorization/roleAssignments/read",
           "Microsoft.Compute/availabilitySets/read",
           "Microsoft.Compute/availabilitySets/vmSizes/read",
           "Microsoft.Compute/disks/read",
