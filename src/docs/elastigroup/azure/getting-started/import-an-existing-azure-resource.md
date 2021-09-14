@@ -25,7 +25,7 @@ To import an existing Azure resource, you must first complete the following:
 
 3. In the Import dialog, choose the type of Azure configuration to import.
 
-<img src="/elastigroup/_media/azure-import-existing-resource-02a.png" />
+<img src="/elastigroup/_media/azure-import-existing-resource-02a.png" width="307" height="302" />
 
 4. Click Continue, and follow the relevant procedure below.
    - [Import Scale Set](elastigroup/azure/getting-started/import-an-existing-azure-resource?id=import-scale-set)
@@ -72,7 +72,7 @@ In the Import dialog, complete the following:
 2. Select a Load Balancer.
 3. Select a Backend Pool.
 
-<img src="/elastigroup/_media/azure-import-existing-resource-05a.png" />
+<img src="/elastigroup/_media/azure-import-existing-resource-05a.png" width="307" height="380" />
 
 4. If the resource has a password associated with it in Azure, it cannot be passed to Elastigroup. You will be prompted for a password. You may enter the existing password or a new password.
 5. Click Continue.
