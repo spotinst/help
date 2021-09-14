@@ -106,7 +106,7 @@ Enter the information for your network interface. You can define additional netw
 - Vnet Resource Group. Select the Vnet Resource group you want your Elastigroup Scale Sets to be a part of.
 - Virtual Network. Select the specific Virtual Network (VN) for your Elastigroup.
 
-<img src="/elastigroup/_media/gettingstarted-eg-azure-03a.png" width="517" height="122" />
+<img src="/elastigroup/_media/gettingstarted-eg-azure-03aa.png" />
 
 - Set as Primary. The main network interface attached to the VM.
 - Subnet ID. Select the specific Subnet inside your VN.
@@ -121,7 +121,7 @@ Enter the information for your network interface. You can define additional netw
 
   Note that the items appearing in the list of application security groups depend on the Virtual Network that you choose and may be different in each network.
 
-- Assign Public IP. Mark this checkbox if you want VMs in this Elastigroup to launch with a Public IP. Choose Basic or Standard. You will then need to choose one or more Static Public IPs from the dropdown list. The list will include IPs only from AZs that you have chosen for the Elastigroup.
+- Assign Public IP. Mark this checkbox if you want VMs in this Elastigroup to launch with a Public IP. You will then need to choose one or more Static Public IPs from the dropdown list. The list will include IPs only from AZs that you have chosen for the Elastigroup.
 
 <img src="/elastigroup/_media/gettingstarted-eg-azure-03d.png" width="273" height="362" />
 
@@ -185,5 +185,5 @@ To create a scaling policy, complete the following steps.
 
 Learn how to:
 
-- [Import Existing Azure Resources](elastigroup/azure/getting-started/import-an-existing-azure-resource.md) such as a Scale Set, an Application Gateway, a Classic Load Balancer or a VM.
+- [Import Existing Azure Resources](elastigroup/azure/getting-started/import-an-existing-azure-resource.md) such as a Scale Set, an Application Gateway, or a VM.
 - [Clone an Existing Elastigroup](elastigroup/tutorials/azure/clone-an-existing-elastigroup).
