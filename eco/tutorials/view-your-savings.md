@@ -62,6 +62,25 @@ A line graph that breaks down the story of how reservations, savings plan covera
 
 <img src="/eco/_media/tutorials-view-savings-01d.png" />
 
+### Commitment Usage Distribution Over Time
+
+A filterable table and corresponding chart which allow you to review your commitments in a variety of ways.  By placing your cursor in the filter field, you will see which parameters can be selected.
+
+<img src="/eco/_media/tutorials-view-savings-01e.png" />
+
+- Commitment ID: Identifier of the Reservation or Savings Plan. The row and ID appear when it fits within the relevant filters.
+- Usage Account Name: Account utilizing the discount.
+- Commitment Type: Standard RI, Convertible RI, Compute Savings Plan, or EC2 Savings Plan.
+- $ Used: The total equivalent cost within the time range multiplied by the utilization.
+  - Example 1: If the time range covered the entire term of the reservation, it was 100% utilized, and the total equivalent cost was $1000, the result would be $1000.
+  - Example 2: If the time range was half the history of the same reservation, it would be $500.
+  - Example 3: If it was only 50% utilized during that period, it would be $250.
+  - Example 4: If the term of the RI is three years and only one year of the period has passed since it was purchased, it would be possible to show only 33.3% of the total equivalent cost in this field, at maximum.
+- % Used: Utilization within that time period.
+- Equivalent OD Price: What the on-demand price would have been during that time period.
+- Generated Savings: How much you saved due to using commitments' discounted rates instead of the full on demand rates. Calculation: On Demand equivalent minus commitments minus uncovered spend. Not necessarily the same as net savings.
+- Source: Eco or Non-Eco.
+
 ### Commitment per Service
 
 A pie chart showing the current reserved instance commitment broken down into the different services.
