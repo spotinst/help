@@ -4,7 +4,7 @@ FSx for ONTAP, a service provided by AWS, enables you to easily deploy a managed
 
 This page describes the necessary steps to mount FSx for ONTAP volumes to Kubernetes Pods.
 
-<img src="/ocean/_media/tutorials-ocean-dashboard-01.png" />
+<img src="/ocean/_media/tutorials-mount-fsx-01.png" />
 
 ## Create an FSx ONTAP File System and StorageVirtualMachine (SVM)
 
@@ -15,40 +15,40 @@ The steps below describe how to create an FSx ONTAP file system using the AWS in
 1. Go to the [AWS FSx dashboard](https://us-east-2.console.aws.amazon.com/fsx/home?) and select Create file system.
 2. Select Amazon FSx for Netapp ONTAP as the File system type.
 
-<img src="/ocean/_media/tutorials-mount-fsx-02.png" />
+<img src="/ocean/_media/tutorials-mount-fsx-02.png" width="227" height="193" />
 
 3. Select the Standard creation method.
 
-<img src="/ocean/_media/tutorials-mount-fsx-03.png" />
+<img src="/ocean/_media/tutorials-mount-fsx-03.png" width="562" height="198" />
 
 4. In the File system details page, specify a name for the file system and define its capacity and performance.
 
-<img src="/ocean/_media/tutorials-mount-fsx-04.png" />
+<img src="/ocean/_media/tutorials-mount-fsx-04.png" width="562" height="338" />
 
 5. In the Network & Security section, choose the VPC on which your Kubernetes cluster connected to Ocean is running.
 6. Specify the subnets on which you would like the file system to be created.
 7. In the VPC route tables section, select the route tables that the subnets specified above are associated with.
 
-<img src="/ocean/_media/tutorials-mount-fsx-05.png" />
+<img src="/ocean/_media/tutorials-mount-fsx-05.png" width="468" height="350" />
 
 8. In the Security & encryption section, specify a password in the file system administrative password (the password is set for a user names “fsxadmin” on the file system).
 
-<img src="/ocean/_media/tutorials-mount-fsx-06.png" />
+<img src="/ocean/_media/tutorials-mount-fsx-06.png" width="468" height="301" />
 
 9. As part of the Filesystem creation process, a Storage Virtual Machine (SVM) will also be created. SVMs allow you to segregate your Filesystem to multiple logical Filesystems. Specify the SVM name.
 
-<img src="/ocean/_media/tutorials-mount-fsx-07.png" />
+<img src="/ocean/_media/tutorials-mount-fsx-07.png" width="468" height="199" />
 
 10. These are the configurations needed for our setup, you are welcome to specify or modify additional configurations.
 11. Click next, you’ll see a summary of the File system details.
 
-<img src="/ocean/_media/tutorials-mount-fsx-08.png" />
+<img src="/ocean/_media/tutorials-mount-fsx-08.png" width="468" height="494" />
 
 12. Click Create file system, the creation process will take approximately 20 minutes.
 
 Once the file system reaches an available state, the FSx for ONTAP file system is ready for use.
 
-<img src="/ocean/_media/tutorials-mount-fsx-09.png" />
+<img src="/ocean/_media/tutorials-mount-fsx-09.png" width="468" height="148" />
 
 ## Use Volumes from the File System with Astra Trident
 
@@ -100,12 +100,12 @@ EOF
 
 <img src="/ocean/_media/tutorials-mount-fsx-11.png" />
 
-   - dataLIF: Go to the StorageVirutalMachine and search for the Endpoints section.
+    - dataLIF: Go to the StorageVirutalMachine and search for the Endpoints section.
 
 <img src="/ocean/_media/tutorials-mount-fsx-12.png" />
 
-   - SVM: the StorageVirtualMachine name.
-   - Password: The password you specified earlier during the creation of the file system.
+    - SVM: the StorageVirtualMachine name.
+    - Password: The password you specified earlier during the creation of the file system.
 
 3. Create the TridentBackendConfig resource using kubectl.
 
