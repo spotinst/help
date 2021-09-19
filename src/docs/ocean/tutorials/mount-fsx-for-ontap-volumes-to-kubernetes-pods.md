@@ -100,12 +100,12 @@ EOF
 
 <img src="/ocean/_media/tutorials-mount-fsx-11.png" />
 
-    - dataLIF: Go to the StorageVirutalMachine and search for the Endpoints section.
+   - dataLIF: Go to the StorageVirutalMachine and search for the Endpoints section.
 
 <img src="/ocean/_media/tutorials-mount-fsx-12.png" />
 
-    - SVM: the StorageVirtualMachine name.
-    - Password: The password you specified earlier during the creation of the file system.
+   - SVM: the StorageVirtualMachine name.
+   - Password: The password you specified earlier during the creation of the file system.
 
 3. Create the TridentBackendConfig resource using kubectl.
 
