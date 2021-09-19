@@ -1,5 +1,11 @@
 # Controller Version History
 
+## [1.0.78] - 2021-09-19
+
+Added
+
+- Wave big data topology
+
 ## [1.0.77] - 2021-07-12
 
 Added
