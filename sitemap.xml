@@ -2136,6 +2136,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean/tutorials/migrate-workload"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/ocean/tutorials/mount-fsx-for-ontap-volumes-to-kubernetes-pods</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean/tutorials/mount-fsx-for-ontap-volumes-to-kubernetes-pods"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean/tutorials/mount-fsx-for-ontap-volumes-to-kubernetes-pods"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/ocean/tutorials/ocean-dashboard</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
