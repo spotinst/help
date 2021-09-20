@@ -1,3 +1,4 @@
+<meta name="robots" content="noindex">
 
 # AVD and Spot PC Requirements
 This document describes the required elements for deploying Spot PC. A core component of Spot pPC is Azure Virtual Desktop, thus the prerequisites for AVD are also required for Spot PC.  
