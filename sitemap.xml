@@ -2234,6 +2234,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean/tutorials/view-scaling-constraints"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/spot-pc/getting-started/prerequisites/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-pc/getting-started/prerequisites/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/getting-started/prerequisites/"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/spot-pc/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
