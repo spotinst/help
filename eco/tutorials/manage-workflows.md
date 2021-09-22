@@ -90,6 +90,10 @@ There are a variety of financial benefits from working with AWS which a business
 - Solution Provider Program
 - Other Credits (Any credits not addressed by the above.)
 
+### Remove Taxes
+
+This removes any tax-related usage types from the data.
+
 ### Cross Account RI Cost Sharing
 
 This enables you to pass a reservation's cost to accounts proportionate to the discounts they consume. You have the option to pass the cost in the following ways:
@@ -127,7 +131,7 @@ After all the other rules have been applied, the charges are increased or decrea
 
 ### Eco Cost Sharing
 
-You may chose to share the cost of Eco RI or savings plan-related savings with consumers of the savings. 
+You may chose to share the cost of Eco RI or savings plan-related savings with consumers of the savings.
 
 The percentage option allows you to add a charge to each subset relative to the overall savings provided by Eco. You may enter the exact same percentage as your contract with Spot, or you may enter a different percentage depending on your business model.
 
