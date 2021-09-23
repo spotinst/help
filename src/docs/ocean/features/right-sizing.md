@@ -62,7 +62,7 @@ Get Right Sizing Recommendations: Ocean for [ECS](https://docs.spot.io/api/#oper
 
 You can also view Right Sizing recommendations on your Ocean console, under the Right Sizing tab, and under the tabs for Kubernetes Deployments or ECS Services.
 
-<img src="/ocean/_media/features-rightsizing-02.png" />
+<img src="/ocean/_media/features-rightsizing-02a.png" />
 
 ### Recommendations
 
