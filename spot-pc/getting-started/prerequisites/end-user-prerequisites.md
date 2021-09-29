@@ -2,19 +2,18 @@
 
 # End User Connection Requirements
 
+## End User Clients
 The following Remote Desktop clients support Azure Virtual Desktop:
 
-* Windows Desktop
-* Web
-* macOS
-* iOS
-* IGEL Thin Client (Linux)
-* Android (Preview)
+* [Windows Desktop Client](https://docs.microsoft.com/en-us/azure/virtual-desktop/user-documentation/connect-windows-7-10)
+* [Microsoft Store Client](https://docs.microsoft.com/en-us/azure/virtual-desktop/user-documentation/connect-microsoft-store)
+* [Web Client](https://docs.microsoft.com/en-us/azure/virtual-desktop/user-documentation/connect-web)
+* [macOS Client](https://docs.microsoft.com/en-us/azure/virtual-desktop/user-documentation/connect-macos)
+* [iOS Client](https://docs.microsoft.com/en-us/azure/virtual-desktop/user-documentation/connect-ios)
+* [Thin Clients](https://docs.microsoft.com/en-us/azure/virtual-desktop/user-documentation/linux-overview)
+* [Android Client](https://docs.microsoft.com/en-us/azure/virtual-desktop/user-documentation/connect-android)
 
-**NOTE:** Azure Virtual Desktop does not support the RemoteApp and Desktop Connections (RADC) client or the Remote Desktop Connection (MSTSC) client.
-
-**IMPORTANT:** Azure Virtual Desktop does not currently support the Remote Desktop client from the Windows Store. Support for this client will be added in a future release.
-
+## Outbound URL Safelist
 The Remote Desktop clients must have access to the following URLs:
 
 | Address                         | Outbound TCP Port | Purpose                 | Client(s)       |
@@ -31,6 +30,11 @@ Source: https://docs.microsoft.com/en-us/azure/virtual-desktop/safe-url-list#rem
 
 **NOTE:** Opening these URLs is essential for a reliable client experience. Blocking access to these URLs is unsupported and will affect service functionality. These URLs only correspond to the client sites and resources, and do not include URLs for other services like Azure Active Directory.
 
+## Network Performance
+Depending on the use case, Microsoft recommends 1.5Mbps-15Mbps per user. Details can be found at: https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/network-guidance
+
+The AVD Experience Estimator is a good tool for evaluating the network performance for a Spot PC deployment. https://azure.microsoft.com/en-us/services/virtual-desktop/assessment/
+
 ## What’s Next?
 
-Learn more about 
+Learn more about [Getting Started](spot-pc/getting-started) with Spot PC.
