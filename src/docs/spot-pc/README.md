@@ -4,20 +4,17 @@
 
 Spot PC is a co-managed service delivering a robust virtual desktop service that satisfies all stake holders. End users get a high-performing virtual desktop running on Azure and NetApp technology. IT administrators are empowered to support their environment(s) with enablement services and simple (yet powerful) administration tools. Organizations get low, fixed costs and peace of mind because Spot PC is built with an aggressive security posture as the center.
 
-- Fully Managed
- - Simple Onboarding and migration included – data, apps, and users. Day 2+ Admin tools for partner and customer admins to expedite management tasks
+**Fully Managed**:
+Simple Onboarding and migration included – data, apps, and users. Day 2+ Admin tools for partner and customer admins to expedite management tasks
 
+**50% Lower Cost**:
+Spot optimization reduces costs by 50% compared to alternatives, including DIY
 
-- 50% Lower Cost
- - Spot optimization reduces costs by 50% compared to alternatives, including DIY
+**Always Secure**:
+Admin and user identity and access integrated with Microsoft security framework
 
-
-- Always Secure
- - Admin and user identity and access integrated with Microsoft security framework
-
-
-- Complete Solution
- - Includes Azure NetApp Files, data protection, application management, and real time session observability. Developed in partnership with Microsoft and Windows 365
+**Complete Solution**:
+Includes Azure NetApp Files, data protection, application management, and real time session observability. Developed in partnership with Microsoft and Windows 365
 
 ## Components and services
 - Fully managed & secured desktop as a service
