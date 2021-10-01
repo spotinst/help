@@ -5,7 +5,7 @@
  - [Getting Started](spot-pc/getting-started/)
    - [Prerequisites](spot-pc/getting-started/prerequisites)
    - [End-User Prerequisites](spot-pc/getting-started/prerequisites/end-user-prerequisites)
-  - [Service Summary]
+ - [Service Summary]
    - [Roles and Responsibilities]
   - [Onboarding Workflow]
    - [Planning and Design White Paper]
