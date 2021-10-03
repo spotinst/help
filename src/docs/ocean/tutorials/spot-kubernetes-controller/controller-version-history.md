@@ -1,6 +1,12 @@
 # Controller Version History
 
-## [1.0.78] - TBD
+## [1.0.79] - TBD
+
+Added
+
+- overall stability improvement
+
+## [1.0.78] - 2021-10-03
 
 Added
 
