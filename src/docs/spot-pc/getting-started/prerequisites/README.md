@@ -44,7 +44,7 @@ The network scope must fall within one of these ranges:
 ## Azure AD Connect
 Azure AD Connect is a required component that syncs the customer's AD DC with their Azure AD tenant. The customer AD DC must be configured with Azure AD Connect for Spot PC to deploy successfully.
 
-# Pre-Deployment Checklist
+## Pre-Deployment Checklist
 
 * Confirm prerequisites
 * Identify total number of users
