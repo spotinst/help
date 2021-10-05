@@ -3,6 +3,9 @@ https://docs.spot.io/spot-pc/getting-started/service-summary
 
 <meta name="robots" content="noindex">
 
+# Spot PC Service Summary
+
+<img src="/spot-pc/_media/getting-started-service-summary-01.png" />
 
 
 
