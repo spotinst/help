@@ -17,7 +17,7 @@ Enter the Tenant ID for the Azure AD tenant where the Spot PC users are located.
 Select an appropriate Azure Region. This [Microsoft Tool](https://azure.microsoft.com/en-us/services/virtual-desktop/assessment/) can estimate end user experienced based on region.
 
 Not all Azure regions can support all Spot PC configurations.  Regions with the best support are show as "Spot PC Reccommended."  Limited regions may be unable to support larger environemnts and/or GPU enabled workloads.
-
+ 
 In addition to end user experience, consideration should be made to locate the Spot PC environment near other Azure resources such as hosted domain controllers, existing data storage and/or line of business application serivces.  
 
 ### Initialization Progress
