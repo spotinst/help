@@ -18,8 +18,8 @@
       - [Spot PC and Windows 365 Cloud PC](spot-pc/features/concepts/spot-pc-and-windows-365-cloud-pc/)
       - [Spot Groups](spot-pc/features/concepts/spot-groups/)
 <!--
-       - [Storage](spot-pc/features/concepts/storage/)
--->
+       - [Storage](spot-pc/features/concepts/storage/)-->
+
       - [Business Server](spot-pc/features/concepts/business-server/)
       - [Security Concepts](spot-pc/features/concepts/security-concepts/)
         - [User Security](spot-pc/features/concepts/security-concepts/user-security/)
@@ -28,30 +28,28 @@
       - [Images](spot-pc/features/concepts/images/)
       - [Patching](spot-pc/features/concepts/patching/)
       - [Backup](spot-pc/features/concepts/backup/)
---> <!--
+<!--
       - [Azure AD Connect](spot-pc/features/concepts/azure-ad-connect/)
-      - [Nightly Maintenance](spot-pc/features/concepts/nightly-maintenance/)
--->
+      - [Nightly Maintenance](spot-pc/features/concepts/nightly-maintenance/)-->
       - [Organizations](spot-pc/features/concepts/organizations/)
       - [Tenants](spot-pc/features/concepts/tenants/)
     - [Spot PC Console](spot-pc/features/spot-pc-console/)
       - [Overview](spot-pc/features/spot-pc-console/overview/)
       - [Admins](spot-pc/features/spot-pc-console/admins/)
---><!--
+<!--
       - [Support Issues](spot-pc/features/spot-pc-console/support-issues/)
-      - [Invoice Details](spot-pc/features/spot-pc-console/invoice-details/)
--->
+      - [Invoice Details](spot-pc/features/spot-pc-console/invoice-details/)-->
+
       - [Add New Tenant](spot-pc/features/spot-pc-console/add-new-tenant/)
       - [Tenant](spot-pc/features/spot-pc-console/tenant/)
         - [Overview](spot-pc/features/spot-pc-console/tenant/overview/)
         - [User Sessions](spot-pc/features/spot-pc-console/tenant/user-sessions/)
         - [Machines](spot-pc/features/spot-pc-console/tenant/machines/)
         - [Data Volumes](spot-pc/features/spot-pc-console/tenant/data-volumes/)
---><!--
+<!--
         - [Security](spot-pc/features/spot-pc-console/tenant/security/)
         - [Alerts](spot-pc/features/spot-pc-console/tenant/alerts/)
-        - [Logs](spot-pc/features/spot-pc-console/tenant/logs/)
--->
+        - [Logs](spot-pc/features/spot-pc-console/tenant/logs/)-->
       - [Config Actions](spot-pc/features/config-actions/)
         - [Windows 365](spot-pc/features/config-actions/windows-365/)
           - [Connections](spot-pc/features/config-actions/windows-365/connections/)
@@ -60,18 +58,16 @@
   - [Tutorials](spot-pc/tutorials/)
     - [Create Image](spot-pc/tutorials/create-image/)
     - [Deploy Image](spot-pc/tutorials/deploy-image/)
---><!--
+<!--
     - [Add/Remove App](spot-pc/tutorials/add-remove-app/)
     - [Deploy App](spot-pc/tutorials/deploy-app/)
-    - [Assign App](spot-pc/tutorials/assign-app/)
--->
+    - [Assign App](spot-pc/tutorials/assign-app/)-->
     - [Connect to Desktop](spot-pc/tutorials/connect-to-desktop/)
     - [Manage Users and Groups](spot-pc/tutorials/manage-users-and-groups/)
---><!--
-    - [Restore from Backups](spot-pc/tutorials/restore-from-backups/)
--->
+<!--
+    - [Restore from Backups](spot-pc/tutorials/restore-from-backups/)-->
     - [Manage Admins](spot-pc/tutorials/manage-admins/)
---><!--
+<!--
     - [Map Network Drive](spot-pc/tutorials/map-network-drive/)
     - [Add VPN](spot-pc/tutorials/add-vpn/)
     - [Configure Conditional Access](spot-pc/tutorials/configure-conditional-access/)
@@ -79,11 +75,10 @@
     - [Remove App](spot-pc/tutorials/remove-app/)
     - [Remove Image](spot-pc/tutorials/remove-image/)
     - [Remove Spot Group](spot-pc/tutorials/remove-spot-group/)
-    - [Remove Tenant](spot-pc/tutorials/remove-tenant/)
--->
+    - [Remove Tenant](spot-pc/tutorials/remove-tenant/)-->
   - [Troubleshooting](spot-pc/troubleshooting/)
     - [Getting Support](spot-pc/troubleshooting/getting-support/)
---><!--
+<!--
     - [Network Connectivity](spot-pc/troubleshooting/network-connectivity/)
     - [Resource Consumption](spot-pc/troubleshooting/resource-consumption/)
     - [Storage Performance](spot-pc/troubleshooting/storage-performance/)
