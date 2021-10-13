@@ -66,39 +66,7 @@ This section enables you to inform Ocean about the labels and taints that are se
 - Memory (MiB): Optionally configure the amount of memory (MiB) to allocate to the headroom.
 - GPUs: Optionally configure the number of GPUs to allocate for headroom unit.
 
-## Example 1: Run a Windows Node in a Linux Cluster
-
-In this scenario, the default Ocean AMI will include a Linux OS, but for a specific pod, WinPod, a Windows image is required. To ensure that the pod is using a Windows image, do the following:
-
-1. Configure your WinPod pod with a dedicated nodeSelector.
-
-```json
-apiVersion: v1
-kind: Pod
-metadata:
-name: WinPod
-spec:
-  containers:
-    - name: WinPodCon
-      image: WinPodCon
-      imagePullPolicy: IfNotPresent
-  nodeSelector:
-    runOnWin: true
-```
-
-2. Configure your Ocean cluster with a VNG that serves the WinPod nodeSelector label. (See the steps above in [Create a VNG](ocean/tutorials/manage-virtual-node-groups?id=create-a-vng).)
-
-   1. In the VNG configuration, set the image to Windows OS.
-   2. In the VNG configuration, go to Node Selection and define the following node label:
-
-      ```
-      Key: runOnWin
-      Value: true
-      ```
-
-   3. Set the User Data script and label your nodes with the above label.
-
-## Example 2: GPU Instance
+## Example: GPU Instance
 
 If a pod requires a GPU instance, add the relevant GPU image in a VNG. Ocean will spin up instances accordingly. Specific labels are not required in this case. Example:
 
