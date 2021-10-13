@@ -1,7 +1,7 @@
 <!-- Table of Contents -->
 
 - <a href="/" class="sidebar-home"><i data-feather="arrow-left" class="sidebar-back-icon"></i>Back to Main Tree</a>
-- [Spot PC2](spot-pc/)
+- [Spot PC](spot-pc/)
   - [Getting Started](spot-pc/getting-started/)
     - [Prerequisites](spot-pc/getting-started/prerequisites/)
       - [End-User Prerequisites](spot-pc/getting-started/prerequisites/end-user-prerequisites/)
@@ -12,8 +12,7 @@
       - [Planning and Design White Paper](spot-pc/getting-started/onboarding-workflow/planning-and-design-white-paper/)
       - [Data Migration Services](spot-pc/getting-started/onboarding-workflow/data-migration-services/)
       - [Tools and Strategies](spot-pc/getting-started/onboarding-workflow/tools-and-strategies/)
-      - [Advanced Use Cases](spot-pc/getting-started/onboarding-workflow/advanced-use-cases/)
--->      
+      - [Advanced Use Cases](spot-pc/getting-started/onboarding-workflow/advanced-use-cases/)-->      
   - [Features](spot-pc/features/)
     - [Concepts](spot-pc/features/concepts/)
       - [Spot PC and Windows 365 Cloud PC](spot-pc/features/concepts/spot-pc-and-windows-365-cloud-pc/)
