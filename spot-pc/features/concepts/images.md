@@ -1,4 +1,5 @@
 <meta name="robots" content="noindex">
+
 ## Images
 
 VM Images are an area of emphasis and focus for Spot PC management.  The goal is that all customization to session host VM be done at the image level, allowing Spot PC optimization automation to manage the creation, deletion and availability of session hosts automatically.
