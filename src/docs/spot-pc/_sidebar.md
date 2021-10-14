@@ -8,7 +8,7 @@
     - [Service Summary](spot-pc/getting-started/service-summary/)
       - [Roles and Responsibilities](spot-pc/getting-started/service-summary/roles-and-responsibilities/)
     - [Onboarding Workflow](spot-pc/getting-started/onboarding-workflow/)
-<!--      - [Planning and Design White Paper](spot-pc/getting-started/onboarding-workflow/planning-and-design-white-paper/)
+[comment]: #      - [Planning and Design White Paper](spot-pc/getting-started/onboarding-workflow/planning-and-design-white-paper/)
       - [Data Migration Services](spot-pc/getting-started/onboarding-workflow/data-migration-services/)
       - [Tools and Strategies](spot-pc/getting-started/onboarding-workflow/tools-and-strategies/)
       - [Advanced Use Cases](spot-pc/getting-started/onboarding-workflow/advanced-use-cases/)-->      
