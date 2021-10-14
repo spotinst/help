@@ -33,7 +33,7 @@
         - [Config Actions](spot-pc/features/config-actions/) <!-- Mike --->
           - [Windows 365](spot-pc/features/config-actions/windows-365/) <!-- Mike --->
             - [Connections](spot-pc/features/config-actions/windows-365/connections) <!-- Mike --->
-            - [Device Images](spot-pc/features/config-actions/windows-365/device-images/) <!-- Mike --->
+            - [Device Images](spot-pc/features/config-actions/windows-365/device-images) <!-- Mike --->
             - [Provisioning Policies](spot-pc/features/config-actions/windows-365/provisioning-policies) <!-- Mike --->
   - [Tutorials](spot-pc/tutorials/)
     - [Create Image](spot-pc/tutorials/create-image)
