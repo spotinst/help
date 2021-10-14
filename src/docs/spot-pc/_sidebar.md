@@ -7,7 +7,7 @@
       - [End-User Prerequisites](spot-pc/getting-started/prerequisites/end-user-prerequisites)
     - [Service Summary](spot-pc/getting-started/service-summary/)
       - [Roles and Responsibilities](spot-pc/getting-started/service-summary/roles-and-responsibilities)
-    - [Onboarding Workflow](spot-pc/getting-started/onboarding-workflow)
+    - [Onboarding Workflow](spot-pc/getting-started/onboarding-workflow/)
   - [Features](spot-pc/features/)
     - [Concepts](spot-pc/features/concepts/)
       - [Spot PC and Windows 365 Cloud PC](spot-pc/features/concepts/spot-pc-and-windows-365-cloud-pc) <!-- Mike --->
@@ -33,7 +33,7 @@
         - [Config Actions](spot-pc/features/config-actions/) <!-- Mike --->
           - [Windows 365](spot-pc/features/config-actions/windows-365/) <!-- Mike --->
             - [Connections](spot-pc/features/config-actions/windows-365/connections) <!-- Mike --->
-          - [Device Images](spot-pc/features/config-actions/windows-365/device-images/) <!-- Mike --->
+            - [Device Images](spot-pc/features/config-actions/windows-365/device-images/) <!-- Mike --->
             - [Provisioning Policies](spot-pc/features/config-actions/windows-365/provisioning-policies) <!-- Mike --->
   - [Tutorials](spot-pc/tutorials/)
     - [Create Image](spot-pc/tutorials/create-image)
