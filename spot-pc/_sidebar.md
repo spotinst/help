@@ -1,7 +1,7 @@
 <!-- Table of Contents -->
 
 - <a href="/" class="sidebar-home"><i data-feather="arrow-left" class="sidebar-back-icon"></i>Back to Main Tree</a>
-- [Spot PC](spot-pc/)
+- [Spot PC2](spot-pc/)
   - [Getting Started](spot-pc/getting-started/)
     - [Prerequisites](spot-pc/getting-started/prerequisites/)
       - [End-User Prerequisites](spot-pc/getting-started/prerequisites/end-user-prerequisites/)
@@ -16,8 +16,8 @@
     - [Concepts](spot-pc/features/concepts/)
       - [Spot PC and Windows 365 Cloud PC](spot-pc/features/concepts/spot-pc-and-windows-365-cloud-pc/)
       - [Spot Groups](spot-pc/features/concepts/spot-groups/)
-<!--      - [Storage](spot-pc/features/concepts/storage/)-->
-      - [Business Server](spot-pc/features/concepts/business-server/)
+<!--      - [Storage](spot-pc/features/concepts/storage/)
+      - [Business Server](spot-pc/features/concepts/business-server/)-->
       - [Security Concepts](spot-pc/features/concepts/security-concepts/)
         - [User Security](spot-pc/features/concepts/security-concepts/user-security/)
         - [Admin Security](spot-pc/features/concepts/security-concepts/admin-security/)
