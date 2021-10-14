@@ -1,21 +1,21 @@
 <!-- Table of Contents -->
 
 - <a href="/" class="sidebar-home"><i data-feather="arrow-left" class="sidebar-back-icon"></i>Back to Main Tree</a>
-- [Spot PC](spot-pc/)
-  - [Getting Started](spot-pc/getting-started/)
+- [Spot PC](spot-pc)
+  - [Getting Started](spot-pc/getting-started)
     - [Prerequisites](spot-pc/getting-started/prerequisites/)
-      - [End-User Prerequisites](spot-pc/getting-started/prerequisites/end-user-prerequisites/)
+      - [End-User Prerequisites](spot-pc/getting-started/prerequisites/end-user-prerequisites)
     - [Service Summary](spot-pc/getting-started/service-summary/)
       - [Roles and Responsibilities](spot-pc/getting-started/service-summary/roles-and-responsibilities/)
     - [Onboarding Workflow](spot-pc/getting-started/onboarding-workflow/)
   - [Features](spot-pc/features/)
     - [Concepts](spot-pc/features/concepts/)
-      - [Spot PC and Windows 365 Cloud PC](spot-pc/features/concepts/spot-pc-and-windows-365-cloud-pc/)
+      - [Spot PC and Windows 365 Cloud PC](spot-pc/features/concepts/spot-pc-and-windows-365-cloud-pc/) <!-- Mike --->
       - [Spot Groups](spot-pc/features/concepts/spot-groups/)
-      - [Security Concepts](spot-pc/features/concepts/security-concepts/)
+      - [Security Concepts](spot-pc/features/concepts/security-concepts/) <!-- Mike --->
         - [User Security](spot-pc/features/concepts/security-concepts/user-security/) <!-- Mike --->
-        - [Admin Security](spot-pc/features/concepts/security-concepts/admin-security/)
-        - [Machine Security](spot-pc/features/concepts/security-concepts/machine-security/)
+        - [Admin Security](spot-pc/features/concepts/security-concepts/admin-security/) <!-- Mike --->
+        - [Machine Security](spot-pc/features/concepts/security-concepts/machine-security/) <!-- Mike --->
       - [Images](spot-pc/features/concepts/images/)
       - [Patching](spot-pc/features/concepts/patching/)
       - [Backup](spot-pc/features/concepts/backup/)
@@ -30,11 +30,11 @@
         - [User Sessions](spot-pc/features/spot-pc-console/tenant/user-sessions/)
         - [Machines](spot-pc/features/spot-pc-console/tenant/machines/)
         - [Data Volumes](spot-pc/features/spot-pc-console/tenant/data-volumes/)
-        - [Config Actions](spot-pc/features/config-actions/)
-          - [Windows 365](spot-pc/features/config-actions/windows-365/)
-            - [Connections](spot-pc/features/config-actions/windows-365/connections/)
-          - [Device Images](spot-pc/features/config-actions/windows-365/device-images/)
-            - [Provisioning Policies](spot-pc/features/config-actions/windows-365/provisioning-policies/)
+        - [Config Actions](spot-pc/features/config-actions/) <!-- Mike --->
+          - [Windows 365](spot-pc/features/config-actions/windows-365/) <!-- Mike --->
+            - [Connections](spot-pc/features/config-actions/windows-365/connections/) <!-- Mike --->
+          - [Device Images](spot-pc/features/config-actions/windows-365/device-images/) <!-- Mike --->
+            - [Provisioning Policies](spot-pc/features/config-actions/windows-365/provisioning-policies/) <!-- Mike --->
   - [Tutorials](spot-pc/tutorials/)
     - [Create Image](spot-pc/tutorials/create-image/)
     - [Deploy Image](spot-pc/tutorials/deploy-image/)
