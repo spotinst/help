@@ -1,7 +1,7 @@
 <!-- Table of Contents -->
 
 - <a href="/" class="sidebar-home"><i data-feather="arrow-left" class="sidebar-back-icon"></i>Back to Main Tree</a>
-- [Spot PC2](spot-pc/)
+- [Spot PC](spot-pc/)
   - [Getting Started](spot-pc/getting-started/)
     - [Prerequisites](spot-pc/getting-started/prerequisites/)
       - [End-User Prerequisites](spot-pc/getting-started/prerequisites/end-user-prerequisites/)
