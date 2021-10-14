@@ -1,14 +1,15 @@
 <!-- Table of Contents -->
 
 - <a href="/" class="sidebar-home"><i data-feather="arrow-left" class="sidebar-back-icon"></i>Back to Main Tree</a>
-- [Spot PC2](spot-pc/)
+- [Spot PC](spot-pc/)
   - [Getting Started](spot-pc/getting-started/)
     - [Prerequisites](spot-pc/getting-started/prerequisites/)
       - [End-User Prerequisites](spot-pc/getting-started/prerequisites/end-user-prerequisites/)
     - [Service Summary](spot-pc/getting-started/service-summary/)
       - [Roles and Responsibilities](spot-pc/getting-started/service-summary/roles-and-responsibilities/)
     - [Onboarding Workflow](spot-pc/getting-started/onboarding-workflow/)
-<!--      - [Planning and Design White Paper](spot-pc/getting-started/onboarding-workflow/planning-and-design-white-paper/)
+    
+[comment]: #      - [Planning and Design White Paper](spot-pc/getting-started/onboarding-workflow/planning-and-design-white-paper/)
       - [Data Migration Services](spot-pc/getting-started/onboarding-workflow/data-migration-services/)
       - [Tools and Strategies](spot-pc/getting-started/onboarding-workflow/tools-and-strategies/)
       - [Advanced Use Cases](spot-pc/getting-started/onboarding-workflow/advanced-use-cases/)-->      
