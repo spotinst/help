@@ -2276,6 +2276,27 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/features/config-actions/"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/spot-pc/features/config-actions/windows-365/connections</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-pc/features/config-actions/windows-365/connections"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/features/config-actions/windows-365/connections"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-pc/features/config-actions/windows-365/device-images</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-pc/features/config-actions/windows-365/device-images"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/features/config-actions/windows-365/device-images"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-pc/features/config-actions/windows-365/provisioning-policies</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-pc/features/config-actions/windows-365/provisioning-policies"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/features/config-actions/windows-365/provisioning-policies"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/spot-pc/features/config-actions/windows-365/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
@@ -2311,11 +2332,25 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/getting-started/prerequisites/"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/spot-pc/getting-started/service-summary</loc>
+        <loc>https://docs.spot.io/?/spot-pc/getting-started/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-pc/getting-started/service-summary"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/getting-started/service-summary"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-pc/getting-started/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/getting-started/"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-pc/getting-started/service-summary/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-pc/getting-started/service-summary/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/getting-started/service-summary/"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-pc/getting-started/service-summary/roles-and-responsibilities</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-pc/getting-started/service-summary/roles-and-responsibilities"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/getting-started/service-summary/roles-and-responsibilities"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/spot-pc/</loc>
@@ -2339,6 +2374,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/tools-and-integrations/"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/spot-pc/troubleshooting/getting-support</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-pc/troubleshooting/getting-support"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/troubleshooting/getting-support"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/spot-pc/troubleshooting/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
@@ -2346,11 +2388,39 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/troubleshooting/"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/spot-pc/tutorials/connect-to-desktop</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-pc/tutorials/connect-to-desktop"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/tutorials/connect-to-desktop"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/spot-pc/tutorials/create-image</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-pc/tutorials/create-image"/>
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/tutorials/create-image"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-pc/tutorials/deploy-image</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-pc/tutorials/deploy-image"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/tutorials/deploy-image"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-pc/tutorials/manage-admins</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-pc/tutorials/manage-admins"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/tutorials/manage-admins"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-pc/tutorials/manage-users-and-groups</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-pc/tutorials/manage-users-and-groups"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/tutorials/manage-users-and-groups"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/spot-pc/tutorials/</loc>
