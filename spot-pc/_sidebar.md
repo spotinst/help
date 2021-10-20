@@ -28,7 +28,7 @@
         - [Data Volumes](spot-pc/features/spot-pc-console/tenant/data-volumes)
         - [Config Actions](spot-pc/features/config-actions/) <!-- Mike --->
   - [Tutorials](spot-pc/tutorials/)
-    - [Add Tenant](spot-pc/getting-started/onboarding-workflow/)
+    - [Add Tenant](spot-pc/tutorials/add-tenant)
     - [Create Image](spot-pc/tutorials/create-image)
     - [Deploy Image](spot-pc/tutorials/deploy-image)
     - [Connect to Desktop](spot-pc/tutorials/connect-to-desktop)
