@@ -27,6 +27,9 @@ This procedure describes how to create an Elastigroup using an empty template. T
    - Target: The desired number of instances or vCPUs in your Elastigroup.
    - Minimum: In the case of a scale down policy action, this is the minimum number of instances or vCPUs that must run in the group. The minimum acceptable value is 0.
    - Maximum: In the case of a scale up policy action, this is the maximum number of instances or vCPUs allowed in the group. The minimum acceptable value is 0.
+
+> **Tip**: If you are creating an Intelligent Traffic Flow group for the first time, it is not recommended to set a target of 0 because the migration will not start immediately. 
+
 3. Choose one of the following:
    - On-demand Count: The number of on-demand instances to include in the Elastigroup.
    - Spot Instances %: The percentage of spot instances to include in the Elastigroup. Use the slider to set the percent. The remaining percentage will be on-demand instances.
@@ -89,6 +92,8 @@ After choosing one of the above options, complete the required information relat
    - Health Check Grace Period: The timeout (in seconds) until newly launched instances become healthy. If an instance fails the health check after the given grace period, it will be terminated and replaced with a new one.
    - Unhealthy Duration: The amount of time (in seconds) you want to keep existing instances that are deemed unhealthy before the instance is terminated and replaced with a new one.
    - Minimum Healthiness: The minimum number of instances (as a percent) that must be healthy for the group to be indicated as healthy.
+
+> **Tip**: It is recommended to set Target Groups as the health check type when working with ITF.
 
 ## Step 4: Scaling (Optional)
 
