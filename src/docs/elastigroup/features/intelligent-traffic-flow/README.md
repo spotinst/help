@@ -26,7 +26,7 @@ Some key benefits of ITF are:
 
 The illustration below provides a high-level example of the method ITF uses for weighting the distribution of traffic to the target groups.
 
-<img src="/elastigroup/_media/intelligent-traffic-flow-overview-01.png" width="694" height="481" />
+<img src="/elastigroup/_media/intelligent-traffic-flow-overview-01.png" width="540" height="374" />
 
 In this example, ITF has created three target groups. From left to right:
 - Target Group 1 has two instances, each having eight vCPUs, making a total of 16 vCPUs for the target group.
