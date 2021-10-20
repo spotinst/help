@@ -29,6 +29,8 @@
       - [Using Signals in Elastigroups](elastigroup/features/compute/using-signals-in-elastigroups)
       - [Placement Groups](elastigroup/features/compute/placement-groups)
       - [Block Device Mapping](elastigroup/features/compute/block-device-mapping)
+    - [Intelligent Traffic Flow](elastigroup/features/intelligent-traffic-flow/)
+      - [Configure Intelligent Traffic Flow](elastigroup/features/intelligent-traffic-flow/configure-intelligent-traffic-flow)
     - [Stateful Instance](elastigroup/features/stateful-instance/)
       - [Import a Stateful Instance](elastigroup/features/stateful-instance/import-a-stateful-instance)
       - [Edit a Stateful Instance](elastigroup/features/stateful-instance/edit-a-stateful-instance)
