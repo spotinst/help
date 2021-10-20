@@ -18,7 +18,7 @@ Click Intelligent Traffic, and then complete the steps for setting up ITF.
 
 Choose an application load balancer from the drop down list. Then the appropriate listeners and rules will appear according to the load balancer you chose.
 
-<img src="/elastigroup/_media/intelligent-traffic-flow-enable-or-edit-itf-02.png" />
+<img src="/elastigroup/_media/intelligent-traffic-flow-enable-or-edit-itf-02.png" width="593" height="143" />
 
 ## Step 2. Listener Rules
 
@@ -42,7 +42,7 @@ Complete the settings below for target group creation:
 - Health Check Protocol: The protocol the load balancer uses when performing health checks on targets. Can be HTTP or HTTPs.
 - Health Check Path: The destination for health checks on the targets. If the protocol version is HTTP/1.1 or HTTP/2, specify a valid URI (/path?query). The default is /. If the protocol version is gRPC, specify the path of a custom health check method with the format /Package.Class/method. The path must start with “/”.
 
-<img src="/elastigroup/_media/intelligent-traffic-flow-enable-or-edit-itf-04.png" />
+<img src="/elastigroup/_media/intelligent-traffic-flow-enable-or-edit-itf-04.png" width="406" height="234" />
 
 ## Advanced Health Check Settings
 

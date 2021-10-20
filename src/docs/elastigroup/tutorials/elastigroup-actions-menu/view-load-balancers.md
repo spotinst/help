@@ -63,7 +63,7 @@ This graph appears only when you have ITF activated. The bars in this graph indi
 
 The line indicates the average CPU utilization in each target group. You can see the exact CPU utilization of each target group by hovering over the relevant target group.
 
-<img src="/elastigroup/_media/tutorials-load-balancers-05.png" />
+<img src="/elastigroup/_media/tutorials-load-balancers-05.png" width="426" height="321" />
 
 This graph illustrates that the number of requests that each target group serves is different and relative to the number of vCPUs it has, but the CPU utilization in each target group is approximately the same.
 
