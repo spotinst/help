@@ -26,7 +26,7 @@ Some key benefits of ITF are:
 
 The illustration below provides a high-level example of the method ITF uses for weighting the distribution of traffic to the target groups.
 
-<img src="/elastigroup/_media/intelligent-traffic-flow-overview-01.png" />
+<img src="/elastigroup/_media/intelligent-traffic-flow-overview-01.png" width="694" height="481" />
 
 In this example, ITF has created three target groups. From left to right:
 - Target Group 1 has two instances, each having eight vCPUs, making a total of 16 vCPUs for the target group.
@@ -38,6 +38,10 @@ ITF calculates distribution weights as a percentage based on the target groupsâ€
 Weight of Target Group 1 = (16 vCPU/34 vCPU) * 100 = 47%
 
 The weights are used to ensure that whatever the capacity of the instances, each instance will be utilized to the appropriate amount.  This method of load-balancing inbound traffic across varied instance types and sizes guarantees optimal workload performance and infrastructure utilization.
+
+## Application Load Balancer Quotas
+
+Your AWS Application Load Balancers are subject to quotas defined by AWS. For more information, see [Quotas for your Application Load Balancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-limits.html).
 
 ## Whatâ€™s Next?
 
