@@ -62,7 +62,7 @@ For example, you can use:
 - The `instanceIds` parameter (for Ocean for K8s on AWS and ECS) or `instanceNames` (for Ocean GKE) to initiate a roll of one or more specific nodes.
 - The `launchSpecIds` parameter to initiate a roll of one or more launch specifications in the cluster. When you specify a launch specification ID, all the nodes in that launch specification are rolled.
 
-For more information about the specific APIs, see Initiate Cluster Roll: [K8s on AWS](https://docs.spot.io/api/#operation/oceanAwsRollInit), [ECS](https://docs.spot.io/api/#operation/oceanEcsRollInit), [GKE](https://docs.spot.io/api/#operation/oceanGkeRollInit)
+For more information about the specific APIs, see Initiate Cluster Roll: [AKS](https://docs.spot.io/api/#operation/oceanAzureRollInit), [K8s on AWS](https://docs.spot.io/api/#operation/oceanAwsRollInit), [ECS](https://docs.spot.io/api/#operation/oceanEcsRollInit), [GKE](https://docs.spot.io/api/#operation/oceanGkeRollInit)
 
 ## Create A Roll
 
