@@ -11,7 +11,7 @@ Most devices have a specific AVD client built to optimize your experience.  This
 
 [Download and install](https://docs.microsoft.com/en-us/azure/virtual-desktop/user-documentation/connect-windows-7-10) the client application or install from the [Microsoft Store](https://www.microsoft.com/store/productId/9WZDNCRFJ3PS)
 
-After installing the application, subscribe your Spot PC workspace as documented here:
+After installing the application, add your Spot PC workspace as documented here:
 * Instructions for the [Download and install ](https://docs.microsoft.com/en-us/azure/virtual-desktop/user-documentation/connect-windows-7-10#subscribe-to-a-workspace) client.
 * Instructions for the [Microsoft Store](https://docs.microsoft.com/en-us/azure/virtual-desktop/user-documentation/connect-microsoft-store#subscribe-to-a-workspace) client.
 
