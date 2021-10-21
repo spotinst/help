@@ -57,7 +57,7 @@
     "webpack": "^5.59.0",
     "webpack-cli": "^4.9.1",
     "webpack-dev-server": "^4.3.1",
-    "xml-formatter": "^2.5.0",
+    "xml-formatter": "^2.5.1",
     "yarn": "^1.22.17"
   },
   "engines": {
