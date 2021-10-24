@@ -162,7 +162,7 @@ You can initiate a roll per VNG. This is useful when you need to apply changes t
 
 This feature enables you to roll multiple VNGs at once. To do this, Ocean includes all of the relevant VNGs and  initiates one roll for all of the instances in all of the VNGs specified. In addition, you have an option to roll specific instances.
 
-For more information, see Initiate Roll per launchSpecIds ([AWS](https://docs.spot.io/api/#operation/oceanAwsRollInit), [GKE](https://docs.spot.io/api/#operation/oceanGkeRollInit)).
+For more information, see Initiate Roll per launchSpecIds ([AKS](https://docs.spot.io/api/#operation/oceanAzureRollInit), [AWS](https://docs.spot.io/api/#operation/oceanAwsRollInit), [GKE](https://docs.spot.io/api/#operation/oceanGkeRollInit)).
 
 ### Restrict Scale Down per VNGs
 
