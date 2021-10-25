@@ -841,6 +841,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/features/gcp/shutdown-scripts"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/elastigroup/features/intelligent-traffic-flow/api-descriptions</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/features/intelligent-traffic-flow/api-descriptions"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/features/intelligent-traffic-flow/api-descriptions"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/elastigroup/features/intelligent-traffic-flow/configure-intelligent-traffic-flow</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
@@ -1758,6 +1765,69 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/managed-instance/tutorials/upgrade-an-existing-elastigroup-to-managed-instance"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/ocean-cd/features/external-verifications</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/features/external-verifications"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/features/external-verifications"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/ocean-cd/features/granular-visibility/detailed-rollout-view</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/features/granular-visibility/detailed-rollout-view"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/features/granular-visibility/detailed-rollout-view"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/ocean-cd/features/granular-visibility/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/features/granular-visibility/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/features/granular-visibility/"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/ocean-cd/features/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/features/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/features/"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/ocean-cd/features/rollback</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/features/rollback"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/features/rollback"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/ocean-cd/features/webhook-notifications</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/features/webhook-notifications"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/features/webhook-notifications"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/ocean-cd/getting-started/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/getting-started/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/getting-started/"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/ocean-cd/ocean-cd-overview</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/ocean-cd-overview"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/ocean-cd-overview"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/ocean-cd/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/ocean/features/auto-update-process-gke</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
@@ -2589,6 +2659,90 @@
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-pc/tutorials/"/>
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/tutorials/"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-security/features/analyze-risks/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-security/features/analyze-risks/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-security/features/analyze-risks/"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-security/features/analyze-risks/remediate</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-security/features/analyze-risks/remediate"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-security/features/analyze-risks/remediate"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-security/features/analyze-risks/view-risk-details</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-security/features/analyze-risks/view-risk-details"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-security/features/analyze-risks/view-risk-details"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-security/features/events</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-security/features/events"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-security/features/events"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-security/features/inventory</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-security/features/inventory"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-security/features/inventory"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-security/features/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-security/features/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-security/features/"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-security/features/security-dashboard/create-preset/READM</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-security/features/security-dashboard/create-preset/READM"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-security/features/security-dashboard/create-preset/READM"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-security/features/topology</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-security/features/topology"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-security/features/topology"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-security/getting-started/existing-customer-registration</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-security/getting-started/existing-customer-registration"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-security/getting-started/existing-customer-registration"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-security/getting-started/new-customer-registration</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-security/getting-started/new-customer-registration"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-security/getting-started/new-customer-registration"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-security/getting-started/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-security/getting-started/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-security/getting-started/"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-security/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-security/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-security/"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/tools-and-provisioning/ansible</loc>
