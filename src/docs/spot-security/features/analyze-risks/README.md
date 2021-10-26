@@ -60,4 +60,4 @@ Click this button to go to the [Risk Details](spot-security/features/analyze-ris
 
 ## What’s Next?
 
-Learn more about how you can [Remediate](spot-security/features/analyze-risks/view-risk-details) your risks.
+Learn more about how you can [Remediate](spot-security/features/analyze-risks/remediate) your risks.
