@@ -18,6 +18,17 @@ Once you get started with Ocean CD, you will see the benefits stack up:
 - High confidence in deployment reliability: Detection and mitigation of issues early to gracefully deploy code into production.
 - One Spot for cloud operations and application delivery: Using Ocean CD along with Spot Ocean as your Kubernetes management and optimization tool. (Ocean CD can also be used independently of Ocean.)
 
+## Documentation Map
+
+- [Ocean CD Overview]
+- [Getting Started]
+- [Features]
+  - [External Verifications]
+  - [Granular Visibility]
+    - [Detailed Rollout View]
+  - [Rollback]
+  - [Webhook Notifications]
+  
 ## What’s Next?
 
 Learn more about:
