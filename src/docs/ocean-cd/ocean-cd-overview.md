@@ -20,7 +20,7 @@ Ocean CD performs automated Rollback, a mission critical feature not covered out
 
 Ocean CD resides within Kubernetes and communicates with Spot to connect all parts of the delivery pipeline. The Ocean CD architecture and API enable a simple and secured installation that seamlessly fits into any existing environment. CI pipelines, Jenkins jobs, and other events before deployment to the cluster remain in place and untouched. With one simple command in the Kubernetes cluster, DevOps engineers can install the Ocean CD Controller and gain the SaaS logic and interface. As a multi-cluster product, Ocean CD enables you to track all the organizational clusters in which the controller is installed using one central dashboard.
 
-
+<img src="/ocean-cd/_media/ocean-cd-overview-01.png" />
 
 To automate deliveries with Ocean CD, you will set up three basic types of entities:
 - A Microservice, which is a logical object that binds a Kubernetes deployment with the respective Ocean CD rollout spec (based on label selectors). *In other words, the microservice object you define tells Ocean CD about a Kubernetes deployment of yours, making it a managed workload.*
@@ -41,7 +41,7 @@ As shown in the illustration below, Ocean CD fits right into your Cloud Kubernet
 
 You use the Kubernetes orchestrator of your choice (e.g., EKS, AKS, GKE, KOPS or others).
 
-
+<img src="/ocean-cd/_media/ocean-cd-overview-02.png" />
 
 When you use Ocean and Ocean CD together, you gain a full kubernetes backend that takes care of both application delivery and infrastructure optimization, all accessible from a single console.
 
@@ -60,4 +60,4 @@ Ocean CD service may include multiple rollout configurations, and each rollout c
 
 What’s Next?
 
-Learn more about Getting Started(link to Getting Started page) with Ocean CD.
+Learn more about [Getting Started](ocean-cd/getting-started/) with Ocean CD.
