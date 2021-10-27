@@ -23,15 +23,15 @@ To take advantage of the Spot Security features, simply log into your existing S
 
 ## Documentation Map
 
-[Features](spot-security/features/)
-- [Security Dashboard](spot-security/features/security-dashboard/)
-  - [Create a Preset](spot-security/features/security-dashboard/create-preset)
-- [Analyze Risks](spot-security/features/analyze-risks/)
-  - [View Risk Details](spot-security/features/analyze-risks/view-risk-details)
-  - [Remediate](spot-security/features/analyze-risks/remediate) 
-- [Topology](spot-security/features/topology)
-- [Events](spot-security/features/events)
-- [Inventory](spot-security/features/inventory)
+- [Features](spot-security/features/)
+  - [Security Dashboard](spot-security/features/security-dashboard/)
+    - [Create a Preset](spot-security/features/security-dashboard/create-preset)
+  - [Analyze Risks](spot-security/features/analyze-risks/)
+    - [View Risk Details](spot-security/features/analyze-risks/view-risk-details)
+    - [Remediate](spot-security/features/analyze-risks/remediate)
+  - [Topology](spot-security/features/topology)
+  - [Events](spot-security/features/events)
+  - [Inventory](spot-security/features/inventory)
 
 ## What’s Next?
 
