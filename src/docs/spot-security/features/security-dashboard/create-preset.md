@@ -13,7 +13,7 @@ Go to the Spot Security dashboard.
 1. Enter the filter settings that you would like to save and use over again.
 2. Click Create Preset.
 
-<img src="/spot-security/_media/features-dashboard-presets-02.png" width="309" height="162" />
+<img src="/spot-security/_media/features-dashboard-presets-02.png" width="395" height="166" />
 
 3. Enter a name for the preset, mark if you want to save this preset as the default, and click Save. For your first preset, you do not need to mark the default box.
 
