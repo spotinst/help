@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Spot Security
 
 Using its methodology of *Analyze, Detect, and Act*, Spot Security enables you to rapidly understand your cloud security posture on the public cloud and attack surface and compliance gaps. Spot Security provides unprecedented visibility into your cloud deployment, and you can set it up within minutes.
