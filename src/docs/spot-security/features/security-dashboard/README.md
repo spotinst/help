@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Security Dashboard
 
 The Security Dashboard provides you with a high-level summary of your security posture. In addition, the dashboard provides quick access to more detailed information and remediation actions.
