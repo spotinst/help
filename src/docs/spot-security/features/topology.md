@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Topology
 
 Spot Security gives you easy visibility over your network topology with several types of views. A security issue in one resource can impact several other resources. The topology view lets you see the connections to other resources and gives insight about how extensive a security issue might be.

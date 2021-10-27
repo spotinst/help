@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Risk Analysis
 
 The risk analysis feature provides visibility into your risks on several levels of granularity including a top-level aggregation per risk level, a listing of all risks, and a drill-down level of [Risk Details](spot-security/features/analyze-risks/view-risk-details) per each risk.
