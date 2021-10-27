@@ -12,7 +12,7 @@ There are several ways to get to the Remediation page.
 
 In the [Security Dashboard](spot-security/security-dashboard/), go to one of the Highest Impact Recommendations and click Remediate Risk Now.
 
-<img src="/spot-security/_media/features-remediation-01.png" />
+<img src="/spot-security/_media/features-remediation-01.png" width="423" height="137" />
 
 **From Risk Analysis**:
 
@@ -38,11 +38,11 @@ The default method displayed provides the steps for using AWS CLI. You can copy 
 
 This tab specifies the steps you need to complete to implement the remediation in the AWS Console.
 
-<img src="/spot-security/_media/features-remediation-04.png" />
+<img src="/spot-security/_media/features-remediation-04.png" width="332" height="159" />
 
 The relevant data fields you need to change in the AWS console are indicated by a colored rectangle.
 
-<img src="/spot-security/_media/features-remediation-05.png" />
+<img src="/spot-security/_media/features-remediation-05.png" width="547" height="80" />
 
 ### Using Python
 

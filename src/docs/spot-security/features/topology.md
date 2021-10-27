@@ -44,7 +44,7 @@ To create a custom service map, do the following:
 
 3. When prompted, enter a name for the new service map and indicate whether it should be your new default.
 
-<img src="/spot-security/_media/features-topology-05.png" />
+<img src="/spot-security/_media/features-topology-05.png" width="634" height="192" />
 
 4. Click save.
 

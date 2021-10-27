@@ -13,7 +13,7 @@ Go to the Spot Security dashboard.
 1. Enter the filter settings that you would like to save and use over again.
 2. Click Create Preset.
 
-<img src="/spot-security/_media/features-dashboard-presets-02.png" />
+<img src="/spot-security/_media/features-dashboard-presets-02.png" width="309" height="162" />
 
 3. Enter a name for the preset, mark if you want to save this preset as the default, and click Save. For your first preset, you do not need to mark the default box.
 
@@ -23,11 +23,11 @@ Once you have created a new preset, the name will appear as part of the Security
 
 To apply a saved preset, click on the down arrow next to the Security Summary title.
 
-<img src="/spot-security/_media/features-dashboard-presets-03.png" />
+<img src="/spot-security/_media/features-dashboard-presets-03.png" width="373" height="270" />
 
 A list of presets will appear in the dropdown. Click on the preset you want to use.
 
-<img src="/spot-security/_media/features-dashboard-presets-04.png" />
+<img src="/spot-security/_media/features-dashboard-presets-04.png" width="186" height="164" />
 
 If the list is long, type the first few letters of the preset name in the search box and click search.
 
@@ -35,7 +35,7 @@ If the list is long, type the first few letters of the preset name in the search
 
 The edit function enables you to change the preset name or to change the default. To make one of these changes, go to the preset in the dropdown list and click the pencil icon in the same row. Make your changes and save.
 
-<img src="/spot-security/_media/features-dashboard-presets-05.png" />
+<img src="/spot-security/_media/features-dashboard-presets-05.png" width="185" height="165" />
 
 To delete the preset, click the trash can icon and confirm that you want to delete.
 
