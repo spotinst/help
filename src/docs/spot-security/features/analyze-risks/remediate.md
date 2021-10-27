@@ -1,5 +1,3 @@
-<meta name="robots" content="noindex">
-
 # Remediate
 
 In line with the Spot Security methodology of Analyze, Detect, Act, the primary purpose of the Remediation feature is to enable you to act swiftly once your risks have been detected.
