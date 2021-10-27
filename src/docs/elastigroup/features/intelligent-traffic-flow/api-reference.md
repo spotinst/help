@@ -3,12 +3,12 @@
 # API Reference for Intelligent Traffic Flow
 
 To use Intelligent Traffic Flow (ITF) through the API commands, the following Elastigroup commands are required:
-Create Elastigroup: To create a new ITF Elastigroup.
-Update Elastigroup: To add an ITF object to an existing Elastigroup or to change parameters in an existing ITF object.
+- [Create Elastigroup](https://docs.spot.io/api/#operation/elastigroupAwsCreate): To create a new ITF Elastigroup.
+- [Update Elastigroup](https://docs.spot.io/api/#operation/elastigroupAwsUpdate): To add an ITF object to an existing Elastigroup or to change parameters in an existing ITF object.
 
-In all of the APIs, the “itf” object is located under the “launchSpecification” object of the Elastigroup as shown in the example below.
+In all of the APIs, the “itf” object is located under the “launchSpecification” object of the Elastigroup, as shown in the example below.
 
-```JSON
+```json
 {
   "group": {
     "compute": {
@@ -60,7 +60,7 @@ The table below shows the description of each object and parameter in the API.
 
 | Parameter | Type | Mandatory/ Optional | Valid Values | Description |
 |---|---|---|---|---|
-| loadBalancers | Array of lb objects | Mandatory | List with minimum size of 1. | Array of LoadBalancer Object |
+| loadBalancers | Array of LB objects | Mandatory | List with minimum size of 1. | Array of LoadBalancer Object |
 | loadBalancers.loadBalancerArn | String | Mandatory |  | The ARN of the Application load balancer that is going to be managed in the group. |
 | loadBalancers. listenerRules | Array of ‘rules’ | Mandatory | List with minimum size of 1. | The ARNs of the listener rules that should be maintained by ITF. |
 | loadBalancers.listenerRules.rule.ruleArn | String | Mandatory |  | ARN of a rule that is going to be managed by Elastigroup. |
@@ -87,4 +87,4 @@ The table below shows the description of each object and parameter in the API.
 
 ## What's Next?
 
-Learn more about the Spot by [NetApp API Reference](https://docs.spot.io/api/).
+Learn more about the Spot by NetApp [API Reference](https://docs.spot.io/api/).
