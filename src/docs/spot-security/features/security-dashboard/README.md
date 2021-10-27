@@ -18,7 +18,7 @@ The default filter for the Security Dashboard includes all accounts, services, a
 
 Spot Security currently works only with AWS as the cloud provider.
 
-<img src="/spot-security/_media/features-dashboard-01.png" />
+<img src="/spot-security/_media/a-features-dashboard-01.png" />
 
 To create a particular set of filter settings and save for later use, click [Create Preset](spot-security/features/security-dashboard/create-preset).
 
