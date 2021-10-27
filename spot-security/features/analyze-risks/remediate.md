@@ -42,7 +42,7 @@ This tab specifies the steps you need to complete to implement the remediation i
 
 The relevant data fields you need to change in the AWS console are indicated by a colored rectangle.
 
-<img src="/spot-security/_media/features-remediation-05.png" width="547" height="80" />
+<img src="/spot-security/_media/features-remediation-05.png" width="547" height="160" />
 
 ### Using Python
 
