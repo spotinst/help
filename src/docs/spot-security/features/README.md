@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Features
 
 Spot Security enables public cloud users to rapidly understand their cloud security posture and attack surface. Spot Security provides unprecedented
