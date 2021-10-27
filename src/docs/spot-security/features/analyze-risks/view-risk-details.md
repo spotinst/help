@@ -1,5 +1,3 @@
-<meta name="robots" content="noindex">
-
 # View Risk Details
 
 The Risk Details page gives you the in-depth picture of a risk, including a risk impact map, affected resources, essential details, and a pathway to remediation.

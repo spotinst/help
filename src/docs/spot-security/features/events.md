@@ -1,5 +1,3 @@
-<meta name="robots" content="noindex">
-
 # Events
 
 For your reference, Spot Security provides a list of all events that have occurred on your cloud network (within a defined time period). Statistics are provided to help you see the big picture, and details about each event are also available.
