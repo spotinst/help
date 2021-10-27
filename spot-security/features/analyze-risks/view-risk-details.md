@@ -24,7 +24,7 @@ When you click on the clock icon on the left, a timeline appears at the bottom o
 
 Below the map, a summary of affected resources shows the total number of each type of resource. For each type, you can click the arrow to see the full list of resources of that type.
 
-<img src="/spot-security/_media/features-risk-details-02.png" />
+<img src="/spot-security/_media/features-risk-details-02.png" width="236" height="142" />
 
 ## Sidebar Information
 
@@ -34,7 +34,7 @@ The sidebar presents the same information that appears on the sidebar of the Ris
 
 The map at the bottom of the sidebar shows the region of the affected resources. The map indicates multiple regions if resources in multiple regions are impacted.
 
-<img src="/spot-security/_media/features-risk-details-03.png" />
+<img src="/spot-security/_media/features-risk-details-03.png" width="251" height="166" />
 
 ## What’s Next?
 
