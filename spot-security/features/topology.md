@@ -61,4 +61,4 @@ To change the service map used in the topology, do the following:
 
 ## What’s Next?
 
-Learn more about the [Events](spot-security/features/topology) page, that provides information about all the events in your network.
+Learn more about the [Events](spot-security/features/events) page, that provides information about all the events in your network.
