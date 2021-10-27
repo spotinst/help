@@ -841,11 +841,11 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/features/gcp/shutdown-scripts"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/elastigroup/features/intelligent-traffic-flow/api-descriptions</loc>
+        <loc>https://docs.spot.io/?/elastigroup/features/intelligent-traffic-flow/api-reference</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/features/intelligent-traffic-flow/api-descriptions"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/features/intelligent-traffic-flow/api-descriptions"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/features/intelligent-traffic-flow/api-reference"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/features/intelligent-traffic-flow/api-reference"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/elastigroup/features/intelligent-traffic-flow/configure-intelligent-traffic-flow</loc>
