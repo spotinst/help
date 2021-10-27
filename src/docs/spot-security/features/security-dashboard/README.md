@@ -40,7 +40,7 @@ The large tile at the top provides your main security stats:
 
 This tile enables you to review the highest impact alerts and take remediation actions immediately if you choose.
 
-<img src="/spot-security/_media/features-dashboard-03.png" />
+<img src="/spot-security/_media/features-dashboard-03.png" width="426" height="133" />
 
 By default, the alert with the highest level impact appears in the tile. You can click the arrow to scroll through up to 10 risks. High impact risks are determined by the risk factor and ease of remediation.
 
@@ -50,7 +50,7 @@ When you click Remediate Risk Now, Spot provides instructions for remediation ac
 
 This tile shows the nine most common alerts detected for the filters or preset you have chosen. The default view shows the top three alerts. Click the arrow to see the other top alerts.
 
-<img src="/spot-security/_media/features-dashboard-04.png" />
+<img src="/spot-security/_media/features-dashboard-04.png" width="423" height="134" />
 
 ## View Trends
 

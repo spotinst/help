@@ -28,7 +28,7 @@ The example above shows the expanded list of high risks. You can sort the list b
 
 To read basic information about a risk, click on the risk. A sidebar appears on the right with some details about the risk and suggestions for further action.
 
-<img src="/spot-security/_media/features-analyze-risks-03.png" />
+<img src="/spot-security/_media/features-analyze-risks-03.png" width="334" height="449" />
 
 The risk sidebar includes the risk title, a brief description, and an option to change the risk level. You change the risk level only if you have the permissions for that. The sidebar also includes the following information about the risk:
 - Severity
@@ -46,7 +46,7 @@ The risk sidebar includes the risk title, a brief description, and an option to 
 
 The sidebar shows a summary of affected resources which includes the total number of each type of resource.
 
-<img src="/spot-security/_media/features-analyze-risks-04.png" />
+<img src="/spot-security/_media/features-analyze-risks-04.png" width="318" height="117" />
 
 To see a list of resources in each type, just click the arrow.
 
