@@ -4,7 +4,9 @@
 
 Added
 
+- support for user environments custom certificates
 - overall stability improvement
+- Upgraded dependencies
 
 ## [1.0.78] - 2021-10-03
 
