@@ -18,7 +18,7 @@ In the [Security Dashboard](spot-security/security-dashboard/), go to one of the
 
 In the sidebar of the [Risk Analysis](spot-security/features/analyze-risks/) page, click Remediation Steps.
 
-<img src="/spot-security/_media/features-remediation-02.png" />
+<img src="/spot-security/_media/features-remediation-02.png" width="395" height="166" />
 
 **From Risk Analysis Details**:
 
