@@ -32,7 +32,7 @@ The large tile at the top provides your main security stats:
 - Risk Summary Map: The map shows the risks per region in all the regions where you have resources. You can hover the mouse over the circle charts to see specific numbers. The colors are according to the breakdown by severity.
 - Breakdown by Severity: A color legend shows the total number of risks per each severity level including High, Medium, and Low. A further breakdown on the right shows the same numerical breakdown of new risks only.
 
-<img src="/spot-security/_media/features-dashboard-02.png" />
+<img src="/spot-security/_media/a-features-dashboard-02.png" />
 
 ### Highest Impact Recommendations
 
