@@ -58,6 +58,6 @@ GitOps architecture is considered an initiator that applies a change to the Kube
 ### Works over Multiple Environments
 Ocean CD service may include multiple rollout configurations, and each rollout can trigger deployment into different environments. That means you can create a fully automated deployment process over multiple environments with a couple of clicks.
 
-What’s Next?
+## What’s Next?
 
 Learn more about [Getting Started](ocean-cd/getting-started/) with Ocean CD.
