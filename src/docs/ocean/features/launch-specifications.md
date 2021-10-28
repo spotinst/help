@@ -179,8 +179,6 @@ Ocean takes the following parameters from the default VNG unless explicitly set 
 <details>
   <summary markdown="span">AWS Kubernetes</summary>
 
-AWS Kubernetes
-
 - Image
 - Instance profile
 - Instance types
@@ -196,8 +194,6 @@ AWS Kubernetes
 <details>
   <summary markdown="span">AWS ECS</summary>
 
-AWS ECS
-
 - Block device mapping
 - Image
 - Instance profile
@@ -212,8 +208,6 @@ AWS ECS
 
 <details>
   <summary markdown="span">GCP</summary>
-
-GCP
 
 - Image
 - Instance types
