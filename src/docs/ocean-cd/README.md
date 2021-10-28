@@ -22,7 +22,7 @@ Once you get started with Ocean CD, you will see the benefits stack up:
 
   - [Ocean CD Overview](ocean-cd/ocean-cd-overview)
   - [Getting Started](ocean-cd/getting-started/)
-  - [Features]
+  - [Features](ocean-cd/features/)
       - [External Verifications](ocean-cd/features/external-verifications)
       - [Granular Visibility](ocean-cd/features/granular-visibility/)
           - [Detailed Rollout View](ocean-cd/features/granular-visibility/detailed-rollout-view)
