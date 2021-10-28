@@ -26,6 +26,16 @@ For pods without constraints configured, Ocean will choose the VNG with the most
 
 In addition, any configuration parameter that is not configured explicitly in a VNG will be inherited from the internal configuration.
 
+### Prioritization of Pods on VNGs
+
+A pod could be scheduled on multiple VNGs. In this case, Ocean has to prioritize on which VNG to launch an instance first. Ocean uses the following method:
+- If the pod has a preferred affinity that matches one of the VNGs, Ocean prioritizes according to the affinity.
+- Otherwise, Ocean prioritizes the least restrictive VNG in the order of the following criteria:
+  1. Highest maximum instance count
+  2. Highest spot percentage
+  3. Highest availability zone count
+  4. Highest Instance type count
+
 ## VNG Creation
 
 You can create new VNGs or reconfigure existing ones at any time after the cluster is created. In addition, it is possible to import an autoscaling group configuration from AWS and create a VNG in your Ocean cluster using that configuration.
@@ -153,6 +163,62 @@ The following is a list of attributes customizable per VNG in Ocean for GKE.
 Ocean for GKE allows the utilization of local SSD disks, high-performance local disks which are useful with specific workloads such as those that heavily use caching. You can define SSD disks in your Ocean VNG configuration by using localSsdCount to configure the number of SSD disks to be connected to each VM in the VNG.
 
 Once configured, whenever the Ocean autoscaler scales up, Ocean will automatically connect the local SSDs to the new VM. Note that local SSDs are limited to specific machine types. Ocean will automatically filter out the machine types that are not compatible. For information about the API, see Local SSD in the Spot API.
+
+</details><br>
+
+### Default VNG
+
+The specification configured in the Ocean cluster object is referred to as the Default VNG. This definition is used for the following reasons:
+- Ocean uses this specification as the last option out of the possible VNGs to serve a workload.
+- At runtime, Ocean uses this default VNG as a template for the other VNGs defined, as it effectively uses parameters that are not explicitly set by the user in a VNG object.
+
+This methodology minimizes the effort of creating and maintaining multiple infrastructure configurations in a single cluster.
+
+Ocean takes the following parameters from the default VNG unless explicitly set in a VNG.
+
+<details>
+  <summary markdown="span">AWS Kubernetes</summary>
+
+AWS Kubernetes
+
+- Image
+- Instance profile
+- Instance types
+- Minimum nodes per VNG
+- Root volume size
+- Security groups
+- Subnets
+- Tags
+- User data
+
+</details><br>
+
+<details>
+  <summary markdown="span">AWS ECS</summary>
+
+AWS ECS
+
+- Block device mapping
+- Image
+- Instance profile
+- Instance types
+- Root volume size
+- Security groups
+- Subnets
+- Tags
+- User data
+
+</details><br>
+
+<details>
+  <summary markdown="span">GCP</summary>
+
+GCP
+
+- Image
+- Instance types
+- Minimum nodes per VNG
+- Root volume size
 
 </details><br>
 
