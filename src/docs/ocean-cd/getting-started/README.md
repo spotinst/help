@@ -38,7 +38,7 @@ In the Clusters tab under Connect Cluster, do the following:
 
 The Ocean CD controller will be installed in the cluster, and a card will appear under the clusters tab with initial information about the cluster and the controller.
 
-<img src="/ocean-cd/_media/getting-started-03.png" />
+<img src="/ocean-cd/_media/getting-started-02.png" />
 
 The card provides the following information:
 - Clust Identifier: The name (cluster ID) you have provided.
