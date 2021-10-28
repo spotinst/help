@@ -20,15 +20,15 @@ Once you get started with Ocean CD, you will see the benefits stack up:
 
 ## Documentation Map
 
-- [Ocean CD Overview]
-- [Getting Started]
-- [Features]
-  - [External Verifications]
-  - [Granular Visibility]
-    - [Detailed Rollout View]
-  - [Rollback]
-  - [Webhook Notifications]
-  
+  - [Ocean CD Overview](ocean-cd/ocean-cd-overview)
+  - [Getting Started](ocean-cd/getting-started/)
+  - [Features]
+      - [External Verifications](ocean-cd/features/external-verifications)
+      - [Granular Visibility](ocean-cd/features/granular-visibility/)
+          - [Detailed Rollout View](ocean-cd/features/granular-visibility/detailed-rollout-view)
+      - [Rollback](ocean-cd/features/rollback)
+      - [Webhook Notifications](ocean-cd/features/webhook-notifications)
+
 ## What’s Next?
 
 Learn more about:

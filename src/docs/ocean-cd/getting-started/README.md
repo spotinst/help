@@ -130,6 +130,17 @@ Once you have filled in all the information for the rollout spec and received co
 
 You can use the Create Rollout API at any time to create additional rollouts. Cards for all the rollout specs will appear under the Rollout Specs tab.
 
+## Documentation Map
+
+  - [Ocean CD Overview](ocean-cd/ocean-cd-overview)
+  - [Getting Started](ocean-cd/getting-started/)
+  - [Features]
+      - [External Verifications](ocean-cd/features/external-verifications)
+      - [Granular Visibility](ocean-cd/features/granular-visibility/)
+          - [Detailed Rollout View](ocean-cd/features/granular-visibility/detailed-rollout-view)
+      - [Rollback](ocean-cd/features/rollback)
+      - [Webhook Notifications](ocean-cd/features/webhook-notifications)
+
 ## What’s Next?
 
 Learn more about setting up [Verifications](ocean-cd/features/external-verifications).
