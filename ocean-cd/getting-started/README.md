@@ -134,7 +134,7 @@ You can use the Create Rollout API at any time to create additional rollouts. Ca
 
   - [Ocean CD Overview](ocean-cd/ocean-cd-overview)
   - [Getting Started](ocean-cd/getting-started/)
-  - [Features]
+  - [Features](ocean-cd/features/)
       - [External Verifications](ocean-cd/features/external-verifications)
       - [Granular Visibility](ocean-cd/features/granular-visibility/)
           - [Detailed Rollout View](ocean-cd/features/granular-visibility/detailed-rollout-view)
