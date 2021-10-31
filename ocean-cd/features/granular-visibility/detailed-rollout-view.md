@@ -31,7 +31,7 @@ A Failure policy phase can be activated due to a Kubernetes rolling update failu
 
 When you click on a phase in the flow chart, a panel will appear on the right with the rollout phase details. Below is an example of information provided for the Rolling Update phase of a rollout.
 
-<img src="/ocean-cd/_media/features-detailed-rollout-view-03.png" />
+<img src="/ocean-cd/_media/features-detailed-rollout-view-03.png" width="206" height="488" />
 
 ## Application View
 
