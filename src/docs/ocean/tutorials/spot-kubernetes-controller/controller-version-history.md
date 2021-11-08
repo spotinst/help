@@ -1,6 +1,6 @@
 # Controller Version History
 
-## [1.0.79] - TBD
+## [1.0.79] - 2021-11-08
 
 Added
 
