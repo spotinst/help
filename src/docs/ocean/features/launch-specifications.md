@@ -76,7 +76,7 @@ The following is a list of attributes customizable per VNG in Ocean for AWS.
 - User Data
 
 For example, you could use the Labels and Taints attributes to instruct Ocean which labels and taints are applied on the nodes using the user data, and effectively connect between the cloud infrastructure properties and Kubernetes node labels that will be used on applications using node affinity.
-  
+
 > **Tip**: If automatic headroom is configured, you must set `autoScaler.enableAutomaticAndManualHeadroom` to True at the Ocean level in order to ensure that the manual headroom will be effective.
 
 ### Preferred Spot Instance Types per VNG
@@ -104,21 +104,21 @@ For information about defining preferred instance types in the Spot API (using t
 
 The following is a list of attributes customizable per VNG in Ocean for ECS.
 
-- Block Device Mappy
-- Subnets
-- Security Group
-- Instance Types (API only)
-- Instance Profile
-- Manual Headroom
-- Restrict Scaledown
-- Tags and Metadata
 - Attributes
-- User Data
-- Metadata v2 (API only)
-- Roll (API only)
+- Block Device Mappy
+- Instance Profile
+- Instance Types (API only)
 - Launch Instance (API only)
+- Manual Headroom
+- Metadata v2 (API only)
+- Restrict Scaledown
+- Roll (API only)
 - Schedualed manual headroom (API only)
-  
+- Security Group
+- Subnets
+- Tags and Metadata
+- User Data
+
 > **Tip**: If automatic headroom is configured, you must set `autoScaler.enableAutomaticAndManualHeadroom` to True at the Ocean level in order to ensure that the manual headroom will be effective.
 
 </details><br>
@@ -160,11 +160,11 @@ The following is a list of attributes customizable per VNG in Ocean for GKE.
 - Roll (API only)
 - Root Volume Size
 - Root Volume Type (API only)
+- Schedualed manual headroom (API only)
 - Shielded VMs (API only)
 - Tags & Metadata (API only)
 - Taints
-- Schedualed manual headroom (API only)
-  
+
 > **Tip**: If automatic headroom is configured, you must set `autoScaler.enableAutomaticAndManualHeadroom` to True at the Ocean level in order to ensure that the manual headroom will be effective.
 
 ### Local SSD Support
