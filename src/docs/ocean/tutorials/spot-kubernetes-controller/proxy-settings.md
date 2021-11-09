@@ -39,8 +39,7 @@ In order to add “extra pems” you need to add the certificate(s) to a file na
 
 Create a Secret with the certificate(s), `kubectl -n kube-system create secret generic spotinst-kubernetes-cluster-controller-ca-bundle --from-file=userEnvCertificates.pem`
 
-If the Ocean Controller was already running it will require a restart, it can be restarted by deleting the running Pod.
-Find the pod using `kubectl -n kube-system get pod` and delete it using `kubectl -n kube-system delete pod spotinst-kubernetes-cluster-controller-64d54478b-hcdds`
+If the Ocean Controller was already running it will require a restart, it can be restarted by deleting the running Pod using `kubectl -n kube-system delete pod <controller_pod_name>`
 
 Once the Pod is started again the additinal CAs should be added to the controllers list of trusted CAs can connect to Spot APIs.
 
