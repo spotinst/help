@@ -56,7 +56,7 @@ The following is a list of attributes customizable per VNG in Ocean for AWS.
 - Associate Public IP (API only)
 - Block Device Mappings
 - Elastic IPs
-- Headroom
+- Manual Headroom
 - Instance Types (These must be a subset of the instance types defined for the Ocean cluster.)
 - Instance Profile
 - Labels
@@ -73,6 +73,9 @@ The following is a list of attributes customizable per VNG in Ocean for AWS.
 - Tags
 - Taints
 - User Data
+- Schedualed manual headroom (API only)
+  
+**Note:** In case automatic headroom is configured, please make sure to set  autoScaler.enableAutomaticAndManualHeadroom on Ocean level to true in order to make sure that the manual headroom would be affective
 
 For example, you could use the Labels and Taints attributes to instruct Ocean which labels and taints are applied on the nodes using the user data, and effectively connect between the cloud infrastructure properties and Kubernetes node labels that will be used on applications using node affinity.
 
@@ -114,6 +117,9 @@ The following is a list of attributes customizable per VNG in Ocean for ECS.
 - Metadata v2 (API only)
 - Roll (API only)
 - Launch Instance (API only)
+- Schedualed manual headroom (API only)
+  
+**Note:** In case automatic headroom is configured, please make sure to set  autoScaler.enableAutomaticAndManualHeadroom on Ocean level to true in order to make sure that the manual headroom would be affective
 
 </details><br>
 
@@ -157,6 +163,9 @@ The following is a list of attributes customizable per VNG in Ocean for GKE.
 - Shielded VMs (API only)
 - Tags & Metadata (API only)
 - Taints
+- Schedualed manual headroom (API only)
+  
+**Note:** In case automatic headroom is configured, please make sure to set  autoScaler.enableAutomaticAndManualHeadroom on Ocean level to true in order to make sure that the manual headroom would be affective
 
 ### Local SSD Support
 
