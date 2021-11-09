@@ -67,17 +67,17 @@ The following is a list of attributes customizable per VNG in Ocean for AWS.
 - Preferred Spot Instance Types (API only)
 - Restrict scale down
 - Roll (API only)
+- Scheduled manual headroom (API only)
 - Security Group IDs
 - Spot% to use within the VNG
 - Subnet IDs
 - Tags
 - Taints
 - User Data
-- Schedualed manual headroom (API only)
-  
-**Note:** In case automatic headroom is configured, please make sure to set  autoScaler.enableAutomaticAndManualHeadroom on Ocean level to true in order to make sure that the manual headroom would be affective
 
 For example, you could use the Labels and Taints attributes to instruct Ocean which labels and taints are applied on the nodes using the user data, and effectively connect between the cloud infrastructure properties and Kubernetes node labels that will be used on applications using node affinity.
+  
+> **Tip**: If automatic headroom is configured, you must set `autoScaler.enableAutomaticAndManualHeadroom` to True at the Ocean level in order to ensure that the manual headroom will be effective.
 
 ### Preferred Spot Instance Types per VNG
 
@@ -119,7 +119,7 @@ The following is a list of attributes customizable per VNG in Ocean for ECS.
 - Launch Instance (API only)
 - Schedualed manual headroom (API only)
   
-**Note:** In case automatic headroom is configured, please make sure to set  autoScaler.enableAutomaticAndManualHeadroom on Ocean level to true in order to make sure that the manual headroom would be affective
+> **Tip**: If automatic headroom is configured, you must set `autoScaler.enableAutomaticAndManualHeadroom` to True at the Ocean level in order to ensure that the manual headroom will be effective.
 
 </details><br>
 
@@ -165,7 +165,7 @@ The following is a list of attributes customizable per VNG in Ocean for GKE.
 - Taints
 - Schedualed manual headroom (API only)
   
-**Note:** In case automatic headroom is configured, please make sure to set  autoScaler.enableAutomaticAndManualHeadroom on Ocean level to true in order to make sure that the manual headroom would be affective
+> **Tip**: If automatic headroom is configured, you must set `autoScaler.enableAutomaticAndManualHeadroom` to True at the Ocean level in order to ensure that the manual headroom will be effective.
 
 ### Local SSD Support
 
