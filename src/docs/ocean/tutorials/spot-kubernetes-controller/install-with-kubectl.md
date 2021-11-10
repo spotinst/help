@@ -32,7 +32,7 @@ metadata:
   namespace: kube-system
 data:
   spotinst.cluster-identifier: <IDENTIFIER>
-  proxy-url: <Proxy-URL> i.e http://hello-world.com:82/
+  proxy-url: <Proxy-URL>
   disable-auto-update: <"true"/"false">
 ```
 
@@ -48,15 +48,18 @@ data:
   spotinst.token: <TOKEN>
   spotinst.account: <ACCOUNT_ID>
   spotinst.cluster-identifier: <IDENTIFIER>
-  proxy-url: <Proxy-URL> i.e http://hello-world.com:82/
+  proxy-url: <Proxy-URL>
   disable-auto-update: <"true"/"false">
 ```
 
-Replace `<TOKEN>`, `<ACCOUNT_ID>`, and `<IDENTIFIER>` with the appropriate values.
-Note the following:
+Replace `<TOKEN>`, `<ACCOUNT_ID>`, and `<IDENTIFIER>` with the appropriate values. Optionally provide `<Proxy-URL>`. A Proxy URL will be a url value, for example "http://proxy.example.com:8080/"
 
-- `proxy-url` and is an optional parameter in case you want to use a proxy in your cluster, and it is supported in Controller Version 1.0.45 and above.
+**Note:**
+
+- `proxy-url` and is an optional parameter in case you want or need to use a proxy in your cluster and is supported in Controller Version 1.0.45 and above.
 - `disable-auto-update` is an optional parameter (set to `false` by default). In case you want to disable the controller's auto-update functionality you can set it to `true`.
+
+*For more information on proxy configuration see [Proxy Settings](ocean/tutorials/spot-kubernetes-controller/proxy-settings) page.*
 
 Load the parameters into the cluster configuration:
 `kubectl apply -f configMap.yaml`
