@@ -1565,6 +1565,10 @@ export const aliases = (() => {
 
     "/administration/users/configure-slack-notifications":
       "/administration/notification-center/",
+
+    "/ocean/concepts/ocean-cloud/scaling/":
+      "/ocean/features/scaling-kubernetes",
+
   };
 
   for (let [key, value] of Object.entries(map)) {
