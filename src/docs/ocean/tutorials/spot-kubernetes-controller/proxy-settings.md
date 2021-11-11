@@ -35,7 +35,7 @@ To be able to add these "extra CAs" to the Ocean Controller we provide a way tha
 
 In order to add “extra pems” you need to add the certificate(s) to a file name `userEnvCertificates.pem`. The cerificates should be in PEM format.
 
-***Note:** The filename needs to be `userEnvCertificates.pem`*
+***Note:*** *The filename needs to be `userEnvCertificates.pem`*
 
 Create a Secret with the certificate(s), `kubectl -n kube-system create secret generic spotinst-kubernetes-cluster-controller-ca-bundle --from-file=userEnvCertificates.pem`
 
