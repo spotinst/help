@@ -33,6 +33,9 @@ The invitation link above includes a request to grant the delegated admin permis
 ## Existing AD DC Deployment
 If Spot PC is to be integrated with an existing Active Directory Domain Controller (AD DC), a domain account with Domain Join rights on that AD DC is required.
 
+## Existing Azure vNet
+An existing Azure vNet must be configured with network access to the AD DC.  This is typically accomplished via a site to site VPN or by running the AD DC on a VM attached to that vNet. A Spot PC network will be created and peered with this existing vNet as part of the onboarding workflow.
+
 ## Virtual Network Scope
 The customer will need to select a network scope for Spot PC. Often, Spot PC will be integrated with on-premises (or other public cloud) resources via a site-to-site VPN or Azure vNet peering. To avoid conflicts with current or future integrations, it is important to define a network scope that won't overlap with other resources in the environment.
 
