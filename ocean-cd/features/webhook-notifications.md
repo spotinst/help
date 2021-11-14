@@ -7,12 +7,16 @@ Ocean CD enables you to define notification providers (endpoints) that will rece
 ## Notification Event Types
 
 The following event types will trigger a webhook notification to the endpoints you define:
-- Controller heartbeat failure
-- New deployment detection
-- Kubernetes rolling update failed or finished
-- Rollout stopped, failed, or finished
-- Failure policy activated or finished
-- Manual rollback
+- controller-heartbeat-failure: The controller is not reporting a heartbeat for the configured amount of time.
+- kubernetes-rolling-update-failed: The Kubernetes rolling update failed.
+- kubernetes-rolling-update-finished: The Kubernetes rolling update finished.
+- rollout-started: The Ocean CD rollout process began.
+- rollout-failed: The Ocean CD rollout finished in failed status.
+- rollout-failed-to-roll-back: Ocean CD failed to roll back the version.
+- rollout-rolled-back: Ocean CD successfully rolled back the version.
+- rollout-finished: The Ocean CD rollout successfully finished.
+- start-external-verification: Ocean CD informs you start the external verification on your side.
+
 
 ## Add a New Webhook
 To add a new webhook notification, do the following:
