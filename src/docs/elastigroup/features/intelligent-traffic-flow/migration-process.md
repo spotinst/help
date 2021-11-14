@@ -10,13 +10,13 @@ A migration process starts any time you provide a new rule to the group. This oc
 
 The details of an example migration process are described in the steps shown below. The examples shown with each step are based on a customer rule that is assigned to two customer target groups.
 
-<img src="/elastigroup/_media/features-itf-migration-process-01.png" />
+<img src="/elastigroup/_media/features-itf-migration-process-01.png" width="574" height="96" />
 
 Elastigroup calculates the traffic distribution projected at the end of the process based on the total number of vCPUs in each of its target groups and assuming that all instances are healthy.
 
 Example:
 
-<img src="/elastigroup/_media/features-itf-migration-process-02.png" />
+<img src="/elastigroup/_media/features-itf-migration-process-02.png" width="586" height="119" />
 
 ### Step 1
 
@@ -24,7 +24,7 @@ Elastigroup assigns its target group with the highest weight (that was not assig
 
 Example:
 
-<img src="/elastigroup/_media/features-itf-migration-process-03.png" />
+<img src="/elastigroup/_media/features-itf-migration-process-03.png" width="488" height="119" />
 
 ### Step 2
 
@@ -40,7 +40,7 @@ Elastigroup assigns interim weights, to be used during the migration process onl
 
 Example:
 
-<img src="/elastigroup/_media/features-itf-migration-process-04.png" />
+<img src="/elastigroup/_media/features-itf-migration-process-04.png" width="479" height="109" />
 
 ### Step 4
 
@@ -48,7 +48,7 @@ Elastigroup repeats Steps 1 - 3 until all new target groups are created.
 
 Example:
 
-<img src="/elastigroup/_media/features-itf-migration-process-05.png" />
+<img src="/elastigroup/_media/features-itf-migration-process-05.png" width="479" height="158" />
 
 ### Step 5
 
@@ -57,13 +57,13 @@ Then, Elastigroup does the following:
 
   Example:
 
-<img src="/elastigroup/_media/features-itf-migration-process-06.png" />
+<img src="/elastigroup/_media/features-itf-migration-process-06.png" width="488" height="106" />
 
 - Update the weights of all Elastigroup target groups again (according to the planned distribution shown before Step 1).
 
   Example:
 
-<img src="/elastigroup/_media/features-itf-migration-process-07.png" />
+<img src="/elastigroup/_media/features-itf-migration-process-07.png" width="488" height="109" />
 
 A banner indicating the progress of the migration will appear in the Elastigroup Overview page. When this step is completed, the traffic will be optimally distributed.
 
@@ -73,7 +73,7 @@ When the total number of customer target groups and Elastigroup target groups fo
 
 In this example, the customer rule starts with the following target groups:
 
-<img src="/elastigroup/_media/features-itf-migration-process-08.png" />
+<img src="/elastigroup/_media/features-itf-migration-process-08.png" width="488" height="109" />
 
 The process begins like the simple process shown above, completes Steps 1 and 2, and begins Step 3. However, before a third Elastigroup target group (Target Group C) can be added, a customer target group must be dropped.
 
@@ -81,19 +81,19 @@ The process begins like the simple process shown above, completes Steps 1 and 2,
 
 There are five target groups assigned to the rule. Before another one can be added, a customer target group must be dropped.
 
-<img src="/elastigroup/_media/features-itf-migration-process-09.png" />
+<img src="/elastigroup/_media/features-itf-migration-process-09.png" width="483" height="162" />
 
 ### Step B: Drop
 
 The customer target group with the lowest weight is dropped.
 
-<img src="/elastigroup/_media/features-itf-migration-process-10.png" />
+<img src="/elastigroup/_media/features-itf-migration-process-10.png" width="475" height="162" />
 
 ### Step C: Add Next Target Group
 
 Now another Elastigroup target group is added.
 
-<img src="/elastigroup/_media/features-itf-migration-process-11.png" />
+<img src="/elastigroup/_media/features-itf-migration-process-11.png" width="476" height="162" />
 
 In cases where there are more than three Elastigroup target groups, this process is repeated until all the target groups are added, and then Elastigroup continues to Step 5 above.
 
