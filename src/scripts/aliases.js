@@ -1568,7 +1568,6 @@ export const aliases = (() => {
 
     "/ocean/concepts/ocean-cloud/scaling/":
       "/ocean/features/scaling-kubernetes",
-
   };
 
   for (let [key, value] of Object.entries(map)) {
