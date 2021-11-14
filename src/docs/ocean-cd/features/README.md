@@ -10,7 +10,7 @@ Ocean CD extends Kubernetes to continuous delivery by automating and standardizi
 
 ### Granular Visibility
 
-Ocean CD provides [granular visibility](ocean-cd/features/granular-visibility/) on several levels and in different views. This includes a view per cluster, tracking and management views of rollout events, and detailed visibility per rollout.
+Ocean CD provides [granular visibility](ocean-cd/features/granular-visibility/) on several levels and in different views. This includes a view per cluster, tracking and management views of rollout events, and [detailed visibility per rollout](ocean-cd/features/granular-visibility/detailed-rollout-view).
 
 ### Rollbacks
 
