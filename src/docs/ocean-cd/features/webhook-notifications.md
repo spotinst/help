@@ -58,13 +58,13 @@ Ocean CD sends notification events with the following JSON structure:
 
 ## Add a New Webhook
 To add a new webhook notification, do the following:
-1. Use the Create Notification Provider API as described in the [Getting Started](ocean-cd/getting-started/) page.
+1. Use the [Create Notification Provider API](https://docs.spot.io/api/#operation/OceanCDNotificationProviderCreate) as described in the [Getting Started](ocean-cd/getting-started/) page.
 2. Activate the cluster heartbeat notification by doing one of the following:
-   - Use the Update Rollout API to add the notification to an existing rollout.
-   - Use the Create Rollout API if you are creating a completely new rollout object.
+   - Use the [Update Rollout Spec API](https://docs.spot.io/api/#operation/OceanCDRolloutSpecUpdate) to add the notification to an existing rollout.
+   - Use the [Create Rollout Spec API](https://docs.spot.io/api/#operation/OceanCDRolloutSpecCreate) if you are creating a completely new rollout object.
 3. Activate the rollout-related notifications, by doing one of the following:
-   - Use the Update Rollout API to add the notification to an existing rollout.
-   - Use the Create Rollout API if you are creating a completely new rollout object.
+   - Use the [Update Rollout Spec API](https://docs.spot.io/api/#operation/OceanCDRolloutSpecUpdate) to add the notification to an existing rollout.
+   - Use the [Create Rollout Spec API](https://docs.spot.io/api/#operation/OceanCDRolloutSpecCreate) if you are creating a completely new rollout object.
 
 ## What’s Next?
 
