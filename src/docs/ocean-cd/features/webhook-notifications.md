@@ -17,6 +17,44 @@ The following event types will trigger a webhook notification to the endpoints y
 - rollout-finished: The Ocean CD rollout successfully finished.
 - start-external-verification: Ocean CD informs you start the external verification on your side.
 
+## Notification Event Structure
+
+Ocean CD sends notification events with the following JSON structure:
+
+```json
+{
+  "type": "<Based on the ‘Notification Event Type’>",
+  "timestamp": "14/11/2021 05:00:22",
+  "rolloutDetails": {
+    "id": "rol-12345678",
+    "startTime": "14/11/2021 04:59:34",
+    "rolloutSpec": "<rolloutSpec name>",
+    "microservice": "<microservice name>",
+    "environment": "<environment name>",
+    "namespace": ""
+  },
+  "kubernetesDetails": {
+    "deployment": {
+      "name": "",
+      "labels": [
+        {
+          "key": "",
+          "value": ""
+        }
+      ],
+      "version": {
+        "oldImage": "",
+        "newImage": "",
+        "oldVersion": "",
+        "newVersion": ""
+      }
+    }
+  },
+  "failure": {
+    "reason": ""
+  }
+}
+```
 
 ## Add a New Webhook
 To add a new webhook notification, do the following:
