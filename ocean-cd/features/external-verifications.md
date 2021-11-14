@@ -25,7 +25,7 @@ In this example, an external verification called DevOps Tests was sent to a Jenk
 
 ## Set up External Verifications
 
-Define the external verification using the Create Rollout API(link to OpenAPI) under the External Verification section.  In the API, you will define attributes that correspond to the following:
+Define the external verification using the [Create Rollout Spec API](https://docs.spot.io/api/#operation/OceanCDRolloutSpecCreate) under the External Verification section.  In the API, you will define attributes that correspond to the following:
 - Initial delay: Define this parameter if initial delay is required. This is helpful if you want to ensure bootstrapping related actions are completed before getting the notification that triggers your external tests.
 - Timeout: The amount of time Ocean CD should wait before activating a fallback policy (i.e., if an API request is not received).
 - Fallback policy: Continue to the next rollout phase or fail the rollout and activate a failure policy.
