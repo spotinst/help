@@ -8,7 +8,7 @@ The views described in this page are relevant once you set up the entities descr
 
 ## Cluster Level View
 
-To see information at the cluster level, go to Ocean CD in the left menu tree and click Settings. The Settings page opens with the Clusters tab open. In the Clusters tab, you can track rollout activity per cluster as described in the Getting Started page.
+To see information at the cluster level, go to Ocean CD in the left menu tree and click Settings. The Settings page opens with the Clusters tab open. In the Clusters tab, you can track rollout activity per cluster as described in the [Getting Started](ocean-cd/getting-started) page.
 
 <img src="/ocean-cd/_media/features-granular-visibility-01.png" />
 
@@ -32,7 +32,7 @@ The tiles in the summary line include the following information:
 
 The Rollouts list provides information about each microservice rollout event for all clusters where an Ocean CD controller is installed. Each row represents a rollout event and includes the data described below.
 
-- Rollout ID: A unique identifier for a rollout event. A Rollout ID is generated each time an initiator (described below) triggers a rollout event. To see more details about a particular rollout, click Detailed Rollout View.
+- Rollout ID: A unique identifier for a rollout event. A Rollout ID is generated each time an initiator (described below) triggers a rollout event. To see more details about a particular rollout, click [Detailed Rollout View](ocean-cd/features/granular-visibility/detailed-rollout-view).
 - Rollout Spec: An Ocean CD object that connects between a microservice and its target environment and includes the logic that Ocean CD uses to manage the rollout process.
 - Microservice: An Ocean CD object that binds a Kubernetes deployment with the respective Ocean CD rollout spec, based on label selectors.
 - Environment: An internal Ocean CD object that tells where each microservice is deployed. In other words, the environment is the destination of an Ocean CD rollout.
@@ -45,7 +45,7 @@ The Rollouts list provides information about each microservice rollout event for
 - Cluster ID: An Ocean CD object, as you provided in the cluster settings.
 - Cloud provider: The name of the cloud provider in which the cluster is deployed.
 
-> **Tip**: There may be additional information about these parameters in the Getting Started page and in the Ocean CD APIs.
+> **Tip**: There may be additional information about these parameters in the Getting Started page and in the [Ocean CD APIs](https://docs.spot.io/api/#tag/Ocean-CD).
 
 ### Initiator
 This parameter initiates a new rollout event (i.e., a new table entry). Ocean CD adds a new row when one of the following types of initiations occurs:
