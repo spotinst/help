@@ -31,7 +31,7 @@ In the example below, the rollback was completed successfully, and the failure p
 
 ## Change Rollback Setting
 
-To change a rollback setting, use the Update Rollback API or Create Rollout Spec API and change the parameters as they are described in the [Getting Started](ocean-cd/getting-started/) page or in the Create Rollback API.
+To change a rollback setting, use the [Update Rollback Spec API](https://docs.spot.io/api/#operation/OceanCDRolloutSpecUpdate) or [Create Rollout Spec API](https://docs.spot.io/api/#operation/OceanCDRolloutSpecCreate) and change the parameters as they are described in the [Getting Started](ocean-cd/getting-started/) page or in the Create Rollback Spec API.
 
 ## What’s Next?
 
