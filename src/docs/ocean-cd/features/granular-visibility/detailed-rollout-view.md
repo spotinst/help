@@ -21,7 +21,7 @@ The flow chart illustrates the rollout phases that you defined in the rollout sp
 - Rolling update: The green color and check mark indicate that this phase completed successfully and an arrow shows how the rollout was promoted to the next phase. During the phase completion there is also an indication of the rolling status of new pods.
 - Finished: This  phase includes the final microservice version following the rollout process completion. The completion of this phase can be either the desired rolled version (assuming a successful rollout) or the last successful version (assuming a rollback failure policy has been activated during the process).
 
-The Failure policy and [External Verification](ocean-cd/features/external-verifications) phases can also appear in the chart if you configured them as part of the Rollout Spec  Settings.
+The Failure policy and [External Verification](ocean-cd/features/external-verifications) phases can also appear in the chart if you configured them as part of the [Rollout Spec](https://docs.spot.io/api/#operation/OceanCDRolloutSpecCreate) settings.
 
 A Failure policy phase can be activated due to a Kubernetes rolling update failure or following a verification failure response or fallback response. A phase that has failed is indicated in red color and with an “x”.
 

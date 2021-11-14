@@ -17,16 +17,54 @@ The following event types will trigger a webhook notification to the endpoints y
 - rollout-finished: The Ocean CD rollout successfully finished.
 - start-external-verification: Ocean CD informs you start the external verification on your side.
 
+## Notification Event Structure
+
+Ocean CD sends notification events with the following JSON structure:
+
+```json
+{
+  "type": "<Based on the ‘Notification Event Type’>",
+  "timestamp": "14/11/2021 05:00:22",
+  "rolloutDetails": {
+    "id": "rol-12345678",
+    "startTime": "14/11/2021 04:59:34",
+    "rolloutSpec": "<rolloutSpec name>",
+    "microservice": "<microservice name>",
+    "environment": "<environment name>",
+    "namespace": ""
+  },
+  "kubernetesDetails": {
+    "deployment": {
+      "name": "",
+      "labels": [
+        {
+          "key": "",
+          "value": ""
+        }
+      ],
+      "version": {
+        "oldImage": "",
+        "newImage": "",
+        "oldVersion": "",
+        "newVersion": ""
+      }
+    }
+  },
+  "failure": {
+    "reason": ""
+  }
+}
+```
 
 ## Add a New Webhook
 To add a new webhook notification, do the following:
-1. Use the Create Notification Provider API as described in the [Getting Started](ocean-cd/getting-started/) page.
+1. Use the [Create Notification Provider API](https://docs.spot.io/api/#operation/OceanCDNotificationProviderCreate) as described in the [Getting Started](ocean-cd/getting-started/) page.
 2. Activate the cluster heartbeat notification by doing one of the following:
-   - Use the Update Rollout API to add the notification to an existing rollout.
-   - Use the Create Rollout API if you are creating a completely new rollout object.
+   - Use the [Update Rollout Spec API](https://docs.spot.io/api/#operation/OceanCDRolloutSpecUpdate) to add the notification to an existing rollout.
+   - Use the [Create Rollout Spec API](https://docs.spot.io/api/#operation/OceanCDRolloutSpecCreate) if you are creating a completely new rollout object.
 3. Activate the rollout-related notifications, by doing one of the following:
-   - Use the Update Rollout API to add the notification to an existing rollout.
-   - Use the Create Rollout API if you are creating a completely new rollout object.
+   - Use the [Update Rollout Spec API](https://docs.spot.io/api/#operation/OceanCDRolloutSpecUpdate) to add the notification to an existing rollout.
+   - Use the [Create Rollout Spec API](https://docs.spot.io/api/#operation/OceanCDRolloutSpecCreate) if you are creating a completely new rollout object.
 
 ## What’s Next?
 

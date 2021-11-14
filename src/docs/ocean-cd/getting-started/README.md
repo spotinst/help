@@ -59,7 +59,7 @@ If you have already connected your first cluster to Ocean CD and would like to c
 
 The environment is an internal Ocean CD object that tells where each microservice is deployed. In other words, the environment is the destination of an Ocean CD rollout.
 
-Define the environment using the Create Environment API(link to OpenAPI). In the API, you will define attributes that correspond to the following:
+Define the environment using the [Create Environment API](https://docs.spot.io/api/#operation/OceanCDEnvironmentCreate). In the API, you will define attributes that correspond to the following:
 - Environment Name: The environment, e.g., Dev, Staging, Production, to which your microservice will be delivered. Must be a unique name.
 - Description: A few words about the environment.
 - Cluster ID: The name of the cluster where the environment is located (This must be a cluster ID of one of the clusters you connected to Ocean CD).
@@ -77,10 +77,10 @@ You can use the Create Environment API at any time to create additional environm
 
 A microservice is an internal Ocean CD object that associates a Kubernetes deployment with an Ocean CD rollout spec. Information you provide in a microservice tells Ocean CD (based on label selectors) if it is managed or not.  
 
-Define the microservice using the Create Microservice API. In the API, you will define attributes that correspond to the following:
+Define the microservice using the [Create Microservice API](https://docs.spot.io/api/#operation/OceanCDEnvironmentCreate). In the API, you will define attributes that correspond to the following:
 - Microservice name: The name of the app (i.e., microservice) you are delivering. Must be a unique name.
 - Description: A few words about the microservice you are delivering.
-- Label Selectors: Ocean CD uses these to identify the workloads (e.g., Kubernetes deployments) that are represented by the microservice and managed by Ocean CD rollout spec logic (see also Rollout Spec) .
+- Label Selectors: Ocean CD uses these to identify the workloads (e.g., Kubernetes deployments) that are represented by the microservice and managed by Ocean CD rollout spec logic (see also [Rollout Spec](ocean-cd/getting-started/?id=create-rollout-spec)) .
 - Version Label Key: Ocean CD will search for this unique version label key to present as the microservice version. If the key does not exist, the version will be taken from the deployment manifest (pod template image).
 
 After you send the Create Microservice API, a card displaying details about the microservice will appear under the Microservices tab.
@@ -95,7 +95,7 @@ You can use the Create Microservice API at any time to create additional microse
 
 A notification provider is an external endpoint to which Ocean CD sends a webhook API with the detailed rollout process information and where your external test tools should listen.
 
-Define the notification provider using the Create Notification Provider API. In the API, you will define attributes that correspond to the following:
+Define the notification provider using the [Create Notification Provider API](https://docs.spot.io/api/#operation/OceanCDNotificationProviderCreate). In the API, you will define attributes that correspond to the following:
 - Notification Provider Name: A name you provide indicating who the notification provider is. Must be unique.
 - Description (optional): A few words indicating the purpose of these notifications.
 - Endpoint URL: The address to which the API messages are sent.
@@ -110,7 +110,7 @@ You can use the Create Notification Provider API at any time to create additiona
 
 A rollout spec is an Ocean CD object that connects a microservice to its target environment(s) and includes the logic that Ocean CD uses to manage the rollout process.
 
-Define the rollout spec using the Create Rollout API. In the API, you will define attributes that correspond to the following:
+Define the rollout spec using the [Create Rollout Spec API](https://docs.spot.io/api/#operation/OceanCDRolloutSpecCreate). In the API, you will define attributes that correspond to the following:
 - Rollout Spec Name: Give a name to the rollout spec. Must be unique.
 - Environment: Enter the name of the environment you created above. Once you have created several environments, you can choose from any one of them.
 - Microservice: Enter the name of the microservice you created above. Once you have created several microservices, you can choose from any one of them.
