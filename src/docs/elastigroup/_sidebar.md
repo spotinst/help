@@ -31,6 +31,7 @@
       - [Block Device Mapping](elastigroup/features/compute/block-device-mapping)
     - [Intelligent Traffic Flow](elastigroup/features/intelligent-traffic-flow/)
       - [Configure Intelligent Traffic Flow](elastigroup/features/intelligent-traffic-flow/configure-intelligent-traffic-flow)
+      - [Migration Process](elastigroup/features/intelligent-traffic-flow/migration-process)
       - [API Reference](elastigroup/features/intelligent-traffic-flow/api-reference)
     - [Stateful Instance](elastigroup/features/stateful-instance/)
       - [Import a Stateful Instance](elastigroup/features/stateful-instance/import-a-stateful-instance)

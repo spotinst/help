@@ -61,4 +61,4 @@ After you complete the Advanced Health Check Settings, continue to the [Autoheal
 
 ## What’s Next?
 
-Learn more about relevant data and trends Elastigroup presents in the [Load Balancers](elastigroup/tutorials/elastigroup-actions-menu/view-load-balancers) tab.
+Learn more about how the [Migration Process](elastigroup/features/intelligent-traffic-flow/migration-process) works.
