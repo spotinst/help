@@ -78,9 +78,7 @@ Ocean CD can send notification of controller heartbeat failures. This is a separ
 
 To add a new webhook notification, do the following:
 1. Use the [Create Notification Provider API](https://docs.spot.io/api/#operation/OceanCDNotificationProviderCreate) as described in the [Getting Started](ocean-cd/getting-started/) page.
-2. Activate the cluster heartbeat notification by doing one of the following:
-   - Use the [Update Rollout Spec API](https://docs.spot.io/api/#operation/OceanCDRolloutSpecUpdate) to add the notification to an existing rollout.
-   - Use the [Create Rollout Spec API](https://docs.spot.io/api/#operation/OceanCDRolloutSpecCreate) if you are creating a completely new rollout object.
+2. Activate the cluster heartbeat notification by using the [Update Cluster API](https://docs.spot.io/api/#operation/OceanCDClusterUpdate) (after the controller has been installed). This will add a notification on heartbeat failure (based on your `minutesWithoutHeartbeat` definition).
 3. Activate the rollout-related notifications, by doing one of the following:
    - Use the [Update Rollout Spec API](https://docs.spot.io/api/#operation/OceanCDRolloutSpecUpdate) to add the notification to an existing rollout.
    - Use the [Create Rollout Spec API](https://docs.spot.io/api/#operation/OceanCDRolloutSpecCreate) if you are creating a completely new rollout object.
