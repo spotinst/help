@@ -9,7 +9,7 @@ The Onboarding workflow can be accessed by clicking "+ Add New Tenant" from the 
 The onboarding workflow has seven steps, each step is outlined below.<br><img src="/spot-pc/_media/onboarding-workflow-02.png" />
 
 ## Connect Your Azure Account
-Enter the Tenant ID for the Azure AD tenant where the Spot PC users are located.  This can be found in the Azure AD section of the Azure portal: https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview
+Enter the Tenant ID for the Azure AD tenant where the Spot PC users are located.  This can be found in the Azure AD section of the Azure portal: https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview<br><img src="/spot-pc/_media/onboarding-workflow-04.png" />
 
 ## Authorize Spot PC Discovery
 Grant
@@ -76,7 +76,7 @@ As the automation runs and builds the Spot PC environment, several milestones ar
 + Creates the SpotPC 'home' organizational unit (OU) in the AD Domain and configures it for Spot PC.
 
 **Install Spot PC Orchestration Service**
-+ Installs the Spot service on the SpotPCManager1 virtual machine and configures it for Spot PC. 
++ Installs the Spot service on the SpotPCManager1 virtual machine and configures it for Spot PC.
 
 **Assign Html5 Web Address**
 + Registers the new HTML5 gateway used by connect-to-server using a unique, publicly-routable DNS address
