@@ -19,6 +19,8 @@ The following event types will trigger a webhook notification to the endpoints y
 
 ## Notification Event Structure
 
+### Rollout Events
+
 Ocean CD sends notification events with the following JSON structure:
 
 ```json
@@ -55,8 +57,25 @@ Ocean CD sends notification events with the following JSON structure:
   }
 }
 ```
+### Cluster Heartbeat Failure Event
+
+Ocean CD can send notification of controller heartbeat failures. This is a separate notification type (compared to rollout events) and can be set by using the [Ocean CD Update Cluster API](https://docs.spot.io/api/#operation/OceanCDClusterUpdate) (after the controller has been installed). Ocean CD sends notification events with the following JSON structure:
+
+```json
+{
+  "type": "controller-heartbeat-failure",
+  "timestamp": "14/11/2021 05:00:22",
+  "clusterId": "",
+  "controllerDetails": {
+    "controllerVersion": "",
+    "nodeName": "",
+    "podName": ""
+  }
+}
+```
 
 ## Add a New Webhook
+
 To add a new webhook notification, do the following:
 1. Use the [Create Notification Provider API](https://docs.spot.io/api/#operation/OceanCDNotificationProviderCreate) as described in the [Getting Started](ocean-cd/getting-started/) page.
 2. Activate the cluster heartbeat notification by doing one of the following:
