@@ -23,7 +23,7 @@ To see this page, go to Ocean CD in the left menu tree and click Rollouts. The R
 The tiles in the summary line include the following information:
 - Managed Clusters Heartbeat: Number of clusters that provide a heartbeat out of all the connected clusters.
 - Microservices: The number of microservices with active rollouts, managed by Ocean CD.
-- Environments: The number of environments with active rollouts set up in Ocean CD
+- Environments: The number of environments with active rollouts set up in Ocean CD.
 - Successful Rollouts: The number of successful rollouts per total number of rollouts attempted.
 
 <img src="/ocean-cd/_media/features-granular-visibility-02.png" />

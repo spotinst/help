@@ -17,7 +17,7 @@ The following event types will trigger a webhook notification to the endpoints y
 - rollout-finished: The Ocean CD rollout successfully finished.
 - start-external-verification: Ocean CD informs you start the external verification on your side.
 
-## Notification Event Structure
+## Notification Event Structures
 
 ### Rollout Events
 
@@ -59,7 +59,7 @@ Ocean CD sends notification events with the following JSON structure:
 ```
 ### Cluster Heartbeat Failure Event
 
-Ocean CD can send notification of controller heartbeat failures. This is a separate notification type (compared to rollout events) and can be set by using the [Ocean CD Update Cluster API](https://docs.spot.io/api/#operation/OceanCDClusterUpdate) (after the controller has been installed). Ocean CD sends notification events with the following JSON structure:
+Ocean CD can send notification of controller heartbeat failures. This is a separate notification type (compared to rollout events) and can be set by using the [Update Ocean CD Cluster API](https://docs.spot.io/api/#operation/OceanCDClusterUpdate) (after the controller has been installed). Ocean CD sends notification events with the following JSON structure:
 
 ```json
 {
