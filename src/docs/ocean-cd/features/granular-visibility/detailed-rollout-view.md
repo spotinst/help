@@ -5,7 +5,7 @@
 The Detailed Rollout View enables you to see a graphical representation of the live progress of a rollout and provides a historical view of rollout events so that you can go back and review the events after the rollout has been completed. When the rollout is completed, whether successfully or not, the rollout is saved for future overview and investigation of events.
 
 To see the Detailed Rollout View of a rollout, do the following:
-1. Click [Rollouts](ocean-cd/features/granular-visibility/) in the left menu tree of the console. The Rollouts page appears.
+1. Click [Rollouts](ocean-cd/features/granular-visibility/?id=rollouts-list) in the left menu tree of the console. The Rollouts page appears.
 2. In the Rollouts list, click the Rollout ID in the table. A page with the Detailed Rollout View for that rollout will appear.
 
 The top of the page provides basic information about the rollout, and the major areas of this page include the:
@@ -19,7 +19,7 @@ The top of the page provides basic information about the rollout, and the major 
 
 The flow chart illustrates the rollout phases that you defined in the rollout spec. By default, the chart includes the following phases:
 - Rolling update: The green color and check mark indicate that this phase completed successfully and an arrow shows how the rollout was promoted to the next phase. During the phase completion there is also an indication of the rolling status of new pods.
-- Finished: This  phase includes the final microservice version following the rollout process completion. The completion of this phase can be either the desired rolled version (assuming a successful rollout) or the last successful version (assuming a rollback failure policy has been activated during the process).
+- Finished: This phase includes the final microservice version following the rollout process completion. The completion of this phase can be either the desired rolled version (assuming a successful rollout), the last successful version (assuming an immediate rollback failure policy has been activated during the process), or a link to a new rollout process (assuming a rollback failure policy of type New Rollout has been activated during the process).
 
 The Failure policy and [External Verification](ocean-cd/features/external-verifications) phases can also appear in the chart if you configured them as part of the [Rollout Spec](https://docs.spot.io/api/#operation/OceanCDRolloutSpecCreate) settings.
 
