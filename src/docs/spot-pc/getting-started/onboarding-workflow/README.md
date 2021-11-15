@@ -105,4 +105,4 @@ As the automation runs and builds the Spot PC environment, several milestones ar
 
 ## What’s Next?
 
-Learn more about [Getting Started](spot-pc/getting-started) with Spot PC.
+Learn more about [Getting Started](spot-pc/getting-started/) with Spot PC.
