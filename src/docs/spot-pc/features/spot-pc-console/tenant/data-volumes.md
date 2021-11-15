@@ -4,4 +4,4 @@
 
 ## What’s Next?
 
-Learn more about [Getting Started](spot-pc/getting-started) with Spot PC.
+Learn more about [Getting Started](spot-pc/getting-started/) with Spot PC.

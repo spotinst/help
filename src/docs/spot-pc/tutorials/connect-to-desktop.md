@@ -51,4 +51,4 @@ Follow the thin client Vendor's instructions to connect to your Spot PC desktop.
 
 ## What’s Next?
 
-Learn more about [Getting Started](spot-pc/getting-started) with Spot PC.
+Learn more about [Getting Started](spot-pc/getting-started/) with Spot PC.
