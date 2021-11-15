@@ -36,11 +36,11 @@ The Rollouts list provides information about each microservice rollout event for
 - Rollout Spec: An Ocean CD object that connects between a microservice and its target environment and includes the logic that Ocean CD uses to manage the rollout process.
 - Microservice: An Ocean CD object that binds a Kubernetes deployment with the respective Ocean CD rollout spec, based on label selectors.
 - Environment: An internal Ocean CD object that tells where each microservice is deployed. In other words, the environment is the destination of an Ocean CD rollout.
-- Initiator: See below about [Initiator](ocean-cd/features/granular-visibility?id=initiator).
-- Rollout State: See below about [Rollout State](ocean-cd/features/granular-visibility?id=rollout-state).
+- Initiator: See below about [Initiator](ocean-cd/features/granular-visibility/?id=initiator).
+- Rollout State: See below about [Rollout State](ocean-cd/features/granular-visibility/?id=rollout-state).
 - Start: Rollout beginning time and date.
 - Duration: Amount of time for the rollout to complete (for the entire rollout process, not only the Kubernetes rolling update).
-- Version: See below about version and [version comparison](ocean-cd/features/granular-visibility?id=version-and-comparison).
+- Version: See below about version and [version comparison](ocean-cd/features/granular-visibility/?id=version-and-comparison).
 - Namespace: As defined in the deployment manifest.
 - Cluster ID: An Ocean CD object, as you provided in the cluster settings.
 - Cloud provider: The name of the cloud provider in which the cluster is deployed.
@@ -48,6 +48,7 @@ The Rollouts list provides information about each microservice rollout event for
 > **Tip**: There may be additional information about these parameters in the Getting Started page and in the [Ocean CD APIs](https://docs.spot.io/api/#tag/Ocean-CD).
 
 ### Initiator
+
 This parameter initiates a new rollout event (i.e., a new table entry). Ocean CD adds a new row when one of the following types of initiations occurs:
 - Detection: A new microservice that is managed by Ocean CD is detected.
 - Failure policy: This occurs following a failure policy activation of type New Rollout, deploying a previous version through all Ocean CD rollout phases.
@@ -67,10 +68,6 @@ The rollout state can be one of the following states:
 The rollout states are also indicated with graphic icons.
 
 ### Version and Comparison
-
-The version is taken from a special VersionLabelKey that you can add in the deployment manifest and is defined as part of the microservice settings. If the label does not exist, Ocean CD will present the image (taken from the Pod Template) under the version column.
-
-The Live label is attached to version cells that represent the last deployed version of the microservice into a specific environment.
 
 To see a version comparison, click the Version cell in the table. A popup will show a comparison of the selected rollout event microservice version to the previous version with the differences highlighted.
 
