@@ -11,7 +11,7 @@ To see the Detailed Rollout View of a rollout, do the following:
 The top of the page provides basic information about the rollout, and the major areas of this page include the:
 - Rollout Flow Chart
 - Rollout Phase Details
-- Application View.
+- Application View
 
 <img src="/ocean-cd/_media/features-detailed-rollout-view-01.png" />
 
