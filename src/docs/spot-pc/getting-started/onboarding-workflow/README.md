@@ -4,7 +4,9 @@
 # Onboarding Workflow
 Onboarding a new Spot PC tenant is performed from within the Spot PC console.  For new administrators with no existing tenants, their initial login will automatically log them into the new tenant workflow.
 
-The Onboarding workflow can be accessed by clicking "+ Add New Tenant" from the Spot PC Dashboard.<br> <a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow-01.png" target="_blank"><img src="/spot-pc/_media/onboarding-workflow-01.png" alt="Click Image for Full Size" width="500"> </a>
+The Onboarding workflow can be accessed by clicking "+ Add New Tenant" from the Spot PC Dashboard.
+
+<a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow-01.png" target="_blank"><img src="/spot-pc/_media/onboarding-workflow-01.png" alt="Click Image for Full Size" width="500"> </a>
 
 The onboarding workflow has seven steps, each step is outlined below.<br> <a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow-02.png" target="_blank"><img src="/spot-pc/_media/onboarding-workflow-02.png" alt="Click to Enlarge" width="500"> </a>
 
