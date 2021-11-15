@@ -47,16 +47,15 @@ When you use Ocean and Ocean CD together, you gain a full kubernetes backend tha
 
 ### Fits into my Pipeline
 
-CI pipelines, Jenkins jobs, and other processes before deployment to the cluster remain in place and untouched. With just a few commands and simple scripts, DevOps engineers can install the two main components of Ocean CD.
-
-Ocean CD takes control of all delivery phases within Kubernetes.
+CI pipelines, Jenkins jobs, and other processes before deployment to the cluster remain in place and untouched. With just a few clicks, DevOps engineers can install Ocean CD and take control of all delivery phases within Kubernetes.
 
 ### Comfortable with GitOps
 
 GitOps architecture is considered an initiator that applies a change to the Kubernetes cluster, just like CI/CD pipelines or CI jobs. The only difference is that the deployment event is triggered by Git. So GitOps initiates the change event in the cluster, and Ocean CD knows to identify the event and manage it end-to-end.
 
 ### Works over Multiple Environments
-Ocean CD service may include multiple rollout configurations, and each rollout can trigger deployment into different environments. That means you can create a fully automated deployment process over multiple environments with a couple of clicks.
+
+An Ocean CD microservice may include multiple rollout configurations, and each rollout can trigger deployment into different environments. That means you can create a fully automated deployment process over multiple environments with a couple of clicks.
 
 ## What’s Next?
 
