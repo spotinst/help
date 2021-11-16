@@ -18,21 +18,21 @@ Enter the Tenant ID for the Azure AD tenant where the Spot PC users are located.
 <a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow-04.png" target="_blank"><img src="/spot-pc/_media/onboarding-workflow-04.png" alt="Click to Enlarge" width="500"> </a>
 
 ## Authorize Spot PC Discovery
-Spot PC uses an Azure Enterprise application to discover the existing Azure tenant's networks and to locate the AD DC (or Azure AD Domain Service).  Deploying this eEnterprise App requires an additional permissions grant by the Azure admin account.
+Spot PC uses an Azure Enterprise application to discover the existing Azure tenant's networks and to locate the AD DC (or Azure AD Domain Service).  Deploying this Enterprise App requires an additional permission set be granted by the Azure admin account.
 
 <a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow-05.png" target="_blank"><img src="/spot-pc/_media/onboarding-workflow-05.png" alt="Click to Enlarge" width="500"> </a>
 
 ## Select an Azure Region and Define Network
 Select an appropriate Azure Region. This [Microsoft Tool](https://azure.microsoft.com/en-us/services/virtual-desktop/assessment/) can estimate end user experienced based on region.
 
-Not all Azure regions can support all Spot PC configurations.  Regions with the best support are show as "Spot PC Recommended."  Limited regions may be unable to support larger environments and/or GPU enabled workloads. Consult with the Spot PC onboarding team if you'd like to select a limited region to confirm it can support your
+Not all Azure regions can support all Spot PC configurations.  Regions with the best support are shown as "Spot PC Recommended."  Limited regions may be unable to support larger environments and/or GPU enabled workloads. Consult with the Spot PC onboarding team if you'd like to select a limited region to confirm it can support your use case.
 
 In addition to end user experience, consideration should be made to locate the Spot PC environment near other Azure resources such as hosted domain controllers, existing data storage and/or line of business application services.  
 
 <a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow-06.png" target="_blank"><img src="/spot-pc/_media/onboarding-workflow-06.png" alt="Click to Enlarge" width="500"> </a>
 
 ### Initialization Progress
-After the region is selected, the initialization of the tenant begins.  Several resources are created by Spot PS in the Spot PC Azure subscription.  This step can take several minutes.  Progress is shown to the right under "Initialization Logs".  The next step in the wizard can not begin until this initialization process finishes.
+After the region is selected, the initialization of the tenant begins.  Several resources are created by Spot PC in the Spot PC Azure subscription.  This step can take several minutes.  Progress is shown to the right under "Initialization Logs".  The next step in the wizard can not begin until this initialization process finishes.
 
 <a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow-03.png" target="_blank"><img src="/spot-pc/_media/onboarding-workflow-03.png" alt="Click to Enlarge" width="500"> </a>
 
@@ -47,7 +47,7 @@ In either case, select the appropriate domain address (e.g. company.onmicrosoft.
 <a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow-07.png" target="_blank"><img src="/spot-pc/_media/onboarding-workflow-07.png" alt="Click to Enlarge" width="500"> </a>
 
 ### Connecting to an Existing AD DC
-When an Existing AD DC is selected, the AD DC needs to be accessible to Azure.  This means the AD DC VM must be hosted in Azure or be connected to azure via a VPN/Express Route.
+When an Existing AD DC is selected, the AD DC needs to be accessible to Azure.  This means the AD DC VM must be hosted in Azure or be connected to Azure via a VPN/Express Route.
 
 A Domain Join admin account and password is collected at this point to facilitate the joining of Spot PC VMs to the existing AD DC.  A unique admin account for solely this purpose is recommended for security reasons.
 
@@ -57,12 +57,12 @@ In order for Spot PC to connect with the AD DC, the Spot PC vNet will need to be
 <a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow-08.png" target="_blank"><img src="/spot-pc/_media/onboarding-workflow-08.png" alt="Click to Enlarge" width="500"> </a>
 
 ## Confirm Azure AD Sync
-For Spot PC to operate the existing AD DC must be synced with Azure AD via Azure Active Directory Sync.  This step simply confirms that this sync is in place and has had sync activity in the past 24 hours.
+For Spot PC to operate the existing AD DC must be synced with Azure AD via Azure Active Directory Connect.  This step simply confirms that this sync is in place and has had sync activity in the past 24 hours. More information on AD Connect can be found [here.](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/whatis-azure-ad-connect)
 
 <a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow-09.png" target="_blank"><img src="/spot-pc/_media/onboarding-workflow-09.png" alt="Click to Enlarge" width="500"> </a>
 
 ## Review and Build
-All of your selections are shows for your review before clicking to finalize the deployment.
+All of your selections are shown for your review before clicking to finalize the deployment.
 
 <a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow-10.png" target="_blank"><img src="/spot-pc/_media/onboarding-workflow-10.png" alt="Click to Enlarge" width="500"> </a>
 
@@ -79,14 +79,14 @@ As the automation runs and builds the Spot PC environment, several milestones ar
 
 **Request SSL Certificate**
 
-+ In this step we're issuing a SSL certificate that's used to secure any of the optional public-facing endpoints.  This is primarily used to secure the in-browser "connect to server" functionality available to Spot PC admins.
++ In this step we're issuing an SSL certificate that's used to secure any of the optional public-facing endpoints.  This is primarily used to secure the in-browser "connect to server" functionality available to Spot PC admins.
 
 **Validate deployment parameters**
 + This step evaluates all of your inputs in the onboarding workflow and transforms them into an ARM template and Desired State Configuration (DSC) used during the deployment automation.
 
 **Deploy ARM Template**
 
-+ Spot PC sends the deployment's ARM template to the Spot PC subscription/resource group and initiates the deployment.  This triggers Azure to add the Azure resources to the the Spot PC subscription such as virtual networks, virtual machines, network security groups, etc...
++ Spot PC sends the deployment's ARM template to the Spot PC subscription/resource group and initiates the deployment.  This triggers Azure to add the Azure resources to the Spot PC subscription such as virtual networks, virtual machines, network security groups, etc...
 
 **Process ARM DSC**
 + Initiates the DSC for platform resources in the subscription.  The primary platform resource is the SpotPCManager1 VM.
