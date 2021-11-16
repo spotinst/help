@@ -185,7 +185,7 @@ This methodology minimizes the effort of creating and maintaining multiple infra
 
 There is an option to set the Ocean configuration to be a template only for other VNG's. This means that the default VNG will be only a template and we would not be able to launch an  instance from it as a fallback. In this case, you would need at least one VNG so that the cluster could scale.
 
-You can configure this option in the JSON view of the default VNG with the parameter `launchSpecification.useAsTemplateOnly`. Note that the parameter is case sensitive and cannot be used at the Ocean level of the JSON.
+You can configure this option in the JSON view of the default VNG or in the JSON of the cluster with the parameter `launchSpecification.useAsTemplateOnly`. Note that the parameter is case sensitive.
 
 In AKS, the default behaviour is that the Ocean configuration is the template.
 
