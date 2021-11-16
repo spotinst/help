@@ -128,9 +128,9 @@ From a workstation in your cluster:
 
 `kubectl delete mutatingwebhookconfiguration controller.oceancd.spot.io`
 
-2. Then enter the command:
+2. Then enter the command (including your Spot API token and the Cluster ID):
 
-`kubectl delete ns oceancd`
+`curl -X POST 'https://api.spotinst.io/ocean/cd/clusterInstaller?clusterId=<CLUSTER_Id>' --header 'Authorization: Bearer <TOKEN>' | kubectl delete -f -`
 
 ## Documentation Map
 
