@@ -41,7 +41,7 @@ For example, a VNG is configured to maintain two headroom units of 2048 MiB and 
 
 ### Note for AWS and GKE Users
 
-Due to backward compatibility considerations, you will need to activate a switch in the configuration in order to enable automatic and manual headroom to work in parallel. Otherwise, automatic headroom overrides all other headroom definitions manually configured, whether they are at cluster or VNG level. You may enable automatic and manual headroom at the Ocean level by setting autoScaler.enableAutomaticAndManualHeadroom to True.
+Due to backward compatibility considerations, you will need to activate a switch in the configuration in order to enable automatic and manual headroom to work in parallel. Otherwise, automatic headroom overrides all other headroom definitions manually configured, whether they are at cluster or VNG level. You may enable automatic and manual headroom at the Ocean level by setting `autoScaler.enableAutomaticAndManualHeadroom` to True.
 
 ## What's Next?
 
