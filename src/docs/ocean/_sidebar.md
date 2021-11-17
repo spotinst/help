@@ -73,4 +73,4 @@
   - [Troubleshooting](ocean/troubleshooting/)
     - [Troubleshoot Controller](ocean/troubleshooting/troubleshoot-controller)
   - [Tips & Best Practices](ocean/tips-and-best-practices/)
-    - [Upgrade AKS Clusters](ocean/tips-and-best-practices/upgraded-aks-cluster)
+    - [Upgrade AKS Clusters](ocean/tips-and-best-practices/upgrade-aks-cluster)
