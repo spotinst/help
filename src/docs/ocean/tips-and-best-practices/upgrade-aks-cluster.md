@@ -1,8 +1,8 @@
-# Upgrade AKS Cluster
+# Upgrade Kubernetes Version in Ocean AKS Cluster
 
-This page describes the procedures for upgrading an AKS cluster and the Ocean cluster associated with the AKS cluster.
+This page describes the procedures for upgrading the Kubernetes version in Ocean AKS Cluster.
 
-After you have updated the Ocean configuration, all new nodes launched by Ocean (regardless of the VNG) will be launched with the new configuration version.
+After you have completed all the steps described, all new nodes launched by Ocean (regardless of the VNG) will be launched with the new Kubernetes version.
 
 ## Step 1: Upgrade your AKS Control Plane
 
