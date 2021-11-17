@@ -8,7 +8,7 @@ After you have updated the Ocean configuration, all new nodes launched by Ocean 
 
 Under “Cluster configuration” in your AKS console, define the Kubernetes version you want to upgrade to and click Save.
 
-
+<img src="/ocean/_media/tips-upgrade-aks-cluster-01.png" />
 
 The cluster will upgrade. This process may take a few minutes.
 
@@ -17,11 +17,11 @@ The cluster will upgrade. This process may take a few minutes.
 The steps below must be completed for each of your System node pools.
 1. In the “Node pools” section, click the Kubernetes version.
 
-
+<img src="/ocean/_media/tips-upgrade-aks-cluster-02.png" />
 
 2. In the sidebar, choose the relevant version, and click Apply at the bottom of the page. This process may also take a few minutes.
 
-
+<img src="/ocean/_media/tips-upgrade-aks-cluster-03.png" />
 
 ## Step 3: Import New Configurations
 
@@ -42,7 +42,7 @@ bash -s <ACD_ID>
 
 ```kubectl get jobs -n kube-system```
 
-
+<img src="/ocean/_media/tips-upgrade-aks-cluster-04.png" />
 
 ### Fetch the New Configurations
 
