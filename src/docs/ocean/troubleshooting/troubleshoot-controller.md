@@ -39,7 +39,7 @@ From the 1.0.66 controller version, the account and token was modified as secret
 
 Example Response: `act-abc12def%`
 
-4. Verify if your cluster is in the [same account](https://console.spotinst.com/spt/settings/account/general).
+4. Verify that your cluster is in the [same account](https://console.spotinst.com/spt/settings/account/general).
 5. To view the decoded token, run the following command (Ignore the % at the end of the response):
 
 `kubectl get secrets spotinst-kubernetes-cluster-controller -n kube-system --template={{.data.token}} | base64 --decode`
