@@ -40,7 +40,7 @@ Complete the steps below:
      - Set maximum of: Sets a new upper limit capacity for the Elastigroup.
      - Decrease: Reduces the capacity by a specified percentage.
    - Amount: The number of instances or vCPUs that will be scaled (you can also specify expressions). If the adjustment is not a whole number, Elastigroup rounds it to the nearest whole.
-   - : Specify the name of the dimension used and it's value. If no dimension is specified, the default is the average of instances in the group, divided into instance types. Meaning an average value of the sampled metric is calculated for each instance type currently running in the group, and the first value to cross the threshold will trigger the policy. In the case of scaling up, it's likely to be the smallest instance type, as it will be the first to become loaded, while in scaling down the trigger will likely be the largest instance type.
+   - Dimensions: Specify the name of the dimension used and it's value. If no dimension is specified, the default is the average of instances in the group, divided into instance types. Meaning an average value of the sampled metric is calculated for each instance type currently running in the group, and the first value to cross the threshold will trigger the policy. In the case of scaling up, it's likely to be the smallest instance type, as it will be the first to become loaded, while in scaling down the trigger will likely be the largest instance type.
 4. To save the configuration, click Next, and then click Create or Update at the bottom of the Review tab.
 
 ### Autoscale Based on a Custom Metric
