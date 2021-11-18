@@ -6,32 +6,66 @@ To troubleshoot the issue, complete each step below until you find the issue.
 
 ## Step 1: Check the Configuration
 
-Check the configuration of your configMap.yaml and ensure the parameters are set correctly.
+Check the configuration of your configMap.yaml and ensure that the spotinst.cluster-identifier is the same as "controllerClusterId" (Cluster Identifier) in the Ocean configuration.
+
 In order to view the controller configmap currently applied to your cluster, run the following command:
 
 `kubectl describe configmap spotinst-kubernetes-cluster-controller-config -n kube-system`
 
 Controller ConfigMap template:
 
-```YAML
+```yaml
 kind: ConfigMap
 apiVersion: v1
 metadata:
  name: spotinst-kubernetes-cluster-controller-config
  namespace: kube-system
-data:
- spotinst.token: <API_TOKEN>
- spotinst.account: <ACCOUNT_ID>
- spotinst.cluster-identifier: <CLUSTER_ID>
+ data:
+  spotinst.cluster-identifier: <CLUSTER_ID>
 ```
 
-## Step 2: Is the Controller Running?
+## Step 2: Are the account ID and token valid?
+
+From the 1.0.66 controller version, the account and token was modified as secret in configMap.
+
+1. To view the base 64 encoded secrets run the following command:
+
+`kubectl get secret spotinst-kubernetes-cluster-controller -n kube-system -o yaml`
+
+2. Ensure the encoded account and token values are correct and don’t have any trailing spaces or special characters.
+3. To view the decoded account ID, run the following command (Ignore the % at the end of response):
+
+`kubectl get secrets spotinst-kubernetes-cluster-controller -n kube-system --template={{.data.account}} | base64 --decode`
+
+Example Response: `act-abc12def%`
+
+4. Verify if your cluster is in the [same account](https://console.spotinst.com/spt/settings/account/general).
+5. To view the decoded token, run the following command (Ignore the % at the end of the response):
+
+`kubectl get secrets spotinst-kubernetes-cluster-controller -n kube-system --template={{.data.token}} | base64 --decode`
+
+Example Response:
+
+`abcdef124567890ghijk123456789abcdfghijk123456bcdefjik12346890000%`
+
+6. Verify that the token exists and that the user associated with token exists and can make Spot API calls to resources in the account where the cluster exists:
+https://console.spotinst.com/spt/settings/tokens/permanent
+
+In case your account ID or token is incorrect or invalid, the controller pod will be in a Terminating/CrashLoopBackOff state and in the container logs (Refer Step 6) you will see an unauthorized response as shown below:
+
+```
+WARN   [DATE] [main] SpotinstApiService - Got status code different the SC_OK : 401 Body {  "request": {    "id": "123bc63bd-da6d-4f0e-aaeb-660edc1124",    "url": "/mcs/kubernetes/topology/autoScalerData?accountId=act-123bcdef&clusterIdentifier=test-&fastScale=false&kubernetesUniqueIdentifier=1b123abc-4a83-4d51-8536-64b402372ecb",    "method": "POST",    "timestamp": "DATE"  },  "response": {    "status": {      "code": 401,      "message": "Unauthorized"    }  }}
+ERROR  [DATE] [main] PushAutoScalerDataCmd - Failed to push autoScaler data. Errors: null
+ERROR  [DATE] [main] ControllerApplication - Failed to validate controller communication with spotinst API
+```
+
+## Step 3: Is the Controller Running?
 
 To see if the controller is running, run the following command on your kubectl enabled terminal:
 
 `kubectl get pods -n kube-system | grep spotinst`
 
-## Step 3: One Controller Pod in Cluster?
+## Step 4: One Controller Pod in Cluster?
 
 Ensure there is only one Ocean Controller pod in the cluster. If there is more than one, do the following:
 
@@ -41,7 +75,7 @@ Ensure there is only one Ocean Controller pod in the cluster. If there is more t
 
 2. [Reinstall the controller](ocean/tutorials/spot-kubernetes-controller/).
 
-## Step 4: Controller Running but not Responding?
+## Step 5: Controller Running but not Responding?
 
 If the controller pod appears to be running, but is not responding, do the following:
 
@@ -55,7 +89,7 @@ If the controller pod appears to be running, but is not responding, do the follo
 
 3. Try restarting the controller pod.
 
-## Step 5: Get Controller Logs
+## Step 6: Get Controller Logs
 
 If the steps above do not solve your issue, get the controller logs using the steps below.
 
@@ -74,3 +108,7 @@ If the steps above do not solve your issue, get the controller logs using the st
 `cat spotinst-kubernetes-controller.log`
 
 5. Contact Support in the online chat or by email.
+
+## What's Next?
+- Learn how to [update the controller](ocean/tutorials/spot-kubernetes-controller/update-controller).
+- Find out about the latest updates in [Controller Version History](ocean/tutorials/spot-kubernetes-controller/controller-version-history).
