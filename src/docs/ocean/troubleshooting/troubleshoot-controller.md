@@ -111,4 +111,4 @@ If the steps above do not solve your issue, get the controller logs using the st
 
 ## What's Next?
 - Learn how to [update the controller](ocean/tutorials/spot-kubernetes-controller/update-controller).
-- Read the [Controller Version History](ocean/tutorials/spot-kubernetes-controller/controller-version-history).
+- Find out about the latest updates in [Controller Version History](ocean/tutorials/spot-kubernetes-controller/controller-version-history).

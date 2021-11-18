@@ -14,6 +14,10 @@ There are several ways to install the Controller. Choose one of the procedures b
 - [Install Controller with Terraform](ocean/tutorials/spot-kubernetes-controller/install-with-terraform)
 - [Install Controller with Helm](ocean/tutorials/spot-kubernetes-controller/install-with-helm)
 
+## Troubleshoot the Controller
+
+If you need to troubleshoot an issue with the controller, go to the [Troubleshooting](ocean/troubleshooting/troubleshoot-controller) page.
+
 ## Supported Operating Systems
 
 The Ocean Controller can run on a number of Linux distributions, including container-optimized operating systems such as Bottlerocket OS, Container Optimized OS, and RancherOS.
