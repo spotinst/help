@@ -39,7 +39,7 @@ The description can be edited later if needed.
 
 Review your selections, navigate to _previous_ steps to make changes.  
 
-Add notes to document any important information about this image set and the 0.0 version.  The goal is to write down how and why changes are being made for reference later by you or your colleagues.
+Add notes to document any important information about this image set and the 0.0.0 version.  The goal is to write down how and why changes are being made for reference later by you or your colleagues.
 
 ## Creating a New Image Version
 A new version of an existing image can be created from with an Image Set.
@@ -72,10 +72,10 @@ If unsure, Spot PC recommends:
 *  Personal Spot Group
  * windows-10-21-h1-ent
 
-### Set User Status
-
 ### Add Notes and Save
+Review your selections, navigate to _previous_ steps to make changes.  
 
+Add notes to document any important information about this new image version.  The goal is to write down how and why changes are being made for reference later by you or your colleagues.
 
 ## What’s Next?
 
