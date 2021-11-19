@@ -2,7 +2,7 @@
 
 
 # Onboarding Workflow
-Onboarding a new Spot PC tenant is performed from within the Spot PC console.  For new administrators with no existing tenants, their initial login will automatically log them into the new tenant workflow.
+Onboarding a new Spot PC tenant is performed from within the [Spot PC console](https://admin.pc.spot.io/).  For new administrators with no existing tenants, their initial login will automatically log them into the new tenant workflow.
 
 The Onboarding workflow can be accessed by clicking "+ Add New Tenant" from the Spot PC Dashboard.
 
