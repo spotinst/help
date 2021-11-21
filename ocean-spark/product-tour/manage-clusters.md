@@ -21,7 +21,7 @@ Cluster Name: The user-given name of the cluster. A colored icon next to the clu
 
 ## View Cluster Details
 
-To get detailed information, statistics, and operational information about a cluster, click on the Cluster Name. This will open the [Cluster Overview](ocean-spark/product-tour/manage-clusters) tab for that cluster which serves as your operational dashboard for the cluster.
+To get detailed information, statistics, and operational information about a cluster, click on the Cluster Name. This will open the [Cluster Overview](ocean-spark/product-tour/view-cluster-details) tab for that cluster which serves as your operational dashboard for the cluster.
 
 ## Filter Cluster List
 
@@ -41,4 +41,4 @@ To disconnect a cluster you don’t need any more, do the following:
 
 ## What’s Next?
 
-Learn how to get detailed cluster statistics and trends in the [Cluster Overview](ocean-spark/product-tour/manage-clusters) tab.
+Learn how to get detailed cluster statistics and trends in the [Cluster Overview](ocean-spark/product-tour/view-cluster-details) tab.
