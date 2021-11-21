@@ -1842,11 +1842,116 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-spark/configure-spark-apps/access-your-data"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/ocean-spark/configure-spark-apps/common-spark-configs</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-spark/configure-spark-apps/common-spark-configs"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-spark/configure-spark-apps/common-spark-configs"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/ocean-spark/configure-spark-apps/docker-images</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-spark/configure-spark-apps/docker-images"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-spark/configure-spark-apps/docker-images"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/ocean-spark/configure-spark-apps/memory-&amp;-cores</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-spark/configure-spark-apps/memory-&amp;-cores"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-spark/configure-spark-apps/memory-&amp;-cores"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/ocean-spark/configure-spark-apps/mount-volumes</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-spark/configure-spark-apps/mount-volumes"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-spark/configure-spark-apps/mount-volumes"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/ocean-spark/configure-spark-apps/package-spark-code</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-spark/configure-spark-apps/package-spark-code"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-spark/configure-spark-apps/package-spark-code"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/ocean-spark/configure-spark-apps/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-spark/configure-spark-apps/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-spark/configure-spark-apps/"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/ocean-spark/configure-spark-apps/secrets-environment-variables</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-spark/configure-spark-apps/secrets-environment-variables"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-spark/configure-spark-apps/secrets-environment-variables"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/ocean-spark/getting-started/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-spark/getting-started/"/>
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-spark/getting-started/"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/ocean-spark/product-tour/analyze-costs</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-spark/product-tour/analyze-costs"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-spark/product-tour/analyze-costs"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/ocean-spark/product-tour/manage-clusters</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-spark/product-tour/manage-clusters"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-spark/product-tour/manage-clusters"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/ocean-spark/product-tour/monitor-applications</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-spark/product-tour/monitor-applications"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-spark/product-tour/monitor-applications"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/ocean-spark/product-tour/monitor-jobs</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-spark/product-tour/monitor-jobs"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-spark/product-tour/monitor-jobs"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/ocean-spark/product-tour/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-spark/product-tour/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-spark/product-tour/"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/ocean-spark/product-tour/view-application-details</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-spark/product-tour/view-application-details"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-spark/product-tour/view-application-details"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/ocean-spark/product-tour/view-cluster-details</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-spark/product-tour/view-cluster-details"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-spark/product-tour/view-cluster-details"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/ocean-spark/product-tour/view-job-details</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-spark/product-tour/view-job-details"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-spark/product-tour/view-job-details"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/ocean-spark/</loc>
