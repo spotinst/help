@@ -51,4 +51,4 @@ Click the Spark Issues tab to see a list of all the issues with error messages. 
 
 ## What’s Next?
 
-Learn more about monitoring jobs.
+Learn more about [monitoring jobs](ocean-spark/product-tour/monitor-jobs).
