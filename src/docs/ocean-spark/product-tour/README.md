@@ -34,4 +34,5 @@ A job belongs to a specific cluster, but the main Jobs dashboard gives you visib
 
 ## What’s Next?
 
-[Get started](ocean-spark/getting-started/) with your first cluster in Ocean for Apache Spark.
+- Continue the Product Tour and learn how to [manage your clusters](ocean-spark/product-tour/manage-clusters).
+- [Get started](ocean-spark/getting-started/) with your first cluster in Ocean for Apache Spark.
