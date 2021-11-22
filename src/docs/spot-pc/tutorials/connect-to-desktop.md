@@ -6,7 +6,7 @@ As the end user, you have many options for how to connect to your Spot PC deskto
 
 End user prerequisites are documented [here.](spot-pc/getting-started/prerequisites/end-user-prerequisites)
 
-## Connection Methods
+## Available Clients
 Most devices have a specific AVD client built to optimize your experience.  This client application can be acquired from Microsoft and installed by you or your IT administrator.
 
 * **Windows**
