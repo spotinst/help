@@ -20,6 +20,7 @@ After installing the application, add your Spot PC workspace as documented here:
 NOTE: When asked, enter **https<area>://rdweb.wvd.microsoft.com/api/arm/feeddiscovery** as the workspace URL.
 
 **MacOS**
+
 Install the client application form the [Mac App Store.](https://apps.apple.com/app/microsoft-remote-desktop/id1295203466?mt=12)
 
 After installing the application, add your Spot PC workspace as [documented here.](https://docs.microsoft.com/en-us/azure/virtual-desktop/user-documentation/connect-macos#subscribe-to-a-feed)
@@ -27,6 +28,7 @@ After installing the application, add your Spot PC workspace as [documented here
 NOTE: When asked, enter **https<area>://rdweb.wvd.microsoft.com/api/arm/feeddiscovery** as the workspace URL.
 
 **iOS**
+
 Install the iOS client app from the Apple [App Store.](https://aka.ms/rdios)
 
 After installing the application, add your Spot PC workspace as [documented here.](https://docs.microsoft.com/en-us/azure/virtual-desktop/user-documentation/connect-ios#subscribe-to-a-feed)
@@ -34,6 +36,7 @@ After installing the application, add your Spot PC workspace as [documented here
 NOTE: When asked, enter **https<area>://rdweb.wvd.microsoft.com/api/arm/feeddiscovery** as the workspace URL.
 
 **Android**
+
 Install the Android client app from [Google Play.](https://play.google.com/store/apps/details?id=com.microsoft.rdc.androidx)
 
 After installing the application, add your Spot PC workspace as [documented here.](https://docs.microsoft.com/en-us/azure/virtual-desktop/user-documentation/connect-android#subscribe-to-a-feed)
@@ -45,6 +48,7 @@ NOTE: When asked, enter **https<area>://rdweb.wvd.microsoft.com/api/arm/feeddisc
 Any modern web browser (with HTML5 support) should be able to open the web client provided by Microsoft at: https://rdweb.wvd.microsoft.com/arm/webclient
 
 **Thin Clients**
+
 Several 3rd-parties have created thin client devices that support the Spot PC desktop.  
 
 A list of the supported vendors is maintained by Microsoft at: https://docs.microsoft.com/en-us/azure/virtual-desktop/user-documentation/linux-overview
