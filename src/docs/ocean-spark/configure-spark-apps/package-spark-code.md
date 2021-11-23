@@ -309,3 +309,7 @@ https://repo1.maven.org/maven2/org/influxdb/influxdb-java/2.14/influxdb-java-2.1
 ```
 
 </details><br>
+
+## What's Next?
+
+Learn more about [memory and cores](ocean-spark/configure-spark-apps/memory-&-cores).
