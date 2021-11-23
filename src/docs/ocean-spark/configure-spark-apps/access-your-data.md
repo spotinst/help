@@ -86,12 +86,12 @@ Finally, configure the Ocean Virtual Node Group (VNG) of your Ocean Spark cluste
 3. Search the roles you created above and open it.
 4. Collect the name of the instance profile you associated with the role.
 
-[CAPTURE]
+<img src="/ocean-spark/_media/configure-spark-apps-access-your-data-01.png" />
 
 5. In the [Spot console](https://console.spotinst.com/), navigate to the [configuration of the VNG](ocean/tutorials/manage-virtual-node-groups?id=view-vngs) used in your Ocean Spark cluster.
 6. Configure the VNG to use the instance profile that you noted down above
 
-[CAPTURE]
+<img src="/ocean-spark/_media/configure-spark-apps-access-your-data-02.png" />
 
 The Spark application will now be able to access the S3 bucket specified in the IAM policy you created.
 
