@@ -13,6 +13,8 @@ The following Remote Desktop clients support Azure Virtual Desktop:
 * [Thin Clients](https://docs.microsoft.com/en-us/azure/virtual-desktop/user-documentation/linux-overview)
 * [Android Client](https://docs.microsoft.com/en-us/azure/virtual-desktop/user-documentation/connect-android)
 
+More details on AVD clients and Spot PC can be found [here](spot-pc/tutorials/connect-to-desktop).
+
 ## Outbound URL Safelist
 The Remote Desktop clients must have access to the following URLs:
 
