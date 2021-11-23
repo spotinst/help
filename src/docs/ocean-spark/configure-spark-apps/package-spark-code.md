@@ -5,8 +5,8 @@
 In this page, we describe how to package your Spark code so that it can be run on an Ocean Spark cluster.
 
 There are two options available:
-- Build a Docker image containing your source code and push it to a Docker registry.
-- Upload your source code to an object storage.
+- Add your code to a Docker image
+- Host your code on an object storage
 
 > **Tip**: You need to call spark.stop() at the end of your application code, where spark can be your Spark session or Spark context. Otherwise your application may keep running indefinitely.
 
@@ -177,7 +177,7 @@ curl -X POST \
 
 In this section, you will learn how to package your code, upload it to an object storage, and make it accessible to an Ocean Spark cluster.
 
-> **Tip**: If possible, use [Building a Docker image]() containing your source code. It is more robust and more convenient, especially for Python.
+> **Tip**: If possible, use [Building a Docker image](ocean-spark/configure-spark-apps/package-spark-code?id=build-a-docker-image-and-run-it-locally) containing your source code. It is more robust and more convenient, especially for Python.
 
 <details>
   <summary markdown="span">Python</summary>
@@ -216,7 +216,7 @@ Zip your project source files from the global package src. This package will be 
 
 Zip the src global package:
 
-```zip -r ./src.zip ./src```
+`zip -r ./src.zip ./src`
 
 All your sources modules/packages are now zipped into a src.zip file.
 
@@ -269,7 +269,9 @@ You can access the Ocean Spark console in order to monitor your Spark applicatio
 The procedure is simpler for JVM-based languages, as Spark has been designed with these in mind.
 Once your application is compiled, upload it to your cloud storage:
 
-```aws s3 cp <main-jar>.jar s3://<s3-folder>/<main-jar>.jar```
+```
+aws s3 cp <main-jar>.jar s3://<s3-folder>/<main-jar>.jar
+```
 
 Reference your JAR (and its dependencies if it has any) in the configuration of your Spark application:
 
@@ -302,6 +304,8 @@ You can access the [Ocean Spark console]() in order to monitor your Spark applic
 
 If you need to import a dependency directly from a repository like Maven, the `deps->jars` list accepts URLs, like:
 
-```https://repo1.maven.org/maven2/org/influxdb/influxdb-java/2.14/influxdb-java-2.14.jar```
+```
+https://repo1.maven.org/maven2/org/influxdb/influxdb-java/2.14/influxdb-java-2.14.jar
+```
 
 </details><br>
