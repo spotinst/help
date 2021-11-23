@@ -117,8 +117,10 @@ This complex command can be found in the AWS console by clicking the "View push 
 
 3. You can now re-tag the Docker image we built above and push it to the ECR repository:
 
-```docker tag my-app:dev <account-id>.dkr.ecr.<region>.amazonaws.com/my-app:dev
-docker push <account-id>.dkr.ecr.<region>.amazonaws.com/my-app:dev```
+```
+docker tag my-app:dev <account-id>.dkr.ecr.<region>.amazonaws.com/my-app:dev
+docker push <account-id>.dkr.ecr.<region>.amazonaws.com/my-app:dev
+```
 
 Please refer to the [AWS documentation about ECR](https://docs.aws.amazon.com/AmazonECR/latest/userguide/docker-push-ecr-image.html) in case of issue.
 
