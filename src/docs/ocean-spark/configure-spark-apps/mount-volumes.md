@@ -60,7 +60,7 @@ If you `kubectl exec` into one of the executor pods, you will find the `secrets.
 
 ## Mount persistent cloud volumes to your container
 
-For larger volume needs, sharing volumes across applications, or persisting data beyond an application's lifecycle, you can mount a cloud provider volume to your container. Instead of passing in a mount path, find the appropriate key for the cloud volume of your choice, and add the necessary data to the object. You can find the full list of supported volume options in the API reference for submitting applications.
+For larger volume needs, sharing volumes across applications, or persisting data beyond an application's lifecycle, you can mount a cloud provider volume to your container. Instead of passing in a mount path, find the appropriate key for the cloud volume of your choice, and add the necessary data to the object. You can find the full list of supported volume options in the [API reference](https://docs.spot.io/api/#operation/OceanSparkClusterApplicationSubmit) for submitting applications.
 
 To enable volume mounting, you must first create the volume instance in your respective cloud provider. Then, you must make sure your cluster role has read/write access to the volume.
 
