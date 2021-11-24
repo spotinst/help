@@ -2,13 +2,13 @@
 
 # Configure Spark Applications
 
-This section shows you how to configure critical aspects of your Spark applications, such as how to control permissions to access data, how to package your code (and install libraries), how to configure the size of your Spark containers, and more.
+This section shows you how to configure critical aspects of your Spark applications, such as how to control permissions to [access data](ocean-spark/configure-spark-apps/access-your-data), how to [package your code](ocean-spark/configure-spark-apps/package-spark-code) (and install libraries), how to configure the size of your Spark containers, and more.
 
 Before diving into these topics, it is important to realize that the final configuration of a Spark application is the result of applying multiple levels of configuration inputs.
 
 ### Level 1: Config Overrides
 
-This is an application-specific configuration that you specify directly in your API request. This source of input takes absolute preference.
+This is an application-specific configuration that you specify directly in your [API request](https://docs.spot.io/api/#operation/OceanSparkClusterApplicationSubmit). This source of input takes absolute preference.
 
 ### Level 2: Auto-tuning
 
@@ -39,10 +39,10 @@ curl -X POST \
 ```
 
 Config overrides have higher precedence than all other sources of configuration. As a result, they are useful:
-- To specify arguments that change at every execution of your Spark job. For example, if you have an ETL pipeline processing data for a specific date, you should pass this date using config overrides.
+- To specify arguments that change at every execution of your [Spark job](ocean-spark/product-tour/monitor-jobs). For example, if you have an ETL pipeline processing data for a specific date, you should pass this date using config overrides.
 - To forcefully ensure a specific configuration is applied (so that it cannot be changed by auto-tuning or a configuration template). For example, you may have a technical reason to force Spark to use a certain codec for compression.
 
-All other configurations are better placed in the configuration templates. To know more about all the configurations you can set, check out the API reference.
+All other configurations are better placed in the configuration templates. To know more about all the configurations you can set, check out the [API reference](https://docs.spot.io/api/#operation/OceanSparkClusterApplicationSubmit).
 
 ## Configuration Templates
 
@@ -52,14 +52,14 @@ Following the example above, we'll use a configuration template to store stable 
 
 There are two ways you can manage the configuration templates in your deployment: through the Spot Console or through the API.
 
-Spot Console
-API
+<details>
+  <summary markdown="span">Spot Console</summary>
 
 To manage your configuration templates in the Spot console, go to Ocean for Spark in the menu tree and click Configuration Templates. You should see your current list of configuration templates.
 
+<img src="/ocean-spark/_media/configure-spark-applications-01.png" />
 
-
-Click on "New Template" in the upper right corner and create a configuration template called my-template with the following content:
+Click on "New Template" in the upper right corner and create a configuration template called `my-template` with the following content:
 
 ```yaml
 {
@@ -67,15 +67,17 @@ Click on "New Template" in the upper right corner and create a configuration tem
 }
 ```
 
-To know more about the all configurations you can set in a template, check out the API reference.
+To know more about the all configurations you can set in a template, check out the [API reference](https://docs.spot.io/api/#operation/OceanSparkClusterApplicationSubmit).
 
+</details><br>
 
-Spot Console
-API
+<details>
+  <summary markdown="span">API</summary>
 
 The API routes under `https://api.spotinst.io/ocean/spark/cluster/{your-cluster-id}/configTemplate` let you manage configuration templates as a REST resource.
 
-To know more about the API routes and parameters, check out the API reference.
+To know more about the API routes and parameters, check out the [API reference](https://docs.spot.io/api/#tag/Ocean-Spark).
+
 The following command creates a configuration template with the ID my-template containing this block of Spark application configuration:
 
 ```yaml
@@ -90,6 +92,8 @@ curl -X POST \
    }
 }'
 ```
+
+</details>
 
 The configuration template can now be used as a kernel for a Jupyter notebook or referenced when submitting a Spark application using the field `configTemplateId`:
 
@@ -140,4 +144,4 @@ We recommend that you put all performance parameters in a configuration template
 
 ## What’s Next?
 
-Learn more about how to access your data.
+Learn more about how to [access your data](ocean-spark/configure-spark-apps/access-your-data).
