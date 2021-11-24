@@ -59,7 +59,7 @@ This is how you can retrieve environment variables in your Spark application cod
 <details>
   <summary markdown="span">Python</summary>
 
-```python
+```Python
 import os
 env_vars = os.environ # Dictionary of key-value pairs
 value = os.environ['ENV_VAR_KEY'] # ENV_VAR_VALUE
@@ -69,7 +69,7 @@ value = os.environ['ENV_VAR_KEY'] # ENV_VAR_VALUE
 <details>
   <summary markdown="span">Java and Scala</summary>
 
-```java
+```Java
 val envVars = System.getEnv() // Map[String, String] of key-value pairs
 val value = System.getEnv("ENV_VAR_KEY") // ENV_VAR_VALUE
 ```
