@@ -33,7 +33,7 @@ You can create a new Ocean Spark cluster from scratch, or import an existing AWS
 
 To create a new Ocean Spark cluster, enter the following command:
 
-  '$ spotctl ocean spark create cluster --region $YOUR_REGION --cluster-name $SOME_NAME`
+`$ spotctl ocean spark create cluster --region $YOUR_REGION --cluster-name $SOME_NAME`
 
 The `--cluster-name` argument is optional. A name will be generated for you if you omit it.
 
@@ -68,7 +68,7 @@ Once the cluster has been created, your kubectl installation will have been auto
 
 ## Run Your First App
 
-###Prerequisites
+### Prerequisites
 
 To run your first app, you will need to have:
 - The Ocean Spark cluster ID of the cluster you just created (of the format osc-e4089a00). You can find this in the console in the [list of clusters](ocean-spark/product-tour/manage-clusters), or by using the Get Cluster List in the API.
