@@ -112,9 +112,9 @@ See the release notes below to learn about the changes introduced by each versio
 
 These images are also published on a [public Dockerhub repository](https://hub.docker.com/r/datamechanics/spark). It is not recommended to pull images directly from Dockerhub in production (it’s best to use our [GCR](https://gcr.io/datamechanics/spark) repository instead) as free users of DockerHub are subject to rate-limiting.
 
-## Data Mechanics Docker images release notes
+## Docker image release notes
 
-Data Mechanics regularly updates its publicly available Docker images for Spark. This section contains the release notes of those images, indicating what changed in each version.
+Ocean Spark regularly updates its publicly available Docker images for Spark. This section contains the release notes of those images, indicating what changed in each version.
 
 ### Release dm15 (latest)
 - Add new images with Spark 3.2.0 and Hadoop 3.3.1
