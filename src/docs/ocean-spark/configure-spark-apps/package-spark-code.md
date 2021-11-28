@@ -1,5 +1,3 @@
-<meta name="robots" content="noindex">
-
 # Package Spark Code
 
 In this page, we describe how to package your Spark code so that it can be run on an Ocean Spark cluster.
@@ -22,7 +20,7 @@ You must have [Docker](https://www.docker.com/get-started) installed on your mac
 
 For compatibility reasons, you must use one of our published Docker images as a base, then add your dependencies on top. Building an entirely custom Docker image is not supported.
 
-[Docker images](https://gcr.io/datamechanics/spark) are offered by Ocean Spark and documented in the [user documentation](ocean-spark/configure-spark-apps/docker-Images).
+[Docker images](https://gcr.io/datamechanics/spark) are offered by Ocean Spark and documented in the [user documentation](ocean-spark/configure-spark-apps/docker-images).
 
 <details>
   <summary markdown="span">Python</summary>

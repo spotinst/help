@@ -1,5 +1,3 @@
-<meta name="robots" content="noindex">
-
 # Docker Images
 
 Ocean Spark maintains a popular fleet of Docker images for Apache Spark.
@@ -29,7 +27,7 @@ When submitting Spark apps on Ocean for Apache Spark, you can:
 
 ### Need another image?
 
-To match different dependencies and version requirements you can find more images at https://gcr.io/datamechanics/spark:platform.
+To match different dependencies and version requirements you can find more images in our [Docker registry](https://gcr.io/datamechanics/spark:platform).
 
 All these dependencies can have different versions. A combination of dependency versions is called a flavor of spark:platform in this page. The image tag indicates the flavor of the image and can be adjusted to fit your needs.Here are two examples of image tags:
 
@@ -40,9 +38,9 @@ gcr.io/datamechanics/spark:platform-3.2.0-hadoop-3.3.1-java-8-scala-2.12-python-
 
 ### Need to build your own Image?
 
-You should use one of the spark:platform images as a base. Once your custom image is in your local docker repository you have to Tag and Push it, see [Set up a Docker registry](ocean-spark/configure-spark-apps/package-spark-code) and push your image.
+You should use one of the spark:platform images as a base. Once your custom image is in your local docker repository you have to Tag and Push it, see [Set up a Docker registry](ocean-spark/configure-spark-apps/package-spark-code?id=set-up-a-docker-registry-and-push-your-image) and push your image.
 
-## Data sources connectors
+## Data source connectors
 
 The image tages `gcr.io/datamechanics/spark:platform` supports for the following data sources:
 - AWS S3 (s3a:// scheme)
@@ -75,7 +73,7 @@ delta-core_2.12-0.7.0.jar
 
 ## Python support
 
-The image tag `gcr.io/datamechanics/spark:platform` supports Pyspark applications. When [building a custom image](https://docs.spot.io/ocean-spark/configure-spark-apps/package-spark-code) or working from a notebook, additional Python packages can be installed with pip or conda.
+The image tag `gcr.io/datamechanics/spark:platform` supports Pyspark applications. When [building a custom image](ocean-spark/configure-spark-apps/package-spark-code) or working from a notebook, additional Python packages can be installed with pip or conda.
 
 ## Image tags and flavors
 
@@ -89,7 +87,7 @@ Spark Docker images for multiple combinations of the versions of the dependencie
 | Scala | 2.11 and 2.12 |
 | Python | 2.7 to 3.8 |
 
-Note that not all the combinations in the matrix exist. To list all the flavors for a given image, check out our Docker registry at https://gcr.io/datamechanics/spark:platform.
+Note that not all the combinations in the matrix exist. To list all the flavors for a given image, check out our [Docker registry](https://gcr.io/datamechanics/spark:platform).
 
 There are both long-form tags (like `gcr.io/datamechanics/spark:platform-3.1.1-java-8-scala-2.12-hadoop-3.2.0-python-3.8-latest`) where all versions are explicitly listed, as well as short-form tags (like `gcr.io/datamechanics/spark:platform-3.1-latest`).
 
