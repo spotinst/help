@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Cost Analysis
 
 Wave provides full visibility into the cost of your wave cluster, including a cost analysis over time per Spark application, a detailed cost drill down on each application, and your total cost for the Wave cluster.
