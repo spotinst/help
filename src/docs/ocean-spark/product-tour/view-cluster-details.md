@@ -17,7 +17,7 @@ The Cluster page opens with the Overview tab open and the cluster name at the to
 - Failing - A critical cluster component is unhealthy.
 - Unknown - The cluster status API has an unexpected, internal error.
 
-<img src="/ocean-spark/_media/tutorials-clusters-01-1.png" />
+<img src="/ocean-spark/_media/tutorials-clusters-01-1.png" width="642" height="63" />
 
 The Cluster Overview includes the following main areas:
 - Metrics
