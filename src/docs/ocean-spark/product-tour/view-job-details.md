@@ -1,5 +1,3 @@
-<meta name="robots" content="noindex">
-
 # View Job Details
 
 To drill down into the details about your Ocean for Apache Spark job, start with the Overview tab, which gives you quick access to insights and summary data about the job. You can obtain an overview of your cost trend and other related trends, job analytics, and status of applications relevant to this job.
