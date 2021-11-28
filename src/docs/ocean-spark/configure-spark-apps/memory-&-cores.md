@@ -1,5 +1,3 @@
-<meta name="robots" content="noindex">
-
 # Memory and Cores
 
 This page describes how to configure your Spark pod sizes and select the instances on which they run.
