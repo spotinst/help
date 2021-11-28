@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Wave
 
 Using Wave, you can automate infrastructure provisioning, management, and scaling for big data cloud environments. Wave simplifies and automates cloud infrastructure for Spark running on Kubernetes.
