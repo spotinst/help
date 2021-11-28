@@ -1,5 +1,3 @@
-<meta name="robots" content="noindex">
-
 # Monitor Jobs
 
 Ocean for Apache Spark (also referred to as Ocean Spark) defines “jobs” as a logical grouping of applications. You decide on this grouping by providing a job identifier (job-id) when you submit a Spark application to our REST API.
