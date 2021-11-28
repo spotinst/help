@@ -1,5 +1,3 @@
-<meta name="robots" content="noindex">
-
 # Get Started with Ocean for Apache Spark
 
 The Ocean for Apache Spark (also referred to as Ocean Spark) environment includes the Ocean Spark components installed in a Kubernetes cluster integrated with Spot Ocean. The cluster creation and deployment of the whole stack is really simple using the *spotctl* command-line tool.
@@ -74,7 +72,7 @@ To run your first app, you will need to have:
 - The Ocean Spark cluster ID of the cluster you just created (of the format osc-e4089a00). You can find this in the console in the [list of clusters](ocean-spark/product-tour/manage-clusters), or by using the Get Cluster List in the API.
 - A [Spot token](administration/api/create-api-token) to interact with [Spot API](https://docs.spot.io/api/).
 
-Using the [Ocean Spark API](https://api.spotinst.io/ocean/spark/), you can run, configure, and monitor applications using the different endpoints available.
+Using the [Ocean Spark API](https://docs.spot.io/api/#tag/Ocean-Spark), you can run, configure, and monitor applications using the different endpoints available.
 
 To know more about the API endpoints and parameters, check out the API reference.
 
