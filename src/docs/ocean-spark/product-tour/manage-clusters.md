@@ -1,5 +1,3 @@
-<meta name="robots" content="noindex">
-
 # Manage Clusters
 
 Ocean for Apache Spark (also referred to as Ocean Spark) enables you to see an overview of all your Ocean Spark clusters, get status at a glance, perform tasks such as adding and removing clusters, and drill down to more detailed cluster information when you need to.
