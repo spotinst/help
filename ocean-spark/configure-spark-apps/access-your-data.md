@@ -1,5 +1,3 @@
-<meta name="robots" content="noindex">
-
 # Access Your Data
 
 This page shows how to run your own code and access data hosted in your cloud account. It assumes that you know how to [run a Spark application](ocean-spark/getting-started/?id=run-your-first-app) on Ocean for Apache Spark.
@@ -86,12 +84,12 @@ Finally, configure the Ocean Virtual Node Group (VNG) of your Ocean Spark cluste
 3. Search the roles you created above and open it.
 4. Collect the name of the instance profile you associated with the role.
 
-<img src="/ocean-spark/_media/configure-spark-apps-access-your-data-01.png" />
+<img src="/ocean-spark/_media/configure-spark-apps-access-your-data-01.png" width="710" height="195" />
 
 5. In the [Spot console](https://console.spotinst.com/), navigate to the [configuration of the VNG](ocean/tutorials/manage-virtual-node-groups?id=view-vngs) used in your Ocean Spark cluster.
 6. Configure the VNG to use the instance profile that you noted down above
 
-<img src="/ocean-spark/_media/configure-spark-apps-access-your-data-02.png" />
+<img src="/ocean-spark/_media/configure-spark-apps-access-your-data-02.png" width="508" height="636" />
 
 The Spark application will now be able to access the S3 bucket specified in the IAM policy you created.
 
