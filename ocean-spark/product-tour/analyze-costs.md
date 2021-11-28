@@ -1,5 +1,3 @@
-<meta name="robots" content="noindex">
-
 # Analyze Costs
 
 Ocean for Apache Spark (Ocean Spark) provides full visibility into the cost of your Ocean Spark cluster, including a cost analysis over time per Spark application, a detailed cost drill-down on each application, and your total cost for the cluster.

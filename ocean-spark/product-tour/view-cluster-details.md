@@ -1,5 +1,3 @@
-<meta name="robots" content="noindex">
-
 # View Cluster Details
 
 To drill down into the details about your Ocean for Apache Spark cluster, start with the Overview tab, which gives you quick access to insights and summary data over the entire cluster. You can obtain an overview of your current cost, efficiency status, detailed cluster information, a Spark application overview, and tracking of cluster analytics. You can view more details about the cluster in additional tabs including a [cost analysis](ocean-spark/product-tour/analyze-costs) and the [Ocean Controller logs](ocean-spark/product-tour/view-cluster-details?id=view-ocean-controller-log).
@@ -19,7 +17,7 @@ The Cluster page opens with the Overview tab open and the cluster name at the to
 - Failing - A critical cluster component is unhealthy.
 - Unknown - The cluster status API has an unexpected, internal error.
 
-[CAPTURE HERE]
+<img src="/ocean-spark/_media/tutorials-clusters-01-1.png" />
 
 The Cluster Overview includes the following main areas:
 - Metrics

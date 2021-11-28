@@ -1,5 +1,3 @@
-<meta name="robots" content="noindex">
-
 # Monitor Applications
 
 Ocean for Apache Spark (also referred to as Ocean Spark) enables you to see an overview of all your Spark applications, get status at a glance, drill down to more detailed application information, and kill your application when you need to.
