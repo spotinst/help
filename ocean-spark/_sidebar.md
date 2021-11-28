@@ -1,0 +1,21 @@
+<!-- Table of Contents -->
+
+- <a href="/" class="sidebar-home"><i data-feather="arrow-left" class="sidebar-back-icon"></i>Back to Main Tree</a>
+- [Ocean for Apache Spark](ocean-spark/)
+  - [Getting Started](ocean-spark/getting-started/)
+  - [Product Tour](ocean-spark/product-tour/)
+    - [Manage Clusters](ocean-spark/product-tour/manage-clusters)
+    - [View Cluster Details](ocean-spark/product-tour/view-cluster-details)
+    - [Analyze Costs](ocean-spark/product-tour/analyze-costs)
+    - [Monitor Applications](ocean-spark/product-tour/monitor-applications)
+    - [View Application Details](ocean-spark/product-tour/view-application-details)
+    - [Monitor Jobs](ocean-spark/product-tour/monitor-jobs)
+    - [View Job Details](ocean-spark/product-tour/view-job-details)
+  - [Configure Spark Applications](ocean-spark/configure-spark-apps/)
+    - [Access Your Data](cean-spark/configure-spark-apps/access-your-data)
+    - [Package Spark Code](ocean-spark/configure-spark-apps/package-spark-code)
+    - [Memory & Cores](ocean-spark/configure-spark-apps/memory-&-cores)
+    - [Common Spark Configurations](ocean-spark/configure-spark-apps/common-spark-configs)
+    - [Secrets & Environment Variables](ocean-spark/configure-spark-apps/secrets-environment-variables)
+    - [Docker Images](ocean-spark/configure-spark-apps/docker-images)
+    - [Mount Volumes](ocean-spark/configure-spark-apps/mount-volumes)
