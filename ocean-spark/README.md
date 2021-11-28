@@ -1,4 +1,4 @@
-# Ocean for Apache Spark Overview
+# Ocean for Apache Spark
 
 Ocean for Apache Spark (also referred to in the user documentation as Ocean Spark) is a managed cloud-native Spark platform that can be deployed in your cloud account. As of December 2021, Ocean Spark is available on AWS and is an alternative to managed services like Databricks, EMR, Google Dataproc, Azure HDInsight, or DIY Spark infrastructures.
 

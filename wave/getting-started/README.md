@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Get Started with Wave
 
 The Wave environment includes the Wave components installed in a Kubernetes cluster integrated with Spot Ocean. The cluster creation and deployment of the whole stack is really simple using the spotctl command-line tool.

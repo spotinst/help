@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Wave Cluster Overview
 
 The Wave Cluster Overview tab gives you quick access to insights and summary data over the entire cluster. You can obtain an overview of your current cost efficiency status, detailed cluster information, a Spark application overview, and tracking of cluster analytics.
