@@ -1,5 +1,3 @@
-<meta name="robots" content="noindex">
-
 # View Application Details
 
 To drill down into the details about your Ocean for Apache Spark application, start with the Overview tab, which gives you quick access to insights and summary data about the application. You can obtain an overview of your current cost, efficiency status, app metrics, and access to logs. You can view more details about the app in additional tabs including its [configuration](ocean-spark/product-tour/view-application-details?id=view-configuration) and a listing of [Spark issues](ocean-spark/product-tour/view-application-details?id=view-spark-issues).
