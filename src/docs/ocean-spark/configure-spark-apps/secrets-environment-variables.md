@@ -1,12 +1,10 @@
-<meta name="robots" content="noindex">
-
 # Secrets and Environment Variables
 
 This page describes the configuration of secrets and environment variables.
 
 ## Set environment variables
 
-Environment variables can easily be set by inserting the lines below in a [configuration template]() or in [config overrides]():
+Environment variables can easily be set by inserting the lines below in a [configuration template](ocean-spark/configure-spark-apps/?id=configuration-templates) or in [config overrides](ocean-spark/configure-spark-apps/?id=config-overrides):
 
 ```json
 {
@@ -25,7 +23,7 @@ Environment variables can easily be set by inserting the lines below in a [confi
 
 ## Set environment variables using Kubernetes secrets
 
-If you have [defined Kubernetes secrets](ocean-spark/configure-spark-apps/access-your-data), you can pass them to your Spark applications as an environment variable. Merge the following configuration segment into a configuration template or into config overrides:
+If you have [defined Kubernetes secrets](ocean-spark/configure-spark-apps/access-your-data?id=grant-permissions-using-kubernetes-secrets), you can pass them to your Spark applications as an environment variable. Merge the following configuration segment into a configuration template or into config overrides:
 
 ```json
 {
@@ -59,7 +57,7 @@ This is how you can retrieve environment variables in your Spark application cod
 <details>
   <summary markdown="span">Python</summary>
 
-```Python
+```python
 import os
 env_vars = os.environ # Dictionary of key-value pairs
 value = os.environ['ENV_VAR_KEY'] # ENV_VAR_VALUE
@@ -69,7 +67,7 @@ value = os.environ['ENV_VAR_KEY'] # ENV_VAR_VALUE
 <details>
   <summary markdown="span">Java and Scala</summary>
 
-```Java
+```java
 val envVars = System.getEnv() // Map[String, String] of key-value pairs
 val value = System.getEnv("ENV_VAR_KEY") // ENV_VAR_VALUE
 ```
