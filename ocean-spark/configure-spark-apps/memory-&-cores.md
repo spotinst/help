@@ -1,5 +1,3 @@
-<meta name="robots" content="noindex">
-
 # Memory and Cores
 
 This page describes how to configure your Spark pod sizes and select the instances on which they run.
@@ -105,7 +103,7 @@ If you'd like to investigate some of these configurations further, the official 
 
 If your Spark Driver or Executors are abruptly terminated with a Docker exit code 137, it means that the memory used by the processes running inside your containers have exceeded the memory limit controlled by Kubernetes. This is known as an OOM-Kill (OutOfMemory-kill).
 
-<img src="/ocean-spark/_media/configure-spark-apps-memory-&-cores-01.png" />
+<img src="/ocean-spark/_media/configure-spark-apps-memory-&-cores-01.png" width="612" height="233" />
 
 A common situation when this can occur is when you use PySpark because some of your code will be executed by Python processes (1 per core) running inside your container (alongside the main Spark executor JVM process).
 

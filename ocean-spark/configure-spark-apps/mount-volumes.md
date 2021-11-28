@@ -1,5 +1,3 @@
-<meta name="robots" content="noindex">
-
 # Mount Volumes
 
 This page shows how to add volumes to your Spark applications.
@@ -14,7 +12,7 @@ By default, if you select a node type that includes scalable block storage, such
 
 ## Mount secrets as files in volumes
 
-Instead of setting environment variables from [kubernetes secrets](ocean-spark/configure-spark-apps/secrets-environment-variables), you can also mount secrets directly as files into a volume.
+Instead of setting environment variables from [Kubernetes secrets](ocean-spark/configure-spark-apps/secrets-environment-variables), you can also mount secrets directly as files into a volume.
 
 First, create a kubernetes secret in your cluster, and make sure to use the namespace spark-apps so your application can access it. Here is an example basic-auth secret below:
 
