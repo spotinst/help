@@ -1,5 +1,3 @@
-<meta name="robots" content="noindex">
-
 # Configure Spark Applications
 
 This section shows you how to configure critical aspects of your Spark applications, such as how to control permissions to [access data](ocean-spark/configure-spark-apps/access-your-data), how to [package your code](ocean-spark/configure-spark-apps/package-spark-code) (and install libraries), how to configure the size of your Spark containers, and more.
