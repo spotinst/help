@@ -1,5 +1,3 @@
-<meta name="robots" content="noindex">
-
 # Product Tour
 
 This section takes you through a tour of the main pages of Ocean for Apache Spark (also referred to as Ocean Spark): Clusters, Applications, and Jobs. Let’s first define these major concepts.
@@ -22,7 +20,7 @@ Even if you have multiple clusters (hosted in the same cloud account), Ocean for
 
 ## Jobs
 
-A [Spark job](ocean-spark/product-tour/monitor-jobs) is a logical grouping of Spark applications which you explicitly define when you submit Spark applications, as the Spark job identifier is a required field in our [REST API](). Applications belonging to the same job are also called executions of the job.
+A [Spark job](https://docs.spot.io/api/#tag/Ocean-Spark) is a logical grouping of Spark applications which you explicitly define when you submit Spark applications, as the Spark job identifier is a required field in our [REST API](). Applications belonging to the same job are also called executions of the job.
 
 For example you could define a job with the ID `daily-etl-ingestion`. This job would be scheduled on a daily basis from Airflow, and then applications within this job could be `daily-etl-ingestion-2022-01-01`, `daily-etl-ingestion-2022-01-02`, `daily-etl-ingestion-2022-01-03`, etc.
 
