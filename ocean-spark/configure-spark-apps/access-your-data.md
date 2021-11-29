@@ -37,41 +37,40 @@ Spark pods running in Kubernetes inherit the permissions of the nodes they run o
 ### Your data is in the same AWS account as the Ocean Spark cluster
 
 To allow the Kubernetes nodes and Spark pods to access your S3 buckets, complete the following steps:
+
 1. Create a data access policy for your S3 buckets.
 2. Create an IAM role and attach the data access policy to it.
 3. Configure the Ocean [Virtual Node Group](ocean/features/launch-specifications) of your Ocean Spark cluster to use the IAM role.
 
 To create a policy for your cluster nodes:
 Sign in to the [IAM console](https://console.aws.amazon.com/iam/) with a user having administrator permissions.
+
 1. In the navigation pane, choose Policies.
 2. In the content pane, choose Create policy.
 3. Choose the JSON tab and define the policy. An example of policy for Kubernetes nodes could be:
 
 ```yaml
 {
-   "Version": "2012-10-17",
-   "Statement": [
-       {
-           "Effect": "Allow",
-           "Action": [
-               "s3:GetBucketLocation",
-               "s3:ListAllMyBuckets"
-           ],
-           "Resource": "arn:aws:s3:::*"
-       },
-       {
-           "Effect": "Allow",
-           "Action": "s3:*",
-           "Resource": [
-               "arn:aws:s3:::<bucket-name>",
-               "arn:aws:s3:::<bucket-name>/*"
-           ]
-       }
-   ]
+  "Version": "2012-10-17",
+  "Statement":
+    [
+      {
+        "Effect": "Allow",
+        "Action": ["s3:GetBucketLocation", "s3:ListAllMyBuckets"],
+        "Resource": "arn:aws:s3:::*",
+      },
+      {
+        "Effect": "Allow",
+        "Action": "s3:*",
+        "Resource":
+          ["arn:aws:s3:::<bucket-name>", "arn:aws:s3:::<bucket-name>/*"],
+      },
+    ],
 }
 ```
 
 Now create an IAM role and attach the policy to it:
+
 1. Sign in to the AWS Management Console and open the IAM console.
 2. In the navigation pane, choose Roles and then click Create role.
 3. Select AWS service as the type of trusted entities, and the EC2. Click Next: Permissions
@@ -79,6 +78,7 @@ Now create an IAM role and attach the policy to it:
 5. Click Next as many times as needed, choose a name for the IAM role, and create it.
 
 Finally, configure the Ocean Virtual Node Group (VNG) of your Ocean Spark cluster to use the IAM role:
+
 1. Sign in to the AWS Management Console and open the IAM console.
 2. In the navigation pane, choose Roles
 3. Search the roles you created above and open it.
@@ -98,24 +98,25 @@ The Spark application will now be able to access the S3 bucket specified in the 
 > **Tip**: This section assumes you are familiar with the previous one, “Your data is in the same AWS account as the Ocean Spark cluster”. The previous section provides more detailed explanations and acts as a tutorial. This section assumes a good knowledge of AWS Identity and Access Management (IAM).
 
 To allow the Kubernetes nodes and Spark pods to access your S3 buckets, complete the following steps:
+
 1. Create an IAM role in the AWS account where the data resides (“data account”). Note down the instance profile associated with this IAM role.
 2. Add the following policy to the IAM role to grant it data access.
 
 ```yaml
 {
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Effect": "Allow",
-            "Action": [
-                "s3:*"
-            ],
-            "Resource": [
-                "arn:aws:s3:::<your data bucket>",
-                "arn:aws:s3:::<your data bucket>/*",
-            ]
-        }
-    ]
+  "Version": "2012-10-17",
+  "Statement":
+    [
+      {
+        "Effect": "Allow",
+        "Action": ["s3:*"],
+        "Resource":
+          [
+            "arn:aws:s3:::<your data bucket>",
+            "arn:aws:s3:::<your data bucket>/*",
+          ],
+      },
+    ],
 }
 ```
 
@@ -125,35 +126,35 @@ To allow the Kubernetes nodes and Spark pods to access your S3 buckets, complete
 ```yaml
 {
   "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Principal": {
-        "AWS": "arn:aws:iam::<cluster account id>:role/<cluster account IAM role name>"
+  "Statement":
+    [
+      {
+        "Effect": "Allow",
+        "Principal":
+          {
+            "AWS": "arn:aws:iam::<cluster account id>:role/<cluster account IAM role name>",
+          },
+        "Action": "sts:AssumeRole",
       },
-      "Action": "sts:AssumeRole"
-    }
-  ]
+    ],
 }
 ```
 
 5. Conversely, in the cluster account, grant the cluster account IAM role the ability to assume the data account IAM role.
 
 ```yaml
- {
+{
   "Version": "2012-10-17",
-  "Statement": [
+  "Statement":
+    [
       {
-          "Sid": "Stmt1487884001000",
-          "Effect": "Allow",
-          "Action": [
-              "sts:AssumeRole"
-          ],
-          "Resource": [
-              "arn:aws:iam::<data account id>:role/<data account IAM role>"
-          ]
-      }
-  ]
+        "Sid": "Stmt1487884001000",
+        "Effect": "Allow",
+        "Action": ["sts:AssumeRole"],
+        "Resource":
+          ["arn:aws:iam::<data account id>:role/<data account IAM role>"],
+      },
+    ],
 }
 ```
 
@@ -163,12 +164,13 @@ To allow the Kubernetes nodes and Spark pods to access your S3 buckets, complete
 
 ```yaml
 {
-  "hadoopConf": {
-    "fs.s3a.stsAssumeRole.arn": "arn:aws:iam::<data account id>:role/<data account IAM role>",
-    "fs.s3a.assumed.role.arn": "arn:aws:iam::<data account id>:role/<data account IAM role>",
-    "fs.s3a.aws.credentials.provider": "org.apache.hadoop.fs.s3a.auth.AssumedRoleCredentialProvider",
-    "fs.s3a.assumed.role.credentials.provider": "org.apache.hadoop.fs.s3a.SimpleAWSCredentialsProvider,com.amazonaws.auth.EnvironmentVariableCredentialsProvider,com.amazonaws.auth.InstanceProfileCredentialsProvider"
-  }
+  "hadoopConf":
+    {
+      "fs.s3a.stsAssumeRole.arn": "arn:aws:iam::<data account id>:role/<data account IAM role>",
+      "fs.s3a.assumed.role.arn": "arn:aws:iam::<data account id>:role/<data account IAM role>",
+      "fs.s3a.aws.credentials.provider": "org.apache.hadoop.fs.s3a.auth.AssumedRoleCredentialProvider",
+      "fs.s3a.assumed.role.credentials.provider": "org.apache.hadoop.fs.s3a.SimpleAWSCredentialsProvider,com.amazonaws.auth.EnvironmentVariableCredentialsProvider,com.amazonaws.auth.InstanceProfileCredentialsProvider",
+    },
 }
 ```
 
@@ -179,6 +181,7 @@ Spark pods can impersonate an IAM user (AWS) when provided with the user’s cre
 To protect those credentials, you will store them in Kubernetes secrets and configure Spark to mount those secrets into all the driver and executor pods as [environment variables](ocean-spark/configure-spark-apps/secrets-environment-variables).
 
 To let your Spark pods access your S3 buckets, complete the following steps:
+
 1. Create a data access policy for your S3 buckets.
 2. Create a user that is granted the data access policy.
 3. Create an access key for the user.
@@ -186,6 +189,7 @@ To let your Spark pods access your S3 buckets, complete the following steps:
 5. Configure Spark to use the Kubernetes secret.
 
 Create a policy for your cluster nodes:
+
 1. Sign in to the [IAM console](https://console.aws.amazon.com/iam/) with a user having administrator permissions.
 2. In the navigation pane, choose Policies.
 3. In the content pane, choose Create policy.
@@ -193,29 +197,26 @@ Create a policy for your cluster nodes:
 
 ```yaml
 {
-   "Version": "2012-10-17",
-   "Statement": [
-       {
-           "Effect": "Allow",
-           "Action": [
-               "s3:GetBucketLocation",
-               "s3:ListAllMyBuckets"
-           ],
-           "Resource": "arn:aws:s3:::*"
-       },
-       {
-           "Effect": "Allow",
-           "Action": "s3:*",
-           "Resource": [
-               "arn:aws:s3:::<bucket-name>",
-               "arn:aws:s3:::<bucket-name>/*"
-           ]
-       }
-   ]
+  "Version": "2012-10-17",
+  "Statement":
+    [
+      {
+        "Effect": "Allow",
+        "Action": ["s3:GetBucketLocation", "s3:ListAllMyBuckets"],
+        "Resource": "arn:aws:s3:::*",
+      },
+      {
+        "Effect": "Allow",
+        "Action": "s3:*",
+        "Resource":
+          ["arn:aws:s3:::<bucket-name>", "arn:aws:s3:::<bucket-name>/*"],
+      },
+    ],
 }
 ```
 
 Create a user having the data access policy:
+
 1. Sign in to the AWS Management Console and open the IAM console .
 2. In the navigation pane, choose Users, and click Add User.
 3. Give it a name and check "Programmatic access".
@@ -225,6 +226,7 @@ Create a user having the data access policy:
 A user with the correct policy is now created.
 
 Create an access key for the user:
+
 1. Sign in to the AWS Management Console and open the IAM console.
 2. In the navigation pane, choose Users, and click on the user you just created.
 3. Go to the "Security credentials" tab and click "Create access key".

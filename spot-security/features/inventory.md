@@ -13,6 +13,7 @@ The default filter or preset on this page is the same filter or preset that you 
 ## Asset Stats
 
 The summary line at the top provide the following information:
+
 - Total Assets: The total number of resources detected within the specified filters or preset at the last scan.
 - Pass: Number of passes of the healthcheck.
 - Fail: Number of failures of the healthcheck.

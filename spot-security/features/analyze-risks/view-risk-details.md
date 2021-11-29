@@ -5,6 +5,7 @@
 The Risk Details page gives you the in-depth picture of a risk, including a risk impact map, affected resources, essential details, and a pathway to remediation.
 
 To access the Risk Details page for a risk, do the following:
+
 1. Go to the [Risk Analysis](spot-security/features/analyze-risks/view-risk-details) page and open the sidebar for the risk.
 2. In the sidebar, click View Affected Risks in the bottom right.
 
@@ -39,5 +40,6 @@ The map at the bottom of the sidebar shows the region of the affected resources.
 ## What’s Next?
 
 Learn more about:
+
 - The [Remediation](spot-security/features/analyze-risks/remediate) actions you can take.
 - Additional [Topology](spot-security/features/topology) views available.

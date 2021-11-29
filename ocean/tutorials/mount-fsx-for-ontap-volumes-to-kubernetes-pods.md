@@ -65,6 +65,7 @@ Deploy Astra Trident using the procedures in [Deploying Trident Operator](https:
 ## Configure the FSx Ontap Filesystem as a backend for Astra Trident
 
 After installing Astra Trident, you will need to create a [backend configuration](https://netapp-trident.readthedocs.io/en/stable-v21.07/kubernetes/operations/tasks/managing-backends/backend-operations.html#handling-backend-operations) for it.
+
 1. Run the following to create the backend-ontap-nas.yaml file.
 
 ```yaml
@@ -100,17 +101,17 @@ EOF
 
 <img src="/ocean/_media/tutorials-mount-fsx-11.png" />
 
-   - dataLIF: Go to the StorageVirutalMachine and search for the Endpoints section.
+- dataLIF: Go to the StorageVirutalMachine and search for the Endpoints section.
 
 <img src="/ocean/_media/tutorials-mount-fsx-12.png" />
 
-   - SVM: the StorageVirtualMachine name.
-   - Password: The password you specified earlier during the creation of the file system.
+- SVM: the StorageVirtualMachine name.
+- Password: The password you specified earlier during the creation of the file system.
 
 3. Create the TridentBackendConfig resource using kubectl.
 
 ```
-trident-installer k -n trident create -f backend-ontap-nas.yaml                                                                            
+trident-installer k -n trident create -f backend-ontap-nas.yaml
 tridentbackendconfig.trident.netapp.io/backend-tbc-fsx-ontap-nas created
 secret/backend-tbc-fsx-ontap-nas-secret created
 ```
@@ -152,10 +153,11 @@ basic-csi       csi.trident.netapp.io   Delete          Immediate              f
 ## Create Volumes
 
 You are now ready to use storage from the file system.
+
 1. Create a PVC.
 
 ```yaml
-cat << EOF > pvc-basic-csi.yaml                                                                                             
+cat << EOF > pvc-basic-csi.yaml
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
@@ -169,6 +171,7 @@ spec:
   storageClassName: basic-csi
 EOF
 ```
+
 2. Apply the PVC.
 
 ```
@@ -186,6 +189,7 @@ basic   Bound    pvc-9d83906d-d3f0-4ac0-bf91-72a69720c1dc   1Gi        RWO      
 ## Mount a Volume
 
 Now that a volume is ready, deploy a Pod that will use it.
+
 1. Run the following command to create a task-pv-pod.yaml file and deploy it on the cluster.
 
 ```yaml
@@ -215,7 +219,7 @@ kubectl create -f task-pv-pod.yaml
 2. View the pod to see that the volume was successfully attached.
 
 ```yaml
-kubectl describe pod task-pv-pod                                                                                                                                                                                                             
+kubectl describe pod task-pv-pod
 Name:         task-pv-pod
 Namespace:    default
 Priority:     0
@@ -275,7 +279,7 @@ Events:
 3. You can run the following command on the pod to see that the volume is actually mounted and reachable.
 
 ```
-kubectl exec -it task-pv-pod -- df -h /usr/share/nginx/html                                                                                                                                                                           
+kubectl exec -it task-pv-pod -- df -h /usr/share/nginx/html
 Filesystem                                                     Size  Used Avail Use% Mounted on
 1.1.178.130:/trident_pvc_9d83906d_d3f0_4ac0_bf91_72a69720c1dc  1.0G  256K  1.0G   1% /usr/share/nginx/html
 ```

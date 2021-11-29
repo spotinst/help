@@ -5,6 +5,7 @@
 The Security Dashboard provides you with a high-level summary of your security posture. In addition, the dashboard provides quick access to more detailed information and remediation actions.
 
 The dashboard includes the following main areas:
+
 - Data Filters
 - Security Stats
 - Risk Trends over Time
@@ -14,6 +15,7 @@ To use the dashboard, click Dashboard under Spot Security in the Spot console tr
 ## Filter Data to View
 
 The default filter for the Security Dashboard includes all accounts, services, and regions in your organization. You can set the following filters:
+
 - Accounts: Include one or more accounts in your organization.
 - Services: Include one or more AWS services that you are using.
 - Region: Include one or more regions.
@@ -27,6 +29,7 @@ To create a particular set of filter settings and save for later use, click [Cre
 ## View Security Stats
 
 The large tile at the top provides your main security stats:
+
 - Identified Risks: The total number of security risks identified within the filters or preset chosen. This includes risks found in the latest scan and risks found previously that have not yet been fixed. Click View All Risks to see a detailed listing of all the risks.
 - Resources Scanned: Under the Identified Risks, Spot displays the total number of resources scanned for the given analysis.
 - Checks Passed: The total number of checks passed within the filters or preset chosen.

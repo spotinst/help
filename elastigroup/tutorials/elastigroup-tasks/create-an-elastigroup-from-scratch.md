@@ -28,7 +28,7 @@ This procedure describes how to create an Elastigroup using an empty template. T
    - Minimum: In the case of a scale down policy action, this is the minimum number of instances or vCPUs that must run in the group. The minimum acceptable value is 0.
    - Maximum: In the case of a scale up policy action, this is the maximum number of instances or vCPUs allowed in the group. The minimum acceptable value is 0.
 
-> **Tip**: If you are creating an Intelligent Traffic Flow group for the first time, it is not recommended to set a target of 0 because the migration will not start immediately. 
+> **Tip**: If you are creating an Intelligent Traffic Flow group for the first time, it is not recommended to set a target of 0 because the migration will not start immediately.
 
 3. Choose one of the following:
    - On-demand Count: The number of on-demand instances to include in the Elastigroup.
@@ -74,6 +74,7 @@ The networking configuration includes the incoming traffic balancing and autohea
 ### Incoming Traffic Balancing
 
 Choose one of the following options for incoming traffic balancing:
+
 - No Load Balancer: The instances will not be registered to any Classic load balancers or target groups.
 - Attach Existing Load Balancers: The instances will be registered to target groups or classic load balancers that you selected.
 - Intelligent Traffic Flow (ITF): Elastigroup will optimize the distribution of traffic flow between the instances it creates.

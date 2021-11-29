@@ -11,6 +11,7 @@ To monitor your jobs in the Spot console, go to Ocean for Spark in the menu tree
 ## View Job List
 
 The list of Ocean Spark jobs gives you a quick view of your jobs and basic information including:
+
 - Job Info
   - Job: Name of the job. Click here to see job details.
   - Cluster: Cluster that the job belongs to.

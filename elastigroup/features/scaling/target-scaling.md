@@ -9,12 +9,14 @@ Target scaling policies are autoscaling policies that track a specified metric r
 - Elastigroup will manage scaling policies for you in real time to ensure your target metric remains at or close to the specified target value.
 
 For example, you could use target tracking scaling to:
+
 - Configure a target tracking scaling policy to keep the average aggregate CPU utilization of your Elastigroup instances at 50%.
 - Configure a target tracking scaling policy to keep the incoming traffic at 1,000,000 bytes per second to each of your instances.
 
 ## Metric Tracking Options
 
 You can choose from the following metrics:
+
 - Average CPU Utilization (as %)
 - Average Network In (bytes)
 - Average Network Out (bytes)
@@ -41,6 +43,7 @@ Whenever Spot performs a scaling action, there is a cooldown period during which
 When you choose Average CPU Utilization as the metric tracking option, you also have the option to enable Predictive Autoscaling. Predictive autoscaling enables Spot to predict when your Elastigroup will experience load and then scale the number of instances in advance to meet your business needs.
 
 ### Concepts
+
 - Target: The number of active instances that Elastigroup should have.
 - Effective Minimum: The value that determines the lowest number of instances Elastigroup should have to accommodate the load required by the predicted metric. When this value is greater than the target value, Elastigroup will scale up instances to meet the effective minimum, depending on your predictive scaling configuration.
 - Predicted Metric: The parameter that Elastigroup actively tracks and evaluates in order to determine future load and scaling requirements for the group.
@@ -52,6 +55,7 @@ Once predictive autoscaling is set on an Elastigroup, a backend process for eval
 Once the predicted metric value is determined, an effective-minimum calculation begins to determine the minimum number of instances required to handle the predicted load. This enables your application to be ready in advance for any workload bursts.
 
 Predictive autoscaling can work in the following modes:
+
 - Predict and Scale
 - Predict Only
 
@@ -70,6 +74,7 @@ This allows you to observe Elastigroup's prediction and predicted metric values,
 ## Configure Target Scaling
 
 You can configure target scaling when you create an Elastigroup or by editing an existing Elastigroup. Do the following:
+
 1. In the Elastigroup, go to the Scaling tab.
 2. Under Target Scaling Policies, click Add, and then click on the policy name to open the form.
 
@@ -88,6 +93,7 @@ You can configure target scaling when you create an Elastigroup or by editing an
 ## Configure Predictive Autoscaling
 
 Predictive Autoscaling is configured in a Target Scaling Policy. You can enable it when you create an Elastigroup or by editing an existing Elastigroup. Do the following:
+
 1. In the Elastigroup, go to the Scaling tab.
 2. Under Target Scaling Policies, click Add, and then click on the policy name to open the form.
 3. Complete the following in the form:

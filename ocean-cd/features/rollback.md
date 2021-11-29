@@ -7,6 +7,7 @@ Rollback is a mission critical event that comes as a standard feature of Ocean C
 ## During Rollout Process
 
 The following types of rollbacks can be implemented during the rollout process:
+
 - Immediate Automatic Rollback: Immediate rollback to the last successful version. This rollback is executed as part of the “In progress” Ocean CD rollout flow, with no need to go through the full rollout spec process.
 - New Rollout: Triggers a new Ocean CD rollout event that takes the last successful version through all the rollout spec phases.
 

@@ -3,6 +3,7 @@
 To drill down into the details about your Ocean for Apache Spark application, start with the Overview tab, which gives you quick access to insights and summary data about the application. You can obtain an overview of your current cost, efficiency status, app metrics, and access to logs. You can view more details about the app in additional tabs including its [configuration](ocean-spark/product-tour/view-application-details?id=view-configuration) and a listing of [Spark issues](ocean-spark/product-tour/view-application-details?id=view-spark-issues).
 
 To get to the App Overview tab, do the following:
+
 1. In the Spot console, go to Ocean for Spark in the menu tree and click Applications.
 2. In the [list of applications](ocean-spark/product-tour/monitor-applications), click an app name.
 
@@ -11,6 +12,7 @@ To get to the App Overview tab, do the following:
 The App page opens with the Overview tab open and the app name at the top. Next to the App name, a status icon indicates the App status.
 
 The App Overview includes the following main areas:
+
 - Metrics
 - App Info
 - Logs
@@ -18,6 +20,7 @@ The App Overview includes the following main areas:
 ## Metrics
 
 Application Metrics is a summary line providing data about your app usage. The following information is presented:
+
 - Cloud Cost: The cloud provider’s costs incurred by this application.
 - Core Hours: The core resources used by the application. This metric is calculated as the sum over each container (driver or executor) of its uptime duration multiplied by the number of cores allocated to it.
 - Data Read: Amount of data read by this application.

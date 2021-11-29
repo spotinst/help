@@ -31,6 +31,7 @@ To read basic information about a risk, click on the risk. A sidebar appears on 
 <img src="/spot-security/_media/features-analyze-risks-03.png" width="334" height="449" />
 
 The risk sidebar includes the risk title, a brief description, and an option to change the risk level. You change the risk level only if you have the permissions for that. The sidebar also includes the following information about the risk:
+
 - Severity
 - Risk Score
 - Resources Affected: The total number of affected resources within the filters or preset selected.

@@ -62,7 +62,8 @@ A report that was successfully created is downloadable for a limited period of t
 
 The example report generated below is organized according to the Group by options: Customer, Usage Account, Service, Region, Charge Type, and Lifecycle.
 
-The report produces the equivalent of AWS’s Cost and Usage report, first as raw unblended cost, then showing the public on-demand price for the same level of aggregation, the actual charge from report, and  savings. Charge From report is the result of the workflow you defined. Savings is a great way of seeing your commitments’ effectiveness. Here are some important notes about Savings:
+The report produces the equivalent of AWS’s Cost and Usage report, first as raw unblended cost, then showing the public on-demand price for the same level of aggregation, the actual charge from report, and savings. Charge From report is the result of the workflow you defined. Savings is a great way of seeing your commitments’ effectiveness. Here are some important notes about Savings:
+
 - It is net savings. (The difference between discounted cost and on-demand equivalents, plus portioned, effective cost of the commitments themselves).
 - Savings is not currently available when Charge Type or Lifecycle groupings are selected.
 - The sum of savings associated with accounts not included in the report will appear as a row titled Other.

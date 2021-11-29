@@ -13,6 +13,7 @@ The default filter or preset on this page is the same filter or preset that you 
 ## Event Stats
 
 The cards at the top provide the following information:
+
 - Resources Scanned: The total number of resources scanned in your network and according to the set defined by your filters or preset.
 - Last Scanned: The date and time of the most recent scan.
 - Events: The total number of events detected in the last scan of the resources included in your filters or preset.
@@ -31,6 +32,7 @@ The list of events displays events from the AWS CloudTrail log and includes thos
 <img src="/spot-security/_media/features-events-02.png" />
 
 For each event, you can see the:
+
 - Event ID
 - Event Name
 - Severity
@@ -39,6 +41,7 @@ For each event, you can see the:
 - Service
 
 In addition, you can click the arrow by an event and see more details including:
+
 - Related Resources
 - Resource Type
 - CloudTrail Event

@@ -10,6 +10,7 @@ To manage your clusters in the Spot console, go to Ocean for Spark in the menu t
 
 The list of Ocean Spark clusters gives you a quick view of your clusters and basic information including:
 Cluster Name: The user-given name of the cluster. A colored icon next to the cluster name indicates the current health status.
+
 - Cluster ID: The ID that Ocean Spark assigned to the cluster upon creation.
 - Region: The cloud provider region where the cluster is located.
 - Nodes: The number of nodes in the cluster.
@@ -32,6 +33,7 @@ To add a cluster, click Add Cluster above the cluster list and complete the proc
 ## Remove Cluster
 
 To disconnect a cluster you don’t need any more, do the following:
+
 1. Click Remove in the Action column.
 2. Enter the name of the cluster to confirm, and click Remove Cluster.
 

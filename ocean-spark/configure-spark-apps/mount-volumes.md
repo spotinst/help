@@ -20,11 +20,11 @@ First, create a kubernetes secret in your cluster, and make sure to use the name
 apiVersion: v1
 kind: Secret
 metadata:
- namespace: spark-apps
- name: basic-auth
+  namespace: spark-apps
+  name: basic-auth
 data:
- password: cGFzc3dvcmQK # password
- user: dXNlcgo= # user
+  password: cGFzc3dvcmQK # password
+  user: dXNlcgo= # user
 type: Opaque
 ```
 
@@ -32,25 +32,31 @@ In your application json config, add a volume object that references the secret 
 
 ```json
 {
-   "executor": {
-       "cores": 1,
-       "instances": 3,
-       "instanceType": "r5.xlarge",
-       "volumeMounts": [{
-           "mountPath": "/opt/spark/work-dir/secrets",
-           "name": "volume-secret"
-       }]
-   },
-   "volumes": [{
-       "secret": {
-           "items": [{
-               "key": "user",
-               "path": "secret.yaml"
-           }],
-           "secretName": "basic-auth"
-       },
-       "name": "volume-secret"
-   }]
+  "executor": {
+    "cores": 1,
+    "instances": 3,
+    "instanceType": "r5.xlarge",
+    "volumeMounts": [
+      {
+        "mountPath": "/opt/spark/work-dir/secrets",
+        "name": "volume-secret"
+      }
+    ]
+  },
+  "volumes": [
+    {
+      "secret": {
+        "items": [
+          {
+            "key": "user",
+            "path": "secret.yaml"
+          }
+        ],
+        "secretName": "basic-auth"
+      },
+      "name": "volume-secret"
+    }
+  ]
 }
 ```
 
@@ -74,16 +80,16 @@ To mount an EBS volume to your spark application, add the following json to your
 
 ```json
 {
-   "volumes": [
-           {
-               "name": "spark-aws-dir",
-               "awsElasticBlockStore": {
-                   "fsType": "type of file system",
-                   "readOnly": false,
-                   "volumeID": "id of ebs"
-               }
-           },
-       ]
+  "volumes": [
+    {
+      "name": "spark-aws-dir",
+      "awsElasticBlockStore": {
+        "fsType": "type of file system",
+        "readOnly": false,
+        "volumeID": "id of ebs"
+      }
+    }
+  ]
 }
 ```
 
@@ -95,13 +101,13 @@ To enable PVC provisioning, you must add a few configuration settings to your sp
 
 ```json
 {
-"sparkConf": {
-   "spark.kubernetes.executor.volumes.persistentVolumeClaim.data.options.claimName": "OnDemand",
-   "spark.kubernetes.executor.volumes.persistentVolumeClaim.data.options.storageClass":"standard",
-   "spark.kubernetes.executor.volumes.persistentVolumeClaim.data.options.sizeLimit":"500Gi",
-   "spark.kubernetes.executor.volumes.persistentVolumeClaim.data.mount.path":"/var/data",
-   "spark.kubernetes.executor.volumes.persistentVolumeClaim.data.mount.readOnly":"false"
-   }
+  "sparkConf": {
+    "spark.kubernetes.executor.volumes.persistentVolumeClaim.data.options.claimName": "OnDemand",
+    "spark.kubernetes.executor.volumes.persistentVolumeClaim.data.options.storageClass": "standard",
+    "spark.kubernetes.executor.volumes.persistentVolumeClaim.data.options.sizeLimit": "500Gi",
+    "spark.kubernetes.executor.volumes.persistentVolumeClaim.data.mount.path": "/var/data",
+    "spark.kubernetes.executor.volumes.persistentVolumeClaim.data.mount.readOnly": "false"
+  }
 }
 ```
 
