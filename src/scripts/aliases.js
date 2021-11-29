@@ -1577,9 +1577,11 @@ export const aliases = (() => {
 
     "/wave/features/": "/ocean-spark/product-tour/",
 
-    "/wave/features/cluster-management": "/ocean-spark/product-tour/manage-clusters",
+    "/wave/features/cluster-management":
+      "/ocean-spark/product-tour/manage-clusters",
 
-    "/wave/features/wave-cluster-overview": "/ocean-spark/product-tour/view-cluster-details",
+    "/wave/features/wave-cluster-overview":
+      "/ocean-spark/product-tour/view-cluster-details",
 
     "/wave/features/cost-analysis": "/ocean-spark/product-tour/analyze-costs",
   };
