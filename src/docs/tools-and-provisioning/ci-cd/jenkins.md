@@ -35,7 +35,7 @@ The Elastigroup/plugin setup for each one of the modes is different; here are th
 
 <img src="/tools-and-provisioning/_media/Jenkins_4.png" />
 
-### Choose Conneciton Method
+### Choose Connection Method
 
 To be taken to the right configuration-steps, choose how you'd like your Spot agents to connect:
 
