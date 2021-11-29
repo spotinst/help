@@ -5,6 +5,7 @@ Simple scaling policies provide the ability to scale up when you need to accommo
 ## How it Works
 
 On a high level, simple scaling policies work according to the following process:
+
 - You assign a metric that best describes the load of your application and set a threshold value for that metric.
 - Elastigroup tracks the metric you have chosen. Whenever the threshold is surpassed, a scaling action (e.g., a scale up or a scale down, depending on the type of policy) is triggered.
 
@@ -12,12 +13,14 @@ On a high level, simple scaling policies work according to the following process
 
 You can configure a simple scaling policy when you create an Elastigroup or by editing an existing Elastigroup. A simple scaling policy consists of an Up Scaling policy and a Down Scaling policy. The parameters for Up Scaling and Down Scaling are the same, except that the options for Actions are different.
 Complete the steps below:
+
 1. In the Elastigroup, go to the Scaling tab.
 2. Under Simple Scaling Policies/Up Scaling Policies, click Add Policy.
 
 <img src="/elastigroup/_media/scaling-simple-scaling-01.png" width="651" height="372" />
 
 3. Complete the following parameters in the form:
+
    - Policy Name: Enter the name to assign to the policy. It is recommended to use a meaningful name to help you understand scaling actions better in the future.
    - Policy Type: Choose Simple Scaling.
    - Source: The scaling policy can utilize metrics from either AWS CloudWatch or Spectrum.
@@ -35,12 +38,13 @@ Complete the steps below:
 
    The following Actions are available for Down Scaling:
 
-     - Set Capacity Range: Similar to up scaling.
-     - Remove: The default value for down scaling. Terminates the specified number of instances or vCPU units.
-     - Set maximum of: Sets a new upper limit capacity for the Elastigroup.
-     - Decrease: Reduces the capacity by a specified percentage.
+   - Set Capacity Range: Similar to up scaling.
+   - Remove: The default value for down scaling. Terminates the specified number of instances or vCPU units.
+   - Set maximum of: Sets a new upper limit capacity for the Elastigroup.
+   - Decrease: Reduces the capacity by a specified percentage.
    - Amount: The number of instances or vCPUs that will be scaled (you can also specify expressions). If the adjustment is not a whole number, Elastigroup rounds it to the nearest whole.
    - Dimensions: Specify the name of the dimension used and it's value. If no dimension is specified, the default is the average of instances in the group, divided into instance types. Meaning an average value of the sampled metric is calculated for each instance type currently running in the group, and the first value to cross the threshold will trigger the policy. In the case of scaling up, it's likely to be the smallest instance type, as it will be the first to become loaded, while in scaling down the trigger will likely be the largest instance type.
+
 4. To save the configuration, click Next, and then click Create or Update at the bottom of the Review tab.
 
 ### Autoscale Based on a Custom Metric
@@ -66,6 +70,7 @@ When you choose Other, then the Namespace field appears. You can choose one of t
 ### Advanced Parameters
 
 If necessary, you can also use advanced parameters to define the scaling criteria.
+
 - Statistic: The type of value you will utilize. Options are:
   - Average
   - Maximum
@@ -90,6 +95,7 @@ Step scaling is available in Simple Scaling policies and can be configured for b
 ### Configure Step Scaling
 
 You can configure step scaling when you create a new Elastigroup or when you edit the configuration of an existing group.
+
 1. In the Scaling tab, go to Simple Scaling and Up Scaling Policies.
 
 <img src="/elastigroup/_media/scaling-simple-scaling-02a.png" width="820" height="337" />

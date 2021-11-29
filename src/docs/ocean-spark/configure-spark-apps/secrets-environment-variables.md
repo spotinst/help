@@ -8,16 +8,16 @@ Environment variables can easily be set by inserting the lines below in a [confi
 
 ```json
 {
- "driver": {
-   "envVars": {
-     "ENV_VAR_KEY": "ENV_VAR_VALUE"
-   }
- },
- "executor": {
-   "envVars": {
-     "ENV_VAR_KEY": "ENV_VAR_VALUE"
-   }
- }
+  "driver": {
+    "envVars": {
+      "ENV_VAR_KEY": "ENV_VAR_VALUE"
+    }
+  },
+  "executor": {
+    "envVars": {
+      "ENV_VAR_KEY": "ENV_VAR_VALUE"
+    }
+  }
 }
 ```
 
@@ -27,22 +27,22 @@ If you have [defined Kubernetes secrets](ocean-spark/configure-spark-apps/access
 
 ```json
 {
- "driver": {
-   "envSecretKeyRefs": {
-     "ENV_VAR_KEY": {
-       "name": "secret-name",
-       "key": "secret-field"
-     }
-   }
- },
- "executor": {
-   "envSecretKeyRefs": {
-     "ENV_VAR_KEY": {
-       "name": "secret-name",
-       "key": "secret-field"
-     }
-   }
- }
+  "driver": {
+    "envSecretKeyRefs": {
+      "ENV_VAR_KEY": {
+        "name": "secret-name",
+        "key": "secret-field"
+      }
+    }
+  },
+  "executor": {
+    "envSecretKeyRefs": {
+      "ENV_VAR_KEY": {
+        "name": "secret-name",
+        "key": "secret-field"
+      }
+    }
+  }
 }
 ```
 
@@ -62,6 +62,7 @@ import os
 env_vars = os.environ # Dictionary of key-value pairs
 value = os.environ['ENV_VAR_KEY'] # ENV_VAR_VALUE
 ```
+
 </details><br>
 
 <details>

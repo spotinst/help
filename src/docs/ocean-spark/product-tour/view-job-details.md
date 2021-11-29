@@ -3,6 +3,7 @@
 To drill down into the details about your Ocean for Apache Spark job, start with the Overview tab, which gives you quick access to insights and summary data about the job. You can obtain an overview of your cost trend and other related trends, job analytics, and status of applications relevant to this job.
 
 To get to the Job overview page, do the following:
+
 1. In the Spot console, go to Ocean for Spark in the menu tree and click Jobs.
 2. In the [list of jobs](ocean-spark/product-tour/monitor-jobs), click a job name.
 
@@ -11,6 +12,7 @@ To get to the Job overview page, do the following:
 The Job page opens showing the job name at the top.
 
 The App overview includes the following main areas:
+
 - Job Info
 - Job trends
 - Job Analytics
@@ -25,6 +27,7 @@ The Job Info area gives you a quick point of reference for vital information abo
 ## Job Trends
 
 The trends displayed include the following median metrics (computed over the last 10 applications):
+
 - Median Cloud Cost
 - Median Duration
 - Median Data Read

@@ -9,6 +9,7 @@ To monitor your applications in the Spot console, go to Ocean for Spark in the m
 ## View Application List
 
 The list of Ocean Spark applications gives you a quick view of your applications and basic information including:
+
 - Application: The name of the application and under it the name of the job it belongs to. To see more details about the application or the job, click on the application or job name.
 - Cluster: The Ocean Spark cluster where the application is running. To see more information about the cluster, click on the cluster name.
 - Started at: Start date and time.

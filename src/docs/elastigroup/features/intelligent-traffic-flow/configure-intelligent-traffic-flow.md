@@ -3,6 +3,7 @@
 This page describes the procedures to configure Intelligent Traffic Flow (ITF).
 
 ## Prerequisite
+
 - ITF requires the most up-to-date [Spot policies](administration/api/spot-policy-in-aws).
 - An Application Load Balancer (ALB) should be created in AWS including listeners and rules.
 
@@ -23,6 +24,7 @@ Choose an application load balancer from the drop down list. Then the appropriat
 ## Step 2. Listener Rules
 
 For each listener displayed, mark the rules that you would like Elastigroup to manage. You can choose rules:
+
 - From multiple listeners.
 - Only for the type Forward.
 
@@ -33,6 +35,7 @@ Elastigroup assigns its target groups and weights, but does not change the stick
 ## Step 3. Target Group Creation Settings
 
 Complete the settings below for target group creation:
+
 - Protocol: Choose HTTP or HTTPS.
 - Port: The port the load balancer uses when performing health checks on targets. The values can be between 1-65535. For HTTP, the default is 80. For HTTPS, the default is 443.
 - Protocol Version:
@@ -47,9 +50,10 @@ Complete the settings below for target group creation:
 ## Advanced Health Check Settings
 
 If you would like to configure the advanced health check settings, click the arrow to open this section. Otherwise, the default settings will be used.
+
 - Port: The port the load balancer uses when performing health checks on targets. Choose Traffic Port or Override.
   - Port Number: If you chose Override, enter a port number between 1-65535.
-- Healthy Threshold: The number of consecutive successful health checks required before considering an unhealthy target healthy.  The default threshold is five. Valid values are 2 - 10.
+- Healthy Threshold: The number of consecutive successful health checks required before considering an unhealthy target healthy. The default threshold is five. Valid values are 2 - 10.
 - Unhealthy Threshold: The number of consecutive failed health checks required before considering a target unhealthy. The default value is two. Valid values are 2 - 10.
 - Timeout: The amount of time, in seconds, during which no response from a target means a failed health check. The default value is five. Valid values are 2 - 120.
 - Interval: The approximate amount of time, in seconds, between health checks of an individual target. The default value is 30. Valid values are 5 - 300.

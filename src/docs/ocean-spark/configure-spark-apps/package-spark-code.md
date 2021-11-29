@@ -3,6 +3,7 @@
 In this page, we describe how to package your Spark code so that it can be run on an Ocean Spark cluster.
 
 There are two options available:
+
 - Add your code to a Docker image
 - Host your code on an object storage
 
@@ -28,10 +29,11 @@ For compatibility reasons, you must use one of our published Docker images as a 
 In this example, the Python project uses the main Docker image offered by Ocean Spark, `spark:platform`. It includes Python support and connectors to popular data sources. The latest image is `gcr.io/datamechanics/spark:platform-3.2.0-latest`.
 
 We'll assume your project directory has the following structure:
+
 - A main Python file e.g., `main.py`
 - A `requirements.txt` file specifying project dependencies
 - A global Python package called `src`, containing all project sources. This package can contain modules and packages and does not require source files to be flattened. Because `src` is a p
-Python package, it must contain an  `__init__.py file`.
+  Python package, it must contain an `__init__.py file`.
 
 ```
 |____ main.py
@@ -60,11 +62,11 @@ COPY main.py .
 
 2. Build the Docker image by running this command in the project directory:
 
-```docker build -t my-app:dev```
+`docker build -t my-app:dev`
 
 3. Run it locally with:
 
-```docker run -e SPARK_LOCAL_IP=127.0.0.1 my-app:dev driver local:///opt/spark/work-dir/main.py <args>```
+`docker run -e SPARK_LOCAL_IP=127.0.0.1 my-app:dev driver local:///opt/spark/work-dir/main.py <args>`
 
 where `<args>` are the arguments to be passed to the main script `main.py`.
 
@@ -89,11 +91,11 @@ COPY main.jar .
 
 2. Build the Docker image by running this command in the project directory:
 
-```docker build -t my-app:dev```
+`docker build -t my-app:dev`
 
 3. Run it locally with
 
-```docker run -e SPARK_LOCAL_IP=127.0.0.1 my-app:dev driver --class <className> local:///opt/spark/work-dir/main.jar <args>```
+`docker run -e SPARK_LOCAL_IP=127.0.0.1 my-app:dev driver --class <className> local:///opt/spark/work-dir/main.jar <args>`
 
 where `<args>` are the arguments to be passed to the application main class `<className>`.
 
@@ -104,10 +106,11 @@ where `<args>` are the arguments to be passed to the application main class `<cl
 ### Set up a Docker registry and push your image
 
 The simplest option on AWS is to use the Elastic Container Registry (ECR) of the account where the Ocean Spark platform is deployed. This way, the Spark pods can pull the Docker images without needing extra permissions.
+
 1. Navigate to the [ECR console](https://console.aws.amazon.com/ecr/repositories) and create a repository with name my-app in the account where the Data Mechanics is deployed. Make sure to create it in the same region as the Ocean Spark cluster to avoid transfer costs. Please refer to the [AWS documentation](https://docs.aws.amazon.com/AmazonECR/latest/userguide/repository-create.html) in case of issue.
 2. Generate a temporary token so that Docker can access ECR for 12 hours with the following:
 
-```aws ecr get-login-password --region <region> | docker login --username AWS --password-stdin <account-id>.dkr.ecr.<region>.amazonaws.com```
+`aws ecr get-login-password --region <region> | docker login --username AWS --password-stdin <account-id>.dkr.ecr.<region>.amazonaws.com`
 
 This complex command can be found in the AWS console by clicking the "View push commands" button.
 
@@ -183,6 +186,7 @@ In this section, you will learn how to package your code, upload it to an object
 ### Project structure
 
 In order to run on your cluster, your Spark application project directory must fit the following structure:
+
 - A main python file e.g., `main.py`
 - A `requirements.txt` file specifying project dependencies
 - A global python package named `src` containing all project sources. This package can contain modules and packages and does not require source files to be flattened. Because src is a python package it must contain a `__init__.py` file.
@@ -209,6 +213,7 @@ All your dependencies are now zipped into a libs.zip file.
 ### Package project source files
 
 Zip your project source files from the global package src. This package will be consumed by your Spark application main file using python imports such as:
+
 - import src.your_module
 - from src.your_package.your_module import your_object
 

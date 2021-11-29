@@ -67,5 +67,6 @@ Spark can read data from (and write data to) a wide range of data sources and fo
 You can leverage cloud security best-practices (such as IAM role and Kubernetes secrets) to give your Spark applications permission to access the data in the most secure manner. The sensitive data Spark works with stays protected in your cloud account all the time.
 
 ## What’s Next?
+
 - If you are new to Spot, [connect your cloud provider](connect-your-cloud-provider/aws-account) to Spot.
 - If you are already a Spot user, go ahead and [Get Started with Ocean Spark](ocean-spark/getting-started/).

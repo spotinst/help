@@ -12,7 +12,7 @@ The [Dashboard](spot-security/features/security-dashboard/) provides high-level 
 
 ### Risk Analysis
 
-Spot Security’s [Risk Analysis](spot-security/features/analyze-risks/) shows you the security risks discovered in your cloud environment with visibility at a high level and at a very detailed-level view. Spot Security then takes the next step of showing you the appropriate remediations that you can act on.  
+Spot Security’s [Risk Analysis](spot-security/features/analyze-risks/) shows you the security risks discovered in your cloud environment with visibility at a high level and at a very detailed-level view. Spot Security then takes the next step of showing you the appropriate remediations that you can act on.
 
 ### Topology View
 

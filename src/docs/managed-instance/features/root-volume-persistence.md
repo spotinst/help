@@ -11,6 +11,7 @@ The [flow diagram](elastigroup/features/stateful-instance/stateful-elastigroup-f
 ## Backend Actions
 
 Managed Instance performs various backend actions for different states of the instance to ensure root volume persistence.
+
 - Paused: Images (AMIs) are created each time the managed instance is paused using the latest root volume snapshot which was taken after the instance termination. Only the latest snapshot is kept for each volume.
 - Running: While the instance is running, a snapshot is taken for the root volume every 5 minutes.
 - Deallocated: When you delete a managed instance, you can choose which parts to delete.
@@ -20,6 +21,7 @@ Managed Instance performs various backend actions for different states of the in
 > **Tip**: Data storage time can be configured on an hourly basis. For more information, reach out to the Customer Support team.
 
 ## Enable Root Volume Persistence
+
 1. Enter the Managed Instance configuration wizard.
 2. Under the Persistent Resources tab select Persist Root Volume.
 
@@ -28,6 +30,7 @@ Managed Instance performs various backend actions for different states of the in
 ## Change the Image of Existing Managed Instances
 
 In order to change the AMI used to launch a particular managed instance with root volume persistence, do the following:
+
 1. Remove the root persistence and update the managed instance with the new AMI.
 2. Recycle the managed instance.
 3. Re-enable the root volume persistence in the managed instance configuration.

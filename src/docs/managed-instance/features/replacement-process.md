@@ -5,8 +5,10 @@ If the underlying EC2 instance has to be replaced for any reason, Managed Instan
 ## Pause Action
 
 The pause process terminates the existing instance after it saves all the relevant data.
+
 1. A final [root volume snapshot](managed-instance/features/root-volume-persistence) is taken, from which a new AMI is created. The new AMI will be used to launch the new instance upon resume.
 2. The Data volume is maintained, as configured in the [data persistence settings](managed-instance/features/data-volume-persistence):
+
    1. Snapshot backups: A final data volume snapshot is taken, which is used in the next instance's block device mapping configuration.
    2. Reattach + Multi AZ: A final data volume snapshot is created and used to create a new volume to be attached once the next instance is launched in a new AZ.
    3. Reattach + Single AZ: The same data volume is retained as is, containing the latest data written to it.
@@ -16,6 +18,7 @@ The pause process terminates the existing instance after it saves all the releva
 ## Resume Action
 
 The resume operation launches a new instance and assigns it all the information stored in the pause operation.
+
 1. The AMI registered using the latest root snapshot is used in the launch request.
 2. Persisted data volumes are created upon launch from snapshots used in the launch request’s block device mapping, or reattached post-launch.
 3. The persisted ENI is used in the network configuration of the new instance.
@@ -35,6 +38,7 @@ Once a health-check failure is detected, the unhealthy instance will be terminat
 ### Revert to Spot
 
 This is a strategic replacement intended to revert back to spot after falling back to on-demand instances. This is performed according to the maintenance window configuration:
+
 - Never: Do not revert to spot.
 - Timeframe: When the configured time window is reached.
 - Always: Once available spot capacity is detected, perform the replacement.

@@ -10,9 +10,10 @@ This is an application-specific configuration that you specify directly in your 
 
 ### Level 2: Auto-tuning
 
-These configurations are applied by Ocean for Spark to improve the performance and stability of your workloads. Some of these optimizations are static. For example, some Spark configurations are adjusted based on the Spark version you selected, while others are dynamically determined by the history of the past executions of a job or the real-time characteristics of your infrastructure. Auto-tuning takes precedence over configuration templates, but is overridden by config overrides.  
+These configurations are applied by Ocean for Spark to improve the performance and stability of your workloads. Some of these optimizations are static. For example, some Spark configurations are adjusted based on the Spark version you selected, while others are dynamically determined by the history of the past executions of a job or the real-time characteristics of your infrastructure. Auto-tuning takes precedence over configuration templates, but is overridden by config overrides.
 
 ### Level 3: Configuration Templates
+
 These are fragments of configuration that you can define in the Ocean Spark UI or API and then reuse across many notebooks and jobs.
 
 ## Config Overrides
@@ -37,6 +38,7 @@ curl -X POST \
 ```
 
 Config overrides have higher precedence than all other sources of configuration. As a result, they are useful:
+
 - To specify arguments that change at every execution of your [Spark job](ocean-spark/product-tour/monitor-jobs). For example, if you have an ETL pipeline processing data for a specific date, you should pass this date using config overrides.
 - To forcefully ensure a specific configuration is applied (so that it cannot be changed by auto-tuning or a configuration template). For example, you may have a technical reason to force Spark to use a certain codec for compression.
 
@@ -60,9 +62,7 @@ To manage your configuration templates in the Spot console, go to Ocean for Spar
 Click on "New Template" in the upper right corner and create a configuration template called `my-template` with the following content:
 
 ```yaml
-{
- "sparkVersion": "3.2.0",
-}
+{ "sparkVersion": "3.2.0" }
 ```
 
 To know more about the all configurations you can set in a template, check out the [API reference](https://docs.spot.io/api/#operation/OceanSparkClusterApplicationSubmit).
@@ -129,11 +129,7 @@ To give you control over the tuning process, the config overrides have precedenc
 For example, if you set the following configuration fragment in the configuration template of your application:
 
 ```yaml
-{
-  "executor": {
-    "instances": 10
-  }
-}
+{ "executor": { "instances": 10 } }
 ```
 
 Ocean Spark might change the number of executors, in order to improve efficiency of your job. If you put this fragment in the config overrides section of your API call, then the number of executors will never change.

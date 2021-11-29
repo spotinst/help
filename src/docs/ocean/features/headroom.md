@@ -16,9 +16,10 @@ Headroom can be configured using one of two mechanisms, automatic or manual.
 
 Automatic refers to headroom that is dynamic and designed to predict the next scale up of services in the cluster. It is limited by a percent of the overall resources requested by the cluster’s workloads.
 
-When you configure automatic headroom, Ocean calculates the total amount of resources (CPU, memory,  and GPU) deployed in the cluster and then allocates a certain percent of that to be available as spare capacity. The default is 5%, but the value is user configurable.
+When you configure automatic headroom, Ocean calculates the total amount of resources (CPU, memory, and GPU) deployed in the cluster and then allocates a certain percent of that to be available as spare capacity. The default is 5%, but the value is user configurable.
 
 Ocean continually monitors the cluster and creates headroom according to the following process, in order to prepare the cluster for the next workload scale out:
+
 1. According to historical workload behavior that is monitored continuously, Ocean sorts the cluster’s workloads according to their chance and scope of scaling out.
 2. Based on the top 5 workloads’ request size, Ocean provisions infrastructure that is able to facilitate a scale out of those workloads, considering all of their constraints.
 3. As per the total amount of headroom, Ocean continually balances so that it matches the percentage of resources defined by the user.

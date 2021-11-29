@@ -7,6 +7,7 @@ With Elastigroup, you can utilize more sophisticated autoscaling by creating and
 ## How it Works
 
 On a high level, Elastigroup uses scaling policies with multiple metrics according to the following process:
+
 1. In the Scaling tab of the Elastigroup, you define several metrics in the Metric List.
 2. You go to either [Simple Scaling Policies](elastigroup/features/scaling/simple-scaling-policies) or [Target Scaling Policies](elastigroup/features/scaling/target-scaling) and set up an autoscaling policy. In the policy, you define the Policy Type as Multiple Metric Scaling, and then define an expression that Elastigroup will use to evaluate a threshold.
 3. Once the scaling policy is active, Elastigroup continually tracks the metrics and evaluates the expression you defined. When the expression surpasses your defined threshold, then a scaling action is triggered.
@@ -61,6 +62,7 @@ For creating expressions with multiple metrics in the simple scaling and target 
 ### Expressions
 
 In addition, the following types expressions are supported:
+
 - SUM([m1,m2])/AVG(m2)
 - AVG(METRICS())
 - CEIL(m1)
@@ -73,6 +75,7 @@ In addition, the following types expressions are supported:
 ### Comparison Operators
 
 The following types of comparison operators are supported:
+
 - ==
 - !=
 - <=
@@ -83,12 +86,14 @@ The following types of comparison operators are supported:
 ### Logical Operators
 
 The following types of logical operators are supported:
+
 - AND or &&
 - OR or ||
 
 ## Use Multiple Metrics with Simple Scaling
 
 You can configure simple scaling to use multiple metrics when you create an Elastigroup or by editing an existing Elastigroup. To create a new simple scaling policy, do the following:
+
 1. In the Elastigroup, go to the Scaling tab.
 2. Under Simple Scaling Policies, click Up Scaling Policies or Down Scaling Policies.
 3. Click Add Policy.
@@ -112,6 +117,7 @@ This policy will be saved when you finish creating or updating the Elastigroup (
 ## Use Multiple Metrics with Target Scaling
 
 You can configure target scaling to use multiple metrics when you create an Elastigroup or by editing an existing Elastigroup. To create a new policy, do the following:
+
 1. In the Elastigroup, go to the Scaling tab.
 2. Under Target Scaling Policies, click Add Policy.
 
@@ -129,5 +135,6 @@ This policy will be saved when you finish creating or updating the Elastigroup (
 ## What’s Next?
 
 Learn how to create a scaling policy that uses multiple metrics in:
+
 - [Simple Scaling Policies](elastigroup/features/scaling/simple-scaling-policies)
 - [Target Scaling Policies and Predictive Autoscaling](elastigroup/features/scaling/target-scaling)

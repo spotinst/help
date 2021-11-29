@@ -18,10 +18,10 @@ Controller ConfigMap template:
 kind: ConfigMap
 apiVersion: v1
 metadata:
- name: spotinst-kubernetes-cluster-controller-config
- namespace: kube-system
- data:
-  spotinst.cluster-identifier: <CLUSTER_ID>
+  name: spotinst-kubernetes-cluster-controller-config
+  namespace: kube-system
+  data:
+    spotinst.cluster-identifier: <CLUSTER_ID>
 ```
 
 ## Step 2: Are the account ID and token valid?
@@ -49,7 +49,7 @@ Example Response:
 `abcdef124567890ghijk123456789abcdfghijk123456bcdefjik12346890000%`
 
 6. Verify that the token exists and that the user associated with token exists and can make Spot API calls to resources in the account where the cluster exists:
-https://console.spotinst.com/spt/settings/tokens/permanent
+   https://console.spotinst.com/spt/settings/tokens/permanent
 
 In case your account ID or token is incorrect or invalid, the controller pod will be in a Terminating/CrashLoopBackOff state and in the container logs (Refer Step 6) you will see an unauthorized response as shown below:
 
@@ -110,5 +110,6 @@ If the steps above do not solve your issue, get the controller logs using the st
 5. Contact Support in the online chat or by email.
 
 ## What's Next?
+
 - Learn how to [update the controller](ocean/tutorials/spot-kubernetes-controller/update-controller).
 - Find out about the latest updates in [Controller Version History](ocean/tutorials/spot-kubernetes-controller/controller-version-history).

@@ -19,11 +19,11 @@ For example, the following configuration requests two cores for the Spark driver
 ```json
 {
   "driver": {
-    "cores": 2,
+    "cores": 2
   },
   "executor": {
-    "cores": 4,
-  },
+    "cores": 4
+  }
 }
 ```
 
@@ -65,7 +65,7 @@ For example, if you request:
 }
 ```
 
-Ocean Spark will determine how much memory to request so that each Spark executor exactly utilizes the memory available on an r5.xlarge instance (which has four available cores), or  half of an r5.2xlarge instance (which has eight available cores).
+Ocean Spark will determine how much memory to request so that each Spark executor exactly utilizes the memory available on an r5.xlarge instance (which has four available cores), or half of an r5.2xlarge instance (which has eight available cores).
 
 If you want to allocate a lot of memory to your Spark driver, you could set the following configuration:
 
@@ -113,10 +113,10 @@ To remediate this issue, you should increase the memoryOverheadFactor configurat
 
 ```json
 {
- "memoryOverheadFactor": "0.5",
+  "memoryOverheadFactor": "0.5"
 }
 ```
 
- ## What's Next?
+## What's Next?
 
- Learn more about [common Spark configurations](ocean-spark/configure-spark-apps/common-spark-configs).
+Learn more about [common Spark configurations](ocean-spark/configure-spark-apps/common-spark-configs).

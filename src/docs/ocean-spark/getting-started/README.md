@@ -1,10 +1,11 @@
 # Get Started with Ocean for Apache Spark
 
-The Ocean for Apache Spark (also referred to as Ocean Spark) environment includes the Ocean Spark components installed in a Kubernetes cluster integrated with Spot Ocean. The cluster creation and deployment of the whole stack is really simple using the *spotctl* command-line tool.
+The Ocean for Apache Spark (also referred to as Ocean Spark) environment includes the Ocean Spark components installed in a Kubernetes cluster integrated with Spot Ocean. The cluster creation and deployment of the whole stack is really simple using the _spotctl_ command-line tool.
 
 ## Stages of Ocean Spark Setup
 
 The Ocean Spark setup has the following major parts:
+
 - Prerequisites
 - Create an Ocean Spark Cluster
 - Run Your First App
@@ -14,6 +15,7 @@ Each of these parts is described below.
 ## Prerequisites
 
 Before you can start the setup of an Ocean Spark cluster, you will need to have the following in place:
+
 - Your [AWS account connected](connect-your-cloud-provider/aws-account) to Spot
 - Kubernetes [kubectl](https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html) (provided by Amazon EKS) installed
 - The AWS CLI installed and configured for your AWS account (by running `aws configure`)
@@ -39,17 +41,17 @@ The `--cluster-name` argument is optional. A name will be generated for you if y
 
 To import an existing AWS Ocean cluster, enter the following command:
 
-  `$ spotctl ocean spark create cluster --cluster-id $YOUR_OCEAN_CLUSTER_ID`
+`$ spotctl ocean spark create cluster --cluster-id $YOUR_OCEAN_CLUSTER_ID`
 
 Your Ocean cluster ID is of the form o-XXXXXXXX. To find your Ocean cluster ID, you can run the following command:
 
-  `$ spotctl ocean get cluster kubernetes`
+`$ spotctl ocean get cluster kubernetes`
 
 Note that your kubectl installation must be configured to talk to your Ocean cluster in order to import it into Ocean Spark.
 
 For more information about the available arguments, you can run the following command:
 
-  `$ spotctl ocean spark create cluster --help`
+`$ spotctl ocean spark create cluster --help`
 
 ### Creation Process in Background
 
@@ -69,6 +71,7 @@ Once the cluster has been created, your kubectl installation will have been auto
 ### Prerequisites
 
 To run your first app, you will need to have:
+
 - The Ocean Spark cluster ID of the cluster you just created (of the format osc-e4089a00). You can find this in the console in the [list of clusters](ocean-spark/product-tour/manage-clusters), or by using the Get Cluster List in the API.
 - A [Spot token](administration/api/create-api-token) to interact with [Spot API](https://docs.spot.io/api/).
 
@@ -100,6 +103,7 @@ curl -X POST \
 ```
 
 Here's a breakdown of the payload:
+
 - We assign the job ID "spark-pi" to the application. A job is a logical grouping of applications. It is typically a scheduled workload that runs every day or every hour. Every run of a job is called an application in Ocean Spark. In the console, the Jobs view lets you track performance of jobs over time. A unique app ID will be generated from the job ID (although you can specify one yourself).
 - Default configurations are overridden in configOverrides:
   - This is a Scala application running Spark 3.2.0.

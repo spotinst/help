@@ -37,6 +37,7 @@ A Service Map is the definition of instances that appear in your topology. The d
 When you create a service map, you choose the instances that will be the basis for the topology mapping.
 
 To create a custom service map, do the following:
+
 1. Create a New Service Map. The Create a Custom Service Map opens with a list of nodes (i.e., instances) for you to choose from. If the list is long, you can use the filter to find a node.
 2. Mark the nodes to include, and click Create Service Map.
 
@@ -53,6 +54,7 @@ The new service map is added to the list of services on the Topology page.
 ## Use a Saved Service Map
 
 To change the service map used in the topology, do the following:
+
 1. In any of the topology views, click the down arrow or the current map name by Service Map.
 
 <img src="/spot-security/_media/features-topology-06.png" />

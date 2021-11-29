@@ -29,6 +29,7 @@ In addition, any configuration parameter that is not configured explicitly in a 
 ### Prioritization of Pods on VNGs
 
 A pod could be scheduled on multiple VNGs. In this case, Ocean has to prioritize on which VNG to launch an instance first. Ocean uses the following method:
+
 - If the pod has a preferred affinity that matches one of the VNGs, Ocean prioritizes according to the affinity.
 - Otherwise, Ocean prioritizes the least restrictive VNG in the order of the following criteria:
   1. Highest maximum instance count
@@ -86,6 +87,7 @@ Ocean provides a serverless experience in which the specific instances don’t m
 Ocean serves such use cases with the ability to define a list of preferred instance types, out of all types allowed in the VNG. When your preferences are defined, Ocean takes them into consideration alongside other considerations when scaling up. In this way, Ocean strives towards a well-distributed and highly available spot-instance based VNG that uses preferred types as broadly as possible.
 
 In each scale up action, Ocean provisions the new instances from the preferred types, using:
+
 - 100% of the new instances, if three or more different preferred types are defined.
 - 0-80% of the new instances, when 0-2 different preferred types are defined.
 
@@ -153,7 +155,7 @@ The following is a list of attributes customizable per VNG in Ocean for GKE.
 - Labels
 - Launch Instance (API only)
 - Local SSD (API only)
-- Maximum Nodes  
+- Maximum Nodes
 - Minimum Nodes
 - Preemptible% to use within the VNG
 - Restrict scale down
@@ -178,12 +180,13 @@ Once configured, whenever the Ocean autoscaler scales up, Ocean will automatical
 ### Default VNG
 
 The specification configured in the Ocean cluster object is referred to as the Default VNG. This definition is used for the following reasons:
+
 - Ocean uses this specification as the last option out of the possible VNGs to serve a workload.
 - At runtime, Ocean uses this default VNG as a template for the other VNGs defined, as it effectively uses parameters that are not explicitly set by the user in a VNG object.
 
 This methodology minimizes the effort of creating and maintaining multiple infrastructure configurations in a single cluster.
 
-There is an option to set the Ocean configuration to be a template only for other VNG's. This means that the default VNG will be only a template and we would not be able to launch an  instance from it as a fallback. In this case, you would need at least one VNG so that the cluster could scale.
+There is an option to set the Ocean configuration to be a template only for other VNG's. This means that the default VNG will be only a template and we would not be able to launch an instance from it as a fallback. In this case, you would need at least one VNG so that the cluster could scale.
 
 You can configure this option in the JSON view of the default VNG or in the JSON of the cluster with the parameter `launchSpecification.useAsTemplateOnly`. Note that the parameter is case sensitive.
 
@@ -233,9 +236,9 @@ Ocean takes the following parameters from the default VNG unless explicitly set 
 
 ### Roll per VNG
 
-You can initiate a roll per VNG. This is useful when you need to apply changes to a VNG or restart the VNG for any reason without impacting other instances in the Ocean cluster.  
+You can initiate a roll per VNG. This is useful when you need to apply changes to a VNG or restart the VNG for any reason without impacting other instances in the Ocean cluster.
 
-This feature enables you to roll multiple VNGs at once. To do this, Ocean includes all of the relevant VNGs and  initiates one roll for all of the instances in all of the VNGs specified. In addition, you have an option to roll specific instances.
+This feature enables you to roll multiple VNGs at once. To do this, Ocean includes all of the relevant VNGs and initiates one roll for all of the instances in all of the VNGs specified. In addition, you have an option to roll specific instances.
 
 For more information, see Initiate Roll per launchSpecIds ([AKS](https://docs.spot.io/api/#operation/oceanAzureRollInit), [AWS](https://docs.spot.io/api/#operation/oceanAwsRollInit), [GKE](https://docs.spot.io/api/#operation/oceanGkeRollInit)).
 

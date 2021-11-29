@@ -14,7 +14,7 @@ Ocean Spark lets you manage clusters in a self-service way.
 
 ## Applications
 
-A Spark application is the runtime execution of Spark code, submitted interactively through a notebook or as a file to execute through an API call. When you submit a Spark application on a cluster, Kubernetes first needs to schedule the Spark driver pod, which means placing it on a Kubernetes node by reusing existing capacity or provisioning  a new node. Kubernetes then downloads the application’s Docker image, and runs it. Once the Spark driver has started, it will request Spark executors, which will be scheduled on the same cluster. A Spark application is therefore made of one Spark driver (one pod), and a variable number of Spark executors (one executor = one pod).
+A Spark application is the runtime execution of Spark code, submitted interactively through a notebook or as a file to execute through an API call. When you submit a Spark application on a cluster, Kubernetes first needs to schedule the Spark driver pod, which means placing it on a Kubernetes node by reusing existing capacity or provisioning a new node. Kubernetes then downloads the application’s Docker image, and runs it. Once the Spark driver has started, it will request Spark executors, which will be scheduled on the same cluster. A Spark application is therefore made of one Spark driver (one pod), and a variable number of Spark executors (one executor = one pod).
 
 Even if you have multiple clusters (hosted in the same cloud account), Ocean for Apache Spark lets you [monitor the applications](ocean-spark/product-tour/monitor-applications) running on these clusters on a single dashboard.
 

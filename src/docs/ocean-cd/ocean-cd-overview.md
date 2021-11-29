@@ -23,9 +23,10 @@ Ocean CD resides within Kubernetes and communicates with Spot to connect all par
 <img src="/ocean-cd/_media/ocean-cd-overview-01.png" />
 
 To automate deliveries with Ocean CD, you will set up three basic types of entities:
-- A Microservice, which is a logical object that binds a Kubernetes deployment with the respective Ocean CD rollout spec (based on label selectors). *In other words, the microservice object you define tells Ocean CD about a Kubernetes deployment of yours, making it a managed workload.*
-- An Environment, which is a logical object that represents the target inside the cluster to which a microservice will be deployed, based on Ocean CD rollout spec. *When you define an environment object, you tell Ocean CD about a required destination for a rollout.*
-- A Rollout Spec - An Object that connects between a Microservice and its target Environment and includes the logic that Ocean CD will use in order to manage the rollout process (deployment strategy, verifications, failure policies, notifications types, and webhook APIs). *When you create a rollout spec, you match a microservice to an environment and configure the various options of how that rollout will take place.*
+
+- A Microservice, which is a logical object that binds a Kubernetes deployment with the respective Ocean CD rollout spec (based on label selectors). _In other words, the microservice object you define tells Ocean CD about a Kubernetes deployment of yours, making it a managed workload._
+- An Environment, which is a logical object that represents the target inside the cluster to which a microservice will be deployed, based on Ocean CD rollout spec. _When you define an environment object, you tell Ocean CD about a required destination for a rollout._
+- A Rollout Spec - An Object that connects between a Microservice and its target Environment and includes the logic that Ocean CD will use in order to manage the rollout process (deployment strategy, verifications, failure policies, notifications types, and webhook APIs). _When you create a rollout spec, you match a microservice to an environment and configure the various options of how that rollout will take place._
 
 The Ocean CD Controller detects every applied deployment (using an admission webhook) with the required changes in your Kubernetes cluster. Ocean CD controller checks the deployment labels and namespace.  
 Whenever there is a match with a rollout spec that includes a microservice with matching labels and environment that targets the deployment namespace, then the SaaS will instruct the controller on the actions that need to be automatically executed.
@@ -35,6 +36,7 @@ This process enables full automation of the rollout, with verification and rollb
 ## Putting it all Together
 
 As shown in the illustration below, Ocean CD fits right into your Cloud Kubernetes environment with:
+
 - Your service provider (e.g., AWS, Google Cloud or Microsoft Azure) providing your cloud layer
 - Spot Ocean providing container management and numerous optimization features in your infrastructure layer
 - Ocean CD providing visibility, deployment automation, and continuous verification at the application level

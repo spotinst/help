@@ -15,12 +15,14 @@ To see information at the cluster level, go to Ocean CD in the left menu tree an
 ## Rollouts View
 
 To see this page, go to Ocean CD in the left menu tree and click Rollouts. The Rollouts page appears as shown below and includes two areas:
+
 - Summary Line
 - Rollouts List
 
 ### Summary Line
 
 The tiles in the summary line include the following information:
+
 - Managed Clusters Heartbeat: Number of clusters that provide a heartbeat out of all the connected clusters.
 - Microservices: The number of microservices with active rollouts, managed by Ocean CD.
 - Environments: The number of environments with active rollouts set up in Ocean CD.
@@ -50,17 +52,20 @@ The Rollouts list provides information about each microservice rollout event for
 ### Initiator
 
 This parameter initiates a new rollout event (i.e., a new table entry). Ocean CD adds a new row when one of the following types of initiations occurs:
+
 - Detection: A new microservice that is managed by Ocean CD is detected.
 - Failure policy: This occurs following a failure policy activation of type New Rollout, deploying a previous version through all Ocean CD rollout phases.
 - Manual: Following a manual user action on rollout that has been completed (rollback).
 
-*Managed* means that Ocean CD has a rollout spec with settings that include:
+_Managed_ means that Ocean CD has a rollout spec with settings that include:
+
 - A microservice that has label selectors that match with part or all of the detected deployment labels.
 - An environment that matches with the deployment target environment, based on namespace.
 
 ### Rollout State
 
 The rollout state can be one of the following states:
+
 - Success: The rollout process has been completed, and the required updates are in the desired environment after passing the Ocean CD logical rollout phases. A failure policy phase has not been activated during the rollout.
 - In Progress: The rollout process has started. The last phase of the Ocean CD rollout has not been finished yet.
 - Failed: The rollout process has been completed. A failure policy phase has been activated during the rollout.

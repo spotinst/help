@@ -29,6 +29,7 @@ Example:
 ### Step 2
 
 After assigning its target group to the rule, Elastigroup waits until the ratio of healthy instances in the Elastigroup target group is higher than the [minimum healthiness percentage](elastigroup/tutorials/elastigroup-tasks/create-an-elastigroup-from-scratch?id=autohealing) configured, or until timeout.
+
 - When the ratio of healthy instances is higher than configured, Elastigroup continues to the next step.
 - If after the wait time the ratio of healthy instances in the assigned target group is lower than configured, then Elastigroup stops and fails the migration, producing an error message.
 
@@ -53,6 +54,7 @@ Example:
 ### Step 5
 
 Then, Elastigroup does the following:
+
 - Drops all customer target groups that are still assigned to the rule.
 
   Example:

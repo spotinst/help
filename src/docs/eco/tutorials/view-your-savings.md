@@ -34,9 +34,10 @@ Eco provides summary graphs and charts to give you wide visibility of your savin
 ### Savings over time
 
 A bar graph showing the amount of savings each month broken down by type of savings. This graph will allow you to visualize savings from reservations and savings plans. You can use the filters at the top of the page and source filters specific to each graph.
-  - All
-  - Eco
-  - Non-Eco
+
+- All
+- Eco
+- Non-Eco
 
 <img src="/eco/_media/tutorials-view-savings-01c2.png" width="531" height="405" />
 
@@ -47,6 +48,7 @@ A stacked bar graph showing your reserved instance and savings plan commitment p
 <img src="/eco/_media/tutorials-view-savings-01c3.png" />
 
 The export from this table provides an amortization report, which breaks down each commitment as a CSV file with the following headers.
+
 - Amortized Commitment: The amortized amount for the month. If there was no upfront commitment, this will be zero.
 - ARN: The AWS Resource Name unique to the commitment.
 - Date: The year and month of the amortized amount.
@@ -64,7 +66,7 @@ A line graph that breaks down the story of how reservations, savings plan covera
 
 ### Commitment Usage Distribution Over Time
 
-A filterable table and corresponding chart which allow you to review your commitments in a variety of ways.  By placing your cursor in the filter field, you will see which parameters can be selected.
+A filterable table and corresponding chart which allow you to review your commitments in a variety of ways. By placing your cursor in the filter field, you will see which parameters can be selected.
 
 <img src="/eco/_media/tutorials-view-savings-01e.png" />
 

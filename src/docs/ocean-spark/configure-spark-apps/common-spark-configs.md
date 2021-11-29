@@ -5,6 +5,7 @@ This page describes some common Spark configurations relevant to Ocean Spark.
 ## Control the number of executors
 
 For Spark versions 3.0 and above, dynamic allocation is enabled by default for your workloads. It will cause the Spark driver to dynamically adjust the number of Spark executors at runtime based on load:
+
 - When there are pending tasks, the Spark driver will request more executors.
 - When an executor is idle for a while (not running any task), it is removed.
 
@@ -12,12 +13,12 @@ Here is an example configuration fragment to enable dynamic allocation. The fiel
 
 ```json
 {
- "sparkConf": {
-   "spark.dynamicAllocation.enabled": "true",
-   "spark.dynamicAllocation.minExecutors": "0",
-   "spark.dynamicAllocation.maxExecutors": "25",
-   "spark.dynamicAllocation.initialExecutors": "1"
- }
+  "sparkConf": {
+    "spark.dynamicAllocation.enabled": "true",
+    "spark.dynamicAllocation.minExecutors": "0",
+    "spark.dynamicAllocation.maxExecutors": "25",
+    "spark.dynamicAllocation.initialExecutors": "1"
+  }
 }
 ```
 
@@ -31,7 +32,7 @@ You can disable dynamic allocation and control exactly the number of executors t
 {
   "sparkConf": {
     "spark.dynamicAllocation.enabled": "false"
- },
+  },
   "executor": {
     "instances": 10
   }
@@ -44,9 +45,9 @@ You can disable dynamic allocation and control exactly the number of executors t
 
 ```json
 {
- "sparkConf": {
-   "spark.sql.adaptive.enabled": "true"
- }
+  "sparkConf": {
+    "spark.sql.adaptive.enabled": "true"
+  }
 }
 ```
 
