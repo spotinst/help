@@ -12,7 +12,7 @@
     - [Monitor Jobs](ocean-spark/product-tour/monitor-jobs)
     - [View Job Details](ocean-spark/product-tour/view-job-details)
   - [Configure Spark Applications](ocean-spark/configure-spark-apps/)
-    - [Access Your Data](cean-spark/configure-spark-apps/access-your-data)
+    - [Access Your Data](ocean-spark/configure-spark-apps/access-your-data)
     - [Package Spark Code](ocean-spark/configure-spark-apps/package-spark-code)
     - [Memory & Cores](ocean-spark/configure-spark-apps/memory-&-cores)
     - [Common Spark Configurations](ocean-spark/configure-spark-apps/common-spark-configs)
