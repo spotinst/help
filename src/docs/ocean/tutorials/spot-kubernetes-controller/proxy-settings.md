@@ -1,8 +1,10 @@
-# Ocean Controller Proxy settings
+# Ocean Controller Proxy Settings
+
+This page describes how to configure the Ocean Controller Proxy.
 
 ## Proxy Configuration
 
-The Ocean Controller supports connecting to the Spot APIs via a Proxy when it is required. The proxy should be configured in the Spot Controller ConfigMap where `proxy-url` and is an optional parameter. It is supported in Controller Version 1.0.45 and above.
+The Ocean Controller supports connecting to the Spot APIs via a proxy. The proxy should be configured in the Spot Controller ConfigMap where `proxy-url` is an optional parameter. It is supported in Controller Version 1.0.45 and above.
 
 Example ConfigMap:
 
@@ -19,45 +21,46 @@ data:
 ```
 
 Replace `<IDENTIFIER>` and `<Proxy-URL>` with the appropriate values.
-A Proxy URL will be a url value, for example "http://proxy.example.com:8080/"
+A Proxy URL will be a URL value, for example, "http://proxy.example.com:8080/".
 
-To create or update your configuration you can save the ConfigMap yaml to a file and apply it using `kubectl apply -f <filename>`
+To create or update your configuration, you can save the ConfigMap yaml to a file and apply it using `kubectl apply -f <filename>`.
 
 ## TLS Terminating Proxies
 
-Some proxies inspect TLS traffic by terminating the client's connection at the Proxy and making it's own connection to the destination. In these cases the proxy will usually generate it's own certificate to present to the client, which the client must then trust.
+Some proxies inspect TLS traffic by terminating the client's connection at the proxy and making its own connection to the destination. In these cases, the proxy will usually generate its own certificate to present to the client, which the client must then trust.
 
-The Ocean Controller makes connections to the Spot APIs using TLS endpoints and expects a trusted certificate. In the case of proxies that terminate the TLS connection at the Proxy, the root/issuing Certificat Authority (CA) of the certificate that the proxy presents to the Ocean Controller must be added to it's list of trusted CAs.
+The Ocean Controller makes connections to the Spot APIs using TLS endpoints and expects a trusted certificate. In the case of proxies that terminate the TLS connection at the Proxy, the issuing Certificate Authority (CA) of the certificate that the proxy presents to the Ocean Controller must be added to its list of trusted CAs.
 
-To be able to add these "extra CAs" to the Ocean Controller we provide a way that you can add certificates to a Secret which will be added to the trust chain for the controller.
+To be able to add these "extra CAs" to the Ocean Controller, we provide a way that you can add certificates to a secret which will be added to the trust chain for the controller.
 
 ### Adding Trusted CAs
 
 In order to add “extra pems” you need to add the certificate(s) to a file name `userEnvCertificates.pem`. The cerificates should be in PEM format.
 
-***Note:*** *The filename needs to be `userEnvCertificates.pem`*
+> **Tip**: The filename needs to be `userEnvCertificates.pem`.
 
-Create a Secret with the certificate(s), `kubectl -n kube-system create secret generic spotinst-kubernetes-cluster-controller-ca-bundle --from-file=userEnvCertificates.pem`
+Create a secret with the certificate(s): `kubectl -n kube-system create secret generic spotinst-kubernetes-cluster-controller-ca-bundle --from-file=userEnvCertificates.pem`
 
-If the Ocean Controller was already running it will require a restart, it can be restarted by deleting the running Pod using `kubectl -n kube-system delete pod <controller_pod_name>`
+If the Ocean Controller was already running, it will require a restart. It can be restarted by deleting the running pod using: `kubectl -n kube-system delete pod <controller_pod_name>`
 
-Once the Pod is started again the additinal CAs should be added to the controllers list of trusted CAs can connect to Spot APIs.
+Once the pod is started again, the additinal CAs should be added to the controller's list of trusted CAs so they can connect to Spot APIs.
 
 ### Discovering Proxy Certificate Authority
 
-If you do not have the certificates provided, you need to discover the certificate authority used by the proxy you can find the certificate chain from a host or pod that can connect to the proxy. The host or pod will need to have openssl tools installed.
+If you do not have the certificates provided, you need to discover the certificate authority used by the proxy. You can find the certificate chain from a host or pod that can connect to the proxy. The host or pod will need to have `openssl` tools installed.
 
-For example run a network diagnostics pod in the cluster using `kubectl run --rm -ti netshoot --image=nicolaka/netshoot -- bash`
+For example, run a network diagnostics pod in the cluster using: `kubectl run --rm -ti netshoot --image=nicolaka/netshoot -- bash`
 
-*Note: For more information on the netshoot image please see https://github.com/nicolaka/netshoot*
+> **Tip**: For more information about the netshoot image, see https://github.com/nicolaka/netshoot.
 
 Once you have a shell inside the pod or on the host, you can run `openssl s_client -showcerts -connect api.spotinst.com:443 -servername api.spotinst.com -proxy proxy.example.com:8080` where you can replace the proxy with the hostname/IP address and port of your own proxy.
 
-In the output you will be able to see the certificate chain provided for the TLS connection, there will usually be 2-3 certificates in the chain where the bottom one listed is the Certificate Authority. You can copy this certiciate, which is provided in PEM format and add to the Secret.
+In the output, you will be able to see the certificate chain provided for the TLS connection. There will usually be 2-3 certificates in the chain where the bottom one listed is the Certificate Authority. You can copy this certiciate, which is provided in PEM format and add to the secret.
 
-Example PEM Certificate from openssl output
+### Example PEM Certificate from openssl Output
 
-```userEnvCertificates.pem
+```
+userEnvCertificates.pem
 -----BEGIN CERTIFICATE-----
 MIIDzjCCAragAwIBAgIJAMJUvQUNey/kMA0GCSqGSIb3DQEBCwUAMEgxGDAWBgNV
 BAMMD1Nwb3QgRXhhbXBsZSBDQTENMAsGA1UECgwEU3BvdDEQMA4GA1UECwwHc3Bv
