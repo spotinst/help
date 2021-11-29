@@ -81,7 +81,7 @@ To use variables in custom formats, please wrap the variable name with a percent
 }
 ```
 
-### Custom Content Format Example For Slack Endpoints
+### Custom Content Format Example For Slack Endpoints (Mandatory)
 
 ```
 {
