@@ -47,7 +47,7 @@ The following are possible reasons for failure:
 
 The roll does not consider the [restrict-scale-down](ocean/features/scaling-kubernetes.md#scale-down-prevention) label. Ocean will replace a node even if a task or pod uses this label. As mentioned above, Ocean's autoscaler takes into consideration all relevant constraints in place before the roll.
 
-## Roll per Node or Launch Specification
+## Roll per Node or Virtual Node Group
 
 Ocean launch specifications enable you to run different node groups within a single Ocean cluster. This makes it possible to run different groups of nodes, such as the examples below, on the same cluster.
 
