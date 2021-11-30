@@ -5,7 +5,7 @@
   - [Getting Started](spot-pc/getting-started/)
     - [Prerequisites](spot-pc/getting-started/prerequisites/)
       - [End-User Prerequisites](spot-pc/getting-started/prerequisites/end-user-prerequisites)
-    - [Roles and Responsibilities](spot-pc/getting-started/roles-and-responsibilities)
+    - [Roles and Responsibilities](spot-pc/getting-started/roles-and-responsibilities/)
     - [Onboarding Workflow](spot-pc/getting-started/onboarding-workflow/)
   - [Features](spot-pc/features/)
     - [Concepts](spot-pc/features/concepts/)
