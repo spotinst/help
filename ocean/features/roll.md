@@ -8,7 +8,7 @@ In Ocean you can roll your cluster with a single click. The roll feature takes i
 
 ## How It Works
 
-Whether you are rolling your entire Ocean cluster, a specific launch specification, or only specific nodes, Ocean can divide the roll into batches according to batch sizes that you choose. So for example, if you choose to roll according to the default batch size of 20%, Ocean divides the roll into 5 batches. The process takes place as follows:
+Whether you are rolling your entire Ocean cluster, a specific virtual node group (VNG), or only specific nodes, Ocean can divide the roll into batches according to batch sizes that you choose. So for example, if you choose to roll according to the default batch size of 20%, Ocean divides the roll into 5 batches. The process takes place as follows:
 
 1. Ocean calculates the number of batches required in the roll based on the batch size you enter and divides the workloads equally among the batches.
 2. Ocean starts with the first batch, replacing each node in such a way that ensures the successful accomodation of the workloads on the new nodes. Ocean's autoscaler takes into consideration all relevant constraints in place before the roll.
@@ -47,22 +47,22 @@ The following are possible reasons for failure:
 
 The roll does not consider the [restrict-scale-down](ocean/features/scaling-kubernetes.md#scale-down-prevention) label. Ocean will replace a node even if a task or pod uses this label. As mentioned above, Ocean's autoscaler takes into consideration all relevant constraints in place before the roll.
 
-## Roll per Node or Virtual Node Group
+## Roll per Node or VNG
 
-Ocean launch specifications enable you to run different node groups within a single Ocean cluster. This makes it possible to run different groups of nodes, such as the examples below, on the same cluster.
+Ocean VNGs enable you to run different node groups within a single Ocean cluster. This makes it possible to run different groups of nodes, such as the examples below, on the same cluster.
 
 - Separate development, test, and production environments
 - Different teams
 - Different applications or microservices
 
-The Ocean API enables you to roll one or more nodes in a launch specification without having to roll the entire cluster. This is useful when you have different groups of nodes running in the cluster, like those described above, and don't want to roll the entire cluster for a local software update. You can do this by specifying a list of node IDs or a specific launch specification ID.
+The Ocean API enables you to roll one or more nodes in a VNG without having to roll the entire cluster. This is useful when you have different groups of nodes running in the cluster, like those described above, and don't want to roll the entire cluster for a local software update. You can do this by specifying a list of node IDs or a specific VNG ID.
 
 For example, you can use:
 
-- The `instanceIds` parameter (for Ocean for K8s on AWS and ECS) or `instanceNames` (for Ocean GKE) to initiate a roll of one or more specific nodes.
-- The `launchSpecIds` parameter to initiate a roll of one or more launch specifications in the cluster. When you specify a launch specification ID, all the nodes in that launch specification are rolled.
+- The `instanceIds` parameter (for Ocean for Kubernetes on AWS and ECS) or `instanceNames` (for Ocean GKE) to initiate a roll of one or more specific nodes.
+- The `launchSpecIds` parameter to initiate a roll of one or more VNGs in the cluster. When you specify a VNG ID, all the nodes in that VNG are rolled.
 
-For more information about the specific APIs, see Initiate Cluster Roll: [AKS](https://docs.spot.io/api/#operation/oceanAzureRollInit), [K8s on AWS](https://docs.spot.io/api/#operation/oceanAwsRollInit), [ECS](https://docs.spot.io/api/#operation/oceanEcsRollInit), [GKE](https://docs.spot.io/api/#operation/oceanGkeRollInit)
+For more information about the specific APIs, see Initiate Cluster Roll: [AKS](https://docs.spot.io/api/#operation/oceanAzureRollInit), [Kubernetes on AWS](https://docs.spot.io/api/#operation/oceanAwsRollInit), [ECS](https://docs.spot.io/api/#operation/oceanEcsRollInit), [GKE](https://docs.spot.io/api/#operation/oceanGkeRollInit)
 
 ## Create A Roll
 
