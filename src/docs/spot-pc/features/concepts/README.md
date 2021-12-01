@@ -1,11 +1,37 @@
 <meta name="robots" content="noindex">
 # Spot PC concepts
+This section covers concepts and policies that are specific to Spot PC to help define terms used in the documentation and the Spot PC console.
 
-## Organizations
+## Spot PC Hierarchy
+Spot PC is organized in a way to maximize the flexibility fo the access and control of Spot PC resources.  Multiple layers of organization exist to achieving this goal.  Below, each layer is detailed in reverse order, starting with the most granular grouping.
 
-## Tenants
+This diagram illustrates each layer from Organization to users:
+<img src="/spot-pc/_media/features-concepts-01" width="500"> </a>
 
-## Spot Groups
+### Spot Group
+The Spot Group represents a collection of users with homogeneous application requirements.
+
+Spot Groups are populated by one or more existing security groups from the customer Active Directory configuration.  Users are added/removed from the Spot Group by being added or removed to the linked AD security group(s).
+
+A single VM image is assigned to the Spot Group.  Thus, all host VMs are identical and all user sessions on those machines will have access to the same applications.
+
+A user can be a member of multiple Spot Groups and will receive access to the appropriate resources.  Note that users with multiple Spot Groups assigned may consume additional Spot PC licensing.
+
+One or more session host VM is built for each Spot Group. The machines are dedicated to the Spot Group and not shared with other Spot Groups. These machines are used to host the user sessions.  The size and quantity of available hosts are determined by Spot PC licensing and the performance optimization technology included in Spot PC.  
+
+### Tenant
+The Tenant represents a customer that uses the Spot PC service.
+
+A Spot PC tenant must be associated with one (and only one) Azure tenant.
+
+Tenants can contain one or more Spot Group(s).
+
+### Organization
+The Organization represents an IT support organization.  Typically this is a Managed Services Provider (MSP) supporting multiple customers or an internal IT department supporting one or more business units.
+
+All tenants are assigned to one (and only one) Organization. Multiple Tenants can be assigned to the same Organization.
+
+
 
 ## Session Hosts
 
