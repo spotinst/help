@@ -117,9 +117,10 @@ As the automation runs and builds the Spot PC environment, several milestones ar
 
 - Installs the Spot service on the SpotPCManager1 virtual machine and configures it for Spot PC.
 
-**Assign Html5 Web Address**
 
-- Registers the new HTML5 gateway used by connect-to-server using a unique, publicly-routable DNS address
+**Assign HTML5 Web Address**
++ Registers the new HTML5 gateway used by connect-to-server using a unique, publicly-routable DNS address
+
 
 ## What’s Next?
 
