@@ -1,10 +1,11 @@
 <meta name="robots" content="noindex">
+
 # Spot PC concepts
 This section covers concepts and policies that are specific to Spot PC to help define terms used in the documentation and the Spot PC console.
 
 ## Spot PC Hierarchy
 Spot PC is organized in a way to maximize the flexibility fo the access and control of Spot PC resources.  Multiple layers of organization exist to achieving this goal. This diagram illustrates each layer from organization to users:
-<img src="/spot-pc/_media/features-concepts-01" width="500"> </a>
+<img src="/spot-pc/_media/features-concepts-01.png" width="500"> </a>
 
 ### Spot Group
 The Spot Group represents a collection of users with homogeneous application requirements.
@@ -37,7 +38,7 @@ All tenants are assigned to one (and only one) Organization. Multiple Tenants ca
 
 ## Images
 VM Images are an area of emphasis and focus for Spot PC management.  The goal is that all customization to session host VM be done at the image level, allowing Spot PC optimization automation to manage the creation, deletion and availability of session hosts automatically.
- 
+
 This this end the Spot PC Console includes an Images workflow for creating, customizing and sealing VM images.  This workflow integrates with Azure Images and Azure Image Gallery and makes the task of managing images far simpler.
 
 Within the Spot PC Console there is an Image Set Library, accessible from the Config Actions menu, within any tenant. From this menu the Spot PC administrator can:
