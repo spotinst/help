@@ -2486,34 +2486,6 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/features/concepts/"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/spot-pc/features/concepts/security-concepts/admin-security</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-pc/features/concepts/security-concepts/admin-security"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/features/concepts/security-concepts/admin-security"/>
-    </url>
-    <url>
-        <loc>https://docs.spot.io/?/spot-pc/features/concepts/security-concepts/machine-security</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-pc/features/concepts/security-concepts/machine-security"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/features/concepts/security-concepts/machine-security"/>
-    </url>
-    <url>
-        <loc>https://docs.spot.io/?/spot-pc/features/concepts/security-concepts/</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-pc/features/concepts/security-concepts/"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/features/concepts/security-concepts/"/>
-    </url>
-    <url>
-        <loc>https://docs.spot.io/?/spot-pc/features/concepts/security-concepts/user-security</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-pc/features/concepts/security-concepts/user-security"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/features/concepts/security-concepts/user-security"/>
-    </url>
-    <url>
         <loc>https://docs.spot.io/?/spot-pc/features/concepts/spot-pc-and-windows-365-cloud-pc</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
