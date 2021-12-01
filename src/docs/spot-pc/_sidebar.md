@@ -9,14 +9,7 @@
     - [Onboarding Workflow](spot-pc/getting-started/onboarding-workflow/)
   - [Features](spot-pc/features/)
     - [Concepts](spot-pc/features/concepts/)
-      - [Spot PC and Windows 365 Cloud PC](spot-pc/features/concepts/spot-pc-and-windows-365-cloud-pc) <!-- Mike --->
-      - [Spot Groups](spot-pc/features/concepts/spot-groups)
-      - [Security Concepts](spot-pc/features/concepts/security-concepts/) <!-- Mike --->
-        - [User Security](spot-pc/features/concepts/security-concepts/user-security) <!-- Mike --->
-        - [Admin Security](spot-pc/features/concepts/security-concepts/admin-security) <!-- Mike --->
-        - [Machine Security](spot-pc/features/concepts/security-concepts/machine-security) <!-- Mike --->
-      - [Organizations](spot-pc/features/concepts/organizations)
-      - [Tenants](spot-pc/features/concepts/tenants)
+      - [Security](spot-pc/features/concepts/security) <!-- Mike --->
     - [Spot PC Console](spot-pc/features/spot-pc-console/)
       - [Overview](spot-pc/features/spot-pc-console/overview)
       - [Admins](spot-pc/features/spot-pc-console/admins)

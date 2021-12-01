@@ -12,16 +12,15 @@ End user prerequisites are documented [here.](spot-pc/getting-started/prerequisi
 Below you'll find a list of available clients for Spot PC and AVD. You'll experience the best performance with an installed client as opposed to the web client.  When possible use the client available for your device type (e.g. Windows, Android, etc...).
 
 ### Understanding User Sessions and Inactivity Timeouts
-When you connect to your Spot PC desktop, a "user session" is created on the virtual machine (vm) that hosts user sessions. This user session contains all of your running applications and helps keep your apps and data seperate from other users who may be using the same vm for their user session.
+When you connect to your Spot PC desktop, a "user session" is created on the virtual machine (vm) that hosts user sessions. This user session contains all of your running applications and helps keep your apps and data separate from other users who may be using the same vm for their user session.
 
-A disconnected sesison is one where your session and applications continue to run.  This can happen when you close the remote desktop window (aka. "X-out" of the window), choose **"disconnect"** from the start menu, lose internet connectivity, close their laptop or otherwise ends the remote connection between you and your remote desktop.  When you reconnect, you'll be connected with your existing session, exactly as you left your desktop. User sessions are also disconnected after two hours of inactivity on a connected session.
+A disconnected session is one where your session and applications continue to run.  This can happen when you close the remote desktop window (aka. "X-out" of the window), choose _disconnect_ from the start menu, lose internet connectivity, close their laptop, or otherwise ends the remote connection between you and your remote desktop. Additionally, Spot PC runs an automated task to close idle connections after a set period of time (as determined by your IT support organization). When you reconnect, you'll be connected with your existing session, exactly as you left your apps and desktop. 
 
+In a remote desktop environment, allowing user sessions to remain open (even when disconnected) for extended periods of time is considered a bad practice. Open sessions consume resources and prevent system maintenance which can add up to significant performance issues if left unaddressed.  
 
-In a remote dekstop environment, allowing user sessions to remain open (even when disconnected) for extended periods of time is considered a bad practice. Open sessions consume resources and prevent system maintnenace which can add up to significant performance issues if left unaddressed.  
+Therefore, Spot PC will close disconnected sessions after a set period of time (as determined by your IT support organization).
 
-Therefore, if your user session is running in a disconnected state for two consecutive hours, it will be automatiaclly closed. There is the potential that unsaved work is lost, in practice this is rare as most modern applications (including Microsoft Office) automatically save work.  These two idel/inactivity timers combine so that an active session that is idle for 2 hours will be disconnected, if that sessions then remains disconnected for two additional hours it will be closed automatically.  
-
-You can help maximize the performance of your team's Spot PC environment by logging off when not using the session.  This is done by click the start Menu, clicking your username and then on **"Sign out"**.  Below is a screenshot showing the difference beween a
+You can help maximize the performance of your team's Spot PC environment by logging off when not using the session.  This is done by click the _Start Menu, clicking your username and then on Sign out_.  Below is a screenshot showing the difference between disconnecting and logging off.
 
 <img src="/spot-pc/_media/connect-to-desktop-01.png" />
 
