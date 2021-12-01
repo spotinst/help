@@ -3,9 +3,7 @@
 This section covers concepts and policies that are specific to Spot PC to help define terms used in the documentation and the Spot PC console.
 
 ## Spot PC Hierarchy
-Spot PC is organized in a way to maximize the flexibility fo the access and control of Spot PC resources.  Multiple layers of organization exist to achieving this goal.  Below, each layer is detailed in reverse order, starting with the most granular grouping.
-
-This diagram illustrates each layer from Organization to users:
+Spot PC is organized in a way to maximize the flexibility fo the access and control of Spot PC resources.  Multiple layers of organization exist to achieving this goal. This diagram illustrates each layer from organization to users:
 <img src="/spot-pc/_media/features-concepts-01" width="500"> </a>
 
 ### Spot Group
