@@ -10,24 +10,24 @@ You will need to add to the Spot policy permissions to write to your S3 bucket. 
 
 ```json
 {
-            "Sid": "statement1",
-            "Effect": "Allow",
-            "Action": [
-            "s3:PutObject"
-            ],
-            "Resource": "arn:aws:s3:::awsexamplebucket1/*"
-        }
+  "Sid": "statement1",
+  "Effect": "Allow",
+  "Action": ["s3:PutObject"],
+  "Resource": "arn:aws:s3:::awsexamplebucket1/*"
+}
 ```
 
 ## Setup in Ocean
 
 The integration consists of two parts:
+
 - Defining the data integration between the Spot platform and an S3 bucket. This definition is at the Spot account level and can then be used by one or more Ocean clusters.
 - Defining the usage of the data integration by an ocean cluster. This activates the logging export to the S3 bucket defined in the data integration.
 
 Once you set up the integration, Ocean will start sending log files from the defined cluster to your S3 bucket.
 
 To set up the integration in Ocean, do the following:
+
 1. Use the [Create Data Integration](https://docs.spot.io/api/#operation/DataIntegrationCreate) API to configure the basic parameters of the integration such as the vendor name, a name identifying the integration (as you may want to create several integrations and keep them separate), the S3 bucket name, and the destination sub-directory for the exported log files.
 
 ```json
@@ -67,7 +67,7 @@ To set up the integration in Ocean, do the following:
         }
       }
     ],
-  }  
+  }
 ```
 
 Use either the [Create Cluster](https://docs.spot.io/api/#operation/OceanAWSClusterCreate) or [Update Cluster](https://docs.spot.io/api/#operation/OceanAWSClusterUpdate) (if your cluster already exists) API to enter the integration ID in the Ocean cluster that you want to export. (This is the ID that you copied in Step 2.)

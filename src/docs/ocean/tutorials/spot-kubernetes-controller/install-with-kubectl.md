@@ -2,7 +2,7 @@
 
 To install the Ocean Controller, follow the steps below.
 
-1. Create a yaml file secret.yaml with the following parameters:
+## 1. Create the file secret.yaml with the following parameters:
 
 ```yaml
 apiVersion: v1
@@ -22,7 +22,7 @@ Run the command for each of the inputs (account id, token) separately.
 
 Create the secret by running: `kubectl apply -f secret.yaml`
 
-2. Create a yaml file configMap.yaml with the following parameters:
+## 2. Create the file configMap.yaml with the following parameters:
 
 ```yaml
 kind: ConfigMap
@@ -32,11 +32,11 @@ metadata:
   namespace: kube-system
 data:
   spotinst.cluster-identifier: <IDENTIFIER>
-  proxy-url: <Proxy-URL> i.e http://hello-world.com:82/
+  proxy-url: <Proxy-URL>
   disable-auto-update: <"true"/"false">
 ```
 
-**Note:** As an alternative for using a secret, create yaml file configMap.yaml with all the relevant parameters (Token, Account_ID, Identifier):
+> **Tip**: As an alternative for using a secret, create yaml file configMap.yaml with all the relevant parameters (Token, Account_ID, Identifier):
 
 ```yaml
 kind: ConfigMap
@@ -48,20 +48,23 @@ data:
   spotinst.token: <TOKEN>
   spotinst.account: <ACCOUNT_ID>
   spotinst.cluster-identifier: <IDENTIFIER>
-  proxy-url: <Proxy-URL> i.e http://hello-world.com:82/
+  proxy-url: <Proxy-URL>
   disable-auto-update: <"true"/"false">
 ```
 
-Replace `<TOKEN>`, `<ACCOUNT_ID>`, and `<IDENTIFIER>` with the appropriate values.
-Note the following:
+Replace `<TOKEN>`, `<ACCOUNT_ID>`, and `<IDENTIFIER>` with the appropriate values. Optionally, provide `<Proxy-URL>`. A Proxy URL will be a URL value, for example, "http://proxy.example.com:8080/".
 
-- `proxy-url` and is an optional parameter in case you want to use a proxy in your cluster, and it is supported in Controller Version 1.0.45 and above.
-- `disable-auto-update` is an optional parameter (set to `false` by default). In case you want to disable the controller's auto-update functionality you can set it to `true`.
+### Optional Parameters
+
+- `proxy-url` is an optional parameter for when you need to use a proxy in your cluster and is supported in Controller Version 1.0.45 and above.
+- `disable-auto-update` is an optional parameter, set to False by default. In case you want to disable the controller's auto-update functionality you can set it to True.
+
+For more information on proxy configuration see [Proxy Settings](ocean/tutorials/spot-kubernetes-controller/proxy-settings) page.
 
 Load the parameters into the cluster configuration:
 `kubectl apply -f configMap.yaml`
 
-3. Install the controller and its dependencies.
+## 3. Install the controller and its dependencies.
 
 `kubectl apply -f https://s3.amazonaws.com/spotinst-public/integrations/kubernetes/cluster-controller/spotinst-kubernetes-cluster-controller-ga.yaml`
 

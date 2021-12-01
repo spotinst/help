@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Wave Overview
 
 Wave is a management and optimization tool for big data workflows. Running on the Spot platform, Wave enables you to run Apache Spark on Kubernetes without managing servers. Wave provides reliable, automated, and continuously optimized cloud infrastructure for big data workloads resulting in significant time and cost savings.

@@ -57,8 +57,6 @@ Within the Spot PC Console there is an Image Set Library, accessible from the Co
 
 
 
-
-
 ## What’s Next?
 
 Learn more about [Getting Started](spot-pc/getting-started/) with Spot PC.

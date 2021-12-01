@@ -1565,6 +1565,25 @@ export const aliases = (() => {
 
     "/administration/users/configure-slack-notifications":
       "/administration/notification-center/",
+
+    "/ocean/concepts/ocean-cloud/scaling/":
+      "/ocean/features/scaling-kubernetes",
+
+    "/wave/": "/ocean-spark/",
+
+    "/wave/overview": "/ocean-spark/",
+
+    "/wave/getting-started/": "/ocean-spark/getting-started/",
+
+    "/wave/features/": "/ocean-spark/product-tour/",
+
+    "/wave/features/cluster-management":
+      "/ocean-spark/product-tour/manage-clusters",
+
+    "/wave/features/wave-cluster-overview":
+      "/ocean-spark/product-tour/view-cluster-details",
+
+    "/wave/features/cost-analysis": "/ocean-spark/product-tour/analyze-costs",
   };
 
   for (let [key, value] of Object.entries(map)) {

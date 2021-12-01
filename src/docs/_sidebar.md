@@ -5,7 +5,7 @@
   - [Connect Azure Subscription](connect-your-cloud-provider/azure-account)
   - [Connect GCP Project](connect-your-cloud-provider/gcp-project)
 - [**Ocean**](ocean/)
-- [**Wave**](wave/)
+- [**Ocean for Apache Spark**](ocean-spark/)
 - [**Elastigroup**](elastigroup/)
 - [**Managed Instance**](managed-instance/)
 - [**Eco**](eco/)

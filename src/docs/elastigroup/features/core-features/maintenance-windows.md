@@ -1,6 +1,6 @@
 # Maintenance Windows
 
-The Maintenance Window option provides several ways to control the process of gracefully replacing on-demand instances with spot instances in the Elastigroup. When the Elastigroup needs to launch a new instance, either due to scaling or a predicted spot instance preemption, if no spot instance is available the Elastigroup launches an on-demand instance to maintain the desired capacity. This process is known as *fallback to on-demand*. The maintenance window ensures that the Elastigroup replaces the on-demand instances with spot instances as soon as they become available, or alternatively, at predefined times selected by the user.
+The Maintenance Window option provides several ways to control the process of gracefully replacing on-demand instances with spot instances in the Elastigroup. When the Elastigroup needs to launch a new instance, either due to scaling or a predicted spot instance preemption, if no spot instance is available the Elastigroup launches an on-demand instance to maintain the desired capacity. This process is known as _fallback to on-demand_. The maintenance window ensures that the Elastigroup replaces the on-demand instances with spot instances as soon as they become available, or alternatively, at predefined times selected by the user.
 
 ## Configuring the Maintenance Window
 
