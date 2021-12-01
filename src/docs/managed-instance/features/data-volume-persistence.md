@@ -57,14 +57,17 @@ echo "volume is ready"
 Managed Instance performs various backend actions for different states of the instance to ensure data volume persistence.
 
 ### Running
+
 - Reattach + One AZ: The data volumes are preserved, detached, and attached on every instance replacement.
 - Snapshot backups or Reattach + Multi AZ: A snapshot is taken for each data volume every five minutes.
 
 ### Paused
+
 - Reattach + One AZ: The original EBS volumes are maintained.
 - Snapshot backups or Reattach + Multi AZ: Only the latest snapshot for each volume is kept.
 
 ### Resume
+
 - Snapshot backups: New volumes are created from the latest snapshots upon instance launch.
 - Reattach + instance launch in same AZ as previous instance: The existing volumes are reattached to the new instance post launch.
 - Reattach + instance launch in different AZ from previous instance: New volumes are created in the same AZ as the new instance and are attached post launch.

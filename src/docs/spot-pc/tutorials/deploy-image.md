@@ -1,6 +1,7 @@
 <meta name="robots" content="noindex">
 
 # Deploy Machine Image
+
 Spot PC uses machine images to automatically build VMs to support the user desktops.
 
 Spot PC admins can change the image used for this automated process from the _Config Actions > Spot Group > Update_ menu on any tenant page.

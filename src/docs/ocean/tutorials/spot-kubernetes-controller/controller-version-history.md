@@ -1,10 +1,18 @@
 # Controller Version History
 
-## [1.0.79] - TBD
+## [1.0.80] - 2021-11-29
 
 Added
 
+- Upgraded UBI dependencies
+
+## [1.0.79] - 2021-11-08
+
+Added
+
+- support for user environments custom certificates
 - overall stability improvement
+- Upgraded dependencies
 
 ## [1.0.78] - 2021-10-03
 

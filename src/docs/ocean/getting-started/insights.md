@@ -58,7 +58,7 @@ The cluster details include:
 
 This area shows your:
 
-- Estimated Current Costs: An estimate based on the instances detected in the cluster and relevant attributes such as instance type, size, and lifecycle (e.g., on demand or spot).
+- Estimated Current Costs: An estimate based on the instances detected in the cluster and relevant attributes such as instance type, size, and lifecycle (e.g., on demand or spot). Note that although Ocean utilizes commitment plans automatically and continuously in the cluster, commitment plans as well as EDPs are not considered in this estimation.
 - Estimated Potential Costs: This estimate is based on two parts:
   - Converting all on-demand instances to spot instances. (If you do not plan to use spot instances, click the toggle switch in the upper right. This will show an estimate based on bin packing only.)
   - Optimizing the allocation of compute infrastructure by workloads using Ocean’s bin packing abilities.

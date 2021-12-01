@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Cluster Management
 
 Wave enables you to see an overview of all your Wave clusters, get status at a glance, perform tasks such as adding and removing clusters, and drill down to more detailed cluster information when you need to.

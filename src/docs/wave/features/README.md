@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Wave Features
 
 Wave takes end-to-end care of your big data infrastructure including:

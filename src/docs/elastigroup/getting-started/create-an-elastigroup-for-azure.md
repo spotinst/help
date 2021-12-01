@@ -76,6 +76,7 @@ When you have completed the information in the General tab, click Next to contin
 ### Image
 
 Choose one of the following types of images:
+
 - [Marketplace](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/cli-ps-findimage). An image available in the Azure Marketplace. You will need to select options from each of the following dropdowns:
   - Publisher. The organization that created the image.
   - Offer. The name of a group of related images created by a publisher. Examples: UbuntuServer, WindowsServer.
@@ -87,7 +88,7 @@ Choose one of the following types of images:
   - Image Resource Group. A list of Resource Groups associated with your subscription.
   - Gallery Name. The list of shared gallery names associated with the selected Resource Group.
   - Image Name. List of shared images associated with the selected Gallery. See below for more information.
-  - Version. The available versions of the selected Image.  These will be versions that are available in your selected region. If you need the most recent version, choose Latest from the list.
+  - Version. The available versions of the selected Image. These will be versions that are available in your selected region. If you need the most recent version, choose Latest from the list.
 
 <img src="/elastigroup/_media/gettingstarted-eg-azure-031.png" />
 
@@ -96,6 +97,7 @@ Choose one of the following types of images:
 All of the image names in the dropdown list have the OS that you chose under Operating System and VM Sizes.
 
 Images are indicated as Generalized or Specialized. When you choose a Specialized image, the following applies:
+
 - You will not specify Login information for the image.
 - Custom Data will not be available.
 
@@ -128,6 +130,7 @@ Enter the information for your network interface. You can define additional netw
 #### More on Choosing Public IPs
 
 In order to minimize ad hoc creation of new IPs on VM launchers, the following is recommended:
+
 - Choose IPs that are indicated as No zone/Zone redundant. These will ensure the most AZ flexibility.
 - The optimal number of public IPs for the pool is twice your maximum capacity. For example, if your maximum capacity is 6 VMs, then choose at least 12 public IP addresses.
 - If you choose zonal IPs (e.g., in zones 1, 2, 3), then distribute them equally across the zones.

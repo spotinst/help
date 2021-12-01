@@ -58,6 +58,7 @@ For additional information, see: [Update the Spot Policy](elastigroup/tutorials/
         "elasticloadbalancing:Describe*",
         "elasticloadbalancing:Deregister*",
         "elasticloadbalancing:Register*",
+        "elasticloadbalancing:ModifyListener",
         "elasticloadbalancing:RemoveTags",
         "elasticloadbalancing:RegisterTargets",
         "elasticloadbalancing:CreateTargetGroup",
@@ -156,16 +157,14 @@ For additional information, see: [Update the Spot Policy](elastigroup/tutorials/
       "Resource": ["*"]
     },
     {
-          "Sid": "AccessEks",
-          "Action": [
-            "eks:ListClusters",
-            "eks:DescribeNodegroup",
-            "eks:ListNodegroups"
-          ],
-          "Effect": "Allow",
-          "Resource": [
-            "*"
-          ]
+      "Sid": "AccessEks",
+      "Action": [
+        "eks:ListClusters",
+        "eks:DescribeNodegroup",
+        "eks:ListNodegroups"
+      ],
+      "Effect": "Allow",
+      "Resource": ["*"]
     },
     {
       "Sid": "AccessEMR",
