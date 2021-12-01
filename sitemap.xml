@@ -2486,20 +2486,6 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/features/concepts/"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/spot-pc/features/concepts/tenants</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-pc/features/concepts/tenants"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/features/concepts/tenants"/>
-    </url>
-    <url>
-        <loc>https://docs.spot.io/?/spot-pc/features/config-actions/</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-pc/features/config-actions/"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/features/config-actions/"/>
-    </url>
-    <url>
         <loc>https://docs.spot.io/?/spot-pc/features/config-actions/windows-365/connections</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
