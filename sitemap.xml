@@ -2640,11 +2640,11 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/features/spot-pc-console/tenant/user-sessions"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/spot-pc/getting-started/onboarding-workflow/</loc>
+        <loc>https://docs.spot.io/?/spot-pc/getting-started/onboarding-workflow</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-pc/getting-started/onboarding-workflow/"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/getting-started/onboarding-workflow/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-pc/getting-started/onboarding-workflow"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/getting-started/onboarding-workflow"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/spot-pc/getting-started/prerequisites/end-user-prerequisites</loc>
