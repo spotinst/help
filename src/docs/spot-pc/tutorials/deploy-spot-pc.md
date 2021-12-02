@@ -1,12 +1,12 @@
 <meta name="robots" content="noindex">
 
 # Deploy Spot PC Workflow
-Deploying Spot PC desktops with Spot PC takes three simple configuration workflows:  Create Image and Create Spot Group
+Deploying Spot PC desktops with Spot PC takes two simple configuration workflows: [Create Image](spot-pc/tutorials/deploy-spot-pc?id=create-image) and Create Spot [Group](spot-pc/tutorials/deploy-spot-pc?id=create-spot-group)
 
 # Create Image
 NOTE: This is the Spot PC workflow, for Windows 365 Cloud PC, [click here](spot-pc/tutorials/create-image?id=create-image-for-windows-365-cloud-pc-workflow).
 
-Creating a VM image is the first step towards adding a new (or additional) group of users and resources to an organization.  The image will then be assigned to the Spot Group created in the [next step](spot-pc/tutorials/create-spot-group) of this process.
+Creating a VM image is the first step towards adding a new (or additional) group of users and resources to an organization.  The image will then be assigned to the Spot Group created in the [next step](spot-pc/tutorials/deploy-spot-pc?id=create-spot-group) of this process.
 
 VM images for Spot PC are contained within Image Sets. Each new iteration of an image is represented within Spot PC as an Image with an incremented version number, all contained within a single Image Set. Then, an Image Set is assigned to a Spot Group, linking that image (and version) to that Spot Group. With this linkage intact, Spot PC optimization can automation the creation, deletion and availability of Spot PC session hosts for end users in real-time. Rolling out changes to the session host(s) is also simplified, once the new image version is created and tested, the Spot Group can be linked with the new image version and automation handles a seamless cutover to the new image.
 
@@ -98,7 +98,7 @@ Add notes to document any important information about this new image version. Th
 
 # Create Spot Group
 ## Create Spot Group Workflow
-Creating a Spot group is the second step towards adding a new (or additional) group of users and resources to an organization.  The image created in the [first step](spot-pc/tutorials/create-image/) of this process will be used.
+Creating a Spot group is the second step towards adding a new (or additional) group of users and resources to an organization.  The image created in the [first step](spot-pc/tutorials/deploy-spot-pc?id=create-image) of this process will be used.
 
 Creating a Spot Group can be done from the _Config Actions_ menu, found when inside any tenant.
 <br><a href="https://docs.spot.io/spot-pc/_media/tutorials-create-spot-group-01.png" target="_blank"><img src="/spot-pc/_media/tutorials-create-spot-group-01.png" alt="Click to Enlarge" width="500"> </a>
