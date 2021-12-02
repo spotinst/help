@@ -1,4 +1,5 @@
 <meta name="robots" content="noindex">
+
 # Create Image Workflow
 Below are two workflows, one for [Spot PC desktops](#) and another for [Windows 365 Cloud PC desktops](spot-pc/tutorials/create-image?id=create-image-for-windows-365-cloud-pc-workflow).  Either type can be deployed into a Spot PC tenant but the process is slightly different for each.  
 
