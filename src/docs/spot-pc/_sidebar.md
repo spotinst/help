@@ -21,13 +21,12 @@
         - [Config Actions](spot-pc/features/config-actions/) <!-- Mike --->
   - [Tutorials](spot-pc/tutorials/)
     - [Add Tenant](spot-pc/tutorials/add-tenant)
-    - [Create Image](spot-pc/tutorials/create-image)
-    - [Create Spot Group](spot-pc/tutorials/create-spot-group)
-    - [Deploy Image](spot-pc/tutorials/deploy-image)
+    - [Deploy Spot PC](spot-pc/tutorials/deploy-spot-pc)
+    - [Deploy Windows 365 Cloud PC](spot-pc/tutorials/deploy-windows-365-cloud-pc)
+    - [Deploy Image Update](spot-pc/tutorials/deploy-image-update)
     - [Connect to Desktop](spot-pc/tutorials/connect-to-desktop)
     - [Manage Users and Groups](spot-pc/tutorials/manage-users-and-groups)
     - [Manage Admins](spot-pc/tutorials/manage-admins)
-    - [Deploy Windows 365 Cloud PC](spot-pc/tutorials/deploy-windows-365-cloud-pc)
   - [Troubleshooting](spot-pc/troubleshooting/)
     - [Getting Support](spot-pc/troubleshooting/getting-support)
 
