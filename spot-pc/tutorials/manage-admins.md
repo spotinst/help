@@ -6,19 +6,38 @@ Spot PC allows for granular control over admin access to tenants including detai
 
 ## Admin Identity
 
-Spot PC admins authenticate with a single identity. That identity can be invited to access and manage any tenant(s) in Spot PC, across all organizations and tenants. This flexability is designed to support all sorts of support relationships including MSPs, contract admins, vendor access and more.
+Spot PC admins authenticate with a single identity. That identity can be invited to access and manage any tenant(s) in Spot PC, across all organizations and tenants. This flexibility is designed to support all sorts of support relationships including MSPs, contract admins, vendor access and more.
 
 Admins can login with their existing identities from Azure AD, Google or NetApp Cloud Central. When an admin is invited to and organization or a tenant, they are prompted to login to accept the invitation and
 
+Assigning tenant level permissions and managing those permissions has not been implemented yet in web app. So, you can not currently use organization user role.
+
 ## Admin Types
+A Spot PC Admin can be invited to multiple organizations, admin type is configurable per-organization.  Thus the same Spot PC Admin could be an _Org Admin_ for Org1 and _Tenant Creator_ for Org2.
 
 ### Organization Administrator
+* Has full permissions to all tenants in the org.
+* Can create new tenant(s) in the org.  
+* Can invite new users to the org.
+* Can assign tenant-level permissions to users.
 
 ### Organization User
-
-### Tenant Creator
+* Has _no_ default permissions to any org tenants.
+* Can be assigned tenant-level permissions.
+* Can _not_ invite new users to the org.
+* Can _not_ assign tenant-level permissions to users.
 
 ### Tenant Administrator
+* Has full permissions to all tenants in the org.  
+* Can _not_ invite new users to the org.
+* Can assign tenant-level permissions to users.
+
+### Tenant Creator
+* Has _no_ default permissions to any org tenants.
+* Can be assigned tenant-level permissions.
+* Can create new tenant(s) in the org, gains tenant-level permission on created tenant(s).  
+* Can _not_ invite new users to the org.
+* Can _not_ assign tenant-level permissions to users.
 
 ## Inviting a new Admin
 
