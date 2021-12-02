@@ -2717,6 +2717,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/tutorials/deploy-image"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/spot-pc/tutorials/deploy-windows-365-cloud-pc</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-pc/tutorials/deploy-windows-365-cloud-pc"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/tutorials/deploy-windows-365-cloud-pc"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/spot-pc/tutorials/install-ad-connect</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
