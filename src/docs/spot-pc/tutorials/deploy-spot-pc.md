@@ -66,7 +66,7 @@ To begin the process of creating a new Image version:
 - Click _+ Add New Version"
 - The _New Image Set_ workflow has five steps
 
-Follow the workflow covering the same data as the "Creating a New Image Set" workflow above but entering an incremented version number.
+Follow the workflow covering the same data as the [Creating a New Image Set](spot-pc/tutorials/deploy-spot-pc?id=creating-a-new-image-set) workflow above but entering an incremented version number.
 
 # Create Spot Group
 ## Create Spot Group Workflow
