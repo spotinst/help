@@ -90,7 +90,7 @@ Note: Ensure the image you're using is supported by your planned deployment type
 
 ### Add Notes and Save
 
-Review your selections, navigate to _previous_ steps to make changes.
+Review your selections, navigate to _previous_ steps to make changes..
 
 Add notes to document any important information about this new image version. The goal is to write down how and why changes are being made for reference later by you or your colleagues.
 
