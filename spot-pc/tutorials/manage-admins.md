@@ -21,12 +21,6 @@ A Spot PC Admin can be invited to multiple organizations, admin type is configur
 * Can invite new users to the org.
 * Can assign tenant-level permissions to users.
 
-### Organization User
-* Has _no_ default permissions to any org tenants.
-* Can be assigned tenant-level permissions.
-* Can _not_ invite new users to the org.
-* Can _not_ assign tenant-level permissions to users.
-
 ### Tenant Administrator
 * Has full permissions to all tenants in the org.  
 * Can _not_ invite new users to the org.
@@ -39,9 +33,15 @@ A Spot PC Admin can be invited to multiple organizations, admin type is configur
 * Can _not_ invite new users to the org.
 * Can _not_ assign tenant-level permissions to users.
 
+### Organization User
+* Has _no_ default permissions to any org tenants.
+* Can be assigned tenant-level permissions.
+* Can _not_ invite new users to the org.
+* Can _not_ assign tenant-level permissions to users.
+
 ## Inviting a new Admin
 
-New admins can be added to an organization or tenant from the Admins section of the Spot PC console home page.  
+New admins can be added to an organization by an Organization Admin in the the Admins section of the Spot PC console home page.  
 <br><a href="https://docs.spot.io/spot-pc/_media/tutorials-manage-admins-01.png" target="_blank"><img src="/spot-pc/_media/tutorials-manage-admins-01.png" alt="Click to Enlarge" width="500"> </a>
 
 When adding an admin, the email address field is only used to deliver their invitation. They can accept and authenticate with any supported identity. Admins should only maintain one identity in Spot PC, there is no reason to have different logins to Spot PC.  
