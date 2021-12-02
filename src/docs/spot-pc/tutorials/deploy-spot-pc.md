@@ -1,7 +1,7 @@
 <meta name="robots" content="noindex">
 
 # Deploy Spot PC Workflow
-Deploying Spot PC desktops with Spot PC takes two simple configuration workflows: [Create Image](spot-pc/tutorials/deploy-spot-pc?id=create-image) and Create Spot [Group](spot-pc/tutorials/deploy-spot-pc?id=create-spot-group)
+Deploying Spot PC desktops with Spot PC takes two simple configuration workflows: [Create Image](spot-pc/tutorials/deploy-spot-pc?id=create-image) and [Create Spot Group](spot-pc/tutorials/deploy-spot-pc?id=create-spot-group)
 
 NOTE: This is the Spot PC workflow, for Windows 365 Cloud PC, [click here](spot-pc/tutorials/deploy-windows-365-cloud-pc).
 
@@ -143,4 +143,4 @@ Once saved, the Spot PC automation engine will build and configure the environme
 
 ## What’s Next?
 
-Learn more about [Spot PC Dashboards](spot-pc/tenant/overview) with Spot PC.
+Learn more about [Connecting to the Spot PC desktop](spot-pc/tutorials/connect-to-desktop) as an end user.
