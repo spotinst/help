@@ -2493,6 +2493,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/features/concepts/security"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/spot-pc/features/config-actions/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-pc/features/config-actions/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/features/config-actions/"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/spot-pc/features/config-actions/windows-365/connections</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
@@ -2703,11 +2710,25 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/tutorials/add-tenant"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/spot-pc/tutorials/connect-to-desktop</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-pc/tutorials/connect-to-desktop"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/tutorials/connect-to-desktop"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/spot-pc/tutorials/create-image</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-pc/tutorials/create-image"/>
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/tutorials/create-image"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-pc/tutorials/create-spot-group</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-pc/tutorials/create-spot-group"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/tutorials/create-spot-group"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/spot-pc/tutorials/deploy-image</loc>

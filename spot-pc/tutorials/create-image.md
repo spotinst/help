@@ -2,6 +2,8 @@
 
 ## Create Image Workflow
 
+Creating a VM image is the first step towards adding a new (or additional) group of users and resources to an organization.  The image will then be assigned to the Spot Group created in the [next step](spot-pc/tutorials/create-spot-group) of this process.
+
 VM images for Spot PC are contained within Image Sets. Each new iteration of an image is represented within Spot PC as an Image with an incremented version number, all contained within a single Image Set. Then, an Image Set is assigned to a Spot Group, linking that image (and version) to that Spot Group. With this linkage intact, Spot PC optimization can automation the creation, deletion and availability of Spot PC session hosts for end users in real-time. Rolling out changes to the session host(s) is also simplified, once the new image version is created and tested, the Spot Group can be linked with the new image version and automation handles a seamless cutover to the new image.
 
 ## Creating a New Image Set
@@ -78,11 +80,13 @@ Depending on your use case, select the appropriate version of Windows.
 If unsure, Spot PC recommends:
 
 - Pooled Spot Group
-- office-365-21h1-evd-o365pp
-- office365-win11-21h2-avd-m365
-- windows-10-s1h1-evd
+ - office-365-21h1-evd-o365pp
+ - office365-win11-21h2-avd-m365
+ - windows-10-s1h1-evd
 - Personal Spot Group
-- windows-10-21-h1-ent
+ - windows-10-21-h1-ent
+
+Note: Ensure the image you're using is supported by your planned deployment type (_Spot PC desktops_ or _Windows 365 Cloud PC desktops_) Windows 365 Cloud PC image support documentation is found [here](https://docs.microsoft.com/en-us/windows-365/enterprise/device-images). Spot PC can support any Windows 10/11 Enterprise image available in the Azure Image Gallery, pooled users will require an image with "multi-session" support.
 
 ### Add Notes and Save
 
@@ -92,4 +96,6 @@ Add notes to document any important information about this new image version. Th
 
 ## What’s Next?
 
-Learn more about the [Image workflow](spot-pc/tutorials/create-image/) in the Spot PC Console.
+Learn how to [create a Spot Group](spot-pc/tutorials/create-spot-group) and assign the image to the Spot Group in the Spot PC console.
+or
+Learn how to [create Windows 365 Cloud PC](spot-pc/tutorials/deploy-windows-365-cloud-pc) desktops and assign the image the Spot PC console.

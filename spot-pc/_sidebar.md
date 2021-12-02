@@ -22,6 +22,7 @@
   - [Tutorials](spot-pc/tutorials/)
     - [Add Tenant](spot-pc/tutorials/add-tenant)
     - [Create Image](spot-pc/tutorials/create-image)
+    - [Create Spot Group](spot-pc/tutorials/create-spot-group)
     - [Deploy Image](spot-pc/tutorials/deploy-image)
     - [Connect to Desktop](spot-pc/tutorials/connect-to-desktop)
     - [Manage Users and Groups](spot-pc/tutorials/manage-users-and-groups)
