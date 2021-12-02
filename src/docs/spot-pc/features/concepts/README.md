@@ -30,11 +30,15 @@ The Organization represents an IT support organization.  Typically this is a Man
 
 All tenants are assigned to one (and only one) Organization. Multiple Tenants can be assigned to the same Organization.
 
-
-
 ## Session Hosts
+Sessions hosts are the virtual machines (VMs) that host the end user sessions.  These VMs run in azure within the Spot PC Azure subscription.  All sessions hosts within a Spot Group are identical as they are created by the single VM image that is assigned to the Spot Group.  The size and quantity of available session hosts are determined by Spot PC licensing and the performance optimization technology included in Spot PC.  
+
+Pooled Spot PC users share one or more session hosts to achieve lower costs. When more than one session host is deployed for a Spot Group, users are assigned to sessions hosts based on current load to maximize performance.
+
+Personal Spot PC users do not share sessions hosts to achieve greater performance.  Personal users are assigned to a session host that is currently unused.  
 
 ## Spot PC Admins
+The admin(s) that logs into the Spot PC console to deploy and configure Spot PC.  These admins can have various levels of permissions across one or more organizations and tenants within those organizations.
 
 ## Images
 VM Images are an area of emphasis and focus for Spot PC management.  The goal is that all customization to session host VM be done at the image level, allowing Spot PC optimization automation to manage the creation, deletion and availability of session hosts automatically.
@@ -47,9 +51,15 @@ Within the Spot PC Console there is an Image Set Library, accessible from the Co
 * Edit an existing image set
 * Delete an existing image set
 
-## Windows 365 Desktops
-
 ## Spot PC Desktops
+Spot PC deployments offer a managed option where customized architecture is used to deliver a customizable experience to Spot PC users. Spot PC technology manages the deployment, the data layer and available VM resources (VM size and qty) in order to maximize performance and minimize costs.
+
+## Windows 365 Cloud PC
+Spot PC deployments also offer the Windows 365 Cloud PC option.  Windows 365 Cloud PC is a desktop service managed by Microsoft and available in several defined performance tiers.
+
+For more information on Windows 365 Cloud PC, visit that [product page here](https://www.microsoft.com/en-us/windows-365).
+
+Instructions on configuring Windows 365 Cloud PC with Spot PC console is found [here]
 
 
 
