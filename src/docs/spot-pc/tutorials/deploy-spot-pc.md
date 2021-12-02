@@ -39,6 +39,7 @@ Pooled Spot Group
 * office-365-21h1-evd-o365pp
 * office365-win11-21h2-avd-m365
 * windows-10-s1h1-evd
+
 Personal Spot Group
 * windows-10-21-h1-ent
 
