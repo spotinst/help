@@ -2,7 +2,7 @@
 
 # Create Image for Spot PC Workflow
 
-NOTE: The following workflow is for images to be used to deploy _Spot PC_ desktops.  To create an image for _Windows 365 Cloud PC_ desktops, see below.
+NOTE: The following workflow is for images to be used to deploy _Spot PC_ desktops.  To create an image for _Windows 365 Cloud PC_ desktops, see [below](spot-pc/tutorials/create-image?id=create-image-for-windows-365-cloud-pc-workflow).
 
 Creating a VM image is the first step towards adding a new (or additional) group of users and resources to an organization.  The image will then be assigned to the Spot Group created in the [next step](spot-pc/tutorials/create-spot-group) of this process.
 
