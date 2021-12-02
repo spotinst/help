@@ -2584,6 +2584,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/features/spot-pc-console/tenant/config-actions/windows-365/connections"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/spot-pc/features/spot-pc-console/tenant/config-actions/windows-365/device-images</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-pc/features/spot-pc-console/tenant/config-actions/windows-365/device-images"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/features/spot-pc-console/tenant/config-actions/windows-365/device-images"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/spot-pc/features/spot-pc-console/tenant/config-actions/windows-365/provisioning-policies</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
@@ -2661,11 +2668,11 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/getting-started/"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/spot-pc/getting-started/roles-and-responsibilities/</loc>
+        <loc>https://docs.spot.io/?/spot-pc/getting-started/roles-and-responsibilities</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-pc/getting-started/roles-and-responsibilities/"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/getting-started/roles-and-responsibilities/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-pc/getting-started/roles-and-responsibilities"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/getting-started/roles-and-responsibilities"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/spot-pc/</loc>
