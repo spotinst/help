@@ -35,12 +35,12 @@ The drop down for _Image Source_ is populated from Azure Marketplace, with filte
 Depending on your use case, select the appropriate version of Windows.
 If unsure, Spot PC recommends:
 
-- Pooled Spot Group
-- office-365-21h1-evd-o365pp
-- office365-win11-21h2-avd-m365
-- windows-10-s1h1-evd
-- Personal Spot Group
-- windows-10-21-h1-ent
+Pooled Spot Group
+* office-365-21h1-evd-o365pp
+* office365-win11-21h2-avd-m365
+* windows-10-s1h1-evd
+Personal Spot Group
+* windows-10-21-h1-ent
 
 ### Image Name and Description
 
@@ -63,40 +63,10 @@ To begin the process of creating a new Image version:
 - Navigate to the desired tenant
 - Open the _Config Actions_ menu, open _Images_ and select _List_
 - Click to open the desired Image Set
-- Click \_+ Add New Version"
+- Click _+ Add New Version"
 - The _New Image Set_ workflow has five steps
 
-### Image Set Version
-
-Enter the new version number for this image.
-
-### Select Site
-
-A location for the VM Image to be built and to reside once completed must be selected. You can select form all available sites in the tenant or a _Global_ option.
-
-The _Global_ option will add the image to the Azure Shared Image Gallery and replicate the image across multiple Azure regions. <br>
-NOTE: Due to replication time, the global image set won't be immediately available for customization. Please expect approximately 20 minutes of delay once the global image is saved.
-
-### Select Image Source
-
-The drop down for _Image Source_ is populated from Azure Marketplace, with filters applied to narrow the list to images relevant to Spot PC.
-
-Depending on your use case, select the appropriate version of Windows.
-Spot PC can support any Windows 10/11 Enterprise image available in the Azure Image Gallery, pooled users will require an image with "multi-session" support. If unsure, Spot PC recommends:
-
-**Pooled Users Spot Group**
-office-365-21h1-evd-o365pp
-office365-win11-21h2-avd-m365
-windows-10-21h1-evd
-
-**Personal Users Spot Group**
-windows-10-21-h1-ent
-
-### Add Notes and Save
-
-Review your selections, navigate to _previous_ steps to make changes.
-
-Add notes to document any important information about this new image version. The goal is to write down how and why changes are being made for reference later by you or your colleagues.
+Follow the workflow covering the same data as the "Creating a New Image Set" workflow above but entering an incremented version number.
 
 # Create Spot Group
 ## Create Spot Group Workflow
