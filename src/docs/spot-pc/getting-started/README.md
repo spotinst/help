@@ -6,7 +6,7 @@
 
 Spot PC administration is designed around a few simple workflows.
 
-### Onboarding Workflow
+### Org Onboarding Workflow
 
 The first workflow is the onboarding workflow which builds and configures the base environment, network, AD integration and other deployment tasks.
 
@@ -21,6 +21,12 @@ The second is a VM image building workflow which simplifies the creation of Vm i
 **Select source image > Build temp VM > Customize temp VM > Capture temp VM as image > Assign new image to Spot Group**
 
 <a href="https://docs.spot.io/spot-pc/_media/getting-started-02.png" target="_blank"><img src="/spot-pc/_media/getting-started-02.png" alt="Click to Enlarge" width="500"> </a>
+
+## Spot Group Creation Workflow
+
+The second is the creation of the Spot Group which contains the users, resources and settings for a set of users with homogeneous desktop requirements.
+
+<a href="https://docs.spot.io/spot-pc/_media/getting-started-04.png" target="_blank"><img src="/spot-pc/_media/getting-started-04.png" alt="Click to Enlarge" width="500"> </a>
 
 ## Operational Dashboards
 

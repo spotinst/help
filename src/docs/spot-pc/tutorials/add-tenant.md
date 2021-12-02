@@ -11,4 +11,4 @@ The onboarding workflow is documented [here](spot-pc/getting-started/onboarding-
 
 ## What’s Next?
 
-Begin the [onboarding workflow](spot-pc/getting-started/onboarding-workflow/) to add a new tenant.
+Learn more about the [Image workflow](spot-pc/tutorials/create-image/) in the Spot PC console.
