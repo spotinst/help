@@ -84,11 +84,11 @@ The drop down for _Image Source_ is populated from Azure Marketplace, with filte
 Depending on your use case, select the appropriate version of Windows.
 Spot PC can support any Windows 10/11 Enterprise image available in the Azure Image Gallery, pooled users will require an image with "multi-session" support. If unsure, Spot PC recommends:
 
-Pooled Userd Spot Group
+**Pooled Users Spot Group**
 * office-365-21h1-evd-o365pp
 * office365-win11-21h2-avd-m365
 * windows-10-21h1-evd
-Personal Users Spot Group
+**Personal Users Spot Group**
 * windows-10-21-h1-ent
 
 ### Add Notes and Save
