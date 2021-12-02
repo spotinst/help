@@ -54,19 +54,14 @@ Within the Spot PC Console there is an Image Set Library, accessible from the Co
 ## Spot PC Desktops
 Spot PC deployments offer a managed option where customized architecture is used to deliver a customizable experience to Spot PC users. Spot PC technology manages the deployment, the data layer and available VM resources (VM size and qty) in order to maximize performance and minimize costs.
 
+Instructions on configuring Spot PC desktops can be found [here](spot-pc/tutorials/deploy-windows-365-cloud-pc).
+
 ## Windows 365 Cloud PC
 Spot PC deployments also offer the Windows 365 Cloud PC option.  Windows 365 Cloud PC is a desktop service managed by Microsoft and available in several defined performance tiers.
 
 For more information on Windows 365 Cloud PC, visit that [product page here](https://www.microsoft.com/en-us/windows-365).
 
-Instructions on configuring Windows 365 Cloud PC with Spot PC console is found [here]
-
-
-
-
-
-
-
+Instructions on configuring Windows 365 Cloud PC with Spot PC console can be found [here](spot-pc/tutorials/deploy-windows-365-cloud-pc).
 
 ## What’s Next?
 
