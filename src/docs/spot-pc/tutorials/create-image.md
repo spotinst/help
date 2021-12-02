@@ -1,8 +1,9 @@
 <meta name="robots" content="noindex">
+# Create Image Workflow
+Below are two workflows, one for [Spot PC desktops](#) and another for [Windows 365 Cloud PC desktops](spot-pc/tutorials/create-image?id=create-image-for-windows-365-cloud-pc-workflow).  Either type can be deployed into a Spot PC tenant but the process is slightly different for each.  
 
 # Create Image for Spot PC Workflow
-
-NOTE: The following workflow is for images to be used to deploy _Spot PC_ desktops.  To create an image for _Windows 365 Cloud PC_ desktops, see [below](spot-pc/tutorials/create-image?id=create-image-for-windows-365-cloud-pc-workflow).
+NOTE: This is the Spot PC workflow, for Windows 365 Cloud PC, [click here](spot-pc/tutorials/create-image?id=create-image-for-windows-365-cloud-pc-workflow).
 
 Creating a VM image is the first step towards adding a new (or additional) group of users and resources to an organization.  The image will then be assigned to the Spot Group created in the [next step](spot-pc/tutorials/create-spot-group) of this process.
 
@@ -95,8 +96,7 @@ Review your selections, navigate to _previous_ steps to make changes.
 Add notes to document any important information about this new image version. The goal is to write down how and why changes are being made for reference later by you or your colleagues.
 
 # Create Image for Windows 365 Cloud PC Workflow
-
-NOTE: The following workflow is for images to be used to deploy _Windows 365 Cloud PC_ desktops.  To create an image for _Spot PC_ desktops, see above.
+NOTE: This is the Spot PC workflow, for Windows 365 Cloud PC, [click here](spot-pc/tutorials/create-image).
 
 To begin this workflow navigate to _Config Actions > Create Device Image_ from within the appropriate tenant.
 <br><a href="https://docs.spot.io/spot-pc/_media/tutorials-create-image-01.png" target="_blank"><img src="/spot-pc/_media/tutorials-create-image-01.png" alt="Click to Enlarge" width="500"> </a>
