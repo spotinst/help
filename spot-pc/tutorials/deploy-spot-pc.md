@@ -1,7 +1,7 @@
 <meta name="robots" content="noindex">
 
 # Deploy Spot PC Workflow
-Deploying Spot PC desktops with Spot PC takes two simple configuration workflows: [Create Image](spot-pc/tutorials/deploy-spot-pc?id=create-image) and Create Spot [Group](spot-pc/tutorials/deploy-spot-pc?id=create-spot-group)
+Deploying Spot PC desktops with Spot PC takes two simple configuration workflows: [Create Image](spot-pc/tutorials/deploy-spot-pc?id=create-image) and [Create Spot Group](spot-pc/tutorials/deploy-spot-pc?id=create-spot-group)
 
 NOTE: This is the Spot PC workflow, for Windows 365 Cloud PC, [click here](spot-pc/tutorials/deploy-windows-365-cloud-pc).
 
@@ -84,12 +84,13 @@ The drop down for _Image Source_ is populated from Azure Marketplace, with filte
 Depending on your use case, select the appropriate version of Windows.
 Spot PC can support any Windows 10/11 Enterprise image available in the Azure Image Gallery, pooled users will require an image with "multi-session" support. If unsure, Spot PC recommends:
 
-Pooled Userd Spot Group
-* office-365-21h1-evd-o365pp
-* office365-win11-21h2-avd-m365
-* windows-10-21h1-evd
-Personal Users Spot Group
-* windows-10-21-h1-ent
+**Pooled Users Spot Group**
+office-365-21h1-evd-o365pp
+office365-win11-21h2-avd-m365
+windows-10-21h1-evd
+
+**Personal Users Spot Group**
+windows-10-21-h1-ent
 
 ### Add Notes and Save
 
@@ -143,4 +144,4 @@ Once saved, the Spot PC automation engine will build and configure the environme
 
 ## What’s Next?
 
-Learn more about [Spot PC Dashboards](spot-pc/tenant/overview) with Spot PC.
+Learn more about [Connecting to the Spot PC desktop](spot-pc/tutorials/connect-to-desktop) as an end user.

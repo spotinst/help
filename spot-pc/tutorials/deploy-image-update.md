@@ -13,4 +13,4 @@ The process for creating and/or updating machine images is detailed on the [Crea
 
 ## What’s Next?
 
-Learn more about [Getting Started](spot-pc/getting-started/) with Spot PC.
+Learn more about [Connecting to the Windows 365 Cloud PC desktop](spot-pc/tutorials/connect-to-desktop) as an end user.
