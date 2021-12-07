@@ -122,6 +122,12 @@ To customize the scaling configuration:
 
 Ocean supports launching instances using any operating system (OS) type, including container-optimized OSs such as Bottlerocket OS, Container Optimized OS, and RancherOS.
 
+### Windows and Linux Instances in the same Cluster
+
+Ocean provides the flexibility to use different operating systems in a Kubernetes cluster. For example, using the virtual node group concept, you can have Ocean manage Windows nodes alongside other nodes in the cluster.  
+
+All you need to do is to create a [virtual node group](ocean/features/launch-specifications) (VNG) with a Windows AMI and you are all set. (Please note for EKS users, you must use an EKS optimized Windows AMI.) For Windows workloads, the Autoscaler automatically launches instances only from dedicated VNGs. This means that there is no need to set any specific label on the VNG, unless you have multiple VNGs and you wish to ensure the workload runs on a specific VNG.
+
 ## What’s Next?
 
 Learn more about how Ocean manages [headroom](ocean/features/headroom).
