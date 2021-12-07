@@ -4,7 +4,7 @@ Once Eco has been enabled for your organization and you have chosen your reserve
 
 To view the Eco dashboard in the console, go to Eco on the left side and click Dashboard.
 
-<img src="/eco/_media/tutorials-view-savings-01ba.png" />
+<img src="/eco/_media/tutorials-view-savings-01bb.png" />
 
 ## Filters
 
@@ -39,13 +39,13 @@ A bar graph showing the amount of savings each month broken down by type of savi
 - Eco
 - Non-Eco
 
-<img src="/eco/_media/tutorials-view-savings-01c2.png" width="531" height="405" />
+<img src="/eco/_media/tutorials-view-savings-01c2a.png" />
 
 ### Monthly Commitment over Time
 
 A stacked bar graph showing your reserved instance and savings plan commitment per month broken down into Standard, Convertible, and Pending reservations, plus Compute and EC2 savings plans. Use the toggle switches to include or exclude recurring fees or show up-front fees from an amortized view.
 
-<img src="/eco/_media/tutorials-view-savings-01c3.png" />
+<img src="/eco/_media/tutorials-view-savings-01c3a.png" />
 
 The export from this table provides an amortization report, which breaks down each commitment as a CSV file with the following headers.
 
