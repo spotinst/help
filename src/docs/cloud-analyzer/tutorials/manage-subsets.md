@@ -56,9 +56,9 @@ The Subsets page may display the following information:
 - Expected charge: If you have assigned a workflow to this subset, the average daily charge extrapolated to the end of the month.
 - Subset info: To see more information about the subset, click View Spend Details. This will open the [Cost Analysis](cloud-analyzer/tutorials/analyze-your-costs.md) page and display the accounts in this subset.
 
-## View and Edit Subset Details
+## View Subset Details
 
-You can view all the information about a specific subset and modify the details. To display subset details, do the following:
+You can view all the information about a specific subset. To display subset details, do the following:
 
 1. Click Subsets in the left sidebar.
 2. Click the name of a subset.
@@ -82,26 +82,6 @@ The Actions column shows options you can click on to perform a task in the accou
 
 - View details: This action appears if the account is connected to Spot. Click here to see detailed account information in the Compute Overview tab of the [Optimization](cloud-analyzer/tutorials/use-optimization-dashboard/) dashboard.
 - Connect: This action appears if the account is not yet connected to Spot. Click here to connect the account.
-
-## Assign and Unassign Accounts
-
-Once you have created subsets, you may need to assign or unassign accounts from time to time. In Cloud Analyzer, click Subsets in the left sidebar, and then click a subset name.
-
-You can add an account to only one subset.
-
-### Assign accounts
-
-1. Click Assign Accounts.
-2. Mark the accounts to add to the subset and click Assign.
-
-### Unassign accounts
-
-1. In the Subset Details page, mark the accounts to take out of the subset.
-2. Click Unassign Accounts.
-
-<img src="/eco/_media/tutorials-manage-subsets-06.png" />
-
-3. Confirm that you want to take the account out of the subset by clicking Yes, unassign.
 
 ## Delete a Subset
 
