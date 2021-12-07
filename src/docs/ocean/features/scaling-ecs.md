@@ -114,6 +114,13 @@ To customize the scaling configuration:
 
 Ocean supports launching of instances using any ECS supported operating system (OS), including container-optimized OSs such as Bottlerocket OS.
 
+### Windows and Linux Instances in the same Cluster
+
+Ocean provides the flexibility to use different operating systems in an ECS cluster. For example, using the [virtual node group](ocean/features/launch-specifications) (VNG) concept, you can have Ocean manage Windows instances alongside other instances in the cluster.
+
+All you need to do is to create a VNG with a Windows AMI and you are all set. For Windows workloads, the Autoscaler automatically launches instances only from dedicated VNGs. This means that there is no need to set any specific label on the VNG, unless you have multiple VNGs and you wish to ensure the workload runs on a specific VNG.
+
+
 ## What’s Next?
 
 Learn more about how Ocean manages [headroom](ocean/features/headroom).
