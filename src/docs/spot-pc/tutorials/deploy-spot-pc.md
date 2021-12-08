@@ -7,7 +7,7 @@ NOTE: This is the Spot PC workflow, for Windows 365 Cloud PC, [click here](spot-
 
 # Create Image
 
-Creating a VM image is the first step towards adding a new (or additional) group of users and resources to an organization.  The image will then be assigned to the Spot Group created in the [next step](spot-pc/tutorials/deploy-spot-pc?id=create-spot-group) of this process.
+Creating a VM image is the first step towards adding a new (or additional) group of users and resources to an organization. The image will then be assigned to the Spot Group created in the [next step](spot-pc/tutorials/deploy-spot-pc?id=create-spot-group) of this process.
 
 VM images for Spot PC are contained within Image Sets. Each new iteration of an image is represented within Spot PC as an Image with an incremented version number, all contained within a single Image Set. Then, an Image Set is assigned to a Spot Group, linking that image (and version) to that Spot Group. With this linkage intact, Spot PC optimization can automation the creation, deletion and availability of Spot PC session hosts for end users in real-time. Rolling out changes to the session host(s) is also simplified, once the new image version is created and tested, the Spot Group can be linked with the new image version and automation handles a seamless cutover to the new image.
 
@@ -71,7 +71,7 @@ Follow the workflow covering the same data as the [Creating a New Image Set](spo
 
 # Create Spot Group
 ## Create Spot Group Workflow
-Creating a Spot group is the second step towards adding a new (or additional) group of users and resources to an organization.  The image created in the [first step](spot-pc/tutorials/deploy-spot-pc?id=create-image) of this process will be used.
+Creating a Spot group is the second step towards adding a new (or additional) group of users and resources to an organization. The image created in the [first step](spot-pc/tutorials/deploy-spot-pc?id=create-image) of this process will be used.
 
 Creating a Spot Group can be done from the _Config Actions_ menu, found when inside any tenant.
 <br><a href="https://docs.spot.io/spot-pc/_media/tutorials-create-spot-group-01.png" target="_blank"><img src="/spot-pc/_media/tutorials-create-spot-group-01.png" alt="Click to Enlarge" width="500"> </a>
@@ -91,13 +91,13 @@ Select the type of user licensing to be used for this Spot Group.
 
 Pooled users share a session host which personal users a dedicated session host when connecting. All users in a Spot Group must be the same user type.
 
-Use the slider to define the total number of named licenses you with to assign to this Spot Group.  This should equal the total number of users you'll have accessing resources in this Spot Group.
+Use the slider to define the total number of named licenses you with to assign to this Spot Group. This should equal the total number of users you'll have accessing resources in this Spot Group.
 
 ### Select Site
 Select the site into which you wish to deploy this Spot Group.
 
 ### Select Groups
-Select the existing AD Security Group(s) which contain the users to be assigned to this spot group.  
+Select the existing AD Security Group(s) which contain the users to be assigned to this spot group.
 
 ### Select Image Set
 Select the image set and image version that will be used to build session hosts for this Spot Group.
