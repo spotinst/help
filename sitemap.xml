@@ -2535,13 +2535,6 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/features/"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/spot-pc/features/spot-pc-console/add-new-tenant</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-pc/features/spot-pc-console/add-new-tenant"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/features/spot-pc-console/add-new-tenant"/>
-    </url>
-    <url>
         <loc>https://docs.spot.io/?/spot-pc/features/spot-pc-console/admins</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
@@ -2619,6 +2612,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/features/spot-pc-console/tenant/data-volumes"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/spot-pc/features/spot-pc-console/tenant/logs</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-pc/features/spot-pc-console/tenant/logs"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/features/spot-pc-console/tenant/logs"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/spot-pc/features/spot-pc-console/tenant/machines</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
@@ -2638,6 +2638,13 @@
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-pc/features/spot-pc-console/tenant/"/>
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/features/spot-pc-console/tenant/"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-pc/features/spot-pc-console/tenant/security</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-pc/features/spot-pc-console/tenant/security"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/features/spot-pc-console/tenant/security"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/spot-pc/features/spot-pc-console/tenant/user-sessions</loc>
