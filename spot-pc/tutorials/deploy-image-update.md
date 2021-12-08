@@ -1,6 +1,6 @@
 <meta name="robots" content="noindex">
 
-# Deploy Spot PC Image Update
+# Spot PC Tutorial: Deploy Spot PC Image Update
 
 Spot PC uses machine images to automatically build VMs to support the user desktops.
 

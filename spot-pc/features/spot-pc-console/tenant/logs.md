@@ -1,6 +1,6 @@
 <meta name="robots" content="noindex">
 
-# Tenant: analogous
+# Tenant: Logs
 From any other tenant-specific page, clicking on the _Logs_ tab brings you to this page.
 
 1. Like other tenant pages, [Config Actions](spot-pc/features/spot-pc-console/tenant/config-actions) can be accessed and other tenant pages can be accessed by clicking the appropriate tab across the top.

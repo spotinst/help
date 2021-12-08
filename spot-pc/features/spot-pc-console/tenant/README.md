@@ -1,6 +1,6 @@
 <meta name="robots" content="noindex">
 
-# Tenant
+# Spot PC: Tenant
 From the [overview](spot-pc/features/spot-pc-console/tenant/overview) page, clicking on any tenant name brings you to a tenant-specific context.
 
 1. You can switch between tenants from the selector in the upper right.

@@ -1,6 +1,6 @@
 <meta name="robots" content="noindex">
 
-# Spot PC Security
+# Spot PC: Security
 
 ## Spot PC Admin Security
 

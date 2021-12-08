@@ -1,6 +1,6 @@
 <meta name="robots" content="noindex">
 
-# Manage Users and Groups
+# Spot PC Tutorial: Manage Users and Groups
 
 Spot PC is built to manage access to resources (desktops) based on the AD security groups of the tenant's company.
 
