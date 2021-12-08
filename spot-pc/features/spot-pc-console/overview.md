@@ -2,9 +2,9 @@
 
 # Overview
 
-The Overview page is the landing post when a Spot PC Admin first authenticates into the Spot PC Console.
+The overview page is the landing post when a Spot PC admin first authenticates into the Spot PC console.
 
-1. This page summarizes the total number of tenants and licensed users this Admin can access.
+1. This page summarizes the total number of tenants and licensed users this admin can access.
 2. A new tenant can be added from this page.
 3. In progress deployments can be resumed from here, an option to delete the pending tenant is available.
 4. A list of all of the Admin's deployed tenants are listed here, an option to delete the tenant is available.
