@@ -42,7 +42,7 @@
       - [End-User Prerequisites](spot-pc/getting-started/prerequisites/end-user-prerequisites/)
     - [Service Summary](spot-pc/getting-started/service-summary/)
       - [Roles and Responsibilities](spot-pc/getting-started/service-summary/roles-and-responsibilities/)
-    - [Onboarding Workflow](spot-pc/getting-started/onboarding-workflow/)
+    - [Onboarding Workflow](spot-pc/getting-started/onboarding-workflow)
       - [Planning and Design White Paper](spot-pc/getting-started/onboarding-workflow/planning-and-design-white-paper/)
       - [Data Migration Services](spot-pc/getting-started/onboarding-workflow/data-migration-services/)
       - [Tools and Strategies](spot-pc/getting-started/onboarding-workflow/tools-and-strategies/)
