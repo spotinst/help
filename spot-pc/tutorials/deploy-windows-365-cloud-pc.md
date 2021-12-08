@@ -32,7 +32,7 @@ Confirms the configuration is healthy.
 To begin this workflow navigate to _Config Actions > Create Device Image_ from within the appropriate tenant.
 <br><a href="https://docs.spot.io/spot-pc/_media/tutorials-create-image-03.png" target="_blank"><img src="/spot-pc/_media/tutorials-create-image-03.png" alt="Click to Enlarge" width="500"> </a>
 
-Creating a VM image is the second step towards adding a new (or additional) Windows 365 Cloud PC group.  The image will then be assigned to the Windows 365 Connection created in the [next step](spot-pc/tutorials/deploy-windows-365-cloud-pc) of this process.
+Creating a VM image is the second step towards adding a new (or additional) Windows 365 Cloud PC group. The image will then be assigned to the Windows 365 Connection created in the [next step](spot-pc/tutorials/deploy-windows-365-cloud-pc) of this process.
 
 <br><a href="https://docs.spot.io/spot-pc/_media/tutorials-create-image-04.png" target="_blank"><img src="/spot-pc/_media/tutorials-create-image-04.png" alt="Click to Enlarge" width="500"> </a>
 
@@ -55,7 +55,7 @@ Review your selections, navigate to _previous_ steps to make changes.
 To begin this workflow navigate to _Config Actions > Create Provisioning Policy_ from within the appropriate tenant.
 <br><a href="https://docs.spot.io/spot-pc/_media/tutorials-create-image-05.png" target="_blank"><img src="/spot-pc/_media/tutorials-create-image-05.png" alt="Click to Enlarge" width="500"> </a>
 
-Creating a Provisioning Policy is the third step towards adding a new (or additional) Windows 365 Cloud PC group.  The Provisioning Policy associates the Connection with the Image and associates users to complete the Windows 365 Cloud PC creation process.
+Creating a Provisioning Policy is the third step towards adding a new (or additional) Windows 365 Cloud PC group. The Provisioning Policy associates the Connection with the Image and associates users to complete the Windows 365 Cloud PC creation process.
 <br><a href="https://docs.spot.io/spot-pc/_media/tutorials-create-image-06.png" target="_blank"><img src="/spot-pc/_media/tutorials-create-image-06.png" alt="Click to Enlarge" width="500"> </a>
 
 ### Select Connection
@@ -65,7 +65,7 @@ Select the appropriate Connection.
 Select the appropriate device image. Either a custom image (created above) or an Azure Gallery Image can be used.
 
 ### Select Group
-Select the existing AD Security Group(s) which contain the users to be assigned to this spot group.  
+Select the existing AD Security Group(s) which contain the users to be assigned to this spot group.
 
 ### Provisioning Policy Detail
 Enter a policy name and description for your own future reference.

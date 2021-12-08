@@ -4,7 +4,7 @@
 From the [overview](spot-pc/features/spot-pc-console/tenant/overview) page, clicking on any tenant name brings you to a tenant-specific context.
 
 1. You can switch between tenants from the selector in the upper right.
-2. You can perform common configuration actions from the Config Actions menu.
+2. You can perform common configuration actions from the [Config Actions](spot-pc/features/config-actions/) menu.
 3. You can navigate between tabs to find live data about the selected tenant across the top of the page.
 4. You can navigate back to the [overview](spot-pc/features/spot-pc-console/tenant/overview) page to the left of the page.
 
