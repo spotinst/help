@@ -33,9 +33,7 @@ Elastigroup automatically performs various backend actions for different states 
 
 ## Persist Root on Windows Platform
 
-When using the persist root volume with Windows images, images created from snapshots as part of the stateful process, will have a Platform: Other Linux (default behavior of AWS). This behavior can cause issues while trying to connect to the instance.
-
-The following user data script can be added to the group configuration to create a new user and password as the machine boots up, which will later be used to connect to the instance:
+In some cases, when using Windows-based instances together with root persistency, some customers encounter difficulties connecting to the instance. To avoid this, the following user data script can be added to the group configuration to create a new user and password as the machine boots up. The new user credentials will later be used to connect to the instance.
 
 ```powershell
 <powershell>
@@ -57,3 +55,7 @@ WMIC USERACCOUNT WHERE "Name='$Username'" SET PasswordExpires=FALSE
 ```
 
 For the updated user data to take effect, the instance must be recycled.
+
+## What's Next?
+
+Learn more about [persisting data volumes](elastigroup/features/stateful-instance/persist-data-volumes).
