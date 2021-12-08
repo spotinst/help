@@ -9,7 +9,7 @@ From any other tenant-specific page, clicking on the _Security_ tab brings you t
 4. Security alerts are listed at the bottom. Clicking the description will bring you to details about the alert and provide for action to be taken.
 5. Recommendations are listed at the bottom, accessed by clicking the Recommendations tab. Recommendations can be expanded to see detail. Acting on these recommendations can negatively impact end user workflows and should be handled through your own change control process to avoid impacting end user productivity.
 
-<br><a href="https://docs.spot.io/spot-pc/_media/features-spot-pc-console-tenant-security-01.png" target="_blank"><img src="/spot-pc/_media/features-spot-pc-console-tenant-security-01" alt="Click to Enlarge" width="1000"> </a>
+<br><a href="https://docs.spot.io/spot-pc/_media/features-spot-pc-console-tenant-security-01.png" target="_blank"><img src="/spot-pc/_media/features-spot-pc-console-tenant-security-01.png" alt="Click to Enlarge" width="1000"> </a>
 
 ## What’s Next?
 

@@ -12,15 +12,16 @@ Config actions for Images include: List, Create, Edit and Delete.
 A tutorial for deploying Spot PC covering creating an Image and deploying a Spot Group is found [here](spot-pc/tutorials/deploy-spot-pc).
 
 ## Spot Groups
-Config actions for Spot Groups include: List, Create, Edit, Update and Delete.
-<br><img src="/spot-pc/_media/features-spot-pc-console-tenant-config-actions-03.png" />
-
+Config actions for Spot Groups include: List, Create, Edit, Update and Delete.<br>
 **Update** is used to update the Image used for the Spot Group, updating the machine(s) used to host users' desktops. A tutorial for updating a Spot Group with a new Image is found [here](spot-pc/tutorials/deploy-image-update).
 
+<br><img src="/spot-pc/_media/features-spot-pc-console-tenant-config-actions-03.png" />
+
+
 ## Windows 365
-Config actions for Windows 365 Connections include: View, Create, Edit and Delete.
-Config actions for Windows 365 Images include: View, Create and Delete.
-Config actions for Windows 365 Provisioning Policies include: View, Create, Edit and Delete.
+Config actions for Windows 365 Connections include: View, Create, Edit and Delete.<br>
+Config actions for Windows 365 Images include: View, Create and Delete.<br>
+Config actions for Windows 365 Provisioning Policies include: View, Create, Edit and Delete.<br>
 
 A tutorial covering Windows 365 Cloud PC deployments (including Connections, Images and Provisioning Policies) can be found [here](spot-pc/tutorials/deploy-windows-365-cloud-pc).
 
