@@ -22,11 +22,9 @@ Config actions for Windows 365 Connections include: View, Create, Edit and Delet
 Config actions for Windows 365 Images include: View, Create and Delete.
 Config actions for Windows 365 Provisioning Policies include: View, Create, Edit and Delete.
 
-A tutorial for deploying Windows 365 Cloud PC is found [here](spot-pc/tutorials/deploy-windows-365-cloud-pc).
+A tutorial covering Windows 365 Cloud PC deployments (including Connections, Images and Provisioning Policies) can be found [here](spot-pc/tutorials/deploy-windows-365-cloud-pc).
 
 <br><a href="https://docs.spot.io/spot-pc/_media/features-spot-pc-console-tenant-config-actions-04.png" target="_blank"><img src="/spot-pc/_media/features-spot-pc-console-tenant-config-actions-04.png" alt="Click to Enlarge" width="1000"> </a>
-
-
 
 ## What’s Next?
 
