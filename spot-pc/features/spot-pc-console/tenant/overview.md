@@ -1,7 +1,7 @@
 <meta name="robots" content="noindex">
 
 # Tenant: Overview
-From the [overview](spot-pc/features/spot-pc-console/tenant/overview) page, clicking on any tenant name brings you to a tenant-specific context, landing on the Tenant: Overview page.
+From the [Spot PC: Overview](spot-pc/features/spot-pc-console/overview) page, clicking on any tenant name brings you to a tenant-specific context, landing on the Tenant: Overview page.
 
 1. You can perform common configuration actions from the [Config Actions](spot-pc/features/spot-pc-console/tenant/config-actions) menu.
 2. You can navigate between tabs to find live data about the selected tenant across the top of the page.
