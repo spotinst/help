@@ -1,18 +1,18 @@
 <meta name="robots" content="noindex">
 
-# Spot PC Overview
+# Spot PC
 
-Spot PC is a fully managed, continuously optimized cloud desktop service that runs on Azure Virtual Desktop and Windows 365. The service is easy to deploy and secure for both end users and administrators, all while offered at a fixed price per user per month for each user type.
+Spot PC is a fully managed, continuously optimized cloud desktop service that runs on Azure Virtual Desktop (AVD) and Windows 365. The service is easy to deploy and secure for both end users and administrators, all while offered at a fixed price per user per month for each user type.
 
 **Key features of the service include:**
 
-- **Fully managed desktops** - Spot PC delivers native cloud desktops based on Azure Virtual Desktop and Windows 365. Using AI-driven automation and optimization from Spot by NetApp creates cost optimized virtual desktops that provide users with a superior experience.
+- **Fully managed desktops** - Spot PC delivers native cloud desktops based on AVD and/or Windows 365. Using AI-driven automation and optimization from Spot by NetApp creates cost optimized virtual desktops that provide users with a superior experience.
 
 - **Rapid deployment and migration assistance** - Spot PC experts will assist with application and data migration while the Spot PC automated deployment workflow reduces the time from purchase to usable cloud desktops.
 
-- **Choice of Azure Virtual Desktop and Windows 365 cloud PCs** - Spot PC creates and manages both types of Azure based virtual desktops.
+- **Choice of AVD and/or Windows 365 Cloud PC** - Spot PC creates and manages both types of Azure-based virtual desktops.
 
-- **Enhanced Security and Protection** - Defender for Server is enabled for all AVD session VMs, and the Spot PC console reports security alerts and recommendations for both AVD and Windows 365 desktops. In addition, Spot PC automatically backs up the user data volume every night.
+- **Enhanced security and protection** - Defender for Server is enabled for all AVD session VMs, and the Spot PC console reports security alerts and recommendations for both AVD and Windows 365 desktops. In addition, Spot PC automatically backs up the user data volume every night.
 
 - **Unified cross-tenant management** - A global view of all accounts, resources, and users under your control with secure drill down into any tenant to immediately troubleshoot, diagnose, and resolve identified issues.
 

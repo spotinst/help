@@ -1,6 +1,6 @@
 <meta name="robots" content="noindex">
 
-# Overview
+# Spot PC: Overview
 
 The overview page is the landing post when a Spot PC admin first authenticates into the Spot PC console.
 

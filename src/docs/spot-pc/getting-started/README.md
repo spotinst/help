@@ -1,6 +1,6 @@
 <meta name="robots" content="noindex">
 
-# Getting Started
+# Spot PC: Getting Started
 
 ## Workflow Focused
 
