@@ -7,13 +7,13 @@ From all tenant-specific pages, the _Config Actions_ menu provides quick access 
 
 ## Images
 Config actions for Images include: List, Create, Edit and Delete.
-<br><a href="https://docs.spot.io/spot-pc/_media/features-spot-pc-console-tenant-config-actions-02.png" target="_blank"><img src="/spot-pc/_media/features-spot-pc-console-tenant-config-actions-02.png" alt="Click to Enlarge"> </a>
+<br><img src="/spot-pc/_media/features-spot-pc-console-tenant-config-actions-02.png" />
 
 A tutorial for deploying Spot PC covering creating an Image and deploying a Spot Group is found [here](spot-pc/tutorials/deploy-spot-pc).
 
 ## Spot Groups
 Config actions for Spot Groups include: List, Create, Edit, Update and Delete.
-<br><a href="https://docs.spot.io/spot-pc/_media/features-spot-pc-console-tenant-config-actions-03.png" target="_blank"><img src="/spot-pc/_media/features-spot-pc-console-tenant-config-actions-03.png" alt="Click to Enlarge"> </a>
+<br><img src="/spot-pc/_media/features-spot-pc-console-tenant-config-actions-03.png" />
 
 **Update** is used to update the Image used for the Spot Group, updating the machine(s) used to host users' desktops. A tutorial for updating a Spot Group with a new Image is found [here](spot-pc/tutorials/deploy-image-update).
 
@@ -24,7 +24,7 @@ Config actions for Windows 365 Provisioning Policies include: View, Create, Edit
 
 A tutorial covering Windows 365 Cloud PC deployments (including Connections, Images and Provisioning Policies) can be found [here](spot-pc/tutorials/deploy-windows-365-cloud-pc).
 
-<br><a href="https://docs.spot.io/spot-pc/_media/features-spot-pc-console-tenant-config-actions-04.png" target="_blank"><img src="/spot-pc/_media/features-spot-pc-console-tenant-config-actions-04.png" alt="Click to Enlarge"> </a>
+<br><img src="/spot-pc/_media/features-spot-pc-console-tenant-config-actions-04.png" />
 
 ## What’s Next?
 
