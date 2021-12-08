@@ -3,7 +3,7 @@
 # Tenant: analogous
 From any other tenant-specific page, clicking on the _Logs_ tab brings you to this page.
 
-1. Like other tenant pages, [Config Actions](spot-pc/features/config-actions) can be accessed and other tenant pages can be accessed by clicking the appropriate tab across the top.
+1. Like other tenant pages, [Config Actions](spot-pc/features/spot-pc-console/tenant/config-actions) can be accessed and other tenant pages can be accessed by clicking the appropriate tab across the top.
 2. The log data (displayed below) can be filtered by various factors.
 3. The log data can be downloaded as a CSV file.
 4. The lg data is displayed in the table below.
