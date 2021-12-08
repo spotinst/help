@@ -2577,34 +2577,6 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/features/spot-pc-console/tenant/config-actions/"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/spot-pc/features/spot-pc-console/tenant/config-actions/windows-365/connections</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-pc/features/spot-pc-console/tenant/config-actions/windows-365/connections"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/features/spot-pc-console/tenant/config-actions/windows-365/connections"/>
-    </url>
-    <url>
-        <loc>https://docs.spot.io/?/spot-pc/features/spot-pc-console/tenant/config-actions/windows-365/device-images</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-pc/features/spot-pc-console/tenant/config-actions/windows-365/device-images"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/features/spot-pc-console/tenant/config-actions/windows-365/device-images"/>
-    </url>
-    <url>
-        <loc>https://docs.spot.io/?/spot-pc/features/spot-pc-console/tenant/config-actions/windows-365/provisioning-policies</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-pc/features/spot-pc-console/tenant/config-actions/windows-365/provisioning-policies"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/features/spot-pc-console/tenant/config-actions/windows-365/provisioning-policies"/>
-    </url>
-    <url>
-        <loc>https://docs.spot.io/?/spot-pc/features/spot-pc-console/tenant/config-actions/windows-365/</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-pc/features/spot-pc-console/tenant/config-actions/windows-365/"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/features/spot-pc-console/tenant/config-actions/windows-365/"/>
-    </url>
-    <url>
         <loc>https://docs.spot.io/?/spot-pc/features/spot-pc-console/tenant/data-volumes</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>

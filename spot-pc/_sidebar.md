@@ -18,7 +18,7 @@
         - [User Sessions](spot-pc/features/spot-pc-console/tenant/user-sessions)
         - [Machines](spot-pc/features/spot-pc-console/tenant/machines)
         - [Data Volumes](spot-pc/features/spot-pc-console/tenant/data-volumes)
-        - [Config Actions](spot-pc/features/config-actions/) <!-- Mike --->
+        - [Config Actions](spot-pc/features/config-actions/)
   - [Tutorials](spot-pc/tutorials/)
     - [Add Tenant](spot-pc/tutorials/add-tenant)
     - [Deploy Spot PC](spot-pc/tutorials/deploy-spot-pc)
