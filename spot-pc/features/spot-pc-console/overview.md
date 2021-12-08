@@ -1,4 +1,5 @@
 <meta name="robots" content="noindex">
+
 # Overview
 
 The Overview page is the landing post when a Spot PC Admin first authenticates into the Spot PC Console.
@@ -8,7 +9,7 @@ The Overview page is the landing post when a Spot PC Admin first authenticates i
 3. In progress deployments can be resumed from here, an option to delete the pending tenant is available.
 4. A list of all of the Admin's deployed tenants are listed here, an option to delete the tenant is available.
 
-<br><a href="https://docs.spot.io/spot-pc/_media/features-spot-pc-console-overview-01.png" target="_blank"><img src="/spot-pc/_media/features-spot-pc-console-overview-01.png" alt="Click to Enlarge" width="500"> </a>
+<br><a href="https://docs.spot.io/spot-pc/_media/features-spot-pc-console-overview-01.png" target="_blank"><img src="/spot-pc/_media/features-spot-pc-console-overview-01.png" alt="Click to Enlarge" width="1000"> </a>
 
 
 ## What’s Next?
