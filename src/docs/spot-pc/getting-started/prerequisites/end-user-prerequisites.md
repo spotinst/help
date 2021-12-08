@@ -1,6 +1,6 @@
 <meta name="robots" content="noindex">
 
-# End User Connection Requirements
+# Spot PC: End User Connection Requirements
 
 ## End User Clients
 

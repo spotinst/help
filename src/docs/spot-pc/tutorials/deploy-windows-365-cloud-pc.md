@@ -1,6 +1,6 @@
 <meta name="robots" content="noindex">
 
-# Deploy Windows 365 Cloud PC Workflow
+# Spot PC Tutorial: Deploy Windows 365 Cloud PC
 Deploying Windows 365 Cloud PC desktops with Spot PC takes three simple configuration workflows: [Connections](spot-pc/tutorials/deploy-windows-365-cloud-pc?id=create-connection), [Images](spot-pc/tutorials/deploy-windows-365-cloud-pc?id=create-image) and [Provisioning Policies](spot-pc/tutorials/deploy-windows-365-cloud-pc?id=create-provisioning-policy).
 
 NOTE: This is the Windows 365 Cloud PC workflow, for Spot PC, [click here](spot-pc/tutorials/deploy-spot-pc).
