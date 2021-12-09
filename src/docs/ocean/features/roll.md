@@ -43,11 +43,9 @@ The following are possible reasons for failure:
 - There may be constraint mismatches or configuration mismatches such as labels, selectors, taints, or affinity rules.
 - There may be one or more unhealthy nodes.
 
-### Restrict Scale Down during Roll[^\*\*]
+### Restrict Scale Down during Roll[\*\*](ocean/features/roll?id=what39s-next)
 
 The roll does not consider the [restrict-scale-down](ocean/features/scaling-kubernetes.md#scale-down-prevention) label. Ocean will replace a node even if a task or pod uses this label. As mentioned above, Ocean's autoscaler takes into consideration all relevant constraints in place before the roll.
-
-[^\*\*]: Features indicated with this symbol are not supported for AKS.
 
 ## Roll per Node or VNG
 
@@ -87,3 +85,9 @@ After you have created the roll, click the Cluster Roll tab.
 In this tab you can see the details of the roll you created in Step 1, and you can follow the progress of the roll.
 
 <img src="/ocean/_media/features-roll-03.png" />
+
+## What’s Next?
+
+Learn more about how Ocean’s [right-sizing](ocean/features/right-sizing) feature works.
+
+> **\*\*Note**: Features indicated with this symbol are not supported for AKS.
