@@ -4,7 +4,7 @@ The Roll feature enables you to perform changes in order to align cluster infras
 
 > **Note**: Where this page uses Kubernetes terms such as node and pod, the ECS and AKS equivalents such as container instance or VM and task are also applicable.
 
-In Ocean you can roll your cluster with a single click. The roll feature takes into consideration the actual workloads running the in cluster. Ocean freezes scale-down activity in the cluster and launches new compute capacity to match the workload requirements. While the new nodes are starting up, the `old` nodes are still able to scale up if necessary and will scale down only after the new nodes are healthy.
+In Ocean you can roll your cluster with a single click. The roll feature takes into consideration the actual workloads running the in cluster. Ocean freezes scale-down activity in the cluster and launches new compute capacity to match the workload requirements. While the new nodes are starting up, the old nodes are still able to scale up if necessary and will scale down only after the new nodes are healthy.
 
 ## How It Works
 
@@ -101,7 +101,7 @@ For more information about the specific APIs, see Initiate Cluster Roll: [AKS](h
    - Comment. A brief note indicating the reason for the roll.
    - Respect Pod Disruption Budget. Leave the default setting marked, or unmark this if you do not want to respect the PDB.
 
-<img src="/ocean/_media/features-roll-02a.png" />
+<img src="/ocean/_media/features-roll-02a.png" width="313" height="211" />
 
 3. Click Roll.
 
