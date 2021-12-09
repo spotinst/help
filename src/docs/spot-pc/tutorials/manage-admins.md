@@ -42,13 +42,13 @@ A Spot PC Admin can be invited to multiple organizations, admin type is configur
 ## Inviting a new Admin
 
 New admins can be added to an organization by an Organization Admin in the the Admins section of the Spot PC console home page.
-<br><a href="https://docs.spot.io/spot-pc/_media/tutorials-manage-admins-01.png" target="_blank"><img src="/spot-pc/_media/tutorials-manage-admins-01.png" alt="Click to Enlarge" width="500"> </a>
+<br><a href="https://docs.spot.io/spot-pc/_media/tutorials-manage-admins-01.png" target="_blank"><img src="/spot-pc/_media/tutorials-manage-admins-01.png" alt="Click to Enlarge" width="1000"> </a>
 
 When adding an admin, the email address field is only used to deliver their invitation. They can accept and authenticate with any supported identity. Admins should only maintain one identity in Spot PC, there is no reason to have different logins to Spot PC.
-<br><a href="https://docs.spot.io/spot-pc/_media/tutorials-manage-admins-02.png" target="_blank"><img src="/spot-pc/_media/tutorials-manage-admins-02.png" alt="Click to Enlarge" width="500"> </a>
+<br><a href="https://docs.spot.io/spot-pc/_media/tutorials-manage-admins-02.png" target="_blank"><img src="/spot-pc/_media/tutorials-manage-admins-02.png" alt="Click to Enlarge" width="1000"> </a>
 
 The new admin will receive an email with a link to accept the invitation.
-<br><a href="https://docs.spot.io/spot-pc/_media/tutorials-manage-admins-03.png" target="_blank"><img src="/spot-pc/_media/tutorials-manage-admins-03.png" alt="Click to Enlarge" width="500"> </a>
+<br><a href="https://docs.spot.io/spot-pc/_media/tutorials-manage-admins-03.png" target="_blank"><img src="/spot-pc/_media/tutorials-manage-admins-03.png" alt="Click to Enlarge" width="1000"> </a>
 
 ## What’s Next?
 

@@ -10,7 +10,7 @@
   - [Features](spot-pc/features/)
     - [Concepts](spot-pc/features/concepts/)
       - [Security](spot-pc/features/concepts/security) <!-- Mike --->
-      - [Backups](spot-pc/features/concepts/backups)
+      - [Backup](spot-pc/features/concepts/backup)
       - [OS Patching](spot-pc/features/concepts/os-patching)
       - [Spot PC & Cloud PC](spot-pc/features/concepts/spot-pc-and-cloud-pc) <!-- Mike --->
     - [Spot PC Console](spot-pc/features/spot-pc-console/)

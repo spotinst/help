@@ -7,7 +7,7 @@ There are many sources of data to help with troubleshooting in general. Specific
 ## Spot PC Console
 
 The Spot PC console is a good place to start with troubleshooting. The dashboards, logs and alerts surface many of the most common issues.
-<br><a href="https://docs.spot.io/spot-pc/_media/troubleshooting-01.png" target="_blank"><img src="/spot-pc/_media/troubleshooting-01.png" alt="Click to Enlarge" width="500"> </a>
+<br><a href="https://docs.spot.io/spot-pc/_media/troubleshooting-01.png" target="_blank"><img src="/spot-pc/_media/troubleshooting-01.png" alt="Click to Enlarge" width="1000"> </a>
 
 ## Connect to Machine
 
