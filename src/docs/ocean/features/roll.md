@@ -2,7 +2,7 @@
 
 The Roll feature enables you to perform changes in order to align cluster infrastructure with a new image, user data or security groups without having to disable the Ocean autoscaler or manually detach nodes in the cluster.
 
-> **Note**: Where this page uses Kubernetes terms such as node and pod, the ECS equivalents such as container instance and task are also applicable.
+> **Note**: Where this page uses Kubernetes terms such as node and pod, the ECS and AKS equivalents such as container instance or VM and task are also applicable.
 
 In Ocean you can roll your cluster with a single click. The roll feature takes into consideration the actual workloads running the in cluster. Ocean freezes scale-down activity in the cluster and launches new compute capacity to match the workload requirements. While the new nodes are starting up, the `old` nodes are still able to scale up if necessary and will scale down only after the new nodes are healthy.
 
@@ -12,17 +12,37 @@ Whether you are rolling your entire Ocean cluster, a specific virtual node group
 
 1. Ocean calculates the number of batches required in the roll based on the batch size you enter and divides the workloads equally among the batches.
 2. Ocean starts with the first batch, replacing each node in such a way that ensures the successful accomodation of the workloads on the new nodes. Ocean's autoscaler takes into consideration all relevant constraints in place before the roll.
-3. When all nodes in a batch are finished processing and at least 50% of them have successful replacement, then Ocean starts to work on the next batch.
+3. When all nodes in a batch are finished processing and at least 50% of them have successful replacement, then Ocean starts to work on the next batch. (The percentage can be configured using the `batchMinHealthyPercentage` parameter, explained below.)
 
-## Roll Status
+### Replace Node with Smaller Nodes[\*\*](ocean/features/roll?id=whats-next)
+
+A cluster roll is able to replace a single node with multiple smaller nodes. This avoids a cluster roll failure when only smaller node types are configured in the Ocean cluster prior to initiating the roll. Rather than replacing each existing node with one of the same type, Ocean will provision the most relevant infrastructure during the cluster roll. This is based on the workloads currently running on the nodes chosen for rolling. This is especially helpful when you have modified the list of allowed node types or if your goal is to remove a specific node type and replace it with multiple smaller ones.
+
+This logic can improve the utilization in the cluster since the workload would run on infrastructure that best matches the workload. Ocean constantly tries to scale down the cluster, but if this is not possible, cluster roll could improve the utilization.
+
+### Respect Pod Disruption Budget[\*\*](ocean/features/roll?id=whats-next)
+
+Some pods may have a [pod disruption budget](https://kubernetes.io/docs/concepts/workloads/pods/disruptions/) (PDB). By using the parameter `respectPdb`, you can instruct Ocean to check the PDB. When `respectPdb` is set to True, Ocean will not replace a node if the PDB is violated.
+
+### Minimum Healthy Instances in Batch[\*\*](ocean/features/roll?id=whats-next)
+
+The parameter `batchMinHealthyPercentage` indicates the minimum percentage of healthy instances in a single batch. If the amount of healthy instances in a single batch is under this percentage, the cluster roll will fail. The range is 1-100, and if the parameter value is null, the default value will be 50%. Instances that were not replaced due to PDB will be considered as healthy. You can override this behavior by setting ignorePdb to True.
+
+### Node Status
+
+During the replacement process, Ocean provides information about the status of each node. The following statuses are reported:
+- REPLACED. The node was successfully replaced by a new node.
+- TO_BE_REPLACED. Ocean did not try to replace the node yet.
+- COULD_NOT_BE_REPLACED. The node was not replaced. This situation generally happens when there is no replacement node that becomes healthy within the grace period.
+- NOT_REPLACED_DUE_TO_PDB. Replacing the node violates the PDB configuration on one of the pods running on the node. This status is only relevant when `respectPdb` is set to True. If a node could not be replaced due to PDB, it would be considered successful replacement, meaning if 50% of the nodes should be replaced in order to proceed to the next batch and all of the nodes were not replaced due to PDB, Ocean would continue to the next batch.
+
+### Roll Status
 
 Ocean assigns a status to each stage of the roll process. A roll can have one of the following statuses:
-
-- `STARTING`: This is an indicator that the roll process is beginning. Ocean remains in this status until the first batch actually starts replacing its nodes.
-- `IN_PROGRESS`: The roll is in this status as long as nodes are being replaced successfully.
-- `FAILED`: An error occurred that caused the roll to fail, and an error message is recorded in the Elastilog.
-- `STOPPED`: The roll was stopped by the user. When the user stops a roll, the nodes remain in the state they were in at the time of the stop. (For example, there is no rollback to an initial state.)
-- `COMPLETED`: The roll transitions to Completed status when all nodes have been processed, and at least 50% of them have been successfully replaced.
+- IN_PROGRESS: The roll is in this status as long as nodes are being replaced successfully.
+- FAILED: An error occurred that caused the roll to fail, and an error message is recorded in the Elastilog.
+- STOPPED: The roll was stopped by the user. When the user stops a roll, the nodes remain in the state they were in at the time of the stop. (For example, there is no rollback to an initial state.)
+- COMPLETED: The roll transitions to Completed status when all nodes have been processed, and at least 50% of them have been successfully replaced.
 
 > **Tip**: In the UI, a specific batch may appear with `Pending` state. This means that even though the roll process has started, that batch has not yet started to replace its nodes.
 
@@ -43,9 +63,15 @@ The following are possible reasons for failure:
 - There may be constraint mismatches or configuration mismatches such as labels, selectors, taints, or affinity rules.
 - There may be one or more unhealthy nodes.
 
-### Restrict Scale Down during Roll[\*\*](ocean/features/roll?id=whats-next)
+### Restrict Scale Down during Roll
 
 The roll does not consider the [restrict-scale-down](ocean/features/scaling-kubernetes.md#scale-down-prevention) label. Ocean will replace a node even if a task or pod uses this label. As mentioned above, Ocean's autoscaler takes into consideration all relevant constraints in place before the roll.
+
+## Schedule Cluster Roll[\*\*](ocean/features/roll?id=whats-next)
+
+You can schedule a roll in the Create Cluster or Update Cluster [API](https://docs.spot.io/api/) using a `cron` expression. This enables you to easily run the roll during off hours.
+
+<img src="/ocean/_media/features-roll-01-1.png" />
 
 ## Roll per Node or VNG
 
@@ -66,17 +92,18 @@ For more information about the specific APIs, see Initiate Cluster Roll: [AKS](h
 
 ## Create A Roll
 
-In your Ocean cluster, go to Actions and click Cluster Roll.
+1. In your Ocean cluster, go to Actions and click Cluster Roll.
 
 <img src="/ocean/_media/features-roll-01.png" width="200" height="213" />
 
-1. Enter the following information:
+2. Enter the following information:
    - Batch Size. Indicates how much will be rolled at a time. This value is a percentage of the cluster's target capacity.
    - Comment. A brief note indicating the reason for the roll.
+   - Respect Pod Disruption Budget. Leave the default setting marked, or unmark this if you do not want to respect the PDB.
 
-<img src="/ocean/_media/features-roll-02.png" width="259" height="159" />
+<img src="/ocean/_media/features-roll-02a.png" />
 
-2. Click Roll.
+3. Click Roll.
 
 ## Monitor The Roll
 
