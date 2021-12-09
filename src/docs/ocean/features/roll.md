@@ -43,7 +43,7 @@ The following are possible reasons for failure:
 - There may be constraint mismatches or configuration mismatches such as labels, selectors, taints, or affinity rules.
 - There may be one or more unhealthy nodes.
 
-### Restrict Scale Down during Roll[\*\*](ocean/features/roll?id=what39s-next)
+### Restrict Scale Down during Roll[\*\*](ocean/features/roll?id=whats-next)
 
 The roll does not consider the [restrict-scale-down](ocean/features/scaling-kubernetes.md#scale-down-prevention) label. Ocean will replace a node even if a task or pod uses this label. As mentioned above, Ocean's autoscaler takes into consideration all relevant constraints in place before the roll.
 
