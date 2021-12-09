@@ -74,7 +74,7 @@ Follow the workflow covering the same data as the [Creating a New Image Set](spo
 Creating a Spot group is the second step towards adding a new (or additional) group of users and resources to an organization. The image created in the [first step](spot-pc/tutorials/deploy-spot-pc?id=create-image) of this process will be used.
 
 Creating a Spot Group can be done from the _Config Actions_ menu, found when inside any tenant.
-<br><a href="https://docs.spot.io/spot-pc/_media/tutorials-create-spot-group-01.png" target="_blank"><img src="/spot-pc/_media/tutorials-create-spot-group-01.png" alt="Click to Enlarge" width="500"> </a>
+<br><a href="https://docs.spot.io/spot-pc/_media/tutorials-create-spot-group-01.png" target="_blank"><img src="/spot-pc/_media/tutorials-create-spot-group-01.png" alt="Click to Enlarge" width="1000"> </a>
 
 Clicking _Create_ will open the Create Spot Group workflow is displayed.
 
