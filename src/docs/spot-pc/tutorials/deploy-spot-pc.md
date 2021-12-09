@@ -20,6 +20,7 @@ To begin the process of creating a new Image Set and Image version 0.0.0:
 - Navigate to the desired tenant
 - Open the _Config Actions_ menu, open _Images_ and select _Create_
 - The _New Image Set_ workflow has four steps
+<br><a href="https://docs.spot.io/spot-pc/_media/tutorials-deploy-spot-pc-01.png" target="_blank"><img src="/spot-pc/_media/tutorials-deploy-spot-pc-01.png" alt="Click to Enlarge" width="1000"> </a>
 
 #### Select Site
 
@@ -87,7 +88,7 @@ Enter a name and friendly name for the Spot Group.
 Enter the path to the data volume that will host the company shared data and the users' personal data.
 
 #### Select Spot Group License
-Select the type of user licensing to be used for this Spot Group.
+Select the type and quantity of licenses for this Spot Group.  This determines the size and quantity of session hosts as well as the maximum number of users with access to these resources.
 
 Pooled users share a session host which personal users a dedicated session host when connecting. All users in a Spot Group must be the same user type.
 
@@ -97,7 +98,7 @@ Use the slider to define the total number of named licenses you with to assign t
 Select the site into which you wish to deploy this Spot Group.
 
 #### Select Groups
-Select the existing AD Security Group(s) which contain the users to be assigned to this spot group.
+Select one or more AD Security Groups.  The members of the group(s) will be provisioned with Spot PC resources and have access to the resources for this Spot Group. Users can be added to (or removed from) this Spot Group by managing their membership in the AD Security Group in their domain.
 
 #### Select Image Set
 Select the image set and image version that will be used to build session hosts for this Spot Group.

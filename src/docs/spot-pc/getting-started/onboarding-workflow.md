@@ -34,6 +34,18 @@ In addition to end user experience, consideration should be made to locate the S
 
 <a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow-06.png" target="_blank"><img src="/spot-pc/_media/onboarding-workflow-06.png" alt="Click to Enlarge" width="1000"> </a>
 
+### Custom vNet Scope
+This step also offers the ability to define a custom vNet Scope for the Spot PC deployment. This is options and without input, Spot PC will randomly select a viable network range.  
+
+Spot PC is typically integrated with other resources and networks via VPNs and/or vNet Peering.  It is important that the range used by Spot PC does not overlap with any other ranges in use for this tenant, both in and out of Azure.  Please select a range that does not overlap with any other networks.  
+
+The network scope defaults to a /20 which supports up to 2096 addressed in Spot PC.  This can be changed post-deployment to expand capacity or reduce address consumption on the network.  
+
+The network scope must fall into one of these private ranges:
+- 192.168.0.0 through 192.168.255.255
+- 172.16.0.0 through 172.31.255.255
+- 10.0.0.0 through 10.255.255.255
+
 ### Initialization Progress
 
 After the region is selected, the initialization of the tenant begins. Several resources are created by Spot PC in the Spot PC Azure subscription. This step can take several minutes. Progress is shown to the right under "Initialization Logs". The next step in the wizard can not begin until this initialization process finishes.
