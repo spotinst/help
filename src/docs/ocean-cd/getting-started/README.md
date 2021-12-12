@@ -86,7 +86,7 @@ Define the microservice using the [Create Microservice API](https://docs.spot.io
 - Label Selectors: A microservice uses label selectors to identify deployments that are managed by Ocean CD. These must be part of the deployment metadata labels. Ensure that each deployment that needs to be managed by Ocean CD includes the labels you define in the Ocean CD microservice, under the primary metadata section.
 Here is an example for the desired label location inside the deployment YAML:
 
-<img src="/ocean-cd/_media/getting-started-06a.png" />
+<img src="/ocean-cd/_media/getting-started-06a.png" width="152" height="307" />
 
 - Version Label Key: Ocean CD will search for this unique version label key to present as the microservice version. If the key does not exist, the version will be taken from the deployment manifest (pod template image).
 
