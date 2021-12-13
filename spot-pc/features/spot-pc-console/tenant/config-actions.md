@@ -29,4 +29,4 @@ A tutorial covering Windows 365 Cloud PC deployments (including Connections, Ima
 
 ## What’s Next?
 
-Learn more about [Getting Started](spot-pc/getting-started/) with Spot PC.
+Get more information about editing [Spot Groups](spot-pc/tutorials/edit-spot-group) or [Windows 365](spot-pc/tutorials/edit-w365) with Spot PC.

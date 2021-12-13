@@ -42,4 +42,4 @@ The AVD Experience Estimator is a good tool for evaluating the network performan
 
 ## What’s Next?
 
-Learn more about [Getting Started](spot-pc/getting-started/) with Spot PC.
+Get started [deploying Spot PC](spot-pc/getting-started/onboarding-workflow) by following the Onboarding Workflow.

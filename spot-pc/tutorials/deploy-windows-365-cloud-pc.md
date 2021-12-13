@@ -75,4 +75,16 @@ Review your selections, navigate to _previous_ steps to make changes.
 
 ## What’s Next?
 
-Learn more about [Connecting to the Windows 365 Cloud PC desktop](spot-pc/tutorials/connect-to-desktop) as an end user.
+Use the [Operational Dashboards](spot-pc/features/spot-pc-console/tenant/) to monitor and support Spot PC.
+
+Test the login as an end user, instructions for [Connecting to the Spot PC desktop is found here](spot-pc/tutorials/connect-to-desktop).
+
+Manage which end users have access to this Spot Group. The guide for [managing users and groups is found here](spot-pc/tutorials/manage-users-and-groups).
+
+Invite your co-workers to create their own Spot PC admin account(s). The guide for [managing admin accounts is found here](spot-pc/tutorials/manage-admins).
+
+Edit the Windows 365 Cloud PC Connection.  The guide for [editing Spot Groups is found here](spot-pc/tutorials/edit-spot-group).
+
+Make changes to the image and deploy the new image to the Spot Group. The guide for [deploying image updates is found here](spot-pc/tutorials/deploy-image-update).
+
+Create another tenant for a different customer or Azure AD tenant. The guide for [adding a new Tenant is found here](spot-pc/tutorials/add-tenant).

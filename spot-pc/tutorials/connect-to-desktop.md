@@ -71,4 +71,4 @@ Most devices have a specific Remote Desktop client built to optimize your experi
 
 ## What’s Next?
 
-Learn more about [Getting Started](spot-pc/getting-started/) with Spot PC.
+Learn more about [Spot PC](spot-pc/).

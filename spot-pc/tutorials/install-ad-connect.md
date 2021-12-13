@@ -4,4 +4,4 @@
 
 ## What’s Next?
 
-Learn how to about [adding a tenant](spot-pc/getting-started/onboarding-workflow) to Spot PC.
+Learn more about [Spot PC](spot-pc/).
