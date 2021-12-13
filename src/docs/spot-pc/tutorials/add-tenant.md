@@ -11,4 +11,4 @@ The onboarding workflow is documented [here](spot-pc/getting-started/onboarding-
 
 ## What’s Next?
 
-Lean how to deploy [Spot PC desktops](spot-pc/tutorials/deploy-spot-pc) or [Windows 365 Cloud PC desktops.](spot-pc/tutorials/deploy-windows-365-cloud-pc)
+Lean how to deploy [Spot PC desktops](spot-pc/tutorials/deploy-spot-pc) and/or [Windows 365 Cloud PC desktops.](spot-pc/tutorials/deploy-windows-365-cloud-pc)

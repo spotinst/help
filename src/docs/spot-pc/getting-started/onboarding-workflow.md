@@ -141,4 +141,4 @@ As the automation runs and builds the Spot PC environment, several milestones ar
 
 ## What’s Next?
 
-Learn how to [deploy](spot-pc/tutorials/deploy-spot-pc) your first Spot PC environment .
+Learn how to [deploy your first Spot Group](spot-pc/tutorials/deploy-spot-pc) into this new Spot PC account. 

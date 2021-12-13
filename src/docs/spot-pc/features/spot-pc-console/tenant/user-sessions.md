@@ -12,4 +12,4 @@ From any other tenant-specific page, clicking on the _User Sessions_ tab brings 
 
 ## What’s Next?
 
-Learn more about [Getting Started](spot-pc/getting-started/) with Spot PC.
+Use the [Operational Dashboards](spot-pc/features/spot-pc-console/tenant/) to monitor and support Spot PC.

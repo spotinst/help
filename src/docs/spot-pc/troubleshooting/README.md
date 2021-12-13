@@ -20,4 +20,4 @@ If the end users' experience is impacted by network performance, running a trace
 
 ## What’s Next?
 
-Learn more about [Getting Started](spot-pc/getting-started/) with Spot PC.
+Get started [deploying Spot PC](spot-pc/getting-started/onboarding-workflow) by following the onboarding workflow guide.

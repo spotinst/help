@@ -13,4 +13,4 @@ From any other tenant-specific page, clicking on the _Security_ tab brings you t
 
 ## What’s Next?
 
-Learn more about [Getting Started](spot-pc/getting-started/) with Spot PC.
+Use the [Operational Dashboards](spot-pc/features/spot-pc-console/tenant/) to monitor and support Spot PC.

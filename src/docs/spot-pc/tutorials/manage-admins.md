@@ -52,4 +52,4 @@ The new admin will receive an email with a link to accept the invitation.
 
 ## What’s Next?
 
-Lean how to deploy [Spot PC desktops](spot-pc/tutorials/deploy-spot-pc) or [Windows 365 Cloud PC desktops.](spot-pc/tutorials/deploy-windows-365-cloud-pc)
+Manage which end users have access to your Spot Groups and/or Windows 365 Cloud PCs. The guide for [managing users and groups is found here](spot-pc/tutorials/manage-users-and-groups).
