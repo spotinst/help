@@ -9,7 +9,7 @@
 
 
 ## Spot PC Virtual Machine Security
-- Azure Defender for server
+- Azure Defender for Server
 
 ## Spot PC User Security
 - AVD Reverse Connect
