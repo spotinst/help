@@ -1,6 +1,4 @@
-
-
-# Spot PC: Security
+# Concepts: Security
 
 ## Summary
 Spot PC is a managed virtual desktop service, available exclusively in Microsoft Azure and based on the Azure Virtual Desktop (AVD) and Windows 365 components. The security model for Spot PC is based on a multi-tier, multi-identity structure that follows Microsoft best practices for securing the environment for virtual desktop end users, partner and customer administrators, and Spot support administrators.

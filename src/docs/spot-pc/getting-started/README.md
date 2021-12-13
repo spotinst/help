@@ -1,5 +1,3 @@
-
-
 # Spot PC: Getting Started
 
 ## Workflow Focused

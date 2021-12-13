@@ -1,5 +1,3 @@
-
-
 # Spot PC: Admins
 
 The admins page is where you can manage admins for the selected organization.

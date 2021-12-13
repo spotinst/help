@@ -1,11 +1,10 @@
 <meta name="robots" content="noindex">
-
 # Features: OS Patching
 <!--
 
 
 
-Planned Feature, not yet implemented.  Manually configured Windows Update until then. 
+Planned Feature, not yet implemented.  Manually configured Windows Update until then.
 
 From the PRD:
 

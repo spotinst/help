@@ -1,5 +1,3 @@
-
-
 # Spot PC Tutorial: Deploy Spot PC Image Update
 
 ## Azure Virtual Desktop (AVD) Process
