@@ -1,4 +1,4 @@
-<meta name="robots" content="noindex">
+
 
 # Tenant: Config Actions
 From all tenant-specific pages, the _Config Actions_ menu provides quick access to common configuration change workflows. These are organized into categories for _Images, Spot Groups and Windows 365_.

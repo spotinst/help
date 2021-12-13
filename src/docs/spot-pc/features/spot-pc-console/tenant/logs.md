@@ -1,4 +1,4 @@
-<meta name="robots" content="noindex">
+
 
 # Tenant: Logs
 From any other tenant-specific page, clicking on the _Logs_ tab brings you to this page.
