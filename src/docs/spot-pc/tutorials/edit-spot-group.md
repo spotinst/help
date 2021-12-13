@@ -35,7 +35,7 @@ Supported RDP Settings:
 - **Com ports** - COM ports redirection: COM ports on the local computer are available in the remote session
 - **Smart cards** - mart card redirection: The smart card device on the local computer is available in the remote session
 - **Full screen** mode - Determines whether the remote session window appears full screen when you launch the connection.
-- **Usb devices** - USB redirection: Redirect all USB devices that are not already redirected by another high-level redirection
+- **USB devices** - USB redirection: Redirect all USB devices that are not already redirected by another high-level redirection
 - **Clipboard** - Clipboard redirection: Clipboard on local computer is available in remote session.
 - **Audio input** - Microphone redirection: Local microphone is redirected to remote desktop.
 - **Cameras** - Camera redirection: Redirect all cameras

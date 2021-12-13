@@ -18,7 +18,7 @@ More detail is found in the [Onboarding Workflow](spot-pc/getting-started/onboar
 
 ### VM Image Customization
 
-The second is a VM image building workflow which simplifies the creation of Vm images. These images are used as the basis for all host VMs in Spot PC. All applications and customizations are applied to the images and then Spot PCs automation engine uses the images in the management of host VM instances.
+The second is a VM image building workflow which simplifies the creation of VM images. These images are used as the basis for all host VMs in Spot PC. All applications and customizations are applied to the images and then Spot PCs automation engine uses the images in the management of host VM instances.
 
 **Select source image > Build temp VM > Customize temp VM > Capture temp VM as image > Assign new image to Spot Group**
 
@@ -28,7 +28,7 @@ More detail is found in the [Create Image](spot-pc/tutorials/deploy-spot-pc?id=c
 
 ## Spot Group Creation Workflow
 
-The second is the creation of the Spot Group which contains the users, resources and settings for a set of users with homogeneous desktop requirements.
+The second is the creation of the Spot Group which contains the users, resources, and settings for a set of users with homogeneous desktop requirements.
 
 <a href="https://docs.spot.io/spot-pc/_media/getting-started-04.png" target="_blank"><img src="/spot-pc/_media/getting-started-04.png" alt="Click to Enlarge" width="1000"> </a>
 
