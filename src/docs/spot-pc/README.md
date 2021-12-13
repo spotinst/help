@@ -138,4 +138,4 @@ Spot PC co-management is a collaboration between Spot by NetApp, the IT administ
 
 ## What's Next?
 
-Learn how to [Get Started with Spot PC](spot-pc/getting-started/) today.
+Learn how to [Get Started with Spot PC](spot-pc/getting-started/onboarding-workflow) today.
