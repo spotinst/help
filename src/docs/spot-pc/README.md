@@ -1,5 +1,3 @@
-
-
 # Spot PC
 
 Spot PC is a fully managed, continuously optimized cloud desktop service that runs Azure Virtual Desktops (AVD) and/or Windows 365 Cloud PCs. The service is easy to deploy and secure for both end users and administrators, all while offered at a fixed price per user per month for each user type.

@@ -1,5 +1,3 @@
-
-
 # Spot PC Tutorial: Edit Windows 365 Cloud PC Connection & Provisioning Policy
 For Cloud PC deployments the Connection and/or Provisioning Policy can be edited after creation. These changes will impact the experience of the end users of the edited deployment(s).
 

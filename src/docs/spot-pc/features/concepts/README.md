@@ -1,5 +1,3 @@
-
-
 # Spot PC: Concepts
 This section covers concepts and policies that are specific to Spot PC to help define terms used in the documentation and the Spot PC console.
 

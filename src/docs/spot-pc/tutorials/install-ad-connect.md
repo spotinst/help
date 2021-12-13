@@ -1,5 +1,3 @@
-
-
 # Spot PC Tutorial: Install AD Connect
 
 ## What’s Next?

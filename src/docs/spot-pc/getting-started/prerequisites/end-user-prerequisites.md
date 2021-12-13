@@ -1,5 +1,3 @@
-
-
 # Spot PC: End User Connection Requirements
 
 ## End User Clients

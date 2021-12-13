@@ -1,5 +1,3 @@
-
-
 # Tenant: User Sessions
 From any other tenant-specific page, clicking on the _User Sessions_ tab brings you to this page.
 

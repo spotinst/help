@@ -1,5 +1,3 @@
-
-
 # Tenant: Machines
 From any other tenant-specific page, clicking on the _Machines_ tab brings you to this page.
 

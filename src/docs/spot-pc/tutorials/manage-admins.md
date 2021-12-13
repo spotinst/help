@@ -1,5 +1,3 @@
-
-
 # Spot PC Tutorial: Manage Spot PC Admins
 
 Spot PC allows for granular control over admin access to tenants including detailed permission sets.
