@@ -21,18 +21,16 @@ To begin the process of creating a new Image version:
 - Click to open the desired Image Set
 - Click _+ Add New Version"
 - The _New Image Set_ workflow has steps
-  - Image set version <br><a href="https://docs.spot.io/spot-pc/_media/tutorials-deploy-image-01.png" target="_blank"><img src="/spot-pc/_media/tutorials-deploy-image-01.png" alt="Click to Enlarge" width="400"> </a>
-  - Select Image Source
-  - Add Notes and Save
-
-
-
-Follow the workflow covering the same data as the [Creating a New Image Set](spot-pc/tutorials/deploy-spot-pc?id=creating-a-new-image-set) workflow but entering an incremented version number.
+  - Image set version - enter an appropriate version number for this image version in the format of x.x.x <br><a href="https://docs.spot.io/spot-pc/_media/tutorials-deploy-image-02.png" target="_blank"><img src="/spot-pc/_media/tutorials-deploy-image-02.png" alt="Click to Enlarge" width="600"> </a>
+  - Select Image Source - Select the source of this new image version  <br><a href="https://docs.spot.io/spot-pc/_media/tutorials-deploy-image-03.png" target="_blank"><img src="/spot-pc/_media/tutorials-deploy-image-03.png" alt="Click to Enlarge" width="600"> </a>
+  - Add Notes and Save - Add any relevant notes to document what is changed in this new image version.  <br><a href="https://docs.spot.io/spot-pc/_media/tutorials-deploy-image-04.png" target="_blank"><img src="/spot-pc/_media/tutorials-deploy-image-04.png" alt="Click to Enlarge" width="600"> </a>
 
 ## Windows 365 Cloud PC Process
 Windows 365 uses VM images to automatically build VMs to support the user desktops.
+<br><a href="https://docs.spot.io/spot-pc/_media/tutorials-deploy-image-05.png" target="_blank"><img src="/spot-pc/_media/tutorials-deploy-image-05.png" alt="Click to Enlarge" width="1000"> </a>
 
-The image used for this process is set by [editing](spot-pc/tutorials/edit-w365)  the Provisioning Policy and (on step 3) selecting a different Image.  
+The image used for this process is set by [editing](spot-pc/tutorials/edit-w365) the Provisioning Policy and (on step 3) selecting a different Image.  
+<br><a href="https://docs.spot.io/spot-pc/_media/tutorials-deploy-image-06.png" target="_blank"><img src="/spot-pc/_media/tutorials-deploy-image-06.png" alt="Click to Enlarge" width="1000"> </a>
 
 ## What’s Next?
 
