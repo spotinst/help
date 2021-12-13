@@ -36,7 +36,7 @@ More detail is found in the [Create Spot Group](spot-pc/tutorials/deploy-spot-pc
 
 ## Operational Dashboards
 
-Spot PC is also built on the prioritization of actionable data. Within each Spot PC tenant there are several dashboards designed to simplify day-to-day operations. On each tab, live data steams to the screen and updates in realtime. Additional details about these users, machines and security items can be displayed by clicking the individual item from their dashboard. These dashboards include:
+Spot PC is also built on the prioritization of actionable data. Within each Spot PC tenant there are several dashboards designed to simplify day-to-day operations. On each tab, live data steams to the screen and updates in real-time. Additional details about these users, machines and security items can be displayed by clicking the individual item from their dashboard. These dashboards include:
 - Tenant [Overview](spot-pc/features/spot-pc-console/tenant/overview) Dashboard
 - [User Sessions](spot-pc/features/spot-pc-console/tenant/user-sessions) Dashboard
 - [Machines](spot-pc/features/spot-pc-console/tenant/machines) Dashboard
