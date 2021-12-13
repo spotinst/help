@@ -6,7 +6,7 @@ Microsoft provides two offerings for virtual desktops in the Azure Cloud: Azure 
 ## AVD Desktops
 Spot PC uses AVD desktops for pooled user scenarios. In these cases, users typically need access to web/SaaS applications, store data mostly in the cloud using OneDrive or a similar service, or only use a limited number of Windows applications. In these scenarios, Spot PC can group users together on one virtual machine and then manage the compute resources (CPU, memory) to ensure each user has a good virtual desktop experience.   
 
-Spot PC can also provision personal AVD virtual desktops for cases that Windows 365 cannot support, including the use of a Graphics Processing Unit (GPU) for heavy graphics application like Computer Aided Design (CAD) or graphics design.   
+Spot PC can also provision personal AVD virtual desktops for cases that Windows 365 cannot support, including the use of a Graphics Processing Unit (GPU) for heavy graphics applications like Computer Aided Design (CAD) or graphics design.   
 
 AVD is also useful when a customer configuration has characteristics that Windows 365 does not currently support. Examples of this case include Azure tenants that are not InTune registered domains or have complex networks that prevent direct line of sight from the Windows 365 cloud PCs to the nearest domain controller.
 
