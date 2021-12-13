@@ -93,7 +93,7 @@ Occasionally, server resources may be required in the same subscription as the S
 
 ## Co-Management: Who does what?
 
-Spot PC co-management is a collaboration between Spot, the IT administrator and the consuming organization. Each entity has a role in a successful Spot PC experience.
+Spot PC co-management is a collaboration between Spot by NetApp, the IT administrator and the tenant organization. Each entity has a role in a successful Spot PC experience.
 
 ### Operate: Spot by NetApp
 
@@ -116,12 +116,12 @@ Spot PC co-management is a collaboration between Spot, the IT administrator and 
 - Application acquisition
 - Application update approval / timing
 - Environment monitoring/response (co-managed with Spot)
-- Tier 1 support
+- Tier 1 & end user support
 - Add on services and products
 
 ### Consume: End Users
 
-- User add & remove
+- User add & remove (based on AD Group membership)
 - Manage user groups and virtual desktop access
 - Application purchase and licensing
 - Monitor user sessions and session servers
