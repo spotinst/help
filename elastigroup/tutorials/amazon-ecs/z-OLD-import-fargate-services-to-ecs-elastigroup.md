@@ -32,7 +32,7 @@ You will be shown with a list of detected services, from which to select which F
 
 The import process does not affect any existing services. Selected Fargate Tasks and Services are cloned by Spot and their settings are imported into an Elastigroup.
 
-Last step before starting the import process will be to review your Elastigroup configuration and click the the `Create` button:
+Last step before starting the import process will be to review your Elastigroup configuration and click the `Create` button:
 
 <img src="/elastigroup/_media/import-fargate-services-to-ecs-elastigroup_3.png" />
 

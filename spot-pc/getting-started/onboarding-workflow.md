@@ -123,7 +123,7 @@ As the automation runs and builds the Spot PC environment, several milestones ar
 
 **Set up Spot PC OUs**
 
-- Creates the SpotPC 'home' organizational unit (OU) in the AD Domain and configures it for Spot PC.
+- Creates the Spot PC 'home' organizational unit (OU) in the AD Domain and configures it for Spot PC.
 
 **Install Spot PC Orchestration Service**
 
@@ -131,7 +131,7 @@ As the automation runs and builds the Spot PC environment, several milestones ar
 
 
 **Assign HTML5 Web Address**
-+ Registers the new HTML5 gateway used by connect-to-server using a unique, publicly-routable DNS address
++ Registers the new HTML5 gateway used by connect-to-server using a unique, publicly routable DNS address
 
 
 ## What’s Next?

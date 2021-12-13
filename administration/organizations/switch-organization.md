@@ -6,7 +6,7 @@ If your user is mapped to more than one organization, you can easily switch from
 
 <img src="/administration/_media/switch-organization-01a.png" />
 
-2. Choose the the name of the organization from the dropdown list. If you do not see the name in the list, you can scroll down or enter the first few characters of the name in the Search box. Click the name when it appears in the list.
+2. Choose the name of the organization from the dropdown list. If you do not see the name in the list, you can scroll down or enter the first few characters of the name in the Search box. Click the name when it appears in the list.
 
 <img src="/administration/_media/switch-organization-02.png" width="370" height="128" />
 
