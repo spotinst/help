@@ -1,4 +1,4 @@
-<meta name="robots" content="noindex">
+
 
 # Spot PC Tutorial: Connecting to Spot PC Desktops
 

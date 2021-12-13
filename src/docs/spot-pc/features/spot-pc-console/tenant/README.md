@@ -1,4 +1,4 @@
-<meta name="robots" content="noindex">
+
 
 # Spot PC: Tenant
 From the [Spot PC: Overview](spot-pc/features/spot-pc-console/overview) page, clicking on any tenant name brings you to a tenant-specific context.
