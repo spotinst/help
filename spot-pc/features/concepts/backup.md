@@ -1,4 +1,3 @@
-
 # Features: Backup
 Backing up the Spot PC Data Layer is configured at deployment by the Spot PC onboarding team.  The specific technology and configuration of the backup policy is determined by many factors including the storage layer technology (Azure Files vs. Azure NetApp Files) as well as the region as the availability of backup services vary by region.
 

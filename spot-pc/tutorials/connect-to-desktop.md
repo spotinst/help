@@ -1,5 +1,3 @@
-
-
 # Spot PC Tutorial: Connecting to Spot PC Desktops
 
 As the end user, you have many options for how to connect to your Spot PC desktop. For the purposes of end use access, Spot PC is functionally identical to Azure Virtual Desktop, any connection process that works for AVD should work for Spot PC. The process is the same for both Spot PC tenants and Windows 365 Cloud PC tenants deploying by Spot PC.

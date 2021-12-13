@@ -1,5 +1,3 @@
-
-
 # Tenant: Security
 From any other tenant-specific page, clicking on the _Security_ tab brings you to this page. This page displays security data from the Azure Defender for Server service that is included in the Spot PC service. Spot PC admins can and should leverage this data to secure their Spot PC environments in a way that supports their tenants' workflow and security requirements.
 

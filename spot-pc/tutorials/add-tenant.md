@@ -1,5 +1,3 @@
-
-
 # Spot PC Tutorial: Add tenant
 
 Adding a tenant can be done from the _+ Add New Tenant_ link found on the main Spot PC homepage.
