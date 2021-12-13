@@ -69,22 +69,31 @@ GPU users connect to their own host machine. Spot PC builds a VM host for every 
 GPU end users can expect performance roughly equivalent to 4 vCPUs, 14GiB RAM and 2Gib Video RAM on the AMD Radeon Instinct MI25 GPU (e.g. NV4as v4). (See Resource Allocation Note [above](https://docs.spot.io/spot-pc/?id=resource-allocation-note))
 
 ### Data Storage Layer
-The technology used to support the data layer is based on the number of licensed Spot PC users supported by that storage layer.
+The technology used to support the data layer is either Azure Files or Azure NetApp Files, depending on the number of licensed Spot PC users supported by that storage layer. A detailed comparison of these technologies can be found [here](https://docs.microsoft.com/en-us/azure/storage/files/storage-files-netapp-comparison).
 
-For deployments supporting less than 50 users, [Azure Files is used with the Transaction Optimized](https://azure.microsoft.com/en-us/pricing/details/storage/files/) tier.<br>
-For deployments supporting 50-249 users, [Azure NetApp Files is used with the Standard](https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-service-levels) tier.<br>
-For deployments supporting 250 or more users, [Azure NetApp Files is used with the Premium](https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-service-levels) tier.<br>
+For deployments supporting less than 50 users, [Azure Files is used with the Transaction Optimized](https://docs.microsoft.com/en-us/azure/storage/files/storage-files-planning#storage-tiers) tier.
+
+>From Microsoft: "Transaction optimized file shares are offered on the standard storage hardware backed by hard disk drives (HDDs). Transaction optimized has historically been called "standard", however this refers to the storage media type rather than the tier itself (the hot and cool are also "standard" tiers, because they are on standard storage hardware)."
+
+For deployments supporting 50-249 users, [Azure NetApp Files is used with the Standard](https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-service-levels) tier.
+
+>From Microsoft: "The Standard storage tier provides up to 16 MiB/s of throughput per 1 TiB of capacity provisioned."
+
+
+For deployments supporting 250 or more users, [Azure NetApp Files is used with the Premium](https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-service-levels) tier.
+
+>From Microsoft: "The Premium storage tier provides up to 64 MiB/s of throughput per 1 TiB of capacity provisioned."
 
 The size of the data storage layer is calculated at 25Gib licensed user. Additional storage can be purchased in 1TiB blocks and will augment the existing storage layer on the storage type as determined by the user quantity (above).
 
 ### Business Server
 Many use cases require dedicated server infrastructure to support customer workflows. Spot PC environments can easily be integrated with other (self-managed) Azure Subscription resources via vNet peering. This option makes integrating machines and services with the Spot PC environment easy to manage without requiring ongoing support from the Spot PC team.
 
-Occasionally, server resources may be required in the same subscription as the Spot PC session hosts. This may be due to technical requirements or business reasons. To support this requirement, Spot PC offers an add-on subscription to add Business Server resources as a separate SKU. The SKU includes a set mix of resources (4vCPU/8GiB RAM/128GiB HDD) which can be applied to one or more machines. The minimum size is 2 vCPU, 8GiB RAM and 128GiB Managed Disk. Multiple Business server SKUs can be purchased, with the resources applied to a single VM or multiple. For example, two Business Server SKUs could support either **1x D4as v4** with 4vCPU/8GiB/256GIB HDD or **2x D2as v4**	with 2vCPU/4GiB/128GIB HDD each).
+Occasionally, server resources may be required in the same subscription as the Spot PC session hosts. This may be due to technical requirements or business reasons. To support this requirement, Spot PC offers an add-on subscription to add Business Server resources as a separate SKU. The SKU includes a set mix of resources (4vCPU/8GiB RAM/128GiB HDD) which can be applied to one or more machines. The minimum size is 2 vCPU, 8GiB RAM and 128GiB Managed Disk. Multiple Business server SKUs can be purchased, with the resources applied to a single VM or multiple. For example, two Business Server SKUs could support either 1x D4as_v4 (4vCPU/8GiB/256GIB HDD) or 2x D2as_v4 (2vCPU/4GiB/128GIB HDD) each.
 
 ## Co-Management: Who does what?
 
-Spot PC co-management is a collaboration between Spot, the IT administrator and the consuming organization. Each entity has a role in a successful Spot PC experience.
+Spot PC co-management is a collaboration between Spot by NetApp, the IT administrator and the tenant organization. Each entity has a role in a successful Spot PC experience.
 
 ### Operate: Spot by NetApp
 
@@ -107,12 +116,12 @@ Spot PC co-management is a collaboration between Spot, the IT administrator and 
 - Application acquisition
 - Application update approval / timing
 - Environment monitoring/response (co-managed with Spot)
-- Tier 1 support
+- Tier 1 & end user support
 - Add on services and products
 
 ### Consume: End Users
 
-- User add & remove
+- User add & remove (based on AD Group membership)
 - Manage user groups and virtual desktop access
 - Application purchase and licensing
 - Monitor user sessions and session servers
