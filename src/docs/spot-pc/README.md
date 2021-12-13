@@ -6,7 +6,7 @@ Spot PC is a fully managed, continuously optimized cloud desktop service that ru
 
 **Key features of the service include:**
 
-- **Fully managed desktops** - Spot PC delivers native cloud desktops based on AVD and/or Windows 365. Using AI-driven automation and optimization from Spot by NetApp creates cost optimized virtual desktops that provide users with a superior experience.
+- **Fully managed desktops** - Spot PC delivers native cloud desktops based on AVD and/or Windows 365 Cloud PC. Using AI-driven automation and optimization from Spot by NetApp creates cost optimized virtual desktops that provide users with a superior experience. Spot PC tools simplify image management, resource allocation and more.
 
 - **Rapid deployment and migration assistance** - Spot PC experts will assist with application and data migration while the Spot PC automated deployment workflow reduces the time from purchase to usable cloud desktops.
 
@@ -18,11 +18,11 @@ Spot PC is a fully managed, continuously optimized cloud desktop service that ru
 
 - **Powerful console with rich analytic dashboards** - Complete visibility to user session and session VM performance, along with automation tools to make configuration more efficient.
 
-- **Application lifecycle management** - workflow driven tasks to create and manage both images and application installation packages, including MSIX App Attach and scripted installs.
+- **Application lifecycle management** - Workflow driven tasks to create and manage both images and application installation packages, including MSIX App Attach and scripted installs.
 
 **Let the experts manage your cloud desktops so you can focus on your business. Benefits of Spot PC include:**
 
-- **Elimination of operational burdens** - with fully managed cloud desktops from our experts, your IT resources can focus on what they do best, making end users productive and helping your business grow.
+- **Elimination of operational burdens** - With fully managed cloud desktops from our experts, your IT resources can focus on what they do best, making end users productive and helping your business grow.
 
 - **Deliver more cloud desktops at less cost** - Utilizing Spot by NetApp optimization and automation technologies, Spot PC reduces management and infrastructure costs by up to 70%.
 
@@ -32,48 +32,41 @@ Spot PC is a fully managed, continuously optimized cloud desktop service that ru
 
 ## Components and services
 
-- Fully managed & secured desktop as a service
-- A service that configured not customized
-- Multi-tenant customer support for MSP's
+- Fully managed & secured Desktop-as-a-Service (DaaS)
+- A service that is configured, not customized
+- Cross-tenant customer support for MSPs
 - Continuously optimized for price & performance
 - Tools for application migration & application management
-- Windows 10 Image Management Tools & update rules
+- Windows 10/11 image management Tools & update rules
 - Virtual Desktop application customization scripts
 - RESTful API integrations with PSA
 
 <img src="/spot-pc/_media/spot-pc-01.png" />
 
 ## Resource Allocation
-Spot PC session hosts are built by Spot automation to maximize availability and performance for end users while minimizing unnecessary costs.
+Spot PC session hosts are built in Azure using Spot automation to maximize availability and performance for end users while minimizing unnecessary costs.
+
+Spot PC builds as maintains hosts for each user type.  These hosts will be kept in an offline state when not needed and brought online to support real-time workloads. Host machines typically take 2 minutes to come online and be ready for new user sessions.  Spot PC maintains an extra 10% of online capacity in each Spot Group to provide end users with instant availability for nearly all login patterns. It is possible that user login storms (when many users simultaneously login) may cause some users to receive a login failure. The system automates the availability of additional resources and simply retrying 1-2 minutes later should be enough effort for a user to successfully connect.
+
+### Resource Allocation Note:
+Below, examples of the resources allocated to each user type are outlined. The exact Azure VM type (e.g. RAM/CPU/GPU configuration) used for session hosts is determined by automation and thus the specific resources available to users is not a specific, fixed, amount. Spot PC aggregates usage and performance data to optimize these algorithms. Specific concerns about end users' performance experience should be raised with Spot PC support so adjustments can be made to ensure performance and productivity are maintained.
 
 ### Pooled User Session Hosts
-Pooled users share a host with up to 9 other pooled users (10 total). Spot PC will build and configure one host for every 10 licensed Spot PC Pooled users (rounding up). These machines will be maintained in an offline state when not needed and brought online to support real-time workloads. Host machines typically take 2 minutes to come online and be ready for new user sessions.
+Pooled users share a host with up to 9 other pooled users (10 total). Spot PC builds one VM host for every 10 licensed Pooled users (rounding up).
 
-End users can expect performance roughly equivalent to sharing a 4vCPU host with 32 GiB RAM (e.g. E4as v4). However, the exact Azure VM type (e.g. RAM/CPU configuration) used for session hosts is determined by automation and thus the specific resources available to users is not a specific, fixed, amount. Spot PC aggregates usage and performance data to optimize these algorithms. Specific concerns about end users' performance experience should be raised with Spot PC support so adjustments can be made to ensure performance and productivity are maintained.
+Pooled end users can expect performance roughly equivalent to sharing a 4vCPU host with 32 GiB RAM (e.g. E4as v4).  (See Resource Allocation Note above)
 
-Each user session is assigned to a host sequentially (aka "depth mode"), filling each host with 10 users before moving on to fill the next host. Once a host reaches 6 active sessions, an additional host is proactively brought online to be ready ahead of the need for additional capacity.
-
-An additional 10% of capacity is kept online to support end users with instant availability for nearly all login patterns.
-
-It is possible that user login storms (when many users simultaneously login) maybe cause some users to receive a login failure. The system automates the availability of additional resources and simply retrying 1-2 minutes later should be enough effort for a user to successfully connect.
+For pooled users, each user session is assigned to a host sequentially (aka "depth mode"), filling each host with 10 users before moving on to fill the next host. Once a host reaches 6 active sessions, an additional host is proactively brought online to be ready ahead of the need for additional capacity.
 
 ### Personal User Session Hosts
-Pooled users connect to their own host machine. Spot PC will build and configure one host for every licensed Spot PC Personal user. These machines will be maintained in an offline state when not needed and brought online to support real-time workloads. Host machines typically take 2 minutes to come online and be ready for new user sessions.
+Personal users connect to their own host machine. Spot PC builds a VM host for every licensed Personal user.  
 
-End users can expect performance roughly equivalent to 2 vCPUs and 8GiB RAM (e.g. D2as v4). However, the exact Azure VM type (e.g. RAM/CPU configuration) used for session hosts is determined by automation and thus the specific resources available to users is not a specific, fixed, amount. Spot PC aggregates usage and performance data to optimize these algorithms. Specific concerns about end users' performance experience should be raised with Spot PC support so adjustments can be made to ensure performance and productivity are maintained.
-
-10% of capacity is kept online to support end users with instant availability for nearly all login patterns.
-
-It is possible that user login storms (when many users simultaneously login) maybe cause some users to receive a login failure. The system automates the availability of additional resources and simply retrying 1-2 minutes later should be enough effort for a user to successfully connect.
+Personal end users can expect performance roughly equivalent to 2 vCPUs and 8GiB RAM (e.g. D2as v4). (See Resource Allocation Note above)
 
 ### GPU User Session Hosts
-GPU users connect to their own host machine. Spot PC will build and configure one host for every licensed Spot PC Personal user. These machines will be maintained in an offline state when not needed and brought online to support realtime workloads. Host machines typically take 2 minutes to come online and be ready for new user sessions.
+GPU users connect to their own host machine. Spot PC builds a VM host for every licensed Personal user.
 
-End users can expect performance roughly equivalent to 4 vCPUs, 14GiB RAM and 2Gib VRAM on the AMD Radeon Instinct MI25 GPU (e.g. NV4as v4). However, the exact Azure VM type (e.g. RAM/CPU/GPU configuration) used for session hosts is determined by automation and thus the specific resources available to users is not a specific, fixed, amount. Spot PC aggregates usage and performance data to optimize these algorithms. Specific concerns about end users' performance experience should be raised with Spot PC support so adjustments can be made to ensure performance and productivity are maintained.
-
-10% of capacity is kept online to support end users with instant availability for nearly all login patterns.
-
-It is possible that user login storms (when many users simultaneously login) maybe cause some users to receive a login failure. The system automates the availability of additional resources and simply retrying 1-2 minutes later should be enough effort for a user to successfully connect.
+GPU end users can expect performance roughly equivalent to 4 vCPUs, 14GiB RAM and 2Gib Video RAM on the AMD Radeon Instinct MI25 GPU (e.g. NV4as v4). (See Resource Allocation Note above)
 
 ### Data Storage Layer
 The technology used to support the data layer is based on the number of licensed Spot PC users supported by that storage layer.
@@ -95,10 +88,10 @@ Spot PC co-management is a collaboration between Spot, the IT administrator and 
 
 ### Operate: Spot by NetApp
 
-- Architecture & solution support
-- Onboarding and Migration: process and support
+- Architecture & solution coaching
+- Onboarding and migration project planning and support
 - Spot PC deployment (including Azure Components)
-- Application lifecycle assistance (install, update, images)![](_media/b1848a0e.png)
+- Application lifecycle assistance (install, update, images)
 - Monitoring and alert response for VMs, network, data volumes, security
 - OS Updates
 - Run time optimization of compute and storage
