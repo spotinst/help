@@ -35,11 +35,8 @@
     - [Getting Support](spot-pc/troubleshooting/getting-support)
 
 
-    <!--      - [OS Patching](spot-pc/features/concepts/os-patching)
-          - [Spot PC & Cloud PC](spot-pc/features/concepts/spot-pc-and-cloud-pc) -->
-
-          
-<!--
+<!--      - [OS Patching](spot-pc/features/concepts/os-patching)
+          - [Spot PC & Cloud PC](spot-pc/features/concepts/spot-pc-and-cloud-pc)
 - [Spot PC](spot-pc/)
   - [Getting Started](spot-pc/getting-started/)
     - [Prerequisites](spot-pc/getting-started/prerequisites/)
@@ -123,7 +120,7 @@
     - [Azure Virtual Desktop](spot-pc/tools-and-integrations/azure-virtual-desktop/)
     - [Windows 365 Cloud PC](spot-pc/tools-and-integrations/windows-365-cloud-pc/)
     - [Azure Defender for Server](spot-pc/tools-and-integrations/azure-defender-for-server/)
-    - [Netapp Cloud Insights](spot-pc/tools-and-integrations/netapp-cloud-insights/)
+    - [NetApp Cloud Insights](spot-pc/tools-and-integrations/netapp-cloud-insights/)
     - [NetApp Cloud Backup Service](spot-pc/tools-and-integrations/netapp-cloud-backup-service/)
     - [NetApp Cloud Sync](spot-pc/tools-and-integrations/netapp-cloud-sync/)
     - [Azure Files](spot-pc/tools-and-integrations/azure-files/)

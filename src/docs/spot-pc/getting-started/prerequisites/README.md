@@ -22,7 +22,7 @@ The Spot PC service requires that a reseller relationship be established between
 
 https://admin.microsoft.com/Adminportal/Home?invType=ResellerRelationship&partnerId=47c1f6d2-b112-48e0-915f-4304efffb3e8&msppId=0&DAP=true#/BillingAccounts/partner-invitation
 
-Spot PC leverages Microsoft's multi-patner CSP option, enabling multiple resellers to maintain their individual relationship(s) with the customer. Thus, establishing a reseller relationship for Spot PC **does not**:
+Spot PC leverages Microsoft's multi-partner CSP option, enabling multiple resellers to maintain their individual relationship(s) with the customer. Thus, establishing a reseller relationship for Spot PC **does not**:
 
 - Change any of the customer's existing subscriptions
 - Transition the customer's existing subscriptions or account ownership
@@ -41,7 +41,7 @@ If Spot PC is to be integrated with an existing Active Directory Domain Controll
 
 ## Existing Azure vNet
 
-An existing Azure vNet must be configured with network access to the AD DC. This is typically accomplished via a site to site VPN or by running the AD DC on a VM attached to that vNet. A Spot PC network will be created and peered with this existing vNet as part of the onboarding workflow.
+An existing Azure vNet must be configured with network access to the AD DC. This is typically accomplished via a site-to-site VPN or by running the AD DC on a VM attached to that vNet. A Spot PC network will be created and peered with this existing vNet as part of the onboarding workflow.
 
 ## Virtual Network Scope
 

@@ -14,7 +14,7 @@ Below you'll find a list of available clients for Spot PC and AVD. You'll experi
 
 ### Understanding User Sessions and Inactivity Timeouts
 
-When you connect to your remote desktop, a "user session" is created on the virtual machine (vm) that hosts user sessions. This user session contains all of your running applications and helps keep your apps and data separate from other users who may be using the same vm for their user session.
+When you connect to your remote desktop, a "user session" is created on the virtual machine (VM) that hosts user sessions. This user session contains all of your running applications and helps keep your apps and data separate from other users who may be using the same VM for their user session.
 
 A disconnected session is one where your session and applications continue to run. This can happen when by closing the remote desktop window (aka. "X-out" of the window), choosing _disconnect_ from the start menu, loss of internet connectivity, closing their laptop or otherwise ending the remote connection between you and your remote desktop. When you reconnect, you'll be connected with your existing session, exactly as you left your desktop. User sessions are also disconnected is they remain idle beyond the [Active Idle](spot-pc/tutorials/edit-spot-group?id=logoff-settings) setting.
 
