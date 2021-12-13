@@ -56,20 +56,6 @@ Review your selections, navigate to _previous_ steps to make changes.
 
 Add notes to document any important information about this image set and the 0.0.0 version. The goal is to write down how and why changes are being made for reference later by you or your colleagues.
 
-### Creating a New Image Version
-
-A new version of an existing image can be created from with an Image Set.
-
-To begin the process of creating a new Image version:
-
-- Navigate to the desired tenant
-- Open the _Config Actions_ menu, open _Images_ and select _List_
-- Click to open the desired Image Set
-- Click _+ Add New Version"
-- The _New Image Set_ workflow has five steps
-
-Follow the workflow covering the same data as the [Creating a New Image Set](spot-pc/tutorials/deploy-spot-pc?id=creating-a-new-image-set) workflow above but entering an incremented version number.
-
 ## Create Spot Group
 ### Create Spot Group Workflow
 Creating a Spot group is the second step towards adding a new (or additional) group of users and resources to an organization. The image created in the [first step](spot-pc/tutorials/deploy-spot-pc?id=create-image) of this process will be used.
