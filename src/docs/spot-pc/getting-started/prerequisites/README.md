@@ -68,4 +68,4 @@ Azure AD Connect is a required component that syncs the customer's AD DC with th
 
 ## What’s Next?
 
-Learn more about [End-User prerequisites](spot-pc/getting-started/prerequisites/end-user-prerequisites).
+Learn more about [End-User prerequisites](spot-pc/getting-started/prerequisites/end-user-prerequisites) or get started [deploying Spot PC](spot-pc/getting-started/onboarding-workflow) by following the Onboarding Workflow.

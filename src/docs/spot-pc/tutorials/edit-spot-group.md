@@ -51,4 +51,4 @@ Review your selections, navigate to _previous_ steps to make changes.
 
 ## What’s Next?
 
-Learn more about [Connecting to the Spot PC desktop](spot-pc/tutorials/connect-to-desktop) as an end user.
+Learn more about [connecting to the Spot PC desktop](spot-pc/tutorials/connect-to-desktop) as an end user.

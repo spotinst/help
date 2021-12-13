@@ -15,4 +15,4 @@ The Spot PC: Overview page is the landing post when a Spot PC admin first authen
 
 ## What’s Next?
 
-Learn more about [Getting Started](spot-pc/getting-started/) with Spot PC.
+Learn how to [deploy your first Spot Group](spot-pc/tutorials/deploy-spot-pc) with this easy guide.

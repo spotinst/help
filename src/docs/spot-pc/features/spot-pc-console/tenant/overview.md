@@ -13,4 +13,4 @@ From the [Spot PC: Overview](spot-pc/features/spot-pc-console/overview) page, cl
 
 ## What’s Next?
 
-Learn more about [Getting Started](spot-pc/getting-started/) with Spot PC.
+Use the [Operational Dashboards](spot-pc/features/spot-pc-console/tenant/) to monitor and support Spot PC.

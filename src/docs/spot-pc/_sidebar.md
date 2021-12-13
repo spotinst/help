@@ -29,6 +29,7 @@
     - [Deploy Image Update](spot-pc/tutorials/deploy-image-update)
     - [Connect to Desktop](spot-pc/tutorials/connect-to-desktop)
     - [Edit Spot Group](spot-pc/tutorials/edit-spot-group)
+    - [Edit Windows 365 Cloud PC](spot-pc/tutorials/edit-w365)
     - [Manage Users and Groups](spot-pc/tutorials/manage-users-and-groups)
     - [Manage Admins](spot-pc/tutorials/manage-admins)
   - [Troubleshooting](spot-pc/troubleshooting/)
