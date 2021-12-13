@@ -14,13 +14,18 @@ The onboarding workflow has seven steps, each step is outlined below.
 
 ## Connect Your Azure Account
 
-Enter the Tenant ID for the Azure AD tenant where the Spot PC users are located. This can be found in the Azure AD section of the Azure portal: https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview
+Enter the Tenant ID for the Azure AD tenant where the Spot PC users are located.
+
+### Locating your Tenant ID
+Your Tenant ID can be found in the Azure AD section of the Azure portal: https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview
 
 <a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow-04.png" target="_blank"><img src="/spot-pc/_media/onboarding-workflow-04.png" alt="Click to Enlarge" width="1000"> </a>
 
 ## Authorize Spot PC Discovery
 
 Spot PC uses an Azure Enterprise application to discover the existing Azure tenant's networks and to locate the AD DC (or Azure AD Domain Service). Deploying this Enterprise App requires an additional permission set be granted by the Azure admin account.
+
+After clicking _Authorize Spot PC Discovery_ you'll be asked to login with an Azure admin that has the Azure Tenant Owner role assigned.  The specific permissions requested are required for Spot PC automation to deploy and manage the Spot PC environment.  
 
 <a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow-05.png" target="_blank"><img src="/spot-pc/_media/onboarding-workflow-05.png" alt="Click to Enlarge" width="1000"> </a>
 
@@ -136,4 +141,4 @@ As the automation runs and builds the Spot PC environment, several milestones ar
 
 ## What’s Next?
 
-Learn more about [Getting Started](spot-pc/getting-started/) with Spot PC.
+Learn how to [deploy](spot-pc/tutorials/deploy-spot-pc) your first Spot PC environment .
