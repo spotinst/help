@@ -14,7 +14,7 @@
   "scripts": {
     "build": "webpack",
     "build:watch": "webpack -w",
-    "start": "concurrently --kill-others-on-fail \"npm:format\" \"npm:build:watch\" \"npm:serve\"",
+    "start": "concurrently --kill-others-on-fail \"npm:build:watch\" \"npm:serve\"",
     "serve": "webpack serve --mode development --env development",
     "lint": "eslint --ext .js,.ts,.md,.html ./src",
     "format": "prettier --write 'src/{**/,}*.{html,json,js,pcss,md,yaml}'",
