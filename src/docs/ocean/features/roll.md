@@ -31,6 +31,7 @@ The parameter `batchMinHealthyPercentage` indicates the minimum percentage of he
 ### Node Status
 
 During the replacement process, Ocean provides information about the status of each node. The following statuses are reported:
+
 - REPLACED. The node was successfully replaced by a new node.
 - TO_BE_REPLACED. Ocean did not try to replace the node yet.
 - COULD_NOT_BE_REPLACED. The node was not replaced. This situation generally happens when there is no replacement node that becomes healthy within the grace period.
@@ -39,6 +40,7 @@ During the replacement process, Ocean provides information about the status of e
 ### Roll Status
 
 Ocean assigns a status to each stage of the roll process. A roll can have one of the following statuses:
+
 - IN_PROGRESS: The roll is in this status as long as nodes are being replaced successfully.
 - FAILED: An error occurred that caused the roll to fail, and an error message is recorded in the Elastilog.
 - STOPPED: The roll was stopped by the user. When the user stops a roll, the nodes remain in the state they were in at the time of the stop. (For example, there is no rollback to an initial state.)

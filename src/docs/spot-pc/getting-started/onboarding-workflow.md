@@ -15,6 +15,7 @@ The onboarding workflow has seven steps, each step is outlined below.
 Enter the Tenant ID for the Azure AD tenant where the Spot PC users are located.
 
 ### Locating your Tenant ID
+
 Your Tenant ID can be found in the Azure AD section of the Azure portal: https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview
 
 <a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow-04.png" target="_blank"><img src="/spot-pc/_media/onboarding-workflow-04.png" alt="Click to Enlarge" width="1000"> </a>
@@ -23,7 +24,7 @@ Your Tenant ID can be found in the Azure AD section of the Azure portal: https:/
 
 Spot PC uses an Azure Enterprise application to discover the existing Azure tenant's networks and to locate the AD DC (or Azure AD Domain Service). Deploying this Enterprise App requires an additional permission set be granted by the Azure admin account.
 
-After clicking _Authorize Spot PC Discovery_ you'll be asked to login with an Azure admin that has the Azure Tenant Owner role assigned.  The specific permissions requested are required for Spot PC automation to deploy and manage the Spot PC environment.  
+After clicking _Authorize Spot PC Discovery_ you'll be asked to login with an Azure admin that has the Azure Tenant Owner role assigned. The specific permissions requested are required for Spot PC automation to deploy and manage the Spot PC environment.
 
 <a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow-05.png" target="_blank"><img src="/spot-pc/_media/onboarding-workflow-05.png" alt="Click to Enlarge" width="1000"> </a>
 
@@ -38,13 +39,15 @@ In addition to end user experience, consideration should be made to locate the S
 <a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow-06.png" target="_blank"><img src="/spot-pc/_media/onboarding-workflow-06.png" alt="Click to Enlarge" width="1000"> </a>
 
 ### Custom vNet Scope
-This step also offers the ability to define a custom vNet Scope for the Spot PC deployment. This is options and without input, Spot PC will randomly select a viable network range.  
 
-Spot PC is typically integrated with other resources and networks via VPNs and/or vNet Peering.  It is important that the range used by Spot PC does not overlap with any other ranges in use for this tenant, both in and out of Azure.  Please select a range that does not overlap with any other networks.  
+This step also offers the ability to define a custom vNet Scope for the Spot PC deployment. This is options and without input, Spot PC will randomly select a viable network range.
 
-The network scope defaults to a /20 which supports up to 2096 addressed in Spot PC.  This can be changed post-deployment to expand capacity or reduce address consumption on the network.  
+Spot PC is typically integrated with other resources and networks via VPNs and/or vNet Peering. It is important that the range used by Spot PC does not overlap with any other ranges in use for this tenant, both in and out of Azure. Please select a range that does not overlap with any other networks.
+
+The network scope defaults to a /20 which supports up to 2096 addressed in Spot PC. This can be changed post-deployment to expand capacity or reduce address consumption on the network.
 
 The network scope must fall into one of these private ranges:
+
 - 192.168.0.0 through 192.168.255.255
 - 172.16.0.0 through 172.31.255.255
 - 10.0.0.0 through 10.255.255.255
@@ -132,10 +135,9 @@ As the automation runs and builds the Spot PC environment, several milestones ar
 
 - Installs the Spot service on the SpotPCManager1 virtual machine and configures it for Spot PC.
 
-
 **Assign HTML5 Web Address**
-+ Registers the new HTML5 gateway used by connect-to-server using a unique, publicly routable DNS address
 
+- Registers the new HTML5 gateway used by connect-to-server using a unique, publicly routable DNS address
 
 ## What’s Next?
 

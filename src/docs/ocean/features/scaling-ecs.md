@@ -120,7 +120,6 @@ Ocean provides the flexibility to use different operating systems in an ECS clus
 
 All you need to do is to create a VNG with a Windows AMI and you are all set. For Windows workloads, the Autoscaler automatically launches instances only from dedicated VNGs. This means that there is no need to set any specific label on the VNG, unless you have multiple VNGs and you wish to ensure the workload runs on a specific VNG.
 
-
 ## What’s Next?
 
 Learn more about how Ocean manages [headroom](ocean/features/headroom).

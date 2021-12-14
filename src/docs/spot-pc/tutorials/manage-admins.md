@@ -11,31 +11,36 @@ Admins can login with their existing identities from Azure AD, Google or NetApp 
 Assigning tenant level permissions and managing those permissions has not been implemented yet in web app. So, you can not currently use organization user role.
 
 ## Admin Types
+
 A Spot PC Admin can be invited to multiple organizations, admin type is configurable per-organization. Thus the same Spot PC Admin could be an _Org Admin_ for Org1 and _Tenant Creator_ for Org2.
 
 ### Organization Administrator
-* Has full permissions to all tenants in the org.
-* Can create new tenant(s) in the org.
-* Can invite new users to the org.
-* Can assign tenant-level permissions to users.
+
+- Has full permissions to all tenants in the org.
+- Can create new tenant(s) in the org.
+- Can invite new users to the org.
+- Can assign tenant-level permissions to users.
 
 ### Tenant Administrator
-* Has full permissions to all tenants in the org.
-* Can _not_ invite new users to the org.
-* Can assign tenant-level permissions to users.
+
+- Has full permissions to all tenants in the org.
+- Can _not_ invite new users to the org.
+- Can assign tenant-level permissions to users.
 
 ### Tenant Creator
-* Has _no_ default permissions to any org tenants.
-* Can be assigned tenant-level permissions.
-* Can create new tenant(s) in the org, gains tenant-level permission on created tenant(s).
-* Can _not_ invite new users to the org.
-* Can _not_ assign tenant-level permissions to users.
+
+- Has _no_ default permissions to any org tenants.
+- Can be assigned tenant-level permissions.
+- Can create new tenant(s) in the org, gains tenant-level permission on created tenant(s).
+- Can _not_ invite new users to the org.
+- Can _not_ assign tenant-level permissions to users.
 
 ### Organization User
-* Has _no_ default permissions to any org tenants.
-* Can be assigned tenant-level permissions.
-* Can _not_ invite new users to the org.
-* Can _not_ assign tenant-level permissions to users.
+
+- Has _no_ default permissions to any org tenants.
+- Can be assigned tenant-level permissions.
+- Can _not_ invite new users to the org.
+- Can _not_ assign tenant-level permissions to users.
 
 ## Inviting a new Admin
 

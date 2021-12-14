@@ -8,7 +8,6 @@ The admins page is where you can manage admins for the selected organization.
 
 <br><a href="https://docs.spot.io/spot-pc/_media/features-spot-pc-console-admins-01.png" target="_blank"><img src="/spot-pc/_media/features-spot-pc-console-admins-01.png" alt="Click to Enlarge" width="1000"> </a>
 
-
 ## What’s Next?
 
 Use the [Operational Dashboards](spot-pc/features/spot-pc-console/tenant/) to monitor and support Spot PC.

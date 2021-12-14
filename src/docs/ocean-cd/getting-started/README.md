@@ -84,7 +84,7 @@ Define the microservice using the [Create Microservice API](https://docs.spot.io
 - Microservice name: The name of the app (i.e., microservice) you are delivering. Must be a unique name.
 - Description: A few words about the microservice you are delivering.
 - Label Selectors: A microservice uses label selectors to identify deployments that are managed by Ocean CD. These must be part of the deployment metadata labels. Ensure that each deployment that needs to be managed by Ocean CD includes the labels you define in the Ocean CD microservice, under the primary metadata section.
-Here is an example for the desired label location inside the deployment YAML:
+  Here is an example for the desired label location inside the deployment YAML:
 
 <img src="/ocean-cd/_media/getting-started-06a.png" width="190" height="384" />
 
@@ -137,6 +137,7 @@ You can use the Create Rollout API at any time to create additional rollouts.
 If you ever need to delete the Ocean CD Controller, you can do so safely with the procedure below.
 
 From a workstation in your cluster:
+
 1. Enter the command:
 
 `kubectl delete mutatingwebhookconfiguration controller.oceancd.spot.io`

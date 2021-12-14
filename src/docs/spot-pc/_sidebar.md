@@ -35,7 +35,6 @@
   - [Troubleshooting](spot-pc/troubleshooting/)
     - [Getting Support](spot-pc/troubleshooting/getting-support)
 
-
 <!--      - [OS Patching](spot-pc/features/concepts/os-patching)
           - [Spot PC & Cloud PC](spot-pc/features/concepts/spot-pc-and-cloud-pc)
 - [Spot PC](spot-pc/)

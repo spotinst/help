@@ -1,4 +1,5 @@
 # Spot PC Tutorial: Deploy Spot PC Workflow
+
 Deploying Spot PC desktops with Spot PC takes two simple configuration workflows: [Create Image](spot-pc/tutorials/deploy-spot-pc?id=create-image) and [Create Spot Group](spot-pc/tutorials/deploy-spot-pc?id=create-spot-group)
 
 NOTE: This is the Spot PC workflow, for Windows 365 Cloud PC, [click here](spot-pc/tutorials/deploy-windows-365-cloud-pc).
@@ -18,7 +19,7 @@ To begin the process of creating a new Image Set and Image version 0.0.0:
 - Navigate to the desired tenant
 - Open the _Config Actions_ menu, open _Images_ and select _Create_
 - The _New Image Set_ workflow has four steps
-<br><a href="https://docs.spot.io/spot-pc/_media/tutorials-deploy-spot-pc-01.png" target="_blank"><img src="/spot-pc/_media/tutorials-deploy-spot-pc-01.png" alt="Click to Enlarge" width="1000"> </a>
+  <br><a href="https://docs.spot.io/spot-pc/_media/tutorials-deploy-spot-pc-01.png" target="_blank"><img src="/spot-pc/_media/tutorials-deploy-spot-pc-01.png" alt="Click to Enlarge" width="1000"> </a>
 
 #### Select Site
 
@@ -35,12 +36,14 @@ Depending on your use case, select the appropriate version of Windows.
 If unsure, Spot PC recommends:
 
 Pooled Spot Group
-* office-365-21h1-evd-o365pp
-* office365-win11-21h2-avd-m365
-* windows-10-s1h1-evd
+
+- office-365-21h1-evd-o365pp
+- office365-win11-21h2-avd-m365
+- windows-10-s1h1-evd
 
 Personal Spot Group
-* windows-10-21-h1-ent
+
+- windows-10-21-h1-ent
 
 #### Image Name and Description
 
@@ -55,7 +58,9 @@ Review your selections, navigate to _previous_ steps to make changes.
 Add notes to document any important information about this image set and the 0.0.0 version. The goal is to write down how and why changes are being made for reference later by you or your colleagues.
 
 ## Create Spot Group
+
 ### Create Spot Group Workflow
+
 Creating a Spot group is the second step towards adding a new (or additional) group of users and resources to an organization. The image created in the [first step](spot-pc/tutorials/deploy-spot-pc?id=create-image) of this process will be used.
 
 Creating a Spot Group can be done from the _Config Actions_ menu, found when inside any tenant.
@@ -65,39 +70,48 @@ Clicking _Create_ will open the Create Spot Group workflow is displayed.
 
 ### Create Spot Group
 
-#### Enter Spot Group Name  
+#### Enter Spot Group Name
+
 Enter a name and friendly name for the Spot Group.
 
 #### Enter Profile Path
+
 Enter the path to the data volume that will host the company shared data and the users' personal data.
 
 #### Select Spot Group License
-Select the type and quantity of licenses for this Spot Group.  This determines the size and quantity of session hosts as well as the maximum number of users with access to these resources.
+
+Select the type and quantity of licenses for this Spot Group. This determines the size and quantity of session hosts as well as the maximum number of users with access to these resources.
 
 Pooled users share a session host which personal users a dedicated session host when connecting. All users in a Spot Group must be the same user type.
 
 Use the slider to define the total number of named licenses you with to assign to this Spot Group. This should equal the total number of users you'll have accessing resources in this Spot Group.
 
 #### Select Site
+
 Select the site into which you wish to deploy this Spot Group.
 
 #### Select Groups
-Select one or more AD Security Groups.  The members of the group(s) will be provisioned with Spot PC resources and have access to the resources for this Spot Group. Users can be added to (or removed from) this Spot Group by managing their membership in the AD Security Group in their domain.
+
+Select one or more AD Security Groups. The members of the group(s) will be provisioned with Spot PC resources and have access to the resources for this Spot Group. Users can be added to (or removed from) this Spot Group by managing their membership in the AD Security Group in their domain.
 
 #### Select Image Set
+
 Select the image set and image version that will be used to build session hosts for this Spot Group.
 
 #### Description
+
 Enter a useful description of this Spot Group to help you and other Spot PC Admins identify this Spot Group, who it is for, and how it is unique.
 
 Add notes to document any important information about this new image version. The goal is to write down how and why changes are being made for reference later by you or your colleagues.
 
 #### Review and Save Spot Group
+
 Review your selections, navigate to _previous_ steps to make changes.
 
 Once saved, the Spot PC automation engine will build and configure the environment to support this new Spot Group, the users and the session hosts.
 
 ## What’s Next?
+
 Once the Spot Group is deployed, there are several next steps you can explore.
 
 Use the [Operational Dashboards](spot-pc/features/spot-pc-console/tenant/) to monitor and support Spot PC.
@@ -108,7 +122,7 @@ Manage which end users have access to this Spot Group. The guide for [managing u
 
 Invite your co-workers to create their own Spot PC admin account(s). The guide for [managing admin accounts is found here](spot-pc/tutorials/manage-admins).
 
-Edit the Spot Group to make granular changes to how it works.  The guide for [editing Spot Groups is found here](spot-pc/tutorials/edit-spot-group).
+Edit the Spot Group to make granular changes to how it works. The guide for [editing Spot Groups is found here](spot-pc/tutorials/edit-spot-group).
 
 Make changes to the image and deploy the new image to the Spot Group. The guide for [deploying image updates is found here](spot-pc/tutorials/deploy-image-update).
 
