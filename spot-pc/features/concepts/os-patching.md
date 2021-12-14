@@ -2,13 +2,11 @@
 # Features: OS Patching
 <!--
 
-
-
-Planned Feature, not yet implemented.  Manually configured Windows Update until then.
+Planned Feature, not yet implemented. Manually configured Windows Update until then.
 
 From the PRD:
 
-Windows Update for Business is a deployment service that allows the Windows 10 operating system to be updated on targeted Azure Virtual Machines (VMs). For Spot PC, Windows Update for Business will be used to update both feature versions (named versions like 21H1) and quality versions (specific security and bug fix releases).  Spot PC management will propagate new versions by creating an OS Update candidate for all Spot PC tenants and then following deployment rules to execute the update on a per Spot tenant basis. In general, the update candidate will:
+Windows Update for Business is a deployment service that allows the Windows 10 operating system to be updated on targeted Azure Virtual Machines (VMs). For Spot PC, Windows Update for Business will be used to update both feature versions (named versions like 21H1) and quality versions (specific security and bug fix releases). Spot PC management will propagate new versions by creating an OS Update candidate for all Spot PC tenants and then following deployment rules to execute the update on a per Spot tenant basis. In general, the update candidate will:
 
 Be created by Spot support based on evaluation of new/recent entries in the update Catalog.
 
@@ -60,15 +58,13 @@ All new session VMs for a Spot Tenant should be added to an Updatable Asset Grou
 
 OS Updates should be translated to a Windows Update for Business Deployment for each non-excluded Spot PC tenant:
 
-Create a Deployment for the tenant, including the target update instance selected from the Catalog and stored in the OS Update, including the rollout schedule.  POST https://docs.microsoft.com/en-us/graph/api/windowsupdates-updates-post-deployments?view=graph-rest-beta&tabs=http
+Create a Deployment for the tenant, including the target update instance selected from the Catalog and stored in the OS Update, including the rollout schedule. POST https://docs.microsoft.com/en-us/graph/api/windowsupdates-updates-post-deployments?view=graph-rest-beta&tabs=http
 
 Update the Deployment to target specific virtual machines by using the Update Deployment Audience endpoint. POST https://docs.microsoft.com/en-us/graph/api/windowsupdates-deploymentaudience-updateaudience?view=graph-rest-beta&tabs=http
 
 Track status of the Deployment GET https://docs.microsoft.com/en-us/graph/api/windowsupdates-deployment-get?view=graph-rest-beta&tabs=http and report back to the Spot PC console. Note: Update Compliance (Monitor Windows Updates and Microsoft Defender AV with Update Compliance (Windows 10) - Windows Deployment | Microsoft Docs) provides a more granular, VM level data set on the current version/update state. The configuration of this component and integration of its data is out of scope for v1 but will be incorporated in future release plans.
 
-
 -->
-
 
 ## What’s Next?
 
