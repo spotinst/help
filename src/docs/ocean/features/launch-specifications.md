@@ -95,7 +95,7 @@ The rest of the new instances will have non-preferred types to maintain a distri
 
 As preferred instance type is a soft requirement, the general spot instance availability of both preferred and non-preferred types is considered before considering type preference.
 
-For information about defining preferred instance types in the Spot API (using the preferredSpotTypes attribute under launchSpec.instanceTypes) , see Create Virtual Node Group (AWS).
+For information about defining preferred instance types in the Spot API (using the `preferredSpotTypes` attribute under `launchSpec.instanceTypes`), see [Create Virtual Node Group](https://docs.spot.io/api/#operation/OceanAWSLaunchSpecCreate) (AWS).
 
 </details><br>
 
@@ -252,5 +252,5 @@ For more information about the Scale Down feature, see Scaling ([Kubernetes](oce
 
 ## What’s next?
 
-- Learn how to [Manage Virtual Node Groups](ocean/tutorials/manage-virtual-node-groups.md).
+- Learn how to [Manage Virtual Node Groups](ocean/tutorials/manage-virtual-node-groups.md) and customize configurations per VNG.
 - Learn more about the VNGs in the APIs: [AWS Kubernetes](https://docs.spot.io/api/#operation/OceanAWSClusterCreate), [ECS](https://docs.spot.io/api/#operation/OceanECSClusterCreate), [GKE](https://docs.spot.io/api/#operation/OceanGKEClusterCreate)

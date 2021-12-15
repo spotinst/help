@@ -78,6 +78,55 @@ resources:
 
 You don't need to add any extra label for GPU support. You can use taints that require your GPU-based pods to select the specific VNG that contains the GPU image.
 
+## Choose Instance Types per VNG
+
+To choose spot instance types(link to feature page) for a specific VNG, do the following:
+1. Go to Clusters in the left menu tree and click the name of the relevant Ocean cluster.
+2. Click the Virtual Node Groups tab and click the name of the relevant VNG in the list.
+
+<img src="/ocean/_media/tutorials-manage-vngs-02-1.png" />
+
+3. In the VNG page, scroll down until you see Instance Types and click Customize Instance Types.
+
+<img src="/ocean/_media/tutorials-manage-vngs-02-2.png" />
+
+4. Complete the Instance Types configuration as described below and then click Save.
+
+### Configure Instance Types
+
+The instance types shown in the default VNG are only the instance types supported in the region that the cluster is configured in.
+
+In the custom VNGs, Ocean automatically filters out instance types that are not selected in the default VNG and instance types that do not meet the AMI architecture of the custom VNG.
+
+<img src="/ocean/_media/tutorials-manage-vngs-02-3.png" />
+
+1. Click an arrow to see the available instance options.
+2. Unmark the available options, as needed.
+
+The instance types that are grayed out are disabled for the following reasons:
+- Does not exist in the default VNG.
+- Does not fit the AMI architecture.
+
+When you hover the cursor over the instance type, a tooltip appears stating which reason.
+
+### Use the Sliders
+
+Instead of unmarking individual instances, you can use the vCPU, memory, or GPU sliders. When you use these, the instance types that are not in the range will be unmarked automatically.
+
+<img src="/ocean/_media/tutorials-manage-vngs-02-4.png" />
+
+Above the sliders, Instance Types Selected indicates how many of the available instances you have marked (specifically: number of instances marked/number of instances available). This figure changes automatically when you move the sliders or when click or unclick instances. There are similar indicators in the Types column. For example, the illustration above shows that you have marked two Compute Optimized instances out of four that are available.
+
+### Restore to Default
+
+To restore the instance types in a VNG to the default configuration, click Restore to Default. This behaves as follows:
+- For a Custom VNG: The instance types are set to all the instance types that are available in the Default VNG.
+- For Default VNG: The instance types are set to the default Ocean configuration, which means that all instance types are available. Then Ocean can choose any combination of instance types that best fit the workload requirements.
+
+Note that when you update the default VNG instance types, Ocean actually updates the Ocean cluster types since these have the same configuration.
+
+<img src="/ocean/_media/tutorials-manage-vngs-02-5.png" />
+
 ## Create a VNG from an ASG
 
 The following procedure describes how to create a VNG in an Ocean cluster using the configuration from an existing Amazon autoscaling group. This process is referred to as importing a VNG from an ASG.
