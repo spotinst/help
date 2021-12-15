@@ -80,7 +80,7 @@ You don't need to add any extra label for GPU support. You can use taints that r
 
 ## Choose Instance Types per VNG
 
-To choose spot instance types(link to feature page) for a specific VNG, do the following:
+To choose spot instance types for a specific VNG, do the following:
 1. Go to Clusters in the left menu tree and click the name of the relevant Ocean cluster.
 2. Click the Virtual Node Groups tab and click the name of the relevant VNG in the list.
 
