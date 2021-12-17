@@ -9,8 +9,9 @@
     - [Onboarding Workflow](spot-pc/getting-started/onboarding-workflow)
   - [Features](spot-pc/features/)
     - [Concepts](spot-pc/features/concepts/)
-      - [Security](spot-pc/features/concepts/security) <!-- Mike --->
+      - [Security](spot-pc/features/concepts/security)
       - [Backup](spot-pc/features/concepts/backup)
+      - [Spot PC & Cloud PC](spot-pc/features/concepts/spot-pc-and-cloud-pc)
     - [Spot PC Console](spot-pc/features/spot-pc-console/)
       - [Overview](spot-pc/features/spot-pc-console/overview)
       - [Admins](spot-pc/features/spot-pc-console/admins)
