@@ -8,7 +8,7 @@ NOTE: This is the Spot PC workflow, for Windows 365 Cloud PC, [click here](spot-
 
 Creating a VM image is the first step towards adding a new (or additional) group of users and resources to an organization. The image will then be assigned to the Spot Group created in the [next step](spot-pc/tutorials/deploy-spot-pc?id=create-spot-group) of this process.
 
-VM images for Spot PC are contained within Image Sets. Each new iteration of an image is represented within Spot PC as an Image with an incremented version number, all contained within a single Image Set. Then, an Image Set is assigned to a Spot Group, linking that image (and version) to that Spot Group. With this linkage intact, Spot PC optimization can automation the creation, deletion and availability of Spot PC session hosts for end users in real-time. Rolling out changes to the session host(s) is also simplified, once the new image version is created and tested, the Spot Group can be linked with the new image version and automation handles a seamless cutover to the new image.
+VM images for Spot PC are contained within Image Sets. Each new iteration of an image is represented within Spot PC as an Image with an incremented version number, all contained within a single Image Set. Then, an Image Set is assigned to a Spot Group, linking that image (and version) to that Spot Group. With this linkage intact, Spot PC optimization can automate the creation, deletion and availability of Spot PC session hosts for end users in real-time. Rolling out changes to the session host(s) is also simplified, once the new image version is created and tested, the Spot Group can be linked with the new image version and automation handles a seamless cutover to the new image.
 
 ### Creating a New Image Set
 
@@ -23,7 +23,7 @@ To begin the process of creating a new Image Set and Image version 0.0.0:
 
 #### Select Site
 
-Select the site for the VM Image to be built (and to reside in) once completed You can select from all available sites in the tenant or a _Global_ option.
+Select the site for the temporary VM to be built and for the final VM image to reside in. You can select from all available sites in the tenant or a _Global_ option.
 
 The _Global_ option will add the image to the Azure Shared Image Gallery and replicate the image across multiple Azure regions. <br>
 NOTE: Due to replication time, the global image set won't be immediately available for customization. Please expect approximately 20 minutes of delay once the global image is saved.
@@ -66,7 +66,7 @@ Creating a Spot group is the second step towards adding a new (or additional) gr
 Creating a Spot Group can be done from the _Config Actions_ menu, found when inside any tenant.
 <br><a href="https://docs.spot.io/spot-pc/_media/tutorials-create-spot-group-01.png" target="_blank"><img src="/spot-pc/_media/tutorials-create-spot-group-01.png" alt="Click to Enlarge" width="1000"> </a>
 
-Clicking _Create_ will open the Create Spot Group workflow is displayed.
+Clicking _Create_ will open the Create Spot Group workflow.
 
 ### Create Spot Group
 
