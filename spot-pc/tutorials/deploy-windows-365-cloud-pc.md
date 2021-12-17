@@ -35,11 +35,11 @@ Confirms the configuration is healthy.
 ## Create Image
 
 To begin this workflow navigate to _Config Actions > Create Device Image_ from within the appropriate tenant.
-<br><a href="https://docs.spot.io/spot-pc/_media/tutorials-create-image-03.png" target="_blank"><img src="/spot-pc/_media/tutorials-create-image-03.png" alt="Click to Enlarge" width="1000"> </a>
+<br><a href="https://docs.spot.io/spot-pc/_media/tutorials-deploy-windows-365-cloud-pc-03.png" target="_blank"><img src="/spot-pc/_media/tutorials-deploy-windows-365-cloud-pc-03.png" alt="Click to Enlarge" width="1000"> </a>
 
 Creating a VM image is the second step towards adding a new (or additional) Windows 365 Cloud PC group. The image will then be assigned to the Windows 365 Connection created in the [next step](spot-pc/tutorials/deploy-windows-365-cloud-pc) of this process.
 
-<br><a href="https://docs.spot.io/spot-pc/_media/tutorials-create-image-04.png" target="_blank"><img src="/spot-pc/_media/tutorials-create-image-04.png" alt="Click to Enlarge" width="1000"> </a>
+<br><a href="https://docs.spot.io/spot-pc/_media/tutorials-deploy-windows-365-cloud-pc-04.png" target="_blank"><img src="/spot-pc/_media/tutorials-deploy-windows-365-cloud-pc-04.png" alt="Click to Enlarge" width="1000"> </a>
 
 ### Enter Image Name
 
@@ -64,10 +64,10 @@ Review your selections, navigate to _previous_ steps to make changes.
 ## Create Provisioning Policy
 
 To begin this workflow navigate to _Config Actions > Create Provisioning Policy_ from within the appropriate tenant.
-<br><a href="https://docs.spot.io/spot-pc/_media/tutorials-create-image-05.png" target="_blank"><img src="/spot-pc/_media/tutorials-create-image-05.png" alt="Click to Enlarge" width="1000"> </a>
+<br><a href="https://docs.spot.io/spot-pc/_media/tutorials-deploy-windows-365-cloud-pc-05.png" target="_blank"><img src="/spot-pc/_media/tutorials-deploy-windows-365-cloud-pc-05.png" alt="Click to Enlarge" width="1000"> </a>
 
 Creating a Provisioning Policy is the third step towards adding a new (or additional) Windows 365 Cloud PC group. The Provisioning Policy associates the Connection with the Image and associates users to complete the Windows 365 Cloud PC creation process.
-<br><a href="https://docs.spot.io/spot-pc/_media/tutorials-create-image-06.png" target="_blank"><img src="/spot-pc/_media/tutorials-create-image-06.png" alt="Click to Enlarge" width="1000"> </a>
+<br><a href="https://docs.spot.io/spot-pc/_media/tutorials-deploy-windows-365-cloud-pc-06.png" target="_blank"><img src="/spot-pc/_media/tutorials-deploy-windows-365-cloud-pc-06.png" alt="Click to Enlarge" width="1000"> </a>
 
 ### Select Connection
 
