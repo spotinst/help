@@ -2794,20 +2794,6 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-security/features/topology"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/spot-security/getting-started/existing-customer-registration</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-security/getting-started/existing-customer-registration"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-security/getting-started/existing-customer-registration"/>
-    </url>
-    <url>
-        <loc>https://docs.spot.io/?/spot-security/getting-started/new-customer-registration</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-security/getting-started/new-customer-registration"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-security/getting-started/new-customer-registration"/>
-    </url>
-    <url>
         <loc>https://docs.spot.io/?/spot-security/getting-started/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
