@@ -24,6 +24,7 @@ To take advantage of the Spot Security features, simply log into your existing S
 
 ## Documentation Map
 
+- [Getting Started](spot-security/getting-started/)
 - [Features](spot-security/features/)
   - [Security Dashboard](spot-security/features/security-dashboard/)
     - [Create a Preset](spot-security/features/security-dashboard/create-preset)
