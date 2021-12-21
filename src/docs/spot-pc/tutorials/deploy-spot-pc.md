@@ -39,11 +39,11 @@ Pooled Spot Group
 
 - office-365-21h1-evd-o365pp
 - office365-win11-21h2-avd-m365
-- windows-10-s1h1-evd
+- windows-10-21h2-evd
 
 Personal Spot Group
 
-- windows-10-21-h1-ent
+- windows-10-21-h2-ent
 
 #### Image Name and Description
 
@@ -82,9 +82,9 @@ Enter the path to the data volume that will host the company shared data and the
 
 Select the type and quantity of licenses for this Spot Group. This determines the size and quantity of session hosts as well as the maximum number of users with access to these resources.
 
-Pooled users share a session host which personal users a dedicated session host when connecting. All users in a Spot Group must be the same user type.
+Pooled users share a session host while personal users a dedicated session host when connecting. All users in a Spot Group must be the same user type.
 
-Use the slider to define the total number of named licenses you with to assign to this Spot Group. This should equal the total number of users you'll have accessing resources in this Spot Group.
+Use the slider to define the total number of named licenses you wish to assign to this Spot Group. This should equal the total number of users you'll have accessing resources in this Spot Group.
 
 #### Select Site
 
@@ -116,7 +116,7 @@ Once the Spot Group is deployed, there are several next steps you can explore.
 
 Use the [Operational Dashboards](spot-pc/features/spot-pc-console/tenant/) to monitor and support Spot PC.
 
-Test the login as an end user, instructions for [Connecting to the Spot PC desktop is found here](spot-pc/tutorials/connect-to-desktop).
+Test the login as an end user, instructions for [Connecting to the Spot PC desktop are found here](spot-pc/tutorials/connect-to-desktop).
 
 Manage which end users have access to this Spot Group. The guide for [managing users and groups is found here](spot-pc/tutorials/manage-users-and-groups).
 
