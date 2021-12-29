@@ -100,6 +100,22 @@ In addition, cluster headroom may be further customized by using a separate head
 
 When custom headroom units are specified on one Launch Specification or more, Ocean will maintain a buffer of spare capacity that matches the constraints defined in that Launch Specification (node labels, taints, etc.), in addition to the Cluster level Headroom units. For example, if the cluster level Headroom is configured to maintain 2 headroom units of 2048 MiB and 2000 CPU, and a specific Launch Specification is configured to maintain 2 Headroom unit of the same size, that means a total of 4 headroom units will be maintained at all times, 2 of them matching the Launch Specification's constraints.
 
+## Pod Topology Spread Constraints
+
+Ocean supports Kubernetes [pod topology spread constraints](https://kubernetes.io/docs/concepts/workloads/pods/pod-topology-spread-constraints/). This allows for the control of how pods are spread across worker nodes among failure domains such as regions, zones, nodes, and other user-defined topology domains in order to achieve high availability and efficient resource utilization.
+
+Ocean automatically launches nodes while ensuring that the `maxSkew` is maintained. Similarly, Ocean will only scale down a node if `maxSkew` is maintained.
+
+To support the Kubernetes feature, Ocean requires the following:
+- Kubernetes version 1.19 or later (for other versions, see the note in the [Kubernetes documentation](https://kubernetes.io/docs/concepts/workloads/pods/pod-topology-spread-constraints/).
+- Ocean Controller version 1.0.78 or later.
+
+### Special Case: Node-lifecycle Key
+
+When you use the topology key `spotinst.io/node-lifecycle`, a running node in each topology before applying the workloads(s) that contain the spread constraints.
+
+> Warning: If one of the topologies running in the cluster is not available, the pods that are supposed to run on this topology will remain pending. For example, you have a topology key `spotinst.io/node-lifecycle`, and you have spot and OD nodes in the cluster. If there are no available spot markets, the pods would remain pending since launching an OD node would violate the `maxSkew` limitation.
+
 ## Resource Limits
 
 Ocean allow dynamic resource allocation to fit the pods' needs. Ocean cluster resources are limited to 1000 CPU cores and 4000 GB memory by default, this can be customized via the cluster creation and edit wizards.
@@ -110,9 +126,9 @@ Ocean manages the cluster capacity to ensure all pods are running and that resou
 If you wish to override the default configuration, you can customize the scaling configuration.
 To customize the scaling configuration:
 
-1. Navigate to your Ocean cluster
-2. Click on the Actions button on the top-right side of the screen to open the actions menu
-3. Choose Customize Scaling
+1. Navigate to your Ocean cluster.
+2. Click on the Actions button on the top-right side of the screen to open the actions menu.
+3. Choose Customize Scaling.
 
 <img src="/ocean/_media/features-scaling-k8s-03.png" />
 
