@@ -107,9 +107,6 @@ Enter the information for your network interface. You can define additional netw
 
 - Vnet Resource Group. Select the Vnet Resource group you want your Elastigroup Scale Sets to be a part of.
 - Virtual Network. Select the specific Virtual Network (VN) for your Elastigroup.
-
-<img src="/elastigroup/_media/gettingstarted-eg-azure-03aa.png" />
-
 - Set as Primary. The main network interface attached to the VM.
 - Subnet ID. Select the specific Subnet inside your VN.
 - Resource Group. The resource group where the network interface will be created.
@@ -154,6 +151,8 @@ In order to minimize ad hoc creation of new IPs on VM launchers, the following i
 ### Load Balancers (optional)
 
 You can add a load balancer. Elastigroup will automatically register new VMs to the configured load balancer.
+
+<img src="/elastigroup/_media/gettingstarted-eg-azure-03aa.png" />
 
 ## Step 3: Scaling
 
