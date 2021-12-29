@@ -114,7 +114,7 @@ To support the Kubernetes feature, Ocean requires the following:
 
 When you use the topology key `spotinst.io/node-lifecycle`, a running node in each topology before applying the workloads(s) that contain the spread constraints.
 
-> Warning: If one of the topologies running in the cluster is not available, the pods that are supposed to run on this topology will remain pending. For example, you have a topology key `spotinst.io/node-lifecycle`, and you have spot and OD nodes in the cluster. If there are no available spot markets, the pods would remain pending since launching an OD node would violate the `maxSkew` limitation.
+> **Important Note**: If one of the topologies running in the cluster is not available, the pods that are supposed to run on this topology will remain pending. For example, you have a topology key `spotinst.io/node-lifecycle`, and you have spot and OD nodes in the cluster. If there are no available spot markets, the pods would remain pending since launching an OD node would violate the `maxSkew` limitation.
 
 ## Resource Limits
 
