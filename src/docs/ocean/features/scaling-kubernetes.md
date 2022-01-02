@@ -110,7 +110,7 @@ To support the Kubernetes feature, Ocean requires the following:
 - Kubernetes version 1.19 or later (for other versions, see the note in the [Kubernetes documentation](https://kubernetes.io/docs/concepts/workloads/pods/pod-topology-spread-constraints/).
 - Ocean Controller version 1.0.78 or later.
 
-### Special Case: Node-lifecycle Key
+### Spread by Node-lifecycle Key
 
 When you use the topology key `spotinst.io/node-lifecycle`, a running node in each topology is required before applying the workloads(s) that contain the spread constraints.
 
