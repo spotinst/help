@@ -33,6 +33,7 @@
     - [Edit Windows 365 Cloud PC](spot-pc/tutorials/edit-w365)
     - [Manage Users and Groups](spot-pc/tutorials/manage-users-and-groups)
     - [Manage Admins](spot-pc/tutorials/manage-admins)
+    - [Install AD Connect](spot-pc/tutorials/install-ad-connect)
   - [Troubleshooting](spot-pc/troubleshooting/)
     - [Getting Support](spot-pc/troubleshooting/getting-support)
 
