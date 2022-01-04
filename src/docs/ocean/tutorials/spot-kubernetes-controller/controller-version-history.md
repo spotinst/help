@@ -1,5 +1,11 @@
 # Controller Version History
 
+## [1.0.81] - 2022-01-04
+
+Added
+
+- Upgraded UBI dependencies
+
 ## [1.0.80] - 2021-11-29
 
 Added
