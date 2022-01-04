@@ -92,7 +92,7 @@ For example, you can use:
 
 For more information about the specific APIs, see Initiate Cluster Roll: [AKS](https://docs.spot.io/api/#operation/oceanAzureRollInit), [Kubernetes on AWS](https://docs.spot.io/api/#operation/oceanAwsRollInit), [ECS](https://docs.spot.io/api/#operation/oceanEcsRollInit), [GKE](https://docs.spot.io/api/#operation/oceanGkeRollInit)
 
-## Create A Roll
+## Start A Roll
 
 1. In your Ocean cluster, go to Actions and click Cluster Roll.
 
@@ -106,6 +106,24 @@ For more information about the specific APIs, see Initiate Cluster Roll: [AKS](h
 <img src="/ocean/_media/features-roll-02a.png" width="313" height="211" />
 
 3. Click Roll.
+
+## Start a VNG Roll
+
+1. In your Ocean cluster, click the Virtual Node Groups tab.
+
+<img src="/ocean/_media/features-roll-02a-1.png" />
+
+2. In the list of VNGs, mark all the VNGs that you want to roll.
+
+<img src="/ocean/_media/features-roll-02a-2.png" />
+
+3. Click VNG Actions and Roll VNG.
+
+<img src="/ocean/_media/features-roll-02a-3.png" />
+
+4. Enter the Batch Size and Comments, indicate whether you want to respect the pod disruption budget, and click Roll VNG(s).
+
+<img src="/ocean/_media/features-roll-02a-4.png" />
 
 ## Monitor The Roll
 
