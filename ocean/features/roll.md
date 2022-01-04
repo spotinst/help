@@ -123,7 +123,7 @@ For more information about the specific APIs, see Initiate Cluster Roll: [AKS](h
 
 4. Enter the Batch Size and Comments, indicate whether you want to respect the pod disruption budget, and click Roll VNG(s).
 
-<img src="/ocean/_media/features-roll-02a-4.png" />
+<img src="/ocean/_media/features-roll-02a-4.png" width="342" height="346" />
 
 ## Monitor The Roll
 
