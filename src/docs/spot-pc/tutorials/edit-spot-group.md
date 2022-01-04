@@ -1,6 +1,6 @@
 # Spot PC Tutorial: Edit Spot Group
 
-Editing a Spot Group is a similar workflow to the [Create Spot Group](spot-pc/tutorials/deploy-spot-pc?id=create-spot-group) workflow but with a couple additional options.  
+Editing a Spot Group is a similar workflow to the [Create Spot Group](spot-pc/tutorials/deploy-spot-pc?id=create-spot-group) workflow but with a couple additional options. 
 <br><a href="https://docs.spot.io/spot-pc/_media/tutorials-edit-spot-group-01.png" target="_blank"><img src="/spot-pc/_media/tutorials-edit-spot-group-01.png" alt="Click to Enlarge" width="1000"> </a>
 
 ## Select Spot Group
@@ -25,7 +25,7 @@ Select one or more AD Security Groups. The members of the group(s) will be provi
 
 ## Logoff Settings
 
-Define the duration for both the _Active idle_ and _Disconnect idle_ settings for this Spot Group. For more details on this, see the [Understanding User Sessions and Inactivity Timeouts](spot-pc/tutorials/connect-to-desktop?id=understanding-user-sessions-and-inactivity-timeouts) article.  
+Define the duration for both the _Active idle_ and _Disconnect idle_ settings for this Spot Group. For more details on this, see the [Understanding User Sessions and Inactivity Timeouts](spot-pc/tutorials/connect-to-desktop?id=understanding-user-sessions-and-inactivity-timeouts) article.
 <br><a href="https://docs.spot.io/spot-pc/_media/tutorials-edit-spot-group-06.png" target="_blank"><img src="/spot-pc/_media/tutorials-edit-spot-group-06.png" alt="Click to Enlarge" width="1000"> </a>
 
 ## Set Custom Properties
