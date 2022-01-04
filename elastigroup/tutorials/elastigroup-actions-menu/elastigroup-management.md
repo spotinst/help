@@ -9,8 +9,8 @@ To manage your Elastigroups in the Spot console, go to Elastigroup in the menu t
 ## View List of Groups
 
 The list of Elastigroups gives you a quick view of your groups and basic information including:
-Elastigroup Name: The user-given name of the group.
 
+- Elastigroup Name: The user-given name of the group.
 - ID: The ID that Elastigroup assigned to the group upon creation.
 - Integrations: If the group has any integrations, they are indicated with icons in this column.
 - Instances: The number of active instances in the Elastigroup.
