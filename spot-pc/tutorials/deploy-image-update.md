@@ -29,7 +29,7 @@ To begin the process of creating a new Image version:
 Windows 365 uses VM images to automatically build VMs to support the user desktops.
 <br><a href="https://docs.spot.io/spot-pc/_media/tutorials-deploy-image-05.png" target="_blank"><img src="/spot-pc/_media/tutorials-deploy-image-05.png" alt="Click to Enlarge" width="1000"> </a>
 
-The image used for this process is set by [editing](spot-pc/tutorials/edit-w365) the Provisioning Policy and (on step 3) selecting a different Image.  
+The image used for this process is set by [editing](spot-pc/tutorials/edit-w365) the Provisioning Policy and (on step 3) selecting a different Image. 
 <br><a href="https://docs.spot.io/spot-pc/_media/tutorials-deploy-image-06.png" target="_blank"><img src="/spot-pc/_media/tutorials-deploy-image-06.png" alt="Click to Enlarge" width="1000"> </a>
 
 ## What’s Next?

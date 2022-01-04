@@ -9,6 +9,8 @@ Prior to starting, confirm the AD Connect has not already been setup and configu
 ## Enforce TLS 1.2
 Enforcing TLS 1.2 is required for AD Connect to securely sync with Azure AD. Microsoft provides guidance on enabling this for your AD DC here: https://docs.microsoft.com/en-us/azure/active-directory/hybrid/reference-connect-tls-enforcement
 
+<iframe src="https://drive.google.com/file/d/1vk_-puV3vuUhLYhMdmocq62vm7KGVF3k/preview" width="640" height="480" allow="autoplay"></iframe>
+
 ## Add UPNs to the AD DC
 Prior to running AD Connect, add all domain UPNs to the DC by selecting the domain's Properties.
 <br><a href="https://docs.spot.io/spot-pc/_media/tutorials-install-ad-connect-02.png" target="_blank"><img src="/spot-pc/_media/tutorials-install-ad-connect-02.png" alt="Click to Enlarge" width="1000"> </a>
