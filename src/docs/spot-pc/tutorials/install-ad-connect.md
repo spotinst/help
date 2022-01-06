@@ -64,7 +64,7 @@ You may choose to limit the synced users and devices by group. For initial setup
 <br><a href="https://docs.spot.io/spot-pc/_media/tutorials-install-ad-connect-16.png" target="_blank"><img src="/spot-pc/_media/tutorials-install-ad-connect-16.png" alt="Click to Enlarge" width="1000"> </a>
 
 ## Optional features
-You may choose to enable enhanced functionality for your environment. For Spot PC, the _Password writeback_ and _Group writeback_ settings are recommended. This guide does not cover these optional features,
+You may choose to enable enhanced functionality for your environment. For Spot PC, the _Password writeback_ and _Group writeback_ settings are recommended. This guide does not cover these optional features.
 
 An article on enabling password write back is found here: https://docs.microsoft.com/en-us/azure/active-directory/authentication/tutorial-enable-sspr-writeback
 
