@@ -42,13 +42,14 @@ If unsure, Spot PC recommends:
 
 Pooled Spot Group
 
-- office-365-21h2-evd-o365
-- office365-win11-21h2-avd-m365
-- windows-10-21h2-evd
+- office-365-win10-21h2-avd-m365
+- office-365-win11-21h2-avd-m365
+- Windows-10-win10-21h2-avd
 
 Personal Spot Group
 
-- windows-10-21-h2-ent
+- Windows-10-win10-21h2-ent
+
 
 #### Image Name and Description
 
