@@ -11,7 +11,7 @@ Creating a VM image is the first step towards adding a new (or additional) group
 VM images for Spot PC are contained within Image Sets. Each new iteration of an image is represented within Spot PC as an Image with an incremented version number, all contained within a single Image Set. Then, an Image Set is assigned to a Spot Group, linking that image (and version) to that Spot Group. With this linkage intact, Spot PC optimization can automate the creation, deletion and availability of Spot PC session hosts for end users in real-time. Rolling out changes to the session host(s) is also simplified, once the new image version is created and tested, the Spot Group can be linked with the new image version and automation handles a seamless cutover to the new image.
 
 ### Create Image Video
-A walkthrough of the create image and update image functionality is detailed here::
+A walkthrough of the create image and update image functionality is detailed here:
 
 <iframe src="https://drive.google.com/file/d/1TH_PdbERA8ygtuaHq_t9ksCzEXhMB1ns/preview" width="640" height="480" allow="autoplay"></iframe>
 
