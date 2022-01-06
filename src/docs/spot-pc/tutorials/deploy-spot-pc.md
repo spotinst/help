@@ -8,12 +8,12 @@ NOTE: This is the Spot PC workflow, for Windows 365 Cloud PC, [click here](spot-
 
 Creating a VM image is the first step towards adding a new (or additional) group of users and resources to an organization. The image will then be assigned to the Spot Group created in the [next step](spot-pc/tutorials/deploy-spot-pc?id=create-spot-group) of this process.
 
-### Create Image Video
-A walkthrough of the create image and update image functionality is detailed here: <br>
-<iframe src="https://drive.google.com/file/d/1TH_PdbERA8ygtuaHq_t9ksCzEXhMB1ns/preview" width="50%" height="720px" allow="autoplay"></iframe><br>
-
-
 VM images for Spot PC are contained within Image Sets. Each new iteration of an image is represented within Spot PC as an Image with an incremented version number, all contained within a single Image Set. Then, an Image Set is assigned to a Spot Group, linking that image (and version) to that Spot Group. With this linkage intact, Spot PC optimization can automate the creation, deletion and availability of Spot PC session hosts for end users in real-time. Rolling out changes to the session host(s) is also simplified, once the new image version is created and tested, the Spot Group can be linked with the new image version and automation handles a seamless cutover to the new image.
+
+### Create Image Video
+A walkthrough of the create image and update image functionality is detailed here::
+
+<iframe src="https://drive.google.com/file/d/1TH_PdbERA8ygtuaHq_t9ksCzEXhMB1ns/preview" width="640" height="480" allow="autoplay"></iframe>
 
 ### Creating a New Image Set
 
@@ -42,13 +42,14 @@ If unsure, Spot PC recommends:
 
 Pooled Spot Group
 
-- office-365-21h1-evd-o365pp
-- office365-win11-21h2-avd-m365
-- windows-10-21h2-evd
+- office-365-win10-21h2-avd-m365
+- office-365-win11-21h2-avd-m365
+- Windows-10-win10-21h2-avd
 
 Personal Spot Group
 
-- windows-10-21-h2-ent
+- Windows-10-win10-21h2-ent
+
 
 #### Image Name and Description
 
