@@ -64,6 +64,8 @@ Review your selections, navigate to _previous_ steps to make changes.
 
 Add notes to document any important information about this image set and the 0.0.0 version. The goal is to write down how and why changes are being made for reference later by you or your colleagues.
 
+To customize the image, create a new version (e.g. 0.0.1) following [these instructions](spot-pc/tutorials/deploy-image-update?id=creating-a-new-image-version).
+
 ## Create Spot Group
 
 ### Create Spot Group Workflow
