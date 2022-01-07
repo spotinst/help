@@ -10,6 +10,11 @@ The onboarding workflow has seven steps, each step is outlined below.
 
 <a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow-02.png" target="_blank"><img src="/spot-pc/_media/onboarding-workflow-02.png" alt="Click to Enlarge" width="1000"> </a>
 
+## Onboarding Workflow Video
+A walkthrough of the onboarding workflow functionality is detailed here:
+
+<iframe src="https://www.youtube-nocookie.com/embed/Qe8aHt-kcYU?vq=hd1080&modestbranding=1&rel=0&theme=light&color=white" height="720" frameborder="0"></iframe>
+
 ## Connect Spot PC to Your Azure tenant
 
 Enter the Tenant ID for the Azure AD tenant where the Spot PC users are located.
