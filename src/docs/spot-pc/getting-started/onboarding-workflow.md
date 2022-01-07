@@ -99,10 +99,6 @@ As the automation runs and builds the Spot PC environment, several milestones ar
 
 <a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow-11.png" target="_blank"><img src="/spot-pc/_media/onboarding-workflow-11.png" alt="Click to Enlarge" width="1000"> </a>
 
-**Add Resource Providers**
-
-- Azure subscriptions require providers to be registered before using different types of Azure resources. In this step we're adding all the required resource types to the Spot PC subscription in preparation for creating the resource objects
-
 **Peer Virtual Network**
 
 - In this step we're creating a peering link between the new Spot PC virtual network used by virtual desktops, and your existing customer network (which has visibility to your AD DC or Azure AD Domain services resources).
