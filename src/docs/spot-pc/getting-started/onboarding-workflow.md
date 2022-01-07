@@ -13,7 +13,7 @@ The onboarding workflow has seven steps, each step is outlined below.
 ## Onboarding Workflow Video
 A walkthrough of the onboarding workflow functionality is detailed here:
 
-<iframe src="https://www.youtube-nocookie.com/embed/Qe8aHt-kcYU?vq=hd1080&modestbranding=1&rel=0&theme=light&color=white" height="720" frameborder="0"></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/Qe8aHt-kcYU?vq=hd1080&modestbranding=1&rel=0&theme=light&color=white" height="480" frameborder="0"></iframe>
 
 ## Connect Spot PC to Your Azure tenant
 
