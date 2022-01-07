@@ -10,7 +10,7 @@ The onboarding workflow has seven steps, each step is outlined below.
 
 <a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow-02.png" target="_blank"><img src="/spot-pc/_media/onboarding-workflow-02.png" alt="Click to Enlarge" width="1000"> </a>
 
-## Connect Your Azure Account
+## Connect Spot PC to Your Azure tenant
 
 Enter the Tenant ID for the Azure AD tenant where the Spot PC users are located.
 
@@ -38,7 +38,7 @@ In addition to end user experience, consideration should be made to locate the S
 
 <a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow-06.png" target="_blank"><img src="/spot-pc/_media/onboarding-workflow-06.png" alt="Click to Enlarge" width="1000"> </a>
 
-### Custom vNet Scope
+### Custom Spot PC VNet Scope
 
 This step also offers the ability to define a custom vNet Scope for the Spot PC deployment. This is options and without input, Spot PC will randomly select a viable network range.
 
@@ -58,7 +58,7 @@ After the region is selected, the initialization of the tenant begins. Several r
 
 <a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow-03.png" target="_blank"><img src="/spot-pc/_media/onboarding-workflow-03.png" alt="Click to Enlarge" width="1000"> </a>
 
-## Select your Active Directory Type
+## Connect Spot PC to your AD Domain
 
 While the users' identity must be a part of the Azure AD, each machine must also be joined to an Active Directory Domain Controller (AD DC) and Azure AD does not currently support that function. Therefore an AD DC must be assessable from the Spot PC Azure subscription. There are two options to fulfill this requirement.
 
@@ -69,7 +69,7 @@ In either case, select the appropriate domain address (e.g. company.onmicrosoft.
 
 <a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow-07.png" target="_blank"><img src="/spot-pc/_media/onboarding-workflow-07.png" alt="Click to Enlarge" width="1000"> </a>
 
-### Connecting to an Existing AD DC
+### Connect to your Domain Controller's Network
 
 When an Existing AD DC is selected, the AD DC needs to be accessible to Azure. This means the AD DC VM must be hosted in Azure or be connected to Azure via a VPN/Express Route.
 
@@ -98,10 +98,6 @@ All of your selections are shown for your review before clicking to finalize the
 As the automation runs and builds the Spot PC environment, several milestones are tracked and that progress is shown on the right side of the page. These steps are:
 
 <a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow-11.png" target="_blank"><img src="/spot-pc/_media/onboarding-workflow-11.png" alt="Click to Enlarge" width="1000"> </a>
-
-**Add Resource Providers**
-
-- Azure subscriptions require providers to be registered before using different types of Azure resources. In this step we're adding all the required resource types to the Spot PC subscription in preparation for creating the resource objects
 
 **Peer Virtual Network**
 
