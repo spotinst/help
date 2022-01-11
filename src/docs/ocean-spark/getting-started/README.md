@@ -84,21 +84,20 @@ To know more about the API endpoints and parameters, check out the API reference
 The command below will run the classic Monte-Carlo Pi computation contained in all Spark distributions:
 
 ```yaml
-curl -X POST \
- https://api.spotinst.io/ocean/spark/cluster/osc-e4089a00/app \
- -H 'Content-Type: application/json' \
- -H 'Authorization: Bearer 4536dc4418995c553df9c0c0e1d31866453bcec3df0f31f97003926d67ff1e00
-
-' \
- -d '{
- "job-id": "spark-pi",
- "configOverrides": {
-   "type": "Scala",
-   "sparkVersion": "3.2.0",
-   "mainApplicationFile": "local:///opt/spark/examples/jars/examples.jar",
-   "mainClass": "org.apache.spark.examples.SparkPi",
-   "arguments": ["1000"]
- }
+curl -k -X POST \
+  'https://api.spotinst.io/ocean/spark/cluster/<your cluster id>/app?accountId=<your accountId>' \
+  -H 'Content-Type: application/json' \
+  -H 'Authorization: Bearer ...' \
+  -d '{
+  "jobId": "spark-pi",
+  "configOverrides": {
+    "type": "Scala",
+    "sparkVersion": "3.2.0",
+    "mainApplicationFile": "local:///opt/spark/examples/jars/examples.jar",
+    "image": "gcr.io/datamechanics/spark:platform-3.2-latest",
+    "mainClass": "org.apache.spark.examples.SparkPi",
+    "arguments": ["1000"]
+  }
 }'
 ```
 

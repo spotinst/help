@@ -21,19 +21,20 @@ These are fragments of configuration that you can define in the Ocean Spark UI o
 Config overrides are fragments of configuration that you define when submitting Spark applications through the API. They are specified directly in the body of the POST request (https://api.spotinst.io/ocean/spark/cluster/{clusterId}/app):
 
 ```yaml
-curl -X POST \
- https://api.spotinst.io/ocean/spark/cluster/<your-cluster-id>/app \
- -H 'Content-Type: application/json' \
- -H 'Authorization: Bearer <your-spot-token> \
- -d '{
-   "jobId": "daily-upload",
-   "configOverrides": {
-       "type": "Scala",
-       "sparkVersion": "3.2.0",
-       "mainApplicationFile": "s3a://acme-assets/processing-1.0.0.jar",
-       "mainClass": "com.acme.processing.DailyUpload",
-       "arguments": ["2022-01-01"]
-   }
+curl -k -X POST \
+  'https://api.spotinst.io/ocean/spark/cluster/<your cluster id>/app?accountId=<your accountId>' \
+  -H 'Content-Type: application/json' \
+  -H 'Authorization: Bearer ...' \
+  -d '{
+  "jobId": "spark-pi",
+  "configOverrides": {
+    "type": "Scala",
+    "sparkVersion": "3.2.0",
+    "mainApplicationFile": "local:///opt/spark/examples/jars/examples.jar",
+    "image": "gcr.io/datamechanics/spark:platform-3.2-latest",
+    "mainClass": "org.apache.spark.examples.SparkPi",
+    "arguments": ["1000"]
+  }
 }'
 ```
 
@@ -97,7 +98,7 @@ The configuration template can now be used as a kernel for a Jupyter notebook or
 
 ```yaml
 curl -X POST \
- https://api.spotinst.io/ocean/spark/cluster/<your-cluster-id>/app \
+  'https://api.spotinst.io/ocean/spark/cluster/<your cluster id>/app?accountId=<your accountId>' \
  -H 'Content-Type: application/json' \
  -H 'Authorization: Bearer <your-spot-token> \
  -d '{
@@ -107,6 +108,7 @@ curl -X POST \
        "type": "Scala",
        "mainApplicationFile": "s3a://acme-assets/processing-1.0.0.jar",
        "mainClass": "com.acme.processing.DailyUpload",
+       "image": "gcr.io/datamechanics/spark:platform-3.2-latest",
        "arguments": ["2022-01-01"]
    }
 }'
