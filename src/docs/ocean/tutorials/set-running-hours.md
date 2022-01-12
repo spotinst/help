@@ -35,6 +35,16 @@ You can also configure shutdown hours using the API parameter cluster.scheduling
 
 > **Tip**: The value defined in the `shutdownHours.timeWindows` field is effective only when the `shutdownHours.isEnabled` field is set to `true`.
 
+## Set Shutdown Hours per VNG
+
+You can use the API (AWS) to configure [shutdown hours](ocean/features/running-hours?id=shutdown-hours-per-vng) for one or more individual VNGs.
+
+Use the [Create](https://docs.spot.io/api/#operation/OceanAWSLaunchSpecCreate) or the [Update](https://docs.spot.io/api/#operation/OceanAWSLaunchSpecUpdate) VNG API to set up the shutdown hours. Configure it under: `launchSpec.scheduling.shutdownHours` as shown below.
+
+Note that `isEnabled` must be set to True in order to enable the shutdown hours.
+
+<img src="/ocean/_media/tutorials-set-running-hours-03.png" width="278" height="514" />
+
 ## What's Next?
 
-Have a look at the Create Cluster in Ocean APIs: [K8s AWS](https://docs.spot.io/api/#operation/OceanAWSClusterCreate), [ECS](https://docs.spot.io/api/#operation/OceanECSClusterCreate), [GKE](https://docs.spot.io/api/#operation/OceanGKEClusterCreate)
+Learn more about the Create Cluster in Ocean APIs: [K8s AWS](https://docs.spot.io/api/#operation/OceanAWSClusterCreate), [ECS](https://docs.spot.io/api/#operation/OceanECSClusterCreate), [GKE](https://docs.spot.io/api/#operation/OceanGKEClusterCreate)
