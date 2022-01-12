@@ -25,11 +25,27 @@ The controller immediately reports the unscheduled pods in the cluster to Ocean'
 
 At the end of this process, all pods are satisfied, and the cluster is fully functioning in the running hours scheduled.
 
-## Scaling Behavior (Ocean For ECS)
+## Scaling Behavior
+
+(Ocean For ECS)
 
 When a period of running time ends, Ocean automatically scales down the entire cluster to 0. During the off time, all container instances are down.
 
 At the end of the off time, the autoscaler launches the appropriate types and number of container instances to provide the resources required by the unscheduled tasks. At the end of this process, all tasks are satisfied, and the cluster is fully functioning in the running hours scheduled.
+
+## Shutdown Hours per VNG
+
+(Ocean for Kubernetes AWS)
+
+You can define shutdown hours per virtual node group (VNG) so that VNGs can shut down at different times.
+
+In some cases, different VNGs have different shutdown hours. For example, teams working on different VNGs have different times for scaling down the infrastructure related to that VNG.
+
+### Related VNG and Cluster Behavior
+- Cluster shutdown hours have higher priority. For example, if the cluster is in its shutdown hours, a scheduled wake-up of the VNG during this time would not happen.
+- When a VNG comes back up, it automatically scales to the minimum nodes configured.
+
+This feature is available using the [Create](https://docs.spot.io/api/#operation/OceanAWSLaunchSpecCreate) and [Update](https://docs.spot.io/api/#operation/OceanAWSLaunchSpecUpdate) APIs for AWS. For setup  information, see [Set Shutdown Hours per VNG](ocean/tutorials/set-running-hours?id=set-shutdown-hours-per-vng).
 
 ## What's Next?
 
