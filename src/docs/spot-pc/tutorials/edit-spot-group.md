@@ -1,6 +1,6 @@
 # Spot PC Tutorial: Edit Spot Group
 
-Editing a Spot Group is a similar workflow to the [Create Spot Group](spot-pc/tutorials/deploy-spot-pc?id=create-spot-group) workflow but with a couple additional options. 
+Editing a Spot Group is a similar workflow to the [Create Spot Group](spot-pc/tutorials/deploy-spot-pc?id=create-spot-group) workflow but with a couple additional options.
 <br><a href="https://docs.spot.io/spot-pc/_media/tutorials-edit-spot-group-01.png" target="_blank"><img src="/spot-pc/_media/tutorials-edit-spot-group-01.png" alt="Click to Enlarge" width="1000"> </a>
 
 ## Select Spot Group
@@ -10,7 +10,7 @@ Select the Spot Group to edit.
 
 ## Edit Configurations
 
-Optional edit the Name, Description and/or Profile Path of the Spot Group.
+Optionally edit the Name, Description and/or Profile Path of the Spot Group.
 <br><a href="https://docs.spot.io/spot-pc/_media/tutorials-edit-spot-group-03.png" target="_blank"><img src="/spot-pc/_media/tutorials-edit-spot-group-03.png" alt="Click to Enlarge" width="1000"> </a>
 
 ## Update License Quantity
