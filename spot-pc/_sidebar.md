@@ -81,6 +81,28 @@
         - [Security](spot-pc/features/spot-pc-console/tenant/security/)
         - [Alerts](spot-pc/features/spot-pc-console/tenant/alerts/)
         - [Logs](spot-pc/features/spot-pc-console/tenant/logs/)
+
+
+      ]
+    We discovered last week that you can input different SpotPC Custom log analytics tables:
+SPOC_CL
+ServerResource_CL
+Spot_PC_Deployment_CL
+SpotPcAgent_CL
+
+and the default Azure tables:
+AzureDiagnostics
+Event
+Heartbeat
+Usage
+WVDAgentHealthStatus
+WVDCheckpoints
+WVDConnections
+WVDErrors
+WVDHostRegistrations
+WVDManagement
+<https://teams.microsoft.com/l/message/19:1940a1eebf2f4fa7af7d390068951881@thread.tacv2/1641997747797?tenantId=4b0911a0-929b-4715-944b-c03745165b3a&amp;groupId=706924f6-2925-4827-941e-8129608cf17e&amp;parentMessageId=1641996375002&amp;teamName=VDS - Product Management &amp; Strategy&amp;channelName=General&amp;createdTime=1641997747797>
+
       - [Config Actions](spot-pc/features/spot-pc-console/tenant/config-actions)
         - [Windows 365](spot-pc/features/spot-pc-console/tenant/config-actionswindows-365/)
           - [Connections](spot-pc/features/spot-pc-console/tenant/config-actionswindows-365/connections/)
