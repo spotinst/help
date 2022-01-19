@@ -1,5 +1,12 @@
-# Spot PC: Getting Started
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SCV64B4XJ6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-SCV64B4XJ6');
+</script># Spot PC: Getting Started
 ## Workflow Focused
 
 Spot PC administration is designed around a few simple workflows. Understanding these primary workflows is fundamental to successfully administering Spot PC for your tenant(s).
@@ -35,4 +42,4 @@ Spot PC is built on the prioritization of actionable data. Within each Spot PC t
 
 ## What’s Next?
 
-Get started [deploying Spot PC](spot-pc/getting-started/onboarding-workflow) by following the Onboarding Workflow.
+Get started [deploying Spot PC](spot-pc/getting-started/onboarding-workflow) by following the Onboarding Workflow
