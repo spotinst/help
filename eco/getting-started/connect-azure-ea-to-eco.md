@@ -248,7 +248,7 @@ In the code boxes below are the Spot Eco policies, only with limited access and 
 }
 ```
 
-</details>
+</details><br><br>
 
 <details>
   <summary markdown="span">Full Permissions</summary>
@@ -381,23 +381,7 @@ Use the steps in the above procedure to assign the Reservation Purchaser role to
 
 4. Ensure the Auth Level on the Enrollment Detail says “Work or School Account Cross tenant.”
 It is possible to temporarily set it as this auth level. Just switch it to “Work or School Account Cross tenant,” send the invite, then switch it back to your preferred Auth Level.
-5. You will again need to invite the four guest users, but this time as Read-Only Enterprise Administrators.
-
-<table>
-  <tr>
-    <td> Tanner Harvey  </td>
-    <td> TannerH@netapp.com  </td>
-  </tr>
-  <tr>
-    <td> Brett McCulloch  </td>
-    <td> Mccullob@netapp.com   </td>
-  </tr>
-  <tr>
-    <td> Mimi Bao  </td>
-    <td> Bmimi@netapp.com  </td>
-  </tr>
-</table>
-
+5. You will again need to invite the guest users (see list [above](eco/getting-started/connect-azure-ea-to-eco?id=invite-the-eco-guest-user)), but this time as Read-Only Enterprise Administrators.
    - Enter email address: as listed above
    - Auth Type: Work or school account
    - Notification frequency: None
