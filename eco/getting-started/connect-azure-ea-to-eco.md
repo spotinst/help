@@ -248,7 +248,7 @@ In the code boxes below are the Spot Eco policies, only with limited access and 
 }
 ```
 
-</details><br><br>
+</details><br>
 
 <details>
   <summary markdown="span">Full Permissions</summary>
