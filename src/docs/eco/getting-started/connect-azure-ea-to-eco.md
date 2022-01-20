@@ -27,9 +27,20 @@ Microsoft EA Azure administrators
 1. Navigate to Users.
 2. Select New Guest User and complete the required fields. You will do this once for each user. You will use the following names and email addresses:
 
-| Tanner Harvey  | TannerH@netapp.com  |<br>
-| Brett McCulloch  | Mccullob@netapp.com   |<br>
-| Mimi Bao  | Bmimi@netapp.com  |
+<table>
+  <tr>
+    <td> Tanner Harvey  </td>
+    <td> TannerH@netapp.com  </td>
+  </tr>
+  <tr>
+    <td> Brett McCulloch  </td>
+    <td> Mccullob@netapp.com   </td>
+  </tr>
+  <tr>
+    <td> Mimi Bao  </td>
+    <td> Bmimi@netapp.com  </td>
+  </tr>
+</table>
 
 3. For the first user, click Invite. This sends a notification to the Eco guest user via email.
 
@@ -236,8 +247,8 @@ In the code boxes below are the Spot Eco policies, only with limited access and 
 
 }
 ```
-</details>
 
+</details>
 
 <details>
   <summary markdown="span">Full Permissions</summary>
@@ -372,9 +383,20 @@ Use the steps in the above procedure to assign the Reservation Purchaser role to
 It is possible to temporarily set it as this auth level. Just switch it to “Work or School Account Cross tenant,” send the invite, then switch it back to your preferred Auth Level.
 5. You will again need to invite the four guest users, but this time as Read-Only Enterprise Administrators.
 
-| Tanner Harvey  | TannerH@netapp.com  |<br>
-| Brett McCulloch  | Mccullob@netapp.com   |<br>
-| Mimi Bao  | Bmimi@netapp.com  |
+<table>
+  <tr>
+    <td> Tanner Harvey  </td>
+    <td> TannerH@netapp.com  </td>
+  </tr>
+  <tr>
+    <td> Brett McCulloch  </td>
+    <td> Mccullob@netapp.com   </td>
+  </tr>
+  <tr>
+    <td> Mimi Bao  </td>
+    <td> Bmimi@netapp.com  </td>
+  </tr>
+</table>
 
    - Enter email address: as listed above
    - Auth Type: Work or school account
