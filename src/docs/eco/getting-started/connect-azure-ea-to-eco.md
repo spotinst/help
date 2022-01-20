@@ -14,22 +14,26 @@ Microsoft EA Azure administrators
 - Admin access to https://ea.azure.com/
 - The ability to assign privileges for existing reservations in portal.azure.com  
 - The ability to create custom roles within each subscription to which you intend to give Eco access: https://docs.microsoft.com/en-us/azure/role-based-access-control/custom-roles
+
 ## Step 1. Subscription and Management Group Guest User Access
+
 ### Get Started
-1. Log into portal.azure.com.
+
+1. Log into the [Azure portal](https://portal.azure.com/).
 2. Complete the procedures below in the order that they appear.
 
 ### Invite the Eco guest user
+
 1. Navigate to Users.
 2. Select New Guest User and complete the required fields. You will do this once for each user. You will use the following names and email addresses:
 
-| Tanner Harvey  | TannerH@netapp.com  |
-| Brett McCulloch  | Mccullob@netapp.com   |
+| Tanner Harvey  | TannerH@netapp.com  |<br>
+| Brett McCulloch  | Mccullob@netapp.com   |<br>
 | Mimi Bao  | Bmimi@netapp.com  |
 
 3. For the first user, click Invite. This sends a notification to the Eco guest user via email.
 
-<img src="/ocean/_media/connect-azure-ea-to-eco-01.png" />
+<img src="/eco/_media/connect-azure-ea-to-eco-01.png" />
 
 4. Repeat the invitations for remaining users.
 
@@ -234,6 +238,7 @@ In the code boxes below are the Spot Eco policies, only with limited access and 
 ```
 </details>
 
+
 <details>
   <summary markdown="span">Full Permissions</summary>
 
@@ -361,14 +366,14 @@ Use the steps in the above procedure to assign the Reservation Purchaser role to
 2. In the left Navigation, click Manage.
 3. Within the Enrollment tab, copy the Enrollment Number and set that aside for now.
 
-<img src="/ocean/_media/connect-azure-ea-to-eco-02.png" />
+<img src="/eco/_media/connect-azure-ea-to-eco-02.png" />
 
 4. Ensure the Auth Level on the Enrollment Detail says “Work or School Account Cross tenant.”
 It is possible to temporarily set it as this auth level. Just switch it to “Work or School Account Cross tenant,” send the invite, then switch it back to your preferred Auth Level.
 5. You will again need to invite the four guest users, but this time as Read-Only Enterprise Administrators.
 
-| Tanner Harvey  | TannerH@netapp.com  |
-| Brett McCulloch  | Mccullob@netapp.com   |
+| Tanner Harvey  | TannerH@netapp.com  |<br>
+| Brett McCulloch  | Mccullob@netapp.com   |<br>
 | Mimi Bao  | Bmimi@netapp.com  |
 
    - Enter email address: as listed above
