@@ -391,7 +391,7 @@ It is possible to temporarily set it as this auth level. Just switch it to “Wo
    - Open the API Access page under the Download Usage tab from the Reports menu.
    - Copy one of the keys. (You will need to expand the key.)
 
-Both the enrollment number and the key can be provided to the Eco team through one of the guest users you invited earlier. andrew.watson@netapp.com will be fine.
+Both the enrollment number and the key can be provided to the Eco team through one of the guest users you invited earlier. The address andrew.watson@netapp.com will be fine.
 
 ## What’s Next?
 
