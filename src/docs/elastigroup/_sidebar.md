@@ -16,6 +16,7 @@
       - [Cluster Orientation](elastigroup/features/core-features/cluster-orientation)
       - [Equal AZ Instance Distribution Orientation](elastigroup/features/core-features/equal-az-instance-distribution-orientation)
       - [Maintenance Windows](elastigroup/features/core-features/maintenance-windows)
+      - [Predictive Rebalancing](elastigroup/features/core-features/predictive-rebalancing)
       - [Elastigroup Capacity: Instances or Weighted](elastigroup/features/core-features/elastigroup-capacity-instances-or-weighted)
       - [Scheduling](elastigroup/features/core-features/scheduling)
       - [Instance Actions](elastigroup/features/core-features/instance-actions)
