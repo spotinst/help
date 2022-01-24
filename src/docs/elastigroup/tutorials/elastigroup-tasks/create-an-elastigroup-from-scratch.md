@@ -18,31 +18,11 @@ This procedure describes how to create an Elastigroup using an empty template. T
 
 ## Step 1: General
 
-1. On the General page, enter the following Basic settings:
+1. On the General page, enter the following information:
    - Name: The name of your Elastigroup
    - Region: The AWS region where your group will be located.
    - Description: A brief description describing the purpose of the group.
-2. Enter the Capacity settings:
-   - Capacity Unit: Choose either instances or vCPU.
-   - Target: The desired number of instances or vCPUs in your Elastigroup.
-   - Minimum: In the case of a scale down policy action, this is the minimum number of instances or vCPUs that must run in the group. The minimum acceptable value is 0.
-   - Maximum: In the case of a scale up policy action, this is the maximum number of instances or vCPUs allowed in the group. The minimum acceptable value is 0.
-
-> **Tip**: If you are creating an Intelligent Traffic Flow group for the first time, it is not recommended to set a target of 0 because the migration will not start immediately.
-
-3. Choose one of the following:
-   - On-demand Count: The number of on-demand instances to include in the Elastigroup.
-   - Spot Instances %: The percentage of spot instances to include in the Elastigroup. Use the slider to set the percent. The remaining percentage will be on-demand instances.
-4. Choose the following Availability and Cost-Efficiency settings:
-   - Cluster Orientation: Specify the prediction algorithm strategy.
-   - Draining Timeout: Set the amount of time (seconds) that Elastigroup will allow to de-register and drain instances before termination.
-   - Utilize Commitment Plans:
-   - Fallback to On-demand: Elastigroup provides a fallback mechanism in case no spot instances are available. Mark this option if you would like the option to automatically fall back to an on-demand instance in such a case.
-   - Maintenance Window: In the event of a fallback to on-demand, select the time period for the Elastigroup to automatically replace the on-demand instances with spot instances.
-     - Once Available
-     - Never
-     - Custom
-5. Click Next.
+2. Click Next.
 
 ## Step 2: Compute
 
@@ -67,34 +47,82 @@ This procedure describes how to create an Elastigroup using an empty template. T
    - Key Pair: Enter the key pair that will be used for authenticating with your instances.
 6. Click Next.
 
-## Step 3: Networking
+## Step 3: Predictive Rebalancing
 
-The networking configuration includes the incoming traffic balancing and autohealing, which are described below.
+The configuration of predictive rebalancing includes the major parts described below.
 
-### Incoming Traffic Balancing
+### Workload Capacity
 
-Choose one of the following options for incoming traffic balancing:
+In this part you define your workload capacity as described below.
 
-- No Load Balancer: The instances will not be registered to any Classic load balancers or target groups.
-- Attach Existing Load Balancers: The instances will be registered to target groups or classic load balancers that you selected.
-- Intelligent Traffic Flow (ITF): Elastigroup will optimize the distribution of traffic flow between the instances it creates.
+<img src="/elastigroup/_media/tutorials-create-eg-from-scratch-05.png" width="263" height="335" />
 
-<img src="/elastigroup/_media/tutorials-create-eg-from-scratch-04a.png" />
+- Capacity Unit: The units of the number of servers required, either in Instances (default) or vCPU.
+- Target: The desired number of instances or vCPUs under normal operation.
+- Minimum: The lowest number of instances or vCPUs that can be available.
+- Maximum: The highest number of instances or vCPUs that can be available.
+- Choose one of the following:
+  - Set by % of spot instances: Percent of total instances that should be spot instances. The rest will be on-demand instances.
+  - Set by specific On-Demand count: A specific number of instances that must be On-Demand. The rest will be spot instances. If you chose vCPU as the capacity unit, Elastigroup will choose on-demand instance types that provide the total number of vCPUs requested. For example, if you requested four vCPUs, Elastigroup may choose two instance types with two vCPUs on each (or any other combination meeting the requirement), making a total of four vCPUs.
 
-After choosing one of the above options, complete the required information related to the option.
+### Optimization Strategy
 
-> Tip: If you are updating the Elastigroup to use ITF and it was previously not using ITF, then a roll is required.
+In this part you define your optimization strategy as described below.
 
-### Autohealing
+<img src="/elastigroup/_media/tutorials-create-eg-from-scratch-06.png" width="270" height="344" />
 
-1. To add health checks to the group, click the Autohealing arrow.
-2. Complete the following information:
-   - Health Check Service: The service that performs the autohealing health checks.
-   - Health Check Grace Period: The timeout (in seconds) until newly launched instances become healthy. If an instance fails the health check after the given grace period, it will be terminated and replaced with a new one.
-   - Unhealthy Duration: The amount of time (in seconds) you want to keep existing instances that are deemed unhealthy before the instance is terminated and replaced with a new one.
-   - Minimum Healthiness: The minimum number of instances (as a percent) that must be healthy for the group to be indicated as healthy.
+#### Fallback to On-Demand
 
-> **Tip**: It is recommended to set Target Groups as the health check type when working with ITF.
+If no spot instances are available, an on-demand instance will be provisioned to meet the capacity requirement.
+
+#### Utilize Commitment Plans
+
+Elastigroup will automatically provision on-demand instances if there are any vacant Savings Plans or reserved instances that match any instance type defined in the Compute page. The utilization order is: RIs, EC2 SP, Compute SP. Choose one of the following:
+
+- Reserved Instances
+- Reserved Instances and Savings Plans
+
+> Tip: When you choose Utilize Commitment Plans, ensure that your RoleARN is updated with the [latest policy](administration/api/spot-policy-in-aws).
+
+<img src="/elastigroup/_media/tutorials-create-eg-from-scratch-06a.png" width="275" height="231" />
+
+#### Cluster Orientation
+
+Specify which prediction algorithm to use:
+
+- Balanced (recommended)
+- Availability
+- Cost
+- Cheapest
+
+### Continuous Optimization
+
+In this part you can choose the optimization method.
+
+<img src="/elastigroup/_media/tutorials-create-eg-from-scratch-07.png" width="267" height="246" />
+
+- Continuous Optimization: If fallback to on-demand instances has occurred, you can choose when your workload should be returned to spot instances or moved to an instance type that has already-purchased an available reserved capacity. Switch this On (default) to return the instances automatically.
+- Choose one of the following:
+  - Once Available: Your workload will return to spot instances automatically whenever they become available.
+  - Custom: You define one or more time windows that your workloads can be returned to spot instances. When you choose this option, you will be prompted to fill in the time ranges.
+
+### Instance Availability
+
+This option enables you to define availability preferences and gain visibility into EC2 spot instance availability and lifespan. After you define a minimum instance lifetime and your other availability preferences, Spot will do the following:
+
+- Display the resulting market scoring chart showing the probabilities of meeting your specifications.
+- Deploy instances that have the highest probability of matching your specifications.
+
+<img src="/elastigroup/_media/corefeatures-predictive-rebalancing-02.png" />
+
+Specify the following:
+
+- Minimum Instance Lifetime: The desired amount of time you wish your workloads to run without any interruption to their underlying instances. The shorter the lifetime you choose, the more accurate the market scoring will be.
+- Preferred Availability Zones: Choose one or more of the availability zones that you defined in the Compute tab.
+- Preferred Spot Types: Choose one or more of the instance types you defined in the Compute tab.
+- Draining Timeout: In addition, you can define the draining period your application requires so the automation will start replacing the instances with enough time before the interruption is predicted to occur, allowing for complete and graceful draining.
+
+When you have finished setting up Predictive Rebalancing, click Next.
 
 ## Step 4: Scaling (Optional)
 
@@ -111,3 +139,4 @@ After reviewing and making any required changes, click Next and launch your Elas
 ## What's Next?
 
 - Learn more about the [Features](elastigroup/features/) and integrations supported in [Elastigroup for AWS](elastigroup/getting-started/elastigroup-for-aws.md).
+- Learn more about the [Predictive Rebalancing](elastigroup/features/core-features/predictive-rebalancing.md) algorithm, [Cluster Orientation](elastigroup/features/core-features/cluster-orientation.md), and defining [Maintenance Windows](elastigroup/features/core-features/maintenance-windows.md).
