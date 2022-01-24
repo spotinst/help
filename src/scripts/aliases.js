@@ -1594,8 +1594,8 @@ export const aliases = (() => {
     "/elastigroup/features/core-features/market-scoring-managing-interruptions-a":
       "/elastigroup/features/core-features/market-scoring-managing-interruptions",
 
-    "/elastigroup/features/compute/preferred-availability-zones-a":
-      "/elastigroup/features/compute/preferred-availability-zones",
+    "/elastigroup/features/compute/preferred-instance-types-a":
+      "/elastigroup/features/compute/preferred-instance-types",
   };
 
   for (let [key, value] of Object.entries(map)) {
