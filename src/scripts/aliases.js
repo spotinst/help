@@ -1584,6 +1584,18 @@ export const aliases = (() => {
       "/ocean-spark/product-tour/view-cluster-details",
 
     "/wave/features/cost-analysis": "/ocean-spark/product-tour/analyze-costs",
+
+    "/elastigroup/tutorials/elastigroup-tasks/create-an-elastigroup-from-scratch-a":
+      "/elastigroup/tutorials/elastigroup-tasks/create-an-elastigroup-from-scratch",
+
+    "/elastigroup/features/core-features/elastigroup-capacity-instances-or-weighted-a":
+      "/elastigroup/features/core-features/elastigroup-capacity-instances-or-weighted",
+
+    "/elastigroup/features/core-features/market-scoring-managing-interruptions-a":
+      "/elastigroup/features/core-features/market-scoring-managing-interruptions",
+
+    "/elastigroup/features/compute/preferred-availability-zones-a":
+      "/elastigroup/features/compute/preferred-availability-zones",
   };
 
   for (let [key, value] of Object.entries(map)) {
