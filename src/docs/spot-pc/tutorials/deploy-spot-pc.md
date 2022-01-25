@@ -13,7 +13,7 @@ VM images for Spot PC are contained within Image Sets. Each new iteration of an 
 ### Create and Update Images Video
 A walkthrough of the create image and update image functionality is detailed here:
 
-<iframe src="https://www.youtube-nocookie.com/embed/bESSv9UtohI?vq=hd1080&modestbranding=1&rel=0&theme=light&color=white" height="480" frameborder="0"></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/RnXXJ-XJE7U=hd1080&modestbranding=1&rel=0&theme=light&color=white" height="480" frameborder="0"></iframe>
 
 
 ### Creating a New Image Set
