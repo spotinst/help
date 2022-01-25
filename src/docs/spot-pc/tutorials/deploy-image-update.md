@@ -13,7 +13,7 @@ The update Spot Group workflow allows the admin to select the Spot Group, Image 
 ### Updating to a new Image Version Video
 A walkthrough of the update Spot Group (deploy a new image) functionality is detailed here:
 
-<iframe src="https://www.youtube-nocookie.com/embed/6TyltoaL288=hd1080&modestbranding=1&rel=0&theme=light&color=white" height="480" frameborder="0"></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/6TyltoaL288?vq=hd1080&modestbranding=1&rel=0&theme=light&color=white" height="480" frameborder="0"></iframe>
 
 ### Creating a New Image Version
 
