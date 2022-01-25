@@ -1,6 +1,6 @@
 # Spot PC: Prerequisites
 
-This document describes the required elements for deploying Spot PC. A core component of Spot PC is Azure Virtual Desktop (AVD), thus the Spot PC inherits the prerequisites for AVD.
+This document describes the required elements for deploying Spot PC. A core component of Spot PC is Azure Virtual Desktop (AVD), thus Spot PC inherits the prerequisites for AVD.
 
 ## Microsoft 365 Licensing to support AVD
 
