@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Launch Specifications
 
 Launch specifications enable you to configure multiple workload types on the same Ocean cluster. With Ocean launch specifications, you can configure sets of labels and taints (Kubernetes) or attributes (ECS) to go along with a custom AMI, Instance Profile , Security Groups, and User Data script that will be used for the nodes or container instances that will serve your labeled workloads. If a pod or task has no node-selector labels or attributes configured, the default AMI and user data configured on the Ocean cluster will be used.
