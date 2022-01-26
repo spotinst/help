@@ -127,4 +127,4 @@ For more information about the Scale Down feature, see Scaling ([Kubernetes](oce
 
 ## What’s next?
 
-- Learn how to [Manage Virtual Node Groups](ocean/tutorials/manage-virtual-node-groups.md) and customize configurations per VNG.
+Learn how to [Manage Virtual Node Groups](ocean/tutorials/manage-virtual-node-groups.md) and customize configurations per VNG.
