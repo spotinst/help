@@ -45,11 +45,11 @@ In addition to end user experience, consideration should be made to locate the S
 
 ### Custom Spot PC VNet Scope
 
-This step also offers the ability to define a custom vNet Scope for the Spot PC deployment. This is options and without input, Spot PC will randomly select a viable network range.
+This step also offers the ability to define a custom vNet Scope for the Spot PC deployment. This is optional and without input, Spot PC will randomly select a viable network range.
 
 Spot PC is typically integrated with other resources and networks via VPNs and/or vNet Peering. It is important that the range used by Spot PC does not overlap with any other ranges in use for this tenant, both in and out of Azure. Please select a range that does not overlap with any other networks.
 
-The network scope defaults to a /20 which supports up to 2096 addressed in Spot PC. This can be changed post-deployment to expand capacity or reduce address consumption on the network.
+The network scope defaults to a /20 which supports up to 2096 addresses in Spot PC. This can be changed post-deployment to expand capacity or reduce address consumption on the network.
 
 The network scope must fall into one of these private ranges:
 
