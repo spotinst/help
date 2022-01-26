@@ -65,7 +65,7 @@ After the region is selected, the initialization of the tenant begins. Several r
 
 ## Connect Spot PC to your AD Domain
 
-While the users' identity must be a part of the Azure AD, each machine must also be joined to an Active Directory Domain Controller (AD DC) and Azure AD does not currently support that function. Therefore an AD DC must be assessable from the Spot PC Azure subscription. There are two options to fulfill this requirement.
+While the users' identity must be a part of the Azure AD, each machine must also be joined to an Active Directory Domain Controller (AD DC) and Azure AD does not currently support that function. Therefore, an AD DC must be accessible from the Spot PC Azure subscription. There are two options to fulfill this requirement.
 
 - Build a new AD DC - the AD DC role will be installed on a VM in the Spot PC Azure Subscription as part of the Spot PC onboarding automation.
 - Connect to an existing AD DC - Join Spot PC VMs to an existing AD DC via VPN/vNet Peering.
