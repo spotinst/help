@@ -68,10 +68,10 @@ A line graph that breaks down the story of how reservations, savings plan covera
 
 A filterable table and corresponding chart which allow you to review your commitments in a variety of ways. By placing your cursor in the filter field, you will see which parameters can be selected.
 
-<img src="/eco/_media/tutorials-view-savings-01e.png" />
+<img src="/eco/_media/tutorials-view-savings-01e2.png" />
 
+- Account ID: Account number identifier.
 - Commitment ID: Identifier of the Reservation or Savings Plan. The row and ID appear when it fits within the relevant filters.
-- Usage Account Name: Account utilizing the discount.
 - Commitment Type: Standard RI, Convertible RI, Compute Savings Plan, or EC2 Savings Plan.
 - $ Used: The total equivalent cost within the time range multiplied by the utilization.
   - Example 1: If the time range covered the entire term of the reservation, it was 100% utilized, and the total equivalent cost was $1000, the result would be $1000.
