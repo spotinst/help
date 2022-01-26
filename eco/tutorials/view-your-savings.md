@@ -4,7 +4,7 @@ Once Eco has been enabled for your organization and you have chosen your reserve
 
 To view the Eco dashboard in the console, go to Eco on the left side and click Dashboard.
 
-<img src="/eco/_media/tutorials-view-savings-01bb.png" />
+<img src="/eco/_media/tutorials-view-savings-01bc.png" />
 
 ## Filters
 
@@ -13,9 +13,9 @@ The default view of the dashboard shows data from all the accounts in your organ
 By default, the dashboard shows data since the first day of your AWS account, from all regions, and from all of your AWS services. However, you can use the drop-down filters to limit the scope of data displayed. For example, you can display according to services such as EC2, RDS, and ElastiCache.
 
 You can set the following filters:
-
-- Selected Services: Choose the services which will be included in the charts and tables.
 - Time: Choose the range of dates for which data will be displayed.
+- Regions: Choose the regions which will be included in the charts and tables.
+- Selected Services: Choose the services which will be included in the charts and tables.
 
 ## Summary Line
 
@@ -68,10 +68,10 @@ A line graph that breaks down the story of how reservations, savings plan covera
 
 A filterable table and corresponding chart which allow you to review your commitments in a variety of ways. By placing your cursor in the filter field, you will see which parameters can be selected.
 
-<img src="/eco/_media/tutorials-view-savings-01e.png" />
+<img src="/eco/_media/tutorials-view-savings-01e2.png" />
 
+- Account ID: Account number identifier.
 - Commitment ID: Identifier of the Reservation or Savings Plan. The row and ID appear when it fits within the relevant filters.
-- Usage Account Name: Account utilizing the discount.
 - Commitment Type: Standard RI, Convertible RI, Compute Savings Plan, or EC2 Savings Plan.
 - $ Used: The total equivalent cost within the time range multiplied by the utilization.
   - Example 1: If the time range covered the entire term of the reservation, it was 100% utilized, and the total equivalent cost was $1000, the result would be $1000.
