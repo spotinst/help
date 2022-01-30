@@ -1598,6 +1598,10 @@ export const aliases = (() => {
       "/elastigroup/features/compute/preferred-instance-types",
 
     "/ocean/features/launch-specifications": "/ocean/features/vngs/",
+
+    "/ocean/features/z-OLD-launch-specifications": "/ocean/features/vngs/",
+
+    "/ocean/features/z-OLD2-launch-specifications": "/ocean/features/vngs/",
   };
 
   for (let [key, value] of Object.entries(map)) {
