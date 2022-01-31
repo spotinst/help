@@ -1,8 +1,10 @@
 # Headroom
 
-Ocean provides the option to include a buffer of spare capacity, i.e., vCPU, memory, and GPU resources, known as headroom. Headroom ensures that the cluster has the capacity to quickly scale more workloads (tasks or pods) without waiting for new instances (container instances or nodes) to be provisioned. You can configure headroom in specific amounts of resources, or specify headroom as a percentage of the total cluster requested resources.
+One of Ocean’s key features for optimizing scaling is *headroom*, a buffer of spare capacity ensuring that a cluster is always ready for a rapid application scale up.
 
-Ocean optimally manages the headroom in a dynamic manner in order to provide the best possible cost-performance balance. Alternatively, headroom may also be manually configured to support any use case.
+When you configure headroom in specific amounts of resources (i.e., vCPU, memory, and GPU), or specify headroom as a percentage of the cluster’s total requested resources, the cluster can scale workloads without waiting for new instances to be provisioned.
+
+Ocean optimally manages the headroom dynamically in order to provide the best possible cost-performance balance. Alternatively, headroom may be configured manually to support any use case.
 
 ## How It Works
 
