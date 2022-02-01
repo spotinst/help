@@ -94,7 +94,7 @@ Node Termination process is as follows:
 
 ## Headroom
 
-One of Ocean’s key features for optimizing scaling is [*headroom*](ocean/features/headroom), a buffer of spare capacity ensuring that a cluster is always ready for a rapid application scale up. When you configure headroom in specific amounts of resources (i.e., vCPU, memory, and GPU), or specify headroom as a percentage of the cluster’s total requested resources, the cluster can scale workloads without waiting for new instances to be provisioned.
+One of Ocean’s key features for optimizing scaling is [_headroom_](ocean/features/headroom), a buffer of spare capacity ensuring that a cluster is always ready for a rapid application scale up. When you configure headroom in specific amounts of resources (i.e., vCPU, memory, and GPU), or specify headroom as a percentage of the cluster’s total requested resources, the cluster can scale workloads without waiting for new instances to be provisioned.
 
 In addition to the benefits of using headroom, it is important to know how headroom could affect scaling. The compute resources saved as headroom restrict scale-down of a node, as if those were actual containers running, in order to keep the amount of headroom required. In addition, if there is missing headroom, a scale up will be triggered to ensure that headroom is maintained.
 
@@ -105,6 +105,7 @@ Ocean supports Kubernetes [pod topology spread constraints](https://kubernetes.i
 Ocean automatically launches nodes while ensuring that the `maxSkew` is maintained. Similarly, Ocean will only scale down a node if `maxSkew` is maintained.
 
 To support the Kubernetes feature, Ocean requires the following:
+
 - Kubernetes version 1.19 or later (for other versions, see the note in the [Kubernetes documentation](https://kubernetes.io/docs/concepts/workloads/pods/pod-topology-spread-constraints/).
 - Ocean Controller version 1.0.78 or later.
 

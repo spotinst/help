@@ -81,6 +81,7 @@ You don't need to add any extra label for GPU support. You can use taints that r
 ## Choose Instance Types per VNG
 
 To choose spot instance types for a specific VNG, do the following:
+
 1. Go to Clusters in the left menu tree and click the name of the relevant Ocean cluster.
 2. Click the Virtual Node Groups tab and click the name of the relevant VNG in the list.
 
@@ -104,6 +105,7 @@ In the custom VNGs, Ocean automatically filters out instance types that are not 
 2. Unmark the available options, as needed.
 
 The instance types that are grayed out are disabled for the following reasons:
+
 - Does not exist in the default VNG.
 - Does not fit the AMI architecture.
 
@@ -120,6 +122,7 @@ Above the sliders, Instance Types Selected indicates how many of the available i
 ### Restore to Default
 
 To restore the instance types in a VNG to the default configuration, click Restore to Default. This behaves as follows:
+
 - For a Custom VNG: The instance types are set to all the instance types that are available in the Default VNG.
 - For Default VNG: The instance types are set to the default Ocean configuration, which means that all instance types are available. Then Ocean can choose any combination of instance types that best fit the workload requirements.
 

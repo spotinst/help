@@ -13,6 +13,7 @@ The default view of the dashboard shows data from all the accounts in your organ
 By default, the dashboard shows data since the first day of your AWS account, from all regions, and from all of your AWS services. However, you can use the drop-down filters to limit the scope of data displayed. For example, you can display according to services such as EC2, RDS, and ElastiCache.
 
 You can set the following filters:
+
 - Time: Choose the range of dates for which data will be displayed.
 - Regions: Choose the regions which will be included in the charts and tables.
 - Selected Services: Choose the services which will be included in the charts and tables.

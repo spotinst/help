@@ -9,8 +9,8 @@ Spot PC admins can change the image used for this automated process from the _Co
 
 The update Spot Group workflow allows the admin to select the Spot Group, Image and Release Method of the update.
 
-
 ### Updating to a new Image Version Video
+
 A walkthrough of the update Spot Group (deploy a new image) functionality is detailed here:
 
 <iframe src="https://www.youtube-nocookie.com/embed/6TyltoaL288?vq=hd1080&modestbranding=1&rel=0&theme=light&color=white" height="480" frameborder="0"></iframe>
@@ -35,10 +35,11 @@ To begin the process of creating a new Image version, navigate to the desired te
 Once the _Seal Image_ process has completed, this version can be used in the existing Spot Group through the _Update Spot Group_ workflow.
 
 To begin the process of deploying the new image version, navigate to the desired tenant:
+
 - Open the _Config Actions_ menu, open _Spot Group_ and select _Update_
 - Select Spot Group - Select the desired Spot Group to update <br><a href="https://docs.spot.io/spot-pc/_media/tutorials-deploy-image-09.png" target="_blank"><img src="/spot-pc/_media/tutorials-deploy-image-09.png" alt="Click to Enlarge" width="1000"> </a>
 - Select Image Set - Select the desired version for this Spot Group <br><a href="https://docs.spot.io/spot-pc/_media/tutorials-deploy-image-10.png" target="_blank"><img src="/spot-pc/_media/tutorials-deploy-image-10.png" alt="Click to Enlarge" width="1000"> </a>
-- Select Release Method - The release method determins how the exisitng VMs are replaced.  The _Opportunistic_ method will replace sessions hosts that are not in use, and route new logins to the new VMs.  Over time the old version will cycle out until all VMs are based on the new image version.  The _Immediate_ and _Scheduled_ options operate in the same way, only the timing of the action varies.  In both cases, the new VMs are created, and once available, all new user session will be routed to the new VMs.  All active users are then notified to sign out and then reconnect to get the new VM version.  Users are given a 5 minute warning and then signed out automatically.  <br><a href="https://docs.spot.io/spot-pc/_media/tutorials-deploy-image-11.png" target="_blank"><img src="/spot-pc/_media/tutorials-deploy-image-11.png" alt="Click to Enlarge" width="1000"> </a>
+- Select Release Method - The release method determins how the exisitng VMs are replaced. The _Opportunistic_ method will replace sessions hosts that are not in use, and route new logins to the new VMs. Over time the old version will cycle out until all VMs are based on the new image version. The _Immediate_ and _Scheduled_ options operate in the same way, only the timing of the action varies. In both cases, the new VMs are created, and once available, all new user session will be routed to the new VMs. All active users are then notified to sign out and then reconnect to get the new VM version. Users are given a 5 minute warning and then signed out automatically. <br><a href="https://docs.spot.io/spot-pc/_media/tutorials-deploy-image-11.png" target="_blank"><img src="/spot-pc/_media/tutorials-deploy-image-11.png" alt="Click to Enlarge" width="1000"> </a>
 - Review and Update Spot Group - Simply confirm your selections and finish the workflow <br><a href="https://docs.spot.io/spot-pc/_media/tutorials-deploy-image-12.png" target="_blank"><img src="/spot-pc/_media/tutorials-deploy-image-12.png" alt="Click to Enlarge" width="1000"> </a>
 
 ## Windows 365 Cloud PC Process
