@@ -84,13 +84,11 @@ A filterable table and corresponding chart which allow you to review your commit
 - Generated Savings: How much you saved due to using commitments' discounted rates instead of the full on demand rates. Calculation: On Demand equivalent minus commitments minus uncovered spend. Not necessarily the same as net savings.
 - Source: Eco or Non-Eco.
 
-### Commitment per Service
+### Total Active Commitments
 
-A pie chart showing the current reserved instance commitment broken down into the different services.
+This chart provides amortized costs (i.e., up-front plus recurring costs) of all active commitments according to the designated filters and views.
 
-### Commitment per Region
-
-A pie chart showing the current reserved instance commitment broken down by region.
+<img src="/eco/_media/tutorials-view-savings-02a.png" />
 
 ## Reservation Details Report
 
