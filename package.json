@@ -41,7 +41,7 @@
     "glob": "^7.2.0",
     "html-webpack-plugin": "^5.5.0",
     "husky": "^7.0.4",
-    "lint-staged": "^12.2.2",
+    "lint-staged": "^12.3.2",
     "markdownlint": "^0.25.1",
     "markdownlint-cli": "^0.30.0",
     "postcss": "^8.4.5",
