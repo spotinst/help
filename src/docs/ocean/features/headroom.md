@@ -1,6 +1,6 @@
 # Headroom
 
-One of Ocean’s key features for optimizing scaling is *headroom*, a buffer of spare capacity ensuring that a cluster is always ready for a rapid application scale up.
+One of Ocean’s key features for optimizing scaling is _headroom_, a buffer of spare capacity ensuring that a cluster is always ready for a rapid application scale up.
 
 When you configure headroom in specific amounts of resources (i.e., vCPU, memory, and GPU), or specify headroom as a percentage of the cluster’s total requested resources, the cluster can scale workloads without waiting for new instances to be provisioned.
 

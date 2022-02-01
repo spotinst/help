@@ -1,4 +1,5 @@
 # Spot PC: Getting Started
+
 ## Workflow Focused
 
 Spot PC administration is designed around a few simple workflows. Understanding these primary workflows is fundamental to successfully administering Spot PC for your tenant(s).
