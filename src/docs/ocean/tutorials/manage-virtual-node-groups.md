@@ -35,7 +35,7 @@ When you choose Import, a one-time process occurs. Import copies values from the
 1. In the New Virtual Node Group page, enter the VNG parameters you want to customize. Parameters that are left blank use values from the default VNG, as indicated in the illustration below.
 2. When you have finished customizing the VNG, click Save. The VNG parameters are described below.
 
-<img src="/ocean/_media/tutorials-manage-vngs-02a1.png" />
+<img src="/ocean/_media/tutorials-manage-vngs-02a1.png" width="496" height="433" />
 
 ## Configuration Parameters
 
