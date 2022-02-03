@@ -10,6 +10,7 @@
 - [**Managed Instance**](managed-instance/)
 - [**Eco**](eco/)
 - [**Cloud Analyzer**](cloud-analyzer/)
+- [**Spot PC**](spot-pc/)
 - [**Administration**](administration/)
 - [**Tools & Provisioning**](tools-and-provisioning/)
 - <a href="https://docs.spot.io/api" target="_blank"><strong>API Reference <i data-feather="external-link"></i></strong></a>
