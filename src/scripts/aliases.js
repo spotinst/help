@@ -1602,6 +1602,8 @@ export const aliases = (() => {
     "/ocean/features/z-OLD-launch-specifications": "/ocean/features/vngs/",
 
     "/ocean/features/z-OLD2-launch-specifications": "/ocean/features/vngs/",
+
+    "/ocean/concepts/ocean-cloud/create-cluster-roll/": "/ocean/features/roll",
   };
 
   for (let [key, value] of Object.entries(map)) {
