@@ -1,3 +1,13 @@
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SCV64B4XJ6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SCV64B4XJ6');
+</script>
+
 # Spot PC Tutorial: Manage Spot PC Admins
 
 Spot PC allows for granular control over admin access to tenants including detailed permission sets.
