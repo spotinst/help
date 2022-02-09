@@ -11,9 +11,10 @@ Indicates the average % consumption for the period indicated. The default time i
 
 - High value indicates users or applications are consuming a large amount of CPU resources.  
 - **Resolving high CPU Consumption %:** First, use the time interval function to change the duration of the data displayed. This can give you a sense of when the issue originally began and if there is a recurring pattern. Next, navigate to the Performance tab to see which specific users and processes are consuming CPU resources. Finally, either communicate with the user/s directly and/or use the Connect to Machine Quick Action to navigate to the machine to troubleshoot further.
+
 - Alerting thresholds:
- - Critical: 90%+ consumption for 5 consecutive minutes
- - Warning: 75+% (but less than 90%) consumption for 5 consecutive minutes
+  - Critical: 90%+ consumption for 5 consecutive minutes
+  - Warning: 75+% (but less than 90%) consumption for 5 consecutive minutes
 
 
 #### Memory Consumption %:  
