@@ -13,19 +13,24 @@ Alerting thresholds:
 - Warning: 75%-90% consumption for 2 consecutive minutes
 - Critical: 90%+ consumption for 2 consecutive minutes
 
-High value indicates users or applications are consuming a large amount of CPU resources.  
+High value indicates that users or applications are consuming a large amount of CPU resources.  
 
 Note: This data is displayed in various parts of the Spot PC console.  On the _Machines dashboard_ view (where all machines are summarized in a table) both "CPU % Trend" (average) and "CPU % Peak" (highest value in range) values are displayed.  On the _Machine Performance_ view (where the details for a single machine are displayed) the time-series chart displays the average value.
 
 **Resolving high CPU Consumption %:** First, use the time interval function to change the duration of the data displayed. This can give you a sense of when the issue originally began and if there is a recurring pattern. Next, navigate to the Performance tab to see which specific users and processes are consuming CPU resources. Finally, either communicate with the user/s directly and/or use the Connect to Machine Quick Action to navigate to the machine to troubleshoot further.
 
 #### Memory Consumption %:  
-Description: Indicates the average % consumption for the period indicated. The default time interval displayed is the last 3 hours, with data provided for every minute. 
-High Memory Consumption % Indicates: Users or applications are consuming a large amount of Memory (RAM) resources.  
-Resolving high Memory consumption %: First, use the time interval function to change the duration of the data displayed. This can give you a sense of when the issue originally began and if there is a recurring pattern. Next, navigate to the Performance tab to see which specific users and processes are consuming RAM resources. Finally, either communicate with the user/s directly and/or use the Connect to Machine Quick Action to navigate to the machine to troubleshoot further.
+Indicates the average % consumption for the period indicated. The default time interval displayed is the last 3 hours, with data provided for every minute. 
+
 Alerting thresholds:
-Critical: 90%+ consumption for 5 consecutive minutes
-Warning: 75+% (but less than 90%) consumption for 5 consecutive minutes
+- Warning: 75%-90% consumption for 2 consecutive minutes
+- Critical: 90%+ consumption for 2 consecutive minutes
+
+High value indicates that users or applications are consuming a large amount of Memory (RAM) resources.  
+
+Note: This data is displayed in various parts of the Spot PC console.  On the _Machines dashboard_ view (where all machines are summarized in a table) both "RAM % Trend" (average) and "RAM % Peak" (highest value in range) values are displayed.  On the _Machine Performance_ view (where the details for a single machine are displayed) the time-series chart displays the average value.
+
+**Resolving high Memory consumption %:** First, use the time interval function to change the duration of the data displayed. This can give you a sense of when the issue originally began and if there is a recurring pattern. Next, navigate to the Performance tab to see which specific users and processes are consuming RAM resources. Finally, either communicate with the user/s directly and/or use the Connect to Machine Quick Action to navigate to the machine to troubleshoot further.
 
 #### Processor Queue Length 
 Description: Indicates the average number of actions waiting to be executed by the CPU for the period indicated. The default time interval displayed is the last 3 hours, with data provided for every minute. 
