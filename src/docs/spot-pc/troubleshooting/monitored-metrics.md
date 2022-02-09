@@ -9,9 +9,9 @@ The following metrics are collected from the VMs in Spot PC, both session hosts 
 #### CPU Consumption %: 
 Indicates the average % consumption for the period indicated. The default time interval displayed is the last 3 hours, with data provided for every minute. 
 
-_High CPU Consumption % Indicates:_ Users or applications are consuming a large amount of CPU resources.  
+- High value Indicates Users or applications are consuming a large amount of CPU resources.  
 
-_Resolving high CPU Consumption %:_ First, use the time interval function to change the duration of the data displayed. This can give you a sense of when the issue originally began and if there is a recurring pattern. Next, navigate to the Performance tab to see which specific users and processes are consuming CPU resources. Finally, either communicate with the user/s directly and/or use the Connect to Machine Quick Action to navigate to the machine to troubleshoot further.
+**Resolving high CPU Consumption %:** First, use the time interval function to change the duration of the data displayed. This can give you a sense of when the issue originally began and if there is a recurring pattern. Next, navigate to the Performance tab to see which specific users and processes are consuming CPU resources. Finally, either communicate with the user/s directly and/or use the Connect to Machine Quick Action to navigate to the machine to troubleshoot further.
 
 Alerting thresholds:
 
