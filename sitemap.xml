@@ -2682,6 +2682,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/troubleshooting/getting-support"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/spot-pc/troubleshooting/monitored-metrics</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-pc/troubleshooting/monitored-metrics"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/troubleshooting/monitored-metrics"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/spot-pc/troubleshooting/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
