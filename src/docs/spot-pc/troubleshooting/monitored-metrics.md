@@ -10,8 +10,8 @@ The following metrics are collected from the VMs in Spot PC, both session hosts 
 Indicates the average % consumption for the period indicated. The default time interval displayed is the last 15 minutes, with multiple data-points per minute.
 
 Alerting thresholds:
-- Warning: 75+% (but less than 90%) consumption for 5 consecutive minutes
-- Critical: 90%+ consumption for 5 consecutive minutes
+- Warning: 75%-90% consumption for 2 consecutive minutes
+- Critical: 90%+ consumption for 2 consecutive minutes
 
 High value indicates users or applications are consuming a large amount of CPU resources.  
 
