@@ -121,7 +121,7 @@ The Kubernetes [extended resources](https://kubernetes.io/docs/tasks/administer-
 
 ## Resource Limits
 
-Ocean allow dynamic resource allocation to fit the pods' needs. Ocean cluster resources are limited to 1000 CPU cores and 4000 GB memory by default, this can be customized via the cluster creation and edit wizards.
+Ocean allows dynamic resource allocation to fit the pods' needs. Ocean cluster resources are limited to 1000 CPU cores and 4000 GB memory by default. This can be customized in the cluster creation and edit wizards.
 
 ## Customize Scaling Configuration
 
