@@ -115,6 +115,10 @@ When you use the topology key `spotinst.io/node-lifecycle`, a running node in ea
 
 > **Important Note**: If one of the topologies running in the cluster is not available, the pods that are supposed to run on this topology will remain pending. For example, you have a topology key `spotinst.io/node-lifecycle`, and you have spot and OD nodes in the cluster. If there are no available spot markets, the pods would remain pending since launching an OD node would violate the `maxSkew` limitation.
 
+## Support for Extended Resources Feature
+
+The Kubernetes [extended resources](https://kubernetes.io/docs/tasks/administer-cluster/extended-resource-node/) feature allows cluster administrators to advertise node-level resources that would otherwise be unknown to Kubernetes. Ocean supports this feature (for AWS users) both in scale up and scale down, improving cluster performance and cost savings. To learn more about Ocean support for extended resources and how to set it up, see the tutorial [Set up Extended Resource Support](ocean/tutorials/set-up-extended-resource-support).
+
 ## Resource Limits
 
 Ocean allow dynamic resource allocation to fit the pods' needs. Ocean cluster resources are limited to 1000 CPU cores and 4000 GB memory by default, this can be customized via the cluster creation and edit wizards.
