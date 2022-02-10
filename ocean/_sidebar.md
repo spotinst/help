@@ -43,6 +43,7 @@
     - [Manage Virtual Node Groups](ocean/tutorials/manage-virtual-node-groups)
     - [Use Right Sizing](ocean/tutorials/use-right-sizing)
     - [View Scaling Constraints](ocean/tutorials/view-scaling-constraints)
+    - [Set up Extended Resource Support](ocean/tutorials/set-up-extended-resource-support)
     - [Set Shutdown Hours](ocean/tutorials/set-running-hours)
     - [Connect an AKS Private Cluster](ocean/tutorials/connect-an-aks-private-cluster)
     - [Create a Cluster for GKE using Shared VPC](ocean/tutorials/create-cluster-gke-shared-vpc)

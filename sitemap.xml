@@ -2430,6 +2430,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean/tutorials/set-running-hours"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/ocean/tutorials/set-up-extended-resource-support</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean/tutorials/set-up-extended-resource-support"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean/tutorials/set-up-extended-resource-support"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/ocean/tutorials/spot-kubernetes-controller/controller-permissions</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
