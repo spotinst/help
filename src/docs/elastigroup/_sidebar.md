@@ -89,7 +89,6 @@
       - [Filter API Responses](elastigroup/tutorials/elastigroup-tasks/filter-api-responses)
       - [Register Instances to Domain](elastigroup/tutorials/elastigroup-tasks/register-instances-to-domain)
     - [Elastigroup Budgets](elastigroup/tutorials/elastigroup-budgets/)
-      - [Budgets](elastigroup/tutorials/elastigroup-budgets/budgets)
       - [Configure Budgets](elastigroup/tutorials/elastigroup-budgets/configure-budgets)
       - [Monitor Budgets](elastigroup/tutorials/elastigroup-budgets/monitor-budgets)
     - [Amazon ECS](elastigroup/tutorials/amazon-ecs/)
