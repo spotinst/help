@@ -528,16 +528,6 @@ High value indicates that the GPU is offloading a substantial amount of processi
 ### Control Plane Context
 The following metrics are collected from the local control plane VM (Spot PC Manager) and pertain to the services required to support the Spot PC environment which are hosted on that VM within the Spot PC Azure tenant.
 
-#### MSSQLServer:
-Description: The platform server contains a SQL database that houses platform settings 
-
-Alerting threshold:
-- Critical: service not responding for 5+ minutes
-
-Impact: The SQL service being offline indicates that changes made via the UI will not be reflected in the Local Control Plane
-
-**Resolving MSSQLServer alerts:** Connect to the Local Control Plane server and open Task Manager, then restart the service  
-
 #### SPOC:
 Description: This service performs user and application tasks, including all activation/modification activity 
 
