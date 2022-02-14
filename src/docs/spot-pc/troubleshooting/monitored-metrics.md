@@ -195,8 +195,6 @@ Resolving high Video Encoder %: First, use the Time Interval function to change 
 Alerting thresholds:
 Critical: 90+% consumption for 5 consecutive minutes
 Warning: 75+% (but less than 90%) consumption for 5 consecutive minutes
-
-
 #### Session Host Services
 ##### CWAgent
 Description: CWAgent facilitates automation actions from CWGR1.
@@ -204,8 +202,8 @@ Impact: CWAgent being offline will not process
 Resolving CWAgent alerts: Connect to the session host server and open Task Manager, then restart the service  
 Alerting threshold:
 Critical: service not responding for 5+ minutes
-##### Windows Defender Service:<!---
-Description: Windows Defender delivers antivirus and security services for a VM
+##### Windows Defender Service:
+<!--- Description: Windows Defender delivers antivirus and security services for a VM
 Impact: Windows Defender being offline indicates that <TBD>
 Resolving Windows Defender alerts: Connect to the session host server and open Task Manager, then restart the service  
 Alerting threshold:
@@ -228,8 +226,8 @@ Impact: Spark Gateway/Myrtille being offline would prevent users from generating
 Resolving Spark Gateway/Myrtille alerts: Connect to the session host server and open Task Manager, then restart the service  
 Alerting threshold:
 Critical: service not responding for 5+ minutes
-##### Remote Desktop Agent (RDAgent): <!---
-Description: The Remote Desktop Agent facilitates MFA for connections to the session host server. <Is this the WVD Agent too?> 
+##### Remote Desktop Agent (RDAgent):
+<!--- Description: The Remote Desktop Agent facilitates MFA for connections to the session host server. <Is this the WVD Agent too?> 
 Impact: The Remote Desktop Agent service being offline indicates that <TBD>
 Resolving Remote Desktop Agent alerts: Connect to the session host server and open Task Manager, then restart the service  
 Alerting threshold:
@@ -381,7 +379,6 @@ Alerting thresholds:
 Critical: 90+% consumption for 5 consecutive minutes
 Warning: 75+% (but less than 90%) consumption for 5 consecutive minutes
 
-
 ### Spot PC Control Plane Context
 The following metrics are collected from the local control plane VM (Spot PC Manager) and pertain to the services required to support the Spot PC environment which are hosted on that VM within the Spot PC Azure tenant.
 
@@ -411,14 +408,11 @@ Alerting threshold:
 Critical: service not responding for 5+ minutes
 #### FlexLM License Manager:
 Description: This service operates the FlexLM license manager used by Mechdyne TGX
-Impact: Interuption of this service will cause the licensing manager to go offline thus effecting the ability of the TGX Sender to obtain/validate licenses
+Impact: Interruption of this service will cause the licensing manager to go offline thus effecting the ability of the TGX Sender to obtain/validate licenses
 Resolution: Connect to the Local Control Plane server and open Task Manager, then restart the service  
 Alerting threshold:
 Critical: service not responding for 5+ minutes
 
-
-
-
 ## What’s Next?
 
-Get started [deploying Spot PC](spot-pc/getting-started/onboarding-workflow) by following the Onboarding Workflow.
+Get help from [Spot PC Support](spot-pc/troubleshooting/getting-support) for advanced assistance.
