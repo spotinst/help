@@ -247,14 +247,14 @@ Alerting threshold:
 - Critical: service not responding for 5+ minutes
 
 ##### Windows Defender Service:
-<!--- Description: Windows Defender delivers antivirus and security services for a VM
-
+Description: Windows Defender delivers antivirus and security services for a VM
+<!---
 Impact: Windows Defender being offline indicates that <TBD>
-
+ --->
 Resolving Windows Defender alerts: Connect to the session host server and open Task Manager, then restart the service  
 
 Alerting threshold:
-- Critical: service not responding for 5+ minutes --->
+- Critical: service not responding for 5+ minutes
 
 ##### FSLogix Service:
 Description: the FSLogix service facilitates profile services
@@ -287,14 +287,14 @@ Alerting threshold:
 - Critical: service not responding for 5+ minutes
 
 ##### Remote Desktop Agent (RDAgent):
-<!--- Description: The Remote Desktop Agent facilitates MFA for connections to the session host server. <Is this the WVD Agent too?> 
+Description: The Remote Desktop Agent facilitates MFA for connections to the session host server. <!--- <Is this the WVD Agent too?> 
 
-Impact: The Remote Desktop Agent service being offline indicates that <TBD>
+Impact: The Remote Desktop Agent service being offline indicates that <TBD> --->
 
 Resolving Remote Desktop Agent alerts: Connect to the session host server and open Task Manager, then restart the service  
 
 Alerting threshold:
-- Critical: service not responding for 5+ minutes --->
+- Critical: service not responding for 5+ minutes
 
 ##### Remote Desktop Agent Boot Loader (RDAgentBootLoader):
 Description: The RDAgentBootLoader service… 
