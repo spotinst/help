@@ -566,5 +566,4 @@ Alerting threshold:
 - Critical: service not responding for 5+ minutes
 
 ## What’s Next?
-
 Get help from [Spot PC Support](spot-pc/troubleshooting/getting-support) for advanced assistance.
