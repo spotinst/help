@@ -10,8 +10,8 @@ The following metrics are collected from the VMs in Spot PC, both session hosts 
 Indicates the average % consumption for the period indicated. The default time interval displayed is the last 15 minutes, with multiple data-points per minute.
 
 Alerting thresholds:
-- Warning: 75%-90% consumption for 2 consecutive minutes
-- Critical: 90%+ consumption for 2 consecutive minutes
+- Warning: 75%-90% consumption for 5 consecutive minutes
+- Critical: 90%+ consumption for 5 consecutive minutes
 
 High value indicates that users or applications are consuming a large amount of CPU resources.  
 
@@ -23,8 +23,8 @@ Note: This data is displayed in various parts of the Spot PC console.  On the Ma
 Indicates the average % consumption for the period indicated. The default time interval displayed is the last 15 minutes, with multiple data-points per minute.
 
 Alerting thresholds:
-- Warning: 75%-90% consumption for 2 consecutive minutes
-- Critical: 90%+ consumption for 2 consecutive minutes
+- Warning: 75%-90% consumption for 5 consecutive minutes
+- Critical: 90%+ consumption for 5 consecutive minutes
 
 High value indicates that users or applications are consuming a large amount of Memory (RAM) resources.  
 
@@ -36,8 +36,8 @@ Note: This data is displayed in various parts of the Spot PC console.  On the Ma
 Indicates the average number of actions waiting to be executed by the CPU for the period indicated. The default time interval displayed is the last 15 minutes, with multiple data-points per minute.
 
 Alerting thresholds:
-- Warning: Greater than 6 for 2 consecutive minutes
-- Critical: Greater than 10 for 2 consecutive minutes
+- Warning: Greater than 6 for 5 consecutive minutes
+- Critical: Greater than 10 for 5 consecutive minutes
 
 A high value indicates that a number of actions are lined up for execution by the CPU. End users may report hanging or frozen applications.
 
@@ -47,8 +47,8 @@ A high value indicates that a number of actions are lined up for execution by th
 Indicates the average % consumption for the period indicated. The default time interval displayed is the last 15 minutes, with multiple data-points per minute.
 
 Alerting thresholds:
-- Warning: 50%-75% consumption for 2 consecutive minutes
-- Critical: 75%+ consumption for 2 consecutive minutes
+- Warning: 50%-75% consumption for 5 consecutive minutes
+- Critical: 75%+ consumption for 5 consecutive minutes
 
 A high value indicates that one or more applications are consuming too much RAM. Memory management is likely offloading RAM consumption in the form of paging, which is manifesting here.
 
@@ -58,8 +58,8 @@ A high value indicates that one or more applications are consuming too much RAM.
 Indicates the average connection quality of the user’s session (ms between their physical location and virtual desktop) for the period indicated. The default time interval displayed is the last 15 minutes, with multiple data-points per minute.
 
 Alerting thresholds:
-- Warning: 150+ milliseconds for 2 consecutive minutes
-- Critical: 200+ milliseconds for 2 consecutive minutes
+- Warning: 150+ milliseconds for 5 consecutive minutes
+- Critical: 200+ milliseconds for 5 consecutive minutes
 
 A high value indicates reduced connection quality between the user’s physical location and the location of their virtual desktop. This is an ongoing measurement, making it more relevant than the quality of a user’s login time since that is a point-in-time metric. This may manifest in “it feels slow” complaints or user sessions spontaneously disconnecting.  
 
@@ -69,8 +69,8 @@ A high value indicates reduced connection quality between the user’s physical 
 Indicates the average amount of time it takes a user’s action to take effect and be shown to them in their virtual desktop consumption for the period indicated. This is often reflected in how quickly the user sees the text they type appear in an email or in a Word document. The default time interval displayed is the last 15 minutes, with multiple data-points per minute. 
 
 Alerting thresholds:
-- Warning: 150+ milliseconds for 2 consecutive minutes
-- Critical: 200+ milliseconds for 2 consecutive minutes
+- Warning: 150+ milliseconds for 5 consecutive minutes
+- Critical: 200+ milliseconds for 5 consecutive minutes
 
 A high value indicates reduced performance for end users – this may result in “it feels slow” complaints or “I can’t work” reports in extreme scenarios.
 
@@ -80,8 +80,8 @@ A high value indicates reduced performance for end users – this may result in 
 Indicates the average number of frames skipped due to a lack of network resources for the period indicated. The default time interval displayed is the last 15 minutes, with multiple data-points per minute. 
 
 Alerting thresholds:
-- Critical: 10+ frames for 2 consecutive minutes
-- Warning: 5+ frames for 2 consecutive minutes
+- Critical: 10+ frames for 5 consecutive minutes
+- Warning: 5+ frames for 5 consecutive minutes
 
 A high value indicates that the network (for example, the VNET in Azure) does not have enough throughput to handle the load placed on it, resulting in values being displayed here.
 
@@ -91,8 +91,8 @@ A high value indicates that the network (for example, the VNET in Azure) does no
 Description: Indicates the number of frames skipped due to lack of resources available on the user’s local device for the period indicated. The default time interval displayed is the last 15 minutes, with multiple data-points per minute. 
 
 Alerting thresholds:
-- Critical: 10+ frames for 2 consecutive minutes
-- Warning: 5+ frames for 2 consecutive minutes
+- Critical: 10+ frames for 5 consecutive minutes
+- Warning: 5+ frames for 5 consecutive minutes
 
 A high value indicates that the user’s virtual desktop may see a performance impact due to a high CPU and RAM consumption on the user’s local device. This may result in “it feels slow” complaints or “I can’t work” reports in extreme scenarios.
 
@@ -104,8 +104,8 @@ If the issue is consistent, then consider a more wholistic approach to performan
 Description: Indicates the number of frames skipped due to insufficient server resources for the period indicated. The default time interval displayed is the last 15 minutes, with multiple data-points per minute.
 
 Alerting thresholds:
-- Critical: 10+ frames for 2 consecutive minutes
-- Warning: 5+ frames for 2 consecutive minutes
+- Critical: 10+ frames for 5 consecutive minutes
+- Warning: 5+ frames for 5 consecutive minutes
 
 A high value indicates that resource consumption on the VM itself is resulting in reduced performance in user sessions. This should be easy to confirm, as CPU/RAM (or both) should indicate high consumption as well. This may result in “it feels slow” complaints or “I can’t work” reports in extreme scenarios.  
 
@@ -132,8 +132,8 @@ High value indicates a large number of IO requests are being made against the st
 **Resolving high Disk Queue Length consumption:** When disk queue length is a frequent bottleneck, consider increasing the performance tier of your managed disk. If you are already using Premium SSD, you can review the System event log on the system, to see if there are any error indicating problems with the disk or the storage subsystem and potentially open a ticket with Microsoft to resolve anything you find there. 
 
 Alerting thresholds:
-- Critical: Greater than 5 for 2 consecutive minutes
-- Warning: Greater than 2 (but less than 5) for 2 consecutive minutes
+- Critical: Greater than 5 for 5 consecutive minutes
+- Warning: Greater than 2 (but less than 5) for 5 consecutive minutes
 
 #### OS Disk Reads/second
 Description: Indicates the average number of disk read operations for the period indicated. The default time interval displayed is the last 3 hours, with data provided for every minute. 
@@ -179,8 +179,8 @@ High value indicates that there is a lot of write activity on the disk.
 Description: Indicates the average GPU Usage % consumption for the period indicated. For the default time window of the last 3 hours, this is displayed every minute. 
 
 Alerting thresholds:
-- Critical: 75+% consumption for 2 consecutive minutes
-- Warning: 50+% (but less than 75%) for 2 consecutive minutes
+- Critical: 75+% consumption for 5 consecutive minutes
+- Warning: 50+% (but less than 75%) for 5 consecutive minutes
 
 High value indicates that a large amount of graphics processing/rendering has been offloaded from the CPU and onto the GPU.   
 
@@ -192,8 +192,8 @@ Note: if you see both zero GPU Usage % and high CPU consumption on this VM, then
 Description: Indicates the average % consumption for the period indicated. The default time interval displayed is the last 3 hours, with data provided for every minute. 
 
 Alerting thresholds:
-- Critical: 75+% consumption for 2 consecutive minutes
-- Warning: 50+% (but less than 75%) consumption for 2 consecutive minutes
+- Critical: 75+% consumption for 5 consecutive minutes
+- Warning: 50+% (but less than 75%) consumption for 5 consecutive minutes
 
 High value indicates that a large number of IO requests are being made against the storage system. This is more common in scenarios/applications with large data sets, such as CAD applications. 
 
@@ -203,8 +203,8 @@ High value indicates that a large number of IO requests are being made against t
 Description: Indicates the average GPU Memory % consumption for the period indicated. The default time interval displayed is the last 3 hours, with data provided for every minute. 
 
 Alerting thresholds:
-- Critical: 90+% consumption for 2 consecutive minutes
-- Warning: 75+% (but less than 90%) for 2 consecutive minutes
+- Critical: 90+% consumption for 5 consecutive minutes
+- Warning: 75+% (but less than 90%) for 5 consecutive minutes
 
 High value indicates that a large amount of GPU memory available is being accessed by the GPU. This also allows the GPU to communicate with its own memory much faster.
 
@@ -218,8 +218,8 @@ Note: when GPU Memory % is high but GPU Usage % is low it could be an indicator 
 Description: NVIDIA GPUs utilize hardware decoding, reducing CPU consumption and reserving it for other purposes. This is independent of graphics performance. The default time interval displayed is the last 3 hours, with data provided for every minute. 
 
 Alerting thresholds:
-- Critical: 90+% consumption for 2 consecutive minutes
-- Warning: 75+% (but less than 90%) consumption for 2 consecutive minutes
+- Critical: 90+% consumption for 5 consecutive minutes
+- Warning: 75+% (but less than 90%) consumption for 5 consecutive minutes
 
 High value indicates that the GPU is offloading a substantial amount of processing actions related to video performance/quality from the CPU. If CPU consumption is high and this value is null, it is likely that hardware acceleration has been disabled for this VM.
 
@@ -229,8 +229,8 @@ High value indicates that the GPU is offloading a substantial amount of processi
 Description: NVIDIA GPUs utilize hardware encoding, reducing CPU consumption and reserving it for other purposes. This is independent of graphics performance. The default time interval displayed is the last 3 hours, with data provided for every minute. 
 
 Alerting thresholds:
-- Critical: 90+% consumption for 2 consecutive minutes
-- Warning: 75+% (but less than 90%) consumption for 2 consecutive minutes
+- Critical: 90+% consumption for 5 consecutive minutes
+- Warning: 75+% (but less than 90%) consumption for 5 consecutive minutes
 
 High value indicates that the GPU is offloading a substantial amount of processing actions related to video performance/quality from the CPU. If CPU consumption is high and this value is null, it is likely that hardware acceleration has been disabled for this VM.
 
@@ -242,7 +242,7 @@ High value indicates that the GPU is offloading a substantial amount of processi
 Description: CWAgent facilitates automation actions from CWGR1.
 
 Alerting threshold:
-- Critical: service not responding for 2+ minutes
+- Critical: service not responding for 5+ minutes
 
 Impact: CWAgent being offline will not process  
 
@@ -252,7 +252,7 @@ Impact: CWAgent being offline will not process
 Description: Windows Defender delivers antivirus and security services for a VM
 
 Alerting threshold:
-- Critical: service not responding for 2+ minutes
+- Critical: service not responding for 5+ minutes
 
 Impact: Windows Defender being offline may leave the OS less protected against security threats.
 
@@ -262,7 +262,7 @@ Impact: Windows Defender being offline may leave the OS less protected against s
 Description: the FSLogix service facilitates profile services
 
 Alerting threshold:
-- Critical: service not responding for 2+ minutes
+- Critical: service not responding for 5+ minutes
 
 Impact: FSLogix being offline
 
@@ -276,13 +276,13 @@ Impact: Cloud Insights acquisition unit being offline
 **Resolving Cloud Insights acquisition unit alerts:** Connect to the session host server and open Task Manager, then restart the service  
 
 Alerting threshold:
-- Critical: service not responding for 2+ minutes
+- Critical: service not responding for 5+ minutes
 
 ##### Spark Gateway/Myrtille
 Description: The Spark Gateway/Myrtille service facilitates HTML5 connections from both the UI and for end user logins, if applicable.
 
 Alerting threshold:
-- Critical: service not responding for 2+ minutes
+- Critical: service not responding for 5+ minutes
 
 Impact: Spark Gateway/Myrtille being offline would prevent users from generating an HTML5 connection to a server
 
@@ -299,7 +299,7 @@ Impact: The Remote Desktop Agent service being offline indicates that the sessio
 Description: The RDAgentBootLoader service… 
 
 Alerting threshold:
-- Critical: service not responding for 2+ minutes
+- Critical: service not responding for 5+ minutes
 
 Impact: The RDAgentBootLoader service being offline indicates that changes made via the UI will not be reflected in the Local Control Plane
 
@@ -309,7 +309,7 @@ Impact: The RDAgentBootLoader service being offline indicates that changes made 
 Description: The  platform server contains a SQL database that houses platform settings 
 
 Alerting threshold:
-- Critical: service not responding for 2+ minutes
+- Critical: service not responding for 5+ minutes
 
 Impact: The Windows Azure Guest Agent service being offline indicates that changes made via the UI will not be reflected in the Local Control Plane
 
@@ -319,7 +319,7 @@ Impact: The Windows Azure Guest Agent service being offline indicates that chang
 Description: The platform server contains a SQL database that houses platform settings 
 
 Alerting threshold:
-- Critical: service not responding for 2+ minutes
+- Critical: service not responding for 5+ minutes
 
 Impact: The Windows Azure Network Agent service being offline indicates that changes made via the UI will not be reflected in the Local Control Plane
 
@@ -332,8 +332,8 @@ The following metrics are collected from the storage service that supports the S
 Description: Displays the amount of storage consumed related to the amount of storage provisioned. The default time interval displayed is the last 3 hours, with data provided for every minute. 
 
 Alerting thresholds:
-- Critical: 95+% consumption for 2 consecutive minutes
-- Warning: 90+% (but less than 95%) consumption for 2 consecutive minutes
+- Critical: 95+% consumption for 5 consecutive minutes
+- Warning: 90+% (but less than 95%) consumption for 5 consecutive minutes
 
 High value indicates that the amount of storage consumed on an ANF volume is nearing the amount of storage provisioned to the ANF volume. Best practices suggest staying under 90% of the available disk to avoid performance impacts, with more and more impact to performance as you get closer to 100% consumption of the provisioned size of the volume.
 
@@ -377,8 +377,8 @@ The following metrics are collected from various places including the session ho
 Description: Indicates the user’s average % consumption for the period indicated. The default time interval displayed is the last 3 hours, with data provided for every minute. 
 
 Alerting thresholds:
-- Critical: 90%+ consumption for 2 consecutive minutes
-- Warning: 75+% (but less than 90%) consumption for 2 consecutive minutes
+- Critical: 90%+ consumption for 5 consecutive minutes
+- Warning: 75+% (but less than 90%) consumption for 5 consecutive minutes
 
 High value indicates that the user and their applications are consuming a large amount of CPU resources.  
 
@@ -388,8 +388,8 @@ High value indicates that the user and their applications are consuming a large 
 Description: Indicates the user’s average % consumption for the period indicated. The default time interval displayed is the last 3 hours, with data provided for every minute. 
 
 Alerting thresholds:
-- Critical: 90%+ consumption for 2 consecutive minutes
-- Warning: 75+% (but less than 90%) consumption for 2 consecutive minutes
+- Critical: 90%+ consumption for 5 consecutive minutes
+- Warning: 75+% (but less than 90%) consumption for 5 consecutive minutes
 
 High value indicates that the user and their applications are consuming a large amount of Memory (RAM) resources.  
 
@@ -399,8 +399,8 @@ High value indicates that the user and their applications are consuming a large 
 Description: Indicates the average connection quality of the user’s session (ms between their physical location and virtual desktop) for the period indicated. The default time interval displayed is the last 3 hours, with data provided for every minute. 
 
 Alerting thresholds:
-- Critical: 200+ milliseconds for 2 consecutive minutes
-- Warning: 150+ milliseconds for 2 consecutive minutes
+- Critical: 200+ milliseconds for 5 consecutive minutes
+- Warning: 150+ milliseconds for 5 consecutive minutes
 
 High value indicates that there is reduced connection quality between the user’s physical location and the location of their virtual desktop. This is an ongoing measurement, making it more relevant than the quality of a user’s login time since that is a point-in-time metric.
 
@@ -412,8 +412,8 @@ This may manifest in “it feels slow” complaints or at worst, in a user’s s
 Description: Indicates the average amount of time it takes a user’s action to take effect and be shown to them in their virtual desktop consumption for the period indicated. This is often reflected in how quickly the user sees the text they type appear in an email or in a Word document. The default time interval displayed is the last 3 hours, with data provided for every minute. 
 
 Alerting thresholds:
-- Critical: 200+ milliseconds for 2 consecutive minutes
-- Warning: 150+ milliseconds for 2 consecutive minutes
+- Critical: 200+ milliseconds for 5 consecutive minutes
+- Warning: 150+ milliseconds for 5 consecutive minutes
 
 High value indicates that  there is reduced performance for end users – this may result in “it feels slow” complaints or “I can’t work” reports in extreme scenarios.
 
@@ -423,8 +423,8 @@ High value indicates that  there is reduced performance for end users – this m
 Description: Indicates the average number of frames skipped due to a lack of network resources for the period indicated. The default time interval displayed is the last 3 hours, with data provided for every minute. 
 
 Alerting thresholds:
-- Critical: 10+ frames for 2 consecutive minutes
-- Warning: 5+ frames for 2 consecutive minutes
+- Critical: 10+ frames for 5 consecutive minutes
+- Warning: 5+ frames for 5 consecutive minutes
 
 High value indicates that the network (for example, the VNET in Azure) does not have enough throughput to handle the load placed on it, resulting in values being displayed here.     
 
@@ -434,8 +434,8 @@ High value indicates that the network (for example, the VNET in Azure) does not 
 Description: Indicates the number of frames skipped due to lack of resources available on the user’s local device for the period indicated. The default time interval displayed is the last 3 hours, with data provided for every minute. 
 
 Alerting thresholds:
-- Critical: 10+ frames for 2 consecutive minutes
-- Warning: 5+ frames for 2 consecutive minutes
+- Critical: 10+ frames for 5 consecutive minutes
+- Warning: 5+ frames for 5 consecutive minutes
 
 High value indicates that the user’s virtual desktop may see a performance impact due to a high CPU and RAM consumption on the user’s local device. This may result in “it feels slow” complaints or “I can’t work” reports in extreme scenarios.
 
@@ -447,8 +447,8 @@ If the issue is consistent, then consider a more wholistic approach to performan
 Description: Indicates the number of frames skipped due to insufficient server resources for the period indicated. The default time interval displayed is the last 3 hours, with data provided for every minute. 
 
 Alerting thresholds:
-- Critical: 10+ frames for 2 consecutive minutes
-- Warning: 5+ frames for 2 consecutive minutes
+- Critical: 10+ frames for 5 consecutive minutes
+- Warning: 5+ frames for 5 consecutive minutes
 
 High value indicates that resource consumption on the VM itself is resulting in reduced performance in user sessions. This should be easy to confirm, as CPU/RAM (or both) should indicate high consumption as well. This may result in “it feels slow” complaints or “I can’t work” reports in extreme scenarios.  
 
@@ -458,8 +458,8 @@ High value indicates that resource consumption on the VM itself is resulting in 
 Description: Indicates the average GPU Usage % consumption for the period indicated. For the default time window of the last 3 hours, this is displayed every minute. 
 
 Alerting thresholds:
-- Critical: 75+% consumption for 2 consecutive minutes
-- Warning: 50+% (but less than 75%) for 2 consecutive minutes
+- Critical: 75+% consumption for 5 consecutive minutes
+- Warning: 50+% (but less than 75%) for 5 consecutive minutes
 
 High value indicates that a large amount of graphics processing/rendering has been offloaded from the CPU and onto the GPU.   
 
@@ -471,8 +471,8 @@ Note: if you see both zero GPU Usage % and high CPU consumption on this VM, then
 Description: Indicates the average % consumption for the period indicated. The default time interval displayed is the last 3 hours, with data provided for every minute. 
 
 Alerting thresholds:
-- Critical: 75+% consumption for 2 consecutive minutes
-- Warning: 50+% (but less than 75%) consumption for 2 consecutive minutes
+- Critical: 75+% consumption for 5 consecutive minutes
+- Warning: 50+% (but less than 75%) consumption for 5 consecutive minutes
 
 High value indicates that a large number of IO requests are being made against the storage system. This is more common in scenarios/applications with large data sets, such as CAD applications. 
 
@@ -482,8 +482,8 @@ High value indicates that a large number of IO requests are being made against t
 Description: Indicates the average GPU Memory % consumption for the period indicated. The default time interval displayed is the last 3 hours, with data provided for every minute. 
 
 Alerting thresholds:
-- Critical: 90+% consumption for 2 consecutive minutes
-- Warning: 75+% (but less than 90%) for 2 consecutive minutes
+- Critical: 90+% consumption for 5 consecutive minutes
+- Warning: 75+% (but less than 90%) for 5 consecutive minutes
 
 High value indicates that a large amount of GPU memory available is being accessed by the GPU. This also allows the GPU to communicate with its own memory much faster.
 
@@ -497,8 +497,8 @@ Note: GPU Memory consumption is separate and independent from the VM's Memory co
 Description: NVIDIA GPUs utilize hardware decoding, reducing CPU consumption and reserving it for other purposes. This is independent of graphics performance. The default time interval displayed is the last 3 hours, with data provided for every minute. 
 
 Alerting thresholds:
-- Critical: 90+% consumption for 2 consecutive minutes
-- Warning: 75+% (but less than 90%) consumption for 2 consecutive minutes
+- Critical: 90+% consumption for 5 consecutive minutes
+- Warning: 75+% (but less than 90%) consumption for 5 consecutive minutes
 
 High value indicates that the GPU is offloading a substantial amount of processing actions related to video performance/quality from the CPU. If CPU consumption is high and this value is null, it is likely that hardware acceleration has been disabled for this VM.
 
@@ -508,8 +508,8 @@ High value indicates that the GPU is offloading a substantial amount of processi
 Description: NVIDIA GPUs utilize hardware encoding, reducing CPU consumption and reserving it for other purposes. This is independent of graphics performance. The default time interval displayed is the last 3 hours, with data provided for every minute. 
 
 Alerting thresholds:
-- Critical: 90+% consumption for 2 consecutive minutes
-- Warning: 75+% (but less than 90%) consumption for 2 consecutive minutes
+- Critical: 90+% consumption for 5 consecutive minutes
+- Warning: 75+% (but less than 90%) consumption for 5 consecutive minutes
 
 High value indicates that the GPU is offloading a substantial amount of processing actions related to video performance/quality from the CPU. If CPU consumption is high and this value is null, it is likely that hardware acceleration has been disabled for this VM.
 
@@ -522,7 +522,7 @@ The following metrics are collected from the local control plane VM (Spot PC Man
 Description: The platform server contains a SQL database that houses platform settings 
 
 Alerting threshold:
-- Critical: service not responding for 2+ minutes
+- Critical: service not responding for 5+ minutes
 
 Impact: The SQL service being offline indicates that changes made via the UI will not be reflected in the Local Control Plane
 
@@ -532,7 +532,7 @@ Impact: The SQL service being offline indicates that changes made via the UI wil
 Description: This service performs user and application tasks, including all activation/modification activity 
 
 Alerting threshold:
-- Critical: service not responding for 2+ minutes
+- Critical: service not responding for 5+ minutes
 
 Impact: The CWAutomation service being offline would prevent changes made in the UI from going into effect and being applied to users and applications
 
@@ -542,7 +542,7 @@ Impact: The CWAutomation service being offline would prevent changes made in the
 Description: This service performs VM tasks, including creation/modification activity and tasks that interact with the hyperscaler 
 
 Alerting threshold:
-- Critical: service not responding for 2+ minutes
+- Critical: service not responding for 5+ minutes
 
 Impact: The CWVMAutomation service being offline would prevent changes made in the UI from going into effect and being applied to VMs/hyperscalers
 
@@ -552,7 +552,7 @@ Impact: The CWVMAutomation service being offline would prevent changes made in t
 Description: The Spark Gateway/Myrtille service facilitates HTML5 connections from both the UI and for end user logins, if applicable.
 
 Alerting threshold:
-- Critical: service not responding for 2+ minutes
+- Critical: service not responding for 5+ minutes
 
 Impact: Spark Gateway/Myrtille being offline would prevent users from generating an HTML5 connection to a server
 
@@ -562,7 +562,7 @@ Impact: Spark Gateway/Myrtille being offline would prevent users from generating
 Description: This service operates the FlexLM license manager used by Mechdyne TGX
 
 Alerting threshold:
-- Critical: service not responding for 2+ minutes
+- Critical: service not responding for 5+ minutes
 
 Impact: Interruption of this service will cause the licensing manager to go offline thus effecting the ability of the TGX Sender to obtain/validate licenses
 
