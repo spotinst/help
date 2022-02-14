@@ -515,7 +515,7 @@ High value indicates that the GPU is offloading a substantial amount of processi
 
 **Resolving high Video Encoder %:** First, use the Time Interval function to change how long the data is displayed. This can give you a sense of when the issue originally began and whether there is a recurring pattern. If the issue is consistent, then consider increasing the size of the VM to one with a larger amount of GPU allocated.
 
-### Spot PC Control Plane Context
+### Control Plane Context
 The following metrics are collected from the local control plane VM (Spot PC Manager) and pertain to the services required to support the Spot PC environment which are hosted on that VM within the Spot PC Azure tenant.
 
 #### MSSQLServer:
