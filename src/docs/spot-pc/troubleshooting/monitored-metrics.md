@@ -392,7 +392,7 @@ Alerting thresholds:
 
 High value indicates that the user and their applications are consuming a large amount of CPU resources.  
 
-**Resolving high CPU Consumption %:** First, use the Time Interval function to change how long the data is displayed. This can give you a sense of when the issue originally began and if there is a recurring pattern. Additionally, you can shadow the user session, terminate processes from VDS or connect to the VM to resolve issues as an admin.  
+**Resolving high CPU Consumption %:** First, use the Time Interval function to change how long the data is displayed. This can give you a sense of when the issue originally began and if there is a recurring pattern. Additionally, you can shadow the user session, terminate processes from Spot PC or connect to the VM to resolve issues as an admin.  
 
 #### Memory Consumption %:  
 Description: Indicates the user’s average % consumption for the period indicated. The default time interval displayed is the last 3 hours, with data provided for every minute. 
@@ -403,7 +403,7 @@ Alerting thresholds:
 
 High value indicates that the user and their applications are consuming a large amount of Memory (RAM) resources.  
 
-**Resolving high Memory consumption %:** First, use the Time Interval function to change how long the data is displayed. This can give you a sense of when the issue originally began and whether there is a recurring pattern. Additionally, you can shadow the user session, terminate processes from VDS or connect to the VM to resolve issues as an admin.  
+**Resolving high Memory consumption %:** First, use the Time Interval function to change how long the data is displayed. This can give you a sense of when the issue originally began and whether there is a recurring pattern. Additionally, you can shadow the user session, terminate processes from Spot PC or connect to the VM to resolve issues as an admin.  
 
 #### Round Trip Time 
 Description: Indicates the average connection quality of the user’s session (ms between their physical location and virtual desktop) for the period indicated. The default time interval displayed is the last 3 hours, with data provided for every minute. 
