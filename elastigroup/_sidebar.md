@@ -96,7 +96,6 @@
       - [Set Health Checks and Autohealing](elastigroup/tutorials/amazon-ecs/configure-health-checks-and-autohealing)
       - [Configure Attributes for Task Placement Constraints](elastigroup/tutorials/amazon-ecs/configure-attributes-for-task-placement-constraints)
       - [Create Cluster Roll](elastigroup/tutorials/amazon-ecs/create-cluster-roll)
-      - [Enable Autoscaling for ECS](elastigroup/tutorials/amazon-ecs/enable-autoscaling-for-ecs)
     - [Amazon EKS](elastigroup/tutorials/amazon-eks/)
       - [Create Elastigroup EKS Cluster](elastigroup/tutorials/amazon-eks/create-elastigroup-eks-cluster)
       - [Configure Kubectl for EKS & Install Controller](elastigroup/tutorials/amazon-eks/configure-kubectl-for-eks-install-controller)
