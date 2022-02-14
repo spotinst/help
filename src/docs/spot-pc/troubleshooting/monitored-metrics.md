@@ -238,15 +238,25 @@ High value indicates that the GPU is offloading a substantial amount of processi
 
 #### Session Host Services
 
-##### CWAgent
-Description: CWAgent facilitates automation actions from CWGR1.
+##### SpotAgent
+Description: SpotAgent facilitates automation actions from Spotmgr1.
 
 Alerting threshold:
 - Critical: service not responding for 5+ minutes
 
-Impact: CWAgent being offline will not process  
+Impact: SpotAgent being offline will not process Spot PC automation from Spotmgr1.
 
-**Resolving CWAgent alerts:** Connect to the session host server and open Task Manager, then restart the service  
+**Resolving SpotAgent alerts:** Connect to the session host server and open Task Manager, then restart the service  
+
+##### SpotAgent
+Description: SpotAgent facilitates automation actions on Spotmgr1.
+
+Alerting threshold:
+- Critical: service not responding for 5+ minutes
+
+Impact: SpotAgent being offline will not process Spot PC automation on Spotmgr1.
+
+**Resolving SpotAgent alerts:** Connect to the Spotmgr1 server and open Task Manager, then restart the service  
 
 ##### Windows Defender Service:
 Description: Windows Defender delivers antivirus and security services for a VM
@@ -528,25 +538,15 @@ Impact: The SQL service being offline indicates that changes made via the UI wil
 
 **Resolving MSSQLServer alerts:** Connect to the Local Control Plane server and open Task Manager, then restart the service  
 
-#### CWAutomationService:
+#### SPOC:
 Description: This service performs user and application tasks, including all activation/modification activity 
 
 Alerting threshold:
 - Critical: service not responding for 5+ minutes
 
-Impact: The CWAutomation service being offline would prevent changes made in the UI from going into effect and being applied to users and applications
+Impact: The SPOC service being offline would prevent changes made in the UI from going into effect and being applied to users and applications
 
-**Resolving CWAutomationService alerts:** Connect to the Local Control Plane server and open Task Manager, then restart the service  
-
-#### CWVMAutomationService:
-Description: This service performs VM tasks, including creation/modification activity and tasks that interact with the hyperscaler 
-
-Alerting threshold:
-- Critical: service not responding for 5+ minutes
-
-Impact: The CWVMAutomation service being offline would prevent changes made in the UI from going into effect and being applied to VMs/hyperscalers
-
-**Resolving CWVMAutomationService alerts:** Connect to the Local Control Plane server and open Task Manager, then restart the service  
+**Resolving SPOC alerts:** Connect to the Local Control Plane server and open Task Manager, then restart the service  
 
 #### Spark Gateway/Myrtille
 Description: The Spark Gateway/Myrtille service facilitates HTML5 connections from both the UI and for end user logins, if applicable.
