@@ -287,7 +287,7 @@ Alerting threshold:
 ##### Remote Desktop Agent (RDAgent):
 Description: The Remote Desktop Agent facilitates MFA for connections to the session host server.
 
-<!---Impact: The Remote Desktop Agent service being offline indicates that <TBD> --->
+<!--- Impact: The Remote Desktop Agent service being offline indicates that <TBD> --->
 
 Resolving Remote Desktop Agent alerts: Connect to the session host server and open Task Manager, then restart the service  
 
