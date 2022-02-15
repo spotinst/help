@@ -71,6 +71,27 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/administration/api/whitelist-ips"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/administration/groups/create-new-group</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/administration/groups/create-new-group"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/administration/groups/create-new-group"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/administration/groups/edit-group-details</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/administration/groups/edit-group-details"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/administration/groups/edit-group-details"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/administration/groups/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/administration/groups/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/administration/groups/"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/administration/identity-providers/adfs-saml-authentication</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
