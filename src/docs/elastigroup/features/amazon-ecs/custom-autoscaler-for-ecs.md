@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Custom Autoscaler for ECS
 
 This article explains how Custom ECS Autoscaler works and includes a guide on how to setup a Custom ECS AutoScaler in your ECS integrated Elastigroup.

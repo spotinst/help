@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Create Elastigroup EKS Cluster
 
 This guide covers the requirements to launch Amazon EKS and create an Elastigroup to manage the underlying EC2 Instances.
