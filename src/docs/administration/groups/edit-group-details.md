@@ -8,7 +8,7 @@ Once you have created a [new group](administration/groups/create-new-group), you
 
 1. Go to the User icon in the Spot console and click Settings.
 
-<img src="/administration/_media/create-new-user-01.png" />
+<img src="/administration/_media/create-new-user-01.png" width="381" height="258" />
 
 2. Under Organization in the left menu, click Groups, then in the Group Name column on the left, click the name of a group. If you don’t see the name of the group you want to edit in the Group Name column, use the search box above to find the name of the group.
 
