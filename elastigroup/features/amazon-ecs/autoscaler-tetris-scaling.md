@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Autoscaler Tetris Scaling
 
 Tetris scaling is a process that optimizes the task placement across the infrastructure of a cluster. When a task is launched in ECS, The ECS scheduler tries to find free capacity for the task to run, in some cases, there aren't enough resources to meet the task's demands.

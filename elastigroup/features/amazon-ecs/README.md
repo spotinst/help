@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Amazon ECS
 
 Elastigroup uses machine learning and analytics to automate and optimize cloud infrastructure on AWS, Azure, and GCP, freeing application teams to focus on their applications, without worrying about their infrastructure.

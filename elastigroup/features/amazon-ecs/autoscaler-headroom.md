@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Autoscaler Headroom
 
 Headroom is a buffer of spare capacity (in terms of both memory and CPU) that makes sure that when you want to scale more tasks, you don't have to wait for new instances to be provisioned.
