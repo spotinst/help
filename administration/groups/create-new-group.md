@@ -27,7 +27,7 @@ In the Create New Group popup, complete the required information and then click 
 - Group Name: The name of the group. This should relate to the permission level or organizational placement of the group, e.g., Viewers, Eco Users, QC users, etc.
 - Description: A few words describing the purpose of the group.
 
-<img src="/administration/_media/create-new-group-02.png" />
+<img src="/administration/_media/create-new-group-02.png" width="302" height="197" />
 
 ## Add Users
 
@@ -36,7 +36,7 @@ There are several ways you can add [users]() to a group:
 - When you edit the group, after the group has been created.
 - When you are adding a new user or editing a user.
 
-<img src="/administration/_media/create-new-group-03.png" width="302" height="197" />
+<img src="/administration/_media/create-new-group-03.png" />
 
 ## Attach Policies
 
