@@ -44,13 +44,13 @@ Eco charges only for the reserved instances that have a start date after Eco sta
 
 ## Question: Convertible Reserved Instances
 
-If I have convertible reserved instances, does the savings recommendation include the savings by exchanging these?
+If I have convertible AWS reserved instances, does the savings recommendation include the savings by exchanging these?
 
 ### Answer:
 
 Yes. Eco is not able to sell convertible reserved instances. It can only replace them with other reserved instances under AWS constraints. Therefore, Eco suggests how to manage your convertibles. Also, Eco may purchase convertibles for customers.
 
-## Question: Customer Outside USA
+## Question: AWS Customer Outside USA
 
 My company is not located in the USA. How can I connect my bank account to the AWS marketplace?
 
@@ -58,13 +58,13 @@ My company is not located in the USA. How can I connect my bank account to the A
 
 Please contact your account executive for more information.
 
-## Question: No Data In Dashboard
+## Question: No Data in Eco AWS Dashboard
 
 Why don't I see data in my dashboard?
 
 ### Answer:
 
-There are several reasons why data might not appear in the dashboard. Please check possibilities below.
+There are several reasons why data might not appear in the Eco AWS dashboard. Please check possibilities below.
 
 - Data appears for the first time 48 hours after registration. If 48 hours have not passed yet, please try again when this period has finished.
 - S3 bucket name is missing. Verify that the bucket name you inserted during your registration to Eco appears in the AWS Cost and Usage report list.
@@ -73,3 +73,11 @@ There are several reasons why data might not appear in the dashboard. Please che
 
 - If data still does not appear, the IAMRole permissions may be missing or incorrect. Verify that your permissions are complete and the same as in the [Eco Policy](eco/tutorials/eco-policy/).
 - If you have checked the items above and still cannot see data in your dashboard, please contact the Spot support team.
+
+## Question: No Data in Eco Azure Dashboard
+
+Why don't I see data in my dashboard?
+
+### Answer:
+
+Please contact the Spot support team, and the Eco team will invstigate.
