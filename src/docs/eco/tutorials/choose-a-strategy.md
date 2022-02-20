@@ -1,6 +1,6 @@
 # Choose AWS RI Strategy
 
-After you click Choose Strategy in the [Analysis](eco/tutorials/review-ri-spending-analysis) page (Eco AWS), you will choose a reserved instance (RI) strategy in the Strategy Selection page, shown below.
+After you click Choose Strategy in the Dashboard’s [Analysis](eco/tutorials/review-ri-spending-analysis) page (Eco AWS), you will choose a reserved instance (RI) strategy in the Strategy Selection page, shown below.
 
 <img src="/eco/_media/tutorials-choose-strategy-01.png" />
 
