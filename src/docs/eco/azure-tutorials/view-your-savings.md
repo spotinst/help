@@ -2,7 +2,7 @@
 
 Once Eco Azure has been enabled for your organization and you have chosen your reserved instance (RI) strategy, your Eco Azure dashboard will display a more complete view of savings.
 
-To view the dashboard in the console, go to Eco on the left side and click Dashboard.
+To view the dashboard in the console, go to Eco on the left side and click Dashboard, then click the Azure EA tab.
 
 <img src="/eco/_media/azure-view-your-savings-01.png" />
 
