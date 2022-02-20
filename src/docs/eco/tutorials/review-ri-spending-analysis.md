@@ -1,6 +1,6 @@
-# Review Commitment Spending Analysis
+# Review AWS Commitment Spending Analysis
 
-The Analysis page appears to new customers who have connected an AWS account to Spot, but have not yet committed to a reserved instance strategy.
+The Eco AWS Dashboard’s Analysis page appears to new customers who have connected an AWS Management account to Spot, but have not yet committed to an Eco RI and Savings Plan management strategy.
 
 Once Eco is connected to your cloud account, a period of data aggregation begins which lasts up to 48 hours. Once the account usage and billing reports are completely analysed, Eco will display the Analysis page that summarizes your current reserved instance utilization.
 
