@@ -1,4 +1,4 @@
-# Eco Policy
+# Eco AWS Policy
 
 The Eco policy is shown below.
 
