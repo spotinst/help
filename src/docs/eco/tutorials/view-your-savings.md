@@ -1,6 +1,6 @@
 # View Savings in Dashboard
 
-Once Eco has been enabled for your organization and you have chosen your reserved instance (RI) [Strategy](eco/tutorials/choose-a-strategy), your Eco dashboard will switch to a more complete view of savings.
+Once Eco has been enabled for your organization and you have chosen your reserved instance (RI) [Strategy](eco/tutorials/choose-a-strategy), your Eco dashboard (AWS) will switch to a more complete view of savings.
 
 To view the Eco dashboard in the console, go to Eco on the left side and click Dashboard, then click the AWS tab.
 
