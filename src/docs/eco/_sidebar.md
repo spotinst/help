@@ -11,7 +11,7 @@
     - [Choose AWS RI Strategy](eco/tutorials/choose-a-strategy)
     - [View your Savings](eco/tutorials/view-your-savings)
     - [MSP Enrollment](eco/tutorials/msp-enrollment)
-    - [Manage Subsets](cloud-analyzer/tutorials/manage-subsets)
+    - [Manage Subsets](eco/tutorials/manage-subsets)
     - [Manage Workflows](eco/tutorials/manage-workflows)
     - [View Workflow Details](eco/tutorials/view-workflow-details)
     - [Eco AWS Policy](eco/tutorials/eco-policy/)

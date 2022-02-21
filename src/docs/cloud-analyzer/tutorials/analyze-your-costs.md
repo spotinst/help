@@ -4,7 +4,7 @@ The Cost Analysis page provides insights on past, current, and future cloud cost
 
 ## View per Subset
 
-If you have [Subsets](cloud-analyzer/tutorials/manage-subsets.md) enabled, the top of the Cost Analysis page will appear as shown below.
+If you have [Subsets](eco/tutorials/manage-subsets.md) enabled, the top of the Cost Analysis page will appear as shown below.
 
 <img src="/cloud-analyzer/_media/tutorials-analyze-costs-00.png" />
 

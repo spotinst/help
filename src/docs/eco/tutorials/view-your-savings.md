@@ -134,5 +134,5 @@ To export the Reservation Details report to a CSV file, click Export above the t
 
 ## What’s Next?
 
-- Learn how to [Manage Subsets](cloud-analyzer/tutorials/manage-subsets).
+- Learn how to [Manage Subsets](eco/tutorials/manage-subsets).
 - Learn more about analyzing and tracking all of your cloud compute expenses with [Cloud Analyzer](cloud-analyzer/).
