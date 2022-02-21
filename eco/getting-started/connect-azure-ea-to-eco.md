@@ -48,9 +48,9 @@ Microsoft EA Azure administrators
 
 4. Repeat the invitations for remaining users.
 
-### Give Spot Eco the Owner Role over individual reservations
+### Optional: Give Spot Eco the Owner Role over individual reservations
 
-Skip this step if there are no reservations. Otherwise, complete the steps below for each reservation.
+Skip this section if there are no reservations or if you are doing an assessment. Otherwise, complete the steps below for each reservation.
 
 1. Type “Reservations” in the search bar and click Enter.
 2. Click an individual resource name.
@@ -76,7 +76,7 @@ The following steps can be applied to management groups instead of subscriptions
    4. Click Review and Create
    5. Click Create
 
-In the code boxes below are the Spot Eco policies, only with limited access and without consideration for any other Spot products. It primarily targets Virtual Machines. To gain access to the JSON, download a copy, duplicate it, and “edit” the text box.
+In the code boxes below are the Spot Eco policies, with limited access. It primarily targets Virtual Machines. Replace the <subscriptionID> in the json with one or more actual subscriptionIDs you need Eco to review (or manage).
 
 <details>
   <summary markdown="span">Read-Only Permissions</summary>
@@ -116,79 +116,42 @@ In the code boxes below are the Spot Eco policies, only with limited access and 
           "Microsoft.Compute/virtualMachines/read",
           "Microsoft.Compute/virtualMachines/vmSizes/read",
           "Microsoft.Consumption/register/action",
-
           "Microsoft.Consumption/reservationRecommendations/read",
-
           "Microsoft.CostManagement/query/action",
-
           "Microsoft.CostManagement/reports/action",
-
           "Microsoft.CostManagement/exports/action",
-
           "Microsoft.CostManagement/register/action",
-
           "Microsoft.CostManagement/views/action",
-
           "Microsoft.CostManagement/forecast/action",
-
           "Microsoft.CostManagement/alerts/read",
-
           "Microsoft.CostManagement/cloudConnectors/read",
-
           "Microsoft.CostManagement/dimensions/read",
-
           "Microsoft.CostManagement/exports/read",
-
           "Microsoft.CostManagement/exports/write",
-
           "Microsoft.CostManagement/exports/delete",
-
           "Microsoft.CostManagement/exports/run/action",
-
           "Microsoft.CostManagement/externalBillingAccounts/read",
-
           "Microsoft.CostManagement/externalBillingAccounts/query/action",
-
           "Microsoft.CostManagement/externalBillingAccounts/forecast/action",
-
           "Microsoft.CostManagement/externalBillingAccounts/dimensions/read",
-
           "Microsoft.CostManagement/externalBillingAccounts/query/read",
-
           "Microsoft.CostManagement/externalBillingAccounts/externalSubscriptions/read",
-
           "Microsoft.CostManagement/externalBillingAccounts/forecast/read",
-
           "Microsoft.CostManagement/externalSubscriptions/read",
-
           "Microsoft.CostManagement/externalSubscriptions/query/action",
-
           "Microsoft.CostManagement/externalSubscriptions/forecast/action",
-
           "Microsoft.CostManagement/externalSubscriptions/dimensions/read",
-
           "Microsoft.CostManagement/externalSubscriptions/query/read",
-
           "Microsoft.CostManagement/externalSubscriptions/forecast/read",
-
           "Microsoft.CostManagement/forecast/read",
-
           "Microsoft.CostManagement/operations/read",
-
           "Microsoft.CostManagement/query/read",
-
           "Microsoft.CostManagement/reports/read",
-
           "Microsoft.CostManagement/views/read",
-
           "Microsoft.CostManagement/views/delete",
-
           "Microsoft.CostManagement/views/write",
-
           "Microsoft.CostManagement/tenants/register/action",
-
           "Microsoft.CostManagement/budgets/read",
-
           "Microsoft.Insights/MetricDefinitions/Read",
           "Microsoft.Insights/Metrics/Read",
           "Microsoft.Resources/tags/read",
@@ -311,7 +274,6 @@ In the code boxes below are the Spot Eco policies, only with limited access and 
 
 </details>
 
-If there are other subscriptions to which you wish to give Eco access and permissions, repeat Step 4 above for each.
 
 ### Assign the Spot Eco role to the Spot Eco guest users
 
@@ -323,11 +285,13 @@ You may need to wait a few minutes for the role to be visible.
    - Select: Each of the users described above.
 2. Click Save.
 
-### Assign the Reservation Purchaser role to the Spot Eco Guest Users
+### Optional: Assign the Reservation Purchaser role to the Spot Eco Guest Users
 
-Use the steps in the above procedure to assign the Reservation Purchaser role to the Spot Eco Guest Users.
+Skip this section if you are only doing an assessment. Use the steps in the above procedure to assign the Reservation Purchaser role to the Spot Eco Guest Users.
 
 ### Optional: Create a new Subscription for Eco RI Purchases
+
+
 
 ## Step 2. Access to Enterprise Enrollment Data
 
