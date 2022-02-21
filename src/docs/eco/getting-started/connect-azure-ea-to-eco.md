@@ -1,6 +1,4 @@
-<meta name="robots" content="noindex">
-
-# Connect Azure EA to Eco
+# Connect your Azure EA Account to Eco
 
 This document describes the manual process and procedures to enable the Eco Managed Service for Eco reservation management and provide appropriate access to subscription usage data.
 
