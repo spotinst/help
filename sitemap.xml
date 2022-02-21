@@ -330,13 +330,6 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/cloud-analyzer/tutorials/cloud-analyzer-policy/z-README"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/cloud-analyzer/tutorials/manage-subsets</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/cloud-analyzer/tutorials/manage-subsets"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/cloud-analyzer/tutorials/manage-subsets"/>
-    </url>
-    <url>
         <loc>https://docs.spot.io/?/cloud-analyzer/tutorials/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
@@ -559,6 +552,13 @@
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/eco/tutorials/eco-policy/"/>
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/eco/tutorials/eco-policy/"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/eco/tutorials/manage-subsets</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/eco/tutorials/manage-subsets"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/eco/tutorials/manage-subsets"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/eco/tutorials/manage-workflows</loc>

@@ -316,4 +316,4 @@ Both the enrollment number and the key can be provided to the Eco team through o
 
 ## What’s Next?
 
-Learn more about Eco's [Commitment Spending Analysis](eco/tutorials/review-ri-spending-analysis).
+Learn [how Eco works](eco/azure-tutorials/) to provide significant savings on your cloud spend.

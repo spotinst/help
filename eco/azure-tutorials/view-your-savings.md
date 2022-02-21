@@ -108,4 +108,4 @@ To export the Reservation Details report to a CSV file, click Export above the t
 
 ## What's Next?
 
-Learn more about [xxxxx]().
+Learn more about Eco in the [Eco FAQ](eco/troubleshooting/eco-faq).
