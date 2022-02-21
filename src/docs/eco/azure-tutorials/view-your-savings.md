@@ -50,11 +50,11 @@ You can filter the data displayed according to several criteria available.
 
 1. Place your cursor in the filter and click a parameter.
 
-<img src="/eco/_media/azure-view-your-savings-04.png" />
+<img src="/eco/_media/azure-view-your-savings-04.png" width="251" height="349" />
 
 2. Choose the specific value(s) to be displayed by typing them or selecting from the list.
 
-<img src="/eco/_media/azure-view-your-savings-05.png" />
+<img src="/eco/_media/azure-view-your-savings-05.png" width="230" height="109" />
 
 ### Display Columns
 
@@ -86,7 +86,7 @@ You can filter the data displayed according to several criteria available.
 
 1. Place your cursor in the filter and click a parameter.
 
-<img src="/eco/_media/azure-view-your-savings-07.png" />
+<img src="/eco/_media/azure-view-your-savings-07.png" width="236" height="147" />
 
 2. Choose the specific value(s) to be displayed by typing them or selecting from the list.
 
