@@ -24,7 +24,7 @@ Contact your Spot representative to have the Subsets feature enabled.
 
 ## Step 4. Create Subsets
 
-Once the Subsets feature has been enabled, create your subsets as described in [Create a Subset](cloud-analyzer/tutorials/manage-subsets?id=create-a-subset).
+Once the Subsets feature has been enabled, create your subsets as described in [Create a Subset](eco/tutorials/manage-subsets?id=create-a-subset).
 
 ## Step 5. Set up your Billing Workflows
 
