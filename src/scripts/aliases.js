@@ -1649,6 +1649,8 @@ export const aliases = (() => {
 
     "/elastigroup/tutorials/amazon-eks/configure-kubectl-for-eks-install-controller":
       "/ocean/getting-started/eks/",
+
+    "/cloud-analyzer/tutorials/manage-subsets": "/eco/tutorials/manage-subsets",
   };
 
   for (let [key, value] of Object.entries(map)) {
