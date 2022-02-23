@@ -48,4 +48,4 @@ To remove a group from Spot, do the following:
 
 ## What’s Next?
 
-Learn more about [setting up policies]().
+Learn more about [setting up permission policies](administration/policies/).
