@@ -218,6 +218,27 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/administration/sso-access-control/"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/administration/users-a/create-new-user</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/administration/users-a/create-new-user"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/administration/users-a/create-new-user"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/administration/users-a/edit-user-details</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/administration/users-a/edit-user-details"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/administration/users-a/edit-user-details"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/administration/users-a/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/administration/users-a/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/administration/users-a/"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/administration/users/add-users</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
