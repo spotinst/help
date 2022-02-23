@@ -2,7 +2,7 @@
 
 # Users
 
-In Spot, a user is a person who accesses the Spot console to perform any action such as viewing information, producing reports, or creating and configuring spot clusters.
+In Spot, a *user* is a person who accesses the Spot console to perform any action such as viewing information, producing reports, or creating and configuring spot clusters.
 
 A user can also be an application that accesses Spot programmatically using the Spot APIs. Using CRUD actions via the APIs, programmatic users can perform all the same actions that console users do.
 
