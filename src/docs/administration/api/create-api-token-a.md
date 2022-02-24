@@ -14,9 +14,9 @@
 
 !> Remember to keep your tokens secret. Treat them just like passwords. They act on your behalf when interacting with the API. Do not share your personal access tokens with anyone outside your organization. Do not hard-code them into your programs. Instead, use environment variables. Please contact our support if you're concerned your token has been compromised.
 
-## Alternate Method
+## API Token from User Details Page
 
-You can also get an API token from your User Details page.
+An alternative method is to get an API token from your User Details page.
 
 1. Go to Settings and click Users.
 2. In the Users list, click your own user name.
