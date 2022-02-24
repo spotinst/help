@@ -8,7 +8,7 @@ Once you have [created a new user](administration/users-a/create-new-user), you 
 
 1. Go to the User icon in the Spot console and click Settings.
 
-<img src="/administration/_media/create-new-user-01.png" />
+<img src="/administration/_media/create-new-user-01.png" width="381" height="258" />
 
 2. Under Organization in the left menu, click Users, then in the Name column on the left, click the name of a user. If you don’t see the name of the user you want to edit in the Name column, use the search box above to find the user’s name.
 
@@ -41,7 +41,7 @@ To add or remove groups associated with the user, do the following:
 1. Above the table on the right, click Manage.
 2. In the Manage Groups popup, mark or unmark groups as needed, then click Update.
 
-<img src="/administration/_media/edit-user-details-04.png" />
+<img src="/administration/_media/edit-user-details-04.png" width="370" height="169" />
 
 ### Manage Policies
 
@@ -54,7 +54,7 @@ If you need to associate additional policies with the user, do the following:
 2. Select the name of the policy from the dropdown list. Note that the dropdown list doesn’t include the policies the user inherited from the groups. If you wish to remove an ‘inherited’ policy, you must un-assign the user from the group or remove the policy from the group itself.
 3. If the policy is at account level, you need to select at least one account to associate with this policy.
 
-<img src="/administration/_media/edit-user-details-06.png" />
+<img src="/administration/_media/edit-user-details-06.png" width="300" height="160" />
 
 In addition, you can review existing policies and detach any policy you no longer need.
 ### Manage API Tokens
@@ -77,7 +77,7 @@ To remove a user from Spot, do the following:
 1. In the upper right of the User Details page, click Remove User.
 2. In the popup that appears, confirm that you want to remove the user from Spot.
 
-<img src="/administration/_media/edit-user-details-07.png" />
+<img src="/administration/_media/edit-user-details-07.png" width="243" height="97" />
 
 ## What’s Next?
 
