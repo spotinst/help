@@ -5,7 +5,7 @@
 Creating a new [user](administration/users-a/) consists of the following major steps:
 1. Define user details
 2. Choose Groups
-3. Choose Policies
+3. Choose Permission Policies
 
 Each of these is described below.
 
@@ -13,7 +13,7 @@ Each of these is described below.
 
 1. Go to the User icon in the Spot console and click Settings.
 
-<img src="/administration/_media/create-new-user-01.png" />
+<img src="/administration/_media/create-new-user-01.png" width="381" height="258" />
 
 2. Under Organization in the left menu, click Users, then on the right, click Create New User.
 
