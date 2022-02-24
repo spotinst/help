@@ -8,7 +8,7 @@ Once you have [created a new user](administration/users-a/create-new-user), you 
 
 1. Go to the User icon in the Spot console and click Settings.
 
-<img src="/administration/_media/create-new-user-01.png" />
+<img src="/administration/_media/create-new-user-01.png" width="381" height="258" />
 
 2. Under Organization in the left menu, click Users, then in the Name column on the left, click the name of a user. If you don’t see the name of the user you want to edit in the Name column, use the search box above to find the user’s name.
 
