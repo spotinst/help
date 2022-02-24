@@ -25,8 +25,6 @@ The Create New Policy wizard appears.
    - Account: These permissions relate to products and services that have resources at the account level. You will select the relevant accounts separately for each user or group once you attach the policy to them.
    - Organization: The permissions relate to products and services that have resources at the organization level.
 
-<img src="/administration/_media/create-policy-03.png" />
-
 Once a policy has been created, you will not be able to change the policy type.
 
 ### Service
@@ -35,13 +33,13 @@ A service can allow use of a particular product within the Spot Suite, such as O
 
 Choose the relevant service (e.g., Ocean, Elastigroup, or Setup) for the policy.
 
-<img src="/administration/_media/create-policy-04.png" />
+<img src="/administration/_media/create-policy-03.png" width="421" height="101" />
 
 ### Actions
 
 Once you choose a service, the service will appear below with its set of standard Create, Update, and Delete actions that are granted with the service.
 
-<img src="/administration/_media/create-policy-05.png" />
+<img src="/administration/_media/create-policy-04.png" width="406" height="166" />
 
 ### Manual Edit
 
@@ -53,7 +51,7 @@ Unmark any actions that will not be allowed.
 
 Below is an example of the individual Create actions for the Elastigroup service. Since the Delete action is unmarked, this policy will not allow the users to delete anything in Elastigroup.
 
-<img src="/administration/_media/create-policy-06.png" />
+<img src="/administration/_media/create-policy-05.png" />
 
 ### Effect
 
@@ -74,6 +72,8 @@ To remove a service and all of its corresponding actions, click the Trash icon o
 You also have the option to edit the JSON format. Do the following:
 1. By Services and permissions, click JSON.
 2. Click Edit Mode, and edit the file as required.
+
+<img src="/administration/_media/create-policy-06.png" />
 
 ## What’s New?
 

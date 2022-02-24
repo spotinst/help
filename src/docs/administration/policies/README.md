@@ -8,7 +8,7 @@ A *permission* allows a user access to a Spot service (e.g., Ocean and Elastigro
 
 <img src="/administration/_media/policies-01.png" />
 
-How it Works
+## How it Works
 
 We make it really easy for you to create a new policy with the creation wizard. The wizard includes the simple steps summarized below. For the detailed procedures, see Create Policy.
 1. You define the most basic policy details such as the policy name and a brief description of the policy purpose.
@@ -32,6 +32,6 @@ Spot comes with a number of default policies. You can use these out of the box a
 - Organization and Account level permissions
   - Admin
 
-# What’s Next?
+## What’s Next?
 
 Learn how to [create a new permission policy](administration/policies/create-new-policy).
