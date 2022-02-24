@@ -1,0 +1,29 @@
+<meta name="robots" content="noindex">
+
+# Create an API Token
+
+1. To create a Spot API Token, log on to the Spot console. Go to Settings and click API.
+
+<img src="/administration/_media/api-create-api-token-01.png" />
+
+2. The Spot console provides both permanent and temporary tokens. Select your preferred token type and click Generate Token.
+
+<img src="/administration/_media/api-create-api-token-02.png" width="429" height="236" />
+
+3. Give your token a name and click Generate. Your access token will appear in the window.
+
+!> Remember to keep your tokens secret. Treat them just like passwords. They act on your behalf when interacting with the API. Do not share your personal access tokens with anyone outside your organization. Do not hard-code them into your programs. Instead, use environment variables. Please contact our support if you're concerned your token has been compromised.
+
+## Alternate Method
+
+You can also get an API token from your User Details page.
+
+1. Go to Settings and click Users.
+2. In the Users list, click your own user name.
+3. When your User Details page appears, click API Tokens, and then Generate API Token.
+
+<img src="/administration/_media/api-create-api-token-03.png" />
+
+What's Next?
+
+Learn more about the [Spot APIs](https://docs.spot.io/api/).
