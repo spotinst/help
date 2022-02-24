@@ -5,7 +5,7 @@
 Creating a new [user](administration/users-a/) consists of the following major steps:
 1. Define user details
 2. Choose Groups
-3. Choose Policies
+3. Choose Permission Policies
 
 Each of these is described below.
 

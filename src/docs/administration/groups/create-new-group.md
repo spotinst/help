@@ -5,7 +5,7 @@
 The Create New [Group](administration/groups/) wizard consists of the following major steps:
 1. Add Group Details
 2. Add Users
-3. Attach Policies
+3. Attach Permission Policies
 
 Each of these is described below.
 
@@ -42,7 +42,7 @@ There are several ways you can add [users]() to a group:
 
 You can add [policies]() to the group. The policies will determine what the group members will be allowed to do.
 
-<img src="/administration/_media/create-new-group-04.png" width="427" height="179" />
+<img src="/administration/_media/create-new-group-04.png" width="383" height="183" />
 
 1. Select the policy from the dropdown list.
 2. If the policy you are looking for is on the account level, you must select the relevant account(s) from the list of accounts, and then choose the policy.
