@@ -24,6 +24,6 @@ You can also get an API token from your User Details page.
 
 <img src="/administration/_media/api-create-api-token-03.png" />
 
-What's Next?
+## What's Next?
 
 Learn more about the [Spot APIs](https://docs.spot.io/api/).
