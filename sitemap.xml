@@ -2066,6 +2066,20 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-spark/"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/ocean-spark/tools-integrations/connect-jupyter-notebooks</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-spark/tools-integrations/connect-jupyter-notebooks"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-spark/tools-integrations/connect-jupyter-notebooks"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/ocean-spark/tools-integrations/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-spark/tools-integrations/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-spark/tools-integrations/"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/ocean/features/auto-update-process-gke</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
