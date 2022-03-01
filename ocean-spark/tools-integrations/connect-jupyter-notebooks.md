@@ -25,7 +25,7 @@ jupyter notebook \
     --GatewayClient.request_timeout=600
 ```
 
-- The GatewayClient.url points to an Ocean Spark cluster, with an Ocean Spark cluster ID of the format *osc-xxxxxxxx* that you can find on the [Clusters] (https://console.spotinst.com/ocean/spark/clusters) list in the Spot console.
+- The GatewayClient.url points to an Ocean Spark cluster, with an Ocean Spark cluster ID of the format *osc-xxxxxxxx* that you can find on the [Clusters](https://console.spotinst.com/ocean/spark/clusters) list in the Spot console.
 - The GatewayClient.auth_token is a [Spot API token](administration/api/create-api-token).
 - The GatewayClient.request_timeout parameter specifies the maximum amount of time Jupyter will wait until the Spark driver starts. If you have capacity available in your cluster, the wait time should be very short. If there isn't capacity, the Kubernetes cluster will automatically get a new node from the cloud provider, which usually takes a couple of minutes. *You should set the request_timeout to 10 minutes to give you a security margin.* Omitting this parameter will prevent you from starting a notebook.
 
@@ -76,11 +76,11 @@ You can use the Spot console or the API to create a Configuration template. Here
 
 After creating it in the Spot console:
 
-<img src="/ocean-spark/_media/tools-connect-jupyter-notebooks-02.png" />
+<img src="/ocean-spark/_media/tools-connect-jupyter-notebooks-02.png" width="594" height="429" />
 
 The Configuration Template “notebook-template” appears in the list of kernels in the Jupyter dashboard:
 
-<img src="/ocean-spark/_media/tools-connect-jupyter-notebooks-03.png" />
+<img src="/ocean-spark/_media/tools-connect-jupyter-notebooks-03.png" width="344" height="298" />
 
 At the moment, Ocean Spark only supports Python kernels.
 
@@ -100,7 +100,7 @@ If those objects are not ready yet, you should see something like this upon invo
 
 After a few seconds, they should be ready and you can use them to run Spark commands:
 
-<img src="/ocean-spark/_media/tools-connect-jupyter-notebooks-04.png" />
+<img src="/ocean-spark/_media/tools-connect-jupyter-notebooks-04.png" width="354" height="158" />
 
 You can install your own libraries by running:
 
@@ -135,7 +135,7 @@ KERNEL_VAR_FOO=bar jupyter notebook \
 
 The env variable FOO=bar is available in the notebook:
 
-<img src="/ocean-spark/_media/tools-connect-jupyter-notebooks-05.png" />
+<img src="/ocean-spark/_media/tools-connect-jupyter-notebooks-05.png" width="257" height="106" />
 
 ## Notebooks are regular Spark applications
 
