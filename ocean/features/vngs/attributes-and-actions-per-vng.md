@@ -11,6 +11,7 @@ Many of the attributes that you apply to your cluster can be applied specificall
 
 The following is a list of attributes customizable per VNG in Ocean for AWS.
 
+- Automatic Headroom
 - Associate Public IP (API only)
 - Block Device Mappings
 - Elastic IPs
@@ -27,6 +28,7 @@ The following is a list of attributes customizable per VNG in Ocean for AWS.
 - Roll (API only)
 - Scheduled manual headroom (API only)
 - Security Group IDs
+- Shutdown hours
 - Spot% to use within the VNG
 - Subnet IDs
 - Tags
@@ -72,10 +74,13 @@ The following is a list of attributes customizable per VNG in Ocean for ECS.
 
 The following is a list of attributes customizable per VNG in Ocean for AKS.
 
+- Automatic Headroom
+- Availability zone (API only)
 - Headroom
 - Labels
 - Maximum Nodes
 - OS Disk Type and Size
+- Shutdown hours
 - Tags
 - Taints
 
@@ -88,8 +93,10 @@ The following is a list of attributes customizable per VNG in Ocean for AKS.
 
 The following is a list of attributes customizable per VNG in Ocean for GKE.
 
-- Instance Types (API only. These must be a subset of the instance types defined for the Ocean cluster.)
+- Automatic Headroom
+- Availability zone
 - Headroom
+- Instance Types (API only. These must be a subset of the instance types defined for the Ocean cluster.)
 - Instance Types (API only)
 - Instance Profile (API only)
 - Labels
@@ -104,6 +111,7 @@ The following is a list of attributes customizable per VNG in Ocean for GKE.
 - Root Volume Type (API only)
 - Schedualed manual headroom (API only)
 - Shielded VMs (API only)
+- Shutdown hours
 - Tags & Metadata (API only)
 - Taints
 
