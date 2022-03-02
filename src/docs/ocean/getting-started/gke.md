@@ -38,9 +38,12 @@ In the left menu of the Spot Console, click Ocean/Cloud Clusters, and click Crea
    - Additional Configurations
      - Draining Timeout
 
-<img src="/ocean/_media/gke-compute.png" width="400" height="290" />
+<img src="/ocean/_media/gke-compute-a.png" width="462" height="322" />
 
 2. Optionally, you can import all GKE node pools into Ocean as [virtual node groups](ocean/features/launch-specifications). (The default node pool will be automatically imported.)
+
+<img src="/ocean/_media/gke-compute-vng.png" />
+
 3. Click Next.
 
 ## Step 3: Connectivity
