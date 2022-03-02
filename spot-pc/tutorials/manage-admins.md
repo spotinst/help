@@ -1,12 +1,3 @@
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SCV64B4XJ6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-SCV64B4XJ6');
-</script>
 
 # Spot PC Tutorial: Manage Spot PC Admins
 
@@ -16,9 +7,7 @@ Spot PC allows for granular control over admin access to tenants including detai
 
 Spot PC admins authenticate with a single identity. That identity can be invited to access and manage any tenant(s) in Spot PC, across all organizations and tenants. This flexibility is designed to support all sorts of support relationships including MSPs, contract admins, vendor access and more.
 
-Admins can login with their existing identities from Azure AD, Google or NetApp Cloud Central. When an admin is invited to and organization or a tenant, they are prompted to login to accept the invitation and
-
-Assigning tenant level permissions and managing those permissions has not been implemented yet in web app. So, you can not currently use organization user role.
+Admins can login with their existing identities from Azure AD, Google or NetApp Cloud Central. When an admin is invited to an organization or a tenant, they are prompted to login to accept the invitation and to associate their preferred identity with the invitation.
 
 ## Admin Types
 
