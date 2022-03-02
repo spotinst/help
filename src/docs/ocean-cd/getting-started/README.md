@@ -148,6 +148,10 @@ From a workstation in your cluster:
 
 `curl -X POST 'https://api.spotinst.io/ocean/cd/clusterInstaller?clusterId=<CLUSTER_Id>' --header 'Authorization: Bearer <TOKEN>' | kubectl delete -f -`
 
+3. Delete `clusterolebinging`:
+
+`kubectl delete clusterrolebinding spot-oceancd-cluster-admin`
+
 ## Documentation Map
 
 - [Ocean CD Overview](ocean-cd/ocean-cd-overview)
