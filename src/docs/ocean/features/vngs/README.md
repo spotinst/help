@@ -99,7 +99,7 @@ Ocean takes the following parameters from the default VNG unless explicitly set 
 
 </details><br>
 
-Learn more about:
+## Learn more about:
 
 - [Attributes and Actions per VNG](ocean/features/vngs/attributes-and-actions-per-vng).
 - Learn how to [Manage Virtual Node Groups](ocean/tutorials/manage-virtual-node-groups.md) and customize configurations per VNG.
