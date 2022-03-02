@@ -89,8 +89,9 @@ Ocean takes the following parameters from the default VNG unless explicitly set 
 </details><br>
 
 <details>
-  <summary markdown="span">GCP</summary>
+  <summary markdown="span">GKE</summary>
 
+- Availability zone
 - Image
 - Instance types
 - Minimum nodes per VNG
