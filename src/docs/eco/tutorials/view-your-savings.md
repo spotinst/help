@@ -90,7 +90,7 @@ This chart provides amortized costs (i.e., up-front plus recurring costs) of all
 
 <img src="/eco/_media/tutorials-view-savings-02a.png" />
 
-## Reservation Details Report
+## Commitment Details Report
 
 Below the overview graphs and pie charts, you can see a table with detailed information about your reserved instances, including your total generated savings at the bottom of the table.
 
@@ -112,7 +112,12 @@ You can filter the data displayed according to several criteria available.
 
 You can customize the columns that appear in the table. The following column headings are available:
 
-- Commitment type
+- Savings type: 
+  - COMP SP: Compute Savings Plan
+  - EC2 SP: EC2 Savings Plan
+  - SAGE SP: Sagemaker Savings Plan
+  - RI-S: Standard Reserved Instance
+  - RI-C: Convertible Reserved Instance
 - Instance type
 - Quantity: The number of instances in the batch.
 - Service
