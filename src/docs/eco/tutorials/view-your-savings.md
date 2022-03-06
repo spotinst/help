@@ -112,7 +112,12 @@ You can filter the data displayed according to several criteria available.
 
 You can customize the columns that appear in the table. The following column headings are available:
 
-- Savings type: COMP SP = Compute Savings Plan; EC2 SP = EC2 Savings Plan; SAGE SP = Sagemaker Savings Plan; RI-S = Standard Reserved Instance; RI-C = Convertible Reserved Instance
+- Savings type: 
+  - COMP SP: Compute Savings Plan
+  - EC2 SP: EC2 Savings Plan
+  - SAGE SP: Sagemaker Savings Plan
+  - RI-S: Standard Reserved Instance
+  - RI-C: Convertible Reserved Instance
 - Instance type
 - Quantity: The number of instances in the batch.
 - Service
