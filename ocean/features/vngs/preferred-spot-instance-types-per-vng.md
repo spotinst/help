@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Preferred Spot Instance Types per VNG
 
 Ocean provides a serverless experience in which the specific instances don’t matter and the best practice is to allow the use of all instance types. However, there are some cases in which a specific instance type may provide better performance or increased cost savings. For example, if you know that your application performs significantly better on M5 instances, then you can save costs by preferring this instance type over others.
