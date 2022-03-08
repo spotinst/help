@@ -1,16 +1,16 @@
 # Spot PC
 
-Spot PC is a fully managed, continuously optimized cloud desktop service that runs Azure Virtual Desktops (AVD) and/or Windows 365 Cloud PCs. The service is easy to deploy and secure for both end users and administrators, all while offered at a fixed price per user per month for each user type.
+Spot PC is a managed, continuously optimized cloud desktop service that runs Azure Virtual Desktops (AVD) and/or Windows 365 Cloud PCs. The service is easy to deploy and secure for both end users and administrators, all while offered at a fixed price per user per month for each user type.
 
 **Key features of the service include:**
 
-- **Fully managed desktops** - Spot PC delivers native cloud desktops based on AVD and/or Windows 365 Cloud PC. Using AI-driven automation and optimization from Spot by NetApp creates cost optimized virtual desktops that provide users with a superior experience. Spot PC tools simplify image management, resource allocation and more.
+- **Managed desktops** - Spot PC delivers native cloud desktops based on AVD and/or Windows 365 Cloud PC. Using AI-driven automation and optimization from Spot by NetApp creates cost optimized virtual desktops that provide users with a superior experience. Spot PC tools simplify image management, resource allocation and more.
 
 - **Rapid deployment and migration assistance** - Spot PC experts will assist with application and data migration while the Spot PC automated deployment workflow reduces the time from purchase to usable cloud desktops.
 
 - **Choice of AVD and/or Windows 365 Cloud PC** - Spot PC creates and manages both types of Azure-based virtual desktops.
 
-- **Enhanced security and protection** - Defender for Server is enabled for all AVD session VMs, and the Spot PC console reports security alerts and recommendations for both AVD and Windows 365 desktops. In addition, Spot PC automatically backs up the user data volume every night.
+- **Enhanced security and protection** - Microsoft Defender for Cloud is enabled for all AVD session VMs, and the Spot PC console reports security alerts and recommendations for both AVD and Windows 365 desktops. In addition, Spot PC automatically backs up the user data volume every night.
 
 - **Unified cross-tenant management** - A global view of all accounts, resources, and users under your control with secure drill down into any tenant to immediately troubleshoot, diagnose, and resolve identified issues.
 
@@ -103,34 +103,26 @@ Spot PC co-management is a collaboration between Spot by NetApp, the IT administ
 
 - Architecture & solution coaching
 - Onboarding and migration project planning and support
-- Spot PC deployment (including Azure Components)
-- Application lifecycle assistance (install, update, images)
+- Spot PC deployment support (including Azure Components)
+- Provide end-to-end Image management platform
 - Monitoring and alert response for VMs, network, data volumes, security
 - OS Updates
 - Run time optimization of compute and storage
 - On-Demand Tier 2 and 3 Support (chat, phone, ticket)
 
-### Configure: Cloud Operations/Managed Service Provider
+### Configure: Managed Service Provider/Cloud Operations
 
-- User needs assessment
-- Provide application list
-- Managed Microsoft licensing (M365)
-- Azure AD user management & security
-- Solution definition – use cases and sizing
-- Application acquisition
-- Application update approval / timing
+- User needs assessment, use case and solution sizing
+- Customer/User communication
+- Customize VM image with apps and settings
+- Image update testing, approval & timing
+- AD user management & security
+- On-premises device and network support
+- Application licensing including M365
 - Environment monitoring/response (co-managed with Spot)
-- Tier 1 & end user support
-- Add on services and products
-
-### Consume: End Users
-
-- User add & remove (based on AD Group membership)
-- Manage user groups and virtual desktop access
-- Application purchase and licensing
-- Monitor user sessions and session servers
-- Basic support functions (ex: shadow user)
-- Set security policy and standards
+- Helpdesk, Tier 1 troubleshooting & end user support
+- User entitlement and MACD (moves, adds, changes, deletes)
+- Set/customize security policy & standards for end users
 
 ## Getting Support
 

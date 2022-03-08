@@ -62,7 +62,7 @@ Create a Deployment for the tenant, including the target update instance selecte
 
 Update the Deployment to target specific virtual machines by using the Update Deployment Audience endpoint. POST https://docs.microsoft.com/en-us/graph/api/windowsupdates-deploymentaudience-updateaudience?view=graph-rest-beta&tabs=http
 
-Track status of the Deployment GET https://docs.microsoft.com/en-us/graph/api/windowsupdates-deployment-get?view=graph-rest-beta&tabs=http and report back to the Spot PC console. Note: Update Compliance (Monitor Windows Updates and Microsoft Defender AV with Update Compliance (Windows 10) - Windows Deployment | Microsoft Docs) provides a more granular, VM level data set on the current version/update state. The configuration of this component and integration of its data is out of scope for v1 but will be incorporated in future release plans.
+Track status of the Deployment GET https://docs.microsoft.com/en-us/graph/api/windowsupdates-deployment-get?view=graph-rest-beta&tabs=http and report back to the Spot PC console. Note: Update Compliance (Monitor Windows Updates and Microsoft Defender for Cloud with Update Compliance (Windows 10) - Windows Deployment | Microsoft Docs) provides a more granular, VM level data set on the current version/update state. The configuration of this component and integration of its data is out of scope for v1 but will be incorporated in future release plans.
 
 -->
 
