@@ -104,6 +104,8 @@ Ocean supports Kubernetes [pod topology spread constraints](https://kubernetes.i
 
 Ocean automatically launches nodes while ensuring that the `maxSkew` is maintained. Similarly, Ocean will only scale down a node if `maxSkew` is maintained.
 
+When pods contain spread constraints, Ocean is aware of their labels and can provision nodes from all relevant topologies. Before the initial apply action of these pods, Ocean is required to have at least a single node from each topology so that Kuberentes is aware of their existence. A single node from each topology can easily be configured in Ocean’s [headroom](ocean/features/headroom) feature or by setting [minimum nodes per VNG](ocean/features/launch-specifications?id=attributes-and-actions-per-vng).
+
 To support the Kubernetes feature, Ocean requires the following:
 
 - Kubernetes version 1.19 or later (for other versions, see the note in the [Kubernetes documentation](https://kubernetes.io/docs/concepts/workloads/pods/pod-topology-spread-constraints/).
@@ -113,7 +115,7 @@ To support the Kubernetes feature, Ocean requires the following:
 
 When you use the topology key `spotinst.io/node-lifecycle`, a running node in each topology is required before applying the workloads(s) that contain the spread constraints.
 
-> **Important Note**: If one of the topologies running in the cluster is not available, the pods that are supposed to run on this topology will remain pending. For example, you have a topology key `spotinst.io/node-lifecycle`, and you have spot and OD nodes in the cluster. If there are no available spot markets, the pods would remain pending since launching an OD node would violate the `maxSkew` limitation.
+> **Important Note**: If one of the topologies running in the cluster is not available, the pods that are supposed to run on this topology will remain pending. For example, you have a topology key `spotinst.io/node-lifecycle`, and you have spot and OD nodes in the cluster. If there are no available spot markets, the pods would remain pending since Kubernetes would not schedule them on an OD node, and consequently, Ocean would not launch an OD node.
 
 ## Support for Extended Resources Feature
 
