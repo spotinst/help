@@ -24,7 +24,6 @@ output "spot_account_id" {
 }
 ```
 
-
 Terraform module documentation: [aws-connect terraform module](https://registry.terraform.io/modules/spotinst/aws-connect/spotinst/latest)
 
 To report an issue or fork: [source code](https://github.com/spotinst/terraform-spotinst-aws-connect)
