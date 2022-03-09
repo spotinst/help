@@ -19,5 +19,6 @@ Watch a step-by-step [video tutorial](https://youtu.be/csPmq3JZlgU/) on connecti
 
 ## What's Next?
 
+- [Connect AWS Account with Terraform](connect-your-cloud-provider/aws-account/terraform)
 - [Get started with Elastigroup](elastigroup/getting-started/).
 - [Get Started with an Ocean cluster](ocean/getting-started/).

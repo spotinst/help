@@ -54,17 +54,17 @@ Now that you have created an Active Directory Application, you will create a cus
 
 1. Create a Custom Role
 
-   - Under All Services, select Subscriptions. Choose the subscription you would Spot to access.
-   - In the Subscription menu, select Access Control (IAM).
-   - Click Roles, Add, and Add Custom Role.
-   - Select JSON.
-   - Copy and paste the Policy from Step 4. [Spot Policy in Azure](administration/api/spot-policy-in-azure)
-   - Review and click Create.
+    - Under All Services, select Subscriptions. Choose the subscription you would Spot to access.
+    - In the Subscription menu, select Access Control (IAM).
+    - Click Roles, Add, and Add Custom Role.
+    - Select JSON.
+    - Copy and paste the Policy from Step 4. [Spot Policy in Azure](administration/api/spot-policy-in-azure)
+    - Review and click Create.
 
 2. Attach the Role
-   - Click Role Assignments, Add, and Add Role Assignment.
-   - Enter the custom role created above.
-   - Enter and select the application created in Step 1.
+    - Click Role Assignments, Add, and Add Role Assignment.
+    - Enter the custom role created above.
+    - Enter and select the application created in Step 1.
 
 > **Tip**: If your application does not appear in the Select autocomplete list, enter the application name there anyway.
 
@@ -76,6 +76,7 @@ You're all set! Your Azure account is now connected to Spot.
 
 ## What's Next?
 
+- [Connect Azure subscription with Terraform](connect-your-cloud-provider/azure-account/terraform)
 - [Create your first Elastigroup](elastigroup/getting-started/create-an-elastigroup-for-azure).
 - Learn how to [import existing Azure resources](elastigroup/azure/getting-started/import-an-existing-azure-resource.md) such as a Scale Set, an Application Gateway, a Classic Load Balancer or a VM.
 - Check out the [Elastigroup for Azure API](https://help.spot.io/spotinst-api/elastigroup/microsoft-azure/create/).
