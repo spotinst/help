@@ -41,7 +41,7 @@ Go to the VPC security group of the database service and create an inbound rule 
 
 Please see the relevant [AWS instructions](https://aws.amazon.com/premiumsupport/knowledge-center/rds-connectivity-instance-subnet-vpc/). The connectivity of your RDS service should look like the screen capture below:
 
-<img src="/ocean-spark/_media/tools-hive-metastore-02.png" />
+<img src="/ocean-spark/_media/tools-hive-metastore-02.png" width="731" height="416" />
 
 ### Create the database
 
@@ -85,7 +85,7 @@ COPY ./jars/postgresql-42.2.20.jar /opt/spark/jars/postgresql-42.2.20.jar
 
 The JAR will then be downloaded at runtime when each Spark application starts:
 
-```JSON
+```json
 "deps": {
     "jars": [
       "https://repo1.maven.org/maven2/org/postgresql/postgresql/42.2.20/postgresql-42.2.20.jar"
@@ -209,7 +209,3 @@ Here’s what your Spark application configuration should look like:
     }
   ]
 ```
-
-## What's Next?
-
-Learn more about...
