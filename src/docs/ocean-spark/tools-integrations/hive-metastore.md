@@ -41,7 +41,7 @@ Go to the VPC security group of the database service and create an inbound rule 
 
 Please see the relevant [AWS instructions](https://aws.amazon.com/premiumsupport/knowledge-center/rds-connectivity-instance-subnet-vpc/). The connectivity of your RDS service should look like the screen capture below:
 
-<img src="/ocean-spark/_media/tools-hive-metastore-02.png" width="731" height="416" />
+<img src="/ocean-spark/_media/tools-hive-metastore-02.png" width="650" height="370" />
 
 ### Create the database
 

@@ -21,3 +21,4 @@
     - [Mount Volumes](ocean-spark/configure-spark-apps/mount-volumes)
   - [Tools & Integrations](ocean-spark/tools-integrations/)
     - [Connect Jupyter Notebooks](ocean-spark/tools-integrations/connect-jupyter-notebooks)
+    - [Hive Metastore](ocean-spark/tools-integrations/hive-metastore)
