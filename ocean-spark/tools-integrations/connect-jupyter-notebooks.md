@@ -147,3 +147,7 @@ Notebooks appear in the [Applications](ocean-spark/product-tour/monitor-applicat
 
 You can use the Type dropdown, as shown above, to filter on notebooks.
 Additionally, any configuration option for Spark applications can be applied to notebooks via the Config template mechanism.
+
+## What's Next?
+
+Learn how to [run apps from Airflow](ocean-spark/tools-integrations/run-apps-from-airflow).
