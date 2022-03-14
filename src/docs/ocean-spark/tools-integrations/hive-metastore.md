@@ -209,3 +209,7 @@ Here’s what your Spark application configuration should look like:
     }
   ]
 ```
+
+## What's Next?
+
+Learn more about the Ocean Spark features in the [Product Tour](ocean-spark/product-tour/).
