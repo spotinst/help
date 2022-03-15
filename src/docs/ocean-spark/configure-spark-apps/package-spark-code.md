@@ -134,7 +134,7 @@ The Spark application can now be run on Ocean Spark:
 
 ```
 curl -X POST \
- https://api.spotinst.io/ocean/spark/cluster/osc-e4089a00/app \
+'https://api.spotinst.io/ocean/spark/cluster/<your cluster id>/app?accountId=<your accountId>' \
  -H 'Content-Type: application/json' \
  -H 'Authorization: Bearer 4536dc4418995c553df9c0c0e1d31866453bcec3df0f31f97003926d67ff1e00
        --data-raw '{
@@ -156,7 +156,7 @@ curl -X POST \
 
 ```
 curl -X POST \
- https://api.spotinst.io/ocean/spark/cluster/osc-e4089a00/app \
+  'https://api.spotinst.io/ocean/spark/cluster/<your cluster id>/app?accountId=<your accountId>' \
  -H 'Content-Type: application/json' \
  -H 'Authorization: Bearer 4536dc4418995c553df9c0c0e1d31866453bcec3df0f31f97003926d67ff1e00
        --data-raw '{
@@ -239,7 +239,7 @@ All required files are uploaded in your cloud storage. The Spark application can
 
 ```
 curl -X POST \
- https://api.spotinst.io/ocean/spark/cluster/osc-e4089a00/app \
+ 'https://api.spotinst.io/ocean/spark/cluster/<your cluster id>/app?accountId=<your accountId>' \
  -H 'Content-Type: application/json' \
  -H 'Authorization: Bearer 4536dc4418995c553df9c0c0e1d31866453bcec3df0f31f97003926d67ff1e00
  --data-raw '{
@@ -247,6 +247,7 @@ curl -X POST \
    "configOverrides": {
      "type": "Python",
      "sparkVersion": "3.2.0",
+     "image": "<account-id>.dkr.ecr.<region>.amazonaws.com/my-app:dev",
      "mainApplicationFile": "s3a://<s3-folder>/<your_main_application_file.py>",
      "deps": {
        "pyFiles": [
@@ -289,6 +290,7 @@ curl -X POST \
      "type": "Scala",
      "sparkVersion": "3.2.0",
      "mainApplicationFile": "s3a://<s3-folder>/<main-jar>.jar",
+     "image": "gcr.io/datamechanics/spark:platform-3.2-latest",
      "deps": {
        "jars": [
          "s3a://<s3-folder>/<dep1>.jar",

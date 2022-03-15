@@ -5,12 +5,14 @@
 It is really easy to get started with Spot Security. All you need to do is connect your cloud provider. The procedures below describe how to connect your AWS account to Spot Security.
 
 ## Prerequisites
+
 - An AWS account
 - A Spot account activated
 
 ## Get Started
 
 To get started with Spot Security you need to be signed in to the Spot console.
+
 1. In the left menu tree of the console, click Spot Security. The introductory panel appears.
 
 <img src="/spot-security/_media/getting-started-01.png" />
@@ -20,6 +22,7 @@ To get started with Spot Security you need to be signed in to the Spot console.
 <img src="/spot-security/_media/getting-started-02.png" />
 
 ## Step 1: Log in to AWS Account
+
 1. On the Onboard page, click Log in. The AWS Log in page appears in a separate tab.
 
 <img src="/spot-security/_media/getting-started-03.png" />
@@ -29,12 +32,13 @@ To get started with Spot Security you need to be signed in to the Spot console.
 <img src="/spot-security/_media/getting-started-04.png" />
 
 ## Step 2: Deploy CloudFormation Template
+
 1. Go back to the Onboard tab in the Spot console.
 2. Under Step 2, click Run Template.
 
 <img src="/spot-security/_media/getting-started-05.png" />
 
-   The AWS stack creation page will appear as shown below.
+The AWS stack creation page will appear as shown below.
 
 <img src="/spot-security/_media/getting-started-06.png" />
 
@@ -56,6 +60,7 @@ To get started with Spot Security you need to be signed in to the Spot console.
 <img src="/spot-security/_media/getting-started-10.png" />
 
 ## Step 3: Add your Bucket Information
+
 1. Once the stack creation completes, go to the Outputs tab and copy the Bucket Name.
 2. Go back to the Onboard page in the Spot console, and paste the Bucket Name in the Bucket Name field.
 

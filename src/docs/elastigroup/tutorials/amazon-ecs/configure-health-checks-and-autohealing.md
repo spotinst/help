@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Set Health Checks and Autohealing
 
 ## Elastigroup Health Checks For ECS

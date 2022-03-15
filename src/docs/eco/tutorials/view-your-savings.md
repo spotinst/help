@@ -1,10 +1,10 @@
 # View Savings in Dashboard
 
-Once Eco has been enabled for your organization and you have chosen your reserved instance (RI) [Strategy](eco/tutorials/choose-a-strategy), your Eco dashboard will switch to a more complete view of savings.
+Once Eco has been enabled for your organization and you have chosen your reserved instance (RI) [Strategy](eco/tutorials/choose-a-strategy), your Eco dashboard (AWS) will switch to a more complete view of savings.
 
-To view the Eco dashboard in the console, go to Eco on the left side and click Dashboard.
+To view the Eco dashboard in the console, go to Eco on the left side and click Dashboard, then click the AWS tab.
 
-<img src="/eco/_media/tutorials-view-savings-01bb.png" />
+<img src="/eco/_media/tutorials-view-savings-01bc.png" />
 
 ## Filters
 
@@ -14,8 +14,9 @@ By default, the dashboard shows data since the first day of your AWS account, fr
 
 You can set the following filters:
 
-- Selected Services: Choose the services which will be included in the charts and tables.
 - Time: Choose the range of dates for which data will be displayed.
+- Regions: Choose the regions which will be included in the charts and tables.
+- Selected Services: Choose the services which will be included in the charts and tables.
 
 ## Summary Line
 
@@ -68,10 +69,10 @@ A line graph that breaks down the story of how reservations, savings plan covera
 
 A filterable table and corresponding chart which allow you to review your commitments in a variety of ways. By placing your cursor in the filter field, you will see which parameters can be selected.
 
-<img src="/eco/_media/tutorials-view-savings-01e.png" />
+<img src="/eco/_media/tutorials-view-savings-01e2.png" />
 
+- Account ID: Account number identifier.
 - Commitment ID: Identifier of the Reservation or Savings Plan. The row and ID appear when it fits within the relevant filters.
-- Usage Account Name: Account utilizing the discount.
 - Commitment Type: Standard RI, Convertible RI, Compute Savings Plan, or EC2 Savings Plan.
 - $ Used: The total equivalent cost within the time range multiplied by the utilization.
   - Example 1: If the time range covered the entire term of the reservation, it was 100% utilized, and the total equivalent cost was $1000, the result would be $1000.
@@ -83,15 +84,13 @@ A filterable table and corresponding chart which allow you to review your commit
 - Generated Savings: How much you saved due to using commitments' discounted rates instead of the full on demand rates. Calculation: On Demand equivalent minus commitments minus uncovered spend. Not necessarily the same as net savings.
 - Source: Eco or Non-Eco.
 
-### Commitment per Service
+### Total Active Commitments
 
-A pie chart showing the current reserved instance commitment broken down into the different services.
+This chart provides amortized costs (i.e., up-front plus recurring costs) of all active commitments according to the designated filters and views.
 
-### Commitment per Region
+<img src="/eco/_media/tutorials-view-savings-02a.png" />
 
-A pie chart showing the current reserved instance commitment broken down by region.
-
-## Reservation Details Report
+## Commitment Details Report
 
 Below the overview graphs and pie charts, you can see a table with detailed information about your reserved instances, including your total generated savings at the bottom of the table.
 
@@ -113,7 +112,12 @@ You can filter the data displayed according to several criteria available.
 
 You can customize the columns that appear in the table. The following column headings are available:
 
-- Commitment type
+- Savings type: 
+  - COMP SP: Compute Savings Plan
+  - EC2 SP: EC2 Savings Plan
+  - SAGE SP: Sagemaker Savings Plan
+  - RI-S: Standard Reserved Instance
+  - RI-C: Convertible Reserved Instance
 - Instance type
 - Quantity: The number of instances in the batch.
 - Service
@@ -135,5 +139,5 @@ To export the Reservation Details report to a CSV file, click Export above the t
 
 ## What’s Next?
 
-- Learn how to [Manage Subsets](cloud-analyzer/tutorials/manage-subsets).
+- Learn how to [Manage Subsets](eco/tutorials/manage-subsets).
 - Learn more about analyzing and tracking all of your cloud compute expenses with [Cloud Analyzer](cloud-analyzer/).

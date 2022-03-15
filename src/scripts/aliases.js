@@ -1584,6 +1584,73 @@ export const aliases = (() => {
       "/ocean-spark/product-tour/view-cluster-details",
 
     "/wave/features/cost-analysis": "/ocean-spark/product-tour/analyze-costs",
+
+    "/elastigroup/tutorials/elastigroup-tasks/create-an-elastigroup-from-scratch-a":
+      "/elastigroup/tutorials/elastigroup-tasks/create-an-elastigroup-from-scratch",
+
+    "/elastigroup/features/core-features/elastigroup-capacity-instances-or-weighted-a":
+      "/elastigroup/features/core-features/elastigroup-capacity-instances-or-weighted",
+
+    "/elastigroup/features/core-features/market-scoring-managing-interruptions-a":
+      "/elastigroup/features/core-features/market-scoring-managing-interruptions",
+
+    "/elastigroup/features/compute/preferred-instance-types-a":
+      "/elastigroup/features/compute/preferred-instance-types",
+
+    "/ocean/features/launch-specifications": "/ocean/features/vngs/",
+
+    "/ocean/features/z-OLD-launch-specifications": "/ocean/features/vngs/",
+
+    "/ocean/features/z-OLD2-launch-specifications": "/ocean/features/vngs/",
+
+    "/ocean/concepts/ocean-cloud/create-cluster-roll/": "/ocean/features/roll",
+
+    "/elastigroup/tutorials/elastigroup-budgets/budgets":
+      "/elastigroup/tutorials/elastigroup-budgets/",
+
+    "/elastigroup/tutorials/amazon-ecs/enable-autoscaling-for-ecs":
+      "/ocean/getting-started/ecs",
+
+    "/elastigroup/features/amazon-ecs/": "/ocean/overview-ecs",
+
+    "/elastigroup/features/amazon-ecs/elastigroup-for-ecs":
+      "/ocean/overview-ecs",
+
+    "/elastigroup/features/amazon-ecs/autoscaler-tetris-scaling":
+      "/ocean/overview-ecs",
+
+    "/elastigroup/features/amazon-ecs/automatic-autoscaler-for-ecs":
+      "/ocean/overview-ecs",
+
+    "/elastigroup/features/amazon-ecs/custom-autoscaler-for-ecs":
+      "/ocean/overview-ecs",
+
+    "/elastigroup/features/amazon-ecs/autoscaler-headroom":
+      "/ocean/overview-ecs",
+
+    "/elastigroup/tutorials/amazon-ecs/": "/ocean/getting-started/ecs",
+
+    "/elastigroup/tutorials/amazon-ecs/get-started-with-ecs-on-elastigroup":
+      "/ocean/getting-started/ecs",
+
+    "/elastigroup/tutorials/amazon-ecs/configure-health-checks-and-autohealing":
+      "/ocean/getting-started/ecs",
+
+    "/elastigroup/tutorials/amazon-ecs/configure-attributes-for-task-placement-constraints":
+      "/ocean/getting-started/ecs",
+
+    "/elastigroup/tutorials/amazon-ecs/create-cluster-roll":
+      "/ocean/getting-started/ecs",
+
+    "/elastigroup/tutorials/amazon-eks/": "/ocean/getting-started/eks/",
+
+    "/elastigroup/tutorials/amazon-eks/create-elastigroup-eks-cluster":
+      "/ocean/getting-started/eks/",
+
+    "/elastigroup/tutorials/amazon-eks/configure-kubectl-for-eks-install-controller":
+      "/ocean/getting-started/eks/",
+
+    "/cloud-analyzer/tutorials/manage-subsets": "/eco/tutorials/manage-subsets",
   };
 
   for (let [key, value] of Object.entries(map)) {

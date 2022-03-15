@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Connect a Fargate Service
 
 You can import an [ECS Fargate](https://aws.amazon.com/fargate/?whats-new-cards.sort-by=item.additionalFields.postDateTime&whats-new-cards.sort-order=desc&fargate-blogs.sort-by=item.additionalFields.createdDate&fargate-blogs.sort-order=desc) service into an existing Ocean ECS cluster. Upon Fargate service import, Spot clones the selected Fargate services and runs them with the same VPC and subnet settings on EC2 spot Instances. This enables you to focus on your applications and enjoy all the optimization and scaling features of Ocean without having to manage the underlying infrastructure.

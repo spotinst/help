@@ -39,5 +39,5 @@ To set up preferred AZs, follow the steps below.
 You may want to learn more about:
 
 - [Equal AZ Instance Distribution](elastigroup/features/core-features/equal-az-instance-distribution-orientation.md)
-- Configuring [Preferred Instance Types](elastigroup/features/compute/preferred-instance-types-a.md)
+- Configuring [Preferred Instance Types](elastigroup/features/compute/preferred-instance-types.md)
 - All the options available in [Predictive Rebalancing](elastigroup/features/core-features/predictive-rebalancing.md)
