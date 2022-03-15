@@ -6,14 +6,14 @@ From all tenant-specific pages, the _Config Actions_ menu provides quick access 
 
 ## Images
 
-Config actions for Images include: List, Create, Edit and Delete.
+Config actions for Images include List, Create, Edit and Delete.
 <br><img src="/spot-pc/_media/features-spot-pc-console-tenant-config-actions-02.png" />
 
 A tutorial for deploying Spot PC covering creating an Image and deploying a Spot Group is found [here](spot-pc/tutorials/deploy-spot-pc).
 
 ## Spot Groups
 
-Config actions for Spot Groups include: List, Create, Edit, Update and Delete.<br>
+Config actions for Spot Groups include List, Create, Edit, Update and Delete.<br>
 **Update** is used to update the Image used for the Spot Group, updating the machine(s) used to host users' desktops. A tutorial for updating a Spot Group with a new Image is found [here](spot-pc/tutorials/deploy-image-update).
 
 <br><img src="/spot-pc/_media/features-spot-pc-console-tenant-config-actions-03.png" />

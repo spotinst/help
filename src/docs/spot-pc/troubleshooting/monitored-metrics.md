@@ -4,7 +4,7 @@ Spot PC uses Cloud Insights and other technologies to monitor and alert on speci
 ## Spot PC Alerts
 
 ### Virtual Machine Context
-The following metrics are collected from the VMs in Spot PC, both session hosts and and Business Servers running alongside Spot PC.
+The following metrics are collected from the VMs in Spot PC, both session hosts and any Business Servers running alongside Spot PC.
 
 #### CPU Consumption %: 
 Indicates the average % consumption for the period indicated. The default time interval displayed is the last 15 minutes, with multiple data-points per minute.
@@ -212,7 +212,7 @@ Note: GPU Memory consumption is separate and independent from the VM's Memory co
 
 Note: when GPU Memory % is high but GPU Usage % is low it could be an indicator that the GPU is processing data faster than the memory available can get the data to the GPU for processing.
 
-**Resolving high GPU Memory %:** First, use the Time Interval function to change how long the data is displayed. This can give you a sense of when the issue originally began and whether there is a recurring pattern. If the issue is consistent, consider increasing the size of the VM in order to increase the amount of GPU RAM available.
+**Resolving high GPU Memory %:** First, use the Time Interval function to change how long the data is displayed. This can give you a sense of when the issue originally began and whether there is a recurring pattern. If the issue is consistent, consider increasing the size of the VM to increase the amount of GPU RAM available.
 
 #### Video Decoder % 
 Description: NVIDIA GPUs utilize hardware decoding, reducing CPU consumption and reserving it for other purposes. This is independent of graphics performance. The default time interval displayed is the last 3 hours, with data provided for every minute. 
@@ -279,7 +279,7 @@ Impact: FSLogix being offline
 **Resolving FSLogix alerts:** Connect to the session host server and open Task Manager, then restart the service  
 
 ##### Cloud Insights Acquisition Unit:
-Description: The Cloud Insights acquisition unit facilitates the collection of data from from a VM.
+Description: The Cloud Insights acquisition unit facilitates the collection of data from a VM.
 
 Impact: Cloud Insights acquisition unit being offline
 
@@ -501,7 +501,7 @@ Note: when GPU Memory % is high but GPU Usage % is low it could be an indicator 
 
 Note: GPU Memory consumption is separate and independent from the VM's Memory consumption, meaning they don't share resources.
 
-**Resolving high GPU Memory %:** First, use the Time Interval function to change how long the data is displayed. This can give you a sense of when the issue originally began and whether there is a recurring pattern. If the issue is consistent, consider increasing the size of the VM in order to increase the amount of GPU RAM available.
+**Resolving high GPU Memory %:** First, use the Time Interval function to change how long the data is displayed. This can give you a sense of when the issue originally began and whether there is a recurring pattern. If the issue is consistent, consider increasing the size of the VM to increase the amount of GPU RAM available.
 
 #### Video Decoder % 
 Description: NVIDIA GPUs utilize hardware decoding, reducing CPU consumption and reserving it for other purposes. This is independent of graphics performance. The default time interval displayed is the last 3 hours, with data provided for every minute. 

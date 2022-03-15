@@ -29,7 +29,7 @@ Tenants can contain one or more Spot Group(s).
 
 ### Organization
 
-The Organization represents an IT support organization. Typically this is a Managed Services Provider (MSP) supporting multiple customers or an internal IT department supporting one or more business units.
+The Organization represents an IT support organization. Typically, this is a Managed Services Provider (MSP) supporting multiple customers or an internal IT department supporting one or more business units.
 
 All tenants are assigned to one (and only one) Organization. Multiple Tenants can be assigned to the same Organization.
 
@@ -60,7 +60,7 @@ Within the Spot PC Console there is an Image Set Library, accessible from the Co
 
 ## Spot PC Desktops
 
-Spot PC deployments offer a managed option where customized architecture is used to deliver a customizable experience to Spot PC users. Spot PC technology manages the deployment, the data layer and available VM resources (VM size and qty) in order to maximize performance and minimize costs.
+Spot PC deployments offer a managed option where customized architecture is used to deliver a customizable experience to Spot PC users. Spot PC technology manages the deployment, the data layer and available VM resources (VM size and qty) to maximize performance and minimize costs.
 
 Instructions on configuring Spot PC desktops can be found [here](spot-pc/tutorials/deploy-windows-365-cloud-pc).
 

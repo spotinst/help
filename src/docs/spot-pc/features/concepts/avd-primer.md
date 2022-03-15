@@ -4,14 +4,14 @@ Azure Virtual Desktop (AVD) is a core technology used to deliver Spot PC and thi
 
 Microsoft provides through documentation on AVD and is a good resource for deep learning on the intricacies of AVD. One of the reasons Spot PC is valuable is that much of the nuance and exhaustive learning required to successfully leverage AVD manually has been automated and pre-architected for you. Thus, much of this detail is only important to satisfy curiosity and not a must-read to be successful with Spot PC. https://docs.microsoft.com/en-us/azure/virtual-desktop/overview
 
-AVD is a collection of Microsoft services, software licenses and technologies that have been brought together in Azure to simplify the delivery of remote desktops to end users. In traditional RD implementations the same components are present although, for the most part, each component needed to be acquired, configured and maintained by the IT support organization of the end users (e.g. MSP, internal IT).
+AVD is a collection of Microsoft services, software licenses and technologies that have been brought together in Azure to simplify the delivery of remote desktops to end users. In traditional RD implementations the same components are present although, for the most part, each component needed to be acquired, configured and maintained by the IT support organization of the end users (e.g., MSP, internal IT).
 
 ## Components of RD Deployments
 
-In order to fully understand how AVD fits in this offering, it is helpful to step back and consider what components it takes to successfully deliver a RD solution, independent of a specific technology (e.f. AVD, RDS, VDI, etc...)
+To fully understand how AVD fits in this offering, it is helpful to step back and consider what components it takes to successfully deliver a RD solution, independent of a specific technology (e.g., AVD, RDS, VDI, etc...)
 
 * User Access Devices
-  * In order to connect to their remote resources (desktop and/or apps), end users need some sort of device with which to connect. Examples include computers, Mobile devices and even a [Smart Fridge](https://youtu.be/fV-qiahSYFw).
+  * To connect to their remote resources (desktop and/or apps), end users need some sort of device with which to connect. Examples include computers, Mobile devices and even a [Smart Fridge](https://youtu.be/fV-qiahSYFw).
 * User Access Clients
   * The client applications used to connect to remote resources, come in many flavors. Installed clients software and web-based clients are available from many vendors provide clients as do 3rd party vendors. Hosting of web clients and/or install and customization of local client software is often required and managed by the IT team.
 * Gateway
@@ -53,7 +53,7 @@ In order to fully understand how AVD fits in this offering, it is helpful to ste
 * End User Helpdesk
   * Just like traditional desktop users, RD end users need a helpdesk resource to contact for support. When supporting an RD environment, many aspects of the helpdesk role is the same as a traditional desktop environment. However, depending on the RD configuration, the nature or frequency of questions and incidents are shifted. Also the method of support and the skillset of the helpdesk staff may be very different, with a greater focus on network connectivity and session host VM support.
 * Private Connectivity to IT Resources
-  * Access to IT resources that are not hosted along side the RD resources is often a requirement for RD projects. From on-premises servers to cloud-hosted services across any number fo public/private cloud vendors, there are diverse requirements for private connectivity to those resources. Often this takes the form or site-to-site VPN connectivity between the RD environment and the networks of those other IT resources. In Azure, Express Routes and vNet Peering are alternative options to establish private connectivity.
+  * Access to IT resources that are not hosted along side the RD resources is often a requirement for RD projects. From on-premises servers to cloud-hosted services across any number of public/private cloud vendors, there are diverse requirements for private connectivity to those resources. Often this takes the form or site-to-site VPN connectivity between the RD environment and the networks of those other IT resources. In Azure, Express Routes and vNet Peering are alternative options to establish private connectivity.
 
 
 ## Shifted Responsibility with AVD
@@ -100,7 +100,7 @@ Spot PC extends the progress made by AVD in shifting the responsibility of manag
 
 Examples of this shifting responsibility include:
 * VM Images
-  * Spot PC includes end-to-end image lifecycle management functionality. This automates much of the back-end complexity and prerequisites required to user an image based VM management approach. This approach is also a requirement to support some of the advanced optimization and business continuity functionality found elsewhere in Spot PC. This functionality automates the tactical tasks and allows the admin to simply pick a source image, connect to a temporary VM to configure the image, one-click sys-prep and finalization of the image. Spot PC also handles distributing the image to appropriate Azure regions, removing up the temporary VM resources,  applying the image to host VMs and automating the deployment and availability fo the new image to test and production users.
+  * Spot PC includes end-to-end image lifecycle management functionality. This automates much of the back-end complexity and prerequisites required to user an image based VM management approach. This approach is also a requirement to support some of the advanced optimization and business continuity functionality found elsewhere in Spot PC. This functionality automates the tactical tasks and allows the admin to simply pick a source image, connect to a temporary VM to configure the image, one-click sys-prep and finalization of the image. Spot PC also handles distributing the image to appropriate Azure regions, removing up the temporary VM resources,  applying the image to host VMs and automating the deployment and availability of the new image to test and production users.
 * Desktop Applications
   * The selection, install and configuration of desktop applications remains the responsibility of you, the IT team. Spot PC functionality for one-click remote access to all VMs and the Image management feature greatly simplify and automate the delivery of this IT function.
 * Desktop and Streaming Apps
@@ -122,9 +122,9 @@ Examples of this shifting responsibility include:
 * User Management and Identity Provider
   * Azure AD is the identity provider for AVD and Spot PC. Users' assignment to specific Spot PC resources (desktops and apps) is governed by the users' membership in AD Security Groups. The IT team is responsible for organizing the users into the appropriate groups and the ongoing management of that membership. Spot PC automation translates that membership, automatically exposing the appropriate resources when membership changes are made. Via Azure AD Connect, Azure AD and the local AD Domain Controller are synced for management simplicity.
 * Active Directory Domain
-  * While Azure AD is the identity provider, the VMs in AVD and Spot PC must join the actual AD DC, typically via a site-to-site VPN. The deployment of this VPN, along with the setup of Azure AD Connect are septs of the onboarding process fulfilled via a self-service workflow with support from the Spot PC services team. The configuration and management fo the AD DC remains the responsibility of the IT team.
+  * While Azure AD is the identity provider, the VMs in AVD and Spot PC must join the actual AD DC, typically via a site-to-site VPN. The deployment of this VPN, along with the setup of Azure AD Connect are septs of the onboarding process fulfilled via a self-service workflow with support from the Spot PC services team. The configuration and management of the AD DC remains the responsibility of the IT team.
 * Windows OS and User Session Licensing
-  * Licensing for the OS and user sessions in AVD are both handled as part fo the end user's Microsoft 365 subscription, a responsibility that remains with the IT team. Licensing for the OS for non-session host VMs including the management VM and any purchased Business Servers is included in the Spot PC service, that licensing responsibility is part of the Spot PC service.
+  * Licensing for the OS and user sessions in AVD are both handled as part of the end user's Microsoft 365 subscription, a responsibility that remains with the IT team. Licensing for the OS for non-session host VMs including the management VM and any purchased Business Servers is included in the Spot PC service, that licensing responsibility is part of the Spot PC service.
 * End User Helpdesk
   * The support of end users is solely provided by the IT team, end user support is not included in the Spot PC service. The Spot PC console does include significant real-time data visibility, log aggregation, one-click remote access and configurations functionality to enable the helpdesk to efficiently support their end users.
 * Private Connectivity to IT Resources

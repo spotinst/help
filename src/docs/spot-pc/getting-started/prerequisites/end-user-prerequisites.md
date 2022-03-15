@@ -22,7 +22,7 @@ The Remote Desktop clients must have access to the following URLs:
 | ------------------------------- | ----------------- | ----------------------- | --------------- |
 | \*.wvd.microsoft.com            | 443               | Service traffic         | All             |
 | \*.servicebus.windows.net       | 443               | Troubleshooting data    | All             |
-| go.microsoft.com                | 443               | Microsoft FWLinks       | All             |
+| go.microsoft.com                | 443               | Microsoft FW Links      | All             |
 | aka.ms                          | 443               | Microsoft URL shortener | All             |
 | docs.microsoft.com              | 443               | Documentation           | All             |
 | privacy.microsoft.com           | 443               | Privacy statement       | All             |

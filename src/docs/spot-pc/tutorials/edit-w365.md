@@ -4,7 +4,7 @@ For Cloud PC deployments the Connection and/or Provisioning Policy can be edited
 
 ## Edit Connection
 
-After selecting which Connection to edit, the second step allows you to to rename the configuration and change the credentials used for Cloud PC deployment.
+After selecting which Connection to edit, the second step allows you to rename the configuration and change the credentials used for Cloud PC deployment.
 <br><a href="https://docs.spot.io/spot-pc/_media/tutorials-edit-w365-01.png" target="_blank"><img src="/spot-pc/_media/tutorials-edit-w365-01.png" alt="Click to Enlarge" width="500"> </a>
 
 On the third step, you can re-run the Health Check to confirm the Connection remains healthy.
