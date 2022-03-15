@@ -77,7 +77,9 @@ The following steps can be applied to management groups instead of subscriptions
 In the code boxes below are the Spot Eco policies, with limited access. It primarily targets Virtual Machines. Replace the <subscriptionID> in the JSON with one or more actual subscriptionIDs you need Eco to review (or manage).
 
 <details>
-  <summary markdown="span"><h4>Read-Only Permissions</h4</summary>
+  <summary markdown="span"><strong>Read-Only Permissions</strong></summary>
+
+#### Read-Only Permissions
 
 ```json
 {
@@ -174,7 +176,9 @@ In the code boxes below are the Spot Eco policies, with limited access. It prima
 </details><br>
 
 <details>
-  <summary markdown="span"><h4>Full Permissions</h4></summary>
+  <summary markdown="span"><strong>Full Permissions</strong></summary>
+
+#### Full Permissions
 
 ```json
 {
