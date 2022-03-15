@@ -15,7 +15,7 @@ docker run -d -p 8080:8080 -e FERNET_KEY=`openssl rand -base64 32` \
    --name test-airflow apache/airflow:2.2.3-python3.7 webserver
 ```
 
-### Airflow 1
+#### Airflow 1
 
 ```shell
 mkdir -p dags/
