@@ -30,8 +30,7 @@ Run the AD Connect installer downloaded in step one ([Confirm AD Connect is not 
 <br><a href="https://docs.spot.io/spot-pc/_media/tutorials-install-ad-connect-05.png" target="_blank"><img src="/spot-pc/_media/tutorials-install-ad-connect-05.png" alt="Click to Enlarge" width="1000"> </a>
 
 ## Choose to Customize the Install
-
-Several helpful features (e.g. AD group and password writeback) can only be enabled if AD Connect is installed using the customize option. Even is all default options are selected, the Customize install is preferred.
+Several helpful features (e.g., AD group and password writeback) can only be enabled if AD Connect is installed using the customize option. Even is all default options are selected, the Customize install is preferred.
 <br><a href="https://docs.spot.io/spot-pc/_media/tutorials-install-ad-connect-06.png" target="_blank"><img src="/spot-pc/_media/tutorials-install-ad-connect-06.png" alt="Click to Enlarge" width="1000"> </a>
 
 ## Install required components
@@ -50,8 +49,7 @@ Enter the credentials of an Azure AD Global Admin to authenticate to Azure AD.
 <br><a href="https://docs.spot.io/spot-pc/_media/tutorials-install-ad-connect-09.png" target="_blank"><img src="/spot-pc/_media/tutorials-install-ad-connect-09.png" alt="Click to Enlarge" width="1000"> </a>
 
 ## Connect your directories
-
-Select your AD forrest and click _Add Directory_.
+Select your AD forest and click _Add Directory_.
 <br><a href="https://docs.spot.io/spot-pc/_media/tutorials-install-ad-connect-10.png" target="_blank"><img src="/spot-pc/_media/tutorials-install-ad-connect-10.png" alt="Click to Enlarge" width="1000"> </a>
 
 The AD forest sync requires a service account to maintain the ongoing sync. It is strongly recommended that the _Create new AD account_ option is selected so that the account is dedicate to this sync and the permissions are set correctly.

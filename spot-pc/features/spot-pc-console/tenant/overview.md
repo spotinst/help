@@ -4,7 +4,7 @@ From the [Spot PC: Overview](spot-pc/features/spot-pc-console/overview) page, cl
 
 1. You can perform common configuration actions from the [Config Actions](spot-pc/features/spot-pc-console/tenant/config-actions) menu.
 2. You can navigate between tabs to find live data about the selected tenant across the top of the page.
-3. This page summarizes the total number of active user sessions, active machine and current security alerts.
+3. This page summarizes the total number of active user sessions, active machines, and all current security alerts.
 4. Tenant details are displayed for reference.
 5. Licenses applied to this tenant are summarized.
 

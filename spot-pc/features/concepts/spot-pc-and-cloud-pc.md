@@ -8,7 +8,7 @@ Spot PC uses AVD desktops for pooled user scenarios. In these cases, users typic
 
 Spot PC can also provision personal AVD virtual desktops for cases that Windows 365 cannot support, including the use of a Graphics Processing Unit (GPU) for heavy graphics applications like Computer Aided Design (CAD) or graphics design.
 
-AVD is also useful when a customer configuration has characteristics that Windows 365 does not currently support. Examples of this case include Azure tenants that are not InTune registered domains or have complex networks that prevent direct line of sight from the Windows 365 cloud PCs to the nearest domain controller.
+AVD is also useful when a customer configuration has characteristics that Windows 365 does not currently support. Examples of this case include Azure tenants that are not Intune registered domains or have complex networks that prevent direct line of sight from the Windows 365 cloud PCs to the nearest domain controller.
 
 ## Win365 Cloud PC Desktops
 
