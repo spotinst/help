@@ -7,6 +7,10 @@ Authentication for AVD users is performed against the Azure AD and thus, the use
 Prior to starting, confirm the AD Connect has not already been setup and configured on this (or any other) AD DC. This can be confirmed from within the Azure portal under Azure AD Connect. The AD Connect installer can be downloaded from here as well.
 <br><a href="https://docs.spot.io/spot-pc/_media/tutorials-install-ad-connect-01.png" target="_blank"><img src="/spot-pc/_media/tutorials-install-ad-connect-01.png" alt="Click to Enlarge" width="1000"> </a>
 
+If Azure AD Connect is already setup and syncing between the appropriate AA DC and Azure AD tenant, this prerequisite is likely complete. The current settings may be reviewed to confirm support for Spot PC.
+
+If Azure AD Connect is already (or was previously) setup and is non-functional or syncing between the wrong AD DC and/or Azure AD tenant, follow Microsoft's instructions for [disabling directory sync](https://docs.microsoft.com/en-US/troubleshoot/azure/active-directory/cannot-manage-objects#resolution), before [uninstalling Azure AD Connect](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/how-to-connect-uninstall).
+
 ## Enforce TLS 1.2
 
 Enforcing TLS 1.2 is required for AD Connect to securely sync with Azure AD. Microsoft provides guidance on enabling this for your AD DC here: https://docs.microsoft.com/en-us/azure/active-directory/hybrid/reference-connect-tls-enforcement
@@ -45,7 +49,7 @@ Select the method of end user sign-on desired. Please modify to meet your enviro
 Enter the credentials of an Azure AD Global Admin to authenticate to Azure AD.
 <br><a href="https://docs.spot.io/spot-pc/_media/tutorials-install-ad-connect-09.png" target="_blank"><img src="/spot-pc/_media/tutorials-install-ad-connect-09.png" alt="Click to Enlarge" width="1000"> </a>
 
-## Connect you directories
+## Connect your directories
 
 Select your AD forrest and click _Add Directory_.
 <br><a href="https://docs.spot.io/spot-pc/_media/tutorials-install-ad-connect-10.png" target="_blank"><img src="/spot-pc/_media/tutorials-install-ad-connect-10.png" alt="Click to Enlarge" width="1000"> </a>

@@ -2,17 +2,17 @@
 
 Onboarding a new Spot PC tenant is performed from within the [Spot PC console](https://admin.pc.spot.io/). For new administrators with no existing tenants, their initial login will automatically log them into the new tenant workflow.
 
-The Onboarding workflow can be accessed by clicking "+ Add New Tenant" from the Spot PC Dashboard.
+The Onboarding Workflow can be accessed by clicking "+ Add New Tenant" from the Spot PC Dashboard.
 
 <a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow-01.png" target="_blank"><img src="/spot-pc/_media/onboarding-workflow-01.png" alt="Click Image for Full Size" width="1000"> </a>
 
-The onboarding workflow has seven steps, each step is outlined below.
+The Onboarding Workflow has seven steps, each step is outlined below.
 
 <a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow-02.png" target="_blank"><img src="/spot-pc/_media/onboarding-workflow-02.png" alt="Click to Enlarge" width="1000"> </a>
 
 ## Onboarding Workflow Video
 
-A walkthrough of the onboarding workflow functionality is detailed here:
+A walkthrough of the Onboarding Workflow functionality is detailed here:
 
 <iframe src="https://www.youtube-nocookie.com/embed/YLDgldXgVzA?vq=hd1080&modestbranding=1&rel=0&theme=light&color=white" height="480" frameborder="0"></iframe>
 
@@ -115,7 +115,7 @@ As the automation runs and builds the Spot PC environment, several milestones ar
 
 **Validate deployment parameters**
 
-- This step evaluates all of your inputs in the onboarding workflow and transforms them into an ARM template and Desired State Configuration (DSC) used during the deployment automation.
+- This step evaluates all of your inputs in the Onboarding Workflow and transforms them into an ARM template and Desired State Configuration (DSC) used during the deployment automation.
 
 **Deploy ARM Template**
 
