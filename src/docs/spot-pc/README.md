@@ -48,13 +48,13 @@ Spot PC builds and maintains hosts for each user type. These hosts will be kept 
 
 ### Resource Allocation Note
 
-Below, examples of the resources allocated to each user type are outlined. The exact Azure VM type (e.g. RAM/CPU/GPU configuration) used for session hosts is determined by automation and thus the specific resources available to users is not a specific, fixed, amount. Spot PC aggregates usage and performance data to optimize these algorithms. Specific concerns about end users' performance experience should be raised with Spot PC support so adjustments can be made to ensure performance and productivity are maintained.
+Below, examples of the resources allocated to each user type are outlined. The exact Azure VM type (e.g., RAM/CPU/GPU configuration) used for session hosts is determined by automation and thus the specific resources available to users is not a specific, fixed, amount. Spot PC aggregates usage and performance data to optimize these algorithms. Specific concerns about end users' performance experience should be raised with Spot PC support so adjustments can be made to ensure performance and productivity are maintained.
 
 ### Pooled User Session Hosts
 
 Pooled users share a host with up to 9 other pooled users (10 total). Spot PC builds one VM host for every 10 licensed Pooled users (rounding up).
 
-Pooled end users can expect performance roughly equivalent to sharing a 4vCPU host with 32 GiB RAM (e.g. E4as v4). (See Resource Allocation Note [above](https://docs.spot.io/spot-pc/?id=resource-allocation-note))
+Pooled end users can expect performance roughly equivalent to sharing a 4vCPU host with 32 GiB RAM (e.g., E4as v4). (See Resource Allocation Note [above](https://docs.spot.io/spot-pc/?id=resource-allocation-note))
 
 For pooled users, each user session is assigned to a host sequentially (aka "depth mode"), filling each host with 10 users before moving on to fill the next host. Once a host reaches 6 active sessions, an additional host is proactively brought online to be ready ahead of the need for additional capacity.
 
@@ -62,13 +62,13 @@ For pooled users, each user session is assigned to a host sequentially (aka "dep
 
 Personal users connect to their own host machine. Spot PC builds a VM host for every licensed Personal user.
 
-Personal end users can expect performance roughly equivalent to 2 vCPUs and 8GiB RAM (e.g. D2as v4). (See Resource Allocation Note [above](https://docs.spot.io/spot-pc/?id=resource-allocation-note))
+Personal end users can expect performance roughly equivalent to 2 vCPUs and 8GiB RAM (e.g., D2as v4). (See Resource Allocation Note [above](https://docs.spot.io/spot-pc/?id=resource-allocation-note))
 
 ### GPU User Session Hosts
 
 GPU users connect to their own host machine. Spot PC builds a VM host for every licensed Personal user.
 
-GPU end users can expect performance roughly equivalent to 4 vCPUs, 14GiB RAM and 2Gib Video RAM on the AMD Radeon Instinct MI25 GPU (e.g. NV4as v4). (See Resource Allocation Note [above](https://docs.spot.io/spot-pc/?id=resource-allocation-note))
+GPU end users can expect performance roughly equivalent to 4 vCPUs, 14GiB RAM and 2Gib Video RAM on the AMD Radeon Instinct MI25 GPU (e.g., NV4as v4). (See Resource Allocation Note [above](https://docs.spot.io/spot-pc/?id=resource-allocation-note))
 
 ### Data Storage Layer
 
@@ -96,7 +96,7 @@ Occasionally, server resources may be required in the same subscription as the S
 
 ## Co-Management: Who does what?
 
-Spot PC co-management is a collaboration between Spot by NetApp, the IT administrator and the tenant organization. Each entity has a role in a successful Spot PC experience.
+Spot PC co-management is a collaboration between Spot by NetApp, the IT administrator, and the tenant organization. Each entity has a role in a successful Spot PC experience.
 
 ### Operate: Spot by NetApp
 

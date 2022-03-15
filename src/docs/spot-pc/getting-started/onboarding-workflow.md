@@ -60,7 +60,7 @@ The network scope must fall into one of these private ranges:
 
 ### Initialization Progress
 
-After the region is selected, the initialization of the tenant begins. Several resources are created by Spot PC in the Spot PC Azure subscription. This step can take several minutes. Progress is shown to the right under "Initialization Logs". The next step in the wizard can not begin until this initialization process finishes.
+After the region is selected, the initialization of the tenant begins. Several resources are created by Spot PC in the Spot PC Azure subscription. This step can take several minutes. Progress is shown to the right under "Initialization Logs". The next step in the wizard cannot begin until this initialization process finishes.
 
 <a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow-03.png" target="_blank"><img src="/spot-pc/_media/onboarding-workflow-03.png" alt="Click to Enlarge" width="1000"> </a>
 
@@ -71,7 +71,7 @@ While the users' identity must be a part of the Azure AD, each machine must also
 - Build a new AD DC - the AD DC role will be installed on a VM in the Spot PC Azure Subscription as part of the Spot PC onboarding automation.
 - Connect to an existing AD DC - Join Spot PC VMs to an existing AD DC via VPN/vNet Peering.
 
-In either case, select the appropriate domain address (e.g. company.onmicrosoft.com)
+In either case, select the appropriate domain address (e.g., company.onmicrosoft.com)
 
 <a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow-07.png" target="_blank"><img src="/spot-pc/_media/onboarding-workflow-07.png" alt="Click to Enlarge" width="1000"> </a>
 
@@ -83,7 +83,7 @@ A Domain Join admin account and password is collected at this point to facilitat
 
 ## Connect your Network
 
-In order for Spot PC to connect with the AD DC, the Spot PC vNet will need to be peered with an existing Azure vNet that has visibility to the AD DC.
+For Spot PC to connect with the AD DC, the Spot PC vNet will need to be peered with an existing Azure vNet that has visibility to the AD DC.
 
 <a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow-08.png" target="_blank"><img src="/spot-pc/_media/onboarding-workflow-08.png" alt="Click to Enlarge" width="1000"> </a>
 
@@ -101,7 +101,7 @@ All of your selections are shown for your review before clicking to finalize the
 
 ### Deployment Logs
 
-As the automation runs and builds the Spot PC environment, several milestones are tracked and that progress is shown on the right side of the page. These steps are:
+As the automation runs and builds the Spot PC environment, several milestones are tracked, and that progress is shown on the right side of the page. These steps are:
 
 <a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow-11.png" target="_blank"><img src="/spot-pc/_media/onboarding-workflow-11.png" alt="Click to Enlarge" width="1000"> </a>
 
@@ -115,7 +115,7 @@ As the automation runs and builds the Spot PC environment, several milestones ar
 
 **Validate deployment parameters**
 
-- This step evaluates all of your inputs in the Onboarding Workflow and transforms them into an ARM template and Desired State Configuration (DSC) used during the deployment automation.
+- This step evaluates all your inputs in the Onboarding Workflow and transforms them into an ARM template and Desired State Configuration (DSC) used during the deployment automation.
 
 **Deploy ARM Template**
 

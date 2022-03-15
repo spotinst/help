@@ -16,7 +16,7 @@ The customer must have an Azure AD tenant containing all Spot PC users. Since M3
 
 ## Establish Reseller Relationship
 
-The Spot PC service requires that a reseller relationship be established between the customer's Azure Tenant and the Spot PC CSP Tenant. In order to successfully establish the relationship, a global admin for that Azure AD tenant must follow this link and accept the invitation:
+The Spot PC service requires that a reseller relationship be established between the customer's Azure Tenant and the Spot PC CSP Tenant. To successfully establish the relationship, a global admin for that Azure AD tenant must follow this link and accept the invitation:
 
 https://admin.microsoft.com/Adminportal/Home?invType=ResellerRelationship&partnerId=47c1f6d2-b112-48e0-915f-4304efffb3e8&msppId=0&DAP=true#/BillingAccounts/partner-invitation
 

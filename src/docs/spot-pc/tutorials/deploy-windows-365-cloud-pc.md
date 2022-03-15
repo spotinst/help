@@ -10,8 +10,7 @@ Deploying Windows 365 Cloud PC requires Windows 365 licensing in Azure before th
 <br><a href="https://docs.spot.io/spot-pc/_media/tutorials-deploy-windows-365-cloud-pc-07.png" target="_blank"><img src="/spot-pc/_media/tutorials-deploy-windows-365-cloud-pc-07.png" alt="Click to Enlarge" width="1000"> </a>
 
 ## Create Connection
-
-To begin this workflow navigate to _Config Actions > Create Connection_ from within the appropriate tenant.
+To begin this workflow, navigate to _Config Actions > Create Connection_ from within the appropriate tenant.
 <br><a href="https://docs.spot.io/spot-pc/_media/tutorials-deploy-windows-365-cloud-pc-01.png" target="_blank"><img src="/spot-pc/_media/tutorials-deploy-windows-365-cloud-pc-01.png" alt="Click to Enlarge" width="1000"> </a>
 
 Creating the Connection is the first step towards adding a new (or additional) Windows 365 Cloud PC group. This Connection is analogous to the Spot Group for a Spot PC deployment.
@@ -67,11 +66,10 @@ Select an image from the available list.
 Review your selections, navigate to _previous_ steps to make changes.
 
 ## Create Provisioning Policy
-
-To begin this workflow navigate to _Config Actions > Create Provisioning Policy_ from within the appropriate tenant.
+To begin this workflow, navigate to _Config Actions > Create Provisioning Policy_ from within the appropriate tenant.
 <br><a href="https://docs.spot.io/spot-pc/_media/tutorials-deploy-windows-365-cloud-pc-05.png" target="_blank"><img src="/spot-pc/_media/tutorials-deploy-windows-365-cloud-pc-05.png" alt="Click to Enlarge" width="1000"> </a>
 
-Creating a Provisioning Policy is the third step towards adding a new (or additional) Windows 365 Cloud PC group. The Provisioning Policy associates the Connection with the Image and associates users to complete the Windows 365 Cloud PC creation process.
+Creating a Provisioning Policy is the third step towards adding a new (or additional) Windows 365 Cloud PC group. The Provisioning Policy links the Connection with the Image and links users to complete the Windows 365 Cloud PC creation process.
 <br><a href="https://docs.spot.io/spot-pc/_media/tutorials-deploy-windows-365-cloud-pc-06.png" target="_blank"><img src="/spot-pc/_media/tutorials-deploy-windows-365-cloud-pc-06.png" alt="Click to Enlarge" width="1000"> </a>
 
 ### Select Connection
