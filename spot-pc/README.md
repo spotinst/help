@@ -30,13 +30,12 @@ Spot PC is a managed, continuously optimized cloud desktop service that runs Azu
 
 ## Components and services
 
-- Fully managed & secured Desktop-as-a-Service (DaaS)
+- Co-managed & secured Desktop-as-a-Service (DaaS)
 - A service that is configured, not customized
 - Cross-tenant customer support for MSPs
 - Continuously optimized for price & performance
 - Tools for application migration & application management
-- Windows 10/11 image management Tools & update rules
-- Virtual Desktop application customization scripts
+- Windows 10/11 image management tools & update automation
 - RESTful API integrations with PSA
 
 <img src="/spot-pc/_media/spot-pc-01.png" />
@@ -45,7 +44,7 @@ Spot PC is a managed, continuously optimized cloud desktop service that runs Azu
 
 Spot PC session hosts are built in Azure using Spot automation to maximize availability and performance for end users while minimizing unnecessary costs.
 
-Spot PC builds as maintains hosts for each user type. These hosts will be kept in an offline state when not needed and brought online to support real-time workloads. Host machines typically take 2 minutes to come online and be ready for new user sessions. Spot PC maintains an extra 10% of online capacity in each Spot Group to provide end users with instant availability for nearly all login patterns. It is possible that user login storms (when many users simultaneously login) may cause some users to receive a login failure. The system automates the availability of additional resources and simply retrying 1-2 minutes later should be enough effort for a user to successfully connect.
+Spot PC builds and maintains hosts for each user type. These hosts will be kept in an offline state when not needed and brought online to support real-time workloads. Host machines typically take 2 minutes to come online and be ready for new user sessions. Spot PC maintains an extra 10% of online capacity in each Spot Group to provide end users with instant availability for nearly all login patterns. It is possible that user login storms (when many users simultaneously login) may cause some users to receive a login failure. The system automates the availability of additional resources and simply retrying 1-2 minutes later should be enough effort for a user to successfully connect.
 
 ### Resource Allocation Note
 
@@ -93,7 +92,7 @@ The size of the data storage layer is calculated at 25Gib licensed user. Additio
 
 Many use cases require dedicated server infrastructure to support customer workflows. Spot PC environments can easily be integrated with other (self-managed) Azure Subscription resources via vNet peering. This option makes integrating machines and services with the Spot PC environment easy to manage without requiring ongoing support from the Spot PC team.
 
-Occasionally, server resources may be required in the same subscription as the Spot PC session hosts. This may be due to technical requirements or business reasons. To support this requirement, Spot PC offers an add-on subscription to add Business Server resources as a separate SKU. The SKU includes a set mix of resources (4vCPU/8GiB RAM/128GiB HDD) which can be applied to one or more machines. The minimum size is 2 vCPU, 8GiB RAM and 128GiB Managed Disk. Multiple Business server SKUs can be purchased, with the resources applied to a single VM or multiple. For example, two Business Server SKUs could support either 1x D4as_v4 (4vCPU/8GiB/256GIB HDD) or 2x D2as_v4 (2vCPU/4GiB/128GIB HDD) each.
+Occasionally, server resources may be required in the same subscription as the Spot PC session hosts. This may be due to technical requirements or business reasons. To support this requirement, Spot PC offers an add-on subscription to add Business Server resources as a separate SKU. The SKU includes a set mix of resources (4vCPU/8GiB RAM/128GiB HDD) which can be applied to one or more machines. The minimum size is 2 vCPU, 8GiB RAM and 128GiB Managed Disk. Multiple Business Server SKUs can be purchased, with the resources applied to a single VM or multiple. For example, two Business Server SKUs could support either 1x D4as_v4 (4vCPU/8GiB/256GIB HDD) or 2x D2as_v4 (2vCPU/4GiB/128GIB HDD) each.
 
 ## Co-Management: Who does what?
 
@@ -101,7 +100,7 @@ Spot PC co-management is a collaboration between Spot by NetApp, the IT administ
 
 ### Operate: Spot by NetApp
 
-- Architecture & solution coaching
+- Architecture & solutions coaching
 - Onboarding and migration project planning and support
 - Spot PC deployment support (including Azure Components)
 - Provide end-to-end Image management platform

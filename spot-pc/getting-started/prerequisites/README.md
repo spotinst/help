@@ -39,7 +39,7 @@ If Spot PC is to be integrated with an existing Active Directory Domain Controll
 
 ## Existing Azure vNet
 
-An existing Azure vNet must be configured with network access to the AD DC. This is typically accomplished via a site-to-site VPN or by running the AD DC on a VM attached to that vNet. A Spot PC network will be created and peered with this existing vNet as part of the onboarding workflow.
+An existing Azure vNet must be configured with network access to the AD DC. This is typically accomplished via a site-to-site VPN or by running the AD DC on a VM attached to that vNet. A Spot PC network will be created and peered with this existing vNet as part of the Onboarding Workflow.
 
 ## Virtual Network Scope
 

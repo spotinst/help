@@ -15,7 +15,7 @@ Alerting thresholds:
 
 High value indicates that users or applications are consuming a large amount of CPU resources.  
 
-Note: This data is displayed in various parts of the Spot PC console.  On the Machines dashboard view (where all machines are summarized in a table) both "CPU % Trend" (average) and "CPU % Peak" (highest value in range) values are displayed.  On the Machine Performance view (where the details for a single machine are displayed) the time-series chart displays the average value.
+Note: This data is displayed in various parts of the Spot PC console. On the Machines dashboard view (where all machines are summarized in a table) both "CPU % Trend" (average) and "CPU % Peak" (highest value in range) values are displayed. On the Machine Performance view (where the details for a single machine are displayed) the time-series chart displays the average value.
 
 **Resolving high CPU Consumption %:** First, use the time interval function to change the duration of the data displayed. This can give you a sense of when the issue originally began and if there is a recurring pattern. Next, navigate to the Performance tab to see which specific users and processes are consuming CPU resources. Finally, either communicate with the user/s directly and/or use the Connect to Machine Quick Action to navigate to the machine to troubleshoot further.
 
@@ -28,7 +28,7 @@ Alerting thresholds:
 
 High value indicates that users or applications are consuming a large amount of Memory (RAM) resources.  
 
-Note: This data is displayed in various parts of the Spot PC console.  On the Machines dashboard view (where all machines are summarized in a table) both "RAM % Trend" (average) and "RAM % Peak" (highest value in range) values are displayed.  On the Machine Performance view (where the details for a single machine are displayed) the time-series chart displays the average value.
+Note: This data is displayed in various parts of the Spot PC console. On the Machines dashboard view (where all machines are summarized in a table) both "RAM % Trend" (average) and "RAM % Peak" (highest value in range) values are displayed. On the Machine Performance view (where the details for a single machine are displayed) the time-series chart displays the average value.
 
 **Resolving high Memory consumption %:** First, use the time interval function to change the duration of the data displayed. This can give you a sense of when the issue originally began and if there is a recurring pattern. Next, navigate to the Performance tab to see which specific users and processes are consuming RAM resources. Finally, either communicate with the user/s directly and/or use the Connect to Machine Quick Action to navigate to the machine to troubleshoot further.
 
@@ -61,9 +61,9 @@ Alerting thresholds:
 - Warning: 150+ milliseconds for 5 consecutive minutes
 - Critical: 200+ milliseconds for 5 consecutive minutes
 
-A high value indicates reduced connection quality between the user’s physical location and the location of their virtual desktop. This is an ongoing measurement, making it more relevant than the quality of a user’s login time since that is a point-in-time metric. This may manifest in “it feels slow” complaints or user sessions spontaneously disconnecting.  
+A high value indicates reduced connection quality between the user’s physical location and the location of their virtual desktop. This is an ongoing measurement, making it more relevant than the quality of a user’s login time since that is a point-in-time metric. This may manifest in “it feels slow” complaints or user sessions spontaneously disconnecting.
 
-**Resolving high Round Trip Time:** First, use the time interval function to change how long the data is displayed. This can give you a sense of when the issue originally began and whether there is a recurring pattern. If the issue is consistent, then consider adding additional Sites to resolve geographic-based challenges users are facing. Root cause resolutions for these issues are ultimately up to the ISPs responsible for the networks and the hops in between those networks. Tools like Traceroute or Pingplotter can help identify where the challenges lie in the connection at a point in time.    
+**Resolving high Round Trip Time:** First, use the time interval function to change how long the data is displayed. This can give you a sense of when the issue originally began and whether there is a recurring pattern. If the issue is consistent, then consider adding additional Sites to resolve geographic-based challenges users are facing. Root cause resolutions for these issues are ultimately up to the ISPs responsible for the networks and the hops in between those networks. Tools like Traceroute or Pingplotter can help identify where the challenges lie in the connection at a point in time.   
 
 #### User Input Delay 
 Indicates the average amount of time it takes a user’s action to take effect and be shown to them in their virtual desktop consumption for the period indicated. This is often reflected in how quickly the user sees the text they type appear in an email or in a Word document. The default time interval displayed is the last 15 minutes, with multiple data-points per minute. 
@@ -107,7 +107,7 @@ Alerting thresholds:
 - Critical: 10+ frames for 5 consecutive minutes
 - Warning: 5+ frames for 5 consecutive minutes
 
-A high value indicates that resource consumption on the VM itself is resulting in reduced performance in user sessions. This should be easy to confirm, as CPU/RAM (or both) should indicate high consumption as well. This may result in “it feels slow” complaints or “I can’t work” reports in extreme scenarios.  
+A high value indicates that resource consumption on the VM itself is resulting in reduced performance in user sessions. This should be easy to confirm, as CPU/RAM (or both) should indicate high consumption as well. This may result in “it feels slow” complaints or “I can’t work” reports in extreme scenarios.
 
 **Resolving high Frames Skipped – Insufficient Server Resources:** First, use the Time Interval function to change how long the data is displayed. This can give you a sense of when the issue originally began and whether there is a recurring pattern. Troubleshooting what is consuming excessive CPU/RAM should reduce the values displayed here. If the issue is consistent, then consider adding additional CPU/RAM to relieve this bottleneck.
 
@@ -184,7 +184,7 @@ Alerting thresholds:
 
 High value indicates that a large amount of graphics processing/rendering has been offloaded from the CPU and onto the GPU.   
 
-Note: if you see both zero GPU Usage % and high CPU consumption on this VM, then odds are the hardware acceleration is disabled for the VM (or that some other GPU enabling GPO is off).  
+Note: if you see both zero GPU Usage % and high CPU consumption on this VM, then odds are the hardware acceleration is disabled for the VM (or that some other GPU enabling GPO is off).
 
 **Resolving high GPU Usage % consumption:** First, use the Time Interval function to change how long the data is displayed. This can give you a sense of when the issue originally began and whether there is a recurring pattern. If the issue is consistent, then consider increasing the size of the VM to one with a larger amount of GPU allocated.
 
@@ -208,9 +208,9 @@ Alerting thresholds:
 
 High value indicates that a large amount of GPU memory available is being accessed by the GPU. This also allows the GPU to communicate with its own memory much faster.
 
-Note: GPU Memory consumption is separate and independent from the VM's Memory consumption, meaning they don't share resources.  
+Note: GPU Memory consumption is separate and independent from the VM's Memory consumption, meaning they don't share resources.
 
-Note: when GPU Memory % is high but GPU Usage % is low it could be an indicator that the GPU is processing data faster than the memory available can get the data to the GPU for processing.  
+Note: when GPU Memory % is high but GPU Usage % is low it could be an indicator that the GPU is processing data faster than the memory available can get the data to the GPU for processing.
 
 **Resolving high GPU Memory %:** First, use the Time Interval function to change how long the data is displayed. This can give you a sense of when the issue originally began and whether there is a recurring pattern. If the issue is consistent, consider increasing the size of the VM in order to increase the amount of GPU RAM available.
 
@@ -336,7 +336,7 @@ Impact: The Windows Azure Network Agent service being offline indicates that cha
 **Resolving Windows Azure Network Agent alerts:** Connect to the session host server and open Task Manager, then restart the service  
 
 ### Storage Layer Context
-The following metrics are collected from the storage service that supports the Spot PC environment.  Typically this service is run on Azure NetApp Files or Azure Files.
+The following metrics are collected from the storage service that supports the Spot PC environment. Typically this service is run on Azure NetApp Files or Azure Files.
 
 #### ANF Volume Capacity:
 Description: Displays the amount of storage consumed related to the amount of storage provisioned. The default time interval displayed is the last 3 hours, with data provided for every minute. 
@@ -350,12 +350,12 @@ High value indicates that the amount of storage consumed on an ANF volume is nea
 **Resolving high Capacity:** First, use the Time Interval function to change how long the data is displayed. This can give you a sense of when the issue originally began and whether this is an increasing trend you have to plan for or a one-time increase in storage consumed. If the amount of storage continues to trend upwards, then consider increasing the size of the volume to accommodate the growth over time vs. a one-time increase.
 
 #### ANF IOPS:
-Description: This is a representation of the total amount of operations on the volume.  The default time interval displayed is the last 3 hours, with data provided for every minute. 
+Description: This is a representation of the total amount of operations on the volume. The default time interval displayed is the last 3 hours, with data provided for every minute. 
 
 Alerting thresholds:
 - IOPS are not alerted on – they are a highly relative data point that is largely used as a reference for other, related metrics
 
-High value indicates that a high amount of read and write activity against the volume.  
+High value indicates that a high amount of read and write activity against the volume.
 
 **Resolving high IOPS:** First, use the Time Interval function to change how long the data is displayed. This can give you a sense of when the issue originally began and whether there is a recurring pattern. If the issue is consistent, then consider increasing the size of your ANF capacity pool/volume.
 
@@ -366,7 +366,7 @@ Alerting Thresholds:
 - Critical: 20+ milliseconds for 1 consecutive minutes
 - Warning: 10+ (but less than 25) milliseconds for 1 consecutive minutes
 
-High value indicates that the amount of time it takes each individual I/O action to resolve. The higher the latency and the larger the IOPS, the more impact storage performance will have on individual user sessions.  
+High value indicates that the amount of time it takes each individual I/O action to resolve. The higher the latency and the larger the IOPS, the more impact storage performance will have on individual user sessions.
 
 **Resolving high Latency:** First, use the Time Interval function to change how long the data is displayed. This can give you a sense of when the latency began increasing and whether there is a recurring pattern. If the issue is consistent, then open a ticket from the Azure portal and ask the Microsoft team to investigate.
 
@@ -376,12 +376,12 @@ Description: This is a representation of the read and write latency from the v
 Alerting Thresholds:
 - Throughput is not alerted on – they are a highly relative data point that is largely used as a reference for other, related metrics
 
-High value indicates that the amount of time it takes each individual I/O action to resolve. The higher the latency and the larger the IOPS, the more impact storage performance will have on individual user sessions.  
+High value indicates that the amount of time it takes each individual I/O action to resolve. The higher the latency and the larger the IOPS, the more impact storage performance will have on individual user sessions.
 
 **Resolving high Latency:** First, use the Time Interval function to change how long the data is displayed. This can give you a sense of when the latency began increasing and whether there is a recurring pattern. If the issue is consistent, then open a ticket from the Azure portal and ask the Microsoft team to investigate.
 
 ### End User Context
-The following metrics are collected from various places including the session host VMs, the local control plane and Azure platform services.  These metrics relate to a specific end user and their connection, rather than an entire VM or Azure service.
+The following metrics are collected from various places including the session host VMs, the local control plane and Azure platform services. These metrics relate to a specific end user and their connection, rather than an entire VM or Azure service.
 
 #### CPU Consumption %: 
 Description: Indicates the user’s average % consumption for the period indicated. The default time interval displayed is the last 3 hours, with data provided for every minute. 
@@ -414,9 +414,9 @@ Alerting thresholds:
 
 High value indicates that there is reduced connection quality between the user’s physical location and the location of their virtual desktop. This is an ongoing measurement, making it more relevant than the quality of a user’s login time since that is a point-in-time metric.
 
-This may manifest in “it feels slow” complaints or at worst, in a user’s session disappearing (technically, entering a disconnected state – the user can log in and resume working without losing their work, but at first it appears as if their desktop is now gone).   
+This may manifest in “it feels slow” complaints or at worst, in a user’s session disappearing (technically, entering a disconnected state – the user can log in and resume working without losing their work, but at first it appears as if their desktop is now gone).  
 
-**Resolving high Round Trip Time:** First, use the Time Interval function to change how long the data is displayed. This can give you a sense of when the issue originally began and whether there is a recurring pattern. If the issue is consistent, then consider adding additional Sites to resolve geographic-based challenges users are facing. Root cause resolutions for these issues are ultimately up to the ISPs responsible for the networks and the hops in between those networks. Tools like Traceroute or Pingplotter can help identify where the challenges lie in the connection at a point in time.    
+**Resolving high Round Trip Time:** First, use the Time Interval function to change how long the data is displayed. This can give you a sense of when the issue originally began and whether there is a recurring pattern. If the issue is consistent, then consider adding additional Sites to resolve geographic-based challenges users are facing. Root cause resolutions for these issues are ultimately up to the ISPs responsible for the networks and the hops in between those networks. Tools like Traceroute or Pingplotter can help identify where the challenges lie in the connection at a point in time.   
 
 #### User Input Delay 
 Description: Indicates the average amount of time it takes a user’s action to take effect and be shown to them in their virtual desktop consumption for the period indicated. This is often reflected in how quickly the user sees the text they type appear in an email or in a Word document. The default time interval displayed is the last 3 hours, with data provided for every minute. 
@@ -436,7 +436,7 @@ Alerting thresholds:
 - Critical: 10+ frames for 5 consecutive minutes
 - Warning: 5+ frames for 5 consecutive minutes
 
-High value indicates that the network (for example, the VNET in Azure) does not have enough throughput to handle the load placed on it, resulting in values being displayed here.     
+High value indicates that the network (for example, the VNET in Azure) does not have enough throughput to handle the load placed on it, resulting in values being displayed here.    
 
 **Resolving high Frames Skipped - Insufficient Network Resources:** First, use the Time Interval function to change how long the data is displayed. This can give you a sense of when the issue originally began and whether there is a recurring pattern. If the issue is consistent, then consider increasing the bandwidth available to the network.
 
@@ -460,7 +460,7 @@ Alerting thresholds:
 - Critical: 10+ frames for 5 consecutive minutes
 - Warning: 5+ frames for 5 consecutive minutes
 
-High value indicates that resource consumption on the VM itself is resulting in reduced performance in user sessions. This should be easy to confirm, as CPU/RAM (or both) should indicate high consumption as well. This may result in “it feels slow” complaints or “I can’t work” reports in extreme scenarios.  
+High value indicates that resource consumption on the VM itself is resulting in reduced performance in user sessions. This should be easy to confirm, as CPU/RAM (or both) should indicate high consumption as well. This may result in “it feels slow” complaints or “I can’t work” reports in extreme scenarios.
 
 **Resolving high Frames Skipped – Insufficient Server Resources:** First, use the Time Interval function to change how long the data is displayed. This can give you a sense of when the issue originally began and whether there is a recurring pattern. Troubleshooting what is consuming excessive CPU/RAM should reduce the values displayed here. If the issue is consistent, then consider adding additional CPU/RAM to relieve this bottleneck.
 
@@ -473,7 +473,7 @@ Alerting thresholds:
 
 High value indicates that a large amount of graphics processing/rendering has been offloaded from the CPU and onto the GPU.   
 
-Note: if you see both zero GPU Usage % and high CPU consumption on this VM, then odds are the hardware acceleration is disabled for the VM (or that some other GPU enabling GPO is off).  
+Note: if you see both zero GPU Usage % and high CPU consumption on this VM, then odds are the hardware acceleration is disabled for the VM (or that some other GPU enabling GPO is off).
 
 **Resolving high GPU Usage % consumption:** First, use the Time Interval function to change how long the data is displayed. This can give you a sense of when the issue originally began and whether there is a recurring pattern. If the issue is consistent, then consider increasing the size of the VM to one with a larger amount of GPU allocated.
 
@@ -497,9 +497,9 @@ Alerting thresholds:
 
 High value indicates that a large amount of GPU memory available is being accessed by the GPU. This also allows the GPU to communicate with its own memory much faster.
 
-Note: when GPU Memory % is high but GPU Usage % is low it could be an indicator that the GPU is processing data faster than the memory available can get the data to the GPU for processing.  
+Note: when GPU Memory % is high but GPU Usage % is low it could be an indicator that the GPU is processing data faster than the memory available can get the data to the GPU for processing.
 
-Note: GPU Memory consumption is separate and independent from the VM's Memory consumption, meaning they don't share resources.  
+Note: GPU Memory consumption is separate and independent from the VM's Memory consumption, meaning they don't share resources.
 
 **Resolving high GPU Memory %:** First, use the Time Interval function to change how long the data is displayed. This can give you a sense of when the issue originally began and whether there is a recurring pattern. If the issue is consistent, consider increasing the size of the VM in order to increase the amount of GPU RAM available.
 

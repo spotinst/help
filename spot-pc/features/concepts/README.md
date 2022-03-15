@@ -35,21 +35,21 @@ All tenants are assigned to one (and only one) Organization. Multiple Tenants ca
 
 ## Session Hosts
 
-Sessions hosts are the virtual machines (VMs) that host the end user sessions. These VMs run in azure within the Spot PC Azure subscription. All sessions hosts within a Spot Group are identical as they are created by the single VM image that is assigned to the Spot Group. The size and quantity of available session hosts are determined by Spot PC licensing and the performance optimization technology included in Spot PC.
+Session hosts are the virtual machines (VMs) that host the end user sessions. These VMs run in Azure within the Spot PC Azure subscription. All session hosts within a Spot Group are identical as they are created by the single VM image that is assigned to the Spot Group. The size and quantity of available session hosts are determined by Spot PC licensing and the performance optimization technology included in Spot PC.
 
-Pooled Spot PC users share one or more session hosts to achieve lower costs. When more than one session host is deployed for a Spot Group, users are assigned to sessions hosts based on current load to maximize performance.
+Pooled Spot PC users share one or more session hosts to achieve lower costs. When more than one session host is deployed for a Spot Group, users are assigned to session hosts based on current load to maximize performance.
 
-Personal Spot PC users do not share sessions hosts to achieve greater performance. Personal users are assigned to a session host that is currently unused.
+Personal Spot PC users do not share session hosts to achieve greater performance. Personal users are assigned to a session host that is currently unused.
 
 ## Spot PC Admins
 
-The admin(s) that logs into the Spot PC console to deploy and configure Spot PC. These admins can have various levels of permissions across one or more organizations and tenants within those organizations.
+All Administrators that login to the Spot PC console are collectively called Spot PC Admins in the documentation. These admins can be granted various levels of permissions across one or more organizations and tenants within those organizations.
 
 ## Images
 
-VM Images are an area of emphasis and focus for Spot PC management. The goal is that all customization to session host VM be done at the image level, allowing Spot PC optimization automation to manage the creation, deletion and availability of session hosts automatically.
+VM Images are an area of emphasis and focus for Spot PC management. For Spot PC's optimization technology to work, all configuration of the session hosts must be performed against an Image, rather than directly to the session host VMs. The session host VMs are not necessarily persistent and get re-built from the source image on a regular basis, thus any changes made directly to the machines may not persist.
 
-This this end the Spot PC Console includes an Images workflow for creating, customizing and sealing VM images. This workflow integrates with Azure Images and Azure Image Gallery and makes the task of managing images far simpler.
+To facilitate and support the easy creation and implementation of Images, the Spot PC Console includes an Images workflow for creating, customizing and sealing VM images. This workflow integrates with Azure Images and Azure Image Gallery and makes the task of managing images far simpler.
 
 Within the Spot PC Console there is an Image Set Library, accessible from the Config Actions menu, within any tenant. From this menu the Spot PC administrator can:
 
