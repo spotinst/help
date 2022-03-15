@@ -47,4 +47,4 @@ Your AWS Application Load Balancers are subject to quotas defined by AWS. For mo
 
 ## What’s Next?
 
-Learn more about setting up ITF in [Configure Intelligent Traffic Flow](elastigroup/features/configure-intelligent-traffic-flow).
+Learn more about setting up ITF in [Configure Intelligent Traffic Flow](elastigroup/features/intelligent-traffic-flow/configure-intelligent-traffic-flow).

@@ -10,17 +10,16 @@ Here’s the payload you would submit:
 
 ```yaml
 curl -X POST \
-  https://api.spotinst.io/ocean/spark/cluster/osc-e4089a00/app \
+  'https://api.spotinst.io/ocean/spark/cluster/<your cluster id>/app?accountId=<your accountId>' \
   -H 'Content-Type: application/json' \
-  -H 'Authorization: Bearer 4536dc4418995c553df9c0c0e1d31866453bcec3df0f31f97003926d67ff1e00
-
-' \
+  -H 'Authorization: Bearer 4536dc4418995c553df9c0c0e1d31866453bcec3df0f31f97003926d67ff1e00' \
   -d '{
-  "job-id": "spark-pi",
+  "jobId": "spark-pi",
   "configOverrides": {
     "type": "Scala",
     "sparkVersion": "3.2.0",
     "mainApplicationFile": "s3a://my-example-bucket/word_count.py",
+    "image": "gcr.io/datamechanics/spark:platform-3.2-latest",
     "arguments": [“s3a://my-example-bucket/input/*”, “s3a://my-example-bucket/output”]
   }
 }'
@@ -248,16 +247,15 @@ You can now modify the payload to launch the Spark application in order to refer
 
 ```yaml
 curl -X POST \
- https://api.spotinst.io/ocean/spark/cluster/osc-e4089a00/app \
+'https://api.spotinst.io/ocean/spark/cluster/<your cluster id>/app?accountId=<your accountId>' \
  -H 'Content-Type: application/json' \
- -H 'Authorization: Bearer 4536dc4418995c553df9c0c0e1d31866453bcec3df0f31f97003926d67ff1e00
-
-' \
+ -H 'Authorization: Bearer 4536dc4418995c553df9c0c0e1d31866453bcec3df0f31f97003926d67ff1e00' \
  -d '{
  "job-id": "spark-pi",
  "configOverrides": {
    "type": "Scala",
    "sparkVersion": "3.2.0",
+   "image": "gcr.io/datamechanics/spark:platform-3.2-latest",
    "mainApplicationFile": "s3a://my-example-bucket/word_count.py",
    "arguments": [“s3a://my-example-bucket/input/*”, “s3a://my-example-bucket/output”],
 "driver": {

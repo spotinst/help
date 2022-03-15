@@ -31,6 +31,17 @@ When a period of running time ends, Ocean automatically scales down the entire c
 
 At the end of the off time, the autoscaler launches the appropriate types and number of container instances to provide the resources required by the unscheduled tasks. At the end of this process, all tasks are satisfied, and the cluster is fully functioning in the running hours scheduled.
 
+## Shutdown Hours per VNG (Ocean for Kubernetes AWS)
+
+You can define shutdown hours per virtual node group (VNG) so that VNGs will shut down at different times. In some cases, different VNGs require different shutdown hours. For example, teams working on different VNGs may need to scale down the infrastructures related to each VNG at different times.
+
+### Related VNG and Cluster Behavior
+
+- Cluster shutdown hours have higher priority. For example, if the cluster is in its shutdown hours, a scheduled wake-up of the VNG during this time would not happen.
+- When a VNG comes back up, it automatically scales to the minimum nodes configured.
+
+This feature is available using the [Create](https://docs.spot.io/api/#operation/OceanAWSLaunchSpecCreate) and [Update](https://docs.spot.io/api/#operation/OceanAWSLaunchSpecUpdate) APIs for AWS. For setup information, see [Set Shutdown Hours per VNG](ocean/tutorials/set-running-hours?id=set-shutdown-hours-per-vng).
+
 ## What's Next?
 
 Learn how to [Set Shutdown Hours](ocean/tutorials/set-running-hours)

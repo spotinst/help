@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Get Started with ECS on Elastigroup
 
 ## Introduction

@@ -32,9 +32,10 @@ When you choose Import, a one-time process occurs. Import copies values from the
 
 ### New Virtual Node Group Page
 
-In the New Virtual Node Group page, enter the VNG parameters and click Save. The VNG parameters are described below.
+1. In the New Virtual Node Group page, enter the VNG parameters you want to customize. Parameters that are left blank use values from the default VNG, as indicated in the illustration below.
+2. When you have finished customizing the VNG, click Save. The VNG parameters are described below.
 
-<img src="/ocean/_media/tutorials-manage-vngs-02a.png" width="518" height="400" />
+<img src="/ocean/_media/tutorials-manage-vngs-02a1.png" width="496" height="433" />
 
 ## Configuration Parameters
 
@@ -81,6 +82,7 @@ You don't need to add any extra label for GPU support. You can use taints that r
 ## Choose Instance Types per VNG
 
 To choose spot instance types for a specific VNG, do the following:
+
 1. Go to Clusters in the left menu tree and click the name of the relevant Ocean cluster.
 2. Click the Virtual Node Groups tab and click the name of the relevant VNG in the list.
 
@@ -104,6 +106,7 @@ In the custom VNGs, Ocean automatically filters out instance types that are not 
 2. Unmark the available options, as needed.
 
 The instance types that are grayed out are disabled for the following reasons:
+
 - Does not exist in the default VNG.
 - Does not fit the AMI architecture.
 
@@ -120,6 +123,7 @@ Above the sliders, Instance Types Selected indicates how many of the available i
 ### Restore to Default
 
 To restore the instance types in a VNG to the default configuration, click Restore to Default. This behaves as follows:
+
 - For a Custom VNG: The instance types are set to all the instance types that are available in the Default VNG.
 - For Default VNG: The instance types are set to the default Ocean configuration, which means that all instance types are available. Then Ocean can choose any combination of instance types that best fit the workload requirements.
 

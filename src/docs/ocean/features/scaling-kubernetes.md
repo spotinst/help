@@ -94,11 +94,9 @@ Node Termination process is as follows:
 
 ## Headroom
 
-Ocean provides the option to include a buffer of spare capacity (vCPU and memory resources) known as headroom. Headroom ensures that the cluster has the capacity to quickly scale more Pods without waiting for new nodes to be provisioned. Ocean optimally manages the headroom to provide the best possible cost/performance balance. However, headroom may also be manually configured to support any use case.
+One of Ocean’s key features for optimizing scaling is [_headroom_](ocean/features/headroom), a buffer of spare capacity ensuring that a cluster is always ready for a rapid application scale up. When you configure headroom in specific amounts of resources (i.e., vCPU, memory, and GPU), or specify headroom as a percentage of the cluster’s total requested resources, the cluster can scale workloads without waiting for new instances to be provisioned.
 
-In addition, cluster headroom may be further customized by using a separate headroom configuration per [Launch Specification](./launch-specifications). Custom Headroom units per Launch Specification are enabled when using headroom in Manual configuration mode, and are accessible via Launch Specification [API](https://docs.spot.io/api/#operation/OceanAWSLaunchSpecCreate).
-
-When custom headroom units are specified on one Launch Specification or more, Ocean will maintain a buffer of spare capacity that matches the constraints defined in that Launch Specification (node labels, taints, etc.), in addition to the Cluster level Headroom units. For example, if the cluster level Headroom is configured to maintain 2 headroom units of 2048 MiB and 2000 CPU, and a specific Launch Specification is configured to maintain 2 Headroom unit of the same size, that means a total of 4 headroom units will be maintained at all times, 2 of them matching the Launch Specification's constraints.
+In addition to the benefits of using headroom, it is important to know how headroom could affect scaling. The compute resources saved as headroom restrict scale-down of a node, as if those were actual containers running, in order to keep the amount of headroom required. In addition, if there is missing headroom, a scale up will be triggered to ensure that headroom is maintained.
 
 ## Pod Topology Spread Constraints
 
@@ -106,7 +104,10 @@ Ocean supports Kubernetes [pod topology spread constraints](https://kubernetes.i
 
 Ocean automatically launches nodes while ensuring that the `maxSkew` is maintained. Similarly, Ocean will only scale down a node if `maxSkew` is maintained.
 
+When pods contain spread constraints, Ocean is aware of their labels and can provision nodes from all relevant topologies. Before the initial apply action of these pods, Ocean is required to have at least a single node from each topology so that Kuberentes is aware of their existence. A single node from each topology can easily be configured in Ocean’s [headroom](ocean/features/headroom) feature or by setting [minimum nodes per VNG](ocean/features/launch-specifications?id=attributes-and-actions-per-vng).
+
 To support the Kubernetes feature, Ocean requires the following:
+
 - Kubernetes version 1.19 or later (for other versions, see the note in the [Kubernetes documentation](https://kubernetes.io/docs/concepts/workloads/pods/pod-topology-spread-constraints/).
 - Ocean Controller version 1.0.78 or later.
 
@@ -114,11 +115,15 @@ To support the Kubernetes feature, Ocean requires the following:
 
 When you use the topology key `spotinst.io/node-lifecycle`, a running node in each topology is required before applying the workloads(s) that contain the spread constraints.
 
-> **Important Note**: If one of the topologies running in the cluster is not available, the pods that are supposed to run on this topology will remain pending. For example, you have a topology key `spotinst.io/node-lifecycle`, and you have spot and OD nodes in the cluster. If there are no available spot markets, the pods would remain pending since launching an OD node would violate the `maxSkew` limitation.
+> **Important Note**: If one of the topologies running in the cluster is not available, the pods that are supposed to run on this topology will remain pending. For example, you have a topology key `spotinst.io/node-lifecycle`, and you have spot and OD nodes in the cluster. If there are no available spot markets, the pods would remain pending since Kubernetes would not schedule them on an OD node, and consequently, Ocean would not launch an OD node.
+
+## Support for Extended Resources Feature
+
+The Kubernetes [extended resources](https://kubernetes.io/docs/tasks/administer-cluster/extended-resource-node/) feature allows cluster administrators to advertise node-level resources that would otherwise be unknown to Kubernetes. Ocean supports this feature (for AWS users) both in scale up and scale down, improving cluster performance and cost savings. To learn more about Ocean support for extended resources and how to set it up, see the tutorial [Set up Extended Resource Support](ocean/tutorials/set-up-extended-resource-support).
 
 ## Resource Limits
 
-Ocean allow dynamic resource allocation to fit the pods' needs. Ocean cluster resources are limited to 1000 CPU cores and 4000 GB memory by default, this can be customized via the cluster creation and edit wizards.
+Ocean allows dynamic resource allocation to fit the pods' needs. Ocean cluster resources are limited to 1000 CPU cores and 4000 GB memory by default. This can be customized in the cluster creation and edit wizards.
 
 ## Customize Scaling Configuration
 

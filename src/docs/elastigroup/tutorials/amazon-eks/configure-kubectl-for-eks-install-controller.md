@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Configure Kubectl for EKS & Install Controller
 
 ## Prerequisites

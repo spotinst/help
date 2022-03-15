@@ -96,7 +96,7 @@ This removes any tax-related usage types from the data.
 
 ### Cross Account RI Cost Sharing
 
-This enables you to pass a reservation's cost to accounts proportionate to the discounts they consume. You have the option to pass the cost in the following ways:
+This enables you to pass a reservation's cost to accounts proportionate to the discounts they consume. We include EDP discounts in the cost calculations. You have the option to pass the cost in the following ways:
 
 - Effective Cost: Pass both the ongoing, monthly fees for RIs and the amortized, up-front costs.
 - Amortized Up-front: Pass only the amortized, up-front costs of reservations.
@@ -104,7 +104,7 @@ This enables you to pass a reservation's cost to accounts proportionate to the d
 
 ### Cross Account Savings Plan Cost Sharing
 
-This cost sharing option has the same type of cost distribution as shown above for reservations, but for savings plans.
+This cost sharing option has the same type of cost distribution as shown above for reservations, but for savings plans. We include EDP discounts in the cost calculations.
 
 ### Remove Volume Discounts
 
