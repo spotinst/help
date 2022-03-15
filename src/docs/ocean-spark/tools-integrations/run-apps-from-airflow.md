@@ -27,9 +27,7 @@ docker run -d -p 8080:8080 -e FERNET_KEY=`openssl rand -base64 32` \
 The Airflow UI is now available at http://localhost:8080/.
 Connect to the container with the following command:
 
-```
-docker exec -ti test-airflow /bin/bash
-```
+```docker exec -ti test-airflow /bin/bash```
 
 When you are finished with the tutorial, kill the docker image with this command:
 
@@ -69,10 +67,12 @@ airflow users  create --role Admin \
 
 Run the following command to create the connection:
 
+```shell
 airflow connections add --conn-type ocean-spark-airflow-provider \
    --conn-host <your ocean spark cluster id> \
    –conn-login <your ocean spark account id> \
    --conn-password <your Spot API token> ocean_spark_default
+```
 
 Use the username `admin` and password `admin` when you bring up the Airflow UI at http://localhost:8080/.
 
