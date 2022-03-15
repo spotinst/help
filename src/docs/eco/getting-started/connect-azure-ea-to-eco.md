@@ -91,8 +91,15 @@ In the code boxes below are the Spot Eco policies, with limited access. It prima
       {
         "actions": [
           "Microsoft.Authorization/roleAssignments/read",
-          "Microsoft.Advisor/advisorScore/read",
-
+          "Microsoft.Advisor/generateRecommendations/action",
+          "Microsoft.Advisor/register/action",
+          "Microsoft.Advisor/unregister/action",
+          "Microsoft.Advisor/configurations/read",
+          "Microsoft.Advisor/generateRecommendations/read",
+          "Microsoft.Advisor/operations/read",
+          "Microsoft.Advisor/recommendations/read",
+          "Microsoft.Advisor/recommendations/available/action",
+          "Microsoft.Advisor/recommendations/suppressions/read",
           "Microsoft.Capacity/catalogs/read",
           "Microsoft.Capacity/register/action",
           "Microsoft.Compute/register/action",
