@@ -8,7 +8,7 @@ Customer segregation using the Microsoft tenant model is a primary design princi
 
 The security layers for Spot PC can be broken down into the personas or roles that will access the environment:
 
-**Virtual desktop end users** – day to day users of Spot PCs and cloud PCs. End Users can access the environment from a wide range of locations and physical device types.
+**Virtual desktop end users** – day to day users of Spot PCs and Cloud PCs. End users can access the environment from a wide range of locations and physical device types.
 **Partner administrators** – MSP, CSP, and ISV administrators with virtual desktop management responsibility for multiple customers
 **Customer administrators** – customer staff members responsible for managing virtual desktops or acting as the primary troubleshooting contact.
 **Spot support administrator** – Spot by NetApp team members that provide active support for troubleshooting and optimizing the virtual desktop environment.

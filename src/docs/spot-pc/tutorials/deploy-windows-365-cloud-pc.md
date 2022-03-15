@@ -5,7 +5,7 @@ Deploying Windows 365 Cloud PC desktops with Spot PC takes three simple configur
 NOTE: This is the Windows 365 Cloud PC workflow, for Spot PC, [click here](spot-pc/tutorials/deploy-spot-pc).
 
 ## Prerequisites
-Deploying Windows 365 Cloud PC requires Windows 365 licensing in Azure before the deployment workflow will work.  When this licensing is correctly added, an Enterprise Application named "Windows 365" will be present within the Azure portal for this Azure Directory tenant as shown below.  Note the changed _Application type and the keyword filter_.
+Deploying Windows 365 Cloud PC requires Windows 365 licensing in Azure before the deployment workflow will work. When this licensing is correctly added, an Enterprise Application named "Windows 365" will be present within the Azure portal for this Azure Directory tenant as shown below. Note the changed _Application type and the keyword filter_.
 <br><a href="https://docs.spot.io/spot-pc/_media/tutorials-deploy-windows-365-cloud-pc-07.png" target="_blank"><img src="/spot-pc/_media/tutorials-deploy-windows-365-cloud-pc-07.png" alt="Click to Enlarge" width="1000"> </a>
 
 
