@@ -37,18 +37,19 @@ Note: These instructions are adapted from Microsoft's official documentation fou
 
 
 ### Example Conditional Access Naming Standard
-
-| Address                         | Outbound TCP Port |
-| ------------------------------- | ----------------- |
-|T/P                              | Test, Production  |
-| Control                         | Block, Allow, Require configured control |
-| Principal                       | All or Single User(s), Individual or Ring group (R1,R2), Azure AD Role |
-| Cloud_App                       | All or individual application(s) |
-| Conditions                      | (optional) If there are conditions specified like network, platform etc. |
-
 **Examples:**
-* _P-Require_MFA-for-All_Users-AVD_ (Production, Requiring MFA for All Users, Applies to AVD, without conditions)
-* _P-Require_MFA-for-All_Users-AVD-when-Not_On_Corporate_Network_ (Production, Requiring MFA for All Users, Applies to AVD, exception for users connecting from the corporate network)
+* **P-Require_MFA-for-All_Users-AVD** (Production, Requiring MFA for All Users, Applies to AVD, without conditions)
+* **P-Require_MFA-for-All_Users-AVD-when-Not_On_Corporate_Network** (Production, Requiring MFA for All Users, Applies to AVD, exception for users connecting from the corporate network)
+
+| **Structure**      | **Description**                                                          |
+| ------------------ | ------------------------------------------------------------------------ |
+|T/P                 | Test, Production                                                         |
+| Control            | Block, Allow, Require configured control                                 |
+| Principal          | All or Single User(s), Individual or Ring group (R1,R2), Azure AD Role   |
+| Cloud_App          | All or individual application(s)                                         |
+| Conditions         | (optional) If there are conditions specified like network, platform etc. |
+
+
 
 
 
