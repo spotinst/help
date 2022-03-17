@@ -28,7 +28,7 @@ Note: These instructions are adapted from Microsoft's official documentation fou
   1. Select both check boxes if you want to apply the policy to all clients.
   <br><a href="https://docs.spot.io/spot-pc/_media/tutorials-setup-mfa-conditional-access-02.png" target="_blank"><img src="/spot-pc/_media/tutorials-setup-mfa-conditional-access-02.png" alt="Click to Enlarge" width="800"> </a>
 1. Once you've selected your app, choose **Select**, and then select **Done**.
-<br><a href="https://docs.spot.io/spot-pc/_media/tutorials-setup-mfa-conditional-access-03.png" target="_blank"><img src="/spot-pc/_media/tutorials-setup-mfa-conditional-access-03.png" alt="Click to Enlarge" width="600"> </a>
+<br><a href="https://docs.spot.io/spot-pc/_media/tutorials-setup-mfa-conditional-access-03.png" target="_blank"><img src="/spot-pc/_media/tutorials-setup-mfa-conditional-access-03.png" alt="Click to Enlarge" width="400"> </a>
 1. Under **Access controls > Grant**, select **Grant access, Require multi-factor authentication**, and then **Select**.
 1. Under **Access controls > Session**, select **Sign-in frequency**, set the value to the time you want between prompts, and then select **Select**. For example, setting the value to 1 and the unit to Hours, will require multi-factor authentication if a connection is launched an hour after the last one.
 1. Confirm your settings and set **Enable policy** to **On**.
