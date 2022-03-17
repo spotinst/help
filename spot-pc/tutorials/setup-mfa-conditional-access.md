@@ -28,7 +28,7 @@ Note: These instructions are adapted from Microsoft's official documentation fou
   1. Select both check boxes if you want to apply the policy to all clients.
   <br><a href="https://docs.spot.io/spot-pc/_media/tutorials-setup-mfa-conditional-access-02.png" target="_blank"><img src="/spot-pc/_media/tutorials-setup-mfa-conditional-access-02.png" alt="Click to Enlarge" width="800"> </a>
 1. Once you've selected your app, choose **Select**, and then select **Done**.
-<br><a href="https://docs.spot.io/spot-pc/_media/tutorials-setup-mfa-conditional-access-03.png" target="_blank"><img src="/spot-pc/_media/tutorials-setup-mfa-conditional-access-03.png" alt="Click to Enlarge" width="600"> </a>
+<br><a href="https://docs.spot.io/spot-pc/_media/tutorials-setup-mfa-conditional-access-03.png" target="_blank"><img src="/spot-pc/_media/tutorials-setup-mfa-conditional-access-03.png" alt="Click to Enlarge" width="400"> </a>
 1. Under **Access controls > Grant**, select **Grant access, Require multi-factor authentication**, and then **Select**.
 1. Under **Access controls > Session**, select **Sign-in frequency**, set the value to the time you want between prompts, and then select **Select**. For example, setting the value to 1 and the unit to Hours, will require multi-factor authentication if a connection is launched an hour after the last one.
 1. Confirm your settings and set **Enable policy** to **On**.
@@ -37,18 +37,19 @@ Note: These instructions are adapted from Microsoft's official documentation fou
 
 
 ### Example Conditional Access Naming Standard
-
-| Address                         | Outbound TCP Port |
-| ------------------------------- | ----------------- |
-|T/P                              | Test, Production  |
-| Control                         | Block, Allow, Require configured control |
-| Principal                       | All or Single User(s), Individual or Ring group (R1,R2), Azure AD Role |
-| Cloud_App                       | All or individual application(s) |
-| Conditions                      | (optional) If there are conditions specified like network, platform etc. |
-
 **Examples:**
-* _P-Require_MFA-for-All_Users-AVD_ (Production, Requiring MFA for All Users, Applies to AVD, without conditions)
-* _P-Require_MFA-for-All_Users-AVD-when-Not_On_Corporate_Network_ (Production, Requiring MFA for All Users, Applies to AVD, exception for users connecting from the corporate network)
+* **P-Require_MFA-for-All_Users-AVD** (Production, Requiring MFA for All Users, Applies to AVD, without conditions)
+* **P-Require_MFA-for-All_Users-AVD-when-Not_On_Corporate_Network** (Production, Requiring MFA for All Users, Applies to AVD, exception for users connecting from the corporate network)
+
+| **Structure**      | **Description**                                                          |
+| ------------------ | ------------------------------------------------------------------------ |
+|T/P                 | Test, Production                                                         |
+| Control            | Block, Allow, Require configured control                                 |
+| Principal          | All or Single User(s), Individual or Ring group (R1,R2), Azure AD Role   |
+| Cloud_App          | All or individual application(s)                                         |
+| Conditions         | (optional) If there are conditions specified like network, platform etc. |
+
+
 
 
 
