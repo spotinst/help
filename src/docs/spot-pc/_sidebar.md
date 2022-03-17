@@ -35,7 +35,7 @@
     - [Manage Users and Groups](spot-pc/tutorials/manage-users-and-groups)
     - [Manage Admins](spot-pc/tutorials/manage-admins)
     - [Install AD Connect](spot-pc/tutorials/install-ad-connect)
-    - [Setup MFA](spot-pc/tutorials/setup-mfa-conditional-access)
+    - [Setup Conditional Access](spot-pc/tutorials/setup-mfa-conditional-access)
   - [Troubleshooting](spot-pc/troubleshooting/)
     - [Getting Support](spot-pc/troubleshooting/getting-support)
     - [Monitored Metrics](spot-pc/troubleshooting/monitored-metrics)
