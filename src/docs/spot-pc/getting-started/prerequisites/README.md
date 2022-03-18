@@ -14,25 +14,6 @@ Spot by NetApp has no role in purchasing, enrolling or enforcing M365 licensing.
 
 The customer must have an Azure AD tenant containing all Spot PC users. Since M365 creates an Azure AD tenant, meeting that requirement will also satisfy this requirement.
 
-## Establish Reseller Relationship
-
-The Spot PC service requires that a reseller relationship be established between the customer's Azure Tenant and the Spot PC CSP Tenant. To successfully establish the relationship, a global admin for that Azure AD tenant must follow this link and accept the invitation:
-
-https://admin.microsoft.com/Adminportal/Home?invType=ResellerRelationship&partnerId=47c1f6d2-b112-48e0-915f-4304efffb3e8&msppId=0&DAP=true#/BillingAccounts/partner-invitation
-
-Spot PC leverages Microsoft's multi-partner CSP option, enabling multiple resellers to maintain their individual relationship(s) with the customer. Thus, establishing a reseller relationship for Spot PC **does not**:
-
-- Change any of the customer's existing subscriptions
-- Transition the customer's existing subscriptions or account ownership
-- Change the terms or customer's obligations for any of their existing subscriptions
-- Change the partner of record for a subscription
-
-Source: https://docs.microsoft.com/en-us/partner-center/multipartner
-
-## Delegated Admin
-
-The invitation link above includes a request to grant the delegated admin permission to the Spot CSP account. This permission grants the Global Admin and Helpdesk Admin role to our CSP account, the permissions we'll use to deploy Spot PC and integrate it with the customer's Azure AD tenant.
-
 ## Existing AD DC Deployment
 
 If Spot PC is to be integrated with an existing Active Directory Domain Controller (AD DC), a domain account with Domain Join rights on that AD DC is required.
@@ -66,4 +47,4 @@ Azure AD Connect is a required component that syncs the customer's AD DC with th
 
 ## What’s Next?
 
-Learn more about [End-User prerequisites](spot-pc/getting-started/prerequisites/end-user-prerequisites) or get started [deploying Spot PC](spot-pc/getting-started/onboarding-workflow) by following the Onboarding Workflow.
+Learn more about [End-User prerequisites](spot-pc/getting-started/prerequisites/end-user-prerequisites) or get started [deploying Spot PC](spot-pc/getting-started/onboarding-workflow) by following the Onboarding Workflow. 

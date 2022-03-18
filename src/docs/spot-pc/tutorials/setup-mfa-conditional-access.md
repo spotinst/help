@@ -1,13 +1,18 @@
-# Spot PC Tutorial: Setup MFA with Azure AD Conditional Access
+# Spot PC Tutorial: Azure AD Conditional Access and MFA
 
-Requiring Multi-factor authentication for end users connecting to Spot PC is highly recommended as a bare-minimum security policy. Configuration of Conditional Access is not a feature of Spot PC and licensing required for Conditional Access is not included in the Spot PC service. However, we believe this is such a critical component of a modern security approach that we've documented how Conditional Access can be setup to protect the end user connection into Spot PC. This is not the only method for securing end user connections, and more advanced configurations (e.g., geographic blocking, corporate network exceptions, etc.) are certainly possible and encouraged.
+Requiring Multi-factor authentication for end users connecting to Spot PC is highly recommended as a bare-minimum security policy. Adding additional conditions via Conditional Access is a great idea as well. Configuration of Conditional Access is not a feature of Spot PC and licensing required for Conditional Access is not included in the Spot PC service. However, we believe this is such a critical component of a modern security approach that we've documented how Conditional Access can be setup to protect the end user connection into Spot PC. This is not the only method for securing end user connections, and more advanced configurations (e.g., geographic blocking, corporate network exceptions, etc.) are certainly possible and encouraged.
+
+## Prerequisites
+1. Assign Users appropriate Azure AD licensing (Premium P1 or P2)
+1. Azure AD Groups with the users to be assigned MFA
+  * Spot PC already uses AD groups to assign desktops to users (e.g. all users in the "Accounting" AD group get assigned to a Spot PC Group for "Accounting"). You can simply re-use those groups for this policy or assign it at a higher level in AD.
+1. Follow [Microsoft's guide](https://docs.microsoft.com/en-us/azure/active-directory/authentication/howto-mfa-userstates#view-the-status-for-a-user) for enabling MFA for all users.
 
 ## Conditional Access Licensing
 Azure AD Conditional Access licensing is included in Azure Active Directory Premium P1. Fortunately, this licensing is included in many of the Microsoft 365 packages commonly purchased to support AVD and Spot PC. Prior to implementing MFA with Conditional Access, please confirm appropriate licensing is in place.
 
 As shown in the screenshot below, when viewing "Azure AD: Conditional Access" within the Azure Management Portal, the "Policies" page will display an offer to add licensing if not currently applied.
 <br><a href="https://docs.spot.io/spot-pc/_media/tutorials-setup-mfa-conditional-access-01.png" target="_blank"><img src="/spot-pc/_media/tutorials-setup-mfa-conditional-access-01.png" alt="Click to Enlarge" width="1000"> </a>
-
 
 ## Implementing MFA
 Note: These instructions are adapted from Microsoft's official documentation found at: https://docs.microsoft.com/en-us/azure/virtual-desktop/set-up-mfa
@@ -22,6 +27,7 @@ Note: These instructions are adapted from Microsoft's official documentation fou
 1. Under **Cloud apps or actions > Include**, select **Select apps**.
 1. Select the following app:
   1. **Azure Virtual Desktop** (App ID 9cdead84-a844-4324-93f2-b2e6bb768d07)
+  1. Note: This will limit the policy to only apply to AVD logins.  This will impact AVD logins to AVD, including Spot PC deployments and deployments not related to Spot PC.
 1. Go to **Conditions > Client apps**. In **Configure**, select **Yes**, and then select where to apply the policy:
   1. Select **Browser** if you want the policy to apply to the web client.
   1. Select **Mobile apps and desktop clients** if you want to apply the policy to other clients.
@@ -33,8 +39,6 @@ Note: These instructions are adapted from Microsoft's official documentation fou
 1. Under **Access controls > Session**, select **Sign-in frequency**, set the value to the time you want between prompts, and then select **Select**. For example, setting the value to 1 and the unit to Hours, will require multi-factor authentication if a connection is launched an hour after the last one.
 1. Confirm your settings and set **Enable policy** to **On**.
 1. Select **Create** to enable your policy.
-
-
 
 ### Example Conditional Access Naming Standard
 **Examples:**
