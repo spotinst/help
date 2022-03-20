@@ -21,7 +21,7 @@
     - [Scaling (Kubernetes)](ocean/features/scaling-kubernetes)
     - [Scaling (ECS)](ocean/features/scaling-ecs)
     - [Headroom](ocean/features/headroom)
-    - [Revert to Lower-Cost Node](ocean/features/proactive-cost-optimization)
+    - [Revert to Lower-Cost Node](ocean/features/revert-to-lower-cost-node)
     - [Health Checks & Auto-Healing](ocean/features/health-checks-and-autohealing)
     - [Labels & Taints](ocean/features/labels-and-taints)
     - [Virtual Node Groups](ocean/features/vngs/)
