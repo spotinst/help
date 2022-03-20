@@ -1,14 +1,14 @@
-# Proactive Cost Optimization
+# Revert to Lower-Cost Node
 
-In addition to [scale up](ocean/features/scaling-kubernetes?id=scale-up), [scale down](ocean/features/scaling-kubernetes?id=scale-down), and various optimization processes (e.g., Revert to Reserved Capacity, Savings Plans, and Revert to Spot), Ocean employs an additional continuous optimization process. *Proactive Cost Optimization* is a process applied to nodes with underutilized compute resources that cannot be scaled down from the cluster set of nodes.
+In addition to [scale up](ocean/features/scaling-kubernetes?id=scale-up), [scale down](ocean/features/scaling-kubernetes?id=scale-down), and various optimization processes (e.g., Revert to Reserved Capacity, Savings Plans, and Revert to Spot), Ocean employs an additional continuous optimization process. *Revert to Lower-cost node* is a process applied to nodes with underutilized compute resources that cannot be scaled down from the cluster set of nodes.
 
 There are some use cases when scaling down is not possible. One case is anti-affinity rules which ensure pods run on different nodes. Even if the node is underutilized because the other pods have finished running, it is not possible to scale down the node. The reason is that in case we scale down the node the anti affinity will be violated.
 
 Another example could occur when the configuration requires a minimum number of nodes at the cluster or virtual node group (VNG) level. Either situation may result in cluster nodes that have unused resources without the ability to scale down for optimization.
 
-To address these cases, the Proactive Cost Optimization process analyzes the nodes in the cluster and checks for underutilized nodes that Ocean was not able to scale down. Then, Ocean proactively replaces them with cheaper nodes if a more profitable VM instance is available.
+To address these cases, the revert to lower-cost node process analyzes the nodes in the cluster and checks for underutilized nodes that Ocean was not able to scale down. Then, Ocean proactively replaces them with cheaper nodes if a more profitable VM instance is available.
 
-## How it works
+## How it Works
 
 Ocean constantly scans the cluster’s node utilization. The proactive cost optimization process is applied when **all** of the following conditions are met:
 - No scaling event happened in the last 30 minutes in the specific VNG (neither scale up nor down event).

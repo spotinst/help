@@ -2150,18 +2150,18 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean/features/log-integration-with-s3"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/ocean/features/proactive-cost-optimization</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean/features/proactive-cost-optimization"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean/features/proactive-cost-optimization"/>
-    </url>
-    <url>
         <loc>https://docs.spot.io/?/ocean/features/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean/features/"/>
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean/features/"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/ocean/features/revert-to-lower-cost-node</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean/features/revert-to-lower-cost-node"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean/features/revert-to-lower-cost-node"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/ocean/features/right-sizing</loc>
