@@ -1,6 +1,6 @@
 # Revert to Lower-Cost Node
 
-In addition to [scale up](ocean/features/scaling-kubernetes?id=scale-up), [scale down](ocean/features/scaling-kubernetes?id=scale-down), and various optimization processes (e.g., Revert to Reserved Capacity, Savings Plans, and Revert to Spot), Ocean employs an additional continuous optimization process. *Revert to Lower-cost node* is a process applied to nodes with underutilized compute resources that cannot be scaled down from the cluster set of nodes.
+In addition to [scale up](ocean/features/scaling-kubernetes?id=scale-up), [scale down](ocean/features/scaling-kubernetes?id=scale-down), and various optimization processes (e.g., Revert to Reserved Capacity, Savings Plans, and Revert to Spot), Ocean employs an additional continuous optimization process. *Revert to Lower-cost Node* is a process applied to nodes with underutilized compute resources that cannot be scaled down from the cluster set of nodes.
 
 There are some use cases when scaling down is not possible. One case is anti-affinity rules which ensure pods run on different nodes. Even if the node is underutilized because the other pods have finished running, it is not possible to scale down the node. The reason is that in case we scale down the node the anti affinity will be violated.
 
