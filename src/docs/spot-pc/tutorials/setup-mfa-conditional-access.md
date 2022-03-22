@@ -54,10 +54,6 @@ Note: These instructions are adapted from Microsoft's official documentation fou
 | Conditions         | (optional) If there are conditions specified like network, platform etc. |
 
 
-
-
-
-
 ## What’s Next?
 
 Lean how to deploy [Spot PC desktops](spot-pc/tutorials/deploy-spot-pc) and/or [Windows 365 Cloud PC desktops.](spot-pc/tutorials/deploy-windows-365-cloud-pc)
