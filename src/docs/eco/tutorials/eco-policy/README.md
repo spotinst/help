@@ -202,3 +202,7 @@ This role and the corresponding permissions are issued to the Eco production and
   }
 }
 ```
+
+## What's New?
+
+Learn how to [Create an Eco Policy with CloudFormation](eco/tutorials/eco-policy/create-eco-policy-with-cloudformation).
