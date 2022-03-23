@@ -82,4 +82,4 @@ Once your Organization is connected to Eco, initial data processing will take up
 
 ## What’s Next?
 
-Learn how to view your savings in the dashboard.
+Learn how to [view your savings](eco/eco-in-cloudcheckr/view-savings-in-dashboard) in the dashboard.
