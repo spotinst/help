@@ -526,6 +526,20 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/eco/azure-tutorials/view-your-savings"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/eco/eco-in-cloudcheckr/connect-your-aws-account-in-cloudcheckr</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/eco/eco-in-cloudcheckr/connect-your-aws-account-in-cloudcheckr"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/eco/eco-in-cloudcheckr/connect-your-aws-account-in-cloudcheckr"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/eco/eco-in-cloudcheckr/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/eco/eco-in-cloudcheckr/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/eco/eco-in-cloudcheckr/"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/eco/getting-started/connect-account-customer-working-with-msp</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
