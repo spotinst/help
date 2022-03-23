@@ -15,6 +15,6 @@ Eco enables you to get the most out of cloud commitment purchases. This includes
 - Managing commitment lifecycles: Automated purchasing strategies for RIs in the AWS Marketplace throughout their lifecycle to ensure workloads are always running at optimal pricing.
 - Aligning finance & DevOps: Enabling collaboration between Finance and DevOps teams with full visibility into compute consumption and automation of optimal RI and SP strategies.
 
-## What’s Next?
+## Document Map
 
-Learn how to Connect your AWS Account in CloudCheckr.
+[Connect your AWS Account in CloudCheckr](eco/eco-in-cloudcheckr/connect-your-aws-account-in-cloudcheckr)
