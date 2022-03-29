@@ -13,4 +13,3 @@ Elastigroup uses machine learning and analytics to automate and optimize cloud i
 ## What's Next?
 
 - This section includes procedures related specifically to running Elastigroup with Microsoft Azure. To learn more, choose a topic in the sidebar on the left.
-- To learn more about general Elastigroup procedures that are applicable with the major cloud providers (AWS, Azure, and GCP, unless otherwise specified), read about Elastigroup management [Tasks](elastigroup/tutorials/elastigroup-tasks/), the [Actions Menu](elastigroup/tutorials/elastigroup-actions-menu/), and Elastigroup [Budgets](elastigroup/tutorials/elastigroup-budgets/).
