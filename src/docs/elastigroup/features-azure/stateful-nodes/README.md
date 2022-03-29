@@ -33,4 +33,4 @@ New nodes are provisioned with the same private IP using the same Elastic Networ
 
 ## What’s Next?
 
-Learn more about persisting the OS and data disks.
+Learn more about [persisting the OS and data disks](elastigroup/features-azure/stateful-nodes/persist-os-data-disks).
