@@ -90,7 +90,7 @@ Node Termination process is as follows:
 4. An eviction is not completed until Ocean gets health signal from the new pod [readiness\liveness](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/) probe (when configured) and the old pod was successfully terminated ([wait for grace-period or after pre Stop command](https://kubernetes.io/docs/concepts/workloads/pods/pod/#termination-of-pods)).
 5. Ocean provides draining timeout of 300 seconds by default (configurable) for every Pod before terminating it.
 
-<img src="/ocean/_media/features-scaling-k8s-02.png" />
+<img src="/ocean/_media/features-scaling-k8s-02a.png" />
 
 ## Headroom
 
