@@ -1576,6 +1576,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/tutorials/azure/set-health-checks-and-autohealing"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/elastigroup/tutorials/azure/use-stateful-nodes/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/tutorials/azure/use-stateful-nodes/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/tutorials/azure/use-stateful-nodes/"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/elastigroup/tutorials/elastigroup-actions-menu/analyze-your-costs</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
