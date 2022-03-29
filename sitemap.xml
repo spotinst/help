@@ -694,6 +694,27 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/features-azure/shutdown-script-in-elastigroup-for-azure"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/elastigroup/features-azure/stateful-nodes/actions</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/features-azure/stateful-nodes/actions"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/features-azure/stateful-nodes/actions"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/elastigroup/features-azure/stateful-nodes/persist-network</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/features-azure/stateful-nodes/persist-network"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/features-azure/stateful-nodes/persist-network"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/elastigroup/features-azure/stateful-nodes/persist-os-data-disks</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/features-azure/stateful-nodes/persist-os-data-disks"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/features-azure/stateful-nodes/persist-os-data-disks"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/elastigroup/features-azure/stateful-nodes/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
