@@ -680,13 +680,6 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/eco/tutorials/view-your-savings"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/elastigroup/azure/getting-started/import-an-existing-azure-resource</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/azure/getting-started/import-an-existing-azure-resource"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/azure/getting-started/import-an-existing-azure-resource"/>
-    </url>
-    <url>
         <loc>https://docs.spot.io/?/elastigroup/features/amazon-ecs/automatic-autoscaler-for-ecs</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
@@ -1457,6 +1450,62 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/tools-integrations/route53"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/elastigroup/tutorials-azure/azure-aks-engine</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/tutorials-azure/azure-aks-engine"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/tutorials-azure/azure-aks-engine"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/elastigroup/tutorials-azure/clone-an-existing-elastigroup</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/tutorials-azure/clone-an-existing-elastigroup"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/tutorials-azure/clone-an-existing-elastigroup"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/elastigroup/tutorials-azure/connect-elastigroup-to-application-gateway</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/tutorials-azure/connect-elastigroup-to-application-gateway"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/tutorials-azure/connect-elastigroup-to-application-gateway"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/elastigroup/tutorials-azure/deploy-an-elastigroup</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/tutorials-azure/deploy-an-elastigroup"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/tutorials-azure/deploy-an-elastigroup"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/elastigroup/tutorials-azure/getting-started/import-an-existing-azure-resource</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/tutorials-azure/getting-started/import-an-existing-azure-resource"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/tutorials-azure/getting-started/import-an-existing-azure-resource"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/elastigroup/tutorials-azure/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/tutorials-azure/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/tutorials-azure/"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/elastigroup/tutorials-azure/set-health-checks-and-autohealing</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/tutorials-azure/set-health-checks-and-autohealing"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/tutorials-azure/set-health-checks-and-autohealing"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/elastigroup/tutorials-azure/use-stateful-nodes/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/tutorials-azure/use-stateful-nodes/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/tutorials-azure/use-stateful-nodes/"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/elastigroup/tutorials/amazon-ecs/configure-attributes-for-task-placement-constraints</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
@@ -1532,55 +1581,6 @@
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/tutorials/amazon-eks/"/>
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/tutorials/amazon-eks/"/>
-    </url>
-    <url>
-        <loc>https://docs.spot.io/?/elastigroup/tutorials/azure/azure-aks-engine</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/tutorials/azure/azure-aks-engine"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/tutorials/azure/azure-aks-engine"/>
-    </url>
-    <url>
-        <loc>https://docs.spot.io/?/elastigroup/tutorials/azure/clone-an-existing-elastigroup</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/tutorials/azure/clone-an-existing-elastigroup"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/tutorials/azure/clone-an-existing-elastigroup"/>
-    </url>
-    <url>
-        <loc>https://docs.spot.io/?/elastigroup/tutorials/azure/connect-elastigroup-to-application-gateway</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/tutorials/azure/connect-elastigroup-to-application-gateway"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/tutorials/azure/connect-elastigroup-to-application-gateway"/>
-    </url>
-    <url>
-        <loc>https://docs.spot.io/?/elastigroup/tutorials/azure/deploy-an-elastigroup</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/tutorials/azure/deploy-an-elastigroup"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/tutorials/azure/deploy-an-elastigroup"/>
-    </url>
-    <url>
-        <loc>https://docs.spot.io/?/elastigroup/tutorials/azure/</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/tutorials/azure/"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/tutorials/azure/"/>
-    </url>
-    <url>
-        <loc>https://docs.spot.io/?/elastigroup/tutorials/azure/set-health-checks-and-autohealing</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/tutorials/azure/set-health-checks-and-autohealing"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/tutorials/azure/set-health-checks-and-autohealing"/>
-    </url>
-    <url>
-        <loc>https://docs.spot.io/?/elastigroup/tutorials/azure/use-stateful-nodes/</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/tutorials/azure/use-stateful-nodes/"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/tutorials/azure/use-stateful-nodes/"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/elastigroup/tutorials/elastigroup-actions-menu/analyze-your-costs</loc>
