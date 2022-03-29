@@ -1513,6 +1513,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/tutorials-azure/use-stateful-nodes/"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/elastigroup/tutorials-azure/use-stateful-nodes/view-details</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/tutorials-azure/use-stateful-nodes/view-details"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/tutorials-azure/use-stateful-nodes/view-details"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/elastigroup/tutorials/amazon-ecs/configure-attributes-for-task-placement-constraints</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
