@@ -92,7 +92,7 @@
     - [Deploy an Elastigroup](elastigroup/tutorials-azure/deploy-an-elastigroup)
     - [Set Health Checks and Autohealing](elastigroup/tutorials-azure/set-health-checks-and-autohealing)
     - [Use Stateful Nodes](elastigroup/tutorials-azure/use-stateful-nodes/)
-      - [Manage Stateful Nodes](elastigroup/tutorials-azure/use-stateful-nodes/manage-stateful-nodes)
+      - [Manage Stateful Nodes](elastigroup/tutorials-azure/use-stateful-nodes/manage)
   - [Tools & Integrations](elastigroup/tools-integrations/)
     - [AWS Batch](elastigroup/tools-integrations/aws-batch)
     - [AWS Load Balancers & Autohealing](elastigroup/tools-integrations/aws-load-balancers-elb-alb)
