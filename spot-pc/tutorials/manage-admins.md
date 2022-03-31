@@ -41,7 +41,7 @@ A Spot PC Admin can be invited to multiple organizations, admin type is configur
 - Can _not_ invite new users to the org.
 - Can _not_ assign tenant-level permissions to users.
 
-## Inviting a new Admin
+## Inviting a New Admin
 
 New admins can be added to an organization by an Organization Admin in the the Admins section of the Spot PC console home page.
 <br><a href="https://docs.spot.io/spot-pc/_media/tutorials-manage-admins-01.png" target="_blank"><img src="/spot-pc/_media/tutorials-manage-admins-01.png" alt="Click to Enlarge" width="1000"> </a>

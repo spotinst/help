@@ -6,7 +6,7 @@ End user prerequisites are documented [here.](spot-pc/getting-started/prerequisi
 
 ## End User Tips
 
-### Use a native client if possible
+### Use a Native Client if Possible
 
 Below you'll find a list of available clients for Spot PC and AVD. You'll experience the best performance with an installed client as opposed to the web client. When possible, use the client available for your device type (e.g., Windows, Android, etc...).
 

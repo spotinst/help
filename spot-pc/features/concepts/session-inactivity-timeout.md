@@ -19,7 +19,7 @@ This setting governs how long a disconnected user session will remain running on
 
 If, at any point in this time window, the user re-connects they will be connected to their existing user session, with all their applications running just as the left them. Re-connecting re-sets both the Active and Disconnect Idle Timeout counters.
 
-## Customizing this Setting
+## Customizing This Setting
 These settings are required but can be individually customized to any value between 1 and 240 minutes.
 
 In an example scenario where each is set to 120 minutes (2 hours), the end user walking away from their local device would result in the remote desktop window closing after 2 hours, and the user session being ended after another 2 hours (4 hours total).
