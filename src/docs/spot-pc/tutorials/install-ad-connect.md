@@ -24,9 +24,9 @@ The available UPNs can be located in the Azure portal under _Azure Active Direct
 <br><a href="https://docs.spot.io/spot-pc/_media/tutorials-install-ad-connect-03.png" target="_blank"><img src="/spot-pc/_media/tutorials-install-ad-connect-03.png" alt="Click to Enlarge" width="1000"> </a>
 <br><a href="https://docs.spot.io/spot-pc/_media/tutorials-install-ad-connect-04.png" target="_blank"><img src="/spot-pc/_media/tutorials-install-ad-connect-04.png" alt="Click to Enlarge" width="1000"> </a>
 
-## Run the Azure AD Connect Installer
+## Run the Azure AD Connect Installer on the Domain Controller
 
-Run the AD Connect installer downloaded in step one ([Confirm AD Connect is not Setup](spot-pc/tutorials/install-ad-connect?id=confirm-ad-connect-is-not-setup)).
+Run the AD Connect installer which can be [downloaded from Microsoft here.](https://www.microsoft.com/en-us/download/details.aspx?id=47594)
 <br><a href="https://docs.spot.io/spot-pc/_media/tutorials-install-ad-connect-05.png" target="_blank"><img src="/spot-pc/_media/tutorials-install-ad-connect-05.png" alt="Click to Enlarge" width="1000"> </a>
 
 ## Choose to Customize the Install
