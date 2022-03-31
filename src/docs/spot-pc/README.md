@@ -94,7 +94,7 @@ Many use cases require dedicated server infrastructure to support customer workf
 
 Occasionally, server resources may be required in the same subscription as the Spot PC session hosts. This may be due to technical requirements or business reasons. To support this requirement, Spot PC offers an add-on subscription to add Business Server resources as a separate SKU. The SKU includes a set mix of resources (4vCPU/8GiB RAM/128GiB HDD) which can be applied to one or more machines. The minimum size is 2 vCPU, 8GiB RAM and 128GiB Managed Disk. Multiple Business Server SKUs can be purchased, with the resources applied to a single VM or multiple. For example, two Business Server SKUs could support either 1x D4as_v4 (4vCPU/8GiB/256GIB HDD) or 2x D2as_v4 (2vCPU/4GiB/128GIB HDD) each.
 
-## Co-Management: Who does what?
+## Co-Management: Who Does What?
 
 Spot PC co-management is a collaboration between Spot by NetApp, the IT administrator, and the tenant organization. Each entity has a role in a successful Spot PC experience.
 

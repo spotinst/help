@@ -44,7 +44,7 @@ In addition to end user experience, consideration should be made to locate the S
 
 <a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow-06.png" target="_blank"><img src="/spot-pc/_media/onboarding-workflow-06.png" alt="Click to Enlarge" width="1000"> </a>
 
-### Custom Spot PC VNet Scope
+### Custom Spot PC vNet Scope
 
 This step also offers the ability to define a custom vNet Scope for the Spot PC deployment. This is optional and without input, Spot PC will randomly select a viable network range.
 
@@ -113,7 +113,7 @@ As the automation runs and builds the Spot PC environment, several milestones ar
 
 - In this step we're issuing an SSL certificate that's used to secure any of the optional public-facing endpoints. This is primarily used to secure the in-browser "connect to server" functionality available to Spot PC admins.
 
-**Validate deployment parameters**
+**Validate Deployment Parameters**
 
 - This step evaluates all your inputs in the Onboarding Workflow and transforms them into an ARM template and Desired State Configuration (DSC) used during the deployment automation.
 

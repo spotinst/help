@@ -30,7 +30,7 @@ To begin the process of creating a new Image version, navigate to the desired te
 - After approximately 20 minutes, a temporary VM will be created, you can then _connect_ to the VM and make any changes such as adding applications and adjusting settings.<br><a href="https://docs.spot.io/spot-pc/_media/tutorials-deploy-image-07.png" target="_blank"><img src="/spot-pc/_media/tutorials-deploy-image-07.png" alt="Click to Enlarge" width="1000"> </a>
 - Once the temporary VM is configured to meet requirements, the _Seal Image_ link will generalize the VM and create an image for Spot PC to use. This process usually takes less than 5 minutes. <br><a href="https://docs.spot.io/spot-pc/_media/tutorials-deploy-image-08.png" target="_blank"><img src="/spot-pc/_media/tutorials-deploy-image-08.png" alt="Click to Enlarge" width="1000"> </a>
 
-### Updating the Spot Group with the New Image version
+### Updating the Spot Group with the New Image Version
 
 Once the _Seal Image_ process has completed, this version can be used in the existing Spot Group through the _Update Spot Group_ workflow.
 

@@ -2,7 +2,7 @@
 
 This document describes the required elements for deploying Spot PC. A core component of Spot PC is Azure Virtual Desktop (AVD), thus Spot PC inherits the prerequisites for AVD.
 
-## Microsoft 365 Licensing to support AVD
+## Microsoft 365 Licensing to Support AVD
 
 Windows 10 user access rights for Spot PC are included in the users' Microsoft 365 (M365) subscription, a requirement for AVD and Spot PC.
 
@@ -47,4 +47,4 @@ Azure AD Connect is a required component that syncs the customer's AD DC with th
 
 ## What’s Next?
 
-Learn more about [End-User prerequisites](spot-pc/getting-started/prerequisites/end-user-prerequisites) or get started [deploying Spot PC](spot-pc/getting-started/onboarding-workflow) by following the Onboarding Workflow. 
+Learn more about [End-User prerequisites](spot-pc/getting-started/prerequisites/end-user-prerequisites) or get started [deploying Spot PC](spot-pc/getting-started/onboarding-workflow) by following the Onboarding Workflow.

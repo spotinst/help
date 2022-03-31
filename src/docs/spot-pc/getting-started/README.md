@@ -12,7 +12,7 @@ Spot PC administration is designed around a few simple workflows. Understanding 
 - Step 4 - Test the [login as an end user](spot-pc/tutorials/connect-to-desktop)
 - Step 5 - Use the [Operational Dashboards](spot-pc/getting-started/?id=operational-dashboards) to monitor and support Spot PC
 
-## Common management tasks
+## Common Management Tasks
 
 - Manage which end users have access to this Spot Group. The guide for [managing users and groups is found here](spot-pc/tutorials/manage-users-and-groups).
 - Invite your co-workers to create their own Spot PC admin account(s). The guide for [managing admin accounts is found here](spot-pc/tutorials/manage-admins).
