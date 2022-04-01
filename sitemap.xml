@@ -2752,6 +2752,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/features/concepts/session-inactivity-timeout"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/spot-pc/features/concepts/spot-groups</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-pc/features/concepts/spot-groups"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/features/concepts/spot-groups"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/spot-pc/features/concepts/spot-pc-and-cloud-pc</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>

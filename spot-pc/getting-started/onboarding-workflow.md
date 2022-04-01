@@ -20,9 +20,9 @@ A walkthrough of the Onboarding Workflow functionality is detailed here:
 
 Enter the Tenant ID for the Azure AD tenant where the Spot PC users are located.
 
-### Locating your Tenant ID
+### Enter the Azure AD Tenant ID
 
-Your Tenant ID can be found in the Azure AD section of the Azure portal: https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview
+This should have been documented as part of the [pre-deployment checklist](/spot-pc/getting-started/prerequisites/?id=azure-ad-tenant-for-end-users) and instructions for locating the Tenant ID are foudn on that page as well.
 
 <a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow-04.png" target="_blank"><img src="/spot-pc/_media/onboarding-workflow-04.png" alt="Click to Enlarge" width="1000"> </a>
 
@@ -66,12 +66,9 @@ After the region is selected, the initialization of the tenant begins. Several r
 
 ## Connect Spot PC to your AD Domain
 
-While the users' identity must be a part of the Azure AD, each machine must also be joined to an Active Directory Domain Controller (AD DC) and Azure AD does not currently support that function. Therefore, an AD DC must be accessible from the Spot PC Azure subscription. There are two options to fulfill this requirement.
+While the users' identity must be a part of the Azure AD, each machine must also be joined to an Active Directory Domain Controller (AD DC). Azure AD does not currently support Azure AD Direct Join (AADJ) in a way that can be utilized by Spot PC. Therefore, the existing AD DC must be accessible from the Spot PC Azure subscription. As noted in the [pre-deployment article]((/spot-pc/getting-started/prerequisites/?id=existing-domain-controller), this is done via vNet Peering from Spot PC to any other Azure vNet that has established connectivity to the AD DC.
 
-- Build a new AD DC - the AD DC role will be installed on a VM in the Spot PC Azure Subscription as part of the Spot PC onboarding automation.
-- Connect to an existing AD DC - Join Spot PC VMs to an existing AD DC via VPN/vNet Peering.
-
-In either case, select the appropriate domain address (e.g., company.onmicrosoft.com)
+Select the appropriate domain address (e.g., company.onmicrosoft.com)
 
 <a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow-07.png" target="_blank"><img src="/spot-pc/_media/onboarding-workflow-07.png" alt="Click to Enlarge" width="1000"> </a>
 
