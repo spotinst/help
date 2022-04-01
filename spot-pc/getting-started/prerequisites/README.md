@@ -7,23 +7,25 @@ The following list covers required and recommended discovery steps to perform fo
 
 Some items are linked to a section below for more details about it.
 
-Confirm prerequisites
-  - [ ] [Microsoft 365 Licensing](spot-pc/getting-started/prerequisites/?id=microsoft-365-licensing)
-  - [ ] **Azure AD (AAD) Tenant ID**
-    - [ ] **Azure Admin with Global Administrator rights on the Azure Tenant**
-    - [ ] **Identify default custom domain name for AAD**
-  - [ ] **Existing Domain Controller (AD DC)**
-    - [ ] **AD Domain Account (local) with AD join rights**
-    - [ ] **Identify existing AD domain name**
-  - [ ] **Identify Existing Azure vNet with network access to AD DC**
-    - [ ] **Identify External vNet Subscription**
-    - [ ] **Azure Admin with Rights on this Azure Subscription**
-  - [ ] **Available vNet IP scope identified**
-  - [ ] **Azure AD Connect installed**
-  - [ ] **Identify Primary Azure Region**
+### Confirm Prerequisites (Required)
+  - [ ] **[Azure AD (AAD) Tenant ID](spot-pc/getting-started/prerequisites/?id=azure-ad-tenant-id)**
+    - [ ] **[Azure Admin with Global Administrator rights on the Azure Tenant](spot-pc/getting-started/prerequisites/?id=azure-admin-with-global-administrator-rights-on-the-azure-tenant)**
+    - [ ] **[Identify default custom domain name for AAD](spot-pc/getting-started/prerequisites/?id=default-custom-domain-name-for-aad)**
+  - [ ] **[Existing domain controller (AD DC)](spot-pc/getting-started/prerequisites/?id=existing-domain-controller)**
+    - [ ] **[AD domain account (local) with AD join rights](spot-pc/getting-started/prerequisites/?id=domain-admin-account-with-domain-join-rights)**
+    - [ ] **[Identify existing AD domain name](spot-pc/getting-started/prerequisites/?id=existing-ad-domain-name)**
+  - [ ] **[Identify existing Azure vNet with network access to AD DC](spot-pc/getting-started/prerequisites/?id=identify-external-azure-vnet-for-ad-dc)**
+    - [ ] **[Identify external vNet subscription](spot-pc/getting-started/prerequisites/?id=identify-external-vnet-subscription)**
+    - [ ] **[Azure admin with rights on this Azure subscription](spot-pc/getting-started/prerequisites/?id=azure-admin-with-permissions-on-this-azure-subscription)**
+  - [ ] **[Available vNet IP scope identified](spot-pc/getting-started/prerequisites/?id=virtual-network-scope)**
+  - [ ] **[Azure AD Connect installed](spot-pc/getting-started/prerequisites/?id=azure-ad-connect)**
+  - [ ] **[Identify primary Azure region](spot-pc/getting-started/prerequisites/?id=identify-preferred-azure-region)**
     - [ ] Identify possible multi-region requirements
 
-- Identify Purchased SKUs
+### [Confirm Microsoft 365 Licnesing](spot-pc/getting-started/prerequisites/?id=microsoft-365-licensing)
+ - [ ] Microsoft 365 Licensing for AVD
+
+### [Identify Purchased SKUs](spot-pc/getting-started/prerequisites/?id=identify-purchased-skus)
   - [ ] Total pooled/shared users
     - [ ] Define Spot Group quantity
     - [ ] Identify AD Groups for "User <-> Spot Group" assignment
@@ -42,19 +44,20 @@ Confirm prerequisites
     - [ ] Determine number of Business servers
     - [ ] Define CPU/RAM allocation (2vCPU/4GiB increments)
 
-- Identify primary application list
+### [Identify primary application list](spot-pc/getting-started/prerequisites/?id=identify-primary-application-list)
   - [ ] List of common apps
   - [ ] Identify client/server apps
   - [ ] Identify database requirements
 
-- Assess existing Azure and on-premises networking configuration
+### [Assess existing Azure and on-premises networking configuration](spot-pc/getting-started/prerequisites/?id=assess-existing-azure-and-on-premises-resources)
   - [ ] List other existing Azure Subscription(s)
   - [ ] Azure resources to be exposed to Spot PC users
 
-- Assess data migration needs
+### [Assess data migration needs](spot-pc/getting-started/prerequisites/?id=assess-data-migration-needs)
   - [ ] Quantify total size of data to migrate
   - [ ] Assess change rate of existing data
   - [ ] Identify location(s) of existing and available bandwidth
+
 
 ## Microsoft 365 Licensing
 Windows 10/11 user access rights for Spot PC are included in the users' Microsoft 365 (M365) subscription, a requirement for AVD and Spot PC.
@@ -115,7 +118,7 @@ Each Spot Group is deployed into a single Azure Region. During the onboarding wo
 Commonly the closest region to the end user(s) is the best choice, however regions vary in service availability and some may not have the resources available to support your workload. Microsoft offers a [very useful tool](https://azure.microsoft.com/en-us/services/virtual-desktop/assessment/) for determining which Azure Region will offer the best performance based on your location.
 
 ## Identify Purchased SKUs
-Identifying the quantity of purchased users and how they are organized is a recommended exercise to perform earlier in the Spot PC deployment project. Spot PC users and desktops are organized into "Spot Groups" to simplify administration tasks.  Depending on the type of Spot Group, the behavior of session host allocation to users can vary.  More detail on tis topic is [found here.](spot-pc/features/spot-groups)
+Identifying the quantity of purchased users and how they are organized is a recommended exercise to perform earlier in the Spot PC deployment project. Spot PC users and desktops are organized into "Spot Groups" to simplify administration tasks.  Depending on the type of Spot Group, the behavior of session host allocation to users can vary.  More detail on tis topic is [found here.](spot-pc/features/concepts/spot-groups)
 
 Having an awareness of the purchased Spot PC SKUs and how they will be deployed is helpful at the beginning of the deployment project.
 
