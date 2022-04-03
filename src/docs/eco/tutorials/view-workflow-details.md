@@ -71,7 +71,7 @@ Savings, RI Savings, and SP Savings are great ways to see your commitments’ ef
 - These are net savings. (The difference between discounted cost and on-demand equivalents, plus portioned, effective cost of the commitments themselves.)
 - Savings is not currently available when Charge Type or Lifecycle groupings are selected.
 - The sum of savings associated with accounts not included in the report will appear as a row titled Other.
-- Most reports will not show Savings within the Master Payer unless a billing rule request the Master Payer appear (for instance, when the Master Payer Recoups the cost of commitments as a result of the Cross-Account Cost Sharing rules).
+- Most reports will not show Savings within the Master Payer unless a billing rule requests the Master Payer to appear (for instance, when the Master Payer recoups the cost of commitments as a result of the Cross-Account Cost Sharing rules).
 
 <img src="/eco/_media/tutorials-view-workflow-details-06a.png" />
 
