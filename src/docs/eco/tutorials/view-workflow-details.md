@@ -64,11 +64,11 @@ The example report generated below is organized according to the Group by option
 
 The report produces the equivalent of AWS’s Cost and Usage report, first as raw unblended cost, then showing the public on-demand price for the same level of aggregation, the actual charge from report, and savings. Charge From report is the result of the workflow you defined. 
 
-Savings, RI Savings, and SP Savings are great ways to see your commitments’ effectiveness. sHere are some important notes about Savings:
+Savings, RI Savings, and SP Savings are great ways to see your commitments’ effectiveness. Here are some important notes about Savings:
 
-- RI Savings are provided by Reserved Instances
-- SP Savings are provided by Savings Plans
-- These are net savings. (The difference between discounted cost and on-demand equivalents, plus portioned, effective cost of the commitments themselves).
+- RI Savings are provided by Reserved Instances.
+- SP Savings are provided by Savings Plans.
+- These are net savings. (The difference between discounted cost and on-demand equivalents, plus portioned, effective cost of the commitments themselves.)
 - Savings is not currently available when Charge Type or Lifecycle groupings are selected.
 - The sum of savings associated with accounts not included in the report will appear as a row titled Other.
 - Most reports will not show Savings within the Master Payer unless a billing rule request the Master Payer appear (for instance, when the Master Payer Recoups the cost of commitments as a result of the Cross-Account Cost Sharing rules).
