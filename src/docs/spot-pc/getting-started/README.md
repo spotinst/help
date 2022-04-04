@@ -15,7 +15,7 @@ Spot PC administration is designed around a few simple workflows. Understanding 
 ## Common Management Tasks
 
 - Manage which **end users** have access to this Spot Group. The guide for [managing users and groups is found here](spot-pc/tutorials/manage-users-and-groups).
-- **Invite your co-workers** to create their own Spot PC admin account(s). The guide for [managing admin accounts is found here](spot-pc/tutorials/manage-admins).
+- **Invite additional Admins** to create their own Spot PC admin account(s). The guide for [managing admin accounts is found here](spot-pc/tutorials/manage-admins).
 - **Edit the Spot Group** to make granular changes to how it works. The guide for [editing Spot Groups is found here](spot-pc/tutorials/edit-spot-group).
 - Make changes to the **image** and deploy the new image to the Spot Group. The guide for [deploying image updates is found here](spot-pc/tutorials/deploy-image-update).
 - **Create another tenant** for a different Azure AD tenant. The guide for [adding a new Tenant is found here](spot-pc/tutorials/add-tenant).
