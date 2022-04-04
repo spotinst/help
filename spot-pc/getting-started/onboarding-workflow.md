@@ -2,27 +2,21 @@
 
 Onboarding a new Spot PC tenant is performed from within the [Spot PC console](https://admin.pc.spot.io/). For new administrators with no existing tenants, their initial login will automatically log them into the new tenant workflow.
 
-The Onboarding Workflow can be accessed by clicking "+ Add New Tenant" from the Spot PC Dashboard.
-
-<a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow-01.png" target="_blank"><img src="/spot-pc/_media/onboarding-workflow-01.png" alt="Click Image for Full Size" width="1000"> </a>
-
-The Onboarding Workflow has seven steps, each step is outlined below.
-
-<a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow-02.png" target="_blank"><img src="/spot-pc/_media/onboarding-workflow-02.png" alt="Click to Enlarge" width="1000"> </a>
-
 ## Onboarding Workflow Video
 
 A walkthrough of the Onboarding Workflow functionality is detailed here:
 
 <iframe src="https://www.youtube-nocookie.com/embed/YLDgldXgVzA?vq=hd1080&modestbranding=1&rel=0&theme=light&color=white" height="480" frameborder="0"></iframe>
 
-## Connect Spot PC to Your Azure tenant
+## Add New Tenant
+The Onboarding Workflow can be accessed by clicking "+ Add New Tenant" from the Spot PC Dashboard.
 
-Enter the Tenant ID for the Azure AD tenant where the Spot PC users are located.
+<a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow-01.png" target="_blank"><img src="/spot-pc/_media/onboarding-workflow-01.png" alt="Click Image for Full Size" width="1000"> </a>
 
-### Enter the Azure AD Tenant ID
+## Connect Your Azure Account
+The first step is to enter the Azure Tenant ID for the target tenant. The tenant ID can be located in the Azure Portal for the tenant. After entering, click "Connect Account" to authorize Spot PC for this Tenant. Clicking the refresh icon will force Spot PC to re-check for an existing link. Once the link is confirmed, you can move on to Step 2, "Authorize Spot PC Discovery."
 
-This should have been documented as part of the [pre-deployment checklist](/spot-pc/getting-started/prerequisites/?id=azure-ad-tenant-for-end-users) and instructions for locating the Tenant ID are found on that page as well.
+<a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow-02.png" target="_blank"><img src="/spot-pc/_media/onboarding-workflow-02.png" alt="Click to Enlarge" width="1000"> </a>
 
 <a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow-04.png" target="_blank"><img src="/spot-pc/_media/onboarding-workflow-04.png" alt="Click to Enlarge" width="1000"> </a>
 
