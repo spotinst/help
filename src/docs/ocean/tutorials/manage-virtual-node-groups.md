@@ -77,7 +77,7 @@ resources:
     nvidia.com/gpu: 1
 ```
 
-You don't need to add any extra label for GPU support. You can use taints that require your GPU-based pods to select the specific VNG that contains the GPU image.
+You can use a node selector or node affinity that requires your GPU-based pods to select the specific VNG containing the GPU image, based on the custom node label configured in the GPU VNG.
 
 ## Choose Instance Types per VNG
 
