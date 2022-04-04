@@ -22,7 +22,7 @@ Enter the Tenant ID for the Azure AD tenant where the Spot PC users are located.
 
 ### Enter the Azure AD Tenant ID
 
-This should have been documented as part of the [pre-deployment checklist](/spot-pc/getting-started/prerequisites/?id=azure-ad-tenant-for-end-users) and instructions for locating the Tenant ID are foudn on that page as well.
+This should have been documented as part of the [pre-deployment checklist](/spot-pc/getting-started/prerequisites/?id=azure-ad-tenant-for-end-users) and instructions for locating the Tenant ID are found on that page as well.
 
 <a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow-04.png" target="_blank"><img src="/spot-pc/_media/onboarding-workflow-04.png" alt="Click to Enlarge" width="1000"> </a>
 
