@@ -54,43 +54,26 @@ In order to enable import of GKE clusters to Ocean and registration of new nodes
 
 ## Scale Down
 
-Ocean constantly checks which nodes are unneeded in the cluster. A node is considered for removal when:
+Ocean proactively identifies underutilized nodes and [bin-packs](https://en.wikipedia.org/wiki/Bin_packing_problem) the pods on the nodes more efficiently to be able to scale down the nodes and reduce the cluster cost. This is reflected by a higher resource allocation. Every minute, Ocean simulates whether there are any running pods that can be moved to other nodes within the cluster. If so, Ocean drains those nodes (cordon the nodes and evicts the pods gracefully) to ensure continuous infrastructure optimization and increased cloud savings.
 
-- All pods running on the node (except these that run on all nodes by default, like manifest-run pods or pods created by daemonsets) can be moved to other nodes in the cluster. (based on Pod Disruption Budget (PDB), Node and pod affinity /anti-affinity and labels).
-- The node's removal won't reduce the headroom below the target.
-- Ocean will prefer to downscale the least utilized nodes first
+### Scale Down Behavior
 
-Ocean simulates the cluster's topology and state `post` the scale-down activity and decides whether the action can be executed or not.
+- When scale down of a node is expected, Ocean utilizes a configurable draining timeout of at least 300 seconds. (This can be configured using the drainingTimeout parameter on the Ocean level). At this time, Ocean marks the node as unschedulable and evicts all pods running on the node.
+  - Ocean spreads out the evictions instead of just deleting the pods all at once.  All the pods that run on the nodes are spread across a 120 seconds period of time. For example, if there are 10 pods running on the nodes, one pod is evicted every 12 seconds.
+  - If the eviction fails, Ocean has a retry mechanism that tries to evict the pods a few seconds later. If eviction still fails after one minute, Ocean forces deletion of the pod.
+- After the draining timeout has expired, Ocean terminates the node and removes any pods that were not successfully evicted.
+- Scale down will start only if no PDB is violated by removing the pods on the node. That is the default behavior. However, you could decide to ignore the PDB restriction during scale down. (Please reach out to the Support team to enable ignoring the restriction.) If ignoring PDB restriction is configured, the drain still occurs, and the spread described above provides a "best effort" to prevent violating the PDB.
+- There is a parameter at the cluster level called `maxScaleDownPercentage`. This parameter indicates the percentage out of the cluster nodes that can be scaled down at once. If you wish to scale down the cluster as quickly as possible, you can increase this parameter value to make the scale down more aggressive.
+
+<img src="/ocean/_media/features-scaling-k8s-02b.png" />
 
 ### Scale Down Prevention
 
-- Pods with restrictive PodDisruptionBudget will be evicted gradually if the scale down will cause a violation of the disruption budget, Ocean will not scale down the node.
-- Pods that are not backed by a controller object (so not created by deployment, replica set, job, stateful set).
-- Pods that cannot be moved elsewhere due to various constraints (lack of resources, non-matching node selectors or affinity, matching anti-affinity).
-- Pods that have the following label: `spotinst.io/restrict-scale-down`:`true`.
+Some workloads are not as resilient to instance replacements as others, so you may wish to prevent replacement of the nodes, while still getting the benefit of spot instance pricing. A good example of these cases are jobs or batch processes that need to finish their work without termination by the Ocean autoscaler.
 
-### Scale Down Suspension
-
-- During roll (per cluster, VNG or specific instance), Ocean suspends the scale down on the cluster level.
-- During workload migration, a scale down is suspended.
-- Once Ocean fails to launch an instance due to a technical reason (for example, if there is no capacity for OD in a specific market), Ocean suspends the scale down per the specific VNG. Ocean suspends the scale down because the cluster is not in optimal condition and pods are unscheduled. The following message is posted on the Elastilog:
-
-`"Could not scale up for pending pod ${KUBERNETES_POD_NAME} due to technical failure to launch required instances. Scale down has been disabled in VNG ${LAUNCHSPEC_NAME_AND_ID} until pod is scheduled."`
-
-### Pods & Nodes Draining Process
-
-Ocean ensures that pods and nodes are gracefully terminated in a case of scale-down or an instance replacement.
-Node Termination process is as follows:
-
-1. Check for scale-down restriction label (`spotinst.io/restrict-scale-down`:`true`) on node's pods.
-   - If found, the node is not eligible for scale-down.
-2. Scan All the pods and mark the ones that need to be rescheduled.
-   - Mark all the pods that don't have PDB configured, and start evicting them in parallel.
-3. For pods with PDB, Ocean performs the eviction in chunks and makes sure that it won't interfere with the minimal budget configured (For example a PDB .spec.minAvailable is 3, while there are 5 pods, 4 of them run on the node that is about to get scaled down; Ocean will evict 2 pods, wait for health signal and move to the next 2.
-4. An eviction is not completed until Ocean gets health signal from the new pod [readiness\liveness](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/) probe (when configured) and the old pod was successfully terminated ([wait for grace-period or after pre Stop command](https://kubernetes.io/docs/concepts/workloads/pods/pod/#termination-of-pods)).
-5. Ocean provides draining timeout of 300 seconds by default (configurable) for every Pod before terminating it.
-
-<img src="/ocean/_media/features-scaling-k8s-02a.png" />
+Ocean makes it easy to prevent scaling down of nodes running pods configured with one of the following labels:
+- spotinst.io/restrict-scale-down:true label – This label is a proprietary Spot label ([additional Spot labels](https://docs.spot.io/ocean/features/labels-and-taints?id=spot-labels)) and can be configured on a pod level. When configured, it instructs the Ocean autoscaler to prevent scaling down a node that runs any pod with this label specified.
+- cluster-autoscaler.kubernetes.io/safe-to-evict: false label – Cluster autoscaler label; works similarly to the restrict-scale-down label. Ocean supports that label to ensure easy migration from the cluster autoscaler to Ocean.
 
 ## Headroom
 
