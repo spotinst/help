@@ -10,7 +10,7 @@ To address these cases, the revert to lower-cost node process analyzes the nodes
 
 ## How it Works
 
-Ocean constantly scans the cluster’s node utilization. The proactive cost optimization process is applied when **all** of the following conditions are met:
+Ocean constantly scans the cluster’s node utilization. The revert to lower-cost node optimization process is applied when **all** of the following conditions are met:
 - No scaling event happened in the last 30 minutes in the specific VNG (neither scale up nor down event).
 - CPU and memory usage is less than 50% **or** GPU utilization is less than 50%.
 - The node was underutilized for at least 10 minutes.
