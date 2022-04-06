@@ -22,14 +22,14 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "docsify-cli": "^4.4.3"
+    "docsify-cli": "^4.4.4"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.33.0",
     "@typescript-eslint/parser": "^4.33.0",
     "autoprefixer": "^10.4.2",
     "clean-webpack-plugin": "4.0.0",
-    "concurrently": "^7.0.0",
+    "concurrently": "^7.1.0",
     "copy-webpack-plugin": "^10.2.4",
     "css-loader": "^6.7.1",
     "eslint": "^7.32.0",
