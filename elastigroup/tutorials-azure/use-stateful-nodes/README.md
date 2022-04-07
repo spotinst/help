@@ -9,7 +9,7 @@ Using Spot’s stateful node you can quickly import existing Azure VMs into Elas
 Elastigroup also gives Azure users more flexibility and control over infrastructure for their stateful workloads:
 - Increasing the availability of stateful nodes by defining multiple availability zones and spot VM types.
 - Improving infrastructure efficiencies by using the built-in scheduling mechanism to determine exact running hours for stateful nodes.
-- Easily managing stateful components like storage devices and add/remove data volumes.
+- Easily managing stateful resources such as adding and removing data disks.
 - Taking actions on nodes (e.g., pause, resume, recycle, and delete) in just a few clicks.
 
 ## What’s Next?
