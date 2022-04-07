@@ -33,7 +33,7 @@ To get detailed information, statistics, and operational information about a sta
 
 ## Use Node Actions
 
-To perform one of the node actions, click on the Actions menu on the top right and click one of the actions. The actions available include:
+To perform one of the [node actions](elastigroup/features-azure/stateful-nodes/actions), click on the Actions menu on the top right and click one of the actions. The actions available include:
 - View Configuration
 - Recycle
 - Pause
