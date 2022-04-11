@@ -296,8 +296,6 @@ Skip this section if you are only doing an assessment. Use the steps in the abov
 
 ### Optional: Create a new Subscription for Eco RI Purchases
 
-
-
 ## Step 2. Access to Enterprise Enrollment Data
 
 1. Log into https://ea.azure.com/.
@@ -324,8 +322,3 @@ Both the enrollment number and the key can be provided to the Eco team through o
 ## What’s Next?
 
 Learn [how Eco works](eco/azure-tutorials/) to provide significant savings on your cloud spend.
-
-[![Alternate Text]({https://netapp-my.sharepoint.com/:v:/p/wata/EUjKO1hz2WpOjsx6xdKpqDUBslp0eE1z0KVli8nTQNlWYw?e=pvW7if})]({https://netapp-my.sharepoint.com/:v:/p/wata/EUjKO1hz2WpOjsx6xdKpqDUBslp0eE1z0KVli8nTQNlWYw?e=pvW7if} "Link Title")
-
-
-<a href="{https://netapp-my.sharepoint.com/:v:/p/wata/EUjKO1hz2WpOjsx6xdKpqDUBslp0eE1z0KVli8nTQNlWYw?e=pvW7if}" title="Link Title"><img src="{https://netapp-my.sharepoint.com/:v:/p/wata/EUjKO1hz2WpOjsx6xdKpqDUBslp0eE1z0KVli8nTQNlWYw?e=pvW7if}" alt="Alternate Text" /></a>
