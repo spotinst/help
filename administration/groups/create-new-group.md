@@ -31,7 +31,7 @@ In the Create New Group popup, complete the required information and then click 
 
 ## Add Users
 
-There are several ways you can add [users]() to a group:
+There are several ways you can add [users](administration/users-a/) to a group:
 - When you create the group, as shown in the illustration below.
 - When you edit the group, after the group has been created.
 - When you are adding a new user or editing a user.
