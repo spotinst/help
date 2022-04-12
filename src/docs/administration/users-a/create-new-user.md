@@ -50,7 +50,7 @@ If you need the user to have policies that are not associated with the groups yo
 1. Select the policy from the dropdown list.
 2. If the policy you are looking for is on the account level, you must select the relevant account(s) from the list of accounts.
 
-To learn more about policies, see [Permission Policies](administration/permission-policies/).
+To learn more about policies, see [Permission Policies](administration/policies/).
 
 ## What’s Next?
 

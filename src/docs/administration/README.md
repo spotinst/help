@@ -1,11 +1,11 @@
 # Administration
 
-We make it easy for you to manage users, accounts, and organizations in Spot.
+We make it easy for you to manage users, permissions, and accounts in Spot.
 
 This section includes information you need to:
 
-- Set up users, accounts, and organizations
-- Manage access policies
+- Set up users, groups, and permission policies
+- Manage accounts and organizations
 - Configure single sign-on (SSO) with major identity providers
 
 ## What's Next?
