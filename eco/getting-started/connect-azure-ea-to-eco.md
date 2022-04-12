@@ -25,7 +25,7 @@ Complete the procedure below.
 
    - In the New Group page, enter the Group Name and Group Description, e.g., Eco Cost Specialist Team, and click Create.
 
-<img src="/eco/_media/connect-azure-ea-to-eco-002.png" />
+<img src="/eco/_media/connect-azure-ea-to-eco-002.png" width="542" />
 
    - Wait a few moments, then refresh the page. The name of the group will appear after it has been created.
 
@@ -40,12 +40,12 @@ To apply the Reservation Reader role to the user group, complete the procedure b
 
 2. Find and copy the Tenant ID.
 
-<img src="/eco/_media/connect-azure-ea-to-eco-005.png" />
+<img src="/eco/_media/connect-azure-ea-to-eco-005.png" width="513" />
 
 3. Apply the Azure Reservation Reader role to the user group using Azure PowerShell by completing the following steps.
    - Copy the code shown below, add the Tenant ID, and add the Object ID.
 
-<img src="/eco/_media/connect-azure-ea-to-eco-006.png" />
+<img src="/eco/_media/connect-azure-ea-to-eco-006.png" width="387" />
 
    - Paste the code into PowerShell directly and press enter. The output below will appear:
 
