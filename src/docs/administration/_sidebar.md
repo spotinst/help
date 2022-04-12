@@ -6,7 +6,7 @@
     - [Create New User](administration/users-a/create-new-user)
     - [Edit User Details](administration/users-a/edit-user-details)
     - [Set Password](administration/users/set-password)
-  _ [Groups](administration/groups/)
+  - [Groups](administration/groups/)
     - [Create New Group](administration/groups/create-new-group)
     - [Edit Group Details](administration/groups/edit-group-details)
   - [Permission Policies](administration/policies/)
