@@ -42,7 +42,7 @@ Microsoft EA Azure administrators
 
 3. For the first user, click Invite. This sends a notification to the Eco guest user via email.
 
-<img src="/eco/_media/connect-azure-ea-to-eco-01.png" />
+<img src="/eco/_media/connect-azure-ea-to-eco-008.png" />
 
 4. Repeat the invitations for remaining users.
 
@@ -302,7 +302,7 @@ Skip this section if you are only doing an assessment. Use the steps in the abov
 2. In the left Navigation, click Manage.
 3. Within the Enrollment tab, copy the Enrollment Number and set that aside for now.
 
-<img src="/eco/_media/connect-azure-ea-to-eco-02.png" />
+<img src="/eco/_media/connect-azure-ea-to-eco-009.png" />
 
 4. Ensure the Auth Level on the Enrollment Detail says “Work or School Account Cross tenant.”
    It is possible to temporarily set it as this auth level. Just switch it to “Work or School Account Cross tenant,” send the invite, then switch it back to your preferred Auth Level.
