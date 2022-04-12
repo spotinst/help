@@ -5,7 +5,7 @@ Requiring Multi-factor authentication for end users connecting to Spot PC is hig
 ## Prerequisites
 1. Assign Users appropriate Azure AD licensing (Premium P1 or P2)
 1. Azure AD Groups with the users to be assigned MFA
-  * Spot PC already uses AD groups to assign desktops to users (e.g. all users in the "Accounting" AD group get assigned to a Spot PC Group for "Accounting"). You can simply re-use those groups for this policy or assign it at a higher level in AD.
+    * Spot PC already uses AD groups to assign desktops to users (e.g. all users in the "Accounting" AD group get assigned to a Spot PC Group for "Accounting"). You can simply re-use those groups for this policy or assign it at a higher level in AD.
 1. Follow [Microsoft's guide](https://docs.microsoft.com/en-us/azure/active-directory/authentication/howto-mfa-userstates#view-the-status-for-a-user) for enabling MFA for all users.
 
 ## Conditional Access Licensing
