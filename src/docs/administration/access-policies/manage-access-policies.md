@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Manage Access Policies
 
 This article describes how to do the following:
