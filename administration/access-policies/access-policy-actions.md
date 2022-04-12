@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Access Policy Actions
 
 The following table lists the available actions for use in the Access Policies.

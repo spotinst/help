@@ -29,11 +29,11 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/administration/access-policies/"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/administration/api/create-api-token-a</loc>
+        <loc>https://docs.spot.io/?/administration/api/create-api-token-OLD</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/administration/api/create-api-token-a"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/administration/api/create-api-token-a"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/administration/api/create-api-token-OLD"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/administration/api/create-api-token-OLD"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/administration/api/create-api-token</loc>
@@ -232,11 +232,11 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/administration/sso-access-control/account-level-sso"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/administration/sso-access-control/organization-level-sso-a</loc>
+        <loc>https://docs.spot.io/?/administration/sso-access-control/organization-level-sso-OLD</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/administration/sso-access-control/organization-level-sso-a"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/administration/sso-access-control/organization-level-sso-a"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/administration/sso-access-control/organization-level-sso-OLD"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/administration/sso-access-control/organization-level-sso-OLD"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/administration/sso-access-control/organization-level-sso</loc>
