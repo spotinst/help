@@ -1,5 +1,3 @@
-<meta name="robots" content="noindex">
-
 # Organization Level SSO
 
 For organization level login, it is possible to grant a user permissions to an organization per role or per user groups using a SAML attribute. The attributes allow login to different organizations by the same user and the same IDP app while setting the permissions dynamically for each organization. The attributes are described below.
