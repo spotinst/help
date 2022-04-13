@@ -6,6 +6,7 @@
     - [Connect your AWS Account](eco/getting-started/connect-your-aws-account)
     - [Connect Account: Customer Working with AWS MSP](eco/getting-started/connect-account-customer-working-with-msp)
     - [Connect your Azure EA Account for Eco Analysis](eco/getting-started/connect-azure-ea-to-eco)
+    - [Eco Savings Blox](eco/getting-started/eco-savings-blox)
   - [AWS Tutorials](eco/tutorials/)
     - [Review AWS Commitment Spending Analysis](eco/tutorials/review-ri-spending-analysis)
     - [Choose AWS RI Strategy](eco/tutorials/choose-a-strategy)
