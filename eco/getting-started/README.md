@@ -6,4 +6,4 @@ It is really easy to get started with Eco. All you need to do is [connect your c
 
 ## What's Next?
 
-Learn more about [optimizing your use of reserved instances](eco/tutorials/).
+Learn more about optimizing your use of reserved instances ([AWS](eco/tutorials/), [Azure](eco/azure-tutorials/)).
