@@ -4,7 +4,7 @@ Autohealing enables you to select which health check service will be used to det
 
 ## Relevance
 
-This tutorial is relevant for users of Elastigroup with AWS. For Elastigroup with Azure, see [Set Health Checks and Autohealing](elastigroup/tutorials/azure/set-health-checks-and-autohealing).
+This tutorial is relevant for users of Elastigroup with AWS. For Elastigroup with Azure, see [Set Health Checks and Autohealing](elastigroup/tutorials-azure/set-health-checks-and-autohealing).
 
 ## Configure Autohealing Health Check Type
 
