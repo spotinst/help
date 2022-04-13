@@ -17,7 +17,7 @@ Eco enables you to get the most out of cloud commitment purchases. This includes
 
 ## Document Map
 
-Eco in CloudCheckr
+**Eco in CloudCheckr**
 - [Connect your AWS Account in CloudCheckr](eco/eco-in-cloudcheckr/connect-your-aws-account-in-cloudcheckr)
 - [View Savings in Dashboard](eco/eco-in-cloudcheckr/view-savings-in-dashboard)
 - [Eco AWS Policy](eco/tutorials/eco-policy/)
