@@ -104,8 +104,8 @@ For production workloads:
 
 - We don't recommend using the `-latest` tags. To keep the image stable you should use images with an explicit version suffix like `-dm17` below. The following images are the same:
   - gcr.io/datamechanics/spark:platform-3.2-dm17
-  - gcr.io/datamechanics/spark:platform-3.2.0-dm17
-  - gcr.io/datamechanics/spark:platform-3.2.0-hadoop-3.3.1-java-8-scala-2.12-python-3.8-dm17
+  - gcr.io/datamechanics/spark:platform-3.2.1-dm17
+  - gcr.io/datamechanics/spark:platform-3.2.1-hadoop-3.3.1-java-8-scala-2.12-python-3.8-dm17
 - Long-form tag images without the suffix version can change to the exclusion of the Spark, Hadoop, Java, Scala and Python versions specified in the image tag.
 
 See the release notes below to learn about the changes introduced by each version.
