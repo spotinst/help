@@ -133,7 +133,7 @@ After all the other rules have been applied, the charges are increased or decrea
 
 You may chose to share the cost of Eco RI or savings plan-related savings with consumers of the savings.
 
-The percentage option allows you to add a charge to each subset relative to the overall savings provided by Eco. You may enter the exact same percentage as your contract with Spot, or you may enter a different percentage depending on your business model.
+The percentage option allows you to add a charge proportionate to the overall savings provided by Eco. You may enter the exact same percentage as your contract with Spot, or you may enter a different percentage depending on your business model. It is possible for an account to appear in the report, but if no Eco-generated savings is attributed to it, then no Eco fee will be attributed to it.
 
 The Flat Fee option allows you to add a fee to each subset or account. The fee will be the same each month.
 
