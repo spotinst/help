@@ -85,4 +85,6 @@ We'll check connectivity to your GCP account, and you're all set.
 
 ## What's Next?
 
-[Create your first Elastigroup](elastigroup/getting-started/create-an-elastigroup-for-gcp).
+- [Connect GCP project with Terraform](connect-your-cloud-provider/gcp-project/terraform).
+- [Create your first Elastigroup](elastigroup/getting-started/create-an-elastigroup-for-gcp).
+- [Create your first Ocean Cluster with GKE](ocean/getting-started/gke).
