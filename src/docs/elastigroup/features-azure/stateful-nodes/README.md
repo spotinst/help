@@ -10,6 +10,7 @@ Managing your stateful workload using a single instance solution is a very popul
 - Personal developer machines
 - Single DB instances
 - Machine learning environments
+- Applications that require stateful (IP and storage) capabilities
 
 ## Stateful Persistence Options
 
