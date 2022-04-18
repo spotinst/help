@@ -15,9 +15,9 @@ In addition to a version of Spark itself, the `spark:platform` images include co
 |                Full Image name                 | Spark Version | Scala Version | Python Version | Hadoop Version |
 | :--------------------------------------------: | :-----------: | :-----------: | :------------: | :------------: |
 | gcr.io/datamechanics/spark:platform-2.4-latest |     2.4.7     |     2.12      |      3.7       |     3.1.0      |
-| gcr.io/datamechanics/spark:platform-3.0-latest |     3.0.2     |     2.12      |      3.8       |     3.2.0      |
-| gcr.io/datamechanics/spark:platform-3.1-latest |     3.1.1     |     2.12      |      3.8       |     3.2.0      |
-| gcr.io/datamechanics/spark:platform-3.2-latest |     3.2.0     |     2.12      |      3.8       |     3.3.1      |
+| gcr.io/datamechanics/spark:platform-3.0-latest |     3.0.3     |     2.12      |      3.8       |     3.2.0      |
+| gcr.io/datamechanics/spark:platform-3.1-latest |     3.1.3     |     2.12      |      3.8       |     3.2.0      |
+| gcr.io/datamechanics/spark:platform-3.2-latest |     3.2.1     |     2.12      |      3.8       |     3.3.1      |
 
 ### How to use those images for your apps and jobs?
 
@@ -33,8 +33,8 @@ To match different dependencies and version requirements you can find more image
 All these dependencies can have different versions. A combination of dependency versions is called a flavor of spark:platform in this page. The image tag indicates the flavor of the image and can be adjusted to fit your needs.Here are two examples of image tags:
 
 ```
-gcr.io/datamechanics/spark:platform-3.2.0-latest
-gcr.io/datamechanics/spark:platform-3.2.0-hadoop-3.3.1-java-8-scala-2.12-python-3.8-latest
+gcr.io/datamechanics/spark:platform-3.2.1-latest
+gcr.io/datamechanics/spark:platform-3.2.1-hadoop-3.3.1-java-8-scala-2.12-python-3.8-latest
 ```
 
 ### Need to build your own Image?
@@ -62,8 +62,8 @@ The versions of those connectors depend on the versions of Spark and Hadoop. Her
 | Azure Blob Storage (wasbs://) | Hadoop 3.1.0 - Azure Storage 5.4.0 | Hadoop 3.2.0 - Azure Storage 7.0.0 | Hadoop 3.2.0 - Azure Storage 7.0.0 | Hadoop 3.3.1 - Azure Storage 7.0.1 |
 | ADLS gen2 (abfss://)          | Hadoop 3.1.0 - Azure Storage 5.4.0 | Hadoop 3.2.0 - Azure Storage 7.0.0 | Hadoop 3.2.0 - Azure Storage 7.0.0 | Hadoop 3.3.1 - Azure Storage 7.0.1 |
 | GCS                           |               2.1.5                |               2.1.5                |               2.1.5                |               2.1.5                |
-| Delta                         |               0.6.1                |               0.8.0                |               1.0.0                |               1.0.0                |
-| Snowflake                     |               2.9.1                |               2.9.1                |               2.9.1                |               2.9.1                |
+| Delta                         |               0.6.1                |               0.8.0                |               1.0.1                |               1.1.0                |
+| Snowflake                     |               2.9.3                |               2.10.0                |               2.10.0                |               2.10.0                |
 | Pyarrow                       |               3.0.0                |               3.0.0                |               3.0.0                |               3.0.0                |
 
 To check these versions, you may also run the image locally and list the JARs in /opt/spark/jars/:
@@ -83,7 +83,7 @@ Spark Docker images for multiple combinations of the versions of the dependencie
 
 | Component |     Available versions      |
 | :-------: | :-------------------------: |
-|   Spark   |       2.4.5 to 3.2.0        |
+|   Spark   |       2.4.5 to 3.2.1        |
 |  Hadoop   | 2.6, 2.7, 3.1, 3.2, and 3.3 |
 |   Java    |          8 and 11           |
 |   Scala   |        2.11 and 2.12        |
@@ -95,17 +95,17 @@ There are both long-form tags (like `gcr.io/datamechanics/spark:platform-3.1.1-j
 
 In most cases, we encourage starting with our short-form tags:
 
-- `gcr.io/datamechanics/spark:platform-3.1.1-latest` contains a Spark 3.1.1 distribution and all other dependencies are set to the latest compatible version. For example, platform-3.1.1-latest contains Hadoop 3.2.0, Python 3.8, Scala 2.12, and Java 11. We allow ourselves to upgrade the version of a dependency if a new, compatible version is released. For example, we may upgrade platform-3.1.1-latest to Hadoop 3.3.0 once it is compatible with Spark 3.1.1.
-- `gcr.io/datamechanics/spark:platform-3.1-latest` contains the latest Spark version of the 3.1 minor. For example, platform-3.1-latest currently uses Spark 3.1.1 and will be upgraded once Spark 3.1.2 is released. For other dependencies (Hadoop, Python, etc), platform-3.1-latest behaves like platform-3.1.1-latest (see the previous bullet point).
+- `gcr.io/datamechanics/spark:platform-3.1.3-latest` contains a Spark 3.1.3 distribution and all other dependencies are set to the latest compatible version. For example, platform-3.1.3-latest contains Hadoop 3.2.0, Python 3.8, Scala 2.12, and Java 11. We allow ourselves to upgrade the version of a dependency if a new, compatible version is released. For example, we may upgrade platform-3.1.3-latest to Hadoop 3.3.0 once it is compatible with Spark 3.1.3.
+- `gcr.io/datamechanics/spark:platform-3.1-latest` contains the latest Spark version of the 3.1 minor.
 
 Please use a long-form only if you need a specific combination. For instance, you may require a specific combination of versions when migrating an existing Scala or Java project to Spark on Kubernetes. On the other hand, new JVM projects and Pyspark projects should work fine with short-form tags.
 
 For production workloads:
 
-- We don't recommend using the `-latest` tags. To keep the image stable you should use images with an explicit version suffix like `-dm15` below. The following images are the same:
-  - gcr.io/datamechanics/spark:platform-3.2-dm15
-  - gcr.io/datamechanics/spark:platform-3.2.0-dm15
-  - gcr.io/datamechanics/spark:platform-3.2.0-hadoop-3.3.1-java-8-scala-2.12-python-3.8-dm15
+- We don't recommend using the `-latest` tags. To keep the image stable you should use images with an explicit version suffix like `-dm17` below. The following images are the same:
+  - gcr.io/datamechanics/spark:platform-3.2-dm17
+  - gcr.io/datamechanics/spark:platform-3.2.1-dm17
+  - gcr.io/datamechanics/spark:platform-3.2.1-hadoop-3.3.1-java-8-scala-2.12-python-3.8-dm17
 - Long-form tag images without the suffix version can change to the exclusion of the Spark, Hadoop, Java, Scala and Python versions specified in the image tag.
 
 See the release notes below to learn about the changes introduced by each version.
@@ -118,7 +118,19 @@ These images are also published on a [public Dockerhub repository](https://hub.d
 
 Ocean Spark regularly updates its publicly available Docker images for Spark. This section contains the release notes of those images, indicating what changed in each version.
 
-### Release dm15 (latest)
+### Release dm17 (latest)
+
+- Add new images with Spark 3.1.3 and Spark 3.2.1
+- Upgrade Delta version to 1.0.1 with Spark 3.1.x
+- Upgrade Snowflake to 2.9.3 for Spark 2 and 2.10.0 for Spark 3
+
+### Release dm16
+
+- Add new images with Spark 3.0.3 and Spark 3.1.2
+- Upgrade Snowflake connector to 2.9.2
+- Use the newly released Delta version 1.1.0 with Spark 3.2.0
+
+### Release dm15
 
 - Add new images with Spark 3.2.0 and Hadoop 3.3.1
 - Upgrade OS packages to apply latest security patches
