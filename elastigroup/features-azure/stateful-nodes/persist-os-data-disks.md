@@ -39,13 +39,14 @@ When using the Reattach option for data volume persistence, the instances are la
   - Reattach plus the instance is launched in the same AZ as the previous instance- The existing volumes are attached to the new instance.
   - Reattach plus the instance is launched in a different AZ as the previous instance- New volumes are created in the same AZ as the new instance and attached.
 - Once a stateful instance is deallocated. The data (Images, Volumes and Snapshots) is kept for 4 days by default. Can be configured on an hourly basis.
-Backend Actions
+
+## Backend Actions
+
 Elastigroup automatically performs various backend actions for different states of the Stateful instance to ensure root volume persistence.
-Paused: Images (AMI) are created each time the Stateful instance is Paused using the latest root volume snapshot which was taken after the instance termination. Elastigroup only keeps the latest Snapshot for each volume.
-Running: While the instance is running, a Snapshot is taken for the root volume every 5 minutes and the latest 3 Snapshots are kept (incremental backup).
-Deallocated: The data (Images, Volumes and Snapshots) are kept for 4 days by default.
+- Paused: Images (AMI) are created each time the Stateful instance is Paused using the latest root volume snapshot which was taken after the instance termination. Elastigroup only keeps the latest Snapshot for each volume.
+- Running: While the instance is running, a Snapshot is taken for the root volume every 5 minutes and the latest 3 Snapshots are kept (incremental backup).
+- Deallocated: The data (Images, Volumes and Snapshots) are kept for 4 days by default.
 
+## What's Next?
 
-
-What's Next?
 Learn more about persisting the network.
