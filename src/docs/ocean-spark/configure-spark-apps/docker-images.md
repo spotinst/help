@@ -95,7 +95,7 @@ There are both long-form tags (like `gcr.io/datamechanics/spark:platform-3.1.1-j
 
 In most cases, we encourage starting with our short-form tags:
 
-- `gcr.io/datamechanics/spark:platform-3.1.3-latest` contains a Spark 3.1.3 distribution and all other dependencies are set to the latest compatible version. For example, platform-3.1.3-latest contains Hadoop 3.2.0, Python 3.8, Scala 2.12, and Java 11. We allow ourselves to upgrade the version of a dependency if a new, compatible version is released. For example, we may upgrade platform-3.1.3-latest to Hadoop 3.3.0 once it is compatible with Spark 3.1.3.
+- `gcr.io/datamechanics/spark:platform-3.1.3-latest` contains a Spark 3.1.3 distribution and all other dependencies are set to the latest compatible version. For example, platform-3.1.3-latest contains Hadoop 3.2.0, Python 3.8, Scala 2.12, and Java 11. We reserve the right to upgrade the version of a dependency if a new, compatible version is released. For example, we may upgrade platform-3.1.3-latest to Hadoop 3.3.0 once it is compatible with Spark 3.1.3.
 - `gcr.io/datamechanics/spark:platform-3.1-latest` contains the latest Spark version of the 3.1 minor.
 
 Please use a long-form only if you need a specific combination. For instance, you may require a specific combination of versions when migrating an existing Scala or Java project to Spark on Kubernetes. On the other hand, new JVM projects and Pyspark projects should work fine with short-form tags.
