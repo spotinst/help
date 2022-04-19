@@ -33,5 +33,5 @@ New nodes are provisioned with the same private IP using the same Elastic Networ
 <img src="/elastigroup/_media/azure-features-stateful-nodes-01.png" />
 
 ## What’s Next?
-
-Learn more about [persisting the OS and data disks](elastigroup/features-azure/stateful-nodes/persist-os-data-disks).
+- Learn more about [persisting the OS and data disks](elastigroup/features-azure/stateful-nodes/persist-os-data-disks).
+- Try out the [Stateful Node Tutorials](elastigroup/tutorials-azure/use-stateful-nodes/).
