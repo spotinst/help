@@ -4,7 +4,7 @@
 
 Spot PC administration is designed around a few simple workflows. Understanding these primary workflows is fundamental to successfully administering Spot PC for your tenant(s).
 
-## Typical Net Tenant Deployment Steps
+## Typical New Tenant Deployment Steps
 
 - Step 1 - [Onboarding Workflow](spot-pc/getting-started/onboarding-workflow)
 - Step 2 - [Create VM Image](spot-pc/tutorials/deploy-spot-pc?id=create-image)
