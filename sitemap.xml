@@ -736,6 +736,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/features-azure/stateful-nodes/"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/elastigroup/features-azure/stateful-nodes/schedule</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/features-azure/stateful-nodes/schedule"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/features-azure/stateful-nodes/schedule"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/elastigroup/features/amazon-ecs/automatic-autoscaler-for-ecs</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
