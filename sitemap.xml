@@ -2899,6 +2899,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/getting-started/"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/spot-pc/getting-started/release-notes</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-pc/getting-started/release-notes"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/getting-started/release-notes"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/spot-pc/getting-started/roles-and-responsibilities</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
