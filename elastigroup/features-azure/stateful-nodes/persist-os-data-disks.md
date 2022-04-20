@@ -7,6 +7,7 @@ Elastigroup’s [stateful nodes](elastigroup/features-azure/stateful-nodes/) are
 Persist OS maintains the data stored in your root disk such as OS and configuration data during spot node replacements. This way you can start the application exactly where you left off. By default, the OS disk is deleted when the node terminates. To change the default behavior, enable the Persist OS feature.
 
 ### Persist Data Disks
+
 Persist Data maintains the data disk during VM replacement. All data disks that were attached at the time of the previous VM termination will be automatically re-attached using the same configuration upon VM replacement.
 
 ## How it Works
@@ -15,7 +16,7 @@ Both Persist OS Disk and Persist Data Disk provide the Re-attach and Snapshot me
 
 ### Re-attach Disks (recommended for large data disks)
 
-The same disk is detached from the original VM and reattached to the newly launched VM. If the new VM is launched in a different availability zone (AZ), Spot creates a new disk from the latest snapshot and attaches it to the new node VM (as disks cannot be migrated between AZs). Spot maintains the same disks as long as the VM is launched in the same AZ.
+The same disk is detached from the original VM and reattached to the newly launched VM. If the new VM is launched in a different availability zone (AZ), Spot creates a new disk from the latest snapshot and attaches it to the new VM (as disks cannot be migrated between AZs). Spot maintains the same disks as long as the VM is launched in the same AZ.
 
 <img src="/elastigroup/_media/azure-persist-os-data-disks-01.png" width="200" />
 
