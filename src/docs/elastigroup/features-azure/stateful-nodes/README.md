@@ -26,7 +26,7 @@ Data and OS disks are maintained using one of the following methods:
 
 New VMs are provisioned with the same private IP and public IP using the same network interface.
 
-<img src="/elastigroup/_media/azure-features-stateful-nodes-01.png" />
+<img src="/elastigroup/_media/azure-features-stateful-nodes-01.png" width="350"/>
 
 ## What’s Next?
 - Learn more about [persisting the OS and data disks](elastigroup/features-azure/stateful-nodes/persist-os-data-disks).
