@@ -16,19 +16,15 @@ Managing your stateful workload using a single instance solution is a very popul
 
 The Stateful Node feature provides the ability to persist your OS disk, data disks, and network.
 
-### Persist OS Disk
-
-Choosing to persist the OS disk ensures that your operating system and root volume configurations are maintained during node replacements.
-
-### Persist Data Disk
+### Persist Data and OS Disks
 
 Data and OS disks are maintained using one of the following methods:
-- Re-attach: The same volumes are detached from the original node and reattached to the new node. If the new node is launched in a different availability zone, a new volume is created from the latest snapshot and attached to the new node. (Volumes cannot be migrated between availability zones.)
-- Take Snapshot: Periodic snapshots of the data volume are taken while the node is running. Upon node replacement, a new volume is created from the latest snapshot and is attached to the new node.
+- Re-attach: The same disks are detached from the original VM and reattached to the new VM. If the new VM is launched in a different availability zone, a new disk is created from the latest snapshot and attached to the new VM. (Disks cannot be migrated between availability zones.)
+- Take Snapshot: Periodic snapshots of the data disk are taken while the VM is running. Upon VM replacement, a new disk is created from the latest snapshot and is attached to the new VM.
 
 ### Persist Network
 
-New nodes are provisioned with the same private IP using the same Elastic Network Interface.
+New VMs are provisioned with the same private IP and public IP using the same network interface.
 
 <img src="/elastigroup/_media/azure-features-stateful-nodes-01.png" />
 
