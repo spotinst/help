@@ -55,7 +55,7 @@ You can use the Spot console or the API to create a Configuration template. Here
 ```json
 {
     "type": "Python",
-    "sparkVersion": "3.2.0",
+    "sparkVersion": "3.2.1",
     "sparkConf": {
         "spark.dynamicAllocation.enabled": "true",
         "spark.dynamicAllocation.minExecutors": "0",
@@ -91,7 +91,7 @@ in your configuration template. Here's an example configuration for a scala kern
 ```json
 {
     "type": "Scala",
-    "sparkVersion": "3.2.0",
+    "sparkVersion": "3.2.1",
     "sparkConf": {
         "spark.dynamicAllocation.enabled": "true",
         "spark.dynamicAllocation.minExecutors": "0",
