@@ -61,17 +61,7 @@ You can use the Spot console or the API to create a Configuration template. Here
         "spark.dynamicAllocation.minExecutors": "0",
         "spark.dynamicAllocation.maxExecutors": "10",
         "spark.dynamicAllocation.initialExecutors": "1"
-    },
-    "driver": {
-        "cores": 1,
-        "instanceSelector": "r5",
-        "spot": false
-    },
-    "executor": {
-        "cores": 4,
-        "instanceSelector": "r5",
-        "spot": true
-    }        
+    }      
  }
 ```
 
@@ -97,17 +87,7 @@ in your configuration template. Here's an example configuration for a scala kern
         "spark.dynamicAllocation.minExecutors": "0",
         "spark.dynamicAllocation.maxExecutors": "10",
         "spark.dynamicAllocation.initialExecutors": "1"
-    },
-    "driver": {
-        "cores": 1,
-        "instanceSelector": "r5",
-        "spot": false
-    },
-    "executor": {
-        "cores": 4,
-        "instanceSelector": "r5",
-        "spot": true
-    }        
+    }      
  }
 ```
 
