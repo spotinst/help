@@ -10,7 +10,9 @@ Microsoft EA Azure administrators
 
 - Admin access to https://ea.azure.com/
 - The ability to create a user group in Azure Portal
-- The ability to assign a role to a user group in Azure PowerShell to a Tenant scope in Azure Portal
+- Reviewed [Read Only permissions](eco/azure-tutorials/access-roles-read-only) required for Eco team
+- The Azure user is a global administrator with [elevated access](https://docs.microsoft.com/en-us/azure/role-based-access-control/elevate-access-global-admin#elevate-access-for-a-global-administrator) and access to at least one subscription
+
 
 ## Setup for Initial Analysis
 
@@ -31,7 +33,19 @@ Complete the procedure below.
 
 <img src="/eco/_media/connect-azure-ea-to-eco-003.png" />
 
-## Step 2. Apply Azure Role to User Group
+Step 2. Apply the Cost Management Reader Role
+
+To apply the Cost Management Reader role to the Management Group or Subscriptions that you would like analyzed, complete the procedure below.
+
+1. Find the Management Group you would like to give the Eco Cost Specialist group access to.
+
+<img src="/eco/_media/connect-azure-ea-to-eco-0031.png" />
+
+2. Apply the Cost Management Reader role to the user group created earlier for the Management Group.
+
+<img src="/eco/_media/connect-azure-ea-to-eco-0032.png" />
+
+## Step 3: Apply the Reservation Reader Role
 
 To apply the Reservation Reader role to the user group, complete the procedure below.
 1. Find and copy the Object ID of the new user group.
@@ -51,7 +65,7 @@ To apply the Reservation Reader role to the user group, complete the procedure b
 
 <img src="/eco/_media/connect-azure-ea-to-eco-007.png" />
 
-## Step 3. Invite Eco Cost Specialist Guest Users to the user group
+## Step 4. Invite Eco Cost Specialist Guest Users to the user group
 
 1. Navigate to Users.
 2. Select New Guest User and complete the required fields. You will do this once for each user. You will use the following names and email addresses:
@@ -77,7 +91,7 @@ To apply the Reservation Reader role to the user group, complete the procedure b
 
 4. Repeat the invitations for remaining users.
 
-## Step 4. Read Only Access to Enterprise Enrollment Data
+## Step 5. Read Only Access to Enterprise Enrollment Data
 
 1. Log into https://ea.azure.com/.
 2. In the left Navigation, click Manage.
