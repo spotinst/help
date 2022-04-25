@@ -10,7 +10,9 @@ Microsoft EA Azure administrators
 
 - Admin access to https://ea.azure.com/
 - The ability to create a user group in Azure Portal
-- The ability to assign a role to a user group in Azure PowerShell to a Tenant scope in Azure Portal
+- Reviewed [Read Only permissions](eco/azure-tutorials/access-roles-read-only) required for Eco team
+- The Azure user is a global administrator with [elevated access](https://docs.microsoft.com/en-us/azure/role-based-access-control/elevate-access-global-admin#elevate-access-for-a-global-administrator) and access to at least one subscription
+
 
 ## Setup for Initial Analysis
 
