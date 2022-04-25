@@ -6,6 +6,10 @@ As mentioned on the [Azure EA Tutorial](eco/azure-tutorials/) there is a three s
 
 The role and EA Read Only Admin access below is relevant only for customers who have not yet signed a contract for Eco Azure.
 
+### Cost Management Reader
+
+The Eco team requests the [Cost Management Reader role](https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#cost-management-reader) to be applied to the user group of guest users for the Management Group OR Subscriptions scope that is going to be analyzed. The data is used to complete the initial analysis.
+
 ### Reservation Reader role
 
 The Eco team requests customers to assign the [Azure Reservation Reader](https://docs.microsoft.com/en-us/azure/cost-management-billing/reservations/view-reservations#assign-a-reservation-reader-role-at-the-tenant-level) role to the user group of guest users in order to accurately perform the initial analysis.
