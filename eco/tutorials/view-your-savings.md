@@ -42,6 +42,8 @@ A bar graph showing the amount of savings each month broken down by type of savi
 
 <img src="/eco/_media/tutorials-view-savings-01c2a.png" />
 
+It is important to note that RI Volume Discounts may appear in Savings Over Time because they also drive the cost of reservations down. Eco includes these cost reductions in our net savings calculations. 
+
 ### Monthly Commitment over Time
 
 A stacked bar graph showing your reserved instance and savings plan commitment per month broken down into Standard, Convertible, and Pending reservations, plus Compute and EC2 savings plans. Use the toggle switches to include or exclude recurring fees or show up-front fees from an amortized view.
