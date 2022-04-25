@@ -20,7 +20,7 @@ Use the [registration procedure](https://console.spotinst.com/spt/auth/signUp) i
 
 ## Step 3. Enable Subsets Feature
 
-Contact your Spot representative to have the Subsets feature enabled.
+Submit a ticket to have the Subsets feature enabled. Specifiy the organization ID in the ticket.
 
 ## Step 4. Create Subsets
 
