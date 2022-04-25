@@ -58,6 +58,14 @@ My company is not located in the USA. How can I connect my bank account to the A
 
 Please contact your account executive for more information.
 
+
+## Question: How Does Eco Consider RI Volume Discounts?
+
+### Answer:
+
+RI Volume Discounts drive the cost of reservations down. When Eco makes a large RI purchase which generates the RI Volume Discount, it is by design. Eco includes the cost reductions in our net savings calculations, which may impact your Eco fee. 
+
+
 ## Question: No Data in Eco AWS Dashboard
 
 Why don't I see data in my dashboard?
