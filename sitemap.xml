@@ -2087,11 +2087,32 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-spark/configure-spark-apps/secrets-environment-variables"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/ocean-spark/getting-started/create-cluster</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-spark/getting-started/create-cluster"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-spark/getting-started/create-cluster"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/ocean-spark/getting-started/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-spark/getting-started/"/>
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-spark/getting-started/"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/ocean-spark/getting-started/run-your-first-app</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-spark/getting-started/run-your-first-app"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-spark/getting-started/run-your-first-app"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/ocean-spark/getting-started/troubleshoot-cluster-deployment</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-spark/getting-started/troubleshoot-cluster-deployment"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-spark/getting-started/troubleshoot-cluster-deployment"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/ocean-spark/product-tour/analyze-costs</loc>
