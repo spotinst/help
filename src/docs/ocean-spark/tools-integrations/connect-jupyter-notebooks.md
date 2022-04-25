@@ -75,8 +75,8 @@ The Configuration Template “notebook-template” appears in the list of kernel
 
 ## Scala Kernels
 
-Ocean Spark also supports Jupyter Scala kernels. To open up a scala Kernel, all you need is to change the `type` field 
-in your configuration template. Here's an example configuration for a scala kernel:
+Ocean Spark also supports Jupyter Scala kernels. To open up a Scala kernel, all you need is to change the `type` field 
+in your configuration template. Here's an example configuration for a Scala kernel:
 
 ```json
 {
