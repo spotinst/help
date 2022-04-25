@@ -54,23 +54,14 @@ You can use the Spot console or the API to create a Configuration template. Here
 
 ```json
 {
-    "sparkVersion": "3.2.0",
+    "type": "Python",
+    "sparkVersion": "3.2.1",
     "sparkConf": {
         "spark.dynamicAllocation.enabled": "true",
         "spark.dynamicAllocation.minExecutors": "0",
         "spark.dynamicAllocation.maxExecutors": "10",
-         "spark.dynamicAllocation.initialExecutors": "1"
-    },
-    "driver": {
-        "cores": 1,
-        "instanceSelector": "r5",
-        "spot": false
-    },
-    "executor": {
-        "cores": 4,
-        "instanceSelector": "r5",
-        "spot": true
-    }        
+        "spark.dynamicAllocation.initialExecutors": "1"
+    }      
  }
 ```
 
@@ -82,7 +73,23 @@ The Configuration Template “notebook-template” appears in the list of kernel
 
 <img src="/ocean-spark/_media/tools-connect-jupyter-notebooks-03.png" width="344" height="298" />
 
-At the moment, Ocean Spark only supports Python kernels.
+## Scala Kernels
+
+Ocean Spark also supports Jupyter Scala kernels. To open up a Scala kernel, all you need is to change the `type` field 
+in your configuration template. Here's an example configuration for a Scala kernel:
+
+```json
+{
+    "type": "Scala",
+    "sparkVersion": "3.2.1",
+    "sparkConf": {
+        "spark.dynamicAllocation.enabled": "true",
+        "spark.dynamicAllocation.minExecutors": "0",
+        "spark.dynamicAllocation.maxExecutors": "10",
+        "spark.dynamicAllocation.initialExecutors": "1"
+    }      
+ }
+```
 
 ## Use a notebook
 
