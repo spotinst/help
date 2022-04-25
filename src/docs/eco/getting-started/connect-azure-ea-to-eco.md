@@ -13,7 +13,6 @@ Microsoft EA Azure administrators
 - Reviewed [Read Only permissions](eco/azure-tutorials/access-roles-read-only) required for Eco team
 - The Azure user is a global administrator with [elevated access](https://docs.microsoft.com/en-us/azure/role-based-access-control/elevate-access-global-admin#elevate-access-for-a-global-administrator) and access to at least one subscription
 
-
 ## Setup for Initial Analysis
 
 ### Step 1. Create User Group for Eco Cost Specialist Guest Users
@@ -33,7 +32,7 @@ Complete the procedure below.
 
 <img src="/eco/_media/connect-azure-ea-to-eco-003.png" />
 
-Step 2. Apply the Cost Management Reader Role
+## Step 2. Apply the Cost Management Reader Role
 
 To apply the Cost Management Reader role to the Management Group or Subscriptions that you would like analyzed, complete the procedure below.
 
