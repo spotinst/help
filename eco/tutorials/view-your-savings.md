@@ -46,7 +46,7 @@ It is important to note that RI Volume Discounts may appear in Savings Over Time
 
 ### Monthly Commitment over Time
 
-A stacked bar graph showing your reserved instance and savings plan commitment per month broken down into Standard, Convertible, and Pending reservations, plus Compute and EC2 savings plans. Use the toggle switches to include or exclude recurring fees or show up-front fees from an amortized view.
+A stacked bar graph showing your reserved instance and savings plan commitment per month broken down into Standard, Convertible, and Pending reservations, plus Compute and EC2 savings plans. Use the toggle switches to include or exclude recurring fees or show up-front fees from an amortized view. Regardless of what data range you select in the date filter, this graph will remain static, looking six months into the past and thirty-six months into the future. 
 
 <img src="/eco/_media/tutorials-view-savings-01c3a.png" />
 
