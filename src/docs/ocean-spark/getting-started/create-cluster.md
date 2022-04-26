@@ -39,7 +39,7 @@ Use the ocean-spark Terraform module to import an existing EKS cluster into Ocea
 
 ### Additional Method
 
-You can also follow the documentation on [how to get started with Ocean](https://docs.spot.io/ocean/getting-started/), and then use the method described below to import an existing Ocean cluster into Ocean Spark.
+You can also follow the documentation on [how to get started with Ocean](ocean/getting-started/), and then use the method described below to import an existing Ocean cluster into Ocean Spark.
 
 ## Import an Existing Ocean Cluster to Ocean Spark
 

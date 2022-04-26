@@ -16,7 +16,7 @@ If the Ocean Spark menu does not appear in the Spot console navigation bar, plea
 
 ### Connect your cloud account to Spot
 
-Connect the cloud account in which you intend to deploy Ocean Spark: ([AWS](connect-your-cloud-provider/))
+Connect the cloud account in which you intend to deploy Ocean Spark: ([AWS](connect-your-cloud-provider/aws-account))
 
 > **Tip**: Other Spot by NetApp products such as [Eco](eco/) and [Cloud Analyzer](cloud-analyzer/) can give you visibility into your entire cloud spend and help you optimize it, so these products may ask you to connect multiple accounts (or your master billing account). For Ocean Spark, connecting only the account in which you intend to deploy an Ocean Spark cluster is enough.
 

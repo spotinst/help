@@ -7,7 +7,7 @@ This page describes a list of common issues specific to the cluster deployment p
 
 In the Spot console, browse to the Ocean cluster list. Check if your cluster is marked as unreachable.
 
-<img src="/ocean-spark/_media/troubleshoot-cluster-deployment-01.png" />
+<img src="/ocean-spark/_media/troubleshoot-cluster-deployment-01.png" width="370" />
 
 ### Troubleshoot
 
@@ -35,10 +35,16 @@ In the Spot console, browse to the Ocean cluster list. Check if your cluster is 
 ### Identify the issue
 
 1. Tail the logs of the Ocean controller and look for any errors regarding connectivity:
-```kubectl logs -n kube-system -l 'k8s-app=spotinst-kubernetes-cluster-controller'```
+
+```
+kubectl logs -n kube-system -l 'k8s-app=spotinst-kubernetes-cluster-controller'
+```
 
 2. Run a pod on the same node as the Ocean controller pod, exec into it, and call the Spot API:
-```curl https://api.spotinst.io```
+
+```
+curl https://api.spotinst.io
+```
 
 ### Troubleshoot
 
@@ -51,17 +57,15 @@ In the Spot console, browse to the Ocean cluster list. Check if your cluster is 
 
 Go to the Ocean Spark cluster list and look for your Ocean Spark cluster.
 
-<img src="/ocean-spark/_media/troubleshoot-cluster-deployment-02.png" />
+<img src="/ocean-spark/_media/troubleshoot-cluster-deployment-02.png" width="370" />
 
 ### Troubleshoot
 
-- Ensure that no Ocean Spark pod is stuck in a pending state.
-Run ```kubectl get pods -n spot-system```
+- Ensure that no Ocean Spark pod is stuck in a pending state. Run ```kubectl get pods -n spot-system```
 - If an Ocean Spark pod is stuck in pending, then the Ocean cluster probably can’t scale up. See the corresponding section below.
 - If the spark-operator pod is in the Error state, ensure that you are running a version of Kubernetes < 1.22.
 
-1. Ensure that a load balancer can be created by Ocean Spark.
-Run ```kubectl get svc -n spot-system```
+1. Ensure that a load balancer can be created by Ocean Spark. Run ```kubectl get svc -n spot-system```
 2. If this command shows a service whose EXTERNAL-IP is stuck in pending, this means that the load balancer can't be created. See the corresponding section below.
 
 ## Ocean-managed nodes can't join the cluster
