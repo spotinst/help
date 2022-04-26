@@ -29,8 +29,8 @@ In this procedure, you will use the [Spot Console](http://console.spotinst.com/)
 
 2. Under Import Cluster, complete the following:
    - Import from: In most cases, you will choose the default, EKS Node Group.
-   - EKS Cluster Name: This is a list of cluster names in the region you chose. Select the EKS Cluster Name that your node group is in.
-   - Node Group: This is the list of auto-scaling groups in the cluster you chose. Select the auto-scaling group you want to import.
+   - EKS Cluster Name: This is a list of cluster names in the region you chose. Select the EKS Cluster Name that you wish to import.
+   - Node Group: This is the list of node groups in the cluster you chose. The selected node group will be used as the default values for any [Virtual node group](ocean/features/vngs/?id=default-vng) created.
 
 <img src="/ocean/_media/getting-started-eks-connect-existing-eks-01.png" />
 
@@ -38,7 +38,7 @@ In this procedure, you will use the [Spot Console](http://console.spotinst.com/)
 
 ## Step 2: Compute
 
-1. Ocean imports the compute configuration from your EKS cluster and displays it in the Compute page. Confirm or change the configuration if needed:
+1. Ocean imports the compute configuration from your EKS node group and displays it in the Compute page. Confirm or change the configuration if needed:
    - Cluster Network:
      - VPC
      - Subnets
@@ -72,5 +72,5 @@ You're all set! Ocean will now ensure the most cost-effective capacity and sizin
 
 ## What's Next?
 
+- Learn more about importing multiple workload types in the same cluster by using [Virtual node groups](ocean/features/vngs/).
 - [Migrate your Workloads](ocean/tutorials/migrate-workload) to Ocean.
-- Learn more about importing multiple workload types in the same cluster by using [Launch Specifications](ocean/features/launch-specifications).
