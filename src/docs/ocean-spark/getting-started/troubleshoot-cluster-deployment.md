@@ -57,7 +57,7 @@ curl https://api.spotinst.io
 
 Go to the Ocean Spark cluster list and look for your Ocean Spark cluster.
 
-<img src="/ocean-spark/_media/troubleshoot-cluster-deployment-02.png" width="370" />
+<img src="/ocean-spark/_media/troubleshoot-cluster-deployment-02.png" width="300" />
 
 ### Troubleshoot
 
