@@ -126,7 +126,7 @@ The application you just created should appear in the Ocean Spark console:
 
 <img src="/ocean-spark/_media/run-your-first-app-01.png" />
 
-Clicking on the application opens the [application page](ocean-spark/product-tour/view-application-details). At this point, you can open the Spark UI, follow the live log stream, or kill the app.
+Clicking on the application name opens the [application details page](ocean-spark/product-tour/view-application-details). At this point, you can open the Spark UI, follow the live log stream, or kill the app.
 
 <img src="/ocean-spark/_media/run-your-first-app-02.png" />
 
