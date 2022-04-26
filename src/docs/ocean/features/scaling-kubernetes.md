@@ -76,10 +76,12 @@ Ocean makes it easy to prevent scaling down of nodes running pods configured wit
 - spotinst.io/restrict-scale-down:true label – This label is a proprietary Spot label ([additional Spot labels](https://docs.spot.io/ocean/features/labels-and-taints?id=spot-labels)) and can be configured on a pod level. When configured, it instructs the Ocean autoscaler to prevent scaling down a node that runs any pod with this label specified.
 - cluster-autoscaler.kubernetes.io/safe-to-evict: false label – Cluster autoscaler label; works similarly to the restrict-scale-down label. Ocean supports that label to ensure easy migration from the cluster autoscaler to Ocean.
 
-Another option is to disable the option to scale down from a specific [Virtual node group] (https://docs.spot.io/ocean/features/vngs/).
-You could do it using the UI - ADD SCREENSHOT
-Or using the [API](https://docs.spot.io/api/#operation/OceanAWSLaunchSpecUpdate) - Simply set the restrictScaleDown parameter to true.
-Once enabled, VNG nodes will be treated as if all pods running have the restrict-scale-down label. Therefore, Ocean will not scale nodes down from the Virtual node group unless empty.
+Another method is to disable the option to scale down from a specific [virtual node group](ocean/features/vngs/). You could do this in the console.
+
+<img src="/ocean/_media/features-scaling-k8s-002.png" />
+
+Using the [API](https://docs.spot.io/api/#operation/OceanAWSLaunchSpecUpdate), you could simply set the restrictScaleDown parameter to True.
+Once enabled, VNG nodes are treated as if all pods running have the restrict-scale-down label. Therefore, Ocean would not scale nodes down from the virtual node group unless they are empty.
 
 ## Headroom
 
