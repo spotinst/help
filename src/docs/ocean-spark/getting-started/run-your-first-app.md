@@ -29,7 +29,7 @@ Here's a breakdown of the payload:
 
 The API then returns something like:
 
-```JSON
+```json
 {
    "request":{
       "id":"39e2b4a4-46c9-4ff3-bc3a-e5d3f2432549",

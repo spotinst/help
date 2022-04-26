@@ -3,6 +3,9 @@
 - <a href="/" class="sidebar-home"><i data-feather="arrow-left" class="sidebar-back-icon"></i>Back to Main Tree</a>
 - [Ocean for Apache Spark](ocean-spark/)
   - [Getting Started](ocean-spark/getting-started/)
+    - [Create an Ocean Spark Cluster](ocean-spark/getting-started/create-cluster)
+    - [Run Your First App](ocean-spark/getting-started/run-your-first-app)
+    - [Troubleshoot Cluster Deplyment](ocean-spark/getting-started/troubleshoot-cluster-deployment)
   - [Product Tour](ocean-spark/product-tour/)
     - [Manage Clusters](ocean-spark/product-tour/manage-clusters)
     - [View Cluster Details](ocean-spark/product-tour/view-cluster-details)
