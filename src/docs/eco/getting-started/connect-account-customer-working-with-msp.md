@@ -118,9 +118,8 @@ Typically, this method requires coordination between the end-customer and the ad
 - The _Partner_ will deliver the export files to the target bucket.
 - The _End Customer_ will provide Eco an ARN with access to the exported CUR and generate a support ticket, requesting to handoff the following information to Spot Finops technical support:
 
-1. Bucket name where the exported CUR is located
-2. The Role ARN necesary to download the exported CUR.
-
+1. The bucket name where the exported CUR is located.
+2. The role ARN necessary to download the exported CUR.
 
 ### Requirements
 
