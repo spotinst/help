@@ -116,7 +116,10 @@ Typically, this method requires coordination between the end-customer and the ad
 - The _End Customer_ and the _Partner_ will agree on a target S3 bucket to locate their version of the CUR.
 - The _End Customer_ and the _Partner_ will agree on the method of providing the Partner access to the target bucket.
 - The _Partner_ will deliver the export files to the target bucket.
-- The _End Customer_ will provide Eco access to the exported CUR.
+- The _End Customer_ will provide Eco an ARN with access to the exported CUR and generate a support ticket, requesting to handoff the following information to Spot Finops technical support:
+
+1. The bucket name where the exported CUR is located.
+2. The role ARN necessary to download the exported CUR.
 
 ### Requirements
 
