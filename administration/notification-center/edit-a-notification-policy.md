@@ -93,4 +93,4 @@ On the Policy Details page, you can perform the following additional actions:
 
 ## What’s Next?
 
-Learn about managing [Access Policies](administration/access-policies/) in Spot.
+Learn about managing [Permission Policies](administration/policies/) in Spot.
