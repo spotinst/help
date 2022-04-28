@@ -31,8 +31,8 @@ Use the procedure below to enable API data access. This procedure can also be fo
 
 3. After entering in the EA API data you can choose to set up a strategy call with the Eco Azure team to perform an initial analysis of what savings the Eco Azure team can provide. The details are listed in the Eco Azure [Getting Started](eco/getting-started/connect-azure-ea-to-eco) guide.
 
-<img src="/connect-your-cloud-provider/_media/connect-azure-ea-04.png" width="400" />
+<img src="/connect-your-cloud-provider/_media/connect-azure-ea-04.png" width="450" />
 
 ## What’s Next?
 
-Setup a Strategy call with the Eco Azure team to perform an initial analysis of what savings the Eco Azure team can provide. The details are listed in the Eco Azure Getting Started Guide.
+Setup a Strategy call with the Eco Azure team to perform an initial analysis of what savings the Eco Azure team can provide. The details are listed in the Eco Azure [Getting Started](eco/getting-started/connect-azure-ea-to-eco) guide.
