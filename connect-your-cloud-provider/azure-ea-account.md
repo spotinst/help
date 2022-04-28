@@ -25,14 +25,14 @@ Use the procedure below to enable API data access. This procedure can also be fo
 
 <img src="/connect-your-cloud-provider/_media/connect-azure-ea-02.png" width="500" />
 
-2. Click Connect Your Enterprise Agreement (EA), fill out the information, and click Connect.
+2. Click Connect Your Enterprise Agreement (EA), fill in the information, and click Connect.
 
 <img src="/connect-your-cloud-provider/_media/connect-azure-ea-03.png" width="500" />
 
-3. After entering in the EA API data you can choose to set up a strategy call with the Eco Azure team to perform an initial analysis of what savings the Eco Azure team can provide. The details are listed in the Eco Azure [Getting Started](eco/getting-started/connect-azure-ea-to-eco) guide.
+3. After entering the EA API data, you can choose to set up a strategy call with the Eco Azure team to perform an initial analysis of what savings the Eco Azure team can provide. The details are listed in the Eco Azure [Getting Started](eco/getting-started/connect-azure-ea-to-eco) guide.
 
 <img src="/connect-your-cloud-provider/_media/connect-azure-ea-04.png" width="450" />
 
 ## What’s Next?
 
-Setup a Strategy call with the Eco Azure team to perform an initial analysis of what savings the Eco Azure team can provide. The details are listed in the Eco Azure [Getting Started](eco/getting-started/connect-azure-ea-to-eco) guide.
+Schedule a Strategy call with the Eco Azure team to perform an initial analysis of the savings the Eco Azure team can provide. The details are listed in the Eco Azure [Getting Started](eco/getting-started/connect-azure-ea-to-eco) guide.
