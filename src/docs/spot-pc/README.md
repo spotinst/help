@@ -74,17 +74,13 @@ GPU end users can expect performance roughly equivalent to 4 vCPUs, 14GiB RAM an
 
 The technology used to support the data layer is either Azure Files or Azure NetApp Files, depending on the number of licensed Spot PC users supported by that storage layer. A detailed comparison of these technologies can be found [here](https://docs.microsoft.com/en-us/azure/storage/files/storage-files-netapp-comparison).
 
-For deployments supporting less than 50 users, [Azure Files is used with the Premium ](https://docs.microsoft.com/en-us/azure/storage/files/storage-files-planning#storage-tiers) tier.
+For deployments supporting less than 50 users, [Azure Files is used with the Premium](https://docs.microsoft.com/en-us/azure/storage/files/storage-files-planning#storage-tiers) tier.
 
 > From Microsoft: "Premium file shares are backed by solid-state drives (SSDs) and provide consistent high performance and low latency, within single-digit milliseconds for most IO operations, for IO-intensive workloads. Premium file shares are suitable for a wide variety of workloads like databases, web site hosting, and development environments. Premium file shares can be used with both Server Message Block (SMB) and Network File System (NFS) protocols."
 
-For deployments supporting 50-249 users, [Azure NetApp Files is used with the Standard](https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-service-levels) tier.
+For deployments supporting 50+ users, [Azure NetApp Files is used with the Standard](https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-service-levels) tier.
 
 > From Microsoft: "The Standard storage tier provides up to 16 MiB/s of throughput per 1 TiB of capacity provisioned."
-
-For deployments supporting 250 or more users, [Azure NetApp Files is used with the Premium](https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-service-levels) tier.
-
-> From Microsoft: "The Premium storage tier provides up to 64 MiB/s of throughput per 1 TiB of capacity provisioned."
 
 The size of the data storage layer is calculated at 25Gib licensed user. Additional storage can be purchased in 1TiB blocks and will augment the existing storage layer on the storage type as determined by the user quantity (above).
 
