@@ -1,5 +1,12 @@
 # Controller Version History
 
+## [1.0.82] - 2022-05-03
+
+Added
+
+- Upgraded dependencie
+- Added support for user/pass proxy authentication
+
 ## [1.0.81] - 2022-01-04
 
 Added
