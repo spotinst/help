@@ -1,4 +1,4 @@
-# Connect your AWS Account with Terraform to Spot
+# Connect AWS Account with Terraform to Spot
 
 In this procedure, you will connect an AWS account to Spot using a terraform module to provide the Spot platform with a set of permissions to manage instances on your behalf.
 

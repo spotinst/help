@@ -1,6 +1,6 @@
-# Connect your AWS Account with Terraform to Spot
+# Connect GCP project with Terraform to Spot
 
-In this procedure, you will connect an AWS account to Spot using a terraform module to provide the Spot platform with a set of permissions to manage instances on your behalf.
+In this procedure, you will connect an GCP project to Spot using a terraform module to provide the Spot platform with a set of permissions to manage VMs on your behalf.
 
 1. Log in to [Spot Console](http://console.spotinst.com/).
 2. [Create an API Token](administration/api/create-api-token) that is personal with Org Admin permissions.
@@ -24,7 +24,7 @@ output "spot_account_id" {
 }
 ```
 
-Terraform module documentation: [aws-connect terraform module](https://registry.terraform.io/modules/spotinst/gcp-connect/spotinst/latest)
+Terraform module documentation: [cp-connect terraform module](https://registry.terraform.io/modules/spotinst/gcp-connect/spotinst/latest)
 
 To report an issue or fork: [source code](https://github.com/spotinst/terraform-spotinst-gcp-connect)
 
