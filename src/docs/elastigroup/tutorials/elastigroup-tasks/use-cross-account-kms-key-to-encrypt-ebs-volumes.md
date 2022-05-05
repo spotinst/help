@@ -80,7 +80,7 @@ The next steps will be performed in account actInst using AWS CLI, please note t
 3. Run the following command in a terminal (grant for the Spot role):
 
 ```
-aws kms create-grant --key-id <b><i><<mark class="hilite term-0">KMS</mark> <mark class="hilite term-1">key</mark>-ARN></i></b> --grantee-principal <b><i><Spot role ARN></i></b> --operations "Encrypt" "Decrypt" "RetireGrant" "DescribeKey" "GenerateDataKey" "GenerateDataKeyWithoutPlaintext" "ReEncryptFrom" "ReEncryptTo" "CreateGrant" --name spotinst-grant
+aws kms create-grant --key-id <KMS KEY ARN> --grantee-principal <SPOT ROLE ARN> --operations "Encrypt" "Decrypt" "RetireGrant" "DescribeKey" "GenerateDataKey" "GenerateDataKeyWithoutPlaintext" "ReEncryptFrom" "ReEncryptTo" "CreateGrant" --name spotinst-grant
 
 ```
 
@@ -91,7 +91,7 @@ aws kms create-grant --key-id <b><i><<mark class="hilite term-0">KMS</mark> <mar
 5. Run the following command in terminal (grant for the spot instances role):
 
 ```
-aws kms create-grant --key-id <b><i><<mark class="hilite term-0">KMS</mark> <mark class="hilite term-1">key</mark>-ARN></i></b> --grantee-principal <b><i><AWSServiceRoleForEC2Spot ARN></i></b> --operations "Encrypt" "Decrypt" "RetireGrant" "DescribeKey" "GenerateDataKey" "GenerateDataKeyWithoutPlaintext" "ReEncryptFrom" "ReEncryptTo" "CreateGrant" --name spot-grant
+aws kms create-grant --key-id <KMS KEY ARN> --grantee-principal <AWSServiceRoleForEC2Spot ARN> --operations "Encrypt" "Decrypt" "RetireGrant" "DescribeKey" "GenerateDataKey" "GenerateDataKeyWithoutPlaintext" "ReEncryptFrom" "ReEncryptTo" "CreateGrant" --name spot-grant
 ```
 
 That's it! You can now add your KMS key-id to the BDM section in Elastigroup's configuration:
