@@ -687,6 +687,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/eco/tutorials/review-ri-spending-analysis"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/eco/tutorials/set-subset-and-workflow-permissions</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/eco/tutorials/set-subset-and-workflow-permissions"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/eco/tutorials/set-subset-and-workflow-permissions"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/eco/tutorials/view-workflow-details</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
