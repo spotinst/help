@@ -52,11 +52,6 @@ Use the policy below to if you are creating an Eco policy with Cloudformation.
                 "rds:ListTagsForResource",
                 "redshift:Describe*",
                 "trustedadvisor:*",
-                "s3:List*",
-                "s3:GetBucketLocation",
-                "s3:ListBucketMultipartUploads",
-                "s3:AbortMultipartUpload",
-                "s3:ListMultipartUploadParts",
                 "support:*",
                 "organizations:List*",
                 "organizations:Describe*"
@@ -67,7 +62,12 @@ Use the policy below to if you are creating an Eco policy with Cloudformation.
               "Sid": "S3SyncPermissions",
               "Effect": "Allow",
               "Action": [
+                "s3:GetBucketLocation",
+                "s3:ListBucketMultipartUploads",
+                "s3:AbortMultipartUpload",
+                "s3:ListMultipartUploadParts",
                 "s3:PutObject",
+                "s3:List*",
                 "s3:ListBucket",
                 "s3:PutObjectTagging",
                 "s3:PutObjectAcl"
@@ -77,10 +77,34 @@ Use the policy below to if you are creating an Eco policy with Cloudformation.
             {
               "Sid": "S3BillingDBR",
               "Effect": "Allow",
-              "Action": ["s3:get*"],
+              "Action": [
+                "s3:GetBucketLocation",
+                "s3:ListBucketMultipartUploads",
+                "s3:AbortMultipartUpload",
+                "s3:ListMultipartUploadParts",
+                "s3:List*",
+                "s3:get*"
+              ],
               "Resource": [
-               { "Fn::Join" : [ "", [ "arn:aws:s3:::", { "Ref" : "CostAndUsageBucket" },"/*"]]}  
+                {
+                  "Fn::Join": [
+                    "",
+                    ["arn:aws:s3:::", { "Ref": "CostAndUsageBucket" }, "*"]
+                  ]
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    ["arn:aws:s3:::", { "Ref": "CostAndUsageBucket" }, "/*"]
+                  ]
+                }
               ]
+            },
+            {
+              "Sid": "ServiceQuotas",
+              "Effect": "Allow",
+              "Action": "servicequotas:*",
+              "Resource": "*"
             }
           ]
         }
