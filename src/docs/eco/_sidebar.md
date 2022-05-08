@@ -15,6 +15,7 @@
     - [Manage Subsets](eco/tutorials/manage-subsets)
     - [Manage Workflows](eco/tutorials/manage-workflows)
     - [View Workflow Details](eco/tutorials/view-workflow-details)
+    - [Set Subset & Workflow Permissions](eco/tutorials/set-subset-and-workflow-permissions)
     - [Eco AWS Policy](eco/tutorials/eco-policy/)
       - [Create Eco Policy with CloudFormation](eco/tutorials/eco-policy/create-eco-policy-with-cloudformation)
   - [Azure EA Tutorials](eco/azure-tutorials/)
