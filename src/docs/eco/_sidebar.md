@@ -11,6 +11,7 @@
     - [Review AWS Commitment Spending Analysis](eco/tutorials/review-ri-spending-analysis)
     - [Choose AWS RI Strategy](eco/tutorials/choose-a-strategy)
     - [View your Savings](eco/tutorials/view-your-savings)
+    - [Monthly Value Report](eco/tutorials/monthly-value-report)
     - [MSP Enrollment](eco/tutorials/msp-enrollment)
     - [Manage Subsets](eco/tutorials/manage-subsets)
     - [Manage Workflows](eco/tutorials/manage-workflows)
