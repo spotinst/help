@@ -34,13 +34,13 @@ The net savings Eco has provided since you became a customer.
 
 Over the last month, the primary regions in which savings were provided and the amounts provided in those regions. It will show up to five of the top regions.
 
-<img src="/eco/_media/tutorials-monthly-value-report-03.png" />
+<img src="/eco/_media/tutorials-monthly-value-report-03.png" width="340" />
 
 ### Top Instance Types by Savings
 
 Over the last month, the primary regions in which savings were provided and the amount of savings provided for those instance types. Up to three instance types will be shown. With “other” acting as a catch-all category for any instance types after the top three.
 
-<img src="/eco/_media/tutorials-monthly-value-report-04.png" />
+<img src="/eco/_media/tutorials-monthly-value-report-04.png" width="340" />
 
 ### Top Expiring RIs Eco is Reviewing
 
