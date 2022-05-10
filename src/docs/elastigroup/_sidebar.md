@@ -56,7 +56,7 @@
       - [Stateful Node Actions](elastigroup/features-azure/stateful-nodes/actions)
       - [Schedule Stateful Node Actions](elastigroup/features-azure/stateful-nodes/schedule)
   - [Features - GCP](elastigroup/features/gcp/)
-    - [Pre-emptible, CUD & On-Demand Instances](elastigroup/features/gcp/pre-emptible-cud-on-demand-instances)
+    - [GCP Pricing Models](elastigroup/features/gcp/pre-emptible-cud-on-demand-instances)
     - [GCP Load Balancers: Backend Services](elastigroup/features/gcp/gcp-load-balancers-backend-services)
     - [Scaling Policies for GCP Elastigroup](elastigroup/features/gcp/scaling-policies-for-gcp-elastigroup)
     - [Shutdown Scripts](elastigroup/features/gcp/shutdown-scripts)
