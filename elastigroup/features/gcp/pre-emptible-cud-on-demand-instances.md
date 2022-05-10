@@ -18,7 +18,7 @@ Preemptible VMs offer the same machine types and options as regular compute inst
 
 Spot Virtual Machines (VMs) are highly affordable compute instances suitable for batch jobs and fault-tolerant workloads. Spot VMs offer the same machine types, options, and performance as regular compute instances. If your applications are fault tolerant and can withstand possible instance preemptions, then Spot instances can reduce your Compute Engine costs by up to 91%.
 
-Unlike Preemptible VMs that can be terminated by GCP for up to 24 hours, Spot VMs do not have this restriction. Spot VMs are currently supported via the [Spot API](https://docs.spot.io/api/#tag/Elastigroup-Azure-Spot-VMs). Learn more in the [Google documentation about Spot VMs](https://cloud.google.com/compute/docs/instances/spot).
+Unlike Preemptible VMs that can be terminated by GCP for up to 24 hours, Spot VMs do not have this restriction. Spot VMs are currently supported via the [Spot API](https://docs.spot.io/api/#tag/Elastigroup-GCP). Learn more in the [Google documentation about Spot VMs](https://cloud.google.com/compute/docs/instances/spot).
 
 ## Committed Use Discounts (CUD)
 
