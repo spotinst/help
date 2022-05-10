@@ -157,14 +157,14 @@ Additionally, any configuration option for Spark applications can be applied to 
 
 ## Connecting to JupyterHub
 
-If you prefer to run your Jupyter Notebooks in a hosted environment that can be shared across teams and developers, JupyterHub is an excellent solution. JupyterHub will give you the same developer experience that you are familiar with using local notebooks, but with added features and functionality for managing authentication, user access and multiple configuration templates/environments. 
+If you prefer to run your Jupyter Notebooks in a hosted environment that can be shared across teams and developers, JupyterHub is an excellent solution. JupyterHub will give you the same developer experience that you are familiar with using local notebooks, but with added features and functionality for managing authentication, user access, and multiple configuration environments and templates. 
 
-To help you get started, we've built a simple Docker image that can have you running notebooks in minutes. Follow these steps to deploy JupyterHub on your local machine :
-- Pull this repo - https://github.com/spotinst/ocean-spark-examples/tree/master/jupyterhub-in-docker
-- Add your Ocean Spark cluster-id to the `jupyterhub_config.py`
-- Run the command `make run`
-- Navigate to `localhost:8000` and input your Ocean Spark api key when prompted
-- Select a kernel/Ocean Spark configuration template, and beginning executing Spark code
+To help you get started, we've built a simple Docker image that can get you running notebooks in minutes. Follow these steps to deploy JupyterHub on your local machine:
+1. Pull this repo - https://github.com/spotinst/ocean-spark-examples/tree/master/jupyterhub-in-docker
+2. Add your Ocean Spark cluster-id to the `jupyterhub_config.py`
+3. Run the command `make run`
+4. Navigate to `localhost:8000` and input your Ocean Spark API key when prompted.
+5. Select a kernel (i.e., an Ocean Spark configuration template), and begin executing Spark code.
 
 This template is a great starting place, but feel free to adapt and alter the logic to meet your team's configuration requirements. 
 
