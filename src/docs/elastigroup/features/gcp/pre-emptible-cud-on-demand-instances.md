@@ -1,8 +1,6 @@
 # GCP Pricing Models
 
-This article provides a brief overview of the three most common pricing models on GCP. Nevertheless, all cloud providers offer the same four pricing models with different terms.
-
-Elastigroup utilizes these pricing models to ensure that your computing cluster is always cost-optimized. To learn more about your cloud provider's pricing visit their website.
+This article provides a brief overview of the most common pricing models on GCP. All the major cloud providers use the same pricing models, just with different terms. Elastigroup utilizes these pricing models to ensure that your computing cluster is always cost-optimized.
 
 ## On-Demand
 
@@ -14,7 +12,7 @@ GCP provide their spare compute capacity, known as preemptible Instances, at a h
 
 Preemptible VMs offer the same machine types and options as regular compute instances and last for up to 24 hours. pricing can be up to 80% less than On-Demand pricing.
 
-### Spot Virtual Machines
+## Spot Virtual Machines
 
 Spot Virtual Machines (VMs) are highly affordable compute instances suitable for batch jobs and fault-tolerant workloads. Spot VMs offer the same machine types, options, and performance as regular compute instances. If your applications are fault tolerant and can withstand possible instance preemptions, then Spot instances can reduce your Compute Engine costs by up to 91%.
 
