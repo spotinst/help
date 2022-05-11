@@ -1,6 +1,6 @@
-# MSP Enrollment
+# Eco Reports Enrollment
 
-There are several use cases for MSP enrollment. This use case is for AWS MSPs with administrative access to their MPA.
+There are several use cases for Eco Reports enrollment. This use case is for AWS enterprises with administrative access to their MPA.
 
 Although some of the enrollment steps are manual, we are actively working to make this process a streamlined, self-service experience for future users.
 
@@ -40,7 +40,7 @@ Once you have validated the billing workflows and are comfortable with them, you
 
 1. Send a support ticket associating the subsets with the billing workflows. In the ticket, please include the following message and information:
 
-> Please associate the Eco for MSP billing workflow(s), below, with the subset(s), going forward. We would like the processed workflow to be embedded in Cloud Analyzer and shown as charges in our Subsets List.
+> Please associate the Rename for Eco Reports billing workflow(s), below, with the subset(s), going forward. We would like the processed workflow to be embedded in Cloud Analyzer and shown as charges in our Subsets List.
 >
 > \<Subset Name\> : \<Billing Workflow Name\>
 >
