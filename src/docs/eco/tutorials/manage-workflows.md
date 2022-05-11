@@ -1,6 +1,6 @@
 # Manage Workflows
 
-Cloud administrators and Managed Service Providers (MSPs) face the challenge of presenting cloud spend data clearly to their users and customers. Complex billing conditions and logic -- such as amortization, discount sharing or unsharing, and customer uplifts and discounts -- can make reporting a major challenge. Using Eco Workflows, your cloud spending will be clear and accounted for.
+Cloud administrators face the challenge of presenting cloud spend data clearly to their users and customers. Complex billing conditions and logic -- such as amortization, discount sharing or unsharing, and customer uplifts and discounts -- can make reporting a major challenge. Using Eco Workflows, your cloud spending will be clear and accounted for.
 
 The Workflows feature simplifies and clarifies the presentation of cloud charges. It enables you to do the following:
 
@@ -82,7 +82,7 @@ You may charge the full on-demand price in place of Savings Plan discounts. See 
 
 ### Remove credits and/or refunds:
 
-There are a variety of financial benefits from working with AWS which a business may opt to share with their end customers or retain as margin. These options are familiar to AWS MSPs:
+There are a variety of financial benefits from working with AWS which a business may opt to share with their end customers or retain as margin. 
 
 - EDP
 - Data Egress Waiver
