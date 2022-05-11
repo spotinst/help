@@ -122,7 +122,7 @@ In general, these margin opportunities represent savings given by AWS for volume
 
   When these volume discounts occur, you may elect to retain them for margin.
 
-### Uplift of Discount
+### Uplift or Discount
 
 After all the other rules have been applied, the charges are increased or decreased by the specified percent.
 
