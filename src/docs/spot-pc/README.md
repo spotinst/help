@@ -52,43 +52,45 @@ Below, examples of the resources allocated to each user type are outlined. The e
 
 ### Pooled User Session Hosts
 
-Pooled users share a host with up to 9 other pooled users (10 total). Spot PC builds one VM host for every 10 licensed Pooled users (rounding up).
+Pooled user sessions run on a shared VM host with a maximum of 10 pooled users per host.
 
-Pooled end users can expect performance roughly equivalent to sharing a 4vCPU host with 32 GiB RAM (e.g., E4as v4). (See Resource Allocation Note [above](https://docs.spot.io/spot-pc/?id=resource-allocation-note))
+Pooled end users can expect performance roughly equivalent to sharing an 8vCPU host with 32 GiB RAM (e.g., D4as v4). (See Resource Allocation Note [above](https://docs.spot.io/spot-pc/?id=resource-allocation-note))
 
 For pooled users, each user session is assigned to a host sequentially (aka "depth mode"), filling each host with 10 users before moving on to fill the next host. Once a host reaches 6 active sessions, an additional host is proactively brought online to be ready ahead of the need for additional capacity.
+
+Pooled user sessions are only available as on-demand accounts, meaning that sessions have adjustable timeout limits and are disconnected and then logged off after a set period of time.
 
 ### Personal User Session Hosts
 
 Personal users connect to their own host machine. Spot PC builds a VM host for every licensed Personal user.
 
-Personal end users can expect performance roughly equivalent to 2 vCPUs and 8GiB RAM (e.g., D2as v4). (See Resource Allocation Note [above](https://docs.spot.io/spot-pc/?id=resource-allocation-note))
+Personal end users have defined resource allocations, with multiple levels available for purchase. Personal user accounts are only available as on-demand accounts, meaning that sessions have adjustable timeout limits and deallocate when the user session is not active for a period of time. (See Resource Allocation Note [above](https://docs.spot.io/spot-pc/?id=resource-allocation-note))
 
 ### GPU User Session Hosts
 
 GPU users connect to their own host machine. Spot PC builds a VM host for every licensed Personal user.
 
-GPU end users can expect performance roughly equivalent to 4 vCPUs, 14GiB RAM and 2Gib Video RAM on the AMD Radeon Instinct MI25 GPU (e.g., NV4as v4). (See Resource Allocation Note [above](https://docs.spot.io/spot-pc/?id=resource-allocation-note))
+Personal GPU end users have defined resource allocations, with multiple levels available for purchase. Personal GPU users can also choose between on-demand and 24/7 SKUs, with 24/7 SKUs designed for long-running GPU compute tasks. On-demand SKUs have session timeout limits and deallocate when the user session is not active for a set period of time. (See Resource Allocation Note [above](https://docs.spot.io/spot-pc/?id=resource-allocation-note))
 
 ### Data Storage Layer
 
 The technology used to support the data layer is either Azure Files or Azure NetApp Files, depending on the number of licensed Spot PC users supported by that storage layer. A detailed comparison of these technologies can be found [here](https://docs.microsoft.com/en-us/azure/storage/files/storage-files-netapp-comparison).
 
-For deployments supporting less than 50 users, [Azure Files is used with the Premium](https://docs.microsoft.com/en-us/azure/storage/files/storage-files-planning#storage-tiers) tier.
+For deployments supporting less than 50 users, [Azure Files Premium](https://docs.microsoft.com/en-us/azure/storage/files/storage-files-planning#storage-tiers) is used.
 
 > From Microsoft: "Premium file shares are backed by solid-state drives (SSDs) and provide consistent high performance and low latency, within single-digit milliseconds for most IO operations, for IO-intensive workloads. Premium file shares are suitable for a wide variety of workloads like databases, web site hosting, and development environments. Premium file shares can be used with both Server Message Block (SMB) and Network File System (NFS) protocols."
 
-For deployments supporting 50+ users, [Azure NetApp Files is used with the Standard](https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-service-levels) tier.
+For deployments supporting 50+ users, [Azure NetApp Files](https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-service-levels) is used.
 
 > From Microsoft: "The Standard storage tier provides up to 16 MiB/s of throughput per 1 TiB of capacity provisioned."
 
-The size of the data storage layer is calculated at 25Gib licensed user. Additional storage can be purchased in 1TiB blocks and will augment the existing storage layer on the storage type as determined by the user quantity (above).
+The size of the data storage layer is calculated at 25Gib per licensed user. Additional storage can be purchased in 1TiB blocks and will augment the existing storage layer on the storage type as determined by the user quantity (above).
 
 ### Business Server
 
 Many use cases require dedicated server infrastructure to support customer workflows. Spot PC environments can easily be integrated with other (self-managed) Azure Subscription resources via vNet peering. This option makes integrating machines and services with the Spot PC environment easy to manage without requiring ongoing support from the Spot PC team.
 
-Occasionally, server resources may be required in the same subscription as the Spot PC session hosts. This may be due to technical requirements or business reasons. To support this requirement, Spot PC offers an add-on subscription to add Business Server resources as a separate SKU. The SKU includes a set mix of resources (4vCPU/8GiB RAM/128GiB HDD) which can be applied to one or more machines. The minimum size is 2 vCPU, 8GiB RAM and 128GiB Managed Disk. Multiple Business Server SKUs can be purchased, with the resources applied to a single VM or multiple. For example, two Business Server SKUs could support either 1x D4as_v4 (4vCPU/8GiB/256GIB HDD) or 2x D2as_v4 (2vCPU/4GiB/128GIB HDD) each.
+Occasionally, server resources may be desired in the same subscription as the Spot PC session hosts. This may be due to technical requirements or business reasons. To support this requirement, Spot PC offers an add-on subscription to add Business Server resources as a separate SKU. The SKU includes a set mix of resources (2vCPU/4GiB RAM/128GiB SSD) which can be applied to one or more machines. The minimum size is 2 vCPU, 4GiB RAM and 128GiB SSD Managed Disk. Multiple Business Server SKUs can be purchased, with the resources applied to a single VM or multiple. For example, two Business Server SKUs could support either 1x D4as_v4 (4vCPU/8GiB/256GIB SSD) or 2x D2as_v4 (2vCPU/4GiB/128GIB SSD) each.
 
 ## Co-Management: Who Does What?
 
