@@ -16,7 +16,7 @@ _Impact:_ Access to desktops and application services for End Users will remain 
 * Introduce Search function for Tenant lists
   * Search function is added to the tenant list to speed finding a specific tenant within the list of tenants.
 * Various Security Enhancements and Updates
-  * Various enhancements an dupdates from our ongoing security hardening efforts.
+  * Various enhancements and updates from our ongoing security hardening efforts.
 * Streamline Columns in List Spot Group
   * Removing some columns to improve look as usability of the Spot Group List view.
 
