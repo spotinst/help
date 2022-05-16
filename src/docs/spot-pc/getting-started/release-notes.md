@@ -1,5 +1,51 @@
 # Spot PC: Release Notes
 
+## 05/12/2021
+
+_When:_ 05/12/2022 at 10pm - 11pm Eastern
+
+_Impact:_ Access to desktops and application services for End Users will remain uninterrupted. Access to Spot PC console will remain available.
+
+* Organization Admin Log activity changes
+  * Spot PC web console All Tenants/Admins tab will display only Admin Activities that initiate a change to Spot PC configurations while excluding activities that just retrieve configuration or dashboard data. In addition, the log can now be filtered to only display activity for a single tenant.
+* Personal Dedicated virtual session machines will default to FsLogix user profile set to off
+  * Personal dedicated virtual session machines are configured for permanent assignment to a specific user. In these cases, the Azure Virtual Desktop recommendation is to store user data locally on the virtual machine, so FsLogix service and profile is configured as disabled by default.
+* Display tenant admins list under the Extensibility section of Config Action
+  * Spot PC web console will now displays both tenant context admin and API user accounts in the Config Actions/Extensibility list.
+* Defender for Cloud automatic enablement chooses the Qualys option
+  * Each new session virtual machine is enabled with Defender for Cloud. Spot PC automation will now select the vulnerability scanning option that includes the integrated Qualys option to enable more comprehensive scans.
+* Automatic configuration of Azure Lighthouse for Spot PC Support access to Spot PC Azure components
+  * Spot PC Support uses Azure Lighthouse to retrieve additional operational data from Log Analytics and to provide support technicians secure access to Azure components. Access requires partner notification and consent in addition to an approved Privileged Identity Management access request. All activities are logged and auditable.
+* Add subscription ID attribute to Spot PC site creation in Command Center
+  * New Spot PC sites can now be added with a subscription ID that is different from the original Spot PC subscription. This attribute is currently only available in Spot PC Command Center and requires a support request to implement. 
+* Spot Group and session Virtual Machine tags
+  * New API endpoints have been added to allow administrators to add tags to both Spot Groups and personal session virtual machines. The tags are pairs of Variable/Values and can be used to identify information such as Cost Centers for back charging or purpose like "test" or "render". This feature is currently API level only, with web console access planned for a future release.
+* New API endpoint User Assigned personal session VM
+  * A new API endpoint will return a list of personal virtual machines that have been assigned to a user. 
+* Spot PC Azure subscription name
+  * For new Spot PC deployments, the Spot PC Azure subscription that is added will now contain the name of the Azure tenant. This change will help partners and customers clearly identify Spot PC subscriptions and will allows Spot PC support to identity the Azure tenant from the subscription name.
+* Granular secrets management for customer configuration information
+  * Spot PC automation utilizes Microsoft best practices for storing and updating secrets and key data, including the use of Key Vaults. The configuration has been updated to provide a more granular level of storage and access for various automated processes and identities
+* Default to the All Tenants list if there is no active Tenant selection
+  * Spot PC web console remembers the last tenant selection the admin user made and returns to that tenant context after a pause if the session is still valid. When a tenant selection is not available, the default view will now return to the All Tenants view for the Organization.
+* Immediate Update of source Image for Spot Groups
+  * Spot PC tracks which image is used to create session virtual machines for a Spot Group. This attribute will now be updated immediately upon change instead of waiting for a daily sync.
+
+
+
+## 04/28/2021
+
+_When:_ 04/28/2022 at 10pm - 11pm Eastern
+
+_Impact:_ Access to desktops and application services for End Users will remain uninterrupted. Access to Spot PC console will remain available.
+
+* User Login Times in the UI
+  * The Spot PC web console now displays end user logon times in the UI. 
+  * This release introduces the total logon time.
+* API account creation/management in the UI
+  * Spot PC's previously announced REST API supports customers orchestrating workflows via external events. This update allows tenant admins to create and manage their own API accounts from within the Spot PC UI.  
+
+
 ## 04/14/2022
 
 _When:_ 04/14/2022 at 10pm - 11pm Eastern
