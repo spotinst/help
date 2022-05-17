@@ -72,7 +72,7 @@ The following list covers required discovery steps to perform before starting a 
 
 ## Additional Considerations
 
-### [Confirm Microsoft 365 Licnesing](spot-pc/getting-started/prerequisites/?id=microsoft-365-licensing)
+### [Confirm Microsoft 365 Licensing](spot-pc/getting-started/prerequisites/?id=microsoft-365-licensing)
   - [ ] Microsoft 365 Licensing for AVD
 
 ### [Identify Purchased SKUs](spot-pc/getting-started/prerequisites/?id=identify-purchased-skus)
@@ -126,7 +126,7 @@ The following list covers required discovery steps to perform before starting a 
     Special attention should be paid to client-server applications and applications that require a database.
 
     ## Assess Existing Azure and On-Premises Resources
-    Occasionally services and resources (such as a server) need to be exposed to the users in Spot PC from another location. Via vNet Peering, network connectivity can be established between other Azure vNets and the Spot PC environment. If there are outside resources that Spot PC users need to access, identify and document those for the onboaridng project.
+    Occasionally services and resources (such as a server) need to be exposed to the users in Spot PC from another location. Via vNet Peering, network connectivity can be established between other Azure vNets and the Spot PC environment. If there are outside resources that Spot PC users need to access, identify and document those for the onboarding project.
 
     ## Assess Data Migration Needs
     As part of the Spot PC deployment project, many customers have significant quantities of data to migration into the Spot PC storage layer. Knowing the scope of this aspect of the project upfront will make the project faster and simpler. Consolidating data before migration can also greatly simplify the effort.
