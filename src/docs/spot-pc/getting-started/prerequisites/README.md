@@ -5,19 +5,18 @@ This document describes the required elements for deploying Spot PC. A core comp
 ## Spot PC Deployment Prerequisites (Required)
 The following list covers required discovery steps to perform before starting a Spot PC onboarding.
 
-  - [ ] **[Azure AD (AAD) Tenant ID](spot-pc/getting-started/prerequisites/?id=azure-ad-tenant-id)**
-    - [ ] **[Azure Admin with Global Administrator rights on the Azure Tenant](spot-pc/getting-started/prerequisites/?id=azure-admin-with-global-administrator-rights-on-the-azure-tenant)**
-    - [ ] **[Identify default custom domain name for AAD](spot-pc/getting-started/prerequisites/?id=default-custom-domain-name-for-aad)**
-  - [ ] **[Existing domain controller (AD DC)](spot-pc/getting-started/prerequisites/?id=existing-domain-controller)**
-    - [ ] **[AD domain account (local) with AD join rights](spot-pc/getting-started/prerequisites/?id=domain-admin-account-with-domain-join-rights)**
-    - [ ] **[Identify existing AD domain name](spot-pc/getting-started/prerequisites/?id=existing-ad-domain-name)**
-  - [ ] **[Identify existing Azure vNet with network access to AD DC](spot-pc/getting-started/prerequisites/?id=identify-external-azure-vnet-for-ad-dc)**
-    - [ ] **[Identify external vNet subscription](spot-pc/getting-started/prerequisites/?id=identify-external-vnet-subscription)**
-    - [ ] **[Azure admin with rights on this Azure subscription](spot-pc/getting-started/prerequisites/?id=azure-admin-with-permissions-on-this-azure-subscription)**
-  - [ ] **[Available vNet IP scope identified](spot-pc/getting-started/prerequisites/?id=virtual-network-scope)**
-  - [ ] **[Azure AD Connect installed](spot-pc/getting-started/prerequisites/?id=azure-ad-connect)**
-  - [ ] **[Identify primary Azure region](spot-pc/getting-started/prerequisites/?id=identify-preferred-azure-region)**
-    - [ ] Identify possible multi-region requirements
+  - **[Azure AD (AAD) Tenant ID](spot-pc/getting-started/prerequisites/?id=azure-ad-tenant-id)**
+    - **[Azure Admin with Global Administrator rights on the Azure Tenant](spot-pc/getting-started/prerequisites/?id=azure-admin-with-global-administrator-rights-on-the-azure-tenant)**
+    - **[Identify default custom domain name for AAD](spot-pc/getting-started/prerequisites/?id=default-custom-domain-name-for-aad)**
+  - **[Existing domain controller (AD DC)](spot-pc/getting-started/prerequisites/?id=existing-domain-controller)**
+    - **[AD domain account (local) with AD join rights](spot-pc/getting-started/prerequisites/?id=domain-admin-account-with-domain-join-rights)**
+    - **[Identify existing AD domain name](spot-pc/getting-started/prerequisites/?id=existing-ad-domain-name)**
+  - **[Identify existing Azure vNet with network access to AD DC](spot-pc/getting-started/prerequisites/?id=identify-external-azure-vnet-for-ad-dc)**
+    - **[Identify external vNet subscription](spot-pc/getting-started/prerequisites/?id=identify-external-vnet-subscription)**
+    - **[Azure admin with rights on this Azure subscription](spot-pc/getting-started/prerequisites/?id=azure-admin-with-permissions-on-this-azure-subscription)**
+  - **[Available vNet IP scope identified](spot-pc/getting-started/prerequisites/?id=virtual-network-scope)**
+  - **[Azure AD Connect installed](spot-pc/getting-started/prerequisites/?id=azure-ad-connect)**
+  - **[Identify primary Azure region](spot-pc/getting-started/prerequisites/?id=identify-preferred-azure-region)**
 
     ### Azure AD Tenant ID
     The customer must have an Azure AD tenant containing all Spot PC users. Since M365 creates an Azure AD tenant, meeting that requirement will also satisfy this requirement. For the onboarding workflow, please document the Azure AD Tenant ID. Your Tenant ID can be found in the Azure AD section of the Azure portal: https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview
@@ -73,40 +72,40 @@ The following list covers required discovery steps to perform before starting a 
 ## Additional Considerations
 
 ### [Confirm Microsoft 365 Licensing](spot-pc/getting-started/prerequisites/?id=microsoft-365-licensing)
-  - [ ] Microsoft 365 Licensing for AVD
+  - Microsoft 365 Licensing for AVD
 
 ### [Identify Purchased SKUs](spot-pc/getting-started/prerequisites/?id=identify-purchased-skus)
-  - [ ] Total pooled/shared users
-    - [ ] Define Spot Group quantity
-    - [ ] Identify AD Groups for "User <-> Spot Group" assignment
-  - [ ] Total personal users
-    - [ ] Define Spot Group quantity
-    - [ ] Identify AD Groups for "User <-> Spot Group" assignment
-    - [ ] Determine Dedicated vs. On-Demand host definition
-    - [ ] For Dedicated Desktops, define Automatic vs. Direct assignment
-  - [ ] Total GPU users
-    - [ ] Define Spot Group quantity
-    - [ ] Identify AD Groups for "User <-> Spot Group" assignment
-    - [ ] Determine Dedicated vs. On-Demand host definition
-    - [ ] For Dedicated Desktops, define Automatic vs. Direct assignment
-  - [ ] Total TiB additional storage
-  - [ ] Total business servers & CPU/RAM allocation
-    - [ ] Determine number of Business servers
-    - [ ] Define CPU/RAM allocation (2vCPU/4GiB increments)
+  - Total pooled/shared users
+    - Define Spot Group quantity
+    - Identify AD Groups for "User <-> Spot Group" assignment
+  - Total personal users
+    - Define Spot Group quantity
+    - Identify AD Groups for "User <-> Spot Group" assignment
+    - Determine Dedicated vs. On-Demand host definition
+    - For Dedicated Desktops, define Automatic vs. Direct assignment
+  - Total GPU users
+    - Define Spot Group quantity
+    - Identify AD Groups for "User <-> Spot Group" assignment
+    - Determine Dedicated vs. On-Demand host definition
+    - For Dedicated Desktops, define Automatic vs. Direct assignment
+  - Total TiB additional storage
+  - Total business servers & CPU/RAM allocation
+    - Determine number of Business servers
+    - Define CPU/RAM allocation (2vCPU/4GiB increments)
 
 ### [Identify primary application list](spot-pc/getting-started/prerequisites/?id=identify-primary-application-list)
-  - [ ] List of common apps
-  - [ ] Identify client/server apps
-  - [ ] Identify database requirements
+  - List of common apps
+  - Identify client/server apps
+  - Identify database requirements
 
 ### [Assess existing Azure and on-premises networking configuration](spot-pc/getting-started/prerequisites/?id=assess-existing-azure-and-on-premises-resources)
-  - [ ] List other existing Azure Subscription(s)
-  - [ ] Azure resources to be exposed to Spot PC users
+  - List other existing Azure Subscription(s)
+  - Azure resources to be exposed to Spot PC users
 
 ### [Assess data migration needs](spot-pc/getting-started/prerequisites/?id=assess-data-migration-needs)
-  - [ ] Quantify total size of data to migrate
-  - [ ] Assess change rate of existing data
-  - [ ] Identify location(s) of existing and available bandwidth
+  - Quantify total size of data to migrate
+  - Assess change rate of existing data
+  - Identify location(s) of existing and available bandwidth
 
     ## Microsoft 365 Licensing
     Windows 10/11 user access rights for Spot PC are included in the users' Microsoft 365 (M365) subscription, a requirement for AVD and Spot PC.
