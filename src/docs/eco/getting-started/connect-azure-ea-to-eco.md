@@ -55,7 +55,7 @@ To apply the Reservation Reader role to the user group, complete the procedure b
 
 <img src="/eco/_media/connect-azure-ea-to-eco-005.png" width="513" />
 
-3. Apply the Azure Reservation Reader role to the user group using Azure PowerShell by completing the following steps.
+3. Apply the [Azure Reservation Reader role](https://docs.microsoft.com/en-us/azure/cost-management-billing/reservations/view-reservations#assign-a-reservation-reader-role-at-the-tenant-level) to the user group using Azure PowerShell by completing the following steps.
    - Copy the code shown below, add the Tenant ID, and add the Object ID.
 
 <img src="/eco/_media/connect-azure-ea-to-eco-006.png" width="387" />
