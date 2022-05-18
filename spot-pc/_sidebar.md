@@ -39,6 +39,7 @@
     - [Manage Admins](spot-pc/tutorials/manage-admins)
     - [Install AD Connect](spot-pc/tutorials/install-ad-connect)
     - [Setup Conditional Access](spot-pc/tutorials/setup-mfa-conditional-access)
+    - [Setup Company Share](spot-pc/tutorials/setup-company-share)
   - [Troubleshooting](spot-pc/troubleshooting/)
     - [Getting Support](spot-pc/troubleshooting/getting-support)
     - [Monitored Metrics](spot-pc/troubleshooting/monitored-metrics)

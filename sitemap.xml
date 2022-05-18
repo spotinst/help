@@ -3081,6 +3081,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/tutorials/0"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/spot-pc/tutorials/setup-company-share</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-pc/tutorials/setup-company-share"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/tutorials/setup-company-share"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/spot-pc/tutorials/setup-mfa-conditional-access</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
