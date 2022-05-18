@@ -20,7 +20,7 @@ curl -X POST \
     "sparkVersion": "3.2.0",
     "mainApplicationFile": "s3a://my-example-bucket/word_count.py",
     "image": "gcr.io/datamechanics/spark:platform-3.2-latest",
-    "arguments": [“s3a://my-example-bucket/input/*”, “s3a://my-example-bucket/output”]
+    "arguments": [“s3a://my-example-bucket/input/*", “s3a://my-example-bucket/output"]
   }
 }'
 ```
@@ -257,7 +257,7 @@ curl -X POST \
    "sparkVersion": "3.2.0",
    "image": "gcr.io/datamechanics/spark:platform-3.2-latest",
    "mainApplicationFile": "s3a://my-example-bucket/word_count.py",
-   "arguments": [“s3a://my-example-bucket/input/*”, “s3a://my-example-bucket/output”],
+   "arguments": [“s3a://my-example-bucket/input/*", “s3a://my-example-bucket/output"],
 "driver": {
       "envSecretKeyRefs": {
         "AWS_ACCESS_KEY_ID": {

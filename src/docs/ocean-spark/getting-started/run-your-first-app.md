@@ -95,9 +95,6 @@ The API then returns something like:
                      "KUBERNETES_REQUEST_TIMEOUT":"30000",
                      "KUBERNETES_CONNECTION_TIMEOUT":"30000"
                   },
-                  "affinity":"“"{
-                     "..."
-                  }"”",
                   "instanceType":"m5.xlarge",
                   "spot":false
                },
@@ -106,9 +103,6 @@ The API then returns something like:
                   "instances":1,
                   "coreRequest":"3460m",
                   "memory":"8192m",
-                  "affinity":"“"{
-                     "..."
-                  }"”",
                   "instanceType":"m5.xlarge",
                   "spot":true
                },
