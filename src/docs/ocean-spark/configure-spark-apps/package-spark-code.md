@@ -141,7 +141,7 @@ curl -X POST \
          "jobId": "my-job",
          "configOverrides": {
            "type": "Python",
-           “sparkVersion”: “3.2.0”,
+           "sparkVersion": "3.2.0",
            "image": "<account-id>.dkr.ecr.<region>.amazonaws.com/my-app:dev",
            "mainApplicationFile": "local:///opt/spark/work-dir/main.py",
            "arguments": [<args>]
@@ -163,7 +163,7 @@ curl -X POST \
          "jobId": "my-job",
          "configOverrides": {
            "type": "Scala",
-           “sparkVersion”: “3.2.0”,
+           "sparkVersion": "3.2.0",
            "image": "<account-id>.dkr.ecr.<region>.amazonaws.com/my-app:dev",
            "mainApplicationFile": "local:///opt/spark/work-dir/main.jar",
            "mainClass": "<className>",
