@@ -35,7 +35,7 @@ You can also follow the documentation on how to get started with Ocean, and then
 ## Import an Existing Kubernetes Cluster to Ocean Spark
 ### Using Terraform
 
-Use the ocean-spark Terraform module to import an existing EKS cluster into Ocean Spark.
+Follow [this example](https://github.com/spotinst/terraform-spotinst-ocean-spark/tree/main/examples/import-eks-cluster) from the [ocean-spark Terraform module](https://registry.terraform.io/modules/spotinst/ocean-spark/spotinst/latest) to import an existing EKS cluster into Ocean Spark.
 
 ### Additional Method
 
