@@ -38,6 +38,13 @@ The following list covers required discovery steps to perform before starting a 
     #### Existing AD Domain Name
     The domain name of the local domain should be documented and on-hand while going through the onboarding workflow.
 
+    #### Document Existing NetBIOS Name
+    In rare cases the NetBIOS configured for your existing domain can require an extra configuration step by our onboarding team. To get ahead of that possibility, please confirm and document the current NetBIOS name by following these instructions:
+    * Connect to an existing AD DC with domain admin Permissions
+    * Run _nbtstat -n_ or right click on the root domain in ADUC and select properties.
+    * Document the "Domain name (pre-Windows 2000)" entry.
+    <br><a href="https://docs.spot.io/spot-pc/_media/getting-started-prerequisites-01.png" target="_blank"><img src="/spot-pc/_media/getting-started-prerequisites-01.png" alt="Click to Enlarge" width="1000"> </a>
+
     ### Identify External Azure vNet for AD DC
     An external Azure vNet must be configured with network access to the AD DC. This is typically accomplished via a site-to-site VPN or by running the AD DC on a VM attached to that vNet. A Spot PC network will be created and peered with this existing vNet as part of the Onboarding Workflow.
 
