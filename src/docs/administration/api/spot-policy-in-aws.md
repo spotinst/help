@@ -43,6 +43,8 @@ For additional information, see: [Update the Spot Policy](elastigroup/tutorials/
         "ec2:DeregisterImage",
         "ec2:DeleteSnapshot",
         "ec2:DeleteVolume",
+        "ec2:DetachVolume",
+        "ec2:ModifyVolume",
         "ec2:ModifyReservedInstances",
         "ec2:CreateReservedInstancesListing",
         "ec2:CancelReservedInstancesListing",
