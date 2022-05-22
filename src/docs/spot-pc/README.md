@@ -22,7 +22,7 @@ Spot PC is a managed, continuously optimized cloud desktop service that runs Azu
 
 - **Elimination of operational burdens** - With fully managed cloud desktops from our experts, your IT resources can focus on what they do best, making end users productive and helping your business grow.
 
-- **Deliver more cloud desktops at less cost** - Utilizing Spot by NetApp optimization and automation technologies, Spot PC reduces management and infrastructure costs by up to 70%.
+- **Deliver more cloud desktops at less cost** - Our use of NetApp and Spot by NetApp technology allows us to go to market with a uniquely aggressive price point that is fixed and billed on a month-by-month basis. 
 
 - **Realize predictable, reliable costs** - With Spot PC’s fixed monthly per seat subscription, you can predict exactly what your cloud desktop spend will be, allowing you to budget based on your needs.
 
