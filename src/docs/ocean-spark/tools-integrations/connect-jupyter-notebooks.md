@@ -115,7 +115,7 @@ You can install your own libraries by running:
 !pip3 install <some-library>
 ```
 
-Note: Please note this installing the libraries this way makes the libraries available only for the driver. If the libraries need to be available for both driver and executors, install directly in the docker image.
+> **Tip** Installing the libraries this way makes them available only for the driver. If the libraries need to be available for both driver and executors, install directly in the Docker image.
 
 If you are new to Jupyter notebooks, you can use this [tutorial](https://www.dataquest.io/blog/jupyter-notebook-tutorial/) as a starting point.
 
