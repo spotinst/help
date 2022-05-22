@@ -75,7 +75,7 @@ The Configuration Template “notebook-template” appears in the list of kernel
 
 ## Scala Kernels
 
-Ocean Spark also supports Jupyter Scala kernels. To open up a Scala kernel, all you need is to change the `type` field 
+Ocean Spark also supports Jupyter Scala kernels. To open up a Scala kernel, all you need is to change the `type` field
 in your configuration template. Here's an example configuration for a Scala kernel:
 
 ```json
@@ -115,7 +115,7 @@ You can install your own libraries by running:
 !pip3 install <some-library>
 ```
 
-> **Tip** Installing the libraries this way makes them available only for the driver. If the libraries need to be available for both driver and executors, install directly in the Docker image.
+> **Tip**: Installing the libraries this way makes them available only for the driver. If the libraries need to be available for both driver and executors, install directly in the Docker image.
 
 If you are new to Jupyter notebooks, you can use this [tutorial](https://www.dataquest.io/blog/jupyter-notebook-tutorial/) as a starting point.
 
@@ -159,7 +159,7 @@ Additionally, any configuration option for Spark applications can be applied to 
 
 ## Connecting to JupyterHub
 
-If you prefer to run your Jupyter Notebooks in a hosted environment that can be shared across teams and developers, JupyterHub is an excellent solution. JupyterHub will give you the same developer experience that you are familiar with using local notebooks, but with added features and functionality for managing authentication, user access, and multiple configuration environments and templates. 
+If you prefer to run your Jupyter Notebooks in a hosted environment that can be shared across teams and developers, JupyterHub is an excellent solution. JupyterHub will give you the same developer experience that you are familiar with using local notebooks, but with added features and functionality for managing authentication, user access, and multiple configuration environments and templates.
 
 To help you get started, we've built a simple Docker image that can get you running notebooks in minutes. Follow these steps to deploy JupyterHub on your local machine:
 1. Pull this repo - https://github.com/spotinst/ocean-spark-examples/tree/master/jupyterhub-in-docker
@@ -168,7 +168,7 @@ To help you get started, we've built a simple Docker image that can get you runn
 4. Navigate to `localhost:8000` and input your Ocean Spark API key when prompted.
 5. Select a kernel (i.e., an Ocean Spark configuration template), and begin executing Spark code.
 
-This template is a great starting place, but feel free to adapt and alter the logic to meet your team's configuration requirements. 
+This template is a great starting place, but feel free to adapt and alter the logic to meet your team's configuration requirements.
 
 ## What's Next?
 
