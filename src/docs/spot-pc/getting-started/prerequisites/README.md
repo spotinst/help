@@ -48,6 +48,8 @@ The following list covers required discovery steps to perform before starting a 
     ### Identify External Azure vNet for AD DC
     An external Azure vNet must be configured with network access to the AD DC. This is typically accomplished via a site-to-site VPN or by running the AD DC on a VM attached to that vNet. A Spot PC network will be created and peered with this existing vNet as part of the Onboarding Workflow.
 
+    A basic VPN from the Spot PC network directly to the on-premises AD DC network is available as well. This solution, using a the basic VPN Gateway, is limited to 100Mbps and isn't a scalable solution for larger or intensive workloads (e.g. loading data from on-premises storage). It should only be used in production for authentication back to the AD DC and only for smaller environment. 
+
     #### Identify External vNet Subscription
     So that permission for vNet Peering is available, identify the Azure Subscription that contains the external Azure vNet (the vNet with AD DC network connectivity).
 
