@@ -2,6 +2,8 @@
 
 From any other tenant-specific page, clicking on the _Security_ tab brings you to this page. This page displays security data from the Microsoft Defender for Cloud service that is included in the Spot PC service. Spot PC admins can and should leverage this data to secure their Spot PC environments in a way that supports their tenants' workflow and security requirements.
 
+**Note:** Azure Defender for Cloud can take up to 24 hours to scan and assess the security score for newly created VMs. Until this initial period elapses the score for that VM may be 0%, bringing down the blended score of the the environment. VMs may be re-created from time to time by the optimization AI and thus VMs may fall back into that initial 24 hour period from time to time.
+
 1. Like other tenant pages, [Security](spot-pc/features/spot-pc-console/tenant/security) can be accessed by clicking the appropriate tab across the top.
 2. Security alerts are displayed as a circle chart based on risk level.
 3. An over-all security score and the Microsoft Defender score are displayed, acting on the recommendations from Microsoft Defender for Cloud can improve these scores.
