@@ -1,6 +1,6 @@
 # Spot PC: Release Notes
 
-## 05/12/2021
+## 05/12/2022
 
 _When:_ 05/12/2022 at 10pm - 11pm Eastern
 
@@ -17,11 +17,11 @@ _Impact:_ Access to desktops and application services for End Users will remain 
 * Automatic configuration of Azure Lighthouse for Spot PC Support access to Spot PC Azure components
   * Spot PC Support uses Azure Lighthouse to retrieve additional operational data from Log Analytics and to provide support technicians secure access to Azure components. Access requires partner notification and consent in addition to an approved Privileged Identity Management access request. All activities are logged and auditable.
 * Add subscription ID attribute to Spot PC site creation in Command Center
-  * New Spot PC sites can now be added with a subscription ID that is different from the original Spot PC subscription. This attribute is currently only available in Spot PC Command Center and requires a support request to implement. 
+  * New Spot PC sites can now be added with a subscription ID that is different from the original Spot PC subscription. This attribute is currently only available in Spot PC Command Center and requires a support request to implement.
 * Spot Group and session Virtual Machine tags
   * New API endpoints have been added to allow administrators to add tags to both Spot Groups and personal session virtual machines. The tags are pairs of Variable/Values and can be used to identify information such as Cost Centers for back charging or purpose like "test" or "render". This feature is currently API level only, with web console access planned for a future release.
 * New API endpoint User Assigned personal session VM
-  * A new API endpoint will return a list of personal virtual machines that have been assigned to a user. 
+  * A new API endpoint will return a list of personal virtual machines that have been assigned to a user.
 * Spot PC Azure subscription name
   * For new Spot PC deployments, the Spot PC Azure subscription that is added will now contain the name of the Azure tenant. This change will help partners and customers clearly identify Spot PC subscriptions and will allows Spot PC support to identity the Azure tenant from the subscription name.
 * Granular secrets management for customer configuration information
@@ -40,7 +40,7 @@ _When:_ 04/28/2022 at 10pm - 11pm Eastern
 _Impact:_ Access to desktops and application services for End Users will remain uninterrupted. Access to Spot PC console will remain available.
 
 * User Login Times in the UI
-  * The Spot PC web console now displays end user logon times in the UI. 
+  * The Spot PC web console now displays end user logon times in the UI.
   * This release introduces the total logon time.
 * API account creation/management in the UI
   * Spot PC's previously announced REST API supports customers orchestrating workflows via external events. This update allows tenant admins to create and manage their own API accounts from within the Spot PC UI.  
@@ -114,7 +114,7 @@ _Impact:_ Access to desktops and application services for End Users will remain 
   * This represents our continuing commitment to testing all aspects of the Spot PC UI, including visualizing what steps are being taken in the UI via the automation tests.
   * This updates adds 4 more workflow validation tests to the list in the link to the right.
 * Improved Clarity when Deleting a Spot Group
-  * Adding text to clarify what happens when a Spot Group is deleted. 
+  * Adding text to clarify what happens when a Spot Group is deleted.
 
 
 ## What’s Next?
