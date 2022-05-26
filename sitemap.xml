@@ -1989,11 +1989,53 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/managed-instance/tutorials/upgrade-an-existing-elastigroup-to-managed-instance"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/ocean-cd/getting-started/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/getting-started/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/getting-started/"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/ocean-cd/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/"/>
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/ocean-cd/tutorials/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/tutorials/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/tutorials/"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/ocean-cd/tutorials/view-rollouts/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/tutorials/view-rollouts/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/tutorials/view-rollouts/"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/ocean-cd/tutorials/view-rollouts/rollout-details</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/tutorials/view-rollouts/rollout-details"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/tutorials/view-rollouts/rollout-details"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/ocean-cd/tutorials/view-settings/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/tutorials/view-settings/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/tutorials/view-settings/"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/ocean-cd/tutorials/view-workloads/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/tutorials/view-workloads/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/tutorials/view-workloads/"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/ocean-spark/configure-spark-apps/access-your-data</loc>
