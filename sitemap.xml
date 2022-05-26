@@ -1989,62 +1989,6 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/managed-instance/tutorials/upgrade-an-existing-elastigroup-to-managed-instance"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/ocean-cd/features/external-verifications</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/features/external-verifications"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/features/external-verifications"/>
-    </url>
-    <url>
-        <loc>https://docs.spot.io/?/ocean-cd/features/granular-visibility/detailed-rollout-view</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/features/granular-visibility/detailed-rollout-view"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/features/granular-visibility/detailed-rollout-view"/>
-    </url>
-    <url>
-        <loc>https://docs.spot.io/?/ocean-cd/features/granular-visibility/</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/features/granular-visibility/"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/features/granular-visibility/"/>
-    </url>
-    <url>
-        <loc>https://docs.spot.io/?/ocean-cd/features/</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/features/"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/features/"/>
-    </url>
-    <url>
-        <loc>https://docs.spot.io/?/ocean-cd/features/rollback</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/features/rollback"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/features/rollback"/>
-    </url>
-    <url>
-        <loc>https://docs.spot.io/?/ocean-cd/features/webhook-notifications</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/features/webhook-notifications"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/features/webhook-notifications"/>
-    </url>
-    <url>
-        <loc>https://docs.spot.io/?/ocean-cd/getting-started/</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/getting-started/"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/getting-started/"/>
-    </url>
-    <url>
-        <loc>https://docs.spot.io/?/ocean-cd/ocean-cd-overview</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/ocean-cd-overview"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/ocean-cd-overview"/>
-    </url>
-    <url>
         <loc>https://docs.spot.io/?/ocean-cd/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
@@ -3590,5 +3534,68 @@
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/wave/"/>
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/wave/"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/z-ocean-cd/features/external-verifications</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/z-ocean-cd/features/external-verifications"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/z-ocean-cd/features/external-verifications"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/z-ocean-cd/features/granular-visibility/detailed-rollout-view</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/z-ocean-cd/features/granular-visibility/detailed-rollout-view"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/z-ocean-cd/features/granular-visibility/detailed-rollout-view"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/z-ocean-cd/features/granular-visibility/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/z-ocean-cd/features/granular-visibility/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/z-ocean-cd/features/granular-visibility/"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/z-ocean-cd/features/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/z-ocean-cd/features/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/z-ocean-cd/features/"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/z-ocean-cd/features/rollback</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/z-ocean-cd/features/rollback"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/z-ocean-cd/features/rollback"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/z-ocean-cd/features/webhook-notifications</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/z-ocean-cd/features/webhook-notifications"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/z-ocean-cd/features/webhook-notifications"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/z-ocean-cd/getting-started/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/z-ocean-cd/getting-started/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/z-ocean-cd/getting-started/"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/z-ocean-cd/ocean-cd-overview</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/z-ocean-cd/ocean-cd-overview"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/z-ocean-cd/ocean-cd-overview"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/z-ocean-cd/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/z-ocean-cd/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/z-ocean-cd/"/>
     </url>
 </urlset>
