@@ -1,5 +1,22 @@
 # Spot PC: Release Notes
 
+## 05/26/2022
+
+_When:_ 05/26/2022 at 10pm - 11pm Eastern
+
+_Impact:_ Access to desktops and application services for End Users will remain uninterrupted. Access to Spot PC console will remain available.
+
+* Introducing Releases Notes in the Web App
+  * In the Spot PC web console in the top right hand corner of the user tile, a link to release notes are available above logout. From the most recent release notes, web app users can navigate to more documentation about Spot PC.
+* Simplified Onboarding Workflow
+  * Spot PC's onboarding process for tenants has been streamlined to make discovery authorization and connecting your Azure tenant to into one step. This allows us to support international customers by aligning them in the appropriate CSP early creating a better user experience.
+* User Session Termination
+  * Spot PC now supports user session termination that can be used when pursing remediation for stuck user sessions for any user logged into a Spot Group.
+* Multiple Tabs Open
+  * Spot PC can now support multiple tabs open in one browser for ease of viewing.
+* Spot Group and session Virtual Machine tags in Spot PC web console
+  * Spot PC is glad to announce that tagging is now available in the web console in the Create and Edit Spot Group workflows in Config Actions in a key-value pair format.
+
 ## 05/12/2022
 
 _When:_ 05/12/2022 at 10pm - 11pm Eastern
