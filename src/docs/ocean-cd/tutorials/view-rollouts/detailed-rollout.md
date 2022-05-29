@@ -1,6 +1,6 @@
 <meta name="robots" content="noindex">
 
-Detailed Rollout
+# Detailed Rollout
 
 The Detailed Rollout page provides the details of a specific rollout. To view a detailed rollout page, click the row of the rollout in the Rollouts list on the [View Rollouts](ocean-cd/tutorials/view-rollouts/) page.
 
@@ -33,7 +33,7 @@ The summary line includes the following information:
 
 This area shows the progress of the rollout and provides information about each phase of the rollout. The arrow at the top hides the Rollout phases area and expands the application view area.
 
-<img src="/ocean-cd/_media/tutorials-detailed-rollout-03.png" />
+<img src="/ocean-cd/_media/tutorials-detailed-rollout-03.png" width="180" />
 
 ### Failures
 

@@ -24,7 +24,7 @@ Under Ocean CD in the Spot console, click Settings, and then click Add Cluster.
 
 When the Add Cluster popup appears, complete the procedure below.
 
-<img src="/ocean-cd/_media/getting-started-n02.png" />
+<img src="/ocean-cd/_media/getting-started-n02.png" width="354" />
 
 1. Complete the information below.
    - Cluster Identifier: This is a logical identifier for your cluster. You can choose any ID, and it is not coupled to the Ocean cluster ID (o-xxxxxx). Ocean CD can run on clusters that are not managed by Ocean. The cluster ID must be unique, have up to 30 alphanumeric characters, and not contain spaces.
@@ -63,7 +63,7 @@ You can also migrate your workload using the [Ocean CD API](ocean-cd/getting-sta
 
 3. The Workload Migration Flow appears to give you an overview of the migration steps.
 
-<img src="/ocean-cd/_media/getting-started-n06.png" />
+<img src="/ocean-cd/_media/getting-started-n06.png" width="400" />
 
 Throughout the process, Ocean CD performs internal validations. At each step, Ocean CD lets you know if a misplaced configuration is found and banners pop up with information you can use.
 
@@ -100,7 +100,7 @@ Complete the steps below:
 
 In the Migrate Workload procedure, you can choose a traffic manager in the RolloutSpec configuration, and Ocean CD will configure it automatically.
 
-<img src="/ocean-cd/_media/getting-started-n10.png" />
+<img src="/ocean-cd/_media/getting-started-n10.png" width="200" />
 
 This section shows templates for all of the traffic managers that Ocean CD supports. If you would like to use a template instead of the automatic configuration, you can use one of these.
 

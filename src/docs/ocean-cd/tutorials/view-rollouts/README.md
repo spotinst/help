@@ -51,4 +51,4 @@ To view detailed information about a specific rollout, click on the row of the r
 
 ## What’s Next?
 
-Learn about all the information provided in the [detailed rollout](ocean-cd/tutorials/detailed-rollout/) page.
+Learn about all the information provided in the [detailed rollout](ocean-cd/tutorials/view-rollouts/detailed-rollout) page.
