@@ -28,8 +28,8 @@ When the Add Cluster popup appears, complete the procedure below.
 
 1. Complete the information below.
    - Cluster Identifier: This is a logical identifier for your cluster. You can choose any ID, and it is not coupled to the Ocean cluster ID (o-xxxxxx). Ocean CD can run on clusters that are not managed by Ocean. The cluster ID must be unique, have up to 30 alphanumeric characters, and not contain spaces.
-   - [Argo Rollout Installation](): Ocean CD dynamically generates and manages Argo rollout manifests. The installation needs to know if you already have Argo installed on your computer. In the dropdown, select the option that applies to you.
-   - Click Download YAML. When you click Download YAML, a YAML file will be downloaded to your computer, and a new row will appear in the Clusters list. If you would like to customize features or [flags]() prior to the installation, you may do so by changing your downloaded YAML file.
+   - [Argo Rollout Installation](ocean-cd/?id=argo-installations): Ocean CD dynamically generates and manages Argo rollout manifests. The installation needs to know if you already have Argo installed on your computer. In the dropdown, select the option that applies to you.
+   - Click Download YAML. When you click Download YAML, a YAML file will be downloaded to your computer, and a new row will appear in the Clusters list. If you would like to [customize features or flags](https://github.com/spotinst/spot-oceancd-releases/blob/main/charts/oceancd-operator/values.yaml) prior to the installation, you may do so by changing your downloaded YAML file.
 
 <img src="/ocean-cd/_media/getting-started-n03.png" />
 
@@ -47,7 +47,7 @@ The procedures below describe how to migrate a Deployment to a SpotDeployment. T
 
 The migration does not delete your original deployment. If there are any resources that you do not want to keep, you will need to delete them manually.
 
-You can also migrate your workload using the [Ocean CD API]().
+You can also migrate your workload using the [Ocean CD API](ocean-cd/getting-started/?id=migrate-a-workload-using-the-api).
 
 ### Prerequisites
 
@@ -77,11 +77,11 @@ Complete the steps below. When you click Create, Ocean CD saves and applies your
 
 <img src="/ocean-cd/_media/getting-started-n07.png" />
 
-2. Edit the [strategy]() and click Next. If you already have a strategy defined, you can just click Skip.
+2. Edit the [strategy](ocean-cd/?id=strategy) and click Next. If you already have a strategy defined, you can just click Skip.
 
 <img src="/ocean-cd/_media/getting-started-n08.png" />
 
-3. Edit the template for the [RolloutSpec]() Choosing a [traffic manager]() is optional. If you would like to specify a traffic manager, choose one from the dropdown list. When you choose a traffic manager, Ocean CD will populate the template automatically with the necessary traffic manager attributes. If you do not select a traffic manager, Ocean CD will use the Kubernetes default traffic methods based on replicas. When you are finished editing, click Create.
+3. Edit the template for the [RolloutSpec](ocean-cd/?id=rolloutspec). Choosing a traffic manager is optional. If you would like to specify a traffic manager, choose one from the dropdown list. When you choose a traffic manager, Ocean CD will populate the template automatically with the necessary traffic manager attributes. If you do not select a traffic manager, Ocean CD will use the Kubernetes default traffic methods based on replicas. When you are finished editing, click Create.
 
 <img src="/ocean-cd/_media/getting-started-n09.png" />
 
@@ -92,7 +92,7 @@ If you prefer to create your entities from scratch and migrate using the API, yo
 Complete the steps below:
 1. Create a SpotDemployment YAML, create your entities, and apply them accordingly, using Postman or another tool you prefer. When you apply a SpotDeployment for the first time, Ocean CD creates the first replicas, but will not trigger a deployment.
 
-   YAML templates and examples can be found in the [Ocean CD Public Repository](https://github.com/spotinst/spot-oceancd-releases/tree/main/examples) or JSON syntax via the [Ocean CD API]().
+   YAML templates and examples can be found in the [Ocean CD Public Repository](https://github.com/spotinst/spot-oceancd-releases/tree/main/examples) or JSON syntax via the [Ocean CD API](https://docs.spot.io/api/#operation/OceanCDRolloutSpecCreate).
 
 2. Trigger a canary deployment, make one or more changes to the SpotDeployment you created and apply them.          
 
@@ -225,4 +225,4 @@ traffic:
 
 ## What’s Next?
 
-Learn about viewing the [list of rollouts]() and the information provided in the [detailed rollout]() page.
+Learn about viewing the [list of rollouts](ocean-cd/tutorials/view-rollouts/) and the information provided in the [detailed rollout](ocean-cd/tutorials/view-rollouts/detailed-rollout) page.

@@ -60,10 +60,10 @@ The attributes of the rolloutSpec are described below.
 - SpotDeployment.Namespace: Cluster Namespace
 - SpotDeployment.Name: CRD Name
 - Strategy.name: Name of the Strategy. You may use an already created strategy and do not need to create a new one.
-- Traffic: The [traffic manager]() you have chosen.
+- Traffic: The [traffic manager](ocean-cd/getting-started/?id=traffic-manager-reference) you have chosen.
 - FailurePolicy: The automatic action(s) OceanCD performs in case of a failure.
 
-You can create your [rolloutSpec](ocean-cd/getting-started/) either in the Spot console or by using the [Ocean CD API]().
+You can create your [rolloutSpec](ocean-cd/getting-started/) either in the Spot console or by using the [Ocean CD API](https://docs.spot.io/api/#operation/OceanCDRolloutSpecCreate).
 
 ### Strategy
 
@@ -100,7 +100,7 @@ The Ocean CD Operator resides in a pod in your Kubernetes cluster and provides t
 - Continuously fetches from the SaaS operations to execute
 - Reports events to the SaaS that are relevant to the well functioning of the Ocean CD processes, such as changes in the cluster resources
 
-Installation of the Operator is described in the [Getting Started]() page.
+Installation of the Operator is described in the [Getting Started](https://docs.spot.io/ocean-cd/getting-started/?id=install-the-operator-using-spot-console) page.
 
 ### SpotDeployment CRD
 
@@ -142,7 +142,7 @@ An Ocean CD microservice may include multiple rollout configurations, and each r
 ## Documentation Map
 
 - [Getting Started](ocean-cd/getting-started/)
-- [Tutorials](ocean-cd/tutorials/)
+- Tutorials
   - [View Settings](ocean-cd/tutorials/view-settings/)
   - [View Rollouts](ocean-cd/tutorials/view-rollouts/)
     - [Detailed Rollout](ocean-cd/tutorials/view-rollouts/detailed-rollout)
