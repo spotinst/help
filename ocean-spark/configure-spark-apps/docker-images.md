@@ -8,7 +8,7 @@ When Spark runs on Kubernetes, the driver and executors are Docker containers th
 
 ## What’s in these Docker Images?
 
-In addition to a version of Spark itself, the `spark:platform` images include connectors to popular [object stores](ocean-spark/configure-spark-apps/docker-images?id=data-source-connectors): (S3, GCS, ADLS), Snowflake, Delta Lake, Python support with pip and conda, Jupyter notebook support, Hadoop, and more.
+In addition to a version of Spark itself, the `spark:platform` images include connectors to popular [object stores](ocean-spark/configure-spark-apps/docker-images?id=data-source-connectors): (S3, GCS, ADLS), Snowflake, Delta Lake, Python support with pip and conda, Jupyter notebook support, Hadoop, AWS Glue Catalog, and more.
 
 ### Images to start with
 
@@ -52,6 +52,7 @@ The image tages `gcr.io/datamechanics/spark:platform` supports for the following
 - Azure Datalake generation 2 (abfss:// scheme)
 - [Snowflake](https://docs.snowflake.com/en/user-guide/spark-connector.html)
 - [Delta Lake](https://docs.delta.io/latest/index.html)
+- [AWS Glue](https://docs.aws.amazon.com/glue/latest/dg/what-is-glue.html)
 
 The versions of those connectors depend on the versions of Spark and Hadoop. Here are the versions per spark:platform image:
 
@@ -63,8 +64,9 @@ The versions of those connectors depend on the versions of Spark and Hadoop. Her
 | ADLS gen2 (abfss://)          | Hadoop 3.1.0 - Azure Storage 5.4.0 | Hadoop 3.2.0 - Azure Storage 7.0.0 | Hadoop 3.2.0 - Azure Storage 7.0.0 | Hadoop 3.3.1 - Azure Storage 7.0.1 |
 | GCS                           |               2.1.5                |               2.1.5                |               2.1.5                |               2.1.5                |
 | Delta                         |               0.6.1                |               0.8.0                |               1.0.1                |               1.1.0                |
-| Snowflake                     |               2.9.3                |               2.10.0                |               2.10.0                |               2.10.0                |
+| Snowflake                     |               2.9.3                |               2.10.0               |               2.10.0               |               2.10.0               |
 | Pyarrow                       |               3.0.0                |               3.0.0                |               3.0.0                |               3.0.0                |
+| AWS Glue                      |           Not Supported            |     Hadoop 3.2.0 - Hive 2.3.7      |      Hadoop 3.2.0 - Hive 2.3.7     |     Hadoop 3.3.1 - Hive 2.3.9      |
 
 To check these versions, you may also run the image locally and list the JARs in /opt/spark/jars/:
 
@@ -102,10 +104,10 @@ Please use a long-form only if you need a specific combination. For instance, yo
 
 For production workloads:
 
-- We don't recommend using the `-latest` tags. To keep the image stable you should use images with an explicit version suffix like `-dm17` below. The following images are the same:
-  - gcr.io/datamechanics/spark:platform-3.2-dm17
-  - gcr.io/datamechanics/spark:platform-3.2.1-dm17
-  - gcr.io/datamechanics/spark:platform-3.2.1-hadoop-3.3.1-java-8-scala-2.12-python-3.8-dm17
+- We don't recommend using the `-latest` tags. To keep the image stable you should use images with an explicit version suffix like `-dm18` below. The following images are the same:
+  - gcr.io/datamechanics/spark:platform-3.2-dm18
+  - gcr.io/datamechanics/spark:platform-3.2.1-dm18
+  - gcr.io/datamechanics/spark:platform-3.2.1-hadoop-3.3.1-java-8-scala-2.12-python-3.8-dm18
 - Long-form tag images without the suffix version can change to the exclusion of the Spark, Hadoop, Java, Scala and Python versions specified in the image tag.
 
 See the release notes below to learn about the changes introduced by each version.
@@ -118,7 +120,11 @@ These images are also published on a [public Dockerhub repository](https://hub.d
 
 Ocean Spark regularly updates its publicly available Docker images for Spark. This section contains the release notes of those images, indicating what changed in each version.
 
-### Release dm17 (latest)
+### Release dm18 (latest)
+
+- Add AWS Glue support for spark 3 images (Spark 2.4 image do not support Glue)
+
+### Release dm17
 
 - Add new images with Spark 3.1.3 and Spark 3.2.1
 - Upgrade Delta version to 1.0.1 with Spark 3.1.x
