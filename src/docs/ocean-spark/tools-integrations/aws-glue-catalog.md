@@ -1,4 +1,4 @@
-# AWS Glue Catalog
+# AWS Glue Data Catalog
 
 You can use the [AWS Glue Data Catalog](https://docs.aws.amazon.com/glue/latest/dg/populate-data-catalog.html) as a metastore to persist metadata about your Spark tables, such as definition, location, and statistics. This is an alternative to using a [Hive Metastore](https://docs.spot.io/ocean-spark/tools-integrations/hive-metastore). The main benefit of Glue is that it natively allows querying from other AWS services such as Athena and Redshift.
 
