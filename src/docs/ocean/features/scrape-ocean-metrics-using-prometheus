@@ -1,0 +1,47 @@
+# Scrape Ocean Metrics using Prometheus
+
+You can use Prometheus to scrape [important Ocean metrics](https://docs.google.com/document/d/1NSV09EVMkb5xcq9IPcWuYePcS9FFxSldq-LuiEbX6qU/edit#heading=h.7vgtfjkhoadm). Using a simple exporter, Ocean is able to provide data in open metrics format for Prometheus to scrape.
+
+The Ocean metrics exporter is a lightweight application running in the Kubernetes cluster and continuously scraping metrical data from the Ocean SaaS. The metrics exporter scrapes every 60 seconds and formats the data for prometheus to scrape.
+
+Although the exporter application is independent of the Ocean controller, a functioning controller is required for data to stream into Ocean Saas and update the metrics.
+
+## Prerequisites
+
+- Ocean running in a cluster with a reporting controller
+- Prometheus installed in the cluster
+
+## Deploy the Exporter
+
+You can deploy the exporter with Helm, using the following steps:
+helm install prom-exp ./ocean-metric-exporter
+
+
+By default, the installation creates the deployment and the service on your cluster under the kube-system namespace.
+Run kubectl get pods -n kube-system and validate that there is a running pod with Ocean metric exporter.
+
+
+Configure Prometheus
+This step configures Prometheus to generate scrape requests to the Kubernetes service that exposes the Ocean exporter.
+
+To the set of Prometheus jobs configured in your environment, add the following:
+
+    scrape_configs:
+      - job_name: 'spot-ocean-metrics' # The job name is assigned to scraped metrics by default.
+        metrics_path: '/actuator/prometheus'  # The HTTP resource path on which to fetch metrics from targets.
+        scrape_interval: 30s                   # How frequently to scrape targets from this job.
+        static_configs:
+        - targets: ['prom-exp-ocean-metric-exporter.kube-system.svc.cluster.local:5050']
+
+Ocean metrics will be scraped every 30 seconds and saved into Prometheus.
+
+<img src="/ocean/_media/create-cluster.png" />
+
+## Grafana Dashboard
+
+One popular use of metrics saved in Prometheus is dashboarding. As Grafana is a popular dashboarding tool, Spot has created a Grafana dashboard template link) that you can download. The dashboard enables you to visualize Ocean metrics and may be incorporated into your existing dashboard base.
+
+## What’s next?
+
+In Ocean, click Roadmap to share feedback and request future metrics.
+Get started (link to Getting Started page) with Ocean.
