@@ -26,4 +26,4 @@
     - [Connect Jupyter Notebooks](ocean-spark/tools-integrations/connect-jupyter-notebooks)
     - [Run Apps from Airflow](ocean-spark/tools-integrations/run-apps-from-airflow)
     - [Hive Metastore](ocean-spark/tools-integrations/hive-metastore)
-    - [AWS Glue Catalog](ocean-spark/tools-integrations/aws-glue-catalog)
+    - [AWS Glue Data Catalog](ocean-spark/tools-integrations/aws-glue-catalog)
