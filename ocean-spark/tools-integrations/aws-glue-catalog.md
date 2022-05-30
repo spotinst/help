@@ -6,7 +6,7 @@ The [Spark docker images](https://docs.spot.io/ocean-spark/configure-spark-apps/
 
 The procedures below differ depending on whether Ocean Spark is deployed in the same AWS account as Glue, or whether they are in separate accounts.
 
-## Ocean Spark deployed in same AWS Account
+## Ocean Spark in same AWS Account
 
 The first step is to create an IAM policy granting your Spark applications access to Glue. You can do this in the AWS console, under IAM > Policies > Create policy, by entering the following JSON block.  
 You should replace `<AWS ACCOUNT ID>` with your actual account ID.
@@ -45,7 +45,7 @@ The final step is to pass the following configuration to your Spark applications
 }
 ```
 
-## Ocean Spark deployed in different AWS Account
+## Ocean Spark in different AWS Account
 
 The procedures below are based on the official [AWS Glue documentation](https://docs.aws.amazon.com/glue/latest/dg/cross-account-access.html)
 
