@@ -8,7 +8,7 @@ When Spark runs on Kubernetes, the driver and executors are Docker containers th
 
 ## What’s in these Docker Images?
 
-In addition to a version of Spark itself, the `spark:platform` images include connectors to popular [object stores](ocean-spark/configure-spark-apps/docker-images?id=data-source-connectors): (S3, GCS, ADLS), Snowflake, Delta Lake, Python support with pip and conda, Jupyter notebook support, Hadoop, AWS Glue Catalog and more.
+In addition to a version of Spark itself, the `spark:platform` images include connectors to popular [object stores](ocean-spark/configure-spark-apps/docker-images?id=data-source-connectors): (S3, GCS, ADLS), Snowflake, Delta Lake, Python support with pip and conda, Jupyter notebook support, Hadoop, AWS Glue Catalog, and more.
 
 ### Images to start with
 
