@@ -70,7 +70,7 @@ You can view the status of the newly created cluster on the Cluster page of the 
 
 This section provides a list of requirements for an Ocean Spark cluster deployment. The next section then puts those requirements in context by detailing common issues.
 
-- The Kubernetes cluster should run one of Kubernetes versions 1.19, 1.20, or 1.21
+- The Kubernetes cluster should run one of Kubernetes versions 1.19, 1.20, 1.21 or 1.22.
 - The VPC subnets should have the [proper tags](https://aws.amazon.com/premiumsupport/knowledge-center/eks-vpc-subnet-discovery/) to be discoverable by Kubernetes:
   - On all subnets: `kubernetes.io/cluster/<eks-cluster-name>: shared`
   - On public subnets: `kubernetes.io/role/elb: 1`
