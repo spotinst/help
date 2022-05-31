@@ -15,7 +15,7 @@ Use the policy below to if you are creating an Eco policy with Cloudformation.
   "Parameters": {
     "CostAndUsageBucket": {
       "Type": "String",
-      "Description": "This role is for Spot by Netapp for use with the Cloud Analyzer, Eco and other FinOps products. The bucket name of where the *HOURLY* Cost and Usage Report is located. <https://console.aws.amazon.com/billing/home?#/reports> If you have any questions, please contact us at: eco@netapp.com"
+      "Description": "The bucket name of where the *HOURLY* Cost and Usage Report is located. https://console.aws.amazon.com/billing/home?#/reports"
     }
   },
   "Resources": {
@@ -113,6 +113,7 @@ Use the policy below to if you are creating an Eco policy with Cloudformation.
     "SpotFinOpsRole": {
       "Type": "AWS::IAM::Role",
       "Properties": {
+        "Description" :"This role is for Spot by Netapp for use with the Cloud Analyzer, Eco and other FinOps products. If you have any questions, please contact us at: eco@netapp.com",
         "AssumeRolePolicyDocument": {
           "Version": "2012-10-17",
           "Statement": [
