@@ -1,0 +1,77 @@
+# Install Operator using API or Helm
+
+If you cannot use the Spot console to install the operator, you can install using the Spot API or using helm.
+
+Whichever method you choose, you will need to indicate whether your cluster has an Argo Rollout installation. If you do not have an Argo Rollout installation, Ocean CD dynamically generates Argo rollout manifests on your behalf. In addition, Ocean CD supports the addition of your own flags and personal Argo customization.
+
+> Tip: If you do not want Ocean CD to generate Argo manifests (e.g., you have already configured your own customized ones), you may configure otherwise.
+
+For further information, have a look at additional [resources supported](https://github.com/spotinst/spot-oceancd-releases/blob/main/charts/spot-oceancd-operator/values.yam) such as affinity, tolerations, podSecurityContext, and nodeSelector.
+
+## Prerequisite
+- Install Operator Lifecycle Manager (OLM)
+
+The purpose of OLM is to extend Kubernetes to provide a declarative way to install, manage, and upgrade operators on a cluster. OLM is required for both the API and Helm installation methods.
+
+To install OLM, use the following command:
+
+```bash
+curl -sL https://github.com/operator-framework/operator-lifecycle-manager/releases/download/v0.21.2/install.sh | bash -s v0.21.2
+```
+
+## Install using API
+
+Run the following API command. Be sure to add the flags required for Argo installation.
+
+```
+https://api.spotinst.io/ocean/cd/clusterInstaller?clusterId=CLUSTER_ID
+```
+
+## Install using Helm
+
+Complete the steps below.
+
+1. Add the OceanCD Helm chart repository:
+
+```
+helm repo add oceancd https://charts.oceancd.io
+```
+
+2. Update your local Helm chart repository cache:
+
+```
+helm repo update
+```
+
+3. Install spot-oceancd-operator:
+
+```
+helm install my-release oceancd/spot-oceancd-operator \
+  --set token=REDACTED \
+  --set clusterId=REDACTED \
+  # [...]
+```
+
+Configure all required chart values using the `set` command line argument or a `values.yaml` file.
+
+### Uninstall Ocean CD Operator
+
+If you need to uninstall spot-oceancd-operator, use the procedure below.
+
+```
+helm uninstall my-release
+
+kubectl get csv -A | grep spot-oceancd-operator | awk '{system("kubectl delete csv " $2 " -n " $1)}'
+
+kubectl delete apiservices v1.packages.operators.coreos.com
+
+kubectl delete -f https://github.com/operator-framework/operator-lifecycle-manager/releases/download/v0.20.0/crds.yaml
+
+kubectl delete -f https://github.com/operator-framework/operator-lifecycle-manager/releases/download/v0.20.0/olm.yaml
+```
+
+For additional information, consult the [Ocean CD Public Repository](https://github.com/spotinst/spot-oceancd-releases/tree/main/examples).
+
+## What’s Next?
+
+Learn how to [migrate a workload using the API](ocean-cd/getting-started/migrate-using-api).
