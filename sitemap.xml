@@ -1989,11 +1989,32 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/managed-instance/tutorials/upgrade-an-existing-elastigroup-to-managed-instance"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/ocean-cd/getting-started/install-operator-using-API-or-helm</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/getting-started/install-operator-using-API-or-helm"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/getting-started/install-operator-using-API-or-helm"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/ocean-cd/getting-started/migrate-using-api</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/getting-started/migrate-using-api"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/getting-started/migrate-using-api"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/ocean-cd/getting-started/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/getting-started/"/>
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/getting-started/"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/ocean-cd/getting-started/traffic-manager-reference</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/getting-started/traffic-manager-reference"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/getting-started/traffic-manager-reference"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/ocean-cd/</loc>

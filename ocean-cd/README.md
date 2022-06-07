@@ -109,9 +109,9 @@ Ocean CD creates its own CRD (i.e., the SpotDeployment CRD) to replace the Kuber
 
 Once the SpotDeployment CRD is applied to the Kubernetes cluster, the Operator reports to the SaaS to start a rollout with all of the needed data.
 
-### Argo rollouts as an engine
+### Argo Rollouts as an Engine
 
-[Argo rollouts](https://argoproj.github.io/argo-rollouts/) is a progressive deployment strategies engine, but it's not a product that can act at scale. While Argo rollouts get the desired rollout configuration and have strong capabilities of running it inside the cluster, Ocean CD manages the configurations which make it more scalable.
+[Argo Rollouts](https://argoproj.github.io/argo-rollouts/) is a progressive deployment strategies engine, but it's not a product that can act at scale. While Argo Rollouts get the desired rollout configuration and have strong capabilities of running it inside the cluster, Ocean CD manages the configurations which make it more scalable.
 
 Ocean CD recognizes the advantages of Argo rollouts as an engine for CD strategies and uses it accordingly to manage and enable it as a scalable CD product providing the following benefits:
 - From zero to canary in production readiness in minutes
@@ -124,7 +124,7 @@ Ocean CD recognizes the advantages of Argo rollouts as an engine for CD strategi
 
 When an updated SpotDeployment is applied to the cluster, the Ocean CD Operator identifies it and gets back from the SaaS the desired RolloutSpec (i.e., the desired Argo Rollout CRD). You do not need to deal with Argo rollouts, rather only with Ocean CD CRDs and strategies that are reusable and can be easily adjusted over multiple services and clusters.
 
-You can compare Ocean CD and Argo rollouts to the way a Kubernetes deployment manages replica sets. While Argo rollouts get the desired rollout configuration and run it inside the cluster, Ocean CD manages the configurations, making the cluster much more scalable. Just as a Kubernetes deployment watches replica sets and manages their life cycle, Ocean CD manages the attributes and behaviors of multiple Argo rollout instances.
+You can compare Ocean CD and Argo Rollouts to the way a Kubernetes deployment manages replica sets. While Argo rollouts get the desired rollout configuration and run it inside the cluster, Ocean CD manages the configurations, making the cluster much more scalable. Just as a Kubernetes deployment watches replica sets and manages their life cycle, Ocean CD manages the attributes and behaviors of multiple Argo rollout instances.
 
 ## Putting it all Together
 
