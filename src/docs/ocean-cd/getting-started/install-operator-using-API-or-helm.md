@@ -74,4 +74,4 @@ For additional information, consult the [Ocean CD Public Repository](https://git
 
 ## What’s Next?
 
-Learn how to [migrate a workload using the API]().
+Learn how to [migrate a workload using the API](ocean-cd/getting-started/migrate-using-api).
