@@ -10,7 +10,7 @@ Ocean CD provides DevOps and Infrastructure teams with out of the box processes 
 
 Ocean CD resides within Kubernetes and communicates with Spot to connect all parts of the delivery pipeline. The Ocean CD architecture and API enable a simple and secured installation that seamlessly fits into any existing environment. CI pipelines, Jenkins jobs, and other events before deployment to the cluster remain in place and untouched. With one simple command in the Kubernetes cluster, DevOps engineers can install the Ocean CD Operator and gain the SaaS logic and interface. As a multi-cluster product, Ocean CD enables you to track all the organizational clusters in which the controller is installed using one central dashboard.
 
-<img src="/ocean-cd/_media/overview-01.png" />
+<img src="/ocean-cd/_media/overview-01.png" width="450"/>
 
 To automate deliveries with Ocean CD, you will perform the following basic steps:
 - Create a SpotDeployment CRD: Ocean CD replacement of a Deployment Resource

@@ -1,8 +1,8 @@
 # Install Operator using API or Helm
 
-If you cannot use the Spot console to install the operator, you can install using the Spot API or using helm.
+If you cannot use the Spot console to install the operator, you can install using the Spot API or using Helm.
 
-Whichever method you choose, you will need to indicate whether your cluster has an Argo Rollout installation. If you do not have an Argo Rollout installation, Ocean CD dynamically generates Argo rollout manifests on your behalf. In addition, Ocean CD supports the addition of your own flags and personal Argo customization.
+Whichever method you choose, you will need to indicate whether your cluster has an Argo Rollout installation. If you do not have an Argo Rollout installation, Ocean CD dynamically generates Argo rollout manifests on your behalf. In addition, Ocean CD supports use of your own flags and personal Argo customization.
 
 > Tip: If you do not want Ocean CD to generate Argo manifests (e.g., you have already configured your own customized ones), you may configure otherwise.
 
