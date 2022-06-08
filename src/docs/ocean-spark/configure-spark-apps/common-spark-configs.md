@@ -2,7 +2,7 @@
 
 This page describes some common Spark configurations relevant to Ocean Spark.
 
-## Controlling the number of executors to use
+## Control the number of executors
 
 A Spark application can either use a fixed number of executors, or it can dynamically adjust the number
 of Spark executors at runtime based on the load (dynamic allocation).
