@@ -36,7 +36,7 @@ When the Add Cluster popup appears, complete the procedure below.
 
 <img src="/ocean-cd/_media/getting-started-n04.png" />
 
-> Note: Once you have downloaded the YAML, the new row will remain with partial information for 10 minutes. If this time has elapsed and the YAML was not applied, the row and the banner will be removed. However, the YAML can still be applied at another time, and the Ocean CD will display the new data accordingly.
+> **Tip**: Once you have downloaded the YAML, the new row will remain with partial information for 10 minutes. If this time has elapsed and the YAML was not applied, the row and the banner will be removed. However, the YAML can still be applied at another time, and the Ocean CD will display the new data accordingly.
 
 You are now ready to migrate your workload.
 
@@ -46,7 +46,7 @@ The procedures below describe how to migrate a Deployment to a SpotDeployment. T
 
 The migration does not delete your original deployment. If there are any resources that you do not want to keep, you will need to delete them manually.
 
-For further information on the syntax of our entities, see examples in the [Ocean CD Public Repository](https://github.com/spotinst/spot-oceancd-releases/tree/main/Quick%20Start%20%26%20Examples)
+For further information on the syntax of our entities, see examples in the [Ocean CD public repository](https://github.com/spotinst/spot-oceancd-releases/tree/main/Quick%20Start%20%26%20Examples)
 
 You can also migrate your workload using the [Ocean CD API](ocean-cd/getting-started/migrate-using-api) and manually creating your SpotDeployment CRD. Just copy the deployment and change its kind. Then send API requests to create a Strategy and a RolloutSpec using the Ocean CD API.
 
