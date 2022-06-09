@@ -73,9 +73,9 @@ For such cases, the phase will be in a paused status until the pre-defined windo
 
 ### Actions
 
-At any time, you can click the three dots at the top of the Rollout Phases panel and initiate one of the actions
+At any time, you can click the three dots at the top of the Rollout Phases panel and initiate one of the actions.
 
-<img src="/ocean-cd/_media/tutorials-detailed-rollout-04.png" />
+<img src="/ocean-cd/_media/tutorials-detailed-rollout-07.png" />
 
 The following actions are available:
 - Promote: Promote one phase to the next.
@@ -102,19 +102,19 @@ The Application view provides information about the Kubernetes layer and the CRD
 
 The default view is by Kubernetes events as shown below.
 
-<img src="/ocean-cd/_media/tutorials-detailed-rollout-05.png" />
+<img src="/ocean-cd/_media/tutorials-detailed-rollout-04.png" />
 
 ### Kubernetes resources
 
 This view shows the status breakdown per pod.
 
-<img src="/ocean-cd/_media/tutorials-detailed-rollout-06.png" />
+<img src="/ocean-cd/_media/tutorials-detailed-rollout-05.png" />
 
 ### CRD Diff
 
 This view shows the difference between the CRD of the rollout and the CRD of the previous desired state.
 
-<img src="/ocean-cd/_media/tutorials-detailed-rollout-07.png" />
+<img src="/ocean-cd/_media/tutorials-detailed-rollout-06.png" />
 
 ## Rollout Details
 
