@@ -8,7 +8,7 @@ Complete the steps below:
 
 > **Tip**: Keep in mind that the Rolloutspec triggers the Strategy, so you will need to first create a strategy, and only then the Rolloutspec.
 
-   YAML templates and examples can be found in the [Ocean CD Public Repository](https://github.com/spotinst/spot-oceancd-releases/tree/main/Quick%20Start%20%26%20Examples) or JSON syntax via the [Ocean CD API](http://docs.spot.io/api).
+   YAML templates and examples can be found in the [Ocean CD public repository](https://github.com/spotinst/spot-oceancd-releases/tree/main/Quick%20Start%20%26%20Examples) or JSON syntax via the [Ocean CD API](http://docs.spot.io/api).
 
 2. To trigger a canary deployment, make one or more changes to the SpotDeployment you created and apply them.
 
