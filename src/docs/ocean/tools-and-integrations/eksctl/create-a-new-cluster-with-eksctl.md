@@ -1,6 +1,6 @@
 # Create a new Cluster with eksctl
 
-In this procedure, you will create an Ocean Kubernetes cluster with [eksctl](https://eksctl.io/) and migrate existing unmanaged nodegroups into Ocean-managed ones so you can spend more time with other tasks instead of managing infrastructure.
+In this procedure, you will create an Ocean Kubernetes cluster with [eksctl](https://eksctl.io/) and migrate existing nodegroups into Ocean-managed ones so you can spend more time with other tasks instead of managing infrastructure.
 
 ## Prerequisites
 
@@ -82,44 +82,44 @@ metadata:
  tags:
    creator: bob
    environment: prod
+spotOcean:
+  strategy:
+    # Percentage of Spot instances that would spin up from the desired
+    # capacity.
+    spotPercentage: 100
+    # Allow Ocean to utilize any available reserved instances first before
+    # purchasing Spot instances.
+    utilizeReservedInstances: true
+    # Launch On-Demand instances in case of no Spot instances available.
+     fallbackToOnDemand: true
+   autoScaler:
+   # Enable the Ocean autoscaler.
+     enabled: true
+     # Cooldown period between scaling actions.
+     cooldown: 300
+     # Spare resource capacity management enabling fast assignment of Pods
+     # without waiting for new resources to launch.
+     headrooms:
+       # Number of CPUs to allocate. CPUs are denoted in millicores, where
+       # 1000 millicores = 1 vCPU.
+       cpuPerUnit: 2
+       # Number of GPUs to allocate.
+       gpuPerUnit: 0
+       # Amount of memory (MB) to allocate.
+       memoryPerUnit: 64
+       # Number of units to retain as headroom, where each unit has the
+       # defined CPU and memory.
+       numOfUnits: 1
 nodeGroups:
  - name: standard-workers
    [... nodegroup standard fields; ssh, tags, etc.]
    spotOcean:
-     strategy:
-      # Percentage of Spot instances that would spin up from the desired
-      # capacity.
-       spotPercentage: 100
-      # Allow Ocean to utilize any available reserved instances first before
-      # purchasing Spot instances.
-       utilizeReservedInstances: true
-      # Launch On-Demand instances in case of no Spot instances available.
-       fallbackToOnDemand: true
-     autoScaler:
-      # Enable the Ocean autoscaler.
-       enabled: true
-      # Cooldown period between scaling actions.
-       cooldown: 300
-      # Spare resource capacity management enabling fast assignment of Pods
-      # without waiting for new resources to launch.
-       headrooms:
-          # Number of CPUs to allocate. CPUs are denoted in millicores, where
-          # 1000 millicores = 1 vCPU.
-         - cpuPerUnit: 2
-          # Number of GPUs to allocate.
-           gpuPerUnit: 0
-          # Amount of memory (MB) to allocate.
-           memoryPerUnit: 64
-          # Number of units to retain as headroom, where each unit has the
-          # defined CPU and memory.
-           numOfUnits: 1
      compute:
        instanceTypes:
-        # Instance types allowed in the Ocean cluster. Cannot be configured
-        # if the blacklist is configured.
-         whitelist: # OR blacklist
-           - t2.large
-           - c5.large
+       # Instance types allowed in the Ocean cluster. Cannot be configured
+       # if the blacklist is configured.
+       - t2.large
+       - c5.large
 ```
 
 2. Create your Amazon EKS cluster and worker nodes with the following command.
