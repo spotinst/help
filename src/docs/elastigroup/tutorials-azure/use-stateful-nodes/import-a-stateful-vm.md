@@ -10,27 +10,27 @@ In this procedure, you will import the configuration of an existing Azure statef
 1. Go to the left menu in the Spot console and under Elastigroup, click Stateful Nodes.
 2. On the top right, click Create Node and Import.
 
-
+<img src="/elastigroup/_media/azure-import-a-stateful-vm-01.png" />
 
 ## Choose a Resource Group
 
 In the page that opens, choose the Azure resource group from the list. A list of Azure VMs will appear.
 
-
+<img src="/elastigroup/_media/azure-import-a-stateful-vm-02.png" width="350" />
 
 ## Choose a VM
 
 In the table, click the row of the VM you want to import and click Review & Import.
 
-
+<img src="/elastigroup/_media/azure-import-a-stateful-vm-03.png" />
 
 ## Review
 
 In the Review page you can see the entire configuration in JSON format and edit it if necessary.
 
+<img src="/elastigroup/_media/azure-import-a-stateful-vm-04.png" />
 
-
-Under the JSON panel, there is a link to the Spot API with the stateful node configuration.
+Under the JSON panel, there is a link to the Spot [API with the stateful node configuration](https://docs.spot.io/api/#operation/azureStatefulNodeCreate).
 
 When you are finished reviewing the configuration, click Create.
 
@@ -50,6 +50,6 @@ When the network persistency is also activated, the following actions will be do
 - A new VM will be launched with new resources (using the saved snapshots) and the original private and public IP addresses.
 - The Azure VM and the data resources will be deleted at the end of the 96 hour period.
 
-What’s Next?
+## What’s Next?
 
-- Learn how to manage stateful nodes (link to page) in Elastigroup.
+- Learn how to [manage stateful nodes](elastigroup/tutorials-azure/use-stateful-nodes/manage) in Elastigroup.
