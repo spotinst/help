@@ -6,6 +6,31 @@ In the [Migrate Workload](ocean-cd/getting-started/?id=migrate-a-workload-using-
 
 This page shows templates for all of the traffic managers that Ocean CD supports. If you would like to use a template instead of the automatic configuration, you can use one of these.
 
+### General Template for Syntax
+
+```yaml
+kind: RolloutSpec
+name: RolloutSpec-OceanCD
+spotDeployment:
+ clusterId: cluster-name
+ namespace: mynamespace
+ name: nginx-deployment
+strategy:
+ name: Strategy-OceanCD
+traffic:
+ canaryService: rollouts-demo-stable
+ stableService: rollouts-demo-canary
+ nginx:
+   stableIngress: rollouts-demo-ingress-nginx
+   additionalIngressAnnotations:
+     canary-by-header: X-Canary
+     canary-by-header-value: iwantsit
+failurePolicy:
+ action: abort
+```
+
+> **Tip**: You do not have to use a traffic manager. For more information, see [Without a Traffic Manager](ocean-cd/getting-started/traffic-manager-reference?id=without-traffic-manager).
+
 ### ALB: Instance Level
 
 ```yaml
@@ -113,5 +138,5 @@ traffic:
 ```
 
 ## What’s Next?
-- To learn more, have a look at the [Ocean CD Public Repository](https://github.com/spotinst/spot-oceancd-releases/tree/main/examples).
+- To learn more, have a look at the [Ocean CD Public Repository](https://github.com/spotinst/spot-oceancd-releases/tree/main/Quick%20Start%20%26%20Examples).
 - Learn about [viewing the list of rollouts](ocean-cd/tutorials/view-rollouts/) and the information provided in the [detailed rollout page](ocean-cd/tutorials/view-rollouts/detailed-rollout).

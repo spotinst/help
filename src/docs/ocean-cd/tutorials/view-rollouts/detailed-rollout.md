@@ -26,12 +26,12 @@ The summary line includes the following information:
 - Rollout type: Shows the current rollout type (e.g., Canary in the example above) as compared to Stable, which is the current version running.
 - Image: Shows the current image and the image being rolled out.
 - Kubernetes service: Enables network access for a set of pods.
-- Traffic split: The percent of traffic running on the current image and the image being rolled out.
-- Replicas: A graphical representation of the number of replicas running the current image and the number of replicas running the new image. The icons also show the status of each replica.
+- Traffic split: The percent of traffic exposed to the stable version and the Canary version being rolled out.
+- Replicas: A graphical representation of the number of available replicas running the stable version and the number of replicas running the Canary version. The icons also show the status of each replica.
 
 ## Rollout Phases
 
-This area shows the progress of the rollout and provides information about each phase of the rollout. The arrow at the top hides the Rollout phases area and expands the application view area.
+This area shows the progress of the Canary version rollout and provides information about each phase of the rollout. The arrow at the top hides the Rollout phases area and expands the application view area.
 
 <img src="/ocean-cd/_media/tutorials-detailed-rollout-03.png" width="180" />
 
@@ -43,7 +43,7 @@ Ocean CD will behave in accordance with the potential failure policy or paused s
 
 ### Failure Types
 
-Kubernetes failures may always be encountered. These failures could include: CrashLoop pod status, ImageLoop, Liveness Probe Failure, and others. For failures like these, OceanCD will immediately trigger a rollback action, regardless of the failure policy set. In addition, the rolled back workload will be considered as Degraded, unless configured otherwise.
+Kubernetes failures may always be encountered. These failures could include: CrashLoop pod status, ImageLoop, Liveness Probe Failure, and others. For failures like these, OceanCD will automatically trigger a rollback action once the `progressDeadlineSeconds` are over,  regardless of the failure policy set. In addition, the rolled back workload will be considered as Degraded, unless configured otherwise.
 
 *Degraded* means when a rollout is rolled back, it will scale up the Stable version (i.e., the version currently running) of the ReplicaSet, and scale down any other versions.
 
@@ -65,7 +65,6 @@ When no pre-defined window has been configured in your strategy prior to the rol
 
 You will be able to take the following actions at any time:
 - Resume
-- Retry
 - Roll Back.
 
 #### Pause with a pre-defined window
@@ -81,10 +80,19 @@ At any time, you can click the three dots at the top of the Rollout Phases panel
 The following actions are available:
 - Promote: Promote one phase to the next.
 - Promote All: Promote a phase to the end of the rollout, triggering a success.
-- Pause: Pause a phase for as long as you need to.
+- Pause: Pause a full rollout. Once the rollout is resumed, it will continue from where it left off.
 - Roll Back: The rollout will be terminated and the previous version (i.e., Stable) will be restored.
+- Retry: Will be available to you only once a rollout was completed. With this action you will be able to retry your full rollout.
 
 Whenever you click an action, you will be prompted to confirm before the action is actually taken.
+
+### Rollout Cancelation
+
+You can cancel a running rollout. Ocean CD supports a cancellation which provides you real-time status information including the newly created Rollout ID.
+
+To cancel a rollout, just reapply the Spotdeployment running.
+
+<img src="/ocean-cd/_media/tutorials-detailed-rollout-09.png" width="450" />
 
 ## Application View
 
@@ -104,7 +112,7 @@ This view shows the status breakdown per pod.
 
 ### CRD Diff
 
-This view shows the difference between the CRD of the rollout and the CRD of Stable, which is the current version running.
+This view shows the difference between the CRD of the rollout and the CRD of the previous desired state.
 
 <img src="/ocean-cd/_media/tutorials-detailed-rollout-07.png" />
 
