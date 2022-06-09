@@ -4,14 +4,14 @@
 
 To get started with Ocean CD, you will need to install the Ocean CD Operator and migrate a workload. The information below walks you through these procedures using the Spot console.
 
-## Install the Operator using Spot Console
+## Install the Operator
 
-The procedure below describes how to install the Ocean CD Operator using the Spot console.
+The procedure below describes how to install the Ocean CD Operator using the Spot console. It is also possible to [install the Operator using the API or Helm](ocean-cd/getting-started/install-operator-using-API-or-helm).
 
 ### Prerequisite
 
 - A Kubernetes cluster running in AWS, Azure or GCP
-- [OLM installation](ocean-cd/getting-started/install-operator-using-api-or-helm?id=prerequisite)
+- [OLM installation](ocean-cd/getting-started/install-operator-using-API-or-helm?id=prerequisite)
 
 ### Get Started
 
@@ -40,15 +40,15 @@ When the Add Cluster popup appears, complete the procedure below.
 
 You are now ready to migrate your workload.
 
-## Migrate a Workload using the Console
+## Migrate a Workload
 
 The procedures below describe how to migrate a Deployment to a SpotDeployment. This will enable Ocean CD to manage the deployments that you migrate. The migration includes the creation of the RolloutSpec and Strategy entities.
 
 The migration does not delete your original deployment. If there are any resources that you do not want to keep, you will need to delete them manually.
 
-For further information on the syntax of our entities, see examples in the [Ocean CD Public Repository](https://github.com/spotinst/spot-oceancd-releases/tree/main/examples)
+For further information on the syntax of our entities, see examples in the [Ocean CD Public Repository](https://github.com/spotinst/spot-oceancd-releases/tree/main/Quick%20Start%20%26%20Examples)
 
-You can also migrate your workload using the [Ocean CD API](ocean-cd/getting-started/migrate-using-api).
+You can also migrate your workload using the [Ocean CD API](ocean-cd/getting-started/migrate-using-api) and manually creating your SpotDeployment CRD. Just copy the deployment and change its kind. Then send API requests to create a Strategy and a RolloutSpec using the Ocean CD API.
 
 ### Prerequisites
 
@@ -57,8 +57,8 @@ You can also migrate your workload using the [Ocean CD API](ocean-cd/getting-sta
 
 ### Get Started
 
-1. Under Ocean CD in the left sidebar, go to Workloads. There will be found a list of all of your deployments.
-2. Hover over the Deployment to migrate, and click Migrate on the right side of the row.
+1. Under Ocean CD in the left sidebar, go to Workloads. You will see a list of all of your deployments.
+2. Hover over the deployment to migrate, and click Migrate on the right side of the row.
 
 <img src="/ocean-cd/_media/getting-started-n05.png" />
 

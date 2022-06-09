@@ -1,17 +1,17 @@
 # Install Operator using API or Helm
 
-If you cannot use the Spot console to install the operator, you can install using the Spot API or using Helm.
+If you are not using the Spot console to install the operator, you can install using the Spot API or using Helm.
 
 Whichever method you choose, you will need to indicate whether your cluster has an Argo Rollout installation. If you do not have an Argo Rollout installation, Ocean CD dynamically generates Argo rollout manifests on your behalf. In addition, Ocean CD supports use of your own flags and personal Argo customization.
 
 > Tip: If you do not want Ocean CD to generate Argo manifests (e.g., you have already configured your own customized ones), you may configure otherwise.
 
-For further information, have a look at additional [resources supported](https://github.com/spotinst/spot-oceancd-releases/blob/main/charts/spot-oceancd-operator/values.yam) such as affinity, tolerations, podSecurityContext, and nodeSelector.
+For further information, have a look at additional [resources supported](https://github.com/spotinst/spot-oceancd-releases/tree/main/Quick%20Start%20%26%20Examples) such as affinity, tolerations, podSecurityContext, and nodeSelector.
 
 ## Prerequisite
 - Install Operator Lifecycle Manager (OLM)
 
-The purpose of OLM is to extend Kubernetes to provide a declarative way to install, manage, and upgrade operators on a cluster. OLM is required for both the API and Helm installation methods.
+The purpose of OLM is to extend Kubernetes to provide a declarative way to install, manage, and upgrade operators on a cluster. OLM is required for all installation methods.
 
 To install OLM, use the following command:
 
@@ -21,7 +21,7 @@ curl -sL https://github.com/operator-framework/operator-lifecycle-manager/releas
 
 ## Install using API
 
-Run the following API command. Be sure to add the flags required for Argo installation.
+In your Kubernetes cluster, run the following API command, which will result in the download of a YAML file. Be sure to add the flags required for Argo installation.
 
 ```
 https://api.spotinst.io/ocean/cd/clusterInstaller?clusterId=CLUSTER_ID
@@ -70,7 +70,7 @@ kubectl delete -f https://github.com/operator-framework/operator-lifecycle-manag
 kubectl delete -f https://github.com/operator-framework/operator-lifecycle-manager/releases/download/v0.20.0/olm.yaml
 ```
 
-For additional information, consult the [Ocean CD Public Repository](https://github.com/spotinst/spot-oceancd-releases/tree/main/examples).
+For additional information, consult the [Ocean CD public repository](https://github.com/spotinst/spot-oceancd-releases/tree/main/Quick%20Start%20%26%20Examples).
 
 ## What’s Next?
 

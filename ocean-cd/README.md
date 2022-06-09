@@ -24,16 +24,15 @@ The Ocean CD Operator detects every applied SpotDeployment, monitors all of your
 
 This process enables full automation of the rollout, and will support a manual failure policy should you choose to make use of it. Throughout a rollout, automatic traffic management, rollbacks, and informative errors (if needed)  will be displayed. Ocean CD will include full monitoring and tracking of the deployment.
 
-
 ## Entities and Architecture
 
 For each deployment, Ocean CD makes use of a rolloutSpec and a strategy. You will use these entities to configure the specific behavior of the deployment.
 
 ### Strategy
 
-An Ocean CD strategy includes a definition of phases that manage the way your workload changes are exposed in the desired cluster and namespace.
+An Ocean CD strategy includes a definition of phases that manage the way your workload changes are exposed in the desired cluster and namespace. A strategy is reusable and can be used and maintained over multiple services and clusters.
 
-Whenever your workload is applied to the cluster, Ocean CD uses the strategy as part of the rolloutSpec logic to run the CD process.  The structure of a strategy is shown in the example below, which you may use as a template for creating your own strategy.
+Whenever your workload is applied to the cluster, Ocean CD uses the strategy as part of the rolloutSpec logic to run the CD process.  The structure of a strategy is shown in the example below, which you may use as a template for creating your own strategy. Additional examples of the strategy and all the entitiies are shown on the [Ocean CD public repository](https://github.com/spotinst/spot-oceancd-releases/tree/main/Quick%20Start%20%26%20Examples).
 
 ```yaml
 name: Strategy-OceanCD
@@ -56,7 +55,8 @@ The attributes of a strategy are described below.
 - Name: Name of the strategy. Must be unique.
 - Steps.name: Optional. Name of the step.
 - Steps.setWeight: Weight percentage of the step. The total of the weights must not exceed 100. If total weights are less than 100, Ocean CD will add on to the last phase until the total equals 100.
-- Steps.pause.duration: Optional. The time in seconds, minutes, or hours that you may pause the step.
+- Steps.pause: Optional. Pause to be set per phase.
+- Steps.pause.duration: Optional. The time in seconds, minutes, or hours that you may pause the step. If undefined, the phase will remain in a paused phase as long as not set otherwise by the user.
 
 ### RolloutSpec
 
@@ -66,7 +66,7 @@ The Ocean CD rollout spec includes the CD process description for the selected w
 - The traffic objects that, together with the strategy, run the rollout process
 - Failure policy, in case something is not working as expected according to the strategy or due to Kubernetes issues
 
-Each time a workload is applied to the cluster, Ocean CD will use the rolloutSpec logic you defined for that workload to run the CD process. The structure of a rolloutSpec is shown in the example below, which you may use as a template for creating your own rolloutSpec.
+Each time a workload is applied to the cluster, Ocean CD will use the rolloutSpec logic you defined for that workload to run the CD process. The structure of a rolloutSpec is shown in the example below (and in the [public repository](https://github.com/spotinst/spot-oceancd-releases/tree/main/Quick%20Start%20%26%20Examples)), which you may use as a template for creating your own rolloutSpec.
 
 ```yaml
 name: RolloutSpec-OceanCD
@@ -85,11 +85,11 @@ failurePolicy:
 ​
 The attributes of the rolloutSpec are described below.
 - Name: Name of the rolloutSpec. Must be unique.
-- SpotDeployment.ClusterId: Cluster Name
+- SpotDeployment.ClusterId: Cluster Name. Note that this is not the Ocean Cluster Identifier, and the name should be unique to Ocean CD.
 - SpotDeployment.Namespace: Cluster Namespace
 - SpotDeployment.Name: CRD Name
 - Strategy.name: Name of the Strategy. You may use an already created strategy and do not need to create a new one.
-- Traffic: The [traffic manager](ocean-cd/getting-started/?id=traffic-manager-reference) you have chosen
+- Traffic: Kubernetes services or optional [traffic manager](ocean-cd/getting-started/?id=traffic-manager-reference) you have chosen.
 - FailurePolicy: The automatic action(s) OceanCD performs in case of a failure
 
 You can create your [rolloutSpec](ocean-cd/getting-started/) either in the Spot console or by using the [Ocean CD API](https://docs.spot.io/api/#operation/OceanCDRolloutSpecCreate).
@@ -105,7 +105,7 @@ Installation of the Operator is described in the [Getting Started](https://docs.
 
 ### SpotDeployment CRD
 
-Ocean CD creates its own CRD (i.e., the SpotDeployment CRD) to replace the Kubernetes Deployment Resource. By creating a CRD, Ocean CD pinpoints in an efficient manner which resources are managed by the Operator (using the Saas logic).
+Ocean CD creates its own CRD (i.e., the SpotDeployment CRD) to replace the Kubernetes Deployment Resource. By creating a CRD, Ocean CD pinpoints in an efficient manner which resources are managed by the Operator (using the SaaS logic).
 
 Once the SpotDeployment CRD is applied to the Kubernetes cluster, the Operator reports to the SaaS to start a rollout with all of the needed data.
 
@@ -125,6 +125,8 @@ Ocean CD recognizes the advantages of Argo rollouts as an engine for CD strategi
 When an updated SpotDeployment is applied to the cluster, the Ocean CD Operator identifies it and gets back from the SaaS the desired RolloutSpec (i.e., the desired Argo Rollout CRD). You do not need to deal with Argo rollouts, rather only with Ocean CD CRDs and strategies that are reusable and can be easily adjusted over multiple services and clusters.
 
 You can compare Ocean CD and Argo Rollouts to the way a Kubernetes deployment manages replica sets. While Argo rollouts get the desired rollout configuration and run it inside the cluster, Ocean CD manages the configurations, making the cluster much more scalable. Just as a Kubernetes deployment watches replica sets and manages their life cycle, Ocean CD manages the attributes and behaviors of multiple Argo rollout instances.
+
+<img src="/ocean-cd/_media/overview-02.png" />
 
 ## Putting it all Together
 
@@ -152,6 +154,9 @@ An Ocean CD microservice may include multiple rollout configurations, and each r
 ## Documentation Map
 
 - [Getting Started](ocean-cd/getting-started/)
+  - [Install using API or Helm](ocean-cd/getting-started/install-operator-using-API-or-helm)
+  - [Migrate using the API](ocean-cd/getting-started/migrate-using-api)
+  - [Traffic Manager Reference](ocean-cd/getting-started/traffic-manager-reference)
 - Tutorials
   - [View Settings](ocean-cd/tutorials/view-settings/)
   - [View Rollouts](ocean-cd/tutorials/view-rollouts/)
