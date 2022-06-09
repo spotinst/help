@@ -168,7 +168,7 @@ Alternatively, you can define the hive-site.xml file as a Kubernetes secret and 
 
 To do this, you will need [kubectl](https://kubernetes.io/docs/tasks/tools/) access to your cluster. Write the desired hive-site.xml file locally, and then run the following command:
 
-``` kubectl create secret generic <your-secret-name> --from-file=/path/to/hive-site.xml ```
+``` kubectl create secret generic <your-secret-name> --from-file=/path/to/hive-site.xml -n spark-apps ```
 
 You should then make a few edits to your Spark application configurations:
 1. Add a `volumes` key with a reference to the Kubernetes secret you created and a name
