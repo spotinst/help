@@ -112,7 +112,7 @@ This view shows the status breakdown per pod.
 
 ### CRD Diff
 
-This view shows the difference between the CRD of the rollout and the CRD of Stable, which is the current version running.
+This view shows the difference between the CRD of the rollout and the CRD of the previous desired state.
 
 <img src="/ocean-cd/_media/tutorials-detailed-rollout-07.png" />
 
