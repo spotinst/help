@@ -14,15 +14,15 @@ The Rollouts page has the following main areas which are described below:
 
 ## Summary Line
 
-At the top of the page, the summary line shows some statistics about your rollouts.
+At the top of the page, the summary line shows statistics about your rollouts.
 
-The default view shows data from the last seven days, but you can use the date filter to display statistics from any time period.
+The default view shows data from the last seven days, but you can use the date filter to display statistics from any time period. You can also use the filter bar to display statistics such as specific clusters, SpotDeployments, and Namespaces.
 
 <img src="/ocean-cd/_media/tutorials-rollouts-02.png" />
 
 The summary line shows statistics about the following:
 - Rollout durations: The duration that has the median time of all the durations in the defined time period, and the mean time of all the durations in the time period.
-- Attention needed: The currently paused rollouts. If you did not set failure policies or did not have pre-configured pause durations, phases may be found in Paused state. They will remain in this state as long as you have not taken any action.
+- Attention needed: The currently paused rollouts. Phases may be found in Paused state based on your RolloutSpec and Strategy configurations. They will remain in this state as long as you have not taken any action.
 - Rolled back: Rollouts that have been rolled back, written as a fraction of all rollouts.
 - Successful rollouts: The number of successful rollouts per all rollouts in the time period defined, presented as a fraction and as a percentage of all rollouts (i.e., successful, rolled back, and paused).
 
