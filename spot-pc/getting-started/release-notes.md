@@ -1,5 +1,14 @@
 # Spot PC: Release Notes
 
+## 06/09/2022
+_When:_ 06/09/2022 at 10pm - 11pm Eastern
+
+_Impact:_ Access to desktops and application services for End Users will remain uninterrupted. Access to Spot PC console will remain available.
+* UI Enhancements
+  * Assorted performance and stability enhancements behind the scenes
+* Additional Automated Testing
+  * Spot PC's team has added another wave of automated tests to ensure that upcoming automation works, all the time.   
+
 ## 05/26/2022
 
 _When:_ 05/26/2022 at 10pm - 11pm Eastern
@@ -50,7 +59,7 @@ _Impact:_ Access to desktops and application services for End Users will remain 
 
 
 
-## 04/28/2021
+## 04/28/2022
 
 _When:_ 04/28/2022 at 10pm - 11pm Eastern
 
