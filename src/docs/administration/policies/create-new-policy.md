@@ -19,7 +19,7 @@ The Create New Policy wizard appears.
 1. Enter a name for the policy.
 2. Enter a few words describing the purpose of the policy.
 
-<img src="/administration/_media/create-policy-02.png" />
+<img src="/administration/_media/create-policy-02.png" /> 
 
 3. Under Permission Management, choose the type of policy to create. There are two types of policies:
    - Account: These permissions relate to products and services that have resources at the account level. You will select the relevant accounts separately for each user or group once you attach the policy to them.
