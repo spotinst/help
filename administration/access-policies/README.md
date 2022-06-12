@@ -39,12 +39,12 @@ A statement contains the following elements:
 
 ```json
 {
-  "Statements": [
+  "statements": [
     {
-      "Effect": "ALLOW",
-      "Actions": ["elastigroup:describeAllGroups"],
-      "Resources": ["*"],
-      "Condition": {
+      "effect": "ALLOW",
+      "actions": ["elastigroup:describeAllGroups"],
+      "resources": ["*"],
+      "condition": {
         "name": "prod-*"
       }
     }
