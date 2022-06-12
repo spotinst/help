@@ -9,7 +9,10 @@ Whichever method you choose, you will need to indicate whether your cluster has 
 For further information, have a look at additional [resources supported](https://github.com/spotinst/spot-oceancd-releases/tree/main/Quick%20Start%20%26%20Examples) such as affinity, tolerations, podSecurityContext, and nodeSelector.
 
 ## Prerequisite
+- Kubernetes cluster up and running (on AWS, Azure or GCP)
+- Workstation with the Kubernetes cluster context and kubectl installed
 - Install Operator Lifecycle Manager (OLM)
+- API Token
 
 The purpose of OLM is to extend Kubernetes to provide a declarative way to install, manage, and upgrade operators on a cluster. OLM is required for all installation methods.
 
@@ -24,7 +27,16 @@ curl -sL https://github.com/operator-framework/operator-lifecycle-manager/releas
 In your Kubernetes cluster, run the following API command, which will result in the download of a YAML file. Be sure to add the flags required for Argo installation.
 
 ```
-https://api.spotinst.io/ocean/cd/clusterInstaller?clusterId=CLUSTER_ID
+https://api.spotinst.io/ocean/cd/clusterInstaller?clusterId=CLUSTER_ID&skipArgoRollouts=true
+```
+
+Should you wish to apply the command using Curl, use the syntax below. Be sure to replace the Authorization with your Bearer Token and the ClusterID with the Identifier of your choice.
+
+```curl
+curl --location --request POST 'https://api.spotinst.io/ocean/cd/clusterInstaller?clusterId=CLUSTER_ID&skipArgoRollouts=true' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer xxxxxxxx' \
+--data-raw ''
 ```
 
 ## Install using Helm
