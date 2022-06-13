@@ -87,5 +87,5 @@ Complete the steps below. When you click Create, Ocean CD saves and applies your
 <img src="/ocean-cd/_media/getting-started-n09.png" />
 
 ## What’s Next?
-- Learn how to [install the Operator using the API or Helm](ocean-cd/getting-started/install-operator-using-api-or-helm).
+- Learn how to [install the Operator using the API or Helm](ocean-cd/getting-started/install-operator-using-API-or-helm).
 - Learn about viewing the [list of rollouts](ocean-cd/tutorials/view-rollouts/) and the information provided in the [detailed rollout](ocean-cd/tutorials/view-rollouts/detailed-rollout) page.
