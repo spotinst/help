@@ -3466,6 +3466,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/tools-and-provisioning/cloudfoundry-bosh"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/tools-and-provisioning/ocean1</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/tools-and-provisioning/ocean1"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/tools-and-provisioning/ocean1"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/tools-and-provisioning/python-sdk</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
