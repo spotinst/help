@@ -20,20 +20,21 @@ This is **some bold text** and this is _some Italic text_.
 
 Paragraph Paragraph Paragraph
 
-1. Item one
-1. Sub item one
-1. Sub item two
-1. Item two
-1. Item three
+1. First item
+2. Second item
+3. Third item
+    1. Indented item
+    2. Indented item
+4. Fourth item
 
-| Default aligned | Left aligned | Center aligned  | Right aligned  |
-|-----------------|:-------------|:---------------:|---------------:|
-| First body part | Second cell  | Third cell      | fourth cell    |
-| Second line     | foo          | **strong**      | baz            |
-| Third line      | quux         | baz             | bar            |
-|-----------------+--------------+-----------------+----------------|
-| Second body     |              |                 |                |
-| 2nd line        |              |                 |                |
-|-----------------+--------------+-----------------+----------------|
-| Third body      |              |                 | Foo            |
+| Default aligned | Left aligned | Center aligned  |
+|-----------------|:-------------|:---------------:|
+| First body part | Second cell  | Third cell      |
+| Second line     | foo          | **strong**      |
+| Third line      | quux         | baz             |
+|-----------------+--------------+-----------------+
+| Second body     |              |                 |               
+| 2nd line        |              |                 |   
+|-----------------+--------------+-----------------+
+| Third body      |              |                 |
 {: .custom-class #custom-id}
