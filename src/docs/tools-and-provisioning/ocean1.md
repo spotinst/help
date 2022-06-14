@@ -36,5 +36,5 @@ Paragraph Paragraph Paragraph
 | Second body     |              |                 |               
 | 2nd line        |              |                 |   
 |-----------------+--------------+-----------------+
-| Third body      |              |                 | 
+| Third body      |              |                 |
 {: .custom-class #custom-id}
