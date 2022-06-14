@@ -74,7 +74,9 @@ Complete the steps below. When you click Create, Ocean CD saves and applies your
 
 1. When the SpotDeployment CRD appears, you may copy, edit, and apply it to your Kubernetes cluster. If you do not need to make any changes to the CRD, just click Next and go on to the next step.
 
-   If you decide not to insert the namespace directly into the SpotDeployment, you will need to add it in your Apply command.
+> **Tip**: Any first apply of your SpotDeployments will not trigger a rollout. Only the pods will be created. To trigger a rollout with the entities of your choice, you need to apply additional changes to the SpotDeployment (see step 4).
+
+If you decide not to insert the namespace directly into the SpotDeployment, you will need to add it in your Apply command.
 
 <img src="/ocean-cd/_media/getting-started-n07.png" />
 
@@ -85,6 +87,8 @@ Complete the steps below. When you click Create, Ocean CD saves and applies your
 3. Edit the template for the [RolloutSpec](ocean-cd/?id=rolloutspec). Choosing a traffic manager is optional. If you would like to [specify a traffic manager](ocean-cd/getting-started/traffic-manager-reference), choose one from the dropdown list. When you choose a traffic manager, Ocean CD will populate the template automatically with the necessary traffic manager attributes. If you do not select a traffic manager, Ocean CD will use the Kubernetes default traffic methods based on replicas. When you are finished editing, click Create.
 
 <img src="/ocean-cd/_media/getting-started-n09.png" />
+
+5. Add changes to your SpotDeployment container spec and apply. This time a new rollout will be created and triggered.
 
 ## What’s Next?
 - Learn how to [install the Operator using the API or Helm](ocean-cd/getting-started/install-operator-using-API-or-helm).
