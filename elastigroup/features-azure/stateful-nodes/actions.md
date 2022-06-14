@@ -11,9 +11,11 @@ The available actions are described below.
 View the JSON configuration for the stateful node. You can also copy the configuration to the clipboard or export the configuration to a JSON file.
 
 ### Recycle
+
 This action is equivalent to rebooting or restarting a machine. The action is relevant to apply changes which were made in the node configuration and then require launching a new node in order to apply them (for example, updating the availability zone list and updating the VM size list). When this action is used, the node is paused, the current VM is terminated and a new VM is launched instead, while saving the original VM resources according to the persistence preferences.
 
 ### Pause
+
 When this action is used, the node is paused, the current VM is terminated, while saving its original resources according to the persistence preferences.
 
 ### Resume

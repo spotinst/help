@@ -22,6 +22,8 @@ To install OLM, use the following command:
 curl -sL https://github.com/operator-framework/operator-lifecycle-manager/releases/download/v0.21.2/install.sh | bash -s v0.21.2
 ```
 
+Be sure to use the [latest OLM version](https://github.com/operator-framework/operator-lifecycle-manager/releases) in order to include the latest updates and fixes.
+
 ## Install using API
 
 In your Kubernetes cluster, run the following API command, which will result in the download of a YAML file. Be sure to add the flags required for Argo installation.
