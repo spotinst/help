@@ -21,8 +21,8 @@ This is **some bold text** and this is _some Italic text_.
 Paragraph Paragraph Paragraph
 
 1. Item one
-1. Sub item one
-1. Sub item two
+  2.Sub item one
+  2.Sub item two
 1. Item two
 1. Item three
 
