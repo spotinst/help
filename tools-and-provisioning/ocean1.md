@@ -10,6 +10,10 @@ Read about [Kubernetes](https://docs.spot.io/ocean/overview-kubernetes)
 
 <img src="/tools-and-provisioning/_media/Jenkins_1.png" />
 
+----
+
 <img src="/_media/images/slack.png" />
 
 Read about [Cloud Formation](tools-and-provisioning/cloudformation/)
+
+This is **some bold text** and this is _some Italic text_.
