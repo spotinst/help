@@ -48,7 +48,7 @@ The following list covers required discovery steps to perform before starting a 
     ### Identify External Azure vNet for AD DC
     An external Azure vNet must be configured with network access to the AD DC. This is typically accomplished via a site-to-site VPN or by running the AD DC on a VM attached to that vNet. A Spot PC network will be created and peered with this existing vNet as part of the Onboarding Workflow.
 
-    A basic VPN from the Spot PC network directly to the on-premises AD DC network is available as well. This solution, using a the basic VPN Gateway, is limited to 100Mbps and isn't a scalable solution for larger or intensive workloads (e.g. loading data from on-premises storage). It should only be used in production for authentication back to the AD DC and only for smaller environment. 
+    A basic VPN from the Spot PC network directly to the on-premises AD DC network is available as well. This solution, using a the basic VPN Gateway, is limited to 100Mbps and isn't a scalable solution for larger or intensive workloads (e.g. loading data from on-premises storage). It should only be used in production for authentication back to the AD DC and only for smaller environment.
 
     #### Identify External vNet Subscription
     So that permission for vNet Peering is available, identify the Azure Subscription that contains the external Azure vNet (the vNet with AD DC network connectivity).
@@ -101,6 +101,8 @@ The following list covers required discovery steps to perform before starting a 
   - Total business servers & CPU/RAM allocation
     - Determine number of Business servers
     - Define CPU/RAM allocation (2vCPU/4GiB increments)
+### Azure Marketplace Purchasing
+- Spot PC can be purchased from [Azure Marketplace](https://azuremarketplace.microsoft.com/en-gb/marketplace/apps/netapp.spot-pc-for-msp?tab=Overview). When purchasing Spot PC from the Azure Marketplace, an existing Pay-as-You-Go or Enterprise Azure subscription is required to complete the checkout process. This is for the Spot PC SKUs, not the Spot PC resources. Spot PC resources (such as VMs) will be deployed into a dedicated Azure Subscription added (and paid for) by NetApp as part of the Spot PC subscription fees. 
 
 ### [Identify primary application list](spot-pc/getting-started/prerequisites/?id=identify-primary-application-list)
   - List of common apps
