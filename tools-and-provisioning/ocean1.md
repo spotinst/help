@@ -23,8 +23,8 @@ Paragraph Paragraph Paragraph
 1. First item
 2. Second item
 3. Third item
-    1. Indented item
-    2. Indented item
+   1. Indented item
+   2. Indented item
 4. Fourth item
 
 | Default aligned | Left aligned | Center aligned  |
@@ -32,9 +32,8 @@ Paragraph Paragraph Paragraph
 | First body part | Second cell  | Third cell      |
 | Second line     | foo          | **strong**      |
 | Third line      | quux         | baz             |
-|-----------------+--------------+-----------------+
+|-----------------|--------------|-----------------|
 | Second body     |              |                 |               
 | 2nd line        |              |                 |   
-|-----------------+--------------+-----------------+
+|-----------------|--------------|-----------------|
 | Third body      |              |                 |
-{: .custom-class #custom-id}
