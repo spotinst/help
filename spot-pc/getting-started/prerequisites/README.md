@@ -101,8 +101,9 @@ The following list covers required discovery steps to perform before starting a 
   - Total business servers & CPU/RAM allocation
     - Determine number of Business servers
     - Define CPU/RAM allocation (2vCPU/4GiB increments)
+
 ### Azure Marketplace Purchasing
-- Spot PC can be purchased from [Azure Marketplace](https://azuremarketplace.microsoft.com/en-gb/marketplace/apps/netapp.spot-pc-for-msp?tab=Overview). When purchasing Spot PC from the Azure Marketplace, an existing Pay-as-You-Go or Enterprise Azure subscription is required to complete the checkout process. This is for the Spot PC SKUs, not the Spot PC resources. Spot PC resources (such as VMs) will be deployed into a dedicated Azure Subscription added (and paid for) by NetApp as part of the Spot PC subscription fees. 
+- Spot PC can be purchased from [Azure Marketplace](https://azuremarketplace.microsoft.com/en-gb/marketplace/apps/netapp.spot-pc-for-msp?tab=Overview). When purchasing Spot PC from the Azure Marketplace, an existing Pay-as-You-Go or Enterprise Azure subscription is required to complete the checkout process. This is for the Spot PC SKUs, not the Spot PC resources. Spot PC resources (such as VMs) will be deployed into a dedicated Azure Subscription added (and paid for) by NetApp as part of the Spot PC subscription fees.
 
 ### [Identify primary application list](spot-pc/getting-started/prerequisites/?id=identify-primary-application-list)
   - List of common apps
