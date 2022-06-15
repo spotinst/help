@@ -62,10 +62,16 @@ You can change this timeout duration by using the following configuration:
 
 You can also disable this timeout entirely - for example if you're running streaming applications, as follows:
 ```json
-"timeout": {
-    "policy": "DISABLE"
-}
+"timeout": "DISABLED"
 ```
+
+Additional notes:
+- Timed out applications wll enter the terminal "Timed Out" state.
+- The timeout clock starts ticking once you make the API call to submit a Spark application, or once you 
+open up a notebook. This can be a few seconds or a few minutes before your Spark code starts running.
+- Ocean Spark checks applications every 5 minutes to enforce their timeout. As a result, setting a very short
+timeout (or a very precise timeout) may not produce the desired effect. Applications should be
+timed out a few minutes after they reach their configuration timeout duration.
 
 ## Enable Adaptive Query Execution (AQE)
 
