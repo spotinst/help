@@ -91,4 +91,4 @@ To avoid unnecessary down time, the scale down of existing nodes should be gradu
 
 ## What's Next?
 
-- Learn how to [connect an existing ECS Cluster] (ocean/getting-started/gke)
+- Learn how to [connect an existing ECS Cluster](ocean/getting-started/gke)
