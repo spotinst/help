@@ -42,3 +42,7 @@ Upon successful creation, a confirmation pop-up will appear.
 Alternatively, you can run the workloads by using a YAML script. Click the YAML tab to edit the script.
 
 <img src="/ocean/_media/tutorials-run-workload-03.png" />
+
+## What's Next?
+
+Learn how to [Create Custom Labels](ocean/tutorials/create-custom-labels).
