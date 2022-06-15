@@ -62,9 +62,7 @@ You can change this timeout duration by using the following configuration:
 
 You can also disable this timeout entirely - for example if you're running streaming applications, as follows:
 ```json
-"timeout": {
-    "policy": "DISABLED"
-}
+"timeout": "DISABLED"
 ```
 
 Additional notes:
