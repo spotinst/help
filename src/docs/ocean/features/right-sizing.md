@@ -73,3 +73,7 @@ The Recommendations table shows a list of resources with recommendations for opt
 For a given resource, you can see the specific recommendations per container by clicking on its Impact (e.g., High).
 
 <img src="/ocean/_media/features-rightsizing-04.png" />
+
+## What’s Next?
+
+Learn more about Ocean’s [shut down hours](ocean/features/running-hours).
