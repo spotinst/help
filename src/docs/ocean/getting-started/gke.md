@@ -88,3 +88,7 @@ gcloud container clusters resize <cluster_name> --num-nodes=0 --region=<region/z
 ```
 
 To avoid unnecessary down time, the scale down of existing nodes should be gradual. For example, run the above command several times, reducing the value of `num-nodes` gradually. Use `num-nodes=0` only on the last time you run the command.
+
+## What's Next?
+
+- Learn how to [connect an existing ECS Cluster] (ocean/getting-started/gke)
