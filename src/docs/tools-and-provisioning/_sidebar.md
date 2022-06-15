@@ -46,4 +46,3 @@
     - [Chef](tools-and-provisioning/ci-cd/chef)
     - [GitLab](tools-and-provisioning/ci-cd/gitlab)
     - [Jenkins](tools-and-provisioning/ci-cd/jenkins)
-    - [MyFirstPage](tools-and-provisioning/ocean1)
