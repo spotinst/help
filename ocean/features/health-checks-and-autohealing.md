@@ -38,3 +38,7 @@ Every Container Instance within the Amazon ECS cluster has the following two par
 To ensure cluster functioning and availability, Ocean monitors those parameters and will consider a container instance as healthy when its status value is either ACTIVE or DRAINING and the agentConnected value returns True .
 
 When either of the above parameters return different values, or when the container instance does not respond at all, Ocean will consider the container instance unhealthy and a replacement will be triggered.
+
+## What’s Next?
+
+Learn about Ocean's [Labels and Taints](ocean/features/labels-and-taints).
