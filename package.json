@@ -29,7 +29,7 @@
     "@typescript-eslint/parser": "^4.33.0",
     "autoprefixer": "^10.4.5",
     "clean-webpack-plugin": "4.0.0",
-    "concurrently": "^7.1.0",
+    "concurrently": "^7.2.2",
     "copy-webpack-plugin": "^10.2.4",
     "css-loader": "^6.7.1",
     "eslint": "^7.32.0",
