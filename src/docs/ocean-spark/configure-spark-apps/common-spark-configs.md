@@ -71,7 +71,7 @@ Additional notes:
 open up a notebook. This can be a few seconds or a few minutes before your Spark code starts running.
 - Ocean Spark checks applications every 5 minutes to enforce their timeout. As a result, setting a very short
 timeout (or a very precise timeout) may not produce the desired effect. Applications should be
-timed out a few minutes after they reache their configuration timeout duration.
+timed out a few minutes after they reach their configuration timeout duration.
 
 ## Enable Adaptive Query Execution (AQE)
 
