@@ -53,3 +53,7 @@ These are clusters that were created by Kops natively.
 <img src="/ocean/_media/tutorials-create-custom-label-02.png" />
 
 3. Run `kops update cluster`.
+
+## What's Next?
+
+Learn how to [Create Custom Labels](ocean/tutorials/manage-virtual-node-groups).
