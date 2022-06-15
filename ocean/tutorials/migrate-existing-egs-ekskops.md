@@ -79,3 +79,7 @@ The last step is to downscale the existing worker nodes and allow Ocean to launc
 Sit back and relax. Ocean's got you covered!
 
 In case of any issues, please contact our support engineers via chat or email.
+
+## What's Next?
+
+Learn how to [Migrate Existing Elastigroups to Ocean](ocean/tutorials/migrate-existing-egs-ecs.md).
