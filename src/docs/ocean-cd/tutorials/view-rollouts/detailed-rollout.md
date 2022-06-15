@@ -53,9 +53,9 @@ To remove the Degraded status, you can do either of the following:
 - Change the desired state back to the previous, stable version. This typically involves running `{{kubectl apply}}` against the previous Rollout spec.
 - Re-run the `{{set image}}` command.
 
-### Paused Status
+### Paused Status (Phase Level)
 
-Throughout a phase, Ocean CD will indicate when and for how long the phase will be in a paused status.
+Throughout a rollout, Ocean CD will indicate when and for how long the phase will be in a paused status. This pause will be the direct consequence of the pause status set in your strategy prior to the rollout.
 
 #### Pause without a pre-defined window
 
@@ -80,9 +80,12 @@ At any time, you can click the three dots at the top of the Rollout Phases panel
 The following actions are available:
 - Promote: Promote one phase to the next.
 - Promote All: Promote a phase to the end of the rollout, triggering a success.
-- Pause: Pause a full rollout. Once the rollout is resumed, it will continue from where it left off.
+- Pause Rollout: Pause a full rollout. Once the rollout is resumed, it will restart the phase where it was left off.
+
+> **Tip**: This action is not the same as the one you have set in your strategy and will not behave in the same manner. Once you have chosen it, the whole rollout (and not only the phase) will be paused, and it will remain as such as long as it is not promoted or rolled back.
+
 - Roll Back: The rollout will be terminated and the previous version (i.e., Stable) will be restored.
-- Retry: Will be available to you only once a rollout was completed. With this action you will be able to retry your full rollout.
+- Retry: Will be available to you only once a rollout is completed. With this action you will be able to retry your full rollout.
 
 Whenever you click an action, you will be prompted to confirm before the action is actually taken.
 
