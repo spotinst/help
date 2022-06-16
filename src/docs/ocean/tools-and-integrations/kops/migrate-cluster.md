@@ -105,3 +105,7 @@ spec:
 5. Clean up (optional):
    1. Delete imported Auto Scaling Groups.
    2. Delete all Launch Configurations.
+
+   ## What's Next?
+
+   Learn about [Metadata Labels](elastigroup/tutorials/amazon-ecs/metadata-labels).
