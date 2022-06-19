@@ -1898,6 +1898,104 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/tutorials/"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/managed-instance-a/features/data-volume-persistence</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/managed-instance-a/features/data-volume-persistence"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/managed-instance-a/features/data-volume-persistence"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/managed-instance-a/features/managed-instance-actions</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/managed-instance-a/features/managed-instance-actions"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/managed-instance-a/features/managed-instance-actions"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/managed-instance-a/features/network-persistence</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/managed-instance-a/features/network-persistence"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/managed-instance-a/features/network-persistence"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/managed-instance-a/features/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/managed-instance-a/features/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/managed-instance-a/features/"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/managed-instance-a/features/replacement-process</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/managed-instance-a/features/replacement-process"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/managed-instance-a/features/replacement-process"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/managed-instance-a/features/root-volume-persistence</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/managed-instance-a/features/root-volume-persistence"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/managed-instance-a/features/root-volume-persistence"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/managed-instance-a/features/stateful-managed-instances</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/managed-instance-a/features/stateful-managed-instances"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/managed-instance-a/features/stateful-managed-instances"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/managed-instance-a/features/third-party-integrations</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/managed-instance-a/features/third-party-integrations"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/managed-instance-a/features/third-party-integrations"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/managed-instance-a/getting-started/create-a-new-managed-instance</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/managed-instance-a/getting-started/create-a-new-managed-instance"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/managed-instance-a/getting-started/create-a-new-managed-instance"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/managed-instance-a/getting-started/join-an-existing-managed-instance</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/managed-instance-a/getting-started/join-an-existing-managed-instance"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/managed-instance-a/getting-started/join-an-existing-managed-instance"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/managed-instance-a/getting-started/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/managed-instance-a/getting-started/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/managed-instance-a/getting-started/"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/managed-instance-a/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/managed-instance-a/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/managed-instance-a/"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/managed-instance-a/tutorials/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/managed-instance-a/tutorials/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/managed-instance-a/tutorials/"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/managed-instance-a/tutorials/upgrade-an-existing-elastigroup-to-managed-instance</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/managed-instance-a/tutorials/upgrade-an-existing-elastigroup-to-managed-instance"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/managed-instance-a/tutorials/upgrade-an-existing-elastigroup-to-managed-instance"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/managed-instance/features/data-volume-persistence</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
