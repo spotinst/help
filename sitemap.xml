@@ -2703,6 +2703,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean/tools-and-integrations/prometheus-for-kubernetes-data-plane-monitoring/"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/ocean/tools-and-integrations/prometheus-for-kubernetes-data-plane-monitoring/scrape-ocean-metrics-using-prometheus</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean/tools-and-integrations/prometheus-for-kubernetes-data-plane-monitoring/scrape-ocean-metrics-using-prometheus"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean/tools-and-integrations/prometheus-for-kubernetes-data-plane-monitoring/scrape-ocean-metrics-using-prometheus"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/ocean/tools-and-integrations/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
