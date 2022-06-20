@@ -87,4 +87,5 @@ ocean_controller_heartbeat_info{ “ocean_name”: “prod”, “ocean_id”: o
 ```
 
 ## What’s Next?
+
 Learn how to use [Prometheus to scrape Ocean metrics](ocean/tools-and-integrations/prometheus-for-kubernetes-data-plane-monitoring/scrape-ocean-metrics-using-prometheus).
