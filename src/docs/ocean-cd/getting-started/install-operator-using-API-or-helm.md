@@ -78,7 +78,11 @@ helm uninstall my-release
 kubectl get csv -A | grep spot-oceancd-operator | awk '{system("kubectl delete csv " $2 " -n " $1)}'
 
 kubectl delete apiservices v1.packages.operators.coreos.com
+```
 
+If you need to remove your OLM installation, you can run the following commands:
+
+```
 kubectl delete -f https://github.com/operator-framework/operator-lifecycle-manager/releases/download/v0.20.0/crds.yaml
 
 kubectl delete -f https://github.com/operator-framework/operator-lifecycle-manager/releases/download/v0.20.0/olm.yaml
