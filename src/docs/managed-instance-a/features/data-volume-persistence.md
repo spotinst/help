@@ -2,28 +2,28 @@
 
 Data volume persistence maintains the data volumes during spot instance replacement. The data on the volumes that were attached at the time of the previous instance termination will be present on the new instance, using the same BlockDeviceMapping configuration upon instance replacement.
 
-The [flow diagram](elastigroup/features/stateful-instance/stateful-elastigroup-flow) describes on a high level how Spot manages the persistence of managed instances.
+The [flow diagram](elastigroup/features/stateful-instance/stateful-elastigroup-flow) describes on a high level how Spot manages the persistence of stateful nodes.
 
 ## Configure Data Volume Persistence
 
-1. To configure data volume persistence, go to the Managed Instance configuration and select Persistent Resources.
+1. To configure data volume persistence, go to the Stateful Nodes configuration and select Persistent Resources.
 2. Mark the Persist Data Volumes option and select a persistence method.
 
 <img src="/managed-instance/_media/data-volume-persistence-01.png" />
 
-Managed Instance provides the methods described below for data volume persistence.
+Stateful Nodes provides the methods described below for data volume persistence.
 
 ### Snapshot Backups
 
-Periodic snapshots of data volumes are taken while the instance is running. Upon spot instance replacement, a new EBS volume is created from the latest snapshot and is attached to the new instance upon launch by updating the block device mapping in the configuration.
+Periodic snapshots of data volumes are taken while the node is running. Upon spot node replacement, a new EBS volume is created from the latest snapshot and is attached to the new node upon launch by updating the block device mapping in the configuration.
 
 ### Reattach
 
-This method is recommended for large data volumes. The same EBS volume is detached from the original instance and reattached to the newly launched instance. If the new instance is launched in a different availability zone, a snapshot is used to create a new volume and attach it to the new instance (as volumes cannot be migrated between availability zones). Initially, volumes can be created based on the AMI block device mapping upon the managed instance's first Resume, or attached via the AWS console. The same volumes are maintained as long as the instance is launched within the same availability zone.
+This method is recommended for large data volumes. The same EBS volume is detached from the original node and reattached to the newly launched instance. If the new node is launched in a different availability zone, a snapshot is used to create a new volume and attach it to the new node (as volumes cannot be migrated between availability zones). Initially, volumes can be created based on the AMI block device mapping upon the managed node's first Resume, or attached via the AWS console. The same volumes are maintained as long as the node is launched within the same availability zone.
 
 ## Suspend User Data Execution Until Volumes are Available
 
-When using the Reattach option for data volume persistence, the instances are launched, followed by the attachment of the volumes. To prevent the User Data from executing before the volumes are attached add the following script:
+When using the Reattach option for data volume persistence, the nodes are launched, followed by the attachment of the volumes. To prevent the User Data from executing before the volumes are attached add the following script:
 
 ```bash
 #!/bin/bash
@@ -52,13 +52,13 @@ done
 echo "volume is ready"
 ```
 
-## Managed Instance Actions
+## Stateful Nodes Actions
 
-Managed Instance performs various backend actions for different states of the instance to ensure data volume persistence.
+Stateful Nodes perform various backend actions for different states of the nodes to ensure data volume persistence.
 
 ### Running
 
-- Reattach + One AZ: The data volumes are preserved, detached, and attached on every instance replacement.
+- Reattach + One AZ: The data volumes are preserved, detached, and attached on every node replacement.
 - Snapshot backups or Reattach + Multi AZ: A snapshot is taken for each data volume every five minutes.
 
 ### Paused
@@ -68,9 +68,9 @@ Managed Instance performs various backend actions for different states of the in
 
 ### Resume
 
-- Snapshot backups: New volumes are created from the latest snapshots upon instance launch.
-- Reattach + instance launch in same AZ as previous instance: The existing volumes are reattached to the new instance post launch.
-- Reattach + instance launch in different AZ from previous instance: New volumes are created in the same AZ as the new instance and are attached post launch.
+- Snapshot backups: New volumes are created from the latest snapshots upon node launch.
+- Reattach + node launch in same AZ as previous node: The existing volumes are reattached to the new node post launch.
+- Reattach + node launch in different AZ from previous node: New volumes are created in the same AZ as the new instance and are attached post launch.
 
 ### Deallocated
 
