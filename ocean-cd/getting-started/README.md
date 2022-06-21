@@ -27,7 +27,7 @@ You can install the operator using either a [YAML](ocean-cd/getting-started/?id=
 
 When the Add Cluster popup appears, complete the procedure below.
 
-<img src="/ocean-cd/_media/getting-started-n02a.png" />
+<img src="/ocean-cd/_media/getting-started-n02a.png" width="440" />
 
 1. Complete the information below.
    - Cluster Identifier: This is a logical identifier for your cluster. You can choose any ID, and it is not coupled to the Ocean cluster ID (o-xxxxxx). Ocean CD can run on clusters that are not managed by Ocean. The cluster ID must be unique, have up to 30 alphanumeric characters, and not contain spaces.
@@ -48,7 +48,7 @@ You are now ready to migrate your workload.
 
 When the Add Cluster popup appears, complete the procedure below.
 
-<img src="/ocean-cd/_media/getting-started-n041.png" />
+<img src="/ocean-cd/_media/getting-started-n041.png" width="440" />
 
 1. Click HELM and complete the information below:
    - Cluster Identifier: This is a logical identifier for your cluster. You can choose any ID, and it is not coupled to the Ocean cluster ID (o-xxxxxx). Ocean CD can run on clusters that are not managed by Ocean. The cluster ID must be unique, have up to 30 alphanumeric characters, and not contain spaces.
@@ -59,7 +59,7 @@ When the Add Cluster popup appears, complete the procedure below.
 
 2. Run all of the commands provided into your Kubernetes cluster.
 
-<img src="/ocean-cd/_media/getting-started-n042.png" />
+<img src="/ocean-cd/_media/getting-started-n042.png" width="440" />
 
 Once you have finished running all of the commands, you will be able to see your cluster in the Cluster Settings table.
 
