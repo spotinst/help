@@ -8,7 +8,45 @@ By default, Spark uses temporary storage to spill data to disk during shuffles a
 
 For certain Spark applications with larger shuffle workfloads or a need to persist data beyond the life of the application, it may be desirable to mount an external volume. Depending on your cloud provider, there are several volume options you can choose from to make your Spark workspaces more dynamic and scalable.
 
-By default, if you select a node type that includes scalable block storage, such as d instances on AWS (m5d, r5d, c5d, etc), Ocean Spark will automatically mount this volume and configure Spark to operate within it.
+By default, if you select a node type that includes local SSDs on AWS, such as `d` instances (e.g., m5d, r5d, c5d), Ocean Spark will help you leverage the performance of local SSDs. Read the next section to learn more.
+
+## Mounting local SSDs on AWS
+
+For certain Spark applications with larger shuffle workfloads, the speed of the disk is the main bottleneck to achieve good Spark performance. This can be remediated by using faster disk types like NVMe-based SSDs.
+
+Instances like `d` instances (e.g., m5d, r5d, c5d) or i3 instances all come with local SSDs. However, they must be mounted into the file system of the instance.
+
+Ocean Spark provides a [user data script](https://raw.githubusercontent.com/spotinst/ocean-spark-examples/master/local_ssd_user_data_script/startup-script.sh) that you can use to mount SSDs automatically. This script must be added in the User Data section of the Virtual Node Group (VNG) configuration tab in Ocean.
+
+Be sure to fill in the variable EKS_CLUSTER_NAME with the name of your EKS cluster.
+
+We recommend adding this [user data script](https://raw.githubusercontent.com/spotinst/ocean-spark-examples/master/local_ssd_user_data_script/startup-script.sh) by default to all VNGs to be used for Spark applications.
+
+Most likely, the Spark-dedicated VNGs in your EKS cluster already use this script (Ocean Spark adds it by default). You can verify this by browsing to the Virtual Node Group tab in the Ocean section of the Spot console.
+
+Once the user data script is installed in the VNGs, Ocean Spark will automatically and transparently configure Spark to use the local SSDs for shuffle data. Two examples are provided below.
+
+In this sample piece of configuration, m5d instances are used as executors:
+
+```
+      "executor": {
+           "instanceSelector": "m5d"
+        }
+```
+
+Ocean Spark will use the local SSDs for shuffle data. This will greatly enhance the performance of the Spark application if it uses a lot of shuffle.
+
+In this sample piece of configuration, m5 instances are used as executors:
+
+```
+      "executor": {
+           "instanceSelector": "m5"
+        }
+```
+
+Ocean Spark will understand that there are no local SSDs and will use a non-SSD location on the host file system for shuffle data. If the CPU profile of the Spark application in the Spot console indicates a high amount of shuffle or IO, consider switching to an instance type with SSDs, like m5d.
+
+> **Tip**: The use of local SSDs for shuffle files is only supported in Spark 3 and above.
 
 ## Mount secrets as files in volumes
 
