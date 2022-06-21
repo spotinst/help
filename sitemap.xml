@@ -2696,27 +2696,6 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean/tools-and-integrations/openshift/"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/ocean/tools-and-integrations/prometheus-for-kubernetes-data-plane-monitoring/1</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean/tools-and-integrations/prometheus-for-kubernetes-data-plane-monitoring/1"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean/tools-and-integrations/prometheus-for-kubernetes-data-plane-monitoring/1"/>
-    </url>
-    <url>
-        <loc>https://docs.spot.io/?/ocean/tools-and-integrations/prometheus-for-kubernetes-data-plane-monitoring/metrics</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean/tools-and-integrations/prometheus-for-kubernetes-data-plane-monitoring/metrics"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean/tools-and-integrations/prometheus-for-kubernetes-data-plane-monitoring/metrics"/>
-    </url>
-    <url>
-        <loc>https://docs.spot.io/?/ocean/tools-and-integrations/prometheus-for-kubernetes-data-plane-monitoring/scrape-metrics-using-prometheus</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean/tools-and-integrations/prometheus-for-kubernetes-data-plane-monitoring/scrape-metrics-using-prometheus"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean/tools-and-integrations/prometheus-for-kubernetes-data-plane-monitoring/scrape-metrics-using-prometheus"/>
-    </url>
-    <url>
         <loc>https://docs.spot.io/?/ocean/tools-and-integrations/prometheus/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
