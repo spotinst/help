@@ -21,9 +21,13 @@ Under Ocean CD in the Spot console, click Settings, and then click Add Cluster.
 
 ### Add Cluster
 
+You can install the operator using either a [YAML](ocean-cd/getting-started/?id=YAML) file or using [HELM](ocean-cd/getting-started/?id=HELM).
+
+#### YAML
+
 When the Add Cluster popup appears, complete the procedure below.
 
-<img src="/ocean-cd/_media/getting-started-n02.png" width="354" />
+<img src="/ocean-cd/_media/getting-started-n02a.png" />
 
 1. Complete the information below.
    - Cluster Identifier: This is a logical identifier for your cluster. You can choose any ID, and it is not coupled to the Ocean cluster ID (o-xxxxxx). Ocean CD can run on clusters that are not managed by Ocean. The cluster ID must be unique, have up to 30 alphanumeric characters, and not contain spaces.
@@ -37,6 +41,27 @@ When the Add Cluster popup appears, complete the procedure below.
 <img src="/ocean-cd/_media/getting-started-n04.png" />
 
 > **Tip**: Once you have downloaded the YAML, the new row will remain with partial information for 10 minutes. If this time has elapsed and the YAML was not applied, the row and the banner will be removed. However, the YAML can still be applied at another time, and the Ocean CD will display the new data accordingly.
+
+You are now ready to migrate your workload.
+
+#### HELM
+
+When the Add Cluster popup appears, complete the procedure below.
+
+<img src="/ocean-cd/_media/getting-started-n041.png" />
+
+1. Click HELM and complete the information below:
+   - Cluster Identifier: This is a logical identifier for your cluster. You can choose any ID, and it is not coupled to the Ocean cluster ID (o-xxxxxx). Ocean CD can run on clusters that are not managed by Ocean. The cluster ID must be unique, have up to 30 alphanumeric characters, and not contain spaces.
+   - Token: The API Spot Token pre-generated via our console
+   - Argo Rollout Installation (link to Argo Installation in Overview page): Ocean CD dynamically generates and manages Argo rollout manifests. The installation needs to know if you already have Argo installed on your computer. In the dropdown, select the option that applies to you.
+
+> Tip: The See Commands button becomes active only after all three parameters are filled in.
+
+2. Run all of the commands provided into your Kubernetes cluster.
+
+<img src="/ocean-cd/_media/getting-started-n042.png" />
+
+Once you have finished running all of the commands, you will be able to see your cluster in the Cluster Settings table.
 
 You are now ready to migrate your workload.
 
