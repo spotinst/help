@@ -8,14 +8,14 @@ The Ocean metrics exporter is a lightweight application that runsrunning in the 
 
 Although the exporter application is independent of the Ocean controller, a functioning controller is required for data to stream into Ocean Saas and update the metrics.
 
-##Prerequisites
+## Prerequisites
 
 *Ocean running in a cluster with a reporting controller
 *Prometheus installed in the cluster
 
-##Install the Exporter
+## Install the Exporter
 
-#####Via Helm
+##### Via Helm
 [This helm chart](https://github.com/spotinst/charts/tree/main/charts/ocean-metric-exporter) entirely covers this step.
 1. Add the Spot Helm chart repository:
 `helm repo add spot https://charts.spot.io`
@@ -24,16 +24,16 @@ Although the exporter application is independent of the Ocean controller, a func
 3. Install ocean-metric-exporter:
 `helm install my-release spot/ocean-metric-exporter`
 
-#####Via Infrastructure as Code
+##### Via Infrastructure as Code
 Alternatively, use [https://registry.terraform.io/modules/spotinst/ocean-metric-exporter/spotinst/latest](https://registry.terraform.io/modules/spotinst/ocean-metric-exporter/spotinst/latest) Terraform module to incorporate the exporter in your IaC setup.
 
-#####Via Kubernetes CLI
+##### Via Kubernetes CLI
 run:
 kubectl apply -f https://spotinst-public.s3.amazonaws.com/integrations/kubernetes/spot-ocean-metric-exporter-beta/spot_ocean_metric_exporter.yaml
 
 This yaml file contains the k8s deployment and the k8s service with the latest version.
 
-##Configure Prometheus
+## Configure Prometheus
 
 This step configures Prometheus to generate scrape requests to the Kubernetes service that exposes the Ocean exporter.
 
@@ -54,6 +54,7 @@ Ocean metrics will be scraped every 60 seconds and saved into Prometheus.
 Grafana Dashboard
 One popular use of metrics saved in Prometheus is dashboarding. As Grafana is a popular dashboarding tool, Spot has created a [Grafana dashboard](https://grafana.com/grafana/dashboards/16475) that you can download. The dashboard enables you to visualize Ocean metrics and may be incorporated into your existing dashboard base.
 
-##What’s next?
+## What’s next?
+
 In Ocean, click Roadmap to share feedback and request future metrics.
 Learn more about Ocean's [scaling](ocean/features/scaling-kubernetes) processes.
