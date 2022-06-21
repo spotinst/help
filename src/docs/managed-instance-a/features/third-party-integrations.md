@@ -1,18 +1,18 @@
 # Third-Party Integrations
 
-Spot Managed Instances can be configured to receive traffic from Amazon Route 53 or one of the following Load Balancers:
+Spot Stateful Nodes can be configured to receive traffic from Amazon Route 53 or one of the following Load Balancers:
 
 - ELB – Classic Load Balancer
 - ALB – Application Load Balancer Target Group
 - MLB – Spot Multai Load Balancer Target Set
 
-Once one or more load balancers are specified, Managed Instances will register managed EC2 instances with the required load balancers upon launch. In addition, Managed Instance will also de-register instances from the load balancer upon termination.
+Once one or more load balancers are specified, Stateful Nodes will register managed EC2 nodes with the required load balancers upon launch. In addition, Stateful Nodes will also de-register nodes from the load balancer upon termination.
 
 ## Integrate Load Balancer or Route 53
 
-In order to configure the Managed Instance to receive traffic from either Route53 or one or more Load Balancers, follow these steps:
+In order to configure the Stateful Node to receive traffic from either Route53 or one or more Load Balancers, follow these steps:
 
-1. Enter the Managed Instance's Configuration Wizard.
+1. Enter the Stateful Nodes's Configuration Wizard.
 2. Head over to the Persisted Resources tab.
 3. Under Network, check the `Receive Traffic From` checkbox.
 4. Choose your source:
