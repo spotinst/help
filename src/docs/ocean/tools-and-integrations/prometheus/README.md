@@ -71,7 +71,7 @@ allocatable_headroom_gpu{vng_id="ols-xxxxxxxx", lifecycle="OD", az="us-west-2a",
 
 ## Tracking Healthiness
 
-The metrics described below provide a good indication of Ocean health.           
+The metric described below provides a good indication of Ocean health.           
 
 ### ocean_controller_heartbeat_info
 
