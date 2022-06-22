@@ -74,7 +74,7 @@
       - [Create Ocean Cluster from v4.x](ocean/tools-and-integrations/openshift/create-cluster-v4x)
       - [Create Ocean Cluster from v4.11](ocean/tools-and-integrations/openshift/create-cluster-v311)
     - [Prometheus](ocean/tools-and-integrations/prometheus/README)
-        - [Scrape Ocean Metrics](ocean/tools-and-integrations/prometheus/scrape)
+      - [Scrape Ocean Metrics](ocean/tools-and-integrations/prometheus/scrape)
   - [Troubleshooting](ocean/troubleshooting/)
     - [Troubleshoot Controller](ocean/troubleshooting/troubleshoot-controller)
   - [Tips & Best Practices](ocean/tips-and-best-practices/)
