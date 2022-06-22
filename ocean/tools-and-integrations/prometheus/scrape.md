@@ -59,12 +59,12 @@ To the set of Prometheus jobs configured in your environment, add the following:
 
 Ocean metrics will be scraped every 60 seconds and saved into Prometheus.
 
-<img src="/ocean/_media/prometheus-scrape-01.png />
+<img src="/ocean/_media/prometheus-scrape-01.png" />
 
 ## Grafana Dashboard
 One popular use of metrics saved in Prometheus is dashboarding. As Grafana is a popular dashboarding tool, Spot has created a [Grafana dashboard](https://grafana.com/grafana/dashboards/16475) that you can download. The dashboard enables you to visualize Ocean metrics and may be incorporated into your existing dashboard base.
 
-<img src="/ocean/_media/prometheus-scrape-02.png />
+<img src="/ocean/_media/prometheus-scrape-02.png" />
 
 ## What’s next?
 
