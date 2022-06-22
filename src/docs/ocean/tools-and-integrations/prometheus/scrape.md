@@ -10,18 +10,22 @@ Although the exporter application is independent of the Ocean controller, a func
 
 ## Prerequisites
 
-*Ocean running in a cluster with a reporting controller
-*Prometheus installed in the cluster
+* Ocean running in a cluster with a reporting controller
+
+* Prometheus installed in the cluster
 
 ## Install the Exporter
 
 ##### Via Helm
 [This helm chart](https://github.com/spotinst/charts/tree/main/charts/ocean-metric-exporter) entirely covers this step.
 1. Add the Spot Helm chart repository:
+
 `helm repo add spot https://charts.spot.io`
 2. Update your local Helm chart repository cache:
+
 `helm repo update`
 3. Install ocean-metric-exporter:
+
 `helm install my-release spot/ocean-metric-exporter`
 
 ##### Via Infrastructure as Code
