@@ -68,7 +68,7 @@ For example, if you request:
 { "executor": { "cores": 4, "instanceAllowList": ["m5"] } }
 ```
 
-Ocean Spark will determine how much memory to request so that each Spark executor exactly utilizes the memory available on an m5.xlarge instance (which has four available cores), or half of an m5.2xlarge instance (which has eight available cores). If you select several instance families with different memory/core ratio, Ocean spark will use the smallest memory/core ratio to compute the requested memory in order to maximize bin packing.
+Ocean Spark will determine how much memory to request so that each Spark executor exactly utilizes the memory available on an m5.xlarge instance (which has four available cores), or half of an m5.2xlarge instance (which has eight available cores). If you select multiple instance families with different memory/core ratios, Ocean spark will fit the pods to the smallest memory/core ratio to maximize bin packing.
 
 If you want to allocate a lot of memory to your Spark driver, you could set the following configuration:
 
