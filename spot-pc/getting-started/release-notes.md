@@ -1,5 +1,21 @@
 # Spot PC: Release Notes
 
+## 06/23/2022
+_When:_ 06/23/2022 at 10pm - 11pm Eastern
+
+_Impact:_ Access to desktops and application services for End Users will remain uninterrupted. Access to Spot PC console will remain available.
+
+* Introducing Self-Service Business Server Management
+  * Spot PC is proud to announce Self-Service Business Server Management is now available. You can now Create and Edit Business Server through in the UI via Config Actions.
+* New Onboarding Option: AD Direct Join in Preview
+  * Spot PC is excited to give an early preview of AD Direct Join. AD Direct Join is now the third option in the Connect Spot PC to your Admin Domain stage in onboarding. It is only available for personal machine types at this time.  
+* Announcement Banner 
+  * Spot PC now has banner that will give several types of announcements such as updates, releases, and downtime prominently under the header. 
+* New Workflow Change in Spot Groups
+  * The Spot Group Workflow has been enhanced to put site selection earlier in the process for a better user experience.  
+* Tenant Assignment for Org Users
+  * Spot PC admins now have the ability to select the number of tenants(one or multiple) that new organization users are assigned to.  
+
 ## 06/09/2022
 _When:_ 06/09/2022 at 10pm - 11pm Eastern
 
