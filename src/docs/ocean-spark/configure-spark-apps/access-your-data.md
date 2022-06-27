@@ -361,6 +361,102 @@ curl -X POST \
 }'
 ```
 
+## Grant permissions with a custom Kubernetes service account (AWS only)
+
+On EKS, [a Kubernetes service account can be associated with an IAM role](https://docs.aws.amazon.com/eks/latest/userguide/iam-roles-for-service-accounts.html).
+The Ocean Spark API allows you to leverage this feature to grant your Spark applications data access in a secure way using service accounts.
+
+This section explains the required steps:
+
+1. Create an IAM OIDC provider for your cluster (one-time operation)
+2. Create an IAM role and grant it access to your data
+3. Create a Kubernetes service account in the EKS cluster
+4. Associate the Kubernetes service account with the IAM role
+5. Configure your Spark application to use the custom service account
+
+#### Create an IAM OIDC provider for your cluster
+
+> **Info**: This operation must be performed only once for every EKS cluster.
+
+Please refer to [this page](https://docs.aws.amazon.com/eks/latest/userguide/enable-iam-roles-for-service-accounts.html) of the AWS documentation.
+
+#### Create and IAM role and grant it access to your data
+
+- Create an IAM role in the AWS account. Note down the ARN of this role. In the rest of the document, the example ARN will be called `arn:aws:iam::111122223333:role/replace-me`.
+- Add the following policy to the IAM role to grant it data access.
+
+```yaml
+{
+  "Version": "2012-10-17",
+  "Statement":
+    [
+      {
+        "Effect": "Allow",
+        "Action": ["s3:*"],
+        "Resource":
+          [
+            "arn:aws:s3:::<your data bucket>",
+            "arn:aws:s3:::<your data bucket>/*",
+          ],
+      },
+    ],
+}
+```
+
+#### Create a Kubernetes service account in the EKS cluster
+
+```bash
+kubectl create serviceaccount -n spark-apps data-writer
+kubectl create rolebinding data-writer-pod-manager-rb --role pod-manager --serviceaccount spark-apps:data-writer
+```
+
+The above bash snippet does the following:
+
+- Create a service account `data-writer` (this is an example name) in namespace `spark-apps`, where the Spark applications live.
+- Bind the Kubernetes role `pod-manager` to service account `data-writer`. This is required so that the Spark driver can interact with Kubernetes, requesting executor pods for example.
+
+#### Associate the Kubernetes service account with the IAM role
+
+To tell EKS to associate a Kubernetes service account with an IAM role, an annotation must be added to the service account.
+
+```bash
+kubectl annotate -n spark-apps serviceaccounts data-writer \
+  eks.amazonaws.com/role-arn=arn:aws:iam::111122223333:role/replace-me
+```
+
+Continuing our example, the above snippet tells EKS to associate service account `data-writer` to IAM role `arn:aws:iam::111122223333:role/replace-me`. This is an example ARN and should be replaced with the ARN noted down in section "Create and IAM role and grant it access to your data".
+
+#### Configure your Spark application to use the custom service account
+
+Use the field `serviceAccountName` exposed by the Ocean Spark API to configure the Spark application to use service account `data-writer`.
+
+Additionally, Hadoop (on which Spark relies to interacts with S3) must be configured to use the OIDC provider created in the first step of this section.
+This is achieved by setting the Hadoop configuration `fs.s3a.aws.credentials.provider` to `com.amazonaws.auth.WebIdentityTokenCredentialsProvider`.
+
+Here is a full example:
+
+```bash
+curl -X POST \
+'https://api.spotinst.io/ocean/spark/cluster/<your cluster id>/app?accountId=<your accountId>' \
+ -H 'Content-Type: application/json' \
+ -H 'Authorization: Bearer 4536dc4418995c553df9c0c0e1d31866453bcec3df0f31f97003926d67ff1e00' \
+ -d '{
+ "job-id": "spark-pi",
+ "configOverrides": {
+   "type": "Scala",
+   "sparkVersion": "3.2.1",
+   "image": "gcr.io/datamechanics/spark:platform-3.2-latest",
+   "mainApplicationFile": "s3a://my-example-bucket/word_count.py",
+   "arguments": ["s3a://my-example-bucket/input/*", "s3a://my-example-bucket/output"],
+   "serviceAccountName": "data-writer",
+   "hadoopConf": {
+      "fs.s3a.aws.credentials.provider": "com.amazonaws.auth.WebIdentityTokenCredentialsProvider"
+   }
+  }
+ }
+}'
+```
+
 ## What's Next?
 
 Learn how to [package Spark code](ocean-spark/configure-spark-apps/package-spark-code).
