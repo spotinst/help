@@ -37,43 +37,43 @@ The default number of cores per executor is four. This is also a reasonable defa
 
 ## Configuring the type of instances
 
-The instanceSelector field lets you control which type of instances the pods will be placed on. It accepts either an instance family name or a specific instance type.
+The instanceAllowList field lets you control which type of instances the pods will be placed on. It accepts a list of instance family names or specific instance types.
 
-For example, the configuration below requests that the Spark driver be placed on an r5.large instance, while the Spark executors can be placed on any instance types of the r5d family (r5d.xlarge, r5d.2xlarge, r5d.4xlarge, etc).
+For example, the configuration below requests that the Spark driver be placed on an r5.large or an r5.xlarge instance, while the Spark executors can be placed on any instance types of the r5d family (r5d.xlarge, r5d.2xlarge, r5d.4xlarge, etc).
 
 ```json
 {
   "driver":{
     "cores":2,
-    "instanceSelector":"r5.large"
+    "instanceAllowList":["r5.large", "r5d.xlarge"]
   },
   "executor":{
     "cores":4,
-    "instanceSelector":"r5d"
+    "instanceAllowList":["r5d"]
   }
 }
 ```
 
 So if you have a specific need, you can pick a specific instance type. In most cases, we recommend you to target an entire instance family. This gives Ocean the flexibility to pick an optimal instance type based on the instances available in your cluster and the current Spot market dynamics.
 
-If you omit the instanceSelector field, your Spark executor pods will be able to run on any instance type, preferably filling up nodes which have available capacity, before adding new nodes to the cluster. This gives Ocean Spark a lot of flexibility to pick Spot nodes at the lowest cost. However, Spark applications can perform differently depending on the instance family on which they run (e.g. due to network and disk performance). For this reason, we recommend targeting a specific instance family using the instanceSelector field to ensure the deterministic and reliable performance of your production workloads.
+If you omit the instanceAllowList field, your Spark executor pods will be able to run on any instance type, preferably filling up nodes which have available capacity, before adding new nodes to the cluster. This gives Ocean Spark a lot of flexibility to pick Spot nodes at the lowest cost. However, Spark applications can perform differently depending on the instance family on which they run (e.g. due to network and disk performance). For this reason, we recommend targeting a specific instance family using the instanceAllowList field to ensure the deterministic and reliable performance of your production workloads.
 
 ## Configuring the memory
 
-You do not need to explicitly request an amount of memory, as Ocean Spark will automatically determine the optimal amount of memory based on the cores and instanceSelector fields to maximize bin packing.
+You do not need to explicitly request an amount of memory, as Ocean Spark will automatically determine the optimal amount of memory based on the cores and instanceAllowList fields to maximize bin packing.
 
 For example, if you request:
 
 ```json
-{ "executor": { "cores": 4, "instanceSelector": "m5" } }
+{ "executor": { "cores": 4, "instanceAllowList": ["m5"] } }
 ```
 
-Ocean Spark will determine how much memory to request so that each Spark executor exactly utilizes the memory available on an m5.xlarge instance (which has four available cores), or half of an m5.2xlarge instance (which has eight available cores).
+Ocean Spark will determine how much memory to request so that each Spark executor exactly utilizes the memory available on an m5.xlarge instance (which has four available cores), or half of an m5.2xlarge instance (which has eight available cores). If you select multiple instance families with different memory/core ratios, Ocean spark will fit the pods to the smallest memory/core ratio to maximize bin packing.
 
 If you want to allocate a lot of memory to your Spark driver, you could set the following configuration:
 
 ```json
-{ "driver": { "cores": 4, "instanceSelector": "r5.xlarge" } }
+{ "driver": { "cores": 4, "instanceAllowList": ["r5.xlarge"] } }
 ```
 
 This will guarantee that the Spark driver fits tightly into an r5.xlarge instance. Note that the configured amount of memory will be smaller than the value advertised by the cloud provider due to the following reasons: There is little memory overhead reserved for the instance operating system and Kubernetes internal operations. Our UI and API shows you the maximum heap memory given to the Java Virtual Machine, while the actual container memory limit is set to a higher number (see next section on container memory overhead).
@@ -84,7 +84,7 @@ Should you want to control precisely yourself the amount of memory (heap-size) t
 { "driver": { "cores": 4, "memory": "8.5g" } }
 ```
 
-Be careful when entering memory settings manually, as it is easy to make mistakes. You can use the Ocean UI to view your nodes and pods and verify your understanding. In general, we recommend that you only select your pod sizes by using the cores and instanceSelector fields.
+Be careful when entering memory settings manually, as it is easy to make mistakes. You can use the Ocean UI to view your nodes and pods and verify your understanding. In general, we recommend that you only select your pod sizes by using the cores and instanceAllowList fields.
 For advanced Kubernetes users, the memory field is not the Kubernetes memory request of the driver pod. As explained above, it is the maximum heap memory given to the JVM. Spark derives a Kubernetes memory request from this input — more details on this calculation below.
 
 If you would like to investigate some of these configurations further, the official Apache Spark documentation page on [Running Spark on Kubernetes](https://spark.apache.org/docs/latest/running-on-kubernetes.html) contains useful information.
