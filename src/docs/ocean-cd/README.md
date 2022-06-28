@@ -40,6 +40,8 @@ canary:
   steps:
   - name: My-first-phase
     setWeight: 20
+    setCanaryScale:
+      replica:3
     pause:
       duration: 2m
   - name: second-phase
@@ -54,7 +56,7 @@ canary:
 The attributes of a strategy are described below.
 - Name: Name of the strategy. Must be unique.
 - Steps.name: Optional. Name of the step.
-- Steps.setWeight: Weight percentage of the step. The total of the weights must not exceed 100. If total weights are less than 100, Ocean CD will add on to the last phase until the total equals 100.
+- Steps.setWeight: Weight percentage of the step. A weight cannot be less than or equal to the one set in the previous step. The total of the weights must not exceed 100. If total weights are less than 100, Ocean CD will add on to the last phase until the total equals 100. 
 - Steps.pause: Optional. Pause to be set per phase.
 - Steps.pause.duration: Optional. The time in seconds, minutes, or hours that you may pause the step. If undefined, the phase will remain in a paused phase as long as not set otherwise by the user.
 
