@@ -4,9 +4,11 @@ If you are not using the Spot console to install the operator, you can install u
 
 Whichever method you choose, you will need to indicate whether your cluster has an Argo Rollout installation. If you do not have an Argo Rollout installation, Ocean CD dynamically generates Argo rollout manifests on your behalf. In addition, Ocean CD supports use of your own flags and personal Argo customization.
 
+In addition, the operator will be created without any limits set. If you want to set resource limits, you may do so manually either via the YAML file, or via the values.yaml file.
+
 > Tip: If you do not want Ocean CD to generate Argo manifests (e.g., you have already configured your own customized ones), you may configure otherwise.
 
-For further information, have a look at additional [resources supported](https://github.com/spotinst/spot-oceancd-releases/tree/main/Quick%20Start%20%26%20Examples) such as affinity, tolerations, podSecurityContext, and nodeSelector.
+For further information, have a look at additional [resources supported](https://github.com/spotinst/spot-oceancd-releases/blob/main/charts/spot-oceancd-operator/values.yaml) such as affinity, tolerations, podSecurityContext, and nodeSelector.
 
 ## Prerequisite
 - Kubernetes cluster up and running (on AWS, Azure or GCP)
@@ -26,7 +28,7 @@ Be sure to use the [latest OLM version](https://github.com/operator-framework/op
 
 ## Install using API
 
-In your Kubernetes cluster, run the following API command, which will result in the download of a YAML file. Be sure to add the flags required for Argo installation.
+Using Postman or another API tool, you may make use of the following API URL, which will result in a YAML file output. Be sure to add the flags required for Argo installation.
 
 ```
 https://api.spotinst.io/ocean/cd/clusterInstaller?clusterId=CLUSTER_ID&skipArgoRollouts=true
@@ -38,7 +40,7 @@ Should you wish to apply the command using Curl, use the syntax below. Be sure t
 curl --location --request POST 'https://api.spotinst.io/ocean/cd/clusterInstaller?clusterId=CLUSTER_ID&skipArgoRollouts=true' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer xxxxxxxx' \
---data-raw ''
+--data-raw '' | kubectl apply -f
 ```
 
 ## Install using Helm
@@ -66,7 +68,29 @@ helm install my-release oceancd/spot-oceancd-operator \
   # [...]
 ```
 
-Configure all required chart values using the `set` command line argument or a `values.yaml` file.
+> **Note**: Installation using a Helm template is not supported.
+
+You can create a new namespace to install the Operator in using the following commands:
+
+```
+  --namespace ${RELEASE_NAMESPACE} \
+  --create-namespace \
+```
+​​
+Alternaltively, you can configure all required chart values without using the set command-line argument, and make use of our  values.yaml file.
+
+To download the relevant YAML, go to the [Git](https://github.com/spotinst/spot-oceancd-releases/blob/main/charts/spot-oceancd-operator/values.yaml).
+
+To run the relevant YAML, use the following command:
+
+```
+helm install my-release oceancd/spot-oceancd-operator \
+  --set token=REDACTED \
+  --set clusterId=REDACTED \
+  --namespace mynamespace \
+  --create-namespace
+  -f values.yaml
+```
 
 ### Uninstall Ocean CD Operator
 
@@ -76,13 +100,13 @@ If you need to uninstall spot-oceancd-operator, use the procedure below.
 helm uninstall my-release
 
 kubectl get csv -A | grep spot-oceancd-operator | awk '{system("kubectl delete csv " $2 " -n " $1)}'
-
-kubectl delete apiservices v1.packages.operators.coreos.com
 ```
 
 If you need to remove your OLM installation, you can run the following commands:
 
 ```
+kubectl delete apiservices v1.packages.operators.coreos.com
+
 kubectl delete -f https://github.com/operator-framework/operator-lifecycle-manager/releases/download/v0.20.0/crds.yaml
 
 kubectl delete -f https://github.com/operator-framework/operator-lifecycle-manager/releases/download/v0.20.0/olm.yaml
