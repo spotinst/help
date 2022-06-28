@@ -110,6 +110,10 @@ Once you have sent the crawler.yml file, it may take up to 48 hours before you r
 
 Typically, this method requires coordination between the end-customer and the administrator of the tool creating their version of the Cost and Usage Report (CUR) as a CSV gzip export.
 
+It is important to determine how you wish Eco to operate. If RI sharing is not turned on, Eco will need one Spot organization per linked account, meaning either one CUR per linked-account or one exported CSV gzip (defined below) per organization. 
+
+If the customer has RI sharing turned on specifically for the group of linked accounts, and is okay with Cost Specialists managing it cross-account, then one exported CSV gzip (below) per organization is fine.
+
 ### Responsibilities
 
 - The _Partner_ (AWS MSP, Management Account Admin, or Admin of the CUR-generating tool) is responsible for CUR generation in the proper format.
