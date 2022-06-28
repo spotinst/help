@@ -199,7 +199,7 @@ Once you have found the service account, grant it sufficient permissions using [
 
 ### AWS
 
-Spark pods can impersonate an IAM user (AWS) when provided with the user’s credentials. This technique completely overrides the IAM role assumed by the Kubernetes nodes (see previous section, "Granting permissions to node instances”).
+Spark pods can impersonate an IAM user (AWS) when provided with the user’s credentials. This technique completely overrides the IAM role assumed by the Kubernetes nodes (see previous section, Granting permissions to node instances).
 
 To protect those credentials, you will store them in Kubernetes secrets and configure Spark to mount those secrets into all the driver and executor pods as [environment variables](ocean-spark/configure-spark-apps/secrets-environment-variables).
 
