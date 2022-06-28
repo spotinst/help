@@ -12,7 +12,7 @@ Here’s the payload you would submit:
 curl -X POST \
   'https://api.spotinst.io/ocean/spark/cluster/<your cluster id>/app?accountId=<your accountId>' \
   -H 'Content-Type: application/json' \
-  -H 'Authorization: Bearer 4536dc4418995c553df9c0c0e1d31866453bcec3df0f31f97003926d67ff1e00' \
+  -H 'Authorization: Bearer <your-spot-token>' \
   -d '{
   "jobId": "spark-pi",
   "configOverrides": {
@@ -273,7 +273,7 @@ You can now modify the payload to launch the Spark application in order to refer
 curl -X POST \
 'https://api.spotinst.io/ocean/spark/cluster/<your cluster id>/app?accountId=<your accountId>' \
  -H 'Content-Type: application/json' \
- -H 'Authorization: Bearer 4536dc4418995c553df9c0c0e1d31866453bcec3df0f31f97003926d67ff1e00' \
+ -H 'Authorization: Bearer <your-spot-token>' \
  -d '{
  "job-id": "spark-pi",
  "configOverrides": {
@@ -315,7 +315,7 @@ curl -X POST \
 
 Create a service account in the GCP console, and grant it sufficient permissions using [IAM roles](https://cloud.google.com/iam/docs/overview). The list of IAM roles for GCS is [here](https://cloud.google.com/storage/docs/access-control/iam-roles).
 
-This bash script will create an access key for the service account, and store it in a secret called data-access in the Kubernetes namespace where Data Mechanics Spark applications are run:
+This bash script will create an access key for the service account, and store it in a secret called `data-access` in the Kubernetes namespace `spark-apps` where Spark applications are run:
 
 ```
 TMP_FILE=$(mktemp)
@@ -329,7 +329,7 @@ Modify the payload to launch the Spark application in order to reference the sec
 curl -X POST \
 'https://api.spotinst.io/ocean/spark/cluster/<your cluster id>/app?accountId=<your accountId>' \
  -H 'Content-Type: application/json' \
- -H 'Authorization: Bearer 4536dc4418995c553df9c0c0e1d31866453bcec3df0f31f97003926d67ff1e00' \
+ -H 'Authorization: Bearer <your-spot-token>' \
  -d '{
  "job-id": "spark-pi",
  "configOverrides": {
@@ -439,7 +439,7 @@ Here is a full example:
 curl -X POST \
 'https://api.spotinst.io/ocean/spark/cluster/<your cluster id>/app?accountId=<your accountId>' \
  -H 'Content-Type: application/json' \
- -H 'Authorization: Bearer 4536dc4418995c553df9c0c0e1d31866453bcec3df0f31f97003926d67ff1e00' \
+ -H 'Authorization: Bearer <your-spot-token>' \
  -d '{
  "job-id": "spark-pi",
  "configOverrides": {
