@@ -28,7 +28,7 @@ To start the connection wizard, do the following:
 1. Log in to the Spot Console.
 2. Click AWS. The connection wizard appears as shown below.
 
-<img src="/cloud-analyzer/_media/gettingstarted-firstregistration-01.png" />
+<img src="/connect-your-cloud-provider/_media/connect-aws-account-02a.png" />
 
 3. From here, follow the steps in the wizard to connect your account.
 
