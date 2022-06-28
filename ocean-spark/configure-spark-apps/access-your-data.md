@@ -12,15 +12,15 @@ Here’s the payload you would submit:
 curl -X POST \
   'https://api.spotinst.io/ocean/spark/cluster/<your cluster id>/app?accountId=<your accountId>' \
   -H 'Content-Type: application/json' \
-  -H 'Authorization: Bearer 4536dc4418995c553df9c0c0e1d31866453bcec3df0f31f97003926d67ff1e00' \
+  -H 'Authorization: Bearer <your-spot-token>' \
   -d '{
   "jobId": "spark-pi",
   "configOverrides": {
     "type": "Scala",
-    "sparkVersion": "3.2.0",
+    "sparkVersion": "3.2.1",
     "mainApplicationFile": "s3a://my-example-bucket/word_count.py",
     "image": "gcr.io/datamechanics/spark:platform-3.2-latest",
-    "arguments": [“s3a://my-example-bucket/input/*", “s3a://my-example-bucket/output"]
+    "arguments": ["s3a://my-example-bucket/input/*", "s3a://my-example-bucket/output"]
   }
 }'
 ```
@@ -33,7 +33,7 @@ Below are two ways to grant the Spark pods access to your data.
 
 Spark pods running in Kubernetes inherit the permissions of the nodes they run on. So a simple solution is to grant the Kubernetes nodes access to your data.
 
-### Your data is in the same AWS account as the Ocean Spark cluster
+### AWS: Your data is in the same AWS account as the Ocean Spark cluster
 
 To allow the Kubernetes nodes and Spark pods to access your S3 buckets, complete the following steps:
 
@@ -92,13 +92,13 @@ Finally, configure the Ocean Virtual Node Group (VNG) of your Ocean Spark cluste
 
 The Spark application will now be able to access the S3 bucket specified in the IAM policy you created.
 
-### Your data is in an AWS account other than the Ocean Spark cluster
+### AWS: Your data is in an AWS account other than the Ocean Spark cluster
 
-> **Tip**: This section assumes you are familiar with the previous one, “Your data is in the same AWS account as the Ocean Spark cluster”. The previous section provides more detailed explanations and acts as a tutorial. This section assumes a good knowledge of AWS Identity and Access Management (IAM).
+> **Tip**: This section assumes you are familiar with the previous one, "Your data is in the same AWS account as the Ocean Spark cluster”. The previous section provides more detailed explanations and acts as a tutorial. This section assumes a good knowledge of AWS Identity and Access Management (IAM).
 
 To allow the Kubernetes nodes and Spark pods to access your S3 buckets, complete the following steps:
 
-1. Create an IAM role in the AWS account where the data resides (“data account”). Note down the instance profile associated with this IAM role.
+1. Create an IAM role in the AWS account where the data resides ("data account”). Note down the instance profile associated with this IAM role.
 2. Add the following policy to the IAM role to grant it data access.
 
 ```yaml
@@ -119,7 +119,7 @@ To allow the Kubernetes nodes and Spark pods to access your S3 buckets, complete
 }
 ```
 
-3. Create an IAM role in the AWS account where the Ocean Spark cluster resides (“cluster account”).
+3. Create an IAM role in the AWS account where the Ocean Spark cluster resides ("cluster account”).
 4. In the data account, authorize the cluster account IAM role to trust the data account IAM role. To do so, add the following to the data account IAM role’s trust policy:
 
 ```yaml
@@ -173,9 +173,33 @@ To allow the Kubernetes nodes and Spark pods to access your S3 buckets, complete
 }
 ```
 
+### GCP
+
+Find the service account used by GCE instances running as Kubernetes nodes. Depending on your setup, it can be the default Compute Engine service account, of the form
+
+```
+PROJECT_NUMBER-compute@developer.gserviceaccount.com
+```
+
+or another service account that you created yourself of the form
+
+```
+SERVICE_ACCOUNT_NAME@PROJECT_ID.iam.gserviceaccount.com
+```
+
+The default Compute Engine service account is used by default in a GKE cluster.
+You can specify another service account for Spark applications in the settings of the [Virtual Node Group](ocean/features/launch-specifications) (VNGs) dedicated to Spark.
+
+A quick way to find out the service account name is to run a Spark application accessing your data.
+When the application fails, the authorization error in the driver log usually shows the service account name.
+
+Once you have found the service account, grant it sufficient permissions using [IAM roles](https://cloud.google.com/iam/docs/overview). The list of IAM roles for GCS is available [here](https://cloud.google.com/storage/docs/access-control/iam-roles).
+
 ## Grant permissions using Kubernetes secrets
 
-Spark pods can impersonate an IAM user (AWS) when provided with the user’s credentials. This technique completely overrides the IAM role assumed by the Kubernetes nodes (see previous section, “Granting permissions to node instances”).
+### AWS
+
+Spark pods can impersonate an IAM user (AWS) when provided with the user’s credentials. This technique completely overrides the IAM role assumed by the Kubernetes nodes (see previous section, Granting permissions to node instances).
 
 To protect those credentials, you will store them in Kubernetes secrets and configure Spark to mount those secrets into all the driver and executor pods as [environment variables](ocean-spark/configure-spark-apps/secrets-environment-variables).
 
@@ -231,7 +255,7 @@ Create an access key for the user:
 3. Go to the "Security credentials" tab and click "Create access key".
 4. Note down the access key ID and the access key secret.
 
-### Create a Kubernetes secret that contains the access key:
+#### Create a Kubernetes secret that contains the access key
 
 The [kubectl command](https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html) below generates a secret from the access key ID and the access key secret created in the previous steps:
 
@@ -241,24 +265,24 @@ kubectl create secret -n spark-apps generic data-access \
        --from-literal 'AWS_SECRET_ACCESS_KEY=<access-key-secret>'
 ```
 
-### Configure Spark to use the Kubernetes secret
+#### Configure Spark to use the Kubernetes secret
 
 You can now modify the payload to launch the Spark application in order to reference the secret:
 
-```yaml
+```bash
 curl -X POST \
 'https://api.spotinst.io/ocean/spark/cluster/<your cluster id>/app?accountId=<your accountId>' \
  -H 'Content-Type: application/json' \
- -H 'Authorization: Bearer 4536dc4418995c553df9c0c0e1d31866453bcec3df0f31f97003926d67ff1e00' \
+ -H 'Authorization: Bearer <your-spot-token>' \
  -d '{
  "job-id": "spark-pi",
  "configOverrides": {
    "type": "Scala",
-   "sparkVersion": "3.2.0",
+   "sparkVersion": "3.2.1",
    "image": "gcr.io/datamechanics/spark:platform-3.2-latest",
    "mainApplicationFile": "s3a://my-example-bucket/word_count.py",
-   "arguments": [“s3a://my-example-bucket/input/*", “s3a://my-example-bucket/output"],
-"driver": {
+   "arguments": ["s3a://my-example-bucket/input/*", "s3a://my-example-bucket/output"],
+   "driver": {
       "envSecretKeyRefs": {
         "AWS_ACCESS_KEY_ID": {
           "name": "data-access",
@@ -282,6 +306,152 @@ curl -X POST \
         }
       }
     }
+  }
+ }
+}'
+```
+
+### GCP
+
+Create a service account in the GCP console, and grant it sufficient permissions using [IAM roles](https://cloud.google.com/iam/docs/overview). The list of IAM roles for GCS is [here](https://cloud.google.com/storage/docs/access-control/iam-roles).
+
+This bash script will create an access key for the service account, and store it in a secret called `data-access` in the Kubernetes namespace `spark-apps` where Spark applications are run:
+
+```
+TMP_FILE=$(mktemp)
+gcloud iam service-accounts keys create $TMP_FILE --iam-account <your-service-account>@<your-project>.iam.gserviceaccount.com
+kubectl create secret -n spark-apps generic data-access --from-file=key.json=$TMP_FILE)
+```
+
+Modify the payload to launch the Spark application in order to reference the secret:
+
+```bash
+curl -X POST \
+'https://api.spotinst.io/ocean/spark/cluster/<your cluster id>/app?accountId=<your accountId>' \
+ -H 'Content-Type: application/json' \
+ -H 'Authorization: Bearer <your-spot-token>' \
+ -d '{
+ "job-id": "spark-pi",
+ "configOverrides": {
+   "type": "Scala",
+   "sparkVersion": "3.2.1",
+   "image": "gcr.io/datamechanics/spark:platform-3.2-latest",
+   "mainApplicationFile": "s3a://my-example-bucket/word_count.py",
+   "arguments": ["s3a://my-example-bucket/input/*", "s3a://my-example-bucket/output"],
+   "driver": {
+      "secrets": [
+        {
+          "name": "data-access",
+          "path": "/mnt/secrets",
+          "secretType": "GCPServiceAccount"
+        }
+      ]
+    },
+    "executor": {
+      "secrets": [
+        {
+          "name": "data-access",
+          "path": "/mnt/secrets",
+          "secretType": "GCPServiceAccount"
+        }
+      ]
+    }
+  }
+ }
+}'
+```
+
+## Grant permissions with a custom Kubernetes service account (AWS only)
+
+On EKS, [a Kubernetes service account can be associated with an IAM role](https://docs.aws.amazon.com/eks/latest/userguide/iam-roles-for-service-accounts.html).
+The Ocean Spark API allows you to leverage this feature to grant your Spark applications data access in a secure way using service accounts.
+
+This section explains the required steps:
+
+1. Create an IAM OIDC provider for your cluster (one-time operation)
+2. Create an IAM role and grant it access to your data
+3. Create a Kubernetes service account in the EKS cluster
+4. Associate the Kubernetes service account with the IAM role
+5. Configure your Spark application to use the custom service account
+
+#### Create an IAM OIDC provider for your cluster
+
+> **Info**: This operation must be performed only once for every EKS cluster.
+
+Please refer to [this page](https://docs.aws.amazon.com/eks/latest/userguide/enable-iam-roles-for-service-accounts.html) of the AWS documentation.
+
+#### Create and IAM role and grant it access to your data
+
+- Create an IAM role in the AWS account. Note down the ARN of this role. In the rest of the document, the example ARN will be called `arn:aws:iam::111122223333:role/replace-me`.
+- Add the following policy to the IAM role to grant it data access.
+
+```yaml
+{
+  "Version": "2012-10-17",
+  "Statement":
+    [
+      {
+        "Effect": "Allow",
+        "Action": ["s3:*"],
+        "Resource":
+          [
+            "arn:aws:s3:::<your data bucket>",
+            "arn:aws:s3:::<your data bucket>/*",
+          ],
+      },
+    ],
+}
+```
+
+#### Create a Kubernetes service account in the EKS cluster
+
+```bash
+kubectl create serviceaccount -n spark-apps data-writer
+kubectl create rolebinding data-writer-pod-manager-rb --role pod-manager --serviceaccount spark-apps:data-writer
+```
+
+The above bash snippet does the following:
+
+- Create a service account `data-writer` (this is an example name) in namespace `spark-apps`, where the Spark applications live.
+- Bind the Kubernetes role `pod-manager` to service account `data-writer`. This is required so that the Spark driver can interact with Kubernetes, requesting executor pods for example.
+
+#### Associate the Kubernetes service account with the IAM role
+
+To tell EKS to associate a Kubernetes service account with an IAM role, an annotation must be added to the service account.
+
+```bash
+kubectl annotate -n spark-apps serviceaccounts data-writer \
+  eks.amazonaws.com/role-arn=arn:aws:iam::111122223333:role/replace-me
+```
+
+Continuing our example, the above snippet tells EKS to associate service account `data-writer` to IAM role `arn:aws:iam::111122223333:role/replace-me`. This is an example ARN and should be replaced with the ARN noted down in section "Create and IAM role and grant it access to your data".
+
+#### Configure your Spark application to use the custom service account
+
+Use the field `serviceAccountName` exposed by the Ocean Spark API to configure the Spark application to use service account `data-writer`.
+
+Additionally, Hadoop (on which Spark relies to interacts with S3) must be configured to use the OIDC provider created in the first step of this section.
+This is achieved by setting the Hadoop configuration `fs.s3a.aws.credentials.provider` to `com.amazonaws.auth.WebIdentityTokenCredentialsProvider`.
+
+Here is a full example:
+
+```bash
+curl -X POST \
+'https://api.spotinst.io/ocean/spark/cluster/<your cluster id>/app?accountId=<your accountId>' \
+ -H 'Content-Type: application/json' \
+ -H 'Authorization: Bearer <your-spot-token>' \
+ -d '{
+ "job-id": "spark-pi",
+ "configOverrides": {
+   "type": "Scala",
+   "sparkVersion": "3.2.1",
+   "image": "gcr.io/datamechanics/spark:platform-3.2-latest",
+   "mainApplicationFile": "s3a://my-example-bucket/word_count.py",
+   "arguments": ["s3a://my-example-bucket/input/*", "s3a://my-example-bucket/output"],
+   "serviceAccountName": "data-writer",
+   "hadoopConf": {
+      "fs.s3a.aws.credentials.provider": "com.amazonaws.auth.WebIdentityTokenCredentialsProvider"
+   }
   }
  }
 }'

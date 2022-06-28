@@ -24,7 +24,7 @@ Config overrides are fragments of configuration that you define when submitting 
 curl -k -X POST \
   'https://api.spotinst.io/ocean/spark/cluster/<your cluster id>/app?accountId=<your accountId>' \
   -H 'Content-Type: application/json' \
-  -H 'Authorization: Bearer ...' \
+  -H 'Authorization: Bearer <your-spot-token>' \
   -d '{
   "jobId": "spark-pi",
   "configOverrides": {
