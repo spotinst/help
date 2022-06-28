@@ -55,7 +55,7 @@ To remove the Degraded status, you can do either of the following:
 
 ### Paused Status (Phase Level)
 
-Throughout a rollout, Ocean CD will indicate when and for how long the phase will be in a paused status. This pause will be the direct consequence of the pause status set in your strategy prior to the rollout.
+Throughout a rollout, Ocean CD will indicate when and for how long the phase will be in a paused status. This pause is the direct consequence of the pause status set in your strategy prior to the rollout.
 
 #### Pause without a pre-defined window
 
@@ -80,12 +80,12 @@ At any time, you can click the three dots at the top of the Rollout Phases panel
 The following actions are available:
 - Promote: Promote one phase to the next.
 - Promote All: Promote a phase to the end of the rollout, triggering a success.
-- Pause Rollout: Pause a full rollout. Once the rollout is resumed, it will restart the phase where it was left off.
+- Pause Rollout: Pause a full rollout. Once the rollout is resumed, it will restart the phase where it left off.
 
 > **Tip**: This action is not the same as the one you have set in your strategy and will not behave in the same manner. Once you have chosen it, the whole rollout (and not only the phase) will be paused, and it will remain as such as long as it is not promoted or rolled back.
 
 - Roll Back: The rollout will be terminated and the previous version (i.e., Stable) will be restored.
-- Retry: Will be available to you only once a rollout is completed. With this action you will be able to retry your full rollout.
+- Retry: Available to you only once a rollback is completed and is applicable to the last SpotDeployment only. With this action you can retry your full rollout.
 
 Whenever you click an action, you will be prompted to confirm before the action is actually taken.
 
