@@ -19,7 +19,7 @@ Create your entities, and apply them accordingly, using Postman or any other too
 
 Note the following:
 - The Rolloutspec triggers the Strategy, so you will need to first create a strategy, and only then the Rolloutspec.
-- The services and additional yamls set in your RolloutSpec will need to applied in the same namespace as your SpotDeployment.
+- The services and additional YAMLs set in your RolloutSpec will need to be applied in the same namespace as your SpotDeployment.
 
 YAML templates and examples can be found in the Ocean CD public repository or JSON syntax via the [Ocean CD API](https://docs.spot.io/api/#tag/Ocean-CD).
 
