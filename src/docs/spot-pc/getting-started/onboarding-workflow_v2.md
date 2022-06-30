@@ -134,7 +134,7 @@ The final step simply displays all of your selection options for review prior to
 ### Allocate Storage
 ### Initialize SPOC Service
 -->
-
+<div> <br>
 ## What’s Next?
 
 Learn how to [deploy your first Spot Group](spot-pc/tutorials/deploy-spot-pc) into this new Spot PC account.
