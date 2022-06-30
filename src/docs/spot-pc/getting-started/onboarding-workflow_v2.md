@@ -12,7 +12,7 @@ In order to automate the implementation of the selections to follow, the workflo
 ###	Tenant ID
 <a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow2-01.png" target="_blank"><img style="float: left;" src="/spot-pc/_media/onboarding-workflow2-01.png" alt="Click Image for Full Size" width="250"> </a>
 
-To ensure the Spot PC deployment is done against the appropriate Azure Tenant, simply enter the Tenant ID of the Customer's Azure AD Tenant. This can be found in may places within the Azure Management Portal. A simple place to locate this value is within the Azure Management Portal, on the Overview Page for the Azure Active Directory service, under Basic Information > Tenant ID.
+To ensure the Spot PC deployment is done against the appropriate Azure Tenant, simply enter the Tenant ID of the Customer's Azure AD Tenant. This can be found in may places within the Azure Management Portal. A simple place to locate this value is within the Azure Management Portal, on the Overview Page for the Azure Active Directory service, under Basic Information > Tenant ID. <br>
 
 ###	Authorize Spot PC Discovery
 Clicking Authorize Spot PC Discovery will open a new browser window and bring you to Microsoft's "Permissions requested" authentication page. At this point you'll login and Accept the permissions request. Note, the Azure account that should be used for this permissions grant needs to be a Global Admin on the Azure AD tenant.
