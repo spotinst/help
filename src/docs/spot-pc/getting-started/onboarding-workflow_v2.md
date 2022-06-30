@@ -87,6 +87,8 @@ If multiple networks are visible to the Azure Admin account, you'll be able to s
 Azure AD Connect is required for some Domain deployment types, when required the Spot PC workflow will check for active AD Connect sync activity. If none is found instructions are shown for deploying that application and a re-check button is available.
 
 ###	Check Status
+Clicking Check Status will re-poll the Azure environment to verify a successful AD Connect sync.
+
 ##	Step 6: Review and Build
 The final step simply displays all of your selection options for review prior to clicking Go! to complete the onboarding workflow and initiate the final automated deployment actions.
 
