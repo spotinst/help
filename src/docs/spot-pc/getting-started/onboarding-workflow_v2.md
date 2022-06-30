@@ -101,8 +101,8 @@ Clicking Check Status will re-poll the Azure environment to verify a successful 
 </p>
 
 ##	Step: Review and Build
-<a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow2-06.png" target="_blank"><img style="float: right;" src="/spot-pc/_media/onboarding-workflow2-06.png" hspace=20 vspace=20 alt="Click Image for Full Size" width="600"> </a>
-The final step simply displays all of your selection options for review prior to clicking Go! to complete the onboarding workflow and initiate the final automated deployment actions.<div>
+<p><a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow2-06.png" target="_blank"><img style="float: right;" src="/spot-pc/_media/onboarding-workflow2-06.png" hspace=20 vspace=20 alt="Click Image for Full Size" width="600"> </a>
+The final step simply displays all of your selection options for review prior to clicking Go! to complete the onboarding workflow and initiate the final automated deployment actions.</p><div><br>
 
 <!--      
 # Progress Sidebar
