@@ -23,7 +23,7 @@ Clicking Connect Account will open a new browser window and bring you to  Micros
 
 ###	Refresh Button
 The authorization of Spot PC Discovery and the acceptance of the new reseller relationship can take a moment to register on the account. Clicking refresh will poll Azure to check if the necessary changes are complete.
-</p>
+</p><div><br>
 <p>
 
 ##	Step: Select an Azure Region and Define Network
@@ -40,7 +40,7 @@ The network scope must fall into one of these private ranges:
 - 192.168.0.0 through 192.168.255.255
 - 172.16.0.0 through 172.31.255.255
 - 10.0.0.0 through 10.255.255.255
-</p>
+</p><div><br>
 <p>
 
 ##	Step: Connect Spot PC to your AD Domain
@@ -88,7 +88,7 @@ When integrating with an AADC, credentials are needed to join Spot PC VMs with t
 
 ###	DC Network Connectivity
 This step seeks to confirm that network connectivity back to the ADDC has been established. This connectivity may be via a VPN form the Spot PC network directly to the ADDC network. Alternativly, if private connectivity already exists between Azure and the ADDC (outside of the Spot PC deployment), Spot PC can configure vNetPeering and Network Security Groups to open that connectivity without additional private connections needing to be established.
-</p>
+</p><div><br>
 <p>
 
 ##	Step: Connect to your Domain Controller’s Network
@@ -96,8 +96,7 @@ This step seeks to confirm that network connectivity back to the ADDC has been e
 ###	Select the network containing your AD Domain Controller
 <a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow2-04.png" target="_blank"><img style="float: right;" src="/spot-pc/_media/onboarding-workflow2-04.png" hspace=20 vspace=20 alt="Click Image for Full Size" width="600"> </a>
 If multiple networks are visible to the Azure Admin account, you'll be able to select which network contains the ADDC.
-
-</p>
+</p><div><br>
 <p>
 
 ##	Step: Confirm Azure AD Sync
@@ -106,7 +105,7 @@ Azure AD Connect is required for some Domain deployment types, when required the
 
 ###	Check Status
 Clicking Check Status will re-poll the Azure environment to verify a successful AD Connect sync.
-</p>
+</p><div><br>
 <p>
 
 ##	Step: Review and Build
@@ -156,4 +155,4 @@ The final step simply displays all of your selection options for review prior to
 ## What’s Next?
 
 Learn how to [deploy your first Spot Group](spot-pc/tutorials/deploy-spot-pc) into this new Spot PC account.
-</p>
+</p><div><br>
