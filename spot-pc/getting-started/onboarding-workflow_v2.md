@@ -99,9 +99,10 @@ Azure AD Connect is required for some Domain deployment types, when required the
 ###	Check Status
 Clicking Check Status will re-poll the Azure environment to verify a successful AD Connect sync.
 </p>
+<p>
 
 ##	Step: Review and Build
-<p><a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow2-06.png" target="_blank"><img style="float: right;" src="/spot-pc/_media/onboarding-workflow2-06.png" hspace=20 vspace=20 alt="Click Image for Full Size" width="600"> </a>
+<a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow2-06.png" target="_blank"><img style="float: right;" src="/spot-pc/_media/onboarding-workflow2-06.png" hspace=20 vspace=20 alt="Click Image for Full Size" width="600"> </a>
 The final step simply displays all of your selection options for review prior to clicking Go! to complete the onboarding workflow and initiate the final automated deployment actions.</p><div><br>
 
 <!--      
@@ -142,7 +143,9 @@ The final step simply displays all of your selection options for review prior to
 ### Allocate Storage
 ### Initialize SPOC Service
 -->
+<p>
 
 ## What’s Next?
 
 Learn how to [deploy your first Spot Group](spot-pc/tutorials/deploy-spot-pc) into this new Spot PC account.
+</p>
