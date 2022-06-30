@@ -27,7 +27,8 @@ The authorization of Spot PC Discovery and the acceptance of the new reseller re
 <p>
 
 ##	Step: Select an Azure Region and Define Network
-<a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow2-02.png" target="_blank"><img style="float: right;" src="/spot-pc/_media/onboarding-workflow2-02.png" hspace=20 vspace=20 alt="Click Image for Full Size" width="600"> </a>  The second section of the onboarding workflow defines some of the fundamental decisions that need to be made regarding the Azure region and the network scope for the new Spot PC environment.
+<a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow2-02.png" target="_blank"><img style="float: right;" src="/spot-pc/_media/onboarding-workflow2-02.png" hspace=20 vspace=20 alt="Click Image for Full Size" width="600"> </a>
+The second section of the onboarding workflow defines some of the fundamental decisions that need to be made regarding the Azure region and the network scope for the new Spot PC environment.
 
 ###	Select Preferred Azure Region
 Select the region into which the core Spot PC components should be initially deployed. Spot PC can support users across multiple regions within a single tenant however some platform resources will be deployed to support the customer Spot PC environment and they need a home. Typically the region where the bulk of users will be hosted is a good choice. There are regional differences in the available resource types, this is particularity relevant for GPU users and larger deployments that wish to run on Azure NetApp Files. This [Microsoft Tool](https://azure.microsoft.com/en-us/services/virtual-desktop/assessment/) can estimate end user experience based on region.
@@ -43,7 +44,8 @@ The network scope must fall into one of these private ranges:
 <p>
 
 ##	Step: Connect Spot PC to your AD Domain
-<a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow2-03.png" target="_blank"><img style="float: right;" src="/spot-pc/_media/onboarding-workflow2-03.png" hspace=20 vspace=20 alt="Click Image for Full Size" width="600"> </a> The user and machine authentication for Spot PC is handled by Microsoft Azure AD (AAD) and/or an Active Directory Domain Controller (ADDC). Several AAD and/or ADDC configurations are supported by the onboarding workflow. The third section covers all of the supported deployment scenarios related to AAD and ADDC.
+<a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow2-03.png" target="_blank"><img style="float: right;" src="/spot-pc/_media/onboarding-workflow2-03.png" hspace=20 vspace=20 alt="Click Image for Full Size" width="600"> </a>
+The user and machine authentication for Spot PC is handled by Microsoft Azure AD (AAD) and/or an Active Directory Domain Controller (ADDC). Several AAD and/or ADDC configurations are supported by the onboarding workflow. The third section covers all of the supported deployment scenarios related to AAD and ADDC.
 
 ###	Directory Type
 
@@ -92,7 +94,9 @@ This step seeks to confirm that network connectivity back to the ADDC has been e
 ##	Step: Connect to your Domain Controller’s Network
 
 ###	Select the network containing your AD Domain Controller
-<a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow2-04.png" target="_blank"><img style="float: right;" src="/spot-pc/_media/onboarding-workflow2-04.png" hspace=20 vspace=20 alt="Click Image for Full Size" width="600"> </a>If multiple networks are visible to the Azure Admin account, you'll be able to select which network contains the ADDC.
+<a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow2-04.png" target="_blank"><img style="float: right;" src="/spot-pc/_media/onboarding-workflow2-04.png" hspace=20 vspace=20 alt="Click Image for Full Size" width="600"> </a>
+If multiple networks are visible to the Azure Admin account, you'll be able to select which network contains the ADDC.
+
 </p>
 <p>
 
