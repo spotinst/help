@@ -10,7 +10,7 @@ The Spot PC onboarding workflow has six distinct steps. Once completed, the Spot
 In order to automate the implementation of the selections to follow, the workflow needs some basic Azure tenant information and permissions to be granted by a Global Admin (GA) account from that tenant. Using the GA's permissions, Spot PC will add two Azure Enterprise Apps (Spot PC & Spot PC Discovery) which will be the credentials used for all future deployments and automation actions against the customer's Azure tenant. Once those two Enterprise apps are created, the GA's credentials won't be retained or reused again.
 
 ###	Tenant ID
-<a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow-01.png" target="_blank"><img src="/spot-pc/_media/onboarding-workflow2-01.png" alt="Click Image for Full Size" width="250"> </a>
+<a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow2-01.png" target="_blank"><img style="float: left;" src="/spot-pc/_media/onboarding-workflow2-01.png" alt="Click Image for Full Size" width="250"> </a>
 
 To ensure the Spot PC deployment is done against the appropriate Azure Tenant, simply enter the Tenant ID of the Customer's Azure AD Tenant. This can be found in may places within the Azure Management Portal. A simple place to locate this value is within the Azure Management Portal, on the Overview Page for the Azure Active Directory service, under Basic Information > Tenant ID.
 
