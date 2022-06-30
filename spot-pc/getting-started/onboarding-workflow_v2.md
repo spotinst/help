@@ -4,10 +4,10 @@ The Spot PC onboarding workflow is designed to deploy the Spot PC environment ba
 Onboarding a new Spot PC tenant is performed from within the [Spot PC console](https://admin.pc.spot.io/). For new administrators with no existing tenants, their initial login will automatically log them into the new tenant workflow.
 
 # Workflow Steps
-The Spot PC onboarding workflow has several distinct steps, the numbering of these steps can change as some selections add/remove other sections based on necessity. Once completed, the Spot PC environment will be built in the client's Azure Tenant with a baseline configuration. After this workflow has completed, the next steps will be to select (or customize) a VM image and create a Spot Group. Those two steps will finalize the build, creating host VMs and enabling end user access to their new Spot PC desktops.
+The Spot PC onboarding workflow has six distinct steps. Once completed, the Spot PC environment will be built in the client's Azure Tenant with a baseline configuration. After this workflow has completed, the next steps will be to select (or customize) a VM image and create a Spot Group. Those two steps will finalize the build, creating host VMs and enabling end user access to their new Spot PC desktops.
 
-## Step: Authorize Spot PC Discovery and Connect Spot PC to your Azure tenant
-<a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow2-01.png" target="_blank"><img style="float: right;" src="/spot-pc/_media/onboarding-workflow2-01.png" hspace=20 vspace=20 alt="Click Image for Full Size" width="600"> </a> In order to automate the implementation of the selections to follow, the workflow needs some basic Azure tenant information and permissions to be granted by a Global Admin (GA) account from that tenant. Using the GA's permissions, Spot PC will add two Azure Enterprise Apps (Spot PC & Spot PC Discovery) which will be the credentials used for all future deployments and automation actions against the customer's Azure tenant. Once those two Enterprise apps are created, the GA's credentials won't be retained or reused again.
+## Step 1: Authorize Spot PC Discovery and Connect Spot PC to your Azure tenant
+<a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow2-01.png" target="_blank"><img style="float: right;" src="/spot-pc/_media/onboarding-workflow2-01.png" hspace=20 vspace=20 alt="Click Image for Full Size" width="450"> </a> In order to automate the implementation of the selections to follow, the workflow needs some basic Azure tenant information and permissions to be granted by a Global Admin (GA) account from that tenant. Using the GA's permissions, Spot PC will add two Azure Enterprise Apps (Spot PC & Spot PC Discovery) which will be the credentials used for all future deployments and automation actions against the customer's Azure tenant. Once those two Enterprise apps are created, the GA's credentials won't be retained or reused again.
 
 ###	Tenant ID
 
@@ -22,8 +22,8 @@ Clicking Connect Account will open a new browser window and bring you to  Micros
 ###	Refresh Button
 The authorization of Spot PC Discovery and the acceptance of the new reseller relationship can take a moment to register on the account. Clicking refresh will poll Azure to check if the necessary changes are complete.
 
-##	Step: Select an Azure Region and Define Network
-<a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow2-02.png" target="_blank"><img style="float: right;" src="/spot-pc/_media/onboarding-workflow2-02.png" hspace=20 vspace=20 alt="Click Image for Full Size" width="600"> </a>  The second section of the onboarding workflow defines some of the fundamental decisions that need to be made regarding the Azure region and the network scope for the new Spot PC environment.
+##	Step 2: Select an Azure Region and Define Network
+<a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow2-02.png" target="_blank"><img style="float: left;" src="/spot-pc/_media/onboarding-workflow2-02.png" hspace=20 vspace=20 alt="Click Image for Full Size" width="450"> </a>  The second section of the onboarding workflow defines some of the fundamental decisions that need to be made regarding the Azure region and the network scope for the new Spot PC environment.
 
 ###	Select Preferred Azure Region
 Select the region into which the core Spot PC components should be initially deployed. Spot PC can support users across multiple regions within a single tenant however some platform resources will be deployed to support the customer Spot PC environment and they need a home. Typically the region where the bulk of users will be hosted is a good choice. There are regional differences in the available resource types, this is particularity relevant for GPU users and larger deployments that wish to run on Azure NetApp Files. This [Microsoft Tool](https://azure.microsoft.com/en-us/services/virtual-desktop/assessment/) can estimate end user experience based on region.
@@ -36,8 +36,8 @@ The network scope must fall into one of these private ranges:
 - 172.16.0.0 through 172.31.255.255
 - 10.0.0.0 through 10.255.255.255
 
-##	Step: Connect Spot PC to your AD Domain
-<a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow2-03.png" target="_blank"><img style="float: right;" src="/spot-pc/_media/onboarding-workflow2-03.png" hspace=20 vspace=20 alt="Click Image for Full Size" width="600"> </a> The user and machine authentication for Spot PC is handled by Microsoft Azure AD (AAD) and/or an Active Directory Domain Controller (ADDC). Several AAD and/or ADDC configurations are supported by the onboarding workflow. The third section covers all of the supported deployment scenarios related to AAD and ADDC.
+##	Step 3: Connect Spot PC to your AD Domain
+<a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow2-03.png" target="_blank"><img style="float: left;" src="/spot-pc/_media/onboarding-workflow2-03.png" hspace=20 vspace=20 alt="Click Image for Full Size" width="450"> </a> The user and machine authentication for Spot PC is handled by Microsoft Azure AD (AAD) and/or an Active Directory Domain Controller (ADDC). Several AAD and/or ADDC configurations are supported by the onboarding workflow. The third section covers all of the supported deployment scenarios related to AAD and ADDC.
 
 ###	Directory Type
 ####	Deploy New Active Directory DC in Spot PC (coming soon)
@@ -80,20 +80,20 @@ When integrating with an AADC, credentials are needed to join Spot PC VMs with t
 ###	DC Network Connectivity
 This step seeks to confirm that network connectivity back to the ADDC has been established. This connectivity may be via a VPN form the Spot PC network directly to the ADDC network. Alternativly, if private connectivity already exists between Azure and the ADDC (outside of the Spot PC deployment), Spot PC can configure vNetPeering and Network Security Groups to open that connectivity without additional private connections needing to be established.
 
-##	Step: Connect to your Domain Controller’s Network
-<a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow2-04.png" target="_blank"><img style="float: right;" src="/spot-pc/_media/onboarding-workflow2-04.png" hspace=20 vspace=20 alt="Click Image for Full Size" width="600"> </a>
+##	Step 4: Connect to your Domain Controller’s Network
+<a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow2-04.png" target="_blank"><img style="float: left;" src="/spot-pc/_media/onboarding-workflow2-04.png" hspace=20 vspace=20 alt="Click Image for Full Size" width="450"> </a>
 ###	Select the network containing your AD Domain Controller
 If multiple networks are visible to the Azure Admin account, you'll be able to select which network contains the ADDC.
 
-##	Step: Confirm Azure AD Sync
-<a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow2-05.png" target="_blank"><img style="float: right;" src="/spot-pc/_media/onboarding-workflow2-05.png" hspace=20 vspace=20 alt="Click Image for Full Size" width="600"> </a>
+##	Step 5: Confirm Azure AD Sync
+<a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow2-05.png" target="_blank"><img style="float: left;" src="/spot-pc/_media/onboarding-workflow2-05.png" hspace=20 vspace=20 alt="Click Image for Full Size" width="450"> </a>
 Azure AD Connect is required for some Domain deployment types, when required the Spot PC workflow will check for active AD Connect sync activity. If none is found instructions are shown for deploying that application and a re-check button is available.
 
 ###	Check Status
 Clicking Check Status will re-poll the Azure environment to verify a successful AD Connect sync.
 
-##	Step: Review and Build
-<a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow2-06.png" target="_blank"><img style="float: right;" src="/spot-pc/_media/onboarding-workflow2-06.png" hspace=20 vspace=20 alt="Click Image for Full Size" width="600"> </a>
+##	Step 6: Review and Build
+<a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow2-06.png" target="_blank"><img style="float: left;" src="/spot-pc/_media/onboarding-workflow2-06.png" hspace=20 vspace=20 alt="Click Image for Full Size" width="450"> </a>
 The final step simply displays all of your selection options for review prior to clicking Go! to complete the onboarding workflow and initiate the final automated deployment actions.
 
 <!--      
