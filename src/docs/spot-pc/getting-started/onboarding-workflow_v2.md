@@ -90,10 +90,9 @@ This step seeks to confirm that network connectivity back to the ADDC has been e
 <p>
 
 ##	Step: Connect to your Domain Controller’s Network
-<a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow2-04.png" target="_blank"><img style="float: right;" src="/spot-pc/_media/onboarding-workflow2-04.png" hspace=20 vspace=20 alt="Click Image for Full Size" width="600"> </a>
 
 ###	Select the network containing your AD Domain Controller
-If multiple networks are visible to the Azure Admin account, you'll be able to select which network contains the ADDC.
+<a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow2-04.png" target="_blank"><img style="float: right;" src="/spot-pc/_media/onboarding-workflow2-04.png" hspace=20 vspace=20 alt="Click Image for Full Size" width="600"> </a>If multiple networks are visible to the Azure Admin account, you'll be able to select which network contains the ADDC.
 </p>
 <p>
 
