@@ -6,7 +6,7 @@ Onboarding a new Spot PC tenant is performed from within the [Spot PC console](h
 # Workflow Steps
 The Spot PC onboarding workflow has several distinct steps, the numbering of these steps can change as some selections add/remove other sections based on necessity. Once completed, the Spot PC environment will be built in the client's Azure Tenant with a baseline configuration. After this workflow has completed, the next steps will be to select (or customize) a VM image and create a Spot Group. Those two steps will finalize the build, creating host VMs and enabling end user access to their new Spot PC desktops.
 
-<a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow2-01.png" target="_blank"><img style="float: right;" src="/spot-pc/_media/onboarding-workflow2-01.png" hspace=20 vspace=20 alt="Click Image for Full Size" width="600"> </a> ## Step: Authorize Spot PC Discovery and Connect Spot PC to your Azure tenant
+## Step: Authorize Spot PC Discovery and Connect Spot PC to your Azure tenant<a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow2-01.png" target="_blank"><img style="float: right;" src="/spot-pc/_media/onboarding-workflow2-01.png" hspace=20 vspace=20 alt="Click Image for Full Size" width="600"> </a> 
 In order to automate the implementation of the selections to follow, the workflow needs some basic Azure tenant information and permissions to be granted by a Global Admin (GA) account from that tenant. Using the GA's permissions, Spot PC will add two Azure Enterprise Apps (Spot PC & Spot PC Discovery) which will be the credentials used for all future deployments and automation actions against the customer's Azure tenant. Once those two Enterprise apps are created, the GA's credentials won't be retained or reused again.
 
 ###	Tenant ID
@@ -93,8 +93,8 @@ Azure AD Connect is required for some Domain deployment types, when required the
 Clicking Check Status will re-poll the Azure environment to verify a successful AD Connect sync.
 
 ##	Step: Review and Build
-<a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow2-06.png" target="_blank"><img style="float: right;" src="/spot-pc/_media/onboarding-workflow2-06.png" hspace=20 vspace=20 alt="Click Image for Full Size" width="600"> </a>
-The final step simply displays all of your selection options for review prior to clicking Go! to complete the onboarding workflow and initiate the final automated deployment actions.
+<p><a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow2-06.png" target="_blank"><img style="float: right;" src="/spot-pc/_media/onboarding-workflow2-06.png" hspace=20 vspace=20 alt="Click Image for Full Size" width="600"> </a>
+The final step simply displays all of your selection options for review prior to clicking Go! to complete the onboarding workflow and initiate the final automated deployment actions.</p>
 
 <!--      
 # Progress Sidebar
@@ -135,6 +135,7 @@ The final step simply displays all of your selection options for review prior to
 ### Initialize SPOC Service
 -->
 <div> <br>
+
 ## What’s Next?
 
 Learn how to [deploy your first Spot Group](spot-pc/tutorials/deploy-spot-pc) into this new Spot PC account.
