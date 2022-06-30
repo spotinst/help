@@ -40,7 +40,7 @@ The network scope must fall into one of these private ranges:
 <a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow2-03.png" target="_blank"><img style="float: right;" src="/spot-pc/_media/onboarding-workflow2-03.png" hspace=20 vspace=20 alt="Click Image for Full Size" width="600"> </a> The user and machine authentication for Spot PC is handled by Microsoft Azure AD (AAD) and/or an Active Directory Domain Controller (ADDC). Several AAD and/or ADDC configurations are supported by the onboarding workflow. The third section covers all of the supported deployment scenarios related to AAD and ADDC.
 
 ###	Directory Type
-####	Deploy New Active Directory DC in Spot PC (coming soon)
+####	Deploy New Active Directory DC in Spot PC
 This option is not yet available in preview. This option will deploy a VM in the Spot PC Azure subscription and configure it as a domain controller to support this Spot PC deployment.
 
 Once deployed, Azure AD Connect will need to be manually installed to sync the ADDC with AAD to support same sign-on functionality for users.
