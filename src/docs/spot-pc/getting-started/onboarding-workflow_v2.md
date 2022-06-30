@@ -24,6 +24,7 @@ The authorization of Spot PC Discovery and the acceptance of the new reseller re
 
 ##	Step 2: Select an Azure Region and Define Network
 <a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow2-02.png" target="_blank"><img style="float: left;" src="/spot-pc/_media/onboarding-workflow2-02.png" hspace=20 vspace=20 alt="Click Image for Full Size" width="450"> </a>  The second section of the onboarding workflow defines some of the fundamental decisions that need to be made regarding the Azure region and the network scope for the new Spot PC environment.
+<div>
 
 ###	Select Preferred Azure Region
 Select the region into which the core Spot PC components should be initially deployed. Spot PC can support users across multiple regions within a single tenant however some platform resources will be deployed to support the customer Spot PC environment and they need a home. Typically the region where the bulk of users will be hosted is a good choice. There are regional differences in the available resource types, this is particularity relevant for GPU users and larger deployments that wish to run on Azure NetApp Files. This [Microsoft Tool](https://azure.microsoft.com/en-us/services/virtual-desktop/assessment/) can estimate end user experience based on region.
