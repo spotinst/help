@@ -90,8 +90,7 @@ Azure AD Connect is required for some Domain deployment types, when required the
 ##	Step 6: Review and Build
 The final step simply displays all of your selection options for review prior to clicking Go! to complete the onboarding workflow and initiate the final automated deployment actions.
 
-
-
+<!--      
 # Progress Sidebar
 ## Initialization Logs
 ### Create Subscription
@@ -128,6 +127,7 @@ The final step simply displays all of your selection options for review prior to
 ### Assign Html5 Web Address
 ### Allocate Storage
 ### Initialize SPOC Service
+-->
 
 ## What’s Next?
 
