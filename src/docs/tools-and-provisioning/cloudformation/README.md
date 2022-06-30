@@ -44,5 +44,3 @@ This Lambda function is hosted by Spot and can be invoked by every Spot customer
 
 - [Activate a Resource in CloudFormation Public Extensions Registry](tools-and-provisioning/cloudformation/activate-a-resource-in-public-extensions-registry)
 - [Get started](tools-and-provisioning/cloudformation/getting-started/) with AWS Lambda.
-
-x
