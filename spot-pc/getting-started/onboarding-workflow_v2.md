@@ -43,6 +43,7 @@ The network scope must fall into one of these private ranges:
 <p><a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow2-03.png" target="_blank"><img style="float: right;" src="/spot-pc/_media/onboarding-workflow2-03.png" hspace=20 vspace=20 alt="Click Image for Full Size" width="600"> </a> The user and machine authentication for Spot PC is handled by Microsoft Azure AD (AAD) and/or an Active Directory Domain Controller (ADDC). Several AAD and/or ADDC configurations are supported by the onboarding workflow. The third section covers all of the supported deployment scenarios related to AAD and ADDC.
 
 ###	Directory Type
+
 ####	Deploy New Active Directory DC in Spot PC
 This option is not yet available in preview. This option will deploy a VM in the Spot PC Azure subscription and configure it as a domain controller to support this Spot PC deployment.
 
@@ -99,8 +100,8 @@ Clicking Check Status will re-poll the Azure environment to verify a successful 
 </p>
 
 ##	Step: Review and Build
-<p><a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow2-06.png" target="_blank"><img style="float: right;" src="/spot-pc/_media/onboarding-workflow2-06.png" hspace=20 vspace=20 alt="Click Image for Full Size" width="600"> </a>
-The final step simply displays all of your selection options for review prior to clicking Go! to complete the onboarding workflow and initiate the final automated deployment actions.</p>
+<a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow2-06.png" target="_blank"><img style="float: right;" src="/spot-pc/_media/onboarding-workflow2-06.png" hspace=20 vspace=20 alt="Click Image for Full Size" width="600"> </a>
+The final step simply displays all of your selection options for review prior to clicking Go! to complete the onboarding workflow and initiate the final automated deployment actions.<div>
 
 <!--      
 # Progress Sidebar
