@@ -23,6 +23,7 @@ Clicking Connect Account will open a new browser window and bring you to  Micros
 ###	Refresh Button
 The authorization of Spot PC Discovery and the acceptance of the new reseller relationship can take a moment to register on the account. Clicking refresh will poll Azure to check if the necessary changes are complete.
 </p>
+
 ##	Step: Select an Azure Region and Define Network
 <p><a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow2-02.png" target="_blank"><img style="float: right;" src="/spot-pc/_media/onboarding-workflow2-02.png" hspace=20 vspace=20 alt="Click Image for Full Size" width="600"> </a>  The second section of the onboarding workflow defines some of the fundamental decisions that need to be made regarding the Azure region and the network scope for the new Spot PC environment.
 
@@ -37,6 +38,7 @@ The network scope must fall into one of these private ranges:
 - 172.16.0.0 through 172.31.255.255
 - 10.0.0.0 through 10.255.255.255
 </p>
+
 ##	Step: Connect Spot PC to your AD Domain
 <p><a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow2-03.png" target="_blank"><img style="float: right;" src="/spot-pc/_media/onboarding-workflow2-03.png" hspace=20 vspace=20 alt="Click Image for Full Size" width="600"> </a> The user and machine authentication for Spot PC is handled by Microsoft Azure AD (AAD) and/or an Active Directory Domain Controller (ADDC). Several AAD and/or ADDC configurations are supported by the onboarding workflow. The third section covers all of the supported deployment scenarios related to AAD and ADDC.
 
@@ -81,11 +83,13 @@ When integrating with an AADC, credentials are needed to join Spot PC VMs with t
 ###	DC Network Connectivity
 This step seeks to confirm that network connectivity back to the ADDC has been established. This connectivity may be via a VPN form the Spot PC network directly to the ADDC network. Alternativly, if private connectivity already exists between Azure and the ADDC (outside of the Spot PC deployment), Spot PC can configure vNetPeering and Network Security Groups to open that connectivity without additional private connections needing to be established.
 </p>
+
 ##	Step: Connect to your Domain Controller’s Network
 <p><a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow2-04.png" target="_blank"><img style="float: right;" src="/spot-pc/_media/onboarding-workflow2-04.png" hspace=20 vspace=20 alt="Click Image for Full Size" width="600"> </a>
 ###	Select the network containing your AD Domain Controller
 If multiple networks are visible to the Azure Admin account, you'll be able to select which network contains the ADDC.
 </p>
+
 ##	Step: Confirm Azure AD Sync
 <p><a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow2-05.png" target="_blank"><img style="float: right;" src="/spot-pc/_media/onboarding-workflow2-05.png" hspace=20 vspace=20 alt="Click Image for Full Size" width="600"> </a>
 Azure AD Connect is required for some Domain deployment types, when required the Spot PC workflow will check for active AD Connect sync activity. If none is found instructions are shown for deploying that application and a re-check button is available.
@@ -93,6 +97,7 @@ Azure AD Connect is required for some Domain deployment types, when required the
 ###	Check Status
 Clicking Check Status will re-poll the Azure environment to verify a successful AD Connect sync.
 </p>
+
 ##	Step: Review and Build
 <p><a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow2-06.png" target="_blank"><img style="float: right;" src="/spot-pc/_media/onboarding-workflow2-06.png" hspace=20 vspace=20 alt="Click Image for Full Size" width="600"> </a>
 The final step simply displays all of your selection options for review prior to clicking Go! to complete the onboarding workflow and initiate the final automated deployment actions.</p>
