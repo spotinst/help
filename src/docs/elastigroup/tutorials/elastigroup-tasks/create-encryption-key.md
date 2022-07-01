@@ -37,7 +37,7 @@ You can find your Spot cross-account IAM role in the Spot settings under the Acc
 
 ## Step 5: Configuring the Key in the Elastigroup Block Device Mapping
 
-You can add the required key to the Elastigorup block device mapping configuration. For more information see [Block Device Mapping](elastigroup/features/compute/block-device-mapping).
+You can add the required key to the Elastigroup block device mapping configuration. For more information see [Block Device Mapping](elastigroup/features/compute/block-device-mapping).
 
 Adding the following:
 
