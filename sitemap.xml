@@ -3249,6 +3249,20 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/tutorials/setup-mfa-conditional-access"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/spot-security/create-a-new-cluster-with-eksctl</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-security/create-a-new-cluster-with-eksctl"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-security/create-a-new-cluster-with-eksctl"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-security/dashboard-a</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-security/dashboard-a"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-security/dashboard-a"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/spot-security/features-a</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
