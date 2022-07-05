@@ -1,5 +1,11 @@
 # Controller Version History
 
+## [1.0.83] - 2022-07-03
+
+Added
+
+- support for IPv6 clusters
+
 ## [1.0.82] - 2022-05-03
 
 Added
