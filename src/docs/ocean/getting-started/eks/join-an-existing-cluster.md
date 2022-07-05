@@ -60,7 +60,7 @@ In this procedure, you will use the [Spot Console](http://console.spotinst.com/)
 The Connectivity page provides steps for you to install the Ocean Controller and establish the connection between the Ocean SaaS and the cluster. Complete the steps as described on the page and summarized below.
 
 1. Create a Spot token (or use an existing one) and copy it to the text box.
-2. Use the kubectl command-line tool to install the Ocean Controller Pod. Learn more about the Ocean Controller Pod and Ocean's anatomy [here](ocean/tutorials/spot-kubernetes-controller).
+2. Use the kubectl command-line tool to install the Ocean Controller Pod. Learn more about the Ocean Controller Pod and Ocean's anatomy [here](ocean/tools-and-integrations/prometheus/).
 3. Click Test Connectivity to ensure the controller functionality. Allow approximately two minutes for the test to complete.
 4. Click Next.
 
