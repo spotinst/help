@@ -2283,6 +2283,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-spark/product-tour/"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/ocean-spark/product-tour/use-vngs</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-spark/product-tour/use-vngs"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-spark/product-tour/use-vngs"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/ocean-spark/product-tour/view-application-details</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
