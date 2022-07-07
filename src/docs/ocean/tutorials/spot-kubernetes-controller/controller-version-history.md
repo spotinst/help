@@ -5,6 +5,7 @@
 Added
 
 - Upgraded Kubernetes SDK
+- Added support for IPv6 clusters
 
 ## [1.0.82] - 2022-05-03
 
