@@ -17,14 +17,21 @@ The summary line at the top provides the following information:
 
 <img src="/spot-security/_media/inventory-a.png" />
 
-# Assets by Service
+
+## Assets by Service
 This area shows statistics about your assets grouped per service. Each tile shows a different service.
 
-# Assets Trend
+<img src="/spot-security/_media/inventory-b.png" />
+
+## Assets Trend
 This line graph shows the number of assets in your cloud system over time. You can choose the time frames of one day, one week, or two weeks. The lines also show the number of assets with alerts and the number of assets with no alerts on each time segment.
 
-# Alerts Trend
+<img src="/spot-security/_media/inventory-c.png" />
+
+## Alerts Trend
 This bar chart shows the alerts on the assets in your cloud environment over a period of time.
 
-# What’s Next?
+<img src="/spot-security/_media/inventory-d.png" />
+
+## What’s Next?
 Learn more about Spot Security compliance with global security standards.
