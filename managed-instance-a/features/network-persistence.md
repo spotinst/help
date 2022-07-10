@@ -17,10 +17,10 @@ Private IP Persistence maintains the same private IP address for the node during
 
 Public IP persistence maintains the nodes Elastic IP. To enable Elastic IP persistence:
 
-1. Enter the Managed Instance's Configuration Wizard.
+1. Enter the Stateful Node's Configuration Wizard.
 2. Under the Configuration tab's Advanced section, make sure the `Public IP Assignment` setting is configured to assign a public IP (can also be set to `According to Subnet Default` if subnet is configured to assign a public IP).
 3. Under the Persistent Resources tab's Network section, select a specific Elastic IP to associate with the instance.
-4. A Managed Instance launched with the associated Elastic IP will then persist that IP during recycles and replacements.
+4. A Stateful Node launched with the associated Elastic IP will then persist that IP during recycles and replacements.
 
 <img src="/managed-instance/_media/network-persistence-02.png" />
 
@@ -31,7 +31,7 @@ When the Stateful Node is configured to persist the Public or Private IP address
 - An Elastic Network Interface (ENI) is created the first time the node is Resumed and is associated with the newly created node.
 - The ENI is kept throughout the entire SMI lifecycle, including while the node is Paused. This is designed to make sure that the IP addresses remain available when the SMI is Resumed.
 
-> **Tip**: The persisted ENI is required to maintain the stateful instance. Do not delete it directly from AWS.
+> **Tip**: The persisted ENI is required to maintain the stateful node. Do not delete it directly from AWS.
 
 ## Example Use Cases
 
