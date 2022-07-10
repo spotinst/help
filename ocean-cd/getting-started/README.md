@@ -10,10 +10,11 @@ The procedure below describes how to install the Ocean CD Operator using the Spo
 
 If you do not want to use the console, you can [install the Operator using the API or Helm](ocean-cd/getting-started/install-operator-using-API-or-helm).
 
-### Prerequisite
+### Prerequisites
 
 - A Kubernetes cluster running in AWS, Azure or GCP
 - OLM installation
+- Permissions to deploy new deployments into your clusters
 
 ### Get Started
 
