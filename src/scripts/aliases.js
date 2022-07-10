@@ -1651,6 +1651,9 @@ export const aliases = (() => {
       "/ocean/getting-started/eks/",
 
     "/cloud-analyzer/tutorials/manage-subsets": "/eco/tutorials/manage-subsets",
+
+    "/elastigroup-for-azure/shutdown-script-in-elastigroup/":
+      "/elastigroup/features-azure/shutdown-script-in-elastigroup-for-azure?id=shutdown-script-in-elastigroup-for-azure",  
   };
 
   for (let [key, value] of Object.entries(map)) {
