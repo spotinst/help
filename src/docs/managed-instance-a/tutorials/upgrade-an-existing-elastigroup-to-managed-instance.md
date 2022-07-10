@@ -1,12 +1,12 @@
-# Upgrade an Existing Elastigroup to Managed Instance
+# Upgrade an Existing Elastigroup to Stateful Nodes
 
-This procedure describes how to upgrade an existing Elastigroup to a managed instance.
+This procedure describes how to upgrade an existing Elastigroup to a stateful node.
 
-Running single instance workloads on Managed Instance will provide you with a simple and intuitive environment as well as additional visibility tailored to the stateful single-instance use case. If you have an existing Elastigroup that manages a single stateful instance, you can upgrade it to a Managed Instance.
+Running single node workloads on Stateful Nodes will provide you with a simple and intuitive environment as well as additional visibility tailored to the stateful single-instance use case. If you have an existing Elastigroup that manages a single stateful instance, you can upgrade it to a Stateful Node.
 
 ## Prerequisites
 
-Before you can create a managed instance, you need to do the following:
+Before you can create a stateful node, you need to do the following:
 
 - Ensure your AWS account is connected to your [Spot account](connect-your-cloud-provider/aws-account).
 - Ensure your [Spot Policy](elastigroup/tutorials/elastigroup-tasks/update-spot-policy) is up to date.
@@ -15,7 +15,7 @@ Before you can create a managed instance, you need to do the following:
 ## Upgrade Your Elastigroup
 
 1. Go to the dashboard of your stateful Elastigroup.
-2. In the top right of the dashboard, click Upgrade to Managed Instance.
+2. In the top right of the dashboard, click Upgrade to Stateful Node.
 
 <img src="/managed-instance/_media/gettingstarted-upgrade-01.png" />
 
