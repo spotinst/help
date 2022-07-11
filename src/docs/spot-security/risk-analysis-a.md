@@ -46,7 +46,7 @@ The risk panel includes the risk title, a brief description, and an option to ch
 
 To view the affected resources, click on View Affected Resources in the bottom of the sidebar.
 
- <img src="/spot-security/_media/risk-analysis-i.png" />
+ <img src="/spot-security/_media/risk-analysis-i.png" width="339"/>
 
 The following information appears:
 * A Risk Impact Map: provides information on how many other assets are linked to each asset. To learn more about the Risk Impact Map, click here link to RIsk Details page.
