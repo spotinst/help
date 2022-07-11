@@ -1,4 +1,4 @@
-# Create a new EKS Cluster
+# Create a New EKS Cluster
 
 In this procedure, you complete the steps to create an Amazon EKS cluster directly from the Spot Console and an Ocean object to manage the cluster worker nodes.
 
@@ -55,13 +55,15 @@ Before you can continue to the next step, CloudFormation must complete creation 
 
 1. Connect your workstation to the EKS cluster by copying the command shown in Step 4 of the Create page and running it in your command-line interface. Note that the command must include the Ocean Cluster Name that you entered previously.
 
-> **Tip**: Just click on the command to copy it.
+> **Tip**: Click on the command to copy it.
 
 <img src="/ocean/_media/new-eks-step4.png" />
 
 2. Verify that kubectl is connected to your EKS cluster by running the next command shown:
    `kubectl get svc`
 3. To install the controller on the EKS cluster, run the predefined script from your command line.
+
+(Optional) To install the [Ocean Prometheus Exporter](https://docs.google.com/document/d/1qM0DRhqgtSifNb9-j8tuRuNtWamL2mspWrB-iiC70sk/edit#), mark the checkbox.
 
 <img src="/ocean/_media/new-eks-step4-a.png" />
 
