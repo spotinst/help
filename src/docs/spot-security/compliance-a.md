@@ -24,13 +24,13 @@ This area shows the globalStandards that are tracked for an asset and they are m
 
 <img src="/spot-security/_media/spot-security-compliance2.png" />
 
-By default the toggle “Show Favorites Only” is turned on. To see all of the global compliance standards, turn the toggle off. You can mark specific Compliance Standards as favorites by clicking on the pin in the top right corner of each Compliance Standard.
+By default the toggle “Show Favorites Only” is turned on. To see all of the global compliance standards, turn the toggle off. You can mark specific Compliance Standards as favorites by clicking the pin in the top right corner of each Compliance Standard.
 
 The graph shows only the selected favorite standards.
 
 ### Compliance Standard Details
 
-Clicking on each standard will take you to a new standard compliance overview page. The percentage under the compliance bar shows how compliant the asset is to the standard.
+Clicking each standard will take you to a new standard compliance overview page. The percentage under the compliance bar shows how compliant the asset is to the standard.
 
 <img src="/spot-security/_media/spot-security-compliance3.png" />
 
@@ -40,9 +40,9 @@ The overview page lists the controls that the compliance defines. The security r
 * Non-Comformant Assets
 * Compliance Status
 
-To see the status of the assets and the rules associated with them, click on a Control ID.
+To see the status of the assets and the rules associated with them, click a Control ID.
 
-To remediate an asset, click on a Control ID, a drop down menu opens and you can see the remediation. The security remediation can be done from the Compliance page and any changes that were made will appear in the Risk Analysis page as well.
+To remediate an asset, click a Control ID, a drop down menu opens and you can see the remediation. The security remediation can be done from the Compliance page and any changes that were made will appear in the Risk Analysis page as well.
 
 ## What’s Next?
 Learn more about how to manage your cloud accounts on the Administration page.

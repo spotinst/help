@@ -60,12 +60,12 @@ The following information appears:
 
 ### Remediation Steps
 
-To receive a recommendation to remediate a risk, click on Remediation Steps. If you decide to take the recommendation, you can take immediate action.
+To receive a recommendation to remediate a risk, click Remediation Steps. If you decide to take the recommendation, you can take immediate action.
 To learn more about remediating, click here (link to Remediation page).
 
 ## Actions
 
-In the Actions column in the asset list, click on the three dots of an asset to do the following:
+In the Actions column in the asset list, click the three dots of an asset to do the following:
 1. Remediate: view information of the remediation steps.
 2. View Details: view the Risk Map of the asset along with the asset details and affected resources.
 3. Update Severity Level: change the severity level of the particular security rule.
@@ -85,9 +85,9 @@ To suppress all of the rules together:
 To suppress individual rules:
 1. Move the Show Suppressed Risks toggle to OFF.
 2. Choose a rule.
-3. Click on the eye of the rule to suppress.
+3. Click the eye of the rule to suppress.
 
-You can click on “Show Suppressed Risks” on the top right corner of the table to show the suppressed risks in the table.
+You can click “Show Suppressed Risks” on the top right corner of the table to show the suppressed risks in the table.
 
 ## What’s Next?
 Learn more about how you can Remediate your risks.

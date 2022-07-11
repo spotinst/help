@@ -35,7 +35,7 @@ Spot Security helps you prioritize risks by giving recommendations of risks with
 <img src="/spot-security/_media/spot-security-dashboard-c.png" />
 
 By default, the alert with the highest level impact appears in the tile. You can click the arrow to scroll through up to five risks. If a risk is remediated, the next risk with the highest impact will appear here. Highest Impact Recommendations are determined by considering the Risk Score of the Assets, the number of Affected Resources, and if the asset is or is linked to an internet-facing asset.
-When you click on Remediate Risk Now, Spot Security provides guided remediation actions to fix the security issue.
+When you click Remediate Risk Now, Spot Security provides guided remediation actions to fix the security issue.
 
 ### Most Prevalent Alerts
 
