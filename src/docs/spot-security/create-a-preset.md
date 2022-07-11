@@ -20,11 +20,11 @@ Once you have created a new preset, the name will appear as part of the Security
 
 ## Use a Saved Preset
 
-To apply a saved preset, click on the down arrow next to the Security Summary title.
+To apply a saved preset, click the down arrow next to the Security Summary title.
 
  <img src="/spot-security/_media/features-dashboard-presets-03.png" />
 
- A list of presets will appear in the dropdown. Click on the preset you want to use.
+ A list of presets will appear in the dropdown. Click the preset you want to use.
 
   <img src="/spot-security/_media/features-dashboard-presets-04.png" />
 

@@ -1,8 +1,8 @@
-# Administration - Draft for Spot Security
+# Administration
 
 The Administration page enables you to see an overview of all of the cloud accounts that you have created, view their status at a glance, and add and remove accounts.
 
-To manage your accounts in the Spot console, click on Administration in the menu on the left.
+To manage your accounts in the Spot console, click Administration in the menu on the left.
 
 
 
