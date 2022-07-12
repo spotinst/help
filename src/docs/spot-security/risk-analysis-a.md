@@ -30,7 +30,7 @@ To get more details about a Risk, click on Asset Name and a panel opens on the r
 
 Items that are marked as Easy Remediation are items that can be remediated immediately.
 
-<img src="/spot-security/_media/risk-analysis-h.png" />
+<img src="/spot-security/_media/risk-analysis-h.png" width="346"/>
 
 The risk panel includes the risk title, a brief description, and an option to change the risk level. You can change the risk level only if you have the permissions to do so. The panel also includes the following information about the risk:
 * Severity and Rule ID of the security rule failing at that asset
