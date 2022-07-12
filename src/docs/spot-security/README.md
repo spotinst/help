@@ -16,7 +16,7 @@ Spot Security enables public cloud security whereby you and your operation teams
 - _Detect_ brings meaning into the analysis by detecting anomalies or configuration drifts.
 - _Act_ provides the means to solve the identified issues with step by step or automated remediation, prevention, and a compliance view.
 
-As your cloud changes, this process repeats itself continuously to support your cloud security team
+As your cloud changes, this process repeats itself continuously to support your cloud security team.
 
 ## Get Started
 
@@ -34,7 +34,5 @@ To take advantage of the Spot Security features, simply log into your existing S
   - [Topology](spot-security/features/topology)
   - [Events](spot-security/features/events)
   - [Inventory](spot-security/features/inventory)
-
-## What’s Next?
-
-Learn more about the Spot Security [Features](spot-security/features/).
+  - [Compliance]
+  - [Administration]
