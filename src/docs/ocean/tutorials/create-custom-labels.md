@@ -56,4 +56,4 @@ These are clusters that were created by Kops natively.
 
 ## What's Next?
 
-Learn how to [Create Custom Labels](ocean/tutorials/manage-virtual-node-groups).
+Learn how to [CManage Virtual Node Groups](ocean/tutorials/manage-virtual-node-groups).
