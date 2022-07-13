@@ -71,3 +71,7 @@ Load the parameters into the cluster configuration:
 Always download the YAML file from the Spot S3 bucket. The file is updated frequently.
 
 The controller is now installed and should be reporting its heartbeat to Spot.io.
+
+## What’s Next?
+
+Learn more about [troubleshooting the controller](ocean/troubleshooting/troubleshoot-controller).
