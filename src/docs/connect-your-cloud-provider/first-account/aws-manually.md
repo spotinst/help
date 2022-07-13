@@ -2,7 +2,7 @@
 
 This page describes the procedures for manually (i.e., using the AWS console) connecting your AWS account to Spot. The procedure assumes that you are following the instructions in the [onboarding wizard](connect-your-cloud-provider/first-account/), have already created your Spot organization, and selected AWS as your cloud provider. You are connecting a linked account, and are now at Step 3.2 as shown below.
 
-> Tip: If this is not the first account you are connecting to Spot, and you are now connecting an additional account, the step below is numbered 3.1.
+> **Tip**: If this is not the first account you are connecting to Spot, and you are now connecting an additional account, the step below is numbered 3.1.
 
 ## Step 3.2: Click Manually
 
