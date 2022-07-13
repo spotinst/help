@@ -86,3 +86,5 @@ That's it! Ocean will now manage the worker nodes, optimizing cluster resource u
 If you receive the error "aws-iam-authenticator": executable file not found in \$PATH, then your kubectl is not configured for Amazon EKS. For more information, see [Configure kubectl for Amazon EKS](https://docs.aws.amazon.com/eks/latest/userguide/configure-kubectl.html).
 You can list your cluster nodes with the following command:
 `kubectl get nodes`.
+
+- Learn more about [eksctl](https://github.com/spotinst/weaveworks-eksctl).
