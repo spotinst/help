@@ -35,20 +35,20 @@ A linked account is an “ordinary” Spot account you use for optimizing cost a
 
 Automatically is the quicker option. Using a CloudFormation stack, this option chooses a policy and a role and associates the two for you.
 
-<img src="/connect-your-cloud-provider/_media/connect-your-first-cloud-account-004.png" />
+<img src="/connect-your-cloud-provider/_media/connect-your-first-cloud-account-005.png" />
 
 #### Connect Manually
 
 When you connect manually, you use your provider’s console (AWS) to choose the policy and role and to associate the two.
 
-<img src="/connect-your-cloud-provider/_media/connect-your-first-cloud-account-005.png" />
+<img src="/connect-your-cloud-provider/_media/connect-your-first-cloud-account-0051.png" />
 
 Please see the [detailed procedures for connecting manually](connect-your-cloud-provider/first-account/aws-manually).                                                                                                                                             
 #### Management Account
 
 Connection to a management account is required to use Eco. A management account will enable Spot to analyze your cost and usage reports and help you to save even more on your cloud spend.
 
-<img src="/connect-your-cloud-provider/_media/connect-your-first-cloud-account-051.png" />
+<img src="/connect-your-cloud-provider/_media/connect-your-first-cloud-account-004.png" />
 
 ### Connect GCP
 #### Linked Account
