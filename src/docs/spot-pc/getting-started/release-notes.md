@@ -1,5 +1,17 @@
 # Spot PC: Release Notes
 
+## 07/14/2022
+_When:_ 07/14/2022 at 10pm - 11pm Eastern
+
+_Impact:_ Access to desktops and application services for End Users will remain uninterrupted. Access to Spot PC console will remain available.
+
+* Introducing Delete Option for Self-Service Business Server Management
+  * SpotPC excited to share that Delete Business Server is now available as part of the Self-Service Business Server Management. You can find List and Delete Business Server through in the UI via Config Actions. 
+* Marketplace Landing Page
+  * SpotPC is proud to announce Marketplace Landing Page is now live. After making a purchase in Azure, this creates a transition with a summary and chance to request assistance.  
+* Security Recommendations Details 
+  * SpotPC's Security Recommendations Details are now available. Next to the Security Alerts under the Security Tab, the Security Recommendations Details include remediation steps. 
+
 ## 06/23/2022
 _When:_ 06/23/2022 at 10pm - 11pm Eastern
 
