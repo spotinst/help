@@ -16,7 +16,7 @@ On the Dashboard page, click the cloud provider that you would like to connect t
 
 If you have multiple accounts with your cloud provider, you will be able to connect them all later, after you have connected your first account. In addition, you will be able to connect accounts from multiple cloud providers.
 
-<img src="/connect-your-cloud-provider/_media/connect-your-first-cloud-account-002.png" width="400" />
+<img src="/connect-your-cloud-provider/_media/connect-your-first-cloud-account-002.png" width="500" />
 
 ## Step 3: Connect your Cloud Account
 
@@ -29,26 +29,26 @@ The decisions are slightly different depending on the cloud provider you choose,
 
 A linked account is an “ordinary” Spot account you use for optimizing cost and usage by using spot instances and taking advantage of numerous Spot features. Choose Linked Account to use Elastigroup or Ocean.
 
-<img src="/connect-your-cloud-provider/_media/connect-your-first-cloud-account-003.png" width="400" />
+<img src="/connect-your-cloud-provider/_media/connect-your-first-cloud-account-003.png" width="500" />
 
 #### Connect Automatically
 
 Automatically is the quicker option. Using a CloudFormation stack, this option chooses a policy and a role and associates the two for you.
 
-<img src="/connect-your-cloud-provider/_media/connect-your-first-cloud-account-005.png" width="400" />
+<img src="/connect-your-cloud-provider/_media/connect-your-first-cloud-account-005.png" width="500" />
 
 #### Connect Manually
 
 When you connect manually, you use your provider’s console (AWS) to choose the policy and role and to associate the two.
 
-<img src="/connect-your-cloud-provider/_media/connect-your-first-cloud-account-0051.png" width="400" />
+<img src="/connect-your-cloud-provider/_media/connect-your-first-cloud-account-0051.png" width="500" />
 
 Please see the [detailed procedures for connecting manually](connect-your-cloud-provider/first-account/aws-manually).                                                                                                                                             
 #### Management Account
 
 Connection to a management account is required to use Eco. A management account will enable Spot to analyze your cost and usage reports and help you to save even more on your cloud spend.
 
-<img src="/connect-your-cloud-provider/_media/connect-your-first-cloud-account-004.png" width="400" />
+<img src="/connect-your-cloud-provider/_media/connect-your-first-cloud-account-004.png" width="500" />
 
 ### Connect GCP
 #### Linked Account
@@ -60,7 +60,7 @@ For GCP, there is currently no option to link a management account, so by defaul
 #### Connect Manually
 When you connect manually, you use your provider’s console (GCP) to choose the policy and role and to associate the two. For GCP, this is a quick option and we recommend choosing Manually.
 
-<img src="/connect-your-cloud-provider/_media/connect-your-first-cloud-account-006.png" width="400" />
+<img src="/connect-your-cloud-provider/_media/connect-your-first-cloud-account-006.png" width="500" />
 
 Please see the detailed procedures for connecting manually.
 
