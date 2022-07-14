@@ -255,7 +255,12 @@ For additional information, see: [Update the Spot Policy](elastigroup/tutorials/
     },
     {
       "Sid": "ElasticFileSystem",
-      "Action": ["elasticfilesystem:DescribeFileSystems"],
+      "Action": [
+        "elasticfilesystem:DescribeFileSystems",
+        "elasticfilesystem:DeleteFileSystem",
+        "elasticfilesystem:DescribeMountTargets",
+        "elasticfilesystem:DeleteMountTarget"
+      ],
       "Effect": "Allow",
       "Resource": ["*"]
     },
