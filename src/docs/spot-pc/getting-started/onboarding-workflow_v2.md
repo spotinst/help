@@ -34,7 +34,8 @@ The second section of the onboarding workflow defines some of the fundamental de
 Select the region into which the core Spot PC components should be initially deployed. Spot PC can support users across multiple regions within a single tenant however some platform resources will be deployed to support the customer Spot PC environment and they need a home. Typically the region where the bulk of users will be hosted is a good choice. There are regional differences in the available resource types, this is particularity relevant for GPU users and larger deployments that wish to run on Azure NetApp Files. This [Microsoft Tool](https://azure.microsoft.com/en-us/services/virtual-desktop/assessment/) can estimate end user experience based on region.
 
 ###	Custom Spot PC vNet Scope
-The Spot PC deployment will be done into a Virtual Network with a defined network scope. It is important that this range of IP addresses not overlap with any existing (or future) network architecture at this customer. In the event that private connectivity is established (now or in the future), overlapping with another subnet can cause issues. The onboarding workflow asks for a /20 range but this can be customized post-deployment if more IP addresses are required.
+The Spot PC deployment will be done into a Virtual Network with a defined network scope. It is important that this range of IP addresses not overlap with any existing (or future) network architecture at this customer. In the event that private connectivity is established (now or in the future), overlapping with another subnet can cause issues. The network scope defaults to a /20 which supports up to 2096 addresses in Spot PC. This can be changed post-deployment to expand capacity or reduce address consumption on the network.
+
 The network scope must fall into one of these private ranges:
 
 - 192.168.0.0 through 192.168.255.255
@@ -101,7 +102,7 @@ If multiple networks are visible to the Azure Admin account, you'll be able to s
 
 ##	Step: Confirm Azure AD Sync
 <a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow2-05.png" target="_blank"><img style="float: right;" src="/spot-pc/_media/onboarding-workflow2-05.png" hspace=20 vspace=20 alt="Click Image for Full Size" width="600"> </a>
-Azure AD Connect is required for some Domain deployment types, when required the Spot PC workflow will check for active AD Connect sync activity. If none is found instructions are shown for deploying that application and a re-check button is available.
+Azure AD Connect is required for some Domain deployment types, when required the Spot PC workflow will check for active AD Connect sync activity. If none is found instructions are shown for deploying that application and a re-check button is available. More information on AD Connect can be found [here.](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/whatis-azure-ad-connect)
 
 ###	Check Status
 Clicking Check Status will re-poll the Azure environment to verify a successful AD Connect sync.
