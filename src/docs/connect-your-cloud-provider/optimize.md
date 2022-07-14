@@ -14,7 +14,7 @@ The data on the page is summarized per cloud provider. If you have multiple acco
 
 You can use the filters to choose where you want to focus your optimization analysis.
 
-<img src="/connect-your-cloud-provider/_media/optimize-your-cloud-002.png" width="400" />
+<img src="/connect-your-cloud-provider/_media/optimize-your-cloud-002.png" width="500" />
 
 - Product: Choose Elastigroup, Ocean or Eco. The default view is Elastigroup.
   - If you choose Ocean or Elastigroup, continue reading below about the Accounts filter, the Summary line, and Workloads.
@@ -64,7 +64,7 @@ To start realizing the savings immediately, click Get started in the Actions col
 
 This will start the import process either to Elastigroup or Ocean (depending on which product you are viewing).
 
-<img src="/connect-your-cloud-provider/_media/optimize-your-cloud-009.png" width="400" />
+<img src="/connect-your-cloud-provider/_media/optimize-your-cloud-009.png" width="460" />
 
 ## Eco
 
