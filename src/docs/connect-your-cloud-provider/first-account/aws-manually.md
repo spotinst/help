@@ -47,7 +47,7 @@ In this step you create the policy that the Spot role will use to manage resourc
 
 <img src="/connect-your-cloud-provider/_media/connect-aws-manually-009.png" />
 
-7. In the Review Policy page in the AWS console, add the name Spot-Policy for the policy and then click Create Policy.xcvcx
+7. In the Review Policy page in the AWS console, add the name Spot-Policy for the policy and then click Create Policy.
 
 <img src="/connect-your-cloud-provider/_media/connect-aws-manually-010.png" />
 
