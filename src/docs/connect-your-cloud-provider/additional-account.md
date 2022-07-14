@@ -8,7 +8,7 @@ Go to Insights & Recommendations in the Dashboard. When you open the Spot consol
 
 <img src="/connect-your-cloud-provider/_media/connect-additional-account-001.png" />
 
-### From somewhere else in Spot
+### From outside the Dashboard
 
 1. If you are using Spot and are in some other location, such as Elastigroup, Ocean or Eco, click the three bars in the upper left corner.
 
@@ -16,7 +16,7 @@ Go to Insights & Recommendations in the Dashboard. When you open the Spot consol
 
 2. In the menu, click Overview.
 
-<img src="/connect-your-cloud-provider/_media/connect-additional-account-003.png" />
+<img src="/connect-your-cloud-provider/_media/connect-additional-account-003.png" width="300" />
 
 ### From the User menu
 
@@ -26,7 +26,7 @@ An alternative and quick way to create a new account is to go straight to the ac
 
 In the Accounts menu, click +Add Account.
 
-<img src="/connect-your-cloud-provider/_media/connect-additional-account-009.png" />
+<img src="/connect-your-cloud-provider/_media/connect-additional-account-009.png" width="300" />
 
 ## Step 1: Create your Spot Account
 
@@ -46,13 +46,13 @@ To create a Management Account, click Connect a Management Account. You can have
 
 Once you have chosen which type of account to create, enter a name for the account and click Create Account.
 
-<img src="/connect-your-cloud-provider/_media/connect-additional-account-006.png" />
+<img src="/connect-your-cloud-provider/_media/connect-additional-account-006.png" width="400" />
 
 ## Step 2: Select your Cloud Provider
 
 Choose your cloud provider for the additional account.
 
-<img src="/connect-your-cloud-provider/_media/connect-additional-account-007.png" />
+<img src="/connect-your-cloud-provider/_media/connect-additional-account-007.png" width="500" />
 
 ## Step 3: Connect your Cloud Account
 

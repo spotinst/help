@@ -6,25 +6,25 @@ This page describes the procedures for manually (i.e., using the AWS console) co
 
 ## Step 3.2: Click Manually
 
-<img src="/connect-your-cloud-provider/_media/connect-aws-manually-001.png" />
+<img src="/connect-your-cloud-provider/_media/connect-aws-manually-001.png" width="500" />
 
 ## Step 3.3: GovCloud or China Account?
 
 Mark your answer to the question and click Next.
 
-<img src="/connect-your-cloud-provider/_media/connect-aws-manually-002.png" />
+<img src="/connect-your-cloud-provider/_media/connect-aws-manually-002.png" width="500" />
 
 ## Step 3.4: AWS Login
 
 Log in to the AWS account that you are connecting to Spot and click Next.
 
-<img src="/connect-your-cloud-provider/_media/connect-aws-manually-003.png" />
+<img src="/connect-your-cloud-provider/_media/connect-aws-manually-003.png" width="500" />
 
 ## Step 3.5 Create IAM Policy
 
 In this step you create the policy that the Spot role will use to manage resources in your AWS account. Complete this step in the order of the bullets in the wizard.
 
-<img src="/connect-your-cloud-provider/_media/connect-aws-manually-004.png" />
+<img src="/connect-your-cloud-provider/_media/connect-aws-manually-004.png" width="500" />
 
 1. In AWS, go to the IAM dashboard. In the sidebar on the left, click Policies.
 
@@ -37,7 +37,7 @@ In this step you create the policy that the Spot role will use to manage resourc
 3. In the Visual Editor page that opens, click the JSON tab.
 4. Back in the Spot console, in the connection wizard, click View Policy at the bottom.
 
-<img src="/connect-your-cloud-provider/_media/connect-aws-manually-007.png" />
+<img src="/connect-your-cloud-provider/_media/connect-aws-manually-007.png" width="500" />
 
 5. When the policy appears in the Spot console, click the Copy button in the upper right.
 
@@ -57,7 +57,7 @@ In this step you create the policy that the Spot role will use to manage resourc
 
 In this step, you will create an IAM role for Spot and attach it to the policy that you just created. This will complete the connection of your AWS account to Spot. Complete this step in the order of the bullets in the wizard.
 
-<img src="/connect-your-cloud-provider/_media/connect-aws-manually-0101.png" />
+<img src="/connect-your-cloud-provider/_media/connect-aws-manually-0101.png" width="500" />
 
 1. In the left sidebar of the AWS console, click Roles, and when the Roles page appears, click Create Role.
 
@@ -66,7 +66,7 @@ In this step, you will create an IAM role for Spot and attach it to the policy t
 2. In the Select Trusted Entity page, click AWS Account. On the same page, click Another AWS Account.
 3. Go back to the wizard in the Spot console, copy the Account ID, 922761411349, and paste it in the Account ID field.
 
-<img src="/connect-your-cloud-provider/_media/connect-aws-manually-013.png" />
+<img src="/connect-your-cloud-provider/_media/connect-aws-manually-013.png" width="500" />
 
 4. Under Options, mark Require External ID.
 5. Copy the external ID generated in the Spot wizard and paste it in the External ID field in the AWS page. Click Next.
@@ -79,7 +79,7 @@ In this step, you will create an IAM role for Spot and attach it to the policy t
 
 7. In the Name, Review, and Create page, enter the name Spot-Role in the Role Name field. Click Create Role.
 
-<img src="/connect-your-cloud-provider/_media/connect-aws-manually-016.png" />
+<img src="/connect-your-cloud-provider/_media/connect-aws-manually-016.png" width="500" />
 
 8. In the AWS console, on the Summary page for the role, copy the ARN.
 
