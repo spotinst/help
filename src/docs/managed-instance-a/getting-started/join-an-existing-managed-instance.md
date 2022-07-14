@@ -12,13 +12,13 @@ Before you can create a stateful node, you need to do the following:
 - Ensure your [Spot Policy](elastigroup/tutorials/elastigroup-tasks/update-spot-policy) is up to date.
 - Memory utilization graphs require the Cloudwatch agent. For more information, see the [AWS documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/mon-scripts.html).
 
-## Import your Managed Instance
+## Import your Stateful Node
 
-1. To import your stateful single instance from AWS, go to the Managed Instance dashboard on the Spot Console and click New Instance on the top right.
+1. To import your stateful single node from AWS, go to the Stateful Node dashboard on the Spot Console and click New Instance on the top right.
 
 <img src="/managed-instance-a/_media/create-new-a.png" />
 
-2. When the New Managed Instance form appears, mark the use case Create a New Managed Instance from and Existing One.
+2. When the New Stateful Node form appears, mark the use case Create a New Stateful Node from an existing one.
 
 <img src="/managed-instance/_media/create-new-b.png" />
 
