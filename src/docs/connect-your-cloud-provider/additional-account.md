@@ -16,7 +16,7 @@ Go to Insights & Recommendations in the Dashboard. When you open the Spot consol
 
 2. In the menu, click Overview.
 
-<img src="/connect-your-cloud-provider/_media/connect-additional-account-003.png" width="300" />
+<img src="/connect-your-cloud-provider/_media/connect-additional-account-003.png" width="250" />
 
 ### From the User menu
 
@@ -26,7 +26,7 @@ An alternative and quick way to create a new account is to go straight to the ac
 
 In the Accounts menu, click +Add Account.
 
-<img src="/connect-your-cloud-provider/_media/connect-additional-account-009.png" width="300" />
+<img src="/connect-your-cloud-provider/_media/connect-additional-account-009.png" width="250" />
 
 ## Step 1: Create your Spot Account
 
@@ -46,7 +46,7 @@ To create a Management Account, click Connect a Management Account. You can have
 
 Once you have chosen which type of account to create, enter a name for the account and click Create Account.
 
-<img src="/connect-your-cloud-provider/_media/connect-additional-account-006.png" width="400" />
+<img src="/connect-your-cloud-provider/_media/connect-additional-account-006.png" width="300" />
 
 ## Step 2: Select your Cloud Provider
 
