@@ -82,7 +82,7 @@ Stateful Nodes perform various backend actions for different states of the nodes
   - If you select all parts, then they will be deleted immediately.
   - If you select only some of the parts for deletion, then those parts will be kept for four days and then deleted.
 
-<img src="/managed-instance/_media/data-volume-persistence-02.png" width="392" height="340" />
+<img src="/managed-instance-a/_media/data-volume-persistence-delete.png" />
 
 > **Tip**: Data storage time can be configured on an hourly basis. For more information, reach out to the Customer Support team.
 
