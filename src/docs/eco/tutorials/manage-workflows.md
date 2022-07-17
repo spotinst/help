@@ -101,7 +101,7 @@ This removes any tax-related usage types from the data.
 
 ### Cross Account RI Cost Sharing
 
-This enables you to pass a reservation's cost to accounts proportionate to the discounts they consume. We include EDP discounts in the cost calculations. In addition to passing the cost, this rule handles the recuperation of the cost to the account which purchased the commitment.
+This enables you to pass a reservation's cost to accounts proportionate to the discounts they consume. The EDP discounts are included in the cost calculations. In addition to passing the cost, this rule handles the recuperation of the cost to the account which purchased the commitment.
 
 You have the option to address costs in the following ways:
 
