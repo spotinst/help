@@ -1,6 +1,6 @@
 # Import an Existing AWS Stateful Node
 
-This procedure describes how to import a stateful nodes from AWS to your account in Spot. This will enable you to have full control of your stateful node directly in Spot and take advantage of all of the optimization features available in Spot.
+This procedure describes how to import a stateful node from AWS to your account in Spot. This will enable you to have full control of your stateful node directly in Spot and take advantage of all of the optimization features available in Spot.
 
 Running single node workloads on Stateful Nodes will provide you with a simple and intuitive environment as well as additional visibility tailored to the stateful single-instance use case. If you have stateful single-instance workloads in AWS, you can import them to the Spot environment using the procedure below.
 
