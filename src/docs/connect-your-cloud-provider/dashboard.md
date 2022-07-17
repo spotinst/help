@@ -57,7 +57,7 @@ The filters enable you to select and display only the data you want to see.
 - Account: Select one or more accounts to include in the charts below. You need to have a management account in order to use this filter.
 - Date: Choose a data range for the data displayed.
 
-<img src="/connect-your-cloud-provider/_media/view-dashboard-003.png" />
+<img src="/connect-your-cloud-provider/_media/view-dashboard-003.png" width="500" />
 
 ### Summary Line
 
@@ -80,13 +80,13 @@ The default view of this bar chart shows savings over the last year, viewing one
 
 This is a pie chart showing your use of spot, on-demand, savings plans, and reserved instances. The lifecycle breakdown represents the current status of your cloud and is not affected by the time filter.
 
-<img src="/connect-your-cloud-provider/_media/view-dashboard-006.png" />
+<img src="/connect-your-cloud-provider/_media/view-dashboard-006.png" width="450" />
 
 ### Potential vs. Actual Cost
 
 Use this chart to see how well you saved each month. For each month, you see a comparison of your potential cost vs. the actual cost using Spot.
 
-<img src="/connect-your-cloud-provider/_media/view-dashboard-007.png" />
+<img src="/connect-your-cloud-provider/_media/view-dashboard-007.png" width="450" />
 
 ## What’s Next?
 
