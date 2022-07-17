@@ -6,10 +6,14 @@ The [flow diagram](elastigroup/features/stateful-instance/stateful-elastigroup-f
 
 ## Configure Data Volume Persistence
 
-1. To configure data volume persistence, go to the Stateful Nodes configuration and select Persistent Resources.
-2. Mark the Persist Data Volumes option and select a persistence method.
+1. Click Stateful Nodes on left menu.
+2. Choose a node.
+3. Click Actions on the top right.
+4. Choose Edit Configuration.
+5. Click Persistent Resources tab.
+2. Mark Persist Root Volume.
 
-<img src="/managed-instance/_media/data-volume-persistence-01.png" />
+<img src="/managed-instance-a/_media/data-volume-persistence.png" />
 
 Stateful Nodes provides the methods described below for data volume persistence.
 
