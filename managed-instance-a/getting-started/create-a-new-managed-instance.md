@@ -1,4 +1,4 @@
-# Create a New Managed Instance
+# Create a New Stateful Node
 
 This procedure describes how to create a new stateful node from scratch.
 
@@ -14,7 +14,7 @@ Before you can create a stateful node, you need to do the following:
 
 ## Get Started
 
-1. To create a new Stateful Node from scratch, go to the Managed Instance dashboard on the Spot Console and click New Instance on the top right.
+1. To create a new Stateful Node from scratch, go to the Stateful Node dashboard on the Spot Console and click New Node on the top right.
 
 <img src="/managed-instance/_media/gettingstarted-create-new-01.png" />
 
