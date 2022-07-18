@@ -14,13 +14,13 @@ Before you can create a stateful node, you need to do the following:
 
 ## Get Started
 
-1. To create a new Stateful Node from scratch, go to the Stateful Node dashboard on the Spot Console and click New Node on the top right.
+1. To create a new Stateful Node from scratch, click Stateful Node on the left menu and click New Node on the top right.
 
-<img src="/managed-instance/_media/gettingstarted-create-new-01.png" />
+<img src="/managed-instance-a/_media/create-new-a.png" />
 
 2. Mark the use case Create a New Managed Instance, as shown below, and click Select.
 
-<img src="/managed-instance/_media/gettingstarted-create-new-02.png" width="400" height="319" />
+<img src="/managed-instance-a/_media/create-new-b.png" />
 
 3. Complete the steps in the Create Managed Instance wizard as described below.
 
@@ -28,7 +28,7 @@ Before you can create a stateful node, you need to do the following:
 
 1. Enter a name and a description for your Stateful Node:
 
-<img src="/managed-instance/_media/gettingstarted-create-new-03.png" />
+<img src="/managed-instance-a/_media/create-new-c.png" />
 
 2. Select the Region and Availability Zones:
 
@@ -43,7 +43,7 @@ Before you can create a stateful node, you need to do the following:
 
 Once VPC, Subnets, Product, Image and Preferred Instance type are selected, Spot will automatically preselect optional similar Spot Markets to ensure optimized cost efficiency. The Spot Market Scoring Table on the right side will be populated:
 
-<img src="/managed-instance/_media/gettingstarted-create-new-06.png" />
+<img src="/managed-instance-a/_media/create-new-d.png" />
 
 7. You can edit the additional Spot Market selection via the Spot Instance Types table below. The more node types selected here, the higher the chance of finding the optimal spot node to launch in terms of cost and availability.
 
