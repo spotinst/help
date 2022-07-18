@@ -18,7 +18,7 @@ These VNGs are dedicated to Ocean Spark, and they have certain best practice con
 
 The on-demand VNG is configured to use on-demand nodes, while the spot VNG is configured to use spot nodes. Note that this is a best-effort attempt, but that in some cases on-demand instances can be launched on the spot VNG, as Ocean will fall back to using on-demand instances if it failed to launch spot ones. If this occurs, you can track it in the Log tab.
 
-##Adding, Modifying, and Deleting VNGs
+## Adding, Modifying, and Deleting VNGs
 
 You can add, modify, or delete VNGs as long as these changes maintain the requirement to have two VNGs dedicated to Ocean Spark at all times (one configured to use on-demand nodes, and the other configured to use spot nodes).
 
