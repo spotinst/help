@@ -1,10 +1,10 @@
 # Network Persistence
 
-Managed Node Network Persistence works by maintaining the EC2 node's Elastic Network Interface (ENI), allowing the persistence of both public and private IPs associated with the node.
+Stateful Node Network Persistence works by maintaining the EC2 node's Elastic Network Interface (ENI), allowing the persistence of both public and private IPs associated with the node.
 
 ## Private IP Persistence
 
-Private IP Persistence maintains the same private IP address for the node during Spot Instance replacements. To Enable Private IP Persistence:
+Private IP Persistence maintains the same private IP address for the node during Spot Node replacements. To Enable Private IP Persistence:
 
 1. Click Stateful Nodes on left menu.
 2. Choose a node.
@@ -27,7 +27,7 @@ Public IP persistence maintains the nodes Elastic IP. To enable Elastic IP persi
 4. Choose Edit Configuration.
 5. Click Configuration tab.
 2. Under the Configuration tab's Advanced section, make sure the `Public IP Assignment` setting is configured to assign a public IP (can also be set to `According to Subnet Default` if subnet is configured to assign a public IP).
-3. Under the Persistent Resources tab's Network section, select a specific Elastic IP to associate with the instance.
+3. Under the Persistent Resources tab's Network section, select a specific Elastic IP to associate with the node.
 4. A Stateful Node launched with the associated Elastic IP will then persist that IP during recycles and replacements.
 
 <img src="/managed-instance/_media/network-persistence-02.png" />
