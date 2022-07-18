@@ -1,6 +1,6 @@
 # Data Volume Persistence
 
-Data volume persistence maintains the data volumes during spot instance replacement. The data on the volumes that were attached at the time of the previous instance termination will be present on the new instance, using the same BlockDeviceMapping configuration upon instance replacement.
+Data volume persistence maintains the data volumes during spot node replacement. The data on the volumes that were attached at the time of the previous node termination will be present on the new node, using the same BlockDeviceMapping configuration upon node replacement.
 
 The [flow diagram](elastigroup/features/stateful-instance/stateful-elastigroup-flow) describes on a high level how Spot manages the persistence of stateful nodes.
 
@@ -23,7 +23,7 @@ Periodic snapshots of data volumes are taken while the node is running. Upon spo
 
 ### Reattach
 
-This method is recommended for large data volumes. The same EBS volume is detached from the original node and reattached to the newly launched instance. If the new node is launched in a different availability zone, a snapshot is used to create a new volume and attach it to the new node (as volumes cannot be migrated between availability zones). Initially, volumes can be created based on the AMI block device mapping upon the managed node's first Resume, or attached via the AWS console. The same volumes are maintained as long as the node is launched within the same availability zone.
+This method is recommended for large data volumes. The same EBS volume is detached from the original node and reattached to the newly launched node. If the new node is launched in a different availability zone, a snapshot is used to create a new volume and attach it to the new node (as volumes cannot be migrated between availability zones). Initially, volumes can be created based on the AMI block device mapping upon the stateful node's first Resume, or attached via the AWS console. The same volumes are maintained as long as the node is launched within the same availability zone.
 
 ## Suspend User Data Execution Until Volumes are Available
 
@@ -74,11 +74,11 @@ Stateful Nodes perform various backend actions for different states of the nodes
 
 - Snapshot backups: New volumes are created from the latest snapshots upon node launch.
 - Reattach + node launch in same AZ as previous node: The existing volumes are reattached to the new node post launch.
-- Reattach + node launch in different AZ from previous node: New volumes are created in the same AZ as the new instance and are attached post launch.
+- Reattach + node launch in different AZ from previous node: New volumes are created in the same AZ as the new node and are attached post launch.
 
 ### Deallocated
 
-- When you delete a managed instance, you can choose which parts to delete.
+- When you delete a stateful node, you can choose which parts to delete.
   - If you select all parts, then they will be deleted immediately.
   - If you select only some of the parts for deletion, then those parts will be kept for four days and then deleted.
 
