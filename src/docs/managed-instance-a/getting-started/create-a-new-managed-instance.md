@@ -47,7 +47,7 @@ Once VPC, Subnets, Product, Image and Preferred Instance type are selected, Spot
 
 7. You can edit the additional Spot Market selection via the Spot Instance Types table below. The more node types selected here, the higher the chance of finding the optimal spot node to launch in terms of cost and availability.
 
-<img src="/managed-instance/_media/gettingstarted-create-new-07.png" />
+<img src="/managed-instance-a/_media/create-new-g.png" />
 
 8. Fill in any User Data or Shutdown Scripts you would like to run upon node launch or termination.
 9. Shutdown Script requires an Agent to be installed via the User Data. Clicking on the `Add Agent installation to User Data` link will automatically add the required bash script to the User Data section.
@@ -129,7 +129,7 @@ Click Next.
 
 The review tab provides a quick summary of your configuration.
 
-<img src="/managed-instance/_media/gettingstarted-create-new-18.png" />
+<img src="/managed-instance-a/_media/create-new-f.png" />
 
 In addition, you can view the full JSON file, and turn on Edit mode to edit it manually.
 
