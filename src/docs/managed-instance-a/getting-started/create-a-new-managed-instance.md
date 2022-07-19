@@ -18,11 +18,11 @@ Before you can create a stateful node, you need to do the following:
 
 <img src="/managed-instance-a/_media/create-new-a.png" />
 
-2. Mark the use case Create a New Managed Instance, as shown below, and click Select.
+2. Mark the use case Create a New Stateful Node, as shown below, and click Select.
 
 <img src="/managed-instance-a/_media/create-new-b.png" />
 
-3. Complete the steps in the Create Managed Instance wizard as described below.
+3. Complete the steps in the Create Stateful Node wizard as described below.
 
 ## Step 1: Configuration Tab
 
@@ -34,18 +34,18 @@ Before you can create a stateful node, you need to do the following:
 
 <img src="/managed-instance/_media/gettingstarted-create-new-04.png" />
 
-3. Fill out Instance settings section.
-4. Configure Network and Security settings such as VPC, Key Pair, Security Groups, Subnets and Instance Profile.
+3. Fill out Node settings section.
+4. Configure Network and Security settings such as VPC, Key Pair, Security Groups, Subnets and Node Profile.
 5. Choose the Product type and the AMI used to launch the node. You can specify your our own AMI, or select one of the images suggested in the common images menu.
-6. Select a Preferred Instance type. The node type selected here will be the preferred type for Spot nodes, and also used as an On-Demand type to fall back to in case no suitable Spot capacity is available.
+6. Select a Preferred Node type. The node type selected here will be the preferred type for Spot nodes, and also used as an On-Demand type to fall back to in case no suitable Spot capacity is available.
 
 <img src="/managed-instance/_media/gettingstarted-create-new-05.png" width="451" height="494" />
 
-Once VPC, Subnets, Product, Image and Preferred Instance type are selected, Spot will automatically preselect optional similar Spot Markets to ensure optimized cost efficiency. The Spot Market Scoring Table on the right side will be populated:
+Once VPC, Subnets, Product, Image and Preferred Node type are selected, Spot will automatically preselect optional similar Spot Markets to ensure optimized cost efficiency. The Spot Market Scoring Table on the right side will be populated:
 
 <img src="/managed-instance-a/_media/create-new-d.png" />
 
-7. You can edit the additional Spot Market selection via the Spot Instance Types table below. The more node types selected here, the higher the chance of finding the optimal spot node to launch in terms of cost and availability.
+7. You can edit the additional Spot Market selection via the Spot Node Types table below. The more node types selected here, the higher the chance of finding the optimal spot node to launch in terms of cost and availability.
 
 <img src="/managed-instance-a/_media/create-new-g.png" />
 
@@ -54,11 +54,11 @@ Once VPC, Subnets, Product, Image and Preferred Instance type are selected, Spot
 
 <img src="/managed-instance/_media/gettingstarted-create-new-08.png" />
 
-10. Add any custom Instance Tags by typing in the Key and Value and clicking `Add`:
+10. Add any custom Node Tags by typing in the Key and Value and clicking `Add`:
 
 <img src="/managed-instance/_media/gettingstarted-create-new-09.png" width="438" height="154" />
 
-11. Fill out any additional settings such as detailed monitoring for Amazon CloudWatch, EBS optimization, Burstable CPU for T2 or 3 instances, IPv6 assignment and Public IP assignment.
+11. Fill out any additional settings such as detailed monitoring for Amazon CloudWatch, EBS optimization, Burstable CPU for T2 or 3 nodes, IPv6 assignment and Public IP assignment.
 
 <img src="/managed-instance/_media/gettingstarted-create-new-10.png" />
 
@@ -66,7 +66,7 @@ Once VPC, Subnets, Product, Image and Preferred Instance type are selected, Spot
 
 ## Step 2: Persistent Resources Tab
 
-On this tab you choose which resources your Managed Instance will persist.
+On this tab you choose which resources your Stateful Node will persist.
 
 ### Select Storage Persistence options.
 
@@ -83,7 +83,7 @@ The creation of a Stateful Node requires at least one of the following persisten
 
 Private IP can be persisted by maintaining the Node's ENI across replacements. Optionally, specify a particular Private IP to maintain.
 
-> **Tip**: Persisting Private IP will limit the Managed Instance to a single AZ.
+> **Tip**: Persisting Private IP will limit the Stateful Node to a single AZ.
 
 Public IP can be persisted by selecting an Elastic IP.
 
@@ -112,7 +112,7 @@ Public IP can be persisted by selecting an Elastic IP.
 ### Configure Scheduled Actions
 
 - You can choose one of two options – predetermined Running hours, or custom scheduled actions.
-  - With the `Run instance only during these hours` option, once you configure the time window the stateful node will be `Paused` outside of it. At the beginning of the next window, it will be automatically `Resumed` along with its persisted resources.
+  - With the `Run node only during these hours` option, once you configure the time window the stateful node will be `Paused` outside of it. At the beginning of the next window, it will be automatically `Resumed` along with its persisted resources.
 
 <img src="/managed-instance/_media/gettingstarted-create-new-16.png" />
 
