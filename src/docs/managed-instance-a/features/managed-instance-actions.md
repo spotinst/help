@@ -18,4 +18,4 @@ Initiates a Pause operation, immediately followed by a Resume operation.
 
 ## Delete
 
-Delete the Stateful Node entity with its resources and terminate the EC2 instance. A dialogue appears which allows the user to choose which resources will be deleted. The last snapshot (and in cases of re-attach – the volumes) will be kept for 96 hours (configurable). When deleting a machine, its data will be lost.
+Delete the Stateful Node entity with its resources and terminate the EC2 node. A dialogue appears which allows the user to choose which resources will be deleted. The last snapshot (and in cases of re-attach – the volumes) will be kept for 96 hours (configurable). When deleting a machine, its data will be lost.
