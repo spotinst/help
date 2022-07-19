@@ -6,7 +6,7 @@ Spot Stateful Nodes can be configured to receive traffic from Amazon Route 53 or
 - ALB – Application Load Balancer Target Group
 - MLB – Spot Multai Load Balancer Target Set
 
-Once one or more load balancers are specified, Stateful Nodes will register managed EC2 nodes with the required load balancers upon launch. In addition, Stateful Nodes will also de-register nodes from the load balancer upon termination.
+Once one or more load balancers are specified, Stateful Nodes will register stateful EC2 nodes with the required load balancers upon launch. In addition, Stateful Nodes will also de-register nodes from the load balancer upon termination.
 
 ## Integrate Load Balancer or Route 53
 
