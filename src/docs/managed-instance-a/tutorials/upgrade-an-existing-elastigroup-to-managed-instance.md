@@ -1,4 +1,4 @@
-# Upgrade an Existing Elastigroup to Stateful Nodes
+# Upgrade an Elastigroup to Stateful Nodes
 
 This procedure describes how to upgrade an existing Elastigroup to a stateful node.
 
