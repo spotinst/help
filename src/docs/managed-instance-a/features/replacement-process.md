@@ -49,4 +49,4 @@ This is a strategic replacement intended to change the market of the underlying 
 
 ## What’s Next?
 
-Learn more about [Managed Instance Actions](managed-instance/features/managed-instance-actions).
+Learn more about [Stateful Node Actions](managed-instance/features/managed-instance-actions).
