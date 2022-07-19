@@ -43,7 +43,7 @@ This is a strategic replacement intended to revert back to spot after falling ba
 - Timeframe: When the configured time window is reached.
 - Always: Once available spot capacity is detected, perform the replacement.
 
-### Revert to Preferred Instance Types
+### Revert to Preferred Node Types
 
 This is a strategic replacement intended to change the market of the underlying spot node to a preferred type. This is performed according to the maintenance window configuration.
 
