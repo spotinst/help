@@ -103,7 +103,7 @@ For more information about the specific APIs, see Initiate Cluster Roll: [AKS](h
    - Comment. A brief note indicating the reason for the roll.
    - Respect Pod Disruption Budget. Leave the default setting marked, or unmark this if you do not want to respect the PDB.
 
-<img src="/ocean/_media/features-roll-02a.png" width="313" height="211" />
+<img src="/ocean/_media/features-roll-a.png" />
 
 3. Click Roll.
 
@@ -123,7 +123,7 @@ For more information about the specific APIs, see Initiate Cluster Roll: [AKS](h
 
 4. Enter the Batch Size and Comments, indicate whether you want to respect the pod disruption budget, and click Roll VNG(s).
 
-<img src="/ocean/_media/features-roll-02a-4.png" width="342" height="346" />
+<img src="/ocean/_media/features-roll-b.png" />
 
 ## Monitor The Roll
 
