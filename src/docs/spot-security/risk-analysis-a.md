@@ -17,7 +17,7 @@ Clicking on a specific risk level will open the rules and specify the category o
 
 ## List of Risks
 
-Spot Security has a library of over 150 Security Rules that they assess 12+ different Asset Types including EC2, S3 buckets, IAM groups, etc.
+Spot Security has a library of over 150 security rules that they assess over twelve different asset types including EC2, S3 buckets, IAM groups, etc.
 
 <img src="/spot-security/_media/risk-analysis-b.png" />
 
@@ -26,7 +26,7 @@ Expanding on any of the security rules gives you the list of assets which are at
 
 ### Risk Info Panel
 
-To get more details about a Risk, click on Asset Name and a panel opens on the right with details about the asset and suggestions for further action.
+To get more details about a risk, click Asset Name and a panel opens on the right with details about the asset and suggestions for further action.
 
 Items that are marked as Easy Remediation are items that can be remediated immediately.
 
@@ -50,7 +50,7 @@ To view the affected resources, click on View Affected Resources in the bottom o
 
 The following information appears:
 * A Risk Impact Map: provides information on how many other assets are linked to each asset. To learn more about the Risk Impact Map, click here link to RIsk Details page.
-* Affected Resources details: shows a summary of affected resources which includes the total number of each type of resource. To learn more about the Affected Resources, click here link to RIsk Details page.
+* Affected Resources details: shows a summary of affected resources which includes the total number of each type of resource. To learn more about affected resources, click here link to Risk Details page.
 
  <img src="/spot-security/_media/risk-analysis-d.png" />
 
