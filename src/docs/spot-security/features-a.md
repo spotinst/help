@@ -14,7 +14,7 @@ Spot Security’s Risk Analysis shows you the security risks discovered in your 
 
 You can filter the findings based on a limitless number of different cloud accounts, regions and asset types. Risks are classified as high, medium or low in order to give you a prioritized view of them.
 
-You can also have a broader view of the number of affected resources. This broader view of the individual risk enables you to see Risk Maps for each risk and see the attacked surface.
+You can also have a broader view of the number of affected resources. This broader view of the individual risk enables you to see risk maps for each risk and see the attacked surface.
 
 ### Preset View
 
