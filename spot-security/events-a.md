@@ -1,15 +1,16 @@
 # Events
 
-For your reference, Spot Security provides a list of all events that have occurred on your cloud network (within a defined time period). Statistics are provided to help you see the big picture, and details about each event are also available.
+FSpot Security strives to reduce the Signal-to-Noise ratio of cloud security events for the users and highlight the events that have occurred on your cloud network within a defined time period based on event security.
 
-To view the Events, go to Spot Security in the left tree of the console and click Events.
-
-## Filters and Presets
-
-The default filter or preset on this page is the same filter or preset that you chose on the Dashboard. You can change the filters or choose a different preset from the list of presets. You can view the core statistics of the presets on this page.
+To view the Events, go to Spot Security in the left menu of the console and click Events.
 
 ## Event Overview
-The overview tab provides the following information:
+You can choose to see the events of a particular cloud account, asset type, or region or view all events altogether. In addition, users can select a time range across which they wish to see the events.
+
+You can select a time range to view among two hours, six hours, one day or a custom date and time in the top right corner. The selected time changes the data for the events overview as well as the events trendline.
+
+Spot Security classifies the events into the following categories:
+
 * Configuration Change
 * IAM Change
 * Critical Event
@@ -24,7 +25,7 @@ This chart shows the risks for each event type over specific time ranges. Filter
 
 ## List of Events
 
-The All Events tab provides a list of events from the AWS CloudTrail log and includes those within the filters or preset you defined. In addition, you can use the filters that appear in the table. The default time period is the last 24 hours. You can change the time period as needed.
+The All Events tab provides a list of events based on the time range or preset you defined. In addition, you can use the filters that appear in the table.
 
 <img src="/spot-security/_media/events-b.png" />
 
@@ -39,10 +40,20 @@ For each event, you can see the:
 * Source
 * Suppress
 
-In addition, you can click the arrow by an event and see more details including:
-* Affected Resources
-* Risks
-* Event Detail Record
+## Event Details
+Clicking on an individual event, gives you the following details:
+* Affected Assets: List of all of the assets that are impacted by an event.
+* Security Rules: List of all the security rules which were assessed for determining an event.
+* Event Details: Further information about an event such as event time, user, event name and source, etc.
+
+### Event Impact Map:
+For each Security Rule, you can see the Event Impact Map to visualize the asset network.
+
+
+
+### Event Detail Record
+
+Event Detail Records present the time of an event, the source, region and more for each event.
 
 <img src="/spot-security/_media/events-c.png" />
 
