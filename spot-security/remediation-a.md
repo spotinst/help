@@ -14,7 +14,7 @@ In the Security Dashboard, go to one of the Highest Impact Recommendations and c
 1. Under the Risk Analysis page, click on the Asset Detail of any of the Assets. Using the sidebar, click on Remediation Steps.
 <img src="/spot-security/_media/remediation-b.png" />
 
-2. Use the three dot Action button placed on the right side of each Asset and click on Remediate.
+2. Click Action on the right side of each asset and click Remediate.
 <img src="/spot-security/_media/remediation-g.png" />
 
 ## Ways to Remediate
@@ -24,7 +24,7 @@ The Remediation page shows the name of the risk at the top, the risk details in 
 ### Using AWS CLI
 The default method displayed provides the steps for using AWS CLI. You can copy and paste the commands illustrated in the steps, and you can also edit the commands directly in the console before copying them for use in the CLI.
 
-Spot Security provides guided remediation of assets. You only need to replace the placeholder values to the actual asset details that they are remediating.
+Spot Security provides guided remediation of assets. You only need to replace the placeholder values to the actual asset details that they remediate.
 
 <img src="/spot-security/_media/remediation-c.png" />
 
