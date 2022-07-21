@@ -17,6 +17,6 @@ Before you can create a stateful node, you need to do the following:
 1. Go to the dashboard of your stateful Elastigroup.
 2. In the top right of the dashboard, click Upgrade to Stateful Node.
 
-<img src="/managed-instance/_media/gettingstarted-upgrade-01.png" />
+<img src="/managed-instance-a/_media/gettingstarted-upgrade-01.png" />
 
 3. If you have additional stateful Elastigroups you would like to upgrade, repeat the procedure.
