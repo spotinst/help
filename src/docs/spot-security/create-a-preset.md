@@ -1,7 +1,7 @@
 # Create a Preset
 
-A preset is a set of filter settings that you have saved and can access for later use in the Security Dashboard. Presets are great when you need to see security summaries for specific accounts, services, and regions.
-Presets have user preference retention and when they are created by one user, they will not be visible to another user. The default preset settings will be specific to each user.
+A preset is a set of filter settings that you have saved and can access for later use in the Security Dashboard. Presets enable you to see security summaries for specific accounts, services, and regions.
+Presets have user preference retention and when they are created by one user, they will not be visible to another user. The default preset settings are specific to each user.
 
 ## Create a Preset
 
