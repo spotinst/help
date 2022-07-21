@@ -11,7 +11,7 @@ A topology map can be created for different cloud accounts, regions, virtual pri
 <img src="/spot-security/_media/topology-a.png" />
 
 ## Create a Service Map
-A Service Map shows how the different assets of your choice are interconnected in a network .
+A Service Map shows how the different assets of your choice are interconnected in a network.
 
 To create a new Service Map, do the following:
 1. Click + Create New Map.
@@ -37,6 +37,7 @@ Users can also view the overall list of service maps created by clicking on the 
 1. Delete a Service Map.
 2. Set it as Default so that it appears as the default map on the Topology view.
 3. Edit and save changes:
+
 a. Remame it.  
 b. Delete one or more nodes previously selected.
 You can also create a new service map from this view.
