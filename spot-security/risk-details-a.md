@@ -16,7 +16,7 @@ The risk impact map illustrates the relations of the various services, policies,
 If a resource is having a security issue, such as a misconfiguration, the map will show other resources that may be impacted. You can click on any resource icon, and you will be able to see details about that resource on a panel on the right.
 
 ## Affected Resources
-A list of Affected Resources can be found under the Impact Map. The list of affected resources provides information of services and presets that are impacted by a risk. For each type, you can click the arrow to see the full list of resources of that type.
+The Affected Resources list can be found under the Impact Map. The list of affected resources provides information of services and presets that are impacted by a risk. For each type, you can click the arrow to see the full list of resources of that type.
 
 The Presets list presents the presets that an asset is a part of.
 
