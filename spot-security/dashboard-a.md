@@ -17,8 +17,8 @@ The large tile at the top provides your main security stats:
 * Checks Passed: The total number of security rules passed for all of your assets
 * Resources Scanned: Under Identified Risks, Spot displays the total number of resources scanned for the given analysis and the date and time of the last Scan.
 * New Risks Identified: Number of new risks identified in the latest scan of your assets compared to the last scan.
-* Risk Across Regions: The map shows the number of risks in each region where you have resources. Hover over the circle charts to see the number of Low, Medium, and High risks.
-* Breakdown by Severity: A color key shows the total number of risks per severity level including High, Medium, and Low, along with the number of new risks identified in the last scan completed.
+* Risk Across Regions: The map shows the number of risks in each region where you have resources. Hover over the circle charts to see the number of low, medium, and high risks.
+* Breakdown by Severity: A color key shows the total number of risks per severity level including  high, medium, and low, along with the number of new risks identified in the last scan completed.
 
 <img src="/spot-security/_media/spot-security-dashboard-a.png" />
 
@@ -34,12 +34,12 @@ Spot Security helps you prioritize risks by giving recommendations of risks with
 
 <img src="/spot-security/_media/spot-security-dashboard-c.png" />
 
-By default, the alert with the highest level impact appears in the tile. You can click the arrow to scroll through up to five risks. If a risk is remediated, the next risk with the highest impact will appear here. Highest Impact Recommendations are determined by considering the Risk Score of the Assets, the number of Affected Resources, and if the asset is or is linked to an internet-facing asset.
+By default, the alert with the highest level impact appears in the tile. You can click the arrow to scroll through up to five risks. If a risk is remediated, the next risk with the highest impact will appear here. Highest Impact Recommendations are determined by considering the risk score of the assets, the number of affected resources, and if the asset is or is linked to an internet-facing asset.
 When you click Remediate Risk Now, Spot Security provides guided remediation actions to fix the security issue.
 
 ### Most Prevalent Alerts
 
-This tile shows the most prevalent alerts detected in your environment. The default view shows the top three alerts. Click the arrow to see the other top alerts.
+This tile shows the most prevalent alerts detected in your environment. The default view shows the top three alerts. Click the arrow to see the other important alerts.
 
 <img src="/spot-security/_media/spot-security-dashboard-d.png" />
 
