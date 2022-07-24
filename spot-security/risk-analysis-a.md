@@ -52,7 +52,7 @@ The following information appears:
 * A Risk Impact Map: provides information on how many other assets are linked to each asset. To learn more about the Risk Impact Map, click here link to RIsk Details page.
 * Affected Resources details: shows a summary of affected resources which includes the total number of each type of resource. To learn more about affected resources, click here link to Risk Details page.
 
- <img src="/spot-security/_media/risk-analysis-d.png" />
+ <img src="/spot-security/_media/risk-analysis-e.png" />
 
  To see a list of resources in each type, click the arrow.
 
