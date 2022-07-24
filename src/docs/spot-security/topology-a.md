@@ -1,9 +1,11 @@
 # Topology
+
 Spot Security gives you easy visibility over your network topology with several types of views. Topology view enables you to view the assets of your interest and determine potential attack paths.
 
 To view the topology, in the left menu of the Spot Security console, click Topology.
 
 ## Topology Views
+
 Topology view gives you a comprehensive visibility into the interconnections of your network, which help you understand the impact of various security risks as well as determine an attacker’s potential path to your individual assets
 
 A topology map can be created for different cloud accounts, regions, virtual private clouds, and nodes (i.e., assets). You can create a Topology service map of up to ten nodes across the different asset types, regions, VPCs, and severity of risks.
@@ -11,6 +13,7 @@ A topology map can be created for different cloud accounts, regions, virtual pri
 <img src="/spot-security/_media/topology-a.png" />
 
 ## Create a Service Map
+
 A Service Map shows how the different assets of your choice are interconnected in a network.
 
 To create a new Service Map, do the following:
@@ -25,14 +28,16 @@ To create a new Service Map, do the following:
 6. The new service map is also added to the list of services on the Topology page.
 
 ### Use a Saved Service Map
+
 To change the service map used in the topology, do the following:
 1. In any of the topology views, click the down arrow or the current map name by Service Map.
 
 <img src="/spot-security/_media/topology-c.png" />
 
-In the dropdown, click the name of the new service map. A different topology map will appear showing the instances and relevant connections of the new map.
+2. In the dropdown, click the name of the new service map. A different topology map will appear showing the instances and relevant connections of the new map.
 
 ### Service Map List
+
 Users can also view the overall list of service maps created by clicking on the service map list on the top right corner of the page. You can perform the following functions on the service maps previously created:
 1. Delete a service map.
 2. Set it as the default so in order to appear as the default map on the Topology view.
