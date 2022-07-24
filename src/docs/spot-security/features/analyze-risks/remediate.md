@@ -1,6 +1,6 @@
 <meta name="robots" content="noindex">
 
-# Remediate 
+# Remediate
 
 In line with the Spot Security methodology of Analyze, Detect, Act, the primary purpose of the Remediation feature is to enable you to act swiftly once your risks have been detected.
 
@@ -48,7 +48,7 @@ Spot Security provides guided remediation of assets. You only need to replace th
 
 ## Mark as Remediated
 
-Once you have completed your changes, click Mark as Remediated in the sidebar on the right. Then, the risk will be indicated as Risk Remediated in the Dashboard along with the details of the user who marked it as Remediated.
+Once you have completed your changes, click Mark as Remediated in the sidebar on the right. Then, the risk will be indicated as Risk Remediated in the dashboard along with the details of the user who marked it as remediated.
 
 ## What’s Next?
 Learn more about how the Topology view can help you in your security analysis.
