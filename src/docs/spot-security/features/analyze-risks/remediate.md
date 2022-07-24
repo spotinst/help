@@ -1,6 +1,6 @@
 <meta name="robots" content="noindex">
 
-# Remediate
+# Remediate 
 
 In line with the Spot Security methodology of Analyze, Detect, Act, the primary purpose of the Remediation feature is to enable you to act swiftly once your risks have been detected.
 
@@ -9,20 +9,16 @@ In line with the Spot Security methodology of Analyze, Detect, Act, the primary 
 There are several ways to get to the Remediation page.
 
 **From the Dashboard**:
+In the Security Dashboard, go to one of the Highest Impact Recommendations and click Remediate Risk Now.
 
-In the [Security Dashboard](spot-security/security-dashboard/), go to one of the Highest Impact Recommendations and click Remediate Risk Now.
-
-<img src="/spot-security/_media/features-remediation-01.png" width="423" height="137" />
+<img src="/spot-security/_media/remediation-a.png" />
 
 **From Risk Analysis**:
+1. Under the Risk Analysis page, click on the Asset Detail of any of the Assets. Using the sidebar, click on Remediation Steps.
+<img src="/spot-security/_media/remediation-b.png" />
 
-In the sidebar of the [Risk Analysis](spot-security/features/analyze-risks/) page, click Remediation Steps.
-
-<img src="/spot-security/_media/features-remediation-02.png" />
-
-**From Risk Analysis Details**:
-
-In the sidebar of the [Risk Analysis Details](spot-security/features/analyze-risks/view-risk-details) page, click Remediation Steps.
+2. Click Action on the right side of each asset and click Remediate.
+<img src="/spot-security/_media/remediation-g.png" />
 
 ## Ways to Remediate
 
@@ -32,28 +28,27 @@ The Remediation page shows the name of the risk at the top, the risk details in 
 
 The default method displayed provides the steps for using AWS CLI. You can copy and paste the commands illustrated in the steps, and you can also edit the commands directly in the console before copying them for use in the CLI.
 
-<img src="/spot-security/_media/features-remediation-03.png" />
+Spot Security provides guided remediation of assets. You only need to replace the placeholder values to the actual asset details that they remediate.
+
+<img src="/spot-security/_media/remediation-c.png" />
 
 ### Using AWS Console
 
 This tab specifies the steps you need to complete to implement the remediation in the AWS Console.
 
-<img src="/spot-security/_media/features-remediation-04.png" width="332" height="159" />
-
-The relevant data fields you need to change in the AWS console are indicated by a colored rectangle.
-
-<img src="/spot-security/_media/features-remediation-05.png" width="547" height="160" />
+<img src="/spot-security/_media/remediation-e.png" />
 
 ### Using Python
 
-For using Python, this tab shows the necessary Python code.
+For using Python, this tab shows the necessary Python code. In addition, you can write Lambda functions to automate remediation using the Python script. Therefore, Spot can automate remediations of security issues.
 
-<img src="/spot-security/_media/features-remediation-06.png" />
+Spot Security provides guided remediation of assets. You only need to replace the placeholder values to the actual asset details that they are remediating.
+
+<img src="/spot-security/_media/remediation-f.png" />
 
 ## Mark as Remediated
 
-Once you have completed your changes, click Mark as Remediated in the sidebar on the right. Then, the risk will be indicated as Risk Remediated in the Dashboard and the Risk Analysis pages. The Risk Remediated tag will appear until the next scan is complete.
+Once you have completed your changes, click Mark as Remediated in the sidebar on the right. Then, the risk will be indicated as Risk Remediated in the Dashboard along with the details of the user who marked it as Remediated.
 
 ## What’s Next?
-
-Learn more about how the [Topology](spot-security/features/topology) views can help you in your security analysis.
+Learn more about how the Topology view can help you in your security analysis.
