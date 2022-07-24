@@ -34,12 +34,11 @@ In the dropdown, click the name of the new service map. A different topology map
 
 ### Service Map List
 Users can also view the overall list of service maps created by clicking on the service map list on the top right corner of the page. You can perform the following functions on the service maps previously created:
-1. Delete a Service Map.
-2. Set it as Default so that it appears as the default map on the Topology view.
-3. Edit and save changes:
+1. Delete a service map.
+2. Set it as the default so in order to appear as the default map on the Topology view.
+3. Remame the service map.
+4. Delete one or more nodes there were previously selected.
 
-a. Remame it.  
-b. Delete one or more nodes previously selected.
 You can also create a new service map from this view.
 
 <img src="/spot-security/_media/topology-d.png" />
