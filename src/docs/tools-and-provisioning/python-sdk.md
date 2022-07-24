@@ -5,6 +5,3 @@ You can use a Python client library for accessing the Spot API. For detailed inf
 ## What's Next?
 
 Learn more about Spot's integration with CI/CD pipeline tools such as [Chef](tools-and-provisioning/ci-cd/chef.md), [Gitlab](tools-and-provisioning/ci-cd/gitlab.md), and [Jenkins](tools-and-provisioning/ci-cd/jenkins.md).
-
-<script src="https://asciinema.org/a/14.js" id="asciicast-14" async></script>
-<a href="https://asciinema.org/a/14"><img src="https://asciinema.org/a/14.png" width="836"/></a>
