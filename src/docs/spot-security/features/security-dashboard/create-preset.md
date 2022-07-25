@@ -7,38 +7,38 @@ Presets have user preference retention and when they are created by one user, th
 
 ## Create a Preset
 
-Go to the Spot Security dashboard.
+1. Go to the Spot Security dashboard.
 
  <img src="/spot-security/_media/spot-security-dashboard-b.png" />
 
-1. Enter the filter settings that you would like to save and use again.
-2. Click + Create Preset From Filters.
+2. Enter the filter settings that you would like to save and use again.
+3. Click + Create Preset From Filters.
 
  <img src="/spot-security/_media/create-presets.png" />
 
- 3. Enter a name for the preset, mark if you want to save this preset as the default, and click Save. For your first preset, you do not need to mark the default box.
+4. Enter a name for the preset, mark if you want to save this preset as the default, and click Save. For your first preset, you do not need to mark the default box.
 
 Once you have created a new preset, the name will appear as part of the Security Summary title.
 
 ## Use a Saved Preset
 
-To apply a saved preset, click the down arrow next to the Security Summary title.
+1. To apply a saved preset, click the down arrow next to the Security Summary title.
 
  <img src="/spot-security/_media/features-dashboard-presets-03.png" width="466"/>
 
- A list of presets will appear in the dropdown. Click the preset you want to use.
+2. A list of presets will appear in the dropdown. Click the preset you want to use.
 
   <img src="/spot-security/_media/features-dashboard-presets-04.png" width="186"/>
 
-  If the list is long, type the first few letters of the preset name in the search box and click search.
+3. If the list is long, type the first few letters of the preset name in the search box and click search.
 
 ## Edit or Delete a Preset
 
-  The edit function enables you to change the preset name or to change the default. To make one of these changes, go to the preset in the dropdown list and click the pencil icon in the same row. Make your changes and save.
+The edit function enables you to change the preset name or to change the default. To make one of these changes, go to the preset in the dropdown list and click the pencil icon in the same row. Make your changes and save.
 
-    <img src="/spot-security/_media/features-dashboard-presets-05.png" />
+  <img src="/spot-security/_media/features-dashboard-presets-05.png" />
 
-    To delete the preset, click the trash can icon and confirm that you want to delete.
+To delete the preset, click the trash can icon and confirm that you want to delete.
 
 ## What's Next?
 
