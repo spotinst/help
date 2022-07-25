@@ -24,7 +24,7 @@ Once you have created a new preset, the name will appear as part of the Security
 
 1. To apply a saved preset, click the down arrow next to the Security Summary title.
 
- <img src="/spot-security/_media/features-dashboard-presets-03.png" width="466"/>
+ <img src="/spot-security/_media/features-dashboard-presets-03.png" width="300"/>
 
 2. A list of presets will appear in the dropdown. Click the preset you want to use.
 
@@ -36,7 +36,7 @@ Once you have created a new preset, the name will appear as part of the Security
 
 The edit function enables you to change the preset name or to change the default. To make one of these changes, go to the preset in the dropdown list and click the pencil icon in the same row. Make your changes and save.
 
-  <img src="/spot-security/_media/features-dashboard-presets-05.png" />
+  <img src="/spot-security/_media/features-dashboard-presets-05.png" width="185"/>
 
 To delete the preset, click the trash can icon and confirm that you want to delete.
 
