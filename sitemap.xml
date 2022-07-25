@@ -3312,25 +3312,11 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-pc/tutorials/setup-mfa-conditional-access"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/spot-security/administration</loc>
+        <loc>https://docs.spot.io/?/spot-security/features/administration</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-security/administration"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-security/administration"/>
-    </url>
-    <url>
-        <loc>https://docs.spot.io/?/spot-security/compliance-a</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-security/compliance-a"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-security/compliance-a"/>
-    </url>
-    <url>
-        <loc>https://docs.spot.io/?/spot-security/dashboard-a</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-security/dashboard-a"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-security/dashboard-a"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-security/features/administration"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-security/features/administration"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/spot-security/features/analyze-risks/</loc>
@@ -3352,6 +3338,13 @@
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-security/features/analyze-risks/view-risk-details"/>
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-security/features/analyze-risks/view-risk-details"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-security/features/compliance</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-security/features/compliance"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-security/features/compliance"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/spot-security/features/events</loc>
