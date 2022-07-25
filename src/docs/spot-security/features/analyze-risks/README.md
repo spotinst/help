@@ -1,64 +1,95 @@
 <meta name="robots" content="noindex">
 
-# Risk Analysis
+# Analyze Risks
 
-The risk analysis feature provides visibility into your risks on several levels of granularity including a top-level aggregation per risk level, a listing of all risks, and a drill-down level of [Risk Details](spot-security/features/analyze-risks/view-risk-details) per each risk.
+The risk analysis feature provides visibility into your risks on several levels of granularity including a top-level aggregation per risk level, a list of all risks, and a drill-down level of Risk Details(link to Risk Details page) per each risk.
 
 To analyze your risks, go to Spot Security in the left tree of the console and click Risk Analysis.
 
 ## Filters and Presets
 
-The default filter or preset on this page is the same filter or preset that you chose on the Dashboard. You can change the filters or choose a different preset from the list of presets.
+You can use the filters to customize the findings as per their requirements. Different teams can create presets based on the AWS accounts, regions, or asset types that they are responsible for. You can also set a preset as a default view to help focus only on the necessary findings.
 
 ## Risk Totals per Level
 
 This top-level view shows the total number of risks per risk-level. Each level also shows the number of new risks identified since the last scan.
+Clicking on a specific risk level will open the rules and specify the category of assets it belongs to.
 
-<img src="/spot-security/_media/features-analyze-risks-01.png" />
+<img src="/spot-security/_media/risk-analysis-a.png" />
 
 ## List of Risks
 
-To see the full list of risks for a particular risk level, click on the arrow for that risk level.
+Spot Security has a library of over 150 security rules that they assess over twelve different asset types including EC2, S3 buckets, IAM groups, etc.
 
-<img src="/spot-security/_media/features-analyze-risks-02.png" />
+<img src="/spot-security/_media/risk-analysis-b.png" />
 
-The example above shows the expanded list of high risks. You can sort the list by risk score or by recommended remediation. Items that have an easy remediation are flagged so you can take care of them right away.
+The example above shows the expanded list of high risks. You can filter the list by risk score, by recommended remediation effort (advanced or low), services and/or by risk status (open, remediated or new).
+Expanding on any of the security rules gives you the list of assets which are at risk because of that security rule. Clicking on any of the assets will give the user further information of the asset.
 
-## Risk Info Sidebar
+### Risk Info Panel
 
-To read basic information about a risk, click on the risk. A sidebar appears on the right with some details about the risk and suggestions for further action.
+To get more details about a risk, click Asset Name and a panel opens on the right with details about the asset and suggestions for further action.
 
-<img src="/spot-security/_media/features-analyze-risks-03.png" width="334" height="449" />
+Items that are marked as Easy Remediation are items that can be remediated immediately.
 
-The risk sidebar includes the risk title, a brief description, and an option to change the risk level. You change the risk level only if you have the permissions for that. The sidebar also includes the following information about the risk:
+<img src="/spot-security/_media/risk-analysis-h.png" width="334"/>
 
-- Severity
-- Risk Score
-- Resources Affected: The total number of affected resources within the filters or preset selected.
-- Account
-- Status
-- Days Open
-- Last Scanned: Date and time of the last scan.
-- First Discovered: Date and time the risk was detected.
-- User
-- Rule ID
-
-### Affected Resources
-
-The sidebar shows a summary of affected resources which includes the total number of each type of resource.
-
-<img src="/spot-security/_media/features-analyze-risks-04.png" width="318" height="117" />
-
-To see a list of resources in each type, just click the arrow.
-
-### Remediation Steps
-
-When you click this button, you go directly to the remediation for this risk in the Remediation module. If you decide to take the recommendation, you can take immediate action.
+The risk panel includes the risk title, a brief description, and an option to change the risk level. You can change the risk level only if you have the permissions to do so. The panel also includes the following information about the risk:
+* Severity and Rule ID of the security rule failing at that asset
+* Resources Affected gives a view of the assets that are further impacted by this asset
+* The cloud account the asset belongs to
+* Status of the security rule
+* Number of days the issue is open
+* Last date scanned
+* First date discovered
+* User
 
 ### View Affected Resources
 
-Click this button to go to the [Risk Details](spot-security/features/analyze-risks/view-risk-details) page, which shows more information about the risk, including a risk impact map.
+To view the affected resources, click on View Affected Resources in the bottom of the sidebar.
+
+ <img src="/spot-security/_media/risk-analysis-i.png" width="339"/>
+
+The following information appears:
+* A Risk Impact Map: provides information on how many other assets are linked to each asset. To learn more about the Risk Impact Map, click here link to RIsk Details page.
+* Affected Resources details: shows a summary of affected resources which includes the total number of each type of resource. To learn more about affected resources, click here link to Risk Details page.
+
+ <img src="/spot-security/_media/risk-analysis-e.png" />
+
+ To see a list of resources in each type, click the arrow.
+
+ To view more details of a risk, click here Risk Details(link to description of Risk Details) page, which shows more information about the risk, including a risk impact map.
+
+### Remediation Steps
+
+To receive a recommendation to remediate a risk, click Remediation Steps. If you decide to take the recommendation, you can take immediate action.
+To learn more about remediating, click here (link to Remediation page).
+
+## Actions
+
+In the Actions column in the asset list, click the three dots of an asset to do the following:
+1. Remediate: view information of the remediation steps.
+2. View Details: view the Risk Map of the asset along with the asset details and affected resources.
+3. Update Severity Level: change the severity level of the particular security rule.
+4. Mark as Remediated: gain quick access to mark the security rule as remediated for an asset.
+
+## Suppress Risks
+
+You can also choose to accept the risk by using the Suppress function which removes the risk from your list.  
+
+ <img src="/spot-security/_media/risk-analysis-e.png" />
+
+To suppress all of the rules together:
+1. Move the Show Suppressed Risks toggle to ON. This shows us all of the risks under a specific rule.
+2. Click the eye icon.
+3. Click Yes, Suppress.
+
+To suppress individual rules:
+1. Move the Show Suppressed Risks toggle to OFF.
+2. Choose a rule.
+3. Click the eye of the rule to suppress.
+
+You can click “Show Suppressed Risks” on the top right corner of the table to show the suppressed risks in the table.
 
 ## What’s Next?
-
-Learn more about how you can [Remediate](spot-security/features/analyze-risks/remediate) your risks.
+Learn more about how you can Remediate your risks.
