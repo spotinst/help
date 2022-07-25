@@ -42,7 +42,7 @@ To change the service map used in the topology, do the following:
 
 Users can also view the overall list of service maps created by clicking on the service map list on the top right corner of the page. You can perform the following functions on the service maps previously created:
 1. Delete a service map.
-2. Set it as the default so in order to appear as the default map on the Topology view.
+2. Set it as the default so it appears as the default map on the Topology view.
 3. Remame the service map.
 4. Delete one or more nodes there were previously selected.
 
