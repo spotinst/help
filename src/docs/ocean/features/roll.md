@@ -92,7 +92,7 @@ For example, you can use:
 
 For more information about the specific APIs, see Initiate Cluster Roll: [AKS](https://docs.spot.io/api/#operation/oceanAzureRollInit), [Kubernetes on AWS](https://docs.spot.io/api/#operation/oceanAwsRollInit), [ECS](https://docs.spot.io/api/#operation/oceanEcsRollInit), [GKE](https://docs.spot.io/api/#operation/oceanGkeRollInit)
 
-## Start A Roll
+## Start A Cluster Roll
 
 1. In your Ocean cluster, go to Actions and click Cluster Roll.
 
