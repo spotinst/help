@@ -51,4 +51,4 @@ You can also create a new service map from this view.
 <img src="/spot-security/_media/topology-d.png" />
 
 ## What’s Next?
-Learn more about the Events(link to the Events page) page, that provides information about all the events in your network.
+Learn more about the [Events](spot-security/features/events) page, that provides information about all the events in your network.
