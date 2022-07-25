@@ -51,4 +51,4 @@ Spot Security provides guided remediation of assets. You only need to replace th
 Once you have completed your changes, click Mark as Remediated in the sidebar on the right. Then, the risk will be indicated as Risk Remediated in the dashboard along with the details of the user who marked it as remediated.
 
 ## What’s Next?
-Learn more about how the Topology view can help you in your security analysis.
+Learn more about how the [Topology view](spot-security/features/topology) can help you in your security analysis.
