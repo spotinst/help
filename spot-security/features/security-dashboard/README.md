@@ -53,4 +53,4 @@ The Risks Over Time chart gives you a view of the risk trends over time. You can
 
 ## What’s Next?
 
-Learn more about the detailed information you can see in the [Risk Analysis](spot-security/features/analyze-risks/) page.
+Learn more about the detailed information you can see in the [Risk Analysis](spot-security/features/analyze-risks) page.
