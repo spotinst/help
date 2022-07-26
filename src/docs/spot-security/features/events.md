@@ -60,4 +60,4 @@ Event Detail Records present the time of an event, the source, region and more f
 <img src="/spot-security/_media/events-d.png" />
 
 ## What’s Next?
-Learn more about the Spot Security Inventory(link to Inventory page).
+Learn more about Spot Security [Inventory](spot-security/features/inventory).
