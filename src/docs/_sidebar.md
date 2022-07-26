@@ -11,7 +11,7 @@
 - [**Managed Instance**](managed-instance/)
 - [**Eco**](eco/)
 - [**Cloud Analyzer**](cloud-analyzer/)
-- [**Spot Security**](spot-security/)
+- [**Security**](spot-security/)
 - [**Spot PC**](spot-pc/)
 - [**Administration**](administration/)
 - [**Tools & Provisioning**](tools-and-provisioning/)
