@@ -14,7 +14,7 @@ Prerequisites
 
 <img src="/spot-security/_media/getting-started-a.png" />
 
-Go to Spot Security in the left menu and click Dashboard. You will then be prompted to choose a cloud provider. As of now, Spot Security only supports AWS.
+2. Go to Spot Security in the left menu and click Dashboard. You will then be prompted to choose a cloud provider. As of now, Spot Security only supports AWS.
 
 <img src="/spot-security/_media/getting-started-b.png" />
 
@@ -57,7 +57,8 @@ You need to connect a CloudTrail account to your Spot Security account. If you h
 ### Centralized Bucket
 
 If you have a centralized bucket, choose Yes.
-You can onboard all the dependent accounts in bulk if you have selected a centralized bucket. Select all the accounts you wish to onboard and click Next.
+
+You can connect all of the dependent accounts in bulk if you have selected a centralized bucket. Select all the accounts you wish to onboard and click Next.
 
 <img src="/spot-security/_media/getting-started-h.png" />
 
@@ -83,4 +84,4 @@ Review the information and ensure all details are correct. Choose Finish Onboard
 
 ## What's Next?
 
-Learn more about the continuous [security features](spot-security/features/) in Spot Security.
+Learn more about the [security features](spot-security/features/) in Spot Security.
