@@ -2,7 +2,7 @@
 
 # Analyze Risks
 
-The risk analysis feature provides visibility into your risks on several levels of granularity including a top-level aggregation per risk level, a list of all risks, and a drill-down level of Risk Details(link to Risk Details page) per each risk.
+The risk analysis feature provides visibility into your risks on several levels of granularity including a top-level aggregation per risk level, a list of all risks, and a drill-down level of [Risk Details](spot-security/features/analyze-risks/view-risk-details) per each risk.
 
 To analyze your risks, go to Spot Security in the left tree of the console and click Risk Analysis.
 
@@ -51,19 +51,19 @@ To view the affected resources, click on View Affected Resources in the bottom o
  <img src="/spot-security/_media/risk-analysis-i.png" width="339"/>
 
 The following information appears:
-* A Risk Impact Map: provides information on how many other assets are linked to each asset. To learn more about the Risk Impact Map, click here link to RIsk Details page.
-* Affected Resources details: shows a summary of affected resources which includes the total number of each type of resource. To learn more about affected resources, click here link to Risk Details page.
+* A Risk Impact Map: provides information on how many other assets are linked to each asset. To learn more about the Risk Impact Map, [click here](spot-security/features/analyze-risks/view-risk-details).
+* Affected Resources details: shows a summary of affected resources which includes the total number of each type of resource. To learn more about affected resources, [click here](spot-security/features/analyze-risks/view-risk-details).
 
  <img src="/spot-security/_media/risk-analysis-e.png" />
 
  To see a list of resources in each type, click the arrow.
 
- To view more details of a risk, click here Risk Details(link to description of Risk Details) page, which shows more information about the risk, including a risk impact map.
+ To find more information about a risk, including a risk impact map, [click here](spot-security/features/analyze-risks/view-risk-details).
 
 ### Remediation Steps
 
 To receive a recommendation to remediate a risk, click Remediation Steps. If you decide to take the recommendation, you can take immediate action.
-To learn more about remediating, click here (link to Remediation page).
+To learn more about remediating, [click here](spot-security/features/analyze-risks/remediate).
 
 ## Actions
 
@@ -92,4 +92,4 @@ To suppress individual rules:
 You can click “Show Suppressed Risks” on the top right corner of the table to show the suppressed risks in the table.
 
 ## What’s Next?
-Learn more about how you can Remediate your risks.
+Learn more about how you can [remediate](spot-security/features/analyze-risks/remediate) your risks.
