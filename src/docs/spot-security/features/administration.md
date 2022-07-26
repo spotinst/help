@@ -7,6 +7,7 @@ To manage your accounts in the Spot console, click Administration in the menu on
 
 
 ## View List of Groups
+
 The list of cloud accounts gives you a quick view of your groups and basic information including:
 * Account Name: The user-given name of the account.
 * ID: The unique identifier that is assigned to the account upon creation.
@@ -29,4 +30,4 @@ To delete a cloud account, do the following:
 2. On the upper right, click Actions and Delete.
 
 ## What’s Next?
-Learn more about Spot Security compliance with global security standards.
+Learn more about Spot Security [compliance](spot-security/features/compliance) with global security standards.
