@@ -1,5 +1,27 @@
 # Spot PC: Release Notes
 
+## 07/28/2022
+_When:_ 07/28/2022 at 10pm - 11pm Eastern
+
+_Impact:_ Access to desktops and application services for End Users will remain uninterrupted. Access to Spot PC console will remain available.
+
+* Introducing Live Updates
+  * Instead of constant refreshing, SpotPC is proud to announce that updates and notifications are now live and instant. This is now true for Image Sets, Spot Groups, Banner Notifications, and more to come in future releases.
+* Introducing Persistent Changes in UI
+  * When an admin makes changes in SpotPC's different views. The admin can now leave that page and return to the page later in the session with their customizations still in place. For example, table sorting and searching.
+* New Collapsible Sidebar
+  * SpotPC heard that customers weren't only using it a desktop screens. So now in smaller screens the left portion of the screen can collapse to give a responsive view of the dashboard.
+* Spot Group Name and Friendly Name
+  * SpotPC listened to our customer's pain points, and we made the necessary changes to cut down on confusion. Spot Group list now features both Name and Friendly Name as two separate columns. Plus in Edit Spot Group, the names are displayed Name - Friendly Name.
+* Tenant ID + Custom ID
+  * SpotPC learned that customers wanted more IDs. The tenant list now features an Tenant ID and Custom ID column. Both ID columns are now searchable and sortable.  
+* Onboarding Improvements
+  * Health Checks have replaced Discovery Logs. Improvements to tooltips. Streamline workflow between Health Checks and Go.
+* Business Server Improvements
+  * Spot PC now has a new table just for Business Servers.
+* Support for Pooled Spot Group with Azure AD Direct Join
+  * Admins can enable Azure Files Volumes to work with Azure AD Direct Join for FsLogix Profile Roaming. 
+
 ## 07/14/2022
 _When:_ 07/14/2022 at 10pm - 11pm Eastern
 
@@ -26,7 +48,7 @@ _Impact:_ Access to desktops and application services for End Users will remain 
 * New Workflow Change in Spot Groups
   * The Spot Group Workflow has been enhanced to put site selection earlier in the process for a better user experience.  
 * Tenant Assignment for Org Users
-  * Spot PC admins now have the ability to select the number of tenants(one or multiple) that new organization users are assigned to.  
+  * Spot PC admins now have the ability to select the number of tenants (one or multiple) that new organization users are assigned to.  
 
 ## 06/09/2022
 _When:_ 06/09/2022 at 10pm - 11pm Eastern
