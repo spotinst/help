@@ -1,4 +1,4 @@
-# Migrate using the API
+# Migrate using the API or the CLI
 
 If you prefer to migrate your SpotDeployment and create your entities from scratch using the API and your terminal, you can use this procedure. All you need to do is create a SpotDeployment YAML followed by the entities.
 
