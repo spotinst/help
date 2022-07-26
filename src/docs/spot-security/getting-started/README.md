@@ -1,76 +1,85 @@
 <meta name="robots" content="noindex">
 
-# Get Started with Spot Security
+## Get Started
 
-It is really easy to get started with Spot Security. All you need to do is connect your cloud provider. The procedures below describe how to connect your AWS account to Spot Security.
+Spot Security aims to help your customers manage their cloud security posture by giving a 360 degree view of their most critical risks and anomalies, along with prioritized recommendations, guided remediation and compliance. In order to connect your cloud accounts to Spot Security, you need to first connect them on the Spot platform.
 
-## Prerequisites
-
-- An AWS account
-- A Spot account activated
+Prerequisites
+* An activated Spot account
+* Cloud Account(s) onboarded on the Spot platform
 
 ## Get Started
 
-To get started with Spot Security you need to be signed in to the Spot console.
+1. To connect your cloud accounts on Spot, see page name. Follow the following steps to connect your cloud accounts on Spot Security with an existing license or to start your 30 days free trial.
 
-1. In the left menu tree of the console, click Spot Security. The introductory panel appears.
+<img src="/spot-security/_media/getting-started-a.png" />
 
-<img src="/spot-security/_media/getting-started-01.png" />
+Go to Spot Security in the left menu and click Dashboard. You will then be prompted to choose a cloud provider. As of now, Spot Security only supports AWS.
 
-2. Click Continue. The Onboard page appears showing the four major onboarding steps. Complete each of these steps, which are described in detail below.
+<img src="/spot-security/_media/getting-started-b.png" />
 
-<img src="/spot-security/_media/getting-started-02.png" />
+## Step 1: Create your Account
 
-## Step 1: Log in to AWS Account
+In this step you create a Spot Security account for your AWS cloud. Complete the information below and then click Create Account.
+* Full name
+* E-mail address
+* Location
 
-1. On the Onboard page, click Log in. The AWS Log in page appears in a separate tab.
+<img src="/spot-security/_media/getting-started-c.png" />
 
-<img src="/spot-security/_media/getting-started-03.png" />
+## Step 2: Connect your AWS Account
+In this step you connect your AWS account to Spot Security.
+1. Click Log in to AWS Account.
 
-2. Log in with your AWS credentials and go to the AWS Management Console.
+<img src="/spot-security/_media/getting-started-d.png" />
 
-<img src="/spot-security/_media/getting-started-04.png" />
+2. The AWS management console opens and you can log in with your AWS credentials.
+3. Logging into your AWS account will allow Spot Security to connect to your AWS account.
 
-## Step 2: Deploy CloudFormation Template
+<img src="/spot-security/_media/getting-started-e.png" />
 
-1. Go back to the Onboard tab in the Spot console.
-2. Under Step 2, click Run Template.
+4. When a green signal appears with your cloud account name next to it, click Next.
 
-<img src="/spot-security/_media/getting-started-05.png" />
+## Step 3: Set up CloudTrail
 
-The AWS stack creation page will appear as shown below.
+CloudTrail conducts a risk analysis of your assets in your AWS accounts.
 
-<img src="/spot-security/_media/getting-started-06.png" />
+### Step 3.1: Do you have a CloudTrail account?
 
-3. Click Next and go to the Stack Details page.
+You need to connect a CloudTrail account to your Spot Security account. If you have an account, do the following steps:
 
-<img src="/spot-security/_media/getting-started-07.png" />
+<img src="/spot-security/_media/getting-started-f.png" />
 
-4. Specify your stack name and click Next. You will then go to the Configure Stack Options page.
+  * If you have a CloudTrail account, choose Yes.
 
-<img src="/spot-security/_media/getting-started-08.png" />
+<img src="/spot-security/_media/getting-started-g.png" />
 
-5. Click Next and review the details.
+### Centralized Bucket
 
-<img src="/spot-security/_media/getting-started-09.png" />
+If you have a centralized bucket, choose Yes.
+You can onboard all the dependent accounts in bulk if you have selected a centralized bucket. Select all the accounts you wish to onboard and click Next.
 
-6. After reviewing, click Create Stack.
-7. The stack creation process begins. In the Events tab you can see the status of each action taking place in the process. Wait until the stack creation process completes.
+<img src="/spot-security/_media/getting-started-h.png" />
 
-<img src="/spot-security/_media/getting-started-10.png" />
+### No Centralized Bucket
 
-## Step 3: Add your Bucket Information
+If you don’t have a centralized bucket, choose No and click Next.
 
-1. Once the stack creation completes, go to the Outputs tab and copy the Bucket Name.
-2. Go back to the Onboard page in the Spot console, and paste the Bucket Name in the Bucket Name field.
+<img src="/spot-security/_media/getting-started-i.png" />
 
-<img src="/spot-security/_media/getting-started-10a.png" />
+  * If you don’t have a CloudTrail account, choose No and click Next.
 
-Step 4: Validate your Onboarding
+1. Enter the bucket name and region; and click Validate.
 
-Click Validate Now under Step 4 in the Onboard page. When the validation completes, you will see a message indicating a successful validation. Now you can go to the Spot Security Dashboard in the Spot console.
+<img src="/spot-security/_media/getting-started-j.png" />
 
-<img src="/spot-security/_media/getting-started-11.png" />
+2. When it is validated by a green checkmark, click Next.
+
+<img src="/spot-security/_media/getting-started-k.png" />
+
+## Step 3: Review and Finalize
+
+Review the information and ensure all details are correct. Choose Finish Onboarding.
 
 ## What's Next?
 
