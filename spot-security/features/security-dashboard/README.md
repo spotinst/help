@@ -26,7 +26,7 @@ The large tile at the top provides your main security stats:
 
 ### Filters and Presets
 
-You can use the filters at the top to focus on only the information you need. Once you have set the filters, you can save them as Presets for quick access to your customized view of the dashboard. You can create presets based on the AWS accounts, regions, or asset types that you are responsible for.
+You can use the filters at the top to focus on only the information you need. Once you have set the filters, you can save them as [Presets](spot-security/features/security-dashboard/create-preset) for quick access to your customized view of the dashboard. You can create presets based on the AWS accounts, regions, or asset types that you are responsible for.
 
 <img src="/spot-security/_media/spot-security-dashboard-b.png" />
 
@@ -53,4 +53,4 @@ The Risks Over Time chart gives you a view of the risk trends over time. You can
 
 ## What’s Next?
 
-Learn more about the detailed information you can see in the Risk Analysis(link to the Risk Analysis documentation page) page.
+Learn more about the detailed information you can see in the [Risk Analysis](spot-security/features/analyze-risks) page.
