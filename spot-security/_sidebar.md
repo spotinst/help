@@ -13,4 +13,3 @@
     - [Events](spot-security/features/events)
     - [Inventory](spot-security/features/inventory)
     - [Compliance](spot-security/features/compliance)
-    - [Administration](spot-security/features/administration)
