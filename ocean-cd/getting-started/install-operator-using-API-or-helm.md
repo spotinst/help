@@ -40,7 +40,7 @@ Should you wish to apply the command using Curl, use the syntax below. Be sure t
 curl --location --request POST 'https://api.spotinst.io/ocean/cd/clusterInstaller?clusterId=CLUSTER_ID&skipArgoRollouts=true' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer xxxxxxxx' \
---data-raw '' | kubectl apply -f
+--data-raw '' | kubectl apply -f -
 ```
 
 ## Install using Helm

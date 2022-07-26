@@ -1,4 +1,4 @@
-# Migrate using the API or the CLI
+# Migrate using API or CLI
 
 If you prefer to migrate your SpotDeployment and create your entities from scratch using the API and your terminal, you can use this procedure. All you need to do is create a SpotDeployment YAML followed by the entities.
 
@@ -15,7 +15,9 @@ When you apply a SpotDeployment for the first time, Ocean CD creates the first r
 
 ## Step 2: Create and Apply Entities
 
-Create your entities, and apply them accordingly, using Postman or any other tool you prefer (such as CLI or curl).
+Create your entities, and apply them accordingly.
+- [API](https://docs.spot.io/api/#tag/Ocean-CD): API calls make use of JSON format and syntax.
+- [CLI](https://github.com/spotinst/spot-oceancd-cli): CLI commands make use of YAML format and syntax.
 
 Note the following:
 - The Rolloutspec triggers the Strategy, so you will need to first create a strategy, and only then the Rolloutspec.
