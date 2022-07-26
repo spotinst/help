@@ -54,7 +54,7 @@ canary:
 ```
 
 The attributes of a strategy are described below.
-- Name: Name of the strategy. Must be unique.
+- Name: Name of the strategy. Must be unique and should not exceed 63 characters.
 - Steps.name: Optional. Name of the step.
 - Steps.setWeight: Weight percentage of the step. A weight cannot be less than or equal to the one set in the previous step. The total of the weights must not exceed 100. If total weights are less than 100, Ocean CD will add on to the last phase until the total equals 100.
 - Steps.pause: Optional. Pause to be set per phase.
@@ -163,4 +163,6 @@ An Ocean CD microservice may include multiple rollout configurations, and each r
   - [View Settings](ocean-cd/tutorials/view-settings/)
   - [View Rollouts](ocean-cd/tutorials/view-rollouts/)
     - [Detailed Rollout](ocean-cd/tutorials/view-rollouts/detailed-rollout)
+    - [Troubleshoot a Rollout](ocean-cd/tutorials/view-rollouts/troubleshoot)
   - [View Workloads](ocean-cd/tutorials/view-workloads/)
+    - [Workload Details](ocean-cd/tutorials/view-workloads/details)
