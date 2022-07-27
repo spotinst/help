@@ -1,6 +1,6 @@
 <meta name="robots" content="noindex">
 
-## Get Started
+# Get Started
 
 Spot Security aims to help your customers manage their cloud security posture by giving a 360 degree view of their most critical risks and anomalies, along with prioritized recommendations, guided remediation and compliance. In order to connect your cloud accounts to Spot Security, you need to first connect them on the Spot platform.
 
