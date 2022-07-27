@@ -2,18 +2,17 @@
 
 The detailed workload page provides information about the history of the workload and provides information about rollouts of this workload that may require your attention.
 
-To view the detailed workload, click on the Workload Name in the [Workloads](ocean-cd/tutorials/view-workloads/) page.
-Please note that a workload name becomes clickable by the moment the SpotDeployment has been created. The launching of the first pods (although no rollout has yet become triggered) will be considered as revision number 01.
+To view the detailed workload, click the Workload Name in the [Workloads](ocean-cd/tutorials/view-workloads/) page. A workload name becomes clickable at the moment the SpotDeployment has been created. The launching of the first pods (although no rollout has yet become triggered) will be considered as revision number 01.
 
 <img src="/ocean-cd/_media/tutorials-detailed-workload-01.png" />
 
 ## Revision History
 
-The Revision History provides a running history of the last versions that have been deployed including the date of the update, the rollout image, its revision ID, as well as its rollout status (successful, rolled back, canceled and paused).
+The Revision History provides a running history of the versions that have been deployed, including the date of the update, the rollout image, its revision ID, and its rollout status (successful, rolled back, canceled, and paused).
 
-<img src="/ocean-cd/_media/tutorials-detailed-workload-02.png" />
+<img src="/ocean-cd/_media/tutorials-detailed-workload-02.png" width="250" />
 
-Statuses
+### Statuses
 
 The revision history provides information about the outcome of each rollout. In addition, the history uses labels to indicate desired and live versions and whether a workload had been degraded. The labels include:
 - Desired: The latest version you have applied in your SpotDeployment. The one you wish to see running.
