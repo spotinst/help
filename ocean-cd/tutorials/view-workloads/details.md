@@ -1,1 +1,1 @@
-# Workload Details
+# Detailed Workload
