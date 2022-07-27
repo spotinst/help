@@ -2,7 +2,7 @@
 
 - <a href="/" class="sidebar-home"><i data-feather="arrow-left" class="sidebar-back-icon"></i>Back to Main Tree</a>
 - [Spot Security](spot-security/)
-  - [Getting Started](spot-security/getting-started)
+  - [Getting Started](spot-security/getting-started/)
   - [Features](spot-security/features/)
     - [Dashboard](spot-security/features/dashboard/)
       - [Create a Preset](spot-security/features/security-dashboard/create-preset)
