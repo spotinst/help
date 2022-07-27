@@ -6,7 +6,7 @@ Spot Security enables public cloud users to rapidly understand their cloud secur
 
 ### Central Security Dashboard
 
-[The Dashboard][spot-security/features/security-dashboard/] is a central point of reference into the security of your cloud environment and enables quick remediations for the risks discovered.
+[The Dashboard][spot-security/features/security-dashboard] is a central point of reference into the security of your cloud environment and enables quick remediations for the risks discovered.
 
 ### Risk Analysis
 
