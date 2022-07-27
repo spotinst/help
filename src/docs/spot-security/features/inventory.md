@@ -35,4 +35,4 @@ This bar chart shows the alerts on the assets in your cloud environment over a p
 <img src="/spot-security/_media/inventory-d.png" />
 
 ## What’s Next?
-Learn more about Spot Security compliance with global security standards.
+Learn more about Spot Security [compliance](spot-security/features/compliance) with global security standards.

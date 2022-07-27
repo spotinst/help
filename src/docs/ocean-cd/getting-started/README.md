@@ -14,7 +14,8 @@ If you do not want to use the console, you can [install the Operator using the A
 
 - A Kubernetes cluster running in AWS, Azure or GCP
 - OLM installation
-- Permissions to deploy new deployments into your clusters
+- Permissions from your CI tool to deploy new deployments into your clusters
+- If you use permission lists or tools such as OPA, allow all of the images Ocean CD uses
 
 ### Get Started
 
@@ -83,11 +84,9 @@ The procedures below describe how to migrate a Deployment to a SpotDeployment. T
 
 The migration does not delete your original deployment. If there are any resources that you do not want to keep, you will need to delete them manually.
 
-For further information on the syntax of our entities, see examples in the [Ocean CD public repository](https://github.com/spotinst/spot-oceancd-releases/tree/main/Quick%20Start%20%26%20Examples)
+For further information on the syntax of our entities, see examples in the [Ocean CD public repository](https://github.com/spotinst/spot-oceancd-releases/tree/main/Quick%20Start%20%26%20Examples).
 
-### Migrate using the API
-
-You can also migrate your workload using the [Ocean CD API](ocean-cd/getting-started/migrate-using-api) and manually creating your SpotDeployment CRD. Just copy the deployment and change its kind and the apiVersion. Then send API requests to create a Strategy and a RolloutSpec using the Ocean CD API.
+If you prefer to use an API, you can migrate your workload using the [Ocean CD API or CLI](ocean-cd/getting-started/migrate-using-api).
 
 ### Prerequisites
 
@@ -119,7 +118,7 @@ If you decide not to insert the namespace directly into the SpotDeployment, you 
 
 <img src="/ocean-cd/_media/getting-started-n07.png" />
 
-2. Edit the [strategy](ocean-cd/?id=strategy) and click Next. If you already have a strategy defined, you can just click Skip.
+2. Edit the [strategy](ocean-cd/?id=strategy) and click Next. The strategy name should not exceed 63 characters. If you already have a strategy defined, you can just click Skip.
 
 <img src="/ocean-cd/_media/getting-started-n08.png" />
 
@@ -133,4 +132,5 @@ If you decide not to insert the namespace directly into the SpotDeployment, you 
 
 ## What’s Next?
 - Learn how to [install the Operator using the API or Helm](ocean-cd/getting-started/install-operator-using-API-or-helm).
+- Learn how to migrate your workload via [API or CLI](ocean-cd/getting-started/migrate-using-api).
 - Learn about viewing the [list of rollouts](ocean-cd/tutorials/view-rollouts/) and the information provided in the [detailed rollout](ocean-cd/tutorials/view-rollouts/detailed-rollout) page.
