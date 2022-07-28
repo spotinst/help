@@ -16,11 +16,11 @@ Before you can create a stateful node, you need to do the following:
 
 1. To create a new Stateful Node from scratch, click Stateful Node on the left menu and click New Node on the top right.
 
-<img src="/managed-instance-a/_media/create-new-a.png" />
+<img src="/managed-instance/_media/create-new-a.png" />
 
 2. Mark the use case Create a New Stateful Node, as shown below, and click Select.
 
-<img src="/managed-instance-a/_media/create-new-b.png" />
+<img src="/managed-instance/_media/create-new-b.png" />
 
 3. Complete the steps in the Create Stateful Node wizard as described below.
 
@@ -28,7 +28,7 @@ Before you can create a stateful node, you need to do the following:
 
 1. Enter a name and a description for your Stateful Node:
 
-<img src="/managed-instance-a/_media/create-new-c.png" />
+<img src="/managed-instance/_media/create-new-c.png" />
 
 2. Select the Region and Availability Zones:
 
@@ -43,11 +43,11 @@ Before you can create a stateful node, you need to do the following:
 
 Once VPC, Subnets, Product, Image and Preferred Node type are selected, Spot will automatically preselect optional similar Spot Markets to ensure optimized cost efficiency. The Spot Market Scoring Table on the right side will be populated:
 
-<img src="/managed-instance-a/_media/create-new-d.png" />
+<img src="/managed-instance/_media/create-new-d.png" />
 
 7. You can edit the additional Spot Market selection via the Spot Node Types table below. The more node types selected here, the higher the chance of finding the optimal spot node to launch in terms of cost and availability.
 
-<img src="/managed-instance-a/_media/create-new-g.png" />
+<img src="/managed-instance/_media/create-new-g.png" />
 
 8. Fill in any User Data or Shutdown Scripts you would like to run upon node launch or termination.
 9. Shutdown Script requires an Agent to be installed via the User Data. Clicking on the `Add Agent installation to User Data` link will automatically add the required bash script to the User Data section.
@@ -129,7 +129,7 @@ Click Next.
 
 The review tab provides a quick summary of your configuration.
 
-<img src="/managed-instance-a/_media/create-new-f.png" />
+<img src="/managed-instance/_media/create-new-f.png" />
 
 In addition, you can view the full JSON file, and turn on Edit mode to edit it manually.
 
