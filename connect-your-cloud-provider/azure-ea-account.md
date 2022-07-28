@@ -1,4 +1,4 @@
-# Connect your Azure EA to Spot
+# Connect Your Azure EA to Spot
 
 This procedure describes how to set up Spot account access to Azure EA Read Only data, which gives Spot the necessary permissions to pull Azure EA data and process it for the [Eco Azure Dashboard](eco/azure-tutorials/view-your-savings).
 
