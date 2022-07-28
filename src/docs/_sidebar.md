@@ -11,7 +11,7 @@
   - [Analyze Your Costs](connect-your-cloud-provider/cost-analysis/)
     - [Save Analysis Reports](connect-your-cloud-provider/cost-analysis/save-reports)
 - [**Elastigroup**](elastigroup/)
-- [**Managed Instance**](managed-instance/)  
+- [**Elastigroup Stateful Node**](managed-instance/)
 - [**Ocean**](ocean/)
 - [**Ocean for Apache Spark**](ocean-spark/)
 - [**Eco**](eco/)
