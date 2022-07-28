@@ -1651,6 +1651,62 @@ export const aliases = (() => {
       "/ocean/getting-started/eks/",
 
     "/cloud-analyzer/tutorials/manage-subsets": "/eco/tutorials/manage-subsets",
+
+    "/cloud-analyzer/": "/connect-your-cloud-provider/dashboard",
+
+    "/cloud-analyzer/getting-started/": "/connect-your-cloud-provider/dashboard",
+
+    "/cloud-analyzer/getting-started/connect-your-aws-master-payer-account-existing-customer":
+      "/connect-your-cloud-provider/additional-account",
+
+    "/cloud-analyzer/getting-started/connect-master-payer-account-first-registration":
+      "/connect-your-cloud-provider/first-account/",
+
+    "/cloud-analyzer/tutorials/": "/connect-your-cloud-provider/dashboard",
+
+    "/cloud-analyzer/tutorials/analyze-your-costs":
+      "/connect-your-cloud-provider/cost-analysis/",
+
+    "/cloud-analyzer/tutorials/save-analysis-reports":
+      "/connect-your-cloud-provider/cost-analysis/save-reports",
+
+    "/cloud-analyzer/tutorials/view-trends-notifications/":
+      "/connect-your-cloud-provider/dashboard",
+
+    "/cloud-analyzer/tutorials/view-trends-notifications/manage-event-definitions":
+      "/connect-your-cloud-provider/dashboard",
+
+    "/cloud-analyzer/tutorials/view-trends-notifications/view-event-details":
+      "/connect-your-cloud-provider/dashboard",
+
+    "/cloud-analyzer/tutorials/view-trends-notifications/view-all-archive":
+      "/connect-your-cloud-provider/dashboard",
+
+    "/cloud-analyzer/tutorials/use-optimization-dashboard/":
+      "/connect-your-cloud-provider/optimize",
+
+    "/cloud-analyzer/tutorials/use-optimization-dashboard/containers":
+      "/connect-your-cloud-provider/optimize",
+
+    "/cloud-analyzer/tutorials/use-optimization-dashboard/elastic-applications":
+      "/connect-your-cloud-provider/optimize",
+
+    "/cloud-analyzer/tutorials/use-optimization-dashboard/reservations":
+      "/connect-your-cloud-provider/optimize",
+
+    "/cloud-analyzer/tutorials/cloud-analyzer-policy/": "/eco/tutorials/eco-policy/",
+
+    "/cloud-analyzer/tutorials/cloud-analyzer-policy/create-cloud-analyzer-policy-with-cloudformation":
+      "/eco/tutorials/eco-policy/create-eco-policy-with-cloudformation",
+
+    "/connect-your-cloud-provider/aws-account":
+      "/connect-your-cloud-provider/first-account/",
+
+    "/connect-your-cloud-provider/azure-account":
+      "/connect-your-cloud-provider/first-account/",
+
+    "/connect-your-cloud-provider/gcp-project":
+      "/connect-your-cloud-provider/first-account/",
   };
 
   for (let [key, value] of Object.entries(map)) {
