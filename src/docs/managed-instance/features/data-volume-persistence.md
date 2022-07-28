@@ -13,7 +13,7 @@ The [flow diagram](elastigroup/features/stateful-instance/stateful-elastigroup-f
 5. Click Persistent Resources tab.
 2. Mark Persist Root Volume.
 
-<img src="/managed-instance-a/_media/data-volume-persistence.png" />
+<img src="/managed-instance/_media/data-volume-persistence.png" />
 
 Stateful Nodes provides the methods described below for data volume persistence.
 
@@ -82,7 +82,7 @@ Stateful Nodes perform various backend actions for different states of the nodes
   - If you select all parts, then they will be deleted immediately.
   - If you select only some of the parts for deletion, then those parts will be kept for four days and then deleted.
 
-<img src="/managed-instance-a/_media/data-volume-persistence-delete.png" />
+<img src="/managed-instance/_media/data-volume-persistence-delete.png" />
 
 > **Tip**: Data storage time can be configured on an hourly basis. For more information, reach out to the Customer Support team.
 
