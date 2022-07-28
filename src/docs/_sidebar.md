@@ -8,7 +8,7 @@
 - [**Ocean**](ocean/)
 - [**Ocean for Apache Spark**](ocean-spark/)
 - [**Elastigroup**](elastigroup/)
-- [**Managed Instance**](managed-instance/)
+- [**Elastigroup Stateful Node**](managed-instance/)
 - [**Eco**](eco/)
 - [**Cloud Analyzer**](cloud-analyzer/)
 - [**Security**](spot-security/)
