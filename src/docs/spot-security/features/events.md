@@ -2,7 +2,7 @@
 
 # Events
 
-FSpot Security strives to reduce the Signal-to-Noise ratio of cloud security events for the users and highlight the events that have occurred on your cloud network within a defined time period based on event security.
+Spot Security strives to reduce the Signal-to-Noise ratio of cloud security events for the users and highlight the events that have occurred on your cloud network within a defined time period based on event security.
 
 To view the Events, go to Spot Security in the left menu of the console and click Events.
 
