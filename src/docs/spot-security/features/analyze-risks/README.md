@@ -51,19 +51,10 @@ To view the affected resources, click on View Affected Resources in the bottom o
  <img src="/spot-security/_media/risk-analysis-i.png" width="339"/>
 
 The following information appears:
-* A Risk Impact Map: provides information on how many other assets are linked to each asset. To learn more about the Risk Impact Map, [click here](spot-security/features/analyze-risks/view-risk-details).
-* Affected Resources details: shows a summary of affected resources which includes the total number of each type of resource. To learn more about affected resources, [click here](spot-security/features/analyze-risks/view-risk-details).
+* A [Risk Impact Map](spot-security/features/analyze-risks/view-risk-details): provides information on how many other assets are linked to each asset.
+* [Affected Resources details](spot-security/features/analyze-risks/view-risk-details): shows a summary of affected resources which includes the total number of each type of resource.
 
  <img src="/spot-security/_media/risk-analysis-e.png" />
-
- To see a list of resources in each type, click the arrow.
-
- To find more information about a risk, including a risk impact map, [click here](spot-security/features/analyze-risks/view-risk-details).
-
-### Remediation Steps
-
-To receive a recommendation to remediate a risk, click Remediation Steps. If you decide to take the recommendation, you can take immediate action.
-To learn more about remediating, [click here](spot-security/features/analyze-risks/remediate).
 
 ## Actions
 
