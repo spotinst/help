@@ -29,7 +29,7 @@ Stateful Node performs various backend actions for different states of the node 
 5. Click Persistent Resources tab.
 2. Mark Persist Root Volume.
 
-<img src="/managed-instance-a/_media/root-volume-persistence.png" />
+<img src="/managed-instance/_media/root-volume-persistence.png" />
 
 ## Change the Image of Existing Stateful Nodes
 
