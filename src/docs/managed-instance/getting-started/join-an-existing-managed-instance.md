@@ -16,7 +16,7 @@ Before you can create a stateful node, you need to do the following:
 
 1. To import your stateful single node from AWS, go to the Stateful Node dashboard on the Spot Console and click New Node on the top right.
 
-<img src="/managed-instance-a/_media/create-new-a.png" />
+<img src="/managed-instance/_media/create-new-a.png" />
 
 2. When the New Stateful Node form appears, mark the use case Create a New Stateful Node from an existing one.
 
