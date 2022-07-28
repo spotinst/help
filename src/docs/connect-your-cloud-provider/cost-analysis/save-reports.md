@@ -46,4 +46,4 @@ To delete a report, do the following:
 
 ## What’s Next?
 
-Learn how you can use the [Trends and Notifications](cloud-analyzer/tutorials/view-trends-notifications/) dashboard to identify trends and irregularities in your cloud spending.
+Learn how to [connect an additional account](connect-your-cloud-provider/additional-account) to Spot.
