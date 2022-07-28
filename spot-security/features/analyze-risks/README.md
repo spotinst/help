@@ -52,7 +52,7 @@ To view the affected resources, click on View Affected Resources in the bottom o
 
 The following information appears:
 * A [Risk Impact Map](spot-security/features/analyze-risks/view-risk-details): provides information on how many other assets are linked to each asset.
-* [Affected Resources details](spot-security/features/analyze-risks/view-risk-details): shows a summary of affected resources which includes the total number of each type of resource.
+* [Affected Resources](spot-security/features/analyze-risks/view-risk-details) details: shows a summary of affected resources which includes the total number of each type of resource.
 
  <img src="/spot-security/_media/risk-analysis-e.png" />
 
