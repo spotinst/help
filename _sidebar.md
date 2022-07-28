@@ -1,7 +1,7 @@
 <!-- Table of Contents -->
 
 - [**Get Started with Spot**](connect-your-cloud-provider/)
-  - [Connect Your Cloud Account to Spot](connect-your-cloud-provider/first-account/)
+  - [Connect Your Cloud Account](connect-your-cloud-provider/first-account/)
     - [Connect AWS Manually](connect-your-cloud-provider/first-account/aws-manually)
     - [Connect GCP Manually](connect-your-cloud-provider/first-account/gcp-manually)
   - [Connect Azure EA to Spot](connect-your-cloud-provider/azure-ea-account)
