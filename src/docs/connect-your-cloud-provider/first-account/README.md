@@ -1,8 +1,8 @@
-# Connect your First Cloud Account to Spot
+# Connect Your First Cloud Account to Spot
 
 In order to take advantage of Spot’s optimization and cost savings features, you need to connect your cloud account to Spot. The procedure on this page walks you through the steps to connect your account.
 
-## Step 1: Create your Spot Organization
+## Step 1: Create Your Spot Organization
 
 If you are signing in to Spot for the first time (e.g., signing in from a [spot.io](https://spot.io/) page or registering for a free trial), you will complete some basic information as shown in the example below.
 
@@ -18,7 +18,7 @@ If you have multiple accounts with your cloud provider, you will be able to conn
 
 <img src="/connect-your-cloud-provider/_media/connect-your-first-cloud-account-002.png" width="500" />
 
-## Step 3: Connect your Cloud Account
+## Step 3: Connect Your Cloud Account
 
 In this step, you make some choices about what type of account you are creating and how you would like to connect the account to Spot. The procedures are explained in detail in the wizard, but to help you along the way, the key concepts are explained below.
 
@@ -81,7 +81,7 @@ Connection to a management account is required to use Eco. A management account 
 
 To create a management account for Azure, use the procedure described in [Connect Azure EA to Spot](connect-your-cloud-provider/azure-ea-account).
 
-### Complete your Connection
+### Complete Your Connection
 
 Once you have successfully completed all the steps in the wizard and connected your cloud provider to Spot, you will see the Spot Dashboard.
 
