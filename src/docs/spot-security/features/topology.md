@@ -24,7 +24,7 @@ To create a new Service Map, do the following:
 3. Based on the account selected, a list of nodes or assets will be populated across different asset types, regions, VPCs, and risk severities.
 4. You can select up to ten nodes to create a service map and save it under a specific name of your choice. You can also mark a new service map as default which will make it appear by default each time you open the Topology view on the product.
 
-<img src="/spot-security/_media/topology-b.png" />
+<img src="/spot-security/_media/topology-b.png" width="388"/>
 
 5. Click Save to view the service map.
 6. The new service map is also added to the list of services on the Topology page.
