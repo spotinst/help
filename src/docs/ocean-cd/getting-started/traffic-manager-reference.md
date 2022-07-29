@@ -6,6 +6,8 @@ In the [Migrate Workload](ocean-cd/getting-started/?id=migrate-a-workload-using-
 
 This page shows templates for all of the traffic managers that Ocean CD supports. If you would like to use a template instead of the automatic configuration, you can use one of these.
 
+> **Tip**: You do not have to use a traffic manager. For more information, see [Without a Traffic Manager](ocean-cd/getting-started/traffic-manager-reference?id=without-traffic-manager).
+
 ### General Template for Syntax
 
 ```yaml
@@ -29,7 +31,7 @@ failurePolicy:
  action: abort
 ```
 
-> **Tip**: You do not have to use a traffic manager. For more information, see [Without a Traffic Manager](ocean-cd/getting-started/traffic-manager-reference?id=without-traffic-manager).
+Whenever `rootService` is used, the value must not be the same as the `stableService` value.
 
 ### ALB: Instance Level
 
@@ -48,6 +50,8 @@ traffic:
 ```
 
 ### ALB: IP Level
+
+The IP Level is a new Argo feature. If you want to use this feature, be sure to have the latest Argo version.
 
 ```yaml
 traffic:

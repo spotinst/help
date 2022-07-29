@@ -41,7 +41,7 @@ Each Spot Group can contain one and only one Spot PC user license type. Some beh
 
         The designation of a Spot Group as Dedicated Desktop is permanent and can not be changed after deployment.
 
-        While new VM hosts for Dedicated Desktops are built form the current assigned VM Image Set Version.  Unlike Pooled and Personal (Standard) Spot Groups, the VM hosts in a Personal (Dedicated Desktop) Spot Group are not automatically rebuilt from the current Image.  Updates tot he assigned Image Set Version will not re-build existing VM hosts. Once a VM host is built, it is persistent and must be managed/maintained individually.
+        While new VM hosts for Dedicated Desktops are built from the current assigned VM Image Set Version.  Unlike Pooled and Personal (Standard) Spot Groups, the VM hosts in a Personal (Dedicated Desktop) Spot Group are not automatically rebuilt from the current Image.  Updates tot he assigned Image Set Version will not re-build existing VM hosts. Once a VM host is built, it is persistent and must be managed/maintained individually.
       - **Automatic Assignment**
 
           For Personal (Dedicated Desktop) Spot Groups, the assignment of specific users to specific VM hosts can be performed automatically.
@@ -49,7 +49,7 @@ Each Spot Group can contain one and only one Spot PC user license type. Some beh
           At deployment each user is assigned to a new VM host, built from the current Image Set Version, and that assignment is persistent and unchangeable. Removing a user from Spot PC will remove their VM host.  New users will always get a fresh VM host based on the current Image Set Version.
 
           Spot Groups set to Automatic Assignment can be changed to "Direct Assignment" after the initial deployment.
-      - **Direct Assignment** 
+      - **Direct Assignment**
 
           For Personal (Dedicated Desktop) Spot Groups, the assignment of specific users to specific VM hosts can be managed manually.
 

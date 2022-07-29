@@ -107,7 +107,7 @@ where `<args>` are the arguments to be passed to the application main class `<cl
 
 The simplest option on AWS is to use the Elastic Container Registry (ECR) of the account where the Ocean Spark platform is deployed. This way, the Spark pods can pull the Docker images without needing extra permissions.
 
-1. Navigate to the [ECR console](https://console.aws.amazon.com/ecr/repositories) and create a repository with name my-app in the account where the Data Mechanics is deployed. Make sure to create it in the same region as the Ocean Spark cluster to avoid transfer costs. Please refer to the [AWS documentation](https://docs.aws.amazon.com/AmazonECR/latest/userguide/repository-create.html) in case of issue.
+1. Navigate to the [ECR console](https://console.aws.amazon.com/ecr/repositories) and create a repository with name my-app in the account where the Ocean Spark cluster is deployed. Make sure to create it in the same region as the Ocean Spark cluster to avoid transfer costs. Please refer to the [AWS documentation](https://docs.aws.amazon.com/AmazonECR/latest/userguide/repository-create.html) in case of issue.
 2. Generate a temporary token so that Docker can access ECR for 12 hours with the following:
 
 `aws ecr get-login-password --region <region> | docker login --username AWS --password-stdin <account-id>.dkr.ecr.<region>.amazonaws.com`
@@ -136,7 +136,7 @@ The Spark application can now be run on Ocean Spark:
 curl -X POST \
 'https://api.spotinst.io/ocean/spark/cluster/<your cluster id>/app?accountId=<your accountId>' \
  -H 'Content-Type: application/json' \
- -H 'Authorization: Bearer 4536dc4418995c553df9c0c0e1d31866453bcec3df0f31f97003926d67ff1e00
+ -H 'Authorization: Bearer <your-spot-token>
        --data-raw '{
          "jobId": "my-job",
          "configOverrides": {
@@ -158,7 +158,7 @@ curl -X POST \
 curl -X POST \
   'https://api.spotinst.io/ocean/spark/cluster/<your cluster id>/app?accountId=<your accountId>' \
  -H 'Content-Type: application/json' \
- -H 'Authorization: Bearer 4536dc4418995c553df9c0c0e1d31866453bcec3df0f31f97003926d67ff1e00
+ -H 'Authorization: Bearer <your-spot-token>
        --data-raw '{
          "jobId": "my-job",
          "configOverrides": {
@@ -241,7 +241,7 @@ All required files are uploaded in your cloud storage. The Spark application can
 curl -X POST \
  'https://api.spotinst.io/ocean/spark/cluster/<your cluster id>/app?accountId=<your accountId>' \
  -H 'Content-Type: application/json' \
- -H 'Authorization: Bearer 4536dc4418995c553df9c0c0e1d31866453bcec3df0f31f97003926d67ff1e00
+ -H 'Authorization: Bearer <your-spot-token>
  --data-raw '{
    "jobId": "my-job",
    "configOverrides": {
@@ -283,7 +283,7 @@ Reference your JAR (and its dependencies if it has any) in the configuration of 
 curl -X POST \
  https://api.spotinst.io/ocean/spark/cluster/osc-e4089a00/app \
  -H 'Content-Type: application/json' \
- -H 'Authorization: Bearer 4536dc4418995c553df9c0c0e1d31866453bcec3df0f31f97003926d67ff1e00
+ -H 'Authorization: Bearer <your-spot-token>
  --data-raw '{
    "jobId": "my-job",
    "configOverrides": {

@@ -1,4 +1,4 @@
-# Create a new EKS Cluster
+# Create a New EKS Cluster
 
 In this procedure, you complete the steps to create an Amazon EKS cluster directly from the Spot Console and an Ocean object to manage the cluster worker nodes.
 
@@ -55,15 +55,17 @@ Before you can continue to the next step, CloudFormation must complete creation 
 
 1. Connect your workstation to the EKS cluster by copying the command shown in Step 4 of the Create page and running it in your command-line interface. Note that the command must include the Ocean Cluster Name that you entered previously.
 
-> **Tip**: Just click on the command to copy it.
+> **Tip**: Click on the command to copy it.
 
-<img src="/ocean/_media/new-eks-step4.png" />
+<img src="/ocean/_media/new-eks-step4-c.png" />
 
 2. Verify that kubectl is connected to your EKS cluster by running the next command shown:
    `kubectl get svc`
 3. To install the controller on the EKS cluster, run the predefined script from your command line.
 
-<img src="/ocean/_media/new-eks-step4-a.png" />
+(Optional) To install the [Ocean Prometheus Exporter](https://docs.google.com/document/d/1qM0DRhqgtSifNb9-j8tuRuNtWamL2mspWrB-iiC70sk/edit#), mark the checkbox. Validate that the [Configure Prometheus](ocean/tools-and-integrations/prometheus/) step is complete.
+
+<img src="/ocean/_media/new-eks-step4-d.png" />
 
 ## Step 5: Update AWS Authentication ConfigMap
 
@@ -84,3 +86,5 @@ That's it! Ocean will now manage the worker nodes, optimizing cluster resource u
 If you receive the error "aws-iam-authenticator": executable file not found in \$PATH, then your kubectl is not configured for Amazon EKS. For more information, see [Configure kubectl for Amazon EKS](https://docs.aws.amazon.com/eks/latest/userguide/configure-kubectl.html).
 You can list your cluster nodes with the following command:
 `kubectl get nodes`.
+
+- Learn more about [eksctl](https://github.com/spotinst/weaveworks-eksctl).

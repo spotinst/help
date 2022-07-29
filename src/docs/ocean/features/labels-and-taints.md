@@ -37,6 +37,9 @@ Valid label values are:
 - `nvidia-tesla-a100`
 - `nvidia-tesla-m60`
 - `amd-radeon-v520`
+- `nvidia-tesla-t4g`
+- `nvidia-tesla-a10`
+
 
 > **Note**: Avoid adding Spot labels under the virtual node group (launch specification) node labels section. These labels should be added in your pod configuration only.
 
@@ -113,3 +116,7 @@ spec:
     - name: with-node-affinity
       image: k8s.gcr.io/pause:2.0
 ```
+
+## What’s next?
+
+- Learn how to [Manage Virtual Node Groups](ocean/tutorials/manage-virtual-node-groups) and customize configurations per VNG.

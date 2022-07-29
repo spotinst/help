@@ -4,6 +4,7 @@ Cloud administrators face the challenge of presenting cloud spend data clearly t
 
 The Workflows feature simplifies and clarifies the presentation of cloud charges. It enables you to do the following:
 
+- Omit any billing rules and just process the existing data for your reports
 - Create a sequence of billing rules that can be applied to one or more subsets of accounts
 - Apply billing workflows on-demand in the form of reports
 
@@ -57,12 +58,16 @@ To create a new workflow, do the following:
 <img src="/eco/_media/tutorials-manage-workflows-02.png" width="320" height="368" />
 
 2. Enter a name for the workflow.
-3. Activate the billing rules you need and mark the options relevant to each rule. Enter any additional information required by the rule. (See below for detailed descriptions.)
+3. Activate the billing rules you need and mark the options relevant to each rule. Enter any additional information required by the rule. (See below for detailed descriptions.) You may omit any billing rules by selecting the "Create workflow with no billing rules" option.
 4. Click Create. The new workflow will appear in the Workflows list.
 
 ## Billing Rule Descriptions
 
 The billing rules available in the user interface are sufficient to capture most use cases. However, the Spot system is flexible enough to create numerous custom workflows. If you require a billing rule or a workflow sequence that cannot be created through the UI, contact the Support team and Spot will work with you to create a custom workflow. The rules available in the UI are described below.
+
+### Create workflow with no billing rules
+You may create a workflow without billing rules so that you may run reports on raw data. The advantage to this choice is it gets you to cost and savings data much quicker. See the article titled "View Workflow Details."
+
 
 ### Replace RI Discounts with Public OD Price:
 
@@ -96,7 +101,9 @@ This removes any tax-related usage types from the data.
 
 ### Cross Account RI Cost Sharing
 
-This enables you to pass a reservation's cost to accounts proportionate to the discounts they consume. We include EDP discounts in the cost calculations. You have the option to pass the cost in the following ways:
+This enables you to pass a reservation's cost to accounts proportionate to the discounts they consume. The EDP discounts are included in the cost calculations. In addition to passing the cost, this rule handles the recuperation of the cost to the account which purchased the commitment.
+
+You have the option to address costs in the following ways:
 
 - Effective Cost: Pass both the ongoing, monthly fees for RIs and the amortized, up-front costs.
 - Amortized Up-front: Pass only the amortized, up-front costs of reservations.
@@ -104,7 +111,7 @@ This enables you to pass a reservation's cost to accounts proportionate to the d
 
 ### Cross Account Savings Plan Cost Sharing
 
-This cost sharing option has the same type of cost distribution as shown above for reservations, but for savings plans. We include EDP discounts in the cost calculations.
+This cost sharing option has the same type of distribution and recuperation of cost as shown above for reservations, but for savings plans. We include EDP discounts in the cost calculations.
 
 ### Remove Volume Discounts
 
