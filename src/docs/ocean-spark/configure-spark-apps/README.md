@@ -2,17 +2,26 @@
 
 This section shows you how to configure critical aspects of your Spark applications, such as how to control permissions to [access data](ocean-spark/configure-spark-apps/access-your-data), how to [package your code](ocean-spark/configure-spark-apps/package-spark-code) (and install libraries), how to configure the size of your Spark containers, and more.
 
-Before diving into these topics, it is important to realize that the final configuration of a Spark application is the result of applying multiple levels of configuration inputs.
+Before diving into these topics, it is important to realize that the final configuration of a Spark application is the result of applying multiple sources of configuration inputs. By order of precedence:
 
-### Level 1: Config Overrides
+### Source #1: Config Overrides (Highest precedence)
 
-This is an application-specific configuration that you specify directly in your [API request](https://docs.spot.io/api/#operation/OceanSparkClusterApplicationSubmit). This source of input takes absolute preference.
+This is an application-specific configuration that you specify directly in your [API request](https://docs.spot.io/api/#operation/OceanSparkClusterApplicationSubmit). 
+This source of configuration takes precedence over the other sources.
 
-### Level 2: Auto-tuning
+### Source #2: Job Configurations
+
+Configurations defined at the level of a job are automatically applied to the future executions of the job.
+In other words, applications inherit the configurations defined at the job level. 
+
+Job configurations are a handy way to define fields such as the `mainApplicationFile`, the file corresponding to your job. You can also insert specific configurations at this level to improve the performance of your jobs.
+For example, if a job requires a lot of memory, you may modify your job configuration to set the  `instanceAllowList` field to target specifically high-memory instances.
+
+### Source #3: Auto-tuning
 
 These configurations are applied by Ocean for Spark to improve the performance and stability of your workloads. Some of these optimizations are static. For example, some Spark configurations are adjusted based on the Spark version you selected, while others are dynamically determined by the history of the past executions of a job or the real-time characteristics of your infrastructure. Auto-tuning takes precedence over configuration templates, but is overridden by config overrides.
 
-### Level 3: Configuration Templates
+### Source #4: Configuration Templates (Lowest precedence)
 
 These are fragments of configuration that you can define in the Ocean Spark UI or API and then reuse across many notebooks and jobs.
 
@@ -115,6 +124,16 @@ curl -X POST \
 ```
 
 Ocean Spark merges the configurations from the configuration template and the config overrides. The configurations in configOverrides have higher precedence than the configuration template.
+
+## Job Configurations
+
+Just like configuration templates, you can define job-specific configurations using the Spot console or the API (see API docs).
+
+To edit the configuration for a job from the Spot console, go to Ocean Spark in the menu tree, click on Jobs, find the Job that you're interested in, and then click on the Configuration Tab.
+
+<img src="/ocean-spark/_media/configure-jobs-01.png" />
+
+Job configurations have a higher precedence than configuration templates, but a lower precedence than config overrides. 
 
 ### Auto-tuning
 
