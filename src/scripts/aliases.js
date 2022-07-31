@@ -101,8 +101,6 @@ export const aliases = (() => {
 
     "/authentication": "/administration/api/create-api-token",
 
-    "/cloud-analyzer/": "/cloud-analyzer/",
-
     "/cloud-analyzer/connect-your-aws-account-2":
       "/cloud-analyzer/getting-started/connect-your-aws-master-payer-account-existing-customer",
 
@@ -1696,7 +1694,8 @@ export const aliases = (() => {
     "/cloud-analyzer/tutorials/use-optimization-dashboard/reservations":
       "/connect-your-cloud-provider/optimize",
 
-    "/cloud-analyzer/tutorials/cloud-analyzer-policy/": "/eco/tutorials/eco-policy/",
+    "/cloud-analyzer/tutorials/cloud-analyzer-policy/":
+      "/eco/tutorials/eco-policy/",
 
     "/cloud-analyzer/tutorials/cloud-analyzer-policy/create-cloud-analyzer-policy-with-cloudformation":
       "/eco/tutorials/eco-policy/create-eco-policy-with-cloudformation",
