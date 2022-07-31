@@ -51,4 +51,3 @@ To utilize cross-account Route53 integration, edit the JSON as follows:
   }
 }
 ```
-.
