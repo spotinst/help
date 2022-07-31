@@ -35,7 +35,7 @@ In this step you connect your AWS account to Spot Security.
 2. The AWS management console opens and you can log in with your AWS credentials.
 3. Logging into your AWS account will allow Spot Security to connect to your AWS account.
 
-<img src="/spot-security/_media/getting-started-e.png" />
+<img src="/spot-security/_media/getting-started-e.png" width="304"/>
 
 4. When a green signal appears with your cloud account name next to it, click Next.
 
