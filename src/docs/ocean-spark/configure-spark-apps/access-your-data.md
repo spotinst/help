@@ -92,6 +92,8 @@ Finally, configure the Ocean Virtual Node Group (VNG) of your Ocean Spark cluste
 
 The Spark application will now be able to access the S3 bucket specified in the IAM policy you created.
 
+> **Note**: If after modifying the instance profile used by the Ocean Spark VNGs, the Kubernetes nodes failed to launch and register with the cluster, you may need to modify your aws-auth config map. The new role should be added to the groups `system:bootstrappers` and `system:nodes`.
+
 ### AWS: Your data is in an AWS account other than the Ocean Spark cluster
 
 > **Tip**: This section assumes you are familiar with the previous one, "Your data is in the same AWS account as the Ocean Spark cluster”. The previous section provides more detailed explanations and acts as a tutorial. This section assumes a good knowledge of AWS Identity and Access Management (IAM).
@@ -172,6 +174,8 @@ To allow the Kubernetes nodes and Spark pods to access your S3 buckets, complete
     },
 }
 ```
+
+> **Note**: If after modifying the instance profile used by the Ocean Spark VNGs, the Kubernetes nodes failed to launch and register with the cluster, you may need to modify your aws-auth config map. The new role should be added to the groups `system:bootstrappers` and `system:nodes`.
 
 ### GCP
 
