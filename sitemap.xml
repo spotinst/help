@@ -1163,74 +1163,74 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/features/scaling/target-scaling"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/elastigroup/features/stateful-instance/edit-a-stateful-instance</loc>
+        <loc>https://docs.spot.io/?/elastigroup/features/z-stateful-instance/edit-a-stateful-instance</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/features/stateful-instance/edit-a-stateful-instance"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/features/stateful-instance/edit-a-stateful-instance"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/features/z-stateful-instance/edit-a-stateful-instance"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/features/z-stateful-instance/edit-a-stateful-instance"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/elastigroup/features/stateful-instance/import-a-stateful-instance</loc>
+        <loc>https://docs.spot.io/?/elastigroup/features/z-stateful-instance/import-a-stateful-instance</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/features/stateful-instance/import-a-stateful-instance"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/features/stateful-instance/import-a-stateful-instance"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/features/z-stateful-instance/import-a-stateful-instance"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/features/z-stateful-instance/import-a-stateful-instance"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/elastigroup/features/stateful-instance/persist-data-volumes</loc>
+        <loc>https://docs.spot.io/?/elastigroup/features/z-stateful-instance/persist-data-volumes</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/features/stateful-instance/persist-data-volumes"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/features/stateful-instance/persist-data-volumes"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/features/z-stateful-instance/persist-data-volumes"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/features/z-stateful-instance/persist-data-volumes"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/elastigroup/features/stateful-instance/persist-network</loc>
+        <loc>https://docs.spot.io/?/elastigroup/features/z-stateful-instance/persist-network</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/features/stateful-instance/persist-network"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/features/stateful-instance/persist-network"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/features/z-stateful-instance/persist-network"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/features/z-stateful-instance/persist-network"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/elastigroup/features/stateful-instance/persist-root-volume</loc>
+        <loc>https://docs.spot.io/?/elastigroup/features/z-stateful-instance/persist-root-volume</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/features/stateful-instance/persist-root-volume"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/features/stateful-instance/persist-root-volume"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/features/z-stateful-instance/persist-root-volume"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/features/z-stateful-instance/persist-root-volume"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/elastigroup/features/stateful-instance/</loc>
+        <loc>https://docs.spot.io/?/elastigroup/features/z-stateful-instance/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/features/stateful-instance/"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/features/stateful-instance/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/features/z-stateful-instance/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/features/z-stateful-instance/"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/elastigroup/features/stateful-instance/schedule-stateful-capacity</loc>
+        <loc>https://docs.spot.io/?/elastigroup/features/z-stateful-instance/schedule-stateful-capacity</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/features/stateful-instance/schedule-stateful-capacity"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/features/stateful-instance/schedule-stateful-capacity"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/features/z-stateful-instance/schedule-stateful-capacity"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/features/z-stateful-instance/schedule-stateful-capacity"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/elastigroup/features/stateful-instance/stateful-elastigroup-flow</loc>
+        <loc>https://docs.spot.io/?/elastigroup/features/z-stateful-instance/stateful-elastigroup-flow</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/features/stateful-instance/stateful-elastigroup-flow"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/features/stateful-instance/stateful-elastigroup-flow"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/features/z-stateful-instance/stateful-elastigroup-flow"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/features/z-stateful-instance/stateful-elastigroup-flow"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/elastigroup/features/stateful-instance/stateful-instance-actions</loc>
+        <loc>https://docs.spot.io/?/elastigroup/features/z-stateful-instance/stateful-instance-actions</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/features/stateful-instance/stateful-instance-actions"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/features/stateful-instance/stateful-instance-actions"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/features/z-stateful-instance/stateful-instance-actions"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/features/z-stateful-instance/stateful-instance-actions"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/elastigroup/features/stateful-instance/z-stateful-instances</loc>
+        <loc>https://docs.spot.io/?/elastigroup/features/z-stateful-instance/z-stateful-instances</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/features/stateful-instance/z-stateful-instances"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/features/stateful-instance/z-stateful-instances"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/features/z-stateful-instance/z-stateful-instances"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/features/z-stateful-instance/z-stateful-instances"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/elastigroup/getting-started/create-an-elastigroup-for-aws</loc>
