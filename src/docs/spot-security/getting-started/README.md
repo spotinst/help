@@ -12,11 +12,12 @@ Spot Security aims to help your customers manage their cloud security posture by
 
 1. To connect your cloud accounts on Spot, see page name. Follow the following steps to connect your cloud accounts on Spot Security with an existing license or to start your 30 days free trial.
 
-<img src="/spot-security/_media/getting-started-a.png" width="390"/>
+<img src="/spot-security/_media/getting-started-a.png" />
 
 2. Go to Spot Security in the left menu and click Dashboard. You will then be prompted to choose a cloud provider. As of now, Spot Security only supports AWS.
 
-<img src="/spot-security/_media/getting-started-b.png" width="362"
+<img src="/spot-security/_media/getting-started-b.png" />
+
 ## Step 1: Create your Account
 
 In this step you create a Spot Security account for your AWS cloud. Complete the information below and then click Create Account.
@@ -24,18 +25,18 @@ In this step you create a Spot Security account for your AWS cloud. Complete the
 * E-mail address
 * Location
 
-<img src="/spot-security/_media/getting-started-c.png" width="522"/>
+<img src="/spot-security/_media/getting-started-c.png" />
 
 ## Step 2: Connect your AWS Account
 In this step you connect your AWS account to Spot Security.
 1. Click Log in to AWS Account.
 
-<img src="/spot-security/_media/getting-started-d.png" width="244"/>
+<img src="/spot-security/_media/getting-started-d.png" />
 
 2. The AWS management console opens and you can log in with your AWS credentials.
 3. Logging into your AWS account will allow Spot Security to connect to your AWS account.
 
-<img src="/spot-security/_media/getting-started-e.png" width="304"/>
+<img src="/spot-security/_media/getting-started-e.png" />
 
 4. When a green signal appears with your cloud account name next to it, click Next.
 
