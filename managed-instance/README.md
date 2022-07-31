@@ -1,4 +1,4 @@
-# Managed Instance
+# Stateful Nodes
 
 Stateful Nodes provide a solution for launching and managing a single node instance. On the AWS cloud, for a standard single node workload, an on-demand EC2 node is launched. The node is expected to be highly available, easily manageable, and integrate well with additional services and monitoring tools.
 
