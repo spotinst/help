@@ -1650,8 +1650,7 @@ export const aliases = (() => {
 
     "/cloud-analyzer/tutorials/manage-subsets": "/eco/tutorials/manage-subsets",
 
-    "/cloud-analyzer/":
-      "/connect-your-cloud-provider/dashboard",
+    "/cloud-analyzer/": "/connect-your-cloud-provider/dashboard",
 
     "/cloud-analyzer/getting-started/":
       "/connect-your-cloud-provider/dashboard",
