@@ -1733,7 +1733,6 @@ export const aliases = (() => {
 
     "/elastigroup/features/stateful-instance/stateful-instance-actions":
       "/managed-instance/features/managed-instance-actions",
-    
   };
 
   for (let [key, value] of Object.entries(map)) {
