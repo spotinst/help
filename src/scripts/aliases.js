@@ -1707,6 +1707,33 @@ export const aliases = (() => {
 
     "/connect-your-cloud-provider/gcp-project":
       "/connect-your-cloud-provider/first-account/",
+
+    "/elastigroup/features/stateful-instance/": "/managed-instance/",
+
+    "/elastigroup/features/stateful-instance/edit-a-stateful-instance":
+      "/managed-instance/getting-started/create-a-new-managed-instance",
+
+    "/elastigroup/features/stateful-instance/import-a-stateful-instance":
+      "/managed-instance/getting-started/join-an-existing-managed-instance",
+
+    "/elastigroup/features/stateful-instance/persist-data-volumes":
+      "/managed-instance/features/data-volume-persistence",
+
+    "/elastigroup/features/stateful-instance/persist-network":
+      "/managed-instance/features/network-persistence",
+
+    "/elastigroup/features/stateful-instance/persist-root-volume":
+      "/managed-instance/features/root-volume-persistence",
+
+    "/elastigroup/features/stateful-instance/schedule-stateful-capacity":
+      "/managed-instance/features/",
+
+    "/elastigroup/features/stateful-instance/stateful-elastigroup-flow":
+      "/managed-instance/features/",
+
+    "/elastigroup/features/stateful-instance/stateful-instance-actions":
+      "/managed-instance/features/managed-instance-actions",
+    
   };
 
   for (let [key, value] of Object.entries(map)) {
