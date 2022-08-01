@@ -12,18 +12,21 @@ Before you can create a stateful node, you need to do the following:
 
 ## Import your Stateful Node
 
-1. To import your stateful single node from AWS, go to the Stateful Node dashboard on the Spot Console and click New Node on the top right.
+1. To import your stateful single node from AWS, click on the left menu.
+2. In the left menu, click Elastigroup.
+3. In the left menu, click Stateful Nodes.
+3. Click New Node on the top right.
 
 <img src="/managed-instance/_media/create-new-a.png" />
 
-2. When the New Stateful Node form appears, mark the use case Create a New Stateful Node from an existing one.
+2. When the New Stateful Node form appears, mark the use-case Create a New Stateful Node from an Existing Instance.
 
 <img src="/managed-instance/_media/create-new-b.png" />
 
 3. Complete the information in the form as described below.
 
    - Region. Select the correct region from the list.
-   - Node ID. Enter the ID of the AWS node to import.
+   - Instance ID. Enter the ID of the AWS node to import.
    - Use the same Private IP. Choose this if you want the private IP in Spot to be the same as the one you used in AWS. When you choose this option, the existing node in AWS will be terminated automatically after the migration is completed.
    - Use a new Private ID. Choose this if you want the private IP in Spot to be different from the one you used in AWS. An available IP will be chosen from the subnet.
    - Terminate existing node. When you mark this option, the existing AWS node will be terminated automatically after Spot has completed creation of the imported image.
