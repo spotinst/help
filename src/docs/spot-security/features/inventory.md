@@ -1,6 +1,7 @@
 <meta name="robots" content="noindex">
 
 # Inventory
+
 For your reference, Spot Security provides a list of all assets auot-detected within your cloud network (per scan at a specific time). Statistics are provided to help you see the big picture, and details about each asset are available.
 
 To view the assets, go to Spot Security in the left tree of the console and click Inventory.
