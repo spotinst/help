@@ -46,8 +46,6 @@ In this step you connect your AWS account to Spot Security.
 
 You need to connect a CloudTrail account to your Spot Security account. If you have an account, complete the following steps:
 
-<img src="/spot-security/_media/getting-started-f.png" />
-
 ### You have a CloudTrail account
 
 1. If you have a CloudTrail account, choose Yes.
@@ -78,7 +76,7 @@ If you don’t have a centralized bucket, choose No and click Next.
 
 If you don't have a CloudTrail account, choose No and Next.
 
-## Step 3: Review and Finalize
+## Step 4: Review and Finalize
 
 Review the information and ensure all details are correct. Choose Finish Onboarding.
 
