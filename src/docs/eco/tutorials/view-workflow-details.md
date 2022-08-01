@@ -82,6 +82,14 @@ RI Savings Only | Net savings gained from reservations from all sources. Not cur
 ECO RI Savings | Net savings gained from Eco-generated reservations. Not currently available when Charge Type or Lifecycle groupings are selected as grouping during the report configuration. Your workflow has no impact on this column.
 SP Savings Only | Net savings gained from savings plans from all sources. Not currently available when Charge Type or Lifecycle groupings are selected as grouping during the report configuration. Your workflow has no impact on this column.
 ECO SP Savings | Net savings gained from  Eco-generated savings plans. Not currently available when Charge Type or Lifecycle groupings are selected as grouping during the report configuration. Your workflow has no impact on this column.
+RI Ondemand Cost | On-demand cost of resource which have been discounted by RIs
+SP Ondemand Cost | On-demand cost of resource which have been discounted by Savings Plans 
+RI Effective Cost |  Reserved Instances effective cost (amortized cost + recurring cost) allocated to the resource which consumed the discount from RIs. Not currently available when Charge Type or Lifecycle groupings are selected as grouping during the report configuration. Your workflow has no impact on this column.
+SP Effective Cost | Savings Plan effective cost (amortized cost + recurring cost) allocated to the resource which consumed the discount from SPs. Not currently available when Charge Type or Lifecycle groupings are selected as grouping during the report configuration. Your workflow has no impact on this column.
+ECO RI Effective Cost |  Reserved Instance effective cost (amortized cost + recurring cost) allocated to the resource which consumed the discount from Eco RIs. Not currently available when Charge Type or Lifecycle groupings are selected as grouping during the report configuration. Your workflow has no impact on this column.
+ECO SP Effective Cost | Savings Plan effective cost (amortized cost + recurring cost) allocated to the resource which consumed the discount from Eco Savings Plans. Not currently available when Charge Type or Lifecycle groupings are selected as grouping during the report configuration. Your workflow has no impact on this column.
+Eco Total Savings | Total sum of ECO savings. Not currently available when Charge Type or Lifecycle groupings are selected as grouping during the report configuration. Your workflow has no impact on this column.
+
 
 
 TotalSavings, RISavingsOnly, ECO RI Savings, SPSavingsOnly, and ECO SP Savings are great ways to see your commitments’ effectiveness. Here are some important notes about Savings:
