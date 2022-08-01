@@ -2,8 +2,6 @@
 
 This procedure describes how to create a new stateful node from scratch.
 
-Running single node workloads on Stateful Node will provide you with a simple and intuitive environment as well as additional visibility tailored to the stateful single-node use case.
-
 ## Prerequisites
 
 Before you can create a stateful node, you need to do the following:
