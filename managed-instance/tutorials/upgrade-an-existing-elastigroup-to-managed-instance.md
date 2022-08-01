@@ -1,8 +1,6 @@
 # Upgrade an Elastigroup to Stateful Nodes
 
-This procedure describes how to upgrade an existing Elastigroup to a stateful node.
-
-Running single node workloads on Stateful Nodes will provide you with a simple and intuitive environment as well as additional visibility tailored to the stateful single-node use case. If you have an existing Elastigroup that manages a single stateful node, you can upgrade it to a Stateful Node.
+If you have an existing Elastigroup that manages a single stateful node, you can upgrade it to a Stateful Node.
 
 ## Prerequisites
 
