@@ -54,7 +54,7 @@ You need to connect a CloudTrail account to your Spot Security account. If you h
 
 <img src="/spot-security/_media/getting-started-g.png" />
 
-### Centralized Bucket
+#### Centralized Bucket
 
 If you have a centralized bucket, choose Yes.
 
@@ -62,7 +62,7 @@ You can connect all of the dependent accounts in bulk if you have selected a cen
 
 <img src="/spot-security/_media/getting-started-h.png" />
 
-### No Centralized Bucket
+#### No Centralized Bucket
 
 If you don’t have a centralized bucket, choose No and click Next.
 
