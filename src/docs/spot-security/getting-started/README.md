@@ -52,11 +52,11 @@ You need to connect a CloudTrail account to your Spot Security account. If you h
 
 <img src="/spot-security/_media/getting-started-g.png" />
 
-1. Enter the bucket name and region; and click Validate.
+2. Enter the bucket name and region; and click Validate.
 
 <img src="/spot-security/_media/getting-started-j.png" />
 
-2. When it is validated by a green checkmark, click Next.
+3. When it is validated by a green checkmark, click Next.
 
 #### Centralized Bucket
 
