@@ -4,7 +4,7 @@ Run stateful applications on stateful nodes. Stateful Nodes utilize spot nodes w
 
 Spot nodes are transient and can be interrupted at any moment by AWS. While this is not an issue for stateless applications as they are designed to easily scale horizontally, it brings a great challenge to stateful applications.
 
-Spot Stateful Nodes are designed to support any fault-tolerant applications, such as databases and stream-processing servers. If you have a stateful application or an application that is designed to withstand node failure, you may have decided in the past that Spot nodes were not the best use case for you. With Stateful Nodes you can maintain your configurations with 0 data loss while taking advantage of the cost savings provided by spot nodes.
+Spot Stateful Nodes are designed to support any fault-tolerant applications, such as databases and stream-processing servers. If you have a stateful application or an application that is designed to withstand node failure, you may have decided in the past that Spot nodes were not the best use case for you. With Stateful Nodes you can maintain your configurations with zero data loss while taking advantage of the cost savings provided by spot nodes.
 
 ## Common Use Cases
 
@@ -28,7 +28,7 @@ Elasticsearch node recovery will take a fraction of the time required to provisi
 
 ### Kafka
 
-Kafka's architecture is designed based on several components and each component has its unique role. Stateful Node supports Brokers and ZooKeeper cluster nodes, as well as the consumers, which can run be seamlessly run on Spot Nodes.
+Kafka's architecture is designed based on several components and each component has its unique role. Stateful Node supports Brokers and ZooKeeper cluster nodes, as well as the consumers, which can run seamlessly on Spot Nodes.
 
 ### MongoDB
 
