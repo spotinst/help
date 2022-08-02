@@ -4,7 +4,7 @@ This procedure describes how to create a new stateful node from scratch.
 
 ## Prerequisites
 
-Before you can create a stateful node, you need to do the following:
+Before you can create a stateful node, you need to complete the following:
 
 - Ensure your AWS account is connected to your [Spot account](connect-your-cloud-provider/aws-account).
 - Ensure your [Spot Policy](elastigroup/tutorials/elastigroup-tasks/update-spot-policy) is up to date.
@@ -12,15 +12,18 @@ Before you can create a stateful node, you need to do the following:
 
 ## Get Started
 
-1. To create a new Stateful Node from scratch, click Stateful Node on the left menu and click New Node on the top right.
+1. To create a new Stateful Node from scratch, click on the left menu.
+2. Click Elastigroup.
+3. Click Stateful Nodes.
+4. Click New Node on the top right.
 
 <img src="/managed-instance/_media/create-new-a.png" />
 
-2. Mark the use case Create a New Stateful Node, as shown below, and click Select.
+5. Mark the use-case Create a New Stateful Node and click Select.
 
 <img src="/managed-instance/_media/create-new-b.png" />
 
-3. Complete the steps in the Create Stateful Node wizard as described below.
+6. Complete the steps in the Create Stateful Node wizard as described below.
 
 ## Step 1: Configuration Tab
 
@@ -32,10 +35,10 @@ Before you can create a stateful node, you need to do the following:
 
 <img src="/managed-instance/_media/gettingstarted-create-new-04.png" />
 
-3. Fill out Node settings section.
+3. Fill out the Node settings section.
 4. Configure Network and Security settings such as VPC, Key Pair, Security Groups, Subnets and Node Profile.
-5. Choose the Product type and the AMI used to launch the node. You can specify your our own AMI, or select one of the images suggested in the common images menu.
-6. Select a Preferred Node type. The node type selected here will be the preferred type for Spot nodes, and also used as an On-Demand type to fall back to in case no suitable Spot capacity is available.
+5. Choose the Product type and the AMI used to launch the node. You can specify your own AMI, or select one of the images suggested in the common images menu.
+6. Select a Preferred Node type. The selected node type will be the preferred type for Spot nodes, and will also be used as an On-Demand type to fall back to in case no suitable Spot capacity is available.
 
 <img src="/managed-instance/_media/gettingstarted-create-new-05.png" width="451" height="494" />
 
@@ -43,20 +46,20 @@ Once VPC, Subnets, Product, Image and Preferred Node type are selected, Spot wil
 
 <img src="/managed-instance/_media/create-new-d.png" />
 
-7. You can edit the additional Spot Market selection via the Spot Node Types table below. The more node types selected here, the higher the chance of finding the optimal spot node to launch in terms of cost and availability.
+7. You can edit the additional Spot Market selection via the Spot Node Types table below. The more node types are selected here, the higher the chance of finding the optimal spot node to launch in terms of cost and availability.
 
 <img src="/managed-instance/_media/create-new-g.png" />
 
-8. Fill in any User Data or Shutdown Scripts you would like to run upon node launch or termination.
+8. Enter any User Data or Shutdown Scripts you would like to run upon node launch or termination.
 9. Shutdown Script requires an Agent to be installed via the User Data. Clicking on the `Add Agent installation to User Data` link will automatically add the required bash script to the User Data section.
 
 <img src="/managed-instance/_media/gettingstarted-create-new-08.png" />
 
-10. Add any custom Node Tags by typing in the Key and Value and clicking `Add`:
+10. Add any custom Node Tags by typing in the Key and Value and click `Add`:
 
 <img src="/managed-instance/_media/gettingstarted-create-new-09.png" width="438" height="154" />
 
-11. Fill out any additional settings such as detailed monitoring for Amazon CloudWatch, EBS optimization, Burstable CPU for T2 or 3 nodes, IPv6 assignment and Public IP assignment.
+11. Enter any additional settings such as detailed monitoring for Amazon CloudWatch, EBS optimization, Burstable CPU for T2 or 3 nodes, IPv6 assignment and Public IP assignment.
 
 <img src="/managed-instance/_media/gettingstarted-create-new-10.png" />
 
@@ -66,12 +69,12 @@ Once VPC, Subnets, Product, Image and Preferred Node type are selected, Spot wil
 
 On this tab you choose which resources your Stateful Node will persist.
 
-### Select Storage Persistence options.
+### Select Storage Persistence options
 
 The creation of a Stateful Node requires at least one of the following persistence options to be selected: Root, Data, or Private IP.
 
-2. Root Volume Persistence is preselected by default, but can be toggled.
-3. Choose Data Volume Persistence options. Data Volume Persistence comes in one of two methods:
+1. Root Volume Persistence is preselected by default, but can be toggled.
+2. Choose Data Volume Persistence options. Data Volume Persistence comes in one of two methods:
    - Snapshots Backups: Incremental snapshots of the data volumes are continuously saved, and are restored upon node replacement.
    - Re-Attach: Data volumes are kept through node termination and are re-attached when a new node is launched.
 
