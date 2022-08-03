@@ -34,7 +34,7 @@ Public IP persistence maintains the nodes Elastic IP. To enable Elastic IP persi
 
 ## Backend Actions
 
-When the Stateful Node is configured to persist the Public or Private IP address the following actions are performed in the backend:
+When the Stateful Node is configured to persist the Public or Private IP address, the following actions are performed in the backend:
 
 - An Elastic Network Interface (ENI) is created the first time the node is Resumed and is associated with the newly created node.
 - The ENI is kept throughout the entire SMI lifecycle, including while the node is Paused. This is designed to make sure that the IP addresses remain available when the SMI is Resumed.
