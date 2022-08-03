@@ -6,16 +6,16 @@ The [flow diagram](elastigroup/features/stateful-instance/stateful-elastigroup-f
 
 ## Configure Data Volume Persistence
 
-1. Click Stateful Nodes on left menu.
+1. Click Stateful Nodes on the left menu.
 2. Choose a node.
 3. Click Actions on the top right.
 4. Choose Edit Configuration.
 5. Click Persistent Resources tab.
-2. Mark Persist Root Volume.
+6. Mark Persist Root Volume.
 
 <img src="/managed-instance/_media/data-volume-persistence.png" />
 
-Stateful Nodes provides the methods described below for data volume persistence.
+Stateful Nodes provide the methods described below for data volume persistence.
 
 ### Snapshot Backups
 
@@ -23,11 +23,11 @@ Periodic snapshots of data volumes are taken while the node is running. Upon spo
 
 ### Reattach
 
-This method is recommended for large data volumes. The same EBS volume is detached from the original node and reattached to the newly launched node. If the new node is launched in a different availability zone, a snapshot is used to create a new volume and attach it to the new node (as volumes cannot be migrated between availability zones). Initially, volumes can be created based on the AMI block device mapping upon the stateful node's first Resume, or attached via the AWS console. The same volumes are maintained as long as the node is launched within the same availability zone.
+This method is recommended for large data volumes. The same EBS volume is detached from the original node and reattached to the newly launched node. If the new node is launched in a different availability zone, a snapshot is used to create a new volume and attach it to the new node (as volumes cannot be migrated between availability zones). Initially, volumes can be created based on the AMI block device mapping upon the stateful node's first resume, or attached via the AWS console. The same volumes are maintained as long as the node is launched within the same availability zone.
 
 ## Suspend User Data Execution Until Volumes are Available
 
-When using the Reattach option for data volume persistence, the nodes are launched, followed by the attachment of the volumes. To prevent the User Data from executing before the volumes are attached add the following script:
+When using the Reattach option for data volume persistence, the nodes are launched, followed by the attachment of the volumes. To prevent the user data from executing before the volumes are attached, add the following script:
 
 ```bash
 #!/bin/bash
