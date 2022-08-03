@@ -33,7 +33,7 @@ For example, the following configuration requests two cores for the Spark driver
 
 Note that the cores field is optional. If omitted, the Spark driver will have 1 core by default. This is a reasonable default as usually the Spark driver does not do much work and so it is more cost-effective to keep the Spark driver small. If you plan to run heavy operations on the Spark driver, such as running pure Python or Scala code, or collecting large results on it, you should increase the number of cores allocated to it.
 
-The default number of cores per executor is four. This is also a reasonable default, and we don’t recommend changing it unless you have a specific need. We recommend setting the instances field to control how many Spark executors you’d like to use. Read [How to Control the number of executors](ocean-spark/configure-spark-apps/common-spark-configs?id=control-the-number-of-executors) to learn more about this.
+For executors, default number of cores is 4. There is no need to change this, unless you have a specific need. Instead, you can set the *instances* field to control how many executors to use. Read [How to Control the number of executors](ocean-spark/configure-spark-apps/common-spark-configs?id=control-the-number-of-executors) to learn more about this.
 
 ## Configuring the type of instances
 
