@@ -57,7 +57,7 @@ For example, the configuration below requests:
 }
 ```
 
-Ocean Spark will optimize the actual choice of nodes (instances) to lower your cloud costs (efficient bin-packing, reusing existing capacity when available, using spot instances as much as possible) and optimize the stability of spot nodes (pick spot instances with a low risk of spot-interruption).
+Ocean Spark will optimize the choice of nodes (instances) to lower your cloud costs (efficient bin-packing, reusing existing capacity when available, using spot instances as much as possible) and optimize the stability of spot nodes (pick spot instances with a low risk of spot-interruption).
 
 If you have a specific need, you can pick a specific instance type or family, but in general we recommend you to let Ocean pick which nodes to use accorss a large list of families. This gives Ocean flexibility to pick an optimal instance type based on the instances available in your cluster and the current Spot market dynamics.
 
