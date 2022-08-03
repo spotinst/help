@@ -512,6 +512,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/connect-your-cloud-provider/first-account/aws-manually"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/connect-your-cloud-provider/first-account/azure</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/connect-your-cloud-provider/first-account/azure"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/connect-your-cloud-provider/first-account/azure"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/connect-your-cloud-provider/first-account/gcp-manually</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
