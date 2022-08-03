@@ -13,7 +13,7 @@ Once one or more load balancers are specified, Stateful Nodes will register stat
 In order to configure the Stateful Node to receive traffic from either Route53 or one or more Load Balancers, follow these steps:
 
 1. Enter the Stateful Nodes's Configuration Wizard.
-2. Head over to the Persisted Resources tab.
+2. Click the Persisted Resources tab.
 3. Under Network, check the `Receive Traffic From` checkbox.
 4. Choose your source:
 
