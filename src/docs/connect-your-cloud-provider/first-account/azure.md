@@ -10,18 +10,18 @@ This page describes the procedures for connecting your Microsoft Azure subscript
 
 Log in to the Azure account you would like Spot to connect to then continue to the next step.
 
-<img src="/connect-your-cloud-provider/_media/connect-azure-001.png" />
+<img src="/connect-your-cloud-provider/_media/connect-azure-001.png" width="400" />
 
 ### Step 3.2: App Registration
 
 In this step, you register Spot to Azure.
 
-<img src="/connect-your-cloud-provider/_media/connect-azure-002.png" />
+<img src="/connect-your-cloud-provider/_media/connect-azure-002.png" width="380" />
 
 1. Go to Azure's Active Directory service.
 2. Click on App registrations and click New Registration.
 
-<img src="/connect-your-cloud-provider/_media/azure1-768x248.png" />
+<img src="/connect-your-cloud-provider/_media/azure1-768x248.png" width="" />
 
 3. Give the application a name and add https://spot.io as the redirect URI.
 
@@ -38,7 +38,7 @@ Continue to the next step in the wizard.
 
 In this step, you create the client secret to be used for authenticating Spot.
 
-<img src="/connect-your-cloud-provider/_media/connect-azure-003.png" />
+<img src="/connect-your-cloud-provider/_media/connect-azure-003.png" width="400" />
 
 1. In the app registration you just created, click Certificates & Secrets.
 2. Create a new client secret:
@@ -59,13 +59,13 @@ Continue to the next step in the wizard.
 
 Enter the Subscription ID you would like to use for spot.io and then continue to the next step in the wizard.
 
-<img src="/connect-your-cloud-provider/_media/connect-azure-004.png" />
+<img src="/connect-your-cloud-provider/_media/connect-azure-004.png" width="350" />
 
 ### Step 3.5: Custom Role
 
 In this step, you create a new custom role that Azure will use for Spot.
 
-<img src="/connect-your-cloud-provider/_media/connect-azure-005.png" />
+<img src="/connect-your-cloud-provider/_media/connect-azure-005.png" width="400" />
 
 1. Under All Services, select Subscriptions. Choose the subscription you would like Spot to access.
 2. In the Subscription menu, select Access Control (IAM).
@@ -92,5 +92,5 @@ Once the validation is complete, your Azure subscription will be connected and r
 
 ## What’s Next?
 
-- [Create your first Elastigroup](elastigroup/getting-started/create-an-elastigroup-for-aws).
+- [Create your first Elastigroup](elastigroup/getting-started/create-an-elastigroup-for-azure).
 - Learn how to [import existing Azure resources](elastigroup/tutorials-azure/getting-started/import-an-existing-azure-resource) such as a Scale Set, an Application Gateway, a Classic Load Balancer or a VM.
