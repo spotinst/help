@@ -10,13 +10,13 @@ This page describes the procedures for connecting your Microsoft Azure subscript
 
 Log in to the Azure account you would like Spot to connect to then continue to the next step.
 
-<img src="/connect-your-cloud-provider/_media/connect-azure-001.png" width="400" />
+<img src="/connect-your-cloud-provider/_media/connect-azure-001.png" width="500" />
 
 ### Step 3.2: App Registration
 
 In this step, you register Spot to Azure.
 
-<img src="/connect-your-cloud-provider/_media/connect-azure-002.png" width="380" />
+<img src="/connect-your-cloud-provider/_media/connect-azure-002.png" width="450" />
 
 1. Go to Azure's Active Directory service.
 2. Click on App registrations and click New Registration.
@@ -38,7 +38,7 @@ Continue to the next step in the wizard.
 
 In this step, you create the client secret to be used for authenticating Spot.
 
-<img src="/connect-your-cloud-provider/_media/connect-azure-003.png" width="400" />
+<img src="/connect-your-cloud-provider/_media/connect-azure-003.png" width="500" />
 
 1. In the app registration you just created, click Certificates & Secrets.
 2. Create a new client secret:
@@ -59,13 +59,13 @@ Continue to the next step in the wizard.
 
 Enter the Subscription ID you would like to use for spot.io and then continue to the next step in the wizard.
 
-<img src="/connect-your-cloud-provider/_media/connect-azure-004.png" width="350" />
+<img src="/connect-your-cloud-provider/_media/connect-azure-004.png" width="320" />
 
 ### Step 3.5: Custom Role
 
 In this step, you create a new custom role that Azure will use for Spot.
 
-<img src="/connect-your-cloud-provider/_media/connect-azure-005.png" width="400" />
+<img src="/connect-your-cloud-provider/_media/connect-azure-005.png" width="500" />
 
 1. Under All Services, select Subscriptions. Choose the subscription you would like Spot to access.
 2. In the Subscription menu, select Access Control (IAM).
@@ -78,7 +78,7 @@ In this step, you create a new custom role that Azure will use for Spot.
 
 In this step, you assign the role you created in the previous step and complete everything you need for the connection.
 
-<img src="/connect-your-cloud-provider/_media/connect-azure-006.png" />
+<img src="/connect-your-cloud-provider/_media/connect-azure-006.png" width="500" />
 
 1. In Azure, Click Role Assignments, Add, and Add Role Assignment.
 2. Enter the custom role created above.
