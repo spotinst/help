@@ -78,7 +78,7 @@ In this step, you create a new custom role that Azure will use for Spot.
 
 In this step, you assign the role you created in the previous step and complete everything you need for the connection.
 
-<img src="/connect-your-cloud-provider/_media/connect-azure-006.png" width="500" />
+<img src="/connect-your-cloud-provider/_media/connect-azure-006.png" width="600" />
 
 1. In Azure, Click Role Assignments, Add, and Add Role Assignment.
 2. Enter the custom role created above.
