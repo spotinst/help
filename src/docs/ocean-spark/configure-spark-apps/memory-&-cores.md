@@ -41,7 +41,7 @@ The instanceAllowList field lets you control which type of instances the pods wi
 
 For example, the configuration below requests:
 * that the Spark driver can be placed on an r5.large instance (which it would fill entirely, given this instance type has 2 available CPU cores) or an r5.xlarge instance (which it would fill at 50% capacity, leaving room for another pod running on the same node)
-* that the 20 requsted Spark executors can be placed on any of 9 families of instances (m5, m5a, ...). For example you could have 20 executors each using an m5.xlarge instance, or you could have 10 executors using m5.xlarge instances, and 10 executors running on 5 m5.2xlarge instances. 
+* that the 20 requested Spark executors can be placed on any of 9 families of instances (m5, m5a, ...). For example you could have 20 executors each using an m5.xlarge instance, or you could have 10 executors using m5.xlarge instances, and 10 executors running on 5 m5.2xlarge instances. 
 
 ```json
 {
