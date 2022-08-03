@@ -38,7 +38,9 @@ You can edit the App Name by clicking the edit icon by the name.
 
 ## Logs
 
-You can view the Driver Logs or the Kubernetes Logs while the application is running. You can also download the logs once the application has finished running.
+You can view the Driver Logs or the Kubernetes Logs while the application is running. You can also download the logs once the application has finished running. 
+
+> **Tip**: If you want to change the severity level of your Driver logs, you can do this easily from your Spark application code, for example by setting `sc.setLogLevel("DEBUG")`.
 
 ## View Configuration
 

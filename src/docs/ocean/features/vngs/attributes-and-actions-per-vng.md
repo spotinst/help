@@ -104,6 +104,7 @@ The following is a list of attributes customizable per VNG in Ocean for GKE.
 - Local SSD (API only)
 - Maximum Nodes
 - Minimum Nodes
+- Network Tags (API only)
 - Preemptible% to use within the VNG
 - Restrict scale down
 - Roll (API only)

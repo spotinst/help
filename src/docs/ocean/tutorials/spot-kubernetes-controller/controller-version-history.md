@@ -1,11 +1,25 @@
 # Controller Version History
 
+## [1.0.84] - 2022-07-31
+
+Added
+
+- Update 3rd party libraries versions
+
+## [1.0.83] - 2022-07-03
+
+Added
+
+- Upgraded Kubernetes SDK
+- Added support for IPv6 clusters
+
 ## [1.0.82] - 2022-05-03
 
 Added
 
-- Upgraded dependencie
+- Upgraded UBI dependencies
 - Added support for user/pass proxy authentication
+- Added support for reporting init container data
 
 ## [1.0.81] - 2022-01-04
 

@@ -16,6 +16,7 @@
       - [Security](spot-pc/features/concepts/security)
       - [Spot Groups](spot-pc/features/concepts/spot-groups)
       - [Spot PC & Cloud PC](spot-pc/features/concepts/spot-pc-and-cloud-pc)
+      - [Spot PC Manager VM](spot-pc/features/concepts/spot-pc-manager)
     - [Spot PC Console](spot-pc/features/spot-pc-console/)
       - [Overview](spot-pc/features/spot-pc-console/overview)
       - [Admins](spot-pc/features/spot-pc-console/admins)
