@@ -16,7 +16,7 @@
 - [**Ocean**](ocean/)
 - [**Ocean for Apache Spark**](ocean-spark/)
 - [**Eco**](eco/)
-- [**Cloud Analyzer](cloud-analyzer)
+- [**Cloud Analyzer**](cloud-analyzer/)
 - [**Security**](spot-security/)
 - [**Spot PC**](spot-pc/)
 - [**Administration**](administration/)
