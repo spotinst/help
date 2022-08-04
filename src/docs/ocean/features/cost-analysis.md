@@ -22,13 +22,32 @@ For example, if a workload requests 20% of the total cluster allocatable resourc
 
 ### Resource Allocation in Detail
 
-The major elements of cluster resource allocation are vCPU and memory, and Ocean gives these equal weights in the cost calculation for a given workload.
+TThe major elements of cluster resource allocation are vCPU and memory. Ocean assigns weights for costs for CPU and Memory depending on
 
-For example, if a workload resource requests 2 vCPUs and 1 GiB of memory and the total cluster allocatable resources are 5 vCPUs and 10 GiB of memory, then the resource allocation of that workload is calculated as:
+* the cloud provider pricing for vCPU when compared to  Memory and
+* the ratio of equivalent compute (vCPU) to memory (GiB) resources allocated in the cluster, CPU:Mem ratio. CPU:Mem ratio indicates if the cluster is more CPU optimized or memory optimized.
 
-`Resource allocation = (0.5 * 2/5) + (0.5 * 1/10)`
+For a cloud provider, the cost of 1 vCPU varies from 7 to 13 times the cost of 1 GiB of memory, depending on instance family and type.
 
-In other words, the workload used 25% of the total cluster allocatable resources.
+In addition, a cluster that is optimized for Memory, using more memory optimized instances, should have a higher weight for memory compared to a cluster optimized for CPU, using more CPU optimized instances.
+
+For example take 2 clusters, Cluster-1(Memory Optimized) and Cluster-2 (CPU optimized)
+* Cluster-1 with 40 vCPU and 320 GiB Memory (1:8 CPU:Mem ratio)
+  - Cost weight for Compute (vCPU) = 48% and Memory (GiB) = 52%
+* Cluster-2 with 120 vCPU and 120 GiB Memory (1:1 CPU:Mem ratio)
+  - Cost weight for Compute (vCPU) = 91% and Memory (GiB) = 9%
+
+In Cluster-1, if workload-1 requests resources for 2 vCPUs and 12 GiB of memory and the total cluster allocatable resources are 40 vCPUs and 320 GiB of memory, then the resource allocation of that workload is calculated as:
+
+`Resource allocation = (0.48 * 2/40) + (0.52 * 12/320) = 0.044 or 4.4%`
+
+In other words, workload-1 used 4.4% of the total cluster allocatable resources. Workload-1 will be assigned 4.4% of Cluster-1 compute costs.
+
+In Cluster-2, if workload-2 requests resources for 4 vCPUs and 6 GiB of memory and the total cluster allocatable resources are 120 vCPUs and 120 GiB of memory, then the resource allocation of that workload is calculated as:
+
+`Resource allocation = (0.91 * 4/120) + (0.09 * 6/120) = 0.035 or 3.5%`
+
+In other words, workload-2 used 3.5% of the total cluster allocatable resources. Workload-2 will be assigned 3.5% of Cluster-2 compute costs.
 
 ### Headroom
 
@@ -60,7 +79,8 @@ In order to relate the storage costs to the breakdowns of your workloads, Ocean 
 
 1. Fetches hourly cost of EFS entities in the AWS account.
 2. Maps pods to their EFS of usage on an hourly basis, using the following logic:
-   a. Ocean identifies pods using EFS storage by identifying certain properties defined on the PVC they are connected to. For a Kubernetes deployment, the PVC is the same for all replicas, and therefore, the storage cost per pod is split between the number of replicas run that hour.
+   a. Ocean identifies pods using EFS storage by identifying certain properties defined on the PVC they are connected to.
+   For a Kubernetes deployment, the PVC is the same for all replicas, and therefore, the storage cost per pod is split between the number of replicas run that hour.
    b. For the relevant pods identified, Ocean evenly spreads the cost between the different workloads that were using the EFS. In cases where a single EFS serves multiple applications (workloads) in the cluster or across different clusters, Ocean also spreads the cost evenly between the different workloads.
 
 To retrieve the necessary EFS information, Ocean requires the following permission in the [Access Policy](administration/api/spot-policy-in-aws.md):
