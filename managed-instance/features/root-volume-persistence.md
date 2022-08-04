@@ -22,12 +22,17 @@ Stateful Node performs various backend actions for different states of the node 
 
 ## Enable Root Volume Persistence
 
-1. Click Stateful Nodes on left menu.
-2. Choose a node.
-3. Click Actions on the top right.
-4. Choose Edit Configuration.
-5. Click Persistent Resources tab.
-2. Mark Persist Root Volume.
+1. If you are using Spot and are in another location in the site, such as Elastigroup, Ocean or Eco, click the three bars in the upper left corner.
+
+<img src="/connect-your-cloud-provider/_media/connect-additional-account-002.png" />
+
+2. In the left menu, click Elastigroup.
+3. In the same left menu, click Stateful Nodes.
+4. Choose a node from the list.
+5. Click Actions on the top right.
+6. Choose Edit Configuration.
+7. Click Persistent Resources tab.
+8. Mark Persist Root Volume.
 
 <img src="/managed-instance/_media/root-volume-persistence.png" />
 

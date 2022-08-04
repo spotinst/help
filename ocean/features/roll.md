@@ -8,7 +8,7 @@ In Ocean you can roll your cluster with a single click. The roll feature takes i
 
 ## How It Works
 
-Whether you are rolling your entire Ocean cluster, a specific virtual node group (VNG), or only specific nodes, Ocean can divide the roll into batches according to batch sizes that you choose. So for example, if you choose to roll according to the default batch size of 20%, Ocean divides the roll into 5 batches. The process takes place as follows:
+Whether you are rolling your entire Ocean cluster, a specific virtual node group (VNG), or only specific nodes, Ocean can divide the roll into batches according to batch sizes that you choose. For example, if you choose to roll according to the default batch size of 20%, Ocean divides the roll into 5 batches. The process takes place as follows:
 
 1. Ocean calculates the number of batches required in the roll based on the batch size you enter and divides the workloads equally among the batches.
 2. Ocean starts with the first batch, replacing each node in such a way that ensures the successful accomodation of the workloads on the new nodes. Ocean's autoscaler takes into consideration all relevant constraints in place before the roll.
@@ -46,7 +46,7 @@ Ocean assigns a status to each stage of the roll process. A roll can have one of
 - STOPPED: The roll was stopped by the user. When the user stops a roll, the nodes remain in the state they were in at the time of the stop. (For example, there is no rollback to an initial state.)
 - COMPLETED: The roll transitions to Completed status when all nodes have been processed, and at least 50% of them have been successfully replaced.
 
-> **Tip**: In the UI, a specific batch may appear with `Pending` state. This means that even though the roll process has started, that batch has not yet started to replace its nodes.
+> **Tip**: In the UI, a specific batch may appear with a `Pending` state. This means that even though the roll process has started, that batch has not yet started to replace its nodes.
 
 ### Log Messages
 

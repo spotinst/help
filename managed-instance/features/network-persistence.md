@@ -11,7 +11,7 @@ Private IP Persistence maintains the same private IP address for the node during
 <img src="/connect-your-cloud-provider/_media/connect-additional-account-002.png" />
 
 2. In the left menu, click Elastigroup.
-3. In the same left menu, Click Stateful Nodes.
+3. In the same left menu, click Stateful Nodes.
 4. Choose a node from the list.
 5. Click Actions on the top right.
 6. Choose Edit Configuration.
@@ -28,7 +28,7 @@ Public IP persistence maintains the nodes Elastic IP. To enable Elastic IP persi
 
 1. If you are using Spot and are in another location in the site, such as Elastigroup, Ocean or Eco, click the three bars in the upper left corner as in the first step above.
 2. In the left menu, click Elastigroup.
-3. In the same left menu, Click Stateful Nodes.
+3. In the same left menu, click Stateful Nodes.
 4. Choose a node from the list.
 5. Click Actions on the top right.
 6. Choose Edit Configuration.
