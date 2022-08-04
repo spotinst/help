@@ -3746,13 +3746,6 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/wave/"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/z-cloud-analyzer_sidebar</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/z-cloud-analyzer_sidebar"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/z-cloud-analyzer_sidebar"/>
-    </url>
-    <url>
         <loc>https://docs.spot.io/?/z-managed-instance/features/data-volume-persistence</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
