@@ -1,6 +1,6 @@
 # Stateful Node Actions
 
-The Stateful Node actions change the node state while maintaining its Root, Data, and IPs. In order to change the state, head over to the Management view, click on the Actions menu on the top right, and click the required action.
+The Stateful Node actions change the node state while maintaining its Root, Data, and IPs. In order to change the state, go to the Management view, click the Actions menu on the top right, and click the required action.
 
 <img src="/managed-instance/_media/actions-02.png" />
 
