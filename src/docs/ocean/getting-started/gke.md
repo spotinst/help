@@ -58,7 +58,7 @@ In the left menu of the Spot Console, click Ocean/Cloud Clusters, and click Crea
 
 ### For a Private GKE Cluster
 
-1. For a private GKE cluster, install the Ocean Controller with the following command:
+1. For a private GKE cluster, install the Spotinst Kubernetes Controller with the following command:
 
 ```sh
 kubectl apply -f https://spotinst-public.s3.amazonaws.com/integrations/kubernetes/cluster-controller/spotinst-kubernetes-cluster-controller-gcr.yaml
@@ -75,7 +75,7 @@ For any change in the original node pool please contact us.
 
 ## Step 4: Review
 
-Review all the Ocean settings you have configured. Click Create to finish or use the generated JSON template to create the Ocean cluster using other tooling.
+Review all of the Ocean settings you have configured. Click Create to finish or use the generated JSON template to create the Ocean cluster using other tooling.
 
 You're all set! Ocean will now ensure the most cost-effective capacity and sizing possible for your cluster.
 
