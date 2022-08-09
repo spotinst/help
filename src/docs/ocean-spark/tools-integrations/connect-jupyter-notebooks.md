@@ -42,8 +42,9 @@ and run with:
 ```
 jupyter lab \
     --GatewayClient.url=https://api.spotinst.io/ocean/spark/cluster/<your ocean spark cluster id>/notebook/ \
-    --GatewayClient.auth_token=<spot token> \
-    --GatewayClient.request_timeout=600
+    --GatewayClient.headers='{"Content-Type": "application/json"}' \
+    --GatewayClient.request_timeout=600 \
+    --GatewayClient.auth_token=<spot token>
 ```
 
 ## Define Jupyter kernels with configuration templates
