@@ -10,7 +10,7 @@ These instances (called nodes in Kubernetes terminology) are dynamically added t
 
 A Spark application consists of exactly one Spark driver pod and a varying number (0 to thousands) of Spark executor pods. You can configure your Spark driver independently of your Spark executors. For example, you can request a small container size for the Spark driver, and large container sizes for the Spark executors, or vice-versa. All Spark executors have the same configuration.
 
-## Running on spot or on-demand nodes
+## Run on spot or on-demand nodes
 
 Your Ocean Spark cluster should have at least two VNGs dedicated to Spark applications: one configured to use only on-demand nodes, one configured to use only spot nodes.
 
@@ -22,7 +22,7 @@ For each application, you can control whether to use spot or on-demand nodes. Fo
 
 You can switch the flags to change the behavior. Note that running the Spark driver on spot nodes is risky. If the spot node is terminated, your Spark application will fail.
 
-## Configuring the number of cores
+## Configure the number of cores
 
 To control the size of your pods, the main API field is cores, which corresponds to the number of CPU cores allocated to the Spark driver or Spark executor. This field also corresponds to the number of Spark tasks which can be executed in parallel on a Spark executor.
 For example, the following configuration requests two cores for the Spark driver and four cores for each Spark executor.
@@ -33,9 +33,9 @@ For example, the following configuration requests two cores for the Spark driver
 
 Note that the cores field is optional. If omitted, the Spark driver will have 1 core by default. This is a reasonable default as usually the Spark driver does not do much work and so it is more cost-effective to keep the Spark driver small. If you plan to run heavy operations on the Spark driver, such as running pure Python or Scala code, or collecting large results on it, you should increase the number of cores allocated to it.
 
-For executors, default number of cores is 4. There is no need to change this, unless you have a specific need. Instead, you can set the *instances* field to control how many executors to use. Read [How to Control the number of executors](ocean-spark/configure-spark-apps/common-spark-configs?id=control-the-number-of-executors) to learn more about this.
+For executors, the default number of cores is four. There is no need to change this, unless you have a specific requirement. Instead, you can set the `instances` field to control how many executors to use. Read [How to Control the number of executors](ocean-spark/configure-spark-apps/common-spark-configs?id=control-the-number-of-executors) to learn more about this.
 
-## Configuring the type of instances
+## Configure the type of instances
 
 The instanceAllowList field lets you control which type of instances the pods will be placed on. It accepts a list of instance family names or specific instance types.
 
