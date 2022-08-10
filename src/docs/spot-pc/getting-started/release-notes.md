@@ -1,5 +1,25 @@
 # Spot PC: Release Notes
 
+## 08/11/2022
+
+* Introducing Granular Tenant Roles
+  * SpotPC is proud to announce Granular Tenant Roles. SpotPC has created a series of Tenant Roles with different permissions that can be assigned to organization users. Tenant role access for each admin can also be changed or removed.
+  **Tenant Manager Role**: A tenant role that allows the highest level permissions with access to all tenant functions.  
+  **Tenant Contributor Role**: A tenant role that allows read/write access to all tenant functions. However, delete access is not available.
+  **Tenant Reader Role**: A tenant role that allows read access to all tenant functions.
+  **Custom Roles**: A organization administrator can create a custom set of roles for specific access to each tenant and can use one of the built-in roles as a base.
+* Image Set Improvements
+  * SpotPC has added a plethora of improvements to Image Sets:
+    1. A warning message to the sealing image since it's a irreversible process
+    2. Improved logging that captures SysPrep failure messages in the Spot PC Spoc Log, which are visible in the Dashboard
+    3. Image creation instances will remain on for 72 hours after build before shutting down. Admins can turn the VM instance back on from the Spot PC image version list by clicking the Connect to Machine link
+    4. Newly created image versions are now tested immediately by creating a new azure VM from the image to ensure its valid for virtual session VM use in Spot Groups
+* Backup Schedules for Business Servers & Personal
+  * SpotPC has backups that are now enabled for new Business server and Personal Virtual Desktops VMs created going forward. The backup occurs once a day, with 7 daily, 5 weekly, 12 monthly, and 5 annual retention/recovery points.
+* Tooltip Size Increase
+  * Tooltip text size has been increased to make them more readable in all form factors.
+
+
 ## 07/28/2022
 _When:_ 07/28/2022 at 10pm - 11pm Eastern
 
