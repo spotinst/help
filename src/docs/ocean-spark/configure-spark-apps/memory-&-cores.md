@@ -40,8 +40,8 @@ For executors, the default number of cores is four. There is no need to change t
 The instanceAllowList field lets you control which type of instances the pods will be placed on. It accepts a list of instance family names or specific instance types.
 
 For example, the configuration below requests:
-* that the Spark driver can be placed on an r5.large instance (which it would fill entirely, given this instance type has 2 available CPU cores) or an r5.xlarge instance (which it would fill at 50% capacity, leaving room for another pod running on the same node)
-* that the 20 requested Spark executors can be placed on any of 9 families of instances (m5, m5a, ...). For example you could have 20 executors each using an m5.xlarge instance, or you could have 10 executors using m5.xlarge instances, and 10 executors running on 5 m5.2xlarge instances. 
+- That the Spark driver be placed on an r5.large instance (which it would fill entirely, given this instance type has 2 available CPU cores) or an r5.xlarge instance (which it would fill at 50% capacity, leaving room for another pod running on the same node).
+- That the 20 requested Spark executors be placed on any of nine families of instances (m5, m5a, ...). For example you could have 20 executors each using an m5.xlarge instance, or you could have 10 executors using m5.xlarge instances, and 10 executors running on 5 m5.2xlarge instances. 
 
 ```json
 {
@@ -57,9 +57,9 @@ For example, the configuration below requests:
 }
 ```
 
-Ocean Spark will optimize the choice of nodes (instances) to lower your cloud costs (efficient bin-packing, reusing existing capacity when available, using spot instances as much as possible) and optimize the stability of spot nodes (pick spot instances with a low risk of spot-interruption).
+Ocean Spark will optimize the choice of nodes (instances) to lower your cloud costs (efficient bin-packing, reusing existing capacity when available, using spot instances as much as possible) and optimize the stability of spot nodes (picking spot instances with a low risk of spot-interruption).
 
-If you have a specific need, you can pick a specific instance type or family, but in general we recommend you to let Ocean pick which nodes to use accorss a large list of families. This gives Ocean flexibility to pick an optimal instance type based on the instances available in your cluster and the current Spot market dynamics.
+If you have a specific need, you can pick a specific instance type or family, but in general we recommend that you to let Ocean pick which nodes to use across a large list of families. This gives Ocean flexibility to pick an optimal instance type based on the instances available in your cluster and the current Spot market dynamics.
 
 If you omit the instanceAllowList field, your Spark executor pods will be able to run on any instance type, preferably filling up nodes which have available capacity, before adding new nodes to the cluster. This gives Ocean Spark a lot of flexibility to pick Spot nodes at the lowest cost. 
 
@@ -90,9 +90,9 @@ The example below shows an instanceAllowList allowing a wide range of high-memor
 }
 ```
 
-Note that the configured amount of memory will be smaller than the value advertised by the cloud provider due to the following reasons: 
-* Some memory is reserved for the instance operating system and Kubernetes internal operations
-* The memory field in our UI and API shows you the maximum heap size of the Spark Java Virtual Machine. This is not the same thing as the pod memory request. Read next section on [Container Memory Overhead](ocean-spark/configure-spark-apps/memory-&-cores?id=container-memory-overhead)) for details on this.
+The configured amount of memory will be smaller than the value advertised by the cloud provider due to the following reasons: 
+- Some memory is reserved for the instance operating system and Kubernetes internal operations.
+- The memory field in our UI and API shows you the maximum heap size of the Spark Java Virtual Machine. This is not the same thing as the pod memory request. Read the next section on [Container Memory Overhead](ocean-spark/configure-spark-apps/memory-&-cores?id=container-memory-overhead)) for details about this.
 
 Should you want to control precisely yourself the amount of memory (heap-size) to allocate to the Spark driver or executors, you can configure it as follows:
 
