@@ -1,13 +1,16 @@
 # Spot PC: Release Notes
 
 ## 08/11/2022
+_When:_ 08/11/2022 at 10pm - 11pm Eastern
+
+_Impact:_ Access to desktops and application services for End Users will remain uninterrupted. Access to Spot PC console will remain available.
 
 * Introducing Granular Tenant Roles
   * SpotPC is proud to announce Granular Tenant Roles. SpotPC has created a series of Tenant Roles with different permissions that can be assigned to organization users. Tenant role access for each admin can also be changed or removed.
-  **Tenant Manager Role**: A tenant role that allows the highest level permissions with access to all tenant functions.  
-  **Tenant Contributor Role**: A tenant role that allows read/write access to all tenant functions. However, delete access is not available.
-  **Tenant Reader Role**: A tenant role that allows read access to all tenant functions.
-  **Custom Roles**: A organization administrator can create a custom set of roles for specific access to each tenant and can use one of the built-in roles as a base.
+  * __Tenant Manager Role__: A tenant role that allows the highest level permissions with access to all tenant functions.  
+  * __Tenant Contributor Role__: A tenant role that allows read/write access to all tenant functions. However, delete access is not available.
+  * __Tenant Reader Role__: A tenant role that allows read access to all tenant functions.
+  * __Custom Roles__: A organization administrator can create a custom set of roles for specific access to each tenant and can use one of the built-in roles as a base.
 * Image Set Improvements
   * SpotPC has added a plethora of improvements to Image Sets:
     1. A warning message to the sealing image since it's a irreversible process
