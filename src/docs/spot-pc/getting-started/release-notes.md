@@ -151,7 +151,6 @@ _When:_ 04/14/2022 at 10pm - 11pm Eastern
 
 _Impact:_ Access to desktops and application services for End Users will remain uninterrupted. Access to Spot PC console will remain available.
 
-### Changes
 * Automatic Activation of Cloud Insights
   * Spot PC's monitoring is powered by Cloud Insights. Activation is now automatic, with the metrics picked up by Spot PC will be available right out of the box for all new tenants.
 * Introduce Spot Group Columns for Image Set and Image Version
@@ -172,7 +171,6 @@ _Impact:_ Access to desktops and application services for End Users will remain 
 
   _Impact:_ Access to desktops and application services for End Users will remain uninterrupted. Access to Spot PC console will remain available.
 
-### Changes
 * Introducing Stateful Desktops
   * Stateful desktops support a variety of customer use cases. A few key examples are Developers and GPU-driven (users can customize their own machine and have changes persist across time).
   * This also allows customers to let end users install apps on their own personal machines as desired.
