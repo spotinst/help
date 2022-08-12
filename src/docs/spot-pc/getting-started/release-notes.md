@@ -1,7 +1,7 @@
 # Spot PC: Release Notes
 
-<!-- ## 08/11/2022
-_When:_ 08/11/2022 at 10pm - 11pm Eastern
+## 08/15/2022
+_When:_ 08/15/2022 at 10pm - 11pm Eastern
 
 _Impact:_ Access to desktops and application services for End Users will remain uninterrupted. Access to Spot PC console will remain available.
 
