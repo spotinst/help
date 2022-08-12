@@ -13,7 +13,7 @@ The Cost Analysis tab opens and shows the cluster name at the top.
 
 ## Cost over Time
 
-The first part of the cost analysis is a bar chart showing the cloud costs (compute and storage) incurred by cluster over time. You can adjust your view of the data by setting the following parameters:
+The first part of the cost analysis is a bar chart showing the cloud costs (compute and storage) incurred by the cluster over time. You can adjust your view of the data by setting the following parameters:
 
 - Filter by Time: Set the time range for displaying data in the chart.
 - Group by: Group the data according to job or user.
@@ -49,8 +49,9 @@ In the Top Spend Summary, you can see a breakdown of costs per application for e
 
 ## Allocate Cloud Costs Using Custom Labels
 
-You can define custom cost labels in each application you submit. 
-Here's an example configuration - which you can insert in your configuration templtes, in your jobs' configuration, or directly in your API calls as configOverrides.
+You can define custom cost labels for each application you run on Ocean Spark.
+
+Here's an example configuration - which you can insert in your configuration templates, in your jobs' configuration, or directly in your API calls as configOverrides.
 
 ```json
 {
@@ -62,7 +63,7 @@ Here's an example configuration - which you can insert in your configuration tem
 }
 ```
 
-You will then be able to view your cloud costs, grouped on these custom cost labels, using the Cost Analysis page of Ocean (and not Ocean Spark). To find this page:
+You will then be able to view your cloud costs, grouped by these custom cost labels, using the Cost Analysis page of Ocean (and not Ocean Spark). To find this page:
 
 1. From your Ocean Spark cluster page, click on the link "View cluster in Ocean"
 2. Then click on the tab "Cost Analysis"
