@@ -1,6 +1,6 @@
 # Spot PC: Release Notes
 
-## 08/11/2022
+<!-- ## 08/11/2022
 _When:_ 08/11/2022 at 10pm - 11pm Eastern
 
 _Impact:_ Access to desktops and application services for End Users will remain uninterrupted. Access to Spot PC console will remain available.
@@ -21,7 +21,7 @@ _Impact:_ Access to desktops and application services for End Users will remain 
   * SpotPC has backups that are now enabled for new Business server and Personal Virtual Desktops VMs created going forward. The backup occurs once a day, with 7 daily, 5 weekly, 12 monthly, and 5 annual retention/recovery points.
 * Tooltip Size Increase
   * Tooltip text size has been increased to make them more readable in all form factors.
-
+-->
 
 ## 07/28/2022
 _When:_ 07/28/2022 at 10pm - 11pm Eastern
