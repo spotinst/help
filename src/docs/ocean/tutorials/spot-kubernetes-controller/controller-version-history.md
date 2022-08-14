@@ -1,5 +1,11 @@
 # Controller Version History
 
+## [1.0.85] - 2022-08-14
+
+Added
+
+- Added support for match expressions in topology spread constraints
+
 ## [1.0.84] - 2022-07-31
 
 Added
