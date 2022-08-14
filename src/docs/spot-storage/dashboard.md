@@ -36,7 +36,7 @@ Spot recommends removing a volume for various reasons, and the reason is always 
 
 In addition, Spot displays that amount you can save over the next month by deleting the volumes recommended.
 
-<img src="/spot-storage/_media/dashboard-n003.png" />
+<img src="/spot-storage/_media/dashboard-n003.png" width="400" />
 
 1. Click Remove Volumes (or anywhere on the card) to see  the list of unattached volumes recommended for removal. See below for more information about the Unattached Volumes table that appears.
 
@@ -45,7 +45,7 @@ In addition, Spot displays that amount you can save over the next month by delet
 2. To remove one or more volumes, mark the checkboxes on the left and click Delete Volumes.
 3. You will be prompted to confirm the volumes you want to remove. Enter the requested information and click Yes, Delete.
 
-<img src="/spot-storage/_media/dashboard-n005.png" />
+<img src="/spot-storage/_media/dashboard-n005.png" width="400" />
 
 #### Unattached Volumes Table
 
@@ -57,7 +57,7 @@ This table displays the full list of unattached volumes recommended for removal.
 
 Spot identifies your EBS types and recommends suitable EBS types that would cost you less. For example, Spot may recommend that you change your EBS type from gp2 to gp3.
 
-<img src="/spot-storage/_media/dashboard-n006.png" />
+<img src="/spot-storage/_media/dashboard-n006.png" width="400" />
 
 1. Click Modify Type (or anywhere on the card) to see the list of recommendations to modify EBS type. See below for more information about the Unoptimized EBS Type table that appears.
 
@@ -118,7 +118,7 @@ Spot checks the last read time on your EFS file systems. An EFS is recommended f
 2. Mark the file systems for removal and click Delete Volumes.
 3. You will be prompted to confirm the deletion. Enter the information requested and click Yes, Delete.
 
-<img src="/spot-storage/_media/dashboard-n012.png" />
+<img src="/spot-storage/_media/dashboard-n012.png" width="400" />
 
 ## What’s Next?
 
