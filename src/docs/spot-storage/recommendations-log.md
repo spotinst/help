@@ -4,7 +4,7 @@ Spot Storage keeps a log of the actions you have taken based on the Recommendati
 1. To get to the Recommendation Log, go to Spot Storage in the left menu and click Dashboard.
 2. In the Recommendations area of the dashboard, click the Recommendation Log tab.
 
-<img src="/spot-storage/_media/view-recommendations-log-n001.png" />
+<img src="/spot-storage/_media/view-recommendation-log-n001.png" />
 
 ## Filters
 
