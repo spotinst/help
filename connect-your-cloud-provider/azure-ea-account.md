@@ -26,7 +26,7 @@ Complete the procedure below.
 
    - In the New Group page, enter the Group Name and Group Description, e.g., Eco Cost Specialist Team, and click Create.
 
-   <img src="/connect-your-cloud-provider/_media/connect-azure-ea-n002.png" />
+   <img src="/connect-your-cloud-provider/_media/connect-azure-ea-n002.png" width="500"/>
 
    - Wait a few moments, then refresh the page. The name of the group will appear after it has been created.
 
@@ -79,7 +79,7 @@ Step 4. Invite Eco Cost Specialist Guest Users to the user group
 
 3. For the first user, click Invite. This sends a notification to the Eco guest user via email.
 
-<img src="/connect-your-cloud-provider/_media/connect-azure-ea-n008.png" />
+<img src="/connect-your-cloud-provider/_media/connect-azure-ea-n008.png" width="500" />
 
 4. Repeat the invitations for remaining users.
 
@@ -89,7 +89,7 @@ Step 4. Invite Eco Cost Specialist Guest Users to the user group
 2. In the left Navigation, click Manage.
 3. Within the Enrollment tab, copy the Enrollment Number and set that aside for now.
 
-<img src="/connect-your-cloud-provider/_media/connect-azure-ea-n009.png" />
+<img src="/connect-your-cloud-provider/_media/connect-azure-ea-n009.png" width="500" />
 
 4. Ensure the Auth Level on the Enrollment Detail says “Work or School Account Cross tenant”. It is possible to temporarily set it as this auth level. Just switch it to “Work or School Account Cross tenant,” send the invite, then switch it back to your preferred Auth Level.
 
