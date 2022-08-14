@@ -19,6 +19,7 @@
 - [**Cloud Analyzer**](cloud-analyzer/)
 - [**Security**](spot-security/)
 - [**Spot PC**](spot-pc/)
+- [**Spot Storage**](spot-storage/)
 - [**Administration**](administration/)
 - [**Tools & Provisioning**](tools-and-provisioning/)
 - <a href="https://docs.spot.io/api" target="_blank"><strong>API Reference <i data-feather="external-link"></i></strong></a>
