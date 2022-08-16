@@ -55,7 +55,7 @@ Apply the Reservation Reader Role to the User Group created earlier.
 
 <img src="/connect-your-cloud-provider/_media/connect-azure-ea-n007.png" />
 
-### Step 4. Invite Eco Cost Specialist Guest Users to the user group
+### Step 4. Invite Eco Cost Specialist Guest Users to the User Group
 
 1. Navigate to Users.
 2. Select New Guest User and complete the required fields. You will do this once for each user. You will use the following names and email addresses:
