@@ -17,7 +17,7 @@ To access the Notification Center, do the following:
 
 In the Create New Policy popup, your user name (i.e., your company email address) appears in the Owner field.
 
-<img src="/administration/_media/create-new-notification-policy-01a.png" />
+<img src="/administration/_media/create-new-notification-policy-01a.png" width="500" />
 
 1. Complete the following information:
    - Policy Name: Give the policy a name.
@@ -31,7 +31,7 @@ To complete the policy definition, you will need to complete all parts of the wi
 
 Select the account the notification policy should apply to.
 
-<img src="/administration/_media/create-new-notification-policy-01-1.png" />
+<img src="/administration/_media/create-new-notification-policy-01-1.png" width="400" />
 
 Only accounts that are connected to a cloud provider can create a notification policy.
 
@@ -88,7 +88,7 @@ You can filter the list and search for a resource by entering a type, a name, an
 
 Choose the types of events you want to receive notifications about. You can use the filter box to search for a specific event type.
 
-<img src="/administration/_media/create-new-notification-policy-04a.png" />
+<img src="/administration/_media/create-new-notification-policy-04a.png" width="500" />
 
 If you want to configure integrations, click Next. Otherwise, click Create.
 
@@ -96,7 +96,7 @@ If you want to configure integrations, click Next. Otherwise, click Create.
 
 If you (an Admin user) are configuring a policy at the Account level, you can select one or more integrations. The integrations determine how the notifications will be delivered.
 
-<img src="/administration/_media/create-new-notification-policy-05a.png" />
+<img src="/administration/_media/create-new-notification-policy-05a.png" width="600" />
 
 The following integrations are available:
 
