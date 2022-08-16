@@ -17,19 +17,25 @@ To access the Notification Center, do the following:
 
 In the Create New Policy popup, your user name (i.e., your company email address) appears in the Owner field.
 
-<img src="/administration/_media/create-new-notification-policy-01.png" width="450" height="219" />
+<img src="/administration/_media/create-new-notification-policy-01a.png" />
 
 1. Complete the following information:
    - Policy Name: Give the policy a name.
-   - Description: Enter a few words describing what or who the policy is for.
-2. Mark the type of visibility for the policy:
-   - Personal: The policy will be visible only to you, and you will not be able to add integrations.
-   - Account: The policy will be available to other members of your account.
+   - Policy Description: Enter a few words describing what or who the policy is for.
+2. Mark Personal Visibility if you want the policy to be visible only to you. You will not be able to add integrations. If you leave the checkbox blank, the policy will be available to other members of the account it is in,, and you will be able to add integrations.
 3. Click Continue.
 
 To complete the policy definition, you will need to complete all parts of the wizard to select resources, events, and integrations. Once the policy is created, you may also need to edit the policy to select users who will have access.
 
-## Step 1: Select Resources
+## Step 1: Select Account
+
+Select the account the notification policy should apply to.
+
+<img src="/administration/_media/create-new-notification-policy-01-1.png" />
+
+Only accounts that are connected to a cloud provider can create a notification policy.
+
+## Step 2: Select Resources
 
 Choose one of the options determining which resources will be monitored. The options are described below.
 
@@ -78,17 +84,19 @@ When you choose Manual Resources, you then select from a list of existing resour
 
 You can filter the list and search for a resource by entering a type, a name, an ID in the filter box, or you can just type in string and search.
 
-## Step 2: Select Events
+## Step 3: Select Events
 
 Choose the types of events you want to receive notifications about. You can use the filter box to search for a specific event type.
 
-<img src="/administration/_media/create-new-notification-policy-04.png" width="507" height="245" />
+<img src="/administration/_media/create-new-notification-policy-04a.png" />
 
-## Step 3: Select Integrations
+If you want to configure integrations, click Next. Otherwise, click Create.
+
+## Step 4: Select Integrations (Optional)
 
 If you (an Admin user) are configuring a policy at the Account level, you can select one or more integrations. The integrations determine how the notifications will be delivered.
 
-<img src="/administration/_media/create-new-notification-policy-05.png" width="506" height="264" />
+<img src="/administration/_media/create-new-notification-policy-05a.png" />
 
 The following integrations are available:
 
