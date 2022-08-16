@@ -33,7 +33,7 @@ These are described in detail below.
 
 1. To modify the Overview information, click on the Edit icon above the overview.
 
-<img src="/administration/_media/edit-a-notification-policy-02a.png" />
+<img src="/administration/_media/edit-a-notification-policy-02a.png" width="400" />
 
 2. Edit the owner, the policy name, and the description, as needed, and click Update. (Only an Admin user can change the owner.)
 
