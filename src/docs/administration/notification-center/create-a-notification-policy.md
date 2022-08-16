@@ -39,7 +39,7 @@ Only accounts that are connected to a cloud provider can create a notification p
 
 Choose one of the options determining which resources will be monitored. The options are described below.
 
-<img src="/administration/_media/create-new-notification-policy-02z.png" width="500" />
+<img src="/administration/_media/create-new-notification-policy-02z.png" width="700" />
 
 ### All Resources
 
