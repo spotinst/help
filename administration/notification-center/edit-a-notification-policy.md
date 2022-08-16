@@ -27,15 +27,15 @@ At the top of the page, a status icon next to the policy name indicates whether 
 
 These are described in detail below.
 
-<img src="/administration/_media/edit-a-notification-policy-01.png" />
+<img src="/administration/_media/edit-a-notification-policy-01a.png" />
 
 ## Edit Policy Overview
 
 1. To modify the Overview information, click on the Edit icon above the overview.
 
-<img src="/administration/_media/edit-a-notification-policy-02.png" width="377" height="120" />
+<img src="/administration/_media/edit-a-notification-policy-02a.png" />
 
-2. Edit the name, owner, and description, as needed, and click Update. (Only an Admin user can change the owner.)
+2. Edit the owner, the policy name, and the description, as needed, and click Update. (Only an Admin user can change the owner.)
 
 The Visibility of a policy cannot be changed.
 
