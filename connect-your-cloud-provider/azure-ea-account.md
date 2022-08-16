@@ -60,22 +60,11 @@ Step 4. Invite Eco Cost Specialist Guest Users to the user group
 1. Navigate to Users.
 2. Select New Guest User and complete the required fields. You will do this once for each user. You will use the following names and email addresses:
 
-```HTML
-<table>
-  <tr>
-    <td> Tanner Harvey  </td>
-    <td> TannerH@netapp.com  </td>
-  </tr>
-  <tr>
-    <td> Brett McCulloch  </td>
-    <td> Mccullob@netapp.com   </td>
-  </tr>
-  <tr>
-    <td> Mimi Bao  </td>
-    <td> Bmimi@netapp.com  </td>
-  </tr>
-</table>
-```
+|  |  |
+|---|---|
+|  Tanner Harvey   |  TannerH@netapp.com   |
+|  Brett McCulloch   |  Mccullob@netapp.com    |
+|  Mimi Bao   |  Bmimi@netapp.com   |
 
 3. For the first user, click Invite. This sends a notification to the Eco guest user via email.
 
