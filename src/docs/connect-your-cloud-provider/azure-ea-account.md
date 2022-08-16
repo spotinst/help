@@ -55,7 +55,7 @@ Apply the Reservation Reader Role to the User Group created earlier.
 
 <img src="/connect-your-cloud-provider/_media/connect-azure-ea-n007.png" />
 
-Step 4. Invite Eco Cost Specialist Guest Users to the user group
+### Step 4. Invite Eco Cost Specialist Guest Users to the user group
 
 1. Navigate to Users.
 2. Select New Guest User and complete the required fields. You will do this once for each user. You will use the following names and email addresses:
@@ -81,7 +81,6 @@ Step 4. Invite Eco Cost Specialist Guest Users to the user group
 <img src="/connect-your-cloud-provider/_media/connect-azure-ea-n009.png" width="500" />
 
 4. Ensure the Auth Level on the Enrollment Detail says “Work or School Account Cross tenant”. It is possible to temporarily set it as this auth level. Just switch it to “Work or School Account Cross tenant,” send the invite, then switch it back to your preferred Auth Level.
-
 
 5. You will again need to invite the guest users (see list [above](eco/getting-started/connect-azure-ea-to-eco?id=steps-to-invite-users)), but this time as Read-Only Enterprise Administrators.
 
