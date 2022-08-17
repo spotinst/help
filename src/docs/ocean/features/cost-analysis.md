@@ -6,6 +6,8 @@ Ocean breaks down the infrastructure costs of your clusters and provides insight
 
 Instead of seeing the cost of an entire cluster, you can see costs broken down into namespaces and individual workloads within each namespace, and you can filter according to your container labels and annotations. You can see this information further broken down into compute costs and storage costs for each workload. This enables you to gain a detailed understanding of the costs in your cloud infrastructure and provides an essential tool for managing your cloud expenses.
 
+<img src="/ocean/_media/cost-analysis-2.png" />
+
 ## How It Works
 
 For the cost analysis, Ocean calculates both compute and storage costs broken down into their sources. Ocean considers all workloads in the cluster, and the managed infrastructure cost is divided across all workloads according to their relative weights.
@@ -20,9 +22,9 @@ In order to provide a cost breakdown for the cluster, Ocean performs the followi
 
 For example, if a workload requests 20% of the total cluster allocatable resources, and the cluster cost was $100, then that workload's cost is calculated as $20.
 
-### Resource Allocation in Detail
+### Compute Costs: Workload Resource Allocation (CPU and Memory)
 
-TThe major elements of cluster resource allocation are vCPU and memory. Ocean assigns weights for costs for CPU and Memory depending on
+The major elements of cluster resource allocation are vCPU and memory. Ocean assigns weights for costs for CPU and Memory depending on
 
 * the cloud provider pricing for vCPU when compared to  Memory and
 * the ratio of equivalent compute (vCPU) to memory (GiB) resources allocated in the cluster, CPU:Mem ratio. CPU:Mem ratio indicates if the cluster is more CPU optimized or memory optimized.
@@ -48,6 +50,8 @@ In Cluster-2, if workload-2 requests resources for 4 vCPUs and 6 GiB of memory a
 `Resource allocation = (0.91 * 4/120) + (0.09 * 6/120) = 0.035 or 3.5%`
 
 In other words, workload-2 used 3.5% of the total cluster allocatable resources. Workload-2 will be assigned 3.5% of Cluster-2 compute costs.
+
+<img src="/ocean/_media/cost-analysis-1.png" />
 
 ### Headroom
 
