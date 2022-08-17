@@ -4,7 +4,7 @@ Once Eco has been enabled for your organization and you have chosen your reserve
 
 To view the Eco dashboard in the console, go to Eco on the left side and click Dashboard, then click the AWS tab.
 
-<img src="/eco/_media/tutorials-view-savings-01bc.png" />
+<img src="/eco/_media/tutorials-view-savings-01bd.png" />
 
 ## Filters
 
@@ -21,12 +21,9 @@ You can set the following filters:
 ## Summary Line
 
 The Overview dashboard includes a summary line which displays the following information:
-
 - Total Saved: Total amount saved as a result of reserved instance utilization.
 - Current Commitment:The amount currently committed to reserved instances. The lower the commitment, the more flexible and dynamic the account's compute resources can be.
-- Additional Potential Savings: The amount of additional potential savings in USD on top of existing RIs.
-- Current EC2 Commitment: The current percentage of On-Demand instances in the account that are covered by reservations.
-- Max EC2 Commitment: Maximum potential committed amount.
+- MTD Savings: Total generated savings from day one of the month to the most recent update.
 
 ## Graphs and Charts
 
@@ -42,11 +39,11 @@ A bar graph showing the amount of savings each month broken down by type of savi
 
 <img src="/eco/_media/tutorials-view-savings-01c2a.png" />
 
-It is important to note that RI Volume Discounts may appear in Savings Over Time because they also drive the cost of reservations down. Eco includes these cost reductions in our net savings calculations. 
+It is important to note that RI Volume Discounts may appear in Savings Over Time because they also drive the cost of reservations down. Eco includes these cost reductions in our net savings calculations.
 
 ### Monthly Commitment over Time
 
-A stacked bar graph showing your reserved instance and savings plan commitment per month broken down into Standard, Convertible, and Pending reservations, plus Compute and EC2 savings plans. Use the toggle switches to include or exclude recurring fees or show up-front fees from an amortized view. Regardless of what data range you select in the date filter, this graph will remain static, looking six months into the past and thirty-six months into the future. 
+A stacked bar graph showing your reserved instance and savings plan commitment per month broken down into Standard, Convertible, and Pending reservations, plus Compute and EC2 savings plans. Use the toggle switches to include or exclude recurring fees or show up-front fees from an amortized view. Regardless of what data range you select in the date filter, this graph will remain static, looking six months into the past and thirty-six months into the future.
 
 <img src="/eco/_media/tutorials-view-savings-01c3a.png" />
 
@@ -114,7 +111,7 @@ You can filter the data displayed according to several criteria available.
 
 You can customize the columns that appear in the table. The following column headings are available:
 
-- Savings type: 
+- Savings type:
   - COMP SP: Compute Savings Plan
   - EC2 SP: EC2 Savings Plan
   - SAGE SP: Sagemaker Savings Plan
