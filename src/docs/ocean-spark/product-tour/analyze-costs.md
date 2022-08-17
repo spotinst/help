@@ -51,7 +51,7 @@ In the Top Spend Summary, you can see a breakdown of costs per application for e
 
 You can define custom cost labels for each application you run on Ocean Spark.
 
-Here's an example configuration - which you can insert in your configuration templates, in your jobs' configuration, or directly in your API calls as configOverrides.
+Here is an example configuration which you can insert in your configuration templates, in your job configuration, or directly in your API calls as configOverrides.
 
 ```json
 {
@@ -65,8 +65,8 @@ Here's an example configuration - which you can insert in your configuration tem
 
 You will then be able to view your cloud costs, grouped by these custom cost labels, using the Cost Analysis page of Ocean (and not Ocean Spark). To find this page:
 
-1. From your Ocean Spark cluster page, click on the link "View cluster in Ocean"
-2. Then click on the tab "Cost Analysis"
+1. From your Ocean Spark cluster page, click "View cluster in Ocean".
+2. Then click "Cost Analysis".
 3. In the "Group By" dropdown, select "Label (Resource)", and then pick your label key ("team", "project", or "environment").
 
 Visit the Ocean documentation to learn more about [how Ocean estimates your cloud costs](/ocean/features/cost-analysis).
