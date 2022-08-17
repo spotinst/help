@@ -1,94 +1,37 @@
 # Connect Your Azure EA to Spot
 
-This document describes the process and procedures to enable the Eco Managed Service for Eco reservation management and provide appropriate access to reservation.
-
-## Audience
-
-Microsoft EA Azure administrators
+This procedure describes how to set up Spot account access to Azure EA Read Only data, which gives Spot the necessary permissions to pull Azure EA data and process it for the [Eco Azure Dashboard](eco/azure-tutorials/view-your-savings).
 
 ## Prerequisites
+- An Azure EA
+- A registered Spot account
 
-- Admin access to the [Azure EA console](https://ea.azure.com/)
-- The ability to create a user group in Azure Portal
-- Reviewed [read-only permissions](https://docs.spot.io/eco/azure-tutorials/access-roles-read-only) required for Eco team
-- The Azure user is a global administrator with [elevated access](https://docs.microsoft.com/en-us/azure/role-based-access-control/elevate-access-global-admin#elevate-access-for-a-global-administrator) and access to at least one subscription
+## Step 1: Enable API Data Access
 
-## Setup for Initial Analysis
+Use the procedure below to enable API data access. This procedure can also be found in the Azure documentation to [enable API data access](https://docs.microsoft.com/en-us/azure/cost-management-billing/manage/ea-portal-rest-apis#enable-api-data-access).
+1. Sign in as an enterprise administrator.
+2. Click Reports on the left navigation window and then click the Download Usage tab.
+3. Click API Access Key.
+4. Under Enrollment Access Keys, select the generate key symbol to generate either a primary or secondary key.
+5. Select Expand Key to view the entire generated API access key.
+6. Select Copy to get the API access key for immediate use.
 
-### Step 1. Create User Group for Eco Cost Specialist Guest Users
+<img src="/connect-your-cloud-provider/_media/connect-azure-ea-01.png" />
 
-Complete the procedure below.
-1. Log into the [Azure portal](https://portal.azure.com/).
-2. Create an Azure user group for the Eco Cost Specialist Team.
-   - In your Microsoft Azure account go to the Groups page and click New Group.
+## Step 2: Enter your Information in the Spot Console
 
-   <img src="/connect-your-cloud-provider/_media/connect-azure-ea-n001.png" />
+1. Choose Microsoft Azure.
 
-   - In the New Group page, enter the Group Name and Group Description, e.g., Eco Cost Specialist Team, and click Create.
+<img src="/connect-your-cloud-provider/_media/connect-azure-ea-02.png" />
 
-   <img src="/connect-your-cloud-provider/_media/connect-azure-ea-n002.png" width="500"/>
+2. Choose option "Connect Your Enterprise Agreement (EA)", fill out the information and click connect.
 
-   - Wait a few moments, then refresh the page. The name of the group will appear after it has been created.
+<img src="/connect-your-cloud-provider/_media/connect-azure-ea-03.png" />
 
-   <img src="/connect-your-cloud-provider/_media/connect-azure-ea-n003.png" />
+3. After entering in the EA API data, you can choose to set up a strategy call with the Eco Azure team to perform an initial analysis of what savings the Eco Azure team can provide. The details are listed in the [Eco Azure Getting Started](eco/getting-started/connect-azure-ea-to-eco) guide.
 
-### Step 2. Apply the Cost Management Reader Role
-
-To apply the Cost Management Reader role to the Management Group or Subscriptions that you would like analyzed, complete the procedure below.
-
-1. Find the Management Group you would like to give the Eco Cost Specialist group access to.
-
-<img src="/connect-your-cloud-provider/_media/connect-azure-ea-n004.png" />
-
-2. Apply the Cost Management Reader role to the user group created earlier for the Management Group.
-
-<img src="/connect-your-cloud-provider/_media/connect-azure-ea-n005.png" />
-
-### Step 3: Apply Reservation Reader Role
-
-To apply the Reservation Reader role to the user group, complete the procedure below.
-1. Navigate to the Reservations Page
-
-<img src="/connect-your-cloud-provider/_media/connect-azure-ea-n006.png" />
-
-Apply the Reservation Reader Role to the User Group created earlier.
-
-<img src="/connect-your-cloud-provider/_media/connect-azure-ea-n007.png" />
-
-### Step 4. Invite Eco Cost Specialist Guest Users to the User Group
-
-1. Navigate to Users.
-2. Select New Guest User and complete the required fields. You will do this once for each user. You will use the following names and email addresses:
-
-|  |  |
-|---|---|
-|  Tanner Harvey   |  TannerH@netapp.com   |
-|  Brett McCulloch   |  Mccullob@netapp.com    |
-|  Mimi Bao   |  Bmimi@netapp.com   |
-
-3. For the first user, click Invite. This sends a notification to the Eco guest user via email.
-
-<img src="/connect-your-cloud-provider/_media/connect-azure-ea-n008.png" width="500" />
-
-4. Repeat the invitations for remaining users.
-
-### Step 5. Read Only Access to Enterprise Enrollment Data
-
-1. Log into https://ea.azure.com/.
-2. In the left Navigation, click Manage.
-3. Within the Enrollment tab, copy the Enrollment Number and set that aside for now.
-
-<img src="/connect-your-cloud-provider/_media/connect-azure-ea-n009.png" width="500" />
-
-4. Ensure the Auth Level on the Enrollment Detail says “Work or School Account Cross tenant”. It is possible to temporarily set it as this auth level. Just switch it to “Work or School Account Cross tenant,” send the invite, then switch it back to your preferred Auth Level.
-
-5. You will again need to invite the guest users (see list [above](eco/getting-started/connect-azure-ea-to-eco?id=steps-to-invite-users)), but this time as Read-Only Enterprise Administrators.
-
-   - Enter email address: as listed above
-   - Auth Type: Work or school account
-   - Notification frequency: None
-   - Lifecycle Notification Suppression: No
+<img src="/connect-your-cloud-provider/_media/connect-azure-ea-04.png" width="500" />
 
 ## What’s Next?
 
-Learn [how Eco works](eco/azure-tutorials/) to provide significant savings on your cloud spend.
+Schedule a strategy call with the Eco Azure team to perform an initial analysis of what savings the Eco Azure team can provide. The details are listed in the Eco Azure Getting Started guide.
