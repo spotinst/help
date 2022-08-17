@@ -112,12 +112,28 @@ an object storage as fallback storage. Here's an example configuration:
 ```json
 {
   "sparkConf": {
-    "spark.storage.decommission.fallbackStorage.path": "s3://<my-S3-bucket>/decom/"
+    "spark.storage.decommission.fallbackStorage.path": "s3a://<my-S3-bucket>/decom/"
   }
 }
 ```
 
 Spark executors will need to have read and write permissions to the target storage.
+
+## Using the S3A protocol instead of S3
+
+The [S3 protocol has been deprecated in favor of S3A since Hadoop 3.x](https://hadoop.apache.org/docs/current3/hadoop-aws/tools/hadoop-aws/index.html#Introducing_the_Hadoop_S3A_client.), because S3A provides better performance and security. 
+
+You should therefore always use S3 paths starting with "s3a://", attempting to use an "s3://" path would give you an error "No FileSystem for scheme 's3'". 
+
+If you can't change the path, there's a workaround to instruct Spark to actually use the S3AFileSystem when it encounters an "s3://" path, by adding the following configuration to your applications:
+
+```json
+{
+  "sparkConf": {
+    "spark.hadoop.fs.s3.impl": "org.apache.hadoop.fs.s3a.S3AFileSystem"
+  }
+}
+```
 
 ## What’s Next?
 
