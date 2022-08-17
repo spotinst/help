@@ -60,7 +60,9 @@ If you have any questions or want to let us know of upcoming account changes, pl
 
 ### Receiving Emails
 
-Eco sends the email to the email addresses of users registered with your org in the Spot platform.
+If you are interested in being added to the list of customers receiving the email, please submit a support ticket.
+
+For companies which have been added to the allow-list, Eco sends the email to the email addresses of users registered with your organization in the Spot platform.
 The email should come to you from Eco Team <team@spot.io>. Please ensure your spam filters do not block the email.
 
 Much of the content of the email is in graphical format. Allow your email client to download pictures to get the full benefit of the email.
