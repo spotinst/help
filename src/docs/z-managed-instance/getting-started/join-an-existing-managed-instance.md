@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Import an Existing AWS Managed Instance
 
 This procedure describes how to import a managed instance from AWS to your account in Spot. This will enable you to have full control of your managed instance directly in Spot and take advantage of all of the optimization features available in Spot.

@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Persist Root Volume
 
 Root Volume Persistence maintains the data stored in your root volume, such as OS and configuration data, during Spot instance replacements. This way you can start the application exactly where you left off. By default, the root device volume is deleted when the instance terminates. To change the default behavior, enable the Root Volume Persistence feature.

@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Edit a Stateful Instance
 
 Once you have [created](elastigroup/tutorials/elastigroup-tasks/create-a-stateful-elastigroup-from-scratch) a stateful instance or [imported](elastigroup/features/stateful-instance/import-a-stateful-instance) one to Elastigroup, you can always go back and edit the configuration.
