@@ -1677,9 +1677,6 @@ export const aliases = (() => {
     "/elastigroup/features/stateful-instance/schedule-stateful-capacity":
       "/managed-instance/features/",
 
-    "/elastigroup/features/stateful-instance/stateful-elastigroup-flow":
-      "/managed-instance/features/",
-
     "/elastigroup/features/stateful-instance/stateful-instance-actions":
       "/managed-instance/features/managed-instance-actions",
 
