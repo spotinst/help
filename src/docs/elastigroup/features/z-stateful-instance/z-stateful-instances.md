@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Stateful Instances
 
 The Elastigroup Stateful feature utilizes Spot Instances while providing persistence for your data, network and other configuration during instance replacements such as instance tags.
