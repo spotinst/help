@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Import a Stateful Instance
 
 You can import an instance from your AWS account to a stateful spot instance managed by Elastigroup. The spot instance will have the same state as the original instance. This includes the root and data volumes and, optionally, the private IP of the original instance.

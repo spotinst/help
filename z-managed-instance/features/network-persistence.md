@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Network Persistence
 
 Managed Instance Network Persistence works by maintaining the EC2 instance's Elastic Network Interface (ENI), allowing the persistence of both public and private IPs associated with the instance.

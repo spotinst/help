@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Stateful Instance Actions
 
 With Stateful instance actions you can change the instance state while keeping its data and IPs. In order to change the state, in the Elastigroup Management view click on the Instances tab and select the desired instance(s). The action to take can then be selected from the Actions menu, located above the table of instances.

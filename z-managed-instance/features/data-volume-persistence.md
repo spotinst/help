@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Data Volume Persistence
 
 Data volume persistence maintains the data volumes during spot instance replacement. The data on the volumes that were attached at the time of the previous instance termination will be present on the new instance, using the same BlockDeviceMapping configuration upon instance replacement.

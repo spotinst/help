@@ -2,7 +2,7 @@
 
 Data volume persistence maintains the data volumes during spot node replacement. The data on the volumes that were attached at the time of the previous node termination will be present on the new node, using the same BlockDeviceMapping configuration upon node replacement.
 
-The [flow diagram](elastigroup/features/stateful-instance/stateful-elastigroup-flow) describes on a high level how Spot manages the persistence of stateful nodes.
+The [flow diagram](elastigroup/features/z-stateful-instance/stateful-elastigroup-flow) describes on a high level how Spot manages the persistence of stateful nodes.
 
 ## Configure Data Volume Persistence
 

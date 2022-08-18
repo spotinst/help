@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Persist Network
 
 Private IP Persistence maintains the same Private IP address for the instances during spot instance replacements. New instances are provisioned with the same private IP using the same elastic network interface.

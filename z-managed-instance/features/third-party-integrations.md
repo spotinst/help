@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Third-Party Integrations
 
 Spot Managed Instances can be configured to receive traffic from Amazon Route 53 or one of the following Load Balancers:
