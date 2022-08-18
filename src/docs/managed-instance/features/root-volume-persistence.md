@@ -6,7 +6,7 @@ Root Volume Persistence maintains the data stored in your root volume, such as O
 
 Periodic snapshots of the root volume are taken continuously while the node is running. When a node is terminated, an image is created from the last snapshot, and a new node is launched from this image.
 
-The [flow diagram](elastigroup/features/stateful-instance/stateful-elastigroup-flow) describes on a high level how Spot manages the persistence of stateful nodes.
+The [flow diagram](elastigroup/features/z-stateful-instance/stateful-elastigroup-flow) describes on a high level how Spot manages the persistence of stateful nodes.
 
 ## Backend Actions
 
