@@ -5,7 +5,9 @@ This procedure provides a description of how to install the operator, create ser
 ### Prerequisites
 
 * Install OLM:
+
 Run the command
+
 `curl -sL https://github.com/operator-framework/operator-lifecycle-manager/releases/download/v0.20.0/install.sh | bash -s v0.20.0`
 * Run Kubernetes cluster in Azure, Google, or Amazon
 * Required level of permissions:
@@ -21,6 +23,7 @@ Run the command
 ## Step 1: Operator Installation
 
 You need to install the operator in order to provide access to your cluster workload to Ocean CD.
+
 _For demo purposes, the YAML method will be provided via the UI._
 
 1. Under Ocean CD in the Spot console, click Settings, and then click Add Cluster.
@@ -52,27 +55,31 @@ The OceanCD operator is now installed in your kubernetes cluster. In the next st
 ## Step 2: Creation of Services
 
 You will create the Canary and Stable services to expose and manage the traffic split between the canary and the stable replicasets.
+
 _For demo purposes, there will be no use of a traffic manager. Copy the services template provided in our [GitRepo](https://github.com/spotinst/spot-oceancd-releases/blob/main/Quick%20Start%20%26%20Examples/Deployment.yaml):_
+
 Stable
 
-<img src="/ocean-cd/_media/getting-started-09.png" />
+<img src="/ocean-cd/_media/getting-started-09.png" width="215" />
 
 Canary
 
-<img src="/ocean-cd/_media/getting-started-10.png" />
+<img src="/ocean-cd/_media/getting-started-10.png" width="215" />
 
 Note: It is critical to apply the services into the same namespace as your SpotDeployment namespace.
 
 Run the following command for applying the services:
+
 `kubectl apply -f <Service YAML> -n demo`
 
 ## Step 3: Workload Migration
 In this step you will migrate the chosen deployments to Spot deployments as well as create the necessary entities for the triggering of your rollouts.
+
 _For demo purposes, the workload migration wizard found in the UI will be used._
 
 1. Go to Spot’s [GitRepo](https://github.com/spotinst/spot-oceancd-releases/blob/main/Quick%20Start%20%26%20Examples/Deployment.yaml) and copy the deployment template provided.
 
-<img src="/ocean-cd/_media/getting-started-11.png" />
+<img src="/ocean-cd/_media/getting-started-11.png" width="461" />
 
 2. Apply the deployment into your kubernetes cluster. Once applied, your deployment will instantly be displayed in the Workload Table in the UI.
 
@@ -107,7 +114,7 @@ Optional: To edit the provided template and create the strategy, click Next.
 
 ### Attributes of the Strategy
 
-Strategy Example
+Strategy example
 
 <img src="/ocean-cd/_media/getting-started-13.png" />
 
@@ -119,7 +126,7 @@ The attributes of the strategy in the example above are as follows:
 Optional action: Pause. Add a predefined 'Pause' by entering duration in 's', 'm' or 'h'. Alternatively, you can leave it empty by using '{}', which will require an explicit user approval before promoting to the next phase (or roll back).
 
 ### Edit and Create the RolloutSpec
-Ocean CD Rollout spec connects the SpotDeployment, the desired strategy, traffic and failure policy.
+Ocean CD Rollout spec connects the SpotDeployment, the desired strategy, traffic, and failure policy.
 
 <img src="/ocean-cd/_media/getting-started-n09.png" />
 
@@ -127,7 +134,8 @@ Ocean CD Rollout spec connects the SpotDeployment, the desired strategy, traffic
 2. Enter your spotDeployment Namespace. Only the ClusterID and the Strategy Name will be auto-filled.OceanCD will automatically create the entity. There is no need for manual input.
 
 ### Attributes of the RolloutSpec
-RolloutSpec Example
+
+RolloutSpec example
 
 <img src="/ocean-cd/_media/getting-started-14.png" />
 
