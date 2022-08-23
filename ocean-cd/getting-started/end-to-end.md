@@ -60,11 +60,11 @@ _For demo purposes, there will be no use of a traffic manager. Copy the services
 
 Stable
 
-<img src="/ocean-cd/_media/getting-started-09.png" width="215" />
+<img src="/ocean-cd/_media/getting-started-09.png" width="300" />
 
 Canary
 
-<img src="/ocean-cd/_media/getting-started-10.png" width="215" />
+<img src="/ocean-cd/_media/getting-started-10.png" width="300" />
 
 Note: It is critical to apply the services into the same namespace as your SpotDeployment namespace.
 
