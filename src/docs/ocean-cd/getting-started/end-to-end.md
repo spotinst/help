@@ -6,9 +6,9 @@ This procedure provides a description of how to install the operator, create ser
 
 * Install OLM:
 
-Run the command
+  Run the command
 
-`curl -sL https://github.com/operator-framework/operator-lifecycle-manager/releases/download/v0.20.0/install.sh | bash -s v0.20.0`
+  `curl -sL https://github.com/operator-framework/operator-lifecycle-manager/releases/download/v0.20.0/install.sh | bash -s v0.20.0`
 * Run Kubernetes cluster in Azure, Google, or Amazon
 * Required level of permissions:
   - Admin on Spot Console
@@ -79,13 +79,13 @@ _For demo purposes, the workload migration wizard found in the UI will be used._
 
 1. Go to Spot’s [GitRepo](https://github.com/spotinst/spot-oceancd-releases/blob/main/Quick%20Start%20%26%20Examples/Deployment.yaml) and copy the deployment template provided.
 
-<img src="/ocean-cd/_media/getting-started-11.png" width="461" />
+<img src="/ocean-cd/_media/getting-started-11.png" width="300" />
 
 2. Apply the deployment into your kubernetes cluster. Once applied, your deployment will instantly be displayed in the Workload Table in the UI.
 
 3. Run the command
 
-`kubectl apply -f <SpotDeployment YAML> -n demo`		
+  `kubectl apply -f <SpotDeployment YAML> -n demo`		
 
 4. In the workloads table in the Workloads page, you will see when the deployment is mapped into the table.
 
@@ -103,9 +103,10 @@ _For demo purposes, the workload migration wizard found in the UI will be used._
 
 8. Run the command
 
-`kubectl apply -f <SpotDeployment YAML> -n demo`
+  `kubectl apply -f <SpotDeployment YAML> -n demo`
 
 9. Set the strategy.
+
 Optional: To edit the provided template and create the strategy, click Next.
 
 <img src="/ocean-cd/_media/getting-started-n08.png" />
@@ -131,7 +132,7 @@ Ocean CD Rollout spec connects the SpotDeployment, the desired strategy, traffic
 <img src="/ocean-cd/_media/getting-started-n09.png" />
 
 1. Enter your SpotDeployment Name.
-2. Enter your spotDeployment Namespace. Only the ClusterID and the Strategy Name will be auto-filled.OceanCD will automatically create the entity. There is no need for manual input.
+2. Enter your spotDeployment Namespace. Only the ClusterID and the Strategy Name will be auto-filled. OceanCD will automatically create the entity. There is no need for manual input.
 
 ### Attributes of the RolloutSpec
 
