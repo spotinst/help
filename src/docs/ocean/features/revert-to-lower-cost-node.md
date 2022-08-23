@@ -25,7 +25,7 @@ Then, Ocean will replace all of the relevant nodes in the VNG one by one. Meanin
 
 Ocean will not replace nodes with restricted scale down configuration (neither on the pods nor the VNG level) or where the pod disruption budget would be violated.
 
-Note: It is only supported in AWS Kubernetes and GCP. The process is not supported for instance types that run GPU workloads in GCP.
+Note: The process is only supported in AWS Kubernetes and GCP. The process is not supported for instance types that run GPU workloads in GCP.
 
 The proactive cost optimization process runs in addition to Ocean's existing optimization processes such as:
 - *Revert to RI or Savings Plan process* - Ocean constantly monitors for available RIs or Savings Plans in your account (when the strategy.utilizeReservedInstances or utilizeCommitments flag is enabled). If there is an Ocean monitored node that runs as spot or OD, Ocean will try to replace it with the available RI or Savings Plan nodes.
