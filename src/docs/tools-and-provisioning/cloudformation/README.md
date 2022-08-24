@@ -34,7 +34,7 @@ When associating a Lambda function with a custom resource, the function is invok
 
 ## How does the Integration with Elastigroup work?
 
-Spot uses `Custom::Resource` in your Cloud Formation templates which use a triggers AWS Lambda function to communicate with the Spot API.
+Spot uses `Custom::Resource` in your Cloud Formation templates which triggers the AWS Lambda function to communicate with the Spot API.
 
 This Lambda function is hosted by Spot and can be invoked by every Spot customer
 
