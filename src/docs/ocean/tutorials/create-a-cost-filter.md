@@ -41,7 +41,7 @@ In the example below, the filter will operate on Kubernetes resources. The filte
 
 The applied filter produces a breakdown table as shown below.
 
-<img src="/ocean/_media/tutorials-create-cost-filter-03.png" />
+<img src="/ocean/_media/cost-analysis-4.png" />
 
 ## What's Next?
 
