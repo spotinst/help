@@ -1,5 +1,27 @@
 # Spot PC: Release Notes
 
+## 08/25/2022
+_When:_ 08/25/2022 at 10pm - 11pm Eastern
+
+_Impact:_ Access to desktops and application services for End Users will remain uninterrupted. Access to Spot PC console will remain available.
+
+* Introducing "Connect as..."
+  * Spot PC is excited to present "Connect as..." option in Quick Actions  for logging into VMs, Business Servers. Now admins can choose which username and password to use connect with including Domain Accounts.  
+* Granular Permission Updates
+  * Spot PC is proud to announce that granular permissions now have a downloadable option for roles. Admins can now chose singular, several or all roles to download to an excel spreadsheet with all the scopes inside. 
+* Spot Group Updates 
+  * Spot PC has multitude of improvements to Spot Groups: 
+1. For the following release methods, Immediate and Scheduled, now have a Session Termination Time that can be changed from the default of 5 minutes
+2. In Select Image Set, admins can now change the source Image Set for Spot Group updates, including Global image sets. Admins are no longer limited to a new version of the image set chosen when the Spot Group was created
+3. Instead of an empty image set list, during creation of a Spot Group a warning message will appear if there are no available image sets in the chosen Spot PC Site
+
+* Bulk User Log Off
+  * The User Session list in the Spot PC Dashboard now supports the ability to select multiple user sessions to terminate. Previously, each user session needed to be terminated individually from the User Session Detail page Quick Actions menu.
+* Editable Details
+  * In Organization Details, first name, last name, and email are now editable and in Tenant Details time zone is also editable.
+* Onboarding Updates
+  * When Health Checks succeed or skipped the Go button will light up Green. However, when health check fail, the admin user can choose the option to Skip Health Checks. In this case, the Go button is enabled with a blue color to denote that the provisioning process may still experience issues.
+
 ## 08/15/2022
 _When:_ 08/15/2022 at 10pm - 11pm Eastern
 
