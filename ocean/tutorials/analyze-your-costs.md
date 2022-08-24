@@ -10,7 +10,7 @@ To view a comprehensive breakdown of your cloud cluster costs, go to the Cost An
 
 The bar chart shows the cost of your workloads over time. The default display is that each bar is broken down into the different namespaces and represents the cost per day over the last week. You can modify the time period and groupings shown to suit your needs. See Grouping Options below for more information.
 
-<img src="/ocean/_media/tutorials-analyze-your-costs-01.png" />
+<img src="/ocean/_media/cost-analysis-5.png" />
 
 ## Breakdown Table
 
@@ -22,7 +22,7 @@ The breakdown table presents an itemization of costs per namespace and costs wit
 - Storage Cost: The portion of the cost for Kubernetes persistent volumes and instance volumes
 - Total Cost: Total cost of that namespace
 
-<img src="/ocean/_media/tutorials-analyze-your-costs-02.png" />
+<img src="/ocean/_media/cost-analysis-4.png" />
 
 Double-click on the arrow to show a breakdown of the workloads within the namespace. For each workload, you can see the following details:
 
