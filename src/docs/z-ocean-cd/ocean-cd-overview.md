@@ -41,7 +41,7 @@ As shown in the illustration below, Ocean CD fits right into your Cloud Kubernet
 - Spot Ocean providing container management and numerous optimization features in your infrastructure layer
 - Ocean CD providing visibility, deployment automation, and continuous verification at the application level
 
-You use the Kubernetes orchestrator of your choice (e.g., EKS, AKS, GKE, KOPS or others).
+You use the Kubernetes orchestrator of your choice (e.g., EKS, AKS, GKE, kOps or others).
 
 <img src="/ocean-cd/_media/ocean-cd-overview-02.png" />
 
