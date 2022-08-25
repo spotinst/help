@@ -1,18 +1,18 @@
-# Install Kops 1.14
+# Install kOps 1.14
 
 Download the proper binary file for your operating system:
 
-## Kops V1.14.1
+## kOps V1.14.1
 
 - [linux_amd64](https://spotinst-public.s3.amazonaws.com/integrations/kubernetes/kops/v1.14.1-8aeefa9a4/linux/amd64/kops)
 - [darwin_amd64](https://spotinst-public.s3.amazonaws.com/integrations/kubernetes/kops/v1.14.1-8aeefa9a4/darwin/amd64/kops)
 - [windows_amd64](https://spotinst-public.s3.amazonaws.com/integrations/kubernetes/kops/v1.14.1-8aeefa9a4/windows/amd64/kops.exe)
 
-You can track and download the latest Kops versions using the below link:
+You can track and download the latest kOps versions using the below link:
 
-[Kops releases](https://github.com/spotinst/kubernetes-kops/releases)
+[kOps releases](https://github.com/spotinst/kubernetes-kops/releases)
 
-Make sure the Kops binary file is executable.
+Make sure the kOps binary file is executable.
 
 ```
 chmod 755 kops && mv kops /usr/local/bin/kops

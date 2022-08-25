@@ -1,4 +1,4 @@
-# Migrate Existing Elastigroups to Ocean (EKS, Kops)
+# Migrate Existing Elastigroups to Ocean (EKS,  kOps)
 
 The following tutorial covers migration of existing Elastigroups running a Kubernetes cluster to Ocean.
 
@@ -16,7 +16,7 @@ If you have one Elastigroup that you would like to upgrade to Ocean, do the foll
 
 Wait for the confirmation message to validate that the upgrade process is complete.
 
-> **Tip**: For Kubernetes Elastigroups created via `kops`, see the following [tutorial](ocean/tools-and-integrations/kops/migrate-cluster).
+> **Tip**: For Kubernetes Elastigroups created via `kOps`, see the following [tutorial](ocean/tools-and-integrations/kops/migrate-cluster).
 
 ## Use Case 2: Multiple Elastigroups
 
