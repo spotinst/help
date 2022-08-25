@@ -23,7 +23,7 @@ There are several ways to create an Ocean-managed cluster. Choose the method tha
   - [eksctl](/ocean/tools-and-integrations/eksctl/)
   - [Terraform](/ocean/getting-started/eks/terraform)
 - [AKS](/ocean/getting-started/aks)
-- [Kops](/ocean/tools-and-integrations/kops/)
+- [kOps](/ocean/tools-and-integrations/kops/)
 - [GKE](/ocean/getting-started/gke)
 - [ECS](/ocean/getting-started/ecs)
 - [OpenShift](/ocean/tools-and-integrations/openshift/)
