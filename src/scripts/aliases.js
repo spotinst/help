@@ -1681,6 +1681,9 @@ export const aliases = (() => {
       "/managed-instance/features/managed-instance-actions",
 
     "/cloud-analyzer/tutorials/manage-subsets": "/eco/tutorials/manage-subsets",
+
+    "/tools-and-provisioning/terraform/getting-started/installation-links":
+      "https://github.com/spotinst/terraform-provider-spotinst/releases",
   };
 
   for (let [key, value] of Object.entries(map)) {

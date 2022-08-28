@@ -4,8 +4,8 @@
 
 Spot has two Terraform provider versions:
 
-- An official provider available for download from Hashicorp
-- Spot provider which can be found on [Installation Links](tools-and-provisioning/terraform/getting-started/installation-links).
+- An official provider available for download from Hashicorp.
+- Spot provider which can be found on the [Releases](tools-and-provisioning/terraform/getting-started/installation-links) page.
 
 Both are fully maintained.
 
