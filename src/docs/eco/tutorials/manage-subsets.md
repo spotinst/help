@@ -98,9 +98,9 @@ Alternatively, if you are already in the Subset Details page and decide to delet
 If you would like to change the name of a subset, do the following:
 
 1. In Eco, click Subsets in the left sidebar.
-2. Select the name of the subset you need to rename
-3. Click Edit subset name
-4. Change the name and Save
+2. Select the name of the subset you need to rename.
+3. Click Edit subset name.
+4. Change the name and Save.
 
 ## What’s Next?
 
