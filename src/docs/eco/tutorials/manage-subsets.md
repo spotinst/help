@@ -93,6 +93,15 @@ If you need to delete one or more subsets, do the following:
 
 Alternatively, if you are already in the Subset Details page and decide to delete the subset, just click Delete Subset at the top right of the page.
 
+## Edit A Subset Name
+
+If you would like to change the name of a subset, do the following:
+
+1. In Eco, click Subsets in the left sidebar.
+2. Select the name of the subset you need to rename.
+3. Click Edit subset name.
+4. Change the name and Save.
+
 ## What’s Next?
 
 Once you have set up your subsets, you can view important information about the subsets in the Cost Analysis page. Learn more about viewing and filtering subset information in [Analyze your Costs](cloud-analyzer/tutorials/analyze-your-costs.md).
