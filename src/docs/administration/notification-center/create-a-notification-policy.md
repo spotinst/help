@@ -22,7 +22,7 @@ In the Create New Policy popup, your user name (i.e., your company email address
 1. Complete the following information:
    - Policy Name: Give the policy a name.
    - Policy Description: Enter a few words describing what or who the policy is for.
-2. Mark Personal Visibility if you want the policy to be visible only to you. You will not be able to add integrations. If you leave the checkbox blank, the policy will be available to other members of the account it is in,, and you will be able to add integrations.
+2. Mark Personal Visibility if you want the policy to be visible only to you. You will not be able to add integrations. If you leave the checkbox blank, the policy will be available to other members of the account it is in, and you will be able to add integrations.
 3. Click Continue.
 
 To complete the policy definition, you will need to complete all parts of the wizard to select resources, events, and integrations. Once the policy is created, you may also need to edit the policy to select users who will have access.
