@@ -4,7 +4,7 @@ In order to take advantage of Spot’s optimization and cost savings features, y
 
 ## Step 1: Create Your Spot Organization
 
-If you are signing in to Spot for the first time (e.g., signing in from a [spot.io](https://spot.io/) page or registering for a free trial), you will complete some basic information as shown in the example below.
+If you are signing in to Spot for the first time (e.g., signing in from a [spot.io](https://spot.io/) page or registering for a free trial), complete the basic information as shown in the example below.
 
 <img src="/connect-your-cloud-provider/_media/connect-your-first-cloud-account-001.png" width="350" />
 
@@ -33,7 +33,7 @@ A linked account is an “ordinary” Spot account you use for optimizing cost a
 
 #### Connect Automatically
 
-Automatically is the quicker option. Using a CloudFormation stack, this option chooses a policy and a role and associates the two for you.
+Connecting automatically is the quicker option. Using a CloudFormation stack, this option chooses a policy and a role and associates the two for you.
 
 <img src="/connect-your-cloud-provider/_media/connect-your-first-cloud-account-005.png" width="500" />
 
@@ -46,7 +46,7 @@ When you connect manually, you use your provider’s console (AWS) to choose the
 Please see the [detailed procedures for connecting manually](connect-your-cloud-provider/first-account/aws-manually).                                                                                                                                             
 #### Management Account
 
-Connection to a management account is required to use Eco. A management account will enable Spot to analyze your cost and usage reports and help you to save even more on your cloud spend.
+Connection to a management account is required to use Eco. A management account will enable Spot to analyze your cost and usage reports and help you save even more on your cloud expenses.
 
 <img src="/connect-your-cloud-provider/_media/connect-your-first-cloud-account-004.png" width="500" />
 
@@ -55,7 +55,7 @@ Connection to a management account is required to use Eco. A management account 
 
 A linked account is an “ordinary” Spot account you use for optimizing cost and usage by using spot instances and taking advantage of numerous Spot features. You need a Linked Account to use Elastigroup or Ocean.
 
-For GCP, there is currently no option to link a management account, so by default you start directly in the wizard for connecting a linked account.
+For GCP, there is currently no option to link a management account, so by default you start directly in the wizard to connect a linked account.
 
 #### Connect Manually
 When you connect manually, you use your provider’s console (GCP) to choose the policy and role and to associate the two. For GCP, this is a quick option and we recommend choosing Manually.
@@ -77,7 +77,7 @@ To create a linked account for Azure, just continue with the wizard in Spot afte
 
 #### Management Account
 
-Connection to a management account is required to use Eco. A management account will enable Spot to analyze your cost and usage reports and help you to save even more on your cloud spend.
+Connection to a management account is required to use Eco. A management account enables Spot to analyze your cost and usage reports and helps you save even more on your cloud expenses.
 
 To create a management account for Azure, use the procedure described in [Connect Azure EA to Spot](connect-your-cloud-provider/azure-ea-account).
 
