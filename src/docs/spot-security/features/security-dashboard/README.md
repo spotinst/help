@@ -17,7 +17,7 @@ To use the dashboard, click Dashboard under Spot Security in the Spot console tr
 The large tile at the top provides your main security stats:
 * Identified Risks: The total number of security risks currently found in your environment (or based on the filters applied). Click View All Risks to see a detailed listing of all the risks.
 * Checks Passed: The total number of security rules passed for all of your assets
-* Resources Scanned: Under Identified Risks, Spot displays the total number of resources scanned for the given analysis and the date and time of the last Scan.
+* Resources Scanned: Under Identified Risks, Spot displays the total number of resources scanned for the given analysis and the date and time of the last scan.
 * New Risks Identified: Number of new risks identified in the latest scan of your assets compared to the last scan.
 * Risk Across Regions: The map shows the number of risks in each region where you have resources. Hover over the circle charts to see the number of low, medium, and high risks.
 * Breakdown by Severity: A color key shows the total number of risks per severity level including  high, medium, and low, along with the number of new risks identified in the last scan completed.
@@ -26,7 +26,7 @@ The large tile at the top provides your main security stats:
 
 ### Filters and Presets
 
-You can use the filters at the top to focus on only the information you need. Once you have set the filters, you can save them as [Presets](spot-security/features/security-dashboard/create-preset) for quick access to your customized view of the dashboard. You can create presets based on the AWS accounts, regions, or asset types that you are responsible for.
+You can use the filters at the top to focus only on the information you need. Once you have set the filters, you can save them as [Presets](spot-security/features/security-dashboard/create-preset) for quick access to your customized view of the dashboard. You can create presets based on the AWS accounts, regions, or asset types that you are responsible for.
 
 <img src="/spot-security/_media/spot-security-dashboard-b.png" />
 
