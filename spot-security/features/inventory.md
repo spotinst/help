@@ -26,7 +26,7 @@ This line graph shows the number of assets in your cloud system over time. You c
 <img src="/spot-security/_media/inventory-b.png" />
 
 ## Assets Trend
-This line graph shows the number of assets in your cloud system over time. You can choose the time frames of one day, one week, or two weeks. The lines also show the number of assets with alerts and the number of assets with no alerts on each time segment.
+This line graph shows the number of assets in your cloud system over time. You can choose the time frames of two weeks, one month, or three months. The lines also show the number of assets with alerts and the number of assets with no alerts on each time segment.
 
 <img src="/spot-security/_media/inventory-c.png" />
 
