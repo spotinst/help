@@ -1,12 +1,12 @@
 # Compliance
-For your reference, Spot Security provides information on how compliant each asset is with global security standards. You can assess your coverage of globalsecurity standards on Spot.
+For your reference, Spot Security provides information on how compliant each asset is with global security standards. You can assess your coverage of global security standards on Spot.
 
 To view your compliance with global security standards, go to Spot Security in the left menu of the console and click Compliance.
 
 ## Security Compliance
 
 You can select different ways to view the compliance of your assets under two tabs:
-* Total Compliance: Provides information of how each globalSecurity Standard that you chose complies with your assets.
+* Total Compliance: Provides information of how each global security standard that you chose complies with your assets.
 * CIS Benchmark: Provides compliance information regarding a major standards organization.
 
 ## Favorite Standards Chart
@@ -21,11 +21,11 @@ Hovering over a specific line that represents a global security standard shows t
 
 ## Compliance Standards
 
-This area shows the globalStandards that are tracked for an asset and they are mapped to the security rules that were defined on the [Risk Analysis](spot-security/features/analyze-risks) page.
+This area shows the global standards that are tracked for an asset and are mapped to the security rules that were defined on the [Risk Analysis](spot-security/features/analyze-risks) page.
 
 <img src="/spot-security/_media/spot-security-compliance2.png" />
 
-By default the toggle “Show Favorites Only” is turned on. To see all of the global compliance standards, turn the toggle off. You can mark specific Compliance Standards as favorites by clicking the pin in the top right corner of each Compliance Standard.
+By default the toggle “Show Favorites Only” is turned on. To see all of the global compliance standards, turn the toggle off. You can mark specific compliance standards as favorites by clicking the pin in the top right corner of each Compliance Standard.
 
 The graph shows only the selected favorite standards.
 
