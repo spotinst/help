@@ -14,7 +14,7 @@ In the Security Dashboard, go to one of the Highest Impact Recommendations and c
 <img src="/spot-security/_media/remediation-a.png" />
 
 **From Risk Analysis**:
-1. Under the Risk Analysis page, click on the Asset Detail of any of the Assets. Using the sidebar, click on Remediation Steps.
+1. Under the Risk Analysis page, click the Asset Detail of any of the Assets. Using the sidebar, click Remediation Steps.
 <img src="/spot-security/_media/remediation-b.png" />
 
 2. Click Action on the right side of each asset and click Remediate.
