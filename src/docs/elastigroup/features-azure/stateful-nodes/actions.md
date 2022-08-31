@@ -24,11 +24,13 @@ This action starts the node after it was paused. When this action is used, the n
 
 ### Delete
 
-This action deletes the running Azure VM. This includes deletion of the stateful node resources and the Azure VM. You can choose which resources to delete as shown below.
+Using this action, you can choose to terminate the VM, delete disks, delete snapshots, and delete the public IP.
+- When Terminate VM is **not** marked,  the only other option you can mark is Delete snapshots.
+- When Delete public IP is marked, Delete network interfaces is marked automatically and cannot be unmarked.
 
 <img src="/elastigroup/_media/azure-stateful-node-actions-02a.png" width="350"/>
 
-The VM will be deleted immediately, and the selected resources will be deleted after 96 hours. You can use the [Delete Stateful Node API](https://docs.spot.io/api/#operation/azureStatefulNodeDelete) in order to specify a different time period to wait for the VM resources.
+Both the node and the selected resources will be deleted after 96 hours. You can use the [Delete Stateful Node API](https://docs.spot.io/api/#operation/azureStatefulNodeDelete) in order to specify a different time period to wait.
 
 ## What’s Next?
 
