@@ -1,5 +1,7 @@
 # Prometheus for Kubernetes Data-Plane Monitoring
 
+This page is relevant to Ocean for AWS Kubernetes.
+
 Ocean functions as an autopilot for the Kubernetes data plane, as it delivers premium [container-driven autoscaling](https://spot.io/blog/ocean-explained-container-driven-autoscaling-with-kubernetes/) to continuously optimize your cloud infrastructure for the cluster. Ocean manages the scaling of the data plane and the data regarding it could be valuable to monitor your containerized environment. Using well-defined Prometheus metrics for monitoring Ocean can accelerate your understanding of the cluster scaling and debugging of issues that may come up. In addition, you could build alerts based on the metrics to address issues in real time and track important trends on a dashboard of different Ocean metrics.
 
 Ocean maintains an official set of metrics, natively scrapable by Prometheus. This set of metrics helps to build a 360 degree view of the actions Ocean takes, while providing an application-driven infrastructure.
