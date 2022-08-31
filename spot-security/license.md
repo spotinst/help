@@ -19,10 +19,10 @@ There is a 30-day free trial with unlimited usage. Spot Security constrains the 
 ## 1.3 Workload Fluctuations
 
 Spot Security nodes are licensed on the ‘honor system’ and it is a violation of Spot Security’s Terms of Use to use the features without purchasing a license for an adequate number of nodes.
-Consumption of Nodes will be measured using a 30-day rolling average. To determine if you are within your licensed coverage, the rolling average is compared to the number of nodes in the license.
-Spot Security samples the number of protected nodes hourly, then creates a daily average based on these samples. The preceding 30 daily averages are averaged to determine the node consumption.  
-You will be notified of excess consumption and given a 30-day grace period to buy more nodes.
-If there is less than 30 days of data available, the average is calculated using the days available.
-Excess consumption can lead to the depletion of nodes before the subscription term ends.  
+* Consumption of nodes will be measured using a 30-day rolling average. To determine if you are within your licensed coverage, the rolling average is compared to the number of nodes in the license.
+* Spot Security samples the number of protected nodes hourly, then creates a daily average based on these samples. The preceding 30 daily averages are averaged to determine the node consumption.  
+* You will be notified of excess consumption and given a 30-day grace period to buy more nodes.
+* If there is less than 30 days of data available, the average is calculated using the days available.
+* Excess consumption can lead to the depletion of nodes before the subscription term ends.  
 
 Spot Security has the right to shut down the security dashboard when the nodes have been completely consumed and the grace period has also ended.  
