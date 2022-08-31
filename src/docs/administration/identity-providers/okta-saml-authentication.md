@@ -11,21 +11,21 @@ SSO support makes it easy to manage your accounts and works with the most popula
 <img src="/administration/_media/okta-saml-01.png" />
 
 4. Make a copy of the Relay State value.
-5. Go to your Okta dashboard and add the Spot app to your account:
+5. Login to the Okta Admin console, choose Applications, select Browse App Integration Catalog and search for Spotinst, select Add Integration:
 
-<img src="/administration/_media/okta-saml-02.png" width="348" height="221" />
+<img src="/administration/_media/okta-saml-02.png" width="737" height="831" />
 
-6. In Okta, go to the admin panel and edit the new Spot app you just added. There, select the Sign On tab, then click Edit.
+6. In Okta, go to the admin panel and select the new Spot app you just added. There, select the Sign On tab, then click Edit.
    1. Enter the Relay State value you copied earlier into the Default Relay State field.
    2. Click Save.
 
-<img src="/administration/_media/okta-saml-03.png" />
+<img src="/administration/_media/okta-saml-03.png" width="670" height="1154"/>
 
-3.  Download the metadata document by clicking on 'Identity Provider metadata' link:
+3.  Download the metadata document by right-click, save link as, on 'View IdP metadata' link under the SAML Signing Certificates Actions :
 
-<img src="/administration/_media/okta-saml-04.png" />
+<img src="/administration/_media/okta-saml-04.png" width="934" height="371"/>
 
-7. Go back to the Spot Console, click BROWSE and upload the metadata.xml file you just downloaded.
+7. Go back to the Spot Console, click BROWSE and upload the file you just downloaded.
 8. Click SUBMIT.
 9. Done! Login back into Spot via your Okta account!
 
