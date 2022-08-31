@@ -3291,13 +3291,6 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-security/features/inventory"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/spot-security/features/license</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-security/features/license"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-security/features/license"/>
-    </url>
-    <url>
         <loc>https://docs.spot.io/?/spot-security/features/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
@@ -3331,6 +3324,13 @@
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-security/getting-started/"/>
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-security/getting-started/"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-security/license</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-security/license"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-security/license"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/spot-security/</loc>
