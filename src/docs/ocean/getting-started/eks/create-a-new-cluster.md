@@ -2,8 +2,6 @@
 
 In this procedure, you complete the steps to create an Amazon EKS cluster directly from the Spot Console and an Ocean object to manage the cluster worker nodes.
 
-<iframe width="350" height="350" src="https://www.youtube.com/embed/h7off6kX6OI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 ## Prerequisites
 
 - Ensure you have an IAM user in your AWS account with both Console and Programmatic Access credentials. If you do not have one, you can follow this [AWS procedure](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html) to create one or refer to your account administrator for the necessary permissions.
