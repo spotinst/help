@@ -20,20 +20,20 @@ The Workflow Details page includes the following areas:
 The workflow summary includes the following details:
 
 - Name: The user-given name of the workflow.
-- Creation date: Date the workflow was created.
+- Creation date: The date the workflow was created.
 - Selected billing rules: The rules you defined in the workflow.
 
 <img src="/eco/_media/tutorials-view-workflow-details-02.png" width="357" height="315" />
 
 ## Reports Table
 
-The Reports table provides a convenient overview of past reports created for this workflow. The includes:
+The Reports table provides a convenient overview of past reports created for this workflow. The report includes:
 
-- Name: The user-given name of the report.
+- Name: The name you gave the report.
 - Report Period: The time frame covered in the report.
 - Subset Assignment: The subsets included in the report.
 - Group by: The parameters chosen for grouping the data in the report.
-- Status: This indicates whether the report is still processing, successfully created, or failed.
+- Status: Indicates whether the report is still processing, successfully created, or failed.
 
 <img src="/eco/_media/tutorials-view-workflow-details-03.png" />
 
@@ -70,12 +70,12 @@ Report Header | Description
 Customer  | Only appears when the Subset grouping was selected when defining the report. This was defined by the user when creating a subset.
 Usage Account | Only appears when the Account grouping was selected when defining the report. This is the AWS AccountID, obtained from your cost and usage report
 Account Name | Only appears when the Account grouping was selected when defining the report. This is the name of the account, obtained from Cost Explorer
-Service | Only appears when the Service grouping was selected when defining the report. This is the AWS Service, obtained from your cost and usage report. 
+Service | Only appears when the Service grouping was selected when defining the report. This is the AWS Service, obtained from your cost and usage report.
 Region | Only appears when the Region grouping was selected when defining the report. This is the AWS Region, obtained from your Cost and usage report.
 Charge Type | Only appears when the Region grouping was selected when defining the report. This is derived from from your Cost and usage report, transformed to match the filters of Cost Explorer. When this grouping is selected, savings columns will not be shown.
 Lifecycle | Only appears when the Lifecycle grouping was selected when defining the report. This is derived from from your cost and usage report, transformed to match the filters of Cost Explorer. When this grouping is selected, savings columns will not be shown.
 Unblended | The raw, unblended cost of resources, grouped according to the report configuration. Obtained from the original cost and usage report.
-Charge From Report | What started as the unblended costs are now modified costs, processed according to the workflow you selected. 
+Charge From Report | What started as the unblended costs are now modified costs, processed according to the workflow you selected.
 Difference | Charge From Report minus Unblended
 Total Savings | Net savings gained from savings plans and reservations from all sources. Not currently available when Charge Type or Lifecycle groupings are selected as grouping during the report configuration. Your workflow has no impact on this column.
 RI Savings Only | Net savings gained from reservations from all sources. Not currently available when Charge Type or Lifecycle groupings are selected as grouping during the report configuration. Your workflow has no impact on this column.
