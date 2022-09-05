@@ -4,17 +4,21 @@
 
 You can set up a credit card as a payment method in your Spot account. Using the credit card option simplifies the payment process.
 
-1. In the console, go to Settings.
+1. In the console, click Settings.
 
-<img src="/administration/_media/configure-payment-details-01.png" width="250" height="150" />
+<img src="/administration/_media/payment-method-1.png" width="250" height="150" />
 
-2. Go to the Organization tab and select Payments.
+2. Click the Billing tab and click Payment Methods.
 
-<img src="/administration/_media/configure-payment-details-02.png" width="200" height="180" />
+<img src="/administration/_media/payment-method-2.png" width="200" height="180" />
 
-3. Enter your credit card details and click ADD CARD.
+3. Click Add Credit Card Details.
 
-<img src="/administration/_media/configure-payment-details-03.png" width="551" height="83" />
+<img src="/administration/_media/payment-method-3.png" width="200" height="180" />
+
+4. Enter your credit card details and click Add.
+
+<img src="/administration/_media/payment-method-4.png" width="551" height="83" />
 
 ## Credit Cards Accepted
 
