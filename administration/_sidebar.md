@@ -15,7 +15,7 @@
   - [Organizations & Accounts](administration/organizations/)
     - [Switch Organization](administration/organizations/switch-organization)
     - [Audit Events](administration/organizations/audit-events)
-    - [Configure Payment Details](administration/organizations/configure-payment-details)
+    - [Set up Payment Method](administration/organizations/configure-payment-details)
   - [Notification Center](administration/notification-center/)
     - [Create a Notification Policy](administration/notification-center/create-a-notification-policy)
     - [Edit a Notification Policy](administration/notification-center/edit-a-notification-policy)
