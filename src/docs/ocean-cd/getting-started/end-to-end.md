@@ -1,8 +1,8 @@
-# Ocean CD Tutorial
+# End-to-End Installation
 
-This procedure provides a description of how to install the operator, create services and migrate your workloads with Ocean CD. You will be provided with an end to end description of the flow in order to successfully perform your very first rollout using the Spot console.
+This procedure provides a description of how to install the operator, create services and migrate your workloads with Ocean CD. You will be provided with an end-to-end description of the flow in order to successfully perform your very first rollout using the Spot console.
 
-### Prerequisites
+## Prerequisites
 
 * Install OLM:
 
@@ -13,14 +13,14 @@ This procedure provides a description of how to install the operator, create ser
 * Required level of permissions:
   - Admin on Spot Console
   - Approval to trigger a change in your deployment via your CI tool
-* In case you are using whitelists or tools like OPA, please whitelist the following images:
+* If you are using permit lists or tools like OPA, please permit the following images:
   - docker.io/spotinst/spot-oceancd-operator:$VERSION
   - docker.io/spotinst/spot-oceancd-operator-catalog:latest
   - docker.io/spotinst/spot-oceancd-operator-bundle:$VERSION
   - quay.io/operator-framework/olm
   - quay.io/operatorhubio/catalog:latest
 
-## Step 1: Operator Installation
+## Step 1: Install the Operator
 
 You need to install the operator in order to provide access to your cluster workload to Ocean CD.
 
@@ -32,7 +32,7 @@ _For demo purposes, the YAML method will be provided via the UI._
 
 2. Complete the information:
 * Cluster Identifier: This is a logical identifier for your cluster. You can choose any ID, and it is not coupled to the Ocean cluster ID (o-xxxxxx). Ocean CD can run on clusters that are not managed by Ocean. The cluster ID must be unique, have up to 30 alphanumeric characters, and not contain spaces.
-* Argo Rollout Installation: Ocean CD uses Argo rollouts as part of its engine. In case Argo rollout is not installed, Ocean CD will install it (based on the selected option).
+* Argo Rollout Installation: Ocean CD uses Argo rollouts as part of its engine. If Argo rollout is not installed, Ocean CD will install it (based on the selected option).
 
 <img src="/ocean-cd/_media/getting-started-n02a.png" />
 
@@ -40,7 +40,7 @@ Note: The YAML is the provided default method.
 
 3. Download the YAML and apply it into your kubernetes cluster.
 kubectl apply -f <Name of the YAML>                 
-Note: If not specified in the command, the operator will be installed in the oceancd namespace. You can change it by running these commands:
+If it is not specified in the command, the operator will be installed in the oceancd namespace. You can change it by running these commands:
           `kubectl create ns demo`
           `kubectl apply -f <Name of the YAML> -n demo`
 
@@ -52,11 +52,11 @@ Tip: Once you have downloaded the YAML, the new row will remain with partial inf
 
 The OceanCD operator is now installed in your kubernetes cluster. In the next steps you will migrate your deployments to be managed by Ocean CD SaaS. You can find all of the existing deployments on the Workloads page and the Workload Migration wizard.  
 
-## Step 2: Creation of Services
+## Step 2: Create Services
 
 You will create the Canary and Stable services to expose and manage the traffic split between the canary and the stable replicasets.
 
-_For demo purposes, there will be no use of a traffic manager. Copy the services template provided in our [GitRepo](https://github.com/spotinst/spot-oceancd-releases/blob/main/Quick%20Start%20%26%20Examples/Deployment.yaml):_
+_For demo purposes, there will be no use of a traffic manager. Copy the services template provided in our [Github Repository](https://github.com/spotinst/spot-oceancd-releases/blob/main/Quick%20Start%20%26%20Examples/Deployment.yaml):_
 
 Stable
 
@@ -72,12 +72,12 @@ Run the following command for applying the services:
 
 `kubectl apply -f <Service YAML> -n demo`
 
-## Step 3: Workload Migration
+## Step 3: Migrate Workloads
 In this step you will migrate the chosen deployments to Spot deployments as well as create the necessary entities for the triggering of your rollouts.
 
 _For demo purposes, the workload migration wizard found in the UI will be used._
 
-1. Go to Spot’s [GitRepo](https://github.com/spotinst/spot-oceancd-releases/blob/main/Quick%20Start%20%26%20Examples/Deployment.yaml) and copy the deployment template provided.
+1. Go to Spot’s [Github Repository](https://github.com/spotinst/spot-oceancd-releases/blob/main/Quick%20Start%20%26%20Examples/Deployment.yaml) and copy the deployment template provided.
 
 <img src="/ocean-cd/_media/getting-started-11.png" width="300" />
 
@@ -143,12 +143,12 @@ RolloutSpec example
 The attributes of the rolloutSpec in the example above are as follows:
 
 * Name: The name of the rolloutSpec must be unique.
-* SpotDeployment.ClusterId: The cluster name. Note that this is not the Ocean Cluster Identifier, and the name should be unique to Ocean CD.
+* SpotDeployment.ClusterId: The cluster name. This is not the Ocean Cluster Identifier, and the name should be unique to Ocean CD.
 * SpotDeployment.Namespace: The Cluster namespace.
 * SpotDeployment.Name: The CRD name.
 * Strategy.name: The name of the strategy. You can use a strategy that has already been created and you do not need to create a new one.
 * Traffic: The kubernetes services or optional traffic manager you have chosen. The syntax needed for each traffic may be found in our Git.
-* FailurePolicy: The automatic action(s) OceanCD performs in case of a failure.
+* FailurePolicy: The automatic action(s) OceanCD performs in the case of a failure.
 
 The process is complete. You can change the pod template in your SpotDeployment yaml. Once applied to the cluster, a new Canary rollout will be initiated in the All Rollouts table. By clicking Rollout ID you will be navigated to the detailed rollout page to view and take action from the UI.
 
