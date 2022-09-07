@@ -127,6 +127,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/administration/identity-providers/custom-saml-idp-configuration"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/administration/identity-providers/google-saml-authentication</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/administration/identity-providers/google-saml-authentication"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/administration/identity-providers/google-saml-authentication"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/administration/identity-providers/okta-saml-authentication</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
