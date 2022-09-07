@@ -411,7 +411,7 @@ Please refer to [this page](https://docs.aws.amazon.com/eks/latest/userguide/ena
 
 ```bash
 kubectl create serviceaccount -n spark-apps data-writer
-kubectl create rolebinding data-writer-pod-manager-rb --role pod-manager --serviceaccount spark-apps:data-writer
+kubectl create rolebinding -n spark-apps data-writer-pod-manager-rb --role pod-manager --serviceaccount spark-apps:data-writer
 ```
 
 The above bash snippet does the following:
