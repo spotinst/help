@@ -34,7 +34,7 @@ _For demo purposes, the YAML method will be provided via the UI._
 * Cluster Identifier: This is a logical identifier for your cluster. You can choose any ID, and it is not coupled to the Ocean cluster ID (o-xxxxxx). Ocean CD can run on clusters that are not managed by Ocean. The cluster ID must be unique, have up to 30 alphanumeric characters, and not contain spaces.
 * Argo Rollout Installation: Ocean CD uses Argo rollouts as part of its engine. If Argo rollout is not installed, Ocean CD will install it (based on the selected option).
 
-<img src="/ocean-cd/_media/getting-started-n02a.png" width="80" />
+<img src="/ocean-cd/_media/getting-started-n02a.png" width="100" />
 
 Note: The YAML is the provided default method.
 
