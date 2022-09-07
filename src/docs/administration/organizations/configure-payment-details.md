@@ -1,12 +1,10 @@
-# Configure Payment Details
+# Set up Payment Method
 
-## Set up your Payment Method
-
-You can use a credit card as a payment method in your Spot account. Using the credit card option simplifies the payment process.
+You can use a credit card as a payment method in your Spot account.
 
 1. In the console, click Settings.
 
-<img src="/administration/_media/payment-method-1.png" width="250" height="150" />
+<img src="/administration/_media/payment-method-1.png" />
 
 2. Click the Billing tab and click Payment Methods.
 
