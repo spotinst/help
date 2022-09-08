@@ -355,7 +355,7 @@ Fix conversion bugs in reported pods
 ## [1.0.26] – 2019-01-04
 
 Fixed
-Fix the auto update process in controllers that were installed via the kops
+Fix the auto update process in controllers that were installed via the kOps
 
 ## [1.0.25] – 2019-01-03
 
