@@ -55,9 +55,9 @@ This is a bar graph showing your top ten accounts by cost. The graph is based on
 
 ## Spend Analysis
 
-The Spend Analysis chart and table provide a breakdown of your organization's costs. These tools help you govern your organizational, account, departmental or project costs by providing a detailed view of the historical, current, and projected costs.
+The Spend Analysis chart and table provide a breakdown of your organization's costs. These tools help you govern your organizational, account, departmental or project costs by providing a detailed view of the historical and current costs.
 
-<img src="/cloud-analyzer/_media/tutorials-analyze-costs-04.png" />
+<img src="/cloud-analyzer/_media/tutorials-analyze-costs-04a.png" />
 
 The chart and table show the cost breakdown for each of the following:
 
@@ -77,19 +77,17 @@ For example, if you click the Tag tab, the bars in the bar chart are broken down
 
 In addition, every tab can be further filtered by static filters, i.e., filters that appear regardless of the breakdown option selected. The following static filters are available:
 
-- Accounts: Accounts in your organization.
+- Accounts: Accounts in your organization, includes account identifier.
 - Services: AWS services used, for example, EC2, ECS and RDS.
 - Time: A range of dates.
 - Region: Includes data for all regions available in AWS. Global means that the resource does not relate to any region.
 - Charge Type: For example, reserved instance, on demand, and spot.
-- Instance Type: Instance types used, for example, A1 and T2. Other resources presents the data of all resources not managed by an instance.
+- Instance Type: Instance types used, for example, A1 and T2. Other resources present the data of all resources not managed by an instance.
 - User Type Group (UTG): AWS filters that collect a specific category of usage type filters into one filter.
 
 ### Amortized View
 
 The Spend Analysis table has an Amortized view switch, which is on by default. In this view, upfront RI payments are spread across the RI commitment length. This enables you to see costs in accrual-based accounting as opposed to cash-based accounting.
-
-In addition to a breakdown of costs in the past and in the current month, the Spend Analysis graph provides cost projections by extending the current spending trends to the future. (The projections are not shown for the Charge Type tab.)
 
 ### Spend Analysis Table
 
