@@ -56,15 +56,15 @@ Sign in to the [IAM console](https://console.aws.amazon.com/iam/) with a user ha
       {
         "Effect": "Allow",
         "Action": ["s3:GetBucketLocation", "s3:ListAllMyBuckets"],
-        "Resource": "arn:aws:s3:::*",
+        "Resource": "arn:aws:s3:::*"
       },
       {
         "Effect": "Allow",
         "Action": "s3:*",
         "Resource":
-          ["arn:aws:s3:::<bucket-name>", "arn:aws:s3:::<bucket-name>/*"],
-      },
-    ],
+          ["arn:aws:s3:::<bucket-name>", "arn:aws:s3:::<bucket-name>/*"]
+      }
+    ]
 }
 ```
 
@@ -114,10 +114,10 @@ To allow the Kubernetes nodes and Spark pods to access your S3 buckets, complete
         "Resource":
           [
             "arn:aws:s3:::<your data bucket>",
-            "arn:aws:s3:::<your data bucket>/*",
-          ],
-      },
-    ],
+            "arn:aws:s3:::<your data bucket>/*"
+          ]
+      }
+    ]
 }
 ```
 
@@ -135,9 +135,9 @@ To allow the Kubernetes nodes and Spark pods to access your S3 buckets, complete
           {
             "AWS": "arn:aws:iam::<cluster account id>:role/<cluster account IAM role name>",
           },
-        "Action": "sts:AssumeRole",
-      },
-    ],
+        "Action": "sts:AssumeRole"
+      }
+    ]
 }
 ```
 
@@ -153,9 +153,9 @@ To allow the Kubernetes nodes and Spark pods to access your S3 buckets, complete
         "Effect": "Allow",
         "Action": ["sts:AssumeRole"],
         "Resource":
-          ["arn:aws:iam::<data account id>:role/<data account IAM role>"],
-      },
-    ],
+          ["arn:aws:iam::<data account id>:role/<data account IAM role>"]
+      }
+    ]
 }
 ```
 
@@ -230,15 +230,15 @@ Create a policy for your cluster nodes:
       {
         "Effect": "Allow",
         "Action": ["s3:GetBucketLocation", "s3:ListAllMyBuckets"],
-        "Resource": "arn:aws:s3:::*",
+        "Resource": "arn:aws:s3:::*"
       },
       {
         "Effect": "Allow",
         "Action": "s3:*",
         "Resource":
-          ["arn:aws:s3:::<bucket-name>", "arn:aws:s3:::<bucket-name>/*"],
-      },
-    ],
+          ["arn:aws:s3:::<bucket-name>", "arn:aws:s3:::<bucket-name>/*"]
+      }
+    ]
 }
 ```
 
@@ -400,10 +400,10 @@ Please refer to [this page](https://docs.aws.amazon.com/eks/latest/userguide/ena
         "Resource":
           [
             "arn:aws:s3:::<your data bucket>",
-            "arn:aws:s3:::<your data bucket>/*",
-          ],
-      },
-    ],
+            "arn:aws:s3:::<your data bucket>/*"
+          ]
+      }
+    ]
 }
 ```
 
@@ -411,7 +411,7 @@ Please refer to [this page](https://docs.aws.amazon.com/eks/latest/userguide/ena
 
 ```bash
 kubectl create serviceaccount -n spark-apps data-writer
-kubectl create rolebinding data-writer-pod-manager-rb --role pod-manager --serviceaccount spark-apps:data-writer
+kubectl create rolebinding -n spark-apps data-writer-pod-manager-rb --role pod-manager --serviceaccount spark-apps:data-writer
 ```
 
 The above bash snippet does the following:
