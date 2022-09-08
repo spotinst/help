@@ -1,5 +1,25 @@
 # Spot PC: Release Notes
 
+## 09/9/2022
+_When:_ 09/9/2022 at 10pm - 11pm Eastern
+
+_Impact:_ Access to desktops and application services for End Users will remain uninterrupted. Access to Spot PC console will remain available.
+
+* Introducing Sites 
+  * Spot PC is proud to present Sites. Now an option under Config Actions, Sites are a way to create and manage resources in Spot PC by grouping them logically, by geolocation, network, and compliance requirements. 
+* Logs Querying Update
+  * Spot PC has improved the logging experience by adding in AVD specific logs as defaults to the query types. The AVD logs in question are WVDCheckpoints, WVDConnections, and WVDErrors. 
+* Logging Improvements 
+  * Spot PC can now collect more AVD logging information, including event and diagnostic information from Workspaces and Application Groups. 
+* Tags for Azure Virtual Machines 
+  * Spot PC is adding tags to Azure Virtual Machines to help classify their role (session hosts, business servers, personal virtual machines) which can be seen the Azure portal.
+* Timing Change for Spot PC OUs
+  * Spot PC changed the timing for when Spot PC child OUs are created in the Active Directory instance for hybrid AD deployments. Previously, the child OUs were created when Spot Groups are created, but now all Spot PC OUs are created during the onboarding process. This will allow more predictably for AD policy implementation and permission setting activities. This was a Partner Feedback ticket. 
+* Live Updates for Image Version List
+  * The image version list is refreshed automatically upon creation of a new version. Previously a manual refresh was required to show the new version. This was a Partner Feedback ticket. 
+* Image Sorting Improvement
+  * The sort order image versions has been changed so that the most recent version is at the top of the list and the oldest version is at the bottom of the list. This change makes it easier to access the most recent version. This was a Partner Feedback ticket. 
+
 ## 08/25/2022
 _When:_ 08/25/2022 at 10pm - 11pm Eastern
 
@@ -14,6 +34,7 @@ _Impact:_ Access to desktops and application services for End Users will remain 
 1. For the following release methods, Immediate and Scheduled, now have a Session Termination Time that can be changed from the default of 5 minutes
 2. In Select Image Set, admins can now change the source Image Set for Spot Group updates, including Global image sets. Admins are no longer limited to a new version of the image set chosen when the Spot Group was created
 3. Instead of an empty image set list, during creation of a Spot Group a warning message will appear if there are no available image sets in the chosen Spot PC Site
+4. The load balancing method for Spot Groups have now changed from depth first to breadth first
 
 * Bulk User Log Off
   * The User Session list in the Spot PC Dashboard now supports the ability to select multiple user sessions to terminate. Previously, each user session needed to be terminated individually from the User Session Detail page Quick Actions menu.
