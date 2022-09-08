@@ -3,7 +3,7 @@
 # Create a Preset
 
 A preset is a set of filter settings that you have saved and can access for later use in the [Security Dashboard](spot-security/features/security-dashboard/). Presets enable you to see security summaries for specific accounts, services, and regions.
-Presets have user preference retention and when they are created by one user, they will not be visible to another user. The default preset settings are specific to each user.
+Presets have user preference retention and when they are created, they will not be visible to another user. The default preset settings are specific to each user.
 
 ## Create a Preset
 
