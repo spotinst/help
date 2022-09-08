@@ -25,3 +25,7 @@ The following credit cards are accepted:
 - American Express
 - MasterCard
 - Visa
+
+## What’s Next?
+
+View the [details](administration/policies/edit-policy-details) of your montlhly bill.
