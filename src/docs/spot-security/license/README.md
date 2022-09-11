@@ -8,7 +8,7 @@ Licensing on Spot Security uses an upfront service credit system with 1 Service 
 
 A minimum bucket of 9900 service credits need to be purchased for a year and Spot Security will compute the consumption of the available nodes at the following rate:
 
-<img src="/spot-security/_media/license.png" width="500" />
+<img src="/spot-security/_media/license.png" width="700" />
 
 **Volume Price Break (VPB)**: Discount schedules are applicable based on quantity or the terms of purchased nodes. The pricing of the nodes reduces as more nodes are purchased. A similar discount is given if the same number of nodes is purchased for a period of two or three years.
 
