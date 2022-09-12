@@ -92,6 +92,18 @@ in your configuration template. Here's an example configuration for a Scala kern
  }
 ```
 
+**Warning**: Adding external jar dependencies to Scala Notebooks  
+The `deps.jars` field in the application configuration does not work with Scala Notebooks and **should not be set**. The JARs specified in this field will not be available on the driver Java classpath.
+
+Instead, you can add external jar to spark context from the notebook with these magic commands (once the spark session is up):
+- Add a JAR with URL: `%AddJar <URL>`
+  - example: `%AddJar https://repo1.maven.org/maven2/org/postgresql/postgresql/42.2.20/postgresql-42.2.20.jar`
+- Add a dependency from maven repo: `%AddDeps <group-id> <artifact-id> <version>`
+  - example: `%AddDeps org.postgresql postgresql 42.2.20`
+  - if the dependency has transitive dependencies, you can add the `--transitive` flag to add those dependencies  
+
+More documentation for these [magic commands](https://toree.incubator.apache.org/docs/current/user/faq/): 
+
 ## Use a notebook
 
 When you open a notebook, you need to wait for the kernel (i.e., the Spark driver) to be ready. As long as the kernel is marked as "busy" in the top right corner of the page, it means it has not started yet. This can take a few minutes. You can track the progress by looking at your [Spark application page](ocean-spark/product-tour/view-application-details) in the Spot console.
