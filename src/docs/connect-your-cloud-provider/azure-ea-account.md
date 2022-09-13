@@ -5,6 +5,7 @@ This procedure describes how to set up Spot account access to Azure EA Read Only
 ## Prerequisites
 - An Azure EA
 - A registered Spot account
+- Admin access to Access to [EA Portal](https://ea.azure.com/)
 
 ## Step 1: Enable API Data Access
 
