@@ -9,8 +9,7 @@ This procedure describes how to set up Spot account access to Azure EA Read Only
 
 ## Step 1: Enable API Data Access
 
-Use the procedure below to enable API data access. This procedure can also be found in the Azure documentation to [Enable API data access](https://docs.microsoft.com/en-us/azure/cost-management-billing/manage/ea-portal-rest-apis#enable-api-data-access).
-
+Use the procedure below to enable API data access. This procedure can also be found in the Azure documentation to [enable API data access](https://docs.microsoft.com/en-us/azure/cost-management-billing/manage/ea-portal-rest-apis#enable-api-data-access).
 1. Sign in as an enterprise administrator.
 2. Click Reports on the left navigation window and then click the Download Usage tab.
 3. Click API Access Key.
@@ -22,18 +21,18 @@ Use the procedure below to enable API data access. This procedure can also be fo
 
 ## Step 2: Enter your Information in the Spot Console
 
-1. In the Spot console, start a new account and choose Microsoft Azure.
+1. Choose Microsoft Azure.
 
-<img src="/connect-your-cloud-provider/_media/connect-azure-ea-02.png" width="500" />
+<img src="/connect-your-cloud-provider/_media/connect-azure-ea-02.png" width="600" />
 
-2. Click Connect Your Enterprise Agreement (EA), fill in the information, and click Connect.
+2. Choose option "Connect Your Enterprise Agreement (EA)", fill out the information and click connect.
 
-<img src="/connect-your-cloud-provider/_media/connect-azure-ea-03.png" width="500" />
+<img src="/connect-your-cloud-provider/_media/connect-azure-ea-03.png" width="600" />
 
-3. After entering the EA API data, you can choose to set up a strategy call with the Eco Azure team to perform an initial analysis of what savings the Eco Azure team can provide. The details are listed in the Eco Azure [Getting Started](eco/getting-started/connect-azure-ea-to-eco) guide.
+3. After entering in the EA API data, you can choose to set up a strategy call with the Eco Azure team to perform an initial analysis of what savings the Eco Azure team can provide. The details are listed in the [Eco Azure Getting Started](eco/getting-started/connect-azure-ea-to-eco) guide.
 
-<img src="/connect-your-cloud-provider/_media/connect-azure-ea-04.png" width="450" />
+<img src="/connect-your-cloud-provider/_media/connect-azure-ea-04.png" width="500" />
 
 ## What’s Next?
 
-Schedule a Strategy call with the Eco Azure team to perform an initial analysis of the savings the Eco Azure team can provide. The details are listed in the Eco Azure [Getting Started](eco/getting-started/connect-azure-ea-to-eco) guide.
+Schedule a strategy call with the Eco Azure team to perform an initial analysis of what savings the Eco Azure team can provide. The details are listed in the Eco Azure Getting Started guide.

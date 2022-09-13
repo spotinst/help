@@ -73,7 +73,7 @@ This option automatically chooses a policy and a role and associates the two for
 
 A linked account is an “ordinary” Spot account you use for optimizing cost and usage by using spot instances and taking advantage of numerous Spot features. You need a Linked Account to use Elastigroup or Ocean.
 
-To create a linked account for Azure, just continue with the wizard in Spot after you choose Azure as the cloud provider.
+To create a linked account for Azure, just continue with the wizard in Spot after you choose Azure as the cloud provider. You can find a detailed description of this procedure in [Connect Azure Subscription](connect-your-cloud-provider/first-account/azure).
 
 #### Management Account
 

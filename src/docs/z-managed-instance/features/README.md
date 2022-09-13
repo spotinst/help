@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Managed Instance Features
 
 Managed Instance is tailored to the single instance use case and is the ideal way to optimize cost by leveraging cloud excess capacity while mitigating the risks of running on spot instances.

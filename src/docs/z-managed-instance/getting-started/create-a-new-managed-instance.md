@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Create a New Managed Instance
 
 This procedure describes how to create a new managed instance from scratch.

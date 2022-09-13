@@ -37,7 +37,7 @@ Spot analyzes the instances you have in your cloud provider account and provides
 
 - Containers: Recommendation and estimate of savings if you would run your container workload on spot instances instead of on-demand instances.
 - Elastic Applications: Recommendation and estimate of savings if you would run your application workload on spot instances instead of on-demand instances.
-- Commitments: Recommendation and estimate of savings if you would run your workload on reserved instances instead of on-demand instances.
+- Commitments: Recommendation and estimate of savings if you would run your workload on a portfolio of reserved instances and savings plans instead of on-demand instances.
 - Resource Groups: Recommendation and estimate of savings if you would run your workload on spot instances instead of on Azure resources.
 
 Each preview contains the number of instances in that category currently running, an estimation of additional savings that could be obtained using optimization, and the potential savings percentage.

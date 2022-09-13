@@ -1,3 +1,5 @@
+<meta name="robots" content="noindex">
+
 # Stateful Managed Instances
 
 Run stateful applications on managed instances. Managed Instances utilize spot instances while providing persistence for the root volume, data volumes and network interface, in addition to other launch specifications during instance replacements.

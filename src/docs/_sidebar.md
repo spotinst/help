@@ -4,6 +4,7 @@
   - [Connect Your Cloud Account](connect-your-cloud-provider/first-account/)
     - [Connect AWS Manually](connect-your-cloud-provider/first-account/aws-manually)
     - [Connect GCP Manually](connect-your-cloud-provider/first-account/gcp-manually)
+    - [Connect Azure](connect-your-cloud-provider/first-account/azure)
   - [Connect Azure EA](connect-your-cloud-provider/azure-ea-account)
   - [Connect an Additional Account](connect-your-cloud-provider/additional-account)
   - [View Dashboard](connect-your-cloud-provider/dashboard)
@@ -15,8 +16,10 @@
 - [**Ocean**](ocean/)
 - [**Ocean for Apache Spark**](ocean-spark/)
 - [**Eco**](eco/)
+- [**Cloud Analyzer**](cloud-analyzer/)
 - [**Security**](spot-security/)
 - [**Spot PC**](spot-pc/)
+- [**Spot Storage**](spot-storage/)
 - [**Administration**](administration/)
 - [**Tools & Provisioning**](tools-and-provisioning/)
 - <a href="https://docs.spot.io/api" target="_blank"><strong>API Reference <i data-feather="external-link"></i></strong></a>

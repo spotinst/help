@@ -45,8 +45,8 @@ Confirm or change the settings imported by the Ocean Creation Wizard.
 curl -fsSL https://spotinst-public.s3.amazonaws.com/integrations/kubernetes/cluster-controller/scripts/init.sh | \
 SPOTINST_TOKEN=<ENTER YOUR TOKEN HERE> \
 SPOTINST_ACCOUNT=act-54c5d1ab \
-SPOTINST_CLUSTER_IDENTIFIER=open-shift \
-ENABLE-CSR-APPROVAL=True \
+SPOTINST_CLUSTER_IDENTIFIER=openshift \
+ENABLE_CSR_APPROVAL=True \
 bash
 ```
 

@@ -1,5 +1,71 @@
 # Spot PC: Release Notes
 
+## 09/9/2022
+_When:_ 09/9/2022 at 10pm - 11pm Eastern
+
+_Impact:_ Access to desktops and application services for End Users will remain uninterrupted. Access to Spot PC console will remain available.
+
+* Introducing Sites 
+  * Spot PC is proud to present Sites. Now an option under Config Actions, Sites are a way to create and manage resources in Spot PC by grouping them logically, by geolocation, network, and compliance requirements. 
+* Logs Querying Update
+  * Spot PC has improved the logging experience by adding in AVD specific logs as defaults to the query types. The AVD logs in question are WVDCheckpoints, WVDConnections, and WVDErrors. 
+* Logging Improvements 
+  * Spot PC can now collect more AVD logging information, including event and diagnostic information from Workspaces and Application Groups. 
+* Tags for Azure Virtual Machines 
+  * Spot PC is adding tags to Azure Virtual Machines to help classify their role (session hosts, business servers, personal virtual machines) which can be seen the Azure portal.
+* Timing Change for Spot PC OUs
+  * Spot PC changed the timing for when Spot PC child OUs are created in the Active Directory instance for hybrid AD deployments. Previously, the child OUs were created when Spot Groups are created, but now all Spot PC OUs are created during the onboarding process. This will allow more predictably for AD policy implementation and permission setting activities. This was a Partner Feedback ticket. 
+* Live Updates for Image Version List
+  * The image version list is refreshed automatically upon creation of a new version. Previously a manual refresh was required to show the new version. This was a Partner Feedback ticket. 
+* Image Sorting Improvement
+  * The sort order image versions has been changed so that the most recent version is at the top of the list and the oldest version is at the bottom of the list. This change makes it easier to access the most recent version. This was a Partner Feedback ticket. 
+
+## 08/25/2022
+_When:_ 08/25/2022 at 10pm - 11pm Eastern
+
+_Impact:_ Access to desktops and application services for End Users will remain uninterrupted. Access to Spot PC console will remain available.
+
+* Introducing "Connect as..."
+  * Spot PC is excited to present "Connect as..." option in Quick Actions  for logging into VMs, Business Servers. Now admins can choose which username and password to use connect with including Domain Accounts.  
+* Granular Permission Updates
+  * Spot PC is proud to announce that granular permissions now have a downloadable option for roles. Admins can now chose singular, several or all roles to download to an excel spreadsheet with all the scopes inside. 
+* Spot Group Updates 
+  * Spot PC has multitude of improvements to Spot Groups: 
+1. For the following release methods, Immediate and Scheduled, now have a Session Termination Time that can be changed from the default of 5 minutes
+2. In Select Image Set, admins can now change the source Image Set for Spot Group updates, including Global image sets. Admins are no longer limited to a new version of the image set chosen when the Spot Group was created
+3. Instead of an empty image set list, during creation of a Spot Group a warning message will appear if there are no available image sets in the chosen Spot PC Site
+4. The load balancing method for Spot Groups have now changed from depth first to breadth first
+
+* Bulk User Log Off
+  * The User Session list in the Spot PC Dashboard now supports the ability to select multiple user sessions to terminate. Previously, each user session needed to be terminated individually from the User Session Detail page Quick Actions menu.
+* Editable Details
+  * In Organization Details, first name, last name, and email are now editable and in Tenant Details time zone is also editable.
+* Onboarding Updates
+  * When Health Checks succeed or skipped the Go button will light up Green. However, when health check fail, the admin user can choose the option to Skip Health Checks. In this case, the Go button is enabled with a blue color to denote that the provisioning process may still experience issues.
+
+## 08/15/2022
+_When:_ 08/15/2022 at 10pm - 11pm Eastern
+
+_Impact:_ Access to desktops and application services for End Users will remain uninterrupted. Access to Spot PC console will remain available.
+
+* Introducing Granular Tenant Roles
+  * SpotPC is proud to announce Granular Tenant Roles. SpotPC has created a series of Tenant Roles with different permissions that can be assigned to organization users. Tenant role access for each admin can also be changed or removed.
+  * __Tenant Manager Role__: A tenant role that allows the highest level permissions with access to all tenant functions.  
+  * __Tenant Contributor Role__: A tenant role that allows read/write access to all tenant functions. However, delete access is not available.
+  * __Tenant Reader Role__: A tenant role that allows read access to all tenant functions.
+  * __Custom Roles__: A organization administrator can create a custom set of roles for specific access to each tenant and can use one of the built-in roles as a base.
+* Image Set Improvements
+  * SpotPC has added a plethora of improvements to Image Sets:
+    1. A warning message to the sealing image since it's a irreversible process
+    2. Improved logging that captures SysPrep failure messages in the Spot PC Spoc Log, which are visible in the Dashboard
+    3. Image creation instances will remain on for 72 hours after build before shutting down. Admins can turn the VM instance back on from the Spot PC image version list by clicking the Connect to Machine link
+    4. Newly created image versions are now tested immediately by creating a new azure VM from the image to ensure its valid for virtual session VM use in Spot Groups
+* Backup Schedules for Business Servers & Personal
+  * SpotPC has backups that are now enabled for new Business server and Personal Virtual Desktops VMs created going forward. The backup occurs once a day, with 7 daily, 5 weekly, 12 monthly, and 5 annual retention/recovery points.
+* Tooltip Size Increase
+  * Tooltip text size has been increased to make them more readable in all form factors.
+-->
+
 ## 07/28/2022
 _When:_ 07/28/2022 at 10pm - 11pm Eastern
 
@@ -128,7 +194,6 @@ _When:_ 04/14/2022 at 10pm - 11pm Eastern
 
 _Impact:_ Access to desktops and application services for End Users will remain uninterrupted. Access to Spot PC console will remain available.
 
-### Changes
 * Automatic Activation of Cloud Insights
   * Spot PC's monitoring is powered by Cloud Insights. Activation is now automatic, with the metrics picked up by Spot PC will be available right out of the box for all new tenants.
 * Introduce Spot Group Columns for Image Set and Image Version
@@ -149,7 +214,6 @@ _Impact:_ Access to desktops and application services for End Users will remain 
 
   _Impact:_ Access to desktops and application services for End Users will remain uninterrupted. Access to Spot PC console will remain available.
 
-### Changes
 * Introducing Stateful Desktops
   * Stateful desktops support a variety of customer use cases. A few key examples are Developers and GPU-driven (users can customize their own machine and have changes persist across time).
   * This also allows customers to let end users install apps on their own personal machines as desired.

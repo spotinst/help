@@ -42,8 +42,9 @@ and run with:
 ```
 jupyter lab \
     --GatewayClient.url=https://api.spotinst.io/ocean/spark/cluster/<your ocean spark cluster id>/notebook/ \
-    --GatewayClient.auth_token=<spot token> \
-    --GatewayClient.request_timeout=600
+    --GatewayClient.headers='{"Content-Type": "application/json"}' \
+    --GatewayClient.request_timeout=600 \
+    --GatewayClient.auth_token=<spot token>
 ```
 
 ## Define Jupyter kernels with configuration templates
@@ -90,6 +91,23 @@ in your configuration template. Here's an example configuration for a Scala kern
     }      
  }
 ```
+
+**Warning**: Adding external JAR dependencies to Scala Notebooks
+The `deps.jars` field in the application configuration does not work with Scala Notebooks and **should not be set**. The JARs specified in this field will not be available on the driver Java classpath.
+
+Instead, you can add external JARs to the Spark context from the notebook with these magic commands (once the Spark session is up):
+
+- Add a JAR with URL: `%AddJar <URL>`
+  ```
+  %AddJar https://repo1.maven.org/maven2/org/postgresql/postgresql/42.2.20/postgresql-42.2.20.jar
+  ```
+- Add a dependency from maven repo: `%AddDeps <group-id> <artifact-id> <version>`
+  ```
+  %AddDeps org.postgresql postgresql 42.2.20
+  ```
+  If the dependency has transitive dependencies, you can add the `--transitive` flag to add those dependencies.
+
+More documentation for these magic commands is available in the [Toree documentation](https://toree.incubator.apache.org/docs/current/user/faq/).
 
 ## Use a notebook
 
