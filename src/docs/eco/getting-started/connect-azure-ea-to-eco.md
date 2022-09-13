@@ -4,11 +4,11 @@ This document describes the process and procedures to enable the Eco Managed Ser
 
 ### Audience
 
-Microsoft EA Azure administrators
+Microsoft MCA Azure billing account owners
 
 ## Prerequisites
 
-- Admin access to https://ea.azure.com/
+- Azure MCA billing account owner access
 - The ability to create a user group in Azure Portal
 - Reviewed [Read Only permissions](eco/azure-tutorials/access-roles-read-only) required for Eco team
 - The Azure user is a global administrator with [elevated access](https://docs.microsoft.com/en-us/azure/role-based-access-control/elevate-access-global-admin#elevate-access-for-a-global-administrator) and access to at least one subscription
@@ -92,20 +92,7 @@ To apply the Reservation Reader role to the user group, complete the procedure b
 
 ## Step 5. Read Only Access to Enterprise Enrollment Data
 
-1. Log into https://ea.azure.com/.
-2. In the left Navigation, click Manage.
-3. Within the Enrollment tab, copy the Enrollment Number and set that aside for now.
-
-<img src="/eco/_media/connect-azure-ea-to-eco-009.png" />
-
-4. Ensure the Auth Level on the Enrollment Detail says “Work or School Account Cross tenant”. It is possible to temporarily set it as this auth level. Just switch it to “Work or School Account Cross tenant,” send the invite, then switch it back to your preferred Auth Level.
-
-5. You will again need to invite the guest users (see list [above](eco/getting-started/connect-azure-ea-to-eco?id=steps-to-invite-users)), but this time as Read-Only Enterprise Administrators.
-
-   - Enter email address: as listed above
-   - Auth Type: Work or school account
-   - Notification frequency: None
-   - Lifecycle Notification Suppression: No
+Apply the Billing Account Reader Access to the user group created earlier.
 
 ## What’s Next?
 Learn [how Eco works](eco/azure-tutorials/) to provide significant savings on your cloud spend.
