@@ -1,6 +1,6 @@
 # Azure EA Tutorials
 
-Eco actively manages the full lifecycle of your commitments, including planning, purchasing, exchanging and canceling. It ensures that your reserved instance portfolio is optimized from the start, beginning with your existing commitment purchases and creating a well-balanced mix of reserved instances that continues to adapt to changing needs and usage.
+Eco actively manages the full lifecycle of your commitments, including planning, purchasing, exchanging and canceling. It ensures that your reserved instance portfolio is optimized from the start, starting with your existing commitment purchases and creating a well-balanced mix of reserved instances that continues to adapt to changing needs and usage.
 
 ## How it Works
 
@@ -8,7 +8,7 @@ Eco takes you through the three-step process described below.
 
 ### Step 1: Analyze
 
-Eco combines years of analysis of detailed marketplace and industry usage data with the complete details of your cloud purchases and usage by region, instance family, lifespan, and scale. This analysis is used to provide a holistic view of on-demand use across all of your Azure Enterprise Agreement (EA) subscriptions.
+Eco combines years of analysis of detailed marketplace and industry usage data with the complete details of your cloud purchases and usage by region, instance family, lifespan, and scale. That analysis is used to provide a holistic view of on-demand use across all of your Azure Enterprise Agreement (EA) subscriptions.
 
 ### Step 2: Plan
 
@@ -22,6 +22,7 @@ Based on those analytics and strategies, Eco helps you to build and manage your 
 
 This section includes procedures and other information you need to understand and fully optimize your reserved instance usage.
 
-To learn more, choose Azure EA tutorials in the sidebar on the left.
+To learn more, choose Azure tutorials in the sidebar on the left.
 
+xx
 xx
