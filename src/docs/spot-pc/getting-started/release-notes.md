@@ -1,5 +1,15 @@
 # Spot PC: Release Notes
 
+
+
+## 09/14/2022 (Hotfix)
+_When:_ 09/14/2022 at 10pm - 11pm Eastern
+
+_Impact:_ Access to desktops and application services for End Users will remain uninterrupted. Access to Spot PC console will remain available.
+
+* Introducing pagination for Spot Groups
+  * Spot Groups creation will now have pagination and filtering when dealing with large numbers of azure active directory groups, to resolve loading issues
+
 ## 09/9/2022
 _When:_ 09/9/2022 at 10pm - 11pm Eastern
 
@@ -14,11 +24,11 @@ _Impact:_ Access to desktops and application services for End Users will remain 
 * Tags for Azure Virtual Machines 
   * Spot PC is adding tags to Azure Virtual Machines to help classify their role (session hosts, business servers, personal virtual machines) which can be seen the Azure portal.
 * Timing Change for Spot PC OUs
-  * Spot PC changed the timing for when Spot PC child OUs are created in the Active Directory instance for hybrid AD deployments. Previously, the child OUs were created when Spot Groups are created, but now all Spot PC OUs are created during the onboarding process. This will allow more predictably for AD policy implementation and permission setting activities. This was a Partner Feedback ticket. 
+  * Spot PC changed the timing for when Spot PC child OUs are created in the Active Directory instance for hybrid AD deployments. Previously, the child OUs were created when Spot Groups are created, but now all Spot PC OUs are created during the onboarding process. This will allow more predictably for AD policy implementation and permission setting activities.
 * Live Updates for Image Version List
-  * The image version list is refreshed automatically upon creation of a new version. Previously a manual refresh was required to show the new version. This was a Partner Feedback ticket. 
+  * The image version list is refreshed automatically upon creation of a new version. Previously a manual refresh was required to show the new version.
 * Image Sorting Improvement
-  * The sort order image versions has been changed so that the most recent version is at the top of the list and the oldest version is at the bottom of the list. This change makes it easier to access the most recent version. This was a Partner Feedback ticket. 
+  * The sort order image versions has been changed so that the most recent version is at the top of the list and the oldest version is at the bottom of the list. This change makes it easier to access the most recent version.
 
 ## 08/25/2022
 _When:_ 08/25/2022 at 10pm - 11pm Eastern
