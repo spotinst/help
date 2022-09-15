@@ -1,4 +1,4 @@
-# Choose Azure RI Strategy
+# Azure RI Strategy
 
 Today the Eco team is hard at work to provide customers the best experience using Eco on the Spot platform.
 
