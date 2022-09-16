@@ -20,7 +20,7 @@
     - [Set Subset & Workflow Permissions](eco/tutorials/set-subset-and-workflow-permissions)
     - [Eco AWS Policy](eco/tutorials/eco-policy/)
       - [Create Eco Policy with CloudFormation](eco/tutorials/eco-policy/create-eco-policy-with-cloudformation)
-  - [Azure EA Tutorials](eco/azure-tutorials/)
+  - [Azure Tutorials](eco/azure-tutorials/)
     - [Access Roles and Permissions - Read-Only](eco/azure-tutorials/access-roles-read-only)
     - [Choose Azure EA RI Strategy](eco/azure-tutorials/choose-ri-strategy)
     - [View your Savings](eco/azure-tutorials/view-your-savings)
