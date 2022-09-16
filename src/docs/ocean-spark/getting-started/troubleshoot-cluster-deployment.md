@@ -126,7 +126,8 @@ The driver pod is not running yet, please wait a few seconds...
 
 Optional check:
 * Tail the logs of the driver pod with ```kubectl logs -n spark-apps <APP-ID>-driver```
-* You may see name resolution errors like ```kubernetes.default.svc: Temporary failure in name resolution```. This is not always the case, because a security group rule might specifically open DNS traffic (port 53) while other types of traffic are restricted.
+* You may see name resolution errors like ```kubernetes.default.svc: Temporary failure in name resolution``` in the driver log. This would be a further indication that node-to-node communication is the culprit (see the troubleshoot section below).
+* Not seeing name resolution errors in the driver log does not completely rule out node-to-node communication as the culprit however. It may be that a security group rule specifically allows DNS traffic (port 53), while other types of traffic are restricted.
 
 ### Troubleshoot
 
