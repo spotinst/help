@@ -138,7 +138,7 @@ After all the other rules have been applied, the charges are increased or decrea
 
 ### Eco Cost Sharing
 
-You may chose to share the cost of Eco RI or savings plan-related savings with consumers of the savings.
+You may choose to share the cost of Eco RI or savings plan-related savings with consumers of the savings.
 
 The percentage option allows you to add a charge proportionate to the overall savings provided by Eco. You may enter the exact same percentage as your contract with Spot, or you may enter a different percentage depending on your business model. It is possible for an account to appear in the report, but if no Eco-generated savings is attributed to it, then no Eco fee will be attributed to it.
 
