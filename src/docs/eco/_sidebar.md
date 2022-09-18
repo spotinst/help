@@ -22,7 +22,7 @@
       - [Create Eco Policy with CloudFormation](eco/tutorials/eco-policy/create-eco-policy-with-cloudformation)
   - [Azure Tutorials](eco/azure-tutorials/)
     - [Access Roles and Permissions - Read-Only](eco/azure-tutorials/access-roles-read-only)
-    - [Choose Azure EA RI Strategy](eco/azure-tutorials/choose-ri-strategy)
+    - [Choose Azure RI Strategy](eco/azure-tutorials/choose-ri-strategy)
     - [View your Savings](eco/azure-tutorials/view-your-savings)
   - [Eco in CloudCheckr](eco/eco-in-cloudcheckr/)
     - [Connect your AWS Account in CloudCheckr](eco/eco-in-cloudcheckr/connect-your-aws-account-in-cloudcheckr)
