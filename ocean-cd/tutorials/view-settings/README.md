@@ -8,7 +8,7 @@ The Settings view includes tabs that display information about the rollout spec,
 
 When you click Settings in the left Ocean CD menu, the default view is Rollout Specs. If the list of rollout specs is long, use the filter tool to find the specifications you are looking for.
 
-<img src="/ocean-cd/_media/tutorials-settings-01.png" />
+<img src="/ocean-cd/_media/tutorials-settings-01a.png" />
 
 The following information is displayed in the list of rollout specs:
 - Name: Name that identifies the YAML specification. You can click the name to see the rollout details in YAML format.
@@ -32,7 +32,8 @@ The following information is displayed:
 - Type: The deployment strategy Ocean CD is using.
 - Phases: A scale like design will show you the steps configured as well as the parameters themselves. When you hover over a point, you can see the duration of each phase (if you configured a duration) and the traffic split.
 
-Clusters
+## Clusters
+
 The Clusters tab provides an overview of the clusters in which the Ocean CD Operator is installed.
 
 <img src="/ocean-cd/_media/tutorials-settings-05.png" />

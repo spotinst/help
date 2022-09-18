@@ -2073,6 +2073,27 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/managed-instance/tutorials/upgrade-an-existing-elastigroup-to-managed-instance"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/ocean-cd/concepts-features/entities</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/concepts-features/entities"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/concepts-features/entities"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/ocean-cd/concepts-features/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/concepts-features/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/concepts-features/"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/ocean-cd/concepts-features/verifications</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/concepts-features/verifications"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/concepts-features/verifications"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/ocean-cd/getting-started/end-to-end</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
