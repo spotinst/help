@@ -37,7 +37,7 @@ A pod could be scheduled on multiple VNGs. In this case, Ocean has to prioritize
   3. Highest availability zone count
   4. Highest Instance type count
 
-Note: In case one Virtual Node group have an explicit configuration and the other have an empty value - the Virtual node group with the empty value will take priority.
+Note: If one Virtual Node group has an explicit configuration and the other has an empty value - the Virtual node group with the empty value will have a higher priority.
 
 ## VNG Creation
 
