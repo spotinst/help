@@ -68,7 +68,7 @@ helm install my-release oceancd/spot-oceancd-operator \
   # [...]
 ```
 
-> **Note**: Installation using a Helm template is not supported.
+> **Tip**: Installation using a Helm template is not supported.
 
 You can create a new namespace to install the Operator in using the following commands:
 
