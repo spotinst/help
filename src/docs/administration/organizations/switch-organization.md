@@ -11,3 +11,6 @@ If your user is mapped to more than one organization, you can easily switch from
 <img src="/administration/_media/switch-organization-02.png" width="370" height="128" />
 
 Spot will then switch to the organization you chose.
+
+## What’s Next
+Learn how to [audit your events](administration/organizations/audit-events).
