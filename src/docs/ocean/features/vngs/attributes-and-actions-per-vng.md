@@ -97,7 +97,6 @@ The following is a list of attributes customizable per VNG in Ocean for GKE.
 - Availability zone
 - Headroom
 - Instance Types (API only. These must be a subset of the instance types defined for the Ocean cluster.)
-- Instance Types (API only)
 - Instance Profile (API only)
 - Labels
 - Launch Instance (API only)
