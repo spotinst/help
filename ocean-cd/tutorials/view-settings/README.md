@@ -57,7 +57,7 @@ The following information is displayed:
 ## Verification Provider
 The verification provider tab provides an overview of the providers set as part of your verification templates.
 
-screenshot
+<img src="/ocean-cd/_media/tutorials-settings-04.png" />
 
 Each provider is represented as a new row in the table and includes the following information:
 * Names: The name (verification provider) you have configured.
