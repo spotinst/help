@@ -39,3 +39,6 @@ You can search for events by entering free text in the Search filter or by enter
 2. Choose one of the attributes displayed, e.g., User or Event Type, and then choose one of the values for that attribute, e.g., a specific user or a specific Event Type. Alternatively, you can search by just typing free text in
 
 <img src="/administration/_media/audit-events-04.png" width="250" height="230" />
+
+## What’s Next?
+View the [details](administration/organizations/configure-payment-details) of your monthly bill.
