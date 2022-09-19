@@ -111,7 +111,7 @@ The attributes of the verification template are described in the [Entities](ocea
 
 2. Verification provider: The Ocean CD verification provider includes the credentials of the monitoring tool as well as the clusterID, for which you will make use of the credentials.
 
-Command: 
+Command:
 `POST https://api.spotinst.io/ocean/cd/verificationProvider`
 
 Only one of each provider type can be set per cluster.
@@ -235,7 +235,7 @@ failurePolicy:
 
 The attributes of the rolloutSpec in the [Entities](ocean-cd/concepts-features/entities?id=rolloutspec) page.
 
-## Step 5: Trigger of a rollout
+## Step 5: Trigger of a Rollout
 
 Now that the process is complete, you can change the pod spec template such as the image in your SpotDeployment YAML and run the following command:
 `kubectl apply -f <SpotDeployment YAML> -n demo`
