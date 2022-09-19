@@ -6,7 +6,9 @@ In the [Migrate Workload](ocean-cd/getting-started/?id=migrate-a-workload-using-
 
 This page shows templates for all of the traffic managers that Ocean CD supports. If you would like to use a template instead of the automatic configuration, you can use one of these.
 
-> **Tip**: You do not have to use a traffic manager. For more information, see [Without a Traffic Manager](ocean-cd/getting-started/traffic-manager-reference?id=without-traffic-manager).
+You do not have to use a traffic manager. For more information, see [Without a Traffic Manager](ocean-cd/getting-started/traffic-manager-reference?id=without-traffic-manager).
+
+> **Tip**: Whenever rootService is used, the value must not be the same as the stableService value.
 
 ### General Template for Syntax
 
