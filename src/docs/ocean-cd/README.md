@@ -26,75 +26,7 @@ This process enables full automation of the rollout, and will support a manual f
 
 ## Entities and Architecture
 
-For each deployment, Ocean CD makes use of a rolloutSpec and a strategy. You will use these entities to configure the specific behavior of the deployment.
-
-### Strategy
-
-An Ocean CD strategy includes a definition of phases that manage the way your workload changes are exposed in the desired cluster and namespace. A strategy is reusable and can be used and maintained over multiple services and clusters.
-
-Whenever your workload is applied to the cluster, Ocean CD uses the strategy as part of the rolloutSpec logic to run the CD process.  The structure of a strategy is shown in the example below, which you may use as a template for creating your own strategy. Additional examples of the strategy and all the entitiies are shown on the [Ocean CD public repository](https://github.com/spotinst/spot-oceancd-releases/tree/main/Quick%20Start%20%26%20Examples).
-
-```yaml
-name: Strategy-OceanCD
-canary:
-  steps:
-  - name: My-first-phase
-    setWeight: 20
-    setCanaryScale:
-      replicas: 3
-    pause:
-      duration: 2m
-  - name: second-phase
-    setWeight: 40
-    pause: {}
-  - name: third-phase
-    setWeight: 80
-    pause:
-      duration: 1m
-```
-
-The attributes of a strategy are described below.
-- Name: Name of the strategy. Must be unique and should not exceed 63 characters.
-- Steps.name: Optional. Name of the step.
-- Steps.setWeight: Weight percentage of the step. A weight cannot be less than or equal to the one set in the previous step. The total of the weights must not exceed 100. If total weights are less than 100, Ocean CD will add on to the last phase until the total equals 100.
-- Steps.pause: Optional. Pause to be set per phase.
-- Steps.pause.duration: Optional. The time in seconds, minutes, or hours that you may pause the step. If undefined, the phase will remain in a paused phase as long as not set otherwise by the user.
-
-### RolloutSpec
-
-The Ocean CD rollout spec includes the CD process description for the selected workload. The RolloutSpec is a key entity which associates all of the basic elements:
-- The SpotDeployment
-- The strategy to assign the SpotDeployment
-- The traffic objects that, together with the strategy, run the rollout process
-- Failure policy, in case something is not working as expected according to the strategy or due to Kubernetes issues
-
-Each time a workload is applied to the cluster, Ocean CD will use the rolloutSpec logic you defined for that workload to run the CD process. The structure of a rolloutSpec is shown in the example below (and in the [public repository](https://github.com/spotinst/spot-oceancd-releases/tree/main/Quick%20Start%20%26%20Examples)), which you may use as a template for creating your own rolloutSpec.
-
-```yaml
-name: RolloutSpec-OceanCD
-spotDeployment:
-  clusterId: cluster-name
-  namespace: mynamespace
-  name: nginx-deployment
-strategy:
-  name: Strategy-OceanCD
-traffic:
-  stableService: rollouts-demo-stable
-  canaryService: rollouts-demo-canary
-failurePolicy:
-  action: abort
-```
-​
-The attributes of the rolloutSpec are described below.
-- Name: Name of the rolloutSpec. Must be unique.
-- SpotDeployment.ClusterId: Cluster Name. Note that this is not the Ocean Cluster Identifier, and the name should be unique to Ocean CD.
-- SpotDeployment.Namespace: Cluster Namespace
-- SpotDeployment.Name: CRD Name
-- Strategy.name: Name of the Strategy. You may use an already created strategy and do not need to create a new one.
-- Traffic: Kubernetes services or optional [traffic manager](ocean-cd/getting-started/?id=traffic-manager-reference) you have chosen.
-- FailurePolicy: The automatic action(s) OceanCD performs in case of a failure
-
-You can create your [rolloutSpec](ocean-cd/getting-started/) either in the Spot console or by using the [Ocean CD API](https://docs.spot.io/api/#operation/OceanCDRolloutSpecCreate).
+Ocean CD makes use of a set of fundamental entities for building a rollout. Examples of fundamental entities are Strategy, RolloutSpec, Verification Template, and Verification Provider. These are described in detail in the [Entities](ocean-cd/concepts-features/entities) page.
 
 ### Ocean CD Operator
 
@@ -130,6 +62,10 @@ You can compare Ocean CD and Argo Rollouts to the way a Kubernetes deployment ma
 
 <img src="/ocean-cd/_media/overview-02.png" />
 
+### Argo CD and Ocean CD
+
+Argo CD has been provided with the ability to synchronize directly with SpotDeployment CRDs. If you are an Argo CD user, you will be able to utilize in real time the update of your Argo CD statuses: paused, degraded, healthy, and suspended.
+
 ## Putting it all Together
 
 Ocean CD fits right into your Cloud Kubernetes environment with:
@@ -155,10 +91,15 @@ An Ocean CD microservice may include multiple rollout configurations, and each r
 
 ## Documentation Map
 
+- Overview
 - [Getting Started](ocean-cd/getting-started/)
   - [Install using API or Helm](ocean-cd/getting-started/install-operator-using-API-or-helm)
   - [Migrate using the API](ocean-cd/getting-started/migrate-using-api)
   - [Traffic Manager Reference](ocean-cd/getting-started/traffic-manager-reference)
+  - [End-to-end Setup](ocean-cd/getting-started/end-to-end)
+- Concepts & Features
+  [Entities](ocean-cd/concepts-features/entities)
+  [Verifications](ocean-cd/concepts-features/verifications)
 - Tutorials
   - [View Settings](ocean-cd/tutorials/view-settings/)
   - [View Rollouts](ocean-cd/tutorials/view-rollouts/)
