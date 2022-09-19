@@ -56,7 +56,7 @@ When the Add Cluster popup appears, complete the procedure below.
 
 1. Click HELM and complete the information below:
    - Cluster Identifier: This is a logical identifier for your cluster. You can choose any ID, and it is not coupled to the Ocean cluster ID (o-xxxxxx). Ocean CD can run on clusters that are not managed by Ocean. The cluster ID must be unique, have up to 30 alphanumeric characters, and not contain spaces.
-   - Token : The API Spot Token pre-generated via our console. If you do not have one, you may click on the generate button above the field. The API will automatically be saved as a personal token by Ocean CD.
+   - Token: The API Spot Token pre-generated via our console. If you do not have one, you may click on the generate button above the field. The API will automatically be saved as a personal token by Ocean CD.
    - Argo Rollout Installation (link to Argo Installation in Overview page): Ocean CD dynamically generates and manages Argo rollout manifests. The installation needs to know if you already have Argo installed on your computer. In the dropdown, select the option that applies to you.
 
 > **Tip**: The See Commands button becomes active only after all three parameters are filled in.
