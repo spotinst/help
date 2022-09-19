@@ -1,6 +1,6 @@
-# End-to-End Installation
+# End-to-End Setup
 
-This procedure provides a description of how to install the operator, create services and migrate your workloads with Ocean CD. You will be provided with an end-to-end description of the flow in order to successfully perform your very first rollout using the Spot console.
+This procedure provides a description of how to install the operator, create services and migrate your workloads with Ocean CD. You will be provided with an end-to-end  description of the flow in order to successfully perform your very first rollout using the Spot console.
 
 ## Prerequisites
 
@@ -36,7 +36,7 @@ _For demo purposes, the YAML method will be provided via the UI._
 
 <img src="/ocean-cd/_media/getting-started-n02a.png" />
 
-Note: The YAML is the provided default method.
+> **Tip**: The YAML is the provided default method.
 
 3. Download the YAML and apply it into your kubernetes cluster.
 kubectl apply -f <Name of the YAML>                 
@@ -48,9 +48,9 @@ When the process is complete and the operator pods are running, your cluster wil
 
 <img src="/ocean-cd/_media/getting-started-n04.png" />
 
-Tip: Once you have downloaded the YAML, the new row will remain with partial information for five minutes. If five minutes elapsed and the YAML was not applied, the row and the banner will be removed. However, the YAML can still be applied at another time, and the Ocean CD will display the new data accordingly.
+> **Tip**: Once you have downloaded the YAML, the new row will remain with partial information for five minutes. If five minutes elapsed and the YAML was not applied, the row and the banner will be removed. However, the YAML can still be applied at another time, and the Ocean CD will display the new data accordingly.
 
-The OceanCD operator is now installed in your kubernetes cluster. In the next steps you will migrate your deployments to be managed by Ocean CD SaaS. You can find all of the existing deployments on the Workloads page and the Workload Migration wizard.  
+The Ocean CD operator is now installed in your kubernetes cluster. In the next steps you will migrate your deployments to be managed by Ocean CD SaaS. You can find all of the existing deployments on the Workloads page and the Workload Migration wizard.  
 
 ## Step 2: Create Services
 
@@ -72,7 +72,65 @@ Run the following command for applying the services:
 
 `kubectl apply -f <Service YAML> -n demo`
 
-## Step 3: Migrate Workloads
+## Step 3: Verification Creation (Optional)
+
+Now that you have successfully created your services, you will be required to create the verifications template and provider which will be used as part of your rollout.
+
+By creating such templates, you will be allowed to insert any data analysis you wish on either a background level or on a phase level.
+
+Although this is an optional step, as a rollout may run without any verifications, it is very easy to set them u. All you have to do is to apply the templates via API
+
+1. Verification template: The verification template is a verification key entity which associates your arguments, queries as well as the monitoring tool of your choice. Such entity is reusable and can be used and maintained over multiple services and clusters
+
+Command:
+`POST https://api.spotinst.io/ocean/cd/verificationTemplate`
+
+Below is an example of the verification template.
+
+```yaml
+kind: verificationTemplate
+name: My-first-verification
+args:
+- name: My-argument
+metrics:
+- name: My-first-metric
+ interval: 5m
+ initialDelay: 1m
+ count: 10
+ successCondition: result[0] <= 0.95
+ failureCondition: result[0] >= 1.2
+ failureLimit: 0
+ inconclusiveLimit: 0
+ consecutiveErrorLimit: 0
+ provider:
+   prometheus:
+     query: My-query
+```
+​
+The attributes of the verification template are described in the [Entities](ocean-cd/concepts-features/entities?id=verification-template) page.
+
+2. Verification provider: The Ocean CD verification provider includes the credentials of the monitoring tool as well as the clusterID, for which you will make use of the credentials.
+
+Command: 
+`POST https://api.spotinst.io/ocean/cd/verificationProvider`
+
+Only one of each provider type can be set per cluster.
+
+```yaml
+kind: verificationProvider
+name: My-verification-provider
+clusterIds:
+- cluster-name
+datadog:
+ address: address-name
+ apiKey: apiKey-Credentials
+ appKey: appKey-Credentials
+```
+
+The attributes of the verification provider are described in the [Entities](ocean-cd/concepts-features/entities?id=verification-provider) page.
+
+## Step 4: Migrate Workloads
+
 In this step you will migrate the chosen deployments to Spot deployments as well as create the necessary entities for the triggering of your rollouts.
 
 _For demo purposes, the workload migration wizard found in the UI will be used._
@@ -95,11 +153,11 @@ _For demo purposes, the workload migration wizard found in the UI will be used._
 
 6. The Workload Migration Flow provides an overview of the migration steps. Click Let’s Get Started.
 
-<img src="/ocean-cd/_media/getting-started-n06.png" />
+<img src="/ocean-cd/_media/getting-started-n06a.png" />
 
 7. Migrate your deployment into your SpotDeployment.
 
-<img src="/ocean-cd/_media/getting-started-12.png" />
+<img src="/ocean-cd/_media/getting-started-n061.png" />
 
 8. Run the command
 
@@ -109,27 +167,42 @@ _For demo purposes, the workload migration wizard found in the UI will be used._
 
 Optional: To edit the provided template and create the strategy, click Next.
 
-<img src="/ocean-cd/_media/getting-started-n08.png" />
+<img src="/ocean-cd/_media/getting-started-n08a.png" />
 
 10. Click Next. OceanCD will automatically create the entity. There is no need for manual input.
 
-### Attributes of the Strategy
+### Strategy example
 
-Strategy example
+```yaml
+kind: Strategy
+name: Strategy-OceanCD
+canary:
+ backgroundVerification:
+   templateNames:
+   - My-first-verification
+ steps:
+ - name: My-first-phase
+   setWeight: 20
+   verification:
+     templateNames:
+     - My-first-verification
+   pause:
+     duration: 5m
+ - name: My-second-phase
+   setWeight: 80
+   verification:
+     templateNames:
+     - My-first-verification
+   pause: {}
+```
 
-<img src="/ocean-cd/_media/getting-started-13.png" />
-
-The attributes of the strategy in the example above are as follows:
-* Name: The name of the strategy must be unique.
-* Phase name: The name of the step is optional.
-* Steps.setWeight: Weight percentage of the step. The weight can not be less than or equal to the one set in the previous step. The total of the weights must not exceed 100 percent. If total weights are less than 100 percent, Ocean CD will add on to the last phase until the total equals 100 percent.
-
-Optional action: Pause. Add a predefined 'Pause' by entering duration in 's', 'm' or 'h'. Alternatively, you can leave it empty by using '{}', which will require an explicit user approval before promoting to the next phase (or roll back).
+The attributes of a strategy are described in the [Entities](ocean-cd/concepts-features/entities?id=strategy) page.
 
 ### Edit and Create the RolloutSpec
+
 Ocean CD Rollout spec connects the SpotDeployment, the desired strategy, traffic, and failure policy.
 
-<img src="/ocean-cd/_media/getting-started-n09.png" />
+<img src="/ocean-cd/_media/getting-started-n09a.png" />
 
 1. Enter your SpotDeployment Name.
 2. Enter your spotDeployment Namespace. Only the ClusterID and the Strategy Name will be auto-filled. OceanCD will automatically create the entity. There is no need for manual input.
@@ -138,19 +211,36 @@ Ocean CD Rollout spec connects the SpotDeployment, the desired strategy, traffic
 
 RolloutSpec example
 
-<img src="/ocean-cd/_media/getting-started-14.png" />
+```yaml
+kind: RolloutSpec
+name: service-rolloutspec
+spotDeployment:
+ clusterId: string
+ namespace: string
+ name: string
+strategy:
+ name: service-rolloutspec
+ args:
+ - name: app
+   value: service
+   valueFrom:
+     fieldRef:
+       fieldPath: metadata.labels['app']
+traffic:
+ canaryService: canary
+ stableService: stable
+failurePolicy:
+ action: abort
+```
 
-The attributes of the rolloutSpec in the example above are as follows:
+The attributes of the rolloutSpec in the [Entities](ocean-cd/concepts-features/entities?id=rolloutspec) page.
 
-* Name: The name of the rolloutSpec must be unique.
-* SpotDeployment.ClusterId: The cluster name. This is not the Ocean Cluster Identifier, and the name should be unique to Ocean CD.
-* SpotDeployment.Namespace: The Cluster namespace.
-* SpotDeployment.Name: The CRD name.
-* Strategy.name: The name of the strategy. You can use a strategy that has already been created and you do not need to create a new one.
-* Traffic: The kubernetes services or optional traffic manager you have chosen. The syntax needed for each traffic may be found in our Git.
-* FailurePolicy: The automatic action(s) OceanCD performs in the case of a failure.
+## Step 5: Trigger of a rollout
 
-The process is complete. You can change the pod template in your SpotDeployment yaml. Once applied to the cluster, a new Canary rollout will be initiated in the All Rollouts table. By clicking Rollout ID you will be navigated to the detailed rollout page to view and take action from the UI.
+Now that the process is complete, you can change the pod spec template such as the image in your SpotDeployment YAML and run the following command:
+`kubectl apply -f <SpotDeployment YAML> -n demo`
+
+At this point, a new Canary rollout will be automatically initiated in the All Rollouts table. By clicking Rollout ID, you can to to the detailed rollout page to view and take action from the console.
 
 ## What’s Next?
 - Learn how to migrate your workload via [API or CLI](ocean-cd/getting-started/migrate-using-api).

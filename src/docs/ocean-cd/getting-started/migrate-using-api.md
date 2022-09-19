@@ -27,7 +27,7 @@ YAML templates and examples can be found in the Ocean CD public repository or JS
 
 ## Step 3: Trigger Canary Deployment
 
-To trigger a canary deployment, make one or more changes to the SpotDeployment you created and apply them.
+To trigger a canary deployment, make one or more changes to the SpotDeployment spec you created and apply them.
 
 ## What’s Next?
 

@@ -97,7 +97,7 @@ If you prefer to use an API, you can migrate your workload using the [Ocean CD A
 
 3. The Workload Migration Flow appears to give you an overview of the migration steps.
 
-<img src="/ocean-cd/_media/getting-started-n06.png" width="400" />
+<img src="/ocean-cd/_media/getting-started-n06a.png"/>
 
 Throughout the process, Ocean CD performs internal validations. At each step, Ocean CD lets you know if a misplaced configuration is found and banners pop up with information you can use.
 
