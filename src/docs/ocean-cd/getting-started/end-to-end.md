@@ -238,6 +238,7 @@ The attributes of the rolloutSpec in the [Entities](ocean-cd/concepts-features/e
 ## Step 5: Trigger of a Rollout
 
 Now that the process is complete, you can change the pod spec template such as the image in your SpotDeployment YAML and run the following command:
+
 `kubectl apply -f <SpotDeployment YAML> -n demo`
 
 At this point, a new Canary rollout will be automatically initiated in the All Rollouts table. By clicking Rollout ID, you can to to the detailed rollout page to view and take action from the console.
