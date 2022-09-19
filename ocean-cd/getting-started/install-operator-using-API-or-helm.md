@@ -2,9 +2,9 @@
 
 If you are not using the Spot console to install the operator, you can install using the Spot API or using Helm.
 
-Whichever method you choose, you will need to indicate whether your cluster has an Argo Rollout installation. If you do not have an Argo Rollout installation, Ocean CD dynamically generates Argo rollout manifests on your behalf. In addition, Ocean CD supports use of your own flags and personal Argo customization.
+Whichever method you choose, you will need to indicate whether your cluster has an Argo Rollout installation. If you do not have an Argo Rollout installation, Ocean CD dynamically generates Argo rollout manifests on your behalf. In addition, Ocean CD supports the addition of your own flags and personal Argo customization.
 
-In addition, the operator will be created without any limits set. If you want to set resource limits, you may do so manually either via the YAML file, or via the values.yaml file.
+In addition, the operator will be created without any limits set. If you want to limit resources, you may do so manually either via the YAML file, or via the values.yaml file.
 
 > Tip: If you do not want Ocean CD to generate Argo manifests (e.g., you have already configured your own customized ones), you may configure otherwise.
 
