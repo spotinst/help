@@ -98,8 +98,8 @@ An Ocean CD microservice may include multiple rollout configurations, and each r
   - [Traffic Manager Reference](ocean-cd/getting-started/traffic-manager-reference)
   - [End-to-end Setup](ocean-cd/getting-started/end-to-end)
 - Concepts & Features
-  [Entities](ocean-cd/concepts-features/entities)
-  [Verifications](ocean-cd/concepts-features/verifications)
+  - [Entities](ocean-cd/concepts-features/entities)
+  - [Verifications](ocean-cd/concepts-features/verifications)
 - Tutorials
   - [View Settings](ocean-cd/tutorials/view-settings/)
   - [View Rollouts](ocean-cd/tutorials/view-rollouts/)
