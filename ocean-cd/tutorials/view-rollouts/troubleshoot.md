@@ -28,9 +28,9 @@ The workload status is indicated as [Degraded](ocean-cd/tutorials/view-workloads
 
 #### Resolution
 
-To remove the Degraded status, apply the [Live](locean-cd/tutorials/view-workloads/details) version again. This removes the Desired version from the SpotDeployment and removes the changes of SpotDeployment done prior to the rollout.
+To remove the Degraded status, apply the [Live](locean-cd/tutorials/view-workloads/details) version again. This removes the desired version from the SpotDeployment and removes the changes of SpotDeployment done prior to the rollout.
 
-The UI will update you accordingly that the apply was performed and the Degraded status was removed.
+The UI will update you accordingly that the application was performed and the Degraded status was removed.
 
 <img src="/ocean-cd/_media/troubleshoot-rollout-003.png" />
 
@@ -42,7 +42,7 @@ During a rollout, no heartbeat is detected from the Ocean CD Operator.
 
 #### Resolution
 
-A reason that the Operator stopped reporting a heartbeat could be that the node its is running on was terminated. If this happens, a banner appears in the Spot console indicating that the Operator is no longer running and that you need to take action. (For example, you would need to restart the node the Operator runs on.)
+A reason that the Operator stopped reporting a heartbeat could be that the node it was running on was terminated. If this happens, a banner appears in the Spot console indicating that the Operator is no longer running and that you need to take action. (For example, you would need to restart the node the Operator runs on.)
 
 However, a stopped Operator does not mean that the rollout has stopped. This means only that Ocean CD does not currently have visibility over the rollout. The rollout could continue independently of the Operator.
 
@@ -56,7 +56,7 @@ During a time that no rollout is in progress, no heartbeat is detected from the 
 
 #### Resolution
 
-If the Operator is not sending a heartbeat, no rollouts will be triggered. You will need to ensure that the relevant node and the Operator are running before a rollout can be started.
+If the Operator does not send a heartbeat, no rollouts will be triggered. You will need to ensure that the relevant node and the Operator are running before a rollout can be started.
 
 ## What’s Next?
 
