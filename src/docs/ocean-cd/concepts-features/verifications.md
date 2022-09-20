@@ -20,15 +20,11 @@ If a metric in phase verification fails, the rollout behaves according to the fa
 
 Once a rollout has been triggered, you can see in real-time either as a graph or as a table the results of each of your metrics.
 
-To take a look at your phase verification, go to the relevant tab in the Rollouts page in the console.
-
-<img src="/ocean-cd/_media/verifications-01.png" />
-
 ### View Phase Verification
 
 To see your phase verification, go to the relevant tab in the Rollouts page in the console.
 
-<img src="/ocean-cd/_media/verifications-02.png" />
+<img src="/ocean-cd/_media/verifications-01.png" />
 
 You can use the actions in the 3-dot menu at any time during the verifications no matter what failure policies you have set.
 
