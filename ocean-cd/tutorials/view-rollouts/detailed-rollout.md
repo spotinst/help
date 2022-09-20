@@ -8,7 +8,7 @@ The top line of the page shows the name of the rollout (Inventory App in the exa
 
 At the top of the page, you will also see banners providing information and guidance about the rollout process as various events occur.
 
-<img src="/ocean-cd/_media/tutorials-rollouts-01.png" />
+<img src="/ocean-cd/_media/tutorials-detailed-rollout-01.png" />
 
 The rollout details are presented in the following areas on the page.
 - Summary Line
