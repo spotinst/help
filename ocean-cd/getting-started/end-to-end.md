@@ -6,7 +6,7 @@ This procedure provides a description of how to install the operator, create ser
 
 * Install OLM:
 
-  Run the command
+  Run the command:
 
   `curl -sL https://github.com/operator-framework/operator-lifecycle-manager/releases/download/v0.20.0/install.sh | bash -s v0.20.0`
 * Run Kubernetes cluster in Azure, Google, or Amazon
@@ -24,7 +24,7 @@ This procedure provides a description of how to install the operator, create ser
 
 You need to install the operator in order to provide access to your cluster workload to Ocean CD.
 
-_For demo purposes, the YAML method will be provided via the UI._
+_For demo purposes, the YAML method will be provided via the console._
 
 1. Under Ocean CD in the Spot console, click Settings, and then click Add Cluster.
 
@@ -34,7 +34,7 @@ _For demo purposes, the YAML method will be provided via the UI._
 * Cluster Identifier: This is a logical identifier for your cluster. You can choose any ID, and it is not coupled to the Ocean cluster ID (o-xxxxxx). Ocean CD can run on clusters that are not managed by Ocean. The cluster ID must be unique, have up to 30 alphanumeric characters, and not contain spaces.
 * Argo Rollout Installation: Ocean CD uses Argo rollouts as part of its engine. If Argo rollout is not installed, Ocean CD will install it (based on the selected option).
 
-<img src="/ocean-cd/_media/getting-started-n02a.png" />
+<img src="/ocean-cd/_media/getting-started-n02a.png" width="500" />
 
 > **Tip**: The YAML is the provided default method.
 
@@ -60,13 +60,13 @@ _For demo purposes, there will be no use of a traffic manager. Copy the services
 
 Stable
 
-<img src="/ocean-cd/_media/getting-started-09.png" width="300" />
+<img src="/ocean-cd/_media/getting-started-09.png" width="250" />
 
 Canary
 
-<img src="/ocean-cd/_media/getting-started-10.png" width="300" />
+<img src="/ocean-cd/_media/getting-started-10.png" width="250" />
 
-Note: It is critical to apply the services into the same namespace as your SpotDeployment namespace.
+> **Note**: It is critical to apply the services into the same namespace as your SpotDeployment namespace.
 
 Run the following command for applying the services:
 
@@ -111,7 +111,7 @@ The attributes of the verification template are described in the [Entities](ocea
 
 2. Verification provider: The Ocean CD verification provider includes the credentials of the monitoring tool as well as the clusterID, for which you will make use of the credentials.
 
-Command: 
+Command:
 `POST https://api.spotinst.io/ocean/cd/verificationProvider`
 
 Only one of each provider type can be set per cluster.
@@ -133,15 +133,15 @@ The attributes of the verification provider are described in the [Entities](ocea
 
 In this step you will migrate the chosen deployments to Spot deployments as well as create the necessary entities for the triggering of your rollouts.
 
-_For demo purposes, the workload migration wizard found in the UI will be used._
+_For demo purposes, the workload migration wizard in the console will be used._
 
 1. Go to Spot’s [Github Repository](https://github.com/spotinst/spot-oceancd-releases/blob/main/Quick%20Start%20%26%20Examples/Deployment.yaml) and copy the deployment template provided.
 
-<img src="/ocean-cd/_media/getting-started-11.png" width="300" />
+<img src="/ocean-cd/_media/getting-started-11.png" width="250" />
 
 2. Apply the deployment into your kubernetes cluster. Once applied, your deployment will instantly be displayed in the Workload Table in the UI.
 
-3. Run the command
+3. Run the command:
 
   `kubectl apply -f <SpotDeployment YAML> -n demo`		
 
@@ -159,7 +159,7 @@ _For demo purposes, the workload migration wizard found in the UI will be used._
 
 <img src="/ocean-cd/_media/getting-started-n061.png" />
 
-8. Run the command
+8. Run the command:
 
   `kubectl apply -f <SpotDeployment YAML> -n demo`
 
@@ -169,7 +169,7 @@ Optional: To edit the provided template and create the strategy, click Next.
 
 <img src="/ocean-cd/_media/getting-started-n08a.png" />
 
-10. Click Next. OceanCD will automatically create the entity. There is no need for manual input.
+10. Click Next. Ocean CD will automatically create the entity. There is no need for manual input.
 
 ### Strategy example
 
@@ -235,12 +235,13 @@ failurePolicy:
 
 The attributes of the rolloutSpec in the [Entities](ocean-cd/concepts-features/entities?id=rolloutspec) page.
 
-## Step 5: Trigger of a rollout
+## Step 5: Trigger a Rollout
 
 Now that the process is complete, you can change the pod spec template such as the image in your SpotDeployment YAML and run the following command:
+
 `kubectl apply -f <SpotDeployment YAML> -n demo`
 
-At this point, a new Canary rollout will be automatically initiated in the All Rollouts table. By clicking Rollout ID, you can to to the detailed rollout page to view and take action from the console.
+At this point, a new Canary rollout will be automatically initiated in the All Rollouts table. By clicking Rollout ID, you can go to the detailed rollout page to view and take action from the console.
 
 ## What’s Next?
 - Learn how to migrate your workload via [API or CLI](ocean-cd/getting-started/migrate-using-api).

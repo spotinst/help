@@ -40,10 +40,6 @@ When the Add Cluster popup appears, complete the procedure below.
 
 <img src="/ocean-cd/_media/getting-started-n03.png" />
 
-2. Apply the YAML to your machine. The Ocean CD operator will be installed in the cluster, and an additional row will appear in the cluster table with initial information about the cluster and the controller.
-
-<img src="/ocean-cd/_media/getting-started-n04.png" />
-
 > **Tip**: Once you have downloaded the YAML, the new row will remain with partial information for two minutes. If this time has elapsed and the YAML was not applied, the row and the banner will be removed. However, the YAML can still be applied at another time, and the Ocean CD will display the new data accordingly.
 
 You are now ready to migrate your workload.
@@ -75,7 +71,7 @@ You are now ready to migrate your workload.
 
 ## Migrate a Workload using the Console
 
-The procedures below describe how to migrate a Deployment to a SpotDeployment via the UI. This will enable Ocean CD to manage the deployments that you migrate. The full migration process includes the creation of the RolloutSpec, the Strategy, the Verification Template, and the Verification Provider [entities]().
+The procedures below describe how to migrate a Deployment to a SpotDeployment via the UI. This will enable Ocean CD to manage the deployments that you migrate. The full migration process includes the creation of the RolloutSpec, the Strategy, the Verification Template, and the Verification Provider [entities](ocean-cd/concepts-features/entities).
 
 The migration does not delete your original deployment. If there are any resources that you do not want to keep, you will need to delete them manually.
 
@@ -111,11 +107,11 @@ Complete the steps below. When you click Create, Ocean CD saves and applies your
 
 > **Tip**: Any first apply of your SpotDeployments will not trigger a rollout. Only the pods will be created. To trigger a rollout with the entities of your choice, you need to apply additional changes to the SpotDeployment (see step 4).
 
-2. Edit the [strategy](ocean-cd/?id=strategy) and click Next. The strategy name should not exceed 63 characters. If you already have a strategy defined, you can just click Skip.
+2. Edit the [strategy](ocean-cd/concepts-features/entities?id=strategy) and click Next. The strategy name should not exceed 63 characters. If you already have a strategy defined, you can just click Skip.
 
 <img src="/ocean-cd/_media/getting-started-n08a.png" />
 
-3. Edit the template for the [RolloutSpec](ocean-cd/?id=rolloutspec). Choosing a traffic manager is optional. If you would like to [specify a traffic manager](ocean-cd/getting-started/traffic-manager-reference), choose one from the dropdown list. When you choose a traffic manager, Ocean CD will populate the template automatically with the necessary traffic manager attributes. If you do not select a traffic manager, Ocean CD will use the Kubernetes default traffic methods based on replicas. When you are finished editing, click Create.
+3. Edit the template for the [RolloutSpec](ocean-cd/concepts-features/entities?id=rolloutspec). Choosing a traffic manager is optional. If you would like to [specify a traffic manager](ocean-cd/getting-started/traffic-manager-reference), choose one from the dropdown list. When you choose a traffic manager, Ocean CD will populate the template automatically with the necessary traffic manager attributes. If you do not select a traffic manager, Ocean CD will use the Kubernetes default traffic methods based on replicas. When you are finished editing, click Create.
 
 > **Tip**: Any YAML entities you insert in your traffic object will need to be applied to the same namespace as your SpotDeployment.
 
