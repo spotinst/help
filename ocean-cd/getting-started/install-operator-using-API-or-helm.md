@@ -116,4 +116,4 @@ For additional information, consult the [Ocean CD public repository](https://git
 
 ## What’s Next?
 
-Learn how to [migrate a workload using the API](ocean-cd/getting-started/migrate-using-api).
+Learn how to [migrate a workload using the API or CLI](ocean-cd/getting-started/migrate-using-api).

@@ -93,8 +93,8 @@ An Ocean CD microservice may include multiple rollout configurations, and each r
 
 - Overview
 - [Getting Started](ocean-cd/getting-started/)
-  - [Install using API or Helm](ocean-cd/getting-started/install-operator-using-API-or-helm)
-  - [Migrate using the API](ocean-cd/getting-started/migrate-using-api)
+  - [Install using Operator API or Helm](ocean-cd/getting-started/install-operator-using-API-or-helm)
+  - [Migrate using API or CLI](ocean-cd/getting-started/migrate-using-api)
   - [Traffic Manager Reference](ocean-cd/getting-started/traffic-manager-reference)
   - [End-to-end Setup](ocean-cd/getting-started/end-to-end)
 - Concepts & Features
@@ -106,4 +106,3 @@ An Ocean CD microservice may include multiple rollout configurations, and each r
     - [Detailed Rollout](ocean-cd/tutorials/view-rollouts/detailed-rollout)
     - [Troubleshoot a Rollout](ocean-cd/tutorials/view-rollouts/troubleshoot)
   - [View Workloads](ocean-cd/tutorials/view-workloads/)
-    - [Workload Details](ocean-cd/tutorials/view-workloads/details)
