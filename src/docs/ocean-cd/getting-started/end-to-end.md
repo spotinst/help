@@ -56,7 +56,7 @@ The Ocean CD operator is now installed in your kubernetes cluster. In the next s
 
 You will create the Canary and Stable services to expose and manage the traffic split between the canary and the stable replicasets.
 
-_For demo purposes, there will be no use of a traffic manager. Copy the services template provided in our [Github Repository](https://github.com/spotinst/spot-oceancd-releases/blob/main/Quick%20Start%20%26%20Examples/Deployment.yaml):_
+_For demo purposes, there will be no use of a traffic manager. Copy the services template provided in our [Github Repository](https://github.com/spotinst/spot-oceancd-releases/tree/main/Quick%20Start%20%26%20Examples):_
 
 Stable
 
@@ -143,7 +143,7 @@ _For demo purposes, the workload migration wizard in the console will be used._
 
 3. Run the command:
 
-  `kubectl apply -f <SpotDeployment YAML> -n demo`		
+  `kubectl apply -f <Deployment YAML> -n demo`		
 
 4. In the workloads table in the Workloads page, you will see when the deployment is mapped into the table.
 

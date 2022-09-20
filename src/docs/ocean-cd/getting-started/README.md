@@ -36,7 +36,7 @@ When the Add Cluster popup appears, complete the procedure below.
 1. Complete the information below.
    - Cluster Identifier: This is a logical identifier for your cluster which must be unique and have up to 30 alphanumeric characters without any spaces. You can choose any ID, and it does not need to be coupled to the Ocean cluster ID (o-xxxxxx). Ocean CD can run on clusters that are not managed by Ocean.
    - [Argo Rollout Installation](ocean-cd/?id=argo-rollouts-as-an-engine): Ocean CD dynamically generates and manages Argo rollout manifests. The installation needs to know if you already have Argo installed on your computer. In the dropdown, select the option that applies to you.
-   - Click Download YAML. When you click Download YAML, a YAML file will be downloaded to your computer, and a new row will appear in the Clusters list. If you would like to [customize features or flags](https://github.com/spotinst/spot-oceancd-releases/blob/main/charts/oceancd-operator/values.yaml) prior to the installation, you may do so by changing your downloaded YAML file.
+   - Click Download YAML. When you click Download YAML, a YAML file will be downloaded to your computer, and a new row will appear in the Clusters list. Then, you just need to apply the YAML in your Kubernetes cluster. 
 
 <img src="/ocean-cd/_media/getting-started-n03.png" />
 
