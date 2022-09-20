@@ -44,7 +44,7 @@ Ocean CD will behave in accordance with the potential failure policy or paused s
 ### Failure Types
 
 1. Kubernetes failures may always be encountered. These failures could include: CrashLoop pod status, ImageLoop, Liveness Probe Failure, and others. For failures like these, OceanCD will automatically trigger a rollback action once the progressDeadlineSeconds are over,  regardless of the failure policy set.
-2. Verification Failures. These failures will only occur if the metrics set in your Verification templates were to fail. The way OceanCD replies to such failure, will be entirely dependent on the failure policy set in your RolloutSpec. Learn more about the verifications.
+2. Verification Failures. These failures will only occur if the metrics set in your Verification templates were to fail. The way OceanCD replies to such failure, will be entirely dependent on the failure policy set in your RolloutSpec. Learn more about the [verifications](ocean-cd/concepts-features/verifications).
 3. Rollouts rolled back due to manual intervention.
 
 ### Paused Status (Phase Level)
