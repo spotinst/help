@@ -60,4 +60,4 @@ If the Operator does not send a heartbeat, no rollouts will be triggered. You wi
 
 ## What’s Next?
 
-Learn more about the information provided in the Detailed Rollout(ocean-cd/tutorials/view-workloads/details) page.
+Learn more about the information provided in the [Detailed Rollout](ocean-cd/tutorials/view-workloads/details) page.
