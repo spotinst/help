@@ -48,7 +48,7 @@ However, a stopped Operator does not mean that the rollout has stopped. This mea
 
 <img src="/ocean-cd/_media/troubleshoot-rollout-004.png" />
 
-## No Heartbeat when no Rollouts
+## No Rollouts, No Heartbeat
 
 #### Issue
 
