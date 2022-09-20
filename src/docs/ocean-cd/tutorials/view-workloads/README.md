@@ -20,5 +20,4 @@ The list of live workloads provides the following information:
 
 ## What’s Next?
 
-- Learn more about the [Detailed Workload](ocean-cd/tutorials/view-workloads/details) page.
 - If you are not already an Ocean user, learn how to use [Ocean](ocean/) to automate your cloud infrastructure for containers.
