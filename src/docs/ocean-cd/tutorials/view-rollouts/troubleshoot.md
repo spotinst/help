@@ -28,7 +28,7 @@ The workload status is indicated as [Degraded](ocean-cd/tutorials/view-workloads
 
 #### Resolution
 
-To remove the Degraded status, apply the [Live](locean-cd/tutorials/view-workloads/details) version again. This removes the desired version from the SpotDeployment and removes the changes of SpotDeployment done prior to the rollout.
+To remove the Degraded status, apply the [Live](ocean-cd/tutorials/view-workloads/details) version again. This removes the desired version from the SpotDeployment and removes the changes of SpotDeployment done prior to the rollout.
 
 The UI will update you accordingly that the application was performed and the Degraded status was removed.
 
