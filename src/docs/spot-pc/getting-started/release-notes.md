@@ -1,6 +1,30 @@
 # Spot PC: Release Notes
 
+## 09/22/2022
+_When:_ 09/22/2022 at 10pm - 11pm Eastern
 
+_Impact:_ Access to desktops and application services for End Users will remain uninterrupted. Access to Spot PC console will remain available.
+
+* Introducing Spot Group Updates
+  * Spot PC is delighted to introduce a multitude of Spot Group enhancements:
+    1. Spot Group Detail View*: Now each Spot Group has it own individual page where more details not on the table are present. Actions buttons are available in the top of the view.
+    2. Spot Group Status View*: In this new column, users can see the updates on the session hosts.
+    3. *Spot Group Tooltips*: In the Spot Group Table, while hovering over the action column each icon has a tooltip description.
+    4. Spot Groups now have improved support for very large numbers of Azure AD Groups
+* Introducing Table Updates
+  * Spot PC has introduced a duo of improvements to all tables through out:
+    1. Spot PC is proud to present *Customizable Columns*. Now in the top right corner as a button, users can remove columns and rearrange columns as they see fit.     
+    2. Spot PC is excited to present *Frozen Header*. Now when in tables that have an large number of rows, the header will be present while scrolling down.
+* Sites Improvements
+  * Spot PC has multitude of improvements to Sites:
+  * Introducing Admin User Changes
+    * Spot PC has improved Admin User Changes. In accounts, admin users' roles can now modified at the organizational level in the UI instead of manually re-adding.
+  * Onboarding Updates
+    * Spot PC improved resiliency of Onboarding initialization. Users can now retry failed actions.  
+* Image Set Updates
+  * Spot PC has a couple of updates for Image Set:
+    1. Improved feedback when a viable image set is not available in a given site
+    2. Prompt for confirmation when deleting an image set
 
 ## 09/14/2022 (Hotfix)
 _When:_ 09/14/2022 at 10pm - 11pm Eastern
