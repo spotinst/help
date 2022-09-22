@@ -15,6 +15,7 @@
 - [**Elastigroup Stateful Node**](managed-instance/)
 - [**Ocean**](ocean/)
 - [**Ocean for Apache Spark**](ocean-spark/)
+- [**Ocean CD**](ocean-cd/)
 - [**Eco**](eco/)
 - [**Cloud Analyzer**](cloud-analyzer/)
 - [**Security**](spot-security/)
