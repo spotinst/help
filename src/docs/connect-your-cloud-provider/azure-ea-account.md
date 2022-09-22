@@ -2,7 +2,7 @@
 
 This procedure describes how to set up Spot account access to Azure EA Read Only data, which gives Spot the necessary permissions to pull Azure EA data and process it for the [Eco Azure Dashboard](eco/azure-tutorials/view-your-savings).
 
-Note: If you no longer have access to the EA Portal the Eco Azure team can assist with a manual setup process using a registered application. Contact support or your sales associate to reach out to the Eco Azure team.
+**If you no longer have access to the EA Portal the Eco Azure team can assist with a manual setup process using a registered application. Contact support or your sales associate to reach out to the Eco Azure team**.
 
 ## Prerequisites
 - An Azure EA
@@ -25,13 +25,13 @@ Use the procedure below to enable API data access. This procedure can also be fo
 
 1. Choose Microsoft Azure.
 
-<img src="/connect-your-cloud-provider/_media/connect-azure-ea-02.png" width="600" />
+<img src="/connect-your-cloud-provider/_media/connect-azure-ea-02a.png" width="600" />
 
-2. Choose option "Connect Your Enterprise Agreement (EA)", fill out the information and click connect.
+2. Choose "Enterprise Agreement (EA)", fill out the information and click connect.
 
-<img src="/connect-your-cloud-provider/_media/connect-azure-ea-03.png" width="600" />
+<img src="/connect-your-cloud-provider/_media/connect-azure-ea-03a.png" width="600" />
 
-3. After entering in the EA API data, you can choose to set up a strategy call with the Eco Azure team to perform an initial analysis of what savings the Eco Azure team can provide. The details are listed in the [Eco Azure Getting Started](eco/getting-started/connect-azure-ea-to-eco) guide.
+3. After entering the EA API data, you can choose to set up a strategy call with the Eco Azure team to perform an initial analysis of what savings the Eco Azure team can provide. The details are listed in the [Eco Azure Getting Started](eco/getting-started/connect-azure-ea-to-eco) guide.
 
 <img src="/connect-your-cloud-provider/_media/connect-azure-ea-04.png" width="500" />
 
