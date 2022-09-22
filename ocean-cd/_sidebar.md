@@ -16,4 +16,3 @@
       - [Detailed Rollout](ocean-cd/tutorials/view-rollouts/detailed-rollout)
       - [Troubleshoot a Rollout](ocean-cd/tutorials/view-rollouts/troubleshoot)
     - [View Workloads](ocean-cd/tutorials/view-workloads/)
-      - [Workload Details](ocean-cd/tutorials/view-workloads/details)
