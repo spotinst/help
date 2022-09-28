@@ -49,7 +49,7 @@ In the left menu of the Spot Console, click Ocean/Cloud Clusters, and click Crea
 ## Step 3: Connectivity
 
 1. Create a Spot token or use an existing one.
-2. Install the Ocean Controller. You can do this using [Helm](tutorials/spot-kubernetes-controller/install-with-helm) or by running [kubectl](tutorials/spot-kubernetes-controller/install-with-kubectl) commands.
+2. Install the Ocean Controller. You can do this using [Helm](ocean/tutorials/spot-kubernetes-controller/install-with-helm) or by running [kubectl](ocean/tutorials/spot-kubernetes-controller/install-with-kubectl) commands.
 3. Click Test Connectivity to ensure the controller functionality.
 
 <img src="/ocean/_media/gke-connectivity.png" />
