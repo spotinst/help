@@ -1,5 +1,3 @@
-<meta name="robots" content="noindex">
-
 # Verifications
 
 Using the Verification Template entity, you can define the verifications that will take place during your deployment process, including metrics and monitoring tools. Once you have set the verifications, you can reference them into your Strategy entity and declare the steps in which they will take place.

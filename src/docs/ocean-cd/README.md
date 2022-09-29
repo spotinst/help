@@ -1,5 +1,3 @@
-<meta name="robots" content="noindex">
-
 # Ocean CD Overview
 
 Ocean CD focuses on the most painful aspects of modern application delivery, giving developers the freedom to push code with confidence while DevOps easily maintain governance and SLOs.
