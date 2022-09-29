@@ -49,6 +49,7 @@ Set up Cost and Usage Reports.
   - Enable Data refresh settings.
   - Time granularity Units should be Hourly.
   - Enable report data integration for Amazon Athena.
+  - The prefix should not have a duplicate “/.” (directorypath/my-cur is better than directorypath//my-cur)
 
 Mark the checkboxes as shown below.
 
