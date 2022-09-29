@@ -1,5 +1,3 @@
-<meta name="robots" content="noindex">
-
 # Get Started with Ocean CD
 
 To get started with Ocean CD, you will need to install the Ocean CD Operator and migrate your workload. The information below walks you through these procedures using the Spot console.
@@ -36,7 +34,7 @@ When the Add Cluster popup appears, complete the procedure below.
 1. Complete the information below.
    - Cluster Identifier: This is a logical identifier for your cluster which must be unique and have up to 30 alphanumeric characters without any spaces. You can choose any ID, and it does not need to be coupled to the Ocean cluster ID (o-xxxxxx). Ocean CD can run on clusters that are not managed by Ocean.
    - [Argo Rollout Installation](ocean-cd/?id=argo-rollouts-as-an-engine): Ocean CD dynamically generates and manages Argo rollout manifests. The installation needs to know if you already have Argo installed on your computer. In the dropdown, select the option that applies to you.
-   - Click Download YAML. When you click Download YAML, a YAML file will be downloaded to your computer, and a new row will appear in the Clusters list. Then, you just need to apply the YAML in your Kubernetes cluster. 
+   - Click Download YAML. When you click Download YAML, a YAML file will be downloaded to your computer, and a new row will appear in the Clusters list. Then, you just need to apply the YAML in your Kubernetes cluster.
 
 <img src="/ocean-cd/_media/getting-started-n03.png" />
 

@@ -1,5 +1,3 @@
-<meta name="robots" content="noindex">
-
 # Entities
 
 For each deployment, Ocean CD makes use of a strategy and a rolloutSpec. You will use these entities to configure the specific behavior of the deployment.
