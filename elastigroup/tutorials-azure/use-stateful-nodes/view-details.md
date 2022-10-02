@@ -6,7 +6,7 @@ To get to the Stateful Node Overview tab, do the following:
 1. In the Spot console, go to Elastigroup in the menu tree and click Stateful Nodes.
 2. In the [list of stateful nodes](elastigroup/tutorials-azure/use-stateful-nodes/manage), click on a Node Name.
 
-<img src="/elastigroup/_media/azure-view-stateful-node-details-01.png" />
+<img src="/elastigroup/_media/azure-view-stateful-node-details-01a.png" />
 
 The stateful node page opens with the Overview tab open and the node name at the top. The node status is indicated next to the name and can be one of the statuses shown in the key below.
 
