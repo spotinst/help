@@ -4,7 +4,7 @@ Elastigroup enables you to see an overview of all your stateful nodes, get statu
 
 To manage your stateful nodes in the Spot console, go to Elastigroup in the menu tree and click Stateful Nodes.
 
-<img src="/elastigroup/_media/azure-manage-stateful-nodes-01a.png" />
+<img src="/elastigroup/_media/azure-manage-stateful-nodes-01b.png" />
 
 ## View List of Stateful Nodes
 
@@ -31,6 +31,10 @@ If you have a long list of stateful nodes, you can use the filter above the list
 
 To get detailed information, statistics, and operational information about a stateful node, click on the Node Name. This will open the Node Details page for that node which serves as your operational dashboard for the node.
 
+## Create Node
+
+You can click Create Node above the node list to import a new node to Elastigroup.
+
 ## Use Node Actions
 
 To perform one of the [node actions](elastigroup/features-azure/stateful-nodes/actions), click on the Actions menu on the top right and click one of the actions. The actions available include:
@@ -41,6 +45,26 @@ To perform one of the [node actions](elastigroup/features-azure/stateful-nodes/a
 - Delete
 
 <img src="/elastigroup/_media/azure-manage-stateful-nodes-03a.png" />
+
+## Edit Node Configuration
+
+When the node status is either Running or Paused, you can edit the configuration of the node in the JSON file. Hover your cursor over the relevant row in the table and click the Edit icon on the right.
+
+<img src="/elastigroup/_media/azure-manage-stateful-nodes-04.png" />
+
+If you are on the Overview page, click Edit Node at the top right.
+
+<img src="/elastigroup/_media/azure-manage-stateful-nodes-04-1.png" />
+
+You can then edit any of the fields in the Basics page that appears.
+
+<img src="/elastigroup/_media/azure-manage-stateful-nodes-05.png" />
+
+You can also go to the Review page and edit directly in the JSON configuration. When the Review page appears, click Edit Node. Make your changes in the JSON text and click Update.
+
+<img src="/elastigroup/_media/azure-manage-stateful-nodes-06.png" />
+
+Your changes to the configuration are saved and applied to the stateful node. Changes that affect the VM directly (e.g., selected availability zones or instance types) will be reflected only when the next VM is launched. In order to make the changes take effect immediately, a [Recycle](elastigroup/features-azure/stateful-nodes/actions?id=recycle) action is required on the stateful node.
 
 ## What’s Next?
 
