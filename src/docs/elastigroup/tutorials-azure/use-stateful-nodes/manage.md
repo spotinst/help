@@ -66,6 +66,13 @@ You can also go to the Review page and edit directly in the JSON configuration. 
 
 Your changes to the configuration are saved and applied to the stateful node. Changes that affect the VM directly (e.g., selected availability zones or instance types) will be reflected only when the next VM is launched. In order to make the changes take effect immediately, a [Recycle](elastigroup/features-azure/stateful-nodes/actions?id=recycle) action is required on the stateful node.
 
+The following parameters cannot be edited and are not included in the JSON configuration that is editable:
+
+`id`
+`region`
+`resourceGroupName`
+`compute.os`
+
 ## What’s Next?
 
 Learn more about the [Stateful Node Details](elastigroup/tutorials-azure/use-stateful-nodes/view-details) view.
