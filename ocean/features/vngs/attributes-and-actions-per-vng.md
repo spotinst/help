@@ -9,20 +9,19 @@ Many of the attributes that you apply to your cluster can be applied specificall
 
 ### Ocean for AWS Kubernetes
 
-The following is a list of attributes customizable per VNG in Ocean for AWS.
+The following is a list of attributes customizable per VNG in Ocean for AWS. Some of the features can be accessed using the [API only](api/#tag/Ocean-AWS), as indicated below.
 
-- Automatic Headroom
 - Associate Public IP (API only)
 - Block Device Mappings
 - Elastic IPs
-- Manual Headroom
-- Instance Types (These must be a subset of the instance types defined for the Ocean cluster.)
+- Headroom
+- Instance Types- whitelist or blacklist (these must be a subset of the instance types defined for the Ocean cluster.)
 - Instance Profile
 - Labels
 - Launch Instance (API only)
 - Maximum Nodes
 - Minimum Nodes (API only)
-- Metadata v2 (API only
+- Metadata v2 (API only)
 - Preferred Spot Instance Types (API only)
 - Restrict scale down
 - Roll (API only)
@@ -46,7 +45,7 @@ For example, you could use the Labels and Taints attributes to instruct Ocean wh
 
 ### Ocean for ECS
 
-The following is a list of attributes customizable per VNG in Ocean for ECS.
+The following is a list of attributes customizable per VNG in Ocean for ECS. Some of the features can be accessed using the [API only](api/#operation/OceanECSLaunchSpecDelete), as indicated below.
 
 - Attributes
 - Block Device Mappy
@@ -55,6 +54,7 @@ The following is a list of attributes customizable per VNG in Ocean for ECS.
 - Launch Instance (API only)
 - Manual Headroom
 - Metadata v2 (API only)
+- Preferred Spot Instance Types (API only)
 - Restrict Scaledown
 - Roll (API only)
 - Schedualed manual headroom (API only)
@@ -91,7 +91,7 @@ The following is a list of attributes customizable per VNG in Ocean for AKS.
 
 ### Ocean for GKE
 
-The following is a list of attributes customizable per VNG in Ocean for GKE.
+The following is a list of attributes customizable per VNG in Ocean for GKE. Some of the features can be accessed using the [API only](api/#operation/OceanGKELaunchSpecDelete), as indicated below.
 
 - Automatic Headroom
 - Availability zone
@@ -109,7 +109,7 @@ The following is a list of attributes customizable per VNG in Ocean for GKE.
 - Roll (API only)
 - Root Volume Size
 - Root Volume Type (API only)
-- Schedualed manual headroom (API only)
+- Scheduled manual headroom (API only)
 - Shielded VMs (API only)
 - Shutdown hours
 - Tags & Metadata (API only)
@@ -140,7 +140,7 @@ The rest of the new instances will have non-preferred types to maintain a distri
 
 As preferred instance type is a soft requirement, the general spot instance availability of both preferred and non-preferred types is considered before considering type preference.
 
-For information about defining preferred instance types in the Spot API (using the `preferredSpotTypes` attribute under `launchSpec.instanceTypes`), see [Create Virtual Node Group](https://docs.spot.io/api/#operation/OceanAWSLaunchSpecCreate) (AWS).
+For information about defining preferred instance types in the Spot API (using the `preferredSpotTypes` attribute under `launchSpec.instanceTypes`), see the Create Virtual Node Group APIs for [Ocean AWS Kubernetes](https://docs.spot.io/api/#operation/oceanK8sClusterAggregatedDetailedCosts) and [Ocean ECS](api/#operation/oceanAwsEcsGetContainerInstances).
 
 ## What’s next?
 
