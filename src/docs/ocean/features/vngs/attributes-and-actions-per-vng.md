@@ -91,7 +91,7 @@ The following is a list of attributes customizable per VNG in Ocean for AKS.
 
 ### Ocean for GKE
 
-The following is a list of attributes customizable per VNG in Ocean for GKE. Some of the features can be accessed using the [API only](api/#operation/OceanGKELaunchSpecDelete), as indicated below.
+The following is a list of attributes customizable per VNG in Ocean for GKE. Some of the features can be accessed using the [API only](https://docs.spot.io/api/#operation/OceanGKELaunchSpecDelete), as indicated below.
 
 - Automatic Headroom
 - Availability zone
