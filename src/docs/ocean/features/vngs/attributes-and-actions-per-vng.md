@@ -9,7 +9,7 @@ Many of the attributes that you apply to your cluster can be applied specificall
 
 ### Ocean for AWS Kubernetes
 
-The following is a list of attributes customizable per VNG in Ocean for AWS. Some of the features can be accessed using the [API only](api/#tag/Ocean-AWS), as indicated below.
+The following is a list of attributes customizable per VNG in Ocean for AWS. Some of the features can be accessed using the [API only](https://docs.spot.io/api/#tag/Ocean-AWS), as indicated below.
 
 - Associate Public IP (API only)
 - Block Device Mappings
@@ -45,7 +45,7 @@ For example, you could use the Labels and Taints attributes to instruct Ocean wh
 
 ### Ocean for ECS
 
-The following is a list of attributes customizable per VNG in Ocean for ECS. Some of the features can be accessed using the [API only](api/#operation/OceanECSLaunchSpecDelete), as indicated below.
+The following is a list of attributes customizable per VNG in Ocean for ECS. Some of the features can be accessed using the [API only](https://docs.spot.io/api/#operation/OceanECSLaunchSpecDelete), as indicated below.
 
 - Attributes
 - Block Device Mappy
@@ -140,7 +140,7 @@ The rest of the new instances will have non-preferred types to maintain a distri
 
 As preferred instance type is a soft requirement, the general spot instance availability of both preferred and non-preferred types is considered before considering type preference.
 
-For information about defining preferred instance types in the Spot API (using the `preferredSpotTypes` attribute under `launchSpec.instanceTypes`), see the Create Virtual Node Group APIs for [Ocean AWS Kubernetes](https://docs.spot.io/api/#operation/oceanK8sClusterAggregatedDetailedCosts) and [Ocean ECS](api/#operation/oceanAwsEcsGetContainerInstances).
+For information about defining preferred instance types in the Spot API (using the `preferredSpotTypes` attribute under `launchSpec.instanceTypes`), see the Create Virtual Node Group APIs for [Ocean AWS Kubernetes](https://docs.spot.io/api/#operation/oceanK8sClusterAggregatedDetailedCosts) and [Ocean ECS](https://docs.spot.io/api/#operation/oceanAwsEcsGetContainerInstances).
 
 ## What’s next?
 
