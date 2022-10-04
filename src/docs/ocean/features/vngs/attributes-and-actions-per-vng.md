@@ -44,7 +44,7 @@ For example, you could use the Labels and Taints attributes to instruct Ocean wh
 
 ### Ocean for ECS
 
-The following is a list of attributes customizable per VNG in Ocean for ECS. Some of the features can be accessed using the [API only](https://docs.spot.io/api/#operation/OceanECSLaunchSpecDelete), as indicated below.
+The following is a list of attributes customizable per VNG in Ocean for ECS. Some of the features can be accessed using the [API only](https://docs.spot.io/api/#operation/OceanECSLaunchSpecUpdate), as indicated below.
 
 - Attributes
 - Block Device Mappy
