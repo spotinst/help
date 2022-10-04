@@ -18,14 +18,13 @@ The following is a list of attributes customizable per VNG in Ocean for AWS. Som
 - Instance Types- whitelist or blacklist (these must be a subset of the instance types defined for the Ocean cluster.)
 - Instance Profile
 - Labels
-- Launch Instance (API only)
+- Launch Instance
 - Maximum Nodes
-- Minimum Nodes (API only)
+- Minimum Nodes
 - Metadata v2 (API only)
 - Preferred Spot Instance Types (API only)
 - Restrict scale down
-- Roll (API only)
-- Scheduled manual headroom (API only)
+- Roll
 - Security Group IDs
 - Shutdown hours
 - Spot% to use within the VNG
@@ -50,18 +49,19 @@ The following is a list of attributes customizable per VNG in Ocean for ECS. Som
 - Attributes
 - Block Device Mappy
 - Instance Profile
-- Instance Types (API only)
-- Launch Instance (API only)
+- Instance Types - whitelist or blacklist (API only)
+- Launch Instance
 - Manual Headroom
 - Metadata v2 (API only)
 - Preferred Spot Instance Types (API only)
 - Restrict Scaledown
-- Roll (API only)
-- Schedualed manual headroom (API only)
+- Roll
+- Scheduled Manual Headroom (API only)
 - Security Group
 - Subnets
 - Tags and Metadata
 - User Data
+
 
 > **Tip**: If automatic headroom is configured, you must set `autoScaler.enableAutomaticAndManualHeadroom` to True at the Ocean level in order to ensure that the manual headroom will be effective.
 
@@ -75,14 +75,14 @@ The following is a list of attributes customizable per VNG in Ocean for ECS. Som
 The following is a list of attributes customizable per VNG in Ocean for AKS.
 
 - Automatic Headroom
-- Availability zone (API only)
+- Availability zone
 - Headroom
 - Labels
 - Maximum Nodes
 - OS Disk Type and Size
-- Shutdown hours
 - Tags
 - Taints
+- Max Pods per Node (API Only)
 
 </details><br>
 
@@ -99,14 +99,14 @@ The following is a list of attributes customizable per VNG in Ocean for GKE. Som
 - Instance Types (API only. These must be a subset of the instance types defined for the Ocean cluster.)
 - Instance Profile (API only)
 - Labels
-- Launch Instance (API only)
+- Launch Instance
 - Local SSD (API only)
 - Maximum Nodes
 - Minimum Nodes
 - Network Tags (API only)
 - Preemptible% to use within the VNG
 - Restrict scale down
-- Roll (API only)
+- Roll
 - Root Volume Size
 - Root Volume Type (API only)
 - Scheduled manual headroom (API only)
