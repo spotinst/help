@@ -9,7 +9,7 @@ Many of the attributes that you apply to your cluster can be applied specificall
 
 ### Ocean for AWS Kubernetes
 
-The following is a list of attributes customizable per VNG in Ocean for AWS. Some of the features can be accessed using the [API only](https://docs.spot.io/api/#tag/Ocean-AWS), as indicated below.
+The following is a list of attributes customizable per VNG in Ocean for AWS. Some of the features can be accessed using the [API only](https://docs.spot.io/api/#operation/OceanAWSLaunchSpecUpdate), as indicated below.
 
 - Associate Public IP (API only)
 - Block Device Mappings
@@ -91,7 +91,7 @@ The following is a list of attributes customizable per VNG in Ocean for AKS.
 
 ### Ocean for GKE
 
-The following is a list of attributes customizable per VNG in Ocean for GKE. Some of the features can be accessed using the [API only](https://docs.spot.io/api/#operation/OceanGKELaunchSpecDelete), as indicated below.
+The following is a list of attributes customizable per VNG in Ocean for GKE. Some of the features can be accessed using the [API only](https://docs.spot.io/api/#operation/OceanGKELaunchSpecUpdate), as indicated below.
 
 - Automatic Headroom
 - Availability zone
