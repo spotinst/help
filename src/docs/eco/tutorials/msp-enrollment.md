@@ -40,7 +40,7 @@ Once you have validated the billing workflows and are comfortable with them, you
 
 1. Send a support ticket associating the subsets with the billing workflows. In the ticket, please include the following message and information:
 
-> For our Spot Organization ID <OrgID>, please associate the Rename for Eco Reports billing workflow(s), below, with the subset(s), going forward. We would like the processed workflow to be embedded in Cloud Analyzer and shown as charges in our Subsets List.
+> For our Spot Organization ID \<OrgID\>, please associate the Eco Reports billing workflow(s), below, with the subset(s), going forward. We would like the processed workflow to be embedded in Cloud Analyzer and shown as charges in our Subsets List.
 >
 > \<Subset Name\> : \<Billing Workflow Name\>
 >
