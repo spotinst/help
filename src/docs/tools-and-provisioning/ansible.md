@@ -2,11 +2,10 @@
 
 Ansible is an open-source software provisioning, configuration management, and application-deployment tool enabling infrastructure as code.
 
-Spot integration with Ansible enables you to use an Ansible modules to create, update, and delete resources running with the Spot platform on AWS.
+Spot integration with Ansible enables you to use an Ansible module to create, update, and delete resources running with the Spot platform on AWS.
 
 To install the [Spot collection](https://galaxy.ansible.com/spot/cloud_modules) from Ansible Galaxy that contains all Ansible modules, run the following command:
 `ansible-galaxy collection install spot.cloud_modules`
-
 
 
 ## What's Next?
