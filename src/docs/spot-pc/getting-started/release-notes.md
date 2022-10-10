@@ -1,5 +1,15 @@
 # Spot PC: Release Notes
 
+## 10/06/2022
+_When:_ 10/06/2022 at 10pm - 11pm Eastern
+
+_Impact:_ Access to desktops and application services for End Users will remain uninterrupted. Access to Spot PC console will remain available.
+
+* New Spot Group Status
+  * Spot PC has improved details when displaying the health status of a Spot Group. The new Spot Group Status is "Limited Availability" which indicates that some but not all of the session hosts in the group are available for end user login.
+* Onboarding Reinforcements
+  * Spot PC has increased capacity for onboarding micro-services to support new tenant deploys.
+
 ## 09/22/2022
 _When:_ 09/22/2022 at 10pm - 11pm Eastern
 
