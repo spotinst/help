@@ -42,6 +42,8 @@ In this step you connect your AWS account to Spot Security.
 
 ## Step 3: Set up CloudTrail
 
+CloudTrail conducts a risk analysis of your assets in your AWS accounts.
+
 ### Step 3.1: Do you have a CloudTrail account?
 
 You need to connect a CloudTrail account to your Spot Security account. If you have an account, complete the following steps:
