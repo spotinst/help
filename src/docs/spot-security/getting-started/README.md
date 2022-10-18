@@ -22,12 +22,12 @@ Spot Security aims to help your customers manage their cloud security posture by
 In this step you connect your AWS account to Spot Security.
 1. Click Log in to AWS Account.
 
-<img src="/spot-security/_media/getting-started-d1.png" width="250" height="250" />
+<img src="/spot-security/_media/getting-started-d1.png" width="350" height="350" />
 
 2. The AWS management console opens and you can log in with your AWS credentials.
 3. Logging into your AWS account will allow Spot Security to connect to your AWS account.
 
-<img src="/spot-security/_media/getting-started-e1.png" width="300" height="250" />
+<img src="/spot-security/_media/getting-started-e1.png" width="400" height="350" />
 
 4. When a green signal appears with your cloud account name next to it, click Next.
 
@@ -43,7 +43,7 @@ You need to connect a CloudTrail account to your Spot Security account. If you h
 
 1. If you have a CloudTrail account, choose Yes.
 
-<img src="/spot-security/_media/getting-started-g1.png" width="250" height="260" />/>
+<img src="/spot-security/_media/getting-started-g1.png" width="350" height="360" />
 
 2. Enter the bucket name and region; and click Validate.
 
