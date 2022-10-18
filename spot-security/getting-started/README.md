@@ -63,7 +63,7 @@ You can connect all of the dependent accounts in bulk if you have selected a cen
 
 If you don’t have a centralized bucket, choose No and click Next.
 
-<img src="/spot-security/_media/getting-started-i1.png" />
+<img src="/spot-security/_media/getting-started-i1.png" width="600" height="400" />
 
 ### You don't have a CloudTrail account
 
@@ -73,7 +73,7 @@ If you don't have a CloudTrail account, choose No and Next.
 
 Review the information and ensure all details are correct. Choose Finish Onboarding.
 
-<img src="/spot-security/_media/getting-started-k1.png" />
+<img src="/spot-security/_media/getting-started-k1.png" width="750" height="450" />
 
 ## What's Next?
 
