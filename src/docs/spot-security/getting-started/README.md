@@ -73,7 +73,7 @@ If you don't have a CloudTrail account, choose No and Next.
 
 Review the information and ensure all details are correct. Choose Finish Onboarding.
 
-<img src="/spot-security/_media/getting-started-k1.png" width="750" height="450" />
+<img src="/spot-security/_media/getting-started-k1.png" width="750" height="600" />
 
 ## What's Next?
 
