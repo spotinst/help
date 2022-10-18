@@ -94,3 +94,6 @@ The Dashboard displays savings potential data about your cloud usage and provide
 ## What’s Next?
 
 Learn how you can use Spot Insights & Recommendations in the [Dashboard](connect-your-cloud-provider/dashboard) and understand your Savings Potential analysis with immediate steps you can take.
+
+Can we expand all the workflows so they include end to end steps - so the client is able to complete self service. Currently an SA is required each time as all the steps in each workflow are not described.
+For example, connecting a management account requires a CUR report to be created and an s3 bucket. This is not shown here.
