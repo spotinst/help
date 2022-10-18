@@ -19,22 +19,22 @@ The command below will run the classic Monte-Carlo Pi computation contained in a
 
 ```
 curl -k -X POST \
-'https://api.spotinst.io/ocean/spark/cluster/<your cluster id>/app?accountId=<your accountId>' \ 
+'https://api.spotinst.io/ocean/spark/cluster/<your cluster id>/app?accountId=<your accountId>' \
 -H 'Content-Type: application/json' \
 -H 'Authorization: Bearer ...' \
--d '{ 
+-d '{
      "jobId": "spark-pi",
-     "configOverrides": 
-        { 
-          "type": "Scala", 
+     "configOverrides":
+        {
+          "type": "Scala",
           "sparkVersion": "3.2.0",
           "mainApplicationFile": "local:///opt/spark/examples/jars/examples.jar",
           "image": "gcr.io/datamechanics/spark:platform-3.2-latest",
           "mainClass": "org.apache.spark.examples.SparkPi",
-          "arguments": ["1000"], 
-          "executor": { 
-            "instances": 1 
-          } 
+          "arguments": ["1000"],
+          "executor": {
+            "instances": 1
+          }
         }
 }'
 ```
