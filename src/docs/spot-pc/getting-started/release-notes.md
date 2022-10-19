@@ -9,8 +9,8 @@ _Impact:_ Access to desktops and application services for End Users will remain 
   * A Performance tab that filters machines, sessions, and data volumes by Spot Group has been added to the dashboard. There are three sub-tabs that display trending graphs: Machines, User Sessions and Data Volumes. In Machines, compare machines within a tenant, view the top 5 machines in a Spot Group or pick the exact machines that you want to see in the Spot Group. In User Sessions, you can do the same for each user. 
 * Sites Updates
   * Spot PC has improved Sites in the following ways. 
-1. Address Range Validation: An error message will appear if an unavailable address is used. 
-2. Directory Type will display only choices that are valid for a specific tenant instance. If a tenant was created for Direct Join, a site can only use the Azure AD directory type. 
+    1. Address Range Validation: An error message will appear if an unavailable address is used. 
+    2. Directory Type will display only choices that are valid for a specific tenant instance. If a tenant was created for Direct Join, a site can only use the Azure AD directory type. 
 * New Config Action: Data Volumes
   * Data Volumes lists and details have moved to the Config Actions menu. 
 * Spot Group Details Update
