@@ -80,8 +80,8 @@ A high value indicates reduced performance for end users – this may result in 
 Indicates the average number of frames skipped due to a lack of network resources for the period indicated. The default time interval displayed is the last 15 minutes, with multiple data-points per minute. 
 
 Alerting thresholds:
-- Critical: 10+ frames for 5 consecutive minutes
 - Warning: 5+ frames for 5 consecutive minutes
+- Critical: 10+ frames for 5 consecutive minutes
 
 A high value indicates that the network (for example, the VNET in Azure) does not have enough throughput to handle the load placed on it, resulting in values being displayed here.
 
@@ -91,8 +91,8 @@ A high value indicates that the network (for example, the VNET in Azure) does no
 Description: Indicates the number of frames skipped due to lack of resources available on the user’s local device for the period indicated. The default time interval displayed is the last 15 minutes, with multiple data-points per minute. 
 
 Alerting thresholds:
-- Critical: 10+ frames for 5 consecutive minutes
 - Warning: 5+ frames for 5 consecutive minutes
+- Critical: 10+ frames for 5 consecutive minutes
 
 A high value indicates that the user’s virtual desktop may see a performance impact due to a high CPU and RAM consumption on the user’s local device. This may result in “it feels slow” complaints or “I can’t work” reports in extreme scenarios.
 
@@ -104,8 +104,8 @@ If the issue is consistent, then consider a more wholistic approach to performan
 Description: Indicates the number of frames skipped due to insufficient server resources for the period indicated. The default time interval displayed is the last 15 minutes, with multiple data-points per minute.
 
 Alerting thresholds:
-- Critical: 10+ frames for 5 consecutive minutes
 - Warning: 5+ frames for 5 consecutive minutes
+- Critical: 10+ frames for 5 consecutive minutes
 
 A high value indicates that resource consumption on the VM itself is resulting in reduced performance in user sessions. This should be easy to confirm, as CPU/RAM (or both) should indicate high consumption as well. This may result in “it feels slow” complaints or “I can’t work” reports in extreme scenarios.
 
@@ -115,8 +115,8 @@ A high value indicates that resource consumption on the VM itself is resulting i
 Description: Indicates the average % consumed of the available disk space for the period indicated. Default time window of the last 3 hours, this is displayed every minute 
 
 Alerting thresholds:
-- Critical: 90+%  for 2 consecutive hours
 - Warning: 75+% (but less than 90%) for 2 consecutive hours
+- Critical: 90+%  for 2 consecutive hours
 
 High value indicates that data stored on the disk is near the total amount of disk space available. Best practices suggest staying under 90% of the available disk to avoid performance impacts, with more and more impact to performance as you get closer to 100% consumption of the disk space available. Some backup programs can report errors if attempting to back up data where more than 85% of the disk is consumed.
 
@@ -127,18 +127,21 @@ Increase the size of the Managed Disk – while this represents a larger cost, i
 #### Disk Queue Length: 
 Description: Indicates the average number of IO actions waiting for the disk for the period indicated. The default time interval displayed is the last 3 hours, with data provided for every minute. 
 
-High value indicates a large number of IO requests are being made against the storage system.  
-
-**Resolving High Disk Queue Length consumption:** When disk queue length is a frequent bottleneck, consider increasing the performance tier of your managed disk. If you are already using Premium SSD, you can review the System event log on the system, to see if there are any error indicating problems with the disk or the storage subsystem and potentially open a ticket with Microsoft to resolve anything you find there. 
-
 Alerting thresholds:
 - Critical: Greater than 5 for 5 consecutive minutes
 - Warning: Greater than 2 (but less than 5) for 5 consecutive minutes
+
+High value indicates a large number of IO requests are being made against the storage system.  
+
+**Resolving High Disk Queue Length consumption:** When disk queue length is a frequent bottleneck, consider increasing the performance tier of your managed disk. If you are already using Premium SSD, you can review the System event log on the system, to see if there are any error indicating problems with the disk or the storage subsystem and potentially open a ticket with Microsoft to resolve anything you find there. 
 
 #### OS Disk Reads/second
 Description: Indicates the average number of disk read operations for the period indicated. The default time interval displayed is the last 3 hours, with data provided for every minute. 
 
 Alerting thresholds:
+- Critical: Not Set
+- Warning: Not Set
+
 - As this metric is effectively IOPS, this metric not alerted on – IOPS are a highly relative data point that is largely used as a reference for other, related metrics
 
 High value indicates that there is a lot of read activity on the disk.
@@ -149,6 +152,9 @@ High value indicates that there is a lot of read activity on the disk.
 Description: Indicates the average number of disk write operations for the period indicated. The default time interval displayed is the last 3 hours, with data provided for every minute. 
 
 Alerting thresholds:
+- Critical: Not Set
+- Warning: Not Set
+
 - As this metric is effectively IOPS, this metric not alerted on – IOPS are a highly relative data point that is largely used as a reference for other, related metrics
 
 High value indicates that there is a lot of write activity on the disk.
@@ -159,6 +165,9 @@ High value indicates that there is a lot of write activity on the disk.
 Description: Indicates the average number of data read by the disk per second for the period indicated. The default time interval displayed is the last 3 hours, with data provided for every minute. 
 
 Alerting thresholds:
+- Critical: Not Set
+- Warning: Not Set
+
 - As this metric is effectively IOPS, this metric not alerted on – IOPS are a highly relative data point that is largely used as a reference for other, related metrics
 
 High value indicates that there is a lot of read activity on the disk.
@@ -169,6 +178,9 @@ High value indicates that there is a lot of read activity on the disk.
 Description: Indicates the average number of data written to disk per second for the period indicated. The default time interval displayed is the last 3 hours, with data provided for every minute. 
 
 Alerting thresholds:
+- Critical: Not Set
+- Warning: Not Set
+
 - As this metric is effectively IOPS, this metric not alerted on – IOPS are a highly relative data point that is largely used as a reference for other, related metrics
 
 High value indicates that there is a lot of write activity on the disk.

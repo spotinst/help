@@ -18,7 +18,7 @@ Some workloads are not as resilient to spot instance replacements as others, so 
 
 ### spotinst.io/node-lifecycle
 
-Ocean labels all nodes it manages with a label key `spotinst.io/node-lifecycle`. The label value is either `od` (on-demand) or `spot`, according to the lifecycle of the instance, and can assist when monitoring the cluster’s nodes in different scenarios.
+Ocean labels all nodes it manages with a label key `spotinst.io/node-lifecycle`. The label value is `od` (on-demand), according to the lifecycle of the instance, and can assist when monitoring the cluster’s nodes in different scenarios.
 
 Some workloads are mission-critical and are not resilient to spot instance interruptions. These workloads have to run on on-demand instances at all times. To ensure that, apply node affinity to the `spotinst.io/node-lifecycle` label with value `od`.
 
@@ -37,6 +37,9 @@ Valid label values are:
 - `nvidia-tesla-a100`
 - `nvidia-tesla-m60`
 - `amd-radeon-v520`
+- `nvidia-tesla-t4g`
+- `nvidia-tesla-a10`
+
 
 > **Note**: Avoid adding Spot labels under the virtual node group (launch specification) node labels section. These labels should be added in your pod configuration only.
 
@@ -113,3 +116,7 @@ spec:
     - name: with-node-affinity
       image: k8s.gcr.io/pause:2.0
 ```
+
+## What’s next?
+
+- Learn how to [Manage Virtual Node Groups](ocean/tutorials/manage-virtual-node-groups) and customize configurations per VNG.

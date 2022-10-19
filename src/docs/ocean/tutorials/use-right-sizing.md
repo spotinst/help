@@ -52,3 +52,7 @@ In addition to the above content, the Right Sizing tab may display one of severa
 - The Metrics Server is installed and data is being collected by the Right Sizing service. The progress bar reflects the amount of data left to collect before suggestions can be displayed.
 - Data collection works as intended. There are no suggestions to make, or all previous suggestions have been applied or dismissed.
 - The Metrics Server is installed, but the system is still collecting data.
+
+## What's Next?
+
+Learn how to [View Scaling Constraints](ocean/tutorials/view-scaling-constraints).

@@ -101,8 +101,6 @@ export const aliases = (() => {
 
     "/authentication": "/administration/api/create-api-token",
 
-    "/cloud-analyzer/": "/cloud-analyzer/",
-
     "/cloud-analyzer/connect-your-aws-account-2":
       "/cloud-analyzer/getting-started/connect-your-aws-master-payer-account-existing-customer",
 
@@ -1650,7 +1648,46 @@ export const aliases = (() => {
     "/elastigroup/tutorials/amazon-eks/configure-kubectl-for-eks-install-controller":
       "/ocean/getting-started/eks/",
 
+    "/connect-your-cloud-provider/aws-account":
+      "/connect-your-cloud-provider/first-account/",
+
+    "/connect-your-cloud-provider/azure-account":
+      "/connect-your-cloud-provider/first-account/",
+
+    "/connect-your-cloud-provider/gcp-project":
+      "/connect-your-cloud-provider/first-account/",
+
+    "/elastigroup/features/stateful-instance/": "/managed-instance/",
+
+    "/elastigroup/features/stateful-instance/edit-a-stateful-instance":
+      "/managed-instance/getting-started/create-a-new-managed-instance",
+
+    "/elastigroup/features/stateful-instance/import-a-stateful-instance":
+      "/managed-instance/getting-started/join-an-existing-managed-instance",
+
+    "/elastigroup/features/stateful-instance/persist-data-volumes":
+      "/managed-instance/features/data-volume-persistence",
+
+    "/elastigroup/features/stateful-instance/persist-network":
+      "/managed-instance/features/network-persistence",
+
+    "/elastigroup/features/stateful-instance/persist-root-volume":
+      "/managed-instance/features/root-volume-persistence",
+
+    "/elastigroup/features/stateful-instance/schedule-stateful-capacity":
+      "/managed-instance/features/",
+
+    "/elastigroup/features/stateful-instance/stateful-instance-actions":
+      "/managed-instance/features/managed-instance-actions",
+
     "/cloud-analyzer/tutorials/manage-subsets": "/eco/tutorials/manage-subsets",
+
+    "/cloud-analyzer/tutorials/use-optimization-dashboard/":
+      "/connect-your-cloud-provider/optimize",
+
+    "/cloud-analyzer/tutorials/use-optimization-dashboard/containers/":
+      "/connect-your-cloud-provider/optimize",
+
   };
 
   for (let [key, value] of Object.entries(map)) {

@@ -10,7 +10,7 @@ To view a comprehensive breakdown of your cloud cluster costs, go to the Cost An
 
 The bar chart shows the cost of your workloads over time. The default display is that each bar is broken down into the different namespaces and represents the cost per day over the last week. You can modify the time period and groupings shown to suit your needs. See Grouping Options below for more information.
 
-<img src="/ocean/_media/tutorials-analyze-your-costs-01.png" />
+<img src="/ocean/_media/cost-analysis-5.png" />
 
 ## Breakdown Table
 
@@ -20,9 +20,10 @@ The breakdown table presents an itemization of costs per namespace and costs wit
 - % of total costs: Cost of the namespace as a portion of the total of the entire cluster
 - Compute Cost: The portion of the cost for computing
 - Storage Cost: The portion of the cost for Kubernetes persistent volumes and instance volumes
+- Network Cost: Part of costs pertaining to amount of data transfer between workloads and services such as Inter-AZ, Internet, Inter-Region and Intra-AZ costs
 - Total Cost: Total cost of that namespace
 
-<img src="/ocean/_media/tutorials-analyze-your-costs-02.png" />
+<img src="/ocean/_media/cost-analysis-4.png" />
 
 Double-click on the arrow to show a breakdown of the workloads within the namespace. For each workload, you can see the following details:
 
@@ -67,7 +68,7 @@ Once you have chosen a grouping, choose the Key from the list of keys in your cl
 
 The example below shows the grouping by Label (Resource) with Key equal to `Family`. The table details all of the values for the Label Key `Family` that exist in the cluster.
 
-<img src="/ocean/_media/tutorials-analyze-your-costs-04.png" />
+<img src="/ocean/_media/cost-analysis-2.png" />
 
 ## Add Filter
 

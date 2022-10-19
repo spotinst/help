@@ -39,12 +39,12 @@ A statement contains the following elements:
 
 ```json
 {
-  "Statements": [
+  "statements": [
     {
-      "Effect": "ALLOW",
-      "Actions": ["elastigroup:describeAllGroups"],
-      "Resources": ["*"],
-      "Condition": {
+      "effect": "ALLOW",
+      "actions": ["elastigroup:describeAllGroups"],
+      "resources": ["*"],
+      "condition": {
         "name": "prod-*"
       }
     }
@@ -65,3 +65,4 @@ The following rules apply to policies:
 ## What's Next?
 
 See the full list of [access policy actions](administration/access-policies/access-policy-actions).
+

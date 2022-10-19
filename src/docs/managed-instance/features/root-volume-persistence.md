@@ -1,20 +1,20 @@
 # Root Volume Persistence
 
-Root Volume Persistence maintains the data stored in your root volume, such as OS and configuration data, during spot instance replacements. This way the application can start exactly where it left off. By default, the root device volume is deleted when the instance terminates. With Managed Instance, you can change the default behavior by enabling the Root Volume Persistence feature.
+Root Volume Persistence maintains the data stored in your root volume, such as OS and configuration data, during spot node replacements. This way the application can start exactly where it left off. By default, the root device volume is deleted when the node terminates. With Statefule Node, you can change the default behavior by enabling the Root Volume Persistence feature.
 
 ## How Root Volume Persistence Works
 
-Periodic snapshots of the root volume are taken continuously while the instance is running. When an instance is terminated, an image is created from the last snapshot, and a new instance is launched from this image.
+Periodic snapshots of the root volume are taken continuously while the node is running. When a node is terminated, an image is created from the last snapshot, and a new node is launched from this image.
 
-The [flow diagram](elastigroup/features/stateful-instance/stateful-elastigroup-flow) describes on a high level how Spot manages the persistence of managed instances.
+The [flow diagram](elastigroup/features/z-stateful-instance/stateful-elastigroup-flow) describes on a high level how Spot manages the persistence of stateful nodes.
 
 ## Backend Actions
 
-Managed Instance performs various backend actions for different states of the instance to ensure root volume persistence.
+Stateful Node performs various backend actions for different states of the node to ensure root volume persistence.
 
-- Paused: Images (AMIs) are created each time the managed instance is paused using the latest root volume snapshot which was taken after the instance termination. Only the latest snapshot is kept for each volume.
-- Running: While the instance is running, a snapshot is taken for the root volume every 5 minutes.
-- Deallocated: When you delete a managed instance, you can choose which parts to delete.
+- Paused: Images (AMIs) are created each time the stateful node is paused using the latest root volume snapshot which was taken after the node termination. Only the latest snapshot is kept for each volume.
+- Running: While the node is running, a snapshot is taken for the root volume every 5 minutes.
+- Deallocated: When you delete a stateful node, you can choose which parts to delete.
   - If you select all parts, then they will be deleted immediately.
   - If you select only some of the parts for deletion, then those parts will be kept for four days and then deleted.
 
@@ -22,24 +22,33 @@ Managed Instance performs various backend actions for different states of the in
 
 ## Enable Root Volume Persistence
 
-1. Enter the Managed Instance configuration wizard.
-2. Under the Persistent Resources tab select Persist Root Volume.
+1. If you are using Spot and are in another location in the site, such as Elastigroup, Ocean or Eco, click the three bars in the upper left corner.
 
-<img src="/managed-instance/_media/root-volume-persistence-01.png" />
+<img src="/connect-your-cloud-provider/_media/connect-additional-account-002.png" />
 
-## Change the Image of Existing Managed Instances
+2. In the left menu, click Elastigroup.
+3. In the same left menu, click Stateful Nodes.
+4. Choose a node from the list.
+5. Click Actions on the top right.
+6. Choose Edit Configuration.
+7. Click Persistent Resources tab.
+8. Mark Persist Root Volume.
 
-In order to change the AMI used to launch a particular managed instance with root volume persistence, do the following:
+<img src="/managed-instance/_media/root-volume-persistence.png" />
 
-1. Remove the root persistence and update the managed instance with the new AMI.
-2. Recycle the managed instance.
-3. Re-enable the root volume persistence in the managed instance configuration.
+## Change the Image of Existing Stateful Nodes
+
+In order to change the AMI used to launch a particular stateful node with root volume persistence, do the following:
+
+1. Remove the root persistence and update the stateful node with the new AMI.
+2. Recycle the stateful node.
+3. Re-enable the root volume persistence in the stateful node configuration.
 
 ## Persist Root on Windows Platform
 
-When using the persist root volume option with Windows images, images created from snapshots as part of the recycle processes, will have a Platform parameter value of `Other Linux` (default behavior of AWS). This behavior can cause issues while trying to connect to the instance.
+When using the persist root volume option with Windows images, images created from snapshots as part of the recycle processes, will have a Platform parameter value of `Other Linux` (default behavior of AWS). This behavior can cause issues while trying to connect to the node.
 
-The following user data script can be added to the Managed Instance's configuration to create a new user and password as the machine boots up, which will later be used to connect to the instance:
+The following user data script can be added to the Stateful Node's configuration to create a new user and password as the machine boots up, which will later be used to connect to the node:
 
 ```powershell
 <powershell>
@@ -60,7 +69,7 @@ WMIC USERACCOUNT WHERE "Name='$Username'" SET PasswordExpires=FALSE
 <persist>true</persist>
 ```
 
-> **Tip**: For the updated user data to take effect the instance must be [Recycled](managed-instance/features/managed-instance-actions).
+> **Tip**: For the updated user data to take effect the  must be [Recycled](managed-node/features/managed-instance-actions).
 
 ## What’s Next
 

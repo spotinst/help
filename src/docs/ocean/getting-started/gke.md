@@ -49,7 +49,7 @@ In the left menu of the Spot Console, click Ocean/Cloud Clusters, and click Crea
 ## Step 3: Connectivity
 
 1. Create a Spot token or use an existing one.
-2. Install the Ocean Controller. You can do this using [Helm](tutorials/spot-kubernetes-controller/install-with-helm) or by running [kubectl](tutorials/spot-kubernetes-controller/install-with-kubectl) commands.
+2. Install the Ocean Controller. You can do this using [Helm](ocean/tutorials/spot-kubernetes-controller/install-with-helm) or by running [kubectl](ocean/tutorials/spot-kubernetes-controller/install-with-kubectl) commands.
 3. Click Test Connectivity to ensure the controller functionality.
 
 <img src="/ocean/_media/gke-connectivity.png" />
@@ -58,7 +58,7 @@ In the left menu of the Spot Console, click Ocean/Cloud Clusters, and click Crea
 
 ### For a Private GKE Cluster
 
-1. For a private GKE cluster, install the Ocean Controller with the following command:
+1. For a private GKE cluster, install the Spotinst Kubernetes Controller with the following command:
 
 ```sh
 kubectl apply -f https://spotinst-public.s3.amazonaws.com/integrations/kubernetes/cluster-controller/spotinst-kubernetes-cluster-controller-gcr.yaml
@@ -75,7 +75,7 @@ For any change in the original node pool please contact us.
 
 ## Step 4: Review
 
-Review all the Ocean settings you have configured. Click Create to finish or use the generated JSON template to create the Ocean cluster using other tooling.
+Review all of the Ocean settings you have configured. Click Create to finish or use the generated JSON template to create the Ocean cluster using other tooling.
 
 You're all set! Ocean will now ensure the most cost-effective capacity and sizing possible for your cluster.
 
@@ -88,3 +88,7 @@ gcloud container clusters resize <cluster_name> --num-nodes=0 --region=<region/z
 ```
 
 To avoid unnecessary down time, the scale down of existing nodes should be gradual. For example, run the above command several times, reducing the value of `num-nodes` gradually. Use `num-nodes=0` only on the last time you run the command.
+
+## What's Next?
+
+- Learn how to [connect an existing ECS Cluster](ocean/getting-started/gke)

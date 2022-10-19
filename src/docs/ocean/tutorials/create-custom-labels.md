@@ -43,9 +43,9 @@ set -o xtrace
 For all of the above, new nodes will be launched with new labels.
 ```
 
-### Add Labels to Kops Clusters
+### Add Labels to kOps Clusters
 
-These are clusters that were created by Kops natively.
+These are clusters that were created by kOps natively.
 
 1. Recognize the IG name you originally created (`nodes` in the following example):
 2. Run `kops edit ig nodes` and add the relevant label.
@@ -53,3 +53,7 @@ These are clusters that were created by Kops natively.
 <img src="/ocean/_media/tutorials-create-custom-label-02.png" />
 
 3. Run `kops update cluster`.
+
+## What's Next?
+
+Learn how to [CManage Virtual Node Groups](ocean/tutorials/manage-virtual-node-groups).

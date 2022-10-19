@@ -20,3 +20,7 @@ module "ocean-controller" {
   cluster_identifier = "example"
 }
 ```
+
+## What’s Next?
+
+Learn more about [Proxy settings](ocean/tutorials/spot-kubernetes-controller/proxy-settings).

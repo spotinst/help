@@ -28,7 +28,7 @@ Add to user data:
 
 <img src="/elastigroup/_media/custom-label-selectors_2.png" />
 
-**Add labels to Elastigroup based on imported ASG from an existing `kops`. Imported from an existing `kops` implementation:**
+**Add labels to Elastigroup based on imported ASG from an existing `kOps`. Imported from an existing `kOps` implementation:**
 
 1. Identify the InstanceGroup name originally imported into Spot (`nodes` in the following example)
 2. Run `kops edit ig nodes` and add the relevant label:
@@ -40,7 +40,7 @@ Add to user data:
 
 <img src="/elastigroup/_media/custom-label-selectors_4.png" />
 
-**Add labels to Spot-`kops` (Elastigroup that were created by `kops` natively):**
+**Add labels to Spot-`kOps` (Elastigroup that were created by `kOps` natively):**
 
 1. Recognize the IG name you originally created (`nodes` in the following example)
 2. Run `kops edit ig nodes` and add the relevant label

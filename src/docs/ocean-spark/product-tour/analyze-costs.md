@@ -1,6 +1,6 @@
 # Analyze Costs
 
-Ocean for Apache Spark (Ocean Spark) provides full visibility into the cost of your Ocean Spark cluster, including a cost analysis over time per Spark application, a detailed cost drill-down on each application, and your total cost for the cluster.
+Ocean for Apache Spark (Ocean Spark) provides full visibility into the cloud cost of your Ocean Spark cluster, including a cost analysis over time per Spark application, a detailed cost drill-down on each application, and your total cost for the cluster.
 
 To get to the Cluster Cost Analysis tab, do the following:
 
@@ -13,7 +13,7 @@ The Cost Analysis tab opens and shows the cluster name at the top.
 
 ## Cost over Time
 
-The first part of the cost analysis is a bar chart showing your Spark application costs on the cluster over time. You can adjust your view of the data by setting the following parameters:
+The first part of the cost analysis is a bar chart showing the cloud costs (compute and storage) incurred by the cluster over time. You can adjust your view of the data by setting the following parameters:
 
 - Filter by Time: Set the time range for displaying data in the chart.
 - Group by: Group the data according to job or user.
@@ -46,6 +46,30 @@ The total cost for all the jobs or users in the cluster appears at the bottom of
 In the Top Spend Summary, you can see a breakdown of costs per application for each job or user. Just click on the job or user name.
 
 <img src="/ocean-spark/_media/tutorial-wave-cost-analysis-04a.png" />
+
+## Allocate Cloud Costs Using Custom Labels
+
+You can define custom cost labels for each application you run on Ocean Spark.
+
+Here is an example configuration which you can insert in your configuration templates, in your job configuration, or directly in your API calls as configOverrides.
+
+```json
+{
+  "labels": {
+    "team": "data-engineering",
+    "project": "etl",
+    "environment": "production",
+  }
+}
+```
+
+You will then be able to view your cloud costs, grouped by these custom cost labels, using the Cost Analysis page of Ocean (and not Ocean Spark). To find this page:
+
+1. From your Ocean Spark cluster page, click "View cluster in Ocean".
+2. Then click "Cost Analysis".
+3. In the "Group By" dropdown, select "Label (Resource)", and then pick your label key ("team", "project", or "environment").
+
+Visit the Ocean documentation to learn more about [how Ocean estimates your cloud costs](/ocean/features/cost-analysis).
 
 ## What’s Next?
 

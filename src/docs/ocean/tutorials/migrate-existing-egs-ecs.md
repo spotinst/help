@@ -69,3 +69,7 @@ The last step is to downscale the container instances in any secondary Elastigro
 Sit back and relax. Ocean's got you covered!
 
 If you any issues, contact our support engineers via chat or email.
+
+## What's Next?
+
+Learn how to [Connect a Fargate Service](elastigroup/tutorials/amazon-ecs/import-fargate-services-to-ecs-elastigroup.).

@@ -1,11 +1,37 @@
 # Controller Version History
 
+## [1.0.86] - 2022-10-11
+
+Added
+
+- Update 3rd party libraries versions
+
+## [1.0.85] - 2022-08-14
+
+Added
+
+- Added support for match expressions in topology spread constraints
+
+## [1.0.84] - 2022-07-31
+
+Added
+
+- Update 3rd party libraries versions
+
+## [1.0.83] - 2022-07-03
+
+Added
+
+- Upgraded Kubernetes SDK
+- Added support for IPv6 clusters
+
 ## [1.0.82] - 2022-05-03
 
 Added
 
-- Upgraded dependencie
+- Upgraded UBI dependencies
 - Added support for user/pass proxy authentication
+- Added support for reporting init container data
 
 ## [1.0.81] - 2022-01-04
 
@@ -335,7 +361,7 @@ Fix conversion bugs in reported pods
 ## [1.0.26] – 2019-01-04
 
 Fixed
-Fix the auto update process in controllers that were installed via the kops
+Fix the auto update process in controllers that were installed via the kOps
 
 ## [1.0.25] – 2019-01-03
 

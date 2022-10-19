@@ -14,6 +14,7 @@
     - [View Application Details](ocean-spark/product-tour/view-application-details)
     - [Monitor Jobs](ocean-spark/product-tour/monitor-jobs)
     - [View Job Details](ocean-spark/product-tour/view-job-details)
+    - [Use Virtual Node Groups](ocean-spark/product-tour/use-vngs)
   - [Configure Spark Applications](ocean-spark/configure-spark-apps/)
     - [Access Your Data](ocean-spark/configure-spark-apps/access-your-data)
     - [Package Spark Code](ocean-spark/configure-spark-apps/package-spark-code)
@@ -26,3 +27,4 @@
     - [Connect Jupyter Notebooks](ocean-spark/tools-integrations/connect-jupyter-notebooks)
     - [Run Apps from Airflow](ocean-spark/tools-integrations/run-apps-from-airflow)
     - [Hive Metastore](ocean-spark/tools-integrations/hive-metastore)
+    - [AWS Glue Data Catalog](ocean-spark/tools-integrations/aws-glue-catalog)

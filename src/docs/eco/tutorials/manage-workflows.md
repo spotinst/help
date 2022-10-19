@@ -1,9 +1,10 @@
 # Manage Workflows
 
-Cloud administrators and Managed Service Providers (MSPs) face the challenge of presenting cloud spend data clearly to their users and customers. Complex billing conditions and logic -- such as amortization, discount sharing or unsharing, and customer uplifts and discounts -- can make reporting a major challenge. Using Eco Workflows, your cloud spending will be clear and accounted for.
+Cloud administrators face the challenge of presenting cloud spend data clearly to their users and customers. Complex billing conditions and logic -- such as amortization, discount sharing or unsharing, and customer uplifts and discounts -- can make reporting a major challenge. Using Eco Workflows, your cloud spending will be clear and accounted for.
 
 The Workflows feature simplifies and clarifies the presentation of cloud charges. It enables you to do the following:
 
+- Omit any billing rules and just process the existing data for your reports
 - Create a sequence of billing rules that can be applied to one or more subsets of accounts
 - Apply billing workflows on-demand in the form of reports
 
@@ -57,12 +58,16 @@ To create a new workflow, do the following:
 <img src="/eco/_media/tutorials-manage-workflows-02.png" width="320" height="368" />
 
 2. Enter a name for the workflow.
-3. Activate the billing rules you need and mark the options relevant to each rule. Enter any additional information required by the rule. (See below for detailed descriptions.)
+3. Activate the billing rules you need and mark the options relevant to each rule. Enter any additional information required by the rule. (See below for detailed descriptions.) You may omit any billing rules by selecting the "Create workflow with no billing rules" option.
 4. Click Create. The new workflow will appear in the Workflows list.
 
 ## Billing Rule Descriptions
 
 The billing rules available in the user interface are sufficient to capture most use cases. However, the Spot system is flexible enough to create numerous custom workflows. If you require a billing rule or a workflow sequence that cannot be created through the UI, contact the Support team and Spot will work with you to create a custom workflow. The rules available in the UI are described below.
+
+### Create workflow with no billing rules
+You may create a workflow without billing rules so that you may run reports on raw data. The advantage to this choice is it gets you to cost and savings data much quicker. See the article titled "View Workflow Details."
+
 
 ### Replace RI Discounts with Public OD Price:
 
@@ -82,7 +87,7 @@ You may charge the full on-demand price in place of Savings Plan discounts. See 
 
 ### Remove credits and/or refunds:
 
-There are a variety of financial benefits from working with AWS which a business may opt to share with their end customers or retain as margin. These options are familiar to AWS MSPs:
+There are a variety of financial benefits from working with AWS which a business may opt to share with their end customers or retain as margin. 
 
 - EDP
 - Data Egress Waiver
@@ -96,7 +101,9 @@ This removes any tax-related usage types from the data.
 
 ### Cross Account RI Cost Sharing
 
-This enables you to pass a reservation's cost to accounts proportionate to the discounts they consume. We include EDP discounts in the cost calculations. You have the option to pass the cost in the following ways:
+This enables you to pass a reservation's cost to accounts proportionate to the discounts they consume. The EDP discounts are included in the cost calculations. In addition to passing the cost, this rule handles the recuperation of the cost to the account which purchased the commitment.
+
+You have the option to address costs in the following ways:
 
 - Effective Cost: Pass both the ongoing, monthly fees for RIs and the amortized, up-front costs.
 - Amortized Up-front: Pass only the amortized, up-front costs of reservations.
@@ -104,7 +111,7 @@ This enables you to pass a reservation's cost to accounts proportionate to the d
 
 ### Cross Account Savings Plan Cost Sharing
 
-This cost sharing option has the same type of cost distribution as shown above for reservations, but for savings plans. We include EDP discounts in the cost calculations.
+This cost sharing option has the same type of distribution and recuperation of cost as shown above for reservations, but for savings plans. We include EDP discounts in the cost calculations.
 
 ### Remove Volume Discounts
 
@@ -122,7 +129,7 @@ In general, these margin opportunities represent savings given by AWS for volume
 
   When these volume discounts occur, you may elect to retain them for margin.
 
-### Uplift of Discount
+### Uplift or Discount
 
 After all the other rules have been applied, the charges are increased or decreased by the specified percent.
 
@@ -131,7 +138,7 @@ After all the other rules have been applied, the charges are increased or decrea
 
 ### Eco Cost Sharing
 
-You may chose to share the cost of Eco RI or savings plan-related savings with consumers of the savings.
+You may choose to share the cost of Eco RI or savings plan-related savings with consumers of the savings.
 
 The percentage option allows you to add a charge proportionate to the overall savings provided by Eco. You may enter the exact same percentage as your contract with Spot, or you may enter a different percentage depending on your business model. It is possible for an account to appear in the report, but if no Eco-generated savings is attributed to it, then no Eco fee will be attributed to it.
 

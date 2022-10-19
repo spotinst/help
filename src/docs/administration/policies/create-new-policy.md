@@ -75,6 +75,6 @@ You also have the option to edit the JSON format. Do the following:
 
 <img src="/administration/_media/create-policy-06.png" />
 
-## What’s New?
+## What’s Next?
 
 Learn how to [edit a permission policy](administration/policies/edit-policy-details) once you have created it.

@@ -8,7 +8,7 @@ In Ocean you can roll your cluster with a single click. The roll feature takes i
 
 ## How It Works
 
-Whether you are rolling your entire Ocean cluster, a specific virtual node group (VNG), or only specific nodes, Ocean can divide the roll into batches according to batch sizes that you choose. So for example, if you choose to roll according to the default batch size of 20%, Ocean divides the roll into 5 batches. The process takes place as follows:
+Whether you are rolling your entire Ocean cluster, a specific virtual node group (VNG), or only specific nodes, Ocean can divide the roll into batches according to batch sizes that you choose. For example, if you choose to roll according to the default batch size of 20%, Ocean divides the roll into 5 batches. The process takes place as follows:
 
 1. Ocean calculates the number of batches required in the roll based on the batch size you enter and divides the workloads equally among the batches.
 2. Ocean starts with the first batch, replacing each node in such a way that ensures the successful accomodation of the workloads on the new nodes. Ocean's autoscaler takes into consideration all relevant constraints in place before the roll.
@@ -46,7 +46,7 @@ Ocean assigns a status to each stage of the roll process. A roll can have one of
 - STOPPED: The roll was stopped by the user. When the user stops a roll, the nodes remain in the state they were in at the time of the stop. (For example, there is no rollback to an initial state.)
 - COMPLETED: The roll transitions to Completed status when all nodes have been processed, and at least 50% of them have been successfully replaced.
 
-> **Tip**: In the UI, a specific batch may appear with `Pending` state. This means that even though the roll process has started, that batch has not yet started to replace its nodes.
+> **Tip**: In the UI, a specific batch may appear with a `Pending` state. This means that even though the roll process has started, that batch has not yet started to replace its nodes.
 
 ### Log Messages
 
@@ -92,7 +92,7 @@ For example, you can use:
 
 For more information about the specific APIs, see Initiate Cluster Roll: [AKS](https://docs.spot.io/api/#operation/oceanAzureRollInit), [Kubernetes on AWS](https://docs.spot.io/api/#operation/oceanAwsRollInit), [ECS](https://docs.spot.io/api/#operation/oceanEcsRollInit), [GKE](https://docs.spot.io/api/#operation/oceanGkeRollInit)
 
-## Start A Roll
+## Start A Cluster Roll
 
 1. In your Ocean cluster, go to Actions and click Cluster Roll.
 
@@ -103,7 +103,7 @@ For more information about the specific APIs, see Initiate Cluster Roll: [AKS](h
    - Comment. A brief note indicating the reason for the roll.
    - Respect Pod Disruption Budget. Leave the default setting marked, or unmark this if you do not want to respect the PDB.
 
-<img src="/ocean/_media/features-roll-02a.png" width="313" height="211" />
+<img src="/ocean/_media/features-roll-a.png" width="592"/>
 
 3. Click Roll.
 
@@ -123,7 +123,7 @@ For more information about the specific APIs, see Initiate Cluster Roll: [AKS](h
 
 4. Enter the Batch Size and Comments, indicate whether you want to respect the pod disruption budget, and click Roll VNG(s).
 
-<img src="/ocean/_media/features-roll-02a-4.png" width="342" height="346" />
+<img src="/ocean/_media/features-roll-b.png" width="593"/>
 
 ## Monitor The Roll
 

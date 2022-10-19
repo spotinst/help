@@ -1,14 +1,14 @@
 # Installation
 
-## Install kops
+## Install kOps
 
-Download [kops](https://github.com/kubernetes/kops/releases). Ensure the binary file is executable:
+Download [kOps](https://github.com/kubernetes/kops/releases). Ensure the binary file is executable:
 
 ```sh
 $ chmod 755 kops && mv kops /usr/local/bin/kops
 ```
 
-Kops is also available via Homebrew, this will install kubectl as well as a dependency.
+kOps is also available via Homebrew, this will install kubectl as well as a dependency.
 
 ```sh
 $ brew update && brew install kops
@@ -22,7 +22,7 @@ Download [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/). Ens
 $ chmod 755 kubectl && mv kubectl /usr/local/bin/kubectl
 ```
 
-kubectl is also available via Homebrew. It should automatically be installed if you install kops using Homebrew.
+kubectl is also available via Homebrew. It should automatically be installed if you install kOps using Homebrew.
 
 ```sh
 $ brew update && brew install kubernetes-cli

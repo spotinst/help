@@ -18,7 +18,25 @@ To know more about the API endpoints and parameters, check out the API reference
 The command below will run the classic Monte-Carlo Pi computation contained in all Spark distributions:
 
 ```
-curl -k -X POST \ 'https://api.spotinst.io/ocean/spark/cluster/<your cluster id>/app?accountId=<your accountId>' \ -H 'Content-Type: application/json' \ -H 'Authorization: Bearer ...' \ -d '{ "jobId": "spark-pi", "configOverrides": { "type": "Scala", "sparkVersion": "3.2.0", "mainApplicationFile": "local:///opt/spark/examples/jars/examples.jar", "image": "gcr.io/datamechanics/spark:platform-3.2-latest", "mainClass": "org.apache.spark.examples.SparkPi", "arguments": ["1000"], "executor": { "instances": 1 } }'
+curl -k -X POST \
+'https://api.spotinst.io/ocean/spark/cluster/<your cluster id>/app?accountId=<your accountId>' \
+-H 'Content-Type: application/json' \
+-H 'Authorization: Bearer ...' \
+-d '{
+     "jobId": "spark-pi",
+     "configOverrides":
+        {
+          "type": "Scala",
+          "sparkVersion": "3.2.0",
+          "mainApplicationFile": "local:///opt/spark/examples/jars/examples.jar",
+          "image": "gcr.io/datamechanics/spark:platform-3.2-latest",
+          "mainClass": "org.apache.spark.examples.SparkPi",
+          "arguments": ["1000"],
+          "executor": {
+            "instances": 1
+          }
+        }
+}'
 ```
 
 Here's a breakdown of the payload:
@@ -95,9 +113,6 @@ The API then returns something like:
                      "KUBERNETES_REQUEST_TIMEOUT":"30000",
                      "KUBERNETES_CONNECTION_TIMEOUT":"30000"
                   },
-                  "affinity":"“"{
-                     "..."
-                  }"”",
                   "instanceType":"m5.xlarge",
                   "spot":false
                },
@@ -106,9 +121,6 @@ The API then returns something like:
                   "instances":1,
                   "coreRequest":"3460m",
                   "memory":"8192m",
-                  "affinity":"“"{
-                     "..."
-                  }"”",
                   "instanceType":"m5.xlarge",
                   "spot":true
                },

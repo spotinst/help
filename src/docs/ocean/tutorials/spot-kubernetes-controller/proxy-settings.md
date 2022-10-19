@@ -85,3 +85,6 @@ Rrq0upb0pKZYDUTxUAP//VFkxaQtC1XiD2ZdycVRytcqJaNcV4/9y3XmUzABLk2n
 y8CKbiq0lxTS2xS/1P16qlLB
 -----END CERTIFICATE-----
 ```
+## What’s Next?
+
+Learn more about [Controller Version History](ocean/tutorials/spot-kubernetes-controller/controller-version-history).

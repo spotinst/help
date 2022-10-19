@@ -69,8 +69,8 @@ value = os.environ['ENV_VAR_KEY'] # ENV_VAR_VALUE
   <summary markdown="span">Java and Scala</summary>
 
 ```java
-val envVars = System.getEnv() // Map[String, String] of key-value pairs
-val value = System.getEnv("ENV_VAR_KEY") // ENV_VAR_VALUE
+val envVars = System.getenv() // Map[String, String] of key-value pairs
+val value = System.getenv("ENV_VAR_KEY") // ENV_VAR_VALUE
 ```
 
 </details><br>

@@ -1,10 +1,10 @@
 # Access Roles and Permissions - Read-Only
 
-As mentioned on the [Azure EA Tutorial](eco/azure-tutorials/) there is a three step process to get setup with Eco Azure. The information on this page is relevant to Analysis step (Step 1).
+As mentioned on the [Azure Tutorial](eco/azure-tutorials/) there is a three step process to set up  Eco Azure. The information on this page is relevant to Analysis step (Step 1).
 
 ## Azure Role needed for Eco Azure Analysis and Planning
 
-The role and EA Read Only Admin access below is relevant only for customers who have not yet signed a contract for Eco Azure.
+The roles and billing access below is relevant only for customers who have not yet signed a contract for Eco Azure.
 
 ### Cost Management Reader
 
@@ -14,11 +14,13 @@ The Eco team requests the [Cost Management Reader role](https://docs.microsoft.c
 
 The Eco team requests customers to assign the [Azure Reservation Reader](https://docs.microsoft.com/en-us/azure/cost-management-billing/reservations/view-reservations#assign-a-reservation-reader-role-at-the-tenant-level) role to the user group of guest users in order to accurately perform the initial analysis.
 
-<img src="/eco/_media/azure-access-roles-read-only-01.png" />
-
-### EA Read Only Admin
+### EA Read Only Admin (Applies to Enterprise Agreement only)
 
 The Eco team requests that the guest user also be given EA Admin Read Only access in order to view Cost Management data. The data is used to complete the initial analysis.
+
+### MCA Billing Account Reader (Applies to Microsoft Customer Agreement only)
+
+The Eco team requests that the guest user also be given MCA Billing Account Reader access in order to view Cost Management data. The data is used to complete the initial analysis.
 
 ## What's Next?
 
