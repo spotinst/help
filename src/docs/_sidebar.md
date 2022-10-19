@@ -8,7 +8,7 @@
   - [Connect Azure EA](connect-your-cloud-provider/azure-ea-account)
   - [Connect an Additional Account](connect-your-cloud-provider/additional-account)
   - [View Dashboard](connect-your-cloud-provider/dashboard)
-  - [Optimized Your Cloud](connect-your-cloud-provider/optimize)
+  - [Optimize Your Cloud](connect-your-cloud-provider/optimize)
   - [Analyze Your Costs](connect-your-cloud-provider/cost-analysis/)
     - [Save Analysis Reports](connect-your-cloud-provider/cost-analysis/save-reports)
 - [**Elastigroup**](elastigroup/)
