@@ -1681,6 +1681,9 @@ export const aliases = (() => {
       "/managed-instance/features/managed-instance-actions",
 
     "/cloud-analyzer/tutorials/manage-subsets": "/eco/tutorials/manage-subsets",
+
+    "/cloud-analyzer/tutorials/use-optimization-dashboard/":
+      "/connect-your-cloud-provider/optimize",
   };
 
   for (let [key, value] of Object.entries(map)) {
