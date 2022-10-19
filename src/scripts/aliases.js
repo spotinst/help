@@ -1685,7 +1685,7 @@ export const aliases = (() => {
     "/cloud-analyzer/tutorials/use-optimization-dashboard/":
       "/connect-your-cloud-provider/optimize",
 
-    "/cloud-analyzer/tutorials/use-optimization-dashboard/containers":
+    "/cloud-analyzer/tutorials/use-optimization-dashboard/containers/":
       "/connect-your-cloud-provider/optimize",
 
   };
