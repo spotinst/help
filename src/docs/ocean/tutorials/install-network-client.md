@@ -54,5 +54,3 @@ To install the latest network client version, run the following command:
 
 `kubectl apply -f
 https://spotinst-public.s3.amazonaws.com/integrations/kubernetes/network-client/templates/network-client.yaml`
-
-xxx
