@@ -31,7 +31,7 @@ The following are some considerations when installing the Ocean network client:
 ### Install Ocean Network Client with Helm
 
 This tutorial describes how to install Ocean Network Client DaemonSet using Helm. Installation is only supported with Helm version 3.x (not supported with Helm 2.x). You can learn more about the installation in the Github Repository.
- 
+
 1. Add the Spot’s Helm chart repository:
 `helm repo add spot https://charts.spot.io`
 2. Update your local Helm chart repository cache:
@@ -54,3 +54,5 @@ To install the latest network client version, run the following command:
 
 `kubectl apply -f
 https://spotinst-public.s3.amazonaws.com/integrations/kubernetes/network-client/templates/network-client.yaml`
+
+xxx
