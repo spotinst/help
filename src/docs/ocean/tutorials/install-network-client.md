@@ -4,7 +4,8 @@ This tutorial describes how to install the Ocean Network Client as a DaemonSet i
 
 The procedures below describe how you can install the Ocean Network Client with Helm or Kubectl.
 
-Prerequisites
+## Prerequisites
+
 * The Ocean controller must be installed and run correctly.
 * The Ocean network client should be installed in the same namespace (typically kube-system) as the Ocean controller
 * The Ocean network client can be installed using Helm version 3 and above. Not supported with Helm 2.x
@@ -43,14 +44,15 @@ NOTE: Configure all required chart values using the set command line argument or
 4. If you want to upgrade the Ocean network client version:
 `helm upgrade ocean-net-client spot/ocean-network-client \
 --reuse-values \
---version <VERSION>``
+--version <VERSION>`
 5. In order to discover the available Ocean network client versions, use the following command:
 `helm search spot/ocean-network-client --versions`
 
 ### Install the Ocean Network Client with Kubectl
 
 To install the latest network client version, run the following command:
-`kubectl apply -f https://spotinst-public.s3.amazonaws.com/integrations/kubernetes/network-client/templates/network-client.yaml`
+`kubectl apply -f
+https://spotinst-public.s3.amazonaws.com/integrations/kubernetes/network-client/templates/network-client.yaml`
 
 ## What's Next?
 
