@@ -5,24 +5,24 @@ _When:_ 10/20/2022 at 10pm - 11pm Eastern
 
 _Impact:_ Access to desktops and application services for End Users will remain uninterrupted. Access to Spot PC console will remain available.
 
-* Filtered Performance tab added to the Dashboard 
-  * A Performance tab that filters machines, sessions, and data volumes by Spot Group has been added to the dashboard. There are three sub-tabs that display trending graphs: Machines, User Sessions and Data Volumes. In Machines, compare machines within a tenant, view the top 5 machines in a Spot Group or pick the exact machines that you want to see in the Spot Group. In User Sessions, you can do the same for each user. 
+* Filtered Performance tab added to the Dashboard
+  * A Performance tab that filters machines, sessions, and data volumes by Spot Group has been added to the dashboard. There are three sub-tabs that display trending graphs: Machines, User Sessions and Data Volumes. In Machines, compare machines within a tenant, view the top 5 machines in a Spot Group or pick the exact machines that you want to see in the Spot Group. In User Sessions, you can do the same for each user.
 * Sites Updates
-  * Spot PC has improved Sites in the following ways. 
-    1. Address Range Validation: An error message will appear if an unavailable address is used. 
-    2. Directory Type will display only choices that are valid for a specific tenant instance. If a tenant was created for Direct Join, a site can only use the Azure AD directory type. 
+  * Spot PC has improved Sites in the following ways.
+    1. Address Range Validation: An error message will appear if an unavailable address is used.
+    2. Directory Type will display only choices that are valid for a specific tenant instance. If a tenant was created for Direct Join, a site can only use the Azure AD directory type.
 * New Config Action: Data Volumes
-  * Data Volumes lists and details have moved to the Config Actions menu. 
+  * Data Volumes lists and details have moved to the Config Actions menu.
 * Spot Group Details Update
   * Session Time Security Settings has been added to the Spot Group Details page and can be changed using the Edit option.
-* New Limited Availability Tooltip 
+* New Limited Availability Tooltip
   * Spot Groups with a status of Limited Availability will now display a tooltip that describes the reason that all session virtual machines are not available.
 * New Column: Process ID
   * The Process ID for a user session has been added to the session details for both Machines and User Sessions.
 * FSLogix Shrink Disk Automation for Hybrid AD Tenants
   * Spot PC has added an automated task that compresses the size of FsLogix containers if they are not locked. The compression task is run every Sunday at 12:01 am local time (as defined by the time on the SpotPCmanager1 server)
-* Azure Front Door component added to the default tenant configuration 
-  * Spot PC now includes an instance of Azure Front Door to control traffic into the web based administrative access to managed virtual machines (session VMs and Business Servers). The Web Application Firewall (WAF) component of the Azure Front Door can be restricted per tenant. 
+* Azure Front Door component added to the default tenant configuration
+  * Spot PC now includes an instance of Azure Front Door to control traffic into the web based administrative access to managed virtual machines (session VMs and Business Servers). The Web Application Firewall (WAF) component of the Azure Front Door can be restricted per tenant.
 * UI Enhancement: Add Confirmation dialog when deleting AVD host pool objects
 * Defect Resolved: Error uploading log data from deployments in some scenarios
 * Feature: Local Control Plane support for VCloud Director REST API v35
