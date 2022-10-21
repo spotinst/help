@@ -91,6 +91,31 @@ To retrieve the necessary EFS information, Ocean requires the following permissi
 
 `elasticfilesystem:DescribeFileSystems`
 
+### Network Costs
+
+Ocean network costs measure data transfer costs (in $) and bandwidth usage (in GB) for Kubernetes applications.
+
+To enable Network Costs, the network client (agent) needs to be installed and run as a DaemonSet on every node in the Kubernetes cluster.
+
+The different types of cloud provider data transfer costs which can be associated with Kubernetes applications are described in detail below.
+
+<img src="/ocean/_media/network-costs-1.png" />
+
+* **Internet**: When an application sends traffic out to the internet, to an IP address external to the cloud provider, the application is assigned cloud provider Internet data transfer costs based on the amount of data (in GB) transferred. For example, a streaming service that sends videos to external clients on the internet or a sales application backing up data to DB service in a private cloud. Cloud providers do not charge for internet traffic coming into the cluster.
+* **Inter-Region**: When an application sends traffic that crosses a cloud provider regional boundary and goes to a cluster or service in a different region, the application entails cloud provider Inter-region data transfer costs based on the amount of data (in GB) transferred. For example: backing up DB data between North America and Europe regions. The cost typically depends on the source region of the application generating the traffic.
+* **Inter-AZ**:  When an application sends traffic that traverses a cloud provider availability zone (AZ) boundary and goes to a service or application pod in a different availability zone but in the same region, the cloud provider charges Inter-AZ data transfer cost in both ingress and egress directions. As a result, both source and destination applications or services will have Inter-AZ  data transfer costs based on the amount of data transferred (in GB).
+* **Intra-AZ**: Typically traffic within the same AZ (Intra-AZ) has no cost, but there are cases when an application sends traffic to a different cluster or accesses an application or service using public IPs. In those cases, the cloud provider charges similar Inter-AZ data transfer costs in both ingress and egress directions. This typically happens when traffic uses Public IP for services like DNS, Ingress, Load Balancer, Transit Gateway, NAT Gateway etc. For example
+- DNS or Ingress path url is resolved to a Public IP
+- Load balancer service that is resolved by NodePort public IP instead of private pod IP or service ClusterIP.
+
+**If all application traffic is within the cluster in the same AZ and only private IPs are used, Ocean network costs will show some Intra-AZ bandwidth usage but the cost will be $0.00.**
+
+#### High-level Architecture for Network Costs
+
+The Ocean network client is installed in the Kubernetes cluster and runs as a Kubernetes DeamonSet on each node in the cluster. The Ocean network client includes an exporter and an eBPF packet counter. They collect network flow metrics from pods on the node and send aggregated flow data at regular intervals to the Ocean backend cluster (AWS) for network cost calculation and further aggregation which can be up to 90 days.
+
+<img src="/ocean/_media/network-costs-2.png" />
+
 ## Breakdown Types
 
 The default breakdown of costs is shown per workload (e.g., kubernetes deployments). However, it is possible to show cost itemization per labels and annotations. This is a powerful tool that enables you to analyze your cluster usage per department in your organization, per application, per functions such as development, testing, production, etc., or per any system of labeling you have implemented.
