@@ -42,6 +42,7 @@ For example:
 `helm install ocean-net-client spot/ocean-network-client`
 
 **Configure all required chart values using the set command line argument or a values.yaml file.**
+
 4. If you want to upgrade the Ocean network client version:
 
 ```
