@@ -32,7 +32,7 @@ The following are some considerations when installing the Ocean network client:
 
 This tutorial describes how to install Ocean Network Client DaemonSet using Helm. Installation is only supported with Helm version 3.x (not supported with Helm 2.x). You can learn more about the installation in the Github Repository.
 
-1. Add the Spot’s Helm chart repository:
+1. Add Spot’s Helm chart repository:
 `helm repo add spot https://charts.spot.io`
 2. Update your local Helm chart repository cache:
 `helm repo update`
@@ -42,9 +42,13 @@ For example:
 `helm install ocean-net-client spot/ocean-network-client`
 NOTE: Configure all required chart values using the set command line argument or a values.yaml file.
 4. If you want to upgrade the Ocean network client version:
-`helm upgrade ocean-net-client spot/ocean-network-client \
+
+```
+helm upgrade ocean-net-client spot/ocean-network-client \
 --reuse-values \
---version <VERSION>`
+--version <VERSION>
+```
+
 5. In order to discover the available Ocean network client versions, use the following command:
 `helm search spot/ocean-network-client --versions`
 
