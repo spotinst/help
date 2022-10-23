@@ -1692,7 +1692,10 @@ export const aliases = (() => {
       "/connect-your-cloud-provider/optimize",
 
     "/cloud-analyzer/tutorials/use-optimization-dashboard/reservations/":
-      "/connect-your-cloud-provider/optimize",      
+      "/connect-your-cloud-provider/optimize",
+
+    "/cloud-analyzer/tutorials/view-trends-notifications/":
+      "/connect-your-cloud-provider/dashboard",            
   };
 
   for (let [key, value] of Object.entries(map)) {
