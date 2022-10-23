@@ -1687,6 +1687,9 @@ export const aliases = (() => {
 
     "/cloud-analyzer/tutorials/use-optimization-dashboard/containers/":
       "/connect-your-cloud-provider/optimize",
+
+    "/cloud-analyzer/tutorials/use-optimization-dashboard/elastic-applications/":
+      "/connect-your-cloud-provider/optimize",
   };
 
   for (let [key, value] of Object.entries(map)) {
