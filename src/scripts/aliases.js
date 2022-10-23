@@ -1706,7 +1706,7 @@ export const aliases = (() => {
     "/cloud-analyzer/tutorials/view-trends-notifications/view-all-archive/":
       "/connect-your-cloud-provider/dashboard",
 
-    "/cloud-analyzer/getting-started/":
+    "/cloud-analyzer/getting-started/connect-your-aws-master-payer-account-existing-customer/":
       "/connect-your-cloud-provider/optimize",
   };
 
