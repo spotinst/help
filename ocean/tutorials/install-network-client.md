@@ -40,7 +40,8 @@ This tutorial describes how to install Ocean Network Client DaemonSet using Helm
 `helm install <NAME> spot/ocean-network-client`
 For example:
 `helm install ocean-net-client spot/ocean-network-client`
-NOTE: Configure all required chart values using the set command line argument or a values.yaml file.
+
+**Configure all required chart values using the set command line argument or a values.yaml file.**
 4. If you want to upgrade the Ocean network client version:
 
 ```
