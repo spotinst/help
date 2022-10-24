@@ -1720,6 +1720,9 @@ export const aliases = (() => {
 
     "/cloud-analyzer/tutorials/cloud-analyzer-policy/":
       "/connect-your-cloud-provider/optimize",
+
+    "/cloud-analyzer/tutorials/cloud-analyzer-policy/create-cloud-analyzer-policy-with-cloudformation/":
+      "/connect-your-cloud-provider/optimize",
   };
 
   for (let [key, value] of Object.entries(map)) {
