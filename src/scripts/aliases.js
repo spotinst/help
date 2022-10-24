@@ -1712,7 +1712,7 @@ export const aliases = (() => {
     "/cloud-analyzer/getting-started/connect-master-payer-account-first-registration/":
       "/connect-your-cloud-provider/optimize",
 
-    "/cloud-analyzer/getting-started/": "/connect-your-cloud-provider/optimize",
+    "/cloud-analyzer/getting-started/": "/connect-your-cloud-provider/optimize/",
 
     "/cloud-analyzer/": "/connect-your-cloud-provider/optimize",
 
