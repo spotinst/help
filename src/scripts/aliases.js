@@ -1726,6 +1726,9 @@ export const aliases = (() => {
 
     "/cloud-analyzer/tutorials/save-analysis-reports/":
       "/connect-your-cloud-provider/cost-analysis/",
+
+    "/cloud-analyzer/tutorials/analyze-your-costs/":
+      "/connect-your-cloud-provider/cost-analysis/",
   };
 
   for (let [key, value] of Object.entries(map)) {
