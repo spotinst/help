@@ -1711,6 +1711,8 @@ export const aliases = (() => {
 
     "/cloud-analyzer/getting-started/connect-master-payer-account-first-registration/":
       "/connect-your-cloud-provider/optimize",
+
+    "/cloud-analyzer/getting-started/": "/connect-your-cloud-provider/optimize",
   };
 
   for (let [key, value] of Object.entries(map)) {
