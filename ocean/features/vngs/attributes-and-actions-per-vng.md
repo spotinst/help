@@ -125,6 +125,13 @@ Once configured, whenever the Ocean autoscaler scales up, Ocean will automatical
 
 </details><br>
 
+## Restrict Scale Down per VNG
+The restrict-scale-down label is a [Spot label](ocean/features/labels-and-taints?id=spot-labels) that can be applied on a kubernetes pod or an ECS task and forces Ocean to not scale down the node or container instance running it. It is also possible to restrict scale down at the VNG level using a boolean property with the same name.
+
+A possible use case is protecting a 100% On-demand VNG from any scale down activity, as Ocean will treat the nodes or container instances in this VNG as if all pods or tasks running on them have the restrict-scale-down label. This will ensure that scale down will not cause interruptions to sensitive workloads.
+
+For more information about the Scale Down feature, see Scaling (Kubernetes or ECS).
+
 ## Preferred Spot Instance Types per VNG
 
 Ocean provides a serverless experience in which the specific instances don’t matter and the best practice is to allow the use of all instance types. However, there are some cases in which a specific instance type may provide better performance or increased cost savings. For example, if you know that your application performs significantly better on M5 instances, then you can save costs by preferring this instance type over others.
