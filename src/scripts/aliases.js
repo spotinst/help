@@ -1717,6 +1717,9 @@ export const aliases = (() => {
     "/cloud-analyzer/": "/connect-your-cloud-provider/optimize",
 
     "/cloud-analyzer/tutorials/": "/connect-your-cloud-provider/optimize",
+
+    "/cloud-analyzer/tutorials/cloud-analyzer-policy/":
+      "/connect-your-cloud-provider/optimize",
   };
 
   for (let [key, value] of Object.entries(map)) {
