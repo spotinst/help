@@ -1723,6 +1723,9 @@ export const aliases = (() => {
 
     "/cloud-analyzer/tutorials/cloud-analyzer-policy/create-cloud-analyzer-policy-with-cloudformation/":
       "/connect-your-cloud-provider/optimize",
+
+    "/cloud-analyzer/tutorials/save-analysis-reports/":
+      "/connect-your-cloud-provider/cost-analysis",
   };
 
   for (let [key, value] of Object.entries(map)) {
