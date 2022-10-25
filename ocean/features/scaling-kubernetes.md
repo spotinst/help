@@ -149,7 +149,8 @@ The feature is also available in Ocean in order to improve node utilization and 
 * At the cluster level, so that all nodes have a unified configuration.
 * Per virtual Node Group, so that you can have different configurations for different workloads.
 If you have already configured maximum pods per node on your AKS cluster, this configuration will be imported during the connection of the AKS cluster to Ocean.
-This feature is available via API on the [cluster level](api/#operation/oceanAwsGetHeartbeatStatus) and [the VNG level](api/#operation/oceanAzureDetachVms).
+
+This feature is available via API on the [cluster level](https://docs.spot.io/api/#operation/oceanAwsGetHeartbeatStatus) and [the VNG level](https://docs.spot.io/api/#operation/oceanAzureDetachVms).
 
 ## What’s Next?
 
