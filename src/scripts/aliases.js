@@ -1729,6 +1729,9 @@ export const aliases = (() => {
 
     "/cloud-analyzer/tutorials/analyze-your-costs/":
       "/connect-your-cloud-provider/cost-analysis/",
+
+    "/elastigroup/azure/getting-started/import-an-existing-azure-resource/":
+      "/elastigroup/tutorials-azure/getting-started/import-an-existing-azure-resource/",
   };
 
   for (let [key, value] of Object.entries(map)) {
