@@ -95,6 +95,8 @@ Ocean supports Kubernetes [pod topology spread constraints](https://kubernetes.i
 
 Ocean automatically launches nodes while ensuring that the `maxSkew` is maintained. Similarly, Ocean will only scale down a node if `maxSkew` is maintained.
 
+While Ocean scales up in situations where a pod’s topology spread constraint skew is already imbalanced (i.e: given a pod spread of 3-1-1 across 3 AZs with maxSkew: 1 configured), Ocean will scale up a node for the pod as long as the resulting skew will not increase, even if the imbalanced skew remains the same (i.e: scale a node in either the second or third zones). This is done to emulate the behavior of the kubernetes scheduler (if the cluster is imbalanced, this is done to prevent it from further imbalancing).
+
 When pods contain spread constraints, Ocean is aware of their labels and can provision nodes from all relevant topologies. Before the initial apply action of these pods, Ocean is required to have at least a single node from each topology so that Kuberentes is aware of their existence. A single node from each topology can easily be configured in Ocean’s [headroom](ocean/features/headroom) feature or by setting [minimum nodes per VNG](ocean/features/launch-specifications?id=attributes-and-actions-per-vng).
 
 To support the Kubernetes feature, Ocean requires the following:
@@ -139,6 +141,15 @@ Ocean supports launching instances using any operating system (OS) type, includi
 Ocean provides the flexibility to use different operating systems in a Kubernetes cluster. For example, using the [virtual node group](ocean/features/launch-specifications) (VNG) concept, you can have Ocean manage Windows nodes alongside other nodes in the cluster.
 
 All you need to do is to create a VNG with a Windows AMI and you are all set. (Please note for EKS users, you must use an EKS optimized Windows AMI.) For Windows workloads, the Autoscaler automatically launches nodes only from dedicated VNGs. This means that there is no need to set any specific label on the VNG, unless you have multiple VNGs and you wish to ensure the workload runs on a specific VNG.
+
+### AKS Support for Max Pods Configuration
+There is a default configuration in AKS of maximum pods that can be scheduled on each node and this default number of pods can be adjusted.
+
+The feature is also available in Ocean in order to improve node utilization and bin packing. With Ocean, you can set a max pods per node parameter in the following different ways:
+* At the cluster level, so that all nodes have a unified configuration.
+* Per virtual Node Group, so that you can have different configurations for different workloads.
+If you have already configured maximum pods per node on your AKS cluster, this configuration will be imported during the connection of the AKS cluster to Ocean.
+This feature is available via API on the [cluster level](api/#operation/oceanAwsGetHeartbeatStatus) and [the VNG level](api/#operation/oceanAzureDetachVms).
 
 ## What’s Next?
 
