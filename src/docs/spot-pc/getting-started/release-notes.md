@@ -23,9 +23,6 @@ _Impact:_ Access to desktops and application services for End Users will remain 
   * Spot PC has added an automated task that compresses the size of FsLogix containers if they are not locked. The compression task is run every Sunday at 12:01 am local time (as defined by the time on the SpotPCmanager1 server)
 * Azure Front Door component added to the default tenant configuration
   * Spot PC now includes an instance of Azure Front Door to control traffic into the web based administrative access to managed virtual machines (session VMs and Business Servers). The Web Application Firewall (WAF) component of the Azure Front Door can be restricted per tenant.
-* UI Enhancement: Add Confirmation dialog when deleting AVD host pool objects
-* Defect Resolved: Error uploading log data from deployments in some scenarios
-* Feature: Local Control Plane support for VCloud Director REST API v35
  
 ## 10/06/2022
 _When:_ 10/06/2022 at 10pm - 11pm Eastern
