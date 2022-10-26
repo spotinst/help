@@ -95,8 +95,6 @@ Ocean supports Kubernetes [pod topology spread constraints](https://kubernetes.i
 
 Ocean automatically launches nodes while ensuring that the `maxSkew` is maintained. Similarly, Ocean will only scale down a node if `maxSkew` is maintained.
 
-While Ocean scales up in situations where a pod’s topology spread constraint skew is already imbalanced (i.e: given a pod spread of 3-1-1 across 3 AZs with maxSkew: 1 configured), Ocean will scale up a node for the pod as long as the resulting skew will not increase, even if the imbalanced skew remains the same (i.e: scale a node in either the second or third zones). This is done to emulate the behavior of the kubernetes scheduler (if the cluster is imbalanced, this is done to prevent it from further imbalancing).
-
 When pods contain spread constraints, Ocean is aware of their labels and can provision nodes from all relevant topologies. Before the initial apply action of these pods, Ocean is required to have at least a single node from each topology so that Kuberentes is aware of their existence. A single node from each topology can easily be configured in Ocean’s [headroom](ocean/features/headroom) feature or by setting [minimum nodes per VNG](ocean/features/launch-specifications?id=attributes-and-actions-per-vng).
 
 To support the Kubernetes feature, Ocean requires the following:
@@ -150,7 +148,7 @@ The feature is also available in Ocean in order to improve node utilization and 
 * Per virtual Node Group, so that you can have different configurations for different workloads.
 If you have already configured maximum pods per node on your AKS cluster, this configuration will be imported during the connection of the AKS cluster to Ocean.
 
-This feature is available via API on the [cluster level](https://docs.spot.io/api/#operation/oceanAwsGetHeartbeatStatus) and [the VNG level](https://docs.spot.io/api/#operation/oceanAzureDetachVms).
+This feature is available via API on the cluster level and the VNG level.
 
 ## What’s Next?
 
