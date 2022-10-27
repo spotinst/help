@@ -743,9 +743,6 @@ export const aliases = (() => {
     "/elastigroup-for-azure/hpc/tortuga-unicloud-grid-engine/":
       "/elastigroup/tools-integrations/grid-engine-azure/configure-tortuga-unicloud-grid-engine",
 
-    "/elastigroup-for-azure/shutdown-script-in-elastigroup":
-      "/elastigroup/features/azure/shutdown-script-in-elastigroup-for-azure",
-
     "/elastigroup-for-azure/shutdown-script-in-elastigroup/":
       "/elastigroup/features/azure/shutdown-script-in-elastigroup-for-azure",
 
