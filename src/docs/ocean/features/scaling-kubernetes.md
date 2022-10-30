@@ -149,7 +149,7 @@ The feature is also available in Ocean in order to improve node utilization and 
 * Per virtual Node Group, so that you can have different configurations for different workloads.
 If you have already configured maximum pods per node on your AKS cluster, this configuration will be imported during the connection of the AKS cluster to Ocean.
 
-This feature is available via API on the cluster level and the VNG level.
+This feature is available via API on the [cluster level](https://docs.spot.io/api/#operation/oceanAKSClusterCreate) and the [VNG level](https://docs.spot.io/api/#operation/oceanAKSVirtualNodeGroupCreate).
 
 ## What’s Next?
 
