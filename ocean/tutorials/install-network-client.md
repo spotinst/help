@@ -53,7 +53,7 @@ NOTE: Configure all required chart values using the set command line argument or
 
 `helm upgrade ocean-net-client spot/ocean-network-client \
 --reuse-values \
---version <VERSION>``
+--version <VERSION>`
 
 5. In order to discover the available Ocean network client versions, use the following command:
 
