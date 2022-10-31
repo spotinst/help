@@ -1,11 +1,10 @@
 # Install the Ocean Network Client in the Cluster
 
-This tutorial describes how to install the Ocean Network Client as a DaemonSet in your Ocean managed Kubernetes cluster. In order to measure Network Costs  with traffic flow visibility, the network client needs to run in privileged mode on every node in the cluster.
+This tutorial describes how to install the Ocean Network Client as a DaemonSet in your Ocean managed Kubernetes cluster. In order to measure [Network Costs](ocean/features/cost-analysis?id=network-costs) with traffic flow visibility, the network client needs to run in privileged mode on every node in the cluster.
 
 The procedures below describe how you can install the Ocean Network Client with Helm or Kubectl.
 
 ## Prerequisites
-
 * The Ocean controller must be installed and run correctly.
 * The Ocean network client should be installed in the same namespace (typically kube-system) as the Ocean controller
 * The Ocean network client can be installed using Helm version 3 and above. Not supported with Helm 2.x
@@ -32,34 +31,40 @@ The following are some considerations when installing the Ocean network client:
 
 This tutorial describes how to install Ocean Network Client DaemonSet using Helm. Installation is only supported with Helm version 3.x (not supported with Helm 2.x). You can learn more about the installation in the Github Repository.
 
-1. Add Spot’s Helm chart repository:
+1. Add the Spot’s Helm chart repository:
+
 `helm repo add spot https://charts.spot.io`
+
 2. Update your local Helm chart repository cache:
+
 `helm repo update`
+
 3. Install the Ocean Network Client
+
 `helm install <NAME> spot/ocean-network-client`
+
 For example:
+
 `helm install ocean-net-client spot/ocean-network-client`
 
-**Configure all required chart values using the set command line argument or a values.yaml file.**
+NOTE: Configure all required chart values using the set command line argument or a values.yaml file.
 
 4. If you want to upgrade the Ocean network client version:
 
-```
-helm upgrade ocean-net-client spot/ocean-network-client \
+`helm upgrade ocean-net-client spot/ocean-network-client \
 --reuse-values \
---version <VERSION>
-```
+--version <VERSION>``
 
 5. In order to discover the available Ocean network client versions, use the following command:
+
 `helm search spot/ocean-network-client --versions`
 
 ### Install the Ocean Network Client with Kubectl
 
 To install the latest network client version, run the following command:
-`kubectl apply -f
-https://spotinst-public.s3.amazonaws.com/integrations/kubernetes/network-client/templates/network-client.yaml`
+
+`kubectl apply -f https://spotinst-public.s3.amazonaws.com/integrations/kubernetes/network-client/templates/network-client.yaml`
 
 ## What's Next?
 
-Learn more about [Network Costs](link).
+Learn more about [Network Costs](ocean/features/cost-analysis?id=network-costs).
