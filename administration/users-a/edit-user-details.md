@@ -1,5 +1,3 @@
-<meta name="robots" content="noindex">
-
 # Edit User Details
 
 Once you have [created a new user](administration/users-a/create-new-user), you can easily modify the user details whenever you choose.
