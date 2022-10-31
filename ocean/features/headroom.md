@@ -28,15 +28,15 @@ Ocean continually monitors the cluster and creates headroom according to the fol
 
 As these steps are repeated, the desired percent of headroom is maintained at all times.
 
-### Automatic Headroom per VNG
+### Automatic Headroom per Virtual Node Group
 
-It is possible to define automatic headroom per VNG. The calculation of the automatic headroom in the VNG is the same as the calculation for the cluster as described above. Meaning, Ocean takes all of the workloads that run on a given VNG and calculates the headroom for that VNG using the same method it would for calculating headroom for the cluster.
+It is possible to define automatic headroom per virtual node group (VNG). The calculation of the automatic headroom in the VNG is the same as the calculation for the cluster as described above. This means that Ocean takes all of the workloads that run on a given VNG and calculates the headroom for that VNG using the same method it would for calculating headroom for the cluster.
 
-The automatic headroom and the headroom per VNG are calculated independently. Therefore, there is a possibility that the headroom per cluster and per VNG will save headroom for the same workload. In order to avoid this situation, you can set the headroom only on a VNG level.
+The automatic headroom and the headroom per VNG are calculated independently. Therefore, there is a possibility that the headroom per cluster and per VNG will save headroom for the same workload. In order to avoid this situation, you should set the headroom only at VNG level.
 
 ## Manual Headroom
 
-While automatic headroom is the recommended configuration, you can also set up manual headroom on top of automatic headroom. Defined per virtual node group (VNG), manual headroom adds flexibility to help with specific use cases.
+While automatic headroom is the recommended configuration, you can also set up manual headroom on top of automatic headroom. Defined per VNG, manual headroom adds flexibility to help with specific use cases.
 
 Manual refers to headroom that is configured as specific amounts of resources, and is relevant for users who are aware of specific needs in the cluster.
 
