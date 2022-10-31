@@ -1,5 +1,3 @@
-<meta name="robots" content="noindex">
-
 # Groups
 
 In Spot, a *group* is a set of one or more [users](administration/users-a/) that have the same [policies](administration/policies/). You use groups in order to assign or modify policies for several users at once. You can use different types of groupings for managing users, for example:
