@@ -11,7 +11,7 @@
     - [Create an Elastigroup for GCP](elastigroup/getting-started/create-an-elastigroup-for-gcp)
   - [Features - AWS](elastigroup/features/)
     - [Core Features](elastigroup/features/core-features/)
-      - [Spot, Reserved & On-demand Instances](elastigroup/features/core-features/spot-reserved-on-demand-instances)
+      - [On-Demand, Spot & Reserved Instances](elastigroup/features/core-features/spot-reserved-on-demand-instances)
       - [Market Scoring & Managing Interruptions](elastigroup/features/core-features/market-scoring-managing-interruptions)
       - [Predictive Rebalancing](elastigroup/features/core-features/predictive-rebalancing)
       - [Cluster Orientation](elastigroup/features/core-features/cluster-orientation)
