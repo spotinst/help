@@ -50,6 +50,7 @@
     - [Migrate Existing Elastigroups to Ocean (ECS)](ocean/tutorials/migrate-existing-egs-ecs)
     - [Connect a Fargate Service](elastigroup/tutorials/amazon-ecs/import-fargate-services-to-ecs-elastigroup)
     - [Mount FSx for ONTAP to Kubernetes Pods](ocean/tutorials/mount-fsx-for-ontap-volumes-to-kubernetes-pods)
+    - [Install Network Client](ocean/tutorials/install-network-client)
   - [Ocean Controller](ocean/tutorials/spot-kubernetes-controller/)
     - [Install with Helm](ocean/tutorials/spot-kubernetes-controller/install-with-helm)
     - [Install with Kubectl](ocean/tutorials/spot-kubernetes-controller/install-with-kubectl)
