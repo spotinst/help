@@ -1,5 +1,3 @@
-<meta name="robots" content="noindex">
-
 # Create New User
 
 Creating a new [user](administration/users-a/) consists of the following major steps:

@@ -1,5 +1,3 @@
-<meta name="robots" content="noindex">
-
 # Create New Permission Policy
 
 When you create a [permission policy](administration/policies/), you can define the policy type and choose the services and actions that will be included. The detailed procedures are described below.

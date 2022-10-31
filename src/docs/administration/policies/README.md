@@ -1,5 +1,3 @@
-<meta name="robots" content="noindex">
-
 # Permission Policies
 
 In Spot, a *permission policy* (also referred to as a policy) is a set of one or more permissions. When a policy is attached to a [user](administration/users-a/) or a [group](administration/groups/) of users, the policy grants its permissions to those users. A permission policy can apply to one or more individual Spot accounts, or a policy can apply to an entire Spot organization.

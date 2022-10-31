@@ -1,5 +1,3 @@
-<meta name="robots" content="noindex">
-
 # Edit Group Details
 
 Once you have created a [new group](administration/groups/create-new-group), you can easily modify the group details whenever you choose.
