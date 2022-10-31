@@ -1,8 +1,8 @@
 # Virtual Node Groups
 
-Virtual Node Groups (VNGs) provide a single layer of abstraction that allows users to manage different types of workloads on the same cluster.
+Virtual Node Groups (VNGs) provide a single layer of abstraction that enables users to manage different types of workloads on the same cluster.
 
-Previously named launch specifications in the Ocean console, VNGs define cloud infrastructure properties and offer a wider feature set for governance mechanisms, scaling attributes, and networking definitions. VNGs give users more visibility into resource allocation with a new layer of monitoring. VNGs also provide more flexibility to edit and manage settings like headroom, block device mapping, and maximum nodes.
+Formerly called launch specifications in the Ocean console, VNGs define cloud infrastructure properties and offer a wider feature set for governance mechanisms, scaling attributes, and networking definitions. VNGs give users more visibility into resource allocation with a new layer of monitoring. VNGs also provide more flexibility to edit and manage settings such as headroom, block device mapping, and maximum nodes.
 
 ### Note on Terminology
 
@@ -32,12 +32,12 @@ A pod could be scheduled on multiple VNGs. In this case, Ocean has to prioritize
 
 - If the pod has a preferred affinity that matches one of the VNGs, Ocean prioritizes according to the affinity.
 - Otherwise, Ocean prioritizes the least restrictive VNG in the order of the following criteria:
-  1. Highest maximum instance count parameter 
+  1. Highest maximum instance count parameter
   2. Highest spot percentage
   3. Highest availability zone count
   4. Highest Instance type count
 
-Note: If one Virtual Node group has an explicit configuration and the other has an empty value - the Virtual node group with the empty value will have a higher priority.
+> **Note**: If one VNG has an explicit configuration and the other has an empty value, the VNG with the empty value will have a higher priority.
 
 ## VNG Creation
 
