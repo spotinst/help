@@ -1,5 +1,3 @@
-<meta name="robots" content="noindex">
-
 # Create New Group
 
 The Create New [Group](administration/groups/) wizard consists of the following major steps:
