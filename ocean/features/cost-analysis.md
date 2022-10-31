@@ -95,7 +95,7 @@ To retrieve the necessary EFS information, Ocean requires the following permissi
 
 Ocean network costs measure data transfer costs (in $) and bandwidth usage (in GB) for Kubernetes applications.
 
-To enable Network Costs, the network client (agent) needs to be installed and run as a DaemonSet on every node in the Kubernetes cluster.
+To enable Network Costs, the network client (agent) needs to [be installed](ocean/features/cost-analysis) and run as a DaemonSet on every node in the Kubernetes cluster.
 
 The different types of cloud provider data transfer costs which can be associated with Kubernetes applications are described in detail below.
 
