@@ -1,5 +1,3 @@
-<meta name="robots" content="noindex">
-
 # Edit Permission Policy Details
 
 Once you have [created a permission policy](administration/policies/create-new-policy), you can easily modify the policy details whenever you choose.
