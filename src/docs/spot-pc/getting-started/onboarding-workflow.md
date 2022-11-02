@@ -60,7 +60,14 @@ After the region is selected, the initialization of the tenant begins. Several r
 
 ## Connect Spot PC to your AD Domain
 
-While the users' identity must be a part of the Azure AD, each machine must also be joined to an Active Directory Domain Controller (AD DC). Azure AD does not currently support Azure AD Direct Join (AADJ) in a way that can be utilized by Spot PC. Therefore, the existing AD DC must be accessible from the Spot PC Azure subscription. As noted in the [pre-deployment article]((/spot-pc/getting-started/prerequisites/?id=existing-domain-controller), this is done via vNet Peering from Spot PC to any other Azure vNet that has established connectivity to the AD DC.
+While the users' identity must be a part of the Azure AD, each machine must authenticate against AD (AD DC, AADDS or Azure AD). The following options are supported by Spot PC:
+
+1. Hybrid AD with Azure site-to-site VPN allowing Spot PC VMs to joing the local AD DC.
+2. Hybrid AD with Azure vNet Peering allowing Spot PC VMs to join Azure-hosted AD DC. 
+3. Azure AD Domain Services (AADDS) acting as the AD DC within the end-customer's Azure Tenant.
+4. Azure AD Direct Join (in currently in Preview) can joing Spot PC VMs to Azure AD without any AD DC. 
+
+Therefore if used, the existing AD DC must be accessible from the Spot PC Azure subscription. As noted in the [pre-deployment article]((/spot-pc/getting-started/prerequisites/?id=existing-domain-controller), this is done via site-to-site VPN or vNet Peering from Spot PC to any other Azure vNet that has established connectivity to the AD DC.
 
 Select the appropriate domain address (e.g., company.onmicrosoft.com)
 
