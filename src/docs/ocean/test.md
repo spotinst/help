@@ -25,7 +25,7 @@ If you choose to upgrade the control plane only, make sure you upgrade each of t
 
 ### Rerun the Import Job
 
-1. Delete the get-waagent-data job (if it exists on the cluster):
+1. Delete the get-waagent-data job (if it exists in the cluster):
 
 ` kubectl delete job get-waagent-data -n kube-system`
 
@@ -47,17 +47,23 @@ Replace the ACD_ID with any unique string (you cannot use an ACD_ID that was pre
 2. Update the ACD_ID (the same as in the previous step), ACT_ID, TOKEN, AKS_CLUSTER_NAME, RESOURCE_GROUP_NAME, and run the following command:
 
 ```
-
-curl --location --request POST 'https://api.spotinst.io/ocean/azure/k8s/cluster/aks/import/<ACD_ID>?accountId=<ACT_ID>' \ --header 'Authorization: Bearer <TOKEN>' \ --header 'Content-Type: application/json' \ --data-raw '{ "cluster": { "aks": { "name": "<AKS_CLUSTER_NAME>", "resourceGroupName": "<RESOURCE_GROUP_NAME>" } } }'
-
+curl --location --request POST 'https://api.spotinst.io/ocean/azure/k8s/cluster/aks/import/<ACD_ID>?accountId=<ACT_ID>' \
+--header 'Authorization: Bearer <TOKEN>' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "cluster": {
+        "aks": {
+            "name": "<AKS_CLUSTER_NAME>",
+            "resourceGroupName": "<RESOURCE_GROUP_NAME>"
+        }
+    }
+}'
 ```
 
 3. From the output, get the generated cluster object like the example below. Note that the base64 scripts for the customData and the OceanAKS extension have been edited out since they are very long.
 
-```
-
-{ "cluster": { "aks": { "name": "AmitAKS", "resourceGroupName": "amit-test" }, "virtualNodeGroupTemplate": { "launchSpecification": { "resourceGroupName": "MC_amit-test_AmitAKS_westus2", "customData": "REDACTED", "network": { "resourceGroupName": "MC_amit-test_AmitAKS_westus2", "virtualNetworkName": "aks-vnet-28390561", "networkInterfaces": [ { "isPrimary": true, "subnetName": "aks-subnet", "assignPublicIp": false, "publicIpSku": "Standard", "securityGroup": { "name": "aks-agentpool-28390561-nsg", "resourceGroupName": "MC_amit-test_AmitAKS_westus2", }, "enableIPForwarding": true, "additionalIpConfigurations": [], }, ], }, "login": { "userName": "azureuser" }, "loadBalancersConfig": { "loadBalancers": [ { "type": "loadBalancer", "resourceGroupName": "MC_amit-test_AmitAKS_westus2", "name": "kubernetes", "loadBalancerSku": "Standard", "backendPoolNames": ["aksOutboundBackendPool", "kubernetes"], }, ], }, "tags": [{ "tagKey": "Creator", "tagValue": "amit.baroz" }], "extensions": [ { "name": "OceanAKS", "type": "customScript", "publisher": "Microsoft.Azure.Extensions", "apiVersion": "2.0", "minorVersionAutoUpgrade": true, "protectedSettings": { "script": "REDACTED" }, }, ], "image": { "marketplace": { "publisher": "microsoft-aks", "offer": "aks", "sku": "aks-ubuntu-1804-gen2-2021-q2", "version": "2021.05.01", }, }, }, }, }, }
-
+```yaml
+{ "cluster": { "aks": { "name": "AmitAKS", "resourceGroupName": "amit-test" }, "virtualNodeGroupTemplate": { "launchSpecification": { "resourceGroupName": "MC_amit-test_AmitAKS_westus2", "customData": "REDACTED", "network": { "resourceGroupName": "MC_amit-test_AmitAKS_westus2", "virtualNetworkName": "aks-vnet-28390561", "networkInterfaces": [ { "isPrimary": true, "subnetName": "aks-subnet", "assignPublicIp": false, "publicIpSku": "Standard", "securityGroup": { "name": "aks-agentpool-28390561-nsg", "resourceGroupName": "MC_amit-test_AmitAKS_westus2", }, "enableIPForwarding": true, "additionalIpConfigurations": [], }, ], }, "login": { "userName": "azureuser" }, "loadBalancersConfig": { "loadBalancers": [ { "type": "loadBalancer", "resourceGroupName": "MC_amit-test_AmitAKS_westus2", "name":
 ```
 
 4. From the example above, remove the following lines:
