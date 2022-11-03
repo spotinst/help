@@ -48,15 +48,15 @@ You need to connect a CloudTrail account to your Spot Security account. If you h
 2. If the selected account is centralized, choose Yes.
 You can connect all of the dependent accounts in bulk if you have selected a centralized bucket. Select all the accounts you wish to onboard and click Next.
 
-<img src="/spot-security/_media/getting-started-j1.png" />
+<img src="/spot-security/_media/getting-started-h1.png" />
 
 3. If the selected account is not centralized, choose No and click Next.
 
-### You don't have a CloudTrail account
+### You do not have a CloudTrail account
 
 1. If you don’t have a CloudTrail account, choose No and click Run Cloudformation Template which will help you set up CloudTrial.
 
-screenshot
+<img src="/spot-security/_media/getting-started-i1.png" />
 
 2. Click “Run CloudFormation Template” and a window will open which is connected to AWS with the cloud formation template path. AWS uses this path to create the CloudTrail and the stack creation is a four step process in the AWS console. The required details and permissions are automatically entered in the AWS form.
 
@@ -86,8 +86,9 @@ When this is complete, you can go back to the Spot Security onboarding process t
 
 ### Step 2.2: Bucket Name and Region Validation
 
-1. Enter the CloudTrail’s Bucket Name and Region; and click Validate.
+1. Enter the CloudTrail’s Bucket Name and Region, and click Validate.
 
+<img src="/spot-security/_media/getting-started-j1.png" />
 
 2. When it is validated by a green checkmark, click Next.
 
