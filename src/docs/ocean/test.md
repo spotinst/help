@@ -47,13 +47,17 @@ Replace the ACD_ID with any unique string (you cannot use an ACD_ID that was pre
 2. Update the ACD_ID (the same as in the previous step), ACT_ID, TOKEN, AKS_CLUSTER_NAME, RESOURCE_GROUP_NAME, and run the following command:
 
 ```
+
 curl --location --request POST 'https://api.spotinst.io/ocean/azure/k8s/cluster/aks/import/<ACD_ID>?accountId=<ACT_ID>' \ --header 'Authorization: Bearer <TOKEN>' \ --header 'Content-Type: application/json' \ --data-raw '{ "cluster": { "aks": { "name": "<AKS_CLUSTER_NAME>", "resourceGroupName": "<RESOURCE_GROUP_NAME>" } } }'
+
 ```
 
 3. From the output, get the generated cluster object like the example below. Note that the base64 scripts for the customData and the OceanAKS extension have been edited out since they are very long.
 
 ```
+
 { "cluster": { "aks": { "name": "AmitAKS", "resourceGroupName": "amit-test" }, "virtualNodeGroupTemplate": { "launchSpecification": { "resourceGroupName": "MC_amit-test_AmitAKS_westus2", "customData": "REDACTED", "network": { "resourceGroupName": "MC_amit-test_AmitAKS_westus2", "virtualNetworkName": "aks-vnet-28390561", "networkInterfaces": [ { "isPrimary": true, "subnetName": "aks-subnet", "assignPublicIp": false, "publicIpSku": "Standard", "securityGroup": { "name": "aks-agentpool-28390561-nsg", "resourceGroupName": "MC_amit-test_AmitAKS_westus2", }, "enableIPForwarding": true, "additionalIpConfigurations": [], }, ], }, "login": { "userName": "azureuser" }, "loadBalancersConfig": { "loadBalancers": [ { "type": "loadBalancer", "resourceGroupName": "MC_amit-test_AmitAKS_westus2", "name": "kubernetes", "loadBalancerSku": "Standard", "backendPoolNames": ["aksOutboundBackendPool", "kubernetes"], }, ], }, "tags": [{ "tagKey": "Creator", "tagValue": "amit.baroz" }], "extensions": [ { "name": "OceanAKS", "type": "customScript", "publisher": "Microsoft.Azure.Extensions", "apiVersion": "2.0", "minorVersionAutoUpgrade": true, "protectedSettings": { "script": "REDACTED" }, }, ], "image": { "marketplace": { "publisher": "microsoft-aks", "offer": "aks", "sku": "aks-ubuntu-1804-gen2-2021-q2", "version": "2021.05.01", }, }, }, }, }, }
+
 ```
 
 4. From the example above, remove the following lines:
@@ -66,7 +70,7 @@ virtualNodeGroupTemplate.launchSpecification.resourceGroupName:
 
 `"resourceGroupName": "MC_amit-test_AmitAKS_westus2",`
 
-5. Optional: The JSON above includes the old image, you should replace it with the updated one by updating the following:
+5. **Optional** The JSON above includes the old image, you should replace it with the updated one by updating the following:
 `"image": { "marketplace": { "publisher": "microsoft-aks", "offer": "aks", "sku": "aks-ubuntu-1804-gen2-2021-q2", "version": "2021.05.01", }, }`
 
 ### Step 3: Upgrade the Ocean Cluster
@@ -76,12 +80,14 @@ Use the [oceanAKSClusterUpdate API](https://docs.spot.io/api/#operation/oceanAKS
 Modify the OCEAN_ID, ACT_ID, TOKEN and CLUSTER_BODY fields in the following script and run the command:
 
 ```
-curl --location --request PUT 'https://api.spotinst.io/ocean/azure/k8s/cluster/<OCEAN_ID>?accountId=<ACT_ID>' \ --header 'Authorization: Bearer <TOKEN>' \ --header 'Content-Type: application/json' \ --data-raw '<CLUSTER_BODY>'
+
+curl --location --request PUT 'https://api.spotinst.io/ocean/ zure/k8s/cluster/<OCEAN_ID>?accountId=<ACT_ID>' \ --header 'Authorization: Bearer <TOKEN>' \ --header 'Content-Type: application/json' \ --data-raw '<CLUSTER_BODY>'
+
 ```
 
 After this update, any new machine launched by Ocean will run with the new configurations, regardless of the VNG.
 
-You can let this change happen gradually or trigger a rollout as explained in the next step.
+You can let this happen gradually or trigger a rollout as explained in the next step.
 
 ## Step 4: Roll the Cluster
 
