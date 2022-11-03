@@ -1,5 +1,33 @@
 # Spot PC: Release Notes
 
+## 11/3/2022
+_When:_ 11/3/2022 at 10pm - 11pm Eastern
+
+_Impact:_ Access to desktops and application services for End Users will remain uninterrupted. Access to Spot PC console will remain available.
+
+* New Config Action: Monitors
+  * Spot PC is delighted to introduce a New Config Action - Monitors. Monitors are rules that continuously evaluate a specific performance parameter like network round trip time or CPU utilization % and produce alerts when the current values reach warning and critical levels. Spot PC monitors will include both a default set of rules for common parameters and tenant level parameters created by administrators. In the list view, the actions column has the ability to pause or activate the monitor in real time. In the Create workflow, naming the monitor, the metric that will have conditionals place it on and a description that can provide a resolution. 
+* Image Set Update:  Connect As 
+  * Spot PC is proud to announce Connect As for Image Sets. The computer icon now has a drop down with Connect and Connect As. Using Connect As, admins can choose which username and password to use connect with including Domain Accounts.  Overall, all Image Set Icons are now visible all times but are disabled when they can't be used. 
+* Image Set Update: Image Validation
+  * When a new image set version is created, Spot PC automation now waits and retries if Azure reports the new image is not ready to create a validation VM.
+* User Logon Activity Report
+  * Spot PC has reformatted User Logon Activity Report. Now downable in csv format with additional columns powered by WVDConnections  which are customizable and be rearranged to an individualistic benefitable way to enable quick troubleshooting. New columns include Client IP address, and AVD client version and type.  
+* Extensibility Changes 
+  * Spot PC has renamed the options under Extensibility Config Actions to 'API Accounts' to 'Accounts' and 'Accounts' and 'Tenant Admins' to better describe items underneath it.    
+* Security Tile Now Active 
+  * Clicking the Security Tile now leads to Security Tab and the recommendation page. 
+* Logs: Duration Addition 
+  * Under the Logs Tab in Admin Activity, a unit of time, milliseconds, was added to the Duration column in order to provide clarity. 
+* Admin User Updates 
+  * Admin User lists now reflect the Invitation Date as the date an admin was added, not the first date they attempted to log in.
+* Process List Refresh
+  * The Spot PC Web UI does not force and immediate refresh on the process list when a terminate process action has been taken. This change corrects a slow refresh condition which incorrectly reported the terminated processes as still active.
+* Cloud PC and Business Server User Logon Tracking
+  * Logon and logoff events for Cloud PCs and Business Servers have been added to the User Logon activity view. 
+* Create Business Server Name Validation 
+  * In the Create Business Server workflow, the Business Server Name field in Spot PC now has validation that matches Azure's conventions. 
+
 ## 10/20/2022
 _When:_ 10/20/2022 at 10pm - 11pm Eastern
 
