@@ -130,7 +130,7 @@ The restrict-scale-down label is a [Spot label](ocean/features/labels-and-taints
 
 A possible use case is protecting a 100% On-demand VNG from any scale down activity, as Ocean will treat the nodes or container instances in this VNG as if all pods or tasks running on them have the restrict-scale-down label. This will ensure that scale down will not cause interruptions to sensitive workloads.
 
-For more information about the Scale Down feature, see Scaling (Kubernetes or ECS).
+For more information about the Scale Down feature, see Scaling ([Kubernetes](ocean/features/scaling-kubernetes?id=scale-down) or [ECS](ocean/features/scaling-ecs?id=scale-down-behavior)).
 
 ## Preferred Spot Instance Types per VNG
 
