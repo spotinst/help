@@ -63,7 +63,83 @@ curl --location --request POST 'https://api.spotinst.io/ocean/azure/k8s/cluster/
 3. From the output, get the generated cluster object like the example below. Note that the base64 scripts for the customData and the OceanAKS extension have been edited out since they are very long.
 
 ```yaml
-{ "cluster": { "aks": { "name": "AmitAKS", "resourceGroupName": "amit-test" }, "virtualNodeGroupTemplate": { "launchSpecification": { "resourceGroupName": "MC_amit-test_AmitAKS_westus2", "customData": "REDACTED", "network": { "resourceGroupName": "MC_amit-test_AmitAKS_westus2", "virtualNetworkName": "aks-vnet-28390561", "networkInterfaces": [ { "isPrimary": true, "subnetName": "aks-subnet", "assignPublicIp": false, "publicIpSku": "Standard", "securityGroup": { "name": "aks-agentpool-28390561-nsg", "resourceGroupName": "MC_amit-test_AmitAKS_westus2", }, "enableIPForwarding": true, "additionalIpConfigurations": [], }, ], }, "login": { "userName": "azureuser" }, "loadBalancersConfig": { "loadBalancers": [ { "type": "loadBalancer", "resourceGroupName": "MC_amit-test_AmitAKS_westus2", "name":
+{
+   "cluster":{
+      "aks":{
+         "name":"AmitAKS",
+         "resourceGroupName":"amit-test"
+      },
+      "virtualNodeGroupTemplate":{
+         "launchSpecification":{
+            "resourceGroupName":"MC_amit-test_AmitAKS_westus2",
+            "customData":"REDACTED",
+            "network":{
+               "resourceGroupName":"MC_amit-test_AmitAKS_westus2",
+               "virtualNetworkName":"aks-vnet-28390561",
+               "networkInterfaces":[
+                  {
+                     "isPrimary":true,
+                     "subnetName":"aks-subnet",
+                     "assignPublicIp":false,
+                     "publicIpSku":"Standard",
+                     "securityGroup":{
+                        "name":"aks-agentpool-28390561-nsg",
+                        "resourceGroupName":"MC_amit-test_AmitAKS_westus2"
+                     },
+                     "enableIPForwarding":true,
+                     "additionalIpConfigurations":[
+
+                     ]
+                  }
+               ]
+            },
+            "login":{
+               "userName":"azureuser"
+            },
+            "loadBalancersConfig":{
+               "loadBalancers":[
+                  {
+                     "type":"loadBalancer",
+                     "resourceGroupName":"MC_amit-test_AmitAKS_westus2",
+                     "name":"kubernetes",
+                     "loadBalancerSku":"Standard",
+                     "backendPoolNames":[
+                        "aksOutboundBackendPool",
+                        "kubernetes"
+                     ]
+                  }
+               ]
+            },
+            "tags":[
+               {
+                  "tagKey":"Creator",
+                  "tagValue":"amit.baroz"
+               }
+            ],
+            "extensions":[
+               {
+                  "name":"OceanAKS",
+                  "type":"customScript",
+                  "publisher":"Microsoft.Azure.Extensions",
+                  "apiVersion":"2.0",
+                  "minorVersionAutoUpgrade":true,
+                  "protectedSettings":{
+                     "script":"REDACTED"
+                  }
+               }
+            ],
+            "image":{
+               "marketplace":{
+                  "publisher":"microsoft-aks",
+                  "offer":"aks",
+                  "sku":"aks-ubuntu-1804-gen2-2021-q2",
+                  "version":"2021.05.01"
+               }
+            }
+         }
+      }
+   }
+}
 ```
 
 4. From the example above, remove the following lines:
