@@ -33,7 +33,7 @@ You can also choose a specific asset from the graph to see the individual assetâ
 
 If you want to see a detailed 360-degree view, you can expand the table by clicking expand in the right corner of the 360Â° detail View panel.
 
-
+<img src="/spot-security/_media/topology-h.png" />
 
 In addition, if you click Failed Assets on any of the views (such as Security Rules or Compliance), this will give you a list of assets that have failed for that particular risk.
 
