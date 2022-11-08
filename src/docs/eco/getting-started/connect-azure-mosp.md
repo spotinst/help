@@ -6,10 +6,6 @@ This Microsoft Online Subscription Program (MOSP) is in a pay as you go (PAYG) f
 
 This page is relevant to MOSP billing and global administrators.
 
-## Audience
-
-Microsoft Azure MOSP billing administrators and global admins
-
 ## Prerequisites
 
 - The ability to create a user group in Azure Portal.
