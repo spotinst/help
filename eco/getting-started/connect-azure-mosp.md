@@ -1,4 +1,4 @@
-# Connect Your Azure Microsoft Online Subscription Program (PAYG) for Eco Analysis
+# Connect Your Azure MOSP for Eco Analysis
 
 This document describes the process and procedures to enable the Eco Managed Service for Eco reservation management and provide appropriate access to reservation.
 
