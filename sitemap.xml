@@ -645,11 +645,11 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/eco/getting-started/connect-azure-mca-to-eco"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/eco/getting-started/connect-azure-payg-to-eco</loc>
+        <loc>https://docs.spot.io/?/eco/getting-started/connect-azure-mosp</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/eco/getting-started/connect-azure-payg-to-eco"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/eco/getting-started/connect-azure-payg-to-eco"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/eco/getting-started/connect-azure-mosp"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/eco/getting-started/connect-azure-mosp"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/eco/getting-started/connect-your-aws-account</loc>
