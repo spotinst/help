@@ -140,7 +140,7 @@ Ocean provides the flexibility to use different operating systems in a Kubernete
 
 All you need to do is to create a VNG with a Windows AMI and you are all set. (Please note for EKS users, you must use an EKS optimized Windows AMI.) For Windows workloads, the Autoscaler automatically launches nodes only from dedicated VNGs. This means that there is no need to set any specific label on the VNG, unless you have multiple VNGs and you wish to ensure the workload runs on a specific VNG.
 
-### AKS Support for Max Pods Configuration
+## AKS Support for Max Pods Configuration
 
 There is a default configuration in AKS of maximum pods that can be scheduled on each node and this default number of pods can be adjusted.
 
