@@ -39,7 +39,7 @@ In addition, if you click Failed Assets on any of the views (such as Security Ru
 
 <img src="/spot-security/_media/topology-e.png" />
 
-Clicking on the individual asset names will take you to the View Risk Details page of that asset. You can also see the steps to remediate that risk of that particular asset on that page.
+Clicking on an individual asset name enables you to [view the risk details](spot-security/features/analyze-risks/view-risk-details) of that asset. You can also see the steps to remediate the risk of that particular asset.
 
 ## Create a Service Map
 
@@ -81,4 +81,4 @@ You can also create a new service map from this view.
 <img src="/spot-security/_media/topology-d.png" />
 
 ## What’s Next?
-Learn more about the [Events](spot-security/features/events) page, that provides information about all the events in your network.
+View more information about all of the [events](spot-security/features/events) in your network.
