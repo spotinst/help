@@ -2934,6 +2934,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean/tutorials/spot-kubernetes-controller/update-controller"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/ocean/tutorials/upgrade-kubernetes-eks</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean/tutorials/upgrade-kubernetes-eks"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean/tutorials/upgrade-kubernetes-eks"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/ocean/tutorials/use-right-sizing</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
