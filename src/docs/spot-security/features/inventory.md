@@ -18,7 +18,7 @@ The summary line at the top provides the following information:
 * Medium Risk: Total number of assets associated with medium risks detected. Click the link to view the list of medium-risk assets.
 * Low Risk: Total number of assets associated with low risks detected. Click the link to view the list of low-risk assets.
 
-<img src="/spot-security/_media/inventory-a.png" />
+<img src="/spot-security/_media/inventory-a1.png" />
 
 ## Assets by Service
 This line graph shows the number of assets in your cloud system over time. You can choose the time frames of one day, one week, or two weeks. The lines also show the number of assets with alerts and the number of assets with no alerts on each time segment.
