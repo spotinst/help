@@ -28,7 +28,7 @@ The large tile at the top provides your main security stats:
 
 You can use the filters at the top to focus only on the information you need. Once you have set the filters, you can save them as [Presets](spot-security/features/security-dashboard/create-preset) for quick access to your customized view of the dashboard. You can create presets based on the AWS accounts, regions, or asset types that you are responsible for.
 
-<img src="/spot-security/_media/spot-security-dashboard-b.png" />
+<img src="/spot-security/_media/spot-security-dashboard-b1.png" />
 
 ### Highest Impact Recommendations
 
@@ -43,7 +43,7 @@ When you click Remediate Risk Now, Spot Security provides guided remediation act
 
 This tile shows the most prevalent alerts detected in your environment. The default view shows the top three alerts. Click the arrow to see the other important alerts.
 
-<img src="/spot-security/_media/spot-security-dashboard-d.png" />
+<img src="/spot-security/_media/spot-security-dashboard-d1.png" />
 
 ## View Trends
 
