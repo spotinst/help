@@ -29,7 +29,7 @@ This chart shows the risks for each event type over specific time ranges. Filter
 
 The All Events tab provides a list of events based on the time range or preset you defined. In addition, you can use the filters that appear in the table.
 
-<img src="/spot-security/_media/events-b.png" />
+<img src="/spot-security/_media/events-b1.png" />
 
 For each event, you can see the:
 * Event Name
