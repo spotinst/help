@@ -57,7 +57,7 @@ This is a bar graph showing your top ten accounts by cost. The graph is based on
 
 The Spend Analysis chart and table provide a breakdown of your organization's costs. These tools help you govern your organizational, account, departmental or project costs by providing a detailed view of the historical and current costs.
 
- **Note**: Data will only be shown from the start date of the billing file. In most cases that means the first day the CUR is generated, but for Eco Reports it may mean first day the modifed CUR is generated. If you need more, retroactive data, please submit a support ticket.
+ >**Tip**: Data will only be shown from the start date of the billing file. In most cases that means the first day the CUR is generated, but for Eco Reports it may mean first day the modifed CUR is generated. If you need more, retroactive data, please submit a support ticket.
 
 <img src="/cloud-analyzer/_media/tutorials-analyze-costs-04a.png" />
 
