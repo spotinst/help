@@ -20,7 +20,7 @@ The summary line at the top provides the following information:
 
 <img src="/spot-security/_media/inventory-a1.png" />
 
-## Assets by Service
+## Asset Types
 This line graph shows the number of assets in your cloud system over time. You can choose the time frames of one day, one week, or two weeks. The lines also show the number of assets with alerts and the number of assets with no alerts on each time segment.
 
 <img src="/spot-security/_media/inventory-b.png" />
