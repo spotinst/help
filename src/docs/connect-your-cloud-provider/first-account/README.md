@@ -44,6 +44,7 @@ When you connect manually, you use your provider’s console (AWS) to choose the
 <img src="/connect-your-cloud-provider/_media/connect-your-first-cloud-account-0051.png" width="500" />
 
 Please see the [detailed procedures for connecting manually](connect-your-cloud-provider/first-account/aws-manually).                                                                                                                                             
+
 #### Management Account
 
 Connection to a management account is required to use Eco. A management account will enable Spot to analyze your cost and usage reports and help you save even more on your cloud expenses.
@@ -55,18 +56,19 @@ Connection to a management account is required to use Eco. A management account 
 
 A linked account is an “ordinary” Spot account you use for optimizing cost and usage by using spot instances and taking advantage of numerous Spot features. You need a Linked Account to use Elastigroup or Ocean.
 
-For GCP, there is currently no option to link a management account, so by default you start directly in the wizard to connect a linked account.
-
-#### Connect Manually
-When you connect manually, you use your provider’s console (GCP) to choose the policy and role and to associate the two. For GCP, this is a quick option and we recommend choosing Manually.
-
-<img src="/connect-your-cloud-provider/_media/connect-your-first-cloud-account-006.png" width="500" />
-
-Please see the detailed procedures for connecting manually.
+For GCP, there is currently no option to connect the Cloud Billing account, so by default you start directly in the wizard to connect a project.
 
 #### Connect Automatically
 
 This option automatically chooses a policy and a role and associates the two for you. To connect automatically with GCP, you must have gcloud with permissions to create a service account.
+
+#### Connect Manually
+
+When you connect manually, you use your provider’s console (GCP) to choose the policy and role and to associate the two. For GCP, this is a quick option and we recommend choosing Manually.
+
+<img src="/connect-your-cloud-provider/_media/connect-your-first-cloud-account-006.png" width="500" />
+
+Please see the [detailed procedures for connecting manually](connect-your-cloud-provider/first-account/gcp-manually).
 
 ### Connect Azure
 #### Linked Account

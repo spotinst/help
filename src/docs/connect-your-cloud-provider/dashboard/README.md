@@ -90,4 +90,4 @@ Use this chart to see how well you saved each month. For each month, you see a c
 
 ## What’s Next?
 
-Learn about specific actions you can take on the [Optimization](connect-your-cloud-provider/optimize) page to further optimize your cloud cost and usage.
+Learn about specific actions you can take on the [Optimization](connect-your-cloud-provider/dashboard/optimize) page to further optimize your cloud cost and usage.

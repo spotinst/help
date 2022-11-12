@@ -22,5 +22,12 @@ Spot extends your Continuous Integration/Continuous Deployment (CI/CD) pipeline 
 
 ## Get Started
 
-- Connect your cloud provider account to Spot: [AWS](connect-your-cloud-provider/aws-account), [Azure](connect-your-cloud-provider/azure-account), [GCP](connect-your-cloud-provider/gcp-project).
-- Get started with Spot: [Cloud Analyzer](/cloud-analyzer/), [Elastigroup](/elastigroup/) for VMs, [Ocean](/ocean/) for Kubernetes.
+- Connect your cloud provider to Spot: 
+  - [AWS](connect-your-cloud-provider/first-account/?id=connect-aws)
+  - [Azure](connect-your-cloud-provider/first-account/?id=connect-azure)
+  - [GCP](connect-your-cloud-provider/first-account/?id=connect-gcp).
+- Get started with Spot: 
+  - [Overview Dashboard](connect-your-cloud-provider/dashboard/)
+  - [Elastigroup](/elastigroup/) for VMs
+  - [Ocean](/ocean/) for Kubernetes
+  - [Eco](/eco/) for managed commitments
