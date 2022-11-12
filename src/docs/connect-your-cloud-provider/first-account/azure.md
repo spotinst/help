@@ -92,5 +92,6 @@ Once the validation is complete, your Azure subscription will be connected and r
 
 ## What’s Next?
 
+- Learn how you can use Spot Insights & Recommendations in the [Dashboard](connect-your-cloud-provider/dashboard) and understand your Savings Potential analysis with immediate steps you can take.
 - [Create your first Elastigroup](elastigroup/getting-started/create-an-elastigroup-for-azure).
 - Learn how to [import existing Azure resources](elastigroup/tutorials-azure/getting-started/import-an-existing-azure-resource) such as a Scale Set, an Application Gateway, a Classic Load Balancer or a VM.
