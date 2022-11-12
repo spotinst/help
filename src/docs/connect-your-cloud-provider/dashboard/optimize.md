@@ -18,7 +18,7 @@ You can use the filters to choose where you want to focus your optimization anal
 
 - Product: Choose Elastigroup, Ocean or Eco. The default view is Elastigroup.
   - If you choose Ocean or Elastigroup, continue reading below about the Accounts filter, the Summary line, and Workloads.
-  - If you choose Eco, [skip down](connect-your-cloud-provider/optimize?id=eco) the page for further information.
+  - If you choose Eco, [skip down](connect-your-cloud-provider/dashboard/optimize?id=eco) the page for further information.
 - Accounts: Select one or multiple accounts. You can also analyze across all accounts.
 
 ## Summary Line
@@ -80,4 +80,4 @@ Once you have a Strategy, you will be directed to the Eco Optimization page.
 
 ## What’s Next?
 
-Learn more about Spot’s [cost analysis](cloud-analyzer/tutorials/analyze-your-costs) of your cloud resources.
+Learn more about Spot’s [cost analysis](connect-your-cloud-provider/dashboard/cost-analysis/) of your cloud resources.

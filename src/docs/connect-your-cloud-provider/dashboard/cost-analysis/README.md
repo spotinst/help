@@ -6,7 +6,7 @@ The Cost Analysis page provides insights on past, current, and future cloud cost
 
 If you have [Subsets](eco/tutorials/manage-subsets.md) enabled, the top of the Cost Analysis page will appear as shown below.
 
-<img src="/cloud-analyzer/_media/tutorials-analyze-costs-00.png" />
+<img src="/connect-your-cloud-provider/_media/tutorials-analyze-costs-00.png" />
 
 - To see analysis information for all accounts in your organization, leave the default setting as No Subsets. This view will not contain any billing workflows you may have associated with subsets.
 - To see the analysis for a specific subset of accounts, click the Subsets box and choose a subset from the list. All of the information in the page will apply specifically to the subset you chose. If a billing workflow has been associated with the subset, the data shown will contain the relevant adjustments.
@@ -24,7 +24,7 @@ The Cost Analysis includes the following areas:
 
 ## Summary Line
 
-<img src="/cloud-analyzer/_media/tutorials-analyze-costs-01.png" />
+<img src="/connect-your-cloud-provider/_media/tutorials-analyze-costs-01.png" />
 
 The Summary Line is at the top of the page and includes:
 
@@ -34,7 +34,7 @@ The Summary Line is at the top of the page and includes:
 
 ## Top Account Spend Efficiency
 
-<img src="/cloud-analyzer/_media/tutorials-analyze-costs-02.png" width="495" height="301" />
+<img src="/connect-your-cloud-provider/_media/tutorials-analyze-costs-02.png" width="495" height="301" />
 
 The top 10 accounts in your organization are listed according to the greatest amount of Estimated Additional Savings (shown in US dollars).
 
@@ -51,13 +51,13 @@ You can take the following actions to further optimize your accounts:
 
 This is a bar graph showing your top ten accounts by cost. The graph is based on the last 30 days of spend activity.
 
-<img src="/cloud-analyzer/_media/tutorials-analyze-costs-03.png" width="495" height="392" />
+<img src="/connect-your-cloud-provider/_media/tutorials-analyze-costs-03.png" width="495" height="392" />
 
 ## Spend Analysis
 
 The Spend Analysis chart and table provide a breakdown of your organization's costs. These tools help you govern your organizational, account, departmental or project costs by providing a detailed view of the historical, current, and projected costs.
 
-<img src="/cloud-analyzer/_media/tutorials-analyze-costs-04.png" />
+<img src="/connect-your-cloud-provider/_media/tutorials-analyze-costs-04.png" />
 
 The chart and table show the cost breakdown for each of the following:
 
