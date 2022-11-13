@@ -8,7 +8,7 @@ To access the notification policies, do the following:
 
 1. In the upper right, click on the User icon, and then click My Account in the menu.
 
-<img src="/administration/_media/notifications-event-policies-001.png" />
+<img src="/administration/_media/notifications-event-policies-001.png" width="400" />
 
 2. In the top center, click Notification Center.
 3. In the left menu, click Event Policies. The Event Policies dashboard appears.
