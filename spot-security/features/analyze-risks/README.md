@@ -21,7 +21,7 @@ Clicking on a specific risk level will open the rules and specify the category o
 
 Spot Security has a library of over 150 security rules that they assess over twelve different asset types including EC2, S3 buckets, IAM groups, etc.
 
-<img src="/spot-security/_media/risk-analysis-b.png" />
+<img src="/spot-security/_media/risk-analysis-b1.png" />
 
 The example above shows the expanded list of high risks. You can filter the list by risk score, by recommended remediation effort (advanced or low), services and/or by risk status (open, remediated or new).
 Expanding on any of the security rules gives you the list of assets which are at risk because of that security rule. Clicking on any of the assets will give the user further information of the asset.
