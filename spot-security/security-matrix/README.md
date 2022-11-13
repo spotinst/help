@@ -3,6 +3,7 @@
 ## Supported AWS Asset Types:
 
 |  |  |
+|---|---|
 |  Config   |  IAM (Identity and Access Management)   |
 |  CloudTrail   |  KMS (Key Management Service)  |
 |  CloudWatch   |  RDS (Relational Database Service) |
