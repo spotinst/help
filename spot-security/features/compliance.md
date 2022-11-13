@@ -31,7 +31,7 @@ The graph shows only the selected favorite standards.
 
 ### Compliance Standard Details
 
-Clicking each standard will take you to a new standard compliance overview page. The percentage under the compliance bar shows how compliant the asset is to the standard.
+Clicking each standard will take you to a new standard compliance overview page. The percentage under the compliance bar shows how compliant the asset is to the standard. To see the security rules click on Control ID or Control Description.
 
 <img src="/spot-security/_media/spot-security-compliance3.png" />
 
