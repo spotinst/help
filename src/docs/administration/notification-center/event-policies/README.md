@@ -15,7 +15,8 @@ To access the event policies, do the following:
 
 <img src="/administration/_media/notifications-event-policies-001.png" />
 
-2. In the left menu, click Event Policies. The Event Policies dashboard appears.
+2. In the top center, click Notification Center.
+3. In the left menu, click Event Policies. The Event Policies dashboard appears.
 
 ## Event Policies Dashboard
 
