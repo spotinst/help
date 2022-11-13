@@ -20,7 +20,7 @@ Spot Security classifies the events into the following categories:
 * Anomalies
 * Audit and Compliance Impact
 
-<img src="/spot-security/_media/events-a.png" />
+<img src="/spot-security/_media/events-a1.png" />
 
 ### Risks per Event Type Over Time
 This chart shows the risks for each event type over specific time ranges. Filters apply for all events in the asset and you can select filters for specific time ranges.
