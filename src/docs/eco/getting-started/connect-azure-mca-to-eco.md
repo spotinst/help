@@ -58,12 +58,12 @@ Apply the Reservation Reader Role to the User Group created earlier.
 ### Step 4. Invite Eco Cost Specialist Guest Users to the User Group
 
 1. Navigate to Users.
-2. Select New Guest User and complete the required fields. You will do this once for each user. You will use the following names and email addresses:
+2. Select New Guest User and complete the required fields. You will do this once for each user. You will use the following names and e-mail addresses:
 
 |  |  |
 |---|---|
 |  Tanner Harvey   |  TannerH@netapp.com   |
-|  Brett McCulloch   |  Mccullob@netapp.com    |
+|  Cody Conway   |  Cody.Conway@netapp.com   |
 |  Mimi Bao   |  Bmimi@netapp.com   |
 
 3. For the first user, click Invite. This sends a notification to the Eco guest user via email.
