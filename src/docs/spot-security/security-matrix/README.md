@@ -1,6 +1,6 @@
 # Spot Security Support Matrix
 
-**Supported AWS Asset Types**:
+## Supported AWS Asset Types:
 
 |  |  |
 |---|---|
@@ -11,7 +11,7 @@
 |  ELB (Elastic Load Balancing)   |  SNS (Simple Notification Service)   |
 |  ELBv2 (Elastic Load Balancing V2)   |  VPC (Virtual Private Cloud)   |
 
-**Supported Azure Asset Types (Upcoming)**:
+## Supported Azure Asset Types (Upcoming):
 
 |  |  |
 |---|---|
@@ -22,7 +22,7 @@
 |  Key Vaults   |  Virtual Networks   |
 |  Load Balancers   |     |
 
-**Supported Compliance Standards**:
+## Supported Compliance Standards:
 
 |  |  |
 |---|---|
