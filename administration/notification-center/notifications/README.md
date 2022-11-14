@@ -18,7 +18,7 @@ Click a message preview to view and [read the full message](administration/notif
 
 A blue dot on the right indicates unread notifications. When you hover the cursor over the three dots on the top right of the preview panel, you can choose to mark all as read or to go to the Notification Policies page, where you define the types of notifications you receive.
 
-<img src="/administration/_media/message-notifications-03.png" />
+<img src="/administration/_media/message-notifications-03.png" width="350" />
 
 ## Notification Types
 
@@ -34,7 +34,7 @@ In addition to a title and the first line of the notification, a preview can inc
 - Notification menu: Hover the cursor over the top right of the notification to see the three dots, and click the three dots to menu.
 - Flag
 
-<img src="/administration/_media/message-notifications-04.png" />
+<img src="/administration/_media/message-notifications-04.png" width="400"/>
 
 ## What’s Next?
 
