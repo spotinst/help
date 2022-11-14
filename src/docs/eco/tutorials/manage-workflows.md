@@ -87,7 +87,7 @@ You may charge the full on-demand price in place of Savings Plan discounts. See 
 
 ### Remove credits and/or refunds:
 
-There are a variety of financial benefits from working with AWS which a business may opt to share with their end customers or retain as margin. 
+There are a variety of financial benefits from working with AWS which a business may opt to share with their end customers or retain as margin.
 
 - EDP
 - Data Egress Waiver
@@ -143,6 +143,8 @@ You may choose to share the cost of Eco RI or savings plan-related savings with 
 The percentage option allows you to add a charge proportionate to the overall savings provided by Eco. You may enter the exact same percentage as your contract with Spot, or you may enter a different percentage depending on your business model. It is possible for an account to appear in the report, but if no Eco-generated savings is attributed to it, then no Eco fee will be attributed to it.
 
 The Flat Fee option allows you to add a fee to each subset or account. The fee will be the same each month.
+
+The Distributed Eco option allows you to distribute the fee evenly across accounts based on usage. From this option, you may choose Estimate or Spot Billing Cycle Actuals. Estimate will distribute the fee based on a tentative estimate of the usage, while Spot Billing Cycle Actuals will leverage data from the previous month to distribute the fee accordingly.
 
 ## What’s Next?
 
