@@ -11,7 +11,7 @@ The Spot console provides a robust and flexible tool for configuring and managin
 
 To access the event policies, do the following:
 
-1. In the upper right of the Spot console, click on the User icon, and then click My Account in the menu.
+1. In the upper right of the Spot console, click the User icon, and then click My Account in the menu.
 
 <img src="/administration/_media/notifications-event-policies-001.png" width="400" />
 

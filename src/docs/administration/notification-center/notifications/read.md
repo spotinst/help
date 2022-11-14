@@ -1,6 +1,6 @@
 # Read Notifications
 
-You can access and read all of your notifications on a single page. The Notifications page shows your Spot messages and event notifications. In addition, you can see a list of news items about Spot from the spot.io blog.
+You can access and read all of your notifications on a single page. The Notifications page shows your Spot messages and event notifications. In addition, you can see a list of news items about Spot from the [spot.io blog](https://spot.io/news/).
 
 <img src="/administration/_media/read-messages-01.png" />
 
@@ -16,7 +16,7 @@ There are a few ways to get to the Notifications page.
 
 2. In the list of notification previews that drops down, click a notification. The Notifications page opens showing the full message of the preview you clicked.
 
-<img src="/administration/_media/read-messages-03.png" />
+<img src="/administration/_media/read-messages-03.png" width="380" />
 
 ## From the user menu
 
@@ -26,7 +26,7 @@ There are a few ways to get to the Notifications page.
 
 2. In the User menu, click Settings.
 
-<img src="/administration/_media/read-messages-05.png" />
+<img src="/administration/_media/read-messages-05.png" width="200" />
 
 3. Click Notification Center and then Notifications in the left sidebar.
 
@@ -56,7 +56,7 @@ There are several options for filtering notifications.
 
 The What’s New column on the right lists the last six articles on the spot.io blog. When you click one of these, the corresponding blog page on spot.io opens. When you click View All, you are directed to the main blog page where you have access to all the blog topics.
 
-<img src="/administration/_media/read-messages-08.png" />
+<img src="/administration/_media/read-messages-08.png" width="280" />
 
 ## What’s Next?
 
