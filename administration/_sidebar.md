@@ -18,6 +18,8 @@
     - [Set up Payment Method](administration/organizations/configure-payment-details)
     - [Billing Details](administration/organizations/billing-details)
   - [Notification Center](administration/notification-center/)
+    - [Notifications](administration/notification-center/notifications/
+      - [Event Policies](administration/notification-center/notifications/read
     - [Event Policies](administration/notification-center/event-policies/)
       - [Create a Policy](administration/notification-center/event-policies/create)
       - [Edit a Policy](administration/notification-center/event-policies/edit)
