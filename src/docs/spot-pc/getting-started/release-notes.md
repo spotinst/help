@@ -1,5 +1,30 @@
 # Spot PC: Release Notes
 
+## 11/17/2022
+_When:_ 11/17/2022 at 10pm - 11pm Eastern
+
+_Impact:_ Access to desktops and application services for End Users will remain uninterrupted. Access to Spot PC console will remain available.
+
+* Admin Invitation Expiration
+  * Spot PC now has an expiration policy of 15 days for Admin Invitations. After the expiry date, new invites can be sent within the UI by hitting resend.  
+* Spot Group Details View Update: Image Set Details 
+  * Spot PC has introduced a new section, Image Sets Detail, on the Spot Group Detail View Page. The Image Sets Detail includes a history of image sets including past, current and scheduled. 
+* Security Alerts & Recommendations Improvements
+  * Security Alerts and Recommendations has improved navigation for filtered lists. When searching a severity or phrase, cycling through items of that search is now supported. To go back to filtered list, there's a back button. 
+* New Tooltips
+  * Spot PC has new tooltips: 
+    1. Domain Name Tooltip: In Connect to Spot PC to your AD Domain with Onboarding, a tooltip to explain the source of the dropdown names and when to provide a manual input name has been added.  
+    2. Connectivity Type Tooltip: In user logon activity, a tooltip has added to clarify between new and existing sessions. 
+* UI Enhancements
+  * Spot PC has added a plethora of UI Enhancements throughout: 
+    1. Config Actions has new icons for actions with a white background. 
+    2. Quick Actions has a blue background with new icons for actions. 
+    3. Log View now has all the queries inline, and refreshes with new selections.  
+    4. In Admin Roles, the checkbox color for permissions is now blue.
+    5. Performance improvements when retrieving spot groups list and image setlist
+* Machine Detail View Update: OS Disk 
+  * Spot PC has added OS Disk in the Machine Detail View. OS Disk value shows the used space and size of the disk with the units. 
+
 ## 11/3/2022
 _When:_ 11/3/2022 at 10pm - 11pm Eastern
 
