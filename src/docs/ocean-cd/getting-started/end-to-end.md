@@ -132,13 +132,15 @@ Now that your SpotDeployment and services were created, the remaining step is to
 
 ## Step 4: Create Verification
 
-This step focuses on the creation of the Verification Provider and Verification Template. These entities allow you to insert any data analysis you require during the running of your deployments from any of our supported monitoring tools.
+This step focuses on the creation of the verification provider and verification template. These entities allow you to insert any data analysis you require during the running of your deployments from any of our supported monitoring tools.
 
 ### Install Prometheus
 
-Prometheus is a monitoring tool that is capable of collecting and storing measurements as time-series data.
+Prometheus is a monitoring tool that collects and stores measurements as time-series data.
 
-_For demo purposes, the Prometheus monitoring tool will be used. The procedure below describes how to set Prometheus in your cluster. If it is already installed, you can skip to the creation of the verification provider entity itself._
+_For demo purposes, the Prometheus monitoring tool will be used._
+
+The procedure below describes how to set Prometheus in your cluster. If it is already installed, you can skip to the creation of the verification provider entity itself.
 
 1. Run the following command to deploy Prometheus:
 
@@ -146,12 +148,14 @@ _For demo purposes, the Prometheus monitoring tool will be used. The procedure b
 
 `helm repo add prometheus-community https://prometheus-community.github.io/helm-charts`
 
-`helm install prometheus prometheus-community/prometheus \
+```
+helm install prometheus prometheus-community/prometheus \
     --namespace prometheus \
     --set alertmanager.persistentVolume.storageClass="gp2" \
-    --set server.persistentVolume.storageClass="gp2"`
+    --set server.persistentVolume.storageClass="gp2"
+```
 
-2. Make note of the Prometheus endpoint in helm response (this will be needed later) which will be as follows:
+2. Make note of the Prometheus endpoint in helm response (this will be needed later) as follows:
 
 The Prometheus server can be accessed via port 80 on the following DNS name from within your cluster:
 
