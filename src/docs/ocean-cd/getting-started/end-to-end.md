@@ -248,8 +248,6 @@ prometheus:
 
 * Insert the clusterID you chose during the operator installation.
 
-* Make sure the Prometheus address is correct. If you have followed the Prometheus installation, the address should be configured well.
-
 6. Run the command via CLI in your terminal:
 
 `oceancd apply -f <VP Yaml>`
