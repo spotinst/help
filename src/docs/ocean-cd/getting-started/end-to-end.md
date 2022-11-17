@@ -136,11 +136,9 @@ This step focuses on the creation of the verification provider and verification 
 
 ### Install Prometheus
 
-Prometheus is a monitoring tool that collects and stores measurements as time-series data.
+The procedure below describes how to set Prometheus in your cluster. Prometheus is a monitoring tool that collects and stores measurements as time-series data. If it is already installed, you can skip to the creation of the verification provider entity itself. 
 
 _For demo purposes, the Prometheus monitoring tool will be used._
-
-The procedure below describes how to set Prometheus in your cluster. If it is already installed, you can skip to the creation of the verification provider entity itself.
 
 1. Run the following command to deploy Prometheus:
 
