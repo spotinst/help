@@ -6,7 +6,9 @@ This procedure describes how to install the operator, create services and Spot D
 
 * Run Kubernetes cluster in Azure, Google, or Amazon
 * OceanCD’s [CLI](https://github.com/spotinst/spot-oceancd-cli#installation) tool is installed. If you do not have it installed already, you can run the following command to install it:
+
 `brew install spotinst/tap/oceancd`
+
 * If you are using permit lists or tools like OPA, please permit the following images:
   - docker.io/spotinst/spot-oceancd-operator:$VERSION
   - docker.io/spotinst/spot-oceancd-operator-catalog:latest
@@ -96,9 +98,8 @@ To trigger the OceanCD engine, you will be required to use our CRD called SpotDe
 
 1. Copy and run the following YAML file on your computer:
 
-apiVersion: `spot.io/v1beta1`
-
 ```yaml
+apiVersion: `spot.io/v1beta1`
 kind: SpotDeployment
 metadata:
   name: nginx-deployment
@@ -136,15 +137,19 @@ This step focuses on the creation of the verification provider and verification 
 
 ### Install Prometheus
 
-The procedure below describes how to set Prometheus in your cluster. Prometheus is a monitoring tool that collects and stores measurements as time-series data. If it is already installed, you can skip to the creation of the verification provider entity itself. 
+The procedure below describes how to set Prometheus in your cluster. Prometheus is a monitoring tool that collects and stores measurements as time-series data. If it is already installed, you can skip to the creation of the verification provider entity itself.
 
 _For demo purposes, the Prometheus monitoring tool will be used._
 
 1. Run the following command to deploy Prometheus:
 
-`kubectl create namespace prometheus`
+```
+kubectl create namespace prometheus
+```
 
-`helm repo add prometheus-community https://prometheus-community.github.io/helm-charts`
+```
+helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+```
 
 ```
 helm install prometheus prometheus-community/prometheus \
@@ -165,7 +170,6 @@ Prometheus- server.prometheus.svc.cluster.local
 
 4. The following response appears. All of the pods should be ready and available.
 
-```
 NAME                                                 READY   STATUS    RESTARTS   AGE
 
 pod/prometheus-alertmanager-868f8db8c4-67j2x         2/2     Running   0          78s
@@ -181,9 +185,8 @@ pod/prometheus-node-exporter-vcbjq                   1/1     Running   0        
 pod/prometheus-pushgateway-759689fbc6-hvjjm          1/1     Running   0          78s
 
 pod/prometheus-server-546c64d959-qxbzd               2/2     Running   0          78s
-```
 
-```
+
 NAME                                    TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)    AGE
 
 service/prometheus-alertmanager         ClusterIP   10.100.38.47     <none>        80/TCP     78s
@@ -195,15 +198,16 @@ service/prometheus-node-exporter        ClusterIP   None             <none>     
 service/prometheus-pushgateway          ClusterIP   10.100.150.237   <none>        9091/TCP   78s
 
 service/prometheus-server               ClusterIP   10.100.209.224   <none>        80/TCP     78s
-```
 
-```
-NAME                                      DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE   NODE SELECTOR   AGE
+
+NAME                                      DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE   NODE
+
+SELECTOR   AGE
 
 daemonset.apps/prometheus-node-exporter   3         3         3       3            3           <none>          78s
-```
 
-```NAME                                            READY   UP-TO-DATE   AVAILABLE   AGE
+
+NAME                                            READY   UP-TO-DATE   AVAILABLE   AGE
 
 deployment.apps/prometheus-alertmanager         1/1     1            1           78s
 
@@ -212,9 +216,8 @@ deployment.apps/prometheus-kube-state-metrics   1/1     1            1          
 deployment.apps/prometheus-pushgateway          1/1     1            1           78s
 
 deployment.apps/prometheus-server               1/1     1            1           78s
-```
 
-```
+
 NAME                                                       DESIRED   CURRENT   READY   AGE
 
 replicaset.apps/prometheus-alertmanager-868f8db8c4         1         1         1       78s
@@ -224,11 +227,10 @@ replicaset.apps/prometheus-kube-state-metrics-6df5d44568   1         1         1
 replicaset.apps/prometheus-pushgateway-759689fbc6          1         1         1       78s
 
 replicaset.apps/prometheus-server-546c64d959               1         1         1       78s
-```
+
 
 5. When Prometheus is installed, you can create the verification provider. Set your credentials by copying and running the following YAML file on your computer:
 
-apiVersion: `spot.io/v1beta1`
 
 ```yaml
 kind: "VerificationProvider"
@@ -239,14 +241,14 @@ prometheus:
   address: "http://prometheus-server.prometheus.svc.cluster.local:80"
 ```
 
-**Note**: If you did not follow the tutorial, the naming convention of the address should be:  
+**Note**:
+
+* If you did not follow the tutorial, the naming convention of the address should be:  
 `<svc name>.<ns name>.svc.cluster.local:portnumber`
 
->**Tip**:  
+* Insert the clusterID you chose during the operator installation.
 
->**1. Insert the clusterID you chose during the operator installation.**
-
->**2. Make sure the Prometheus address is correct. If you have followed the Prometheus installation, the address should be well configured.**
+* Make sure the Prometheus address is correct. If you have followed the Prometheus installation, the address should be configured well.
 
 6. Run the command via CLI in your terminal:
 
@@ -271,6 +273,7 @@ metrics:
 ```
 
 8. Run the command via CLI in your terminal:
+
 `oceancd apply -f <VT Yaml> `
 
 ## Step 5: Create a Strategy
