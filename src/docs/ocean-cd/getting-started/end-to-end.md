@@ -26,12 +26,12 @@ _For demo purposes, the YAML method will be provided via the console._
 
 2. Complete the information:
 * Cluster Identifier: This is a logical identifier for your cluster. You can choose any ID, and it is not coupled to the Ocean cluster ID (o-xxxxxx). Ocean CD can run on clusters that are not managed by Ocean. The cluster ID must be unique, have up to 30 alphanumeric characters, and not contain spaces.
-* Argo Rollout Installation: Ocean CD uses Argo rollouts as part of its engine. If Argo rollout is not installed, Ocean CD will install it (based on the selected option).
+* Argo Rollout Installation: Ocean CD uses Argo rollouts as part of its engine. If Argo Rollout is not installed, Ocean CD will install it (based on the selected option).
 
 3. Download the YAML and apply it to your Kubernetes cluster.
 `kubectl apply -f <Name of the YAML>`
 
-**If this is not specified in the command, the operator will be installed in the oceancd namespace.**
+**If this is not specified in the command, the operator will be installed in the Ocean CD namespace.**
 
 When the process is complete and the operator pods are running, your cluster will automatically appear in the Cluster Settings section.
 
