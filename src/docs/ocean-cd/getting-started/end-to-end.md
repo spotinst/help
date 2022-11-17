@@ -1,18 +1,12 @@
 # End-to-End Setup
 
-This procedure provides a description of how to install the operator, create services and migrate your workloads with Ocean CD. You will be provided with an end-to-end  description of the flow in order to successfully perform your very first rollout using the Spot console.
+This procedure describes how to install the operator, create services and Spot Deployments as well as your Ocean CD entities.  This procedure provides end-to-end insights of the OceanCD flow you will perform in order to successfully trigger your very first deployment.   
 
 ## Prerequisites
 
-* Install OLM:
-
-  Run the command:
-
-  `curl -sL https://github.com/operator-framework/operator-lifecycle-manager/releases/download/v0.20.0/install.sh | bash -s v0.20.0`
 * Run Kubernetes cluster in Azure, Google, or Amazon
-* Required level of permissions:
-  - Admin on Spot Console
-  - Approval to trigger a change in your deployment via your CI tool
+* OceanCD’s [CLI](https://github.com/spotinst/spot-oceancd-cli#installation) tool is installed. If you do not have it installed already, you can run the following command to install it:
+`brew install spotinst/tap/oceancd`
 * If you are using permit lists or tools like OPA, please permit the following images:
   - docker.io/spotinst/spot-oceancd-operator:$VERSION
   - docker.io/spotinst/spot-oceancd-operator-catalog:latest
@@ -22,7 +16,7 @@ This procedure provides a description of how to install the operator, create ser
 
 ## Step 1: Install the Operator
 
-You need to install the operator in order to provide access to your cluster workload to Ocean CD.
+Install the operator in order to provide access to your cluster workload to Ocean CD.  
 
 _For demo purposes, the YAML method will be provided via the console._
 
@@ -34,15 +28,10 @@ _For demo purposes, the YAML method will be provided via the console._
 * Cluster Identifier: This is a logical identifier for your cluster. You can choose any ID, and it is not coupled to the Ocean cluster ID (o-xxxxxx). Ocean CD can run on clusters that are not managed by Ocean. The cluster ID must be unique, have up to 30 alphanumeric characters, and not contain spaces.
 * Argo Rollout Installation: Ocean CD uses Argo rollouts as part of its engine. If Argo rollout is not installed, Ocean CD will install it (based on the selected option).
 
-<img src="/ocean-cd/_media/getting-started-n02a.png" width="500" />
+3. Download the YAML and apply it to your Kubernetes cluster.
+`kubectl apply -f <Name of the YAML>`
 
-> **Tip**: The YAML is the provided default method.
-
-3. Download the YAML and apply it into your kubernetes cluster.
-kubectl apply -f <Name of the YAML>                 
-If it is not specified in the command, the operator will be installed in the oceancd namespace. You can change it by running these commands:
-          `kubectl create ns demo`
-          `kubectl apply -f <Name of the YAML> -n demo`
+**If this is not specified in the command, the operator will be installed in the oceancd namespace.**
 
 When the process is complete and the operator pods are running, your cluster will automatically appear in the Cluster Settings section.
 
@@ -50,198 +39,308 @@ When the process is complete and the operator pods are running, your cluster wil
 
 > **Tip**: Once you have downloaded the YAML, the new row will remain with partial information for five minutes. If five minutes elapsed and the YAML was not applied, the row and the banner will be removed. However, the YAML can still be applied at another time, and the Ocean CD will display the new data accordingly.
 
-The Ocean CD operator is now installed in your kubernetes cluster. In the next steps you will migrate your deployments to be managed by Ocean CD SaaS. You can find all of the existing deployments on the Workloads page and the Workload Migration wizard.  
+Once the OceanCD operator is installed you can create your Kubernetes entities: Services & SpotDeployment.   
 
-## Step 2: Create Services
+## Step 2: Create a Namespace and Services
 
-You will create the Canary and Stable services to expose and manage the traffic split between the canary and the stable replicasets.
+Create a namespace in order to make sure all of the following Kubernetes entities you will create will be found in the same namespace.
 
-_For demo purposes, there will be no use of a traffic manager. Copy the services template provided in our [Github Repository](https://github.com/spotinst/spot-oceancd-releases/tree/main/Quick%20Start%20%26%20Examples):_
+1. Run the following command:
 
-Stable
+`kubectl create ns oceancd-workshop`
 
-<img src="/ocean-cd/_media/getting-started-09.png" width="250" />
+When a namespace is created, you will create the canary and stable services to expose and manage the traffic split between the canary and the stable replicasets.   
 
-Canary
+_For demo purposes, there will be no use of a traffic manager._
 
-<img src="/ocean-cd/_media/getting-started-10.png" width="250" />
+2. Copy and run the following YAML file on your computer:
 
-> **Note**: It is critical to apply the services into the same namespace as your SpotDeployment namespace.
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: rollouts-demo-stable
+  namespace: oceancd-workshop
+spec:
+  selector:
+    app: nginx
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080`
+```
+---
 
-Run the following command for applying the services:
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: rollouts-demo-canary
+  namespace: oceancd-workshop
+spec:
+  selector:
+    app: nginx
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+```
 
-`kubectl apply -f <Service YAML> -n demo`
+3. Copy and run the following command in your cluster :
 
-## Step 3: Verification Creation (Optional)
+      `kubectl apply -f <Service YAML>`   
 
-Now that you have successfully created your services, you will be required to create the verifications template and provider which will be used as part of your rollout.
+## Step 3: Create a SpotDeployment
 
-By creating such templates, you will be allowed to insert any data analysis you wish on either a background level or on a phase level.
+To trigger the OceanCD engine, you will be required to use our CRD called SpotDeployment.
 
-Although this is an optional step, as a rollout may run without any verifications, it is very easy to set them u. All you have to do is to apply the templates via API
+1. Copy and run the following YAML file on your computer:
 
-1. Verification template: The verification template is a verification key entity which associates your arguments, queries as well as the monitoring tool of your choice. Such entity is reusable and can be used and maintained over multiple services and clusters
+apiVersion: `spot.io/v1beta1`
 
-Command:
-`POST https://api.spotinst.io/ocean/cd/verificationTemplate`
+```yaml
+kind: SpotDeployment
+metadata:
+  name: nginx-deployment
+  namespace: oceancd-workshop
+  labels:
+    app: nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: public.ecr.aws/nginx/nginx:1.22
+        ports:
+        - containerPort: 8080
+```
 
-Below is an example of the verification template.
+**The difference between a deployment and a SpotDeployment is the API version and kind.**
+
+2. Copy and run the following command in your cluster:  
+
+`kubectl apply -f <SpotDeployment YAML>`  
+
+Now that your SpotDeployment and services were created, the remaining step is to create the OceanCD entities. These will act as the rules for your canary deployment to follow.
+
+## Step 4: Create Verification
+
+This step focuses on the creation of the Verification Provider and Verification Template. These entities allow you to insert any data analysis you require during the running of your deployments from any of our supported monitoring tools.
+
+### Install Prometheus
+
+Prometheus is a monitoring tool that is capable of collecting and storing measurements as time-series data.
+
+_For demo purposes, the Prometheus monitoring tool will be used. The procedure below describes how to set Prometheus in your cluster. If it is already installed, you can skip to the creation of the verification provider entity itself._
+
+1. Run the following command to deploy Prometheus:
+
+`kubectl create namespace prometheus`
+
+`helm repo add prometheus-community https://prometheus-community.github.io/helm-charts`
+
+`helm install prometheus prometheus-community/prometheus \
+    --namespace prometheus \
+    --set alertmanager.persistentVolume.storageClass="gp2" \
+    --set server.persistentVolume.storageClass="gp2"`
+
+2. Make note of the Prometheus endpoint in helm response (this will be needed later) which will be as follows:
+
+The Prometheus server can be accessed via port 80 on the following DNS name from within your cluster:
+
+Prometheus- server.prometheus.svc.cluster.local
+
+3. This DNS name for the verification provider template will soon be updated. Validate that the Prometheus components are deployed as expected by running the following command:
+
+`kubectl get all -n prometheus`
+
+4. The following response appears. All of the pods should be ready and available.
+
+`NAME                                                 READY   STATUS    RESTARTS   AGE
+
+pod/prometheus-alertmanager-868f8db8c4-67j2x         2/2     Running   0          78s
+
+pod/prometheus-kube-state-metrics-6df5d44568-c4tkn   1/1     Running   0          78s
+
+pod/prometheus-node-exporter-dh6f4                   1/1     Running   0          78s
+
+pod/prometheus-node-exporter-v8rd8                   1/1     Running   0          78s
+
+pod/prometheus-node-exporter-vcbjq                   1/1     Running   0          78s
+
+pod/prometheus-pushgateway-759689fbc6-hvjjm          1/1     Running   0          78s
+
+pod/prometheus-server-546c64d959-qxbzd               2/2     Running   0          78s`
+
+
+`NAME                                    TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)    AGE
+
+service/prometheus-alertmanager         ClusterIP   10.100.38.47     <none>        80/TCP     78s
+
+service/prometheus-kube-state-metrics   ClusterIP   10.100.165.139   <none>        8080/TCP   78s
+
+service/prometheus-node-exporter        ClusterIP   None             <none>        9100/TCP   78s
+
+service/prometheus-pushgateway          ClusterIP   10.100.150.237   <none>        9091/TCP   78s
+
+service/prometheus-server               ClusterIP   10.100.209.224   <none>        80/TCP     78s`
+
+
+`NAME                                      DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE   NODE SELECTOR   AGE
+
+daemonset.apps/prometheus-node-exporter   3         3         3       3            3           <none>          78s`
+
+
+`NAME                                            READY   UP-TO-DATE   AVAILABLE   AGE
+
+deployment.apps/prometheus-alertmanager         1/1     1            1           78s
+
+deployment.apps/prometheus-kube-state-metrics   1/1     1            1           78s
+
+deployment.apps/prometheus-pushgateway          1/1     1            1           78s
+
+deployment.apps/prometheus-server               1/1     1            1           78s`
+
+
+`NAME                                                       DESIRED   CURRENT   READY   AGE
+
+replicaset.apps/prometheus-alertmanager-868f8db8c4         1         1         1       78s
+
+replicaset.apps/prometheus-kube-state-metrics-6df5d44568   1         1         1       78s
+
+replicaset.apps/prometheus-pushgateway-759689fbc6          1         1         1       78s
+
+replicaset.apps/prometheus-server-546c64d959               1         1         1       78s`
+
+5. When Prometheus is installed, you can create the verification provider. Set your credentials by copying and running the following YAML file on your computer:
+
+apiVersion: `spot.io/v1beta1`
+
+```yaml
+kind: "VerificationProvider"
+name: "prometheus-vp"
+clusterIds:
+  - "cluster-name"
+prometheus:
+  address: "http://prometheus-server.prometheus.svc.cluster.local:80"
+```
+
+**Note**: If you did not follow the tutorial, the naming convention of the address should be:  
+`<svc name>.<ns name>.svc.cluster.local:portnumber`
+
+>**Tip**:  
+
+>**1. Insert the clusterID you chose during the operator installation.**
+
+>**2. Make sure the Prometheus address is correct. If you have followed the Prometheus installation, the address should be well configured.**
+
+6. Run the command via CLI in your terminal:
+
+`oceancd apply -f <VP Yaml>`
+
+The verification template entity allows you to build in the query you want to apply to your monitoring tool. In addition to the query, it is also a configuration of a set of rules that the verifications will follow to determine whether a metric failed or was successful.  
+
+7. Copy and run the following YAML file on your computer:
 
 ```yaml
 kind: verificationTemplate
-name: My-first-verification
-args:
-- name: My-argument
+name: oceancd-workshop-vt
 metrics:
 - name: My-first-metric
- interval: 5m
- initialDelay: 1m
- count: 10
- successCondition: result[0] <= 0.95
- failureCondition: result[0] >= 1.2
- failureLimit: 0
- inconclusiveLimit: 0
- consecutiveErrorLimit: 0
- provider:
-   prometheus:
-     query: My-query
-```
-​
-The attributes of the verification template are described in the [Entities](ocean-cd/concepts-features/entities?id=verification-template) page.
-
-2. Verification provider: The Ocean CD verification provider includes the credentials of the monitoring tool as well as the clusterID, for which you will make use of the credentials.
-
-Command:
-`POST https://api.spotinst.io/ocean/cd/verificationProvider`
-
-Only one of each provider type can be set per cluster.
-
-```yaml
-kind: verificationProvider
-name: My-verification-provider
-clusterIds:
-- cluster-name
-datadog:
- address: address-name
- apiKey: apiKey-Credentials
- appKey: appKey-Credentials
+  interval: 5s
+  count: 10
+  failureCondition: result[0] >= 100
+  failureLimit: 5
+  provider:
+    prometheus:
+      query: sum(container_cpu_usage_seconds_total{namespace="oceancd-workshop"})
 ```
 
-The attributes of the verification provider are described in the [Entities](ocean-cd/concepts-features/entities?id=verification-provider) page.
+8. Run the command via CLI in your terminal:
+`oceancd apply -f <VT Yaml> `
 
-## Step 4: Migrate Workloads
+## Step 5: Create a Strategy
 
-In this step you will migrate the chosen deployments to Spot deployments as well as create the necessary entities for the triggering of your rollouts.
+With this entity, you can set the rules of your canary deployment. This entity also enables you to configure pre-defined pauses, as well as the traffic percentage and any verifications created above you might need.
 
-_For demo purposes, the workload migration wizard in the console will be used._
+1. Copy and run the following YAML file on your computer:
 
-1. Go to Spot’s [Github Repository](https://github.com/spotinst/spot-oceancd-releases/blob/main/Quick%20Start%20%26%20Examples/Deployment.yaml) and copy the deployment template provided.
-
-<img src="/ocean-cd/_media/getting-started-11.png" width="250" />
-
-2. Apply the deployment into your kubernetes cluster. Once applied, your deployment will instantly be displayed in the Workload Table in the UI.
-
-3. Run the command:
-
-  `kubectl apply -f <Deployment YAML> -n demo`		
-
-4. In the workloads table in the Workloads page, you will see when the deployment is mapped into the table.
-
-5. Hover over the deployment’s name, and click Migrate.
-
-<img src="/ocean-cd/_media/getting-started-15.png" />
-
-6. The Workload Migration Flow provides an overview of the migration steps. Click Let’s Get Started.
-
-<img src="/ocean-cd/_media/getting-started-n06a.png" />
-
-7. Migrate your deployment into your SpotDeployment.
-
-<img src="/ocean-cd/_media/getting-started-n061.png" />
-
-8. Run the command:
-
-  `kubectl apply -f <SpotDeployment YAML> -n demo`
-
-9. Set the strategy.
-
-Optional: To edit the provided template and create the strategy, click Next.
-
-<img src="/ocean-cd/_media/getting-started-n08a.png" />
-
-10. Click Next. Ocean CD will automatically create the entity. There is no need for manual input.
-
-### Strategy example
+apiVersion: `spot.io/v1beta1`
 
 ```yaml
 kind: Strategy
-name: Strategy-OceanCD
-canary:
- backgroundVerification:
-   templateNames:
-   - My-first-verification
- steps:
- - name: My-first-phase
-   setWeight: 20
-   verification:
-     templateNames:
-     - My-first-verification
-   pause:
-     duration: 5m
- - name: My-second-phase
-   setWeight: 80
-   verification:
-     templateNames:
-     - My-first-verification
-   pause: {}
+name: "oceancd-workshop"
+canary:  
+  backgroundVerification:  
+    templateNames:  
+      - "oceancd-workshop-vt"
+  steps:  
+    - name: "My-first-phase"
+      setWeight: 20
+      verification:  
+        templateNames:  
+          - "oceancd-workshop-vt"
+    - name: "second-phase"
+      setWeight: 40
+      verification:  
+        templateNames:  
+          - "oceancd-workshop-vt"
+    - name: "third-phase"
+      setWeight: 80
+      verification:  
+        templateNames:  
+          - "oceancd-workshop-vt"
+      pause:  
+        duration: 1m
 ```
 
-The attributes of a strategy are described in the [Entities](ocean-cd/concepts-features/entities?id=strategy) page.
+2. Run the command via CLI in your terminal:
 
-### Edit and Create the RolloutSpec
+`oceancd apply -f <Strategy Yaml>`
 
-Ocean CD Rollout spec connects the SpotDeployment, the desired strategy, traffic, and failure policy.
+## Step 6: Create a RolloutSpec
 
-<img src="/ocean-cd/_media/getting-started-n09a.png" />
+This entity acts as the bridge between the OceanCD entities that were previously set up (verifications and strategy) and the Kubernetes entities created in the previous steps (services and SpotDeployment).
 
-1. Enter your SpotDeployment Name.
-2. Enter your spotDeployment Namespace. Only the ClusterID and the Strategy Name will be auto-filled. OceanCD will automatically create the entity. There is no need for manual input.
+1. Copy and run the following YAML file on your computer:
 
-### Attributes of the RolloutSpec
-
-RolloutSpec example
+apiVersion: `spot.io/v1beta1`
 
 ```yaml
 kind: RolloutSpec
-name: service-rolloutspec
-spotDeployment:
- clusterId: string
- namespace: string
- name: string
-strategy:
- name: service-rolloutspec
- args:
- - name: app
-   value: service
-   valueFrom:
-     fieldRef:
-       fieldPath: metadata.labels['app']
-traffic:
- canaryService: canary
- stableService: stable
-failurePolicy:
+name: "OceanCD-Rolloutspec-1"
+spotDeployment:  
+ clusterId: "oceancd-demo"
+ namespace: "oceancd-workshop"
+ name: "nginx-deployment"
+strategy:  
+ name: "oceancd-workshop"
+traffic:  
+ canaryService: "rollouts-demo-canary"
+ stableService: "rollouts-demo-stable"
+failurePolicy:  
  action: abort
 ```
 
-The attributes of the rolloutSpec in the [Entities](ocean-cd/concepts-features/entities?id=rolloutspec) page.
+2. Run the command via CLI in your terminal:
 
-## Step 5: Trigger a Rollout
+`oceancd apply -f <RolloutSpec Yaml>`
 
-Now that the process is complete, you can change the pod spec template such as the image in your SpotDeployment YAML and run the following command:
+##  Step 7: Trigger a Rollout
 
-`kubectl apply -f <SpotDeployment YAML> -n demo`
+Now that everything is installed, you can trigger your very first rollout. Change the pod spec template such as the image in your SpotDeployment yaml and run the following command:
 
-At this point, a new Canary rollout will be automatically initiated in the All Rollouts table. By clicking Rollout ID, you can go to the detailed rollout page to view and take action from the console.
+`kubectl apply -f <SpotDeployment YAML>`
+
+A new Canary rollout will be automatically initiated in the All Rollouts table. Click the Rollout ID of your deployment to view the detailed rollout page and take action from the console.
+
 
 ## What’s Next?
 - Learn how to migrate your workload via [API or CLI](ocean-cd/getting-started/migrate-using-api).
