@@ -25,7 +25,7 @@ The Affected Resources list can be found under the Impact Map. The list of affec
 
 The Presets list presents the presets that an asset is a part of.
 
-<img src="/spot-security/_media/view-risk-details-b.png" />
+<img src="/spot-security/_media/view-risk-details-c.png" />
 
 ## What’s Next?
 
