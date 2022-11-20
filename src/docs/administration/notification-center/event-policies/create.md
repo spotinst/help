@@ -77,7 +77,7 @@ Each condition contains the following:
 
 Any new resources added to the account that match the defined criteria will automatically be included in the monitoring.
 
-## Manual Resources
+### Manual Resources
 
 When you choose Manual Resources, you then select from a list of existing resources. Only those resources will be monitored for notifications. Any new resources added to the account in the future will not be included unless you edit the policy and add them to the monitoring list.
 
