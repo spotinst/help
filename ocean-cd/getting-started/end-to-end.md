@@ -168,68 +168,7 @@ Prometheus- server.prometheus.svc.cluster.local
 
 `kubectl get all -n prometheus`
 
-4. The following response appears. All of the pods should be ready and available.
-
-NAME                                                 READY   STATUS    RESTARTS   AGE
-
-pod/prometheus-alertmanager-868f8db8c4-67j2x         2/2     Running   0          78s
-
-pod/prometheus-kube-state-metrics-6df5d44568-c4tkn   1/1     Running   0          78s
-
-pod/prometheus-node-exporter-dh6f4                   1/1     Running   0          78s
-
-pod/prometheus-node-exporter-v8rd8                   1/1     Running   0          78s
-
-pod/prometheus-node-exporter-vcbjq                   1/1     Running   0          78s
-
-pod/prometheus-pushgateway-759689fbc6-hvjjm          1/1     Running   0          78s
-
-pod/prometheus-server-546c64d959-qxbzd               2/2     Running   0          78s
-
-
-NAME                                    TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)    AGE
-
-service/prometheus-alertmanager         ClusterIP   10.100.38.47     <none>        80/TCP     78s
-
-service/prometheus-kube-state-metrics   ClusterIP   10.100.165.139   <none>        8080/TCP   78s
-
-service/prometheus-node-exporter        ClusterIP   None             <none>        9100/TCP   78s
-
-service/prometheus-pushgateway          ClusterIP   10.100.150.237   <none>        9091/TCP   78s
-
-service/prometheus-server               ClusterIP   10.100.209.224   <none>        80/TCP     78s
-
-
-NAME                                      DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE   NODE
-
-SELECTOR   AGE
-
-daemonset.apps/prometheus-node-exporter   3         3         3       3            3           <none>          78s
-
-
-NAME                                            READY   UP-TO-DATE   AVAILABLE   AGE
-
-deployment.apps/prometheus-alertmanager         1/1     1            1           78s
-
-deployment.apps/prometheus-kube-state-metrics   1/1     1            1           78s
-
-deployment.apps/prometheus-pushgateway          1/1     1            1           78s
-
-deployment.apps/prometheus-server               1/1     1            1           78s
-
-
-NAME                                                       DESIRED   CURRENT   READY   AGE
-
-replicaset.apps/prometheus-alertmanager-868f8db8c4         1         1         1       78s
-
-replicaset.apps/prometheus-kube-state-metrics-6df5d44568   1         1         1       78s
-
-replicaset.apps/prometheus-pushgateway-759689fbc6          1         1         1       78s
-
-replicaset.apps/prometheus-server-546c64d959               1         1         1       78s
-
-
-5. When Prometheus is installed, you can create the verification provider. Set your credentials by copying and running the following YAML file on your computer:
+4. When Prometheus is installed, you can create the verification provider. Set your credentials by copying and running the following YAML file on your computer:
 
 
 ```yaml
@@ -248,13 +187,13 @@ prometheus:
 
 * Insert the clusterID you chose during the operator installation.
 
-6. Run the command via CLI in your terminal:
+5. Run the command via CLI in your terminal:
 
 `oceancd apply -f <VP Yaml>`
 
 The verification template entity allows you to build in the query you want to apply to your monitoring tool. In addition to the query, it is also a configuration of a set of rules that the verifications will follow to determine whether a metric failed or was successful.  
 
-7. Copy and run the following YAML file on your computer:
+6. Copy and run the following YAML file on your computer:
 
 ```yaml
 kind: verificationTemplate
@@ -270,7 +209,7 @@ metrics:
       query: sum(container_cpu_usage_seconds_total{namespace="oceancd-workshop"})
 ```
 
-8. Run the command via CLI in your terminal:
+7. Run the command via CLI in your terminal:
 
 `oceancd apply -f <VT Yaml> `
 
@@ -279,8 +218,6 @@ metrics:
 With this entity, you can set the rules of your canary deployment. This entity also enables you to configure pre-defined pauses, as well as the traffic percentage and any verifications created above you might need.
 
 1. Copy and run the following YAML file on your computer:
-
-apiVersion: `spot.io/v1beta1`
 
 ```yaml
 kind: Strategy
@@ -318,8 +255,6 @@ canary:
 This entity acts as the bridge between the OceanCD entities that were previously set up (verifications and strategy) and the Kubernetes entities created in the previous steps (services and SpotDeployment).
 
 1. Copy and run the following YAML file on your computer:
-
-apiVersion: `spot.io/v1beta1`
 
 ```yaml
 kind: RolloutSpec
