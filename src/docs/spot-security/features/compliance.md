@@ -17,7 +17,7 @@ You can export the data of the compliance to an Excel sheet.
 
 Hovering over a specific line that represents a global security standard shows the percentage of the compliance of the global security standard.
 
-<img src="/spot-security/_media/spot-security-compliance1.png" />
+<img src="/spot-security/_media/spot-security-compliance4.png" />
 
 ## Compliance Standards
 
@@ -42,6 +42,8 @@ The overview page lists the controls that the compliance defines. The security r
 * Compliance Status
 
 To see the status of the assets and the rules associated with them, click a Control ID.
+
+<img src="/spot-security/_media/spot-security-compliance5.png" />
 
 To remediate an asset, click a Control ID, a drop down menu opens and you can see the remediation. The security remediation can be done from the [Compliance](spot-security/features/compliance) page and any changes that were made will appear in the [Risk Analysis](spot-security/features/analyze-risks/) page as well.
 
