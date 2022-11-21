@@ -99,7 +99,7 @@ To trigger the OceanCD engine, you will be required to use our CRD called SpotDe
 1. Copy and run the following YAML file on your computer:
 
 ```yaml
-apiVersion: `spot.io/v1beta1`
+apiVersion: spot.io/v1beta1
 kind: SpotDeployment
 metadata:
   name: nginx-deployment
@@ -168,8 +168,7 @@ Prometheus- server.prometheus.svc.cluster.local
 
 `kubectl get all -n prometheus`
 
-4. When Prometheus is installed, you can create the verification provider. Set your credentials by copying and running the following YAML file on your computer:
-
+4. When Prometheus is installed, you can create the verification provider. Set your credentials by copying the following YAML file on your computer:
 
 ```yaml
 kind: "VerificationProvider"
@@ -196,13 +195,13 @@ The verification template entity allows you to build in the query you want to ap
 6. Copy and run the following YAML file on your computer:
 
 ```yaml
-kind: verificationTemplate
-name: oceancd-workshop-vt
+kind: "verificationTemplate"
+name: "oceancd-workshop-vt"
 metrics:
-- name: My-first-metric
+- name: "My-first-metric"
   interval: 5s
   count: 10
-  failureCondition: result[0] >= 100
+  failureCondition: "result[0] >= 100"
   failureLimit: 5
   provider:
     prometheus:
@@ -220,7 +219,7 @@ With this entity, you can set the rules of your canary deployment. This entity a
 1. Copy and run the following YAML file on your computer:
 
 ```yaml
-kind: Strategy
+kind: "Strategy"
 name: "oceancd-workshop"
 canary:  
   backgroundVerification:  
@@ -257,10 +256,10 @@ This entity acts as the bridge between the OceanCD entities that were previously
 1. Copy and run the following YAML file on your computer:
 
 ```yaml
-kind: RolloutSpec
+kind: "RolloutSpec"
 name: "OceanCD-Rolloutspec-1"
 spotDeployment:  
- clusterId: "oceancd-demo"
+ clusterId: "cluster-name"
  namespace: "oceancd-workshop"
  name: "nginx-deployment"
 strategy:  
@@ -269,8 +268,10 @@ traffic:
  canaryService: "rollouts-demo-canary"
  stableService: "rollouts-demo-stable"
 failurePolicy:  
- action: abort
+ action: "abort"
 ```
+
+**Insert the clusterID you chose during the operator installation.**
 
 2. Run the command via CLI in your terminal:
 
@@ -286,5 +287,4 @@ A new Canary rollout will be automatically initiated in the All Rollouts table. 
 
 
 ## What’s Next?
-- Learn how to migrate your workload via [API or CLI](ocean-cd/getting-started/migrate-using-api).
 - Learn about viewing the [list of rollouts](ocean-cd/tutorials/view-rollouts/) and the information provided in the [detailed rollout](ocean-cd/tutorials/view-rollouts/detailed-rollout) page.
