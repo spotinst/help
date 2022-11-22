@@ -2787,6 +2787,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean/tools-and-integrations/prometheus/"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/ocean/tools-and-integrations/prometheus/scrape-test</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean/tools-and-integrations/prometheus/scrape-test"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean/tools-and-integrations/prometheus/scrape-test"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/ocean/tools-and-integrations/prometheus/scrape</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
