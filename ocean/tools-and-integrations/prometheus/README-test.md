@@ -1,6 +1,6 @@
-# Prometheus for Kubernetes Data-Plane Monitoring 
+# Prometheus for Kubernetes Data-Plane Monitoring
 
-Ocean manages the scaling of the Kubernetes data-plane and the data generated  in the process could be valuable for monitoring your containerized environment.  Using well-defined Prometheus metrics for monitoring Ocean can accelerate your understanding of the cluster scaling and debugging of issues that may come up. In addition, you could build alerts based on the metrics to address issues in real time and track important trends on a dashboard of different Ocean metrics.  
+Ocean manages the scaling of the Kubernetes data-plane and the data generated  in the process could be valuable for monitoring your containerized environment.  Using well-defined Prometheus metrics for monitoring Ocean can accelerate your understanding of the cluster scaling and debugging of issues that may come up. In addition, you can build alerts based on the metrics to address issues in real time and track important trends on a dashboard of different Ocean metrics.  
 
 Ocean maintains an official set of metrics, natively scrapable by Prometheus. This set of metrics helps to build a 360 degree view of the actions Ocean takes, while providing application-driven infrastructure.
 
@@ -14,7 +14,7 @@ This metric tracks the total number of nodes managed by Ocean in the cluster. Th
 
 Prometheus metric type: gauge
 
-Dimensions: `vng_id`, `lifecycle="Spot/OD"`` , `az`, `vm_type`, `ocean_name`, `vng_name`, `ocean_id`
+Dimensions: `vng_id`, `lifecycle="Spot/OD"` , `az`, `vm_type`, `ocean_name`, `vng_name`, `ocean_id`
 
 Example:  
 ```
