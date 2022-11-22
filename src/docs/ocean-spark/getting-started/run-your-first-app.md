@@ -29,7 +29,7 @@ curl -k -X POST \
           "type": "Scala",
           "sparkVersion": "3.2.0",
           "mainApplicationFile": "local:///opt/spark/examples/jars/examples.jar",
-          "image": "gcr.io/datamechanics/spark:platform-3.2-latest",
+          "image": "gcr.io/ocean-spark/spark:platform-3.2-latest",
           "mainClass": "org.apache.spark.examples.SparkPi",
           "arguments": ["1000"],
           "executor": {
@@ -82,7 +82,7 @@ The API then returns something like:
             "config":{
                "type":"Scala",
                "sparkVersion":"3.2.0",
-               "image":"gcr.io/datamechanics/spark:platform-3.2.0-dm15",
+               "image":"gcr.io/ocean-spark/spark:platform-3.2.0-dm15",
                "mainApplicationFile":"local:///opt/spark/examples/jars/examples.jar",
                "mainClass":"org.apache.spark.examples.SparkPi",
                "arguments":[

@@ -14,10 +14,10 @@ In addition to a version of Spark itself, the `spark:platform` images include co
 
 |                Full Image name                 | Spark Version | Scala Version | Python Version | Hadoop Version |
 | :--------------------------------------------: | :-----------: | :-----------: | :------------: | :------------: |
-| gcr.io/datamechanics/spark:platform-2.4-latest |     2.4.7     |     2.12      |      3.7       |     3.1.0      |
-| gcr.io/datamechanics/spark:platform-3.0-latest |     3.0.3     |     2.12      |      3.8       |     3.2.0      |
-| gcr.io/datamechanics/spark:platform-3.1-latest |     3.1.3     |     2.12      |      3.8       |     3.2.0      |
-| gcr.io/datamechanics/spark:platform-3.2-latest |     3.2.1     |     2.12      |      3.8       |     3.3.1      |
+| gcr.io/ocean-spark/spark:platform-2.4-latest |     2.4.7     |     2.12      |      3.7       |     3.1.0      |
+| gcr.io/ocean-spark/spark:platform-3.0-latest |     3.0.3     |     2.12      |      3.8       |     3.2.0      |
+| gcr.io/ocean-spark/spark:platform-3.1-latest |     3.1.3     |     2.12      |      3.8       |     3.2.0      |
+| gcr.io/ocean-spark/spark:platform-3.2-latest |     3.2.1     |     2.12      |      3.8       |     3.3.1      |
 
 ### How to use those images for your apps and jobs?
 
@@ -28,13 +28,13 @@ When submitting Spark apps on Ocean for Apache Spark, you can:
 
 ### Need another image?
 
-To match different dependencies and version requirements you can find more images in our [Docker registry](https://gcr.io/datamechanics/spark:platform).
+To match different dependencies and version requirements you can find more images in our [Docker registry](https://gcr.io/ocean-spark/spark:platform).
 
 All these dependencies can have different versions. A combination of dependency versions is called a flavor of spark:platform in this page. The image tag indicates the flavor of the image and can be adjusted to fit your needs.Here are two examples of image tags:
 
 ```
-gcr.io/datamechanics/spark:platform-3.2.1-latest
-gcr.io/datamechanics/spark:platform-3.2.1-hadoop-3.3.1-java-8-scala-2.12-python-3.8-latest
+gcr.io/ocean-spark/spark:platform-3.2.1-latest
+gcr.io/ocean-spark/spark:platform-3.2.1-hadoop-3.3.1-java-8-scala-2.12-python-3.8-latest
 ```
 
 ### Need to build your own Image?
@@ -43,7 +43,7 @@ You should use one of the spark:platform images as a base. Once your custom imag
 
 ## Data source connectors
 
-The image tages `gcr.io/datamechanics/spark:platform` supports for the following data sources:
+The image tages `gcr.io/ocean-spark/spark:platform` supports for the following data sources:
 
 - AWS S3 (s3a:// scheme)
 - Google Cloud Storage (gs:// scheme)
@@ -71,13 +71,13 @@ The versions of those connectors depend on the versions of Spark and Hadoop. Her
 To check these versions, you may also run the image locally and list the JARs in /opt/spark/jars/:
 
 ```
-$ docker run -ti gcr.io/datamechanics/spark:platform-3.1-latest ls -1 /opt/spark/jars | grep delta
+$ docker run -ti gcr.io/ocean-spark/spark:platform-3.1-latest ls -1 /opt/spark/jars | grep delta
 delta-core_2.12-0.7.0.jar
 ```
 
 ## Python support
 
-The image tag `gcr.io/datamechanics/spark:platform` supports Pyspark applications. When [building a custom image](ocean-spark/configure-spark-apps/package-spark-code) or working from a notebook, additional Python packages can be installed with pip or conda.
+The image tag `gcr.io/ocean-spark/spark:platform` supports Pyspark applications. When [building a custom image](ocean-spark/configure-spark-apps/package-spark-code) or working from a notebook, additional Python packages can be installed with pip or conda.
 
 ## Image tags and flavors
 
@@ -91,30 +91,30 @@ Spark Docker images for multiple combinations of the versions of the dependencie
 |   Scala   |        2.11 and 2.12        |
 |  Python   |         2.7 to 3.8          |
 
-Note that not all the combinations in the matrix exist. To list all the flavors for a given image, check out our [Docker registry](https://gcr.io/datamechanics/spark:platform).
+Note that not all the combinations in the matrix exist. To list all the flavors for a given image, check out our [Docker registry](https://gcr.io/ocean-spark/spark:platform).
 
-There are both long-form tags (like `gcr.io/datamechanics/spark:platform-3.1.1-java-8-scala-2.12-hadoop-3.2.0-python-3.8-latest`) where all versions are explicitly listed, as well as short-form tags (like `gcr.io/datamechanics/spark:platform-3.1-latest`).
+There are both long-form tags (like `gcr.io/ocean-spark/spark:platform-3.1.1-java-8-scala-2.12-hadoop-3.2.0-python-3.8-latest`) where all versions are explicitly listed, as well as short-form tags (like `gcr.io/ocean-spark/spark:platform-3.1-latest`).
 
 In most cases, we encourage starting with our short-form tags:
 
-- `gcr.io/datamechanics/spark:platform-3.1.3-latest` contains a Spark 3.1.3 distribution and all other dependencies are set to the latest compatible version. For example, platform-3.1.3-latest contains Hadoop 3.2.0, Python 3.8, Scala 2.12, and Java 11. We reserve the right to upgrade the version of a dependency if a new, compatible version is released. For example, we may upgrade platform-3.1.3-latest to Hadoop 3.3.0 once it is compatible with Spark 3.1.3.
-- `gcr.io/datamechanics/spark:platform-3.1-latest` contains the latest Spark version of the 3.1 minor.
+- `gcr.io/ocean-spark/spark:platform-3.1.3-latest` contains a Spark 3.1.3 distribution and all other dependencies are set to the latest compatible version. For example, platform-3.1.3-latest contains Hadoop 3.2.0, Python 3.8, Scala 2.12, and Java 11. We reserve the right to upgrade the version of a dependency if a new, compatible version is released. For example, we may upgrade platform-3.1.3-latest to Hadoop 3.3.0 once it is compatible with Spark 3.1.3.
+- `gcr.io/ocean-spark/spark:platform-3.1-latest` contains the latest Spark version of the 3.1 minor.
 
 Please use a long-form only if you need a specific combination. For instance, you may require a specific combination of versions when migrating an existing Scala or Java project to Spark on Kubernetes. On the other hand, new JVM projects and Pyspark projects should work fine with short-form tags.
 
 For production workloads:
 
 - We don't recommend using the `-latest` tags. To keep the image stable you should use images with an explicit version suffix like `-dm18` below. The following images are the same:
-  - gcr.io/datamechanics/spark:platform-3.2-dm18
-  - gcr.io/datamechanics/spark:platform-3.2.1-dm18
-  - gcr.io/datamechanics/spark:platform-3.2.1-hadoop-3.3.1-java-8-scala-2.12-python-3.8-dm18
+  - gcr.io/ocean-spark/spark:platform-3.2-dm18
+  - gcr.io/ocean-spark/spark:platform-3.2.1-dm18
+  - gcr.io/ocean-spark/spark:platform-3.2.1-hadoop-3.3.1-java-8-scala-2.12-python-3.8-dm18
 - Long-form tag images without the suffix version can change to the exclusion of the Spark, Hadoop, Java, Scala and Python versions specified in the image tag.
 
 See the release notes below to learn about the changes introduced by each version.
 
 ## Dockerhub repository
 
-These images are also published on a [public Dockerhub repository](https://hub.docker.com/r/datamechanics/spark). It is not recommended to pull images directly from Dockerhub in production (it’s best to use our [GCR](https://gcr.io/datamechanics/spark) repository instead) as free users of DockerHub are subject to rate-limiting.
+These images are also published on a [public Dockerhub repository](https://hub.docker.com/r/ocean-spark/spark). It is not recommended to pull images directly from Dockerhub in production (it’s best to use our [GCR](https://gcr.io/ocean-spark/spark) repository instead) as free users of DockerHub are subject to rate-limiting.
 
 ## Docker image release notes
 
