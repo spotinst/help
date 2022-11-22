@@ -6,14 +6,13 @@ Feature state: Beta
 
 You can use Prometheus to scrape [important Ocean metrics](ocean/tools-and-integrations/prometheus/README). Using a simple exporter, Ocean is able to provide data in [open metrics](https://openmetrics.io/) format for Prometheus to scrape.
 
-The Ocean metrics exporter is a lightweight application that runs in the Kubernetes cluster and continuously scrapes metrical data from the Ocean SaaS. The metrics exporter scrapes every 60 seconds and formats the data for prometheus to scrape.
+The Ocean metrics exporter is a lightweight application that runs in the Kubernetes cluster and continuously scrapes metrical data from the Ocean SaaS. The metrics exporter scrapes every 60 seconds and formats the data for Prometheus to scrape.
 
 Although the exporter application is independent of the Ocean controller, a functioning controller is required for data to stream into Ocean Saas and update the metrics.
 
 ## Prerequisites
 
 * Ocean running in a cluster with a reporting controller
-
 * Prometheus installed in the cluster
 
 ## Install the Exporter
@@ -143,4 +142,3 @@ One popular use of metrics saved in Prometheus is dashboarding. As Grafana is a 
 
 In Ocean, click Roadmap to share feedback and request future metrics.
 Learn more about Ocean's [scaling](ocean/features/scaling-kubernetes) processes.
-   
