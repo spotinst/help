@@ -21,12 +21,12 @@ You must have [Docker](https://www.docker.com/get-started) installed on your mac
 
 For compatibility reasons, you must use one of our published Docker images as a base, then add your dependencies on top. Building an entirely custom Docker image is not supported.
 
-[Docker images](https://gcr.io/datamechanics/spark) are offered by Ocean Spark and documented in the [user documentation](ocean-spark/configure-spark-apps/docker-images).
+[Docker images](https://gcr.io/ocean-spark/spark) are offered by Ocean Spark and documented in the [user documentation](ocean-spark/configure-spark-apps/docker-images).
 
 <details>
   <summary markdown="span">Python</summary>
 
-In this example, the Python project uses the main Docker image offered by Ocean Spark, `spark:platform`. It includes Python support and connectors to popular data sources. The latest image is `gcr.io/datamechanics/spark:platform-3.2.0-latest`.
+In this example, the Python project uses the main Docker image offered by Ocean Spark, `spark:platform`. It includes Python support and connectors to popular data sources. The latest image is `gcr.io/ocean-spark/spark:platform-3.2.0-latest`.
 
 We'll assume your project directory has the following structure:
 
@@ -51,7 +51,7 @@ We'll assume your project directory has the following structure:
 1. Add a file called Dockerfile to the project directory with the following content:
 
 ```
-FROM gcr.io/datamechanics/spark:platform-3.2.0-latest`
+FROM gcr.io/ocean-spark/spark:platform-3.2.0-latest`
 
 COPY requirements.txt .
 RUN pip3 install -r requirements.txt
@@ -79,12 +79,12 @@ where `<args>` are the arguments to be passed to the main script `main.py`.
 
 We'll assume you have assembled your application into a fat or [uber JAR](https://stackoverflow.com/questions/11947037/what-is-an-uber-jar) called `main.jar`.
 
-For this example project, we'll use the main Docker image offered by Ocean for Spark, `spark:platform`. It includes Python support and connectors to popular data sources. The latest image is `gcr.io/datamechanics/spark:platform-3.2.0-latest`.
+For this example project, we'll use the main Docker image offered by Ocean for Spark, `spark:platform`. It includes Python support and connectors to popular data sources. The latest image is `gcr.io/ocean-spark/spark:platform-3.2.0-latest`.
 
 1. Add a file called Dockerfile to the directory where `main.jar` resides:
 
 ```
-FROM gcr.io/datamechanics/spark:platform-3.2.0-latest
+FROM gcr.io/ocean-spark/spark:platform-3.2.0-latest
 
 COPY main.jar .
 ```
@@ -290,7 +290,7 @@ curl -X POST \
      "type": "Scala",
      "sparkVersion": "3.2.0",
      "mainApplicationFile": "s3a://<s3-folder>/<main-jar>.jar",
-     "image": "gcr.io/datamechanics/spark:platform-3.2-latest",
+     "image": "gcr.io/ocean-spark/spark:platform-3.2-latest",
      "deps": {
        "jars": [
          "s3a://<s3-folder>/<dep1>.jar",
