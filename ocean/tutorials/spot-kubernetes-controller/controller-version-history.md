@@ -1,5 +1,14 @@
 # Controller Version History
 
+## [1.0.87] - 2022-11-21
+
+Added
+
+- Java version update to JDK17
+- Update 3rd party libraries versions
+- Added toleration for node-role.kubernetes.io/control-plane
+- Ocean Controller restarts after a Java heap space out of memory error
+
 ## [1.0.86] - 2022-10-11
 
 Added
