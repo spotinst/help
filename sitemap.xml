@@ -813,6 +813,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/eco/tutorials/view-workflow-details"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/eco/tutorials/view-your-savings-tst</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/eco/tutorials/view-your-savings-tst"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/eco/tutorials/view-your-savings-tst"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/eco/tutorials/view-your-savings</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
