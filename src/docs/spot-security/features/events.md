@@ -18,7 +18,7 @@ Spot Security classifies the events into the following categories:
 * Critical Event
 * Data Access
 * Anomalies
-* Audit and Compliance Impact
+* Audit and Compliance Impact- events and risks
 
 <img src="/spot-security/_media/events-a1.png" />
 
@@ -34,19 +34,36 @@ The All Events tab provides a list of events based on the time range or preset y
 For each event, you can see the:
 * Event Name
 * Event Type
-* Resource Name
-* Risks
-* Severity
+* Asset Name
+* Security Rules
+* Severity Level
+* Source IP
+* Region
 * User
+* Session ID
 * Event Time
 * Source
 * Suppress
 
 ## Event Details
-Clicking on an individual event, gives you the following details:
-* Affected Assets: List of all of the assets that are impacted by an event.
-* Security Rules: List of all the security rules which were assessed for determining an event.
-* Event Details: Further information about an event such as event time, user, event name and source, etc.
+Clicking on an individual event, gives you the following information:
+* Event Details: Information about an event such as event time, user, event name and source, etc.
+
+<img src="/spot-security/_media/events-e.png" />
+
+* Asset Details: Information about an asset such as the asset name, cloud details and cloud account name, etc. You will also find information about:
+
+- Security Rules: List of all the security rules which were assessed for determining an event.
+
+- Affected Assets: List of all of the assets that are impacted by an event.
+
+- Historical Events: List of the latest 500 events that occurred in the asset and has at least one failing security rule.
+
+- Session Events: List of the latest 500 events that occurred in the same session as an event and has at least one failing security rule.
+
+Download the CSV option on the right corner of the table to view the latest	100,000 historical and session events.
+
+<img src="/spot-security/_media/events-f1.png" /> 
 
 ### Event Impact Map:
 For each Security Rule, you can see the Event Impact Map to visualize the asset network.
