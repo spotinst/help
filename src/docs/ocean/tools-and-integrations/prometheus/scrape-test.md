@@ -65,16 +65,16 @@ Ocean metrics will be scraped every 60 seconds and saved into Prometheus.
 
 <img src="/ocean/_media/prometheus-scrape-01.png" />
 
-### Configurable Options
+## Configurable Options
 
 You can configure labels, categories and metrics to scrape with the Prometheus exporter [version 1.0.1](https://artifacthub.io/packages/helm/spot/ocean-metric-exporter) and later.
 
-## Categories  
+### Categories  
 
 Each category represents a group of metrics. If the categories are not set - they will all be included by default. The possible categories are:  
 
-*scaling  
-*cost_analysis  
+* scaling  
+* cost_analysis  
 
 ### Metrics  
 
@@ -114,7 +114,9 @@ These labels are the default for all the metrics of scaling and cost analysis. I
 * ocean_id  
 * ocean_name  
 
-#### Scaling Metrics Labels (not relevant for ocean_controller_heartbeat_info)  
+#### Scaling Metrics Labels  
+
+Not relevant to ocean_controller_heartbeat_info.
 
 * vng_id  
 * az  
@@ -129,8 +131,8 @@ These labels are the default for all the metrics of scaling and cost analysis. I
 * namespace  
 * resource_type  
 * resource_name  
-* traffic_type – only for the networking metrics, it value can be ‘internet’, ‘interRegion’, ‘interAZ’, ‘intraAZ’.  
-* direction - only for the networking metrics, it value can be ‘In’ or ‘Out’.  
+* traffic_type – only for the networking metrics. Its value can be ‘internet’, ‘interRegion’, ‘interAZ’, ‘intraAZ’.  
+* direction - only for the networking metrics. Its value can be ‘In’ or ‘Out’.  
 * storage_type – only for the metric ‘ocean_storage_cost’, its value can be ‘pv’, ‘nonPv’, ‘pvEfs’.
 
 ## Grafana Dashboard
