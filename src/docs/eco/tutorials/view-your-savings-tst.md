@@ -37,7 +37,7 @@ A bar graph shows the amount of savings each month broken down by type of saving
 - Eco
 - Non-Eco
 
-<img src="/eco/_media/tutorials-view-savings-2.png" />
+<img src="/eco/_media/tutorials-view-savings-2.png" width="500" height="500" />
 
 It is important to note that RI Volume Discounts may appear in Savings Over Time because they also drive the cost of reservations down. Eco includes these cost reductions in our net savings calculations.
 
@@ -45,9 +45,9 @@ It is important to note that RI Volume Discounts may appear in Savings Over Time
 
 A stacked bar graph showing your reserved instance and savings plan commitment per month broken down into Standard, Convertible, and Pending reservations, plus Compute and EC2 savings plans. Use the toggle switches to include or exclude recurring fees or show up-front fees from an amortized view. Regardless of what data range you select in the date filter, this graph will remain static, looking six months into the past and thirty-six months into the future.
 
-<img src="/eco/_media/tutorials-view-savings-3.png" />
+<img src="/eco/_media/tutorials-view-savings-3.png" width="500" height="500" />
 
-The export from this table provides an amortization report, which breaks down each commitment as a CSV file with the following headers.
+The export from this table provides an amortization report, which breaks down each commitment as a CSV file with the following information.
 
 - Amortized Commitment: The amortized amount for the month. If there was no upfront commitment, this will be zero.
 - ARN: The AWS Resource Name unique to the commitment.
@@ -115,7 +115,7 @@ Additionally, the filter results will display the filter logic used in the filte
 
 ### Display Columns
 
-You can customize the columns that appear in the table. The following column headings are available:
+You can customize the columns in the table. The following information is available:
 
 - Savings type:
   - COMP SP: Compute Savings Plan
