@@ -61,7 +61,7 @@ scrape_configs:
 
     - targets: ['spot-ocean-metric-exporter.kube-system.svc.cluster.local:5050'] #kube-system represents the namespace where the exporter service resides at
 
-Ocean metrics will be scraped every 60 seconds and saved into Prometheus.
+Ocean metrics are scraped every 60 seconds and saved into Prometheus.
 
 <img src="/ocean/_media/prometheus-scrape-01.png" />
 
@@ -106,7 +106,7 @@ For each category you can configure allowed metrics and deny specific metrics. A
 
 ### Labels  
 
-You can configure allow labels and deny labels for the metrics.  Note: In case you set a label as allow and deny – it will be denied.  
+You can configure allow labels and deny labels for the metrics.  Note: If you set a label as allow and deny – it will be denied.  
 
 #### Default Labels  
 These labels are the default for all the metrics of scaling and cost analysis. It is not possible to remove them:
