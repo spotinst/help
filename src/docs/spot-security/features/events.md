@@ -7,7 +7,7 @@ Spot Security strives to reduce the Signal-to-Noise ratio of cloud security even
 To view the Events, go to Spot Security in the left menu of the console and click Events.
 
 ## Event Overview
-You can choose to see the events of a particular cloud account, asset type, or region or view all events altogether. In addition, users can select a time range across which they wish to see the events.
+You can choose to see the events of a particular cloud account, asset type, or region or view all events altogether. In addition, you can choose a time range to view specific events.
 
 You can select a time range to view among two hours, six hours, one day or a custom date and time in the top right corner. The selected time changes the data for the events overview as well as the events trendline.
 
@@ -53,20 +53,20 @@ Clicking on an individual event, gives you the following information:
 
 * Asset Details: Information about an asset such as the asset name, cloud details and cloud account name, etc. You will also find information about:
 
-- Security Rules: List of all the security rules which were assessed for determining an event.
+  - Security Rules: List of all the security rules which were assessed for determining an event.
 
-- Affected Assets: List of all of the assets that are impacted by an event.
+  - Affected Assets: List of all of the assets that are impacted by an event.
 
-- Historical Events: List of the latest 500 events that occurred in the asset and has at least one failing security rule.
+  - Historical Events: List of the latest 500 events that occurred in the asset and has at least one failing security rule.
 
-- Session Events: List of the latest 500 events that occurred in the same session as an event and has at least one failing security rule.
+  - Session Events: List of the latest 500 events that occurred in the same session as an event and has at least one failing security rule.
 
 Download the CSV option on the right corner of the table to view the latest	100,000 historical and session events.
 
-<img src="/spot-security/_media/events-f1.png" /> 
+<img src="/spot-security/_media/events-f1.png" />
 
 ### Event Impact Map:
-For each Security Rule, you can see the Event Impact Map to visualize the asset network.
+For each security rule, you can see the Event Impact Map to visualize the asset network.
 
 <img src="/spot-security/_media/events-c.png" />
 
