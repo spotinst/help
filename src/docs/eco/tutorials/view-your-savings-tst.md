@@ -14,9 +14,9 @@ By default, the dashboard shows data since the first day of your AWS account, fr
 
 You can set the following filters:
 
-- Time: Choose the range of dates for which data will be displayed.
-- Regions: Choose the regions which will be included in the charts and tables.
-- Services: Choose the services which will be included in the charts and tables.
+- **Time**: Choose the range of dates for which data will be displayed.
+- **Regions**: Choose the regions which will be included in the charts and tables.
+- **Services**: Choose the services which will be included in the charts and tables.
 
 ## Summary Line
 
@@ -72,18 +72,18 @@ A filterable table and corresponding chart which allow you to review your commit
 
 <img src="/eco/_media/view-savings-commitment_usage_distro_overtime.png" />
 
-- Account ID: Account number identifier.
-- Commitment ID: Identifier of the Reservation or Savings Plan. The row and ID appear when it fits within the relevant filters.
-- Commitment Type: Standard RI, Convertible RI, Compute Savings Plan, or EC2 Savings Plan.
-- $ Used: The total equivalent cost within the time range multiplied by the utilization.
-  - Example 1: If the time range covered the entire term of the reservation, it was 100% utilized, and the total equivalent cost was $1000, the result would be $1000.
-  - Example 2: If the time range was half the history of the same reservation, it would be $500.
-  - Example 3: If it was only 50% utilized during that period, it would be $250.
-  - Example 4: If the term of the RI is three years and only one year of the period has passed since it was purchased, it would be possible to show only 33.3% of the total equivalent cost in this field, at maximum.
-- % Used: Utilization within that time period.
-- Equivalent OD Price: What the on-demand price would have been during that time period.
-- Generated Savings: How much you saved due to using commitments' discounted rates instead of the full on demand rates. Calculation: On Demand equivalent minus commitments minus uncovered spend. Not necessarily the same as net savings.
-- Source: Eco or Non-Eco.
+- **Account ID**: Account number identifier.
+- **Commitment ID**: Identifier of the Reservation or Savings Plan. The row and ID appear when it fits within the relevant filters.
+- **Commitment Type**: Standard RI, Convertible RI, Compute Savings Plan, or EC2 Savings Plan.
+- **$ Used**: The total equivalent cost within the time range multiplied by the utilization.
+  - **Example 1**: If the time range covered the entire term of the reservation, it was 100% utilized, and the total equivalent cost was $1000, the result would be $1000.
+  - **Example 2**: If the time range was half the history of the same reservation, it would be $500.
+  - **Example 3**: If it was only 50% utilized during that period, it would be $250.
+  - **Example 4**: If the term of the RI is three years and only one year of the period has passed since it was purchased, it would be possible to show only 33.3% of the total equivalent cost in this field, at maximum.
+- **% Used**: Utilization within that time period.
+- **Equivalent OD Price**: What the on-demand price would have been during that time period.
+- **Generated Savings**: How much you saved due to using commitments' discounted rates instead of the full on demand rates. Calculation: On Demand equivalent minus commitments minus uncovered spend. Not necessarily the same as net savings.
+- **Source**: Eco or Non-Eco.
 
 ### Total Active Commitments
 
@@ -117,25 +117,25 @@ Additionally, the filter results will display the filter logic used in the filte
 
 You can customize the columns in the table. The following information is available:
 
-- Savings type:
+- **Savings type**:
   - COMP SP: Compute Savings Plan
   - EC2 SP: EC2 Savings Plan
   - SAGE SP: Sagemaker Savings Plan
   - RI-S: Standard Reserved Instance
   - RI-C: Convertible Reserved Instance
-- Instance type
-- Quantity: The number of instances in the batch.
-- Service
-- Region
-- OS
-- Payment option: Indicates how you have opted to pay for the RIs: All upfront, partial upfront, or no upfront payment.
-- Offering class: Indicates whether the RIs are standard or convertible.
-- Start date: The date on which this batch of RIs was purchased.
-- End date: The date on which this purchase commitment will end.
-- OD cost equivalent: The amount it would cost to use the same resources with on-demand instances.
-- Generated savings: The amount the commitment saved over using strictly on-demand instances.
-- Source: Indicates whether the RIs were purchased by Eco or not.
-- Generated savings: Savings generated due to the use of reservations.
+- **Instance type**
+- **Quantity**: The number of instances in the batch.
+- **Service**
+- **Region**
+- **OS**
+- **Payment option**: Indicates how you have opted to pay for the RIs: All upfront, partial upfront, or no upfront payment.
+- **Offering class**: Indicates whether the RIs are standard or convertible.
+- **Start date**: The date on which this batch of RIs was purchased.
+- **End date**: The date on which this purchase commitment will end.
+- **OD cost equivalent**: The amount it would cost to use the same resources with on-demand instances.
+- **Generated savings**: The amount the commitment saved over using strictly on-demand instances.
+- **Source**: Indicates whether the RIs were purchased by Eco or not.
+- **Generated savings**: Savings generated due to the use of reservations.
 
 ### Export Data
 
