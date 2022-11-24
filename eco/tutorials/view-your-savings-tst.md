@@ -4,7 +4,7 @@ Once Eco has been enabled for your organization and you have chosen your reserve
 
 To view the Eco dashboard in the console, go to Eco on the left side and click Dashboard, then click the AWS tab.
 
-<img src="/eco/_media/tutorials-view-savings-01bda.png" />
+<img src="/eco/_media/view-savings-savings_overtime.png" />
 
 ## Filters
 
@@ -37,7 +37,7 @@ A bar graph shows the amount of savings each month broken down by type of saving
 - Eco
 - Non-Eco
 
-<img src="/eco/_media/tutorials-view-savings-2.png" width="500" height="500" />
+<img src="/eco/_media/view-savings-savings_overtime.png" />
 
 It is important to note that RI Volume Discounts may appear in Savings Over Time because they also drive the cost of reservations down. Eco includes these cost reductions in our net savings calculations.
 
@@ -45,7 +45,7 @@ It is important to note that RI Volume Discounts may appear in Savings Over Time
 
 A stacked bar graph showing your reserved instance and savings plan commitment per month broken down into Standard, Convertible, and Pending reservations, plus Compute and EC2 savings plans. Use the toggle switches to include or exclude recurring fees or show up-front fees from an amortized view. Regardless of what data range you select in the date filter, this graph will remain static, looking six months into the past and thirty-six months into the future.
 
-<img src="/eco/_media/tutorials-view-savings-3.png" width="500" height="500" />
+<img src="/eco/_media/view-savings-monthly_commitment_overtime.png />
 
 The export from this table provides an amortization report, which breaks down each commitment as a CSV file with the following information.
 
@@ -64,13 +64,13 @@ The export from this table provides an amortization report, which breaks down ea
 
 A line graph that breaks down the story of how reservations, savings plan coverage, and commitments relate to your overall savings. The left chart is the simplest, showing the difference between your actual spend and what could have been your costs for reservable services without a savings strategy. On the right, you see the same data, but with your actual spend explained as the combination of commitment cost and uncovered spend. The coverage calculation considers dollars or your investment used instead of hours, which is different from AWS cost explorer. For actual spend, the calculation only considers what is reservable for a service (e.g., Eco only uses the on-demand purchase option, with the Running Hours usage type groups and the Usage charge type).
 
-<img src="/eco/_media/tutorials-view-savings-4.png" />
+<img src="/eco/_media/view-savings-coverage_overtime.png" />
 
 ### Commitment Usage Distribution Over Time
 
 A filterable table and corresponding chart which allow you to review your commitments in a variety of ways. By placing your cursor in the filter field, you will see which parameters can be selected.
 
-<img src="/eco/_media/tutorials-view-savings-5.png" />
+<img src="/eco/_media/view-savings-commitment_usage_distro_overtime.png" />
 
 - Account ID: Account number identifier.
 - Commitment ID: Identifier of the Reservation or Savings Plan. The row and ID appear when it fits within the relevant filters.
@@ -89,13 +89,13 @@ A filterable table and corresponding chart which allow you to review your commit
 
 This chart provides amortized costs (i.e., up-front plus recurring costs) of all active commitments according to the designated filters and views.
 
-<img src="/eco/_media/tutorials-view-savings-6.png" />
+<img src="/eco/_media/view-savings-total_active_commitments.png" />
 
 ## Commitment Details Report
 
 Below the overview graphs and pie charts, you can view detailed information about your reserved instances, including your total generated savings at the bottom of the table.
 
-<img src="/eco/_media/tutorials-view-savings-7.png" />
+<img src="/eco/_media/view-savings-commitment_details.png" />
 
 ### Filter Data
 
@@ -103,15 +103,15 @@ You can filter the data displayed according to several criteria available.
 
 1. Place your cursor in the filter and click a parameter.
 
-<img src="/eco/_media/tutorials-view-savings-8.png" />
+<img src="/eco/_media/view-savings-filter_data_img1.png" />
 
 2. Choose the specific value(s) to be displayed by typing them or selecting from the list.
 
-<img src="/eco/_media/tutorials-view-savings-9.png" />
+<img src="/eco/_media/view-savings-filter_data_img2.png" />
 
 Additionally, the filter results will display the filter logic used in the filter.
 
-<img src="/eco/_media/tutorials-view-savings-10.png" />
+<img src="/eco/_media/view-savings-filter_data_img3.png" />
 
 ### Display Columns
 
