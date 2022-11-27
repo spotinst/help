@@ -25,6 +25,8 @@ Spot Security classifies the events into the following categories:
 ### Risks per Event Type Over Time
 This chart shows the risks for each event type over specific time ranges. Filters apply for all events in the asset and you can select filters for specific time ranges.
 
+<img src="/spot-security/_media/events-i.png" />
+
 ## List of Events
 
 The All Events tab provides a list of events based on the time range or preset you defined. In addition, you can use the filters that appear in the table.
