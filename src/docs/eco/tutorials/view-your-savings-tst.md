@@ -4,7 +4,7 @@ Once Eco has been enabled for your organization and you have chosen your reserve
 
 To view the Eco dashboard in the console, go to Eco on the left side and click Dashboard, then click the AWS tab.
 
-<img src="/eco/_media/view-savings-savings_overtime.png" />
+<img src="/eco/_media/tutorials-view-savings-11.png" />
 
 ## Filters
 
