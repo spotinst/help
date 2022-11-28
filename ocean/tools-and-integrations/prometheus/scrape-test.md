@@ -84,16 +84,16 @@ For each category you can configure allowed metrics and deny specific metrics. A
 
 #### Scaling Metrics  
 
-* ocean_nodes_removed  
-* ocean_nodes_added  
-* ocean_controller_heartbeat_info  
-* ocean_managed_nodes  
-* ocean_allocated_cpu_vcpus  
-* ocean_allocated_memory_gibs  
-* ocean_allocated_gpu_units  
-* ocean_allocated_headroom_vcpus  
-* ocean_allocated_headroom_memory_gibs  
-* ocean_allocated_headroom_gpu_units  
+* ocean_nodes_removed_total  
+* ocean_nodes_added_total  
+* ocean_controller_heartbeat_info_total  
+* ocean_managed_nodes_total  
+* ocean_allocated_cpu_vcpus_total  
+* ocean_allocated_memory_gibs_total  
+* ocean_allocated_gpu_units_total  
+* ocean_allocated_headroom_vcpus_total  
+* ocean_allocated_headroom_memory_gibs_total  
+* ocean_allocated_headroom_gpu_units_total  
 
 #### Cost Analysis Metrics  
 
@@ -106,7 +106,10 @@ For each category you can configure allowed metrics and deny specific metrics. A
 
 ### Labels  
 
-You can configure allow labels and deny labels for the metrics.  Note: If you set a label as allow and deny – it will be denied.  
+You can [configure allow labels and deny labels](ocean/tools-and-integrations/prometheus/README-test)
+for the metrics.  
+
+**If you set a label as allow and deny – it will be denied**.  
 
 #### Default Labels  
 These labels are the default for all the metrics of scaling and cost analysis. It is not possible to remove them:
@@ -116,7 +119,7 @@ These labels are the default for all the metrics of scaling and cost analysis. I
 
 #### Scaling Metrics Labels  
 
-Not relevant to ocean_controller_heartbeat_info.
+Not relevant to ocean_controller_heartbeat_info. For this metric, only use the default labels.
 
 * vng_id  
 * az  
