@@ -74,6 +74,8 @@ Apply the Reservation Reader Role to the User Group created earlier.
 
 ### Step 5. Read Only Access to Enterprise Enrollment Data
 
+**If you do not have access to the EA portal, please follow the instructions in the Azure guide to [add the Enrollment Reader Access in the Azure Portal](https://learn.microsoft.com/en-us/azure/cost-management-billing/manage/direct-ea-administration#add-another-enterprise-administrator)**.
+
 1. Log into https://ea.azure.com/.
 2. In the left Navigation, click Manage.
 3. Within the Enrollment tab, copy the Enrollment Number and set that aside for now.
