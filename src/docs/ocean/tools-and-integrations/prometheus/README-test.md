@@ -31,7 +31,7 @@ These counter type metrics help track the rate of addition and removal of nodes 
 
 Prometheus metric type: counter
 
-Dimensions: `reason` (`VNG_Id, lifecycle="Spot/ ON-DEMAND/ OD(RI)"`, `az`, `vm_type`, `Ocean_Name`, `vng_name`, `ocean_id`, `Node_name` (optional, only for ocean_nodes_removed_total) 
+Dimensions: `reason`, `VNG_Id`, `lifecycle="Spot/ ON-DEMAND/ OD(RI)"`, `az`, `vm_type`, `Ocean_Name`, `vng_name`, `ocean_id`, `Node_name` (optional, only for ocean_nodes_removed_total)
 
 Example:
 ```
