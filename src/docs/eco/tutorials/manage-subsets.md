@@ -32,7 +32,7 @@ For a given organization:
 
 ## View Subset List
 
-To view a list of your subsets and manage them, click Subsets in the left sidebar.
+To view a list of your subsets and manage them, click Reports on the left navigation side bar.
 
 <img src="/eco/_media/tutorials-manage-subsets-04.png" />
 
@@ -70,14 +70,6 @@ The Subset Details page displays the following information:
   - Last month cost: Amount you paid the cloud provider (AWS) for this account in the last full month.
   - MTD cost: Amount you owe the cloud provider for this account from the first of the current month until now.
   - Expected monthly cost: Estimated amount you will owe the cloud provider for this account at the end of the current month.
-  - Actions: Tasks you can perform in the account (described below).
-
-### Actions
-
-The Actions column shows options you can click on to perform a task in the account.
-
-- View details: This action appears if the account is connected to Spot. Click here to see detailed account information in the Compute Overview tab of the [Optimization](cloud-analyzer/tutorials/use-optimization-dashboard/) dashboard.
-- Connect: This action appears if the account is not yet connected to Spot. Click here to connect the account.
 
 ## Delete a Subset
 
