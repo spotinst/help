@@ -20,7 +20,7 @@ For a given organization:
 
 2. Enter a name for the subset and then click Assign Accounts.
 
-<img src="/eco/_media/tutorials-manage-subsets-02a.png" width="534" height="276" />
+<img src="/eco/_media/tutorials-manage-subsets-02a.png" />
 
 3. Mark the accounts to be included in the subset and click Assign.
 
