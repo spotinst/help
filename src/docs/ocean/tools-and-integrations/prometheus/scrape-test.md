@@ -78,7 +78,7 @@ Each category represents a group of metrics. If the categories are not set - the
 
 ### Metrics  
 
-For each category you can configure allowed metrics and deny specific metrics. Allow metrics are the metrics that would be scraped, while the denied metrics would not be scraped.   
+For each category you [can configure allowed metrics and deny specific metrics](ocean/tools-and-integrations/prometheus/README-test). Allow metrics are the metrics that would be scraped, while the denied metrics would not be scraped.   
 
 **If the same metric is in the allow list and deny list – it will be denied.**
 
@@ -106,8 +106,7 @@ For each category you can configure allowed metrics and deny specific metrics. A
 
 ### Labels  
 
-You can [configure allow labels and deny labels](ocean/tools-and-integrations/prometheus/README-test)
-for the metrics.  
+You can configure allow labels and deny labels for the metrics.  
 
 **If you set a label as allow and deny – it will be denied**.  
 

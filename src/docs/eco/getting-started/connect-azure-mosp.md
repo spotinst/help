@@ -61,7 +61,7 @@ Apply the Reservation Reader Role to the User Group created in Step 1.
 |  |  |
 |---|---|
 |  Tanner Harvey   |  TannerH@netapp.com   |
-|  Cody Conway   |  Cody.Conway@netapp.com   |
+|  Cody Conway   |  codyc@netapp.com   |
 |  Mimi Bao   |  Bmimi@netapp.com   |
 
 3. For the first user, click Invite. This sends a notification to the Eco guest user via email.
