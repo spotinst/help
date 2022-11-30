@@ -16,7 +16,7 @@ For a given organization:
 
 1. In the left sidebar, go to Eco/Reports and then click Create new subset.
 
-<img src="/eco/_media/tutorials-manage-subsets-01a.png" width="288" />
+<img src="/eco/_media/tutorials-manage-subsets-01a.png" height="288" />
 
 2. Enter a name for the subset and then click Assign Accounts.
 
