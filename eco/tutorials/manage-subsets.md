@@ -20,11 +20,11 @@ For a given organization:
 
 2. Enter a name for the subset and then click Assign Accounts.
 
-<img src="/eco/_media/tutorials-manage-subsets-02b.png" />
+<img src="/eco/_media/tutorials-manage-subsets-02.png" />
 
 3. Mark the accounts to be included in the subset and click Assign.
 
-<img src="/eco/_media/tutorials-manage-subsets-03.png" width="516" height="280" />
+<img src="/eco/_media/tutorials-manage-subsets-02b.png" />
 
 4. Click Create. The new subset will now be visible in the list on the Subsets page.
 
@@ -34,11 +34,7 @@ For a given organization:
 
 To view a list of your subsets and manage them, click Reports on the left navigation side bar.
 
-<img src="/eco/_media/tutorials-manage-subsets-04.png" />
-
-To customize the columns in the table, click the configuration icon on the right.
-
-<img src="/eco/_media/tutorials-manage-subsets-04a.png" />
+<img src="/eco/_media/tutorials-manage-subsets-04b.png" />
 
 The Subsets page may display the following information:
 
