@@ -12,19 +12,15 @@ For a given organization:
 - A subset can include any of the accounts listed in the CUR file for your organization.
 - An account can belong to one subset only.
 
-## Prerequisites
-
-You must have the Subsets feature enabled. Please contact technical support to submit a request.
-
 ## Create a Subset
 
-1. In the left sidebar, go to Eco/Subsets and then click Create new subset.
+1. In the left sidebar, go to Eco/Reports and then click Create new subset.
 
-<img src="/eco/_media/tutorials-manage-subsets-01.png" />
+<img src="/eco/_media/tutorials-manage-subsets-01a.png" />
 
 2. Enter a name for the subset and then click Assign Accounts.
 
-<img src="/eco/_media/tutorials-manage-subsets-02.png" width="534" height="276" />
+<img src="/eco/_media/tutorials-manage-subsets-02a.png" width="534" height="276" />
 
 3. Mark the accounts to be included in the subset and click Assign.
 
@@ -63,7 +59,7 @@ You can view all the information about a specific subset. To display subset deta
 1. Click Subsets in the left sidebar.
 2. Click the name of a subset.
 
-<img src="/eco/_media/tutorials-manage-subsets-05.png" />
+<img src="/eco/_media/tutorials-manage-subsets-05a.png" />
 
 The Subset Details page displays the following information:
 
