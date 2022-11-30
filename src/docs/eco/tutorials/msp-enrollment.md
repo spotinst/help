@@ -34,7 +34,7 @@ Create your billing workflows as described in [Manage Workflows](eco/tutorials/m
 
 Run reports on existing data sets in a variety of ways with [Workflow details reports](eco/tutorials/view-workflow-details).
 
-## Step 7. Associate Billing Workflows to Subsets
+## Step 7. Associate Billing Workflows to Subsets (Optional)
 
 Once you have validated the billing workflows and are comfortable with them, you may want to us to process the workflows indefinitely and embed them in the Subsets List and Cloud Analyzer.
 
@@ -48,7 +48,7 @@ Once you have validated the billing workflows and are comfortable with them, you
 
 2. Allow us approximately four days for configuration and for the data to refresh.
 
-## Step 8. End-Customer Association
+## Step 8. End-Customer Association (Optional)
 
 1. Begin the process of [setting up your end-customer console](https://console.spotinst.com/spt/auth/signUp) by creating a distinct Spot Organization for each End Customer.
 2. Send a support ticket with the Spot console email and the Spot organization ID. You can locate the organization ID by clicking the User icon in the upper right of the Spot console while logged into the organization, and then click My Organization. In the ticket, please include the following message and information:
