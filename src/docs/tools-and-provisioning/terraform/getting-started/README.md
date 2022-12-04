@@ -4,9 +4,9 @@ Terraform is a tool for building, changing, and versioning infrastructure safely
 
 It is really easy to get started to intengrate Spot by NetApp with Terraform.
 
-For more information reference our official provider [documentation](https://registry.terraform.io/providers/spotinst/spotinst/latest/docs)
+For more information, reference our official provider [documentation](https://registry.terraform.io/providers/spotinst/spotinst/latest/docs).
 
 To get started, you can:
 
-- [Install](tools-and-provisioning/terraform/getting-started/install-terraform)
-- [configure](tools-and-provisioning/terraform/getting-started/configuration) Terraform.
+- [Install](tools-and-provisioning/terraform/getting-started/install-terraform) Terraform.
+- [Configure](tools-and-provisioning/terraform/getting-started/configuration) Terraform.
