@@ -78,7 +78,7 @@ Each category represents a group of metrics. If the categories are not set - the
 
 ### Metrics  
 
-For each category you [can configure allowed metrics and deny specific metrics](ocean/tools-and-integrations/prometheus/README-test). Allow metrics are the metrics that would be scraped, while the denied metrics would not be scraped.   
+For each category you [can configure allowed metrics and deny specific metrics](ocean/tools-and-integrations/prometheus/README-test?id=ocean-metrics). Allow metrics are the metrics that would be scraped, while the denied metrics would not be scraped.   
 
 **If the same metric is in the allow list and deny list – it will be denied.**
 
@@ -118,7 +118,7 @@ These labels are the default for all the metrics of scaling and cost analysis. I
 
 #### Scaling Metrics Labels  
 
-Not relevant to ocean_controller_heartbeat_info. For this metric, only use the default labels.
+Not relevant to ocean_controller_heartbeat_info. For this metric, only the default labels are used.
 
 * vng_id  
 * az  
