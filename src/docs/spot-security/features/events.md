@@ -70,13 +70,13 @@ Download the CSV option on the right corner of the table to view the latest	100,
 ### Event Impact Map:
 For each security rule, you can see the Event Impact Map to visualize the asset network.
 
-<img src="/spot-security/_media/events-c.png" />
+<img src="/spot-security/_media/events-c1.png" />
 
 ### Event Detail Record
 
 Event Detail Records present the time of an event, the source, region and more for each event.
 
-<img src="/spot-security/_media/events-d.png" />
+<img src="/spot-security/_media/events-d1.png" />
 
 ## What’s Next?
 Learn more about Spot Security [Inventory](spot-security/features/inventory).
