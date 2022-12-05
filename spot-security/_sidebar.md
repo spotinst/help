@@ -13,4 +13,5 @@
     - [Events](spot-security/features/events)
     - [Inventory](spot-security/features/inventory)
     - [Compliance](spot-security/features/compliance)
+  - [Support Matrix](spot-security/security-matrix/)
   - [License](spot-security/license/)
