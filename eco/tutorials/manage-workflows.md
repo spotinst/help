@@ -1,6 +1,6 @@
 # Manage Workflows
 
-Cloud administrators face the challenge of presenting cloud spend data clearly to their users and customers. Complex billing conditions and logic -- such as amortization, discount sharing or unsharing, and customer uplifts and discounts -- can make reporting a major challenge. Using Eco Workflows, your cloud spending will be clear and accounted for.
+Cloud administrators face the challenge of presenting cloud spend data clearly to their users and customers. Complex billing conditions and logic -- such as amortization, discount sharing, and customer uplifts and discounts -- can make reporting a major challenge. Using Eco Workflows, your cloud spending will be clear and accounted for.
 
 The Workflows feature simplifies and clarifies the presentation of cloud charges. It enables you to do the following:
 
@@ -19,8 +19,8 @@ The workflow wizard is designed to be an easy way to get started, but our billin
 
 Example Billing Workflow 1:
 
-1. Replace RI Discount with Public on-demand price when RIs are puchased by account <########>.
-2. Replace Savings Plan Discount with Public on-demand price when RIs are puchased by account <########>.
+1. Replace RI Discount with Public on-demand price when RIs are purchased by account <############>.
+2. Replace Savings Plan Discount with Public on-demand price when RIs are puchased by account <############>.
 3. Remove EDP Discount so it is not shared with the customer.
 4. Uplift the price of all services by 3%.
 
