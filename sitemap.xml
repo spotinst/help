@@ -2885,6 +2885,27 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean/tutorials/migrate-existing-egs-ekskops"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/ocean/tutorials/migrate-workload-tst</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean/tutorials/migrate-workload-tst"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean/tutorials/migrate-workload-tst"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/ocean/tutorials/migrate-workload-via-api</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean/tutorials/migrate-workload-via-api"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean/tutorials/migrate-workload-via-api"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/ocean/tutorials/migrate-workload-via-ui</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean/tutorials/migrate-workload-via-ui"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean/tutorials/migrate-workload-via-ui"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/ocean/tutorials/migrate-workload</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
