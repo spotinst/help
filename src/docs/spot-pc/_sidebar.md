@@ -7,6 +7,7 @@
       - [End-User Prerequisites](spot-pc/getting-started/prerequisites/end-user-prerequisites)
     - [Roles and Responsibilities](spot-pc/getting-started/roles-and-responsibilities)
     - [Onboarding Workflow](spot-pc/getting-started/onboarding-workflow)
+    - [Release Lifecycle](spot-pc/getting-started/release-lifecycle)
     - [Release Notes](spot-pc/getting-started/release-notes)
   - [Features](spot-pc/features/)
     - [Concepts](spot-pc/features/concepts/)
