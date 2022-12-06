@@ -1,5 +1,13 @@
 # Spot PC: Release Notes
 
+
+## 12/6/2022
+_When:_ 12/6/2022 at 10pm - 11pm Eastern
+_Impact:_ Access to desktops and application services for End Users will remain uninterrupted. Access to Spot PC console will remain available.
+
+* Monitors and Alerts
+  * This hot fix improves the reliability of Monitor creation and management and fixes an intermittent Alerts display problem
+
 ## 11/17/2022
 _When:_ 11/17/2022 at 10pm - 11pm Eastern
 
