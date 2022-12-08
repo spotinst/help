@@ -18,7 +18,6 @@ Spot Security classifies the events into the following categories:
 * Critical Event
 * Data Access
 * Anomalies
-* Audit and Compliance Impact- events and risks
 
 <img src="/spot-security/_media/events-a1.png" />
 
