@@ -23,11 +23,11 @@ Use the [Create Migration API](https://docs.spot.io/api/#operation/oceanAwsPostM
 * shouldEvictStandAlonePods – Ocean terminates pods that do not belong to a Kubernetes deployment. This means you would need to launch the pod manually (after the migration) since no object would do it automatically.
 * forcePodEvictionOnPdbFailure – Selecting this checkbox enables Ocean to force the Pod eviction from the instance, even if the distributed budget is not satisfied.
 
-Once you have started the migration, you have the option to stop it. However, workloads migrated to Ocean remain under the new instances that Ocean manages. When stopping the process, Ocean finishes scheduling all unscheduled pods of the current batch, and instances that were not drained yet will become schedulable again. 
+Once you have started the migration, you have the option to stop it. However, workloads migrated to Ocean remain under the new instances that Ocean manages. When stopping the process, Ocean finishes scheduling all unscheduled pods of the current batch, and instances that were not drained yet will become schedulable again.
 
 ## Step 3: Get Migration Information
 
-During the migration, you have complete visibility into the process of the Workload Migration by using the [Get Migration Status](https://docs.spot.io/api/#operation/oceanAwsGetMigrationStatus) API call. Using this API call, you can monitor the migration's status and information.
+During the migration, you have complete visibility of the Workload Migration process by using the [Get Migration Status](https://docs.spot.io/api/#operation/oceanAwsGetMigrationStatus) API call. Using this API call, you can monitor the migration's status and information.
 
 ## Stop Migration
 
