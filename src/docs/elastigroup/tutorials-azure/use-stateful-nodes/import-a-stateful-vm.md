@@ -26,9 +26,13 @@ In the table, click the row of the VM you want to import and click Review & Impo
 
 ## Review
 
-In the Review page you can see the entire configuration in JSON format and edit it if necessary.
+In the Review page you can see a summary of the configuration and edit if necessary.  
 
-<img src="/elastigroup/_media/azure-import-a-stateful-vm-04.png" />
+<img src="/elastigroup/_media/azure-import-a-stateful-vm-04-1.png" />
+
+You can also view the entire configuration in JSON format and edit the JSON page.
+
+<img src="/elastigroup/_media/azure-import-a-stateful-vm-04-2.png" />
 
 Under the JSON panel, there is a link to the Spot [API with the stateful node configuration](https://docs.spot.io/api/#operation/azureStatefulNodeCreate).
 
