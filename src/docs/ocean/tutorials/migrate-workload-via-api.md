@@ -44,6 +44,6 @@ This API call returns all the Migration processes that were triggered in your Oc
 
 To check all the nodes in your cluster and their full data use the [Get Cluster Nodes](https://docs.spot.io/api/#operation/oceanAwsGetNodes) API call.
 
-What’s Next?
+## What’s Next?
 
 Learn how to manage a [Virtual Node Group](https://docs.spot.io/ocean/tutorials/manage-virtual-node-groups).
