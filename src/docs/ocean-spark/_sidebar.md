@@ -28,6 +28,6 @@
     - [Run Apps from Airflow](ocean-spark/tools-integrations/run-apps-from-airflow)
     - [Hive Metastore](ocean-spark/tools-integrations/hive-metastore)
     - [AWS Glue Data Catalog](ocean-spark/tools-integrations/aws-glue-catalog)
-  - [Docker images release notes](ocean-spark/docker-images-release-notes/)
+  - [Docker Images Release Notes](ocean-spark/docker-images-release-notes/)
     - [gen18](ocean-spark/docker-images-release-notes/gen18.md)
-    - [Legacy images](ocean-spark/docker-images-release-notes/legacy-dm-images)
+    - [Legacy Images](ocean-spark/docker-images-release-notes/legacy-dm-images)
