@@ -60,9 +60,13 @@ You can then edit any of the fields in the Basics page that appears.
 
 <img src="/elastigroup/_media/azure-manage-stateful-nodes-05.png" />
 
-You can also go to the Review page and edit directly in the JSON configuration. When the Review page appears, click Edit Node. Make your changes in the JSON text and click Update.
+You can also go to the Review page and edit directly in the JSON configuration. When the Review page appears, do the following:
 
-<img src="/elastigroup/_media/azure-manage-stateful-nodes-06a.png" />
+1. Click JSON and click Edit Mode.  
+
+<img src="/elastigroup/_media/azure-manage-stateful-nodes-06b.png" />
+
+2. Make your changes in the JSON configuration and click Update.
 
 Your changes to the configuration are saved and applied to the stateful node. Changes that affect the VM directly (e.g., selected availability zones or instance types) will be reflected only when the next VM is launched. In order to make the changes take effect immediately, a [Recycle](elastigroup/features-azure/stateful-nodes/actions?id=recycle) action is required on the stateful node.
 
