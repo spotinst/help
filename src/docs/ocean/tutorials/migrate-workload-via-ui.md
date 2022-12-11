@@ -8,11 +8,11 @@ Before you start this procedure, review the [prerequisites](ocean/tutorials/migr
 
 After you have successfully completed creating your Ocean cluster, click the plus sign (Workload Migration) under Nodes managed by Ocean.
 
-<img src="/ocean/_media/tutorials-migrate-workload-01.png" />
+<img src="/ocean/_media/migrate-workload-ui.png" />
 
 ## Step 2: Select Instances to Migrate
 
-Ocean will automatically detect the workloads (nodes and pods) which belong to the Kubernetes cluster associated with it.
+Ocean automatically detects the workloads (nodes and pods) that belong to the Kubernetes cluster associated with it.
 
 In the following screen, Ocean will display all the nodes that it discovered.
 
@@ -22,7 +22,7 @@ From the list on the left, choose the instances you want to migrate into your Oc
 
 ## Step 3: Set Preferences
 
-Select your preferred Workload Migration process by selecting the relevant checkbox:
+Choose your preferred Workload Migration process by selecting the relevant checkbox:
 
 * **Terminate Instances** – Ocean terminates the old instances once the pods that reside in them are migrated, and the old instances are fully drained.
 * **Evict stand-alone Pods** – Ocean terminates pods that do not belong to a Kubernetes deployment. This means that you would need to launch the pod manually (after the migration) because there is no object that can launch it automatically.
@@ -32,13 +32,13 @@ Select your preferred Workload Migration process by selecting the relevant check
 
 ## Step 4: Start Migration
 
-1. After you have selected the relevant instances and decided on the migration scope and batch size, click Start Migration on the bottom right corner. A pop-up appears where you have a final review of the migration configuration.
+1. After you have chosen the relevant instances and decided on the migration scope and batch size, click Start Migration on the bottom right corner. A window appears where you have a final review of the migration configuration.
 
 <img src="/ocean/_media/tutorials-migrate-workload-03.png" />
 
-2. Click Start Migration to officially begin the migration process.
+2. Click Start Migration to begin the migration process.
 
-Once you have started the migration, you will have the option to stop it. However, workloads that have been migrated to Spot remain under the new instances which are managed by Spot. This means that when stopping the process, Spot finishes scheduling all unscheduled pods of the current batch, and instances that were not drained yet become schedulable again.
+Once you have started the migration, you will have the option to stop it. However, workloads that have been migrated to Spot remain under the new instances that are managed by Spot. This means that when stopping the process, Spot finishes scheduling all unscheduled pods of the current batch, and instances that were not drained yet become schedulable again.
 
 ## Step 5: View Workload Migration Dashboard
 
@@ -66,15 +66,15 @@ The following information is displayed:
 
 ### Instance Color Status
 
-* Green: Instance has completed the migration successfully.
-* Yellow: Instance has partially completed the migration.
-* Red: Instance has failed the migration.
+* Green: The instance has completed the migration successfully.
+* Yellow: The instance has partially completed the migration.
+* Red: The instance has failed the migration.
 
 If you want to review previous migrations, click Previous Migrations on the top right corner of the Workload Migration screen.
 
 ## Stop Migration
 
-You have the option to stop the migration process once it has started. 
+You have the option to stop the migration process once it has started.
 
 1. Click Stop Migration.  
 2. Mark Terminate Drained Instances if you want Ocean to terminate the already drained instances before stopping the entire process.
