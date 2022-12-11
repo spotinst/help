@@ -6,7 +6,7 @@ Before you start this procedure, review the [prerequisites](ocean/tutorials/migr
 
 ## Step 1: Get Started with Workload Migration
 
-After you have successfully completed creating your Ocean cluster, click the plus sign (Workload Migration) under Nodes managed by Ocean.
+After you have successfully completed creating your Ocean cluster, click the plus sign under Nodes managed by Ocean.
 
 <img src="/ocean/_media/migrate-workload-ui.png" />
 
@@ -32,7 +32,7 @@ Choose your preferred Workload Migration process by selecting the relevant check
 
 ## Step 4: Start Migration
 
-1. After you have chosen the relevant instances and decided on the migration scope and batch size, click Start Migration on the bottom right corner. A window appears where you have a final review of the migration configuration.
+1. After you have chosen the relevant instances and decided on the migration scope and batch size, click Start Migration on the bottom right corner. A window displays a final review of the migration configuration.
 
 <img src="/ocean/_media/tutorials-migrate-workload-03.png" />
 
