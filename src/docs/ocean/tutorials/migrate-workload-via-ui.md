@@ -14,18 +14,18 @@ After you have successfully completed creating your Ocean cluster, click the plu
 
 Ocean automatically detects the workloads (nodes and pods) that belong to the Kubernetes cluster associated with it.
 
-In the following screen, Ocean will display all the nodes that it discovered.
+In the following window, Ocean will display all the nodes that it discovered.
 
 <img src="/ocean/_media/tutorials-migrate-workload-02.png" />
 
-From the list on the left, choose the instances you want to migrate into your Ocean cluster by clicking on the relevant checkboxes.
+From the list on the left, choose the instances you want to migrate into your Ocean cluster by marking the checkboxes.
 
 ## Step 3: Set Preferences
 
 Choose your preferred Workload Migration process by selecting the relevant checkbox:
 
 * **Terminate Instances** – Ocean terminates the old instances once the pods that reside in them are migrated, and the old instances are fully drained.
-* **Evict stand-alone Pods** – Ocean terminates pods that do not belong to a Kubernetes deployment. This means that you would need to launch the pod manually (after the migration) because there is no object that can launch it automatically.
+* **Evict stand-alone Pods** – Ocean terminates pods that do not belong to a Kubernetes deployment. This means that you need to launch the pod manually (after the migration) because there is no object that can launch it automatically.
 * **Force PDB covered Pod Eviction** – By selecting this checkbox, Ocean forces the Pod eviction from the instance, even if the distributed budget is not satisfied.
 
 > **Tip**: If you have Stand-Alone pods and you have not chosen Evict stand-alone Pods, you will be required to manually evict those pods at the end of the migration process.
@@ -42,7 +42,7 @@ Once you have started the migration, you will have the option to stop it. Howeve
 
 ## Step 5: View Workload Migration Dashboard
 
-During the migration, you have complete visibility into the process in the Workload Migration Dashboard.
+During the migration, you have visibility into the process in the Workload Migration Dashboard.
 
 <img src="/ocean/_media/tutorials-migrate-workload-04.png" />
 
