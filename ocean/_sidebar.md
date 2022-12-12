@@ -36,7 +36,7 @@
     - [Ocean Dashboard](ocean/tutorials/ocean-dashboard)
     - [Analyze Your Costs](ocean/tutorials/analyze-your-costs)
     - [Create a Cost Analysis Filter](ocean/tutorials/create-a-cost-filter)
-    - [Migrate the Workload to Ocean](ocean/tutorials/migrate-workload/)
+    - [Migrate the Workload to Ocean](ocean/tutorials/migrate-workload)
       - [Migrate using the Console](ocean/tutorials/migrate-workload-via-ui)
       - [Migrate using API](ocean/tutorials/migrate-workload-via-api)
     - [Run Workloads](ocean/tutorials/run-workloads)
