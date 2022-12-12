@@ -1,6 +1,6 @@
 # Migrate the Workload to Ocean
 
-After you have created an Ocean cluster and connected it to your Kubernetes cluster, it is time to migrate and register the workloads (nodes and pods) into Ocean so they will be managed by Spot. Instead of manually draining and re-scheduling your Kubernetes pods on new nodes, Ocean will completely automate the migration process.
+You can migrate and register your workloads (nodes and pods) into Ocean so they will be managed by Spot. Ocean automates the migration process of manually draining and re-scheduling your Kubernetes pods on new nodes. The following procedures are relevant to Kubernetes on AWS.
 
 The following procedures are relevant to Kubernetes on AWS.
 
