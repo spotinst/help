@@ -17,7 +17,7 @@ Before you start the procedure in this tutorial, you need the following:
 
 After you have successfully completed creating your Ocean cluster, you can start the Workload Migration by using the console or the API.
 
-### Guides:
+### Guides
 * Migrate the Workload using [the Console](ocean/tutorials/migrate-workload-via-ui).
 * Migrate the Workload using [the API](ocean/tutorials/migrate-workload-via-api).
 
