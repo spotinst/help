@@ -8,7 +8,7 @@ Before you start this procedure, review the [prerequisites](ocean/tutorials/migr
 
 After you have successfully completed creating your Ocean cluster, click the plus sign under Nodes managed by Ocean.
 
-<img src="/ocean/_media/migrate-workload-ui2.png" />
+<img src="/ocean/_media/migrate-workload-ui3.png" />
 
 ## Step 2: Select Instances to Migrate
 
