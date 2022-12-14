@@ -46,7 +46,7 @@ Cloud Cost is the default view (as shown in the example [above](ocean-spark/prod
 
 > **Tip**: It can take up to two days after an application’s completion for the cost data to be accurate.
 
-<img src="/ocean-spark/_media/tutorial-wave-cost-analysis-02b-4.png" width="300" />
+<img src="/ocean-spark/_media/tutorial-wave-cost-analysis-02b-4.png" width="400" />
 
 ## Core Hours View
 
@@ -61,7 +61,7 @@ This application used 1 * 30/60 + 4 * 30/60 + 4 * 615 / 3600 = 3.18 core hours.
 
 In the Core Hours view, each bar shows the total number of core hours, and the different colors show the breakdown of core hours used by each job.
 
-<img src="/ocean-spark/_media/tutorial-wave-cost-analysis-02b-5.png" width="300" />
+<img src="/ocean-spark/_media/tutorial-wave-cost-analysis-02b-5.png" width="400" />
 
 ## App Hours View
 
@@ -69,7 +69,7 @@ The *App Hours* metric is defined as the sum of the runtime durations of your ap
 
 In the App Hours view, each bar shows the total number of application hours, and the different colors show the breakdown of core hours used by each application.
 
-<img src="/ocean-spark/_media/tutorial-wave-cost-analysis-02b-6.png" width="300" />
+<img src="/ocean-spark/_media/tutorial-wave-cost-analysis-02b-6.png" width="400" />
 
 ## Download
 
