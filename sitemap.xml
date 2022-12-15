@@ -2661,6 +2661,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean/tips-and-best-practices/advanced-instance-types"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/ocean/tips-and-best-practices/manage-machine-types</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean/tips-and-best-practices/manage-machine-types"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean/tips-and-best-practices/manage-machine-types"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/ocean/tips-and-best-practices/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
