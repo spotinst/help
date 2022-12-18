@@ -49,7 +49,7 @@ To apply the Reservation Reader role to the user group, complete the procedure b
 
 <img src="/connect-your-cloud-provider/_media/connect-azure-ea-n006.png" />
 
-Apply the Reservation Reader Role to the User Group created in Step 1.
+2. Apply the Reservation Reader Role to the User Group created in Step 1.
 
 <img src="/connect-your-cloud-provider/_media/connect-azure-ea-n007.png" />
 

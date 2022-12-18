@@ -58,7 +58,7 @@ Apply the Reservation Reader Role to the User Group created earlier.
 ### Step 4. Invite Eco Cost Specialist Guest Users to the User Group
 
 1. Navigate to Users.
-2. Select New Guest User and complete the required fields. You will do this once for each user. You will use the following names and email addresses:
+2. Select New Guest User and complete the required fields. You will do this once for each user. Use the following names and email addresses:
 
 |  |  |
 |---|---|
