@@ -93,7 +93,7 @@ Once the Filters are set, Ocean scales up nodes according to these parameters.
 
 In case you would like to validate the filters before configuring them in your cluster, you can use the [Simulation of Filters API](https://docs.spot.io/api/#operation/oceanAwsInstanceTypeFiltersSimulation) call. This API call returns the list of instance types according to the filters.
 
->**The whitelist, the blacklist, and the filters objects cannot be used at the same time. If you want to use one of them, all the others should be null**.
+**The whitelist, the blacklist, and the filters objects cannot be used at the same time. If you want to use one of them, all the others should be null**.
 
 ## What’s Next?
 Learn more about [Virtual Node Groups](ocean/features/vngs/).
