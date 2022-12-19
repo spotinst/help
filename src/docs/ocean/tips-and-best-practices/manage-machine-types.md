@@ -2,13 +2,19 @@
 
 Ocean operation is based on containers, and as such, Ocean is free to utilize all types of cloud infrastructure, distribute optimally, and focus on cutting costs. Therefore, when it comes to machine types, it is usually best practice to let Ocean make the intelligent decisions about which machine family to launch.
 
-In the Machine Types definition of the Compute tab, all of the machine types are already selected by default. Leave the default setting on so that Ocean can choose from all possibilities. Ocean will then carefully match the node type to the specifications of the scheduled user workloads.
+In the Machine Types definition of the Compute tab, all of the machine types are already selected by default. Just leave this default setting on so that Ocean can choose from all possibilities. Ocean will then carefully match the node type to the specifications of the scheduled user workloads.
 
 ## Opt out of Machine Types
 
 If you have a reason not to use certain machine types, you can deselect those family types. For example, your application may be specifically tuned for newer versions of CPU offered in the later families, and the older models cause performance issues. Deselect those families.
 
+For Ocean in AWS, you can manage your instance types in the Instance Types panel as seen below.
+
 <img src="/ocean/_media/tips-image-types-03.png" />
+
+The relevant section for Ocean in GCP:
+
+<img src="/ocean/_media/tips-image-types-05.png" />
 
 You can use the instanceTypes attribute in the API to specify machine types that are allowed or not allowed in the cluster. The following options are available:
 
@@ -30,17 +36,17 @@ Increasing the minimum machine size helps to limit the node count by not allowin
 
 Alternatively, depending on the sensitivity of your workloads and the general size of your cluster, you may wish to decrease the maximum CPU or RAM per node to limit the number of containers that will be affected in the event of a node replacement.
 
+This can be done in the GCP console as seen below:
+
 <img src="/ocean/_media/tips-image-types-04.png" />
 
-## Advanced Instance Types
+## Select Instance Types with Advanced Filters
+
+This section is relevant for AWS Kubernetes clusters.
 
 By default Ocean launches the best instance type suitable for your workload. However, there are cases where clients would like to restrict the types available for scale in the Ocean cluster or in a specific Virtual Node Group. Since there are hundreds of types, selecting as many instance types as possible that meet the specific criteria you need may be challenging and requires manual work.   
 
 **As best practice it is recommended to configure as many instance types as possible, to let Ocean choose the best market for your workloads**.
-
-## Relevance
-
-This section is relevant for AWS Kubernetes clusters.  
 
 ### Select Instance Types according to Filters
 
@@ -85,9 +91,11 @@ The following are the Filters Ocean supports:
 
 Once the Filters are set, Ocean scales up nodes according to these parameters.
 
-In case you would like to validate the filters before configuring them in your cluster, you can use the Simulation of Filters API call. This API call returns the list of instance types according to the filters.
+In case you would like to validate the filters before configuring them in your cluster, you can use the [Simulation of Filters API](https://docs.spot.io/api/#operation/oceanAwsInstanceTypeFiltersSimulation) call. This API call returns the list of instance types according to the filters.
 
+```
 **The whitelist, the blacklist, and the filters objects cannot be used at the same time. If you want to use one of them, all the others should be null**.
+```
 
 ## What’s Next?
 Learn more about [Virtual Node Groups](ocean/features/vngs/).
