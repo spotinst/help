@@ -10,7 +10,7 @@ If you have a reason not to use certain machine types, you can deselect those fa
 
 For Ocean in AWS, you can manage your instance types in the Instance Types panel as seen below.
 
-<img src="/ocean/_media/tips-image-types-03.png" />
+<img src="/ocean/_media/tips-image-types-06.png" />
 
 The relevant section for Ocean in GCP:
 
