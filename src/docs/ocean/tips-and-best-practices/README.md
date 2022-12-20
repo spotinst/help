@@ -3,7 +3,7 @@
 This page presents a collection of tips, suggestions, and recommendations to help you become an expert Ocean user and get the most out of your Ocean experience. To learn more, click on a topic below.
 
 <details>
-  <summary markdown="span">Let Ocean Manage Machine Types</summary>
+  <summary markdown="span">Match Kubernetes Version and Built-in Labels</summary>
 
 ## Match Kubernetes Version and Built-in Labels
 
