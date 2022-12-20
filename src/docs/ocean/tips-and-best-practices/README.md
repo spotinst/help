@@ -5,45 +5,6 @@ This page presents a collection of tips, suggestions, and recommendations to hel
 <details>
   <summary markdown="span">Let Ocean Manage Machine Types</summary>
 
-## Let Ocean Manage Machine Types
-
-Ocean operation is based on containers, and as such, Ocean is free to utilize all types of cloud infrastructure, distribute optimally, and focus on cutting costs. Therefore, when it comes to machine types, it is usually best practice to let Ocean make the intelligent decisions about which machine family to launch.
-
-In the Machine Types definition of the Compute tab, all of the machine types are already selected by default. Just leave this default setting on so that Ocean can choose from all possibilities. Ocean will then carefully match the node type to the specifications of the scheduled user workloads.
-
-### Opt out of Machine Types
-
-If you have a reason not to use certain machine types, you can simply deselect those family types. For example, your application may be specifically tuned for newer versions of CPU offered in the later families, and the older models cause performance issues. Simply deselect those families.
-
-<img src="/ocean/_media/tips-image-types-01.png" />
-
-You can use the `instanceTypes` attribute in the API to specify machine types that are allowed or not allowed in the cluster. The following options are available:
-
-- `instanceTypes.blacklist` - Specify instance types to avoid in the cluster.
-- `instanceTypes.whitelist` - Specify instance types that are allowed in the cluster.
-
-The following rules apply to these:
-
-- The permit list and the deny list may not be used at the same time.
-- If no instance types are defined for both options, then all instance types are available.
-
-### Set Instance Size Ranges
-
-In some use cases, it is good practice to increase the minimum CPU or RAM of the individual nodes Ocean launches for your containerized workloads.
-
-For example, you may want to increase the minimum machine size if you run many DaemonSets (that require a lot of resources) or you have any DaemonSets that are licensed based on machine count.
-
-Increasing the minimum machine size helps to limit the node count by not allowing very small nodes that can host only a very small number of containers. Efficiency is achieved by bin packing more containers per node.
-
-Alternatively, depending on the sensitivity of your workloads and the general size of your cluster, you may wish to decrease the maximum CPU or RAM per node to limit the number of containers that will be affected in the event of a node replacement.
-
-<img src="/ocean/_media/tips-image-types-02.png" /><br><br>
-
-</details><br>
-
-<details>
-  <summary markdown="span">Match Kubernetes Version and Built-in Labels</summary>
-
 ## Match Kubernetes Version and Built-in Labels
 
 Ocean obeys Kubernetes labels wherever you apply them. However, labels are specific to Kubernetes cluster versions. Keep an eye on the labels you are using and ensure that they are correct for your version of the cluster. This is especially important during cluster version upgrades.
