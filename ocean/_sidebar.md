@@ -82,3 +82,4 @@
     - [Troubleshoot Controller](ocean/troubleshooting/troubleshoot-controller)
   - [Tips & Best Practices](ocean/tips-and-best-practices/)
     - [Upgrade AKS Clusters](ocean/tips-and-best-practices/upgrade-aks-cluster)
+    - [Manage Machine Types](ocean/tips-and-best-practices/manage-machine-types)
