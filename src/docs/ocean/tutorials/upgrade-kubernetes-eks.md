@@ -18,7 +18,7 @@ If you use the same AMI for all of your workloads, you should change the AMI on 
 
 If you want to use a different AMI for your custom VNGs, change the value of each VNG in the Spot Console or in the [Spot API](https://docs.spot.io/api/#operation/OceanAWSLaunchSpecUpdate).
 
->**Tip: You should change the AMI of custom VNGs if they use different AMIs than the default VNG.
+>**Tip**: You should change the AMI of custom VNGs if they use different AMIs than the default VNG.
 
 ## Step 3: Roll the Cluster
 
