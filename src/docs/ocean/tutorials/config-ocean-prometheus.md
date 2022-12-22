@@ -3,7 +3,7 @@
 Helm link:
 https://artifacthub.io/packages/helm/spot/ocean-metric-exporter
 
-There are three new configurations for the Prometheus exporter:
+There are three configurations for the Prometheus exporter:
 
 * Categories
 * Metrics
@@ -18,7 +18,7 @@ Each category represents a group of metrics. If the categories are not set - the
 
 ## Metrics
 
-For each category, you can configure allowed metrics and deny specific metrics. Allow metrics are the metrics that would be scraped, while the denied metrics will not be scraped.  
+For each category, you can configure allowed metrics and deny specific metrics. The allow metrics are the metrics that would be scraped, while the denied metrics will not be scraped.  
 
 **If the same metric is in the allow list and deny list – it will be denied.**
 
@@ -78,9 +78,7 @@ These labels are the default for all the metrics of scaling and cost analysis. I
 
 Ocean Prometheus Exporter enables scaling and cost analysis categories. In addition, it enables all the metrics listed above.
 
-If you want to limit your data to just specific scaling or cost analysis metrics, you can customize the config YAML to select a category (scaling or cost_analysis) or choose to allow or remove specific metrics or labels.
-
-For example:
+If you want to limit your data to just specific scaling or cost analysis metrics, you can customize the config YAML to select a category (scaling or cost_analysis) or choose to allow or remove specific metrics or labels. For example:
 
 ### metricsConfiguration categories :  
 
@@ -113,7 +111,7 @@ Once you reinstall the exporter, make sure to apply the file above (in this exam
 
 helm upgrade my-release spot/ocean-metric-exporter –f ocean_exporter_config.yaml
 
-**If it is the first installation, you should use the helm install command.**
+**If you are installing this for the first time, use the helm install command.**
 
 ## Cost Analysis Metrics
 
@@ -121,7 +119,7 @@ helm upgrade my-release spot/ocean-metric-exporter –f ocean_exporter_config.ya
 
 These metrics track the hourly aggregated usage information of the total cluster resource: CPU usage, memory usage and compute cost.
 
-These help track the usage rate according to the hour, the division to resources, resource types and namespace by dedicated labels. These metrics help manage the usage costs efficiently.  
+They help track the usage rate according to the hour, the division of resources, resource types and namespace by dedicated labels. These metrics help manage the usage costs efficiently.  
 
 #### Labels
 
