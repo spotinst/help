@@ -27,7 +27,7 @@ You can change the AMI in one of the following ways:
 
 The [cluster roll](ocean/features/roll?id=create-a-roll) process enables you to make changes in order to align cluster infrastructure with a new image, user data, or security groups, without having to disable the Ocean Autoscaler or manually detach nodes in the cluster.
 
-Rolls can be triggered for the whole Ocean cluster, per VNG, or per instance. You may trigger the process using the [Spot console](ocean/features/roll?id=start-a-cluster-roll) or the [API](https://docs.spot.io/api/#operation/oceanAwsRollInit).
+Rolls can be triggered for the whole Ocean cluster, per VNG, or per instance. You may trigger the process using the [Spot console](ocean/features/roll?id=start-a-cluster-roll) or the [Spot API](https://docs.spot.io/api/#operation/oceanAwsRollInit).
 
 Once the roll is complete, all of the nodes in the cluster will have the new Kubernetes version.
 
