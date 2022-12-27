@@ -12,9 +12,9 @@ For a given organization:
 - A subset can include any of the accounts listed in the CUR file for your organization.
 - An account can belong to one subset only.
 
-## Requirement
+## Permission
 
-Only a spot organization admin can create or delete a subset. 
+Only a Spot organization administrator can create or delete a subset. 
 
 ## Create a Subset
 
