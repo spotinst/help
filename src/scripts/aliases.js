@@ -1740,7 +1740,7 @@ export const aliases = (() => {
       "/administration/notification-center/event-policies/edit",
 
     "/hc/en-us/articles/115004280909-Spectrum-as-Grafana-Data-Source":
-      "/elastigroup/tools-integrations/"
+      "/elastigroup/tools-integrations/",
   };
 
   for (let [key, value] of Object.entries(map)) {
