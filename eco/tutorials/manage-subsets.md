@@ -12,6 +12,10 @@ For a given organization:
 - A subset can include any of the accounts listed in the CUR file for your organization.
 - An account can belong to one subset only.
 
+## Permission
+
+Only a Spot organization administrator can create or delete a subset. 
+
 ## Create a Subset
 
 1. In the left sidebar, go to Eco/Reports and then click Create new subset.
