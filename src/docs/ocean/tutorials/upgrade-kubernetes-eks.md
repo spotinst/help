@@ -12,17 +12,20 @@ Update your EKS cluster in AWS by using the [EKS guide](https://docs.aws.amazon.
 
 After the EKS control plane is upgraded, you need to change the AMI in Ocean, based on the Kubernetes version you upgraded. In the AWS documentation, you can view the list of [EKS Optimized AMIs](https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html).
 
-If you use the same AMI for all of your workloads, you should change the AMI on the Ocean cluster level by editing the [Default VNG/ Template VNG](https://docs.spot.io/ocean/features/vngs/?id=default-vng). This can be done in the Spot console or in the [Spot API](https://docs.spot.io/api/#operation/OceanAWSClusterUpdate).
+You can change the AMI in one of the following ways:
+* If you use the same AMI for all of your workloads, you should change the AMI on the Ocean cluster level by editing the [Default VNG/ Template VNG](https://docs.spot.io/ocean/features/vngs/?id=default-vng). This can be done using the Spot console or the [Spot API](https://docs.spot.io/api/#operation/OceanAWSClusterUpdate).
 
 **Ensure that the AMI value in the custom VNG is null if you are using this method.**
 
-If you want to use a different AMI for your custom VNGs, change the value of each VNG in the Spot Console or in the [Spot API](https://docs.spot.io/api/#operation/OceanAWSLaunchSpecUpdate).
+**OR**
+
+* If you want to use a different AMI for your custom VNGs, change the value of each VNG using the Spot Console or the [Spot API](https://docs.spot.io/api/#operation/OceanAWSLaunchSpecUpdate).
 
 >**Tip**: You should change the AMI of custom VNGs if they use different AMIs than the default VNG.
 
 ## Step 3: Roll the Cluster
 
-The [cluster roll](ocean/features/roll?id=create-a-roll) process enables you to perform changes in order to align cluster infrastructure with a new image, user data, or security groups, without having to disable the Ocean Autoscaler or manually detach nodes in the cluster.
+The [cluster roll](ocean/features/roll?id=create-a-roll) process enables you to make changes in order to align cluster infrastructure with a new image, user data, or security groups, without having to disable the Ocean Autoscaler or manually detach nodes in the cluster.
 
 Rolls can be triggered for the whole Ocean cluster, per VNG, or per instance. You may trigger the process using the [Spot console](ocean/features/roll?id=start-a-cluster-roll) or the [API](https://docs.spot.io/api/#operation/oceanAwsRollInit).
 
@@ -31,3 +34,4 @@ Once the roll is complete, all of the nodes in the cluster will have the new Kub
 >**Tip**: New Kubernetes versions sometimes introduce significant changes. Therefore, it is recommended to test the behavior of your applications in a Dev cluster against a new Kubernetes version before you update your production clusters.
 
 ## What's Next?
+Learn how to [run your workloads](ocean/tutorials/run-workloads).
