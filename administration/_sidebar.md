@@ -33,6 +33,7 @@
     - [Custom SAML IDP Configuration](administration/identity-providers/custom-saml-idp-configuration)
     - [Google SAML Authentication](administration/identity-providers/google-saml-authentication)
     - [Okta SAML Authentication](administration/identity-providers/okta-saml-authentication)
+    - [Define OrgAndRole with Okta](administration/identity-providers/define-organdrole-with-okta)
     - [OneLogin SAML Authentication](administration/identity-providers/onelogin-saml-authentication)
   - [API Administration](administration/api/)
     - [Create an API Token](administration/api/create-api-token)
