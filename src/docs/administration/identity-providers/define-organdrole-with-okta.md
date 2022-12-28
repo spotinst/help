@@ -16,7 +16,7 @@ Before you begin the procedure, you will need:
 
 2. Click Sign On. When the Settings page appears, click Edit.
 
-<img src="/administration/_media/define-organdrole-with-okta-02.png" />
+<img src="/administration/_media/define-organdrole-with-okta-02.png" width="500" />
 
 ## Step 1: Add Organization and Role Values
 
@@ -35,7 +35,7 @@ Example:
 SPOTINST-12121212121417-ADMIN,SPOTINST-12121212121418-ADMIN
 ```
 
-<img src="/administration/_media/define-organdrole-with-okta-03.png" />
+<img src="/administration/_media/define-organdrole-with-okta-03.png" width="500" />
 
 When you are finished adding the OrgAndRole details, click Save.
 
@@ -51,7 +51,7 @@ For each of your organizations in Spot, do the following:
 1. Log in to your Spot organization as an administrator.
 2. In the Spot console, go to the User menu and click Settings.
 
-<img src="/administration/_media/define-organdrole-with-okta-05.png" />
+<img src="/administration/_media/define-organdrole-with-okta-05.png" width="400" />
 
 3. Click Security and select Identity Providers in the sidebar on the left.
 4. Click Browse and upload the XML file that you just downloaded from Okta. Click Save.
