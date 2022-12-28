@@ -36,3 +36,7 @@ SSO support makes it easy to manage your accounts and works with the most popula
 1. Go to https://console.spotinst.com/#/auth/signIn.
 2. Type your email address and click outside the form.
 3. Click SIGN IN WITH SSO.
+
+## What's Next?
+
+Learn how to [Define OrgAndRole with Okta](administration/identity-providers/define-organdrole-with-okta).
