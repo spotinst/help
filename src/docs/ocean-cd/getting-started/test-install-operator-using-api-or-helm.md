@@ -25,6 +25,8 @@ To install OLM, run the following command:
 curl -sL https://github.com/operator-framework/operator-lifecycle-manager/releases/download/v0.21.2/install.sh | bash -s v0.21.2
 ```
 
+Be sure to use the [latest OLM version](https://github.com/operator-framework/operator-lifecycle-manager/releases) in order to include the latest updates and fixes.
+
 ## Install using API
 
 You can use the following API URL, using Postman or another API tool, that generates a YAML file output. Add the flags required for Argo installation.  
@@ -115,7 +117,7 @@ helm uninstall my-release
 kubectl get csv -A | grep spot-oceancd-operator | awk '{system("kubectl delete csv " $2 " -n " $1)}'  
 ```
 
-To remove your OLM installation, you can run the following commands:
+To remove the OLM installation, run the following commands:
 
 ```
 kubectl delete apiservices v1.packages.operators.coreos.com
