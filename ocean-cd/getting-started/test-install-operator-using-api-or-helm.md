@@ -8,7 +8,7 @@ In addition, the operator is created with no limits of resources. If you want to
 
 > Tip: If you do not want Ocean CD to generate Argo manifests (e.g., you have already configured your own customized ones), you may configure otherwise.
 
-Additional resources supported](https://github.com/spotinst/spot-oceancd-releases/blob/main/charts/spot-oceancd-operator/values.yaml) are affinity, tolerations, podSecurityContext, and nodeSelector.
+Additional [resources supported](https://github.com/spotinst/spot-oceancd-releases/blob/main/charts/spot-oceancd-operator/values.yaml) are affinity, tolerations, podSecurityContext, and nodeSelector.
 
 ## Prerequisites
 
