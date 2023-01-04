@@ -2185,11 +2185,32 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/getting-started/traffic-manager-reference"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/ocean-cd/ocean-integration/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/ocean-integration/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/ocean-integration/"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/ocean-cd/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/"/>
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/ocean-cd/troubleshooting/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/troubleshooting/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/troubleshooting/"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/ocean-cd/troubleshooting/troubleshoot-rollout</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/troubleshooting/troubleshoot-rollout"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/troubleshooting/troubleshoot-rollout"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/ocean-cd/tutorials/</loc>
