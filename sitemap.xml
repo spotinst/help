@@ -2136,6 +2136,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/concepts-features/override-strategy"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/ocean-cd/concepts-features/provider-reference</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/concepts-features/provider-reference"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/concepts-features/provider-reference"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/ocean-cd/concepts-features/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
