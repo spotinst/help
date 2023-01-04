@@ -111,7 +111,7 @@ Once you reinstall the exporter, make sure to apply the file above (in this exam
 
 helm upgrade my-release spot/ocean-metric-exporter –f ocean_exporter_config.yaml
 
-**If you are installing this for the first time, use the helm install command.**
+**If this is the first installation, use the helm install command.**
 
 ## Cost Analysis Metrics
 
