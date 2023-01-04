@@ -1,6 +1,6 @@
 # Stateful Node Features
 
-Stateful Nodes are tailored to the single node use case and is the ideal way to optimize cost by leveraging cloud excess capacity while mitigating the risks of running on spot nodes.
+Stateful Node is tailored to the single node use case and is the ideal way to optimize cost by leveraging cloud excess capacity while mitigating the risks of running on spot nodes.
 
 Stateful Node provides recovery and flexibility by enabling customers to leverage Spot algorithms and expansive statistical database. This ensures workloads are launched in the best possible Spot market for pricing and availability while gaining granular control with detailed dashboards and monitoring tools.
 
