@@ -216,8 +216,6 @@ A web analysis webhook can be configured in the verification template to receive
 This template enables you to perform a GET request to the mywebhook URL, which in turn returns a full JSON. Through the use of the jsonPath paramater, Ocean CD displays only the request data from the JSON in question.
 
 ```
-
-
 kind: "VerificationTemplate"
 
 name: "webanalysis"
@@ -250,7 +248,7 @@ A Job Analysis which will allow you to configure a Kubernetes Job at any given t
 For additional details on the parameters below, see the Ocean CD API documentation.
 
 ```
-kind: "VerificationTemplate" 
+kind: "VerificationTemplate"
 name: "jobanalysis"
 metrics:
  - name: "jobanalysis"
