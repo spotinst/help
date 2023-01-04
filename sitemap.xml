@@ -2150,6 +2150,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/concepts-features/verifications"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/ocean-cd/get-to-know-ocean-cd/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/get-to-know-ocean-cd/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/get-to-know-ocean-cd/"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/ocean-cd/getting-started/end-to-end</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
