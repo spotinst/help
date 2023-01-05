@@ -1,4 +1,4 @@
-# Stateful Nodes
+# Stateful Node for Azure
 
 When running stateful applications in the cloud, it is more likely you’ll find them using pay-as-you-go (i.e., on-demand) VMs, which will stay up and running throughout the application’s lifetime. On the other hand, using pay-as-you-go VMs typically cost a lot more than spot VMs. As these applications grow, so too does the cloud bill, and finding ways to optimize costs is becoming a strategic goal. With the potential to save up to 90% on cloud compute, it is hard to overlook the benefits of Spot VMs for these workloads.
 
