@@ -1,6 +1,6 @@
 # Persist OS and Data Disks
 
-Elastigroup’s [stateful nodes](elastigroup/features-azure/stateful-nodes/) are able to persist data when VMs need to be replaced. Stateful Nodes breaks this down into two parts which are described below.
+Elastigroup’s [stateful nodes](managed-instance/azure/) are able to persist data when VMs need to be replaced. Stateful Nodes breaks this down into two parts which are described below.
 
 ### Persist OS Disk
 
@@ -28,4 +28,4 @@ A snapshot is taken from the disk while the VM is terminated. Once a new VM is l
 
 ## What's Next?
 
-Learn more about [persisting the network](elastigroup/features-azure/stateful-nodes/persist-network).
+Learn more about [persisting the network](managed-instance/azure/features/persist-network).
