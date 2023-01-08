@@ -24,4 +24,4 @@ With Stateful Node, you can maintain your configurations with zero data loss whi
 
 ## What’s Next?
 
-Learn more about the specific features provided in Elastigroup Stateful Node for [AWS](managed-instance/features/stateful-managed-instances) and [Azure]().
+Learn more about the specific features provided in Elastigroup Stateful Node for [AWS](managed-instance/features/stateful-managed-instances) and [Azure](managed-instance/azure/).
