@@ -4,7 +4,7 @@ The Stateful Node Overview tab gives you quick access to insights and summary da
 
 To get to the Stateful Node Overview tab, do the following:
 1. In the Spot console, go to Elastigroup in the menu tree and click Stateful Nodes.
-2. In the [list of stateful nodes](elastigroup/tutorials-azure/use-stateful-nodes/manage), click on a Node Name.
+2. In the [list of stateful nodes](managed-instance/azure/tutorials/manage), click on a Node Name.
 
 <img src="/elastigroup/_media/azure-view-stateful-node-details-01a.png" />
 
@@ -70,4 +70,4 @@ The second table shows information about the storage resources.
 
 ## What’s Next?
 
-Learn more about stateful node [Actions](elastigroup/features-azure/stateful-nodes/actions).
+Learn more about stateful node [Actions](managed-instance/azure/features/actions).

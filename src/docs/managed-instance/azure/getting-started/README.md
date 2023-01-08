@@ -56,4 +56,4 @@ When the network persistency is also activated, the following actions will be do
 
 ## What’s Next?
 
-- Learn how to [manage stateful nodes](elastigroup/tutorials-azure/use-stateful-nodes/manage) in Elastigroup.
+- Learn how to [manage stateful nodes](managed-instance/azure/tutorials/manage) in Elastigroup.

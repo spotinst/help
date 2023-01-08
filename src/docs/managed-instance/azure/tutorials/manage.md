@@ -37,7 +37,7 @@ You can click Create Node above the node list to import a new node to Elastigrou
 
 ## Use Node Actions
 
-To perform one of the [node actions](elastigroup/features-azure/stateful-nodes/actions), click on the Actions menu on the top right and click one of the actions. The actions available include:
+To perform one of the [node actions](managed-instance/azure/features/actions), click on the Actions menu on the top right and click one of the actions. The actions available include:
 - View Configuration
 - Recycle
 - Pause
@@ -68,7 +68,7 @@ You can also go to the Review page and edit directly in the JSON configuration. 
 
 2. Make your changes in the JSON configuration and click Update.
 
-Your changes to the configuration are saved and applied to the stateful node. Changes that affect the VM directly (e.g., selected availability zones or instance types) will be reflected only when the next VM is launched. In order to make the changes take effect immediately, a [Recycle](elastigroup/features-azure/stateful-nodes/actions?id=recycle) action is required on the stateful node.
+Your changes to the configuration are saved and applied to the stateful node. Changes that affect the VM directly (e.g., selected availability zones or instance types) will be reflected only when the next VM is launched. In order to make the changes take effect immediately, a [Recycle](managed-instance/azure/features/actions?id=recycle) action is required on the stateful node.
 
 The following parameters cannot be edited and are not included in the JSON configuration that is editable:
 
@@ -79,4 +79,4 @@ The following parameters cannot be edited and are not included in the JSON confi
 
 ## What’s Next?
 
-Learn more about the [Stateful Node Details](elastigroup/tutorials-azure/use-stateful-nodes/view-details) view.
+Learn more about the [Stateful Node Details](managed-instance/azure/tutorials/view-details) view.
