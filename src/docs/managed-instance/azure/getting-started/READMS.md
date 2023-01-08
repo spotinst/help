@@ -1,4 +1,4 @@
-# Import a Stateful VM
+# Getting Started: Import a Stateful VM
 
 In this procedure, you will import the configuration of an existing Azure stateful VM to Spot so that the VM can be managed as an Elastigroup stateful node in Spot.
 
