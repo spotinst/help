@@ -16,7 +16,7 @@
     - [Tutorials](managed-instance/tutorials/)
       - [Upgrade an Elastigroup to Stateful Nodes](managed-instance/tutorials/upgrade-an-existing-elastigroup-to-managed-instance)
   - [Azure](managed-instance/azure/)
-    - [Getting Started](elastigroup/tutorials-azure/use-stateful-nodes/import-a-stateful-vm)
+    - [Getting Started](managed-instance/azure/getting-started/)
     - [Features]()
       - [Persist OS & Data Disks](elastigroup/features-azure/stateful-nodes/persist-os-data-disks)
       - [Persist Network](elastigroup/features-azure/stateful-nodes/persist-network)
