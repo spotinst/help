@@ -15,7 +15,7 @@
       - [Recycle Process](managed-instance/features/replacement-process)
     - [Tutorials](managed-instance/tutorials/)
       - [Upgrade an Elastigroup to Stateful Nodes](managed-instance/tutorials/upgrade-an-existing-elastigroup-to-managed-instance)
-  - [Azure](elastigroup/features-azure/stateful-nodes/)
+  - [Azure](managed-instance/azure/)
     - [Getting Started](elastigroup/tutorials-azure/use-stateful-nodes/import-a-stateful-vm)
     - [Features]()
       - [Persist OS & Data Disks](elastigroup/features-azure/stateful-nodes/persist-os-data-disks)

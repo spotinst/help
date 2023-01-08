@@ -869,13 +869,6 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/features-azure/stateful-nodes/persist-os-data-disks"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/elastigroup/features-azure/stateful-nodes/</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/features-azure/stateful-nodes/"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/features-azure/stateful-nodes/"/>
-    </url>
-    <url>
         <loc>https://docs.spot.io/?/elastigroup/features-azure/stateful-nodes/schedule</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
@@ -2015,6 +2008,13 @@
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/tutorials/"/>
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/tutorials/"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/managed-instance/azure/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/managed-instance/azure/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/managed-instance/azure/"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/managed-instance/features/data-volume-persistence</loc>
