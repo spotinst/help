@@ -2,7 +2,7 @@
 
 Network persistence maintains the public IP and private IP for the virtual machine.
 
-<img src="/elastigroup/_media/azure-features-stateful-nodes-01.png" />
+<img src="/elastigroup/_media/azure-features-stateful-nodes-01.png" width="300" />
 
 ## Example Use Cases
 
