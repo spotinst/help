@@ -1,6 +1,6 @@
 # Schedule Stateful Node Actions
 
-In [Stateful Nodes](elastigroup/features-azure/stateful-nodes/), you can schedule when certain actions take place. For example, for a node that is not used on weekends, you can pause the node Friday evening after everyone has stopped working and then resume the node early Monday morning just before people start work again.
+In [Stateful Nodes](managed-instance/azure/), you can schedule when certain actions take place. For example, for a node that is not used on weekends, you can pause the node Friday evening after everyone has stopped working and then resume the node early Monday morning just before people start work again.
 
 To schedule an action, use the `Scheduling` function in the [Create](https://docs.spot.io/api/#operation/azureStatefulNodeCreate) or [Update](https://docs.spot.io/api/#operation/azureStatefulNodeUpdate) API in the Stateful Node APIs.
 

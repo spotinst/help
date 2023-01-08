@@ -15,4 +15,4 @@ In the Elastigroup Stateful Node, the Persist Network feature maintains the same
 
 ## What’s Next?
 
-Learn more about [stateful node actions](elastigroup/features-azure/stateful-nodes/actions).
+Learn more about [stateful node actions](managed-instance/azure/features/actions).

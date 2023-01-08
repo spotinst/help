@@ -29,5 +29,5 @@ New VMs are provisioned with the same private IP and public IP using the same ne
 <img src="/elastigroup/_media/azure-features-stateful-nodes-01.png" width="350"/>
 
 ## What’s Next?
-- Learn more about [persisting the OS and data disks](elastigroup/features-azure/stateful-nodes/persist-os-data-disks).
-- Try out the [Stateful Node Tutorials](elastigroup/tutorials-azure/use-stateful-nodes/).
+- Learn more about [persisting the OS and data disks](managed-instance/azure/features/persist-os-data-disks).
+- Try out the [Stateful Node Tutorials](managed-instance/azure/tutorials/).

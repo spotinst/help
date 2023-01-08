@@ -34,4 +34,4 @@ Both the node and the selected resources will be deleted after 96 hours. You can
 
 ## What’s Next?
 
-Learn how to [schedule stateful node actions](elastigroup/features-azure/stateful-nodes/schedule).
+Learn how to [schedule stateful node actions](managed-instance/azure/features/schedule).

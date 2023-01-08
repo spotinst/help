@@ -11,5 +11,5 @@ Elastigroup also gives Azure users more flexibility and control over infrastruct
 - Taking actions on nodes (e.g., pause, resume, recycle, and delete) in just a few clicks.
 
 ## What’s Next?
-- Learn how to [manage your stateful nodes](elastigroup/tutorials-azure/use-stateful-nodes/manage).
-- Learn more about [stateful node features](elastigroup/features-azure/stateful-nodes/).
+- Learn how to [manage your stateful nodes](managed-instance/azure/tutorials/manage).
+- Learn more about [stateful node features](managed-instance/azure/).
