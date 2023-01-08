@@ -1741,6 +1741,32 @@ export const aliases = (() => {
 
     "/hc/en-us/articles/115004280909-Spectrum-as-Grafana-Data-Source":
       "/elastigroup/tools-integrations/",
+
+    "/elastigroup/features-azure/stateful-nodes/": "/managed-instance/azure/",
+
+    "/elastigroup/features-azure/stateful-nodes/persist-os-data-disks":
+      "/managed-instance/azure/features/persist-os-data-disks",
+
+    "/elastigroup/features-azure/stateful-nodes/persist-network":
+      "/managed-instance/azure/features/persist-network",
+
+    "/elastigroup/features-azure/stateful-nodes/actions":
+      "/managed-instance/azure/features/actions",
+
+    "/elastigroup/features-azure/stateful-nodes/schedule":
+      "/managed-instance/azure/features/schedule",
+
+    "/elastigroup/tutorials-azure/use-stateful-nodes/":
+      "/managed-instance/azure/tutorials/",
+
+    "/elastigroup/tutorials-azure/use-stateful-nodes/import-a-stateful-vm":
+      "/managed-instance/azure/getting-started/",
+
+    "/elastigroup/tutorials-azure/use-stateful-nodes/manage":
+      "/managed-instance/azure/tutorials/manage",
+
+    "/elastigroup/tutorials-azure/use-stateful-nodes/view-details":
+      "/managed-instance/azure/tutorials/view-details",
   };
 
   for (let [key, value] of Object.entries(map)) {
