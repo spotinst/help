@@ -52,7 +52,7 @@ When the network persistency is also activated, the following actions will be do
 - The Azure VM will be terminated.
 - Snapshots will be taken from the Azure VM resources (i.e., OS disk and data disks) and the resources will be kept for 96 hours (configurable in the API).
 - A new VM will be launched with new resources (using the saved snapshots) and the original private and public IP addresses.
-- The Azure VM and the data resources will be deleted at the end of the 96 hour period.
+- The original data resources will be deleted at the end of the 96 hour period.
 
 ## What’s Next?
 
