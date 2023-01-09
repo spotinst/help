@@ -5,7 +5,7 @@ The Detailed Rollout page provides information of the rollouts that are triggere
 1. Click the menu on the left and choose Rollouts.  
 2. Click the rollout ID in the Rollouts table.  
 
-The rollout details are presented in the following manner.
+The rollout details are presented in the following manner:
 
 * Summary Line
 * Rollout Phases, Statuses and Actions
