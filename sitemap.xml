@@ -2325,6 +2325,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/tutorials/view-workloads/details"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/ocean-cd/tutorials/view-workloads/readme-test</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/tutorials/view-workloads/readme-test"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/tutorials/view-workloads/readme-test"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/ocean-cd/tutorials/view-workloads/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
