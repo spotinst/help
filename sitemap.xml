@@ -2276,6 +2276,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/tutorials/view-rollouts/detailed-rollout"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/ocean-cd/tutorials/view-rollouts/readme-test</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/tutorials/view-rollouts/readme-test"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/tutorials/view-rollouts/readme-test"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/ocean-cd/tutorials/view-rollouts/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
