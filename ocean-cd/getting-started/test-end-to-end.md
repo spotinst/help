@@ -1,4 +1,4 @@
-# End-to-End Setup  
+# End-to-End Setup - Draft    
 
 This procedure describes how to install the operator, create services and Spot Deployments as well as your Ocean CD entities. This procedure provides end-to-end insights of the Ocean CD flow to successfully trigger your very first deployment.  
 
