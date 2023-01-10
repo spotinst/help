@@ -25,39 +25,23 @@ The Prometheus query in the verification template enables you to receive targete
 
 This template enables you to calculate the sum of the container CPU usage per seconds found in the demo namespace.
 
-```
+```yaml
 kind: verificationTemplate
-
 name: prometheus
-
 args:
-
 - name: metric-name
-
 metrics:
-
 - name: cpu-usage
-
  interval: 5m
-
  initialDelay: 1m
-
  count: 10
-
  successCondition: result[0] <= 0.95
-
  failureCondition: result[0] >= 1.2
-
  failureLimit: 0
-
  inconclusiveLimit: 0
-
  consecutiveErrorLimit: 0
-
  provider:
-
    prometheus:
-
      query: sum(container_cpu_usage_seconds_total{namespace=\"demo\"})
 ```
 
@@ -67,31 +51,19 @@ The New Relic query in the verification template enables you to receive targeted
 
 This template enables you to collect the number of CPU requests when the app label equals the argument called metric-name.
 
-```
+```yaml
 kind: "VerificationTemplate"
-
 name: "newrelic"
-
 args:
-
   - name: " metric-name "
-
 metrics:
-
   - name: "cpu-utilization"
-
     interval: "1m"
-
     count: 3
-
     successCondition: "result.successRate <= 90"
-
     failureLimit: 3
-
     provider:
-
       newRelic:
-
         query: "SELECT latest(`k8s.container.cpuRequestedCores`) as successRate FROM Metric FACET `tags.app` WHERE `tags.app` = '{{ args. metric-name }}'\n"
 ```
 
@@ -101,27 +73,17 @@ The DataDog query in the verification template enables you to receive targeted d
 
 This template enables you to collect the average of the running pods found in your demo namespace.
 
-```
+```yaml
 kind: "VerificationTemplate"
-
 name: "datadog"
-
 metrics:
-
   - name: "error-rate"
-
     interval: "2s"
-
     count: 5
-
     successCondition: "result >= 0.01"
-
     failureLimit: 3
-
     provider:
-
       datadog:
-
         query: "avg:kubernetes.pods.running{kube_namespace:demo}\n"
 ```
 
@@ -135,77 +97,42 @@ Ocean CD supports the configuration of either Expressions or MetricStat in order
 
 For additional details on the parameters below, see the [Ocean CD API documentation](https://docs.spot.io/api/#tag/Ocean-CD).  
 
-```
+```yaml
 kind: "VerificationTemplate"
-
 name: "cloudwatch"
-
 metrics:
-
   - name: "error-rate"
-
     interval: "1m"
-
     count: 3
-
     successCondition: "all(result[0].Values, {# < 1})"
-
     failureLimit: 3
-
     provider:
-
       cloudWatch:
-
         metricDataQueries:
-
           - id: "healthy-rate"
-
             expression: "healthy/unhealthy"
-
             returnData: true
-
           - id: "unhealthy"
-
             metricStat:
-
               metric:
-
                 dimensions:
-
                   - name: "LoadBalancerName"
-
                     value: "12334445678"
-
                 metricName: "UnHealthyHostCount"
-
                 namespace: "AWS/ELB"
-
               period: 300
-
               stat: "Average"
-
             returnData: false
-
           - id: "healthy"
-
             metricStat:
-
               metric:
-
                 dimensions:
-
                   - name: "LoadBalancerName"
-
                     value: "12334445678"
-
                 metricName: "HealthyHostCount"
-
                 namespace: "AWS/ELB"
-
               period: 300
-
               stat: "Average"
-
             returnData: false
 ```
 
@@ -215,29 +142,18 @@ A web analysis webhook can be configured in the verification template to receive
 
 This template enables you to perform a GET request to the mywebhook URL, which in turn returns a full JSON. Through the use of the jsonPath paramater, Ocean CD displays only the request data from the JSON in question.
 
-```
+```yaml
 kind: "VerificationTemplate"
-
 name: "webanalysis"
-
 metrics:
-
  - name: "webanalysis"
-
    interval: "10s"
-
    count: 10
-
    successCondition: "result.ok && result.successPercent >= 0.90"
-
    provider:
-
      web:
-
        url: "https://mywebhook.com"
-
        jsonPath: "{$.data}"
-
        insecure: false
 ```
 
@@ -247,7 +163,7 @@ A Job Analysis which will allow you to configure a Kubernetes Job at any given t
 
 For additional details on the parameters below, see the Ocean CD API documentation.
 
-```
+```yaml
 kind: "VerificationTemplate"
 name: "jobanalysis"
 metrics:
