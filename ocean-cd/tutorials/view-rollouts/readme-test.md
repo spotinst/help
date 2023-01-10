@@ -6,7 +6,7 @@ To view the Rollouts page, click Rollouts in the left sidebar.
 
 <img src="/ocean-cd/_media/tutorials-rollouts-01.png" />
 
-The Rollouts page has the following main areas which are described below:
+The Rollouts page has the following main areas that are described below:
 - Summary Line
 - Rollouts List
 
@@ -20,8 +20,8 @@ The default view shows data from the last seven days, but you can use the date f
 
 The summary line provides the following statistics:
 * **Rollout durations**:  
-  - The duration that has the median time of all the durations in the defined time period.
-  - The mean time of all the durations in the time period.
+  - Median: The duration that has the median time of all the durations in the defined time period.
+  - Avg.: The mean time of all the durations in the time period.
 * **Attention needed**: The currently paused rollouts. Phases may be found in Paused state based on your RolloutSpec and Strategy configurations. They will remain in this state as long as you have not taken any action.
 * **Failure Management**: The number of rolled back rollouts.
 * **Successful rollouts**: The number of successful rollouts per all rollouts in the time period defined, presented as a fraction and as a percentage of all rollouts (i.e., successful, rolled back, and paused).

@@ -63,7 +63,7 @@ Throughout a rollout, Ocean CD indicates when and how long a phase is in a pause
 
 #### Pause Without a Predefined Window
 
-When a pause without a predefined window occurs, the phase turns to a paused status, and its overall rollout status becomes visible in the list of rollouts in the rollouts page and in all rollout cards (i.e., in the Summary Line).  
+When a pause without a predefined window occurs, the phase turns into a paused status, and its overall rollout status becomes visible in the list of rollouts in the Rollouts page and in all rollout cards (i.e., in the Summary Line).  
 
 When a predefined window hasn’t been configured in your strategy prior to the rollout, the pause continues until you choose an action that ends the pause.
 

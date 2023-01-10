@@ -65,23 +65,23 @@ helm repo add oceancd https://charts.oceancd.io
 helm repo update
 ```
 
-3. Install spot-oceancd-operator:
+3. Install spot-oceancd-operator. The example below enables the Argo installation. Replace the token and cluster ID to your own values.
 
 ```
 helm install my-release oceancd/spot-oceancd-operator \
-
-  --set token=REDACTED \
-
-  --set clusterId=REDACTED  
+  --namespace oceancd \
+  --create-namespace \
+  --set token=xxxxx \
+  --set clusterId=xxxxx \
+  --set argoRollouts.create=true  
 ```
 
-> Tip: Installation using a Helm template is not supported.
+**Installation using a Helm template is not supported**.
 
 You can create a new namespace to install the operator by using the following commands:
 
 ```
   --namespace ${RELEASE_NAMESPACE} \
-
   --create-namespace \
 ```
 

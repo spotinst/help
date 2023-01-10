@@ -14,7 +14,7 @@ The Rollouts page has the following main areas which are described below:
 
 ## Summary Line
 
-At the top of the page, the summary line shows statistics about your rollouts.
+At the top of the page, the summary line shows statistics of your rollouts.
 
 The default view shows data from the last seven days, but you can use the date filter to display statistics from any time period. You can also use the filter bar to display statistics such as specific clusters, SpotDeployments, and Namespaces.
 

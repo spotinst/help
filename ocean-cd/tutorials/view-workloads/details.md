@@ -2,8 +2,7 @@
 
 The detailed workload page provides information about the history of the workload and provides information about rollouts of this workload that may require your attention.
 
-To view the detailed workload, click the Workload Name in the [Workloads](ocean-cd/tutorials/view-workloads/) page. A workload name becomes clickable
- the moment the SpotDeployment has been created. The launching of the first pods (although no rollout has yet become triggered) will be considered as revision number 01.
+To view the detailed workload, click the Workload Name in the [Workloads](ocean-cd/tutorials/view-workloads/) page. A workload name becomes a hyperlink the moment the SpotDeployment has been created. The launching of the first pods (although no rollout has yet become triggered) will be considered as revision number 01.
 
 <img src="/ocean-cd/_media/tutorials-detailed-workload-01.png" />
 
