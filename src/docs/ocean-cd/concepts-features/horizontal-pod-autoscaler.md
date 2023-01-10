@@ -8,7 +8,7 @@ Ocean CD has support for HPA resources that target our SpotDeployments. Use one 
 
 ## SpotDeployment YAML  
 
-```
+```yaml
 apiVersion: spot.io/v1beta1
 kind: SpotDeployment
 metadata:
@@ -42,7 +42,7 @@ spec:
 
 To set HPA using Kubernetes metric server, use the following template:
 
-```
+```yaml
 apiVersion: autoscaling/v1
 kind: HorizontalPodAutoscaler
 metadata:
@@ -61,7 +61,7 @@ spec:
 
 To set HPA using Prometheus query, use the following template:
 
-```
+```yaml
 apiVersion: keda.sh/v1alpha1
 kind: ScaledObject
 metadata:
