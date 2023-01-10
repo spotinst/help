@@ -1,4 +1,4 @@
-# End-to-End Setup - Draft    
+# End-to-End Setup  
 
 This procedure describes how to install the operator, create services and Spot Deployments as well as your Ocean CD entities. This procedure provides end-to-end insights of the Ocean CD flow to successfully trigger your very first deployment.  
 
@@ -6,18 +6,17 @@ This procedure describes how to install the operator, create services and Spot D
 
 * Run the Kubernetes cluster in Azure, Google, or Amazon.
 * If you are not already connected to Spot, follow the steps in the enablement process.
-* Ocean CD’s CLI tool is installed. If it is not installed, run the following command to do so:  
+* Ocean CD’s [CLI tool](https://docs.spot.io/connect-your-cloud-provider/first-account/) is installed. If it is not installed, run the following command:  
 
-brew install spotinst/tap/oceancd
-oceancd configure
+`brew install spotinst/tap/oceancd
+oceancd configure`
 
 * If you are using permit lists or tools like OPA, permit the following images:  
-
-- docker.io/spotinst/spot-oceancd-operator:$VERSION
-- docker.io/spotinst/spot-oceancd-operator-catalog:latest
-- docker.io/spotinst/spot-oceancd-operator-bundle:$VERSION
-- quay.io/operator-framework/olm
-- quay.io/operatorhubio/catalog:latest
+  - docker.io/spotinst/spot-oceancd-operator:$VERSION
+  - docker.io/spotinst/spot-oceancd-operator-catalog:latest
+  - docker.io/spotinst/spot-oceancd-operator-bundle:$VERSION
+  - quay.io/operator-framework/olm
+  - quay.io/operatorhubio/catalog:latest
 
 ## Step 1: Install the Operator  
 
@@ -33,6 +32,7 @@ _For demo purposes, the YAML method is provided in the console._
 * [**Argo Rollout Installation**](ocean-cd/?id=argo-rollouts-as-an-engine): Ocean CD uses Argo rollouts as part of its engine. If Argo Rollout is not installed, Ocean CD will install it (based on the selected option).
 
 3. Download the YAML and apply it to your Kubernetes cluster.
+
 `kubectl apply -f <Name of the YAML>`
 
 **If this is not specified in the command, the operator will be installed in the Ocean CD namespace.**
@@ -47,7 +47,7 @@ Once the OceanCD operator is installed you can create your Kubernetes entities: 
 
 ## Step 2: Create a Namespace and Services
 
-Create a namespace to enable all of the Kubernetes entities you create to be in the same namespace.
+Create a namespace to keep all the Kubernetes entities you create together.
 
 1. Run the following command:
 
@@ -249,7 +249,7 @@ prometheus:
  address: "http://prometheus-server.prometheus.svc.cluster.local:80"
 ```
 
-Note:  
+**Note**:  
 * If you did not follow the tutorial, the naming convention of the address should be:  
 `<svc name>.<ns name>.svc.cluster.local:portnumber`
 * **Insert the cluster ID you chose during the operator installation.**
