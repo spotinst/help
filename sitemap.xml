@@ -2213,6 +2213,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/getting-started/"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/ocean-cd/getting-started/test-end-to-end</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/getting-started/test-end-to-end"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/getting-started/test-end-to-end"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/ocean-cd/getting-started/test-install-operator-using-api-or-helm</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
