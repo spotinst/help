@@ -1,6 +1,6 @@
 # Verifications
 
-You can define the verifications that take place during the deployment process. This feature also enables you to define the type of metrics you want to receive and which monitoring tools you want to use.  
+You can define the verifications that take place during the deployment process. This feature also enables you to define the type of metrics you want to receive and which monitoring tools to use.  
 
 ## Verification Types
 
@@ -60,9 +60,9 @@ SCREENSHOT
 
 For each verification you can define a failure policy in the RolloutSpec entity. If the verification fails, Ocean CD enacts the policy. You can choose one of the following policies:   
 
-* **Roll back**: Ocean CD rolls back your rollout upon verification metric failure and returns to the previous stable version.  
+* **Roll back**: Ocean CD rolls back your rollout upon metric failure verification and returns to the previous stable version.    
 
-* **Pause**: Ocean CD pauses the rollout upon verification metric failure and allows the user to choose in real time how to pursue the rollout.  
+* **Pause**: Ocean CD pauses the rollout upon metric failure verification and enables you to choose in real time how to pursue the rollout.  
 
 * **Promote**: Ocean CD promotes your rollout, regardless of the result of the verifications.  
 
