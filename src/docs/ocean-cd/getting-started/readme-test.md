@@ -57,7 +57,7 @@ When the Add Cluster popup appears, complete the procedure below.
 
 - Token: The API Spot Token pre-generated via our console. If you do not have one, you may click on the generate button above the field. The API is saved as a personal token by Ocean CD.
 
-- [Argo Rollout Installation](https://docs.spot.io/ocean-cd/?id=argo-rollouts-as-an-engine): Ocean CD dynamically generates and manages Argo rollout manifests. In the dropdown, define that you already have Argo installed in your cluster by choosing the option that applies to you.
+- Argo Rollout Installation: Ocean CD dynamically generates and manages Argo rollout manifests. In the dropdown, define that you already have Argo installed in your cluster by choosing the option that applies to you.
 
 **The See Commands button becomes active only after all three parameters are completed.**
 
