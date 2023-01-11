@@ -9,7 +9,7 @@ This page describes the meaning of these entities, and explains the significatio
 The Ocean CD Verification Provider enables you to configure the credentials of the chosen monitoring tool.  
 The Verification Provider is reusable and can be used and maintained over multiple services and clusters. An example of a structure is as follows:  
 
-```YAML
+```yaml
 kind: verificationProvider
 name: My-verification-provider
 clusterIds:
