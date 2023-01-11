@@ -5,7 +5,7 @@ This procedure describes how to install the operator, create services and Spot D
 ## Prerequisites
 
 * Run the Kubernetes cluster in Azure, Google, or Amazon.
-* If you are not already connected to Spot, follow the steps in the enablement process.
+* If you are not already connected to Spot, follow the steps in the [enablement process](https://docs.spot.io/connect-your-cloud-provider/first-account/).
 * Ocean CD’s [CLI tool](https://docs.spot.io/connect-your-cloud-provider/first-account/) is installed. If it is not installed, run the following command:  
 
 `brew install spotinst/tap/oceancd
@@ -29,7 +29,7 @@ _For demo purposes, the YAML method is provided in the console._
 
 2. Complete the information:
 * **Cluster Identifier**: This is a logical identifier for your cluster that must be unique and have up to 30 alphanumeric characters without any spaces. You can choose any ID and it does not need to be coupled to the Ocean cluster ID (o-xxxxxx). Ocean CD can run on clusters that are not managed by Ocean.
-* [**Argo Rollout Installation**](ocean-cd/?id=argo-rollouts-as-an-engine): Ocean CD uses Argo rollouts as part of its engine. If Argo Rollout is not installed, Ocean CD will install it (based on the selected option).
+* [Argo Rollout Installation](ocean-cd/?id=argo-rollouts-as-an-engine): Ocean CD uses Argo rollouts as part of its engine. If Argo Rollout is not installed, Ocean CD will install it (based on the selected option).
 
 3. Download the YAML and apply it to your Kubernetes cluster.
 
@@ -43,7 +43,7 @@ When the process is complete and the operator pods are running, your cluster app
 
 > **Tip**: Once you have downloaded the YAML, the new row remains with partial information for five minutes. If five minutes elapsed and the YAML was not applied, the row and the banner will be removed. However, the YAML can still be applied at a different time, and the Ocean CD displays the new data accordingly.
 
-Once the OceanCD operator is installed you can create your Kubernetes entities: Services & SpotDeployment.
+Once the OceanCD operator is installed you can create your Kubernetes entities: Services and SpotDeployment.
 
 ## Step 2: Create a Namespace and Services
 
@@ -131,7 +131,7 @@ spec:
 
 `kubectl apply -f <SpotDeployment YAML>`  
 
-Now that your SpotDeployment and services were created, the remaining step is to create the OceanCD entities. These will act as the rules for your canary deployment to follow.
+After the SpotDeployment and services are created, the remaining step is to create the Ocean CD entities that act as the rules for your canary deployment to follow.
 
 ## Step 4: Create Verification
 
@@ -164,7 +164,7 @@ helm install prometheus prometheus-community/prometheus \
 
 2. Make note of the Prometheus endpoint in helm response (this will be needed later) as follows:
 
-The Prometheus server can be accessed via port 80 on the following DNS name from within your cluster:
+The Prometheus server can be accessed via port 80 on the following DNS name from your cluster:
 
 Prometheus- server.prometheus.svc.cluster.local
 
