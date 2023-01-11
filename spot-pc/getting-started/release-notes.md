@@ -1,5 +1,20 @@
 # Spot PC: Release Notes
 
+## 1/12/2023
+_When:_ 1/12/2023 at 10pm - 11pm Eastern
+_Impact:_ Access to desktops and application services for End Users will remain uninterrupted. Access to Spot PC console will remain available.
+
+* Alerts Notification Badge
+  * Spot PC is excited to present the Alerts Notification Badge to the header of the Web App. With real-time alerts that are created by specific tenant-based monitors. Alerts can be filtered by all tenants or by specific tenants.
+* Log View Improvements
+  * Spot PC has improved Log View. Logs can be expanded across the screen with the Full button with the search bar still available. To get out of the full screen, press the minimize button. While in the logs, visibility has improved when highlighted blue hover is enabled with black text. 
+* New Notifications Profiles
+  * Spot PC is proud to announce Notification Profiles are now available under Config Actions. At this point in time, emails can be added to notification profiles that can be assigned to monitors.  
+* Logs Update 
+  * Log Analytics retention has increased to 90 days for new tenants. In timeframe, 60 day and 90 days are now available options for filtering in Logs.
+* Default Monitors Updates 
+  * Default Monitors are now created for automatically for new tenants. Default Monitors can be added for existing tenants manually. 
+
 ## 12/15/2022
 _When:_ 12/15/2022 at 10pm - 11pm Eastern
 _Impact:_ Access to desktops and application services for End Users will remain uninterrupted. Access to Spot PC console will remain available.
