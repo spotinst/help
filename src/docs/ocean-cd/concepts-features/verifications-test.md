@@ -29,6 +29,7 @@ Go to the Phase Verifications or Background Verification tab in the [Detailed Ro
 The verification results are described below.
 
 **Passed**: A metric is passed when the success condition has been met.
+
 **Failed**: A metric is failed if the failure condition consecutiveErrorLimit or failure limit has been met.  
 **Inconclusive**: A metric is inconclusive when it has reached the `inconclusiveLimit` parameter. An inconclusive metric indicates that the run was neither successful nor failed.  
 
