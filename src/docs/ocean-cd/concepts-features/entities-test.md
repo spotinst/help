@@ -11,15 +11,10 @@ The Verification Provider is reusable and can be used and maintained over multip
 
 ```YAML
 kind: verificationProvider
-
 name: My-verification-provider
-
 clusterIds:
-
 - cluster-name
-
 prometheus:
-
  address: address-name
 ```
 
@@ -169,7 +164,7 @@ The attributes of a rolloutSpec are described below.
 * Traffic: Kubernetes services or optional traffic manager (link) you have chosen.  
 * failure.Policy: The automatic action/s Ocean CD performs in the case of a failure. Ocean CD supports Abort, Pause and Promote. For more details see the verifications page.
 
-You can create your rolloutSpec (link to Getting Started) either in the Spot console or by using the Ocean CD API. 
+You can create your rolloutSpec (link to Getting Started) either in the Spot console or by using the Ocean CD API.
 
 ## What’s Next?
 
