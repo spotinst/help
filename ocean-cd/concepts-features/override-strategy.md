@@ -10,7 +10,32 @@ To set a strategy for a specific rollout, add a new annotation to your SpotDeplo
 
 If the annotation is in the SpotDeployment, the strategy set in the SpotDeployment is the strategy Ocean CD uses for upcoming rollouts.  
 
-<img src="/ocean-cd/_media/override-strategy-1.png" />
+```yaml
+apiVersion: spot.io/v1beta1
+kind: SpotDeployment
+metadata:
+  name: nginx-deployment
+  namespace: oceancd-workshop
+  labels:
+    app: nginx
+  annotations:
+    oceancd.spot.io/strategy: newstrategy
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: public.ecr.aws/nginx/nginx:1.22
+        ports:
+        - containerPort: 8080
+```
 
 To override successfully, use an existing strategy.  
 
@@ -18,9 +43,7 @@ To override successfully, use an existing strategy.
 
 The Spot console updates the success or failure of the process.  
 
-The success of an override is displayed as shown below:
-
-<img src="/ocean-cd/_media/override-strategy-2.png" />
+The success of an override is displayed in the Spot console. In the Detailed Rollout page, click Rollout details.
 
 The failure of an override is displayed as shown below:
 
