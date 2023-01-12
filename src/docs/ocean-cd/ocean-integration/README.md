@@ -30,7 +30,7 @@ kubectl edit clusterrole spotinst-kubernetes-cluster-controller
 3. Restart your controller using the following command:  
 
 ```
-kubectl delete <Pod’s name>	 
+kubectl rollout restart deployment spotinst-kubernetes-cluster-controller -n kube-system
 ```
 
 ## What’s Next?
