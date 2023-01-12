@@ -47,8 +47,7 @@ _Impact:_ Access to desktops and application services for End Users will remain 
 	6. Config Actions' accordion is now aligned in formation
 * Sites Updates
   * Sites now have new tooltips to Sites' fields in attributes and other key locations in the workflow.  
-* Automatic FSLogix Updates 
-  * Spot PC is delighted to preview prerequisites for FSLogix agent automatic upgrade in future versions. FSLogix agent version can be specified from approved version list and can be focus on site or tenant with inheritance. New deployments will default to 'install latest'. Existing deployments will have the feature disabled by default, and it must be enabled explicitly. Updates will occur gracefully and opportunistically. This new feature can be managed through Command Center but will be available in Spot PC Web App in a future release.    
+
 
 ## 12/6/2022
 _When:_ 12/6/2022 at 10pm - 11pm Eastern
