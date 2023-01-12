@@ -1,72 +1,124 @@
-# Verifications
+# Traffic Manager Reference
 
-You can define the verifications that take place during the deployment process. This feature also enables you to define the type of metrics you want to receive and which monitoring tools to use.  
+Ocean CD enables you to choose from a number of supported traffic managers to configure in the RolloutSpec. This page shows template examples for the traffic managers that Ocean CD supports. For any option you choose, the YAML created is applied in the namespace chosen for the Spot deployment.
 
-## Verification Types
+### ALB: Instance Level
 
-### Background Verifications
-
-Background verifications occur behind the scenes, at the rollout level. They are not dedicated only to a single phase, but they run while the rollout is in progress.  
-
-<img src="/ocean-cd/_media/background-verifications.png" />
-
-### Phase Verifications
-
-Phase verifications occur at the phase level. Within your strategy, you can set one or more verification templates within a phase.
-
-<img src="/ocean-cd/_media/phase-verifications.png" />
-
-###  Tracking the Verification Progress
-
-Once a rollout has been triggered, you can view the results of each of the metrics in the form of a graph or a table.  
-
-Go to the Phase Verifications or Background Verification tab in the [Detailed Rollouts](link) page depending on the type of verification you are running.
-
-<img src="/ocean-cd/_media/verifications-01.png" />
-
-## Verification Results
-
-The verification results are described below.
-
-**Passed**: A metric is passed when the success condition has been met.
-
-**Failed**: A metric is failed if the failure condition consecutiveErrorLimit or failure limit has been met.  
-**Inconclusive**: A metric is inconclusive when it has reached the `inconclusiveLimit` parameter. An inconclusive metric indicates that the run was neither successful nor failed.  
-
-You can encounter an inconclusive metric under the following conditions:
-
-* You set both failure and success conditions. In this case, the inclusive verification would lie in any result found between the two.  
-
-For example:    
-
-```
-Failure limit: result < 10      
-
-Success limit: result > 30
+```yaml
+traffic:
+  canaryService: rollouts-demo-canary
+  stableService: rollouts-demo-stable
+  alb:
+    ingress: rollouts-demo-ingress
+    servicePort: 80
+    rootService: rollouts-demo-root
+    stickinessConfig:
+      enabled: true
+      durationSeconds: 3600
+    annotationPrefix: string
 ```
 
-In this case, the inconclusive range is from 10 to 30.
+Whenever `rootService` is used, the value must not be the same as the `stableService` value.
 
-* You didn’t set any failure or success conditions. In this case, any result would be inconclusive.
+### ALB: IP Level
 
-## Dry Run Verifications
+```yaml
+traffic:
+  pingPong:
+    pingService: rollouts-demo-canary
+    pongService: rollouts-demo-stable
+  alb:
+    ingress: rollouts-demo-ingress
+    servicePort: 80
+    rootService: rollouts-demo-root
+    stickinessConfig:
+      enabled: true
+      durationSeconds: 3600
+    annotationPrefix: string     
+```
 
-Ocean CD enables you to choose whether the metric runs as a dry run. Enable the boolean parameter during the verification template configuration.  
+Whenever `rootService` is used, the value must not be the same as the `stableService` value.
 
-This is useful if you want to use a metric as part of a verification without impacting the final state of the rollout. There is no impact on the rollout regardless of the result for that metric.
+### Ambassador
 
-SCREENSHOT
+```yaml
+traffic:
+  canaryService: rollouts-demo-canary
+  stableService: rollouts-demo-stable
+  ambassador:
+    mappings:
+    - echo
+```
 
-## Failure policy
+### Istio: Host Level
 
-For each verification you can define a failure policy in the RolloutSpec entity. If the verification fails, Ocean CD enacts the policy. You can choose one of the following policies:   
+```yaml
+traffic:
+  canaryService: rollouts-demo-canary
+  stableService: rollouts-demo-stable
+  istio:
+    virtualServices:
+      - name: rollout-vsvc
+        routes:
+          - primary
+```
 
-* **Roll back**: Ocean CD rolls back your rollout upon metric failure verification and returns to the previous stable version.    
+### Istio: Subset Level
 
-* **Pause**: Ocean CD pauses the rollout upon metric failure verification and enables you to choose in real time how to pursue the rollout.  
+```yaml
+traffic:
+  stableService: rollouts-demo-stable
+  istio:
+    virtualServices:
+    - name: rollout-vsvc
+      routes:
+      - primary
+    destinationRule:
+      name: rollout-destrule
+      canarySubsetName: canary
+      stableSubsetName: stable
+```
 
-* **Promote**: Ocean CD promotes your rollout, regardless of the result of the verifications.  
+### NGINX
 
-## What’s Next?
+```yaml
+traffic:
+  canaryService: rollouts-demo-stable
+  stableService: rollouts-demo-canary
+  nginx:
+    stableIngress: rollouts-demo-ingress-nginx
+    additionalIngressAnnotations:
+      canary-by-header: X-Canary
+      canary-by-header-value: iwantsit    
+```
 
-Learn how to see the real-time progress in the [Detailed Rollout](ocean-cd/tutorials/view-rollouts/detailed-rollout) page.
+### SMI
+
+```yaml
+traffic:
+  canaryService: rollouts-demo-canary
+  stableService: rollouts-demo-stable
+  smi:
+    rootService: rollouts-demo-root
+```
+
+Whenever `rootService` is used, the value must not be the same as the `stableService` value.
+
+### Without Traffic Manager  
+If a traffic manager is not explicitly configured, Ocean CD by default uses Kubernetes traffic methods based on replicas.  
+
+In this case, you have two options:  
+
+* Add both service names (Canary and Stable)  as shown in the template below.
+
+```yaml
+traffic:
+ stableService: < >
+ canaryService: < >
+ ```
+
+* Remove the traffic object entirely. Ocean CD pinpoints the relevant services by using labels.
+
+# What’s Next?
+
+Learn about [viewing the list of rollouts](ocean-cd/tutorials/view-rollouts/) and the information provided in the [detailed rollout page](ocean-cd/tutorials/view-rollouts/detailed-rollout).
