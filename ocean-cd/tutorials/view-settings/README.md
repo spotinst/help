@@ -2,11 +2,13 @@
 
 The Settings view displays information about the verification templates, verification providers, RolloutSpec, and strategies as well as a view of the clusters that have the Ocean CD Operator installed.
 
+OceanCD supports the creation, update, delete and duplicate actions of all of the entities below using the Spot console.
+
 ## Verification Provider
 
 The verification provider tab provides an overview of the providers set for your verification template.  
 
-<img src="/ocean-cd/_media/tutorials-settings-04b.png" />
+<img src="/ocean-cd/_media/verification-provider.png" />
 
 ## Verification Template
 
@@ -24,7 +26,7 @@ The Clusters tab provides an overview of the clusters where the Ocean CD Operato
 
 The Strategy tab provides an overview of the phases, traffic splits and verifications you have chosen for your entity.
 
-<img src="/ocean-cd/_media/tutorials-settings-04.png" />
+<img src="/ocean-cd/_media/view-settings-strategy.png" />
 
 ## Rollout Spec
 
