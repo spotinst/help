@@ -16,7 +16,7 @@ At the top of the page, the summary line shows statistics of your rollouts.
 
 The default view shows data from the last seven days, but you can use the date filter to display statistics from any time period. You can also use the filter bar to display statistics such as specific clusters, SpotDeployments, and Namespaces.
 
-<img src="/ocean-cd/_media/tutorials-rollouts-02.png" />
+<img src="/ocean-cd/_media/tutorials-rollouts-04.png" />
 
 The summary line provides the following statistics:
 * **Rollout durations**:  
