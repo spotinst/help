@@ -1,31 +1,32 @@
 # Detailed Workload
 
-The detailed workload page provides information about the history of the workload and provides information about rollouts of this workload that may require your attention.
+This page describes how you can view the history of a workload and provides information about rollouts of the workload that may require your attention.
 
-To view the detailed workload, click the Workload Name in the [Workloads](ocean-cd/tutorials/view-workloads/) page. A workload name becomes a hyperlink the moment the SpotDeployment has been created. The launching of the first pods (although no rollout has yet become triggered) will be considered as revision number 01.
-
-<img src="/ocean-cd/_media/tutorials-detailed-workload-01.png" />
+To view the detailed workload, click the workload name in the [Workloads](ocean-cd/tutorials/view-workloads/) page. A workload name becomes a hyperlink the moment the SpotDeployment has been created. If no rollout has been triggered, the first launch of pods is still considered as revision number 01.  
 
 ## Revision History
 
-The Revision History provides a running history of the versions that have been deployed, including the date of the update, the rollout image, its revision ID, and its rollout status (successful, rolled back, canceled, and paused).
+The Revision History provides a running history of the versions that have been deployed. The revision history includes the date of the update, the rollout image, its revision ID, and its rollout status (successful, rolled back, canceled, and paused).
 
-<img src="/ocean-cd/_media/tutorials-detailed-workload-02.png" width="250" />
+<img src="/ocean-cd/_media/detailed-workload-1.png" />
 
-### Statuses
+## Statuses
 
-The revision history provides information about the outcome of each rollout. In addition, the history uses labels to indicate desired and live versions and whether a workload had been degraded. The labels include:
-- Desired: The latest version you have applied in your SpotDeployment. The one you wish to see running.
-- Live: The currently running version. The one you consider as stable.
-- Degraded: Indicates that your latest SpotDeployment rollout was rolled back. Your live version would be your stable version, and the desired would be the canary one.
+The revision history provides information about the outcome of each rollout. In addition, the history uses labels to indicate desired and live versions and whether a workload has been degraded. The labels include:
 
-In most cases, the Desired and the Live versions will be the same. The one you wish to see running (desired) will be the actual running one (live).
+* **Desired**: The latest version you have applied in your SpotDeployment that you want to view.  
 
-However there may be cases where they do not correspond. Such use cases occur when your workload is in a degraded state.
+* **Live**: The current version that is considered stable.
 
-A degraded status may easily be removed either by applying your SpotDeployment with the details of your live version or by triggering a whole new rollout with a new version.
+* **Degraded**: Indicates that your latest SpotDeployment rollout was rolled back. The live version is the stable version and the desired version is the canary version.
 
-<img src="/ocean-cd/_media/tutorials-detailed-workload-021.png" />
+In most cases, the desired and the live versions are the same. The version you want to see running (desired) is the actual running version (live).   
+
+However, there can be cases where they do not correspond. This occurs when a workload is in a degraded state.  
+
+A degraded status may easily be removed either by applying your SpotDeployment with the details of your live version or by triggering a whole new rollout with a new version.  
+
+<img src="/ocean-cd/_media/detailed-workload.png" />
 
 ## What’s Next?
 
