@@ -23,7 +23,7 @@ The summary line provides the following statistics:
   - Median: The duration that has the median time of all the durations in the defined time period.
   - Avg.: The mean time of all the durations in the time period.
 * **Attention needed**: The currently paused rollouts. Phases may be found in Paused state based on your RolloutSpec and Strategy configurations. They will remain in this state as long as you have not taken any action.
-* **Failure Management**: The number of rolled back rollouts.
+* **Incident Prevention**: The number of rollouts that were prevented.
 * **Successful rollouts**: The number of successful rollouts per all rollouts in the time period defined, presented as a fraction and as a percentage of all rollouts (i.e., successful, rolled back, and paused).
 
 ## Rollout List
