@@ -113,11 +113,15 @@ In this case, you have two options:
 
 ```yaml
 traffic:
- stableService: < >
- canaryService: < >
+ canaryService: rollouts-demo-canary
+ canaryService: rollouts-demo-stable
  ```
 
 * Remove the traffic object entirely. Ocean CD pinpoints the relevant services by using labels.
+
+In both options, the YAML created must be applied in the namespace chosen for the Spot deployment.
+
+**Adding a traffic manager remains optional when using replica based method. If you want to configure the services only in your cluster, you can do so**. 
 
 ## What’s Next?
 
