@@ -6,9 +6,7 @@ This page describes cases that could prevent the triggering of your rollout (lin
 
 #### Issue
 
-If the YAML files applied in your namespace were not configured correctly, Ocean CD displays an error message in the Spot console including specific information required for you to resolve the issue.
-
-For example, the errors could be that the services you applied do not share the same labels as your SpotDeployment, or that the services were not found in the same namespace as the SpotDeployment. The Spot console supplies the details you need to resolve the issue.
+If the YAML files applied in your namespace such as the services ones were not configured correctly, or one of your Ocean CD entities was wrongly configured or missing, Ocean CD displays an error message in the Spot console including information to resolve the issue.
 
 #### Resolution
 
@@ -38,7 +36,9 @@ An update appears in the console that the application was performed and the Degr
 
 #### Issue
 
-During a rollout, no heartbeat is detected from the Ocean CD Operator.
+If the operator stops reporting a heartbeat, there can be different reasons to it, such as the termination of a node. In this case, a banner appears in the Spot console indicating that the operator is no longer running and that you might need to take action. Spot highly recommends at this point to reach out to the Operator logs for additional information.
+
+**Although the operator is no longer providing a heartbeat, it does not indicate that the rollout has stopped and it will continue independently without the operator behind the scene. Once the operator is back, the data will be updated accordingly**.
 
 #### Resolution
 
@@ -46,7 +46,7 @@ The operator can stop reporting a heartbeat because the node it was running on w
 
 However, the operator may stop and this indicates that Ocean CD does not currently have visibility over the rollout. This does not indicate that the rollout has stopped and it can continue independently without the operator.  
 
-<img src="/ocean-cd/_media/troubleshoot-rollout-003.png" />
+<img src="/ocean-cd/_media/troubleshoot-rollout-004.png" />
 
 ## No Heartbeat Before a Rollout
 
@@ -71,6 +71,8 @@ Verify the following:
 * The cluster ID is well found in the verification provider. The cluster ID within which you are performing a rollout, may be the one configured in your verification provider.
 * Your credentials were typed correctly. Incorrect typing of a credential can cause a lack of communication with the chosen monitoring tool.
 * Your query is valid by running it internally in your monitoring tool prior to the rollout.
+
+<img src="/ocean-cd/_media/troubleshoot-verification-data.png" />
 
 ## What’s Next?
 
