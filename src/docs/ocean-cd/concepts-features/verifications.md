@@ -2,6 +2,8 @@
 
 You can define the verifications that take place during the deployment process. This feature also enables you to define the type of metrics you want to receive and which monitoring tools to use.  
 
+Ocean CD offers a way to configure a set of queries and rules, also known as verifications using different providers along with progressive deployments. The particularity of Ocean CD is that it processes the query requested in real time along with the rules configured to determine if the metric has failed or succeeded. There is no need to reach your monitoring tool in parallel, all tools are found in the Spot console.
+
 ## Verification Types
 
 ### Background Verifications
