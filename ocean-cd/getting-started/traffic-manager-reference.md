@@ -119,6 +119,6 @@ traffic:
 
 * Remove the traffic object entirely. Ocean CD pinpoints the relevant services by using labels.
 
-# What’s Next?
+## What’s Next?
 
 Learn about [viewing the list of rollouts](ocean-cd/tutorials/view-rollouts/) and the information provided in the [detailed rollout page](ocean-cd/tutorials/view-rollouts/detailed-rollout).
