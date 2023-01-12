@@ -15,8 +15,10 @@ The list of live workloads provides the following information:
 - Workload type: Indicates whether the workload is a Deployment (i.e., not migrated to Ocean CD) or a Spotdeployment (already migrated).
 - Cluster ID: The cluster where the workload is running.
 - Namespace: Kubernetes object that partitions a single Kubernetes cluster into multiple virtual clusters. The namespace displayed in the Workloads table is the namespace (i.e., a virtual group of instances) to which the workload belongs.
+- Last Updated: The last time the pod was updated.  
 - Image: Name and version number of the current version.
 - Ready pods: Number of pods running this image.
+- Revisions: The number of versions that were successfully deployed by Ocean CD.  
 
 ## What’s Next?
 

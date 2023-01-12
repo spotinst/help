@@ -4,7 +4,7 @@ In Kubernetes, a Horizontal Pod Autoscaler (HPA) automatically updates a workloa
 
 Horizontal scaling means that the response to increased load is to deploy more pods. This is different from vertical scaling, which for Kubernetes would mean assigning more resources (for example: memory or CPU) to the pods that are already running in the workload.
 
-Ocean CD has support for HPA resources that target our SpotDeployments. Use one of the templates below to set HPA when using Ocean CD.
+Ocean CD supports HPA resources that acknowledge SpotDeployments. The templates below give an example of triggering the launch of pods using Prometheus query or using Kubernetes metric server. 
 
 ## SpotDeployment YAML  
 
@@ -57,7 +57,7 @@ spec:
  targetCPUUtilizationPercentage: 20
  ```
 
-## Scaled Object
+## Scaled Object YAML
 
 To set HPA using Prometheus query, use the following template:
 

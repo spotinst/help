@@ -24,7 +24,7 @@ Create one or more services that will be used during the rollout. Choose one of 
 
 * Use your existing services.
 
-> Tip: Make sure to apply the services in the same namespace as the one used for your SpotDeployment.
+> Tip: Ensure you apply the services in the same namespace as the one used for your SpotDeployment.
 
 ## Step 3: Create and Apply Entities
 
