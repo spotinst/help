@@ -1,73 +1,39 @@
-<meta name="robots" content="noindex">
-
 # Detailed Rollout
 
-The Detailed Rollout page provides the details of a specific rollout. To view a detailed rollout page, click the row of the rollout in the Rollouts list on the [View Rollouts](ocean-cd/tutorials/view-rollouts/) page.
+The Detailed Rollout page provides information of the rollouts that are triggered by Ocean CD. To view a detailed rollout page complete the following steps:
 
-The top line of the page shows the name of the rollout (Inventory App in the example below), the rollout type, an icon indicating the rollout status, and the time and duration of the rollout.
+1. Click the menu on the left and choose Rollouts.  
+2. Click the rollout ID in the Rollouts table.  
 
-At the top of the page, you will also see banners providing information and guidance about the rollout process as various events occur.
+The rollout details are presented in the following manner:
 
-<img src="/ocean-cd/_media/tutorials-detailed-rollout-01.png" />
-
-The rollout details are presented in the following areas on the page.
-- Summary Line
-- Rollout Phases
-- Application View
-- Rollout Details
+* Summary Line
+* Rollout Phases, Statuses and Actions
+* Application View
+* Rollout Details
 
 ## Summary Line
-
-Just above the summary line, you can see the cluster name, the namespace and the rollout ID.
 
 <img src="/ocean-cd/_media/tutorials-detailed-rollout-02.png" />
 
 The summary line includes the following information:
-- Rollout type: Shows the current rollout type (e.g., Canary in the example above) as compared to Stable, which is the current version running.
+- Version type: Refers to the previous and new version configured.
 - Image: Shows the current image and the image being rolled out.
-- Kubernetes service: Enables network access for a set of pods.
-- Traffic split: The percent of traffic exposed to the stable version and the Canary version being rolled out.
+- Kubernetes service: Displays the name of the services used for the rollout. 
+- Traffic split: The percent of traffic exposed to the stable version and the Canary version.
 - Replicas: A graphical representation of the number of available replicas running the stable version and the number of replicas running the Canary version. The icons also show the status of each replica.
 
-## Rollout Phases & Statuses
+## Rollout Phases, Statuses and Actions
 
-This area shows the progress of the Canary version rollout and provides information about each phase of the rollout. The arrow at the top hides the Rollout phases area and expands the application view area.
+This section shows the progress of the rollout and provides information about each of its phases.
 
 <img src="/ocean-cd/_media/tutorials-detailed-rollout-03.png" width="180" />
 
-### Failures
+### Types of Statuses of Phases  
 
-Should any of your phases encounter a failure or enter a pause, the display will be updated accordingly, enabling you to easily understand the status and the steps you would need to take.
+#### Initialization and Deallocation of Pods
 
-Ocean CD will behave in accordance with the potential failure policy or paused statuses set prior to the rollout.
-
-### Failure Types
-
-1. Kubernetes failures may always be encountered. These failures could include: CrashLoop pod status, ImageLoop, Liveness Probe Failure, and others. For failures like these, OceanCD will automatically trigger a rollback action once the progressDeadlineSeconds are over,  regardless of the failure policy set.
-2. Verification Failures. These failures will only occur if the metrics set in your Verification templates were to fail. The way OceanCD replies to such failure, will be entirely dependent on the failure policy set in your RolloutSpec. Learn more about the [verifications](ocean-cd/concepts-features/verifications).
-3. Rollouts rolled back due to manual intervention.
-
-### Paused Status (Phase Level)
-
-Throughout a rollout, Ocean CD will indicate when and for how long the phase will be in a paused status. This pause is the direct consequence of the pause status set in your strategy prior to the rollout.
-
-#### Pause Without a Pre-Defined Window
-
-For such cases, the phase will be in a paused status, and its overall status will be visible in the list of rollouts in the Rollouts page and in all rollout cards (i.e., in the Summary Line).
-
-When no pre-defined window has been configured in your strategy prior to the rollout, the pause will continue up until you decide otherwise.
-
-You will be able to take the following actions at any time:
-- Resume
-- Roll Back.
-
-#### Pause With a Pre-Defined Window
-
-For such cases, the phase will be in a paused status until the pre-defined window configured in the strategy entity is completed. After the window, the rollout will automatically move on to the next phase without any further action required.
-
-### Initialization & Deallocation of pods
-
-Ocean CD will update you when pods are in initialization processes and when pods are being deallocated. No rollouts will come to term and no phase actions will be triggered until these processes are completed.
+The console displays updates of pods that are in initialization processes and that are deallocated. Rollouts will not be completed and phase actions will not be triggered until these processes are finished.  
 
 #### Initialization
 
@@ -77,35 +43,65 @@ Ocean CD will update you when pods are in initialization processes and when pods
 
 <img src="/ocean-cd/_media/tutorials-detailed-rollout-11.png" />
 
-### Actions
+### Failures
 
-At any time, you can click the three dots at the top of the Rollout Phases panel and initiate one of the actions.
+Updates of failed phases are sent in the console and they enable you to easily understand the status and the steps undertaken.  
+
+**Failure Types**
+
+* **Kubernetes failures**: Such errors include CrashLoop pod status, ImageLoop, Liveness Probe Failure, and others. In these cases, Ocean CD triggers a rollback action once the progressDeadlineSeconds are over, regardless of the failure policy set.
+
+* **Verification failures**: These failures occur if the metrics set in your verification templates fail. The way Ocean CD responds to this type of failure, depends on the failure policy set in your RolloutSpec. Learn more about the [verifications](ocean-cd/concepts-features/verifications).
+
+* **Verification data not received**: These failures occur when there is lack of communication between the monitoring tool or a misconfiguration in the verification template and the verification provider. The way Ocean CD responds to this type of failure depends on the failure policy set in your RolloutSpec.  
+
+* **Rollouts rolled back due to manual intervention**: This occurs if you choose to manually roll back the rollout.
+
+### Paused Status (Phase Level)
+
+Throughout a rollout, Ocean CD indicates when and how long a phase is in a paused status. This pause is the direct consequence of the pause status set in your strategy prior to the rollout.  
+
+#### Pause Without a Predefined Window
+
+When a pause without a predefined window occurs, the phase turns into a paused status, and its overall rollout status becomes visible in the list of rollouts in the Rollouts page and in all rollout cards (i.e., in the Summary Line).  
+
+When a predefined window hasn’t been configured in your strategy prior to the rollout, the pause continues until you choose an action that ends the pause.
+
+You can take the following actions at any time:  
+
+* Resume
+* Roll Back  
+
+#### Pause With a Predefined Window  
+
+When a pause with a predefined window occurs, the phase turns to a paused status until the predefined window configured in the strategy entity is completed. After the window, the rollout moves to the next phase without any further action required.  
+
+### Dropped
+
+Phases are considered as dropped, if they were not performed at all. For example during a roll back at an early stage, Ocean CD rolls back immediately to the previous version, without performing any of the left phases.
+
+### Canceled
+
+Ocean CD allows the triggering of a new rollout, while another rollout is already running. This action would consider any phases of the overridden rollout to be canceled.  
+
+### Type of Actions in a Rollout:  
+
+Click the three dots at the top of the Rollout Phases panel at any time to start one of the following actions:
+
+* **Promote**: Promote one phase to the next.
+* **Promote All**: Promote a phase to the end of the rollout, triggering success.
+* **Pause Rollout**: Pause a full rollout. Once the rollout is resumed, it restarts the  phase where it left off.
 
 <img src="/ocean-cd/_media/tutorials-detailed-rollout-07.png" />
 
-The following actions are available:
-- Promote: Promote one phase to the next.
-- Promote All: Promote a phase to the end of the rollout, triggering success.
-- Pause Rollout: Pause a full rollout. Once the rollout is resumed, it will restart the phase where it left off.
+> Tip: This action is different from the action that you set in the strategy and does not behave in the same manner. Once you have chosen the action, the entire rollout (and not only the phase) is paused, and remains so as long as it is not promoted or rolled back.
 
-> **Tip**: This action is not the same as the one you have set in your strategy and will not behave in the same manner. Once you have chosen it, the whole rollout (and not only the phase) will be paused, and it will remain as such as long as it is not promoted or rolled back.
-
-- Roll Back: The rollout will be terminated and the previous version (i.e., Stable) will be restored.
-- Retry: Available to you only once a rollback is completed and is applicable to the last SpotDeployment only. With this action you can retry your full rollout.
-
-Whenever you click an action, you will be prompted to confirm before the action is actually taken.
-
-### Rollout Cancelation
-
-You can cancel a running rollout. Ocean CD supports a cancellation which provides you real-time status information including the newly created Rollout ID.
-
-To cancel a rollout, just reapply the Spotdeployment running.
-
-<img src="/ocean-cd/_media/tutorials-detailed-rollout-09.png" width="450" />
+* **Roll Back**: The rollout is terminated and the previous version (i.e., Stable) is restored.  
+* **Retry**: Retry your full rollout. Available only when a rollback is completed and is applicable to the last SpotDeployment only.   
 
 ## Application View
 
-The Application view provides information about the Kubernetes layer and the CRD diff. Each of the views also provides convenient tools to export the data and copy to the clipboard.
+The Application view provides information about the Kubernetes layer and the CRD differences. Each of the views also provides tools to export the data and copy to the clipboard.  
 
 ### Kubernetes Events
 

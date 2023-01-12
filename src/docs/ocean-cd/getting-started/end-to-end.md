@@ -285,6 +285,5 @@ Now that everything is installed, you can trigger your very first rollout. Chang
 
 A new Canary rollout will be automatically initiated in the All Rollouts table. Click the Rollout ID of your deployment to view the detailed rollout page and take action from the console.
 
-
 ## What’s Next?
 - Learn about viewing the [list of rollouts](ocean-cd/tutorials/view-rollouts/) and the information provided in the [detailed rollout](ocean-cd/tutorials/view-rollouts/detailed-rollout) page.

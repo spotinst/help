@@ -1,39 +1,6 @@
 # Traffic Manager Reference
 
-In the [Migrate Workload](ocean-cd/getting-started/?id=migrate-a-workload-using-the-console) procedure, you can choose a traffic manager in the RolloutSpec configuration, and Ocean CD will configure it automatically.
-
-<img src="/ocean-cd/_media/getting-started-n10.png" width="200" />
-
-This page shows templates for all of the traffic managers that Ocean CD supports. If you would like to use a template instead of the automatic configuration, you can use one of these.
-
-You do not have to use a traffic manager. For more information, see [Without a Traffic Manager](ocean-cd/getting-started/traffic-manager-reference?id=without-traffic-manager).
-
-> **Tip**: Whenever rootService is used, the value must not be the same as the stableService value.
-
-### General Template for Syntax
-
-```yaml
-kind: RolloutSpec
-name: RolloutSpec-OceanCD
-spotDeployment:
- clusterId: cluster-name
- namespace: mynamespace
- name: nginx-deployment
-strategy:
- name: Strategy-OceanCD
-traffic:
- canaryService: rollouts-demo-stable
- stableService: rollouts-demo-canary
- nginx:
-   stableIngress: rollouts-demo-ingress-nginx
-   additionalIngressAnnotations:
-     canary-by-header: X-Canary
-     canary-by-header-value: iwantsit
-failurePolicy:
- action: abort
-```
-
-Whenever `rootService` is used, the value must not be the same as the `stableService` value.
+Ocean CD enables you to choose from a number of supported traffic managers to configure in the RolloutSpec. This page shows template examples for the traffic managers that Ocean CD supports. For any option you choose, the YAML created is applied in the namespace chosen for the Spot deployment.
 
 ### ALB: Instance Level
 
@@ -51,9 +18,9 @@ traffic:
     annotationPrefix: string
 ```
 
-### ALB: IP Level
+Whenever `rootService` is used, the value must not be the same as the `stableService` value.
 
-The IP Level is a new Argo feature. If you want to use this feature, be sure to have the latest Argo version.
+### ALB: IP Level
 
 ```yaml
 traffic:
@@ -67,8 +34,10 @@ traffic:
     stickinessConfig:
       enabled: true
       durationSeconds: 3600
-    annotationPrefix: string    
+    annotationPrefix: string     
 ```
+
+Whenever `rootService` is used, the value must not be the same as the `stableService` value.
 
 ### Ambassador
 
@@ -120,7 +89,7 @@ traffic:
     stableIngress: rollouts-demo-ingress-nginx
     additionalIngressAnnotations:
       canary-by-header: X-Canary
-      canary-by-header-value: iwantsit   
+      canary-by-header-value: iwantsit    
 ```
 
 ### SMI
@@ -133,16 +102,23 @@ traffic:
     rootService: rollouts-demo-root
 ```
 
-### Without Traffic Manager
+Whenever `rootService` is used, the value must not be the same as the `stableService` value.
 
-If a traffic manager is not explicitly configured, Ocean CD by default uses Kubernetes traffic methods based on replicas. You only need to add the service names for the Canary and Stable versions as shown in the template below..
+### Without Traffic Manager  
+If a traffic manager is not explicitly configured, Ocean CD by default uses Kubernetes traffic methods based on replicas.  
+
+In this case, you have two options:  
+
+* Add both service names (Canary and Stable)  as shown in the template below.
 
 ```yaml
 traffic:
  stableService: < >
  canaryService: < >
-```
+ ```
 
-## What’s Next?
-- To learn more, have a look at the [Ocean CD public repository](https://github.com/spotinst/spot-oceancd-releases/tree/main/Quick%20Start%20%26%20Examples).
-- Learn about [viewing the list of rollouts](ocean-cd/tutorials/view-rollouts/) and the information provided in the [detailed rollout page](ocean-cd/tutorials/view-rollouts/detailed-rollout).
+* Remove the traffic object entirely. Ocean CD pinpoints the relevant services by using labels.
+
+# What’s Next?
+
+Learn about [viewing the list of rollouts](ocean-cd/tutorials/view-rollouts/) and the information provided in the [detailed rollout page](ocean-cd/tutorials/view-rollouts/detailed-rollout).

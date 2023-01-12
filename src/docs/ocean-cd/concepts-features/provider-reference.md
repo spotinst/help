@@ -2,9 +2,9 @@
 
 Ocean CD supports the configuration of a number of different providers through the creation of the Verification Template entity.
 
-This page provides template examples for all of the providers and describes the way they are used in verification templates.  
+This page provides template examples for all of the verification providers and describes the way they are used in verification templates. For built-in verifications, Ocean CD supports the following monitoring tools: NewRelic, Prometheus, DataDog and CloudWatch.  
 
-Ocean CD supports Web Analysis and Job Analysis, although they are not considered as proper providers which should be set in verification providers entities. These should be configured only in the verification templates.
+If your current verifications and testing processes use an external tool or an automation pipeline. For this purpose Ocean CD supports the following custom phases: Web Analysis and Job Analysis.
 
 ## Supported Providers
 
@@ -26,23 +26,23 @@ The Prometheus query in the verification template enables you to receive targete
 This template enables you to calculate the sum of the container CPU usage per seconds found in the demo namespace.
 
 ```yaml
-kind: verificationTemplate
-name: prometheus
+kind: "verificationTemplate"
+name: "prometheus"
 args:
-- name: metric-name
+- name: "metric-name"
 metrics:
-- name: cpu-usage
- interval: 5m
- initialDelay: 1m
+- name: "cpu-usage"
+ interval: "5m"
+ initialDelay: "1m"
  count: 10
- successCondition: result[0] <= 0.95
- failureCondition: result[0] >= 1.2
+ successCondition: "result[0] <= 0.95"
+ failureCondition: "result[0] >= 1.2"
  failureLimit: 0
  inconclusiveLimit: 0
  consecutiveErrorLimit: 0
  provider:
    prometheus:
-     query: sum(container_cpu_usage_seconds_total{namespace=\"demo\"})
+     query: "sum(container_cpu_usage_seconds_total{namespace=\"demo\"})"
 ```
 
 ## New Relic

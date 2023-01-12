@@ -1,64 +1,124 @@
-# Verifications
+# Traffic Manager Reference
 
-Using the Verification Template entity, you can define the verifications that will take place during your deployment process, including metrics and monitoring tools. Once you have set the verifications, you can reference them into your Strategy entity and declare the steps in which they will take place.
+Ocean CD enables you to choose from a number of supported traffic managers to configure in the RolloutSpec. This page shows template examples for the traffic managers that Ocean CD supports. For any option you choose, the YAML created is applied in the namespace chosen for the Spot deployment.
 
-## Background Verifications
+### ALB: Instance Level
 
-*Background Verifications* occur behind the scenes, at the rollout level. They are not dedicated to a single phase only, but run as long as the rollout is in progress.
+```yaml
+traffic:
+  canaryService: rollouts-demo-canary
+  stableService: rollouts-demo-stable
+  alb:
+    ingress: rollouts-demo-ingress
+    servicePort: 80
+    rootService: rollouts-demo-root
+    stickinessConfig:
+      enabled: true
+      durationSeconds: 3600
+    annotationPrefix: string
+```
 
-If a metric in a background verification fails, the rollout behaves according to the failure policy set in your strategy.
+Whenever `rootService` is used, the value must not be the same as the `stableService` value.
 
-## Phase Verifications
+### ALB: IP Level
 
-*Phase Verifications* occur at the phase level. Within your strategy, you can set one or more verification templates within a phase.
+```yaml
+traffic:
+  pingPong:
+    pingService: rollouts-demo-canary
+    pongService: rollouts-demo-stable
+  alb:
+    ingress: rollouts-demo-ingress
+    servicePort: 80
+    rootService: rollouts-demo-root
+    stickinessConfig:
+      enabled: true
+      durationSeconds: 3600
+    annotationPrefix: string     
+```
 
-If a metric in phase verification fails, the rollout behaves according to the failure policy set in your strategy.
+Whenever `rootService` is used, the value must not be the same as the `stableService` value.
 
-## Tracking the Verification Progress
+### Ambassador
 
-Once a rollout has been triggered, you can see in real-time either as a graph or as a table the results of each of your metrics.
+```yaml
+traffic:
+  canaryService: rollouts-demo-canary
+  stableService: rollouts-demo-stable
+  ambassador:
+    mappings:
+    - echo
+```
 
-### View Phase Verification
+### Istio: Host Level
 
-To see your phase verification, go to the relevant tab in the Rollouts page in the console.
+```yaml
+traffic:
+  canaryService: rollouts-demo-canary
+  stableService: rollouts-demo-stable
+  istio:
+    virtualServices:
+      - name: rollout-vsvc
+        routes:
+          - primary
+```
 
-<img src="/ocean-cd/_media/verifications-01.png" />
+### Istio: Subset Level
 
-You can use the actions in the 3-dot menu at any time during the verifications no matter what failure policies you have set.
+```yaml
+traffic:
+  stableService: rollouts-demo-stable
+  istio:
+    virtualServices:
+    - name: rollout-vsvc
+      routes:
+      - primary
+    destinationRule:
+      name: rollout-destrule
+      canarySubsetName: canary
+      stableSubsetName: stable
+```
 
-## Verification Results
+### NGINX
 
-The verification results possible are described below.
+```yaml
+traffic:
+  canaryService: rollouts-demo-stable
+  stableService: rollouts-demo-canary
+  nginx:
+    stableIngress: rollouts-demo-ingress-nginx
+    additionalIngressAnnotations:
+      canary-by-header: X-Canary
+      canary-by-header-value: iwantsit    
+```
 
-### Passed
+### SMI
 
-A metric is passed when the success condition has been met.
+```yaml
+traffic:
+  canaryService: rollouts-demo-canary
+  stableService: rollouts-demo-stable
+  smi:
+    rootService: rollouts-demo-root
+```
 
-### Failed
+Whenever `rootService` is used, the value must not be the same as the `stableService` value.
 
-A metric is failed when either of the failure condition consecutiveErrorLimit or failure limit has been met.
+### Without Traffic Manager  
+If a traffic manager is not explicitly configured, Ocean CD by default uses Kubernetes traffic methods based on replicas.  
 
-### Inconclusive
+In this case, you have two options:  
 
-A metric is inconclusive when it has reached the inconclusiveLimit parameter. An inconclusive metric indicates that the run was neither successful nor failed.
+* Add both service names (Canary and Stable)  as shown in the template below.
 
-You can encounter an inconclusive metric under the following conditions:
+```yaml
+traffic:
+ stableService: < >
+ canaryService: < >
+ ```
 
-1. You set both failure and success conditions. In this case, the inclusive verification would lie in any result found between the two.
+* Remove the traffic object entirely. Ocean CD pinpoints the relevant services by using labels.
 
-For example:  
+# What’s Next?
 
-`Failure limit: result < 10`     
-`Success limit: result > 30`
-
-In this case, the inconclusive range would be from 10 to 30.
-
-2. You don’t set any failure or success conditions. In this case, any result would be inconclusive.
-
-## Failure Policy
-
-In the event the verification shows a failure, the Abort failure policy will be activated.
-
-## What’s Next?
-
-Learn how to see the real-time progress in the [Detailed Rollout](ocean-cd/tutorials/view-rollouts/detailed-rollout) page.
+Learn about [viewing the list of rollouts](ocean-cd/tutorials/view-rollouts/) and the information provided in the [detailed rollout page](ocean-cd/tutorials/view-rollouts/detailed-rollout).
