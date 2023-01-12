@@ -2122,13 +2122,6 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/managed-instance/tutorials/upgrade-an-existing-elastigroup-to-managed-instance"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/ocean-cd/concepts-features/entities-test</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/concepts-features/entities-test"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/concepts-features/entities-test"/>
-    </url>
-    <url>
         <loc>https://docs.spot.io/?/ocean-cd/concepts-features/entities</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
@@ -2199,39 +2192,11 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/getting-started/migrate-using-api"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/ocean-cd/getting-started/readme-test</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/getting-started/readme-test"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/getting-started/readme-test"/>
-    </url>
-    <url>
         <loc>https://docs.spot.io/?/ocean-cd/getting-started/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/getting-started/"/>
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/getting-started/"/>
-    </url>
-    <url>
-        <loc>https://docs.spot.io/?/ocean-cd/getting-started/test-end-to-end</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/getting-started/test-end-to-end"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/getting-started/test-end-to-end"/>
-    </url>
-    <url>
-        <loc>https://docs.spot.io/?/ocean-cd/getting-started/test-install-operator-using-api-or-helm</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/getting-started/test-install-operator-using-api-or-helm"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/getting-started/test-install-operator-using-api-or-helm"/>
-    </url>
-    <url>
-        <loc>https://docs.spot.io/?/ocean-cd/getting-started/test-migrate-api</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/getting-started/test-migrate-api"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/getting-started/test-migrate-api"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/ocean-cd/getting-started/traffic-manager-reference</loc>
@@ -2276,25 +2241,11 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/tutorials/view-rollouts/detailed-rollout"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/ocean-cd/tutorials/view-rollouts/readme-test</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/tutorials/view-rollouts/readme-test"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/tutorials/view-rollouts/readme-test"/>
-    </url>
-    <url>
         <loc>https://docs.spot.io/?/ocean-cd/tutorials/view-rollouts/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/tutorials/view-rollouts/"/>
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/tutorials/view-rollouts/"/>
-    </url>
-    <url>
-        <loc>https://docs.spot.io/?/ocean-cd/tutorials/view-rollouts/test-detailed-rollout</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/tutorials/view-rollouts/test-detailed-rollout"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/tutorials/view-rollouts/test-detailed-rollout"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/ocean-cd/tutorials/view-rollouts/troubleshoot</loc>
@@ -2304,13 +2255,6 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/tutorials/view-rollouts/troubleshoot"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/ocean-cd/tutorials/view-settings/readme-test</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/tutorials/view-settings/readme-test"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/tutorials/view-settings/readme-test"/>
-    </url>
-    <url>
         <loc>https://docs.spot.io/?/ocean-cd/tutorials/view-settings/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
@@ -2318,25 +2262,11 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/tutorials/view-settings/"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/ocean-cd/tutorials/view-workloads/details-test</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/tutorials/view-workloads/details-test"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/tutorials/view-workloads/details-test"/>
-    </url>
-    <url>
         <loc>https://docs.spot.io/?/ocean-cd/tutorials/view-workloads/details</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/tutorials/view-workloads/details"/>
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/tutorials/view-workloads/details"/>
-    </url>
-    <url>
-        <loc>https://docs.spot.io/?/ocean-cd/tutorials/view-workloads/readme-test</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/tutorials/view-workloads/readme-test"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/tutorials/view-workloads/readme-test"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/ocean-cd/tutorials/view-workloads/</loc>
