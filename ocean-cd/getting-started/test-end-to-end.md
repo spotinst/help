@@ -10,6 +10,7 @@ This procedure describes how to install the operator, create services and Spot D
 * For MacOS users only: Ocean CD’s [CLI tool](https://github.com/spotinst/spot-oceancd-cli#installation) is installed. If it is not installed, run the following command:
 
 `brew install spotinst/tap/oceancd
+
   oceancd configure`
 
 * For non MacOS users: use OceanCD’s [API](https://docs.spot.io/api/#tag/Ocean-CD).  
@@ -32,7 +33,7 @@ Install the operator to access your cluster workload to Ocean CD.
 
 2. Complete the information:  
 
-<img src="/ocean-cd/_media/end-to-end-1.png" width="400"/>
+<img src="/ocean-cd/_media/end-to-end-1.png" width="500"/>
 
 * **Cluster Identifier**: This is a logical identifier for your cluster that must be unique and have up to 30 alphanumeric characters without any spaces. You can choose any ID and it does not need to be coupled to the Ocean cluster ID (o-xxxxxx). Ocean CD can run on clusters that are not managed by Ocean.  
 
