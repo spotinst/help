@@ -248,7 +248,7 @@ metrics:
 - name: "My-first-metric"
   interval: "5s"
   count: 10
-  failureCondition: "result[0] >= "100""
+  failureCondition: "result[0] >= 100"
   failureLimit: 5
   provider:
     prometheus:
