@@ -34,7 +34,7 @@ Install the operator to access your cluster workload to Ocean CD.
 
 2. Complete the information:  
 
-<img src="/ocean-cd/_media/end-to-end-1.png" />
+<img src="/ocean-cd/_media/end-to-end-1.png" width="330"/>
 
 * **Cluster Identifier**: This is a logical identifier for your cluster that must be unique and have up to 30 alphanumeric characters without any spaces. You can choose any ID and it does not need to be coupled to the Ocean cluster ID (o-xxxxxx). Ocean CD can run on clusters that are not managed by Ocean.  
 
@@ -63,11 +63,11 @@ _For demo purposes, a traffic manager will not be used._
 2. Copy and save the following YAML files. Each YAML is dedicated to one service:
 
 ```yaml
-apiVersion: v1
-kind: Service
+apiVersion: "v1"
+kind: "Service"
 metadata:
- name: rollouts-demo-stable
- namespace: oceancd-workshop
+ name: "rollouts-demo-stable"
+ namespace: "oceancd-workshop"
 spec:
  selector:
    app: nginx
@@ -78,11 +78,11 @@ spec:
 ```
 
 ```yaml
-apiVersion: v1
-kind: Service
+apiVersion: "v1"
+kind: "Service"
 metadata:
- name: rollouts-demo-canary
- namespace: oceancd-workshop
+ name: "rollouts-demo-canary"
+ namespace: "oceancd-workshop"
 spec:
  selector:
    app: nginx
@@ -103,11 +103,11 @@ To trigger the Ocean CD engine, you are required to use our CRD called SpotDeplo
 1. Copy and save the following YAML file:
 
 ```yaml
-apiVersion: spot.io/v1beta1
-kind: SpotDeployment
+apiVersion: "spot.io/v1beta1"
+kind: "SpotDeployment"
 metadata:
-  name: nginx-deployment
-  namespace: oceancd-workshop
+  name: "nginx-deployment"
+  namespace: "oceancd-workshop"
   labels:
     app: nginx
 spec:
@@ -149,13 +149,9 @@ _If Prometheus is already installed in your cluster, you can skip to the creatio
 
 ```yaml
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
-
 helm install prometheus prometheus-community/prometheus \
-
    --namespace prometheus \
-
    --set alertmanager.persistentVolume.storageClass="gp2" \
-
    --set server.persistentVolume.storageClass="gp2"
 ```
 
@@ -173,34 +169,24 @@ The DNS name for the verification provider template updates within a number of s
 4. The following response is displayed. All of the pods should be ready and available.
 
 ```
-NAME                                                 READY   STATUS    RESTARTS   AGE
-
+NAME  
+                                               READY   STATUS    RESTARTS   AGE
 pod/prometheus-alertmanager-868f8db8c4-67j2x         2/2     Running   0          78s
-
 pod/prometheus-kube-state-metrics-6df5d44568-c4tkn   1/1     Running   0          78s
-
 pod/prometheus-node-exporter-dh6f4                   1/1     Running   0          78s
-
 pod/prometheus-node-exporter-v8rd8                   1/1     Running   0          78s
-
 pod/prometheus-node-exporter-vcbjq                   1/1     Running   0          78s
-
 pod/prometheus-pushgateway-759689fbc6-hvjjm          1/1     Running   0          78s
-
 pod/prometheus-server-546c64d959-qxbzd               2/2     Running   0          78s
 ```
 
 ```
-NAME                                    TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)    AGE
-
+NAME
+                                   TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)    AGE
 service/prometheus-alertmanager         ClusterIP   10.100.38.47     <none>        80/TCP     78s
-
 service/prometheus-kube-state-metrics   ClusterIP   10.100.165.139   <none>        8080/TCP   78s
-
 service/prometheus-node-exporter        ClusterIP   None             <none>        9100/TCP   78s
-
 service/prometheus-pushgateway          ClusterIP   10.100.150.237   <none>        9091/TCP   78s
-
 service/prometheus-server               ClusterIP   10.100.209.224   <none>        80/TCP     78s
 ```
 
@@ -214,11 +200,8 @@ daemonset.apps/prometheus-node-exporter   3         3         3       3         
 NAME                                            READY   UP-TO-DATE   AVAILABLE   AGE
 
 deployment.apps/prometheus-alertmanager         1/1     1            1           78s
-
 deployment.apps/prometheus-kube-state-metrics   1/1     1            1           78s
-
 deployment.apps/prometheus-pushgateway          1/1     1            1           78s
-
 deployment.apps/prometheus-server               1/1     1            1           78s
 ```
 
@@ -226,11 +209,8 @@ deployment.apps/prometheus-server               1/1     1            1          
 NAME                                                       DESIRED   CURRENT   READY   AGE
 
 replicaset.apps/prometheus-alertmanager-868f8db8c4         1         1         1       78s
-
 replicaset.apps/prometheus-kube-state-metrics-6df5d44568   1         1         1       78s
-
 replicaset.apps/prometheus-pushgateway-759689fbc6          1         1         1       78s
-
 replicaset.apps/prometheus-server-546c64d959               1         1         1       78s
 ```
 
@@ -239,7 +219,6 @@ replicaset.apps/prometheus-server-546c64d959               1         1         1
 1. When Prometheus is installed, you can create the verification provider. Set your address by copying and saving the following YAML file:
 
 ```yaml
-apiVersion: spot.io/v1beta1
 kind: "VerificationProvider"
 name: "prometheus-vp"
 clusterIds:
@@ -264,17 +243,17 @@ The verification template entity enables you to build in the query you want to a
 1. Copy and save the following YAML file:
 
 ```yaml
-kind: verificationTemplate
-name: oceancd-workshop-vt
+kind: "verificationTemplate"
+name: "oceancd-workshop-vt"
 metrics:
-- name: My-first-metric
+- name: "My-first-metric"
   interval: 5s
   count: 10
   failureCondition: result[0] >= 100
   failureLimit: 5
   provider:
     prometheus:
-      query: sum(container_cpu_usage_seconds_total{namespace="oceancd-workshop"})
+      query: "sum(container_cpu_usage_seconds_total{namespace="oceancd-workshop"})"
 ```
 
 2. Copy and run the following command in your cluster:   
@@ -289,7 +268,7 @@ With this entity, you can set the rules of your canary deployment. It also enabl
 
 ```yaml
 
-kind: Strategy
+kind: "Strategy"
 name: "oceancd-workshop"
 canary:  
   backgroundVerification:  
@@ -326,7 +305,7 @@ The RolloutSpec entity connects between the Ocean CD entities that were previous
 1. Copy and save the following YAML file:
 
 ```yaml
-kind: RolloutSpec
+kind: "RolloutSpec"
 name: "OceanCD-Rolloutspec-1"
 spotDeployment:  
  clusterId: "cluster-name"
