@@ -161,8 +161,7 @@ helm install prometheus prometheus-community/prometheus \
 
 2. Make note of the Prometheus endpoint in the helm response (this is needed later) as follows:
 
-The Prometheus server can be accessed through port 80 on the following DNS name from your cluster:
-
+> The Prometheus server can be accessed through port 80 on the following DNS name from your cluster:
 `prometheus-server.prometheus.svc.cluster.local`
 
 The DNS name for the verification provider template updates within a number of seconds.  
