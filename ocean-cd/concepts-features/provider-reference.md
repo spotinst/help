@@ -95,6 +95,12 @@ This template enables you to perform a logical expression based on the healthy a
 
 Ocean CD supports the configuration of either Expressions or MetricStat in order to create the desired query.  
 
+Null values can appear when using Cloudwatch. They can be interpreted in two ways: it can either mean that the requested metric was not encountered, or that data for your request was not received. In order to enable Ocean CD to compartmentalize both use cases, the following will occur:
+
+* If a null value is encountered when its query is set as a failure condition, the metric will be considered failed.
+
+* If a null value is encountered when its query is set as a success condition, the metric will be considered successful. 
+
 For additional details on the parameters below, see the [Ocean CD API documentation](https://docs.spot.io/api/#tag/Ocean-CD).  
 
 ```yaml
