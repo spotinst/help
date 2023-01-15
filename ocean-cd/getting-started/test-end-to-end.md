@@ -9,7 +9,9 @@ This procedure describes how to install the operator, create services and Spot D
 * An existing Spot API Token. If not, you can create one using [this tutorial](https://docs.spot.io/administration/api/create-api-token?id=create-an-api-token).
 * For MacOS users only: Ocean CD’s [CLI tool](https://github.com/spotinst/spot-oceancd-cli#installation) is installed. If it is not installed, run the following command:
 
-`brew install spotinst/tap/oceancd` and `oceancd configure`
+`brew install spotinst/tap/oceancd`
+
+`oceancd configure`
 
 * For non MacOS users: use OceanCD’s [API](https://docs.spot.io/api/#tag/Ocean-CD).  
 * Helm Installation. If not installed, you can use [this tutorial](https://helm.sh/docs/intro/install/).
@@ -132,7 +134,7 @@ After the SpotDeployment and services are created, the remaining steps are to cr
 
 ## Step 4: Create Verification  
 
-This step focuses on the creation of the verification provider and verification template. These entities enable you to insert data analysis while your deployments run. These deployments can be from any of the supported monitoring tools by Spot. For further information please jump to Verification Providers page.
+This step focuses on the creation of the verification provider and verification template. These entities enable you to insert data analysis while your deployments run. These deployments can be from any of the supported monitoring tools by Spot. For further information please jump to [Verification Providers](ocean-cd/concepts-features/provider-reference) page.
 
 ### Install Prometheus
 
@@ -246,7 +248,7 @@ metrics:
 - name: "My-first-metric"
   interval: "5s"
   count: 10
-  failureCondition: result[0] >= "100"
+  failureCondition: "result[0] >= "100""
   failureLimit: 5
   provider:
     prometheus:
@@ -329,7 +331,7 @@ You can trigger your very first rollout. Change the pod spec template such as th
 
 `kubectl apply -f <SpotDeployment YAML>`
 
-A new canary rollout is initiated in the All Rollouts table. Click the Rollout ID of your deployment to view the detailed rollout page and take action from the console.
+A new canary rollout is initiated in the [All Rollouts](ocean-cd/tutorials/view-rollouts/) table. Click the Rollout ID of your deployment to view the detailed rollout page and take action from the console.
 
 ## Step 8: Integrate Ocean and Ocean CD (Optional)  
 
