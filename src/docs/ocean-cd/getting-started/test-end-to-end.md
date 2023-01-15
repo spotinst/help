@@ -15,7 +15,7 @@ This procedure describes how to install the operator, create services and Spot D
   ```
 
 * For non MacOS users: use OceanCD’s [API](https://docs.spot.io/api/#tag/Ocean-CD).  
-* Helm Installation. If not installed, you can use [this tutorial](https://helm.sh/docs/intro/install/)
+* Helm Installation. If not installed, you can use [this tutorial](https://helm.sh/docs/intro/install/).
 * If you are using permit lists or tools like OPA, permit the following images:  
   - docker.io/spotinst/spot-oceancd-operator:$VERSION
   - docker.io/spotinst/spot-oceancd-operator-catalog:latest
@@ -161,9 +161,8 @@ helm install prometheus prometheus-community/prometheus \
 
 2. Make note of the Prometheus endpoint in the helm response (this is needed later) as follows:
 
-The Prometheus server can be accessed through port 80 on the following DNS name from your cluster:
-
-prometheus-server.prometheus.svc.cluster.local
+> The Prometheus server can be accessed through port 80 on the following DNS name from your cluster:
+`prometheus-server.prometheus.svc.cluster.local`
 
 The DNS name for the verification provider template updates within a number of seconds.  
 
