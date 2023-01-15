@@ -7,7 +7,7 @@
     - [Migrate using API or CLI](ocean-cd/getting-started/migrate-using-api)
   - [Concepts and Features](ocean-cd/concepts-features/)
     - [Entities](ocean-cd/concepts-features/entities)
-    - [Horizontal Pod Autoscaler](ocean-cd/concepts-features/entities)
+    - [Horizontal Pod Autoscaler](ocean-cd/concepts-features/horizontal-pod-autoscaler)
     - [Override Strategy](ocean-cd/concepts-features/override-strategy)
     - [Provider Reference](ocean-cd/concepts-features/provider-reference)
     - [Traffic Manager Reference](ocean-cd/getting-started/traffic-manager-reference)
