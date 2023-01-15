@@ -9,7 +9,7 @@ This procedure describes how to install the operator, create services and Spot D
 * An existing Spot API Token. If not, you can create one using [this tutorial](https://docs.spot.io/administration/api/create-api-token?id=create-an-api-token).
 * For MacOS users only: Ocean CD’s [CLI tool](https://github.com/spotinst/spot-oceancd-cli#installation) is installed. If it is not installed, run the following command:
 
-`brew install spotinst/tap/oceancd and oceancd configure`
+`brew install spotinst/tap/oceancd` and `oceancd configure`
 
 * For non MacOS users: use OceanCD’s [API](https://docs.spot.io/api/#tag/Ocean-CD).  
 * Helm Installation. If not installed, you can use [this tutorial](https://helm.sh/docs/intro/install/).
