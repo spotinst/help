@@ -24,7 +24,7 @@ Once a rollout has been triggered, you can view the results of each of the metri
 
 Go to the Phase Verifications or Background Verification tab in the Detailed Rollouts page depending on the type of verification you are running.
 
-<img src="/ocean-cd/_media/verifications-1.png" />  
+<img src="/ocean-cd/_media/verifications-01.png" />  
 
 ## Verification Results
 
@@ -33,24 +33,6 @@ The verification results are described below.
 * **Passed**: A metric is passed when the success condition has been met.
 
 * **Failed**: A metric is failed if the failure condition consecutiveErrorLimit or failure limit has been met.  
-
-* **Inconclusive**: A metric is inconclusive when it has reached the `inconclusiveLimit` parameter. An inconclusive metric indicates that the run was neither successful nor failed.  
-
-You can encounter an inconclusive metric under the following conditions:
-
-* You set both failure and success conditions. In this case, the inclusive verification would lie in any result found between the two.   
-
-For example:   
-
-```
-Failure limit: result < 10      
-
-Success limit: result > 30
-```
-
-In this case, the inconclusive range is from 10 to 30.
-
-* You didn’t set any failure or success conditions. In this case, any result would be inconclusive.  
 
 ## Dry Run Verifications
 
