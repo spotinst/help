@@ -47,4 +47,4 @@ The following information is included in the rollout list:
 
 ## What’s Next?
 
-Learn about all the information provided in the [detailed rollout](ocean-cd/tutorials/view-rollouts/detailed-rollout) page.
+Learn about [detailed rollouts](ocean-cd/tutorials/view-rollouts/detailed-rollout) page.
