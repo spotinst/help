@@ -51,4 +51,4 @@ The failure of an override is displayed as shown below:
 
 ## What’s Next
 
-Learn how to use the Provider's reference (link).  
+Learn how to use the [provider's reference](ocean-cd/concepts-features/provider-reference.md).  
