@@ -57,7 +57,7 @@ metrics:
 The attributes of a verification template are described below.
 
 * Name: The name of the verification template. Must be unique.
-* arguments.Name: The name of the arguments only. An argument allows you to configure into the query a static or dynamic reference. The value of each argument is configured in the rolloutspec.  
+* arguments.Name: The name of the arguments only. An argument allows you to configure into the query a static or dynamic reference. The value of each argument is configured in the [rolloutspec](ocean-cd/concepts-features/entities?id=rolloutspec).  
 * metrics.Name: The name of the metric you want to test.
 * metric.Count: The number of times you want to run the measurement. If both interval and count are omitted, the effective count is 1.  
 * metric.Interval: The interval string (30s, 5m, 1h) between each verification measurement. If an interval is omitted, a single measurement is performed. An interval is required whenever the count is higher than 1.  
@@ -161,10 +161,10 @@ The attributes of a rolloutSpec are described below.
 * strategy.Args.Name: The name of the argument set in your verification template.
 * strategy.Args.Value: The static value you wish to provide to your argument.
 * strategy.Args.Value From FieldRef.fieldPath: The dynamic value you want to provide your argument with. You can either have a dynamic or a static value per argument name.  
-* Traffic: Kubernetes services or optional traffic manager (link) you have chosen.  
+* Traffic: Kubernetes services or optional [traffic manager](ocean-cd/getting-started/traffic-manager-reference) you have chosen.  
 * failure.Policy: The automatic action/s Ocean CD performs in the case of a failure. Ocean CD supports Abort, Pause and Promote. For more details see the verifications page.
 
-You can create your rolloutSpec (link to Getting Started) either in the Spot console or by using the Ocean CD API.
+You can create your [rolloutSpec](ocean-cd/getting-started/) either in the Spot console or by using the Ocean CD API.
 
 ## What’s Next?
 
