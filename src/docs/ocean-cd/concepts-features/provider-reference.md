@@ -1,4 +1,4 @@
-# Providers Reference
+# Provider Reference
 
 Ocean CD supports the configuration of a number of different providers through the creation of the Verification Template entity.
 
@@ -99,7 +99,7 @@ Null values can appear when using Cloudwatch. They can be interpreted in two way
 
 * If a null value is encountered when its query is set as a failure condition, the metric will be considered failed.
 
-* If a null value is encountered when its query is set as a success condition, the metric will be considered successful. 
+* If a null value is encountered when its query is set as a success condition, the metric will be considered successful.
 
 For additional details on the parameters below, see the [Ocean CD API documentation](https://docs.spot.io/api/#tag/Ocean-CD).  
 
