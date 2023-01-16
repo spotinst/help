@@ -41,11 +41,8 @@ https://api.spotinst.io/ocean/cd/clusterInstaller?clusterId=CLUSTER_ID&skipArgoR
 
 ```
 curl --location --request POST 'https://api.spotinst.io/ocean/cd/clusterInstaller?clusterId=CLUSTER_ID&skipArgoRollouts=true' \
-
 --header 'Content-Type: application/json' \
-
 --header 'Authorization: Bearer xxxxxxxx' \
-
 --data-raw '' | kubectl apply -f -
 ```
 
@@ -93,15 +90,10 @@ To run the relevant YAML, use the following command:
 
 ```
 helm install my-release oceancd/spot-oceancd-operator \
-
   --set token=REDACTED \
-
   --set clusterId=REDACTED \
-
   --namespace mynamespace \
-
   --create-namespace
-
   -f values.yaml
 ```
 
