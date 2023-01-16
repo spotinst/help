@@ -1,6 +1,6 @@
 # Troubleshoot a Rollout
 
-This page describes cases that could prevent the triggering of your rollout (link to Rollouts page) and describes how you can resolve most of these issues with manual input.  
+This page describes cases that could prevent the triggering of your [rollout](ocean-cd/tutorials/view-rollouts/) and describes how you can resolve most of these issues with manual input.  
 
 ## InvalidSpec
 
@@ -14,19 +14,19 @@ Change the configuration in the YAML according to the information supplied in th
 
 <img src="/ocean-cd/_media/troubleshoot-rollout-001.png" />
 
-If you do not find the error on the Detailed Rollout page, view the Workload page, where you can also find an indication of the error. The status of the rollout may be set as InvalidError, which also indicates that action needs to be taken.  
+If you do not find the error on the Detailed Rollout page, view the [Detailed Workload page](ocean-cd/tutorials/view-workloads/details), where you can also find an indication of the error. The status of the rollout may be set as InvalidError, which also indicates that action needs to be taken.  
 
 ## Degraded Status Removal
 
 #### Issue
 
-The workload status is indicated as [Degraded](ocean-cd/tutorials/view-workloads/details) in the Detailed Workload page.
+The workload status is indicated as Degraded in the Detailed Workload page.
 
 <img src="/ocean-cd/_media/troubleshoot-rollout-002.png" />
 
 #### Resolution
 
-To remove the Degraded status, apply the [Live](ocean-cd/tutorials/view-workloads/details) version again. This removes the desired version from the SpotDeployment and removes the changes of SpotDeployment done prior to the rollout.
+To remove the Degraded status, apply the Live version again. This removes the desired version from the SpotDeployment and removes the changes of SpotDeployment done prior to the rollout.
 
 An update appears in the console that the application was performed and the Degraded status was removed.  
 
