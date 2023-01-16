@@ -6,7 +6,7 @@ This procedure describes how to migrate your SpotDeployment and create your enti
 
 In order to create a SpotDeployment, choose one of the following options:  
 
-* Create a SpotDepolyment from scratch. For further assistance regarding the template, refer to the Ocean CD Public Repository.
+* Create a SpotDepolyment from scratch. For further assistance regarding the template, refer to the [Ocean CD Public Repository](https://github.com/spotinst/spot-oceancd-releases/tree/main/Quick%20Start%20%26%20Examples).
 
 * Migrate an existing deployment to SpotDeployment. Copy the deployment and change the apiVersion and kind.
 
@@ -30,10 +30,10 @@ Create one or more services that will be used during the rollout. Choose one of 
 
 All of the Ocean CD entities are related to each other and must be created in a specific order. Create your entities and apply them in the following order.  
 
-1. Create your Verification Provider
-2. Create your Verification Template
-3. Create your Strategy
-4. Create your RolloutSpec
+1. Create your [Verification Provider](https://docs.spot.io/ocean-cd/concepts-features/entities?id=verification-provider)
+2. Create your [Verification Template](https://docs.spot.io/ocean-cd/concepts-features/entities?id=verification-template)
+3. Create your [Strategy](https://docs.spot.io/ocean-cd/concepts-features/entities?id=strategy)
+4. Create your [RolloutSpec](https://docs.spot.io/ocean-cd/concepts-features/entities?id=rolloutspec)
 
 ### Format and Syntax
 
