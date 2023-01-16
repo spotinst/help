@@ -22,7 +22,7 @@ Phase verifications occur at the phase level. Within your strategy, you can set 
 
 Once a rollout has been triggered, you can view the results of each of the metrics in the form of a graph or a table.   
 
-Go to the Phase Verifications or Background Verification tab in the Detailed Rollouts page depending on the type of verification you are running.
+Click the Phase Verifications or Background Verification tab in the [Detailed Rollouts](ocean-cd/tutorials/view-rollouts/detailed-rollout) page depending on the type of verification you are running.
 
 <img src="/ocean-cd/_media/verifications-01.png" />  
 
