@@ -2472,6 +2472,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean/features/auto-update-process-gke"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/ocean/features/cluster-orientation</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean/features/cluster-orientation"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean/features/cluster-orientation"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/ocean/features/cost-analysis</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
