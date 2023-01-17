@@ -110,10 +110,7 @@ See the release notes below to learn about the changes introduced by each versio
 
 ## Alternative repositories
 
-In addition to our [GCR](https://gcr.io/ocean-spark/spark) repository, our images are also hosted:
-
-- In a public AWS ECR repository: `CHANGEME`.
-- In a [public Dockerhub repository](https://hub.docker.com/r/ocean-spark/spark). It is not recommended to pull images directly from Dockerhub in production (it’s best to use our [GCR](https://gcr.io/ocean-spark/spark) repository instead) as free users of DockerHub are subject to rate-limiting.
+In addition to our [GCR](https://gcr.io/ocean-spark/spark) repository, our images are also hosted in a public AWS ECR repository: `public.ecr.aws/ocean-spark/spark`.
 
 ## Release notes
 
