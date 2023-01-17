@@ -3081,6 +3081,48 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean/tutorials/view-scaling-constraints"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/spot-connect/aws-services/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/aws-services/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/aws-services/"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-connect/getting-started/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/getting-started/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/getting-started/"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-connect/integrations/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/integrations/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/integrations/"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-connect/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-connect/resources/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/resources/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/resources/"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-connect/sample-workflows/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/sample-workflows/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/sample-workflows/"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/spot-pc/features/concepts/avd-primer</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
