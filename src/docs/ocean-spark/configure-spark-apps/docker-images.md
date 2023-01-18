@@ -41,7 +41,7 @@ You should use one of the spark:platform images as a base. Once your custom imag
 
 ## Data source connectors
 
-The image tages `gcr.io/ocean-spark/spark:platform` supports for the following data sources:
+The image tags `gcr.io/ocean-spark/spark:platform` supports for the following data sources:
 
 - AWS S3 (s3a:// or s3:// scheme)
 - Google Cloud Storage (gs:// scheme)
