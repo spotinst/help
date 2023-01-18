@@ -40,7 +40,7 @@ curl -k -X POST \
     "type": "Scala",
     "sparkVersion": "3.2.0",
     "mainApplicationFile": "local:///opt/spark/examples/jars/examples.jar",
-    "image": "gcr.io/datamechanics/spark:platform-3.2-latest",
+    "image": "gcr.io/ocean-spark/spark:platform-3.2-latest",
     "mainClass": "org.apache.spark.examples.SparkPi",
     "arguments": ["1000"]
   }
@@ -117,7 +117,7 @@ curl -X POST \
        "type": "Scala",
        "mainApplicationFile": "s3a://acme-assets/processing-1.0.0.jar",
        "mainClass": "com.acme.processing.DailyUpload",
-       "image": "gcr.io/datamechanics/spark:platform-3.2-latest",
+       "image": "gcr.io/ocean-spark/spark:platform-3.2-latest",
        "arguments": ["2022-01-01"]
    }
 }'

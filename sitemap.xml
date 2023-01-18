@@ -2332,6 +2332,27 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-spark/configure-spark-apps/secrets-environment-variables"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/ocean-spark/docker-images-release-notes/gen18</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-spark/docker-images-release-notes/gen18"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-spark/docker-images-release-notes/gen18"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/ocean-spark/docker-images-release-notes/legacy-dm-images</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-spark/docker-images-release-notes/legacy-dm-images"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-spark/docker-images-release-notes/legacy-dm-images"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/ocean-spark/docker-images-release-notes/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-spark/docker-images-release-notes/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-spark/docker-images-release-notes/"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/ocean-spark/getting-started/create-cluster</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
