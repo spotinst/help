@@ -3081,11 +3081,53 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean/tutorials/view-scaling-constraints"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/spot-connect/aws-services/ec2</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/aws-services/ec2"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/aws-services/ec2"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/spot-connect/aws-services/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/aws-services/"/>
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/aws-services/"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-connect/aws-services/service-health</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/aws-services/service-health"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/aws-services/service-health"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-connect/getting-started/create-first-workflow</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/getting-started/create-first-workflow"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/getting-started/create-first-workflow"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-connect/getting-started/create-target-account</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/getting-started/create-target-account"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/getting-started/create-target-account"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-connect/getting-started/get-to-know-workflows</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/getting-started/get-to-know-workflows"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/getting-started/get-to-know-workflows"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-connect/getting-started/manage-automatic-execution</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/getting-started/manage-automatic-execution"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/getting-started/manage-automatic-execution"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/spot-connect/getting-started/</loc>
@@ -3095,11 +3137,235 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/getting-started/"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/spot-connect/getting-started/sample-workflows</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/getting-started/sample-workflows"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/getting-started/sample-workflows"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-connect/getting-started/set-up-execution</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/getting-started/set-up-execution"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/getting-started/set-up-execution"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-connect/getting-started/set-up-integration</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/getting-started/set-up-integration"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/getting-started/set-up-integration"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-connect/getting-started/set-up-resource</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/getting-started/set-up-resource"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/getting-started/set-up-resource"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-connect/integrations/amazon-event-bridge</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/integrations/amazon-event-bridge"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/integrations/amazon-event-bridge"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-connect/integrations/ansible</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/integrations/ansible"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/integrations/ansible"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-connect/integrations/aws-health</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/integrations/aws-health"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/integrations/aws-health"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-connect/integrations/aws</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/integrations/aws"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/integrations/aws"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-connect/integrations/container</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/integrations/container"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/integrations/container"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-connect/integrations/datadog</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/integrations/datadog"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/integrations/datadog"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-connect/integrations/generic-webhook</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/integrations/generic-webhook"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/integrations/generic-webhook"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-connect/integrations/gke</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/integrations/gke"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/integrations/gke"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-connect/integrations/humio</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/integrations/humio"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/integrations/humio"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-connect/integrations/instana</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/integrations/instana"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/integrations/instana"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-connect/integrations/jenkins</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/integrations/jenkins"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/integrations/jenkins"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-connect/integrations/jira</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/integrations/jira"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/integrations/jira"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-connect/integrations/new-relix</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/integrations/new-relix"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/integrations/new-relix"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-connect/integrations/opsgenie</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/integrations/opsgenie"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/integrations/opsgenie"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-connect/integrations/pagerduty</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/integrations/pagerduty"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/integrations/pagerduty"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-connect/integrations/prometheus</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/integrations/prometheus"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/integrations/prometheus"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-connect/integrations/pulumi</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/integrations/pulumi"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/integrations/pulumi"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/spot-connect/integrations/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/integrations/"/>
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/integrations/"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-connect/integrations/servicenow</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/integrations/servicenow"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/integrations/servicenow"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-connect/integrations/slack</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/integrations/slack"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/integrations/slack"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-connect/integrations/splunk-on-call-victorops</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/integrations/splunk-on-call-victorops"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/integrations/splunk-on-call-victorops"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-connect/integrations/splunk</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/integrations/splunk"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/integrations/splunk"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-connect/integrations/squadcast</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/integrations/squadcast"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/integrations/squadcast"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-connect/integrations/sumologic</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/integrations/sumologic"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/integrations/sumologic"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-connect/integrations/teleport</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/integrations/teleport"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/integrations/teleport"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-connect/integrations/terraform-cli</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/integrations/terraform-cli"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/integrations/terraform-cli"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-connect/integrations/terraform-cloud</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/integrations/terraform-cloud"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/integrations/terraform-cloud"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-connect/integrations/twilio</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/integrations/twilio"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/integrations/twilio"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-connect/integrations/zoom</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/integrations/zoom"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/integrations/zoom"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/spot-connect/</loc>
@@ -3109,6 +3375,41 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/spot-connect/resources/api-keys</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/resources/api-keys"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/resources/api-keys"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-connect/resources/cloudformation-templates</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/resources/cloudformation-templates"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/resources/cloudformation-templates"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-connect/resources/cloudwatch-targets</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/resources/cloudwatch-targets"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/resources/cloudwatch-targets"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-connect/resources/eks-permissions</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/resources/eks-permissions"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/resources/eks-permissions"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-connect/resources/github-repos</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/resources/github-repos"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/resources/github-repos"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/spot-connect/resources/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
@@ -3116,11 +3417,53 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/resources/"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/spot-connect/resources/s3-buckets</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/resources/s3-buckets"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/resources/s3-buckets"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-connect/resources/ssh-targets</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/resources/ssh-targets"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/resources/ssh-targets"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-connect/sample-workflows/automate-incident-response</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/sample-workflows/automate-incident-response"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/sample-workflows/automate-incident-response"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-connect/sample-workflows/monitor-app-performance</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/sample-workflows/monitor-app-performance"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/sample-workflows/monitor-app-performance"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/spot-connect/sample-workflows/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/sample-workflows/"/>
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/sample-workflows/"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-connect/sample-workflows/rightsize-ec2-instances</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/sample-workflows/rightsize-ec2-instances"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/sample-workflows/rightsize-ec2-instances"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/spot-connect/sample-workflows/stop-underutilized-resources</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/sample-workflows/stop-underutilized-resources"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/sample-workflows/stop-underutilized-resources"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/spot-pc/features/concepts/avd-primer</loc>
