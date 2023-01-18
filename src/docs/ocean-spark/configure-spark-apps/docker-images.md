@@ -100,10 +100,10 @@ Please use a long-form only if you need a specific combination. For instance, yo
 
 For production workloads:
 
-- We don't recommend using the `-latest` tags. To keep the image stable you should use images with an explicit version suffix like `-dm18` below. The following images are the same:
-  - `gcr.io/ocean-spark/spark:platform-3.2-dm18`
-  - `gcr.io/ocean-spark/spark:platform-3.2.1-dm18`
-  - `gcr.io/ocean-spark/spark:platform-3.2.1-hadoop-3.3.1-java-8-scala-2.12-python-3.8-dm18`
+- We don't recommend using the `-latest` tags. To keep the image stable you should use images with an explicit version suffix like `-gen18` below. The following images are the same:
+  - `gcr.io/ocean-spark/spark:platform-3.2-gen18`
+  - `gcr.io/ocean-spark/spark:platform-3.2.1-gen18`
+  - `gcr.io/ocean-spark/spark:platform-3.2.1-hadoop-3.3.1-java-8-scala-2.12-python-3.8-gen18`
 - Long-form tag images without the suffix version can change to the exclusion of the Spark, Hadoop, Java, Scala and Python versions specified in the image tag.
 
 See the release notes below to learn about the changes introduced by each version.
