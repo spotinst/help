@@ -3207,6 +3207,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/integrations/datadog"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/spot-connect/integrations/elasticsearch</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/integrations/elasticsearch"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/integrations/elasticsearch"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/spot-connect/integrations/generic-webhook</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
