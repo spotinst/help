@@ -4,7 +4,7 @@ Before generation 18, images were available in the `gcr.io/datamechanics/spark` 
 
 ## Release dm18
 
-- Add AWS Glue support for spark 3 images (Spark 2.4 image do not support Glue)
+- Add AWS Glue support for Spark 3 images (Spark 2.4 image do not support Glue)
 
 ## Release dm17
 
@@ -22,13 +22,13 @@ Before generation 18, images were available in the `gcr.io/datamechanics/spark` 
 
 - Add new images with Spark 3.2.0 and Hadoop 3.3.1
 - Upgrade OS packages to apply latest security patches
-- Use a JDK base image instead of a JRE base image to include tooks like `jstack`
+- Use a JDK base image instead of a JRE base image to include tools like `jstack`
 - Upgrade Snowflake connector to 2.9.1
 - Pin pip version for Python 2 images. Latest pip versions are not compatible with Python 2 anymore.
 
 ## Release dm14
 
-- Use delta 1.0 on Spark ≥ 3.1
+- Use Delta 1.0 on Spark ≥ 3.1
 
 ## Release dm13
 
