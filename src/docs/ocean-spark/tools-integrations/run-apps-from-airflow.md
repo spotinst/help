@@ -149,7 +149,7 @@ spark_pi_task = OceanSparkOperator(
     config_overrides={
         "type": "Scala",
         "sparkVersion": "3.2.0",
-        "image": "gcr.io/datamechanics/spark:platform-3.2-latest",
+        "image": "gcr.io/ocean-spark/spark:platform-3.2-latest",
         "imagePullPolicy": "IfNotPresent",
         "mainClass": "org.apache.spark.examples.SparkPi",
         "mainApplicationFile": "local:///opt/spark/examples/jars/examples.jar",

@@ -19,7 +19,7 @@ curl -X POST \
     "type": "Scala",
     "sparkVersion": "3.2.1",
     "mainApplicationFile": "s3a://my-example-bucket/word_count.py",
-    "image": "gcr.io/datamechanics/spark:platform-3.2-latest",
+    "image": "gcr.io/ocean-spark/spark:platform-3.2-latest",
     "arguments": ["s3a://my-example-bucket/input/*", "s3a://my-example-bucket/output"]
   }
 }'
@@ -283,7 +283,7 @@ curl -X POST \
  "configOverrides": {
    "type": "Scala",
    "sparkVersion": "3.2.1",
-   "image": "gcr.io/datamechanics/spark:platform-3.2-latest",
+   "image": "gcr.io/ocean-spark/spark:platform-3.2-latest",
    "mainApplicationFile": "s3a://my-example-bucket/word_count.py",
    "arguments": ["s3a://my-example-bucket/input/*", "s3a://my-example-bucket/output"],
    "driver": {
@@ -339,7 +339,7 @@ curl -X POST \
  "configOverrides": {
    "type": "Scala",
    "sparkVersion": "3.2.1",
-   "image": "gcr.io/datamechanics/spark:platform-3.2-latest",
+   "image": "gcr.io/ocean-spark/spark:platform-3.2-latest",
    "mainApplicationFile": "s3a://my-example-bucket/word_count.py",
    "arguments": ["s3a://my-example-bucket/input/*", "s3a://my-example-bucket/output"],
    "driver": {
@@ -449,7 +449,7 @@ curl -X POST \
  "configOverrides": {
    "type": "Scala",
    "sparkVersion": "3.2.1",
-   "image": "gcr.io/datamechanics/spark:platform-3.2-latest",
+   "image": "gcr.io/ocean-spark/spark:platform-3.2-latest",
    "mainApplicationFile": "s3a://my-example-bucket/word_count.py",
    "arguments": ["s3a://my-example-bucket/input/*", "s3a://my-example-bucket/output"],
    "serviceAccountName": "data-writer",

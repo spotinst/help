@@ -77,7 +77,7 @@ For PostgreSQL the JAR file can be found in the [MVN repository](https://mvnrepo
 Add the JAR file directly to your Spark docker images:
 
 ```
-FROM gcr.io/datamechanics/spark:platform-3.0.2-latest
+FROM gcr.io/ocean-spark/spark:platform-3.0.2-latest
 COPY ./jars/postgresql-42.2.20.jar /opt/spark/jars/postgresql-42.2.20.jar
 ```
 
@@ -152,7 +152,7 @@ This file should be added in a folder defined by an environment variable ($HADOO
 The hive-site.xml file can be added directly into your docker image by following this example:
 
 ```
-FROM gcr.io/datamechanics/spark:platform-3.1.1-latest`
+FROM gcr.io/ocean-spark/spark:platform-3.1.1-latest`
 
 COPY requirements.txt .
 RUN pip3 install -r requirements.txt
