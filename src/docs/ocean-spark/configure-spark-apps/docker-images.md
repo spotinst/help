@@ -26,7 +26,7 @@ When submitting Spark apps on Ocean for Apache Spark, you can:
 
 ### Need another image?
 
-To match different dependencies and version requirements you can find more images in our [Docker registry](https://gcr.io/ocean-spark/spark:platform).
+To match different dependencies and version requirements you can find more images in Spot's [Docker registry](https://gcr.io/ocean-spark/spark:platform).
 
 All these dependencies can have different versions. A combination of dependency versions is called a flavor of spark:platform in this page. The image tag indicates the flavor of the image and can be adjusted to fit your needs. Here are two examples of image tags:
 
@@ -52,7 +52,7 @@ The image tags `gcr.io/ocean-spark/spark:platform` supports for the following da
 - [Delta Lake](https://docs.delta.io/latest/index.html)
 - [AWS Glue](https://docs.aws.amazon.com/glue/latest/dg/what-is-glue.html)
 
-To check the versions used by an image, please see the [release notes](ocean-spark/docker-images-release-notes/).
+To check the versions used by an image, see the [release notes](ocean-spark/docker-images-release-notes/).
 
 ## Python support
 
@@ -62,13 +62,13 @@ The image tag `gcr.io/ocean-spark/spark:platform` supports Pyspark applications.
 
 ### Flavors
 
-We maintain Spark Docker images for multiple combinations of the versions of Spark and some of its dependencies (Hadoop, Java, Scala and Python). These combinations are called flavors.
+Spot maintains Spark Docker images for multiple combinations of the versions of Spark and some of its dependencies (Hadoop, Java, Scala and Python). These combinations are called flavors.
 
-Note that not all the combinations of versions exist. To list all the flavors for a given image, check out our [Docker registry](https://gcr.io/ocean-spark/spark:platform).
+Note that not all the combinations of versions exist. To list all the flavors for a given image, check out the [Docker registry](https://gcr.io/ocean-spark/spark:platform).
 
 ### Generations
 
-When we update images, we create a new generation. Generations can be identified by the suffix `-genXX` in the image tags (`-latest` always points to the latest generation). Each generation contains the following flavors:
+When Spot updates images, Spot creates a new generation. Generations can be identified by the suffix `-genXX` in the image tags (`-latest` always points to the latest generation). Each generation contains the following flavors:
 
 - Latest (at the time of the generation's release) Spark 3.x:
 
@@ -91,16 +91,16 @@ When we update images, we create a new generation. Generations can be identified
 
 There are both long-form tags (like `gcr.io/ocean-spark/spark:platform-3.1.1-java-8-scala-2.12-hadoop-3.2.0-python-3.8-latest`) where all versions are explicitly listed, as well as short-form tags (like `gcr.io/ocean-spark/spark:platform-3.1-latest`).
 
-In general we encourage starting with our short-form tags:
+In general Spot encourages starting with Spot's short-form tags:
 
-- `gcr.io/ocean-spark/spark:platform-3.1.3-latest` contains a Spark 3.1.3 distribution and all other dependencies are set to the latest compatible version. For example, `platform-3.1.3-latest` contains Hadoop 3.2.0, Python 3.8, Scala 2.12, and Java 11. We reserve the right to upgrade the version of a dependency if a new, compatible version is released. For example, we may upgrade `platform-3.1.3-latest` to Hadoop 3.3.0 once it is compatible with Spark 3.1.3.
+- `gcr.io/ocean-spark/spark:platform-3.1.3-latest` contains a Spark 3.1.3 distribution and all other dependencies are set to the latest compatible version. For example, `platform-3.1.3-latest` contains Hadoop 3.2.0, Python 3.8, Scala 2.12, and Java 11. Spot reserves the right to upgrade the version of a dependency if a new, compatible version is released. For example, Spot can upgrade `platform-3.1.3-latest` to Hadoop 3.3.0 once it is compatible with Spark 3.1.3.
 - `gcr.io/ocean-spark/spark:platform-3.1-latest` contains the latest Spark version of the 3.1 minor.
 
-Please use a long-form only if you need a specific combination. For instance, you may require a specific combination of versions when migrating an existing Scala or Java project to Spark on Kubernetes. On the other hand, new JVM projects and Pyspark projects should work fine with short-form tags.
+Use a long-form only if you need a specific combination. For instance, you can require a specific combination of versions when migrating an existing Scala or Java project to Spark on Kubernetes. On the other hand, new JVM projects and Pyspark projects should work fine with short-form tags.
 
 For production workloads:
 
-- We don't recommend using the `-latest` tags. To keep the image stable you should use images with an explicit version suffix like `-gen18` below. The following images are the same:
+- Spot doesn't recommend using the `-latest` tags. To keep the image stable you should use images with an explicit version suffix like `-gen18` below. The following images are the same:
   - `gcr.io/ocean-spark/spark:platform-3.2-gen18`
   - `gcr.io/ocean-spark/spark:platform-3.2.1-gen18`
   - `gcr.io/ocean-spark/spark:platform-3.2.1-hadoop-3.3.1-java-8-scala-2.12-python-3.8-gen18`
@@ -110,7 +110,7 @@ See the release notes below to learn about the changes introduced by each versio
 
 ## Alternative repositories
 
-In addition to our [GCR](https://gcr.io/ocean-spark/spark) repository, our images are also hosted in a public AWS ECR repository: [public.ecr.aws/ocean-spark/spark](https://gallery.ecr.aws/ocean-spark/spark).
+In addition to Spot's [GCR](https://gcr.io/ocean-spark/spark) repository, Spot's images are also hosted in a public AWS ECR repository: [public.ecr.aws/ocean-spark/spark](https://gallery.ecr.aws/ocean-spark/spark).
 
 ## Release notes
 
