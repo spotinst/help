@@ -6,12 +6,12 @@ Generation 18 is a port of the [legacy dm18](ocean-spark/docker-images-release-n
 
 ## Available tags
 
-### platform-3.3.0-hadoop-3.3.2-java-8-scala-2.12-python-3.8-dm18
+### platform-3.3.0-hadoop-3.3.2-java-8-scala-2.12-python-3.8-gen18
 
 #### Additional tags
 
-- `platform-3.3-dm18`
-- `platform-3.3.0-dm18`
+- `platform-3.3-gen18`
+- `platform-3.3.0-gen18`
 
 #### Dependency versions
 
@@ -43,12 +43,12 @@ Generation 18 is a port of the [legacy dm18](ocean-spark/docker-images-release-n
 |   Delta   |     Not supported      |
 | Snowflake | Spark Snowflake 2.10.0 |
 
-### platform-3.2.1-hadoop-3.3.1-java-8-scala-2.12-python-3.8-dm18
+### platform-3.2.1-hadoop-3.3.1-java-8-scala-2.12-python-3.8-gen18
 
 #### Additional tags
 
-- `platform-3.2-dm18`
-- `platform-3.2.1-dm18`
+- `platform-3.2-gen18`
+- `platform-3.2.1-gen18`
 
 #### Dependency versions
 
@@ -80,11 +80,11 @@ Generation 18 is a port of the [legacy dm18](ocean-spark/docker-images-release-n
 |   Delta   |     Not supported      |
 | Snowflake | Spark Snowflake 2.10.0 |
 
-### platform-3.2.0-hadoop-3.3.1-java-8-scala-2.12-python-3.8-dm18
+### platform-3.2.0-hadoop-3.3.1-java-8-scala-2.12-python-3.8-gen18
 
 #### Additional tags
 
-- `platform-3.2.0-dm18`
+- `platform-3.2.0-gen18`
 
 #### Dependency versions
 
@@ -116,12 +116,12 @@ Generation 18 is a port of the [legacy dm18](ocean-spark/docker-images-release-n
 |   Delta   |     Not supported      |
 | Snowflake | Spark Snowflake 2.10.0 |
 
-### platform-3.1.3-hadoop-3.2.0-java-8-scala-2.12-python-3.8-dm18
+### platform-3.1.3-hadoop-3.2.0-java-8-scala-2.12-python-3.8-gen18
 
 #### Additional tags
 
-- `platform-3.1-dm18`
-- `platform-3.1.3-dm18`
+- `platform-3.1-gen18`
+- `platform-3.1.3-gen18`
 
 #### Dependency versions
 
@@ -153,11 +153,11 @@ Generation 18 is a port of the [legacy dm18](ocean-spark/docker-images-release-n
 |   Delta   |     Not supported      |
 | Snowflake | Spark Snowflake 2.10.0 |
 
-### platform-3.1.2-hadoop-3.2.0-java-8-scala-2.12-python-3.8-dm18
+### platform-3.1.2-hadoop-3.2.0-java-8-scala-2.12-python-3.8-gen18
 
 #### Additional tags
 
-- `platform-3.1.2-dm18`
+- `platform-3.1.2-gen18`
 
 #### Dependency versions
 
@@ -189,11 +189,11 @@ Generation 18 is a port of the [legacy dm18](ocean-spark/docker-images-release-n
 |   Delta   |     Not supported      |
 | Snowflake | Spark Snowflake 2.10.0 |
 
-### platform-3.1.1-hadoop-3.2.0-java-8-scala-2.12-python-3.8-dm18
+### platform-3.1.1-hadoop-3.2.0-java-8-scala-2.12-python-3.8-gen18
 
 #### Additional tags
 
-- `platform-3.1.1-dm18`
+- `platform-3.1.1-gen18`
 
 #### Dependency versions
 
@@ -225,12 +225,12 @@ Generation 18 is a port of the [legacy dm18](ocean-spark/docker-images-release-n
 |   Delta   |     Not supported      |
 | Snowflake | Spark Snowflake 2.10.0 |
 
-### platform-3.0.3-hadoop-3.2.0-java-8-scala-2.12-python-3.8-dm18
+### platform-3.0.3-hadoop-3.2.0-java-8-scala-2.12-python-3.8-gen18
 
 #### Additional tags
 
-- `platform-3.0-dm18`
-- `platform-3.0.3-dm18`
+- `platform-3.0-gen18`
+- `platform-3.0.3-gen18`
 
 #### Dependency versions
 
@@ -262,11 +262,11 @@ Generation 18 is a port of the [legacy dm18](ocean-spark/docker-images-release-n
 |   Delta   |     Not supported      |
 | Snowflake | Spark Snowflake 2.10.0 |
 
-### platform-3.0.2-hadoop-3.2.0-java-8-scala-2.12-python-3.8-dm18
+### platform-3.0.2-hadoop-3.2.0-java-8-scala-2.12-python-3.8-gen18
 
 #### Additional tags
 
-- `platform-3.0.2-dm18`
+- `platform-3.0.2-gen18`
 
 #### Dependency versions
 
@@ -298,11 +298,11 @@ Generation 18 is a port of the [legacy dm18](ocean-spark/docker-images-release-n
 |   Delta   |     Not supported      |
 | Snowflake | Spark Snowflake 2.10.0 |
 
-### platform-3.0.1-hadoop-3.2.0-java-8-scala-2.12-python-3.8-dm18
+### platform-3.0.1-hadoop-3.2.0-java-8-scala-2.12-python-3.8-gen18
 
 #### Additional tags
 
-- `platform-3.0.1-dm18`
+- `platform-3.0.1-gen18`
 
 #### Dependency versions
 
@@ -334,11 +334,11 @@ Generation 18 is a port of the [legacy dm18](ocean-spark/docker-images-release-n
 |   Delta   |     Not supported      |
 | Snowflake | Spark Snowflake 2.10.0 |
 
-### platform-3.0.0-hadoop-3.2.0-java-8-scala-2.12-python-3.8-dm18
+### platform-3.0.0-hadoop-3.2.0-java-8-scala-2.12-python-3.8-gen18
 
 #### Additional tags
 
-- `platform-3.0.0-dm18`
+- `platform-3.0.0-gen18`
 
 #### Dependency versions
 
@@ -370,12 +370,12 @@ Generation 18 is a port of the [legacy dm18](ocean-spark/docker-images-release-n
 |   Delta   |     Not supported      |
 | Snowflake | Spark Snowflake 2.10.0 |
 
-### platform-2.4.7-hadoop-3.1.0-java-8-scala-2.12-python-3.7-dm18
+### platform-2.4.7-hadoop-3.1.0-java-8-scala-2.12-python-3.7-gen18
 
 #### Additional tags
 
-- `platform-2.4.7-dm18`
-- `platform-2.4-dm18`
+- `platform-2.4.7-gen18`
+- `platform-2.4-gen18`
 
 #### Dependency versions
 
@@ -407,11 +407,11 @@ Generation 18 is a port of the [legacy dm18](ocean-spark/docker-images-release-n
 |   Delta   |     Not supported     |
 | Snowflake | Spark Snowflake 2.9.3 |
 
-### platform-2.4.6-hadoop-3.1.0-java-8-scala-2.12-python-3.7-dm18
+### platform-2.4.6-hadoop-3.1.0-java-8-scala-2.12-python-3.7-gen18
 
 #### Additional tags
 
-- `platform-2.4.6-dm18`
+- `platform-2.4.6-gen18`
 
 #### Dependency versions
 
@@ -443,11 +443,11 @@ Generation 18 is a port of the [legacy dm18](ocean-spark/docker-images-release-n
 |   Delta   |     Not supported     |
 | Snowflake | Spark Snowflake 2.9.3 |
 
-### platform-2.4.5-hadoop-3.1.0-java-8-scala-2.12-python-3.7-dm18
+### platform-2.4.5-hadoop-3.1.0-java-8-scala-2.12-python-3.7-gen18
 
 #### Additional tags
 
-- `platform-2.4.5-dm18`
+- `platform-2.4.5-gen18`
 
 #### Dependency versions
 
@@ -479,7 +479,7 @@ Generation 18 is a port of the [legacy dm18](ocean-spark/docker-images-release-n
 |   Delta   |     Not supported     |
 | Snowflake | Spark Snowflake 2.9.3 |
 
-### platform-3.3.0-hadoop-3.3.2-java-11-scala-2.12-python-3.8-dm18
+### platform-3.3.0-hadoop-3.3.2-java-11-scala-2.12-python-3.8-gen18
 
 #### Dependency versions
 
@@ -511,7 +511,7 @@ Generation 18 is a port of the [legacy dm18](ocean-spark/docker-images-release-n
 |   Delta   |     Not supported      |
 | Snowflake | Spark Snowflake 2.10.0 |
 
-### platform-3.2.1-hadoop-3.3.1-java-11-scala-2.12-python-3.8-dm18
+### platform-3.2.1-hadoop-3.3.1-java-11-scala-2.12-python-3.8-gen18
 
 #### Dependency versions
 
@@ -543,7 +543,7 @@ Generation 18 is a port of the [legacy dm18](ocean-spark/docker-images-release-n
 |   Delta   |     Not supported      |
 | Snowflake | Spark Snowflake 2.10.0 |
 
-### platform-3.2.0-hadoop-3.3.1-java-11-scala-2.12-python-3.8-dm18
+### platform-3.2.0-hadoop-3.3.1-java-11-scala-2.12-python-3.8-gen18
 
 #### Dependency versions
 
@@ -575,7 +575,7 @@ Generation 18 is a port of the [legacy dm18](ocean-spark/docker-images-release-n
 |   Delta   |     Not supported      |
 | Snowflake | Spark Snowflake 2.10.0 |
 
-### platform-3.1.3-hadoop-3.2.0-java-11-scala-2.12-python-3.8-dm18
+### platform-3.1.3-hadoop-3.2.0-java-11-scala-2.12-python-3.8-gen18
 
 #### Dependency versions
 
@@ -607,7 +607,7 @@ Generation 18 is a port of the [legacy dm18](ocean-spark/docker-images-release-n
 |   Delta   |     Not supported      |
 | Snowflake | Spark Snowflake 2.10.0 |
 
-### platform-3.1.2-hadoop-3.2.0-java-11-scala-2.12-python-3.8-dm18
+### platform-3.1.2-hadoop-3.2.0-java-11-scala-2.12-python-3.8-gen18
 
 #### Dependency versions
 
@@ -639,7 +639,7 @@ Generation 18 is a port of the [legacy dm18](ocean-spark/docker-images-release-n
 |   Delta   |     Not supported      |
 | Snowflake | Spark Snowflake 2.10.0 |
 
-### platform-3.1.1-hadoop-3.2.0-java-11-scala-2.12-python-3.8-dm18
+### platform-3.1.1-hadoop-3.2.0-java-11-scala-2.12-python-3.8-gen18
 
 #### Dependency versions
 
@@ -671,7 +671,7 @@ Generation 18 is a port of the [legacy dm18](ocean-spark/docker-images-release-n
 |   Delta   |     Not supported      |
 | Snowflake | Spark Snowflake 2.10.0 |
 
-### platform-3.0.3-hadoop-3.2.0-java-11-scala-2.12-python-3.8-dm18
+### platform-3.0.3-hadoop-3.2.0-java-11-scala-2.12-python-3.8-gen18
 
 #### Dependency versions
 
@@ -703,7 +703,7 @@ Generation 18 is a port of the [legacy dm18](ocean-spark/docker-images-release-n
 |   Delta   |     Not supported      |
 | Snowflake | Spark Snowflake 2.10.0 |
 
-### platform-3.0.2-hadoop-3.2.0-java-11-scala-2.12-python-3.8-dm18
+### platform-3.0.2-hadoop-3.2.0-java-11-scala-2.12-python-3.8-gen18
 
 #### Dependency versions
 
@@ -735,7 +735,7 @@ Generation 18 is a port of the [legacy dm18](ocean-spark/docker-images-release-n
 |   Delta   |     Not supported      |
 | Snowflake | Spark Snowflake 2.10.0 |
 
-### platform-3.0.1-hadoop-3.2.0-java-11-scala-2.12-python-3.8-dm18
+### platform-3.0.1-hadoop-3.2.0-java-11-scala-2.12-python-3.8-gen18
 
 #### Dependency versions
 
@@ -767,7 +767,7 @@ Generation 18 is a port of the [legacy dm18](ocean-spark/docker-images-release-n
 |   Delta   |     Not supported      |
 | Snowflake | Spark Snowflake 2.10.0 |
 
-### platform-3.0.0-hadoop-3.2.0-java-11-scala-2.12-python-3.8-dm18
+### platform-3.0.0-hadoop-3.2.0-java-11-scala-2.12-python-3.8-gen18
 
 #### Dependency versions
 
@@ -799,7 +799,7 @@ Generation 18 is a port of the [legacy dm18](ocean-spark/docker-images-release-n
 |   Delta   |     Not supported      |
 | Snowflake | Spark Snowflake 2.10.0 |
 
-### platform-2.4.7-hadoop-3.1.0-java-8-scala-2.11-python-3.7-dm18
+### platform-2.4.7-hadoop-3.1.0-java-8-scala-2.11-python-3.7-gen18
 
 #### Dependency versions
 
@@ -831,7 +831,7 @@ Generation 18 is a port of the [legacy dm18](ocean-spark/docker-images-release-n
 |   Delta   |     Not supported     |
 | Snowflake | Spark Snowflake 2.9.3 |
 
-### platform-2.4.6-hadoop-3.1.0-java-8-scala-2.11-python-3.7-dm18
+### platform-2.4.6-hadoop-3.1.0-java-8-scala-2.11-python-3.7-gen18
 
 #### Dependency versions
 
@@ -863,7 +863,7 @@ Generation 18 is a port of the [legacy dm18](ocean-spark/docker-images-release-n
 |   Delta   |     Not supported     |
 | Snowflake | Spark Snowflake 2.9.3 |
 
-### platform-2.4.5-hadoop-3.1.0-java-8-scala-2.11-python-3.7-dm18
+### platform-2.4.5-hadoop-3.1.0-java-8-scala-2.11-python-3.7-gen18
 
 #### Dependency versions
 
