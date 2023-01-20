@@ -20,7 +20,7 @@ _When:_ 12/15/2022 at 10pm - 11pm Eastern
 _Impact:_ Access to desktops and application services for End Users will remain uninterrupted. Access to Spot PC console will remain available.
 
 * Introducing Code Signing
-  * Spot PC is excited to announce Code Signing is now available for our exe's and DLL's. This change iproves compatibility with customer 3rd party anti-malware and management tools.  
+  * Spot PC is excited to announce Code Signing is now available for our exe's and DLL's. This change improves compatibility with customer 3rd party anti-malware and management tools.  
 * New Downloadable Reports
   * Downloadable reports are now available in .csv format for Alerts and Security tabs in Spot PC Web App.
 * Monitors & Alerts Updates
