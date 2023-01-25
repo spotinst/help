@@ -3,8 +3,6 @@
 - <a href="/" class="sidebar-home"><i data-feather="arrow-left" class="sidebar-back-icon"></i>Back to Main Tree</a>
 - [Ocean CD](ocean-cd/)
   - [Getting Started](ocean-cd/getting-started/)
-    - [Install using API or Helm](ocean-cd/getting-started/install-operator-using-API-or-helm)
-    - [Migrate using API or CLI](ocean-cd/getting-started/migrate-using-api)
     - [End-to-End Setup](ocean-cd/getting-started/end-to-end)
   - [Concepts and Features](ocean-cd/concepts-features/)
     - [Entities](ocean-cd/concepts-features/entities)
@@ -19,6 +17,9 @@
       - [Detailed Rollout](ocean-cd/tutorials/view-rollouts/detailed-rollout)
     - [View Workloads](ocean-cd/tutorials/view-workloads/)
       - [Detailed Workload](ocean-cd/tutorials/view-workloads/details)
+  - [Tutorials](ocean-cd/tutorials/)
+    - [Install Operator using API or Helm](ocean-cd/getting-started/install-operator-using-API-or-helm)
+    - [Migrate using API or CLI](ocean-cd/getting-started/migrate-using-api)
   - [Ocean Integration](ocean-cd/ocean-integration/)
   - [Troubleshooting](ocean-cd/troubleshooting/)
     - [Troubleshoot a Rollout](ocean-cd/tutorials/view-rollouts/troubleshoot)

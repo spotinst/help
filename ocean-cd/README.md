@@ -1,8 +1,10 @@
-# Ocean CD Overview
+# Ocean CD Overview (Beta Mode)
 
 Ocean CD focuses on the most painful aspects of modern application delivery, giving developers the freedom to push code with confidence while DevOps easily maintain governance and SLOs.
 
 Ocean CD provides DevOps and Infrastructure teams with out of the box processes to reimplement and share complex and mission critical pieces of CD across different environments, such as canary deployments. Service owners are able to promote service changes to production without code or re-inventing deployment strategies. Developers are able to commit with confidence, now that the deployment phases are managed and visible.
+
+Ocean CD is currently provided in Beta Mode.
 
 ## How it Works
 
