@@ -4,7 +4,7 @@ The Rollouts page provides an overview of the Spot deployments triggered.
 
 To view the Rollouts page, click Rollouts in the left sidebar.
 
-<img src="/ocean-cd/_media/tutorials-rollouts-01.png" />
+<img src="/ocean-cd/_media/tutorials-rollouts-05.png" />
 
 The Rollouts page has the following main areas that are described below:
 - Summary Line
@@ -16,7 +16,7 @@ At the top of the page, the summary line shows statistics of your rollouts.
 
 The default view shows data from the last seven days, but you can use the date filter to display statistics from any time period. You can also use the filter bar to display statistics such as specific clusters, SpotDeployments, and Namespaces.
 
-<img src="/ocean-cd/_media/tutorials-rollouts-05.png" />
+<img src="/ocean-cd/_media/tutorials-rollouts-04.png" />
 
 The summary line provides the following statistics:
 * **Rollout durations**:  
