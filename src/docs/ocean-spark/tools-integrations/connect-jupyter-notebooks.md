@@ -227,10 +227,10 @@ Repeat the steps from Step 2 in the following link to install the Microsoft Jupy
 
 * If config-templates in the kernel picker doesn’t appear, switch the Microsoft Jupyter Extension to the Pre-release version by completing the following steps:
 
-1. Close your notebook files.
-2. Open the Command Palette (Cmd+Shift+P) and select `Developer: Clear Notebook Kernels MRU Cache`. 
-3. Open the file again and connect to cluster again.
-4. Your config-templates should appear in the kernel picker.
+  1. Close your notebook files.
+  2. Open the Command Palette (Cmd+Shift+P) and select `Developer: Clear Notebook Kernels MRU Cache`.
+  3. Open the file again and connect to cluster again.
+  4. Your config-templates should appear in the kernel picker.
 
 ## Connecting to JupyterHub
 
