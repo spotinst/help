@@ -5,7 +5,7 @@ _When:_ 1/26/2023 at 10pm - 11pm Eastern
 _Impact:_ Access to desktops and application services for End Users will remain uninterrupted. Access to Spot PC console will remain available.
 
 * Email Alert Threshold 
-  * Spot PC is proud to announce the Email Alert Threshold which is a default of 250 email per hour per tenant. When the threshold met, all recipients in a tenant’s notification profiles will receive an email that email alerts have been suspended.
+  * Spot PC is proud to announce the Email Alert Threshold which is a default of 250 emails per hour per tenant. When the threshold met, all recipients in a tenant’s notification profiles will receive an email that email alerts have been suspended.
  Plus, the notification badge will display a pinned notice that the tenant has passed threshold and email alerts have been suspended. Tenant users and Spot PC techs can enable and disable alert emails. However, only Spot PC support can change the email alert
  threshold limit. 
 * Command Center Access using Local Admin
