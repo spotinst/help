@@ -1,5 +1,33 @@
 # Spot PC: Release Notes
 
+## 1/26/2023
+_When:_ 1/26/2023 at 10pm - 11pm Eastern
+_Impact:_ Access to desktops and application services for End Users will remain uninterrupted. Access to Spot PC console will remain available.
+
+* Email Alert Threshold 
+  * Spot PC is proud to announce the Email Alert Threshold which is a default of 250 email per hour per tenant. When the threshold met, all recipients in a tenant’s notification profiles will receive an email that email alerts have been suspended.
+ Plus, the notification badge will display a pinned notice that the tenant has passed threshold and email alerts have been suspended. Tenant users and Spot PC techs can enable and disable alert emails. However, only Spot PC support can change the email alert
+ threshold limit. 
+* Command Center Access using Local Admin
+  * Spot PC is excited to present Command Center Access using Local Admin. Users now have the option to use Local Admin instead of just Domain User Access. Local Admin can now use automatically Command Center without entering a password. When Command
+ Center is started Computer Management and Notepad will open as well.  
+* Command Center Change Tracking
+  * In Command Center, users can enable or uninstall change tracking. Users can track software, registry, inventory and services and these changes will be upload the Azure Log Analytics workspace.
+* Spot Group List Update
+  * The Spot Group List now has three new default columns - Active Sessions, Disconnected Sessions, Total Sessions. 
+* New Column: Source 
+  * The User Session List now has a new Column, Source. The Source Column denotes the Spot Group that user session is a part of. 
+* Security Updates 
+  * Spot PC is continuing our security efforts, checking signatures before downloading the upgrading and securing SSL Certificates in Azure Key Value are latest examples. 
+* New Tooltips 
+  * Both the Business Servers and Images' Create and Edit Workflows have new tooltips.
+* Process List Update
+  * The Process List now has a refresh button for manual refreshes. 
+* Prerequisites for FSLogix agent automatic upgrade in future versions
+  * Spot PC is delighted to preview prerequisites for FSLogix agent automatic upgrade in future versions. FSLogix agent version can be specified from approved version list and can be focus on site or tenant with inheritance. New deployments will
+ default to 'install latest'. Existing deployments will have the feature disabled by default, and it must be enabled explicitly. Updates will occur gracefully and opportunistically. This new feature can be managed through Command Center but will be available
+ in Spot PC Web App in a future release.  
+
 ## 1/12/2023
 _When:_ 1/12/2023 at 10pm - 11pm Eastern
 _Impact:_ Access to desktops and application services for End Users will remain uninterrupted. Access to Spot PC console will remain available.
