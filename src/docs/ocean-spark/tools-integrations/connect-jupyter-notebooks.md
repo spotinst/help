@@ -6,7 +6,7 @@ Assumption: You already know how to [create and manage Config templates](ocean-s
 
 <img src="/ocean-spark/_media/tools-connect-jupyter-notebooks-01.png" />
 
-## Connect a local Jupyter server
+## Connect a Local Jupyter Server
 
 The Jupyter notebook server has an option to specify a gateway service in charge of running kernels on its behalf. Ocean Spark can fill this role and enables you to run Jupyter Spark kernels on the platform.
 
@@ -16,7 +16,7 @@ Install the Jupyter notebook Python package locally. Be sure to use the latest v
 pip install notebook --upgrade
 ```
 
-Here’s how to launch a local Jupyter notebook server configured to interact with an Ocean Spark cluster:
+Launch a local Jupyter notebook server configured to interact with an Ocean Spark cluster:
 
 ```
 jupyter notebook \
@@ -27,7 +27,7 @@ jupyter notebook \
 
 - The GatewayClient.url points to an Ocean Spark cluster, with an Ocean Spark cluster ID of the format *osc-xxxxxxxx* that you can find on the [Clusters](https://console.spotinst.com/ocean/spark/clusters) list in the Spot console.
 - The GatewayClient.auth_token is a [Spot API token](administration/api/create-api-token).
-- The GatewayClient.request_timeout parameter specifies the maximum amount of time Jupyter will wait until the Spark driver starts. If you have capacity available in your cluster, the wait time should be very short. If there isn't capacity, the Kubernetes cluster will automatically get a new node from the cloud provider, which usually takes a couple of minutes. *You should set the request_timeout to 10 minutes to give you a security margin.* Omitting this parameter will prevent you from starting a notebook.
+- The GatewayClient.request_timeout parameter specifies the maximum amount of time Jupyter will wait until the Spark driver starts. If you have capacity available in your cluster, the waiting time should be very short. If there isn't capacity, the Kubernetes cluster will get a new node from the cloud provider, which usually takes a couple of minutes. *You should set the request_timeout to 10 minutes to give you a security margin.* Omitting this parameter prevents you from starting a notebook.
 
 > **Tip**: If you run into issues starting the Jupyter notebook server, ensure that your Ocean for Apache Spark cluster is marked as available in the Spot console.
 
@@ -93,7 +93,7 @@ in your configuration template. Here's an example configuration for a Scala kern
 ```
 
 **Warning**: Adding external JAR dependencies to Scala Notebooks
-The `deps.jars` field in the application configuration does not work with Scala Notebooks and **should not be set**. The JARs specified in this field will not be available on the driver Java classpath.
+The `deps.jars` field in the application configuration does not work with Scala Notebooks and **should not be set**. The JARs specified in this field are not available on the driver Java classpath.
 
 Instead, you can add external JARs to the Spark context from the notebook with these magic commands (once the Spark session is up):
 
@@ -137,11 +137,11 @@ You can install your own libraries by running:
 
 If you are new to Jupyter notebooks, you can use this [tutorial](https://www.dataquest.io/blog/jupyter-notebook-tutorial/) as a starting point.
 
-## Close a notebook
+## Close a Notebook
 
-To close a notebook application, you should not use the "Kill" action from the Spot console, because Jupyter interprets this as a kernel failure and will automatically restart your kernel, causing a new notebook application to appear.
+To close a notebook application, you should not use the "Kill" action from the Spot console, because Jupyter interprets this as a kernel failure and it restarts your kernel, causing a new notebook application to appear.
 
-You should close your notebooks from Jupyter (File > Close & Halt). This will terminate the Spark app in the Ocean Spark cluster.
+Close your notebooks from Jupyter (File > Close & Halt). This terminates the Spark app in the Ocean Spark cluster.
 
 ### Important Note
 
@@ -149,7 +149,7 @@ In some cases, a notebook may be "leaked", for example, if the Jupyter server (r
 
 ## Inject environment variables
 
-If you need to pass some information from your local environment to the notebook kernel in a dynamic way, you can use environment variables.
+If you need to transfer information from your local environment to the notebook kernel in a dynamic way, you can use environment variables.
 
 The environment variables are only injected into the notebook kernel if they are prefixed with KERNEL_VAR_. In the kernel, the environment variables are stripped of their prefix, for instance, if you run the following command and open a notebook:
 
@@ -166,7 +166,7 @@ The env variable FOO=bar is available in the notebook:
 
 ## Notebooks are regular Spark applications
 
-Ocean Spark essentially makes no distinction between notebooks and Spark applications launched by API requests. All options and features of Spark applications are available to notebooks.
+Ocean for Spark essentially makes no distinction between notebooks and Spark applications launched by API requests. All options and features of Spark applications are available to notebooks.
 
 Notebooks appear in the [Applications](ocean-spark/product-tour/monitor-applications) list, so you can see their logs and configurations, access the Spark UI, and more:
 
@@ -174,6 +174,63 @@ Notebooks appear in the [Applications](ocean-spark/product-tour/monitor-applicat
 
 You can use the Type dropdown, as shown above, to filter on notebooks.
 Additionally, any configuration option for Spark applications can be applied to notebooks via the Config template mechanism.
+
+## Launch Jupyter Notebook with VS Code IDE
+
+Ocean for Apache Spark (OfAS) provides a continuously optimized and autoscaled infrastructure and has featured support for integration with Jupyter notebooks. You can have this interactive notebook within your familiar IDE, such as VS Code, to benefit from other IDE built-in features including Git integration.  
+
+This procedure describes how to use VS Code to run Jupyter notebooks, while the code runs on an Ocean for Apache Spark cluster.
+
+### Step 1: Install VS Code Editor
+
+Click the following link to find information on how to install VS Code locally: https://code.visualstudio.com/download.   
+
+Verify that you have the latest version.  
+
+If this is already installed, proceed to the next step.  
+
+### Step 2: Install OfAS Jupyter Extension
+
+The OfAS extension to the VS Code IDE enables you to interactively launch your work as an OfAS Spark application, while writing the Notebook’s code, without needing to switch to a different tool.
+
+If you already have the VS Code editor installed, connect a notebook to your cluster as instructed below.
+
+1. Click [Ocean for Apache Spark Jupyter extension](https://marketplace.visualstudio.com/items?itemName=spot-by-netapp.spot-jupyter-extension).  
+
+2. Click Install. When the VS Code editor is installed, the VS Code window opens.
+
+ <img src="/ocean-spark/_media/jupyter-vscode-ide-1.png" />
+
+3. Click Install.
+
+### Step 3: Install Microsoft Jupyter Extension
+
+Repeat the steps from Step 2 in the following link to install the Microsoft Jupyter extension: https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter .
+
+#### Connect Notebook to your OfAS Cluster  
+
+1. Create or open a Jupyter notebook file.
+2. In the VS Code window, click Jupyter Server in the status bar.
+
+ <img src="/ocean-spark/_media/jupyter-vscode-ide-2.png" />
+
+3. Select Spot Ocean for Apache Spark item in the list.
+4. Enter your account ID, token and select the cluster you want to use from your account that appears in the dropdown menu.
+5. Click Kernel selector button in the top right corner, and select the config-template you want to use. (Config-templates can take few seconds to appear in the list)
+6. Run the code in your notebook. The first execution can take approximately 1-5 minutes as a Spark application needs to be started in your cluster.  
+
+> **Tip**: Closing your notebook may not result in the termination of the notebook application. You may have to do so from the Spot console. You can also shutdown kernels without leaving VSCode in the [Jupyter PowerToys](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.vscode-jupyter-powertoys) extension.
+
+#### Troubleshooting
+
+* If Spot Ocean for Apache Spark in the Jupyter Connection options doesn’t appear, ensure that the VSCode and Jupyter extensions are updated to their latest version.  
+
+* If config-templates in the kernel picker doesn’t appear, switch the Microsoft Jupyter Extension to the Pre-release version by completing the following steps:
+
+1. Close your notebook files.
+2. Open the Command Palette (Cmd+Shift+P) and select `Developer: Clear Notebook Kernels MRU Cache`. 
+3. Open the file again and connect to cluster again.
+4. Your config-templates should appear in the kernel picker.
 
 ## Connecting to JupyterHub
 
