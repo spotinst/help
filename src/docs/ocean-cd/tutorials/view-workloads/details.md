@@ -30,11 +30,11 @@ A degraded status may easily be removed either by applying your SpotDeployment w
 
 ## Rollout Trend
 
-This area provides information regarding all of the finished rollouts in your workload. It presents the reasons for the success or failure each of your rollouts.  
+This area provides information regarding all of the finished rollouts in your workload. It presents the reasons for the success or failure of each of your rollouts.  
 
 * Manual Intervention: Any rollout that was manually rolled back using the console actions.
 * Kubernetes Error: Any rolled back rollout due to Kubernetes errors encountered.
-* Metric Failure: Any rolled back rollout due to verification failures. 
+* Metric Failure: Any rolled back rollout due to verification failures.
 
 <img src="/ocean-cd/_media/detailed-workload-2.png" />
 
