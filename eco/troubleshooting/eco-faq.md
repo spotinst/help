@@ -58,13 +58,67 @@ My company is not located in the USA. How can I connect my bank account to the A
 
 Please contact your account executive for more information.
 
-
 ## Question: How Does Eco Consider RI Volume Discounts?
 
 ### Answer:
 
-RI Volume Discounts drive the cost of reservations down. When Eco makes a large RI purchase which generates the RI Volume Discount, it is by design. Eco includes the cost reductions in our net savings calculations, which may impact your Eco fee. 
+RI Volume Discounts drive the cost of reservations down. When Eco makes a large RI purchase which generates the RI Volume Discount, it is by design. Eco includes the cost reductions in our net savings calculations, which may impact your Eco fee.
 
+## Question: I am seeing a notification “Invalid ARN. Please review Getting Started documentation for Eco and compare it to your Management account resources. ensure the Cloud Formation stack providing the ARN has not been changed. Additionally, ensure no AWS Service Control Policies restrict access. If you need assistance updating your ARN, please contact support.”, what should I do next?
+
+<img src="/eco/_media/faq-invalid-arn.png" />
+
+### Answer:
+
+Please contact [Spot support](https://spot.io/support/) for additional assistance.
+
+## Question: I am seeing a notification “Insufficient permissions. Please review Getting Started documentation for Eco. Confirm the S3 bucket still exists, bucket policies and Service Control policies have not changed, and the Cost and Usage report is still scheduled to create data within the bucket. If this error persists, please contact support.”, what should I do next?
+
+<img src="/eco/_media/faq-no-access-s3-bucket.png" />
+
+### Answer:
+
+Please contact [Spot support](https://spot.io/support/) for additional assistance.
+
+## Question: I am seeing a notification “Bucket not found. Please review Getting Started documentation for Eco. Confirm the S3 bucket still exists, bucket policies and Service Control policies have not changed, and the Cost and Usage report is still scheduled to create data within the bucket. If this error persists, please contact support.”, what should I do next?
+
+<img src="/eco/_media/faq-s3-bucket-no-longer-exists.png" />
+
+### Answer:
+
+Please contact [Spot support](https://spot.io/support/) for additional assistance.
+
+## Question: I am seeing a notification “No new data in S3 Bucket for over 48 hours. Please review Getting Started documentation for Eco. Confirm the Cost and Usage report is still scheduled to create data within the bucket. If this error persists, please contact support.”, what should I do next?
+
+<img src="/eco/_media/faq-no-new-data-s3-bucket-48-hours.png" />
+
+### Answer:
+
+Please contact [Spot support](https://spot.io/support/) for additional assistance.
+
+## Question: I am seeing a notification “Insufficient permissions to read CE data. Please review the Eco permissions policy in Spot’s public documentation. If this error persists, please contact support.”, what should I do next?
+
+<img src="/eco/_media/faq-no-ce-access.png" />
+
+### Answer:
+
+Please contact [Spot support](https://spot.io/support/) for additional assistance.
+
+## Question: I am seeing a notification “We were not able to access data in the S3 bucket. This is normal if the AWS CUR was only recently configured. If your CUR was configured more than 48 hours ago, please submit a support ticket.”, what should I do next?
+
+<img src="/eco/_media/faq-no-s3-bucket-48-hours.png" />
+
+### Answer:
+
+Please contact [Spot support](https://spot.io/support/) for additional assistance.
+
+## Question: I am seeing a notification “Failure to retrieve data from <bucket>. Last Successful sync is <insert last_cur_sync_timestamp> . Expecting parquet format.”, what should I do next?
+
+<img src="/eco/_media/faq-invalid-arn-not-parquet-format.png" />
+
+### Answer:
+
+Review [Getting Started](https://docs.spot.io/eco/getting-started/connect-your-aws-account) documentation. If needed, contact [Spot support](https://spot.io/support/) for additional assistance.  
 
 ## Question: No Data in Eco AWS Dashboard
 
