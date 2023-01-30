@@ -3,7 +3,6 @@
 - <a href="/" class="sidebar-home"><i data-feather="arrow-left" class="sidebar-back-icon"></i>Back to Main Tree</a>
 - [Ocean CD](ocean-cd/)
   - [Getting Started](ocean-cd/getting-started/)
-    - [End-to-End Setup](ocean-cd/getting-started/end-to-end)
   - [Concepts and Features](ocean-cd/concepts-features/)
     - [Entities](ocean-cd/concepts-features/entities)
     - [Horizontal Pod Autoscaler](ocean-cd/concepts-features/horizontal-pod-autoscaler)
