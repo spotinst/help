@@ -147,6 +147,7 @@ _If Prometheus is already installed in your cluster, you can skip to the creatio
 1. Run the following command to deploy Prometheus:
 
 ```yaml
+kubectl create namespace prometheus 
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 helm install prometheus prometheus-community/prometheus \
    --namespace prometheus \
