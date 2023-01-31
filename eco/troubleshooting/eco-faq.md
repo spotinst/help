@@ -114,7 +114,7 @@ There are insufficient permissions to read CE data. Please review the Eco permis
 
 If this error persists, please contact [Spot support](https://spot.io/support/) for additional assistance.
 
-## Question: I am seeing a notification “We were not able to access data in the S3 bucket". 
+## Question: I am seeing a notification “We were not able to access data in the S3 bucket".
 
 <img src="/eco/_media/faq-no-s3-bucket-48-hours.png" />
 
@@ -124,7 +124,7 @@ This is normal if the AWS CUR was only recently configured. If your CUR was conf
 
 Please contact [Spot support](https://spot.io/support/) for additional assistance.
 
-## Question: I am seeing a notification “Failure to retrieve data from <bucket>. Last Successful sync is <insert last_cur_sync_timestamp> . Expecting parquet format.”, what should I do next?
+## Question: I am seeing a notification “Failure to retrieve data from < bucket >. Last Successful sync is < insert last_cur_sync_timestamp >. Expecting parquet format.”
 
 <img src="/eco/_media/faq-invalid-arn-not-parquet-format.png" />
 
