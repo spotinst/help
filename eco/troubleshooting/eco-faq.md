@@ -66,7 +66,7 @@ RI Volume Discounts drive the cost of reservations down. When Eco makes a large 
 
 ## Question: I am seeing the following notification “Invalid ARN".
 
-<img src="/eco/_media/faq-invalid-arn.png" />
+<img src="/eco/_media/invalid-arn.png" />
 
 ### Answer:
 
