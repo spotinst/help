@@ -28,11 +28,11 @@ If there is a fee for selling on the marketplace, the customer pays AWS based on
 
 ## Question: Eco And Spot Instances
 
-Does Eco also recommend spot instances in the projected savings?
+Does Eco also recommend Spot instances in the projected savings?
 
 ### Answer:
 
-Eco is a tool for management and optimization of reserved instances. The projected savings by using Eco relates only to reserved instances. We suggest using Eco for managing the reserved instances in your organization, while using Elastigroup or Ocean to optimize the combined use of spot and reserved instances in the workload.
+Eco is a tool for management and optimization of reserved instances. The projected savings by using Eco relates only to reserved instances. We suggest using Eco for managing the reserved instances in your organization, while using Elastigroup or Ocean to optimize the combined use of Spot and reserved instances in the workload.
 
 ## Question: Reserved Instances Existing At Purchase
 
