@@ -7,7 +7,6 @@ Added
 - Update 3rd party libraries versions
 - Update EULA
 
-
 ## [1.0.87] - 2022-11-21
 
 Added
