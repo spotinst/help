@@ -71,7 +71,7 @@ Example:
 
 ## Tracking Healthiness
 
- `ocean_controller_heartbeat_info`
+### ocean_controller_heartbeat_info
 
 This metric is a measure of the controller health in the cluster. The metric tracks Ocean connectivity health.
 
@@ -82,7 +82,7 @@ ocean_controller_heartbeat_info{ “ocean_name”: “prod”, “ocean_id”: o
 
 ## Tracking Ocean Cluster Configurations
 
-`ocean_cluster_limits_cpu_vcpu`, `ocean_cluster_limits_memory_gib`  
+### ocean_cluster_limits_cpu_vcpu, ocean_cluster_limits_memory_gib  
 
 These metrics return the value of the CPU and memory limits configured on the Ocean level.  
 This can be used to set alerts when the limit is reached.
