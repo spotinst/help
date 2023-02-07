@@ -69,15 +69,31 @@ Example:
  allocatable_headroom_gpu{vng_id="ols-xxxxxxxx", lifecycle="OD", az="us-west-2a", vm_type="c5.2xlarge",  vng_name = “Vng2”, ocean_id= “o-XXXXX”, “ocean_name”: “prod”} 12
  ```
 
- ## Tracking Healthiness
+## Tracking Healthiness
 
  `ocean_controller_heartbeat_info`
 
- This metric is a measure of the controller health in the cluster. The metric tracks Ocean connectivity health.
+This metric is a measure of the controller health in the cluster. The metric tracks Ocean connectivity health.
 
- Example:  
+Example:  
 ```
 ocean_controller_heartbeat_info{ “ocean_name”: “prod”, “ocean_id”: o-XXXXXX} 1
+```
+
+## Tracking Ocean Cluster Configurations
+
+`ocean_cluster_limits_cpu_vcpu`, `ocean_cluster_limits_memory_gib`  
+
+These metrics return the value of the CPU and memory limits configured on the Ocean level.  
+This can be used to set alerts when the limit is reached.
+
+Prometheus metric type: gauge  
+
+Dimensions: ocean_name, ocean_id
+
+Example:
+```
+ocean_cluster_limits_cpu_vcpu{ocean_id="o-xxxxx", ocean_name="xxxx"} 203
 ```
 
 ## What’s Next?
