@@ -89,7 +89,7 @@ This can be used to set alerts when the limit is reached.
 
 Prometheus metric type: gauge  
 
-Dimensions: ocean_name, ocean_id
+Dimensions: `ocean_name`, `ocean_id`
 
 Example:
 ```
