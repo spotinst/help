@@ -6,7 +6,7 @@ You can control the approach that Ocean takes by configuring the Cluster Orienta
 
 ### Relevance
 
-This feature is available to users of Ocean for AWS Kubernetes.
+This feature is available to users of Ocean for AWS Kubernetes and ECS.
 
 ## Ocean Orientations
 

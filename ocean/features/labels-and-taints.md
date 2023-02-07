@@ -34,7 +34,7 @@ Valid label values are:
 - `nvidia-tesla-k80`
 - `nvidia-tesla-p4`
 - `nvidia-tesla-t4`
-- `nvidia-tesla-a100`
+- `nvidia-tesla-a100` (Only for AWS)
 - `nvidia-tesla-m60`
 - `amd-radeon-v520`
 - `nvidia-tesla-t4g`
