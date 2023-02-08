@@ -43,4 +43,4 @@ The valid values are: costOriented, balanced, cheapest
 
 ## What's Next?
 
-Learn more about using the [Create Cluster](https://docs.spot.io/api/#operation/OceanAWSClusterCreate) and Update [Cluster](https://docs.spot.io/api/#operation/OceanAWSClusterUpdate) APIs for configuring your Ocean clusters.
+Learn more about using the [Create Cluster](https://docs.spot.io/api/#operation/OceanAWSClusterCreate) and Update [Cluster](https://docs.spot.io/api/#operation/OceanAWSClusterUpdate) APIs for configuring your Ocean cluster.
