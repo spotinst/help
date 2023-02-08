@@ -1768,8 +1768,7 @@ export const aliases = (() => {
     "/elastigroup/tutorials-azure/use-stateful-nodes/view-details":
       "/managed-instance/azure/tutorials/view-details",
 
-    "/ocean-cd/getting-started/end-to-end":
-      "/ocean-cd/getting-started/",      
+    "/ocean-cd/getting-started/end-to-end": "/ocean-cd/getting-started/",  
   };
 
   for (let [key, value] of Object.entries(map)) {
