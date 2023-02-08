@@ -75,6 +75,10 @@ Example:
 
 This metric is a measure of the controller health in the cluster. The metric tracks Ocean connectivity health.
 
+Prometheus metric type: gauge
+
+Dimensions:  `Ocean_Name`, `ocean_id` 
+
 Example:  
 ```
 ocean_controller_heartbeat_info{ “ocean_name”: “prod”, “ocean_id”: o-XXXXXX} 1
