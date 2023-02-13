@@ -33,6 +33,7 @@
     - [Shutdown Hours](ocean/features/running-hours)
     - [Auto-Update Process (GKE)](ocean/features/auto-update-process-gke)
     - [Log Integration with S3](ocean/features/log-integration-with-s3)
+    - [Distribute by vCPU](ocean/features/distribute-vcpu)    
   - [Tutorials](ocean/tutorials/)
     - [Ocean Dashboard](ocean/tutorials/ocean-dashboard)
     - [Analyze Your Costs](ocean/tutorials/analyze-your-costs)
