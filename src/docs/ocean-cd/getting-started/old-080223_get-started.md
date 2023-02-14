@@ -1,4 +1,4 @@
-# Get Started with Ocean CD
+# Get Started with Ocean CD-
 
 To get started with Ocean CD, you need to install the Ocean CD Operator and migrate your workload. The information below walks you through these procedures using the Spot console.
 
