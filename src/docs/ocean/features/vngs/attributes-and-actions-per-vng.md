@@ -130,7 +130,7 @@ The restrict-scale-down label is a [Spot label](ocean/features/labels-and-taints
 
 A possible use case is protecting a 100% On-demand VNG from any scale down activity, as Ocean will treat the nodes or container instances in this VNG as if all pods or tasks running on them have the restrict-scale-down label. This will ensure that scale down will not cause interruptions to sensitive workloads.
 
-Restrict scale down can be applied only in AWS, ECS and GKE. 
+Restrict scale down can be applied only in AWS, ECS and GKE.
 
 For more information about the Scale Down feature, see Scaling ([Kubernetes](ocean/features/scaling-kubernetes?id=scale-down) or [ECS](ocean/features/scaling-ecs?id=scale-down-behavior)).
 
@@ -149,7 +149,7 @@ The rest of the new instances will have non-preferred types to maintain a distri
 
 As preferred instance type is a soft requirement, the general spot instance availability of both preferred and non-preferred types is considered before considering type preference.
 
-For information about defining preferred instance types in the Spot API (using the `preferredSpotTypes` attribute under `launchSpec.instanceTypes`), see the Create Virtual Node Group APIs for [Ocean AWS Kubernetes](https://docs.spot.io/api/#operation/oceanK8sClusterAggregatedDetailedCosts) and [Ocean ECS](https://docs.spot.io/api/#operation/oceanAwsEcsGetContainerInstances).
+For information about defining preferred instance types in the Spot API (using the `preferredSpotTypes` attribute under `launchSpec.instanceTypes`), see the Create Virtual Node Group APIs for [Ocean AWS Kubernetes](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecCreate) and [Ocean ECS](https://docs.spot.io/api/#tag/Ocean-ECS/operation/OceanECSLaunchSpecCreate).
 
 ## What’s next?
 
