@@ -72,7 +72,7 @@ The tiles in the summary line provide some statics to give you an overview of yo
 
 ### Savings over Time
 
-The default view of this bar chart shows savings over the last year, viewing one bar per month. If you are using Ocean, Elastigroup, and Eco the information is broken down per Spot service.
+The default view of this bar chart shows savings over the last year, viewing one bar per month. If you are using Ocean, Elastigroup, and Eco, the information is broken down per Spot service.
 
 <img src="/connect-your-cloud-provider/_media/view-dashboard-005.png" />
 
