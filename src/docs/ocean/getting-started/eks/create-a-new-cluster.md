@@ -61,7 +61,7 @@ Before you can continue to the next step, CloudFormation must complete creation 
    `kubectl get svc`
 3. To install the controller on the EKS cluster, run the predefined script from your command line.
 
-(Optional) To install the [Ocean Prometheus Exporter](https://docs.google.com/document/d/1qM0DRhqgtSifNb9-j8tuRuNtWamL2mspWrB-iiC70sk/edit#), mark the checkbox. Validate that the [Configure Prometheus](ocean/tools-and-integrations/prometheus/) step is complete.
+(Optional) To install the [Ocean Prometheus Exporter](ocean/tools-and-integrations/prometheus/scrape), mark the checkbox. Validate that the [Configure Prometheus](ocean/tools-and-integrations/prometheus/) step is complete.
 
 <img src="/ocean/_media/new-eks-step4-d.png" />
 
