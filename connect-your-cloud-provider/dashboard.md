@@ -16,7 +16,7 @@ The main areas of the dashboard are described below.
 
 Once you have connected your cloud provider, Spot provides recommendations based on your cloud provider(s), the kind of account you connected (e.g., linked account or management account), and the resources existing in your cloud account.
 
-<img src="/connect-your-cloud-provider/_media/view-dashboard-1.png" />
+<img src="/connect-your-cloud-provider/_media/view-dashboard-001.png" />
 
 If Spot presents a lot of recommendations, be sure to click View All so that you can see all the recommendations for savings and optimization. Any of the following recommendations could appear (and possibly others).
 - Connect a Linked Account: You can link additional accounts to Spot, including accounts from different cloud providers.
