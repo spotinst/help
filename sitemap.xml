@@ -1989,20 +1989,6 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/managed-instance/azure/features/schedule"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/managed-instance/azure/getting-started/create-stateful-node</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/managed-instance/azure/getting-started/create-stateful-node"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/managed-instance/azure/getting-started/create-stateful-node"/>
-    </url>
-    <url>
-        <loc>https://docs.spot.io/?/managed-instance/azure/getting-started/import-stateful-node</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/managed-instance/azure/getting-started/import-stateful-node"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/managed-instance/azure/getting-started/import-stateful-node"/>
-    </url>
-    <url>
         <loc>https://docs.spot.io/?/managed-instance/azure/getting-started/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
