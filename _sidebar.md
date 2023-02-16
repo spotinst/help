@@ -7,7 +7,7 @@
     - [Connect Azure](connect-your-cloud-provider/first-account/azure)
   - [Connect Azure EA](connect-your-cloud-provider/azure-ea-account)
   - [Connect an Additional Account](connect-your-cloud-provider/additional-account)
-  - [Overview Dashboard](connect-your-cloud-provider/dashboard)
+  - [View Dashboard](connect-your-cloud-provider/dashboard)
   - [Optimize Your Cloud](connect-your-cloud-provider/optimize)
   - [Analyze Your Costs](connect-your-cloud-provider/cost-analysis/)
     - [Save Analysis Reports](connect-your-cloud-provider/cost-analysis/save-reports)

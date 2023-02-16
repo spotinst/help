@@ -46,7 +46,7 @@ Once you have validated the billing workflows and are comfortable with them, you
 >
 > \<Subset Name\> : \<Billing Workflow Name\>
 
-2. Allow us approximately four days for configuration and data refresh.
+2. Allow us approximately four days for configuration and for the data to refresh.
 
 ## Step 8. End-Customer Association (Optional)
 
