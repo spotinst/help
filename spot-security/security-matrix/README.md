@@ -15,12 +15,11 @@
 
 |  |  |
 |---|---|
-|  Activity Log   |  Network Interfaces   |
-|  Application Gateways   |  SQL Servers  |
-|  Disks   |  Virtual Machines |
-|  IoT Hub  |  Virtual Machine Scale Sets   |
-|  Key Vaults   |  Virtual Networks   |
-|  Load Balancers   |     |
+|  Application Gateways   |  SQL Servers   |
+|  Disks   |  Virtual Machines  |
+|  Key Vaults   |  Virtual Machine Scale Sets |
+|  Load Balancers  |  Virtual Networks   |
+|  Network Security Groups   |     |
 
 ## Supported Compliance Standards:
 

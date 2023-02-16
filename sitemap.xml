@@ -1989,6 +1989,20 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/managed-instance/azure/features/schedule"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/managed-instance/azure/getting-started/create-stateful-node</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/managed-instance/azure/getting-started/create-stateful-node"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/managed-instance/azure/getting-started/create-stateful-node"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/managed-instance/azure/getting-started/import-stateful-node</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/managed-instance/azure/getting-started/import-stateful-node"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/managed-instance/azure/getting-started/import-stateful-node"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/managed-instance/azure/getting-started/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
@@ -2337,6 +2351,13 @@
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-spark/docker-images-release-notes/gen18"/>
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-spark/docker-images-release-notes/gen18"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/ocean-spark/docker-images-release-notes/gen19</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-spark/docker-images-release-notes/gen19"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-spark/docker-images-release-notes/gen19"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/ocean-spark/docker-images-release-notes/legacy-dm-images</loc>
@@ -3165,6 +3186,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/getting-started/"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/spot-connect/getting-started/run-first-workflow</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/getting-started/run-first-workflow"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/getting-started/run-first-workflow"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/spot-connect/getting-started/sample-workflows</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
@@ -3340,11 +3368,11 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/integrations/slack"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/spot-connect/integrations/splunk-on-call-victorops</loc>
+        <loc>https://docs.spot.io/?/spot-connect/integrations/splunk-on-call</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/integrations/splunk-on-call-victorops"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/integrations/splunk-on-call-victorops"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/integrations/splunk-on-call"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/integrations/splunk-on-call"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/spot-connect/integrations/splunk</loc>
@@ -3382,11 +3410,11 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/integrations/terraform-cli"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/spot-connect/integrations/terraform-cloud</loc>
+        <loc>https://docs.spot.io/?/spot-connect/integrations/terraform</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/integrations/terraform-cloud"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/integrations/terraform-cloud"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/integrations/terraform"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/integrations/terraform"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/spot-connect/integrations/twilio</loc>
@@ -3417,32 +3445,32 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/resources/api-keys"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/spot-connect/resources/cloudformation-templates</loc>
+        <loc>https://docs.spot.io/?/spot-connect/resources/cloudformation</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/resources/cloudformation-templates"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/resources/cloudformation-templates"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/resources/cloudformation"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/resources/cloudformation"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/spot-connect/resources/cloudwatch-targets</loc>
+        <loc>https://docs.spot.io/?/spot-connect/resources/cloudwatch</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/resources/cloudwatch-targets"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/resources/cloudwatch-targets"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/resources/cloudwatch"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/resources/cloudwatch"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/spot-connect/resources/eks-permissions</loc>
+        <loc>https://docs.spot.io/?/spot-connect/resources/eks</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/resources/eks-permissions"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/resources/eks-permissions"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/resources/eks"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/resources/eks"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/spot-connect/resources/github-repos</loc>
+        <loc>https://docs.spot.io/?/spot-connect/resources/git</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/resources/github-repos"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/resources/github-repos"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/resources/git"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/resources/git"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/spot-connect/resources/</loc>

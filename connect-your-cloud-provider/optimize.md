@@ -16,9 +16,9 @@ You can use the filters to choose where you want to focus your optimization anal
 
 <img src="/connect-your-cloud-provider/_media/optimize-your-cloud-002.png" width="500" />
 
-- Product: Choose Elastigroup, Ocean or Eco. The default view is Elastigroup.
+- Product: Choose Spot Storage, Elastigroup, Ocean or Eco. The default view is Elastigroup.
   - If you choose Ocean or Elastigroup, continue reading below about the Accounts filter, the Summary line, and Workloads.
-  - If you choose Eco, [skip down](connect-your-cloud-provider/optimize?id=eco) the page for further information.
+  - If you choose Eco, [scroll down](connect-your-cloud-provider/optimize?id=eco) the page for further information.
 - Accounts: Select one or multiple accounts. You can also analyze across all accounts.
 
 ## Summary Line

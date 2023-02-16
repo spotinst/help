@@ -1,4 +1,4 @@
-# View Dashboard
+# Overview Dashboard
 
 The Dashboard provides a compute overview of your entire organization. On the Dashboard, you can see insights and recommendations, potential savings, and an overview of savings for the Spot products you are using, including Elastigroup, Ocean, and Eco.
 
@@ -16,7 +16,7 @@ The main areas of the dashboard are described below.
 
 Once you have connected your cloud provider, Spot provides recommendations based on your cloud provider(s), the kind of account you connected (e.g., linked account or management account), and the resources existing in your cloud account.
 
-<img src="/connect-your-cloud-provider/_media/view-dashboard-1.png" />
+<img src="/connect-your-cloud-provider/_media/view-dashboard-001.png" />
 
 If Spot presents a lot of recommendations, be sure to click View All so that you can see all the recommendations for savings and optimization. Any of the following recommendations could appear (and possibly others).
 - Connect a Linked Account: You can link additional accounts to Spot, including accounts from different cloud providers.
@@ -72,7 +72,7 @@ The tiles in the summary line provide some statics to give you an overview of yo
 
 ### Savings over Time
 
-The default view of this bar chart shows savings over the last year, viewing one bar per month. If you are using both Ocean and Elastigroup, the information is broken down per Spot service.
+The default view of this bar chart shows savings over the last year, viewing one bar per month. If you are using Ocean, Elastigroup, and Eco, the information is broken down per Spot service.
 
 <img src="/connect-your-cloud-provider/_media/view-dashboard-005.png" />
 
