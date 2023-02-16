@@ -42,7 +42,7 @@
     "html-webpack-plugin": "^5.5.0",
     "husky": "^8.0.1",
     "lint-staged": "^13.1.2",
-    "markdownlint": "^0.25.1",
+    "markdownlint": "^0.27.0",
     "markdownlint-cli": "^0.32.2",
     "postcss": "^8.4.17",
     "postcss-import": "^14.1.0",
