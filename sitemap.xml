@@ -3186,6 +3186,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/getting-started/"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/spot-connect/getting-started/run-first-workflow</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/getting-started/run-first-workflow"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/getting-started/run-first-workflow"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/spot-connect/getting-started/sample-workflows</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
