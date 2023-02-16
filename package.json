@@ -36,7 +36,7 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-html": "^7.1.0",
     "eslint-plugin-markdown": "^3.0.0",
-    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "file-loader": "^6.2.0",
     "glob": "^8.0.3",
     "html-webpack-plugin": "^5.5.0",
