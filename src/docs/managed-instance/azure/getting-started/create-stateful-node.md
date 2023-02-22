@@ -40,7 +40,7 @@ Enter the information described below. Required fields are indicated with an ast
 
 You can choose to persist the OS disk and data disks for the node by snapshotting the disk or reattaching existing ones between VM replacements.  
 
-<img src="/elastigroup/_media/azure-new-stateful-9.png" width="300" />
+<img src="/elastigroup/_media/azure-new-stateful-9.png" />
 
 * The re-attach persistency method is supported only for regional or a single AZ selection. If you select the multiple AZs with the re-attach method, Spot will use the snapshot persistency method in case the current AZ is not available for the new VM.
 * Persisting the OS disk will disable editing the Login, Image and Custom Data/Shutdown scripts fields after the VM is created. This also applies to the process of importing a stateful node.   
@@ -176,11 +176,11 @@ Define the networking settings for your stateful node. At least one network inte
 * Subnet: Define the subnet that the network interface will be assigned to. This field is mandatory.
 * Network Security Group: The network security group that will be associated with the network interface. In the dropdown menu, the network security groups are listed under the resource groups (optional value).
 
-<img src="/elastigroup/_media/azure-new-stateful-16.png" width="150"/>
+<img src="/elastigroup/_media/azure-new-stateful-16.png" />
 
 * Application Security Groups: The application Security Groups that will be associated with your network interface. Choose one or more application security groups for your network interface (optional value).  
 
-<img src="/elastigroup/_media/azure-new-stateful-17.png" width="140"/>
+<img src="/elastigroup/_media/azure-new-stateful-17.png" />
 
 * Assign Public IP: Select this option to auto-assign a public IP to the launched VMs.
 
