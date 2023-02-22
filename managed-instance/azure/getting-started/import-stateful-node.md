@@ -24,7 +24,7 @@ In the page that opens, choose the Azure resource group from the list. A list of
 
 In the table, click the VM you want to import and click Review & Import.
 
-<img src="/elastigroup/_media/azure-import-a-stateful-vm-03.png" />
+<img src="/elastigroup/_media/azure-import-stateful-6.png" />
 
 **Note: Spot does not support generalized VMs nor ephemeral storage VMs.**
 
@@ -60,4 +60,5 @@ When the network persistency is also activated, the following actions will be do
 
 ## What's Next?
 
-Learn how to [create a stateful node from scratch](managed-instance/azure/getting-started/create-stateful-node)
+* Learn how to [create a stateful node from scratch](managed-instance/azure/getting-started/create-stateful-node).
+* Learn how to manage your existing [stateful nodes](https://docs.spot.io/managed-instance/azure/tutorials/manage?id=manage-stateful-nodes).  
