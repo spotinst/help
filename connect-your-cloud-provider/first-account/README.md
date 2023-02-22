@@ -69,17 +69,15 @@ Please see the detailed procedures for connecting manually.
 This option automatically chooses a policy and a role and associates the two for you. To connect automatically with GCP, you must have gcloud with permissions to create a service account.
 
 ### Connect Azure
-#### Linked Account
+#### Subscription
 
-A linked account is an “ordinary” Spot account you use for optimizing cost and usage by using spot instances and taking advantage of numerous Spot features. You need a Linked Account to use Elastigroup or Ocean.
+Connection to your Azure subscription is required to use Spot Elastigroup or Spot Ocean, just continue with the wizard in Spot after you choose Azure as the cloud provider. You can find a detailed description of this procedure in [Connect Azure Subscription](connect-your-cloud-provider/first-account/azure).
 
-To create a linked account for Azure, just continue with the wizard in Spot after you choose Azure as the cloud provider. You can find a detailed description of this procedure in [Connect Azure Subscription](connect-your-cloud-provider/first-account/azure).
+#### Billing Account
 
-#### Management Account
+Connection to your Azure Billing Account is required to use Spot Eco. A connected billing account enables Spot Eco to analyze your cost, usage, and commitment data and help you save even more on your cloud expenses.  
 
-Connection to a management account is required to use Eco. A management account enables Spot to analyze your cost and usage reports and helps you save even more on your cloud expenses.
-
-To create a management account for Azure, use the procedure described in [Connect Azure EA to Spot](connect-your-cloud-provider/azure-ea-account).
+To connect your Azure Billing Account to Spot Eco, use the procedure described in [Connect Azure billing account to Spot](connect-your-cloud-provider/azure-ea-account). 
 
 ### Complete Your Connection
 
