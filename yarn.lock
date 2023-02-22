@@ -5376,17 +5376,17 @@ xdg-basedir@^4.0.0:
   resolved "https://registry.yarnpkg.com/xdg-basedir/-/xdg-basedir-4.0.0.tgz#4bc8d9984403696225ef83a1573cbbcb4e79db13"
   integrity sha512-PSNhEJDejZYV7h50BohL09Er9VaIefr2LMAf3OEmpCkjOi34eYyQYAXUTjEQtZJTKcF0E2UKTh+osDLsgNim9Q==
 
-xml-formatter@^2.6.1:
-  version "2.6.1"
-  resolved "https://registry.yarnpkg.com/xml-formatter/-/xml-formatter-2.6.1.tgz#066ef3a100bd58ee3b943f0c503be63176d3d497"
-  integrity sha512-dOiGwoqm8y22QdTNI7A+N03tyVfBlQ0/oehAzxIZtwnFAHGeSlrfjF73YQvzSsa/Kt6+YZasKsrdu6OIpuBggw==
+xml-formatter@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/xml-formatter/-/xml-formatter-3.2.1.tgz#ee398f3a60b1df0a26147fd573091de56c181cca"
+  integrity sha512-YUR3at3Fr3++sXfrVDcYfM7zlUUoxql4/fvzOkUd/BN7mLJBbFWp9YzTgzRI8FxmbCV7eaOEmxlshSfgyR+saw==
   dependencies:
-    xml-parser-xo "^3.2.0"
+    xml-parser-xo "^4.0.3"
 
-xml-parser-xo@^3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/xml-parser-xo/-/xml-parser-xo-3.2.0.tgz#c633ab55cf1976d6b03ab4a6a85045093ac32b73"
-  integrity sha512-8LRU6cq+d7mVsoDaMhnkkt3CTtAs4153p49fRo+HIB3I1FD1o5CeXRjRH29sQevIfVJIcPjKSsPU/+Ujhq09Rg==
+xml-parser-xo@^4.0.3:
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/xml-parser-xo/-/xml-parser-xo-4.0.3.tgz#bfe235470386ca7e23e9cbb82125c78ed6114ae1"
+  integrity sha512-JDRz/Pl1KDtidCl56J1jF9x+CDWiLLVeWwVRU7qzRF2ZCIDo8UcnDVQ0D44JiAJ/IWNTQli5yp6tiee0ebDoFA==
 
 y18n@^4.0.0:
   version "4.0.3"
