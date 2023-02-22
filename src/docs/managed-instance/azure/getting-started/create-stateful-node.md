@@ -12,7 +12,7 @@ Ensure your Azure account is connected to your Spot account. For more informatio
 2. Click Create Node.
 3. Click Start from scratch.
 
-<img src="/elastigroup/_media/azure-new-stateful-1.png" />
+<img src="/elastigroup/_media/azure-new-stateful-1.png" width="1000" />
 
 The following steps are included in the creation wizard:
 
@@ -40,7 +40,7 @@ Enter the information described below. Required fields are indicated with an ast
 
 You can choose to persist the OS disk and data disks for the node by snapshotting the disk or reattaching existing ones between VM replacements.  
 
-<img src="/elastigroup/_media/azure-new-stateful-9.png" />
+<img src="/elastigroup/_media/azure-new-stateful-9.png" width="300" />
 
 * The re-attach persistency method is supported only for regional or a single AZ selection. If you select the multiple AZs with the re-attach method, Spot will use the snapshot persistency method in case the current AZ is not available for the new VM.
 * Persisting the OS disk will disable editing the Login, Image and Custom Data/Shutdown scripts fields after the VM is created. This also applies to the process of importing a stateful node.   
@@ -69,7 +69,7 @@ Specify the image to be used for launching VMs on the stateful node.
 
 The list of images is affected by the region you select in the Basics tab.  
 
-<img src="/elastigroup/_media/azure-new-stateful-9.png" />
+<img src="/elastigroup/_media/azure-new-stateful-21.png" />
 
 Choose one of the following types of images:
 
@@ -144,7 +144,7 @@ You can select the columns to view by clicking the column selector in the furthe
 
 The list of VMs can be filtered according to VM size.  
 
-<img src="/elastigroup/_media/azure-new-stateful-14.png" />
+<img src="/elastigroup/_media/azure-new-stateful-14.png" width="450" />
 
 >**Tip**: To maximize cost savings, provide the stateful node with all possible Spot VMs compatible with the expected workload. The more VM sizes you select, the higher the chances that the stateful node will find an available Spot VM to run on.  
 
@@ -176,11 +176,11 @@ Define the networking settings for your stateful node. At least one network inte
 * Subnet: Define the subnet that the network interface will be assigned to. This field is mandatory.
 * Network Security Group: The network security group that will be associated with the network interface. In the dropdown menu, the network security groups are listed under the resource groups (optional value).
 
-<img src="/elastigroup/_media/azure-new-stateful-16.png" />
+<img src="/elastigroup/_media/azure-new-stateful-16.png" width="150"/>
 
 * Application Security Groups: The application Security Groups that will be associated with your network interface. Choose one or more application security groups for your network interface (optional value).  
 
-<img src="/elastigroup/_media/azure-new-stateful-17.png" />
+<img src="/elastigroup/_media/azure-new-stateful-17.png" width="140"/>
 
 * Assign Public IP: Select this option to auto-assign a public IP to the launched VMs.
 
