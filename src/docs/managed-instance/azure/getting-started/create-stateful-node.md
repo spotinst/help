@@ -253,4 +253,5 @@ To create the Stateful Node, click Create.
 
 ## What's Next?
 
-Learn how to manage your existing [stateful nodes](https://docs.spot.io/managed-instance/azure/tutorials/manage?id=manage-stateful-nodes).  
+* Learn how to [import a stateful node](managed-instance/azure/getting-started/import-stateful-node).
+* Learn how to manage your existing [stateful nodes](https://docs.spot.io/managed-instance/azure/tutorials/manage?id=manage-stateful-nodes).  
