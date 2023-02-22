@@ -61,4 +61,4 @@ When the network persistency is also activated, the following actions will be do
 ## What's Next?
 
 * Learn how to [create a stateful node from scratch](managed-instance/azure/getting-started/create-stateful-node).
-* Learn how to manage your existing [stateful nodes](https://docs.spot.io/managed-instance/azure/tutorials/manage?id=manage-stateful-nodes).  
+* Learn how to [manage your existing stateful nodes](https://docs.spot.io/managed-instance/azure/tutorials/manage?id=manage-stateful-nodes).  
