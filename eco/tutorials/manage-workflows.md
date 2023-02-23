@@ -85,6 +85,10 @@ You may charge the full on-demand price in place of RI discounts.
 
 You may charge the full on-demand price in place of Savings Plan discounts. See above for explanations of the options.
 
+### Retaining Discounts
+
+You may choose to retain discounts within specific subsets or accounts from Reserved Instances or Savings Plans. Selecting these options allows you to retain discounts when they are purchased by the specified accounts or accounts within a specific subset. When selecting this option, you cannot select to replace Reserved Instance or Savings Plan discounts with On Demand Pricing.
+
 ### Remove credits and/or refunds:
 
 There are a variety of financial benefits from working with AWS which a business may opt to share with their end customers or retain as margin.
