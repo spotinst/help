@@ -56,7 +56,7 @@ Choose rules determining which services and events will generate security notifi
 
 Choose the regions to include for security notifications. You can mark one or multiple regions in the dropdown list.
 
-<img src="/administration/_media/create-security-policy-7.png" />
+<img src="/administration/_media/create-security-policy-7.png" width="150" />
 
 Once you have chosen your regions, you can click Create to create the policy.
 
@@ -64,7 +64,7 @@ Once you have chosen your regions, you can click Create to create the policy.
 
 If you (an Admin user) are configuring a policy at the Account level, you can select one or more integrations. The integrations determine how the notifications will be delivered.
 
-<img src="/administration/_media/create-security-policy-8.png" />
+<img src="/administration/_media/create-security-policy-8.png" width="500" />
 
 The following integrations are available:
 
