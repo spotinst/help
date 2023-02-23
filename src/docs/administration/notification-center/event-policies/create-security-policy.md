@@ -32,7 +32,7 @@ To complete the policy definition, you will need to complete all parts of the wi
 
 Select the account the notification policy should apply to.
 
-<img src="/administration/_media/create-security-policy-3.png" />
+<img src="/administration/_media/create-security-policy-3.png" width="350" />
 
 Only accounts that are connected to a cloud provider can create a notification policy.
 
@@ -56,7 +56,7 @@ Choose rules determining which services and events will generate security notifi
 
 Choose the regions to include for security notifications. You can mark one or multiple regions in the dropdown list.
 
-<img src="/administration/_media/create-security-policy-7.png" width="150" />
+<img src="/administration/_media/create-security-policy-7.png" width="300" />
 
 Once you have chosen your regions, you can click Create to create the policy.
 
