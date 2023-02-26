@@ -4,6 +4,10 @@ In [Stateful Nodes](managed-instance/azure/), you can schedule when certain acti
 
 To schedule an action, use the `Scheduling` function in the [Create](https://docs.spot.io/api/#operation/azureStatefulNodeCreate) or [Update](https://docs.spot.io/api/#operation/azureStatefulNodeUpdate) API in the Stateful Node APIs.
 
+You can schedule actions in the Advanced tab of the creation wizard when you [create a new stateful node](managed-instance/azure/getting-started/create-stateful-node) or you can schedule by editing the configuration of an existing stateful node.
+
+Learn how to [schedule](managed-instance/azure/getting-started/create-stateful-node?id=scheduling) a stateful node.  
+
 ## Cron Expressions
 
 Scheduling is based on cron expressions. Each line of a cron expression represents a job (i.e., an action). The cron expression consists of five fields as described below.
