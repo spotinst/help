@@ -1,6 +1,6 @@
 # Use Stateful Nodes
 
-Using Spot’s stateful node you can quickly [import existing Azure VMs](elastigroup/tutorials-azure/use-stateful-nodes/import-a-stateful-vm) into Elastigroup as new nodes while keeping your stateful resources intact. The platform can also be used as a centralized management and monitoring console for all running stateful nodes (and other workloads), with visibility into cost, logs, configuration settings and more. Stateful nodes can be created in Elastigroup, where you can monitor components, add or remove disks, view the current state of nodes and take actions on a node such as recycle, pause, and resume.
+Using Spot’s stateful node you can quickly [import existing Azure VMs](elastigroup/tutorials-azure/use-stateful-nodes/import-a-stateful-vm) or [create a VM from scratch](https://docs.spot.io/managed-instance/azure/getting-started/create-stateful-node) into Elastigroup as new nodes while keeping your stateful resources intact. The platform can also be used as a centralized management and monitoring console for all running stateful nodes (and other workloads), with visibility into cost, logs, configuration settings and more. Stateful nodes can be created in Elastigroup, where you can monitor components, add or remove disks, view the current state of nodes and take actions on a node such as recycle, pause, and resume.
 
 <img src="/elastigroup/_media/use-stateful-nodes-01a.png" />
 
