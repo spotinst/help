@@ -77,3 +77,7 @@ Once the stack is created, copy the Spot Role ARN from the CloudFormation stack 
 <img src="/eco/_media/gettingstarted-aws-connect-08.png" width="546" height="484" />
 
 Once your Organization is connected to Eco, initial data processing will take up to 48 hours. You will be notified via email when your dashboards are ready.
+
+## Step 7 (optional)
+
+Eco has the ability to process historical AWS Cost and Usage Report files in the CSV format. If you have CUR files from a previous AWS Organization in the CSV format that you would like to add, please place them into the S3 bucket with the current CUR files being generated from the setup.
