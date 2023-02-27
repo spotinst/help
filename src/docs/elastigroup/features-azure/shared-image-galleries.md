@@ -20,9 +20,9 @@ As mentioned above, you can share images and entire galleries with other users. 
 
 ## Use Shared Image in Spot
 
-You can use the Spot console to access shared images in Elastigroup for stateless groups. Shared images for stateful nodes are available by API only.
+You can use the Spot console to access shared images in Elastigroup for stateless groups and stateful nodes.  
 
-To use a shared image in stateless groups, do the following:
+To use a shared image in stateless groups, complete the following steps:
 1. When you are creating or editing a stateless group configuration, go to the Compute tab.
 
 <img src="/elastigroup/_media/azure-shared-gallery-01.png" />
@@ -36,6 +36,27 @@ To use a shared image in stateless groups, do the following:
 <img src="/elastigroup/_media/azure-shared-gallery-02.png" />
 
 3. Continue with your configuration edits and then click Create or Update.
+
+### Stateful Nodes
+
+To use a shared image in stateful nodes, complete the following steps:
+
+1. When you are creating or editing for a stateful node configuration, go to the Compute tab.
+
+<img src="/elastigroup/_media/shared-image-galleries-1.png" />
+
+2. Choose Shared Image and choose the relevant item from each of the following dropdown lists: 
+
+* Image Resource Group
+* Gallery Name
+* Image Name
+* Version
+
+<img src="/elastigroup/_media/shared-image-galleries-2.png" />
+
+3. Continue editing your configuration and then click Create or Update.
+
+
 
 ## Use the API
 
