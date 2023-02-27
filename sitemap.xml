@@ -3487,18 +3487,18 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/resources/"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/spot-connect/resources/s3-buckets</loc>
+        <loc>https://docs.spot.io/?/spot-connect/resources/s3</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/resources/s3-buckets"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/resources/s3-buckets"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/resources/s3"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/resources/s3"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/spot-connect/resources/ssh-targets</loc>
+        <loc>https://docs.spot.io/?/spot-connect/resources/ssh</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/resources/ssh-targets"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/resources/ssh-targets"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/resources/ssh"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/resources/ssh"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/spot-connect/sample-workflows/automate-incident-response</loc>
