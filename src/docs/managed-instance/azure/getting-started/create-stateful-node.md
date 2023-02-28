@@ -90,7 +90,7 @@ Choose one of the following types of images:
     - Image Name.  
     - Version. If you need the most recent version, choose Latest from the list.
 
-  * In order to define cross-subscription images, use the “Shared Image Gallery” documentation page.
+  * Learn how to [define cross-subscription images](elastigroup/features-azure/shared-image-galleries?id=cross-subscription-shared-galleries).
 
 #### Define Custom or Shared Specialized Image
 
