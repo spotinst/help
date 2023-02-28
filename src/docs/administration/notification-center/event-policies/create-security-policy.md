@@ -10,15 +10,16 @@ To access the notification policies, do the following:
 
 <img src="/administration/_media/create-security-policy-1.png" />
 
-2. In the top center, click Notification Center.
-3. In the left menu, click Event Policies. The Event Policies dashboard appears.
-4. In the upper right, click Create Policy.
+2. In the top center, click on Settings.
+3. In the left menu, click Notification Center and Event Policies.
+4. The Event Policies dashboard opens. 
+5. In the upper right, click Create Policy.
 
 ### Create New Policy
 
 1. In the Create Policy popup, complete the following information:
 * Policy Name: Give the policy a name.
-* Policy Type: In the dropdown, choose SecOps.
+* Policy Type: In the dropdown, choose Security.
 * Policy Description: Enter a few words describing what or who the policy is for.
 
 <img src="/administration/_media/create-security-policy-2.png" />
@@ -26,39 +27,31 @@ To access the notification policies, do the following:
 2. Mark Personal Visibility if you want the policy to be visible only to you. You will not be able to add integrations. If you leave the checkbox blank, the policy will be available to other members of the account it is in, and you will be able to add integrations.
 3. Click Continue.
 
-To complete the policy definition, you will need to complete all parts of the wizard to select an account, rules, regions, and integrations. Once the policy is created, you may need to edit it to select users who will have access.  
+To complete the policy definition, you will need to complete all parts of the wizard to select an account, rules, regions, and integrations. Once the policy is created, you might need to edit it to select users who will have access.  
 
 ## Step 1: Select Account
 
 Select the account the notification policy should apply to.
 
-<img src="/administration/_media/create-security-policy-3.png" width="350" />
+<img src="/administration/_media/create-security-policy-9.png" />
 
 Only accounts that are connected to a cloud provider can create a notification policy.
 
-## Step 2: Select Rules
+## Step 2: Select Assets
 
-Choose rules determining which services and events will generate security notifications.
+Choose the assets you wish to be notified of if any security rules fail to perform them.
 
-1.  Choose a service from the dropdown list.
+<img src="/administration/_media/create-security-policy-10.png" />
 
-<img src="/administration/_media/create-security-policy-4.png" />
+You can turn on the Future Assets toggle if you select All Assets across the selected accounts. This will enable the notifications for the assets which are onboarded later in these accounts.
 
-2. Choose rules from the Rules list. You can mark multiple rules in the list.
+## Step 3: Select Security Rules
 
-<img src="/administration/_media/create-security-policy-5.png" />
+Choose the security rules that you want to generate security events from the Rules list.  
 
-3. Click Add Service if you want to add additional services for notification.
+<img src="/administration/_media/create-security-policy-11.png"  />
 
-<img src="/administration/_media/create-security-policy-6.png" />
-
-## Step 3: Select Regions
-
-Choose the regions to include for security notifications. You can mark one or multiple regions in the dropdown list.
-
-<img src="/administration/_media/create-security-policy-7.png" width="250" />
-
-Once you have chosen your regions, you can click Create to create the policy.
+The frequency that the security notifications is sent is based on the severity of the security rules selected.
 
 ## Step 4: Select Integrations (Optional)
 
