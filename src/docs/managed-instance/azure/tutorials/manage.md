@@ -25,7 +25,7 @@ The list of stateful nodes gives you a quick view of your nodes and basic inform
 
 If you have a long list of stateful nodes, you can use the filter above the list to find one or multiple nodes. Just enter a tag, a node attribute, a keyword or simply a string of text into the filter box and type enter.
 
-<img src="/elastigroup/_media/azure-manage-stateful-nodes-02.png" />
+<img src="/elastigroup/_media/azure-manage-stateful-edit-6.png" />
 
 ## View Node Details
 
