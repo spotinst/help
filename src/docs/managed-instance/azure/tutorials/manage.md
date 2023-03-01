@@ -38,7 +38,7 @@ You can do the following from the dropdown menu:
 * Create a new node from scratch.
 * Import an existing VM from Azure.  
 
-<img src="/elastigroup/_media/azure-manage-stateful-edit-5.png" />
+<img src="/elastigroup/_media/azure-manage-stateful-edit-5.png" width="300"/>
 
 ## Use Node Actions
 
