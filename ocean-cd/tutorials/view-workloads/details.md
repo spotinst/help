@@ -26,7 +26,7 @@ However, there can be cases where they do not correspond. This occurs when a wor
 
 A degraded status may easily be removed either by applying your SpotDeployment with the details of your live version or by triggering a whole new rollout with a new version.  
 
-<img src="/ocean-cd/_media/detailed-workload.png"
+<img src="/ocean-cd/_media/detailed-workload.png" />
 
 ## Rollout Trend
 
