@@ -80,4 +80,4 @@ Once your Organization is connected to Eco, initial data processing will take up
 
 ## Step 7 (optional)
 
-Eco has the ability to process historical AWS Cost and Usage Report files in the CSV format. If you have CUR files from a previous AWS Organization in the CSV format that you would like to add, please place them into the S3 bucket with the current CUR files being generated from the setup.
+Eco has the ability to process historical AWS Cost and Usage Report files in the CSV format. If you have previous CUR files in the CSV format that you would like to add, please place them into the S3 bucket with the current CUR files being generated from the setup.
