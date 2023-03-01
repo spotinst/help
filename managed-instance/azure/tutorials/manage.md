@@ -38,7 +38,7 @@ You can do the following from the dropdown menu:
 * Create a new node from scratch.
 * Import an existing VM from Azure.  
 
-<img src="/elastigroup/_media/azure-managed-stateful-edit-5.png" />
+<img src="/elastigroup/_media/azure-manage-stateful-edit-5.png" />
 
 ## Use Node Actions
 
@@ -48,8 +48,6 @@ To perform one of the [node actions](managed-instance/azure/features/actions), c
 - Pause
 - Resume
 - Delete
-
-<img src="/elastigroup/_media/azure-manage-stateful-nodes-03.png" />
 
 ## Edit Node Configuration
 
