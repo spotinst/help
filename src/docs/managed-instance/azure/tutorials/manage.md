@@ -1,6 +1,6 @@
 # Manage Stateful Nodes
 
-Elastigroup enables you to see an overview of all your stateful nodes, get status at a glance, perform other tasks, and drill down to more detailed information when you need to.
+Elastigroup enables you to see an overview of all your stateful nodes, get status at a glance, perform tasks such as importing and creating new stateful nodes, and drill down to more detailed information when you need to.
 
 To manage your stateful nodes in the Spot console, go to Elastigroup in the menu tree and click Stateful Nodes.
 
@@ -23,7 +23,7 @@ The list of stateful nodes gives you a quick view of your nodes and basic inform
 
 ## Filter Node List
 
-If you have a long list of stateful nodes, you can use the filter above the list to find one or multiple nodes. Just enter a tag, an attribute, a keyword or simply a string of text into the filter box and type enter.
+If you have a long list of stateful nodes, you can use the filter above the list to find one or multiple nodes. Just enter a tag, a node attribute, a keyword or simply a string of text into the filter box and type enter.
 
 <img src="/elastigroup/_media/azure-manage-stateful-nodes-02.png" />
 
@@ -61,7 +61,7 @@ If you are on the Overview page, click Edit Node at the top right.
 
 <img src="/elastigroup/_media/azure-manage-stateful-edit-2.png" />
 
-You can then edit any of the fields in the Basics page that appears.
+You can then edit any of the fields in the Basics page that appear.
 
 <img src="/elastigroup/_media/azure-manage-stateful-edit-3.png" />
 
@@ -81,6 +81,8 @@ The following parameters cannot be edited and are not included in the JSON confi
 `region`<br>
 `resourceGroupName`<br>
 `compute.os`
+
+> Tip: You can edit a node only when it is in Running or Paused state.
 
 ## What’s Next?
 
