@@ -38,7 +38,7 @@ The Spot Agent is required to run a shutdown script. You can add the script for 
 
 2. Click the Advanced tab.
 
-<img src="/elastigroup/_media/shutdown-script-elastigroup-azure-.png" />
+<img src="/elastigroup/_media/shutdown-script-elastigroup-azure-2.png" />
 
 3. Add the required script according to the relevant OS and Python version as described below.
 
