@@ -14,7 +14,7 @@ There are several ways to install the Controller. Choose one of the procedures b
 - [Install Controller with Terraform](ocean/tutorials/spot-kubernetes-controller/install-with-terraform)
 - [Install Controller with Helm](ocean/tutorials/spot-kubernetes-controller/install-with-helm)
 
-Installation of the Ocean Controller is governed by NetApp’s end user license agreement (“EULA”), which can be found at: [Sales Terms and Conditions | NetApp](https://www.netapp.com/how-to-buy/sales-terms-and-conditions/)
+Installation of the Ocean Controller is governed by NetApp’s end user license agreement (“EULA”), which can be found at: [Sales Terms and Conditions | NetApp](https://www.netapp.com/how-to-buy/sales-terms-and-conditions/).
 
 By installing the Ocean Controller, you accept and approve the EULA.
 
