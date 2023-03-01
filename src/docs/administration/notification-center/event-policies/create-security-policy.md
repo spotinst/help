@@ -8,11 +8,11 @@ To access the notification policies, do the following:
 
 1. In the upper right, click the User icon, and then click My Account in the menu.
 
-<img src="/administration/_media/create-security-policy-1.png" />
+<img src="/administration/_media/create-security-policy-1.png" width="400" />
 
 2. In the top center, click on Settings.
 3. In the left menu, click Notification Center and Event Policies.
-4. The Event Policies dashboard opens. 
+4. The Event Policies dashboard opens.
 5. In the upper right, click Create Policy.
 
 ### Create New Policy
@@ -22,7 +22,7 @@ To access the notification policies, do the following:
 * Policy Type: In the dropdown, choose Security.
 * Policy Description: Enter a few words describing what or who the policy is for.
 
-<img src="/administration/_media/create-security-policy-2.png" />
+<img src="/administration/_media/create-security-policy-2.png" width="400" />
 
 2. Mark Personal Visibility if you want the policy to be visible only to you. You will not be able to add integrations. If you leave the checkbox blank, the policy will be available to other members of the account it is in, and you will be able to add integrations.
 3. Click Continue.
@@ -33,7 +33,7 @@ To complete the policy definition, you will need to complete all parts of the wi
 
 Select the account the notification policy should apply to.
 
-<img src="/administration/_media/create-security-policy-9.png" />
+<img src="/administration/_media/create-security-policy-9.png" width="1000" />
 
 Only accounts that are connected to a cloud provider can create a notification policy.
 
