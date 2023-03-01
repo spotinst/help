@@ -22,7 +22,7 @@
       - [Read Notifications](administration/notification-center/notifications/read)
     - [Event Policies](administration/notification-center/event-policies/)
       - [Create a Policy](administration/notification-center/event-policies/create)
-      - [Create a Security Polic](administration/notification-center/event-policies/create-security-policy)
+      - [Create a Security Policy](administration/notification-center/event-policies/create-security-policy)
       - [Edit a Policy](administration/notification-center/event-policies/edit)
   - [SSO Access Control](administration/sso-access-control/)
     - [Organization Level SSO](administration/sso-access-control/organization-level-sso)

@@ -26,7 +26,7 @@ The Spot Agent is required to run a shutdown script. You can add the script for 
 
 2. Click the Compute tab and open Additional Configuration. Scroll down until you see Custom Data and Shutdown Script.
 
-<img src="/elastigroup/_media/azure-shutdown-script-02.png" width="800"/>
+<img src="/elastigroup/_media/azure-shutdown-script-02a.png" />
 
 3. Add the required script according to the relevant OS and Python version as described below.
 
