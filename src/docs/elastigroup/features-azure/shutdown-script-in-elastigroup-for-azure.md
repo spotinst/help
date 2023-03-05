@@ -16,7 +16,7 @@ A shutdown script is basically a shell script (Bash or Powershell) that is execu
 
 ## Install the Spot Agent
 
-The Spot Agent is required to run a shutdown script. You can add the script for installing the Spot Agent when you create a new stateless group or stateful node or by editing an existing group or stateful node. The steps below are for editing an existing group.
+The Spot Agent is required to run a shutdown script. You can add the script for installing the Spot Agent when you create a new stateless group or stateful node or by editing an existing group or stateful node. The steps below are for editing an existing stateless group and an existing stateful node.
 
 ### Stateless Group
 
@@ -91,7 +91,7 @@ Once you have added the script for installing the Spot Agent, you can add the ac
 
 2. Click Next, and then click Update in the Review tab.
 
-## Usage Notes
+## Usage Notes for Linux OS
 
 - Shutdown scripts must start with the #! characters and the path to the interpreter you want to read the script (e.g. /bin/bash).
 - Shutdown scripts are executed as the root user, sudo is not required in the script. Remember that any files you create will be owned by root. For non-root permissions to files, modify permissions accordingly.
