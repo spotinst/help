@@ -2,7 +2,7 @@
 
 ## Question: Tenant ID doesn’t Match
 
-Tenant Id in the request does not match tenant id where the Eco Azure App was consented?
+Tenant ID in the request does not match tenant ID where the Eco Azure App was consented?
 
 <img src="/eco/_media/eco-azure-faq-1.png" />
 
@@ -12,7 +12,7 @@ During the setup for Eco Azure please verify the account that you signed into is
 
 ## Question: Invalid Billing Permission  
 
-Permission is not valid, please update permission as needed and try again. (Billing Permission)
+Permission is not valid, please update permission as needed and try again.
 
 <img src="/eco/_media/eco-azure-faq-2.png" />
 
@@ -22,11 +22,11 @@ During the setup the Eco Azure application requires that someone must have the b
 
 ## Question: Invalid Reservation Permission  
 
-Permission is not valid, please update permission as needed and try again. (Reservation Permission)
+Permission is not valid, please update permission as needed and try again.
 
 <img src="/eco/_media/eco-azure-faq-3.png" />
 
-Answer:
+### Answer:
 
 During the setup the Eco Azure application requires that someone must have reservation administrator access. Please follow this guide to update your permissions to reservation administrator and start over.
 
@@ -34,6 +34,6 @@ During the setup the Eco Azure application requires that someone must have reser
 
 Why don't I see data in my Azure dashboard?
 
-### Answer: 
+### Answer:
 
 Please contact the Spot support team, and the Eco team will investigate.
