@@ -30,3 +30,4 @@
     - [View Savings in Dashboard](eco/eco-in-cloudcheckr/view-savings-in-dashboard)      
   - [Troubleshooting](eco/troubleshooting/)
     - [Eco FAQ](eco/troubleshooting/eco-faq)
+    - [Azure FAQ](eco/troubleshooting/azure-faq)
