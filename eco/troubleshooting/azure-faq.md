@@ -1,6 +1,6 @@
 # Eco Azure FAQ
 
-## Question: Tenant ID doesn’t Match
+## Question: Tenant ID Doesn’t Match
 
 Tenant ID in the request does not match tenant ID where the Eco Azure App was consented?
 
