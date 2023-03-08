@@ -37,3 +37,13 @@ Why don't I see data in my Azure dashboard?
 ### Answer:
 
 Please contact the Spot support team, and the Eco team will investigate.
+
+## Question: Tenant ID and Billing Account ID
+
+How do I find my tenant ID and billing account ID?  
+
+<img src="/eco/_media/eco-azure-faq-4.png" />
+
+### Answer:  
+
+Learn how to [find your Tenant ID](https://learn.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-how-to-find-tenant) and how to [find your Billing ID](https://learn.microsoft.com/en-us/azure/cost-management-billing/manage/direct-ea-administration#manage-your-enrollment).  
