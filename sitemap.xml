@@ -2241,13 +2241,6 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/getting-started/"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/ocean-cd/getting-started/rollout-entities</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/getting-started/rollout-entities"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/getting-started/rollout-entities"/>
-    </url>
-    <url>
         <loc>https://docs.spot.io/?/ocean-cd/getting-started/rollout-entities/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
@@ -2260,6 +2253,13 @@
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/getting-started/rollout-entities/verifiaction-provider"/>
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/getting-started/rollout-entities/verifiaction-provider"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/ocean-cd/getting-started/rollout-entities/verification-template</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/getting-started/rollout-entities/verification-template"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/getting-started/rollout-entities/verification-template"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/ocean-cd/getting-started/traffic-manager-reference</loc>
