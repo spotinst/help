@@ -6,37 +6,21 @@ The template is reusable and can be used and maintained over multiple services a
 
 ```yaml
 kind: verificationTemplate
-
 name: prometheus
-
 args:
-
 - name: metric-name
-
 metrics:
-
 - name: cpu-usage
-
  interval: 5m
-
  initialDelay: 1m
-
  count: 10
-
  successCondition: result[0] <= 0.95
-
  failureCondition: result[0] >= 1.2
-
  failureLimit: 0
-
  inconclusiveLimit: 0
-
  consecutiveErrorLimit: 0
-
  provider:
-
    prometheus:
-
      query: sum(container_cpu_usage_seconds_total{namespace=\"demo\", endpoint=\"{{args.metric-name}}\"})
 ```
 
