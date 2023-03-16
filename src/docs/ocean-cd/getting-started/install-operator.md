@@ -23,7 +23,9 @@ The purpose of OLM is to extend Kubernetes to provide a declarative way to insta
 
 To install OLM, run the following command:
 
-`curl -sL https://github.com/operator-framework/operator-lifecycle-manager/releases/download/v0.21.2/install.sh | bash -s v0.21.2`
+```
+curl -sL https://github.com/operator-framework/operator-lifecycle-manager/releases/download/v0.21.2/install.sh | bash -s v0.21.2
+```
 
 Be sure to use the [latest OLM version](https://github.com/operator-framework/operator-lifecycle-manager/releases) in order to include the latest updates and fixes.
 
@@ -55,17 +57,21 @@ You can use the following API URL, using Postman or another API tool, that gener
 
 1. Run the following command:
 
+```
 https://api.spotinst.io/ocean/cd/clusterInstaller?clusterId=CLUSTER_ID&skipArgoRollouts=true
+```
 
 2. To apply the command using Curl, use the syntax below. Be sure to replace the authorization with your bearer token and the cluster ID with the identifier of your choice.
 
-`curl --location --request POST 'https://api.spotinst.io/ocean/cd/clusterInstaller?clusterId=CLUSTER_ID&skipArgoRollouts=true' \
+```
+curl --location --request POST 'https://api.spotinst.io/ocean/cd/clusterInstaller?clusterId=CLUSTER_ID&skipArgoRollouts=true' \
 
 --header 'Content-Type: application/json' \
 
 --header 'Authorization: Bearer xxxxxxxx' \
 
---data-raw '' | kubectl apply -f - `
+--data-raw '' | kubectl apply -f -
+```
 
 ## Install using Helm
 
@@ -73,28 +79,35 @@ Complete the steps below:
 
 1. Add the OceanCD Helm chart repository:
 
-`helm repo add oceancd https://charts.oceancd.io`
+```
+helm repo add oceancd https://charts.oceancd.io
+```
 
 2. Update your local Helm chart repository cache:
 
-`helm repo update`
+```
+helm repo update
+```
 
 3. Install spot-oceancd-operator. The example below enables the Argo installation. Replace the token and cluster ID to your own values.
 
-`helm install my-release oceancd/spot-oceancd-operator \
+```
+helm install my-release oceancd/spot-oceancd-operator \
   --namespace oceancd \
   --create-namespace \
   --set token=xxxxx \
   --set clusterId=xxxxx \
-  --set argoRollouts.create=true`
+  --set argoRollouts.create=true
+```
 
 **Installation using a Helm template is not supported.**
 
 You can create a new namespace to install the operator by using the following commands:
 
-` --namespace ${RELEASE_NAMESPACE} \
-
-  --create-namespace \ `
+```
+  --namespace ${RELEASE_NAMESPACE} \
+  --create-namespace \
+```
 
 Alternatively, you can configure all required chart values without using the set command-line argument, and use Spot’s `values.yaml` file.  
 
@@ -102,7 +115,8 @@ To download the relevant YAML, go to the [Github](https://github.com/spotinst/sp
 
 To run the relevant YAML, use the following command:  
 
-`helm install my-release oceancd/spot-oceancd-operator \
+```
+helm install my-release oceancd/spot-oceancd-operator \
 
   --set token=REDACTED \
 
@@ -112,7 +126,8 @@ To run the relevant YAML, use the following command:
 
   --create-namespace
 
-  -f values.yaml`
+  -f values.yaml
+```
 
 ## What’s Next?
 
