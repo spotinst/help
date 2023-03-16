@@ -2241,6 +2241,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/getting-started/"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/ocean-cd/getting-started/rollout-entities/canary-strategy</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/getting-started/rollout-entities/canary-strategy"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/getting-started/rollout-entities/canary-strategy"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/ocean-cd/getting-started/rollout-entities/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
@@ -2253,6 +2260,13 @@
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/getting-started/rollout-entities/rolling-update-strategy"/>
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/getting-started/rollout-entities/rolling-update-strategy"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/ocean-cd/getting-started/rollout-entities/rolloutspec</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/getting-started/rollout-entities/rolloutspec"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/getting-started/rollout-entities/rolloutspec"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/ocean-cd/getting-started/rollout-entities/verification-provider</loc>
@@ -2274,6 +2288,13 @@
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/getting-started/traffic-manager-reference"/>
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/getting-started/traffic-manager-reference"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/ocean-cd/getting-started/trigger-rollout</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/getting-started/trigger-rollout"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/getting-started/trigger-rollout"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/ocean-cd/ocean-integration/</loc>
