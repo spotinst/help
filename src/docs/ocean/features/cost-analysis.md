@@ -24,16 +24,17 @@ For example, if a workload requests 20% of the total cluster allocatable resourc
 
 ### Compute Costs: Workload Resource Allocation (CPU and Memory)
 
-The major elements of cluster resource allocation are vCPU and memory. Ocean assigns weights for costs for CPU and Memory depending on
+The major elements of cluster resource allocation are vCPU and memory. Ocean assigns weights for costs for CPU and Memory depending on the following:
 
-* the cloud provider pricing for vCPU when compared to  Memory and
-* the ratio of equivalent compute (vCPU) to memory (GiB) resources allocated in the cluster, CPU:Mem ratio. CPU:Mem ratio indicates if the cluster is more CPU optimized or memory optimized.
+* The cloud provider pricing for vCPU when compared to memory.
+* The ratio of equivalent compute (vCPU) to memory (GiB) resources allocated in the cluster, i.e., CPU to memory ratio. The CPU to memory ratio indicates if the cluster is more CPU optimized or memory optimized.
 
 For a cloud provider, the cost of 1 vCPU varies from 7 to 13 times the cost of 1 GiB of memory, depending on instance family and type.
 
-In addition, a cluster that is optimized for Memory, using more memory optimized instances, should have a higher weight for memory compared to a cluster optimized for CPU, using more CPU optimized instances.
+In addition, a cluster that is optimized for memory, using more memory optimized instances, should have a higher weight for memory compared to a cluster optimized for CPU, using more CPU optimized instances.
 
-For example take 2 clusters, Cluster-1(Memory Optimized) and Cluster-2 (CPU optimized)
+For example, in two clusters, Cluster-1 (memory optimized) and Cluster-2 (CPU optimized):
+
 * Cluster-1 with 40 vCPU and 320 GiB Memory (1:8 CPU:Mem ratio)
   - Cost weight for Compute (vCPU) = 48% and Memory (GiB) = 52%
 * Cluster-2 with 120 vCPU and 120 GiB Memory (1:1 CPU:Mem ratio)
@@ -45,7 +46,7 @@ In Cluster-1, if workload-1 requests resources for 2 vCPUs and 12 GiB of memory 
 
 In other words, workload-1 used 4.4% of the total cluster allocatable resources. Workload-1 will be assigned 4.4% of Cluster-1 compute costs.
 
-In Cluster-2, if workload-2 requests resources for 4 vCPUs and 6 GiB of memory and the total cluster allocatable resources are 120 vCPUs and 120 GiB of memory, then the resource allocation of that workload is calculated as:
+In Cluster-2, if workload-2 requests resources for 4 vCPUs and 6 GiB of memory, and the total cluster allocatable resources are 120 vCPUs and 120 GiB of memory, then the resource allocation of that workload is calculated as:
 
 `Resource allocation = (0.91 * 4/120) + (0.09 * 6/120) = 0.035 or 3.5%`
 
@@ -112,9 +113,9 @@ The different types of cloud provider data transfer costs which can be associate
 
 #### High-level Architecture for Network Costs
 
-The Ocean network client is installed in the Kubernetes cluster and runs as a Kubernetes DeamonSet on each node in the cluster. The Ocean network client includes an exporter and an eBPF packet counter. They collect network flow metrics from pods on the node and send aggregated flow data at regular intervals to the Ocean backend cluster (AWS) for network cost calculation and further aggregation which can be up to 90 days.
+The Ocean network client is installed in the Kubernetes cluster and runs as a Kubernetes DeamonSet on each node in the cluster. The Ocean network client includes an exporter and an eBPF packet counter. They collect network flow metrics from pods on the node and send aggregated flow data at regular intervals to the Ocean backend cluster (AWS) for network cost calculation and further aggregation which can be up to 90 days.  
 
-<img src="/ocean/_media/network-costs-2.png" />
+<img src="/ocean/_media/network-costs-3.png" />
 
 ## Breakdown Types
 
