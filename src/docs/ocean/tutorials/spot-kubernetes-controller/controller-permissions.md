@@ -136,7 +136,7 @@ rules:
   verbs: ["get", "list", "create", "patch", "delete"]
   # ----------------------------------------------------------------------------
   # Required by the Netwrok Cost anaysis feature
-  # ##### Add to your controller RBAC permissions for any apiGroup and custom object resource belonging to the apiGroup
+  # Add to your controller RBAC permissions for any apiGroup and custom object resource belonging to the apiGroup
   # ----------------------------------------------------------------------------
 - apiGroups: [YOUR_API_GROUP]
   resources: [YOUR_CUSTOM_OBJECT_RESOURCE]
