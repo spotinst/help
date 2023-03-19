@@ -34,7 +34,7 @@ failurePolicy:
  action: abort
 ```
 
-Attributes   
+### Attributes   
 
 The attributes of a rolloutSpec are described below.
 
@@ -49,6 +49,6 @@ The attributes of a rolloutSpec are described below.
 * Traffic: Kubernetes services or optional traffic manager (link) you have chosen.  
 * Failure.Policy: The automatic action or actions Ocean CD performs in the case of a failure. Ocean CD supports Abort, Pause and Promote. For more details see the verifications page.  
 
-## What's Next? 
+## What's Next?
 
 Learn how to trigger a rollout.
