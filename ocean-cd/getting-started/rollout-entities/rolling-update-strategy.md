@@ -19,7 +19,7 @@ rolling:
    verification:
      templateNames:
      - My-first-verification
-- My-second-verification
+     - My-second-verification
    pause:
      duration: 5m
  - name: My-second-phase
@@ -39,6 +39,6 @@ The attributes of a strategy:
 * Steps.Pause: Optional. Pause set per phase.
 * Steps.Pause.Duration: Optional. The time in seconds, minutes, or hours that you may pause the step. If undefined, a pause in the phase continues indefinitely.
 
-## What's Next? 
+## What's Next?
 
 Learn how Ocean CD manages the rollout of a new SpotDeployment update.
