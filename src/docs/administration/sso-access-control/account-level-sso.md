@@ -1,6 +1,6 @@
 # Account Level SSO
 
-Assign Account Permissions with SAML Attribute. For account level login, it is possible to grant a user permissions to accounts per [user role](administration/users/) and per [access policy](administration/access-policies/). These are defined using SAML attributes. The attributes allow login to different accounts by the same user and the same IDP app while setting the roles dynamically on each request.
+Assign Account Permissions with SAML Attribute. For account level login, it is possible to grant a user permission's to accounts per [user role](administration/users/) and per [access policy](administration/access-policies/). These are defined using SAML attributes. The attributes allow login to different accounts by the same user and the same IDP app while setting the roles dynamically on each request.
 
 ## Account and Role
 
@@ -17,7 +17,7 @@ Login to an account with a specific role is defined with an Account and Role com
 The attribute value is in the format:
 `SPOTINST-<AccountId>-<Role>`
 
-The <AccountId> and <Role> are separated by a dash.
+The "<AccountId>" and "<Role>" are separated by a dash.
 
 ## Account and Policy
 
@@ -39,7 +39,7 @@ The format is shown below:
 The attribute value is in the format:
 `SPOTINST-<AccountId>:<PolicyId>`
 
-- The <AccountId> and <PolicyId> are separated by a colon.
+- The "<AccountId>" and "<PolicyId>" are separated by a colon.
 
 If multiple policies are applied to an account, the format is as follows:
 
