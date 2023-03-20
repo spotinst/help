@@ -1,6 +1,6 @@
 # Organization Level SSO
 
-For organization level login, it is possible to grant a user permissions to an organization per role or per user groups using a SAML attribute. The attributes allow login to different organizations by the same user and the same IDP app while setting the permissions dynamically for each organization. The attributes are described below.
+For organization level login, it is possible to grant a user permission's to an organization per role or per user groups using a SAML attribute. The attributes allow login to different organizations by the same user and the same IDP app while setting the permissions dynamically for each organization. The attributes are described below.
 
 ## Organization and Role
 
@@ -10,7 +10,7 @@ You can configure role and organization attributes using a SAML attribute. The O
 <Attribute Name="OrgAndRole" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"> <AttributeValue>SPOTINST-OrganizationID-ADMIN</AttributeValue> <AttributeValue>SPOTINST-OrganizationID-VIEWER</AttributeValue> <AttributeValue>SPOTINST-OrganizationID-VIEWER</AttributeValue> </Attribute>
 ```
 
-The SAML attribute OrgAndRole (ignore case) allows the organization ID to be set dynamically on each request, and not once as a RelayState. The attribute is in the Format: Spotinst-<organizationID>-<role>.
+The SAML attribute OrgAndRole (ignore case) allows the organization ID to be set dynamically on each request, and not once as a RelayState. The attribute is in the Format: "Spotinst-<organizationID>-<role>".
 
 This attribute will allow login into different organizations with the same user and the same IDP app while setting the organization ID dynamically.
 
@@ -32,7 +32,7 @@ In this case, an Account Admin role is provided, meaning an Account Editor. This
 
 ## Organization and User Group
 
-You can configure a user to one or many user groups under a certain organization, so that the policy-based permissions that are configured to those groups will be enforced on the user.. The Organization and User Group combination are configured for each user using the following IDP format:
+You can configure a user to one or many user groups under a certain organization, so that the policy-based permissions that are configured to those groups will be enforced on the user. The Organization and User Group combination are configured for each user using the following IDP format:
 
 ```xml
 <Attribute Name="OrgAndUserGroups" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
