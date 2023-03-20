@@ -29,7 +29,7 @@ rolling:
    pause: {}  
 ```
 
-## Attributes
+### Attributes
 
 The attributes of a strategy:
 
