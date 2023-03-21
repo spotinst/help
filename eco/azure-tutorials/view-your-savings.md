@@ -1,10 +1,10 @@
 # View your Savings
 
-Once Eco Azure has been enabled for your organization and you have chosen your reserved instance (RI) strategy, your Eco Azure dashboard will display a more complete view of savings.
+Once Eco Azure has been enabled for your organization and you have chosen your reservation and savings plan strategy, your Eco Azure dashboard will display a more complete view of savings.
 
 To view the Eco Azure dashboard in the console, go to Eco on the left side and click Dashboard.
 
-<img src="/eco/_media/azure-view-your-savings-01.png" />
+<img src="/eco/_media/azure-view-your-savings.png" />
 
 ## Filters
 
@@ -32,7 +32,7 @@ Eco Azure provides summary graphs and charts to give you wide visibility of your
 
 ### Savings over Time
 
-A bar graph showing the amount of savings each month broken down by type of savings. This graph will allow you to visualize savings from VM reservations. You can use the filters at the top of the page and source filters specific to each graph.
+A bar graph showing the amount of savings each month broken down by type of savings. This graph will allow you to visualize savings from reservations and savings plans. You can use the filters at the top of the page and source filters specific to each graph.
 
 - All
 - Eco
