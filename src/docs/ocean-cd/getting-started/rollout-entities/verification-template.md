@@ -43,4 +43,4 @@ The attributes of a verification template are described below:
 
 ## What’s Next?
 
-Learn about the Canary Strategy.  
+Learn about the [Canary Strategy](ocean-cd/getting-started/rollout-entities/canary-strategy).  

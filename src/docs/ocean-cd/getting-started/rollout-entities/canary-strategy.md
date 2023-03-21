@@ -1,4 +1,4 @@
-# Strategy: Canary 
+# Canary Strategy
 
 A canary strategy is a deployment that allows you to roll out releases to a predefined traffic weight.
 
@@ -45,4 +45,4 @@ The attributes of a strategy:
 
 ## What’s Next?
 
-Learn how to roll an update strategy.  
+Learn how to [roll an update strategy](ocean-cd/getting-started/rollout-entities/rolling-update-strategy).  

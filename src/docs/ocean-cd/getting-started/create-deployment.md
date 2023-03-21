@@ -58,4 +58,4 @@ spec:
 
 ## What’s Next?
 
-Learn how to create Ocean CD entities.  
+Learn how to [create Ocean CD entities](ocean-cd/concepts-features/rollout-entities).  
