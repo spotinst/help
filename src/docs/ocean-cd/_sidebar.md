@@ -5,7 +5,7 @@
   - [Getting Started](ocean-cd/getting-started/)
     - [Install Operator](ocean-cd/getting-started/install-operator-using-API-or-helm)
     - [Create Spot Deployments](ocean-cd/getting-started/create-deployment)
-    - [Rollout Entities](ocean-cd/getting-started/rollout-entities)
+    - [Rollout Entities](ocean-cd/getting-started/rollout-entities/)
       - [Verification Provider](ocean-cd/getting-started/rollout-entities/verification-provider)
       - [Verification Template](ocean-cd/getting-started/rollout-entities/verification-template)
       - [Canary Strategy](ocean-cd/getting-started/rollout-entities/canary-strategy)

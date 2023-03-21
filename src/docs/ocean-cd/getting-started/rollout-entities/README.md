@@ -1,4 +1,4 @@
-# Rollout Entities - Draft for Ocean CD
+# Rollout Entities
 
 Ocean CD entities are YAML templates where you can set the rules of how the rollouts will run.  
 
