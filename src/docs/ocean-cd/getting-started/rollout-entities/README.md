@@ -16,4 +16,4 @@ The entities are as follows:
 
 ## What’s Next?
 
-Learn more about the [features in your CD process]((https://docs.spot.io/ocean-cd/concepts-features/).
+Learn more about the [features in your CD process](ocean-cd/concepts-features/).
