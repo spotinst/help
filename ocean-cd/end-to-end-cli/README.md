@@ -59,7 +59,7 @@ When a namespace is created, create the canary and stable services to expose and
 
 _For demo purposes, a traffic manager will not be used._
 
-2. Copy and save the following YAML files. Each YAML is dedicated to one service:
+1. Copy and save the following YAML files. Each YAML is dedicated to one service:
 
 ```yaml
 apiVersion: "v1"
@@ -91,7 +91,7 @@ spec:
      targetPort: 8080
 ```
 
-3. Run the following command in your cluster for each of your services:
+2. Run the following command in your cluster for each of your services:
 
 `kubectl apply -f <Service YAML>`
 

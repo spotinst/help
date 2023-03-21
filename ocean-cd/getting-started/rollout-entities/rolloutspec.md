@@ -51,4 +51,4 @@ The attributes of a rolloutSpec are described below.
 
 ## What's Next?
 
-Learn how to trigger a rollout.
+Learn how to [trigger a rollout](ocean-cd/getting-started/trigger-rollout).

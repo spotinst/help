@@ -29,4 +29,4 @@ The attributes of a verification provider are described below.
 
 ## Whats Next?  
 
-Learn about the verification template.   
+Learn about the [verification template](ocean-cd/getting-started/rollout-entities/verification-template).   
