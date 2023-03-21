@@ -16,8 +16,10 @@ Additional [supported resources](https://github.com/spotinst/spot-oceancd-releas
 
 * A Kubernetes cluster up and running (on AWS, Azure or GCP).
 * A workstation with the Kubernetes cluster context and kubectl installed.
-* Operator Lifecycle Manager (OLM) installed. A tutorial is provided below if necessary.
-* API Token.
+* An existing Spot API Token. If not, you can create one using [this tutorial](administration/api/create-api-token?id=create-an-api-token).
+* Operator Lifecycle Manager (OLM) installed. A tutorial is provided below.
+
+## Install OLM
 
 The purpose of OLM is to extend Kubernetes to provide a declarative way to install, manage, and upgrade operators on a cluster. OLM is required for all installation methods.
 
