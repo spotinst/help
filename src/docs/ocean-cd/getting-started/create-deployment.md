@@ -1,4 +1,4 @@
-# SpotDeployment Creation  
+# Create Spot Deployment
 
 SpotDeployment is the Ocean CD custom resource (CRD) that provides advanced deployment capabilities of workloads in Kubernetes.  
 
@@ -56,6 +56,6 @@ spec:
         - containerPort: 8080
 ```
 
-## What’s Next? 
+## What’s Next?
 
 Learn how to create Ocean CD entities.  

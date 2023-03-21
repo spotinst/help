@@ -1,4 +1,4 @@
-# Provider Reference
+# Verification Providers
 
 Ocean CD supports the configuration of a number of different providers through the creation of the Verification Template entity.
 
