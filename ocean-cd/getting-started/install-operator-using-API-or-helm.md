@@ -41,7 +41,7 @@ You can install the operator using the Spot console.
 
 2. When the Add Cluster window opens, complete the information:   
 
-<img src="/ocean-cd/_media/install-operator.png" width="500"/>
+<img src="/ocean-cd/_media/install-operator.png" />
 
 * **Cluster Identifier**: Your cluster ID must be unique, have up to 30 alphanumeric characters, and not contain spaces. It does not need to be related to the Ocean cluster ID (o-xxxxxx). Ocean CD can run on clusters that are not managed by Ocean.  
 
