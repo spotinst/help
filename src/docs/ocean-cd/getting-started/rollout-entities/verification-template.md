@@ -17,7 +17,6 @@ metrics:
  successCondition: result[0] <= 0.95
  failureCondition: result[0] >= 1.2
  failureLimit: 0
- inconclusiveLimit: 0
  consecutiveErrorLimit: 0
  provider:
    prometheus:
@@ -38,7 +37,6 @@ The attributes of a verification template are described below:
 * Metric.Failure.Limit: The maximum number of times the measurement is allowed to fail before the entire metric is considered failed. The default is 0.  
 * Metric.Consecutive.Error.Limit: The maximum number of times the measurement is allowed to fail in succession before the metric is considered failed. The default is 4.
 * Metric.Initial.Delay: The time it takes to start the metric measurements.
-* Metric.Inconclusive: The maximum number of times the measurement is allowed to measure inconclusive before the entire metric is considered inconclusive. The default is 0. For more information, see Verifications (link to page).
 * Provider: The name of the monitoring tool you chose for the metric. Currently supported: Prometheus, NewRelic, DataDog, Cloudwatch, Web Analysis and Job Analysis. For more information see the providers reference page.
 
 ## What’s Next?
