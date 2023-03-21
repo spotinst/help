@@ -1,4 +1,4 @@
-# Traffic Manager Reference
+# Traffic Managers
 
 Ocean CD enables you to choose from a number of supported traffic managers to configure in the RolloutSpec. This page shows template examples for the traffic managers that Ocean CD supports. For any option you choose, the YAML created is applied in the namespace chosen for the Spot deployment.
 
