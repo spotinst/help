@@ -1,4 +1,4 @@
-# Getting Started- Draft for Ocean CD
+# Getting Started
 
 Ocean CD provides a solution for devops engineers who ask to provide safe automations based on clear metrics and SREs who want to monitor changes to production environments in real time and investigate critical events.  
 
