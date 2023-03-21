@@ -62,9 +62,13 @@ The export from this table provides an amortization report, which breaks down ea
 
 ### Coverage over Time
 
-A line graph that breaks down the story of how reservations, savings plan coverage, and commitments relate to your overall savings. The left chart is the simplest, showing the difference between your actual spend and what could have been your costs for reservable services without a savings strategy. On the right, you see the same data, but with your actual spend explained as the combination of commitment cost and uncovered spend. The coverage calculation considers dollars or your investment used instead of hours, which is different from AWS cost explorer. For actual spend, the calculation only considers what is reservable for a service (e.g., Eco only uses the on-demand purchase option, with the Running Hours usage type groups and the Usage charge type).
+A line graph that breaks down the story of how reservations, savings plan coverage, and commitments relate to your overall savings. The left chart is the simplest, showing the difference between your actual spend and what could have been your costs for reservable services without a savings strategy. On the right, you see the same data, but with your actual spend explained as the combination of commitment cost and uncovered spend. The coverage calculation considers dollars or your investment used instead of hours, which is different from AWS cost explorer. For actual spend, the calculation only considers what is reservable for a service (e.g., Eco only uses the on-demand purchase option, with the Running Hours usage type groups and the Usage charge type). You can use the source filter specific to the Coverage Over Time graph.  
 
-<img src="/eco/_media/view-savings-coverage_overtime.png" />
+* All  
+* Eco  
+* Non-Eco
+
+<img src="/eco/_media/view-savings-coverage_overtime-1.png" />
 
 ### Commitment Usage Distribution Over Time
 
