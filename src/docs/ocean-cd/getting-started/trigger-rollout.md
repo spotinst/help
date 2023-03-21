@@ -1,4 +1,4 @@
-# Trigger a rollout - PreGA Draft for Ocean CD
+# Trigger a Rollout
 
 To trigger your rollout, follow the tutorial below:  
 
@@ -14,4 +14,4 @@ Both actions instantly trigger a rollout, which you can see in the Spot console.
 
 ## What's Next?
 
-View examples of traffic managers and verification providers.  
+View examples of [traffic managers](ocean-cd/getting-started/traffic-manager-reference) and [verification providers](ocean-cd/concepts-features/provider-reference).  
