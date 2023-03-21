@@ -6,4 +6,4 @@ This section provides an explanation as well as a template for each of the traff
 
 ## What’s Next?
 
-View examples of traffic managers.  
+View [examples of traffic managers](ocean-cd/getting-started/traffic-manager-reference).  

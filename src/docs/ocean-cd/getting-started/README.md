@@ -9,4 +9,4 @@ The procedures in this section assist in installing Ocean CD’s operator into o
 
 ## What’s Next?
 
-Learn how to install the operator. 
+Learn how to [install the operator](ocean-cd/getting-started/install-operator-using-API-or-helm).

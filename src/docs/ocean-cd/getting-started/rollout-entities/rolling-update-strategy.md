@@ -1,4 +1,4 @@
-# Strategy: Rolling Update - Draft for Ocean CD  
+# Rolling Update Strategy  
 
 A rolling update strategy is the default Kubernetes deployment that replaces the existing version of pods with a new version, updating pods slowly one by one.
 
@@ -41,4 +41,4 @@ The attributes of a strategy:
 
 ## What's Next?
 
-Learn how Ocean CD manages the rollout of a new SpotDeployment update.
+Learn how Ocean CD manages the [rollout of a new SpotDeployment update](ocean-cd/getting-started/create-deployment).
