@@ -1,4 +1,4 @@
-# Ocean & Ocean CD Integration
+# Ocean and Ocean CD Integration
 
 Ocean and Ocean CD are fully integrated applications on the Spot platform. When you use Ocean, you will see Ocean CD’s Spot deployments, also known as CRDs, in any of the relevant Ocean tabs.
 
