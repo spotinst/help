@@ -1,4 +1,4 @@
-# Verifications
+# Continuous Verifications
 
 You can define the verifications that take place during the deployment process. This feature also enables you to define the type of metrics you want to receive and which monitoring tools to use.  
 

@@ -2157,6 +2157,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/concepts-features/entities"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/ocean-cd/concepts-features/examples/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/concepts-features/examples/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/concepts-features/examples/"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/ocean-cd/concepts-features/horizontal-pod-autoscaler</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
@@ -2213,11 +2220,11 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/get-to-know-ocean-cd/"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/ocean-cd/getting-started/deployment-creation</loc>
+        <loc>https://docs.spot.io/?/ocean-cd/getting-started/create-deployment</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/getting-started/deployment-creation"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/getting-started/deployment-creation"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/getting-started/create-deployment"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/getting-started/create-deployment"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/ocean-cd/getting-started/install-operator-using-API-or-helm</loc>
