@@ -16,7 +16,7 @@ Additional [supported resources](https://github.com/spotinst/spot-oceancd-releas
 
 * A Kubernetes cluster up and running (on AWS, Azure or GCP).
 * A workstation with the Kubernetes cluster context and kubectl installed.
-* Operator Lifecycle Manager (OLM) installed. A tutorial is provided below if necessary. 
+* Operator Lifecycle Manager (OLM) installed. A tutorial is provided below if necessary.
 * API Token.
 
 The purpose of OLM is to extend Kubernetes to provide a declarative way to install, manage, and upgrade operators on a cluster. OLM is required for all installation methods.
@@ -47,7 +47,7 @@ You can install the operator using the Spot console.
 
 Click Download YAML. A YAML file downloads to your computer, and a new row appears in the Clusters list. Then, apply the YAML in your Kubernetes cluster.
 
-<img src="/ocean-cd/_media/getting.png" />
+<img src="/ocean-cd/_media/getting-started-n03.png" />
 
 Once you have downloaded the YAML, the new row will remain with partial information for two minutes. If two minutes have elapsed and the YAML was not applied, the row and the banner will be removed. However, the YAML can still be applied at another time, and the Ocean CD will display the new data accordingly.
 
@@ -117,15 +117,10 @@ To run the relevant YAML, use the following command:
 
 ```
 helm install my-release oceancd/spot-oceancd-operator \
-
   --set token=REDACTED \
-
   --set clusterId=REDACTED \
-
   --namespace mynamespace \
-
   --create-namespace
-
   -f values.yaml
 ```
 
