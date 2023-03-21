@@ -1,51 +1,76 @@
 # Compliance
-For your reference, Spot Security provides information on how compliant each asset is with global security standards. You can assess your coverage of global security standards on Spot.
 
-To view your compliance with global security standards, go to Spot Security in the left menu of the console and click Compliance.
+Spot Security provides information on how compliant your organization is with global security standards.  
+
+To view your compliance with global security standards, go to Spot Security in the left menu of the console and click Compliance. .
 
 ## Security Compliance
 
-You can select different ways to view the compliance of your assets under two tabs:
-* Total Compliance: Provides information of how each global security standard that you chose complies with your assets.
-* CIS Benchmark: Provides compliance information regarding a major standards organization.
+You can review the compliance of your assets under two tabs:  
+* Total Compliance: Provides information on how your organization complies with global security standards.
+* CIS Benchmark: Provides compliance information against CIS recommended standards.
 
 ## Favorite Standards Chart
 
-This line graph shows the compliance of the assets in your cloud system with the selected global security standards at the bottom of the page. You can choose the time frames of two weeks, one month, or three months. You can also choose to see the compliance of assets on a specific date next to Snapback.
+You can select a compliance from the provided list as a favorite.   
 
-You can export the data of the compliance to an Excel sheet.
+The line graph shows the compliance of the assets in your cloud infrastructure with the global security standards marked as favorite. You can select the time frames of two weeks, one month, or three months. You can also view the compliance of assets on a specific date using Snapback. Click Export to export the summary of the compliance to an Excel sheet.
+
+<img src="/spot-security/_media/compliance-1.png" />
 
 Hovering over a specific line that represents a global security standard shows the percentage of the compliance of the global security standard.
 
-<img src="/spot-security/_media/spot-security-compliance4.png" />
+## CIS Benchmark
 
-## Compliance Standards
+<img src="/spot-security/_media/compliance-2.png" />
 
-This area shows the global standards that are tracked for an asset and are mapped to the security rules that were defined on the [Risk Analysis](spot-security/features/analyze-risks) page.
+The CIS benchmark section shows the compliance of your cloud infrastructure with CIS standards. Move the View toggle to view Level 1 and Level 2 to check the compliance with each level. You can view the detailed controls with:
 
-<img src="/spot-security/_media/spot-security-compliance2.png" />
+1. Control ID
+2. Control Description
+3. Non-Conformant Assets
+4. Compliance Status
+5. Category
+6. Scoring
 
-By default the toggle “Show Favorites Only” is turned on. To see all of the global compliance standards, turn the toggle off. You can mark specific compliance standards as favorites by clicking the pin in the top right corner of each Compliance Standard.
+Each control is mapped to the security rules that were defined in the [Analyze Risk](spot-security/features/analyze-risks/) page. You can also view the compliance of assets on a specific date using Snapback. Click Excel to export the details of the compliance to an Excel sheet.
 
-The graph shows only the selected favorite standards.
+## Compliance Standards 
+
+This section displays the global standards that are tracked for an asset and they are mapped to the security rules that are on the Risk Analysis page.
+
+<img src="/spot-security/_media/compliance-4.png" />
+
+The toggle Show Favorites Only is turned on by default. To see all of the global compliance standards, turn the toggle off. Click the pin in the top right corner of each compliance standard to mark specific standards as favorites. The percentage in the compliance bar shows how compliant your cloud infrastructure is to the standard.
 
 ### Compliance Standard Details
 
-Clicking each standard will take you to a new standard compliance overview page. The percentage under the compliance bar shows how compliant the asset is to the standard. To see the security rules click on Control ID or Control Description.
+In the Compliance Standards section, click a standard to view the standard compliance overview page.  
 
-<img src="/spot-security/_media/spot-security-compliance3.png" />
-
-The overview page lists the controls that the compliance defines. The security rules are mapped into each control and you can see the:
+The overview page lists the controls that the compliance defines. The security rules are mapped into each control and you can find the following information:
 * ID
 * Control Description
 * Non-Comformant Assets
 * Compliance Status
 
-To see the status of the assets and the rules associated with them, click a Control ID.
+<img src="/spot-security/_media/compliance-3.png" />
 
-<img src="/spot-security/_media/spot-security-compliance5.png" />
+You can also view the compliance of assets on a specific date using Snapback. Click Export to view the details of the compliance to an Excel sheet.
 
-To remediate an asset, click a Control ID, a drop down menu opens and you can see the remediation. The security remediation can be done from the [Compliance](spot-security/features/compliance) page and any changes that were made will appear in the [Risk Analysis](spot-security/features/analyze-risks/) page as well.
+To see the rules associated with compliance controls, click Control ID or Control Descriptions. You can click on the filter icon and filter the rules by severity level (low, medium or high), remediation effort (advanced or easy) and asset type (S3, Virtual Machine, etc.).  
+
+<img src="/spot-security/_media/compliance-5.png" />
+
+### Remediate Failed Assets
+
+You can remediate failed assets by completing the following steps:  
+
+1. Click Failed Assets to view the list of assets that are at risk due to a specific security rule failing on it.  
+2. Click [Remediation](spot-security/features/analyze-risks/remediate) for a step by step guide on how to remediate the risk.
+
+<img src="/spot-security/_media/compliance-6.png" />
+
+You can also accept the risk by clicking Suppress. This removes the risk from your list. You can suppress one or multiple rules by selecting them and clicking Suppress in the Actions Menu. You can suppress a security rule completely for all assets. To learn more about security rules see the Analyze Risk Page.
 
 ## What’s Next?
 Learn more about Spot Security [features](spot-security/features/).
