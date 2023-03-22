@@ -79,9 +79,13 @@ For self-signed authentication, you should inject its crt file to `etc/chef/trus
 While creating your Elastigroup, on the Compute screen, you will find a '3rd Party Integrations' section. Check the Chef integration and enter the following data:
 
 `API Server` – Public DNS record or Public IP (e.g., ec2-52-206-204-15.compute-1.amazonaws.com or 52.206.204.1)
+
 `Organization` – Organization name (e.g. myOrg)
+
 `Version` – The Chef Version in use. We need this information to send the right API call
+
 `User` – Enter the name of the user you have created in step #2
+
 `Pem Key` – Please enter the new user key
 
 That's it. Your Chef integration is all set.
