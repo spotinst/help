@@ -2,7 +2,7 @@
 
 Once Eco Azure has been enabled for your organization and you have chosen your reservation and savings plan strategy, your Eco Azure dashboard will display a more complete view of savings.
 
-To view the Eco Azure dashboard in the console, go to Eco on the left side and click Dashboard.
+To view the Eco Azure dashboard in the console, go to Eco on the left menu and click Dashboard.
 
 ## Filters
 
@@ -30,7 +30,7 @@ Eco Azure provides summary graphs and charts to give you wide visibility of your
 
 ### Savings over Time
 
-A bar graph showing the amount of savings each month broken down by type of savings. This graph will allow you to visualize savings from reservations and savings plans. You can use the filters at the top of the page and source filters specific to each graph.
+A bar graph showing the amount of savings each month broken down by type of savings. This graph displays the savings from reservations and savings plans. You can use the filters at the top of the page and source filters specific to each graph.
 
 - All
 - Eco
@@ -90,7 +90,7 @@ You can filter the data displayed according to several criteria available.
 
 1. Place your cursor in the filter and click a parameter.
 
-<img src="/eco/_media/azure-view-your-savings-07.png" />
+<img src="/eco/_media/azure-view-your-savings-07.png" width="236" height="147" />
 
 2. Choose the specific value(s) to be displayed by typing them or selecting from the list.
 
@@ -106,7 +106,7 @@ You can customize the columns that appear in the table. The following column hea
 * Reserved hours: Number of total hours the reserved instance has for the dates selected.
 * Utilization: Utilization percentage of the reserved instance for the dates selected.
 
-#### Export Data 
+#### Export Data
 
 To export the Reservation Details report to a CSV file, click Export above the table.
 
@@ -123,7 +123,6 @@ A filterable table and corresponding chart which displays your commitments in a 
 * Equivalent OD Price: What the on-demand price would have been during that time period.
 * Generated Savings: How much you saved due to using commitments' discounted rates instead of the full on-demand rates. Calculation: On-demand equivalent minus commitments minus uncovered spend. Not necessarily the same as net savings.
 * $ Used: The total equivalent cost within the time range multiplied by the utilization.
-
   - Example 1: If the time range covered the entire term of the reservation, it was 100% utilized, and the total equivalent cost was $1000, the result would be $1000.
   - Example 2: If the time range was half the history of the same reservation, it would be $500.
   - Example 3: If it was only 50% utilized during that period, it would be $250.
