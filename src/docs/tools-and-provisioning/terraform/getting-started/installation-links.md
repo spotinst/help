@@ -20,7 +20,7 @@
 
 ## Terraform Provider Binaries for v0.10-v0.11
 
-v0.10.6, v0.10.7, v0.10.8, v0.11.0, v0.11.1, v0.11.3, v0.11.4
+`v0.10.6, v0.10.7, v0.10.8, v0.11.0, v0.11.1, v0.11.3, v0.11.4`
 
 [linux_amd64](https://s3.amazonaws.com/spotinst-public/integrations/terraform/v0.11.4/providers/v2/linux_amd64/terraform-provider-spotinst)
 
@@ -32,7 +32,7 @@ v0.10.6, v0.10.7, v0.10.8, v0.11.0, v0.11.1, v0.11.3, v0.11.4
 
 > **Tip**: The schema between v0.8-v0.9 and latest provider version contains breaking changes. If you are new to Spot Terraform provider, we encourage you to use the latest version.
 
-v0.8.8, v0.9.2, v0.9.5, v0.9.8, v0.9.11
+`v0.8.8, v0.9.2, v0.9.5, v0.9.8, v0.9.11`
 
 [linux_amd64](http://spotinst-public.s3.amazonaws.com/integrations/terraform/v0.9.11/providers/v1/linux_amd64/terraform-provider-spotinst)
 
