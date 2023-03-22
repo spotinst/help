@@ -1,6 +1,6 @@
 # Upgrade to Terraform v0.12
 
-Introduction
+## Introduction
 This article discusses the latest Terraform v0.12 update and its effects on Spot users who are using the official Spot provider from HashiCorp.
 
 ## The Update
@@ -21,7 +21,7 @@ Once you have upgraded to TF v0.12, you will need to [Update your Configuration]
 
 To use the command you need to:
 
-- Run terraform 0.12upgrade within a fully-initialized working directory that contains the TF files.
+- Run `terraform 0.12upgrade` within a fully-initialized working directory that contains the TF files.
 - The command will prompt for confirmation. Confirm the changes and the `.tf` and `.tfvars` files in your current working directory will be rewritten.
 
 - The output should appear as shown below:
