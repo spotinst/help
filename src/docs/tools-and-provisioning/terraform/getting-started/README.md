@@ -2,7 +2,7 @@
 
 Terraform is a tool for building, changing, and versioning infrastructure safely and efficiently. Terraform can manage existing and popular service providers as well as custom, in-house solutions. Terraform supports many cloud providers and platforms including Spot.
 
-It is really easy to get started to intengrate Spot by NetApp with Terraform.
+It is really easy to get started to integrate Spot by NetApp with Terraform.
 
 For more information, reference our official provider [documentation](https://registry.terraform.io/providers/spotinst/spotinst/latest/docs).
 
