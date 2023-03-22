@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Using [Gitlab Runner's autoscaling](https://docs.gitlab.com/runner/executors/docker_machine.html) feature you can now configure Docker Machine to provision Spot instances on Elastigroup. This gives both the cost savings of Spot instances and the 100% availability that Elastigroup provides. All while retaining full control over your CI/CD with Gitlab Runners.
+Using [Gitlab Runner's autoscaling](https://docs.gitlab.com/runner/executors/docker_machine.html) feature you can now configure Docker-Machine to provision Spot instances on Elastigroup. This gives both the cost savings of Spot instances and the 100% availability that Elastigroup provides while retaining full control over your CI/CD with Gitlab Runners.
 
 ## What's Covered
 
@@ -10,22 +10,22 @@ The following tutorial covers how to start running Gitlab Runner's autoscaling f
 
 ## Prerequisites
 
-- A verified Spot Elastigroup account. For more information on getting started with Spot's Elastigroup head [here](https://spot.io/products/elastigroup/).
+- A verified Spot Elastigroup account. For more information on getting started with Spot's Elastigroup, click [here](https://spot.io/products/elastigroup/).
 
 ## Procedure
 
 1. [Create an Elastigroup](elastigroup/tutorials/elastigroup-tasks/create-an-elastigroup-from-scratch) in your account with the following parameters:
-2. [Docker-Machine Supported OS AMI](https://docs.docker.com/machine/drivers/os-base/)
-3. Create Security Group with inbound SSH (22) and Docker-Machine (2376) ports open
-4. Install [Git Runner on Linux machine](https://docs.gitlab.com/runner/install/index.html)
-5. On the same machine, install [Docker-Machine](https://docs.docker.com/machine/install-machine/).
-6. Install Spot driver on Docker-Machine. The driver can be found [here](https://github.com/spotinst/docker-machine-driver-spotinst/releases).
-7. [Register your Runner](https://docs.gitlab.com/runner/register/index.html#gnu-linux).
-8. [Open the Gitlab Runner configuration file](https://docs.gitlab.com/runner/configuration/advanced-configuration.html)
+   - [Docker-Machine Supported OS AMI](https://docs.docker.com/machine/drivers/os-base/)
+   - Create Security Group with inbound SSH (22) and Docker-Machine (2376) ports open
+2. Install [Git Runner on Linux machine](https://docs.gitlab.com/runner/install/index.html)
+3. On the same machine, install [Docker-Machine](https://docs.docker.com/machine/install-machine/).
+4. Install Spot driver on Docker-Machine. The driver can be found [here](https://github.com/spotinst/docker-machine-driver-spotinst/releases).
+5. [Register your Runner](https://docs.gitlab.com/runner/register/index.html#gnu-linux).
+6. [Open the Gitlab Runner configuration file](https://docs.gitlab.com/runner/configuration/advanced-configuration.html)
 
    `:/etc/gitlab-runner/config.toml`
 
-9. Add configuration of Spot provider under `[runners.machine]`:
+7. Add configuration of Spot provider under `[runners.machine]`:
 
 ```
  [runners.machine]
