@@ -19,10 +19,10 @@ You can set the following filters:
 
 ## Summary Line
 
-The Overview dashboard includes a summary line which displays the following information:
+The Overview dashboard includes a summary line that displays the following information:
 
-- Current Monthly Commitment: The dollar amount of monthly commitment for reserved instance coverage
-- Current Monthly Waste: The dollar amount of monthly waste for reserved instance coverage
+- Current Monthly Commitment: The dollar amount of monthly commitment for reserved instance coverage.
+- Current Monthly Waste: The dollar amount of monthly waste for reserved instance coverage.
 
 ## Graphs and Charts
 
@@ -38,7 +38,7 @@ A bar graph showing the amount of savings each month broken down by type of savi
 
 <img src="/eco/_media/azure-view-your-savings.png" />
 
-## Reservation Order Details
+### Reservation Order Details
 
 Below the savings over time chart, you can see a table with detailed information about your reserved instances, including your total generated savings at the bottom of the table.
 
@@ -56,7 +56,7 @@ You can filter the data displayed according to several criteria available.
 
 <img src="/eco/_media/azure-view-your-savings-05.png" width="230" height="109" />
 
-### Display Columns
+#### Display Columns
 
 You can customize the columns that appear in the table. The following column headings are available:
 
@@ -74,15 +74,41 @@ You can customize the columns that appear in the table. The following column hea
 - Amount: Cost of the reserved instance.
 - Source: Eco or Non-Eco.
 
-### Export Data
+#### Export Data
 
 To export the Reservation Details report to a CSV file, click Export above the table.
 
-## Reserved Order Usage
+### Reserved Order Usage
 
 Below the reservation order details, you can see a table with detailed information about your reserved instances, including your total generated savings at the bottom of the table.
 
 <img src="/eco/_media/azure-view-your-savings-06.png" />
+
+#### Filter Data
+
+You can filter the data displayed according to several criteria available.
+
+1. Place your cursor in the filter and click a parameter.
+
+<img src="/eco/_media/azure-view-your-savings-07.png" />
+
+2. Choose the specific value(s) to be displayed by typing them or selecting from the list.
+
+<img src="/eco/_media/azure-view-your-savings-08.png" />
+
+#### Display Columns
+
+You can customize the columns that appear in the table. The following column headings are available:
+
+* Reservation order ID: Azure reservation order identifier.
+* Reservation ID: The identifier of the reserved instance.
+* Used hours: Number of reserved hours used for the specific reserved instance.
+* Reserved hours: Number of total hours the reserved instance has for the dates selected.
+* Utilization: Utilization percentage of the reserved instance for the dates selected.
+
+#### Export Data 
+
+To export the Reservation Details report to a CSV file, click Export above the table.
 
 ### Commitment Usage Distribution Over Time
 
@@ -100,7 +126,7 @@ A filterable table and corresponding chart which displays your commitments in a 
 
   - Example 1: If the time range covered the entire term of the reservation, it was 100% utilized, and the total equivalent cost was $1000, the result would be $1000.
   - Example 2: If the time range was half the history of the same reservation, it would be $500.
-  - Example 3: If it was only 50% utilized during that period, it would be $250. 
+  - Example 3: If it was only 50% utilized during that period, it would be $250.
   - Example 4: If the term of the RI is three years and only one year of the period has passed since it was purchased, it would be possible to show only 33.3% of the total equivalent cost in this field, at maximum.
 * % Used: Utilization within that time period.
 
