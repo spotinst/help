@@ -4,9 +4,9 @@ This tutorial describes how to install the Ocean Network Client as a DaemonSet i
 
 There are several options to install the Ocean Network Client listed below.  
 
-* [Install or Update with Helm](ocean/tutorials/install-network-client?id=install-the-ocean-network-client-with-helm)
-* [Install or Update with Kubectl](ocean/tutorials/install-network-client?id=install-the-ocean-network-client-with-kubectl)
-* [Install or Update with Terraform](ocean/tutorials/install-network-client?id=install-ocean-network-client-with-terraform)
+* [Install or Update with Helm](ocean/tutorials/install-network-client?id=install-or-update-the-ocean-network-client-with-helm)
+* [Install or Update with Kubectl](ocean/tutorials/install-network-client?id=install-or-update-the-ocean-network-client-with-kubectl)
+* [Install or Update with Terraform](ocean/tutorials/install-network-client?id=install-or-update-the-ocean-network-client-with-terraform)
 * [Install with Controller Init Script](ocean/tutorials/install-network-client?id=install-the-ocean-network-client-with-controller-init-script)
 
 After installing the Network Client, it may take 1-2 hours for the Network Costs column to appear in the Spot console or for the [oceanK8sClusterAggregatedDetailedCosts](https://docs.spot.io/api/#tag/Ocean-AWS/operation/oceanK8sClusterAggregatedDetailedCosts) API to show the network costs breakdown.  
@@ -39,7 +39,7 @@ The following are some considerations when installing the Ocean network client:
 * Ocean network client runs as a DaemonSet on every node in the cluster. In most cases the network client requires a minimal amount of compute (CPU and memory) overhead. Actual resources needed depend on cluster size, number of flows and data transfer interval (default 60s).
   - Resource requests: 10m vCPU (1% CPU) and ~100MiB  
   - Resource limits: 300m vCPU and ~500MiB  
-* The network client uses a lightweight eBPF program based on TC BPF to capture traffic flow data (IP addresses, protocols TCP/UDP ports, transmitted TX and received RX packet and byte counts) in and out of the pods with minimum impact to existing workloads.   
+* The network client uses a lightweight [eBPF](https://lwn.net/Articles/740157/) program based on [TC BPF](https://man7.org/linux/man-pages/man8/tc-bpf.8.html) to capture traffic flow data (IP addresses, protocols TCP/UDP ports, transmitted TX and received RX packet and byte counts) in and out of the pods with minimum impact to existing workloads.   
 * Flow data on each node is aggregated, compressed before it is sent to the Ocean backend cluster. This could result in some minimal data transfer cost overhead, typically <$10 per month per cluster. Actual data transfer costs depend on cloud provider pricing, number of nodes, number of flows and data transfer interval.  
 
 ## Install or Update the Ocean Network Client with Helm  
@@ -93,7 +93,7 @@ To install the Ocean network client or upgrade Ocean network client to latest ve
 `kubectl apply -f https://spotinst-public.s3.amazonaws.com/integrations/kubernetes/network-client/templates/network-client.yaml`
 
 To change or update the Ocean network client version edit manifest `network-client.yaml`
-image: public.ecr.aws/spotinst/spot-network-client:<VERSION>  
+image: public.ecr.aws/spotinst/spot-network-client: <VERSION>  
 
 ```YAML
 serviceAccountName: ocean-network-client
