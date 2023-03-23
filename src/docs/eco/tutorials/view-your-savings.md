@@ -101,6 +101,8 @@ Below the overview graphs and pie charts, you can view detailed information abou
 
 <img src="/eco/_media/view-savings-commitment_details.png" />
 
+When a reservation expires, Eco first makes sure a renewal is the right course of action. If so, expired coverage will be replaced with the best commitment to provide a blend of flexibility and savings. When an expiration is renewed a new lease ID will be created. Depending on the situation, an expired reservation may be renewed under different parameters, so do not be concerned if you do not see an exact match.
+
 ### Filter Data
 
 You can filter the data displayed according to several criteria available.
