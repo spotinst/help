@@ -7,7 +7,7 @@ There are several options to install the Ocean Network Client listed below.
 * [Install or Update with Helm](ocean/tutorials/install-network-client?id=install-the-ocean-network-client-with-helm)
 * [Install or Update with Kubectl](ocean/tutorials/install-network-client?id=install-the-ocean-network-client-with-kubectl)
 * [Install or Update with Terraform](ocean/tutorials/install-network-client?id=install-ocean-network-client-with-terraform)
-* [Install with Controller Init Script](link)
+* [Install with Controller Init Script](ocean/tutorials/install-network-client?id=install-the-ocean-network-client-with-controller-init-script)
 
 After installing the Network Client, it may take 1-2 hours for the Network Costs column to appear in the Spot console or for the [oceanK8sClusterAggregatedDetailedCosts](https://docs.spot.io/api/#tag/Ocean-AWS/operation/oceanK8sClusterAggregatedDetailedCosts) API to show the network costs breakdown.  
 
