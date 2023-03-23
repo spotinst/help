@@ -17,7 +17,7 @@ For the cost analysis, Ocean calculates both compute and storage costs broken do
 In order to provide a cost breakdown for the cluster, Ocean performs the following process:
 
 1. Ocean continually (every hour) aggregates the resource allocation (CPU and memory) for each workload from the workload specification as collected from the container orchestrator.
-2. Ocean calculates the overall managed infrastructure costs across spot, reserved, and on-demand instances.
+2. Ocean calculates the overall managed infrastructure costs across Spot, reserved, and on-demand instances.
 3. Based on the infrastructure costs and the workload information, Ocean calculates the costs of the individual workloads according to their weights.
 
 For example, if a workload requests 20% of the total cluster allocatable resources, and the cluster cost was $100, then that workload's cost is calculated as $20.
@@ -113,7 +113,7 @@ The different types of cloud provider data transfer costs which can be associate
 
 #### High-level Architecture for Network Costs
 
-The Ocean network client is installed in the Kubernetes cluster and runs as a Kubernetes DeamonSet on each node in the cluster. The Ocean network client includes an exporter and an eBPF packet counter. They collect network flow metrics from pods on the node and send aggregated flow data at regular intervals to the Ocean backend cluster (AWS) for network cost calculation and further aggregation which can be up to 90 days.  
+The Ocean network client is installed in the Kubernetes cluster and runs as a Kubernetes DeamonSet on each node in the cluster. The Ocean network client includes an exporter and an eBPF packet counter. They collect network flow metrics from pods on the node and send aggregated flow data at regular intervals to the Ocean backend cluster (AWS) for network cost calculation and further aggregation which can be up to 90 days.   
 
 <img src="/ocean/_media/network-costs-3.png" />
 
