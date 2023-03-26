@@ -17,12 +17,12 @@ The system supports the following identity providers:
 
 1. Login to the Spot account as an administrator: [Spot Console](https://console.spotinst.com/#/dashboard)
 2. Click on the user icon and choose Settings.
-3. Click on the `SECURITY` tab at the top and select Identity Providers.
+3. Click on the `SECURITY` tab on the left sidebar and select Identity Providers.
 4. Complete the required information in the form and save.
 
 ## Identity Provider Information
 
-<img src="/administration/_media/sss-access-control-01.png" />
+##add new image? <img src="/administration/_media/sss-access-control-01.png" />
 
 **Relay state** – The Organization ID – Used as the Relay State configuration for the identity provider (Used in IDP Initiated SSO)
 
@@ -34,7 +34,7 @@ The system supports the following identity providers:
 
 **User Allowed Accounts** – The accounts which the user will have access to (Default Account or All Accounts)
 
-For further information, see Organizations and Accounts.
+For further information, see [Organizations and Accounts](https://docs.spot.io/administration/organizations/).
 
 ## Organization and Role Selection
 
