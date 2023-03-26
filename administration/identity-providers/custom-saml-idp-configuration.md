@@ -11,8 +11,8 @@ Configuring an IDP to authenticate using SAML requires the following information
 - Single Sign-On URL (ACS URL): https://console.spotinst.com/auth/saml
 - Recipient URL: https://console.spotinst.com/auth/saml
 - RelayState (Used in IDP Initiated SSO):
-  1. Login to your Spot account as an Admin.Click the user icon on the top right side of the screen and click Settings.
-  2. Click the Security tab on the top and then select Identity Providers.Make a copy of the Relay State value.
+  1. Login to your Spot account as an Admin. Click the user icon on the top right side of the screen and click Settings.
+  2. Click the Security tab on the top and then select Identity Providers. Make a copy of the Relay State value.
 
 The Relay State should be used while setting up the IDP. Google users should enter this value (as is) to the `start url` field under Service Provider Details.
 
