@@ -22,7 +22,7 @@ The system supports the following identity providers:
 
 ## Identity Provider Information
 
-##add new image? <img src="/administration/_media/sss-access-control-01.png" />
+<img src="/administration/_media/sss-access-control-01a.png" />
 
 **Relay state** – The Organization ID – Used as the Relay State configuration for the identity provider (Used in IDP Initiated SSO)
 
