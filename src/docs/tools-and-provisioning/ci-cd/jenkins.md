@@ -67,7 +67,7 @@ chmod 644 jenkinsSSH.pub
 
 Create an Elastigroup with the desired instance types, region and other configurations for the Jenkins agents.
 
-The configuration of your Elastigroup startup-script (`Compute` &rarr; `Additional Configurations` &rarr; `User Data`) will depened on the Host-Key Verification Strategy that you will use in Jenkins for establishing trust between your Jenkins controller and the agents. You can read more about host-key verification strategies [here](https://support.cloudbees.com/hc/en-us/articles/115000073552-Host-Key-Verification-for-SSH-Agents) but this guide assumes that `Manually trusted key Verification Strategy` is used. The following section will detail where this setting is found in the Jenkins Clouds section.
+The configuration of your Elastigroup startup-script (`Compute` &rarr; `Additional Configurations` &rarr; `User Data`) will depend on the Host-Key Verification Strategy that you will use in Jenkins for establishing trust between your Jenkins controller and the agents. You can read more about host-key verification strategies [here](https://support.cloudbees.com/hc/en-us/articles/115000073552-Host-Key-Verification-for-SSH-Agents) but this guide assumes that `Manually trusted key Verification Strategy` is used. The following section will detail where this setting is found in the Jenkins Clouds section.
 
 The following startup-script is for EC2 Amazon Linux instances, but you can easily adjust it for Azure Spot VMs and GCP:
 
