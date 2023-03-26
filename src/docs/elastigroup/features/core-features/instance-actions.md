@@ -16,7 +16,7 @@ Decrement Group's Capacity – Change the group Instance count Target reducing i
 
 ## Lock an Instance
 
-You can Lock specific instances to prevent them from being scaled down during autoscaling. Simply select the instance you want to lock and use Actions-> Lock:
+You can Lock specific instances to prevent them from being scaled down during autoscaling. The Fix Strategy process is prevented as well. Simply select the instance you want to lock and use Actions-> Lock:
 
 <img src="/elastigroup/_media/corefeatures-instance-actions-03.png" />
 
