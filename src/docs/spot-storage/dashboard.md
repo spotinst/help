@@ -10,7 +10,7 @@ Storage highlights for this account are displayed at the top of the Dashboard an
 
 <img src="/spot-storage/_media/dashboard-n001a.png" />
 
-- Estimated Mon. Savings: The amount you could have in the last month if all of the recommendations on this page had been enacted. The month is calculated as the last 30 days from the date that appears in the upper right by Last Update.
+- Estimated Mon. Savings: The amount you could have saved in the last month if all of the recommendations on this page had been enacted. The month is calculated as the last 30 days from the date that appears in the upper right by Last Update.
 - Savings Percentage: A comparison of your theoretical storage cost over the last month with all recommendations taken vs. your actual storage cost.
 - EBS Volumes: Total number of EBS volumes in your cloud.
 - Allocated Size: Total size of storage you have in your cloud.
@@ -38,7 +38,7 @@ In addition, Spot displays that amount you can save over the next month by delet
 
 <img src="/spot-storage/_media/dashboard-n003.png" width="400" />
 
-1. Click Remove Volumes (or anywhere on the card) to see  the list of unattached volumes recommended for removal. See below for more information about the Unattached Volumes table that appears.
+1. Click Remove Volumes (or anywhere on the card) to see the list of unattached volumes recommended for removal. See below for more information about the Unattached Volumes table that appears.
 
 <img src="/spot-storage/_media/dashboard-n004.png" />
 
@@ -83,7 +83,7 @@ This table shows the full list of unoptimized EBS volumes in your cloud recommen
 <img src="/spot-storage/_media/dashboard-n0082.png" />
 
 - Click the Volume ID to see more detailed information about a volume. This will take you to the detailed Volume page in the AWS console.
-- Click an instance ID to see more details about an instance attached to the volume. This also takes you to a page in the AWS console.
+- Click an Instance ID to see more details about the instance attached to the volume. This also takes you to a page in the AWS console.
 - Click Download to CSV to download the list of volumes. This will download the full list of volumes recommended to a comma separated list in a text file.
 
 ### Potential Savings by Region
