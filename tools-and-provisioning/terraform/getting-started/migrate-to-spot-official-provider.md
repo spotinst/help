@@ -52,7 +52,7 @@ The Provider can also be added as described [here](tools-and-provisioning/terraf
 
 ## Step 2: Migrate Your Current Resource
 
-1. Open the terminal and run `terraform initin` order to download the official Spot provider to the same folder from the previous step.
+1. Open the terminal and run `terraform init` in order to download the official Spot provider to the same folder from the previous step.
 2. Execute the following command:
 
 ```
@@ -78,12 +78,11 @@ These changes will be addressed in the next step.
 
 1. Migrate the previous tf.file to your empty `spotinst_elastigroup_aws` resource (created as part of step 1) and convert its schema to be aligned with the new provider.
    You can use our [special post](https://spot.io/news/2018-08-21/terrafrom-elastigroup-configuration-review/) on how to view ElastiGroup configuration as Terraform.  
-   More examples provided within the following links:
+   More examples provided here:
    https://www.terraform.io/docs/providers/spotinst/r/elastigroup_aws.html
-   https://api.spotinst.com/integration-docs/terraform/resources/terraform-v-2/elastigroup/
 
-2. Occasionally perform `terraform plan` to verify which fields need to modify on the schema without actually changing the group via the Spot API.
+2. Occasionally perform `terraform plan` to verify which fields need to be modified on the schema without actually changing the group via the Spot API.
 
 > **Note**: Do not run `terraform apply` until you fully migrate the Terraform schema to the new provider.
 
-3. Perform terraform applyto successfully apply your changes.
+3. Perform `terraform apply` to successfully apply your changes.
