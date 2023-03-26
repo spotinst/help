@@ -67,7 +67,7 @@ Active Directory Federation Services (ADFS) is one of the leading Identity Provi
 
 7. Click BROWSE, select your metadata file, and click SAVE.
 
-## Step 3: Configure IDP Initiated SSP
+## Step 3: Configure IDP Initiated SSO
 
 To configure IDP Initiated SSO, additional settings must be configured as follows:
 
