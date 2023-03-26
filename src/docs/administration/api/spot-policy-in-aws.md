@@ -43,8 +43,6 @@ For additional information, see: [Update the Spot Policy](elastigroup/tutorials/
         "ec2:DeregisterImage",
         "ec2:DeleteSnapshot",
         "ec2:DeleteVolume",
-        "ec2:DetachVolume",
-        "ec2:ModifyVolume",
         "ec2:ModifyReservedInstances",
         "ec2:CreateReservedInstancesListing",
         "ec2:CancelReservedInstancesListing",
@@ -256,10 +254,7 @@ For additional information, see: [Update the Spot Policy](elastigroup/tutorials/
     {
       "Sid": "ElasticFileSystem",
       "Action": [
-        "elasticfilesystem:DescribeFileSystems",
-        "elasticfilesystem:DeleteFileSystem",
-        "elasticfilesystem:DescribeMountTargets",
-        "elasticfilesystem:DeleteMountTarget"
+        "elasticfilesystem:DescribeFileSystems"
       ],
       "Effect": "Allow",
       "Resource": ["*"]
@@ -279,6 +274,22 @@ For additional information, see: [Update the Spot Policy](elastigroup/tutorials/
     {
       "Sid": "Lambda",
       "Action": ["lambda:ListFunctions"],
+      "Effect": "Allow",
+      "Resource": ["*"]
+    },
+    {
+      "Sid": "GeneralSpotStorageAccess",
+      "Action": [
+        "ec2:ModifyVolume",
+        "ec2:DetachVolume",
+        "ec2:DescribeVolumes",
+        "ec2:DescribeVolumesModifications",
+        "ec2:DescribeSnapshots",
+        "elasticfilesystem:DeleteFileSystem",
+        "elasticfilesystem:DescribeMountTargets",
+        "elasticfilesystem:DeleteMountTarget",
+        "fsx:DescribeFileSystems"
+      ],
       "Effect": "Allow",
       "Resource": ["*"]
     }
