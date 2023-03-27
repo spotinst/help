@@ -40,7 +40,6 @@ Valid label values are:
 - `nvidia-tesla-t4g`
 - `nvidia-tesla-a10`
 
-
 > **Note**: Avoid adding Spot labels under the virtual node group (launch specification) node labels section. These labels should be added in your pod configuration only.
 
 ## Examples
@@ -89,7 +88,7 @@ metadata:
 spec:
   containers:
     - name: with-node-selector
-      image: k8s.gcr.io/pause:2.0
+      image: registry.k8s.io/pause:2.0
       imagePullPolicy: IfNotPresent
   nodeSelector:
     spotinst.io/node-lifecycle: od
@@ -114,7 +113,7 @@ spec:
                   - od
   containers:
     - name: with-node-affinity
-      image: k8s.gcr.io/pause:2.0
+      image: registry.k8s.io/pause:2.0
 ```
 
 ## What’s next?
