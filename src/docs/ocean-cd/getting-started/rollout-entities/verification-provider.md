@@ -10,10 +10,10 @@ The Verification Provider is reusable and can be used and maintained over multip
 kind: verificationProvider
 name: My-verification-provider
 clusterIds:
-- cluster-name-1
-- cluster-name-2
+  - cluster-name-1
+  - cluster-name-2
 prometheus:
- address: http://<svc name>.<ns name>.svc.cluster.local:<portnumber>
+  address: http://<svc name>.<ns name>.svc.cluster.local:<portnumber>
 ```
 
 ### Attributes
