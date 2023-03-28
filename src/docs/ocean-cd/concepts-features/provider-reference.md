@@ -26,23 +26,21 @@ The Prometheus query in the verification template enables you to receive targete
 This template enables you to calculate the sum of the container CPU usage per seconds found in the demo namespace.
 
 ```yaml
-kind: "verificationTemplate"
-name: "prometheus"
+kind: verificationTemplate
+name: prometheus
 args:
-- name: "metric-name"
+  - name: metric-name
 metrics:
-- name: "cpu-usage"
- interval: "5m"
- initialDelay: "1m"
- count: 10
- successCondition: "result[0] <= 0.95"
- failureCondition: "result[0] >= 1.2"
- failureLimit: 0
- inconclusiveLimit: 0
- consecutiveErrorLimit: 0
- provider:
-   prometheus:
-     query: "sum(container_cpu_usage_seconds_total{namespace=\"demo\"})"
+  - name: cpu-usage
+    interval: 5m
+    initialDelay: 1m
+    count: 10
+    successCondition: result[0] <= 0.95
+    failureLimit: 0
+    consecutiveErrorLimit: 0
+    provider:
+       prometheus:
+          query: sum(container_cpu_usage_seconds_total{namespace=\"demo\", endpoint=\"{{args.metric-name}}\"})
 ```
 
 ## New Relic
