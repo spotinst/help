@@ -3,7 +3,8 @@
 ## Changelog
 
 - support multi-platform `linux/amd64` and `linux/arm64`
-- available on public ecr and gcr registries:
+- available on public acr, ecr and gcr registries:
+  - `oceanspark.azurecr.io/spark`
   - https://gallery.ecr.aws/ocean-spark/spark
   - https://gcr.io/ocean-spark/spark
 
