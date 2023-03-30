@@ -55,23 +55,18 @@ Apply the Reservation Reader Role to the User Group created earlier.
 
 <img src="/connect-your-cloud-provider/_media/connect-azure-ea-n007.png" />
 
-### Step 4. Invite Eco Cost Specialist Guest Users to the User Group
+### Step 4. Invite Eco Cost Specialist Guest User to the User Group
 
 1. Navigate to Users.
-2. Select New Guest User and complete the required fields. You will do this once for each user. Use the following names and email addresses:
+2. Select New Guest User and complete the required fields. Use the following name and email address:
 
 |  |  |
 |---|---|
-|  Tanner Harvey   |  TannerH@netapp.com   |
-|  Cody Conway   |  Codyc@netapp.com   |
-|  Mimi Bao   |  Bmimi@netapp.com   |
-|  Andrew Watson   |  Wata@netapp.com   |
+|  Eco Cost Specialist   |  ECOAZAD@netapp.com   |
 
-3. For the first user, click Invite. This sends a notification to the Eco guest user via email.
+3. For the user, click Invite. This sends a notification to the Eco guest user via email.
 
 <img src="/connect-your-cloud-provider/_media/connect-azure-ea-n008.png" width="500" />
-
-4. Repeat the invitations for remaining users.
 
 ### Step 5. Read Only Access to Enterprise Enrollment Data
 
@@ -85,7 +80,7 @@ Apply the Reservation Reader Role to the User Group created earlier.
 
 4. Ensure the Auth Level on the Enrollment Detail says “Work or School Account Cross tenant”. It is possible to temporarily set it as this auth level. Just switch it to “Work or School Account Cross tenant,” send the invite, then switch it back to your preferred Auth Level.
 
-5. You will again need to invite the guest users (see list [above](eco/getting-started/connect-azure-ea-to-eco?id=steps-to-invite-users)), but this time as Read-Only Enterprise Administrators.
+5. You will again need to invite the guest user (see list [above](eco/getting-started/connect-azure-ea-to-eco?id=steps-to-invite-users)), but this time as Read-Only Enterprise Administrators.
 
    - Enter email address: as listed above
    - Auth Type: Work or school account
