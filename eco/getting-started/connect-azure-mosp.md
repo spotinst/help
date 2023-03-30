@@ -53,23 +53,18 @@ To apply the Reservation Reader role to the user group, complete the procedure b
 
 <img src="/connect-your-cloud-provider/_media/connect-azure-ea-n007.png" />
 
-### Step 4. Invite Eco Cost Specialist Guest Users to the User Group
+### Step 4. Invite Eco Cost Specialist Guest User to the User Group
 
 1. Navigate to Users.
-2. Select New Guest User and complete the required fields. You will do this once for each user. Use the following names and e-mail addresses:
+2. Select New Guest User and complete the required fields. Use the following names and e-mail addresses:
 
 |  |  |
 |---|---|
-|  Tanner Harvey   |  TannerH@netapp.com   |
-|  Cody Conway   |  Codyc@netapp.com   |
-|  Mimi Bao   |  Bmimi@netapp.com   |
-|  Andrew Watson   |  Wata@netapp.com   |
+|  Eco Cost Specialist    |  ECOAZAD@netapp.com   |
 
 3. For the first user, click Invite. This sends a notification to the Eco guest user via email.
 
 <img src="/connect-your-cloud-provider/_media/connect-azure-ea-n008.png" width="500" />
-
-4. Repeat the invitations for remaining users.
 
 ## What’s Next?
 
