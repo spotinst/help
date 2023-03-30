@@ -110,7 +110,7 @@ See the release notes below to learn about the changes introduced by each versio
 
 ## Alternative repositories
 
-In addition to Spot's [GCR](https://gcr.io/ocean-spark/spark) repository, Spot's images are also hosted in a public AWS ECR repository: [public.ecr.aws/ocean-spark/spark](https://gallery.ecr.aws/ocean-spark/spark).
+In addition to Spot's [GCR](https://gcr.io/ocean-spark/spark) repository, Spot's images are also hosted in a public AWS ECR repository: [public.ecr.aws/ocean-spark/spark](https://gallery.ecr.aws/ocean-spark/spark), and a public Azure repository: `oceanspark.azurecr.io/spark`.
 
 ## Release notes
 
