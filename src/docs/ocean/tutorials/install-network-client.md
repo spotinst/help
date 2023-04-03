@@ -132,7 +132,7 @@ provider "helm" {
 
 module "ocean-network-client" {
   source  = "spotinst/ocean-network client/spotinst"
-  version = "1.0.4"
+  version = "<LATEST_VERSION>"
 }
 ```
 
