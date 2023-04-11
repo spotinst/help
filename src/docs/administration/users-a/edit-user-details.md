@@ -75,6 +75,7 @@ To remove a user from Spot, do the following:
 1. In the upper right of the User Details page, click Remove User.
 2. In the popup that appears, confirm that you want to remove the user from Spot.
 
+*** NOTE ***
 <img src="/administration/_media/edit-user-details-07.png" width="243" height="97" />
 
 ## What’s Next?
