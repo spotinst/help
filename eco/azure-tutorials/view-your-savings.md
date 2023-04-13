@@ -16,6 +16,7 @@ You can set the following filters:
 
 - Time: Choose the range of dates for which data will be displayed for the chart and tables.
 - Regions: Choose the regions which will be included in the chart and tables.
+- Services: Choose the services which will be included in the charts and tables.
 
 ## Summary Line
 
@@ -60,19 +61,21 @@ You can filter the data displayed according to several criteria available.
 
 You can customize the columns that appear in the table. The following column headings are available:
 
-- Bill frequency: Azure reservations can be billing up front or monthly.
-- Start date: Start date of the reserved instance.
-- Region: The regions specified for the reserved instance.
-- Scope: The scope applied to the reserved instance.
-- SKU name: The virtual machine Instance the reserved instance will cover.
-- RI Type: Displays the different types of RIs available. Eco supports only virtual machines.
-- Purchasing Subscription ID: The subscription being charged for the reserved instance.
-- Reservation ID: The identifier of the reserved instance.
 - Reservation order ID: Azure reservation order identifier.
+- Reservation ID: The identifier of the reservation.
+- Reservation Name: The name of the reservation.
+- Purchasing Subscription ID: The subscription being charged for the reserved instance.
 - Subscription name: Purchasing subscription name.
-- Quantity: Number of reserved instances bought.
-- Amount: Cost of the reserved instance.
-- Source: Eco or Non-Eco.
+- Reservation Type: Displays the different types of RIs available. Eco supports only virtual machines.
+- Start date: Start date of the reservations.
+- End Date: End date of the reservations.
+- Region: The regions specified for the reservation.
+- Scope: The scope applied to the reservation.
+- SKU name: The name of the product the reservation will cover.
+- Quantity: Number of reservations bought.
+- Amount: Cost of the reservation.
+- Bill frequency: Azure reservations can be billing up front or monthly
+- Source: Eco or Non-Eco. 
 
 #### Export Data
 
