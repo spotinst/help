@@ -163,3 +163,11 @@ What does the end date of a reservation mean in the context of renewal?
 ### Answer:
 
 When a reservation expires, Eco first makes sure a renewal is the right course of action. If so, expired coverage will be replaced with the best commitment to provide a blend of flexibility and savings. When an expiration is renewed, a new lease ID will be created. Depending on the situation, an expired reservation may be renewed under different parameters, so do not be concerned if you do not see an exact match.
+
+## Question: No Data in Eco Azure Dashboard
+
+Learn more about Elastigroup.
+
+### Answer:
+
+Review [Elastigroup documentation](https://docs.spot.io/elastigroup/).
