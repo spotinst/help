@@ -3,7 +3,7 @@
 This procedure describes how to set up Spot account access to Azure EA Read Only data, which gives Spot the necessary permissions to pull Azure data and process it for the [Eco Azure Dashboard](eco/azure-tutorials/view-your-savings).
 
 ## Prerequisites
-- An Azure EA, MCA or PYAG account
+- An Azure EA, MCA or PAYG account
 - A registered Spot account
 - User must be a billing account administrator, Reservation administrator and Global Administrator
 - Member Account only, account cannot be a guest user account
