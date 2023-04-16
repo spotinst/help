@@ -20,14 +20,14 @@ Permission is not valid, please update permission as needed and try again.
 
 During the setup the Eco Azure application requires that someone must have the billing account administrator access. Please update your permissions and start over.
 
-If you have an enterprise agreement you can use these instructions to check your access: https://learn.microsoft.com/en-us/azure/cost-management-billing/manage/direct-ea-administration#add-another-enterprise-administrator
+If you have an enterprise agreement you can use these instructions to check your access: https://learn.microsoft.com/en-us/azure/cost-management-billing/manage/direct-ea-administration#add-another-enterprise-administrator.
 
 If you have a Microsoft Customer Agreement you can use these instructions to check your access:
-https://learn.microsoft.com/en-us/azure/cost-management-billing/manage/understand-mca-roles
+https://learn.microsoft.com/en-us/azure/cost-management-billing/manage/understand-mca-roles.
 
 ## Question: Invalid Reservation Permission  
 
-Permission is not valid. Please update permission as needed and try again.
+Permission is not valid. Please update permissions as needed and try again.
 
 <img src="/eco/_media/eco-azure-faq-3.png" />
 
@@ -35,7 +35,7 @@ Permission is not valid. Please update permission as needed and try again.
 
 During the setup the Eco Azure application requires that someone must have reservation administrator access. Please follow the guide below to update your permissions to reservation administrator and start over.
 
-https://blog.hametbenoit.info/2022/08/03/azure-you-can-now-delegate-management-of-reservations/#.ZDmJ7OzMJf0
+https://blog.hametbenoit.info/2022/08/03/azure-you-can-now-delegate-management-of-reservations/#.ZDmJ7OzMJf0.
 
 **Note**: If you are having issues adding reservation administrator permissions to your user, you might need to elevate the global admin access first.
 
