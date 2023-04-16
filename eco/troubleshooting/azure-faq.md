@@ -27,7 +27,7 @@ https://learn.microsoft.com/en-us/azure/cost-management-billing/manage/understan
 
 ## Question: Invalid Reservation Permission  
 
-Permission is not valid, please update permission as needed and try again.
+Permission is not valid. Please update permission as needed and try again.
 
 <img src="/eco/_media/eco-azure-faq-3.png" />
 
@@ -37,7 +37,7 @@ During the setup the Eco Azure application requires that someone must have reser
 
 https://blog.hametbenoit.info/2022/08/03/azure-you-can-now-delegate-management-of-reservations/#.ZDmJ7OzMJf0
 
-**Note**: If you are having issues adding reservation administrator permissions to your user, you might need to elevate the global admin access first. 
+**Note**: If you are having issues adding reservation administrator permissions to your user, you might need to elevate the global admin access first.
 
 Elevating Global Admin: https://learn.microsoft.com/en-us/azure/role-based-access-control/elevate-access-global-admin#elevate-access-for-a-global-administrator.
 
