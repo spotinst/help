@@ -14,22 +14,24 @@ A topology map can be created for different cloud accounts, regions, virtual pri
 
 <img src="/spot-security/_media/topology-1.png" />
 
-### 360-degree View
+### Service View
 
 The service map dropdown menu, along with a date filter, provides a 360-degree detailed view of the specific topology screen.
 
-The 360-degree view provides the following information based on the date and service map filter in the table below:
+<img src="/spot-security/_media/topology-2.png" />
+
+### 360-degree View
+
+The 360-degree view provides information based on the date and service map filter in the table below.
+
+<img src="/spot-security/_media/topology-3.png" />
 
 * A list of security rules that have failed for the selected assets.
 * A list of affected assets.
 * A list of all the events occurring in the assets.
 * A list of controls that have failed across different compliances.
 
-<img src="/spot-security/_media/topology-2.png" />
-
 You can also choose a specific asset from the table to see its 360-degree view.
-
-<img src="/spot-security/_media/topology-3.png" />
 
 If you want to see a detailed 360-degree view, you can expand the table in the top right corner of the 360° detail View panel.
 
