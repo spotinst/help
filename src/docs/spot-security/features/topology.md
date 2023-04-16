@@ -64,13 +64,13 @@ To change the service map used in the topology view, do the following:
 <img src="/spot-security/_media/topology-c.png" />
 
 2. In the dropdown menu, click the name of the new service map. A different topology map will appear showing the instances and relevant connections of the new map.
-3. Users can also use the date filter to view the service maps and their 360- degree view on that particular date.
+3. You can also use the date filter to view the service maps and their 360- degree view on that particular date.
 
 <img src="/spot-security/_media/topology-8.png" />
 
 ### Service Map List
 
-Users can also view the overall list of service maps created by clicking on the service map list on the top right corner of the page. You can perform the following functions on the service maps previously created:
+You can also view the overall list of service maps created by clicking on the service map list on the top right corner of the page. You can perform the following functions on the service maps previously created:
 1. Delete a service map.
 2. Set it as default so that it appears as the default map in the Topology view.
 3. Remame the service map.
