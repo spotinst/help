@@ -12,7 +12,7 @@ The topology view gives you a comprehensive visibility into the interconnections
 
 A topology map can be created for different cloud accounts, regions, virtual private clouds, and nodes (i.e., assets). You can create a Topology service map of up to ten nodes across the different asset types, regions, VPCs, and severity of risks.
 
-<img src="/spot-security/_media/topology-a1.png" />
+<img src="/spot-security/_media/topology-1.png" />
 
 ### 360-degree View
 
@@ -25,19 +25,19 @@ The 360-degree view provides the following information based on the date and ser
 * A list of all the events occurring in the assets.
 * A list of controls that have failed across different compliances.
 
-<img src="/spot-security/_media/topology-b-360.png" />
+<img src="/spot-security/_media/topology-2.png" />
 
 You can also choose a specific asset from the graph to see the individual asset’s 360-degree view.
 
-<img src="/spot-security/_media/topology-c1.png" />
+<img src="/spot-security/_media/topology-3.png" />
 
 If you want to see a detailed 360-degree view, you can expand the table by clicking expand in the right corner of the 360° detail View panel.
 
-<img src="/spot-security/_media/topology-h.png" />
+<img src="/spot-security/_media/topology-4.png" />
 
 In addition, if you click Failed Assets on any of the views (such as Security Rules or Compliance), this will give you a list of assets that have failed for that particular risk.
 
-<img src="/spot-security/_media/topology-e.png" />
+<img src="/spot-security/_media/topology-5.png" />
 
 Clicking on an individual asset name enables you to [view the risk details](spot-security/features/analyze-risks/view-risk-details) of that asset. You can also see the steps to remediate the risk of that particular asset.
 
@@ -66,7 +66,7 @@ To change the service map used in the topology view, do the following:
 2. In the dropdown menu, click the name of the new service map. A different topology map will appear showing the instances and relevant connections of the new map.
 3. Users can also use the date filter to view the service maps and their 360- degree view on that particular date.
 
-<img src="/spot-security/_media/topology-g.png" />
+<img src="/spot-security/_media/topology-8.png" />
 
 ### Service Map List
 
