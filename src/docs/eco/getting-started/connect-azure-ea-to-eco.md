@@ -1,97 +1,103 @@
-# Connect Your Azure EA for Eco Analysis
+# Connect Your Azure Account for Eco Analysis
 
-This document describes the process and procedures to enable the Eco Managed Service for Eco reservation management and provide appropriate access to reservation.
+This document describes what is required for Spot Eco to provide an analysis for potential cost savings.
 
 ## Audience
 
-Microsoft EA Azure administrators
+Microsoft Azure administrators
 
 ## Prerequisites
 
-- Admin access to the [Azure EA console](https://ea.azure.com/)
-- The ability to create a user group in Azure Portal
-- Reviewed [read-only permissions](https://docs.spot.io/eco/azure-tutorials/access-roles-read-only) required for Eco team
-- The Azure user is a global administrator with [elevated access](https://docs.microsoft.com/en-us/azure/role-based-access-control/elevate-access-global-admin#elevate-access-for-a-global-administrator) and access to at least one subscription
+- Review [read-only permissions](https://docs.spot.io/eco/azure-tutorials/access-roles-read-only) required for Eco Cost Specialist team
+- For steps 1-3: The Azure user performing these steps must be a Global Administrator with [elevated access](https://docs.microsoft.com/en-us/azure/role-based-access-control/elevate-access-global-admin#elevate-access-for-a-global-administrator) and access to at least one subscription
+- For step 4: The Azure user performing this step must be an Enterprise Administrator
 
-## Setup for Initial Analysis
 
-### Step 1. Create User Group for Eco Cost Specialist Guest Users
+## Process
 
-Complete the procedure below.
-1. Log into the [Azure portal](https://portal.azure.com/).
-2. Create an Azure user group for the Eco Cost Specialist Team.
-   - In your Microsoft Azure account go to the Groups page and click New Group.
+<details>
 
-   <img src="/connect-your-cloud-provider/_media/connect-azure-ea-n001.png" />
+<summary><font size="+1">Step 1 - Invite Spot Cost Specialist guest user</font></summary>
 
-   - In the New Group page, enter the Group Name and Group Description, e.g., Eco Cost Specialist Team, and click Create.
 
-   <img src="/connect-your-cloud-provider/_media/connect-azure-ea-n002.png" width="500"/>
+  1. Log into the [Azure portal](https://portal.azure.com/).
 
-   - Wait a few moments, then refresh the page. The name of the group will appear after it has been created.
+  2. Go to **Users** and click **New user** / **Invite external user**
 
-   <img src="/connect-your-cloud-provider/_media/connect-azure-ea-n003.png" />
+  3. In the Invite external user page, enter:
 
-### Step 2. Apply the Cost Management Reader Role
+       Email: ecoazad@netapp.com
+   
+       Display Name: Eco Cost Specialist (feel free to change)
 
-To apply the Cost Management Reader role to the Management Group or Subscriptions that you would like analyzed, complete the procedure below.
+  4. Click **Review & Invite** (lower left corner) and then **Invite**
 
-1. Find the Management Group you would like to give the Eco Cost Specialist group access to.
+</details>
 
-<img src="/connect-your-cloud-provider/_media/connect-azure-ea-n004.png" />
+<details>
 
-2. Apply the Cost Management Reader role to the user group created earlier for the Management Group.
+<summary><font size="+1">Step 2 - Apply the <u>Cost Management Reader</u> role</font></summary>
 
-<img src="/connect-your-cloud-provider/_media/connect-azure-ea-n005.png" />
+Please apply this role at the highest level possible, ideally the Tenant or other management group that contains all of the desired subscriptions. This role can also be applied on a per subscription basis if desired.
 
-### Step 3: Apply Reservation Reader Role
+1. Go to the management group or subscription(s) you would like to give the Eco Cost Specialist team access to
 
-To apply the Reservation Reader role to the user group, complete the procedure below.
-1. Navigate to the Reservations Page
+2. Go to **Access control (IAM)**
 
-<img src="/connect-your-cloud-provider/_media/connect-azure-ea-n006.png" />
+3. Click **Role assignments** and then **Add** / **Add role assignment**
 
-Apply the Reservation Reader Role to the User Group created earlier.
+4. Search for and select <u>Cost Management Reader</u>
 
-<img src="/connect-your-cloud-provider/_media/connect-azure-ea-n007.png" />
+5. Click **Next** in lower left
 
-### Step 4. Invite Eco Cost Specialist Guest Users to the User Group
+6. Click **+ Select members**
 
-1. Navigate to Users.
-2. Select New Guest User and complete the required fields. You will do this once for each user. Use the following names and email addresses:
+7. In the right pane, search for and select ecoazad@netapp.com
 
-|  |  |
-|---|---|
-|  Tanner Harvey   |  TannerH@netapp.com   |
-|  Cody Conway   |  Codyc@netapp.com   |
-|  Mimi Bao   |  Bmimi@netapp.com   |
-|  Andrew Watson   |  Wata@netapp.com   |
+8. Click **Review + assign** in the lower right
 
-3. For the first user, click Invite. This sends a notification to the Eco guest user via email.
+</details>
 
-<img src="/connect-your-cloud-provider/_media/connect-azure-ea-n008.png" width="500" />
+<details>
 
-4. Repeat the invitations for remaining users.
+<summary><font size="+1">Step 3 - Apply <u>Reservation Reader</u> role</font></summary>
 
-### Step 5. Read Only Access to Enterprise Enrollment Data
+1. Go to the Reservations Page
 
-**If you do not have access to the EA portal, please follow the instructions in the Azure guide to [add the Enrollment Reader Access in the Azure Portal](https://learn.microsoft.com/en-us/azure/cost-management-billing/manage/direct-ea-administration#add-another-enterprise-administrator)**.
+2. Click **Role assignments** and then **Add** / **Add role assignment**
 
-1. Log into https://ea.azure.com/.
-2. In the left Navigation, click Manage.
-3. Within the Enrollment tab, copy the Enrollment Number and set that aside for now.
+3. Search for and select <u>Reservation Reader</u>
 
-<img src="/connect-your-cloud-provider/_media/connect-azure-ea-n009.png" width="500" />
+4. Click **Next** in hte lower left
 
-4. Ensure the Auth Level on the Enrollment Detail says “Work or School Account Cross tenant”. It is possible to temporarily set it as this auth level. Just switch it to “Work or School Account Cross tenant,” send the invite, then switch it back to your preferred Auth Level.
+5. Click + Select members
 
-5. You will again need to invite the guest users (see list [above](eco/getting-started/connect-azure-ea-to-eco?id=steps-to-invite-users)), but this time as Read-Only Enterprise Administrators.
+6. In the right pane, search for and select ecoazad@netapp.com
 
-   - Enter email address: as listed above
-   - Auth Type: Work or school account
-   - Notification frequency: None
-   - Lifecycle Notification Suppression: No
+7. Click **Review + assign** in the lower right
+
+</details>
+
+<details>
+
+<summary><font size="+1">Step 4 - Provide Read Only Access to Enterprise Enrollment Data</font></summary>
+
+
+1. Go to Cost Management & Billing
+
+2. In the left menu, select Billing Scopes and then select the appropriate billing account scope
+
+3. In the left menu, select **Access Control (IAM)**
+
+4. In the top menu, select **+ Add** / **Enterprise administrator (Read Only)**
+
+5. **need to complete steps when I have access to Billing Scope**
+
+</details>
+<br/>
 
 ## What’s Next?
 
-Learn [how Eco works](eco/azure-tutorials/) to provide significant savings on your cloud spend.
+Within 5 business days, your Spot account team will have the results of our analysis to share.
+
+In the meantime, learn [how Eco works](eco/azure-tutorials/) to provide significant savings on your cloud spend.
