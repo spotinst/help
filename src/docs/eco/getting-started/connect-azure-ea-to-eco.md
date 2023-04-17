@@ -19,18 +19,17 @@ Microsoft Azure administrators
 
 <summary><font size="+1">Step 1 - Invite Spot Cost Specialist guest user</font></summary>
 
+1. Log into the [Azure portal](https://portal.azure.com/).
 
-  1. Log into the [Azure portal](https://portal.azure.com/).
+2. Go to **Users** and click **New user** / **Invite external user**
 
-  2. Go to **Users** and click **New user** / **Invite external user**
+3. In the Invite external user page, enter:
 
-  3. In the Invite external user page, enter:
-
-       Email: ecoazad@netapp.com
+    Email: ecoazad@netapp.com
    
-       Display Name: Eco Cost Specialist (feel free to change)
+    Display Name: Eco Cost Specialist (feel free to change)
 
-  4. Click **Review & Invite** (lower left corner) and then **Invite**
+4. Click **Review & Invite** (lower left corner) and then **Invite**
 
 </details>
 
@@ -38,7 +37,7 @@ Microsoft Azure administrators
 
 <summary><font size="+1">Step 2 - Apply the <u>Cost Management Reader</u> role</font></summary>
 
-Please apply this role at the highest level possible, ideally the Tenant or other management group that contains all of the desired subscriptions. This role can also be applied on a per subscription basis if desired.
+Please apply this role at the highest level possible, ideally the Tenant or other management group that contains all of the desired subscriptions. This role can also be applied on a per subscription basis if needed.
 
 1. Go to the management group or subscription(s) you would like to give the Eco Cost Specialist team access to
 
