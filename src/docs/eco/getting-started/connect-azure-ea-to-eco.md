@@ -37,7 +37,7 @@ Microsoft Azure administrators
 
 <summary><font size="+1">Step 2 - Apply the <u>Cost Management Reader</u> role</font></summary>
 
-*Please apply this role at the highest level possible, ideally the Tenant or other management group that contains all of the desired subscriptions. This role can also be applied on a per subscription basis if needed.
+* Please apply this role at the highest level possible, ideally the Tenant or other management group that contains all of the desired subscriptions. This role can also be applied on a per subscription basis if needed.
 
 1. Go to the management group or subscription(s) you would like to give the Eco Cost Specialist team access to
 
