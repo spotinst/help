@@ -81,6 +81,7 @@ Microsoft Azure administrators
 <details>
 
 <summary><font size="+1">Step 4 - Provide Read Only Access to EA or MCA Data</font></summary>
+<br/>
 
 * <details><summary>EA</summary>
 
