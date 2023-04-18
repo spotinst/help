@@ -70,4 +70,4 @@ For more information on how to retrieve the data above, see the official CloudWa
 
 ## What’s next?
 
-Take a look at our features.  
+Take a look at our [features](https://docs.spot.io/ocean-cd/concepts-features/).  
