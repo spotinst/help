@@ -87,7 +87,7 @@ Microsoft Azure administrators
 
   1. Go to Cost Management & Billing
 
-  2. In the left menu, select Billing _Scopes_ and then select the appropriate Billing Account Scope
+  2. In the left menu, select Billing Scopes and then select the appropriate Billing Account Scope
 
   3. In the left menu, select **Access Control (IAM)**
 
