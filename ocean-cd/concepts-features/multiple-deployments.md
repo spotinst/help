@@ -1,6 +1,6 @@
 # Multiple SpotDeployments per RolloutSpec
 
-Multiple SpotDeployments Per RollouSpec provides flexibility when configuring the RolloutSpec entity.  This feature enables you to set as many clusters, namespaces and Spot deployments as needed as part of one RolloutSpec.   
+Multiple SpotDeployments Per RollouSpec provide flexibility when configuring the RolloutSpec entity.  This feature enables you to set as many clusters, namespaces and Spot deployments as needed as part of one RolloutSpec.   
 
 Multiple SpotDeployments enable all of the configured SpotDeployments to use the same services, strategies, arguments as well as failure policies.  
 
@@ -22,4 +22,4 @@ Two SpotDeployments may not be exposed to the same Kubernetes service.
 
 ## What's Next?
 
-Get to know [Ocean Cd](ocean-cd/get-to-know-ocean-cd/). 
+Get to know [Ocean Cd](ocean-cd/get-to-know-ocean-cd/).
