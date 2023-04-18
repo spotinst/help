@@ -80,7 +80,7 @@ Microsoft Azure administrators
 
 <details>
 
-<summary><font size="+1">Step 4 - Provide Read Only Access to EA or MCA Data</font></summary>
+<summary><font size="+1">Step 4 - Provide Read Only Access to <u>EA</u> or <u>MCA</u> Data</font></summary>
 <br/>
 
 * <details><summary>EA</summary>
@@ -100,13 +100,13 @@ Microsoft Azure administrators
 
   1. Go to Cost Management & Billing
 
-  2. In the left menu, select Billing Scopes and then select the appropriate Billing Account Scope
-
   3. In the left menu, select **Access Control (IAM)**
 
-  4. In the top menu, select **+ Add** / **Billing account reader**
+  4. In the top menu, select **+ Add**
 
-  5. ***need to complete steps when I have access to Billing Scope***
+  4. In the right pane, select **Billing account reader**
+
+  5. Select ecoazad@netapp.com and click **Save**
 
 </details>
 
