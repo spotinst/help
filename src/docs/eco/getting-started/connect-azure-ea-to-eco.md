@@ -8,7 +8,7 @@ EA<br>
 MCA<br>
 MOSP/PAYG*
 
-<font size="-1">*step 4 not required</font>
+<font size="-2">*step 4 not required</font>
 
 ## Audience
 
