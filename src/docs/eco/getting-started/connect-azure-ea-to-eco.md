@@ -9,8 +9,8 @@ Microsoft Azure administrators
 ## Prerequisites
 
 > - Review [read-only permissions](https://docs.spot.io/eco/azure-tutorials/access-roles-read-only) required for Eco Cost Specialist team
-- For steps 1-3: The Azure user performing these steps must be a Global Administrator with [elevated access](https://docs.microsoft.com/en-us/azure/role-based-access-control/elevate-access-global-admin#elevate-access-for-a-global-administrator) and access to at least one subscription
-- For step 4: The Azure user performing this step must be an Enterprise Administrator
+> - For steps 1-3: The Azure user performing these steps must be a Global Administrator with [elevated access](https://docs.microsoft.com/en-us/azure/role-based-access-control/elevate-access-global-admin#elevate-access-for-a-global-administrator) and access to at least one subscription
+> - For step 4: The Azure user performing this step must be an Enterprise Administrator
 
 
 ## Process
