@@ -36,6 +36,7 @@ Microsoft Azure administrators
 <details>
 
 <summary><font size="+1">Step 2 - Apply the <u>Cost Management Reader</u> role</font></summary>
+<br/>
 
 * Please apply this role at the highest level possible, ideally on the Tenant or other Management Group that contains all of the desired Subscriptions. This role can also be applied on a per Subscription basis if needed.
 
