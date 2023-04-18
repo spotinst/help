@@ -2,6 +2,14 @@
 
 This document describes what is required for Spot Eco to provide an estimated cost savings analysis.
 
+The steps below apply to the following account/agreement types:
+
+EA<br>
+MCA<br>
+MOSP/PAYG*
+
+<font size="-1">*step 4 not required</font>
+
 ## Audience
 
 Microsoft Azure administrators
@@ -9,7 +17,7 @@ Microsoft Azure administrators
 ## Prerequisites
 
 > - Review [read-only permissions](https://docs.spot.io/eco/azure-tutorials/access-roles-read-only) required for Eco Cost Specialist team
-> - For steps 1-3: The Azure user performing these steps must be a Global Administrator with [elevated access](https://docs.microsoft.com/en-us/azure/role-based-access-control/elevate-access-global-admin#elevate-access-for-a-global-administrator) and access to at least one subscription
+> - For steps 1-3: The Azure user performing these steps must be a Global Administrator with [elevated access](https://docs.microsoft.com/en-us/azure/role-based-access-control/elevate-access-global-admin#elevate-access-for-a-global-administrator) and access to relevant Management Groups or Subscription(s)
 > - For step 4: The Azure user performing this step must be an Enterprise Administrator (EA) or Billing account owner (MCA)
 
 
@@ -25,7 +33,7 @@ Microsoft Azure administrators
 
 3. In the Invite external user page, enter:
 
-    Email: ecoazad@netapp.com
+    Email: <u>ecoazad@netapp.com</u>
    
     Display Name: Eco Cost Specialist (feel free to change)
 
@@ -40,7 +48,7 @@ Microsoft Azure administrators
 
 * Please apply this role at the highest level possible, ideally on the Tenant or other Management Group that contains all of the desired Subscriptions. This role can also be applied on a per Subscription basis if needed.
 
-1. Go to the Management Group or Subscription(s) you would like to give the Eco Cost Specialist team access to
+1. Go to the **Management Group** or **Subscription(s)** you would like to give the Eco Cost Specialist team access to
 
 2. Go to **Access control (IAM)**
 
@@ -52,7 +60,7 @@ Microsoft Azure administrators
 
 6. Click **+ Select members**
 
-7. In the right pane, search for and select ecoazad@netapp.com
+7. In the right pane, search for and select <u>ecoazad@netapp.com</u>
 
 8. Click **Review + assign** in the lower right
 
@@ -70,9 +78,9 @@ Microsoft Azure administrators
 
 4. Click **Next** in the lower left
 
-5. Click + Select members
+5. Click **+ Select members**
 
-6. In the right pane, search for and select ecoazad@netapp.com
+6. In the right pane, search for and select <u>ecoazad@netapp.com</u>
 
 7. Click **Review + assign** in the lower right
 
@@ -104,9 +112,9 @@ Microsoft Azure administrators
 
   4. In the top menu, select **+ Add**
 
-  4. In the right pane, select **Billing account reader**
+  4. In the right pane, select <u>Billing account reader</u>
 
-  5. Select ecoazad@netapp.com and click **Save**
+  5. Search for and select <u>ecoazad@netapp.com</u> and click **Save**
 
 </details>
 
