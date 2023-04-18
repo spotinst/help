@@ -43,8 +43,10 @@ Microsoft Azure administrators
 
 <details>
 
-<summary><font size="+1">Step 2 - Apply the <u>Cost Management Reader</u> role</font></summary>
+<summary><font size="+1">Step 2 - Apply <u>Cost Management Reader</u> role</font></summary>
 <br/>
+
+* details for this permission can be found [here](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/understand-work-scopes)
 
 * Please apply this role at the highest level possible, ideally on the Tenant or other Management Group that contains all of the desired Subscriptions. This role can also be applied on a per Subscription basis if needed.
 
@@ -70,6 +72,8 @@ Microsoft Azure administrators
 
 <summary><font size="+1">Step 3 - Apply <u>Reservation Reader</u> role</font></summary>
 
+* details for this permission can be found [here](https://learn.microsoft.com/en-us/azure/cost-management-billing/reservations/view-reservations)
+
 1. Go to the Reservations Page
 
 2. Click **Role assignments** and then **Add** / **Add role assignment**
@@ -88,10 +92,12 @@ Microsoft Azure administrators
 
 <details>
 
-<summary><font size="+1">Step 4 - Provide Read Only Access to <u>EA</u> or <u>MCA</u> Data</font></summary>
+<summary><font size="+1">Step 4 - Provide read only Access to <u>EA</u> or <u>MCA</u> billing data</font></summary>
 <br/>
 
 * <details><summary>EA</summary>
+
+  * details for this permission can be found [here](https://learn.microsoft.com/en-us/azure/cost-management-billing/manage/understand-ea-roles) 
 
   1. Go to Cost Management & Billing
 
@@ -105,6 +111,8 @@ Microsoft Azure administrators
 
 
 * <details><summary>MCA</summary>
+
+  * details for this permission can be found [here](https://learn.microsoft.com/en-us/azure/cost-management-billing/manage/understand-mca-roles)
 
   1. Go to Cost Management & Billing
 
