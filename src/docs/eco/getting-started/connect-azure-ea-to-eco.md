@@ -10,7 +10,7 @@ Microsoft Azure administrators
 
 > - Review [read-only permissions](https://docs.spot.io/eco/azure-tutorials/access-roles-read-only) required for Eco Cost Specialist team
 > - For steps 1-3: The Azure user performing these steps must be a Global Administrator with [elevated access](https://docs.microsoft.com/en-us/azure/role-based-access-control/elevate-access-global-admin#elevate-access-for-a-global-administrator) and access to at least one subscription
-> - For step 4: The Azure user performing this step must be an Enterprise Administrator
+> - For step 4: The Azure user performing this step must be an Enterprise Administrator (EA) or Billing account owner (MCA)
 
 
 ## Process
@@ -80,24 +80,40 @@ Microsoft Azure administrators
 
 <details>
 
-<summary><font size="+1">Step 4 - Provide Read Only Access to Enterprise Enrollment Data</font></summary>
+<summary><font size="+1">Step 4 - Provide Read Only Access to EA or MCA Data</font></summary>
+
+* <details><summary>EA</summary>
+
+  1. Go to Cost Management & Billing
+
+  2. In the left menu, select Billing Scopes and then select the appropriate Billing Account Scope
+
+  3. In the left menu, select **Access Control (IAM)**
+
+  4. In the top menu, select **+ Add** / **Enterprise administrator (Read Only)**
+
+  5. ***need to complete steps when I have access to Billing Scope***
 
 
-1. Go to Cost Management & Billing
+* <details><summary>MCA</summary>
 
-2. In the left menu, select Billing Scopes and then select the appropriate Billing Account Scope
+  1. Go to Cost Management & Billing
 
-3. In the left menu, select **Access Control (IAM)**
+  2. In the left menu, select Billing Scopes and then select the appropriate Billing Account Scope
 
-4. In the top menu, select **+ Add** / **Enterprise administrator (Read Only)**
+  3. In the left menu, select **Access Control (IAM)**
 
-5. **need to complete steps when I have access to Billing Scope**
+  4. In the top menu, select **+ Add** / **Billing account reader**
+
+  5. ***need to complete steps when I have access to Billing Scope***
 
 </details>
-<br/>
+
 
 ## What’s Next?
 
-Within 5 business days, your Spot account team will have the results of our analysis to share.
+Please let your account team know when you have completed the steps above.
+
+Within 5 business days we will have the results of our analysis to share.
 
 In the meantime, learn [how Eco works](eco/azure-tutorials/) to provide significant savings on your cloud spend.
