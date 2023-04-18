@@ -123,6 +123,6 @@ Microsoft Azure administrators
 
 Please let your account team know when you have completed the steps above.
 
-Within 5 business days we will have the results of our analysis to share.
+A detailed cost savings analysis will be available within 5 business days.
 
 In the meantime, learn [how Eco works](eco/azure-tutorials/) to provide significant savings on your cloud spend.
