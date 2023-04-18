@@ -1,3 +1,5 @@
+<base target="_blank">
+
 # Connect Your Azure Account for Eco Analysis
 
 This document describes what is required for Spot Eco to provide an estimated cost savings analysis.
