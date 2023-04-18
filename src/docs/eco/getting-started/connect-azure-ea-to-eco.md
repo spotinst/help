@@ -10,9 +10,7 @@ MOSP/PAYG*
 
 <font size="-2">*step 4 not required</font>
 
-## Audience
 
-Microsoft Azure administrators
 
 ## Prerequisites
 
