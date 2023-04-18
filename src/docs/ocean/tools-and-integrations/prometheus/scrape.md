@@ -1,8 +1,6 @@
 # Scrape Ocean Metrics using Prometheus
 
-This page is relevant to Ocean for AWS Kubernetes.
-
-Feature state: Beta
+This page is relevant to Ocean for AWS Kubernetes and GCP.
 
 You can use Prometheus to scrape [important Ocean metrics](ocean/tools-and-integrations/prometheus/README). Using a simple exporter, Ocean is able to provide data in [open metrics](https://openmetrics.io/) format for Prometheus to scrape.
 
