@@ -66,7 +66,7 @@ Name:        myconfigmap
 
 Namespace:    mynamespace
 
-Labels:       <none>
+Labels:       < none >
 
 Annotations:  oceancd.spot.io/broadcasting: true
                       oceancd.spot.io/dataSum: 559375aefe071e1a5620f90ebb3a5ef1c4239f0af7f31f512ec2a5259e18a986
