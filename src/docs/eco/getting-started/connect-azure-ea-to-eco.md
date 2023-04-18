@@ -8,7 +8,7 @@ Microsoft Azure administrators
 
 ## Prerequisites
 
-- Review [read-only permissions](https://docs.spot.io/eco/azure-tutorials/access-roles-read-only) required for Eco Cost Specialist team
+> - Review [read-only permissions](https://docs.spot.io/eco/azure-tutorials/access-roles-read-only) required for Eco Cost Specialist team
 - For steps 1-3: The Azure user performing these steps must be a Global Administrator with [elevated access](https://docs.microsoft.com/en-us/azure/role-based-access-control/elevate-access-global-admin#elevate-access-for-a-global-administrator) and access to at least one subscription
 - For step 4: The Azure user performing this step must be an Enterprise Administrator
 
@@ -37,9 +37,9 @@ Microsoft Azure administrators
 
 <summary><font size="+1">Step 2 - Apply the <u>Cost Management Reader</u> role</font></summary>
 
-* Please apply this role at the highest level possible, ideally the Tenant or other management group that contains all of the desired subscriptions. This role can also be applied on a per subscription basis if needed.
+* Please apply this role at the highest level possible, ideally on the Tenant or other Management Group that contains all of the desired Subscriptions. This role can also be applied on a per Subscription basis if needed.
 
-1. Go to the management group or subscription(s) you would like to give the Eco Cost Specialist team access to
+1. Go to the Management Group or Subscription(s) you would like to give the Eco Cost Specialist team access to
 
 2. Go to **Access control (IAM)**
 
@@ -67,7 +67,7 @@ Microsoft Azure administrators
 
 3. Search for and select <u>Reservation Reader</u>
 
-4. Click **Next** in hte lower left
+4. Click **Next** in the lower left
 
 5. Click + Select members
 
@@ -84,7 +84,7 @@ Microsoft Azure administrators
 
 1. Go to Cost Management & Billing
 
-2. In the left menu, select Billing Scopes and then select the appropriate billing account scope
+2. In the left menu, select Billing Scopes and then select the appropriate Billing Account Scope
 
 3. In the left menu, select **Access Control (IAM)**
 
