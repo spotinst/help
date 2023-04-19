@@ -15,6 +15,7 @@
   - [Examples](ocean-cd/examples/)
     - [Traffic Managers](ocean-cd/getting-started/traffic-manager-reference)
     - [Verification Providers](ocean-cd/concepts-features/provider-reference)
+    - [Verification Templates](ocean-cd/examples/verification-templates)
   - [End-to-end (CLI)](ocean-cd/end-to-end-cli/)  
   - [Features](ocean-cd/concepts-features/)   
     - [Horizontal Pod Autoscaler](ocean-cd/concepts-features/horizontal-pod-autoscaler)
