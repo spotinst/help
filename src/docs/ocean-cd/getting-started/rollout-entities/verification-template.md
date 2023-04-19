@@ -8,7 +8,11 @@ The template is reusable and can be used and maintained over multiple services a
 kind: verificationTemplate
 name: prometheus
 args:
-  - name: metric-name
+  - name: metric-name 
+    value: string
+    secretKeyRef:
+      name: string
+      key: string
 metrics:
   - name: cpu-usage
     interval: 5m
