@@ -62,6 +62,7 @@ spec:
 
 The following output is displayed:
 
+```
 Name:        myconfigmap
 
 Namespace:    mynamespace
@@ -69,8 +70,11 @@ Namespace:    mynamespace
 Labels:       < none >
 
 Annotations:  oceancd.spot.io/broadcasting: true
-                      oceancd.spot.io/dataSum: 559375aefe071e1a5620f90ebb3a5ef1c4239f0af7f31f512ec2a5259e18a986
-                      oceancd.spot.io/spotdeployment. nginx-deployment: true
+
+              oceancd.spot.io/dataSum: 559375aefe071e1a5620f90ebb3a5ef1c4239f0af7f31f512ec2a5259e18a986
+
+              oceancd.spot.io/spotdeployment. nginx-deployment: true
+```
 
 The annotations and how they work:
 
