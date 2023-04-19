@@ -21,7 +21,7 @@
     - [Override Strategy](ocean-cd/concepts-features/override-strategy)
     - [Ocean Integration](ocean-cd/ocean-integration/)
     - [Continuous Verification](ocean-cd/concepts-features/verifications)
-    - [Multiple SpotDepolyments](ocean-cd/getting-started/multiple-deployments)  
+    - [Multiple SpotDepolyments](ocean-cd/concepts-features/multiple-deployments)  
   - [Get to Know Ocean CD](ocean-cd/get-to-know-ocean-cd/)
     - [View Settings](ocean-cd/tutorials/view-settings/)
     - [View Rollouts](ocean-cd/tutorials/view-rollouts/)
