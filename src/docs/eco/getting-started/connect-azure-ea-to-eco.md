@@ -14,8 +14,8 @@ MOSP/PAYG*
 
 ## Prerequisites
 
-> - Review [read-only permissions](https://docs.spot.io/eco/azure-tutorials/access-roles-read-only){:target="_blank"} required for Eco Cost Specialist team
-> - For steps 1-3: The Azure user performing these steps must be a Global Administrator with [elevated access](https://docs.microsoft.com/en-us/azure/role-based-access-control/elevate-access-global-admin#elevate-access-for-a-global-administrator) and access to relevant Management Groups or Subscription(s)
+> - Review [read-only permissions](https://docs.spot.io/eco/azure-tutorials/access-roles-read-only) required for Eco Cost Specialist team
+> - For steps 1-3: The Azure user performing these steps must be a Global Administrator with [elevated access](https://docs.microsoft.com/en-us/azure/role-based-access-control/elevate-access-global-admin#elevate-access-for-a-global-administrator) and access to the relevant Management Group(s) or Subscription(s)
 > - For step 4: The Azure user performing this step must be an Enterprise Administrator (EA) or Billing account owner (MCA)
 
 
@@ -25,7 +25,7 @@ MOSP/PAYG*
 
 <summary><font size="+1">Step 1 - Invite Spot Cost Specialist guest user</font></summary>
 
-1. Log into the [Azure portal](https://portal.azure.com/).
+1. Log into the [Azure portal](https://portal.azure.com/)
 
 2. Go to **Users** and click **New user** / **Invite external user**
 
@@ -42,7 +42,6 @@ MOSP/PAYG*
 <details>
 
 <summary><font size="+1">Step 2 - Apply <u>Cost Management Reader</u> role</font></summary>
-<br/>
 
 * details for this permission can be found [here](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/understand-work-scopes)
 
@@ -50,9 +49,9 @@ MOSP/PAYG*
 
 1. Go to the **Management Group** or **Subscription(s)** you would like to give the Eco Cost Specialist team access to
 
-2. Go to **Access control (IAM)**
+2. In the left menu, select **Access Control (IAM)**
 
-3. Click **Role assignments** and then **Add** / **Add role assignment**
+3. Click **Add** / **Add role assignment**
 
 4. Search for and select <u>Cost Management Reader</u>
 
@@ -62,7 +61,7 @@ MOSP/PAYG*
 
 7. In the right pane, search for and select <u>ecoazad@netapp.com</u>
 
-8. Click **Review + assign** in the lower right
+8. Click **Review + assign** in the lower left
 
 </details>
 
@@ -84,14 +83,13 @@ MOSP/PAYG*
 
 6. In the right pane, search for and select <u>ecoazad@netapp.com</u>
 
-7. Click **Review + assign** in the lower right
+7. Click **Review + assign** in the lower left
 
 </details>
 
 <details>
 
 <summary><font size="+1">Step 4 - Provide read only Access to <u>EA</u> or <u>MCA</u> billing data</font></summary>
-<br/>
 
 * <details><summary>EA</summary>
 
