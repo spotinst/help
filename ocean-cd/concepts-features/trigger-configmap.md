@@ -1,4 +1,4 @@
-# Trigger Rollouts with ConfigMap- PreGA Draft for Ocean CD
+# Trigger Rollouts with ConfigMap
 
 Ocean CD enables you to update SpotDeployments and trigger rollouts accordingly through the change of a ConfigMap.  
 
