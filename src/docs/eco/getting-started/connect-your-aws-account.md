@@ -43,9 +43,9 @@ Set up Cost and Usage Reports as described below.
 
 > **Note**: Spot strongly recommends that you create both a new Amazon S3 bucket and a new Cost and Usage Reports if you do not have Athena already integrated. The following setup process removes any Amazon S3 events that your bucket might already have, which can negatively affect any existing event-based processes that you have for an existing AWS CUR.
 
-<img src="/eco/_media/gettingstarted-aws-connect-09.png" />
+<img src="/eco/_media/gettingstarted-aws-connect-09.png" width="350" height="500" />
 
-<img src="/eco/_media/gettingstarted-aws-connect-10.png" />
+<img src="/eco/_media/gettingstarted-aws-connect-10.png" width="450" height="600" />
 
 > **Note**: An administrator of your account or your organization may have restricted your user's right to define the CUR, and this should be addressed with the administrator. For example, if you see errors stating that you cannot perform the 'putReportDefinition' operation, you will need to address this with your administrator.
 
@@ -62,13 +62,13 @@ Set up Cost and Usage Reports as described below.
 
 Open the linked Cloudformation Template.
 
-<img src="/eco/_media/gettingstarted-aws-connect-06.png" width="350" height="500" />
+<img src="/eco/_media/gettingstarted-aws-connect-06.png" />
 
 ## Step 5
 
 Mark the checkbox acknowledging that CloudFormation will create IAM resources, and hit create.
 
-<img src="/eco/_media/gettingstarted-aws-connect-07.png" width="450" height="600" />
+<img src="/eco/_media/gettingstarted-aws-connect-07.png" />
 
 ## Step 6
 
