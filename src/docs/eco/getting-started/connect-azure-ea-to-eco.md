@@ -101,9 +101,13 @@ MOSP/PAYG*
 
   3. In the left menu, select **Access Control (IAM)**
 
-  4. In the top menu, select **+ Add** / **Enterprise administrator (Read Only)**
+  4. In the top menu, select **+ Add** / **Enterprise administrator**
 
-  5. ***need to complete steps when I have access to Billing Scope***
+  5. In the right pane, search for and select <u>ecoazad@netapp.com</u>
+
+  6. Check the box for **Provide read-only access**
+
+  7. Click **Add** in the lower right
 
 
 * <details><summary>MCA</summary>
