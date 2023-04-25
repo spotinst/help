@@ -62,13 +62,13 @@ Set up Cost and Usage Reports as described below.
 
 Open the linked Cloudformation Template.
 
-<img src="/eco/_media/gettingstarted-aws-connect-06.png" />
+<img src="/eco/_media/gettingstarted-aws-connect-06.png" width="350" height="500" />
 
 ## Step 5
 
 Mark the checkbox acknowledging that CloudFormation will create IAM resources, and hit create.
 
-<img src="/eco/_media/gettingstarted-aws-connect-07.png" />
+<img src="/eco/_media/gettingstarted-aws-connect-07.png" width="450" height="600" />
 
 ## Step 6
 
