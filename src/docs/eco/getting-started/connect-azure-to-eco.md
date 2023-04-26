@@ -23,25 +23,36 @@ MOSP/PAYG*
 
 <details>
 
-<summary><font size="+1">Step 1 - Invite Spot Cost Specialist guest user</font></summary>
+<summary><font size="+1">Step 1 - Confirm/enable Global Admin elevated access</font></summary>
 
 1. Log into the [Azure portal](https://portal.azure.com/)
 
-2. Go to **Users** and click **New user** / **Invite external user**
+2. Go to **Azure Active Directory**
 
-3. In the Invite external user page, enter:
+3. In the left pane under **Manage**, click **Properties**
+
+4. At the bottom of the page, toggle **Access management for Azure resources** to **Yes**
+</details>
+
+<details>
+
+<summary><font size="+1">Step 2 - Invite Spot Cost Specialist guest user</font></summary>
+
+1. Go to **Users** and click **New user** / **Invite external user**
+
+2. In the Invite external user page, enter:
 
     Email: <u>ecoazad@netapp.com</u>
    
     Display Name: Eco Cost Specialist (feel free to change)
 
-4. Click **Review & Invite** (lower left corner) and then **Invite**
+3. Click **Review & Invite** (lower left corner) and then **Invite**
 
 </details>
 
 <details>
 
-<summary><font size="+1">Step 2 - Apply <u>Cost Management Reader</u> role</font></summary>
+<summary><font size="+1">Step 3 - Apply <u>Cost Management Reader</u> role</font></summary>
 
 * details for this permission can be found [here](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/understand-work-scopes)
 
@@ -67,7 +78,7 @@ MOSP/PAYG*
 
 <details>
 
-<summary><font size="+1">Step 3 - Apply <u>Reservation Reader</u> role</font></summary>
+<summary><font size="+1">Step 4 - Apply <u>Reservation Reader</u> role</font></summary>
 
 * details for this permission can be found [here](https://learn.microsoft.com/en-us/azure/cost-management-billing/reservations/view-reservations)
 
@@ -89,7 +100,7 @@ MOSP/PAYG*
 
 <details>
 
-<summary><font size="+1">Step 4 - Provide read only Access to <u>EA</u> or <u>MCA</u> billing data</font></summary>
+<summary><font size="+1">Step 5 - Provide read only Access to <u>EA</u> or <u>MCA</u> billing data</font></summary>
 
 * <details><summary>EA</summary>
 
