@@ -34,11 +34,12 @@ Eco provides summary graphs and charts to give you wide visibility of your savin
 
 A bar graph showing the amount of savings each month broken down by type of savings. This graph will allow you to visualize savings from reservations and savings plans. You can use the filters at the top of the page and source filters specific to each graph.
 
-- All
-- Eco
-- Non-Eco
+- All: This source filter displays all savings provided by Eco, Non-Eco and Support Savings.
+- Eco: This source filter displays all savings provide by Eco.
+- Non-Eco: This source filter displays all savings provided by the customer. 
+- Support Savings: This source filter displays all savings Eco saved you on AWS Support Plans. AWS provides different Support Tiers and charges differently for each tier. Spot retrieves and calculates how much a customer would be spending on support if they weren’t using Eco. Eco does not charge customers based on these savings.
 
-<img src="/eco/_media/tutorials-view-savings-01c2a.png" />
+<img src="/eco/_media/tutorials-view-savings-1.png" />
 
 ### Monthly Commitment over Time
 
