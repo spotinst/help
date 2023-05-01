@@ -1,5 +1,11 @@
 # Controller Version History
 
+## [1.0.91] - 2023-04-30
+
+Added
+
+- Support Kubernetes new API versions
+
 ## [1.0.90] - 2023-04-16
 
 Added
