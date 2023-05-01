@@ -33,11 +33,12 @@ Eco provides summary graphs and charts to give you wide visibility of your savin
 
 A bar graph shows the amount of savings each month broken down by type of savings. This graph will allow you to visualize savings from reservations and savings plans. You can use the filters at the top of the page and source filters specific to each graph.
 
-- All
-- Eco
-- Non-Eco
+- All: This source filter displays all savings provided by Eco, Non-Eco and Support Savings.
+- Eco: This source filter displays all savings provide by Eco.
+- Non-Eco: This source filter displays all savings provided by the customer.
+- Support Savings: This source filter displays all savings Eco saved you on AWS Support Plans. AWS provides different Support Tiers and charges differently for each tier. We retrieve and calculate how much a customer would be spending on support if they weren’t using Eco. Eco does not charge customers based on these savings.
 
-<img src="/eco/_media/view-savings-savings_overtime.png" />
+<img src="/eco/_media/view-savings-savings_overtime-1.png" />
 
 It is important to note that RI Volume Discounts may appear in Savings Over Time because they also drive the cost of reservations down. Eco includes these cost reductions in our net savings calculations.
 
