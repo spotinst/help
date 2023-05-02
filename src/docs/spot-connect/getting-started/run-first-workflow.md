@@ -94,7 +94,7 @@ When all of the inputs for the specific action are configured and there are no a
 
 1. After saving a workflow, click Run Now. A Set Runtime Parameters window opens.  
 
-<img src="/spot-connect/_media/run-workflow-2.png" />
+<img src="/spot-connect/_media/run-workflow-2.png" width="400" height="250" />
 
 2. Enter the parameters and click Run Now. You will be redirected to the Executions Detail page.  
 
