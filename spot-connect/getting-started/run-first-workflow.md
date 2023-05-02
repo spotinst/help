@@ -1,4 +1,4 @@
-# Run you First Workflow
+# Run your First Workflow
 
 You can run a workflow by ensuring that it has the four following components:   
 
@@ -32,7 +32,7 @@ Every workflow needs a trigger. There are three types of triggers:
 
 * Manual: you can start the workflow immediately after clicking Create Workflow.
 
-* Third-party/ Integration trigger: You can select one of the third-party integrations that are presented in the window/ in the options. Integrations like AWS Datadog, PagerDuty, etc. are webhook based. For example, when a certain alert is triggered inside PagerDuty, the workflow inside a Spot Connect workflow automatically runs and executes.  
+* Third-party/ Integration trigger: You can select one of the third-party integrations that are presented in the window in the options. Integrations like AWS Datadog, PagerDuty, etc. are webhook based. For example, when a certain alert is triggered inside PagerDuty, the workflow inside a Spot Connect workflow automatically runs and executes.  
 
 * Scheduled: A scheduled run can only be done to a manual trigger. You cannot schedule a workflow to run if it's got a third-party integration trigger, like PagerDuty or Datadog.  
 
@@ -52,7 +52,7 @@ The Rate/Expression column displays the scheduled triggers that were created wit
 
 ### Configure the Trigger
 
-You need to configure the trigger in the configuration panel.  
+Configure the trigger in the configuration panel.  
 
 Insert the API key that you created prior to creating the workflow. The Webhook API Key Value and the Workflow Webhook URL will be automatically inserted.  
 
