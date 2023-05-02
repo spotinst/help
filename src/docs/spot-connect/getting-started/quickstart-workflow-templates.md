@@ -1,6 +1,6 @@
 # QuickStart- Workflow Templates
 
-Template workflows in Spot Connect help you navigate to a specific workflow easily.
+Workflow templates in Spot Connect help you navigate to a specific workflow easily.
 
 * Each workflow represents a use case that could be your starting point.
 
@@ -29,4 +29,4 @@ You can also search for workflows by entering the name of a workflow or tag in t
 
 ## What's Next?
 
-Learn about integrations. 
+Learn about integrations.
