@@ -3270,32 +3270,32 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/aws-services/service-health"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/spot-connect/getting-started/create-first-workflow</loc>
+        <loc>https://docs.spot.io/?/spot-connect/getting-started/create-first-workflow-aws</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/getting-started/create-first-workflow"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/getting-started/create-first-workflow"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/getting-started/create-first-workflow-aws"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/getting-started/create-first-workflow-aws"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/spot-connect/getting-started/create-target-account</loc>
+        <loc>https://docs.spot.io/?/spot-connect/getting-started/create-first-workflow-spot</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/getting-started/create-target-account"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/getting-started/create-target-account"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/getting-started/create-first-workflow-spot"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/getting-started/create-first-workflow-spot"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/spot-connect/getting-started/get-to-know-workflows</loc>
+        <loc>https://docs.spot.io/?/spot-connect/getting-started/get-to-know-workflow-builder</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/getting-started/get-to-know-workflows"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/getting-started/get-to-know-workflows"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/getting-started/get-to-know-workflow-builder"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/getting-started/get-to-know-workflow-builder"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/spot-connect/getting-started/manage-automatic-execution</loc>
+        <loc>https://docs.spot.io/?/spot-connect/getting-started/quickstart-workflow-templates</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/getting-started/manage-automatic-execution"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/getting-started/manage-automatic-execution"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/getting-started/quickstart-workflow-templates"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/getting-started/quickstart-workflow-templates"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/spot-connect/getting-started/</loc>
@@ -3310,34 +3310,6 @@
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/getting-started/run-first-workflow"/>
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/getting-started/run-first-workflow"/>
-    </url>
-    <url>
-        <loc>https://docs.spot.io/?/spot-connect/getting-started/sample-workflows</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/getting-started/sample-workflows"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/getting-started/sample-workflows"/>
-    </url>
-    <url>
-        <loc>https://docs.spot.io/?/spot-connect/getting-started/set-up-execution</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/getting-started/set-up-execution"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/getting-started/set-up-execution"/>
-    </url>
-    <url>
-        <loc>https://docs.spot.io/?/spot-connect/getting-started/set-up-integration</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/getting-started/set-up-integration"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/getting-started/set-up-integration"/>
-    </url>
-    <url>
-        <loc>https://docs.spot.io/?/spot-connect/getting-started/set-up-resource</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/getting-started/set-up-resource"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/getting-started/set-up-resource"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/spot-connect/integrations/amazon-event-bridge</loc>
