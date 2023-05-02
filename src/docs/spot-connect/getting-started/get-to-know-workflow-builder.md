@@ -23,7 +23,7 @@ The page consists of three panels to create your workflow:
 
 * **Left Panel** – A library of integration actions. Click the + icon in the top left to open and close the library.
 
-<img src="/spot-connect/_media/get-to-know-wkflw-bldr-3.png" />
+<img src="/spot-connect/_media/get-to-know-wkflw-bldr-3.png" width="400" height="650" />
 
 * **Center Panel**-  A canvas where you can drag and drop action nodes to connect them and create a workflow.
 
@@ -47,7 +47,7 @@ After creating the workflow, click the trigger node to select the API key.
 
 1. Click Settings and then Resources to create the API Key.
 
-<img src="/spot-connect/_media/get-to-know-wkflw-bldr-4.png" />
+<img src="/spot-connect/_media/get-to-know-wkflw-bldr-4.png" width="500" height="500" />
 
 Once the key is selected, the API key and Webhook URL can be copied.
 
