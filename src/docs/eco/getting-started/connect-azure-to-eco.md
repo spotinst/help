@@ -15,8 +15,8 @@ MOSP/PAYG*
 ## Prerequisites
 
 > - Review [read-only permissions](https://docs.spot.io/eco/azure-tutorials/access-roles-read-only) required for Eco Cost Specialist team
-> - For steps 1-3: The Azure user performing these steps must be a Global Administrator with [elevated access](https://docs.microsoft.com/en-us/azure/role-based-access-control/elevate-access-global-admin#elevate-access-for-a-global-administrator) and access to the relevant Management Group(s) or Subscription(s)
-> - For step 4: The Azure user performing this step must be an Enterprise Administrator (EA) or Billing account owner (MCA)
+> - For steps 1-4: The Azure user performing these steps must be a Global Administrator with [elevated access](https://docs.microsoft.com/en-us/azure/role-based-access-control/elevate-access-global-admin#elevate-access-for-a-global-administrator) and access to the relevant Management Group(s) or Subscription(s)
+> - For step 5: The Azure user performing this step must be an Enterprise Administrator (EA) or Billing account owner (MCA)
 
 
 ## Process
