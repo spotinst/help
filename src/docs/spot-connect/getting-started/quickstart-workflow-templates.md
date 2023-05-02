@@ -10,7 +10,7 @@ Workflow templates in Spot Connect help you navigate to a specific workflow easi
 
 <img src="/spot-connect/_media/workflow-templates.png" />
 
-In the Spot Connect console, click Workflows and then the Templates tab to view the list of workflow samples that can be filtered based on the following use case categories:
+In the Spot Connect console, click Workflows and then the Templates tab to view the list of workflow samples that can be filtered based on the following categories:
 
 * Spot Onboarding
 * Spot Automations

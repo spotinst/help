@@ -19,7 +19,7 @@ In the workflow interface you can drag, drop and connect nodes on the canvas to 
 
 <img src="/spot-connect/_media/get-to-know-wkflw-bldr-2.png" />
 
-The page consists of three panels to create your workflow:
+**The interface consists of three panels to create your workflow**:
 
 * **Left Panel** – A library of integration actions. Click the + icon in the top left to open and close the library.
 
