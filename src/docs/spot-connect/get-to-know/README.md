@@ -1,4 +1,4 @@
-# Get to know the Workflow Builder
+# Get to Know the Workflow Builder
 
 In the workflow interface you can drag, drop and connect nodes on the canvas to create a workflow that suits your needs.
 
@@ -12,7 +12,6 @@ In the workflow interface you can drag, drop and connect nodes on the canvas to 
 4. Select the trigger type.
 
 * You can select the trigger type once the integration is configured and authorized on the Settings page.
-
 * Generic Webhook can be used for any third-party application that supports webhook as a notification.
 
 5. Click Create Workflow.
