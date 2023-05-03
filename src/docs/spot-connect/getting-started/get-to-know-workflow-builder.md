@@ -25,7 +25,7 @@ In the workflow interface you can drag, drop and connect nodes on the canvas to 
 
 <img src="/spot-connect/_media/get-to-know-wkflw-bldr-3.png" width="400" height="650" />
 
-* **Center Panel**-  A canvas where you can drag and drop action nodes to connect them and create a workflow.
+* **Center Panel** - A canvas where you can drag and drop action nodes to connect them and create a workflow.
 
 * **Right Panel** – An action configuration panel where you select the integration instance, account, and operation, enter the input parameters, and explore the output of your chosen action.
 
@@ -45,16 +45,16 @@ The trigger types shown provide the default JSON schema body in the output of th
 
 After creating the workflow, click the trigger node to select the API key.
 
-1. Click Settings and then Resources to create the API Key.
+Click Settings and then Resources to create the API Key.
 
 <img src="/spot-connect/_media/get-to-know-wkflw-bldr-4.png" width="500" height="500" />
 
 Once the key is selected, the API key and Webhook URL can be copied.
 
-<img src="/spot-connect/_media/get-to-know-wkflw-bldr-.png" />
+<img src="/spot-connect/_media/get-to-know-wkflw-bldr-6.png" />
 
-Webhook URL requires an API key to authenticate. For instance, the API key can be added as a query parameter or embedded in the URL for usage with AWS SNS Topics.
+Webhook URL requires an API key to authenticate. For instance, the API key can be added as a query parameter or be embedded in the URL for usage with AWS SNS Topics.
 
 Postman can be used to quickly test the execution of the workflow with example data provided in the body.
 
-<img src="/spot-connect/_media/get-to-know-wkflw-bldr-.png" />
+<img src="/spot-connect/_media/get-to-know-wkflw-bldr-7.png" />
