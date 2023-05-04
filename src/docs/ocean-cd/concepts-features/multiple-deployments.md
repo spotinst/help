@@ -1,8 +1,8 @@
 # Multiple SpotDeployments per RolloutSpec
 
-Multiple SpotDeployments Per RollouSpec provide flexibility when configuring the RolloutSpec entity.  This feature enables you to set as many clusters, namespaces and Spot deployments as needed as part of one RolloutSpec.   
+Multiple SpotDeployments Per RollouSpec provide flexibility when configuring the RolloutSpec entity.  This feature enables you to set as many clusters and namespaces as needed as part of one RolloutSpec.   
 
-Multiple SpotDeployments enable all of the configured SpotDeployments to use the same services, strategies, arguments as well as failure policies.  
+Multiple SpotDeployments enable all of the configured SpotDeployments to use strategies and arguments as well as failure policies.  
 
 The following tutorial explains how to use the feature in the Spot console:
 
