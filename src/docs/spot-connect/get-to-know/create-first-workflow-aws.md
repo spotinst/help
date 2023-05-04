@@ -80,7 +80,7 @@ Create the workflow using the AWS node.
 1. Select the AWS node, and the input configuration panel opens.
 2. Above the alias field, click the settings icon and select Set value now.
 
-<img src="/spot-connect/_media/create-wrkflw-aws-3.png" width="450" height="230" />
+<img src="/spot-connect/_media/create-wrkflw-aws-3.png" />
 
 3. From the dropdown menu, select the AWS integration alias created above.
 4. Above the region_name field, click the settings icon and select Set value now.
