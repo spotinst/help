@@ -48,7 +48,7 @@ Create the workflow using the AWS node.
 <img src="/spot-connect/_media/create-wrkflw-spot-6.png" />
 
 8. In the Description field, enter a workflow description.
-9. Find the AWS EC2 instance with a specific name by completing the following steps: 
+9. Find the AWS EC2 instance with a specific name by completing the following steps:
   a. Click + on the left panel and click Core.
   b. Drag and drop the AWS node onto the canvas.
   c. Manually connect the Manual Trigger node with the AWS node.
@@ -57,71 +57,48 @@ Create the workflow using the AWS node.
 ### Configure the Describe EC2 Instance Node
 
 1. Select the AWS node, and the input configuration panel opens.
-
 2. Above the alias field, click the settings icon and select Set value now.
-
 3. From the alias dropdown menu, select the AWS integration alias created above.
-
 4. Above the region_name field, click the settings icon and select Set value now.
-
 5. From the region-name dropdown menu, select the region.
-
 6. In the Service field, select the AWS Service.
-
 7. In the Operation field, select [DescribeInstances](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ec2/client/describe_instances.html#). The following fields open: Optional, Name, and Value.  
-
 8. In the Optional field, click + Add Filters.  
-
 9. In the Name field, enter tag:Name and click Add Value.
-
 10. In the value field, enter the name of the EC2 instance you want to stop and click Save.
-
 11. Click Save Workflow at the top to save the new workflow version.
 
 ## Shutdown the EC2 Instance  
 
 1. Click + on the left panel and click Core.  
-
 2. Drag and drop the AWS node onto the canvas.
-
 3. Manually connect the previous Describe EC2 Instance AWS node with the new AWS node.
-
 4. Change the name of the new AWS node to: Shutdown EC2 Instance.
 
 ### Configure the Shutdown EC2 Instance node
 
 1. Select the AWS node, and the input configuration panel opens.
-
 2. Above the alias field, click the settings icon and select Set value now.
 
 <img src="/spot-connect/_media/create-wrkflw-aws-3.png" />
 
 3. From the dropdown menu, select the AWS integration alias created above.
-
 4. Above the region_name field, click the settings icon and select Set value now.
-
 5. From the region-name dropdown menu, select the region.
-
 6. In the Service field, select the AWS Service.
-
 7. In the Operation field, select StopInstances
-
 8. Above the InstanceIds field, click the settings icon and select Set value from the previous step.
-
 9. Select the Describe EC2 instance node from the dropdown menu.
 
 <img src="/spot-connect/_media/create-wrkflw-aws-4.png" />
 
 10. From the dropdown menu in the Previous step Output, select output.  
-
 11. In the output, click Configure, that opens a modal with the JSON Schema of the response output of the EC2 described action.
-
 12. Select InstanceId.
 
 <img src="/spot-connect/_media/create-wrkflw-aws-5.png" />
 
 13. Click Save Output.
-
 14. Click Save Workflow at the top to save the new workflow version.  
 
 ## Manually Run the Workflow
@@ -131,7 +108,6 @@ You can manually run the workflow that you constructed in the steps above.
 <img src="/spot-connect/_media/create-wrkflw-aws-6.png" />
 
 1. In the workflow builder, click Run Now. A new browser opens that displays the execution steps of the workflow.
-
 2. Refresh the browser to see the updated step statuses.
 
 <img src="/spot-connect/_media/create-wrkflw-aws-7.png" />
