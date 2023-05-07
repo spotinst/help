@@ -86,7 +86,7 @@ Create the workflow using the AWS node.
 4. Above the region_name field, click the settings icon and select Set value now.
 5. From the region-name dropdown menu, select the region.
 6. In the Service field, select the AWS Service.
-7. In the Operation field, select StopInstances.
+7. In the Operation field, select [StopInstances](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ec2/client/stop_instances.html#).
 8. Above the InstanceIds field, click the settings icon and select Set value from the previous step.
 9. Select the Describe EC2 instance node from the dropdown menu.
 
