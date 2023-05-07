@@ -48,7 +48,7 @@ The Slack integration enables you to send notifications and messages from a work
 4. Enter an alias for the Slack Workspace.
 5. Click Add to Slack.
 
-<img src="/spot-connect/_media/create-wrkflw-spot-7.png" />
+<img src="/spot-connect/_media/create-wrkflw-spot-7.png" width="400" height="500" />
 
 6. In the top right corner, verify that you selected the correct workspace and click Submit.  
 
@@ -61,7 +61,7 @@ _If you do not have permission to access the Slack Workspace, you can request to
 4. Search for and add the Spot Connect by Netapp app.
 5. Verify the app is listed in the integrations.
 
-<img src="/spot-connect/_media/create-wrkflw-spot-4.png" />
+<img src="/spot-connect/_media/create-wrkflw-spot-4.png" width="500" height="500" />
 
 ### API Key
 
@@ -97,11 +97,9 @@ Create a workflow using the Spot Elastigroup AWS node.
 
 2. From the Webhook API Key Name dropdown menu, select the API Key created above. The webhook URL and required API Key is provided.
 
-<img src="/spot-connect/_media/create-wrkflw-spot-10.png" />
-
 3. The API key can be added as a Header or Query Parameter, which is embedded in the URL for usage with AWS SNS Topics.
 
->**Note**:
+**Note**:
 * The workflow cannot be saved with the trigger node configured and requires at least one additional node added.
 * Since the Generic Webhook trigger is configured, Spot Connect is unaware of which third-party application sends the webhook payload. Therefore, the Output of the trigger node does not show the JSON Schema of the webhook. However, his can be copied by following the steps listed here.
 
@@ -225,10 +223,15 @@ Send an approval notification to the slack channel, and if approved, automatical
 4. Manually add the two paths for approval and denial by completing the following steps:  
 
 a. To create one path, drag and drop the Spot Elastigroup AWS onto the canvas.
+
 b. Manually connect the Approval Node with the Spot Elastigroup AWS node
+
 c. Rename the node to “Scale Down Elastigroup.”
+
 d. Use this path for approval.
+
 e. To create the other path, drag and drop the Spot Elastigroup AWS onto the canvas.
+
 f. Manually connect the Approval Node with the Spot Elastigroup AWS node.
 
 ### Configure the Approval Node
@@ -238,10 +241,8 @@ f. Manually connect the Approval Node with the Spot Elastigroup AWS node.
 3. In the Slack App, right-click the channel and select View Channel Details.
 4. Select the Integrations tab and Click Add apps.
 5. Search for and add the Spot Connect app.
-6. Verify the app is listed in the integrations.  
-
-a. Enter notes to the reviewer.
-b. Set the Interval before triggering a time out.
+6. Verify the app is listed in the integrations and enter notes to the reviewer.
+7. Set the Interval before triggering a time out.
   * For approved, select the node Spot Elastigroup AWS #2.  
   * For denied, select the node Stop #1.
 
