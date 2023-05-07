@@ -50,17 +50,14 @@ The Slack integration enables you to send notifications and messages from a work
 
 <img src="/spot-connect/_media/create-wrkflw-spot-7.png" />
 
-6. In the top right corner, verify that you selected the correct workspace and click Allow.  
+6. In the top right corner, verify that you selected the correct workspace and click Submit.  
 
 _If you do not have permission to access the Slack Workspace, you can request to install it, which is sent to the App Manager for approval_.
-
-<img src="/spot-connect/_media/create-wrkflw-spot-8.png" />
 
 #### Enable a Slack Channel for Selection
 
 1. In the Slack App, right-click the channel and select View Channel Details.
-2. Click the Integrations tab.
-3. Click Add a Workflow.  
+2. Click the Integrations tab and click Add a Workflow.  
 4. Search for and add the Spot Connect by Netapp app.
 5. Verify the app is listed in the integrations.
 
@@ -86,7 +83,7 @@ Create a workflow using the Spot Elastigroup AWS node.
 
 <img src="/spot-connect/_media/create-wrkflw-spot-5.png" />
 
-In the left panel, click the settings icon.
+6. In the left panel, click the settings icon.
 
 <img src="/spot-connect/_media/create-wrkflw-spot-6.png" />
 
@@ -227,10 +224,15 @@ Send an approval notification to the slack channel, and if approved, automatical
 3. Manually connect the Slack Send Message node with the new Approval Node.
 4. Manually add the two paths for approval and denial by completing the following steps:  
 a. To create one path, drag and drop the Spot Elastigroup AWS onto the canvas.
+
 b. Manually connect the Approval Node with the Spot Elastigroup AWS node
+
 c. Rename the node to “Scale Down Elastigroup.”
+
 d. Use this path for approval.
+
 e. To create the other path, drag and drop the Spot Elastigroup AWS onto the canvas.
+
 f. Manually connect the Approval Node with the Spot Elastigroup AWS node.
 
 ### Configure the Approval Node
@@ -242,6 +244,7 @@ f. Manually connect the Approval Node with the Spot Elastigroup AWS node.
 5. Search for and add the Spot Connect app.
 6. Verify the app is listed in the integrations.  
 a. Enter notes to the reviewer.
+
 b. Set the Interval before triggering a time out.
   * For approved, select the node Spot Elastigroup AWS #2.  
   * For denied, select the node Stop #1.
@@ -311,12 +314,12 @@ o   {o     "Organization_Name": "SpotOrgname",o     "Account_Name": "SpotAccount
 
 You can view the executions you created in the Execution Detail page after you have successfully run your workflow.  
 
-1. In the left main menu, click Connect and Executions. This page gives a general overview of an execution. You can review each step individually by clicking on the step.
+In the left main menu, click Connect and Executions. This page gives a general overview of an execution. You can review each step individually by clicking on the step.
 
 <img src="/spot-connect/_media/create-wrkflw-spot-23.png" />
 
-2. Click a step ID to view the details of that step. You can click the Inputs and Outputs tabs to view the input and output information.
+Click a step ID to view the details of that step. You can view the input and output information by clicking the relevant tab. 
 
 <img src="/spot-connect/_media/create-wrkflw-spot-24.png" />
 
-<img src="/spot-connect/_media/create-wrkflw-spot-25.png" /> 
+<img src="/spot-connect/_media/create-wrkflw-spot-25.png" />
