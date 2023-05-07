@@ -11,11 +11,11 @@ Create a budgeted alert in Elastigroup for the automatic scale-down.
 1. In the left main menu, click Elastigroup and click Budgets.
 2. Click an Elastigroup ID to set a budget.
 
-<img src="/spot-connect/_media/create-wkflw-spot-elastigroup-2.png" />
+<img src="/spot-connect/_media/create-wkflw-spot-elastigroup-2.png" width="500" height="160" />
 
 3. Set the threshold.  
 
-<img src="/spot-connect/_media/create-wkflw-spot-elastigroup-3.png" />
+<img src="/spot-connect/_media/create-wkflw-spot-elastigroup-3.png" width="350" height="200" />
 
 4. Set the SNS alert type.  
 
@@ -158,7 +158,7 @@ The JSON schema is provided for the webhook body from your third-party applicati
 
 ## Get the Friendly Name of Elastigroup using the Spot API
 
-The webhook body payload only provides the Elastigroup ID, but we would like to give the familiar name of Elastigroup in the Slack message. Retrieve the Elastigroup configuration details by using the [List Elastigroup](https://docs.spot.io/api/#tag/Elastigroup-AWS/operation/elastigroupAwsListElastigroup) API call.
+The webhook body payload only provides the Elastigroup ID, but we would like to give the familiar name of Elastigroup in the Slack message. Retrieve the Elastigroup configuration details by using the List Elastigroup API call.
 
 1. Click + on the left panel and click Spot by Netapp.
 2. Drag and drop the Spot Elastigroup AWS node onto the canvas.
