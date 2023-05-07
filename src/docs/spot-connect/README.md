@@ -29,4 +29,4 @@ From the menu on the left, you can navigate to any of the reference documentatio
 
 ## What's Next?
 
-Get to know the Workflow Builder.  
+Get to know the [Workflow Builder](spot-connect/get-to-know/).  

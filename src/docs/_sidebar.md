@@ -18,6 +18,7 @@
 - [**Ocean CD**](ocean-cd/)
 - [**Eco**](eco/)
 - [**Security**](spot-security/)
+- [**Spot Connect**](spot-connect/)
 - [**Spot PC**](spot-pc/)
 - [**Spot Storage**](spot-storage/)
 - [**Administration**](administration/)

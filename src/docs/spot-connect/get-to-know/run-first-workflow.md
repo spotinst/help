@@ -9,7 +9,7 @@ You can run a workflow by ensuring that it has the four following components:
 
 ## Prerequisites
 
-* Create a [workflow]().
+* Create a [workflow](spot-connect/get-to-know/create-first-workflow-spot).
 * API keys.
 
 ## Workflow Editor
