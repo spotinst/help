@@ -1,5 +1,11 @@
 # Controller Version History
 
+## [1.0.92] - 2023-05-07
+
+Added
+
+- Update 3rd party libraries versions
+
 ## [1.0.91] - 2023-04-30
 
 Added
