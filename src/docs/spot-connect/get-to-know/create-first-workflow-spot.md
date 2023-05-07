@@ -101,7 +101,7 @@ Create a workflow using the Spot Elastigroup AWS node.
 
 **Note**:
 * The workflow cannot be saved with the trigger node configured and requires at least one additional node added.
-* Since the Generic Webhook trigger is configured, Spot Connect is unaware of which third-party application sends the webhook payload. Therefore, the Output of the trigger node does not show the JSON Schema of the webhook. However, his can be copied by following the steps listed here.
+* Since the Generic Webhook trigger is configured, Spot Connect is unaware of which third-party application sends the webhook payload. Therefore, the Output of the trigger node does not show the JSON Schema of the webhook. However, his can be copied by following the steps listed [here](spot-connect/get-to-know/create-first-workflow-spot?id=workflow-execution-alert-body).
 
 #### Extract the Elastigroup ID from the Webhook JSON Formatted Alert Body
 
@@ -146,7 +146,7 @@ To update the output schema of the trigger node, complete the following steps:
 4. Click Use as the output schema.
 5. Open the Workflow builder.
 6. Select the generic webhook trigger node.
-7. Select the output tab in the configuration panel.
+7. Select the Output tab in the configuration panel.
 8. Click View Outputs.
 
 <img src="/spot-connect/_media/create-wrkflw-spot-14.png" />
@@ -172,7 +172,7 @@ The webhook body payload only provides the Elastigroup ID, but we would like to 
 
 8. Click the settings icon above the groupID field and select Set value from the previous step.
 9. In the groupID field, select Trigger [trigger_1].
-10. In the Previous Step Output, select output.
+10. In the Previous Step Output, select `output`.
 11. Click Configure.
 12. Select the key name from the trigger node JSON Schema.
 13. Click Save Output.
@@ -200,7 +200,7 @@ b. Click + Add Slack Variables.
 <img src="/spot-connect/_media/create-wrkflw-spot-18.png" />
 
 5. In the Set Slack Variable field, enter the variable name EG-Name.
-6. Select the List Elastigroup node and output in the Previous Step Output field.  
+6. Select the List Elastigroup node and `output` in the Previous Step Output field.  
 7. Select Configure.
 8. Select the key name and click Save Output.
 
