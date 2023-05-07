@@ -246,7 +246,7 @@ f. Manually connect the Approval Node with the Spot Elastigroup AWS node.
   * For approved, select the node Spot Elastigroup AWS #2.  
   * For denied, select the node Stop #1.
 
-<img src="/spot-connect/_media/create-wrkflw-spot-20.png" />
+<img src="/spot-connect/_media/create-wrkflw-spot-20.png" width="250" height="450" />
 
 ## Scale Down the Elastigroup Cluster  
 
