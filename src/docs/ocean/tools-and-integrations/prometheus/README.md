@@ -6,7 +6,7 @@ Ocean maintains an official set of metrics, natively scrapable by Prometheus. Th
 
 ## Ocean Metrics
 
-By monitoring a few key metrics you can gain an understanding of how Ocean scales. The metrics are described below with examples.
+By monitoring a few key metrics you can gain an understanding of how Ocean scales. TThe metrics are described below with examples and are relevant to Ocean Prometheus Exporter for AWS Kubernetes and GCP.
 
 ### ocean_managed_nodes
 
@@ -14,7 +14,7 @@ This metric tracks the total number of nodes managed by Ocean in the cluster. Th
 
 Prometheus metric type: gauge
 
-Dimensions: `vng_id`, `lifecycle="Spot/OD"` , `az`, `vm_type`, `ocean_name`, `vng_name`, `ocean_id`
+Dimensions: `vng_id`, `lifecycle="Spot/OD/Preemptible"` , `az/zone`, `vm_type`, `ocean_name`, `vng_name`, `ocean_id`
 
 Example:  
 ```
@@ -27,11 +27,11 @@ ocean_managed_nodes {vng_id="ols-xxxxxxxx", lifecycle="Spot", az="us-west-2b", v
 
 ### Ocean_Nodes_added_total and Ocean_Nodes_removed_total
 
-These counter type metrics help track the rate of addition and removal of nodes in the cluster and the different reasons behind them, as reflected in a dedicated label called Reason.  Reason includes values such as `pendingPodsOrHeadroom` (as part of scale up), `scaleDownForOptimization`, `odToSpotReplacement`, `autoHealingReplacement`, `riUtilizationReplacement`, `recoveryReplacement`, `revertToLowerCostReplacement`, `shutdownHoursActivity`, `clusterRollReplacement`, `workloadMigration`.
+These counter type metrics help track the rate of addition and removal of nodes in the cluster and the different reasons behind them, as reflected in a dedicated label called Reason.  Reason includes values such as `pendingPodsOrHeadroom` (as part of scale up), `scaleDownForOptimization`, `odToSpotReplacement`, `autoHealingReplacement`, `riUtilizationReplacement`(relevant only to AWS), `recoveryReplacement`, `revertToLowerCostReplacement`, `shutdownHoursActivity`, `clusterRollReplacement`, `workloadMigration`.
 
 Prometheus metric type: counter
 
-Dimensions: `reason`, `VNG_Id`, `lifecycle="Spot/ ON-DEMAND/ OD(RI)"`, `az`, `vm_type`, `Ocean_Name`, `vng_name`, `ocean_id`, `Node_name` (optional, only for ocean_nodes_removed_total)
+Dimensions: `reason`, `VNG_Id`, `lifecycle="Spot/OD/Preemptible"`, `az/zone`, `vm_type`, `Ocean_Name`, `vng_name`, `ocean_id`, `Node_name` (optional, only for ocean_nodes_removed_total)
 
 Example:
 ```
@@ -49,7 +49,7 @@ These metrics track the total resources allocatable by all nodes in the cluster.
 
 Prometheus metric type: gauge
 
-Dimensions: `VNG_Id`, `lifecycle="Spot/OD"` , `az`, `vm_type`, `Ocean_Name`, `vng_name`, `ocean_id`
+Dimensions: `VNG_Id`, `lifecycle="Spot/OD/Preemptible"` , `az/zone`, `vm_type`, `Ocean_Name`, `vng_name`, `ocean_id`
 
 Example:
 ```
@@ -62,7 +62,7 @@ This metric tracks the total resource allocatable as headroom in all nodes in th
 
 Prometheus metric type: gauge
 
-Dimensions: `VNG_Id`, `lifecycle="Spot/OD"` , `az`, `vm_type`, `Ocean_Name`, `vng_name`, `ocean_id`
+Dimensions: `VNG_Id`, `lifecycle="Spot/OD/Preemptible"` , `az/zone`, `vm_type`, `Ocean_Name`, `vng_name`, `ocean_id`
 
 Example:  
 ```
@@ -77,7 +77,7 @@ This metric is a measure of the controller health in the cluster. The metric tra
 
 Prometheus metric type: gauge
 
-Dimensions:  `Ocean_Name`, `ocean_id` 
+Dimensions:  `Ocean_Name`, `ocean_id`
 
 Example:  
 ```
