@@ -283,7 +283,7 @@ Open your API platform. The following procedure is an example that uses Postman.
 7. Under the Body tab, select raw, and change the format to JSON.
 8. Enter the relevant data from your Elastigroup with the following JSON Schema:
 
-```YAML
+```json
 o   {o     "Organization_Name": "SpotOrgname",o     "Account_Name": "SpotAccountname",o     "Account_ID": "act-29ddd123",o     "MTD_Spend": "3.8",o     "Budget": "4.0",o     "Elastigroup_Id": "sig-e26f1234"o   }  
 ```
 
