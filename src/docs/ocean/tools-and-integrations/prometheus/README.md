@@ -27,7 +27,7 @@ ocean_managed_nodes {vng_id="ols-xxxxxxxx", lifecycle="Spot", az="us-west-2b", v
 
 ### Ocean_Nodes_added_total and Ocean_Nodes_removed_total
 
-These counter type metrics help track the rate of addition and removal of nodes in the cluster and the different reasons behind them, as reflected in a dedicated label called Reason.  Reason includes values such as `pendingPodsOrHeadroom` (as part of scale up), `scaleDownForOptimization`, `odToSpotReplacement`, `autoHealingReplacement`, `riUtilizationReplacement`(relevant only to AWS), `recoveryReplacement`, `revertToLowerCostReplacement`, `shutdownHoursActivity`, `clusterRollReplacement`, `workloadMigration`.
+These counter type metrics help track the rate of addition and removal of nodes in the cluster and the different reasons behind them, as reflected in a dedicated label called Reason.  Reason includes values such as `pendingPodsOrHeadroom` (as part of scale up), `scaleDownForOptimization`, `odToSpotReplacement`, `autoHealingReplacement`, `riUtilizationReplacement`, `recoveryReplacement`, `revertToLowerCostReplacement`, `shutdownHoursActivity`, `clusterRollReplacement`, `workloadMigration` (relevant only to AWS).
 
 Prometheus metric type: counter
 
