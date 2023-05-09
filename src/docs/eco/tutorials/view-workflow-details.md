@@ -60,6 +60,20 @@ A report that was successfully created is downloadable via the UI for a limited 
 
 If you are interested in programatic access to scheduled reports, please submit a support ticket.
 
+## Schedule a Report
+You can schedule a report. Scheduling a report is a way to repeat an existing report that you may repeat weekly or monthly.
+
+<img src="/eco/_media/tutorials-view-workflow-details-07.png" />
+
+1. Click the report you want and select Add a Schedule. The Schedule Workflow window opens.
+
+<img src="/eco/_media/tutorials-view-workflow-details-08.png" />
+
+2. Enter the start date of your schedule.
+3. Select the range of the report (Month to date, Previous Month, or Previous Week), and how frequently the report repeats (Daily, Weekly, Monthly, Does Not Repeat). When the information is entered, a description of when the report will run and the details of the report will appear. If this information is correct, click Save Schedule to schedule the future report(s).
+
+<img src="/eco/_media/tutorials-view-workflow-details-09.png" />  
+
 ## Example Report
 
 The example report generated below is organized according to the Group by options: Customer, Usage Account, Service, Region, Charge Type, and Lifecycle.
@@ -83,7 +97,7 @@ ECO RI Savings | Net savings gained from Eco-generated reservations. Not current
 SP Savings Only | Net savings gained from savings plans from all sources. Not currently available when Charge Type or Lifecycle groupings are selected as grouping during the report configuration. Your workflow has no impact on this column.
 ECO SP Savings | Net savings gained from  Eco-generated savings plans. Not currently available when Charge Type or Lifecycle groupings are selected as grouping during the report configuration. Your workflow has no impact on this column.
 RI Ondemand Cost | On-demand cost of resource which have been discounted by RIs
-SP Ondemand Cost | On-demand cost of resource which have been discounted by Savings Plans 
+SP Ondemand Cost | On-demand cost of resource which have been discounted by Savings Plans
 RI Effective Cost |  Reserved Instances effective cost (amortized cost + recurring cost) allocated to the resource which consumed the discount from RIs. Not currently available when Charge Type or Lifecycle groupings are selected as grouping during the report configuration. Your workflow has no impact on this column.
 SP Effective Cost | Savings Plan effective cost (amortized cost + recurring cost) allocated to the resource which consumed the discount from SPs. Not currently available when Charge Type or Lifecycle groupings are selected as grouping during the report configuration. Your workflow has no impact on this column.
 ECO RI Effective Cost |  Reserved Instance effective cost (amortized cost + recurring cost) allocated to the resource which consumed the discount from Eco RIs. Not currently available when Charge Type or Lifecycle groupings are selected as grouping during the report configuration. Your workflow has no impact on this column.
