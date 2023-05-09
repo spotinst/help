@@ -61,7 +61,7 @@ A report that was successfully created is downloadable via the UI for a limited 
 If you are interested in programatic access to scheduled reports, please submit a support ticket.
 
 ## Schedule a Report
-You can schedule a report. Scheduling a report is a way to repeat an existing report that you may repeat weekly or monthly.
+Scheduling a report is a way to repeat an existing report that you may repeat weekly or monthly.
 
 <img src="/eco/_media/tutorials-view-workflow-details-07.png" />
 
