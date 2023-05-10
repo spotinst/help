@@ -335,3 +335,5 @@ Click a step ID to view the details of that step. You can view the input and out
 <img src="/spot-connect/_media/create-wrkflw-spot-24.png" />
 
 <img src="/spot-connect/_media/create-wrkflw-spot-25.png" />
+
+Learn how to [create your first workflow with AWS](spot-connect/get-to-know/create-first-workflow-aws).
