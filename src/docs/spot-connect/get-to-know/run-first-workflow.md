@@ -104,4 +104,4 @@ You can add another action node to the canvas. If you decide to add another node
 
 ## What’s Next?
 
-Get started quickly with Workflow Templates.
+Get started quickly with [Workflow Templates](spot-connect/get-to-know/quickstart-workflow-templates).
