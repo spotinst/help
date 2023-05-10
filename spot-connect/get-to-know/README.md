@@ -60,4 +60,4 @@ Postman can be used to quickly test the execution of the workflow with example d
 
 ## What's Next?
 
-Create your first workflow with Spot integration or AWS integration.
+Create your first workflow with [Spot integration](spot-connect/get-to-know/create-first-workflow-spot) or [AWS integration](spot-connect/get-to-know/create-first-workflow-aws).
