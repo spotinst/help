@@ -97,6 +97,8 @@ Create a workflow using the Spot Elastigroup AWS node.
 
 2. From the Webhook API Key Name dropdown menu, select the API Key created above. The webhook URL and required API Key is provided.
 
+<img src="/spot-connect/_media/create-wrkflw-spot-10.png" />
+
 3. The API key can be added as a Header or Query Parameter, which is embedded in the URL for usage with AWS SNS Topics.
 
 **Note**:
@@ -266,6 +268,9 @@ If you approved the flow in Slack, configure the scale down of the Elastigroup t
 10. Select Elastigroup_Id from the trigger node JSON Schema.
 11. Click Save Output. The value of the Elastigroup_Id will be automatically entered in the groupId field.
 12. In the adjustment field, set the number of nodes by which you want to scale the Elastigroup.
+
+<img src="/spot-connect/_media/create-wrkflw-spot-26.png" />
+
 13. Click Save Workflow to save the new workflow version.  
 
 ## Run the Workflow using Webhook
@@ -284,7 +289,14 @@ Open your API platform. The following procedure is an example that uses Postman.
 8. Enter the relevant data from your Elastigroup with the following JSON Schema:
 
 ```json
-o   {o     "Organization_Name": "SpotOrgname",o     "Account_Name": "SpotAccountname",o     "Account_ID": "act-29ddd123",o     "MTD_Spend": "3.8",o     "Budget": "4.0",o     "Elastigroup_Id": "sig-e26f1234"o   }  
+{
+  "Organization_Name": "SpotOrgname",
+  "Account_Name": "SpotAccountname",
+  "Account_ID": "act-29ddd123",
+  "MTD_Spend": "3.8",
+  "Budget": "4.0",
+  "Elastigroup_Id": "sig-e26f1234"
+}
 ```
 
 9. Click Send.
@@ -305,6 +317,9 @@ o   {o     "Organization_Name": "SpotOrgname",o     "Account_Name": "SpotAccount
 ## Approve the Workflow using Slack
 
 1. Open the select Slack Channel to review the slack message and approval.
+
+<img src="/spot-connect/_media/create-wrkflw-spot-27.png" />
+
 2. Click Approve for the workflow to continue with scaling down the identified Elastigroup.
 
 ## View Executions
