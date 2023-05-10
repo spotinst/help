@@ -3,7 +3,7 @@
 When you create a [permission policy](administration/policies/), you can define the policy type and choose the services and actions that will be included. The detailed procedures are described below.
 
 ## Get Started
-1. Go to the User icon in the Spot console and click Settings.
+1. Click the User icon in the Spot console and click Settings.
 
 <img src="/administration/_media/create-new-user-01.png" width="381" height="258" />
 
@@ -67,11 +67,44 @@ To remove a service and all of its corresponding actions, click the Trash icon o
 
 ## Edit the JSON
 
-You also have the option to edit the JSON format. Do the following:
+You can also edit the JSON format. Complete the following steps:
 1. By Services and permissions, click JSON.
 2. Click Edit Mode, and edit the file as required.
 
 <img src="/administration/_media/create-policy-06.png" />
+
+### Edit Custom Policy Conditions
+
+You can edit the custom policy conditions according to the following conditions and their supported configurations in the JSON format.   
+
+The conditions consist of 4 parts:
+
+* Condition operator: The operator field defines the logic that will be checked between the operands condition attribute value VS actual retrieved value.  
+* Resource retrieval: This part is responsible for the definition of which resource will be tested with the condition operator and specifies the resources that will be retrieved for testing.  
+* Resource attribute: A single attribute among the available attributes from the resource configuration.
+* Attribute value: The specified value should be tested against the retrieved value within the retrieved resource.
+
+**Example**
+
+Editing with an Elastigroup resource:
+
+```json
+{
+    "group": {
+        "name": "eg-example",
+        "compute": {
+            "launchSpecification": {
+                "tags": [
+                    {
+                        "tagKey": "DeveloperEmail",
+                        "tagValue": "example@mail.com"
+                    }
+                ]
+            }
+        }
+    }
+}
+```
 
 ## What’s Next?
 
