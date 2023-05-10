@@ -29,4 +29,4 @@ You can also search for workflows by entering the name of a workflow or tag in t
 
 ## What's Next?
 
-Learn about integrations.
+Learn how to [run your first workflow](spot-connect/get-to-know/run-first-workflow).
