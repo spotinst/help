@@ -9,7 +9,7 @@ You can run a workflow by ensuring that it has the four following components:
 
 ## Prerequisites
 
-* Create a [workflow].
+* Create a [workflow](spot-connect/get-to-know/create-first-workflow-spot).
 * API keys.
 
 ## Workflow Editor
@@ -100,7 +100,7 @@ When all of the inputs for the specific action are configured and there are no a
 
 The Executions page provides live updates of the running workflow.  
 
-You can add another action node to the canvas. If you decide to add another node to the canvas, you need to click Save New Version after creating it and configuring it. This needs to be done for each action node that is added to the workflow. Each change that is made on the canvas needs to be saved by clicking Save New Version.
+You can add another action node to the canvas. If you decide to add another node to the canvas, you need to click Save New Version after creating and configuring it. This needs to be done for each action node that is added to the workflow. Each change that is made on the canvas needs to be saved by clicking Save New Version.
 
 ## What’s Next?
 
