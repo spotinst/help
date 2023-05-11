@@ -113,4 +113,4 @@ Let your account team know when you have completed the steps above.
 
 A detailed cost savings analysis will be available within 5 business days.
 
-In the meantime, learn [how Eco works](eco/azure/tutorials/) to provide significant savings on your cloud spend.
+In the meantime, learn [how Eco works](eco/azure-tutorials/) to provide significant savings on your cloud spend.
