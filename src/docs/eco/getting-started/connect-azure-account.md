@@ -5,7 +5,9 @@ This document describes the requirements for Spot Eco to provide an estimated co
 The steps below apply to the following account/agreement types:
 
 EA
+
 MCA
+
 MOSP/PAYG*
 
 *step 5 not required
@@ -32,12 +34,9 @@ MOSP/PAYG*
   <summary markdown="span">Step 2: Invite Spot Cost Specialist Guest User</summary>
 
 1. Click Users and click New user / Invite external user.
-2. In the Invite external user page, enter:
-
-  a. Email: ecoazad@netapp.com  
-
-  b. Display Name: Eco Cost Specialist (feel free to change).
-
+2. In the Invite external user page, enter the following:
+* Email: ecoazad@netapp.com  
+* Display Name: Eco Cost Specialist (feel free to change).
 3. Click Review & Invite (lower left corner) and then Invite.
 
 </details><br>
@@ -77,6 +76,7 @@ MOSP/PAYG*
 <details>
   <summary markdown="span">Step 5: Provide Read-only Access to EA or MCA Billing Data</summary>
 
+
   <details>
     <summary markdown="span">EA</summary>
 
@@ -111,4 +111,4 @@ MOSP/PAYG*
 
 Let your account team know when you have completed the steps above.
 A detailed cost savings analysis will be available within 5 business days.
-In the meantime, learn [how Eco works](eco/getting-started/) to provide significant savings on your cloud spend. 
+In the meantime, learn [how Eco works](eco/azure/tutorials) to provide significant savings on your cloud spend.
