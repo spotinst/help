@@ -77,41 +77,40 @@ MOSP/PAYG*
   <summary markdown="span">Step 5: Provide Read-only Access to EA or MCA Billing Data</summary>
 
 
+  <details>
+    <summary markdown="span">EA</summary>
 
-      <details>
-        <summary markdown="span">EA</summary>
+* Details for this permission can be found [here](https://learn.microsoft.com/en-us/azure/cost-management-billing/manage/understand-ea-roles).
 
-    * Details for this permission can be found [here](https://learn.microsoft.com/en-us/azure/cost-management-billing/manage/understand-ea-roles).
+1. Click Cost Management & Billing.
+2. In the left menu, select Billing Scopes and then select the appropriate Billing Account Scope.
+3. In the left menu, select Access Control (IAM).
+4. In the top menu, select + Add / Enterprise administrator.
+5. In the right pane, search for and select ecoazad@netapp.com.
+6. Check the box for Provide read-only access.
+7. Click Add in the lower right.
 
-    1. Click Cost Management & Billing.
-    2. In the left menu, select Billing Scopes and then select the appropriate Billing Account Scope.
-    3. In the left menu, select Access Control (IAM).
-    4. In the top menu, select + Add / Enterprise administrator.
-    5. In the right pane, search for and select ecoazad@netapp.com.
-    6. Check the box for Provide read-only access.
-    7. Click Add in the lower right.
+  </details><br>
 
-      </details><br>
+  <details>
+    <summary markdown="span">MCA</summary>
 
-      <details>
-        <summary markdown="span">MCA</summary>
+* Details for this permission can be found [here](https://learn.microsoft.com/en-us/azure/cost-management-billing/manage/understand-mca-roles).  
 
-    * Details for this permission can be found [here](https://learn.microsoft.com/en-us/azure/cost-management-billing/manage/understand-mca-roles).  
+1. Click Cost Management & Billing.
+2. In the left menu, select Access Control (IAM).
+3. In the top menu, select + Add.
+4. In the right pane, select Billing account reader.
+5. Search for and select ecoazad@netapp.com and click Save.
 
-    1. Click Cost Management & Billing.
-    2. In the left menu, select Access Control (IAM).
-    3. In the top menu, select + Add.
-    4. In the right pane, select Billing account reader.
-    5. Search for and select ecoazad@netapp.com and click Save.
+  </details><br>
 
-      </details><br>
+</details><br>
 
-    </details><br>
+## What's Next?
 
-    ## What's Next?
+Let your account team know when you have completed the steps above.
 
-    Let your account team know when you have completed the steps above.
+A detailed cost savings analysis will be available within 5 business days.
 
-    A detailed cost savings analysis will be available within 5 business days.
-
-    In the meantime, learn [how Eco works](eco/azure/tutorials) to provide significant savings on your cloud spend.
+In the meantime, learn [how Eco works](eco/azure/tutorials) to provide significant savings on your cloud spend.
