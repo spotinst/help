@@ -2,7 +2,7 @@
 
 OceanCD provides support for the Headers-based Traffic feature using Istio Traffic Manager that enables to send all of your traffic during any phase of your Canary or rolling update rollouts to an http request header value.
 
-The feature works in a similar manner for both Subset and Host Levels.  
+The feature works in a similar manner for both subset and host levels.  
 
 You can set the Headers-based Traffic feature while using Ocean CD according to the following tutorial.
 
@@ -45,12 +45,12 @@ kind: Strategy
         setWeight: 100
 ```
 
-A detailed explanation of all of the above parameters may be found as part of our API documentation.
+A detailed explanation of all of the above parameters can be found in Spot's API documentation.
 
 Rules of the behavior of the headers:  
 
-* Any header that was set as a part of any phase, will remain running until the end of the rollout. Headers may not be deleted throughout the rollout, they need to be part of consecutive phases.  
-* There is no limitation to the amount of headers you may add along the way.
+* Any header that was set as a part of any phase, will remain running until the end of the rollout. Headers can not be deleted throughout the rollout, they need to be part of consecutive phases.  
+* There is no limitation to the amount of headers you can add along the way.
 * There is no limitation to the number of Matches per HeaderRoute.
 * Each headerValue must include one of the following options: exact, prefix, regex.
 
@@ -64,4 +64,4 @@ Note: Headers can not be configured using the console. Use Spot's API to set the
 
 ## What's Next?
 
-Learn more about [entities](ocean-cd/concepts-features/entities). 
+Learn more about [entities](ocean-cd/concepts-features/entities).
