@@ -5,10 +5,8 @@ This document describes the requirements for Spot Eco to provide an estimated co
 The steps below apply to the following account/agreement types:
 
 EA
-
 MCA
-
-MOSP/PAYG*
+MOSP/PAYG
 
 *step 5 not required
 
