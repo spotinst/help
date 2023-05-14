@@ -2164,6 +2164,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/concepts-features/entities"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/ocean-cd/concepts-features/headers</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/concepts-features/headers"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/concepts-features/headers"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/ocean-cd/concepts-features/horizontal-pod-autoscaler</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
