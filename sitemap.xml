@@ -680,6 +680,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/eco/getting-started/connect-account-multiple-organizations-to-single-master-payer"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/eco/getting-started/connect-azure-account</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/eco/getting-started/connect-azure-account"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/eco/getting-started/connect-azure-account"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/eco/getting-started/connect-azure-ea-to-eco</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
@@ -699,13 +706,6 @@
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/eco/getting-started/connect-azure-mosp"/>
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/eco/getting-started/connect-azure-mosp"/>
-    </url>
-    <url>
-        <loc>https://docs.spot.io/?/eco/getting-started/connect-azure-to-eco</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/eco/getting-started/connect-azure-to-eco"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/eco/getting-started/connect-azure-to-eco"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/eco/getting-started/connect-your-aws-account</loc>
