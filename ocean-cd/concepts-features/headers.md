@@ -8,7 +8,7 @@ You can set the Headers-based Traffic feature while using Ocean CD according to 
 
 **Note: OceanCD’s tutorial uses a Subset Level Istio Traffic.**
 
-1. Make sure to configure the relevant YAML services as part of your RolloutSpec and apply them accordingly into your cluster.  
+1. Make sure to configure the relevant YAML services as part of your rolloutSpec and apply them accordingly into your cluster.  
 These include: DestinationRule, Stable Service, Gateway & Virtual Service YAMLs.
 
 * Templates can be found in Spot's public GitHub.
