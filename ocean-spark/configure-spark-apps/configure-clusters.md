@@ -62,7 +62,7 @@ An endpoint connection appears on your endpoint service, with the owner `0665971
 
 In addition, ensure that you set up your node security group to allow traffic from the load balancer.
 
-###Use an Existing Load Balancer
+### Use an Existing Load Balancer
 
 If you are using AWS, you can have OfAS use an existing load balancer instead of provisioning a new one. OfAS will still install an ingress controller, but it will be linked with an existing load balancer using a `TargetGroupBinding`.
 
@@ -88,7 +88,7 @@ Ensure that you set up your node security group to allow traffic from the load b
 
 ### Node Security Group
 
-Your node security group must allow traffic from the load balancer, over TCP on port 443. For the load balancer health checks, you can either allow traffic from your VPC CIDR, or the private IP addresses used by the load balancer nodes. See the [AWS documentation}(https://docs.aws.amazon.com/elasticloadbalancing/latest/network/target-group-register-targets.html#target-security-groups) for more information.
+Your node security group must allow traffic from the load balancer, over TCP on port 443. For the load balancer health checks, you can either allow traffic from your VPC CIDR, or the private IP addresses used by the load balancer nodes. See the [AWS documentation](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/target-group-register-targets.html#target-security-groups) for more information.
 
 If everything is configured correctly, you should see a healthy target in your target group. The target IP address should be the IP address of the `ofas-ingress-nginx-controller` pod running in the `spot-system` namespace.
 
@@ -231,7 +231,7 @@ You can configure additional Spark application namespaces in your OfAS cluster.
 
 The `spark-apps` namespace is always the default if no namespace is specified in the Spark application submission. It is not necessary to create these namespaces beforehand, the `bigdata-operator` component creates them if they do not exist.
 
-Istio Sidecar Injection
+### Istio Sidecar Injection
 
 If you are using Istio, disable the Istio sidecar injection in the Spark application namespaces since the sidecar can interfere with the Spark pod lifecycle.
 
@@ -289,7 +289,7 @@ This section shows you how to set up ARM VNGs on the different cloud providers.
 
 #### AWS  
 
-Select an Amazon Machine Image suitable for ARM. View [this list}(https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html) to select the right image according to the AMI ID in your region.   
+Select an Amazon Machine Image suitable for ARM. View [this list](https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html) to select the right image according to the AMI ID in your region.   
 
 <img src="/ocean-spark/_media/configure-cluster-aws.png" />
 
