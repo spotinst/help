@@ -2437,6 +2437,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-spark/configure-spark-apps/common-spark-configs"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/ocean-spark/configure-spark-apps/configure-clusters</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-spark/configure-spark-apps/configure-clusters"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-spark/configure-spark-apps/configure-clusters"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/ocean-spark/configure-spark-apps/docker-images</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
