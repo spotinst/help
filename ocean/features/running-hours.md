@@ -31,6 +31,8 @@ When a period of running time ends, Ocean automatically scales down the entire c
 
 At the end of the off time, the autoscaler launches the appropriate types and number of container instances to provide the resources required by the unscheduled tasks. At the end of this process, all tasks are satisfied, and the cluster is fully functioning in the running hours scheduled.
 
+Note: The Shutdown Hours feature is not supported for GKE clusters with shielded nodes. If you use the Shutdown Hours feature with shielded nodes, you need to ensure that the Ocean controller is available at the end of the off time, by checking that it is running on a node that is not managed by Ocean. This is because the Ocean controller is part of the node registration process and requires an available node to run on. 
+
 ## Shutdown Hours per VNG (Ocean for Kubernetes AWS)
 
 You can define shutdown hours per virtual node group (VNG) so that VNGs will shut down at different times. In some cases, different VNGs require different shutdown hours. For example, teams working on different VNGs may need to scale down the infrastructures related to each VNG at different times.
