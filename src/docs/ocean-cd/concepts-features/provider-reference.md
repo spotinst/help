@@ -63,7 +63,7 @@ name: My-verification-provider
 clusters:
   - cluster-name-1
 cloudWatch:
-  iamArn: arn:aws:iam::123456789012:policy/MyPolicy
+  iamArn: arn:aws:iam::123456789012:role/MyRole
 ```
 
 For more information on how to retrieve the data above, see the official CloudWatch documentation: https://docs.aws.amazon.com/eks/latest/userguide/iam-roles-for-service-accounts.html
