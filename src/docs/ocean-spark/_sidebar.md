@@ -24,6 +24,7 @@
     - [Secrets & Environment Variables](ocean-spark/configure-spark-apps/secrets-environment-variables)
     - [Docker Images](ocean-spark/configure-spark-apps/docker-images)
     - [Mount Volumes](ocean-spark/configure-spark-apps/mount-volumes)
+  - [Configure Clusters](ocean-spark/configure-clusters/)
   - [Tools & Integrations](ocean-spark/tools-integrations/)
     - [Connect Jupyter Notebooks](ocean-spark/tools-integrations/connect-jupyter-notebooks)
     - [Run Apps from Airflow](ocean-spark/tools-integrations/run-apps-from-airflow)
