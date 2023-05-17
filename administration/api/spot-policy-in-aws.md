@@ -6,7 +6,12 @@ The latest Spot policy in AWS appears below.
 - You can [restrict your Spot Policy](elastigroup/tutorials/elastigroup-tasks/restrict-your-spot-iam-policy) using custom AWS IAM Condition Statements.
 - Ensure that your policy is always up to date with the latest JSON.
 
-For additional information, see: [Update the Spot Policy](elastigroup/tutorials/elastigroup-tasks/update-spot-policy).
+Spot creates two kinds of policies while onboarding your cloud accounts:  
+
+1. Spot Policy: the permissions taken for this policy are listed below. For additional information, see: [Update the Spot Policy](elastigroup/tutorials/elastigroup-tasks/update-spot-policy).
+2. [SecurityAudit Policy](https://docs.aws.amazon.com/aws-managed-policy/latest/reference/SecurityAudit.html).
+
+SecurityAudit is an AWS managed policy that grants access to read security configuration metadata. This policy is used by Spot with no deviation from the standard AWS Managed Policy. 
 
 ```json
 {
