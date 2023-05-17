@@ -18,6 +18,7 @@
   - [Configure Spark Applications](ocean-spark/configure-spark-apps/)
     - [Access Your Data](ocean-spark/configure-spark-apps/access-your-data)
     - [Package Spark Code](ocean-spark/configure-spark-apps/package-spark-code)
+    - [Configure Cluster](ocean-spark/configure-spark-apps/configure-clusters)
     - [Configure Pod Sizes](ocean-spark/configure-spark-apps/memory-&-cores)
     - [Common Spark Configurations](ocean-spark/configure-spark-apps/common-spark-configs)
     - [Secrets & Environment Variables](ocean-spark/configure-spark-apps/secrets-environment-variables)
