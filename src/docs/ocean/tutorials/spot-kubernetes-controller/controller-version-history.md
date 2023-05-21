@@ -1,5 +1,11 @@
 # Controller Version History
 
+## [1.0.93] - 2023-05-21
+
+Added
+
+- Improved the removal process of a large number of nodes
+
 ## [1.0.92] - 2023-05-07
 
 Added
