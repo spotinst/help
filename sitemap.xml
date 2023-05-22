@@ -3333,6 +3333,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/get-to-know/run-first-workflow"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/spot-connect/get-to-know/test_test</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/get-to-know/test_test"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/get-to-know/test_test"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/spot-connect/integrations/amazon-event-bridge</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
