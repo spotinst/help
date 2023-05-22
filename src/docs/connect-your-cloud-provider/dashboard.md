@@ -43,6 +43,42 @@ Spot analyzes the instances you have in your cloud provider account and provides
 Each preview contains the number of instances in that category currently running, an estimation of additional savings that could be obtained using optimization, and the potential savings percentage.
 The Reservations preview appears only if you are connected to AWS with a management account.
 
+## Fee Calculation
+
+The Monthly Fee is calculated each month as a percentage of your monthly savings.  
+
+### Elastigroup/Ocean Service Savings Definition
+
+For each cloud provider, the term “Savings” is defined as follows:
+
+#### AWS Spot Instances
+
+Your actual AWS Spot Instances charges deducted from the published cost of AWS EC2 On-Demand Instances. The On-Demand Instance charges can be found on the AWS website at https://aws.amazon.com/ec2/pricing/on-demand/.
+
+#### Microsoft Azure Spot Virtual Machines (VMs)
+
+Your actual Microsoft Azure Spot VM charges deducted from the published cost of Azure On-Demand VMs. The On-Demand VMs charges can be found on Microsoft Azure’s website at https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/.
+
+#### Google Cloud Platform (GCP) Spot and/or preemptible VMs
+
+Your actual GCP Spot VMs charges deducted from the published cost of GCP On-Demand VMs. The On-Demand VMs charges can be found on GCP’s website at https://cloud.google.com/compute/pricing.
+
+### Eco Service Savings Definition
+
+For each cloud provider, the term “Savings” is defined as follows:
+
+#### AWS Reserved Instances (RIs) and Savings Plans (SPs)  
+
+Your actual AWS RIs and/or SPs charges deducted from the published cost of AWS EC2 On-Demand Instances. The On-Demand Instance charges can be found on AWS’s website at https://aws.amazon.com/ec2/pricing/on-demand/.
+
+#### Microsoft Azure RIs, SPs and Reserved Capacity (RC)  
+
+Your actual Azure RIs and/or SPs and/or RCs charges deducted from the cost of Microsoft Azure Pay-As-You-Go Instances, as published in the Customer’s Azure price sheet, which is presented to Spot by NetApp.
+
+#### GCP Committed Usage Discounts (CUD)  
+
+Your actual GCP CUD charges deducted from the published cost of GCP On-Demand VMs. The On-Demand VMs charges can be found on GCP’s website at https://cloud.google.com/compute/pricing.
+
 ### View All
 
 Potential Savings information is presented per cloud provider that you have connected to Spot. If you have connected multiple cloud providers, there may be more than the three boxes shown by default. To see all of them, click View All.
