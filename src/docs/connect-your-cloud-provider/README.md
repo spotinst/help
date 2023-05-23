@@ -3,7 +3,7 @@
 Going beyond cloud analytics and recommendations, Spot by NetApp automates and optimizes your cloud infrastructure in AWS, Azure or Google Cloud to deliver SLA-backed availability and performance at the lowest possible cost.
 
 ## Our Core Value Proposition
-
+THIS IS TEST
 Spot technology uses machine learning and analytics algorithms that enable you to utilize spot capacity for production and mission-critical workloads. This allows you to enjoy up to 90% cloud compute cost reduction with SLAs and SLOs that guarantee availability. Spot continuously scores the different capacity pools across operating systems, instance types, availability zones, regions, and cloud providers to make the most intelligent decisions in real-time regarding which instances to choose for provisioning and which ones to proactively rebalance and replace.
 
 <img src="/connect-your-cloud-provider/_media/introduction-to-spot-01.png" width="500" height="326" />
