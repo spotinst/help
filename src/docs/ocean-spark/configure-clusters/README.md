@@ -522,13 +522,13 @@ When ARM based VNGs are created in your cluster, **it is important to note that 
   "coreRequest": "500m",
   "memory": "1000m",
   "spot": false,
-  "vngIds": ["ols-848f2cb3"]
+  "vngIds": ["ols-XXXXXXXX"]
 },
 "executor": {
   "cores": 2,
   "coreRequest": "500m",
   "memory": "1000m",
-  "vngIds": ["ols-c1a8ef9c"]
+  "vngIds": ["ols-XXXXXXXX"]
 }
 ```
 
