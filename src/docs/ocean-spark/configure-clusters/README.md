@@ -16,9 +16,9 @@ The following configuration options enable you to customize this setup:
 
 ### Load Balancer Service Annotations
 
-Ocean for Apache Spark creates a Load Balancer service called `ofas-ingress-nginx-controller` in the `spot-system` namespace by default. This service triggers the creation of a load balancer by your cloud provider. To customize the load balancer that gets provisioned, you can set additional annotations on the `Load Balancer` service. Different annotations are supported on different cloud providers.
+Ocean for Apache Spark creates a `LoadBalancer` service called `ofas-ingress-nginx-controller` in the `spot-system` namespace by default. This service triggers the creation of a load balancer by your cloud provider. To customize the load balancer that gets provisioned, you can set additional annotations on the `LoadBalancer` service. Different annotations are supported on different cloud providers.
 
-Example cluster configuration:
+**Example of a cluster configuration:**
 
 ```json
 {
@@ -27,8 +27,7 @@ Example cluster configuration:
       "ingress": {
         "loadBalancer": {
           "serviceAnnotations": {
-            "service.beta.kubernetes.io/aws-load-balancer-additional-resource-tags": "Environment=dev,
-Team=data-science",
+            "service.beta.kubernetes.io/aws-load-balancer-additional-resource-tags": "Environment=dev,Team=data-science",
             "service.beta.kubernetes.io/aws-load-balancer-nlb-target-type": "ip",
             "service.beta.kubernetes.io/aws-load-balancer-scheme": "internet-facing",
             "service.beta.kubernetes.io/aws-load-balancer-target-group-attributes": "preserve_client_ip.enabled=true",
@@ -220,9 +219,10 @@ spec:
           - backend:
               service:
                 name: bigdata-notebook-service
-                port: number: 80
-                path: /bigdata-notebook-service/?(._)
-                pathType: Prefix
+                port:
+                  number: 80
+            path: /bigdata-notebook-service/?(.*)
+            pathType: Prefix
   tls:
     - hosts:
         - org-XXXXXXXXXXXX-osc-XXXXXXXX.bigdata.svc.cluster.local
@@ -248,11 +248,11 @@ spec:
                 name: bigdata-proxy
                 port:
                   number: 80
-            path: /bigdata-proxy/?(._)
+            path: /bigdata-proxy/?(.*)
             pathType: Prefix
   tls:
     - hosts:
-       - org-XXXXXXXXXXXX-osc-XXXXXXXX.bigdata.svc.cluster.local
+        - org-XXXXXXXXXXXX-osc-XXXXXXXX.bigdata.svc.cluster.local
       secretName: spot-bigdata-tls
 ```
 
@@ -293,7 +293,7 @@ spec:
         mode: MUTUAL
         credentialName: spot-bigdata-tls
       hosts:
-        - org-6060XXXXXXXX-osc-XXXXXXXX.bigdata.svc.cluster.local
+        - org-XXXXXXXXXXXX-osc-XXXXXXXX.bigdata.svc.cluster.local
 ---
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
@@ -302,7 +302,7 @@ metadata:
   namespace: spot-system
 spec:
   hosts:
-    - org-6060XXXXXXXX-osc-XXXXXXXX.bigdata.svc.cluster.local
+    - org-XXXXXXXXXXXX-osc-XXXXXXXX.bigdata.svc.cluster.local
   gateways:
     - ocean-spark-gateway
   http:
@@ -366,7 +366,9 @@ In addition, ensure that client IP addresses are preserved.
 
 On AWS, you can find this under Target Group > Attributes > Preserve client IP addresses. You can also set an annotation on your `LoadBalancer` service:
 
+```sh
 service.beta.kubernetes.io/aws-load-balancer-target-group-attributes: preserve_client_ip.enabled=true
+```
 
 If this is not done and you have allowed traffic from the load balancer to your nodes over TCP on port 443 (for health checks), all inbound traffic will be allowed through the load balancer.
 
@@ -386,7 +388,7 @@ The Spark driver and executor logs are the log streams from the Spark pods. They
 
 You can turn off the driver and executor log collection on your OfAS cluster.
 
-**Example cluster configuration:**
+**Example of a cluster configuration:**
 
 ```json
 {
@@ -473,7 +475,7 @@ If you prefer to create these VNGs using other methods, like Terraform, you can 
 
 The automatically created VNGs use taints by default to prevent non-Spark workloads from running on them. You can disable them.
 
-**Example cluster configuration**:
+**Example of a cluster configuration**:
 
 ```json
 {
@@ -520,13 +522,13 @@ When ARM based VNGs are created in your cluster, **it is important to note that 
   "coreRequest": "500m",
   "memory": "1000m",
   "spot": false,
-  "vngIds": ["ols-848f2cb3"]
+  "vngIds": ["ols-XXXXXXXX"]
 },
 "executor": {
   "cores": 2,
   "coreRequest": "500m",
   "memory": "1000m",
-  "vngIds": ["ols-c1a8ef9c"]
+  "vngIds": ["ols-XXXXXXXX"]
 }
 ```
 
