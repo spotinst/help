@@ -22,8 +22,6 @@ The Workflow Editor is the interface where you can create and edit workloads.
 
 * Right Panel – an action configuration panel where you enter the input parameters and explore the output parameters for a particular action that you selected.  
 
-A description is required. workflow name the trigger and the description are of course, all required. Once all of these are entered there is no red bubble.
-
 <img src="/spot-connect/_media/create-workflow-2.png" />
 
 ## Create a Trigger
