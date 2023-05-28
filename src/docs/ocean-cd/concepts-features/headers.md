@@ -11,7 +11,7 @@ You can set the Headers-based Traffic feature while using Ocean CD according to 
 1. Make sure to configure the relevant YAML services as part of your rolloutSpec and apply them accordingly into your cluster.  
 These include: DestinationRule, Stable Service, Gateway & Virtual Service YAMLs.
 
-* Templates can be found in Spot's public GitHub.
+**Note: Templates can be found in Spot's [GitHub repository](https://github.com/spotinst/spot-oceancd-releases/blob/main/Quick%20Start%20%26%20Examples/Headers%20Based%20Traffic/ISTIO/Subset-Level/Gateway.yaml).**
 
 2. Create an Ocean CD strategy that includes the headers you wish to set for each phase. You can find a template below:
 
@@ -45,7 +45,7 @@ kind: Strategy
         setWeight: 100
 ```
 
-A detailed explanation of all of the above parameters can be found in Spot's API documentation.
+A detailed explanation of all of the above parameters can be found in Spot's [API documentation](https://docs.spot.io/api/#tag/Ocean-CD/operation/OceanCDStrategyCreate).
 
 Rules of the behavior of the headers:  
 
