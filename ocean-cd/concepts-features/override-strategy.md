@@ -1,14 +1,16 @@
 # Override Strategy
 
-When you change the strategy in the RolloutSpec, this change is implemented for all subsequent rollouts. If you wish to change the strategy for a specific rollout only, Ocean CD provides a method to do so. Once the rollout is completed, subsequent rollouts will revert to the strategy that is saved in the RolloutSpec. If you need a permanent change to the strategy, then you will need to use the usual method of changing the strategy in the RolloutSpec.
+When you change the strategy as part of the RolloutSpec, the change is implemented for all subsequent rollouts. However, there may be times when you want to momentarily override your strategy, to test a new one without having to change the rolloutSpec you have already created.  
+
+OceanCD provides a method to do so by adding an annotation to your SpotDeployment manifest. As long as the annotation exists, the overridden strategy is used as part of your rollouts.  
+
+Note: If the strategy that was added as a part of the annotation does not exist, the one set as part of the RolloutSpec will be used.
 
 ## Set Strategy for Specific Rollout
 
 To set a strategy for a specific rollout, add a new annotation to your SpotDeployment:  
 
 `oceancd.spot.io/strategy: <Strategy Name>`
-
-If the annotation is in the SpotDeployment, the strategy set in the SpotDeployment is the strategy Ocean CD uses for upcoming rollouts.  
 
 ```yaml
 apiVersion: spot.io/v1beta1
