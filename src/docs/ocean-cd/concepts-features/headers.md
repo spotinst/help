@@ -47,7 +47,7 @@ kind: Strategy
 
 A detailed explanation of all of the above parameters can be found in Spot's [API documentation](https://docs.spot.io/api/#tag/Ocean-CD/operation/OceanCDStrategyCreate).
 
-Rules of the behavior of the headers:  
+**Rules of the behavior of the headers**:  
 
 * Any header that was set as a part of any phase, will remain running until the end of the rollout. Headers can not be deleted throughout the rollout, they need to be part of consecutive phases.  
 * There is no limitation to the amount of headers you can add along the way.
