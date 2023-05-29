@@ -343,6 +343,22 @@ Spot creates two kinds of policies while onboarding your cloud accounts:
       "Resource": [
         "*"
       ]
+    },
+    {
+      "Sid": "GeneralSpotStorageAccess",
+      "Action": [
+        "ec2:ModifyVolume",
+        "ec2:DetachVolume",
+        "ec2:DescribeVolumes",
+        "ec2:DescribeVolumesModifications",
+        "ec2:DescribeSnapshots",
+        "elasticfilesystem:DeleteFileSystem",
+        "elasticfilesystem:DescribeMountTargets",
+        "elasticfilesystem:DeleteMountTarget",
+        "fsx:DescribeFileSystems"
+      ],
+      "Effect": "Allow",
+      "Resource": ["*"]
     }
   ]
 }
