@@ -162,6 +162,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/administration/identity-providers/"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/administration/notification-center/event-policies/create-ocean-cd-policy</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/administration/notification-center/event-policies/create-ocean-cd-policy"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/administration/notification-center/event-policies/create-ocean-cd-policy"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/administration/notification-center/event-policies/create-security-policy</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
