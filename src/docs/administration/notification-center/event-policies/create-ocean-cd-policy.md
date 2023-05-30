@@ -47,7 +47,7 @@ If you do not want to add notifications and complete the policy creation process
 
 The integrations determine how the notifications will be delivered.
 
-<img src="/administration/_media/notifications-ocean-cd-3.png" />
+<img src="/administration/_media/notifications-ocean-cd-3.png" width="450" height="200" />
 
 You can receive notifications by external email. Turn the External Email toggle on and add email addresses that will receive notifications.
 
@@ -55,4 +55,4 @@ You can now edit the policy and determine which Spot users will receive notifica
 
 ## What’s Next?
 
-Learn how to [Edit an Existing Policy](administration/notification-center/edit-a-notification-policy). 
+Learn how to [Edit an Existing Policy](administration/notification-center/edit-a-notification-policy).
