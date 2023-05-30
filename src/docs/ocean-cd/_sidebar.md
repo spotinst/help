@@ -24,6 +24,7 @@
     - [Continuous Verification](ocean-cd/concepts-features/verifications)
     - [Multiple SpotDepolyments](ocean-cd/concepts-features/multiple-deployments)  
     - [Trigger Rollouts with ConfigMap](ocean-cd/concepts-features/trigger-configmap)
+    - [Headers-based Traffic](ocean-cd/concepts-features/headers)
   - [Get to Know Ocean CD](ocean-cd/get-to-know-ocean-cd/)
     - [View Settings](ocean-cd/tutorials/view-settings/)
     - [View Rollouts](ocean-cd/tutorials/view-rollouts/)
