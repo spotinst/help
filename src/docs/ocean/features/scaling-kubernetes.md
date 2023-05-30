@@ -45,7 +45,7 @@ spec:
           topologyKey: failure-domain.beta.kubernetes.io/zone
 ```
 
-> **Tip**: In the [affinity syntax](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#resources-that-support-set-based-requirements), Ocean supports `matchExpressions` only. The `matchLabels` selector is not supported.
+> **Tip**: In the [affinity syntax](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#resources-that-support-set-based-requirements), Ocean supports both `matchExpressions` and `matchLabels`.
 
 ### Support for Shielded GKE Nodes (GKE only)
 
