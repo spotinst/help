@@ -1,4 +1,4 @@
-# Create a Policy
+# Create a Compute Policy
 
 This page describes the procedures to create a new policy for notifications.
 
