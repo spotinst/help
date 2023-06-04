@@ -14,8 +14,8 @@ In addition to a version of Spark itself, the `spark:platform` images include co
 
 |               Full Image name                | Spark Version | Scala Version | Python Version | Hadoop Version |
 | :------------------------------------------: | :-----------: | :-----------: | :------------: | :------------: |
-| gcr.io/ocean-spark/spark:platform-3.3-latest |     3.3.0     |     2.12      |      3.8       |     3.3.2      |
-| gcr.io/ocean-spark/spark:platform-2.4-latest |     2.4.7     |     2.12      |      3.7       |     3.1.0      |
+| gcr.io/ocean-spark/spark:platform-3.4-latest |     3.4.0     |     2.12      |      3.10      |     3.3.4      |
+| gcr.io/ocean-spark/spark:platform-2.4-latest |     2.4.8     |     2.12      |      3.7       |     3.1.0      |
 
 ### How to use those images for your apps and jobs?
 
