@@ -77,6 +77,8 @@ To remove a user from Spot, do the following:
 
 <img src="/administration/_media/edit-user-details-07.png" width="243" height="97" />
 
+**All API tokens associated with the user will also be deleted**.
+
 ## What’s Next?
 
 Learn more about using [Groups](administration/groups/) in Spot administration.
