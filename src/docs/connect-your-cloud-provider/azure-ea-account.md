@@ -22,8 +22,6 @@ Complete the following steps:
 
 <img src="/connect-your-cloud-provider/_media/azure-billing-2.png" width="600" />
 
-After following the steps, you can choose to set up a strategy call with the Eco Azure team to perform an initial analysis of what savings the Eco Azure team can provide. The details are listed in the  [Eco Azure Getting Started](eco/getting-started/connect-azure-ea-to-eco) guide.
-
 ## What’s Next?
 
-Schedule a strategy call with the Eco Azure team to perform an initial analysis of what savings the Eco Azure team can provide. The details are listed in the Eco Azure Getting Started guide.
+Schedule a strategy call with the Eco Azure team to perform an initial analysis of what savings the Eco Azure team can provide. The details are listed in the [Eco Azure Getting Started](eco/getting-started/connect-azure-ea-to-eco) guide.
