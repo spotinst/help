@@ -24,4 +24,4 @@ Complete the following steps:
 
 ## What’s Next?
 
-Schedule a strategy call with the Eco Azure team to perform an initial analysis of what savings the Eco Azure team can provide. The details are listed in the [Eco Azure Getting Started](eco/getting-started/connect-azure-ea-to-eco) guide.
+Schedule a strategy call with the Eco Azure team to perform an initial analysis of what savings the Eco Azure team can provide. The details are listed in the [Eco Azure Getting Started](eco/getting-started/connect-azure-account) guide.
