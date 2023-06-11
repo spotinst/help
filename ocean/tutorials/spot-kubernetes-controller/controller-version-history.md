@@ -1,5 +1,11 @@
 # Controller Version History
 
+## [1.0.94] - 2023-06-11
+
+Added
+
+- Improve the scale up process for a large number of pods
+
 ## [1.0.93] - 2023-05-21
 
 Added
