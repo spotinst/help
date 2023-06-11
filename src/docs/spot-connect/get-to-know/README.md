@@ -2,8 +2,8 @@
 
 In the workflow interface you can drag, drop and connect nodes on the canvas to create a workflow that suits your needs.
 
-1. In the left menu, click Connect and then Workflows.  
-2. Click New Workflow. The Create New Workflow window opens and displays all the workflows created by users within the Spot Organization.
+1. In the left menu, click **Connect** and then **Workflows**.  
+2. Click **New Workflow**. The Create New Workflow window opens and displays all the workflows created by users within the Spot Organization.
 
 <img src="/spot-connect/_media/get-to-know-wkflw-bldr-1.png" />
 
@@ -14,7 +14,7 @@ In the workflow interface you can drag, drop and connect nodes on the canvas to 
 * You can select the trigger type once the integration is configured and authorized on the Settings page.
 * Generic Webhook can be used for any third-party application that supports webhook as a notification.
 
-5. Click Create Workflow.
+5. Click **Create Workflow**.
 
 <img src="/spot-connect/_media/get-to-know-wkflw-bldr-2.png" />
 
@@ -44,7 +44,7 @@ The trigger types shown provide the default JSON schema body in the output of th
 
 After creating the workflow, click the trigger node to select the API key.
 
-Click Settings and then Resources to create the API Key.
+Click **Settings** and then **Resources** to create the API Key.
 
 <img src="/spot-connect/_media/get-to-know-wkflw-bldr-4.png" width="500" height="500" />
 

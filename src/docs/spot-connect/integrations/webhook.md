@@ -18,16 +18,16 @@ To automatically execute a Spot Connect workflow with a Generic Webhook event, c
 
 If you do not already have a Spot Connect API Key, create one by completing the following steps:  
 
-1. In the left main menu, click Connect and click Settings.
-2. Scroll down and under Resources, click API Keys.  
-3. Create an API Key and click Save.
+1. In the left main menu, click **Connect** and click **Settings**.
+2. Scroll down and under Resources, click **API Keys**.  
+3. Create an API Key and click **Save**.
 
 #### Create a New Workflow
 
-1. In the left main menu, click Connect and click Workflows.  
-2. Click New Workflow and enter a name for the workflow.
-3. Scroll down and select Generic Webhook trigger type.
-4. Click Create Workflow.  
+1. In the left main menu, click **Connect** and click **Workflows**.  
+2. Click **New Workflow** and enter a name for the workflow.
+3. Scroll down and select **Generic Webhook**.
+4. Click **Create Workflow**.  
 
 <img src="/spot-connect/_media/general-webhook-integration-1.png" />
 
