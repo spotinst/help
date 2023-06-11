@@ -7,4 +7,6 @@
     - [Create your First Workflow- Spot](spot-connect/get-to-know/create-first-workflow-spot)
     - [Create your First Workflow- AWS](spot-connect/get-to-know/create-first-workflow-aws)
     - [Run Your First Workflow](spot-connect/get-to-know/run-first-workflow)
-    - [Sample Workflows](spot-connect/get-to-know/quickstart-workflow-templates)  
+    - [Sample Workflows](spot-connect/get-to-know/quickstart-workflow-templates)
+  - [Integrations](spot-connect/integrations/)
+    - [Generic Webhook](spot-connect/integrations/webhook)
