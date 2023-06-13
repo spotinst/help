@@ -30,20 +30,17 @@ You can use the filters at the top to focus only on the information you need. On
 
 <img src="/spot-security/_media/spot-security-dashboard-b1.png" />
 
-### Highest Impact Recommendations
+### Prioritized Actionable Insights
 
-Spot Security helps you prioritize risks by giving recommendations of risks with the highest impact.
+Spot Security helps you prioritize risks by providing you with the Prioritized Actionbale Insights. The Risks in this table are sorted according to priorities starting from 1 to 100 by default. Spot Security takes into account asset’s status (Internet facing), asset type, severity of the security rule, blast radius and access type (external access, public access) to calculate the priority. You can choose to accept the risks using the supress action and you will be presented with the next set of priorities. You can also filter the table and customize its columns as well as export the table to a CSV file.  
 
-<img src="/spot-security/_media/spot-security-dashboard-c.png" />
-
-By default, the alert with the highest level impact appears in the tile. You can click the arrow to scroll through up to five risks. If a risk is remediated, the next risk with the highest impact will appear here. Highest Impact Recommendations are determined by considering the risk score of the assets, the number of affected resources, and if the asset is or is linked to an internet-facing asset.
-When you click Remediate Risk Now, Spot Security provides guided remediation actions to fix the security issue.
+<img src="/spot-security/_media/dashboard-1.png" />
 
 ### Most Prevalent Alerts
 
-This tile shows the most prevalent alerts detected in your environment. The default view shows the top three alerts. Click the arrow to see the other important alerts.
+The table shows the most prevalent alerts detected in your environment. You can  export the complete list of alerts.  
 
-<img src="/spot-security/_media/spot-security-dashboard-d1.png" />
+<img src="/spot-security/_media/dashboard-2.png" />
 
 ## View Trends
 
