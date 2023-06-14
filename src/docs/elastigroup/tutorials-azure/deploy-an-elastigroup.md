@@ -39,7 +39,7 @@ Alternatively, in the Elastigroups Summary click the Deployments tab and click D
 
 - Batch size: The size of each batch in the deployment as a percent of the total number of VMs in the group. For example, a group with 20% will deploy VMs in five separate batches.
 - Grace period: The amount of time to wait for a VM to be deemed healthy according to the health check setting before the deployment starts the next batch. The grace period must be at least 120 seconds.
-- Health Check Types: The health check type to be used for the deployment process. This field is enabled only if at least one [health check type](https://docs.spot.io/api/#operation/elastigroupAzureSpotVmsCreate) has been defined for the Elastigroup.
+- Health Check Types: The health check type to be used for the deployment process. This field is enabled only if at least one [health check type](https://docs.spot.io/api/#operation/elastigroupAzureSpotVmsCreate) has been defined for the Elastigroup. Comments: The health check type is linked to create Azure VM in API refernce, the proposed change is to link it to https://docs.spot.io/elastigroup/tutorials-azure/set-health-checks-and-autohealing page.
 
 4. If you want to used the Advanced parameters, click Advanced and complete the following:
    - Draining Timeout: The amount of time (seconds) that Elastigroup will de-register and drain the VM before termination. This definition will override the general Draining Timeout defined in the group.
@@ -100,5 +100,6 @@ This area displays the details of the deployment selected in the summary table. 
 
 ## What’s Next?
 
-- Learn how to [Set Health Checks and Autohealing](elastigroup/tutorials/azure/set-health-checks-and-autohealing.md).
+- Learn how to [Set Health Checks and Autohealing](elastigroup/tutorials/azure/set-health-checks-and-autohealing.md). Comments: This link is not working, says page does'nt exist. Proposed change to add https://docs.spot.io/elastigroup/tutorials-azure/set-health-checks-and-autohealing in the link.
+
 - Learn more about using the API to [set up health checks](https://docs.spot.io/api/#operation/elastigroupAzureSpotVmsCreate) for your Elastigroup.
