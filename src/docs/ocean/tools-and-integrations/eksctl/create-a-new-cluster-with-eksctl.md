@@ -34,7 +34,7 @@ Alternatively, you can use the AWS credentials file. For more information, see [
 
 ## Install eksctl
 
-1. Download and extract the `eksctl` binary with the following command.
+1. Download and extract the `eksctl` binary with the following command from the spotinst eksctl github repo.
 
 ```sh
 $ curl -sfL https://spotinst-public.s3.amazonaws.com/integrations/kubernetes/eksctl/eksctl.sh | sh
@@ -82,6 +82,12 @@ metadata:
  tags:
    creator: bob
    environment: prod
+
+spotOcean:
+  strategy:
+    utilizeReservedInstances: true
+    fallbackToOnDemand: true
+
 nodeGroups:
  - name: standard-workers
    [... nodegroup standard fields; ssh, tags, etc.]
@@ -90,16 +96,8 @@ nodeGroups:
       # Percentage of Spot instances that would spin up from the desired
       # capacity.
        spotPercentage: 100
-      # Allow Ocean to utilize any available reserved instances first before
-      # purchasing Spot instances.
-       utilizeReservedInstances: true
-      # Launch On-Demand instances in case of no Spot instances available.
-       fallbackToOnDemand: true
+
      autoScaler:
-      # Enable the Ocean autoscaler.
-       enabled: true
-      # Cooldown period between scaling actions.
-       cooldown: 300
       # Spare resource capacity management enabling fast assignment of Pods
       # without waiting for new resources to launch.
        headrooms:
@@ -115,11 +113,9 @@ nodeGroups:
            numOfUnits: 1
      compute:
        instanceTypes:
-        # Instance types allowed in the Ocean cluster. Cannot be configured
-        # if the blacklist is configured.
-         whitelist: # OR blacklist
-           - t2.large
-           - c5.large
+        # Instance types allowed in the Ocean cluster.
+       - t2.large
+       - c5.large
 ```
 
 2. Create your Amazon EKS cluster and worker nodes with the following command.
