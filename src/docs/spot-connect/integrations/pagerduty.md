@@ -149,7 +149,7 @@ Configure PagerDuty to send a webhook request to Spot Connect when an incident o
 7. Custom Headers:
 * **Header Name**: **x-api-key**
 * **Header Value**: enter Webhook API Key Value saved from Spot Connect.
-8. Save the extension.
+8. Save the extension. gg
 
 **Action Example**
 
