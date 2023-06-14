@@ -87,6 +87,7 @@ PagerDuty Instance    | Select a PagerDuty integration instance configured in Sp
 PagerDuty Incident Id | ID of PagerDuty incident.   | True
 From User    | A valid user associated with the PagerDuty account making the request. | True
 
+
 #### Output
 
 Parameter | Description | Required
@@ -118,45 +119,7 @@ To automatically execute a Spot Connect workflow with a PagerDuty alert in real-
 
 If you do not already have a Spot Connect API Key, create one by completing the following steps:   
 
-1. In the left main menu, click Connect and click Settings.  
-2. Scroll down and under Resources, click API Keys.   
-3. Create an API Key and click Save.
 
-#### Create a New Workflow
-
-1. In the left main menu, click Connect and click Workflows.  
-2. Click New Workflow and enter a name for the workflow.
-3. Scroll down and select PagerDuty trigger type.
-4. Click Create Workflow.
-5. In the center panel of the workflow builder, click the PagerDuty trigger node to open the right panel. Under Webhook API Key Name, select the API Key you created earlier.  
-6. Compose your workflow and save it.
-
-In the workflow builder, click the copy icon in each of the fields Webhook API Key Value and the Workflow Webhook URL to save the values. You can paste and save them into your text editor. When you configure the third-party application, use those saved values.
-
-<img src="/spot-connect/_media/pagerduty-3.png" />
-
-#### In PagerDuty
-
-Configure PagerDuty to send a webhook request to Spot Connect when an incident occurs.
-
-1. In your Pager Duty account, click Services and Service Directory.
-2. Select any existing PagerDuty service (e.g. CloudWatch-Memory-Alert) and click Integrations.
-3. Click Extensions and Add-Ons and Add or manager extensions.
-4. Click New Extension.
-5. In Extension Type, select Generic V2 Webhook.
-6. In the URL field, enter the Workflow Webhook URL value saved from Spot Connect
-7. Custom Headers:
-* Header Name: x-api-key
-* Header Value: enter Webhook API Key Value saved from Spot Connect
-8. Save the extension.
-
-**Action Example**
-
-When a PagerDuty alert is triggered by CloudWatch-Memory-Alert, a Generic Webhook request is sent to Spot Connect’s webhook URL.   
-
-<img src="/spot-connect/_media/pagerduty-4.png" />
-
-The associated workflow executions.
 
 <img src="/spot-connect/_media/pagerduty-5.png" />
 
