@@ -86,7 +86,7 @@ The conditions consist of 4 parts:
 
 **Example**
 
-Editing with an Elastigroup resource:
+Given an Elastigroup resource:
 
 ```json
 {
@@ -105,6 +105,30 @@ Editing with an Elastigroup resource:
     }
 }
 ```
+The following policy will allow update action for users with the email example@mail.com as specified in the tag with key `DeveloperEmail` from the Elastigroup above.
+
+```json
+{
+    "statements": [
+        {
+            "effect": "ALLOW",
+            "actions": [
+                "elastigroup:updateGroup"
+            ],
+            "resources": [
+                "*"
+            ],
+            "condition": {
+                "StringEquals": {
+                    "spot:elastigroup:tags/DeveloperEmail": "${spot:userEmail}"
+                }
+            }
+        }
+    ]
+}
+```
+
+In the case above, the `attribute` (tag with the key of `DeveloperEmail`) exists in the Elastigroup and matches the `resource attribute` in the policy ("spot:elastigroup:tags/DeveloperEmail. Therefore, if your email is defined as example@mail.com, you can take the actions that were defined in the policy and can update Elastigroup.
 
 ## What’s Next?
 
