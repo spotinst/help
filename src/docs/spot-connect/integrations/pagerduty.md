@@ -1,6 +1,6 @@
 # PagerDuty
 
-The PagerDuty integration standardizes and speeds up the resolution of various cloud alerts. PagerDuty aggregates data from myriad monitoring tools and creates actionable insights in the form of incidents. You can tap into the real-time PagerDuty intel with the workflow automation features of Spot Connect to improve full-stack visibility and accelerated incident response.  
+The PagerDuty integration standardizes and speeds up the resolution of various cloud alerts. PagerDuty aggregates data from myriad monitoring tools and creates actionable insights in the form of incidents. You can tap into the real-time PagerDuty intel with the workflow automation features of Spot Connect to improve full-stack visibility and accelerated incident response.  mmm
 
 The integration between Spot Connect and PagerDuty enables you to:
 
