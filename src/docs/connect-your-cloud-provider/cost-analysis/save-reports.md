@@ -1,6 +1,6 @@
 # Save Analysis Reports
 
-The Cloud Analyzer [Cost Analysis](connect-your-cloud-provider/cost-analysis/) page provides a detailed breakdown of your organization's cloud compute costs. When you create customized Spend Analysis reports using the filters and grouping options, you can save each report for quick reference and future follow up on spending. By saving your customized reports, you can re-use the same filters and grouping options without having to reset them each time you need a report. This saves time for you and helps you to obtain exactly the same report parameters and presentation whenever you review reports.
+The ~Cloud Analyzer~ Overview Dashboard [Cost Analysis](connect-your-cloud-provider/cost-analysis/) page provides a detailed breakdown of your organization's cloud compute costs. When you create customized Spend Analysis reports using the filters and grouping options, you can save each report for quick reference and future follow up on spending. By saving your customized reports, you can re-use the same filters and grouping options without having to reset them each time you need a report. This saves time for you and helps you to obtain exactly the same report parameters and presentation whenever you review reports.
 
 Saved reports are personal to each user. You cannot see the reports that other users save.
 
