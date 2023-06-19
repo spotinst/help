@@ -12,7 +12,7 @@ API keys are unique to your organization. An API key is required to send a webho
 
 3. Click **Add New**.
 
-4. Enter an API Key Name.  
+4. Enter an API Key Name.
 
 <img src="/spot-connect/_media/api-keys-1.png" />
 
@@ -25,6 +25,7 @@ API keys are unique to your organization. An API key is required to send a webho
 3. Click the trash bin icon to delete an instance.
 
 <img src="/spot-connect/_media/api-keys-2.png" />
+
 4. Confirm deletion.
 
 ## Where do you use an API Key?
