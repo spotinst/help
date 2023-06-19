@@ -6,11 +6,11 @@ API keys are unique to your organization. An API key is required to send a webho
 
 ### Add API Key
 
-1. In the left main menu, click Connect and click Settings.
+1. In the left main menu, click **Connect** and click **Settings**.
 
-2. Scroll down and under Resources, click API Keys.  
+2. Scroll down and under Resources, click **API Keys**.  
 
-3. Click Add New.
+3. Click **Add New**.
 
 4. Enter an API Key Name.  
 
@@ -18,14 +18,14 @@ API keys are unique to your organization. An API key is required to send a webho
 
 ### Delete API Key
 
-1. In the left main menu, click Connect and click Settings.
+1. In the left main menu, click **Connect** and click **Settings**.
 
-2. Scroll down and under Resources, click API Keys.  
+2. Scroll down and under Resources, click **API Keys**.  
 
 3. Click the trash bin icon to delete an instance.
 
 <img src="/spot-connect/_media/api-keys-2.png" />
-4. Confirm deletion. 
+4. Confirm deletion.
 
 ## Where do you use an API Key?
 
