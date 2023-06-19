@@ -125,10 +125,10 @@ If you do not already have a Spot Connect API Key, create one by completing the 
 
 #### Create a New Workflow
 
-1. In the left main menu, click Connect and click Workflows.  
-2. Click New Workflow and enter a name for the workflow.
-3. Scroll down and select PagerDuty trigger type.
-4. Click Create Workflow.
+1. In the left main menu, click **Connect** and click **Workflows**.  
+2. Click **New Workflow** and enter a name for the workflow.
+3. Scroll down and select **PagerDuty** trigger type.
+4. Click **Create Workflow**.
 5. In the center panel of the workflow builder, click the PagerDuty trigger node to open the right panel. Under Webhook API Key Name, select the API Key you created earlier.  
 6. Compose your workflow and save it.
 
