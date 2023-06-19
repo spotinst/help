@@ -3361,6 +3361,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/integrations/ansible"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/spot-connect/integrations/apikeys</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/integrations/apikeys"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/integrations/apikeys"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/spot-connect/integrations/aws-health</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
