@@ -1,8 +1,6 @@
 # Slack
 
-Use the Slack integration to send messages and notifications to your Slack team.
-
-One of the most common workflow integrations is the connection to the user's communication suite. Slack is a very popular communication tool.
+Slack is a very popular communication tool and you can use the Slack integration to send messages and notifications to your Slack team. One of the most common workflow integrations is the connection to the user's communication suite.
 
 This integration is a path forward for users who want to connect to their Slack workspace with the Spot Connect platform to interact with workflows, get execution statuses, approvals, etc.
 
