@@ -54,6 +54,10 @@ Alternatively, you can use the Filter box and filter by keyword.
 
 <img src="/connect-your-cloud-provider/_media/optimize-your-cloud-007.png" width="300" />
 
+You can also save filters in presets. Presets save filters that have been selected.
+
+<img src="/connect-your-cloud-provider/_media/presets-1.png" />
+
 ### Actionable List of Workloads
 
 The list of workloads shows the results of any of the filters you apply. The workloads are listed in descending order, with the workload with most potential savings at the top.
