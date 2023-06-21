@@ -9,4 +9,8 @@
     - [Run Your First Workflow](spot-connect/get-to-know/run-first-workflow)
     - [Sample Workflows](spot-connect/get-to-know/quickstart-workflow-templates)
   - [Integrations](spot-connect/integrations/)
+    - [API Keys](spot-connect/integrations/apikeys)
+    - [AWS System Status](spot-connect/integrations/aws_system_status)
     - [Generic Webhook](spot-connect/integrations/webhook)
+    - [PagerDuty](spot-connect/integrations/pagerduty)
+    - [Slack](spot-connect/integrations/slack)
