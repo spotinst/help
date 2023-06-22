@@ -8,7 +8,7 @@ The Verification Provider is reusable and can be used and maintained over multip
 
 ```yaml
 kind: verificationProvider
-name: My-verification-provider
+name: my-verification-provider
 clusterIds:
   - cluster-name-1
   - cluster-name-2

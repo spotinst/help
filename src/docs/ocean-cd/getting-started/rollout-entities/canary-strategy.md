@@ -10,24 +10,24 @@ The structure of a canary strategy is shown in the example below. You can use it
 
 ```yaml
 kind: Strategy
-name: Strategy-OceanCD
+name: my-strategy-template
 canary:
  backgroundVerification:
    templateNames:
-   - My-first-verification
+   - my-verification-template
  steps:
  - name: My-first-phase
    setWeight: 20
    verification:
      templateNames:
-     - My-first-verification
+     - my-verification-template
    pause:
      duration: 5m
  - name: My-second-phase
    setWeight: 80
    verification:
      templateNames:
-     - My-first-verification
+     - my-verification-template
    pause: {}
 ```
 

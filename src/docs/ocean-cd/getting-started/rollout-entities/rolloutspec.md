@@ -13,13 +13,13 @@ The structure of a rolloutSpec is shown in the example below (and in the [public
 
 ```yaml
 kind: RolloutSpec
-name: service-rolloutspec
+name: my-rolloutspec-template
 spotDeployment:
  clusterId: string
  namespace: string
  name: string
 strategy:
- name: service-rolloutspec
+ name: my-strategy-template
  args:
  - name: app
    value: service
