@@ -17,7 +17,7 @@ The status returned will be one of the following:
 Status | Description
 --------- | -----------
 Ok   | The service is operating normally.
-Degraded   | There is something happening in the service that is leading to degraded performance or issues in a subset of the availability zones for that service. 
+Degraded   | There is something happening in the service that is leading to degraded performance or issues in a subset of the availability zones for that service.
 Disrupted   | There is something wrong resulting in significant outages for that service.
 Unknown   | The action node could not determine the status of the service.
 
@@ -50,27 +50,16 @@ The output for the AWS System Status action node is a JSON dict called `output`,
 
 ```json
 {
-
   "AWS Region": { # e.g. 'us-west-1'
-
-    "your service": {  #  
-
-      "status": "string", # Status computed from looking at the below fields.  
-
+    "your service": {  #
+      "status": "string", # Status computed from looking at the below fields.
       "title": "string",  # The title of the most recent entry in the RSS for the service
-
-      "description": null, # The description for the most recent entry.  
-
-      "last_update": "Thu, 04 Oct 2018 08:04:44 PDT", # Formatted date string for the most recent update.  
-
+      "description": null, # The description for the most recent entry.
+      "last_update": "Thu, 04 Oct 2018 08:04:44 PDT", # Formatted date string for the most recent update.
       "error": null,  # Any errors reported in the most recent entry.
-
       "message": ""   # The message included in the most recent entry.
-
     }
-
   }
-
 }
 ```
 
@@ -79,27 +68,16 @@ This example is the result from a query on us-west-2 for the AWS Secrets Manager
 
 ```json
 {
-
   "us-west-2": {
-
     "secretsmanager": {
-
       "status": "OK",
-
       "title": "Service is operating normally: [RESOLVED] Elevated latencies and API Error Rates",
-
       "description": null,
-
       "last_update": "Thu, 04 Oct 2018 08:04:44 PDT",
-
       "error": null,
-
       "message": "Between 2:04 AM and 7:50 AM PDT we experienced increased API error rates and latencies in the US-WEST-2 Region. The issue has been resolved and the service is operating normally."
-
     }
-
   }
-
 }
 ```
 
