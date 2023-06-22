@@ -65,23 +65,23 @@ To set HPA using Prometheus query, use the following template:
 apiVersion: keda.sh/v1alpha1
 kind: ScaledObject
 metadata:
-name: nginx-hpa-prometheus-scale
+ name: nginx-hpa-prometheus-scale
 spec:
-scaleTargetRef:
+ scaleTargetRef:
   apiVersion: spot.io/v1beta1
   kind: SpotDeployment
   name: nginx
-minReplicaCount: 2
-maxReplicaCount: 6
-cooldownPeriod: 30
-pollingInterval: 1
-triggers:
+ minReplicaCount: 2
+ maxReplicaCount: 6
+ cooldownPeriod: 30
+ pollingInterval: 1
+ triggers:
 - type: prometheus
   metadata:
     serverAddress: http://prometheus-kube-prometheus-prometheus.prometheus.svc.cluster.local:9090
     metricName: pod_cpu_with_keda
     query: |
-     sum (rate (container_cpu_usage_seconds_total{pod=~"nginx.*"}[1m]))
+      sum (rate (container_cpu_usage_seconds_total{pod=~"nginx.*"}[1m]))
     threshold: "0.1"  
 ```
 

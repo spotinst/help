@@ -29,7 +29,7 @@ prometheus:
 
 ```yaml
 kind: verificationProvider
-name: My-verification-provider
+name: my-verification-provider
 clusters:
   - cluster-name-1
 newRelic:

@@ -3,6 +3,7 @@
 The PagerDuty integration standardizes and speeds up the resolution of various cloud alerts. PagerDuty aggregates data from myriad monitoring tools and creates actionable insights in the form of incidents. You can tap into the real-time PagerDuty intel with the workflow automation features of Spot Connect to improve full-stack visibility and accelerated incident response.  
 
 The integration between Spot Connect and PagerDuty enables you to:
+
 * Ingest incidents from PagerDuty that are collected from various monitoring tools and grouped into actionable insights.
 * Leverage automated workflows in Spot Connect and create incident response best practices to reduce MTTR.
 * Access hundreds of Spot Connect’s third-party integration actions to coordinate response across multiple cloud infrastructure functions such as AWS, GCP, and Azure.
@@ -120,7 +121,7 @@ If you do not already have a Spot Connect API Key, create one by completing the 
 
 1. In the left main menu, click **Connect** and click **Settings**.  
 2. Scroll down and under Resources, click **API Keys**.   
-3. Create an API Key and click **Save**.
+3. Create an [API Key](spot-connect/integrations/apikeys) and click **Save**.
 
 #### Create a New Workflow
 
