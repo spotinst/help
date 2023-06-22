@@ -11,21 +11,20 @@ A strategy is reusable and can be used and maintained over multiple services and
 The structure of a rolling update strategy is shown in the example below. You can use it as a template for creating your own strategy.   
 
 ```yaml
-kind: Strategy
-name: Strategy-OceanCD-rollingupdate
+kind: strategy
+name: my-strategy-template-rollingupdate
 rolling:
  steps:
  - name: My-first-phase
    verification:
      templateNames:
-     - My-first-verification
-     - My-second-verification
+     - my-verification-template
    pause:
      duration: 5m
  - name: My-second-phase
    verification:
      templateNames:
-     - My-first-verification
+     - my-verification-template
    pause: {}  
 ```
 

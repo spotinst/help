@@ -6,10 +6,10 @@ The template is reusable and can be used and maintained over multiple services a
 
 ```yaml
 kind: verificationTemplate
-name: prometheus
+name: my-verification-template
 args:
-- name: metric-name
-  value: string
+- name: my-secret-name
+  value: my-value
   secretKeyRef:
     name: string
     key: string

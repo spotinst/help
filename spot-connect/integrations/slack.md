@@ -73,7 +73,7 @@ Workflow Name   | String | Name of the workflow associated with the execution.
 
 <img src="/spot-connect/_media/slack-3.png" />
 
-## Add Slack Users
+## Slack Add Users
 
 Add users to a previously created Slack channel.
 
@@ -95,7 +95,7 @@ message   | String | List of Slack User IDs of the users added to the channel
 
 <img src="/spot-connect/_media/slack-4.png" />
 
-## Archive Slack Channel
+## Slack Archive Channel
 
 You can archive a specified Slack channel. Archived channels can still be searched but are closed to any new activity.
 
@@ -116,7 +116,7 @@ message   | String | Status of the archive command.
 
 <img src="/spot-connect/_media/slack-5.png" />
 
-## Create New Slack Channel
+## Slack Create New Channel
 
 Create a new Slack channel.  
 
@@ -143,7 +143,7 @@ channel_url   | String | A URL for the newly created channel.
 
 <img src="/spot-connect/_media/slack-7.png" />
 
-## Send Slack Message
+## Slack Send Message
 
 Send Slack messages to a given channel.
 
