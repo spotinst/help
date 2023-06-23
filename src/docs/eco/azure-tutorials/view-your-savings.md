@@ -41,7 +41,7 @@ A bar graph showing the amount of savings each month broken down by type of savi
 
 ### Reservation Order Details
 
-Below the savings over time chart, you can see a table with detailed information about your reserved instances, including your total generated savings at the bottom of the table.
+Below the savings over time chart, you can see a table with detailed information about your reserved instances.
 
 <img src="/eco/_media/azure-view-your-savings-03a.png" />
 
@@ -59,7 +59,7 @@ You can filter the data displayed according to several criteria available.
 
 #### Display Columns
 
-You can customize the columns that appear in the table. The following column headings are available:
+The following column headings are displayed:
 
 - Reservation order ID: Azure reservation order identifier.
 - Reservation ID: The identifier of the reservation.
@@ -83,7 +83,7 @@ To export the Reservation Details report to a CSV file, click Export above the t
 
 ### Reserved Order Usage
 
-Below the reservation order details, you can see a table with detailed information about your reserved instances, including your total generated savings at the bottom of the table.
+Below the reservation order details, you can see a table with detailed information about your reserved instances, including the Utilization per reservation. 
 
 <img src="/eco/_media/azure-view-your-savings-06.png" />
 
@@ -101,7 +101,7 @@ You can filter the data displayed according to several criteria available.
 
 #### Display Columns
 
-You can customize the columns that appear in the table. The following column headings are available:
+The following column headings are displayed:
 
 * Reservation order ID: Azure reservation order identifier.
 * Reservation ID: The identifier of the reserved instance.
@@ -132,7 +132,7 @@ A filterable table and corresponding chart which displays your commitments in a 
   - Example 4: If the term of the RI is three years and only one year of the period has passed since it was purchased, it would be possible to show only 33.3% of the total equivalent cost in this field, at maximum.
 * % Used: Utilization within that time period.
 
-### Export Data
+#### Export Data
 
 To export the Commitment Usage Distribution Over Time Details table to a CSV file, click Export above the table.
 
