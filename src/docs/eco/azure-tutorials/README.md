@@ -22,4 +22,6 @@ Based on those analytics and strategies, Eco helps you build and manage your por
 
 This section includes procedures and other information you need to understand and fully optimize your reserved instance and savings plan portfolio.
 
-To learn more, choose Azure tutorials in the sidebar on the left.
+To learn more, choose an Azure tutorial in the sidebar on the left.
+
+
