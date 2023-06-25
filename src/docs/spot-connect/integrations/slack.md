@@ -12,7 +12,7 @@ The integration between Spot Connect and Slack enables you to:
 ## Configure Slack in Spot Connect
 
 1. In the left main menu, click **Connect** and click **Settings**.
-2. Under the Integrations tab, select **PagerDuty**.  
+2. Under the Integrations tab, select **Slack**.  
 3. Configure a new integration instance with the information below.
 
 Details needed to set up a Slack instance in Spot Connect:

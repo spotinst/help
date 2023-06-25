@@ -147,8 +147,8 @@ Configure PagerDuty to send a webhook request to Spot Connect when an incident o
 5. In Extension Type, select **Generic V2 Webhook**.
 6. In the URL field, enter the Workflow Webhook URL value saved from Spot Connect.
 7. Custom Headers:
-  * Header Name: x-api-key
-  * Header Value: enter Webhook API Key Value saved from Spot Connect.
+    * Header Name: x-api-key
+    * Header Value: enter Webhook API Key Value saved from Spot Connect.
 8. Save the extension.
 
 **Action Example**

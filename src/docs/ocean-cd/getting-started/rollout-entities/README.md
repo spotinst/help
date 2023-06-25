@@ -14,7 +14,9 @@ The entities are as follows:
 
 **RolloutSpec** - The definition of how to manage the rollout of a specific SpotDeployment or more.
 
-> **Note**: The above SaaS entities should not be applied using the “kubectl commands”. They can be configured using either the Spot console, using CLI, or using the Spot API.
+
+> **Note**: The above SaaS entities should not be applied using the “kubectl commands”. They can be configured using either the Spot console, using [CLI](https://github.com/spotinst/spot-oceancd-cli#ocean-cd-entities), or using the Spot [API](https://docs.spot.io/api/#tag/Ocean-CD).
+
 
 ## What’s Next?
 
