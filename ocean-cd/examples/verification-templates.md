@@ -28,7 +28,7 @@ The Prometheus query in the verification template enables you to receive targete
 This template enables you to calculate the sum of the container CPU usage per seconds found in the demo namespace.
 
 ```yaml
-kind: "verificationTemplate"
+kind: "VerificationTemplate"
 name: "prometheus"
 args:
   - name: "metric-name"

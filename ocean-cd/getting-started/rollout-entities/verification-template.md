@@ -21,7 +21,6 @@ metrics:
  successCondition: result[0] <= 0.95
  failureCondition: result[0] >= 1.2
  failureLimit: 0
- inconclusiveLimit: 0
  consecutiveErrorLimit: 0
  provider:
    prometheus:
