@@ -17,7 +17,7 @@ Ocean CD supports the following providers:
 
 ```yaml
 kind: verificationProvider
-name: My-verification-provider
+name: my-verification-provider
 clusterIds:
   - cluster-name-1
   - cluster-name-2
@@ -44,7 +44,7 @@ For more information on how to retrieve the data above, see the official NewReli
 
 ```yaml
 kind: verificationProvider
-name: My-verification-provider
+name: my-verification-provider
 clusters:
   - cluster-name-1
 datadog:
@@ -59,7 +59,7 @@ For more information on how to retrieve the data above, see the official DataDog
 
 ```yaml
 kind: verificationProvider
-name: My-verification-provider
+name: my-verification-provider
 clusters:
   - cluster-name-1
 cloudWatch:
