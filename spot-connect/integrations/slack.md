@@ -33,11 +33,11 @@ Integration Alias   | A name for the integration instance. | True
 
 You can add these actions in the Spot Connect workflow builder as part of your workflow.
 
-* Approval
-* Slack Add Users
-* Slack Archive Channel
-* Slack Create New Channel
-* Slack Send Message  
+* [Approval](spot-connect/integrations/slack?id=approval)
+* [Slack Add Users](spot-connect/integrations/slack?id=slack-add-users)
+* [Slack Archive Channel](spot-connect/integrations/slack?id=slack-archive-channel)
+* [Slack Create New Channel](spot-connect/integrations/slack?id=slack-create-new-channel)
+* [Slack Send Message](spot-connect/integrations/slack?id=slack-send-message)  
 
 ### Approval
 
