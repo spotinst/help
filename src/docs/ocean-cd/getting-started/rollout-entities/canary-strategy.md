@@ -45,4 +45,4 @@ The attributes of a strategy:
 
 ## What’s Next?
 
-Learn how to [roll an update strategy](ocean-cd/getting-started/rollout-entities/rolling-update-strategy).  
+Learn how to [roll an update strategy](ocean-cd/getting-started/rollout-entities/rolloutspec).  
