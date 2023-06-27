@@ -40,4 +40,4 @@ The attributes of a strategy:
 
 ## What's Next?
 
-Learn how Ocean CD manages the [rollout of a new SpotDeployment update](ocean-cd/getting-started/create-deployment).
+Learn how Ocean CD manages the [rollout of a new SpotDeployment update](ocean-cd/getting-started/rollout-entities/rolloutspec).
