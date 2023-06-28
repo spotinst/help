@@ -89,6 +89,7 @@ Examples:
 
 * **Resources** – An array of resources to which the actions and effect apply (Using camelCase). Each one represents a Spot resource (e.g., Ocean cluster, Elastigroup). A resource is defined by the pattern: [serviceName]:[ResourceId]. Wildcards (*) are supported in [serviceName] and [actionName].  
 Examples:
+
   - * - all resources.
   - elastigroup:* – all Elastigroup resources.
   - elastigroup:sig-214* – all groups starting with sig-214.  
@@ -128,7 +129,9 @@ This means that all the operators should return true.
 
 * **Resource retrieval**:  
 Currently supports AWS, Azure, and Ocean CD resources.
+
 This part is responsible for the definition of which resource should be tested with the condition operator. It consists of a Spot prefix (`spot`) and resource name (`elastigroup`, `ocean`, etc.), separated by the character:
+
 When specifying an Ocean CD resource, the correct usage should be:
 
 ```
