@@ -1,13 +1,13 @@
 # Create New Permission Policy
 
-When you create a [permission policy](administration/policies/), you can define the policy type and choose the services and actions that will be included. The detailed procedures are described below.
+Creating a [permission policy](administration/policies/), enables you to define the granted permissions that are set for groups and users inside the organization. You can choose the policy type, and specify which services and actions are included. The detailed procedures are described below.
 
 ## Get Started
-1. Click the User icon in the Spot console and click Settings.
+1. Click the User icon in the Spot console and click **Settings**.
 
 <img src="/administration/_media/create-new-user-01.png" width="381" height="258" />
 
-2. Under Organization in the left menu, click Permission Policies, then on the right, click Create New Policy.
+2. Under Organization in the left menu, click **Permission Policies**, then on the right, click **Create New Policy**.
 
 <img src="/administration/_media/create-policy-01.png" />
 
@@ -23,7 +23,7 @@ The Create New Policy wizard appears.
    - Account: These permissions relate to products and services that have resources at the account level. You will select the relevant accounts separately for each user or group once you attach the policy to them.
    - Organization: The permissions relate to products and services that have resources at the organization level.
 
-Once a policy has been created, you will not be able to change the policy type.
+Once a policy has been created, you can not change the policy type.
 
 ### Service
 
@@ -67,24 +67,97 @@ To remove a service and all of its corresponding actions, click the Trash icon o
 
 ## Edit the JSON
 
-You can also edit the JSON format. Complete the following steps:
-1. By Services and permissions, click JSON.
-2. Click Edit Mode, and edit the file as required.
+You can also edit a policy using the JSON format. To edit the policy using the JSON editor, complete the following steps:
+
+1. Open an existing permission policy or create a new one, navigate to the **Services and permissions**, click **JSON**.
+2. Turn on the **Edit Mode** to enable editing the JSON file.
 
 <img src="/administration/_media/create-policy-06.png" />
 
-### Edit Custom Policy Conditions
+### Statements
 
-You can edit the custom policy conditions according to the following conditions and their supported configurations in the JSON format.   
+A statement contains the following elements:
 
-The conditions consist of 4 parts:
+* **Effect** – Determines whether the following actions are allowed or denied. The value for this field can be either ALLOW or DENY.
 
-* Condition operator: The operator field defines the logic that will be checked between the operands condition attribute value VS actual retrieved value.  
-* Resource retrieval: This part is responsible for the definition of which resource will be tested with the condition operator and specifies the resources that will be retrieved for testing.  
-* Resource attribute: A single attribute among the available attributes from the resource configuration.
-* Attribute value: The specified value should be tested against the retrieved value within the retrieved resource.
+* **Actions** – An array of actions defined by the pattern [serviceName]:[actionName]. Using wildcards (*) is supported both in the [serviceName] and in the [actionName] parts.  
+Examples:
+  - elastigroup:update
+  - ocean:roll
+  - elastigroup:describe* will allow all Describe actions, for example: -elastigroup:describeDeployments, elastigroup:describeGroup, etc.
+- elastigroup:* will allow all Elastigroup actions.
 
-**Example**
+* **Resources** – An array of resources to which the actions and effect apply (Using camelCase). Each one represents a Spot resource (e.g., Ocean cluster, Elastigroup). A resource is defined by the pattern: [serviceName]:[ResourceId]. Wildcards (*) are supported in [serviceName] and [actionName].  
+Examples:
+  - all resources.
+  - elastigroup:* – all Elastigroup resources.
+  - elastigroup:sig-214* – all groups starting with sig-214.  
+
+### Policy Rules
+The following rules apply to policies:
+* An action that is not explicitly allowed by a policy is denied by default.
+* A policy-based user with no policies is equivalent to a viewer user. Organization Administrators, Account Editors, and policy-based users with the proper permissions are able to grant permissions.
+* All API tokens that belong to you will be affected by the your current policy.
+* Permissions to create objects (for example: elastigroup:create*) do not grant permissions on the created objects themselves.
+
+
+
+### Policy Conditions
+
+Custom policy conditions enables you to create conditions within policies for granular control.
+
+Supported resources include Spot managed AWS, Azure, and Ocean CD resources.
+
+ **Conditions consist of five parts**:
+
+* **Logical operator** (optional):  
+
+Defines the logic between the value based operators.
+
+>**Note**: Using a logical operator requires at least two value-based operators.
+
+* **Value-based operator**:  
+    - StringEquals - Compares two strings and returns true if equals, otherwise returns false.
+    - StringNotEquals - Compares two strings and returns false if equals, otherwise returns true.
+    - StringContains - Compares two strings and returns true if the first string contains the second, otherwise returns false.
+    - StringEqualsIgnoreCase - Compares two strings and returns true if the strings are in the same length, and corresponding characters in the two strings are equal ignoring case.
+    - StringPatternMatch – Compares two strings and returns true if the string matches the given regular expression.
+
+In case the condition contains more than one condition operator, an **AND** will be 	used between them.
+This means that all the operators should return true.
+
+* **Resource retrieval**:  
+Currently supports AWS, Azure, and Ocean CD resources.
+This part is responsible for the definition of which resource should be tested with the condition operator consists of Spot prefix (spot) and resource name (elastigroup, ocean, etc.), separated by the character:
+When specifying an Ocean CD resource, the correct usage should be:
+
+```
+"resources": [
+    "oceancdStrategyName:iair-julia-test-copy"
+  ],
+```
+
+* **Resource attribute**:  
+Name, tags, or resource attribute (optional).
+Examples for a full resource retrieval definition:  
+  - "spot:ocean:name"
+  - "spot:elastigroup:tags/Email"
+
+**Note**: Ocean CD resources are are a combination of resource retrieval and resource attribute. For example:
+
+  - oceancdClusterId
+  - oceancdWorkloadName
+  - oceancdWorkloadType
+  - OceancdNamespace
+
+* **Attribute value**:
+Single string, single variable (e.g., ${spot:userEmail}), or array of values.
+Multiple attribute values of the same field is possible  
+(e.g `spot:elastigroup:name": ["elastigroup-1","elastigroup-2"]`, In this case the logical `OR` will take place.
+
+### Policy Conditions Examples
+
+**Example 1: Update Elastigroup resource**
 
 Given an Elastigroup resource:
 
@@ -105,7 +178,7 @@ Given an Elastigroup resource:
     }
 }
 ```
-The following policy will allow update action for users with the email example@mail.com as specified in the tag with key `DeveloperEmail` from the Elastigroup above.
+The following policy will allow users with example@mail.com email address to update the Elastigroup resource:
 
 ```json
 {
@@ -128,7 +201,86 @@ The following policy will allow update action for users with the email example@m
 }
 ```
 
-In the case above, the `attribute` (tag with the key of `DeveloperEmail`) exists in the Elastigroup and matches the `resource attribute` in the policy ("spot:elastigroup:tags/DeveloperEmail. Therefore, if your email is defined as example@mail.com, you can take the actions that were defined in the policy and can update Elastigroup.
+The policy checks the existence and value of the `DeveloperEmail` tag, and permits users with this email address to perform the update Elastigroup action.
+
+**Example 2: Resource name contains**
+
+```json
+{
+    "statements": [
+        {
+            "effect": "ALLOW",
+            "actions": [
+                "ocean:*"
+            ],
+            "resources": [
+                "*"
+            ],
+            "condition": {
+                "StringEqualsIgnoreCase": {
+                    "spot:ocean:name": ["ocean-example-1", "ocean-example-2"]
+                }
+            }
+        }
+    ]
+}
+```
+
+The policy enable performing ocean-related operations on clusters with names containing `ocean-example-1` or `ocean-example-2`.
+
+**Example 3: Ocean CD Workload Policy**
+
+```json
+{
+	"statements": [{
+		"effect": "ALLOW",
+		"actions": [
+			"oceancd:restartWorkloadAction"
+		],
+		"resources": [
+			"*"
+		],
+		"condition": {
+			"And": [{
+					"StringEquals": {
+						"oceancdClusterId": "cluster-labs"
+					}
+				},
+				{
+					"StringEqualsIgnoreCase": {
+						"oceancdWorkloadType": "SpotDeployment"
+					}
+				},
+				{
+					"StringEquals": {
+						"oceancdNamespace": " nslab"
+					}
+				},
+				{
+					"Or": [{
+							"StringEquals": {
+								"oceancdWorkloadName": " workload1"
+							}
+						},
+						{
+							"StringContains": {
+								"oceancdWorkloadName": " workload2"
+							}
+						}
+					]
+				}
+			]
+		}
+	}]
+}  
+```   
+
+The policy enables restarting workloads on Ocean CD with specific conditions, including: cluster ID, workload type, namespace, and workload name. 
+
+* Workload type - “SpotDeployment”
+* Cluster id - “cluster-labs”
+* Namespace - “nslab”
+* Workload name equals to “workload1” or contains “workload2”
 
 ## What’s Next?
 
