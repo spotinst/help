@@ -1,4 +1,4 @@
-# Create New Permission Policy
+# Create Permission Policy
 
 Creating a [permission policy](administration/policies/), enables you to define the granted permissions that are set for groups and users inside the organization. You can choose the policy type, and specify which services and actions are included. The detailed procedures are described below.
 
@@ -89,7 +89,8 @@ Examples:
 
 * **Resources** – An array of resources to which the actions and effect apply (Using camelCase). Each one represents a Spot resource (e.g., Ocean cluster, Elastigroup). A resource is defined by the pattern: [serviceName]:[ResourceId]. Wildcards (*) are supported in [serviceName] and [actionName].  
 Examples:
-  - all resources.
+
+  - * - all resources.
   - elastigroup:* – all Elastigroup resources.
   - elastigroup:sig-214* – all groups starting with sig-214.  
 
@@ -128,7 +129,9 @@ This means that all the operators should return true.
 
 * **Resource retrieval**:  
 Currently supports AWS, Azure, and Ocean CD resources.
-This part is responsible for the definition of which resource should be tested with the condition operator consists of Spot prefix (spot) and resource name (elastigroup, ocean, etc.), separated by the character:
+
+This part is responsible for the definition of which resource should be tested with the condition operator. It consists of a Spot prefix (`spot`) and resource name (`elastigroup`, `ocean`, etc.), separated by the character:
+
 When specifying an Ocean CD resource, the correct usage should be:
 
 ```
@@ -143,7 +146,7 @@ Examples for a full resource retrieval definition:
   - "spot:ocean:name"
   - "spot:elastigroup:tags/Email"
 
-**Note**: Ocean CD resources are are a combination of resource retrieval and resource attribute. For example:
+**Note**: Ocean CD resources are a combination of resource retrieval and resource attribute. For example:
 
   - oceancdClusterId
   - oceancdWorkloadName
@@ -275,7 +278,7 @@ The policy enable performing ocean-related operations on clusters with names con
 }  
 ```   
 
-The policy enables restarting workloads on Ocean CD with specific conditions, including: cluster ID, workload type, namespace, and workload name. 
+The policy enables restarting workloads on Ocean CD with specific conditions, including: cluster ID, workload type, namespace, and workload name.
 
 * Workload type - “SpotDeployment”
 * Cluster id - “cluster-labs”
