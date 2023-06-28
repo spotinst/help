@@ -35,7 +35,7 @@ Choose the relevant service (e.g., Ocean, Elastigroup, or Setup) for the policy.
 
 ### Actions
 
-Once you choose a service, the service will appear below with its set of standard Create, Update, and Delete actions that are granted with the service.
+Once you choose a service, the service opens below with its set of standard Create, Update, and Delete actions that are granted with the service.
 
 <img src="/administration/_media/create-policy-04.png" width="406" height="166" />
 
@@ -43,7 +43,7 @@ Once you choose a service, the service will appear below with its set of standar
 
 If you do not want to allow all of the actions included in the standard set of actions, click Manual Edit. Then you can unmark the actions that will not be allowed.
 
-If you need more granular control of the actions to be allowed, click one of the arrows. For example, when you click the arrow by Create, you will then see a list of individual Create actions allowed for this service.
+If you need more granular control of the actions to be allowed, click one of the arrows. For example, when you click the arrow by Create, a list of individual Create actions allowed for this service opens.
 
 Unmark any actions that will not be allowed.
 
@@ -91,12 +91,12 @@ Examples:
 Examples:
 - all resources: *
 - all Elastigroup resources: elastigroup:*
-- all groups starting with sig-214: sig-214* 
+- all groups starting with sig-214: sig-214*
 
 ### Policy Rules
 The following rules apply to policies:
 * An action that is not explicitly allowed by a policy is denied by default.
-* A policy-based user with no policies is equivalent to a viewer user. Organization Administrators, Account Editors, and policy-based users with the proper permissions are able to grant permissions.
+* A policy-based user with no policies is equivalent to a viewer user. Organization administrators, account editors, and policy-based users with the proper permissions are able to grant permissions.
 * All API tokens that belong to you will be affected by the your current policy.
 * Permissions to create objects (for example: elastigroup:create*) do not grant permissions on the created objects themselves.
 
