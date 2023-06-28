@@ -1,5 +1,11 @@
 # Controller Version History
 
+## [1.0.95] - 2023-06-15
+
+Added
+
+- overall stability improvement
+
 ## [1.0.94] - 2023-06-11
 
 Added
