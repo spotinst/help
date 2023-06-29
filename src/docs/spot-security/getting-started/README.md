@@ -86,7 +86,7 @@ When this is complete, you can go back to the Spot Security onboarding process t
 
 ### Step 2.2: Bucket Name and Region Validation
 
-1. Enter the CloudTrail’s Bucket Name and Region, and click Validate.
+1. Enter the CloudTrail’s Bucket Name and Region, and click **Validate**.
 
 <img src="/spot-security/_media/getting-started-j1.png" />
 
