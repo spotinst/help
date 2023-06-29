@@ -4096,6 +4096,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-security/features/topology"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/spot-security/getting-started/azure</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-security/getting-started/azure"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-security/getting-started/azure"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/spot-security/getting-started/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
