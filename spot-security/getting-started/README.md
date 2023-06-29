@@ -94,7 +94,7 @@ When this is complete, you can go back to the Spot Security onboarding process t
 
 ## Step 3: Review and Finalize
 
-Review the information and ensure all details are correct. Click Finish Onboarding.
+Review the information and ensure everything is correct. Click Finish Onboarding.
 
 <img src="/spot-security/_media/getting-started-k1.png" width="750" height="600" />
 
