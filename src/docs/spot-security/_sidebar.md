@@ -3,6 +3,8 @@
 - <a href="/" class="sidebar-home"><i data-feather="arrow-left" class="sidebar-back-icon"></i>Back to Main Tree</a>
 - [Spot Security](spot-security/)
   - [Getting Started](spot-security/getting-started/)
+    - [AWS](spot-security/getting-started/aws)
+    - [Azure](spot-security/getting-started/azure)  
   - [Features](spot-security/features/)
     - [Dashboard](spot-security/features/security-dashboard/)
       - [Create a Preset](spot-security/features/security-dashboard/create-preset)
