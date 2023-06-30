@@ -3,12 +3,12 @@
 There are two methods to set a budget for an Elastigroup:
 
 - From the Elastigroup Dashboard
+  In the EG dashboard, browse to the `Costs` tab, there you will find a new icon `Set Budget`.
 
 <img src="/elastigroup/_media/configure-budgets_1.png" />
 
 - From the Budgets Dashboard
-  In the EG dashboard, browse to the `Costs` tab, there you will find a new icon `Set Budget`.
-
+  
   <img src="/elastigroup/_media/configure-budgets_2.png" />
 
 In order to access the Budgets dashboard, please click on the new `Budgets` icon in the left hand menu.
