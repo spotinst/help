@@ -239,55 +239,30 @@ The policy enable performing ocean-related operations on clusters with names con
             "*"
         ],
      "condition": {
-
         "And": [
-
           {
-
             "StringEquals": {
-
               "oceancdWorkloadName": "nginx-deployment"
-
             }
-
           },
-
           {
-
             "StringEquals": {
-
               "oceancdNamespace": "nslab"
-
             }
-
           },
-
           {
-
             "StringEquals": {
-
               "oceancdClusterId": "cluster-labs"
-
             }
-
           },
-
           {
-
             "StringEquals": {
-
               "oceancdWorkloadType": "SpotDeployment"
-
             }
-
           }
-
         ]
-
       }
-
     }
-
   ]
 
 }  
