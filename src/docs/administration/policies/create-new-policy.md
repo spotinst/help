@@ -11,7 +11,7 @@ Creating a [permission policy](administration/policies/), enables you to define 
 
 <img src="/administration/_media/create-policy-01.png" />
 
-The Create New Policy wizard appears.
+The Create New Policy wizard opens.
 
 ## Create New Policy
 1. Enter a name for the policy.
@@ -230,46 +230,66 @@ The policy enable performing ocean-related operations on clusters with names con
 
 ```json
 {
-	"statements": [{
-		"effect": "ALLOW",
-		"actions": [
-			"oceancd:restartWorkloadAction"
-		],
-		"resources": [
-			"*"
-		],
-		"condition": {
-			"And": [{
-					"StringEquals": {
-						"oceancdClusterId": "cluster-labs"
-					}
-				},
-				{
-					"StringEqualsIgnoreCase": {
-						"oceancdWorkloadType": "SpotDeployment"
-					}
-				},
-				{
-					"StringEquals": {
-						"oceancdNamespace": " nslab"
-					}
-				},
-				{
-					"Or": [{
-							"StringEquals": {
-								"oceancdWorkloadName": " workload1"
-							}
-						},
-						{
-							"StringContains": {
-								"oceancdWorkloadName": " workload2"
-							}
-						}
-					]
-				}
-			]
-		}
-	}]
+    "statements": [{
+        "effect": "ALLOW",
+        "actions": [
+            "oceancd:restartWorkloadAction"
+        ],
+        "resources": [
+            "*"
+        ],
+     "condition": {
+
+        "And": [
+
+          {
+
+            "StringEquals": {
+
+              "oceancdWorkloadName": "nginx-deployment"
+
+            }
+
+          },
+
+          {
+
+            "StringEquals": {
+
+              "oceancdNamespace": "nslab"
+
+            }
+
+          },
+
+          {
+
+            "StringEquals": {
+
+              "oceancdClusterId": "cluster-labs"
+
+            }
+
+          },
+
+          {
+
+            "StringEquals": {
+
+              "oceancdWorkloadType": "SpotDeployment"
+
+            }
+
+          }
+
+        ]
+
+      }
+
+    }
+
+  ]
+
 }  
 ```   
 
