@@ -13,6 +13,7 @@
       - [Remediate](spot-security/features/analyze-risks/remediate)
     - [Topology](spot-security/features/topology)
     - [Events](spot-security/features/events)
+    - [Threats](spot-security/features/threats)    
     - [Inventory](spot-security/features/inventory)
     - [Compliance](spot-security/features/compliance)
   - [Support Matrix](spot-security/security-matrix/)

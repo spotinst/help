@@ -1,10 +1,8 @@
 <meta name="robots" content="noindex">
 
-# Get Started
+## Onboard AWS Account
 
 This procedure describes how to connect your AWS account to Spot Security.
-
-## Onboard AWS Account
 
 1. If you are using Spot Security for the first time, click **Spot Security** in the left main menu of the Spot console. Click **Start With 30 Days Free Trial**.
 2. If you already onboarded a cloud account(s) on Spot Security, in the left main menu in the console click **Spot Security** and **Administration**.  
