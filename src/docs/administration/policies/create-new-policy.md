@@ -264,7 +264,6 @@ The policy enable performing ocean-related operations on clusters with names con
       }
     }
   ]
-
 }  
 ```   
 

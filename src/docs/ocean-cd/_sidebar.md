@@ -22,7 +22,7 @@
     - [Override Strategy](ocean-cd/concepts-features/override-strategy)
     - [Ocean Integration](ocean-cd/ocean-integration/)
     - [Continuous Verification](ocean-cd/concepts-features/verifications)
-    - [Multiple SpotDepolyments](ocean-cd/concepts-features/multiple-deployments)  
+    - [Multiple SpotDeployments](ocean-cd/concepts-features/multiple-deployments)  
     - [Trigger Rollouts with ConfigMap](ocean-cd/concepts-features/trigger-configmap)
     - [Headers-based Traffic](ocean-cd/concepts-features/headers)
   - [Get to Know Ocean CD](ocean-cd/get-to-know-ocean-cd/)
