@@ -40,7 +40,6 @@ compute.instanceGroups.get
 compute.instanceGroups.list
 compute.instanceGroups.update
 compute.instanceGroups.use
-compute.instanceGroups.delete
 compute.instanceTemplates.get
 compute.instances.attachDisk
 compute.instances.create
