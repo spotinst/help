@@ -52,7 +52,7 @@ In addition to the table:
 
 The individual threat page displays details of session events such as the event name, event type, asset ID, IP address, region, event time, session ID, and event source, providing comprehensive information about the specific threat events.
 
-<img src="/spot-security/_media/threats-5.png" />
+<img src="/spot-security/_media/threats-5a.png" />
 
 You can click **Table** or **Details** to view the threat analysis in the form of a table or JSON. The JSON view displays the event detail record.  
 
@@ -64,4 +64,4 @@ The Event Detail Record provides additional context for each event. These record
 
 ## What’s Next?
 
-Learn more about [Spot Security Inventory](spot-security/features/inventory). 
+Learn more about [Spot Security Inventory](spot-security/features/inventory).
