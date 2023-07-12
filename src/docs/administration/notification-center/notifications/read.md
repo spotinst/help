@@ -1,6 +1,6 @@
 # Read Notifications
 
-You can access and read all of your notifications on a single page. The Notifications page shows your Spot messages and event notifications. In addition, you can see a list of news items about Spot from the [spot.io blog](https://spot.io/news/).
+You can access and read all of your notifications on a single page. The Notifications page shows your Spot messages and event notifications. In addition, you can see a list of news items about Spot from the [Spot.io Resource Center](https://spot.io/news/).
 
 <img src="/administration/_media/read-messages-01.png" />
 
