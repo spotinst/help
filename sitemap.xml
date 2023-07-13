@@ -4089,6 +4089,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-security/features/security-dashboard/"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/spot-security/features/threats</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-security/features/threats"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-security/features/threats"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/spot-security/features/topology</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
