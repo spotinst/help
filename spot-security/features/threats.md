@@ -11,7 +11,7 @@ In the Threats page, there are two main tabs:
 
 ## Overview
 
-The Overview section comprises three informative subsections:
+The Overview section provides three informative subsections:
 
 * **Threats Over Time**: A line graph that displays the trend of threat counts over time, enabling you to select the view of the overall threat landscape in the range of a day, week or month.
 
