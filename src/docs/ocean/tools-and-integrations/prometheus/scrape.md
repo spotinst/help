@@ -30,7 +30,7 @@ Although the exporter application is independent of the Ocean controller, a func
 `helm install my-release spot/ocean-metric-exporter`
 
 ### Via Infrastructure as Code
-Alternatively, use the [Terraform module](https://registry.terraform.io/modules/spotinst/ocean-metric-exporter/spotinst/latest) to incorporate the exporter in your Infrastructure as Code aC setup.
+Alternatively, use the [Terraform module](https://registry.terraform.io/modules/spotinst/ocean-metric-exporter/spotinst/latest) to incorporate the exporter in your Infrastructure as Code (IaC) setup.
 
 ### Via Kubernetes CLI
 
@@ -69,7 +69,7 @@ You can configure labels, categories and metrics to scrape with the Prometheus e
 
 ### Categories  
 
-Each category represents a group of metrics. If the categories are not set - they will all be included by default. The possible categories are:  
+Each category represents a group of metrics. If the categories are not set - all will be included by default. The possible categories are:  
 
 * scaling  
 * cost_analysis  
