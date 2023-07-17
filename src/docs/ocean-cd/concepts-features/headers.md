@@ -1,6 +1,6 @@
 # Headers-based Traffic
 
-OceanCD provides support for the Headers-based Traffic feature using Istio Traffic Manager that enables to send all of your traffic during any phase of your Canary or rolling update rollouts to an http request header value.
+OceanCD provides support for the Headers-based Traffic feature using Istio Traffic Manager that enables to send all of your traffic during any phase of your Canary rollouts to an http request header value.
 
 The feature works in a similar manner for both subset and host levels.  
 
@@ -11,7 +11,7 @@ You can set the Headers-based Traffic feature while using Ocean CD according to 
 1. Make sure to configure the relevant YAML services as part of your rolloutSpec and apply them accordingly into your cluster.  
 These include: DestinationRule, Stable Service, Gateway & Virtual Service YAMLs.
 
-**Note: Templates can be found in Spot's [GitHub repository](https://github.com/spotinst/spot-oceancd-releases/blob/main/Quick%20Start%20%26%20Examples/Headers%20Based%20Traffic/ISTIO/Subset-Level/Gateway.yaml).**
+**Note: Templates can be found in Spot's [GitHub repository](https://github.com/spotinst/spot-oceancd-releases/tree/main/examples/features/headers_based_traffic).**
 
 2. Create an Ocean CD strategy that includes the headers you wish to set for each phase. You can find a template below:
 
