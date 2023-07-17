@@ -21,7 +21,6 @@ Download the proper binary `kubectl` [file](https://kubernetes.io/docs/tasks/too
 Make sure the binary file is executable.
 
 ```chmod 755 kubectl && mv kubectl /usr/local/bin/kubectl
-
 ```
 
 ## (Optional) Installing AWS CLI
