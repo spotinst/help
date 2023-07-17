@@ -32,7 +32,7 @@ In order to create a SpotDeployment from scratch complete the following steps:
 1. Copy the SpotDeployment template below.
 2. Apply your SpotDeployment using the command:
 
-`kubectl apply –f <SD YAML> -n <namespace>`
+`kubectl apply -f <SD YAML> -n <namespace>`
 
 ```yaml
 apiVersion: spot.io/v1beta1
