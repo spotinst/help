@@ -51,6 +51,8 @@ To create a new Policy Engine Map, complete the following steps:
 
 8. Click **Save Changes** and save it under a specific name of your choice. You can also mark a new policy engine map as default for the Policy Engine Map view in the console.  
 
+<img src="/spot-security/_media/policy-engine-5.png" />
+
 ## Manage Policy Engine Maps
 
 You can view the complete list of the policy engine maps that have been created by completing the following steps:
@@ -58,7 +60,7 @@ You can view the complete list of the policy engine maps that have been created 
 1. In the **Topology page**, click the **Policy Engine Map** tab.
 2. In the top right corner click **Actions**, then **+ Manage Policy Engine Map List**.
 
-<img src="/spot-security/_media/policy-engine-5.png" />  
+<img src="/spot-security/_media/policy-engine-6.png" />  
 
 In this page you can:
 
