@@ -2,7 +2,7 @@
 
 1. To create a Spot API Token, log on to the Spot console. Go to Settings and click API.
 
-<img src="/administration/_media/api-create-api-token-01.png" />
+<img src="/administration/_media/api-create-api-token-01_2023.png" />
 
 2. The Spot console provides both permanent and temporary tokens. Select your preferred token type and click Generate Token.
 
