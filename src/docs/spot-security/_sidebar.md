@@ -12,6 +12,7 @@
       - [View Risk Details](spot-security/features/analyze-risks/view-risk-details)
       - [Remediate](spot-security/features/analyze-risks/remediate)
     - [Topology](spot-security/features/topology)
+    - [Policy Engine](spot-security/features/policy-engine)
     - [Events](spot-security/features/events)
     - [Threats](spot-security/features/threats)    
     - [Inventory](spot-security/features/inventory)
