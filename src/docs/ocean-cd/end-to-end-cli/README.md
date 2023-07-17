@@ -246,7 +246,7 @@ The verification template entity enables you to build in the query you want to a
 kind: "verificationTemplate"
 name: "oceancd-workshop-vt"
 metrics:
-- name: "My-first-metric"
+- name: "my-first-metric"
   interval: "5s"
   count: 10
   failureCondition: "result[0] >= 100"
