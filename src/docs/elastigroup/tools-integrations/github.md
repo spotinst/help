@@ -7,7 +7,7 @@ Scale and manage your GitHub workflow jobs by hosting your GitHub runners in Ela
 ## Prerequisites
 
 * Connect your AWS account to Spot. Refer to the following link for details: https://docs.spot.io/connect-your-cloud-provider/first-account/
-* Spot Connect is in private preview mode. You can enable it in your account by contacting your sales representative or by contacting the Spot support team at support@spot.io.
+* Spot Connect in private preview mode. You can enable it in your account by contacting your sales representative or by contacting the Spot support team at support@spot.io.
 * Integrate Spot Connect with your Spot Elastigroup account that hosts the GitHub runners by creating an API token in the Spot console with a minimum of Elastigroup create and update permissions.
 
 ## Step 1: Add Spot Services to Spot Connect
@@ -175,7 +175,7 @@ The Spot Operation must be kept as Scale Up in the Spot Operation field with an 
 
 1. In the left main menu in the Spot console, click **Connect** and click **Workflows**.
 2. Under the Templates tab, select the **Spot Elastigroup Remove All Idle GitHub Runners** template and Click **Duplicate**.
-3. Configure the GitHub Filter Runners resource and select the GitHub repository configured in **Step 2**, make sure the Busy filter is set to `false` and the Status filter is set to `online`.  
+3. Configure the GitHub Filter Runners resource and select the GitHub repository configured in Step 2, make sure the Busy filter is set to `false` and the Status filter is set to `online`.  
 4. Add the Specify labels required by the GitHub workflow jobs. The resource discovers any idle instances matching the labels specified.
 
 <img src="/elastigroup/_media/elast-spot-connect-github-11.png" />
@@ -229,6 +229,4 @@ jobs:
     - run: sleep 300
 ```
 
-The configuration is complete, and you can deploy your workflow in GitHub. Spot Connect scales up the Elastigroup runners when the new job is queued and scales down any idle instances based on your scheduled trigger. Ensure the label of Job is the same as the one used in the User data of Elastigroup and the Spot Connect labels configured in GitHub Resource. 
-
- ￼
+The configuration is complete, and you can deploy your workflow in GitHub. Spot Connect scales up the Elastigroup runners when the new job is queued and scales down any idle instances based on your scheduled trigger. Ensure the label of Job is the same as the one used in the User data of Elastigroup and the Spot Connect labels configured in GitHub Resource.
