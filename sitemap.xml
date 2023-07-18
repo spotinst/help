@@ -1478,6 +1478,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/tools-integrations/elastic-mapreduce/termination-policies-for-emr"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/elastigroup/tools-integrations/github</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/tools-integrations/github"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/tools-integrations/github"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/elastigroup/tools-integrations/grid-engine-azure/configure-tortuga-unicloud-grid-engine</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
