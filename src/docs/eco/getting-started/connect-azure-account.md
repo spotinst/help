@@ -10,7 +10,7 @@ MCA
 
 MOSP/PAYG
 
-**Note**: CSP customers please contact https://spot.io/contact/ for connection details
+**Note**: CSP users- please contact https://spot.io/contact/ for connection details.
 
 ## Prerequisites
 
@@ -36,7 +36,7 @@ Complete the following steps:
 
 <img src="/eco/_media/connect-az-account-3.png" />
 
-If you have any issues with the process, please see our troubleshooting guide https://docs.spot.io/eco/troubleshooting/azure-faq. Additionally, the Eco Axure team can assist with setting up the registered application and transferring the application credentials. Please contact https://spot.io/contact/ for further details. 
+If you have any issues with the process, please see our troubleshooting guide https://docs.spot.io/eco/troubleshooting/azure-faq. Additionally, the Eco Axure team can assist with setting up the registered application and transferring the application credentials. Please contact https://spot.io/contact/ for further details.
 
 ## What's Next?
 
