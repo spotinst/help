@@ -104,6 +104,7 @@
       - [Scaling Policies for EMR](elastigroup/tools-integrations/elastic-mapreduce/scaling-policies-for-emr)
       - [Elastigroup Auto-Recover for EMR](elastigroup/tools-integrations/elastic-mapreduce/elastigroup-auto-recover-for-emr)
       - [Termination Policies for EMR](elastigroup/tools-integrations/elastic-mapreduce/termination-policies-for-emr)
+    - [Github](elastigroup/tools-integrations/github)
     - [Grid Engine (Azure)](elastigroup/tools-integrations/grid-engine-azure/)
       - [Create a Grid Engine Elastigroup](elastigroup/tools-integrations/grid-engine-azure/create-a-grid-engine-elastigroup)
       - [Configure Tortuga (UniCloud) Grid Engine](elastigroup/tools-integrations/grid-engine-azure/configure-tortuga-unicloud-grid-engine)
