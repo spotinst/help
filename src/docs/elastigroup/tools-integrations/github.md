@@ -230,5 +230,3 @@ jobs:
 ```
 
 The configuration is complete, and you can deploy your workflow in GitHub. Spot Connect scales up the Elastigroup runners when the new job is queued and scales down any idle instances based on your scheduled trigger. Ensure the label of Job is the same as the one used in the User data of Elastigroup and the Spot Connect labels configured in GitHub Resource.
-
- ￼
