@@ -10,15 +10,15 @@ MCA
 
 MOSP/PAYG
 
-**Note**: CSP customers please contact https://spot.io/contact/ for connection details
+**Note**: CSP users- please contact https://spot.io/contact/ for connection details.
 
 ## Prerequisites
 
-* Review [read-only permissions](eco/azure-tutorials/access-roles-read-only) required for Eco Cost Specialist team.
-* The Azure user performing these steps must be a Global Administrator with [elevated access](https://learn.microsoft.com/en-us/azure/role-based-access-control/elevate-access-global-admin#elevate-access-for-a-global-administrator) and access to the relevant Management Group(s) or Subscription(s).
-* The Azure user performing this step must be an Enterprise Administrator (EA) or Billing account owner (MCA).
-* Member Account only, account cannot be a guest user account.
-* A registered Spot account.
+- Review [read-only permissions](eco/azure-tutorials/access-roles-read-only) required for Eco Cost Specialist team.
+- The Azure user performing these steps must be a Global Administrator with [elevated access](https://learn.microsoft.com/en-us/azure/role-based-access-control/elevate-access-global-admin#elevate-access-for-a-global-administrator) and access to the relevant Management Group(s) or Subscription(s).
+- The Azure user performing this step must be an Enterprise Administrator (EA) or Billing account owner (MCA).
+- Member Account only, account cannot be a guest user account.
+- A registered Spot account.
 
 ## Process
 
@@ -36,7 +36,7 @@ Complete the following steps:
 
 <img src="/eco/_media/connect-az-account-3.png" />
 
-If you have any issues with the process, please see our troubleshooting guide https://docs.spot.io/eco/troubleshooting/azure-faq. Additionally, the Eco Axure team can assist with setting up the registered application and transferring the application credentials. Please contact https://spot.io/contact/ for further details. 
+If you have any issues with the process, please see our troubleshooting guide https://docs.spot.io/eco/troubleshooting/azure-faq. Additionally, the Eco Axure team can assist with setting up the registered application and transferring the application credentials. Please contact https://spot.io/contact/ for further details.
 
 ## What's Next?
 
