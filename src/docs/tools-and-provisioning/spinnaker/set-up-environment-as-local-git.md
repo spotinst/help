@@ -55,12 +55,15 @@ Create an Ubuntu instance with the following definitions:
    - emacs
    - awscli
    - nginx
+   - make
+   - python2.7
+   - python-pip
 
 ```
 $ sudo su -
 $ add-apt-repository ppa:openjdk-r/ppa
 $ apt-get update
-$ apt-get -y install git curl netcat redis-server openjdk-11-jdk emacs awscli nginx make python2.7 python-pip nginx
+$ apt-get -y install git curl netcat redis-server openjdk-11-jdk emacs awscli nginx make python2.7 python-pip
 ```
 
 2. Install Node.js
