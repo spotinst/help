@@ -25,7 +25,7 @@ $ git checkout spot_provider
 $ ./gradlew halyard-web:run
 ```
 
-2. If you receive the error: hors parameter must be non-empty, then run the following commands and try again.
+2. If you receive the error: trustAnchors parameter must be non-empty, then run the following commands and try again.
 
 ```
 $ /usr/bin/printf '\xfe\xed\xfe\xed\x00\x00\x00\x02\x00\x00\x00\x00\xe2\x68\x6e\x45\xfb\x43\xdf\xa4\xd9\x92\xdd\x41\xce\xb6\xb2\x1c\x63\x30\xd7\x92' > /etc/ssl/certs/java/cacerts
