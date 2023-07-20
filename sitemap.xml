@@ -3403,6 +3403,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/integrations/container"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/spot-connect/integrations/csv-export</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/integrations/csv-export"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/integrations/csv-export"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/spot-connect/integrations/datadog</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
