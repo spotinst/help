@@ -2,7 +2,7 @@
 
 Add a new notification to an existing Elastigroup by creating a new stack and referring to existing groupId, or create a new Elastigroup together with a notification.
 
-`More` protocol and `eventType` options are available in the [Subscribe API](https://docs.spot.io/api/#operation/notificationsServiceSubscriptionsSubscribe).
+`protocol` and `eventType` options are available in the [Subscribe API](https://docs.spot.io/api/#operation/notificationsServiceSubscriptionsSubscribe).
 
 ```json
 {
