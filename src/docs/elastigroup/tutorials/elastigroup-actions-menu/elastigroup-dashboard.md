@@ -30,7 +30,7 @@ The following information appears:
 - Running On-Demand: The total number on-demand instances running in this account during the chosen timeframe.
   On-Demand Hours: The total number of hours that on-demand instances in this account have run in the chosen timeframe.
 - On-Demand Costs: The actual cost for the on-demand instances that ran in this account during the timeframe.
-- Running RIs: The total number reserved instances running in this account during the chosen timeframe.
+- Commitment Plans: The total number reserved instances/savings plans running in this account during the chosen timeframe
 
 ## Top Active Elastigroups
 
@@ -66,12 +66,13 @@ The map displays the AWS regions in which the resources are managed. The colors 
 
 <img src="/elastigroup/_media/tutorials-elastigroup-dashboard-04.png" />
 
-## Reserved Instance Utilization
+## Commitment Plans
 
-In this graph, you can see data about your flexible and non-flexible reserved instances (RIs).
+In this graph, you can see data about your flexible and non-flexible reserved instances (RIs) and Savings Plans.
 
 - Flexible RIs: This graph provides insight into your NFU utilization per region. (NFUs are normalized factor units, available CPUs based on the AWS [instance size flexibility model](https://aws.amazon.com/blogs/aws/new-instance-size-flexibility-for-ec2-reserved-instances/).
 - Non-Flexible RIs: Number of your RIs in use or vacant per AWS market.
+- Savings Plans: Savings Plans utilization for EC2,Fargate and Lambda.
 
 <img src="/elastigroup/_media/tutorials-elastigroup-dashboard-05.png" />
 
