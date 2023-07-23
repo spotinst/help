@@ -17,16 +17,16 @@ To create an Elastigroup using an empty template from scratch, complete the foll
 
 <img src="/elastigroup/_media/tutorials-create-eg-from-scratch-01a.png" />
 
-3. Click Start from scratch.  
+3. Click **Start from scratch**.  
 
 #### Create an Elastigroup using Use Cases 
 
-To create an Elatigroup based on an existing workload, complete the following steps: 
+To create an Elastigroup based on an existing workload, complete the following steps: 
 
 1. In the left menu of the Spot console, click **Elastigroup** and **Groups**. 
 2. Click **Create** and **Use Cases**.
 
-<img src="/elastigroup/_media/tutorials-create-eg-from-scratch-02a.png" />
+<img src="/elastigroup/_media/tutorials-create-eg-from-scratch-02a.png" width="430" height="240" />
 
 3. Select a use case.  
 
@@ -110,7 +110,8 @@ The compute section includes all the relevant information needed in order to for
 * Availability  
 * Cost
 
-<img src="/elastigroup/_media/tutorials-create-eg-from-scratch-5a.png" />
+![tutorials-create-eg-from-scratch-5a](https://github.com/spotinst/help/assets/106514736/e806c038-8015-4df9-87ea-1af96e1f7d5d)
+
 
 ### Instance Selection 
 
@@ -198,7 +199,7 @@ Optionally, you can select to not have a scaling policy or have a [Target Scalin
 
 When you have finished filling in the information in the template, you can review the configuration and edit it in JSON, CloudFormation or Terraform formats. 
 
-<img src="/elastigroup/_media/tutorials-create-eg-from-scratch-5.png" />
+<img src="/elastigroup/_media/tutorials-create-eg-from-scratch-5.png" width="500" height="500" />
 
 ## What's Next?
 
