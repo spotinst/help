@@ -62,8 +62,8 @@ Define your workload capacity as described below.
 * **Minimum**: The lowest number of instances or vCPUs that can be available.  
 * **Maximum**: The highest number of instances or vCPUs that can be available.  
 * Choose one of the following:  
-  - Set by % of Spot instances: Percent of total instances that should be Spot instances. The rest will be On-Demand instances.  
-  - Set by specific On-Demand count: A specific number of instances that must be On-Demand. The rest will be Spot instances. 
+    - Set by % of Spot instances: Percent of total instances that should be Spot instances. The rest will be On-Demand instances.  
+    - Set by specific On-Demand count: A specific number of instances that must be On-Demand. The rest will be Spot instances. 
 
 ## Step 2: Networking 
 
@@ -112,7 +112,6 @@ The compute section includes all the relevant information needed in order to for
 
 ![tutorials-create-eg-from-scratch-5a](https://github.com/spotinst/help/assets/106514736/e806c038-8015-4df9-87ea-1af96e1f7d5d)
 
-
 ### Instance Selection 
 
 You can select instances based on attributes or manually.  
@@ -123,12 +122,12 @@ Specify instance attributes that match your compute requirements.
 
 1. Select the vCPU and memory. 
 2. Select the type of filter: 
-  - Instance types to exclude 
-  - Instance families to exclude 
-  - Generations to exclude 
+    - Instance types to exclude 
+    - Instance families to exclude 
+    - Generations to exclude 
 3. Spot Types: Choose the instance types Elastigroup should consider when launching your instances. Spot recommends selecting multiple instance types to provide Elastigroup with as many Spot instance market options as possible. 
-  - On-demand Type: Choose the on-demand type to use in the event that no Spot instances are available in your desired markets. 
-  - Preferred Spot Types: Select at least one preferred Spot type to prioritize. This constitutes a higher percentage of the group's instance type mix. 4. Select the Minimum Instance Lifetime. The amount of time you want your workloads to run without any interruption to their underlying instances. The shorter the lifetime you choose, the more accurate the market scoring will be. This is based on predictions of the selected value.  
+    - On-demand Type: Choose the on-demand type to use in the event that no Spot instances are available in your desired markets. 
+    - Preferred Spot Types: Select at least one preferred Spot type to prioritize. This constitutes a higher percentage of the group's instance type mix. 4. Select the Minimum Instance Lifetime. The amount of time you want your workloads to run without any interruption to their underlying instances. The shorter the lifetime you choose, the more accurate the market scoring will be. This is based on predictions of the selected value.  
 
 #### Manual Selection 
 
@@ -200,6 +199,8 @@ Optionally, you can select to not have a scaling policy or have a [Target Scalin
 When you have finished filling in the information in the template, you can review the configuration and edit it in JSON, CloudFormation or Terraform formats. 
 
 <img src="/elastigroup/_media/tutorials-create-eg-from-scratch-5.png" width="500" height="500" />
+
+After reviewing and making any required changes, click **Next** and launch your Elastigroup. 
 
 ## What's Next?
 
