@@ -30,7 +30,7 @@ Complete the following steps:
 
 2. Select **Azure Billing Account**.
 
-<img src="/eco/_media/connect-az-account-2.png" />
+<img src="/eco/_media/connect-az-account-2a.png" />
 
 3. Follow the steps in the process below:
 
