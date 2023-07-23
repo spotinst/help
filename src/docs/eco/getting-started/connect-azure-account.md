@@ -17,7 +17,7 @@ MOSP/PAYG
 - Review [read-only permissions](eco/azure-tutorials/access-roles-read-only) required for Eco Cost Specialist team.
 - The Azure user performing these steps must be a Global Administrator with [elevated access](https://learn.microsoft.com/en-us/azure/role-based-access-control/elevate-access-global-admin#elevate-access-for-a-global-administrator) and access to the relevant Management Group(s) or Subscription(s).
 - The Azure user performing this step must be an Enterprise Administrator (EA) or Billing account owner (MCA).
-- Member Account only, account cannot be a guest user account.
+- A Member Account only. The account cannot be a guest user account.
 - A registered Spot account.
 
 ## Process
