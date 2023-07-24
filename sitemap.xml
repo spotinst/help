@@ -1884,11 +1884,11 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/tutorials/elastigroup-tasks/create-a-stateful-elastigroup-from-scratch"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/elastigroup/tutorials/elastigroup-tasks/create-an-elastigroup-from-scratch-legacy-design</loc>
+        <loc>https://docs.spot.io/?/elastigroup/tutorials/elastigroup-tasks/create-an-elastigroup-from-scratch-nw</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/tutorials/elastigroup-tasks/create-an-elastigroup-from-scratch-legacy-design"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/tutorials/elastigroup-tasks/create-an-elastigroup-from-scratch-legacy-design"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/tutorials/elastigroup-tasks/create-an-elastigroup-from-scratch-nw"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/tutorials/elastigroup-tasks/create-an-elastigroup-from-scratch-nw"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/elastigroup/tutorials/elastigroup-tasks/create-an-elastigroup-from-scratch-OLD</loc>
