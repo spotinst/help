@@ -1,4 +1,4 @@
-# Create a Stateful Elastigroup from Scratch- Legacy Design
+# Create a Stateful Elastigroup from Scratch
 
 This procedure describes how to create a stateful Elastigroup using the [Stateful Creation Wizard](https://console.spotinst.com/spt/aws/ec2/elastigroup/stateful/create/general), that is able to persist Volumes, Elastic IPs, Private IPs and more, across spot interruptions. Using Stateful Elastigroups allows you to run a variety of stateful workloads using managed and SLA driven Spot Instances.
 First, we'll start by creating a new Elastigroup, selecting 'Stateful' under the [Use Cases](https://console.spotinst.com/spt/aws/ec2/elastigroup/create/setup) tab.
