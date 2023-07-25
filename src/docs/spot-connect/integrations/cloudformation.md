@@ -76,7 +76,7 @@ Output
 
 This action connects an AWS account to Spot. 
 
-Input 
+#### Input 
 
 |       Parameter       |                                                                        Description                                                                    |      Required  |   |   |
 |-----------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------:|:--------------:|---|---|
@@ -88,7 +88,7 @@ Input
 |      auto_deployment  |     Describes whether StackSets automatically deploy to Organization accounts that are added to the target organization or organizational unit (OU).  |     True       |   |   |
 |      aws_account_ids  |     AWS account IDs under given OU where a StackSet will deploy
 
-Output
+#### Output
 
 |       Parameter         |                                                                            Type                                                                       |                 Description             |   |   |
 |-------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------:|---|---|
