@@ -4,7 +4,7 @@ CloudFormation actions allow you to perform operations to manage your AWS resour
 
 ## Integration Actions 
 
-You can add these actions in the Spot Connect workflow builder as part of your workflow. 
+You can add these actions in the Spot Connect workflow builder as part of your workflow: 
 
 * CloudFormation Filter Resources 
 * CloudFormation Onboard Spot Eco 
@@ -87,3 +87,54 @@ Input
 |      region_name      |     Region where to deploy StackSet                                                                                                                   |     True       |   |   |
 |      auto_deployment  |     Describes whether StackSets automatically deploy to Organization accounts that are added to the target organization or organizational unit (OU).  |     True       |   |   |
 |      aws_account_ids  |     AWS account IDs under given OU where a StackSet will deploy
+
+Output
+
+|       Parameter         |                                                                            Type                                                                       |                 Description             |   |   |
+|-------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------:|---|---|
+|      stack_set_id       |     String                                                                                                                                            |     ID of StackSet deployed             |   |   |
+|      stack_instance_id  |     String                                                                                                                                            |     ID of stack instance                |   |   |
+|      execution_status   |     String                                                                                                                                            |     Status of run (ie: S_OK / E_FAIL)   |   |   |
+
+### Action Example 
+
+Input
+
+![cloudformation-5](https://github.com/spotinst/help/assets/106514736/bc2f5f0f-f193-4182-b6db-befb8be11ddc)
+
+Output
+
+![cloudformation-6](https://github.com/spotinst/help/assets/106514736/a6c4cab4-81a9-49d4-8a08-f8bccb64e2a7)
+
+### CloudFormation Run Template 
+
+The action runs a CloudFormation template. 
+
+#### Input 
+
+|       Parameter       |                                                                                     Description                                                                                |      Required  |   |   |
+|-----------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:--------------:|---|---|
+|      alias            |     AWS target account for running the CloudFormation template.                                                                                                                |     True       |   |   |
+|      stack_name       |     A stack name can contain only alphanumeric characters (case sensitive) and hyphens. It must start with an alphabetical character and can't be longer than 128 characters.  |     True       |   |   |
+|      integration_id   |     CloudFormation Template Resource integration ID                                                                                                                            |     False      |   |   |
+|      template_url     |     URL to fetch CloudFormation template                                                                                                                                       |     False      |   |   |
+|      parameters       |     CloudFormation template parameters                                                                                                                                         |     False      |   |   |
+|      capabilities     |     Capabilities in order for CloudFormation to create the stack                                                                                                               |     False      |   |   |
+#### Output
+
+|       Parameter        |       Type  |                Description             |   |   |
+|------------------------|:-----------:|:--------------------------------------:|---|---|
+|      stack_id          |     String  |     ID of stack deployed               |   |   |
+|      execution_status  |     String  |     Status of run (ie: S_OK / E_FAIL)  |   |   |
+
+Action Example 
+
+Input 
+
+![cloudformation-7](https://github.com/spotinst/help/assets/106514736/9885b274-ff9d-4988-b7de-e8648008c827)
+
+Output 
+
+![cloudformation-8](https://github.com/spotinst/help/assets/106514736/2b5f2ba2-c7b3-4fd0-82f4-780aacaa75ca)
+
+
