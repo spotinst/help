@@ -71,7 +71,7 @@ Input
 
 Output 
 
-![cloudformation-4](https://github.com/spotinst/help/assets/106514736/151784f6-4df5-4f7a-99e3-375c5cb36988)
+![cloudformation-4](https://github.com/spotinst/help/assets/106514736/e41ed7ab-6239-4156-8a66-cc8426997bc1)
 
 ### CloudFormation Onboard Spot User 
 
