@@ -143,7 +143,6 @@ Then, we need to download the Zookeeper deployment.
 ```
 $ wget https://raw.githubusercontent.com/cppforlife/zookeeper-release/master/manifests/zookeeper.yml
 ```
-
 And finally, we can run deploy by providing a path to deployment manifest.
 
 ```
