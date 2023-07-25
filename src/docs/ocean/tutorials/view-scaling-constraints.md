@@ -38,7 +38,7 @@ The summary line shows the number of nodes using each kind of constraint. When y
 
 In addition to the overall summary in the summary line, the table provides summary information per node. In the Pods column, an arrow indicates that one or more pods in that node have scaling constraints. Click on the arrow to see a popup constraint summary for that node.
 
-<img src="/ocean/_media/tutorials-scaling-constraints-02.png" />
+<img src="/ocean/_media/tutorials-scaling-constraints-02.png" /> /*update image*/
 
 ### Node Details
 
