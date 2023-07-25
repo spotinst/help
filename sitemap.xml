@@ -3410,6 +3410,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/integrations/azure"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/spot-connect/integrations/cloudformation</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/integrations/cloudformation"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/integrations/cloudformation"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/spot-connect/integrations/container</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
