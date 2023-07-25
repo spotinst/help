@@ -66,11 +66,12 @@ stack_id | String   | ID of deployed CloudFormation stack.
 
 Input 
 
-![cloudformation-3](https://github.com/spotinst/help/assets/106514736/05697d69-3c34-4418-83dd-61961671231b)
+![cloudformation-3](https://github.com/spotinst/help/assets/106514736/ec440116-ae45-4a25-9c9d-5539d68cf4c8)
+
 
 Output 
 
-![cloudformation-4](https://github.com/spotinst/help/assets/106514736/64cd4552-02e1-4a9a-af00-2d4faa69066a)
+![cloudformation-4](https://github.com/spotinst/help/assets/106514736/34c4ddf6-6d76-458b-9906-a2298f3ecd9d)
 
 ### CloudFormation Onboard Spot User 
 
@@ -104,7 +105,7 @@ Input
 
 Output
 
-![cloudformation-6](https://github.com/spotinst/help/assets/106514736/a6c4cab4-81a9-49d4-8a08-f8bccb64e2a7)
+![cloudformation-6](https://github.com/spotinst/help/assets/106514736/fe2b5c4b-a808-4cd6-959d-919ab6c31d3d)
 
 ### CloudFormation Run Template 
 
@@ -135,6 +136,4 @@ Input
 
 Output 
 
-![cloudformation-8](https://github.com/spotinst/help/assets/106514736/2b5f2ba2-c7b3-4fd0-82f4-780aacaa75ca)
-
-
+![cloudformation-8](https://github.com/spotinst/help/assets/106514736/ade956bd-2b4c-4e1c-b7f4-e1d9029010f8)
