@@ -23,11 +23,15 @@ jupyter notebook \
     --GatewayClient.url=https://api.spotinst.io/ocean/spark/cluster/<your ocean spark cluster id>/notebook/ \
     --GatewayClient.auth_token=<spot token> \
     --GatewayClient.request_timeout=600
+
+# With Notebook v7+, add this option : 
+    --GatewayWebSocketConnection.kernel_ws_protocol=""
 ```
 
 - The GatewayClient.url points to an Ocean Spark cluster, with an Ocean Spark cluster ID of the format *osc-xxxxxxxx* that you can find on the [Clusters](https://console.spotinst.com/ocean/spark/clusters) list in the Spot console.
 - The GatewayClient.auth_token is a [Spot API token](administration/api/create-api-token).
 - The GatewayClient.request_timeout parameter specifies the maximum amount of time Jupyter will wait until the Spark driver starts. If you have capacity available in your cluster, the waiting time should be very short. If there isn't capacity, the Kubernetes cluster will get a new node from the cloud provider, which usually takes a couple of minutes. *You should set the request_timeout to 10 minutes to give you a security margin.* Omitting this parameter prevents you from starting a notebook.
+- The GatewayWebSocketConnection.kernel_ws_protocol specifies we want to use the legacy websocket subprotocol for compatibility reason.
 
 > **Tip**: If you run into issues starting the Jupyter notebook server, ensure that your Ocean for Apache Spark cluster is marked as available in the Spot console.
 
@@ -44,6 +48,9 @@ jupyter lab \
     --GatewayClient.url=https://api.spotinst.io/ocean/spark/cluster/<your ocean spark cluster id>/notebook/ \
     --GatewayClient.request_timeout=600 \
     --GatewayClient.auth_token=<spot token>
+
+# With JupyterLab v4+, add this option : 
+    --GatewayWebSocketConnection.kernel_ws_protocol=""
 ```
 
 ## Define Jupyter kernels with configuration templates
