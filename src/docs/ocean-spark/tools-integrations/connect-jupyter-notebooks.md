@@ -216,25 +216,27 @@ Repeat the steps from Step 2 in the following link to install the Microsoft Jupy
 #### Connect Notebook to your OfAS Cluster  
 
 1. Create or open a Jupyter notebook file.
-2. In the VS Code window, click Jupyter Server in the status bar.
+2. In the VS Code window, click "Select Kernel" in the top-right corner.
 
  <img src="/ocean-spark/_media/jupyter-vscode-ide-2.png" />
 
 3. Select Spot Ocean for Apache Spark item in the list.
 4. Enter your account ID, token and select the cluster you want to use from your account that appears in the dropdown menu.
-5. Click Kernel selector button in the top right corner, and select the config-template you want to use. (Config-templates can take few seconds to appear in the list)
+5. Select the config-template you want to use. (Config-templates can take few seconds to appear in the list)
 6. Run the code in your notebook. The first execution can take approximately 1-5 minutes as a Spark application needs to be started in your cluster.  
 
 > **Tip**: Closing your notebook may not result in the termination of the notebook application. You may have to do so from the Spot console. You can also shutdown kernels without leaving VSCode in the [Jupyter PowerToys](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.vscode-jupyter-powertoys) extension.
 
 #### Troubleshooting
 
-* If Spot Ocean for Apache Spark in the Jupyter Connection options doesn’t appear, ensure that the VSCode and Jupyter extensions are updated to their latest version.  
+* If Spot Ocean for Apache Spark in the Jupyter Connection options doesn’t appear, ensure that the VSCode and Jupyter extensions are updated to their latest version. 
 
-* If config-templates in the kernel picker doesn’t appear, switch the Microsoft Jupyter Extension to the Pre-release version by completing the following steps:
+* If your cluster doesn't appear in the list, check if it appears as `AVAILABLE` in the Spot console
+
+* If config-templates in the kernel picker doesn’t appear, follow these steps :
 
   1. Close your notebook files.
-  2. Open the Command Palette (Cmd+Shift+P) and select `Developer: Clear Notebook Kernels MRU Cache`.
+  2. Open the Command Palette (Cmd+Shift+P) and select `Python: Clear Cache and Reload Window`.
   3. Open the file again and connect to cluster again.
   4. Your config-templates should appear in the kernel picker.
 
