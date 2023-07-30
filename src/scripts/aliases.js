@@ -1770,9 +1770,6 @@ export const aliases = (() => {
 
     "/ocean-cd/getting-started/end-to-end": "/ocean-cd/getting-started/",
 
-    "/administration/access-policies/":
-      "/administration/policies/create-new-policy",
-    
   };
 
   for (let [key, value] of Object.entries(map)) {
