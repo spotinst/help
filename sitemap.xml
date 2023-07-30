@@ -22,11 +22,11 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/administration/access-policies/manage-access-policies"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/administration/access-policies/-z</loc>
+        <loc>https://docs.spot.io/?/administration/access-policies/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/administration/access-policies/-z"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/administration/access-policies/-z"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/administration/access-policies/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/administration/access-policies/"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/administration/api/create-api-token-OLD</loc>
