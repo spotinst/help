@@ -12,9 +12,7 @@ You can use the filters to customize the findings as per their requirements. Dif
 
 ## Risk Table
 
-The risk distribution at the top gives the total number of risks for each severity-level and acts as a quick filter when you click on each level. Each level also shows the number of new risks identified since the last scan.
-
-Spot Security has comprehensive security rules for over 25 different asset types including EC2, S3 buckets, IAM groups, Virtual Machines etc.
+The risk distribution at the top gives the total number of open and suppressed risks for each severity-level and acts as a quick filter when you click on each level. Spot Security has comprehensive security rules for over 25 different asset types including EC2, S3 buckets, IAM groups, Virtual Machines etc.
 
 For each rule, you can see the:
 
@@ -24,8 +22,8 @@ For each rule, you can see the:
 * Cloud
 * Compliance
 * Failed Assets
-* Remediation Effort
-* Status  
+* Suppressed Assets
+* Remediation Effort  
 
 <img src="/spot-security/_media/risk-analysis-1.png" />
 
@@ -66,15 +64,20 @@ You can also accept a risk by selecting the check box near the Sevurity Rule Nam
 
 You can also suppress specific assets for selected security rules by following these steps:
 
-1. Click the number of Failed Assets for the Security Rule Name you want to view.  
+1. Click the number of failed assets for the security rule name you want to view.  
 2. Select the asset name or names you want to suppress and click Suppress in the Actions menu on the top right.  
 
 <img src="/spot-security/_media/risk-analysis-5.png" />
 
-To view the suppressed assets or suppressed rules:  
+To view the suppressed rules:  
 
 * Click the Show Suppressed toggle in the Risk table.
-* Click the Show Suppressed Assets toggle in the Failed Asset table.
+
+To view the suppressed assets: 
+
+* Click Supressed Assets Column in the Risk Table **or** 
+* Click the Show Suppressed Assets toggle in the Failed Asset table. 
+
 
 ## What’s Next?
 Learn more about how you can [remediate](spot-security/features/analyze-risks/remediate) your risks.
