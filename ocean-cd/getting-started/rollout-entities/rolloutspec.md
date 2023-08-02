@@ -7,8 +7,6 @@ The RolloutSpec definition includes the managed SpotDeployments, its target envi
 
 Whenever a workload is applied to the cluster, Ocean CD uses the rolloutSpec logic you defined for that workload to run the CD process.
 
-> Tip: A rolloutSpec is applicable only to the cluster it is in. It cannot be used in other clusters.
-
 The structure of a rolloutSpec is shown in the example below (and in the [public repository](https://github.com/spotinst/spot-oceancd-releases/tree/main/Quick%20Start%20%26%20Examples)), which you can use as a template for creating your own rolloutSpec:
 
 ```yaml
