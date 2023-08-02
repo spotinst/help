@@ -25,8 +25,8 @@
 
 |  |  |
 |---|---|
-|  AICPA SOC2 and SOC3 TSC 2017   |  NIST 800-52 rev2   |
-|  AWS CIS Benchmark v1.4.0   |  NIST 800-53 rev4  |
+|  SOC2   |  NIST 800-52 rev2   |
+|  AWS CIS Benchmark v1.4.0   |  NIST 800-53 rev5  |
 |  GDPR   |  NIST CSF 1.1 |
 |  HIPAA  |  NIST SMB Guide   |
 |  ISO IEC 27001-2018   |  PCI DSS 3.2   |
