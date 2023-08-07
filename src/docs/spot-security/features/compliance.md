@@ -14,7 +14,7 @@ You can review the compliance of your assets under two tabs:
 
 You can select a compliance from the provided list as a favorite.   
 
-The line graph shows the compliance of the assets in your cloud infrastructure with the global security standards marked as favorite. You can select the time frames of two weeks, one month, or three months. You can also view the compliance of assets on a specific date using Snapback. Click **Export** to export the summary of the compliance to an Excel sheet.
+The line graph shows the compliance of the assets in your cloud infrastructure with the global security standards marked as favorite. You can select the time frames of two weeks, one month, or three months. You can also view the compliance of assets on a specific date using Snapback. Click Export to export the summary of the compliance to an Excel sheet.
 
 <img width="724" alt="compliance-1a" src="https://github.com/spotinst/help/assets/106514736/d1a73456-f7b6-477c-9d3b-f89c850754d4">
 
