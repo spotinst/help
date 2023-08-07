@@ -2857,6 +2857,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean/getting-started/eks/create-a-new-cluster"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/ocean/getting-started/eks/join-an-existing-cluster-test</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean/getting-started/eks/join-an-existing-cluster-test"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean/getting-started/eks/join-an-existing-cluster-test"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/ocean/getting-started/eks/join-an-existing-cluster</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
