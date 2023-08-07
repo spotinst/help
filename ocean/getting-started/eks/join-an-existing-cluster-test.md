@@ -13,10 +13,9 @@ To enable Ocean to start managing your EKS cluster, you need to connect the clus
 
 To import the configurations of your EKS Node Groups, ensure the following permissions are added to the Spot Policy associated with the role of the Spot.io account. 
 
-1. Go to the IAM role in your AWS account that is associated with the Spot.io account. It can be found in the Account details. (To review the role associated with the Spot account, please review the [documentation](https://docs.spot.io/administration/organizations/?id=account).  
+1. Go to the IAM role in your AWS account that is associated with the Spot.io account. It can be found in the Account details. (To review the role associated with the Spot account, please review the [documentation](https://docs.spot.io/administration/organizations/?id=account)).  
 
-![connect-eks-cluster-02](https://github.com/spotinst/help/assets/106514736/280dbaa0-2b76-4f66-999d-b960ef9bbac5)
-
+![connect-eks-cluster-02](https://github.com/spotinst/help/assets/106514736/60e6eb7b-e32f-4790-af64-9162c2ff54e5)
 
 2. In the AWS IAM console, add the following permissions to your Spot policy. These permissions are used to get the Labels and Taints of the Node Groups. 
 
@@ -39,7 +38,9 @@ To get to the wizard for connecting an existing cluster, complete the steps belo
  
 ![connect-eks-cluster-04](https://github.com/spotinst/help/assets/106514736/fcfe9c4a-b079-453e-b284-d2049c501d50)
 
-3. Click Elastic Kubernetes Service (EKS) and Continue.  
+3. Click Elastic Kubernetes Service (EKS) and Continue.
+   
+![connect-eks-cluster-01](https://github.com/spotinst/help/assets/106514736/23df760f-2f0c-439b-a63b-53839bfe128c)
 
 ## Step 1: Choose EKS Cluster 
 
