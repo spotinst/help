@@ -13,7 +13,7 @@ To enable Ocean to start managing your EKS cluster, you need to connect the clus
 
 To import the configurations of your EKS Node Groups, ensure the following permissions are added to the Spot Policy associated with the role of the Spot.io account. 
 
-1. Go to the IAM role in your AWS account that is associated with the Spot.io account. It can be found in the Account details. (To review the role associated with the Spot account, please review the [documentation](https://docs.spot.io/administration/organizations/?id=account)).  
+1. Go to the IAM role in your AWS account that is associated with the Spot.io account. It can be found in the [Account](https://console.spotinst.com/spt/auth/signIn) details.   
 
 ![connect-eks-cluster-02](https://github.com/spotinst/help/assets/106514736/60e6eb7b-e32f-4790-af64-9162c2ff54e5)
 
@@ -30,11 +30,10 @@ To import the configurations of your EKS Node Groups, ensure the following permi
 
 ## Get Started 
 
-To get to the wizard for connecting an existing cluster, complete the steps below.  
+To connect an existing cluster, complete the following steps:  
 
 1. In the left menu of the Spot Console, choose Ocean. 
-
-2. Click Cloud Clusters and then click Create Ocean Cluster. 
+2. Click Cloud Clusters and then click Create Cluster. 
  
 ![connect-eks-cluster-04](https://github.com/spotinst/help/assets/106514736/fcfe9c4a-b079-453e-b284-d2049c501d50)
 
@@ -49,7 +48,7 @@ The Ocean Cluster Name that is created in this step will also be used as a Clust
  <img width="621" alt="connect-eks-cluster-00" src="https://github.com/spotinst/help/assets/106514736/d732e75d-cf73-40fb-80c7-9ff9783aa627">
 
 1. Choose the region where the cluster is running.  
-2. Choose the EKS cluster you wish to import. The Ocean Cluster Name will automatically generated according to the EKS cluster name and can be edited. For a cluster that you are importing, we recommend that you give it the same name as the original cluster. This will make it easier to identify the Ocean cluster associated with your EKS cluster . 
+2. Choose the EKS cluster you wish to import. The Ocean Cluster Name will automatically generate according to the EKS cluster name and can be edited. For a cluster that you are importing, we recommend that you give it the same name as the original cluster. This will make it easier to identify the Ocean cluster associated with your EKS cluster . 
 3. The Ocean name will be also used as a Cluster Identifier which is the unique key used to connect between the Ocean SaaS and the Kubernetes cluster. Click Next.
 
 ## Step 2: VNG Template 
@@ -58,43 +57,52 @@ In this step, choose one of your EKS Node Groups you want to use as a [template]
 
 <img width="790" alt="connect-eks-cluster-03" src="https://github.com/spotinst/help/assets/106514736/ca3b6232-8591-4285-b129-2322399eeead">
   
+
 The selected EKS Node Group’s configuration will be imported to the template VNG and will be used for other custom VNGs, unless explicitly set in a VNG. For example, all VNGs inherit the image set of the EKS Node Group you imported to the Template VNG unless the custom VNG is set to a different image. 
  
+
 ### Template Configuration 
 
 Complete the VNG template configuration as described below. 
 
 1. Choose a Node Group in the dropdown.  
-2. Confirm or change the configuration in the Template Configuration if needed.: 
-    * Instance Types 
+2. Confirm or change the configuration in the Template Configuration if needed. 
 
-All instance types are selected by default to grant Ocean the ability to choose the best types for your workload. It is recommended to use the default configurations.  
+### Instance Types 
 
-3. Click Customize if an adjustment is required. There are two options:   
+All instance types are selected by default to grant Ocean the ability to choose the best types for your workload. It is recommended to use the automatic configurations.  
+
+There are three options:
+
+* Automatic Selection (recommended) - All instance types are selectec to grant Ocean the ability to choose the best types for your workload  
 * Manual Selection – Select the instance family/types for the Ocean cluster’s whitelist. 
-* Advanced Selection – Use advanced filters to select specific instance families. Click [here](https://docs.spot.io/ocean/tips-and-best-practices/manage-machine-types?id=select-instance-types-with-advanced-filters) for more information. 
+* Advanced Selection – Use advanced filters to select specific instance families. 
 
 Use the [Instance Type guide](https://docs.spot.io/ocean/tips-and-best-practices/manage-machine-types?id=let-ocean-manage-machine-types) for more information. 
 
 #### Tags  
 
-Set the tags of the node group. Ensure the EKS required tag appears - "kubernetes.io/cluster/<clusterName>":"owned". 
+Set the tags of the node group. Ensure the EKS required tag appears - 
+
+```
+"kubernetes.io/cluster/<clusterName>":"owned". 
+```
 
 ## Step 3: Virtual Node Groups 
 
-In this step, you can import the existing Node Groups to Ocean by importing their configuration to Ocean custom [VNGs](https://docs.spot.io/ocean/features/vngs/?id=virtual-node-groups). 
+In this step, you can import the existing Node Groups to Ocean by importing their configuration to [Ocean custom VNGs](https://docs.spot.io/ocean/features/vngs/?id=virtual-node-groups). 
 
 ### Consolidate Node Groups into a Single VNG 
 
-Possible use cases for consolidations:  
+#### Possible use cases for consolidations:  
 
-#### Node groups with different capacity types (Spot and OD) 
+**Node groups with different capacity types (Spot and OD)** 
 
 Using Ocean VNGs, you can use only one VNG by setting the Spot percentage so that a specific percentage of the infrastructure will run on an OD instance and a specific percentage on a Spot instance. By default, the VNG is running on spot instances, and in case no spot is available it would fall back to OD instances. 
 
  ![connect-eks-cluster-09](https://github.com/spotinst/help/assets/106514736/481a0107-55e2-42fa-acc1-6a10ff0772a2)
 
-#### Node groups that run on different instance types 
+**Node groups that run on different instance types** 
 
 Ocean is a pod-driven Autoscaler that launches the node that best fits the pod's requirements. Therefore, in Ocean’s VNG you can run the workloads in the same VNG, and Ocean will scale only the  instance type that fits the pod. 
 
@@ -136,7 +144,7 @@ Enter your changes for the following parameters:
 
 This section displays the labels and taints of the imported node group.  
 
-If the required permissions were not set, the labels and taints cannot be imported. In this case you should add the required labels and taints. 
+If the [required permissions]( were not set, the labels and taints cannot be imported. In this case you should add the required labels and taints. 
 
 #### Instance Types 
 
@@ -160,10 +168,8 @@ Complete the following steps:
 
 1. Create a [Spot Programmatic token](https://docs.spot.io/administration/api/create-api-token) (or use an existing one) and copy it to the text box. 
 2. Use the kubectl command-line tool to install the [Ocean Controller Pod](https://docs.spot.io/ocean/overview-kubernetes?id=ocean-controller). Learn more about the Ocean Controller Pod.  
-
-(Optional) To install the [Ocean Prometheus Exporter](https://docs.spot.io/ocean/tools-and-integrations/prometheus/), mark the dedicated checkbox. Validate that the [Configure Prometheus](https://docs.spot.io/ocean/tools-and-integrations/prometheus/scrape?id=configure-prometheus) step is complete. 
-
-(Optional) To install the [Ocean Network Client](https://docs.spot.io/ocean/tools-and-integrations/prometheus/scrape?id=configure-prometheus), mark the dedicated checkbox. 
+    * (Optional) To install the [Ocean Prometheus Exporter](https://docs.spot.io/ocean/tools-and-integrations/prometheus/), mark the dedicated checkbox. Validate that the [Configure Prometheus](https://docs.spot.io/ocean/tools-and-integrations/prometheus/scrape?id=configure-prometheus) step is complete. 
+    * (Optional) To install the [Ocean Network Client](https://docs.spot.io/ocean/tutorials/install-network-client?id=install-the-ocean-network-client-in-the-cluster), mark the dedicated checkbox. 
 
 3. Click Test Connectivity to ensure the controller functionality. Allow approximately two minutes for the test to complete. 
 4. Click Next. 
