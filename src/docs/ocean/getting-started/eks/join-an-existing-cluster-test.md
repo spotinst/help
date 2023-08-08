@@ -55,11 +55,11 @@ The Ocean Cluster Name that is created in this step will also be used as a Clust
 
 In this step, choose one of your EKS Node Groups you want to use as a [template](https://docs.spot.io/ocean/features/vngs/?id=default-vng) for your other custom [VNGs](https://docs.spot.io/ocean/features/vngs/?id=virtual-node-groups). 
 
-<img width="790" alt="connect-eks-cluster-03" src="https://github.com/spotinst/help/assets/106514736/ca3b6232-8591-4285-b129-2322399eeead">
-  
+![connect-eks-cluster-03](https://github.com/spotinst/help/assets/106514736/bf017c1a-d942-4850-8fd0-cb796ed47c2b)
+
 
 The selected EKS Node Group’s configuration will be imported to the template VNG and will be used for other custom VNGs, unless explicitly set in a VNG. For example, all VNGs inherit the image set of the EKS Node Group you imported to the Template VNG unless the custom VNG is set to a different image. 
- 
+
 
 ### Template Configuration 
 
@@ -70,13 +70,13 @@ Complete the VNG template configuration as described below.
 
 ### Instance Types 
 
-All instance types are selected by default to grant Ocean the ability to choose the best types for your workload. It is recommended to use the automatic configurations.  
+All instance types are selected by default to grant Ocean the ability to choose the best types for your workload.  It is recommended to use the automatic configurations.  
 
 There are three options:
 
-* Automatic Selection (recommended) - All instance types are selectec to grant Ocean the ability to choose the best types for your workload  
+* Automatic Selection (recommended) - All instance types are selected to grant Ocean the ability to choose the best types for your workload.  
 * Manual Selection – Select the instance family/types for the Ocean cluster’s whitelist. 
-* Advanced Selection – Use advanced filters to select specific instance families. 
+* [Advanced Selection](https://docs.spot.io/ocean/tips-and-best-practices/manage-machine-types?id=select-instance-types-with-advanced-filters) – Use advanced filters to select specific instance families. 
 
 Use the [Instance Type guide](https://docs.spot.io/ocean/tips-and-best-practices/manage-machine-types?id=let-ocean-manage-machine-types) for more information. 
 
@@ -94,7 +94,7 @@ In this step, you can import the existing Node Groups to Ocean by importing thei
 
 ### Consolidate Node Groups into a Single VNG 
 
-#### Possible use cases for consolidations:  
+There are two ways to consolidate node groups: 
 
 **Node groups with different capacity types (Spot and OD)** 
 
@@ -110,7 +110,7 @@ Ocean is a pod-driven Autoscaler that launches the node that best fits the pod's
 
 Since Ocean provides the flexibility to configure multiple types of infrastructure configurations in the same Ocean cluster, we recommend consolidating node groups that contain similar or the same configurations to one VNG according to the suggestions below:  
 
-If you have two or more node groups that have similar configurations, mark one of them for import and unmark the others. (In the example below, the two node groups shown will be consolidated into a single VNG called Intelligent-COM-Frozen-46.) 
+If you have two or more node groups that have similar configurations, mark one of them for import and unmark the others.  (In the example below, the two node groups shown will be consolidated into a single VNG called Intelligent-COM-Frozen-46.) 
  
  ![connect-eks-cluster-10](https://github.com/spotinst/help/assets/106514736/7aab974d-6def-48ee-b395-54576f762040)
  
@@ -128,8 +128,6 @@ In case no VNG is chosen, Ocean will create a VNG based on the Template VNG.
  
 ![connect-eks-cluster-12](https://github.com/spotinst/help/assets/106514736/f263b6fc-73a0-4789-bec3-42b368583802)
 
-<img width="873" alt="connect-eks-cluster-07" src="https://github.com/spotinst/help/assets/106514736/65277fc5-25e7-46d5-998f-fa876710dc21">
-
 Enter your changes for the following parameters: 
 
 * Node Group Name 
@@ -144,7 +142,7 @@ Enter your changes for the following parameters:
 
 This section displays the labels and taints of the imported node group.  
 
-If the [required permissions]( were not set, the labels and taints cannot be imported. In this case you should add the required labels and taints. 
+If the [required permissions] were not set, the labels and taints cannot be imported. In this case you should add the required labels and taints. 
 
 #### Instance Types 
 
