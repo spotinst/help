@@ -141,7 +141,7 @@ Enter your changes for the following parameters:
 
 This section displays the labels and taints of the imported node group.  
 
-If the [required permissions] were not set, the labels and taints cannot be imported. In this case you should add the required labels and taints. 
+If the [required permissions](https://docs.spot.io/ocean/getting-started/eks/join-an-existing-cluster?id=add-required-permissions) were not set, the labels and taints cannot be imported. In this case you should add the required labels and taints. 
 
 #### Instance Types 
 
