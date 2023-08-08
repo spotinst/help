@@ -13,10 +13,9 @@ To enable Ocean to start managing your EKS cluster, you need to connect the clus
 
 To import the configurations of your EKS Node Groups, ensure the following permissions are added to the Spot Policy associated with the role of the Spot.io account. 
 
-1. Go to the IAM role in your AWS account that is associated with the Spot.io account. It can be found in the [Account](https://console.spotinst.com/spt/auth/signIn) details.   
-
 ![connect-eks-cluster-02](https://github.com/spotinst/help/assets/106514736/60e6eb7b-e32f-4790-af64-9162c2ff54e5)
 
+1. Go to the IAM role in your AWS account that is associated with the Spot.io account. It can be found in the [Account](https://console.spotinst.com/spt/auth/signIn) details. 
 2. In the AWS IAM console, add the following permissions to your Spot policy. These permissions are used to get the Labels and Taints of the Node Groups. 
 
 ```
