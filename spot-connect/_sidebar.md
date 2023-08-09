@@ -15,3 +15,4 @@
     - [Generic Webhook](spot-connect/integrations/webhook)
     - [PagerDuty](spot-connect/integrations/pagerduty)
     - [Slack](spot-connect/integrations/slack)
+    - [S3](spot-connect/integrations/s3)
