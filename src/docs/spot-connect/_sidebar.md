@@ -16,3 +16,4 @@
     - [PagerDuty](spot-connect/integrations/pagerduty)
     - [Slack](spot-connect/integrations/slack)
     - [S3](spot-connect/integrations/s3)
+    - [String Transformers](spot-connect/integrations/string_transformers)
