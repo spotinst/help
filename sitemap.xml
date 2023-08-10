@@ -3578,6 +3578,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/integrations/squadcast"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/spot-connect/integrations/string_transformers</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/integrations/string_transformers"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/integrations/string_transformers"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/spot-connect/integrations/sumologic</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
