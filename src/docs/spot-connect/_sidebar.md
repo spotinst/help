@@ -12,6 +12,7 @@
     - [API Keys](spot-connect/integrations/apikeys)
     - [AWS System Status](spot-connect/integrations/aws_system_status)
     - [CloudFormation](spot-connect/integrations/cloudformation)
+    - [CloudWatch](spot-connect/integrations/cloudwatch)
     - [Generic Webhook](spot-connect/integrations/webhook)
     - [PagerDuty](spot-connect/integrations/pagerduty)
     - [Slack](spot-connect/integrations/slack)
