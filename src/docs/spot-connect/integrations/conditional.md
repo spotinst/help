@@ -30,11 +30,11 @@ This node does not produce an output. It selects the destination node based on t
 
 1. From the workflow builder in the left panel, drag and drop the Conditional node on the workflow editor page and click it. Define the conditional by adding a rule. 
 
-<img src="/spot-connect/_media/conditional-1.png" width="450" height="150" />
+<img width="470" alt="conditional-1" src="https://github.com/spotinst/help/assets/106514736/e7c4318d-dd50-4e91-9642-1473be5fbe8d">
 
 2. Select the previous step’s output. 
 
-<img src="/spot-connect/_media/condtional-2.png" width="450" height="300" />
+<img width="470" alt="conditional-2" src="https://github.com/spotinst/help/assets/106514736/115af3d0-d712-4e28-b19e-df4ed37198af">
 
 3. Select the comparison operation. 
 
