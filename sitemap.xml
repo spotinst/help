@@ -3557,6 +3557,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/integrations/s3"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/spot-connect/integrations/send_email</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/integrations/send_email"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/integrations/send_email"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/spot-connect/integrations/servicenow</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
