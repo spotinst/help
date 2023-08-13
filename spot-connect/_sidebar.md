@@ -2,6 +2,7 @@
 
 - <a href="/" class="sidebar-home"><i data-feather="arrow-left" class="sidebar-back-icon"></i>Back to Main Tree</a>
 - [Spot-Connect](spot-connect/)
+  - [Actions](spot-connect/get-to-know/actions/)
   - [Get to Know the Workflow Builder](spot-connect/get-to-know/)
     - [Video- Spot Connect](spot-connect/get-to-know/promo-video)
     - [Create your First Workflow- Spot](spot-connect/get-to-know/create-first-workflow-spot)
