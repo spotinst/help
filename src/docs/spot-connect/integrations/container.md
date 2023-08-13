@@ -56,4 +56,5 @@ Input
 
 Output
 
-![container-2](https://github.com/spotinst/help/assets/106514736/0cd54aa6-3151-4db0-b4bb-007bb26ed420)
+![container-2](https://github.com/spotinst/help/assets/106514736/0c21e723-e6c4-41ce-b0b6-ad025567b50a)
+
