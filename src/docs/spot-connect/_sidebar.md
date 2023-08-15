@@ -8,7 +8,7 @@
     - [Create your First Workflow- AWS](spot-connect/get-to-know/create-first-workflow-aws)
     - [Run Your First Workflow](spot-connect/get-to-know/run-first-workflow)
     - [Sample Workflows](spot-connect/get-to-know/quickstart-workflow-templates)
-  - [Actions](spot-connect/get-to-know/actions/)
+  - [Actions](spot-connect/actions/)
     - [CloudWatch](spot-connect/actions/cloudwatch)
     - [Conditional](spot-connect/actions/conditional)
     - [String Transformers](spot-connect/actions/string_transformers)
