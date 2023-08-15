@@ -101,3 +101,4 @@ Output
 * failed_entries provides the ID of the failed target and the error code.
 
 ![cloudwatch-4](https://github.com/spotinst/help/assets/106514736/5995aa27-1cf2-4ba0-ab1f-7f4ae2050a99)
+

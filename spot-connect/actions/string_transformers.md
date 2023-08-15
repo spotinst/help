@@ -1,4 +1,4 @@
-# String Transformers Action  
+# String Transformers
 
 This action node manipulates a string output from the previous node. 
 
@@ -54,7 +54,3 @@ An operation will have a separate set of requirements which will also have Set V
 2. After the execution of the workflow above, the output of the execution step details of string transformers are shown below.  
 
 <img width="787" alt="string-transformers-2" src="https://github.com/spotinst/help/assets/106514736/9d893bc7-1434-44de-b09e-b195d616ca95">
-
- 
-
- 
