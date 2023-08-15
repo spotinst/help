@@ -56,6 +56,3 @@ This node does not produce an output. It selects the destination node based on t
 8. After the execution of the workflow above, you can see the output of the node in the Executions page. 
 
 ![conditional-7](https://github.com/spotinst/help/assets/106514736/08525d2e-92a3-42e7-9e07-10b7ee4099c8)
-
-
- 
