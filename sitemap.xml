@@ -3480,6 +3480,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/integrations/elasticsearch"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/spot-connect/integrations/git</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/integrations/git"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/integrations/git"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/spot-connect/integrations/gke</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
