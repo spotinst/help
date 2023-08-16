@@ -116,7 +116,6 @@
       - [Configure Autohealing for Kubernetes](elastigroup/tools-integrations/kubernetes-with-elastigroup/configure-autohealing-for-kubernetes)
       - [Custom Label Selectors](elastigroup/tools-integrations/kubernetes-with-elastigroup/custom-label-selectors)
       - [Create a Kubernetes Bearer Token](elastigroup/tools-integrations/kubernetes-with-elastigroup/create-a-kubernetes-bearer-token)
-    - [Mesosphere](elastigroup/tools-integrations/mesosphere)
     - [Nomad](elastigroup/tools-integrations/nomad/)
       - [Set up Nomad on Elastigroup](elastigroup/tools-integrations/nomad/set-up-nomad-on-elastigroup)
       - [Configure Nomad Autoscaler](elastigroup/tools-integrations/nomad/configure-nomad-autoscaler)
@@ -125,5 +124,4 @@
     - [Rancher](elastigroup/tools-integrations/rancher/)
       - [Rancher Versions 2.0 and Later](elastigroup/tools-integrations/rancher/rancher-versions-20-and-later)
       - [Rancher Versions before 2.0](elastigroup/tools-integrations/rancher/rancher-versions-before-20)
-    - [RightScale](elastigroup/tools-integrations/rightscale)
     - [Route53](elastigroup/tools-integrations/route53)
