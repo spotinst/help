@@ -1776,6 +1776,9 @@ export const aliases = (() => {
 
     "/elastigroup/tools-integrations/rightscale":
       "connect-your-cloud-provider/",
+
+    "/elastigroup/tools-integrations/mesosphere":
+      "connect-your-cloud-provider/",
   };
 
   for (let [key, value] of Object.entries(map)) {
