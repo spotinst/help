@@ -1772,7 +1772,7 @@ export const aliases = (() => {
 
     "/tools-and-provisioning/ci-cd/chef": "connect-your-cloud-provider/",
 
-    "/tools-and-provisioning/cloudfoundry-bosh": "connect-your-cloud-provider/", 
+    "/tools-and-provisioning/cloudfoundry-bosh": "connect-your-cloud-provider/",
   };
 
   for (let [key, value] of Object.entries(map)) {
