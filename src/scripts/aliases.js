@@ -1769,6 +1769,9 @@ export const aliases = (() => {
       "/managed-instance/azure/tutorials/view-details",
 
     "/ocean-cd/getting-started/end-to-end": "/ocean-cd/getting-started/",
+
+    "/tools-and-provisioning/ci-cd/chef":
+      "connect-your-cloud-provider/",
   };
 
   for (let [key, value] of Object.entries(map)) {
