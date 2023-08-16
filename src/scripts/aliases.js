@@ -1771,6 +1771,8 @@ export const aliases = (() => {
     "/ocean-cd/getting-started/end-to-end": "/ocean-cd/getting-started/",
 
     "/tools-and-provisioning/ci-cd/chef": "connect-your-cloud-provider/",
+
+    "/tools-and-provisioning/cloudfoundry-bosh": "connect-your-cloud-provider/", 
   };
 
   for (let [key, value] of Object.entries(map)) {
