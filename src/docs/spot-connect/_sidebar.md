@@ -13,6 +13,7 @@
     - [Conditional](spot-connect/actions/conditional)
     - [Container](spot-connect/actions/container)
     - [CSV Export](spot-connect/actions/csv_export)
+    - [Send Email](spot-connect/actions/send_email)
     - [String Transformers](spot-connect/actions/string_transformers)
   - [Integrations](spot-connect/integrations/)
     - [API Keys](spot-connect/integrations/apikeys)
