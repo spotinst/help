@@ -3480,13 +3480,6 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/integrations/cloudformation"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/spot-connect/integrations/container</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/integrations/container"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/integrations/container"/>
-    </url>
-    <url>
         <loc>https://docs.spot.io/?/spot-connect/integrations/csv-export</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
@@ -3597,13 +3590,6 @@
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/integrations/s3"/>
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/integrations/s3"/>
-    </url>
-    <url>
-        <loc>https://docs.spot.io/?/spot-connect/integrations/send_email</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/integrations/send_email"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/integrations/send_email"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/spot-connect/integrations/servicenow</loc>
