@@ -11,6 +11,7 @@
   - [Actions](spot-connect/actions/)
     - [CloudWatch](spot-connect/actions/cloudwatch)
     - [Conditional](spot-connect/actions/conditional)
+    - [Container](spot-connect/actions/container)
     - [CSV Export](spot-connect/actions/csv_export)
     - [String Transformers](spot-connect/actions/string_transformers)
   - [Integrations](spot-connect/integrations/)
