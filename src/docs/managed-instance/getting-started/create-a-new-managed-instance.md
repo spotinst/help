@@ -93,7 +93,7 @@ Public IP can be persisted by selecting an Elastic IP.
 ### Configure Load Balancing.
 
 - You can set the Stateful Node to receive traffic from Route 53 or a Load Balancer.
-- For Load Balancers, select your Elastic Load Balancer, ALB Target Group or MLB Target Set:
+- For Load Balancers, select your Elastic Load Balancer or ALB Target Group:
 
 <img src="/managed-instance/_media/gettingstarted-create-new-13.png" />
 
