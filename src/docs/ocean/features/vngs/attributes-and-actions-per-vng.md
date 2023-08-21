@@ -7,7 +7,7 @@ Many of the attributes that you apply to your cluster can be applied specificall
 <details>
   <summary markdown="span">Ocean for AWS</summary>
 
-### Ocean for AWS Kubernetes
+## Ocean for AWS Kubernetes
 
 The following is a list of attributes customizable per VNG in Ocean for AWS. Some of the features can be accessed using the [API only](https://docs.spot.io/api/#operation/OceanAWSLaunchSpecUpdate), as indicated below.
 
@@ -47,7 +47,7 @@ Whenever you create a VNG having the Arm64 and x86 instance types, ensure that t
 <details>
   <summary markdown="span">Ocean for ECS</summary>
 
-### Ocean for ECS
+## Ocean for ECS
 
 The following is a list of attributes customizable per VNG in Ocean for ECS. Some of the features can be accessed using the [API only](https://docs.spot.io/api/#operation/OceanECSLaunchSpecUpdate), as indicated below.
 
@@ -75,7 +75,7 @@ The following is a list of attributes customizable per VNG in Ocean for ECS. Som
 <details>
   <summary markdown="span">Ocean for AKS</summary>
 
-### Ocean for AKS
+## Ocean for AKS
 
 The following is a list of attributes customizable per VNG in Ocean for AKS.
 
@@ -94,7 +94,7 @@ The following is a list of attributes customizable per VNG in Ocean for AKS.
 <details>
   <summary markdown="span">Ocean for GKE</summary>
 
-### Ocean for GKE
+## Ocean for GKE
 
 The following is a list of attributes customizable per VNG in Ocean for GKE. Some of the features can be accessed using the [API only](https://docs.spot.io/api/#operation/OceanGKELaunchSpecUpdate), as indicated below.
 
