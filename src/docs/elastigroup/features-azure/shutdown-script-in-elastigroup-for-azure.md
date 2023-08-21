@@ -56,18 +56,6 @@ SPOTINST_TOKEN=“pleaseAddYourToken” \
 bash
 ```
 
-For Python 2.x versions, click Add Python 2.x script. The following script is added to the Custom Data.
-
-Note: Only version 2.7 and later is supported.  
-
-```bash
-#!/usr/bin/env bash
-curl -fsSL https://s3.amazonaws.com/spotinst-public/services/agent/azure-spot-elastigroup-agent-init.sh | \
-SPOTINST_ACCOUNT_ID=“pleaseAddYourAccountID” \
-SPOTINST_TOKEN=“pleaseAddYourToken” \
-bash
-```
-
 ### Windows OS
 
 Click Add Windows script. The following script is added to the Custom Data.
