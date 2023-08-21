@@ -1779,6 +1779,9 @@ export const aliases = (() => {
 
     "/elastigroup/tools-integrations/mesosphere":
       "connect-your-cloud-provider/",
+
+    "/eco/getting-started/connect-azure-ea-to-eco":
+      "eco/getting-started/connect-azure-account",
   };
 
   for (let [key, value] of Object.entries(map)) {
