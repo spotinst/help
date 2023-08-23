@@ -23,5 +23,6 @@
     - [Github/Bitbucket](spot-connect/integrations/git)
     - [PagerDuty](spot-connect/integrations/pagerduty)
     - [Slack](spot-connect/integrations/slack)
+    - [Spot](spot-connect/integrations/spot)
     - [S3](spot-connect/integrations/s3)
 
