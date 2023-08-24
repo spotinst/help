@@ -23,11 +23,15 @@ jupyter notebook \
     --GatewayClient.url=https://api.spotinst.io/ocean/spark/cluster/<your ocean spark cluster id>/notebook/ \
     --GatewayClient.auth_token=<spot token> \
     --GatewayClient.request_timeout=600
+
+# With Notebook v7+, add this option : 
+    --GatewayWebSocketConnection.kernel_ws_protocol=""
 ```
 
 - The GatewayClient.url points to an Ocean Spark cluster, with an Ocean Spark cluster ID of the format *osc-xxxxxxxx* that you can find on the [Clusters](https://console.spotinst.com/ocean/spark/clusters) list in the Spot console.
 - The GatewayClient.auth_token is a [Spot API token](administration/api/create-api-token).
 - The GatewayClient.request_timeout parameter specifies the maximum amount of time Jupyter will wait until the Spark driver starts. If you have capacity available in your cluster, the waiting time should be very short. If there isn't capacity, the Kubernetes cluster will get a new node from the cloud provider, which usually takes a couple of minutes. *You should set the request_timeout to 10 minutes to give you a security margin.* Omitting this parameter prevents you from starting a notebook.
+- The GatewayWebSocketConnection.kernel_ws_protocol specifies we want to use the legacy websocket subprotocol for compatibility reason.
 
 > **Tip**: If you run into issues starting the Jupyter notebook server, ensure that your Ocean for Apache Spark cluster is marked as available in the Spot console.
 
@@ -42,9 +46,11 @@ and run with:
 ```
 jupyter lab \
     --GatewayClient.url=https://api.spotinst.io/ocean/spark/cluster/<your ocean spark cluster id>/notebook/ \
-    --GatewayClient.headers='{"Content-Type": "application/json"}' \
     --GatewayClient.request_timeout=600 \
     --GatewayClient.auth_token=<spot token>
+
+# With JupyterLab v4+, add this option : 
+    --GatewayWebSocketConnection.kernel_ws_protocol=""
 ```
 
 ## Define Jupyter kernels with configuration templates
@@ -210,25 +216,27 @@ Repeat the steps from Step 2 in the following link to install the Microsoft Jupy
 #### Connect Notebook to your OfAS Cluster  
 
 1. Create or open a Jupyter notebook file.
-2. In the VS Code window, click Jupyter Server in the status bar.
+2. In the VS Code window, click "Select Kernel" in the top-right corner.
 
  <img src="/ocean-spark/_media/jupyter-vscode-ide-2.png" />
 
 3. Select Spot Ocean for Apache Spark item in the list.
 4. Enter your account ID, token and select the cluster you want to use from your account that appears in the dropdown menu.
-5. Click Kernel selector button in the top right corner, and select the config-template you want to use. (Config-templates can take few seconds to appear in the list)
+5. Select the config-template you want to use. (Config-templates can take few seconds to appear in the list)
 6. Run the code in your notebook. The first execution can take approximately 1-5 minutes as a Spark application needs to be started in your cluster.  
 
 > **Tip**: Closing your notebook may not result in the termination of the notebook application. You may have to do so from the Spot console. You can also shutdown kernels without leaving VSCode in the [Jupyter PowerToys](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.vscode-jupyter-powertoys) extension.
 
 #### Troubleshooting
 
-* If Spot Ocean for Apache Spark in the Jupyter Connection options doesn’t appear, ensure that the VSCode and Jupyter extensions are updated to their latest version.  
+* If Spot Ocean for Apache Spark in the Jupyter Connection options doesn’t appear, ensure that the VSCode and Jupyter extensions are updated to their latest version. 
 
-* If config-templates in the kernel picker doesn’t appear, switch the Microsoft Jupyter Extension to the Pre-release version by completing the following steps:
+* If your cluster doesn't appear in the list, check if it appears as `AVAILABLE` in the Spot console
+
+* If config-templates in the kernel picker doesn’t appear, follow these steps :
 
   1. Close your notebook files.
-  2. Open the Command Palette (Cmd+Shift+P) and select `Developer: Clear Notebook Kernels MRU Cache`.
+  2. Open the Command Palette (Cmd+Shift+P) and select `Python: Clear Cache and Reload Window`.
   3. Open the file again and connect to cluster again.
   4. Your config-templates should appear in the kernel picker.
 
