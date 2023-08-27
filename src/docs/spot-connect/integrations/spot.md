@@ -29,14 +29,14 @@ Follow the steps below in your Spot by NetApp account to generate Spot Programma
 
 You can add these actions in the Spot Connect workflow builder as part of your workflow. 
 
-* Spot Elastigroup AWS 
-* Spot Ocean AWS 
-* Spot Elastigroup Detach Instance 
-* Spot AWS Update Stateful Instance 
-* Spot Remove Idle GitHub Runner 
-* Spot Ocean Cluster Copy VNG 
-* Spot Ocean Cost Analyzer 
-* Spot Ocean Rightsizing k8s Resources  
+* [Spot Elastigroup AWS](spot-connect/integrations/spot?id=spot-elastigroup-aws) 
+* [Spot Ocean AWS](spot-connect/integrations/spot?id=spot-ocean-aws) 
+* [Spot Elastigroup Detach Instance](spot-connect/integrations/spot?id=spot-elastigroup-detach-instance) 
+* [Spot AWS Update Stateful Instance](spot-connect/integrations/spot?id=spot-aws-update-stateful-instance) 
+* [Spot Remove Idle GitHub Runner](spot-connect/integrations/spot?id=spot-remove-idle-github-runner) 
+* [Spot Ocean Cluster Copy VNG](spot-connect/integrations/spot?id=spot-ocean-cluster-copy-vng) 
+* [Spot Ocean Cost Analyzer](spot-connect/integrations/spot?id=spot-ocean-cost-analyzer) 
+* [Spot Ocean Rightsizing k8s Resources](spot-connect/integrations/spot?id=spot-ocean-rightsizing-k8s-resources) 
 
 ### Spot Elastigroup AWS 
 
