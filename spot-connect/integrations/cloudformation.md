@@ -6,10 +6,10 @@ CloudFormation actions allow you to perform operations to manage your AWS resour
 
 You can add these actions in the Spot Connect workflow builder as part of your workflow: 
 
-* CloudFormation Filter Resources 
-* CloudFormation Onboard Spot Eco 
-* CloudFormation Onboard Spot User 
-* CloudFormation Run Template 
+* [CloudFormation Filter Resources](spot-connect/integrations/cloudformation?id=cloudformation-filter-resources) 
+* [CloudFormation Onboard Spot Eco](spot-connect/integrations/cloudformation?id=cloudformation-onboard-spot-eco) 
+* [CloudFormation Onboard Spot User](spot-connect/integrations/cloudformation?id=cloudformation-onboard-spot-user) 
+* [CloudFormation Run Template](spot-connect/integrations/cloudformation?id=cloudformation-run-template) 
 
 ### CloudFormation Filter Resources 
 
@@ -62,7 +62,7 @@ alias | String   | AWS target account
 region_name | String   | Region where CloudFormation stack is deployed.
 stack_id | String   | ID of deployed CloudFormation stack.
 
-### Action Example 
+#### Action Example 
 
 Input 
 
@@ -97,7 +97,7 @@ This action connects an AWS account to Spot.
 |      stack_instance_id  |     String                                                                                                                                            |     ID of stack instance                |   |   |
 |      execution_status   |     String                                                                                                                                            |     Status of run (ie: S_OK / E_FAIL)   |   |   |
 
-### Action Example 
+#### Action Example 
 
 Input
 
@@ -128,7 +128,7 @@ The action runs a CloudFormation template.
 |      stack_id          |     String  |     ID of stack deployed               |   |   |
 |      execution_status  |     String  |     Status of run (ie: S_OK / E_FAIL)  |   |   |
 
-Action Example 
+#### Action Example 
 
 Input 
 

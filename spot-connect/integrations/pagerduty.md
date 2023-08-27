@@ -32,9 +32,9 @@ Follow these steps in your PagerDuty account to obtain the desired parameter val
 
 You can add these actions in the Spot Connect workflow builder as part of your workflow.
 
-* PagerDuty Create Incident
-* PagerDuty Resolve Incident
-* PagerDuty Webhook Trigger
+* [PagerDuty Create Incident](spot-connect/integrations/pagerduty?id=pagerduty-create-incident)
+* [PagerDuty Resolve Incident](spot-connect/integrations/pagerduty?id=pagerduty-resolve-incident)
+* [PagerDuty Webhook Trigger](spot-connect/integrations/pagerduty?id=pagerduty-webhook-trigger)
 
 ### PagerDuty Create Incident
 
