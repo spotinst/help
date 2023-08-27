@@ -23,9 +23,9 @@ Details needed to set up a Github/Bitbucket Cloud instance in Spot Connect:
 
 You can add these actions in the Spot Connect workflow builder as part of your workflow: 
 
-* GitHub/Bitbucket Cloud Clone 
-* GitHub/Bitbucket Cloud Create PR 
-* GitHub Filter Runners 
+* [GitHub/Bitbucket Cloud Clone](spot-connect/integrations/git?id=githubbitbucket-cloud-clone) 
+* [GitHub/Bitbucket Cloud Create PR](spot-connect/integrations/git?id=githubbitbucket-cloud-create-pr) 
+* [GitHub Filter Runners](spot-connect/integrations/git?id=github-filter-runners) 
 
 ## GitHub/Bitbucket Cloud Clone 
 
