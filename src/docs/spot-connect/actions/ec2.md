@@ -6,12 +6,12 @@ EC2 actions allow you to perform targeted operations against EC2 resources.
 
 You can add these actions in the Spot Connect workflow builder as part of your workflow: 
 
-* EC2 Filter Reserved Instances 
-* EC2 Filter Savings Plans 
-* EC2 Filter Snapshots 
-* EC2 Get Sizing Recommendations 
-* EC2 Revoke Security Group Ingress 
-* EC2 Resize Instances 
+* [EC2 Filter Reserved Instances](spot-connect/actions/ec2?id=ec2-filter-reserved-instances) 
+* [EC2 Filter Savings Plans](spot-connect/actions/ec2?id=ec2-filter-savings-plans) 
+* [EC2 Filter Snapshots](spot-connect/actions/ec2?id=ec2-filter-snapshots)
+* [EC2 Get Sizing Recommendations](spot-connect/actions/ec2?id=ec2-get-sizing-recommendations) 
+* [EC2 Revoke Security Group Ingress](spot-connect/actions/ec2?id=ec2-revoke-security-group-ingress) 
+* [EC2 Resize Instances](spot-connect/actions/ec2?id=ec2-resize-instances) 
 
 ### EC2 Filter Reserved Instances 
 
@@ -46,7 +46,7 @@ This node returns the list of reserved instances using filters of days to expira
 
 ![ec2-2](https://github.com/spotinst/help/assets/106514736/e8418f36-7e70-453f-bcd3-752901f2005f)
 
-#### EC2 Filter Savings Plans 
+### EC2 Filter Savings Plans 
 
 This node returns the list of savings plans using filters of days to expiration and payment option. 
 
