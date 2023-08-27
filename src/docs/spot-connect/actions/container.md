@@ -11,15 +11,10 @@ Additionally, the target account role needs to have its Trust Relationships upda
 The Container integration enables you to:  
 
 * Configure a container registry.  
-
 * Pick a Docker image and version that is available in the registry.  
-
 * Pass any input to the Docker image in a text box. The input is directly passed as input when running the container.  
-
 * Enter resource requirements for the container  
-
 * CPU (specified in CPU units).   
-
 * MEM (specified in MB)  
 
 ## Container Node   

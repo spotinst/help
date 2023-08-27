@@ -8,7 +8,7 @@ Webhook integration in a Spot Connect workflow lets you trigger an execution of 
 
 You can use this action in the Spot Connect workflow builder as part of your workflow.
 
-* Generic Webhook Trigger
+* [Generic Webhook Trigger](spot-connect/integrations/webhook?id=generic-webhook-trigger)
 
 ## Generic Webhook Trigger
 
