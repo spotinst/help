@@ -111,7 +111,7 @@ This action launches a playbook with Ansible.
 
 #### Action Example 
 
-Select Ansible Run Playbook node from the workflow editor. Click the node.  Complete the following information:  
+Select Ansible Run Playbook node from the workflow editor and click the node.  Complete the following information:  
 
 * Ansible Instance: Select the configured Ansible Instance from the dropdown menu. 
 * Target Account Alias: Enter the AWS account alias configured that has access to the S3 bucket containing the playbook. 
