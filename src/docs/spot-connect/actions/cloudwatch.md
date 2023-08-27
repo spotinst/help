@@ -6,8 +6,8 @@ CloudWatch is used to monitor AWS resources and use alarms, logs, and events to 
 
 You can add these actions in the Spot Connect workflow builder as part of your workflow: 
 
-* CloudWatch Create Rule 
-* CloudWatch Update Target 
+* [CloudWatch Create Rule](spot-connect/actions/cloudwatch?id=cloudwatch-create-rule) 
+* [CloudWatch Update Target](spot-connect/actions/cloudwatch?id=cloudwatch-update-target) 
 
 ### CloudWatch Create Rule 
 
