@@ -81,15 +81,15 @@ This action connects an AWS account to Spot.
 
 #### Input 
 
-|       Parameter       |                                                                        Description                                                                    |      Required  |   |   |
-|-----------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------:|:--------------:|---|---|
-|      alias            |     AWS target account for running the CloudFormation template                                                                                        |     True       |   |   |
-|      name             |     Name of Spot StackSet                                                                                                                             |     True       |   |   |
-|      permissions      |     Level of permissions to be given to the new Spot Policy                                                                                           |     True       |   |   |
-|      org_unit_ids     |     The organization root ID or organizational unit (OU) IDs where StackSets deploy                                                                   |     True       |   |   |
-|      region_name      |     Region where to deploy StackSet                                                                                                                   |     True       |   |   |
-|      auto_deployment  |     Describes whether StackSets automatically deploy to Organization accounts that are added to the target organization or organizational unit (OU).  |     True       |   |   |
-|      aws_account_ids  |     AWS account IDs under given OU where a StackSet will deploy
+|       Parameter       |                                                                        Description                                                                    |      Required  |   |
+|-----------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------:|:--------------:|---|
+|      alias            |     AWS target account for running the CloudFormation template                                                                                        |     True       |   |
+|      name             |     Name of Spot StackSet                                                                                                                             |     True       |   |
+|      permissions      |     Level of permissions to be given to the new Spot Policy                                                                                           |     True       |   |
+|      org_unit_ids     |     The organization root ID or organizational unit (OU) IDs where StackSets deploy                                                                   |     True       |   |
+|      region_name      |     Region where to deploy StackSet                                                                                                                   |     True       |   |
+|      auto_deployment  |     Describes whether StackSets automatically deploy to Organization accounts that are added to the target organization or organizational unit (OU).  |     True       |   |
+|      aws_account_ids  |     AWS account IDs under given OU where a StackSet will deploy                                                                                       |     False      |   |
 
 #### Output
 
