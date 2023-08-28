@@ -31,6 +31,8 @@ Parameter | Type | Description
 resource_ids    | StringList  | IDs of filtered resources
 execution_status | String   | Status of run (ie: S_OK / E_FAIL)
 
+#### Action Example
+
 Input
 
 ![cloudformation-1](https://github.com/spotinst/help/assets/106514736/8a2032f2-79c1-4ee7-b6d9-ff7f9b0a57b1)
