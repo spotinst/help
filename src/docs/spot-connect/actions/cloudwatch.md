@@ -86,11 +86,11 @@ Use this action node to update CloudWatch target.
 
 1. From the workflow builder in the left panel, drag and drop the CloudWatch Update Target action node in workflow builder. Connect it with the trigger.  
 2. Click the action node.  
-* Target Account Alias: Select a target account alias. 
-* CloudWatch Rule Name: Provide a CloudWatch rule name. 
-* Target ID: Provide a unique ID for the target within the rule which can be used to reference the target.  
-* Target ARN: Provide an ARN of a target resource to update. 
-* Optional: Select a region. 
+   * Target Account Alias: Select a target account alias. 
+   * CloudWatch Rule Name: Provide a CloudWatch rule name. 
+   * Target ID: Provide a unique ID for the target within the rule which can be used to reference the target.  
+   * Target ARN: Provide an ARN of a target resource to update. 
+   * Optional: Select a region. 
 3. Click **Run Now** to execute the workflow.
 
 ![cloudwatch-3](https://github.com/spotinst/help/assets/106514736/e39bc9b9-c120-46c9-a43a-d1cd690289e4)
