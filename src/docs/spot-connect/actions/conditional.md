@@ -26,7 +26,7 @@ Details needed to set up a Conditional instance in Spot Connect:
 
 This node does not produce an output. It selects the destination node based on the input condition match. 
 
-#### Conditional Action Example 
+#### Action Example 
 
 1. From the workflow builder in the left panel, drag and drop the Conditional node on the workflow editor page and click it. Define the conditional by adding a rule. 
 

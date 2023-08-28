@@ -1,4 +1,4 @@
-# GitHub/Bitbucket 
+# GitHub/Bitbucket Cloud
 
 The GitHub/Bitbucket cloud integration manages Git repositories while enabling you to clone Git repositories and create pull requests.  
 
@@ -114,5 +114,7 @@ This action lists GitHub runners based on the status, busy and labels filters.
 3. Provide labels to match GitHub runners. 
 
 <img width="519" alt="github-bitbucket-5" src="https://github.com/spotinst/help/assets/106514736/d9ad7c43-286e-4faf-9a0a-64b9e144e3b7">
+
+
 
 <img width="1001" alt="github-bitbucket-6" src="https://github.com/spotinst/help/assets/106514736/eb2fd408-18cc-4a35-a758-3862f4049444">

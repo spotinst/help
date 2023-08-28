@@ -141,6 +141,8 @@ channel_url   | String | A URL for the newly created channel.
 
 <img src="/spot-connect/_media/slack-6.png" />
 
+
+
 <img src="/spot-connect/_media/slack-7.png" />
 
 ## Slack Send Message
