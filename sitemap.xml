@@ -3319,6 +3319,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean/tutorials/view-scaling-constraints"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/spot-connect/actions/aws_system_status</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/actions/aws_system_status"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/actions/aws_system_status"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/spot-connect/actions/cloudwatch</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
@@ -3457,13 +3464,6 @@
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/integrations/apikeys"/>
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/integrations/apikeys"/>
-    </url>
-    <url>
-        <loc>https://docs.spot.io/?/spot-connect/integrations/aws_system_status</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/integrations/aws_system_status"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/integrations/aws_system_status"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/spot-connect/integrations/aws-health</loc>

@@ -90,3 +90,4 @@ and feeding the output of that to a conditional node.
 #### Action Example
 
 <img src="/spot-connect/_media/aws-system-status.png" />
+
