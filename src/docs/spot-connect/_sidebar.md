@@ -21,7 +21,7 @@
     - [AWS System Status](spot-connect/integrations/aws_system_status)
     - [CloudFormation](spot-connect/integrations/cloudformation)
     - [Generic Webhook](spot-connect/integrations/webhook)
-    - [Github/Bitbucket](spot-connect/integrations/git)
+    - [Github/Bitbucket Cloud](spot-connect/integrations/git)
     - [PagerDuty](spot-connect/integrations/pagerduty)
     - [Slack](spot-connect/integrations/slack)
     - [Spot](spot-connect/integrations/spot)
