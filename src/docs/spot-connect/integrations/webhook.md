@@ -52,7 +52,7 @@ To trigger the execution of the Spot Connect workflow you created, a third-party
 
 You can find the workflow execution listed in the Spot Connect Executions page.
 
-### Action Example
+#### Action Example
 
 Create a webhook request from Postman to trigger a workflow execution in Spot Connect.
 
