@@ -34,7 +34,7 @@ Use this action node to create a CloudWatch rule.
 
 #### Action Example 
 
-Input
+#### Input
 
 1. From the workflow builder in the left panel, drag and drop the CloudWatch Create Rule action node in the workflow builder. Connect it with the trigger.  
 2. Click the action node.  
@@ -51,7 +51,7 @@ Input
 
 ![cloudwatch-1](https://github.com/spotinst/help/assets/106514736/b725b035-6a10-4a8c-967d-835319dc04dc)
 
-Output
+#### Output
 
 * rule_arn is the ARN of the created CloudWatch rule. 
 
@@ -61,7 +61,7 @@ Output
 
 Use this action node to update CloudWatch target. 
 
-Input
+#### Input
 
 |       Parameter   |                       Description                   |      Required  |
 |-------------------|:---------------------------------------------------:|:--------------:|
@@ -70,7 +70,7 @@ Input
 |      Target ARN   |     ARN of the target to be added/updated           |     True       |
 |      Region Name  |     AWS Region Name                                 |     False      |
 
-Output
+#### Output
 
 |       Parameter          |       Type   |                   Description              |
 |--------------------------|:------------:|:------------------------------------------:|
@@ -82,20 +82,20 @@ Output
 
 #### Action Example 
 
-Input 
+#### Input 
 
 1. From the workflow builder in the left panel, drag and drop the CloudWatch Update Target action node in workflow builder. Connect it with the trigger.  
 2. Click the action node.  
-* Target Account Alias: Select a target account alias. 
-* CloudWatch Rule Name: Provide a CloudWatch rule name. 
-* Target ID: Provide a unique ID for the target within the rule which can be used to reference the target.  
-* Target ARN: Provide an ARN of a target resource to update. 
-* Optional: Select a region. 
+   * Target Account Alias: Select a target account alias. 
+   * CloudWatch Rule Name: Provide a CloudWatch rule name. 
+   * Target ID: Provide a unique ID for the target within the rule which can be used to reference the target.  
+   * Target ARN: Provide an ARN of a target resource to update. 
+   * Optional: Select a region. 
 3. Click **Run Now** to execute the workflow.
 
 ![cloudwatch-3](https://github.com/spotinst/help/assets/106514736/e39bc9b9-c120-46c9-a43a-d1cd690289e4)
 
-Output
+#### Output
 
 * failed_entry_count is the number of requests failed.
 * failed_entries provides the ID of the failed target and the error code.
