@@ -1,4 +1,4 @@
-# Send Email Action 
+# Send Email 
 
 An action that sends an email to multiple recipients. 
 
