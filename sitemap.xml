@@ -1667,6 +1667,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/tutorials-azure/deploy-an-elastigroup"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/elastigroup/tutorials-azure/extensions</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/tutorials-azure/extensions"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/tutorials-azure/extensions"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/elastigroup/tutorials-azure/getting-started/import-an-existing-azure-resource</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
@@ -2057,6 +2064,13 @@
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/managed-instance/azure/"/>
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/managed-instance/azure/"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/managed-instance/azure/tutorials/extensions</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/managed-instance/azure/tutorials/extensions"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/managed-instance/azure/tutorials/extensions"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/managed-instance/azure/tutorials/manage</loc>
