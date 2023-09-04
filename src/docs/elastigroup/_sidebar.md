@@ -85,6 +85,7 @@
     - [Connect Elastigroup to Application Gateway](elastigroup/tutorials-azure/connect-elastigroup-to-application-gateway)
     - [Deploy an Elastigroup](elastigroup/tutorials-azure/deploy-an-elastigroup)
     - [Set Health Checks and Autohealing](elastigroup/tutorials-azure/set-health-checks-and-autohealing)
+    - [Extensions](elastigroup/tutorials-azure/extenstions)
   - [Tools & Integrations](elastigroup/tools-integrations/)
     - [AWS Batch](elastigroup/tools-integrations/aws-batch)
     - [AWS Load Balancers & Autohealing](elastigroup/tools-integrations/aws-load-balancers-elb-alb)
