@@ -35,4 +35,4 @@
     - [gen19](ocean-spark/docker-images-release-notes/gen19.md)
     - [gen18](ocean-spark/docker-images-release-notes/gen18.md)
     - [Legacy Images](ocean-spark/docker-images-release-notes/legacy-dm-images)
-  - [Get Support](ocean-spark/support/)
+
