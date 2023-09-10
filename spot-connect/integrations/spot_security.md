@@ -36,4 +36,4 @@ To integrate threats with Spot Connect to get alerted on Jira or Slack, you can 
 
 The workflow execution is listed on the Spot Connect Executions page. You can view which alerts have been sent and which workflows have been executed. 
 
-<img width="833" alt="spot-security-2" src="https://github.com/spotinst/help/assets/106514736/2e2c760c-1462-4ec2-a462-4dd5a359c710">
+![spot-security-2](https://github.com/spotinst/help/assets/106514736/95545467-d745-4eab-8dc6-3d5ce7f452cb)
