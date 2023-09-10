@@ -20,7 +20,7 @@ Once you have connected your cloud provider, Spot provides recommendations based
 
 If Spot presents a lot of recommendations, be sure to click View All so that you can see all the recommendations for savings and optimization. Any of the following recommendations could appear (and possibly others).
 - Connect a Linked Account: You can link additional accounts to Spot, including accounts from different cloud providers.
-- Connect a Management Account: This enables you to use Eco (AWS only). Will appear if you do not already have a management account.
+- Connect a Management Account: This enables you to use Eco (AWS only). Will appear if you do not already have a management account connected.
 - Invite more users to Spot: This opens the user administration in Spot where you can add more users in your organization. Appears only if you have administrator rights in Spot.
 - Create your first Elastigroup: Appears if you have no Elastigroup.
 - Create your first Stateful Node: Appears if you have no Stateful Node.
