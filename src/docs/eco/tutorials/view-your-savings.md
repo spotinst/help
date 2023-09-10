@@ -21,15 +21,15 @@ You can set the following filters:
 ## Summary Line
 
 The Overview dashboard includes a summary line which displays the following information:
-- Total Saved: Total amount saved as a result of reserved instance utilization.
-- Current Commitment:The amount currently committed to reserved instances. The lower the commitment, the more flexible and dynamic the account's compute resources can be.
+- Total Saved: Total amount saved as a result of reserved instance and savings plan coverage.
+- Current Commitment: The amount currently committed to reserved instances. The lower the commitment, the more flexible and dynamic the account's compute resources can be.
 - MTD Savings: Total generated savings from day one of the month to the most recent update.
 
 ## Graphs and Charts
 
 Eco provides summary graphs and charts to give you wide visibility of your savings and commitments. The graphs and charts can be filtered according to the items in the legend. The following graphs are displayed:
 
-### Savings over time
+### Savings Over Time
 
 A bar graph shows the amount of savings each month broken down by type of savings. This graph will allow you to visualize savings from reservations and savings plans. You can use the filters at the top of the page and source filters specific to each graph.
 
@@ -42,7 +42,7 @@ A bar graph shows the amount of savings each month broken down by type of saving
 
 It is important to note that RI Volume Discounts may appear in Savings Over Time because they also drive the cost of reservations down. Eco includes these cost reductions in our net savings calculations.
 
-### Monthly Commitment over Time
+### Monthly Commitment Over Time
 
 A stacked bar graph showing your reserved instance and savings plan commitment per month broken down into Standard, Convertible, and Pending reservations, plus Compute and EC2 savings plans. Use the toggle switches to include or exclude recurring fees or show up-front fees from an amortized view. Regardless of what data range you select in the date filter, this graph will remain static, looking six months into the past and thirty-six months into the future.
 
@@ -61,9 +61,9 @@ The export from this table provides an amortization report, which breaks down ea
 - Recurring Commitment: The monthly commitment charge.  
 - Total Commitment: Total commitment spend.
 
-### Coverage over Time
+### Coverage Over Time
 
-A line graph that breaks down the story of how reservations, savings plan coverage, and commitments relate to your overall savings. The left chart is the simplest, showing the difference between your actual spend and what could have been your costs for reservable services without a savings strategy. On the right, you see the same data, but with your actual spend explained as the combination of commitment cost and uncovered spend. The coverage calculation considers dollars or your investment used instead of hours, which is different from AWS cost explorer. For actual spend, the calculation only considers what is reservable for a service (e.g., Eco only uses the on-demand purchase option, with the Running Hours usage type groups and the Usage charge type). You can use the source filter specific to the Coverage Over Time graph.  
+A line graph that breaks down the story of how reservations, savings plan coverage, and commitments relate to your overall savings. The left chart is the simplest, showing the difference between your actual spend and what could have been your costs for reservable services without a savings strategy. On the right, you see the same data, but with your actual spend explained as the combination of commitment cost and uncovered spend. The coverage calculation considers dollars or your investment used instead of hours, which is different from AWS Cost Explorer. For actual spend, the calculation only considers what is reservable for a service (e.g., Eco only uses the on-demand purchase option, with the Running Hours usage type groups and the Usage charge type). You can use the source filter specific to the Coverage Over Time graph.  
 
 * All  
 * Eco  
