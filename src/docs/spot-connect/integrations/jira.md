@@ -76,8 +76,8 @@ A user with Jira access (admin privileges are **not required**) can complete the
 
 You can add these actions in the Spot Connect workflow builder as part of your workflow. 
 
-* Jira Create Issue. 
-* Jira Update Issue. 
+* [Jira Create Issue](https://docs.spot.io/spot-connect/integrations/jira?id=jira-create-issue). 
+* [Jira Update Issue](https://docs.spot.io/spot-connect/integrations/jira?id=jira-update-issue). 
 
 ### Jira Create Issue 
 
