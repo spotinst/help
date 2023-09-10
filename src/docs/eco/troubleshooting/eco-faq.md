@@ -8,7 +8,7 @@ When I purchase reserved instances, how are savings calculated?
 
 The savings calculation of reserved instances works as follows:
 
-ECO gathers data about all of your instances before you are using reserved instances.
+Eco gathers data about all of your instances before you are using reserved instances.
 Savings are calculated each month. This means that we do not charge the customer at the purchasing moment, but for each month separately.
 The calculation of each purchase is multiplied by the number of instances.
 
