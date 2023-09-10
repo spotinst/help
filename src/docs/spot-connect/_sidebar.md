@@ -26,5 +26,6 @@
     - [PagerDuty](spot-connect/integrations/pagerduty)
     - [Slack](spot-connect/integrations/slack)
     - [Spot](spot-connect/integrations/spot)
+    - [Spot SEcurity](spot-connect/integrations/spot_security)
     - [S3 Buckets](spot-connect/integrations/s3)
 
