@@ -22,6 +22,7 @@
     - [CloudFormation](spot-connect/integrations/cloudformation)
     - [Generic Webhook](spot-connect/integrations/webhook)
     - [Github/Bitbucket Cloud](spot-connect/integrations/git)
+    - [Jira](spot-connect/integrations/jira)
     - [PagerDuty](spot-connect/integrations/pagerduty)
     - [Slack](spot-connect/integrations/slack)
     - [Spot](spot-connect/integrations/spot)
