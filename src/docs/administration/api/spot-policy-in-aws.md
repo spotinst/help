@@ -359,6 +359,16 @@ Spot creates two kinds of policies while onboarding your cloud accounts:
       ],
       "Effect": "Allow",
       "Resource": ["*"]
+    },
+    {
+      "Sid": "AccessCostExplorer",
+      "Action": [
+        "ce:GetCostAndUsage"
+      ],
+      "Effect": "Allow",
+      "Resource": [
+        "*"
+      ]
     }
   ]
 }
