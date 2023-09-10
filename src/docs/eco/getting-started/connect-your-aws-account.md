@@ -11,7 +11,7 @@ Getting started with Eco on AWS usually requires read-only permissions to the Co
 
 ## AWS Region
 
-All actions in this procedure should be made in the US-East-1 (Northern Virginia) AWS region. (This includes generating the CUR file into a bucket in us-east-1.) If there is a problem doing this, please contact Support.
+All actions in this procedure should be made in the US-East-1 (Northern Virginia) AWS region. This includes generating the CUR file into a bucket in us-east-1. If there is a problem doing this, please contact Support.
 
 ## Get Started
 
