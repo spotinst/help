@@ -35,5 +35,10 @@
     - [gen19](ocean-spark/docker-images-release-notes/gen19.md)
     - [gen18](ocean-spark/docker-images-release-notes/gen18.md)
     - [Legacy Images](ocean-spark/docker-images-release-notes/legacy-dm-images)
+  - [Data Plane Release Notes](ocean-spark/data-plane-release-notes/)
+    - [0.2.8-62](ocean-spark/data-plane-release-notes/0.2.8-62.md)
+    - [0.2.8-61](ocean-spark/data-plane-release-notes/0.2.8-61.md)
+    - [0.2.8-60](ocean-spark/data-plane-release-notes/0.2.8-60.md)
+    - [0.2.8-59](ocean-spark/data-plane-release-notes/0.2.8-59.md)
+    - [0.2.7-58](ocean-spark/data-plane-release-notes/0.2.7-58.md)
   - [Get Support](ocean-spark/support/)
-
