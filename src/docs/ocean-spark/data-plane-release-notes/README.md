@@ -1,4 +1,4 @@
-# Ocean Spark Cluster Release Notes
+# Cluster Release Notes
 
 ## [0.2.8-62] - 2023-09-06
 
