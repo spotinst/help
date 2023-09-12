@@ -7,7 +7,7 @@ Many of the attributes that you apply to your cluster can be applied specificall
 <details>
   <summary markdown="span">Ocean for AWS</summary>
 
-### Ocean for AWS Kubernetes
+## Ocean for AWS Kubernetes
 
 The following is a list of attributes customizable per VNG in Ocean for AWS. Some of the features can be accessed using the [API only](https://docs.spot.io/api/#operation/OceanAWSLaunchSpecUpdate), as indicated below.
 
@@ -21,6 +21,7 @@ The following is a list of attributes customizable per VNG in Ocean for AWS. Som
 - Launch Instance
 - Maximum Nodes
 - Minimum Nodes
+- Multiple AMI Architectures in same VNG 
 - Metadata v2 (API only)
 - Preferred Spot Instance Types (API only)
 - Restrict scale down
@@ -35,14 +36,18 @@ The following is a list of attributes customizable per VNG in Ocean for AWS. Som
 
 For example, you could use the Labels and Taints attributes to instruct Ocean which labels and taints are applied on the nodes using the user data, and effectively connect between the cloud infrastructure properties and Kubernetes node labels that will be used on applications using node affinity.
 
-> **Tip**: If automatic headroom is configured, you must set `autoScaler.enableAutomaticAndManualHeadroom` to True at the Ocean level in order to ensure that the manual headroom will be effective.
+### Multiple AMI Architectures in Same VNG 
+
+Ocean supports instance types with both Arm64 and x86 architectures in the same VNG. This widens the instance selection options because instances that support either the Arm64 or the x86 architectures can be chosen. This enables you to take advantage of the cost and performance benefits of Arm64 when the spot markets allow while maintaining a large whitelist of x86 instances. 
+
+Whenever you create a VNG having the Arm64 and x86 instance types, ensure that the workloads can run on both architectures. In addition, ensure by using node selectors that only the relevant pods will trigger a scale-up from this VNG. 
 
 </details><br>
 
 <details>
   <summary markdown="span">Ocean for ECS</summary>
 
-### Ocean for ECS
+## Ocean for ECS
 
 The following is a list of attributes customizable per VNG in Ocean for ECS. Some of the features can be accessed using the [API only](https://docs.spot.io/api/#operation/OceanECSLaunchSpecUpdate), as indicated below.
 
@@ -70,7 +75,7 @@ The following is a list of attributes customizable per VNG in Ocean for ECS. Som
 <details>
   <summary markdown="span">Ocean for AKS</summary>
 
-### Ocean for AKS
+## Ocean for AKS
 
 The following is a list of attributes customizable per VNG in Ocean for AKS.
 
@@ -89,7 +94,7 @@ The following is a list of attributes customizable per VNG in Ocean for AKS.
 <details>
   <summary markdown="span">Ocean for GKE</summary>
 
-### Ocean for GKE
+## Ocean for GKE
 
 The following is a list of attributes customizable per VNG in Ocean for GKE. Some of the features can be accessed using the [API only](https://docs.spot.io/api/#operation/OceanGKELaunchSpecUpdate), as indicated below.
 

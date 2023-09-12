@@ -8,7 +8,7 @@ Webhook integration in a Spot Connect workflow lets you trigger an execution of 
 
 You can use this action in the Spot Connect workflow builder as part of your workflow.
 
-* Generic Webhook Trigger
+* [Generic Webhook Trigger](spot-connect/integrations/webhook?id=generic-webhook-trigger)
 
 ## Generic Webhook Trigger
 
@@ -45,14 +45,14 @@ To trigger the execution of the Spot Connect workflow you created, a third-party
 1. Log in to Postman.
 2. Create a new POST request using Workflow Webhook URL value saved from Spot Connect.
 3. Add a custom header.
-* Key: x-api-key.
-* Value: Webhook API Key Value saved from Spot Connect.
+    * Key: x-api-key.
+    * Value: Webhook API Key Value saved from Spot Connect.
 4. Enter a JSON string as the request Body.
 5. Send the request.
 
 You can find the workflow execution listed in the Spot Connect Executions page.
 
-### Action Example
+#### Action Example
 
 Create a webhook request from Postman to trigger a workflow execution in Spot Connect.
 

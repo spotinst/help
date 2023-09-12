@@ -1769,6 +1769,19 @@ export const aliases = (() => {
       "/managed-instance/azure/tutorials/view-details",
 
     "/ocean-cd/getting-started/end-to-end": "/ocean-cd/getting-started/",
+
+    "/tools-and-provisioning/ci-cd/chef": "connect-your-cloud-provider/",
+
+    "/tools-and-provisioning/cloudfoundry-bosh": "connect-your-cloud-provider/",
+
+    "/elastigroup/tools-integrations/rightscale":
+      "connect-your-cloud-provider/",
+
+    "/elastigroup/tools-integrations/mesosphere":
+      "connect-your-cloud-provider/",
+
+    "/eco/getting-started/connect-azure-ea-to-eco":
+      "eco/getting-started/connect-azure-account",
   };
 
   for (let [key, value] of Object.entries(map)) {

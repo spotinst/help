@@ -34,7 +34,7 @@ The summary line provides some data about savings you have missed and estimated 
 
 ## Workloads
 
-The Workloads area shows your services and workloads where you can achieve the most savings. Spot analyzes your cloud resources and displays workloads that are not yet connected to Spot (Elastigroup or Ocean). You can take action immediately and import those workloads and enjoy the cost savings and optimization features.
+The Workloads area shows your services and workloads where you can achieve the most savings. Spot analyzes your cloud resources and displays workloads that are not yet connected to Spot (Elastigroup or Ocean). You can take action immediately and import those workloads to enjoy the cost savings and optimization features.
 
 <img src="/connect-your-cloud-provider/_media/optimize-your-cloud-005.png" />
 

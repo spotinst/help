@@ -24,7 +24,7 @@ Unknown   | The action node could not determine the status of the service.
 ## Integration Actions  
 
 You can add this action in the Spot Connect workflow builder, as part of your workflow:
-* AWS System Status
+* [AWS System Status](spot-connect/integrations/aws_system_status?id=aws-system-status-1)
 
 ### AWS System Status
 
@@ -90,3 +90,4 @@ and feeding the output of that to a conditional node.
 #### Action Example
 
 <img src="/spot-connect/_media/aws-system-status.png" />
+

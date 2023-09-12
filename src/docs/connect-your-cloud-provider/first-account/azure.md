@@ -70,7 +70,7 @@ In this step, you create a new custom role that Azure will use for Spot.
 1. Under All Services, select Subscriptions. Choose the subscription you would like Spot to access.
 2. In the Subscription menu, select Access Control (IAM).
 3. Click Roles, Add, and Add Custom Role.
-4. Select JSON.
+4. Select JSON. To view the JSON of the full Spot by NetApp policy in Azure, click [here](https://docs.spot.io/administration/api/spot-policy-in-azure?id=spot-policy-in-azure).  
 5. Switch to the wizard in Spot and click Export JSON Policy. This will put the correct policy on the clipboard.
 6. Return to the Azure console, paste in the policy, review, and click Create.
 

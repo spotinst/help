@@ -22,7 +22,6 @@ Elastigroup supports the following Health Check types:
 - [ECS](elastigroup/tutorials/configure-health-checks-and-autohealing) – ECS Cluster Instance Health check.
 - [K8S_NODE](elastigroup/tools-integrations/kubernetes-with-elastigroup/configure-autohealing-for-kubernetes) – Kubernetes Status check. Requires integration with a Kubernetes cluster.
 - NOMAD_NODE – Nomad Status check. Requires integration with a Nomad cluster.
-- MLB – Multai Load Balancer health check service.
 - [OpsWorks](elastigroup/tools-integrations/opsworks/opsworks-autohealing) – OpsWorks layer membership verification.
 
 ## Additional Health Check Settings

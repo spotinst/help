@@ -8,7 +8,7 @@ When I purchase reserved instances, how are savings calculated?
 
 The savings calculation of reserved instances works as follows:
 
-ECO gathers data about all of your instances before you are using reserved instances.
+Eco gathers data about all of your instances before you are using reserved instances.
 Savings are calculated each month. This means that we do not charge the customer at the purchasing moment, but for each month separately.
 The calculation of each purchase is multiplied by the number of instances.
 
@@ -32,7 +32,7 @@ Does Eco also recommend Spot instances in the projected savings?
 
 ### Answer:
 
-Eco is a tool for management and optimization of reserved instances. The projected savings by using Eco relates only to reserved instances. We suggest using Eco for managing the reserved instances in your organization, while using Elastigroup or Ocean to optimize the combined use of Spot and reserved instances in the workload.
+Eco is a tool for management and optimization of commitment discounts (reservations and savings plans). The projected savings by using Eco relates to commitments. We suggest using Eco for managing commitments in your organization, while using Elastigroup or Ocean to optimize the combined use of Spot and reserved instances in the workload.
 
 ## Question: Reserved Instances Existing At Purchase
 
