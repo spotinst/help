@@ -9,7 +9,7 @@
 |  CloudWatch   |  RDS (Relational Database Service) |
 |  EC2 (Elastic Compute Cloud)  |  S3 (Simple Storage Service)   |
 |  ELB (Elastic Load Balancing)   |  SNS (Simple Notification Service)   |
-|  ELBv2 (Elastic Load Balancing V2)   |  VPC (Virtual Private Cloud)   |
+|  EBS   |     |
 
 ## Supported Azure Asset Types:
 
