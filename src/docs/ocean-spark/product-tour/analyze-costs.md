@@ -1,6 +1,6 @@
 # Analyze Costs
 
-Ocean for Apache Spark (Ocean Spark) provides full visibility into the cost of your Ocean Spark cluster, including a view of your total cloud costs over time. In addition, detailed information about your cloud consumption is provided in cost breakdown views showing core and application hours used.
+Ocean for Apache Spark (Ocean Spark) provides full visibility into the cost of your Ocean Spark cluster, including a view of your total cloud compute costs over time. In addition, detailed information about your cloud consumption is provided in cost breakdown views showing core and application hours used.
 
 ## Get Started
 
@@ -9,7 +9,7 @@ To get to the Cluster Cost Analysis tab, do the following:
 1. In the Spot console, go to Ocean for Spark in the menu tree and click Clusters.
 2. In the [list of Clusters](ocean-spark/product-tour/manage-clusters), click on a Cluster Name and click the Cost Analysis tab.
 
-The Cost Analysis tab opens and shows the cluster name at the top. A graph of Spark App Cost over Time appears with Cloud Cost as the default view.
+The Cost Analysis tab opens and shows the cluster name at the top. A graph of Spark App Cost over Time appears with Cloud Compute Cost as the default view.
 
 <img src="/ocean-spark/_media/tutorial-wave-cost-analysis-01b.png" />
 
@@ -17,7 +17,7 @@ The Cost Analysis tab opens and shows the cluster name at the top. A graph of Sp
 
 The top part of the cost analysis page is a bar chart showing your Spark application usage metrics on the cluster over time.  
 
-Cloud costs, Core Hours, and App Hours are the usage metrics presented. The metrics are calculated for each Spark application that runs on the cluster. Cloud costs correspond to your cloud provider bill, while the Core Hours and App Hours metrics can influence your Ocean Spark service fee. These metrics are then aggregated per day, based on the timestamp (in UTC time zone) at which the application finished running in your cloud account.
+Cloud compute costs, Core Hours, and App Hours are the usage metrics presented. The metrics are calculated for each Spark application that runs on the cluster. Cloud compute costs correspond to your cloud provider bill, while the Core Hours and App Hours metrics can influence your Ocean Spark service fee. These metrics are then aggregated per day, based on the timestamp (in UTC time zone) at which the application finished running in your cloud account.
 
 <img src="/ocean-spark/_media/tutorial-wave-cost-analysis-02b.png" />
 
@@ -50,12 +50,12 @@ Cloud Cost is the default view (as shown in the example [above](ocean-spark/prod
 
 ## Core Hours View
 
-Your Spark applications define the number of cores allocated to the driver and the number of cores allocated to each executor. The *core hours* used by an application correspond to the sum over each of these pods of the uptime duration of the pod multiplied by the number of cores allocated to it.
+Your Spark applications define the number of cores allocated to the driver pod and the number of cores allocated to each executor pod. The *core hours* used by an application correspond to the sum over each of these pods of the uptime duration of the pod multiplied by the number of cores allocated to it.
 
 Sample calculation:
-- A driver with one core runs for 30 minutes
-- An executor with four cores runs for 30 minutes
-- A second executor with four cores runs for 10 minutes and 15 seconds
+- A driver pod with one core runs for 30 minutes
+- An executor pod with four cores runs for 30 minutes
+- A second executor pod with four cores runs for 10 minutes and 15 seconds
 
 This application used 1 * 30/60 + 4 * 30/60 + 4 * 615 / 3600 = 3.18 core hours.
 
@@ -88,7 +88,7 @@ The table includes the following information for each application:
 - Job or User
 - Core Hours
 - App Hours
-- Cloud Costs
+- Cloud Compute Costs
 - % of Total Costs
 
 The total cost for all the jobs or users in the cluster appears at the bottom of the table.
