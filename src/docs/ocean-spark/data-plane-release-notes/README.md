@@ -1,5 +1,33 @@
 # Cluster Release Notes
 
+## [0.4.1-64] - 2023-09-13
+
+Changelog
+
+- [0.4.1] bigdata-operator
+
+  - respect proxy-url from `spotinst-kubernetes-cluster-controller-config`
+
+- [0.5.0] bigdata-spark-watcher
+- [0.2.0] bigdata-notebook-service
+  - Support for HTTP_PROXY and HTTPS_PROXY environment variables
+
+## [0.4.0-63] - 2023-09-12
+
+Changelog
+
+- [0.4.6] bigdata-spark-watcher
+  - fix bug in the executor storm handling
+- [0.4.0] bigdata-operator
+  - manage bigdata CRDs via Helm chart
+
+## [0.3.0-62] - 2023-09-08
+
+Changelog
+
+- [0.3.0] bigdata-operator
+  - support bigdatacomponents.bigdata.spot.io CRD
+
 ## [0.2.8-62] - 2023-09-06
 
 Changelog
