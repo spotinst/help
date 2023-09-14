@@ -32,7 +32,7 @@ The Overview section provides three informative subsections:
 The All Threats tab presents a comprehensive table of detected threats, providing valuable insights into the nature of threats, their origins, associated tactics and techniques, users involved, and the time of detection. Understanding this information enables you to make informed decisions regarding threat mitigation and implement necessary security enhancements.
 You can find the table in the Threats section under the All Threats tab.
 
-<img src="/spot-security/_media/threats-4.png" />  
+![threats-4a](https://github.com/spotinst/help/assets/106514736/2e66b65d-2433-4a50-9e86-27c34d0380ce)
 
 The All Threats table includes the following columns:
 
@@ -56,7 +56,7 @@ In addition to the table:
 The individual threat page displays details of session events such as the event name, event type, asset ID, IP address, region, event time, session ID, and event source, providing comprehensive information about the specific threat events.
 You can find the details of a threat by clicking a threat in the All Threats table.  
 
-<img src="/spot-security/_media/threats-5a.png" />
+![threats-5b](https://github.com/spotinst/help/assets/106514736/575a454d-fcdd-4662-b812-e9e8b90dd73c)
 
 Click **Table** or **Details** to view the threat analysis in the form of a table or JSON. The JSON view displays the event detail record.  
 
@@ -91,7 +91,7 @@ If you do not have the webhook details, configure your workflow [here](https://d
 
 The OnDemand approach enables you to manually create threat tickets. When accessing the Individual Threats page, you can click **Create Incident Ticket** and select an available tool from the dropdown to set up the ticketing process.  
 
-![threats-9](https://github.com/spotinst/help/assets/106514736/bc4bf16e-9550-484a-8856-d511cef6d3af)
+![threats-9](https://github.com/spotinst/help/assets/106514736/ed7753b5-b9dc-4437-b42c-816e7f13f682)
 
 A green checkmark indicates the success of the configuration, enabling you to create tickets for specific threats with one click. 
 
@@ -99,7 +99,7 @@ A green checkmark indicates the success of the configuration, enabling you to cr
 
 When you select a specific tool for the first time, it will prompt you to enter webhook details to configure it.  
 
-![threats-11](https://github.com/spotinst/help/assets/106514736/2c08efb1-3cbb-46f4-b380-06e62604a43e)
+![threats-11](https://github.com/spotinst/help/assets/106514736/08de46f2-5fff-4186-bd46-7863f53cb1a1)
 
 If you do not have the webhook details, configure your workflow [here](https://docs.spot.io/spot-connect/integrations/spot_security?id=spot-security-webhook). You can also configure Jira or Send a Slack Message.  
 
