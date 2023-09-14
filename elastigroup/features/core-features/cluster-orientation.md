@@ -11,7 +11,6 @@ Elastigroup supports the following Orientations:
 - Balanced
 - Availability
 - Cost
-- Cheapest
 
 ### Balanced (Default)
 
@@ -34,10 +33,6 @@ The Availability orientation is primarily suitable for `jobs` or `batch` computi
 Optimize towards the most cost-effective infrastructure.
 
 In addition to basic cost optimization of moving workloads from on-demand to spot, Elastigroup will take an aggressive approach to cost-savings by replacing spot instances with less expensive instances whenever a less expensive market becomes available, even when no interruption is anticipated.
-
-### Cheapest
-
-When Spot launches instances, it searches all the markets defined in the Elastigroup and looks for the lowest price for the spot type defined in the group. Spot then brings up instances only in the markets that have the minimum price.
 
 ## What's Next?
 
