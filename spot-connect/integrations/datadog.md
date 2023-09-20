@@ -103,12 +103,12 @@ If you do not already have a Spot Connect API Key, first create one by completin
 }
 ```
 
-5. Replace <Spot-Connect-api-key>. 
+5. Replace < Spot-Connect-api-key >. 
 6. Choose one of the Webhook API Key Names from the dropdown menu in the Spot Connect Workflow panel, and the corresponding Webhook API Key Value will appear.
 
-**Note**: If no options are available for the Webhook API Key Name, click Settings. Under the Integrations tab, click API Keys to create a New API Key.   
+**Note**: If no options are available for the Webhook API Key Name, click **Settings**. Under the Integrations tab, click **API Keys** to create a New API Key.   
 
-7. Copy the Webhook API Key Value and replace <Spot-Connect-api-key> in the header. 
+7. Copy the Webhook API Key Value and replace < Spot-Connect-api-key > in the header. 
 8. Click **Save** to complete Webhook creation.  
 
 ![datadog-7](https://github.com/spotinst/help/assets/106514736/efb4c4bc-4c06-4e0b-9acb-3de2557f38a9)
@@ -179,4 +179,7 @@ Perform a search query and return matching monitors.
 
 ![datadog-12](https://github.com/spotinst/help/assets/106514736/59de8608-1ceb-4851-8ff1-f2c31c8a754e)
 
+5. Enter Optional inputs such as Page Index, Monitors Per Page, Sort Index for further filtering. 
+6. Save and execute the workflow. 
 
+![datadog-13](https://github.com/spotinst/help/assets/106514736/e23e9ba9-7309-4395-ad90-ed7a556313eb)
