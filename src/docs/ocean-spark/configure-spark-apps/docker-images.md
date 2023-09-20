@@ -26,7 +26,7 @@ When submitting Spark apps on Ocean for Apache Spark, you can:
 
 ### Need another image?
 
-To match different dependencies and version requirements you can find more images in Spot's [Docker registry](https://gcr.io/ocean-spark/spark:platform).
+To match different dependencies and version requirements you can find more images in Spot's [Docker registry](https://gcr.io/ocean-spark/spark).
 
 All these dependencies can have different versions. A combination of dependency versions is called a flavor of spark:platform in this page. The image tag indicates the flavor of the image and can be adjusted to fit your needs. Here are two examples of image tags:
 
