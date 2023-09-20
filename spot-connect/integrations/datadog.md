@@ -111,15 +111,15 @@ If you do not already have a Spot Connect API Key, first create one by completin
 7. Copy the Webhook API Key Value and replace < Spot-Connect-api-key > in the header. 
 8. Click **Save** to complete Webhook creation.  
 
-![datadog-7](https://github.com/spotinst/help/assets/106514736/e3613851-685d-4889-b167-8e1c4a39e4c6)
+![datadog-7](https://github.com/spotinst/help/assets/106514736/50acc75b-59cf-43f1-90f6-ffad5fc0a112)
 
 Below is an example monitor created in Datadog that sends notifications to the selected Webhook.  
 
-![datadog-8](https://github.com/spotinst/help/assets/106514736/94596601-ede9-4967-ad23-f9dd0fa1af81)
+![datadog-8](https://github.com/spotinst/help/assets/106514736/e8fe529d-4e18-421b-bb59-80500ae5f31d)
 
 The page below shows that the webhook triggered the Spot Connect workflow.  
 
-![datadog-9](https://github.com/spotinst/help/assets/106514736/6ca665dd-438b-4a79-a8d5-2fea0083a7a9)
+![datadog-9](https://github.com/spotinst/help/assets/106514736/60203b74-318b-42d0-92aa-64d0f39534ae)
 
 ### Datadog Get API Test Results 
 
@@ -144,11 +144,11 @@ Use the action to get the last 50 test results summaries for all Synthetic API t
 1. From the workflow builder in the left panel, drag and drop the Datadog Get API Test Results action node onto the workflow builder. 
 2. Click the action node and select a Datadog integration instance. 
 
-![datadog-10](https://github.com/spotinst/help/assets/106514736/33e9070b-451f-4c62-927c-2e2129354c39)
+![datadog-10](https://github.com/spotinst/help/assets/106514736/3a411605-07d1-4937-83ef-1d4d97f895f2)
 
 3. Save and execute the workflow.
 
-![datadog-11](https://github.com/spotinst/help/assets/106514736/5edbda7a-169f-4a11-be7b-5ed5fcc3159b)
+![datadog-11](https://github.com/spotinst/help/assets/106514736/273b2306-4d59-4fef-b380-9bc1ec83b532)
 
 ### Datadog Search Monitors 
 
@@ -177,10 +177,11 @@ Perform a search query and return matching monitors.
 3. Select a Datadog integration instance. 
 4. Enter a datadog monitor search query. View the [syntax](https://docs.datadoghq.com/monitors/manage/search/). 
 
-![datadog-12](https://github.com/spotinst/help/assets/106514736/aef6c403-f17a-49e7-b21f-64d60c2e6f99)
+![datadog-12](https://github.com/spotinst/help/assets/106514736/83270494-5690-468e-8ddb-95479a5eb757)
 
 5. Enter Optional inputs such as Page Index, Monitors Per Page, Sort Index for further filtering. 
 6. Save and execute the workflow. 
 
-![datadog-13](https://github.com/spotinst/help/assets/106514736/4860ef3f-6fac-4c0b-87cb-b5eec2895c99)
+![datadog-13](https://github.com/spotinst/help/assets/106514736/7e58c546-d070-4acb-bab1-5059e7b6bbe8)
+
 
