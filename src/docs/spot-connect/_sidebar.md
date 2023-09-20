@@ -20,6 +20,7 @@
   - [Integrations](spot-connect/integrations/)
     - [API Keys](spot-connect/integrations/apikeys)
     - [CloudFormation](spot-connect/integrations/cloudformation)
+    - [Datadog](spot-connect/integrations/datadog)
     - [Generic Webhook](spot-connect/integrations/webhook)
     - [Github/Bitbucket Cloud](spot-connect/integrations/git)
     - [Jira](spot-connect/integrations/jira)
