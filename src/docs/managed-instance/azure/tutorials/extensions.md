@@ -7,8 +7,10 @@ Elastigroup’s stateful nodes support Azure extensions and they are installed r
 To install extensions on stateful nodes using the Spot console: 
 
 1. In the left main menu, click **Elastigroup** and then **Stateful Nodes**.  
-2. Select your stateful node and click the **Review** tab. 
-3. Click **JSON** and move the toggle to **Edit mode**. 
+2. Select your stateful node and click **Edit Node**.  
+3. Click **Next** until the Review tab.  
+4. Click **JSON** and move the toggle to **Edit mode**. 
+
  
 ![extentions-stateful-azure](https://github.com/spotinst/help/assets/106514736/734837ce-0ea8-4f30-9a02-356ead086ca3)
 
