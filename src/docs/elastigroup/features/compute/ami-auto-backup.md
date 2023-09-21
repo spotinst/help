@@ -23,6 +23,8 @@ The AMI Auto-Backup provides several options for the frequency in which the back
 
 You're all set! Elastigroup will now automatically create backup images.
 
+> **Note**: When utilizing both AMI backup and IP persistency features concurrently, be aware that the automatic deletion of available AMIs might not occur, despite selecting the Deallocate option during group deletion.  Spot recommends manually deleting the associated AMIs to ensure efficient resource management and prevent unnecessary storage costs. 
+
 ## Manually Change an AMI
 
 In order to manually update the AMI of an Elastigroup that has AMI Auto Backup enabled, follow these steps:
