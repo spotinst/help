@@ -1,4 +1,4 @@
-Topology - Draft for Spot Security 
+Topology 
 
 Spot Security gives you easy visibility over your network topology with several types of views. The topology view enables you to view the assets of your interest and determine potential attack paths for both AWS and Azure.  
 
