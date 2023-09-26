@@ -38,7 +38,7 @@ These counter type metrics help track the rate of addition and removal of nodes 
 * revertToLowerCostReplacement-  The node was scaled up/down due to the ‘Revert to lower cost’ process. For more information click [here](ocean/features/revert-to-lower-cost-node?id=revert-to-lower-cost-node). 
 * shutdownHoursActivity- The node was scaled up/down due to shutdown hours set on your cluster. For more information click [here](ocean/features/running-hours?id=shutdown-hours).  
 * clusterRollReplacement- The node was scaled up/down due to a cluster roll in your cluster. For more information click [here](ocean/features/roll?id=roll).  
-* workloadMigration (relevant only to AWS)- The node was scaled up due to a workload migration process on your cluster. For more information click [here](cean/tutorials/migrate-workload-via-ui?id=migrate-workload-using-the-console). 
+* workloadMigration (relevant only to AWS)- The node was scaled up due to a workload migration process on your cluster. For more information click [here](ocean/tutorials/migrate-workload-via-ui?id=migrate-workload-using-the-console). 
 
 Prometheus metric type: counter
 
