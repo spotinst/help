@@ -129,14 +129,15 @@ With Ocean, do not include the nodeAffinity: `kubernetes.azure.com/scalesetprior
 
 ```
 affinity: 
-         nodeAffinity: 
-          requiredDuringSchedulingIgnoredDuringExecution: 
-            nodeSelectorTerms: 
-             - matchExpressions: 
-               - key: "kubernetes.azure.com/scalesetpriority" 
-                 operator: In 
-                 values: 
-                                - "spot"
+  nodeAffinity: 
+    requiredDuringSchedulingIgnoredDuringExecution: 
+      nodeSelectorTerms: 
+      - matchExpressions: 
+        - key: "kubernetes.azure.com/scalesetpriority" 
+          operator: In 
+          values: 
+          - "spot" 
+], 
 ```
 
 If you have both the Spot toleration and the nodeAffinity configured, then Ocean autoscaling fails with an error that can be seen in the logs. 
@@ -152,7 +153,7 @@ Contact the Spot Sales team or Support if the workload manifest (YAML) cannot be
 Ensure that you have Helm 3.x, Terraform or kubectl installed on your workstation or laptop. Validate that it is configured to connect with the relevant AKS cluster to be imported to Ocean. The Spot account must already be connected to the AKS cluster. If using kubectl, kube-config context set to relevant AKS cluster. 
 
 In order for Ocean to manage the AKS cluster you will need to install the Spot [Ocean Kubernetes controller](https://docs.spot.io/ocean/tutorials/spot-kubernetes-controller/). The Ocean Controller uses kubectl and AKS API to collect metrics on pods, nodes and tracks events from scheduler and nodes or node pools.  These metrics and events are then pushed via a secured connection to the Spot Ocean SaaS to perform cluster autoscaling and optimization functions.   
-Ocean controller is a Deployment with single replica that is typically deployed in the default system node pool where the Kubernetes control plane is deployed. To install the Ocean controller you can use either Helm, Terraform or Kubectl.  
+Ocean controller is a deployment with single replica that is typically deployed in the default system node pool where the Kubernetes control plane is deployed. To install the Ocean controller you can use either Helm, Terraform or Kubectl.  
 
 Helm provides the more flexibility for customization and is the preferred method to install the Ocean Kubernetes controller. In the instructions below to import an AKS cluster to Ocean we will go over detailed steps on how to install the Ocean Kubernetes controller using Helm. 
 
@@ -160,8 +161,86 @@ The three main options to install the Ocean controller.
  
 * **Option 1** – Install Ocean Controller with Helm 
 
-When using [Helm](https://docs.spot.io/ocean/tutorials/spot-kubernetes-controller/install-with-helm?id=for-helm-versions-30-and-later) to install the controller, you will need to add the Spot Helm chart repo (https://spotinst.github.io/spotinst-kubernetes-helm-charts) and then install Ocean Kubernetes Controller Helm chart (spotinst-kubernetes-cluster-controller) on Artifact hub.   
+When using [Helm](ocean/tutorials/spot-kubernetes-controller/install-with-helm?id=for-helm-versions-30-and-later) to install the controller, add the Spot Helm chart repo (https://spotinst.github.io/spotinst-kubernetes-helm-charts) and then install Ocean Kubernetes Controller Helm chart (spotinst-kubernetes-cluster-controller) on Artifact hub.   
 
 You need three required parameters which are credentials: `spotinst.token`, `spotinst.account` and the cluster identifier `spotinst.clusterIdentifier` as shown below. You can add more optional parameters using –set to specify command line arguments or use the file values.yaml. 
 
-Kubernetes metrics server is required and is typically deployed along with the Ocean controller. However, Azure AKS already installs the metrics server and Ocean does not need to reinstall it. You need to set metrics-server.deployChart to false.  
+Kubernetes [metrics server](https://github.com/kubernetes-sigs/metrics-server) is required and is typically deployed along with the Ocean controller. However, Azure AKS already installs the metrics server and Ocean does not need to reinstall it. You need to set `metrics-server.deployChart` to false.
+
+```
+helm repo add spotinst https://spotinst.github.io/spotinst-kubernetes-helm-charts \ 
+
+&& helm repo update 
+
+ 
+
+helm install ocean-controller spotinst/spotinst-kubernetes-cluster-controller \ 
+
+--set spotinst.token=<TOKEN> \ 
+
+--set spotinst.account=<SPOT_ACCOUNT> \ 
+
+--set spotinst.clusterIdentifier=<CLUSTER_IDENTIFIER> \ 
+
+--set metrics-server.deployChart=false \ 
+
+--create-namespace \ 
+
+--namespace="spot-ocean" \ 
+
+--set namespace="spot-ocean" 
+```
+
+* **Option 2** – Install Ocean Controller with Terraform 
+
+When using [Terraform](ocean/tutorials/spot-kubernetes-controller/install-with-terraform?id=install-with-terraform) to install the controller, use [ocean-controller module](https://registry.terraform.io/modules/spotinst/ocean-controller/spotinst/latest) to install the Spot Ocean Kubernetes controller in the AKS cluster. You will need to set three required parameters listed below. Terraform uses Helm chart to install the Ocean controller. You can add optional parameters available with ocean-controller module. For example, you can change the namespace for the Ocean controller deployment to “spot-ocean” instead of “kube-system”.
+
+```
+module "ocean-controller" { 
+  source = "spotinst/ocean-controller/spotinst" 
+
+  # Credentials 
+  spotinst_token   = var.spotinst_token 
+  spotinst_account = var.spotinst_account 
+
+  # Configuration 
+  cluster_identifier = var.cluster_identifier 
+
+  # Optional Configuration 
+
+  namespace = “spot-ocean” 
+}
+```
+
+* **Option 3** – Install Ocean controller with Kubectl 
+
+When using [Kubectl](ocean/tutorials/spot-kubernetes-controller/install-with-kubectl?id=install-with-kubectl) to install the Ocean controller,  complete the following steps:  
+
+1. Create a configMap YAML file for example ocean_controller_configMap.yaml with all required and optional parameters and then use kubectl to apply the configMap to the cluster.  
+
+`ocean_controller_configMap.yaml`
+
+```
+kind: ConfigMap 
+apiVersion: v1 
+metadata: 
+  name: spotinst-kubernetes-cluster-controller-config 
+  namespace: kube-system 
+data: 
+  spotinst.token: <TOKEN> 
+  spotinst.account: <ACCOUNT_ID> 
+  spotinst.cluster-identifier: <CLUSTER_IDENTIFIER> 
+  proxy-url: <Proxy-URL> 
+  disable-auto-update: <"true"/"false">
+```
+
+2. Use kubectl to load the ocean_controller_configMap.yaml into the cluster configuration. 
+
+`kubectl apply -f ocean_controller_configMap.yaml`
+
+3. Use kubectl to install the Ocean controller YAML file directly from Spot AWS S3 bucket.
+
+`kubectl apply -f` https://s3.amazonaws.com/spotinst-public/integrations/kubernetes/cluster-controller/spotinst-kubernetes-cluster-controller-ga.yaml
+
+
+
