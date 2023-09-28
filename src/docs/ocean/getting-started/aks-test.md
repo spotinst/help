@@ -442,4 +442,9 @@ spec:
     operator: "Equal" 
     value: "spot" 
     effect: "NoSchedule"
-``` 
+```
+
+## What’s Next?
+
+- Learn how to [Connect an AKS Private Cluster](ocean/tutorials/connect-an-aks-private-cluster).
+- Learn more about Ocean’s [scaling](ocean/features/scaling-kubernetes) and [headroom](ocean/features/headroom) features.
