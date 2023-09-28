@@ -32,7 +32,7 @@ First, complete the steps for new application registration in steps [3.1 to 3.4]
 
 Spot Ocean AKS requires Azure Access Control (IAM) to provide role-based access control (RBAC) to be able to manage the resources in the AKS cluster. The following steps describe how to create an Azure custom role in the Azure portal for Spot Ocean AKS with the correct scope and permissions to manage AKS resources (node pools and VM Scale Sets).   
 
-Step 1: Export a JSON permissions file for Ocean AKS from the Spot onboarding wizard,  
+Step 1: Export a JSON permissions file for Ocean AKS from the Spot onboarding wizard.  
 Step 2: Define the assignable scope for the Azure custom role in the Azure portal. 
 Step 3: Create the custom role and import the Ocean AKS permissions file. 
 
