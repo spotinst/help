@@ -2,7 +2,7 @@
 
 ## Introduction
 
-An interactive Spark application is a long-running application which the user can interact with on runtime. This can be a notebook application or applications running Spark Connect or HiveThrift servers. Spark Connect supports languages such as Python, Scala and Go and potentially all languages supported by gRPC. The HiveThrift server offers SQL interaction through JDBC.
+An interactive Spark application is a long-running application which the user can interact with on runtime. This can be a notebook application or applications running [Spark Connect](https://spark.apache.org/docs/latest/spark-connect-overview.html) or a [Thrift Hive Server](https://cwiki.apache.org/confluence/display/hive/hiveserver). Spark Connect supports languages such as Python, Scala and Go and potentially all languages supported by [gRPC](https://grpc.io). The Thrift Hive Server offers SQL interaction through JDBC.
 
 ## Spark Connect
 
