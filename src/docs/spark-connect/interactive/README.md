@@ -1,4 +1,4 @@
-# Ofas Interactive Applications
+# Ocean Spark Interactive Applications
 
 ## Introduction
 
