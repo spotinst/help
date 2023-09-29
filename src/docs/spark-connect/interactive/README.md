@@ -158,3 +158,46 @@ spotctl ocean spark --clusterid osc-cluster --appid appid --profile default --po
 ```
 
 The user can now connect to the interactive Spark application through a Hive Thrift library or the Hive JDBC driver.
+
+### Using DBT (https://getdbt.com)
+
+With the spotctl tool running on port 10000 forwarded to the remote hive port the thrift server is accessible on the client side. Start by installing dbt-spark
+
+```sh
+pip install dbt-spark
+pip install "dbt-spark[PyHive]"
+```
+
+Add entry to the ~/.dbt/profiles.yaml
+
+```yaml
+jaffle_shop:
+  outputs:
+    dev:
+      host: localhost
+      method: thrift
+      port: 10000
+      schema: jaffle
+      threads: 1
+      type: spark
+  target: dev
+```
+
+For demo purposes, checkout the demo dbt project jaffle-shop and run the seed
+
+```sh
+git clone https://github.com/dbt-labs/jaffle_shop
+cd jaffle_shop
+dbt seed
+```
+
+Finally run dbt to provision the database
+
+```sh
+dbt run
+```
+
+To enable hive metastore or use AWS Glue Catalog follow these instructions
+
+https://docs.spot.io/ocean-spark/tools-integrations/aws-glue-catalog
+https://docs.spot.io/ocean-spark/tools-integrations/hive-metastore
