@@ -87,7 +87,7 @@ curl -k -X POST 'https://api.spotinst.io/ocean/spark/cluster/{clusterId}/app?acc
 
 ## JDBC
 
-JDBC, or Java Database Connectivity, is an API used in Java programming to interact with databases. It provides a standard abstraction for Java applications to communicate with various databases1. JDBC allows applications to send requests made by users to the specified database1. It is used to write programs required to access databases. Apache Spark provides a JDBC interface throught the HiveThriftServer.
+JDBC, or Java Database Connectivity, is an API used in Java programming to interact with databases. It provides a standard abstraction for Java applications to communicate with various databases1. JDBC allows applications to send requests made by users to the specified database1. It is used to write programs required to access databases. Apache Spark provides a JDBC interface through the HiveThriftServer.
 
 ### Server side
 
