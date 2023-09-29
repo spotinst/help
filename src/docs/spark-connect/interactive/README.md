@@ -105,7 +105,7 @@ To enable JDBC connections to the Spark Application, start the HiveThriftServer
 
 ### Client side
 
-#### Ofas JDBC driver
+#### Ocean Spark JDBC driver
 
 Use the Ofas JDBC driver with database tool or in your code project. The driver available at the following maven coordinates
 
