@@ -8,6 +8,13 @@ An interactive Spark application is a long-running application which the user ca
 
 In Apache Spark 3.4, Spark Connect introduced a decoupled client-server architecture that allows remote connectivity to Spark clusters using the DataFrame API and unresolved logical plans as the protocol. The separation between client and server allows Spark and its open ecosystem to be leveraged from everywhere. It can be embedded in modern data applications, in IDEs, Notebooks and programming languages. Ocean Spark support Spark Connect, and that can be especially useful for the direct execution of Spark SQL.
 
+Once connected to the remote application (as described in the Client side section below) the user can execute SQL queries directly from code, notebook or pyspark shell
+
+```Python
+df = spark.sql("select 'apple' as word, 123 as count union all select 'orange' as word, 456 as count")
+df.write.save("s3://results_bucket/fruits.parquet")
+```
+
 ### Server side
 
 To start a Spark application with SparkConnect server, either run the mainClass SparkConnectServer or enable the SparkConnect plugin. Using the Spark Connect plugin, the application can run other tasks or services while enabling Spark Connect.
@@ -88,6 +95,29 @@ curl -k -X POST 'https://api.spotinst.io/ocean/spark/cluster/{clusterId}/app?acc
 ## JDBC
 
 JDBC, or Java Database Connectivity, is an API used in Java programming to interact with databases. It provides a standard abstraction for Java applications to communicate with various databases1. JDBC allows applications to send requests made by users to the specified database1. It is used to write programs required to access databases. Apache Spark provides a JDBC interface through the HiveThriftServer.
+
+The user can execute SQL queries directly by using the JDBC driver in code, a database tool or from another Spark session. Here is a Java example
+
+```Java
+var prop = new Properties();
+var query = "select 'apple' as word, 123 as count union all select 'orange' as word, 456 as count";
+var jdbcUrl = "jdbc:ofas://api.spotinst.io/"+clusterId+"/"+appId+"?profile=default";
+//var hiveUrl = "jdbc:hive2://localhost:10000";
+
+try (var conn = DriverManager.getConnection(jdbcUrl, prop); var stmt = conn.createStatement(); var rs = stmt.executeQuery(query)) {
+  var metadata = rs.getMetaData();
+  int columnCount = metadata.getColumnCount();
+  while(rs.next()) {
+      var row = new StringBuilder();
+      int i;
+      for (i = 1; i < columnCount; i++) {
+          row.append(rs.getString(i)).append(", ");
+      }
+      row.append(rs.getString(i));
+      System.out.println(row);
+  }
+}
+```
 
 ### Server side
 
