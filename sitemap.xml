@@ -2227,11 +2227,11 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/concepts-features/override-strategy"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/ocean-cd/concepts-features/permission_policies</loc>
+        <loc>https://docs.spot.io/?/ocean-cd/concepts-features/permission-policies</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/concepts-features/permission_policies"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/concepts-features/permission_policies"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-cd/concepts-features/permission-policies"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-cd/concepts-features/permission-policies"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/ocean-cd/concepts-features/provider-reference</loc>
