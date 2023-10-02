@@ -6,11 +6,11 @@ This procedure describes how to use the Spot Console to connect an existing 
 
 ## Prerequisites 
 
-* Valid AKS Managed cluster with at least one node pool (for control-plane). 
-* Connect Spot account to Azure Subscription
-* Verify Connection to Spot Account 
-* Enable Ocean to launch Spot VMs for Workloads 
-* Terraform or Helm or Kubectl (Kubernetes command-line tool) installed. 
+* [Valid AKS Managed cluster with at least one node pool (for control-plane)](ocean/getting-started/aks?id=valid-aks-managed-cluster-with-at-least-one-node-pool-for-control-plane). 
+* [Connect Spot account to Azure Subscription](ocean/getting-started/aks?id=connect-spot-account-to-azure-subscription).
+* [Verify Connection to Spot Account](ocean/getting-started/aks?id=verify-connection-to-spot-account).
+* [Enable Ocean to launch Spot VMs for Workloads](ocean/getting-started/aks?id=enable-ocean-to-launch-spot-vms-for-workloads). 
+* [Install Helm, Terraform or Kubectl (Kubernetes command-line tool)](ocean/getting-started/aks?id=install-helm-terraform-or-kubectl-kubernetes-command-line-tool). 
 
 ### Valid AKS Managed Cluster with at least One Node Pool (for control-plane) 
 
@@ -139,9 +139,11 @@ affinity:
 
 If you have both the Spot toleration and the nodeAffinity configured, then Ocean autoscaling fails with an error that can be seen in the logs. 
 
+```
 05/05/2023, 4:13:48 PM	 Warn	AutoScaler - Attempt Scale Up, Pod nginx-6b966cbdb7 is pending but its constraints differ from the group labels.  
 
-NodeAffinity: '{"preferredDuringSchedulingIgnoredDuringExecution":null,"requiredDuringSchedulingIgnoredDuringExecution":{"nodeSelectorTerms":[{"matchExpressions":[{"key":"kubernetes.azure.com/scalesetpriority","operator":"IN","values":["spot"]}]}]}}'. 
+NodeAffinity: '{"preferredDuringSchedulingIgnoredDuringExecution":null,"requiredDuringSchedulingIgnoredDuringExecution":{"nodeSelectorTerms":[{"matchExpressions":[{"key":"kubernetes.azure.com/scalesetpriority","operator":"IN","values":["spot"]}]}]}}'.
+``` 
 
 Contact the Spot Sales team or Support if the workload manifest (YAML) cannot be edited to add Spot toleration. Mutating admission [webhook](https://kubernetes.io/docs/reference/access-authn-authz/extensible-admission-controllers/) is available to dynamically inject the toleration for pods before they are scheduled. 
 
@@ -156,7 +158,7 @@ Helm provides the more flexibility for customization and is the preferred method
 
 The three main options to install the Ocean controller. 
  
-* **Option 1** – Install Ocean Controller with Helm 
+#### **Option 1** – Install Ocean Controller with Helm 
 
 When using [Helm](ocean/tutorials/spot-kubernetes-controller/install-with-helm?id=for-helm-versions-30-and-later) to install the controller, add the Spot Helm chart repo (https://spotinst.github.io/spotinst-kubernetes-helm-charts) and then install Ocean Kubernetes Controller Helm chart (spotinst-kubernetes-cluster-controller) on Artifact hub.   
 
@@ -178,7 +180,7 @@ helm install ocean-controller spotinst/spotinst-kubernetes-cluster-controller \
 --set namespace="spot-ocean" 
 ```
 
-* **Option 2** – Install Ocean Controller with Terraform 
+#### **Option 2** – Install Ocean Controller with Terraform 
 
 When using [Terraform](ocean/tutorials/spot-kubernetes-controller/install-with-terraform?id=install-with-terraform) to install the controller, use [ocean-controller module](https://registry.terraform.io/modules/spotinst/ocean-controller/spotinst/latest) to install the Spot Ocean Kubernetes controller in the AKS cluster. Set three required parameters listed below. Terraform uses Helm chart to install the Ocean controller. You can add optional parameters available with ocean-controller module. For example, you can change the namespace for the Ocean controller deployment to “spot-ocean” instead of “kube-system”.
 
@@ -198,7 +200,7 @@ module "ocean-controller" {
 }
 ```
 
-* **Option 3** – Install Ocean controller with Kubectl 
+#### **Option 3** – Install Ocean controller with Kubectl 
 
 When using [Kubectl](ocean/tutorials/spot-kubernetes-controller/install-with-kubectl?id=install-with-kubectl) to install the Ocean controller, complete the following steps:  
 
@@ -217,7 +219,7 @@ data:
   spotinst.account: <ACCOUNT_ID> 
   spotinst.cluster-identifier: <CLUSTER_IDENTIFIER> 
   proxy-url: <Proxy-URL> 
-  disable-auto-update: <"true"/"false">
+  disable-auto-update: <true/false>
 ```
 
 2. Use kubectl to load the ocean_controller_configMap.yaml into the cluster configuration. 
@@ -226,7 +228,7 @@ data:
 
 3. Use kubectl to install the Ocean controller YAML file directly from Spot AWS S3 bucket.
 
-`kubectl apply -f` https://s3.amazonaws.com/spotinst-public/integrations/kubernetes/cluster-controller/spotinst-kubernetes-cluster-controller-ga.yaml
+`kubectl apply -f https://s3.amazonaws.com/spotinst-public/integrations/kubernetes/cluster-controller/spotinst-kubernetes-cluster-controller-ga.yaml`
 
 An alternative option is to use the Ocean controller init.sh (bash) script with all required and optional parameters specified in the command line as shown below. 
 
