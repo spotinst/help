@@ -159,13 +159,38 @@ spotctl ocean spark --clusterid osc-cluster --appid appid --profile default --po
 
 The user can now connect to the interactive Spark application through a Hive Thrift library or the Hive JDBC driver.
 
-### Using DBT (https://getdbt.com)
+## Using DBT (https://getdbt.com)
 
-With the spotctl tool running on port 10000 forwarded to the remote hive port the thrift server is accessible on the client side. Start by installing dbt-spark
+### Server side
+
+Launch a Ocean Spark application with the HiveThriftServer running on port 8080 and with http transport mode enabled. Use the following Java options.
+
+```
+-Dhive.server2.transport.mode=http
+-Dhive.server2.thrift.http.port=8080
+-Dhive.server2.thrift.http.path=""
+```
+
+or use arguments
+
+```json
+"mainClass": "com.netapp.spark.HiveThriftServer",
+"deps": {
+    "packages": ["com.netapp.spark:hive:1.2.0"],
+    "repositories": ["https://us-central1-maven.pkg.dev/ocean-spark/spark-code-submission-plugin"]
+},
+"arguments": [
+  8080,
+  "http"
+]
+```
+
+Install the dbt-ocean-spark dbt adaptor python package (https://pypi.org/project/dbt-ocean-spark/)
+
+### Client side
 
 ```sh
-pip install dbt-spark
-pip install "dbt-spark[PyHive]"
+pip install dbt-ocean-spark
 ```
 
 Add entry to the ~/.dbt/profiles.yaml
@@ -174,12 +199,15 @@ Add entry to the ~/.dbt/profiles.yaml
 jaffle_shop:
   outputs:
     dev:
-      host: localhost
-      method: thrift
-      port: 10000
+      host: api.spotinst.io
+      method: http
+      port: 443
       schema: jaffle
       threads: 1
-      type: spark
+      cluster: [clusterId]
+      account: [accountId]
+      app: [appId]
+      type: ocean_spark
   target: dev
 ```
 
