@@ -30,7 +30,7 @@ Complete the following steps to configure the Ansible integration in Spot Connec
 
 1. In the Ansible integration page, click **+ Add Integeration**. Enter the parameters, Integration Alias, SSH private key, S3 Bucket with Playbooks and S3 Bucket for Logs.
 
-![ansible-1](https://github.com/spotinst/help/assets/106514736/fb107509-ba4c-4063-b915-a81022be8085)
+![ansible-1](https://github.com/spotinst/help/assets/106514736/5a204e0c-451a-4399-94bc-c5659dfb19e5)
 
 2. Click **Add Instance**.
 
@@ -42,7 +42,7 @@ Complete the following steps in your AWS Account and get the desired parameters 
     c. Choose a region. 
 2. Enable cross-account access to the S3 bucket.
    
-![ansible-2](https://github.com/spotinst/help/assets/106514736/e1c19757-2e94-433b-ba5a-2590383456e8)
+![ansible-2](https://github.com/spotinst/help/assets/106514736/19aadd95-98d6-4b13-ba16-8cafae6dc1ba)
 
 3. Click **Create bucket**. 
 4. (Optional) Follow the previous steps again for creating S3 bucket for logs.
@@ -54,7 +54,7 @@ If you already have S3 bucket with Ansible playbooks and the optional S3 bucket 
 3. Select your bucket. 
 4. Go to Permissions tab, click **Edit** under Block public access (bucket settings).  
 
-![ansible-3](https://github.com/spotinst/help/assets/106514736/736df8a8-1118-4f64-815c-216a99b53c1f)
+![ansible-3](https://github.com/spotinst/help/assets/106514736/b06bb697-27c4-40ce-b7a3-ebcced5f5cdc)
 
 5. Enable cross-account access. 
 
