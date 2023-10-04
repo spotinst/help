@@ -18,11 +18,11 @@ The bar chart displays the distribution of risks for each event type. When you c
 
 You can select a date range in the top right corner to view events.  
 
-![events-3](https://github.com/spotinst/help/assets/106514736/687d1bac-8e72-4d9d-9051-ca20fb03f856)
+![events-3](https://github.com/spotinst/help/assets/106514736/687d1bac-8e72-4d9d-9051-ca20fb03f856) 
 
 If you have both AWS and Azure events in your environment you can use the toggle to the left of the events to switch between AWS and Azure. 
 
-![events-4](https://github.com/spotinst/help/assets/106514736/74285f8a-6de1-48e7-a453-1546a31950be)
+![events-4](https://github.com/spotinst/help/assets/106514736/24f18ce5-2fa4-43e6-a1f8-c01276c89dd6)
 
 Spot Security classifies the events into the following categories: 
 
