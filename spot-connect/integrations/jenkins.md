@@ -65,7 +65,7 @@ Use the action to start a Jenkins job.
  
 You can start a Jenkins job from the workflow builder as follows: 
 
-1. From the workflow builder in the left panel, drag and drop a Jenkins action node onto the center panel 
+1. From the workflow builder in the left panel, drag and drop a Jenkins action node onto the center panel. 
 2. Click the Jenkins Build action node. 
 3. Select a Jenkins Instance. 
 4. Select a Jenkins job from the Job Name dropdown menu. 
