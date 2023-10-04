@@ -19,7 +19,7 @@
 |  Disks   |  Virtual Machines  |
 |  Key Vaults   |  Virtual Machine Scale Sets |
 |  Load Balancers  |  Virtual Networks   |
-|  Network Security Groups   |     |
+|  Network Security Groups   |  AKS (Azure Kubernetes Services)   |
 
 ## Supported Compliance Standards:
 
