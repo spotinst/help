@@ -24,6 +24,7 @@
     - [Datadog](spot-connect/integrations/datadog)
     - [Generic Webhook](spot-connect/integrations/webhook)
     - [Github/Bitbucket Cloud](spot-connect/integrations/git)
+    - [Jenkins](spot-connect/integrations/jenkins)
     - [Jira](spot-connect/integrations/jira)
     - [PagerDuty](spot-connect/integrations/pagerduty)
     - [Slack](spot-connect/integrations/slack)
