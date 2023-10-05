@@ -130,7 +130,7 @@ You can create more VNGs to handle different workload requirements. For example:
 * AI/ML VNG – for workloads that need GPUs, say GPU count: 2-4 and specific VM series r GPU families 
 * Windows VNG - for workloads that need Windows nodes.
 
-<img width="350" height="450" alt="connect-aks-cluster-13" src="https://github.com/spotinst/help/assets/106514736/3e31608a-ecc3-469c-80ac-6942dc53f61f">
+![connect-aks-cluster-13](https://github.com/spotinst/help/assets/106514736/a48344bd-37ed-47af-9c76-35892de1b62b)
 
 The cluster and VNG are created, and the basic configurations are complete.  
 
@@ -158,7 +158,7 @@ For large clusters with more than 20 nodes, scale down nodes in batches, approxi
 
 #### Enable Ocean to Launch Spot for Workloads During Workload Migration VMs  
 
-For Ocean to launch Spot VMs, the workload needs to add [Spot toleration](https://learn.microsoft.com/en-us/azure/aks/spot-node-pool#schedule-a-pod-to-run-on-the-spot-node) (the node affinity is not required). If there is no Spot toleration, Ocean will launch regular On-demand nodes during workload migration. Please see prerequisites above for more details. 
+For Ocean to launch Spot VMs, the workload needs to add [Spot toleration](https://learn.microsoft.com/en-us/azure/aks/spot-node-pool#schedule-a-pod-to-run-on-the-spot-node) (the node affinity is not required). If there is no Spot toleration, Ocean will launch regular On-demand nodes during workload migration. Learn how to [enable Ocean to launch Spot VMs for workloads](ocean/getting-started/aks?id=enable-ocean-to-launch-spot-vms-for-workloads). 
 
 **Include**
 
