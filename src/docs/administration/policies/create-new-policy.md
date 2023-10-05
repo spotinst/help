@@ -1,6 +1,6 @@
 # Create Permission Policy
 
-Creating a [permission policy](administration/policies/), enables you to define the granted permissions that are set for groups and users inside the organization. You can choose the policy type, and specify which services and actions are included. The detailed procedures are described below.
+Creating a [permission policy](administration/policies/) enables you to define the granted permissions that are set for groups and users inside the organization. You can choose the policy type, and specify which services and actions are included. The detailed procedures are described below.
 
 ## Get Started
 1. Click the User icon in the Spot console and click **Settings**.
@@ -29,7 +29,7 @@ Once a policy has been created, you can not change the policy type.
 
 A service can allow use of a particular product within the Spot Suite, such as Ocean or Elastigroup. It could also provide a specific function such as Setup.
 
-Choose the relevant service (e.g., Ocean, Elastigroup, or Setup) for the policy.
+Choose the relevant service (e.g., Ocean, Elastigroup) for the policy.
 
 <img src="/administration/_media/create-policy-03.png" width="421" height="101" />
 
@@ -39,13 +39,13 @@ Once you choose a service, the service opens below with its set of standard Crea
 
 <img src="/administration/_media/create-policy-04.png" width="406" height="166" />
 
-### Manual Edit
+### Manually Selection of Actions
 
-If you do not want to allow all of the actions included in the standard set of actions, click Manual Edit. Then you can unmark the actions that will not be allowed.
+If you do not want to allow all of the high level actions included in the standard set of actions, uncheck **All Actions**. Then you can mark only the specific high level actions to be allowed.
 
 If you need more granular control of the actions to be allowed, click one of the arrows. For example, when you click the arrow by Create, a list of individual Create actions allowed for this service opens.
 
-Unmark any actions that will not be allowed.
+Mark any actions that will be allowed.
 
 Below is an example of the individual Create actions for the Elastigroup service. Since the Delete action is unmarked, this policy will not allow the users to delete anything in Elastigroup.
 
@@ -70,7 +70,7 @@ To remove a service and all of its corresponding actions, click the Trash icon o
 You can also edit a policy using the JSON format. To edit the policy using the JSON editor, complete the following steps:
 
 1. Open an existing permission policy or create a new one, navigate to the **Services and permissions**, click **JSON**.
-2. Turn on the **Edit Mode** to enable editing the JSON file.
+2. Enable the **Edit Mode** to enable editing the JSON file.
 
 <img src="/administration/_media/create-policy-06.png" />
 
