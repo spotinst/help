@@ -39,7 +39,7 @@ From the 1.0.66 controller version, the account and token was modified as secret
 
 Example Response: `act-abc12def%`
 
-4. Verify that your cluster is in the [same account](https://console.spotinst.com/spt/settings/account/general).
+4. Verify that your cluster is in the [same account](https://console.spotinst.com/settings/v2/organization/accounts).
 5. To view the decoded token, run the following command (Ignore the % at the end of the response):
 
 `kubectl get secrets spotinst-kubernetes-cluster-controller -n kube-system --template={{.data.token}} | base64 --decode`
@@ -49,7 +49,7 @@ Example Response:
 `abcdef124567890ghijk123456789abcdfghijk123456bcdefjik12346890000%`
 
 6. Verify that the token exists and that the user associated with token exists and can make Spot API calls to resources in the account where the cluster exists:
-   https://console.spotinst.com/spt/settings/tokens/permanent
+   [Permanent API Tokens](https://console.spotinst.com/settings/v2/tokens/permanent).
 
 In case your account ID or token is incorrect or invalid, the controller pod will be in a Terminating/CrashLoopBackOff state and in the container logs (Refer Step 6) you will see an unauthorized response as shown below:
 
