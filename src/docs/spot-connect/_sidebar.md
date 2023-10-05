@@ -15,6 +15,7 @@
     - [Container](spot-connect/actions/container)
     - [CSV Export](spot-connect/actions/csv_export)
     - [EC2](spot-connect/actions/ec2)
+    - [HTTP Send Request](spot-connect/actions/http)
     - [Send Email](spot-connect/actions/send_email)
     - [String Transformers](spot-connect/actions/string_transformers)
   - [Integrations](spot-connect/integrations/)
