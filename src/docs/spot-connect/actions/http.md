@@ -49,7 +49,7 @@ The output for the Http Send Request node is a JSON dict and has the values that
 
 ![http-send-rq-2](https://github.com/spotinst/help/assets/106514736/4c84b529-ccee-4962-a2dd-0b4155a6be56)
 
-4. You can save the workflow by clicking on Save Workflow in the top right corner. 
+4. You can save the workflow by clicking Save Workflow in the top right corner. 
 5. Click **Run Now** in the top left corner, to execute the workflow. 
 6. Select the HTTP node to see the execution output. 
 
