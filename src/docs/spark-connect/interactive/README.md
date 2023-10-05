@@ -24,7 +24,7 @@ To start a Spark application with SparkConnect server, either run the mainClass 
 ```json
 "mainClass": "org.apache.spark.connect.sql.service.SparkConnectServer",
 "deps": {
-    "packages": ["org.apache.spark:spark-connect_2.12:3.5.0"]
+    "packages": ["org.apache.spark:spark-connect_2.12:3.4.1"]
 }
 ```
 
@@ -35,7 +35,7 @@ To start a Spark application with SparkConnect server, either run the mainClass 
     "spark.plugins": "org.apache.spark.sql.connect.SparkConnectPlugin"
 },
 "deps": {
-    "packages": ["org.apache.spark:spark-connect_2.12:3.5.0"]
+    "packages": ["org.apache.spark:spark-connect_2.12:3.4.1"]
 }
 ```
 
@@ -94,7 +94,7 @@ curl -k -X POST 'https://api.spotinst.io/ocean/spark/cluster/{clusterId}/app?acc
 
 ## JDBC
 
-JDBC, or Java Database Connectivity, is an API used in Java programming to interact with databases. It provides a standard abstraction for Java applications to communicate with various databases1. JDBC allows applications to send requests made by users to the specified database1. It is used to write programs required to access databases. Apache Spark provides a JDBC interface through the HiveThriftServer.
+JDBC, or Java Database Connectivity, is an API used in Java programming to interact with databases. It provides a standard abstraction for Java applications to communicate with various databases1. JDBC allows applications to send requests made by users to the specified database. It is used to write programs required to access databases. Apache Spark provides a JDBC interface through the HiveThriftServer.
 
 The user can execute SQL queries directly by using the JDBC driver in code, a database tool or from another Spark session. Here is a Java example
 
@@ -128,8 +128,8 @@ To enable JDBC connections to the Spark Application, start the HiveThriftServer
 ```json
 "mainClass": "com.netapp.spark.HiveThriftServer",
 "deps": {
-    "packages": ["com.netapp.spark:hive:1.2.0"],
-    "repositories": ["https://us-central1-maven.pkg.dev/ocean-spark/spark-code-submission-plugin"]
+    "packages": ["com.netapp.spark:hive:1.2.1"],
+    "repositories": ["https://us-central1-maven.pkg.dev/ocean-spark/ocean-spark-adapters"]
 }
 ```
 
@@ -176,8 +176,8 @@ or use arguments
 ```json
 "mainClass": "com.netapp.spark.HiveThriftServer",
 "deps": {
-    "packages": ["com.netapp.spark:hive:1.2.0"],
-    "repositories": ["https://us-central1-maven.pkg.dev/ocean-spark/spark-code-submission-plugin"]
+    "packages": ["com.netapp.spark:hive:1.2.1"],
+    "repositories": ["https://us-central1-maven.pkg.dev/ocean-spark/ocean-spark-adapters"]
 },
 "arguments": [
   8080,
