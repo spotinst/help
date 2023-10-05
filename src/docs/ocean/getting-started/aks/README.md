@@ -158,7 +158,7 @@ For large clusters with more than 20 nodes, scale down nodes in batches, approxi
 
 #### Enable Ocean to Launch Spot for Workloads During Workload Migration VMs  
 
-For Ocean to launch Spot VMs, the workload needs to add [Spot toleration](https://learn.microsoft.com/en-us/azure/aks/spot-node-pool#schedule-a-pod-to-run-on-the-spot-node) (the node affinity is not required). If there is no Spot toleration, Ocean will launch regular On-demand nodes during workload migration. Please see prerequisites above for more details. 
+For Ocean to launch Spot VMs, the workload needs to add [Spot toleration](https://learn.microsoft.com/en-us/azure/aks/spot-node-pool#schedule-a-pod-to-run-on-the-spot-node) (the node affinity is not required). If there is no Spot toleration, Ocean will launch regular On-demand nodes during workload migration. Learn how to [enable Ocean to launch Spot VMs for workloads](ocean/getting-started/aks?id=enable-ocean-to-launch-spot-vms-for-workloads). 
 
 **Include**
 
