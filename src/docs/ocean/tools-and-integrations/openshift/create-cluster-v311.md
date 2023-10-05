@@ -6,7 +6,7 @@ This tutorial covers the creation of an Ocean cluster using [Spot](https://conso
 
 ## Prerequisites
 
-- OpenShift is installed and configured on AWS or GCP.
+- OpenShift is installed and configured on AWS, Azure, or GCP.
 - At least one worker node is up and running, with a primed image and user-data. To set up the primed image and user data, you may follow the procedures below.
 
 ### Create Primed Image
