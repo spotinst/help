@@ -6,11 +6,11 @@ This procedure describes how to use the Spot Console to connect an existing 
 
 ## Prerequisites 
 
-* [Valid AKS Managed cluster with at least one node pool (for control-plane)](ocean/getting-started/aks?id=valid-aks-managed-cluster-with-at-least-one-node-pool-for-control-plane). 
-* [Connect Spot account to Azure Subscription](ocean/getting-started/aks?id=connect-spot-account-to-azure-subscription).
-* [Verify Connection to Spot Account](ocean/getting-started/aks?id=verify-connection-to-spot-account).
-* [Enable Ocean to launch Spot VMs for Workloads](ocean/getting-started/aks?id=enable-ocean-to-launch-spot-vms-for-workloads). 
-* [Install Helm, Terraform or Kubectl (Kubernetes command-line tool)](ocean/getting-started/aks?id=install-helm-terraform-or-kubectl-kubernetes-command-line-tool). 
+* [Valid AKS Managed cluster with at least one node pool (for control-plane)](ocean/getting-started/aks/aks-prerequisites?id=valid-aks-managed-cluster-with-at-least-one-node-pool-for-control-plane). 
+* [Connect Spot account to Azure Subscription](ocean/getting-started/aks/aks-prerequisites?id=connect-spot-account-to-azure-subscription).
+* [Verify Connection to Spot Account](ocean/getting-started/aks/aks-prerequisites?id=verify-connection-to-spot-account).
+* [Enable Ocean to launch Spot VMs for Workloads](ocean/getting-started/aks/aks-prerequisites?id=enable-ocean-to-launch-spot-vms-for-workloads). 
+* [Install Helm, Terraform or Kubectl (Kubernetes command-line tool)](ocean/getting-started/aks/aks-prerequisites?id=install-helm-terraform-or-kubectl-kubernetes-command-line-tool). 
 
 ### Valid AKS Managed Cluster with at least One Node Pool (for control-plane) 
 
@@ -276,7 +276,7 @@ When all of the prerequisites are completed, you are ready to import an AKS clus
 
 The instructions below describe the steps to import an existing AKS cluster to Ocean using the Create Cluster wizard in the Spot console. 
 
-You can perform similar steps to import an AKS cluster to Ocean using the Ocean AKS API using [oceanAKSClusterImport](https://docs.spot.io/api/#tag/Ocean-AKS/operation/oceanAKSClusterImport)) or Terraform providers for Ocean AKS cluster [ocean-aks-np-k8s](https://registry.terraform.io/modules/spotinst/ocean-aks-np-k8s/spotinst/latest), Ocean AKS VNG [ocean_aks_np_virtual_node_group](https://registry.terraform.io/providers/spotinst/spotinst/latest/docs/resources/ocean_aks_np_virtual_node_group).  
+You can perform similar steps to import an AKS cluster to Ocean using the Ocean AKS API using [oceanAKSClusterImport](https://docs.spot.io/api/#tag/Ocean-AKS/operation/oceanAKSClusterImport) or Terraform providers for Ocean AKS cluster [ocean-aks-np-k8s](https://registry.terraform.io/modules/spotinst/ocean-aks-np-k8s/spotinst/latest), Ocean AKS VNG [ocean_aks_np_virtual_node_group](https://registry.terraform.io/providers/spotinst/spotinst/latest/docs/resources/ocean_aks_np_virtual_node_group).  
 
 Launch the Create Ocean Cluster Wizard in the Spot Console.  
 
@@ -303,7 +303,7 @@ Additional tips:
 
 ### Step 1.2: VNG Template  
 
-Select the node pool for the VNG Template. A VNG Template contains cluster default node configuration that VNGs ([Virtual Node Groups](ocean/features/vngs/?id=virtual-node-groups) inherit from. Ocean VNG Template contains cluster default node configuration. For example, availability zones, node pool properties (OS type, OS disk type/size, max pods), auto-scaling configuration (min/max nodes, headroom) as well as default attributes - labels, taints and annotations. 
+Select the node pool for the VNG Template. A VNG Template contains cluster default node configuration that VNGs ([Virtual Node Groups](ocean/features/vngs/?id=virtual-node-groups)) inherit from. Ocean VNG Template contains cluster default node configuration. For example, availability zones, node pool properties (OS type, OS disk type/size, max pods), auto-scaling configuration (min/max nodes, headroom) as well as default attributes - labels, taints and annotations. 
 
 You can view and edit the VNG Template configuration in JSON. When the VNG Template configuration is complete, click **Next**. 
 
