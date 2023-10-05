@@ -22,7 +22,7 @@ In the Organization, you can define the following:
 ## Get your Organization ID
 
 1. In the console, click on the User icon and click Settings.
-2. Under the Organization tab, click General. The Organization ID is displayed.
+2. You will be automatically presented with the General Details pane under Organization. Within the My Organization section you can find your Organization ID.
 
 <img src="/administration/_media/organizations-accounts-02.png" width="400" height="155" />
 
@@ -46,7 +46,7 @@ In case you need multiple organizations, e.g., for multiple divisions or units i
 
 When you register to Spot, the registration wizard automatically creates an Account in your Organization. The account is a child entity of your organization. You can manage multiple accounts in which each account is connected to a different Cloud Provider Account. This allows you to manage multiple accounts and users under the same Organization.
 
-A Spot Account is an equivalent to an AWS account.
+A Spot Account is an equivalent to an AWS account, Azure subscription, or a GCP project.
 
 In the Account, you can define the following:
 
@@ -71,8 +71,8 @@ To add an account through the API, go to [Spot API – Create Account](https://d
 The Account ID is required for API and SDK interactions with the Elastigroup configuration.
 
 1. Log in to the Organization and select the required Account.
-2. In the console, click and click Settings.
-3. Under the Account tab, click General. The Organization ID is displayed.
+2. In the console, click on the User icon and click Settings.
+3. You will be automatically presented with the General Details pane under Organization. Within the My My Spot Account section, you can find your Spot Account ID.
 
 <img src="/administration/_media/organizations-accounts-05.png" width="400" height="117" />
 
