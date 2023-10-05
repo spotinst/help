@@ -4,7 +4,7 @@
 
 <img src="/administration/_media/api-create-api-token-01.png" />
 
-2. The Spot console provides both permanent and temporary tokens. Select your preferred token type and click Generate Token.
+2. The Spot console provides both permanent and temporary tokens. For permanent tokens, select the corresponding user type, either 'Personal' or 'Programmatic'. Temporary tokens are created via the Spot API and the options for doing so are presented on screen.
 
 <img src="/administration/_media/api-create-api-token-02.png" width="429" height="236" />
 
