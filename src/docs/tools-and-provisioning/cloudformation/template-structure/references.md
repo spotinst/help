@@ -5,7 +5,7 @@ AWS CloudFormation provides a built-in function that helps to reuse parameters a
 - When specifying the logical name of a parameter, the value of the parameter is returned.
 - When specifying the logical name of a resource, it returns a value that can be used to refer to that resource, such as a physical ID.
 
-To set up, use: `` Ref`: `logical-name ``
+To set up, use: `` "Ref": "logical-name" ``
 
 ## Using Parameters
 

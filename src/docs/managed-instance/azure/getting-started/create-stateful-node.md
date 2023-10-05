@@ -158,6 +158,26 @@ The list of VMs can be filtered according to VM size.
 
 <img src="/elastigroup/_media/azure-new-stateful-6.png" />
 
+#### Capacity Reservation Group 
+
+Capacity reservation group (CRG) can be utilized in Stateful Node and Elastigroup. 
+ 
+![azure-new-stateful-22](https://github.com/spotinst/help/assets/106514736/804beca7-7cec-4d06-b0e5-e330073377e5)
+
+Complete the following steps to utilize your capacity reservation group: 
+
+1. Check the ‘Utilize CRG’ checkbox. 
+2. Select the CRG you want Elastigroup to use: 
+ * **Automatic**: Elastigroup searches for available CRG slots in your subscription and utilizes the available slots in the configuration of each group.  
+ * **Manual**: Provide details for the CRG you want to be utilized as part of the Stateful node or Elastigroup. 
+3. Select how you want Elastigroup to use your CRG- 
+ * **Prioritize over Spot**: Provides CRG utilization as a priority before Elastigroup picks up the next OD market. 
+ * **Prioritize over On-Demand**: Provides CRG utilization as a priority before Elastigroup picks up the next OD market. 
+
+You must create a CRG in Azure before Elastigroup can utilize the CRG.  
+
+CRG will only be available for selection when it correlates with the enabled VMs in the Elastigroup configuration. 
+
 When you have completed the information in the Compute tab, click Next to continue.
 
 ## Step 3: Networking

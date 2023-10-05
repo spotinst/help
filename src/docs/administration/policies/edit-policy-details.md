@@ -25,7 +25,7 @@ You can also edit in JSON format as described in Create Permission Policy, [Edit
 
 ## Delete a Policy
 
-To delete a policy, click Remove or the Trash icon on the lower right of the policy.
+To delete a policy, click Remove or the Trash icon at the upper right of the Policy Details screen.
 
 ## What’s New?
 
