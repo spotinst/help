@@ -10,7 +10,7 @@ By monitoring a few key metrics you can gain an understanding of how Ocean scale
 
 ### ocean_managed_nodes
 
-This metric tracks the total number of nodes managed by Ocean in the cluster. The metric could be useful in responding to unnatural anomalies. In addition, the metric provides an easy breakdown to monitor specific [virtual node groups](ocean/features/vngs/) in the cluster as well as other infrastructure characteristics such as instance lifecycle and type.
+This metric tracks the total number of nodes managed by Ocean in the cluster. The metric could be useful in responding to anomalies. In addition, the metric provides an easy breakdown to monitor specific [virtual node groups](ocean/features/vngs/) in the cluster as well as other infrastructure characteristics such as instance lifecycle and type.
 
 Prometheus metric type: gauge
 
@@ -46,7 +46,7 @@ Dimensions: `reason`, `VNG_Id`, `lifecycle="Spot/OD/Preemptible"`, `az/zone`, `v
 
 Example:
 ```
-nodes_added_toal{reason="revertToLowerCostReplacement", lifecycle="Spot", az="us-west-2a", vm_type="c5.xlarge", vng_name = “Vng2”, ocean_id= “o-XXXXX”} 46
+nodes_added_total{reason="revertToLowerCostReplacement", lifecycle="Spot", az="us-west-2a", vm_type="c5.xlarge", vng_name = “Vng2”, ocean_id= “o-XXXXX”} 46
 nodes_added_total{reason="scaleUpForPendingPods", lifecycle="Spot", az="us-west-2b", vm_type="r5a.4xlarge", vng_name = “Vng2”, ocean_id= “o-XXXXX”} 13
 ```
 
