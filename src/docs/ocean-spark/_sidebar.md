@@ -28,6 +28,7 @@
   - [Tools & Integrations](ocean-spark/tools-integrations/)
     - [Connect Jupyter Notebooks](ocean-spark/tools-integrations/connect-jupyter-notebooks)
     - [Run Apps from Airflow](ocean-spark/tools-integrations/run-apps-from-airflow)
+    - [Interactive apps with Spark Connect](ocean-spark/spark-connect)
     - [Hive Metastore](ocean-spark/tools-integrations/hive-metastore)
     - [AWS Glue Data Catalog](ocean-spark/tools-integrations/aws-glue-catalog)
   - [Docker Images Release Notes](ocean-spark/docker-images-release-notes/)
