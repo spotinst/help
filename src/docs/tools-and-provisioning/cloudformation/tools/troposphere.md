@@ -6,4 +6,4 @@ The Troposphere library allows easier creation of the [AWS CloudFormation JSON](
 
 ## How to use Troposphere
 
-We created a Git repository for the library accessible [here](https://github.com/spotinst/spotinst-troposphere.md).
+We created a Git repository for the library accessible [here](https://github.com/spotinst/spotinst-troposphere).
