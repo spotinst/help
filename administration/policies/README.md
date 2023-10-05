@@ -8,7 +8,7 @@ A *permission* allows a user access to a Spot service (e.g., Ocean and Elastigro
 
 ## How it Works
 
-We make it really easy for you to create a new policy with the creation wizard. The wizard includes the simple steps summarized below. For the detailed procedures, see Create Policy.
+We make it really easy for you to create a new policy with the creation wizard. The wizard includes the simple steps summarized below. For the detailed procedures, see Create New Policy.
 1. You define the most basic policy details such as the policy name and a brief description of the policy purpose.
 2. You define the policy type, which can be either Organization or Account. Policy type cannot be changed after you have created the policy. (If you need the permissions in this policy to apply to a different policy type, you can always create a new policy.)
 3. You choose one or multiple Spot services. Usually all the actions you need to operate that service are provided just by choosing the service. If you need to allow or deny specific actions, you can do so.
