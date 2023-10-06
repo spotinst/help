@@ -55,6 +55,15 @@ Use the following public maven repository
 https://us-central1-maven.pkg.dev/ocean-spark/ocean-spark-adapters
 ```
 
+The jdbc url looks like
+
+```
+jdbc:ofas://api.spotinst.io/{clusterId}/{appId}?profile=default
+```
+
+additional url parameters are token, account and mode,
+mode is the thrift transport mode and can be 'http' or 'thrift'
+
 ### Spotctl
 
 Use the spotctl command line tool as above, with the port option, --port 10000 or --port hive
