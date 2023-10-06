@@ -94,7 +94,7 @@ curl -k -X POST 'https://api.spotinst.io/ocean/spark/cluster/{clusterId}/app?acc
   "configOverrides": {
     "mainClass": "org.apache.spark.connect.sql.service.SparkConnectServer",
     "deps": {
-      "packages": ["org.apache.spark:spark-connect_2.12:3.5.0"]
+      "packages": ["org.apache.spark:spark-connect_2.12:3.4.1"]
     }
   }
 }
