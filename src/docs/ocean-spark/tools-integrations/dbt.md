@@ -66,7 +66,4 @@ Finally run dbt to provision the database
 dbt run
 ```
 
-To enable hive metastore or use AWS Glue Catalog follow these instructions
-
-[aws-glue-catalog](ocean-spark/tools-integrations/aws-glue-catalog)
-[hive-metastore](https://docs.spot.io/ocean-spark/tools-integrations/hive-metastore)
+Follow the instructions for [Hive metastore](https://docs.spot.io/ocean-spark/tools-integrations/hive-metastore) or [AWS Glue Catalog](ocean-spark/tools-integrations/aws-glue-catalog) to table metadata persistent across your Apache Spark applications.
