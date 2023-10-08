@@ -34,34 +34,36 @@ Complete the following steps to configure the Ansible integration in Spot Connec
 
 2. Click **Add Instance**.
 
-Complete the following steps in your AWS Account and get the desired parameters to insert in the Spot Connect console. 
+### No Existing S3 Bucket 
 
-1. Log in to the AWS Console. If you do not have S3 bucket for Playbook created:
-    a. Go to S3 and click **Create Bucket**. 
-    b. Enter a name in the Bucket Name field. 
-    c. Choose a region. 
-2. Enable cross-account access to the S3 bucket.
+Complete the following steps in your AWS Account if you do not have an S3 bucket for Playbook created and get the desired parameters to insert in the Spot Connect console.  
+
+1. Log in to the AWS Console. 
+2. Go to S3 and click **Create Bucket**. 
+3. Enter a name in the Bucket Name field and choose a region. 
+4. Enable cross-account access to the S3 bucket.
    
 ![ansible-2](https://github.com/spotinst/help/assets/106514736/19aadd95-98d6-4b13-ba16-8cafae6dc1ba)
 
-3. Click **Create bucket**. 
-4. (Optional) Follow the previous steps again for creating S3 bucket for logs.
+5. Click **Create bucket**. 
+6. (Optional) Follow the previous steps again for creating S3 bucket for logs.
 
-If you already have S3 bucket with Ansible playbooks and the optional S3 bucket for log files, enable cross-account access. If not, complete the following steps: 
+### Existing S3 Bucket 
 
-1. Log in to the AWS Console. 
-2. Go to S3. 
-3. Select your bucket. 
-4. Go to Permissions tab, click **Edit** under Block public access (bucket settings).  
+Complete the following steps in your AWS account if you already have an S3 bucket with Ansible playbooks and the optional S3 bucket for log files, enable cross-account access.  
+
+1. Log in to the AWS Console and click S3. 
+2. Select your bucket. 
+3. Click the **Permissions** tab, click **Edit** under Block public access (bucket settings).  
 
 ![ansible-3](https://github.com/spotinst/help/assets/106514736/b06bb697-27c4-40ce-b7a3-ebcced5f5cdc)
 
-5. Enable cross-account access. 
+4. Enable cross-account access. 
 
 ![ansible-4](https://github.com/spotinst/help/assets/106514736/06c62824-668d-4349-b3fc-1c1a89461024)
 
-6. Open the permissions for the selected S3 bucket and edit the bucket policy. 
-7. Paste the bucket policy from below and update the Principal and Resource fields accordingly. The Principal value is the S3 Access Role copied from the previous step. 
+5. Open the permissions for the selected S3 bucket and edit the bucket policy. 
+6. Paste the bucket policy from below and update the Principal and Resource fields accordingly. The Principal value is the S3 Access Role copied from the previous step. 
 
 ```yaml
 {
@@ -141,8 +143,8 @@ In the workflow builder, select the Ansible Run Playbook node from the workflow 
 * Target Account Alias: Enter the AWS account alias configured that has access to the S3 bucket containing the playbook. 
 * Playbook: Enter the name of the playbook present in the S3 bucket configured during the Ansible instance creation. 
 * Hosts: You can either enter the host name, or you can pass the name of inventory file present in the bucket.  
-* User: Specify the user that will be used for executing the command on managed node. 
-* Extra Args: Pass any additional arguments to the ansible-playbook command.
+* User (optional): Specify the user that will be used for executing the command on managed node. 
+* Extra Args (optional): Pass any additional arguments to the ansible-playbook command.
 
 #### Input
 
