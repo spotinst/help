@@ -6,11 +6,11 @@ This procedure describes how to use the Spot Console to connect an existing 
 
 ## Prerequisites 
 
-* [Valid AKS Managed cluster with at least one node pool (for control-plane)](ocean/getting-started/aks?id=valid-aks-managed-cluster-with-at-least-one-node-pool-for-control-plane). 
-* [Connect Spot account to Azure Subscription](ocean/getting-started/aks?id=connect-spot-account-to-azure-subscription).
-* [Verify Connection to Spot Account](ocean/getting-started/aks?id=verify-connection-to-spot-account).
-* [Enable Ocean to launch Spot VMs for Workloads](ocean/getting-started/aks?id=enable-ocean-to-launch-spot-vms-for-workloads). 
-* [Install Helm, Terraform or Kubectl (Kubernetes command-line tool)](ocean/getting-started/aks?id=install-helm-terraform-or-kubectl-kubernetes-command-line-tool).
+* [Valid AKS Managed cluster with at least one node pool (for control-plane)](ocean/getting-started/aks/aks-prerequisites?id=valid-aks-managed-cluster-with-at-least-one-node-pool-for-control-plane). 
+* [Connect Spot account to Azure Subscription](ocean/getting-started/aks/aks-prerequisites?id=connect-spot-account-to-azure-subscription).
+* [Verify Connection to Spot Account](ocean/getting-started/aks/aks-prerequisites?id=verify-connection-to-spot-account).
+* [Enable Ocean to launch Spot VMs for Workloads](ocean/getting-started/aks/aks-prerequisites?id=enable-ocean-to-launch-spot-vms-for-workloads). 
+* [Install Helm, Terraform or Kubectl (Kubernetes command-line tool)](ocean/getting-started/aks/aks-prerequisites?id=install-helm-terraform-or-kubectl-kubernetes-command-line-tool).
 
 ## Import Cluster  
 
