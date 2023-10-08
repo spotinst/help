@@ -41,7 +41,7 @@ The output for the Http Send Request node is a JSON dict and has the values that
 #### HTTP Send Request Example 
 
 1. Create a new workflow and give it a name. 
-2. From the workflow builder in the left panel, drag and drop the HTTPSendRequest node in the workflow builder. 
+2. From the workflow builder in the left panel, drag and drop the HTTP Send Request node in the workflow builder. 
 
 ![http-send-rq-1](https://github.com/spotinst/help/assets/106514736/e1840c5d-ecf4-4204-8ef6-7462daa363f2)
 
@@ -51,8 +51,10 @@ The output for the Http Send Request node is a JSON dict and has the values that
 
 4. You can save the workflow by clicking Save Workflow in the top right corner. 
 5. Click **Run Now** in the top left corner, to execute the workflow. 
-6. Select the HTTP node to see the execution output. 
+6. On the Execution Details page, click the HTTP node to see the execution output. 
 
 ![http-send-rq-3](https://github.com/spotinst/help/assets/106514736/ecc48a60-6400-4c71-a731-97f4135fa4c0)
 
-7. Click the **Outputs** tab in the Execution step details to see the output of the http request.
+7. On the Execution Step Detail page, click the **Outputs** tab in the Execution step details to see the output of the http request.
+
+![http-send-rq-4](https://github.com/spotinst/help/assets/106514736/d2154bfc-beb0-4e04-af25-a560cc370c4e)
