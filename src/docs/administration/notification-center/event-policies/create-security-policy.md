@@ -17,14 +17,14 @@ To access the notification policies, do the following:
 
 ### Create New Policy
 
-1. In the Create Policy popup, complete the following information:
+1. In the Create Policy popup, enter the following information:
 * Policy Name: Give the policy a name.
 * Policy Type: In the dropdown, choose Security.
 * Policy Description: Enter a few words describing what or who the policy is for.
 
 <img src="/administration/_media/create-security-policy-2.png" width="400" />
 
-2. Mark Personal Visibility if you want the policy to be visible only to you. You will not be able to add integrations. If you leave the checkbox blank, the policy will be available to other members of the account it is in, and you will be able to add integrations.
+2. Mark Personal policy if you want the policy to be visible only to you. You will not be able to add integrations. If you leave the checkbox blank, the policy will be available to other members of the account it is in, and you will be able to add integrations.
 3. Click Continue.
 
 To complete the policy definition, you will need to complete all parts of the wizard to select an account, rules, regions, and integrations. Once the policy is created, you might need to edit it to select users who will have access.  

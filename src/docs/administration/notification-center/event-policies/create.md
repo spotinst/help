@@ -20,13 +20,15 @@ In the Create New Policy popup, your user name (i.e., your company email address
 
 <img src="/administration/_media/create-new-notification-policy-01a.png" width="500" />
 
-1. Complete the following information:
+1. In the Create Policy window, complete the following information:
    - Policy Name: Give the policy a name.
+   - Policy Type: In the dropdown, choose Compute.
    - Policy Description: Enter a few words describing what or who the policy is for.
+
 2. Mark Personal Visibility if you want the policy to be visible only to you. You will not be able to add integrations. If you leave the checkbox blank, the policy will be available to other members of the account it is in, and you will be able to add integrations.
 3. Click Continue.
 
-To complete the policy definition, you will need to complete all parts of the wizard to select resources, events, and integrations. Once the policy is created, you may also need to edit the policy to select users who will have access.
+To complete the policy definition, you will need to complete all parts of the wizard to select an account, rules, regions, and integrations. Once the policy is created, you might need to edit it to select users who will have access.
 
 ## Step 1: Select Account
 
@@ -66,22 +68,22 @@ Each condition contains the following:
   - Load Balancer
   - Availability Zone
   - Security Group
-  - VPC
 - Operator: The criterion for matching a search, such as:
   - Is
+  - Is not
   - Contains
-  - Does not contain
+  - Does Not Contain
   - Begins with
   - Ends with
 - Value: The string to be matched, such as a phrase, a word, or part of a word.
 
 Any new resources added to the account that match the defined criteria will automatically be included in the monitoring.
 
-### Manual Resources
+### Individual Resources
 
 When you choose Manual Resources, you then select from a list of existing resources. Only those resources will be monitored for notifications. Any new resources added to the account in the future will not be included unless you edit the policy and add them to the monitoring list.
 
-<img src="/administration/_media/create-new-notification-policy-03.png" width="472" height="211" />
+<img src="/administration/_media/create-new-notification-policy-03a.png" width="472" height="211" />
 
 You can filter the list and search for a resource by entering a type, a name, an ID in the filter box, or you can just type in string and search.
 
@@ -120,7 +122,7 @@ The following attributes will be sent as part of the JSON message via Webhook, S
 
 ## Select Users
 
-Once you (an Admin user) have created an Account level policy, only you are registered to the policy. You can now edit the policy and determine which Spot users will receive notifications. See [Edit Registered Users](administration/notification-center/edit-a-notification-policy?id=edit-registered-users).
+Once you (an Admin user) have created an Account level policy, only you are registered to the policy. You can now edit the policy and determine which Spot users will receive notifications. See [Edit Registered Users](https://docs.spot.io/administration/notification-center/event-policies/edit?id=edit-registered-users).
 
 ## What’s Next?
 

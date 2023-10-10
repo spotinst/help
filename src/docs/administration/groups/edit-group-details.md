@@ -20,7 +20,7 @@ The Group Details page appears with a summary line of information about the grou
 
 ### Edit Group Details
 
-To edit the Group Name or Description, click the pencil icon on the right.
+To edit the Group Name or Description, click the pencil icon at the top right.
 
 ### Manage Users
 
