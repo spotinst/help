@@ -1,10 +1,10 @@
 # Eco Reports Enrollment
 
-There are several use cases for Eco Reports enrollment. This use case is for AWS enterprises with administrative access to their MPA.
+There are several use cases for Eco Reports enrollment. This use case is for AWS enterprises with administrative access to their Management Account.
 
 Although some of the enrollment steps are manual, we are actively working to make this process a streamlined, self-service experience for future users.
 
-This procedure is for one MPA. If more than one MPA needs to be registered, this process will need to be repeated for each.
+This procedure is for one Management Account. If more than one needs to be registered, this process will need to be repeated for each.
 
 ## Step 1. Sign up with Spot
 
@@ -12,10 +12,10 @@ Use the [registration procedure](https://console.spotinst.com/spt/auth/signUp) i
 
 ## Step 2. Connect your Management Account
 
-1. Complete this [procedure](https://docs.spot.io/cloud-analyzer/getting-started/connect-your-aws-master-payer-account-existing-customer).
-2. Wait up to 48 hours for data generation. After that, Cloud Analyzer and a minimal, ECO dashboard will be available to you.
-3. For full ECO, schedule a strategy call with Spot Cost specialists
-   1. Convert to a paying, ECO customer by scheduling a strategy call.
+1. Complete this [procedure](https://docs.spot.io/eco/getting-started/connect-your-aws-account).
+2. Wait up to 48 hours for data generation. After that, Cost Analysis and a minimal, Eco dashboard will be available to you.
+3. For full Eco, schedule a strategy call with Spot Cost specialists
+   1. Convert to a paying, Eco customer by scheduling a strategy call.
    2. Four to six weeks of ‘Ramp Up’ to learn usage patterns, compare with AWS historical data, and start increasing coverage
 
 ## Step 3. Enable Subsets Feature
@@ -36,7 +36,7 @@ Run reports on existing data sets in a variety of ways with [Workflow details re
 
 ## Step 7. Associate Billing Workflows to Subsets (Optional)
 
-Once you have validated the billing workflows and are comfortable with them, you may want to us to process the workflows indefinitely and embed them in the Subsets List and Cloud Analyzer.
+Once you have validated the billing workflows and are comfortable with them, you may want to us to process the workflows indefinitely and embed them in the Subsets List and Cost Analysis.
 
 1. Send a support ticket associating the subsets with the billing workflows. In the ticket, please include the following message and information:
 
