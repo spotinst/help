@@ -66,7 +66,7 @@ To create a new workflow, do the following:
 The billing rules available in the user interface are sufficient to capture most use cases. However, the Spot system is flexible enough to create numerous custom workflows. If you require a billing rule or a workflow sequence that cannot be created through the UI, contact the Support team and Spot will work with you to create a custom workflow. The rules available in the UI are described below.
 
 ### Create workflow with no billing rules
-You may create a workflow without billing rules so that you may run reports on raw data. The advantage to this choice is it gets you to cost and savings data much quicker. See the article titled "View Workflow Details."
+You can create a workflow without billing rules to run reports on raw data. The advantage to this choice is that it provides you with the cost and savings data quicker. See the article titled "[View Workflow Details](eco/tutorials/view-workflow-details)".
 
 
 ### Replace RI Discounts with Public OD Price:
