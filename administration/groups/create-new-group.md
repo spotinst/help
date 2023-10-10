@@ -38,7 +38,7 @@ There are several ways you can add [users](administration/users-a/) to a group:
 
 ## Attach Policies
 
-You can add [policies]() to the group. The policies will determine what the group members will be allowed to do.
+You can add [policies](administration/policies/) to the group. The policies will determine what the group members will be allowed to do.
 
 <img src="/administration/_media/create-new-group-04.png" width="383" height="183" />
 
