@@ -71,7 +71,7 @@ spotctl configure
 ```
 
 ```sh
-spotctl ocean spark connect --cluster-id osc-cluster --app-id appid --account-id acc-account --token token
+spotctl ocean spark connect --cluster-id osc-cluster --app-id appid
 ```
 
 spotctl will start a service on port 15002 (the default Spark Connect port)
