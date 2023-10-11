@@ -68,7 +68,7 @@ mode is the thrift transport mode and can be 'http' or 'thrift'
 Use the spotctl command line tool with the port option, --port 10000 or --port hive
 
 ```
-spotctl ocean spark connect --cluster-id osc-cluster --app-id appid --account-id acc-account --token token --port hive
+spotctl ocean spark hive --cluster-id osc-cluster --app-id appid --account-id acc-account --token token
 ```
 
 The user can now connect to the interactive Spark application through a Hive Thrift library or the Hive JDBC driver.
