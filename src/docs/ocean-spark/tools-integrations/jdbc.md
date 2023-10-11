@@ -66,7 +66,7 @@ mode is the thrift transport mode and can be 'http' or 'thrift'
 
 ### Spotctl
 
-Use the spotctl command line tool as above, with the port option, --port 10000 or --port hive
+Use the spotctl command line tool with the port option, --port 10000 or --port hive
 
 ```
 spotctl ocean spark --clusterid osc-cluster --appid appid --profile default --port hive
