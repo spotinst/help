@@ -1,6 +1,6 @@
 # JDBC
 
-JDBC, or Java Database Connectivity, is an API used in Java programming to interact with databases. It provides a standard abstraction for Java applications to communicate with various databases1. JDBC allows applications to send requests made by users to the specified database. It is used to write programs required to access databases. Apache Spark provides a JDBC interface through the HiveThriftServer.
+JDBC, or Java Database Connectivity, is an API used in Java programming to interact with databases. It provides a standard abstraction for Java applications to communicate with various databases. JDBC allows applications to send requests made by users to the specified database. It is used to write programs required to access databases. Apache Spark provides a JDBC interface through the HiveThriftServer.
 
 The user can execute SQL queries directly by using the JDBC driver in code, a database tool or from another Spark session. Here is a Java example
 
