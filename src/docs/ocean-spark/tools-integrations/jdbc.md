@@ -8,7 +8,6 @@ The user can execute SQL queries directly by using the JDBC driver in code, a da
 var prop = new Properties();
 var query = "select 'apple' as word, 123 as count union all select 'orange' as word, 456 as count";
 var jdbcUrl = "jdbc:ofas://api.spotinst.io/"+clusterId+"/"+appId+"?profile=default";
-//var hiveUrl = "jdbc:hive2://localhost:10000";
 
 try (var conn = DriverManager.getConnection(jdbcUrl, prop); var stmt = conn.createStatement(); var rs = stmt.executeQuery(query)) {
   var metadata = rs.getMetaData();
@@ -69,7 +68,7 @@ mode is the thrift transport mode and can be 'http' or 'thrift'
 Use the spotctl command line tool with the port option, --port 10000 or --port hive
 
 ```
-spotctl ocean spark --clusterid osc-cluster --appid appid --profile default --port hive
+spotctl ocean spark connect --cluster-id osc-cluster --app-id appid --account-id acc-account --token token --port hive
 ```
 
 The user can now connect to the interactive Spark application through a Hive Thrift library or the Hive JDBC driver.
