@@ -1,5 +1,19 @@
 # Cluster Release Notes
 
+## [0.4.1-66] - 2023-10-12
+
+Changelog
+
+- [0.1.22] spark-operator
+  - performance improvements
+
+## [0.4.1-65] - 2023-09-28
+
+Changelog
+
+- [0.4.1] bigdata-proxy
+  - Workspace reverse proxy
+
 ## [0.4.1-64] - 2023-09-13
 
 Changelog
