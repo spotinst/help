@@ -1784,6 +1784,8 @@ export const aliases = (() => {
       "eco/getting-started/connect-azure-account",
 
     "/ocean/getting-started/aks": "ocean/getting-started/aks/",
+
+    "/ocean/tutorials/run-workloads": "ocean/",
   };
 
   for (let [key, value] of Object.entries(map)) {
