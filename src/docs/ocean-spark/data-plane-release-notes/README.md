@@ -1,6 +1,6 @@
 # Cluster Release Notes
 
-## [0.4.1-66] - 2023-10-04
+## [0.4.1-66] - 2023-10-12
 
 Changelog
 
