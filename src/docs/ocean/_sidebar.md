@@ -42,7 +42,6 @@
     - [Migrate the Workload to Ocean](ocean/tutorials/migrate-workload)
       - [Migrate using the Console](ocean/tutorials/migrate-workload-via-ui)
       - [Migrate using API](ocean/tutorials/migrate-workload-via-api)
-    - [Run Workloads](ocean/tutorials/run-workloads)
     - [Create Custom Labels](ocean/tutorials/create-custom-labels)
     - [Manage Virtual Node Groups](ocean/tutorials/manage-virtual-node-groups)
     - [Use Right Sizing](ocean/tutorials/use-right-sizing)
