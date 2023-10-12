@@ -38,13 +38,12 @@ Double-click on the arrow to show a breakdown of the workloads within the namesp
 
 You can define the time period for which the analysis is presented and set your preferences for grouping the breakdowns.
 
-### Time
+### Cost Over Time
 
-Click on Time to open the calendar. You can choose from the following time periods:
+Click on Date to open the calendar. You can choose from the following time periods:
 
 - 7D: The last seven days. This is the default display.
-- 14D: The last 14 days.
-- MTD: From the first of the month to the present day.
+- Today: Costs for Today.
 - 1M: The last 30 days.
 - Custom: In addition, you can create a custom time period by clicking on the start date and end date in the calendar.
 
