@@ -3263,13 +3263,6 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean/tutorials/"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/ocean/tutorials/run-workloads</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean/tutorials/run-workloads"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean/tutorials/run-workloads"/>
-    </url>
-    <url>
         <loc>https://docs.spot.io/?/ocean/tutorials/set-running-hours</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
