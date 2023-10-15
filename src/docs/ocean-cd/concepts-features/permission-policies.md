@@ -251,7 +251,7 @@ Actions of Create type entities can not be set if the resources object is in use
 }
 ```
 
-#### Option 3: Granting Access to all Actions Found as Part of Ocean CD 
+### Option 3: Granting Access to all Actions Found as Part of Ocean CD 
 
 **If no resources or condition objects are used**, all of the Ocean CD actions can be in the same policy.  
 
@@ -282,9 +282,9 @@ The process is complete to grant the policies to your editor users. Refer to the
 
 **Read-only users**: 
 
-* have access to the entire console.  
-* can not perform actions.  
+* Have access to the entire console.  
+* Can not perform actions.  
 
 **Admin users**: 
 
-* can perform as many actions as needed.  
+* Can perform as many actions as needed.  
