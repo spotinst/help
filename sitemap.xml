@@ -2703,6 +2703,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-spark/tools-integrations/hive-metastore"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/ocean-spark/tools-integrations/jdbc</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-spark/tools-integrations/jdbc"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-spark/tools-integrations/jdbc"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/ocean-spark/tools-integrations/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
@@ -2715,6 +2722,13 @@
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-spark/tools-integrations/run-apps-from-airflow"/>
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-spark/tools-integrations/run-apps-from-airflow"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/ocean-spark/tools-integrations/spark-connect</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean-spark/tools-integrations/spark-connect"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean-spark/tools-integrations/spark-connect"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/ocean/features/auto-update-process-gke</loc>
