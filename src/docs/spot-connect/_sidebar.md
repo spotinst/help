@@ -19,6 +19,7 @@
     - [Send Email](spot-connect/actions/send_email)
     - [String Transformers](spot-connect/actions/string_transformers)
   - [Integrations](spot-connect/integrations/)
+    - [Amazon SNS](spot-connect/integrations/sns)
     - [Ansible](spot-connect/integrations/ansible)
     - [API Keys](spot-connect/integrations/apikeys)
     - [CloudFormation](spot-connect/integrations/cloudformation)
