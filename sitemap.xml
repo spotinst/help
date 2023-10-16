@@ -3676,6 +3676,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/integrations/slack"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/spot-connect/integrations/sns</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-connect/integrations/sns"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-connect/integrations/sns"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/spot-connect/integrations/splunk-on-call</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
