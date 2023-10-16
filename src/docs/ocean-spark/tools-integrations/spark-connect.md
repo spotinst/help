@@ -9,11 +9,11 @@ df = spark.sql("select 'apple' as word, 123 as count union all select 'orange' a
 df.write.save("s3://results_bucket/fruits.parquet")
 ```
 
-## Server side
+## Server Side
 
 To start a Spark application with SparkConnect server, either run the mainClass SparkConnectServer or enable the SparkConnect plugin. Using the Spark Connect plugin, the application can run other tasks or services while enabling Spark Connect.
 
-### Spark Connect launch using the SparkConnectServer
+### Spark Connect Launch using the SparkConnectServer
 
 ```json
 "mainClass": "org.apache.spark.connect.sql.service.SparkConnectServer",
@@ -22,7 +22,7 @@ To start a Spark application with SparkConnect server, either run the mainClass 
 }
 ```
 
-### Spark Connect launch using the Spark Connect plugin
+### Spark Connect Launch using the Spark Connect plugin
 
 ```json
 "sparkConf": {
