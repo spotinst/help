@@ -74,7 +74,7 @@ Some workloads are not as resilient to instance replacements as others, so you m
 
 Ocean makes it easy to prevent scaling down of nodes running pods configured with one of the following labels:
 - spotinst.io/restrict-scale-down:true label – This label is a proprietary Spot label ([additional Spot labels](https://docs.spot.io/ocean/features/labels-and-taints?id=spot-labels)) and can be configured on a pod level. When configured, it instructs the Ocean autoscaler to prevent scaling down a node that runs any pod with this label specified.
-- cluster-autoscaler.kubernetes.io/safe-to-evict: false label – Cluster autoscaler label; works similarly to the restrict-scale-down label. Ocean supports that label to ensure easy migration from the cluster autoscaler to Ocean.
+- cluster-autoscaler.kubernetes.io/safe-to-evict: false annotation – Cluster autoscaler annotation; works similarly to the restrict-scale-down label. Ocean supports the annotation to ensure easy migration from the cluster autoscaler to Ocean.
 
 Another method is to disable the option to scale down from a specific [virtual node group](ocean/features/vngs/). You could do this in the console.
 
