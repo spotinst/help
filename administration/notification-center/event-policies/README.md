@@ -4,7 +4,7 @@ The Spot console provides a robust and flexible tool for configuring and managin
 
 - Resources monitored
 - Events to be notified
-- Notification media such as Slack, email, and SNS
+- Notification mediums such as Slack, email, and SNS
 - Users and stakeholders to be notified
 
 ## Get Started
@@ -36,19 +36,18 @@ A summary line at the top includes the following information:
 - Personal policies: The number of personal policies I have created.
 - Policies I own: The number of policies I have created.
 - Policies I’m registered to: The number of policies I have subscribed to and will receive notifications for.
-- Active: The number of policies I own that are available for subscription.
+- Active Policies: The number of policies I own that are available for subscription.
 
 ### Policy List
 
 The policy list includes the following information for each policy:
 
 - Name: The user-defined name of the policy. You can click on the policy name to see more detailed information about the policy.
-- Account: The name of the account the event policy belongs to.
+- Type: What product category the policy belongs to.
 - Integrations: The external notification media used to deliver notifications outside the Spot system. (The integrations do not impact the internally registered Spot users.)
 - Registered Users: The number of users subscribing to the policy and receiving emails.
-- Visibility: Can be either:
-  - Personal: Visible only to the owner (you).
-  - Account: Visible to all users in the account.
+- Integrations: The external notification medium used to deliver notifications outside the Spot system. (The integrations do not impact the internally registered Spot users.)
+- Notification Method: How users will be notified of events.
 - Actions: A link to either register to or leave a policy.
 - Status: Indication of whether the policy is active or not.
 
