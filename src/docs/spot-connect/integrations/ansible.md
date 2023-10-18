@@ -109,7 +109,7 @@ Upload your playbook and inventory files in the S3 bucket for Playbook.
 
 You can add these actions in the Spot Connect workflow builder as part of your workflow. 
 
-* Ansible Run Playbook
+* [Ansible Run Playbook](spot-connect/integrations/ansible?id=ansible-run-playbook)
 
 ### Ansible Run Playbook 
 

@@ -40,7 +40,7 @@ Complete the steps below in your Jenkins Account and get the desired parameters 
 
 You can add these actions in the Spot Connect workflow builder as part of your workflow. 
 
-* Jenkins Build 
+* [Jenkins Build](spot-connect/integrations/jenkins?id=jenkins-build) 
 
 ### Jenkins Build  
 

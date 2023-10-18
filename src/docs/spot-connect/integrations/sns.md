@@ -14,7 +14,7 @@ SNS Webhook integration in a Spot Connect workflow enables you to:
 
 You can use this action in the Spot Connect workflow builder as part of your workflow. 
 
-* Amazon SNS Webhook Trigger 
+* [Amazon SNS Webhook Trigger](spot-connect/integrations/sns?id=amazon-sns-webhook-trigger) 
 
 ### Amazon SNS Webhook Trigger 
 
