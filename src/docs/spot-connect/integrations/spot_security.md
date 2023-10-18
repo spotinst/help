@@ -28,9 +28,9 @@ After configuring the webhook you can integrate with tools (Slack and Jira) and 
 * [How to configure Slack here](spot-connect/integrations/slack)
 * Send Slack Message  
 
-## Integrate Spot Security 
+## Integrate Spot Security  
 
-To integrate threats with Spot Connect to get alerted on Jira or Slack, you can follow the information here. 
+Follow [Spot Security documentation](spot-security/features/threats?id=event-detail-record) to integrate with Spot Connect to receive threat alerts on Jira or Slack.
 
 ## View Execution Workflow 
 
