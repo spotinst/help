@@ -25,7 +25,7 @@ Insert a JSONPath node in the workflow editor page, provide the required inputs 
 |      output_bool       |     Boolean  |     Output of JSON path if it is in Bool form .    |   |
 |      execution_status  |     String   |     Status of run (ie: S_OK / E_FAIL)              |   |
 
-The output for the JSONPath action node is a JSON dict called "output", it can give you output with other variables like output_str, output_int as well if output can be type caste to other data types as well.  
+The output for the JSONPath action node is a JSON dict called "output", it can give you output with other variables like output_str, output_int as well if output can be typecast to other data types as well.  
 
 ### JSONPath Action Example 
 
