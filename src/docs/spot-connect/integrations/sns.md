@@ -53,8 +53,10 @@ Complete the following steps:
 2. Click **Simple Notification Service** and click **Topics**. 
 3. Select a topic for the Webhook to be configured under and click **Create Subscription**. 
 4. Select Protocol as **HTTPS**. 
-5. Copy the Webhook URL from the workflow and add it as an **Endpoint**. 
-6. Append **?x-api-key=<api_key_from_the_workflow>** to the same endpoint.
+5. Compose the endpoint URL <webhook-url>?x-api-key=<key-value>, whereas: 
+   * <webhook-url> is Workflow Webhook URL copied from the Spot Connect workflow 
+   * <key-value> is Webhook API Key Value from the workflow.   
+6. Copy and paste the full endpoint URL from step 5 into the Endpoint field.
 
 ![amzn-sns-2](https://github.com/spotinst/help/assets/106514736/eb8e2f71-b0a4-4c9f-9f22-0004dbcd7806)
 
