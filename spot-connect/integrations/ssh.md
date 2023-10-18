@@ -4,7 +4,7 @@ Use this integration to run commands over SSH and log results and errors.
 
 SSH Targets in a Spot Connect workflow lets you: 
 
-* execute a command over SSH and collect logs. 
+* Execute a command over SSH and collect logs. 
 
 ## Configure SSH Targets in Spot Connect 
 
@@ -32,7 +32,7 @@ Details needed to set up a SSH Target instance in Spot Connect:
 
 You can add these actions in the Spot Connect workflow builder as part of your workflow. 
 
-* SSH Execute 
+* [SSH Execute](spot-connect/integrations/ssh?id=ssh-execute) 
 
 ### SSH Execute 
 

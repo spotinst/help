@@ -53,9 +53,9 @@ Follow these steps in your Datadog account to obtain the desired parameter value
 
 You can add these actions in the Spot Connect workflow builder as part of your workflow. 
 
-* Datadog Alert Trigger 
-* Datadog Get API Test Results 
-* Datadog Search Monitors
+* [Datadog Alert Trigger](spot-connect/integrations/datadog?id=datadog-alert-trigger) 
+* [Datadog Get API Test Results](spot-connect/integrations/datadog?id=datadog-get-api-test-results) 
+* [Datadog Search Monitors](spot-connect/integrations/datadog?id=datadog-search-monitors)
 
 ### Datadog Alert Trigger 
 
