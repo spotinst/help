@@ -15,7 +15,7 @@ You can view your license details in the License Management page. This page disp
 1. In the main menu on the left, click **Security** and then **Administration**.  
 2. Click the **License Management** tab.  
 
-<img width="1116" alt="license-1" src="https://github.com/spotinst/help/assets/106514736/b214437a-d919-4129-98d7-9ac70ca7b6ce">
+![license-1](https://github.com/spotinst/help/assets/106514736/af5c92bb-454c-4c12-b998-8605c39a50db)
 
 You can also view the: 
 
