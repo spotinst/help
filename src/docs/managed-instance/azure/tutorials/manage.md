@@ -2,9 +2,9 @@
 
 Elastigroup enables you to see an overview of all your stateful nodes, get status at a glance, perform tasks such as importing and creating new stateful nodes, and drill down to more detailed information when you need to.
 
-To manage your stateful nodes in the Spot console, go to Elastigroup in the menu tree and click Stateful Nodes.
+To manage your stateful nodes in the Spot console, go to Elastigroup in the left main menu and click Stateful Nodes.
 
-<img src="/elastigroup/_media/azure-manage-stateful-nodes-01b.png" />
+![azure-manage-stateful-1a](https://github.com/spotinst/help/assets/106514736/e9c36f9b-d0a4-4b98-9527-8e620758d5b1)
 
 ## View List of Stateful Nodes
 
