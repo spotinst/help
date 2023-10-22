@@ -11,15 +11,13 @@ To manage your stateful nodes in the Spot console, go to Elastigroup in the menu
 The list of stateful nodes gives you a quick view of your nodes and basic information including:
 - Node Name: The user-given name of the node.
 - ID: The unique identifier that Elastigroup assigned to the node upon creation.
-- VM Name: The Azure VM name. Click the VM Name to load the Azure portal for this specific VM.
-- Region: The Azure region where the node is located.
-- Availability Zone: The Azure availability zone where the VM is located.
-- VM Size: The VM size assigned to the node.
-- Life Cycle: Spot or on-demand.
-- Public IP: The public IP address which is assigned to the VM.
-- Private IP: The private IP address which is assigned to the VM.
-- Creation Date: The date the node was created.
-- Status: The activity status of the node (e.g., Running, Paused).
+- Instance Type: The instance type of the stateful node.  
+- Availability Zone: The Azure availability zone where the VM is located. 
+- Public IP: The public IP address which is assigned to the VM. 
+- Status: The activity status of the node (e.g., Running, Paused). 
+- Node ID: The ID of the node.  
+- Launched at: When the node was launched.  
+- Agent Health: The health of the agent of the node.
 
 ## Filter Node List
 
@@ -50,6 +48,12 @@ To perform one of the [node actions](managed-instance/azure/features/actions), c
 - Delete
 
 <img src="/elastigroup/_media/azure-manage-stateful-edit-6.png" />
+
+## Monitor Node Data 
+
+The monitoring tab provides information regarding the utilization of your stateful node. The monitoring information enables you to optimize resource allocation (right sizing), identify performance, and manage costs effectively. You can view customized graphs that display historical data of CPU and memory utilization of the last hour, day, week or 14 days. 
+
+![azure-manage-stateful-monitor](https://github.com/spotinst/help/assets/106514736/f5d90bd1-163d-4dca-8da1-177202f5bb91)
 
 ## Edit Node Configuration
 
