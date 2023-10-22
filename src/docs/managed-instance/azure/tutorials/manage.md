@@ -53,7 +53,7 @@ To perform one of the [node actions](managed-instance/azure/features/actions), c
 
 The monitoring tab provides information regarding the utilization of your stateful node. The monitoring information enables you to optimize resource allocation (right sizing), identify performance, and manage costs effectively. You can view customized graphs that display historical data of CPU and memory utilization of the last hour, day, week or 14 days. 
 
-![azure-manage-stateful-monitor](https://github.com/spotinst/help/assets/106514736/f5d90bd1-163d-4dca-8da1-177202f5bb91)
+![azure-manage-stateful-monitor](https://github.com/spotinst/help/assets/106514736/ed0a00c0-4048-49a4-b509-6d0540c61010)
 
 ## Edit Node Configuration
 
