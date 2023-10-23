@@ -257,8 +257,24 @@ Use this node to execute a Kubectl command in a GKE Cluster.
 |      log_key           |     String  |     Object Key of the data stored in s3 bucket.  |   |
 |      execution_status  |     String  |     Status of run (ie: S_OK / E_FAIL)            |   |
 
+#### Action Example 
+
+Create a workflow in your Spot Connect workspace by completing the following steps: 
+
+1. From the left panel, drag and drop GKE Kubectl Run Command action node in the workflow builder. 
+2. Click the node and complete the following information:  
+  * GKE Instance: Select GKE integration instance.  
+  * Cluster Name: Enter Cluster Name. 
+  * Zone: Enter Zone.
+  * Arguments: Enter the argument.
+  * Optional inputs: Select a Log Bucket.  
+3. Click **Run Now**. 
+
 #### Input  
 
-
+![ggl-k8s-eng-11](https://github.com/spotinst/help/assets/106514736/95505c79-357e-4152-9477-a138e19325cb)
 
 #### Output
+
+![ggl-k8s-eng-12](https://github.com/spotinst/help/assets/106514736/c2e9ead3-d663-490e-a96f-d8835f4291db)
+
