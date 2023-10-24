@@ -29,9 +29,9 @@ To register Spot Connect application in GCP and grant access to a project's Kube
 
 1. In the Cloud Console, go to the Service accounts page. Go to the [Service accounts page](https://console.cloud.google.com/projectselector2/iam-admin/serviceaccounts?supportedpurview=project). 
 2. Select a project. 
-3. Click **Create service account**.  
-
-![ggl-k8s-eng-1](https://github.com/spotinst/help/assets/106514736/a2391cae-57c6-4aab-a4b7-24a9643bb32b)
+3. Click **Create service account**.
+  
+![ggl-k8s-eng-1](https://github.com/spotinst/help/assets/106514736/7a20e32b-b4b0-4a13-96e7-852c2614e9e3)
 
 4. Enter a service account name to display in the Cloud Console. The Cloud console generates a service account ID based on this name. Edit the ID if necessary. You cannot change the ID later. 
 5. (Optional) Enter a description of the service account. 
@@ -44,10 +44,11 @@ To register Spot Connect application in GCP and grant access to a project's Kube
 
 Grant this service account access to project and include Kubernetes Engine Service Agent role. 
 
-1. If you did not follow step 7 while creating the service account or you already had a service account and missed adding the IAM role - Kubernetes Engine Service Agent, click the permissions tab for the specific service account and include the role. 
-2. **Kubernetes Engine Service Agent role** - Gives Kubernetes Engine account access to manage cluster resources. Includes access to service accounts. 
+**Kubernetes Engine Service Agent role** - Gives Kubernetes Engine account access to manage cluster resources. Includes access to service accounts. 
 
-Create service account key and add it to Spot Connect right panel to complete the integration setup 
+If you did not follow step 7 while creating the service account or you already had a service account and missed adding the IAM role - Kubernetes Engine Service Agent, click the permissions tab for the specific service account and include the role. 
+
+Create a service account key and add it to the right panel to complete the integration setup. 
 
 1. Select the same **Service Account** used. 
 2. Click the **Keys** tab. 
@@ -98,10 +99,10 @@ You can add these actions in the Spot Connect workflow builder as part of your w
 
 **Note**: Currently Spot Connect supports only zonal clusters.  
 
-* GKE Get Nodes From Pending Pods 
-* GKE Get Pending Pods 
-* GKE Kill Node 
-* GKE Kubectl Run Command 
+* [GKE Get Nodes From Pending Pods](spot-connect/integrations/gke?id=gke-get-nodes-from-pending-pods) 
+* [GKE Get Pending Pods](spot-connect/integrations/gke?id=gke-get-pending-pods) 
+* [GKE Kill Node](spot-connect/integrations/gke?id=gke-kill-node) 
+* [GKE Kubectl Run Command](spot-connect/integrations/gke?id=gke-kubectl-run-command) 
 
 Complete one of the following:  
 
@@ -126,7 +127,7 @@ Use this action to get GKE Nodes from the Pending Pods Node Selector.
 |      GKE Instance  |     GKE integration instance in Spot Connect  |     True       |   |
 |      Pod Names     |     List of pods in Pending status            |     True       |   |
 |      Cluster Name  |     Name of the GKE cluster                   |     True       |   |
-|      Zone          |     The zone associated with the Cluster      |     True       |   |
+|      Zone          |     The zone associated with the cluster      |     True       |   |
 
 #### Output
 
@@ -165,7 +166,7 @@ Use this action to get pods in pending state from a GKE Cluster.
 |--------------------|:---------------------------------------------:|:--------------:|---|
 |      GKE Instance  |     GKE integration instance in Spot Connect  |     True       |   |
 |      Cluster Name  |     Name of the GKE cluster                   |     True       |   |
-|      Zone          |     The zone associated with the Cluster      |     True       |   |
+|      Zone          |     The zone associated with the cluster      |     True       |   |
 
 #### Output
 
@@ -205,7 +206,7 @@ Use this action to kill a node in a GKE Cluster.
 |      GKE Instance  |     GKE integration instance in Spot Connect      |     True       |   |
 |      Node Name     |     Name of the node associated with the cluster  |     True       |   |
 |      Cluster Name  |     Name of the GKE cluster                       |     True       |   |
-|      Zone          |     The zone associated with the Cluster          |     True       |   |
+|      Zone          |     The zone associated with the cluster          |     True       |   |
 
 #### Output
 
@@ -242,7 +243,7 @@ Use this node to execute a Kubectl command in a GKE Cluster.
 |       Parameter            |                          Description                     |      Required  |   |
 |----------------------------|:--------------------------------------------------------:|:--------------:|---|
 |      Cluster Name          |     Name of the GKE cluster                              |     True       |   |
-|      Zone                  |     The zone associated with the Cluster                 |     True       |   |
+|      Zone                  |     The zone associated with the cluster                 |     True       |   |
 |      Arguments             |     Command Line Arguments to pass to kubectl            |     True       |   |
 |      Log Bucket            |     S3 Bucket for storing output from the command        |     False      |   |
 |      Target Account Alias  |     AWS target account for the above selected S3 bucket  |     False      |   |
@@ -263,11 +264,11 @@ Create a workflow in your Spot Connect workspace by completing the following ste
 
 1. From the left panel, drag and drop GKE Kubectl Run Command action node in the workflow builder. 
 2. Click the node and complete the following information:  
-  * GKE Instance: Select GKE integration instance.  
-  * Cluster Name: Enter Cluster Name. 
-  * Zone: Enter Zone.
-  * Arguments: Enter the argument.
-  * Optional inputs: Select a Log Bucket.  
+   * GKE Instance: Select GKE integration instance.  
+   * Cluster Name: Enter Cluster Name. 
+   * Zone: Enter Zone.
+   * Arguments: Enter the argument.
+   * Optional inputs: Select a Log Bucket.  
 3. Click **Run Now**. 
 
 #### Input  
