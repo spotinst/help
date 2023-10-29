@@ -41,6 +41,8 @@
       - [Multiple Metrics](elastigroup/features/scaling/multiple-metrics)
       - [Advanced Expressions](elastigroup/features/scaling/advanced-expressions)
   - [Features - Azure](elastigroup/features-azure/)
+    - [DNS Integration](elastigroup/features-azure/dns)
+    - [Networking](elastigroup/features-azure/networking)
     - [Shared Image Galleries](elastigroup/features-azure/shared-image-galleries)
     - [Shutdown Script](elastigroup/features-azure/shutdown-script-in-elastigroup-for-azure)
   - [Features - GCP](elastigroup/features/gcp/)
