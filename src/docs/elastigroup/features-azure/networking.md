@@ -16,7 +16,7 @@ You can have Elastigroup define a Public IP on a network interface and describe 
 
 ## Static IP Pools 
 
-With Elastigroup, you can view how your application scales up and down with our Auto-scaler. During the provisioning of your VMs, Elastigroup can effectively employ pools of various IP addresses, and upon scaling down, it will release or delete the addresses.  
+With Elastigroup, you can view how your application scales up and down with our Auto-scaler. During the provisioning of your VMs, Elastigroup can effectively employ pools of various IP addresses, and upon scaling down, it will release or detatch the addresses.  
 
 ### Private IP Pool 
 
