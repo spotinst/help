@@ -32,7 +32,7 @@ The Cluster Overview includes the following main areas:
 
 Cluster Metrics is a summary line providing insights into your cluster usage. The default display shows data from the last 24 hours. You can also see the numbers for the last seven days and the last 30 days. The following information is presented:
 
-- Cloud Cost: The cloud provider’s costs incurred by all applications in this cluster during the selected period.
+- Cloud Compute Cost: The cloud provider’s compute costs incurred by all applications in this cluster during the selected period.
 - Efficiency Score: The fraction of the time that Spark executor cores are running Spark tasks.
 - Core Hours: Total core resources used by all your Spark applications in this cluster during the selected time period.
 - Data Read: Amount of data read during the selected time period.
