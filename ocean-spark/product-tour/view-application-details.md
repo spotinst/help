@@ -21,7 +21,7 @@ The App Overview includes the following main areas:
 
 Application Metrics is a summary line providing data about your app usage. The following information is presented:
 
-- Cloud Cost: The cloud provider’s costs incurred by this application.
+- Cloud Compute Cost: The cloud provider’s compute costs incurred by this application.
 - Core Hours: The core resources used by the application. This metric is calculated as the sum over each container (driver or executor) of its uptime duration multiplied by the number of cores allocated to it.
 - Data Read: Amount of data read by this application.
 - Data Written: Amount of data written by this application.
