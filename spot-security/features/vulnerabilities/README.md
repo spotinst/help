@@ -1,0 +1,11 @@
+# Vulnerability
+
+Spot Security can scan the VMs of the onboarded accounts and provide you information regarding the open CVEs. 
+
+<img width="1567" alt="vuln-readme" src="https://github.com/spotinst/help/assets/106514736/0213414c-459e-4d15-a20b-e014497df930">
+
+## Getting Started with Vulnerability 
+
+To have the vulnerability scanning set up you have to provide permission and details for each account and Spot Security will scan the VMs in those accounts. Learn how to [enable vulnerability scanning](link).   
+
+When the scan is enabled, Spot Security provides the CVEs associated with the VMs along with information such as the affected volumes, partitions, OS, packages, package version and path etc. The [vulnerability dashboard](link) presents the details of the vulnerability analysis.  
