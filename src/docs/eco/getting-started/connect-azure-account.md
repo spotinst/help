@@ -24,7 +24,7 @@ Complete the following steps:
 
 1. In the left main menu, click **Eco** and select **Microsoft Azure** as your cloud provider. 
 2. Select **Azure Billing Account**. 
-3. Select **Automated Onboarding** or **Manual Onboarding**. 
+3. Select [Automated Onboarding](eco/getting-started/connect-azure-account?id=connect-automatically) or [Manual Onboarding](eco/getting-started/connect-azure-account?id=connect-manually). 
 
 ### Connect Automatically 
 
