@@ -1,6 +1,6 @@
 # Connect Your Azure Account for Eco Analysis
 
-This document describes the requirements for Spot Eco to provide an estimated cost savings analysis. The procedure below describes the connection process. If you want a more detailed explanation of Spot's roles and permissions, please review our [access roles and permissions page](azure-tutorials/access-roles-read-only). 
+This document describes the requirements for Spot Eco to provide an estimated cost savings analysis. The procedure below describes the connection process. If you want a more detailed explanation of Spot's roles and permissions, please review our [access roles and permissions page](eco/azure-tutorials/access-roles-read-only). 
 
 The steps below apply to the following account/agreement types:
 
@@ -24,7 +24,7 @@ Complete the following steps:
 
 1. In the left main menu, click **Eco** and select **Microsoft Azure** as your cloud provider. 
 2. Select **Azure Billing Account**. 
-3. Select **Automated Onboarding** or **Manual Onboarding**. 
+3. Select [Automated Onboarding](eco/getting-started/connect-azure-account?id=connect-automatically) or [Manual Onboarding](eco/getting-started/connect-azure-account?id=connect-manually). 
 
 ### Connect Automatically 
 
