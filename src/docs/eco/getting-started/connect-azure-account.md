@@ -1,6 +1,6 @@
 # Connect Your Azure Account for Eco Analysis
 
-This document describes the requirements for Spot Eco to provide an estimated cost savings analysis. The procedure below describes the connection process. If you want a more detailed explanation of Spot's roles and permissions, please review our [access roles and permissions page](azure-tutorials/access-roles-read-only). 
+This document describes the requirements for Spot Eco to provide an estimated cost savings analysis. The procedure below describes the connection process. If you want a more detailed explanation of Spot's roles and permissions, please review our [access roles and permissions page](eco/azure-tutorials/access-roles-read-only). 
 
 The steps below apply to the following account/agreement types:
 
