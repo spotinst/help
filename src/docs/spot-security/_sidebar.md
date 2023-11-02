@@ -17,5 +17,8 @@
     - [Threats](spot-security/features/threats)    
     - [Inventory](spot-security/features/inventory)
     - [Compliance](spot-security/features/compliance)
+    - [Vulnerability Scan](spot-security/features/vulnerability/)
+      - [Dashboard](spot-security/features/vulnerability/dashboard)
+      - [Configure](spot-security/features/vulnerability/configure)  
   - [Support Matrix](spot-security/security-matrix/)
   - [License](spot-security/license/)
