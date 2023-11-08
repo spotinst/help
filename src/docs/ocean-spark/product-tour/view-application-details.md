@@ -36,9 +36,28 @@ The App Info area gives you a quick point of reference for vital information abo
 
 You can edit the App Name by clicking the edit icon by the name.
 
+## Insights
+
+The Insights area gives information about the resource usage of the application
+over time. The first tab shows executor CPU usage, broken down by categories
+(CPU, I/O, shuffle, GC, Spark internals). This graph aligns with a timeline of
+your Spark jobs and stages, so that it's easy to correlate CPU metrics with the
+code of your Spark application.
+
+<img src="/ocean-spark/_media/view-app-details-04.png" />
+
+On the second tab, you get a report of the memory usage of your spark executors
+over the application's job and stages timeline. On the left hand side, you can
+see the peak memory usage for each executor, broken down by category (JVM,
+Python, Other). This graph should help you tune your container memory sizes - so
+that memory usage stays in the 70-90% range. Clicking the executor list shows
+detailed memory usage for that executor in the bottom graph.
+
+<img src="/ocean-spark/_media/view-app-details-05.png" />
+
 ## Logs
 
-You can view the Driver Logs or the Kubernetes Logs while the application is running. You can also download the logs once the application has finished running. 
+You can view the Driver Logs or the Kubernetes Logs while the application is running. You can also download the logs once the application has finished running.
 
 > **Tip**: If you want to change the severity level of your Driver logs, you can do this easily from your Spark application code, for example by setting `sc.setLogLevel("DEBUG")`.
 
