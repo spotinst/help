@@ -234,7 +234,7 @@ Use the action node to extract Terraform State and save to an S3 location if spe
 
 #### Input 
 
-![terraform-14](https://github.com/spotinst/help/assets/106514736/776d6284-b9ef-468f-ba07-e2df6d60b87c)
+
 
 #### Output  
 
