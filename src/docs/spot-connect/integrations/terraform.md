@@ -29,12 +29,12 @@ Steps to configure a Terraform Cloud instance:
 
 You can add these actions in the Spot Connect workflow builder as part of your workflow: 
 
-* Terraform Cloud Apply 
-* Terraform Cloud Destroy 
-* Terraform Cloud Discard 
-* Terraform Cloud Plan  
-* Terraform Cloud Show 
-* Terraform Cloud Update Vars  
+* [Terraform Cloud Apply](spot-connect/integrations/terraform?id=terraform-cloud-apply) 
+* [Terraform Cloud Destroy](spot-connect/integrations/terraform?id=terraform-cloud-destroy) 
+* [Terraform Cloud Discard](spot-connect/integrations/terraform?id=terraform-cloud-discard) 
+* [Terraform Cloud Plan](spot-connect/integrations/terraform?id=terraform-cloud-plan)  
+* [Terraform Cloud Show](spot-connect/integrations/terraform?id=terraform-cloud-show) 
+* [Terraform Cloud Update Vars](spot-connect/integrations/terraform?id=terraform-cloud-update-vars)  
 
 ## How to Create an API Token 
 
@@ -240,9 +240,7 @@ Use the action node to extract Terraform State and save to an S3 location if spe
 
 ![terraform-15](https://github.com/spotinst/help/assets/106514736/36411337-2b26-4c18-b5a1-1dae5dc09740)
 
-### Terraform Cloud Destroy 
-
-Use the action node to remove infrastructure that was deployed with Terraform. 
+### Terraform Update Vars 
 
 #### Input 
 
