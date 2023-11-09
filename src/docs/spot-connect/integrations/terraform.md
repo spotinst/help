@@ -240,7 +240,7 @@ Use the action node to extract Terraform State and save to an S3 location if spe
 
 ![terraform-15](https://github.com/spotinst/help/assets/106514736/36411337-2b26-4c18-b5a1-1dae5dc09740)
 
-### Terraform Update Vars 
+### Terraform Cloud Update Vars 
 
 #### Input 
 
