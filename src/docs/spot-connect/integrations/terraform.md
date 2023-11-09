@@ -129,7 +129,7 @@ Use the action node to destroy infrastructure that was deployed with Terraform.
 
 #### Input 
 
-![terraform-8](https://github.com/spotinst/help/assets/106514736/9f0dd65a-8fde-4495-a427-c0db62dc0681)
+![terraform-8](https://github.com/spotinst/help/assets/106514736/8fec7fa5-8825-4731-89b2-fa46649a9040)
 
 #### Output 
 
