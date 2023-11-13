@@ -1,95 +1,106 @@
 # Connect Azure Subscription
 
-This page describes the procedures for connecting your Microsoft Azure subscription to Spot. The procedure assumes that you are following the instructions in the [onboarding wizard](connect-your-cloud-provider/first-account/?id=connect-azure), have already created your Spot organization or new account, and selected Azure as your cloud provider. You are connecting a linked account, and are in Step 3 as shown below.
+The procedures on this page describe how to connect your Microsoft Azure subscription to Spot by Netapp. The procedure assumes that you are following the instructions in the [onboarding wizard](connect-your-cloud-provider/first-account/?id=connect-azure), have already created your Spot organization or new account, and selected Azure as your cloud provider. 
 
-## Step 3: Connect your cloud account to Spot
+## Step 1: Connect to your Spot Account  
 
-> **Tip**: If this is the first account you are connecting, the step below will show as 3.2. If you are connecting an additional account, the step below is numbered 3.1. The examples in this procedure show as if you are connecting an additional account.
+1. Enter an account name and click **Next**. 
+ 
+![connect-azure-sub-1](https://github.com/spotinst/help/assets/106514736/977a62e9-ed2a-4bc0-9da4-0a0794273a48)
 
-### Step 3.1: Log in to Azure
+2. Select **Microsoft Azure** as your cloud provider. 
 
-Log in to the Azure account you would like Spot to connect to then continue to the next step.
+## Step 2: Log in to your Azure Account 
+ 
+Click **Log in to Azure Account** and continue to the next step. 
 
-<img src="/connect-your-cloud-provider/_media/connect-azure-001.png" width="500" />
+## Step 3: Create New Registration 
+ 
+1. In the Azure console, type **App Registration** in the search bar and click the App Registrations result that appears.  
 
-### Step 3.2: App Registration
+![connect-azure-sub-2](https://github.com/spotinst/help/assets/106514736/dadaf0c3-2539-4d5f-99a0-fabbc545102b)
 
-In this step, you register Spot to Azure.
+2. Click the **+ New registration** tab.  
+ 
+![connect-azure-sub-3](https://github.com/spotinst/help/assets/106514736/e1769ebf-888b-43ac-9e60-f1810ae343ba)
 
-<img src="/connect-your-cloud-provider/_media/connect-azure-002.png" width="450" />
+3. In the Register Application window that opens, enter a name for the application. 
 
-1. Go to Azure's Active Directory service.
-2. Click on App registrations and click New Registration.
+4. In the Support account types section, select **Accounts in this organizational directory only (Spotinst only - Single tenant)**. 
 
-<img src="/connect-your-cloud-provider/_media/azure1-768x248.png" width="" />
+5. In the Redirect URI dropdown menu, select **Web** and specify: https://spot.io. 
+ 
+![connect-azure-sub-4](https://github.com/spotinst/help/assets/106514736/6e8198f9-cdd2-4cd4-8bee-c56bcb6241de)
 
-3. Give the application a name and add https://spot.io as the redirect URI.
+6. In the Register an application window, enter the application you have just registered and copy the Application (client) ID and Directory (tenant) ID to provide in the next step. Click **Register**.
 
-<img src="/connect-your-cloud-provider/_media/azure2-1024x774.png" />
+![connect-azure-sub-5](https://github.com/spotinst/help/assets/106514736/ec2b6c10-23b0-4bb4-8919-a2f1dce66ede)
 
-4. Once your application is ready, copy the Application ID and save it.
-5. Return to the wizard in Spot and enter:
-   - Application (client) ID
-   - Directory (tenant) ID
+7. Paste the Application (client) ID and Directory (tenant) ID in the fields respectively: 
 
-Continue to the next step in the wizard.
+![connect-azure-sub-6](https://github.com/spotinst/help/assets/106514736/5fad3158-3d39-4f94-8985-883f9e4595cd)
 
-### Step 3.3: Client Secret
+8. Click **Next**. 
 
-In this step, you create the client secret to be used for authenticating Spot.
+## Step 4: Create Certificates and Secrets 
+ 
+In the previous app registration that was created, create a client secret:  
 
-<img src="/connect-your-cloud-provider/_media/connect-azure-003.png" width="500" />
+1. In the left menu, click **Certificates & secrets**. 
+2. Click the **Create secrets** tab and then **+ New client secret**. 
+3. Copy the secret value. 
+ 
+![connect-azure-sub-7](https://github.com/spotinst/help/assets/106514736/511bff26-1663-4b7d-82f2-31021dfb6e1e)
 
-1. In the app registration you just created, click Certificates & Secrets.
-2. Create a new client secret:
+4. In the wizard in the Spot console, paste the secret value and click **Next**. 
 
-<img src="/connect-your-cloud-provider/_media/azure3-768x240.png" />
+![connect-azure-sub-8](https://github.com/spotinst/help/assets/106514736/333125ce-e84e-4ae7-8a44-d0cb0385df73)
 
-3. Enter a brief description of the secret and define a validity period that expires in 24 months:
+5. Enter the Subscription ID you want to associate with spot.io and then continue to the next step in the Azure connection wizard. 
+ 
+![connect-azure-sub-9](https://github.com/spotinst/help/assets/106514736/fb26789c-0d34-48fa-802c-6317509bda57)
 
-<img src="/connect-your-cloud-provider/_media/azure4-768x424a.png" width="395" height="176" />
+## Step 5: Create a Custom Role 
 
-4. Copy the Secret Key and then return to Spot and paste it in the field in the wizard that says Client secret value. The key will not appear again after you leave the Key settings.
+1. In the Azure console, type **Subscriptions** in the search bar and click the **Subscriptions** result that appears. 
+2. In the menu on the left side of the Subscriptions platform, click **Access Control (IAM)**.  
+3. Click **+ Add** and then **Add custom role**.  
 
-<img src="/connect-your-cloud-provider/_media/azure5-1024x631.png" />
+![connect-azure-sub-10](https://github.com/spotinst/help/assets/106514736/c63efd8e-9ab1-4e49-8970-86dbf680fca2) 
+ 
+4. Select **Start from JSON** and upload the next JSON policy 
+ 
+![connect-azure-sub-11](https://github.com/spotinst/help/assets/106514736/e66c540c-4e9d-49b9-8209-5a9046c7faf6)
 
-Continue to the next step in the wizard.
+5. Click **Assignable scope** and select the relevant subscription. 
 
-### Step 3.4: Subscription
+![connect-azure-sub-12](https://github.com/spotinst/help/assets/106514736/d99feaa4-2ad4-4cee-ae2d-e4bc82f97b6a) 
 
-Enter the Subscription ID you would like to use for spot.io and then continue to the next step in the wizard.
+6. In the **Create a custom role** window, click **Review + create** and complete the custom role information. 
 
-<img src="/connect-your-cloud-provider/_media/connect-azure-004.png" width="320" />
+## Step 6: Assign a Role 
 
-### Step 3.5: Custom Role
+1. In the Access control (IAM) platform, click **+ Add** and then click **Add role assignment**. 
+ 
+![connect-azure-sub-13](https://github.com/spotinst/help/assets/106514736/4ed79ac3-70e3-41bd-8587-a36a049552fd)
 
-In this step, you create a new custom role that Azure will use for Spot.
+2. Click the **Role** tab and select the custom role you created in the previous steps. 
+ 
+![connect-azure-sub-14](https://github.com/spotinst/help/assets/106514736/ada424da-c289-4ef7-b9bf-78e7d491bccf)
 
-<img src="/connect-your-cloud-provider/_media/connect-azure-005.png" width="500" />
+3. Click the **Members** tab and click **Select members**. 
 
-1. Under All Services, select Subscriptions. Choose the subscription you would like Spot to access.
-2. In the Subscription menu, select Access Control (IAM).
-3. Click Roles, Add, and Add Custom Role.
-4. Select JSON. To view the JSON of the full Spot by NetApp policy in Azure, click [here](https://docs.spot.io/administration/api/spot-policy-in-azure?id=spot-policy-in-azure).  
-5. Switch to the wizard in Spot and click Export JSON Policy. This will put the correct policy on the clipboard.
-6. Return to the Azure console, paste in the policy, review, and click Create.
+![connect-azure-sub-15](https://github.com/spotinst/help/assets/106514736/ca963bc9-824a-42e6-b927-fe372597d65d)
+ 
+4. Select the app registration that was created in the previous steps and click **Next**.  
+5. In the Spot console, click **Connect Account**.  
 
-### Step 3.6: Role Assignment
+![connect-azure-sub-16](https://github.com/spotinst/help/assets/106514736/9d8cf4f9-a9a4-4be8-844c-46843fb7a698)
 
-In this step, you assign the role you created in the previous step and complete everything you need for the connection.
-
-<img src="/connect-your-cloud-provider/_media/connect-azure-006.png" width="600" />
-
-1. In Azure, Click Role Assignments, Add, and Add Role Assignment.
-2. Enter the custom role created above.
-3. Select the application you registered in Step 3.2.
-
-> **Tip**: If your application does not appear in the Select autocomplete list, enter the application name there anyway.
-
-4. In the wizard in Spot, click Connect Account.
-
-Once the validation is complete, your Azure subscription will be connected and ready for optimization.
-
+When the validation is complete, your Azure subscription will be connected and ready for optimization. 
+ 
+![connect-azure-sub-17](https://github.com/spotinst/help/assets/106514736/31fe6d4e-87f9-4d69-8916-95c7648bf00d)
+ 
 ## What’s Next?
 
 - [Create your first Elastigroup](elastigroup/getting-started/create-an-elastigroup-for-azure).
