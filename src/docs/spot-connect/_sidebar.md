@@ -23,7 +23,7 @@
     - [Amazon SNS](spot-connect/integrations/sns)
     - [Ansible](spot-connect/integrations/ansible)
     - [API Keys](spot-connect/integrations/apikeys)
-    - [CloudFormation](spot-connect/integrations/cloudformation)
+    - [CloudFormation Templates](spot-connect/integrations/cloudformation)
     - [Datadog](spot-connect/integrations/datadog)
     - [Generic Webhook](spot-connect/integrations/webhook)
     - [Github/Bitbucket Cloud](spot-connect/integrations/git)
