@@ -1,11 +1,29 @@
 # Cluster Release Notes
 
+## [0.4.4-67] - 2023-11-14
+
+Changelog
+
+- [0.4.4] bigdata-operator
+  - retrieve the deployer namespace
+
+## [0.4.2-67] - 2023-10-24
+
+Changelog
+
+- [0.4.3] bigdata-proxy
+  - update the secret token when starting a Notebook Workspace
+- [0.4.2] bigdata-operator
+  - stop refreshing ocean-controller namespace
+
 ## [0.4.1-66] - 2023-10-12
 
 Changelog
 
 - [0.1.22] spark-operator
   - performance improvements
+- [0.4.2] bigdata-proxy
+  - increase ingress read timeout to 600 seconds by default
 
 ## [0.4.1-65] - 2023-09-28
 
