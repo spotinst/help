@@ -46,7 +46,7 @@ code of your Spark application.
 
 <img src="/ocean-spark/_media/view-app-details-04.png" />
 
-On the second tab, you get a report of the memory usage of your spark executors
+The second tab provides a report of the memory usage of your spark executors
 over the application's job and stages timeline. On the left hand side, you can
 see the peak memory usage for each executor, broken down by category (JVM,
 Python, Other). This graph should help you tune your container memory sizes - so
