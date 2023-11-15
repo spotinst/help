@@ -8,7 +8,7 @@ Use this integration to create workflows to manage cloud infrastructure using Te
 
 1. In the left main menu, click **Connect** and click **Settings**.  
 2. Under the Integrations tab, select **Terraform Cloud**. 
-3. Configure a new integration instance. 
+3. Configure a new integration instance with the information below. 
 
 Details needed to set up a Terraform Cloud instance in Spot Connect: 
 
@@ -18,25 +18,9 @@ Details needed to set up a Terraform Cloud instance in Spot Connect:
 |      Token              |     Terraform Cloud API token                          |     True       |   |
 |      Organization       |     Name of target Organization from Terraform Cloud   |     True       |   |
 
-Steps to configure a Terraform Cloud instance: 
+Follow these steps in your Terraform Cloud account to obtain the desired parameter values to enter in Spot Connect. 
 
-1. In the Terraform Cloud console, click **Add Integration**. 
-2. Enter an Integration Alias for the integration resource. 
-3. Enter the API Token from Terraform Cloud.  
-4. Enter the name of the target organization from Terraform Cloud. 
-
-## Integration Actions 
-
-You can add these actions in the Spot Connect workflow builder as part of your workflow: 
-
-* [Terraform Cloud Apply](spot-connect/integrations/terraform?id=terraform-cloud-apply) 
-* [Terraform Cloud Destroy](spot-connect/integrations/terraform?id=terraform-cloud-destroy) 
-* [Terraform Cloud Discard](spot-connect/integrations/terraform?id=terraform-cloud-discard) 
-* [Terraform Cloud Plan](spot-connect/integrations/terraform?id=terraform-cloud-plan)  
-* [Terraform Cloud Show](spot-connect/integrations/terraform?id=terraform-cloud-show) 
-* [Terraform Cloud Update Vars](spot-connect/integrations/terraform?id=terraform-cloud-update-vars)  
-
-## How to Create an API Token 
+## Create a Terraform API Token 
 
 1. Sign in to Terraform Cloud. 
 2. Click the user icon on the top left and click **User Settings**. 
@@ -54,7 +38,7 @@ You can add these actions in the Spot Connect workflow builder as part of your w
 
 6. Copy the token and paste it into the Token field of the Add Integration Instance window in the Spot Connect console. 
 
-## How to Get Organization Name 
+## Obtain the Terraform Organization Name 
 
 1. Click the user icon on the top left and click **User Settings**. 
 2. Click **Organizations**. 
@@ -62,9 +46,17 @@ You can add these actions in the Spot Connect workflow builder as part of your w
 ![terraform-4](https://github.com/spotinst/help/assets/106514736/f93aa9bb-998f-4954-a980-2372bac61e23)
 
 3. Copy the Organization name and paste it into the Organization field of Add Integration Instance box in the Spot Connect console.  
-4. Click **Add Instance**. 
 
-![terraform-5](https://github.com/spotinst/help/assets/106514736/b39c111c-d86c-4b5f-9ea9-99edbce5c69d)
+## Integration Actions 
+
+You can add these actions in the Spot Connect workflow builder as part of your workflow: 
+
+* [Terraform Cloud Apply](spot-connect/integrations/terraform?id=terraform-cloud-apply) 
+* [Terraform Cloud Destroy](spot-connect/integrations/terraform?id=terraform-cloud-destroy) 
+* [Terraform Cloud Discard](spot-connect/integrations/terraform?id=terraform-cloud-discard) 
+* [Terraform Cloud Plan](spot-connect/integrations/terraform?id=terraform-cloud-plan)  
+* [Terraform Cloud Show](spot-connect/integrations/terraform?id=terraform-cloud-show) 
+* [Terraform Cloud Update Vars](spot-connect/integrations/terraform?id=terraform-cloud-update-vars)  
 
 ### Terraform Cloud Apply 
 
@@ -87,11 +79,9 @@ Use the action to send an http request to Terraform Cloud and apply the request.
 
 #### Action Example 
 
-1. From the left panel, drag and drop the Terraform Cloud Apply node in the workflow builder. Connect it with the trigger. 
+1. From the left panel, drag and drop the Terraform Cloud Apply node in the workflow builder. 
 2. Select a Terraform Cloud Instance.  
 3. Provide a run ID of the run you want to apply. 
-
- 
 
 #### Input 
 
@@ -123,7 +113,7 @@ Use the action node to destroy infrastructure that was deployed with Terraform.
 
 #### Action Example 
 
-1. From the left panel, drag and drop the Terraform Cloud Destroy node in the workflow builder. Connect it with the trigger. 
+1. From the left panel, drag and drop the Terraform Cloud Destroy node in the workflow builder. 
 2. Select a Terraform Cloud Instance.  
 3. Select a workspace name to remove the deployed infrastructure from. 
 
@@ -157,9 +147,9 @@ Use the action node to discard Terraform run and unlock a workspace.
  
 #### Action Example 
 
-1. From the left panel, drag and drop the Terraform Cloud Discard node in the workflow builder. Connect it with the trigger. 
+1. From the left panel, drag and drop the Terraform Cloud Discard node in the workflow builder. 
 2. Select a Terraform Cloud Instance.  
-3. Select a workspace name to discard a run or provide a run ID from.  
+3. Select a workspace name to discard a run from, or provide a run ID.  
 
 #### Input  
 
@@ -191,13 +181,13 @@ Use the action node to plan a Terraform run.
 
 #### Action Example 
 
-1. From the left panel, drag and drop the Terraform Cloud Plan node in the workflow builder. Connect it with the trigger. 
+1. From the left panel, drag and drop the Terraform Cloud Plan node in the workflow builder.  
 2. Select a Terraform Cloud Instance.  
 3. Select a workspace name you want to send a plan request to.   
 
 #### Input 
 
-![terraform-12](https://github.com/spotinst/help/assets/106514736/3f9d17bb-5559-4d4d-ae7b-c8f58199c413)
+![terraform-12](https://github.com/spotinst/help/assets/106514736/af6b27d4-3428-40b7-8f64-8e910b1fedc9)
 
 #### Output 
 
@@ -228,9 +218,9 @@ Use the action node to extract Terraform State and save to an S3 location if spe
 
 #### Action Example 
 
-1. From the left panel, drag and drop the Terraform Cloud Show node on workflow builder. Connect it with the trigger. 
+1. From the left panel, drag and drop the Terraform Cloud Show node on workflow builder. 
 2. Select a Terraform Cloud Instance.  
-3. Select a workspace name that has the state you want to extract.  
+3. Select a workspace name that has the state you want to extract from.  
 
 #### Input 
 
@@ -261,7 +251,7 @@ Node execution status
 
 #### Action Example 
 
-1. From the left panel, drag and drop the Terraform Cloud Update Vars node on workflow builder. Connect it with the trigger. 
+1. From the left panel, drag and drop the Terraform Cloud Update Vars node on workflow builder. 
 2. Select a Terraform Cloud Instance.  
 3. Select a workspace name that has a variable you want to update. 
 4. Hover over the variable you want to edit. Click **Open JSON** editor.  
