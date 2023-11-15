@@ -1,16 +1,16 @@
 # Configure Pod Sizes
 
-This page describes how to configure your Spark pod sizes and select the instances on which they run.
+This page describes how to configure your Spark pod sizes and select the instances they run on.
 
 ## Concepts
 
-Your Ocean Spark cluster uses a variety of instances, such as a mix of instance families (for example on AWS: m5, r5, i3, …), sizes (for example, on AWS: x.large, 2x.large, …) and availability (spot, on-demand).
+Your Ocean Spark cluster uses a variety of instances, such as a combination of instance families (for example on AWS: m5, r5, i3, …), sizes (for example, on AWS: x.large, 2x.large, …) and availability (spot, on-demand).
 
 These instances (called nodes in Kubernetes terminology) are dynamically added to the cluster as they are requested by your Spark applications, and are automatically terminated when they are unused so they do not incur any costs. This is all managed by Ocean through the concept of [Virtual Node Groups](ocean/features/launch-specifications) (VNGs).
 
 A Spark application consists of exactly one Spark driver pod and a varying number (0 to thousands) of Spark executor pods. You can configure your Spark driver independently of your Spark executors. For example, you can request a small container size for the Spark driver, and large container sizes for the Spark executors, or vice-versa. All Spark executors have the same configuration.
 
-## Run on spot or on-demand nodes
+## Run on Spot or On-demand Nodes
 
 Your Ocean Spark cluster should have at least two VNGs dedicated to Spark applications: one configured to use only on-demand nodes, one configured to use only spot nodes.
 
@@ -22,7 +22,7 @@ For each application, you can control whether to use spot or on-demand nodes. Fo
 
 You can switch the flags to change the behavior. Note that running the Spark driver on spot nodes is risky. If the spot node is terminated, your Spark application will fail.
 
-## Configure the number of cores
+## Configure the Number of Cores
 
 To control the size of your pods, the main API field is cores, which corresponds to the number of CPU cores allocated to the Spark driver or Spark executor. This field also corresponds to the number of Spark tasks which can be executed in parallel on a Spark executor.
 For example, the following configuration requests two cores for the Spark driver and four cores for each Spark executor.
@@ -35,7 +35,7 @@ Note that the cores field is optional. If omitted, the Spark driver will have 1 
 
 For executors, the default number of cores is four. There is no need to change this, unless you have a specific requirement. Instead, you can set the `instances` field to control how many executors to use. Read [How to Control the number of executors](ocean-spark/configure-spark-apps/common-spark-configs?id=control-the-number-of-executors) to learn more about this.
 
-## Configure the type of instances
+## Configure the Type of Instances
 
 The instanceAllowList field lets you control which type of instances the pods will be placed on. It accepts a list of instance family names or specific instance types.
 
@@ -74,7 +74,7 @@ If you have a specific need, you can pick a specific instance type or family, bu
 
 If you omit the instanceAllowList field, your Spark executor pods will be able to run on any instance type, preferably filling up nodes which have available capacity, before adding new nodes to the cluster. This gives Ocean Spark a lot of flexibility to pick Spot nodes at the lowest cost.
 
-## Configuring the memory
+## Configure the Memory
 
 You do not need to explicitly request an amount of memory, as Ocean Spark will automatically determine the optimal amount of memory based on the cores and instanceAllowList fields to optimize bin packing.
 
@@ -136,14 +136,14 @@ Be careful when entering memory settings manually, as it is easy to make mistake
 
 If you would like to investigate some of these configurations further, the official Apache Spark documentation page on [Running Spark on Kubernetes](https://spark.apache.org/docs/latest/running-on-kubernetes.html) contains useful information.
 
-### Memory autotuning strategies
+### Memory Auto-tuning Strategies
 
 In addition to hard-coded memory string, two strategies are available to
-dynamically adjust the executor memory. These strategies analyze previous
+dynamically adjust the executor memory. These strategies analyze the previous
 apps' performance to adjust the memory automatically.
 
-The oomRecovery strategy works like the default autotuning mechanism but it will
-automatically bump the memory request up (doubling it by default) if the
+The oomRecovery strategy works like the default autotuning mechanism but it
+automatically bumps the memory request up (doubling it by default) if the
 previous app with the same job name failed with OOM (Out Of Memory) errors.
 
 ```json
