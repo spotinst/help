@@ -113,7 +113,7 @@ Use the action node to destroy infrastructure that was deployed with Terraform.
 
 #### Action Example 
 
-1. From the left panel, drag and drop the Terraform Cloud Destroy node in the workflow builder. Connect it with the trigger. 
+1. From the left panel, drag and drop the Terraform Cloud Destroy node in the workflow builder. 
 2. Select a Terraform Cloud Instance.  
 3. Select a workspace name to remove the deployed infrastructure from. 
 
