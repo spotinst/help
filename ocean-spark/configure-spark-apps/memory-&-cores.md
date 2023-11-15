@@ -40,19 +40,30 @@ For executors, the default number of cores is four. There is no need to change t
 The instanceAllowList field lets you control which type of instances the pods will be placed on. It accepts a list of instance family names or specific instance types.
 
 For example, the configuration below requests:
+
 - That the Spark driver be placed on an r5.large instance (which it would fill entirely, given this instance type has 2 available CPU cores) or an r5.xlarge instance (which it would fill at 50% capacity, leaving room for another pod running on the same node).
-- That the 20 requested Spark executors be placed on any of nine families of instances (m5, m5a, ...). For example you could have 20 executors each using an m5.xlarge instance, or you could have 10 executors using m5.xlarge instances, and 10 executors running on 5 m5.2xlarge instances. 
+- That the 20 requested Spark executors be placed on any of nine families of instances (m5, m5a, ...). For example you could have 20 executors each using an m5.xlarge instance, or you could have 10 executors using m5.xlarge instances, and 10 executors running on 5 m5.2xlarge instances.
 
 ```json
 {
-  "driver":{
-    "cores":2,
+  "driver": {
+    "cores": 2,
     "instanceAllowList": ["r5.large", "r5.xlarge"]
   },
-  "executor":{
-    "cores":4,
+  "executor": {
+    "cores": 4,
     "instances": 20,
-    "instanceAllowList": ["m5", "m5a", "m5ad", "m5d", "m5dn", "m5n", "m5zn", "m6a", "m6i"]
+    "instanceAllowList": [
+      "m5",
+      "m5a",
+      "m5ad",
+      "m5d",
+      "m5dn",
+      "m5n",
+      "m5zn",
+      "m6a",
+      "m6i"
+    ]
   }
 }
 ```
@@ -61,7 +72,7 @@ Ocean Spark will optimize the choice of nodes (instances) to lower your cloud co
 
 If you have a specific need, you can pick a specific instance type or family, but in general we recommend that you to let Ocean pick which nodes to use across a large list of families. This gives Ocean flexibility to pick an optimal instance type based on the instances available in your cluster and the current Spot market dynamics.
 
-If you omit the instanceAllowList field, your Spark executor pods will be able to run on any instance type, preferably filling up nodes which have available capacity, before adding new nodes to the cluster. This gives Ocean Spark a lot of flexibility to pick Spot nodes at the lowest cost. 
+If you omit the instanceAllowList field, your Spark executor pods will be able to run on any instance type, preferably filling up nodes which have available capacity, before adding new nodes to the cluster. This gives Ocean Spark a lot of flexibility to pick Spot nodes at the lowest cost.
 
 ## Configuring the memory
 
@@ -73,7 +84,7 @@ For example, if you request:
 { "executor": { "cores": 4, "instanceAllowList": ["m5"] } }
 ```
 
-Ocean Spark will determine how much memory to request so that each Spark executor exactly utilizes the memory available on an m5.xlarge instance (which has 4 available cores), or half of an m5.2xlarge instance (which has eight available cores). 
+Ocean Spark will determine how much memory to request so that each Spark executor exactly utilizes the memory available on an m5.xlarge instance (which has 4 available cores), or half of an m5.2xlarge instance (which has eight available cores).
 
 If you allow instance families with different memory/core ratios, Ocean spark will determine the memory amount corresponding to the highest memory/core ratio.
 
@@ -81,16 +92,37 @@ The example below shows an instanceAllowList allowing a wide range of high-memor
 
 ```json
 {
-  "driver":{
-    "instanceAllowList": ["r5", "r5a", "r5ad", "r5b", "r5d", "r5dn", "r5n", "r6i", "i3" ]
+  "driver": {
+    "instanceAllowList": [
+      "r5",
+      "r5a",
+      "r5ad",
+      "r5b",
+      "r5d",
+      "r5dn",
+      "r5n",
+      "r6i",
+      "i3"
+    ]
   },
-  "executor":{
-    "instanceAllowList": ["m5", "m5a", "m5ad", "m5d", "m5dn", "m5n", "m5zn", "m6a", "m6i"]
+  "executor": {
+    "instanceAllowList": [
+      "m5",
+      "m5a",
+      "m5ad",
+      "m5d",
+      "m5dn",
+      "m5n",
+      "m5zn",
+      "m6a",
+      "m6i"
+    ]
   }
 }
 ```
 
-The configured amount of memory will be smaller than the value advertised by the cloud provider due to the following reasons: 
+The configured amount of memory will be smaller than the value advertised by the cloud provider due to the following reasons:
+
 - Some memory is reserved for the instance operating system and Kubernetes internal operations.
 - The memory field in our UI and API shows you the maximum heap size of the Spark Java Virtual Machine. This is not the same thing as the pod memory request. Read the next section on [Container Memory Overhead](ocean-spark/configure-spark-apps/memory-&-cores?id=container-memory-overhead)) for details about this.
 
@@ -103,6 +135,31 @@ Should you want to control precisely yourself the amount of memory (heap-size) t
 Be careful when entering memory settings manually, as it is easy to make mistakes. You can use the Ocean UI to view your nodes and pods and verify your understanding. In general, we recommend that you only select your pod sizes by using the cores and instanceAllowList fields.
 
 If you would like to investigate some of these configurations further, the official Apache Spark documentation page on [Running Spark on Kubernetes](https://spark.apache.org/docs/latest/running-on-kubernetes.html) contains useful information.
+
+### Memory autotuning strategies
+
+In addition to hard-coded memory string, two strategies are available to
+dynamically adjust the executor memory. These strategies analyze previous
+apps' performance to adjust the memory automatically.
+
+The oomRecovery strategy works like the default autotuning mechanism but it will
+automatically bump the memory request up (doubling it by default) if the
+previous app with the same job name failed with OOM (Out Of Memory) errors.
+
+```json
+{ "executor": { "strategy": "oomRecovery" } }
+```
+
+The autotuning strategy expands on the oomRecovery strategy by additionally
+adjusting memory request down to match the observed memory usage of previous
+apps. The autotuning strategy is only available for Spark 3 apps as it relies on
+spark metrics to monitor the memory usage of your apps.
+
+```json
+{ "executor": { "strategy": "autotuning" } }
+```
+
+You can find more details on how to configure these strategies in the [Ocean Spark API reference ](https://docs.spot.io/api/#operation/OceanSparkClusterApplicationSubmit).
 
 ## Container Memory Overhead
 
