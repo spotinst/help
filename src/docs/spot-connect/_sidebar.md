@@ -37,5 +37,5 @@
     - [Spot Security](spot-connect/integrations/spot_security)
     - [SSH Targets](spot-connect/integrations/ssh)
     - [S3 Buckets](spot-connect/integrations/s3)
-    - [Terraform](spot-connect/integrations/terraform)
+    - [Terraform Cloud](spot-connect/integrations/terraform)
 
