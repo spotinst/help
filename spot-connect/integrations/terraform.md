@@ -4,7 +4,7 @@ Terraform Cloud is used to manage cloud infrastructure including Amazon Web Serv
 
 Use this integration to create workflows to manage cloud infrastructure using Terraform. 
 
-## Configure Terraform Cloud in Spot Connect 
+### Configure Terraform Cloud in Spot Connect 
 
 1. In the left main menu, click **Connect** and click **Settings**.  
 2. Under the Integrations tab, select **Terraform Cloud**. 
@@ -20,7 +20,7 @@ Details needed to set up a Terraform Cloud instance in Spot Connect:
 
 Follow these steps in your Terraform Cloud account to obtain the desired parameter values to enter in Spot Connect. 
 
-## Create a Terraform API Token 
+#### Create a Terraform API Token 
 
 1. Sign in to Terraform Cloud. 
 2. Click the user icon on the top left and click **User Settings**. 
@@ -38,7 +38,7 @@ Follow these steps in your Terraform Cloud account to obtain the desired paramet
 
 6. Copy the token and paste it into the Token field of the Add Integration Instance window in the Spot Connect console. 
 
-## Obtain the Terraform Organization Name 
+#### Obtain the Terraform Organization Name 
 
 1. Click the user icon on the top left and click **User Settings**. 
 2. Click **Organizations**. 
@@ -218,13 +218,13 @@ Use the action node to extract Terraform State and save to an S3 location if spe
 
 #### Action Example 
 
-1. From the left panel, drag and drop the Terraform Cloud Show node on workflow builder. 
+1. From the left panel, drag and drop the Terraform Cloud Show node in the workflow builder. 
 2. Select a Terraform Cloud Instance.  
 3. Select a workspace name that has the state you want to extract from.  
 
 #### Input 
 
-
+![terraform-14](https://github.com/spotinst/help/assets/106514736/3bd0ef27-7d3b-41fb-b35f-8a7480d4ce22)
 
 #### Output  
 
@@ -232,26 +232,28 @@ Use the action node to extract Terraform State and save to an S3 location if spe
 
 ### Terraform Cloud Update Vars 
 
+Use the action snippet to update Terraform Cloud workspace variables. 
+
 #### Input 
 
 |       Parameter                |                         Description                    |      Required  |
 |--------------------------------|:------------------------------------------------------:|:--------------:|
 |      Terraform Cloud Instance  |     Terraform Cloud integration in Spot Connect        |     True       |
 |      Workspace Name            |     String representing Terraform Cloud workspace Id.  |     True       |
+|      Variables                 |     List of terraform variables needed to update       |     True       |
 
 #### Output 
 
+|       Parameter        |       Type  |                      Description                 |
+|------------------------|:-----------:|:------------------------------------------------:|
 |      run_id            |     String  |     String representing Id of the run destroyed  |
-|------------------------|-------------|--------------------------------------------------|
 |      run_status        |     String  |     Status of the run                            |
 |      run_data          |     String  |     Response data of the run                     |
 |      execution_status  |     String  |     Node execution status                        |
 
-Node execution status 
-
 #### Action Example 
 
-1. From the left panel, drag and drop the Terraform Cloud Update Vars node on workflow builder. 
+1. From the left panel, drag and drop the Terraform Cloud Update Vars node in the workflow builder. 
 2. Select a Terraform Cloud Instance.  
 3. Select a workspace name that has a variable you want to update. 
 4. Hover over the variable you want to edit. Click **Open JSON** editor.  
