@@ -91,7 +91,7 @@ If you do not already have a Spot Connect API Key, create one in the Settings pa
 
 You can add Opsgenie Alert (Trigger) action in the Spot Connect workflow builder as part of your workflow. 
 
-* Opsgenie Alert 
+* [Opsgenie Alert](https://docs.spot.io/spot-connect/integrations/opsgenie?id=opsgenie-alert) 
 
 ### Opsgenie Alert 
 
