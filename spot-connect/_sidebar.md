@@ -30,6 +30,7 @@
     - [Google Kubernetes Engine](spot-connect/integrations/gke)
     - [Jenkins](spot-connect/integrations/jenkins)
     - [Jira](spot-connect/integrations/jira)
+    - [Opsgenie](spot-connect/integrations/opsgenie)
     - [PagerDuty](spot-connect/integrations/pagerduty)
     - [Slack](spot-connect/integrations/slack)
     - [Spot](spot-connect/integrations/spot)
