@@ -1,6 +1,6 @@
 # Opsgenie
 
-Opsgenie (now acquired by Atlassian) is mainly used for on-call, alerting, and incident management. 
+Opsgenie is mainly used for on-call, alerting, and incident management. 
 
 Opsgenie integration is intended for users who have Opsgenie set up as the primary alerting and on-call management system. 
 
@@ -95,7 +95,7 @@ You can add Opsgenie Alert (Trigger) action in the Spot Connect workflow builder
 
 ### Opsgenie Alert 
 
-You can add these actions in the Spot Connect workflow builder, as part of your workflow. 
+You can add this action in the Spot Connect workflow builder, as part of your workflow. 
 
 #### Input  
 
