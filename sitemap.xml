@@ -386,6 +386,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/administration/users/set-password"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/billing-engine/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/billing-engine/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/billing-engine/"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/cloud-analyzer/getting-started/connect-account-customer-working-with-msp</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
@@ -601,6 +608,13 @@
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/connect-your-cloud-provider/"/>
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/connect-your-cloud-provider/"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/cost-intelligence/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/cost-intelligence/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/cost-intelligence/"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/design-documents/msp/msp-enrollment</loc>
