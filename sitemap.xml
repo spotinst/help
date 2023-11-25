@@ -610,6 +610,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/connect-your-cloud-provider/"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/cost-intelligence/get-started/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/cost-intelligence/get-started/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/cost-intelligence/get-started/"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/cost-intelligence/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
