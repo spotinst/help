@@ -624,6 +624,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/cost-intelligence/"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/cost-intelligence/tutorials/administration/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/cost-intelligence/tutorials/administration/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/cost-intelligence/tutorials/administration/"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/cost-intelligence/tutorials/best-practice-checks/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
@@ -643,6 +650,13 @@
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/cost-intelligence/tutorials/dashboard/"/>
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/cost-intelligence/tutorials/dashboard/"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/cost-intelligence/tutorials/inventory</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/cost-intelligence/tutorials/inventory"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/cost-intelligence/tutorials/inventory"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/cost-intelligence/tutorials/</loc>
