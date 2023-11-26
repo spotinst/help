@@ -624,6 +624,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/cost-intelligence/"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/cost-intelligence/tutorials/best-practice-checks/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/cost-intelligence/tutorials/best-practice-checks/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/cost-intelligence/tutorials/best-practice-checks/"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/cost-intelligence/tutorials/cost-intelligence-policy/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
