@@ -393,6 +393,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/billing-engine/families/"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/billing-engine/plans/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/billing-engine/plans/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/billing-engine/plans/"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/billing-engine/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
