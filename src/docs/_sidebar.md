@@ -17,6 +17,8 @@
 - [**Ocean for Apache Spark**](ocean-spark/)
 - [**Ocean CD**](ocean-cd/)
 - [**Eco**](eco/)
+- [**Cost Intelligence**](cost-intelligence/)
+- [**Billing Engine**](billing-engine/)
 - [**Security**](spot-security/)
 - [**Spot Connect**](spot-connect/)
 - [**Spot PC**](spot-pc/)
