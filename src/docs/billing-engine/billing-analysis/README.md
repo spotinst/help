@@ -30,6 +30,6 @@ This is the cost shown after the effects of the rules that you applied.
   
 ## Profit 
 
-Profit = List Cost - Provider Cost 
+The profit is calculated by subtracting the provider cost from the list cost. 
 
 ![billing-analysis-5](https://github.com/spotinst/help/assets/106514736/f3c96432-93d7-4f13-b05e-d6bcea6ff0f7)
