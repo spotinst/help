@@ -6,4 +6,4 @@
   - [Strategies](billing-engine/strategies/)  
   - [Plans](billing-engine/plans/)  
   - [Billing Analysis](billing-engine/billing-analysis/)  
-  - [Connect AWS Account](billing-engine/connect-aws/)   
+  - [Connect AWS Account](billing-engine/connect-aws)   
