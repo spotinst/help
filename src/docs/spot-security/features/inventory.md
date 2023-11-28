@@ -4,7 +4,7 @@
 
 Spot Security provides a list of all supported assets within your cloud network. Analytics are provided to help increase your visibility. 
 
-To view the assets, click **Spot Security** in the left main menu and click Inventory. 
+To view the assets, click **Spot Security** in the left main menu and click **Inventory**. 
 
 The default filter or preset on this page is the same filter or preset that you chose on the dashboard. You can change the filters or choose a different preset from the list of presets. 
 
@@ -27,7 +27,7 @@ The Overview page consists of 4 sections:
 The Summary section provides the following information: 
 
 * **Total Asset**: The number of assets Spot Security detected. 
-* **At Risk**:  The number of assets with at least one faling security rule. 
+* **At Risk**:  The number of assets with at least one failing security rule. 
 * **No Risk**: The number of assets with zero failing security rules. 
 * **Assets Turned Risky**: The number of assets that have transitionsed from the status of No Risk to At Risk in the last 24 hours. 
 * **New Assets Onboarded**: The number of new assets that have onboarded in the last 24 hours. 
