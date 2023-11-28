@@ -1,5 +1,14 @@
 # Cluster Release Notes
 
+## [0.4.4-68] - 2023-11-27
+
+Changelog
+
+- [0.2.1] bigdata-notebook-service
+  - increase port range for notebook service
+- [0.1.2] bigdata-notebook-service-static
+  - increase port range for notebook service
+
 ## [0.4.4-67] - 2023-11-14
 
 Changelog
