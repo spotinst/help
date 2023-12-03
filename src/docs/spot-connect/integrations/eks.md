@@ -28,11 +28,11 @@ If you want to use an existing AWS EKS cluster, you must allow one of your Spot 
 
 3. Update permissions of `EKS-Test-Cluster-Role` IAM role to create EKS Nodegroup. 
 
-4. Attach AmazonEKSWorkerNodePolicy, AmazonEKS_CNI_Policy, AmazonEC2ContainerRegistryReadOnly policies to EKS role. 
+4. Attach AmazonEKSWorkerNodePolicy, AmazonEKS_CNI_Policy, [AmazonEC2ContainerRegistryReadOnly](https://signin.aws.amazon.com/signin?redirect_uri=https%3A%2F%2Fus-east-1.console.aws.amazon.com%2Fiamv2%2Fhome%3Fregion%3Dus-west-2%26state%3DhashArgs%2523%252Fpolicies%252Fdetails%252Farn%25253Aaws%25253Aiam%25253A%25253Aaws%25253Apolicy%25252FAmazonEC2ContainerRegistryReadOnly%26isauthcode%3Dtrue&client_id=arn%3Aaws%3Aiam%3A%3A015428540659%3Auser%2Fiamv2&forceMobileApp=0&code_challenge=cAUmZWRiZkejhBtNCAn5ckd4wiWw7sj4uzko8US8uxc&code_challenge_method=SHA-256) policies to EKS role. 
 
- 
+<img width="468" alt="eks-4" src="https://github.com/spotinst/help/assets/106514736/a4449b4e-dd62-4061-8f22-3323d240eba4">
 
-In the Edit Trust Policy panel, run the following command to update trust relationship to include Cloud Compute Capacity - Amazon EC2 - AWS service.  
+5. In the Edit Trust Policy panel, run the following command to update trust relationship to include [Cloud Compute Capacity - Amazon EC2 - AWS service](https://aws.amazon.com/ec2/).  
 
         { 
 
@@ -48,53 +48,36 @@ In the Edit Trust Policy panel, run the following command to update trust relati
 
         } 
 
-Step 2: Update Target Account Role with Inline Policy 
+## Step 2: Update Target Account Role with Inline Policy 
 
-In the Specify Permissions panel, click JSON on the top right and run the policy below with previously created IAM `EKS-Test-Cluster-Role` role ARN.  
+1. In the Specify Permissions panel, click JSON on the top right and run the policy below with previously created IAM `EKS-Test-Cluster-Role` role ARN.  
 
-{ 
+```json
+{
+   "Version":"2012-10-17",
+   "Statement":[
+      {
+         "Effect":"Allow",
+         "Action":[
+            "iam:GetRole",
+            "iam:PassRole",
+            "iam:ListAttachedRolePolicies"
+         ],
+         "Resource":"arn:aws:iam::948274114318:role/EKS-Test-Cluster-Role"
+      }
+   ]
+}
+```
 
-    "Version": "2012-10-17", 
-
-    "Statement": [ 
-
-        { 
-
-            "Effect": "Allow", 
-
-            "Action": [ 
-
-                "iam:GetRole", 
-
-                "iam:PassRole", 
-
-                "iam:ListAttachedRolePolicies" 
-
-            ], 
-
-            "Resource": "arn:aws:iam::948274114318:role/EKS-Test-Cluster-Role" 
-
-        } 
-
-    ] 
-
-} 
+2. Provide a name for Inline policy and click Create Policy. 
 
  
 
  
 
- 
+## Step 3: Create IAM Role with EKS – Nodegroup Use-case 
 
-Provide a name for Inline policy and click Create Policy. 
-
- 
-
- 
-
-Step 3: Create IAM role with EKS – Nodegroup Use-case 
-
-In the Trusted entity type window, select ASW service and then EKS- Nodegroup.  
+1. In the Trusted entity type window, select **ASW service** and then **EKS- Nodegroup**.  
 
  
 
@@ -104,7 +87,7 @@ In the Trusted entity type window, select ASW service and then EKS- Nodegroup.
 
  
 
-Step 4: Update Target Account Role with Inline Policy 
+## Step 4: Update Target Account Role with Inline Policy 
 
 In the Specify Permissions panel, click JSON in the top right and run the policy below with the IAM that was previously created: `AWSServiceRoleForAmazonEKSNodegroup` role ARN. 
 
