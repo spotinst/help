@@ -2,12 +2,13 @@
 
 ## Connect your AWS/Azure Account 
 
-NOTE: Cost Intelligence only supports AWS and Azure accounts at the moment. 
+If you are a new Spot customer, follow the existing Spot organization creation process. After the Spot Organization has been created, you can begin adding cloud accounts. 
 
-If this is your first time setting up an account, complete the following steps. New Spot customers will follow the existing Spot organization creation process. After the Spot Organization has been created, you can begin adding cloud accounts. 
+**NOTE**: Cost Intelligence only supports AWS and Azure accounts.
+
 You can also switch accounts at the top right of the screen and click **+ Add Account**. 
 
- 
+If this is your first time setting up an account, complete the following steps.
 
 1. To select the cloud provider, select the appropriate account to connect to Cost Intelligence.
 
@@ -22,7 +23,7 @@ You can also switch accounts at the top right of the screen and click **+ Add Ac
 <img width="352" alt="get-started-3" src="https://github.com/spotinst/help/assets/106514736/d90ea173-7069-45cf-81cf-9acaa51ed2b9">
 
 
-NOTE: Only AWS accounts are supported in the Spot console. Azure accounts can be registered using the API. Contact your support representative for assistance if needed. 
+**NOTE**: Only AWS accounts are supported in the Spot console. Azure accounts can be registered using the API. Contact your support representative for assistance if needed. 
 
 For help finalizing Azure accounts via API, complete the steps here.  
 
@@ -36,7 +37,7 @@ To register an existing Spot Account to Cost Intelligence complete the following
 
 <img width="443" alt="get-started-4" src="https://github.com/spotinst/help/assets/106514736/7f7ebafe-bd4f-43ba-9de8-b4b5abd82c9e">
 
-4. Run the IAM Template. You have now connected your account. 
+4. Run the IAM Template. Your account is connected.
 
 <img width="445" alt="get-started-5" src="https://github.com/spotinst/help/assets/106514736/66aeb71f-c59a-45ff-9949-6d4e297e7524">
 
