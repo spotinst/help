@@ -20,8 +20,6 @@ Complete the following steps to create a new dashboard.
 
 NOTE: If you do not publish the dashboard, the newly created dashboard will display in the list of available dashboards as an empty dashboard.    
 
-![dashboard-4](https://github.com/spotinst/help/assets/106514736/72c9a54a-5292-47cd-b845-8097e802ad27)   
-
 ## Setting Default Dashboard for an Organization
 
 Cost Intelligence Dashboards come with a default dashboard that is set for all users under an organization.  
@@ -33,13 +31,15 @@ Complete the following steps to set the default dashboard.
 
 ![dashboard-1](https://github.com/spotinst/help/assets/106514736/724f724f-5013-49bf-8e76-0b6388fb3669) 
 
-3. In the action bar, click Select Default Dashboard, and confirm the action. The selected dashboard is the default dashboard for all the users in this organization.    
+3. In the action bar, click **Select Default Dashboard**, and confirm the action. The selected dashboard is the default dashboard for all the users in this organization.    
 
 ![dashboard-2](https://github.com/spotinst/help/assets/106514736/ac8a9589-4eb3-48b7-b1f3-764759296286)  
 
 ## Edit an Existing Dashboard    
 
 Users with the correct permissions will have the ability to edit all organization-level dashboards that are not system managed dashboards. If you want to modify a system managed dashboard, you can clone it and modify it.  
+
+![dashboard-4](https://github.com/spotinst/help/assets/106514736/72c9a54a-5292-47cd-b845-8097e802ad27)   
 
 The Edit Dashboard is the interface where you can edit the organization-level dashboards and it consists of the following sections (from the left to right):  
 
