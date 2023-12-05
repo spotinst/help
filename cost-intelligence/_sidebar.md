@@ -8,4 +8,4 @@
     - [Dashboards](cost-intelligence/tutorials/dashboard/)
     - [Best Practice Checks](cost-intelligence/tutorials/best-practice-checks/)
     - [Inventory](cost-intelligence/tutorials/inventory)
-    - [Cost Intelligence Administration](cost-intelligence/tutorials/administration/)
+    - [Administration](cost-intelligence/tutorials/administration/)
