@@ -41,7 +41,7 @@ Set up Cost and Usage Reports as described below.
    - Enable report data integration for Amazon Athena.
 3. Mark the checkboxes as shown below.
 
-> **Note**: Spot strongly recommends that you create both a new Amazon S3 bucket and a new Cost and Usage Reports if you do not have Athena already integrated. The following setup process removes any Amazon S3 events that your bucket might already have, which can negatively affect any existing event-based processes that you have for an existing AWS CUR.
+> **Note**: Spot strongly recommends that you create both a new Amazon S3 bucket and a new Cost and Usage Reports if you do not have Athena already integrated. If you choose to use a pre-existing S3 bucket, the following Athena integration setup process using AWS CloudFormation removes any Amazon S3 events that your bucket might already have.
 
 <img src="/eco/_media/gettingstarted-aws-connect-09.png" width="450" height="600" />
 
