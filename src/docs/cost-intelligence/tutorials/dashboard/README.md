@@ -2,22 +2,13 @@
 
 ## Setting Default Dashboard for the Org  
 
-Cost Intelligence Dashboards come with a default dashboard that is set for all users under an organization. Users with the Cost Intelligence Admin permissions are able to determine the organization’s default dashboard for all users.  The dashboard page has an action bar at the top that provides the options to edit, clone, create, delete, manage files, and select default dashboards.     
-
-Complete the following steps to set the default dashboard.    
-
-1. In the left main tree, click **Cost Intelligence** and click **Dashboard**.   
-2. In the Change Dashboard drop-down menu, select the dashboard you want to set as the default.  
-
-![dashboard-1](https://github.com/spotinst/help/assets/106514736/724f724f-5013-49bf-8e76-0b6388fb3669) 
-
-3. In the action bar, click Select Default Dashboard, and confirm the action. The selected dashboard is the default dashboard for all the users in this organization.    
-
-![dashboard-2](https://github.com/spotinst/help/assets/106514736/ac8a9589-4eb3-48b7-b1f3-764759296286)  
+Users with the Cost Intelligence Admin permissions can determine the organization’s default dashboard for all users.  The dashboard page has an action bar at the top that provides the options to edit, clone, create, delete, manage files, and select default dashboards.     
 
 ## Create a New Dashboard  
 
-Users with the correct permissions will have the ability to create new dashboards for Cost Intelligence. Complete the following steps to create a new dashboard.   
+Users with the correct permissions will have the ability to create new dashboards for Cost Intelligence. 
+
+Complete the following steps to create a new dashboard.   
 
 1. In the Dashboard page, at the top right of the page, click **+ Create**.    
 
@@ -30,6 +21,21 @@ Users with the correct permissions will have the ability to create new dashboard
 NOTE: If you do not publish the dashboard, the newly created dashboard will display in the list of available dashboards as an empty dashboard.    
 
 ![dashboard-4](https://github.com/spotinst/help/assets/106514736/72c9a54a-5292-47cd-b845-8097e802ad27)   
+
+## Setting Default Dashboard for an Organization
+
+Cost Intelligence Dashboards come with a default dashboard that is set for all users under an organization.  
+
+Complete the following steps to set the default dashboard.
+
+1. In the left main tree, click **Cost Intelligence** and click **Dashboard**.   
+2. In the Change Dashboard drop-down menu, select the dashboard you want to set as the default.  
+
+![dashboard-1](https://github.com/spotinst/help/assets/106514736/724f724f-5013-49bf-8e76-0b6388fb3669) 
+
+3. In the action bar, click Select Default Dashboard, and confirm the action. The selected dashboard is the default dashboard for all the users in this organization.    
+
+![dashboard-2](https://github.com/spotinst/help/assets/106514736/ac8a9589-4eb3-48b7-b1f3-764759296286)  
 
 ## Edit an Existing Dashboard    
 
@@ -44,13 +50,15 @@ The Edit Dashboard is the interface where you can edit the organization-level da
 * **Add Chart**: In this field you can build and add a new panel from scratch using the existing datasets. The composer bar contains a variety of functionalities to help build and customize the dashboard. You can add a new chart, a new text element, images, and page filters.   
 * **Discard Dashboard**: To discard changes that you’ve made and have not saved/published yet, click Discard Dashboard.   
 * **Publish Dashboard**: To publish any changes to the dashboard, click Publish Dashboard.  
-* **Data**: This drop-down menu provides a list of previously built drag-and-drop panels and charts for each dataset that is available to the user.    
+* **Data**: This drop-down menu lists previously built drag-and-drop panels and charts for each dataset that is available to the user.    
 
 This is also a way to duplicate charts between dashboards. All charts are available here for that specific data set. Find the desired data set and chart, and drag it onto the canvas.  
 
 ## Clone a Dashboard   
 
-Users with the correct permissions will have the ability to clone existing dashboards, including any system managed dashboards. Complete the following steps to clone a dashboard.   
+Users with permissions will have the ability to clone existing dashboards, including any system managed dashboards. 
+
+Complete the following steps to clone a dashboard.   
 
 1. In the Dashboard page, click **Clone** in the action bar.  
 2. Modify the dashboard as desired.  
@@ -81,7 +89,7 @@ With Cost Intelligence Dashboards, you can upload your data directly into the pr
   - Manage column name.  
   - Manage column type.  
   - Manage the display format, such as DateTime.  
-  - Manage any unique Transformations.    
+  - Manage any unique transformations.    
 
 You can perform additional dataset functions such as editing connections, joining datasets, etc by clicking the following icon.   
 
@@ -91,31 +99,33 @@ You can perform additional dataset functions such as editing connections, joinin
 
 To manage existing datasets, click the **Manage Files** page via the Dashboard action bar.  
 
-You can quickly determine which datasets are active and being utilized vs ones that are still in draft. You can also refresh an existing dataset by editing a dataset and simply reuploading the file.  
+You can quickly determine which datasets are active and being utilized vs datasets that are still in draft. You can also refresh an existing dataset by editing a dataset and simply reuploading the file.  
 
 ![datasets-4](https://github.com/spotinst/help/assets/106514736/3f94acd9-7c77-443d-9a15-a7caac69aca3) 
 
-To edit a file, hover over the three dots icon to open a sub menu and select ‘edit’.  
+To edit a file, hover over the three dots icon to open a sub menu and select **Edit**.  
 
 ![datasets-5](https://github.com/spotinst/help/assets/106514736/4d1af696-2634-4eae-9ec3-16eb3d8c377c) 
   
-To refresh an existing dataset, while editing the dataset, click the ‘Reload Dataset’ button (#2 in the image above) to go through the process of reloading the CSV file and refreshing the data in the application.  
+To refresh an existing dataset, while editing the dataset, click **Reload Dataset** (#2 in the image above) to go through the process of reloading the CSV file and refreshing the data in the application. 
 
-To delete a dataset, hover over the three dots icon on the ‘Manage Files’ page and select the delete option. Be warned that this action will remove any charts on all dashboards that contain this dataset.  
+To delete a dataset, hover over the icon of three dots on the Manage Files page and select the delete option. **This action removes any charts from all dashboards that contain this dataset**. 
 
 ## Joining Data Sets  
 
-Dashboards in Cost Intelligence gives users the power to join two datasets together, giving you unprecedented flexibility in generated charts, how you need them to be.  
+Cost Intelligence dashboards enable you to connect two datasets, granting you flexibility to create charts according to your specific requirements. 
 
-To join a CSV based dataset to an existing dataset, go to edit the dataset. Once in the ‘Edit Dataset’ page, click on the three dots icon to open a menu and select ‘Join to Another Data Source’.  
+To connect a CSV based dataset to an existing dataset, complete the following steps: 
+
+1. In the Edit Dataset page, click the icon of three dots to open a menu and select **Join to Another Data Source**.  
 
 ![datasets-3](https://github.com/spotinst/help/assets/106514736/6737aad2-f308-4421-98a1-f923076cbfb5) 
 
-This will open a new modal that displays a list of existing datasets (both user generated, and system generated) that you can join with. Simply select which one you want to join together.   
+This opens a new modal that lists existing datasets (both user-generated, and system generated) that you can join with. Select the dataset you want to connect to.    
 
 ![datasets-6](https://github.com/spotinst/help/assets/106514736/f0371615-2e7d-4c7a-8174-0221d4b9dfd6)   
 
-You then will be able to determine how you want to join your data together by linking specific columns together for each dataset.    
+You can choose how you want to join your data together by linking specific columns together for each dataset.    
 
 ![datasets-7](https://github.com/spotinst/help/assets/106514736/5e2ba217-8ad2-472e-bec2-0b936fe68e77) 
 
