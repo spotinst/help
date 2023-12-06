@@ -3,11 +3,11 @@
 EKS actions require additional IAM configuration to create a cluster and access it. 
 
 * EKS clusters need an associated service-linked EKS Role to access other AWS services. If this role does not already exist in the account, Create EKS Role provides instructions on how to create it. 
-* The Target Account requires some privileges beyond PowerUserAccess to use EKS actions. Add Inline Policy to Target Account provides instructions on how to add these privileges. Using service-linked roles for Amazon EKS - Amazon EKS provides more detail on this requirement. 
+* The Target Account requires some privileges beyond PowerUserAccess to use EKS actions. Add Inline Policy to Target Account provides instructions on how to add these privileges. [Using service-linked roles for Amazon EKS - Amazon EKS](https://docs.aws.amazon.com/eks/latest/userguide/using-service-linked-roles.html) provides more detail on this requirement. 
 
 ## Managing Existing AWS EKS Cluster with Spot Connect 
 
-If you want to use an existing AWS EKS cluster, you must allow one of your Spot Connect [Target Accounts] (AWS account configured) to access the Kubernetes cluster. This can be done by associating a Target Account (AWS account configured) role ARN with a list of Kubernetes groups (i.e. system:masters, system:basic-user). Please follow the instructions in [Managing users or IAM roles for your cluster - Amazon EKS](https://docs.aws.amazon.com/eks/latest/userguide/add-user-role.html) to complete this process. 
+If you want to use an existing AWS EKS cluster, you must allow one of your Spot Connect [Target Accounts](https://docs.spot.io/spot-connect/integrations/aws))(AWS account configured) to access the Kubernetes cluster. This can be done by associating a Target Account (AWS account configured) role ARN with a list of Kubernetes groups (i.e. system:masters, system:basic-user). Follow the instructions in [Managing users or IAM roles for your cluster - Amazon EKS](https://docs.aws.amazon.com/eks/latest/userguide/add-user-role.html) to complete this process. 
 
 ## Prerequisites 
 
@@ -46,7 +46,12 @@ If you want to use an existing AWS EKS cluster, you must allow one of your Spot 
 
 ## Step 2: Update Target Account Role with Inline Policy 
 
-1. In the Specify Permissions panel, click JSON on the top right and run the policy below with previously created IAM `EKS-Test-Cluster-Role` role ARN.  
+1. Click **Roles** in the left menu and then click **spotconnect-onboarding** assume role.
+2. Click **Add permissions** and then click **Create inline policy**.
+
+SCREENSHOT
+
+3. In the Specify Permissions panel, click **JSON** on the top right and add the policy below with previously created IAM `EKS-Test-Cluster-Role` role ARN.  
 
 ```json
 {
@@ -67,19 +72,16 @@ If you want to use an existing AWS EKS cluster, you must allow one of your Spot 
 
 2. Provide a name for Inline policy and click Create Policy. 
 
- 
-
- 
+SCrenshot 
 
 ## Step 3: Create IAM Role with EKS – Nodegroup Use-case 
 
-1. In the Trusted entity type window, select **ASW service** and then **EKS- Nodegroup**.  
+1. In the Trusted entity type window, select **ASW service** and then **EKS- Nodegroup**.
+2. Click **Next**.  
 
- 
 
- 
 
- 
+3. In the Add permissions Window, click **Next**.  
 
  
 
