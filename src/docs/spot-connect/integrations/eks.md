@@ -3,11 +3,11 @@
 EKS actions require additional IAM configuration to create a cluster and access it. 
 
 * EKS clusters need an associated service-linked EKS Role to access other AWS services. If this role does not already exist in the account, Create EKS Role provides instructions on how to create it. 
-* The Target Account requires some privileges beyond PowerUserAccess to use EKS actions. Add Inline Policy to Target Account provides instructions on how to add these privileges. Using service-linked roles for Amazon EKS - Amazon EKS provides more detail on this requirement. 
+* The Target Account requires some privileges beyond PowerUserAccess to use EKS actions. Add Inline Policy to Target Account provides instructions on how to add these privileges. Using [service-linked roles for Amazon EKS - Amazon EKS](https://docs.aws.amazon.com/eks/latest/userguide/using-service-linked-roles.html) provides more detail on this requirement. 
 
 ## Managing Existing AWS EKS Cluster with Spot Connect 
 
-If you want to use an existing AWS EKS cluster, you must allow one of your Spot Connect [Target Accounts] (AWS account configured) to access the Kubernetes cluster. This can be done by associating a Target Account (AWS account configured) role ARN with a list of Kubernetes groups (i.e. system:masters, system:basic-user). Please follow the instructions in [Managing users or IAM roles for your cluster - Amazon EKS](https://docs.aws.amazon.com/eks/latest/userguide/add-user-role.html) to complete this process. 
+If you want to use an existing AWS EKS cluster, you must allow one of your Spot Connect [Target Accounts](spot-connect/integrations/aws) (AWS account configured) to access the Kubernetes cluster. This can be done by associating a Target Account (AWS account configured) role ARN with a list of Kubernetes groups (i.e. system:masters, system:basic-user). Follow the instructions in [Managing users or IAM roles for your cluster - Amazon EKS](https://docs.aws.amazon.com/eks/latest/userguide/add-user-role.html) to complete this process. 
 
 ## Prerequisites 
 
@@ -46,8 +46,12 @@ If you want to use an existing AWS EKS cluster, you must allow one of your Spot 
 
 ## Step 2: Update Target Account Role with Inline Policy 
 
-1. In the Specify Permissions panel, click JSON on the top right and run the policy below with previously created IAM `EKS-Test-Cluster-Role` role ARN.  
+1. Click **Roles** in the left menu and then click `spotconnect-onboarding` assume role. 
+2. Click **Add permissions** and then click **Create inline policy**.   
 
+![eks-5](https://github.com/spotinst/help/assets/106514736/b6f1d4bd-5758-4820-b982-53bf3c86428c)
+
+3. In the Specify Permissions panel, click **JSON** on the top right and add the policy below with previously created IAM `EKS-Test-Cluster-Role` role ARN.  
 ```json
 {
    "Version":"2012-10-17",
@@ -65,27 +69,24 @@ If you want to use an existing AWS EKS cluster, you must allow one of your Spot 
 }
 ```
 
-2. Provide a name for Inline policy and click Create Policy. 
+4. Provide a name for Inline policy and click **Create Policy**. 
 
- 
-
- 
+<img width="468" alt="eks-6" src="https://github.com/spotinst/help/assets/106514736/6dffe35e-9d02-414d-96a0-3065b5d319b1">
 
 ## Step 3: Create IAM Role with EKS – Nodegroup Use-case 
 
 1. In the Trusted entity type window, select **ASW service** and then **EKS- Nodegroup**.  
+2. Click **Next**. 
 
- 
+![eks-7](https://github.com/spotinst/help/assets/106514736/c0fb868e-43bf-49dd-b777-04fe0661eeaf)
 
- 
+3. In the Add permissions Window, click **Next**.  
 
- 
-
- 
+![eks-8](https://github.com/spotinst/help/assets/106514736/8b76c849-9dae-4a86-82ad-d065479820d3) 
 
 ## Step 4: Update Target Account Role with Inline Policy 
 
-1. In the Specify Permissions panel, click JSON in the top right and run the policy below with the IAM that was previously created: `AWSServiceRoleForAmazonEKSNodegroup` role ARN. 
+1. In the Specify Permissions panel, click **JSON** in the top right and run the policy below with the IAM that was previously created: `AWSServiceRoleForAmazonEKSNodegroup` role ARN. 
 
  ```json
 {
@@ -105,11 +106,12 @@ If you want to use an existing AWS EKS cluster, you must allow one of your Spot 
 
 2. Click **Next**. 
 
- 
+<img width="468" alt="eks-9" src="https://github.com/spotinst/help/assets/106514736/b4150929-6614-4645-ad34-774d5103d7ad">
 
 3. Provide a name for the Inline policy and click **Create Policy**. 
 
- 
+<img width="468" alt="eks-9a" src="https://github.com/spotinst/help/assets/106514736/c3306b97-2287-4480-bad1-e8cd24c03b94">
+
 ## Configure the Resource 
 
 1. In the left main menu, click **Connect** and click **Settings**.  
@@ -123,6 +125,8 @@ Details needed to provide EKS Permissions to Spot Connect:
 |      Resource Alias    |     Alias for EKS permissions resource instance  |     True       |
 |      Target Account    |     AWS Target account for the EKS cluster role  |     True       |
 |      Cluster Role ARN  |     IAM Role ARN to be used for the EKS cluster  |     True       |
+
+## Integration Actions 
 
 You can add these actions in the Spot Connect workflow builder as part of your workflow. 
 
@@ -529,8 +533,9 @@ This node creates an AWS EKS cluster in a selected AWS region.
 
 #### Output 
 
+|       Parameter                 |         Type    |                      Description                 |
+|---------------------------------|:---------------:|:------------------------------------------------:|
 |      cluster_name               |     String      |     Name of the AWS EKS cluster                  |
-|---------------------------------|-----------------|--------------------------------------------------|
 |      cluster_status             |     String      |     AWS S3 Bucket key where Pod logs are stored  |
 |      cluster_security_group_id  |     String      |     Status of run (ie: S_OK / E_FAIL)            |
 |      kubernetes_version         |     String      |     The deployed K8s version                     |
@@ -599,7 +604,7 @@ This node fetches the CPU and Memory usage of worker nodes in AWS EKS cluster.
 |       Parameter        |       Type   |                     Description                 |
 |------------------------|:------------:|:-----------------------------------------------:|
 |      cluster_name      |     String   |     Name of the AWS EKS cluster                 |
-|      nodes             |     MapList  |     List of pods with its CPU and Memory usage  |
+|      nodes             |     MapList  |     List of nodes with its CPU and Memory usage |
 |      execution_status  |     String   |     Status of run (ie: S_OK / E_FAIL)           |
 
 #### Action Example 
