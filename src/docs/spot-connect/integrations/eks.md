@@ -341,7 +341,7 @@ This node gets the details of pods in running state for AWS EKS cluster.
 
 #### Output
 
-![eks-21](https://github.com/spotinst/help/assets/106514736/018da054-615c-450f-a2ce-e84361ea4e23)
+![eks-21](https://github.com/spotinst/help/assets/106514736/beac34f1-7701-46c7-a61b-94d4c2d4e94f)
 
 ### EKS Get Not Running Pods 
 
