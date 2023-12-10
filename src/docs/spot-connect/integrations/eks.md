@@ -244,8 +244,6 @@ This node fetches the list of deployments in an AWS EKS cluster.
 
 ![eks-15](https://github.com/spotinst/help/assets/106514736/2ebd1dc1-a51c-4c3c-a0b9-eaaa55b1496b)
 
-<img width="330" height="700" alt="eks-15" src="https://github.com/spotinst/help/assets/106514736/482c0a21-93d3-41a7-b5ae-0bf7f4eaac56]">
-
 ### EKS Get Nodes 
 
 This node gets the details of nodes for AWS EKS cluster. 
@@ -377,8 +375,6 @@ This node gets the details of pods that are not in running state for AWS EKS clu
 
 ![eks-23](https://github.com/spotinst/help/assets/106514736/971ec3ce-4bb8-4024-be33-f91be601cdd1)
 
-<img width="550" height="750" alt="eks-23" src="https://github.com/spotinst/help/assets/106514736/482c0a21-93d3-41a7-b5ae-0bf7f4eaac56">
-
 ### EKS Get Pods Status 
 
 This node gets the status of pods in AWS EKS cluster. 
@@ -442,8 +438,6 @@ This node gets the dead pods from EKS cluster.
 #### Output 
 
 ![eks-27](https://github.com/spotinst/help/assets/106514736/ee7b168f-99c1-4580-9ac5-888f0f278eb2)
-
-<img width="550" height="750" alt="eks-27" src="https://github.com/spotinst/help/assets/106514736/87b63c9e-73e0-4b82-97a8-52c215006f36">
 
 ### EKS Execute 
 
@@ -650,5 +644,5 @@ This node fetches the CPU and Memory usage of pods in AWS EKS cluster.
 
 #### Output 
 
-![eks-39](https://github.com/spotinst/help/assets/106514736/bed10022-aa8c-4326-a2ec-747a0ef982c0)
+![eks-39](https://github.com/spotinst/help/assets/106514736/a81b3ae8-77fe-45a4-af5a-1ecae277b806)
 
