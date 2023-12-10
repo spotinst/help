@@ -3,11 +3,11 @@
 EKS actions require additional IAM configuration to create a cluster and access it. 
 
 * EKS clusters need an associated service-linked EKS Role to access other AWS services. If this role does not already exist in the account, Create EKS Role provides instructions on how to create it. 
-* The Target Account requires some privileges beyond PowerUserAccess to use EKS actions. Add Inline Policy to Target Account provides instructions on how to add these privileges. Using service-linked roles for Amazon EKS - Amazon EKS provides more detail on this requirement. 
+* The Target Account requires some privileges beyond PowerUserAccess to use EKS actions. Add Inline Policy to Target Account provides instructions on how to add these privileges. Using [service-linked roles for Amazon EKS - Amazon EKS](https://docs.aws.amazon.com/eks/latest/userguide/using-service-linked-roles.html) provides more detail on this requirement. 
 
 ## Managing Existing AWS EKS Cluster with Spot Connect 
 
-If you want to use an existing AWS EKS cluster, you must allow one of your Spot Connect [Target Accounts] (AWS account configured) to access the Kubernetes cluster. This can be done by associating a Target Account (AWS account configured) role ARN with a list of Kubernetes groups (i.e. system:masters, system:basic-user). Please follow the instructions in [Managing users or IAM roles for your cluster - Amazon EKS](https://docs.aws.amazon.com/eks/latest/userguide/add-user-role.html) to complete this process. 
+If you want to use an existing AWS EKS cluster, you must allow one of your Spot Connect [Target Accounts](https://docs.spot.io/spot-connect/integrations/aws) (AWS account configured) to access the Kubernetes cluster. This can be done by associating a Target Account (AWS account configured) role ARN with a list of Kubernetes groups (i.e. system:masters, system:basic-user). Follow the instructions in [Managing users or IAM roles for your cluster - Amazon EKS](https://docs.aws.amazon.com/eks/latest/userguide/add-user-role.html) to complete this process. 
 
 ## Prerequisites 
 
@@ -46,8 +46,12 @@ If you want to use an existing AWS EKS cluster, you must allow one of your Spot 
 
 ## Step 2: Update Target Account Role with Inline Policy 
 
-1. In the Specify Permissions panel, click JSON on the top right and run the policy below with previously created IAM `EKS-Test-Cluster-Role` role ARN.  
+1. Click **Roles** in the left menu and then click spotconnect-onboarding assume role. 
+2. Click **Add permissions** and then click **Create inline policy**.
 
+![eks-5](https://github.com/spotinst/help/assets/106514736/b63fa46d-ff77-4908-8d75-d55fba23e522)
+
+3. In the Specify Permissions panel, click **JSON** on the top right and add the policy below with previously created IAM `EKS-Test-Cluster-Role` role ARN.  
 ```json
 {
    "Version":"2012-10-17",
@@ -65,27 +69,22 @@ If you want to use an existing AWS EKS cluster, you must allow one of your Spot 
 }
 ```
 
-2. Provide a name for Inline policy and click Create Policy. 
-
- 
-
- 
+4. Provide a name for Inline policy and click **Create Policy**. 
 
 ## Step 3: Create IAM Role with EKS – Nodegroup Use-case 
 
 1. In the Trusted entity type window, select **ASW service** and then **EKS- Nodegroup**.  
+2. Click **Next**. 
 
- 
+![eks-7](https://github.com/spotinst/help/assets/106514736/87576635-a77d-4fde-817f-8c57ed2e5f63)
 
- 
+3. In the Add permissions window, click **Next**.  
 
- 
-
- 
+![eks-8](https://github.com/spotinst/help/assets/106514736/d4e2d589-20c3-4b7e-a23c-9629b2677140)
 
 ## Step 4: Update Target Account Role with Inline Policy 
 
-1. In the Specify Permissions panel, click JSON in the top right and run the policy below with the IAM that was previously created: `AWSServiceRoleForAmazonEKSNodegroup` role ARN. 
+1. In the Specify Permissions panel, click **JSON** in the top right and run the policy below with the IAM that was previously created: `AWSServiceRoleForAmazonEKSNodegroup` role ARN. 
 
  ```json
 {
@@ -105,11 +104,12 @@ If you want to use an existing AWS EKS cluster, you must allow one of your Spot 
 
 2. Click **Next**. 
 
- 
+<img width="468" alt="eks-9" src="https://github.com/spotinst/help/assets/106514736/a18a7e52-190d-4326-a9a0-595b32273b65">
 
 3. Provide a name for the Inline policy and click **Create Policy**. 
 
- 
+<img width="468" alt="eks-9a" src="https://github.com/spotinst/help/assets/106514736/fc9e1e2f-2042-4cd2-8e7c-2eeb7f408884">
+
 ## Configure the Resource 
 
 1. In the left main menu, click **Connect** and click **Settings**.  
@@ -123,6 +123,8 @@ Details needed to provide EKS Permissions to Spot Connect:
 |      Resource Alias    |     Alias for EKS permissions resource instance  |     True       |
 |      Target Account    |     AWS Target account for the EKS cluster role  |     True       |
 |      Cluster Role ARN  |     IAM Role ARN to be used for the EKS cluster  |     True       |
+
+#### Integration Actions 
 
 You can add these actions in the Spot Connect workflow builder as part of your workflow. 
 
@@ -174,7 +176,7 @@ This node runs a `kubectl` command on an AWS EKS cluster.
 
 #### Output 
 
-![eks-11](https://github.com/spotinst/help/assets/106514736/e7780332-2a5b-421d-bc73-b1df4b9a05a6) 
+![eks-11](https://github.com/spotinst/help/assets/106514736/6f29c92c-3650-4112-a499-4921b444b088)
 
 ### EKS Get Namespaces 
 
@@ -208,7 +210,7 @@ This node gets details of namespaces in AWS EKS cluster.
 
 #### Output  
 
-![eks-13](https://github.com/spotinst/help/assets/106514736/3196a1f8-d7ad-418e-b960-4d013bd52c3d)
+![eks-13](https://github.com/spotinst/help/assets/106514736/b991333e-febb-473b-8222-c8d97e668261)
 
 ### EKS Get Deployments Name Only 
 
@@ -240,7 +242,9 @@ This node fetches the list of deployments in an AWS EKS cluster.
 
 #### Output 
 
-![eks-15](https://github.com/spotinst/help/assets/106514736/6b7e67c5-afa6-4e3c-917b-41a7c55e5efb)
+![eks-15](https://github.com/spotinst/help/assets/106514736/2ebd1dc1-a51c-4c3c-a0b9-eaaa55b1496b)
+
+<img width="330" height="700" alt="eks-15" src="https://github.com/spotinst/help/assets/106514736/482c0a21-93d3-41a7-b5ae-0bf7f4eaac56]">
 
 ### EKS Get Nodes 
 
@@ -272,7 +276,7 @@ This node gets the details of nodes for AWS EKS cluster.
 
 #### Output 
 
-![eks-17](https://github.com/spotinst/help/assets/106514736/37c6940d-ab9a-4722-9e48-0ca0282c8662)
+![eks-17](https://github.com/spotinst/help/assets/106514736/01801b2e-cc6f-4dd2-99fd-7cc3b917b812)
 
 ### EKS Get Pods 
 
@@ -306,7 +310,7 @@ This node gets the details of pods for AWS EKS cluster.
 
 #### Output 
 
-![eks-19](https://github.com/spotinst/help/assets/106514736/5ced44a7-d55d-4d99-8535-770ee7399965)
+![eks-19](https://github.com/spotinst/help/assets/106514736/3075a647-43b8-4da5-adfb-b0cf59cd3fbc)
 
 ### EKS Get Running Pods 
 
@@ -339,7 +343,7 @@ This node gets the details of pods in running state for AWS EKS cluster.
 
 #### Output
 
-![eks-21](https://github.com/spotinst/help/assets/106514736/935e1a00-0f36-4cb1-96a0-5bd2fd336208)
+![eks-21](https://github.com/spotinst/help/assets/106514736/018da054-615c-450f-a2ce-e84361ea4e23)
 
 ### EKS Get Not Running Pods 
 
@@ -371,7 +375,9 @@ This node gets the details of pods that are not in running state for AWS EKS clu
 
 #### Output 
 
-![eks-23](https://github.com/spotinst/help/assets/106514736/fb7595a7-5717-458a-9b73-ca448d439ae3)
+![eks-23](https://github.com/spotinst/help/assets/106514736/971ec3ce-4bb8-4024-be33-f91be601cdd1)
+
+<img width="550" height="750" alt="eks-23" src="https://github.com/spotinst/help/assets/106514736/482c0a21-93d3-41a7-b5ae-0bf7f4eaac56">
 
 ### EKS Get Pods Status 
 
@@ -403,7 +409,7 @@ This node gets the status of pods in AWS EKS cluster.
 
 #### Output 
 
-![eks-25](https://github.com/spotinst/help/assets/106514736/b34db450-f315-4e4e-b2dd-caf2b0ceb966)
+![eks-25](https://github.com/spotinst/help/assets/106514736/4e2c8b2d-6318-4302-a897-fa6948e41892)
 
 ### EKS Fetch Dead Pods 
 
@@ -435,7 +441,9 @@ This node gets the dead pods from EKS cluster.
 
 #### Output 
 
-![eks-27](https://github.com/spotinst/help/assets/106514736/87b63c9e-73e0-4b82-97a8-52c215006f36)
+![eks-27](https://github.com/spotinst/help/assets/106514736/ee7b168f-99c1-4580-9ac5-888f0f278eb2)
+
+<img width="550" height="750" alt="eks-27" src="https://github.com/spotinst/help/assets/106514736/87b63c9e-73e0-4b82-97a8-52c215006f36">
 
 ### EKS Execute 
 
@@ -470,7 +478,7 @@ This node executes the Kubernetes methods for these endpoints https://github.com
 
 #### Output 
 
-![eks-29](https://github.com/spotinst/help/assets/106514736/0e21eaa3-8daa-4331-8865-0fed5a1703b1)
+![eks-29](https://github.com/spotinst/help/assets/106514736/f207cfa3-3017-4160-a96a-ed9846c39deb)
 
 ### EKS Copy Pod Logs 
 
@@ -503,7 +511,7 @@ This node copies logs of Pod to AWS S3 bucket.
 
 #### Output 
 
-![eks-31](https://github.com/spotinst/help/assets/106514736/137fb8f0-8765-466d-b565-32b288da6533)
+![eks-31](https://github.com/spotinst/help/assets/106514736/d36e98d4-f38c-45cd-aac3-f3298c1e38ef)
 
 ### EKS Deploy Cluster 
 
@@ -547,7 +555,7 @@ This node creates an AWS EKS cluster in a selected AWS region.
 
 #### Output 
 
-![eks-33](https://github.com/spotinst/help/assets/106514736/1e6b4711-fd33-4c01-8d04-e72dc5e7b9ae)
+![eks-33](https://github.com/spotinst/help/assets/106514736/eb010cd8-d12d-48a1-8aaa-d91fc1c740bc)
 
 ### EKS Delete Pods 
 
@@ -610,7 +618,7 @@ This node fetches the CPU and Memory usage of worker nodes in AWS EKS cluster.
 
 #### Output  
 
-![eks-37](https://github.com/spotinst/help/assets/106514736/b11c6483-5056-4164-8819-9f944963d51e)
+![eks-37](https://github.com/spotinst/help/assets/106514736/f761618c-0954-4d20-a65d-00ad04225c29)
 
 ### EKS Check Pods CPU Memory Usage 
 
@@ -642,4 +650,5 @@ This node fetches the CPU and Memory usage of pods in AWS EKS cluster.
 
 #### Output 
 
-![eks-39](https://github.com/spotinst/help/assets/106514736/e2ddc78b-630b-4919-a399-0fa7b83b6805)
+![eks-39](https://github.com/spotinst/help/assets/106514736/bed10022-aa8c-4326-a2ec-747a0ef982c0)
+
