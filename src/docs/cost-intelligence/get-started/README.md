@@ -18,14 +18,14 @@ If this is your first time setting up an account, complete the following steps.
 
 <img width="472" alt="get-started-2" src="https://github.com/spotinst/help/assets/106514736/5a0e4666-2441-4e66-b0c5-b17093f5fff0">
 
-3. Complete the final steps to finish credentialing the new Spot account and setting up the required IAM policies in the cloud provider. 
+3. Complete the following steps to finish credentialing the new Spot account and setting up the required IAM policies in the cloud provider. 
 
 <img width="352" alt="get-started-3" src="https://github.com/spotinst/help/assets/106514736/d90ea173-7069-45cf-81cf-9acaa51ed2b9">
 
 
 **NOTE**: Only AWS accounts are supported in the Spot console. Azure accounts can be registered using the API. Contact your support representative for assistance if needed. 
 
-For help finalizing Azure accounts via API, complete the steps here.  
+For help finalizing Azure accounts via API, complete the steps [here](cost-intelligence/tutorials/administration/).  
 
 ### Connect Existing Spot Account 
 
