@@ -67,7 +67,7 @@ The output should be:
 
 You can add these actions in the Spot Connect workflow builder, as part of your workflow.  
 
-* Elasticsearch Search 
+* [Elasticsearch Search](spot-connect/integrations/elasticsearch?id=elasticsearch-search) 
 
 ### Elasticsearch Search 
 
