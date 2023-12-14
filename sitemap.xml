@@ -393,20 +393,6 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/billing-engine/billing-analysis/"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/billing-engine/connect-aws</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/billing-engine/connect-aws"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/billing-engine/connect-aws"/>
-    </url>
-    <url>
-        <loc>https://docs.spot.io/?/billing-engine/families/</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/billing-engine/families/"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/billing-engine/families/"/>
-    </url>
-    <url>
         <loc>https://docs.spot.io/?/billing-engine/get-started/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
@@ -414,25 +400,11 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/billing-engine/get-started/"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/billing-engine/plans/</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/billing-engine/plans/"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/billing-engine/plans/"/>
-    </url>
-    <url>
         <loc>https://docs.spot.io/?/billing-engine/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/billing-engine/"/>
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/billing-engine/"/>
-    </url>
-    <url>
-        <loc>https://docs.spot.io/?/billing-engine/strategies/</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/billing-engine/strategies/"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/billing-engine/strategies/"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/billing-engine/tutorials/analysis</loc>
