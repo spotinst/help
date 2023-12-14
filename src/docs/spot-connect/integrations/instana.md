@@ -10,7 +10,7 @@ Instana Webhook integration in a Spot Connect workflow enables you to trigger a 
 
 You can use this action in the Spot Connect workflow builder as part of your workflow. 
 
-* Instana Webhook Trigger 
+* [Instana Webhook Trigger](spot-connect/integrations/instana?id=instana-webhook-trigger) 
 
 ### Instana Webhook Trigger 
 
