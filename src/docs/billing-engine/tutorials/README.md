@@ -10,7 +10,7 @@ Billing Engine includes default strategies for handling Reserved Instances (RI),
 
 ## Plans 
 
-Plans is also a feature that is tied to specific commercial offerings or agreements. Plans support three rule types for manipulating billing data across all cloud providers. These rules can be ordered to control their application. Once a plan and its associated rules are configured, they can impact the usage of targeted cloud accounts or accounts within a specific Family. 
+Plans is also a feature that is tied to specific commercial offerings or agreements. Plans support three rule types for manipulating billing data across all cloud providers. These rules can be ordered to control their application. Once a plan and its associated rules are configured, they can impact the usage of targeted cloud accounts or accounts within a specific family. 
 
 ## Billing Analysis 
 
