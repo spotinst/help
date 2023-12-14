@@ -407,6 +407,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/billing-engine/families/"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/billing-engine/get-started/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/billing-engine/get-started/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/billing-engine/get-started/"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/billing-engine/plans/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
@@ -426,6 +433,41 @@
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/billing-engine/strategies/"/>
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/billing-engine/strategies/"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/billing-engine/tutorials/analysis</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/billing-engine/tutorials/analysis"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/billing-engine/tutorials/analysis"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/billing-engine/tutorials/families</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/billing-engine/tutorials/families"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/billing-engine/tutorials/families"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/billing-engine/tutorials/plans</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/billing-engine/tutorials/plans"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/billing-engine/tutorials/plans"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/billing-engine/tutorials/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/billing-engine/tutorials/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/billing-engine/tutorials/"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/billing-engine/tutorials/strategies</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/billing-engine/tutorials/strategies"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/billing-engine/tutorials/strategies"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/cloud-analyzer/getting-started/connect-account-customer-working-with-msp</loc>
