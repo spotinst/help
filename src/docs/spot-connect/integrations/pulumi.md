@@ -47,7 +47,7 @@ Details needed to set up a **Pulumi** instance with Spot Connect: (either **Toke
 
 4. Copy the generated Access Token into the corresponding entry box in **Pulumi Settings**. 
 
-![pulumi-4](https://github.com/spotinst/help/assets/106514736/1983ad25-5665-4b4a-bd4e-99f6852cdf22)
+![pulumi-4](https://github.com/spotinst/help/assets/106514736/fd20c694-3474-444b-85e8-527f41593812)
 
 ## Integration Actions 
 
