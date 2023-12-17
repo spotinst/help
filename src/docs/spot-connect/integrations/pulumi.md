@@ -39,7 +39,7 @@ Details needed to set up a **Pulumi** instance with Spot Connect: (either **Toke
 
 2. Click the **Settings** tab and then click **Access Tokens** in the left menu.   
 
-![pulumi-2](https://github.com/spotinst/help/assets/106514736/d6f00446-f226-4bfa-8d19-70f0c4154f52)
+![pulumi-2](https://github.com/spotinst/help/assets/106514736/824ce9dc-68a4-4063-821c-d91bd1f9176b)
 
 3. Click **Create token**. Enter a name and click **Create token**. 
 
@@ -47,7 +47,7 @@ Details needed to set up a **Pulumi** instance with Spot Connect: (either **Toke
 
 4. Copy the generated Access Token into the corresponding entry box in **Pulumi Settings**. 
 
-![pulumi-4](https://github.com/spotinst/help/assets/106514736/51840f54-18f5-4202-8bdc-3cf33bd024dd)
+![pulumi-4](https://github.com/spotinst/help/assets/106514736/1983ad25-5665-4b4a-bd4e-99f6852cdf22)
 
 ## Integration Actions 
 
