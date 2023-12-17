@@ -48,10 +48,10 @@ You can apply the following filters:
 
 ## Modify a Plan 
 
-To modify a plan, click on the pencil icon to do so. 
+To modify a plan, click the pencil icon to do so. 
 
 ## Delete a Plan 
 
-To delete a plan, click on the trash icon associated with the Billing Plan. 
+To delete a plan, click the trash icon associated with the Billing Plan. 
 
  
