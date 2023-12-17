@@ -36,11 +36,8 @@ https://docs.spot.io/api/#tag/Accounts/operation/OrganizationsAndAccountsSetClou
 
 To view the most recent policy definitions for each provider, please visit the relevant documentation links below that go into the permissions more thoroughly. 
 
-- AWS Cost Intelligence Policy 
-- AWS Billing Engine Policy 
-- Azure Cost Intelligence Policy 
-- Azure Billing Engine Policy 
-- Google Cloud Billing Engine Policy 
+- [AWS Cost Intelligence Policy](https://docs.spot.io/cost-intelligence/tutorials/cost-intelligence-policy/?id=cost-intelligence-aws-policy) 
+- [Azure Cost Intelligence Policy](https://docs.spot.io/cost-intelligence/tutorials/cost-intelligence-policy/?id=cost-intelligence-azure-policy) 
 
 ## Step 4: Register Account with Cost Intelligence 
 
