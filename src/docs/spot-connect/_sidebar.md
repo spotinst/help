@@ -35,6 +35,7 @@
     - [Jira](spot-connect/integrations/jira)
     - [Opsgenie](spot-connect/integrations/opsgenie)
     - [PagerDuty](spot-connect/integrations/pagerduty)
+    - [Pulumi](spot-connect/integrations/pulumi)
     - [Slack](spot-connect/integrations/slack)
     - [Spot](spot-connect/integrations/spot)
     - [Spot Security](spot-connect/integrations/spot_security)
