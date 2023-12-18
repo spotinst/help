@@ -37,6 +37,7 @@
     - [PagerDuty](spot-connect/integrations/pagerduty)
     - [Pulumi](spot-connect/integrations/pulumi)
     - [Slack](spot-connect/integrations/slack)
+    - [Splunk](spot-connect/integrations/splunk)
     - [Spot](spot-connect/integrations/spot)
     - [Spot Security](spot-connect/integrations/spot_security)
     - [SSH Targets](spot-connect/integrations/ssh)
