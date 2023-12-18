@@ -29,7 +29,7 @@ Follow the steps below to integrate your Splunk instance with Spot Connect:
 
 You can add these actions in the Spot Connect workflow builder as part of your workflow.  
 
-* [Splunk Search](https://docs.spot.io/spot-connect/integrations/splunk?id=splunk-search) 
+* [Splunk Search](spot-connect/integrations/splunk?id=splunk-search) 
 
 ### Splunk Search 
 
