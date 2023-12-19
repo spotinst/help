@@ -31,7 +31,9 @@ Details needed to set up a **Pulumi** instance with Spot Connect: (either **Toke
 |      Passphrase         |     The passphrase for accessing the Pulumi config.                                                                                                  |     If backend is specified                                        |
 |      Organization       |     Organization under which Pulumi projects should be run.                                                                                          |     Optional. If specified, all workflows share the organization.  |
 
-## Creating an Access Token 
+## Create an Access Token 
+
+If you choose to configure Pulumi in Spot Connect using an access token, complete the following steps. 
 
 1. Log in to the Pulumi web console.  
 
@@ -45,7 +47,9 @@ Details needed to set up a **Pulumi** instance with Spot Connect: (either **Toke
 
 ![pulumi-3](https://github.com/spotinst/help/assets/106514736/bd00ef54-c2e3-4a97-9ff1-00f8b5adef36)
 
-4. Copy the generated Access Token into the corresponding entry box in **Pulumi Settings**. 
+## Configure Pulumi in Spot Connect 
+
+Copy the generated Access Token into the Token parameter in Spot Connect configuration.  
 
 ![pulumi-4](https://github.com/spotinst/help/assets/106514736/fd20c694-3474-444b-85e8-527f41593812)
 
@@ -53,9 +57,9 @@ Details needed to set up a **Pulumi** instance with Spot Connect: (either **Toke
 
 Spot only supports Pulumi Python projects with an AWS provider. Before using any Pulumi integration action, a project needs to be defined, either in the GitHub Repos resource or the S3 Buckets resource. All actions are configured in the same way: 
 
-1. **Pulumi Up** - Runs command `pulumi up` for the specified project and stack. Creates the set of resources specified in the project. 
-2. **Pulumi Stack Output** - Runs command `pulumi stack output` for the specified project and stack. The output is in JSON format and can be pulled from specified `log_bucket` and `log_key` for further processing. 
-3. **Pulumi Destroy** - Runs command `pulumi destroy` for the specified project and stack and removes the provisioned resources. 
+* **Pulumi Up** - Runs command `pulumi up` for the specified project and stack. Creates the set of resources specified in the project.
+* **Pulumi Stack Output** - Runs command `pulumi stack output` for the specified project and stack. The output is in JSON format and can be pulled from specified `log_bucket` and `log_key` for further processing. 
+* **Pulumi Destroy** - Runs command `pulumi destroy` for the specified project and stack and removes the provisioned resources. 
 
 #### Input 
 

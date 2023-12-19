@@ -63,7 +63,7 @@ The output should be:
 
 5. Copy the value of `id` and enter it in the `Elasticsearch API key id` field. Copy value of `api_key` and enter it in the `Elastic Search API key value` field. 
 
-### Integration Actions 
+## Integration Actions 
 
 You can add these actions in the Spot Connect workflow builder, as part of your workflow.  
 
@@ -103,9 +103,9 @@ Use this action to perform an Elasticsearch Search.
 
 ![elasticsearch-2](https://github.com/spotinst/help/assets/106514736/34d03041-84e1-4128-950c-a6bfc9fcc3f8)
 
-![elasticsearch-3](https://github.com/spotinst/help/assets/106514736/c8afd299-e880-4c17-af66-c54922e93c49)
- 
 #### Output 
+
+![elasticsearch-3](https://github.com/spotinst/help/assets/106514736/c8afd299-e880-4c17-af66-c54922e93c49)
 
 ![elasticsearch-4](https://github.com/spotinst/help/assets/106514736/a9cb13b0-4a01-42b0-abc6-fd03cd373c41)
 

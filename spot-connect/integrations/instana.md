@@ -73,7 +73,7 @@ Complete the following steps:
 5. Click **Create**.  
 6. The Workflow is immediately executed when a specific Instana Alert goes into the state of ALERT. 
 
-The Workflow Execution 
+#### Action Example 
 
 <img width="1105" alt="instana-4" src="https://github.com/spotinst/help/assets/106514736/34bbd57c-8c1f-4d52-beb3-b94979a45c98">
 
