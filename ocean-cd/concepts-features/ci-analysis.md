@@ -16,7 +16,7 @@ The CI pipeline execution follows this sequence:
 
 The following tutorial describes how to use the feature in the Spot console: 
 
-1. In the Metrics stage under the + Create Verification tab, select Jenkins in the Provider field.  
+1. In the Metrics stage under the Verification Template tab, select Jenkins in the Provider field.  
 
 ![ci-analysis-1](https://github.com/spotinst/help/assets/106514736/103001b9-8316-4de4-9910-e42313a3ba2c)
 
