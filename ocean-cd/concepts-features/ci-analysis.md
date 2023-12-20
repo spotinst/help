@@ -30,11 +30,11 @@ The following tutorial describes how to use the feature in the Spot console:
 
 ![ci-analysis-3](https://github.com/spotinst/help/assets/106514736/4d364d03-2dc8-4d33-b772-f25a499c0c4f)
 
->Note:  
+**Note**:  
 
-* CI Analysis is supported for both Phase and Background Verifications.  
-* CI Analysis is supported for all strategies: Rolling Update and Canary. 
-* CI Analysis is not supported for Baseline metrics.
+* **CI Analysis is supported for both Phase and Background Verifications**.  
+* **CI Analysis is supported for all strategies: Rolling Update and Canary**. 
+* **CI Analysis is not supported for Baseline metrics**.
 
 ## What’s Next?  
 
