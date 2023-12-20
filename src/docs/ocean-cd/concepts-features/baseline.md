@@ -4,7 +4,7 @@ Ocean CD enables you to use the active stable version in production as a 'baseli
 
 Within your Verification Template, you have the option to modify the approach for setting success or failure conditions as part of thresholds. Instead, you can determine the success or failure of your metrics based on the performance of your currently active version.  
 
-To facilitate the process, you need to provide Ocean CD with a Baseline query that will be executed during a pre-phase triggered at the beginning of the rollout. In addition, provide a mathematical expression which will be used to compare the canary and stable versions.   
+To facilitate the process, you need to provide Ocean CD with a Baseline query that will be executed during a pre-phase triggered at the beginning of the rollout. In addition, provide a mathematical expression which will be used to compare the Canary and stable versions.   
 
 ## Supported Providers 
 
@@ -20,7 +20,7 @@ The following tutorial explains how to use the feature in the Spot console:
 
 ![baseline-1](https://github.com/spotinst/help/assets/106514736/e918792f-a3d2-4dd0-beaa-70bb6aa7d47e)
 
-Note: In addition to basic expressions such as "<", ">", "<=", ">=", or "=", you can also utilize a range of data to compare versions. By leveraging the MinRange and MaxRange parameters, you can set a percentage that defines the acceptable results within specified upper and lower limits. 
+**Note**: In addition to basic expressions such as "<", ">", "<=", ">=", or "=", you can also utilize a range of data to compare versions. By leveraging the MinRange and MaxRange parameters, you can set a percentage that defines the acceptable results within specified upper and lower limits. 
 
 4. When the baseline is configured, its queries will be executed during a pre-phase from the moment the rollout is triggered. The output of these queries, along with the phases in which they are discovered, will be displayed. 
 
@@ -28,7 +28,7 @@ Note: In addition to basic expressions such as "<", ">", "<=", ">=", or "=", you
 
 During the rollout, any metric making use of the baseline will be displayed as below: 
 
-![baseline-3](https://github.com/spotinst/help/assets/106514736/90049fb2-98c8-41c9-af0f-abf78e26044e)
+![baseline-3](https://github.com/spotinst/help/assets/106514736/0c720886-e748-4ac6-af5a-f7bb5914d2e4)
 
 ## What’s Next 
 
