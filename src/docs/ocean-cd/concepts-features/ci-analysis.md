@@ -16,7 +16,7 @@ The CI pipeline execution follows this sequence:
 
 The following tutorial describes how to use the feature in the Spot console: 
 
-1. In the Metrics stage under the Verification Template tab, select Jenkins in the Provider field.  
+1. In the Metrics stage under the Verification Template tab, select **Jenkins** in the Provider field.  
 
 ![ci-analysis-1](https://github.com/spotinst/help/assets/106514736/103001b9-8316-4de4-9910-e42313a3ba2c)
 
@@ -26,12 +26,16 @@ The following tutorial describes how to use the feature in the Spot console:
 
 ![ci-analysis-2](https://github.com/spotinst/help/assets/106514736/ba9c5e00-0fe9-42c0-bb20-82117e864688) 
 
-4. When your rollout is in progress, the results of your CI pipeline will be presented, indicating either a Passed or Failed status. This enables you to quickly assess the outcome of the CI pipeline and take appropriate actions based on the results. 
+4. The process is complete. The results of your CI pipeline are presented in real time during your rollout, indicating either a Passed or Failed status. This enables you to quickly assess the outcome of the CI pipeline and take appropriate actions based on the results. 
 
 ![ci-analysis-3](https://github.com/spotinst/help/assets/106514736/4d364d03-2dc8-4d33-b772-f25a499c0c4f)
 
 >Note:  
 
-* CI Analysis is supported for both Phase & Background Verifications.  
-* CI Analysis is supported for all strategies: Rolling Update & Canary. 
-* CI Analysis is not supported for Baseline metrics. 
+* CI Analysis is supported for both Phase and Background Verifications.  
+* CI Analysis is supported for all strategies: Rolling Update and Canary. 
+* CI Analysis is not supported for Baseline metrics.
+
+## What’s Next?  
+
+Learn how to use a [baseline](ocean-cd/concepts-features/baseline) in a Canary deployment strategy.  
