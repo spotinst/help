@@ -42,7 +42,7 @@ Follow the steps below in your Sumo Logic Account and get the desired parameters
 
 You can add these actions in the Spot Connect workflow builder as part of your workflow. 
 
-* Sumo Logic Search 
+* [Sumo Logic Search](spot-connect/integrations/sumologic?id=sumo-logic-search) 
 
 ### Sumo Logic Search 
 
