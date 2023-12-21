@@ -26,6 +26,8 @@
     - [Multiple SpotDeployments](ocean-cd/concepts-features/multiple-deployments)  
     - [Trigger Rollouts with ConfigMap](ocean-cd/concepts-features/trigger-configmap)
     - [Headers-based Traffic](ocean-cd/concepts-features/headers)
+    - [Baseline](ocean-cd/concepts-features/baseline)
+    - [CI Analysis](ocean-cd/concepts-features/ci-analysis)
   - [Permission Policies](ocean-cd/permission-policies/)   
   - [Get to Know Ocean CD](ocean-cd/get-to-know-ocean-cd/)
     - [View Settings](ocean-cd/tutorials/view-settings/)
