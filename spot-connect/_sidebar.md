@@ -44,4 +44,5 @@
     - [Sumo Logic](spot-connect/integrations/sumologic)
     - [S3 Buckets](spot-connect/integrations/s3)
     - [Terraform Cloud](spot-connect/integrations/terraform)
+    - [Twilio](spot-connect/integrations/twilio)
 
