@@ -116,7 +116,7 @@ Runs command pulumi stack output for the specified project and stack. The output
 |      log_key           |     string   |     name of system created log file                     |
 |      execution_status  |     boolean  |     returns true if pulumi node is executed correctly.  |
  
-#### Pulumi Destroy 
+### Pulumi Destroy 
 
 Runs command pulumi destroy for the specified project and stack, and removes the provisioned resources. 
 
