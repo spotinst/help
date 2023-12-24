@@ -9,7 +9,7 @@
 |  CloudWatch   |  RDS (Relational Database Service) |
 |  EC2 (Elastic Compute Cloud)  |  S3 (Simple Storage Service)   |
 |  ELB (Elastic Load Balancing)   |  SNS (Simple Notification Service)   |
-|  EBS   |     |
+|  EBS (Elastic Block Store)   |  EKS(Elastic Kubernetes Service)   |
 
 ## Supported Azure Asset Types:
 
