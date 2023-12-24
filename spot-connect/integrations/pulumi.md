@@ -54,11 +54,11 @@ If you choose to configure Pulumi in Spot Connect using an access token, complet
 
 Spot only supports Pulumi Python projects with an AWS provider. Before using any Pulumi integration action, a project needs to be defined, either in the GitHub Repos resource or the S3 Buckets resource. 
 
-* **Pulumi Up** - Runs command `pulumi up` for the specified project and stack. Creates the set of resources specified in the project.
-* **Pulumi Stack Output** - Runs command `pulumi stack output` for the specified project and stack. The output is in JSON format and can be pulled from specified `log_bucket` and `log_key` for further processing. 
-* **Pulumi Destroy** - Runs command `pulumi destroy` for the specified project and stack and removes the provisioned resources. 
+* **[Pulumi Up](spot-connect/integrations/pulumi?id=pulumi-up)** - Runs command `pulumi up` for the specified project and stack. Creates the set of resources specified in the project.
+* **[Pulumi Stack Output](spot-connect/integrations/pulumi?id=pulumi-stack-output)** - Runs command `pulumi stack output` for the specified project and stack. The output is in JSON format and can be pulled from specified `log_bucket` and `log_key` for further processing. 
+* **[Pulumi Destroy](spot-connect/integrations/pulumi?id=pulumi-destroy)** - Runs command `pulumi destroy` for the specified project and stack and removes the provisioned resources. 
 
-### [Pulumi Up](spot-connect/integrations/pulumi?id=pulumi-up)
+### Pulumi Up
 
 Runs the command `pulumi up` for the specified project and stack. Creates the set of resources specified in the project. 
 
@@ -92,7 +92,7 @@ Runs the command `pulumi up` for the specified project and stack. Creates the se
 
 ![pulumi-6](https://github.com/spotinst/help/assets/106514736/f172ea48-8909-45a7-a59a-38f2473ea1b0)
 
-### [Pulumi Stack Output](spot-connect/integrations/pulumi?id=pulumi-stack-output) 
+### Pulumi Stack Output
 
 Runs command pulumi stack output for the specified project and stack. The output is in JSON format and can be pulled from specified log_bucket and log_key for further processing. 
 
@@ -116,7 +116,7 @@ Runs command pulumi stack output for the specified project and stack. The output
 |      log_key           |     string   |     name of system created log file                     |
 |      execution_status  |     boolean  |     returns true if pulumi node is executed correctly.  |
  
-### [Pulumi Destroy](spot-connect/integrations/pulumi?id=pulumi-destroy) 
+### Pulumi Destroy
 
 Runs command pulumi destroy for the specified project and stack, and removes the provisioned resources. 
 
