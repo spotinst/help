@@ -4,8 +4,7 @@ Use the Pulumi integration to execute Pulumi templates and connect the execution
 
 Pulumi is a modern infrastructure as a code platform. It leverages existing programming languages—TypeScript, JavaScript, Python, Go, and .NET—and their native ecosystem to interact with cloud resources through the Pulumi SDK. 
 
-You can run multiple types of code (e.g. Terraform templates, Ansible playbooks, Python scripts) to automate their tasks. We built this integration, specifically to support the execution of Pulumi Programs. 
-
+You can run multiple types of code (e.g. Terraform templates, Ansible playbooks, Python scripts) to automate their tasks. This integration supports the execution of Pulumi Programs. 
 The integration between Spot Connect and Pulumi enables you to execute: 
 
 * **Pulumi Up** for the specified project and stack. Create the set of resources specified in the project. 
@@ -47,19 +46,21 @@ If you choose to configure Pulumi in Spot Connect using an access token, complet
 
 ![pulumi-3](https://github.com/spotinst/help/assets/106514736/bd00ef54-c2e3-4a97-9ff1-00f8b5adef36)
 
-## Configure Pulumi in Spot Connect 
-
-Copy the generated Access Token into the Token parameter in Spot Connect configuration.  
+4. Copy the generated Access Token into the Token parameter in the Spot Connect configuration.  
 
 ![pulumi-4](https://github.com/spotinst/help/assets/106514736/fd20c694-3474-444b-85e8-527f41593812)
 
 ## Integration Actions 
 
-Spot only supports Pulumi Python projects with an AWS provider. Before using any Pulumi integration action, a project needs to be defined, either in the GitHub Repos resource or the S3 Buckets resource. All actions are configured in the same way: 
+Spot only supports Pulumi Python projects with an AWS provider. Before using any Pulumi integration action, a project needs to be defined, either in the GitHub Repos resource or the S3 Buckets resource. 
 
 * **Pulumi Up** - Runs command `pulumi up` for the specified project and stack. Creates the set of resources specified in the project.
 * **Pulumi Stack Output** - Runs command `pulumi stack output` for the specified project and stack. The output is in JSON format and can be pulled from specified `log_bucket` and `log_key` for further processing. 
 * **Pulumi Destroy** - Runs command `pulumi destroy` for the specified project and stack and removes the provisioned resources. 
+
+Pulumi Up
+
+Runs the command `pulumi up` for the specified project and stack. Creates the set of resources specified in the project. 
 
 #### Input 
 
@@ -70,6 +71,7 @@ Spot only supports Pulumi Python projects with an AWS provider. Before using any
 |      Log Bucket         |     An S3 bucket for writing logs from the Pulumi command execution. The target account needs to have access to this bucket.  |     True                       |
 |      Project Git Repo   |     A GitHub Repos resource with a Pulumi Python project with an AWS provider.                                                |     If S3 Bucket is not added  |
 |      Project S3 Bucket  |     A S3 Buckets resource with a Pulumi Python project with an AWS provider                                                   |     If Git Repo is not added   |
+
 #### Output 
 
 |       Parameter Name   |       Type   |                         Description                     |
@@ -90,5 +92,50 @@ Spot only supports Pulumi Python projects with an AWS provider. Before using any
 
 ![pulumi-6](https://github.com/spotinst/help/assets/106514736/f172ea48-8909-45a7-a59a-38f2473ea1b0)
 
+### Pulumi Stack Output 
 
+Runs command pulumi stack output for the specified project and stack. The output is in JSON format and can be pulled from specified log_bucket and log_key for further processing. 
+
+#### Input 
+
+|       Parameter Name    |                                                            Description                                                        |              Required          |
+|-------------------------|:-----------------------------------------------------------------------------------------------------------------------------:|:------------------------------:|
+|      Pulumi Instance    |     Target account alias for running the Pulumi action. It needs to have access to the Backend S3 bucket                      |     True                       |
+|      Project Stack      |     The Pulumi stack used for the action. Pulumi support running the same project against different stacks.                   |     True                       |
+|      Log Bucket         |     An S3 bucket for writing logs from the Pulumi command execution. The target account needs to have access to this bucket.  |     True                       |
+|      Project Git Repo   |     A GitHub Repos resource with a Pulumi Python project with an AWS provider.                                                |     If S3 Bucket is not added  |
+|      Project S3 Bucket  |     A S3 Buckets resource with a Pulumi Python project with an AWS provider                                                   |     If Git Repo is not added   | 
+
+#### Output 
+
+|       Parameter Name   |       Type   |                         Description                     |
+|------------------------|:------------:|:-------------------------------------------------------:|
+|      task_arn          |     string   |     The task ARN for the asynchronous Pulumi task       |
+|      task_status       |     string   |     The task status when the action returns.            |
+|      log_bucket        |     string   |     log_bucket from the Input parameters                |
+|      log_key           |     string   |     name of system created log file                     |
+|      execution_status  |     boolean  |     returns true if pulumi node is executed correctly.  |
  
+### Pulumi Destroy 
+
+Runs command pulumi destroy for the specified project and stack, and removes the provisioned resources. 
+
+#### Input 
+
+|       Parameter Name    |                                                            Description                                                        |              Required          |
+|-------------------------|:-----------------------------------------------------------------------------------------------------------------------------:|:------------------------------:|
+|      Pulumi Instance    |     Target account alias for running the Pulumi action. It needs to have access to the Backend S3 bucket                      |     True                       |
+|      Project Stack      |     The Pulumi stack used for the action. Pulumi support running the same project against different stacks.                   |     True                       |
+|      Log Bucket         |     An S3 bucket for writing logs from the Pulumi command execution. The target account needs to have access to this bucket.  |     True                       |
+|      Project Git Repo   |     A GitHub Repos resource with a Pulumi Python project with an AWS provider.                                                |     If S3 Bucket is not added  |
+|      Project S3 Bucket  |     A S3 Buckets resource with a Pulumi Python project with an AWS provider                                                   |     If Git Repo is not added   |
+
+#### Output 
+
+|       Parameter Name   |       Type   |                         Description                     |
+|------------------------|:------------:|:-------------------------------------------------------:|
+|      task_arn          |     string   |     The task ARN for the asynchronous Pulumi task       |
+|      task_status       |     string   |     The task status when the action returns.            |
+|      log_bucket        |     string   |     log_bucket from the Input parameters                |
+|      log_key           |     string   |     name of system created log file                     |
+|      execution_status  |     boolean  |     returns true if pulumi node is executed correctly.  |
