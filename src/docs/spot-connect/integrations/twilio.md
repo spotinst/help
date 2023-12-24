@@ -24,7 +24,7 @@ Details needed to set up a Twilio instance in Spot Connect:
 
 You can add these actions in the Spot Connect workflow builder as part of your workflow. 
 
-* Twilio Send SMS 
+* [Twilio Send SMS](spot-connect/integrations/twilio?id=twilio-send-sms) 
 
 ### Twilio Send SMS 
 
