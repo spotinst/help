@@ -21,7 +21,7 @@ Terraform Module `.tf` files are expected to be stored in GitHub Cloud, Bitbucke
 1. In the Settings menu, click **Integrations** and then **S3 Buckets**.  
 2. Follow [S3 Buckets](spot-connect/integrations/s3) documentation to set up an integration instance. 
 
-### Set up the Terraform Module Integration  
+## Set up the Terraform Module Integration  
 
 1. In the left main menu, click **Connect** and click **Settings**.
 2. Under the Integrations tab, select **Terraform Modules**. 
@@ -38,7 +38,7 @@ Terraform Module `.tf` files are expected to be stored in GitHub Cloud, Bitbucke
 4. Provide the information in the following parameters: 
 
 * **Resource Alias**: Add resource alias name. 
-* **Root**: Root specifies the Terraform configuration file path in the git repository or s3 bucket. 
+* **Root**: Root specifies the Terraform configuration file path in the git repository or S3 bucket. 
 * **Source Type**: Select Source Type as Git Repo or S3 bucket as per the previous configuration. 
 * **Git Repo**: Select the Git/S3 resource on which Terraform module is present. 
 
@@ -94,7 +94,7 @@ You can add these actions in the Spot Connect workflow builder as part of your w
 1. Check the execution status of the node, if its E_FAIL there should be an error message. This could happen if Spot Connect is not able to trigger a task to perform Terraform actions in case wrong credentials/params/version are provided.  
 
 2. To debug the Terraform command, check the logs file name added in the output of the action. 
-Ex:  
+Example: 
 
 ```
 Error: No configuration files Apply requires configuration to be present. Applying without a configuration would mark everything for destruction, which is normally not what is desired. If you would like to destroy everything, run 'terraform destroy' instead.
