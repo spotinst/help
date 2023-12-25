@@ -1,10 +1,8 @@
 # Terraform CLI
 
-Use the integration to execute Terraform templates and connect the execution with other integrations that Spot Connect offers. 
+Terraform CLI executes Terraform templates and connects the execution with other integrations that Spot Connect offers. 
 
-This document describes the Terraform CLI integration, not to be confused with our support for the Terraform Cloud integration.  
-
-This integration supports execution of Terraform templates. 
+This document describes the Terraform CLI integration, not to be confused with Spot’s support for the Terraform Cloud integration. 
 
 ## Configure Terraform CLI in Spot Connect 
 
@@ -48,7 +46,7 @@ Terraform Module `.tf` files are expected to be stored in GitHub Cloud, Bitbucke
 
 You can add these actions in the Spot Connect workflow builder as part of your workflow. 
 
-* Terraform CLI Apply - runs Terraform Apply on the specified module, does not wait for confirmation. 
+* [Terraform CLI Apply](spot-connect/integrations/terraform-cli?id=terraform-cli-apply) - runs Terraform Apply on the specified module, does not wait for confirmation. 
 * Terraform CLI Destroy - runs Terraform Destroy on the specified module, does not wait for confirmation. 
 * Terraform CLI Plan - runs Terraform Plan on the specified module. 
 * Terraform CLI Show - runs Terraform Show on the specified module.
