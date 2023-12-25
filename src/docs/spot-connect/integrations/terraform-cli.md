@@ -64,3 +64,38 @@ You can add these actions in the Spot Connect workflow builder as part of your w
 |      Extra Args                 |     Additional CLI arguments for the terraform command                       |     False      |
 |      Version                    |     Version of terraform to use (0.11, 0.12, or 0.13)                        |     True       |
 |      Workspace                  |     Workspace to use for a terraform command, Default workspace is default   |     False      |
+
+#### Output
+
+|       Parameter        |       Type  |                          Description                      |
+|------------------------|:-----------:|:---------------------------------------------------------:|
+|      task_arn          |     String  |     AWS Task ARN which is performing Terraform operation  |
+|      task_status       |     String  |     AWS task status, ex: PROVISIONING                     |
+|      log_bucket        |     String  |     S3 bucket name where logs to be uploaded              |
+|      log_key           |     String  |     Terraform logs file name                              |
+|      execution_status  |     String  |     Node execution status                              |
+
+#### Action Example 
+
+1. From the left panel, drag and drop the Terraform CLI Apply action node in the workflow builder. 
+2. Select a Terraform Module Resource. 
+3. Provide S3 Log Bucket. 
+
+#### Input 
+
+<img width="1025" alt="terraform-cli-2" src="https://github.com/spotinst/help/assets/106514736/50d936cc-36a8-434c-a132-e9d547f8ada4">
+
+#### Output 
+
+![terraform-cli-3](https://github.com/spotinst/help/assets/106514736/16ed39c9-4001-483e-a5ef-648589a351be)
+
+## Debug Terraform CLI Actions 
+
+1. Check the execution status of the node, if its E_FAIL there should be an error message. This could happen if Spot Connect is not able to trigger a task to perform Terraform actions in case wrong credentials/params/version are provided.  
+
+2. To debug the Terraform command, check the logs file name added in the output of the action. 
+Ex:  
+
+```
+Error: No configuration files Apply requires configuration to be present. Applying without a configuration would mark everything for destruction, which is normally not what is desired. If you would like to destroy everything, run 'terraform destroy' instead.
+```
