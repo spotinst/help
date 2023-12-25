@@ -43,6 +43,7 @@
     - [SSH Targets](spot-connect/integrations/ssh)
     - [Sumo Logic](spot-connect/integrations/sumologic)
     - [S3 Buckets](spot-connect/integrations/s3)
+    - [Terraform CLI](spot-connect/integrations/terraform-cli)
     - [Terraform Cloud](spot-connect/integrations/terraform)
     - [Twilio](spot-connect/integrations/twilio)
 
