@@ -36,6 +36,7 @@
     - [Opsgenie](spot-connect/integrations/opsgenie)
     - [PagerDuty](spot-connect/integrations/pagerduty)
     - [Pulumi](spot-connect/integrations/pulumi)
+    - [Prometheus](spot-connect/integrations/prometheus)
     - [Slack](spot-connect/integrations/slack)
     - [Splunk](spot-connect/integrations/splunk)
     - [Spot](spot-connect/integrations/spot)
