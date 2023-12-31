@@ -14,7 +14,7 @@ The integration between Spot Connect and Prometheus enables you to trigger a wor
 
 You can use this action in the Spot Connect workflow builder as part of your workflow. 
 
-* Prometheus Webhook Trigger 
+* [Prometheus Webhook Trigger](spot-connect/integrations/prometheus?id=prometheus-webhook-trigger) 
 
 ## Prometheus Webhook Trigger 
 
