@@ -30,6 +30,7 @@
     - [Generic Webhook](spot-connect/integrations/webhook)
     - [Github/Bitbucket Cloud](spot-connect/integrations/git)
     - [Google Kubernetes Engine](spot-connect/integrations/gke)
+    - [Humio](spot-connect/integrations/humio)
     - [Instana](spot-connect/integrations/instana)
     - [Jenkins](spot-connect/integrations/jenkins)
     - [Jira](spot-connect/integrations/jira)
