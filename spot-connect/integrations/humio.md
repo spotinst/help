@@ -35,8 +35,8 @@ Complete the following steps in your Humio account to obtain the desired paramet
 
 You can add these actions in the Spot Connect workflow builder as part of your workflow. 
 
-* Humio Search 
-* Humio Webhook Trigger
+* [Humio Search](spot-connect/integrations/humio?id=humio-search)
+* [Humio Webhook Trigger](spot-connect/integrations/humio?id=humio-webhook-trigger)
 
 ### Humio Search 
 
