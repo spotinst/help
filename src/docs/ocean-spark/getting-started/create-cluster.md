@@ -76,11 +76,11 @@ You can view the status of the newly created cluster on the Cluster page of the 
 
 This section provides a list of requirements for an Ocean Spark cluster deployment.
 
-**General Availability** versions are fully enabled for customer usage, ready for production use, and have no restrictions on support. These versions are recommended for the cluster underlying new applications as they provide customers with the most complete range of features and fixes. There is no set time on how long versions remain in the General Availability state; they will be moved to the Deprecated state according to the timetable of those linked cloud provider tables. 
+**General Availability** versions are fully enabled for customer usage, ready for production use, and have no restrictions on support. These versions are recommended for the cluster underlying new applications as they provide customers with the most complete range of features and fixes. There is no set time on how long versions remain in the General Availability state; they will be moved to the Deprecated state according to the timetable of the cloud provider tables that are referenced below. 
 
-**Deprecated versions** are fully supported and tested but are not our recommended choice for the cluster underlying new applications. There is no set time on how long versions remain in the Deprecated state; they will be moved to the Retired state according to the timetable of those linked cloud provider tables. 
+**Deprecated versions** are fully supported and tested but are not our recommended choice for the cluster underlying new applications. There is no set time on how long versions remain in the Deprecated state; they will be moved to the Retired state according to the timetable of the cloud provider tables that are referenced below. 
 
-**Retired versions** are no longer supported. We require that these clusters are upgraded or replaced. Versions will be moved to the Retired state according to the timetable of those linked cloud provider tables. Any issues encountered with a Retired cluster underlying your application will not be supported by us, but we will advise you during your update of the cluster to a more suitable version. 
+**Retired versions** are no longer supported. We require that these clusters are upgraded or replaced. Versions will be moved to the Retired state according to the timetable of the cloud provider tables that are referenced below. Any issues encountered with a Retired cluster underlying your application will not be supported by us, but we will advise you during your update of the cluster to a more suitable version. 
 
 ### AWS
 
