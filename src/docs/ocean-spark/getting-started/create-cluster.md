@@ -100,7 +100,7 @@ This section provides a list of requirements for an Ocean Spark cluster deployme
 
 ### GCP
 
-- The Kubernetes cluster should use a [version supported by GCP](https://cloud.google.com/kubernetes-engine/docs/release-schedule). We will begin supporting, with “General Availability” a version two months after the “Stable - Available” column date listed in that linked table. We will treat the version as “Deprecated” at the “Stable - Auto Upgrade” column date listed in that linked table. We will treat the version as “Retired” at the “End of life” column date listed in that linked table.
+- The Kubernetes cluster should use a [version supported by GCP](https://cloud.google.com/kubernetes-engine/docs/release-schedule). We will begin supporting, with “General Availability” a version two months after the “Stable - Available” column date listed in that linked table. We will treat the version as “Deprecated” six months before the “End of life” column date listed in that linked table. We will treat the version as “Retired” at the “End of life” column date listed in that linked table.
 - The service account assumed by cluster nodes should have at least the following roles: `monitoring.viewer`, `monitoring.metricWriter`, `logging.logWriter`, and `stackdriver.resourceMetadata.writer`. More details in [this section of GCP doc](https://cloud.google.com/kubernetes-engine/docs/how-to/hardening-your-cluster#use_least_privilege_sa)
 - If Spark applications use custom Docker images stored in Container Registry, the node service account should also have `objectViewer` access to the GCS bucket where the Docker images are stored.
 - The cluster nodes should be allowed:
