@@ -66,9 +66,9 @@ Follow [this example](https://github.com/spotinst/terraform-spotinst-ocean-spark
 
 When you start running the script or command to create the cluster, the following major events take place:
 
-1. Kubernetes cluster creation (If creating a cluster from scratch). The duration of this step varies depending on the cloud provider, but this can take 20 minutes or more. You may be able to track progress from your cloud provider console.
-2. Ocean controller installation. The Ocean controller is installed on the cluster. The cluster is then registered with Spot and will be visible in the Spot console (under the Ocean UI).
-3. Ocean Spark controller installation. The Ocean Spark components are then installed, and the cluster will be visible in the Spot console (under the Ocean Spark UI).
+* Kubernetes cluster creation (if creating a cluster from scratch). The duration of this step varies depending on the cloud provider, but this can take 20 minutes or more. You may be able to track progress from your cloud provider console.
+* Ocean controller installation. The Ocean controller is installed on the cluster. The cluster is then registered with Spot and will be visible in the Spot console (under the Ocean UI).
+* Ocean Spark controller installation. The Ocean Spark components are then installed, and the cluster will be visible in the Spot console (under the Ocean Spark UI).
 
 You can view the status of the newly created cluster on the Cluster page of the Ocean Spark console. The cluster status should move from Progressing to Available as the creation completes. Other statuses indicate an error. You can troubleshoot in the list of common issues below.
 
@@ -84,7 +84,7 @@ This section provides a list of requirements for an Ocean Spark cluster deployme
 
 ### AWS
 
-- The Kubernetes cluster should use a [version supported by Amazon](https://docs.aws.amazon.com/eks/latest/userguide/kubernetes-versions.html). We will begin supporting, with “General Availability” a version two months after the “Amazon EKS release” column date listed in that linked table. We will treat the version as “Deprecated” at the “End of standard support” column date listed in that linked table. We will treat the version as “Retired” at the “End of extended support” column date listed in that linked table. 
+- The Kubernetes cluster should use a [version supported by Amazon](https://docs.aws.amazon.com/eks/latest/userguide/kubernetes-versions.html). Spot will begin supporting, with General Availability, a version two months after the Amazon EKS release column date listed in that linked table. Spot will treat the version as Deprecated at the End of standard support column date listed in that linked table. Spot will treat the version as Retired at the End of extended support column date listed in that linked table. 
 - The VPC subnets should have the [proper tags](https://aws.amazon.com/premiumsupport/knowledge-center/eks-vpc-subnet-discovery/) to be discoverable by Kubernetes:
   - On all subnets: `kubernetes.io/cluster/<eks-cluster-name>: shared`
   - On public subnets: `kubernetes.io/role/elb: 1`
@@ -100,7 +100,7 @@ This section provides a list of requirements for an Ocean Spark cluster deployme
 
 ### GCP
 
-- The Kubernetes cluster should use a [version supported by GCP](https://cloud.google.com/kubernetes-engine/docs/release-schedule). We will begin supporting, with “General Availability” a version two months after the “Stable - Available” column date listed in that linked table. We will treat the version as “Deprecated” six months before the “End of life” column date listed in that linked table. We will treat the version as “Retired” at the “End of life” column date listed in that linked table.
+- The Kubernetes cluster should use a [version supported by GCP](https://cloud.google.com/kubernetes-engine/docs/release-schedule). Spot will begin supporting, with General Availability, a version two months after the Stable - Available column date listed in that linked table. Spot will treat the version as Deprecated six months before the End of life column date listed in that linked table. Spot will treat the version as Retired at the End of life column date listed in that linked table.
 - The service account assumed by cluster nodes should have at least the following roles: `monitoring.viewer`, `monitoring.metricWriter`, `logging.logWriter`, and `stackdriver.resourceMetadata.writer`. More details in [this section of GCP doc](https://cloud.google.com/kubernetes-engine/docs/how-to/hardening-your-cluster#use_least_privilege_sa)
 - If Spark applications use custom Docker images stored in Container Registry, the node service account should also have `objectViewer` access to the GCS bucket where the Docker images are stored.
 - The cluster nodes should be allowed:
@@ -112,7 +112,7 @@ This section provides a list of requirements for an Ocean Spark cluster deployme
 
 ### Azure
 
-- The Kubernetes cluster should use a [version supported by Azure](https://learn.microsoft.com/en-us/azure/aks/supported-kubernetes-versions?tabs=azure-cli.). We will begin supporting, with “General Availability” a version two months after the “AKS GA” column date listed in that linked table. We will treat the version as “Deprecated” at the “End of life” column date listed in that linked table. We will treat the version as “Retired” at the “Platform support” column date listed in that linked table. 
+- The Kubernetes cluster should use a [version supported by Azure](https://learn.microsoft.com/en-us/azure/aks/supported-kubernetes-versions?tabs=azure-cli.). We will begin supporting, with General Availability, a version two months after the AKS GA column date listed in that linked table. We will treat the version as Deprecated at the End of life column date listed in that linked table. We will treat the version as Retired at the Platform support column date listed in that linked table. 
 
 ## What’s Next?
 
