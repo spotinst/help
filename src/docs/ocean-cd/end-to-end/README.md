@@ -19,7 +19,7 @@ Install the operator to connect your cluster to Ocean CD.
 
 * **Cluster Identifier**: This is a logical identifier for your cluster that must be unique and have up to 30 alphanumeric characters without any spaces. You can choose any ID and it does not need to be coupled to the Ocean cluster ID (o-xxxxxx). Ocean CD can run on clusters that are not managed by Ocean. 
 
-8 **Argo Rollout Installation**: Ocean CD uses Argo rollouts as an underlying engine to facilitate rollouts and is required to trigger rollouts. 
+* **Argo Rollout Installation**: Ocean CD uses Argo rollouts as an underlying engine to facilitate rollouts and is required to trigger rollouts. 
 
 2. Download the YAML and apply it to your Kubernetes cluster. 
 
