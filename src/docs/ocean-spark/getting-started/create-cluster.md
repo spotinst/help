@@ -76,16 +76,22 @@ You can view the status of the newly created cluster on the Cluster page of the 
 
 This section provides a list of requirements for an Ocean Spark cluster deployment.
 
+**General Availability** versions are fully enabled for customer usage, ready for production use, and have no restrictions on support. These versions are recommended for the cluster underlying new applications as they provide customers with the most complete range of features and fixes. There is no set time on how long versions remain in the General Availability state; they will be moved to the Deprecated state according to the timetable of the cloud provider tables that are referenced below. 
+
+**Deprecated versions** are fully supported and tested but are not our recommended choice for the cluster underlying new applications. There is no set time on how long versions remain in the Deprecated state; they will be moved to the Retired state according to the timetable of the cloud provider tables that are referenced below. 
+
+**Retired versions** are no longer supported. We require that these clusters are upgraded or replaced. Versions will be moved to the Retired state according to the timetable of the cloud provider tables that are referenced below. Any issues encountered with a Retired cluster underlying your application will not be supported by us, but we will advise you during your update of the cluster to a more suitable version. 
+
 ### AWS
 
-- The Kubernetes cluster should run one of Kubernetes versions 1.19, 1.20, 1.21 or 1.22.
+- The Kubernetes cluster should use a [version supported by Amazon](https://docs.aws.amazon.com/eks/latest/userguide/kubernetes-versions.html). We will begin supporting, with “General Availability” a version two months after the “Amazon EKS release” column date listed in that linked table. We will treat the version as “Deprecated” at the “End of standard support” column date listed in that linked table. We will treat the version as “Retired” at the “End of extended support” column date listed in that linked table. 
 - The VPC subnets should have the [proper tags](https://aws.amazon.com/premiumsupport/knowledge-center/eks-vpc-subnet-discovery/) to be discoverable by Kubernetes:
   - On all subnets: `kubernetes.io/cluster/<eks-cluster-name>: shared`
   - On public subnets: `kubernetes.io/role/elb: 1`
 - The instance profile assumed by cluster nodes should have:
   - The [required permissions](https://docs.aws.amazon.com/eks/latest/userguide/create-node-role.html) for EKS
 - The permission to create security groups within the VPC
-- The cluster nodes should be in a security groups that allows them:
+- The cluster nodes should be in a security group that allows them:
   - To connect to one another
   - To reach the Internet
   - To connect to the Kubernetes API (which is in the cluster security group)
@@ -94,7 +100,7 @@ This section provides a list of requirements for an Ocean Spark cluster deployme
 
 ### GCP
 
-- The Kubernetes cluster should run one of Kubernetes versions 1.19, 1.20, 1.21 or 1.22.
+- The Kubernetes cluster should use a [version supported by GCP](https://cloud.google.com/kubernetes-engine/docs/release-schedule). We will begin supporting, with “General Availability” a version two months after the “Stable - Available” column date listed in that linked table. We will treat the version as “Deprecated” six months before the “End of life” column date listed in that linked table. We will treat the version as “Retired” at the “End of life” column date listed in that linked table.
 - The service account assumed by cluster nodes should have at least the following roles: `monitoring.viewer`, `monitoring.metricWriter`, `logging.logWriter`, and `stackdriver.resourceMetadata.writer`. More details in [this section of GCP doc](https://cloud.google.com/kubernetes-engine/docs/how-to/hardening-your-cluster#use_least_privilege_sa)
 - If Spark applications use custom Docker images stored in Container Registry, the node service account should also have `objectViewer` access to the GCS bucket where the Docker images are stored.
 - The cluster nodes should be allowed:
@@ -103,6 +109,10 @@ This section provides a list of requirements for an Ocean Spark cluster deployme
   - To connect to the Kubernetes API
 - If the cluster nodes are private, make sure a NAT service is installed in the Cloud Router of the VPC.
 - All the Ocean Spark Virtual Node Groups (VNGs) should have access to the same subnets, or at least to the same locations (also called availability zones by analogy with AWS).
+
+### Azure
+
+- The Kubernetes cluster should use a [version supported by Azure](https://learn.microsoft.com/en-us/azure/aks/supported-kubernetes-versions?tabs=azure-cli.). We will begin supporting, with “General Availability” a version two months after the “AKS GA” column date listed in that linked table. We will treat the version as “Deprecated” at the “End of life” column date listed in that linked table. We will treat the version as “Retired” at the “Platform support” column date listed in that linked table. 
 
 ## What’s Next?
 
