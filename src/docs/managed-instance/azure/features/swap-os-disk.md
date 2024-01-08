@@ -35,8 +35,8 @@ This document describes how to swap the OS disk for stateful nodes using the Spo
 4. In the Swap OS Disk window, select the resource group and enter a new disk name.  
 5. Select if you would like to keep the old OS disk or terminate it. If you choose to terminate the old OS disk, specify the number of hours to keep it.  
 6. Click **Update** or **Update and resume**.  
-  * Update: to change the configuration of the stateful node. 
-  * Update and resume: to resume the stateful node with one click.
+  * **Update**: to change the configuration of the stateful node. 
+  * **Update and resume**: to resume the stateful node with one click.
 
 ## What's Next?
 
