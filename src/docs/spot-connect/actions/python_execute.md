@@ -39,45 +39,136 @@ Configure your target account with necessary permissions and trust.
 #### IAM Role Permissions on Target Account 
 
 1. Add AWS managed policy `AWSLambda_FullAccess` to Target Account Assumed Role. 
-2. Create an inline policy in Target Account Assumed Role to pass role to the lambda service in Target Account. 
-3. Use the permission `PassRoleToLambdaServiceForTargetAccount` defined below. 
-4. Replace `SPOTCONNECTACCOUNT` with correct AWS account ID in line #8.
+2. Create an inline policy in Target Account Assumed Role to pass role to the lambda service in Target Account by using the permission `PassRoleToLambdaServiceForTargetAccount`:
 
-| Name                                          |                                                                                                                                                                                                                       Definition                                                                                                                                                                                                                       |                             Comment                         |
-|-----------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:-----------------------------------------------------------:|
-|      PassRoleToLambdaServiceForTargetAccount  |     {      "Version": "2012-10-17",      "Statement": [          {              "Sid": "VisualEditor0",              "Effect": "Allow",              "Action": "iam:PassRole",              "Resource": "arn:aws:iam::SPOTCONNECTACCOUNT:role/*AssumeRole*",              "Condition": {                  "StringEquals": {                      "iam:PassedToService": "lambda.amazonaws.com"                  }              }          }      ]  }  |     Used to pass role to lambda service on Target Account.  |
-|                                               |                                                                                                                                                                                                                                                                                                                                                                                                                                                        |                                                             |
-|                                               |                                                                                                                                                                                                                                                                                                                                                                                                                                                        |                                                             |
-|                                               |                                                                                                                                                                                                                                                                                                                                                                                                                                                        |                                                             |
-|                                               |                                                                                                                                                                                                                                                                                                                                                                                                                                                        |                                                             |
-|                                               |                                                                                                                                                                                                                                                                                                                                                                                                                                                        |                                                             |
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": "iam:PassRole",
+            "Resource": "arn:aws:iam::SPOTCONNECTACCOUNT:role/*AssumeRole*",
+            "Condition": {
+                "StringEquals": {
+                    "iam:PassedToService": "lambda.amazonaws.com"
+                }
+            }
+        }
+    ]
+}
+```
 
-5. Create an inline policy in Target Account Assumed Role to onboard Spot user policy on the Target Account. Use the policy definition `OnboardSpotUserPolicyForTargetAccount` below.
+3. Replace `SPOTCONNECTACCOUNT` with correct AWS account ID in line #8.
+4. Create an inline policy in Target Account Assumed Role to onboard Spot user policy on the Target Account. Use the policy definition `OnboardSpotUserPolicyForTargetAccount`:
 
-|       Name                                  |                                                                                                                                                                                                                                                                                                                                                                                                                            Definition                                                                                                                                                                                                                                                                                                                                                                                                                       |                            Comment                       |
-|---------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:--------------------------------------------------------:|
-|      OnboardSpotUserPolicyForTargetAccount  |     {      "Version": "2012-10-17",      "Statement": [          {              "Action": [                  "s3:GetObject",                  "iam:GetRole",                  "iam:GetPolicy",                  "iam:DeletePolicy",                  "iam:CreateRole",                  "iam:DeleteRole",                  "iam:AttachRolePolicy",                  "iam:CreatePolicy",                  "iam:DetachRolePolicy",                  "iam:ListPolicyVersions",                  "iam:DeleteRolePolicy",                  "iam:UpdateRole",                  "iam:CreatePolicyVersion",                  "iam:DeletePolicyVersion",                  "cloudformation:CreateStackInstances",                  "cloudformation:CreateStackSet"              ],              "Resource": "*",              "Effect": "Allow"          }      ]  }  |     Used to onboard Spot user policy on Target Account.  |
-|                                             |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |                                                          |
-|                                             |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |                                                          |
-|                                             |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |                                                          |
-|                                             |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |                                                          |
-|                                             |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |                                                          |
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Action": [
+                "s3:GetObject",
+                "iam:GetRole",
+                "iam:GetPolicy",
+                "iam:DeletePolicy",
+                "iam:CreateRole",
+                "iam:DeleteRole",
+                "iam:AttachRolePolicy",
+                "iam:CreatePolicy",
+                "iam:DetachRolePolicy",
+                "iam:ListPolicyVersions",
+                "iam:DeleteRolePolicy",
+                "iam:UpdateRole",
+                "iam:CreatePolicyVersion",
+                "iam:DeletePolicyVersion",
+                "cloudformation:CreateStackInstances",
+                "cloudformation:CreateStackSet"
+            ],
+            "Resource": "*",
+            "Effect": "Allow"
+        }
+    ]
+}
+```
 
-6. Create an inline policy in Target Account Assumed Role for ECR-related access for Spot Connect on the Target Account. Use the policy definition `ECR-Related-Policy-For-Spot-ConnectForTargetAccount` below. 
+5. Create an inline policy in Target Account Assumed Role for ECR-related access for Spot Connect on the Target Account. Use the following policy definition `ECR-Related-Policy-For-Spot-ConnectForTargetAccount`: 
 
-* If needed, the ECR Resource on line #34 can be narrowed down further by setting it to `"Resource": "arn:aws:ecr:us-west-2:SPOTCONNECTACCOUNT:repository/spot-connect-lambda/python-exec-engine"`
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "ecr:DescribeImageScanFindings",
+                "ecr:GetLifecyclePolicyPreview",
+                "ecr:GetDownloadUrlForLayer",
+                "ecr:DescribeImageReplicationStatus",
+                "ecr:ListTagsForResource",
+                "ecr:ListImages",
+                "ecr:BatchGetRepositoryScanningConfiguration",
+                "ecr:BatchGetImage",
+                "ecr:DescribeImages",
+                "ecr:DescribeRepositories",
+                "ecr:BatchCheckLayerAvailability",
+                "ecr:GetRepositoryPolicy",
+                "ecr:GetLifecyclePolicy"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": [
+                "ecr:GetRegistryPolicy",
+                "ecr:DescribeRegistry",
+                "ecr:DescribePullThroughCacheRules",
+                "ecr:GetAuthorizationToken",
+                "ecr:GetRegistryScanningConfiguration"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
+```
 
-| Name                                                |                                                                                                                                                                                                                                                                                                                                                                              Definition                                                                                                                                                                                                                                                                                                                                                                              |                                Comment                                |
-|-----------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------:|
-| ECR-Related-Policy-For-Spot-ConnectForTargetAccount | { "Version": "2012-10-17", "Statement": [ { "Sid": "VisualEditor0", "Effect": "Allow", "Action": [ "ecr:DescribeImageScanFindings", "ecr:GetLifecyclePolicyPreview", "ecr:GetDownloadUrlForLayer", "ecr:DescribeImageReplicationStatus", "ecr:ListTagsForResource", "ecr:ListImages", "ecr:BatchGetRepositoryScanningConfiguration", "ecr:BatchGetImage", "ecr:DescribeImages", "ecr:DescribeRepositories", "ecr:BatchCheckLayerAvailability", "ecr:GetRepositoryPolicy", "ecr:GetLifecyclePolicy" ], "Resource": "*" }, { "Sid": "VisualEditor1", "Effect": "Allow", "Action": [ "ecr:GetRegistryPolicy", "ecr:DescribeRegistry", "ecr:DescribePullThroughCacheRules", "ecr:GetAuthorizationToken", "ecr:GetRegistryScanningConfiguration" ], "Resource": "*" } ] } | Used to allow Target Account to access Spot Connect Host Account ECR. |
+* If needed, the ECR Resource in line #34 can be narrowed down further by setting it to `"Resource": "arn:aws:ecr:us-west-2:SPOTCONNECTACCOUNT:repository/spot-connect-lambda/python-exec-engine"`.
 
 #### Trust Relationships on Target Account 
 
 Modify the `TrustRelationShipForTargetAccount` template defined below with appropriate values for `SPOTCONNECTACCOUNT and EXTERNALID. Append it to the existing list of Trust Relationships for Target Account Assumed Role. 
 
-|       Name                              |                                                                                                                                                                                                Definition                                                                                                                                                                                           |                                        Comment                                    |
-|-----------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------:|
-|      TrustRelationShipForTargetAccount  |     { "Version": "2012-10-17", "Statement": [ { "Sid": "Statement1", "Effect": "Allow", "Principal": { "AWS": "arn:aws:iam::SPOTCONNECTACCOUNT:root" }, "Action": "sts:AssumeRole", "Condition": { "StringEquals": { "sts:ExternalId": "EXTERNALID" } } }, { "Sid": "LambdaServicePolicy", "Effect": "Allow", "Principal": { "Service": "lambda.amazonaws.com" }, "Action": "sts:AssumeRole" } ] }  |     Used to establish trust relationship for Spot Connect in the Target Account.  |
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "Statement1",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::SPOTCONNECTACCOUNT:root"
+            },
+            "Action": "sts:AssumeRole",
+            "Condition": {
+                "StringEquals": {
+                    "sts:ExternalId": "EXTERNALID"
+                }
+            }
+        },
+        {
+            "Sid": "LambdaServicePolicy",
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "lambda.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+```
 
 ### Integration Actions 
 
