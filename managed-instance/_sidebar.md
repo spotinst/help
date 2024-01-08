@@ -24,6 +24,7 @@
       - [Persist Network](managed-instance/azure/features/persist-network)
       - [Stateful Node Actions](managed-instance/azure/features/actions)
       - [Schedule Stateful Node Actions](managed-instance/azure/features/schedule)
+      - [Swap OS Disk](managed-instance/azure/features/swap-os-disk)
     - [Tutorials](managed-instance/azure/tutorials/)
       - [Manage Stateful Nodes](managed-instance/azure/tutorials/manage)
       - [View Details](managed-instance/azure/tutorials/view-details)
