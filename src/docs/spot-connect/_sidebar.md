@@ -17,6 +17,7 @@
     - [EC2](spot-connect/actions/ec2)
     - [HTTP Send Request](spot-connect/actions/http)
     - [JSONPath](spot-connect/actions/jsonpath)
+    - [Python Execute](spot-connect/actions/python_execute)
     - [Send Email](spot-connect/actions/send_email)
     - [String Transformers](spot-connect/actions/string_transformers)
   - [Integrations](spot-connect/integrations/)
