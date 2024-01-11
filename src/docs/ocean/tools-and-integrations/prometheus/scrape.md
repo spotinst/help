@@ -32,16 +32,6 @@ Although the exporter application is independent of the Ocean controller, a func
 ### Via Infrastructure as Code
 Alternatively, use the [Terraform module](https://registry.terraform.io/modules/spotinst/ocean-metric-exporter/spotinst/latest) to incorporate the exporter in your Infrastructure as Code (IaC) setup.
 
-### Via Kubernetes CLI
-
-Run the following command:
-```
-kubectl apply -f
-https://spotinst-public.s3.amazonaws.com/integrations/kubernetes/spot-ocean-metric-exporter-beta/spot_ocean_metric_exporter.yaml
-```
-
-This yaml file contains the Kubernetes deployment and the Kuberneres service with the latest version.
-
 ### Configure Prometheus  
 
 This step configures Prometheus to generate scrape requests to the Kubernetes service that exposes the Ocean exporter.
