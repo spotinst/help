@@ -61,7 +61,7 @@ Example of the JSON object:
 
 #### Option 2: Manual Trigger 
 
-Use the API to manually trigger the AMI auto-update process. The body of the API call should contain the following parameters: 
+Use the API to [manually trigger the AMI auto-update](https://docs.spot.io/api/#tag/Ocean-AWS/operation/oceanAwsAmiAutoUpdate) process. The body of the API call should contain the following parameters: 
 
 * `"patch": true` - The auto-update process will update the VNGs’ images with the latest security patches. 
 * `"minorVersion": true` - The auto-update process will update the VNGs’ images with the AMI to match the Kubernetes control plane version. 
