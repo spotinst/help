@@ -63,9 +63,9 @@ Example of the JSON object:
 
 Use the API to manually trigger the AMI auto-update process. The body of the API call should contain the following parameters: 
 
-* "patch": true - The auto-update process will update the VNGs’ images with the latest security patches. 
-* "minorVersion": true - The auto-update process will update the VNGs’ images with the AMI to match the Kubernetes control plane version. 
-* "clusterRoll": true - When the AMI is updated according to the configuration set, a cluster roll will be triggered. 
+* `"patch": true` - The auto-update process will update the VNGs’ images with the latest security patches. 
+* `"minorVersion": true` - The auto-update process will update the VNGs’ images with the AMI to match the Kubernetes control plane version. 
+* `"clusterRoll": true` - When the AMI is updated according to the configuration set, a cluster roll will be triggered. 
 
 Example of the JSON object for the API call: 
 
