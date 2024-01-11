@@ -30,7 +30,7 @@ Add the new `amiAutoUpdate` object under `ocean.scheduling.tasks.parameters`. 
 
 * `"patch": true` - The auto-update process will update the VNGs’ images with the latest security patches. 
 * `"minorVersion": true` - The auto-update process will update the VNGs’ AMI with the AMI to match the Kubernetes control plane version. 
-* `"clusterRoll": true` (optional) - When the AMI is updated according to the configuration set, a cluster roll can be triggered, providing an automatic and seamless transition to the updated environment. 
+* `"clusterRoll": true` (optional) - When the AMI is updated according to the configuration set, a cluster roll can be triggered, providing an automatic and seamless transition to the updated environment. When set to ‘null’, once the AMIs are updated, a cluster roll will not be triggered. 
 
 Under `scheduling.tasks`, set `isEnabled` to true and the `taskType` to `amiAutoUpdate` to activate the process. You also have the option to add a cron expression that sets the frequency of the triggering of the auto-update process. If a cron is not set, the auto-update process will be triggered every 24 hours. 
 
@@ -65,7 +65,7 @@ Use the API to manually trigger the AMI auto-update process. The body of the API
 
 * `"patch": true` - The auto-update process will update the VNGs’ images with the latest security patches. 
 * `"minorVersion": true` - The auto-update process will update the VNGs’ images with the AMI to match the Kubernetes control plane version. 
-* `"clusterRoll": true` - When the AMI is updated according to the configuration set, a cluster roll will be triggered. 
+* `"clusterRoll": true` - When the AMI is updated according to the configuration set, a cluster roll will be triggered. When set to ‘null’, once the AMIs are updated, a cluster roll will not be triggered. 
 
 Example of the JSON object for the API call: 
 
