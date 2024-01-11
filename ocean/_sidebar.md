@@ -78,7 +78,7 @@
       - [Metadata Labels](ocean/tools-and-integrations/kops/metadata-labels)
     - [OpenShift](ocean/tools-and-integrations/openshift/)
       - [Create Ocean Cluster from v4.x](ocean/tools-and-integrations/openshift/create-cluster-v4x)
-      - [Create Ocean Cluster from v4.11](ocean/tools-and-integrations/openshift/create-cluster-v311)
+      - [Create Ocean Cluster from v3.11](ocean/tools-and-integrations/openshift/create-cluster-v311)
     - [Prometheus](ocean/tools-and-integrations/prometheus/)
       - [Scrape Ocean Metrics](ocean/tools-and-integrations/prometheus/scrape)
   - [Troubleshooting](ocean/troubleshooting/)
