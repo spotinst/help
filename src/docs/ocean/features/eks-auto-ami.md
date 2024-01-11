@@ -65,7 +65,7 @@ Use the API to manually trigger the AMI auto-update process. The body of the API
 
 * `"patch": true` - The auto-update process will update the VNGs’ images with the latest security patches. 
 * `"minorVersion": true` - The auto-update process will update the VNGs’ images with the AMI to match the Kubernetes control plane version. 
-* `"clusterRoll": true` - When the AMI is updated according to the configuration set, a cluster roll will be triggered. When set to ‘null’, once the AMIs are updated, a cluster roll will not be triggered. 
+* `"clusterRoll"` - When the AMI is updated according to the configuration set, a cluster roll will be triggered. When set to ‘null’, once the AMIs are updated, a cluster roll will not be triggered. 
 
 Example of the JSON object for the API call: 
 
