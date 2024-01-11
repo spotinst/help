@@ -2,7 +2,7 @@
 
 Operating an Amazon EKS cluster involves managing the compatibility between the Kubernetes control plane and the nodes, especially when upgrading the EKS cluster version. While it's not mandatory for the control plane and worker nodes to run identical versions, keeping the worker nodes’ version up to date with the control plane is crucial to use the latest features and improvements in Kubernetes. Moreover, ensuring that the worker nodes are running the latest AMIs is vital for maintaining the overall security of your cluster. However, the process of manually updating the worker nodes each time the control plane is upgraded or when new security patches are released can be a challenging, error-prone, and time-consuming task. 
 
-The Ocean EKS AMI Auto-Update feature addresses these challenges. This feature automates the process of updating the nodes' AMIs, which are set on the Ocean Virtual Node Group (VNG), when the control plane is upgraded or when new security patches are available. This new process saves time, reduces the likelihood of errors, and enhances the overall security of your EKS cluster by ensuring that the nodes are always running the most secure and compatible version of the AMI. 
+The Ocean EKS AMI Auto-Update feature addresses these challenges. This feature automates the process of updating the nodes' AMIs, which are set on the Ocean Virtual Node Group (VNG), when the control plane is upgraded or when new security patches are available. This new process saves time, reduces the likelihood of errors, and enhances the overall security of your EKS cluster by ensuring that the nodes always run the most secure and compatible version of the AMI. 
  
 When the EKS control plane is upgraded or when new security patches are released, the feature immediately detects the need to upgrade the nodes and takes action accordingly, eliminating the need for manual intervention. It also allows flexibility by configuring a specific time for checking updates, ensuring that the update process does not cause unexpected disruptions. 
 
@@ -26,13 +26,13 @@ There are two options to enable the auto-update feature:
 
 #### Option 1: Configuration in the Cluster 
 
-Add the new 'amiAutoUpdate' object under ‘ocean.scheduling.tasks.parameters’. In this object configure the ‘patch’ and ‘minorVersion’ parameters. 
+Add the new `amiAutoUpdate` object under `ocean.scheduling.tasks.parameters`. In this object configure the `patch` and `minorVersion` parameters. 
 
-* ‘"patch": true’ - The auto-update process will update the VNGs’ images with the latest security patches. 
-* ‘"minorVersion": true’ - The auto-update process will update the VNGs’ AMI with the AMI to match the Kubernetes control plane version. 
-* ‘"clusterRoll": true’ (optional) - When the AMI is updated according to the configuration set, a cluster roll can be triggered, providing an automatic and seamless transition to the updated environment. 
+* `"patch": true` - The auto-update process will update the VNGs’ images with the latest security patches. 
+* `"minorVersion": true` - The auto-update process will update the VNGs’ AMI with the AMI to match the Kubernetes control plane version. 
+* `"clusterRoll": true` (optional) - When the AMI is updated according to the configuration set, a cluster roll can be triggered, providing an automatic and seamless transition to the updated environment. 
 
-Under ‘scheduling.tasks’, set `isEnabled` to true and the `taskType` to `amiAutoUpdate` to activate the process. You also have the option to add a cron expression that sets the frequency of the triggering of the auto-update process. If a cron is not set, the auto-update process will be triggered every 24 hours. 
+Under `scheduling.tasks`, set `isEnabled` to true and the `taskType` to `amiAutoUpdate` to activate the process. You also have the option to add a cron expression that sets the frequency of the triggering of the auto-update process. If a cron is not set, the auto-update process will be triggered every 24 hours. 
 
 Example of the JSON object: 
 
