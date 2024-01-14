@@ -112,7 +112,7 @@ This section provides a list of requirements for an Ocean Spark cluster deployme
 
 ### Azure
 
-- The Kubernetes cluster should use a [version supported by Azure](https://learn.microsoft.com/en-us/azure/aks/supported-kubernetes-versions?tabs=azure-cli.). We will begin supporting, with General Availability, a version two months after the AKS GA column date listed in that linked table. We will treat the version as Deprecated at the End of life column date listed in that linked table. We will treat the version as Retired at the Platform support column date listed in that linked table. 
+- The Kubernetes cluster should use a [version supported by Azure](https://learn.microsoft.com/en-us/azure/aks/supported-kubernetes-versions?tabs=azure-cli.). Spot will begin supporting, with General Availability, a version two months after the AKS GA column date listed in that linked table. Spot will treat the version as Deprecated at the End of life column date listed in that linked table. Spot will treat the version as Retired at the Platform support column date listed in that linked table. 
 
 ## What’s Next?
 
