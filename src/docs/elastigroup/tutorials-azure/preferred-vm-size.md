@@ -20,3 +20,7 @@ Preferred Spot VM sizes enable you to set priority tiers on the Elastigroup’s 
 `"preferredSpotSizes": [     "standard_a1_v2"]` 
 
 **Note**: The preferred Spot size must be a subset of the Spot sizes. 
+
+## What’s Next? 
+
+Learn more about [Shared Image Galleries](elastigroup/features-azure/shared-image-galleries).  
