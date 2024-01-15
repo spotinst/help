@@ -15,7 +15,7 @@ You can view your license details in the License Management page. This page disp
 1. In the main menu on the left, click **Security** and then click **Administration**.  
 2. Click the **License Management** tab.  
 
-![license-1](https://github.com/spotinst/help/assets/106514736/af5c92bb-454c-4c12-b998-8605c39a50db)
+![license-2](https://github.com/spotinst/help/assets/106514736/fa7cbfa4-9f2d-4cda-a317-da8eade8a5ac)
 
 The Active License Usage bar displays the overall license consumption as a percentage as well as the number of nodes that were consumed. 
 
