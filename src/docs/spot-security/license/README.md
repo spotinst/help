@@ -2,7 +2,7 @@
 
 ## Subscription
 
-Spot Security offers an all-inclusive subscription license to protect your public cloud infrastructure, currently supporting AWS and Microsoft Azure cloud assets with an agentless assessment. You can conduct continuous scanning of your assets for misconfigurations and threat detection along with assisted remediation, track compliance adherence to the top global standards, gain visibility into your inventory, and receive proactive security alerts. Each cloud asset shall be defined as a “Node”. 
+Spot Security offers an all-inclusive subscription license to protect your public cloud infrastructure, currently supporting AWS and Microsoft Azure cloud assets with an agentless assessment. You can conduct continuous scanning of your assets for misconfigurations and threat detection along with assisted remediation, track compliance adherence to the top global standards, gain visibility into your inventory, and receive proactive security alerts. Each cloud asset shall be defined as a “**Node**”. 
 
 Licensing on Spot Security uses an upfront service credits system, with one (1) service credit = one (1) US$. For each node, you are entitled to receive ninety-nine (99) service credits per year. You may purchase additional service credits during the subscription term. The cost of such additional service credits shall be agreed by both you and NetApp. 
 
