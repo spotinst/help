@@ -5,7 +5,7 @@ The Verification Template includes a set of metrics that need to be analyzed dur
 The template is reusable and can be used and maintained over multiple services and clusters. An example of a structure is as follows:
 
 ```yaml
-kind: verificationTemplate
+kind: VerificationTemplate
 name: my-verification-template
 args:
   - name: my-secret-name
@@ -43,7 +43,7 @@ The attributes of a verification template are described below:
 * Metric.Failure.Limit: The maximum number of times the measurement is allowed to fail before the entire metric is considered failed. The default is 0.  
 * Metric.Consecutive.Error.Limit: The maximum number of times the measurement is allowed to fail in succession before the metric is considered failed. The default is 4.
 * Metric.Initial.Delay: The time it takes to start the metric measurements.
-* Provider: The name of the monitoring tool you chose for the metric. Currently supported: Prometheus, NewRelic, DataDog, Cloudwatch, Web Analysis and Job Analysis. For more information see [Verification Providers](ocean-cd/getting-started/rollout-entities/verification-provider).
+* Provider: The name of the monitoring tool you chose for the metric. Currently supported: Prometheus, NewRelic, DataDog, Cloudwatch, Web Analysis, Job Analysis and Jenkins. For more information see [Verification Providers](ocean-cd/getting-started/rollout-entities/verification-provider).
 
 ## What’s Next?
 
