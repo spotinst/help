@@ -10,7 +10,7 @@ If your current verifications and testing processes use an external tool or an a
 
 ## Supported Providers
 
-Ocean Cd supports the following providers:  
+Ocean CD supports the following providers:  
 
 * [Prometheus](ocean-cd/examples/verification-templates?id=prometheus)   
 * [NewRelic](ocean-cd/examples/verification-templates?id=new-relic)
@@ -20,7 +20,7 @@ Ocean Cd supports the following providers:
 * [Job Analysis](ocean-cd/examples/verification-templates?id=job-analysis)
 * [Jenkins](ocean-cd/examples/verification-templates?id=jenkins)
 
-You can find further details on the parameters used by the providers in the [Entities](ocean-cd/getting-started/rollout-entities/) page.
+You can find further information on the parameters used by the providers in the [Entities](ocean-cd/getting-started/rollout-entities/) page.
 
 ### Prometheus
 
@@ -102,7 +102,7 @@ Null values can appear when using Cloudwatch. They can be interpreted in two way
 
 * If a null value is encountered when its query is set as a success condition, the metric will be considered successful.
 
-For additional details on the parameters below, see the [Ocean CD API documentation](https://docs.spot.io/api/#tag/Ocean-CD).  
+For additional information on the parameters below, see the [Ocean CD API documentation](https://docs.spot.io/api/#tag/Ocean-CD).  
 
 ```yaml
 kind: "VerificationTemplate"
@@ -166,9 +166,9 @@ metrics:
 
 ## Job-Analysis
 
-A Job Analysis which will allow you to configure a Kubernetes Job at any given time during your rollout.
+A job analysis enables you to configure a Kubernetes job at any given time during your rollout.
 
-For additional details on the parameters below, see the Ocean CD API documentation.
+For additional information on the parameters below, see the Ocean CD API documentation.
 
 ```yaml
 kind: "VerificationTemplate"
@@ -217,7 +217,7 @@ metrics:
             value: param2 
 ```
 
-For more information, refer to the [CI analysis documentation](ocean-cd/concepts-features/ci-analysis). 
+For more information, refer to the [CI Analysis documentation](ocean-cd/concepts-features/ci-analysis). 
 
 ## What’s next?
 
