@@ -12,14 +12,15 @@ If your current verifications and testing processes use an external tool or an a
 
 Ocean Cd supports the following providers:  
 
-* Prometheus   
-* NewRelic
-* DataDog
-* Cloudwatch
-* Web Analysis
-* Job Analysis
+* [Prometheus](ocean-cd/examples/verification-templates?id=prometheus)   
+* [NewRelic](ocean-cd/examples/verification-templates?id=new-relic)
+* [DataDog](ocean-cd/examples/verification-templates?id=datadog)
+* [Cloudwatch](ocean-cd/examples/verification-templates?id=cloudwatch)
+* [Web Analysis](ocean-cd/examples/verification-templates?id=web-analysis)
+* [Job Analysis](ocean-cd/examples/verification-templates?id=job-analysis)
+* [Jenkins](ocean-cd/examples/verification-templates?id=jenkins)
 
-You can find further details on the parameters used by the providers in the [Entities](ocean-cd/concepts-features/entities) page.
+You can find further details on the parameters used by the providers in the [Entities](ocean-cd/getting-started/rollout-entities/) page.
 
 ### Prometheus
 
@@ -115,7 +116,7 @@ metrics:
     provider:
       cloudWatch:
         metricDataQueries:
-          - id: "healthy-rate"
+          - id: "healthy_rate"
             expression: "healthy/unhealthy"
             returnData: true
           - id: "unhealthy"
@@ -191,6 +192,32 @@ metrics:
                  name: "nginx"
              restartPolicy: "Never"
 ```
+
+## Jenkins 
+
+Jenkins should be used as a provider if you wish to incorporate CI pipelines into Ocean CD rollouts. 
+
+```yaml
+kind: "VerificationTemplate" 
+name: "jenkins-vt" 
+args: [ ] 
+metrics: 
+  - name: "jenkinsci" 
+    dryRun: true 
+    provider: 
+      jenkins: 
+        pipelineName: jenkinsPipelineName 
+        tlsVerification: false 
+        timeout: '120s' 
+        interval: '5s' 
+        parameters: 
+          - key: key1 
+            value: param1 
+          - key: key2 
+            value: param2 
+```
+
+For more information, refer to the [CI analysis documentation](ocean-cd/concepts-features/ci-analysis). 
 
 ## What’s next?
 
