@@ -56,11 +56,11 @@ You can add these actions in the Spot Connect workflow builder as part of your w
 * Splunk On-Call Resolve Incidents  
 * Splunk On-Call Reroute Incidents
 
-## Splunk On-Call (VictorOps) Trigger  
+### Splunk On-Call (VictorOps) Trigger  
 
 To automatically execute a Spot Connect workflow with a Splunk On-Call (VictorOps) alert in real-time, complete the following steps to set up a webhook integration between Spot Connect and Splunk On-Call (VictorOps). 
 
-### In Spot Connect 
+#### In Spot Connect 
 
 If you do not already have a Spot Connect API Key, create one by completing the following steps: 
 
@@ -68,7 +68,7 @@ If you do not already have a Spot Connect API Key, create one by completing the 
 2. Scroll down and under Resources, click **API Keys**. 
 3. Create an API Key and click **Save**. 
 
-### Create a New Workflow 
+#### Create a New Workflow 
 
 1. In the left main menu, click **Connect** and click **Workflows**. 
 2. Click **New Workflow** and enter a name for the workflow. 
@@ -79,7 +79,7 @@ If you do not already have a Spot Connect API Key, create one by completing the 
 
 ![splunk-victor-4](https://github.com/spotinst/help/assets/106514736/7660fe5b-1f67-43e7-a8ca-42149dfca010)
 
-### In Splunk On-Call (VictorOps) 
+#### In Splunk On-Call (VictorOps) 
 
 1. Log in to your Splunk On-Call (VictorOps) account using your credentials. 
 2. In the top navigation bar, click **Integrations**. 
