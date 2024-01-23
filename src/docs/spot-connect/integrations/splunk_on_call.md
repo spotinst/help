@@ -52,11 +52,11 @@ Follow these steps in your Splunk On-Call (VictorOps) account to obtain the desi
 
 You can add these actions in the Spot Connect workflow builder as part of your workflow. 
 
-* Splunk On-Call (VictorOps) Trigger 
-* Splunk On-Call Resolve Incidents  
-* Splunk On-Call Reroute Incidents
+* [Splunk On-Call (VictorOps) Trigger](spot-connect/integrations/splunk_on_call?id=splunk-on-call-victorops-trigger)  
+* [Splunk On-Call Resolve Incidents](spot-connect/integrations/splunk_on_call?id=splunk-on-call-resolve-incidents)  
+* [Splunk On-Call Reroute Incidents](spot-connect/integrations/splunk_on_call?id=splunk-on-call-reroute-incidents)
 
-### Splunk On-Call (VictorOps) Trigger  
+### Splunk On-Call (VictorOps) Trigger
 
 To automatically execute a Spot Connect workflow with a Splunk On-Call (VictorOps) alert in real-time, complete the following steps to set up a webhook integration between Spot Connect and Splunk On-Call (VictorOps). 
 
