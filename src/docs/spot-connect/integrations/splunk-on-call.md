@@ -79,5 +79,115 @@ If you do not already have a Spot Connect API Key, create one by completing the 
 
 ![splunk-victor-4](https://github.com/spotinst/help/assets/106514736/7660fe5b-1f67-43e7-a8ca-42149dfca010)
 
-### 
+### In Splunk On-Call (VictorOps) 
 
+1. Log in to your Splunk On-Call (VictorOps) account using your credentials. 
+2. In the top navigation bar, click **Integrations**. 
+3. Click **Outgoing Webhooks**. 
+
+![splunk-victor-5](https://github.com/spotinst/help/assets/106514736/0719fdc4-588a-4082-a5b8-0d534a68aea7)
+
+4. Click **Add Webhook**.  
+5. Select your desired event type.  
+6. Select method to POST.  
+7. Add custom header. Put `x-api-key` in Key input box.  
+8. Go to your workflow. Select trigger node. From the right panel, copy the Webhook API Key Value. Paste it into the Value input box.  
+9. Copy and paste Workflow Webhook URL from your workflow into the ‘To:’ input box. 
+
+![splunk-victor-6](https://github.com/spotinst/help/assets/106514736/9969321a-d610-4bad-96f4-cdf7462f8707)
+
+10. Click **Save**.
+
+#### Action Example 
+
+In your Splunk On-Call (VictorOps) account:  
+
+1. Click **Incidents** and then **Create Incident**. 
+
+![splunk-victor-7](https://github.com/spotinst/help/assets/106514736/cd74ba37-f2b0-48f6-80e0-d1c335e22f59)
+
+2. Select **Teams/Policies**. 
+3. Enter an Incident Description.  
+4. Enter an Incident Body.  
+
+![splunk-victor-8](https://github.com/spotinst/help/assets/106514736/a2df7957-72e8-4cf5-b0f9-7c53bd7d6e13)
+
+5. Click **Create Incident**.  
+6. Spot Connect receives the incident webhook request and triggers your workflow. 
+
+![splunk-victor-9](https://github.com/spotinst/help/assets/106514736/d07a7c99-35ad-48e5-9237-1c9fbb216a93)
+
+Execution:  
+
+![splunk-victor-10](https://github.com/spotinst/help/assets/106514736/309f3cbc-86b9-41c7-bc78-273baff1a3d7)
+
+### Splunk On-Call Resolve Incidents 
+
+Use this action node to resolve a list of Splunk On-Call (VictorOps) incidents.
+
+#### Input
+
+|       Parameter               |                        Description                    |      Required  |
+|-------------------------------|:-----------------------------------------------------:|:--------------:|
+|      Splunk On-Call Instance  |     Splunk On-Call (VictorOps) integration instance.  |     True       |
+|      Incident Numbers         |     List of incidents to reroute                      |     True       |
+|      Username                 |     User to resolve incidents                         |     True       |
+
+
+#### Output
+
+|       Parameter         |       Type  |                         Description                    |
+|-------------------------|:-----------:|:------------------------------------------------------:|
+|      execution_message  |     Object  |     JSON of Splunk On-Call resolve incident execution  |
+|      execution_status   |     String  |     Status of run (ie: S_OK / E_FAIL)                  |
+
+#### Action Example 
+
+1. In the Spot Connect console click **Workflows** and then **New Workflow**. 
+2. Give your workflow a name and select **Manual Trigger**. 
+3. Click **Create Workflow**. 
+4. From the left panel, drag and drop Splunk On-Call Resolve Incidents action node in the workflow builder.  
+5. Select an instance in the Splunk On-Call Resolve Incidents drop-down menu and then your Splunk On-Call Instance.  
+6. Provide the Incident Number(s) you want to resolve.  
+7. Select **Username** and click **Run Now**. 
+
+#### Input
+
+![splunk-victor-11](https://github.com/spotinst/help/assets/106514736/2d358d32-0d50-4841-96b8-8f7279795869)
+
+#### Output
+
+![splunk-victor-12](https://github.com/spotinst/help/assets/106514736/6dbc5cbb-e947-487e-a547-8374e4442532)
+
+#### Splunk On-Call Reroute Incidents 
+
+Use this action node to reroute a list of Splunk On-Call (VictorOps) incidents. 
+
+#### Input
+
+|       Parameter               |                              Description                         |      Required  |
+|-------------------------------|:----------------------------------------------------------------:|:--------------:|
+|      Splunk On-Call Instance  |     Splunk On-Call (VictorOps) integration instance              |     True       |
+|      Incident Numbers         |     List of incidents to reroute                                 |     True       |
+|      Username                 |     User to reroute incidents                                    |     True       |
+|      Target Users             |     Select one or more users to reroute incidents to             |     False *    |
+|      Target Policies          |     Select one or more escalation policies to reroute incidents  |     False *    |
+
+* Target Users and/or Target Policies are required for rerouting incidents. 
+
+#### Output
+
+|       Parameter         |      Description  |                           Required                      |
+|-------------------------|:-----------------:|:-------------------------------------------------------:|
+|      execution_message  |     Object        |     JSON of Splunk On-Call reroute incidents execution  |
+|      execution_status   |     String        |     Status of run (ie: S_OK / E_FAIL)                   |
+
+In Spot Connect:  
+
+1. In the Spot Connect console click **Workflows** and then **New Workflow**. 
+2. Give your workflow a name and select **Manual Trigger**. 
+3. Click **Create Workflow**. 
+4. From the left panel, drag and drop Splunk On-Call Reroute Incidents action node in your workflow builder.  
+5. Select an instance in the Splunk On-Call Reroute Incidents drop-down menu and then your Splunk On-Call Instance. 
+6. Provide Incident Number(s) you want to reroute.  
+7. Select Username and click **Run Now**.  
