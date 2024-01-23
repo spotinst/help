@@ -3,9 +3,10 @@
 - <a href="/" class="sidebar-home"><i data-feather="arrow-left" class="sidebar-back-icon"></i>Back to Main Tree</a>
 - [Eco](eco/)
   - [Getting Started](eco/getting-started/)
-    - [Connect your AWS Account](eco/getting-started/connect-your-aws-account)
+    - [Connect AWS to Eco](eco/getting-started/connect-your-aws-account)
     - [Connect Account: Customer Working with AWS MSP](eco/getting-started/connect-account-customer-working-with-msp)
     - [Connect Azure to Eco](eco/getting-started/connect-azure-account)
+    - [Connect GC to Eco](eco/getting-started/connect-gc-account)
     - [Eco Savings Blox](eco/getting-started/eco-savings-blox)
   - [AWS Tutorials](eco/tutorials/)
     - [Review AWS Commitment Spending Analysis](eco/tutorials/review-ri-spending-analysis)
