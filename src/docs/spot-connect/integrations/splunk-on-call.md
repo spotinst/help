@@ -35,8 +35,8 @@ Follow these steps in your Splunk On-Call (VictorOps) account to obtain the desi
 ![splunk-victor-2](https://github.com/spotinst/help/assets/106514736/8fb62c00-308e-4b4c-9a44-fe7005fdece3)
 
 5. Click **New Key**. 
-6. Provide a descriptive name for the API key in the **Description** field. 
-7. (Optional) check the **Read-only** checkbox if you want to restrict the key's permissions to GET requests. 
+6. Enter a descriptive name for the API key in the **Description** field. 
+7. (Optional) Mark the **Read-only** checkbox if you want to restrict the key's permissions to GET requests. 
 8. Click **Create Key**. 
 
 ![splunk-victor-3](https://github.com/spotinst/help/assets/106514736/0d9ff482-a36c-4b5f-9ed6-0684ba905261)
@@ -90,9 +90,9 @@ If you do not already have a Spot Connect API Key, create one by completing the 
 4. Click **Add Webhook**.  
 5. Select your desired event type.  
 6. Select method to POST.  
-7. Add custom header. Put `x-api-key` in Key input box.  
-8. Go to your workflow. Select trigger node. From the right panel, copy the Webhook API Key Value. Paste it into the Value input box.  
-9. Copy and paste Workflow Webhook URL from your workflow into the ‘To:’ input box. 
+7. Add custom header. Put `x-api-key` in Key input field.  
+8. Go to your workflow. Select trigger node. From the right panel, copy the Webhook API Key Value. Paste it into the Value input field.  
+9. Copy and paste Workflow Webhook URL from your workflow into the ‘To:’ input field. 
 
 ![splunk-victor-6](https://github.com/spotinst/help/assets/106514736/9969321a-d610-4bad-96f4-cdf7462f8707)
 
@@ -182,6 +182,8 @@ Use this action node to reroute a list of Splunk On-Call (VictorOps) incidents.
 |      execution_message  |     Object        |     JSON of Splunk On-Call reroute incidents execution  |
 |      execution_status   |     String        |     Status of run (ie: S_OK / E_FAIL)                   |
 
+#### Action Example
+
 In Spot Connect:  
 
 1. In the Spot Connect console click **Workflows** and then **New Workflow**. 
@@ -191,3 +193,11 @@ In Spot Connect:
 5. Select an instance in the Splunk On-Call Reroute Incidents drop-down menu and then your Splunk On-Call Instance. 
 6. Provide Incident Number(s) you want to reroute.  
 7. Select Username and click **Run Now**.  
+
+#### Input
+
+![splunk-victor-13](https://github.com/spotinst/help/assets/106514736/f6560ea5-16db-44a2-a08c-9a262ff7dd6b)
+
+#### Output
+
+![splunk-victor-14](https://github.com/spotinst/help/assets/106514736/f481cf10-e86f-426c-aa12-e76bc796f215)
