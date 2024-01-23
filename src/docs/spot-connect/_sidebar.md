@@ -41,6 +41,7 @@
     - [Prometheus](spot-connect/integrations/prometheus)
     - [Slack](spot-connect/integrations/slack)
     - [Splunk](spot-connect/integrations/splunk)
+    - [Splunk On-Call (VictorOps)](spot-connect/integrations/splunk_on_call)
     - [Spot](spot-connect/integrations/spot)
     - [Spot Security](spot-connect/integrations/spot_security)
     - [SSH Targets](spot-connect/integrations/ssh)
