@@ -97,7 +97,7 @@ Examples:
 The following rules apply to policies:
 * An action that is not explicitly allowed by a policy is denied by default.
 * A policy-based user with no policies is equivalent to a viewer user. Organization administrators, account editors, and policy-based users with the proper permissions are able to grant permissions.
-* All API tokens that belong to you will be affected by the your current policy.
+* All API tokens that belong to you will be affected by your current policy.
 * Permissions to create objects (for example: elastigroup:create*) do not grant permissions on the created objects themselves.
 
 ### Policy Conditions
@@ -126,7 +126,7 @@ This means that all the operators should return true.
 
 * **Resource retrieval**:  
 Currently supports AWS, Azure, and Ocean CD resources.
-This part is responsible for the definition of which resource should be tested with the condition operator. It consists of a Spot prefix (`spot`) and resource name (`elastigroup`, `ocean`, etc.), separated by the character:
+This part is responsible for the definition of which resource should be tested with the condition operator. It consists of a Spot prefix (`spot`) and resource name (`elastigroup`, `ocean`, etc.), separated by the character `:`.
 When specifying an Ocean CD resource, the correct usage should be:
 
 ```
