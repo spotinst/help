@@ -315,7 +315,7 @@ Action to fetch Rightsizing recommendations from Spot Ocean cluster and update K
 
 #### Action Example
 
-<img width="1088" alt="spot-int-9" src="https://github.com/spotinst/help/assets/106514736/444f6bc4-3791-46d7-9ce4-33927a41872c">
+<img width="767" alt="spot-int-9" src="https://github.com/spotinst/help/assets/106514736/61a24dd8-5efd-4cab-b307-404cd0bf62d3">
 
 Complete the following information:  
 
