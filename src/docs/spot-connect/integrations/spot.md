@@ -257,14 +257,14 @@ Use this action to fetch the aggregated cost data for Spot Ocean AWS ECS cluster
 
 #### Input
 
-|       Parameter      |                                                                                         Description                                                                                    |      Required  |   |
-|----------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:--------------:|---|
-|      Spot Instance   |     Select a Spot integration instance.                                                                                                                                                |     True       |   |
-|      Spot Account    |     Select a Spot account.                                                                                                                                                             |     True       |   |
-|      Cluster Type    |     Select a cluster type. Currently only ECS is supported.                                                                                                                            |     True       |   |
-|      Ocean Cluster   |     Select Spot Ocean Cluster ID from the dropdown                                                                                                                                     |     True       |   |
-|      Number Of Days  |     Number of days to collect data for.                                                                                                                                                |     True       |   |
-|      End Time        |     End Time.   If provided, Number of Days is calculated backwards from this.   Otherwise, the node will collect data based on Number of Days for current date when it is triggered.  |     False      |   |
+|       Parameter      |                                                                                         Description                                                                                    |                    Required                |
+|----------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:------------------------------------------:|
+|      Spot Instance   |     Select a Spot integration instance.                                                                                                                                                |     True                                   |
+|      Spot Account    |     Select a Spot account.                                                                                                                                                             |     True                                   |
+|      Cluster Type    |     Cluster type can be K8S or ECS                                                                                                                                                     |     True   Note: Only ECS is supported.    |
+|      Ocean Cluster   |     Select Spot Ocean Cluster ID from the dropdown                                                                                                                                     |     True                                   |
+|      Number Of Days  |     Number of days to collect data for.                                                                                                                                                |     True                                   |
+|      End Time        |     End Time.   If provided, Number of Days is calculated backwards from this.   Otherwise, the node will collect data based on number of days for current date when it is triggered.  |     False                                  |
 
 #### Output
 
@@ -292,27 +292,26 @@ Action to fetch Rightsizing recommendations from Spot Ocean cluster and update K
 
 #### Input
 
-|       Parameter                      |                                          Description                                     |      Required  |   |
-|--------------------------------------|:----------------------------------------------------------------------------------------:|:--------------:|---|
-|      Spot Instance                   |     Select a Spot integration instance                                                   |     True       |   |
-|      Spot Account                    |     Select a Spot account                                                                |     True       |   |
-|      Ocean Cluster                   |     Select Spot Ocean Cluster from the dropdown                                          |     True       |   |
-|      AWS S3 Bucket with Helm config  |     AWS S3 bucket where Helm config file is stored                                       |     False      |   |
-|      AWS S3 Prefix                   |     Complete path in front of the object name (including the bucket name)                |     False      |   |
-|      Deployment YAML or Values YAML  |     Helm config resources to be updated as per the Spot Ocean Recommendation             |     False      |   |
-|      Namespace                       |     Select a Kubernetes namespace for which resources to be updated                      |     False      |   |
-|      Deployment Name                 |     Select a Kubernetes deployment name for which resources to be updated                |     False      |   |
-|      Container Name                  |     Select a Kubernetes container name for which resources to be updated                 |     False      |   |
-|      Multiplier                      |     Constant for multiplying CPU and Memory resources (default multiplier value is 1.0)  |     False      |   |
+|       Parameter                                       |                                          Description                                      |      Required  |
+|-------------------------------------------------------|:-----------------------------------------------------------------------------------------:|:--------------:|
+|      Spot API Token/ Alias                            |     Select a Spot integration instance                                                    |     True       |
+|      Spot Account                                     |     Select a Spot account                                                                 |     True       |
+|      Ocean Cluster                                    |     Select Spot Ocean Cluster from the dropdown                                           |     True       |
+|      AWS S3 Bucket with K8s Manifests or Helm Config  |     AWS S3 bucket where K8s Manifests or Helm Config is stored                            |     False      |
+|      AWS S3 Prefix                                    |     Complete path in front of the object name (including the bucket name)                 |     False      |
+|      Namespace                                        |     Select one or more Kubernetes namespaces for which resources should be updated        |     False      |
+|      Deployment Name                                  |     Select one or more Kubernetes deployment names for which resources should be updated  |     False      |
+|      Container Name                                   |     Select one or more Kubernetes container names for which resources should be updated   |     False      |
+|      Multiplier                                       |     Constant for multiplying CPU and Memory resources (default multiplier value is 1.0)   |     False      |
 
 #### Output
 
-|       Parameter               |         Type    |                                      Description                                 |   |
-|-------------------------------|:---------------:|:--------------------------------------------------------------------------------:|---|
-|      values_yaml              |     String      |     Updated helm chart with Spot Ocean AWS rightsizing recommendations           |   |
-|      s3_bucket                |     String      |     AWS S3 bucket where helm charts are uploaded                                 |   |
-|      updated_helm_s3_objects  |     StringList  |     List of helm charts updated with Spot Ocean AWS rightsizing recommendations  |   |
-|      execution_status         |     String      |     Status of run (i.e.: S_OK / E_FAIL)                                          |   |
+|       Parameter               |         Type    |                                         Description                                     |
+|-------------------------------|:---------------:|:---------------------------------------------------------------------------------------:|
+|      s3_bucket                |     String      |     AWS S3 bucket where helm charts are uploaded                                        |
+|      skipped_s3_objects       |     Object      |     List of K8s manifest files skipped                                                  |
+|      updated_helm_s3_objects  |     StringList  |     List of K8s manifest files updated with Spot Ocean AWS rightsizing recommendations  |
+|      execution_status         |     String      |     Status of run (ie: S_OK / E_FAIL)                                                   |                                     |   |
 
 #### Action Example
 
@@ -320,16 +319,16 @@ Action to fetch Rightsizing recommendations from Spot Ocean cluster and update K
 
 Complete the following information:  
 
-* Spot Instance: Select a Spot by NetApp instance. 
+* Spot API Token/ Alias: Select a Spot API Token/ Alias.  
 * Spot Account: Select a Spot account. 
-* Ocean Cluster: Select a Spot Ocean AWS cluster. 
+* Ocean AWS Cluster: Select a Spot Ocean AWS cluster.
+* AWS S3 Bucket with K8s Manifests or Helm Config: Select AWS S3 bucket.  
 
 Optional:  
 
-* AWS S3 Bucket with Helm Config: Select AWS S3 bucket and S3 prefix with helm charts to be updated with Spot Ocean AWS rightsizing recommendations. 
+* AWS S3 Prefix: Select an AWS S3 prefix with helm charts to be updated with Spot Ocean AWS rightsizing recommendations. 
 * Namespace, Deployment Name, and Container Name: Select namespace deployment name and container name to fetch Spot Ocean AWS rightsizing recommendations and update helm charts. 
-* Multiplier: Provide multiplier value to multiply CPU and memory resources, default is 1.0. 
-
+* Multiplier: Provide multiplier value to multiply CPU and memory resources. The default is 1.0. 
  
 
  
