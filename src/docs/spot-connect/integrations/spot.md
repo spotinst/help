@@ -20,7 +20,7 @@ Follow the steps below in your Spot by NetApp account to generate Spot Programma
 2. In the left menu, click Settings and click **API**. 
 3. Click **Permanent Tokens** and on the top right, click **Generate Token**.
 
-<img width="433" alt="spot-int-1" src="https://github.com/spotinst/help/assets/106514736/d155c0ce-c6ec-4690-b64f-881993e85e9c">
+<img width="767" alt="spot-int-9" src="https://github.com/spotinst/help/assets/106514736/bb757911-489f-4770-b305-4bde1dbd2659">
 
 4. Select Programmatic User to generate a new permanent access token. 
 5. Enter a Token name and click **Generate**.
