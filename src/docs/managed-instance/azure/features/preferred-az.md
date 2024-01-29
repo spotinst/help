@@ -29,4 +29,4 @@ For detailed instructions on using the Stateful Node API to set the preferred AZ
 
 ## What's next? 
 
-Learn about [shutdown scripts](elastigroup/features-azure/shutdown-script-in-elastigroup-for-azure).  
+Learn about more [stateful node actions](managed-instance/azure/features/actions).  
