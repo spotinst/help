@@ -988,6 +988,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/features-azure/networking"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/elastigroup/features-azure/preffered-az</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/features-azure/preffered-az"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/features-azure/preffered-az"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/elastigroup/features-azure/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
@@ -2162,6 +2169,13 @@
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/managed-instance/azure/features/persist-os-data-disks"/>
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/managed-instance/azure/features/persist-os-data-disks"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/managed-instance/azure/features/preferred-az</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/managed-instance/azure/features/preferred-az"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/managed-instance/azure/features/preferred-az"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/managed-instance/azure/features/</loc>
