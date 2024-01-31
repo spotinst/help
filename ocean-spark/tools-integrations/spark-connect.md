@@ -16,7 +16,7 @@ To start a Spark application with SparkConnect server, either run the mainClass 
 ### Spark Connect Launch using the SparkConnectServer
 
 ```json
-"mainClass": "org.apache.spark.connect.sql.service.SparkConnectServer",
+"mainClass": "org.apache.spark.sql.connect.service.SparkConnectServer",
 "deps": {
     "packages": ["org.apache.spark:spark-connect_2.12:3.4.1"]
 }
