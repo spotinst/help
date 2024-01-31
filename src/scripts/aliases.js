@@ -1786,6 +1786,9 @@ export const aliases = (() => {
     "/ocean/getting-started/aks": "ocean/getting-started/aks/",
 
     "/ocean/tutorials/run-workloads": "ocean/",
+
+    "/spot-security/features/vulnerability/configure":
+      "spot-security/features/vulnerability/configure/",
   };
 
   for (let [key, value] of Object.entries(map)) {
