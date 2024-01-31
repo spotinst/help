@@ -1,3 +1,5 @@
+<meta name=“robots” content=“noindex”>
+
 # Ocean Controller (Beta) Installation 
 
 The beta controller is designed to align with Spot's goals of enhancing scaling experience and maximizing efficiency.  
