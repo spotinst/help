@@ -81,7 +81,7 @@ In this step you create the policy that the Spot role will use to manage resourc
 ![connect-aws-manually-013a](https://github.com/spotinst/help/assets/106514736/3b76c92b-0fb1-4f8e-a053-da1fe7316cdc)
 
 7. In the Review Policy page in the AWS console, add the name Spot-Policy for the policy and then click **Create Policy**.                                                                                                                                             
-<img src="/connect-your-cloud-provider/_media/connect-aws-manually-010.png" />
+<img width="1201" alt="connect-aws-manually-010" src="https://github.com/spotinst/help/assets/106514736/99036404-89dc-486a-86ee-8c305123a5c3">
 
 8. In the wizard in the Spot console, click **Next**.
 9. Create the IAM role by completing the steps in the order of the instructions in the wizard. 
