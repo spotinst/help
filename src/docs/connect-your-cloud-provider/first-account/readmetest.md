@@ -91,26 +91,19 @@ Connection to your Azure Billing Account is required to use Spot Eco. A connecte
  
 To connect your Azure Billing Account to Spot Eco, use the procedure described in [Connect Azure billing account to Spot](https://docs.spot.io/connect-your-cloud-provider/azure-ea-account). 
 
-### Complete Your Connection 
+## Step 4: Complete Your Connection 
 
 Once you have successfully completed all the steps in the wizard and connected your cloud provider to Spot, you will see the Spot Dashboard. 
 
-Note: Spot could take up to 24 hours to acquire all the data necessary to display in the Dashboard. 
+> Note: Spot could take up to 24 hours to acquire all the data necessary to display in the Dashboard.
 
-The Dashboard displays savings potential data about your cloud usage and provides recommendations about actions you can take next. 
+The Dashboard displays savings potential data about your cloud usage and provides recommendations about actions you can take next.
 
-Graphical user interface, application, Teams
+<img width="478" alt="connect-1st-cloud-account-8" src="https://github.com/spotinst/help/assets/106514736/55963618-dd4d-4223-b3d2-779b179c85e7">
 
-Description automatically generated 
+## What’s Next?
 
-Should be replaced with this one: 
- 
-
-What’s Next? 
-
-Learn how you can use Spot Insights & Recommendations in the Dashboard and understand your Savings Potential analysis with immediate steps you can take. 
-
-Can we expand all the workflows so they include end to end steps - so the client is able to complete self service. Currently an SA is required each time as all the steps in each workflow are not described. For example, connecting a management account requires a CUR report to be created and an s3 bucket. This is not shown here. 
+Learn how you can use Spot Insights & Recommendations in the [Dashboard](connect-your-cloud-provider/dashboard) and understand your Savings Potential analysis with immediate steps you can take.
 
  
 
