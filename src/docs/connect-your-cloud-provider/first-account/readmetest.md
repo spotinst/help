@@ -24,92 +24,74 @@ In this step, you make some choices about what type of account you are creating 
 
 The decisions are slightly different depending on the cloud provider you choose, so please follow the flow for your cloud provider: [AWS](connect-your-cloud-provider/first-account/?id=connect-aws), [GCP](connect-your-cloud-provider/first-account/?id=connect-gcp), [Azure](connect-your-cloud-provider/first-account/?id=connect-azure).
 
-Connect AWS 
-
-Linked Account 
+### Connect AWS
+#### Linked Account
 
 A linked account is an “ordinary” Spot account you use for optimizing cost and usage by using spot instances and taking advantage of numerous Spot features. Choose Linked Account to use: 
 
-Elastigroup or  
+* Elastigroup or  
+* Ocean or  
+* Spot Storage. 
 
-Ocean or  
+![connect-1st-cloud-account-1](https://github.com/spotinst/help/assets/106514736/6247bed1-a377-4446-b9f4-09b65f0fdf31)
 
-Spot Storage. 
-
- 
-
-Connect Automatically 
+**Connect Automatically** 
 
 Connecting automatically is the quicker option. Using a CloudFormation stack, this option chooses a policy and a role and associates the two for you. 
 
-Replace with this one: 
- 
+<img width="483" alt="connect-1st-cloud-account-5" src="https://github.com/spotinst/help/assets/106514736/d24f3f14-3915-4653-882f-4808aeb40b73">
 
-Connect Manually 
+**Connect Manually** 
 
 When you connect manually, you use your provider’s console (AWS) to choose the policy and role and to associate the two. 
 
- 
-
-Replace with this one: 
- 
+<img width="472" alt="connect-1st-cloud-account-6" src="https://github.com/spotinst/help/assets/106514736/de0c0f55-c6d0-41a3-ae35-1f25955fbe01">
 
 Please see the detailed procedures for connecting manually and automatically. 
 
-Management Account 
+#### Management Account 
 
 Connection to a management account is required to use Eco. A management account will enable Spot to analyze your cost and usage reports and help you save even more on your cloud expenses. 
 
- 
+![connect-1st-cloud-account-2](https://github.com/spotinst/help/assets/106514736/d34a05ab-6316-4744-80e2-d93148d2efa5)
 
- 
-
-FinOps Products 
+#### FinOps Products 
 
 Connect an account to the Billing Engine or Cost Intelligence solutions. This enables advanced analysis, rating and reporting on your cloud accounts. 
 
- 
+![connect-1st-cloud-account-3](https://github.com/spotinst/help/assets/106514736/5344a76c-d396-4fa6-bd68-de07acd67640)
 
- 
-
-Connect GCP 
-
-Linked Account 
+### Connect GCP 
+#### Linked Account 
 
 A linked account is an “ordinary” Spot account you use for optimizing cost and usage by using spot instances and taking advantage of numerous Spot features. You need a Linked Account to use Elastigroup or Ocean. 
 
 For GCP, there is currently no option to link a management account, so by default you start directly in the wizard to connect a linked account. 
 
-Connect Manually 
+**Connect Manually** 
 
 When you connect manually, you use your provider’s console (GCP) to choose the policy and role and to associate the two. For GCP, this is a quick option and we recommend choosing Manually. 
 
-Graphical user interface, text, application
-
-Description automatically generated 
-
-Replace with this one: 
- 
+<img width="472" alt="connect-1st-cloud-account-7" src="https://github.com/spotinst/help/assets/106514736/fe87ede2-8985-47bd-b0f7-a98c6ef72a8e">
 
 Please see the detailed procedures for connecting manually. 
 
-Connect Automatically 
+**Connect Automatically** 
 
 This option automatically chooses a policy and a role and associates the two for you. To connect automatically with GCP, you must have gcloud with permissions to create a service account. 
 
-Connect Azure 
+### Connect Azure 
+#### Subscription 
 
-Subscription 
+Connection to your Azure subscription is required to use Spot Elastigroup or Spot Ocean, just continue with the wizard in Spot after you choose Azure as the cloud provider. You can find a detailed description of this procedure in [Connect Azure Subscription](https://docs.spot.io/connect-your-cloud-provider/first-account/azure). 
 
-Connection to your Azure subscription is required to use Spot Elastigroup or Spot Ocean, just continue with the wizard in Spot after you choose Azure as the cloud provider. You can find a detailed description of this procedure in Connect Azure Subscription. 
-
-Billing Account 
+#### Billing Account 
 
 Connection to your Azure Billing Account is required to use Spot Eco. A connected billing account enables Spot Eco to analyze your cost, usage, and commitment data and help you save even more on your cloud expenses.  
  
-To connect your Azure Billing Account to Spot Eco, use the procedure described in Connect Azure billing account to Spot. 
+To connect your Azure Billing Account to Spot Eco, use the procedure described in [Connect Azure billing account to Spot](https://docs.spot.io/connect-your-cloud-provider/azure-ea-account). 
 
-Complete Your Connection 
+### Complete Your Connection 
 
 Once you have successfully completed all the steps in the wizard and connected your cloud provider to Spot, you will see the Spot Dashboard. 
 
