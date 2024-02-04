@@ -1,6 +1,6 @@
 # Connect AWS Account- Draft 
 
-This page describes the procedures for automatically and manually connecting your AWS account to Spot. You can also customize your account by selecting persmissions for specific Spot products and integrations with AWS.  
+This page describes the procedures for automatically and manually connecting your AWS account to Spot. You can also customize your account by selecting permissions for specific Spot products and integrations with AWS.  
 
 After signing up for Spot and creating your first Spot organization, you need to connect your Spot account to your AWS account. The following procedure describes how to connect a linked account.  
 
