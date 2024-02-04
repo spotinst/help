@@ -47,7 +47,7 @@ When you connect manually, you use your provider’s console (AWS) to choose the
 
 <img width="472" alt="connect-1st-cloud-account-6" src="https://github.com/spotinst/help/assets/106514736/de0c0f55-c6d0-41a3-ae35-1f25955fbe01">
 
-Please see the detailed procedures for connecting manually and automatically. 
+Please see the detailed [procedures](connect-your-cloud-provider/first-account/aws-manually) for connecting manually and automatically. 
 
 #### Management Account 
 

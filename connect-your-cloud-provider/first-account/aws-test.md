@@ -8,7 +8,9 @@ You can connect your account to AWS in two ways:
 * Connect manually 
 * Connect automatically 
 
-## Step 1.1: Connect Manually
+## Connect Manually
+
+### Step 1.1: Connect Manually
 
 1. After you have selected AWS as the [cloud provider](connect-your-cloud-provider/first-account/), select **Linked Account**.  
 
@@ -92,7 +94,6 @@ In this step you create the policy that the Spot role will use to manage resourc
 11. The success message below indicates that your AWS account is linked to Spot. 
 
 <img width="1145" alt="connect-aws-manually-018" src="https://github.com/spotinst/help/assets/106514736/9ddbfeaa-a0f4-4632-b13b-01e111b656c8">
-
 
 ## Connect Automatically 
 
