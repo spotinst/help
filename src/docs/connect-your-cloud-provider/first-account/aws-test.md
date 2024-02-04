@@ -22,15 +22,15 @@ You can connect your account to AWS in two ways:
 
 Mark the relevant answer and click **Next**. 
 
-<img src="/connect-your-cloud-provider/_media/connect-aws-manually-002.png" width="500" />
+![connect-aws-manually-002a](https://github.com/spotinst/help/assets/106514736/a8876bfe-5d33-4e47-9823-3e0c55c47892)
 
-**Note**: If your are connected to an AWS GovCloud or China account, you will not be able to customize your policy.  
+**Note**: If you are connected to an AWS GovCloud or China account, you will not be able to customize your policy.  
 
 ### Step 1.3: AWS Login
 
 Log in to the AWS account that you want to connect to your Spot account and click **Next**.
 
-<img src="/connect-your-cloud-provider/_media/connect-aws-manually-003.png" width="500" />
+![connect-aws-manually-003a](https://github.com/spotinst/help/assets/106514736/be4a1b85-b78d-488a-b7dd-67291146af3f)
 
 ### Step 1.4: Customize or Default Permissions 
 
@@ -50,11 +50,11 @@ When you connect your cloud account to Spot automatically or manually, you can s
 
 Expand each integration to view the actions under it.  
 
-<img width="1010" alt="connect-aws-manually-006" src="https://github.com/spotinst/help/assets/106514736/8ea47cb0-8ae7-4621-ba97-13018295a161">
+![connect-aws-manually-006a](https://github.com/spotinst/help/assets/106514736/beb14e09-7b2e-4d89-b60a-c0590969fe0d)
 
 If a permission bundle is not selected, the list of permissions under it won’t be included in the policy JSON. 
 
-Click **View JSON** to view the permissions in the JSON preview that is dynamically updated according to your selection.  
+Click **View JSON** to view the permissions in the JSON preview that is updated according to your selection.  
 
 ## Step 1.6 Create IAM Policy
 
@@ -81,8 +81,6 @@ In this step you create the policy that the Spot role will use to manage resourc
 ![connect-aws-manually-013a](https://github.com/spotinst/help/assets/106514736/3b76c92b-0fb1-4f8e-a053-da1fe7316cdc)
 
 7. In the Review Policy page in the AWS console, add the name Spot-Policy for the policy and then click **Create Policy**.                                                                                                                                             
-<img src="/connect-your-cloud-provider/_media/connect-aws-manually-009.png" />
-
 <img src="/connect-your-cloud-provider/_media/connect-aws-manually-010.png" />
 
 8. In the wizard in the Spot console, click **Next**.
@@ -93,7 +91,8 @@ In this step you create the policy that the Spot role will use to manage resourc
 
 11. The success message below indicates that your AWS account is linked to Spot. 
 
-screenshot 
+<img width="1145" alt="connect-aws-manually-018" src="https://github.com/spotinst/help/assets/106514736/9ddbfeaa-a0f4-4632-b13b-01e111b656c8">
+
 
 ## Connect Automatically 
 
@@ -109,7 +108,7 @@ Mark the relevant answer and click **Next**.
 
 ![connect-aws-manually-002a](https://github.com/spotinst/help/assets/106514736/c756df4e-a2ca-434d-87bf-78a2fcc139a0)
 
-**Note**: If your are connected to an AWS GovCloud or China account, you will not be able to customize your policy.  
+**Note**: If you are connected to an AWS GovCloud or China account, you will not be able to customize your policy.  
 
 ### Step 1.3: AWS Login 
 
