@@ -15,7 +15,7 @@ Spot advises installing the beta version in a development cluster rather than a 
 1. Run the following command to retrieve the namespace where the existing controller is installed: 
 
 ```
-export NAMESPACE=$(kubectl get cm -A \ --field-selector=metadata.name=spotinst-kubernetes-cluster-controller-config \ -o jsonpath='{.items[0].metadata.namespace}')
+export NAMESPACE=$(kubectl get cm -A --field-selector=metadata.name=spotinst-kubernetes-cluster-controller-config -o jsonpath='{.items[0].metadata.namespace}')
 ```
 
 2. Run the following commands to export the details of the existing controller:  
@@ -57,9 +57,9 @@ helm repo update
 3. Run the following command to install the controller: 
 
 ```
-helm install ocean-controller spot/ocean-kubernetes-controller -n kube-system \ 
-  --set spotinst.account=$SPOTINST_ACCOUNT \ 
-  --set spotinst.token=$SPOTINST_TOKEN \ 
+helm install ocean-controller spot/ocean-kubernetes-controller -n kube-system \
+  --set spotinst.account=$SPOTINST_ACCOUNT \
+  --set spotinst.token=$SPOTINST_TOKEN \
   --set spotinst.clusterIdentifier=$SPOTINST_CLUSTER_IDENTIFIER
 ```
 
@@ -74,14 +74,14 @@ Note:
 * (Optional) To enable the [Right Sizing](ocean/features/right-sizing) feature, set `INCLUDE_METRIC_SERVER` to `true` to install the [Metric Server](https://github.com/kubernetes-sigs/metrics-server#deployment). 
 
 ```
-curl -fsSL https://spotinst-public.s3.amazonaws.com/integrations/kubernetes/cluster-controller-v2/scripts/init.sh | \ 
-SPOTINST_TOKEN=$SPOTINST_TOKEN \ 
-SPOTINST_ACCOUNT=$SPOTINST_ACCOUNT \ 
-SPOTINST_CLUSTER_IDENTIFIER=$SPOTINST_CLUSTER_IDENTIFIER \ 
-ENABLE_OCEAN_METRIC_EXPORTER=false \ 
-ENABLE_OCEAN_NETWORK_CLIENT=false \ 
-INCLUDE_METRIC_SERVER=false \ 
-bash   
+curl -fsSL https://spotinst-public.s3.amazonaws.com/integrations/kubernetes/cluster-controller-v2/scripts/init.sh | \
+SPOTINST_TOKEN=$SPOTINST_TOKEN \
+SPOTINST_ACCOUNT=$SPOTINST_ACCOUNT \
+SPOTINST_CLUSTER_IDENTIFIER=$SPOTINST_CLUSTER_IDENTIFIER \
+ENABLE_OCEAN_METRIC_EXPORTER=false \
+ENABLE_OCEAN_NETWORK_CLIENT=false \
+INCLUDE_METRIC_SERVER=false \
+bash
 ```
  
 
