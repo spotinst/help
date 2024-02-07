@@ -4,7 +4,7 @@
 
 The beta controller is designed to align with Spot's goals of enhancing scaling experience and maximizing efficiency.  
 
-## Risks and Recommendations 
+## Limitations 
 
 Spot advises installing the beta version in a development cluster rather than a production environment.  
 
