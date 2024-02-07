@@ -4,7 +4,7 @@ The Ocean Controller is a pod that resides within your Kubernetes cluster, enabl
 
 ## High Availability
 
-Because the Ocean Controller is critical to the operation of an Ocean cluster, high availability is essential. When the Controller pod is installed, it is marked with the [highest available scheduling priority](https://kubernetes.io/docs/tasks/administer-cluster/guaranteed-scheduling-critical-addon-pods/), i.e., `priorityClassName` for the pod is set to `system-node-critical`. This ensures that if the pod ever goes into a pending status, the Kubernetes scheduler will give it the highest priority available for rescheduling, thus ensuring business continuity.
+Because the Ocean Controller is critical to the operation of an Ocean cluster, high availability is essential. When the Controller pod is installed, it is marked with the [highest available scheduling priority](https://kubernetes.io/docs/tasks/administer-cluster/guaranteed-scheduling-critical-addon-pods/), i.e., `priorityClassName` for the pod is set to `system-cluster-critical`. This ensures that if the pod ever goes into a pending status, the Kubernetes scheduler will give it the highest priority available for rescheduling, thus ensuring business continuity.
 
 ## Install the Controller
 
