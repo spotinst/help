@@ -65,8 +65,26 @@ helm install ocean-controller spot/ocean-kubernetes-controller -n kube-system \
   --set spotinst.clusterIdentifier=$SPOTINST_CLUSTER_IDENTIFIER
 ```
 
-The installation is complete.  
+## Script Installation 
 
+Use Spot’s script for a Helm-based installation of the [Ocean Controller Pod](ocean/overview-kubernetes?id=ocean-controller).  
+
+Note: 
+
+* If the [Ocean Prometheus Exporter](ocean/tools-and-integrations/prometheus/) or [Ocean Network Client](ocean/tutorials/install-network-client?id=install-the-ocean-network-client-in-the-cluster) is already installed in your cluster, reinstall them by setting `ENABLE_OCEAN_METRIC_EXPORTER` or `ENABLE_OCEAN_NETWORK_CLIENT` to 'true' for the integration with the new controller 
+
+* (Optional) To enable the [Right Sizing](ocean/features/right-sizing) feature, set `INCLUDE_METRIC_SERVER` to `true` to install the [Metric Server](kubernetes-sigs/metrics-server#deployment). 
+
+```
+curl -fsSL https://spotinst-public.s3.amazonaws.com/integrations/kubernetes/cluster-controller-v2/scripts/init.sh | \ 
+SPOTINST_TOKEN=$SPOTINST_TOKEN \ 
+SPOTINST_ACCOUNT=$SPOTINST_ACCOUNT \ 
+SPOTINST_CLUSTER_IDENTIFIER=$SPOTINST_CLUSTER_IDENTIFIER \ 
+ENABLE_OCEAN_METRIC_EXPORTER=false \ 
+ENABLE_OCEAN_NETWORK_CLIENT=false \ 
+INCLUDE_METRIC_SERVER=false \ 
+bash   
+```
  
 
  
