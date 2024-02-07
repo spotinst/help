@@ -15,9 +15,7 @@ Spot advises installing the beta version in a development cluster rather than a 
 1. Run the following command to retrieve the namespace where the existing controller is installed: 
 
 ```
-export NAMESPACE=$(kubectl get cm -A \ 
-  --field-selector=metadata.name=spotinst-kubernetes-cluster-controller-config \ 
-  -o jsonpath='{.items[0].metadata.namespace}')
+export NAMESPACE=$(kubectl get cm -A \ --field-selector=metadata.name=spotinst-kubernetes-cluster-controller-config \ -o jsonpath='{.items[0].metadata.namespace}')
 ```
 
 2. Run the following commands to export the details of the existing controller:  
