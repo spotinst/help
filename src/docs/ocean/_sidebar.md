@@ -49,7 +49,6 @@
     - [View Scaling Constraints](ocean/tutorials/view-scaling-constraints)
     - [Set up Extended Resource Support](ocean/tutorials/set-up-extended-resource-support)
     - [Set Shutdown Hours](ocean/tutorials/set-running-hours)
-    - [Connect an AKS Private Cluster](ocean/tutorials/connect-an-aks-private-cluster)
     - [Create a Cluster for GKE using Shared VPC](ocean/tutorials/create-cluster-gke-shared-vpc)
     - [Migrate Existing Elastigroups to Ocean (EKS, kOps)](ocean/tutorials/migrate-existing-egs-ekskops)
     - [Migrate Existing Elastigroups to Ocean (ECS)](ocean/tutorials/migrate-existing-egs-ecs)
