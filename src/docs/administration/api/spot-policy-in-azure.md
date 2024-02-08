@@ -7,12 +7,20 @@ The latest Spot policy in Azure appears below.
         fetch('https://spotinst-public.s3.amazonaws.com/assets/azure/custom_role_file.json')
             .then(res => res.json())
             .then(res => {
-                document.querySelector('#hello').textContent = JSON.stringify({permissions: res.properties.permissions}, null, 2)
+                document.querySelector('#hello').textContent = JSON.stringify(
+                    {
+                        permissions:[
+                            {
+                               actions: res.properties.permissions[0].actions
+                          }
+                        ]
+                    }
+                , null, 2)
             })
 </script>
 <body>
 <pre v-pre data-lang="json">
-<code id="hello" class="lang-json">hello</code>
+<code id="hello" class="lang-json">Loading...</code>
 </pre>
 </body>
 </html>
