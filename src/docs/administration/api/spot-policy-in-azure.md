@@ -17,10 +17,11 @@ The latest Spot policy in Azure appears below.
                     }
                 , null, 2)
             })
+            .then(() => window.Prism.highlightAll())
 </script>
 <body>
 <pre v-pre data-lang="json">
-<code id="spot-azure-permissions" class="lang-json">Loading...</code>
+<code data-app id="spot-azure-permissions" class="lang-json">Loading...</code>
 </pre>
 </body>
 </html>
