@@ -21,7 +21,7 @@ The latest Spot policy in Azure appears below.
 </script>
 <body>
 <pre v-pre data-lang="json">
-<code data-app id="spot-azure-permissions" class="lang-json">Loading...</code>
+<code id="spot-azure-permissions" class="lang-json">Loading...</code>
 </pre>
 </body>
 </html>
