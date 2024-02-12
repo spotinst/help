@@ -24,6 +24,7 @@
     - [Amazon SNS](spot-connect/integrations/sns)
     - [Ansible](spot-connect/integrations/ansible)
     - [API Keys](spot-connect/integrations/apikeys)
+    - [AWS Health](spot-connect/integrations/aws-health)
     - [EKS Permissions](spot-connect/integrations/eks)
     - [Elasticsearch](spot-connect/integrations/elasticsearch) 
     - [CloudFormation Templates](spot-connect/integrations/cloudformation)
