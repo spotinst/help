@@ -1,6 +1,6 @@
 # End-to-End Setup- Spot  
 
-This procedure describes how to install the Ocean CD operator and the entities using the Spot console’s QuickStart guide. This procedure describes how to set up the necessary components to quickly deploy your first rollout using the Spot console. 
+This procedure describes how to install the operator manager, create services and Spot Deployments as well as your Ocean CD entities. This procedure provides end-to-end insights of the Ocean CD flow to successfully trigger your very first deployment.  
 
 ## Prerequisites 
 
