@@ -27,11 +27,7 @@ Setup API Keys
 Go to Spot Connect → Select Settings in the left nav bar → Under Integrations tab → Go to the resource section and click API Keys → Click on Add New button → Provide API Key Name → Click on Save button
   
 
-NOTE: If API Keys is already created then the above steps are not required 
 
-Workflow creation 
-
-Configure a workflow using AWS Health as trigger node. 
 
  
 
