@@ -1,41 +1,47 @@
-# End-to-End Setup- Spot  
+# End-to-End Setup 
 
-This procedure describes how to install the operator manager, create services and Spot Deployments as well as your Ocean CD entities. This procedure provides end-to-end insights of the Ocean CD flow to successfully trigger your very first deployment.  
+This procedure describes how to install the Ocean CD operator and the entities using the Spot console’s QuickStart guide. This procedure describes how to set up the necessary components to quickly deploy your first rollout using the Spot console.  
 
 ## Prerequisites 
 
 * A Kubernetes cluster running (cloud agnostic) 
 * At least one worker node running 
 
-## Step 1: Install the Operator 
+## Step 1: Install the Operator Manager 
 
-Install the operator to connect your cluster to Ocean CD. 
+Install the operator manager to connect your cluster to Ocean CD. 
 
-**OLM allows Ocean CD to deploy Spot's operator and provides a declarative way to manage and upgrade Ocean CD components.** 
+In the left main menu, click **Ocean CD** and then click **Settings**. If you are connecting your first Ocean CD cluster, complete the following steps: 
 
-1. In the left main menu, click Ocean CD and then click Quick start. If you are connecting your first Ocean CD cluster, complete the following steps: 
+1. Click **+ Add Cluster**.   
 
-<img src="/ocean-cd/_media/end-to-end-1.png" width="500"/>
+![end-to-end-ui-1](https://github.com/spotinst/help/assets/106514736/fa6de04c-474c-46c4-994e-c9b150119896)
 
-* **Cluster Identifier**: This is a logical identifier for your cluster that must be unique and have up to 30 alphanumeric characters without any spaces. You can choose any ID and it does not need to be coupled to the Ocean cluster ID (o-xxxxxx). Ocean CD can run on clusters that are not managed by Ocean. 
+2. Complete the following information: 
 
-* **Argo Rollout Installation**: Ocean CD uses Argo rollouts as an underlying engine to facilitate rollouts and is required to trigger rollouts. 
+* Cluster Identifier: This is a logical identifier for your cluster that must be unique and have up to 30 alphanumeric characters without any spaces. You can choose any ID and it does not need to be coupled to the Ocean cluster ID (o-xxxxxx). Ocean CD can run on clusters that are not managed by Ocean. 
 
-2. Download the YAML and apply it to your Kubernetes cluster. 
+* Spot API Token: This token is required for authentication and authorization of your API requests. 
 
-`kubectl apply -f <Name of the YAML>` 
+3. Run the following command:  
 
-When the process is complete and the operator pods are running, your cluster appears in the Cluster Settings section. 
+```
+helm repo add oceancd https://charts.oceancd.io 
 
-<img src="/ocean-cd/_media/getting-started-n04.png" />  
+helm repo update 
 
-**Tip**: Once you have downloaded the YAML, the new row remains with partial information for five minutes. If five minutes elapsed and the YAML was not applied, the row and the banner will be removed. However, the YAML can still be applied at a different time, and the Ocean CD displays the new data accordingly. 
-
-Once the Ocean CD operator is installed you can create your Kubernetes entities: Services and SpotDeployment. 
+helm install my-release oceancd/spot-oceancd-operator \ 
+  --namespace oceancd \ 
+  --create-namespace \ 
+  --set token= \ 
+  --set clusterId= \
+```
+ 
+When the Ocean CD operator is installed, you can create your Kubernetes entities: Services and SpotDeployment.  
 
 ## Step 2: Create a Namespace and Service 
 
-When a namespace is created, create the canary and stable services to expose and manage the traffic that is divided between the canary and the stable replicasets. 
+When a namespace is created, create the canary and stable services to expose and manage the traffic that is divided between the canary and stable replicasets. 
 
 _For demo purposes, a traffic manager will not be used._ 
 
@@ -115,19 +121,20 @@ After the SpotDeployment and services are created, the remaining steps are to cr
 ## Step 4: Create your Ocean CD Resources using the Ocean CD Quick Start
 
 1. In the Ocean CD menu, click **Quick start**. 
-2. Select your existing cluster ID, Spot Deployment and Verification Provider (optional). The quick start panel automatically populates YAML templates for all the Ocean CD entities required to support a canary deployment in seconds.
+2. In the Spot Deployment step, select your existing cluster ID, Spot Deployment and namespace.  
+3. In the Verification Provider step, enter the information of your chosen provider. The quick start panel automatically populates YAML templates for all the Ocean CD entities required to support a canary deployment in seconds. 
 
-<img width="1226" alt="end-to-end-ui-2" src="https://github.com/spotinst/help/assets/106514736/02e6c72a-43b0-4b26-a57a-997b7260d38c">
+![end-to-end-ui-2](https://github.com/spotinst/help/assets/106514736/3465677e-22b1-476a-a10f-b7121dc750e1)
 
-3. Click **Create Resources** and review the Ocean CD entities in the Settings tab.
+4. Click **Create Resources** and review the Ocean CD entities in the Settings tab.
 
-<img width="1413" alt="end-to-end-ui-3" src="https://github.com/spotinst/help/assets/106514736/92d2ae03-e8b0-435e-a09d-69160296fe5b">
+<img width="1413" alt="end-to-end-ui-3" src="https://github.com/spotinst/help/assets/106514736/5c80e0c0-1d3a-4d85-bf3b-f86d063efbc1">
 
 Learn more about [Ocean CD entities](ocean-cd/getting-started/rollout-entities/).
 
 ## Step 5: Trigger a Rollout
 
-You can trigger your very first rollout. Change the pod spec template such as the image (for example, you may use: public.ecr.aws/nginx/nginx:latest) in your SpotDeployment yaml and run the following command:
+You can trigger your very first rollout. Change the pod spec template such as the image (for example: public.ecr.aws/nginx/nginx:latest) in your SpotDeployment yaml and run the following command:
 
 `kubectl apply -f <SpotDeployment YAML>`
 
@@ -135,6 +142,6 @@ A new canary rollout is initiated in the [All Rollouts](ocean-cd/tutorials/view-
 
 ## What’s Next?
 
-Learn about viewing the [list of rollouts](ocean-cd/tutorials/view-rollouts/)
+Learn about viewing the [list of rollouts](ocean-cd/tutorials/view-rollouts/).
 
-Ready to start using more advanced verifications and features? Check our our [hands-on Ocean CD workshop](https://www.spotk8s.com/oceancd.html).
+Ready to start using more advanced verifications and features? Check Spot's [hands-on Ocean CD workshop](https://www.spotk8s.com/oceancd.html).
