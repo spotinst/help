@@ -1,6 +1,6 @@
 # Troubleshoot a Rollout
 
-This page describes cases that could prevent the triggering of your [rollout](ocean-cd/tutorials/view-rollouts/) and describes how you can resolve most of these issues with manual input.  
+This page outlines scenarios that could hinder the smooth running of your [rollout](ocean-cd/tutorials/view-rollouts/) and provides guidance on resolving most of these issues through manual input.  
 
 ## InvalidSpec
 
@@ -32,31 +32,41 @@ An update appears in the console that the application was performed and the Degr
 
 <img src="/ocean-cd/_media/troubleshoot-rollout-003.png" />
 
-## No Heartbeat during a Rollout
+## Rollout Disruption: Ocean CD Operator's Heartbeat Stopped
 
 #### Issue
 
-If the operator stops reporting a heartbeat, there can be different reasons to it, such as the termination of a node. In this case, a banner appears in the Spot console indicating that the operator is no longer running and that you might need to take action. Spot highly recommends at this point to reach out to the Operator logs for additional information.
+If the Ocean CD manager stops reporting a heartbeat during a rollout, a message will appear in the Spot console notifying that the operator is no longer running and that you need to take action internally. 
 
-**Although the operator is no longer providing a heartbeat, it does not indicate that the rollout has stopped and it will continue independently without the operator behind the scene. Once the operator is back, the data will be updated accordingly**.
+#### Resolution  
+
+Refer to the pods’ logs for additional information. 
+
+**Although the Ocean CD operator no longer has a heartbeat, it does not indicate that the rollout has stopped and it will continue independently without the operator. When the operator is restored, the data will be updated accordingly**.
+
+![troubleshoot-rollout-1](https://github.com/spotinst/help/assets/106514736/61be709e-428b-4403-97fc-6ea9466558ac)
+
+## Rollout Disruption: Argo Rollouts' Heartbeat Stopped 
+
+#### Issue 
+
+If the Argo Rollouts stops reporting a heartbeat, a message will appear in the Spot console notifying that the operator is no longer running and that you need to take action.  
+
+#### Resolution  
+
+Refer to the pods’ logs for additional information. 
+ 
+**If the Argo Rollouts stop providing a heartbeat, your rollout will be disrupted. Ocean CD will be able to display the current status of the rollout, once the operator is back**. 
+
+## Pre-Rollout Alert: Absence of Argo Rollouts and Ocean CD Operator Heartbeat 
+
+#### Issue 
+
+If the Operator does not send a heartbeat, no rollouts will be triggered. Ensure that the relevant node and the operator are running before a rollout can be started. 
 
 #### Resolution
 
-The operator can stop reporting a heartbeat because the node it was running on was terminated. If this happens, a banner appears in the Spot console indicating that the operator is no longer running and that you need to take action. (For example, you would need to restart the node the operator runs on.)
-
-However, the operator may stop and this indicates that Ocean CD does not currently have visibility over the rollout. This does not indicate that the rollout has stopped and it can continue independently without the operator.  
-
-<img src="/ocean-cd/_media/troubleshoot-rollout-004.png" />
-
-## No Heartbeat Before a Rollout
-
-#### Issue
-
-When no rollout is in progress, no heartbeat is detected from the Ocean CD Operator.
-
-#### Resolution
-
-If the Operator does not send a heartbeat, no rollouts will be triggered. Ensure that the relevant node and the operator are running before a rollout can be started.
+Refer to the pods’ logs for additional information. 
 
 ## Verification Data was not Received
 
@@ -76,4 +86,4 @@ Verify the following:
 
 ## What’s Next?
 
-Learn more about the information provided in the [Detailed Rollout](ocean-cd/tutorials/view-workloads/details) page.
+Discover the various features of [Ocean CD](ocean-cd/concepts-features/).
