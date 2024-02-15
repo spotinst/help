@@ -1789,6 +1789,9 @@ export const aliases = (() => {
 
     "/spot-security/features/vulnerability/configure":
       "spot-security/features/vulnerability/configure/",
+
+    "/ocean-cd/getting-started/install-operator-using-API-or-helm":
+      "ocean-cd/getting-started/install-operator-manager",
   };
 
   for (let [key, value] of Object.entries(map)) {
