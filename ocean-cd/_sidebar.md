@@ -3,7 +3,7 @@
 - <a href="/" class="sidebar-home"><i data-feather="arrow-left" class="sidebar-back-icon"></i>Back to Main Tree</a>
 - [Ocean CD](ocean-cd/)
   - [Getting Started](ocean-cd/getting-started/)
-    - [Install Operator](ocean-cd/getting-started/install-operator-using-API-or-helm)
+    - [Install Operator](ocean-cd/getting-started/install-operator-manager)
     - [Create Spot Deployments](ocean-cd/getting-started/create-deployment)
     - [Rollout Entities](ocean-cd/getting-started/rollout-entities/)
       - [Verification Provider](ocean-cd/getting-started/rollout-entities/verification-provider)
