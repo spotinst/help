@@ -1792,6 +1792,9 @@ export const aliases = (() => {
 
     "/ocean-cd/getting-started/install-operator-using-API-or-helm":
       "ocean-cd/getting-started/install-operator-manager",
+
+    "/connect-your-cloud-provider/first-account/aws-manually":
+      "connect-your-cloud-provider/first-account/aws",
   };
 
   for (let [key, value] of Object.entries(map)) {
