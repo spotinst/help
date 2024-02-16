@@ -31,23 +31,38 @@ Log in to your AWS management account (or single, member account if you are an M
 
 ## Step 2
 
-Set up Cost and Usage Reports as described below.
+Set up Cost and Usage Reports as described below. 
 
-1. To go to AWS Cost and Usage Report setup, click [here](https://console.aws.amazon.com/billing/home?#/reports).
-2. To create a new report, follow the illustrations below. Important guidelines:
-   - Include Resource IDs under `Additional report details`
-   - Enable Data refresh settings.
-   - Time granularity Units should be Hourly.
-   - Enable report data integration for Amazon Athena.
-3. Mark the checkboxes as shown below.
+1. Log in to [AWS](https://us-east-1.console.aws.amazon.com/costmanagement/home#/bcm-data-exports) and click **AWS Billing and Cost Management Data Exports**. 
+2. To create a new export, click **Create**. 
 
+![connect-aws-1](https://github.com/spotinst/help/assets/106514736/da4aad90-3fa9-44e2-bd20-f4b2a2170cc4)
+
+3. Select **Legacy CUR export**. 
+
+![connect-aws-2](https://github.com/spotinst/help/assets/106514736/42dd96b1-eac1-4a16-b8ec-7663191c26aa)
+
+4. Enter a name for your CUR export. 
+5. Complete the following information to export the configuration:  
+
+![connect-aws-3](https://github.com/spotinst/help/assets/106514736/726141b4-388f-4ffd-870b-cd9e790eacf1)
+
+* Under Additional export details, mark **Include Resource IDs**.  
+* Under Data refresh settings, mark **Refresh automatically**.  
+
+![connect-aws-4](https://github.com/spotinst/help/assets/106514736/5b10c71c-fba4-4ca3-9d50-770dbde3ee8d)
+
+* Mark Report data time granularity units to **Hourly**. 
+* Mark Report versioning to **Overwrite existing report**. 
+* Mark Report data integration for **Amazon Athena**. 
+
+![connect-aws-5](https://github.com/spotinst/help/assets/106514736/799b3862-0bf9-43c9-83a1-20f9ac633047)
+
+6. If you have not previously set up a new Amazon S3 bucket for the CUR, click **Configure** under Data export storage settings. 
+7. A S3 path prefix is required to create the report.  
+8. Click **Create**.
+ 
 > **Note**: Spot strongly recommends that you create both a new Amazon S3 bucket and a new Cost and Usage Reports if you do not have Athena already integrated. If you choose to use a pre-existing S3 bucket, the following Athena integration setup process using AWS CloudFormation removes any Amazon S3 events that your bucket might already have.
-
-<img src="/eco/_media/gettingstarted-aws-connect-09.png" width="450" height="600" />
-
-<img src="/eco/_media/gettingstarted-aws-connect-10.png" width="450" height="600" />
-
-> **Note**: An administrator of your account or your organization may have restricted your user's right to define the CUR, and this should be addressed with the administrator. For example, if you see errors stating that you cannot perform the 'putReportDefinition' operation, you will need to address this with your administrator.
 
 ## Step 3
 
