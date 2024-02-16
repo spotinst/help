@@ -146,11 +146,11 @@ This section describes how to start migrating workloads to Ocean.
 
 ![connect-aks-cluster-15](https://github.com/spotinst/help/assets/106514736/d3d6589f-b304-46d5-a54f-00e277388de4)
 
-3. Gradually reduce the node pool node count to zero in order to scale down unmanaged node pools. When the Node Count is reduced, the pods running on the nodes are evicted and they become pending pods that can not be scheduled. Ocean launches nodes from the appropriate VNG and creates node pools with scale count so that the Kubernetes scheduler can schedule these pods.
+3. Gradually reduce the user node pool node count to zero (the default system  node pool can only be scaled down to one node as Ocean does not manage the Kubernetes control plane) in order to scale down unmanaged node pools. 
 
 To reduce down-time for critical workloads while migrating, you can:  
 
-* launch some nodes in the VNGs you just created earlier. Select **VNG Actions** and in the dropdown menu, select **Launch nodes**. Specify how many nodes to launch (3-5 nodes).  
+* launch some nodes in the VNGs you previously created. Select **VNG Actions** and in the dropdown menu, select **Launch nodes**. Specify the number of nodes to launch (3-5 nodes).  
 * or increase VNG minimum node count to approximately 5 nodes.  
 * or add VNG headroom (manual) for approximately 16 vCPUs and memory 32 GiB.  
 
