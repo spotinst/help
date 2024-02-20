@@ -1,6 +1,6 @@
 # Controller Version History
 
-## [1.0.97] - 2024-02-20
+## [1.0.98] - 2024-02-20
 
 Added
 
