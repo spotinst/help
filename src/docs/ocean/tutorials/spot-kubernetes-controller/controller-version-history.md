@@ -1,5 +1,13 @@
 # Controller Version History
 
+## [1.0.98] - 2024-02-20
+
+Added
+
+- Fixed security vulnerabilities
+- Fixed tokens with whitespace breaking authentication
+- Fixed some error level logs during initialization
+
 ## [1.0.97] - 2023-12-18
 
 Added
