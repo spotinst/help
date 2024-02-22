@@ -1,5 +1,47 @@
 # Cluster Release Notes
 
+## [0.4.8-70] - 2024-02-20
+
+Changelog
+
+- [0.4.8] bigdata-operator
+
+  - store cluster cloud provider and region in CM
+
+- [0.5.8] bigdata-spark-watcher
+
+  - Annotate spark driver pod exit code and exit time
+
+- [0.1.25] spark-operator
+  - run as non-root
+
+## [0.4.7-69] - 2024-01-24
+
+Changelog
+
+- [0.4.7] bigdata-operator
+  - enable telemetry
+  - run as non-root
+  -
+- [0.2.4] bigdata-notebook-service
+
+  - upgrade workflow notebook image to JupyterLab 4
+  - show kernel launchers in the JupyterLab UI for each Spark Connect app running in the cluster
+  - enable telemetry
+
+- [0.4.5] bigdata-proxy
+
+  - run as non-root
+  - enable telemetry
+
+- [0.1.24] spark-operator
+- enable telemetry
+
+- [0.5.4] bigdata-spark-watcher
+  - run as non-root
+  - enable telemetry
+  - performance improvements
+
 ## [0.4.4-68] - 2023-11-27
 
 Changelog
