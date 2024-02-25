@@ -10,7 +10,13 @@ The Ocean CD Operator Manager is made of three pods that reside in your Kubernet
 
 * A Kubernetes cluster up and running (on AWS, Azure or GCP). 
 * A workstation with the Kubernetes cluster context and kubectl installed. 
-* An existing Spot API Token. If not, you can create one using [this tutorial](https://docs.spot.io/administration/api/create-api-token?id=create-an-api-token). 
+* An existing Spot API Token. If not, you can create one using [this tutorial](https://docs.spot.io/administration/api/create-api-token?id=create-an-api-token).
+
+Prior to migrating charts from Spot Ocean CD operator to Spot Ocean CD operator manager:  
+
+* Upgrade the Spot Ocean CD operator so that the most recent version of the chart is deployed in your cluster. This will avoid deletion of Argo Rollouts CRDs along with the pods associated with the Spot deployment. 
+* In the values.yaml file, verify that the Spot Ocean CD operator value is set to `argoRollouts.keepCRDs: true` 
+ 
 
 ## Install the Operator Manager 
 
