@@ -4,12 +4,17 @@ This procedure describes how to connect your Azure account to Spot Security.
 
 If you are using Spot Security for the first time, in the left main menu of the Spot console click **Spot Security**. Click **Start With 30 Days Free Trial**.  
 
+## Prerequisites 
+
+* Use the same Service Principal you created when you onboarded the Azure subscription to the Spot console for the Spot Security onboarding (based on individual subscriptions). 
+
+* If you lost the service principle you used, you can access the service principle in the Spot Accounts page and select the account that you are onboarding by clicking the relevant client ID.
+
+![get-started-azure-1](https://github.com/spotinst/help/assets/106514736/24567701-1bed-4790-a9b2-9c9f817a7bed)
+
 If you already connected a cloud account(s) to Spot Security, in the left main menu of the Spot console, click **Spot Security** and **Administration**.  
 
 1. Under the Cloud Accounts Tab, click **+ Cloud Account**.
-
-<img src="/spot-security/_media/get-started-azure-1.png" />
-
 2. Click **Azure**.
 
 ## Step 1: Connect your Azure Account
