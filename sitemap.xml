@@ -1254,6 +1254,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/features/core-features/spot-reserved-on-demand-instances"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/elastigroup/features/gcp/commit-use-discount</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/features/gcp/commit-use-discount"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/features/gcp/commit-use-discount"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/elastigroup/features/gcp/gcp-load-balancers-backend-services</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
