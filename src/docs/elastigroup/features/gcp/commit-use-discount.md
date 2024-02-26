@@ -13,7 +13,7 @@ The Utilize Commitment Plans feature enables you to leverage both spend-based an
 * For resource-based and spend-based commitment utilization:  
 
 1. Log in to the GCP console and type **IAM & Admin** in the search bar.  
-In the left main menu, click **IAM**.  
+2. In the left main menu, click **IAM**.  
 
 ![commited-use-discounts-1](https://github.com/spotinst/help/assets/106514736/930c8ca3-0a6b-4e3f-9b52-9088fbc4498f)
 
