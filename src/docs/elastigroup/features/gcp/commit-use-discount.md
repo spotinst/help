@@ -1,6 +1,5 @@
 # Committed Use Discounts 
 
- 
 Elastigroup assists in optimizing the usage of [committed use discounts (CUDs)](https://cloud.google.com/compute/docs/instances/committed-use-discounts-overview) to ensure minimal waste. Elastigroup strategically allocates reservations for maximum benefit, improving estimation accuracy for commitment usage. This provides visibility into savings plans and RI utilization, enabling enhanced methods for effectively utilizing vacant plans and maximizing cost savings. 
 
 This feature enables you to utilize your existing committed use discounts before considering the addition of extra resources and makes efficient use of your cloud resources. 
@@ -10,7 +9,6 @@ This procedure describes how you can utilize your GCP committed use discounts in
 ## Prerequisites 
 
 The Utilize Commitment Plans feature enables you to leverage both spend-based and resource-based CUDs in your Elastigroup before adding additional resources. Ensure that the necessary prerequisites are in place for the method you want to utilize your usage.  
- 
 
 * For resource-based and spend-based commitment utilization:  
 
@@ -21,7 +19,7 @@ In the left main menu, click **IAM**.
 
 3. Under the _View by Principal_ tab, click the Security Insights of a principal that begins with spotinst-role-act-xyz. The _Current permissions for Owner role_ window opens.  
 
-![commited-use-discounts-2](https://github.com/spotinst/help/assets/106514736/d03723af-d0b9-4730-8680-972c90dd519f)
+<img width="400" height="300" alt="commited-use-discounts-2" src="https://github.com/spotinst/help/assets/106514736/d03723af-d0b9-4730-8680-972c90dd519f">
 
 4. Ensure that the `compute.commitments.list` permission for Spot’s generated service account is in the [Spot policy](https://docs.spot.io/administration/api/spot-policy-in-gcp). 
 
@@ -35,7 +33,7 @@ When this step is completed, you can start utilizing resource-based CUDs.
 
 * The required permission for read only accounts is `compute.instances.list` on Spot's generated service accounts. 
 
-![commited-use-discounts-3](https://github.com/spotinst/help/assets/106514736/52c0db34-54c4-4cbc-9352-3a7fb26a949c)
+<img width="300" height="300" alt="commited-use-discounts-3" src="https://github.com/spotinst/help/assets/106514736/52c0db34-54c4-4cbc-9352-3a7fb26a949c">
 
 2. In the search bar in the GCP console, type **API Library**. 
 
