@@ -47,6 +47,7 @@
     - [Shared Image Galleries](elastigroup/features-azure/shared-image-galleries)
     - [Shutdown Script](elastigroup/features-azure/shutdown-script-in-elastigroup-for-azure)
   - [Features - GCP](elastigroup/features/gcp/)
+    - [Commited Use Discount](elastigroup/features/gcp/commit-use-discount)  
     - [GCP Pricing Models](elastigroup/features/gcp/pre-emptible-cud-on-demand-instances)
     - [GCP Load Balancers: Backend Services](elastigroup/features/gcp/gcp-load-balancers-backend-services)
     - [Scaling Policies for GCP Elastigroup](elastigroup/features/gcp/scaling-policies-for-gcp-elastigroup)
