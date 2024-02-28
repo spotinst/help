@@ -17,7 +17,7 @@ The Utilize Commitment Plans feature enables you to leverage both spend-based an
 
 ![commited-use-discounts-1](https://github.com/spotinst/help/assets/106514736/930c8ca3-0a6b-4e3f-9b52-9088fbc4498f)
 
-3. Under the _View by Principal_ tab, click the Security Insights of a principal that begins with spotinst-role-act-xyz. The _Current permissions for Owner role_ window opens.  
+3. Under the *View by Principal* tab, click the Security Insights of a principal that begins with spotinst-role-act-xyz. The _Current permissions for Owner role_ window opens.  
 
 <img width="400" height="300" alt="commited-use-discounts-2" src="https://github.com/spotinst/help/assets/106514736/d03723af-d0b9-4730-8680-972c90dd519f">
 
