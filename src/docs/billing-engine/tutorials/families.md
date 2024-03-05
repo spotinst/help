@@ -2,8 +2,6 @@
 
 Families are Billing Engine’s way to group together accounts and subscriptions from AWS, Azure and Google Cloud to help you organize your cloud billing data. With Families, you can apply billing rules over a desired grouping to show accurate chargeback and showback.
 
-![families-1](https://github.com/spotinst/help/assets/106514736/d48cd71e-2b42-4489-8714-9fbf2ebbf53b) 
-
 ## Create Billing Family 
 
 To create a family, complete the following steps:  
@@ -14,7 +12,7 @@ To create a family, complete the following steps:
 
 In this page, you can create a name and add available accounts or subscriptions that haven’t been added to any other families yet. The name needs to be unique from the other billing families. The accounts that you include in this billing family can only be present in this one billing family. An example of a family would be a project, internal business unit or external client that leverages any of these cloud services.  
 
-![families-3](https://github.com/spotinst/help/assets/106514736/93c0a7af-7af7-42e1-ac60-12b6224b3ef9)
+<img width="600" height="600" alt="families-3" src="https://github.com/spotinst/help/assets/106514736/93c0a7af-7af7-42e1-ac60-12b6224b3ef9">
 
 To save your family, click **Save**. 
 
@@ -24,7 +22,7 @@ After your family is created, the family is displayed on the Family dashboard.
 
 To view your family, in the Family dashboard, click the Family ID you want to view. 
 
-![families-4](https://github.com/spotinst/help/assets/106514736/31423b53-10a3-41b1-9778-7dcb07287cb6)
+![families-4](https://github.com/spotinst/help/assets/106514736/4a679a00-a07d-4c5f-978e-7b404988251f)
 
 The Family Details page opens. On this page, you can view information such as the family name, the accounts and subscriptions associated with it, and additional details pertaining to that particular account. You can also edit the family.  
 
