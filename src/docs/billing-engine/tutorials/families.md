@@ -12,9 +12,7 @@ To create a family, complete the following steps:
 
 In this page, you can create a name and add available accounts or subscriptions that haven’t been added to any other families yet. The name needs to be unique from the other billing families. The accounts that you include in this billing family can only be present in this one billing family. An example of a family would be a project, internal business unit or external client that leverages any of these cloud services.  
 
-![families-3](https://github.com/spotinst/help/assets/106514736/93c0a7af-7af7-42e1-ac60-12b6224b3ef9)
-
-<img width="600" height="600" alt="families-3" src="(https://github.com/spotinst/help/assets/106514736/93c0a7af-7af7-42e1-ac60-12b6224b3ef9)">
+<img width="600" height="600" alt="families-3" src="https://github.com/spotinst/help/assets/106514736/93c0a7af-7af7-42e1-ac60-12b6224b3ef9">
 
 To save your family, click **Save**. 
 
