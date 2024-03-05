@@ -14,6 +14,8 @@ In this page, you can create a name and add available accounts or subscriptions 
 
 ![families-3](https://github.com/spotinst/help/assets/106514736/93c0a7af-7af7-42e1-ac60-12b6224b3ef9)
 
+<img width="600" height="600" alt="families-3" src="(https://github.com/spotinst/help/assets/106514736/93c0a7af-7af7-42e1-ac60-12b6224b3ef9)">
+
 To save your family, click **Save**. 
 
 After your family is created, the family is displayed on the Family dashboard. 
