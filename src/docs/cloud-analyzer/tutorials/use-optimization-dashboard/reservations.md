@@ -27,4 +27,4 @@ The graphs present the following information to help you optimize your utilizati
 
 ## What's Next?
 
-Learn more about using Spot [Eco](/eco/).
+Learn more about using Spot [Eco](/eco/)
