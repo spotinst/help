@@ -61,3 +61,4 @@ For instance
 ## Limitations
 
 - The shuffle data reuse feature is only available for Spark 3.2 and later.
+- Preferably set the spark.dynamicAllocation.shuffleTracking.enabled to false when using shuffle data reuse feature.
