@@ -1,5 +1,12 @@
 # Controller Version History
 
+## [1.0.99] - 2024-03-18
+
+Added
+
+- Fixed security vulnerabilities
+- Periodically check and report the Kubernetes `apiserver` version to Spot.
+
 ## [1.0.98] - 2024-02-20
 
 Added
