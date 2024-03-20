@@ -1,58 +1,97 @@
-# Use Right Sizing
+Ocean AWS ECS Cluster Right Sizing
 
-In this tutorial you will learn about Ocean resizing suggestions and how to use them. This feature will help you define better resource requirements, based on actual consumption, in order to avoid over- or under-provisioning a cluster and increase the cluster's efficiency.
+To help you improve the efficiency and performance of your cloud environments, Ocean’s rightsizing capabilities provide recommendations that target over-provisioning and underutilization.
 
-## Relevance
+Containers are deployed to ECS instances (VMs) created for the cluster. ECS manages them together with tasks that are part of the task definition.
 
-This tutorial is relevant for Kubernetes users.
+Before you attempt to fine-tune your cluster resources according to Ocean recommendations, make sure that you have the following:
 
-## Prerequisites
+-   A Spot account.
+-   An AWS account.
+-   [Metric Server](https://github.com/kubernetes-incubator/metrics-server#deployment) installed in your ECS cluster.
+-   [Ocean cluster](https://docs.spot.io/ocean/getting-started/eks/create-a-new-cluster) managing your ECS worker nodes.
 
-Before performing the procedures in this tutorial, you will need the following:
+How it Works
 
-- A Spot account
-- An AWS account
-- [Metric Server](https://github.com/kubernetes-incubator/metrics-server#deployment) installed in your Kubernetes cluster
-- An [Ocean cluster](ocean/getting-started/eks/create-a-new-cluster) managing your Kubernetes worker nodes
+AWS CloudWatch provides monitoring and management for AWS cloud resources and applications running on AWS. CloudWatch includes logs, metrics, alarms, and events. CloudWatch integrates with ECS for monitoring CPU and memory utilization, network, and disk metrics.
 
-## Step 1: Monitor Deployment Resource Consumption
+In the case of ECS Ocean clusters, right sizing is achieved by utilizing CloudWatch metrics. CloudWatch collects data over a four-day period to provide accurate insights into CPU and memory utilization, network metrics, and disk metrics. This data can then be used to optimize resource allocation and ensure efficient utilization of ECS Ocean clusters.
 
-Ocean collects usage metrics for all deployments in the cluster periodically, e.g., once every five minutes. Based on the past two weeks of collected metrics, Ocean calculates relevant consumption metrics for each resource, e.g., CPU and Memory, and bases its suggestions on these calculated metrics.
+Ocean queries the CloudWatch metrics for service utilization every 15 minutes. For each service, the output is a single data point representing the average CPU and memory utilization at that specific point in time. This single data point is calculated by dividing the total CPU and memory metrics of the service by the number of tasks running within the service.
 
-Resizing suggestions and the graphs described below display data after at least four days of deployment metrics collection.
+This process allows you to obtain a single data point for CPU and a single data point for memory every 15 minutes, providing insights into the average utilization of CPU and memory for the tasks within each service at that moment in time. This information can be valuable for monitoring and optimizing resource allocation in ECS Ocean clusters.
 
-1. Open your Ocean cluster console.
-2. Under Namespaces, click on the deployment (i.e., Resource) you wish to review to find CPU Utilization and Memory Utilization charts.
+For enabling CloudWatch metrics in AWS ECS tasks or services using the EC2 launch type, note the following:
 
-<img src="/ocean/_media/tutorials-use-rightsizing-01.png" />
+-   Refer to the AWS documentation to identify the specific version of the container agent needed for AWS ECS container instances to support CloudWatch metrics.
+-   To enable CloudWatch metrics for ECS container instances, the IAM role assigned to the container instances must have the ecs:StartTelemetrySession permission. This permission allows the container instances to start a telemetry session and send metrics data to CloudWatch.
 
-The CPU and memory utilization charts for that resource appears on the right. If the deployment shows recommendations for multiple containers, click on the container to see the relevant charts.
+Resource Recommendations
 
-<img src="/ocean/_media/tutorials-use-rightsizing-02.png" />
+Ocean provides resource recommendations to assist in adjusting deployment requests based on actual CPU and memory consumption.
 
-## Step 2: Adjust Resource Allocation according to Actual Consumption
+Resource resize recommendations are triggered when the requested resources deviate by 15% or more from the average metric recorded during the last two weeks. If the requested resources are either 15% above or 15% below the average metric, Ocean suggests resizing the resources to align them more closely with the observed consumption patterns.
 
-Resource suggestions will be provided to help you adjust deployment requests to actual resource usage per CPU and Memory. Resource resize recommendations are triggered if the requested resources are 15% above or below the average metric during the last two weeks.
+These recommendations can help optimize resource allocation and ensure that the requested resources align with the actual CPU and memory consumption, leading to improved efficiency and cost-effectiveness in managing your deployments.
 
-In your Ocean cluster, go to the Right Sizing tab.
+To view right sizing for a cluster:
 
-<img src="/ocean/_media/tutorials-use-rightsizing-03.png" />
+1.  In the left main menu, click **Ocean**, and click **Cloud Clusters**.
+2.  Select a cluster from the list of clusters.
+3.  Click the *Right Sizing* tab.
 
-Review the suggested resources offered for all your deployments.
+The Right Sizing tab displays a dashboard divided into the following panels:
 
-To deep dive into a specific deployment and review resource suggestion, click on the requested deployment.
+-   Right Sizing Cluster Resources panel: Displays two widgets with graphical representations of your vCPU and memory resources usage for the selected period.
+-   Top Resizing Recommendations panel: Displays your right sizing recommendations per service.
 
-## Right Sizing Notifications
+Note: If the Right Sizing tab does not display any data:
 
-In addition to the above content, the Right Sizing tab may display one of several notification messages, determined by the status of the Metrics Server reports and the Right Sizing service. The messages indicate one of the following:
+-   Make sure that your metrics server is installed and functioning correctly.
+-   The initial four-day data collection period may not have elapsed.
 
-- The Metrics Server pod is not yet installed on your cluster and must be installed.
-- The Metrics Server is installed, but the system has not received any reports.
-- The last report from the Metrics Server is more than three hours old.
-- The Metrics Server is installed and data is being collected by the Right Sizing service. The progress bar reflects the amount of data left to collect before suggestions can be displayed.
-- Data collection works as intended. There are no suggestions to make, or all previous suggestions have been applied or dismissed.
-- The Metrics Server is installed, but the system is still collecting data.
+Right Sizing Cluster Resources Panel
 
-## What's Next?
+![A screenshot of a computer Description automatically generated](media/0abb2a1338621cfb41c58d9046b118f3.png)
 
-Learn how to [View Scaling Constraints](ocean/tutorials/view-scaling-constraints).
+The Right Sizing Cluster Resources panel contains two widgets:
+
+-   vCPU usage: Displays graphs for requested and recommended vCPU usage, based on data for the selected period.
+-   Memory usage: Displays graphs for requested and recommended memory usage, based on data for the selected period.
+
+You can select data to display for either 7 days, 30 days, or 90 days, by clicking the tab selector on the right of the screen.
+
+Top Resizing Recommendations
+
+![](media/af99773e577d94ed5fb1f4310221a786.png)  
+The Top Resizing Recommendations panel shows recommendations per service.
+
+For each service, you can view:
+
+-   Task count for the service.
+-   Current Resources:
+-   % usage of vCPU.
+-   Memory usage in MiB units.
+-   Recommended Resources
+-   % usage of vCPU.
+-   Memory in MiB units.
+-   Up or down arrow indicating a recommended increase or decrease in resources.
+
+Right Sizing Notifications
+
+The Right Sizing tab may display one of several notification messages, determined by the status of the Metrics Server reports and the Right Sizing service. The messages indicate one of the following:
+
+-   The metric server task is not yet installed on your cluster and must be installed.
+-   The metric server is installed, but the system has not received any reports.
+-   The last report from the Metrics Server is more than three hours old.
+-   The metrics server is installed, and data is being collected by the Right Sizing service. The progress bar reflects the amount of data left to collect before suggestions can be displayed.
+-   Data collection works as intended. There are no suggestions to make, or all previous suggestions have been applied or dismissed.
+-   The Metrics Server is installed, but the system is still collecting data.
+
+Related Topics
+
+[link for feature topic]
+
+[Link for Kubernetes topic]
+
+[Link for Right Sizing recommendations via the API]
