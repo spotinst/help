@@ -14,7 +14,7 @@ The Eco team requests the [Cost Management Reader role](https://docs.microsoft.c
 
 The Eco team requests users to assign the [Azure Reservation Reader](https://docs.microsoft.com/en-us/azure/cost-management-billing/reservations/view-reservations#assign-a-reservation-reader-role-at-the-tenant-level) role to the registered application in order to accurately perform the initial analysis.
 
-### Enrollement Reader Role (Applies to Enterprise Agreement only)
+### Enrollment Reader Role (Applies to Enterprise Agreement only)
 
 The Eco team requests that the registered application also be given [Enrollment Reader](https://learn.microsoft.com/en-us/azure/cost-management-billing/manage/assign-roles-azure-service-principals#permissions-that-can-be-assigned-to-the-spn) access in order to view Cost Management data. The data is used to complete the initial analysis.
 

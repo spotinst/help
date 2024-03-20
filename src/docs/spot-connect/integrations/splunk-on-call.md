@@ -1,1 +1,0 @@
-# Splunk On-Call (VictorOps)

@@ -22,9 +22,13 @@
     - [Features](managed-instance/azure/features/)
       - [Persist OS & Data Disks](managed-instance/azure/features/persist-os-data-disks)
       - [Persist Network](managed-instance/azure/features/persist-network)
+      - [Preferred AZ](managed-instance/azure/features/preferred-az)
       - [Stateful Node Actions](managed-instance/azure/features/actions)
       - [Schedule Stateful Node Actions](managed-instance/azure/features/schedule)
+      - [Swap OS Disk](managed-instance/azure/features/swap-os-disk)
     - [Tutorials](managed-instance/azure/tutorials/)
       - [Manage Stateful Nodes](managed-instance/azure/tutorials/manage)
       - [View Details](managed-instance/azure/tutorials/view-details)
       - [Extensions](managed-instance/azure/tutorials/extensions)
+      - [Preferred VM Sizes](managed-instance/azure/tutorials/preferred-vm-sizes)
+      

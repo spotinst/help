@@ -32,6 +32,7 @@
     - [Hive Metastore](ocean-spark/tools-integrations/hive-metastore)
     - [AWS Glue Data Catalog](ocean-spark/tools-integrations/aws-glue-catalog)
   - [Docker Images Release Notes](ocean-spark/docker-images-release-notes/)
+    - [gen21](ocean-spark/docker-images-release-notes/gen21.md)
     - [gen20](ocean-spark/docker-images-release-notes/gen20.md)
     - [gen19](ocean-spark/docker-images-release-notes/gen19.md)
     - [gen18](ocean-spark/docker-images-release-notes/gen18.md)

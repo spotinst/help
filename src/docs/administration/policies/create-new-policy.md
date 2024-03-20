@@ -17,7 +17,7 @@ The Create New Policy wizard opens.
 1. Enter a name for the policy.
 2. Enter a few words describing the purpose of the policy.
 
-<img src="/administration/_media/create-policy-02.png" />
+<img width="799" alt="create-policy-02" src="https://github.com/spotinst/help/assets/106514736/2aef088c-b5d7-4d85-ab05-8acff5a0c853">
 
 3. Under Permission Management, choose the type of policy to create. There are two types of policies:
    - Account: These permissions relate to products and services that have resources at the account level. You will select the relevant accounts separately for each user or group once you attach the policy to them.
@@ -39,13 +39,13 @@ Once you choose a service, the service opens below with its set of standard Crea
 
 <img src="/administration/_media/create-policy-04.png" width="406" height="166" />
 
-### Manually Selection of Actions
+### Manual Selection of Actions
 
 If you do not want to allow all of the high level actions included in the standard set of actions, uncheck **All Actions**. Then you can mark only the specific high level actions to be allowed.
 
 If you need more granular control of the actions to be allowed, click one of the arrows. For example, when you click the arrow by Create, a list of individual Create actions allowed for this service opens.
 
-Mark any actions that will be allowed.
+Mark actions that will be allowed.
 
 Below is an example of the individual Create actions for the Elastigroup service. Since the Delete action is unmarked, this policy will not allow the users to delete anything in Elastigroup.
 
@@ -97,12 +97,12 @@ Examples:
 The following rules apply to policies:
 * An action that is not explicitly allowed by a policy is denied by default.
 * A policy-based user with no policies is equivalent to a viewer user. Organization administrators, account editors, and policy-based users with the proper permissions are able to grant permissions.
-* All API tokens that belong to you will be affected by the your current policy.
+* All API tokens that belong to you will be affected by your current policy.
 * Permissions to create objects (for example: elastigroup:create*) do not grant permissions on the created objects themselves.
 
 ### Policy Conditions
 
-Custom policy conditions enables you to create conditions within policies for granular control.
+Custom policy conditions enable you to create conditions within policies for granular control.
 
 Supported resources include Spot managed AWS, Azure, and Ocean CD resources.
 
@@ -121,12 +121,12 @@ Defines the logic between the value based operators.
     - StringEqualsIgnoreCase - Compares two strings and returns true if the strings are in the same length, and corresponding characters in the two strings are equal ignoring case.
     - StringPatternMatch – Compares two strings and returns true if the string matches the given regular expression.
 
-In case the condition contains more than one condition operator, an **AND** will be 	used between them.
+In case the condition contains more than one condition operator, an **AND** will be used between them.
 This means that all the operators should return true.
 
 * **Resource retrieval**:  
 Currently supports AWS, Azure, and Ocean CD resources.
-This part is responsible for the definition of which resource should be tested with the condition operator. It consists of a Spot prefix (`spot`) and resource name (`elastigroup`, `ocean`, etc.), separated by the character:
+This part is responsible for the definition of which resource should be tested with the condition operator. It consists of a Spot prefix (`spot`) and resource name (`elastigroup`, `ocean`, etc.), separated by the character `:`.
 When specifying an Ocean CD resource, the correct usage should be:
 
 ```

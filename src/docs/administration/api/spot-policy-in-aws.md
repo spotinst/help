@@ -12,364 +12,321 @@ Spot creates two kinds of policies while onboarding your cloud accounts:
 2. [SecurityAudit Policy](https://docs.aws.amazon.com/aws-managed-policy/latest/reference/SecurityAudit.html). SecurityAudit is an AWS managed policy that grants access to read security configuration metadata. This policy is used by Spot with no deviation from the standard AWS Managed Policy. 
 
 ```json
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Sid": "GeneralSpotInstancesAccess",
-      "Action": [
-        "ec2:RequestSpotInstances",
-        "ec2:CancelSpotInstanceRequests",
-        "ec2:CreateSpotDatafeedSubscription",
-        "ec2:Describe*",
-        "ec2:AssociateAddress",
-        "ec2:AttachVolume",
-        "ec2:ConfirmProductInstance",
-        "ec2:CopyImage",
-        "ec2:CopySnapshot",
-        "ec2:CreateImage",
-        "ec2:CreateSnapshot",
-        "ec2:CreateTags",
-        "ec2:CreateVolume",
-        "ec2:DeleteTags",
-        "ec2:DisassociateAddress",
-        "ec2:ModifyImageAttribute",
-        "ec2:ModifyInstanceAttribute",
-        "ec2:MonitorInstances",
-        "ec2:RebootInstances",
-        "ec2:RegisterImage",
-        "ec2:RunInstances",
-        "ec2:StartInstances",
-        "ec2:StopInstances",
-        "ec2:TerminateInstances",
-        "ec2:UnassignPrivateIpAddresses",
-        "ec2:DeregisterImage",
-        "ec2:DeleteSnapshot",
-        "ec2:DeleteVolume",
-        "ec2:ModifyReservedInstances",
-        "ec2:CreateReservedInstancesListing",
-        "ec2:CancelReservedInstancesListing",
-        "ec2:ModifyNetworkInterfaceAttribute",
-        "ec2:DeleteNetworkInterface"
-      ],
-      "Effect": "Allow",
-      "Resource": [
-        "*"
-      ]
-    },
-    {
-      "Sid": "AccessELB",
-      "Action": [
-        "elasticloadbalancing:Describe*",
-        "elasticloadbalancing:Deregister*",
-        "elasticloadbalancing:Register*",
-        "elasticloadbalancing:RemoveTags",
-        "elasticloadbalancing:RegisterTargets",
-        "elasticloadbalancing:EnableAvailabilityZonesForLoadBalancer",
-        "elasticloadbalancing:DisableAvailabilityZonesForLoadBalancer",
-        "elasticloadbalancing:DescribeTags",
-        "elasticloadbalancing:CreateTargetGroup",
-        "elasticloadbalancing:DeleteTargetGroup",
-        "elasticloadbalancing:ModifyRule",
-        "elasticloadbalancing:AddTags",
-        "elasticloadbalancing:ModifyTargetGroupAttributes",
-        "elasticloadbalancing:ModifyTargetGroup",
-        "elasticloadbalancing:ModifyListener"
-      ],
-      "Effect": "Allow",
-      "Resource": [
-        "*"
-      ]
-    },
-    {
-      "Sid": "AccessCloudWatch",
-      "Action": [
-        "cloudwatch:DescribeAlarmHistory",
-        "cloudwatch:DescribeAlarms",
-        "cloudwatch:DescribeAlarmsForMetric",
-        "cloudwatch:GetMetricStatistics",
-        "cloudwatch:GetMetricData",
-        "cloudwatch:ListMetrics",
-        "cloudwatch:PutMetricData",
-        "cloudwatch:PutMetricAlarm"
-      ],
-      "Effect": "Allow",
-      "Resource": [
-        "*"
-      ]
-    },
-    {
-      "Sid": "AccessSNS",
-      "Action": [
-        "sns:Publish",
-        "sns:ListTopics",
-        "sns:CreateTopic",
-        "sns:GetTopicAttributes",
-        "sns:ListSubscriptionsByTopic",
-        "sns:Subscribe"
-      ],
-      "Effect": "Allow",
-      "Resource": [
-        "*"
-      ]
-    },
-    {
-      "Sid": "AccessIAM",
-      "Action": [
-        "iam:AddRoleToInstanceProfile",
-        "iam:ListInstanceProfiles",
-        "iam:ListInstanceProfilesForRole",
-        "iam:PassRole",
-        "iam:ListRoles",
-        "iam:ListAccountAliases",
-        "iam:GetPolicyVersion",
-        "iam:ListPolicies",
-        "iam:GetPolicy",
-        "iam:ListAttachedRolePolicies",
-        "organizations:ListAccounts",
-        "iam:CreateServiceLinkedRole",
-        "iam:PutRolePolicy",
-        "iam:GetInstanceProfile",
-        "iam:GetRolePolicy",
-        "iam:ListRolePolicies",
-        "iam:SimulatePrincipalPolicy"
-      ],
-      "Effect": "Allow",
-      "Resource": [
-        "*"
-      ]
-    },
-    {
-      "Sid": "GeneralAccessElaticBeanstalk",
-      "Action": [
-        "elasticbeanstalk:Describe*",
-        "elasticbeanstalk:RequestEnvironmentInfo",
-        "elasticbeanstalk:RetrieveEnvironmentInfo",
-        "elasticbeanstalk:ValidateConfigurationSettings",
-        "elasticbeanstalk:UpdateEnvironment",
-        "elasticbeanstalk:ListPlatformVersions",
-        "cloudformation:GetTemplate",
-        "cloudformation:DescribeStackResources",
-        "cloudformation:DescribeStackResource",
-        "cloudformation:DescribeStacks",
-        "cloudformation:ListStackResources",
-        "cloudformation:UpdateStack",
-        "cloudformation:DescribeStackEvents",
-        "logs:PutRetentionPolicy",
-        "logs:createLogGroup",
-        "elasticbeanstalk:ListTagsForResource"
-      ],
-      "Effect": "Allow",
-      "Resource": [
-        "*"
-      ]
-    },
-    {
-      "Sid": "AccessAutoScalingGroups",
-      "Action": [
-        "autoscaling:*"
-      ],
-      "Effect": "Allow",
-      "Resource": [
-        "*"
-      ]
-    },
-    {
-      "Sid": "AccessEks",
-      "Action": [
-        "eks:ListClusters",
-        "eks:DescribeNodegroup",
-        "eks:ListNodegroups"
-      ],
-      "Effect": "Allow",
-      "Resource": [
-        "*"
-      ]
-    },
-    {
-      "Sid": "AccessEMR",
-      "Action": [
-        "elasticmapreduce:*",
-        "s3:GetObject"
-      ],
-      "Effect": "Allow",
-      "Resource": [
-        "*"
-      ]
-    },
-    {
-      "Sid": "AccessECS",
-      "Action": [
-        "ecs:List*",
-        "ecs:Describe*",
-        "ecs:DeregisterContainerInstance",
-        "ecs:UpdateContainerInstancesState",
-        "ecs:RegisterTaskDefinition",
-        "ecs:CreateService",
-        "application-autoscaling:PutScalingPolicy",
-        "application-autoscaling:RegisterScalableTarget",
-        "application-autoscaling:Describe*",
-        "ecs:putAttributes"
-      ],
-      "Effect": "Allow",
-      "Resource": [
-        "*"
-      ]
-    },
-    {
-      "Sid": "AccessBatch",
-      "Action": [
-        "batch:List*",
-        "batch:Describe*"
-      ],
-      "Effect": "Allow",
-      "Resource": [
-        "*"
-      ]
-    },
-    {
-      "Sid": "AccessOpsWorks",
-      "Action": [
-        "opsworks:DeregisterInstance",
-        "opsworks:DescribeInstances",
-        "opsworks:DescribeStacks",
-        "opsworks:DescribeLayers"
-      ],
-      "Effect": "Allow",
-      "Resource": [
-        "*"
-      ]
-    },
-    {
-      "Sid": "AccessCodeDeploy",
-      "Action": [
-        "codedeploy:*"
-      ],
-      "Effect": "Allow",
-      "Resource": [
-        "*"
-      ]
-    },
-    {
-      "Sid": "AccessGeneralS3",
-      "Action": [
-        "s3:GetObject",
-        "s3:List*",
-        "s3:GetBucketLocation"
-      ],
-      "Effect": "Allow",
-      "Resource": [
-        "*"
-      ]
-    },
-    {
-      "Sid": "AccessRoute53",
-      "Action": [
-        "route53:ListHostedZones",
-        "route53:ListResourceRecordSets",
-        "route53:ChangeResourceRecordSets"
-      ],
-      "Effect": "Allow",
-      "Resource": [
-        "*"
-      ]
-    },
-    {
-      "Sid": "AccesS3forElasticBeanstalk",
-      "Effect": "Allow",
-      "Action": [
-        "s3:*"
-      ],
-      "Resource": [
-        "arn:aws:s3:::elasticbeanstalk*"
-      ]
-    },
-    {
-      "Sid": "DockerBasedBeanstalkEnvironments",
-      "Action": [
-        "ecs:Poll",
-        "ecs:DiscoverPollEndpoint",
-        "ecs:StartTelemetrySession",
-        "ecs:StartTask",
-        "ecs:StopTask",
-        "ecs:DescribeContainerInstances",
-        "ecs:RegisterContainerInstance",
-        "ecs:DeregisterContainerInstance",
-        "ecs:SubmitContainerStateChange",
-        "ecs:SubmitTaskStateChange"
-      ],
-      "Effect": "Allow",
-      "Resource": [
-        "*"
-      ]
-    },
-    {
-      "Sid": "ElasticFileSystem",
-      "Action": [
-        "elasticfilesystem:DescribeFileSystems"
-      ],
-      "Effect": "Allow",
-      "Resource": [
-        "*"
-      ]
-    },
-    {
-      "Sid": "Pricing",
-      "Action": [
-        "pricing:GetProducts"
-      ],
-      "Effect": "Allow",
-      "Resource": [
-        "*"
-      ]
-    },
-    {
-      "Sid": "SavingsPlan",
-      "Action": [
-        "savingsplans:Describe*",
-        "savingsplans:List*"
-      ],
-      "Effect": "Allow",
-      "Resource": [
-        "*"
-      ]
-    },
-    {
-      "Sid": "Lambda",
-      "Action": [
-        "lambda:ListFunctions"
-      ],
-      "Effect": "Allow",
-      "Resource": [
-        "*"
-      ]
-    },
-    {
-      "Sid": "GeneralSpotStorageAccess",
-      "Action": [
-        "ec2:ModifyVolume",
-        "ec2:DetachVolume",
-        "ec2:DescribeVolumes",
-        "ec2:DescribeVolumesModifications",
-        "ec2:DescribeSnapshots",
-        "elasticfilesystem:DeleteFileSystem",
-        "elasticfilesystem:DescribeMountTargets",
-        "elasticfilesystem:DeleteMountTarget",
-        "fsx:DescribeFileSystems"
-      ],
-      "Effect": "Allow",
-      "Resource": ["*"]
-    },
-    {
-      "Sid": "AccessCostExplorer",
-      "Action": [
-        "ce:GetCostAndUsage"
-      ],
-      "Effect": "Allow",
-      "Resource": [
-        "*"
-      ]
-    }
-  ]
-}
+{ 
+  "Version": "2012-10-17", 
+  "Statement": [ 
+    { 
+      "Sid": "OpsWorks", 
+      "Action": [ 
+        "opsworks:DeregisterInstance", 
+        "opsworks:DescribeInstances", 
+        "opsworks:DescribeLayers", 
+        "opsworks:DescribeStacks" 
+      ], 
+      "Effect": "Allow", 
+      "Resource": [ 
+        "*" 
+      ] 
+    }, 
+    { 
+      "Sid": "OverviewDashboard", 
+      "Action": [ 
+        "application-autoscaling:Describe*", 
+        "autoscaling:Describe*", 
+        "batch:Describe*", 
+        "batch:List*", 
+        "codedeploy:BatchGetDeployments", 
+        "codedeploy:List*", 
+        "ec2:Describe*", 
+        "ec2:DescribeVolumesModifications", 
+        "ecs:Describe*", 
+        "ecs:List*", 
+        "eks:ListClusters", 
+        "elasticbeanstalk:Describe*", 
+        "elasticfilesystem:DescribeFileSystems", 
+        "elasticfilesystem:DescribeMountTargets", 
+        "elasticloadbalancing:Describe*", 
+        "elasticmapreduce:Describe*", 
+        "elasticmapreduce:List*", 
+        "iam:ListAccountAliases", 
+        "lambda:ListFunctions", 
+        "s3:GetBucketLocation", 
+        "s3:List*", 
+        "savingsplans:Describe*", 
+        "savingsplans:List*" 
+      ], 
+      "Effect": "Allow", 
+      "Resource": [ 
+        "*" 
+      ] 
+    }, 
+    { 
+      "Sid": "OceanEks", 
+      "Action": [ 
+        "eks:DescribeNodegroup", 
+        "eks:ListClusters", 
+        "eks:ListNodegroups" 
+      ], 
+      "Effect": "Allow", 
+      "Resource": [ 
+        "*" 
+      ] 
+    }, 
+    { 
+      "Sid": "OceanAndElastigroupBasicActions", 
+      "Action": [ 
+        "application-autoscaling:Describe*", 
+        "application-autoscaling:PutScalingPolicy", 
+        "application-autoscaling:RegisterScalableTarget", 
+        "autoscaling:*", 
+        "autoscaling:Describe*", 
+        "ce:getCostAndUsage", 
+        "ce:getTags", 
+        "cloudwatch:DescribeAlarmHistory", 
+        "cloudwatch:DescribeAlarms", 
+        "cloudwatch:DescribeAlarmsForMetric", 
+        "cloudwatch:GetMetricData", 
+        "cloudwatch:GetMetricStatistics", 
+        "cloudwatch:ListMetrics", 
+        "cloudwatch:PutMetricAlarm", 
+        "cloudwatch:PutMetricData", 
+        "ec2:AssociateAddress", 
+        "ec2:AttachVolume", 
+        "ec2:CancelReservedInstancesListing", 
+        "ec2:CancelSpotInstanceRequests", 
+        "ec2:ConfirmProductInstance", 
+        "ec2:CopySnapshot", 
+        "ec2:CreateImage", 
+        "ec2:CreateReservedInstancesListing", 
+        "ec2:CreateSnapshot", 
+        "ec2:CreateTags", 
+        "ec2:CreateVolume", 
+        "ec2:DeleteNetworkInterface", 
+        "ec2:DeleteSnapshot", 
+        "ec2:DeleteTags", 
+        "ec2:DeleteVolume", 
+        "ec2:DeregisterImage", 
+        "ec2:DetachVolume", 
+        "ec2:DisassociateAddress", 
+        "ec2:ModifyImageAttribute", 
+        "ec2:ModifyInstanceAttribute", 
+        "ec2:ModifyNetworkInterfaceAttribute", 
+        "ec2:ModifyReservedInstances", 
+        "ec2:MonitorInstances", 
+        "ec2:RebootInstances", 
+        "ec2:RegisterImage", 
+        "ec2:RequestSpotInstances", 
+        "ec2:RunInstances", 
+        "ec2:StartInstances", 
+        "ec2:StopInstances", 
+        "ec2:TerminateInstances", 
+        "ec2:UnassignPrivateIpAddresses", 
+        "ecs:Describe*", 
+        "ecs:List*", 
+        "elasticloadbalancing:AddTags", 
+        "elasticloadbalancing:CreateTargetGroup", 
+        "elasticloadbalancing:DeleteTargetGroup", 
+        "elasticloadbalancing:Deregister*", 
+        "elasticloadbalancing:Describe*", 
+        "elasticloadbalancing:DescribeTags", 
+        "elasticloadbalancing:DisableAvailabilityZonesForLoadBalancer", 
+        "elasticloadbalancing:EnableAvailabilityZonesForLoadBalancer", 
+        "elasticloadbalancing:ModifyListener", 
+        "elasticloadbalancing:ModifyRule", 
+        "elasticloadbalancing:ModifyTargetGroup", 
+        "elasticloadbalancing:ModifyTargetGroupAttributes", 
+        "elasticloadbalancing:Register*", 
+        "elasticloadbalancing:RegisterTargets", 
+        "elasticloadbalancing:RemoveTags", 
+        "savingsplans:Describe*" 
+      ], 
+      "Effect": "Allow", 
+      "Resource": [ 
+        "*" 
+      ] 
+    }, 
+    { 
+      "Sid": "ElastigroupRoute53", 
+      "Action": [ 
+        "ec2:AttachVolume", 
+        "route53:ChangeResourceRecordSets", 
+        "route53:ListHostedZones", 
+        "route53:ListResourceRecordSets" 
+      ], 
+      "Effect": "Allow", 
+      "Resource": [ 
+        "*" 
+      ] 
+    }, 
+    { 
+      "Sid": "ElastigroupBatch", 
+      "Action": [ 
+        "batch:Describe*", 
+        "batch:List*" 
+      ], 
+      "Effect": "Allow", 
+      "Resource": [ 
+        "*" 
+      ] 
+    }, 
+    { 
+      "Sid": "ElastigroupStateful", 
+      "Action": [ 
+        "ec2:CopyImage", 
+        "ec2:CopySnapshot", 
+        "ec2:CreateImage", 
+        "ec2:CreateSnapshot", 
+        "ec2:DeleteNetworkInterface", 
+        "ec2:DeleteSnapshot", 
+        "ec2:DisassociateAddress", 
+        "ec2:ModifyImageAttribute", 
+        "ec2:ModifyNetworkInterfaceAttribute", 
+        "ec2:RegisterImage", 
+        "ec2:UnassignPrivateIpAddresses", 
+        "elasticbeanstalk:ListTagsForResource" 
+      ], 
+      "Effect": "Allow", 
+      "Resource": [ 
+        "*" 
+      ] 
+    }, 
+    { 
+      "Sid": "ElastigroupBeanstalk", 
+      "Action": [ 
+        "cloudformation:DescribeStackEvents", 
+        "cloudformation:DescribeStackResource", 
+        "cloudformation:DescribeStackResources", 
+        "cloudformation:DescribeStacks", 
+        "cloudformation:GetTemplate", 
+        "cloudformation:ListStackResources", 
+        "cloudformation:UpdateStack", 
+        "elasticbeanstalk:Describe*", 
+        "elasticbeanstalk:ListPlatformVersions", 
+        "elasticbeanstalk:ListTagsForResource", 
+        "elasticbeanstalk:RequestEnvironmentInfo", 
+        "elasticbeanstalk:RetrieveEnvironmentInfo", 
+        "elasticbeanstalk:UpdateEnvironment", 
+        "elasticbeanstalk:ValidateConfigurationSettings", 
+        "iam:ListPolicies", 
+        "logs:PutRetentionPolicy", 
+        "logs:createLogGroup" 
+      ], 
+      "Effect": "Allow", 
+      "Resource": [ 
+        "*" 
+      ] 
+    }, 
+    { 
+      "Sid": "ElastigroupEmr", 
+      "Action": [ 
+        "elasticmapreduce:*", 
+        "elasticmapreduce:List*", 
+        "iam:ListPolicies" 
+      ], 
+      "Effect": "Allow", 
+      "Resource": [ 
+        "*" 
+      ] 
+    }, 
+    { 
+      "Sid": "SpotStorage", 
+      "Action": [ 
+        "ec2:CreateTags", 
+        "ec2:CreateVolume", 
+        "ec2:ModifyVolume", 
+        "elasticfilesystem:DeleteFileSystem", 
+        "elasticfilesystem:DeleteMountTarget", 
+        "elasticfilesystem:DescribeFileSystems", 
+        "elasticfilesystem:DescribeMountTargets" 
+      ], 
+      "Effect": "Allow", 
+      "Resource": [ 
+        "*" 
+      ] 
+    }, 
+    { 
+      "Sid": "AccountOperativeActions", 
+      "Action": [ 
+        "iam:AddRoleToInstanceProfile", 
+        "iam:CreateServiceLinkedRole", 
+        "iam:GetInstanceProfile", 
+        "iam:GetPolicy", 
+        "iam:GetPolicyVersion", 
+        "iam:GetRolePolicy", 
+        "iam:ListAccountAliases", 
+        "iam:ListAttachedRolePolicies", 
+        "iam:ListInstanceProfiles", 
+        "iam:ListInstanceProfilesForRole", 
+        "iam:ListPolicies", 
+        "iam:ListRolePolicies", 
+        "iam:ListRoles", 
+        "iam:PassRole", 
+        "iam:PutRolePolicy", 
+        "iam:SimulatePrincipalPolicy", 
+        "lambda:ListFunctions", 
+        "logs:PutRetentionPolicy", 
+        "logs:createLogGroup", 
+        "organizations:ListAccounts", 
+        "pricing:GetProducts", 
+        "s3:GetBucketLocation", 
+        "s3:GetObject", 
+        "s3:List*", 
+        "savingsplans:List*", 
+        "sns:CreateTopic", 
+        "sns:GetTopicAttributes", 
+        "sns:ListSubscriptionsByTopic", 
+        "sns:ListTopics", 
+        "sns:Publish", 
+        "sns:Subscribe" 
+      ], 
+      "Effect": "Allow", 
+      "Resource": [ 
+        "*" 
+      ] 
+    }, 
+    { 
+      "Sid": "OceanEcs", 
+      "Action": [ 
+        "ecs:CreateService", 
+        "ecs:DeregisterContainerInstance", 
+        "ecs:DescribeContainerInstances", 
+        "ecs:DiscoverPollEndpoint", 
+        "ecs:Poll", 
+        "ecs:RegisterContainerInstance", 
+        "ecs:RegisterTaskDefinition", 
+        "ecs:StartTask", 
+        "ecs:StartTelemetrySession", 
+        "ecs:StopTask", 
+        "ecs:SubmitContainerStateChange", 
+        "ecs:SubmitTaskStateChange", 
+        "ecs:UpdateContainerInstancesState", 
+        "ecs:putAttributes" 
+      ], 
+      "Effect": "Allow", 
+      "Resource": [ 
+        "*" 
+      ] 
+    }, 
+    { 
+      "Sid": "ElastigroupCodeDeploy", 
+      "Action": [ 
+        "codedeploy:*" 
+      ], 
+      "Effect": "Allow", 
+      "Resource": [ 
+        "*" 
+      ] 
+    }, 
+    { 
+      "Sid": "AccesS3forElasticBeanstalk", 
+      "Action": [ 
+        "s3:*" 
+      ], 
+      "Effect": "Allow", 
+      "Resource": [ 
+        "arn:aws:s3:::elasticbeanstalk*" 
+      ] 
+    } 
+  ] 
+} 
 ```

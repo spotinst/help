@@ -68,7 +68,7 @@ In the previous app registration that was created, create a client secret:
 
 ![connect-azure-sub-10](https://github.com/spotinst/help/assets/106514736/c63efd8e-9ab1-4e49-8970-86dbf680fca2) 
  
-4. Select **Start from JSON** and upload the next JSON policy 
+4. Select **Start from JSON** and upload the next [JSON policy](https://docs.spot.io/administration/api/spot-policy-in-azure?id=spot-policy-in-azure). 
  
 ![connect-azure-sub-11](https://github.com/spotinst/help/assets/106514736/e66c540c-4e9d-49b9-8209-5a9046c7faf6)
 

@@ -3,7 +3,7 @@
 - <a href="/" class="sidebar-home"><i data-feather="arrow-left" class="sidebar-back-icon"></i>Back to Main Tree</a>
 - [Ocean CD](ocean-cd/)
   - [Getting Started](ocean-cd/getting-started/)
-    - [Install Operator](ocean-cd/getting-started/install-operator-using-API-or-helm)
+    - [Install Operator](ocean-cd/getting-started/install-operator-manager)
     - [Create Spot Deployments](ocean-cd/getting-started/create-deployment)
     - [Rollout Entities](ocean-cd/getting-started/rollout-entities/)
       - [Verification Provider](ocean-cd/getting-started/rollout-entities/verification-provider)
@@ -26,6 +26,8 @@
     - [Multiple SpotDeployments](ocean-cd/concepts-features/multiple-deployments)  
     - [Trigger Rollouts with ConfigMap](ocean-cd/concepts-features/trigger-configmap)
     - [Headers-based Traffic](ocean-cd/concepts-features/headers)
+    - [Baseline](ocean-cd/concepts-features/baseline)
+    - [CI Analysis](ocean-cd/concepts-features/ci-analysis)
   - [Permission Policies](ocean-cd/permission-policies/)   
   - [Get to Know Ocean CD](ocean-cd/get-to-know-ocean-cd/)
     - [View Settings](ocean-cd/tutorials/view-settings/)

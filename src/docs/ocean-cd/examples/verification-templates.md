@@ -10,16 +10,17 @@ If your current verifications and testing processes use an external tool or an a
 
 ## Supported Providers
 
-Ocean Cd supports the following providers:  
+Ocean CD supports the following providers:  
 
-* Prometheus   
-* NewRelic
-* DataDog
-* Cloudwatch
-* Web Analysis
-* Job Analysis
+* [Prometheus](ocean-cd/examples/verification-templates?id=prometheus)   
+* [NewRelic](ocean-cd/examples/verification-templates?id=new-relic)
+* [DataDog](ocean-cd/examples/verification-templates?id=datadog)
+* [Cloudwatch](ocean-cd/examples/verification-templates?id=cloudwatch)
+* [Web Analysis](ocean-cd/examples/verification-templates?id=web-analysis)
+* [Job Analysis](ocean-cd/examples/verification-templates?id=job-analysis)
+* [Jenkins](ocean-cd/examples/verification-templates?id=jenkins)
 
-You can find further details on the parameters used by the providers in the [Entities](ocean-cd/concepts-features/entities) page.
+You can find further information on the parameters used by the providers in the [Entities](ocean-cd/getting-started/rollout-entities/) page.
 
 ### Prometheus
 
@@ -101,7 +102,7 @@ Null values can appear when using Cloudwatch. They can be interpreted in two way
 
 * If a null value is encountered when its query is set as a success condition, the metric will be considered successful.
 
-For additional details on the parameters below, see the [Ocean CD API documentation](https://docs.spot.io/api/#tag/Ocean-CD).  
+For additional information on the parameters below, see the [Ocean CD API documentation](https://docs.spot.io/api/#tag/Ocean-CD).  
 
 ```yaml
 kind: "VerificationTemplate"
@@ -115,7 +116,7 @@ metrics:
     provider:
       cloudWatch:
         metricDataQueries:
-          - id: "healthy-rate"
+          - id: "healthy_rate"
             expression: "healthy/unhealthy"
             returnData: true
           - id: "unhealthy"
@@ -165,9 +166,9 @@ metrics:
 
 ## Job-Analysis
 
-A Job Analysis which will allow you to configure a Kubernetes Job at any given time during your rollout.
+A job analysis enables you to configure a Kubernetes job at any given time during your rollout.
 
-For additional details on the parameters below, see the Ocean CD API documentation.
+For additional information on the parameters below, see the Ocean CD API documentation.
 
 ```yaml
 kind: "VerificationTemplate"
@@ -191,6 +192,32 @@ metrics:
                  name: "nginx"
              restartPolicy: "Never"
 ```
+
+## Jenkins 
+
+Jenkins should be used as a provider if you wish to incorporate CI pipelines into Ocean CD rollouts. 
+
+```yaml
+kind: "VerificationTemplate" 
+name: "jenkins-vt" 
+args: [ ] 
+metrics: 
+  - name: "jenkinsci" 
+    dryRun: true 
+    provider: 
+      jenkins: 
+        pipelineName: jenkinsPipelineName 
+        tlsVerification: false 
+        timeout: '120s' 
+        interval: '5s' 
+        parameters: 
+          - key: key1 
+            value: param1 
+          - key: key2 
+            value: param2 
+```
+
+For more information, refer to the [CI Analysis documentation](ocean-cd/concepts-features/ci-analysis). 
 
 ## What’s next?
 

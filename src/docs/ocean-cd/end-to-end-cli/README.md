@@ -1,12 +1,12 @@
-# End-to-End setup
+# End-to-End (CLI) Setup
 
-This procedure describes how to install the operator, create services and Spot Deployments as well as your Ocean CD entities. This procedure provides end-to-end insights of the Ocean CD flow to successfully trigger your very first deployment.  
+This procedure describes how to install the operator manager, create services and Spot Deployments as well as your Ocean CD entities. This procedure provides end-to-end insights of the Ocean CD flow to successfully trigger your very first deployment.  
 
 ## Prerequisites
 
 * Run the Kubernetes cluster in Azure, Google, or Amazon.
 * If you are not already connected to Spot, follow the steps in the [enablement process](https://docs.spot.io/connect-your-cloud-provider/first-account/).
-* An existing Spot API Token. If not, you can create one using [this tutorial](https://docs.spot.io/administration/api/create-api-token?id=create-an-api-token).
+* An existing Spot API Token. If you don't have one, you can create one using [this tutorial].(https://docs.spot.io/administration/api/create-api-token?id=create-an-api-token).
 * For MacOS users only: Ocean CD’s [CLI tool](https://github.com/spotinst/spot-oceancd-cli#installation) is installed. If it is not installed, run the following command:
 
 `brew install spotinst/tap/oceancd`
@@ -22,38 +22,34 @@ This procedure describes how to install the operator, create services and Spot D
   - quay.io/operator-framework/olm
   - quay.io/operatorhubio/catalog:latest
 
-## Step 1: Install the Operator  
+## Step 1: Install the Operator Manager  
 
-Install the operator to access your cluster workload to Ocean CD.  
-**It is required to use OLM when using Ocean CD**.
+Install the operator manager to access your cluster workload to Ocean CD.  
 
-1. Under Ocean CD in the Spot console, click Settings, and then click Add Cluster.
+1. In the left main menu, click **Ocean CD** and click **Settings**. 
+2. Click **+ Add Cluster**. 
 
-<img src="/ocean-cd/_media/getting-started-n01.png" />
+![end-to-end-cli-1](https://github.com/spotinst/help/assets/106514736/29db2cb1-b2ea-4a63-90e0-54380bb11ea2)
 
-2. Complete the information:  
-
-<img src="/ocean-cd/_media/end-to-end-1.png" width="500"/>
+3. Complete the information:  
 
 * **Cluster Identifier**: This is a logical identifier for your cluster that must be unique and have up to 30 alphanumeric characters without any spaces. You can choose any ID and it does not need to be coupled to the Ocean cluster ID (o-xxxxxx). Ocean CD can run on clusters that are not managed by Ocean.  
 
-* [Argo Rollout Installation](https://docs.spot.io/ocean-cd/?id=argo-rollouts-as-an-engine): Ocean CD uses Argo rollouts as part of its engine. If Argo Rollout is not installed, Ocean CD will install it (based on the chosen option).
+* **Spot API Token**: This token is required for authentication and authorization of your API requests.  
 
-3. Download the YAML and apply it to your Kubernetes cluster.
+4. Run the commands in your cluster: 
 
-`kubectl apply -f <Name of the YAML>`
-
-**If this is not specified in the command, the operator will be installed in the Ocean CD namespace**.
+![end-to-end-cli-2](https://github.com/spotinst/help/assets/106514736/696d00d8-6d2c-4f7b-874d-61e02206136d)
 
 When the process is complete and the operator pods are running, your cluster appears in the Cluster Settings section.
 
-<img src="/ocean-cd/_media/getting-started-n04.png" />
-
-> **Tip**: Once you have downloaded the YAML, the new row remains with partial information for five minutes. If five minutes elapsed and the YAML was not applied, the row and the banner will be removed. However, the YAML can still be applied at a different time, and the Ocean CD displays the new data accordingly.
-
-Once the Ocean CD operator is installed you can create your Kubernetes entities: Services and SpotDeployment.  
-
 ## Step 2: Create a Namespace and Service
+
+Create a namespace to keep all the Kubernetes entities you create together. 
+
+1. Run the following command: 
+
+`kubectl create ns oceancd-workshop` 
 
 When a namespace is created, create the canary and stable services to expose and manage the traffic that is divided between the canary and the stable replicasets.  
 
@@ -134,7 +130,7 @@ After the SpotDeployment and services are created, the remaining steps are to cr
 
 ## Step 4: Create Verification  
 
-This step focuses on the creation of the verification provider and verification template. These entities enable you to insert data analysis while your deployments run. These deployments can be from any of the supported monitoring tools by Spot. For further information please jump to [Verification Providers](ocean-cd/concepts-features/provider-reference) page.
+This step focuses on the creation of the verification provider and verification template. These entities enable you to insert data analysis while your deployments run. These deployments can be from any of the supported monitoring tools by Spot. For further information please see the [Verification Providers](ocean-cd/concepts-features/provider-reference) page.
 
 ### Install Prometheus
 
