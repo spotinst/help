@@ -155,6 +155,20 @@ In addition, you must also attach a cluster role of edit to the spark-driver ser
 
 ```
 kubectl create clusterrolebinding <cluster-role-binding-name> --clusterrole=edit --serviceaccount=spark-apps:spark-driver --namespace=default
+
+```
+
+## Dynamic PVC Reuse
+
+With the release of Spark 3.2, you can now dynamically reuse persistent volume claims within the same application. This becomes particularly beneficial when using spot instances. In a normal Spark application leveraging spot instances for executors, if you lose a node to a spot kill, you will lose any shuffle or output data that was stored on that node, and Spark will be forced to recompute the results. With PVC reuse enabled, the Spark driver will maintain the PVC(s) of the lost spot instance, add new executors to the cluster, and attach the PVC(s) to the new executors, maintaining the work and progress of the previous node. This feature can significantly reduce application runtime and cost, offsetting one of the major drawbacks of using spot instances. To enable dynamic PVC reuse, add the following two lines, in addition to the configuration above, to your Spark conf: 
+
+```
+{
+    "sparkConf": {
+       "spark.kubernetes.driver.reusePersistentVolumeClaim":"true",
+       "spark.kubernetes.driver.ownPersistentVolumeClaim":"true"
+    }
+}
 ```
 
 ## What’s Next?
