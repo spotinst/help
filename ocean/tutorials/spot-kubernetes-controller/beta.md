@@ -83,8 +83,36 @@ ENABLE_OCEAN_NETWORK_CLIENT=false \
 INCLUDE_METRIC_SERVER=false \
 bash
 ```
- 
+## Terraform Installation 
 
- 
+Spot provides a [Terraform Module](https://registry.terraform.io/modules/spotinst/kubernetes-controller/ocean/latest) to install and manage the Ocean Controller. 
+
+Usage Example: 
+```
+provider "helm" { 
+ kubernetes { 
+ config_path = "~/.kube/config" 
+ } 
+} 
+
+locals { 
+ spotinst_token = "TOKEN" 
+ spotinst_account = "ACCOUNT_ID" 
+ spotinst_cluster_identifier = "CLUSTER_IDENTIFIER" 
+} 
+
+module "kubernetes-controller" { 
+ source = "spotinst/kubernetes-controller/ocean" 
+
+# Credentials 
+
+spotinst_token = local.spotinst_token 
+ spotinst_account = local.spotinst_account 
+
+# Configuration 
+
+cluster_identifier = local.spotinst_cluster_identifier
+}
+ ```
 
  
