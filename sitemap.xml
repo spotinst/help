@@ -400,11 +400,11 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/billing-engine/billing-analysis/"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/billing-engine/get-started/connect-azure-be</loc>
+        <loc>https://docs.spot.io/?/billing-engine/get-started/connect-azure</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/billing-engine/get-started/connect-azure-be"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/billing-engine/get-started/connect-azure-be"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/billing-engine/get-started/connect-azure"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/billing-engine/get-started/connect-azure"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/billing-engine/get-started/</loc>
@@ -687,11 +687,11 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/cost-intelligence/_media/"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/cost-intelligence/get-started/connect-azure-ci</loc>
+        <loc>https://docs.spot.io/?/cost-intelligence/get-started/connect-azure</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/cost-intelligence/get-started/connect-azure-ci"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/cost-intelligence/get-started/connect-azure-ci"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/cost-intelligence/get-started/connect-azure"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/cost-intelligence/get-started/connect-azure"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/cost-intelligence/get-started/</loc>

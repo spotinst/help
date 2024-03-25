@@ -10,7 +10,7 @@ Permissions to create app registrations and assign subscription reader role in A
 
 1. Enter an account name and click **Create Account**. 
 
-<img width="998" alt="connect-azure-ci-1" src="https://github.com/spotinst/help/assets/106514736/270c5136-5956-4077-9fe0-b06a6ad0fedb">
+![connect-azure-ci-1](https://github.com/spotinst/help/assets/106514736/60985019-a37d-4faa-a24c-d2d15ffa77fe)
 
 2. Select **Microsoft Azure** as your cloud provider.  
 3. Select **FinOps Products** and click **Next**. 
