@@ -73,8 +73,8 @@ Set up Cost and Usage Reports as described below.
 
 You can open the linked CloudFormation Template in two ways: 
 
-* [Run Default Template Onboarding](getting-started/connect-your-aws-account?id=run-default-template-onboarding) 
-* [Use Custom Template](getting-started/connect-your-aws-account?id=run-custom-template)  
+* [Run Default Template Onboarding](eco/getting-started/connect-your-aws-account?id=run-default-template-onboarding) 
+* [Use Custom Template](eco/getting-started/connect-your-aws-account?id=run-custom-template)  
 
 ![connect-aws-8](https://github.com/spotinst/help/assets/106514736/8e9bc601-45ac-470a-8d64-92043ae4e798)
 
