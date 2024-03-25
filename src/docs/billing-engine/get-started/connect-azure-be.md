@@ -66,7 +66,7 @@ In the previous app registration that was created, complete the following steps 
 
 ## Step 5: Assign Reader Role to the App Registration 
 
-In the Azure console, type ##Subscriptions## in the search bar and click the Subscription you want to connect to Billing Engine in the result that appears. 
+In the Azure console, type **Subscriptions** in the search bar and click the Subscription you want to connect to Billing Engine in the result that appears. 
 **Note**: One subscription from the billing account needs to be given reader access to the application. 
 
 2. In the menu on the left side of the Subscriptions platform, click **Access Control (IAM)**. 
