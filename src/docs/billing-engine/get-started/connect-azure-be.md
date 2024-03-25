@@ -71,8 +71,7 @@ In the Azure console, type **Subscriptions** in the search bar and click the Sub
 
 2. In the menu on the left side of the Subscriptions platform, click **Access Control (IAM)**. 
 3. Click **Add/Add role assignment**. 
-4. Select the Reader role. 
-5. Click **Next**. 
+4. Select the Reader role and click **Next**. 
 6. Click **+ Select Members**. 
 7. In the right panel, search for and select the registered application created earlier. 
 8. Click **Review + Assign**. 
