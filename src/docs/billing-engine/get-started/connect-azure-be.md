@@ -18,7 +18,7 @@ The procedures on this page describe how to connect your Microsoft Azure Billing
 3. Select **FinOps Products** and click **Next**.  
 4. Select **Billing Engine** and follow the steps to log in to Azure. 
 
-<img width="985" alt="connect-azure-2" src="https://github.com/spotinst/help/assets/106514736/3a12efee-9e78-4eec-ac33-4da8558cfcb2"> 
+<img width="811" alt="connect-azure-2" src="https://github.com/spotinst/help/assets/106514736/eaa1784b-10ca-4d2d-8d12-a4ca92f4e6eb">
 
 ## Step 2: Log in to your Azure Account 
 
