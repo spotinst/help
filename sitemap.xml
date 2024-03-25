@@ -680,6 +680,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/cost-intelligence/_media/"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/cost-intelligence/get-started/connect-azure-ci</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/cost-intelligence/get-started/connect-azure-ci"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/cost-intelligence/get-started/connect-azure-ci"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/cost-intelligence/get-started/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
