@@ -60,7 +60,7 @@ Set up Cost and Usage Reports as described below.
 7. A S3 path prefix is required to create the report. 
 8. Click **Create**. 
 
->**Note: Spot strongly recommends that you create both a new Amazon S3 bucket and a new Cost and Usage Reports if you do not have Athena already integrated. If you choose to use a pre-existing S3 bucket, the following Athena integration setup process using AWS CloudFormation removes any Amazon S3 events that your bucket might already have. 
+>Note: Spot strongly recommends that you create both a new Amazon S3 bucket and a new Cost and Usage Reports if you do not have Athena already integrated. If you choose to use a pre-existing S3 bucket, the following Athena integration setup process using AWS CloudFormation removes any Amazon S3 events that your bucket might already have. 
 
 9. In your AWS account, go to the Cost and Usage Reports page. 
 10. Under **Delivery Options**, copy the S3 Bucket value. 
@@ -73,10 +73,10 @@ Set up Cost and Usage Reports as described below.
 
 You can open the linked CloudFormation Template in two ways: 
 
-* Run Default Template Onboarding 
-* Use Custom Template  
+* [Run Default Template Onboarding](getting-started/connect-your-aws-account?id=run-default-template-onboarding) 
+* [Use Custom Template](getting-started/connect-your-aws-account?id=run-custom-template)  
 
-![connect-aws-8](https://github.com/spotinst/help/assets/106514736/a1bc4bfd-4d2a-46a4-bb76-5d1c9edf6d93)
+![connect-aws-8](https://github.com/spotinst/help/assets/106514736/8e9bc601-45ac-470a-8d64-92043ae4e798)
 
 ### Run Default Template Onboarding 
 
@@ -90,7 +90,7 @@ Complete the following steps to run the default onboarding template:
 
 ![connect-aws-10](https://github.com/spotinst/help/assets/106514736/dcf65e99-eac1-4afd-8c36-5c3006eeb6a6)
 
-3. Continue to Step 4.  
+3. Continue to [Step 4](getting-started/connect-your-aws-account?id=step-4).  
 
 ## Run Custom Template 
 
@@ -130,7 +130,7 @@ You can view the creation process of the stack in the left panel.
 
 10. On the Edit Trust Policy Page, enter the AWS Account ID in the arn:aws:iam line and the External ID in the sts:ExternalID line.  The External ID is provided in Step 3 in the Run Custom Template section.  
 
-![connect-aws-18](https://github.com/spotinst/help/assets/106514736/2c072444-66e9-4e9c-97e0-ceacb3d47126)
+![connect-aws-18](https://github.com/spotinst/help/assets/106514736/ec618e34-a56f-4764-8a2c-587ffef3f6a7)
 
 11. Click **Update policy**. 
 
