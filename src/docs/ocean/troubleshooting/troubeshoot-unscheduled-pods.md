@@ -47,6 +47,6 @@ Make sure your pod is not of type DaemonSets:
 5. Make sure the persistent volume configured for your pods is not already assigned to another node in which there is no free space.  
 6. Make sure no instance types, labels or resource limits prevent scheduling a pod with a persistent volume. 
 7. If the unscheduled pod has two PVCs, verify the Binding Mode for both. If one is waitForFirstConsumer and the other is Immediate, scheduling issues can occur. 
-   * WaitForFirstConsumer delays the binding and provisioning of a PersistentVolume until a pod using the PersistentVolumeClaim is created. 
-   * By default, the 'Immediate' mode indicates that volume binding and 	dynamic provisioning occur after the PersistentVolumeClaim is 		created.  
+   * **WaitForFirstConsumer** delays the binding and provisioning of a PersistentVolume until a pod using the PersistentVolumeClaim is created. 
+   * By default, the '**Immediate**' mode indicates that volume binding and 	dynamic provisioning occur after the PersistentVolumeClaim is 		created.  
    * If the Volume Binding Mode is Immediate, you must bind a PV to the PVC. 
