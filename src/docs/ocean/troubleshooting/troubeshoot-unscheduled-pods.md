@@ -18,9 +18,10 @@ Solution: Remove any deprecated and unsupported labels.
 
 5. Make sure the ‘topologySpreadConstraint’ configuration for your pod does not violate the max skew.
 
- *  Ocean supports Kubernetes pod topology spread constraints and automatically launches nodes while ensuring that the maximum skew is maintained. 
-
- *  Maximum skew violation occurs when the maximum skew value exceeds the maximum allowed in the topology spread constraints.
+    * Ocean supports Kubernetes pod topology spread constraints and automatically launches nodes while ensuring that the maximum skew is maintained. 
+    * Maximum skew violation occurs when the maximum skew value exceeds the maximum allowed in the topology spread constraints.
+  
+   [refer to](ocean/troubleshooting/troubeshoot-unscheduled-pods?id=noschedule-taint)
   
 ## Mismatch of Taints and Tolerations 
 
@@ -30,6 +31,7 @@ This occurs when a VNG has one or more taints with the noSchedule effect, and th
  
 As shown in the example below, a pod that needs to use this VNG to scale up must have a matching toleration for this taint, to enable pod scheduling. 
 
+![ocean-ts-taints-example-rs](https://github.com/spotinst/help/assets/159915991/cc2e3b87-1fda-47a0-aa39-dd1e22817d72)
 
 
 
