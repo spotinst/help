@@ -83,6 +83,7 @@
       - [Scrape Ocean Metrics](ocean/tools-and-integrations/prometheus/scrape)
   - [Troubleshooting](ocean/troubleshooting/)
     - [Troubleshoot Controller](ocean/troubleshooting/troubleshoot-controller)
+    - [Troubleshoot Unscheduled Pods](ocean/troubleshooting/troubleshoot-unscheduled-pods)
   - [Tips & Best Practices](ocean/tips-and-best-practices/)
     - [Upgrade AKS Clusters](ocean/tips-and-best-practices/upgrade-aks-cluster)
     - [Manage Machine Types](ocean/tips-and-best-practices/manage-machine-types)
