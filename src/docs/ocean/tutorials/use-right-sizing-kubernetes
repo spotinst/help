@@ -83,7 +83,7 @@ Click on a workload link to drill down to the containers. For each container, yo
  * Memory Request: showing current and Avg. utilization, and a recommended increase or decrease for this resource (in MiB units). If no changes are required, a Keep icon is displayed. 
  * Right Sizing Recommendations: showing the recommended changes in vCPU and memory. Click on the Copy icon to save these changes for later. 
 
-Related Topics 
+# Related Topics 
 
 [link for feature topic] 
 [Link for Right Sizing recommendations via the API](link)
