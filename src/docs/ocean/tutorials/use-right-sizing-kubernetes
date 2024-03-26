@@ -8,7 +8,7 @@ Before you attempt to fine-tune your cluster resources according to Ocean recomm
   * An AWS account. 
   * [Metrics Server](https://github.com/kubernetes-incubator/metrics-server#deployment) installed in your Kubernetes cluster. 
   * Ocean cluster managing your Kubernetes worker nodes. 
-  * New Ocean controller installed 
+  * New Ocean controller installed. 
 
 ## How It Works 
 For Ocean Kubernetes clusters, Right Sizing utilizes the Metrics Server and initializes recommendations after an initial data collection of four full days.
@@ -25,7 +25,7 @@ Using the per-workload container  aggregated data points, Ocean makes recommenda
   Currently, Ocean generates recommendations for Kubernetes deployments, statefulsets, SpotDeployments  and daemonsets.
 
 You view Right Sizing recommendations on your Ocean console, under the Cloud Cluster Right Sizing tab (described later in this topic). 
-Alternatively, you can get the Right Sizing recommendations through the Spot API at:  https://docs.spot.io/api/#tag/Ocean-AWS/operation/oceanAwsFilterRightSizingWithFilter 
+Alternatively, you can get the Right Sizing recommendations through the [Spot API](https://docs.spot.io/api/#tag/Ocean-AWS/operation/oceanAwsFilterRightSizingWithFilter) 
 
 
 ## View Right Sizing for a Cluster 
