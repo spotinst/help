@@ -1,1 +1,19 @@
+# Ocean AWS Kubernetes Cluster Right Sizing 
+
+To help you improve the efficiency and performance of your cloud environments, Ocean’s rightsizing capabilities provide recommendations that target over-provisioning and underutilization.  
+Container resource requests, which are defined in a Kubernetes cluster, determine a pod’s allocation to a node. Incorrect assumptions for CPU and memory requirements can incur unnecessary and costly cloud infrastructure waste. Ocean lets you access detailed right sizing recommendations that fine-tune these resource requests based on the actual resource utilization of any running application, over time. This way, you can define better resource requirements, based on actual consumption, to avoid over-provisioning or underutilizing a cluster and increase the cluster's efficiency. 
+Ocean provides container-level right-sizing recommendations, so you can focus on improving specific application resource requests and make impactful changes to resource utilization.  
+Before you attempt to fine-tune your cluster resources according to Ocean recommendation, make sure that you have the following: 
+  * A Spot account. 
+  * An AWS account. 
+  * [Metrics Server](https://github.com/kubernetes-incubator/metrics-server#deployment) installed in your Kubernetes cluster. 
+  * Ocean cluster managing your Kubernetes worker nodes. 
+  * New Ocean controller installed 
+
+How It Works 
+For Ocean Kubernetes clusters, Right Sizing utilizes the Metrics Server and initializes recommendations after an initial data collection of four full days.
+
+
+
+
 
