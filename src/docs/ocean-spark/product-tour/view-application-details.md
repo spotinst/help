@@ -48,10 +48,15 @@ code of your Spark application.
 
 The second tab provides a report of the memory usage of your spark executors
 over the application's job and stages timeline. On the left hand side, you can
-see the peak memory usage for each executor, broken down by category (JVM,
-Python, Other). This graph should help you tune your container memory sizes - so
-that memory usage stays in the 70-90% range. Clicking the executor list shows
-detailed memory usage for that executor in the bottom graph.
+see the peak memory usage over the total available physical memory for each
+executor, broken down by category (JVM, Python, Other). This graph should help
+you tune your container memory sizes - so that memory usage stays in the 70-90%
+range. Clicking the executor list shows detailed memory usage for that executor
+in the bottom graph.
+
+> **Note:** The memory usage reported here is different from the `onHeap` memory
+> reported by the Spark UI. The graphs in this tab reports the Resident Set Size
+> memory, that is, all the physical memory used by the java process.
 
 <img src="/ocean-spark/_media/view-app-details-05.png" />
 
