@@ -10,6 +10,7 @@
 |  EC2 (Elastic Compute Cloud)  |  S3 (Simple Storage Service)   |
 |  ELB (Elastic Load Balancing)   |  SNS (Simple Notification Service)   |
 |  EBS (Elastic Block Store)   |  EKS(Elastic Kubernetes Service)   |
+|  SES (Simple Email Service)   |  Lambda   |
 
 ## Supported Azure Asset Types:
 
@@ -20,6 +21,7 @@
 |  Key Vaults   |  Virtual Machine Scale Sets |
 |  Load Balancers  |  Virtual Networks   |
 |  Network Security Groups   |  AKS (Azure Kubernetes Services)   |
+|  Storage Account   |     |
 
 ## Supported Compliance Standards:
 
