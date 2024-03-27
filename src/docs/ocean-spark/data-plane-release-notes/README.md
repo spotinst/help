@@ -1,15 +1,36 @@
 # Cluster Release Notes
 
+## [0.4.10-72] - 2024-03-27
+
+Changelog
+
+- [0.4.6] bigdata-proxy 
+  - Fix workspace large file upload 
+
+- [0.4.10] bigdata-operator
+  - Support for embedded helm charts
+
+- [0.4.9] bigdata-operator
+  - Support for running multiple replicas
+
+## [0.4.8-71] - 2024-02-28
+
+Changelog
+
+- [0.5.9] bigdata-spark-watcher 
+  - enable leader election for the high-availability
+
+- [0.1.26] spark-operator 
+  - enable leader election for the high-availability
+
 ## [0.4.8-70] - 2024-02-20
 
 Changelog
 
 - [0.4.8] bigdata-operator
-
   - store cluster cloud provider and region in CM
 
 - [0.5.8] bigdata-spark-watcher
-
   - Annotate spark driver pod exit code and exit time
 
 - [0.1.25] spark-operator
@@ -22,9 +43,8 @@ Changelog
 - [0.4.7] bigdata-operator
   - enable telemetry
   - run as non-root
-  -
-- [0.2.4] bigdata-notebook-service
 
+- [0.2.4] bigdata-notebook-service
   - upgrade workflow notebook image to JupyterLab 4
   - show kernel launchers in the JupyterLab UI for each Spark Connect app running in the cluster
   - enable telemetry
@@ -35,7 +55,7 @@ Changelog
   - enable telemetry
 
 - [0.1.24] spark-operator
-- enable telemetry
+  - enable telemetry
 
 - [0.5.4] bigdata-spark-watcher
   - run as non-root
