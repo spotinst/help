@@ -30,18 +30,18 @@ The decisions are slightly different depending on the cloud provider you choose,
 A linked account is an “ordinary” Spot account you use for optimizing cost and usage by using spot instances and taking advantage of numerous Spot features. Choose Linked Account to use Elastigroup or Ocean. 
 
 You can connect a linked account in two ways:  
-* Automatically 
-* Manually 
+* [Automatically](connect-your-cloud-provider/first-account/?id=connect-automatically)
+* [Manually](connect-your-cloud-provider/first-account/?id=connect-manually) 
 
 ![connect-1st-cloud-account-1](https://github.com/spotinst/help/assets/106514736/6247bed1-a377-4446-b9f4-09b65f0fdf31)
 
-**Connect Automatically** 
+##### Connect Automatically
 
 Connecting automatically is the quicker option. Using a CloudFormation stack, this option chooses a policy and a role and associates the two for you. 
 
 <img width="483" alt="connect-1st-cloud-account-5" src="https://github.com/spotinst/help/assets/106514736/d24f3f14-3915-4653-882f-4808aeb40b73">
 
-**Connect Manually** 
+##### Connect Manually 
 
 When you connect manually, you use your provider’s console (AWS) to choose the policy and role to associate the two. 
 
@@ -85,11 +85,15 @@ This option automatically chooses a policy and a role and associates the two for
 
 Connection to your Azure subscription is required to use Spot Elastigroup or Spot Ocean. Continue with the wizard in Spot after you choose Azure as the cloud provider. You can find a detailed description of this procedure in [Connect Azure Subscription](https://docs.spot.io/connect-your-cloud-provider/first-account/azure). 
 
+![connect-1st-cloud-account-9](https://github.com/spotinst/help/assets/106514736/aeddf12d-f678-4e53-837b-4fe989963d10)
+
 #### Billing Account 
 
 Connection to your Azure Billing Account is required to use Spot Eco. A connected billing account enables Spot Eco to analyze your cost, usage, and commitment data and help you save even more on your cloud expenses.  
  
 To connect your Azure Billing Account to Spot Eco, use the procedure described in [Connect Azure billing account to Spot](https://docs.spot.io/connect-your-cloud-provider/azure-ea-account). 
+
+![connect-1st-cloud-account-10](https://github.com/spotinst/help/assets/106514736/be43db83-c19d-4585-b0bf-92a79b3e5b38)
 
 #### FinOps Products 
 
