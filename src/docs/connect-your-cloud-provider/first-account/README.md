@@ -32,8 +32,8 @@ A linked account is an “ordinary” Spot account you use for optimizing cost a
 ![connect-1st-cloud-account-1](https://github.com/spotinst/help/assets/106514736/6247bed1-a377-4446-b9f4-09b65f0fdf31)
 
 You can connect a linked account in two ways:  
-* [Automatically](connect-your-cloud-provider/first-account/?id=connect-automatically)
-* [Manually](connect-your-cloud-provider/first-account/?id=connect-manually) 
+* Automatically
+* Manually 
 
 ##### Connect Automatically
 
@@ -69,8 +69,8 @@ A linked account is an “ordinary” Spot account you use for optimizing cost a
 For GCP, there is currently no option to link a management account, so by default you start directly in the wizard to connect a linked account. 
 
 You can connect a linked account in two ways:
-* [Manually](connect-your-cloud-provider/first-account/?id=connect-manually) 
-* [Automatically](connect-your-cloud-provider/first-account/?id=connect-automatically)
+* Manually
+* Automatically
 
 ##### Connect Manually 
 
