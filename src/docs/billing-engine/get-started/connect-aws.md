@@ -2,8 +2,6 @@
 
 This section is to help you onboard your AWS account to the Billing Engine. 
 
-**If you are connecting an Azure or Google Cloud Account, please create a support ticket.**
-
 ## New Spot Account 
 
 ### Configure the CUR 
