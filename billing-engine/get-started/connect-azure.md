@@ -1,4 +1,4 @@
-# Connect Your Azure Account to Billing Engine 
+# Connect Your Azure Billling Account to Billing Engine 
 
 The procedures on this page describe how to connect your Microsoft Azure Billing Account to Billing Engine. 
  
