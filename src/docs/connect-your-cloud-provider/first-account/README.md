@@ -29,11 +29,11 @@ The decisions are slightly different depending on the cloud provider you choose,
 
 A linked account is an “ordinary” Spot account you use for optimizing cost and usage by using spot instances and taking advantage of numerous Spot features. Choose Linked Account to use Elastigroup or Ocean. 
 
+![connect-1st-cloud-account-1](https://github.com/spotinst/help/assets/106514736/6247bed1-a377-4446-b9f4-09b65f0fdf31)
+
 You can connect a linked account in two ways:  
 * [Automatically](connect-your-cloud-provider/first-account/?id=connect-automatically)
 * [Manually](connect-your-cloud-provider/first-account/?id=connect-manually) 
-
-![connect-1st-cloud-account-1](https://github.com/spotinst/help/assets/106514736/6247bed1-a377-4446-b9f4-09b65f0fdf31)
 
 ##### Connect Automatically
 
@@ -68,15 +68,19 @@ A linked account is an “ordinary” Spot account you use for optimizing cost a
 
 For GCP, there is currently no option to link a management account, so by default you start directly in the wizard to connect a linked account. 
 
-**Connect Manually** 
+You can connect a linked account in two ways:
+* [Manually](connect-your-cloud-provider/first-account/?id=connect-manually) 
+* [Automatically](connect-your-cloud-provider/first-account/?id=connect-automatically)
 
-When you connect manually, you use your provider’s console (GCP) to choose the policy and role and to associate the two. For GCP, this is a quick option and Spot recommends choosing Manually. 
+##### Connect Manually 
+
+When you connect manually, you use your provider’s console (GCP) to choose the policy and role to associate the two. For GCP, this is a quick option and Spot recommends choosing Manually. 
 
 <img width="472" alt="connect-1st-cloud-account-7" src="https://github.com/spotinst/help/assets/106514736/fe87ede2-8985-47bd-b0f7-a98c6ef72a8e">
 
 Please see the [detailed procedures for connecting manually](https://docs.spot.io/connect-your-cloud-provider/first-account/gcp-manually). 
 
-**Connect Automatically** 
+##### Connect Automatically  
 
 This option automatically chooses a policy and a role and associates the two for you. To connect automatically with GCP, you must have gcloud with permissions to create a service account. 
 
