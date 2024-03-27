@@ -48,7 +48,7 @@ Click **Log in to Azure Account** and continue to the next step.
 
 7. Paste the Application (client) ID and Directory (tenant) ID in the fields respectively: 
  
-<img width="533" alt="connect-azure-3" src="https://github.com/spotinst/help/assets/106514736/7fa9fc4c-c274-4f6f-bd19-2d05b9ad8bda">
+<img width="533" alt="connect-azure-3" src="https://github.com/spotinst/help/assets/106514736/0bf54be4-e738-42f0-9b88-055d32c5e401">
 
 ## Step 4: Create Certificates and Secrets 
 
@@ -112,9 +112,8 @@ billingRoleAssignmentName: 24f8edb6-1668-4659-b5e2-40bb5f3a7d7e
  
 ## Step 7: Connect 
 When the validation is complete, your Azure Billing Account will be connected to Billing Engine. 
- 
-<img width="853" alt="connect-azure-4" src="https://github.com/spotinst/help/assets/106514736/ad60e7ec-59f2-467b-98cf-92c9470ffa70">
 
-  
+<img width="1036" alt="connect-azure-4" src="https://github.com/spotinst/help/assets/106514736/1dee88b7-daa5-4516-ba71-2f99f231ef6f">
+
 
  
