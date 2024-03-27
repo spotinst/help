@@ -1,4 +1,5 @@
 <meta name=“robots” content=“noindex”>
+
 # Ocean AWS Kubernetes Cluster Right Sizing 
 
 To help you improve the efficiency and performance of your cloud environments, Ocean’s rightsizing capabilities provide recommendations that target over-provisioning and underutilization.  
