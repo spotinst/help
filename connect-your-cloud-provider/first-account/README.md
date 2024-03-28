@@ -16,7 +16,7 @@ On the Dashboard page, click the cloud provider that you would like to connect t
 
 If you have multiple accounts with your cloud provider, you will be able to connect them all later, after you have connected your first account. In addition, you will be able to connect accounts from multiple cloud providers. 
  
-<img width="836" alt="connect-your-first-cloud-account-002" src="https://github.com/spotinst/help/assets/106514736/ffdb1d4b-fcf7-4902-b32e-f4063b22eb94">
+![connect-1st-cloud-account-12](https://github.com/spotinst/help/assets/106514736/a8ad87bb-40f4-4647-be81-5e3c1efd0f01)
 
 ## Step 3: Connect Your Cloud Account 
 
