@@ -1,4 +1,4 @@
-# Connect Your Azure Billling Account to Billing Engine 
+# Connect Your Azure Billing Account to Billing Engine 
 
 The procedures on this page describe how to connect your Microsoft Azure Billing Account to Billing Engine. 
  
@@ -12,7 +12,7 @@ The procedures on this page describe how to connect your Microsoft Azure Billing
 
 1. Enter an account name and click **Create Account**. 
 
-![connect-azure-1](https://github.com/spotinst/help/assets/106514736/e33c884a-e158-4222-831f-b175b4090d8a)
+<img width="991" alt="connect-azure-1" src="https://github.com/spotinst/help/assets/106514736/f403c577-5250-454a-8c18-b0bcc2a3cee9">
 
 2. Select **Microsoft Azure** as your cloud provider. 
 3. Select **FinOps Products** and click **Next**.  
@@ -48,7 +48,7 @@ Click **Log in to Azure Account** and continue to the next step.
 
 7. Paste the Application (client) ID and Directory (tenant) ID in the fields respectively: 
  
-<img width="533" alt="connect-azure-3" src="https://github.com/spotinst/help/assets/106514736/0bf54be4-e738-42f0-9b88-055d32c5e401">
+<img width="483" alt="connect-azure-3" src="https://github.com/spotinst/help/assets/106514736/69d7d980-c404-4322-b126-0b780a40ac4d">
 
 ## Step 4: Create Certificates and Secrets 
 
