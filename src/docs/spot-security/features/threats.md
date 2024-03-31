@@ -24,7 +24,7 @@ A graph that provides an overview of the total number of threats mapped to each 
 <img width="352" alt="threats-a2" src="https://github.com/spotinst/help/assets/106514736/d2bae1fa-d007-4df1-b8c9-2f1c52320b51">
 
 ### Cloud Accounts with Most Threats 
-A chart that highlights the cloud accounts with the highest number of detected threats, enabling you to focus on specific accounts for targeted security measures.
+A chart that highlights the cloud accounts with the highest number of detected threats, enables you to focus on specific accounts for targeted security measures.
 
 ![threats-a3](https://github.com/spotinst/help/assets/106514736/ec8571df-e026-469c-84f6-2007346fe0cd)
 
@@ -38,7 +38,7 @@ The All Threats tab presents a comprehensive table of detected threats divided i
 
 The All Threats table includes the following columns:
 
-* **Threat ID**: The unique identifier allows you to track and reference each detected threat individually, aiding in investigation and incident management.
+* **Threat ID**: The unique identifier that enables you to track and reference each detected threat individually, aiding in investigation and incident management.
 * **Asset Type**: The service type such as EC2, IAM, etc.
 * **Asset ID**: The associated ID of the asset impacted by the detected threat, assisting in scoping the potential impact of the incident within the cloud infrastructure.
 * **Cloud Acount Name**: The cloud account that is related to the detected threat.  
@@ -48,7 +48,7 @@ The All Threats table includes the following columns:
 
 In addition to the table:
 
-* Active threat tactics and techniques are highlighted in red, and you can filter threats using specific tactics and techniques as filters. 
+* Active threat tactics and techniques are highlighted in red, and you can filter threats using those tactics and techniques as filters. 
 * You can click the filter icon to filter threats based on the asset type. 
 * You can choose to accept the risk of certain threats using the Suppress option in the Action menu. Suppressed threats can be viewed by moving the Show Suppressed Threats toggle. 
 * By clicking the Threat IDs in the All Threats table, you can access individual threat pages containing all the event records associated with the threat session. 
@@ -65,7 +65,7 @@ Click **Table** or **Details** to view the threat analysis in the form of a tabl
 
 #### Event Detail Record  
 
-The Event Detail Record provides additional context for each event. These records include information such as the time of the event, event source, region, and more. By reviewing these event details, you can gain a deeper understanding of the specific events associated with the threat, aiding in comprehensive threat analysis and response. Click **Next** or **Previous** to move between the event detail records of the session events. .
+The Event Detail Record provides additional context for each event. These records include information such as the time of the event, event source, region, and more. By reviewing these event details, you can gain a deeper understanding of the specific events associated with the threat, aiding in comprehensive threat analysis and response. Click **Next** or **Previous** to move between the event detail records of the session events.
 
 ![threats-a6](https://github.com/spotinst/help/assets/106514736/77e54f37-ca42-4c34-bae4-29d255568f13)
 
