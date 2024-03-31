@@ -48,10 +48,26 @@ code of your Spark application.
 
 The second tab provides a report of the memory usage of your spark executors
 over the application's job and stages timeline. On the left hand side, you can
-see the peak memory usage for each executor, broken down by category (JVM,
-Python, Other). This graph should help you tune your container memory sizes - so
-that memory usage stays in the 70-90% range. Clicking the executor list shows
-detailed memory usage for that executor in the bottom graph.
+see the peak memory usage over the total available physical memory for each
+executor, broken down by category (JVM, Python, Other). This graph should help
+you tune your container memory sizes - so that memory usage stays in the 70-90%
+range. Clicking the executor list shows detailed memory usage for that executor
+in the bottom graph.
+
+> **Note:** The memory usage reported here is different from the memory reported by the Spark UI.
+>
+> The graphs in this tab reports the Resident Set Size (RSS) memory used by Spark and its child processes.
+> RSS (Resident Set Size) refers to the amount of physical memory (RAM) that a process is currently using. This
+> memory is what a process needs to quickly perform its operations without having to swap data in and out of
+> disk storage, which is much slower.
+>
+> In the context of Apache Spark, the processTreeRSS metric is broken down into three categories: Java, Python,
+> and Other (like R). This is because Spark applications can run tasks using different programming languages,
+> and each of these languages manages memory in its own way.
+>
+> RSS is a measure of all the memory used by a process, while on-heap and off-heap memory are specific types of
+> memory used within that process. RSS also includes other memory types like the program's code, stack
+> memory, mapped memory, shared libraries...
 
 <img src="/ocean-spark/_media/view-app-details-05.png" />
 
