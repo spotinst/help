@@ -6,6 +6,8 @@ The Ocean EKS AMI Auto-Update feature addresses these challenges. This feature a
  
 When the EKS control plane is upgraded or when new security patches are released, the feature immediately detects the need to upgrade the nodes and takes action accordingly, eliminating the need for manual intervention. It also allows flexibility by configuring a specific time for checking updates, ensuring that the update process does not cause unexpected disruptions. 
 
+Important: To use the EKS AMI Auto-Update feature for minor version upgrades, your controller version must be `1.0.99 or later`. If updating the controller is not possible, make sure to restart the Ocean controller pod after upgrading the EKS control plane. 
+
 Beyond updating the VNGs’ AMI, the feature also offers an optional, controlled update process for applying the new AMI. If this option is set, the new AMI is applied in a phased manner by dividing the nodes into batches, ensuring minimal impact on the cluster. If any issues occur during the update process, you can monitor the process and take necessary actions.   
 
 Finally, this feature also notifies when a new AMI is in use in the Ocean VNGs, and when issues arise, offering transparency and control over your Ocean EKS environment. 
