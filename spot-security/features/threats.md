@@ -95,7 +95,7 @@ Step 3: Create a Spot Security workflow by completing the following steps:
 6. In the right panel, enter the API key that you want to configure your workflow with. If you have not configured your API key, you can create a new one [here](https://docs.spot.io/spot-connect/integrations/apikeys?id=api-keys). 
 7. When you select the API keys, the **Webhook API Key Value** and **Workflow Webhook URL** open in the right panel. Use them to configure the incident response in Spot Security. 
 
-
+![threats-a7](https://github.com/spotinst/help/assets/106514736/0f55fc2a-ceeb-42d2-9b2d-1bb2a355578d)
 
 ### Configure Notification in Jira 
 
@@ -115,7 +115,7 @@ To configure a Slack notification, complete the following steps:
 1. Delete the **Jira Create Issue** in the workflow that you created in Step 3. 
 2. Click the **+** icon in the left navigation bar and search for **Slack Send Message**.
 
-![threats-a7](https://github.com/spotinst/help/assets/106514736/0f55fc2a-ceeb-42d2-9b2d-1bb2a355578d)
+<img width="997" alt="threats-a14" src="https://github.com/spotinst/help/assets/106514736/58939cd8-dd0b-4202-8283-d5ea9cf887e0">
 
 3. From the workflow builder in the left panel, drag and drop **Slack Send Message** to the JSON Path. 
 4. Click the Slack SEnd Message node and in the right panel, enter the message text, add slack channels and/or users. If the Slack node is not configured, add it by completing the steps [here](https://docs.spot.io/spot-connect/integrations/slack).  
