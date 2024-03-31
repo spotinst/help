@@ -78,8 +78,10 @@ Spot Security offers two methods to create incident response tickets for detecte
 
 To create them you need to set up a workflow in Spot Connect by completing the following steps:  
 
-Step 1: In the left main menu in the console, select [Spot Connect](https://docs.spot.io/spot-connect/get-to-know/).  
+Step 1: In the left main menu in the console, select [Spot Connect](https://docs.spot.io/spot-connect/get-to-know/). 
+
 Step 2: Create your [API Keys](https://docs.spot.io/spot-connect/integrations/apikeys?id=api-keys) on Spot Connect. 
+
 Step 3: Create a Spot Security workflow by completing the following steps: 
 
 1. In the left main menu of the Spot Connect console, click **Workflows** and then the **Templates** tab. You can select your workspace and see who can view the workflows. 
@@ -87,7 +89,7 @@ Step 3: Create a Spot Security workflow by completing the following steps:
 3. Click the 3 dots at the top right of the widget and select **Duplicate**.  
 4. Enter a name for the workflow and click **Create Workflow**. You are redirected to the workflow page where you configure the workflow. 
 5. In the workflow panel in the center, click the Spot Security node. 
-6. In the right panel, enter the API key that you want to configure your workflow with. If you have not configured your API key, you can create a new one here. 
+6. In the right panel, enter the API key that you want to configure your workflow with. If you have not configured your API key, you can create a new one [here](https://docs.spot.io/spot-connect/integrations/apikeys?id=api-keys). 
 7. When you select the API keys, the **Webhook API Key Value** and **Workflow Webhook URL** open in the right panel. Use them to configure the incident response in Spot Security. 
 
 ### Configure Notification in Jira 
@@ -135,7 +137,7 @@ A Conditional Workflow enables you to define specific criteria using the provide
 When new threats that meet the specified criteria are detected, an automatic threat notification is enabled, and a ticket is generated. Depending on the workflow you have set up, you will receive either individual attachments for each matching threat on Slack or a single Jira ticket containing all the attachments that meet the criteria.   
 ### On-Demand 
 
-The OnDemand approach enables you to manually create threat tickets. When accessing the Individual Threats page, you can click **Create Incident Ticket** and select an available tool from the dropdown to set up the ticketing process.  
+The On-Demand (OD) approach enables you to manually create threat tickets. When accessing the Individual Threats page, you can click **Create Incident Ticket** and select an available tool from the dropdown to set up the ticketing process.  
 
 ![threats-a10](https://github.com/spotinst/help/assets/106514736/7e458511-86c0-477d-a8d2-0fb98b681e46)
 
