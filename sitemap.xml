@@ -2052,11 +2052,11 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/tutorials/elastigroup-actions-menu/view-load-balancers"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/elastigroup/tutorials/elastigroup-actions-menu/view-spot-markets</loc>
+        <loc>https://docs.spot.io/?/elastigroup/tutorials/elastigroup-actions-menu/view-spot-markets-z</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/tutorials/elastigroup-actions-menu/view-spot-markets"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/tutorials/elastigroup-actions-menu/view-spot-markets"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/tutorials/elastigroup-actions-menu/view-spot-markets-z"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/tutorials/elastigroup-actions-menu/view-spot-markets-z"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/elastigroup/tutorials/elastigroup-budgets/budgets</loc>
