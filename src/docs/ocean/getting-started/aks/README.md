@@ -121,7 +121,7 @@ When the Ocean Controller connectivity is successful, click **Next**.
 
 ![ocen-aks-auto-spot-toleration-injection](https://github.com/spotinst/help/assets/159915991/7554d272-4e65-4112-8fd4-d3a54a5e994c)
 
-Microsoft Azure / AKS does not allow pods to run on Spot VMs by default. Rather, it adds a NoSchedule taint to all Spot nodes / node pools. 
+Microsoft Azure / AKS does not allow pods to run on Spot VMs by default. Rather, it adds a `NoSchedule` taint to all Spot nodes / node pools. 
 
 ```kubernetes.azure.com/scalesetpriority=spot:NoSchedule``` 
 
