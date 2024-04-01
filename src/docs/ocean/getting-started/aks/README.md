@@ -6,11 +6,11 @@ This procedure describes how to use the Spot Console to connect an existing 
 
 ## Prerequisites 
 
-* [Valid AKS Managed cluster with at least one node pool (for control-plane)](ocean/getting-started/aks/aks-prerequisites?id=valid-aks-managed-cluster-with-at-least-one-node-pool-for-control-plane). 
+* [Valid AKS Managed cluster](ocean/getting-started/aks/aks-prerequisites?id=valid-aks-managed-cluster-with-at-least-one-node-pool-for-control-plane). 
 * [Connect Spot account to Azure Subscription](ocean/getting-started/aks/aks-prerequisites?id=connect-spot-account-to-azure-subscription).
 * [Verify Connection to Spot Account](ocean/getting-started/aks/aks-prerequisites?id=verify-connection-to-spot-account).
 * [Enable Ocean to launch Spot VMs for Workloads](ocean/getting-started/aks/aks-prerequisites?id=enable-ocean-to-launch-spot-vms-for-workloads). 
-* [Install Helm, Terraform or Kubectl (Kubernetes command-line tool)](ocean/getting-started/aks/aks-prerequisites?id=install-helm-terraform-or-kubectl-kubernetes-command-line-tool).
+* [Update Helm or install via Terraform or Kubectl (Kubernetes command-line tool)](ocean/getting-started/aks/aks-prerequisites?id=install-helm-terraform-or-kubectl-kubernetes-command-line-tool).
 
 ## Import Cluster  
 
@@ -21,32 +21,65 @@ You can perform similar steps to import an AKS cluster to Ocean using the Ocean 
 * Step1: Use the Ocean Create Cluster Wizard to import an AKS cluster 
     * Step 1.1 Select AKS cluster 
     * Step 1.2 Define VNG Template 
-    * Step 1.3: Connectivity  
+    * Step 1.3: Connectivity
+    * Step 1.4 Automatic Spot Tolerance Injection (optional)
+    * Step 1.5: Review and Configure 
 * Step 2: Create a VNG (Virtual Node Group) 
 * Step 3: Migrate Workloads to Ocean from the Azure Portal
 
-### Step 1 – Use the Ocean Create Cluster Wizard to import an AKS cluster  
+### Step 1 – Use the Create Ocean Cluster Wizard to import an AKS cluster  
 
-Launch the Create Ocean Cluster Wizard in the Spot Console.  
-In the top left menu, click **Ocean**.   
-* For **new** Ocean AKS accounts with no existing Clusters, click **Create Cluster** to launch the Ocean Create/Import cluster wizard. 
-* For **existing** Ocean AKS accounts with active Ocean AKS clusters, select **Cloud Clusters** on the left menu and then Click **Create Cluster** on top right above the cluster list table. 
+To launch the *Create Ocean Cluster* Wizard in the Spot Console:  
+* In the top left menu, click **Ocean**.   
+   * For **new** Ocean AKS accounts with no existing Clusters, click **Create Cluster** to launch the *Create Ocean Cluster* wizard. 
+   * For **existing** Ocean AKS accounts with active Ocean AKS clusters, select **Cloud Clusters** on the left menu and then click **Create Cluster** on top right above the cluster list table.
 
-Follow the steps in Create Ocean Cluster Wizard to import the AKS cluster. 
+To import the AKS cluster, follow the steps in the *Create Ocean Cluster* Wizard
 
-### Step 1.1: Select AKS Cluster  
+![ocean-aks-newclus-create](https://github.com/spotinst/help/assets/159915991/8e6ddd6c-85f5-40ee-a608-802af4ad6ee2)
 
-1. In the Resource Group drop-down list, select the Azure Resource Group for the AKS cluster. 
-2. In the AKS Cluster Name drop-down list, select the AKS Cluster Name to import (if there are multiple clusters in the resource group, you need to import them one at a time) and click **Next**.
+### Step 1.1: Select AKS Cluster
 
-![connect-aks-cluster-7](https://github.com/spotinst/help/assets/106514736/bc7d14b1-d56a-4554-a265-20501a65fbac)
+Before initiating the import process, make sure that Ocean has the necessary permissions to create and update node pools for autoscaling. Verify your IAM permissions at both the subscription and resource group levels. Specifically, confirm that you have the required permissions for the Ocean AKS product.
 
-Additional tips:  
+1. In the *Create Ocean Cluster* wizard, select your Azure resource group from the *Resource Group* drop-down list. 
+2. Select your cluster name from the *AKS Cluster Name* drop-down list.
 
-* The AKS cluster name is copied to the Ocean Cluster name (Cluster Identifier). The Ocean Cluster Identifier is derived from the Ocean Cluster name plus an 8-digit auto-generated random string to ensure uniqueness. When [importing the Ocean cluster to Terraform](https://spot.io/blog/import-spot-resources-into-terraform/), in order to use Terraform to update the cluster, use the `clusterIdentifier` (not just the Cluster name) e.g. `aks-clsuter1-2475a239`. It should match the `clusterIdentifier` used to install Ocean controller in the AKS cluster (Ocean Controller is installed in Step 1.3: Connectivity listed below). 
-* If there are no AKS clusters in the drop-down menu, the permissions may be incorrect, or the role may be assigned to the wrong resource group (no AKS clusters are available in the existing resource group).  
+   *  If you have multiple clusters in the resource group, you must import them one at a time. 
 
-![connect-aks-cluster-8](https://github.com/spotinst/help/assets/106514736/4903d28c-e6e1-4978-86ba-b4f094797ffa)
+   * The AKS cluster name is copied to the Ocean Cluster name, also known as the Cluster Identifier. To ensure uniqueness, the Ocean Cluster Identifier is derived by appending an 8-digit auto-generated random string to the Ocean Cluster name. When [importing the Ocean cluster to Terraform](https://spot.io/blog/import-spot-resources-into-terraform/), and updating the cluster using Terraform, you must use the `clusterIdentifier` (not just the Cluster name). For example, the `clusterIdentifier` could be `aks-cluster1-2475a239`. This `clusterIdentifier` should match the one used when installing the Ocean Controller in the AKS cluster (see Step 1.3: Connectivity). 
+
+3. Click **Test Cluster Permissions** and wait for the test to be completed. 
+
+
+**Important:** If you can't complete a step due to **Missing Permissions**, refer to the following table: 
+
+
+| Step  | Description                                       | What to do                                                                                                                                                                                                                                                                                                                                                                                                                         |
+|----------------------|---------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Selecting Resource Group       | You can’t find your resource group.               | First check that your Spot account is correctly set up. We recommend deleting the account and setting it up again with the correct Subscription ID and Tenant ID.  If the issue persists: click **Add Permissions** to run the *Missing Permissions* wizard (described below).  In the *Missing permissions* dialog box, select the **Resource Group** permission level (Spot IAM role).                                      |
+| Selecting Cluster Name         | You can’t find your cluster.                      | If there are no AKS clusters in the drop-down list, the permissions may be incorrect, or the IAM role may be assigned to the wrong resource group (no AKS clusters available for the required resource group).  Click **Add Permissions** to run the *Missing Permissions* wizard (described below).  In the *Missing permissions* dialog box, select the **Resource Group** permission level (Spot IAM role).  |
+| Running **Test Cluster Permissions**         | The Cluster test was not successfully completed.  | Your Spot account may not have permissions for the Ocean AKS product or may have read-only permissions at either the subscription level or the resource group level. Click **Add Permissions** to run the *Missing Permissions* wizard for both subscription and resource group levels (described below).                                                                                                                           |
+
+To run the Missing Permissions wizard: 
+
+1. If you received a Missing Permissions message when selecting an AKS Cluster, Click **Add Permissions**.  
+
+![ocean-aks-newclus-missingsubsrgs](https://github.com/spotinst/help/assets/159915991/e3d201a1-9d94-4dff-b055-47b0e1f4d216)
+
+2. In the Missing permissions dialog box, select the required permission level from the drop-down list; either **Resource Group** or **Account Subscription**.
+
+   * For the Account Subscription level, update the Subscription ID in the field on the right of the dialog box. You can obtain the subscription ID by either creating a new Spot account in Azure or updating the existing Spot account.
+   * For the Resource Group level, enter the name of your AKS resource group and the name of its corresponding infrastructure resource group in the field on the right of the dialog box. You must add both, separated by a comma. 
+3. Continue with downloading the Ocean AKS JSON permissions.
+
+![ocean-aks-newclus-missingdownload](https://github.com/spotinst/help/assets/159915991/f5b6b6c9-c8a7-4ca7-8c96-63e0ba60cbce)
+
+4. Continue by creating a new Azure custom role or import permissions to an existing role. Copy the permissions and apply them via the command line. 
+
+![ocean-aks-newclus-missingview](https://github.com/spotinst/help/assets/159915991/2648fe75-46fa-4cfc-96e3-2c63d5cd1907)
+
+Note: You can alternatively apply permissions from the console UI.
 
 ### Step 1.2: VNG Template  
 
@@ -84,8 +117,66 @@ Additional Tips:
   *For Kubectl, you cannot run the controller init script, since remote connectivity is disabled. You need to manually create the config-map and install the controller in the AKS using VPN or proxy.  
 
 When the Ocean Controller connectivity is successful, click **Next**. 
+### Step 1.4: Automatic Spot Tolerance Injection (optional) 
 
-### Step 1.4: Review and Configure  
+![ocen-aks-auto-spot-toleration-injection](https://github.com/spotinst/help/assets/159915991/7554d272-4e65-4112-8fd4-d3a54a5e994c)
+
+Microsoft Azure / AKS does not allow pods to run on Spot VMs by default. Rather, it adds a `NoSchedule` taint to all Spot nodes / node pools. 
+
+```kubernetes.azure.com/scalesetpriority=spot:NoSchedule``` 
+
+To schedule a workload on a Spot node, Spot toleration must be injected on the pod. Otherwise, the workload will run on a regular On-demand (OD) node by default. 
+This step lets you optionally install the Spot admission controller, which is a k8 mutating webhook that automatically injects the spot toleration at the namespace level, enabling AKS workload pods to run on Spot VMs by default. 
+A mutating webhook is a type of Kubernetes dynamic admission controller that allows for modifying resources before they are persisted in the Kubernetes API server. 
+The Spot toleration admission controller webhook is triggered by pod create or update events. When web-app deployment tries to scale up and add new pods or update / restart existing pods, the kube-apiserver sends an admission request to the Spot toleration webhook, and based on the policy, injects the spot toleration before the pod is deployed. 
+
+Prerequisites:
+
+*  The Spot admission controller is a deployment with two pods. You must define a PEM certificate as part of CA (Certificate Authority) bundle in the manifest yaml. 
+*  Make sure you have openssl installed in your environment, or use [Azure Cloud Shell](https://portal.azure.com/). 
+*  Your current k8s context must be the context of your cluster.
+
+Information about Namespaces: 
+
+*  The Spot admission controller injects Spot toleration in pods for all namespaces, except those specifically excluded using label spot.io/inject-aks-spot-toleration=false 
+*  The Spot admission controller automatically excludes all [AKS system namespaces](https://learn.microsoft.com/en-us/azure/aks/faq#can-i-use-admission-controller-webhooks-on-aks) with control-plane label like kube-system.
+
+Notes:
+
+*  You can adjust your non-system namespaces after installation (described later). 
+*  You can install the Spot admission controller now from this wizard or install it later (after importing the cluster) from the Cluster *Actions* drop-down menu. 
+*  If your cluster does not have the Spot admission controller installed, the banner at the top of the screen displays installation instructions.
+
+To Install the Spot Admission Controller:
+
+1.  To get started and install the Spot admission controller, run the Spot Tolerance Injection screen script:
+
+```
+curl -fsSL https://spotinst-public.s3.amazonaws.com/integrations/kubernetes/aks/spot-toleration-injection/init.sh | bash 
+```
+
+2. Restart your existing workload pods.
+3. Exclude namespaces, if necessary
+
+To exclude a specific namespace:
+
+a. Add the namespace label:spot.io/inject-aks-spot-toleration=false with the following script:
+
+```
+# Adding Spot webhook exclude label to namespace: <namespace> 
+kubectl label namespace <namepsace> spot.io/inject-aks-spot-toleration=false
+```
+b. Restart the pods in the namespace so that the Spot webhook can update the Spot toleration for these pods.
+
+```
+# Get all pods in the namespace 
+pods=$(kubectl get pods -n <namepace> -o \ jsonpath='{.items[*].metadata.name}') 
+# Loop through each 
+for pod in $pods; do echo "Deleting pod: $pod" kubectl delete pod $pod -n <namespace> done 
+```
+Note: To enable a workload to run on Regular / OD nodes, add Spot label `spot.io/node-lifecyel=od` 
+
+### Step 1.5: Review and Configure  
 
 You can view and edit the Ocean cluster configuration and the VNG Template in JSON.   
 
