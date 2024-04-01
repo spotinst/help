@@ -88,6 +88,10 @@ The following is a list of attributes customizable per VNG in Ocean for AKS.
 - Tags
 - Taints
 - Max Pods per Node (API Only)
+- Multiple subnets per Virtual Node Group (VNG) 
+  - Kubenet (vnet-subnet) 
+  - Azure CNI (vnet-subnet)  
+  - Azure CNI with Dynamic IP (vnet-subnet and pod-subnet). 
 
 </details><br>
 
