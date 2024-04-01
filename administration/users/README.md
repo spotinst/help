@@ -28,6 +28,6 @@ This role allows the user to modify and change settings within the Account. The 
 
 ## Policy Based
 
-This role enables you to assign a custom policy to a user. A policy can define user permissions per resource and per action. For more information about defining policies, see [Access Policies](administration/access-policies/).
+This role enables you to assign a custom policy to a user. A policy can define user permissions per resource and per action. For more information about defining policies, see [Access Policies](administration/policies/).
 
 <img src="/administration/_media/users-and-roles-02.png" width="300" height="332" />
