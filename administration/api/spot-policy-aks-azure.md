@@ -1,3 +1,7 @@
+<html>
+<body>
+<pre v-pre data-lang="json">
+<code id="spot-azure-permissions" class="lang-json">Loading...</code>
 {
     "properties": {
         "roleName": "Spot Ocean 2.0 Permissions",
@@ -70,3 +74,5 @@
         ]
     }
 }
+</body>
+</html>
