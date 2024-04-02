@@ -113,6 +113,7 @@ To access the Virtual Node Groups dashboard and configure multiple subnets:
 4. Click the Virtual Node Group you need to configure from the list.  
    In the Virtual Node Group dashboard that opens, The Networking panel is on the middle-right of the screen.
 
+![ocean-network-gen](https://github.com/spotinst/help/assets/159915991/4c1c7c3f-0d23-478a-9dd5-92056dab0a44)
 
 
 5. In the Networking panel, you can update subnets for VNG using the Add VNet subnets and Add Pod subnets drop-down lists, according to the AKS cluster Network Type.
@@ -213,3 +214,5 @@ For information about defining preferred instance types in the Spot API (using t
 [Virtual Node Groups](https://docs.spot.io/ocean/features/vngs/)
 
 [Manage Virtual Node Groups](ocean/tutorials/manage-virtual-node-groups.md)
+
+[Spot API-Create Virtual Node Group](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecCreate)
