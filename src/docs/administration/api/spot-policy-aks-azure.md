@@ -1,7 +1,6 @@
-<html>
-<body>
-<pre v-pre data-lang="json">
-<code id="spot-azure-permissions" class="lang-json">Loading...</code>
+# Spot Policy in Azure (AKS)
+The latest Spot policy in Azure appears below
+```
 {
     "properties": {
         "roleName": "Spot Ocean 2.0 Permissions",
@@ -71,8 +70,9 @@
                 "dataActions": [],
                 "notDataActions": []
             }
+
+```
         ]
     }
 }
-</body>
-</html>
+
