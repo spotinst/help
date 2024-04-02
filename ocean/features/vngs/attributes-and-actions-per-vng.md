@@ -91,7 +91,56 @@ The following is a list of attributes customizable per VNG in Ocean for AKS.
 - Multiple subnets per Virtual Node Group (VNG) 
   - Kubenet (vnet-subnet) 
   - Azure CNI (vnet-subnet)  
-  - Azure CNI with Dynamic IP (vnet-subnet and pod-subnet). 
+  - Azure CNI with Dynamic IP (vnet-subnet and pod-subnet).
+ 
+### Configure an Ocean AKS Cluster with Multiple VNG Subnets
+
+Ocean AKS lets you configure multiple subnets for a Virtual Node Group (VNG) to ensure that your AKS cluster does not run out of IP address capacity.  
+There are several Azure Networking CNI options: 
+
+*  Kubenet Networking (vnet-subnet) 
+*  Azure CNI (vnet-subnet)  
+*  Azure CNI with Dynamic IP (vnet-subnet and pod-subnet).  
+
+You can add (or remove) vnet-subnets or pod-subnets in a VNG at any time. Ocean AKS will automatically assign subnets to node pools based on IP address capacity. However, a node pool with a subnet that has run out of IP address capacity will be locked for scaling. 
+You can set up multiple subnets when you create or update a VNG, and when you update a VNG template, in the Cloud Cluster Virtual Node Groups tab. 
+
+To access the Virtual Node Groups dashboard and configure multiple subnets: 
+
+1. In the left main menu, click **Ocean**, and click **Cloud Clusters**.
+2. Select a cluster from the list of clusters. 
+3. Click the **Virtual Node Group** tab. 
+4. Click the Virtual Node Group you need to configure from the list.  
+   In the Virtual Node Group dashboard that opens, The Networking panel is on the middle-right of the screen.
+
+![ocean-network-gen](https://github.com/spotinst/help/assets/159915991/4c1c7c3f-0d23-478a-9dd5-92056dab0a44)
+
+
+5. In the Networking panel, you can update subnets for VNG using the Add VNet subnets and Add Pod subnets drop-down lists, according to the AKS cluster Network Type.
+
+    *  For Kubenet, you can add one or more VNet subnets to the VNG (pod subnets are not applicable) 
+    *  For Azure CNI you can add one or more VNet subnets to the VNG (pod subnets are not applicable) 
+    *  For Azure CNI Dynamic IP, you can add one or more VNet subnets and / or pod subnets to the VNG. 
+
+### What to Consider when Selecting Multiple Subnets 
+
+*  If you do not select a subnet, the VNG will use the VNet and / or pod subnet assigned to the cluster. 
+*  If you select multiple subnets, the VNG will distribute the subnets across nodes / node pools and / or pods based on subnet IP address availability. 
+*  To prevent VNet or Pod subnets from running out of capacity, you can add VNet and / or pod subnets. All subnets must be from the same VNet as the cluster. VNG Pod subnet is configurable only with Azure CNI using dynamic IP allocation. 
+*  If you did not specify the VNet subnet when you created the cluster, the VNet is managed by Azure, so you cannot edit or add a VNet and / or pod subnet. 
+
+### Cluster and Subnet Limitations 
+
+*  All subnets (vnet-subnets and pod-subnets) must be a subset of the AKS cluster VNet CIDR. 
+*  After you create an AKS cluster, you cannot change the VNet name or Network plugin (CNI). 
+*  You can expand VNet CIDR, for example, from 10.200.0.0/16 to 10.200.0.0/14. However, you then need to update the AKS cluster to reconcile to the expanded VNet CIDR:  
+```
+az aks update -g <ResourceGroup> -n <ClusterName>
+```
+*  If a vnet-subnet was not specified when you created the AKS cluster, AKS creates the default managed VNet (CIDR 10.224.0.0/12), and you cannot add more subnets to the managed VNet. Ocean does not support adding subnets to AKS clusters with the default managed VNet. 
+*  BYO CNI - Bring Your Own CNI is not currently supported. It may work with Ocean but there is no capability for adding subnets.
+
+
 
 </details><br>
 
@@ -160,6 +209,10 @@ As preferred instance type is a soft requirement, the general spot instance avai
 
 For information about defining preferred instance types in the Spot API (using the `preferredSpotTypes` attribute under `launchSpec.instanceTypes`), see the Create Virtual Node Group APIs for [Ocean AWS Kubernetes](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecCreate) and [Ocean ECS](https://docs.spot.io/api/#tag/Ocean-ECS/operation/OceanECSLaunchSpecCreate).
 
-## What’s next?
+### Related Topics
 
-Learn how to [Manage Virtual Node Groups](ocean/tutorials/manage-virtual-node-groups.md) and customize configurations per VNG.
+[Virtual Node Groups](https://docs.spot.io/ocean/features/vngs/)
+
+[Manage Virtual Node Groups](ocean/tutorials/manage-virtual-node-groups.md)
+
+[Spot API-Create Virtual Node Group](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecCreate)
