@@ -1,3 +1,6 @@
+<html>
+<body>
+
 {
     "properties": {
         "roleName": "Spot Ocean 2.0 Permissions",
@@ -70,3 +73,5 @@
         ]
     }
 }
+</body>
+</html>
