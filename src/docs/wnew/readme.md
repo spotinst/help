@@ -1,4 +1,4 @@
-## What’s New for Spot Products
+## What’s New in Spot Products
 
 Check out the latest features and enhancements we've released for all Spot products.
 
