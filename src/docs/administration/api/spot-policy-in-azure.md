@@ -1,4 +1,4 @@
-# Spot Policy in Azure
+# Spot Policy in Azure (Elastigroup)
 
 The latest Spot policy in Azure appears below.
 
