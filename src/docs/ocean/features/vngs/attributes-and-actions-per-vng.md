@@ -92,7 +92,7 @@ The following is a list of attributes customizable per VNG in Ocean for AKS.
   - Kubenet (vnet-subnet) 
   - Azure CNI (vnet-subnet)  
   - Azure CNI with Dynamic IP (vnet-subnet and pod-subnet).
- 
+
 ### Configure an Ocean AKS Cluster with Multiple VNG Subnets
 
 Ocean AKS lets you configure multiple subnets for a Virtual Node Group (VNG) to ensure that your AKS cluster does not run out of IP address capacity.  
