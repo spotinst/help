@@ -70,9 +70,8 @@ The latest Spot policy in Azure appears below
                 "dataActions": [],
                 "notDataActions": []
             }
-
-```
         ]
     }
 }
 
+```
