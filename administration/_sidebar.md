@@ -40,6 +40,6 @@
   - [API Administration](administration/api/)
     - [Create an API Token](administration/api/create-api-token)
     - [Spot Policy in AWS](administration/api/spot-policy-in-aws)
-    - [Spot Policy in Azure](administration/api/spot-policy-in-azure)
+    - [Spot Policy in Azure for Elastigroup](administration/api/spot-policy-in-azure)
     - [Spot Policy in GCP](administration/api/spot-policy-in-gcp)
     - [Permit List IPs](administration/api/whitelist-ips)
