@@ -60,6 +60,7 @@ The following is a list of attributes customizable per VNG in Ocean for ECS. Som
 - Launch Instance
 - Manual Headroom
 - Metadata v2 (API only)
+- Multiple AMI Architectures in same VNG
 - Preferred Spot Instance Types (API only)
 - Restrict Scaledown
 - Roll
