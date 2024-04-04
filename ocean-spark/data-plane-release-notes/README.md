@@ -1,5 +1,12 @@
 # Cluster Release Notes
 
+## [0.4.10-73] - 2024-04-03
+
+Changelog
+
+- [0.4.7] bigdata-proxy
+  - Fix workspace save with large notebook file 
+
 ## [0.4.10-72] - 2024-03-27
 
 Changelog
