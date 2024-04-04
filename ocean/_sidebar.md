@@ -2,6 +2,7 @@
 
 - <a href="/" class="sidebar-home"><i data-feather="arrow-left" class="sidebar-back-icon"></i>Back to Main Tree</a>
 - [Ocean](ocean/)
+  - [Release Notes](ocean/release-notes/)  
   - [Overview (Kubernetes)](ocean/overview-kubernetes)
   - [Overview (ECS)](ocean/overview-ecs)
   - [Getting Started](ocean/getting-started/)
@@ -87,3 +88,4 @@
   - [Tips & Best Practices](ocean/tips-and-best-practices/)
     - [Upgrade AKS Clusters](ocean/tips-and-best-practices/upgrade-aks-cluster)
     - [Manage Machine Types](ocean/tips-and-best-practices/manage-machine-types)
+
