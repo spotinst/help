@@ -1,6 +1,6 @@
 <meta name=“robots” content=“noindex”>
 
-# What’s New in Ocean 
+# Ocean Release Notes
 
 ## Features and Enhancements
 
@@ -11,7 +11,4 @@ We’ve enhanced our custom fields, giving you more drop-down options while also
 
 * **22 April, 2024: Next feature.**
 
-## Fixed Issues
 
-
-## Known Issues
