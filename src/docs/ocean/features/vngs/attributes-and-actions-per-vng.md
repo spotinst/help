@@ -36,14 +36,6 @@ The following is a list of attributes customizable per VNG in Ocean for AWS. Som
 
 For example, you could use the Labels and Taints attributes to instruct Ocean which labels and taints are applied on the nodes using the user data, and effectively connect between the cloud infrastructure properties and Kubernetes node labels that will be used on applications using node affinity.
 
-### Multiple AMI Architectures in Same VNG 
-
-Ocean supports instance types with both Arm64 and x86 architectures in the same VNG. This widens the instance selection options because instances that support either the Arm64 or the x86 architectures can be chosen. This enables you to take advantage of the cost and performance benefits of Arm64 when the spot markets allow while maintaining a large whitelist of x86 instances. 
-
-Whenever you create a VNG having the Arm64 and x86 instance types, ensure that the workloads can run on both architectures. In addition, ensure by using node selectors that only the relevant pods will trigger a scale-up from this VNG. 
-
-Multiple architectures in the same VNG can be applied only in AWS Kubernetes and ECS. 
-
 </details><br>
 
 <details>
@@ -194,6 +186,14 @@ A possible use case is protecting a 100% On-demand VNG from any scale down activ
 Restrict scale down can be applied only in AWS, ECS and GKE.
 
 For more information about the Scale Down feature, see Scaling ([Kubernetes](ocean/features/scaling-kubernetes?id=scale-down) or [ECS](ocean/features/scaling-ecs?id=scale-down-behavior)).
+
+### Multiple AMI Architectures in Same VNG 
+
+Ocean supports instance types with both Arm64 and x86 architectures in the same VNG. This widens the instance selection options because instances that support either the Arm64 or the x86 architectures can be chosen. This enables you to take advantage of the cost and performance benefits of Arm64 when the spot markets allow while maintaining a large whitelist of x86 instances. 
+
+Whenever you create a VNG having the Arm64 and x86 instance types, ensure that the workloads can run on both architectures. In addition, ensure by using node selectors that only the relevant pods will trigger a scale-up from this VNG. 
+
+Multiple architectures in the same VNG can be applied only in AWS Kubernetes and ECS. 
 
 ## Preferred Spot Instance Types per VNG
 
