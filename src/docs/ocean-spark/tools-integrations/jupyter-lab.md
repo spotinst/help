@@ -11,7 +11,7 @@ To start a Spark application with SparkConnect server, either run the mainClass 
 ```json
 "mainClass": "com.netapp.spark.JupyterLab",
 "deps": {
-    "packages": ["com.netapp.spark:jupyter-plugin:1.2.8"],
+    "packages": ["com.netapp.spark:jupyter-plugin:1.3.0"],
     "repositories": ["https://us-central1-maven.pkg.dev/ocean-spark/ocean-spark-adapters"]
 },
 ```
@@ -24,7 +24,7 @@ To start a Spark application with SparkConnect server, either run the mainClass 
     "spark.jupyter.work.dir": "/opt/spark/work-dir"
 },
 "deps": {
-    "packages": ["com.netapp.spark:jupyter-plugin:1.2.8"],
+    "packages": ["com.netapp.spark:jupyter-plugin:1.3.0"],
     "repositories": ["https://us-central1-maven.pkg.dev/ocean-spark/ocean-spark-adapters"]
 },
 ```
