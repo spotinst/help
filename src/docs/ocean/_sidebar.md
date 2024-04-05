@@ -2,7 +2,6 @@
 
 - <a href="/" class="sidebar-home"><i data-feather="arrow-left" class="sidebar-back-icon"></i>Back to Main Tree</a>
 - [Ocean](ocean/)
-  - [Release Notes](ocean/release-notes/)  
   - [Overview (Kubernetes)](ocean/overview-kubernetes)
   - [Overview (ECS)](ocean/overview-ecs)
   - [Getting Started](ocean/getting-started/)
