@@ -21,6 +21,7 @@
       - [Scheduling](elastigroup/features/core-features/scheduling)
       - [Instance Actions](elastigroup/features/core-features/instance-actions)
       - [Elastigroup Console Configuration Alerts](elastigroup/features/core-features/elastigroup-console-configuration-alerts)
+      - [AZ Scores](elastigroup/features/core-features/az-scores)
     - [Compute](elastigroup/features/compute/)
       - [Autohealing](elastigroup/features/compute/autohealing)
       - [Preferred Instance Types](elastigroup/features/compute/preferred-instance-types)
