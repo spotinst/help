@@ -17,6 +17,7 @@
     - [GKE](ocean/getting-started/gke)
     - [ECS](ocean/getting-started/ecs)
     - [OpenShift](ocean/getting-started/openshift)
+  - [Release Notes](ocean/release-notes/)
   - [Features](ocean/features/)
     - [Scaling (Kubernetes)](ocean/features/scaling-kubernetes)
     - [Scaling (ECS)](ocean/features/scaling-ecs)
