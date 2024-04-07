@@ -7,7 +7,7 @@ Complete the following steps to access the AZ Recommendations page:
 1. Log in to the Spot Console and on the left main menu, click **Elastigroup**. 
 2. Click **Groups** and then click the **Recommendations** tab. 
 
-![az-score](https://github.com/spotinst/help/assets/106514736/6fcb6b1a-7c9b-4580-971c-bb18ff53c098)
+![az-score](https://github.com/spotinst/help/assets/106514736/e3f285f8-2772-48da-9ac0-d3e2b2eec4cc)
 
 ## Recommendations  
 
