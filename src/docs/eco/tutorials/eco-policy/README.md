@@ -472,7 +472,7 @@ The following permissions are required to write information from your AWS Cost &
 
 This role and the corresponding permissions are issued to the Eco production accounts. 
 
-```
+```json
    "SpotFinOpsRole": { 
         "Type": "AWS::IAM::Role", 
         "Properties": { 
