@@ -51,6 +51,7 @@ Before initiating the import process, make sure that Ocean has the necessary per
 
 3. Click **Test Cluster Permissions** and wait for the test to be completed. 
 
+View this sample of [AKS permissions](https://docs.spot.io/administration/api/spot-policy-aks-azure).
 
 **Important:** If you can't complete a step due to **Missing Permissions**, refer to the following table: 
 
@@ -174,7 +175,7 @@ pods=$(kubectl get pods -n <namepace> -o \ jsonpath='{.items[*].metadata.name}')
 # Loop through each 
 for pod in $pods; do echo "Deleting pod: $pod" kubectl delete pod $pod -n <namespace> done 
 ```
-Note: To enable a workload to run on Regular / OD nodes, add Spot label `spot.io/node-lifecyel=od` 
+Note: To enable a workload to run on Regular / OD nodes, add Spot label `spot.io/node-lifecycle=od` 
 
 ### Step 1.5: Review and Configure  
 
