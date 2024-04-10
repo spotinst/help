@@ -4,7 +4,7 @@ The Eco policy is shown below. The policy below is relevant only for customers w
 
 ```json
 { 
-    "AWSTemplateFormatVersion": "2010-09-09", 
+"AWSTemplateFormatVersion": "2010-09-09", 
     "Outputs": { 
       "SpotFinOpsRoleArn": { 
         "Value": { 
@@ -311,7 +311,7 @@ The following are permissions that are needed for onboarding customers as noted 
 
 ### ElasticSearch 
 
-The following are permissions that are needed to provide the Eco team with information about reserved instance offerings and view details of reserved ES instances.
+The following permissions are required for providing the Eco team with information about reserved instance offerings and view details of reserved ES instances. 
 
 ```
 "es:ListElasticsearchInstanceTypes", 
@@ -321,7 +321,7 @@ The following are permissions that are needed to provide the Eco team with infor
 
 ### RDS 
 
-The following are permissions that are needed to provide the Eco team with information about reserved DB instance details and available offerings. 
+The following permissions are required for providing the Eco team with information about reserved DB instance details and available offerings.  
  
 ```
   "rds:DescribeReservedDBInstances", 
@@ -333,7 +333,7 @@ The following are permissions that are needed to provide the Eco team with infor
 ### Redshift 
 
  
-The following are permissions that are needed to provide the Eco team with information about all Redshift instance details and available offerings. 
+The following permissions are required to provide the Eco team with information about all Redshift instance details and available offerings. 
 
 ```
   "redshift:DescribeReservedNodeOfferings", 
@@ -344,7 +344,7 @@ The following are permissions that are needed to provide the Eco team with infor
 ### Elasticache 
 
  
-The following are permissions that are needed to provide the Eco team with information about all Elasticache instance details and available offerings. 
+The following permissions are required for providing the Eco team with information about all Elasticache instance details and available offerings. 
 
 ```
   "redshift:DescribeReservedNodeOfferings", 
@@ -354,7 +354,7 @@ The following are permissions that are needed to provide the Eco team with infor
 
 ### DynamoDB 
  
-The following are permissions that are needed to provide the Eco team with information about all Dynmo instance details and available offerings. 
+The following permissions are required for providing the Eco team with information about all Dynmo instance details and available offerings. 
 
 ```
   "redshift:DescribeReservedNodeOfferings", 
@@ -364,7 +364,7 @@ The following are permissions that are needed to provide the Eco team with infor
 
 ### EC2 
 
-The following are permissions that are needed to provide the Eco team with information about all EC2 instance details and available offerings. 
+The following permissions are required for providing the Eco team with information about all EC2 instance details and available offerings.
 
 ```
       "ec2:DescribeHostReservations", 
@@ -373,7 +373,7 @@ The following are permissions that are needed to provide the Eco team with infor
  
 ### SavingsPlans 
  
-The following are permissions that are needed to provide the Eco team with information about Savings Plan details and available offerings. 
+The following permissions are required for providing the Eco team with information about Savings Plan details and available offerings. 
 
 ```
         "savingsplans:DescribeSavingsPlanRates", 
@@ -382,14 +382,11 @@ The following are permissions that are needed to provide the Eco team with infor
         "savingsplans:DescribeSavingsPlansOfferings", 
         "savingsplans:ListTagsForResource" 
 ```
- 
-
- 
 
 ### Account, Billing, Cost Explorer, Cost and Usage Report, Invoicing, Payments and Taxes 
 
  
-The following are permissions that are needed to provide the Eco team with access to Billing, Cost Explorer, Cost and Usage Report, Invoicing, Payments and Tax Details that are used to analyze spend and determine savings. 
+The following permissions are required for providing the Eco team with access to Billing, Cost Explorer, Cost and Usage Report, Invoicing, Payments and Tax Details that are used to analyze spend and determine savings.  
 
 ``` 
   	            "account:GetAccountInformation", 
@@ -442,7 +439,7 @@ The following are permissions that are needed to provide the Eco team with acces
                   "payments:ListPaymentPreferences", 
                   "tax:GetTaxInheritance", 
                   "tax:GetTaxRegistrationDocument", 
-                  "tax:ListTaxRegistrations" 
+                  "tax:ListTaxRegistrations"
 ```
 
 ### S3 
