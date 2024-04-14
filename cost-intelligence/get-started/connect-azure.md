@@ -14,7 +14,7 @@ Permissions to create app registrations and assign subscription reader role in A
 
 2. Select **Microsoft Azure** as your cloud provider.  
 3. Select **FinOps Products** and click **Next**. 
-4. Select **Billing Engine** and follow the steps to log in to Azure. 
+4. Select **Cost Intelligence** and follow the steps to log in to Azure. 
  
 <img width="985" alt="connect-azure-ci-2" src="https://github.com/spotinst/help/assets/106514736/c2b789c2-c93c-45a6-bb8e-e014bfff7ffd"> 
 
