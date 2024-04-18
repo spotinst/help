@@ -6,8 +6,8 @@
 >block quote after the h2
 1. List item 1
 2. list item 2
-- bullet 1
-- bullet 2
+   * bullet 1
+   * bullet 2
 ### this is the h3
 'code just cuz'
 ---
