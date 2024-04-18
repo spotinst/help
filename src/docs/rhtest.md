@@ -11,7 +11,7 @@
 ### this is the h3
 'code just cuz'
 ---
-'''
+```
 {
   "firstName": "John",
   "lastName": "Smith",
