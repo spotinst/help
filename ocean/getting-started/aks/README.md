@@ -31,10 +31,10 @@ You can perform similar steps to import an AKS cluster to Ocean using the Ocean 
 
 To launch the Create Ocean Cluster Wizard in the Spot Console:  
 * In the top left menu, click **Ocean**.   
-   * For **new** Ocean AKS accounts with no existing Clusters, click **Create Cluster** to launch the *Create Ocean Cluster* wizard. 
+   * For **new** Ocean AKS accounts with no existing Clusters, click **Create Cluster** to launch the Create Ocean Cluster wizard. 
    * For **existing** Ocean AKS accounts with active Ocean AKS clusters, select **Cloud Clusters** on the left menu and then click **Create Cluster** on top right above the cluster list table.
 
-To import the AKS cluster, follow the steps in the *Create Ocean Cluster* Wizard
+To import the AKS cluster, follow the steps in the Create Ocean Cluster Wizard
 
 ![ocean-aks-newclus-create](https://github.com/spotinst/help/assets/159915991/8e6ddd6c-85f5-40ee-a608-802af4ad6ee2)
 
@@ -143,7 +143,7 @@ Information about Namespaces:
 *  The Spot admission controller injects Spot toleration in pods for all namespaces, except those specifically excluded using label spot.io/inject-aks-spot-toleration=false 
 *  The Spot admission controller automatically excludes all [AKS system namespaces](https://learn.microsoft.com/en-us/azure/aks/faq#can-i-use-admission-controller-webhooks-on-aks) with control-plane label like kube-system.
 
-Notes:
+>**Notes**:
 
 *  You can adjust your non-system namespaces after installation (described later). 
 *  You can install the Spot admission controller now from this wizard or install it later (after importing the cluster) from the Cluster **Actions** drop-down menu. 
