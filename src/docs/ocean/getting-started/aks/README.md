@@ -29,7 +29,7 @@ You can perform similar steps to import an AKS cluster to Ocean using the Ocean 
 
 ### Step 1 – Use the Create Ocean Cluster Wizard to import an AKS cluster  
 
-To launch the *Create Ocean Cluster* Wizard in the Spot Console:  
+To launch the Create Ocean Cluster Wizard in the Spot Console:  
 * In the top left menu, click **Ocean**.   
    * For **new** Ocean AKS accounts with no existing Clusters, click **Create Cluster** to launch the *Create Ocean Cluster* wizard. 
    * For **existing** Ocean AKS accounts with active Ocean AKS clusters, select **Cloud Clusters** on the left menu and then click **Create Cluster** on top right above the cluster list table.
@@ -42,8 +42,8 @@ To import the AKS cluster, follow the steps in the *Create Ocean Cluster* Wizard
 
 Before initiating the import process, make sure that Ocean has the necessary permissions to create and update node pools for autoscaling. Verify your IAM permissions at both the subscription and resource group levels. Specifically, confirm that you have the required permissions for the Ocean AKS product.
 
-1. In the *Create Ocean Cluster* wizard, select your Azure resource group from the *Resource Group* drop-down list. 
-2. Select your cluster name from the *AKS Cluster Name* drop-down list.
+1. In the Create Ocean Cluster wizard, select your Azure resource group from the **Resource Group** drop-down menu. 
+2. Select your cluster name from the **AKS Cluster Name** drop-down menu.
 
    *  If you have multiple clusters in the resource group, you must import them one at a time. 
 
@@ -53,14 +53,14 @@ Before initiating the import process, make sure that Ocean has the necessary per
 
 View this sample of [AKS permissions](https://docs.spot.io/administration/api/spot-policy-aks-azure).
 
-**Important:** If you can't complete a step due to **Missing Permissions**, refer to the following table: 
+>**Important:** If you can't complete Step 1.1 due to **Missing Permissions**, refer to the following table: 
 
 
-| Step  | Description                                       | What to do                                                                                                                                                                                                                                                                                                                                                                                                                         |
+|Action   | Issue                                       | What to do                                                                                                                                                                                                                                                                                                                                                                                                                         |
 |----------------------|---------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Selecting Resource Group       | You can’t find your resource group.               | First check that your Spot account is correctly set up. We recommend deleting the account and setting it up again with the correct Subscription ID and Tenant ID.  If the issue persists: click **Add Permissions** to run the *Missing Permissions* wizard (described below).  In the *Missing permissions* dialog box, select the **Resource Group** permission level (Spot IAM role).                                      |
-| Selecting Cluster Name         | You can’t find your cluster.                      | If there are no AKS clusters in the drop-down list, the permissions may be incorrect, or the IAM role may be assigned to the wrong resource group (no AKS clusters available for the required resource group).  Click **Add Permissions** to run the *Missing Permissions* wizard (described below).  In the *Missing permissions* dialog box, select the **Resource Group** permission level (Spot IAM role).  |
-| Running **Test Cluster Permissions**         | The Cluster test was not successfully completed.  | Your Spot account may not have permissions for the Ocean AKS product or may have read-only permissions at either the subscription level or the resource group level. Click **Add Permissions** to run the *Missing Permissions* wizard for both subscription and resource group levels (described below).                                                                                                                           |
+| Selecting **Resource Group**       | You can’t find your resource group.               | First check that your Spot account is correctly set up. We recommend deleting the account and setting it up again with the correct Subscription ID and Tenant ID.  If the issue persists: click **Add Permissions** to run the Missing Permissions wizard (described below).  In the Missing permissions dialog box, select the **Resource Group** permission level (Spot IAM role).                                      |
+| Selecting **Cluster Name**         | You can’t find your cluster.                      | If there are no AKS clusters in the drop-down list, the permissions may be incorrect, or the IAM role may be assigned to the wrong resource group (no AKS clusters available for the required resource group).  Click **Add Permissions** to run the Missing Permissions wizard (described below).  In the Missing permissions dialog box, select the **Resource Group** permission level (Spot IAM role).  |
+| Running **Test Cluster Permissions**         | The Cluster test was not successfully completed.  | Your Spot account may not have permissions for the Ocean AKS product or may have read-only permissions at either the subscription level or the resource group level. Click **Add Permissions** to run the Missing Permissions wizard for both subscription and resource group levels (described below).                                                                                                                           |
 
 To run the Missing Permissions wizard: 
 
@@ -72,7 +72,7 @@ To run the Missing Permissions wizard:
 
    * For the Account Subscription level, update the Subscription ID in the field on the right of the dialog box. You can obtain the subscription ID by either creating a new Spot account in Azure or updating the existing Spot account.
    * For the Resource Group level, enter the name of your AKS resource group and the name of its corresponding infrastructure resource group in the field on the right of the dialog box. You must add both, separated by a comma. 
-3. Continue with downloading the Ocean AKS JSON permissions.
+3. Continue by downloading the Ocean AKS JSON permissions.
 
 ![ocean-aks-newclus-missingdownload](https://github.com/spotinst/help/assets/159915991/f5b6b6c9-c8a7-4ca7-8c96-63e0ba60cbce)
 
@@ -80,7 +80,7 @@ To run the Missing Permissions wizard:
 
 ![ocean-aks-newclus-missingview](https://github.com/spotinst/help/assets/159915991/2648fe75-46fa-4cfc-96e3-2c63d5cd1907)
 
-Note: You can alternatively apply permissions from the console UI.
+>**Note**: You can alternatively apply permissions from the console UI.
 
 ### Step 1.2: VNG Template  
 
@@ -118,6 +118,7 @@ Additional Tips:
   *For Kubectl, you cannot run the controller init script, since remote connectivity is disabled. You need to manually create the config-map and install the controller in the AKS using VPN or proxy.  
 
 When the Ocean Controller connectivity is successful, click **Next**. 
+
 ### Step 1.4: Automatic Spot Tolerance Injection (optional) 
 
 ![ocen-aks-auto-spot-toleration-injection](https://github.com/spotinst/help/assets/159915991/7554d272-4e65-4112-8fd4-d3a54a5e994c)
@@ -145,7 +146,7 @@ Information about Namespaces:
 Notes:
 
 *  You can adjust your non-system namespaces after installation (described later). 
-*  You can install the Spot admission controller now from this wizard or install it later (after importing the cluster) from the Cluster *Actions* drop-down menu. 
+*  You can install the Spot admission controller now from this wizard or install it later (after importing the cluster) from the Cluster **Actions** drop-down menu. 
 *  If your cluster does not have the Spot admission controller installed, the banner at the top of the screen displays installation instructions.
 
 To Install the Spot Admission Controller:
@@ -175,7 +176,7 @@ pods=$(kubectl get pods -n <namepace> -o \ jsonpath='{.items[*].metadata.name}')
 # Loop through each 
 for pod in $pods; do echo "Deleting pod: $pod" kubectl delete pod $pod -n <namespace> done 
 ```
-Note: To enable a workload to run on Regular / OD nodes, add Spot label `spot.io/node-lifecycle=od` 
+>**Note**: To enable a workload to run on Regular / OD nodes, add Spot label `spot.io/node-lifecycle=od` 
 
 ### Step 1.5: Review and Configure  
 
