@@ -86,7 +86,7 @@ upgrade --install --wait spotinst-ocean-network-client spot/ocean-network-client
 --set oceanController.secretName=ocean-controller-ocean-kubernetes-controller 
 ```
 
-## Helm Installation
+## <a name="helm"></a>Helm Installation
 
 To install the Ocean Controller Version 2 via Helm: 
 
