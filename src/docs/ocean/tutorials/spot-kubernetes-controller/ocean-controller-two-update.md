@@ -1,6 +1,6 @@
 <meta name=“robots” content=“noindex”>
 
-# Update the Ocean Controller
+# Update the Ocean Controller Version 2
 
 This topic describes how to update the Ocean Controller Version 2 in your Kubernetes cluster. 
 
@@ -23,8 +23,8 @@ helm repo update
 3.  Install ocean-kubernetes-controller: 
 
 ```bash
-helm install spot spot/ocean-kubernetes-controller \ 
- 	--set spotinst.account=$SPOTINST_ACCOUNT \ 
+helm install spot spot/ocean-kubernetes-controller \
+  --set spotinst.account=$SPOTINST_ACCOUNT \ 
   --set spotinst.clusterIdentifier=$SPOTINST_CLUSTER_IDENTIFIER \ 
   --set spotinst.token=$SPOTINST_TOKEN 
 ```
