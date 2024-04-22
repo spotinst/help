@@ -8,7 +8,7 @@ You can install the Ocean Controller using a Spot script (based on Helm), via He
 
 1.  Pre-installation: Create a [Spot Programmatic token](https://docs.spot.io/administration/api/create-api-token ) (or use an existing one) for the cluster.  
 
-2.  Install the Ocean Controller via [Helm](https://github.com/spotinst/help/new/ocean-controller-two-install/src/docs/ocean/tutorials/spot-kubernetes-controller#helm-installation),  [Script](https://github.com/spotinst/help/new/ocean-controller-two-install/src/docs/ocean/tutorials/spot-kubernetes-controller#script-installation), or [Terraform](https://github.com/spotinst/help/new/ocean-controller-two-install/src/docs/ocean/tutorials/spot-kubernetes-controller#terraform-installation).  
+2.  Install the Ocean Controller via [Helm](#helm),  [Script](#script), or [Terraform](#terraform).  
 
 >**Note**: Installation of the Ocean Controller is governed by NetApp’s end user license agreement (“EULA”), which can be found at: [Sales Terms and Conditions | NetApp](https://www.netapp.com/how-to-buy/sales-terms-and-conditions/). 
 
@@ -86,7 +86,7 @@ upgrade --install --wait spotinst-ocean-network-client spot/ocean-network-client
 --set oceanController.secretName=ocean-controller-ocean-kubernetes-controller 
 ```
 
-## Helm Installation
+## <a name="helm"></a>Helm Installation
 
 To install the Ocean Controller Version 2 via Helm: 
 
@@ -111,7 +111,7 @@ helm upgrade --install --wait ocean-controller spot/ocean-kubernetes-controller 
 --set spotinst.token="${SPOTINST_TOKEN}" 
 ```
 
-## Script Installation 
+## <a name="script"></a>Script Installation 
 
 Use Spot’s script for a Helm-based installation of the Ocean Controller. 
 
@@ -128,7 +128,7 @@ INCLUDE_METRIC_SERVER=false \
 bash 
 ```
 
->**Note**: 
+>**Note**: Regarding Ocean Prometheus Exporter and Ocean Network Client.
 
 *   If the [Ocean Prometheus Exporter](https://docs.spot.io/ocean/tools-and-integrations/prometheus/) or [Ocean Network Client](https://docs.spot.io/ocean/tutorials/install-network-client?id=install-the-ocean-network-client-in-the-cluster) is already installed in your cluster, reinstall them by setting the following parameter (to integrate with the new controller): 
 
@@ -147,7 +147,7 @@ ENABLE_OCEAN_NETWORK_CLIENT = true
 ```bash
 INCLUDE_METRIC_SERVER = true 
 ```
-## Terraform Installation 
+## <a name="terraform"></a>Terraform Installation 
 
 Spot provides a [Terraform Module](https://registry.terraform.io/modules/spotinst/kubernetes-controller/ocean/latest) to install and manage the Ocean Controller. 
 
@@ -180,4 +180,4 @@ module "kubernetes-controller" {
 
 >**Note** For clarifications and concerns please contact your Account Manager.  
 
->**Note** For troubleshooting issues please contact our support team via the console online chat or via [semail](https://spot.io/support/).  
+>**Note** For troubleshooting issues please contact our support team via the console online chat or via [email](https://spot.io/support/).  
