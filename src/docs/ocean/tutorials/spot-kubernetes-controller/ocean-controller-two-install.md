@@ -8,7 +8,7 @@ You can install the Ocean Controller using a Spot script (based on Helm), via He
 
 1.  Pre-installation: Create a [Spot Programmatic token](https://docs.spot.io/administration/api/create-api-token ) (or use an existing one) for the cluster.  
 
-2.  Install the Ocean Controller via [Helm](https://docs.spot.io/ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-install?id=install-helm), [Script](https://docs.spot.io/ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-install?id=install-script), or [Terraform](https://docs.spot.io/ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-install?id=install-terraform).  
+2.  Install the Ocean Controller via [Helm](https://docs.spot.io/ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-install?id=install-via-helm), [Script](https://docs.spot.io/ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-install?id=install-via-script), or [Terraform](https://docs.spot.io/ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-install?id=install-via-terraform).  
 
 >**Note**: Installation of the Ocean Controller is governed by NetApp’s end user license agreement (“EULA”), which can be found at: [Sales Terms and Conditions | NetApp](https://www.netapp.com/how-to-buy/sales-terms-and-conditions/). 
 
