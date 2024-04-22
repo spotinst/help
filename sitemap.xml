@@ -757,6 +757,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/cost-intelligence/tutorials/cost-intelligence-policy/"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/cost-intelligence/tutorials/dashboard/ci-dashbords-data-joins</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/cost-intelligence/tutorials/dashboard/ci-dashbords-data-joins"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/cost-intelligence/tutorials/dashboard/ci-dashbords-data-joins"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/cost-intelligence/tutorials/dashboard/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>

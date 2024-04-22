@@ -20,7 +20,7 @@ Complete the following steps to create a new dashboard.
 
 NOTE: If you do not publish the dashboard, the newly created dashboard will display in the list of available dashboards as an empty dashboard.    
 
-## Setting Default Dashboard for an Organization
+## Set Default Dashboard for an Organization
 
 Cost Intelligence Dashboards come with a default dashboard that is set for all users under an organization.  
 
@@ -68,7 +68,7 @@ NOTE: If you do not publish the dashboard, the newly cloned dashboard will displ
 
 ![dashboard-6](https://github.com/spotinst/help/assets/106514736/443f9293-861a-4ec1-943f-32d4f053099c)   
 
-## Uploading a CSV/Create a Dataset    
+## Upload a CSV/Create a Dataset    
 
 With Cost Intelligence Dashboards, you can upload your data directly into the product to create customized data views that enable you to make better decisions. Complete the following steps to upload a CSV.    
 
@@ -95,7 +95,7 @@ You can perform additional dataset functions such as editing connections, joinin
 
 ![datasets-3](https://github.com/spotinst/help/assets/106514736/170e83b8-0e10-4982-a727-61934572eedb)   
 
-## Managing Datasets  
+## Manage Datasets  
 
 To manage existing datasets, click the **Manage Files** page via the Dashboard action bar.  
 
@@ -110,27 +110,5 @@ To edit a file, hover over the three dots icon to open a sub menu and select **E
 To refresh an existing dataset, while editing the dataset, click **Reload Dataset** (#2 in the image above) to go through the process of reloading the CSV file and refreshing the data in the application. 
 
 To delete a dataset, hover over the icon of three dots on the Manage Files page and select the delete option. **This action removes any charts from all dashboards that contain this dataset**. 
-
-## Joining Data Sets  
-
-Cost Intelligence dashboards enable you to connect two datasets, granting you flexibility to create charts according to your specific requirements. 
-
-To connect a CSV based dataset to an existing dataset, complete the following steps: 
-
-1. In the Edit Dataset page, click the icon of three dots to open a menu and select **Join to Another Data Source**.  
-
-![datasets-3](https://github.com/spotinst/help/assets/106514736/6737aad2-f308-4421-98a1-f923076cbfb5) 
-
-This opens a new modal that lists existing datasets (both user-generated, and system generated) that you can join with. Select the dataset you want to connect to.    
-
-![datasets-6](https://github.com/spotinst/help/assets/106514736/f0371615-2e7d-4c7a-8174-0221d4b9dfd6)   
-
-You can choose how you want to join your data together by linking specific columns together for each dataset.    
-
-![datasets-7](https://github.com/spotinst/help/assets/106514736/5e2ba217-8ad2-472e-bec2-0b936fe68e77) 
-
-The Edit Dataset page will then be updated to display the joined relationship.    
-
-![datasets-8](https://github.com/spotinst/help/assets/106514736/799004c9-34ae-489e-9cbc-f19a44f69546) 
 
   
