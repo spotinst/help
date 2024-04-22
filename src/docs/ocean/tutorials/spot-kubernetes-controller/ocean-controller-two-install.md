@@ -180,4 +180,4 @@ module "kubernetes-controller" {
 
 >**Note** For clarifications and concerns please contact your Account Manager.  
 
->**Note** For troubleshooting issues please contact our support team via the console online chat or via [semail](https://spot.io/support/).  
+>**Note** For troubleshooting issues please contact our support team via the console online chat or via [email](https://spot.io/support/).  
