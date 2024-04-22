@@ -111,26 +111,4 @@ To refresh an existing dataset, while editing the dataset, click **Reload Datase
 
 To delete a dataset, hover over the icon of three dots on the Manage Files page and select the delete option. **This action removes any charts from all dashboards that contain this dataset**. 
 
-## Join Data Sets  
-
-Cost Intelligence dashboards enable you to connect two datasets, granting you flexibility to create charts according to your specific requirements. 
-
-To connect a CSV based dataset to an existing dataset, complete the following steps: 
-
-1. In the Edit Dataset page, click the icon of three dots to open a menu and select **Join to Another Data Source**.  
-
-![datasets-3](https://github.com/spotinst/help/assets/106514736/6737aad2-f308-4421-98a1-f923076cbfb5) 
-
-This opens a new modal that lists existing datasets (both user-generated, and system generated) that you can join with. Select the dataset you want to connect to.    
-
-![datasets-6](https://github.com/spotinst/help/assets/106514736/f0371615-2e7d-4c7a-8174-0221d4b9dfd6)   
-
-You can choose how you want to join your data together by linking specific columns together for each dataset.    
-
-![datasets-7](https://github.com/spotinst/help/assets/106514736/5e2ba217-8ad2-472e-bec2-0b936fe68e77) 
-
-The Edit Dataset page will then be updated to display the joined relationship.    
-
-![datasets-8](https://github.com/spotinst/help/assets/106514736/799004c9-34ae-489e-9cbc-f19a44f69546) 
-
   
