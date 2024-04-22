@@ -10,7 +10,8 @@ The Ocean Controller is a pod that resides within your Kubernetes cluster, enabl
 
 Ocean comes with two replicas Out-of-the-box. You can add further replicas as required. 
 
-![Ocean-controller-Page-3 drawio](https://github.com/spotinst/help/assets/159915991/24230b21-89cc-4ebc-8e80-3b5b53663bcd)
+
+![Ocean-controller version-two](https://github.com/spotinst/help/assets/159915991/64e1132c-3d43-4d64-9942-f7b701dd5f43)
 
 
 The Ocean Controller offers the following functionality and benefits: 
