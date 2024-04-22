@@ -8,7 +8,7 @@ You can install the Ocean Controller using a Spot script (based on Helm), via He
 
 1.  Pre-installation: Create a [Spot Programmatic token](https://docs.spot.io/administration/api/create-api-token ) (or use an existing one) for the cluster.  
 
-2.  Install the Ocean Controller via [Helm](https://github.com/spotinst/help/new/ocean-controller-two-install/src/docs/ocean/tutorials/spot-kubernetes-controller#helm-installation),  [Script](https://github.com/spotinst/help/new/ocean-controller-two-install/src/docs/ocean/tutorials/spot-kubernetes-controller#script-installation), or [Terraform](https://github.com/spotinst/help/new/ocean-controller-two-install/src/docs/ocean/tutorials/spot-kubernetes-controller#terraform-installation).  
+2.  Install the Ocean Controller via [Helm](https://docs.spot.io/ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-install)#helm-installation),  [Script](https://docs.spot.io/ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-install#script-installation), or [Terraform](https://docs.spot.io/ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-install#terraform-installation).  
 
 >**Note**: Installation of the Ocean Controller is governed by NetApp’s end user license agreement (“EULA”), which can be found at: [Sales Terms and Conditions | NetApp](https://www.netapp.com/how-to-buy/sales-terms-and-conditions/). 
 
@@ -128,7 +128,7 @@ INCLUDE_METRIC_SERVER=false \
 bash 
 ```
 
->**Note**: 
+>**Note**: Regarding Ocean Prometheus Exporter and Ocean Network Client.
 
 *   If the [Ocean Prometheus Exporter](https://docs.spot.io/ocean/tools-and-integrations/prometheus/) or [Ocean Network Client](https://docs.spot.io/ocean/tutorials/install-network-client?id=install-the-ocean-network-client-in-the-cluster) is already installed in your cluster, reinstall them by setting the following parameter (to integrate with the new controller): 
 
