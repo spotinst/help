@@ -433,6 +433,7 @@ The permissions expressed in the clusterRole called spotinst-kubernetes-cluster-
 
 
 ```bash
+
 kind: ClusterRole 
 apiVersion: rbac.authorization.k8s.io/v1 
 metadata: 
@@ -461,7 +462,8 @@ subjects:
 - kind: ServiceAccount 
   name: ocean-controller-ocean-kubernetes-controller  
   namespace: spot-system 
---- 
+```
+
 
 
 
