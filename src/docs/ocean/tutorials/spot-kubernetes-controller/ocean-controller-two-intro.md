@@ -2,10 +2,9 @@
 
 # Ocean Controller Version 2 
 
-> **Note**:  For more information about Ocean Controller Version 2, contact your Customer Support representative. 
+> **Note**:  For more information about Ocean Controller Version 2, contact your Customer Support representative.
 
-The Ocean Controller is a pod that resides within your Kubernetes cluster, enabling the integration with the Spot platform. 
-The Controller exports relevant resources to the Spot SaaS environment, empowering Ocean to autonomously manage, control, and optimize your infrastructure. 
+The Ocean Controller is a powerful pod that resides inside your Kubernetes cluster, facilitating seamless integration with the Spot platform. By exporting essential resources to the Spot SaaS environment, the Controller empowers Ocean to autonomously manage, control, and optimize your infrastructure. With the Ocean Controller, you gain the ability to effortlessly harness the capabilities of the Spot platform while ensuring efficient infrastructure management.
 
 Ocean comes with two replicas out-of-the-box. You can add further replicas as required. 
 
@@ -23,7 +22,7 @@ The Ocean Controller offers the following functionality and benefits:
 
 *   Minimizes its footprint within the cluster, resulting in limited external network traffic when no changes occur. This attribute presents opportunities for cost savings. 
 
-By installing the Ocean Controller, you can effortlessly integrate Ocean with your Kubernetes cluster, leverage event-driven efficiency, ensure high availability, and optimize your infrastructure management. 
+By installing Ocean Controller Version 2, you can effortlessly integrate Ocean with your Kubernetes cluster, leverage event-driven efficiency, ensure high availability, and optimize your infrastructure management. 
 
 ## Supported Operating Systems
 
