@@ -6,7 +6,7 @@ If your Ocean Controller is not reporting a heartbeat to the Ocean cluster, use 
 
 ## Step 1: Check the Configuration 
 
-Check the configuration of your configMap.yaml and ensure that the spotinst.cluster-identifier is the same as "controllerClusterId" (Cluster Identifier) in the Ocean configuration. 
+Check the configuration of your `configMap.yaml` and ensure that the spotinst.cluster-identifier is the same as `controllerClusterId` (Cluster Identifier) in the Ocean configuration. 
 
 To view the controller configmap currently applied to your cluster, run the following command: 
 
@@ -27,7 +27,7 @@ metadata:
  
 ```
 
-## Step 2: Are the account ID and token valid? 
+## Step 2: Are the Account ID and Token valid? 
 
 1.  To view the base64 encoded secrets run the following command: 
 
@@ -70,7 +70,7 @@ ERROR  [DATE] [main] PushAutoScalerDataCmd - Failed to push autoScaler data. Err
 ERROR  [DATE] [main] ControllerApplication - Failed to validate controller communication with spotinst APICo
 ```
 
-## Step 3: Is the Controller Running? 
+## Step 3: Is the Ocean Controller Running? 
 
 To see if the controller is running, run the following command on your kubectl enabled terminal: 
 
@@ -78,7 +78,7 @@ To see if the controller is running, run the following command on your kubectl e
 kubectl get pods -n spot-system | grep ocean-controller 
 ```
 
-## Step 4: Controller Running but not Responding? 
+## Step 4: Is the Ocean Controller Running but not Responding? 
 
 If the controller pod is running, but is not responding, do the following: 
 
@@ -94,7 +94,7 @@ kubectl describe pod 'dns-pod-name' -n kube-system
 
 3.  Try restarting the controller pod. 
 
-## Step 5: Get Controller Logs 
+## Step 5: Get Ocean Controller Logs 
 
 If the steps above do not solve your issue, get the controller logs using the steps below. 
 
@@ -110,4 +110,4 @@ kubectl get pods -n spot-system
 Kubectl logs CONTROLLER_POD_NAME –n spot-system 
 ```
 
-3. If you still encounter issues, you can contact Support via online chat or via [semail](https://spot.io/support/). 
+3. If you still encounter issues, you can contact Support via online chat or via [email](https://spot.io/support/). 
