@@ -4,9 +4,9 @@ The Dashboard provides a compute overview of your entire organization. On the Da
 
 ## Go to the Dashboard
 
-If you have just connected your cloud account using one of the connection wizards in the Spot console, you will see the Dashboard, by default, when you complete the wizard.
+If you have just connected your cloud account using one of the connection wizards in the Spot console, the Dashboard will open when you complete the wizard. 
 
-If you are at some other location in the Spot console, go to Overview at the top of the left sidebar and click Dashboard.
+Click Overview at the top of the left sidebar and click Dashboard. 
 
 <img src="/connect-your-cloud-provider/_media/view-dashboard-000.png" />
 
@@ -18,9 +18,9 @@ Once you have connected your cloud provider, Spot provides recommendations based
 
 <img src="/connect-your-cloud-provider/_media/view-dashboard-001.png" />
 
-If Spot presents a lot of recommendations, be sure to click View All so that you can see all the recommendations for savings and optimization. Any of the following recommendations could appear (and possibly others).
+If Spot presents a lot of recommendations, be sure to click **View All** so that you can see all the recommendations for savings and optimization. The following recommendations you may see: 
 - Connect a Linked Account: You can link additional accounts to Spot, including accounts from different cloud providers.
-- Connect a Management Account: This enables you to use Eco (AWS only). Will appear if you do not already have a management account connected.
+- Connect a Management Account: This enables you to use Eco (AWS only). Appears if you do not already have a management account connected.
 - Invite more users to Spot: This opens the user administration in Spot where you can add more users in your organization. Appears only if you have administrator rights in Spot.
 - Create your first Elastigroup: Appears if you have no Elastigroup.
 - Create your first Stateful Node: Appears if you have no Stateful Node.
@@ -49,7 +49,7 @@ The Monthly Fee is calculated each month as a percentage of your monthly savings
 
 ### Elastigroup/Ocean Service Savings Definition
 
-For each cloud provider, the term “Savings” is defined as follows:
+For each cloud provider, “Savings” is defined as follows:
 
 #### AWS Spot Instances
 
@@ -65,7 +65,7 @@ Your actual GCP Spot VMs charges deducted from the published cost of GCP On-Dema
 
 ### Eco Service Savings Definition
 
-For each cloud provider, the term “Savings” is defined as follows:
+For each cloud provider, “Savings” is defined as follows:
 
 #### AWS Reserved Instances (RIs) and Savings Plans (SPs)  
 
@@ -79,51 +79,6 @@ Your actual Azure RIs and/or SPs and/or RCs charges deducted from the cost of Mi
 
 Your actual GCP CUD charges deducted from the published cost of GCP On-Demand VMs. The On-Demand VMs charges can be found on GCP’s website at https://cloud.google.com/compute/pricing.
 
-### View All
+#### Billing Engine and Cost Intelligence Fee Calculation 
 
-Potential Savings information is presented per cloud provider that you have connected to Spot. If you have connected multiple cloud providers, there may be more than the three boxes shown by default. To see all of them, click View All.
-
-## Savings Overview
-
-The Savings Overview gives you a full picture of your savings across your entire organization. The different charts – including Savings over Time, Compute Lifecycle Breakdown, and Potential vs. Actual Cost – enable you to understand the savings in different slices.
-
-### Filters
-
-The filters enable you to select and display only the data you want to see.
-- Account: Select one or more accounts to include in the charts below. You need to have a management account in order to use this filter.
-- Date: Choose a data range for the data displayed.
-
-<img src="/connect-your-cloud-provider/_media/view-dashboard-003.png" width="500" />
-
-### Summary Line
-
-The tiles in the summary line provide some statics to give you an overview of your savings.
-
-<img src="/connect-your-cloud-provider/_media/view-dashboard-004.png" />
-
-- Savings Percentage: The ratio of the organization's potential cost to the actual cost after using Spot’s services.
-- Total Saved: The organization’s savings amount in the timeframe you selected.
-- Potential Cost: The organization's calculated cost if no spot instances were used.
-- Actual Cost: The organization’s cost after using Spot’s services.
-
-### Savings over Time
-
-The default view of this bar chart shows savings over the last year, viewing one bar per month. If you are using Ocean, Elastigroup, and Eco, the information is broken down per Spot service.
-
-<img src="/connect-your-cloud-provider/_media/view-dashboard-005.png" />
-
-### Compute Lifecycle Breakdown
-
-This is a pie chart showing your use of spot, on-demand, savings plans, and reserved instances. The lifecycle breakdown represents the current status of your cloud and is not affected by the time filter.
-
-<img src="/connect-your-cloud-provider/_media/view-dashboard-006.png" width="450" />
-
-### Potential vs. Actual Cost
-
-Use this chart to see how well you saved each month. For each month, you see a comparison of your potential cost vs. the actual cost using Spot.
-
-<img src="/connect-your-cloud-provider/_media/view-dashboard-007.png" width="450" />
-
-## What’s Next?
-
-Learn about specific actions you can take on the [Optimization](connect-your-cloud-provider/optimize) page to further optimize your cloud cost and usage.
+The monthly fee is calculated each month as a percentage of the total cloud spend. Unless otherwise specified, “Spend” is your charges as detailed in your cloud provider’s bills at the end of each month. This includes taxes, credits, and program discounts, but excludes your cloud provider’s support services. 
