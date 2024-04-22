@@ -86,7 +86,7 @@ upgrade --install --wait spotinst-ocean-network-client spot/ocean-network-client
 --set oceanController.secretName=ocean-controller-ocean-kubernetes-controller 
 ```
 
-## Install Helm
+## Install via Helm
 
 To install the Ocean Controller Version 2 via Helm: 
 
@@ -111,7 +111,7 @@ helm upgrade --install --wait ocean-controller spot/ocean-kubernetes-controller 
 --set spotinst.token="${SPOTINST_TOKEN}" 
 ```
 
-## Install Script  
+## Install via Script  
 
 Use Spot’s script for a Helm-based installation of the Ocean Controller. 
 
@@ -147,7 +147,7 @@ ENABLE_OCEAN_NETWORK_CLIENT = true
 ```bash
 INCLUDE_METRIC_SERVER = true 
 ```
-## Install Terraform  
+## Install via Terraform  
 
 Spot provides a [Terraform Module](https://registry.terraform.io/modules/spotinst/kubernetes-controller/ocean/latest) to install and manage the Ocean Controller. 
 
