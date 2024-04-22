@@ -20,7 +20,7 @@ Complete the following steps to create a new dashboard.
 
 NOTE: If you do not publish the dashboard, the newly created dashboard will display in the list of available dashboards as an empty dashboard.    
 
-## Setting Default Dashboard for an Organization
+## Set Default Dashboard for an Organization
 
 Cost Intelligence Dashboards come with a default dashboard that is set for all users under an organization.  
 
@@ -68,7 +68,7 @@ NOTE: If you do not publish the dashboard, the newly cloned dashboard will displ
 
 ![dashboard-6](https://github.com/spotinst/help/assets/106514736/443f9293-861a-4ec1-943f-32d4f053099c)   
 
-## Uploading a CSV/Create a Dataset    
+## Upload a CSV/Create a Dataset    
 
 With Cost Intelligence Dashboards, you can upload your data directly into the product to create customized data views that enable you to make better decisions. Complete the following steps to upload a CSV.    
 
@@ -95,7 +95,7 @@ You can perform additional dataset functions such as editing connections, joinin
 
 ![datasets-3](https://github.com/spotinst/help/assets/106514736/170e83b8-0e10-4982-a727-61934572eedb)   
 
-## Managing Datasets  
+## Manage Datasets  
 
 To manage existing datasets, click the **Manage Files** page via the Dashboard action bar.  
 
@@ -111,7 +111,7 @@ To refresh an existing dataset, while editing the dataset, click **Reload Datase
 
 To delete a dataset, hover over the icon of three dots on the Manage Files page and select the delete option. **This action removes any charts from all dashboards that contain this dataset**. 
 
-## Joining Data Sets  
+## Join Data Sets  
 
 Cost Intelligence dashboards enable you to connect two datasets, granting you flexibility to create charts according to your specific requirements. 
 
