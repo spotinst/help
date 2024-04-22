@@ -4,7 +4,7 @@
 
 This topic describes the permissions required by the Ocean Controller. All permissions listed here can be viewed and edited in the Ocean Controller's YAML file used in the installation process.
 
-The permissions are divided into the following sections: 
+The permissions are divided into the following sections:  
 
 | Section                  | Description                                                                                                                                     |
 |--------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -463,6 +463,5 @@ subjects:
   namespace: spot-system 
 --- 
 
-```
 
 
