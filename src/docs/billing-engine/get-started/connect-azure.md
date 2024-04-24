@@ -28,7 +28,7 @@ Click **Log in to Azure Account** and continue to the next step.
 
 ## Step 3: Create New Registration 
 
-1. In the Azure console, type **App Registration** in the search bar and click the App Registrations result that appears. 
+1. In the Azure console, type **App Registration** in the search bar and click **App Registrations**.
 
 ![connect-azure-sub-2](https://github.com/spotinst/help/assets/106514736/629e5c8b-00e1-44bd-9515-3908a404d2e5)
 
@@ -36,7 +36,7 @@ Click **Log in to Azure Account** and continue to the next step.
 
 ![connect-azure-sub-3](https://github.com/spotinst/help/assets/106514736/969f0960-db36-47c7-9123-58a657bd47bd)
 
-3. In the Register Application window that opens, enter a name for the application. 
+3. In the Register Application window, enter a name for the application. 
 4. In the Support account types section, select **Accounts in this organizational directory only (Spotinst only - Single tenant)**. 
 5. In the Redirect URI dropdown menu, select **Web** and specify: [https://spot.io](https://spot.io/). 
 
@@ -46,7 +46,7 @@ Click **Log in to Azure Account** and continue to the next step.
 
 ![connect-azure-sub-5](https://github.com/spotinst/help/assets/106514736/6cae12e2-2b45-463e-a079-9ad94775d61a)
 
-7. Paste the Application (client) ID and Directory (tenant) ID in the fields respectively: 
+7. Paste the **Application (client) ID** and **Directory (tenant) ID** in the fields. 
  
 <img width="483" alt="connect-azure-3" src="https://github.com/spotinst/help/assets/106514736/69d7d980-c404-4322-b126-0b780a40ac4d">
 
@@ -66,9 +66,8 @@ In the previous app registration that was created, complete the following steps 
 
 ## Step 5: Assign Reader Role to the App Registration 
 
-In the Azure console, type **Subscriptions** in the search bar and click the Subscription you want to connect to Billing Engine in the result that appears. 
+1. In the Azure console, type **Subscriptions** in the search bar and click the Subscription you want to connect to Billing Engine. 
 **Note**: One subscription from the billing account needs to be given reader access to the application. 
-
 2. In the menu on the left side of the Subscriptions platform, click **Access Control (IAM)**. 
 3. Click **Add/Add role assignment**. 
 4. Select the Reader role and click **Next**. 
@@ -114,6 +113,20 @@ billingRoleAssignmentName: 24f8edb6-1668-4659-b5e2-40bb5f3a7d7e
 When the validation is complete, your Azure Billing Account will be connected to Billing Engine. 
 
 <img width="1036" alt="connect-azure-4" src="https://github.com/spotinst/help/assets/106514736/1dee88b7-daa5-4516-ba71-2f99f231ef6f">
+
+### Connect an Existing Spot Account 
+
+You can connect an existing Spot Account (that is not connected to Azure for other Spot products) to Billing Engine for an Azure Billing Account by completing the following steps: 
+
+1. In the left main menu, click **Billing Engine** or **Cost Intelligence** and then **Administration**. A list of previously registered accounts for both the Cost Intelligence and Billing Engine products opens. 
+2. Click the **Billing Engine** tab and then **+ Cloud Account**. 
+3. Click the Azure cloud provider you want to connect to your Spot account. 
+4. Click the **Existing Spot Account** drop down menu and select the Spot account you want to connect Billing Engine and click **Next**.
+
+![connect-azure-6](https://github.com/spotinst/help/assets/106514736/284ad4fa-343c-4bad-80ee-ac1bedb490ed)
+
+5. To connect your Azure billing account, start with Step 2 [here](https://docs.spot.io/billing-engine/get-started/connect-azure?id=step-2-log-in-to-your-azure-account).  
+
 
 
  
