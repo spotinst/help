@@ -65,6 +65,7 @@ In the previous app registration that was created, complete the following steps 
  
 ## Step 5: Assign a Role 
 
+
 1. In the Azure console, type **Subscriptions** in the search bar and click the Subscription you want to connect to Cost Intelligence in the result that appears. 
 2. In the menu on the left side of the Subscriptions platform, click **Access Control** (IAM). 
 3. Click **Add/ Add role assignment**. 
