@@ -8,6 +8,8 @@
   - [Tutorials](cost-intelligence/tutorials/)
     - [Cost Intelligence Policy](cost-intelligence/tutorials/cost-intelligence-policy/)
     - [Dashboards](cost-intelligence/tutorials/dashboard/)
+      - [Generate Derived Values](cost-intelligence/tutorials/dashboard/derived-values)
+      - [CI Dashboards Data Joins](cost-intelligence/tutorials/dashboard/ci-dashbords-data-joins)   
     - [Best Practice Checks](cost-intelligence/tutorials/best-practice-checks/)
     - [Inventory](cost-intelligence/tutorials/inventory)
     - [Administration](cost-intelligence/tutorials/administration/)
