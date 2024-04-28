@@ -14,7 +14,7 @@ You can install the Ocean Controller using a Spot script (based on Helm), via He
 
 ## Existing Clusters - Install the Ocean Controller on Clusters Running Version 1
 
-**Step 1**: Export relevant variables from the existing cluster:
+### Step 1: Export relevant variables from the existing cluster
 
 1.  Run the following command to retrieve the namespace where the existing Ocean Controller is installed: 
 
@@ -37,30 +37,28 @@ export SPOTINST_CLUSTER_IDENTIFIER=`kubectl get cm -n $NAMESPACE spotinst-kubern
 env | grep -i spotinst 
 ```
 
-**Step 2**: Install Ocean Controller Version 2: 
+### Step 2: Install Ocean Controller Version 2
 
-Install the Ocean Controller via Helm,  Script, or Terraform. 
+Install the Ocean Controller via [Helm](https://docs.spot.io/ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-install?id=install-via-helm), [Script](https://docs.spot.io/ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-install?id=install-via-script), or [Terraform](https://docs.spot.io/ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-install?id=install-via-terraform).  
 
-**Step 3**: Scale Down the Old Controller Replicas 
+### Step 3: Scale Down the Old Controller Replicas
 
-Scale down the old controller replicas after installing the Controller version 2 to prevent upgrade conflicts.  
-
-> **Note**:  The Ocean Controller Version 2 replicas begin operating up to X seconds after all replicas of the Ocean Controller version 1 are fully removed. Completely removing Ocean Controller Version 1 will allow Ocean Controller Version 2 to ensure a smooth transition and optimal performance.
+Scale down the old controller replicas after installing the Controller Version 2 to prevent upgrade conflicts.  
 
 *   To scale down the old controller replicas, run the following command: 
 
 ```bash
 kubectl scale deployment --replicas=0 -n $NAMESPACE spotinst-kubernetes-cluster-controller 
 ```
-
+> **Note**:  The Ocean Controller Version 2 replicas begin operating just a few seconds after all replicas of the Ocean Controller version 1 are fully removed. Completely removing Ocean Controller Version 1 will allow Ocean Controller Version 2 to ensure a smooth transition and optimal performance.
+ 
 >**Note**: You can return to the previous state at any time by running the same command with `--replicas=1`. 
 
-**Step 4**: Install Optional components. 
+### Step 4: Install Optional Components
 
-Optionally install [Prometheus Exporter](https://docs.spot.io/ocean/tools-and-integrations/prometheus/) and / or the {Network Client}(https://docs.spot.io/ocean/tutorials/install-network-client?id=install-the-ocean-network-client-in-the-cluster
-). 
+Optionally install [Prometheus Exporter](https://docs.spot.io/ocean/tools-and-integrations/prometheus/) and / or the [Network Client](https://docs.spot.io/ocean/tutorials/install-network-client?id=install-the-ocean-network-client-in-the-cluster). 
 
->**Note**: If Ocean Prometheus Exporter and / or the Network Client is / are already installed on the cluster, reinstall now. 
+>**Note**: If Ocean Prometheus Exporter and / or the Network Client is / are already installed on the cluster, reinstall them as part of the Ocean Controller Version 2 installation. 
 
 To install Prometheus Exporter: 
 
@@ -105,7 +103,8 @@ helm repo update
 3.  Run the following command to install the Ocean Controller Version 2:
 
 ```bash
-helm upgrade --install --wait ocean-controller spot/ocean-kubernetes-controller \	--namespace spot-system --create-namespace \	 
+helm upgrade --install --wait ocean-controller spot/ocean-kubernetes-controller \
+--namespace spot-system --create-namespace \	 
 --set spotinst.account="${SPOTINST_ACCOUNT}" \	 
 --set spotinst.clusterIdentifier="${SPOTINST_CLUSTER_IDENTIFIER}" \	 
 --set spotinst.token="${SPOTINST_TOKEN}" 
@@ -128,25 +127,11 @@ INCLUDE_METRIC_SERVER=false \
 bash 
 ```
 
->**Note**: Regarding Ocean Prometheus Exporter and Ocean Network Client.
+>**Note**:
 
-*   If the [Ocean Prometheus Exporter](https://docs.spot.io/ocean/tools-and-integrations/prometheus/) or [Ocean Network Client](https://docs.spot.io/ocean/tutorials/install-network-client?id=install-the-ocean-network-client-in-the-cluster) is already installed in your cluster, reinstall them by setting the following parameter (to integrate with the new controller): 
+*   If the [Ocean Prometheus Exporter](https://docs.spot.io/ocean/tools-and-integrations/prometheus/) or [Ocean Network Client](https://docs.spot.io/ocean/tutorials/install-network-client?id=install-the-ocean-network-client-in-the-cluster) is already installed in your cluster, reinstall them by setting the following parameter (to integrate with the new controller): `ENABLE_OCEAN_METRIC_EXPORTER = true` OR `ENABLE_OCEAN_NETWORK_CLIENT = true`.  
+*   (Optional) To enable the Right Sizing feature, install the Metrics Server by setting the following parameter: `INCLUDE_METRIC_SERVER = true`.  
 
-```bash
-ENABLE_OCEAN_METRIC_EXPORTER = true  
-```
-
-Or  
-
-```bash 
-ENABLE_OCEAN_NETWORK_CLIENT = true
-```  
-
-*   (Optional) To enable the Right Sizing feature, install the Metrics Server by setting the following parameter:  
-
-```bash
-INCLUDE_METRIC_SERVER = true 
-```
 ## Install via Terraform  
 
 Spot provides a [Terraform Module](https://registry.terraform.io/modules/spotinst/kubernetes-controller/ocean/latest) to install and manage the Ocean Controller. 
