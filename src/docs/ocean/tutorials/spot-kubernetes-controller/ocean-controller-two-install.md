@@ -14,7 +14,7 @@ You can install the Ocean Controller using a Spot script (based on Helm), via He
 
 ## Existing Clusters - Install the Ocean Controller on Clusters Running Version 1
 
-**Step 1**: Export relevant variables from the existing cluster:
+### Step 1: Export relevant variables from the existing cluster
 
 1.  Run the following command to retrieve the namespace where the existing Ocean Controller is installed: 
 
@@ -37,13 +37,13 @@ export SPOTINST_CLUSTER_IDENTIFIER=`kubectl get cm -n $NAMESPACE spotinst-kubern
 env | grep -i spotinst 
 ```
 
-**Step 2**: Install Ocean Controller Version 2: 
+### Step 2: Install Ocean Controller Version 2
 
 Install the Ocean Controller via Helm,  Script, or Terraform. 
 
-**Step 3**: Scale Down the Old Controller Replicas 
+### Step 3: Scale Down the Old Controller Replicas
 
-Scale down the old controller replicas after installing the Controller version 2 to prevent upgrade conflicts.  
+Scale down the old controller replicas after installing the Controller Version 2 to prevent upgrade conflicts.  
 
 > **Note**:  The Ocean Controller Version 2 replicas begin operating just a few seconds after all replicas of the Ocean Controller version 1 are fully removed. Completely removing Ocean Controller Version 1 will allow Ocean Controller Version 2 to ensure a smooth transition and optimal performance.
 
@@ -55,12 +55,12 @@ kubectl scale deployment --replicas=0 -n $NAMESPACE spotinst-kubernetes-cluster-
 
 >**Note**: You can return to the previous state at any time by running the same command with `--replicas=1`. 
 
-**Step 4**: Install Optional components. 
+### Step 4: Install Optional Components
 
 Optionally install [Prometheus Exporter](https://docs.spot.io/ocean/tools-and-integrations/prometheus/) and / or the {Network Client}(https://docs.spot.io/ocean/tutorials/install-network-client?id=install-the-ocean-network-client-in-the-cluster
 ). 
 
->**Note**: If Ocean Prometheus Exporter and / or the Network Client is / are already installed on the cluster, reinstall now. 
+>**Note**: If Ocean Prometheus Exporter and / or the Network Client is / are already installed on the cluster, reinstall them as part of the Ocean Controller Version 2 installation. 
 
 To install Prometheus Exporter: 
 
