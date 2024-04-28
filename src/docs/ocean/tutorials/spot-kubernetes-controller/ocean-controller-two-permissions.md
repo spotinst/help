@@ -127,7 +127,7 @@ rules:
   resources: [ "events" ] 
   verbs: [ "create" ] 
 
-```yaml
+```
 
 ## Auto Update RBAC 
 
@@ -221,7 +221,7 @@ rules:
   resourceNames: [ ocean-controller-ocean-kubernetes-controller ] 
   verbs: [ "get", "patch" ] 
 
-```yaml
+```
 
 ## Cluster Role and Cluster Role Binding 
 
@@ -276,7 +276,7 @@ subjects:
 - kind: ServiceAccount 
   name: ocean-controller-ocean-kubernetes-controller  
   namespace: spot-system 
-```yaml
+```
 
 
 
