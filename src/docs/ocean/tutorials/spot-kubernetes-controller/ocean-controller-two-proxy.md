@@ -6,7 +6,8 @@ This topic describes how to configure the Ocean Controller Version 2 Proxy.
 
 ## Proxy Configuration 
 
-The Ocean Controller supports connecting to the Spot APIs via a proxy. The proxy should be configured using the --set spotinst.proxyUrl to the Helm install command. 
+The Ocean Controller supports connecting to the Spot APIs via a proxy. The proxy should be configured by adding the
+`--set spotinst.proxyUrl` to the Helm install command. 
 
 ```bash
 
@@ -47,11 +48,8 @@ You must restart the pod and add the additional CAs to the Ocean Controller's li
 
 If you do not have the certificates provided, you need to discover the certificate authority used by the proxy. You can find the certificate chain from a host or pod that can connect to the proxy. The host or pod needs openssl tools installed. 
 
-For example, run a network diagnostics pod in the cluster using:  
+For example, run a network diagnostics pod in the cluster using: `kubectl run --rm -ti netshoot --image=nicolaka/netshoot -- bash` 
 
-```bash
-kubectl run --rm -ti netshoot --image=nicolaka/netshoot -- bash 
-```
 
 >**Tip**: For more information about the netshoot image, see https://github.com/nicolaka/netshoot.
 
