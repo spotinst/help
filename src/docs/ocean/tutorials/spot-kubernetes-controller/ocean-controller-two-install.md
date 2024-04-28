@@ -45,7 +45,7 @@ Install the Ocean Controller via Helm,  Script, or Terraform.
 
 Scale down the old controller replicas after installing the Controller version 2 to prevent upgrade conflicts.  
 
-> **Note**:  The Ocean Controller Version 2 replicas begin operating up to X seconds after all replicas of the Ocean Controller version 1 are fully removed. Completely removing Ocean Controller Version 1 will allow Ocean Controller Version 2 to ensure a smooth transition and optimal performance.
+> **Note**:  The Ocean Controller Version 2 replicas begin operating just a few seconds after all replicas of the Ocean Controller version 1 are fully removed. Completely removing Ocean Controller Version 1 will allow Ocean Controller Version 2 to ensure a smooth transition and optimal performance.
 
 *   To scale down the old controller replicas, run the following command: 
 
