@@ -105,5 +105,4 @@ When the validation is complete, your Azure subscription will be connected to Co
 
 ![connect-azure-ci-8](https://github.com/spotinst/help/assets/106514736/2a795df2-1c55-4a8d-9ee7-168733f7be93)
 
-
- 
+*
