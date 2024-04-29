@@ -95,7 +95,7 @@ You can connect an existing Spot Account (that is already connected to Azure for
 
 4. Click the **Existing Spot Account** drop-down menu and select the Spot account you want to connect Cost Intelligence and click **Next**.
 
-**Note**: You can also add Cost Intelligence to a pre-existing, unconnected Spot account.  
+**Note**: You can also [add Cost Intelligence to a pre-existing, unconnected Spot account](https://docs.spot.io/cost-intelligence/get-started/connect-azure?id=step-1-connect-to-your-spot-account).  
  
 5. Add the Azure Reader Role to the connected app registration and click, **Connect Account**. 
  
