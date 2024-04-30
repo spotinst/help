@@ -16,7 +16,7 @@ kubectl describe configmap ocean-controller-ocean-kubernetes-controller -n spot-
 
 Controller ConfigMap template:
 
-```bash
+```yaml
 
 kind: ConfigMap 
 apiVersion: v1 
@@ -31,7 +31,7 @@ metadata:
 
 1.  To view the base64 encoded secrets run the following command: 
 
-```bash
+```yaml
 kubectl get secret ocean-controller-ocean-kubernetes-controller -n spot-system -o yaml 
 ```
 
@@ -62,7 +62,7 @@ abcdef124567890ghijk123456789abcdfghijk123456bcdefjik12346890000%
 ```
 6.  Verify that the token exists, and that the user associated with token exists and can make Spot API calls to resources in the account where the cluster exists: [Permanent API Tokens](https://console.spotinst.com/settings/v2/tokens/permanent).
 
-In case your account ID or token is incorrect or invalid, the controller pod will be in a Terminating/CrashLoopBackOff state and in the container logs (Refer Step 6) you will see an unauthorized response as shown below: 
+In case your account ID or token is incorrect or invalid, the controller pod will be in a Terminating/CrashLoopBackOff state and in the container logs (Refer to Step 5) you will see an unauthorized response as shown below: 
 
 ```bash
 WARN   [DATE] [main] SpotinstApiService - Got status code different the SC_OK : 401 Body {  "request": {    "id": "123bc63bd-da6d-4f0e-aaeb-660edc1124",    "url": "/mcs/kubernetes/topology/autoScalerData?accountId=act-123bcdef&clusterIdentifier=test-&fastScale=false&kubernetesUniqueIdentifier=1b123abc-4a83-4d51-8536-64b402372ecb",    "method": "POST",    "timestamp": "DATE"  },  "response": {    "status": {      "code": 401,      "message": "Unauthorized"    }  }} 
