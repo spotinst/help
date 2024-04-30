@@ -11,11 +11,12 @@ The Ocean Controller supports connecting to the Spot APIs via a proxy. The proxy
 
 ```bash
 
-helm install spot spot/ocean-kubernetes-controller \ 
+helm upgrade --install --wait ocean-controller spot/ocean-kubernetes-controller \ 
+  --namespace "spot-system" --create-namespace \ 
   --set spotinst.account=$SPOTINST_ACCOUNT \ 
   --set spotinst.clusterIdentifier=$SPOTINST_CLUSTER_IDENTIFIER \ 
   --set spotinst.token=$SPOTINST_TOKEN \ 
-  --set spotinst.proxyUrl=$SPOTINST_PROXY_URL 
+  --set spotinst.proxyUrl=$SPOTINST_PROXY_URL
 
 ```
 
@@ -32,7 +33,7 @@ To be able to add these "extra CAs" to the Ocean Controller, we provide a way th
 To add “extra pems,” add the certificate(s) to userEnvCertificates.pem. The certificates must be in PEM format. 
 
 ```bash
-helm install spot spot/ocean-kubernetes-controller \ 
+helm upgrade --install --wait ocean-controller spot/ocean-kubernetes-controller  
   --set spotinst.account=$SPOTINST_ACCOUNT \ 
   --set spotinst.clusterIdentifier=$SPOTINST_CLUSTER_IDENTIFIER \ 
   --set spotinst.token=$SPOTINST_TOKEN \ 
