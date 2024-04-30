@@ -33,5 +33,6 @@ Ocean Controller supports Linux OS only.
 *  [Ocean Controller Permissions](https://docs.spot.io/ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-permissions)
 *  [Ocean Controller Proxy Settings](https://docs.spot.io/ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-proxy)
 *  [Ocean Controller Troubleshooting](https://docs.spot.io/ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-ts)
+*  [Ocean Controller Version History](https://docs.spot.io/ocean/tutorials/spot-kubernetes-controller/controller-version-two-hist)
 
 
