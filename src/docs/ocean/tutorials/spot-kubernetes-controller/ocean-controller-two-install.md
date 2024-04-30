@@ -4,6 +4,10 @@
 
 You can install the Ocean Controller using a Spot script (based on Helm), via Helm, or via Terraform. Copy the relevant code shown in this procedure and apply it in your environment. 
 
+## Prerequisites
+
+The Ocean controller Version 2 installation is based on Helm, so make sure to have Helm installed on your machine before starting.
+
 ## New Clusters - Install the Ocean Controller Version 2
 
 1.  Pre-installation: Create a [Spot Programmatic token](https://docs.spot.io/administration/api/create-api-token ) (or use an existing one) for the cluster.  
@@ -19,16 +23,16 @@ You can install the Ocean Controller using a Spot script (based on Helm), via He
 1.  Run the following command to retrieve the namespace where the existing Ocean Controller is installed: 
 
 ```bash
-export NAMESPACE=$(kubectl get cm -A --field-selector=metadata.name=spotinst-kubernetes-cluster-controller-config -o jsonpath='{.items[0].metadata.namespace}')
+export EXISTING_NAMESPACE=$(kubectl get cm -A --field-selector=metadata.name=spotinst-kubernetes-cluster-controller-config -o jsonpath='{.items[0].metadata.namespace}')
 ```
 
 2.  Run the following commands to export the details of the existing Ocean Controller: 
 
 ```bash
 set -o pipefail 
-export SPOTINST_TOKEN=`(kubectl get secret -n $NAMESPACE spotinst-kubernetes-cluster-controller -o jsonpath='{.data.token}' | base64 -d) || kubectl get cm -n $NAMESPACE spotinst-kubernetes-cluster-controller-config -o jsonpath='{.data.spotinst\.token}'` 2&>1 
-export SPOTINST_ACCOUNT=`(kubectl get secret -n $NAMESPACE spotinst-kubernetes-cluster-controller -o jsonpath='{.data.account}' | base64 -d) || kubectl get cm -n $NAMESPACE spotinst-kubernetes-cluster-controller-config -o jsonpath='{.data.spotinst\.account}'` 2&>1 
-export SPOTINST_CLUSTER_IDENTIFIER=`kubectl get cm -n $NAMESPACE spotinst-kubernetes-cluster-controller-config -o jsonpath='{.data.spotinst\.cluster-identifier}'` 
+export SPOTINST_TOKEN=`(kubectl get secret -n $EXISTING_NAMESPACE spotinst-kubernetes-cluster-controller -o jsonpath='{.data.token}' | base64 -d) || kubectl get cm -n $EXISTING_NAMESPACE spotinst-kubernetes-cluster-controller-config -o jsonpath='{.data.spotinst\.token}'` 2&>1 
+export SPOTINST_ACCOUNT=`(kubectl get secret -n $EXISTING_NAMESPACE spotinst-kubernetes-cluster-controller -o jsonpath='{.data.account}' | base64 -d) || kubectl get cm -n $EXISTING_NAMESPACE spotinst-kubernetes-cluster-controller-config -o jsonpath='{.data.spotinst\.account}'` 2&>1 
+export SPOTINST_CLUSTER_IDENTIFIER=`kubectl get cm -n $EXISTING_NAMESPACE spotinst-kubernetes-cluster-controller-config -o jsonpath='{.data.spotinst\.cluster-identifier}'` 
 ```
 
 3.  Verify that all three variables have been exported successfully: 
@@ -39,7 +43,11 @@ env | grep -i spotinst
 
 ### Step 2: Install Ocean Controller Version 2
 
-Install the Ocean Controller via [Helm](https://docs.spot.io/ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-install?id=install-via-helm), [Script](https://docs.spot.io/ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-install?id=install-via-script), or [Terraform](https://docs.spot.io/ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-install?id=install-via-terraform).  
+Install the Ocean Controller via [Helm](https://docs.spot.io/ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-install?id=install-via-helm), [Script](https://docs.spot.io/ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-install?id=install-via-script), or [Terraform](https://docs.spot.io/ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-install?id=install-via-terraform). 
+
+For Helm / Script installation - The [Controller Auto-Update](https://docs.spot.io/ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-update) feature is enabled by default. To disable it, use `--set spotinst.disableAutoUpdate=true`.  
+
+For Terraform installation - The controller auto-update is disabled by default. To enable it, use `disable_auto_update=false` [Learn more](https://registry.terraform.io/modules/spotinst/kubernetes-controller/ocean/latest#input_disable_auto_update). 
 
 ### Step 3: Scale Down the Old Controller Replicas
 
@@ -48,9 +56,9 @@ Scale down the old controller replicas after installing the Controller Version 2
 *   To scale down the old controller replicas, run the following command: 
 
 ```bash
-kubectl scale deployment --replicas=0 -n $NAMESPACE spotinst-kubernetes-cluster-controller 
+kubectl scale deployment --replicas=0 -n $EXISITNG_NAMESPACE spotinst-kubernetes-cluster-controller 
 ```
-> **Note**:  The Ocean Controller Version 2 replicas begin operating just a few seconds after all replicas of the Ocean Controller version 1 are fully removed. Completely removing Ocean Controller Version 1 will allow Ocean Controller Version 2 to ensure a smooth transition and optimal performance.
+> **Note**:  The Ocean Controller Version 2 replicas begin operating a few seconds after all replicas of the Ocean Controller version 1 are fully removed. Completely removing Ocean Controller Version 1 will allow Ocean Controller Version 2 to ensure a smooth transition and optimal performance.
  
 >**Note**: You can return to the previous state at any time by running the same command with `--replicas=1`. 
 
