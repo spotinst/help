@@ -2,11 +2,11 @@
 
 # Install the Ocean Controller Version 2
 
-You can install the Ocean Controller using a Spot script (based on Helm), via Helm, or via Terraform. Copy the relevant code shown in this procedure and apply it in your environment. 
+You can install the **AWS K8s** Ocean Controller using a Spot script (based on Helm), via Helm, or via Terraform. Copy the relevant code shown in this procedure and apply it in your environment. 
 
 ## Prerequisites
 
-The Ocean controller Version 2 installation is based on Helm, so make sure to have Helm installed on your machine before starting.
+The Ocean Controller Version 2 installation is based on Helm, so make sure to have Helm installed on your machine before starting.
 
 ## New Clusters - Install the Ocean Controller Version 2
 
@@ -117,6 +117,7 @@ helm upgrade --install --wait ocean-controller spot/ocean-kubernetes-controller 
 --set spotinst.clusterIdentifier="${SPOTINST_CLUSTER_IDENTIFIER}" \	 
 --set spotinst.token="${SPOTINST_TOKEN}" 
 ```
+If the Ocean Metric Server is already installed in your cluster, add `--set metrics-server.deployChart=false` to the installation. 
 
 ## Install via Script  
 
