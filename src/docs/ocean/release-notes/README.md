@@ -17,7 +17,7 @@
 
 >**IMPORTANT:** Please note that **Ocean Controller Version 1** will reach End-Of-Life on **November 1, 2024**. To take advantage of the benefits offered by **Ocean Controller Version 2**, and receive uninterrupted service and support, please make sure to upgrade to Versioh 2 at your earliest convenience.
          
-   [Learn more..](https://docs.spot.io/ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-intro)
+   [Learn more..](https://docs.spot.io/ocean/tutorials/ocean-controller-v2/readme)
 
 
 
