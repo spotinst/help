@@ -5,7 +5,7 @@
 ## Features and Enhancements
 
 * **OCN-001**: As of **May 1, 2024**, **Ocean Controller Version 2** is officially released, bringing a host of new features and enhancements to streamline your operations:
-  *  With Ocean Controller Version 2, you can expect enhanced efficiency and performance thanks to its innovative event-driven system design. This intelligent architecture ensures that your cluster operates at peak performance, delivering optimal results with every interaction.
+  *  With Ocean Controller Version 2, you can expect enhanced efficiency and performance thanks to its innovative event-driven system design. This intelligent architecture ensures your cluster operates at peak performance, delivering optimal results with every interaction.
 
   *  One of the standout features of Ocean Controller Version 2 is its out-of-the-box Leader Election mode, guaranteeing continuous pod availability and uninterrupted operations, to keep your cluster running smoothly, even in the face of unexpected events.
 
