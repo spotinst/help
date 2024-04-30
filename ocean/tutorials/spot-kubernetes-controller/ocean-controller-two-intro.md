@@ -2,7 +2,7 @@
 
 # Ocean Controller Version 2 
 
-The Ocean Controller is a pod that resides inside your Kubernetes cluster, facilitating seamless integration with the Spot platform. By exporting essential resources to the Spot SaaS environment, the Controller empowers Ocean to autonomously manage, control, and optimize your infrastructure. With the Ocean Controller, you gain the ability to effortlessly harness the capabilities of the Spot platform while ensuring efficient infrastructure management.
+The Ocean Controller is a pod that resides inside your Kubernetes cluster, facilitating seamless integration with the Spot platform. By collecting metrics and events and reporting them to the Spot SaaS environment, the Controller empowers Ocean to autonomously manage, control, and optimize your infrastructure. With the Ocean Controller, you gain the ability to effortlessly harness the capabilities of the Spot platform while ensuring efficient infrastructure management.
 
 Ocean Controller Version 2 comes with two replicas out-of-the-box. You can add further replicas as required. 
 
@@ -18,7 +18,7 @@ The Ocean Controller offers the following functionality and benefits:
 
 *   Resides within your Kubernetes cluster and actively listens for resource events. It seamlessly pushes modified resources to the Spot SaaS environment. The Spot SaaS environment houses a dedicated Ocean Autoscaler, which promptly scales your Kubernetes clusters in an optimized manner when triggered. 
 
-*   Minimizes its footprint within the cluster, resulting in limited external network traffic when no changes occur. This attribute presents opportunities for cost savings. 
+*   Minimizes its footprint within the cluster, resulting in low external network traffic when no changes occur. This attribute presents opportunities for cost savings. 
 
 By installing Ocean Controller Version 2, you can effortlessly integrate Ocean with your Kubernetes cluster, leverage event-driven efficiency, ensure high availability, and optimize your infrastructure management. 
 
