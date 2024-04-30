@@ -27,7 +27,6 @@ helm repo update
 3.  Install ocean-kubernetes-controller: 
 
 ```bash
-
 helm upgrade --install --wait ocean-controller spot/ocean-kubernetes-controller\  
 --namespace "spot-system" --create-namespace \ 	  
 --set spotinst.clusterIdentifier="${SPOTINST_CLUSTER_IDENTIFIER}" \ 	  
@@ -39,20 +38,16 @@ If the Ocean Controller is already installed, this action will start a rollout o
 
 ## Ocean Controller Auto-Update 
 
-The Ocean Controller supports auto-update. When an updated version of the controller is available, it will automatically be updated. By default, auto-update is enabled (for installation using Terraform, the auto-update is disabled by default. To enable it, use `disable_auto_update=false`. [Learn more](https://registry.terraform.io/modules/spotinst/kubernetes-controller/ocean/latest#input_disable_auto_update). 
+The Ocean Controller supports auto-update. When an updated version of the controller is available, it will automatically be updated. By default, auto-update is enabled (for installation using Terraform, the auto-update is disabled by default. To enable it, use `disable_auto_update=false`. [Learn more](https://registry.terraform.io/modules/spotinst/kubernetes-controller/ocean/latest#input_disable_auto_update)). 
 
-As a best-practice, we recommend leaving Auto-Update enabled because the update procedure is silent and requires no downtime. In addition, every Ocean Controller version update improves stability and performance, collects new metrics, and supports new K8s versions. 
+As a best-practice, we recommend leaving Auto-Update enabled because the update procedure is silent and requires no downtime. In addition, every Ocean Controller version update improves stability and performance, collects new metrics, and supports new K8s versions.
 
-If the controller is not updated to the latest version, a banner will appear in the console with the message below and the latest version number to be installed.
+The process of pushing a new Ocean Controller version requires a change in your environment and is monitored by the Spot team. Upon failure, the process will automatically roll back the changes. The upgrade is pushed gradually over several days.
 
-The process of pushing a new Ocean Controller version requires a change in your environment and is monitored by the Spot team. Upon failure, the process will automatically rollback the changes.The upgrade is pushed gradually over several days.
-
-If any of the conditions below apply at the time of a latest version push, the auto-update process will be canceled: 
+If any of the conditions below apply at the time of the latest version push, the auto-update process will be canceled: 
 
 *   The current running Ocean Controller is not reporting back to SaaS. 
 *   The cluster is in scheduled shutdown hours.   
-
-If an auto-update stopped before completion, a banner will appear in the console with the message below and the latest version number to be installed. 
 
 ## Disable Auto-Update 
 
