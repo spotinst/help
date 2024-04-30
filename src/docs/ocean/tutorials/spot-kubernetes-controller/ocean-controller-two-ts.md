@@ -17,14 +17,12 @@ kubectl describe configmap ocean-controller-ocean-kubernetes-controller -n spot-
 Controller ConfigMap template:
 
 ```yaml
-
 kind: ConfigMap 
 apiVersion: v1 
 metadata: 
   name: ocean-controller-ocean-kubernetes-controller-config 
   namespace: spot-system 
   data:spotinst.cluster-identifier: <CLUSTER_ID> 
- 
 ```
 
 ## Step 2: Are the Account ID and Token valid? 
@@ -107,7 +105,7 @@ kubectl get pods -n spot-system
 2.  Get the controller logs: 
 
 ```bash
-Kubectl logs CONTROLLER_POD_NAME –n spot-system 
+Kubectl logs ocean-controller-ocean-kubernetes-controller –n spot-system 
 ```
 
 3. If you still encounter issues, you can contact Support via online chat or via [email](https://spot.io/support/). 
