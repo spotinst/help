@@ -16,7 +16,7 @@ The Ocean controller Version 2 installation is based on Helm, so make sure to ha
 
 >**Note**: Installation of the Ocean Controller is governed by NetApp’s end user license agreement (“EULA”), which can be found at: [Sales Terms and Conditions | NetApp](https://www.netapp.com/how-to-buy/sales-terms-and-conditions/). 
 
-## Existing Clusters - Install the Ocean Controller on Clusters Running Version 1
+## Existing Clusters - Install Ocean Controller on Clusters Running Version 1
 
 ### Step 1: Export relevant variables from the existing cluster
 
@@ -112,7 +112,7 @@ helm repo update
 
 ```bash
 helm upgrade --install --wait ocean-controller spot/ocean-kubernetes-controller \
---namespace spot-system --create-namespace \	 
+--namespace "spot-system" --create-namespace \	 
 --set spotinst.account="${SPOTINST_ACCOUNT}" \	 
 --set spotinst.clusterIdentifier="${SPOTINST_CLUSTER_IDENTIFIER}" \	 
 --set spotinst.token="${SPOTINST_TOKEN}" 
