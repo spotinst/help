@@ -1,8 +1,6 @@
-<meta name=“robots” content=“noindex”>
-
 # Proxy Settings
 
-This topic describes how to configure the Ocean Controller Version 2 Proxy. 
+This topic describes configuring the Ocean Controller Version 2 for **AWS K8s** Proxy. 
 
 ## Proxy Configuration 
 
@@ -24,7 +22,7 @@ helm upgrade --install --wait ocean-controller spot/ocean-kubernetes-controller 
 
 Some proxies inspect TLS traffic by terminating the client's connection at the proxy and making its own connection to the destination. In these cases, the proxy will usually generate its own certificate to present to the client, which the client must then trust. 
 
-The Ocean Controller makes connections to the Spot APIs using TLS endpoints and expects a trusted certificate. In the case of proxies that terminate the TLS connection at the Proxy, the issuing Certificate Authority (CA) of the certificate that the proxy presents to the Ocean Controller must be added to its list of trusted CAs. 
+The Ocean Controller connects to the Spot APIs using TLS endpoints and expects a trusted certificate. In the case of proxies that terminate the TLS connection at the Proxy, the issuing Certificate Authority (CA) of the certificate that the proxy presents to the Ocean Controller must be added to its list of trusted CAs. 
 
 To be able to add these "extra CAs" to the Ocean Controller, we provide a way that you can add certificates to a secret which will be added to the trust chain for the controller. 
 
@@ -47,7 +45,7 @@ You must restart the pod and add the additional CAs to the Ocean Controller's li
 
 ## Discovering Proxy Certificate Authority 
 
-If you do not have the certificates provided, you need to discover the certificate authority used by the proxy. You can find the certificate chain from a host or pod that can connect to the proxy. The host or pod needs openssl tools installed. 
+If you do not have the certificates provided, you need to discover the certificate authority used by the proxy. You can find the certificate chain from a host or pod that can connect to the proxy. The host or pod needs to be installed with OpenSSL tools. 
 
 For example, run a network diagnostics pod in the cluster using: `kubectl run --rm -ti netshoot --image=nicolaka/netshoot -- bash` 
 
@@ -56,7 +54,7 @@ For example, run a network diagnostics pod in the cluster using: `kubectl run --
 
 Once you have a shell inside the pod or on the host, you can run `openssl s_client -showcerts -connect api.spotinst.com:443 -servername api.spotinst.com -proxy proxy.example.com:8080` where you can replace the proxy with the hostname/IP address and port of your own proxy. 
 
-In the output, you will be able to see the certificate chain provided for the TLS connection. There will usually be 2-3 certificates in the chain where the last one listed is the Certificate Authority. You can copy this certificate, which is provided in PEM format and add it to the secret. 
+In the output, you will be able to see the certificate chain provided for the TLS connection. There will usually be 2-3 certificates in the chain where the last one listed is the Certificate Authority. You can copy this certificate in PEM format and add it to the secret. 
 
 Example PEM Certificate from openssl Output:
 
