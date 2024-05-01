@@ -1,8 +1,6 @@
-<meta name=“robots” content=“noindex”>
-
 # Troubleshoot the Ocean Controller Version 2
 
-If your Ocean Controller is not reporting a heartbeat to the Ocean cluster, use this troubleshooter to resolve the issue. Complete each step according to the sequence.
+If your Ocean Controller for **AWS K8s** is not reporting a heartbeat to the Ocean cluster, use this troubleshooter to resolve the issue. Complete each step according to the sequence.
 
 ## Step 1: Check the Configuration 
 
@@ -58,7 +56,7 @@ Example Response:
 ```bash
 abcdef124567890ghijk123456789abcdfghijk123456bcdefjik12346890000% 
 ```
-6.  Verify that the token exists, and that the user associated with token exists and can make Spot API calls to resources in the account where the cluster exists: [Permanent API Tokens](https://console.spotinst.com/settings/v2/tokens/permanent).
+6. Verify that the token exists and that the user associated with the token exists and can make Spot API calls to resources in the account where the cluster exists: [Permanent API Tokens](https://console.spotinst.com/settings/v2/tokens/permanent).
 
 In case your account ID or token is incorrect or invalid, the controller pod will be in a Terminating/CrashLoopBackOff state and in the container logs (Refer to Step 5) you will see an unauthorized response as shown below: 
 
@@ -78,7 +76,7 @@ kubectl get pods -n spot-system | grep ocean-controller
 
 ## Step 4: Is the Ocean Controller Running but not Responding? 
 
-If the controller pod is running, but is not responding, do the following: 
+If the controller pod is running but is not responding, do the following: 
 
 1.  The controller needs DNS resolution. Ensure the DNS pods are not in a pending state. 
 ```bash
