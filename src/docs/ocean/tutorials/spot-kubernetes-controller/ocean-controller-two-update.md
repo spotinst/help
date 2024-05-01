@@ -1,6 +1,6 @@
 # Update the Ocean Controller Version 2
 
-This topic describes how to update the **AWS K8s** Ocean Controller Version 2 in your Kubernetes cluster. 
+This topic describes how to update the Ocean Controller Version 2 for **AWS K8s** in your Kubernetes cluster. 
 
 ##  Prerequisites
 
