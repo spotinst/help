@@ -1,3 +1,4 @@
+<meta name=“robots” content=“noindex”>
 # Proxy Settings
 
 This topic describes configuring the Ocean Controller Version 2 for **AWS K8s** Proxy. 
