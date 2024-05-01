@@ -1,6 +1,6 @@
 # Ocean Controller Version 2 
 
-The **AWS K8s** Ocean Controller is a pod that resides inside your Kubernetes cluster, facilitating seamless integration with the Spot platform. By collecting metrics and events and reporting them to the Spot SaaS environment, the Controller empowers Ocean to manage, control, and optimize your infrastructure autonomously. With the Ocean Controller, you can effortlessly harness the capabilities of the Spot platform while ensuring efficient infrastructure management.
+The Ocean Controller for **AWS K8s** is a pod that resides inside your Kubernetes cluster, facilitating seamless integration with the Spot platform. By collecting metrics and events and reporting them to the Spot SaaS environment, the Controller empowers Ocean to manage, control, and optimize your infrastructure autonomously. With the Ocean Controller, you can effortlessly harness the capabilities of the Spot platform while ensuring efficient infrastructure management.
 
 Ocean Controller Version 2 comes with two replicas out-of-the-box. You can add further replicas as required. 
 
