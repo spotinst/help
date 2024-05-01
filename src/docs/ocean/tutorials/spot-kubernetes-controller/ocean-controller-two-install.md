@@ -58,15 +58,15 @@ Scale down the old controller replicas after installing the Controller Version 2
 ```bash
 kubectl scale deployment --replicas=0 -n $EXISITNG_NAMESPACE spotinst-kubernetes-cluster-controller 
 ```
-> **Note**:  The Ocean Controller Version 2 replicas begin operating a few seconds after all replicas of the Ocean Controller version 1 are fully removed. Completely removing Ocean Controller Version 1 will allow Ocean Controller Version 2 to ensure a smooth transition and optimal performance.
+> **Note**:  The Ocean Controller Version 2 replicas begin operating a few seconds after all Ocean Controller version 1 replicas are fully removed. Completely removing Ocean Controller Version 1 will allow Ocean Controller Version 2 to ensure a smooth transition and optimal performance.
  
 >**Note**: You can return to the previous state at any time by running the same command with `--replicas=1`. 
 
 ### Step 4: Install Optional Components
 
-Optionally install [Prometheus Exporter](https://docs.spot.io/ocean/tools-and-integrations/prometheus/) and / or the [Network Client](https://docs.spot.io/ocean/tutorials/install-network-client?id=install-the-ocean-network-client-in-the-cluster). 
+Optionally install [Prometheus Exporter](https://docs.spot.io/ocean/tools-and-integrations/prometheus/) and/or the [Network Client](https://docs.spot.io/ocean/tutorials/install-network-client?id=install-the-ocean-network-client-in-the-cluster). 
 
->**Note**: If Ocean Prometheus Exporter and / or the Network Client is / are already installed on the cluster, reinstall them as part of the Ocean Controller Version 2 installation. 
+>**Note**: If Ocean Prometheus Exporter and/or the Network Client is/are already installed on the cluster, reinstall them as part of the Ocean Controller Version 2 installation. 
 
 To install Prometheus Exporter: 
 
