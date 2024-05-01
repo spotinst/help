@@ -8,9 +8,9 @@ Ocean continuously analyzes the utilization of your nodes in the cloud infrastru
 
 The Ocean Cloud Cluster Overview dashboard is divided into the following panels: 
 
-*   **Ocean Savings panel**: Shows the amount of money and CPU, memory, and GPU compute resources saved when you utilize Ocean to manage your Kubernetes cluster. Specifically, these are savings from running spot instances, bin packing and reverting to lower-cost nodes. 
+*   **Ocean Savings panel**: Shows the amount of money, CPU, memory, and GPU compute resources saved when you utilize Ocean to manage your Kubernetes cluster. Specifically, these are savings from running spot instances, bin packing, and reverting to lower-cost nodes. 
 
-*   **Autoscaling Activity panel**: The Ocean Autoscaler automatically performs scale up and scale down, autohealing, and reverts nodes to lower cost nodes, spots, and commitments, based on resources or availability. This panel shows a summary of these autoscaling activities. 
+* **Autoscaling Activity panel**: The Ocean Autoscaler automatically performs scale-up and scale-down, autohealing, and reverts nodes to lower-cost nodes, spots, and commitments based on resources or availability. This panel shows a summary of these autoscaling activities. 
 
 ## Access the Ocean Cloud Cluster Overview  
 
@@ -36,7 +36,7 @@ In this panel:
 
 *   You can select a time range for displayed data from the drop-down list to the right of the savings widgets. Available options are Last 30 Days, Last 7 Days, and This Month. 
 
-*   For each of the savings widgets, you can click on a How is it calculated?  
+*   For each savings widget, you can click on a How is it calculated?  
 
 ### Ocean Savings from Running on Spot 
 
@@ -64,7 +64,7 @@ This tab displays:
 
 In the context of autoscaling, bin packing savings are calculated based on the vCPU, memory, and GPU resources of the nodes that have been [Scaled Down](https://docs.spot.io/ocean/features/scaling-kubernetes?id=scale-down) by the Ocean Autoscaler. Once a minute, Ocean simulates whether any running pods can be moved to other nodes within the cluster. If so, Ocean drains those nodes to ensure continuous infrastructure optimization and increased cloud savings.   
 
-This process ensures high resource utilization, which in turn reduces the number of nodes required and consequently, the overall cost. You can see how much you're saving through this efficient resource allocation. 
+This process ensures high resource utilization, reducing the number of nodes required and consequently, the overall cost. You can see how much you're saving through this efficient resource allocation. 
 
 To view these savings, click the **Bin Packing** tab (unless already displayed). 
 
@@ -92,9 +92,9 @@ This tab displays:
 
 ### Ocean Savings from Reverting to a Lower Cost Node 
 
-This process is applied to nodes with underutilized compute resources that cannot be scaled down from the cluster's set of nodes. For example, if a pod was initially placed on a more expensive node due to resource constraints, Ocean Autoscaler can replace it with a less expensive node when it becomes available, consequently saving costs. This tab lets you see how much you're saving from this dynamic resource allocation. 
+This process is applied to nodes with underutilized compute resources that cannot be scaled down from the cluster's set of nodes. For example, suppose a pod was initially placed on a more expensive node due to resource constraints. In that case, Ocean Autoscaler can replace it with a less expensive node when it becomes available, consequently saving costs. This tab lets you see how much you save from this dynamic resource allocation. 
 
-Ocean savings for reverting to a lower cost node are calculated from the difference in price between the old node and the new node. For more information, see [Revert to Lower Cost](https://docs.spot.io/ocean/features/revert-to-lower-cost-node?id=revert-to-lower-cost-node) Node. 
+Ocean savings for reverting to a lower-cost node are calculated from the difference in price between the old node and the new node. For more information, see [Revert to Lower Cost](https://docs.spot.io/ocean/features/revert-to-lower-cost-node?id=revert-to-lower-cost-node) Node. 
 
 To view these savings, click the **Revert to Lower Cost** tab (unless already displayed). 
 
@@ -122,11 +122,11 @@ The Autoscaling Activity panel contains the following widgets:
 
 ### Scale Up 
 
-This widget displays scaling up events, which are instances when the Ocean Autoscaler increases the resources (CPU, memory, storage) in your cluster to accommodate higher workloads. A scale up event is triggered when there are 'unschedulable' pods, i.e., pods that cannot be placed due to insufficient resources like CPU, memory, or GPU on the existing nodes. In response, Ocean Autoscaler identifies the optimal nodes to place these pods and increases the resources accordingly. This process ensures efficient resource allocation, improved performance, and shorter processing times.  
+This widget displays scaling-up events, which are instances when the Ocean Autoscaler increases the resources (CPU, memory, storage) in your cluster to accommodate higher workloads. A scale up event is triggered when there are 'unschedulable' pods, i.e., pods that cannot be placed due to insufficient resources like CPU, memory, or GPU on the existing nodes. In response, Ocean Autoscaler identifies the optimal nodes to place these pods and increases the resources accordingly. This process ensures efficient resource allocation, improved performance, and shorter processing times.  
 
-Scaling up nodes also enables allocating more resources to specific tasks, improving their performance, and reducing processing time. 
+Scaling up nodes also enables allocating more resources to specific tasks, improving performance, and reducing processing time. 
 
-The Scale Up widget shows the number of scale-up events and the number of scaled-up nodes in the selected time range. By tracking these events on the Autoscaling Activity panel, you can monitor how effectively your cluster is responding to workload demands. 
+The Scale Up widget shows the number of scale-up events and the number of scaled-up nodes in the selected time range. By tracking these events on the Autoscaling Activity panel, you can monitor how effectively your cluster responds to workload demands. 
 
 For more information, see [Scale Up](https://docs.spot.io/ocean/features/scaling-kubernetes?id=scale-up). 
 
@@ -138,19 +138,19 @@ Ocean Autoscaler performs several automatic processes to optimize cluster resour
 
 Scaling down nodes refers to reducing the resources (such as CPU, memory, GPU) of individual nodes in a cluster. 
 
-Ocean Autoscaler scales down nodes when the cluster is over-provisioned and not utilizing the full capacity of the nodes. In this case, scaling down right-sizes the resources to match the actual workload. In addition, if specific nodes in a cluster are consistently underutilized, Ocean Autoscaler scales down to redistribute the resources to other nodes or consolidate the workload onto fewer nodes. 
+Ocean Autoscaler scales down nodes when the cluster is over-provisioned and does not utilize the full capacity of the nodes. In this case, scaling down right-sizes the resources to match the workload. In addition, if specific nodes in a cluster are consistently underutilized, Ocean Autoscaler scales down to redistribute the resources to other nodes or consolidate the workload onto fewer nodes. 
 
 For more information, see [Scale Down](https://docs.spot.io/ocean/features/scaling-kubernetes?id=scale-down). 
 
-The Scale Down widget shows the number of scale-down events and the number of scaled-down nodes in the selected time range. By monitoring these events on the Autoscaling Activity panel, you can track how your cluster is optimizing resources and reducing costs. 
+The Scale Down widget shows the number of scale-down events and the number of scaled-down nodes in the selected time range. By monitoring these events on the Autoscaling Activity panel, you can track how your cluster optimizes resources and reduces costs. 
 
 **Revert to Spots** 
 
-If a node was launched as OD due to the unavailability of spot nodes in the market, Ocean continuously scans the market for an available spot node and reverts promptly upon finding one. 
+Suppose a node was launched as OD due to the unavailability of spot nodes in the market. In that case, Ocean continuously scans the market for an available spot node and reverts promptly upon finding one. 
 
 The Revert to Spots widget shows the number of events for which an OD node was reverted to a spot node in the selected time range. 
 
-By monitoring these events on the Autoscaling Activity panel, you can see when and how often your cluster is taking advantage of cost-saving opportunities by utilizing Spot nodes. 
+By monitoring these events on the Autoscaling Activity panel, you can see when and how often your cluster takes advantage of cost-saving opportunities by utilizing Spot nodes. 
 
 **Revert to Commitments** 
 
@@ -174,7 +174,7 @@ By tracking these events on the Autoscaling Activity panel, you can see when and
 
 Auto Healing monitors the status of each Kubernetes node by examining the condition object, which provides information about various aspects of the node. Specifically, Autohealing focuses on the Ready condition. If the Ready condition indicates a status of False or Unknown, the instance is deemed unhealthy, prompting the initiation of a replacement process. 
 
-The Autohealing widget shows the number of events for which AWS autohealing replaced an unhealthy instance with a healthy instance. By monitoring these autohealing events on the Autoscaling Activity panel, you can track how effectively Ocean Autoscaler is maintaining your cluster's health and resilience to failures. 
+The Autohealing widget shows the number of events for which AWS autohealing replaced an unhealthy instance with a healthy instance. By monitoring these autohealing events on the Autoscaling Activity panel, you can track how effectively Ocean Autoscaler maintains your cluster's health and resilience to failures. 
 
 For more information about autohealing, see [Autohealing](https://docs.aws.amazon.com/opsworks/latest/userguide/workinginstances-autohealing.html).  
 
