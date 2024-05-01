@@ -1,18 +1,16 @@
-<meta name=“robots” content=“noindex”>
-
 # Ocean Controller Version 2 Permissions
 
-This topic describes the permissions required by the Ocean Controller. All permissions listed here can be viewed and edited in the Ocean Controller's YAML file used in the installation process.
+This topic describes the permissions required by the Ocean Controller Version 2 for **AWS K8s**. All permissions listed here can be viewed and edited in the Ocean Controller's YAML file used in the installation process.
 
 The permissions are divided into the following sections:  
 
 | Section                  | Description                                                                                                                                     |
 |--------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
 | Read-Only                | Permissions for fetching data. Required for functional operation of Ocean and Elastigroup integrations                                          |
-| Node/Pod Manipulation    | Permissions to update nodes and evict pods. This section is required for draining purposes, updating nodes as unschedulable, and evicting pods  |
+| Node/Pod Manipulation    | Permission to update nodes and evict pods. This section is required for draining purposes, updating nodes as unschedulable, and evicting pods  |
 | CleanUp Feature          | Required for Ocean AKS-Engine integration.                                                                                                      |
 | CSR Approval             | Required for the CSR approval feature.                                                                                                          |
-| Full CRUD for Resources  | Currently the resources include pods, deployments, jobs and daemonsets. This is required for the Run Workloads and Auto-Update features.        |
+| Full CRUD for Resources | The resources include pods, deployments, jobs, and daemonsets. This is required for the Run Workloads and Auto-Update features.        |
 | Spark Operator           | Required by the Spot Big Data feature.                                                                                                          |
 | Automatic Rightsizing    | This section is required for the automatic rightsizing functionality; this is an opt-out feature                                                |
 | Leader-Election          | This section is required by the leader-election mechanism, which is required in high-availability mode                                          |
