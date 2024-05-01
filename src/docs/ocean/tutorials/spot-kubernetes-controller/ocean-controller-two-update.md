@@ -1,8 +1,6 @@
-<meta name=“robots” content=“noindex”>
-
 # Update the Ocean Controller Version 2
 
-This topic describes how to update the Ocean Controller Version 2 in your Kubernetes cluster. 
+This topic describes how to update the **AWS K8s** Ocean Controller Version 2 in your Kubernetes cluster. 
 
 ##  Prerequisites
 
@@ -33,14 +31,14 @@ helm upgrade --install --wait ocean-controller spot/ocean-kubernetes-controller\
 --set spotinst.token="${SPOTINST_TOKEN}
 ```
 
-If the Ocean Controller is already installed, this action will start a rollout of the Ocean Controller deployment, which will launch the new controller pods and terminate the old ones. When the Ocean Controller boots up, it will print the version in the log. 
+If the Ocean Controller is already installed, this action will start a rollout of the Ocean Controller deployment, which will launch the new controller pods and terminate the old ones. When the Ocean Controller boots up, the log will print the version. 
 
 
 ## Ocean Controller Auto-Update 
 
-The Ocean Controller supports auto-update. When an updated version of the controller is available, it will automatically be updated. By default, auto-update is enabled (for installation using Terraform, the auto-update is disabled by default. To enable it, use `disable_auto_update=false`. [Learn more](https://registry.terraform.io/modules/spotinst/kubernetes-controller/ocean/latest#input_disable_auto_update)). 
+The Ocean Controller supports auto-update. When an updated controller version is available, it will automatically be updated. By default, auto-update is enabled (for installation using Terraform, the auto-update is disabled by default. To enable it, use `disable_auto_update=false`. [Learn more](https://registry.terraform.io/modules/spotinst/kubernetes-controller/ocean/latest#input_disable_auto_update)). 
 
-As a best-practice, we recommend leaving Auto-Update enabled because the update procedure is silent and requires no downtime. In addition, every Ocean Controller version update improves stability and performance, collects new metrics, and supports new K8s versions.
+As a best practice, we recommend leaving Auto-Update enabled because the update procedure is silent and requires no downtime. In addition, every Ocean Controller version update improves stability and performance, collects new metrics, and supports new K8s versions.
 
 The process of pushing a new Ocean Controller version requires a change in your environment and is monitored by the Spot team. Upon failure, the process will automatically roll back the changes. The upgrade is pushed gradually over several days.
 
@@ -51,7 +49,7 @@ If any of the conditions below apply at the time of the latest version push, the
 
 ## Disable Auto-Update 
 
-If you need to disable the auto-update, use the following flag when running the Helm install / upgrade command. 
+If you need to disable auto-update, use the following flag when running the Helm install/upgrade command. 
 
 ```bash
 --set spotinst.disableAutoUpdate=true
