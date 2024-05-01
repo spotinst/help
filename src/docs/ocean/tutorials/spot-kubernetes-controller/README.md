@@ -1,6 +1,4 @@
-# Ocean Controller Version 1
-
->**IMPORTANT:** Please note that **Ocean Controller Version 1** will reach End-Of-Life on **November 1, 2024**. To take advantage of the benefits offered by **Ocean Controller Version 2**, and receive uninterrupted service and support, please make sure to upgrade to Version 2 at your earliest convenience.
+# Ocean Controller
 
 The Ocean Controller is a pod that resides within your Kubernetes cluster, enabling the integration with the Spot platform. The Controller collects metrics and events that are pushed via a secured link to the Spot SaaS platform to support capacity scaling activities and other functions of the Spot Kubernetes integration. The Ocean Controller is able to run on ARM64 as well as x86 based architectures.
 
