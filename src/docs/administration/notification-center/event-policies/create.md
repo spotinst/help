@@ -40,7 +40,7 @@ Only accounts that are connected to a cloud provider can create a notification p
 
 ## Step 2: Select Resources
 
-Choose one of the options determining which resources will be monitored. The options are described below.
+Choose one of the options to determine which resources will be monitored. The options are described below.
 
 <img src="/administration/_media/create-new-notification-policy-02z.png" width="700" />
 
@@ -83,7 +83,7 @@ Any new resources added to the account that match the defined criteria will auto
 
 When you choose Manual Resources, you then select from a list of existing resources. Only those resources will be monitored for notifications. Any new resources added to the account in the future will not be included unless you edit the policy and add them to the monitoring list.
 
-<img src="/administration/_media/create-new-notification-policy-03a.png" width="472" height="211" />
+<img src="/administration/_media/create-new-notification-policy-03.png" width="472" height="211" />
 
 You can filter the list and search for a resource by entering a type, a name, an ID in the filter box, or you can just type in string and search.
 
