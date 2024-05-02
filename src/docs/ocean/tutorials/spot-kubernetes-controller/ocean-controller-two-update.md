@@ -1,4 +1,5 @@
 <meta name=“robots” content=“noindex”>
+
 # Update the Ocean Controller Version 2
 
 This topic describes how to update the Ocean Controller Version 2 for **AWS K8s** in your Kubernetes cluster. 
