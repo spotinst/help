@@ -42,7 +42,8 @@ Only accounts that are connected to a cloud provider can create a notification p
 
 Choose one of the options to determine which resources will be monitored. The options are described below.
 
-<img src="/administration/_media/create-new-notification-policy-02z.png" width="700" />
+![resources-one-three-types-showing](https://github.com/spotinst/help/assets/159915991/2120b058-fca4-4f75-8c03-622d8a4e85ef)
+
 
 ### All Resources
 
@@ -81,9 +82,9 @@ Any new resources added to the account that match the defined criteria will auto
 
 ### Individual Resources
 
-When you choose Manual Resources, you then select from a list of existing resources. Only those resources will be monitored for notifications. Any new resources added to the account in the future will not be included unless you edit the policy and add them to the monitoring list.
+When you choose Individual Resources, you then select from a list of existing resources. Only those resources will be monitored for notifications. Any new resources added to the account in the future will not be included unless you edit the policy and add them to the monitoring list.
 
-<img src="/administration/_media/create-new-notification-policy-03.png" width="472" height="211" />
+![individual-resources](https://github.com/spotinst/help/assets/159915991/7f72bda8-8214-429c-b801-4df73c554242)
 
 You can filter the list and search for a resource by entering a type, a name, an ID in the filter box, or you can just type in string and search.
 
