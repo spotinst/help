@@ -42,8 +42,7 @@ Only accounts that are connected to a cloud provider can create a notification p
 
 Choose one of the options to determine which resources will be monitored. The options are described below.
 
-![resources-one-three-types-showing](https://github.com/spotinst/help/assets/159915991/2120b058-fca4-4f75-8c03-622d8a4e85ef)
-
+![select-resources](https://github.com/spotinst/help/assets/159915991/3ee55b04-b23f-4cb1-99c7-823e78c7518c)
 
 ### All Resources
 
