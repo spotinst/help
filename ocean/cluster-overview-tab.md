@@ -134,7 +134,7 @@ For more information, see [Scale Up](https://docs.spot.io/ocean/features/scaling
 
 Ocean Autoscaler performs several automatic processes to optimize cluster resources.  
 
-**Scale Down**
+#### Scale Down
 
 Scaling down nodes refers to reducing the resources (such as CPU, memory, GPU) of individual nodes in a cluster. 
 
@@ -144,7 +144,7 @@ For more information, see [Scale Down](https://docs.spot.io/ocean/features/scali
 
 The Scale Down widget shows the number of scale-down events and the number of scaled-down nodes in the selected time range. By monitoring these events on the Autoscaling Activity panel, you can track how your cluster optimizes resources and reduces costs. 
 
-**Revert to Spots** 
+#### Revert to Spots
 
 Suppose a node was launched as OD due to the unavailability of spot nodes in the market. In that case, Ocean continuously scans the market for an available spot node and reverts promptly upon finding one. 
 
@@ -152,7 +152,7 @@ The Revert to Spots widget shows the number of events for which an OD node was r
 
 By monitoring these events on the Autoscaling Activity panel, you can see when and how often your cluster takes advantage of cost-saving opportunities by utilizing Spot nodes. 
 
-**Revert to Commitments** 
+#### Revert to Commitments
 
 If a node was launched as spot due to the absence of available commitments (Reserved Instances or Savings Plans) to utilize, Ocean persistently scans the market for an available commitment and promptly reverts upon finding one. 
 
@@ -162,7 +162,7 @@ By monitoring these events on the Autoscaling Activity panel, you can understand
 
 For more information, see [Reserved Instances](https://docs.spot.io/ocean/tips-and-best-practices/?id=utilize-reserved-instances-for-aws-users). 
 
-**Revert to Lower Cost** 
+#### Revert to Lower Cost
 
 Ocean Autoscaler searches for nodes with underutilized compute resources that cannot be scaled down from the cluster's set of nodes and reverts these nodes to lower cost nodes. 
 
@@ -170,13 +170,11 @@ The Revert to Lower Cost widget shows the number of events for which a node was 
 
 By tracking these events on the Autoscaling Activity panel, you can see when and how often your cluster is optimizing for cost savings. 
 
-**Autohealing** 
+#### Autohealing
 
 Auto Healing monitors the status of each Kubernetes node by examining the condition object, which provides information about various aspects of the node. Specifically, Autohealing focuses on the Ready condition. If the Ready condition indicates a status of False or Unknown, the instance is deemed unhealthy, prompting the initiation of a replacement process. 
 
 The Autohealing widget shows the number of events for which AWS autohealing replaced an unhealthy instance with a healthy instance. By monitoring these autohealing events on the Autoscaling Activity panel, you can track how effectively Ocean Autoscaler maintains your cluster's health and resilience to failures. 
-
-For more information about autohealing, see [Autohealing](https://docs.aws.amazon.com/opsworks/latest/userguide/workinginstances-autohealing.html).  
 
 ##  Related Topics 
 
