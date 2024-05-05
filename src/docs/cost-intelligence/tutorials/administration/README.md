@@ -6,9 +6,7 @@ You can [manage users and accounts](https://docs.spot.io/administration/) in Spo
 
 ## Users 
 
-Create users in the Spot console for Billing Engine and Cost Intelligence. 
-
-Users need to [be created] in the Spot console for Billing Engine and Cost Intelligence. 
+Users need to [be created](https://docs.spot.io/administration/users-a/) in the Spot console for Billing Engine and Cost Intelligence. 
 
 ## Accounts 
 
