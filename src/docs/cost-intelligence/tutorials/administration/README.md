@@ -1,100 +1,34 @@
 # Administration 
 
-## API Administration 
+User and account access are managed in Billing Engine and Cost Intelligence Administration pages. On these pages, you can see the users and cloud accounts configured for Spot accounts. 
 
-The Spot by NetApp API reference is available as an OpenAPI Specification. 
+You can [manage users and accounts](https://docs.spot.io/administration/) in Spot.  
 
-OpenAPI Specification is an industry standard that allows APIs to be defined for humans as well as machines. This allows any person or application to easily consume and build with Spot in a structured format that includes detailed descriptions and examples of every endpoint. The specification is hosted on GitHub, and full documentation is available on the Spot by NetApp API Reference site.  
+## Users 
 
-## API Workflows 
+Create users in the Spot console for Billing Engine and Cost Intelligence. 
 
-After you have your Spot Org ID, follow the instructions below to create and credential a new Spot account to register it for Cost Intelligence. 
+Users need to [be created] in the Spot console for Billing Engine and Cost Intelligence. 
 
-## Step 1: Create Account 
+## Accounts 
 
-Create a new Spot Account. Use the following endpoint to create a Spot account in your organization. 
+Billing Engine and Cost Intelligence tables list the Spot accounts configured for each product. 
 
-https://docs.spot.io/api/#tag/Accounts/operation/OrganizationsAndAccountsCreateAccount 
+### Onboarded Accounts 
 
-## Step 2: Set Credentials 
+Each product has a tab where you can view and manage the cloud accounts onboarded for each of the products. 
 
-Using the correct endpoint, based on the provider, credential the Spot account and add the required IAM policy to the account. The policy is required for Spot to collect the necessary data.    
+All Billing Engine onboarded accounts are automatically onboarded into Cost Intelligence. You can see them in the Cost Intelligence Dashboards. 
 
-### Set Credentials for AWS 
+For cloud accounts without inventory data, such as an Azure EA, the inventory and best practice check features are not available. 
 
-https://docs.spot.io/api/#tag/Accounts/operation/OrganizationsAndAccountsSetCloudCredentialsForAWS 
+![administration-1](https://github.com/spotinst/help/assets/106514736/de1af851-f499-46bd-97c5-d23d7a0ff7e6)
 
-### Set Credentials for Azure 
+![administration-2](https://github.com/spotinst/help/assets/106514736/aed030b3-25ab-46d0-9958-971ef45c4569)
 
-https://docs.spot.io/api/#tag/Accounts/operation/OrganizationsAndAccountsSetCloudCredentialsForAzure 
+### Adding Cloud Accounts 
 
-### Set Credentials for GCP 
+Add existing Spot accounts and configure new cloud accounts for Billing Engine and Cost Intelligence from the Administration page. 
 
-https://docs.spot.io/api/#tag/Accounts/operation/OrganizationsAndAccountsSetCloudCredentialsForGCP 
-
-## Step 3: Get Policy Definitions 
-
-To view the most recent policy definitions for each provider, please visit the relevant documentation links below that go into the permissions more thoroughly. 
-
-- [AWS Cost Intelligence Policy](https://docs.spot.io/cost-intelligence/tutorials/cost-intelligence-policy/?id=cost-intelligence-aws-policy) 
-- [Azure Cost Intelligence Policy](https://docs.spot.io/cost-intelligence/tutorials/cost-intelligence-policy/?id=cost-intelligence-azure-policy) 
-
-## Step 4: Register Account with Cost Intelligence 
-
-After having successfully linked your provider account to your Spot account. You will need to 'register’ your spot account with Cost Intelligence. Use the API information below to register both AWS and Azure accounts. 
-
-Route: `POST /cbi/v1/setup/account` 
-
-Header Parameters: 
-
-- Spotinst-Organization-ID (required) 
-- Type: string 
-- Description: Spot organization ID 
-
-Body 
-
-- Sample Body: 
-
-```json
-{  
-  "account": { 
-    "accountId": "act-bf0377af" 
-  } 
-} 
-```
-
-- Body (Required) 
-
-Type: `json` 
-
-Response 
-
-Sample Response 
-
-```json
-"request": { 
-        "id": "4495716a-a687-46ad-91fd-f82f36c82e8b", 
-        "url": "/cbi/v1/setup/account", 
-        "method": "POST", 
-        "timestamp": "2023-10-18T13:38:55.827Z" 
-    }, 
-    "response": { 
-        "status": { 
-            "code": 200, 
-            "message": "Success" 
-        }, 
-        "kind": "spotinst:cbi:inventory:enrolledAccount", 
-        "items": [ 
-            { 
-                "organizationId": "1212121212121212", 
-                "accountId": "act-bf0377af", 
-                "cloudProvider": "aws", 
-                "externalProviderId": "11111111111", 
-                "enabledDate": "2023-10-05T15:39:16.000Z", 
-                "updatedDate": "2023-10-05T15:39:16.000Z" 
-            } 
-        ], 
-        "count": 1 
-}
-```
+Click **+ Cloud Account** to open the [onboarding wizard](https://docs.spot.io/cost-intelligence/get-started/connect-aws?id=connect-existing-spot-account). 
 
