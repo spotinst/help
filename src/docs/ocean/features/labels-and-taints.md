@@ -16,7 +16,7 @@ Spot labels allow you to adjust the default scaling behavior in Ocean; by adding
 
 If you use a disk of type **premium storage**, you must insert the `spotinst.io/azure-premium-storage` label into your resources (pods). 
 
-This enables Spot to inject the label on the VM that matches the pod with identical requirements so that the pod can be launched.
+This enables Spot to inject the label on the node that matches the exact requirements of the pod so that the pod can be launched.
 
 The `spotinst.io/azure-premium-storage`label helps identify the pod with premium storage so that Spot can launch it and match it with the dedicated node.
 
