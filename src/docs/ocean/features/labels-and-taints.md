@@ -10,15 +10,17 @@ To make scheduling more efficient and compatible with Kubernetes, Ocean supports
 
 ## Spot Labels
 
-Spot labels allow you to adjust the default behavior of scaling in Ocean, by adding Spot labels to your pods you can control the node termination process or its life cycle. The Spot labels are described below.
+Spot labels allow you to adjust the default scaling behavior in Ocean; by adding Spot labels to your pods, you can control the node termination process or its life cycle. The Spot labels are described below.
 
 ### spotinst.io/azure-premium-storage  
 
-If you use a disk of type premium storage, you must define a VNG with the `spotinst.io/azure-premium-storage` label so that a VM that matches a pod with the same requirements can be launched. 
+If you use a disk of type **premium storage**, you must insert the `spotinst.io/azure-premium-storage` label into your resources (pods). 
 
-The label helps identify the pod with premium storage, so that Spot can launch the pod and match it with the dedicated node. 
+This enables Spot to inject the label on the VM that matches the pod with identical requirements so that the pod can be launched.
 
-You must insert this label into your resources (pods). For more information, see [Azure premium storage](https://learn.microsoft.com/en-us/azure/virtual-machines/premium-storage-performance). 
+The `spotinst.io/azure-premium-storage`label helps identify the pod with premium storage so that Spot can launch it and match it with the dedicated node.
+
+For more information, see [Azure premium storage](https://learn.microsoft.com/en-us/azure/virtual-machines/premium-storage-performance). 
 
 
 ### spotinst.io/restrict-scale-down
