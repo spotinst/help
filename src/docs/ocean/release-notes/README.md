@@ -20,7 +20,7 @@
 
 
 * **OCN-002: May 1, 2024:**
-Spot has introduced a new Ocean label, `spotinst.io/azure-premium-storage,` injected on every node in a node pool that supports premium storage. Once you define this label on a workload that requires premium storage, it enables the pods to be provisioned on the most appropriate nodes for the workload. [Learn More...](https://docs.spot.io/ocean/features/labels-and-taints) (edited) 
+Spot has introduced a new Ocean label, `spotinst.io/azure-premium-storage,` which is injected on every node in a node pool that supports premium storage. Once you define this label on a workload that requires premium storage, the pods can be provisioned on the most appropriate nodes for the workload. [Learn More...](https://docs.spot.io/ocean/features/labels-and-taints) (edited) 
 
 
 
