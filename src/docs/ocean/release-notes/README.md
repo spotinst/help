@@ -14,7 +14,7 @@
   *  Not only does Ocean Controller Version 2 offer unparalleled functionality, but it also boasts a minimal footprint within your cluster. This means external network traffic is low when no changes occur, presenting exciting cost-saving opportunities. 
 
 >**IMPORTANT:** Please note that **Ocean Controller Version 1** will reach End-Of-Life on **November 1, 2024**. To take advantage of the benefits offered by **Ocean Controller Version 2** and receive uninterrupted service and support, please upgrade to Version 2 at your earliest convenience.
-[Learn more...](https://docs.spot.io/ocean/tutorials/ocean-controller-v2/readme)
+[Learn more...](https://docs.spot.io/ocean/tutorials/ocean-controller-v2/)
 
 
 * **OCN-002: May 1, 2024:**
