@@ -1,5 +1,3 @@
-<meta name=“robots” content=“noindex”>
-
 # Troubleshoot the Ocean Controller Version 2
 
 If your Ocean Controller for **AWS K8s** is not reporting a heartbeat to the Ocean cluster, use this troubleshooter to resolve the issue. Complete each step according to the sequence.
