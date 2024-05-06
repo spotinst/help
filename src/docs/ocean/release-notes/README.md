@@ -1,5 +1,3 @@
-<meta name=“robots” content=“noindex”>
-
 # Ocean Release Notes
 
 ## Features and Enhancements
