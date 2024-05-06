@@ -4,7 +4,8 @@ The Ocean Controller for **AWS K8s** is a pod that resides inside your Kubernete
 
 Ocean Controller Version 2 comes with two replicas out-of-the-box. You can add further replicas as required. 
 
-![Ocean-controller-multiples](https://github.com/spotinst/help/assets/159915991/42ff4102-589b-40bd-8293-723114ca8718)
+![Ocean-controller-multiples](https://github.com/spotinst/help/assets/159915991/90e2a5ab-f724-4297-914a-186ef4e1b803)
+
 
 The Ocean Controller offers the following functionality and benefits: 
 
