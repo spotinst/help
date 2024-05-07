@@ -5,6 +5,7 @@
   - [Getting Started](cost-intelligence/get-started/)
     - [Connect to AWS](cost-intelligence/get-started/connect-aws)
     - [Connect to Azure](cost-intelligence/get-started/connect-azure)
+    - [Connect with Azure CLI](cost-intelligence/get-started/connect-with-azure-cli)
   - [Tutorials](cost-intelligence/tutorials/)
     - [Cost Intelligence Policy](cost-intelligence/tutorials/cost-intelligence-policy/)
     - [Dashboards](cost-intelligence/tutorials/dashboard/)
