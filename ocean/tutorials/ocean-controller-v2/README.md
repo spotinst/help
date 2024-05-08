@@ -21,9 +21,9 @@ The Ocean Controller offers the following functionality and benefits:
 
 By installing Ocean Controller Version 2, you can effortlessly integrate Ocean with your Kubernetes cluster, leverage event-driven efficiency, ensure high availability, and optimize your infrastructure management. 
 
-Ocean Controller supports Linux OS only. 
+The Ocean Controller pod can run on a Linux OS node only. 
 
->**Note**: Windows OS is not supported.
+>**Note**: The Ocean Controller pod cannot run on a Windows OS node.
 
 ## Related Topics
 
