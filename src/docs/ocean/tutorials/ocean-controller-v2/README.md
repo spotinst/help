@@ -23,7 +23,7 @@ By installing Ocean Controller Version 2, you can effortlessly integrate Ocean w
 
 Ocean Controller supports Linux OS only. 
 
->**Note**: Windows OS is not supported.
+>**Note**: The Ocean Controller pod cannot run on a Windows OS node.
 
 ## Related Topics
 
