@@ -53,13 +53,13 @@ Before initiating the import process, make sure that Ocean has the necessary per
 
 View this sample of [AKS permissions](https://docs.spot.io/administration/api/spot-policy-aks-azure).
 
->**Important:** If you can't complete Step 1.1 due to **Missing Permissions**, refer to the following table: 
+>**Important:** If you can't complete Step 1.1 due to **Missing Permissions**, refer to the following:
 
-|Issue                                 |What to do                                                                                                                                                                                                                                                                                                                                                                                    |
-|:---------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| When selecting Resource Group         | First, check that your Spot account is correctly set up. We recommend deleting the account and setting it up again with the correct Subscription ID and Tenant ID. If the issue persists: click Add Permissions to run the Missing Permissions wizard (described below). Select the Resource Group permission level (Spot IAM role) in the Missing Permissions dialog box.                    |
-| When selecting Cluster Name           | If no AKS clusters are in the drop-down list, the permissions may be incorrect, or the IAM role may be assigned to the wrong resource group (no AKS clusters are available for the required resource group). Click Add Permissions to run the Missing Permissions wizard (described below). Select the Resource Group permission level (Spot IAM role) in the Missing Permissions dialog box. |
-| When running Test Cluster Permissions | Your Spot account may not have permissions for the Ocean AKS product or may have read-only permissions at either the subscription level or the resource group level. Click Add Permissions to run the Missing Permissions wizard for subscription and resource group levels (described below).                                                                                                |
+*   **Issue when selecting the Resource Group:** First, check that your Spot account is correctly set up. We recommend deleting the account and setting it up again with the correct Subscription ID and Tenant ID. If the issue persists: click **Add Permissions** to run the Missing Permissions wizard (described below). Select the **Resource Group permission level** (Spot IAM role) in the Missing Permissions dialog box.
+
+*   **Issue when selecting Cluster Name:** If no AKS clusters are in the drop-down list, the permissions may be incorrect, or the IAM role may be assigned to the wrong resource group (no AKS clusters are available for the required resource group). Click **Add Permissions** to run the Missing Permissions wizard (described below). Select the **Resource Group permission level** (Spot IAM role) in the Missing Permissions dialog box.
+
+*   **Issue when running Test Cluster Permissions:** Your Spot account may not have permissions for the Ocean AKS product or may have read-only permissions at either the subscription level or the resource group level. Click **Add Permissions** to run the Missing Permissions wizard for subscription and resource group levels (see below).
 
 To run the Missing Permissions wizard: 
 
@@ -94,7 +94,7 @@ Additional Tips:
 * Some VNG Template properties may not be edited once the cluster is created. Changing the node pool properties (OS type, OS disk type or OS disk size, Kubernetes version) after the cluster is created, creates VNGS that are not supported, and the configuration will be disregarded.  
 * The wizard selects the default system node pool if no node pool is selected for the VNG Template. 
 * Ocean VNG can have one or more node pools with different VM series, VM sizes, and lifecycle. All node pools inherit properties and attributes (labels, taints, tags, annotations) from the VNG. VNGs provide infrastructure guardrails and customization for workloads.  
-* At least one VNG needs to be defined in the Ocean AKS cluster. A VNG inherits properties and attributes from the VNG Template.  
+* At least one VNG must be defined in the Ocean AKS cluster. A VNG inherits properties and attributes from the VNG Template.  
 
 ### Step 1.3: Connectivity  
 
