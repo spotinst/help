@@ -47,6 +47,7 @@ You can create new VNGs or reconfigure existing ones at any time after the clust
 
 The specification configured in the Ocean cluster object is referred to as the Default VNG. This definition is used for the following reasons:
 
+- Ocean uses this specification as the last option out of all the possible Virtual Node Groups to serve the workload.
 - For ECS clusters, the default VNG takes priority. If you need to change this behavior, contact the [Spot Support team](https://spot.io/support/).
 - At runtime, Ocean uses this default VNG as a template for the other VNGs defined, as it effectively uses parameters that are not explicitly set by the user in a VNG object.
 
