@@ -1,5 +1,3 @@
-<meta name=“robots” content=“noindex”>
-
 # Ocean AWS K8s Cloud Cluster Overview Dashboard 
 
 The Cloud Cluster Overview dashboard provides enhanced functionality to analyze the Ocean Autoscaler actions with high granularity and gain deeper insights into its behavior. This topic delves into the various components and sections of this dashboard, offering a detailed exploration of its capabilities. 
