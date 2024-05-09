@@ -2,14 +2,14 @@
 
 #  Configure a Minor K8s Version for a Virtual Node Group 
 
-This topic describes what to do with your Virtual Node Groups when you upgrade the Kubernetes version for your clusters.  
+This topic describes what to do with your Virtual Node Groups when you upgrade the Kubernetes K8s version for your clusters.  
 
-The method is to (auto) upgrade the control plane to the latest K8s version but continue to have data plane Virtual Node Groups for workloads running on a minor K8s version until they are fully validated for the latest K8s version. 
+The method is to (auto) upgrade the control plane to the latest K8s version, but continue to have data plane Virtual Node Groups for workloads running on a minor K8s version until they are fully validated for the latest K8s version. 
 
 >**Note:** Minor version releases include new features and improvements. Minor versions change when functionality updates that are backward compatible with the other minor versions are made. 
 
 For Large clusters, you can roll out upgrades to the latest K8s version in phases over two to three weeks. First, upgrade the control plane and the Virtual Node Groups as the workload is validated for the latest K8s version. 
-When using K8s minor versions, you must consider the AKS node pool upgrade rules: When the K8s control plane is upgraded to Version N, the user node pools must be within two minor versions (N-2) of the control plane version. 
+When using K8s minor versions, you must consider the AKS node pool upgrade rules: When the K8s control plane is upgraded to Version **N**, the user node pools must be within two minor versions (**N-2**) of the control plane version. 
 
 ## Example: 
 If the control plane is upgraded to K8s v1.28, the Virtual Node Group's K8s version can be 1.28, 1.27, or 1.26, provided AKS supports them. 
