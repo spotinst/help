@@ -39,6 +39,7 @@
     - [EKS AMI Auto-Update](ocean/features/eks-auto-ami)    
   - [Tutorials](ocean/tutorials/)
     - [Ocean Dashboard](ocean/tutorials/ocean-dashboard)
+    - [Cluster Overview](ocean/cluster-overview-tab)
     - [Analyze Your Costs](ocean/tutorials/analyze-your-costs)
     - [Create a Cost Analysis Filter](ocean/tutorials/create-a-cost-filter)
     - [Migrate the Workload to Ocean](ocean/tutorials/migrate-workload)
