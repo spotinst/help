@@ -26,4 +26,7 @@ To specify a minor K8s version for the Virtual Node Group and the node pools it 
 
 3.  Click the **VNG** tab. 
 
-4.  In the Node Pools Properties panel, click the K8s Version drop-down menu and select the K8s minor version. 
+4.  In the Node Pools Properties panel, click the K8s Version drop-down menu and select the K8s minor version.
+
+![vng-tab-k8s-version](https://github.com/spotinst/help/assets/159915991/17d2c79f-9119-4a5b-9004-2b0cdc7ee47d)
+
