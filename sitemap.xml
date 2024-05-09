@@ -3375,6 +3375,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean/tips-and-best-practices/upgrade-aks-cluster"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/ocean/tips-and-best-practices/vng-minor-versions</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean/tips-and-best-practices/vng-minor-versions"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean/tips-and-best-practices/vng-minor-versions"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/ocean/tools-and-integrations/eksctl/create-a-new-cluster-with-eksctl</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
