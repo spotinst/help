@@ -65,9 +65,9 @@ To use the Spot onboarding StackSets, you’ll need to:
 ![stacksets-2](https://github.com/spotinst/help/assets/106514736/ce471c00-488c-4b49-a728-c4c1c1c71cc2)
  
 6. The Set deployment options section defines how stacks of the StackSets are deployed. 
-         i. In Deployment targets, click **Deploy to organization units (OUs)** and enter the AWS OU ID where you want the stacks created.
-         ii. In Auto-deployment options, click **Automatic deployment: enabled** to auto-deploy AWS accounts under the management account. 
-         iii. In Specify regions, select a single region to create a Spot account for every new AWS account. It doesn’t matter which region you select—the policy will grant access to all regions in your AWS account. 
+   i. In Deployment targets, click **Deploy to organization units (OUs)** and enter the AWS OU ID where you want the stacks created.
+   ii. In Auto-deployment options, click **Automatic deployment: enabled** to auto-deploy AWS accounts under the management account. 
+   iii. In Specify regions, select a single region to create a Spot account for every new AWS account. It doesn’t matter which region you select—the policy will grant access to all regions in your AWS account. 
 
 8. Click **Submit**. 
 
