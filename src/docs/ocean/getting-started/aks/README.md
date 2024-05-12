@@ -2,7 +2,7 @@
 
 Ocean is a managed infrastructure service for Kubernetes that automatically adjusts infrastructure capacity and size to meet the needs of pods, containers, and applications. 
 
-This procedure describes how to use the Spot Console to connect an existing AKS cluster to Ocean. 
+This procedure describes using the Spot Console to connect an existing AKS cluster to Ocean. 
 
 ## Prerequisites 
 
@@ -13,7 +13,7 @@ This procedure describes how to use the Spot Console to connect an existing 
 * [Update Helm or install via Terraform or Kubectl (Kubernetes command-line tool)](ocean/getting-started/aks/aks-prerequisites?id=install-helm-terraform-or-kubectl-kubernetes-command-line-tool).
 
 
-##  What to do About Private Clusters
+## What to do About AKS Private Clusters
 
 Ocean supports the management and optimization of AKS private clusters. 
 Ocean supports any AKS private cluster configuration, provided the Ocean Controller can establish outbound communication with the Spot SaaS control plane.  
@@ -31,10 +31,9 @@ To enable the outbound connection, you must configure the internal routing, fire
 Refer to the following documentation to manage Microsoft Azure Native configurations: 
 
 * [Create, change, or delete a route table](https://learn.microsoft.com/en-us/azure/virtual-network/manage-route-table) 
-
 * [Customize cluster egress with a user-defined routing table in Azure Kubernetes Service (AKS)](https://learn.microsoft.com/en-us/azure/aks/egress-udr)
+* [Limit network traffic with Azure Firewall in Azure Kubernetes Service (AKS)](https://learn.microsoft.com/en-us/azure/aks/limit-egress-traffic?tabs=aks-with-system-assigned-identities)
 
-* [Limit network traffic with Azure Firewall in Azure Kubernetes Service (AKS)](https://learn.microsoft.com/en-us/azure/aks/limit-egress-traffic?tabs=aks-with-system-assigned-identities) 
 
 ## Import Cluster  
 
@@ -136,7 +135,7 @@ Additional Tips:
 
 * If the controller connectivity failed, check the token created and verify you have the right permissions. Azure custom role with required [Ocean AKS permissions [JSON]](https://github.com/yaruslavm/spot-Ocean/blob/main/Spot%20Azure%20Infra%20Permissions%20v2.json) should be applied at least 30 -60 min before you start the AKS cluster import or migration.  
 * To make changes to the controller init.sh script, download it, edit it and then execute it from the command line (bash shell). 
-* For private AKS clusters with limited or no Internet connectivity, please see [Connect to Private AKS cluster](https://docs.spot.io/ocean/tutorials/connect-an-aks-private-cluster?id=connect-an-aks-private-cluster).  
+* For private AKS clusters with limited or no Internet connectivity, please see [What to do About Private AKS Clusters](https://docs.spot.io/ocean/getting-started/aks/readme?id=what-to-do-about-private-clusters).  
   *Use a proxy or VPN to add or update the spotinst Helm repo in the private cluster. You need to create the config-map manually. 
   *For Kubectl, you cannot run the controller init script, since remote connectivity is disabled. You need to manually create the config-map and install the controller in the AKS using VPN or proxy.  
 
