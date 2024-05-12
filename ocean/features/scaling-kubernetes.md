@@ -83,6 +83,36 @@ Another method is to disable the option to scale down from a specific [virtual n
 Using the [API](https://docs.spot.io/api/#operation/OceanAWSLaunchSpecUpdate), you could simply set the restrictScaleDown parameter to True.
 Once enabled, VNG nodes are treated as if all pods running have the restrict-scale-down label. Therefore, Ocean would not scale nodes down from the virtual node group unless they are empty.
 
+## Accelerated Scale Down
+
+Accelerated Scale Down is an Ocean Autoscaler feature that enhances efficiency and cost-effectiveness in your Kubernetes clusters. This feature monitors your Ocean cluster for underutilized nodes and terminates those that are not necessary, so you are not paying for idle resources. 
+
+Kubernetes dynamically scales resources based on demand. However, as workloads decrease, you may find your cluster with an excess of underutilized nodes. These idle resources incur unnecessary costs. 
+
+Accelerated Scale-Down significantly reduces the time regular scale-down processes take to scale down nodes. Once a node is identified as eligible for scale down, it is immediately scaled down by the Ocean Autoscaler, depending on a scale-down percentage parameter, `maxScaleDownPercentage`.  
+
+`maxScaleDownPercentage` is the percentage out of the cluster nodes that can be simultaneously scaled down. You can set the maximum scale-down percentage from 1-100, 100% for maximum acceleration. 
+
+Use Accelerated Scale Down for: 
+
+*   Prioritizing cost optimization: Scale down resources in larger or more complex environments that do not require continuous operation, such as development and testing.  
+
+*   Batch processing for short runs: Scale down remaining underutilized nodes after jobs with short run duration (such as every hour for 10-15 minutes) end. 
+
+*   Workload Balancing in CI / CD pipelines: For pipelines that involve workloads that are resource-intensive during specific stages, and less demanding during others, scale down resources during the lighter stages. 
+
+*   Handling sudden drops in demand: Scale down resources when traffic decreases.  
+
+### Configure Accelerated Scale Down 
+
+To configure Accelerated scale-down
+
+1.  Use the [Spot by NetApp API](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterGet) to configure Accelerated Scale Down on the Ocean cluster: 
+
+2.  Set `cluster.autoScaler.down.aggressiveScaleDown.isEnabled = true`. 
+
+3.  Optionally increase scale down further by increasing the maxScaleDownPercentage value up to 100%. 
+
 ## Headroom
 
 One of Ocean’s key features for optimizing scaling is [_headroom_](ocean/features/headroom), a buffer of spare capacity ensuring that a cluster is always ready for a rapid application scale up. When you configure headroom in specific amounts of resources (i.e., vCPU, memory, and GPU), or specify headroom as a percentage of the cluster’s total requested resources, the cluster can scale workloads without waiting for new instances to be provisioned.
