@@ -28,15 +28,13 @@ The Ocean Controller needs an outbound connection to Spot’s public IP address.
 
 To enable the outbound connection, you must configure the internal routing, firewall rules, and/or proxy according to the existing security methods in your environment. 
 
-Consult the following documentation to manage Azure Native configurations: 
+Refer to the following documentation to manage Microsoft Azure Native configurations: 
 
-https://learn.microsoft.com/en-us/azure/virtual-network/manage-route-table 
+* [Create, change, or delete a route table](https://learn.microsoft.com/en-us/azure/virtual-network/manage-route-table) 
 
-https://learn.microsoft.com/en-us/azure/aks/egress-udr  
+* [Customize cluster egress with a user-defined routing table in Azure Kubernetes Service (AKS)](https://learn.microsoft.com/en-us/azure/aks/egress-udr)
 
-https://learn.microsoft.com/en-us/azure/aks/limit-egress-traffic?tabs=aks-with-system-assigned-identities 
-
-
+* [Limit network traffic with Azure Firewall in Azure Kubernetes Service (AKS)](https://learn.microsoft.com/en-us/azure/aks/limit-egress-traffic?tabs=aks-with-system-assigned-identities) 
 
 ## Import Cluster  
 
