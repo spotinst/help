@@ -12,9 +12,33 @@ This procedure describes how to use the Spot Console to connect an existing 
 * [Enable Ocean to launch Spot VMs for Workloads](ocean/getting-started/aks/aks-prerequisites?id=enable-ocean-to-launch-spot-vms-for-workloads). 
 * [Update Helm or install via Terraform or Kubectl (Kubernetes command-line tool)](ocean/getting-started/aks/aks-prerequisites?id=install-helm-terraform-or-kubectl-kubernetes-command-line-tool).
 
+
+##  What to do About Private Clusters
+
+Ocean supports the management and optimization of AKS private clusters. 
+Ocean supports any AKS private cluster configuration, provided the Ocean Controller can establish outbound communication with the Spot SaaS control plane.  
+ 
+The diagram below shows the outbound communication connection for AKS private clusters. The Spot SaaS environment shown on the left is hosted in the public cloud domain and requires internet connectivity for access. The representation of the customer’s AKS environment and the components we access to operate the AKS clusters is shown on the right. In this example, the accessed component is the Spot Ocean Controller.  
+
+![aks-rpivate-clusters-2](https://github.com/spotinst/help/assets/159915991/a8e51268-2c82-401c-922e-badfa88b1bf9)
+
+The Ocean Controller is an AKS deployment that resides in the cluster and communicates with the Spot SaaS environment to trigger scale up and scale down.  
+
+The Ocean Controller needs an outbound connection to Spot’s public IP address. If the Ocean Controller fails to report to SaaS, the scaling and management of the cluster will not function correctly. 
+
+To enable the outbound connection, you must configure the internal routing, firewall rules, and/or proxy according to the existing security methods in your environment. 
+
+Refer to the following documentation to manage Microsoft Azure Native configurations: 
+
+* [Create, change, or delete a route table](https://learn.microsoft.com/en-us/azure/virtual-network/manage-route-table) 
+
+* [Customize cluster egress with a user-defined routing table in Azure Kubernetes Service (AKS)](https://learn.microsoft.com/en-us/azure/aks/egress-udr)
+
+* [Limit network traffic with Azure Firewall in Azure Kubernetes Service (AKS)](https://learn.microsoft.com/en-us/azure/aks/limit-egress-traffic?tabs=aks-with-system-assigned-identities) 
+
 ## Import Cluster  
 
-When all of the prerequisites are completed, you are ready to import an AKS cluster to Ocean. The instructions below describe the steps to import an existing AKS cluster to Ocean using the Create Cluster wizard in the Spot console. 
+When all prerequisites are completed, you are ready to import an AKS cluster to Ocean. The instructions below describe the steps to import an existing AKS cluster to Ocean using the Create Cluster wizard in the Spot console. 
 
 You can perform similar steps to import an AKS cluster to Ocean using the Ocean AKS API using [oceanAKSClusterImport](https://docs.spot.io/api/#tag/Ocean-AKS/operation/oceanAKSClusterImport) or Terraform providers for Ocean AKS cluster [ocean-aks-np-k8s](https://registry.terraform.io/modules/spotinst/ocean-aks-np-k8s/spotinst/latest), Ocean AKS VNG [ocean_aks_np_virtual_node_group](https://registry.terraform.io/providers/spotinst/spotinst/latest/docs/resources/ocean_aks_np_virtual_node_group).  
 
@@ -122,19 +146,20 @@ When the Ocean Controller connectivity is successful, click **Next**.
 
 ![ocen-aks-auto-spot-toleration-injection](https://github.com/spotinst/help/assets/159915991/7554d272-4e65-4112-8fd4-d3a54a5e994c)
 
-Microsoft Azure / AKS does not allow pods to run on Spot VMs by default. Rather, it adds a `NoSchedule` taint to all Spot nodes / node pools. 
+Microsoft Azure / AKS does not allow pods to run on Spot VMs by default. Rather, it adds a `NoSchedule` taint to all Spot nodes / node pools:`kubernetes.azure.com/scalesetpriority=spot:NoSchedule`
 
-```kubernetes.azure.com/scalesetpriority=spot:NoSchedule``` 
+Spot toleration must be injected into the pod to schedule a workload on a Spot node. Otherwise, the workload will run on a regular On-demand (OD) node by default.
 
-To schedule a workload on a Spot node, Spot toleration must be injected on the pod. Otherwise, the workload will run on a regular On-demand (OD) node by default. 
-This step lets you optionally install the Spot admission controller, which is a k8 mutating webhook that automatically injects the spot toleration at the namespace level, enabling AKS workload pods to run on Spot VMs by default. 
-A mutating webhook is a type of Kubernetes dynamic admission controller that allows for modifying resources before they are persisted in the Kubernetes API server. 
-The Spot toleration admission controller webhook is triggered by pod create or update events. When web-app deployment tries to scale up and add new pods or update / restart existing pods, the kube-apiserver sends an admission request to the Spot toleration webhook, and based on the policy, injects the spot toleration before the pod is deployed. 
+This step lets you optionally install the Spot admission controller, a k8 mutating webhook that automatically injects the spot toleration at the namespace level, enabling AKS workload pods to run on Spot VMs by default. 
+
+A mutating webhook is a Kubernetes dynamic admission controller that allows for modifying resources before they are persisted in the Kubernetes API server. 
+
+The Spot toleration admission controller webhook is triggered by pod create or update events. When web-app deployment tries to scale up and add new pods or update/restart existing pods, the kube-apiserver sends an admission request to the Spot toleration webhook and, based on the policy, injects the spot toleration before the pod is deployed. 
 
 Prerequisites:
 
 *  The Spot admission controller is a deployment with two pods. You must define a PEM certificate as part of CA (Certificate Authority) bundle in the manifest yaml. 
-*  Make sure you have openssl installed in your environment, or use [Azure Cloud Shell](https://portal.azure.com/). 
+* Ensure you have OpenSSL installed in your environment or use [Azure Cloud Shell](https://portal.azure.com/). 
 *  Your current k8s context must be the context of your cluster.
 
 Information about Namespaces: 
