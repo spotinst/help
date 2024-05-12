@@ -20,7 +20,7 @@ Ocean supports any AKS private cluster configuration, provided the Ocean Control
  
 The diagram below shows the outbound communication connection for AKS private clusters. The Spot SaaS environment shown on the left is hosted in the public cloud domain and requires internet connectivity for access. The representation of the customer’s AKS environment and the components we access to operate the AKS clusters is shown on the right. In this example, the accessed component is the Ocean Controller.  
 
-
+![aks-rpivate-clusters-2](https://github.com/spotinst/help/assets/159915991/a8e51268-2c82-401c-922e-badfa88b1bf9)
 
 The Ocean Controller is an AKS deployment that resides in the cluster and communicates with the Spot SaaS environment to trigger scale up and scale down.  
 
