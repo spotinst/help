@@ -83,7 +83,7 @@ To install the Ocean Network Client:
 *   Run the following commands: 
 
 ```bash
-upgrade --install --wait spotinst-ocean-network-client spot/ocean-network-client \  
+helm upgrade --install --wait spotinst-ocean-network-client spot/ocean-network-client \  
 --namespace "spot-system" \  
 --set namespace="spot-system" \  
 --set oceanController.configMapName=ocean-controller-ocean-kubernetes-controller \  
