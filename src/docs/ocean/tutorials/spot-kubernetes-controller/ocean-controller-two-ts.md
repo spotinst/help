@@ -1,5 +1,7 @@
 # Troubleshoot the Ocean Controller Version 2
 
+This topic is intended to help you troubleshoot your Ocean Controller Version 2.
+
 ##  "Helm command not found" Log During Installation Via Script
 
 The script installation of Ocean Controller Version 2.0 is based on Helm. Ensure Helm is installed on your machine before starting the installation process. You can install Helm by running `install helm—https://helm.sh/docs/intro/install​`.
@@ -20,7 +22,7 @@ If your Ocean Controller for **AWS K8s** is not reporting a heartbeat to the Oce
 
 ### Step 1: Check the Configuration 
 
-Check the configuration of your `configMap.yaml` and ensure that the spotinst.cluster-identifier is the same as `controllerClusterId` (Cluster Identifier) in the Ocean configuration. 
+Check the configuration of your `configMap.yaml` and ensure that the `spotinst.cluster-identifier` is the same as `controllerClusterId` (Cluster Identifier) in the Ocean configuration. 
 
 To view the controller configmap currently applied to your cluster, run the following command: 
 
