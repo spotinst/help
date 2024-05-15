@@ -4,7 +4,7 @@
 
 <!-- This content will not appear in the rendered Markdown let's see if it really works -->
 ol
-<ol>
+<ol style="list-style-type: decimal;">
 <li>This is the first step<b>CloudFormation</b>.</li>
 <li>This is the second step</li>
 <li><p>This is the third step</p>
@@ -24,7 +24,7 @@ ol
 <li>This is the fifth step</li>
 <li>This is the sixth step</li>
 <li>This is the famous sublist:
-<ol>
+<ol style="list-style-type: lower-alpha;">
   <li>Substep 1</li>
   <li>Substep 2</li>
   <li>Substep 3</li>
