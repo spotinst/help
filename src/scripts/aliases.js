@@ -1800,7 +1800,7 @@ export const aliases = (() => {
       "elastigroup/tutorials/elastigroup-actions-menu/",
 
     "/ocean/tutorials/connect-an-aks-private-cluster":
-      "ocean/getting-started/aks/?id=what-to-do-about-aks-private-clusters",
+      "ocean/getting-started/aks/what-to-do-about-aks-private-clusters",
   };
 
   for (let [key, value] of Object.entries(map)) {
