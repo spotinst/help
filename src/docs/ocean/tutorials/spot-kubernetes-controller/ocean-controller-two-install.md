@@ -71,11 +71,11 @@ To install Prometheus Exporter:
 *   Run the following commands:
 
 ```bash
-helm upgrade --install --wait spot-ocean-metric-exporter spot/ocean-metric-exporter \ 
---namespace "spot-system" \  
---set oceanController.namespace="spot-system" \  
---set oceanController.configMapName=ocean-controller-ocean-kubernetes-controller \  
---set oceanController.secretName=ocean-controller-ocean-kubernetes-controller 
+helm upgrade --install --wait spot-ocean-metric-exporter spot/ocean-metric-exporter \
+--namespace "spot-system" \
+--set oceanController.namespace="spot-system" \
+--set oceanController.configMapName=ocean-controller-ocean-kubernetes-controller \
+--set oceanController.secretName=ocean-controller-ocean-kubernetes-controller
 ```
 
 To install the Ocean Network Client: 
@@ -83,11 +83,11 @@ To install the Ocean Network Client:
 *   Run the following commands: 
 
 ```bash
-helm upgrade --install --wait spotinst-ocean-network-client spot/ocean-network-client \  
---namespace "spot-system" \  
---set namespace="spot-system" \  
---set oceanController.configMapName=ocean-controller-ocean-kubernetes-controller \  
---set oceanController.secretName=ocean-controller-ocean-kubernetes-controller 
+helm upgrade --install --wait spotinst-ocean-network-client spot/ocean-network-client \
+--namespace "spot-system" \
+--set namespace="spot-system" \
+--set oceanController.configMapName=ocean-controller-ocean-kubernetes-controller \
+--set oceanController.secretName=ocean-controller-ocean-kubernetes-controller
 ```
 
 ## Install via Helm
@@ -110,10 +110,10 @@ helm repo update
 
 ```bash
 helm upgrade --install --wait ocean-controller spot/ocean-kubernetes-controller \
---namespace "spot-system" --create-namespace \	 
---set spotinst.account="${SPOTINST_ACCOUNT}" \	 
---set spotinst.clusterIdentifier="${SPOTINST_CLUSTER_IDENTIFIER}" \	 
---set spotinst.token="${SPOTINST_TOKEN}" 
+--namespace "spot-system" --create-namespace \
+--set spotinst.account="${SPOTINST_ACCOUNT}" \
+--set spotinst.clusterIdentifier="${SPOTINST_CLUSTER_IDENTIFIER}" \
+--set spotinst.token="${SPOTINST_TOKEN}"
 ```
 If the Ocean Metric Server is already installed in your cluster, add `--set metrics-server.deployChart=false` to the installation. 
 
@@ -124,14 +124,14 @@ Use Spot’s script for a Helm-based installation of the Ocean Controller.
 *   Run the following script: 
 
  ```bash
-curl -fsSL https://spotinst-public.s3.amazonaws.com/integrations/kubernetes/cluster-controller-v2/scripts/init.sh | \ 
-SPOTINST_TOKEN=$SPOTINST_TOKEN \ 
-SPOTINST_ACCOUNT=$SPOTINST_ACCOUNT \ 
-SPOTINST_CLUSTER_IDENTIFIER=$SPOTINST_CLUSTER_IDENTIFIER \ 
-ENABLE_OCEAN_METRIC_EXPORTER=false \ 
-ENABLE_OCEAN_NETWORK_CLIENT=false \ 
-INCLUDE_METRIC_SERVER=false \ 
-bash 
+curl -fsSL https://spotinst-public.s3.amazonaws.com/integrations/kubernetes/cluster-controller-v2/scripts/init.sh | \
+SPOTINST_TOKEN=$SPOTINST_TOKEN \
+SPOTINST_ACCOUNT=$SPOTINST_ACCOUNT \
+SPOTINST_CLUSTER_IDENTIFIER=$SPOTINST_CLUSTER_IDENTIFIER \
+ENABLE_OCEAN_METRIC_EXPORTER=false \
+ENABLE_OCEAN_NETWORK_CLIENT=false \
+INCLUDE_METRIC_SERVER=false \
+bash
 ```
 
 >**Note**: If the [Ocean Prometheus Exporter](https://docs.spot.io/ocean/tools-and-integrations/prometheus/) or [Ocean Network Client](https://docs.spot.io/ocean/tutorials/install-network-client?id=install-the-ocean-network-client-in-the-cluster) is already installed in your cluster, reinstall them by setting the following parameter (to integrate with the new controller): `ENABLE_OCEAN_METRIC_EXPORTER = true` OR `ENABLE_OCEAN_NETWORK_CLIENT = true`.  
