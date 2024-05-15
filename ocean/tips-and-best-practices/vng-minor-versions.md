@@ -1,5 +1,3 @@
-<meta name=“robots” content=“noindex”>
-
 #  Configure a Minor K8s Version for a Virtual Node Group 
 
 This topic describes what to do with your Virtual Node Groups when you upgrade the Kubernetes K8s version for your clusters.  
