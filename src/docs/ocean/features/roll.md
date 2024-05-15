@@ -181,7 +181,7 @@ To create or edit a roll schedule:
    
 3.	In the third step of the wizard, set the schedule frequency using the day/week/month/time controls or type in a Cron expression.
  
-     ![ocean-rolls-schedule-roll-step-3](https://github.com/spotinst/help/assets/159915991/e0d3bc9d-c37a-4c3d-8d28-209c027bf30c)
+    ![ocean-rolls-schedule-roll-step-3-r1](https://github.com/spotinst/help/assets/159915991/6c8eb106-57b9-4d98-8020-69cc0ee7f820)
 
 4.	Click **Schedule Roll**. Your schedule appears in the Rolls tab - Scheduled Rolls list under Rolls History.
 
