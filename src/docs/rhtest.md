@@ -1,5 +1,8 @@
 <meta name=“robots” content=“noindex”>
+
 # This is my heading 1
+
+<!-- This content will not appear in the rendered Markdown let's see if it really works -->
 
 You can automatically enroll AWS member accounts as new Spot accounts using StackSets. 
 
@@ -45,7 +48,7 @@ To use the Spot onboarding StackSets, you’ll need to:
 * Have an AWS member account nested under an organizational unit (secondary account). 
 
 ## Create StackSets in the AWS Management Account 
-<ol>
+<ol type="1">
 <li>Log in to the AWS console and click **CloudFormation**.</li>
 <li>Click **StackSets** and then click **Create StackSets**. </li>
 <li>Choose a template:
@@ -63,7 +66,7 @@ To use the Spot onboarding StackSets, you’ll need to:
     <li>Include the Spot Policy for Cost Intelligence (default true)</li>
   </ul>
 </li>
-<li>In the Configure StackSets options section, you can optionally enter the key and value to tag the StackSets.
+<li><p>In the Configure StackSets options section, you can optionally enter the key and value to tag the StackSets.</p>
 <p>![stacksets-2](https://github.com/spotinst/help/assets/106514736/ce471c00-488c-4b49-a728-c4c1c1c71cc2)</p></li>
 <li>The Set deployment options section defines how stacks of the StackSets are deployed. </li>
 <li>In Deployment targets:
@@ -73,7 +76,7 @@ To use the Spot onboarding StackSets, you’ll need to:
   <li>Milk</li>
 </ol></li>
 <li>In Specify regions, select a single region to create a Spot account for every new AWS account. It doesn’t matter which region you select—the policy will grant access to all regions in your AWS account.</li>
-</li>Click **Submit**.
+<li><p>Click **Submit**.</p>
 <p>A new Spot account will be created for the AWS member account. The two accounts will be connected, and the Spot account will be renamed to match the AWS billing alias. </p> </li>
 </ol>
 
