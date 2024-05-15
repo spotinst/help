@@ -99,11 +99,12 @@ In the Rolls tab, you can run immediate rolls for your clusters, VNGs, and node 
 
 If you have not yet performed or scheduled a roll in this cluster, the Rolls tab appears as shown below.
 
-[placeholder for picture]
+![ocean-rolls-no-rolls-yet](https://github.com/spotinst/help/assets/159915991/753b1eb4-3ef3-445b-8a0b-49c05543cc0a)
 
 If at least one roll exists, the Rolls History appears. 
 
-[placeholder for picture]
+![ocean-history](https://github.com/spotinst/help/assets/159915991/547db43e-3d24-4cf3-8ef4-8cc105f55aec)
+
 
 ##  Roll Now
 
@@ -123,7 +124,7 @@ To roll immediately:
 
     The dialog-box that appears depends on the type of object(s) you selected to roll (sample shown below).
 
-    [placeholder for picture]
+    ![Ocean-roll-vng](https://github.com/spotinst/help/assets/159915991/6c0cbb34-e08a-4d3b-9316-72f57e2dc6c6)
 
 2.	For a VNG or Node Pools roll, select one or more VNGs or Node Groups to run from the drop-down menu at the top of the dialog box. You can optionally select **All**.
 3.	Do the following (refer to [Roll Parameters]()):
@@ -144,25 +145,15 @@ To roll immediately:
 
 To create or edit a roll schedule: 
 
-*   To create your first roll schedule, click **Schedule a Roll**.
-
-    OR
+1.  To create your first roll schedule, click **Schedule a Roll**, or from the Create Roll drop-down menu on the right of the screen, click **Schedule Roll**.
     
-    From the Create Roll drop-down menu on the right of the screen, click **Schedule Roll**.
-    
-    OR
-    
-    To edit an existing roll schedule: In the Scheduled Rolls list, on the right of roll schedule entry, click the pencil icon. The Schedule Roll wizard opens.
+    If you are editing an existing roll schedule, click the pencil icon on the right of the roll schedule entry in the Scheduled Rolls list.
+     
+2.	In the first step of the Schedule Roll wizard, select the roll type. The available roll types depend on your system deployment. Continue to the next step.
+ 
+    ![ocean-rolls-schedule-roll-step-1](https://github.com/spotinst/help/assets/159915991/44a77a63-981d-4fef-a996-3b314648e5ce)
 
-In the Schedule Roll wizard:
-
-     [placeholder for picture]
-
-1.	In the first step of the Schedule Roll wizard, select the roll type. The available roll types depend on your system deployment. Continue to the next step.
-
-     [placeholder for picture]
-
-2.	In the second step of the wizard, do the following (refer to [Roll Parameters]()):
+3.	In the second step of the wizard, do the following (refer to [Roll Parameters]()):
 
     *   Select your VNG or Cluster.
     *   Configure the size of a roll batch (%). 
@@ -170,13 +161,16 @@ In the Schedule Roll wizard:
     *   Add an optional comment.
     *   Enable or disable Respect Pod Disruption Budget (PDB)
     *   Enable or disable Respect Restrict Scale Down (RSD)
-
-     [placeholder for picture]   
-
+  
+    ![ocean-rolls-schedule-roll-step-2](https://github.com/spotinst/help/assets/159915991/8ffd2e53-e421-47c2-b81d-82a0d912e7a7)
+   
 3.	In the third step of the wizard, set the frequency of the schedule using the day/week/month/time controls or type in a Cron expression.
+ 
+     ![ocean-rolls-schedule-roll-step-3](https://github.com/spotinst/help/assets/159915991/e0d3bc9d-c37a-4c3d-8d28-209c027bf30c)
+
 4.	Click **Schedule Roll**. Your schedule appears in the Rolls tab - Scheduled Rolls list under Rolls History.
 
-    [placeholder for picture]
+    ![ocean-rolls-schedule-in -history tab](https://github.com/spotinst/help/assets/159915991/cebd54ee-a4b6-4702-a471-eff0e3707b95)
 
 ##  Delete a Scheduled Roll
 
