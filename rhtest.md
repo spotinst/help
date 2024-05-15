@@ -48,7 +48,7 @@ To use the Spot onboarding StackSets, you’ll need to:
 * Have an AWS member account nested under an organizational unit (secondary account). 
 
 ## Create StackSets in the AWS Management Account 
-<ol type="1">
+<ol>
 <li>Log in to the AWS console and click **CloudFormation**.</li>
 <li>Click **StackSets** and then click **Create StackSets**. </li>
 <li>Choose a template:
@@ -70,7 +70,7 @@ To use the Spot onboarding StackSets, you’ll need to:
 <p>![stacksets-2](https://github.com/spotinst/help/assets/106514736/ce471c00-488c-4b49-a728-c4c1c1c71cc2)</p></li>
 <li>The Set deployment options section defines how stacks of the StackSets are deployed. </li>
 <li>In Deployment targets:
-<ol type="a">
+<ol>
   <li>click **Deploy to organization units (OUs)** and enter the AWS OU ID where you want the stacks created.</li>
   <li>click **Automatic deployment: enabled** to auto-deploy AWS accounts under the management account.</li>
   <li>Milk</li>
