@@ -1,6 +1,7 @@
 # Troubleshoot the Ocean Controller Version 2
 
-This topic is intended to help you troubleshoot your Ocean Controller Version 2.
+This topic is intended to help you troubleshoot your Ocean Controller Version 2. 
+If required, you can contact Support via online chat or [email](https://spot.io/support/). 
 
 ##  "Helm command not found" Log During Installation Via Script
 
