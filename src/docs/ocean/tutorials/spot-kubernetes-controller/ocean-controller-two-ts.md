@@ -1,8 +1,24 @@
 # Troubleshoot the Ocean Controller Version 2
 
+##  "Helm command not found" Log During Installation Via Script
+
+The script installation of Ocean Controller Version 2.0 is based on Helm. Ensure Helm is installed on your machine before starting the installation process. You can install Helm by running `install helm—https://helm.sh/docs/intro/install​`.
+
+##  "Metrics server already installed" Log After Using Helm to Install the Controller
+
+This issue occurs because the ‘metric server’ is already installed in your cluster. By default, the Helm Chart for the controller installs the 'metric-server' as a dependency. The metric server is a pod that helps Ocean collect data related to the memory and CPU usage of all the pods in the cluster, which is used for the Right Sizing feature.
+Add `--set metrics-server.deployChart=false` to the helm install command to avoid this issue.
+
+##  "Different controller versions detected. Please remove the old version controller. Old version controller pod(s)" Log in Your Ocean Cluster
+
+This log message appears when the old (Version 1.0) and new (Version 2.0) Ocean controllers run concurrently in your Kubernetes cluster. The Version 2.0 Ocean Controller pod will not perform actions until the Version 1.0 Ocean Controller is deleted. This approach prevents conflicts between the two Ocean Controllers, each having different behaviors.
+To resolve this issue, remove the old Ocean controller replicas. 
+
+## Ocean Controller for **AWS K8s** Does Not Report Heartbeat to Ocean Cluster
+
 If your Ocean Controller for **AWS K8s** is not reporting a heartbeat to the Ocean cluster, use this troubleshooter to resolve the issue. Complete each step according to the sequence.
 
-## Step 1: Check the Configuration 
+### Step 1: Check the Configuration 
 
 Check the configuration of your `configMap.yaml` and ensure that the spotinst.cluster-identifier is the same as `controllerClusterId` (Cluster Identifier) in the Ocean configuration. 
 
@@ -23,7 +39,7 @@ metadata:
   data:spotinst.cluster-identifier: <CLUSTER_ID> 
 ```
 
-## Step 2: Are the Account ID and Token valid? 
+### Step 2: Are the Account ID and Token valid? 
 
 1.  To view the base64 encoded secrets run the following command: 
 
@@ -66,7 +82,7 @@ ERROR  [DATE] [main] PushAutoScalerDataCmd - Failed to push autoScaler data. Err
 ERROR  [DATE] [main] ControllerApplication - Failed to validate controller communication with spotinst APICo
 ```
 
-## Step 3: Is the Ocean Controller Running? 
+### Step 3: Is the Ocean Controller Running? 
 
 To see if the controller is running, run the following command on your kubectl enabled terminal: 
 
@@ -74,7 +90,7 @@ To see if the controller is running, run the following command on your kubectl e
 kubectl get pods -n spot-system | grep ocean-controller 
 ```
 
-## Step 4: Is the Ocean Controller Running but not Responding? 
+### Step 4: Is the Ocean Controller Running but not Responding? 
 
 If the controller pod is running but is not responding, do the following: 
 
@@ -90,7 +106,7 @@ kubectl describe pod 'dns-pod-name' -n kube-system
 
 3.  Try restarting the controller pod. 
 
-## Step 5: Get Ocean Controller Logs 
+### Step 5: Get Ocean Controller Logs 
 
 If the steps above do not solve your issue, get the controller logs using the steps below. 
 
