@@ -1,140 +1,197 @@
-# Roll
+<meta name=“robots” content=“noindex”>
 
-The Roll feature enables you to perform changes in order to align cluster infrastructure with a new image, user data or security groups without having to disable the Ocean autoscaler or manually detach nodes in the cluster.
+# Rolls
 
-> **Note**: Where this page uses Kubernetes terms such as node and pod, the ECS and AKS equivalents such as container instance or VM and task are also applicable.
+The Ocean Roll feature lets you to effortlessly synchronize cluster infrastructure with a fresh image, user data, or security groups, eliminating the need to disable the Ocean autoscaler or manually detach nodes within the cluster.
 
-In Ocean you can roll your cluster with a single click. The roll feature takes into consideration the actual workloads running in the cluster. Ocean freezes scale-down activity in the cluster and launches new compute capacity to match the workload requirements. While the new nodes are starting up, the old nodes are still able to scale up if necessary and will scale down only after the new nodes are healthy.
+>**Note:** This topic uses Kubernetes terms such as node and pod (EKS, AKS, and GKE). ECS equivalents such as container instance, VM and task are also applicable.
 
-## How It Works
+With Ocean, you can roll a cluster with just a single click. The roll feature intelligently considers the workloads running in the cluster. It freezes any scale-down activities within the cluster and seamlessly deploys new compute capacity to meet the demands of the workloads. During the startup phase of the new nodes, the existing nodes retain the ability to scale up as needed, ensuring uninterrupted operations. The old nodes are only scaled down once the new nodes are confirmed to be in a healthy state.
 
-Whether you are rolling your entire Ocean cluster, a specific virtual node group (VNG), or only specific nodes, Ocean can divide the roll into batches according to batch sizes that you choose. For example, if you choose to roll according to the default batch size of 20%, Ocean divides the roll into 5 batches. The process takes place as follows:
+Whether you are rolling out changes to your entire Ocean cluster, a particular virtual node group (VNG), or specific nodes, Ocean offers the flexibility to divide the roll into batches based on your chosen batch sizes. For example, if you opt for the default batch size of 20%, Ocean will divide the roll into five batches.
 
-1. Ocean calculates the number of batches required in the roll based on the batch size you enter and divides the workloads equally among the batches.
-2. Ocean starts with the first batch, replacing each node in such a way that ensures the successful accomodation of the workloads on the new nodes. Ocean's autoscaler takes into consideration all relevant constraints in place before the roll.
-3. When all nodes in a batch are finished processing and at least 50% of them have successful replacement, then Ocean starts to work on the next batch. (The percentage can be configured using the `batchMinHealthyPercentage` parameter, explained below.)
+The process is as follows:
+1.	Ocean calculates the number of batches required in the roll based on the batch size you enter and divides the workloads equally among the batches.
+2.	Ocean starts with the first batch, replacing each node to ensure the successful accommodation of the workloads on the new nodes. Ocean's autoscaler considers all relevant constraints in place before the roll.
+3.	When all nodes in a batch complete processing and at least 50% of them have a successful replacement, then Ocean starts to work on the next batch. You can configure the percentage in the Spot API using the batchMinHealthyPercentage parameter, which is explained below.
 
-### Replace Node with Smaller Nodes[\*\*](ocean/features/roll?id=whats-next)
+## Replace Node with Smaller Nodes
 
-A cluster roll is able to replace a single node with multiple smaller nodes. This avoids a cluster roll failure when only smaller node types are configured in the Ocean cluster prior to initiating the roll. Rather than replacing each existing node with one of the same type, Ocean will provision the most relevant infrastructure during the cluster roll. This is based on the workloads currently running on the nodes chosen for rolling. This is especially helpful when you have modified the list of allowed node types or if your goal is to remove a specific node type and replace it with multiple smaller ones.
+A cluster roll can replace a single node with multiple smaller nodes. This avoids a cluster roll failure when only smaller node types are configured in the Ocean cluster before initiating the roll. Rather than replacing each existing node with one of the same type, Ocean will provision the most relevant infrastructure during the cluster roll. 
 
-This logic can improve the utilization in the cluster since the workload would run on infrastructure that best matches the workload. Ocean constantly tries to scale down the cluster, but if this is not possible, cluster roll could improve the utilization.
+This is based on the workloads currently running on the nodes chosen for rolling. This is especially helpful when you have modified the list of allowed node types or if your goal is to remove and replace a specific node type with multiple smaller ones.
 
-### Respect Pod Disruption Budget[\*\*](ocean/features/roll?id=whats-next)
+This logic can improve the cluster's utilization since the workload would run on infrastructure that best matches the workload. Ocean constantly tries to scale down the cluster, but if this is not possible, a cluster roll could improve the utilization.
 
-Some pods may have a [pod disruption budget](https://kubernetes.io/docs/concepts/workloads/pods/disruptions/) (PDB). By using the parameter `respectPdb`, you can instruct Ocean to check the PDB. When `respectPdb` is set to True, Ocean will not replace a node if the PDB is violated.
+## Roll Parameters
 
-### Minimum Healthy Instances in Batch[\*\*](ocean/features/roll?id=whats-next)
+*   **Respect Pod Disruption Budget (PDB)**: Some pods may have a Pod Disruption Budget (PDB). In the Spot API, use `respectPdb` to instruct Ocean to verify the PDB. When `respectPdb` is set to True, Ocean will not replace a node if the PDB is violated.
 
-The parameter `batchMinHealthyPercentage` indicates the minimum percentage of healthy instances in a single batch. If the amount of healthy instances in a single batch is under this percentage, the cluster roll will fail. The range is 1-100, and if the parameter value is null, the default value will be 50%. Instances that were not replaced due to PDB will be considered as healthy. You can override this behavior by setting ignorePdb to True.
+*   **Respect Restrict Scale Down (RSD) during Roll**: Rolls do not consider the restrict-scale-down label. Ocean will replace a node even if a task or pod uses this label. Ocean's autoscaler considers all configured constraints before the roll.
 
-### Node Status
+*   **Roll Batch Size Percentage**: Indicates the percentage of the cluster's target capacity that will be rolled at a time during a node pool update or scale operation. For example, if the cluster's target capacity is 50 nodes, and the Batch Size Percentage is set to 20%, then each batch will consist of 20% of the target capacity, 10 nodes (50 nodes * 20% = 10 nodes). 
 
-During the replacement process, Ocean provides information about the status of each node. The following statuses are reported:
+*   **Batch Size Healthy Percentage**: indicates the minimum percentage of healthy instances in a single batch.
+    The roll will fail if the number of healthy instances in a single batch is below this percentage. The range is 1-100; if the parameter value is null, the default value will be 50%. Ocean considers instances not replaced due to PDB as healthy.
+    You can override the behavior of the `batchMinHealthyPercentage` parameter by setting the `ignorePdb` parameter to True.
 
-- REPLACED. The node was successfully replaced by a new node.
-- TO_BE_REPLACED. Ocean did not try to replace the node yet.
-- COULD_NOT_BE_REPLACED. The node was not replaced. This situation generally happens when there is no replacement node that becomes healthy within the grace period.
-- NOT_REPLACED_DUE_TO_PDB. Replacing the node violates the PDB configuration on one of the pods running on the node. This status is only relevant when `respectPdb` is set to True. If a node could not be replaced due to PDB, it would be considered successful replacement, meaning if 50% of the nodes should be replaced in order to proceed to the next batch and all of the nodes were not replaced due to PDB, Ocean would continue to the next batch.
+## Node Status
 
-### Roll Status
+During the roll process, Ocean provides information about the status of each node:
 
-Ocean assigns a status to each stage of the roll process. A roll can have one of the following statuses:
+*   **REPLACED**: A new node successfully replaced the node.
 
-- IN_PROGRESS: The roll is in this status as long as nodes are being replaced successfully.
-- FAILED: An error occurred that caused the roll to fail, and an error message is recorded in the Elastilog.
-- STOPPED: The roll was stopped by the user. When the user stops a roll, the nodes remain in the state they were in at the time of the stop. (For example, there is no rollback to an initial state.)
-- COMPLETED: The roll transitions to Completed status when all nodes have been processed, and at least 50% of them have been successfully replaced.
+*   **TO_BE_REPLACED**: Ocean has not yet tried to replace the node.
 
-> **Tip**: In the UI, a specific batch may appear with a `Pending` state. This means that even though the roll process has started, that batch has not yet started to replace its nodes.
+*   **COULD_NOT_BE_REPLACED**: The node was not replaced. This may occur for example, when no replacement node becomes  healthy within the grace period.
 
-### Log Messages
+*   **NOT_REPLACED_DUE_TO_PDB**: Replacing the node violates the PDB configuration on one of the pods running on the node. This status is only relevant when `respectPdb` is set to True. If a node could not be replaced due to PDB, and the allowed PDB % of nodes for the batch was respected, Ocean would continue to the next batch. 
+
+*   **NOT_REPLACED_DUE_TO_RSD**: Replacing the node violates the RSD configuration on one of the pods running on the node. This status is only relevant when `respectRestrictScaleDown` is set to True. If a node could not be replaced due to PDB, and the allowed RSD % of nodes for the batch was respected, Ocean would continue to the next batch. 
+
+##  Roll Status
+
+A roll can have one of the following statuses:
+
+*   **IN_PROGRESS**: Nodes are being replaced successfully.
+
+*   **FAILED**: An error caused the roll to fail. An error message is recorded in the Elastilog
+
+*   **STOPPED**: The roll was manually stopped. When you stop a roll, the nodes remain in the state at the stop time. (For example, there is no rollback to the initial state).
+
+*   **COMPLETED**: All nodes have been processed, and at least 50% have been successfully replaced.
+
+>**Tip:** In the Console, a specific batch may appear in a pending state. This means that even though the roll process has started, that batch has not yet started to replace its nodes.  
+
+##  Log Messages
 
 The following messages are recorded in the log:
 
-- Roll \${ROLL_ID} has completed successfully.
-- Roll ${ROLL_ID} has failed. Reason: ${FAILURE_REASON}.
-- Roll ${ROLL_ID} has started. Number of batches ${NUM_OF_BATCHES}.
-- Roll \${ROLL_ID} has stopped.
+*   Roll ${ROLL_ID} has completed successfully.
+*   Roll ${ROLL_ID} has failed. Reason ${FAILURE_REASON}.
+*   Roll ${ROLL_ID} has started. Number of batches ${NUM_OF_BATCHES}.
+*   Roll ${ROLL_ID} has stopped.
 
-The following are possible reasons for failure:
+The following are reasons for failure:
 
-- The roll has been stuck in the same roll status for too long.
-- The Ocean Controller is not active.
-- More than 50 percent of nodes could not be replaced.
-- There may be constraint mismatches or configuration mismatches such as labels, selectors, taints, or affinity rules.
-- There may be one or more unhealthy nodes.
+*   The roll has been stuck in the same status for too long.
+*   The Ocean Controller is not active.
+*   More than 50 percent of nodes could not be replaced.
+*   There may be constraint or configuration mismatches such as labels, selectors, taints, or affinity rules.
+*   There may be one or more unhealthy nodes.
+*   Kubernetes version not supported.
 
-### Restrict Scale Down during Roll
+#   Schedule Cluster Roll for AKS from the Spot API 
 
-The roll does not consider the [restrict-scale-down](ocean/features/scaling-kubernetes.md#scale-down-prevention) label. Ocean will replace a node even if a task or pod uses this label. As mentioned above, Ocean's autoscaler takes into consideration all relevant constraints in place before the roll.
+You can schedule a roll in the Create Cluster or Update Cluster [Spot API](https://docs.spot.io/api/#tag/Ocean-AKS/operation/oceanAKSV2ClusterUpdate) using a cron expression. This enables you to run the roll easily during off hours.
 
-## Schedule Cluster Roll[\*\*](ocean/features/roll?id=whats-next)
+##  Roll per Cluster, VNG, or Node Pool
 
-You can schedule a roll in the Create Cluster or Update Cluster [API](https://docs.spot.io/api/) using a `cron` expression. This enables you to easily run the roll during off hours.
+Ocean VNGs / Node Pools enable you to run different VNGs / Node Pools within a single Ocean cluster, for example:
 
-<img src="/ocean/_media/features-roll-01-1.png" />
+*   Separate development, test, and production environments.
+*   Different teams.
+*   Different applications or microservices.
 
-## Roll per Node or VNG
+The Spot API lets you roll one or more nodes in a VNG without having to roll the entire cluster, for example, when you do not want to roll the entire cluster for a local software update. You do this by specifying a list of node IDs or a specific VNG ID.
+The VNG parameter initiates a roll of one or more VNGs in the cluster. When you specify a VNG ID, all the nodes in that VNG are rolled.
 
-Ocean VNGs enable you to run different node groups within a single Ocean cluster. This makes it possible to run different groups of nodes, such as the examples below, on the same cluster.
+Similarly, the Spot API lets you roll one or more node pools without rolling the entire cluster. Do this by specifying a list of node Pool IDs or a specific Node Pool ID.
+The node pool parameter initiates a roll of one or more node pools in the cluster. When you specify a node pool ID, all the nodes in that node pool are rolled.
 
-- Separate development, test, and production environments
-- Different teams
-- Different applications or microservices
+#   Work with Rolls from the Console
 
-The Ocean API enables you to roll one or more nodes in a VNG without having to roll the entire cluster. This is useful when you have different groups of nodes running in the cluster, like those described above, and don't want to roll the entire cluster for a local software update. You can do this by specifying a list of node IDs or a specific VNG ID.
+##  Access the Ocean Cluster Rolls Tab   
 
-For example, you can use:
+To access the Ocean Cloud Cluster Rolls tab:
 
-- The `instanceIds` parameter (for Ocean for Kubernetes on AWS and ECS) or `instanceNames` (for Ocean GKE) to initiate a roll of one or more specific nodes.
-- The `launchSpecIds` parameter to initiate a roll of one or more VNGs in the cluster. When you specify a VNG ID, all the nodes in that VNG are rolled.
+1.	In the left main menu, click **Ocean**, and click **Cloud Clusters**.
+2.	Select a cluster from the list of clusters.
+3.	Click **Rolls**.
 
-For more information about the specific APIs, see Initiate Cluster Roll: [AKS](https://docs.spot.io/api/#operation/oceanAzureRollInit), [Kubernetes on AWS](https://docs.spot.io/api/#operation/oceanAwsRollInit), [ECS](https://docs.spot.io/api/#operation/oceanEcsRollInit), [GKE](https://docs.spot.io/api/#operation/oceanGkeRollInit)
+In the Rolls tab, you can run immediate rolls for your clusters, VNGs, and node pools or schedule your cluster and VNG rolls.
 
-## Start A Cluster Roll
+The Rolls tab appears below if you have not yet performed or scheduled a roll in this cluster.
 
-1. In your Ocean cluster, go to Actions and click Cluster Roll.
+![ocean-rolls-no-rolls-yet](https://github.com/spotinst/help/assets/159915991/753b1eb4-3ef3-445b-8a0b-49c05543cc0a)
 
-<img src="/ocean/_media/features-roll-01.png" width="200" height="213" />
+If at least one roll exists, the Rolls History appears. 
 
-2. Enter the following information:
-   - Batch Size. Indicates how much will be rolled at a time. This value is a percentage of the cluster's target capacity.
-   - Comment. A brief note indicating the reason for the roll.
-   - Respect Pod Disruption Budget. Leave the default setting marked, or unmark this if you do not want to respect the PDB.
+![ocean-history1](https://github.com/spotinst/help/assets/159915991/28a6f90b-6379-42e9-b93c-2d7315cca61a)
 
-<img src="/ocean/_media/features-roll-a.png" width="592"/>
+##  Roll Now
 
-3. Click Roll.
+To roll immediately:
 
-## Start a VNG Roll
+1.	From the Rolls tab: If this is your first roll, click either **Cluster**, **Virtual Node Group**, or **Node Pool**.
 
-1. In your Ocean cluster, click the Virtual Node Groups tab.
+    -OR-
 
-<img src="/ocean/_media/features-roll-02a-1.png" />
+    From the Create Roll drop-down menu on the right of the screen, click either **Cluster Roll**, **VNG Roll**, or **Node Pool Roll**.
 
-2. In the list of VNGs, mark all the VNGs that you want to roll.
+    Alternative options for starting a roll:
 
-<img src="/ocean/_media/features-roll-02a-2.png" />
+    *   From the Cloud Cluster, Virtual Nodes Group tab: Select a VNG from the list, and then select **VNG Roll** from the Actions drop-down menu at the top-right of the screen.
+    *   From the Cloud Cluster Overview, select **Cluster Roll** from the Actions drop-down menu at the top-right of the screen.
 
-3. Click VNG Actions and Roll VNG.
 
-<img src="/ocean/_media/features-roll-02a-3.png" />
+    The dialog box depends on the type of object(s) you selected to roll (a sample is shown below).
 
-4. Enter the Batch Size and Comments, indicate whether you want to respect the pod disruption budget, and click Roll VNG(s).
+    ![Ocean-roll-vng](https://github.com/spotinst/help/assets/159915991/6c0cbb34-e08a-4d3b-9316-72f57e2dc6c6)
 
-<img src="/ocean/_media/features-roll-b.png" width="593"/>
+2.	To roll a VNG or Node Pools, select one or more VNGs or Node Groups to run from the drop-down menu at the top of the dialog box. You can optionally select **All**.
+3.	Configure the following (refer to [Roll Parameters](https://docs.spot.io/ocean/features?id=roll)):
 
-## Monitor The Roll
+    *   Set the size of a roll batch (%). 
+    *   Set the batch size healthy percentage (%).
+    *   Add an optional comment.
+    *   Turn on or turn off **Respect Pod Disruption Budget** (PDB)
+    *   Turn on or turn off **Respect Restrict Scale Down** (RSD).
 
-After you have created the roll, click the Cluster Roll tab.
+ 4.	Click **Roll Cluster** / **VNG** / **Node Pool**.
 
-In this tab you can see the details of the roll you created in Step 1, and you can follow the progress of the roll.
+>**Note:** To stop a roll while it is running, click the **Stop Roll** button on the screen's right, then click **Stop Roll** in the confirmation box.
 
-<img src="/ocean/_media/features-roll-03.png" />
+##  Create or Edit a Roll Schedule 
 
-## What’s Next?
+>**Note:** You can schedule cluster or Virtual Node Group rolls. You cannot schedule Node Pools rolls.
 
-Learn more about how Ocean’s [right-sizing](ocean/features/right-sizing) feature works.
+To create or edit a roll schedule: 
 
-> **\*\*Note**: Features indicated with this symbol are not supported for AKS.
+1.  To create your first roll schedule, click **Schedule a Roll**
+
+    -OR-
+
+    From the Create Roll drop-down menu on the right of the screen, click **Schedule Roll**.
+    
+    >**Note**: If you are editing an existing roll schedule, click the pencil icon on the right of the roll schedule entry in the Scheduled Rolls list.
+
+3.	Select the roll type in the Schedule Roll wizard's first step. The available roll types depend on your system deployment.
+ 
+    ![ocean-rolls-schedule-roll-step-1](https://github.com/spotinst/help/assets/159915991/44a77a63-981d-4fef-a996-3b314648e5ce)
+
+4.	In the second step of the wizard, configure the following (refer to [Roll Parameters](https://docs.spot.io/ocean/features?id=roll)):
+
+    *   Select your VNG or Cluster.
+    *   Configure the size of a roll batch (%). 
+    *   Configure the Batch size healthy percentage (%)
+    *   Add an optional comment.
+    *   Turn on or turn off Respect Pod Disruption Budget (PDB)
+    *   Turn on or turn off Respect Restrict Scale Down (RSD)
+  
+    ![ocean-rolls-schedule-roll-step-2](https://github.com/spotinst/help/assets/159915991/8ffd2e53-e421-47c2-b81d-82a0d912e7a7)
+   
+3.	In the third step of the wizard, set the schedule frequency using the day/week/month/time controls or type in a Cron expression.
+ 
+    ![ocean-rolls-schedule-roll-step-3-r1](https://github.com/spotinst/help/assets/159915991/6c8eb106-57b9-4d98-8020-69cc0ee7f820)
+
+4.	Click **Schedule Roll**. Your schedule appears in the Rolls tab - Scheduled Rolls list under Rolls History.
+
+    ![ocean-rolls-schedule-in -history tab-1](https://github.com/spotinst/help/assets/159915991/e06344aa-f073-4156-9fb9-8cc4058a6769)
+
+##  Delete a Scheduled Roll
+
+To delete a scheduled roll:
+
+1.	In the Scheduled Rolls list, to the right of the row for the required roll, click the wastebasket icon.
+2.	When the confirmation message appears, type "Delete" and then click **Delete**, or click **No, Keep** (if you are not sure).   
