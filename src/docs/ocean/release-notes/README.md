@@ -21,8 +21,8 @@
 Spot has introduced a new Ocean label, `spotinst.io/azure-premium-storage,` injected on every node in a node pool that supports premium storage. Once you define this label on a workload requiring premium storage, the pods can be provisioned on the most appropriate nodes (for the workload). [Learn More...](https://docs.spot.io/ocean/features/labels-and-taints) (edited)
 
 * **OCN-003: May 16, 2024:** 
-Ocean now offers the ability to schedule cluster and Virtual Node Group (VNG) rolls for AKS. You have the flexibility to roll immediately or plan a maintenance window on a weekly or monthly basis during non-peak hours to upgrade or update your clusters or VNGs. You can set up roll schedules using either the Spot API [link] through the "Create Cluster" or "Update Cluster" endpoints using a cron expression, or through the Ocean Console Cloud Cluster's "Roll" tab.
-[Learn more...]()
+Ocean now offers the ability to schedule cluster and Virtual Node Group (VNG) rolls for AKS. You have the flexibility to roll immediately or plan a maintenance window on a weekly or monthly basis during non-peak hours to upgrade or update your clusters or VNGs. You can set up roll schedules using either the [Spot API](https://docs.spot.io/api/#tag/Ocean-AKS/operation/oceanAKSClusterUpdate) through the "Create Cluster" or "Update Cluster" endpoints using a cron expression, or through the Ocean Console Cloud Cluster's "Roll" tab.
+[Learn more...](https://docs.spot.io/ocean/features/roll?id=rolls)
 
 
 * **OCN-004: May 16, 2024:** 
