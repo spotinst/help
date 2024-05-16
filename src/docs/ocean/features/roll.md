@@ -143,8 +143,8 @@ To roll immediately:
     *   Set the size of a roll batch (%). 
     *   Set the batch size healthy percentage (%).
     *   Add an optional comment.
-    *   Enable or disable **Respect Pod Disruption Budget** (PDB)
-    *   Enable or disable **Respect Restrict Scale Down** (RSD).
+    *   Turn on or turn off **Respect Pod Disruption Budget** (PDB)
+    *   Turn on or turn off **Respect Restrict Scale Down** (RSD).
 
  4.	Click **Roll Cluster** / **VNG** / **Node Pool**.
 
@@ -174,8 +174,8 @@ To create or edit a roll schedule:
     *   Configure the size of a roll batch (%). 
     *   Configure the Batch size healthy percentage (%)
     *   Add an optional comment.
-    *   Enable or disable Respect Pod Disruption Budget (PDB)
-    *   Enable or disable Respect Restrict Scale Down (RSD)
+    *   Turn on or turn off Respect Pod Disruption Budget (PDB)
+    *   Turn on or turn off Respect Restrict Scale Down (RSD)
   
     ![ocean-rolls-schedule-roll-step-2](https://github.com/spotinst/help/assets/159915991/8ffd2e53-e421-47c2-b81d-82a0d912e7a7)
    
