@@ -140,7 +140,7 @@ To roll immediately:
     ![Ocean-roll-vng](https://github.com/spotinst/help/assets/159915991/6c0cbb34-e08a-4d3b-9316-72f57e2dc6c6)
 
 2.	To roll a VNG or Node Pools, select one or more VNGs or Node Groups to run from the drop-down menu at the top of the dialog box. You can optionally select **All**.
-3.	Configure the following (refer to [Roll Parameters](https://docs.spot.io/ocean/features?id=roll)):
+3.	Configure the following (refer to [Roll Parameters](https://docs.spot.io/ocean/features/roll?id=roll-parameters)):
 
     *   Set the size of a roll batch (%). 
     *   Set the batch size healthy percentage (%).
@@ -170,7 +170,7 @@ To create or edit a roll schedule:
  
     ![ocean-rolls-schedule-roll-step-1](https://github.com/spotinst/help/assets/159915991/44a77a63-981d-4fef-a996-3b314648e5ce)
 
-4.	In the second step of the wizard, configure the following (refer to [Roll Parameters](https://docs.spot.io/ocean/features?id=roll)):
+4.	In the second step of the wizard, configure the following (refer to [Roll Parameters](https://docs.spot.io/ocean/features/roll?id=roll-parameters)):
 
     *   Select your VNG or Cluster.
     *   Configure the size of a roll batch (%). 
