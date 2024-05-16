@@ -4,7 +4,7 @@ The procedures on this page describe how to connect your Microsoft Azure Billing
  
 ## Prerequisites 
 
-* Permissions to create app registrations and assign subscription reader role in Azure. 
+* Permissions to create app registrations. 
 * You must be an Enterprise Administrator (EA). 
 * A Member Account only. The account cannot be a guest user account. 
  
@@ -61,8 +61,7 @@ In the previous app registration that was created, complete the following steps 
 ![connect-azure-sub-7](https://github.com/spotinst/help/assets/106514736/421e99fb-4266-4d1f-8a63-1e84d81d0bb9)
 
 
-4. In the Billing Engine Wizard, paste the application secret. 
-5. Enter one Subscription ID from the billing account.  
+4. In the Billing Engine Wizard, paste the application secret.  
 
 ## Step 5: Assign Enrollment Reader Role to the App Registration 
 
