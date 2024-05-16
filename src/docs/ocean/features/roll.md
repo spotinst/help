@@ -81,11 +81,11 @@ The following are reasons for failure:
 *   There may be one or more unhealthy nodes.
 *   Kubernetes version not supported.
 
-#   Schedule Cluster Roll for AKS from the Spot API 
+##   Schedule Cluster Roll for AKS from the Spot API 
 
 You can schedule a roll in the Create Cluster or Update Cluster [Spot API](https://docs.spot.io/api/#tag/Ocean-AKS/operation/oceanAKSV2ClusterUpdate) using a cron expression. This enables you to run the roll easily during off hours.
 
-##  Roll per Cluster, VNG, or Node Pool
+###  Roll per Cluster, VNG, or Node Pool
 
 Ocean VNGs / Node Pools enable you to run different VNGs / Node Pools within a single Ocean cluster, for example:
 
@@ -99,9 +99,9 @@ The VNG parameter initiates a roll of one or more VNGs in the cluster. When you 
 Similarly, the Spot API lets you roll one or more node pools without rolling the entire cluster. Do this by specifying a list of node Pool IDs or a specific Node Pool ID.
 The node pool parameter initiates a roll of one or more node pools in the cluster. When you specify a node pool ID, all the nodes in that node pool are rolled.
 
-#   Work with Rolls from the Console
+##   Work with Rolls from the Console
 
-##  Access the Ocean Cluster Rolls Tab   
+###  Access the Ocean Cluster Rolls Tab   
 
 To access the Ocean Cloud Cluster Rolls tab:
 
@@ -119,7 +119,7 @@ If at least one roll exists, the Rolls History appears.
 
 ![ocean-history1](https://github.com/spotinst/help/assets/159915991/28a6f90b-6379-42e9-b93c-2d7315cca61a)
 
-##  Roll Now
+###  Roll Now
 
 To roll immediately:
 
@@ -152,7 +152,7 @@ To roll immediately:
 
 >**Note:** To stop a roll while it is running, click the **Stop Roll** button on the screen's right, then click **Stop Roll** in the confirmation box.
 
-##  Create or Edit a Roll Schedule 
+###  Create or Edit a Roll Schedule 
 
 >**Note:** You can schedule cluster or Virtual Node Group rolls. You cannot schedule Node Pools rolls.
 
@@ -189,7 +189,7 @@ To create or edit a roll schedule:
 
     ![ocean-rolls-schedule-in -history tab-1](https://github.com/spotinst/help/assets/159915991/e06344aa-f073-4156-9fb9-8cc4058a6769)
 
-##  Delete a Scheduled Roll
+###  Delete a Scheduled Roll
 
 To delete a scheduled roll:
 
