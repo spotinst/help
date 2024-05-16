@@ -64,18 +64,7 @@ In the previous app registration that was created, complete the following steps 
 4. In the Billing Engine Wizard, paste the application secret. 
 5. Enter one Subscription ID from the billing account.  
 
-## Step 5: Assign Reader Role to the App Registration 
-
-1. In the Azure console, type **Subscriptions** in the search bar and click the Subscription you want to connect to Billing Engine. 
-**Note**: One subscription from the billing account needs to be given reader access to the application. 
-2. In the menu on the left side of the Subscriptions platform, click **Access Control (IAM)**. 
-3. Click **Add/Add role assignment**. 
-4. Select the Reader role and click **Next**. 
-6. Click **+ Select Members**. 
-7. In the right panel, search for and select the registered application created earlier. 
-8. Click **Review + Assign**. 
-
-## Step 6: Assign Enrollment Reader Role to the App Registration 
+## Step 5: Assign Enrollment Reader Role to the App Registration 
 
 Assigning the Enrollment Reader applies to Enterprise Agreement Only. Assign the Enrollment Reader role to the registered application. 
 
@@ -109,7 +98,7 @@ billingRoleAssignmentName: 24f8edb6-1668-4659-b5e2-40bb5f3a7d7e
 }  
 ``` 
  
-## Step 7: Connect 
+## Step 6: Connect 
 When the validation is complete, your Azure Billing Account will be connected to Billing Engine. 
 
 <img width="1036" alt="connect-azure-4" src="https://github.com/spotinst/help/assets/106514736/1dee88b7-daa5-4516-ba71-2f99f231ef6f">
