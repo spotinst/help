@@ -4,7 +4,9 @@ This topic is intended to help you troubleshoot your Ocean Controller Version 2.
 
 If you still encounter issues, contact Support via [online chat or email](https://spot.io/support/). 
 
-##  "Helm command not found" Log During Installation Via Script
+##  Upgrading from Ocean Controller Version 1 to Version 2
+
+###  "Helm command not found" Log During Installation Via Script
 
 The script installation of Ocean Controller Version 2.0 is based on Helm. 
 
@@ -12,7 +14,7 @@ To resolve this issue, ensure Helm is installed on your machine before starting 
 
 You can install Helm by running `install helm—https://helm.sh/docs/intro/install​`.
 
-##  "Metrics server already installed" Log After Using Helm to Install the Controller
+###  "Metrics server already installed" Log After Using Helm to Install the Controller
 
 This issue occurs because the **metric server** is already installed in your cluster. By default, the Helm Chart for the Ocean Controller installs the metric-server as a dependency. 
 
@@ -20,7 +22,7 @@ The metric server is a pod that helps Ocean collect data related to the memory a
 
 To resolve this issue, add `--set metrics-server.deployChart=false` to the helm install command.
 
-##  "Different controller versions detected. Please remove the old version controller. Old version controller pod(s)" Log in Your Ocean Cluster
+###  "Different controller versions detected. Please remove the old version controller. Old version controller pod(s)" Log in Your Ocean Cluster
 
 This log message appears when the old (Version 1) and new (Version 2) Ocean Controllers run concurrently in your Kubernetes cluster. 
 
