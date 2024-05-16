@@ -20,17 +20,17 @@
 * **OCN-002: May 1, 2024:**
 Spot has introduced a new Ocean label, `spotinst.io/azure-premium-storage,` injected on every node in a node pool that supports premium storage. Once you define this label on a workload requiring premium storage, the pods can be provisioned on the most appropriate nodes (for the workload). [Learn More...](https://docs.spot.io/ocean/features/labels-and-taints) (edited)
 
-* **OCN-003: May 16, 2024:** Schedule Cluster and VNG Rolls for AKS
+* **OCN-003: May 16, 2024:** 
 Ocean now offers the ability to schedule cluster and Virtual Node Group (VNG) rolls for AKS. You have the flexibility to roll immediately or plan a maintenance window on a weekly or monthly basis during non-peak hours to upgrade or update your clusters or VNGs. You can set up roll schedules using either the Spot API [link] through the "Create Cluster" or "Update Cluster" endpoints using a cron expression, or through the Ocean Console Cloud Cluster's "Roll" tab.
 [Learn more...]()
 
 
-* **OCN-004: May 16, 2024:** Connect AKS Private Clusters
+* **OCN-004: May 16, 2024:** 
 Ocean has introduced an update to manage and optimize AKS Private Clusters. Ocean now supports any AKS private cluster configuration, as long as the Ocean Controller can establish outbound communication with the Spot SaaS control plane.
 [Learn more…](https://docs.spot.io/ocean/getting-started/aks/?id=what-to-do-about-aks-private-clusters)
 
 
-* **OCN-005: May 16, 2024:** [Ocean Documentation Update] Set VNG Kubernetes Version (minor)
+* **OCN-005: May 16, 2024:** [Ocean Documentation Update]: 
 This topic explains how to manage Virtual Node Groups (VNGs) when upgrading the Kubernetes (K8s) version for your clusters. The recommended approach is to automatically upgrade the control plane to the latest K8s version while keeping the data plane's VNGs running on a minor K8s version until fully validating them for the latest K8s version.
 [Learn more…](https://docs.spot.io/ocean/tips-and-best-practices/vng-minor-versions?id=configure-a-minor-k8s-version-for-a-virtual-node-group)
 
