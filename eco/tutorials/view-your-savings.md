@@ -37,6 +37,7 @@ A bar graph shows the amount of savings each month broken down by type of saving
 - Eco: This source filter displays all savings provide by Eco.
 - Non-Eco: This source filter displays all savings provided by the customer.
 - Support Savings: This source filter displays all savings Eco saved you on AWS Support Plans. AWS provides different Support Tiers and charges differently for each tier. We retrieve and calculate how much a customer would be spending on support if they weren’t using Eco. Eco does not charge customers based on these savings.
+- Savings Data vs. Billing Data: The savings data displayed is the total saved by Eco and Non-Eco services from AWS data. This data may differ from the billing data presented in the Spot console retrieved from AWS on the 5th of every month. For further insights into the calculation of fees, please refer to the following documentation: [Fee Calculation Details](connect-your-cloud-provider/dashboard?id=fee-calculation). 
 
 <img src="/eco/_media/view-savings-savings_overtime-1.png" />
 
