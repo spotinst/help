@@ -1,5 +1,3 @@
-<meta name=“robots” content=“noindex”>
-
 # Rolls
 
 The Ocean Roll feature lets you to effortlessly synchronize cluster infrastructure with a fresh image, user data, or security groups, eliminating the need to disable the Ocean autoscaler or manually detach nodes within the cluster.
@@ -83,7 +81,7 @@ The following are reasons for failure:
 
 ##   Schedule Cluster Roll for AKS from the Spot API 
 
-You can schedule a roll in the Create Cluster or Update Cluster [Spot API](https://docs.spot.io/api/#tag/Ocean-AKS/operation/oceanAKSV2ClusterUpdate) using a cron expression. This enables you to run the roll easily during off hours.
+You can schedule a roll in the Create Cluster or Update Cluster [Spot API](https://docs.spot.io/api/#tag/Ocean-AKS/operation/oceanAKSClusterUpdate) using a cron expression. This enables you to run the roll easily during off hours.
 
 ###  Roll per Cluster, VNG, or Node Pool
 
