@@ -1,5 +1,11 @@
 # Controller Version History
 
+## [1.0.100] - 2024-05-15
+
+Added
+
+- Fixed security vulnerabilities
+
 ## [1.0.99] - 2024-03-18
 
 Added
