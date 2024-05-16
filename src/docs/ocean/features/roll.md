@@ -107,9 +107,9 @@ To access the Ocean Cloud Cluster Rolls tab:
 2.	Select a cluster from the list of clusters.
 3.	Click **Rolls**.
 
-In the Rolls tab, you can run immediate rolls for your clusters, VNGs, and node pools. Alternatively, you can schedule your cluster and VNG rolls.
+In the Rolls tab, you can run immediate rolls for your clusters, VNGs, and node pools or schedule your cluster and VNG rolls.
 
-If you have not yet performed or scheduled a roll in this cluster, the Rolls tab appears as shown below.
+The Rolls tab appears below if you have not yet performed or scheduled a roll in this cluster.
 
 ![ocean-rolls-no-rolls-yet](https://github.com/spotinst/help/assets/159915991/753b1eb4-3ef3-445b-8a0b-49c05543cc0a)
 
@@ -123,7 +123,7 @@ To roll immediately:
 
 1.	From the Rolls tab: If this is your first roll, click either **Cluster**, **Virtual Node Group**, or **Node Pool**.
 
-    OR
+    -OR-
 
     From the Create Roll drop-down menu on the right of the screen, click either **Cluster Roll**, **VNG Roll**, or **Node Pool Roll**.
 
@@ -133,12 +133,12 @@ To roll immediately:
     *   From the Cloud Cluster Overview, select **Cluster Roll** from the Actions drop-down menu at the top-right of the screen.
 
 
-    The dialog box that appears depends on the type of object(s) you selected to roll (a sample is shown below).
+    The dialog box depends on the type of object(s) you selected to roll (a sample is shown below).
 
     ![Ocean-roll-vng](https://github.com/spotinst/help/assets/159915991/6c0cbb34-e08a-4d3b-9316-72f57e2dc6c6)
 
 2.	To roll a VNG or Node Pools, select one or more VNGs or Node Groups to run from the drop-down menu at the top of the dialog box. You can optionally select **All**.
-3.	Configure the following (refer to [Roll Parameters]()):
+3.	Configure the following (refer to [Roll Parameters](https://docs.spot.io/ocean/features?id=roll)):
 
     *   Set the size of a roll batch (%). 
     *   Set the batch size healthy percentage (%).
@@ -158,17 +158,17 @@ To create or edit a roll schedule:
 
 1.  To create your first roll schedule, click **Schedule a Roll**
 
-    OR
+    -OR-
 
     From the Create Roll drop-down menu on the right of the screen, click **Schedule Roll**.
     
     >**Note**: If you are editing an existing roll schedule, click the pencil icon on the right of the roll schedule entry in the Scheduled Rolls list.
 
-3.	In the Schedule Roll wizard's first step, select the roll type. The available roll types depend on your system deployment.
+3.	Select the roll type in the Schedule Roll wizard's first step. The available roll types depend on your system deployment.
  
     ![ocean-rolls-schedule-roll-step-1](https://github.com/spotinst/help/assets/159915991/44a77a63-981d-4fef-a996-3b314648e5ce)
 
-4.	In the second step of the wizard, configure the following (refer to [Roll Parameters]()):
+4.	In the second step of the wizard, configure the following (refer to [Roll Parameters](https://docs.spot.io/ocean/features?id=roll)):
 
     *   Select your VNG or Cluster.
     *   Configure the size of a roll batch (%). 
