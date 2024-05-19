@@ -1,5 +1,3 @@
-<meta name=“robots” content=“noindex”>
-
 # Rolls
 
 The Ocean Roll feature lets you to effortlessly synchronize cluster infrastructure with a fresh image, user data, or security groups, eliminating the need to disable the Ocean autoscaler or manually detach nodes within the cluster.
