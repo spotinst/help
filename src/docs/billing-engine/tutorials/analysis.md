@@ -4,8 +4,7 @@ The Billing Analysis page presents your cloud expenditure and detailed informati
 
 Billing Engine supports the FinOps Foundation's FOCUS Specifications, although some fields are unique to Billing Engine and Cost Intelligence. 
 
-<details>
-  <summary markdown="span">Note: You can sort your data according to the following columns:</summary>
+You can sort your data according to the following columns:
 
 * Billing Period Start 
 * Billing Period End 
@@ -47,8 +46,6 @@ Billing Engine supports the FinOps Foundation's FOCUS Specifications, although s
 * List Cost 
 * Profit 
 * Usage Quantity
-
-</details><br>
 
 The total values are calculated based on the groupings: Billing Currency, Provider Cost, List Cost, Profit, Usage Quantity, List Unit Price, and Pricing Quantity.
 
