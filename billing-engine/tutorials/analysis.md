@@ -7,7 +7,7 @@ Billing Engine supports the FinOps Foundation's [FOCUS](https://focus.finops.org
 You can sort your data according to the following columns:
 
 <details>
-  <summary markdown="span">Sort your data</summary>
+  <summary markdown="span">Click here to view</summary>
 
 * Billing Period Start 
 * Billing Period End 
