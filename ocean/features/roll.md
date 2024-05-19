@@ -27,7 +27,7 @@ This logic can improve the cluster's utilization since the workload would run on
 
 *   **Respect Restrict Scale Down during Roll**: Rolls do not consider the restrict-scale-down label. Ocean will replace a node even if a task or pod uses this label. Ocean's autoscaler considers all configured constraints before the roll.
 
-*   **Roll Batch Size Percentage**: Indicates the percentage of the cluster's target capacity that will be rolled at a time during a node pool update or scale operation. For example, if the cluster's target capacity is 50 nodes, and the Batch Size Percentage is set to 20%, then each batch will consist of 20% of the target capacity, 10 nodes (50 nodes * 20% = 10 nodes). 
+*   **Roll Batch Size Percentage**: Indicates the percentage of the cluster's target capacity that will be rolled during a node pool update or scale operation. For example, if the cluster's target capacity is 50 nodes, and the Batch Size Percentage is set to 20%, each batch will consist of 20% of the target capacity, 10 nodes (50 nodes * 20% = 10 nodes). 
 
 *   **Batch Size Healthy Percentage**: indicates the minimum percentage of healthy instances in a single batch.
     The roll will fail if the number of healthy instances in a single batch is below this percentage. The range is 1-100; if the parameter value is null, the default value will be 50%. Ocean considers instances not replaced due to PDB as healthy.
@@ -45,7 +45,7 @@ During the roll process, Ocean provides information about the status of each nod
 
 *   **NOT_REPLACED_DUE_TO_PDB**: Replacing the node violates the PDB configuration on one of the pods running on the node. This status is only relevant when `respectPdb` is set to True. If a node could not be replaced due to PDB, and the allowed PDB % of nodes for the batch was respected, Ocean would continue to the next batch. 
 
-*   **NOT_REPLACED_DUE_TO_RSD**: Replacing the node violates the Restrict Scale Down configuration on one of the pods running on the node. This status is only relevant when `respectRestrictScaleDown` is set to True. If a node could not be replaced due to PDB, and the allowed Restrict Scale Down % of nodes for the batch was respected, Ocean would continue to the next batch. 
+*   **NOT_REPLACED_DUE_TO_RSD**: Replacing the node violates the Restrict Scale Down configuration on one of the pods running on the node. This status is only relevant when `respectRestrictScaleDown` is set to True. If a node could not be replaced due to Restrict Scale Down, and the allowed Restrict Scale Down % of nodes for the batch was respected, Ocean would continue to the next batch. 
 
 ##  Roll Status
 
