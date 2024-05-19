@@ -48,7 +48,7 @@ Click **Log in to Azure Account** and continue to the next step.
 
 7. Paste the **Application (client) ID** and **Directory (tenant) ID** in the fields. 
  
-<img width="483" alt="connect-azure-3" src="https://github.com/spotinst/help/assets/106514736/69d7d980-c404-4322-b126-0b780a40ac4d">
+<img width="454" alt="connect-azure-3" src="https://github.com/spotinst/help/assets/106514736/f78cc81a-c852-4853-892e-1f64279d0b42">
 
 ## Step 4: Create Certificates and Secrets 
 
