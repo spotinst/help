@@ -132,8 +132,7 @@ To roll immediately:
     *   From the Cloud Cluster, Virtual Nodes Group tab: Select a VNG from the list, and then select **VNG Roll** from the Actions drop-down menu at the top-right of the screen.
     *   From the Cloud Cluster Overview, select **Cluster Roll** from the Actions drop-down menu at the top-right of the screen.
 
-
-    The dialog box depends on the type of object(s) you selected to roll (a sample is shown below).
+   >**Note:** The dialog box depends on the type of object(s) you selected to roll (a sample is shown below).
 
 ![ocn-roll-ocean-create-roll-dialog-box](https://github.com/spotinst/help/assets/159915991/8f4a9b48-1d2d-49cf-b72c-e0b477dff6e1)
 
