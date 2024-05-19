@@ -27,7 +27,7 @@ This logic can improve the cluster's utilization since the workload would run on
 
 *   **Respect Pod Disruption Budget (PDB)**: Some pods may have a Pod Disruption Budget (PDB). In the Spot API, use `respectPdb` to instruct Ocean to verify the PDB. When `respectPdb` is set to True, Ocean will not replace a node if the PDB is violated.
 
-*   **Respect Restrict Scale Down (RSD) during Roll**: Rolls do not consider the restrict-scale-down label. Ocean will replace a node even if a task or pod uses this label. Ocean's autoscaler considers all configured constraints before the roll.
+*   **Respect Restrict Scale Down during Roll**: Rolls do not consider the restrict-scale-down label. Ocean will replace a node even if a task or pod uses this label. Ocean's autoscaler considers all configured constraints before the roll.
 
 *   **Roll Batch Size Percentage**: Indicates the percentage of the cluster's target capacity that will be rolled at a time during a node pool update or scale operation. For example, if the cluster's target capacity is 50 nodes, and the Batch Size Percentage is set to 20%, then each batch will consist of 20% of the target capacity, 10 nodes (50 nodes * 20% = 10 nodes). 
 
@@ -47,7 +47,7 @@ During the roll process, Ocean provides information about the status of each nod
 
 *   **NOT_REPLACED_DUE_TO_PDB**: Replacing the node violates the PDB configuration on one of the pods running on the node. This status is only relevant when `respectPdb` is set to True. If a node could not be replaced due to PDB, and the allowed PDB % of nodes for the batch was respected, Ocean would continue to the next batch. 
 
-*   **NOT_REPLACED_DUE_TO_RSD**: Replacing the node violates the RSD configuration on one of the pods running on the node. This status is only relevant when `respectRestrictScaleDown` is set to True. If a node could not be replaced due to PDB, and the allowed RSD % of nodes for the batch was respected, Ocean would continue to the next batch. 
+*   **NOT_REPLACED_DUE_TO_RSD**: Replacing the node violates the Restrict Scale Down configuration on one of the pods running on the node. This status is only relevant when `respectRestrictScaleDown` is set to True. If a node could not be replaced due to PDB, and the allowed Restrict Scale Down % of nodes for the batch was respected, Ocean would continue to the next batch. 
 
 ##  Roll Status
 
@@ -81,11 +81,11 @@ The following are reasons for failure:
 *   There may be one or more unhealthy nodes.
 *   Kubernetes version not supported.
 
-##   Schedule Cluster Roll for AKS from the Spot API 
+#   Roll from Spot API 
 
 You can schedule a roll in the Create Cluster or Update Cluster [Spot API](https://docs.spot.io/api/#tag/Ocean-AKS/operation/oceanAKSClusterUpdate) using a cron expression. This enables you to run the roll easily during off hours.
 
-###  Roll per Cluster, VNG, or Node Pool
+##  Roll per Cluster, VNG, or Node Pool
 
 Ocean VNGs / Node Pools enable you to run different VNGs / Node Pools within a single Ocean cluster, for example:
 
@@ -99,9 +99,9 @@ The VNG parameter initiates a roll of one or more VNGs in the cluster. When you 
 Similarly, the Spot API lets you roll one or more node pools without rolling the entire cluster. Do this by specifying a list of node Pool IDs or a specific Node Pool ID.
 The node pool parameter initiates a roll of one or more node pools in the cluster. When you specify a node pool ID, all the nodes in that node pool are rolled.
 
-##   Work with Rolls from the Console
+#   Roll from Console
 
-###  Access the Ocean Cluster Rolls Tab   
+##  Access the Ocean Cluster Rolls Tab   
 
 To access the Ocean Cloud Cluster Rolls tab:
 
@@ -113,13 +113,13 @@ In the Rolls tab, you can run immediate rolls for your clusters, VNGs, and node 
 
 The Rolls tab appears below if you have not yet performed or scheduled a roll in this cluster.
 
-![ocean-rolls-no-rolls-yet](https://github.com/spotinst/help/assets/159915991/753b1eb4-3ef3-445b-8a0b-49c05543cc0a)
+![ocn-roll-ocean-empty-first-roll](https://github.com/spotinst/help/assets/159915991/c4d47fc4-93c9-42a8-ae67-1fe58b986d49)
 
 If at least one roll exists, the Rolls History appears. 
 
-![ocean-history1](https://github.com/spotinst/help/assets/159915991/28a6f90b-6379-42e9-b93c-2d7315cca61a)
+![ocn-roll-ocean-existing-rolls-ud3](https://github.com/spotinst/help/assets/159915991/bd00ea00-3119-40b8-8fad-a911f5624499)
 
-###  Roll Now
+##  Roll Now
 
 To roll immediately:
 
@@ -137,7 +137,7 @@ To roll immediately:
 
     The dialog box depends on the type of object(s) you selected to roll (a sample is shown below).
 
-    ![Ocean-roll-vng](https://github.com/spotinst/help/assets/159915991/6c0cbb34-e08a-4d3b-9316-72f57e2dc6c6)
+![ocn-roll-ocean-create-roll-dialog-box](https://github.com/spotinst/help/assets/159915991/8f4a9b48-1d2d-49cf-b72c-e0b477dff6e1)
 
 2.	To roll a VNG or Node Pools, select one or more VNGs or Node Groups to run from the drop-down menu at the top of the dialog box. You can optionally select **All**.
 3.	Configure the following (refer to [Roll Parameters](https://docs.spot.io/ocean/features/roll?id=roll-parameters)):
@@ -146,13 +146,13 @@ To roll immediately:
     *   Set the batch size healthy percentage (%).
     *   Add an optional comment.
     *   Turn on or turn off **Respect Pod Disruption Budget** (PDB)
-    *   Turn on or turn off **Respect Restrict Scale Down** (RSD).
+    *   Turn on or turn off **Respect Restrict Scale Down**
 
  4.	Click **Roll Cluster** / **VNG** / **Node Pool**.
 
 >**Note:** To stop a roll while it is running, click the **Stop Roll** button on the screen's right, then click **Stop Roll** in the confirmation box.
 
-###  Create or Edit a Roll Schedule 
+##  Create or Edit a Roll Schedule 
 
 >**Note:** You can schedule cluster or Virtual Node Group rolls. You cannot schedule Node Pools rolls.
 
@@ -168,7 +168,8 @@ To create or edit a roll schedule:
 
 3.	Select the roll type in the Schedule Roll wizard's first step. The available roll types depend on your system deployment.
  
-    ![ocean-rolls-schedule-roll-step-1](https://github.com/spotinst/help/assets/159915991/44a77a63-981d-4fef-a996-3b314648e5ce)
+![ocn-roll-ocean-schedule-roll-first-step](https://github.com/spotinst/help/assets/159915991/953f5022-a60c-4662-886e-e5a1009d1a6f)
+
 
 4.	In the second step of the wizard, configure the following (refer to [Roll Parameters](https://docs.spot.io/ocean/features/roll?id=roll-parameters)):
 
@@ -177,19 +178,21 @@ To create or edit a roll schedule:
     *   Configure the Batch size healthy percentage (%)
     *   Add an optional comment.
     *   Turn on or turn off Respect Pod Disruption Budget (PDB)
-    *   Turn on or turn off Respect Restrict Scale Down (RSD)
+    *   Turn on or turn off Respect Restrict Scale Down 
+
+![ocn-roll-ocean-schedule-roll-second-step](https://github.com/spotinst/help/assets/159915991/47d2c4b4-6ea7-4d51-9d9e-663cfe77f445)
   
-    ![ocean-rolls-schedule-roll-step-2](https://github.com/spotinst/help/assets/159915991/8ffd2e53-e421-47c2-b81d-82a0d912e7a7)
-   
 3.	In the third step of the wizard, set the schedule frequency using the day/week/month/time controls or type in a Cron expression.
  
-    ![ocean-rolls-schedule-roll-step-3-r1](https://github.com/spotinst/help/assets/159915991/6c8eb106-57b9-4d98-8020-69cc0ee7f820)
+ ![ocn-roll-ocean-schedule-roll-third-step](https://github.com/spotinst/help/assets/159915991/e73b2b1f-867c-42ee-a19c-dcb930deb356)
+
 
 4.	Click **Schedule Roll**. Your schedule appears in the Rolls tab - Scheduled Rolls list under Rolls History.
 
-    ![ocean-rolls-schedule-in -history tab-1](https://github.com/spotinst/help/assets/159915991/e06344aa-f073-4156-9fb9-8cc4058a6769)
+![ocn-roll-ocean-new-schedule-in-history](https://github.com/spotinst/help/assets/159915991/534fc374-4a9c-4a7e-8d9f-76c276ab37a9)
 
-###  Delete a Scheduled Roll
+
+##  Delete a Scheduled Roll
 
 To delete a scheduled roll:
 
