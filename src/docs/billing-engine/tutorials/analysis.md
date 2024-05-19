@@ -2,9 +2,9 @@
 
 The Billing Analysis page presents your cloud expenditure and detailed information, providing a deeper understanding of your financial activities within the cloud environment.
 
-Billing Engine supports the FinOps Foundation's FOCUS Specifications, although some fields are unique to Billing Engine and Cost Intelligence. 
+Billing Engine supports the FinOps Foundation's [FOCUS](https://focus.finops.org/) Specifications, although some fields are unique to Billing Engine and Cost Intelligence. 
 
-You can sort your data according to the [following columns](:
+You can sort your data according to the [following columns](billing-engine/tutorials/analysis?id=sort-your-data):
 
 <details>
   <summary markdown="span">Sort your data</summary>
