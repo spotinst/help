@@ -111,11 +111,11 @@ To access the Ocean Cloud Cluster Rolls tab:
 
 In the Rolls tab, you can run immediate rolls for your clusters, VNGs, and node pools or schedule your cluster and VNG rolls.
 
-The Rolls tab appears below if you have not yet performed or scheduled a roll in this cluster.
+*    If you have not run or scheduled a roll in this cluster, the Rolls tab appears as shown below.
 
 ![ocn-roll-ocean-empty-first-roll](https://github.com/spotinst/help/assets/159915991/c4d47fc4-93c9-42a8-ae67-1fe58b986d49)
 
-If at least one roll exists, the Rolls History appears. 
+*    If at least one roll exists, the Rolls History appears. 
 
 ![ocn-roll-ocean-existing-rolls-ud3](https://github.com/spotinst/help/assets/159915991/bd00ea00-3119-40b8-8fad-a911f5624499)
 
@@ -152,11 +152,11 @@ To roll immediately:
 
 >**Note:** To stop a roll while it is running, click the **Stop Roll** button on the screen's right, then click **Stop Roll** in the confirmation box.
 
-##  Create or Edit a Roll Schedule 
+##  Create a Roll Schedule 
 
 >**Note:** You can schedule cluster or Virtual Node Group rolls. You cannot schedule Node Pools rolls.
 
-To create or edit a roll schedule: 
+To create a roll schedule: 
 
 1.  To create your first roll schedule, click **Schedule a Roll**
 
@@ -164,14 +164,12 @@ To create or edit a roll schedule:
 
     From the Create Roll drop-down menu on the right of the screen, click **Schedule Roll**.
     
-    >**Note**: If you are editing an existing roll schedule, click the pencil icon on the right of the roll schedule entry in the Scheduled Rolls list.
-
-3.	Select the roll type in the Schedule Roll wizard's first step. The available roll types depend on your system deployment.
+2.	In the Schedule Roll wizard's first step, select the roll type. The available roll types depend on your system deployment.
  
 ![ocn-roll-ocean-schedule-roll-first-step](https://github.com/spotinst/help/assets/159915991/953f5022-a60c-4662-886e-e5a1009d1a6f)
 
 
-4.	In the second step of the wizard, configure the following (refer to [Roll Parameters](https://docs.spot.io/ocean/features/roll?id=roll-parameters)):
+3.	In the second step of the wizard, configure the following (refer to [Roll Parameters](https://docs.spot.io/ocean/features/roll?id=roll-parameters)):
 
     *   Select your VNG or Cluster.
     *   Configure the size of a roll batch (%). 
@@ -182,19 +180,24 @@ To create or edit a roll schedule:
 
 ![ocn-roll-ocean-schedule-roll-second-step](https://github.com/spotinst/help/assets/159915991/47d2c4b4-6ea7-4d51-9d9e-663cfe77f445)
   
-3.	In the third step of the wizard, set the schedule frequency using the day/week/month/time controls or type in a Cron expression.
+4.	In the third step of the wizard, set the schedule frequency using the day/week/month/time controls or type in a Cron expression.
  
  ![ocn-roll-ocean-schedule-roll-third-step](https://github.com/spotinst/help/assets/159915991/e73b2b1f-867c-42ee-a19c-dcb930deb356)
 
 
-4.	Click **Schedule Roll**. Your schedule appears in the Rolls tab - Scheduled Rolls list under Rolls History.
+5.	Click **Schedule Roll**. Your schedule appears in the Rolls tab - Scheduled Rolls list under Rolls History.
 
 ![ocn-roll-ocean-new-schedule-in-history](https://github.com/spotinst/help/assets/159915991/534fc374-4a9c-4a7e-8d9f-76c276ab37a9)
 
+## Turn a Scheduled Roll On or Off
+
+To turn a scheduled roll on or off: 
+
+*    To the right of the scheduled roll, click the slider right (turn on) or left (turn off).
 
 ##  Delete a Scheduled Roll
 
 To delete a scheduled roll:
 
-1.	In the Scheduled Rolls list, to the right of the row for the required roll, click the wastebasket icon.
+1.	To the right of the scheduled roll, click the wastebasket icon.
 2.	When the confirmation message appears, type "Delete" and then click **Delete**, or click **No, Keep** (if you are not sure).   
