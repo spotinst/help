@@ -3151,18 +3151,18 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean/features/right-sizing"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/ocean/features/roll-deprecated</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean/features/roll-deprecated"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean/features/roll-deprecated"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/ocean/features/roll</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean/features/roll"/>
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean/features/roll"/>
-    </url>
-    <url>
-        <loc>https://docs.spot.io/?/ocean/features/roll1</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean/features/roll1"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean/features/roll1"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/ocean/features/running-hours</loc>
