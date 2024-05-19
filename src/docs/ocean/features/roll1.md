@@ -81,7 +81,7 @@ The following are reasons for failure:
 *   There may be one or more unhealthy nodes.
 *   Kubernetes version not supported.
 
-#   Schedule Cluster Roll for AKS from the Spot API 
+#   Roll from Spot API 
 
 You can schedule a roll in the Create Cluster or Update Cluster [Spot API](https://docs.spot.io/api/#tag/Ocean-AKS/operation/oceanAKSClusterUpdate) using a cron expression. This enables you to run the roll easily during off hours.
 
@@ -99,7 +99,7 @@ The VNG parameter initiates a roll of one or more VNGs in the cluster. When you 
 Similarly, the Spot API lets you roll one or more node pools without rolling the entire cluster. Do this by specifying a list of node Pool IDs or a specific Node Pool ID.
 The node pool parameter initiates a roll of one or more node pools in the cluster. When you specify a node pool ID, all the nodes in that node pool are rolled.
 
-#   Work with Rolls from the Console
+#   Roll from Console
 
 ##  Access the Ocean Cluster Rolls Tab   
 
