@@ -5,7 +5,7 @@
 * **OCN-001**: As of **May 1, 2024**, **Ocean Controller Version 2** for **AWS K8s** is officially released, bringing a host of new features and enhancements to streamline your operations:
   *  With Ocean Controller Version 2, you can expect enhanced efficiency and performance thanks to its innovative event-driven system design. This intelligent architecture ensures your cluster operates at peak performance, delivering optimal results with every interaction.
 
-  *  One of the standout features of Ocean Controller Version 2 is its out-of-the-box Leader Election mode, guaranteeing continuous pod availability and uninterrupted operations, to keep your cluster running smoothly, even in the face of unexpected events.
+  *  One of the standout features of Ocean Controller Version 2 is its out-of-the-box Leader Election mode, which guarantees continuous pod availability and uninterrupted operations to keep your cluster running smoothly, even in the face of unexpected events.
 
   *  Ocean Controller Version 2 establishes a secure binding between your Kubernetes cluster and the relevant Ocean resources. By configuring your Spot Account ID, Spot Token, and a unique Cluster Identifier for each cluster, you can easily manage and monitor your resources.
 
