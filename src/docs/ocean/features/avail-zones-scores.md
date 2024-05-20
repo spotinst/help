@@ -15,7 +15,7 @@ To access the Ocean Availability Zones Recommendations:
 
 The Recommendations tab consists of a dashboard with two panels:
 *  Recommendations Card
-*  Score Graph
+*  Score Graph 
 
 ##  Recommendations Card
 
