@@ -1,7 +1,6 @@
 <meta name=“robots” content=“noindex”>
 
-#  Availability Zones Recommendations for AWS Ocean K8s
-
+#  Availability Zones Recommendations for EKS
 Availability Zones scores and recommendations help you make informed decisions when selecting the best availability Zones for launching instances. The data on the Recommendations tab for a cluster is based on the Availability Zones scores calculated by Ocean, considering both Cost and Spot market availability. 
 
 The Availability Zones scores data directly relates to the allowed instance types configured in your Virtual Node Group to ensure that customized data is displayed.
