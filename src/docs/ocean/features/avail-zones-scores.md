@@ -54,4 +54,16 @@ To configure your Availability Zones recommendations:
 
 1.  In the Availability Zones Recommendations tab, Recommendations Card, click **+ Add to Configuration**.
 
+The Update Configured AZ(s) dialog box lets you edit, add, and change the configured Availability Zones and subnets based on your configured and recommended Availability Zones.
+
+The currently configured Availability Zones are pre-selected.
+
+>**NOTE**: Availability Zones may appear gray, indicating no available subnets.
+
+>**IMPORTANT**: If the subnets are not set on the Virtual Node Group ('subnets' = null) but are taken from the Virtual Node Group template, an information banner will appear in the dialog box to inform you that updating will override the Virtual Node Group Template configuration, and will affect all the custom Virtual Node Groups with ‘subnets’ = null.
+
+
+
+
+
 
