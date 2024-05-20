@@ -2,7 +2,7 @@
 
 #  Availability Zones Recommendations for AWS Ocean K8s
 
-Availability Zones scores and recommendations assist you in making informed decisions when selecting the best availability Zones for launching instances. The data on the Recommendations tab for a cluster is based on the Availability Zones scores calculated by Ocean, considering both Cost and Spot market availability. 
+Availability Zones scores and recommendations help you make informed decisions when selecting the best availability Zones for launching instances. The data on the Recommendations tab for a cluster is based on the Availability Zones scores calculated by Ocean, considering both Cost and Spot market availability. 
 
 The Availability Zones scores data directly relates to the allowed instance types configured in your Virtual Node Group to ensure that customized data is displayed.
 
@@ -22,11 +22,33 @@ The Recommendations Card displays scores ranging from 0 to 100. These scores inc
 
 ###  High Score Availability Zones
 
-The Recommendations Card directly recommends Availability Zones that can reduce costs and interruption rates. You can use the information provided to add or expand to more Availability Zones. Accordingly, a wider range of Spot Markets is included to enhance your options.
+The Recommendations Card directly recommends Availability Zones that can reduce costs and interruption rates. You can use the information provided to add or expand to more Availability Zones, enhancing your options with a wider range of Spot Markets.
 
 A star symbol next to an Availability Zone indicates it has a higher score than the average Virtual Node Group score for the month. So, although the Availability Zone is not currently configured, it has a higher score, indicating its potential benefits. You can expand or replace your Availability Zone offerings based on the star-marked recommendations. Expanding the options enables you to improve the results by having more choices and achieving a better balance between Spot Markets and ideal costs.
 
 The recommendations are data-driven, considering instance interruptions and machine costs over time.
 
->**Note**: Only infrastructure costs are taken into account, not network costs.
+>**Note**: Only infrastructure costs are considered, not network costs.
+
+###  Average Monthly Score Breakdown
+
+The Average Monthly Score Breakdown is relative to the Spot market’s set within the cluster and is based on data collected from the past month. The scores consider the relevant instance types selected in the group when calculating the recommendation score for the Availability Zones.
+
+>**Tip**: Click **How is it calculated** on the Recommendations Card to view the details of the Avg. Monthly Score calculation.
+
+##  Score Graph
+
+The Availability Zone Score graph summarizes the data from the last 30 days. A straight line represents a configured Availability Zone, while a dashed line represents a non-configured Availability Zone. 
+
+Hover over a specific day in the graph to view the scores of the Availability Zones.
+
+To manipulate the score graph:
+
+*  Click on a zone indicator in the legend at the top of the score graph, for example, us-east-ia  in the example above, to remove the curve from the score graph. Click it again to return the curve to the score graph. 
+
+>**Note**: Scores may differ when navigating between Virtual Node Groups because they are calculated according to the relevant source resource types.
+
+The recommendations are data-driven, considering instance interruptions and machine costs over time.
+
+>**Note**: Only infrastructure costs are considered, not network costs.
 
