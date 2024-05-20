@@ -62,7 +62,13 @@ The currently configured Availability Zones are pre-selected.
 
 >**IMPORTANT**: If the subnets are not set on the Virtual Node Group ('subnets' = null) but are taken from the Virtual Node Group template, an information banner will appear in the dialog box to inform you that updating will override the Virtual Node Group Template configuration, and will affect all the custom Virtual Node Groups with ‘subnets’ = null.
 
+2.  Edit your Availablity Zones and accept your recommendations as required.
 
+>**Note**: You can replace a single Availability Zone without adding one.
+
+**Important**:   Make sure that a PVC or any other component can run in the new Availability Zone before replacing the current Availability Zone.
+
+3.  Click **Update**. The updated configuration appears in the Recommendations tab dshboards.
 
 
 
