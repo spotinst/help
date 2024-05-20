@@ -18,6 +18,9 @@ The Recommendations tab consists of a dashboard with two panels:
 *  Score Graph
 
 ##  Recommendations Card
+
+[placeholder]
+
 The Recommendations Card displays scores ranging from 0 to 100. These scores include various factors, such as the cost of instances within the cluster and the conversion rate (the ratio of the interruptions to the number of instances managed in the same market).
 
 ###  High Score Availability Zones
@@ -38,6 +41,8 @@ The Average Monthly Score Breakdown is relative to the Spot market’s set withi
 
 ##  Score Graph
 
+[placeholder]
+
 The Availability Zone Score graph summarizes the data from the last 30 days. A straight line represents a configured Availability Zone, while a dashed line represents a non-configured Availability Zone. 
 
 Hover over a specific day in the graph to view the scores of the Availability Zones.
@@ -56,11 +61,15 @@ To configure your Availability Zones recommendations:
 
 The Update Configured AZ(s) dialog box lets you edit, add, and change the configured Availability Zones and subnets based on your configured and recommended Availability Zones.
 
+[placeholder]
+
 The currently configured Availability Zones are pre-selected.
 
 >**NOTE**: Availability Zones may appear gray, indicating no available subnets.
 
 >**IMPORTANT**: If the subnets are not set on the Virtual Node Group ('subnets' = null) but are taken from the Virtual Node Group template, an information banner will appear in the dialog box to inform you that updating will override the Virtual Node Group Template configuration, and will affect all the custom Virtual Node Groups with ‘subnets’ = null.
+
+[placeholder]
 
 2.  Edit your Availablity Zones and accept your recommendations as required.
 
