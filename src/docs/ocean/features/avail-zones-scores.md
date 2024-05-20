@@ -48,7 +48,10 @@ To manipulate the score graph:
 
 >**Note**: Scores may differ when navigating between Virtual Node Groups because they are calculated according to the relevant source resource types.
 
-The recommendations are data-driven, considering instance interruptions and machine costs over time.
+##  Configure Your Availability Zones Recommendations
 
->**Note**: Only infrastructure costs are considered, not network costs.
+To configure your Availability Zones recommendations:
+
+1.  In the Availability Zones Recommendations tab, Recommendations Card, click **+ Add to Configuration**.
+
 
