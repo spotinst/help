@@ -4,7 +4,7 @@
 
 This page describes migrating existing AKS Kubernetes workloads into an Ocean cluster.
 
-Before you start this procedure, review the [prerequisites]()
+Before you start this procedure, review the [prerequisites](https://docs.spot.io/ocean/tutorials/migrate-workload-aks?id=prerequisites).
 
 ##  Step 1: Get Started with the Workload Migration
 
