@@ -10,11 +10,10 @@ Before starting, review the [prerequisites](https://docs.spot.io/ocean/tutorials
 
 1.  In the left main menu, click **Ocean** and click **Cloud Clusters**.
 2.  Select a cluster from the list of clusters.
-3.  Click **Start Migration** on the left of the screen under Ocean Managed Nodes.
+3.  Click **Start Migration** on the left of the screen under Ocean Managed Nodes. Ocean automatically detects the workloads (nodes and pods) that belong to the associated Kubernetes cluster and displays all the discovered nodes in a list.
 
   [placeholder]
 
-Ocean automatically detects the workloads (nodes and pods) that belong to the associated Kubernetes    cluster and displays all the discovered nodes in a table.
 
 4.  Select the nodes (instances) you want to migrate into your Ocean cluster.
 
