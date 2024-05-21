@@ -302,6 +302,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/administration/"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/administration/release-notes-core/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/administration/release-notes-core/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/administration/release-notes-core/"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/administration/sso-access-control/account-level-sso</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
