@@ -4,4 +4,5 @@
 
 ##  Features and Enhancements
 
-*  OCN-005: May 16, 2024: ipsemlorem. [Learn more]()
+*  COR-001: May 19, 2024: ipsemlorem. [Learn more]()
+*  COR-001: May 16, 2024: ipsemlorem. [Learn more]()
