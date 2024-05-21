@@ -18,7 +18,7 @@ The Recommendations tab consists of a dashboard with two panels:
 
 ##  Recommendations Card
 
-[placeholder]
+![az-rec-taba](https://github.com/spotinst/help/assets/159915991/7e1d2fd2-8c14-4814-a3ee-651866762592)
 
 The Recommendations Card displays scores ranging from 0 to 100. These scores include various factors, such as the cost of instances within the cluster and the conversion rate (the ratio of the interruptions to the number of instances managed in the same market).
 
@@ -40,7 +40,7 @@ The Average Monthly Score Breakdown is relative to the Spot market’s set withi
 
 ##  Score Graph
 
-[placeholder]
+![az-recommend-tab](https://github.com/spotinst/help/assets/159915991/0e761f12-135d-415c-8c91-eb131d212696)
 
 The Availability Zone Score graph summarizes the data from the last 30 days. A straight line represents a configured Availability Zone, while a dashed line represents a non-configured Availability Zone. 
 
@@ -60,15 +60,15 @@ To configure your Availability Zones recommendations:
 
 The Update Configured AZ(s) dialog box lets you edit, add, and change the configured Availability Zones and subnets based on your configured and recommended Availability Zones.
 
-[placeholder]
+![az-conf-nonconf-edit](https://github.com/spotinst/help/assets/159915991/34f49210-a6fb-4ae4-8d75-edf46c71684e)
 
 The currently configured Availability Zones are pre-selected.
 
 >**NOTE**: Availability Zones may appear gray, indicating no available subnets.
 
->**IMPORTANT**: If the subnets are not set on the Virtual Node Group ('subnets' = null) but are taken from the Virtual Node Group template, an information banner will appear in the dialog box to inform you that updating will override the Virtual Node Group Template configuration, and will affect all the custom Virtual Node Groups with ‘subnets’ = null.
+>**IMPORTANT**: If the subnets are not set on the [Virtual Node Group](https://docs.spot.io/ocean/tutorials/manage-virtual-node-groups) ('subnets' = null) but are taken from the Virtual Node Group template (default VNG), an information banner will appear in the dialog box to inform you that updating will override the Virtual Node Group Template configuration, and will affect all the custom Virtual Node Groups with ‘subnets’ = null.
 
-[placeholder]
+![az-vng-message](https://github.com/spotinst/help/assets/159915991/b51b8833-cb28-40ed-8df4-090558487d7a)
 
 2.  Edit your Availablity Zones and accept your recommendations as required.
 
