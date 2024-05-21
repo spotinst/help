@@ -46,4 +46,32 @@ The migration will fail if the number of healthy nodes in a single batch is belo
 
 *  Click **Start Migration**.
 
+##  Step 4: View the Workload Migration Dashboard
 
+Follow the migration in the dashboard.
+
+ [placeholder]
+
+Node Statuses:
+
+*  In Progress: The migration process is in progress.
+*  Migrated: The node has been migrated
+*  Not Migrated: Node could not be migrated
+*  To be Migrated: Node not yet migrated
+*  Failed:  Migration failed.
+*  Manually Excluded: Node was not selected for migration
+
+###  Stop Migration
+
+You can stop a migration in progress. However, migrated workloads remain under the new Spot nodes. Spot completes scheduling all the unscheduled pods of the current batch, and undrained nodes become schedulable again.
+
+To stop the migration process in progress.
+
+1.  Click **Stop Migration**.
+2.  Select **Terminate Drained Instances** if you want Ocean to terminate the already drained nodes before stopping the entire process.
+
+##  View Previous Migrations
+
+To view previous migrations:
+
+*  From the Actions drop-down menu at the top-right of the screen, click **Previous Migrations**.
