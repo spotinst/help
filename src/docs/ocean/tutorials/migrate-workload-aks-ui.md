@@ -34,9 +34,16 @@ The migration will fail if the number of healthy nodes in a single batch is belo
 
 *  **Evict stand-alone Pods**: Ocean evicts pods that are not part of a Kubernetes deployment and will automatically reschedule these stand-alone pods.
 
-*  **Respect Pod Disruption Budget (PDB)**: Some pods may have a Pod Disruption Budget (PDB). In the Spot API, use respectPdb to instruct Ocean to verify the PDB. When respectPdb is set to True, Ocean will not migrate a node if the PDB is violated. 
+*  **Respect Pod Disruption Budget (PDB)**: Some pods may have a [Pod Disruption Budget](https://kubernetes.io/docs/concepts/workloads/pods/disruptions/#pod-disruption-budgets). In the Spot API, use respectPdb to instruct Ocean to verify the PDB. When respectPdb is set to True, Ocean will not migrate a node if the PDB is violated. 
 
 *  **Respect Restrict Scale Down during Roll**: Rolls do not consider the restrict-scale-down label. Ocean will migrate a node even if a task or pod uses this label. Ocean's Autoscaler considers all configured constraints before the roll.
 
 *  **Delete node from Azure after successful migration**: Select to delete the node from the Azure console because Ocean now manages the node.
+
+*  **Enable Unmanagement via Azure Console (after successful migration)**: Change Azure-managed node pools from automatic to manual scaling.
+
+##  Step 3: Start Migration
+
+*  Click **Start Migration**.
+
 
