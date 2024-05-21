@@ -1,3 +1,5 @@
+<meta name=“robots” content=“noindex”>
+
 # Migrate Workload using the Spot API
 
 This page describes migrating existing AKS Kubernetes workloads into an Ocean cluster.
@@ -6,7 +8,7 @@ Before you start this procedure, review the [prerequisites]()
 
 ##  Step 1: Get Started with the Workload Migration
 
-The [Get Migration Discovery API](https://docs.spot.io/api/#tag/Ocean-AKS/operation/oceanAksGetMigration) call returns the information about nodes that can be migrated into Ocean and the number of pods running on each node if the flag is true.
+The [Get Migration Discovery](https://docs.spot.io/api/#tag/Ocean-AKS/operation/oceanAksGetMigration) API call returns the information about nodes that can be migrated into Ocean and the number of pods running on each node if the flag is true.
 
 Additionally, the API call returns a [Virtual Node Group](https://docs.spot.io/api/#tag/Ocean-AKS/operation/oceanAksGetMigration) parameter based on the node's labels and taints.
 
@@ -16,13 +18,13 @@ Additionally, the API call returns a [Virtual Node Group](https://docs.spot.io/a
 
 After creating your Ocean cluster:
 
-1.  Run the [Get Migration Discovery API](https://docs.spot.io/api/#tag/Ocean-AKS/operation/oceanAksGetMigration) call.
+1. Run the [Get Migration Discovery](https://docs.spot.io/api/#tag/Ocean-AKS/operation/oceanAksGetMigration) API call.
 2  From the list of nodes returned in the API, choose the nodes you need to migrate to Ocean and use them in the next step.
-3.  Create a dedicated Virtual Node Group for your workload. See How.
+3. Create a dedicated Virtual Node Group for your workload. See How.
 
 ##  Step 2: Create the Migration and Set Preferences
 
-Use the [Create Migration API](https://docs.spot.io/api/#tag/Ocean-AKS/operation/oceanAksCreateMigration) call to create the migration process. Add the list of instances you want to migrate and the parameters below:
+Use the [Create Migration](https://docs.spot.io/api/#tag/Ocean-AKS/operation/oceanAksCreateMigration) API call to create the migration process. Add the list of instances you want to migrate and the parameters below:
 
 *  nodeNames: a list of instance IDs that should be migrated to the Ocean cluster.
 
