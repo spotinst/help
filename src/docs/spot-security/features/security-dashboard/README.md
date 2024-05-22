@@ -30,11 +30,21 @@ You can use the filters at the top to focus only on the information you need. On
 
 <img src="/spot-security/_media/spot-security-dashboard-b1.png" />
 
-### Prioritized Actionable Insights
+### Prioritized Risk Analysis
 
 Spot Security helps you prioritize risks by providing you with the Prioritized Actionbale Insights. The Risks in this table are sorted according to priorities starting from 1 to 100 by default. Spot Security takes into account asset’s status (Internet facing), asset type, severity of the security rule, blast radius and access type (external access, public access) to calculate the priority. You can choose to accept the risks using the supress action and you will be presented with the next set of priorities. You can also filter the table and customize its columns as well as export the table to a CSV file.  
 
 <img src="/spot-security/_media/dashboard-1.png" />
+
+### Prioritised Vulnerability
+
+The Prioritized Vulnerabilities table presents the vulnerability findings based on their priorities, ranging from 1 to 100 by default. Spot Security takes into account multiple criteria to provide you with a contextual ranking for both the CVE (Common Vulnerabilities and Exposures) and the asset. This feature enables you to easily identify and address the most critical vulnerabilities first.
+
+![dashboard-5](https://github.com/spotinst/help/assets/106514736/cb2872db-e221-469e-a92d-658feacd6e88)
+
+Click the number of the Total Findings column of a vulnerability to view additional information, such as the OS, packages, etc.
+
+![dashboard-6](https://github.com/spotinst/help/assets/106514736/d75dbf9d-44f0-472a-87c2-b615497082d6)
 
 ### Most Prevalent Alerts
 
