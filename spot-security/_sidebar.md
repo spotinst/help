@@ -22,5 +22,6 @@
       - [Configure](spot-security/features/vulnerability/configure/)
         - [Configure for AWS](spot-security/features/vulnerability/configure/aws)
         - [Configure for Azure](spot-security/features/vulnerability/configure/azure)  
+  - [Release Notes](spot-security/release-notes/)
   - [Support Matrix](spot-security/security-matrix/)
   - [License](spot-security/license/)
