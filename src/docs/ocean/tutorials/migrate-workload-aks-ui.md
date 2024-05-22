@@ -10,20 +10,24 @@ Before starting, review the [prerequisites](https://docs.spot.io/ocean/tutorials
 
 1.  In the left main menu, click **Ocean** and click **Cloud Clusters**.
 2.  Select a cluster from the list of clusters.
-3.  Click **Start Migration** on the left of the screen under Ocean Managed Nodes. Ocean automatically detects the workloads (nodes and pods) that belong to the associated Kubernetes cluster and displays all the discovered nodes in a list.
+3.  Click **Start Migration** on the left of the screen under Ocean Managed Nodes. 
 
-  [placeholder]
+![workloads-migration-start-migrations](https://github.com/spotinst/help/assets/159915991/998bb5f0-cdd8-4461-bd66-224df9a28590)
 
+Ocean automatically detects the workloads (nodes and pods) belonging to the associated Kubernetes cluster and displays a list of all the discovered nodes.
+
+![workloads-migration-validated-nodes](https://github.com/spotinst/help/assets/159915991/6163f354-2968-4df9-81ba-8df105d5c139)
 
 4.  Select the nodes (instances) you want to migrate into your Ocean cluster.
 
-If any node entries show the Required Validation status under the Ready for Migration column, click **Validate** at the bottom left of the screen.
+5.  If any node entries show the Required Validation status under the Ready for Migration column, click **Validate** at the bottom left of the screen.
 
 ##  Step 2: Set Preferences
 
 Select your workload migration preferences.
 
-[placeholder]
+![workloads-migration-preferences](https://github.com/spotinst/help/assets/159915991/5ba5714c-88f8-478b-9d56-9ad048d543b4)
+
 
 *  **Batch Size Percentage**: Indicates the percentage of the cluster's target capacity that will be migrated during migration (per batch). For example, if the cluster's target capacity is 50 nodes, and the Batch Size Percentage is set to 20%, each batch will consist of 20% of the target capacity, 10 nodes (50 nodes * 20% = 10 nodes).   
 
@@ -49,16 +53,16 @@ The migration will fail if the number of healthy nodes in a single batch is belo
 
 Follow the migration in the dashboard.
 
- [placeholder]
+ ![workloads-migration-in-progress-1](https://github.com/spotinst/help/assets/159915991/39a08b4d-563a-4af4-b9dc-b11b382d5d58)
 
 Node Statuses:
 
-*  In Progress: The migration process is in progress.
-*  Migrated: The node has been migrated
+*  In Progress: The migration process is in progress (dark blue color)
+*  Migrated: The node has been migrated (green color)
 *  Not Migrated: Node could not be migrated
-*  To be Migrated: Node not yet migrated
-*  Failed:  Migration failed.
-*  Manually Excluded: Node was not selected for migration
+*  To be Migrated: Node not yet migrated (light blue color)
+*  Failed:  Migration failed (red color)
+*  Manually Excluded: Node was not selected for migration (gray color)
 
 ###  Stop Migration
 
@@ -73,4 +77,12 @@ To stop the migration process in progress.
 
 To view previous migrations:
 
-*  From the Actions drop-down menu at the top-right of the screen, click **Previous Migrations**.
+1.   From the Actions drop-down menu at the top-right of the screen, click **Previous Workload Migrations**.
+
+ ![workloads-previous-migrations](https://github.com/spotinst/help/assets/159915991/3397a2bb-25e2-4e75-91b9-e1d5ae3d487d)
+
+2.  Click on the required entry under Migrated Nodes to display the dashboard for that migration.
+
+
+ 
+
