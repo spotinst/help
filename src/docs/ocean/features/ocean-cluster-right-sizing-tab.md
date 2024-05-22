@@ -14,7 +14,7 @@ Before you attempt to fine-tune your cluster resources according to Ocean's reco
 *  Metrics Server installed in your Kubernetes cluster. 
 *  Ocean cluster managing your Kubernetes worker nodes. 
 *  [Ocean Controller Version 2](https://docs.spot.io/ocean/tutorials/ocean-controller-v2/) installed and running. From version 2.0.52 
-*  To enable this feature, contact your support team via email or chat.
+*  To turn on this feature, contact your support team via email or chat.
 
 ##  How It Works 
 
