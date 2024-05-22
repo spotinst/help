@@ -38,8 +38,24 @@ You view Right Sizing recommendations via:
 *  Ocean console, under the Cloud Cluster Right Sizing Recommendation tab [put link here]. 
 *  [Spot API](https://docs.spot.io/api/#tag/Ocean-AWS/operation/oceanAwsFilterRightSizingWithFilter).
 
+##  View Right Sizing for a Cluster 
 
+Ocean provides resource recommendations to assist in adjusting deployment requests based on actual CPU and memory consumption. 
 
+Resource resize recommendations are triggered when the requested resources deviate by 15% or more from the average metric recorded during the last two weeks. If the requested resources are either 15% above or 15% below the average metric, Ocean suggests resizing them to align them more closely with the observed consumption patterns. 
+
+These recommendations can help optimize resource allocation and ensure that the requested resources align with the actual CPU and memory consumption, improving efficiency and cost-effectiveness in managing your deployments. 
+
+To view right sizing for a cluster:   
+
+1.  In the left main menu, click **Ocean**, and click **Cloud Clusters**. 
+2.  Select a cluster from the list of clusters. 
+3.  Click the **Right Sizing** tab. 
+
+The Right-Sizing tab displays a Dashboard divided into the following panels: 
+
+*  The Right-Sizing Savings panel: Summarizes your potential maximum savings from right-sizing, vCPU and memory usage, and recommendations for a selected namespace, workload, and container. 
+*  Right-sizing Resource Usage panel: This panel graphically displays your vCPU and memory resource usage in the last two weeks. 
 
 
 
