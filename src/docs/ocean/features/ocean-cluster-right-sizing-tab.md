@@ -76,6 +76,11 @@ The Right-Sizing Savings panel contains a set of savings widgets, which show you
 
 ###  Right Sizing Resource Usage Panel 
 
+Right Sizing Resources Usage panel contains two widgets: 
 
+*  vCPU usage in the last two weeks: Displays graphs for used, allocated, and recommended vCPU usage, based on data from the last two weeks. 
+*  Memory usage in the last two weeks: Displays graphs for used, allocated, and recommended memory usage based on data from the last two weeks. 
+
+{placeholder]
 
 
