@@ -132,7 +132,3 @@ One popular use of metrics saved in Prometheus is dashboarding. As Grafana is a 
 
 <img src="/ocean/_media/prometheus-scrape-02.png" />
 
-## What’s next?
-
-In Ocean, click Roadmap to share feedback and request future metrics.
-Learn more about Ocean's [scaling](ocean/features/scaling-kubernetes) processes.
