@@ -1,11 +1,10 @@
 <meta name=“robots” content=“noindex”>
 
-# Migrate Workload using the Spot API
+# Migrate AKS Workload using the Spot API
 
 This page describes migrating existing AKS Kubernetes workloads into an Ocean cluster.
 
 Before you start this procedure, review the [prerequisites](https://docs.spot.io/ocean/tutorials/migrate-workload-aks?id=prerequisites).
-
 ##  Step 1: Get Started with the Workload Migration
 
 The [Get Migration Discovery](https://docs.spot.io/api/#tag/Ocean-AKS/operation/oceanAksGetMigration) API call returns the information about nodes that can be migrated into Ocean and the number of pods running on each node if the flag is true.
