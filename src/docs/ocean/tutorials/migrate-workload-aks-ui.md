@@ -14,13 +14,19 @@ Before starting, review the [prerequisites](https://docs.spot.io/ocean/tutorials
 
 ![workloads-migration-start-migrations](https://github.com/spotinst/help/assets/159915991/998bb5f0-cdd8-4461-bd66-224df9a28590)
 
-Ocean automatically detects the workloads (nodes and pods) belonging to the associated Kubernetes cluster and displays a list of all the discovered nodes.
+Ocean automatically detects the workloads (nodes and pods) of the associated Kubernetes cluster and displays a list of all the discovered nodes.
 
 ![workloads-migration-validated-nodes](https://github.com/spotinst/help/assets/159915991/6163f354-2968-4df9-81ba-8df105d5c139)
 
 4.  Select the nodes (instances) you want to migrate into your Ocean cluster.
 
-5.  If any node entries show the Required Validation status under the Ready for Migration column, click **Validate** at the bottom left of the screen.
+5.  If any node entries show the Required Validation status under the **Ready for Migration** column, click **Validate** at the bottom left of the screen.
+
+Node Statuses:
+
+*   Ready for migration: Node is validated and can be migrated (green color)
+*   Excluded: Node was not selected for migration (gray color).
+*   Unable to migrate: Node cannot be migrated (red color)
 
 ##  Step 2: Set Preferences
 
@@ -43,7 +49,6 @@ The migration will fail if the number of healthy nodes in a single batch is belo
 
 *  **Delete node from Azure after successful migration**: Select to delete the node from the Azure console because Ocean now manages the node.
 
-*  **Enable Unmanagement via Azure Console (after successful migration)**: Change Azure-managed node pools from automatic to manual scaling.
 
 ##  Step 3: Start Migration
 
@@ -57,11 +62,11 @@ Follow the migration in the dashboard.
 
 Node Statuses:
 
-*  In Progress: The migration process is in progress (dark blue color)
-*  Migrated: The node has been migrated (green color)
-*  Not Migrated: Node could not be migrated
-*  To be Migrated: Node not yet migrated (light blue color)
-*  Failed:  Migration failed (red color)
+*  In Progress: Migration has started (dark blue color)
+*  Migrated: Node has been migrated (green color)
+*  Not Migrated: Node was not migrated due to stopped migration (gray color).
+*  To be Migrated: Node has not yet been migrated (light blue color)
+*  Failed: Migration failed (red color)
 *  Manually Excluded: Node was not selected for migration (gray color)
 
 ###  Stop Migration
@@ -82,6 +87,13 @@ To view previous migrations:
  ![workloads-previous-migrations](https://github.com/spotinst/help/assets/159915991/3397a2bb-25e2-4e75-91b9-e1d5ae3d487d)
 
 2.  Click on the required entry under Migrated Nodes to display the dashboard for that migration.
+
+    Previous Migration Statuses:
+
+    *  Finished: All nodes were migrated.
+    *  Partly Completed: At least one selected node was not migrated.
+    *  Stopped: Migration was manually stopped.
+    *  Failed: Migration failed.
 
 
  
