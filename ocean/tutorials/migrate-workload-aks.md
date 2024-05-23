@@ -20,8 +20,8 @@ Before starting migration, make sure you have the following:
 
 After successfully creating your Ocean cluster, you can start the Workload Migration via the Ocean Console or the Spot API.
 
-*  Migrate the Workload using the Console [link]
-*  Migrate the Workload using the API [link]
+*  Migrate the Workload using the [Console](https://docs.spot.io/ocean/tutorials/migrate-workload-aks-ui?id=migrate-aks-workload-using-the-console)
+*  Migrate the Workload using the [Spot API](https://docs.spot.io/ocean/tutorials/migrate-workload-aks-api?id=migrate-aks-workload-using-the-spot-api)
  
 ##  Migration Failure Reasons
 
