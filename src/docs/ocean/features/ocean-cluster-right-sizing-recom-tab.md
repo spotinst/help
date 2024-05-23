@@ -96,5 +96,23 @@ To attach a rule to one or more workloads:
 
 4.   Save and apply the rule. 
 
+###   Detach a Right-Sizing Rule from One or More Workloads 
+
+To detach a rule from one or more workloads: 
+
+1.   Select workloads in the Workloads Optimization list.
+
+2.   From the Actions drop-down menu above the list, click **Detach Rule**. 
+
+###   Delete a Right-Sizing Rule 
+
+To delete a right sizing rule: 
+
+1.   To the right of the row for the rule in the list, click the wastebasket icon. 
+
+2.   When the confirmation message appears, Click **Delete**, or Cancel (if you are unsure). 
+
+>**Important**: You cannot restore a deleted right-sizing rule. 
+
 
 
