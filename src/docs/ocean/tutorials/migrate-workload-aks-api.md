@@ -26,9 +26,7 @@ After creating your Ocean cluster:
 Use the [Create Migration](https://docs.spot.io/api/#tag/Ocean-AKS/operation/oceanAksCreateMigration) API call to create the migration process. Add the list of instances you want to migrate and the parameters below:
 
 *  nodeNames: a list of instance IDs that should be migrated to the Ocean cluster.
-
 *  batchSize: Determines how many nodes should be migrated in each batch (in percentage).
-
 *  BatchSizeHealthyPercentage: Indicates the threshold of minimum replaced nodes in a single batch.
 *  shouldTerminateNodes: Ocean terminates the old instances once the pods on them are migrated, and the old instances are fully drained.
 *  shouldEvictStandAlonePods: Ocean terminates pods not belonging to a Kubernetes deployment. This means you would need to launch the pod manually (after the migration) since no object would do it automatically.
