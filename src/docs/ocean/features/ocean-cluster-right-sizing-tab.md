@@ -22,7 +22,7 @@ For Ocean Kubernetes clusters, Right Sizing utilizes the Metrics Server and init
 
 Once every fifteen seconds, the controller queries the Metrics Server for pod utilization (the equivalent of kubectl top pods). Based on the last two weeks of collected metrics, Ocean calculates relevant consumption metrics for each resource, such as CPU and Memory, and bases its recommendations on these calculated metrics. 
 
-[placeholder for graphic]
+![features-rightsizing-01a](https://github.com/spotinst/help/assets/159915991/4ded53db-21ff-4a17-82b2-77b32c598351)
 
 The output produces a single point-in-time data point for each pod. Ocean then aggregates the pods' data per workload container. 
 
