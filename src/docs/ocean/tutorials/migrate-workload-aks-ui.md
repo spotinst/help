@@ -88,6 +88,13 @@ To view previous migrations:
 
 2.  Click on the required entry under Migrated Nodes to display the dashboard for that migration.
 
+    Previous Migration Statuses:
+
+    *  Finished: All nodes were migrated.
+    *  Partly Completed: At least one selected node was not migrated.
+    *  Stopped: Migration was manually stopped.
+    *  Failed: Migration failed.
+
 
  
 
