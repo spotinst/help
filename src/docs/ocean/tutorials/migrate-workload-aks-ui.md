@@ -4,7 +4,7 @@
 
 This topic describes migrating your existing Kubernetes K8s workloads into an Ocean cluster via the Ocean Console.
 
-Before starting, review the [prerequisites](https://docs.spot.io/ocean/tutorials/migrate-workload-aks?id=prerequisites).
+Before starting, review the [prerequisites](https://docs.spot.io/ocean/tutorials/migrate-workload-aks?id=prerequisites)
 
 ##  Step 1: Select Instances to Migrate
 
