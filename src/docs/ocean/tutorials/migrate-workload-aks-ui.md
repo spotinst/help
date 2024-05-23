@@ -43,7 +43,6 @@ The migration will fail if the number of healthy nodes in a single batch is belo
 
 *  **Delete node from Azure after successful migration**: Select to delete the node from the Azure console because Ocean now manages the node.
 
-*  **Enable Unmanagement via Azure Console (after successful migration)**: Change Azure-managed node pools from automatic to manual scaling.
 
 ##  Step 3: Start Migration
 
@@ -59,7 +58,7 @@ Node Statuses:
 
 *  In Progress: The migration process is in progress (dark blue color)
 *  Migrated: The node has been migrated (green color)
-*  Not Migrated: Node could not be migrated
+*  Not Migrated: Node was not migrated due to stopped migration (gray color).
 *  To be Migrated: Node not yet migrated (light blue color)
 *  Failed:  Migration failed (red color)
 *  Manually Excluded: Node was not selected for migration (gray color)
