@@ -46,10 +46,10 @@ You can create right-sizing rules to trigger immediately after a specific set of
 
 ###   Create or Edit a Right-Sizing Rule 
 
-To create/edit a right sizing rule: 
+To create/edit a right-sizing rule: 
 
 1.   Click the **Advanced Optimization** tab, if not already displayed.
-2.   To create a new rule,	click **+ Add new rule** at the top-right of the Advanced Optimization table.
+2.   To create a new rule,	click **+ Add new rule** at the top-right of the Advanced Optimization list.
      
      >**Note**: To edit an existing rule: To the right of the row for the rule in the Right Sizing Rules list at the bottom of the tab, click **Edit Rule**. 
 
@@ -64,7 +64,7 @@ To create/edit a right sizing rule:
 
   [placeholder]
 
-5.   Select whether to turn on the **restart pods for relevant workloads** option. This option enables Ocean to sequentially restart pod batches according to recommendations.
+5.   Select whether to turn on the **restart pods for relevant workloads** option. This option enables Ocean to restart pod batches sequentially according to recommendations.
 6.   Click the **Set Min. CPU / Memory thresholds for workload** down arrow and then set the CPU and Memory percentage thresholds using the up/down arrows. This threshold is the difference between the current request and the recommendation for triggering a percentage change. 
 
 [placeholder]
