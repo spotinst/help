@@ -8,7 +8,7 @@ To view your right-sizing recommendations and rules:
 
 [placeholder]
 
-The Advanced Optimization tab contains the following panels:  
+The Advanced Optimization tab contains the following lists:  
 
 *  Workloads Optimization List 
 *  Automatic Right Sizing Rules List
@@ -37,4 +37,64 @@ To view a list of your potential savings and recommendations per container:
 This list displays your existing right-sizing rules.  
 
 Each rule entry shows relevant information about the parameters that trigger the rule and its scheduling plan. 
+
+##   Work with Right Sizing Rules 
+
+You can create right sizing rules and immediately attach them to specific workloads. Alternatively, you can create and save a rule, and later attach the rule to one or more workloads. 
+
+You can create right-sizing rules to trigger immediately after a specific set of requirements is met or at a specific time after the requirements are met. 
+
+###   Create or Edit a Right-Sizing Rule 
+
+To create/edit a right sizing rule: 
+
+1.   Click the **Advanced Optimization** tab, if not already displayed.
+2.   To create a new rule,	click **+ Add new rule** at the top-right of the Advanced Optimization table.
+     
+     >**Note**: To edit an existing rule: To the right of the row for the rule in the Right Sizing Rules list at the bottom of the tab, click **Edit Rule**. 
+
+[placeholder]
+
+3.   In the Configure Automation Rule dialog box, enter/edit the unique rule name.
+
+4.   Select when to apply the recommendation by clicking the relevant radio button: 
+
+      *   **Once available**: The recommendation is applied immediately after it becomes available. 
+      *   **At a specific time**: You select when to apply the recommendation after it becomes available.
+
+  [placeholder]
+
+5.   Select whether to turn on the **restart pods for relevant workloads** option. This option enables Ocean to sequentially restart pod batches according to recommendations.
+6.   Click the **Set Min. CPU / Memory thresholds for workload** down arrow and then set the CPU and Memory percentage thresholds using the up/down arrows. This threshold is the difference between the current request and the recommendation for triggering a percentage change. 
+
+[placeholder]
+
+7.   Click the **Set recommendation ranges for CPU & Memory** down arrow and enter the minimum and maximum values for CPU requests (millicpu) and Memory requests (mib). 
+
+[placeholder]
+
+8.   Click the **Set overhead for workload** down arrow and use the up/down arrows to set the CPU and memory percentage overheads. An overhead specifies the percentage of extra resources to add to the new request recommendation.
+
+[placeholder]
+
+9.   After you save the rule, it appears in the area under the Workloads Optimization list. See [View Right-Sizing Recommendations and Rules]().
+
+###   Attach a Right-Sizing Rule to One or More Workloads 
+
+To attach a rule to one or more workloads: 
+
+1.   Select one or more workloads in the Workloads Optimization list. 
+2.   From the Actions drop-down menu above the table, click **Attach Rule**.
+
+[placeholder]
+
+3.   You can attach a rule you already created, or create a new rule from scratch:
+      *   Existing rule: Click the **Select from existing rule** drop-down menu and then select a rule. 
+      *   New rule: Click **Create new rule from scratch** (see [Create or Edit a Right-Sizing Rule]())
+  
+>** Note**: Once you create the rule, it will be attached to the workload(s) you selected at the start of this procedure. 
+
+4.   Save and apply the rule. 
+
+
 
