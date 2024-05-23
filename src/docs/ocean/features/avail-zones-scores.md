@@ -68,8 +68,6 @@ The currently configured Availability Zones are pre-selected.
 
 >**IMPORTANT**: If the subnets are not set on the [Virtual Node Group](https://docs.spot.io/ocean/tutorials/manage-virtual-node-groups) ('subnets' = null) but are taken from the Virtual Node Group template (default VNG), an information banner will appear in the dialog box to inform you that updating will override the Virtual Node Group Template configuration, and will affect all the custom Virtual Node Groups with ‘subnets’ = null.
 
-![az-vng-message](https://github.com/spotinst/help/assets/159915991/b51b8833-cb28-40ed-8df4-090558487d7a)
-
 2.  Edit your Availablity Zones and accept your recommendations as required.
 
 >**Note**: You can replace a single Availability Zone without adding one.
