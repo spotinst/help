@@ -4,14 +4,21 @@ AZ scores and recommendations assist you in making informed decisions when choos
 
 Complete the following steps to access the AZ Recommendations page: 
 
-1. Log in to the Spot Console and on the left main menu, click **Elastigroup**. 
+1. Log in to the Spot console and on the left main menu, click **Elastigroup**. 
 2. Click **Groups** and then click the **Recommendations** tab. 
 
 ![az-score](https://github.com/spotinst/help/assets/106514736/064ca0e3-06ff-4a0f-a718-974bc74612ac)
 
-## Recommendations  
+The Recommendations tab consists of a dashboard with two panels:
 
-The **Recommendations** tab displays scores that range from 0 to 100. These scores consist of various factors, such as the cost of instances within the group and the conversion rate (the ratio of the interruptions to the number of instances managed in the same market).  
+* Recommendations Card
+* Score Graph
+
+## Recommendations Card 
+
+![az-score-1](https://github.com/spotinst/help/assets/106514736/e2f1cd6d-5ebe-4d2b-9895-b9368ddc965f)
+
+The **Recommendations** Card displays scores that range from 0 to 100. These scores consist of various factors, such as the cost of instances within the group and the conversion rate (the ratio of the interruptions to the number of instances managed in the same market).  
 
 ### High Score AZs  
 
@@ -26,11 +33,13 @@ Add, edit or change configured AZs directly from the page according to the recom
 1. Click **+ Add to Configuration**. 
 2. The _Update Configured AZ(s)_ window that opens enables you to edit, add and change the configured AZs and subnets.  
 
-## Average Monthly Score Breakdown 
+### The Average Monthly Score Breakdown
+
+![az-score-2](https://github.com/spotinst/help/assets/106514736/2f752bdd-0056-49ad-b644-9167a8b0e3b3)
 
 The Average Monthly Score Breakdown is relative to the Spot market’s set within the group and is based on data from the past month. The scores consider the relevant instance types selected in the group when calculating the recommendation score for the AZ. 
 
-## Availability Zone Score 
+## Score Graph  
 
 The Availability Zone Score graph summarizes the data from the last 30 days. Configured AZs are represented by a straight line, while non-configured AZs are represented by dashed lines. Hover over a specific day in the graph to view the scores of the AZs.  
 
