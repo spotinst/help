@@ -2,26 +2,109 @@
 
 The latest Spot policy in Azure appears below.
 
-<html>
-<script>
-        fetch('https://spotinst-public.s3.amazonaws.com/assets/azure/custom_role_file.json')
-            .then(res => res.json())
-            .then(res => {
-                document.querySelector('#spot-azure-permissions').textContent = JSON.stringify(
-                    {
-                        permissions:[
-                            {
-                               actions: res.properties.permissions[0].actions
-                          }
-                        ]
-                    }
-                , null, 2)
-            })
-            .then(() => window.Prism.highlightAll())
-</script>
-<body>
-<pre v-pre data-lang="json">
-<code id="spot-azure-permissions" class="lang-json">Loading...</code>
-</pre>
-</body>
-</html>
+```json
+{
+    "properties": {
+        "roleName": "spotCustomRole_1704284982749",
+        "isCustom": true,
+        "description": "Custom Role for Spot Account.",
+        "assignableScopes": [
+            "/subscriptions/sdfsd"
+        ],
+        "permissions": [
+            {
+                "actions": [
+                    "Microsoft.Authorization/roleAssignments/read",
+                    "Microsoft.Compute/availabilitySets/read",
+                    "Microsoft.Compute/availabilitySets/vmSizes/read",
+                    "Microsoft.Compute/disks/read",
+                    "Microsoft.Compute/disks/write",
+                    "Microsoft.Compute/disks/delete",
+                    "Microsoft.Compute/disks/beginGetAccess/action",
+                    "Microsoft.Compute/galleries/images/read",
+                    "Microsoft.Compute/galleries/images/versions/read",
+                    "Microsoft.Compute/galleries/read",
+                    "Microsoft.Compute/images/read",
+                    "Microsoft.Compute/images/write",
+                    "Microsoft.Compute/snapshots/read",
+                    "Microsoft.Compute/snapshots/write",
+                    "Microsoft.Compute/snapshots/delete",
+                    "Microsoft.Compute/virtualMachines/*",
+                    "Microsoft.Compute/virtualMachineScaleSets/read",
+                    "Microsoft.Compute/virtualMachineScaleSets/instanceView/read",
+                    "Microsoft.Compute/virtualMachineScaleSets/networkInterfaces/read",
+                    "Microsoft.Compute/virtualMachineScaleSets/publicIPAddresses/read",
+                    "Microsoft.Compute/virtualMachineScaleSets/virtualMachines/extensions/read",
+                    "Microsoft.Compute/capacityReservationGroups/read",
+                    "Microsoft.Compute/capacityReservationGroups/capacityReservations/read",
+                    "Microsoft.Compute/capacityReservationGroups/deploy/action",
+                    "Microsoft.Compute/proximityPlacementGroups/read",
+                    "Microsoft.ContainerService/managedClusters/read",
+                    "Microsoft.ContainerService/managedClusters/agentPools/read",
+                    "Microsoft.Insights/MetricDefinitions/Read",
+                    "Microsoft.Insights/Metrics/Read",
+                    "Microsoft.Insights/AutoscaleSettings/Read",
+                    "Microsoft.Insights/AutoscaleSettings/providers/Microsoft.Insights/MetricDefinitions/Read",
+                    "Microsoft.KeyVault/vaults/deploy/action",
+                    "Microsoft.ManagedIdentity/userAssignedIdentities/assign/action",
+                    "Microsoft.ManagedIdentity/userAssignedIdentities/read",
+                    "Microsoft.ManagedIdentity/identities/read",
+                    "Microsoft.NetApp/netAppAccounts/read",
+                    "Microsoft.NetApp/netAppAccounts/write",
+                    "Microsoft.NetApp/netAppAccounts/capacityPools/write",
+                    "Microsoft.NetApp/netAppAccounts/capacityPools/read",
+                    "Microsoft.NetApp/netAppAccounts/capacityPools/delete",
+                    "Microsoft.NetApp/netAppAccounts/capacityPools/volumes/write",
+                    "Microsoft.NetApp/netAppAccounts/capacityPools/volumes/read",
+                    "Microsoft.NetApp/netAppAccounts/capacityPools/volumes/delete",
+                    "Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots/write",
+                    "Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots/read",
+                    "Microsoft.NetApp/netAppAccounts/capacityPools/volumes/ReplicationStatus/read",
+                    "Microsoft.NetApp/netAppAccounts/capacityPools/volumes/DeleteReplication/action",
+                    "Microsoft.NetApp/netAppAccounts/capacityPools/volumes/ResyncReplication/action",
+                    "Microsoft.NetApp/netAppAccounts/capacityPools/volumes/AuthorizeReplication/action",
+                    "Microsoft.NetApp/netAppAccounts/capacityPools/volumes/ReInitializeReplication/action",
+                    "Microsoft.NetApp/netAppAccounts/capacityPools/volumes/BreakReplication/action",
+                    "Microsoft.Network/applicationGateways/read",
+                    "Microsoft.Network/applicationGateways/backendhealth/action",
+                    "Microsoft.Network/applicationGateways/backendAddressPools/join/action",
+                    "Microsoft.Network/applicationSecurityGroups/joinIpConfiguration/action",
+                    "Microsoft.Network/applicationSecurityGroups/read",
+                    "Microsoft.Network/dnsZones/read",
+                    "Microsoft.Network/dnsZones/A/read",
+                    "Microsoft.Network/dnsZones/write",
+                    "Microsoft.Network/dnsZones/A/write",
+                    "Microsoft.Network/dnsZones/A/delete",
+                    "Microsoft.Network/loadBalancers/read",
+                    "Microsoft.Network/loadBalancers/backendAddressPools/read",
+                    "Microsoft.Network/loadBalancers/backendAddressPools/write",
+                    "Microsoft.Network/loadBalancers/backendAddressPools/join/action",
+                    "Microsoft.Network/networkInterfaces/read",
+                    "Microsoft.Network/networkInterfaces/write",
+                    "Microsoft.Network/networkInterfaces/delete",
+                    "Microsoft.Network/networkInterfaces/join/action",
+                    "Microsoft.Network/networkInterfaces/ipconfigurations/read",
+                    "Microsoft.Network/networkSecurityGroups/read",
+                    "Microsoft.Network/networkSecurityGroups/join/action",
+                    "Microsoft.Network/publicIPAddresses/read",
+                    "Microsoft.Network/publicIPAddresses/write",
+                    "Microsoft.Network/publicIPAddresses/delete",
+                    "Microsoft.Network/publicIPAddresses/join/action",
+                    "Microsoft.Network/routeTables/read",
+                    "Microsoft.Network/virtualNetworks/read",
+                    "Microsoft.Network/virtualNetworks/subnets/join/action",
+                    "Microsoft.Network/virtualNetworks/subnets/read",
+                    "Microsoft.Network/virtualNetworks/virtualMachines/read",
+                    "Microsoft.Network/virtualNetworks/subnets/write",
+                    "Microsoft.Resources/tags/write",
+                    "Microsoft.Resources/subscriptions/resourceGroups/read",
+                    "Microsoft.Storage/storageAccounts/read"
+                ],
+                "notActions": [],
+                "dataActions": [],
+                "notDataActions": []
+            }
+        ]
+    }
+}
+```
