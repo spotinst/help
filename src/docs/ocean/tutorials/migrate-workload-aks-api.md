@@ -50,5 +50,5 @@ Use the [List Migrations summary](https://docs.spot.io/api/#tag/Ocean-AKS/operat
 
 ##  Get Ocean Nodes
 
-Use the [Get Cluster Nodes](https://docs.spot.io/api/#operation/oceanAksGetNodes) API call to check all the nodes in your cluster and their full data
+Use the Get Cluster Nodes API call to check all the nodes in your cluster and their full data
 
