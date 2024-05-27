@@ -11,24 +11,32 @@ To address these cases, the revert to lower-cost node process analyzes the nodes
 ## How it Works
 
 Ocean constantly scans the cluster’s node utilization. The revert to lower-cost node optimization process is applied when **all** of the following conditions are met:
-- No scaling event occurred in the last 30 minutes in the specific VNG (neither scale up nor down event).
-- CPU and memory usage is less than 50% **or** GPU utilization is less than 50%.
-- The node was underutilized for at least 10 minutes.
-- The node life cycle is a spot instance.
-- No ongoing replacement in the relevant VNG.
-- A smaller instance type than the running instance type is configured in the configuration.
 
-Then, Ocean will replace all of the relevant nodes in the VNG one by one. Meaning, each time that the process is triggered, it will replace up to one instance in a VNG. (Nodes from different VNGs can be replaced at the same time.)
+*  Cluster Balanced orientation (default)
+   *  No scaling occurred in the last 25 min
+   *  CPU and memory usage is less than 50%
+*  Cluster Cost orientation
+    *  No scaling occurred in the last 20 min
+    *  CPU and memory usage is less than 60%
+*  Cluster Cheapest orientation -
+    *  No scaling occurred in the last 15 min
+    *  CPU and memory usage is less than 70%
+*  The node was underutilized for at least 10 minutes.
+*  The node life cycle is a spot instance.
+*  No ongoing replacement in the relevant VNG.
+*  A smaller instance type than the running one is configured in the configuration.
+
+Then, Ocean will replace all of the relevant nodes in the VNG one by one. Each time the process is triggered, it will replace up to one instance in a VNG. (Nodes from different VNGs can be replaced at the same time.)
 - If the cluster is set to utilize reserved instances (RIs), the autoscaler will try to launch RIs first.
 - If there is no spot available and there is a smaller on-demand (OD) instance that is also cheaper, Ocean will try to replace the instance with that OD instance.
 
-Ocean will not replace nodes with restricted scale down configuration (neither on the pods nor on the VNG level) or where the pod disruption budget would be violated.
+Ocean will not replace nodes with restricted scale-down configuration (neither on the pods nor on the VNG level) or where the pod disruption budget would be violated.
 
-> **Note**: The process is only supported in AWS Kubernetes and GCP. The process is not supported for instance types that run GPU workloads in GCP.
+> **Note**: The process is only supported in AWS Kubernetes and GCP. The process is unsupported for instance types that run GPU workloads in GCP.
 
 The proactive cost optimization process runs in addition to Ocean's existing optimization processes such as:
-- *Revert to RI or Savings Plan process* - Ocean constantly monitors for available RIs or Savings Plans in your account (when the strategy.utilizeReservedInstances or utilizeCommitments flag is enabled). If there is an Ocean monitored node that runs as spot or OD, Ocean will try to replace it with the available RI or Savings Plan nodes.
-- *Revert to Spot process* - If a node was launched on-demand because there was no available spot node in the market, Ocean continues scanning the market for an available spot node and reverts as soon as there is one available.
+- *Revert to RI or Savings Plan process*—Ocean constantly monitors your account's available RIs or Savings Plans (when the `strategy.utilizeReservedInstances` or `utilizeCommitments` flag is enabled). If an Ocean-monitored node runs as spot or on-demand, Ocean will try to replace it with the available RI or Savings Plan nodes.
+- *Revert to Spot process*—If a node was launched on demand because no spot node was available in the market, Ocean continues scanning the market for an available spot node and reverts as soon as one becomes available.
 
 ## What’s Next?
 
