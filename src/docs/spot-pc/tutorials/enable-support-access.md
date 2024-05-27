@@ -1,3 +1,6 @@
+<meta name=“robots” content=“noindex”>
+
+
 # Spot PC Tutorial: Enable Support Access
 
 Spot PC makes every effort to maintain your clients' privacy and security. To that end, our support agents have limited read-only access to tenant information. When support issues arises and you wish to engage the support Spot PC support team, you can enable additional access by following this guide.
