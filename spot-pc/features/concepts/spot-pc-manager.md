@@ -1,3 +1,5 @@
+<meta name=“robots” content=“noindex”>
+
 # Concept: Spot PC Manager VM
 
 Within the Spot PC Azure Subscription, we deploy an administration and orchestration VM known as "Spotpcmanager1." The VM is sized as a Standard_D2s_v3 running Windows Server 2019 and its costs are fully covered by NetApp.

@@ -1,3 +1,5 @@
+<meta name=“robots” content=“noindex”>
+
 # Spot PC: Monitored Metrics
 Spot PC uses Cloud Insights and other technologies to monitor and alert on specific metrics that we've found can impact the end user experience. This article contains recommendations derived from our experience and research along with data from Microsoft's documentations. All environments are unique and the following information should be taken in context with your own experience and knowledge of the specific environment.
 

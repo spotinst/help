@@ -1,3 +1,5 @@
+<meta name=“robots” content=“noindex”>
+
 # Spot PC Tutorial: Install AD Connect
 
 Authentication for AVD users is performed against the Azure AD and thus, the users' identities must be synced between their AD DC and Azure AD. The following is a step-by-step guide to installing AD Connect on the AD DC to facilitate this sync. The options and selections shown are recommendations and not required. Deployments should be customized to fit your specific environment and use case.
