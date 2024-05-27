@@ -12,18 +12,18 @@ To address these cases, the revert to lower-cost node process analyzes the nodes
 
 Ocean constantly scans the cluster’s node utilization. The revert to lower-cost node optimization process is applied when **all** of the following conditions are met:
 
-*  Cluster Balanced orientation (default)
-   *  No scaling occurred in the last 25 min
-   *  CPU and memory usage is less than 50%
-*  Cluster Cost orientation
+*  Cluster Balanced Orientation (default)
+   *  No scaling occurred in the last 25 minutes.
+   *  CPU and memory usage is less than 50%.
+*  Cluster Cost Orientation
     *  No scaling occurred in the last 20 min
-    *  CPU and memory usage is less than 60%
-*  Cluster Cheapest orientation -
-    *  No scaling occurred in the last 15 min
-    *  CPU and memory usage is less than 70%
+    *  CPU and memory usage is less than 60%.
+*  Cluster Cheapest Orientation
+    *  No scaling occurred in the last 15 minutes.
+    *  CPU and memory usage is less than 70%.
 *  The node was underutilized for at least 10 minutes.
 *  The node life cycle is a spot instance.
-*  No ongoing replacement in the relevant VNG.
+*  No ongoing replacement in the relevant Virtual Node Group.
 *  A smaller instance type than the running one is configured in the configuration.
 
 Then, Ocean will replace all of the relevant nodes in the VNG one by one. Each time the process is triggered, it will replace up to one instance in a VNG. (Nodes from different VNGs can be replaced at the same time.)
