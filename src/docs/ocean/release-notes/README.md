@@ -2,6 +2,10 @@
 
 ## Features and Enhancements
 
+* **OCN-007: May 27, 2024:** 
+Workload Migration for Ocean AKS is now available in both the Ocean console and the Spot API (with new API calls) to make migrating your Kubernetes workloads to Ocean easier. Workload Migration automates draining and rescheduling pods, streamlining the migration of your AKS infrastructure to Ocean.
+Seamlessly migrate and register your workloads into Ocean, and let Spot manage your Kubernetes environment.
+[Learn more](https://docs.spot.io/ocean/tutorials/migrate-workload-aks)
 
 * **OCN-006: May 27, 2024:** 
 Ocean Controller Version 2 supports the `namespaceSelector` scaling constraint label introduced in Kubernetes Version 1,24. When you apply this label, Ocean's Autoscaler scales up nodes based on the Namespace selector, so that pods can be scheduled. This option is available for AWS Kubernetes only.
