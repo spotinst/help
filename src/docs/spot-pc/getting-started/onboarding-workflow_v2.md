@@ -1,3 +1,5 @@
+<meta name=“robots” content=“noindex”>
+
 # Spot PC: Onboarding Workflow
 The Spot PC onboarding workflow is designed to deploy the Spot PC environment balancing configurability with simplicity. Depending on the choices you make along the way some of these documented options may or may not be presented. This document is designed to be used as a guide to help understand the benefits and caveats of each choice in this workflow.
 
