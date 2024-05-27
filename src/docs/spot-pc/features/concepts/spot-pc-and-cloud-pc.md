@@ -1,3 +1,5 @@
+<meta name=“robots” content=“noindex”>
+
 # Concepts: Spot PC and Win365 Cloud PC
 
 Microsoft provides two offerings for virtual desktops in the Azure Cloud: Azure Virtual Desktop (AVD) and Windows 365. While each supports a specific type of virtual desktop use case, the Spot PC managed service supports both options.
