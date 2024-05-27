@@ -1,28 +1,28 @@
-# Roll
+# Rolls
 
-The Roll feature enables you to perform changes in order to align cluster infrastructure with a new image, user data or security groups without having to disable the Ocean autoscaler or manually detach nodes in the cluster.
+The Roll feature enables you to perform changes to align cluster infrastructure with a new image, user data, or security groups without turning off the Ocean autoscaler or manually detaching nodes in the cluster.
 
 > **Note**: Where this page uses Kubernetes terms such as node and pod, the ECS and AKS equivalents such as container instance or VM and task are also applicable.
 
-In Ocean you can roll your cluster with a single click. The roll feature takes into consideration the actual workloads running in the cluster. Ocean freezes scale-down activity in the cluster and launches new compute capacity to match the workload requirements. While the new nodes are starting up, the old nodes are still able to scale up if necessary and will scale down only after the new nodes are healthy.
+In Ocean, you can roll your cluster with a single click. The roll feature considers the actual workloads running in the cluster. Ocean freezes scale-down activity in the cluster and launches new compute capacity to match the workload requirements. While the new nodes are starting up, the old ones can still scale up if necessary and will scale down only after the new ones are healthy.
 
 ## How It Works
 
-Whether you are rolling your entire Ocean cluster, a specific virtual node group (VNG), or only specific nodes, Ocean can divide the roll into batches according to batch sizes that you choose. For example, if you choose to roll according to the default batch size of 20%, Ocean divides the roll into 5 batches. The process takes place as follows:
+Whether you are rolling your entire Ocean cluster, a specific virtual node group (VNG), or only specific nodes, Ocean can divide the roll into batches according to batch sizes that you choose. For example, if you roll according to the default batch size of 20%, Ocean divides the roll into 5 batches. The process takes place as follows:
 
 1. Ocean calculates the number of batches required in the roll based on the batch size you enter and divides the workloads equally among the batches.
-2. Ocean starts with the first batch, replacing each node in such a way that ensures the successful accomodation of the workloads on the new nodes. Ocean's autoscaler takes into consideration all relevant constraints in place before the roll.
+2. Ocean starts with the first batch, replacing each node to ensure the successful accommodation of the workloads on the new nodes. Ocean's autoscaler takes into consideration all relevant constraints in place before the roll.
 3. When all nodes in a batch are finished processing and at least 50% of them have successful replacement, then Ocean starts to work on the next batch. (The percentage can be configured using the `batchMinHealthyPercentage` parameter, explained below.)
 
 ### Replace Node with Smaller Nodes[\*\*](ocean/features/roll?id=whats-next)
 
-A cluster roll is able to replace a single node with multiple smaller nodes. This avoids a cluster roll failure when only smaller node types are configured in the Ocean cluster prior to initiating the roll. Rather than replacing each existing node with one of the same type, Ocean will provision the most relevant infrastructure during the cluster roll. This is based on the workloads currently running on the nodes chosen for rolling. This is especially helpful when you have modified the list of allowed node types or if your goal is to remove a specific node type and replace it with multiple smaller ones.
+A cluster roll can replace a single node with multiple smaller nodes. This avoids a cluster roll failure when only smaller node types are configured in the Ocean cluster before initiating the roll. Rather than replacing each existing node with one of the same type, Ocean will provision the most relevant infrastructure during the cluster roll. This is based on the workloads currently running on the nodes chosen for rolling. This is especially helpful when you have modified the list of allowed node types or if your goal is to remove a specific node type and replace it with multiple smaller ones.
 
-This logic can improve the utilization in the cluster since the workload would run on infrastructure that best matches the workload. Ocean constantly tries to scale down the cluster, but if this is not possible, cluster roll could improve the utilization.
+This logic can improve the cluster's utilization since the workload would run on infrastructure that best matches the workload. Ocean constantly tries to scale down the cluster, but a cluster roll could improve the utilization if this is not possible.
 
 ### Respect Pod Disruption Budget[\*\*](ocean/features/roll?id=whats-next)
 
-Some pods may have a [pod disruption budget](https://kubernetes.io/docs/concepts/workloads/pods/disruptions/) (PDB). By using the parameter `respectPdb`, you can instruct Ocean to check the PDB. When `respectPdb` is set to True, Ocean will not replace a node if the PDB is violated.
+Some pods may have a [pod disruption budget](https://kubernetes.io/docs/concepts/workloads/pods/disruptions/) (PDB). Using the parameter `respectPdb`, you can instruct Ocean to check the PDB. When `respectPdb` is set to True, Ocean will not replace a node if the PDB is violated.
 
 ### Minimum Healthy Instances in Batch[\*\*](ocean/features/roll?id=whats-next)
 
