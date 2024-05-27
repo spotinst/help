@@ -1,9 +1,11 @@
-# Rolls (AKS)
+# Rolls
 
 The Ocean Roll feature effortlessly synchronizes cluster infrastructure with a fresh image, user data, or security groups, eliminating the need to disable the Ocean autoscaler or manually detach nodes within the cluster.
 With Ocean, you can roll a cluster with just a single click. The roll feature intelligently considers the workloads running in the cluster. It freezes any scale-down activities within the cluster and seamlessly deploys new compute capacity to meet the demands of the workloads. During the startup phase of the new nodes, the existing nodes retain the ability to scale up as needed, ensuring uninterrupted operations. The old nodes are only scaled down once the new nodes are confirmed to be in a healthy state.
 
 Whether you are rolling out changes to your entire Ocean cluster, a particular virtual node group (VNG), or specific nodes, Ocean offers the flexibility to divide the roll into batches based on your chosen batch sizes. For example, if you opt for the default batch size of 20%, Ocean will divide the roll into five batches.
+
+>**Note**: This topic uses Kubernetes terms such as node and pod (EKS, AKS, and GKE). ECS equivalents such as container instance, VM, and task are also applicable
 
 The process is as follows:
 1.	Ocean calculates the number of batches required in the roll based on the batch size you enter and divides the workloads equally among the batches.
