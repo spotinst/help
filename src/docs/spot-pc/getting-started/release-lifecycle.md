@@ -1,3 +1,5 @@
+<meta name=“robots” content=“noindex”>
+
 # Spot PC: Release Lifecycle
 
 Spot PC uses a secure development lifecycle (SDL) process to deploy new features and changes. New code is tested and checked for security compliance before automated systems deploy new versions of each component.

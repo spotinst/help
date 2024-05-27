@@ -1,3 +1,5 @@
+<meta name=“robots” content=“noindex”>
+
 # Concepts: AVD Primer
 
 Azure Virtual Desktop (AVD) is a core technology used to deliver Spot PC and this article provides an introductory primer to that service, how it differs from traditional remote desktop (RD) implementations and highlights key features that are of particular relevance to Spot PC.
