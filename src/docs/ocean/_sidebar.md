@@ -30,7 +30,7 @@
       - [Attributes per VNG](ocean/features/vngs/attributes-and-actions-per-vng)
     - [Cost Analysis](ocean/features/cost-analysis)
     - [Elastic IP](ocean/features/elastic-ip)
-    - [Roll (AKS)](ocean/features/roll)
+    - [Roll](ocean/features/roll)
     - [Right Sizing](ocean/features/right-sizing)
     - [Shutdown Hours](ocean/features/running-hours)
     - [Auto-Update Process (GKE)](ocean/features/auto-update-process-gke)
