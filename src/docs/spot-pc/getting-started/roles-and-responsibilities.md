@@ -1,3 +1,5 @@
+<meta name=“robots” content=“noindex”>
+
 # Spot PC: Roles and Responsibilities
 
 Spot PC co-management is a collaboration between Spot, the IT administrator and the consuming organization. Each entity has a role in a successful Spot PC experience.
