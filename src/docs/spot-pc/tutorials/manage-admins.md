@@ -1,3 +1,4 @@
+<meta name=“robots” content=“noindex”>
 
 # Spot PC Tutorial: Manage Spot PC Admins
 
