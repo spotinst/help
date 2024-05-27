@@ -1,5 +1,3 @@
-<meta name=“robots” content=“noindex”>
-
 #  Migrate the Workload to Ocean on AKS
 
 Ocean automates the migration process of manually draining and re-scheduling your Kubernetes pods on new nodes. You can migrate and register your workloads (nodes and pods) into Ocean so Spot will manage them.

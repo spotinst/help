@@ -1,5 +1,3 @@
-<meta name=“robots” content=“noindex”>
-
 # Migrate AKS Workload using the Spot API
 
 This page describes migrating existing AKS Kubernetes workloads into an Ocean cluster.
