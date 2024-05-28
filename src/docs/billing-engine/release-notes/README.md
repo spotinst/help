@@ -1,11 +1,12 @@
 # Billing Engine Release Notes
 
-* **BIE-0001**: **April 24th, 2024** You can now connect an existing Spot Account that is not linked to Azure for other Spot products to Billing Engine for an Azure Billing Account. [Learn more](billing-engine/get-started/connect-azure)
+<details>
+  <summary markdown="span">April 2024</summary>
 
-* **BIE-0002**: ??? (1810) [Learn more](billing-engine/get-started/connect-google)
-  
-* **BIE-0003**: ??? (1806)
+* **BIE-0003**: **April 24th, 2024** You can now connect an existing Spot Account that is not linked to Azure for other Spot products to Billing Engine for an Azure Billing Account. [Learn more](billing-engine/get-started/connect-azure)
 
-* **BIE-0004**: In addition to the overview of your financial activities on the Billing Engine Analysis page, you can also view how Billing Engine supports the FinOps Foundation's FOCUS Specifications. [Learn more](billing-engine/tutorials/analysis)
+* **BIE-0002**: **April 22nd, 2024** You can now view how savings are calculated for each cloud provider. [Learn more](connect-your-cloud-provider/dashboard?id=eco-service-savings-definition)
 
+* **BIE-0001**: **April 22nd, 2024** You can connect Billing Engine to your Google Cloud billing account using read-only access to cost, usage, and bill data. 
 
+</details><br>
