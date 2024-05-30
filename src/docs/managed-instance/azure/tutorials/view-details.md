@@ -74,12 +74,8 @@ The second table shows information about the storage resources.
 
 The Monitoring tab provides information regarding the utilization of your stateful node. The monitoring information enables you to optimize resource allocation (right sizing), identify performance, and manage costs effectively. You can view customized graphs that display historical data of CPU and memory utilization for the last hour, day, week, or 14 days.
 
-Enter screenshot
+![azure-manage-stateful-monitor](https://github.com/spotinst/help/assets/106514736/ed0a00c0-4048-49a4-b509-6d0540c61010)
 
- 
-
-Open image-20240521-083930.png
-image-20240521-083930.png
 
 ## Costs
 The cost breakdown data provides a comprehensive overview of your stateful node’s costs. It is available through both the console and the API. 
