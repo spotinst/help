@@ -39,6 +39,4 @@ The proactive cost optimization process runs in addition to Ocean's existing opt
 - *Revert to RI or Savings Plan process*—Ocean constantly monitors your account's available RIs or Savings Plans (when the `strategy.utilizeReservedInstances` or `utilizeCommitments` flag is enabled). If an Ocean-monitored node runs as spot or on-demand, Ocean will try to replace it with the available RI or Savings Plan nodes.
 - *Revert to Spot process*—If a node was launched on demand because no spot node was available in the market, Ocean continues scanning the market for an available spot node and reverts as soon as one becomes available.
 
-## What’s Next?
 
-Learn more about Ocean's [scaling](ocean/features/scaling-kubernetes) processes.
