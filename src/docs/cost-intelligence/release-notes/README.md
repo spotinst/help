@@ -13,6 +13,6 @@
 
 * **COI-0002**: April 24th, 2024: You can now generate derived values within the Cost Intelligence dashboards. Derived values allow you to perform calculations and create new columns based on existing data. [Learn more](cost-intelligence/tutorials/dashboard/derived-values)
 
-* **COI-0001**: April 22nd, 2024: You can now view how savings are calculated for each cloud provider. [Learn more](connect-your-cloud-provider/dashboard?id=eco-service-savings-definition)
+* **COI-0001**: April 22nd, 2024: You can now view how fees are calculated for usage of Billing Engine and Cost Intelligence. [Learn more](connect-your-cloud-provider/dashboard?id=eco-service-savings-definition)
 
 </details><br>
