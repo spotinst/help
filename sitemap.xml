@@ -1604,6 +1604,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/elastigroup/release-notes/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/release-notes/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/release-notes/"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/elastigroup/tools-integrations/aws-batch</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>

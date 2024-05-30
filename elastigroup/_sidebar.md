@@ -9,6 +9,7 @@
     - [Create an Elastigroup for Azure](elastigroup/getting-started/create-an-elastigroup-for-azure)
     - [Elastigroup for GCP](elastigroup/getting-started/elastigroup-for-gcp)
     - [Create an Elastigroup for GCP](elastigroup/getting-started/create-an-elastigroup-for-gcp)
+  - [Release Notes](elastigroup/release-notes/)
   - [Features - AWS](elastigroup/features/)
     - [Core Features](elastigroup/features/core-features/)
       - [On-Demand, Spot & Reserved Instances](elastigroup/features/core-features/spot-reserved-on-demand-instances)
