@@ -49,12 +49,6 @@ To perform one of the [node actions](managed-instance/azure/features/actions), c
 
 <img src="/elastigroup/_media/azure-manage-stateful-edit-6.png" />
 
-## Monitor Node Data 
-
-The monitoring tab provides information regarding the utilization of your stateful node. The monitoring information enables you to optimize resource allocation (right sizing), identify performance, and manage costs effectively. You can view customized graphs that display historical data of CPU and memory utilization of the last hour, day, week or 14 days. 
-
-![azure-manage-stateful-monitor](https://github.com/spotinst/help/assets/106514736/ed0a00c0-4048-49a4-b509-6d0540c61010)
-
 ## Edit Node Configuration
 
 When the node status is either Running or Paused, you can edit the node’s configuration in the creation wizard.  
