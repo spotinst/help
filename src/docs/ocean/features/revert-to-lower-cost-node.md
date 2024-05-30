@@ -1,10 +1,10 @@
 # Revert to Lower-Cost Node
 
-In addition to [scale up](ocean/features/scaling-kubernetes?id=scale-up), [scale down](ocean/features/scaling-kubernetes?id=scale-down), and various optimization processes (e.g., Revert to Reserved Capacity, Savings Plans, and Revert to Spot), Ocean employs the *Revert to Lower-cost Node* process. This process is applied to nodes with underutilized compute resources that cannot be scaled down from the cluster's set of nodes.
+In addition to [scale up](ocean/features/scaling-kubernetes?id=scale-up), [scale down](ocean/features/scaling-kubernetes?id=scale-down), and various optimization processes (e.g., Revert to Reserved Capacity, Savings Plans, and Revert to Spot), Ocean employs the Revert to Lower-cost Node process. This process is applied to nodes with underutilized compute resources that cannot be scaled down from the cluster's set of nodes.
 
-There are some use cases when scaling down is not possible. One case is anti-affinity rules which ensure pods run on different nodes. Even if the node is underutilized because the other pods have finished running, it is not possible to scale down the node. The reason is that if we scale down the node the anti-affinity will be violated.
+There are some use cases when scaling down is not possible. One case is anti-affinity rules which ensure pods run on different nodes. Even if the node is underutilized because the other pods have finished running, it is impossible to scale down the node. The reason is that if we scale down the node the anti-affinity will be violated.
 
-Another example could occur when the configuration requires a minimum number of nodes at the cluster or virtual node group (VNG) level. Either situation may result in cluster nodes that have unused resources without the ability to scale down for optimization.
+Another example could occur when the configuration requires a minimum number of nodes at the cluster or virtual node group (VNG) level. Either situation may result in cluster nodes that have unused resources and are not able to scale down for optimization.
 
 To address these cases, the revert to lower-cost node process analyzes the nodes in the cluster and checks for underutilized nodes that Ocean could not scale down. Then, Ocean proactively replaces them with cheaper nodes if a more profitable VM instance is available.
 
