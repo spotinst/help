@@ -4,7 +4,7 @@ In addition to [scale up](ocean/features/scaling-kubernetes?id=scale-up), [scale
 
 There are some use cases when scaling down is not possible. One case is anti-affinity rules which ensure pods run on different nodes. Even if the node is underutilized because the other pods have finished running, it is impossible to scale down the node. The reason is that if we scale down the node the anti-affinity will be violated.
 
-Another example could occur when the configuration requires a minimum number of nodes at the cluster or virtual node group (VNG) level. Either situation may result in cluster nodes that have unused resources and are not able to scale down for optimization.
+Another example could occur when the configuration requires a minimum number of nodes at the cluster or virtual node group (VNG) level. Either situation may result in cluster nodes with unused resources that cannot scale down for optimization.
 
 To address these cases, the revert to lower-cost node process analyzes the nodes in the cluster and checks for underutilized nodes that Ocean could not scale down. Then, Ocean proactively replaces them with cheaper nodes if a more profitable VM instance is available.
 
@@ -27,7 +27,7 @@ Ocean constantly scans the cluster’s node utilization. The revert to lower-cos
 *  No ongoing replacement in the relevant Virtual Node Group.
 *  A smaller instance type than the running one is configured in the configuration.
 
-Then, Ocean will individually replace all the relevant nodes in the Virtual Node Group. Each time the process is triggered, it will replace up to one instance in a VNG. (Nodes from different VNGs can be replaced at the same time.)
+Then, Ocean will individually replace all the relevant nodes in the Virtual Node Group. Each time the process is triggered, it will replace up to one instance in a Virtual Node Group. (Nodes from different Virtual Node Groups can be replaced at the same time.)
 - If the cluster is set to utilize reserved instances (RIs), the autoscaler will try to launch RIs first.
 - If there is no spot available and there is a smaller on-demand (OD) instance that is also cheaper, Ocean will try to replace the instance with that OD instance.
 
