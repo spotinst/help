@@ -6,6 +6,7 @@
     - [Connect to AWS](cost-intelligence/get-started/connect-aws)
     - [Connect to Azure](cost-intelligence/get-started/connect-azure)
     - [Connect with Azure CLI](cost-intelligence/get-started/connect-with-azure-cli)
+  - [Release Notes](cost-intelligence/release-notes/)
   - [Tutorials](cost-intelligence/tutorials/)
     - [Cost Intelligence Policy](cost-intelligence/tutorials/cost-intelligence-policy/)
     - [Dashboards](cost-intelligence/tutorials/dashboard/)
@@ -14,3 +15,4 @@
     - [Best Practice Checks](cost-intelligence/tutorials/best-practice-checks/)
     - [Inventory](cost-intelligence/tutorials/inventory)
     - [Administration](cost-intelligence/tutorials/administration/)
+ 
