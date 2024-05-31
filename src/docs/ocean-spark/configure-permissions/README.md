@@ -2,25 +2,25 @@
 
 This section details how to setup permissions for users of the **Ocean for Apache Spark** product.
 
-If you're not familiar with how permissions work in Spot, we recommend you take a look at this section : [Permission Policies](/administration/policies)
+If you're not familiar with how permissions work in Spot, we recommend you take a look at this section: [Permission Policies](/administration/policies)
 
 ## Overview
 
-Ocean for Apache Spark let you configure permission policies for **Actions** for the following resource types:
+Ocean for Apache Spark lets you configure permission policies for **Actions** for the following resource types:
 
 - Clusters
 - Apps
 - Jobs
-- Config-templates
+- Configuration templates
 - Workspaces
 
-All these resource types at least bound to a **Cluster** resource.
+All these resource types are at least bound to a **Cluster** resource.
 In Ocean for Apache Spark, clusters are identified by an id with the format `osc-xxxxxxxx`
 
 ## Account-level Managed Permission Policies
 
 To get started, you can use one of the following managed policies.  
-They will apply at the account level. If you want to set permissions more granular, look at [Granular Permissions Policies How-to Guides section](#granular-permissions-policies-how-to-guides)
+They will apply at the account level. If you want to set permissions with more granularity, look at the [Granular Permissions Policies How-to Guides section](#granular-permissions-policies-how-to-guides)
 
 | Policy                                | Level        | Effect                                                    | Product Scope                                      | Ocean Spark Resource Scope                                                                      |
 | ------------------------------------- | ------------ | --------------------------------------------------------- | -------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
@@ -29,8 +29,8 @@ They will apply at the account level. If you want to set permissions more granul
 
 ## Granular Permissions Policies How-to Guides
 
-Patterns describe below are for "edit" actions only.
-Users should have a read-access managed policies attached to their profile.
+Patterns described below are for "edit" actions only.
+Users should have read-access managed policies attached to their profile.
 
 ### How to define permissions for one or several clusters
 
