@@ -93,8 +93,10 @@ You can also use a wildcard `*` in the config-template resource value like :
 }
 ```
 
-**Important Note:** If you specify several clusters and several config-templates,
-it will allow users to do operations related to any config-template specified against any cluster specified, even if you declare several `statements` with different `resources` array
+> **Important Note 1:** If you specify several clusters and several config-templates,
+> it will allow users to do operations related to any config-template specified against any cluster specified, even if you declare several `statements` with different `resources` array
+
+> **Important Note 2:** If you want to force users to use a `configTemplateId` at app submisssion, you need to use the `condition` field as described below
 
 If you wish to only allow operations for a specific set of config-templates against a specific clusters, you'll need to use `condition` field.
 For example if we want to allow a user to :
@@ -163,14 +165,14 @@ The permission could look like this:
 
 Let's say you want each of your team to have their own config-templates and to be able to only submit spark application for their config-template.
 
-For each team, you can :
+For each team, you can:
 
 1. Create config-template using a specific pattern for the id
    For example : `team-A-config-template-1`, `team-A-config-template-2`, `team-B-config-template-1`
 
 2. Attach a managed policy like `Account Viewer` to your users.
 
-3. Create and attach one of the following policy by team using the condition operator `StringPatternMatch` :
+3. Create and attach one of the following policy by team:
 
 ```json
 {
@@ -190,7 +192,7 @@ For each team, you can :
 }
 ```
 
-If you want to also restrict the cluster users are allowed to submit to :
+If you want to also restrict the cluster users are allowed to submit to:
 
 ```json
 {
@@ -208,6 +210,38 @@ If you want to also restrict the cluster users are allowed to submit to :
         "sparkClusterId:osc-xxxxxx",
         "sparkConfigTemplateId:team-a*"
       ]
+    }
+  ]
+}
+```
+
+If you want to **force users to use a config-template when submitting an app**, you need to use the `condition` field like so:
+
+```json
+{
+  "statements": [
+    {
+      "effect": "ALLOW",
+      "actions": [
+        "spark:createApplication",
+        "spark:deleteApplication", // optional
+        "spark:createConfigTemplate",
+        "spark:updateConfigTemplate",
+        "spark:deleteConfigTemplate"
+      ],
+      "resources": ["*"],
+      "condition": {
+        "And": [
+          {
+            "StringEquals": {
+              "sparkClusterId": "osc-xxxxxx"
+            },
+            "StringPatternMatch": {
+              "sparkConfigTemplateId": "ct-team-a-*"
+            }
+          }
+        ]
+      }
     }
   ]
 }
