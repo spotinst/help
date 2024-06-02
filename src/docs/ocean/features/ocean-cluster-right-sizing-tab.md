@@ -16,16 +16,14 @@ Before you attempt to fine-tune your cluster resources according to Ocean's reco
 *  [Ocean Controller Version 2](https://docs.spot.io/ocean/tutorials/ocean-controller-v2/) installed and running. From version 2.0.52
 
 *  VPA project installed on your cluster. Otherwise, run the following commands:
-```
+```bash
 helm repo add spot https://charts.spot.io 
 
 helm repo update 
 
 helm install <my-release-name> spot/ocean-vpa
 ```
-
-
->**Note**:To turn on Automatic Right Sizing, contact your support team via email or chat.
+>**Note**:To turn on Automatic Right-Sizing, contact your [support](https://spot.io/support/) team via email or chat.
 
 ##  How It Works 
 
