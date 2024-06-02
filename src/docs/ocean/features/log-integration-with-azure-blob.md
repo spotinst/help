@@ -79,4 +79,27 @@ Once you complete the setup, log files from the defined cluster will be exported
 }
 ```
 
+###  Define Integration on Ocean Cluster
+
+Use the [Create Cluster](https://docs.spot.io/api/#operation/OceanAWSClusterCreate) or [Update Cluster](https://docs.spot.io/api/#operation/OceanAWSClusterUpdate) (for an existing cluster) API call to enter the integration ID in the Ocean cluster you want to export. (This is the ID you copied in Step 2 of the previous procedure.)
+
+**Example**:
+```json
+{
+  "cluster": {
+    "logging": {
+      "export": {
+        "azureBlob": {
+          "id": "di-123"         
+        }
+      }
+    }
+  }
+}
+```
+>**Note**: If you want to monitor multiple Ocean clusters, repeat the procedure for each cluster. The log file name format (described below) allows you to distinguish between the logs from different clusters.
+
+
+
+
 
