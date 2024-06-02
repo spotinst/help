@@ -54,7 +54,7 @@ Scale down the old controller replicas after installing the Controller Version 2
 *   To scale down the old controller replicas, run the following command: 
 
 ```bash
-kubectl scale deployment --replicas=0 -n $EXISITNG_NAMESPACE spotinst-kubernetes-cluster-controller 
+kubectl scale deployment --replicas=0 -n $EXISTING_NAMESPACE spotinst-kubernetes-cluster-controller 
 ```
 > **Note**:  The Ocean Controller Version 2 replicas begin operating a few seconds after all Ocean Controller version 1 replicas are fully removed. Completely removing Ocean Controller Version 1 will allow Ocean Controller Version 2 to ensure a smooth transition and optimal performance.
  
