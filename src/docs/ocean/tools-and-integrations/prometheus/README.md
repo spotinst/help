@@ -47,6 +47,7 @@ Dimensions: `reason`, `VNG_Id`, `lifecycle="Spot/OD/Preemptible"`, `az/zone`, `v
 Example:
 ```
 nodes_added_total{reason="revertToLowerCostReplacement", lifecycle="Spot", az="us-west-2a", vm_type="c5.xlarge", vng_name = “Vng2”, ocean_id= “o-XXXXX”} 46
+
 nodes_added_total{reason="scaleUpForPendingPods", lifecycle="Spot", az="us-west-2b", vm_type="r5a.4xlarge", vng_name = “Vng2”, ocean_id= “o-XXXXX”} 13
 ```
 
@@ -72,6 +73,7 @@ of running instances.
 running instances.
 
 Prometheus metric type: counter
+
 Dimensions: `oceanId`, `reason`, `vngId`, `vngName`
 
 Example:
@@ -81,6 +83,7 @@ reason="cant_scale_up_pods_for_vngs ", vngId=" ols-9238181b ", vngName=" test-ne
 vngName=" test-new”}
 
 ocean_failed_scale_downs { oceanId=" o-2cf2e886 ", reason=" cluster_min_instance_count_reached ", vngId="
+Unknown ", vngName=" unKnown”
 ```
 ## Tracking Ocean Managed Resources
 
