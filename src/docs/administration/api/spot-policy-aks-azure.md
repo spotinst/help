@@ -67,7 +67,9 @@ The latest Spot policy in Azure appears below.
                     "Microsoft.Resources/subscriptions/resourceGroups/read"
                 ],
                 "notActions": [],
-                "dataActions": [],
+                "dataActions": [
+                    "Microsoft.Storage/storageAccounts/blobServices/containers/blobs/write"
+                ],
                 "notDataActions": []
             }
         ]
