@@ -71,20 +71,17 @@ of running instances.
 * `cluster_min_instance_count_reached` - failed to scale down. Clusters have reached the minimum capacity of
 running instances.
 
-
-
-
 Prometheus metric type: counter
 Dimensions: `oceanId`, `reason`, `vngId`, `vngName`
+
 Example:
+```
 ocean_failed_scale_ups {oceanId=" o-2cf2e886 ", reason=" oceanId=" o-2cf2e886 ",
 reason="cant_scale_up_pods_for_vngs ", vngId=" ols-9238181b ", vngName=" test-new”", vngId=" ols-9238181b ",
 vngName=" test-new”}
+
 ocean_failed_scale_downs { oceanId=" o-2cf2e886 ", reason=" cluster_min_instance_count_reached ", vngId="
-
-
-
-
+```
 ## Tracking Ocean Managed Resources
 
 It is also useful to track Ocean managed resources in order to get a full picture.
