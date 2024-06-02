@@ -25,7 +25,7 @@ ocean_managed_nodes {vng_id="ols-xxxxxxxx", lifecycle="OD", az="us-west-2b", typ
 ocean_managed_nodes {vng_id="ols-xxxxxxxx", lifecycle="Spot", az="us-west-2b", vm_type="m5.8xlarge",  vng_name = “Vng2”, ocean_id= “o-XXXXX”} 3
 ```
 
-### Ocean_Nodes_added_total and Ocean_Nodes_removed_total
+### ocean_nodes_added_total and ocean_nodes_removed_total
 
 These counter-type metrics help track the rate of addition and removal of nodes in the cluster and their different reasons, as reflected in a dedicated label called `Reason.` `Reason` includes values such as: 
 
@@ -57,7 +57,7 @@ These counter-type metrics help track the rate of failed scale-ups and scale-dow
 reasons behind them, as reflected in a dedicated label called `Reason.` `Reason` includes values such as:
 
 * `auto_scaler_can't_handle_pvc` - failed to scale up. Pvc can’t be handled.
-* `no_instances_with_requested_resources`- failed to scale up. no instances matched all the pod’s requested reources.
+* `no_instances_with_requested_resources`- failed to scale up. No instances matched all the pods' requested resources.
 `vngs_labels_not_match_all_affinities` failed to scale up the instance. Pod’s affinity/ anti-affinity could not be
 satisfied by the current group’s vng configuration.
 * `topology_spread_constrains` - failed to scale up. pod topology spread constraints could not be satisfied by the current
