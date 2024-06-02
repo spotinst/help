@@ -4,6 +4,7 @@
 - [Cost Intelligence](cost-intelligence/)
   - [Getting Started](cost-intelligence/get-started/)
     - [Connect to AWS](cost-intelligence/get-started/connect-aws)
+    - [Connect to AWS with Stacksets](cost-intelligence/get-started/connect-aws-stacksets)
     - [Connect to Azure](cost-intelligence/get-started/connect-azure)
     - [Connect with Azure CLI](cost-intelligence/get-started/connect-with-azure-cli)
   - [Release Notes](cost-intelligence/release-notes/)
