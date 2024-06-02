@@ -27,7 +27,9 @@ Lambda-backed resources used in this template are not provisioned in any of your
 If the stack is created in an AWS account that is: 
 
 * **Not connected to a Spot account**: a new Spot account is automatically created. The Spot account name defaults to the AWS account ID. 
-* **Already connected to a Spot account**: the stack uses the existing Spot account. It creates a new policy and role and applies them to the account. **It also renames the Spot account** if the RenamedSpotAccountByAlias resource is included. If the stack is later deleted, it will delete this Spot account even though the account wasn’t originally created by the stack. 
+* **Already connected to a Spot account**: the stack uses the existing Spot account.
+   * If **Update Spot Accounts that already exist** is set to `True`, it creates a new policy and role and applies them to the account. **It also renames the Spot account** if the RenamedSpotAccountByAlias resource is included. If the stack is deleted later, **it will delete this Spot account** even though the account wasn’t originally created by the stack. 
+   * If **Update Spot Accounts that already exist** is set to `False`, the existing Spot accounts are not changed or deleted by the StackSet.  
 * **Already connected to more than one Spot account**: stack creation fails. 
 
 StackSets doesn't deploy stack instances to the organization management account. This is true even if the organization management account is in your organization or in an organization unit. See the [AWS documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DeploymentTargets.html). 
@@ -54,11 +56,12 @@ To use the Spot onboarding StackSets, you’ll need to:
 ![stacksets-1](https://github.com/spotinst/help/assets/106514736/ca14fbad-eb28-48b4-b58b-51344092fce1)
 
 4. In the Specify StackSet details section, enter these fields, and click **Next**: 
-    * Name (optional) 
+    * Name (required) 
     * Description (optional) 
     * Spot API token with administrative privileges (required) 
     * Include the Spot Policy for Elastigroup and Ocean (default true)
     * Include the Spot Policy for Cost Intelligence (default true)
+    * Update Spot Accounts that already exist (default false) 
     
 5. In the Configure StackSets options section, you can optionally enter the key and value to tag the StackSets. 
 
