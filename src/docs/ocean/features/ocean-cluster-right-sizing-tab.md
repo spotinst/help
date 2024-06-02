@@ -1,6 +1,6 @@
 <meta name=“robots” content=“noindex”>
 
-#  Ocean EKS Cluster Right Sizing 
+#  Ocean EKS Cluster Automatic Right Sizing 
 
 To help you improve the efficiency and performance of your cloud environments, Ocean’s rightsizing capabilities provide recommendations that target over-provisioning and underutilization. 
 
@@ -13,8 +13,19 @@ Before you attempt to fine-tune your cluster resources according to Ocean's reco
 *  A Spot account. 
 *  Metrics Server installed in your Kubernetes cluster. 
 *  Ocean cluster managing your Kubernetes worker nodes. 
-*  [Ocean Controller Version 2](https://docs.spot.io/ocean/tutorials/ocean-controller-v2/) installed and running. From version 2.0.52 
-*  To turn on this feature, contact your support team via email or chat.
+*  [Ocean Controller Version 2](https://docs.spot.io/ocean/tutorials/ocean-controller-v2/) installed and running. From version 2.0.52
+
+*  VPA project installed on your cluster. Otherwise, run the following commands:
+```
+helm repo add spot https://charts.spot.io 
+
+helm repo update 
+
+helm install <my-release-name> spot/ocean-vpa
+```
+
+
+>**Note**:To turn on Automatic Right Sizing, contact your support team via email or chat.
 
 ##  How It Works 
 
