@@ -99,7 +99,13 @@ Use the [Create Cluster](https://docs.spot.io/api/#operation/OceanAWSClusterCrea
 ```
 >**Note**: If you want to monitor multiple Ocean clusters, repeat the procedure for each cluster. The log file name format (described below) allows you to distinguish between the logs from different clusters.
 
+##  Log Files
 
+Each Ocean log file on the container in the defined storage account takes three minutes of logging and has the following format for the filename:
 
+`accountId_oceanId_oceanName_startDate.log`
 
+For example, a filename would look like:
+
+`act-12345_o-12345678_cluster.k8s.com_2021-08-18T08:06:00Z.log`
 
