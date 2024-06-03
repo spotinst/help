@@ -1,6 +1,6 @@
 <meta name=“robots” content=“noindex”>
 
-#  Right Sizing Recommendations and Rules 
+#  Automatic Right-Sizing Recommendations and Rules 
 
 To view your right-sizing recommendations and rules:   
 
@@ -17,7 +17,7 @@ The Advanced Optimization tab contains the following lists:
 
 This list displays: 
 
-* Your right-sizing recommendations per workload, and it lets you drill down to view your right-sizing recommendations per container. 
+*  Your right-sizing recommendations per workload, and it lets you drill down to view your right-sizing recommendations per container. 
 *  Recommendations for vCPU and memory right sizing per deployment. Recommended increases are shown with a green up arrow, and recommended decreases are shown with a red Down arrow.  
 *  Optimized [Right Sizing rules]() that are attached to specific workloads.
 *  Potential monthly max. savings if you adopt these recommendations.  
@@ -27,9 +27,7 @@ To view a list of your potential savings and recommendations per container:
 *  Click on a workload link to drill down to the containers. For each container, you can then view the following: 
 
     *  vCPU Request: showing current and average utilization and a recommended increase or decrease for this resource (in vCPU units). If no changes are required, a Keep icon is displayed. 
-
     *  Memory Request: This shows current and Average utilization and a recommended increase or decrease for this resource (in MiB units). If no changes are required, a Keep icon is displayed. 
-
     *  Right-Sizing Recommendations: Show the recommended changes in vCPU and memory. Click on the Copy icon to save these changes for later. 
 
 ##  Right Sizing Rules List 
@@ -54,7 +52,6 @@ To create/edit a right-sizing rule:
 ![right-sizing-add-new-rule](https://github.com/spotinst/help/assets/159915991/d5f3ac19-e1ac-40b7-a600-9e19cbbdfc5e)
 
 3.   In the Configure Automation Rule dialog box, enter/edit the unique rule name.
-
 4.   Select when to apply the recommendation by clicking the relevant radio button: 
 
       *   **Once available**: The recommendation is applied immediately after it becomes available. 
@@ -90,7 +87,6 @@ To attach a rule to one or more workloads:
 To detach a rule from one or more workloads: 
 
 1.   Select workloads in the Workloads Optimization list.
-
 2.   From the Actions drop-down menu above the list, click **Detach Rule**. 
 
 ###   Delete a Right-Sizing Rule 
@@ -98,7 +94,6 @@ To detach a rule from one or more workloads:
 To delete a right sizing rule: 
 
 1.   To the right of the row for the rule in the list, click the wastebasket icon. 
-
 2.   When the confirmation message appears, Click **Delete**, or **Cancel** (if you are unsure). 
 
 >**Important**: You cannot restore a deleted right-sizing rule. 

@@ -10,7 +10,7 @@ Ocean provides container-level right-sizing recommendations so you can focus on 
 
 ##  Prerequisites
 
-Before you attempt to fine-tune your cluster resources according to Ocean's recommendation, make sure that you have the following: 
+Before you attempt to fine-tune your cluster resources according to Ocean's recommendation, you will need: 
 
 *  A Spot account. 
 *  Metrics Server installed in your Kubernetes cluster. 
@@ -30,7 +30,7 @@ helm install <my-release-name> spot/ocean-vpa
 ##  Limitations  
 
 *  If Vertical Pod Autoscaler custom resources already exist for your workloads before using Ocean Automatic right sizing, do not create any Rule Matching for them. 
-*  Supported manifests: Deployments, DaemonSets, and statefulSets  
+*  Supported manifests: Deployments, DaemonSets, and statefulSets.  
 *  Workloads must have more than one replica for restart capability. 
 
 
@@ -54,7 +54,7 @@ Using the per-workload container aggregated data points, Ocean makes recommendat
 
 You view Right Sizing recommendations via: 
 
-*  Ocean console, under the Cloud Cluster Right Sizing Recommendation tab [put link here]. 
+*  Ocean console, under the Cloud Cluster Right Sizing [Advanced Optimization](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab) tab. 
 *  [Spot API](https://docs.spot.io/api/#tag/Ocean-AWS/operation/oceanAwsFilterRightSizingWithFilter).
 
 ##  View Right Sizing for a Cluster 
@@ -81,14 +81,14 @@ The Right-Sizing tab displays a Dashboard divided into the following panels:
 *  Make sure that your metrics server is installed and functioning correctly. 
 *  The initial one-hour data collection period may not have elapsed. 
 
->**Note**: You can filter your data according to namespaces, workloads/containers, or labels, from the provided drop-down menus.
+>**Note**: You can filter your data according to namespaces, workloads/containers, or labels from the provided drop-down menus.
 
 ###  Right Sizing Savings Panel 
 
 The Right-Sizing Savings panel contains a set of savings widgets, which show your potential savings from Ocean cluster right sizing, derived from data collected in the last two weeks:  
 
 *  Potential Monthly Maximum Savings. 
-*  vCPU Usage: Used and allocated vCPU resources, a recommendation to increase or decrease the vCPU resources, and the percentage of overprovisioning. 
+*  vCPU Usage: Used and allocated vCPU resources, recommended increasing or decreasing the vCPU resources, and the percentage of overprovisioning. 
 *  Memory Usage: Used and allocated memory resources, a recommendation to increase or decrease the memory resources, and the percentage of overprovisioning. 
 
 ![right-sizing-savings-panel](https://github.com/spotinst/help/assets/159915991/3693d491-2caa-4254-ae5c-4eafa6123b89)
