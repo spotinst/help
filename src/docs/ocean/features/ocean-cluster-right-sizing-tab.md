@@ -8,22 +8,33 @@ Container resource requests, defined in a Kubernetes cluster, determine a pod’
 
 Ocean provides container-level right-sizing recommendations so you can focus on improving specific application resource requests and make impactful changes to resource utilization.  
 
+##  Prerequisites
+
 Before you attempt to fine-tune your cluster resources according to Ocean's recommendation, make sure that you have the following: 
 
 *  A Spot account. 
 *  Metrics Server installed in your Kubernetes cluster. 
 *  Ocean cluster managing your Kubernetes worker nodes. 
-*  [Ocean Controller Version 2](https://docs.spot.io/ocean/tutorials/ocean-controller-v2/) installed and running. From version 2.0.52
+*  [Ocean Controller Version 2.0.52 and above](https://docs.spot.io/ocean/tutorials/ocean-controller-v2/) installed and running.
+   *  Make sure to install the [Metrics Server](https://github.com/kubernetes-incubator/metrics-server#deployment).
+*  Vertical Pod Autoscaler project (VPA) Version 1.0.0 and above installed on your cluster. Otherwise, run the following commands:
 
-*  VPA project installed on your cluster. Otherwise, run the following commands:
-```bash
+```sh
+
 helm repo add spot https://charts.spot.io 
-
 helm repo update 
-
 helm install <my-release-name> spot/ocean-vpa
 ```
 >**Note**:To turn on Automatic Right-Sizing, contact your [support](https://spot.io/support/) team via email or chat.
+
+##  Limitations  
+
+If VPA custom resources already exist for your workloads prior to using Ocean Automatic right sizing, do not create any Rule-Matching for them. 
+
+Supported manifests: Deployments, DaemonSets, and statefulSets  
+
+Workloads must have more than one replica for the restart capability to work 
+
 
 ##  How It Works 
 
