@@ -10,7 +10,7 @@ By monitoring a few key metrics, you can understand how Ocean scales. The metric
 
 ### ocean_managed_nodes
 
-This metric tracks the total number of nodes Ocean manages in the cluster. The metric could be useful in responding to anomalies. In addition, the metric provides an easy breakdown to monitor specific [virtual node groups](ocean/features/vngs/) in the cluster and other infrastructure characteristics such as instance lifecycle and type.
+This metric tracks the total number of nodes Ocean manages in the cluster. The metric could be useful in responding to anomalies. In addition, the metric provides an easy breakdown to monitor specific [Virtual Node Groups](ocean/features/vngs/) in the cluster and other infrastructure characteristics such as instance lifecycle and type.
 
 Prometheus metric type: gauge
 
@@ -32,7 +32,7 @@ These counter-type metrics help track the rate of addition and removal of nodes 
 * `odToSpotReplacement`—The node was scaled up/down due to a replacement from an on-demand to a spot node. The on-demand node was launched because there was no available spot node in the market at the time. Ocean continues scanning the market for an available spot node and reverts as soon as one is available.  
 * `autoHealingReplacement`—The node was scaled up/down due to a replacement from an unhealthy instance to a new one. Ocean checks the instance’s status after the grace period, and if an instance fails the health check, it is automatically replaced with a new one.  
 * `riUtilizationReplacement` (relevant only to AWS)—The node was scaled up/down due to a replacement from spot/OD to RI. Ocean constantly monitors for available RIs or Savings Plans in your account (when the `strategy.utilizeReservedInstances` or `utilizeCommitments` flag is	enabled). If there is an Ocean-monitored node that runs as a spot or OD, Ocean will try to replace it with the available RI or Savings Plan nodes. 
-* `recoveryReplacement`—Since the provider took the instance, the node was scaled down. As part of the recovery process, a new node was scaled up to replace it. 
+* `recoveryReplacement`— Since the provider took the instance, the node was scaled down. As part of the recovery process, a new node was scaled up to replace it. 
 * `revertToLowerCostReplacement` -  The node was scaled up/down due to the ‘Revert to lower cost’ process. For more information, click [here](ocean/features/revert-to-lower-cost-node?id=revert-to-lower-cost-node). 
 * `shutdownHoursActivity` - The node was scaled up/down due to shutdown hours set on your cluster. For more information, click [here](ocean/features/running-hours?id=shutdown-hours).  
 * `clusterRollReplacement` - The node was scaled up/down due to a cluster roll in your cluster. For more information, click [here](ocean/features/roll?id=roll).  
@@ -55,12 +55,12 @@ reasons behind them, as reflected in a dedicated label called `Reason.` `Reason`
 
 * `auto_scaler_can't_handle_pvc` - failed to scale up. PVC can’t be handled.
 * `no_instances_with_requested_resources`- failed to scale up. No instances matched all the pods' requested resources.
-* `vngs_labels_not_match_all_affinities` failed to scale up the instance. Pod’s affinity/ anti-affinity could not be
+* `vngs_labels_not_match_all_affinities` - failed to scale up the instance. Pod’s affinity/ anti-affinity could not be
 satisfied by the current group’s Virtual Node Group configuration.
 * `topology_spread_constrains` - failed to scale up. pod topology spread constraints could not be satisfied by the current
 group configuration.
 * `no_applicable_instances` - failed to scale up. The current group configuration could not satisfy the Pod’s constraints.
-* `vng_max_instance_count_reached` - failed to scale up. Virtual Node Group reached maximum instance count running.
+* `vng_max_instance_count_reached` - failed to scale up. Virtual Node Group reached the maximum instance count running.
 * `cluster_max_instance_count_reached` - failed to scale up. Clusters reached maximum instance count running.
 * `cant_scale_up_pods_for_vngs` - failed to scale up. due to technical failure to launch required instances.
 * `vng_min_instance_count_reached` - failed to scale down. Virtual Node Group has reached the minimum capacity
@@ -77,7 +77,7 @@ Example:
 ocean_failed_scale_ups{oceanId="o-2cf2e886", reason="oceanId="o-2cf2e886", reason="cant_scale_up_pods_for_vngs", vngId="ols-9238181b", vngName="test-new”", vngId="ols-9238181b", vngName="test-new”}
 ocean_failed_scale_downs{oceanId="o-2cf2e886", reason="cluster_min_instance_count_reached", vngId="Unknown", vngName="unKnown”}
 ```
->**Note**:  If the vngId and vngName are ‘unknown’: At this point, when the pod was pending and waiting for the Ocean Autoscaler to scale up a node, scaling failed for some reason. At this stage, the Ocean Autoscaler did not know which Virtual Node group the pod should be running in.
+>**Note**: If the vngId and vngName are ‘unknown’, scaling failed for some reason at this point, when the pod was pending and waiting for the Ocean Autoscaler to scale up a node. At this stage, the Ocean Autoscaler did not know which Virtual Node group the pod should be running in.
 
 ## Tracking Ocean Managed Resources
 
