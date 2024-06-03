@@ -6,7 +6,7 @@ To view your right-sizing recommendations and rules:
 
 *  Under the Right Sizing tab, click **Advanced Optimization**. 
 
-[placeholder]
+![right-sizing-wl-and-containers](https://github.com/spotinst/help/assets/159915991/3558f261-20a3-4182-bb2f-b4509869e7a9)
 
 The Advanced Optimization tab contains the following lists:  
 
@@ -53,7 +53,7 @@ To create/edit a right-sizing rule:
      
      >**Note**: To edit an existing rule: To the right of the row for the rule in the Right Sizing Rules list at the bottom of the tab, click **Edit Rule**. 
 
-[placeholder]
+![right-sizing-add-new-rule](https://github.com/spotinst/help/assets/159915991/d5f3ac19-e1ac-40b7-a600-9e19cbbdfc5e)
 
 3.   In the Configure Automation Rule dialog box, enter/edit the unique rule name.
 
@@ -62,21 +62,12 @@ To create/edit a right-sizing rule:
       *   **Once available**: The recommendation is applied immediately after it becomes available. 
       *   **At a specific time**: You select when to apply the recommendation after it becomes available.
 
-  [placeholder]
+![right-sizing-when-to-apply](https://github.com/spotinst/help/assets/159915991/323b56ca-2d9f-440b-ac7e-f934b0da337b)
 
 5.   Select whether to turn on the **restart pods for relevant workloads** option. This option enables Ocean to restart pod batches sequentially according to recommendations.
-6.   Click the **Set Min. CPU / Memory thresholds for workload** down arrow and then set the CPU and Memory percentage thresholds using the up/down arrows. This threshold is the difference between the current request and the recommendation for triggering a percentage change. 
-
-[placeholder]
-
+6.   Click the **Set Min. CPU / Memory thresholds for workload** down arrow and then set the CPU and Memory percentage thresholds. This threshold is the difference between the current request and the recommendation for triggering a percentage change. 
 7.   Click the **Set recommendation ranges for CPU & Memory** down arrow and enter the minimum and maximum values for CPU requests (millicpu) and Memory requests (mib). 
-
-[placeholder]
-
-8.   Click the **Set overhead for workload** down arrow and use the up/down arrows to set the CPU and memory percentage overheads. An overhead specifies the percentage of extra resources to add to the new request recommendation.
-
-[placeholder]
-
+8.   Click the **Set overhead for workload** down arrow and set the CPU and memory percentage overheads. An overhead specifies the percentage of extra resources to add to the new request recommendation.
 9.   After you save the rule, it appears in the area under the Workloads Optimization list. See [View Right-Sizing Recommendations and Rules]().
 
 ###   Attach a Right-Sizing Rule to One or More Workloads 
@@ -86,7 +77,7 @@ To attach a rule to one or more workloads:
 1.   Select one or more workloads in the Workloads Optimization list. 
 2.   From the Actions drop-down menu above the table, click **Attach Rule**.
 
-[placeholder]
+![right-sizing-attach-rule](https://github.com/spotinst/help/assets/159915991/dbc36aec-bc82-4b01-a75a-a6776970a785)
 
 3.   You can attach a rule you already created, or create a new rule from scratch:
       *   Existing rule: Click the **Select from existing rule** drop-down menu and then select a rule. 
