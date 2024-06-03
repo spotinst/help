@@ -36,6 +36,7 @@
     - [Shutdown Hours](ocean/features/running-hours)
     - [Auto-Update Process (GKE)](ocean/features/auto-update-process-gke)
     - [Log Integration with S3](ocean/features/log-integration-with-s3)
+    - [Log Integration with Azure Blob](ocean/features/log-integration-with-azure-blob)
     - [Distribute by vCPU](ocean/features/distribute-vcpu)
     - [EKS AMI Auto-Update](ocean/features/eks-auto-ami)
     - [Migrate Workload to Ocean (EKS)](ocean/tutorials/migrate-workload)
