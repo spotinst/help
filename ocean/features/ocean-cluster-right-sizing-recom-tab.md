@@ -2,16 +2,23 @@
 
 #  Automatic Right-Sizing Recommendations and Rules 
 
-To view your right-sizing recommendations and rules:   
+This topic shows you how to view right-sizing recommendations for workloads and containers and work with right-sizing rules.
 
-*  Under the Right Sizing tab, click **Advanced Optimization**. 
+Before proceeding, see [Ocean EKS Cluster Automatic Right-Sizing](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-tab) for a full description of this Ocean feature.
+
+To view your right-sizing recommendations and rules: 
+
+1. In the left main menu, click **Ocean** > **Cloud Clusters**.
+2. Select a cluster from the list of clusters.
+3. Click the **Right Sizing** tab.
+4. Click **Advanced Optimization**. 
 
 ![right-sizing-wl-and-containers](https://github.com/spotinst/help/assets/159915991/3558f261-20a3-4182-bb2f-b4509869e7a9)
 
 The Advanced Optimization tab contains the following lists:  
 
-*  Workloads Optimization List 
-*  Automatic Right Sizing Rules List
+*  Workloads Optimization List. 
+*  Automatic Right Sizing Rules List.
 
 ##  Workloads Optimization List 
 
@@ -63,7 +70,7 @@ To create/edit a right-sizing rule:
 6.   Click the **Set Min. CPU / Memory thresholds for workload** down arrow and then set the CPU and Memory percentage thresholds. This threshold is the difference between the current request and the recommendation for triggering a percentage change. 
 7.   Click the **Set recommendation ranges for CPU & Memory** down arrow and enter the minimum and maximum values for CPU requests (millicpu) and Memory requests (mib). 
 8.   Click the **Set overhead for workload** down arrow and set the CPU and memory percentage overheads. An overhead specifies the percentage of extra resources to add to the new request recommendation.
-9.   After you save the rule, it appears in the area under the Workloads Optimization list. See [View Right-Sizing Recommendations and Rules]().
+9.   After you save the rule, it appears in the area under the [Workloads Optimization list](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=workloads-optimization-list).
 
 ###   Attach a Right-Sizing Rule to One or More Workloads 
 
