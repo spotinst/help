@@ -159,7 +159,7 @@ The permission might look like this:
 }
 ```
 
-## Use cases
+## Use Cases
 
 ### Set Permissions to Isolate App Submission by Team
 
