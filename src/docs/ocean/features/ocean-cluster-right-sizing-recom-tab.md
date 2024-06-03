@@ -35,13 +35,11 @@ To view a list of your potential savings and recommendations per container:
 ##  Right Sizing Rules List 
 
 This list displays your existing right-sizing rules.  
-
 Each rule entry shows relevant information about the parameters that trigger the rule and its scheduling plan. 
 
 ##   Work with Right Sizing Rules 
 
-You can create the right sizing rules and immediately attach them to specific workloads. Alternatively, you can create and save a rule, and later attach the rule to one or more workloads. 
-
+You can create the right sizing rules and immediately attach them to specific workloads. Alternatively, you can create and save a rule and later attach it to one or more workloads. 
 You can create right-sizing rules to trigger immediately after a specific set of requirements is met or at a specific time after the requirements are met. 
 
 ###   Create or Edit a Right-Sizing Rule 
