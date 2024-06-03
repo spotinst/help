@@ -3165,6 +3165,20 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean/features/log-integration-with-s3"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/ocean/features/ocean-cluster-right-sizing-recom-tab</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean/features/ocean-cluster-right-sizing-recom-tab"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean/features/ocean-cluster-right-sizing-recom-tab"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/ocean/features/ocean-cluster-right-sizing-tab</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean/features/ocean-cluster-right-sizing-tab"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean/features/ocean-cluster-right-sizing-tab"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/ocean/features/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
