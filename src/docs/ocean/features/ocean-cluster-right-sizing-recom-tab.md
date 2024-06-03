@@ -1,6 +1,6 @@
 <meta name=“robots” content=“noindex”>
 
-#  Right Sizing Recommendations and Rules 
+#  Automatic Right Sizing Recommendations and Rules 
 
 To view your right-sizing recommendations and rules:   
 
