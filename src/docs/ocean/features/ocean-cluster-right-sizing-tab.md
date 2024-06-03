@@ -29,11 +29,9 @@ helm install <my-release-name> spot/ocean-vpa
 
 ##  Limitations  
 
-If VPA custom resources already exist for your workloads prior to using Ocean Automatic right sizing, do not create any Rule-Matching for them. 
-
-Supported manifests: Deployments, DaemonSets, and statefulSets  
-
-Workloads must have more than one replica for the restart capability to work 
+*  If Vertical Pod Autoscaler custom resources already exist for your workloads before using Ocean Automatic right sizing, do not create any Rule Matching for them. 
+*  Supported manifests: Deployments, DaemonSets, and statefulSets  
+*  Workloads must have more than one replica for restart capability. 
 
 
 ##  How It Works 
@@ -51,7 +49,8 @@ The aggregation includes maximum, minimum, and mean resource utilization values,
 Using the per-workload container aggregated data points, Ocean makes recommendations based on a mechanism that attempts to even out peaks and troughs in resource demand. The Right-Sizing engine runs every hour to generate new recommendations and update existing ones. 
 
 *  Recommendations for decreasing resource requests are based on the above-described calculation using the 99th Percentile of the maximum resource utilization data collected (e.g., max_memory_utilization). 
-*  Recommendations for increasing resource requests are based on the above-described calculation using the 85th Percentile mean resource utilization data collected (e.g., mean_memory_utilization). Currently, Ocean generates recommendations for Kubernetes deployments, statefulsets, SpotDeployments, and daemonsets.
+*  Recommendations for increasing resource requests are based on the above-described calculation using the 85th Percentile mean resource utilization data collected (e.g., mean_memory_utilization).
+*  Currently, Ocean generates recommendations for Kubernetes deployments, statefulsets, SpotDeployments, and daemonsets.
 
 You view Right Sizing recommendations via: 
 
@@ -74,7 +73,7 @@ To view right-sizing for a cluster:
 
 The Right-Sizing tab displays a Dashboard divided into the following panels: 
 
-*  The Right-Sizing Savings panel: Summarizes your potential maximum savings from right-sizing, vCPU and memory usage, and recommendations for a selected namespace, workload, and container. 
+*  The Right-Sizing Savings panel summarizes your potential maximum savings from right-sizing, vCPU, and memory usage and recommendations for a selected namespace, workload, and container. 
 *  Right-sizing Resource Usage panel: This panel graphically displays your vCPU and memory resource usage in the last two weeks. 
 
 >**Note**: If the Right Sizing tab does not display any data: 
@@ -92,15 +91,14 @@ The Right-Sizing Savings panel contains a set of savings widgets, which show you
 *  vCPU Usage: Used and allocated vCPU resources, a recommendation to increase or decrease the vCPU resources, and the percentage of overprovisioning. 
 *  Memory Usage: Used and allocated memory resources, a recommendation to increase or decrease the memory resources, and the percentage of overprovisioning. 
 
-{placeholder]
+![right-sizing-savings-panel](https://github.com/spotinst/help/assets/159915991/3693d491-2caa-4254-ae5c-4eafa6123b89)
 
 ###  Right Sizing Resource Usage Panel 
 
-Right Sizing Resources Usage panel contains two widgets: 
+The right Sizing Resources Usage panel contains two widgets: 
 
 *  vCPU usage in the last two weeks: Displays graphs for used, allocated, and recommended vCPU usage, based on data from the last two weeks. 
 *  Memory usage in the last two weeks: Displays graphs for used, allocated, and recommended memory usage based on data from the last two weeks. 
 
-{placeholder]
-
+![right-sizing-usage-panel](https://github.com/spotinst/help/assets/159915991/82488c4a-5683-432b-b589-a30b1d15ed99)
 
