@@ -54,7 +54,7 @@ Using the per-workload container aggregated data points, Ocean makes recommendat
 
 You view Right Sizing recommendations via: 
 
-*  Ocean console, under the Cloud Cluster Right Sizing Recommendation tab [put link here]. 
+*  Ocean console, under the Cloud Cluster Right Sizing [Advanced Optimization](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab) tab. 
 *  [Spot API](https://docs.spot.io/api/#tag/Ocean-AWS/operation/oceanAwsFilterRightSizingWithFilter).
 
 ##  View Right Sizing for a Cluster 
