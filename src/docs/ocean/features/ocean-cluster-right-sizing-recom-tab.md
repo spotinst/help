@@ -63,7 +63,7 @@ To create/edit a right-sizing rule:
 6.   Click the **Set Min. CPU / Memory thresholds for workload** down arrow and then set the CPU and Memory percentage thresholds. This threshold is the difference between the current request and the recommendation for triggering a percentage change. 
 7.   Click the **Set recommendation ranges for CPU & Memory** down arrow and enter the minimum and maximum values for CPU requests (millicpu) and Memory requests (mib). 
 8.   Click the **Set overhead for workload** down arrow and set the CPU and memory percentage overheads. An overhead specifies the percentage of extra resources to add to the new request recommendation.
-9.   After you save the rule, it appears in the area under the Workloads Optimization list. See [View Right-Sizing Recommendations and Rules]().
+9.   After you save the rule, it appears in the area under the [Workloads Optimization list](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=workloads-optimization-list).
 
 ###   Attach a Right-Sizing Rule to One or More Workloads 
 
