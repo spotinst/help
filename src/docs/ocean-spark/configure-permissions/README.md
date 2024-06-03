@@ -17,7 +17,7 @@ Ocean for Apache Spark lets you configure permission policies for **Actions** fo
 All these resource types are at least bound to a **Cluster** resource.
 In Ocean for Apache Spark, clusters are identified by an id with the format `osc-xxxxxxxx`
 
-## Account-level Managed Permission Policies
+## Account-Level Managed Permission Policies
 
 To get started, you can use one of the following managed policies, which apply at the account level.  
 If you want to set permissions with more granularity, see [Granular Permissions Policies How-to Guides](#granular-permissions-policies-how-to-guides).
@@ -32,7 +32,7 @@ If you want to set permissions with more granularity, see [Granular Permissions 
 The patterns described below are for "edit" actions only.
 Users should have read-access managed policies attached to their profile.
 
-### How to define permissions for one or several clusters
+### How to Define Permissions for One or Several Clusters
 
 Cluster is the default resource to scope a permission policy.
 You can do it by using the `resources` field in the policy :
