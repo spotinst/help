@@ -2,9 +2,9 @@
 
 #  Automatic Right-Sizing Recommendations and Rules 
 
-This topic shows you how to view recommendations and work with Right-Sizing rules.
+This topic shows you how to view right-sizing recommendations for workloads and containers and work with right-sizing rules.
 
-Before proceeding, see [Automatic Right-Sizing](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-tab). 
+Before proceeding, see [Ocean EKS Cluster Automatic Right-Sizing](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-tab) for a full description of this Ocean feature.
 
 To view your right-sizing recommendations and rules: 
 
