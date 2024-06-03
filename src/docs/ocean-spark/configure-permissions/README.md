@@ -1,8 +1,8 @@
 # Configure Permissions
 
-This section details how to set up permissions for users of the **Ocean for Apache Spark** product.
+This topic describes setting up permissions for **Ocean for Apache Spark** product users.
 
-If you're not familiar with how permissions work in Spot, see [Permission Policies](/administration/policies)
+If you're unfamiliar with how permissions work in Spot, see [Permission Policies](/administration/policies).
 
 ## Overview
 
@@ -98,7 +98,7 @@ You can also use a wildcard `*` in the config-template resource value like this:
 
 > **Important Note 2:** If you want to force users to use a `configTemplateId` in-app submissions, use the `condition` field as described below.
 
-Use the' condition' field to allow operations only for a specific set of config templates against a specific set of clusters.
+Use the 'condition' field to allow operations only for a specific set of config templates against a specific set of clusters.
 For example, to allow a user to:
 
 - use config-templates with pattern `ct-team-a-*` against `cluster-1` and `cluster-2`
@@ -250,7 +250,7 @@ If you want to **force users to use a config-template when submitting an app**, 
 ### Set Permissions for Notebook Users
 
 If you want to give your users access to the notebook feature using local Jupyter notebooks or a JupyterLab instance,
-you can use the following policy:
+you can use this policy:
 
 ```json
 {
@@ -296,7 +296,7 @@ If you want to allow notebook use only for a subset of config-templates, you can
 ### Set Permissions for Workspace Users
 
 If you want to give your users only access to the integrated notebook workspace feature,
-you can use the following policy.
+you can use this policy.
 
 ```json
 {
