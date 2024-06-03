@@ -67,7 +67,7 @@ These recommendations can help optimize resource allocation and ensure that the 
 
 To view right-sizing for a cluster:   
 
-1.  In the left main menu, click **Ocean**, and click **Cloud Clusters**. 
+1.  In the left main menu, click **Ocean** > **Cloud Clusters**. 
 2.  Select a cluster from the list of clusters. 
 3.  Click the **Right Sizing** tab. 
 
