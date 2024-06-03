@@ -54,7 +54,7 @@ You can do it by using the `resources` field in the policy :
 }
 ```
 
-### How to define permissions for a specific set of config-template
+### How to define permissions for a specific set of config-templates
 
 You can specify a clusterId and several configTemplateId like this :
 
@@ -94,11 +94,11 @@ You can also use a wildcard `*` in the config-template resource value like :
 ```
 
 > **Important Note 1:** If you specify several clusters and several config-templates,
-> it will allow users to do operations related to any config-template specified against any cluster specified, even if you declare several `statements` with different `resources` array
+> it will allow users to do operations related to any config-template specified against any cluster specified, even if you declare several `statements` with different `resources` arrays
 
-> **Important Note 2:** If you want to force users to use a `configTemplateId` at app submisssion, you need to use the `condition` field as described below
+> **Important Note 2:** If you want to force users to use a `configTemplateId` in app submissions, you need to use the `condition` field as described below
 
-If you wish to only allow operations for a specific set of config-templates against a specific clusters, you'll need to use `condition` field.
+If you wish to only allow operations for a specific set of config-templates against a specific set of clusters, you'll need to use the `condition` field.
 For example if we want to allow a user to :
 
 - use config-templates with pattern `ct-team-a-*` against `cluster-1` and `cluster-2`
@@ -163,16 +163,16 @@ The permission could look like this:
 
 ### Set permissions to isolate app submission by team
 
-Let's say you want each of your team to have their own config-templates and to be able to only submit spark application for their config-template.
+Let's say you want each of your teams to have their own config-templates and to be able to only submit Spark applications using their config-templates.
 
 For each team, you can:
 
-1. Create config-template using a specific pattern for the id
+1. Create config-templates using a specific pattern for the id
    For example : `team-A-config-template-1`, `team-A-config-template-2`, `team-B-config-template-1`
 
 2. Attach a managed policy like `Account Viewer` to your users.
 
-3. Create and attach one of the following policy by team:
+3. Create and attach one of the following policies by team:
 
 ```json
 {
@@ -192,7 +192,7 @@ For each team, you can:
 }
 ```
 
-If you want to also restrict the cluster users are allowed to submit to:
+If you also want to restrict which cluster users are allowed to submit applications to:
 
 ```json
 {
@@ -249,8 +249,8 @@ If you want to **force users to use a config-template when submitting an app**, 
 
 ### Set permissions for notebook users
 
-If you want to give your users only access to notebook feature using local Jupyter notebook or local JupyterLab instance,
-you can use the following policy
+If you want to give your users access to the notebook feature using local Jupyter notebooks or a JupyterLab instance,
+you can use the following policy:
 
 ```json
 {
@@ -270,7 +270,7 @@ you can use the following policy
 }
 ```
 
-If you want to allow notebook use only for a subset of config-template, you can have something like :
+If you want to allow notebook use only for a subset of config-templates, you can have something like:
 
 ```json
 {
@@ -295,7 +295,7 @@ If you want to allow notebook use only for a subset of config-template, you can 
 
 ### Set permissions for workspace users
 
-If you want to give your users only access to integrated workspace feature,
+If you want to give your users only access to the integrated notebook workspace feature,
 you can use the following policy
 
 ```json
@@ -322,7 +322,7 @@ you can use the following policy
 }
 ```
 
-If you want to allow workspace use only for a subset of config-template, you can have something like :
+If you want to allow workspace use only for a subset of config-templates, you can have something like:
 
 ```json
 {
@@ -353,12 +353,12 @@ If you want to allow workspace use only for a subset of config-template, you can
 
 ## Advanced Policy Patterns
 
-If you want more complex rules and combination between resources, you can use the `condition` field,
+If you want more complex rules and combinations between resources, you can use the `condition` field,
 you can learn more about it here: [Policy conditions](/administration/policies/create-new-policy?id=policy-conditions)
 
 ## Reference
 
-All actions are listed below are "edit" permissions
+All actions listed below are "edit" permissions
 
 | Actions                                                                                      | Resources bound                                 |
 | -------------------------------------------------------------------------------------------- | ----------------------------------------------- |
