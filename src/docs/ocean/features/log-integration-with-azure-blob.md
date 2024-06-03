@@ -7,6 +7,9 @@ You can read and troubleshoot the Ocean logs in the same central interface where
 
 For example, Azure Functions can send logs from Azure Blob to the New Relic monitoring application.
 
+##  Prerequisites
+Add this to the Spot data actions policy permissions to write to your Azure Blob storage account and container.  
+
 ```json
 "dataActions": 
 ["Microsoft.Storage/storageAccounts/blobServices/containers/blobs/write" ]
