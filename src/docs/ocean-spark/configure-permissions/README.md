@@ -1,12 +1,12 @@
 # Configure Permissions
 
-This section details how to setup permissions for users of the **Ocean for Apache Spark** product.
+This section details how to set up permissions for users of the **Ocean for Apache Spark** product.
 
-If you're not familiar with how permissions work in Spot, we recommend you take a look at this section: [Permission Policies](/administration/policies)
+If you're not familiar with how permissions work in Spot, see [Permission Policies](/administration/policies)
 
 ## Overview
 
-Ocean for Apache Spark lets you configure permission policies for **Actions** for the following resource types:
+Ocean for Apache Spark lets you configure permission policies for **Actions** for these resource types:
 
 - Clusters
 - Apps
@@ -19,8 +19,8 @@ In Ocean for Apache Spark, clusters are identified by an id with the format `osc
 
 ## Account-level Managed Permission Policies
 
-To get started, you can use one of the following managed policies.  
-They will apply at the account level. If you want to set permissions with more granularity, look at the [Granular Permissions Policies How-to Guides section](#granular-permissions-policies-how-to-guides)
+To get started, you can use one of the following managed policies, which apply at the account level.  
+If you want to set permissions with more granularity, see [Granular Permissions Policies How-to Guides](#granular-permissions-policies-how-to-guides).
 
 | Policy                                | Level        | Effect                                                    | Product Scope                                      | Ocean Spark Resource Scope                                                                      |
 | ------------------------------------- | ------------ | --------------------------------------------------------- | -------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
@@ -29,7 +29,7 @@ They will apply at the account level. If you want to set permissions with more g
 
 ## Granular Permissions Policies How-to Guides
 
-Patterns described below are for "edit" actions only.
+The patterns described below are for "edit" actions only.
 Users should have read-access managed policies attached to their profile.
 
 ### How to define permissions for one or several clusters
@@ -54,9 +54,9 @@ You can do it by using the `resources` field in the policy :
 }
 ```
 
-### How to define permissions for a specific set of config-templates
+### How to Define Permissions for a Specific Set of config-templates
 
-You can specify a clusterId and several configTemplateId like this :
+You can specify a clusterId and several configTemplateId like this:
 
 ```json
 {
@@ -75,7 +75,7 @@ You can specify a clusterId and several configTemplateId like this :
 }
 ```
 
-You can also use a wildcard `*` in the config-template resource value like :
+You can also use a wildcard `*` in the config-template resource value like this:
 
 ```json
 {
@@ -96,15 +96,15 @@ You can also use a wildcard `*` in the config-template resource value like :
 > **Important Note 1:** If you specify several clusters and several config-templates,
 > it will allow users to do operations related to any config-template specified against any cluster specified, even if you declare several `statements` with different `resources` arrays
 
-> **Important Note 2:** If you want to force users to use a `configTemplateId` in app submissions, you need to use the `condition` field as described below
+> **Important Note 2:** If you want to force users to use a `configTemplateId` in-app submissions, use the `condition` field as described below.
 
-If you wish to only allow operations for a specific set of config-templates against a specific set of clusters, you'll need to use the `condition` field.
-For example if we want to allow a user to :
+Use the' condition' field to allow operations only for a specific set of config templates against a specific set of clusters.
+For example, to allow a user to:
 
 - use config-templates with pattern `ct-team-a-*` against `cluster-1` and `cluster-2`
 - use config-templates with pattern `ct-notebook-*` only against `cluster-1`
 
-The permission could look like this:
+The permission might look like this:
 
 ```json
 {
@@ -161,9 +161,9 @@ The permission could look like this:
 
 ## Use cases
 
-### Set permissions to isolate app submission by team
+### Set Permissions to Isolate App Submission by Team
 
-Let's say you want each of your teams to have their own config-templates and to be able to only submit Spark applications using their config-templates.
+Let's say you want each of your teams to have their own config-templates and to be able only to submit Spark applications using their config-templates.
 
 For each team, you can:
 
@@ -215,7 +215,7 @@ If you also want to restrict which cluster users are allowed to submit applicati
 }
 ```
 
-If you want to **force users to use a config-template when submitting an app**, you need to use the `condition` field like so:
+If you want to **force users to use a config-template when submitting an app**, use the `condition` field like this:
 
 ```json
 {
@@ -247,7 +247,7 @@ If you want to **force users to use a config-template when submitting an app**, 
 }
 ```
 
-### Set permissions for notebook users
+### Set Permissions for Notebook Users
 
 If you want to give your users access to the notebook feature using local Jupyter notebooks or a JupyterLab instance,
 you can use the following policy:
@@ -270,7 +270,7 @@ you can use the following policy:
 }
 ```
 
-If you want to allow notebook use only for a subset of config-templates, you can have something like:
+If you want to allow notebook use only for a subset of config-templates, you can do it like this:
 
 ```json
 {
@@ -293,10 +293,10 @@ If you want to allow notebook use only for a subset of config-templates, you can
 }
 ```
 
-### Set permissions for workspace users
+### Set Permissions for Workspace Users
 
 If you want to give your users only access to the integrated notebook workspace feature,
-you can use the following policy
+you can use the following policy.
 
 ```json
 {
@@ -322,7 +322,7 @@ you can use the following policy
 }
 ```
 
-If you want to allow workspace use only for a subset of config-templates, you can have something like:
+If you want to allow workspace use only for a subset of config-templates, you can do it like this:
 
 ```json
 {
@@ -353,8 +353,8 @@ If you want to allow workspace use only for a subset of config-templates, you ca
 
 ## Advanced Policy Patterns
 
-If you want more complex rules and combinations between resources, you can use the `condition` field,
-you can learn more about it here: [Policy conditions](/administration/policies/create-new-policy?id=policy-conditions)
+If you want more complex rules and combinations between resources, you can use the `condition` field.
+Learn more here: [Policy conditions](/administration/policies/create-new-policy?id=policy-conditions)
 
 ## Reference
 
