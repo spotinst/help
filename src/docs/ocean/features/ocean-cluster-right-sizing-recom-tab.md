@@ -2,7 +2,9 @@
 
 #  Automatic Right-Sizing Recommendations and Rules 
 
-This topic shows you how to view [Automatic Right-Sizing](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-tab) recommendations and work with Right-Sizing rules. 
+This topic shows you how to view recommendations and work with Right-Sizing rules.
+
+Before proceeding, see [Automatic Right-Sizing](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-tab). 
 
 To view your right-sizing recommendations and rules: 
 
