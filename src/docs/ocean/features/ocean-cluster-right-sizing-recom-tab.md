@@ -2,16 +2,21 @@
 
 #  Automatic Right-Sizing Recommendations and Rules 
 
-To view your right-sizing recommendations and rules:   
+This topic shows you how to view [Automatic Right-Sizing](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-tab) recommendations and work with Right-Sizing rules. 
 
-*  Under the Right Sizing tab, click **Advanced Optimization**. 
+To view your right-sizing recommendations and rules: 
+
+1. In the left main menu, click **Ocean** > **Cloud Clusters**.
+2. Select a cluster from the list of clusters.
+3. Click the **Right Sizing** tab.
+4. Click **Advanced Optimization**. 
 
 ![right-sizing-wl-and-containers](https://github.com/spotinst/help/assets/159915991/3558f261-20a3-4182-bb2f-b4509869e7a9)
 
 The Advanced Optimization tab contains the following lists:  
 
-*  Workloads Optimization List 
-*  Automatic Right Sizing Rules List
+*  Workloads Optimization List. 
+*  Automatic Right Sizing Rules List.
 
 ##  Workloads Optimization List 
 
