@@ -30,6 +30,12 @@ The Version 2 Ocean Controller pod will not perform actions until the Version 1 
 
 To resolve this issue, remove the Ocean Controller Version 1 replicas. 
 
+###  Helm install Fails with Parse Error
+
+Help install fails with parse error at `(ocean-kubernetes-controller/templates/_helpers.tpl:320): unclosed acti`
+
+To resolve this issue: Make sure your `helm` version is **3.12.0** or above. If not, update helm and try again.
+
 ## Ocean Controller for **AWS K8s** Does Not Report Heartbeat to Ocean Cluster
 
 If your Ocean Controller for **AWS K8s** is not reporting a heartbeat to the Ocean cluster, use this troubleshooter to resolve the issue. Complete each step according to the sequence.
