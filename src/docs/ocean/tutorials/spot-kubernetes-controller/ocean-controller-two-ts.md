@@ -30,7 +30,7 @@ The Version 2 Ocean Controller pod will not perform actions until the Version 1 
 
 To resolve this issue, remove the Ocean Controller Version 1 replicas. 
 
-###  Helm install Fails with Parse Error
+###  Helm install fails with parse error
 
 Help install fails with parse error at `(ocean-kubernetes-controller/templates/_helpers.tpl:320): unclosed acti`
 
