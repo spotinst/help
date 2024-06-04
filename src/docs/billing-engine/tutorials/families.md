@@ -15,9 +15,9 @@ You can remove a group of accounts by clicking ![image](https://github.com/spoti
 <details>
   <summary markdown="span">View image</summary>
  
-![families1](https://github.com/spotinst/help/assets/167069628/318216d8-a91c-41af-a559-df16c2f29bb7)
+  ![families1](https://github.com/spotinst/help/assets/167069628/4b205f8d-4b6f-4458-b539-a062067ac65e)
 
-</details><br>
+</details>
 
 ## Create a Billing Family
 1. In the left main menu, click **Billing Engine**.
@@ -30,7 +30,7 @@ You can remove a group of accounts by clicking ![image](https://github.com/spoti
   
 ![families2](https://github.com/spotinst/help/assets/167069628/f186eedf-abd6-44d2-9f05-22a8148c4d00)
 
-</details><br>
+</details>
    
 
 6. Click Save.
