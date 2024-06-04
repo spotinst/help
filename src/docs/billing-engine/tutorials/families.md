@@ -14,8 +14,9 @@ You can remove a group of accounts by clicking ![image](https://github.com/spoti
 
  <details>
    <summary markdown="span">View image</summary>
-  
- ![families1](https://github.com/spotinst/help/assets/167069628/cbe1fb6c-deec-4118-bd7e-b4a075a0e88e)
+
+ ![image](https://github.com/spotinst/help/assets/167069628/77bf1b8b-700c-48b8-a639-59a89a658b8c)
+
  </details>
 
    
