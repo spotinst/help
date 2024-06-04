@@ -2,7 +2,7 @@
 
 This topic describes setting up permissions for **Ocean for Apache Spark** product users.
 
-If you're unfamiliar with how permissions work in Spot, see [Permission Policies](/administration/policies).
+If you're unfamiliar with how permissions work in Spot, see [Permission Policies](https://docs.spot.io/administration/policies/).
 
 ## Overview
 
