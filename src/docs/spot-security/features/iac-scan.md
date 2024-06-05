@@ -32,8 +32,6 @@ Gitlab Cloud Access Token Generation Steps (Please add these redirection) 
 
 Bitbucket Cloud Access Token Generation Steps (Please add these redirection)  
 
-![iac-3](https://github.com/spotinst/help/assets/106514736/d5e364c8-1933-476e-9c8b-757ac459e299)
-
 2. To add specific branches from the repo you can: 
 * Click **+ Add Branch** and enter the name of the branch. 
 * If you want to scan only the default branch you can turn on the **Include Default Branch** toggle. 
@@ -47,7 +45,7 @@ If the repo is **not** accessible from the Internet, click **Next** to configure
 
 To configure a scanner instance:  
 
-![iac-4](https://github.com/spotinst/help/assets/106514736/c0bee653-84e7-43db-9f8c-e96f3243e4c9)
+![iac-3](https://github.com/spotinst/help/assets/106514736/d5e364c8-1933-476e-9c8b-757ac459e299)
 
 1. Select the cloud provider to host the scanner instance. 
 2. Select the AWS account, region, and subnet ID you want to run the scanner instance in.  
@@ -77,6 +75,8 @@ The Github Administrator needs to complete the following steps:
 * **SSL verifications**: Select **Enable SSL Verification**. 
 * **Which events would you like to trigger this webhook?** Select **Let me select individual events**.   
 
+![iac-5](https://github.com/spotinst/help/assets/106514736/61ece9c0-a6de-423e-88bb-c983cfa28214)
+
 3. Select: **Pull Requests** and **Active**.
 
 ![iac-6](https://github.com/spotinst/help/assets/106514736/2bbcc679-b020-4a75-9c42-36ba3a7c3216)
@@ -96,7 +96,7 @@ The Health Check column displays two possible statuses: **Healthy** and **Unheal
 
 ![iac-7](https://github.com/spotinst/help/assets/106514736/b323d9e8-5be1-4e86-b04f-0172b86878d9)
 
-In the Administration page, you can delete a repo scanning in the Repo Onboarding section by selecting a repo or more in the checkbox. Click **Action** and then **Delete**.  
+On the Administration page, you can delete a repo scanning in the Repo Onboarding section by selecting one or more repos in the checkbox. Click **Action** and then **Delete**.  
 
 ### View Result  
 
@@ -122,7 +122,7 @@ You can filter the results based on the repo to see the value for only one repo.
 
 ![iac-8](https://github.com/spotinst/help/assets/106514736/f6d6dccc-ab04-4183-b5a8-1a62462bbbbf)
 
-After the PR integration is completed, pull requests will receive a comment from Spot Security if any findings are detected. The user that initiated the comment will be the individual whose access token was used to configure Repo Scanning. An example of a comment can be seen in the screenshot below.
+After the PR integration is completed, pull requests will receive a comment from Spot Security if any findings are detected. The user that initiated the comment will be the user whose access token was used to configure Repo Scanning. An example of a comment can be seen in the screenshot below.
 
 ![iac-9](https://github.com/spotinst/help/assets/106514736/5889a7e1-ef3a-40a3-92be-0a0a929b8c0a)
 
