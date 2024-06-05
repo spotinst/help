@@ -25,18 +25,15 @@ To configure the repo scanning:
 * Repo URL: Enter the repo URL.  
 * Repo Type: If your repo URL does not contain the domain name of GitHub, Gitlab or Bitbucket, select the repo type from the dropdown menu.  
 * Token: Configure the access token.  
-
-Github Access Token Generation Steps (Please add these redirection)  
-
-Gitlab Cloud Access Token Generation Steps (Please add these redirection)  
-
-Bitbucket Cloud Access Token Generation Steps (Please add these redirection)  
+  - [Generate Github Access Token](https://docs.spot.io/spot-security/features/iac-scan/github-access-token)  
+  - [Generate Gitlab Cloud Access Token](spot-security/features/iac-scan/gitlab-cloud-access-token)  
+  - [Generate Bitbucket Cloud Access Token](spot-security/features/iac-scan/bitbucket-access-token)  
 
 2. To add specific branches from the repo you can: 
 * Click **+ Add Branch** and enter the name of the branch. 
-* If you want to scan only the default branch you can turn on the **Include Default Branch** toggle. 
+* To scan only the default branch, turn on the **Include Default Branch** toggle. 
 3. If the repo is accessible from the internet, select the **The above Repos are accessible from the internet** checkbox.   
-* If you want to set up PR integration, complete the integration (Link PR Integration). 
+* If you want to set up PR integration, complete the [integration](spot-security/features/iac-scan/?id=pr-integration-optional). 
 * If you do **not** want to set up PR integration, click **Configure** to set up Iac Scanning. 
 
 If the repo is **not** accessible from the Internet, click **Next** to configure a scanner instance. 
@@ -66,7 +63,7 @@ To configure a scanner instance:
 
 ### PR Integration (Optional) 
 
-In the PR integration, you receive a unique Webhook URL associated with a single URL per organization. You need to enter a Secret string (6-255 characters) in the Spot Security console. The repo's GitHub administrator should configure the Webhook URL and secret string. 
+In the PR integration, you receive a unique Webhook URL associated with a single URL per organization. Enter a Secret string (6-255 characters) in the Spot Security console. The repo's GitHub administrator should configure the Webhook URL and secret string. 
 
 **Note: PR integration is only applicable if the repos are accessible from the Internet and is only supported for Github**.  
 
@@ -79,13 +76,6 @@ The Github Administrator needs to complete the following steps:
 * **Secret**: The secret string was entered in Spot Security. 
 * **SSL verifications**: Select **Enable SSL Verification**. 
 * **Which events would you like to trigger this webhook?** Select **Let me select individual events**.   
-
-<details>
-  <summary markdown="span">View image</summary>
-  
-![iac-5](https://github.com/spotinst/help/assets/106514736/61ece9c0-a6de-423e-88bb-c983cfa28214)
-
-</details><br>
 
 3. Select: **Pull Requests** and **Active**.
 
