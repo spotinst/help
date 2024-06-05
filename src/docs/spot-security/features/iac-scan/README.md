@@ -25,16 +25,13 @@ To configure the repo scanning:
 * Repo URL: Enter the repo URL.  
 * Repo Type: If your repo URL does not contain the domain name of GitHub, Gitlab or Bitbucket, select the repo type from the dropdown menu.  
 * Token: Configure the access token.  
-
-Github Access Token Generation Steps (Please add these redirection)  
-
-Gitlab Cloud Access Token Generation Steps (Please add these redirection)  
-
-Bitbucket Cloud Access Token Generation Steps (Please add these redirection)  
+  - [Generate Github Access Token](https://docs.spot.io/spot-security/features/iac-scan/github-access-token)  
+  - [Generate Gitlab Cloud Access Token](spot-security/features/iac-scan/gitlab-cloud-access-token)  
+  - [Generate Bitbucket Cloud Access Token](spot-security/features/iac-scan/bitbucket-access-token)  
 
 2. To add specific branches from the repo you can: 
 * Click **+ Add Branch** and enter the name of the branch. 
-* If you want to scan only the default branch you can turn on the **Include Default Branch** toggle. 
+* To scan only the default branch, turn on the **Include Default Branch** toggle. 
 3. If the repo is accessible from the internet, select the **The above Repos are accessible from the internet** checkbox.   
 * If you want to set up PR integration, complete the [integration](spot-security/features/iac-scan/?id=pr-integration-optional). 
 * If you do **not** want to set up PR integration, click **Configure** to set up Iac Scanning. 
