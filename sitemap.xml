@@ -4796,6 +4796,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-security/features/iac-scan/github-access-token"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/spot-security/features/iac-scan/github-cloud-access-token</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/spot-security/features/iac-scan/github-cloud-access-token"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/spot-security/features/iac-scan/github-cloud-access-token"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/spot-security/features/iac-scan/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
