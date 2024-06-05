@@ -12,22 +12,22 @@ To address these cases, the revert to lower-cost node process analyzes the nodes
 
 Ocean constantly scans the cluster’s node utilization. The revert to lower-cost node optimization process is applied when **all** of the following conditions are met:
 
-*  Cluster Orientation:
+*  [Cluster Orientation](https://docs.spot.io/ocean/features/cluster-orientation?id=cluster-orientation):
    *  Balanced Orientation (default):
-      *  No scaling occurred in the last 25 minutes.
-      *  CPU and memory usage is less than 50%.
+      *  No scaling occurred in the last 25 minutes in the specific Virtual Node Group (neither scale up nor down event).
+      *  CPU and memory usage is less than 50%, or GPU utilization is less than 50%.
    *  Cost Orientation:
-      *  No scaling occurred in the last 20 min
-      *  CPU and memory usage is less than 60%.
+      *  No scaling occurred in the last 20 minutes in the specific Virtual Node Group (neither scale up nor down event).
+      *  CPU and memory usage is less than 60%, or GPU utilization is less than 60%.
    *  Cheapest Orientation:
-      *  No scaling occurred in the last 15 minutes.
-      *  CPU and memory usage is less than 70%.
+      *  No scaling occurred in the last 15 minutes in the specific Virtual Node Group (neither scale up nor down event).
+      *  CPU and memory usage is less than 70%, or GPU utilization is less than 70%.
 *  The node was underutilized for at least 10 minutes.
 *  The node life cycle is a spot instance.
 *  No ongoing replacement in the relevant Virtual Node Group.
 *  A smaller instance type than the running one is configured in the configuration.
 
-Then, Ocean will individually replace all the relevant nodes in the Virtual Node Group. Each time the process is triggered, it will replace up to one instance in a Virtual Node Group. (Nodes from different Virtual Node Groups can be replaced at the same time.)
+Then, Ocean will individually replace all the relevant nodes in the Virtual Node Group. Each time the process is triggered, it will replace up to one instance in a Virtual Node Group. (Nodes from different Virtual Node Groups can be replaced simultaneously.)
 - If the cluster is set to utilize reserved instances (RIs), the autoscaler will try to launch RIs first.
 - If there is no spot available and there is a smaller on-demand (OD) instance that is also cheaper, Ocean will try to replace the instance with that OD instance.
 
