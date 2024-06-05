@@ -77,7 +77,7 @@ Example:
 ocean_failed_scale_ups{oceanId="o-2cf2e886", reason="oceanId="o-2cf2e886", reason="cant_scale_up_pods_for_vngs", vngId="ols-9238181b", vngName="test-new”", vngId="ols-9238181b", vngName="test-new”}
 ocean_failed_scale_downs{oceanId="o-2cf2e886", reason="cluster_min_instance_count_reached", vngId="Unknown", vngName="unKnown”}
 ```
->**Note**: If the vngId and vngName are ‘unknown’: at this point, when the pod was pending and waiting for the Ocean Autoscaler to scale up a node, the Ocean Autoscaler did not know which Virtual Node group the pod should run in.
+>**Note**: If the vngId and vngName are ‘unknown’: at this point, when the pod was pending and waiting for the Ocean Autoscaler to scale up a node, the Ocean Autoscaler did not know which Virtual Node Group the pod should run in. 
 
 ## Tracking Ocean Managed Resources
 
