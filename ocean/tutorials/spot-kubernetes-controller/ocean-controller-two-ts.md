@@ -52,7 +52,7 @@ apiVersion: v1
 metadata: 
   name: ocean-controller-ocean-kubernetes-controller-config 
   namespace: spot-system 
-  data:spotinst.cluster-identifier: <CLUSTER_ID> 
+  data:spotinst.cluster-identifier: "<controllerClusterId>"
 ```
 
 ### Step 2: Are the Account ID and Token valid? 
