@@ -1,4 +1,4 @@
-# Troubleshoot Controller
+# Troubleshoot the Ocean Controller Version 1
 
 If the banner below appears at the top of your Ocean dashboard, your Ocean Controller is not reporting a heartbeat to the Ocean cluster.
 
