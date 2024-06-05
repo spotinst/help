@@ -21,7 +21,7 @@ metadata:
   name: spotinst-kubernetes-cluster-controller-config
   namespace: kube-system
   data:
-    spotinst.cluster-identifier: <CLUSTER_ID>
+    spotinst.cluster-identifier: "<controllerClusterId>"
 ```
 
 ## Step 2: Are the account ID and token valid?
