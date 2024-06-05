@@ -2,7 +2,7 @@
 
 The Cloud Cluster Overview dashboard provides enhanced functionality to analyze the Ocean Autoscaler actions with high granularity and gain deeper insights into its behavior. This topic delves into the various components and sections of this dashboard, offering a detailed exploration of its capabilities. 
 
-Ocean continuously analyzes the utilization of your nodes in the cloud infrastructure. It automatically scales compute resources to optimize utilization and availability. It achieves this by intelligently combining Spot, Reserved, and On-Demand (OD) compute instances. 
+Ocean continuously analyzes the utilization of your nodes in the cloud infrastructure. It automatically scales compute resources to optimize utilization and availability. It achieves this by intelligently combining Spot, Reserved, and On-Demand compute instances. 
 
 The Ocean Cloud Cluster Overview dashboard is divided into the following panels: 
 
@@ -26,7 +26,7 @@ The Ocean Savings panel contains a set of savings widgets (displayed as tabs), w
 
 *   **Running on Spot**: Savings from running on spot nodes instead of OD nodes. 
 
-*   **Bin Packing**: Ocean proactively identifies underutilized nodes and bin-packs the pods on the nodes more efficiently to be able to scale down the nodes and reduce the cluster cost. 
+*   **Bin Packing**: Ocean proactively identifies underutilized nodes and efficiently bin-packs the pods on them to scale down the nodes and reduce the cluster cost. 
 
 *   **Reverting to Lower-Cost node**: Process applied to nodes with underutilized compute resources that cannot be scaled down from the cluster's set of nodes to optimize cluster utilization and reduce costs. 
 
@@ -34,13 +34,13 @@ In this panel:
 
 *   You can select a time range for displayed data from the drop-down list to the right of the savings widgets. Available options are Last 30 Days, Last 7 Days, and This Month. 
 
-*   For each savings widget, you can click on a How is it calculated?  
+*   For each savings widget, click on "How is it calculated?  
 
 ### Ocean Savings from Running on Spot 
 
 Ocean Autoscaler intelligently leverages these spot instances when appropriate, reducing costs while maintaining high availability. This tab lets you view the cost benefits of using spot instances in your cluster. 
 
-Ocean savings from running on spot are calculated as the difference between the price of OD nodes and spot nodes within a specified time range. This calculation considers the number of CPUs, memory, and GPUs, that are running as spot nodes. 
+Ocean savings from running on spot are calculated as the difference between the price of on-demand and spot nodes within a specified time range. This calculation considers the number of CPUs, memory, and GPUs running as spot nodes. 
 
 To view these savings, click the **Running on Spot** tab (unless already displayed). 
 
@@ -62,7 +62,7 @@ This tab displays:
 
 In the context of autoscaling, bin packing savings are calculated based on the vCPU, memory, and GPU resources of the nodes that have been [Scaled Down](https://docs.spot.io/ocean/features/scaling-kubernetes?id=scale-down) by the Ocean Autoscaler. Once a minute, Ocean simulates whether any running pods can be moved to other nodes within the cluster. If so, Ocean drains those nodes to ensure continuous infrastructure optimization and increased cloud savings.   
 
-This process ensures high resource utilization, reducing the number of nodes required and consequently, the overall cost. You can see how much you're saving through this efficient resource allocation. 
+This process ensures high resource utilization, reducing the number of nodes required and the overall cost. You can see how much you're saving through this efficient resource allocation. 
 
 To view these savings, click the **Bin Packing** tab (unless already displayed). 
 
