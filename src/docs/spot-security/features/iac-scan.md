@@ -57,7 +57,12 @@ To configure a scanner instance:
 7. In the Spot Security console, enter the Role ARN you copied in the previous step in the Role ARN field. 
 8. Proceed to the next step to set up PR integration or click **Configure** to set up the Iac scanning. 
 
+<details>
+  <summary markdown="span">View image</summary>
+
 ![iac-4](https://github.com/spotinst/help/assets/106514736/585fd5e7-f65b-4efa-8008-9fd7eb2fd545)
+
+</details><br>
 
 ### PR Integration (Optional) 
 
@@ -75,12 +80,21 @@ The Github Administrator needs to complete the following steps:
 * **SSL verifications**: Select **Enable SSL Verification**. 
 * **Which events would you like to trigger this webhook?** Select **Let me select individual events**.   
 
+<details>
+  <summary markdown="span">View image</summary>
+  
 ![iac-5](https://github.com/spotinst/help/assets/106514736/61ece9c0-a6de-423e-88bb-c983cfa28214)
+
+</details><br>
 
 3. Select: **Pull Requests** and **Active**.
 
+<details>
+  <summary markdown="span">View image</summary>
+
 ![iac-6](https://github.com/spotinst/help/assets/106514736/2bbcc679-b020-4a75-9c42-36ba3a7c3216)
 
+</details><be>
 
 4. Click **Add Webhook** to add the webhook. 
 5. To test the functionality, click **Recent Deliveries** to send a test message. 
@@ -92,9 +106,14 @@ Click the edit icon to add a new branch, delete an existing branch, change the t
 
 You can also turn the toggle off, which pauses the repo scan.  
 
-The Health Check column displays two possible statuses: **Healthy** and **Unhealthy**. Click each one to view the details. A description of the health results opens as in the example below.  
+The Health Check column displays two possible statuses: **Healthy** and **Unhealthy**. Click each one to view the details. 
+
+<details>
+  <summary markdown="span">Click to view an example of a description of the health results.</summary>
 
 ![iac-7](https://github.com/spotinst/help/assets/106514736/b323d9e8-5be1-4e86-b04f-0172b86878d9)
+
+</details><be>
 
 On the Administration page, you can delete a repo scanning in the Repo Onboarding section by selecting one or more repos in the checkbox. Click **Action** and then **Delete**.  
 
@@ -122,8 +141,11 @@ You can filter the results based on the repo to see the value for only one repo.
 
 ![iac-8](https://github.com/spotinst/help/assets/106514736/f6d6dccc-ab04-4183-b5a8-1a62462bbbbf)
 
-After the PR integration is completed, pull requests will receive a comment from Spot Security if any findings are detected. The user that initiated the comment will be the user whose access token was used to configure Repo Scanning. An example of a comment can be seen in the screenshot below.
+After the PR integration is completed, pull requests will receive a comment from Spot Security if any findings are detected. The user that initiated the comment will be the user whose access token was used to configure Repo Scanning. 
+
+<details>
+  <summary markdown="span">Click to view an example of a comment.</summary>
 
 ![iac-9](https://github.com/spotinst/help/assets/106514736/5889a7e1-ef3a-40a3-92be-0a0a929b8c0a)
 
-  
+</details><be>  
