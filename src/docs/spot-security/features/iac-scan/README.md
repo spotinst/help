@@ -9,7 +9,7 @@ To view this feature, in the left main menu in the Spot console, click **Spot Se
 To set up IaC Scanning: 
 
 1. In the left main menu, click **Administration**.  
-2. Click the **Onboarding** tab and click **IaC Scanning**.  
+2. Click the **Onboarding** tab and click **Repo Onboarding**.  
 3. Click **Actions** and then **Configure Scanning**.   
 
 ![iac-1](https://github.com/spotinst/help/assets/106514736/cba7ef0c-61d7-4529-ac83-034bd603f66b)
