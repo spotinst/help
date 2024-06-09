@@ -83,7 +83,7 @@ Another method is to disable the option to scale down from a specific [virtual n
 Using the [API](https://docs.spot.io/api/#operation/OceanAWSLaunchSpecUpdate), you could simply set the restrictScaleDown parameter to True.
 Once enabled, VNG nodes are treated as if all pods running have the restrict-scale-down label. Therefore, Ocean would not scale nodes down from the virtual node group unless they are empty.
 
-## Accelerated Scale Down
+## Accelerated Scale Down (EKS and GKE)
 
 Accelerated Scale Down is an Ocean Autoscaler feature that enhances efficiency and cost-effectiveness in your Kubernetes clusters. This feature monitors your Ocean cluster for underutilized nodes and terminates those that are not necessary, so you are not paying for idle resources. 
 
