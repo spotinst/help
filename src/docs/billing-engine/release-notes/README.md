@@ -1,5 +1,7 @@
 # Billing Engine Release Notes
 
+* **BIE-0004**: **May 18th, 2024** Billing Engine now supports the FinOps Foundation's [FOCUS](https://focus.finops.org/) Specifications. [Learn more](billing-engine/tutorials/analysis) 
+
 <details>
   <summary markdown="span">April 2024</summary>
 
