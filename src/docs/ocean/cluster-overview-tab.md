@@ -102,7 +102,7 @@ This tab displays:
       *  Hourly cost of original node.
       *  Hourly cost of reverted node.
       *  Hourly cost saved as a percentage: hourly cost of the reverted node / hourly cost of the original node * 100
-      *  The Virtual Node Group's name
+      *  The Virtual Node Group's name (click on the link for a listed VNG to display your custom VNG details).
  
  *   CPU resources saved in vCPU Hours. 
  *   Memory resources saved in GiB Hours. 
@@ -119,7 +119,7 @@ The Autoscaling Activity panel contains the following widgets:
 
 ### Scale Up 
 
-This widget displays scaling-up events, which are instances when the Ocean Autoscaler increases the resources (CPU, memory, storage) in your cluster to accommodate higher workloads. A scale up event is triggered when there are 'unschedulable' pods, i.e., pods that cannot be placed due to insufficient resources like CPU, memory, or GPU on the existing nodes. In response, Ocean Autoscaler identifies the optimal nodes to place these pods and increases the resources accordingly. This process ensures efficient resource allocation, improved performance, and shorter processing times.  
+This widget displays scaling-up events, which are instances when the Ocean Autoscaler increases the resources (CPU, memory, storage) in your cluster to accommodate higher workloads. A scale-up event is triggered when there are 'unschedulable' pods, i.e., pods that cannot be placed due to insufficient resources like CPU, memory, or GPU on the existing nodes. In response, Ocean Autoscaler identifies the optimal nodes to place these pods and increases the resources accordingly. This process ensures efficient resource allocation, improved performance, and shorter processing times.  
 
 Scaling up nodes also enables allocating more resources to specific tasks, improving performance, and reducing processing time. 
 
