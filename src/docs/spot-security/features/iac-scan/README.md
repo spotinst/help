@@ -77,6 +77,8 @@ The Github Administrator needs to complete the following steps:
 * **SSL verifications**: Select **Enable SSL Verification**. 
 * **Which events would you like to trigger this webhook?** Select **Let me select individual events**.   
 
+![iac-5](https://github.com/spotinst/help/assets/106514736/c905611b-e605-442b-9aa6-6ac18c857fab)
+
 3. Select: **Pull Requests** and **Active**.
 
 <details>
