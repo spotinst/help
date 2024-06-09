@@ -2,23 +2,23 @@
 
 Ocean's pod-driven scaling for Kubernetes clusters serves three main goals:
 
-- Schedule pods that failed to run on any of the current nodes due to insufficient resources.
-- Ensure that frequent scaling pods won't have to wait for instances to launch (see Headroom section for more details).
+- Schedule pods that failed to run on the current nodes due to insufficient resources.
+- Ensure frequent scaling pods won't wait for instances to launch (see Headroom section for more details).
 - Ensure that cluster resources are optimally utilized.
 
 ## Spot Ocean vs. Metric-Based Node Autoscaling
 
-Ocean makes sure that all pods in the cluster have a place and capacity to run, regardless of the current cluster's load. Moreover, it ensures that there are no underutilized nodes in the cluster. Metric-based cluster autoscalers are not aware of pods when scaling up and down. As a result, they may add a node that will not have any pods, or remove a node that has some system-critical pods on it, like kube-dns. Usage of these autoscalers with Kubernetes is discouraged.
+Ocean ensures that all pods in the cluster have a place and capacity to run, regardless of the current cluster's load. Moreover, it ensures that there are no underutilized nodes in the cluster. Metric-based cluster autoscalers are not aware of pods when scaling up and down. As a result, they may add a node that will not have any pods or remove a node that has some system-critical pods on it, like kube-dns. Usage of these autoscalers with Kubernetes is discouraged.
 
 ## Scale Up
 
-Ocean continuously checks for unschedulable pods. A pod is unschedulable when the Kubernetes scheduler is unable to find a node that can accommodate the pod. This can happen due to insufficient CPU, Memory, GPU or [custom resource](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/), for example, when a pod requests more CPU than what is available on any of the cluster nodes. In addition, the autoscaler supports the Extended Resources feature as described below.
+Ocean continuously checks for unschedulable pods. A pod is unschedulable when the Kubernetes scheduler is unable to find a node that can accommodate the pod. This can happen due to insufficient CPU, Memory, GPU, or [custom resource](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/), for example, when a pod requests more CPU than what is available on any of the cluster nodes. In addition, the Ocean Autoscaler supports the Extended Resources feature as described below.
 
 Unschedulable pods are recognized by their PodCondition. Whenever a Kubernetes scheduler fails to find a place to run a pod, it sets the `schedulable` PodCondition to false and the reason to `unschedulable`.
 
 Ocean calculates and aggregates the number of unschedulable pods waiting to be placed and finds the optimal nodes for the pod. Ocean ensures that all the pods will have enough resources to be placed. It also distributes the Pods on the most efficient number of VMs from the desired cloud provider. In some scenarios, it will provide a distribution of certain machine types and sizes based on the pod requirements and the spot/preemptible VM prices in the relevant region.
 
-It may take a few moments before the created nodes join the Kubernetes cluster. In order to minimize this time (to zero), learn more about cluster [Headroom](ocean/features/headroom.md).
+It may take a few moments before the created nodes join the Kubernetes cluster. To minimize this time (to zero), learn more about cluster [Headroom](ocean/features/headroom.md).
 
 <img src="/ocean/_media/features-scaling-k8s-01.png"/>
 
