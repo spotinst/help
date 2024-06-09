@@ -122,7 +122,13 @@ kubectl describe pod 'dns-pod-name' -n kube-system
 
 3.  Try restarting the controller pod. 
 
-### Step 5: Get Ocean Controller Logs 
+###  Step 5: Helm Install Fails with Parse Error 
+
+Helm install fails with parse error at `(ocean-kubernetes-controller/templates/_helpers.tpl:320): unclosed acti`
+To resolve this issue, Ensure the `helm` version is **3.12.0** or above. If not, update helm and try again.
+
+
+### Step 6: Get Ocean Controller Logs 
 
 If the steps above do not solve your issue, get the controller logs using the steps below. 
 
@@ -139,10 +145,7 @@ Kubectl logs ocean-controller-ocean-kubernetes-controller –n spot-system
 ```
 3. If you still encounter issues, contact Support via [online chat or email](https://spot.io/support/). 
 
-###  Step 6: Helm Install Fails with Parse Error 
 
-Helm install fails with parse error at `(ocean-kubernetes-controller/templates/_helpers.tpl:320): unclosed acti`
-To resolve this issue: Make sure your `helm` version is **3.12.0** or above. If not, update helm and try again.
 
 
 
