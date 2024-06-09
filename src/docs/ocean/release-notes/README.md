@@ -2,6 +2,15 @@
 
 ## Features and Enhancements
 
+* **OCN-008: June 09, 2024:** 
+Spot has released EKSCTL [v0.180.0](spotinst/weaveworks-eksctl).
+When you use this version to create Ocean clusters, Ocean uses [Controller Version 2](https://docs.spot.io/ocean/tutorials/ocean-controller-v2/.).
+>**important**: Prerequisite: Install Helm before you install EKSCTL.
+
+
+<details>
+  <summary markdown="span">May, 2024 - click to view</summary>
+
 * **OCN-007: May 27, 2024:** 
 Workload Migration for Ocean **AKS** is now available in both the Ocean console and the Spot API (with new API calls) to make migrating your Kubernetes workloads to Ocean easier. Workload Migration automates draining and rescheduling pods, streamlining your **AKS** infrastructure migration to Ocean.
 Seamlessly migrate and register your workloads into Ocean, and let Spot manage your Kubernetes environment.
@@ -39,6 +48,8 @@ Spot has introduced a new Ocean label, `spotinst.io/azure-premium-storage,` inje
 
 >**IMPORTANT:** Please note that **Ocean Controller Version 1** will reach End-Of-Life on **November 1, 2024**. To take advantage of the benefits offered by **Ocean Controller Version 2** and receive uninterrupted service and support, please upgrade to Version 2 at your earliest convenience.
 [Learn more...](https://docs.spot.io/ocean/tutorials/ocean-controller-v2/)
+
+</details><br>
 
 
 
