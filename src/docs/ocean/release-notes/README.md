@@ -4,8 +4,8 @@
 
 * **OCN-008: June 09, 2024:** 
 Spot has released EKSCTL [v0.180.0](spotinst/weaveworks-eksctl).
-When you use this version to create Ocean clusters, Ocean uses [Controller Version 2](https://docs.spot.io/ocean/tutorials/ocean-controller-v2/.).
->**important**: Prerequisite: Install Helm before you install EKSCTL.
+When you use this EKSCTL version to create Ocean clusters, [Ocean Controller Version 2](https://docs.spot.io/ocean/tutorials/ocean-controller-v2/.) is used.
+>**Prerequisite**: Install Helm before you install EKSCTL.
 
 
 <details>
