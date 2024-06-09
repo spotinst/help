@@ -3,7 +3,7 @@
 ## Features and Enhancements
 
 * **OCN-007: May 27, 2024:** 
-Workload Migration for Ocean **AKS** is now available in both the Ocean console and the Spot API (with new API calls) to make migrating your Kubernetes workloads to Ocean easier. Workload Migration automates draining and rescheduling pods, streamlining the migration of your **AKS** infrastructure to Ocean.
+Workload Migration for Ocean **AKS** is now available in both the Ocean console and the Spot API (with new API calls) to make migrating your Kubernetes workloads to Ocean easier. Workload Migration automates draining and rescheduling pods, streamlining your **AKS** infrastructure migration to Ocean.
 Seamlessly migrate and register your workloads into Ocean, and let Spot manage your Kubernetes environment.
 [Learn more](https://docs.spot.io/ocean/tutorials/migrate-workload-aks)
 
@@ -12,7 +12,7 @@ Ocean Controller Version 2 supports the `namespaceSelector` scaling constraint l
 [Learn more](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#namespace-selector) about the `namespaceSelector` label.
 
 * **OCN-005: May 16, 2024:** [Ocean Documentation Update]: 
-This topic explains how to manage Virtual Node Groups (VNGs) when upgrading the Kubernetes (K8s) version for your clusters. The recommended approach is to automatically upgrade the control plane to the latest K8s version while keeping the data plane's VNGs running on a minor K8s version until fully validating them for the latest K8s version.
+This topic explains how to manage Virtual Node Groups (VNGs) when upgrading the Kubernetes version for your clusters. The recommended approach is to automatically upgrade the control plane to the latest K8s version while keeping the data plane's VNGs running on a minor Kubernetes version until fully validating them for the latest K8s version.
 [Learn more…](https://docs.spot.io/ocean/tips-and-best-practices/vng-minor-versions?id=configure-a-minor-k8s-version-for-a-virtual-node-group)
 
 * **OCN-004: May 16, 2024:** 
