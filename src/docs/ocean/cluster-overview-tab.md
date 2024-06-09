@@ -90,20 +90,20 @@ To view these savings, click the **Revert to Lower Cost** tab (unless already di
 This tab displays:
 
 *   Nodes reverted to lower cost: If one or more nodes have been reverted to lower cost, the number of reverted nodes appears. Click to view the number of nodes reverted to lower cost in the selected time range in the Revert to Lower Cost window.
-
 *   Virtual Node Group percentage breakdown
 *   Replacement information: an entry for each reverted node is listed with these details:
 
-   *   Instance type of original node.
-   *  Instance type of reverted node.
-   *  Instance ID of original node.
-   *  Instance ID of reverted node.
-   *  Lifecycle of original node.
-   *  Lifecycle of reverted node.
-   *  Hourly cost of original node.
-   *  Hourly cost of reverted node.
-   *  Hourly cost saved as a percentage: hourly cost of the reverted node / hourly cost of the original node * 100
-   *  The Virtual Node Group's name
+      *  Instance type of original node.
+      *  Instance type of reverted node.
+      *  Instance ID of original node.
+      *  Instance ID of reverted node.
+      *  Lifecycle of original node.
+      *  Lifecycle of reverted node.
+      *  Hourly cost of original node.
+      *  Hourly cost of reverted node.
+      *  Hourly cost saved as a percentage: hourly cost of the reverted node / hourly cost of the original node * 100
+      *  The Virtual Node Group's name
+ 
  *   CPU resources saved in vCPU Hours. 
  *   Memory resources saved in GiB Hours. 
  *   GPU resources saved in GPU Hours. 
@@ -115,7 +115,6 @@ This tab displays:
 The Autoscaling Activity panel contains the following widgets:  
 
 *   Scale Up widget. 
-
 *   Set of Continuous Optimization widgets. 
 
 ### Scale Up 
