@@ -26,7 +26,7 @@ It may take a few moments before the created nodes join the Kubernetes cluster. 
 
 You may wish to have multiple replicas of a pod running in the cluster, but ensure that each pod does not run on the same node as other replicas of itself. In order to distribute the replicas properly, you can set an anti-affinity across availability zones. The autoscaler will then automatically launch instances satisfying the pod requirements.
 
-Example: Anti-affinity across availability zones:
+Example: Anti-affinity across availability zones: 
 
 ```json
 spec:
