@@ -6,7 +6,7 @@ This tutorial covers the creation of an Ocean cluster using [Spot](https://conso
 
 ## Prerequisites
 
-- OpenShift is installed and configured on AWS, Azure, or GCP
+- OpenShift is installed and configured on AWS.
 - At least one worker node is up and running
 
 ## Get Started
