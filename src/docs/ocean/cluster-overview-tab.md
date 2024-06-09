@@ -28,7 +28,7 @@ The Ocean Savings panel contains a set of savings widgets (displayed as tabs), w
 
 *   **Bin Packing**: Ocean proactively identifies underutilized nodes and efficiently bin-packs the pods on them to scale down the nodes and reduce the cluster cost. 
 
-*   **Reverting to Lower-Cost node**: Process applied to nodes with underutilized compute resources that cannot be scaled down from the cluster's set of nodes to optimize cluster utilization and reduce costs. 
+*   **Reverting to Lower-Cost node**: This process is applied to nodes with underutilized compute resources that cannot be scaled down from the cluster's set of nodes to optimize cluster utilization and reduce costs. 
 
 In this panel: 
 
@@ -46,16 +46,13 @@ To view these savings, click the **Running on Spot** tab (unless already display
 
 This tab displays: 
 
-*   Total cluster savings, and the percentage of the saved cluster costs in the selected time range, where: 
+*   Total cluster savings and the percentage of the saved cluster costs in the selected time range, where: 
 
     *   **Total cluster savings** = price for running OD instances – price for running spot instances. 
-
     *   **Percentage of cluster costs** = [total price for running OD instances – total price for running spot instances] / total price for running OD instances x 100. 
 
 *   CPU resources in vCPU Hours. 
-
 *   Memory resources in GiB Hours. 
-
 *   GPU resources in GPU Hours. 
 
 ### Ocean Savings from Bin Packing 
@@ -68,24 +65,18 @@ To view these savings, click the **Bin Packing** tab (unless already displayed).
 
 This tab displays: 
 
-*   Scaled-down nodes: If one or more nodes have been scaled down, the number of scaled-down nodes appears. Click to view the number of nodes scaled down in the selected time range in the Bin Packing window. A table entry for each scaled-down node is listed with the following details: 
+*   Scaled-down nodes: If one or more nodes have been scaled down, the number of scaled-down nodes appears. Click to view the number of nodes scaled down in the selected time range in the Bin Packing window. An entry for each scaled-down node is listed with these details: 
 
     *   Instance ID. 
-
     *   VNG: You can click on the link for a listed VNG to display your custom VNG details. 
-
     *   Lifecycle. 
-
     *   Savings %. 
-
     *   Scale down timestamp. 
 
 *   Resource savings from bin packing in the following units:  
 
     *   CPU resources saved in vCPU Hours. 
-
     *   Memory resources saved in GiB Hours. 
-
     *   GPU resources saved in GPU Hours. 
 
 ### Ocean Savings from Reverting to a Lower Cost Node 
@@ -96,17 +87,28 @@ Ocean savings for reverting to a lower-cost node are calculated from the differe
 
 To view these savings, click the **Revert to Lower Cost** tab (unless already displayed). 
 
-This tab displays: 
+This tab displays:
 
-*   **Total savings** = [old instance price – new instance price] x new instance running time. 
+*   Nodes reverted to lower cost: If one or more nodes have been reverted to lower cost, the number of reverted nodes appears. Click to view the number of nodes reverted to lower cost in the selected time range in the Revert to Lower Cost window.
 
-*   **Resource savings** = difference in resources used by the old and new instances.  
+*   Virtual Node Group percentage breakdown
 
-    *   CPU resources saved in vCPU Hours. 
+*   Replacement information: an entry for each reverted node is listed with these details: :
 
-    *   Memory resources saved in GiB Hours. 
+   *   Instance type of original node.
+   *   Instance type of reverted node.
+   *   Instance ID of original node.
+   *   Instance ID of reverted node.
+   *   Lifecycle of original node.
+   *   Lifecycle of reverted node.
+   *   Hourly cost of original node.
+   *   Hourly cost of reverted node.
+   *   Hourly cost saved as a percentage: hourly cost of the reverted node / hourly cost of the original node * 100
+   *   The Virtual Node Group's name
 
-    *   GPU resources saved in GPU Hours. 
+ *   CPU resources saved in vCPU Hours. 
+ *   Memory resources saved in GiB Hours. 
+ *   GPU resources saved in GPU Hours. 
 
 ## Autoscaling Activity Panel 
 
