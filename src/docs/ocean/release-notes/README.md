@@ -5,15 +5,15 @@
 **June, 2024**
 
 * **OCN-009: June 09, 2024:** 
-Log Integration with Azure Blob for Ocean **AKS** is now available in the [Spot API](https://docs.spot.io/api/).
+Log Integration with Azure Blob for Ocean <code style="color : red">**AKS** </code> is now available in the [Spot API](https://docs.spot.io/api/).
 From now on, you can configure Ocean to export logs to an Azure Blob and then access the logs with a central monitoring tool.
-Read and troubleshoot the Ocean logs in the same central interface where you access your other logs.
+Read and troubleshoot the Ocean logs in the same central interface where you access your other logs. 
 [Learn more](https://docs.spot.io/ocean/features/log-integration-with-azure-blob)
 
 * **OCN-008: June 09, 2024:** 
 Spot has released EKSCTL [v0.180.0](spotinst/weaveworks-eksctl).
 When you use this EKSCTL version to create Ocean clusters, [Ocean Controller Version 2](https://docs.spot.io/ocean/tutorials/ocean-controller-v2/.) is used.
->**Prerequisite**: Install Helm before you install EKSCTL.
+>**Prerequisite**: Helm.
 
 
 <details>
