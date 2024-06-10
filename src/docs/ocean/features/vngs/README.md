@@ -92,6 +92,12 @@ Ocean takes the following parameters from the default VNG unless explicitly set 
 </details><br>
 
 <details>
+  <summary markdown="span">AKS Kubernetes</summary>
+
+
+</details><be>
+  
+<details>
   <summary markdown="span">GKE</summary>
 
 - Availability zone
