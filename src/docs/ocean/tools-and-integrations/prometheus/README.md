@@ -1,12 +1,12 @@
 # Prometheus for Kubernetes Data-Plane Monitoring
 
-Ocean manages the scaling of the Kubernetes data plane, and the data generated in the process could be valuable for monitoring your containerized environment. Using well-defined Prometheus metrics for monitoring Ocean can help you understand the cluster scaling and debug any issues that may arise. In addition, you can build alerts based on the metrics to address issues in real time and track important trends on a dashboard of different Ocean metrics.  
+Ocean manages the scaling of the Kubernetes data plane, and the data generated in the process could be valuable for monitoring your containerized environment. Using well-defined Prometheus metrics for monitoring Ocean can help you understand the cluster scaling and debug any issues that may arise. In addition, you can build alerts based on the metrics to address issues in real-time and track important trends on a dashboard of different Ocean metrics.  
 
 Ocean maintains an official set of metrics, natively scrapable by Prometheus. This set of metrics helps build a 360-degree view of Ocean's actions while providing application-driven infrastructure.
 
 ## Ocean Metrics
 
-By monitoring a few key metrics, you can understand how Ocean scales. The metrics are described below with examples and are relevant to Ocean Prometheus Exporter for AWS Kubernetes and GCP.
+By monitoring a few key metrics, you can understand how Ocean scales. The metrics are described below with examples and are relevant to Ocean Prometheus Exporter for EKS, AKS, and GKE.
 
 ### ocean_managed_nodes
 
@@ -29,10 +29,10 @@ These counter-type metrics help track the rate of addition and removal of nodes 
 
 * `pendingPodsOrHeadroom`—The Ocean Autoscaler scaled up the node due to unscheduled pending pods or missing Headroom units on your cluster.  
 * `scaleDownForOptimization`—The Ocean Autoscaler scaled down the node to optimize resource utilization on your cluster.  
-* `odToSpotReplacement`—The node was scaled up/down due to a replacement from an on-demand to a spot node. The on-demand node was launched because there was no available spot node in the market at the time. Ocean continues scanning the market for an available spot node and reverts as soon as one is available.  
+* `odToSpotReplacement`—The node was scaled up/down due to a replacement from an on-demand to a spot node. The on-demand node was launched because there was no available spot node in the market then. Ocean continues scanning the market for an available spot node and reverts as soon as one is available.  
 * `autoHealingReplacement`—The node was scaled up/down due to a replacement from an unhealthy instance to a new one. Ocean checks the instance’s status after the grace period, and if an instance fails the health check, it is automatically replaced with a new one.  
-* `riUtilizationReplacement` (relevant only to AWS)—The node was scaled up/down due to a replacement from spot/OD to RI. Ocean constantly monitors for available RIs or Savings Plans in your account (when the `strategy.utilizeReservedInstances` or `utilizeCommitments` flag is	enabled). If there is an Ocean-monitored node that runs as a spot or OD, Ocean will try to replace it with the available RI or Savings Plan nodes. 
-* `recoveryReplacement`— Since the provider took the instance, the node was scaled down. As part of the recovery process, a new node was scaled up to replace it. 
+* `riUtilizationReplacement` (relevant only to AWS)—The node was scaled up/down due to a replacement from spot/OD to RI. Ocean constantly monitors your account's available RIs or Savings Plans (when the `strategy.utilizeReservedInstances` or `utilizeCommitments` flag is	enabled). If an Ocean-monitored node runs as a spot or OD, Ocean will try to replace it with the available RI or Savings Plan nodes. 
+* `recoveryReplacement`—Since the provider took the instance, the node was scaled down. A new node was scaled up to replace it as part of the recovery process. 
 * `revertToLowerCostReplacement` -  The node was scaled up/down due to the ‘Revert to lower cost’ process. For more information, click [here](ocean/features/revert-to-lower-cost-node?id=revert-to-lower-cost-node). 
 * `shutdownHoursActivity` - The node was scaled up/down due to shutdown hours set on your cluster. For more information, click [here](ocean/features/running-hours?id=shutdown-hours).  
 * `clusterRollReplacement` - The node was scaled up/down due to a cluster roll in your cluster. For more information, click [here](ocean/features/roll?id=roll).  
@@ -62,7 +62,7 @@ group configuration.
 * `no_applicable_instances` - failed to scale up. The current group configuration could not satisfy the Pod’s constraints.
 * `vng_max_instance_count_reached` - failed to scale up. Virtual Node Group reached the maximum instance count running.
 * `cluster_max_instance_count_reached` - failed to scale up. Clusters reached maximum instance count running.
-* `cant_scale_up_pods_for_vngs` - failed to scale up. due to technical failure to launch required instances.
+* `cant_scale_up_pods_for_vngs` - failed to scale up due to technical failure to launch required instances.
 * `vng_min_instance_count_reached` - failed to scale down. Virtual Node Group has reached the minimum capacity
 of running instances.
 * `cluster_min_instance_count_reached` - failed to scale down. Clusters have reached the minimum capacity of
