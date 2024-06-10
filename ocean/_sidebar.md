@@ -45,7 +45,7 @@
     - [Migrate Workload to Ocean (AKS)](ocean/tutorials/migrate-workload-aks)
       - [Migrate using the Console](ocean/tutorials/migrate-workload-aks-ui)
       - [Migrate using API](ocean/tutorials/migrate-workload-aks-api)
-      - [Minor K8s Versions for VNG](ocean/tips-and-best-practices/vng-minor-versions)
+    - [Minor K8s Versions for VNG](ocean/tips-and-best-practices/vng-minor-versions)
   - [Tutorials](ocean/tutorials/)
     - [Ocean Dashboard](ocean/tutorials/ocean-dashboard)
     - [Cluster Overview](ocean/cluster-overview-tab)
