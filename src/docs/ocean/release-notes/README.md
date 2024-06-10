@@ -13,7 +13,7 @@ Read and troubleshoot the Ocean logs in the same central interface where you acc
 * **OCN-008: June 09, 2024:** 
 Spot has released EKSCTL [v0.180.0](spotinst/weaveworks-eksctl).
 When you use this EKSCTL version to create Ocean clusters, [Ocean Controller Version 2](https://docs.spot.io/ocean/tutorials/ocean-controller-v2/.) is used.
->**Prerequisite**: Helm.
+>**Prerequisite**: Helm installed.
 
 
 <details>
