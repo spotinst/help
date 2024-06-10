@@ -62,7 +62,7 @@ In AKS, the default behaviour is that the Ocean configuration is the template.
 Ocean takes the following parameters from the default VNG unless explicitly set in a VNG.
 
 <details>
-  <summary markdown="span">AWS Kubernetes</summary>
+  <summary markdown="span">EKS</summary>
 
 - Image
 - Instance profile
@@ -89,10 +89,11 @@ Ocean takes the following parameters from the default VNG unless explicitly set 
 - Tags
 - User data
 
-</details><br>
+</details><be>
+
 
 <details>
-  <summary markdown="span">AKS Kubernetes</summary>
+  <summary markdown="span">AKS</summary>
 
 
 </details><be>
