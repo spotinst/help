@@ -13,9 +13,9 @@ To view your right-sizing recommendations and rules:
 3. Click the **Right Sizing** tab.
 4. Click **Advanced Optimization**. 
 
-![right-sizing-wl-and-containers](https://github.com/spotinst/help/assets/159915991/3558f261-20a3-4182-bb2f-b4509869e7a9)
+![right-sizing-workloads](https://github.com/spotinst/help/assets/159915991/70affd93-1f92-4d0b-ada6-721c2842c93c)
 
-The Advanced Optimization tab contains the following lists:  
+The Advanced Optimization tab contains these lists:  
 
 *  Workloads Optimization List. 
 *  Automatic Right Sizing Rules List.
