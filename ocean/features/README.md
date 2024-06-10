@@ -23,6 +23,7 @@ We are in the process of adding several Ocean features for use with AKS. The fol
 - [Right Sizing](ocean/features/right-sizing)
 - [Labels and Taints](ocean/features/labels-and-taints)
 - [Virtual Node Groups](ocean/features/launch-specifications)
+- [Minor K8s Versions for VNGs](ocean/tips-and-best-practices/vng-minor-versions)
 
 ### AKS Notes:
 
