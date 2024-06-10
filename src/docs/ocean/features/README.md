@@ -43,7 +43,7 @@ The following major features are currently supported in Ocean for GKE:
 - [Right Sizing](ocean/features/right-sizing)
 - [Labels and Taints](ocean/features/labels-and-taints)
 - [Virtual Node Groups](ocean/features/launch-specifications)
-- [Cluster Roll](ocean/features/roll)
+- [Cluster Roll](ocean/features/roll-gen))
 - [Shutdown Hours](ocean/features/running-hours)
 
 </details><br>
