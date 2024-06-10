@@ -1975,6 +1975,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/tutorials-gcp/dashboard"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/elastigroup/tutorials-gcp/manage</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/elastigroup/tutorials-gcp/manage"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/tutorials-gcp/manage"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/elastigroup/tutorials-gcp/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
