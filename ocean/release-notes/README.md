@@ -1,6 +1,6 @@
 # Ocean Release Notes
 
-## Features and Enhancements
+## Features and Enhancements 
 
 **June, 2024**
 
