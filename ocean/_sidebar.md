@@ -46,6 +46,7 @@
       - [Migrate using the Console](ocean/tutorials/migrate-workload-aks-ui)
       - [Migrate using API](ocean/tutorials/migrate-workload-aks-api)
     - [Minor K8s Versions for VNG](ocean/tips-and-best-practices/vng-minor-versions)
+    - [Upgrade AKS Clusters](ocean/tips-and-best-practices/upgrade-aks-cluster)
   - [Tutorials](ocean/tutorials/)
     - [Ocean Dashboard](ocean/tutorials/ocean-dashboard)
     - [Cluster Overview](ocean/cluster-overview-tab)
@@ -100,6 +101,5 @@
   - [Troubleshooting](ocean/troubleshooting/)
       - [Troubleshoot Unscheduled Pods](ocean/troubleshooting/troubleshoot-unscheduled-pods)
   - [Tips & Best Practices](ocean/tips-and-best-practices/)
-    - [Upgrade AKS Clusters](ocean/tips-and-best-practices/upgrade-aks-cluster)
-    - [Manage Machine Types](ocean/tips-and-best-practices/manage-machine-types)
+      - [Manage Machine Types](ocean/tips-and-best-practices/manage-machine-types)
 
