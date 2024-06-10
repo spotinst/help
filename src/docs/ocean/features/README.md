@@ -29,7 +29,7 @@ We are in the process of adding several Ocean features for use with AKS. The fol
 ### AKS Notes:
 
 - Ocean initiates actions in the Azure account. These actions are bound by the [Azure subscription limits and quotas](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/azure-subscription-service-limits) provided in the account.
-- Ocean for AKS currently supports import of Linux-based node pools only.
+- Ocean for AKS currently supports the import of Linux-based node pools only.
 
 </details><br>
 
@@ -43,7 +43,7 @@ The following major features are currently supported in Ocean for GKE:
 - [Right Sizing](ocean/features/right-sizing)
 - [Labels and Taints](ocean/features/labels-and-taints)
 - [Virtual Node Groups](ocean/features/launch-specifications)
-- [Cluster Roll](ocean/features/roll-gen))
+- [Cluster Roll](ocean/features/roll-gen)
 - [Shutdown Hours](ocean/features/running-hours)
 
 </details><br>
@@ -59,6 +59,6 @@ The following major features are currently supported in Ocean for ECS:
 - [Cost Analysis per ECS Service](ocean/features/cost-analysis)
 - [Shutdown Hours](ocean/features/running-hours)
 
-## What's Next?
+## Related Topics
 
-To learn more about Ocean features, choose a topic in the sidebar on the left.
+Select a topic in the sidebar on the left to learn more about Ocean features.
