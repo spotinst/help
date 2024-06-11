@@ -17,7 +17,7 @@ These are the major Ocean cross-platform features:
 <details>
   <summary markdown="span">AWS</summary>
 
-These features are only available for Ocean Kubernetes:
+These features are only available for Ocean AWS Kubernetes:
 
 *  [Elastic IP](ocean/features/elastic-ip)
 *  [Distribute Nodes by vCPU](ocean/features/distribute-vcpu)
