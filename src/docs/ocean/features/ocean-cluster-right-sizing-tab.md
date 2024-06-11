@@ -1,6 +1,6 @@
 <meta name=“robots” content=“noindex”>
 
-#  Ocean EKS Cluster Automatic Right Sizing 
+#  Ocean Cluster Automatic Right Sizing (EKS and AKS)
 
 To help you improve the efficiency and performance of your cloud environments, Ocean’s rightsizing capabilities provide recommendations that target over-provisioning and underutilization. 
 
