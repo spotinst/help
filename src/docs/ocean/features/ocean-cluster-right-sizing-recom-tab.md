@@ -1,6 +1,6 @@
 <meta name=“robots” content=“noindex”>
 
-#  Automatic Right-Sizing Recommendations and Rules 
+#  Automatic Right-Sizing Recommendations and Rules (EKS and AKS)
 
 This topic shows you how to view right-sizing recommendations for workloads and containers and work with right-sizing rules.
 
