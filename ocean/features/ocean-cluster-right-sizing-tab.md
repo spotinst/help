@@ -1,6 +1,6 @@
 <meta name=“robots” content=“noindex”>
 
-#  Ocean EKS Cluster Automatic Right Sizing 
+#  Ocean Cluster Automatic Right Sizing (EKS and AKS)
 
 To help you improve the efficiency and performance of your cloud environments, Ocean’s rightsizing capabilities provide recommendations that target over-provisioning and underutilization. 
 
@@ -61,7 +61,8 @@ You view Right Sizing recommendations via:
 
 Ocean provides resource recommendations to assist in adjusting deployment requests based on actual CPU and memory consumption. 
 
-Resource resize recommendations are triggered when the requested resources deviate by 15% or more from the average metric recorded during the last two weeks. If the requested resources are either 15% above or 15% below the average metric, Ocean suggests resizing them to align them more closely with the observed consumption patterns. 
+Resource resize recommendations are triggered when the requested resources deviate by 15% or more from the 85th or 99th Percentile mean metric recorded during the last two weeks. 
+If the requested resources are either 15% above or 15% below the 85th or 99th Percentile mean metric, Ocean suggests resizing the resources to align them more closely with the observed consumption patterns. 
 
 These recommendations can help optimize resource allocation and ensure that the requested resources align with the actual CPU and memory consumption, improving efficiency and cost-effectiveness in managing your deployments. 
 
