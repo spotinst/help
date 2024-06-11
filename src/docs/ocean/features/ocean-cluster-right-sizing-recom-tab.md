@@ -103,7 +103,7 @@ To delete a right sizing rule:
 1.   To the right of the row for the rule in the list, click the wastebasket icon. 
 2.   When the confirmation message appears, Click **Delete**, or **Cancel** (if you are unsure). 
 
->**Important**: You cannot restore a deleted right-sizing rule. 
+>**Important**: You cannot restore a deleted right-sizing rule. In addition, a rule may be deleted only if it is no longer attached to a workload.
 
 
 
