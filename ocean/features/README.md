@@ -23,7 +23,6 @@ We are in the process of adding several Ocean features for use with AKS. The fol
 - [Right Sizing](ocean/features/right-sizing)
 - [Labels and Taints](ocean/features/labels-and-taints)
 - [Virtual Node Groups](ocean/features/launch-specifications)
-- [Minor K8s Versions for Virtual Node Groups](ocean/tips-and-best-practices/vng-minor-versions)
 - [Rolls](https://docs.spot.io/ocean/features/roll): Includes cluster, Virtual Node Group, and Node Pool rolls.
 
 ### AKS Notes:
