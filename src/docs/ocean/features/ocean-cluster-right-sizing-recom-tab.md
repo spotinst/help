@@ -1,6 +1,6 @@
 <meta name=“robots” content=“noindex”>
 
-#  Automatic Right-Sizing Recommendations and Rules 
+#  Automatic Right-Sizing Recommendations and Rules (EKS and AKS)
 
 This topic shows you how to view right-sizing recommendations for workloads and containers and work with right-sizing rules.
 
@@ -76,6 +76,8 @@ To create/edit a right-sizing rule:
 
 To attach a rule to one or more workloads: 
 
+>**Note**: You can only attach workloads that are not already attached to rules.
+
 1.   Select one or more workloads in the Workloads Optimization list. 
 2.   From the Actions drop-down menu above the table, click **Attach Rule**.
 
@@ -93,6 +95,8 @@ To attach a rule to one or more workloads:
 
 To detach a rule from one or more workloads: 
 
+>**Note**: You can only detach workloads that are already attached to rules.
+
 1.   Select workloads in the Workloads Optimization list.
 2.   From the Actions drop-down menu above the list, click **Detach Rule**. 
 
@@ -103,7 +107,7 @@ To delete a right sizing rule:
 1.   To the right of the row for the rule in the list, click the wastebasket icon. 
 2.   When the confirmation message appears, Click **Delete**, or **Cancel** (if you are unsure). 
 
->**Important**: You cannot restore a deleted right-sizing rule. 
+>**Important**: You cannot restore a deleted right-sizing rule. In addition, a rule may be deleted only if it is no longer attached to a workload.
 
 
 
