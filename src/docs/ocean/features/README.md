@@ -46,7 +46,10 @@ These features are only available for Ocean AKS:
 <details>
   <summary markdown="span">GKE</summary>
 
+These features are only available for Ocean GKE:
 
+*  [Auto Update Process for GKE](ocean/features/auto-update-process-gke)
+*  [Create a Cluster for GKE Using Shared VPC](tutorials/create-cluster-gke-shared-vpc)
 
 </details><br>
 
