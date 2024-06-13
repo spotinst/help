@@ -5,7 +5,7 @@
 <span style="color:blue">some magenta text</span>
 
 
-<font color="#FF33FF">text</font>
+This is an example of **<font color="#FF33FF">text</font>** with color
 
 
 
