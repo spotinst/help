@@ -6,13 +6,21 @@ Here are some examples of types of flows you can create:
 * Generate alerts based on specific conditions
 * Update custom datasets
 
+<details>
+     <summary markdown="span">View image</summary>
+
 ![image](https://github.com/spotinst/help/assets/167069628/b733cc21-b45f-4d0e-aa17-93dbd7961bf3)
 
+   </details>
 
 ## Create a Workflow
 1. Click Create New Flow.
+   <details>
+     <summary markdown="span">View image</summary>
 
-   ![image](https://github.com/spotinst/help/assets/167069628/f7736d90-90f8-475f-a4dc-631dd1ce44df)
+    ![image](https://github.com/spotinst/help/assets/167069628/f7736d90-90f8-475f-a4dc-631dd1ce44df)
+
+   </details>
    
 3. Add a trigger to the flow by dragging it. All flows require a trigger.
     <details>
@@ -22,7 +30,7 @@ Here are some examples of types of flows you can create:
     * **Records Added**: the flow runs as soon as new data is received. For example, the flow starts when a new record is added to a data source, or each time a record is added by a data load process.
     * **Records Updated**: the flow starts whenever information changes in an existing dataset or a record is updated by a data load process.
     * **Webhook**: the flow is triggered from an external source using a URL. Selecting this trigger automatically generates a unique URL for the flow you are building. Click **Copy** to use this URL in your external application that triggers the flow. You can require authentication for the URL.
-      > **Note**: Once a flow is saved, you cannot update this URL.
+       > **Note**: Once a flow is saved, you cannot update this URL.
 
       ![image](https://github.com/spotinst/help/assets/167069628/8050da83-1ec1-47ba-94d3-c0a4f61ca6c6)
 
@@ -59,7 +67,7 @@ Here are some examples of types of flows you can create:
     <details>
      <summary markdown="span">Send actions</summary>
 
-     * **Send to Webhook** to send data to an external webhook URL. Enter the URL and click Add Parameters to add data or tokens.
+     * **Send to Webhook** to send data to an external webhook URL. Enter the URL and click **Add Parameters** to add data or tokens.
      * **Send Email** to send notifications and alerts in email. Enter a comma-delimited list of email addresses along with a subject and a message. The message body can be formatted with any of the standard options provided, including bold, italic, and underline. There are also justification and link options.
      * **Send SMS** to send notifications and alerts in text messages. Enter a mobile phone number and type a message with up to 140 characters. Any attachments you include in your message are sent as links that your recipient can click on to open the attachment in their web browser.
      * **Slack Notification** to send notifications and alerts in Slack. Configure the workspace, notification user, channels to send the notification, and the message:
@@ -119,4 +127,9 @@ To access the log, click **Activity**. You can search and filter the activity lo
 
 Click **Refresh** to get new activity log events.
 
+<details>
+     <summary markdown="span">View image</summary>
+
 ![image](https://github.com/spotinst/help/assets/167069628/4fef9e64-3011-4325-8765-d5d14812c97e)
+
+   </details>
