@@ -15,5 +15,8 @@
       - [CI Dashboards Data Joins](cost-intelligence/tutorials/dashboard/ci-dashbords-data-joins)   
     - [Best Practice Checks](cost-intelligence/tutorials/best-practice-checks/)
     - [Inventory](cost-intelligence/tutorials/inventory)
+    - [Workflow Builder](cost-intelligence/tutorials/workflow-builder/)
+      - [Sending Emails](cost-intelligence/tutorials/workflow-builder/configuring-and-sending-emails)
+      - [Basic Alerts for Budgets and Thresholds](cost-intelligence/tutorials/workflow-builder/configuring-budgets-thresholds)
     - [Administration](cost-intelligence/tutorials/administration/)
  
