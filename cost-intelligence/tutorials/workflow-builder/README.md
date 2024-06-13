@@ -27,8 +27,11 @@ Here are some examples of types of flows you can create:
      <summary markdown="span">Triggers</summary>
       
     * **Scheduling**: the flow starts according to a set date and time, and can be set to repeat.
+   
     * **Records Added**: the flow runs as soon as new data is received. For example, the flow starts when a new record is added to a data source, or each time a record is added by a data load process.
+   
     * **Records Updated**: the flow starts whenever information changes in an existing dataset or a record is updated by a data load process.
+      
     * **Webhook**: the flow is triggered from an external source using a URL. Selecting this trigger automatically generates a unique URL for the flow you are building. Click **Copy** to use this URL in your external application that triggers the flow. You can require authentication for the URL.
        > **Note**: Once a flow is saved, you cannot update this URL.
 
