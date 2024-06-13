@@ -3319,6 +3319,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean/features/vngs/attributes-and-actions-per-vng"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/ocean/features/vngs/az-zero-feature</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean/features/vngs/az-zero-feature"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean/features/vngs/az-zero-feature"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/ocean/features/vngs/preferred-spot-instance-types-per-vng</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
