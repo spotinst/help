@@ -14,7 +14,7 @@ You can configure the subject line, recipient list, and the body of the email. Y
 ## Tokens
 You can add tokens to the body of an email to include dynamic and detailed data for your users.
 
-You can use data tokens in emails that were [created in the Cost Intelligence dashboard or Workflows]([cost-intelligence/tutorials/workflow-builder/README)](https://docs.spot.io/cost-intelligence/tutorials/workflow-builder/). In the dashboard, check the metric's name to search for the name/value pair in the token list.
+You can use data tokens in emails that were [created in the Cost Intelligence dashboard or Workflows](https://docs.spot.io/cost-intelligence/tutorials/workflow-builder/). In the dashboard, check the metric's name to search for the name/value pair in the token list.
 
 Data and system tokens can be used in the subject line and the message body. 
 
