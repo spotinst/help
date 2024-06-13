@@ -14,7 +14,7 @@ To specify Availability Zone Zero for a workload:
 
 4.  Edit the configuration.
 
-      -   By Form: In the Availablity Zones area, click 0 (no infrastructure redundancy).
+      -   By Form: In the Availablity Zones area, click **0 (no infrastructure redundancy)**.
 
            ![az-equals-zero-under-vng](https://github.com/spotinst/help/assets/159915991/fdfb1e80-8e2c-4d17-909a-2af7e5777061)
 
