@@ -14,6 +14,11 @@ To resolve this issue, ensure Helm is installed on your machine before starting 
 
 You can install Helm by running `install helm—https://helm.sh/docs/intro/install​`.
 
+###  Helm Install Fails with Parse Error 
+
+Helm install fails with parse error at `(ocean-kubernetes-controller/templates/_helpers.tpl:320): unclosed acti`
+To resolve this issue, Ensure the `helm` version is **3.12.0** or above. If not, update helm and try again.
+
 ###  "Metrics server already installed" Log After Using Helm to Install the Controller
 
 This issue occurs because the **metric server** is already installed in your cluster. By default, the Helm Chart for the Ocean Controller installs the metric-server as a dependency. 
@@ -122,6 +127,7 @@ kubectl describe pod 'dns-pod-name' -n kube-system
 
 3.  Try restarting the controller pod. 
 
+
 ### Step 5: Get Ocean Controller Logs 
 
 If the steps above do not solve your issue, get the controller logs using the steps below. 
@@ -137,5 +143,9 @@ kubectl get pods -n spot-system
 ```bash
 Kubectl logs ocean-controller-ocean-kubernetes-controller –n spot-system 
 ```
-
 3. If you still encounter issues, contact Support via [online chat or email](https://spot.io/support/). 
+
+
+
+
+
