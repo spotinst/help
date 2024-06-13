@@ -45,7 +45,7 @@ Ocean now lets you schedule cluster and Virtual Node Group (VNG) rolls for **AKS
 * **OCN-0002: May 1, 2024:**
 Spot has introduced a new Ocean label, `spotinst.io/azure-premium-storage,` injected on every node in a node pool that supports premium storage. Once you define this label on a workload requiring premium storage, the pods can be provisioned on the most appropriate nodes (for the workload). [Learn More...](https://docs.spot.io/ocean/features/labels-and-taints) (edited)
 
-* **OCN-0001**: (**AWS Kubernetes**) As of **May 1, 2024**, **Ocean Controller Version 2** for **AWS Kubernetes** is officially released, bringing a host of new features and enhancements to streamline your operations:
+* **OCN-0001**: (**<font color="#E80808">AWS Kubernetes</font>**) As of **May 1, 2024**, **Ocean Controller Version 2** for **AWS Kubernetes** is officially released, bringing a host of new features and enhancements to streamline your operations:
   *  With Ocean Controller Version 2, you can expect enhanced efficiency and performance thanks to its innovative event-driven system design. This intelligent architecture ensures your cluster operates at peak performance, delivering optimal results with every interaction.
 
   *  One of the standout features of Ocean Controller Version 2 is its out-of-the-box Leader Election mode, which guarantees continuous pod availability and uninterrupted operations to keep your cluster running smoothly, even in the face of unexpected events.
