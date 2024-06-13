@@ -15,7 +15,6 @@ To specify Availability Zone Zero for a workload:
 3.  In the Virtual Node Groups (VNG) tab, select the specific Virtual Node Group where you want to define a zero-availability Zone.
 
 4.  Edit the configuration.  
+    * By Form: In the Availablity Zones area, click 0 (no infrastructure redundancy).
 
-  *  By Form: In the Availablity Zones area, click 0 (no infrastructure redundancy).
-
- *  Or By JSON: "availabilityZones": [ "0", "1", "2", "3" ]
+    * Or By JSON: "availabilityZones": [ "0", "1", "2", "3" ]
