@@ -827,6 +827,20 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/cost-intelligence/tutorials/"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/cost-intelligence/tutorials/workflow-builder/configuring-and-sending-emails</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/cost-intelligence/tutorials/workflow-builder/configuring-and-sending-emails"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/cost-intelligence/tutorials/workflow-builder/configuring-and-sending-emails"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/cost-intelligence/tutorials/workflow-builder/configuring-budgets-thresholds</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/cost-intelligence/tutorials/workflow-builder/configuring-budgets-thresholds"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/cost-intelligence/tutorials/workflow-builder/configuring-budgets-thresholds"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/cost-intelligence/tutorials/workflow-builder/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
