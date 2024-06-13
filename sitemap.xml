@@ -799,6 +799,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/cost-intelligence/tutorials/dashboard/derived-values"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/cost-intelligence/tutorials/dashboard/forecasting</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/cost-intelligence/tutorials/dashboard/forecasting"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/cost-intelligence/tutorials/dashboard/forecasting"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/cost-intelligence/tutorials/dashboard/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
