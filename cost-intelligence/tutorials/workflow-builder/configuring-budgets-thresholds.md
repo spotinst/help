@@ -28,4 +28,4 @@ After a flow has been running for a while, open the flow and review the activity
 
     </details>
 
-Click **Activate** to start the validation checks.
+6. Click **Activate** to start the validation checks.
