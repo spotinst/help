@@ -48,8 +48,8 @@ This tab displays:
 
 *   Total cluster savings and the percentage of the saved cluster costs in the selected time range, where: 
 
-    *   **Total cluster savings** = price for running OD instances – price for running spot instances. 
-    *   **Percentage of cluster costs** = [total price for running OD instances – total price for running spot instances] / total price for running OD instances x 100. 
+    *   **Total cluster savings** = price for running on-demand instances – price for running spot instances. 
+    *   **Percentage of cluster costs** = [total price for running on-demand instances – total price for running spot instances] / total price for running on-demand instances x 100. 
 
 *   CPU resources in vCPU Hours. 
 *   Memory resources in GiB Hours. 
@@ -116,10 +116,10 @@ This tab displays:
 
 [placeholder for graphic when available]
 
- *   Resource savings from reverting to lower cost in the following units:  
-    * CPU resources saved in vCPU Hours. 
-    * Memory resources saved in GiB Hours. 
-    * GPU resources saved in GPU Hours. 
+*   Resource savings from reverting to lower cost in the following units:  
+     * CPU resources saved in vCPU Hours. 
+     * Memory resources saved in GiB Hours. 
+     * GPU resources saved in GPU Hours. 
 
 ## Autoscaling Activity Panel 
 
