@@ -69,7 +69,7 @@ This tab displays:
 
 *   Scaled-down nodes: If one or more nodes have been scaled down, the number of scaled-down nodes appears. Click to view the number of nodes scaled down in the selected time range in the Bin Packing window. An entry for each scaled-down node is listed with these details:
 
-      * Pie-charts:
+      * Pie charts:
          * Virtual Node Group percentage breakdown for nodes.
          * Lifecycle percentage breakdown (On-Demand, Savings Plans, Reserved Instances, and spots).
       * List:
@@ -100,7 +100,7 @@ This tab displays:
 
 *   Nodes reverted to lower cost: If one or more nodes have been reverted to lower cost, the number of reverted nodes appears. Click to view the number of nodes reverted to lower cost in the selected time range in the Revert to Lower Cost window.
 
-      * Pie-chart:
+      * Pie chart:
          * Virtual Node Group percentage breakdown for nodes.
       * Replacement information: an entry for each reverted node is listed with these details:
          * Instance type of original node.
