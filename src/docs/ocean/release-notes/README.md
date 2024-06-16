@@ -4,7 +4,7 @@
 
 **June, 2024**
 
-*  **OCN-0010: June 13, 2024:** (**<font color="#E80808">AKS</font>**) Ocean now supports AKS VNG (Virtual Network Groups) with Availability Zone set to null (Zone 0). Use this option independently or with other Availability Zones to seamlessly run workloads requiring PVC (Persistent Volume Claim), storage needs, and availability redundancy (AZ=null) within Ocean, with minimal configuration changes. [Learn more…](https://docs.spot.io/ocean/features/vngs/az-zero-feature)
+*  **OCN-0010: June 13, 2024:** (**<font color="#E80808">AKS</font>**) Ocean now supports AKS VNG (Virtual Node Groups) with Availability Zone set to null (Zone 0). Use this option independently or with other Availability Zones to seamlessly run workloads requiring PVC (Persistent Volume Claim), storage needs, and availability redundancy (AZ=null) within Ocean, with minimal configuration changes. [Learn more…](https://docs.spot.io/ocean/features/vngs/az-zero-feature)
 
 * **OCN-0009: June 09, 2024:** (**<font color="#E80808">AKS</font>**)
 Log Integration with Azure Blob for Ocean **AKS** is now available in the [Spot API](https://docs.spot.io/api/).
