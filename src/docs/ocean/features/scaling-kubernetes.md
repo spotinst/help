@@ -24,7 +24,7 @@ It may take a few moments before the created nodes join the Kubernetes cluster. 
 
 ### Affinity and Anti-affinity
 
-You may wish to have multiple replicas of a pod running in the cluster, but ensure that each pod does not run on the same node as other replicas of itself. In order to distribute the replicas properly, you can set an anti-affinity across availability zones. The autoscaler will then automatically launch instances satisfying the pod requirements.
+You may want to have multiple replicas of a pod running in the cluster, but ensure that each pod does not run on the same node as other replicas of itself. In order to distribute the replicas properly, you can set an anti-affinity across availability zones. The autoscaler will then automatically launch instances satisfying the pod requirements.
 
 Example: Anti-affinity across availability zones: 
 
@@ -46,6 +46,12 @@ spec:
 ```
 
 > **Tip**: In the [affinity syntax](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#resources-that-support-set-based-requirements), Ocean supports both `matchExpressions` and `matchLabels`.
+
+###  Scale Up According to Available IPs (EKS only)
+
+When the Ocean Autoscaler needs to scale up an instance, it selects the Availability Zone and the included subnet with the most available IPv4 addresses. This avoids IP address exhaustion in a specific subnet and prevents scaling up a node in a subnet that does not have enough IP addresses.
+If all the subnets set for a Virtual Node Group run out of available IP addresses, scaling up is blocked, and the Spot Monitoring team will email you to request that you add more subnets to the Virtual Node Group.
+
 
 ### Support for Shielded GKE Nodes (GKE only)
 
