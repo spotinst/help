@@ -1,4 +1,4 @@
-# Elastigroup Tutorials for GCP
+# Overview
 
 The Elastigroup Overview tab gives you quick access to insights and summary data about the group. You can obtain an overview of your current cost efficiency status, detailed Elastigroup information, and tracking of group analytics. 
 
