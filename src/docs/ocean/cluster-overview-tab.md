@@ -63,21 +63,28 @@ This process ensures high resource utilization, reducing the number of nodes req
 
 To view these savings, click the **Bin Packing** tab (unless already displayed). 
 
+[placeholder for graphic when available]
+
 This tab displays: 
 
-*   Scaled-down nodes: If one or more nodes have been scaled down, the number of scaled-down nodes appears. Click to view the number of nodes scaled down in the selected time range in the Bin Packing window. An entry for each scaled-down node is listed with these details: 
+*   Scaled-down nodes: If one or more nodes have been scaled down, the number of scaled-down nodes appears. Click to view the number of nodes scaled down in the selected time range in the Bin Packing window. An entry for each scaled-down node is listed with these details:
 
-    *   Instance ID. 
-    *   VNG: You can click on the link for a listed VNG to display your custom VNG details. 
-    *   Lifecycle. 
-    *   Savings %. 
-    *   Scale down timestamp. 
+      * Pie-charts:
+         * Virtual Node Group percentage breakdown for nodes.
+         * Lifecycle percentage breakdown (On-Demand, Savings Plans, Reserved Instances, and spots).
+      * List:
+         * Instance ID. 
+         * Virtual Node Group: You can click the link for a listed VNG to display your custom VNG details. 
+         * Instance Type 
+         * Lifecycle.
+         * Scale-Down Timestamp, for example 06/25/2023 09:23:15   
+
+[placeholder for graphic when available]
 
 *   Resource savings from bin packing in the following units:  
-
-    *   CPU resources saved in vCPU Hours. 
-    *   Memory resources saved in GiB Hours. 
-    *   GPU resources saved in GPU Hours. 
+    * CPU resources saved in vCPU Hours. 
+    * Memory resources saved in GiB Hours. 
+    * GPU resources saved in GPU Hours. 
 
 ### Ocean Savings from Reverting to a Lower Cost Node 
 
@@ -87,26 +94,32 @@ Ocean savings for reverting to a lower-cost node are calculated from the differe
 
 To view these savings, click the **Revert to Lower Cost** tab (unless already displayed). 
 
+[placeholder for graphic when available]
+
 This tab displays:
 
 *   Nodes reverted to lower cost: If one or more nodes have been reverted to lower cost, the number of reverted nodes appears. Click to view the number of nodes reverted to lower cost in the selected time range in the Revert to Lower Cost window.
-*   Virtual Node Group percentage breakdown
-*   Replacement information: an entry for each reverted node is listed with these details:
 
-      *  Instance type of original node.
-      *  Instance type of reverted node.
-      *  Instance ID of original node.
-      *  Instance ID of reverted node.
-      *  Lifecycle of original node.
-      *  Lifecycle of reverted node.
-      *  Hourly cost of original node.
-      *  Hourly cost of reverted node.
-      *  Hourly cost saved as a percentage: hourly cost of the reverted node / hourly cost of the original node * 100
-      *  The Virtual Node Group's name (click on the link for a listed VNG to display your custom VNG details).
- 
- *   CPU resources saved in vCPU Hours. 
- *   Memory resources saved in GiB Hours. 
- *   GPU resources saved in GPU Hours. 
+      * Pie-chart:
+         * Virtual Node Group percentage breakdown for nodes.
+      * Replacement information: an entry for each reverted node is listed with these details:
+         * Instance type of original node.
+         * Instance type of reverted node.
+         * Instance ID of original node.
+         * Instance ID of reverted node.
+         * Lifecycle of original node.
+         * Lifecycle of reverted node.
+         * Hourly cost of original node.
+         * Hourly cost of reverted node.
+         * Hourly cost saved as a percentage: hourly cost of the reverted node / hourly cost of the original node * 100
+         * The Virtual Node Group's name (click the link for a listed VNG to display your custom VNG details).
+
+[placeholder for graphic when available]
+
+ *   Resource savings from reverting to lower cost in the following units:  
+    * CPU resources saved in vCPU Hours. 
+    * Memory resources saved in GiB Hours. 
+    * GPU resources saved in GPU Hours. 
 
 ## Autoscaling Activity Panel 
 
@@ -123,7 +136,7 @@ This widget displays scaling-up events, which are instances when the Ocean Autos
 
 Scaling up nodes also enables allocating more resources to specific tasks, improving performance, and reducing processing time. 
 
-The Scale Up widget shows the number of scale-up events and the number of scaled-up nodes in the selected time range. By tracking these events on the Autoscaling Activity panel, you can monitor how effectively your cluster responds to workload demands. 
+The Scale Up widget shows the number of scale-up events and scaled-up nodes in the selected time range. Tracking these events on the Autoscaling Activity panel allows you to monitor how effectively your cluster responds to workload demands. 
 
 For more information, see [Scale Up](https://docs.spot.io/ocean/features/scaling-kubernetes?id=scale-up). 
 
