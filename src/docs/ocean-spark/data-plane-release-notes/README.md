@@ -1,5 +1,17 @@
 # Cluster Release Notes
 
+## [0.4.11-74] - 2024-04-08
+
+Changelog
+
+- [0.5.12] bigdata-spark-watcher
+  - support for new Ocean controller
+  - k8s event logs collector
+  - custom configs for the telemetry sidecars
+
+- [0.4.11] bigdata-operator 
+  - custom configs for the telemetry sidecars
+
 ## [0.4.10-73] - 2024-04-03
 
 Changelog
