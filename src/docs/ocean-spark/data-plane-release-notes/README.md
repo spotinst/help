@@ -4,12 +4,25 @@
 
 Changelog
 
-- [0.4.19] bigdata-operator 
+- [0.4.19] bigdata-operator
   - use notebook service 0.4.0
 
-- [0.4.0] bigdata-notebook-service 
+- [0.4.0] bigdata-notebook-service
   - uses updated notebook config-templates endpoints
 
+## [0.4.18-75] - 2024-05-30
+
+Changelog
+
+- [0.4.18] bigdata-operator
+  - non-root telemetry image
+
+## [0.4.17-75] - 2024-05-20
+
+Changelog
+
+- [0.4.17] bigdata-operator
+  - use MapKubeAPIs to handle API deprecations when upgrading components
 
 ## [0.4.16-75] - 2024-05-14
 
@@ -18,10 +31,10 @@ Changelog
 - [0.4.16] bigdata-operator
   - upgrade to go 1.21
   - modify logic to allow removal of following charts:
-      - `bigdata-notebook-service-storage-server`
-      - `bigdata-notebook-service-storage`
+    - `bigdata-notebook-service-storage-server`
+    - `bigdata-notebook-service-storage`
 
-- [0.3.2] bigdata-notebook-service 
+- [0.3.2] bigdata-notebook-service
   - Use new backend session storage
   - max port moved down to 50100
   - use appVersion 0.82.3
@@ -29,7 +42,7 @@ Changelog
 - [0.1.3] bigdata-notebook-service-static
   - max port moved down to 50100
 
-- [0.5.15] bigdata-spark-watcher 
+- [0.5.15] bigdata-spark-watcher
   - support for new Ocean controller (rbac)
 
 - [removed] bigdata-notebook-service-storage-server
@@ -56,7 +69,7 @@ Changelog
   - k8s event logs collector
   - custom configs for the telemetry sidecars
 
-- [0.4.11] bigdata-operator 
+- [0.4.11] bigdata-operator
   - custom configs for the telemetry sidecars
 
 ## [0.4.10-73] - 2024-04-03
