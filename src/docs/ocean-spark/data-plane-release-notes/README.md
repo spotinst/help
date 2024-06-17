@@ -1,5 +1,16 @@
 # Cluster Release Notes
 
+## [0.4.19-76] - 2024-06-11
+
+Changelog
+
+- [0.4.19] bigdata-operator 
+  - use notebook service 0.4.0
+
+- [0.4.0] bigdata-notebook-service 
+  - uses updated notebook config-templates endpoints
+
+
 ## [0.4.16-75] - 2024-05-14
 
 Changelog
