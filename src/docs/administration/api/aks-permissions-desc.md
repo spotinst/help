@@ -1,5 +1,10 @@
 
-#   AKD Permissions
+#   AKS Permissions
+
+This topic describes:
+
+* AKS infrastructure permissions.
+* Azure RBAC Enabled Cluster, Kubernetes Permissions.
 
 ##   AKS Infrastructure Permissions
 
