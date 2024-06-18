@@ -296,7 +296,7 @@ If you want to allow notebook use only for a subset of config-templates, you can
 ### Set Permissions for Workspace Users
 
 If you want to give your users only access to the integrated notebook workspace feature,
-you can use this policy.
+you can use this policy:
 
 ```json
 {
@@ -351,6 +351,28 @@ If you want to allow workspace use only for a subset of config-templates, you ca
 }
 ```
 
+### Restrict read acces to config-templates content
+
+If you don't want users to see config-templates content, you can use this policy:
+
+```json
+{
+  "statements": [
+    {
+      "effect": "DENY",
+      "actions": [
+        "spark:viewAllConfigTemplates",
+        "spark:viewClusterConfigTemplates",
+        "spark:viewConfigTemplate"
+      ],
+      "resources": ["*"]
+    }
+  ]
+}
+```
+
+> **Note**: Users will still be able to list config-templates and use them for app submission or notebook creation.
+
 ## Advanced Policy Patterns
 
 If you want more complex rules and combinations between resources, you can use the `condition` field.
@@ -358,9 +380,7 @@ Learn more here: [Policy conditions](/administration/policies/create-new-policy?
 
 ## Reference
 
-All actions listed below are "edit" permissions
-
-| Actions                                                                                      | Resources bound                                 |
+| Create/Update/Delete Actions                                                                 | Resources bound                                 |
 | -------------------------------------------------------------------------------------------- | ----------------------------------------------- |
 | `spark:createApplication`                                                                    | - `sparkClusterId`<br>- `sparkConfigTemplateId` |
 | `spark:deleteApplication`                                                                    | - `sparkClusterId`                              |
@@ -372,3 +392,7 @@ All actions listed below are "edit" permissions
 | `spark:createWorkspaceProxy`<br>`spark:updateWorkspaceProxy`<br>`spark:deleteWorkspaceProxy` | - `sparkClusterId`                              |
 | `spark:updateJob`<br>`spark:updateConfig`                                                    | - `sparkClusterId`<br>- `sparkJobId`            |
 | `spark:createVirtualNodeGroup`<br>`spark:deleteVirtualNodeGroup`                             | - `sparkClusterId`                              |
+
+| Read Actions                                                                                       | Resources bound                                 |
+| -------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
+| `spark:viewAllConfigTemplates`<br>`spark:viewClusterConfigTemplates`<br>`spark:viewConfigTemplate` | - `sparkClusterId`<br>- `sparkConfigTemplateId` |
