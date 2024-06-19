@@ -191,20 +191,28 @@ Auto Healing monitors the status of each Kubernetes node by examining the condit
 
 The Autohealing widget shows the number of events for which AWS autohealing replaced an unhealthy instance with a healthy instance. By monitoring these autohealing events on the Autoscaling Activity panel, you can track how effectively Ocean Autoscaler maintains your cluster's health and resilience to failures. 
 
-###   Autoscaler Graph
+###   Autoscaling Activity Graph
 
-The Autoscaler Graph is designed to help you more intuitively understand the interaction between the infrastructure and the applications it supports. It also provides cluster activity insights at a granular 
+The Autoscaling Activity Graph is designed to help you more intuitively understand the interaction between the infrastructure and the applications it supports. It also provides cluster activity insights at a granular 
 level so you can see why the Ocean Autoscaler triggered a specific scale event within the cluster.
 
 The Autoscaler Graph displays the breakdown by lifecycle, which you can view by vCPU, Memory, or GPU, together with workload and headroom requests.
 
-You can view Autoscaler events directly on the graph for up to the last 12 hours.
+You can view Autoscaler events directly on the graph for up to 12 hours?.
 
 
 [placeholder for graphic when available]
 
 
 ###   How to View the Autoscaling Activity Graph
+
+There are 
+
+To set the zoom level:
+
+On the top-right of the screen, select to zoom by i hour / 12 hours / 7 days.
+You can adjust the zoom level further by dragging the handles on the lower graph left or right.
+
 
 
 ![autoscaler-activity-graph-1](https://github.com/spotinst/help/assets/159915991/6f68dd11-ab78-44db-9b50-7953a185801b)
