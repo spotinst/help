@@ -373,7 +373,11 @@ If you don't want users to see config-templates content, you can use this policy
 
 <img src="/ocean-spark/_media/config-template-restricted-view.png" />
 
-> **Note**: Users will still be able to list config-templates and use them for app submission or notebook creation.
+> **Note**: 
+> - Users will still be able to list config-templates and use them for app submission or notebook creation.
+> - The API endpoints to list config-templates metadata are:
+>   - `/ocean/spark/configTemplateMetadata`
+>   - `/ocean/spark/cluster/{{cluster_id}}/configTemplateMetadata`
 
 ## Advanced Policy Patterns
 
