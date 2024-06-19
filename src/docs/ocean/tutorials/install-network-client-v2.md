@@ -55,13 +55,12 @@ This tutorial describes how to install or upgrade the Ocean Network Client Daemo
 3. Install the Ocean network client, using command `helm repo install`.
 
 ```
-helm repo add spot https://charts.spot.io
-helm repo update
-helm install <NAME> spot/ocean-network-client
+helm install my-release spot/ocean-network-client \
+  --set spotinst.account=$SPOTINST_ACCOUNT \
+  --set spotinst.clusterIdentifier=$SPOTINST_CLUSTER_IDENTIFIER \
+  --set spotinst.token=$SPOTINST_TOKEN \
+  --namespace <$NAMESPACE> --set namespace=<$NAMESPACE>
 ```
-
-Replace <NAME> with a name for Ocean network client chart.
-`helm install ocean-net spot/ocean-network-client`
 
 NOTE: Configure all required chart values using the `set` command line argument or a `values.yaml` file.
 
@@ -69,13 +68,11 @@ NOTE: Configure all required chart values using the `set` command line argument 
 
 1. Discover all the available released Ocean network client versions using command `helm search`.  
 
-2. Then upgrade to a specific version or latest version from the list above using command `helm upgrade`.
+2. Then, upgrade to a specific version or the latest version from the list above using the command `helm upgrade`.
 
 ```
-helm search spot/ocean-network-client –version
-helm upgrade <NAME> spot/ocean-network-client \
---reuse-values
---version <VERSION>
+helm upgrade my-release spot/ocean-network-client \
+ --namespace <$NAMESPACE>
 ```
 
 Replace `<NAME>` and `<VERSION>` with a name for the Ocean network client chart and version that you want it to be upgraded to.
