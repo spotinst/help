@@ -10,7 +10,7 @@ The Ocean Cloud Cluster Overview dashboard is divided into the following panels:
 
 * **Autoscaling Activity panel**: The Ocean Autoscaler automatically performs scale-up and scale-down, autohealing, and reverts nodes to lower-cost nodes, spots, and commitments based on resources or availability. This panel shows a summary of these autoscaling activities.
 
-* **Autoscaler Graph panel**  -  TBD
+<!-- Add info about the Autoscaling Activity graph  -->
 
 ## Access the Ocean Cloud Cluster Overview  
 
@@ -130,7 +130,8 @@ This tab displays:
 The Autoscaling Activity panel contains the following widgets:  
 
 *   Scale Up widget. 
-*   Set of Continuous Optimization widgets. 
+*   Set of Continuous Optimization widgets.
+*   Autoscaler graph
 
 ### Scale Up 
 
@@ -188,7 +189,7 @@ Auto Healing monitors the status of each Kubernetes node by examining the condit
 
 The Autohealing widget shows the number of events for which AWS autohealing replaced an unhealthy instance with a healthy instance. By monitoring these autohealing events on the Autoscaling Activity panel, you can track how effectively Ocean Autoscaler maintains your cluster's health and resilience to failures. 
 
-##   Autoscaler Graph
+###   Autoscaler Graph
 
 The Autoscaler Graph is designed to help you more intuitively understand the interaction between the infrastructure and the applications it supports. It also provides cluster activity insights at a granular 
 level so you can see why the Ocean Autoscaler triggered a specific scale event within the cluster.
@@ -199,6 +200,14 @@ You can view Autoscaler events directly on the graph for up to the last 12 hours
 
 
 [placeholder for graphic when available]
+
+
+###   How to View the Autoscaling Activity Graph
+
+
+
+
+
 
 ##  Related Topics 
 
