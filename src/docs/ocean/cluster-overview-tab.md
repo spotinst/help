@@ -198,26 +198,52 @@ level so you can see why the Ocean Autoscaler triggered a specific scale event w
 
 The Autoscaler Graph displays the breakdown by lifecycle, which you can view by vCPU, Memory, or GPU, together with workload and headroom requests.
 
-You can view Autoscaler events directly on the graph for up to 12 hours?.
-
-
-[placeholder for graphic when available]
-
+![autoscaler-activity-graph-1](https://github.com/spotinst/help/assets/159915991/6f68dd11-ab78-44db-9b50-7953a185801b)
 
 ###   How to View the Autoscaling Activity Graph
 
-There are 
+The upper graph displays the autoscaling activity to analyze. By default, a full set of curves appears on the graph. Click an item on the legend above the graph to turn its associated curve on or off.
 
-To set the zoom level:
+These are the curves:
 
-On the top-right of the screen, select to zoom by i hour / 12 hours / 7 days.
-You can adjust the zoom level further by dragging the handles on the lower graph left or right.
+*  Lifecycle Types
+  * Spot
+  * On-demand
+  * Reserved
+  * Savings Plans
 
+*  Workload Requests
+*  Workloads with Headroom
 
+To set the time span for the graph:
 
-![autoscaler-activity-graph-1](https://github.com/spotinst/help/assets/159915991/6f68dd11-ab78-44db-9b50-7953a185801b)
+On the top-right of the screen, select to show (zoom by) 1 hour / 12 hours / 7 days.
+The lower graph lets you zoom in or out of the selected time span by dragging the handles left or right.
 
+Mouse over the upper graph to display the date/time and resource allocation percentage at a specific point. 
+Click on Cluster State Details to display more information.
 
+For Memory: 
+
+* Nodes Allocation (GiB)
+  * Total node allocation 
+  * Split according to lifecycle types
+*  Workload (GiB)
+    *  deamonSets Requested 
+    *  Pods Requested
+    *  Headroom requested
+    *  Total workload allocation percentage
+
+For vCPU:
+
+* Nodes Allocation (vCPU)
+  * Total node allocation 
+  * Split according to lifecycle types
+*  vCPU of Workload
+    *  deamonSets Requested 
+    *  Pods Requested
+    *  Headroom requested
+    *  Total workload allocation percentage
 
 
 
