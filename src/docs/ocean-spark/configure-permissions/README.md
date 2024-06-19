@@ -371,6 +371,8 @@ If you don't want users to see config-templates content, you can use this policy
 }
 ```
 
+<img src="/ocean-spark/_media/config-template-restricted-view.png" />
+
 > **Note**: Users will still be able to list config-templates and use them for app submission or notebook creation.
 
 ## Advanced Policy Patterns
