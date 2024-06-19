@@ -68,21 +68,12 @@ NOTE: Configure all required chart values using the `set` command line argument 
 
 1. Discover all the available released Ocean network client versions using command `helm search`.  
 
-2. Then, upgrade to a specific version or the latest version from the list above using the command `helm upgrade`.
+2. Then, upgrade to a specific or latest version from the list above using the command `helm upgrade`.
 
 ```
 helm upgrade my-release spot/ocean-network-client \
  --namespace <$NAMESPACE>
 ```
-
-Replace `<NAME>` and `<VERSION>` with a name for the Ocean network client chart and version that you want it to be upgraded to.
-
-```
-helm upgrade ocean-net spot/ocean-network-client \
---reuse-values
---version 1.0.9
-```  
-
 
 ## Install or Update the Ocean Network Client with Terraform
 
@@ -106,11 +97,11 @@ module "ocean-network-client" {
 
 ## Install the Ocean Network Client with Controller Init Script
 
-The Init script (init.sh) is used to install the Ocean Kubernetes controller in the cluster. Using the Init script (init.sh) option to install the Ocean Network Client can only be done when creating a new Ocean cluster or importing an new Kubernetes cluster to Ocean.  
+The Init script (init.sh) installs the Ocean Kubernetes controller in the cluster. Using the Init script (init.sh) option to install the Ocean Network Client can only be done when creating a new Ocean cluster or importing a new Kubernetes cluster to Ocean.  
 
-To enable the Ocean Network client in the new Ocean managed cluster set `ENABLE_OCEAN_NETWORK_CLIENT=true,` in the Ocean controller init.sh script.
+To enable the Ocean Network client in the new Ocean managed cluster, set `ENABLE_OCEAN_NETWORK_CLIENT=true` in the Ocean controller init.sh script.
 
-In the Create or Import cluster wizard using the Spot console, enable or check the `ENABLE_OCEAN_NETWORK_CLIENT` variable.  
+Enable or check the' ENABLE_OCEAN_NETWORK_CLIENT' variable in the Create or Import cluster wizard using the Spot console.  
 
 ```
 curl -fsSL https://spotinst-public.s3.amazonaws.com/integrations/kubernetes/cluster-controller/scripts/init.sh | \
@@ -121,5 +112,49 @@ ENABLE_CSR_APPROVAL=true \
 ENABLE_OCEAN_METRIC_EXPORTER=true \
 ENABLE_OCEAN_NETWORK_CLIENT=true
 ```
+
+##  Upgrade the Network Client After Ocean Controller Upgrade V1 to V2
+
+Select the upgrade option that fits your needs:
+
+###  Option 1: Upgrade Without Ocean Controller Secret and Configmap
+
+Use this option if you want to upgrade your network client.
+
+```
+helm upgrade my-release spot/ocean-network-client \
+  --set spotinst.account=$SPOTINST_ACCOUNT \
+  --set spotinst.clusterIdentifier=$SPOTINST_CLUSTER_IDENTIFIER \
+  --set spotinst.token=$SPOTINST_TOKEN \
+  --namespace <$NAMESPACE> --set namespace=<$NAMESPACE>
+```
+
+###  Option 2: Upgrade With Ocean Controller Secret and Configmap (Controller V2 and Network Client Installed in Same Namespace)
+
+Update the yaml with secret and config map:
+
+```
+helm upgrade my-release spot/ocean-network-client \
+  --set secretName=$SECRET_NAME \
+  --set configMapName=$CONFIG_MAP_NAME \
+  --namespace <$NAMESPACE>
+```
+
+###  Option 3: Upgrade With Ocean Controller Secret and Configmap (Controller V2 and Network Client Installed in Different Namespaces)
+
+Remove the previous agent, install and configure a new agent, and create a new namespace: 
+
+```
+helm install my-release spot/ocean-network-client \
+  --set secretName=$SECRET_NAME \
+  --set configMapName=$CONFIG_MAP_NAME \
+  --namespace <$NAMESPACE> --set namespace=<$NAMESPACE>
+```
+
+
+
+
+
+
 
 
