@@ -12,7 +12,7 @@ Ocean integration with Kubernetes clusters consists of two components, the Ocean
 
 ## Ocean Controller
 
-The [Ocean Controller](ocean/tutorials/spot-kubernetes-controller/) is a pod that resides within the Kubernetes cluster, collects metrics and events, and executes cluster operations on behalf of the Ocean SaaS platform. The events are pushed by a one-way secured link to the Ocean SaaS for business logic and capacity scaling activities.
+The [Ocean Controller](https://docs.spot.io/ocean/tutorials/ocean-controller-v2/) is a pod that resides within the Kubernetes cluster, collects metrics and events, and executes cluster operations on behalf of the Ocean SaaS platform. The events are pushed by a one-way secured link to the Ocean SaaS for business logic and capacity scaling activities.
 
 ## Ocean SaaS
 
