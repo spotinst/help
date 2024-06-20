@@ -13,6 +13,6 @@ To get started, complete the procedures described in the [Spot Ocean Amazon EKS 
 <iframe width="350" height="350" src="https://www.youtube.com/embed/ffGmMlpPsPE?start=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-## What's Next
+## Related Topics
 
 Learn more about using Terraform with Ocean in our [Terraform](tools-and-provisioning/terraform/) documentation.
