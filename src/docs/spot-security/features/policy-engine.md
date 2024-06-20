@@ -1,73 +1,127 @@
 # Policy Engine
 
-The Policy Engine feature is a powerful tool that is designed to enhance the security of your cloud infrastructure by detecting various types of access to assets. It helps identify external, internal, and public access, ensuring proper access control and minimizing potential security risks. Additionally, the Policy Engine can detect duplicates within an IAM policy or between IAM policies, streamlining policy management and maintaining policy consistency.
+The Policy Engine feature is a powerful tool that is designed to enhance the security of your cloud infrastructure by detecting various types of access to assets. It helps identify external, internal, and public access, ensuring proper access control and minimizing potential security risks. Additionally, the Policy Engine can provide input to optimize the IAM Policy attached to your assets. 
 
-## View Policy Engine
+## Policy Engine Maps 
 
-To view the policy engine for your organisation complete the following steps:
+The Policy Engine Maps includes the following features:  
 
-1. In the left main menu in the Spot console, click **Spot Security** and **Topology**.
-2. Select the **Policy Engine Map** tab.
+* Finding access 
+* Optimize policies. 
 
-## Policy Engine Maps
+## View Policy Engine 
 
-The Policy Engine Maps feature allows you to view two types of maps: an Access Map and a Duplicate Map.
+To view the policy engine for your organization, complete the following steps: 
 
-### Access Map
+1. In the left main menu in the Spot console, click **Spot Security** and **Topology**. 
+2. Select the **Policy Engine Map** tab. 
+ 
+## Create Policy Engine Maps 
 
-The Access Map provides a comprehensive scan of your IAM policies and access configurations to identify external, internal, and public access. Its goal is to ensure that your cloud assets are properly protected and accessed only by authorized entities.  
+To create a new Policy Engine Map: 
 
-<img src="/spot-security/_media/policy-engine-1.png" />
+1. In the left main menu in the Spot console, click **Spot Security** and **Topology**. 
+2. Click the **Policy Engine Map** tab. 
+3. In the top right click **Actions**, then **+ Create New Policy Engine Map**. 
+4. Select the type of map you want to create: **Finding Access** or **Optimize Policies**. 
 
-To explore the Access Map, double-click each asset to open the related policy. Double-clicking a policy displays its statements and provides policy information, such as the policy resource, policy action, and the account details.
+![policy-engine-a](https://github.com/spotinst/help/assets/106514736/c62ed9d1-2761-4f5c-b61c-7ab74171a7a2)
 
-### Duplicate Map  
+5. Select a cloud provider and the account you want to create a policy engine map for. 
 
-The Duplicate Map feature employs intelligent algorithms to identify duplicates within a single IAM policy or between IAM policies. Resolving duplicate policies helps maintain policy clarity, reduces complexity, and ensures consistent and effective access controls.
+6. The asset type and the region (and Access Type if you selected **Finding Access**) are automatically selected, and you can change them. 
+7. Click **Save Changes** and enter a name to save it. You can also mark a new policy engine map as default for the Policy Engine Map view in the console. 
 
-<img src="/spot-security/_media/policy-engine-2.png" />
+### Find Access 
 
-To explore the Duplicate Map, double-click each asset to open the related policy. Each policy may appear multiple times depending on the amount of statements that have duplicates. Double-clicking on a policy reveals all duplicate nodes. By hovering over each duplicate, you can view common elements in policy action, policy resource, and policy condition.  
+The Finding Access feature assists you in identifying access permissions and allows you to view data related to who can perform which actions on specific assets. 
 
-If you created multiple maps, you can select any of the saved maps from the dropdown menu.
+For instance, if you created a map that includes all S3 buckets associated with a particular AWS account and you want to determine which buckets a specific user can perform the "deleteobject" action on, or which AWS accounts have "deleteobject" access using an assumed role.  
 
-<img src="/spot-security/_media/policy-engine-3.png" />
+To see who can perform an action on a specific asset, you can use the access map, table, and filters. The table has five sections: 
 
-A policy engine map can be created for different cloud accounts, regions and asset types.You can go back to a previous date to view the past status, search for specific asset names using the search keyword option as well as zoom in and out using the + and - icons.
+* Users: Displays which users have access to a particular asset. 
+* Groups: Shows which groups have access to a specific asset. 
+* Asset: Indicates which other assets can access the selected asset. 
+* Accounts: Provides information on which accounts have access to the asset. 
+* Others: Highlights any SAML or public access permissions associated with the asset.   
 
-## Create Policy Engine Maps
+Each tab in the table provides detailed information on: 
 
-To create a new Policy Engine Map, complete the following steps:
+- Who (name, account, type) can perform which action (action, effect) 
+- On what asset (asset type, asset account, asset name) 
+- Can access via user role or direct policy 
 
-1. In the left main menu in the Spot console, click **Spot Security** and **Topology**.
-2. Click the **Policy Engine Map** tab.
-3. In the top right corner click **Actions**, then **+ Create New Policy Engine Map**.
-4. Select the type of map to be created: **Finding Access** or **Finding Duplicate Permission**.  
-5. In the Choose Cloud Provider field, select a cloud provider.   
-6. In the Select Account field, select the account you want to create a policy engine map for. Based on the selections, a list of assets is generated in the Asset Type and Region fields.  
-7. For the Finding Access permissions, select the Access Type as one of the following: External Account, Internal Account and Public Account.  
+![policy-engine-b](https://github.com/spotinst/help/assets/106514736/c9562f62-0394-491d-a737-f01e1863db8c)
 
-<img src="/spot-security/_media/policy-engine-4.png" />
+You can view the whole table, or you can use filters on each of the columns. To filter, click the filter icon at the top right. For example, if you want to delete an object, complete the following parameters:  
 
-8. Click **Save Changes** and save it under a specific name of your choice. You can also mark a new policy engine map as default for the Policy Engine Map view in the console.  
+* In the Who section of the filter, in the Type Field, enter **user**. 
+* In the Name field, enter a name. 
+* In the On What section of the filter, in the Asset Name field, you can see whether the user can perform the action on any asset or not.  
+* In the Can Perform section of the field, in the Action Name field, select **deleteobject**. 
 
-<img src="/spot-security/_media/policy-engine-5.png" />
+![policy-engine-c](https://github.com/spotinst/help/assets/106514736/74f90440-ee20-48ab-844f-1cffb4f5ee5e)
 
-## Manage Policy Engine Maps
+You can use the filter to refine the table data and identify the users who have the ability to perform actions such as "getobject" and more. The filters allow you to gain insights into the specific users with the desired access permissions. 
 
-You can view the complete list of the policy engine maps that have been created by completing the following steps:
+<details>
+   <summary markdown="span">View image</summary>
 
-1. In the **Topology page**, click the **Policy Engine Map** tab.
-2. In the top right corner click **Actions**, then **+ Manage Policy Engine Map List**.
+![policy-engine-d](https://github.com/spotinst/help/assets/106514736/9f53a7c3-ebc7-4568-b45f-e29070f64935)
 
-<img src="/spot-security/_media/policy-engine-6.png" />  
+</details>
 
-In this page you can:
+You can also filter the table by clicking the assets in the map. 
 
-* **Set a default map**: You can set any map as the default that opens when the page loads.
-* **Edit a map**: You can click the name of a Policy Engine Map that leads to the edit page where you can change the name of the map or remove assets.
-* **Delete a map**: You can select maps using the check box and click the **Delete Policy Engine Map** to delete any map.
+### Optimize Policies  
 
-## What’s Next?
+The Optimize Policies feature employs intelligent algorithms to identify where policies can be optimized by identifying and removing duplicates, identifying excessive permissions. Resolving the highlighted insights helps maintain policy clarity, reduce complexity, and ensure consistent and effective access controls. 
 
-View more information about all of the [events](spot-security/features/events) in your network.
+#### View the Policy Map 
+
+To use the optimized policy map, go to any policy map you created using the create page (link it to the create section). Double-click each asset to open the related policy.  
+
+#### Optimize IAM User Policies 
+
+After you create a map for the IAM User in the Create page, the map and table will be displayed.   
+
+If you created maps for multiple IAM users, double-click on the IAM users that you want to optimize and open the table view. The table view shows the recommendations for all the duplicate permissions and excessive permissions for the IAM User. 
+
+<details>
+   <summary markdown="span">View image</summary>
+
+![policy-engine-e](https://github.com/spotinst/help/assets/106514736/87b9c2dd-cefa-4d16-860f-28914e871967)
+
+</details>
+
+To get instructions on how to optimize the policy, click **View Optimized Policy**.  
+
+To prepare an additional policy when a new policy is created, you can detach all your existing policies and attach the new policy to the IAM user, which will move it towards the lowest access level. 
+
+If you created multiple maps, you can select saved maps from the drop-down menu. 
+
+<details>
+   <summary markdown="span">View image</summary>
+
+![policy-engine-g](https://github.com/spotinst/help/assets/106514736/8d15138d-2642-4704-93f2-0c066a385967) 
+
+</details>
+
+A policy engine map can be created for different cloud accounts, regions and asset types. You can go back to a previous date to view the past status, search for specific asset names using the search keyword option as well as zoom in and out using the + and - icons. 
+
+## Manage Policy Engine Maps 
+
+To view the complete list of the policy engine maps that have been created:   
+
+1. In the Topology page, click the **Policy Engine Map** tab. 
+2. In the top right corner click **Actions**, then **+ Manage Policy Engine Map** list. 
+
+![policy-engine-h](https://github.com/spotinst/help/assets/106514736/0e7e6f4c-34fe-4d40-a619-e7c70483a0e5) 
+
+In this page you can: 
+
+* **Set a default map**: You can set any map as the default that opens when the page loads. 
+* **Edit a map**: You can click the name of a Policy Engine Map that leads to the edit page where you can change the name of the map or remove assets. 
+* **Delete a map**: You can select maps using the check box and click the **Delete Policy Engine Map** to delete a map.
+
