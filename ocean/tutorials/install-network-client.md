@@ -1,4 +1,4 @@
-<summary markdown="span">
+<meta name=“robots” content=“noindex”>
   
 # Install the Ocean Network Client in the Cluster
 
@@ -155,5 +155,5 @@ ENABLE_CSR_APPROVAL=true \
 ENABLE_OCEAN_METRIC_EXPORTER=true \
 ENABLE_OCEAN_NETWORK_CLIENT=true
 ```
-</summary>
+
 
