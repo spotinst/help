@@ -61,34 +61,20 @@ The AKS cluster identity, which is created and associated with the AKS cluster, 
   
 * Microsoft.Compute/virtualMachineScaleSets/delete (Required to delete a virtual machine scale set to a load balancer backend address pools and scale down nodes in a virtual machine scale set).
   
+* Microsoft.Compute/virtualMachineScaleSets/virtualmachines/write (Required to attach AzureDisks and add a virtual machine from a virtual machine scale set to the load balancer)
+   
+* Microsoft.Network/networkInterfaces/read (Required to search internal IPs and load balancer backend address pools for virtual machines in a VMAS).
+ 	
+* Microsoft.Compute/virtualMachineScaleSets/virtualMachines/networkInterfaces/read (Required to search internal IPs and load balancer backend address pools for a virtual machine in a virtual machine scale set).
+  
+* Microsoft.Compute/virtualMachineScaleSets/virtualMachines/networkInterfaces/ipconfigurations/publicipaddresses/read (Required to find public IPs for a virtual machine in a virtual machine scale set).
+  	
+* Microsoft.Network/virtualNetworks/read, Microsoft.Network/virtualNetworks/subnets/read (Required to verify if a subnet exists for the internal load balancer in another resource group).	
 
+* Microsoft.Compute/snapshots/delete, Microsoft.Compute/snapshots/read, Microsoft.Compute/snapshots/write (Required to configure snapshots for AzureDisk).
 
-*  Required to attach AzureDisks and add a virtual machine from a virtual machine scale set to the load balancer
-   * Microsoft.Compute/virtualMachineScaleSets/virtualmachines/write	
-
-*  Required to search internal IPs and load balancer backend address pools for virtual machines in a VMAS
-   * Microsoft.Network/networkInterfaces/read	
-
-*  Required to search internal IPs and load balancer backend address pools for a virtual machine in a virtual machine scale set
-   * Microsoft.Compute/virtualMachineScaleSets/virtualMachines/networkInterfaces/read	
-
-*  Required to find public IPs for a virtual machine in a virtual machine scale set.
-   * Microsoft.Compute/virtualMachineScaleSets/virtualMachines/networkInterfaces/ipconfigurations/publicipaddresses/read	
-
-*  Required to verify if a subnet exists for the internal load balancer in another resource group
-   * Microsoft.Network/virtualNetworks/read 
-   * Microsoft.Network/virtualNetworks/subnets/read	
-
-*  Required to configure snapshots for AzureDisk
-   * Microsoft.Compute/snapshots/delete 
-   * Microsoft.Compute/snapshots/read 
-   * Microsoft.Compute/snapshots/write	
-
-*  Required to find virtual machine sizes for finding AzureDisk volume limits
-   * Microsoft.Compute/locations/vmSizes/read 
-   * Microsoft.Compute/locations/operations/read	
-
-
+* Microsoft.Compute/locations/vmSizes/read, Microsoft.Compute/locations/operations/read (Required to find virtual machine sizes for finding AzureDisk volume limits).
+   
 ###  Additional Cluster Identity Permissions
 
 When creating a cluster with specific attributes, you will need these additional permissions for the cluster identity. Since these permissions are not automatically assigned, you must add them to the cluster identity after creation.
