@@ -20,7 +20,7 @@ Ocean's SaaS layer aggregates the metrics from the Ocean Controller and builds t
 
 <img src="/ocean/_media/ocean-k8s-architecture.png" />
 
-## What's Next?
+## Related Topics
 
 - If you have not already connected your cloud provider account, connect to Spot:
   - [AWS](connect-your-cloud-provider/aws-account)
