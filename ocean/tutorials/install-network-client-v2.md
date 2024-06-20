@@ -1,13 +1,13 @@
-# Install the Ocean Network Client in the Cluster (Ocean Controller V1)
 
-This tutorial describes how to install the Ocean Network Client as a DaemonSet in your Ocean managed Kubernetes cluster. In order to measure [Network Costs](ocean/features/cost-analysis?id=network-costs) for container or Kubernetes workloads, the Ocean network client needs to run with privileged access on every node in the cluster.
+# Install the Ocean Network Client in the Cluster (Ocean Controller V2)
+
+This tutorial describes installing the Ocean Network Client as a DaemonSet in your Ocean-managed Kubernetes cluster. In order to measure [Network Costs](ocean/features/cost-analysis?id=network-costs) for container or Kubernetes workloads, the Ocean network client needs to run with privileged access on every node in the cluster.
 
 There are several options to install the Ocean Network Client listed below.  
 
-* [Install or Update with Helm](ocean/tutorials/install-network-client?id=install-or-update-the-ocean-network-client-with-helm)
-* [Install or Update with Kubectl](ocean/tutorials/install-network-client?id=install-or-update-the-ocean-network-client-with-kubectl)
-* [Install or Update with Terraform](ocean/tutorials/install-network-client?id=install-or-update-the-ocean-network-client-with-terraform)
-* [Install with Controller Init Script](ocean/tutorials/install-network-client?id=install-the-ocean-network-client-with-controller-init-script)
+* [Install or Update with Helm](ocean/tutorials/install-network-client-v2?id=install-or-update-the-ocean-network-client-with-helm)
+* [Install or Update with Terraform](ocean/tutorials/install-network-client-v2?id=install-or-update-the-ocean-network-client-with-terraform)
+* [Install with Controller Init Script](ocean/tutorials/install-network-client-v2?id=install-the-ocean-network-client-with-controller-init-script)
 
 After installing the Network Client, it may take 1-2 hours for the Network Costs column to appear in the Spot console or for the [oceanK8sClusterAggregatedDetailedCosts](https://docs.spot.io/api/#tag/Ocean-AWS/operation/oceanK8sClusterAggregatedDetailedCosts) API to show the network costs breakdown.  
 
@@ -44,24 +44,23 @@ The following are some considerations when installing the Ocean network client:
 
 ## Install or Update the Ocean Network Client with Helm  
 
-This tutorial describes how to install or upgrade the Ocean Network Client DaemonSet using Helm. Installation is only supported with Helm version 3.x (not supported with Helm 2.x). To learn more at Ocean Network Client hem chart [Ocean Network Client Helm chart](https://github.com/spotinst/charts/tree/main/charts/ocean-network-client).
+This procedure describes installing or upgrading the Ocean Network Client DaemonSet using Helm. Installation is only supported with Helm version 3.x (not supported with Helm 2.x). To learn more at Ocean Network Client hem chart [Ocean Network Client Helm chart](https://github.com/spotinst/charts/tree/main/charts/ocean-network-client).
 
 ### Install the Ocean network client for the first time with Helm 3.x
 
-1. Add the Spot Helm chart repository https://charts.spot.io using command `helm repo add`.
+1. Add the Spot Helm chart repository https://charts.spot.io using command: `helm repo add`.
 
 2. Update the local Helm chart repository cache using command `helm repo update`, so that it includes Spot repo `spot/ocean-network-client`.
 
 3. Install the Ocean network client, using command `helm repo install`.
 
 ```
-helm repo add spot https://charts.spot.io
-helm repo update
-helm install <NAME> spot/ocean-network-client
+helm install my-release spot/ocean-network-client \
+  --set spotinst.account=$SPOTINST_ACCOUNT \
+  --set spotinst.clusterIdentifier=$SPOTINST_CLUSTER_IDENTIFIER \
+  --set spotinst.token=$SPOTINST_TOKEN \
+  --namespace <$NAMESPACE> --set namespace=<$NAMESPACE>
 ```
-
-Replace <NAME> with a name for Ocean network client chart.
-`helm install ocean-net spot/ocean-network-client`
 
 >**NOTE**: Configure all required chart values using the `set` command line argument or a `values.yaml` file.
 
@@ -69,57 +68,17 @@ Replace <NAME> with a name for Ocean network client chart.
 
 1. Discover all the available released Ocean network client versions using command `helm search`.  
 
-2. Then, upgrade to a specific version or the latest version from the list above using the command `helm upgrade`.
+2. Then, upgrade to a specific or latest version from the list above using the command: `helm upgrade`.
 
 ```
-helm search spot/ocean-network-client –version
-helm upgrade <NAME> spot/ocean-network-client \
---reuse-values
---version <VERSION>
-```
-
-Replace `<NAME>` and `<VERSION>` with a name for the Ocean network client chart and version that you want it to be upgraded to.
-
-```
-helm upgrade ocean-net spot/ocean-network-client \
---reuse-values
---version 1.0.9
-```  
-
-## Install or Update the Ocean Network Client with Kubectl
-
-To install the Ocean network client or upgrade Ocean network client to latest version, run the `kubectl apply` command with publicly available Ocean network-client Kubernetes manifest (YAML template).
-
-`kubectl apply -f https://spotinst-public.s3.amazonaws.com/integrations/kubernetes/network-client/templates/network-client.yaml`
-
-To change or update the Ocean network client version edit manifest `network-client.yaml`
-image: public.ecr.aws/spotinst/spot-network-client: <VERSION>  
-
-```YAML
-serviceAccountName: ocean-network-client
-     terminationGracePeriodSeconds: 30
-     containers:
-       - name: "spotinst-ocean-network-client"
-         image: public.ecr.aws/spotinst/spot-network-client:1.0.2 #version
-         securityContext:
-           privileged: true
-           capabilities:
-             drop: ["all"]
-             add: [ "NET_ADMIN", "SYS_ADMIN"] # bpf needs SYS_ADMIN network netlink needs NET_ADMIN
-         imagePullPolicy: Always
-         resources:
-           limits:
-             cpu: 300m
-             memory: 500Mi
-           requests:
-             cpu: 10m
-             memory: 100Mi
+helm upgrade my-release spot/ocean-network-client \
+ --namespace <$NAMESPACE>
 ```
 
 ## Install or Update the Ocean Network Client with Terraform
 
 Use Terraform [Ocean Network Client module](https://registry.terraform.io/modules/spotinst/ocean-network-client/spotinst/latest) to install and manage the network client.  
-To install or update to the latest network client version using Terraform, use the example below. Set the version to the latest Ocean network client module available in Spot terraform registry.
+Use the example below to install or update to the latest network client version using Terraform. Set the version to the latest Ocean network client module available in the Spot Terraform registry.
 
 Usage example for Ocean network client module:
 
@@ -140,9 +99,9 @@ module "ocean-network-client" {
 
 The Init script (init.sh) installs the Ocean Kubernetes controller in the cluster. Using the Init script (init.sh) option to install the Ocean Network Client can only be done when creating a new Ocean cluster or importing a new Kubernetes cluster to Ocean.  
 
-To enable the Ocean Network client in the new Ocean managed cluster set `ENABLE_OCEAN_NETWORK_CLIENT=true,` in the Ocean controller init.sh script.
+To enable the Ocean Network client in the new Ocean managed cluster, set `ENABLE_OCEAN_NETWORK_CLIENT=true` in the Ocean controller init.sh script.
 
-In the Create or Import cluster wizard using the Spot console, enable or check the `ENABLE_OCEAN_NETWORK_CLIENT` variable.  
+Enable or check the' ENABLE_OCEAN_NETWORK_CLIENT' variable in the Create or Import cluster wizard using the Spot console.  
 
 ```
 curl -fsSL https://spotinst-public.s3.amazonaws.com/integrations/kubernetes/cluster-controller/scripts/init.sh | \
@@ -153,4 +112,49 @@ ENABLE_CSR_APPROVAL=true \
 ENABLE_OCEAN_METRIC_EXPORTER=true \
 ENABLE_OCEAN_NETWORK_CLIENT=true
 ```
+
+##  Upgrade the Network Client After Ocean Controller Upgrade V1 to V2
+
+Select the upgrade option that fits your needs:
+
+###  Option 1: Upgrade Without Ocean Controller Secret and Configmap
+
+Use this option if you want to upgrade your network client.
+
+```
+helm upgrade my-release spot/ocean-network-client \
+  --set spotinst.account=$SPOTINST_ACCOUNT \
+  --set spotinst.clusterIdentifier=$SPOTINST_CLUSTER_IDENTIFIER \
+  --set spotinst.token=$SPOTINST_TOKEN \
+  --namespace <$NAMESPACE> --set namespace=<$NAMESPACE>
+```
+
+###  Option 2: Upgrade With Ocean Controller Secret and Configmap (Controller V2 and Network Client Installed in Same Namespace)
+
+Update the yaml with secret and config map:
+
+```
+helm upgrade my-release spot/ocean-network-client \
+  --set secretName=$SECRET_NAME \
+  --set configMapName=$CONFIG_MAP_NAME \
+  --namespace <$NAMESPACE>
+```
+
+###  Option 3: Upgrade With Ocean Controller Secret and Configmap (Controller V2 and Network Client Installed in Different Namespaces)
+
+Remove the previous agent, install and configure a new agent, and create a new namespace: 
+
+```
+helm install my-release spot/ocean-network-client \
+  --set secretName=$SECRET_NAME \
+  --set configMapName=$CONFIG_MAP_NAME \
+  --namespace <$NAMESPACE> --set namespace=<$NAMESPACE>
+```
+
+
+
+
+
+
+
 
