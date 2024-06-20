@@ -14,8 +14,8 @@ The Policy Engine Maps includes the following features:
 To view the policy engine for your organization, complete the following steps: 
 
 1. In the left main menu in the Spot console, click **Spot Security** and **Topology**. 
-2. Select the **Policy Engine Map** tab. 
- 
+2. Select the **Policy Engine Map** tab.
+
 ## Create Policy Engine Maps 
 
 To create a new Policy Engine Map: 
@@ -80,7 +80,7 @@ The Optimize Policies feature employs intelligent algorithms to identify where p
 
 #### View the Policy Map 
 
-To use the optimized policy map, go to any policy map you created using the create page (link it to the create section). Double-click each asset to open the related policy.  
+To use the optimized policy map, go to any policy map you created in the [Create Policy Engine Maps](spot-security/features/policy-engine?id=create-policy-engine-maps) step. Double-click each asset to open the related policy.  
 
 #### Optimize IAM User Policies 
 
