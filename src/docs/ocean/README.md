@@ -2,7 +2,7 @@
 
 Ocean automates cloud infrastructure for containers. It continuously analyzes how your containers use infrastructure, automatically scaling compute resources to maximize utilization and availability, and utilizing the optimal blend of spot, reserved, and on-demand compute instances.
 
-Ocean enables you to:
+Ocean lets you focus on your workloads, not your infrastructure:
 
 - **Automate container infrastructure**: Continuously manages scaling and sizing your cluster infrastructure based on container resource needs.
 - **Understand your costs**: Provides real-time insight into infrastructure costs by services, applications, and tasks to enable showback and accountability.
@@ -16,8 +16,8 @@ If you have not yet connected Spot with your Cloud provider account, connect now
 ## Get Started With An Ocean Cluster
 
 Once you have connected your account, get started with an Ocean cluster.
-There are several ways to create an Ocean-managed cluster. 
-Select one of these methods:
+
+Select a method to create an Ocean-managed cluster: 
 
 - EKS
   - [Connect an Existing Cluster](/ocean/getting-started/eks/join-an-existing-cluster)
