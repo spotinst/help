@@ -44,11 +44,11 @@ The following are some considerations when installing the Ocean network client:
 
 ## Install or Update the Ocean Network Client with Helm  
 
-This tutorial describes how to install or upgrade the Ocean Network Client DaemonSet using Helm. Installation is only supported with Helm version 3.x (not supported with Helm 2.x). To learn more at Ocean Network Client hem chart [Ocean Network Client Helm chart](https://github.com/spotinst/charts/tree/main/charts/ocean-network-client).
+This procedure describes installing or upgrading the Ocean Network Client DaemonSet using Helm. Installation is only supported with Helm version 3.x (not supported with Helm 2.x). To learn more at Ocean Network Client hem chart [Ocean Network Client Helm chart](https://github.com/spotinst/charts/tree/main/charts/ocean-network-client).
 
 ### Install the Ocean network client for the first time with Helm 3.x
 
-1. Add the Spot Helm chart repository https://charts.spot.io using command `helm repo add`.
+1. Add the Spot Helm chart repository https://charts.spot.io using command: `helm repo add`.
 
 2. Update the local Helm chart repository cache using command `helm repo update`, so that it includes Spot repo `spot/ocean-network-client`.
 
@@ -62,13 +62,13 @@ helm install my-release spot/ocean-network-client \
   --namespace <$NAMESPACE> --set namespace=<$NAMESPACE>
 ```
 
-NOTE: Configure all required chart values using the `set` command line argument or a `values.yaml` file.
+>**NOTE**: Configure all required chart values using the `set` command line argument or a `values.yaml` file.
 
 ### Update the Ocean network client version with Helm 3.x
 
 1. Discover all the available released Ocean network client versions using command `helm search`.  
 
-2. Then, upgrade to a specific or latest version from the list above using the command `helm upgrade`.
+2. Then, upgrade to a specific or latest version from the list above using the command: `helm upgrade`.
 
 ```
 helm upgrade my-release spot/ocean-network-client \
@@ -78,7 +78,7 @@ helm upgrade my-release spot/ocean-network-client \
 ## Install or Update the Ocean Network Client with Terraform
 
 Use Terraform [Ocean Network Client module](https://registry.terraform.io/modules/spotinst/ocean-network-client/spotinst/latest) to install and manage the network client.  
-To install or update to the latest network client version using Terraform, use the example below. Set the version to the latest Ocean network client module available in Spot terraform registry.
+Use the example below to install or update to the latest network client version using Terraform. Set the version to the latest Ocean network client module available in the Spot Terraform registry.
 
 Usage example for Ocean network client module:
 
