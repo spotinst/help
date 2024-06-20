@@ -79,39 +79,27 @@ The AKS cluster identity, which is created and associated with the AKS cluster, 
 
 When creating a cluster with specific attributes, you will need these additional permissions for the cluster identity. Since these permissions are not automatically assigned, you must add them to the cluster identity after creation.
 
-*  Required if using a network security group in another resource group. Required to configure security rules for a LoadBalancer service
-   * Microsoft.Network/networkSecurityGroups/write 
-   * Microsoft.Network/networkSecurityGroups/read	
+* Microsoft.Network/networkSecurityGroups/write, Microsoft.Network/networkSecurityGroups/read (Required if using a network security group in another resource group. Required to configure security rules for a LoadBalancer service)
 
-*  Required if using a subnet in another resource group such as a custom VNET
-   * Microsoft.Network/virtualNetworks/subnets/read 
-   * Microsoft.Network/virtualNetworks/subnets/join/action	
-
-*  Required if using a subnet associated with a route table in another resource group, such as a custom VNET with a custom route table. Required to verify if a subnet already exists for the subnet in the other resource group
-   * Microsoft.Network/routeTables/routes/read 
-   * Microsoft.Network/routeTables/routes/write	
-
-*  Required if using an internal load balancer in another resource group and to verify if a subnet exists for the resource group's internal load balancer.
-   * Microsoft.Network/virtualNetworks/subnets/read	
-
-*   Required if using a private DNS zone in another resource group, such as a custom privateDNSZone
-   * Microsoft.Network/privatednszones/*	
-
-
+* Microsoft.Network/virtualNetworks/subnets/read, Microsoft.Network/virtualNetworks/subnets/join/action (Required if using a subnet in another resource group such as a custom VNET)
+   
+* Microsoft.Network/routeTables/routes/read, Microsoft.Network/routeTables/routes/write	(Required if using a subnet associated with a route table in another resource group, such as a custom VNET with a custom route table. Also required to verify if a subnet already exists for the subnet in the other resource group).
+   
+* Microsoft.Network/virtualNetworks/subnets/read (Required if using an internal load balancer in another resource group and to verify if a subnet exists for the resource group's internal load balancer).
+ 
+* Microsoft.Network/privatednszones/* (Required if using a private DNS zone in another resource group, such as a custom privateDNSZone).
+  	
 ##  Azure RBAC Enabled Cluster, Kubernetes Permissions
 
 ### Azure Kubernetes Service Contributor Role
 
 The identity creating and operating the cluster needs these permissions:
 
-* Get a managed cluster
-   * Microsoft.ContainerService/managedClusters/read	
+* Microsoft.ContainerService/managedClusters/read (Get a managed cluster).	
 
-*  Creates a new managed cluster or updates an existing one
-   * Microsoft.ContainerService/managedClusters/write
+* Microsoft.ContainerService/managedClusters/write (Creates a new managed cluster or updates an existing one).
 
-*  Create and manage a deployment
-   * Microsoft.Resources/deployments/*	
+* Microsoft.Resources/deployments/* (Create and manage a deployment).
 
 
 
