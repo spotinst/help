@@ -1079,6 +1079,9 @@ export const aliases = (() => {
     "/ocean/tools-and-integrations/openshift/openshift-v4-x/":
       "/ocean/tools-and-integrations/openshift/create-cluster-v4x",
 
+    "/ocean/tutorials/install-network-client/":
+      "/ocean/tutorials/install-network-client-v2",
+    
     "/ocean/tutorials/": "/ocean/tutorials/",
 
     "/ocean/tutorials/cost-analysis/": "/ocean/tutorials/analyze-your-costs",
