@@ -5,9 +5,9 @@ This tutorial describes installing the Ocean Network Client as a DaemonSet in yo
 
 There are several options to install the Ocean Network Client listed below.  
 
-* [Install or Update with Helm](ocean/tutorials/install-network-client?id=install-or-update-the-ocean-network-client-with-helm)
-* [Install or Update with Terraform](ocean/tutorials/install-network-client?id=install-or-update-the-ocean-network-client-with-terraform)
-* [Install with Controller Init Script](ocean/tutorials/install-network-client?id=install-the-ocean-network-client-with-controller-init-script)
+* [Install or Update with Helm](ocean/tutorials/install-network-client-v2?id=install-or-update-the-ocean-network-client-with-helm)
+* [Install or Update with Terraform](ocean/tutorials/install-network-client-v2?id=install-or-update-the-ocean-network-client-with-terraform)
+* [Install with Controller Init Script](ocean/tutorials/install-network-client-v2?id=install-the-ocean-network-client-with-controller-init-script)
 
 After installing the Network Client, it may take 1-2 hours for the Network Costs column to appear in the Spot console or for the [oceanK8sClusterAggregatedDetailedCosts](https://docs.spot.io/api/#tag/Ocean-AWS/operation/oceanK8sClusterAggregatedDetailedCosts) API to show the network costs breakdown.  
 
