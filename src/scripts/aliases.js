@@ -1083,6 +1083,8 @@ export const aliases = (() => {
 
     "/ocean/tutorials/cost-analysis/": "/ocean/tutorials/analyze-your-costs",
 
+     "/ocean/tutorials/install-network-client/": "/ocean/tutorials/install-network-client-v2",
+
     "/ocean/tutorials/create-a-cost-analysis-filter/":
       "/ocean/tutorials/create-a-cost-filter",
 
