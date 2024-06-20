@@ -1,6 +1,6 @@
 # Create a New EKS Cluster
 
-In this procedure, you complete the steps to create an Amazon EKS cluster directly from the Spot Console and an Ocean object to manage the cluster worker nodes.
+In this procedure, you will create an Amazon EKS cluster directly from the Spot Console and an Ocean object to manage the cluster worker nodes.
 
 ## Prerequisites
 
@@ -12,11 +12,11 @@ In this procedure, you complete the steps to create an Amazon EKS cluster direct
 
 ## Get Started
 
-1. In the left menu of the Spot Console, click Ocean/Cloud Clusters, and click Create Cluster.
+1. In the Spot Console's left menu, click Ocean/Cloud Clusters > Create Cluster.
 
 <img src="/ocean/_media/create-cluster.png" />
 
-2. When the Create Ocean Cluster page appears, you will need to choose a use case template. Under Create a New Cluster, click Create an EKS Cluster.
+2. When the Create Ocean Cluster page appears, you must choose a use case template. Under Create a New Cluster, click Create an EKS Cluster.
 
 <img src="/ocean/_media/create-new-eks.png" width="500" height="320" />
 
@@ -39,7 +39,7 @@ Fill in general details including Cluster Name, Region, and the Key Pair used fo
 Provision the cluster resources using a CloudFormation template.
 
 1. Use existing VPC & Subnets. Mark this box to launch CloudFormation with your existing VPC & Subnets. Leave unchecked to launch within a new VPC that CloudFormation will create for you.
-   2.Click Launch CloudFormation Stack.
+   2. Click Launch CloudFormation Stack.
 
 <img src="/ocean/_media/new-eks-step3.png" />
 
@@ -84,5 +84,7 @@ That's it! Ocean will now manage the worker nodes, optimizing cluster resource u
 If you receive the error "aws-iam-authenticator": executable file not found in \$PATH, then your kubectl is not configured for Amazon EKS. For more information, see [Configure kubectl for Amazon EKS](https://docs.aws.amazon.com/eks/latest/userguide/configure-kubectl.html).
 You can list your cluster nodes with the following command:
 `kubectl get nodes`.
+
+##   Related Topics
 
 - Learn more about [eksctl](https://github.com/spotinst/weaveworks-eksctl).

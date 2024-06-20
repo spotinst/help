@@ -126,18 +126,22 @@ This step describes how the Ocean integration starts and the installation of the
 Complete the following steps: 
 
 1. Create a Spot token (or use an existing one) and copy it to the text box. 
-2. Use either Helm (preferred option), Terraform (Ocean Controller module [ocean-controller](https://registry.terraform.io/modules/spotinst/ocean-controller/spotinst/latest)) or Kubectl to install the Ocean Kubernetes controller. 
-* **Helm**: Install the Ocean controller with Helm is preferred since it allows you to customize using command line options or using `values.yaml`. Install **Helm 3.x** and add the `spotinst` repo. Then use the `helm install` command with set command line options to install Ocean controller in separate spot-ocean namespace 
-* **Kubectl**: Run the controller `init.sh` (bash) script on a workstation with `kubectl` command-line and ensure that kube-config is set to the AKS cluster context. The script installs the controller in the kube-system namespace (default) and creates the corresponding Kubernetes components - controller deployment, secret, config-map, service account. 
-3. Click **Test Connectivity** to confirm that the Ocean Controller is functioning in the cluster. Allow approximately two minutes for the test to complete. It is successfully completed when a green OK is displayed as soon as the Ocean controller pod runs in the AKS cluster and is able to communicate with the Ocean SaaS engine.  
+
+2. To install the Ocean Kubernetes controller, use either Helm (the preferred option), Terraform (the Ocean Controller module [ocean-controller](https://registry.terraform.io/modules/spotinst/ocean-controller/spotinst/latest)), or Kubectl. 
+
+* **Helm**: Installing the Ocean controller with Helm is preferred since it allows you to customize using command-line options or `values.yaml`. Install **Helm 3.x** and add the `spotinst` repo. Then, use the `helm install` command with set command-line options to install the Ocean controller in a separate spot-ocean namespace. 
+
+* **Kubectl**: Run the controller `init.sh` (bash) script on a workstation with the `kubectl` command line and ensure that kube-config is set to the AKS cluster context. The script installs the controller in the kube-system namespace (default) and creates the corresponding Kubernetes components—controller deployment, secret, config-map, and service account. 
+
+3. Click **Test Connectivity** to confirm that the Ocean Controller is functioning in the cluster. Allow approximately two minutes for the test to complete. It is successfully completed when a green OK is displayed as soon as the Ocean Controller pod runs in the AKS cluster and can communicate with the Ocean SaaS engine.  
 
 Additional Tips:  
 
-* If the controller connectivity failed, check the token created and verify you have the right permissions. Azure custom role with required [Ocean AKS permissions [JSON]](https://github.com/yaruslavm/spot-Ocean/blob/main/Spot%20Azure%20Infra%20Permissions%20v2.json) should be applied at least 30 -60 min before you start the AKS cluster import or migration.  
-* To make changes to the controller init.sh script, download it, edit it and then execute it from the command line (bash shell). 
+* If the controller connectivity was unsuccessful, check the token created and verify you have the right permissions. Azure custom role with required [Ocean AKS permissions [JSON]](https://github.com/yaruslavm/spot-Ocean/blob/main/Spot%20Azure%20Infra%20Permissions%20v2.json) should be applied at least 30 -60 min before you start the AKS cluster import or migration.  
+* To make changes to the controller init.sh script, download it, edit it, and then execute it from the command line (bash shell). 
 * For private AKS clusters with limited or no Internet connectivity, please see [What to do About Private AKS Clusters](https://docs.spot.io/ocean/getting-started/aks/?id=what-to-do-about-aks-private-clusters).  
   *Use a proxy or VPN to add or update the spotinst Helm repo in the private cluster. You need to create the config-map manually. 
-  *For Kubectl, you cannot run the controller init script, since remote connectivity is disabled. You need to manually create the config-map and install the controller in the AKS using VPN or proxy.  
+  *For Kubectl, you cannot run the controller init script since remote connectivity is disabled. You need to manually create the config-map and install the controller in the AKS using a VPN or proxy.  
 
 When the Ocean Controller connectivity is successful, click **Next**. 
 
@@ -145,9 +149,9 @@ When the Ocean Controller connectivity is successful, click **Next**.
 
 ![ocen-aks-auto-spot-toleration-injection](https://github.com/spotinst/help/assets/159915991/7554d272-4e65-4112-8fd4-d3a54a5e994c)
 
-Microsoft Azure / AKS does not allow pods to run on Spot VMs by default. Rather, it adds a `NoSchedule` taint to all Spot nodes / node pools:`kubernetes.azure.com/scalesetpriority=spot:NoSchedule`
+Microsoft Azure / AKS does not allow pods to run on Spot VMs by default. Rather, it adds a `NoSchedule` taint to all Spot nodes/node pools:`kubernetes.azure.com/scalesetpriority=spot:NoSchedule`
 
-Spot toleration must be injected into the pod to schedule a workload on a Spot node. Otherwise, the workload will run on a regular On-demand (OD) node by default.
+Spot toleration must be injected into the pod to schedule a workload on a Spot node. Otherwise, the workload will default to a regular On-demand (OD) node.
 
 This step lets you optionally install the Spot admission controller, a k8 mutating webhook that automatically injects the spot toleration at the namespace level, enabling AKS workload pods to run on Spot VMs by default. 
 
@@ -164,13 +168,13 @@ Prerequisites:
 Information about Namespaces: 
 
 *  The Spot admission controller injects Spot toleration in pods for all namespaces, except those specifically excluded using label spot.io/inject-aks-spot-toleration=false 
-*  The Spot admission controller automatically excludes all [AKS system namespaces](https://learn.microsoft.com/en-us/azure/aks/faq#can-i-use-admission-controller-webhooks-on-aks) with control-plane label like kube-system.
+*  The Spot admission controller automatically excludes all [AKS system namespaces](https://learn.microsoft.com/en-us/azure/aks/faq#can-i-use-admission-controller-webhooks-on-aks) with control-plane labels like kube-system.
 
 >**Notes**:
 
 *  You can adjust your non-system namespaces after installation (described later). 
-*  You can install the Spot admission controller now from this wizard or install it later (after importing the cluster) from the Cluster **Actions** drop-down menu. 
-*  If your cluster does not have the Spot admission controller installed, the banner at the top of the screen displays installation instructions.
+*  You can install the Spot admission controller from this wizard or later (after importing the cluster) from the Cluster **Actions** drop-down menu. 
+*  If the Spot admission controller is not installed in your cluster, the banner at the top of the screen displays installation instructions.
 
 To Install the Spot Admission Controller:
 
@@ -205,44 +209,44 @@ for pod in $pods; do echo "Deleting pod: $pod" kubectl delete pod $pod -n <names
 
 You can view and edit the Ocean cluster configuration and the VNG Template in JSON.   
 
-You can update Ocean AKS cluster autoscaling configuration; cluster resource limits (vCPU and memory), scale down percentage, automatic headroom. 
+You can update Ocean AKS cluster autoscaling configuration, cluster resource limits (vCPU and memory), scale-down percentage, and automatic headroom. 
 
 You can modify the VNG template configuration in this JSON as well.
 
 ![connect-aks-cluster-10](https://github.com/spotinst/help/assets/106514736/d9c2d5a1-06a1-4876-9c9a-dd7a8888a488)
 
-When you finish editing the Ocean cluster configuration, click **Create**. This creates the Ocean managed AKS cluster. 
+When you finish editing the Ocean cluster configuration, click **Create**. This creates the Ocean-managed AKS cluster. 
 When you finish importing the AKS cluster to an Ocean AKS Cluster, it will appear in the Cloud Clusters list under the left Ocean menu. 
 
 The Ocean Auto-scaler cannot scale up until you create a VNG. For Ocean to start launching nodes, you need to create at least one VNG for Ocean to use.  After you close the Create Cluster wizard, the VNG tab opens to create the first VNG.  
 
 **Note**:  
 
-* This does not change existing workloads, nodes or node pools in the AKS cluster. It does not disable the auto-scaling, the cluster Auto-scaler is still enabled. It does not automatically roll the workloads to Ocean.  
-* In the Azure portal, turn on manual auto-scaling (turn off the cluster Auto-scaler) and then perform workload migration by scaling down existing node pools. 
+* This does not change the AKS cluster's existing workloads, nodes, or node pools. It does not turn off auto-scaling, but the cluster Auto-scaler is still enabled. It does not automatically roll the workloads to Ocean.  
+* In the Azure portal, turn on manual auto-scaling (turn off the cluster Auto-scaler) and perform workload migration by scaling down existing node pools. 
 
 ![connect-aks-cluster-11](https://github.com/spotinst/help/assets/106514736/9d4e13f0-3e6a-4b91-adda-914e42c31068)
 
 ### Step 2: Create a VNG (Virtual Node Group) 
 
-Create a VNG ([Virtual Node Group](https://docs.spot.io/ocean/features/vngs/?id=virtual-node-groups)) so Ocean can create node pools and launch nodes. To finish setting up your cluster you must create at least one VNG. Ocean creates node pools and launches nodes depending on the VNG configuration.   
+Create a VNG ([Virtual Node Group](https://docs.spot.io/ocean/features/vngs/?id=virtual-node-groups)) so Ocean can create node pools and launch nodes. To finish setting up your cluster, you must create at least one VNG. Ocean creates node pools and launches nodes depending on the VNG configuration.   
 
 You can import the configuration from an existing node pool in Azure or manually create a VNG. All properties are inherited from the VNG template created in Step 1.1: Create Ocean AKS Cluster.  
 
 ![connect-aks-cluster-12](https://github.com/spotinst/help/assets/106514736/ba679763-9165-48aa-9ad6-956a14a659a6)
  
-You can edit the VNG JSON configuration. Define AZs, node pool properties (max Pods, OS Type, OS Disk Type, OS Disk Size etc.), min/max node counts, auto-scaling strategy (Spot percentage, fallback to On-Demand). You can create labels, tags, taints. When you are done, click **Save** to complete the VNG creation.  
+You can edit the VNG JSON configuration. Define AZs, node pool properties (max Pods, OS Type, OS Disk Type, OS Disk Size, etc.), min/max node counts, and auto-scaling strategy (Spot percentage, fallback to On-Demand). You can create labels, tags, and taints. When you are done, click **Save** to complete the VNG creation.  
 
-Once the VNG is created, some properties like node pool properties (OS types, OS Disk type) cannot be edited. You need to delete the VNG and create a new one.  
+Once the VNG is created, some properties, such as node pool properties (OS types, OS Disk type), cannot be edited. You need to delete the VNG and create a new one.  
 
-To ensure faster workload migration to Ocean from existing unmanaged node pools with minimum down time, launch some nodes in the new VNG you just created.  
+To ensure faster workload migration to Ocean from existing unmanaged node pools with minimum downtime, launch some nodes in the new VNG you just created.  
 
 Select **VNG Actions** and **Launch nodes**. Specify how many nodes you want to launch. 
 
 You can create more VNGs to handle different workload requirements. For example:   
 
 * VNG with regular VMs – for workloads that cannot run on Spot nodes and must run on Regular (On-demand) VMs e.g. statefulSets, Spark drivers, Kafka producers.  
-* Performance VNG – for workloads that need high performance CPUs (intel v4 or v5), minimum vCPU 8 or higher or larger OS Disk size, VMs with minimum disk 4 or higher. 
+* Performance VNG—for workloads that need high-performance CPUs (Intel v4 or v5), a minimum vCPU 8 or higher or a larger OS Disk size, and VMs with a minimum disk 4 or higher. 
 * AI/ML VNG – for workloads that need GPUs, say GPU count: 2-4 and specific VM series r GPU families 
 * Windows VNG - for workloads that need Windows nodes.
 
@@ -258,16 +262,16 @@ This section describes how to start migrating workloads to Ocean.
 
 ![connect-aks-cluster-14](https://github.com/spotinst/help/assets/106514736/2d5b9386-453e-4ab4-994b-049832c9bd11)
 
-2. Set Scale method to Manual to enable manual scaling. This turns off auto-scaling using the Kubernetes cluster Auto-scaler. 
+2. Set the Scale method to Manual to enable manual scaling. This turns off auto-scaling using the Kubernetes cluster Auto-scaler. 
 
 ![connect-aks-cluster-15](https://github.com/spotinst/help/assets/106514736/d3d6589f-b304-46d5-a54f-00e277388de4)
 
 3. Gradually reduce the user node pool node count to zero (the default system  node pool can only be scaled down to one node as Ocean does not manage the Kubernetes control plane) in order to scale down unmanaged node pools. 
 
-To reduce down-time for critical workloads while migrating, you can:  
+To reduce downtime for critical workloads while migrating, you can:  
 
 * launch some nodes in the VNGs you previously created. Select **VNG Actions** and in the dropdown menu, select **Launch nodes**. Specify the number of nodes to launch (3-5 nodes).  
-* or increase VNG minimum node count to approximately 5 nodes.  
+* or increase the VNG minimum node count to approximately 5 nodes.  
 * or add VNG headroom (manual) for approximately 16 vCPUs and memory 32 GiB.  
 
 For large clusters with more than 20 nodes, scale down nodes in batches, approximately 2-5 nodes at a time. This reduces workload downtime and provides sufficient time for Ocean to scale up nodes. 
@@ -287,7 +291,7 @@ spec:
     effect: "NoSchedule"
 ```
 
-## What’s Next?
+## Related Topics
 
 - Learn how to [Connect an AKS Private Cluster](ocean/tutorials/connect-an-aks-private-cluster).
 - Learn more about Ocean’s [scaling](ocean/features/scaling-kubernetes) and [headroom](ocean/features/headroom) features.
