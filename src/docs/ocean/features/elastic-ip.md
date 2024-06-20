@@ -1,6 +1,6 @@
 # Elastic IP
 
-Platform relevance: <font color="#FC01CC">AWS Kubernetes</font> 
+Platform relevance: <font color="#FC01CC">AWS Kubernetes</font>  
 
 Typically the ingress and egress traffic management for containerized applications is defined and configured by mechanisms provided by the container orchestration system such as Kubernetes services and ingress controllers. However, some cases require traffic routed through the infrastructure, meaning the actual instances underneath the container cluster nodes. For example, there are cases when custom business logic must be applied on the ingress traffic before it reaches the application, and regular TCP load balancers cannot process that traffic.
 
