@@ -35,60 +35,33 @@ The AKS cluster identity, which is created and associated with the AKS cluster, 
 
 * Microsoft.ContainerService/managedClusters/* (Required for creating users and operating the cluster)
   	
+* Microsoft.Network/loadBalancers/delete, Microsoft.Network/loadBalancers/read, Microsoft.Network/loadBalancers/write (Required to configure the load balancer for a LoadBalancer service).
+  
+* Microsoft.Network/publicIPAddresses/delete, Microsoft.Network/publicIPAddresses/read, Microsoft.Network/publicIPAddresses/write (Required to find and configure public IPs for a LoadBalancer service).
+	
+* Microsoft.Network/publicIPAddresses/join/action (Required for configuring public IPs for a LoadBalancer service).
+   	
+* Microsoft.Network/networkSecurityGroups/read, Microsoft.Network/networkSecurityGroups/write (Required to create or delete security rules for a LoadBalancer service).
+  	
+* Microsoft.Compute/disks/delete, Microsoft.Compute/disks/read, Microsoft.Compute/disks/write, Microsoft.Compute/locations/DiskOperations/read (Required to configure AzureDisks)	
 
- * Microsoft.Network/loadBalancers/delete, Microsoft.Network/loadBalancers/read, Microsoft.Network/loadBalancers/write (Required to configure the load balancer for a LoadBalancer service).
+* Microsoft.Storage/storageAccounts/delete. Microsoft.Storage/storageAccounts/listKeys/action, Microsoft.Storage/storageAccounts/read, Microsoft.Storage/storageAccounts/write (Required to configure storage accounts for AzureFile or AzureDisk)
+ 
+* Microsoft.Network/routeTables/read , Microsoft.Network/routeTables/routes/delete, Microsoft.Network/routeTables/routes/read, Microsoft.Network/routeTables/routes/write, Microsoft.Network/routeTables/write (Required to configure route tables and routes for nodes).
+
+* Microsoft.Compute/virtualMachines/read (Required to find information for virtual machines in a VMAS, such as zones, fault domain, size, and data disks).
+   
+* Microsoft.Compute/virtualMachines/write (Required to attach AzureDisks to a virtual machine in a VMAS).
+  
+* Microsoft.Compute/virtualMachineScaleSets/* (Required to find information for virtual machines in a virtual machine scale set, such as zones, fault domain, size, and data disks and operate them).
+   
+* Microsoft.Network/networkInterfaces/write (Required to add a virtual machine in a VMAS to a load balancer backend address pool).
+ 
+* Microsoft.Compute/virtualMachineScaleSets/write (Required to add a virtual machine scale set to a load balancer backend address pools and scale out nodes in a virtual machine scale set).
+  
+* Microsoft.Compute/virtualMachineScaleSets/delete (Required to delete a virtual machine scale set to a load balancer backend address pools and scale down nodes in a virtual machine scale set).
   
 
- * Microsoft.Network/publicIPAddresses/delete, Microsoft.Network/publicIPAddresses/read, Microsoft.Network/publicIPAddresses/write (Required to find and configure public IPs for a LoadBalancer service).
-	
-
-
-  
-
-*  Required for configuring public IPs for a LoadBalancer service
-   * Microsoft.Network/publicIPAddresses/join/action	
-
-*  Required to create or delete security rules for a LoadBalancer service
-   * Microsoft.Network/networkSecurityGroups/read 
-   * Microsoft.Network/networkSecurityGroups/write	
-
-* Required to configure AzureDisks
-  * Microsoft.Compute/disks/delete
-  * Microsoft.Compute/disks/read
-  * Microsoft.Compute/disks/write
-  * Microsoft.Compute/locations/DiskOperations/read	
-
-* Required to configure storage accounts for AzureFile or AzureDisk
-  * Microsoft.Storage/storageAccounts/delete 
-  * Microsoft.Storage/storageAccounts/listKeys/action 
-  * Microsoft.Storage/storageAccounts/read 
-  * Microsoft.Storage/storageAccounts/write 
-
-
-*  Required to configure route tables and routes for nodes
-   * Microsoft.Network/routeTables/read 
-   * Microsoft.Network/routeTables/routes/delete 
-   * Microsoft.Network/routeTables/routes/read 
-   * Microsoft.Network/routeTables/routes/write 
-   * Microsoft.Network/routeTables/write	
-
-*  Required to find information for virtual machines in a VMAS, such as zones, fault domain, size, and data disks
-   * Microsoft.Compute/virtualMachines/read	
-
-*  Required to attach AzureDisks to a virtual machine in a VMAS
-   * Microsoft.Compute/virtualMachines/write	
-
-*  Required to find information for virtual machines in a virtual machine scale set, such as zones, fault domain, size, and data disks and operate them
-   * Microsoft.Compute/virtualMachineScaleSets/*
-	
-*  Required to add a virtual machine in a VMAS to a load balancer backend address pool
-   * Microsoft.Network/networkInterfaces/write	
-
-*  Required to add a virtual machine scale set to a load balancer backend address pools and scale out nodes in a virtual machine scale set
-   * Microsoft.Compute/virtualMachineScaleSets/write	
-
-* Required to delete a virtual machine scale set to a load balancer backend address pools and scale down nodes in a virtual machine scale set
-   * Microsoft.Compute/virtualMachineScaleSets/delete	
 
 *  Required to attach AzureDisks and add a virtual machine from a virtual machine scale set to the load balancer
    * Microsoft.Compute/virtualMachineScaleSets/virtualmachines/write	
