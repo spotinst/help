@@ -1,7 +1,7 @@
-# Ocean Tutorials
+# Ocean Overview Dashboard
 
-This section includes procedures and other information you need to automate your container infrastructure management and reduce complexity, time, and effort managing container infrastructure in the cloud.
+This topic includes these dashboards:
 
-## What's Next?
+*  Ocean Overview Dashboard
+*  Ocean Cloud Cluster Overview Dashboard
 
-To learn more about using Ocean, choose a tutorial in the sidebar on the left.
