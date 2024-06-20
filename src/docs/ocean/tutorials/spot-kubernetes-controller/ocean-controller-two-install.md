@@ -62,7 +62,7 @@ kubectl scale deployment --replicas=0 -n $EXISTING_NAMESPACE spotinst-kubernetes
 
 ### Step 4: Install Optional Components
 
-Optionally install [Prometheus Exporter](https://docs.spot.io/ocean/tools-and-integrations/prometheus/) and/or the [Network Client](https://docs.spot.io/ocean/tutorials/install-network-client?id=install-the-ocean-network-client-in-the-cluster). 
+Optionally install [Prometheus Exporter](https://docs.spot.io/ocean/tools-and-integrations/prometheus/) and/or the [Network Client (Controller V2)](https://docs.spot.io/ocean/tutorials/install-network-client-v2). 
 
 >**Note**: If Ocean Prometheus Exporter and/or the Network Client is/are already installed on the cluster, reinstall them as part of the Ocean Controller Version 2 installation. 
 
@@ -78,9 +78,9 @@ helm upgrade --install --wait spot-ocean-metric-exporter spot/ocean-metric-expor
 --set oceanController.secretName=ocean-controller-ocean-kubernetes-controller
 ```
 
-To install the Ocean Network Client: 
+To install the Ocean Network Client, see [Network Client (Controller V2)](https://docs.spot.io/ocean/tutorials/install-network-client-v2).
 
-*   Run the following commands: 
+<!-- *   Run the following commands: 
 
 ```bash
 helm upgrade --install --wait spotinst-ocean-network-client spot/ocean-network-client \
@@ -89,6 +89,7 @@ helm upgrade --install --wait spotinst-ocean-network-client spot/ocean-network-c
 --set oceanController.configMapName=ocean-controller-ocean-kubernetes-controller \
 --set oceanController.secretName=ocean-controller-ocean-kubernetes-controller
 ```
+-->
 
 ## Install via Helm
 
@@ -134,7 +135,9 @@ INCLUDE_METRIC_SERVER=false \
 bash
 ```
 
->**Note**: If the [Ocean Prometheus Exporter](https://docs.spot.io/ocean/tools-and-integrations/prometheus/) or [Ocean Network Client](https://docs.spot.io/ocean/tutorials/install-network-client?id=install-the-ocean-network-client-in-the-cluster) is already installed in your cluster, reinstall them by setting the following parameter (to integrate with the new controller): `ENABLE_OCEAN_METRIC_EXPORTER = true` OR `ENABLE_OCEAN_NETWORK_CLIENT = true`.  
+>**Note**: If the [Ocean Prometheus Exporter](https://docs.spot.io/ocean/tools-and-integrations/prometheus/) is already installed in your cluster, reinstall by setting the following parameter (to integrate with the new controller): `ENABLE_OCEAN_METRIC_EXPORTER = true`.
+> If the Ocean Network Client is already installed in your cluster:
+> Upgrade using [Ocean Network Client (Controller V2)](https://docs.spot.io/ocean/tutorials/install-network-client-v2), and then set the parameter (to integrate with the new controller): `ENABLE_OCEAN_NETWORK_CLIENT = true`.  
 
 >**Note**: (Optional) To enable the Right Sizing feature, install the Metrics Server by setting the following parameter: `INCLUDE_METRIC_SERVER = true`.  
 
