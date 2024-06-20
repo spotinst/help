@@ -137,11 +137,11 @@ bash
 
 >**Note**: If the [Ocean Prometheus Exporter](https://docs.spot.io/ocean/tools-and-integrations/prometheus/) is already installed in your cluster, reinstall by setting the following parameter (to integrate with the new controller): `ENABLE_OCEAN_METRIC_EXPORTER = true`.
 > If the Ocean Network Client is already installed in your cluster:
-> Upgrade using [Ocean Network Client (Controller V2)](https://docs.spot.io/ocean/tutorials/install-network-client-v2), and then set the parameter (to integrate with the new controller): `ENABLE_OCEAN_NETWORK_CLIENT = true`.  
+> Reinstall using [Ocean Network Client (Controller V2)](https://docs.spot.io/ocean/tutorials/install-network-client-v2), and then set the parameter (to integrate with the new controller): `ENABLE_OCEAN_NETWORK_CLIENT = true`.  
 
 >**Note**: (Optional) To enable the Right Sizing feature, install the Metrics Server by setting the following parameter: `INCLUDE_METRIC_SERVER = true`.  
 
-## Install via Terraform  
+## Install via Terraform    
 
 Spot provides a [Terraform Module](https://registry.terraform.io/modules/spotinst/kubernetes-controller/ocean/latest) to install and manage the Ocean Controller. 
 
