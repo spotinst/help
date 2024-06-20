@@ -14,53 +14,36 @@ When creating a cluster, AKS generates or modifies the resources it needs (like 
 
 The identity that creates and operates the cluster needs these permissions:
 
-*  Required to read disk encryption set ID
-	* Microsoft.Compute/diskEncryptionSets/read
+* Microsoft.Compute/diskEncryptionSets/read (Required to read disk encryption set ID)
 
-*  Required for updating proximity placement groups
-    * Microsoft.Compute/proximityPlacementGroups/write	
+* Microsoft.Compute/proximityPlacementGroups/write (Required for updating proximity placement groups)	
+  
+* Microsoft.Network/applicationGateways/read, Microsoft.Network/applicationGateways/write, Microsoft.Network/virtualNetworks/subnets/join/action (Required to configure application gateways and join the subnet)
+ 	
+* Microsoft.Network/virtualNetworks/subnets/join/action	(Required to configure the Network Security Group for the subnet when using a custom VNET)
 
-*  Required to configure application gateways and join the subnet
-   * Microsoft.Network/applicationGateways/read 
-   * Microsoft.Network/applicationGateways/write 
-   * Microsoft.Network/virtualNetworks/subnets/join/action	
+* Microsoft.Network/publicIPAddresses/join/action, Microsoft.Network/publicIPPrefixes/join/action (Required to configure the outbound public IPs on the Standard Load Balancer).	
 
-
-*  Required to configure the Network Security Group for the subnet when using a custom VNET
-    * Microsoft.Network/virtualNetworks/subnets/join/action	
-
-*  Required to configure the outbound public IPs on the Standard Load Balancer
-   * Microsoft.Network/publicIPAddresses/join/action 
-   * Microsoft.Network/publicIPPrefixes/join/action	
-
-*  Required to create and update Log Analytics workspaces and Azure monitoring for containers
-   * Microsoft.OperationalInsights/workspaces/sharedkeys/read 
-   * Microsoft.OperationalInsights/workspaces/read 
-   * Microsoft.OperationsManagement/solutions/write 
-   * Microsoft.OperationsManagement/solutions/read 
-   * Microsoft.ManagedIdentity/userAssignedIdentities/assign/action	
-
-*  Required to configure the IP-based Load Balancer Backend Pools
-   * Microsoft.Network/virtualNetworks/joinLoadBalancer/action	
-
+* Microsoft.OperationalInsights/workspaces/sharedkeys/read, Microsoft.OperationalInsights/workspaces/read, Microsoft.OperationsManagement/solutions/write, Microsoft.OperationsManagement/solutions/read, Microsoft.ManagedIdentity/userAssignedIdentities/assign/action (Required to create and update Log Analytics workspaces and Azure monitoring for containers).
+ 	
+* Microsoft.Network/virtualNetworks/joinLoadBalancer/action (Required to configure the IP-based Load Balancer Backend Pools)
+   
 
 ###  AKS Cluster Identity Permissions
 
 The AKS cluster identity, which is created and associated with the AKS cluster, needs these permissions: 
 
-*  Required for creating users and operating the cluster
-   * Microsoft.ContainerService/managedClusters/* 	
+* Microsoft.ContainerService/managedClusters/* (Required for creating users and operating the cluster)
+  	
 
-*  Required to configure the load balancer for a LoadBalancer service
-   * Microsoft.Network/loadBalancers/delete 
-   * Microsoft.Network/loadBalancers/read 
-   * Microsoft.Network/loadBalancers/write	
+ * Microsoft.Network/loadBalancers/delete, Microsoft.Network/loadBalancers/read, Microsoft.Network/loadBalancers/write (Required to configure the load balancer for a LoadBalancer service).
+  
 
-*  Required to find and configure public IPs for a LoadBalancer service
-   * Microsoft.Network/publicIPAddresses/delete 
-   * Microsoft.Network/publicIPAddresses/read 
-   * Microsoft.Network/publicIPAddresses/write
+ * Microsoft.Network/publicIPAddresses/delete, Microsoft.Network/publicIPAddresses/read, Microsoft.Network/publicIPAddresses/write (Required to find and configure public IPs for a LoadBalancer service).
 	
+
+
+  
 
 *  Required for configuring public IPs for a LoadBalancer service
    * Microsoft.Network/publicIPAddresses/join/action	
