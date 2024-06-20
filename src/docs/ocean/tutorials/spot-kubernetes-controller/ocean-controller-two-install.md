@@ -141,7 +141,7 @@ bash
 
 >**Note**: (Optional) To enable the Right Sizing feature, install the Metrics Server by setting the following parameter: `INCLUDE_METRIC_SERVER = true`.  
 
-## Install via Terraform  
+## Install via Terraform    
 
 Spot provides a [Terraform Module](https://registry.terraform.io/modules/spotinst/kubernetes-controller/ocean/latest) to install and manage the Ocean Controller. 
 
