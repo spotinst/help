@@ -37,7 +37,7 @@ Refer to the following documentation to manage Microsoft Azure Native configurat
 
 ## Import Cluster  
 
-When all prerequisites are completed, you are ready to import an AKS cluster to Ocean. The instructions below describe the steps to import an existing AKS cluster to Ocean using the Create Cluster wizard in the Spot console. 
+You can import an AKS cluster to Ocean when all prerequisites are completed. The instructions below describe the steps to import an existing AKS cluster to Ocean using the Create Cluster wizard in the Spot console. 
 
 You can perform similar steps to import an AKS cluster to Ocean using the Ocean AKS API using [oceanAKSClusterImport](https://docs.spot.io/api/#tag/Ocean-AKS/operation/oceanAKSClusterImport) or Terraform providers for Ocean AKS cluster [ocean-aks-np-k8s](https://registry.terraform.io/modules/spotinst/ocean-aks-np-k8s/spotinst/latest), Ocean AKS VNG [ocean_aks_np_virtual_node_group](https://registry.terraform.io/providers/spotinst/spotinst/latest/docs/resources/ocean_aks_np_virtual_node_group).  
 
@@ -63,7 +63,7 @@ To import the AKS cluster, follow the steps in the Create Ocean Cluster Wizard
 
 ### Step 1.1: Select AKS Cluster
 
-Before initiating the import process, make sure that Ocean has the necessary permissions to create and update node pools for autoscaling. Verify your IAM permissions at both the subscription and resource group levels. Specifically, confirm that you have the required permissions for the Ocean AKS product.
+Before initiating the import process, ensure Ocean has the necessary permissions to create and update node pools for autoscaling. Verify your IAM permissions at both the subscription and resource group levels. Specifically, confirm that you have the required permissions for the Ocean AKS product.
 
 1. In the Create Ocean Cluster wizard, select your Azure resource group from the **Resource Group** drop-down menu. 
 2. Select your cluster name from the **AKS Cluster Name** drop-down menu.
@@ -74,7 +74,7 @@ Before initiating the import process, make sure that Ocean has the necessary per
 
 3. Click **Test Cluster Permissions** and wait for the test to be completed. 
 
-View this sample of [AKS permissions](https://docs.spot.io/administration/api/spot-policy-aks-azure).
+View this sample of [AKS permissions](https://docs.spot.io/administration/api/spot-policy-aks-azure) and the [description of the AKS Permissions](https://docs.spot.io/administration/api/aks-permissions-desc).
 
 >**Important:** If you can't complete Step 1.1 due to **Missing Permissions**, refer to the following:
 
