@@ -42,5 +42,6 @@
     - [Spot Policy in AWS](administration/api/spot-policy-in-aws)
     - [Spot Policy in Azure for Elastigroup](administration/api/spot-policy-in-azure)
     - [Spot Policy in Azure for AKS](administration/api/spot-policy-aks-azure)
+      - [Azure AKS Permissions Description](administration/api/aks-permissions-desc)
     - [Spot Policy in GCP](administration/api/spot-policy-in-gcp)
     - [Permit List IPs](administration/api/whitelist-ips)
