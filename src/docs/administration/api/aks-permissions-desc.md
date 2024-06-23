@@ -71,7 +71,7 @@ The AKS cluster identity, which is created and associated with the AKS cluster, 
   * (These permissions are required to attach AzureDisks to a virtual machine in a VMAS).
   
 * Microsoft.Compute/virtualMachineScaleSets/*
-  * (These permissions are required to find information for virtual machines in a virtual machine scale set, such as zones, fault domain, size, and data disks and operate them).
+  * (These permissions are required to find information for virtual machines in a virtual machine scales set, such as zones, fault domain, size, and data disks, and operate them).
    
 * Microsoft.Network/networkInterfaces/write
   * (These permissions are required to add a virtual machine in a VMAS to a load balancer backend address pool).
@@ -105,7 +105,7 @@ The AKS cluster identity, which is created and associated with the AKS cluster, 
    
 ###  Additional Cluster Identity Permissions
 
-When creating a cluster with specific attributes, you will need these additional permissions for the cluster identity. Since these permissions are not automatically assigned, you must add them to the cluster identity after creation.
+When creating a cluster with specific attributes, you need these additional permissions for the cluster identity. Since these permissions are not automatically assigned, you must add them to the cluster identity after creation.
 
 * Microsoft.Network/networkSecurityGroups/write, Microsoft.Network/networkSecurityGroups/read
   * (These permissions are required if using a network security group in another resource group. These permissions are required to configure security rules for a LoadBalancer service)
