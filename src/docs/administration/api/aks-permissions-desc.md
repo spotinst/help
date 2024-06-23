@@ -114,12 +114,13 @@ When creating a cluster with specific attributes, you need these additional perm
   * (These permissions are required if using a subnet in another resource group such as a custom VNET)
    
 * Microsoft.Network/routeTables/routes/read, Microsoft.Network/routeTables/routes/write
-  * (These permissions are required if using a subnet associated with a route table in another resource group, such as a custom VNET with a custom route table. Also, These permissions are required to verify if a subnet already exists for the subnet in the other resource group).
+  * (These permissions are required if using a subnet associated with a route table in another resource group, such as a custom VNET with a custom route table. Also, These permissions are required to verify if a subnet exists for the subnet in the other resource group).
    
 * Microsoft.Network/virtualNetworks/subnets/read
   * (These permissions are required if using an internal load balancer in another resource group and to verify if a subnet exists for the resource group's internal load balancer).
  
-* Microsoft.Network/privatednszones/* (These permissions are required if using a private DNS zone in another resource group, such as a custom privateDNSZone).
+* Microsoft.Network/privatednszones/*
+  * (These permissions are required if using a private DNS zone in another resource group, such as a custom privateDNSZone).
   	
 ##  Azure RBAC Enabled Cluster, Kubernetes Permissions
 
