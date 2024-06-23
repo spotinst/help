@@ -48,7 +48,7 @@ You can perform similar steps to import an AKS cluster to Ocean using the Ocean 
     * Step 1.4 Automatic Spot Tolerance Injection (optional)
     * Step 1.5: Review and Configure 
 * Step 2: Create a VNG (Virtual Node Group) 
-* Step 3: Migrate Workloads to Ocean from the Azure Portal
+* Step 3: Migrate Workloads to Ocean from the Azure Portal 
 
 ### Step 1 – Use the Create Ocean Cluster Wizard to import an AKS cluster  
 
