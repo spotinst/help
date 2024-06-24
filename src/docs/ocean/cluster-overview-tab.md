@@ -1,6 +1,6 @@
 # Ocean AWS K8s Cloud Cluster Overview Dashboard 
 
-The Cloud Cluster Overview dashboard provides enhanced functionality to analyze the Ocean Autoscaler actions with high granularity and gain deeper insights into its behavior. This topic delves into the various components and sections of this dashboard, offering a detailed exploration of its capabilities. 
+The Cloud Cluster Overview dashboard provides enhanced functionality to analyze the Ocean Autoscaler actions with high granularity and gain deeper insights into its behavior. This topic delves into this dashboard's various components and sections, offering a detailed exploration of its capabilities. 
 
 Ocean continuously analyzes the utilization of your nodes in the cloud infrastructure. It automatically scales compute resources to optimize utilization and availability. It achieves this by intelligently combining Spot, Reserved, and On-Demand compute instances. 
 
