@@ -15,20 +15,23 @@ This procedure describes using the Spot Console to connect an existing AKS c
 
 ## What to do About AKS Private Clusters
 
-Ocean supports the management and optimization of AKS private clusters. 
-Ocean supports any AKS private cluster configuration, provided the Ocean Controller can establish outbound communication with the Spot SaaS control plane.  
- 
-The diagram below shows the outbound communication connection for AKS private clusters. The Spot SaaS environment shown on the left is hosted in the public cloud domain and requires internet connectivity for access. The representation of the customer’s AKS environment and the components we access to operate the AKS clusters is shown on the right. In this example, the accessed component is the Spot Ocean Controller.  
+Ocean supports:
 
-![aks-rpivate-clusters-2](https://github.com/spotinst/help/assets/159915991/a8e51268-2c82-401c-922e-badfa88b1bf9)
+* Management and optimization of AKS private clusters. 
+* Any AKS private cluster configuration, provided the Ocean Controller can establish outbound communication with the Spot SaaS control plane.  
+ 
+This diagram shows the outbound communication connection for AKS private clusters. The Spot SaaS environment on the right is hosted in the public cloud domain and requires internet connectivity for access. 
+Your AKS environment and the components we access to operate the AKS clusters are on the left. In this example, we access the Spot Ocean Controller.  
+
+![AKS-PRIVATE_CLUSTER-1](https://github.com/spotinst/help/assets/159915991/6f9107f4-f6a5-469a-a55b-bde1543cb165)
 
 The Ocean Controller is an AKS deployment that resides in the cluster and communicates with the Spot SaaS environment to trigger scale up and scale down.  
 
-The Ocean Controller needs an outbound connection to Spot’s public IP address. If the Ocean Controller fails to report to SaaS, the scaling and management of the cluster will not function correctly. 
+The Ocean Controller needs an outbound connection to Spot’s public IP address. If the Ocean Controller fails to report to SaaS, the cluster's scaling and management will not function correctly. 
 
-To enable the outbound connection, you must configure the internal routing, firewall rules, and/or proxy according to the existing security methods in your environment. 
+To enable the outbound connection, you must configure the internal routing, firewall rules, and/or proxy according to your environment's existing security methods. 
 
-Refer to the following documentation to manage Microsoft Azure Native configurations: 
+Refer to the Microsoft documentation to learn about Microsoft Azure Native configurations: 
 
 * [Create, change, or delete a route table](https://learn.microsoft.com/en-us/azure/virtual-network/manage-route-table) 
 * [Customize cluster egress with a user-defined routing table in Azure Kubernetes Service (AKS)](https://learn.microsoft.com/en-us/azure/aks/egress-udr)
