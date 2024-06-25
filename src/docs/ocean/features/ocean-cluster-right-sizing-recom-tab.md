@@ -27,7 +27,10 @@ This list displays:
 *  Your right-sizing recommendations per workload, and it lets you drill down to view your right-sizing recommendations per container. 
 *  Recommendations for vCPU and memory right sizing per deployment. Recommended increases are shown with a green up arrow, and recommended decreases are shown with a red Down arrow.  
 *  Optimized [Right Sizing rules]() that are attached to specific workloads.
-*  Potential monthly max. savings if you adopt these recommendations.  
+*  Potential monthly max. savings if you adopt these recommendations.
+*  Rules/Status: The name of the [right-sizing rule—will have a link to rules below]. Hover over the rule name to see the workload status (pending or activated).
+
+>**Notes**: If a workload is attached to a rule, no vCPU / memory recommendations or Potential monthly max. savings are displayed for the workload.
 
 To view a list of your potential savings and recommendations per container: 
 
