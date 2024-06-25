@@ -54,6 +54,7 @@
     - [GCP Load Balancers: Backend Services](elastigroup/features/gcp/gcp-load-balancers-backend-services)
     - [Scaling Policies for GCP Elastigroup](elastigroup/features/gcp/scaling-policies-for-gcp-elastigroup)
     - [Shutdown Scripts](elastigroup/features/gcp/shutdown-scripts)
+    - [On-demand & Spot VMs](elastigroup/features-azure/od-spotvm)
   - [Tutorials - AWS](elastigroup/tutorials/)
     - [Get to Know Elastigroup](elastigroup/tutorials/elastigroup-actions-menu/)
       - [Elastigroup Dashboard](elastigroup/tutorials/elastigroup-actions-menu/elastigroup-dashboard)
