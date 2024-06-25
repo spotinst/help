@@ -2,6 +2,9 @@
 
 ## Features and Enhancements
 
+* **SEC-004: June 25th, 2024** Spot Security now supports automatic remediation of misconfigurations. This lets you fix detected risks with a single click. After remediation, you can view the logs and roll back changes to resolve unforeseen issues. In addition, role-based access control (RBAC) lets admins control who can do these remediations. This way, only authorized users can make changes to the security posture.
+[Learn more...](spot-security/features/analyze-risks/remediate)
+
 * **SEC-003: June 20th, 2024** Spot Security has launched an enhanced version of the IAM Entitlement Analyzer. You can now run simple queries to determine who can perform specific actions on various assets. Additionally, it helps optimize policies by identifying duplicate and excessive privileges.
 [Learn more...](spot-security/features/policy-engine)
 
