@@ -13,7 +13,6 @@ You can remediate the risks using:
 
 1. In the left main menu, click **Spot Security** > **Administration**.
 2. Click the **Auto Remediation** tab and click <img src="https://github.com/spotinst/help/assets/167069628/d5813c33-269c-4ee3-9cc3-cf66997bbc1e" height="14" /> to enable auto remediation. Only users with <i>Organization Admin</i> or <i>Spot Connect Full Access</i> can enable auto remediation.
-
    <details>
      <summary markdown="span">View image</summary>
    
@@ -58,7 +57,6 @@ You can remediate the risks using:
 
 5. Go to **Spot Security** > **Administration** > **Auto Remediation**.
 6. Turn on **Activate** for the rules you want to use auto remediation for.
-
    <details>
      <summary markdown="span">View image</summary>
    
@@ -71,7 +69,6 @@ You can remediate the risks using:
 
 1. Go to the Risk Analysis Page and sort the list by the auto remediation column or filter on <i>auto remediation: eligible</i>.
 2. Click on the failed assets link for a security rule that is eligible.
-   
    <details>
      <summary markdown="span">View image</summary>
    
@@ -121,23 +118,20 @@ Select **Show Failed Execution** to see which auto remediation actions failed. Y
 You can get to the manual Remediation page from:
 
 * **Security Dashboard**: click **Remediate** <img src="https://github.com/spotinst/help/assets/167069628/2dd70167-ae0b-47eb-9e32-902a3dd3a8a7" height="14" /> on a security rule.
-
    <details>
-    <summary markdown="span">View image</summary>
+     <summary markdown="span">View image</summary>
    
-    ![features-remediation-010](https://github.com/spotinst/help/assets/167069628/b72b2472-bef8-4faa-b03d-b10df3c78a62)
+     ![features-remediation-010](https://github.com/spotinst/help/assets/167069628/b72b2472-bef8-4faa-b03d-b10df3c78a62)
 
    </details>
 
-
 * **Risk Analysis**: click **Remediate** <img src="https://github.com/spotinst/help/assets/167069628/2dd70167-ae0b-47eb-9e32-902a3dd3a8a7" height="14" /> on a failed asset, and then click **Remediation Steps**.
-
-    <details>
+   <details>
      <summary markdown="span">View image</summary>
-     
-    ![features-remediation-011](https://github.com/spotinst/help/assets/167069628/f7b615b1-f39b-4983-832f-2908477082aa)
+   
+     ![features-remediation-011](https://github.com/spotinst/help/assets/167069628/f7b615b1-f39b-4983-832f-2908477082aa)
 
-    </details>
+   </details>
 
 
 ### Using CLI
