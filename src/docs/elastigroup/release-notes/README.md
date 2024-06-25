@@ -1,5 +1,7 @@
 # Elastigroup Release Notes
 
+* **ELS-0003: June 23rd, 2024**: You can now choose between On-Demand (OD) and Spot virtual machines (VMs) based on specific requirements in an Elastigroup. [Learn more](https://docs.spot.io/elastigroup/features-azure/od-spotvm)
+
 * **ELS-0002: June 16th, 2024**: The new tutorials for <font color="#FC01CC">GCP</font> provide a comprehensive guide to managing and optimizing resources using Elastigroup in <font color="#FC01CC">GCP</font>. [Learn more](https://docs.spot.io/elastigroup/tutorials-gcp/)
 
 * **ELS-0001: April 4th, 2024**: You can now leverage availability zone scores and recommendations to reduce costs and minimize interruptions when selecting availability zones for launching instances. [Learn more](https://docs.spot.io/elastigroup/features/core-features/az-scores)
