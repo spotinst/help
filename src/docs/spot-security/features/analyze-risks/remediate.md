@@ -118,6 +118,7 @@ Select **Show Failed Execution** to see which auto remediation actions failed. Y
 You can get to the manual Remediation page from:
 
 * **Security Dashboard**: click **Remediate** <img src="https://github.com/spotinst/help/assets/167069628/2dd70167-ae0b-47eb-9e32-902a3dd3a8a7" height="14" /> on a security rule.
+
    <details>
     <summary markdown="span">View image</summary>
    
