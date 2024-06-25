@@ -109,11 +109,10 @@ You can only Rollback risks where **Operation Type** is <i>Auto Remediation</i>,
 </details>
 
 Select **Show Failed Execution** to see which auto remediation actions failed. You can add the Reason column to see more information about why it failed.
-
  <details>
   <summary markdown="span">View image</summary>
    
-  ![features-remediation-009](https://github.com/spotinst/help/assets/167069628/1f317fd2-10cb-4d49-a8db-9b717e086631)
+  ![features-remediation-009](https://github.com/spotinst/help/assets/167069628/3160f517-14b0-4169-8d7e-16c58262ee8a)
 
 </details>
 
@@ -126,8 +125,8 @@ You can get to the manual Remediation page from:
    <details>
     <summary markdown="span">View image</summary>
    
-    ![features-remediation-010](https://github.com/spotinst/help/assets/167069628/a23bac45-5d1e-4609-8b92-2a01d07d2467)
-  
+    ![features-remediation-010](https://github.com/spotinst/help/assets/167069628/b72b2472-bef8-4faa-b03d-b10df3c78a62)
+
    </details>
 
 
@@ -136,8 +135,8 @@ You can get to the manual Remediation page from:
     <details>
      <summary markdown="span">View image</summary>
      
-     ![features-remediation-011](https://github.com/spotinst/help/assets/167069628/1f4b2b46-ac2c-4497-83a2-7ae47ee67f7f)
-  
+    ![features-remediation-011](https://github.com/spotinst/help/assets/167069628/f7b615b1-f39b-4983-832f-2908477082aa)
+
     </details>
 
 
