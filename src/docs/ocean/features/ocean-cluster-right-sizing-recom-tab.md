@@ -28,13 +28,13 @@ This list displays:
 *  Recommendations for vCPU and memory right sizing per deployment. Recommended increases are shown with a green up arrow, and recommended decreases are shown with a red Down arrow.  
 *  Optimized [Right Sizing rules]() that are attached to specific workloads.
 *  Potential monthly max. savings if you adopt these recommendations.
-*  Rules/Status: The name of the [right-sizing rule](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=right-sizing-rules-list). Hover over the rule name to see the workload status (pending or activated).
+*  Rules/Status: If the workload is [attached](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=attach-a-right-sizing-rule-to-one-or-more-workloads) to a right-sizing rule, the name of the rule appears. Hover over the rule name to see the workload status (pending or activated).
 
->**Notes**: If a workload is [attached](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=attach-a-right-sizing-rule-to-one-or-more-workloads) to a rule, no vCPU / memory recommendations or Potential monthly max. savings are displayed for the workload.
+>**Notes**: If a workload is attached to a right-sizing rule, no vCPU / memory recommendations or Potential monthly max. savings are displayed for the workload.
 
 To view a list of your potential savings and recommendations per container: 
 
-*  Click on a workload link to drill down to the containers. For each container, you can then view the following: 
+*  Click on the down arrow to the left of a workload to drill down to the containers. For each container, you can then view the following: 
 
     *  vCPU Request: showing current and average utilization and a recommended increase or decrease for this resource (in vCPU units). If no changes are required, a Keep icon is displayed. 
     *  Memory Request: This shows current and Average utilization and a recommended increase or decrease for this resource (in MiB units). If no changes are required, a Keep icon is displayed. 
