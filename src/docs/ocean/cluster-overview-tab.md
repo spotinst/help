@@ -78,7 +78,7 @@ This tab displays:
       * List:
          * Instance ID. 
          * Virtual Node Group: You can click the link for a listed VNG to display your custom VNG details. 
-         * Instance Type. 
+         * Instance Type. <!-- This will not be added - please remove it -->
          * Lifecycle.
          * Scale-Down Timestamp, for example 06/25/2023 09:23:15   
 
@@ -101,11 +101,11 @@ To view these savings, click the **Revert to Lower Cost** tab (unless already di
 
 This tab displays:
 
-*   Nodes reverted to lower cost: If one or more nodes have been reverted to lower cost, the number of reverted nodes appears. Click to view the number of nodes reverted to lower cost in the selected time range in the Revert to Lower Cost window.
+*   Nodes reverted to lower cost: If one or more nodes have been reverted to lower cost, the number of reverted nodes appears. Click to view the number of nodes reverted to lower cost in the selected time range in the Revert to Lower Cost window <!--I think we should add here "view the number of nodes and their information (type, cost, etc.) -->.
 
       * Pie chart:
          * Virtual Node Group percentage breakdown for nodes.
-      * Replacement information: an entry for each reverted node is listed with these details:
+      * Replacement information: an entry for each reverted node is listed with these details: <!-- I think in the below list there are too many rows since there's a duplication. Maybe we can change it to something like: Original node information.... Reverted node information... -->
          * Instance type of original node.
          * Instance type of reverted node.
          * Instance ID of original node.
