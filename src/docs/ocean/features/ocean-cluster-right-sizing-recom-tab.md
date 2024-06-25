@@ -30,7 +30,7 @@ This list displays:
 *  Potential monthly max. savings if you adopt these recommendations.
 *  Rules/Status: If the workload is [attached](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=attach-a-right-sizing-rule-to-one-or-more-workloads) to a right-sizing rule, the name of the rule appears. Hover over the rule name to see the workload status (pending or activated).
 
->**Notes**: If a workload is attached to a right-sizing rule, no vCPU / memory recommendations or Potential monthly max. savings are displayed for the workload.
+>**Notes**: If a workload is attached to a right-sizing rule, no vCPU / memory recommendations or Potential monthly max. savings are displayed for the workload. 
 
 To view a list of your potential savings and recommendations per container: 
 
