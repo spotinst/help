@@ -1,6 +1,8 @@
 # Ocean Controller Version 2 Permissions
 
-This topic describes the permissions required by the Ocean Controller Version 2 for **AWS K8s**. All permissions listed here can be viewed and edited in the Ocean Controller's YAML file used in the installation process.
+Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>, <font color="#FC01CC">GKE</font>
+
+This topic describes the permissions required by the Ocean Controller Version 2. All permissions listed here can be viewed and edited in the Ocean Controller's YAML file used in the installation process.
 
 The permissions are divided into the following sections:  
 
