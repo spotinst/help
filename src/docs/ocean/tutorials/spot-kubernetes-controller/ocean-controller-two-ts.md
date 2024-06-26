@@ -31,7 +31,7 @@ To resolve this issue, add `--set metrics-server.deployChart=false` to the helm 
 
 ###  "Different controller versions detected. Please remove the old version controller. Old version controller pod(s)" Log in Your Ocean Cluster
 
-This log message appears when the old (Version 1) and new (Version 2) Ocean Controllers run concurrently in your Kubernetes cluster. 
+This log message appears when the old (Version 1) and new (Version 2) Ocean Controllers run concurrently in your Kubernetes cluster.  
 
 The Version 2 Ocean Controller pod will not perform actions until the Version 1 Ocean Controller pod is deleted. This approach prevents conflicts between the two Ocean Controllers, each having different behaviors.
 
