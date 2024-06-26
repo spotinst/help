@@ -1,6 +1,6 @@
 # EKS AMI Auto-Update
 
-Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>  
+Cloud service provider relevance: <font color="#FC01CC">EKS</font>  
 
 Operating an Amazon EKS cluster involves managing the compatibility between the Kubernetes control plane and the nodes, especially when upgrading the EKS cluster version. While the control plane and worker nodes don't need to run identical versions, keeping the worker nodes’ version updated with the control plane is crucial for using the latest features and improvements in Kubernetes. Moreover, ensuring that the worker nodes are running the latest AMIs is vital for maintaining the overall security of your cluster. However, manually updating the worker nodes each time the control plane is upgraded or when new security patches are released can be challenging, error-prone, and time-consuming. 
 
