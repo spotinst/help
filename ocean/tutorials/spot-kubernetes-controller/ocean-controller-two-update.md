@@ -1,6 +1,8 @@
 # Update the Ocean Controller Version 2
 
-This topic describes how to update the Ocean Controller Version 2 for **AWS K8s** in your Kubernetes cluster. 
+Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>, <font color="#FC01CC">GKE</font>
+
+This topic describes how to update the Ocean Controller Version 2 in your Kubernetes cluster. 
 
 ##  Prerequisites
 
