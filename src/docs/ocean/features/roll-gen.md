@@ -67,9 +67,9 @@ The following are possible reasons for failure:
 
 ### Restrict Scale Down during Roll
 
-The roll does not consider the [restrict-scale-down](ocean/features/scaling-kubernetes.md#scale-down-prevention) label. Ocean will replace a node even if a task or pod uses this label. As mentioned above, Ocean's autoscaler takes into consideration all relevant constraints in place before the roll.
+The roll does not consider the [restrict-scale-down](ocean/features/scaling-kubernetes.md#scale-down-prevention) label. Ocean will replace a node even if a task or pod uses this label. As mentioned above, Ocean's autoscaler considers all relevant constraints in place before the roll.
 
-## Schedule Cluster Roll[\*\*](ocean/features/roll?id=whats-next)
+## Schedule Cluster Roll
 
 You can schedule a roll in the Create Cluster or Update Cluster [API](https://docs.spot.io/api/) using a `cron` expression. This enables you to easily run the roll during off hours.
 
@@ -133,9 +133,4 @@ In this tab you can see the details of the roll you created in Step 1, and you c
 
 <img src="/ocean/_media/features-roll-03.png" />
 
-## What’s Next?
-
-Learn more about how Ocean’s [right-sizing](ocean/features/right-sizing) feature works.
-
-> **\*\*Note**: Features indicated with this symbol are not supported for AKS.
 
