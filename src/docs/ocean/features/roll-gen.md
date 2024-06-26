@@ -14,19 +14,19 @@ Whether you are rolling your entire Ocean cluster, a specific virtual node group
 2. Ocean starts with the first batch, replacing each node to ensure the successful accommodation of the workloads on the new nodes. Ocean's autoscaler takes into consideration all relevant constraints in place before the roll.
 3. When all nodes in a batch are finished processing and at least 50% of them have successful replacement, then Ocean starts to work on the next batch. (The percentage can be configured using the `batchMinHealthyPercentage` parameter, explained below.)
 
-### Replace Node with Smaller Nodes[\*\*](ocean/features/roll?id=whats-next)
+### Replace Node with Smaller Nodes
 
 A cluster roll can replace a single node with multiple smaller nodes. This avoids a cluster roll failure when only smaller node types are configured in the Ocean cluster before initiating the roll. Rather than replacing each existing node with one of the same type, Ocean will provision the most relevant infrastructure during the cluster roll. This is based on the workloads currently running on the nodes chosen for rolling. This is especially helpful when you have modified the list of allowed node types or if your goal is to remove a specific node type and replace it with multiple smaller ones.
 
 This logic can improve the cluster's utilization since the workload would run on infrastructure that best matches the workload. Ocean constantly tries to scale down the cluster, but a cluster roll could improve the utilization if this is not possible.
 
-### Respect Pod Disruption Budget[\*\*](ocean/features/roll?id=whats-next)
+### Respect Pod Disruption Budget
 
 Some pods may have a [pod disruption budget](https://kubernetes.io/docs/concepts/workloads/pods/disruptions/) (PDB). Using the parameter `respectPdb`, you can instruct Ocean to check the PDB. When `respectPdb` is set to True, Ocean will not replace a node if the PDB is violated.
 
-### Minimum Healthy Instances in Batch[\*\*](ocean/features/roll?id=whats-next)
+### Minimum Healthy Instances in Batch
 
-The parameter `batchMinHealthyPercentage` indicates the minimum percentage of healthy instances in a single batch. If the amount of healthy instances in a single batch is under this percentage, the cluster roll will fail. The range is 1-100, and if the parameter value is null, the default value will be 50%. Instances that were not replaced due to PDB will be considered as healthy. You can override this behavior by setting ignorePdb to True.
+The parameter `batchMinHealthyPercentage` indicates a single batch's minimum percentage of healthy instances. The cluster roll will fail if the amount of healthy instances in a single batch is under this percentage. The range is 1-100; if the parameter value is null, the default value will be 50%. Instances that were not replaced due to PDB will be considered as healthy. You can override this behavior by setting ignorePdb to True.
 
 ### Node Status
 
@@ -41,10 +41,10 @@ During the replacement process, Ocean provides information about the status of e
 
 Ocean assigns a status to each stage of the roll process. A roll can have one of the following statuses:
 
-- IN_PROGRESS: The roll is in this status as long as nodes are being replaced successfully.
+- IN_PROGRESS: The roll is in this status as long as nodes are successfully replaced.
 - FAILED: An error occurred that caused the roll to fail, and an error message is recorded in the Elastilog.
 - STOPPED: The roll was stopped by the user. When the user stops a roll, the nodes remain in the state they were in at the time of the stop. (For example, there is no rollback to an initial state.)
-- COMPLETED: The roll transitions to Completed status when all nodes have been processed, and at least 50% of them have been successfully replaced.
+- COMPLETED: The roll transitions to Completed status when all nodes have been processed and at least 50% of them have been successfully replaced.
 
 > **Tip**: In the UI, a specific batch may appear with a `Pending` state. This means that even though the roll process has started, that batch has not yet started to replace its nodes.
 
@@ -88,7 +88,7 @@ The Ocean API enables you to roll one or more nodes in a VNG without having to r
 For example, you can use:
 
 - The `instanceIds` parameter (for Ocean for Kubernetes on AWS and ECS) or `instanceNames` (for Ocean GKE) to initiate a roll of one or more specific nodes.
-- The `launchSpecIds` parameter to initiate a roll of one or more VNGs in the cluster. When you specify a VNG ID, all the nodes in that VNG are rolled.
+- The `launchSpecIds` parameter initiates a roll of one or more VNGs in the cluster. When you specify a VNG ID, all the nodes in that VNG are rolled.
 
 For more information about the specific APIs, see Initiate Cluster Roll: [AKS](https://docs.spot.io/api/#operation/oceanAzureRollInit), [Kubernetes on AWS](https://docs.spot.io/api/#operation/oceanAwsRollInit), [ECS](https://docs.spot.io/api/#operation/oceanEcsRollInit), [GKE](https://docs.spot.io/api/#operation/oceanGkeRollInit)
 
