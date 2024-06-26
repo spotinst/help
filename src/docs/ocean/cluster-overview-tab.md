@@ -106,15 +106,11 @@ This tab displays:
       * Pie chart:
          * Virtual Node Group percentage breakdown for nodes.
       * Replacement information: an entry for each reverted node is listed with these details:
-         * Instance type of original node.
-         * Instance type of reverted node.
-         * Instance ID of original node.
-         * Instance ID of reverted node.
-         * Lifecycle of original node.
-         * Lifecycle of reverted node.
-         * Hourly cost of original node.
-         * Hourly cost of reverted node.
-         * Hourly cost saved as a percentage: hourly cost of the reverted node / hourly cost of the original node * 100
+         * Instance type of the original and reverted nodes.
+         * Instance ID of the original and reverted nodes.
+         * Lifecycle of the original and reverted nodes.
+         * Hourly cost of the original and reverted nodes.
+         * Hourly cost saved as a percentage: hourly cost of the reverted node / hourly cost of the original node * 100.
          * The Virtual Node Group's name (click the link for a listed VNG to display your custom VNG details).
 
 [placeholder for graphic when available]
@@ -133,7 +129,7 @@ The Autoscaling Activity panel contains the following widgets:
 
 *   Scale Up widget. 
 *   Set of Continuous Optimization widgets.
-*   Autoscaler graph
+*   Autoscaler graph.
 
 ### Scale Up 
 
@@ -200,65 +196,70 @@ The Autoscaler Graph displays the breakdown by lifecycle, which you can view by 
 
 <img width="652" alt="autoscaler-graph" src="https://github.com/spotinst/help/assets/159915991/30ac2b63-29b2-459e-9433-a33297f25eb4">
 
-
 The upper graph displays the autoscaling activity to analyze. By default, a full set of curves appears on the graph. Click an item on the legend above the graph to turn its associated curve on or off.
 
 These are the curves:
 
-*  Lifecycle Types
-  * Spot
-  * On-demand
-  * Reserved
-  * Savings Plans
+*  Lifecycle Types:
+  * Spot.
+  * On-demand.
+  * Reserved.
+  * Savings Plans.
 
 *  Workload Requests: includes running pods and pending pods requests.
-*  Workloads with Headroom: includes running pods, running Headroom pods, pending pods, and pending Headroom pods.* 
+*  Workloads with Headroom: includes running pods, running Headroom pods, pending pods, and pending Headroom pods.
 
-To set the time span for the graph:
+To set the zoom level for the graph:
 
-On the top-right of the screen, select to show (zoom by) 1 hour / 12 hours / 7 days.
-The lower graph lets you zoom in or out of the selected time span by dragging the handles left or right.
+1. On the top-right of the screen, select to zoom by 1 hour / 12 hours / 7 days.
+2. Use the lower graph to zoom in or out of the selected period by dragging the handles left or right.
 
-Mouse over the upper graph to display the date/time and resource allocation percentage at a specific point. 
-Click on Cluster State Details to display more information.
+To display the date/time and resource allocation percentage at a specific point on the graph:
 
-For Memory: 
+1. Mouse over the upper graph to view the main details.
+2. Click **Cluster State Details** to view more information.
+
+This is the information displayed:
 
 For vCPU:
 
-* Nodes Allocation (vCPU)
-  * Total node allocation 
-  * Split according to lifecycle types
-*  vCPU of Workload
-    *  deamonSets Requested 
-    *  Pods Requested
-    *  Headroom requested
-    *  Total workload allocation percentage
+* Nodes Allocation (vCPU):
+  * Total node allocation. 
+  * Split according to lifecycle types.
+*  vCPU of Workload:
+    *  deamonSets Requested. 
+    *  Pods Requested.
+    *  Headroom requested.
+    *  Total workload allocation percentage.
 
-* Nodes Allocation (GiB)
-  * Total node allocation 
-  * Split according to lifecycle types
-*  Workload (GiB)
-    *  deamonSets Requested 
-    *  Pods Requested
-    *  Headroom requested
-    *  Total workload allocation percentage
+For Memory: 
+
+* Nodes Allocation (GiB):
+  * Total node allocation. 
+  * Split according to lifecycle types.
+*  Workload (GiB):
+    *  deamonSets Requested. 
+    *  Pods Requested.
+    *  Headroom requested.
+    *  Total workload allocation percentage.
 
 For GPU:
 
-* Nodes Allocation (GPU)
-  * Total node allocation 
-  * Split according to lifecycle types
-*  GPU of Workload
-    *  deamonSets Requested 
-    *  Pods Requested
-    *  Headroom requested
-    *  Total workload allocation percentage
+* Nodes Allocation (GPU):
+  * Total node allocation. 
+  * Split according to lifecycle types.
+*  GPU of Workload:
+    *  deamonSets Requested. 
+    *  Pods Requested.
+    *  Headroom requested.
+    *  Total workload allocation percentage.
 
 Total Allocation Calculation:
 * Sum of vCPU/Memory/GPU allocation - (running pods + running headroom + running DaemonSets)/nodes allocation.
 
 ###   View Autoscaling Events
+
+
 
 
 <img width="652" alt="autoscaling-events" src="https://github.com/spotinst/help/assets/159915991/90035e20-8375-4207-8549-7a3f3314ed5e">
