@@ -30,7 +30,8 @@ This list displays:
 *  Potential monthly max. savings if you adopt these recommendations.
 *  Rules/Status: If the workload is [attached](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=attach-a-right-sizing-rule-to-one-or-more-workloads) to a right-sizing rule, the name of the rule appears. Hover over the rule name to see the workload status (pending or activated).
 
->**Notes**: If a workload is attached to a right-sizing rule, no vCPU / memory recommendations or Potential monthly max. savings are displayed for the workload. 
+>**Notes**: If a workload is attached to an activated right-sizing rule, no vCPU / memory recommendations or Potential monthly max. savings are displayed for the workload because Ocean is already optimizing it.
+>
 
 To view a list of your potential savings and recommendations per container: 
 
@@ -55,7 +56,7 @@ You can create right-sizing rules to trigger immediately after a specific set of
 To create/edit a right-sizing rule: 
 
 1.   Click the **Advanced Optimization** tab if not already displayed.
-2.   To create a new rule,	click **+ Add new rule** at the top-right of the Advanced Optimization list.
+2.   To create a new rule,	click **+ Add new rule** above the Right-Sizing Rules list.
      
      >**Note**: To edit an existing rule: To the right of the row for the rule in the Right Sizing Rules list at the bottom of the tab, click **Edit Rule**. 
 
