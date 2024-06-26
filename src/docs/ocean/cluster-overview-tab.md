@@ -259,10 +259,15 @@ Total Allocation Calculation:
 
 ###   View Autoscaling Events
 
-
-
-
 <img width="652" alt="autoscaling-events" src="https://github.com/spotinst/help/assets/159915991/90035e20-8375-4207-8549-7a3f3314ed5e">
+
+The set of ocean autoscaling scale-up and scale-down events widgets appear in the panel above the graph.
+
+On the graph, you can view any autoscaling event that has already occurred within a 12-hour time frame or less.
+
+
+
+
 
 ##  Related Topics 
 
