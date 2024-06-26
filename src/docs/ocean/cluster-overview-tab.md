@@ -179,11 +179,11 @@ For more information, see [Reserved Instances](https://docs.spot.io/ocean/tips-a
 
 #### Revert to Lower Cost
 
-Ocean Autoscaler searches for nodes with underutilized compute resources that cannot be scaled down from the cluster's set of nodes and reverts these nodes to lower cost nodes. 
+Ocean Autoscaler searches for nodes with underutilized compute resources that cannot be scaled down from the cluster's set of nodes and reverts these nodes to lower-cost nodes. 
 
 The Revert to Lower Cost widget shows the number of events for which a node was reverted to a lower-cost node in the selected time range. For more information, see [Revert to Lower Cost Node](https://docs.spot.io/ocean/features/revert-to-lower-cost-node?id=revert-to-lower-cost-node).  
 
-By tracking these events on the Autoscaling Activity panel, you can see when and how often your cluster is optimizing for cost savings. 
+Tracking these events on the Autoscaling Activity panel lets you see when and how often your cluster is optimizing for cost savings. 
 
 #### Autohealing
 
