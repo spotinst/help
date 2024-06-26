@@ -82,14 +82,14 @@ You can remediate the risks using:
      <img src="https://github.com/spotinst/help/assets/167069628/83b58dbe-3ff0-4b84-a5ba-ae6be64565df" width=60% />
 
    </details>
-5. You can select multiple risks to remediate, or click **Add New** to add one risk at a time.
+4. You can select multiple risks to remediate, or click **Add New** to add one risk at a time.
    <details>
      <summary markdown="span">View image</summary>
    
-     ![features-remediation-007](https://github.com/spotinst/help/assets/167069628/f8ab372e-3811-4ac3-b0db-f95d3fb2970b)
+     <img alt="features-remediation-007" src="https://github.com/spotinst/help/assets/167069628/6d8ae52b-9ffc-4417-b8af-be5225d3cdbd">
 
    </details>
-6. Click **Remediate**.
+5. Click **Remediate**.
 
 ### Recently Auto Remediated and Rollback
 
