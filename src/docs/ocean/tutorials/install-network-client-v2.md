@@ -1,6 +1,8 @@
 
 # Install the Ocean Network Client in the Cluster
 
+Cloud service provider relevance <font color="#FC01CC">AWS Kubernetes</font>
+
 This tutorial describes installing the Ocean Network Client as a DaemonSet in your Ocean-managed Kubernetes cluster. In order to measure [Network Costs](ocean/features/cost-analysis?id=network-costs) for container or Kubernetes workloads, the Ocean network client needs to run with privileged access on every node in the cluster.
 
 There are several options to install the Ocean Network Client listed below.  
