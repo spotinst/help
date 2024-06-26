@@ -198,9 +198,8 @@ level so you can see why the Ocean Autoscaler triggered a specific scale event w
 
 The Autoscaler Graph displays the breakdown by lifecycle, which you can view by vCPU, Memory, or GPU, together with workload and headroom requests.
 
-![autoscaler-activity-graph-1](https://github.com/spotinst/help/assets/159915991/6f68dd11-ab78-44db-9b50-7953a185801b)
+<img width="652" alt="autoscaler-graph" src="https://github.com/spotinst/help/assets/159915991/30ac2b63-29b2-459e-9433-a33297f25eb4">
 
-###   How to View the Autoscaling Activity Graph
 
 The upper graph displays the autoscaling activity to analyze. By default, a full set of curves appears on the graph. Click an item on the legend above the graph to turn its associated curve on or off.
 
@@ -212,8 +211,8 @@ These are the curves:
   * Reserved
   * Savings Plans
 
-*  Workload Requests
-*  Workloads with Headroom
+*  Workload Requests: includes running pods and pending pods requests.
+*  Workloads with Headroom: includes running pods, running Headroom pods, pending pods, and pending Headroom pods.* 
 
 To set the time span for the graph:
 
@@ -224,15 +223,6 @@ Mouse over the upper graph to display the date/time and resource allocation perc
 Click on Cluster State Details to display more information.
 
 For Memory: 
-
-* Nodes Allocation (GiB)
-  * Total node allocation 
-  * Split according to lifecycle types
-*  Workload (GiB)
-    *  deamonSets Requested 
-    *  Pods Requested
-    *  Headroom requested
-    *  Total workload allocation percentage
 
 For vCPU:
 
@@ -245,8 +235,33 @@ For vCPU:
     *  Headroom requested
     *  Total workload allocation percentage
 
+* Nodes Allocation (GiB)
+  * Total node allocation 
+  * Split according to lifecycle types
+*  Workload (GiB)
+    *  deamonSets Requested 
+    *  Pods Requested
+    *  Headroom requested
+    *  Total workload allocation percentage
+
+For GPU:
+
+* Nodes Allocation (GPU)
+  * Total node allocation 
+  * Split according to lifecycle types
+*  GPU of Workload
+    *  deamonSets Requested 
+    *  Pods Requested
+    *  Headroom requested
+    *  Total workload allocation percentage
+
+Total Allocation Calculation:
+* Sum of vCPU/Memory/GPU allocation - (running pods + running headroom + running DaemonSets)/nodes allocation.
+
+###   View Autoscaling Events
 
 
+<img width="652" alt="autoscaling-events" src="https://github.com/spotinst/help/assets/159915991/90035e20-8375-4207-8549-7a3f3314ed5e">
 
 ##  Related Topics 
 
