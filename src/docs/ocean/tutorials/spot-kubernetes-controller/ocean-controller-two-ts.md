@@ -134,7 +134,7 @@ kubectl describe pod 'dns-pod-name' -n kube-system
 
 If the steps above do not solve your issue, get the controller logs using the steps below. 
 
-1.  The following command displays current pods running in the kube-system. Get the spotinst-controller pod name from the output. 
+1.  The following command displays current pods running in the spot-system. Get the spot-system-controller pod name from the output. 
 
 ```bash
 kubectl get pods -n spot-system 
@@ -143,7 +143,7 @@ kubectl get pods -n spot-system
 2.  Get the controller logs: 
 
 ```bash
-Kubectl logs ocean-controller-ocean-kubernetes-controller –n spot-system 
+Kubectl logs ocean-controller-ocean-kubernetes-controller -n spot-system 
 ```
 3. If you still encounter issues, contact Support via [online chat or email](https://spot.io/support/). 
 
