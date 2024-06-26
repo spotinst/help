@@ -10,15 +10,15 @@ To view your right-sizing recommendations and rules:
 
 1. In the left main menu, click **Ocean** > **Cloud Clusters**.
 2. Select a cluster from the list of clusters.
-3. Click the **Right Sizing** tab.
+3. Click the **Right Sizing** tab.  
 4. Click **Advanced Optimization**. 
 
-![right-sizing-workloads-2](https://github.com/spotinst/help/assets/159915991/c67f09df-21a3-4236-b8d1-23e9fc56edc7)
+![right-sizing-workloads-opt-list-2](https://github.com/spotinst/help/assets/159915991/d119783f-015c-4b4a-9a1d-e559baea5a5f)
 
 The Advanced Optimization tab contains these lists:  
 
 *  Workloads Optimization List. 
-*  Automatic Right Sizing Rules List.
+*  Automation Rules List.
 
 ##  Workloads Optimization List 
 
@@ -27,17 +27,21 @@ This list displays:
 *  Your right-sizing recommendations per workload, and it lets you drill down to view your right-sizing recommendations per container. 
 *  Recommendations for vCPU and memory right sizing per deployment. Recommended increases are shown with a green up arrow, and recommended decreases are shown with a red Down arrow.  
 *  Optimized [Right Sizing rules]() that are attached to specific workloads.
-*  Potential monthly max. savings if you adopt these recommendations.  
+*  Potential monthly max. savings if you adopt these recommendations.
+*  Rules/Status: If the workload is [attached](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=attach-a-right-sizing-rule-to-one-or-more-workloads) to a right-sizing rule, the name of the rule appears. Hover over the rule name to see the workload status (pending or activated).
+
+>**Notes**: If a workload is attached to an activated right-sizing rule, no vCPU / memory recommendations or Potential monthly max. savings are displayed for the workload because Ocean is already optimizing it.
+>
 
 To view a list of your potential savings and recommendations per container: 
 
-*  Click on a workload link to drill down to the containers. For each container, you can then view the following: 
+*  Click on the down arrow to the left of a workload to drill down to the containers. For each container, you can then view the following: 
 
     *  vCPU Request: showing current and average utilization and a recommended increase or decrease for this resource (in vCPU units). If no changes are required, a Keep icon is displayed. 
     *  Memory Request: This shows current and Average utilization and a recommended increase or decrease for this resource (in MiB units). If no changes are required, a Keep icon is displayed. 
     *  Right-Sizing Recommendations: Show the recommended changes in vCPU and memory. Click on the Copy icon to save these changes for later. 
 
-##  Right Sizing Rules List 
+##  Automation Rules List 
 
 This list displays your existing right-sizing rules.  
 Each rule entry shows relevant information about the parameters that trigger the rule and its scheduling plan. 
@@ -52,9 +56,9 @@ You can create right-sizing rules to trigger immediately after a specific set of
 To create/edit a right-sizing rule: 
 
 1.   Click the **Advanced Optimization** tab if not already displayed.
-2.   To create a new rule,	click **+ Add new rule** at the top-right of the Advanced Optimization list.
+2.   To create a new rule,	click **+ Add new rule** above the Automation Rules list.
      
-     >**Note**: To edit an existing rule: To the right of the row for the rule in the Right Sizing Rules list at the bottom of the tab, click **Edit Rule**. 
+     >**Note**: To edit an existing rule: To the right of the row for the rule in the Automation Rules list at the bottom of the tab, click **Edit Rule**. 
 
 ![right-sizing-add-new-rule](https://github.com/spotinst/help/assets/159915991/d5f3ac19-e1ac-40b7-a600-9e19cbbdfc5e)
 
@@ -95,7 +99,7 @@ To attach a rule to one or more workloads:
 
 To detach a rule from one or more workloads: 
 
->**Note**: You can only detach workloads that are already attached to rules.
+>**Note**: You can only detach workloads already attached to rules.
 
 1.   Select workloads in the Workloads Optimization list.
 2.   From the Actions drop-down menu above the list, click **Detach Rule**. 
