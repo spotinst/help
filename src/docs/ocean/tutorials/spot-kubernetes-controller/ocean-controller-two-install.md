@@ -1,6 +1,8 @@
 # Install the Ocean Controller Version 2
 
-You can install the Ocean Controller for **AWS K8s** using a Spot script (based on Helm), via Helm, or via Terraform. Copy the relevant code shown in this procedure and apply it in your environment. 
+Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>, <font color="#FC01CC">GKE</font>
+
+You can install the Ocean Controller using a Spot script (based on Helm), via Helm, or via Terraform. Copy the relevant code shown in this procedure and apply it in your environment. 
 
 ## Prerequisites
 
