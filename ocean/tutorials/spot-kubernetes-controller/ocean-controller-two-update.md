@@ -25,10 +25,11 @@ helm repo update
 3.  Install ocean-kubernetes-controller: 
 
 ```bash
-helm upgrade --install --wait ocean-controller spot/ocean-kubernetes-controller\  
---namespace "spot-system" --create-namespace \ 	  
---set spotinst.clusterIdentifier="${SPOTINST_CLUSTER_IDENTIFIER}" \ 	  
---set spotinst.token="${SPOTINST_TOKEN}
+helm upgrade --install --wait ocean-controller spot/ocean-kubernetes-controller \
+--namespace "spot-system" --create-namespace \
+--set spotinst.account="${SPOTINST_ACCOUNT}" \
+--set spotinst.clusterIdentifier="${SPOTINST_CLUSTER_IDENTIFIER}" \
+--set spotinst.token="${SPOTINST_TOKEN}"
 ```
 
 If the Ocean Controller is already installed, this action will start a rollout of the Ocean Controller deployment, which will launch the new controller pods and terminate the old ones. When the Ocean Controller boots up, the log will print the version. 
