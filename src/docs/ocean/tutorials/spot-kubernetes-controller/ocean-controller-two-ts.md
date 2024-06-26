@@ -1,5 +1,7 @@
 # Troubleshoot the Ocean Controller Version 2
 
+Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>, <font color="#FC01CC">GKE</font>
+
 This topic is intended to help you troubleshoot your Ocean Controller Version 2. 
 
 If you still encounter issues, contact Support via [online chat or email](https://spot.io/support/). 
