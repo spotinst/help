@@ -18,7 +18,7 @@ To view your right-sizing recommendations and rules:
 The Advanced Optimization tab contains these lists:  
 
 *  Workloads Optimization List. 
-*  Automatic Right Sizing Rules List.
+*  Automation Rules List.
 
 ##  Workloads Optimization List 
 
@@ -41,7 +41,7 @@ To view a list of your potential savings and recommendations per container:
     *  Memory Request: This shows current and Average utilization and a recommended increase or decrease for this resource (in MiB units). If no changes are required, a Keep icon is displayed. 
     *  Right-Sizing Recommendations: Show the recommended changes in vCPU and memory. Click on the Copy icon to save these changes for later. 
 
-##  Right Sizing Rules List 
+##  Automation Rules List 
 
 This list displays your existing right-sizing rules.  
 Each rule entry shows relevant information about the parameters that trigger the rule and its scheduling plan. 
@@ -56,9 +56,9 @@ You can create right-sizing rules to trigger immediately after a specific set of
 To create/edit a right-sizing rule: 
 
 1.   Click the **Advanced Optimization** tab if not already displayed.
-2.   To create a new rule,	click **+ Add new rule** above the Right-Sizing Rules list.
+2.   To create a new rule,	click **+ Add new rule** above the Automation Rules list.
      
-     >**Note**: To edit an existing rule: To the right of the row for the rule in the Right Sizing Rules list at the bottom of the tab, click **Edit Rule**. 
+     >**Note**: To edit an existing rule: To the right of the row for the rule in the Automation Rules list at the bottom of the tab, click **Edit Rule**. 
 
 ![right-sizing-add-new-rule](https://github.com/spotinst/help/assets/159915991/d5f3ac19-e1ac-40b7-a600-9e19cbbdfc5e)
 
