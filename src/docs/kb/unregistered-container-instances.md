@@ -28,9 +28,9 @@ There are a few possible reasons that a container instance is not being register
 * **User-Data**
   Make sure this code <font color="#FC01CC">is in ______ so ##where do they update this?##</font> the container instances can register the cluster. Update the cluster name.
   
-  #!/bin/bash
+  `#!/bin/bash`
   
-  echo ECS_CLUSTER="MyCluster" >> /etc/ecs/ecs.config
+  `echo ECS_CLUSTER="<font color="#FC01CC">MyCluster</font>" >> /etc/ecs/ecs.config`
 
 * **AMI**
   ECS is optimized and Agent (similar to the controller in Kubernetes) is configured in the AMI.
