@@ -2353,11 +2353,11 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/kb/"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/?/kb/unregistered-rontainer-instances</loc>
+        <loc>https://docs.spot.io/?/kb/unregistered-container-instances</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/kb/unregistered-rontainer-instances"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/kb/unregistered-rontainer-instances"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/kb/unregistered-container-instances"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/kb/unregistered-container-instances"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/managed-instance/azure/features/actions</loc>
