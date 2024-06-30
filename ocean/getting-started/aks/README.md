@@ -259,40 +259,7 @@ The cluster and VNG are created, and the basic configurations are complete.
 
 ### Step 3: Migrate Workloads to Ocean from the Azure Portal 
 
-This section describes how to start migrating workloads to Ocean.  
-
-1. In the Azure portal, select unmanaged node pools that don’t have names that start with Ocean managed _aks-onmp-xxxxxx_, and select **Scale node pool**. 
-
-![connect-aks-cluster-14](https://github.com/spotinst/help/assets/106514736/2d5b9386-453e-4ab4-994b-049832c9bd11)
-
-2. Set the Scale method to Manual to enable manual scaling. This turns off auto-scaling using the Kubernetes cluster Auto-scaler. 
-
-![connect-aks-cluster-15](https://github.com/spotinst/help/assets/106514736/d3d6589f-b304-46d5-a54f-00e277388de4)
-
-3. Gradually reduce the user node pool node count to zero (the default system  node pool can only be scaled down to one node as Ocean does not manage the Kubernetes control plane) in order to scale down unmanaged node pools. 
-
-To reduce downtime for critical workloads while migrating, you can:  
-
-* launch some nodes in the VNGs you previously created. Select **VNG Actions** and in the dropdown menu, select **Launch nodes**. Specify the number of nodes to launch (3-5 nodes).  
-* or increase the VNG minimum node count to approximately 5 nodes.  
-* or add VNG headroom (manual) for approximately 16 vCPUs and memory 32 GiB.  
-
-For large clusters with more than 20 nodes, scale down nodes in batches, approximately 2-5 nodes at a time. This reduces workload downtime and provides sufficient time for Ocean to scale up nodes. 
-
-#### Enable Ocean to Launch Spot for Workloads During Workload Migration VMs  
-
-For Ocean to launch Spot VMs, the workload needs to add [Spot toleration](https://learn.microsoft.com/en-us/azure/aks/spot-node-pool#schedule-a-pod-to-run-on-the-spot-node) (the node affinity is not required). If there is no Spot toleration, Ocean will launch regular On-demand nodes during workload migration. Learn how to [enable Ocean to launch Spot VMs for workloads](ocean/getting-started/aks?id=enable-ocean-to-launch-spot-vms-for-workloads). 
-
-**Include**
-
-```
-spec: 
-  tolerations: 
-  - key: "kubernetes.azure.com/scalesetpriority" 
-    operator: "Equal" 
-    value: "spot" 
-    effect: "NoSchedule"
-```
+See [Migrate the Workload to Ocean on AKS](https://docs.spot.io/ocean/tutorials/migrate-workload-aks)
 
 ## Related Topics
 
