@@ -26,7 +26,7 @@ Registering a container instance with an ECS cluster means you are telling the E
 There are a few possible reasons that a container instance is not being registered - 
 
 * **User-Data**
-  Make sure this code <font color="#FC01CC">is in ______ so ##where do they update this?##</font color> the container instances can register the cluster. Update the cluster name.
+  Make sure this code <font color="#FC01CC">is in ______ so ##where do they update this?##</font> the container instances can register the cluster. Update the cluster name.
   
   #!/bin/bash
   
