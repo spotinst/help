@@ -24,10 +24,25 @@ The VM Selection panel provides these options:
 
 * Advanced VM Size Selection: Use attribute filters to select VMs with customized sizes from which Ocean can scale.
 
-<ol style="list-style-type: lower-alpha;">
-<li>Select an option.</li>
-<li>If you selected the Automatic option, click Save to complete the procedure. Otherwise, if you selected Advanced VM Size Selection, continue./li>
-<li>In the VM Selection list, view each VM type's currently selected size, vCPU, Memory (GiB), and GPU units. The Advanced VM Size Filtering controls to the right of the VM Selection list let you filter these attributes for the VMs:</li>
-</ol>
+ <ol style="list-style-type: lower-alpha;">
+  <li>Select an option.</li>
+  <li>If you selected the Automatic option, click Save to complete the procedure. Otherwise, if you selected Advanced VM Size Selection, continue./li>
+  <li>In the VM Selection list, view each VM type's currently selected size, vCPU, Memory (GiB), and GPU units. </li>
+ </ol>
+ 
+ The Advanced VM Size Filtering controls to the right of the VM Selection list let you filter these attributes for the VMs:
+     
+  * Upper and lower limits for No. of vCPUs (up to 256).
+  * Upper and lower limits for the Memory (up to 1024 GiB).
+  * Upper and lower limits for the No. of GPUs (up to 8).
+  * GPU type.
+  * Exclude Series: You can exclude any series by clicking Exclude in the VM Selection List row for that series (or by typing the series in the Exclude Series field. The series then appears in the Exclude Series filter in the filtering controls.
+  * Include Series: You can include VMs in the Include Series field. For example, to select a GPU type, include the series and VM types
+  * VM Types.
+  * Architectures (values taken from your Virtual Node Group template).
+  * Disk performance (standard or premium).
+  * Minimum no of data disks (up to 64).
+  * Minimum no. of NICs (up to 16).
+  * Turn Accelerated networking on or off.
 
  
