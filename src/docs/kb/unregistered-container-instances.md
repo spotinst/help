@@ -2,7 +2,7 @@
 
 # Ocean | ECS | Unregistered Container Instances
 
-## **Problem**
+## Problem
 Your newly launched Ocean ECS container instance:
 * Has unregistered contain instance events
 * Doesn’t have a Container Instance ID
@@ -10,35 +10,24 @@ Your newly launched Ocean ECS container instance:
 * CPU and memory resource allocations are 0%
 * Status: Can’t determine
 
-<img width="452" alt="unregistered-container-instance1" src="https://github.com/spotinst/help/assets/167069628/acd9d60a-4952-4955-b119-593ccfb9c067">
+<img alt="unregistered-container-instance1" src="https://github.com/spotinst/help/assets/167069628/acd9d60a-4952-4955-b119-593ccfb9c067">
 
-<img width="343" alt="unregistered-container-instance2" src="https://github.com/spotinst/help/assets/167069628/d7713e91-2850-48ee-9d1a-aa439dcf91d1">
+<img alt="unregistered-container-instance2" src="https://github.com/spotinst/help/assets/167069628/d7713e91-2850-48ee-9d1a-aa439dcf91d1">
 
-## **Cause**
+## Cause
 
 Registering a container instance with an ECS cluster means you are telling the ECS service that a specific EC2 instance is available to run containers. <font color="#7632FE">You give information to ECS about the EC2 instance, such as its IP address, the docker daemon endpoint. ##is this part useful?##</font>
 
 <font color="#7632FE">If a container instance is not able to register the cluster, traffic is not received and the cluster does not function. ##what does this mean? what's the result if this happens##</font>
 
 
-## **Solution**
-
-There are a few possible reasons that a container instance is not being registered - 
+## Solutions
 
 * **User-Data**
   Make sure this code <font color="#7632FE">is in ______ so ##where do they update this?##</font> the container instances can register the cluster. Update the cluster name.
-  
-  ````
-  #!/bin/bash
-  
-  echo ECS_CLUSTER="==MyCluster==" >> /etc/ecs/ecs.config
-  ````
 
-  <pre><code>
-  #!/bin/bash
-  
-  echo ECS_CLUSTER="<font color="#FC01CC">MyCluster</font>font>" >> /etc/ecs/ecs.config
-  </code></pre>
+  <pre><code>#!/bin/bash  
+  echo ECS_CLUSTER="<font color="#FC01CC">MyCluster</font>" >> /etc/ecs/ecs.config</code></pre>
 * **AMI**
   ECS is optimized and Agent (similar to the controller in Kubernetes) is configured in the AMI.
   
@@ -52,15 +41,15 @@ There are a few possible reasons that a container instance is not being register
 
   Configure an instance profile with relevant permissions.
 
-  <img width="452" alt="unregistered-container-instance3" src="https://github.com/spotinst/help/assets/167069628/b51d91f7-c067-431f-94b5-64926a6e469c">
+  <img alt="unregistered-container-instance3" src="https://github.com/spotinst/help/assets/167069628/b51d91f7-c067-431f-94b5-64926a6e469c">
 
 * **IP**
   Make sure you configured Public IP according to subnet, and have NAT gateway.
   If you change the configuration in the virtual node group, such as tags/user data, it immediately overrides the cluster's configuration.
 
-  <img width="452" alt="unregistered-container-instance4" src="https://github.com/spotinst/help/assets/167069628/98a19d66-d218-41da-bb88-5a99220dcac3">
+  <img alt="unregistered-container-instance4" src="https://github.com/spotinst/help/assets/167069628/98a19d66-d218-41da-bb88-5a99220dcac3">
 
 
-* [Troubleshooting AWS documentation](https://aws.amazon.com/premiumsupport/knowledge-center/ecs-instance-unable-join-cluster/)   
+* [AWS troubleshooting](https://aws.amazon.com/premiumsupport/knowledge-center/ecs-instance-unable-join-cluster/)   
   
 
