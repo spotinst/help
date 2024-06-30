@@ -31,9 +31,14 @@ There are a few possible reasons that a container instance is not being register
   ````
   #!/bin/bash
   
-  echo ECS_CLUSTER="`MyCluster`" >> /etc/ecs/ecs.config
+  echo ECS_CLUSTER="==MyCluster==" >> /etc/ecs/ecs.config
   ````
 
+  <pre><code>
+  #!/bin/bash
+  
+  echo ECS_CLUSTER="<font color="#FC01CC">MyCluster</font>font>" >> /etc/ecs/ecs.config
+  </code></pre>
 * **AMI**
   ECS is optimized and Agent (similar to the controller in Kubernetes) is configured in the AMI.
   
