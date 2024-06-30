@@ -12,3 +12,8 @@ To select the VMs for your Cluster:
 
 3. Click the  **Virtual Node Groups** tab.
 
+4. In the panel on the top left of the screen, fill in and select the settings for the Virtual Node Group, such as Availability Zones and the maximum Number of pods per node.
+
+5. Scroll down to the VM Selection panel.
+
+![vm-selection-panel](https://github.com/spotinst/help/assets/159915991/ea743bc6-0a06-4fa9-a958-7b4410bc7bd3)
