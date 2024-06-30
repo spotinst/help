@@ -189,14 +189,14 @@ The Autohealing widget shows the number of events for which AWS autohealing repl
 
 ###   Autoscaling Activity Graph
 
-The Autoscaling Activity Graph is designed to help you more intuitively understand the interaction between the infrastructure and the applications it supports. It also provides cluster activity insights at a granular 
+The Autoscaling Activity Graph provides intuitive insights into the interaction between the infrastructure and the applications it supports. It also provides cluster activity insights at a granular 
 level so you can see why the Ocean Autoscaler triggered a specific scale event within the cluster.
 
-The Autoscaler Graph displays the breakdown by lifecycle, which you can view by vCPU, Memory, or GPU, together with workload and headroom requests.
+The graph displays a breakdown by lifecycle, which you can view by vCPU, Memory, or GPU, together with workload and headroom requests.
 
 <img width="652" alt="autoscaler-graph" src="https://github.com/spotinst/help/assets/159915991/30ac2b63-29b2-459e-9433-a33297f25eb4">
 
-The upper graph displays the autoscaling activity to analyze. By default, a full set of curves appears on the graph. Click an item on the legend above the graph to turn its associated curve on or off.
+The upper graph displays the autoscaling activity to analyze. By default, a full set of activity curves appears on the graph. Click an item on the legend above the graph to turn its associated curve on or off.
 
 These are the curves:
 
@@ -212,14 +212,21 @@ These are the curves:
 To set the zoom level for the graph:
 
 1. On the top-right of the screen, select to zoom by 1 hour / 12 hours / 7 days.
-2. Use the lower graph to zoom in or out of the selected period by dragging the handles left or right.
+2. Use the lower graph to zoom in or out of the selected period by dragging the sizing handles left or right.
+>**Tip**: Set the time frame on the graph to 12 hours or less to view autoscaling events, which are displayed as dots on the graph.
 
-To display the date/time and resource allocation percentage at a specific point on the graph:
+<img width="652" alt="autoscaling-events" src="https://github.com/spotinst/help/assets/159915991/90035e20-8375-4207-8549-7a3f3314ed5e">
+
+To display the autoscaling activity at a specific point on the graph:
 
 1. Mouse over the upper graph to view the main details.
 2. Click **Cluster State Details** to view more information.
 
 This is the information displayed:
+
+* Autoscaling events (displayed for a time frame of 12 hours or less:
+One or more autoscaling events are displayed in blue rectangles. These can be any ocean autoscaling scale-up and scale-down events that are displayed as widgets above the graph.
+For example, Scale Up, Scale Down, or Autohealing.
 
 For vCPU:
 
@@ -259,9 +266,8 @@ Total Allocation Calculation:
 
 ###   View Autoscaling Events
 
-<img width="652" alt="autoscaling-events" src="https://github.com/spotinst/help/assets/159915991/90035e20-8375-4207-8549-7a3f3314ed5e">
 
-The set of ocean autoscaling scale-up and scale-down events widgets appear in the panel above the graph.
+The set of 
 
 On the graph, you can view any autoscaling event that has already occurred within a 12-hour time frame or less.
 
