@@ -2353,11 +2353,25 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/kb/cant-spin-instances-invalidsnapshot"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/kb/exclude-instance-ocean</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/kb/exclude-instance-ocean"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/kb/exclude-instance-ocean"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/kb/failed-update-instance-types</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/kb/failed-update-instance-types"/>
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/kb/failed-update-instance-types"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/kb/hostport-ecs-workloads-underutilized-nodes</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/kb/hostport-ecs-workloads-underutilized-nodes"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/kb/hostport-ecs-workloads-underutilized-nodes"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/kb/</loc>
@@ -2372,6 +2386,13 @@
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/kb/running-hours-spot-aws"/>
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/kb/running-hours-spot-aws"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/kb/Troubleshoot-invalidblockdevicemapping-error</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/kb/Troubleshoot-invalidblockdevicemapping-error"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/kb/Troubleshoot-invalidblockdevicemapping-error"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/kb/unregistered-container-instances</loc>
