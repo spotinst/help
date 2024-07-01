@@ -45,11 +45,17 @@ The Reservations preview appears only if you are connected to AWS with a managem
 
 ## Fee Calculation
 
-The Monthly Fee is calculated each month as a percentage of your monthly savings.  
+The Monthly Fee is calculated each month according to your specific agreement with Spot.
+
+### Elastigroup/Ocean vCPU Hour Fee Calculation
+
+The total number of monthly vCPU hours is calculated according to:
+
+<i>The number of vCPUs you allocated to each Ocean and/or Elastigroup managed instance</i> × <i>the number of hours each instance runs each month</i>
 
 ### Elastigroup/Ocean Service Savings Definition
 
-For each cloud provider, “Savings” is defined as follows:
+If your monthly fee is calculated as a percent of your monthly savings, <i>Savings</i> is defined according to the cloud provider:
 
 #### AWS Spot Instances
 
@@ -65,7 +71,7 @@ Your actual GCP Spot VMs charges deducted from the published cost of GCP On-Dema
 
 ### Eco Service Savings Definition
 
-For each cloud provider, “Savings” is defined as follows:
+For each cloud provider, Savings is defined:
 
 #### AWS Reserved Instances (RIs) and Savings Plans (SPs)  
 
