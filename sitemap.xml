@@ -3424,6 +3424,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean/features/scaling-kubernetes"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/ocean/features/vm-selection-aks</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/ocean/features/vm-selection-aks"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/ocean/features/vm-selection-aks"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/ocean/features/vngs/attributes-and-actions-per-vng</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
