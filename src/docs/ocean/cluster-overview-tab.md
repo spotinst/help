@@ -78,7 +78,6 @@ This tab displays:
       * List:
          * Instance ID. 
          * Virtual Node Group: You can click the link for a listed VNG to display your custom VNG details. 
-         * Instance Type. 
          * Lifecycle.
          * Scale-Down Timestamp, for example 06/25/2023 09:23:15   
 
@@ -101,13 +100,13 @@ To view these savings, click the **Revert to Lower Cost** tab (unless already di
 
 This tab displays:
 
-*   Nodes reverted to lower cost: If one or more nodes have been reverted to lower cost, the number of reverted nodes appears. Click to view the number of nodes reverted to lower cost in the selected time range in the Revert to Lower Cost window.
+*   Nodes reverted to lower cost: If one or more nodes have been reverted to lower cost, the number of reverted nodes appears. Click to view the number of nodes reverted to lower cost in the selected time range in the Revert to Lower Cost window. View the types and costs of the nodes, etc.). 
 
       * Pie chart:
          * Virtual Node Group percentage breakdown for nodes.
       * Replacement information: an entry for each reverted node is listed with these details:
-         * Instance type of the original and reverted nodes.
          * Instance ID of the original and reverted nodes.
+         * Instance Type of the original and reverted nodes.
          * Lifecycle of the original and reverted nodes.
          * Hourly cost of the original and reverted nodes.
          * Hourly cost saved as a percentage: hourly cost of the reverted node / hourly cost of the original node * 100.
