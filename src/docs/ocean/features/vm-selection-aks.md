@@ -1,6 +1,6 @@
+<meta name=“robots” content=“noindex”>
 
 #  Select VMs for an AKS Virtual Node Group
-
 
 This topic describes selecting VM sizes in your cluster per Virtual Node Group (custom or template) according to your application needs. An advanced attributes filter lets you search for the optimal VMs for the task from any of the VM families available on the [Azure cloud](https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/overview?tabs=breakdownseries%2Cgeneralsizelist%2Ccomputesizelist%2Cmemorysizelist%2Cstoragesizelist%2Cgpusizelist%2Cfpgasizelist%2Chpcsizelist). Once you have sized your VMs, Ocean can use your customization for its scaling processes.
 
@@ -32,9 +32,9 @@ The VM Selection panel provides these options:
  
  The Advanced VM Size Filtering controls to the right of the VM Selection list let you filter these attributes for the VMs:
      
-  * Upper and lower limits for No. of vCPUs (up to 256).
+  * Upper and lower limits for No. Of vCPUs (up to 256).
   * Upper and lower limits for the Memory (up to 1024 GiB).
-  * Upper and lower limits for the No. of GPUs (up to 8).
+  * Upper and lower limits for the No. Of GPUs (up to 8).
   * GPU type.
   * Exclude Series: You can exclude any series by clicking Exclude in the VM Selection List row for that series (or by typing the series in the Exclude Series field. The series then appears in the Exclude Series filter in the filtering controls.
   * Include Series: You can include VMs in the Include Series field. For example, to select a GPU type, include the series and VM types
