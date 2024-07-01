@@ -46,12 +46,11 @@ The VM Selection panel provides these options:
   * Minimum no. of NICs (up to 16).
   * Turn Accelerated networking on or off.
 
-
-5. Click Apply to apply filters to the VM Selection list. All your filters are applied to the VM list. A color-coded bar appears above the list to provide a rating for the applied filter.
+6. Click **Apply** to filter the VM Selection list. All your filters are applied to the VM list. A color-coded bar appears above the list to provide a rating for the applied filter.
 
 >**Note**: An error is displayed if you define an incorrect VM type.
 
-6. Repeat the previous steps until you are satisfied with the results.
-7. Save the changes for the Virtual Node Group.
+7. Repeat the previous steps until you are satisfied with the results.
+8. Save the changes for the Virtual Node Group.
 
 
