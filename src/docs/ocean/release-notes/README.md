@@ -65,10 +65,19 @@ Spot has introduced a new Ocean label, `spotinst.io/azure-premium-storage,` inje
 >**IMPORTANT:** **Ocean Controller Version 1** will reach End-Of-Life on **November 1, 2024**. To take advantage of the benefits offered by **Ocean Controller Version 2** and receive uninterrupted service and support, upgrade to Version 2 at your earliest convenience.
 [Learn more...](https://docs.spot.io/ocean/tutorials/ocean-controller-v2/)
 
-</details><br>
+</details><be>
+
+<details>
+  <summary markdown="span">March, 2024 - click to view</summary>
+  
+* **March 25, 2024**: (**<font color="#FC01CC">AWS Kubernetes</font>**)
+Improved PDB Handling During Cluster Rolls: 
+The latest update introduces a smart batching mechanism for managing the Pod Disruption Budget (PDB) during cluster rolls. 
+This mechanism intelligently splits the nodes for rolling, ensuring that PDB constraints are respected. 
+[Learn more](https://docs.spot.io/ocean/features/roll-gen?id=respect-pod-disruption-budget) about respecting PDB during cluster roll.
 
 
-
+</details><be>
 
 
 
