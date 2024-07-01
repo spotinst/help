@@ -4,11 +4,12 @@
 
 In AKS, nodes with the same configuration are grouped into node pools, which contain the underlying VMs that run your applications.
 
-pic
+![node-pools-list](https://github.com/spotinst/help/assets/159915991/d48abfb2-b129-4581-bdc9-3d867ffb39fa)
+
 
 In Ocean, each Virtual Node Group (VNG) manages its own set of node pools, so each Virtual Node Group has multiple node pools but not vice versa.
 
-pic
+![cluster-manage-node-pools](https://github.com/spotinst/help/assets/159915991/90fdf59e-9489-4434-a7e0-95deccca4a68)
 
 AKS is responsible for launching the VMs with the given configuration and registering them with the cluster.
 Ocean uses the node pool data to get information about a VM.
