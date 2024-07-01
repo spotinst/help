@@ -62,7 +62,7 @@ This tab displays:
 
 In the context of autoscaling, bin packing savings are calculated based on the vCPU, memory, and GPU resources of the nodes that have been [Scaled Down](https://docs.spot.io/ocean/features/scaling-kubernetes?id=scale-down) by the Ocean Autoscaler. Once a minute, Ocean simulates whether any running pods can be moved to other nodes within the cluster. If so, Ocean drains those nodes to ensure continuous infrastructure optimization and increased cloud savings.   
 
-This process ensures high resource utilization, reducing the number of nodes required and the overall cost. You can see how much you're saving through this efficient resource allocation. 
+This process ensures high resource utilization, reducing the number of nodes required and the overall cost. This efficient resource allocation shows you how much you're saving. 
 
 To view these savings, click the **Bin Packing** tab (unless already displayed). 
 
@@ -101,23 +101,7 @@ To view these savings, click the **Revert to Lower Cost** tab (unless already di
 
 This tab displays:
 
-
-*   Nodes reverted to lower cost: If one or more nodes have been reverted to lower cost, the number of reverted nodes appears. Click to view the number of nodes reverted to lower cost in the selected time range in the Revert to Lower Cost window <!--I think we should add here "view the number of nodes and their information (type, cost, etc.) -->.
-
-      * Pie chart:
-         * Virtual Node Group percentage breakdown for nodes.
-      * Replacement information: an entry for each reverted node is listed with these details: <!-- I think in the below list there are too many rows since there's a duplication. Maybe we can change it to something like: Original node information.... Reverted node information... -->
-         * Instance type of original node.
-         * Instance type of reverted node.
-         * Instance ID of original node.
-         * Instance ID of reverted node.
-         * Lifecycle of original node.
-         * Lifecycle of reverted node.
-         * Hourly cost of original node.
-         * Hourly cost of reverted node.
-         * Hourly cost saved as a percentage: hourly cost of the reverted node / hourly cost of the original node * 100
-
-*   Nodes reverted to lower cost: If one or more nodes have been reverted to lower cost, the number of reverted nodes appears. Click to view the number of nodes reverted to lower cost in the selected time range in the Revert to Lower Cost window. View the types and costs of the nodes, etc.). 
+*   Nodes reverted to lower cost: If one or more nodes have been reverted to lower cost, the number of reverted nodes appears. Click to view the number of nodes reverted to lower cost in the selected time range in the Revert to Lower Cost window. View the types and costs of the nodes, etc). 
 
       * Pie chart:
          * Virtual Node Group percentage breakdown for nodes.
