@@ -27,7 +27,7 @@ The VM Selection panel provides these options:
 
  <ol style="list-style-type: lower-alpha;">
   <li>Select an option.</li>
-  <li>If you selected the Automatic option, click Save to complete the procedure. Otherwise, if you selected **Advanced VM Size Selection**, continue.</li>
+  <li>If you selected <b>Automatic</b>, click <b>Save</b> to complete the procedure. Otherwise, if you selected <b>Advanced VM Size Selection</b>, continue.</li>
   <li>In the VM Selection list, view each VM type's currently selected size, vCPU, Memory (GiB), and GPU units. </li>
  </ol>
  
