@@ -1,8 +1,6 @@
 # Ocean Release Notes
 
-**June, 2024**
-
-## Features and Enhancements 
+## June 2024: Features and Enhancements 
 
 *  **OCN-0012: June 27, 2024:** (**<font color="#FC01CC">GKE</font>**)  As of June 15, 2024, Ocean Controller Version 2 for Google Kubernetes (GKE) is officially released, bringing a host of new features and enhancements to streamline your operations.
 [Learn More...](https://docs.spot.io/ocean/tutorials/ocean-controller-v2/)
@@ -27,7 +25,7 @@ When you use this EKSCTL version to create Ocean clusters, [Ocean Controller Ver
 <details>
   <summary markdown="span">May, 2024 - click to view</summary>
 
-## Features and Enhancements
+## May 2024: Features and Enhancements
 
 * **OCN-0007: May 27, 2024:** (**<font color="#FC01CC">AKS</font>**)
 Workload Migration for Ocean **AKS** is now available in both the Ocean console and the Spot API (with new API calls) to make migrating your Kubernetes workloads to Ocean easier. Workload Migration automates draining and rescheduling pods, streamlining your **AKS** infrastructure migration to Ocean.
@@ -72,7 +70,7 @@ Spot has introduced a new Ocean label, `spotinst.io/azure-premium-storage,` inje
 <details>
   <summary markdown="span">March, 2024 - click to view</summary>
 
-## Features and Enhancements
+## March 2024: Features and Enhancements
 
 * **March 25, 2024:** (**<font color="#FC01CC">AWS Kubernetes</font>**) Improved PDB Handling During Cluster Rolls: 
 The latest update introduces a smart batching mechanism for managing the Pod Disruption Budget (PDB) during cluster rolls. 
