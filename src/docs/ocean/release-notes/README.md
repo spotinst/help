@@ -71,7 +71,7 @@ Spot has introduced a new Ocean label, `spotinst.io/azure-premium-storage,` inje
 <details>
   <summary markdown="span">March, 2024 - click to view</summary>
   
-* **March 25, 2024:** (**<font color="#FC01CC">AWS Kubernetes</font>**)
+* March 25, 2024: (<font color="#FC01CC">AWS Kubernetes</font>)
 Improved PDB Handling During Cluster Rolls: 
 The latest update introduces a smart batching mechanism for managing the Pod Disruption Budget (PDB) during cluster rolls. 
 This mechanism intelligently splits the nodes for rolling, ensuring that PDB constraints are respected. 
