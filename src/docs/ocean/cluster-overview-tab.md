@@ -134,7 +134,7 @@ The Autoscaling Activity panel contains the following widgets:
 
 This widget displays scaling-up events, which are instances when the Ocean Autoscaler increases the resources (CPU, memory, storage) in your cluster to accommodate higher workloads. A scale-up event is triggered when there are 'unschedulable' pods, i.e., pods that cannot be placed due to insufficient resources like CPU, memory, or GPU on the existing nodes. In response, Ocean Autoscaler identifies the optimal nodes to place these pods and increases the resources accordingly. This process ensures efficient resource allocation, improved performance, and shorter processing times.  
 
-Scaling up nodes also enables allocating more resources to specific tasks, improving performance, and reducing processing time. 
+Scaling up nodes also enables allocating more resources to specific tasks, improving performance and reducing processing time. 
 
 The Scale Up widget shows the number of scale-up events and scaled-up nodes in the selected time range. Tracking these events on the Autoscaling Activity panel allows you to monitor how effectively your cluster responds to workload demands. 
 
