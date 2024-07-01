@@ -2,6 +2,8 @@
 
 #  Select VMs for an AKS Virtual Node Group
 
+Cloud service provider relevance: <font color="#FC01CC">AKS</font> 
+
 This topic describes selecting VM sizes in your cluster per Virtual Node Group (custom or template) according to your application needs. An advanced attributes filter lets you search for the optimal VMs for the task from any of the VM families available on the [Azure cloud](https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/overview?tabs=breakdownseries%2Cgeneralsizelist%2Ccomputesizelist%2Cmemorysizelist%2Cstoragesizelist%2Cgpusizelist%2Cfpgasizelist%2Chpcsizelist). Once you have sized your VMs, Ocean can use your customization for its scaling processes.
 
 To select the VMs for your Cluster:
@@ -12,7 +14,7 @@ To select the VMs for your Cluster:
 
 3. Click the  **Virtual Node Groups** tab.
 
-4. In the panel on the top left of the screen, fill in and select the settings for the Virtual Node Group, such as Availability Zones and the maximum Number of pods per node.
+4. In the panel on the top left of the screen, fill in and select settings for the Virtual Node Group, such as Availability Zones and the maximum Number of pods per node.
 
 5. Scroll down to the **VM Selection** panel.
 
@@ -25,7 +27,7 @@ The VM Selection panel provides these options:
 
  <ol style="list-style-type: lower-alpha;">
   <li>Select an option.</li>
-  <li>If you selected the Automatic option, click Save to complete the procedure. Otherwise, if you selected Advanced VM Size Selection, continue.</li>
+  <li>If you selected the Automatic option, click Save to complete the procedure. Otherwise, if you selected **Advanced VM Size Selection**, continue.</li>
   <li>In the VM Selection list, view each VM type's currently selected size, vCPU, Memory (GiB), and GPU units. </li>
  </ol>
  
@@ -36,7 +38,7 @@ The VM Selection panel provides these options:
   * Upper and lower limits for the No. Of GPUs (up to 8).
   * GPU type.
   * Exclude Series: You can exclude any series by clicking Exclude in the VM Selection List row for that series (or by typing the series in the Exclude Series field. The series then appears in the Exclude Series filter in the filtering controls.
-  * Include Series: You can include VMs in the Include Series field. For example, to select a GPU type, include the series and VM types
+  * Include Series: You can include VMs in the Include Series field. For example, to select a GPU type, include the series and VM types.
   * VM Types.
   * Architectures (values taken from your Virtual Node Group template).
   * Disk performance (standard or premium).
