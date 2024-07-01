@@ -2346,6 +2346,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/tutorials/"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/kb/aws-node-termination-handler</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/kb/aws-node-termination-handler"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/kb/aws-node-termination-handler"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/kb/cant-spin-instances-invalidsnapshot</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
@@ -2358,6 +2365,13 @@
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/kb/exclude-instance-ocean"/>
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/kb/exclude-instance-ocean"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/kb/failed-import-fargate</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/kb/failed-import-fargate"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/kb/failed-import-fargate"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/kb/failed-update-instance-types</loc>
@@ -2374,6 +2388,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/kb/hostport-ecs-workloads-underutilized-nodes"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/kb/kubernetes-status-unhealthy</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/kb/kubernetes-status-unhealthy"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/kb/kubernetes-status-unhealthy"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/kb/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
@@ -2386,6 +2407,13 @@
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/kb/running-hours-spot-aws"/>
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/kb/running-hours-spot-aws"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/kb/spotinst-logs</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/kb/spotinst-logs"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/kb/spotinst-logs"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/kb/Troubleshoot-invalidblockdevicemapping-error</loc>
@@ -2407,6 +2435,13 @@
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/kb/update-imdsv2-instance-metadata"/>
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/kb/update-imdsv2-instance-metadata"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/kb/vng-failed-update</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/kb/vng-failed-update"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/kb/vng-failed-update"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/managed-instance/azure/features/actions</loc>
