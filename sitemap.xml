@@ -2360,6 +2360,27 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/kb/cant-spin-instances-invalidsnapshot"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/kb/create-aws-eventbridge</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/kb/create-aws-eventbridge"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/kb/create-aws-eventbridge"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/kb/error-awsserviceroleforec2spot</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/kb/error-awsserviceroleforec2spot"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/kb/error-awsserviceroleforec2spot"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/kb/error-cant-spin-instance</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/kb/error-cant-spin-instance"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/kb/error-cant-spin-instance"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/kb/exclude-instance-ocean</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
@@ -2388,11 +2409,25 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/kb/hostport-ecs-workloads-underutilized-nodes"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/kb/keep-jenkins-agent</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/kb/keep-jenkins-agent"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/kb/keep-jenkins-agent"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/kb/kubernetes-status-unhealthy</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/kb/kubernetes-status-unhealthy"/>
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/kb/kubernetes-status-unhealthy"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/kb/od-instance-launched</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/kb/od-instance-launched"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/kb/od-instance-launched"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/kb/</loc>
@@ -2407,6 +2442,13 @@
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/kb/running-hours-spot-aws"/>
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/kb/running-hours-spot-aws"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/kb/scaling-latency</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/kb/scaling-latency"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/kb/scaling-latency"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/kb/spotinst-logs</loc>
