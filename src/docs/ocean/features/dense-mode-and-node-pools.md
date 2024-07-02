@@ -4,7 +4,7 @@
 
 ##  AKS Node Pools
 
-In AKS, nodes with the same configuration are grouped into node pools, which contain the underlying VMs that run your applications.
+In AKS, nodes with the same configuration are grouped into node pools containing the underlying VMs that run your applications.
 
 ![node-pools-list](https://github.com/spotinst/help/assets/159915991/d48abfb2-b129-4581-bdc9-3d867ffb39fa)
 
@@ -33,7 +33,7 @@ Ocean switches to dense mode when one of these conditions is met:
 
 In dense mode, Ocean only uses existing node pools for scaling operations and does not create new ones. This can impact savings/VM availability because existing node pools and SKUs might experience price changes from Microsoft Cloud, Computers, Apps & Gaming.   
 
-During normal operation conditions (options 1+2 in the list above), other services recycle the node pools to keep them aligned with the cluster settings, such as specific SKUs, VM replacements, spot availability, etc. However, those processes will not work without creating new node pools.
+>**Note**: Other services recycle node pools to align them with the cluster settings, such as specific SKUs, VM replacements, spot availability, etc. However, those processes will not work without creating new node pools.
 
 >**Note**: logs for this feature are in the Elastilogs. More detailed logs are in the Azure_ocean_core_operations service.
 
