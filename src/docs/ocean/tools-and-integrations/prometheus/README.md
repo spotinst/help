@@ -68,6 +68,18 @@ of running instances.
 * `cluster_min_instance_count_reached` - failed to scale down. Clusters have reached the minimum capacity of
 running instances.
 
+<!-- Adding new reasons here  -->
+
+* `instance_type_is_not_supported_in_AZ` = failed to scale up. The instance type is not supported in the Availability Zone.
+* `insufficient_instance_capacity` = failed to scale up. Insufficient requested instance type in the requested zone
+* `insufficient_ip_in_subnet` = failed to scale up. Insufficient free addresses in subnet.
+* `ip_address_in_use` = failed to scale up. Can’t create spot instance in AWS for invalid parameter value.
+* `AMI_and_instance_type_architecture_mismatch` = failed to scale up. A mismatch between the architecture of the AMI set on the Virtual Node Group and the instance type to launch.
+* `invalid_request_parameter_value` = failed to scale up. Can’t create spot instance in AWS due to an invalid parameter value.
+* `request_failed_validation` = failed to scale up. Can't create spot instances in AWS due to a validation error.
+* `max_spot_instances_exceeded` = failed to scale up. The maximum limit for Spot Instances in your AWS account has been reached.
+* `rate_limit_exceeded` = failed to scale up. The number of requests has exceeded the rate limit set by AWS for your account.
+
 Prometheus metric type: counter
 
 Dimensions: `oceanId`, `reason`, `vngId`, `vngName`
