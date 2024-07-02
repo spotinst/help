@@ -2367,6 +2367,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/kb/create-aws-eventbridge"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/kb/delete-azure-stateful</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/kb/delete-azure-stateful"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/kb/delete-azure-stateful"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/kb/error-awsserviceroleforec2spot</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
@@ -2402,11 +2409,25 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/kb/failed-update-instance-types"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/kb/group-error-not-ready</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/kb/group-error-not-ready"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/kb/group-error-not-ready"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/kb/hostport-ecs-workloads-underutilized-nodes</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/kb/hostport-ecs-workloads-underutilized-nodes"/>
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/kb/hostport-ecs-workloads-underutilized-nodes"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/?/kb/increase-disk-stateful</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/kb/increase-disk-stateful"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/kb/increase-disk-stateful"/>
     </url>
     <url>
         <loc>https://docs.spot.io/?/kb/keep-jenkins-agent</loc>
