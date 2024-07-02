@@ -3,9 +3,8 @@
 # Elastigroup | Configure Scaling Policy for Latency Metric
 
 You can configure a scaling policy for latency. 
-  
-![scaling-latency1](https://github.com/spotinst/help/assets/167069628/bc4be548-a0d1-4fb3-85dd-0a32853d99c1)
 
+<img width=60% src="https://github.com/spotinst/help/assets/167069628/bc4be548-a0d1-4fb3-85dd-0a32853d99c1">
 
 <font color="#7632FE"> where do you do this? this is what I found in the documentation:
 1. In the Elastigroup, go to the Scaling tab.
