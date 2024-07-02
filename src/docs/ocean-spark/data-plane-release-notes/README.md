@@ -1,5 +1,16 @@
 # Cluster Release Notes
 
+## [0.4.20-77] - 2024-07-02
+
+Changelog
+
+- [0.4.20] bigdata-operator
+  - use spark watcher 0.5.17
+  - restart no longer required when installing new Ocean controller
+
+- [0.5.17] bigdata-spark-watcher
+  - restart no longer required when installing new Ocean controller
+
 ## [0.4.19-76] - 2024-06-11
 
 Changelog
