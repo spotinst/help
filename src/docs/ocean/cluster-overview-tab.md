@@ -8,7 +8,8 @@ The Ocean Cloud Cluster Overview dashboard is divided into the following panels:
 
 *   **Ocean Savings panel**: Shows the amount of money, CPU, memory, and GPU compute resources saved when you utilize Ocean to manage your Kubernetes cluster. Specifically, these are savings from running spot instances, bin packing, and reverting to lower-cost nodes. 
 
-* **Autoscaling Activity panel**: The Ocean Autoscaler automatically performs scale-up and scale-down, autohealing, and reverts nodes to lower-cost nodes, spots, and commitments based on resources or availability. This panel shows a summary of these autoscaling activities as widgets. In addition, an interactive Autoscaling Activity graph lets you display data at a specific point in time.
+* **Autoscaling Activity panel**: The Ocean Autoscaler automatically performs scale-up and scale-down, autohealing, and reverts nodes to lower-cost nodes, spots, and commitments based on resources or availability. This panel shows a summary of these autoscaling activities as widgets.
+<!--In addition, an interactive Autoscaling Activity graph lets you display data at a specific point in time. -->
 
 Add info about the Autoscaling Activity graph
 
@@ -66,8 +67,6 @@ This process ensures high resource utilization, reducing the number of nodes req
 
 To view these savings, click the **Bin Packing** tab (unless already displayed). 
 
-[placeholder for graphic when available]
-
 This tab displays: 
 
 *   Scaled-down nodes: If one or more nodes have been scaled down, the number of scaled-down nodes appears. Click to view the number of nodes scaled down in the selected time range in the Bin Packing window. An entry for each scaled-down node is listed with these details:
@@ -81,8 +80,6 @@ This tab displays:
 Cloud-cluster-overview-changes
          * Lifecycle.
          * Scale-Down Timestamp, for example 06/25/2023 09:23:15   
-
-[placeholder for graphic when available]
 
 *   Resource savings from bin packing in the following units:  
     * CPU resources saved in vCPU Hours. 
@@ -130,7 +127,7 @@ The Autoscaling Activity panel contains the following widgets:
 
 *   Scale Up widget. 
 *   Set of Continuous Optimization widgets.
-*   Autoscaler graph.
+<!--*   Autoscaler graph.-->
 
 ### Scale Up 
 
@@ -189,7 +186,6 @@ Auto Healing monitors the status of each Kubernetes node by examining the condit
 The Autohealing widget shows the number of events for which AWS autohealing replaced an unhealthy instance with a healthy instance. By monitoring these autohealing events on the Autoscaling Activity panel, you can track how effectively Ocean Autoscaler maintains your cluster's health and resilience to failures. 
 
 ###   Autoscaling Activity Graph
-<!-- A few notes - we need to add that the timeframe selection should be less than 12 hours to view events on the graph. I would also like you to add a screenshot of an event in the graph to make it clearer. In addition, I would like to share with you a different screenshot, one that is better in terms of allocation, so it will look better and more reliable. -->
 
 The Autoscaling Activity Graph provides intuitive insights into the interaction between the Ocean infrastructure and the applications it supports. It also provides cluster activity insights at a granular 
 level so you can see why the Ocean Autoscaler triggered a specific scale event within the cluster.
