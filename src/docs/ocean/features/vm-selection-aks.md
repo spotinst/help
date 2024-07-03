@@ -1,5 +1,3 @@
-<meta name=“robots” content=“noindex”>
-
 #  Select VMs for an AKS Virtual Node Group
 
 Cloud service provider relevance: <font color="#FC01CC">AKS</font> 
