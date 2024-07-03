@@ -49,6 +49,7 @@
     - [Migrate AKS Workload to Ocean](ocean/tutorials/migrate-workload-aks)
       - [Migrate using the Console](ocean/tutorials/migrate-workload-aks-ui)
       - [Migrate using API](ocean/tutorials/migrate-workload-aks-api)
+      - [Migration Troubleshooting](ocean/tutorials/migrate-aks-troubleshooting)
       - [Upgrade AKS Clusters](ocean/tips-and-best-practices/upgrade-aks-cluster)
     - [Mount FSx for ONTAP to Kubernetes Pods](ocean/tutorials/mount-fsx-for-ontap-volumes-to-kubernetes-pods)
     - [Revert to Lower-Cost Node](ocean/features/revert-to-lower-cost-node)
