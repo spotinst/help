@@ -1,6 +1,6 @@
 # Ocean Controller Version 2 
 
-Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>, <font color="#FC01CC">GKE</font> 
+Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>, <font color="#FC01CC">GKE</font>, and <font color="#FC01CC">AKS</font> 
 
 The Ocean Controller is a pod that resides inside your Kubernetes cluster, facilitating seamless integration with the Spot platform. By collecting metrics and events and reporting them to the Spot SaaS environment, the Controller empowers Ocean to manage, control, and optimize your infrastructure autonomously. With the Ocean Controller, you can effortlessly harness the capabilities of the Spot platform while ensuring efficient infrastructure management.
 
