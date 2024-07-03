@@ -124,7 +124,7 @@ Additional Tips:
 
 ### Step 1.3: Connectivity  
 
-This step describes how the Ocean integration starts and the installation of the [Ocean Controller](ocean/tutorials/spot-kubernetes-controller/) (as a Deployment) in your AKS cluster. This establishes the connection between the Ocean SaaS backend engine and your cluster. This step does not affect existing workloads which continue to run on existing nodes in node pools managed by AKS. 
+This step describes how the Ocean integration starts and the installation of the [Ocean Controller](ocean/tutorials/ocean-controller-v2/) (as a Deployment) in your AKS cluster. This establishes the connection between the Ocean SaaS backend engine and your cluster. This step does not affect existing workloads which continue to run on existing nodes in node pools managed by AKS. 
 
 Complete the following steps: 
 
