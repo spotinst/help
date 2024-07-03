@@ -11,9 +11,7 @@
 
 ### Added
 * Improved event pushing mechanism - we are now spliting events into chunks to avoid large gRPC messages.
-* Improved controller heartbeat mechanism:
-  * Controller now reports its configuration to the backend which should help with troubleshooting.
-  * Controller health checks can now be based on backend logic.
+* Improved controller heartbeat mechanism.
 * Support `http` and `https` formats for the `base-url` key in the controller's configmap. Internally we are converting into `HOSTNAME:PORT` format for the gRPC client.
 
 ## [2.0.57] - 2024-05-06
@@ -39,7 +37,7 @@
    </p>
 
     <p>
-    Also, we know validate read permissions for each resource before initializing the informers.
+    Also, we now validate read permissions for each resource before initializing the informers.
     </p>
 
 ## [2.0.53] - 2024-04-18
@@ -49,7 +47,7 @@
 * Initial support for GCP - support CSR approval mechanism.
 
 ### Bug Fixes
-* Sync process now runs immediately after a new leader is elected. Instead of waiting for the regular interval.
+* Sync process now runs immediately after a new leader is elected.
 
 ## [2.0.52] - 2024-04-02
 
