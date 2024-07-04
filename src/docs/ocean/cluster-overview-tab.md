@@ -76,7 +76,8 @@ This tab displays:
          * Lifecycle percentage breakdown (On-Demand, Savings Plans, Reserved Instances, and spots).
       * List:
          * Instance ID. 
-         * Virtual Node Group: You can click the link for a listed VNG to display your custom VNG details. 
+         * Virtual Node Group: You can click the link for a listed VNG to display your custom VNG details.
+         * Node Pools (AKS only).
 Cloud-cluster-overview-changes
          * Lifecycle.
          * Scale-Down Timestamp, for example 06/25/2023 09:23:15   
