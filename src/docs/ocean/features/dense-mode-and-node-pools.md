@@ -32,6 +32,7 @@ Ocean switches to dense mode when one of these conditions is met:
 
 In dense mode, Ocean only uses existing node pools for scaling operations and does not create new ones.
 
+During normal operation conditions, other services recycle the node pools to align them with the cluster settings, such as specific SKUs, VM replacements, spot availability, etc. However, those processes will not work without creating new node pools.
 
 >**Note**: logs for this feature are in the Elastilogs (console Logs tab). 
 
