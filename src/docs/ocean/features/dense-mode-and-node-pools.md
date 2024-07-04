@@ -15,11 +15,10 @@ In Ocean, each Virtual Node Group (VNG) manages its own set of node pools, so ea
 
 AKS is responsible for launching the VMs with the given configuration and registering them with the cluster.
 Ocean uses the node pool data to get information about a VM.
-Managing node pools is challenging when considering scaling up because the maximum number of node pools in an AKS cluster is 100, though the number may be lower in practice.
 
 ##  Dense Scaling Mode
 
-For Ocean with AKS 2.0, new nodes are scaled up using AKS’s node pools in accordance with the native AKS method for launching nodes.
+For Ocean with AKS, new nodes are scaled up using AKS’s node pools in accordance with the native AKS method for launching nodes.
 
 Due to the limited number of node pools in AKS clusters, Ocean considers Market Density and scales from existing node pools. 
 
@@ -31,9 +30,8 @@ Ocean switches to dense mode when one of these conditions is met:
 
 * The Azure AKS version is not supported: Ocean switches to dense mode when the cluster cannot create new node pools and can only scale existing ones because Azure no longer supports the AKS version used by the cluster. 
 
-In dense mode, Ocean only uses existing node pools for scaling operations and does not create new ones. This can impact savings/VM availability because existing node pools and SKUs might experience price changes from Microsoft Cloud, Computers, Apps & Gaming.   
+In dense mode, Ocean only uses existing node pools for scaling operations and does not create new ones.
 
->**Note**: Other services recycle node pools to align them with the cluster settings, such as specific SKUs, VM replacements, spot availability, etc. However, those processes will not work without creating new node pools.
 
->**Note**: logs for this feature are in the Elastilogs. More detailed logs are in the Azure_ocean_core_operations service.
+>**Note**: logs for this feature are in the Elastilogs (console Logs tab). 
 
