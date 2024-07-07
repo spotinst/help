@@ -24,12 +24,12 @@ Due to the limited number of node pools in AKS clusters, Ocean considers Market 
 
 In normal operation, Ocean creates new node pools to extend the number of markets. 
 
-During normal operation conditions, other services recycle the node pools to align them with the cluster settings, such as specific SKUs, VM replacements, spot availability, etc. However, those processes will not work without creating new node pools.
+During normal operation conditions, other services recycle the node pools to align them with the cluster settings, such as specific SKUs, VM replacements, spot availability, etc. However, those processes will not work without the ability to create new node pools.
 
 Ocean switches to dense mode when one of these conditions is met:
 
 * The number of active node pools in the Virtual Node Group reaches saturation (dynamically determined and based on an algorithm): When this occurs, Ocean scales its node pools in dense mode without affecting node pools from other Virtual Node Groups.
 
-* The Azure AKS version is not supported: Ocean switches to dense mode when the cluster cannot create new node pools and can only scale existing ones because Azure no longer supports the AKS version used by the cluster. 
+* The Azure AKS version is not supported: Ocean switches to dense mode when the cluster cannot create new node pools (Azure AKS Limitation) and can only scale existing ones because Azure no longer supports the AKS version used by the cluster.
 
 In dense mode, Ocean only uses existing node pools for scaling operations and does not create new ones.
