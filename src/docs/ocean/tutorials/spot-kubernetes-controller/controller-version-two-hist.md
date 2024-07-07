@@ -1,5 +1,15 @@
 # Ocean Controller Version 2 History
 
+
+## [2.0.62] - 2024-07-07
+
+### Bug Fixes
+* Fixed Auto Update feature to accommodate long Helm release names.
+* Updated the node configuration reconciler to match the behavior of Controller V1, ensuring configurations are applied a single time. This change permits users to append taints and labels subsequent to the initial reconciliation process without interference.
+
+### Added
+* Added mechanism for detecting stale cache resources (https://github.com/kubernetes/client-go/issues/571).
+
 ## [2.0.59] - 2024-06-03
 
 ### Added
