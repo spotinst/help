@@ -77,7 +77,7 @@ This tab displays:
       * List:
          * Instance ID. 
          * Virtual Node Group: You can click the link for a listed VNG to display your custom VNG details.
-         * Node Pools (AKS only).
+         <!--* Node Pools (AKS only).-->
          * Lifecycle.
          * Scale-Down Timestamp, for example 06/25/2023 09:23:15   
 
@@ -94,8 +94,6 @@ Ocean savings for reverting to a lower-cost node are calculated from the differe
 
 To view these savings, click the **Revert to Lower Cost** tab (unless already displayed). 
 
-[placeholder for graphic when available]
-
 This tab displays:
 
 *   Nodes reverted to lower cost: If one or more nodes have been reverted to lower cost, the number of reverted nodes appears. Click to view the number of nodes reverted to lower cost in the selected time range in the Revert to Lower Cost window. View the types and costs of the nodes, etc). 
@@ -108,10 +106,7 @@ This tab displays:
          * Lifecycle of the original and reverted nodes.
          * Hourly cost of the original and reverted nodes.
          * Hourly cost saved as a percentage: hourly cost of the reverted node / hourly cost of the original node * 100.
-Cloud-cluster-overview-changes
          * The Virtual Node Group's name (click the link for a listed VNG to display your custom VNG details).
-
-[placeholder for graphic when available]
 
 *   Resource savings from reverting to lower cost in the following units:  
      * CPU resources saved in vCPU Hours. 
