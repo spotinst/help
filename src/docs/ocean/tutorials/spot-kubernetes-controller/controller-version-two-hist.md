@@ -4,8 +4,8 @@
 ## [2.0.62] - 2024-07-07
 
 ### Bug Fixes
-* Fixed auto update feature not working when helm release name is too long.
-* Aligned node configuration reconciler behavior with controller V1. Now the configuration is applied only once and users may add taints and labels after the initial reconciliation.
+* Fixed Auto Update feature to accommodate long Helm release names.
+* Updated the node configuration reconciler to match the behavior of Controller V1, ensuring configurations are applied a single time. This change permits users to append taints and labels subsequent to the initial reconciliation process without interference.
 
 ### Added
 * Added mechanism for detecting stale cache resources (https://github.com/kubernetes/client-go/issues/571).
