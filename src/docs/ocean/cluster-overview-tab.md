@@ -77,7 +77,6 @@ This tab displays:
       * List:
          * Instance ID. 
          * Virtual Node Group: You can click the link for a listed VNG to display your custom VNG details.
-         <!--* Node Pools (AKS only).-->
          * Lifecycle.
          * Scale-Down Timestamp, for example 06/25/2023 09:23:15   
 
