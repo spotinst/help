@@ -1,5 +1,9 @@
 # Ocean Controller Version 2 History
 
+## [2.0.63] - 2024-07-07
+
+### Bug Fixes
+* GCP - improved CSR approval mechanism.
 
 ## [2.0.62] - 2024-07-07
 
