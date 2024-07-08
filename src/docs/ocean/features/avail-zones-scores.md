@@ -7,7 +7,7 @@ The Availability Zones scores data directly relates to the allowed instance type
 
 To access the Ocean Availability Zones Recommendations:
 
-1.  In the left main menu, click **Ocean** and click **Cloud Clusters**.
+1.  In the left main menu, click **Ocean** > **Cloud Clusters**.
 2.  Select a cluster from the list of clusters.
 3.  Click the **Recommendations tab**.
 4.  Select a Virtual Node Group.
