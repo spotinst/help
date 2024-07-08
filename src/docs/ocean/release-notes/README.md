@@ -1,5 +1,17 @@
 # Ocean Release Notes
 
+## July 2024: Features and Enhancements 
+
+
+* **OCN-0013: July 08, 2024:** [Ocean Documentation Update] (**<font color="#FC01CC">AKS</font>**) We have added these new topics to the Ocean AKS documentation:
+   * [Dense Mode and Node Pools](https://docs.spot.io/ocean/features/dense-mode-and-node-pools)
+   * [Select VMs for an AKS Virtual Node Group](https://docs.spot.io/ocean/features/vm-selection-aks)
+     
+ 
+
+<details>
+  <summary markdown="span">June, 2024 - click to view</summary>
+
 ## June 2024: Features and Enhancements 
 
 *  **OCN-0012: June 27, 2024:** (**<font color="#FC01CC">GKE</font>**)  As of June 15, 2024, Ocean Controller Version 2 for Google Kubernetes (GKE) is officially released, bringing a host of new features and enhancements to streamline your operations.
@@ -20,6 +32,8 @@ Read and troubleshoot the Ocean logs in the same central interface where you acc
 Spot has released EKSCTL [v0.180.0](https://github.com/spotinst/weaveworks-eksctl/releases/tag/v0.180.0).  
 When you use this EKSCTL version to create Ocean clusters, [Ocean Controller Version 2](https://docs.spot.io/ocean/tutorials/ocean-controller-v2/.) is used.
 >**Prerequisite**: Helm installed.
+
+</details><br>
 
 
 <details>
