@@ -1,5 +1,3 @@
-<meta name=“robots” content=“noindex”>
-
 #  Dense Mode and Node Pools
 
 ##  AKS Node Pools
