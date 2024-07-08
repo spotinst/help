@@ -64,7 +64,7 @@ The Update Configured AZ(s) dialog box lets you edit, add, and change the config
 
 The currently configured Availability Zones are pre-selected.
 
->**NOTE**: Availability Zones may appear gray, indicating no available subnets.
+>**NOTE**: All non-selected Availability Zones are grayed, but for those without subnets, a placeholder displays "This AZ doesn’t include subnets" (not clickable). If you want to configure such an Availability Zone, you must create subnets.
 
 >**IMPORTANT**: If the subnets are not set on the [Virtual Node Group](https://docs.spot.io/ocean/tutorials/manage-virtual-node-groups) ('subnets' = null) but are taken from the Virtual Node Group template (default VNG), an information banner will appear in the dialog box to inform you that updating will override the Virtual Node Group Template configuration, and will affect all the custom Virtual Node Groups with ‘subnets’ = null.
 
