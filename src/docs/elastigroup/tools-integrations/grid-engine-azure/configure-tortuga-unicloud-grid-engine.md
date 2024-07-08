@@ -28,7 +28,7 @@ Tortuga uses hardware profiles to manage node registration. For Elastigroup a re
 > set-profile-mapping --software-profile execd-elastigroup --hardware-profile elastigroup
 ```
 
-## Step 3: Associate Software Profile With UGE
+### Step 3: Associate Software Profile With UGE
 
 ```
 > enable-component --software-profile execd-elastigroup --no-sync execd
