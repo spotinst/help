@@ -60,6 +60,7 @@
     - [Scaling (Kubernetes)](ocean/features/scaling-kubernetes)
     - [Scaling Constraints View](ocean/tutorials/view-scaling-constraints)
     - [Scaling (ECS)](ocean/features/scaling-ecs)
+    - [Scaling-Dense Mode (AKS)](ocean/features/dense-mode-and-node-pools)
     - [Shutdown Hours](ocean/features/running-hours)
       - [Set Shutdown Hours](ocean/tutorials/set-running-hours)
     - [Virtual Node Groups](ocean/features/vngs/)
