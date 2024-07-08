@@ -1,13 +1,13 @@
 <meta name=“robots” content=“noindex”>
 
 #  Availability Zones Recommendations for EKS
-Availability Zones scores and recommendations help you make informed decisions when selecting the best availability Zones for launching instances. The data on the Recommendations tab for a cluster is based on the Availability Zones scores calculated by Ocean, considering both Cost and Spot market availability. 
+Availability Zones scores and recommendations help you make informed decisions when selecting the best availability Zones for launching instances in your Kubernetes cluster. The data on the Recommendations tab for a cluster is based on the Availability Zones scores calculated by Ocean, considering both Cost and Spot market availability. 
 
 The Availability Zones scores data directly relates to the allowed instance types configured in your Virtual Node Group to ensure that customized data is displayed.
 
 To access the Ocean Availability Zones Recommendations:
 
-1.  In the left main menu, click **Ocean** and click **Cloud Clusters**.
+1.  In the left main menu, click **Ocean** > **Cloud Clusters**.
 2.  Select a cluster from the list of clusters.
 3.  Click the **Recommendations tab**.
 4.  Select a Virtual Node Group.
@@ -36,7 +36,7 @@ The recommendations are data-driven, considering instance interruptions and mach
 
 The Average Monthly Score Breakdown is relative to the Spot market’s set within the cluster and is based on data collected from the past month. The scores consider the relevant instance types selected in the group when calculating the recommendation score for the Availability Zones.
 
->**Tip**: Click **How is it calculated** on the Recommendations Card to view the details of the Avg. Monthly Score calculation.
+>**Tip**: Click **How is it calculated** on the Recommendations Card to view this documentation.
 
 ##  Score Graph
 
