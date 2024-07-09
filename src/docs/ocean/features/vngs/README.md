@@ -1,65 +1,65 @@
 # Virtual Node Groups
 
-Virtual Node Groups (VNGs) provide a single layer of abstraction that enables users to manage different types of workloads on the same cluster.
+Virtual Node Groups (VNGs) provide a single abstraction layer that enables users to manage different types of workloads on the same cluster.
 
-Formerly called launch specifications in the Ocean console, VNGs define cloud infrastructure properties and offer a wider feature set for governance mechanisms, scaling attributes, and networking definitions. VNGs give users more visibility into resource allocation with a new layer of monitoring. VNGs also provide more flexibility to edit and manage settings such as headroom, block device mapping, and maximum nodes.
+Formerly called launch specifications in the Ocean console, Virtual Node Groups define cloud infrastructure properties and offer a wider feature set for governance mechanisms, scaling attributes, and networking definitions. They give users more visibility into resource allocation with a new layer of monitoring and provide more flexibility to edit and manage settings such as headroom, block device mapping, and maximum nodes.
 
 ### Note on Terminology
 
-A VNG is the same as a launch specification. VNG is used throughout Spot documentation, but launch specification may still be used in some places in the API. Equivalent terms that are used in the industry include node groups and node pools.
+A Virtual Node Group is the same as a launch specification. Virtual Node Group is used throughout Spot documentation, but launch specifications may still be used in some places in the API. Equivalent terms used in the industry include node groups and node pools.
 
 <img src="/ocean/_media/features-vngs-01.png" width="578" height="69" />
 
-## What’s a VNG?
+## What’s a Virtual Node Group?
 
-A VNG is a subset of nodes on a cluster that you can configure for a specific purpose. VNGs allow you to configure multiple types of infrastructure configuration on the same Ocean cluster. Below are some examples of common uses for VNGs.
+A Virtual Node Group is a subset of nodes on a cluster that you can configure for a specific purpose. Virtual Node Groups allow you to configure multiple types of infrastructure configuration on the same Ocean cluster. Below are some examples of common uses for Virtual Node Groups.
 
-Example 1: The default image for nodes in your Ocean cluster is for Linux. However, you need some nodes in the cluster to run Windows. You can use a VNG to set this up. Your VNG nodes will run Windows, while the rest of the Ocean cluster remains on Linux.
+Example 1: The default image for nodes in your Ocean cluster is for Linux. However, you need some nodes in the cluster to run Windows. You can use a Virtual Node Group to set this up. Your Virtual Node Group nodes will run Windows, while the rest of the Ocean cluster remains on Linux.
 
-Example 2: You have some applications in your cluster that have significantly different usage requirements from the rest of the cluster, e.g., performance, scaling, and security requirements. You can create a VNG that configures nodes suitable for the pods these applications are running on.
+Example 2: Some applications in your cluster have significantly different usage requirements from the rest of the cluster, such as performance, scaling, and security requirements. You can create a Virtual Node Group configuring nodes suitable for the pods these applications run on.
 
 ## How it works
 
-To create a VNG in Ocean, you configure sets of labels and taints (Kubernetes) or attributes (ECS) to go along with a custom image, instance profile, security groups, and a user data script that will be used for the nodes that will serve your labeled workloads.
+To create a Virtual Node Group in Ocean, you configure sets of labels and taints (Kubernetes) or attributes (ECS), along with a custom image, instance profile, security groups, and a user data script, which will be used for the nodes that will serve your labeled workloads.
 
-For pods without constraints configured, Ocean will choose the VNG with the most chances to serve other pods in the future (meaning the VNG with the most labels). If no VNG is able to serve such a pod, Ocean will use the internal configuration set on the Ocean cluster object.
+For pods without constraints configured, Ocean will choose the Virtual Node Group with the most chances to serve other pods in the future (meaning the Virtual Node Group with the most labels). If no Virtual Node Group can serve such a pod, Ocean will use the internal configuration set on the Ocean cluster object.
 
-In addition, any configuration parameter that is not configured explicitly in a VNG will be inherited from the internal configuration.
+In addition, any configuration parameter that is not configured explicitly in a Virtual Node Group will be inherited from the internal configuration.
 
-### Prioritization of Pods on VNGs
+### Prioritization of Pods on Virtual Node Groups
 
-A pod could be scheduled on multiple VNGs. In this case, Ocean has to prioritize on which VNG to launch an instance first. Ocean uses the following method:
+A pod could be scheduled on multiple Virtual Node Groups. In this case, Ocean must first prioritize which Virtual Node Group to launch an instance. Ocean uses the following method:
 
-- If the pod has a preferred affinity that matches one of the VNGs, Ocean prioritizes according to the affinity.
-- Otherwise, Ocean prioritizes the least restrictive VNG in the order of the following criteria:
+- If the pod has a preferred affinity that matches one of the Virtual Node Groups, Ocean prioritizes according to the affinity.
+- Otherwise, Ocean prioritizes the least restrictive Virtual Node Group in the order of the following criteria:
   1. Highest maximum instance count parameter
   2. Highest spot percentage
   3. Highest availability zone count
   4. Highest Instance type count
 
-> **Note**: If one VNG has an explicit configuration and the other has an empty value, the VNG with the empty value will have a higher priority.
+> **Note**: If one Virtual Node Group has an explicit configuration and the other has an empty value, the Virtual Node Group with the empty value will have a higher priority.
 
-## VNG Creation
+## Virtual Node Group Creation
 
-You can create new VNGs or reconfigure existing ones at any time after the cluster is created. In addition, it is possible to import an autoscaling group configuration from AWS and create a VNG in your Ocean cluster using that configuration.
+You can create new Virtual Node Groups or reconfigure existing ones at any time after the cluster is created. In addition, you can import an autoscaling group configuration from AWS and create a Virtual Node Group in your Ocean cluster using that configuration.
 
-## Default VNG
+## Default Virtual Node Group
 
-The specification configured in the Ocean cluster object is referred to as the Default VNG. This definition is used for the following reasons:
+The specification configured in the Ocean cluster object is called the Default Virtual Node Group. This definition is used for the following reasons:
 
 - Ocean uses this specification as the last option out of all the possible Virtual Node Groups to serve the workload.
-- For ECS clusters, the default VNG takes priority. If you need to change this behavior, contact the [Spot Support team](https://spot.io/support/).
-- At runtime, Ocean uses this default VNG as a template for the other VNGs defined, as it effectively uses parameters that are not explicitly set by the user in a VNG object.
+- For ECS clusters, the default Virtual Node Group takes priority. If you need to change this behavior, contact the [Spot Support team](https://spot.io/support/).
+- At runtime, Ocean uses this default Virtual Node Group as a template for the other Virtual Node Groups defined, as it effectively uses parameters that are not explicitly set by the user in a Virtual Node Group object.
 
 This methodology minimizes the effort of creating and maintaining multiple infrastructure configurations in a single cluster.
 
-There is an option to set the Ocean configuration to be a template only for other VNG's. This means that the default VNG will be only a template and we would not be able to launch an instance from it as a fallback. In this case, you would need at least one VNG so that the cluster could scale.
+There is an option to set the Ocean configuration as a template only for other Virtual Node Groups. This means that the default Virtual Node Group will only be a template, and Ocean cannot launch an instance from it as a fallback. In this case, you would need at least one Virtual Node Group to scale the cluster.
 
-You can configure this option in the JSON view of the default VNG or in the JSON of the cluster with the parameter `launchSpecification.useAsTemplateOnly`. Note that the parameter is case sensitive.
+You can configure this option in the JSON view of the default Virtual Node Group or the cluster's JSON with the parameter `launchSpecification.useAsTemplateOnly`. Note that the parameter is case-sensitive.
 
-In AKS, the default behaviour is that the Ocean configuration is the template.
+In AKS, the default behavior is that the Ocean configuration is the template.
 
-Ocean takes the following parameters from the default VNG unless explicitly set in a VNG.
+Ocean takes the following parameters from the default Virtual Node Group unless explicitly set in a Virtual Node Group.
 
 <details>
   <summary markdown="span">AWS Kubernetes</summary>
@@ -101,6 +101,20 @@ Ocean takes the following parameters from the default VNG unless explicitly set 
 - Root volume size
 
 </details><br>
+
+
+<details>
+  <summary markdown="span">AKS</summary>
+
+ - Kubernetes Version
+ - Automatic and Advanced VM Size Selection
+ - Availability zone (1,2,3 +0 )
+ - Root volume type
+ - OS SKU type
+ - Max pods per VM
+
+ </details><br> 
+
 
 ## Learn more about:
 
