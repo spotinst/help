@@ -102,6 +102,13 @@ Ocean takes the following parameters from the default VNG unless explicitly set 
 
 </details><br>
 
+
+<details>
+  <summary markdown="span">AKS</summary>
+
+ </details><br> 
+
+
 ## Learn more about:
 
 - [Attributes per VNG](ocean/features/vngs/attributes-and-actions-per-vng).
