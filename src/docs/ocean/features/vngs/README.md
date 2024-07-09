@@ -6,13 +6,13 @@ Formerly called launch specifications in the Ocean console, VNGs define cloud in
 
 ### Note on Terminology
 
-A VNG is the same as a launch specification. VNG is used throughout Spot documentation, but launch specifications may still be used in some places in the API. Equivalent terms used in the industry include node groups and node pools.
+A Virtual Node Group is the same as a launch specification. Virtual Node Group is used throughout Spot documentation, but launch specifications may still be used in some places in the API. Equivalent terms used in the industry include node groups and node pools.
 
 <img src="/ocean/_media/features-vngs-01.png" width="578" height="69" />
 
-## What’s a VNG?
+## What’s a Virtual Node Group?
 
-A VNG is a subset of nodes on a cluster that you can configure for a specific purpose. VNGs allow you to configure multiple types of infrastructure configuration on the same Ocean cluster. Below are some examples of common uses for VNGs.
+A Virtual Node Group is a subset of nodes on a cluster that you can configure for a specific purpose. VNGs allow you to configure multiple types of infrastructure configuration on the same Ocean cluster. Below are some examples of common uses for VNGs.
 
 Example 1: The default image for nodes in your Ocean cluster is for Linux. However, you need some nodes in the cluster to run Windows. You can use a VNG to set this up. Your VNG nodes will run Windows, while the rest of the Ocean cluster remains on Linux.
 
@@ -20,7 +20,7 @@ Example 2: Some applications in your cluster have significantly different usage 
 
 ## How it works
 
-To create a VNG in Ocean, you configure sets of labels and taints (Kubernetes) or attributes (ECS), along with a custom image, instance profile, security groups, and a user data script, which will be used for the nodes that will serve your labeled workloads.
+To create a Virtual Node Group in Ocean, you configure sets of labels and taints (Kubernetes) or attributes (ECS), along with a custom image, instance profile, security groups, and a user data script, which will be used for the nodes that will serve your labeled workloads.
 
 For pods without constraints configured, Ocean will choose the VNG with the most chances to serve other pods in the future (meaning the VNG with the most labels). If no VNG can serve such a pod, Ocean will use the internal configuration set on the Ocean cluster object.
 
@@ -28,7 +28,7 @@ In addition, any configuration parameter that is not configured explicitly in a 
 
 ### Prioritization of Pods on VNGs
 
-A pod could be scheduled on multiple VNGs. In this case, Ocean has to prioritize on which VNG to launch an instance first. Ocean uses the following method:
+A pod could be scheduled on multiple VNGs. In this case, Ocean must first prioritize which Virtual Node Group to launch an instance. Ocean uses the following method:
 
 - If the pod has a preferred affinity that matches one of the VNGs, Ocean prioritizes according to the affinity.
 - Otherwise, Ocean prioritizes the least restrictive VNG in the order of the following criteria:
@@ -55,7 +55,7 @@ This methodology minimizes the effort of creating and maintaining multiple infra
 
 There is an option to set the Ocean configuration as a template only for other Virtual Node Groups. This means that the default Virtual Node Group will only be a template, and Ocean cannot launch an instance from it as a fallback. In this case, you would need at least one Virtual Node Group to scale the cluster.
 
-You can configure this option in the JSON view of the default Virtual Node Group or in the cluster's JSON with the parameter `launchSpecification.useAsTemplateOnly`. Note that the parameter is case-sensitive.
+You can configure this option in the JSON view of the default Virtual Node Group or the cluster's JSON with the parameter `launchSpecification.useAsTemplateOnly`. Note that the parameter is case-sensitive.
 
 In AKS, the default behavior is that the Ocean configuration is the template.
 
