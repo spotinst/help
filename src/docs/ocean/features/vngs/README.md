@@ -106,6 +106,13 @@ Ocean takes the following parameters from the default VNG unless explicitly set 
 <details>
   <summary markdown="span">AKS</summary>
 
+ - Kubernetes Version
+ - Automatic and Advanced VM Size Selection
+ - Availability zone (1,2,3 +0 )
+ - Root volume type
+ - OS SKU type
+ - Max pods per VM
+
  </details><br> 
 
 
