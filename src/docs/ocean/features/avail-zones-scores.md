@@ -1,8 +1,8 @@
-#  Availability Zones Recommendations for AWS Kubernetes
+#  Availability Zones Recommendations (AWS Kubernetes)
 
 Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>  
 
-Availability Zones scores and recommendations help you make informed decisions when selecting the best availability Zones for launching instances in your Kubernetes cluster. The data on the Recommendations tab for a cluster is based on the Availability Zones scores calculated by Ocean, considering both Cost and Spot market availability. 
+Availability Zones scores and recommendations help you make informed decisions when selecting the best Availability Zones for launching instances in your Kubernetes cluster. The data on the Recommendations tab for a cluster is based on the Availability Zones scores calculated by Ocean, considering both Cost and Spot market availability. 
 
 The Availability Zones scores data directly relates to the allowed instance types configured in your Virtual Node Group to ensure that customized data is displayed.
 
