@@ -1,4 +1,4 @@
-#  Availability Zones Recommendations for AWS Kubernetes
+#  Availability Zones Recommendations (AWS Kubernetes)
 
 Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>  
 
