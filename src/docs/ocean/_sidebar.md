@@ -24,6 +24,7 @@
   - [Features](ocean/features/)
     - [AMI Auto-Update (EKS)](ocean/features/eks-auto-ami)
     - [Auto-Update Process (GKE)](ocean/features/auto-update-process-gke)
+    - [Availability Zones Recommendations - AWS Kubernetes](ocean/features/avail-zones-scores)
     - [Connect a Fargate Service](elastigroup/tutorials/amazon-ecs/import-fargate-services-to-ecs-elastigroup)
     - [Cluster Orientation](ocean/features/cluster-orientation)
     - [Cost Analysis](ocean/features/cost-analysis)
