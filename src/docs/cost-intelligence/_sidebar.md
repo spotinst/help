@@ -20,4 +20,4 @@
       - [Sending Emails](cost-intelligence/tutorials/workflow-builder/configuring-and-sending-emails)
       - [Basic Alerts for Budgets and Thresholds](cost-intelligence/tutorials/workflow-builder/configuring-budgets-thresholds)
     - [Administration](cost-intelligence/tutorials/administration/)
- 
+      - [FinOps Permission Policies](cost-intelligence/tutorials/administration/policies)
