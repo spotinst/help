@@ -2,7 +2,7 @@
 
 ## July 2024: Features and Enhancements 
 
-* **OCN-0014: July 09, 2024:** (**<font color="#FC01CC">AWS Kubernetes</font>**) Ocean now lets you use scores and recommendations to make informed decisions when selecting the best Availability Zones for launching instances in your Kubernetes cluster. [Learn More...](https://docs.spot.io/ocean/features/avail-zones-scores)
+* **OCN-0014: July 09, 2024:** (**<font color="#FC01CC">AWS Kubernetes</font>**) Ocean now lets you use recommendations to make informed decisions when selecting the best Availability Zones for launching instances in your Kubernetes cluster. [Learn More...](https://docs.spot.io/ocean/features/avail-zones-scores)
 
 
 * **OCN-0013: July 08, 2024:** [Ocean Documentation Update] (**<font color="#FC01CC">AKS</font>**) We have added these new topics to the Ocean AKS documentation:
