@@ -3,7 +3,7 @@
 ## [2.0.64] - 2024-07-11
 
 ### Bug Fixes
-* Critical bug fix for stale resources during intermittent network errors
+* Fixed stale resources found in cache caused by intermittent network errors.
 
 ## [2.0.63] - 2024-07-07
 
