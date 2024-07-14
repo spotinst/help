@@ -101,15 +101,18 @@ Step 3: Set up Connectivity
 4. Click Test Connectivity to ensure the controller functionality.
 
 ```bash
-curl -fsSL https://spotinst-public.s3.amazonaws.com/integrations/kubernetes/cluster-controller/scripts/init.sh | \
+curl -fsSL https://spotinst-public.s3.amazonaws.com/integrations/kubernetes/cluster-controller-v2/scripts/init.sh | \
 SPOTINST_TOKEN=<ENTER YOUR TOKEN HERE> \
 SPOTINST_ACCOUNT=act-54c5d1ab \
-SPOTINST_CLUSTER_IDENTIFIER=open-shift \
-ENABLE-CSR-APPROVAL=True \
+SPOTINST_CLUSTER_IDENTIFIER=clusterq \
+ENABLE_OCEAN_METRIC_EXPORTER=false \
+ENABLE_OCEAN_NETWORK_CLIENT=false \
+INCLUDE_METRIC_SERVER=true \
 bash
+
 ```
 
-<img src="/ocean/_media/tools-openshift-4x-05.png" />
+![step-openshift](https://github.com/user-attachments/assets/0002b905-b560-437a-95b8-e9681b0705b3)
 
 5. When the connectivity test is complete, click Create.
 
