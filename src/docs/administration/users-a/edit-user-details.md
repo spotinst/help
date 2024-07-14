@@ -55,19 +55,12 @@ If you need to associate additional policies with the user, do the following:
 <img src="/administration/_media/edit-user-details-06.png" width="300" height="160" />
 
 In addition, you can review existing policies and detach any policy you no longer need.
+
 ### Manage API Tokens
 
-Under the API Tokens tab is a listing of all the tokens the user has. The listing also shows the last four digits of each token and the creation date.
+The API Tokens tab lists all the tokens the user has, including the last four digits of each token and the creation date.
 
-#### Add a token:
-1. Click Generate API Token.
-2. Enter a name for your token and click Generate.
-3. After the token is generated, copy your full token to a safe location and click Done.
-
-#### Delete a token:
-1. In the list of API tokens, select the row of the token to delete. The row turns blue and a Trash icon appears on the right.
-2. Click the Trash icon.
-3. In the popup that appears, confirm that you want to delete the token.
+You can [create and delete](https://docs.spot.io/administration/api/create-api-token) API tokens, depending on your permissions.
 
 ## Remove User
 
@@ -78,7 +71,3 @@ To remove a user from Spot, do the following:
 <img src="/administration/_media/edit-user-details-07.png" width="243" height="97" />
 
 **All API tokens associated with the user will also be deleted**.
-
-## What’s Next?
-
-Learn more about using [Groups](administration/groups/) in Spot administration.
