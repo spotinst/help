@@ -57,9 +57,6 @@ bash
 
 5. When the connectivity test is complete, click Create.
 
-You're all set! Ocean will now ensure the most cost-effective capacity and size possible for your cluster.
+Ocean will now ensure the most cost-effective capacity and size possible for your cluster.
 
-5. When the connectivity test is complete, click Create.
-
-You're all set! Ocean will now ensure the most cost-effective capacity and size possible for your cluster.
 
