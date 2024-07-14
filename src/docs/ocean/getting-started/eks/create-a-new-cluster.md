@@ -55,7 +55,8 @@ Before you can continue to the next step, CloudFormation must complete creation 
 
 > **Tip**: Click on the command to copy it.
 
-<img src="/ocean/_media/new-eks-step4-c.png" />
+![create-cluster-aws-step-4](https://github.com/user-attachments/assets/f7b16531-a09a-400d-96bb-cb7382cfce7b)
+
 
 2. Verify that kubectl is connected to your EKS cluster by running the next command shown:
    `kubectl get svc`
@@ -63,7 +64,7 @@ Before you can continue to the next step, CloudFormation must complete creation 
 
 (Optional) To install the [Ocean Prometheus Exporter](ocean/tools-and-integrations/prometheus/scrape), mark the checkbox. Validate that the [Configure Prometheus](ocean/tools-and-integrations/prometheus/) step is complete.
 
-<img src="/ocean/_media/new-eks-step4-d.png" />
+![create-cluster-aws](https://github.com/user-attachments/assets/8bfc5da3-30ee-4819-8a00-12523f5e14ac)
 
 ## Step 5: Update AWS Authentication ConfigMap
 
