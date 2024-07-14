@@ -159,7 +159,7 @@ You can customize the following parameters:
 
 The Connectivity page provides steps for installing the Ocean Controller and establishing the connection between the Ocean SaaS and the cluster. 
   
-![connect-eks-cluster-11](https://github.com/spotinst/help/assets/106514736/b249a59d-a080-4449-b833-fd65f4a4934a)
+![aws-connectivity-for-v2](https://github.com/user-attachments/assets/1354d125-ea5b-4591-926d-ca7142f50cd4)
 
 Complete the following steps: 
 
