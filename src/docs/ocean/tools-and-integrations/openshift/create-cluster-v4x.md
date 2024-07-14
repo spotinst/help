@@ -63,6 +63,3 @@ You're all set! Ocean will now ensure the most cost-effective capacity and size 
 
 You're all set! Ocean will now ensure the most cost-effective capacity and size possible for your cluster.
 
-## What's Next?
-
-Learn more about Ocean scaling and optimization [features](ocean/features/).
