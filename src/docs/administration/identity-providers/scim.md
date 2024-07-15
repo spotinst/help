@@ -6,7 +6,7 @@ You can manage user lifecycle events between Okta and Spot seamlessly. This auto
 
 ## Prerequisites
 * Admin access to your Okta organization.
-* Admin access to your Spot account.
+* Admin access to your Spot organization.
 * A [permanent access token](https://docs.spot.io/administration/api/create-api-token).
 
 ## Step 1: Add Spot to Okta
