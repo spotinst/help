@@ -10,9 +10,8 @@ If you lost the service principal you used, you can access it in the Spot Accoun
 
  <details>
    <summary markdown="span">View image</summary>
+    <img src="https://github.com/spotinst/help/assets/106514736/24567701-1bed-4790-a9b2-9c9f817a7bed">
    
-![get-started-azure-1](https://github.com/spotinst/help/assets/106514736/24567701-1bed-4790-a9b2-9c9f817a7bed)
-
  </details>
 
 ## Step 1: Connect your Azure Account
@@ -29,8 +28,11 @@ If you lost the service principal you used, you can access it in the Spot Accoun
    <summary markdown="span">Assign a reader and storage blob data reader role to your Spot application registration subscription</summary>
    
    1. Log in to your Azure account.
-   2. Under All Services, select **Subscriptions**. Select the subscription to connect to Spot Security.
-   3. In the Subscription menu, select **Access Control (IAM)** and click **+ Add** > **Add role assignment**.
+      
+   2. Under All Services, select <b>Subscriptions</b>. Select the subscription to connect to Spot Security.
+      
+   3. In the Subscription menu, select <b>Access Control (IAM)</b> and click <b>+ Add</b> > <b>Add role assignment</b>.
+      
    4. Find and select the <i>Reader</i> role.
       
   <details>
@@ -38,7 +40,7 @@ If you lost the service principal you used, you can access it in the Spot Accoun
          <img alt="get-started-azure10" src="https://github.com/user-attachments/assets/59fcefee-e795-4d25-a0b5-7d11606c1873">
   </details>
   
-  5. Click **Next**.
+  5. Click <b>Next</b>.
   6. On the Members tab:
      <ol style="list-style-type: lower-alpha;">
       <li>Make sure <b>Assign access to</b> is set to <i>User, group, or service principal</i>.</li>
@@ -47,7 +49,7 @@ If you lost the service principal you used, you can access it in the Spot Accoun
       <li>Click <b>Next</b>.</li>
      </ol>
 
-  7. Click **Review + assign** and wait for it to assign the <i>Reader</i> role to the Spot app registration.
+  7. Click <b>Review + assign</b> and wait for it to assign the <i>Reader</i> role to the Spot app registration.
 
        <details>
        <summary markdown="span">View image</summary>
