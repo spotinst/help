@@ -27,13 +27,21 @@ You can manage user lifecycle events between Okta and Spot seamlessly. This auto
 1. After adding the application, go to **Provisioning** > **Configure API Integration**.
 2. Select **Enable API Integration**.
 3. Enter the [permanent access token](https://docs.spot.io/administration/api/create-api-token) from Spot.
-4. Click **Test API Credentials** to make sure it’s working and then click Save.
+4. Click **Test API Credentials** to make sure it’s working and then click **Save**.
    
     <details>
    <summary markdown="span">View image</summary>
       
    <img alt="scim2" src="https://github.com/user-attachments/assets/fc8cae93-8796-4fd1-bb6f-e67a638eb49d">
     </details>
+
+## Step 3: Enable SCIM Provisioning Features
+
+1. On the Provisioning tab, turn these on:
+     * **Create Users** lets Okta create users in Spot.
+     * **Deactivate Users** lets Okta deactivate users in Spot.
+
+2. Click **Save**.
 
 ## Step 4: Assign Users to the Spot by NetApp App
 
