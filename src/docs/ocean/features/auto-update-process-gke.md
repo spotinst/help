@@ -7,7 +7,7 @@ Ocean’s auto-update process will capture the changes and automatically update 
 
 ##  Prerequisites
 
- * To apply auto-updates for custom and default Virtual Node Groups, the console's cluster version and the default node pool version must be identical.
+ * The console's cluster version and the default node pool version must be identical to apply auto-updates for custom and default Virtual Node Groups.
 
  * Do not delete the original node pool or change its name (to ensure upgrade synchronization). The original node pool can be drained from all nodes as long as it is preserved.
 
@@ -30,9 +30,13 @@ As an example, let’s say you have created an Ocean cluster with VNGs using the
 
 ## Manually trigger the Auto-Update Process
 
-The auto-update process described above occurs every 30 minutes. If you do not want to wait that long, you can use the API to trigger an auto-update process manually.
+The auto-update process described above occurs every 30 minutes (by default). If you do not want to wait, use the [Reimport Cluster](https://docs.spot.io/api/#operation/reImportGke) in the Spot API to trigger the auto-update process manually.
 
-For example, if you make a change in the GKE configuration, you could trigger the auto-update process, trigger a roll, and see your changes right away in the relevant Ocean cluster or VNG configurations.
+Example:
 
-To manually trigger the auto-update process, use the [Reimport Cluster](https://docs.spot.io/api/#operation/reImportGke) API.
+1. Make a change in the GKE configuration.
+2. Manually trigger the auto-update process. 
+3. Manually trigger a roll.
+
+You will immediately see your changes in the relevant Ocean cluster or Virtual Node Group configurations.
 
