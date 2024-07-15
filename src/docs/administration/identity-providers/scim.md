@@ -1,5 +1,4 @@
-
-# Introduction
+# SCIM Integration
 
 Set up and use the System for Cross-domain Identity Management (SCIM) integration for Spot in Okta. SCIM integration lets you automate user provisioning, updates, and deactivation.
 
