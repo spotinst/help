@@ -16,23 +16,26 @@ Each condition type is assigned a status:
 - True
 - Unknown
 
-To ensure optimal performance, Ocean monitors the nodes' status every 30 seconds, and if it identifies that the Ready condition is False or Unknown, it considers this node as Unhealthy and triggers a replacement.
+To ensure optimal performance, Ocean monitors the nodes' status every 30 seconds. If it identifies that the Ready condition is False or Unknown, it considers this node Unhealthy and triggers a replacement.
 
 ###  Control When to Replace an Unhealthy Node
 
 >**Note**: Available for AWS Kubernetes clusters only.
 
-You can configure when to replace an unhealthy node in the Spot API and Terraform via the `healthCheckUnhealthyDurationBeforeReplacement` attribute at the Ocean [Create cluster](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterCreate) level (under `launchSpecification`).
+You can configure when to replace an unhealthy (active) node in the Spot API and Terraform via the `healthCheckUnhealthyDurationBeforeReplacement` attribute. 
 
-This attribute is defined as The amount of time, in seconds, that an instance can remain in the active state after becoming unhealthy.
+For the Spot API, see [Create cluster](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterCreate) level (under `launchSpecification`).
+
+`healthCheckUnhealthyDurationBeforeReplacement` is defined as the amount of time (in seconds) that an instance can remain active after becoming unhealthy.
 
 The minimum duration before replacement is 60 seconds and can be increased in multiples of 60.
 
 The default for a new Ocean cluster is 120 seconds.
 
-When a new Ocean cluster is created, and this value is not configured - the cluster is created with the parameter set to 120.
 
->**Note**: If you set 'null' as the value, 120 seconds will apply.
+>**Note**:
+>  When a new Ocean cluster is created, but this value was not configured, the default value 120 applies.
+>  If you set 'null' as the attribute's value, the default value 120 applies.
 
 
 ## ECS Clusters
