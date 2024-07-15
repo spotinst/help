@@ -1,143 +1,126 @@
 # Onboard Azure Account
 
-This procedure describes how to connect your Azure account to Spot Security.  
-
-If you are using Spot Security for the first time, in the left main menu of the Spot console click **Spot Security**. Click **Start With 30 Days Free Trial**.  
+If you are using Spot Security for the first time, in the left main menu of the Spot console click **Spot Security** > **Start With 30 Days Free Trial**.  
 
 ## Prerequisites 
 
-* Use the same Service Principal you created when you onboarded the Azure subscription to the Spot console for the Spot Security onboarding (based on individual subscriptions). 
+Use the same service principal you created when you onboarded the Azure subscription to the Spot console for the Spot Security onboarding (based on individual subscriptions).
 
-* If you lost the service principle you used, you can access the service principle in the Spot Accounts page and select the account that you are onboarding by clicking the relevant client ID.
+If you lost the service principal you used, you can access it in the Spot Accounts page. Select the account that you are onboarding by clicking the relevant client ID.
 
+ <details>
+   <summary markdown="span">View image</summary>
+   
 ![get-started-azure-1](https://github.com/spotinst/help/assets/106514736/24567701-1bed-4790-a9b2-9c9f817a7bed)
 
-If you already connected a cloud account(s) to Spot Security, in the left main menu of the Spot console, click **Spot Security** and **Administration**.  
-
-1. Under the Cloud Accounts Tab, click **+ Cloud Account**.
-2. Click **Azure**.
+ </details>
 
 ## Step 1: Connect your Azure Account
 
-This step describes how to connect your Azure account to Spot Security.
-
-1. Click **Log in to Azure Account**.
-
-<img src="/spot-security/_media/get-started-azure-2.png" />
-
-2. The Azure Management Console opens. Log in to your account with your Azure credentials.
-
-3. When a green checkmark appears next to your cloud account name, click **Next**.
-
-<img src="/spot-security/_media/get-started-azure-3.png" />
+1. If you already connected cloud accounts to Spot, in the left main menu of the Spot console, click **Spot Security** > **Administration**.
+2. Click **Cloud Account** > **Azure** > **Log in to Azure Account**.
+3. Enter your Azure Management Console and click **Azure**.
 
 ## Step 2:  Elevate Access to your Subscription ID
 
-The following step describes how to assign a reader and Storage Blob Data Reader role to your Spot Application Registration subscription.  
+### Step 2.1:  Assign Reader, Storage Blob Data Reader Role
 
-### Step 2.1:  Assign Reader and Storage Blob Data Reader Role
+ <details>
+   <summary markdown="span">Assign a reader and storage blob data reader role to your Spot application registration subscription</summary>
+   
+   1. Log in to your Azure account.
+   2. Under All Services, select **Subscriptions**. Select the subscription to connect to Spot Security.
+   3. In the Subscription menu, select **Access Control (IAM)** and click **+ Add** > **Add role assignment**.
+   4. Find and select the <i>Reader</i> role.
+      
+  <details>
+       <summary markdown="span">View image</summary>
+         <img alt="get-started-azure10" src="https://github.com/user-attachments/assets/59fcefee-e795-4d25-a0b5-7d11606c1873">
+  </details>
+  
+  5. Click **Next**.
+  6. On the Members tab:
+     <ol style="list-style-type: lower-alpha;">
+      <li>Make sure <b>Assign access to</b> is set to <i>User, group, or service principal</i>.</li>
+      <li>Click <b>+ Select Members</b>.</li>
+      <li>Find and select the Spot application that you used during spot onboarding and click <b>Select</b>.</li>
+      <li>Click <b>Next</b>.</li>
+     </ol>
 
-<img src="/spot-security/_media/get-started-azure-4.png" />
+  7. Click **Review + assign** and wait for it to assign the <i>Reader</i> role to the Spot app registration.
 
-1. Log in to your Azure account.
-2. Under All Services, select **Subscriptions**. Select the subscription you would like to connect to Spot Security.
-3. In the Subscription menu, select **Access Control (IAM)** and click **+ Add**.
-4. Select **Add role assignment**.
+       <details>
+       <summary markdown="span">View image</summary>
+         <img alt="get-started-azure11" src="https://github.com/user-attachments/assets/a7ecacfc-d9d7-41b4-8090-0b1ebadcfaa4">
+         
+       </details>
+  
+  8. Repeat steps 3-7 for the <i>Storage Blob Data Reader</i> role.
+     
+  9. Click the Role Assignments tab, search for your service principal, and make sure the app has both <i>Reader</i> and <i>Storage Blob Data Reader</i> roles assigned.
 
-<img src="/spot-security/_media/get-started-azure-5.png" />
+     <details>
+       <summary markdown="span">View image</summary>
+         <img src="https://github.com/user-attachments/assets/9a71f311-2270-48f9-b679-fd9e6f75fcbc">
+         
+       </details>
 
-5. Search and select Reader role from the list and click **Next**.
+  10. Click on the service principal and copy the <i>Object ID</i> of the Application Service Principal and save it for the next step of onboarding.
 
-<img src="/spot-security/_media/get-started-azure-6.png" />
+      <details>
+        <summary markdown="span">View image</summary>
+          <img src="https://github.com/user-attachments/assets/15cdaccd-2c9e-43df-a3c4-b9179b16cf0c">
+          
+        </details>
 
-6. In the Members tab, the Assign access to option is set on **User, group or service principal** by default. If not, select **User, group or service principal**.  
-
-<img src="/spot-security/_media/get-started-azure-7.png" />
-
-7. In the Members option, click **+ Select Members**. In the right panel in the select field, search for and select **Spot Security App** and click **Select** at the bottom. You can add a brief description for traceability. Click **Next**.
-
-<img src="/spot-security/_media/get-started-azure-8.png" />
-
-8. Click **Review + Assign** and wait for the operation to complete successfully to assign Reader role to the Spot app registration.
-
-<img src="/spot-security/_media/get-started-azure-9.png" />
-
-9. Complete the same steps to also add the **Storage Blob Data Reader** role to the same app registration. Search for the **Storage Blob Data Reader** role and click **Next**.
-10. By default, the **Assign access to** option is set on **User, group or service principal**. If not, select **User, group or service principal**.
-
-<img src="/spot-security/_media/get-started-azure-10.png" />
-
-11. In the Members option, click **+ Select Members**. In the right panel in the select field, search for and select **Spot Security App** and click **Select** at the bottom. You can add a brief description for traceability. Click **Next**.
-
-<img src="/spot-security/_media/get-started-azure-11.png" />  
-
-12. In the Conditions tab, click **Review + Assign**.
-
-<img src="/spot-security/_media/get-started-azure-12.png" />
-
-13. In the Review + assign tab, click **Review + Assign** and wait for the operation to complete successfully to assign Storage Blob Data Reader role to the Spot app registration.
-
-<img src="/spot-security/_media/get-started-azure-13.png" />
-
-14. Click the **Role Assignments** tab, and search for your new role assignment. The app should have both **Reader** and **Storage Blob Data Reader** role assigned. Click the app name to view its properties.
-
-<img src="/spot-security/_media/get-started-azure-14.png" />
-
-15. Copy the Object ID of the Application Service Principal and save it for the next step of onboarding.
-
-<img src="/spot-security/_media/get-started-azure-15.png" />
+ </details>
 
 ### Step 2.2:  Enter the Service Principal Object ID
 
-1. Return to the Spot Console and enter the Service Principal Object ID. Click **Validate**.
+1. Go to the Spot console and enter the <i>Service Principal Object ID</i> and click **Validate**.
 
-<img src="/spot-security/_media/get-started-azure-16.png" />
-
-2. When the Service Principal Object ID is successfully validated, click **Next**.
+2. When the <i>Service Principal Object ID</i> is successfully validated, click **Next**.
 
 ## Step 3: Archive Activity Logs to a Storage Account
 
 ### Step 3.1:  Configure Export Activity Logs
 
-<img src="/spot-security/_media/get-started-azure-17.png" />   
-
 1. Log in to your Azure account.
 2. Under All Services, select **Subscriptions**. Select the subscription you would like to onboard to Spot Security.
+3. Select **Activity log** > **Export Activity Logs** > **+ Add diagnostic setting**.
 
-<img src="/spot-security/_media/get-started-azure-18.png" />   
+  <details>
+    <summary markdown="span">View image</summary>
+      <img src="https://github.com/user-attachments/assets/801fcb0e-8ea5-4f7c-860e-e5d51fc39e24">
+          
+   </details>
 
-3. In the Subscription menu, select **Activity log** and click **Export Activity Logs**.
-
-<img src="/spot-security/_media/get-started-azure-19.png" />
-
-4. Click **+ Add diagnostic setting**.
-5. Create a storage account if a storage account for archiving activity logs doesn’t exist. Follow the steps provided here, https://learn.microsoft.com/en-us/azure/storage/common/storage-account-create?tabs=azure-portal.
-
-<img src="/spot-security/_media/get-started-azure-20.png" />
-
-6. Enter a name in the Diagnostic setting name field.  
-7. In the Categories menu, select **Administrative**.   
-8. Select **Archive to a storage account**.  
-9. In the Subscription drop-down menu, select your subscription name.  
-10. In the Storage account drop-down menu, select the logs you want to archive and click **Save**.
-11. Copy the Storage account name to provide in the next steps of the onboarding process.  
+4. Enter a **Diagnostic setting name**.
+5. Select **Categories** > **Administrative**.
+6. Select **Archive to a storage account** and select the Subscription with the storage account. Make sure the service principal used for onboarding has access to the storage account.
+7. Select the logs you want to archive from the **Storage Account**. [Create a storage account](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-create?tabs=azure-portal) if needed.
+8. Copy the Storage account name and save it for the next step of onboarding.
+9. Click **Save**.  
 
 ### Step 3.2: Enter Storage Account Name
 
-1. Enter the storage account name copied in the previous step and click **Validate**.
-
-<img src="/spot-security/_media/get-started-azure-21.png" />
+1. Go to the Spot console, enter the storage account name copied in the previous step and click **Validate**.
+   
+  <details>
+    <summary markdown="span">View image</summary>
+      <img src="https://github.com/user-attachments/assets/f33b100b-5a4d-4a7a-b383-63c707bc272d" />
+          
+   </details>
 
 2. When the storage account name is validated, click **Next**.  
 
 ## Step 4: Review and Finalize
 
 1. Review the information and ensure all details are correct.
-
-<img src="/spot-security/_media/get-started-azure-22.png" />  
+  <details>
+    <summary markdown="span">View image</summary>
+      <img src="https://github.com/user-attachments/assets/1358628d-cf21-43df-adb8-31561c9177f7" />
+      
+   </details>
 
 2. Click **Finish Onboarding**.
-
-## What's Next? 
-
-Learn more about the [security features](spot-security/features/) in Spot Security.
