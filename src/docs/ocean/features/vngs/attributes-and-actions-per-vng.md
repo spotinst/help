@@ -223,8 +223,11 @@ For information about defining preferred spot instance types in the Spot API (us
 ###  Preferred On-Demand Instance Types per Virtual Node Group
 
 You can configure preferred on-demand types at the Virtual Node Group level for your AWS Kubernetes clusters.
-Ocean filters out non-applicable markets (e.g., banned markets, blocked zones) when selecting on-demand nodes. 
-If no markets are applicable, Ocean selects the types from the Spot whitelist to launch on-demand instances.
+
+In each scale-up action, Ocean provisions the new instances from the preferred types as follows:
+
+-  Ocean filters out non-applicable markets (e.g., banned markets, blocked zones) when selecting on-demand nodes. 
+-  If no markets are applicable, Ocean selects the types from the Spot whitelist to launch on-demand instances.
 
 For information about defining preferred on-demand instance types in the Spot API using the `preferredOnDemandTypes` attribute, see the Create Virtual Node Group APIs for [Ocean AWS Kubernetes](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecCreate).
 
