@@ -27,53 +27,46 @@ If you lost the service principal you used, you can access it in the Spot Accoun
  <details>
    <summary markdown="span">Assign a reader and storage blob data reader role to your Spot application registration subscription</summary>
    
-   1. Log in to your Azure account.
-      
-   2. Under All Services, select <b>Subscriptions</b>. Select the subscription to connect to Spot Security.
-      
-   3. In the Subscription menu, select <b>Access Control (IAM)</b> and click <b>+ Add</b> > <b>Add role assignment</b>.
-      
-   4. Find and select the <i>Reader</i> role.
+   <ol>
+    <li>Log in to your Azure account.</li>
+    <li>Under All Services, select <b>Subscriptions</b>. Select the subscription to connect to Spot Security.</li>
+    <li>In the Subscription menu, select <b>Access Control (IAM)</b> and click <b>+ Add</b> > <b>Add role assignment</b>.</li>
+   <li><p>Find and select the <i>Reader</i> role.</p>
       
   <details>
        <summary markdown="span">View image</summary>
          <img alt="get-started-azure10" src="https://github.com/user-attachments/assets/59fcefee-e795-4d25-a0b5-7d11606c1873">
   </details>
-  
-  5. Click <b>Next</b>.
-  6. On the Members tab:
+  </li>
+  <li>Click <b>Next</b>.</li>
+  <li><p>On the Members tab:</p>
      <ol style="list-style-type: lower-alpha;">
       <li>Make sure <b>Assign access to</b> is set to <i>User, group, or service principal</i>.</li>
       <li>Click <b>+ Select Members</b>.</li>
       <li>Find and select the Spot application that you used during spot onboarding and click <b>Select</b>.</li>
       <li>Click <b>Next</b>.</li>
      </ol>
-
-  7. Click <b>Review + assign</b> and wait for it to assign the <i>Reader</i> role to the Spot app registration.
-
+  </li>
+  <li><p>Click <b>Review + assign</b> and wait for it to assign the <i>Reader</i> role to the Spot app registration.</p>
        <details>
        <summary markdown="span">View image</summary>
          <img alt="get-started-azure11" src="https://github.com/user-attachments/assets/a7ecacfc-d9d7-41b4-8090-0b1ebadcfaa4">
          
-       </details>
-  
-  8. Repeat steps 3-7 for the <i>Storage Blob Data Reader</i> role.
-     
-  9. Click the Role Assignments tab, search for your service principal, and make sure the app has both <i>Reader</i> and <i>Storage Blob Data Reader</i> roles assigned.
-
+   </details>
+  </li>
+  <li>Repeat steps 3-7 for the <i>Storage Blob Data Reader</i> role.</li>
+  <li><p></p>Click the Role Assignments tab, search for your service principal, and make sure the app has both <i>Reader</i> and <i>Storage Blob Data Reader</i> roles assigned.</p>
      <details>
        <summary markdown="span">View image</summary>
          <img src="https://github.com/user-attachments/assets/9a71f311-2270-48f9-b679-fd9e6f75fcbc">
-         
        </details>
-
-  10. Click on the service principal and copy the <i>Object ID</i> of the Application Service Principal and save it for the next step of onboarding.
-
+  </li>
+  <li><p>Click on the service principal and copy the <i>Object ID</i> of the Application Service Principal and save it for the next step of onboarding.</p>
       <details>
         <summary markdown="span">View image</summary>
           <img src="https://github.com/user-attachments/assets/15cdaccd-2c9e-43df-a3c4-b9179b16cf0c">
-          
         </details>
+  </li>
 
  </details>
 
