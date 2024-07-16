@@ -34,7 +34,10 @@ Confirm or change the settings imported by the Ocean Creation Wizard.
 
 <img src="/ocean/_media/tools-openshift-4x-04.png" />
 
-Step 3: Set up Connectivity
+##  Step 3: Set up Connectivity
+
+>**Important**: If a banner displays "Both old and Enhanced Controllers are running. Deactivate the Old Controller so the Enhanced Controller can function," before installing, 
+see [Ocean Controller V2](https://docs.spot.io/ocean/tutorials/ocean-controller-v2) and deactivate the old Ocean Controller (V1).
 
 1. Create a Spot token or use an existing one.
 2. Install the Ocean Controller Pod. Learn more about the Ocean Controller Pod and Ocean's anatomy here.
