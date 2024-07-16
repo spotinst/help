@@ -48,7 +48,7 @@ see [Ocean Controller V2](https://docs.spot.io/ocean/tutorials/ocean-controller-
 curl -fsSL https://spotinst-public.s3.amazonaws.com/integrations/kubernetes/cluster-controller-v2/scripts/init.sh | \
 SPOTINST_TOKEN=<ENTER YOUR TOKEN HERE> \
 SPOTINST_ACCOUNT=$SPOTINST_ACCOUNT \
-SPOTINST_CLUSTER_IDENTIFIER=clusterq \
+SPOTINST_CLUSTER_IDENTIFIER=$SPOTINST_CLUSTER_IDENTIFIER \
 ENABLE_OCEAN_METRIC_EXPORTER=false \
 ENABLE_OCEAN_NETWORK_CLIENT=false \
 INCLUDE_METRIC_SERVER=true \
@@ -56,7 +56,7 @@ bash
 
 ```
 
-![step-openshift](https://github.com/user-attachments/assets/0002b905-b560-437a-95b8-e9681b0705b3)
+![kub-cluster-create](https://github.com/user-attachments/assets/658dc054-0ef4-4e4a-8519-5a9eac86fd7f)
 
 5. When the connectivity test is complete, click Create.
 
