@@ -62,7 +62,7 @@ To launch the Create Ocean Cluster Wizard in the Spot Console:
 
 To import the AKS cluster, follow the steps in the Create Ocean Cluster Wizard
 
-![ocean-aks-newclus-create](https://github.com/spotinst/help/assets/159915991/8e6ddd6c-85f5-40ee-a608-802af4ad6ee2)
+![aks-create-cluster-main](https://github.com/user-attachments/assets/f248d96a-b2b3-4c1d-bd01-dcacb1cbca40)
 
 ## Step 1: Select an AKS Cluster
 
@@ -113,25 +113,28 @@ Virtual Node Groups (VNGs) provide a single abstraction layer for managing diffe
 
 You must create at least one Virtual Node Group in your Ocean AKS cluster. A Virtual Node Group inherits properties and attributes from the Virtual Node Group Template.
 
-In this step, you will select one of your AKS node pools as a [template](https://docs.spot.io/ocean/features/vngs/?id=default-vng) for your other custom [Virtual Node Groups](https://docs.spot.io/ocean/features/vngs/?id=virtual-node-groups).
+In this step, you will select one of your AKS node pools as a [template](https://docs.spot.io/ocean/features/vngs/?id=default-vng) for your other custom [Virtual Node Groups](https://docs.spot.io/ocean/features/vngs/?id=virtual-node-groups), as follows:
 
-[placeholder]
+* Select a Node Pool for Your First Virtual Node Group
+* Import the Other Node Pools into Custom Virtual Node Groups
 
 The selected AKS node pool’s configuration will be imported to the Virtual Node Group template and will be used for other custom Virtual Node Groups unless explicitly set with override. For example, all Virtual Node Groups inherit the image set of the AKS node pool you imported to the Virtual Node Group Template unless the custom Virtual Node Group is set to a different image.
 
 ### Select a Node Pool for Your First Virtual Node Group
 
-[I will put a screenshot of the Virtual Node Group template here]
+![aks-create-cluster-2-select-node-pool](https://github.com/user-attachments/assets/2a166fc3-26ce-47ce-830c-6f37fbb611d5)
 
-1. Select a node pool.
+1. Select a node pool. The Virtual Node Group Template dialog box is displayed.
 
-2. Optional: Click Edit Template and edit template attributes.
+2. Optionally edit [Virtual Node Group Template](https://docs.spot.io/ocean/features/vngs/) attributes.
 
-[I will put the link to the template here]
+>**Note**: To edit the Virtual Node Template in JSON format, click JSON at the top right of the screen.
 
-3. Optional: To edit the Virtual Node Template in JSON format, click JSON at the top right of the screen.
+A list of all your managed node pools is displayed. The first node pool in the list is the one you selected for your first Virtual Node Group.
 
-### Import the Existing Node Pools into Custom Virtual Node Groups
+![aks-create-cluster-2-managed-node-pools](https://github.com/user-attachments/assets/803d2ddd-c2db-4a75-b853-83b8c2b94180)
+
+### Import the Other Node Pools into Custom Virtual Node Groups
 
 You can define which AKS node pools will be imported into a Virtual Node Group by clicking checkboxes in the node pool list. Once you have selected the node pools, Ocean imports their compute configurations into custom node groups. 
 
@@ -141,22 +144,16 @@ You can define which AKS node pools will be imported into a Virtual Node Group b
 
 * If no node pools are selected, Ocean will create a Virtual Node Group based on the Template Virtual Node Group.
 
-* Spot recommends creating a Virtual Node Group for each workload configuration, not per node pool.  Create Virtual Node Groups that are different from one to another so that each Virtual Node Group serves several node pools.
+* Spot recommends creating a Virtual Node Group for each workload configuration, not per node pool. Create Virtual Node Groups that are different from one to another so that each Virtual Node Group serves several node pools.
 
 Example:
 
-In the example, the first four node pools have similar configurations:
+Each of the two node pools also represents several other node pools with similar workload configurations:
 
-1. Select one for import and leave the rest unselected. All the node groups will be consolidated into one Virtual Node Group named <name>.
+1. Select the two node pools for import and leave the rest unselected. You can then consolidate all your node pools into the two custom Virtual Node Groups.
+2. click the link for a custom Virtual Node Group and edit attributes if needed.
 
-2. If needed, click the link for the <name> Virtual Node Group and edit attributes
-
-[placeholder with example]
-
-
-
-
-
+![aks-create-cluster-2-example-sel-managed-node-pools](https://github.com/user-attachments/assets/47f3b28b-0078-4e33-8fc5-77fea1bdd2ea)
 
 ### Step 3: Connectivity  
 
