@@ -2,6 +2,9 @@
 
 ## July 2024: Features and Enhancements 
 
+*  **OCN-0015: July 16, 2024:** (**<font color="#FC01CC">AKS</font>**)  As of July 16, 2024, Ocean Controller Version 2 for Azure Kubernetes (AKS) is officially released, bringing a host of new features and enhancements to streamline your operations.
+[Learn More...](https://docs.spot.io/ocean/tutorials/ocean-controller-v2/)
+
 * **OCN-0014: July 09, 2024:** (**<font color="#FC01CC">AWS Kubernetes</font>**) Ocean now lets you use recommendations to make informed decisions when selecting the best Availability Zones for launching instances in your Kubernetes cluster. [Learn More...](https://docs.spot.io/ocean/features/avail-zones-scores)
 
 
