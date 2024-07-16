@@ -1,10 +1,5 @@
----
-title: Administration
-description: Manage users, permissions, and accounts in Spot
-meta:
-  - name: keywords
-    content: users, groups, permission policies, manage accounts and organizations, single sign on, SSO, Okta
----
+<meta name="description" content="Manage users, permissions, and accounts in Spot">
+<meta name="keywords" content="users, groups, permission policies, manage accounts and organizations, single sign on, SSO, Okta">
 
 # Administration
 
