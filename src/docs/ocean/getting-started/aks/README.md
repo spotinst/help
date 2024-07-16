@@ -158,9 +158,9 @@ In the example, the first four node pools have similar configurations:
 
 
 
-### Step 1.3: Connectivity  
+### Step 3: Connectivity  
 
-This step describes how the Ocean integration starts and the installation of the [Ocean Controller](ocean/tutorials/ocean-controller-v2/) (as a Deployment) in your AKS cluster. This establishes the connection between the Ocean SaaS backend engine and your cluster. This step does not affect existing workloads which continue to run on existing nodes in node pools managed by AKS. 
+This step describes how the Ocean integration starts and the installation of the [Ocean Controller](ocean/tutorials/ocean-controller-v2/) (as a Deployment) in your AKS cluster. This establishes the connection between the Ocean SaaS backend engine and your cluster. This step does not affect existing workloads, which continue to run on existing nodes in node pools managed by AKS. 
 
 Complete the following steps: 
 
@@ -184,7 +184,7 @@ Additional Tips:
 
 When the Ocean Controller connectivity is successful, click **Next**. 
 
-### Step 1.4: Automatic Spot Tolerance Injection (optional) 
+### Step 4: Automatic Spot Tolerance Injection (optional) 
 
 ![ocen-aks-auto-spot-toleration-injection](https://github.com/spotinst/help/assets/159915991/7554d272-4e65-4112-8fd4-d3a54a5e994c)
 
@@ -244,7 +244,7 @@ for pod in $pods; do echo "Deleting pod: $pod" kubectl delete pod $pod -n <names
 ```
 >**Note**: To enable a workload to run on Regular / OD nodes, add Spot label `spot.io/node-lifecycle=od` 
 
-### Step 1.5: Review and Configure  
+### Step 5: Review and Configure  
 
 You can view and edit the Ocean cluster configuration and the VNG Template in JSON.   
 
