@@ -26,8 +26,6 @@ You may want to control how fast to replace a node once it’s not healthy. For 
 
 In the Spot API and Terraform, you can configure when to replace an unhealthy (active) node via the `healthCheckUnhealthyDurationBeforeReplacement` attribute (under `compute.launchSpecification`).
 
-For the Spot API, see [Create cluster](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterCreate) level (under `launchSpecification`).
-
 `healthCheckUnhealthyDurationBeforeReplacement` is defined as the amount of time (in seconds) that an instance can remain active after becoming unhealthy.
 
 The minimum duration before replacement is 60 seconds and can be increased in multiples of 60.
@@ -39,6 +37,8 @@ The default for a new Ocean cluster is 120 seconds.
 >  When a new Ocean cluster is created, but this value was not configured, the default value 120 applies.
 >  If you set 'null' as the attribute's value, the default value 120 applies.
 
+
+For the Spot API, see [Create cluster](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterCreate) level (under `launchSpecification`).
 
 ## ECS Clusters
 
