@@ -159,7 +159,7 @@ You can customize the following parameters:
 
 The Connectivity page provides steps for installing the Ocean Controller and establishing the connection between the Ocean SaaS and the cluster. 
   
-![aws-connectivity-for-v2](https://github.com/user-attachments/assets/1354d125-ea5b-4591-926d-ca7142f50cd4)
+![aws-connectivity-for-v2-t2](https://github.com/user-attachments/assets/aa344290-add3-4d78-8ad1-db00dfee7f10)
 
 Complete the following steps: 
 
