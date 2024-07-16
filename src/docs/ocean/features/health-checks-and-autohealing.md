@@ -22,7 +22,9 @@ To ensure optimal performance, Ocean monitors the nodes' status every 30 seconds
 
 >**Note**: Available for AWS Kubernetes clusters only.
 
-You can configure when to replace an unhealthy (active) node in the Spot API and Terraform via the `healthCheckUnhealthyDurationBeforeReplacement` attribute (under `compute.launchSpecification`).
+You may want to control how fast to replace a node once it’s not healthy. For example, if you want to reduce the time for quicker response. Alternatively, you might want to increase this time.
+
+In the Spot API and Terraform, you can configure when to replace an unhealthy (active) node via the `healthCheckUnhealthyDurationBeforeReplacement` attribute (under `compute.launchSpecification`).
 
 For the Spot API, see [Create cluster](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterCreate) level (under `launchSpecification`).
 
