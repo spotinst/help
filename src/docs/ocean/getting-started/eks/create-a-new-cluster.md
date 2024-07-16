@@ -58,9 +58,8 @@ Before you can continue to the next step, CloudFormation must complete creation 
 
 ![create-cluster-aws-step-4](https://github.com/user-attachments/assets/f7b16531-a09a-400d-96bb-cb7382cfce7b)
 
-
-2. Verify that kubectl is connected to your EKS cluster by running the next command shown:
-   `kubectl get svc`
+2. The Ocean Controller V2 installation is based on Helm, so make sure to have Helm installed on your machine.
+  
 3. To install the controller on the EKS cluster, run the predefined [script](https://docs.spot.io/ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-install?id=install-via-script) from your command line. 
 
 (Optional) To install the [Ocean Prometheus Exporter](ocean/tools-and-integrations/prometheus/scrape), mark the checkbox. Validate that the [Configure Prometheus](ocean/tools-and-integrations/prometheus/) step is complete.
