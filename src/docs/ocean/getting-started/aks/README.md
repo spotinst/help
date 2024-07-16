@@ -115,12 +115,12 @@ You must create at least one Virtual Node Group in your Ocean AKS cluster. A Vir
 
 In this step, you will select one of your AKS node pools as a [template](https://docs.spot.io/ocean/features/vngs/?id=default-vng) for your other custom [Virtual Node Groups](https://docs.spot.io/ocean/features/vngs/?id=virtual-node-groups), as follows:
 
-* Select a Node Pool for Your First Virtual Node Group
-* Import the Other Node Pools into Custom Virtual Node Groups
+* Select a Node Pool for Your First (Custom) Virtual Node Group
+* Create More Custom Virtual Node Groups
 
-The selected AKS node pool’s configuration will be imported to the Virtual Node Group template and will be used for other custom Virtual Node Groups unless explicitly set with override. For example, all Virtual Node Groups inherit the image set of the AKS node pool you imported to the Virtual Node Group Template unless the custom Virtual Node Group is set to a different image.
+The selected AKS node pool’s configuration will be imported to the Virtual Node Group template and used for other custom Virtual Node Groups unless explicitly set with override. For example, all Virtual Node Groups inherit the image set of the AKS node pool you imported to the Virtual Node Group Template unless the custom Virtual Node Group is set to a different image.
 
-### Select a Node Pool for Your First Virtual Node Group
+### Select a Node Pool for Your First (Custom) Virtual Node Group
 
 ![aks-create-cluster-2-select-node-pool](https://github.com/user-attachments/assets/2a166fc3-26ce-47ce-830c-6f37fbb611d5)
 
@@ -128,19 +128,28 @@ The selected AKS node pool’s configuration will be imported to the Virtual Nod
 
 2. Optionally edit [Virtual Node Group Template](https://docs.spot.io/ocean/features/vngs/) attributes.
 
->**Note**: To edit the Virtual Node Template in JSON format, click JSON at the top right of the screen.
+>**Note**: To edit the Virtual Node Template in JSON format, click JSON at the top right of the screen. Define AZs, node pool properties (max Pods, OS Type, OS Disk Type, OS Disk Size, etc.), min/max node counts, and auto-scaling strategy (Spot percentage, fallback to On-Demand). You can create labels, tags, and taints.
 
-A list of all your managed node pools is displayed. The first node pool in the list is the one you selected for your first Virtual Node Group.
+>**Note**: Some Virtual Node Group properties, such as node pool properties (OS types, OS Disk type), cannot be edited. If you need to change these properties, delete the Virtual Node Group and create a new one. 
+
+A list of all your managed node pools is displayed. The first node pool in the list is the one you selected for your first custom Virtual Node Group.
 
 ![aks-create-cluster-2-managed-node-pools](https://github.com/user-attachments/assets/803d2ddd-c2db-4a75-b853-83b8c2b94180)
 
-### Import the Other Node Pools into Custom Virtual Node Groups
+### Create More Custom Virtual Node Groups
 
-You can define which AKS node pools will be imported into a Virtual Node Group by clicking checkboxes in the node pool list. Once you have selected the node pools, Ocean imports their compute configurations into custom node groups. 
+You can define which remaining managed AKS node pools will be imported into Virtual Node Groups by clicking checkboxes in the node pool list. Once you have selected the node pools, Ocean imports their compute configurations into custom Virtual Node Groups. 
+
+Create Virtual Node Groups to handle different workload requirements. For example:   
+
+* VNG with regular VMs – for workloads that cannot run on Spot nodes and must run on Regular (On-demand) VMs e.g. statefulSets, Spark drivers, Kafka producers.  
+* Performance VNG—for workloads that need high-performance CPUs (Intel v4 or v5), a minimum vCPU 8 or higher or a larger OS Disk size, and VMs with a minimum disk 4 or higher. 
+* AI/ML VNG – for workloads that need GPUs, say GPU count: 2-4 and specific VM series r GPU families 
+* Windows VNG - for workloads that need Windows nodes.
 
 >**Important**:  Before starting,
 
-* A separate Virtual Node Group will be created for each selected node pool. 
+* A separate custom Virtual Node Group will be created for each selected node pool. 
 
 * If no node pools are selected, Ocean will create a Virtual Node Group based on the Template Virtual Node Group.
 
@@ -263,34 +272,17 @@ The Ocean Auto-scaler cannot scale up until you create a VNG. For Ocean to start
 
 ![connect-aks-cluster-11](https://github.com/spotinst/help/assets/106514736/9d4e13f0-3e6a-4b91-adda-914e42c31068)
 
-### Step 2: Create a VNG (Virtual Node Group) 
+### Step 6: Launch Nodes in a Virtual Node Group
 
-Create a VNG ([Virtual Node Group](https://docs.spot.io/ocean/features/vngs/?id=virtual-node-groups)) so Ocean can create node pools and launch nodes. To finish setting up your cluster, you must create at least one VNG. Ocean creates node pools and launches nodes depending on the VNG configuration.   
+To ensure faster workload migration to Ocean from existing unmanaged node pools with minimum downtime, launch some nodes in one of the custom Virtual Node Groups you created.
 
-You can import the configuration from an existing node pool in Azure or manually create a VNG. All properties are inherited from the VNG template created in Step 1.1: Create Ocean AKS Cluster.  
-
-![connect-aks-cluster-12](https://github.com/spotinst/help/assets/106514736/ba679763-9165-48aa-9ad6-956a14a659a6)
- 
-You can edit the VNG JSON configuration. Define AZs, node pool properties (max Pods, OS Type, OS Disk Type, OS Disk Size, etc.), min/max node counts, and auto-scaling strategy (Spot percentage, fallback to On-Demand). You can create labels, tags, and taints. When you are done, click **Save** to complete the VNG creation.  
-
-Once the VNG is created, some properties, such as node pool properties (OS types, OS Disk type), cannot be edited. You need to delete the VNG and create a new one.  
-
-To ensure faster workload migration to Ocean from existing unmanaged node pools with minimum downtime, launch some nodes in the new VNG you just created.  
-
-Select **VNG Actions** and **Launch nodes**. Specify how many nodes you want to launch. 
-
-You can create more VNGs to handle different workload requirements. For example:   
-
-* VNG with regular VMs – for workloads that cannot run on Spot nodes and must run on Regular (On-demand) VMs e.g. statefulSets, Spark drivers, Kafka producers.  
-* Performance VNG—for workloads that need high-performance CPUs (Intel v4 or v5), a minimum vCPU 8 or higher or a larger OS Disk size, and VMs with a minimum disk 4 or higher. 
-* AI/ML VNG – for workloads that need GPUs, say GPU count: 2-4 and specific VM series r GPU families 
-* Windows VNG - for workloads that need Windows nodes.
+* Select **VNG Actions** and **Launch nodes**. Specify how many nodes you want to launch. 
 
 ![connect-aks-cluster-13](https://github.com/spotinst/help/assets/106514736/a48344bd-37ed-47af-9c76-35892de1b62b)
 
 The cluster and VNG are created, and the basic configurations are complete.  
 
-### Step 3: Migrate Workloads to Ocean from the Azure Portal 
+### Step 7: Migrate Workloads to Ocean from the Azure Portal 
 
 See [Migrate the Workload to Ocean on AKS](https://docs.spot.io/ocean/tutorials/migrate-workload-aks)
 
