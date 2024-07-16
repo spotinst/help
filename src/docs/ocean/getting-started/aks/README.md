@@ -40,18 +40,14 @@ Refer to the Microsoft documentation to learn about Microsoft Azure Native confi
 
 ## Import Cluster  
 
-You can import an AKS cluster to Ocean when all prerequisites are completed. The instructions below describe the steps to import an existing AKS cluster to Ocean using the Create Cluster wizard in the Spot console. 
+You can import an AKS cluster in the Ocean console Create Cluster Wizard (described in this topic).
 
-You can perform similar steps to import an AKS cluster to Ocean using the Ocean AKS API using [oceanAKSClusterImport](https://docs.spot.io/api/#tag/Ocean-AKS/operation/oceanAKSClusterImport) or Terraform providers for Ocean AKS cluster [ocean-aks-np-k8s](https://registry.terraform.io/modules/spotinst/ocean-aks-np-k8s/spotinst/latest), Ocean AKS VNG [ocean_aks_np_virtual_node_group](https://registry.terraform.io/providers/spotinst/spotinst/latest/docs/resources/ocean_aks_np_virtual_node_group).  
+Other options:
 
-* Step1: Use the Ocean Create Cluster Wizard to import an AKS cluster 
-    * Step 1.1 Select AKS cluster 
-    * Step 1.2 Define VNG Template 
-    * Step 1.3: Connectivity
-    * Step 1.4 Automatic Spot Tolerance Injection (optional)
-    * Step 1.5: Review and Configure 
-* Step 2: Create a VNG (Virtual Node Group) 
-* Step 3: Migrate Workloads to Ocean from the Azure Portal 
+* Spot API using [oceanAKSClusterImport](https://docs.spot.io/api/#tag/Ocean-AKS/operation/oceanAKSClusterImport) 
+* Terraform providers for Ocean AKS cluster [ocean-aks-np-k8s](https://registry.terraform.io/modules/spotinst/ocean-aks-np-k8s/spotinst/latest), Ocean AKS VNG [ocean_aks_np_virtual_node_group](https://registry.terraform.io/providers/spotinst/spotinst/latest/docs/resources/ocean_aks_np_virtual_node_group).  
+
+After importing a cluster, you must Migrate Workloads to Ocean from the Azure Portal.
 
 ## Launch the Create Ocean Cluster Wizard
 
@@ -60,7 +56,13 @@ To launch the Create Ocean Cluster Wizard in the Spot Console:
    * For **new** Ocean AKS accounts with no existing Clusters, click **Create Cluster** to launch the Create Ocean Cluster wizard. 
    * For **existing** Ocean AKS accounts with active Ocean AKS clusters, select **Cloud Clusters** on the left menu and then click **Create Cluster** on top right above the cluster list table.
 
-To import the AKS cluster, follow the steps in the Create Ocean Cluster Wizard
+To import the AKS cluster, follow the steps in the Create Ocean Cluster Wizard:
+
+* Select an AKS cluster 
+* Create Your First Virtual Node Group  
+* Connectivity
+* Automatic Spot Tolerance Injection (optional)
+* Review and Configure 
 
 ![aks-create-cluster-main](https://github.com/user-attachments/assets/f248d96a-b2b3-4c1d-bd01-dcacb1cbca40)
 
@@ -272,17 +274,7 @@ The Ocean Auto-scaler cannot scale up until you create a VNG. For Ocean to start
 
 ![connect-aks-cluster-11](https://github.com/spotinst/help/assets/106514736/9d4e13f0-3e6a-4b91-adda-914e42c31068)
 
-### Step 6: Launch Nodes in a Virtual Node Group
-
-To ensure faster workload migration to Ocean from existing unmanaged node pools with minimum downtime, launch some nodes in one of the custom Virtual Node Groups you created.
-
-* Select **VNG Actions** and **Launch nodes**. Specify how many nodes you want to launch. 
-
-![connect-aks-cluster-13](https://github.com/spotinst/help/assets/106514736/a48344bd-37ed-47af-9c76-35892de1b62b)
-
-The cluster and VNG are created, and the basic configurations are complete.  
-
-### Step 7: Migrate Workloads to Ocean from the Azure Portal 
+## Migrate Workloads to Ocean from the Azure Portal 
 
 See [Migrate the Workload to Ocean on AKS](https://docs.spot.io/ocean/tutorials/migrate-workload-aks)
 
