@@ -6,6 +6,7 @@ In this procedure, you will create an Amazon EKS cluster directly from the Spot 
 
 - Ensure you have an IAM user in your AWS account with both Console and Programmatic Access credentials. If you do not have one, you can follow this [AWS procedure](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html) to create one or refer to your account administrator for the necessary permissions.
 - [Connect your AWS account to Spot](connect-your-cloud-provider/aws-account).
+- The Ocean Controller V2 installation is based on Helm, so make sure to have Helm installed on your machine.
 - Install [awscli](https://docs.aws.amazon.com/cli/latest/userguide/installing.html) 1.16.18+ and configure [AWS credentials](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html#cli-configure-quickstart-config).
 - Install [kubectl](https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html) (Amazon EKS-vended).
 - Install [aws-iam-authenticator](https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html) (only for awscli versions below 1.16.156).
@@ -60,7 +61,7 @@ Before you can continue to the next step, CloudFormation must complete creation 
 
 2. Verify that kubectl is connected to your EKS cluster by running the next command shown:
    `kubectl get svc`
-3. To install the controller on the EKS cluster, run the predefined script from your command line.
+3. To install the controller on the EKS cluster, run the predefined [script](https://docs.spot.io/ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-install?id=install-via-script) from your command line. 
 
 (Optional) To install the [Ocean Prometheus Exporter](ocean/tools-and-integrations/prometheus/scrape), mark the checkbox. Validate that the [Configure Prometheus](ocean/tools-and-integrations/prometheus/) step is complete.
 
