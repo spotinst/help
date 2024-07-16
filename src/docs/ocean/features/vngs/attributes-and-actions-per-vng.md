@@ -226,16 +226,15 @@ You can configure preferred on-demand types at the Virtual Node Group level for 
 
 In each scale-up action, Ocean provisions the new instances from the preferred types as follows:
 
--  Ocean filters out non-applicable markets (e.g., banned markets, blocked zones) when selecting on-demand nodes. 
--  If no markets are applicable, Ocean selects the types from the Spot whitelist to launch on-demand instances.
+* Ocean selects the On-Demand instance types from the preferred list.
+* Ocean filters out unavailable markets when selecting On-Demand nodes.
+* If all the preferred On-Demand instance types are unavailable when scaling up, Ocean will select the types from the Virtual Node Group whitelist `instanceTypes` (if it exists). If the Virtual Node Group whitelist does not exist, Ocean will use the cluster's whitelist.
 
 For information about defining preferred on-demand instance types in the Spot API using the `preferredOnDemandTypes` attribute, see the Create Virtual Node Group APIs for [Ocean AWS Kubernetes](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecCreate).
 
 When you set `preferredOnDemandTypes`, the Ocean Autoscaler will launch on-demand nodes from the listed types.​
 
-For Terraform, see  [link??????]
-
-
+See also [Terraform](https://registry.terraform.io/providers/spotinst/spotinst/latest/docs/resources/ocean_aws_launch_spec#preferred_od_types)
 
 ### Related Topics
 
