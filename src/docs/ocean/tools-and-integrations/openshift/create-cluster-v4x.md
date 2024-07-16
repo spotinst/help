@@ -47,7 +47,7 @@ see [Ocean Controller V2](https://docs.spot.io/ocean/tutorials/ocean-controller-
 ```bash
 curl -fsSL https://spotinst-public.s3.amazonaws.com/integrations/kubernetes/cluster-controller-v2/scripts/init.sh | \
 SPOTINST_TOKEN=<ENTER YOUR TOKEN HERE> \
-SPOTINST_ACCOUNT=act-54c5d1ab \
+SPOTINST_ACCOUNT=$SPOTINST_ACCOUNT \
 SPOTINST_CLUSTER_IDENTIFIER=clusterq \
 ENABLE_OCEAN_METRIC_EXPORTER=false \
 ENABLE_OCEAN_NETWORK_CLIENT=false \
