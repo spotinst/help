@@ -1,8 +1,8 @@
-# Import an AKS Cluster to Ocean 
+# Import an AKS Cluster to Ocean via the Console
 
-Ocean is a managed infrastructure service for Kubernetes that automatically adjusts infrastructure capacity and size to meet the needs of pods, containers, and applications. 
+Ocean is a managed infrastructure service for Kubernetes that automatically adjusts infrastructure capacity and size to meet the needs of pods, containers, and applications.   
 
-This procedure describes using the Spot Console to connect an existing AKS cluster to Ocean. 
+To enable Ocean to start managing your AKS cluster, you need to connect the cluster to Spot. This page includes the procedures to connect an existing AKS cluster to Ocean using the Spot console.
 
 ## Prerequisites 
 
@@ -58,11 +58,11 @@ To launch the Create Ocean Cluster Wizard in the Spot Console:
 
 To import the AKS cluster, follow the steps in the Create Ocean Cluster Wizard:
 
-* Select an AKS cluster 
-* Create Your First Virtual Node Group  
-* Connectivity
-* Automatic Spot Tolerance Injection (optional)
-* Review and Configure 
+* Step 1: Select an AKS cluster. 
+* Step 2: Create Your First Virtual Node Group.  
+* Step 3: Connectivity.
+* Step 4: Automatic Spot Tolerance Injection (optional).
+* Step 5: Review and Configure. 
 
 ![aks-create-cluster-main](https://github.com/user-attachments/assets/f248d96a-b2b3-4c1d-bd01-dcacb1cbca40)
 
