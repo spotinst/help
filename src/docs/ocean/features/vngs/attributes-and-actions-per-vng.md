@@ -236,6 +236,15 @@ When you set `preferredOnDemandTypes`, the Ocean Autoscaler will launch on-deman
 
 See also [Terraform](https://registry.terraform.io/providers/spotinst/spotinst/latest/docs/resources/ocean_aws_launch_spec#preferred_od_types)
 
+##  Ephemeral Storage per Virtual Node Group
+
+The Ocean Autoscaler (by default) calculates ephemeral storage using the root volume size when it scales up. If your system uses the data volume size for the calculation, you need to specify an alternative device name to ensure that the Ocean Autoscaler launches nodes with the right size for their workloads.
+
+When the root volume is not applicable for the ephemeral storage, specify the alternative device name `deviceName` with either the Virtual Node Group (VNG’s) BDM or the AMI’s BDM.
+
+* Via the [Spot API](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecUpdate) -  `launchSpec.ephermeralStorage.deviceName`
+* Via [Terraform](https://registry.terraform.io/providers/spotinst/spotinst/latest/docs/resources/ocean_aws_launch_spec#ephemeral_storage)
+
 ### Related Topics
 
 [Virtual Node Groups](https://docs.spot.io/ocean/features/vngs/)
