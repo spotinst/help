@@ -37,9 +37,9 @@ Confirm or change the settings imported by the Ocean Creation Wizard.
 ##  Step 3: Set up Connectivity
 
 1. Create a Spot token or use an existing one.
-2. Install the Ocean Controller Pod. Learn more about the Ocean Controller Pod and Ocean's anatomy here.
+2. Install the [Ocean Controller](https://docs.spot.io/ocean/tutorials/ocean-controller-v2) Pod. 
 3. Ensure enable-csr-approval is set to True.
-4. Click Test Connectivity to ensure the controller functionality.
+4. Click **Test Connectivity** to ensure the controller functionality.
 
 ```bash
 curl -fsSL https://spotinst-public.s3.amazonaws.com/integrations/kubernetes/cluster-controller-v2/scripts/init.sh | \
