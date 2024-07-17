@@ -34,28 +34,29 @@ Confirm or change the settings imported by the Ocean Creation Wizard.
 
 <img src="/ocean/_media/tools-openshift-4x-04.png" />
 
-## Step 3: Connectivity
+##  Step 3: Set up Connectivity
 
 1. Create a Spot token or use an existing one.
-2. Install the Ocean Controller Pod. Learn more about the Ocean Controller Pod and Ocean's anatomy here.
+2. Install the [Ocean Controller](https://docs.spot.io/ocean/tutorials/ocean-controller-v2) Pod. 
 3. Ensure enable-csr-approval is set to True.
-4. Click Test Connectivity to ensure the controller functionality.
+4. Click **Test Connectivity** to ensure the controller functionality.
 
 ```bash
-curl -fsSL https://spotinst-public.s3.amazonaws.com/integrations/kubernetes/cluster-controller/scripts/init.sh | \
+curl -fsSL https://spotinst-public.s3.amazonaws.com/integrations/kubernetes/cluster-controller-v2/scripts/init.sh | \
 SPOTINST_TOKEN=<ENTER YOUR TOKEN HERE> \
-SPOTINST_ACCOUNT=act-54c5d1ab \
-SPOTINST_CLUSTER_IDENTIFIER=openshift \
-ENABLE_CSR_APPROVAL=True \
+SPOTINST_ACCOUNT=$SPOTINST_ACCOUNT \
+SPOTINST_CLUSTER_IDENTIFIER=$SPOTINST_CLUSTER_IDENTIFIER \
+ENABLE_OCEAN_METRIC_EXPORTER=false \
+ENABLE_OCEAN_NETWORK_CLIENT=false \
+INCLUDE_METRIC_SERVER=true \
 bash
+
 ```
 
-<img src="/ocean/_media/tools-openshift-4x-05.png" />
+![kub-cluster-create](https://github.com/user-attachments/assets/658dc054-0ef4-4e4a-8519-5a9eac86fd7f)
 
-5. When the connectivity test is complete, click Create.
+5. When the connectivity test is complete, click **Create**.
 
-You're all set! Ocean will now ensure the most cost-effective capacity and size possible for your cluster.
+Ocean will now ensure the most cost-effective capacity and size possible for your cluster.
 
-## What's Next?
 
-Learn more about Ocean scaling and optimization [features](ocean/features/).
