@@ -52,9 +52,6 @@ Before you can continue to the next step, CloudFormation must complete creation 
 
 ## Step 4: Install the Ocean Controller on the Newly Created EKS Cluster
 
->**Important**: If a banner displays "Both old and Enhanced Controllers are running. Deactivate the Old Controller so the Enhanced Controller can function," before installing, 
-see [Ocean Controller V2](https://docs.spot.io/ocean/tutorials/ocean-controller-v2) and deactivate the old Ocean Controller (V1).
-
 1. Connect your workstation to the EKS cluster by copying the command shown in Step 4 of the Create page and running it in your command-line interface. Note that the command must include the Ocean Cluster Name that you entered previously.
 
 > **Tip**: Click on the command to copy it.
