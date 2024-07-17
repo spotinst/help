@@ -62,7 +62,8 @@ You can configure labels, categories and metrics to scrape with the Prometheus e
 Each category represents a group of metrics. If the categories are not set - all will be included by default. The possible categories are:  
 
 * scaling  
-* cost_analysis  
+* cost_analysis
+* right sizing  
 
 ### Metrics  
 
@@ -93,6 +94,12 @@ For each category you [can configure allowed metrics and deny specific metrics](
 * ocean_storage_cost  
 * ocean_networking_cost  
 * ocean_networking_usage   
+
+#### Right Sizing Metrics  
+
+* cpu_recommendations
+* memory_recommendations
+* potential_savings
 
 ### Labels  
 
@@ -126,6 +133,16 @@ Not relevant to ocean_controller_heartbeat_info. For this metric, only the defau
 * traffic_type – only for the networking metrics. Its value can be ‘internet’, ‘interRegion’, ‘interAZ’, ‘intraAZ’.  
 * direction - only for the networking metrics. Its value can be ‘In’ or ‘Out’.  
 * storage_type – only for the metric ‘ocean_storage_cost’, its value can be ‘pv’, ‘nonPv’, ‘pvEfs’.
+
+####  Right Suzubg Metrics Labels
+
+* ocean_id
+* ocean_name
+* namespace
+* resource_type
+* resource_name
+* rule_name
+* rule_status
 
 ## Grafana Dashboard
 One popular use of metrics saved in Prometheus is dashboarding. As Grafana is a popular dashboarding tool, Spot has created a [Grafana dashboard](https://grafana.com/grafana/dashboards/16475) that you can download. The dashboard enables you to visualize Ocean metrics and may be incorporated into your existing dashboard base.
