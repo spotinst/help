@@ -6,6 +6,12 @@ This topic is intended to help you troubleshoot your Ocean Controller Version 2.
 
 If you still encounter issues, contact Support via [online chat or email](https://spot.io/support/). 
 
+##  Banner in Console Reports Two Running Ocean Controller Versions 
+
+![oc-versions-banner](https://github.com/user-attachments/assets/3168d5fe-5e90-44dc-a9d1-dab7823f89dc)
+
+See [Ocean Controller V2](https://docs.spot.io/ocean/tutorials/ocean-controller-v2) and deactivate the old Ocean Controller (V1).
+
 ##  Upgrade from Ocean Controller Version 1 to Version 2
 
 ###  "Helm command not found" Log During Installation Via Script
