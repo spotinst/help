@@ -63,7 +63,7 @@ see [Ocean Controller V2](https://docs.spot.io/ocean/tutorials/ocean-controller-
 
 2. To install the controller on the EKS cluster, run the predefined [script](https://docs.spot.io/ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-install?id=install-via-script) from your command line. 
 
-(Optional) To install the [Ocean Prometheus Exporter](ocean/tools-and-integrations/prometheus/scrape), mark the checkbox. Validate that the [Configure Prometheus](ocean/tools-and-integrations/prometheus/) step is complete.
+3. (Optional) To install the [Ocean Prometheus Exporter](ocean/tools-and-integrations/prometheus/scrape), mark the checkbox. Validate that the [Configure Prometheus](ocean/tools-and-integrations/prometheus/) step is complete.
 
 ![create-cluster-aws](https://github.com/user-attachments/assets/8bfc5da3-30ee-4819-8a00-12523f5e14ac)
 
