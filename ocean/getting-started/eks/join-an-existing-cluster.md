@@ -166,10 +166,8 @@ Complete the following steps:
 1. Create a [Spot Programmatic token](https://docs.spot.io/administration/api/create-api-token) (or use an existing one) and copy it to the text box.
 
 2. Install the Ocean Controller: Leverage our [script](https://docs.spot.io/ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-install?id=install-via-script) for a swift, Helm-based installation of the Ocean Controller Deployment.
-
-  * (Optional) To install the [Ocean Prometheus Exporter](https://docs.spot.io/ocean/tools-and-integrations/prometheus/), mark the dedicated checkbox. Validate that the [Configure Prometheus](https://docs.spot.io/ocean/tools-and-integrations/prometheus/scrape?id=configure-prometheus) step is complete. 
-
-  * (Optional) To install the [Ocean Network Client](https://docs.spot.io/ocean/tutorials/install-network-client?id=install-the-ocean-network-client-in-the-cluster), mark the dedicated checkbox. 
+   * (Optional) To install the [Ocean Prometheus Exporter](https://docs.spot.io/ocean/tools-and-integrations/prometheus/), mark the dedicated checkbox. Validate that the [Configure Prometheus](https://docs.spot.io/ocean/tools-and-integrations/prometheus/scrape?id=configure-prometheus) step is complete. 
+   * (Optional) To install the [Ocean Network Client](https://docs.spot.io/ocean/tutorials/install-network-client?id=install-the-ocean-network-client-in-the-cluster), mark the dedicated checkbox. 
 
 3. Click **Test Connectivity** to ensure the controller's functionality. The test should take approximately two minutes to complete.
 4. Click **Next**. 
