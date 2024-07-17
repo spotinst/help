@@ -32,7 +32,9 @@ The minimum duration before replacement is 60 seconds and can be increased in mu
 
 When the attribute's value is not configured ('null'), the default value 120 applies.
 
-For the Spot API, see [Create cluster](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterCreate) level (under `compute.launchSpecification`).
+To access this attribute:
+*  For the Spot API, see [Create cluster](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterCreate) level (under `compute.launchSpecification`).
+*  For [Terraform](https://registry.terraform.io/providers/spotinst/spotinst/latest/docs/resources/ocean_aws#health_check_unhealthy_duration_before_replacement).
 
 ## ECS Clusters
 
