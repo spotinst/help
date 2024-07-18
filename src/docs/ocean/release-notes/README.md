@@ -20,7 +20,7 @@
 
 * **OCN-0013: July 08, 2024:** [Ocean Documentation Update] (**<font color="#FC01CC">AKS</font>**) We have added these new topics to the Ocean AKS documentation:
    * [Dense Mode and Node Pools](https://docs.spot.io/ocean/features/dense-mode-and-node-pools)
-   * [Select VMs for an AKS Virtual Node Group](https://docs.spot.io/ocean/features/vm-selection-aks)
+   * [Select VMs for an AKS Virtual Node Group](https://docs.spot.io/ocean/features/vm-selection-aks) 
      
  
 
