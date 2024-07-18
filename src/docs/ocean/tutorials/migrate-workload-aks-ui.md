@@ -14,7 +14,7 @@ Before starting, review the [prerequisites](https://docs.spot.io/ocean/tutorials
 
 Ocean automatically detects the workloads (nodes and pods) of the associated Kubernetes cluster and displays a list of all the discovered nodes.
 
-![Migration Select Workloads](https://github.com/spotinst/help/assets/159915991/72684d91-4b32-4892-a167-0455bfb1fabc)
+![aks-ready-for-migration](https://github.com/user-attachments/assets/962c3046-fc0a-42ca-8675-dad2d46c6e9c)
 
 4.  Select the nodes (instances) you want to migrate into your Ocean cluster.
 
