@@ -2,6 +2,10 @@
 
 ## July 2024: Features and Enhancements 
 
+
+*  **OCN-0016: July 18, 2024:** (**<font color="#FC01CC">AWS Kubernetes</font>**) In the Spot API and Terraform, you can now control how fast to replace an active node once it becomes unhealthy, using the new `healthCheckUnhealthyDurationBeforeReplacement` attribute.
+[Learn more...](https://docs.spot.io/ocean/features/health-checks-and-autohealing?id=control-when-to-replace-an-unhealthy-node)
+
 *  **OCN-0015: July 16, 2024:** (**<font color="#FC01CC">AKS</font>**)  As of July 16, 2024, Ocean Controller Version 2 for Azure Kubernetes (AKS) is officially released, bringing a host of new features and enhancements to streamline your operations.
 [Learn More...](https://docs.spot.io/ocean/tutorials/ocean-controller-v2/)
 
