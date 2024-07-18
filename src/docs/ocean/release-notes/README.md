@@ -4,6 +4,8 @@
 
 
 
+*  **OCN-0018: July 18, 2024:** (**<font color="#FC01CC">GKE Kubernetes</font>**) Ocean Controller Version 2 now supports the namespaceSelector scaling constraint label introduced in Kubernetes Version 1,24 for the GKE platform. When you apply this label, Ocean's Autoscaler scales up nodes based on the Namespace selector to schedule pods. Learn more... about the namespaceSelector label.
+
 *  **OCN-0017: July 18, 2024:** (**<font color="#FC01CC">AWS Kubernetes</font>**) You can now configure preferred on-demand types at the Virtual Node Group level for your AWS Kubernetes clusters.
 [Learn More...](https://docs.spot.io/ocean/features/vngs/attributes-and-actions-per-vng?id=preferred-on-demand-instance-types-per-virtual-node-group)
 
