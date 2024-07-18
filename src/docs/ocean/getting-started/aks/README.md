@@ -152,13 +152,13 @@ When the Ocean Controller connectivity is successful, click **Next**.
 
 ![ocen-aks-auto-spot-toleration-injection](https://github.com/spotinst/help/assets/159915991/7554d272-4e65-4112-8fd4-d3a54a5e994c)
 
-Microsoft Azure / AKS does not allow pods to run on Spot VMs by default. Rather, it adds a `NoSchedule` taint to all Spot nodes/node pools:`kubernetes.azure.com/scalesetpriority=spot:NoSchedule`
+Microsoft Azure / AKS does not allow pods to run on Spot VMs by default. AKS automatically applies the `NoSchedule` taint to spot nodes/node pools (`kubernetes.azure.com/scalesetpriority=spot:NoSchedule`), ensuring that pods cannot run on them without the appropriate toleration. 
 
-Spot toleration must be injected into the pod to schedule a workload on a Spot node. Otherwise, the workload will default to a regular On-demand (OD) node.
+Spot toleration must be injected into the pod to schedule a workload on a spot node. Otherwise, the workload will default to a regular on-demand (OD) node.
 
-This step lets you optionally install the Spot admission controller, a k8 mutating webhook that automatically injects the spot toleration at the namespace level, enabling AKS workload pods to run on Spot VMs by default. 
+This step lets you optionally install the Spot admission controller, a Kubernetes mutating webhook that automatically injects the spot toleration at the namespace level, enabling AKS workload pods to run on Spot VMs by default. 
 
-A mutating webhook is a Kubernetes dynamic admission controller that allows for modifying resources before they are persisted in the Kubernetes API server. 
+>**Note**: A mutating webhook is a Kubernetes dynamic admission controller that allows for modifying resources before they are persisted in the Kubernetes API server. 
 
 The Spot toleration admission controller webhook is triggered by pod create or update events. When web-app deployment tries to scale up and add new pods or update/restart existing pods, the kube-apiserver sends an admission request to the Spot toleration webhook and, based on the policy, injects the spot toleration before the pod is deployed. 
 
