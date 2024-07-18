@@ -18,7 +18,17 @@ Ocean automatically detects the workloads (nodes and pods) of the associated Kub
 
 4.  Select the nodes (instances) you want to migrate into your Ocean cluster.
 
-5.  If any node entries show the Required Validation status under the **Ready for Migration** column, click **Validate** at the bottom left of the screen.
+5.  If any node entries show the **Required Validation** status under the **Ready for Migration** column, click **Validate** at the bottom left of the screen.
+
+![aks-migration-validations](https://github.com/user-attachments/assets/c0e4f51f-2de8-4dce-8670-3f8a824641b6)
+
+Nodes are checked before migration to ensure they pass the process successfully. If an issue is identified for a node, you can either fix it or select a different node. 
+Validation checks for the following:
+*  Virtual Node Group Match: At least one Virtual Node Group in the cluster must match the specific node.
+*  Support for the Kubernetes version.
+*  Support for the Ocean Controller version is valid and updated.
+*  Whether Spot toleration exists.
+*  Specific Constraints: For example, Restrict Scale Down, PDB, PVC.
 
 Node Statuses:
 
