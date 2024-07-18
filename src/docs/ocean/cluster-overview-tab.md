@@ -96,7 +96,7 @@ This tab displays:
 
      * Pie chart - Virtual Node Group percentage breakdown for nodes.
       
-     Replacement information: an entry for each reverted node is listed with these details:
+    Replacement information: an entry for each reverted node is listed with these details:
       
      * Instance ID of the original and reverted nodes.
      * Instance Type of the original and reverted nodes.
