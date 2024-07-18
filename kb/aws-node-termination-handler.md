@@ -4,7 +4,7 @@
 
 ## Overview
 
-[AWS node termination handler](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_PortMapping.html) is a DaemonSet pod that is deployed on each Spot instance. It detects the instance termination notification signal so that there will be a graceful termination of any pod running on that node, drain from load balancers, and redeploy applications elsewhere in the cluster.
+[AWS node termination handler](https://ec2spotworkshops.com/using_ec2_spot_instances_with_eks/070_selfmanagednodegroupswithspot/deployhandler.html) is a DaemonSet pod that is deployed on each Spot instance. It detects the instance termination notification signal so that there will be a graceful termination of any pod running on that node, drain from load balancers, and redeploy applications elsewhere in the cluster.
 
 AWS node termination handler makes sure that the Kubernetes control plane responds as it should to events that can cause EC2 instances to become unavailable. Some reasons EC2 instances may become unavailable include:
 * EC2 maintenance events
