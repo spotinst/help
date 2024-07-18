@@ -3,6 +3,10 @@
 ## July 2024: Features and Enhancements 
 
 
+
+*  **OCN-0017: July 18, 2024:** (**<font color="#FC01CC">AWS Kubernetes</font>**) You can now configure preferred on-demand types at the Virtual Node Group level for your AWS Kubernetes clusters.
+[Learn More...](https://docs.spot.io/ocean/features/vngs/attributes-and-actions-per-vng?id=preferred-on-demand-instance-types-per-virtual-node-group)
+
 *  **OCN-0016: July 18, 2024:** (**<font color="#FC01CC">AWS Kubernetes</font>**) In the Spot API and Terraform, you can now control how fast to replace an active node once it becomes unhealthy, using the new `healthCheckUnhealthyDurationBeforeReplacement` attribute.
 [Learn more...](https://docs.spot.io/ocean/features/health-checks-and-autohealing?id=control-when-to-replace-an-unhealthy-node)
 
