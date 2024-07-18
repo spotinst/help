@@ -1,6 +1,6 @@
 # Troubleshoot the Ocean Controller Version 2
 
-Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>, <font color="#FC01CC">GKE</font>
+Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>, <font color="#FC01CC">GKE</font>, and <font color="#FC01CC">AKS</font>.
 
 This topic is intended to help you troubleshoot your Ocean Controller Version 2. 
 
