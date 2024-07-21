@@ -10,7 +10,7 @@ If you still encounter issues, contact Support via [online chat or email](https:
 
 ![oc-versions-banner](https://github.com/user-attachments/assets/3168d5fe-5e90-44dc-a9d1-dab7823f89dc)
 
-See [Ocean Controller V2](https://docs.spot.io/ocean/tutorials/ocean-controller-v2) and deactivate the old Ocean Controller (V1).
+See [Different controller versions detected](https://docs.spot.io/ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-ts?id=quotdifferent-controller-versions-detected-please-remove-the-old-version-controller-old-version-controller-podsquot-log-in-your-ocean-cluster) and deactivate the old Ocean Controller (V1).
 
 ##  Upgrade from Ocean Controller Version 1 to Version 2
 
