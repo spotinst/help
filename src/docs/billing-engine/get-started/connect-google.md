@@ -8,7 +8,9 @@ The procedures on this page describe how to connect your Google Cloud Billing Ac
 <li><a href="https://cloud.google.com/iam/docs/keys-create-delete">Create a Google Cloud Service account</a></li>
 <li><a href="https://cloud.google.com/iam/docs/keys-create-delete">Create a Google Project</a></li>
 <li><a href="https://cloud.google.com/iam/docs/keys-create-delete#creating">Create a Service Account Key</a></li>
-Make sure you select key type: **JSON**. Save the key in the JSON format.
+
+  Make sure you select key type: **JSON**. Save the key in the JSON format.
+
 
 2. Set up a [Google Cloud billing data export](https://cloud.google.com/billing/docs/how-to/export-data-bigquery) and save the:
 * BigQuery Dataset ID
