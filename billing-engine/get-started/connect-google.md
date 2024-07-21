@@ -3,12 +3,11 @@
 The procedures on this page describe how to connect your Google Cloud Billing Account to Billing Engine.
 
 1. Set up a service account and keys:
-<ol style="list-style-type: lower-alpha;">
-<li>[Create a Google Cloud Service account](https://cloud.google.com/iam/docs/keys-create-delete).</li>
-<li>[Create a Google Project](https://developers.google.com/workspace/guides/create-project).</li>
-<li>[Create a Service Account Key](https://cloud.google.com/iam/docs/keys-create-delete#creating).</li>
-</ol>
 
+<ol style="list-style-type: lower-alpha;">
+<li><a href="https://cloud.google.com/iam/docs/keys-create-delete">Create a Google Cloud Service account</a></li>
+<li><a href="https://cloud.google.com/iam/docs/keys-create-delete">Create a Google Project</a></li>
+<li><a href="https://cloud.google.com/iam/docs/keys-create-delete#creating">Create a Service Account Key</a></li>
 Make sure you select key type: **JSON**. Save the key in the JSON format.
 
 2. Set up a [Google Cloud billing data export](https://cloud.google.com/billing/docs/how-to/export-data-bigquery) and save the:
