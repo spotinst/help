@@ -38,8 +38,8 @@ Instance types of the virtual node group are always a subset of the Ocean cluste
 
 
  <details>
-   <summary markdown="span">Why can't I spin new instances?</summary>
-
+   <summary markdown="span">    <span background-color="#D8D8D8">Why can't I spin new instances?</span>span></summary>
+    <span background-color="#D8D8D8">
 You have scaling up instances for your Elastigroup or Ocean clusters and you get this message:
 
 <code>ERROR, Can't Spin Instances: Code: InvalidSnapshot.NotFound, Message: The snapshot 'snap-xyz' does not exist.`</code>
@@ -48,6 +48,7 @@ If you have a block device that is mapped to a snapshot ID of an Elastigroup or 
 
  ![cant-spin-instances-invalidsnapshot1](https://github.com/spotinst/help/assets/167069628/1010d3de-2932-4677-92ed-ed6c124fe9a6)
 
+    </span>
 
  </details>
  
