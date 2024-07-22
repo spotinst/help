@@ -5,8 +5,8 @@
 <!----------------------------------general---------------------------------->
 
 ## General
- <details background="#D8D8D8">
-   <summary markdown="span">How are running hours calculated in the Spot console and AWS?</summary>
+ <details style="background:#f2f2f2">
+   <summary markdown="span" style="background:#f2f2f2">How are running hours calculated in the Spot console and AWS?</summary>
 
  Running hours are calculated from the moment an instance is launched until it is <i>detached</i> and not <i>terminated</i>. AWS calculates the entire lifetime of the instance.
 
@@ -20,8 +20,8 @@ Here are some reasons for large differences between the numbers in the Spot Cons
 
 ## Ocean
  
- <details>
-   <summary markdown="span" background="#D8D8D8">Why does Ocean fail to update instance types?</summary>
+ <details style="background:#f2f2f2">
+   <summary markdown="span" style="background:#f2f2f2">Why does Ocean fail to update instance types?</summary>
 
 You cannot update the instance types in the default virtual node group. For example, it’s not supported to remove <i>m4.large</i> and <i>m5.large</i>, add <i>m5d.xlarge</i> and <i>m6i.xlarge</i> to the default virtual node group, and then update the cluster.
 
@@ -37,10 +37,9 @@ Instance types of the virtual node group are always a subset of the Ocean cluste
  </details>
 
 
- <details>
-   <summary markdown="span">    <span background="#D8D8D8">Why can't I spin new instances?</span>span></summary>
-    <span background="#D8D8D8">
-You have scaling up instances for your Elastigroup or Ocean clusters and you get this message:
+ <details style="background:#f2f2f2">
+   <summary markdown="span" style="background:#f2f2f2">Why can't I spin new instances?</summary>
+<span style="background:#f2f2f2">You have scaling up instances for your Elastigroup or Ocean clusters and you get this message:
 
 <code>ERROR, Can't Spin Instances: Code: InvalidSnapshot.NotFound, Message: The snapshot 'snap-xyz' does not exist.`</code>
 
@@ -48,8 +47,7 @@ If you have a block device that is mapped to a snapshot ID of an Elastigroup or 
 
  ![cant-spin-instances-invalidsnapshot1](https://github.com/spotinst/help/assets/167069628/1010d3de-2932-4677-92ed-ed6c124fe9a6)
 
-    </span>
-
+</span>
  </details>
  
  <details>
@@ -59,7 +57,7 @@ If a node only has one task running, then it causes the node to be underutilized
 
 Example service:
 
-<pre><code>"placementConstraints": [],
+<pre class=lang-json"><code>"placementConstraints": [],
    "placementStrategy": [],
 </code></pre>
 
