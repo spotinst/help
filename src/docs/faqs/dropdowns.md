@@ -8,12 +8,14 @@
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600">How are running hours calculated in the Spot console and AWS?</summary>
 
- Running hours are calculated from the moment an instance is launched until it is <i>detached</i> and not <i>terminated</i>. AWS calculates the entire lifetime of the instance.
+<span style="padding-left:16px">
+Running hours are calculated from the moment an instance is launched until it is <i>detached</i> and not <i>terminated</i>. AWS calculates the entire lifetime of the instance.
 
 Here are some reasons for large differences between the numbers in the Spot Console and AWS:
 * Groups of instances with long draining periods
 * Shutdown scripts with long grace periods
 
+ </span>
  </details>
 
 <!----------------------------------ocean---------------------------------->
@@ -22,6 +24,8 @@ Here are some reasons for large differences between the numbers in the Spot Cons
  
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600">Why does Ocean fail to update instance types?</summary>
+
+<span style="padding-left:16px">
 
 You cannot update the instance types in the default virtual node group. For example, it’s not supported to remove <i>m4.large</i> and <i>m5.large</i>, add <i>m5d.xlarge</i> and <i>m6i.xlarge</i> to the default virtual node group, and then update the cluster.
 
@@ -33,13 +37,16 @@ Launch spec ols-xxxxxxxx instance types are not a subset of ocean cluster
 Remove the instance types at the cluster level, add <i>m5d.xlarge</i> and <i>m6i.xlarge</i> instance types, and then update the cluster.
 
 Instance types of the virtual node group are always a subset of the Ocean cluster.
-
+ 
+ </span>
  </details>
 
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600">Why can't I spin new instances?</summary>
-<span style="background:#f2f2f2">You have scaling up instances for your Elastigroup or Ocean clusters and you get this message:
+
+<span style="padding-left:16px">
+You have scaling up instances for your Elastigroup or Ocean clusters and you get this message:
 
 <code>ERROR, Can't Spin Instances: Code: InvalidSnapshot.NotFound, Message: The snapshot 'snap-xyz' does not exist.`</code>
 
@@ -76,10 +83,13 @@ Check the **portMappings: hostPort** value in the task/service defintion.
 
 Port mappings allow containers to access ports on the host container instances to send or receive traffic. This configuration can be found in the task definition. The hostPort value in port mapping is normally left blank or set to 0.
 
+ </span>
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600">Can I include or exclude instance types in my Ocean cluster?</summary>
+
+<span style="padding-left:16px">
 
  You can include or exclude certain instance types in your Ocean cluster. Typically, you do it from the cluster configuration.
 * **Blacklist**: instance types to block launching in the Ocean cluster. It cannot be used with a permit list.
@@ -90,10 +100,13 @@ You can allow, [block](https://docs.spot.io/ocean/tips-and-best-practices/manage
 
 ![exclude-instance-ocean1](https://github.com/spotinst/help/assets/167069628/be29e0f4-5a2c-4e46-a823-f72c218e0460)
 
+ </span>
  </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600">Why am I getting an InvalidBlockDeviceMapping error?</summary>
+
+<span style="padding-left:16px">
 
 You can get this error when the group's device name (for Block Device Mapping) and the AMI's device name do not match:
 
@@ -104,10 +117,13 @@ You can get this error when the group's device name (for Block Device Mapping) a
 
 Change the device name from <code>xvda</code> to <code>/dev/xvda</code> on the group's side. Go to **Actions** > **Edit Configuration** > **Review Tab** > **Switch to Json Edit format** > **Apply the changes and save**.
 
+ </span>
  </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600">Why am I getting an import Fargate services error?</summary>
+
+<span style="padding-left:16px">
 
  When you import Fargate services with more than 5 security groups, you get an error: 
 
@@ -117,6 +133,7 @@ In Spot, you see this warning:
 
 <code>Fargate import failed for xxx-xxxxxx, due to Failed to import services, too many security groups. Import less services to this group (Group ID: xxxx-xxxxxx).</code>
 
+ </span>
  </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
@@ -136,6 +153,7 @@ The workflow of the node termination handler DaemonSet is:
 Ocean does not conflict with aws-node-termination-handler. It is possible to install it, but using aws-node-termination-handler is not required. Ocean continuously analyzes how your containers use infrastructure, automatically scaling compute resources to maximize utilization and availability.
 Ocean ensures that the cluster resources are utilized and scales down underutilized nodes to optimize maximal cost.
  
+ </span>
  </details>
 
 <!----------------------------------elastigroup---------------------------------->
@@ -144,6 +162,7 @@ Ocean ensures that the cluster resources are utilized and scales down underutili
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600">How can I update the instance metadata (IMDS) in my cluster?</summary>
 
+<span style="padding-left:16px">
 
 1. Follow the [Ocean AWS Cluster Create](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterCreate) or [Elastigroup AWS Create](https://docs.spot.io/api/#tag/Elastigroup-AWS/operation/elastigroupAwsCreate) API instructions and add this configuration for the cluster:
    <pre><code>
@@ -183,6 +202,7 @@ If you have another snapshot, then you can use that snapshot ID for the block de
 * **Ocean**: on the virtual node group you want to change, update the snapshot ID.
  ![cant-spin-instances-invalidsnapshot3](https://github.com/spotinst/help/assets/167069628/e4b1a3aa-8404-4877-afbc-50337d67953c)
 
+ </span>
  </details>
 
 <!----------------------------------elastigroup stateful node---------------------------------->
@@ -192,6 +212,8 @@ If you have another snapshot, then you can use that snapshot ID for the block de
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600">How can I update the instance metadata (IMDS) in my cluster?</summary>
 
+<span style="padding-left:16px">
+ 
 Instance metadata service (IMDS) is data about your instance that you can use to configure or manage the running instance or virtual machines. IMDS comes from the cloud providers. The metadata can include instance ID, IP address, security groups, and other configuration details.
 Instance metadata service version 2 (IMDSv2) addresses security concerns and vulnerabilities from IMDSv1. IMDSv2 has more security measures to protect against potential exploitation and unauthorized access to instance metadata.
 
@@ -240,4 +262,5 @@ You can use your own AMI and configure IMDSv2 on it. All instances launched afte
 
 2. In the Spot console, [create a stateful node](https://docs.spot.io/managed-instance/getting-started/create-a-new-managed-instance) with the custom AMI.
    
+ </span>
  </details>
