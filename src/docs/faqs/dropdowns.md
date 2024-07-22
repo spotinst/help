@@ -5,7 +5,7 @@
 <!----------------------------------general---------------------------------->
 
 ## General
- <details style="background:#f2f2f2">
+ <details style="background:#f2f2f2; padding:6 px; margin:10 px 0 px 0 px 0 px">
    <summary markdown="span" style="background:#f2f2f2">How are running hours calculated in the Spot console and AWS?</summary>
 
  Running hours are calculated from the moment an instance is launched until it is <i>detached</i> and not <i>terminated</i>. AWS calculates the entire lifetime of the instance.
