@@ -2360,6 +2360,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/elastigroup/tutorials/"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/?/faqs/dropdowns</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/?/faqs/dropdowns"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/?/faqs/dropdowns"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/?/faqs/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
