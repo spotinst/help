@@ -179,21 +179,22 @@ Once configured, whenever the Ocean Autoscaler scales up, Ocean will automatical
 </details><br>
 
 ## Restrict Scale Down per Virtual Node Group
+
+Relevant for AWS Kubernetes, ECS, and GKE.
+
 The restrict-scale-down label is a [Spot label](ocean/features/labels-and-taints?id=spot-labels) that can be applied on a Kubernetes pod or an ECS task and forces Ocean not to scale down the node or container instance running it. It is also possible to restrict scale down at the VNG level using a boolean property with the same name.
 
 A possible use case is protecting a 100% On-demand VNG from any scale-down activity, as Ocean will treat the nodes or container instances in this VNG as if all pods or tasks running on them have the restrict-scale-down label. This will ensure that scale-down will not cause interruptions to sensitive workloads.
-
-Restrict scale-down can be applied only in AWS, ECS, and GKE.
 
 For more information about the Scale Down feature, see Scaling ([Kubernetes](ocean/features/scaling-kubernetes?id=scale-down) or [ECS](ocean/features/scaling-ecs?id=scale-down-behavior)).
 
 ### Multiple AMI Architectures in the Same Virtual Node Group 
 
+AWS Kubernetes and ECS only.
+
 Ocean supports instance types with both Arm64 and x86 architectures in the same VNG. This widens the instance selection options because instances that support either the Arm64 or the x86 architectures can be chosen. This enables you to take advantage of the cost and performance benefits of Arm64 when the spot markets allow while maintaining a large whitelist of x86 instances. 
 
 Whenever you create a Virtual Node Group with the Arm64 and x86 instance types, ensure that the workloads can run on both architectures. In addition, ensure by using node selectors that only the relevant pods will trigger a scale-up from this VNG. 
-
-Multiple architectures in the same VNG can be applied only in AWS Kubernetes and ECS. 
 
 <!-- I took the generic intro information from Preferred Spot Instance Types per Virtual Node Group and put it above -->
 
