@@ -68,9 +68,9 @@ of running instances.
 * `cluster_min_instance_count_reached` - failed to scale down. Clusters have reached the minimum capacity of
 running instances.
 
---
-Adding new reasons below.........
---
+
+<!--Adding new reasons below.........-->
+
 
 * `instance_type_is_not_supported_in_AZ` = failed to scale up. The instance type is not supported in the Availability Zone.
 * `insufficient_instance_capacity` = failed to scale up. Insufficient requested instance type in the requested zone
