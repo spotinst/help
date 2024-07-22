@@ -2,6 +2,8 @@
 
 # Frequently Asked Questions
 
+<!----------------------------------general---------------------------------->
+
 ## General
  <details>
    <summary markdown="span">How are running hours calculated in the Spot console and AWS?</summary>
@@ -13,6 +15,8 @@ Here are some reasons for large differences between the numbers in the Spot Cons
 * Shutdown scripts with long grace periods
 
  </details>
+
+<!----------------------------------ocean---------------------------------->
 
 ## Ocean
  
@@ -128,7 +132,7 @@ The task definition doesn't have constraints to spread tasks across nodes.
   ],
 </code></pre>
 
-Check the **portMappings: hostPort** value in teh task/service defintion.
+Check the **portMappings: hostPort** value in the task/service defintion.
 
 Port mappings allow containers to access ports on the host container instances to send or receive traffic. This configuration can be found in the task definition. The hostPort value in port mapping is normally left blank or set to 0.
 
@@ -197,7 +201,7 @@ Reimport Fargate services with less than 5 security groups and choose only one s
   <details>
    <summary markdown="span">Can I deploy AWS node termination handler on Spot nodes?</summary>
    
-[AWS node termination handler](https://ec2spotworkshops.com/using_ec2_spot_instances_with_eks/070_selfmanagednodegroupswithspot/deployhandler.html) is a DaemonSet pod that is deployed on each spot instance. It detects the instance termination notification signal so that there will be a graceful termination of any pod running on that node, drain from load balancers, and redeploy applications elsewhere in the cluster.
+The [AWS node termination handler](https://ec2spotworkshops.com/using_ec2_spot_instances_with_eks/070_selfmanagednodegroupswithspot/deployhandler.html) is a DaemonSet pod that is deployed on each spot instance. It detects the instance termination notification signal so that there will be a graceful termination of any pod running on that node, drain from load balancers, and redeploy applications elsewhere in the cluster.
 
 AWS node termination handler makes sure that the Kubernetes control plane responds as it should to events that can cause EC2 instances to become unavailable. Some reasons EC2 instances may become unavailable include:
 * EC2 maintenance events
@@ -219,7 +223,8 @@ Ocean does not conflict with aws-node-termination-handler. It is possible to ins
 Ocean ensures that the cluster resources are utilized and scales down underutilized nodes to optimize maximal cost.
  
  </details>
- 
+
+<!----------------------------------elastigroup---------------------------------->
 ## Elastigroup
 
  <details>
@@ -296,7 +301,9 @@ If you have another snapshot, then you can use that snapshot ID for the block de
  ![cant-spin-instances-invalidsnapshot3](https://github.com/spotinst/help/assets/167069628/e4b1a3aa-8404-4877-afbc-50337d67953c)
 
  </details>
- 
+
+<!----------------------------------elastigroup stateful node---------------------------------->
+
 ## Elastigroup Stateful Node
 
  <details>
