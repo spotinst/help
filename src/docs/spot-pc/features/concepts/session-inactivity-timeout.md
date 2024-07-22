@@ -1,3 +1,5 @@
+<meta name=“robots” content=“noindex”>
+
 # Concept: Session Inactivity Timeout
 Spot PC requires an inactivity timeout be set for user sessions. This functionality disconnects idle user sessions and logs-out disconnected user sessions, both after a defined time delay.
 

@@ -1,3 +1,6 @@
+<meta name="description" content="Manage users, permissions, and accounts in Spot">
+<meta name="keywords" content="users, groups, permission policies, manage accounts and organizations, single sign on, SSO, Okta">
+
 # Administration
 
 We make it easy for you to manage users, permissions, and accounts in Spot.

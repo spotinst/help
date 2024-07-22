@@ -10,13 +10,13 @@ The dashboard includes the following main areas:
 * Most Prevalent Alerts
 * Risks Over Time
 
-To use the dashboard, click Dashboard under Spot Security in the Spot console tree on the left.
+To use the dashboard, in the left main menu, click **Spot Security** and then **Dashboard**. 
 
 ## Security Summary
 
 The large tile at the top provides your main security stats:
-* Identified Risks: The total number of security risks currently found in your environment (or based on the filters applied). Click View All Risks to see a detailed listing of all the risks.
-* Checks Passed: The total number of security rules passed for all of your assets
+* Identified Risks: The total number of security risks currently in your environment (or based on the filters applied). Click **View All Risks** to see a detailed list of all the risks.
+* Checks Passed: The total number of security rules passed for all of your assets.
 * Resources Scanned: Under Identified Risks, Spot displays the total number of resources scanned for the given analysis and the date and time of the last scan.
 * New Risks Identified: Number of new risks identified in the latest scan of your assets compared to the last scan.
 * Risk Across Regions: The map shows the number of risks in each region where you have resources. Hover over the circle charts to see the number of low, medium, and high risks.
@@ -26,15 +26,25 @@ The large tile at the top provides your main security stats:
 
 ### Filters and Presets
 
-You can use the filters at the top to focus only on the information you need. Once you have set the filters, you can save them as [Presets](spot-security/features/security-dashboard/create-preset) for quick access to your customized view of the dashboard. You can create presets based on the AWS accounts, regions, or asset types that you are responsible for.
+You can use the filters at the top to focus only on the information you need. Once you have set the filters, you can save them as [Presets](spot-security/features/security-dashboard/create-preset) for quick access to your customized dashboard view. You can create presets based on the AWS accounts, regions, or asset types for which you are responsible.
 
 <img src="/spot-security/_media/spot-security-dashboard-b1.png" />
 
-### Prioritized Actionable Insights
+### Prioritized Risk Analysis
 
-Spot Security helps you prioritize risks by providing you with the Prioritized Actionbale Insights. The Risks in this table are sorted according to priorities starting from 1 to 100 by default. Spot Security takes into account asset’s status (Internet facing), asset type, severity of the security rule, blast radius and access type (external access, public access) to calculate the priority. You can choose to accept the risks using the supress action and you will be presented with the next set of priorities. You can also filter the table and customize its columns as well as export the table to a CSV file.  
+Spot Security helps you prioritize risks by providing the Prioritized Actionbale Insights. The Risks in this table are sorted according to priorities, starting from 1 to 100 by default. Spot Security considers asset’s status (Internet facing), asset type, severity of the security rule, blast radius and access type (external access, public access) to calculate the priority. You can accept the risks using the Suppress action, and you will be presented with the next set of priorities. You can also filter the table, customize its columns, and export the table to a CSV file.  
 
 <img src="/spot-security/_media/dashboard-1.png" />
+
+### Prioritised Vulnerability
+
+The Prioritized Vulnerabilities table presents the vulnerability findings based on their priorities, ranging from 1 to 100 by default. Spot Security considers multiple criteria to provide you with a contextual ranking for the CVE (Common Vulnerabilities and Exposures) and the asset. This feature lets you identify and address the most critical vulnerabilities first.
+
+![dashboard-5](https://github.com/spotinst/help/assets/106514736/cb2872db-e221-469e-a92d-658feacd6e88)
+
+Click the number of the Total Findings column of a vulnerability to view additional information, such as the OS, packages, etc.
+
+![dashboard-6](https://github.com/spotinst/help/assets/106514736/d75dbf9d-44f0-472a-87c2-b615497082d6)
 
 ### Most Prevalent Alerts
 

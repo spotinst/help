@@ -21,7 +21,7 @@ In the left menu of the Spot Console, click Ocean/Cloud Clusters, and click Crea
 1. In the General page, enter a Cluster Name and the Location Type and click the Region where the cluster is running.
    - Cluster Name is the name of the Ocean entity that will be created. For a cluster that you are importing, we recommend that you give it the same name as the original GKE cluster. This will make it easier to identify related entities in each system.
    - Location Type can be either Zonal or Regional.
-2. Select the GKE cluster to import the configuration from.
+2. Select the GKE cluster from which to import the configuration.
 
 <img src="/ocean/_media/gke-general.png" width="400" height="384" />
 
@@ -29,7 +29,7 @@ In the left menu of the Spot Console, click Ocean/Cloud Clusters, and click Crea
 
 ## Step 2: Compute
 
-1. Ocean imports the compute configuration from your GKE cluster and displays it in the Compute page. Confirm or edit the configuration if need:
+1. Ocean imports the compute configuration from your GKE cluster and displays it on the Compute page. Confirm or edit the configuration if needed:
    - Machine Types.
      All types are selected by default to grant Ocean the most freedom of operation possible. Click Customize if an adjustment is required.
    - Resource Limit
@@ -64,7 +64,7 @@ In the left menu of the Spot Console, click Ocean/Cloud Clusters, and click Crea
 kubectl apply -f https://spotinst-public.s3.amazonaws.com/integrations/kubernetes/cluster-controller/spotinst-kubernetes-cluster-controller-gcr.yaml
 ```
 
-2. Ensure that your GKE cluster has NAT for the controller to be able to report information to the Ocean SaaS.
+2. Ensure your GKE cluster has NAT so the controller can report information to the Ocean SaaS.
 3. Click Test Connectivity to ensure the controller functionality.
 
 ### Preserve Original Node Pool
@@ -87,8 +87,8 @@ Manually scale down your existing GKE nodes in the node pools you migrated to ge
 gcloud container clusters resize <cluster_name> --num-nodes=0 --region=<region/zone> --node-pool <node_pool_name>
 ```
 
-To avoid unnecessary down time, the scale down of existing nodes should be gradual. For example, run the above command several times, reducing the value of `num-nodes` gradually. Use `num-nodes=0` only on the last time you run the command.
+To avoid unnecessary downtime, the scale-down of existing nodes should be gradual. For example, run the above command several times, reducing the value of `num-nodes` gradually. Use `num-nodes=0` only on the last time you run the command.
 
-## What's Next?
+## Related Topics
 
 - Learn how to [connect an existing ECS Cluster](ocean/getting-started/gke)

@@ -1,3 +1,5 @@
+<meta name=“robots” content=“noindex”>
+
 # Concept: Spot Group
 Spot Group is a concept used in the Spot PC UI to organize users, images, session hosts and a variety of other concepts.  Spot Groups are deployed into a single Azure Region and cannot span regions.
 

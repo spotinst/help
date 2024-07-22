@@ -14,7 +14,7 @@ The Eco team requests the [Cost Management Reader role](https://docs.microsoft.c
 
 The Eco team requests users to assign the [Azure Reservation Reader](https://docs.microsoft.com/en-us/azure/cost-management-billing/reservations/view-reservations#assign-a-reservation-reader-role-at-the-tenant-level) role to the registered application in order to accurately perform the initial analysis.
 
-### Enrollement Reader Role (Applies to Enterprise Agreement only)
+### Enrollment Reader Role (Applies to Enterprise Agreement only)
 
 The Eco team requests that the registered application also be given [Enrollment Reader](https://learn.microsoft.com/en-us/azure/cost-management-billing/manage/assign-roles-azure-service-principals#permissions-that-can-be-assigned-to-the-spn) access in order to view Cost Management data. The data is used to complete the initial analysis.
 
@@ -37,6 +37,10 @@ The Eco team requests users to assign the [Azure Reservation Purchaser](https:
 ### Reservation Owner Role 
 
 The Eco team requests users to assign the Azure Reservation Owner role to the registered application in order to view and manage pre-existing reservations orders. This permission is found on the reservation page in Azure. 
+
+### Savings Plan Purchaser Role
+
+The Eco team requests users to assign the Azure Savings Plan Purchaser role to the registered application in order to purchase a savings plan. 
 
 ## What's Next?
 

@@ -34,4 +34,8 @@ When you click on a check, you can see the details related to the check, includi
 The detail page contains several columns that are most relevant to the check and the resources in question.   
 
 ![best-practice-2](https://github.com/spotinst/help/assets/106514736/9c0d6b0e-2867-4f9f-8b81-38b87978e42c) 
+
+## Untagged Resources
+
+Cost Intelligence automatically checks to make sure all resources have tags. Any resources identified to have missing tags will be indicated as a failure for the Untagged Resources check.
  
