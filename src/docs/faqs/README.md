@@ -46,7 +46,7 @@ Instance metadata service version 2 (IMDSv2) addresses security concerns and vul
 You can define metadata for autoscaling groups in AWS that gets imported when you import the groups from AWS to Spot. You can manually configure them in Spot to use IMDSv2.
 
 1. Follow the [Ocean AWS Cluster Create](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterCreate) or [Elastigroup AWS Create](https://docs.spot.io/api/#tag/Elastigroup-AWS/operation/elastigroupAwsCreate) API instructions and add this configuration for the cluster:
-   <pre><code class="language-json">
+   <pre><code class="lang-json">
    "compute": {
     "launchSpecification": {
         "instanceMetadataOptions": {
@@ -117,13 +117,13 @@ If a node only has one task running, then it causes the node to be underutilized
 
 Example service:
 
-<pre><code>"placementConstraints": [],
+<pre><code class="lang-json">"placementConstraints": [],
    "placementStrategy": [],
 </code></pre>
 
 The task definition doesn't have constraints to spread tasks across nodes.
 
-<pre><code>
+<pre><code class="lang-json">
 "placementConstraints": [
   {
   "type": "memberOf",
@@ -137,7 +137,7 @@ Check the **portMappings: hostPort** value in the task/service defintion.
 Port mappings allow containers to access ports on the host container instances to send or receive traffic. This configuration can be found in the task definition. The hostPort value in port mapping is normally left blank or set to 0.
 
 Example:
-<pre><code>
+<pre><code class="lang-json">
       "portMappings": [
             {
                "protocol": "tcp",
@@ -237,7 +237,7 @@ Instance metadata service version 2 (IMDSv2) addresses security concerns and vul
 You can define metadata for autoscaling groups in AWS that gets imported when you import the groups from AWS to Spot. You can manually configure them in Spot to use IMDSv2.
 
 1. Follow the [Ocean AWS Cluster Create](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterCreate) or [Elastigroup AWS Create](https://docs.spot.io/api/#tag/Elastigroup-AWS/operation/elastigroupAwsCreate) API instructions and add this configuration for the cluster:
-   <pre><code>
+   <pre><code class="lang-json">
    "compute": {
     "launchSpecification": {
         "instanceMetadataOptions": {
@@ -316,7 +316,7 @@ Instance metadata service version 2 (IMDSv2) addresses security concerns and vul
 You can define metadata for autoscaling groups in AWS that gets imported when you import the groups from AWS to Spot. You can manually configure them in Spot to use IMDSv2.
 
 1. Follow the [Ocean AWS Cluster Create](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterCreate) or [Elastigroup AWS Create](https://docs.spot.io/api/#tag/Elastigroup-AWS/operation/elastigroupAwsCreate) API instructions and add this configuration for the cluster:
-   <pre><code>
+   <pre><code class="lang-json">
    "compute": {
     "launchSpecification": {
         "instanceMetadataOptions": {
