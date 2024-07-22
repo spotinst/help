@@ -37,6 +37,49 @@ The Updates History list for completed runs is displayed above the configured sc
   * Error (red): Error at Virtual Node Group level: The update has failed for this specific VNG. Hover over the error icon for more information.
   * Cluster Error (red): The cluster update has failed. Hover over the cluster error icon for more information.
 
+>**Note**: See also Auto Update Troubleshooting.
+
+* Old AMI/New AMI: version numbers before and after the run.
+* Virtual Node Group: Click the link to view the Virtual Node Group attributes.
+
+>**Note**: A Virtual Node Group is listed only if an update was needed.
+
+* Roll ID: Listed if the cluster was rolled after auto-update. Click the link to view Roll ID attributes.
+* Trigger Type: Manual (auto-update was run immediately) or Scheduled (auto-update was scheduled and run).
+
+[placeholder for history and schedules]
+
+>**Tip**: Use the Updates History filter to search for auto-update runs by Virtual Node Groups, Status, or Trigger Type.
+
+### Roll Cluster Option
+
+If you optionally select to roll the cluster after the update for either immediate or scheduled auto-updates, these are the roll parameters:
+
+* Respect Pod Disruption Budget (PDB): Some pods may have a Pod Disruption Budget (PDB). If you turn on the PDB, Ocean verifies the PDB and will not replace a node if the PDB is violated.
+* Roll Batch Size Percentage: Indicates the percentage of the cluster's target capacity that will be rolled during a cluster roll operation. For example, if the cluster's target capacity is 50 nodes, and the Batch Size Percentage is set to 20%, each batch will consist of 20% of the target capacity, 10 nodes (50 nodes * 20% = 10 nodes).
+* Batch Size Healthy Percentage: indicates the minimum percentage of healthy instances in a single batch. The roll will fail if the number of healthy instances in a single batch is less than this percentage. The range is 1-100; if the parameter value is null, the default value will be 50%. Ocean considers instances not replaced due to PDB to be healthy. You can override the behavior of the batchMinHealthyPercentage parameter by setting the ignorePdb parameter to True
+
+## Auto Update Now
+
+To auto-update immediately:
+
+1. In the AMI Auto Update tab, click **Configure and Update Now**.
+2. Select whether to update Security patches, Kubernetes minor versions, or both options in the Auto Update dialog box.
+3. Optionally click **Apply cluster roll with update** (see [link to Roll Cluster Option])
+  
+  <ol style="list-style-type: lower-alpha;">
+  <li>Select the Batch size percentage (1 - 100%).</li>
+  <li>Select the Batch size healthy percentage (20-100%)</li>
+  <li>Optionally, turn on the Pod Disruption Budget (PDB) </li>
+  </ol>
+  
+4. Click Update now. After the update is complete, an entry will be displayed in the Updates History list.
+
+>**Note**: An auto-update should take only a few seconds.
+
+
+
+
 
 
 
