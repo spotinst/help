@@ -180,7 +180,7 @@ Change the device name from <code>xvda</code> to <code>/dev/xvda</code> on the g
  </details>
 
   <details>
-   <summary markdown="span">Why am I getting an import Faregate services error?</summary>
+   <summary markdown="span">Why am I getting an import Fargate services error?</summary>
 
  When you import Fargate services with more than 5 security groups, you get an error: 
 
