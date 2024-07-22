@@ -77,10 +77,55 @@ To auto-update immediately:
 
 >**Note**: An auto-update should take only a few seconds.
 
+## Create or Edit an Auto Update Schedule
+
+To create or edit an auto-update schedule:
+
+1. In the AMI Auto Update tab, click Schedule Update to create an auto-update schedule if no configured schedules exist. If at least one configured schedule exists, click Schedule Update from the Actions list above the table. 
+
+>**Note**: To edit an existing auto-update schedule, click Edit in the entry for the schedule.
+
+2. Ensure that AMI Auto update is turned on in the Auto Update dialog box.
+3. Select whether to update Security patches, Kubernetes minor versions, or both options.
+4. Select whether to schedule once a day or at a specific time. 
+4. If you selected to schedule at a specific time, set the time using the day/week/month/time controls or type a Cron expression.
+
+5. Optionally click **Apply cluster roll with update** (see [link to Roll Cluster Option])
+  
+  <ol style="list-style-type: lower-alpha;">
+  <li>Select the Batch size percentage (1 - 100%).</li>
+  <li>Select the Batch size healthy percentage (20-100%)</li>
+  <li>Optionally, turn on the Pod Disruption Budget (PDB) </li>
+  </ol>
+
+6. Save the schedule. The schedule appears in the AMI Auto Update screen above the Updates History List. After the schedule is run, a row with the details is displayed in the Updates History list.
+
+>**Note**: To delete a schedule, click the garbage icon in the row for the schedule.
+
+## Auto Update Troubleshooting
+
+### Auto Update not Successful Due to VNG Issues
+
+These are all the possible errors per VNG:
+
+* The VNG was in Shutdown Hours.
+* The VNG was not updated with the new image.
+* The VNG was not updated with the new image.
+* The VNG was not updated with the new image.
+* The VNG is already using the most updated AMI.
+* The VNG is not set with an imageId.
+* The VNG has double AMIs, which is not supported by AMI Auto Update.
+* The control plane version is lower than the VNG image version.
+* Not supported: the new image's Kubernetes version is more than two versions ahead of the cluster’s.
+* No latest image was found.
+* Not supported: the image set for the VNG is not an EKS-optimized image.
+* Not supported: the VNG image is private.
+* The Kubernetes version for the VNG image was not found.
+* The architecture type for the VNG image was not found.
+* The control plane or VNG image minor version was not found.
+* The image could not be found in AWS.
 
 
+### Auto Update not Successful Due to Cluster Issues
 
-
-
-
-
+For example, an AMI auto-update might fail for the entire cluster if the Ocean Controller was not reported. The console displays this as a “Cluster Error:”
