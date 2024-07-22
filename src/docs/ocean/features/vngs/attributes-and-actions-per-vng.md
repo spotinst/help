@@ -205,7 +205,9 @@ Ocean serves such use cases with the ability to define a list of preferred insta
 
 ### Preferred Spot Instance Types per Virtual Node Group
 
-You can configure preferred Spot instance types at the Virtual Node Group level for your AWS Kubernetes and ECS clusters.
+AWS Kubernetes and ECS only.
+
+For your AWS Kubernetes and ECS clusters, you can configure preferred Spot instance types at the Virtual Node Group level.
 
 In each scale-up action, Ocean provisions the new instances from the preferred types, using:
 
@@ -222,6 +224,8 @@ For information about defining preferred spot instance types in the Spot API (us
 
 ###  Preferred On-Demand Instance Types per Virtual Node Group
 
+AWS Kubernetes only.
+
 You can configure preferred on-demand types at the Virtual Node Group level for your AWS Kubernetes clusters.
 
 In each scale-up action, Ocean provisions the new instances from the preferred types as follows:
@@ -237,6 +241,8 @@ When you set `preferredOnDemandTypes`, the Ocean Autoscaler will launch on-deman
 See also [Terraform](https://registry.terraform.io/providers/spotinst/spotinst/latest/docs/resources/ocean_aws_launch_spec#preferred_od_types)
 
 ##  Ephemeral Storage per Virtual Node Group
+
+AWS Kubernetes only.
 
 The Ocean Autoscaler (by default) calculates ephemeral storage using the root volume size when it scales up. If your system uses the data volume size for the calculation, you need to specify an alternative device name to ensure that the Ocean Autoscaler launches nodes with the right size for their workloads.
 
