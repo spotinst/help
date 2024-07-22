@@ -5,7 +5,7 @@
 <!----------------------------------general---------------------------------->
 
 ## General
- <details style="background:#f2f2f2; padding:6 px; margin:10 px 0 px 0 px 0 px">
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="background:#f2f2f2">How are running hours calculated in the Spot console and AWS?</summary>
 
  Running hours are calculated from the moment an instance is launched until it is <i>detached</i> and not <i>terminated</i>. AWS calculates the entire lifetime of the instance.
@@ -20,8 +20,8 @@ Here are some reasons for large differences between the numbers in the Spot Cons
 
 ## Ocean
  
- <details style="background:#f2f2f2">
-   <summary markdown="span" style="background:#f2f2f2">Why does Ocean fail to update instance types?</summary>
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE">Why does Ocean fail to update instance types?</summary>
 
 You cannot update the instance types in the default virtual node group. For example, it’s not supported to remove <i>m4.large</i> and <i>m5.large</i>, add <i>m5d.xlarge</i> and <i>m6i.xlarge</i> to the default virtual node group, and then update the cluster.
 
@@ -37,8 +37,8 @@ Instance types of the virtual node group are always a subset of the Ocean cluste
  </details>
 
 
- <details style="background:#f2f2f2">
-   <summary markdown="span" style="background:#f2f2f2">Why can't I spin new instances?</summary>
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE">Why can't I spin new instances?</summary>
 <span style="background:#f2f2f2">You have scaling up instances for your Elastigroup or Ocean clusters and you get this message:
 
 <code>ERROR, Can't Spin Instances: Code: InvalidSnapshot.NotFound, Message: The snapshot 'snap-xyz' does not exist.`</code>
@@ -50,8 +50,8 @@ If you have a block device that is mapped to a snapshot ID of an Elastigroup or 
 </span>
  </details>
  
- <details>
-   <summary markdown="span">Can hostPort cause underutilized nodes?</summary>
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE">Can hostPort cause underutilized nodes?</summary>
 
 If a node only has one task running, then it causes the node to be underutilized. Underutilized nodes should be bin-packed together if there are no constraints in the task/service definition.
 
@@ -78,8 +78,8 @@ Port mappings allow containers to access ports on the host container instances t
 
  </details>
 
- <details>
-   <summary markdown="span">Can I include or exclude instance types in my Ocean cluster?</summary>
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE">Can I include or exclude instance types in my Ocean cluster?</summary>
 
  You can include or exclude certain instance types in your Ocean cluster. Typically, you do it from the cluster configuration.
 * **Blacklist**: instance types to block launching in the Ocean cluster. It cannot be used with a permit list.
@@ -92,8 +92,8 @@ You can allow, [block](https://docs.spot.io/ocean/tips-and-best-practices/manage
 
  </details>
 
-  <details>
-   <summary markdown="span">Why am I getting an InvalidBlockDeviceMapping error?</summary>
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE">Why am I getting an InvalidBlockDeviceMapping error?</summary>
 
 You can get this error when the group's device name (for Block Device Mapping) and the AMI's device name do not match:
 
@@ -106,8 +106,8 @@ Change the device name from <code>xvda</code> to <code>/dev/xvda</code> on the g
 
  </details>
 
-  <details>
-   <summary markdown="span">Why am I getting an import Fargate services error?</summary>
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE">Why am I getting an import Fargate services error?</summary>
 
  When you import Fargate services with more than 5 security groups, you get an error: 
 
@@ -119,8 +119,8 @@ In Spot, you see this warning:
 
  </details>
 
-  <details>
-   <summary markdown="span">Can I deploy AWS node termination handler on Spot nodes?</summary>
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE">Can I deploy AWS node termination handler on Spot nodes?</summary>
    
 <a href="https://ec2spotworkshops.com/using_ec2_spot_instances_with_eks/070_selfmanagednodegroupswithspot/deployhandler.html">AWS node termination handler</a> is a DaemonSet pod that is deployed on each spot instance. It detects the instance termination notification signal so that there will be a graceful termination of any pod running on that node, drain from load balancers, and redeploy applications elsewhere in the cluster.
 
@@ -141,8 +141,8 @@ Ocean ensures that the cluster resources are utilized and scales down underutili
 <!----------------------------------elastigroup---------------------------------->
 ## Elastigroup
 
- <details>
-   <summary markdown="span">How can I update the instance metadata (IMDS) in my cluster?</summary>
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE">How can I update the instance metadata (IMDS) in my cluster?</summary>
 
 
 1. Follow the [Ocean AWS Cluster Create](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterCreate) or [Elastigroup AWS Create](https://docs.spot.io/api/#tag/Elastigroup-AWS/operation/elastigroupAwsCreate) API instructions and add this configuration for the cluster:
@@ -164,8 +164,8 @@ Ocean ensures that the cluster resources are utilized and scales down underutili
 
  </details>
 
- <details>
-   <summary markdown="span">Why can't I spin new instances?</summary>
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE">Why can't I spin new instances?</summary>
 
 You have scaling up instances for your Elastigroup or Ocean clusters and you get this message:
 
@@ -189,8 +189,8 @@ If you have another snapshot, then you can use that snapshot ID for the block de
 
 ## Elastigroup Stateful Node
 
- <details>
-   <summary markdown="span">How can I update the instance metadata (IMDS) in my cluster?</summary>
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE">How can I update the instance metadata (IMDS) in my cluster?</summary>
 
 Instance metadata service (IMDS) is data about your instance that you can use to configure or manage the running instance or virtual machines. IMDS comes from the cloud providers. The metadata can include instance ID, IP address, security groups, and other configuration details.
 Instance metadata service version 2 (IMDSv2) addresses security concerns and vulnerabilities from IMDSv1. IMDSv2 has more security measures to protect against potential exploitation and unauthorized access to instance metadata.
