@@ -57,7 +57,7 @@ If a node only has one task running, then it causes the node to be underutilized
 
 Example service:
 
-<pre><code>"placementConstraints": [],
+<pre class=lang-json"><code>"placementConstraints": [],
    "placementStrategy": [],
 </code></pre>
 
