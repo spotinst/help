@@ -133,6 +133,21 @@ These are all the possible errors per VNG:
 * The control plane or VNG image minor version was not found.
 * The image could not be found in AWS.
 
+* The VNG was in Shutdown Hours: When the cluster is in Shutdown Hours, the Ocean Controller is not running, so the AMI Auto Update cannot be triggered.
+* The VNG is already using the most updated AMI: No update is required. The Virtual Node Group is set with the most updated image.
+* The VNG is not set with an imageId: The Virtual Node Group image id field is 'null', so no update is required.
+* The VNG has double AMIs, which is not supported by AMI Auto Updates: EKS AMI Auto Update does not support double AMI configuration. Manually update these Virtual Node Groups.
+* The control plane version is lower than the VNG image version: There is no need for the update. Make sure to upgrade your control plane or change the Virtual Node Group image to the same version as the EKS cluster control plane.
+* Not supported: the new image's Kubernetes version is more than two versions ahead of the cluster’s - AWS typically allows the worker nodes to be at a version that is the same as the control plane or up to 2 minor versions behind. For example, if your control plane is running Kubernetes version 1.20, your worker nodes can be running versions 1.20, 1.19, or 1.18.
+No latest image was found - The VNG is using the most updated image.
+Not supported: the image set for the VNG is not an EKS-optimized image - EKS AMI Auto Update does not support non EKS-optimized image. These VNGs should be manually updated.
+Not supported: the VNG image is private. - EKS AMI Auto Update does not support private images. These VNGs should be manually updated.
+The Kubernetes version for the VNG image was not found - EKS AMI Auto Update failed to get the Kubernetes version of the image's version. Please reach out to support to investigate.
+The architecture type for the VNG image was not found - EKS AMI Auto Update failed to get the architecture type of the image's version. Please reach out to support to investigate.
+The control plane or VNG image minor version was not found - EKS AMI Auto Update failed to get the control plane or VNG image minor version. Please reach out to support to investigate.
+The image could not be found in AWS - EKS AMI Auto Update failed to get the image from AWS. Please reach out to support to investigate.
+The VNG was not updated with the new image. - EKS AMI Auto Update failed. Please reach out to support to investigate.
+
 
 ### Auto Update not Successful Due to Cluster Issues
 
