@@ -109,9 +109,9 @@ To create or edit an auto-update schedule:
 
 ## Auto Update Troubleshooting
 
-### Auto Update not Successful Due to VNG Issues
+### Auto Update not Successful Due to Virtual Node Group Issues
 
-These are all the errors per VNG:
+These are the errors per Virtual Node Group:
 
 * The VNG was in Shutdown Hours: When the cluster is in Shutdown Hours, the Ocean Controller is not running, so the AMI Auto Update cannot be triggered.
 * The VNG is already using the most updated AMI, so no update is required. The Virtual Node Group is set with the most updated image.
