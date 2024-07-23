@@ -5,14 +5,18 @@
 <!----------------------------------general---------------------------------->
 
 ## General
- <details>
-   <summary markdown="span">How are running hours calculated in the Spot console and AWS?</summary>
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600">How are running hours calculated in the Spot console and AWS?</summary>
 
- Running hours are calculated from the moment an instance is launched until it is <i>detached</i> and not <i>terminated</i>. AWS calculates the entire lifetime of the instance.
+  <div style="padding-left:16px">
+
+Running hours are calculated from the moment an instance is launched until it is <i>detached</i> and not <i>terminated</i>. AWS calculates the entire lifetime of the instance.
 
 Here are some reasons for large differences between the numbers in the Spot Console and AWS:
 * Groups of instances with long draining periods
 * Shutdown scripts with long grace periods
+
+ </div>
 
  </details>
 
@@ -20,8 +24,10 @@ Here are some reasons for large differences between the numbers in the Spot Cons
 
 ## Ocean
  
- <details>
-   <summary markdown="span">Why does Ocean fail to update instance types?</summary>
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600">Why does Ocean fail to update instance types?</summary>
+
+  <div style="padding-left:16px">
 
 You cannot update the instance types in the default virtual node group. For example, it’s not supported to remove <i>m4.large</i> and <i>m5.large</i>, add <i>m5d.xlarge</i> and <i>m6i.xlarge</i> to the default virtual node group, and then update the cluster.
 
@@ -34,10 +40,14 @@ Remove the instance types at the cluster level, add <i>m5d.xlarge</i> and <i>m6i
 
 Instance types of the virtual node group are always a subset of the Ocean cluster.
 
+ </div>
+
  </details>
 
- <details>
-   <summary markdown="span">How can I update the instance metadata (IMDS) in my cluster?</summary>
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600">How can I update the instance metadata (IMDS) in my cluster?</summary>
+
+  <div style="padding-left:16px">
 
 Instance metadata service (IMDS) is data about your instance that you can use to configure or manage the running instance or virtual machines. IMDS comes from the cloud providers. The metadata can include instance ID, IP address, security groups, and other configuration details.
 Instance metadata service version 2 (IMDSv2) addresses security concerns and vulnerabilities from IMDSv1. IMDSv2 has more security measures to protect against potential exploitation and unauthorized access to instance metadata.
@@ -87,10 +97,14 @@ You can use your own AMI and configure IMDSv2 on it. All instances launched afte
 
 2. In the Spot console, [create a stateful node](https://docs.spot.io/managed-instance/getting-started/create-a-new-managed-instance) with the custom AMI.
 
+ </div>
+
  </details>
 
- <details>
-   <summary markdown="span">Why can't I spin new instances?</summary>
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600">Why can't I spin new instances?</summary>
+
+  <div style="padding-left:16px">
 
 You have scaling up instances for your Elastigroup or Ocean clusters and you get this message:
 
@@ -108,10 +122,14 @@ If you have another snapshot, then you can use that snapshot ID for the block de
 * **Ocean**: on the virtual node group you want to change, update the snapshot ID.
  ![cant-spin-instances-invalidsnapshot3](https://github.com/spotinst/help/assets/167069628/e4b1a3aa-8404-4877-afbc-50337d67953c)
 
+ </div>
+
  </details>
  
- <details>
-   <summary markdown="span">Can hostPort cause underutilized nodes?</summary>
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600">Can hostPort cause underutilized nodes?</summary>
+
+<div style="padding-left:16px">
 
 If a node only has one task running, then it causes the node to be underutilized. Underutilized nodes should be bin-packed together if there are no constraints in the task/service definition.
 
@@ -149,12 +167,16 @@ However, if the hostPort value equals the containerPort value, then each task ne
 
 You can have multiple containers defined in a single task definition. Check all the <i>portMappings</i> configurations for each container in the [task definition](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_PortMapping.html).
 
+ </div>
+
  </details>
 
- <details>
-   <summary markdown="span">Can I include or exclude instance types in my Ocean cluster?</summary>
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600">Can I include or exclude instance types in my Ocean cluster?</summary>
 
- You can include or exclude certain instance types in your Ocean cluster. Typically, you do it from the cluster configuration.
+<div style="padding-left:16px">
+
+You can include or exclude certain instance types in your Ocean cluster. Typically, you do it from the cluster configuration.
 * **Blacklist**: instance types to block launching in the Ocean cluster. It cannot be used with a permit list.
 * **Whitelist**: instance types allowed in the Ocean cluster. It cannot be used with a deny list.
 * **Filtering**: list of filters. The instance types that match with all filters make up the Ocean's whitelist parameter. Filtering cannot be used with allow or block lists.
@@ -163,10 +185,14 @@ You can allow, [block](https://docs.spot.io/ocean/tips-and-best-practices/manage
 
 ![exclude-instance-ocean1](https://github.com/spotinst/help/assets/167069628/be29e0f4-5a2c-4e46-a823-f72c218e0460)
 
+</div>
+
  </details>
 
-  <details>
-   <summary markdown="span">Why am I getting an InvalidBlockDeviceMapping error?</summary>
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600">Why am I getting an InvalidBlockDeviceMapping error?</summary>
+
+<div style="padding-left:16px">
 
 You can get this error when the group's device name (for Block Device Mapping) and the AMI's device name do not match:
 
@@ -177,12 +203,16 @@ You can get this error when the group's device name (for Block Device Mapping) a
 
 Change the device name from <code>xvda</code> to <code>/dev/xvda</code> on the group's side. Go to **Actions** > **Edit Configuration** > **Review Tab** > **Switch to Json Edit format** > **Apply the changes and save**.
 
+ </div>
+
  </details>
 
-  <details>
-   <summary markdown="span">Why am I getting an import Fargate services error?</summary>
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600">Why am I getting an import Fargate services error?</summary>
 
- When you import Fargate services with more than 5 security groups, you get an error: 
+<div style="padding-left:16px">
+
+When you import Fargate services with more than 5 security groups, you get an error: 
 
 <code>Failed to import Fargate services into Ocean. Please verify Spot IAM policy has the right permissions and try again.</code>
 
@@ -196,11 +226,15 @@ Check the Ocean log to see if you see the error <code>too many security groups</
 
 Reimport Fargate services with less than 5 security groups and choose only one service at a time to import it successfully.
 
+ </div>
+
  </details>
 
-  <details>
-   <summary markdown="span">Can I deploy AWS node termination handler on Spot nodes?</summary>
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600">Can I deploy AWS node termination handler on Spot nodes?</summary>
    
+<div style="padding-left:16px">
+
 <a href="https://ec2spotworkshops.com/using_ec2_spot_instances_with_eks/070_selfmanagednodegroupswithspot/deployhandler.html">AWS node termination handler</a> is a DaemonSet pod that is deployed on each spot instance. It detects the instance termination notification signal so that there will be a graceful termination of any pod running on that node, drain from load balancers, and redeploy applications elsewhere in the cluster.
 
 AWS node termination handler makes sure that the Kubernetes control plane responds as it should to events that can cause EC2 instances to become unavailable. Some reasons EC2 instances may become unavailable include:
@@ -222,13 +256,17 @@ The workflow of the node termination handler DaemonSet is:
 Ocean does not conflict with aws-node-termination-handler. It is possible to install it, but using aws-node-termination-handler is not required. Ocean continuously analyzes how your containers use infrastructure, automatically scaling compute resources to maximize utilization and availability.
 Ocean ensures that the cluster resources are utilized and scales down underutilized nodes to optimize maximal cost.
  
+ </div>
+
  </details>
 
 <!----------------------------------elastigroup---------------------------------->
 ## Elastigroup
 
- <details>
-   <summary markdown="span">How can I update the instance metadata (IMDS) in my cluster?</summary>
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600">How can I update the instance metadata (IMDS) in my cluster?</summary>
+
+<div style="padding-left:16px">
 
 Instance metadata service (IMDS) is data about your instance that you can use to configure or manage the running instance or virtual machines. IMDS comes from the cloud providers. The metadata can include instance ID, IP address, security groups, and other configuration details.
 Instance metadata service version 2 (IMDSv2) addresses security concerns and vulnerabilities from IMDSv1. IMDSv2 has more security measures to protect against potential exploitation and unauthorized access to instance metadata.
@@ -278,11 +316,14 @@ You can use your own AMI and configure IMDSv2 on it. All instances launched afte
 
 2. In the Spot console, [create a stateful node](https://docs.spot.io/managed-instance/getting-started/create-a-new-managed-instance) with the custom AMI.
 
+ </div>
 
  </details>
 
- <details>
-   <summary markdown="span">Why can't I spin new instances?</summary>
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600">Why can't I spin new instances?</summary>
+
+<div style="padding-left:16px">
 
 You have scaling up instances for your Elastigroup or Ocean clusters and you get this message:
 
@@ -300,14 +341,18 @@ If you have another snapshot, then you can use that snapshot ID for the block de
 * **Ocean**: on the virtual node group you want to change, update the snapshot ID.
  ![cant-spin-instances-invalidsnapshot3](https://github.com/spotinst/help/assets/167069628/e4b1a3aa-8404-4877-afbc-50337d67953c)
 
+ </div>
+
  </details>
 
 <!----------------------------------elastigroup stateful node---------------------------------->
 
 ## Elastigroup Stateful Node
 
- <details>
-   <summary markdown="span">How can I update the instance metadata (IMDS) in my cluster?</summary>
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600">How can I update the instance metadata (IMDS) in my cluster?</summary>
+
+<div style="padding-left:16px">
 
 Instance metadata service (IMDS) is data about your instance that you can use to configure or manage the running instance or virtual machines. IMDS comes from the cloud providers. The metadata can include instance ID, IP address, security groups, and other configuration details.
 Instance metadata service version 2 (IMDSv2) addresses security concerns and vulnerabilities from IMDSv1. IMDSv2 has more security measures to protect against potential exploitation and unauthorized access to instance metadata.
@@ -357,4 +402,6 @@ You can use your own AMI and configure IMDSv2 on it. All instances launched afte
 
 2. In the Spot console, [create a stateful node](https://docs.spot.io/managed-instance/getting-started/create-a-new-managed-instance) with the custom AMI.
    
+ </div>
+
  </details>
