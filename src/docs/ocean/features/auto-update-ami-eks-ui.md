@@ -60,7 +60,7 @@ If you optionally select to roll the cluster after the update for either immedia
 
 * Respect Pod Disruption Budget (PDB): Some pods may have a Pod Disruption Budget (PDB). If you turn on the PDB, Ocean verifies the PDB and will not replace a node if the PDB is violated.
 * Roll Batch Size Percentage: Indicates the percentage of the cluster's target capacity that will be rolled during a cluster roll operation. For example, if the cluster's target capacity is 50 nodes, and the Batch Size Percentage is set to 20%, each batch will consist of 20% of the target capacity, 10 nodes (50 nodes * 20% = 10 nodes).
-* Batch Size Healthy Percentage: indicates the minimum percentage of healthy instances in a single batch. The roll will fail if the number of healthy instances in a single batch is less than this percentage. The range is 1-100; if the parameter value is null, the default value will be 50%. Ocean considers instances not replaced due to PDB to be healthy. You can override the behavior of the batchMinHealthyPercentage parameter by setting the ignorePdb parameter to True
+* Batch Size Healthy Percentage: indicates the minimum percentage of healthy instances in a single batch. The roll will fail if the number of healthy instances in a single batch is less than this percentage. The range is 1-100. Ocean considers instances not replaced due to PDB to be healthy. You can override the behavior of the batchMinHealthyPercentage parameter by setting the ignorePdb parameter to True
 
 ## Auto Update Now
 
@@ -81,8 +81,6 @@ To auto-update immediately:
   
 4. Click **Update now**. After the update is complete, an entry will be displayed in the Updates History list.
 
->**Note**: An auto-update should take only a few seconds.
-
 ## Create or Edit an Auto Update Schedule
 
 To create or edit an auto-update schedule:
@@ -93,9 +91,8 @@ To create or edit an auto-update schedule:
 
 ![schedule--update-ami-dialog-box](https://github.com/user-attachments/assets/76858a5d-8713-4e0f-9129-aee65c401128)
 
-2. Ensure that AMI Auto update is turned on in the Auto Update dialog box.
-3. Select whether to update Security patches, Kubernetes minor versions, or both options.
-4. Select whether to schedule once a day or at a specific time. 
+2. Select whether to update Security patches, Kubernetes minor versions, or both options.
+3. Select whether to schedule once a day or at a specific time. 
 4. If you selected to schedule at a specific time, set the time using the day/week/month/time controls or type a Cron expression.
 
 5. Optionally click **Apply cluster roll with update** (see [link to Roll Cluster Option])
