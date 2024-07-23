@@ -24,4 +24,5 @@
 - [**Spot Storage**](spot-storage/)
 - [**Administration**](administration/)
 - [**Tools & Provisioning**](tools-and-provisioning/)
+- [**FAQs**](faqs/)
 - <a href="https://docs.spot.io/api" target="_blank"><strong>API Reference <i data-feather="external-link"></i></strong></a>
