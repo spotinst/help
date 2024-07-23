@@ -11,7 +11,7 @@ Although the exporter application is independent of the Ocean controller, a func
 ## Prerequisites
 
 * Ocean running in a cluster with a reporting controller
-* Prometheus installed in the cluster
+* Prometheus installed in the cluster 
 
 ## Install the Exporter
 
@@ -62,11 +62,12 @@ You can configure labels, categories and metrics to scrape with the Prometheus e
 Each category represents a group of metrics. If the categories are not set - all will be included by default. The possible categories are:  
 
 * scaling  
-* cost_analysis  
+* cost_analysis
+* right sizing  
 
 ### Metrics  
 
-For each category you [can configure allowed metrics and deny specific metrics](ocean/tools-and-integrations/prometheus/?id=ocean-metrics). Allow metrics are the metrics that would be scraped, while the denied metrics would not be scraped.   
+For each category, you [can configure allowed metrics and deny specific metrics](ocean/tools-and-integrations/Prometheus/?id=ocean-metrics). Allow metrics are the metrics that would be scraped, while the denied metrics would not be scraped.   
 
 **If the same metric is in the allow list and deny list – it will be denied.**
 
@@ -94,6 +95,12 @@ For each category you [can configure allowed metrics and deny specific metrics](
 * ocean_networking_cost  
 * ocean_networking_usage   
 
+#### Right Sizing Metrics  
+
+* cpu_recommendations
+* memory_recommendations
+* potential_savings
+
 ### Labels  
 
 You can configure allow labels and deny labels for the metrics.  
@@ -101,7 +108,7 @@ You can configure allow labels and deny labels for the metrics.
 **If you set a label as allow and deny – it will be denied**.  
 
 #### Default Labels  
-These labels are the default for all the metrics of scaling and cost analysis. It is not possible to remove them:
+These labels are the default for all the scaling, cost analysis, and right-sizing metrics. It is not possible to remove them:
 
 * ocean_id  
 * ocean_name  
@@ -127,8 +134,18 @@ Not relevant to ocean_controller_heartbeat_info. For this metric, only the defau
 * direction - only for the networking metrics. Its value can be ‘In’ or ‘Out’.  
 * storage_type – only for the metric ‘ocean_storage_cost’, its value can be ‘pv’, ‘nonPv’, ‘pvEfs’.
 
+####  Right Sizing Metrics Labels
+
+* ocean_id
+* ocean_name
+* namespace
+* resource_type
+* resource_name
+* rule_name
+* rule_status
+
 ## Grafana Dashboard
-One popular use of metrics saved in Prometheus is dashboarding. As Grafana is a popular dashboarding tool, Spot has created a [Grafana dashboard](https://grafana.com/grafana/dashboards/16475) that you can download. The dashboard enables you to visualize Ocean metrics and may be incorporated into your existing dashboard base.
+One popular use of metrics saved in Prometheus is dashboarding. As Grafana is a popular dashboarding tool, Spot has created a [Grafana dashboard](https://grafana.com/grafana/dashboards/16475) that you can download. The dashboard enables you to visualize Ocean metrics, which may be incorporated into your existing dashboard base.
 
 <img src="/ocean/_media/prometheus-scrape-02.png" />
 
