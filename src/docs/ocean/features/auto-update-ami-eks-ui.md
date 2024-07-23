@@ -68,7 +68,7 @@ To auto-update immediately:
 
 1. In the AMI Auto Update tab, click **Configure and Update Now**.
 
-[NEED A SCREEN - NOT AVAILABLE YET]
+![configure-now-update-ami-dialog-box](https://github.com/user-attachments/assets/814c12a7-8dcf-44e2-8bd3-b9dcd54d8178)
 
 2. Select whether to update Security patches, Kubernetes minor versions, or both options in the Auto Update dialog box.
 3. Optionally click **Apply cluster roll with update** (see [link to Roll Cluster Option])
@@ -79,7 +79,7 @@ To auto-update immediately:
   <li>Optionally, turn on the Pod Disruption Budget (PDB) </li>
   </ol>
   
-4. Click Update now. After the update is complete, an entry will be displayed in the Updates History list.
+4. Click **Update now**. After the update is complete, an entry will be displayed in the Updates History list.
 
 >**Note**: An auto-update should take only a few seconds.
 
@@ -87,11 +87,11 @@ To auto-update immediately:
 
 To create or edit an auto-update schedule:
 
-1. In the AMI Auto Update tab, click Schedule Update to create an auto-update schedule if no configured schedules exist. If at least one configured schedule exists, click Schedule Update from the Actions list above the table. 
+1. In the AMI Auto Update tab, click **Schedule Update** to create an auto-update schedule if no configured schedules exist. If at least one configured schedule exists, click Schedule Update from the Actions list above the table. 
 
 >**Note**: To edit an existing auto-update schedule, click Edit in the entry for the schedule.
 
-[NEED A SCREEN - NOT AVAILABLE YET]
+![schedule--update-ami-dialog-box](https://github.com/user-attachments/assets/76858a5d-8713-4e0f-9129-aee65c401128)
 
 2. Ensure that AMI Auto update is turned on in the Auto Update dialog box.
 3. Select whether to update Security patches, Kubernetes minor versions, or both options.
