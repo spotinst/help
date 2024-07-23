@@ -19,15 +19,13 @@ To access the AMI Auto Update tab:
 
 If you have not run or scheduled an auto-update in this cluster, the AMI Auto Update tab appears like this:
 
-[placeholder for empty state]
+![auto-update-eks-empty](https://github.com/user-attachments/assets/7a66a14c-007d-4e0a-b771-751427e434e3)
 
-Otherwise, configured schedules are displayed at the bottom of the screen with these attributes:
+Otherwise, the screen will display the history of the previous runs and the currently configured schedules.
 
-* Schedule: for example, at 11:00 PM only on Sunday or once a day.
-* Type: Security patches, Kubernetes minor version, or both.
-* Roll: Whether to roll the cluster (true or false).
+![auto-update-eks-full-screen-ud1](https://github.com/user-attachments/assets/c2a70b0e-43e7-46c5-a608-4e696df3bc2a)
 
-The Updates History list for completed runs is displayed above the configured schedules with these attributes:
+The Updates History list for completed runs is displayed at the top with these attributes:
 
 * Execution date/time.
 * Update Type: Security patches, Kubernetes minor version, or both.
@@ -47,9 +45,14 @@ The Updates History list for completed runs is displayed above the configured sc
 * Roll ID: Listed if the cluster was rolled after auto-update. Click the link to view Roll ID attributes.
 * Trigger Type: Manual (auto-update was run immediately) or Scheduled (auto-update was scheduled and run).
 
-[placeholder for history and schedules]
 
 >**Tip**: Use the Updates History filter to search for auto-update runs by Virtual Node Groups, Status, or Trigger Type.
+
+The configured schedules are displayed at the bottom of the screen with these attributes:
+
+* Schedule: for example, at 11:00 PM only on Sunday or once a day.
+* Type: Security patches, Kubernetes minor version, or both.
+* Roll: Whether to roll the cluster (true or false).
 
 ### Roll Cluster Option
 
@@ -64,6 +67,9 @@ If you optionally select to roll the cluster after the update for either immedia
 To auto-update immediately:
 
 1. In the AMI Auto Update tab, click **Configure and Update Now**.
+
+[NEED A SCREEN - NOT AVAILABLE YET]
+
 2. Select whether to update Security patches, Kubernetes minor versions, or both options in the Auto Update dialog box.
 3. Optionally click **Apply cluster roll with update** (see [link to Roll Cluster Option])
   
@@ -84,6 +90,8 @@ To create or edit an auto-update schedule:
 1. In the AMI Auto Update tab, click Schedule Update to create an auto-update schedule if no configured schedules exist. If at least one configured schedule exists, click Schedule Update from the Actions list above the table. 
 
 >**Note**: To edit an existing auto-update schedule, click Edit in the entry for the schedule.
+
+[NEED A SCREEN - NOT AVAILABLE YET]
 
 2. Ensure that AMI Auto update is turned on in the Auto Update dialog box.
 3. Select whether to update Security patches, Kubernetes minor versions, or both options.
