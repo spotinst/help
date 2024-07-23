@@ -37,7 +37,7 @@ The maximum scale-down percentage is turned on by default. Accept or change the 
 
 To set the maximum scale-down percentage for a Virtual Node Group:
 
-1. click **Ocean > Cloud Clusters**in the left main menu.
+1. click **Ocean > Cloud Clusters** in the left main menu.
 2. Select a cluster from the list of clusters.
 3. In the Virtual Node Groups (VNG) tab, select the specific Virtual Node Group.
 4. Scroll down to the **Advanced** panel.
