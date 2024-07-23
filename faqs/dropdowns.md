@@ -8,14 +8,14 @@
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600">How are running hours calculated in the Spot console and AWS?</summary>
 
-<span style="padding-left:16px">
+<div style="padding-left:16px">
 Running hours are calculated from the moment an instance is launched until it is <i>detached</i> and not <i>terminated</i>. AWS calculates the entire lifetime of the instance.
 
 Here are some reasons for large differences between the numbers in the Spot Console and AWS:
 * Groups of instances with long draining periods
 * Shutdown scripts with long grace periods
 
- </span>
+ </div>
  </details>
 
 <!----------------------------------ocean---------------------------------->
@@ -24,8 +24,6 @@ Here are some reasons for large differences between the numbers in the Spot Cons
  
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600">Why does Ocean fail to update instance types?</summary>
-
-<span style="padding-left:16px">
 
 You cannot update the instance types in the default virtual node group. For example, it’s not supported to remove <i>m4.large</i> and <i>m5.large</i>, add <i>m5d.xlarge</i> and <i>m6i.xlarge</i> to the default virtual node group, and then update the cluster.
 
@@ -38,7 +36,6 @@ Remove the instance types at the cluster level, add <i>m5d.xlarge</i> and <i>m6i
 
 Instance types of the virtual node group are always a subset of the Ocean cluster.
  
- </span>
  </details>
 
 
