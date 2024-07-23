@@ -11,7 +11,7 @@ Although the exporter application is independent of the Ocean controller, a func
 ## Prerequisites
 
 * Ocean running in a cluster with a reporting controller
-* Prometheus installed in the cluster
+* Prometheus installed in the cluster 
 
 ## Install the Exporter
 
