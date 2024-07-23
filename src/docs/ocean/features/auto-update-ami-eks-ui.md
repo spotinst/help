@@ -13,7 +13,7 @@ You can either run an AMI auto-update immediately or schedule one. For both imme
 
 To access the AMI Auto Update tab:
 
-1. click **Ocean > Cloud Clusters**in the left main menu.
+1. click **Ocean > Cloud Clusters** in the left main menu.
 2. Select a cluster from the list of clusters.
 3. Click the **AMI Auto Update** tab. You can either update immediately or schedule the update.
 
