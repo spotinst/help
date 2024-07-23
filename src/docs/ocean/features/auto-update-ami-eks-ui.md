@@ -60,7 +60,7 @@ If you optionally select to roll the cluster after the update for either immedia
 
 * Respect Pod Disruption Budget (PDB): Some pods may have a Pod Disruption Budget (PDB). If you turn on the PDB, Ocean verifies the PDB and will not replace a node if the PDB is violated.
 * Roll Batch Size Percentage: Indicates the percentage of the cluster's target capacity that will be rolled during a cluster roll operation. For example, if the cluster's target capacity is 50 nodes, and the Batch Size Percentage is set to 20%, each batch will consist of 20% of the target capacity, 10 nodes (50 nodes * 20% = 10 nodes).
-* Batch Size Healthy Percentage: indicates the minimum percentage of healthy instances in a single batch. The roll will fail if the number of healthy instances in a single batch is less than this percentage. The range is 1-100. Ocean considers instances not replaced due to PDB to be healthy. You can override the behavior of the batchMinHealthyPercentage parameter by setting the ignorePdb parameter to True
+* Batch Size Healthy Percentage: indicates the minimum percentage of healthy instances in a single batch. The roll will fail if the number of healthy instances in a single batch is less than this percentage. The range is 1-100.
 
 ## Auto Update Now
 
