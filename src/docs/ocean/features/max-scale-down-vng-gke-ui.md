@@ -25,11 +25,11 @@ To set the max scale-down percentage for a cluster:
 
 The max scale-down percentage is turned on by default. Accept or change the default 10 % value and save your changes.
 
-[placeholder for screenshot]
+![autoscaling-enabled-at-cluster-level](https://github.com/user-attachments/assets/6e6e639c-5a9a-4311-9ac7-011d269d61e7)
 
 >**Note**: If you previously set the max scale-down percentage for a Virtual Node Group in the cluster, the Virtual Node Group value applies (not the cluster value). In addition, each Virtual Node Group for which you did not specifically set a value will use the default 10% value.  In the example below, 50% was set for the cluster.
 
-[placeholder for screenshot]
+![cluster-when-vng-was-enabled](https://github.com/user-attachments/assets/a0d2c280-147f-4b8e-a0f0-fdd9a993e997)
 
 Note: You can set `maxScaleDownPercentage` for a cluster from the [Spot API](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKEClusterCreate) under `autoScaler` > `down`.
 
@@ -43,7 +43,7 @@ To set the max scale-down percentage for a Virtual Node Group:
 4. Scroll down to the Advanced panel.
 5. By default, the max scale-down percentage is turned off.  Click to turn it on. Accept or change the current value, and save your changes.
 
-[placeholder for screenshot]
+![gke-scale-down-max-vng-level](https://github.com/user-attachments/assets/62421150-e705-411a-89a1-c1ee47ed99c3)
 
 >**Note**: If you turn off the max scale-down percentage for all your Virtual Node Groups, the value set at the cluster level will apply, and you can adjust that value.
 
