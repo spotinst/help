@@ -1,5 +1,3 @@
-<meta name=“robots” content=“noindex”>
-
 # Frequently Asked Questions
 
 <!----------------------------------general---------------------------------->
