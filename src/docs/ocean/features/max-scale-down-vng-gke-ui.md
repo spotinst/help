@@ -19,7 +19,7 @@ Note the following:
 
 To set the max scale-down percentage for a cluster:
 
-1. click **Ocean > Cloud Clusters**in the left main menu.
+1. click **Ocean > Cloud Clusters** in the left main menu.
 2. Select a cluster from the list of clusters.
 3. From the Actions drop-down menu on the top-right of the screen, click **Customize Scaling**.
 
