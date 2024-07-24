@@ -2,10 +2,8 @@
 
 ## July 2024: Features and Enhancements 
 
-*  **OCN-0020: July 24, 2024:** (**<font color="#FC01CC">GKE</font>**) You can now set the Ocean Autoscaler `maxScaleDownPercentage` for Virtual Node Groups via the console.
+*  **OCN-0019: July 24, 2024:** (**<font color="#FC01CC">GKE</font>**) You can now set the Ocean Autoscaler `maxScaleDownPercentage` for Virtual Node Groups via the console.
 [Learn More...](https://docs.spot.io/ocean/features/max-scale-down-vng-gke-ui)
-
-*  **OCN-0019: July 24, 2024:** (**<font color="#FC01CC">GKE</font>**) Right-sizing metrics have been added for the Ocean Prometheus exporter. [Learn More...](https://docs.spot.io/ocean/tools-and-integrations/prometheus/scrape)
 
 *  **OCN-0018: July 18, 2024:** (**<font color="#FC01CC">GKE</font>**) Ocean Controller Version 2 now supports the `namespaceSelector` scaling constraint label introduced in Kubernetes Version 1,24 for the GKE platform. When you apply this label, Ocean's Autoscaler scales up nodes based on the Namespace selector to schedule pods. Learn more... about the namespaceSelector label. [Learn more...](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#namespace-selector) about the `namespaceSelector` label.
 
