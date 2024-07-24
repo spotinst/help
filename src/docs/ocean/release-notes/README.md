@@ -27,8 +27,10 @@
      
  
 
-<details>
-  <summary markdown="span">June, 2024 - click to view</summary>
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600">June, 2024 - click to view</summary>
+
+<div style="padding-left:16px">
 
 ## June 2024: Features and Enhancements 
 
@@ -51,11 +53,14 @@ Spot has released EKSCTL [v0.180.0](https://github.com/spotinst/weaveworks-eksct
 When you use this EKSCTL version to create Ocean clusters, [Ocean Controller Version 2](https://docs.spot.io/ocean/tutorials/ocean-controller-v2/.) is used.
 >**Prerequisite**: Helm installed.
 
-</details><br>
+</div>
+</details>
 
 
-<details>
-  <summary markdown="span">May, 2024 - click to view</summary>
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600">May, 2024 - click to view</summary>
+
+<div style="padding-left:16px">
 
 ## May 2024: Features and Enhancements
 
@@ -97,7 +102,8 @@ Spot has introduced a new Ocean label, `spotinst.io/azure-premium-storage,` inje
 >**IMPORTANT:** **Ocean Controller Version 1** will reach End-Of-Life on **November 1, 2024**. To take advantage of the benefits offered by **Ocean Controller Version 2** and receive uninterrupted service and support, upgrade to Version 2 at your earliest convenience.
 [Learn more...](https://docs.spot.io/ocean/tutorials/ocean-controller-v2/)
 
-</details><br>
+</div>
+</details>
 
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
