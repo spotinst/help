@@ -95,7 +95,7 @@ For each category, you [can configure allowed metrics and deny specific metrics]
 * ocean_networking_cost  
 * ocean_networking_usage   
 
-#### Right Sizing Metrics  
+#### Automatic Right Sizing Metrics  
 
 * cpu_recommendations
 * memory_recommendations
@@ -134,7 +134,7 @@ Not relevant to ocean_controller_heartbeat_info. For this metric, only the defau
 * direction - only for the networking metrics. Its value can be ‘In’ or ‘Out’.  
 * storage_type – only for the metric ‘ocean_storage_cost’, its value can be ‘pv’, ‘nonPv’, ‘pvEfs’.
 
-####  Right Sizing Metrics Labels
+####  Automatic Right Sizing Metrics Labels
 
 * ocean_id
 * ocean_name
