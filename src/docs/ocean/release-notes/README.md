@@ -2,7 +2,10 @@
 
 ## July 2024: Features and Enhancements 
 
+*  **OCN-0020: July 24, 2024:** (**<font color="#FC01CC">GKE</font>**) You can now set the Ocean Autoscaler `maxScaleDownPercentage` for Virtual Node Groups via the console.
+[Learn More...](https://docs.spot.io/ocean/features/max-scale-down-vng-gke-ui)
 
+*  **OCN-0019: July 24, 2024:** (**<font color="#FC01CC">GKE</font>**) Right-sizing metrics have been added for the Ocean Prometheus exporter. [Learn More...](https://docs.spot.io/ocean/tools-and-integrations/prometheus/scrape)
 
 *  **OCN-0018: July 18, 2024:** (**<font color="#FC01CC">GKE</font>**) Ocean Controller Version 2 now supports the `namespaceSelector` scaling constraint label introduced in Kubernetes Version 1,24 for the GKE platform. When you apply this label, Ocean's Autoscaler scales up nodes based on the Namespace selector to schedule pods. Learn more... about the namespaceSelector label. [Learn more...](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#namespace-selector) about the `namespaceSelector` label.
 
@@ -96,8 +99,11 @@ Spot has introduced a new Ocean label, `spotinst.io/azure-premium-storage,` inje
 
 </details><br>
 
-<details>
-  <summary markdown="span">March, 2024 - click to view</summary>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600">March, 2024 - click to view</summary>
+
+<div style="padding-left:16px">
 
 ## March 2024: Features and Enhancements
 
@@ -106,7 +112,8 @@ The latest update introduces a smart batching mechanism for managing the Pod Dis
 This mechanism intelligently splits the nodes for rolling, ensuring that PDB constraints are respected. 
 [Learn more](https://docs.spot.io/ocean/features/roll-gen?id=respect-pod-disruption-budget) about respecting PDB during cluster roll.
 
-</details><br>
+ </div>
+ </details>
 
 
 
