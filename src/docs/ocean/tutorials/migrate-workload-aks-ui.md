@@ -6,7 +6,7 @@ Before starting, review the [prerequisites](https://docs.spot.io/ocean/tutorials
 
 ##  Step 1: Select Instances to Migrate
 
-1.  In the left main menu, click **Ocean** and click **Cloud Clusters**.
+1.  In the left main menu, click **Ocean** and click **Cloud Clusters**. 
 2.  Select a cluster from the list of clusters.
 3.  Click **Start Migration** on the left of the screen under Ocean Managed Nodes. 
 
