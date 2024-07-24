@@ -99,8 +99,11 @@ Spot has introduced a new Ocean label, `spotinst.io/azure-premium-storage,` inje
 
 </details><br>
 
-<details>
-  <summary markdown="span">March, 2024 - click to view</summary>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600">March, 2024 - click to view</summary>
+
+<div style="padding-left:16px">
 
 ## March 2024: Features and Enhancements
 
@@ -109,7 +112,8 @@ The latest update introduces a smart batching mechanism for managing the Pod Dis
 This mechanism intelligently splits the nodes for rolling, ensuring that PDB constraints are respected. 
 [Learn more](https://docs.spot.io/ocean/features/roll-gen?id=respect-pod-disruption-budget) about respecting PDB during cluster roll.
 
-</details><br>
+ </div>
+ </details>
 
 
 
