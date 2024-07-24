@@ -110,15 +110,18 @@ You have scaling up instances for your Elastigroup or Ocean clusters and you get
 
 If you have a block device that is mapped to a snapshot ID of an Elastigroup or Ocean cluster and the snapshot isn't available, you will get this error. This can happen if the snapshot is deleted.
 
- ![cant-spin-instances-invalidsnapshot1](https://github.com/spotinst/help/assets/167069628/1010d3de-2932-4677-92ed-ed6c124fe9a6)
+ <img width="460" alt="cant-spin-instances-invalidsnapshot1" src="https://github.com/user-attachments/assets/6b828a90-314f-44e7-8508-077e5e392cb8">
+
 
 If you have another snapshot, then you can use that snapshot ID for the block device mapping. If not, you can remove the snapshot ID, and then the instance is launched using the AMI information.
 
 * **Elastigroup**: on the Elastigroup you want to change, [open the creation wizard](https://docs.spot.io/elastigroup/features/compute/block-device-mapping?id=block-device-mapping) and update the snapshot ID.
-  ![cant-spin-instances-invalidsnapshot2](https://github.com/spotinst/help/assets/167069628/1893d6e9-1d98-4ac5-81e6-1f1ce7ccef2f)
+  <img width="467" alt="cant-spin-instances-invalidsnapshot2" src="https://github.com/user-attachments/assets/0d90513e-a6f3-478c-9b7f-a8bc2d07a798">
+
 
 * **Ocean**: on the virtual node group you want to change, update the snapshot ID.
- ![cant-spin-instances-invalidsnapshot3](https://github.com/spotinst/help/assets/167069628/e4b1a3aa-8404-4877-afbc-50337d67953c)
+  <img width="588" alt="cant-spin-instances-invalidsnapshot3" src="https://github.com/user-attachments/assets/2cca9a9d-6123-4ddb-99b6-afe565304964">
+
 
  </div>
 
