@@ -1,6 +1,6 @@
 <meta name=“robots” content=“noindex”>
 
-#  Auto Update AMI for EKS in the Console
+#  AMI Auto Update for EKS via the Console
 
 You can either run an AMI auto-update immediately or schedule one. For both immediate and scheduled auto-update runs, you can include one or both of these options:
 
@@ -103,9 +103,7 @@ To create or edit an auto-update schedule:
   <li>Optionally, turn on the Pod Disruption Budget (PDB) </li>
   </ol>
 
-6. Save the schedule. The schedule appears in the AMI Auto Update screen above the Updates History List. After the schedule is run, a row with the details is displayed in the Updates History list.
-
->**Note**: To delete a schedule, click the garbage icon in the row for the schedule.
+6. Save the schedule. The AMI Auto Update screen displays the schedule below the Updates History List. After the schedule is run, a row with the details is displayed in the Updates History list.
 
 ## Auto Update Troubleshooting
 
