@@ -113,7 +113,7 @@ This configuration can be used with multiple FSx volumes as well, to shard the s
 }
 ```
 
-The above configuration will shard the shuffle data across two different pvc volumes, defined such as
+The above configuration will shard the shuffle data across two different pvc volumes defined in kubernetes, such as
 
 ```json
 {
