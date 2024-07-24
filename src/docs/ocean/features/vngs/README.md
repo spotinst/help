@@ -123,7 +123,7 @@ Ocean takes the following parameters from the default Virtual Node Group unless 
  - Availability zone (1,2,3 +0 )
  - Root volume type
  - OS SKU type
- - Max pods per VM
+ - Max pods per VM 
 
 </div>
  </details>
