@@ -1,6 +1,3 @@
-
-<meta name=“robots” content=“noindex”>
-
 # Set Maximum Scale Down Percentage for Virtual Node Group or Cluster (GKE) via the Console
 
 Cloud service provider relevance: <font color="#FC01CC">GKE</font> 
