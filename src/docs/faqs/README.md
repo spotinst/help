@@ -100,7 +100,7 @@ You can use your own AMI and configure IMDSv2 on it. All instances launched afte
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600">Why can't I spin new instances?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceancantspin">Why can't I spin new instances?</summary>
 
   <div style="padding-left:16px">
 
@@ -128,7 +128,7 @@ If you have another snapshot, then you can use that snapshot ID for the block de
  </details>
  
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600">Can hostPort cause underutilized nodes?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="hostportunderutilized">Can hostPort cause underutilized nodes?</summary>
 
 <div style="padding-left:16px">
 
@@ -173,7 +173,7 @@ You can have multiple containers defined in a single task definition. Check all 
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600">Can I include or exclude instance types in my Ocean cluster?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="excludeinstanceocean">Can I include or exclude instance types in my Ocean cluster?</summary>
 
 <div style="padding-left:16px">
 
@@ -191,7 +191,7 @@ You can allow, [block](https://docs.spot.io/ocean/tips-and-best-practices/manage
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600">Why am I getting an InvalidBlockDeviceMapping error?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="invalidblockdevicemapping">Why am I getting an InvalidBlockDeviceMapping error?</summary>
 
 <div style="padding-left:16px">
 
@@ -209,7 +209,7 @@ Change the device name from <code>xvda</code> to <code>/dev/xvda</code> on the g
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600">Why am I getting an import Fargate services error?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="importfargateerror">Why am I getting an import Fargate services error?</summary>
 
 <div style="padding-left:16px">
 
@@ -232,7 +232,7 @@ Reimport Fargate services with less than 5 security groups and choose only one s
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600">Can I deploy AWS node termination handler on Spot nodes?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="awsnodeterminationhandler">Can I deploy AWS node termination handler on Spot nodes?</summary>
    
 <div style="padding-left:16px">
 
@@ -265,7 +265,7 @@ Ocean ensures that the cluster resources are utilized and scales down underutili
 ## Elastigroup
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600">How can I update the instance metadata (IMDS) in my cluster?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egimds">How can I update the instance metadata (IMDS) in my cluster?</summary>
 
 <div style="padding-left:16px">
 
@@ -322,7 +322,7 @@ You can use your own AMI and configure IMDSv2 on it. All instances launched afte
  </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600">Why can't I spin new instances?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egcantspin">Why can't I spin new instances?</summary>
 
 <div style="padding-left:16px">
 
@@ -351,7 +351,7 @@ If you have another snapshot, then you can use that snapshot ID for the block de
 ## Elastigroup Stateful Node
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600">How can I update the instance metadata (IMDS) in my cluster?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egsnimds">How can I update the instance metadata (IMDS) in my cluster?</summary>
 
 <div style="padding-left:16px">
 
