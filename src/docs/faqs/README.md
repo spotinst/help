@@ -4,7 +4,7 @@
 
 ## General
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600">How are running hours calculated in the Spot console and AWS?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="runninghours">How are running hours calculated in the Spot console and AWS?</summary>
 
   <div style="padding-left:16px">
 
@@ -23,7 +23,7 @@ Here are some reasons for large differences between the numbers in the Spot Cons
 ## Ocean
  
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600">Why does Ocean fail to update instance types?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanfailinstancetypes">Why does Ocean fail to update instance types?</summary>
 
   <div style="padding-left:16px">
 
@@ -43,7 +43,7 @@ Instance types of the virtual node group are always a subset of the Ocean cluste
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600">How can I update the instance metadata (IMDS) in my cluster?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanimds">How can I update the instance metadata (IMDS) in my cluster?</summary>
 
   <div style="padding-left:16px">
 
