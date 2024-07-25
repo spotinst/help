@@ -1,7 +1,7 @@
 # External Shuffle storage
 
-External Shuffle storage is a feature that writes Spark shuffle data to a shared remote filesystem, such as S3 or FSx for ONTAP.
-This allows reusing shuffle data from failed Spark tasks, avoiding task retries.
+When the External Shuffle storage feature is enabled, Spark writes shuffle data to a shared remote filesystem, such as S3 or FSx for ONTAP.
+This allows recovering shuffle data written by a failed Spark kubernetes pods, avoiding task retries.
 The feature is also useful with dynamic allocation enabled,
 as it allows scaling down Spark executors that are kept running to serve shuffle data for other tasks.
 Storing shuffle data on a remote drive accessible from all executors can save time and resources.
