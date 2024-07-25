@@ -1,6 +1,6 @@
 # External Shuffle storage
 
-When the External Shuffle storage feature is enabled, Spark writes shuffle data to a shared remote filesystem, such as S3 or FSx for ONTAP.
+When the External Shuffle storage feature is enabled, Spark writes shuffle data to a shared remote filesystem, such as S3 or FSx for NetApp ONTAP.
 This allows recovering shuffle data written by a failed Spark kubernetes pods, avoiding task retries.
 The feature is also useful with dynamic allocation enabled,
 as it allows scaling down Spark executors that are kept running to serve shuffle data for other tasks.
@@ -22,7 +22,7 @@ To enable External Shuffle storage feature, add the following configuration in y
 The `shuffle.rootdir` configuration is the location where the shuffle data will be written.
 The shuffle reuse feature uses hadoop filesystem to write the shuffle data, and as such supports any filesystem that hadoop supports.
 The rootdir option can be a local path, HDFS path, or any other hadoop supported filesystem.
-A shared remote drive such as FSx or S3 CSI, must be mounted on all the executors in the cluster when using a local path.
+A shared remote drive such as FSx NetApp ONTAP or S3 CSI, must be mounted on all the executors in the cluster when using a local path.
 
 For instance
 
@@ -133,6 +133,8 @@ The above configuration will shard the shuffle data across two different pvc vol
   }
 }
 ```
+
+To configure FSx for NetApp ONTAP, refer to the [Use Astra Trident with Amazon FSx for NetApp ONTAP](https://docs.netapp.com/us-en/trident/trident-use/trident-fsx.html) documentation.
 
 When using S3 as the shuffle storage medium, altering the `spark.hadoop.fs.s3a.block.size` and `spark.hadoop.fs.s3a.multipart.size` configurations can also improve performance.
 
