@@ -51,6 +51,7 @@ These features are only available for Ocean GKE:
 *  [Auto Update Process for GKE](ocean/features/auto-update-process-gke)
 *  [Create a Cluster for GKE Using Shared VPC](tutorials/create-cluster-gke-shared-vpc)
 *  [Auto Update Process for GKE](https://docs.spot.io/ocean/features/auto-update-process-gke)
+*  [Connect an Existing GKE Cluster](https://docs.spot.io/ocean/getting-started/gke)
 
 </details><br>
 
