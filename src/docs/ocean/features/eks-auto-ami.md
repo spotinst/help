@@ -50,7 +50,8 @@ Example of the JSON object:
           "parameters": { 
             "amiAutoUpdate": { 
               "patch": true, 
-              "minorVersion": true, 
+              "minorVersion": true,
+              "applyRoll": "true",
               "clusterRoll": { 
                 "batchSizePercentage": 20, 
                 "comment": "this is just an example", 
