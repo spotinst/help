@@ -70,11 +70,20 @@ To create/edit a right-sizing rule:
 
 ![right-sizing-when-to-apply](https://github.com/spotinst/help/assets/159915991/323b56ca-2d9f-440b-ac7e-f934b0da337b)
 
-5.   Select whether to turn on the **restart pods for relevant workloads** option. This option enables Ocean to restart pod batches sequentially according to recommendations.
+5. Turn on **Exclude preliminary recommendation** if you want to suppress recommendations as long as the workload is considered preliminary.
+6. Turn on **Adjust HPA Triggers** so you can change HPA to compensate for changes in VPA.
+7. Select one of the **Restart replicas** options:
+   * All manifests.
+   * Manifests with more than 1 replica only.
+   * No restart.
+8. Click the **Set the resources percentage change** down arrow to apply the recommendation, and set the CPU and Memory percentage thresholds. This is the minimum percentage change from the current request for applying a recommendation.
+9. Click the **Set recommendation ranges for resources** down arrow and enter the upper and lower boundary values for CPU (millicpu) and Memory (mib) requests for applying a recommendation.
+
+<!-- 5.   Select whether to turn on the **restart pods for relevant workloads** option. This option enables Ocean to restart pod batches sequentially according to recommendations.
 6.   Click the **Set Min. CPU / Memory thresholds for workload** down arrow and then set the CPU and Memory percentage thresholds. This is the minimum CPU and Memory percentage change for the current request to apply a recommendation. 
-7.   Click the **Set recommendation ranges for CPU & Memory** down arrow and enter the upper and lower boundary values for CPU requests (millicpu) and Memory requests (mib) to apply a recommendation. 
-8.   Click the **Set overhead for workload** down arrow and set the CPU and memory percentage overheads. An overhead specifies the percentage of extra resources to add to the new request recommendation.
-9.   After you save the rule, it appears in the area under the [Workloads Optimization list](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=workloads-optimization-list).
+7.   Click the **Set recommendation ranges for CPU & Memory** down arrow and enter the upper and lower boundary values for CPU requests (millicpu) and Memory requests (mib) to apply a recommendation. -->
+10.   Click the **Set overhead for resources** down arrow and set the CPU and memory percentage overheads. An overhead specifies the percentage of extra resources to add to the new request recommendation.
+11.   After you save the rule, it appears in the area under the [Workloads Optimization list](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=workloads-optimization-list).
 
 ###   Attach a Right-Sizing Rule to One or More Workloads 
 
