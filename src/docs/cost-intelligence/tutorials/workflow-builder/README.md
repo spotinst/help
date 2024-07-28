@@ -31,11 +31,6 @@ Here are some examples of types of flows you can create:
      * **Records Added**: the flow runs as soon as new data is received. For example, the flow starts when a new record is added to a data source, or each time a record is added by a data load process.
    
      * **Records Updated**: the flow starts whenever information changes in an existing dataset or a record is updated by a data load process.
-      
-     * **Webhook**: the flow is triggered from an external source using a URL. Selecting this trigger automatically generates a unique URL for the flow you are building. Click **Copy** to use this URL in your external application that triggers the flow. You can require authentication for the URL.
-       > **Note**: Once a flow is saved, you cannot update this URL.
-
-      ![image](https://github.com/spotinst/help/assets/167069628/8050da83-1ec1-47ba-94d3-c0a4f61ca6c6)
 
    </details>
 
@@ -73,11 +68,6 @@ Here are some examples of types of flows you can create:
      * **Send to Webhook** to send data to an external webhook URL. Enter the URL and click **Add Parameters** to add data or tokens.
      * **Send Email** to send notifications and alerts in email. Enter a comma-delimited list of email addresses along with a subject and a message. The message body can be formatted with any of the standard options provided, including bold, italic, and underline. There are also justification and link options.
      * **Send SMS** to send notifications and alerts in text messages. Enter a mobile phone number and type a message with up to 140 characters. Any attachments you include in your message are sent as links that your recipient can click on to open the attachment in their web browser.
-     * **Slack Notification** to send notifications and alerts in Slack. Configure the workspace, notification user, channels to send the notification, and the message:
-       * **Workspaces** is the list of configured workspaces that you can send the notification to.
-       * **Send Notification** as a Slack bot or a Slack user using Qrvey.
-       * **Recipient** includes the list of all channels, users, and groups of the selected workspace that you can send the the message to. The list only includes recipients the bot or user has permissions to send to. You can select more than one recipient.
-       * **Message** supports the use of tokens and basic Slack formatting using Markdown.
    
    </details>
 
@@ -94,13 +84,7 @@ Here are some examples of types of flows you can create:
        
        Below the search box are branch options where you can place actions depending on the number of results found. You can specify different sets of actions for each of these branch options.
        The <i>Search Record</i> action loops through multiple records found individually. For example, if five records are found, the actions under the Multiple Records Found are performed five times, once for each record.
-     * **Update Record** can be done once you have searched and found one or more records in your dataset. It can only be used in Search action branch options with at least one search result.
-     * **Delete Record** can be done once you have searched and found one or more records in your dataset. It can only be used in <i>Search</i> action branch options with at least one search result.
-     * **Insert Record** to add a new record to an existing dataset.
      * **Submit Data** to send data to a third party system using a URL. It is similar to a <i>form POST</i> in HTML.
-     * **Post Data** to send data to a connected data source.
-     * **Reload Data** from an existing data connection. It may take a few minutes for the reload to complete, depending on the size of your dataset and the speed of the data connection.
-     * **Get Data** to search a connected data source and get results based on the field and value criteria you provided. Then, you can provide different actions for the branch options to handle the cases of one, multiple, or no records found.
      * **Update Token** to update the value of a stored token. You can update tokens by selecting their name and providing a value. To create a new token, click **Add/Manage Tokens**.
    
    </details>
