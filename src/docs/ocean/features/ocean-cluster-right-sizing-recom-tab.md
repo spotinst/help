@@ -60,7 +60,9 @@ To create/edit a right-sizing rule:
      
      >**Note**: To edit an existing rule: To the right of the row for the rule in the Automation Rules list at the bottom of the tab, click **Edit Rule**. 
 
-![right-sizing-add-new-rule](https://github.com/spotinst/help/assets/159915991/d5f3ac19-e1ac-40b7-a600-9e19cbbdfc5e)
+![right-sizing-add-new-rule](https://github.com/spotinst/help/assets/159915991/d5f3ac19-e1ac-40b7-a600-9e19cbbdfc5e)   
+
+<!--NEW SCREEN REQUIRED - NEW SCREEN REQUIRED -NEW SCREEN REQUIRED NEW SCREEN REQUIRED-->
 
 3.   In the Configure Automation Rule dialog box, enter/edit the unique rule name.
 4.   Select when to apply the recommendation by clicking the relevant radio button: 
