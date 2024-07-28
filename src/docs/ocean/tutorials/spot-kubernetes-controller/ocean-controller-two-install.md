@@ -10,7 +10,9 @@ The Ocean Controller Version 2 installation is based on Helm, so make sure to ha
 
 ## New Clusters - Install the Ocean Controller Version 2
 
-1.  Pre-installation: Create a [Spot Programmatic token](https://docs.spot.io/administration/api/create-api-token ) (or use an existing one) for the cluster.  
+1.  Pre-installation: Create a [Spot Programmatic token](https://docs.spot.io/administration/api/create-api-token ) (or use an existing one) for the cluster.
+
+>**Important**: The recommendation is to generate a programmatic (API) token not associated with a specific person. If a person leaves the company, any token associated with that person will be deleted when the user account is deleted, and the Ocean Controller will not function.
 
 2.  Install the Ocean Controller via [Helm](https://docs.spot.io/ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-install?id=install-via-helm), [Script](https://docs.spot.io/ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-install?id=install-via-script), or [Terraform](https://docs.spot.io/ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-install?id=install-via-terraform).  
 
