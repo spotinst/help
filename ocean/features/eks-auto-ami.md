@@ -51,7 +51,7 @@ Example of the JSON object:
             "amiAutoUpdate": { 
               "patch": true, 
               "minorVersion": true,
-              "applyRoll": "true",
+              "applyRoll": true,
               "clusterRoll": { 
                 "batchSizePercentage": 20, 
                 "comment": "this is just an example", 
