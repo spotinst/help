@@ -119,7 +119,7 @@ The Autoscaling Activity panel contains the following widgets:
 
 *   Scale Up widget. 
 *   Set of Continuous Optimization widgets.
-<!--*   Autoscaler graph.-->
+*   Autoscaler graph.
 
 ### Scale Up 
 
@@ -177,7 +177,7 @@ Auto Healing monitors the status of each Kubernetes node by examining the condit
 
 The Autohealing widget shows the number of events for which AWS autohealing replaced an unhealthy instance with a healthy instance. By monitoring these autohealing events on the Autoscaling Activity panel, you can track how effectively Ocean Autoscaler maintains your cluster's health and resilience to failures. 
 
-<!-- ###   Autoscaling Activity Graph
+###   Autoscaling Activity Graph
 
 The Autoscaling Activity Graph provides intuitive insights into the interaction between the Ocean infrastructure and the applications it supports. It also provides cluster activity insights at a granular 
 level so you can see why the Ocean Autoscaler triggered a specific scale event within the cluster.
@@ -252,7 +252,7 @@ For GPU:
     *  Total workload allocation percentage.
 
 Total Allocation Calculation:
-* Sum of vCPU/Memory/GPU allocation - (running pods + running headroom + running DaemonSets)/nodes allocation. -->
+* Sum of vCPU/Memory/GPU allocation - (running pods + running headroom + running DaemonSets)/nodes allocation. 
 
 
 ##  Related Topics 
