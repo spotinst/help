@@ -19,9 +19,7 @@ Once you start migration, Ocean automatically detects the workloads (nodes and p
 ![aks-ready-for-migration](https://github.com/user-attachments/assets/962c3046-fc0a-42ca-8675-dad2d46c6e9c)
 
 4.  Select the nodes (instances) you want to migrate into your Ocean cluster.
-
-5.  If any node entries display the **Required Validation** status in the **Ready for Migration** column, click **Validate** at the bottom left of the screen.
-6.  When the validation process is completed, if any node entries display the **Unable to migrate** status in the **Ready for Migration** column, click the down arrow on the left to drill down to the workloads.
+    * If any node entries display the **Required Validation** status in the **Ready for Migration** column, click **Validate** at the bottom left of the screen. When the validation process is completed, if any node entries display the **Unable to migrate** status in the **Ready for Migration** column, click the down arrow on the left to drill down to the workloads.
 
 ![aks-migration-validations](https://github.com/user-attachments/assets/c0e4f51f-2de8-4dce-8670-3f8a824641b6)
 
@@ -43,7 +41,7 @@ Node Statuses:
 
 Select your workload migration preferences.
 
-![workloads-migration-preferences](https://github.com/spotinst/help/assets/159915991/5ba5714c-88f8-478b-9d56-9ad048d543b4)
+![migration-nodes-prefs](https://github.com/user-attachments/assets/dfd21e4b-15da-404e-a81d-6b34d103c421)
 
 *  **Batch Size Percentage**: Indicates the percentage of the cluster's target capacity that will be migrated during migration (per batch). For example, if the cluster's target capacity is 50 nodes, and the Batch Size Percentage is set to 20%, each batch will consist of 20% of the target capacity, 10 nodes (50 nodes * 20% = 10 nodes).   
 *  **Batch Size Healthy Percentage**: indicates the minimum percentage of (migrated) healthy nodes in a single batch.
