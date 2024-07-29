@@ -89,7 +89,7 @@ To view previous migrations:
 
 1.   From the Actions drop-down menu at the top-right of the screen, click **Previous Workload Migrations**.
 
- ![workloads-previous-migrations](https://github.com/spotinst/help/assets/159915991/3397a2bb-25e2-4e75-91b9-e1d5ae3d487d)
+![workloads-previous-migrations2](https://github.com/user-attachments/assets/a2f1d1a8-afbb-40d9-bf90-9170421188fc)
 
 2.  Click on the required entry under Migrated Nodes to display the dashboard for that migration.
 
