@@ -52,6 +52,8 @@ The migration will fail if the number of healthy nodes in a single batch is belo
 *  **Respect Restrict Scale Down during Roll**: Rolls do not consider the restrict-scale-down label. Ocean will migrate a node even if a task or pod uses this label. Ocean's Autoscaler considers all configured constraints before the roll.
 *  **Delete node from Azure after successful migration**: Select to delete the node from the Azure console because Ocean now manages the node.
 
+>**Note**: Before migration, the Azure-managed node pools are changed from automatic to manual scaling to avoid race conditions.
+
 
 ##  Step 3: Start Migration
 
