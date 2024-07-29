@@ -10,7 +10,7 @@
 8. Click **Next**.
 9. If the user needs additional permissions that are not associated with the groups, associate the user with additional [policies](administration/policies/):
       <ol style="list-style-type: lower-alpha;">
-        <li>Select the **policy**.</li>
-        <li>If the policy you are looking for is on the account level, select the **Accounts**.</li>
+        <li>Select the <b>Policy</b>.</li>
+        <li>If the policy you are looking for is on the account level, select the <b>Accounts</b>.</li>
     </ol>
 10. Click **Create User**.
