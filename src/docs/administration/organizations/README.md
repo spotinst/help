@@ -1,34 +1,34 @@
 # Organizations and Accounts
 
-When you set up your Spot account, you create an Organization and one or more Account entities. You will most likely need only one Organization, but you can set up multiple organizations if required. Within an Organization, you can define multiple accounts for different teams or projects with the Organization. Each account can be set up to use any supported cloud provider and cloud provider account.
+When you set up your Spot account, you create an organization and one or more account entities. You will most likely need only one organization, but you can set up multiple organizations if required. Within an organization, you can define multiple accounts for different teams or projects with the organization. Each account can be set up to use any supported cloud service provider and cloud provider account.
 
 <img src="/administration/_media/organizations-accounts-01.png" width="500" height="281" />
 
 ## Organization
 
-When you register to Spot, the registration wizard automatically creates an Organization. An Organization holds your initial company account and is identified by name or by name and division (for example, Spot or Spot-USA).
+When you register to Spot, the registration wizard automatically creates an organization. An organization holds your initial company account and is identified by name or by name and division (for example, <i>Spot</i> or <i>Spot-USA</i>).
 
-The Organization holds one or more Spot accounts which can be associated with your cloud account. The purpose of the Organization is to help you manage in one place all of your settings across multiple accounts.
+The organization holds one or more Spot accounts which can be associated with your cloud account. The purpose of the organization is to help you manage in one place all of your settings across multiple accounts.
 
-In the Organization, you can define the following:
+In the organization, you can define the following:
 
-- User Management – Create, manage, delete, and associate users to accounts
-- API Tokens – Generate and delete personal and temporary tokens
-- MFA Authentication – Enable and disable two-factor authentication for your Spot users
-- Identity Provider (SAML) – Connect your Organization to an IDP, or use a Custom SAML
-- Billing – Generate billing reports for your Organization
-- Spot Plan – View your Spot plan and activate your Organization
+- User management to create, manage, delete, and associate users to accounts
+- API tokens to generate and delete personal and temporary tokens
+- MFA authentication to enable and disable two-factor authentication for your Spot users
+- Identity provider (SAML) to connect your organization to an IDP, or use a custom SAML
+- Billing to generate billing reports for your organization
+- Spot plan to view your Spot plan and activate your prganization
 
-## Get your Organization ID
+## Get Your Organization ID
 
-1. In the console, click on the User icon and click Settings.
+1. In the Spot console, click the user icon <img height="14" src="https://github.com/spotinst/help/src/docs/administration/_media/usericon.png">  > **Settings**.
 2. You will be automatically presented with the General Details pane under Organization. Within the My Organization section you can find your Organization ID.
 
-<img src="/administration/_media/organizations-accounts-02.png" width="400" height="155" />
+<img height="400" src="https://github.com/user-attachments/assets/b272be03-54ad-4e10-be08-01eb79d9e0ae">
 
 ## Linked Organizations
 
-In case you need multiple organizations, e.g., for multiple divisions or units in your company, you can create linked organizations which can share settings and configuration such as:
+If you need multiple organizations, e.g., for multiple divisions or units in your company, you can create linked organizations which can share settings and configuration such as:
 
 - Billing Information (can be separate if needed)
 - Management Dashboards and Reports
