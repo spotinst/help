@@ -23,6 +23,7 @@
     - [Ocean Cluster Overview Dashboard](ocean/cluster-overview-tab)
   - [Features](ocean/features/)
     - [AMI Auto-Update (EKS)](ocean/features/eks-auto-ami)
+      - [Auto-Update via Console](ocean/features/ami-auto-update-eks-ui)
     - [Auto-Update Process (GKE)](ocean/features/auto-update-process-gke)
     - [AZ Recommendations - AWS Kubernetes](ocean/features/avail-zones-scores)
     - [Connect a Fargate Service](elastigroup/tutorials/amazon-ecs/import-fargate-services-to-ecs-elastigroup)
