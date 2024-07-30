@@ -33,7 +33,7 @@ The Updates History list for completed runs is displayed at the top with these a
   * Error (red): Error at Virtual Node Group level: The update has failed for this specific VNG. Hover over the error icon for more information.
   * Cluster Error (red): The cluster update has failed. Hover over the cluster error icon for more information.
 
->**Note**: See also [Auto Update Troubleshooting](https://docs.spot.io/ocean/features/auto-update-ami-eks-ui?id=auto-update-troubleshooting).
+>**Note**: See also [Auto Update Troubleshooting](https://docs.spot.io/ocean/features/ami-auto-update-eks-ui?id=auto-update-troubleshooting).
 
 * Old AMI/New AMI: version numbers before and after the run.
 * Virtual Node Group: Click the link to view the Virtual Node Group attributes.
@@ -69,7 +69,7 @@ To auto-update immediately:
 ![configure-now-update-ami-dialog-box](https://github.com/user-attachments/assets/814c12a7-8dcf-44e2-8bd3-b9dcd54d8178)
 
 2. Select whether to update Security patches, Kubernetes minor versions, or both options in the Auto Update dialog box.
-3. Optionally click **Apply cluster roll with update** (see [Roll Cluster Option](https://docs.spot.io/ocean/features/auto-update-ami-eks-ui?id=roll-cluster-option)).
+3. Optionally click **Apply cluster roll with update** (see [Roll Cluster Option](https://docs.spot.io/ocean/features/ami-auto-update-eks-ui?id=roll-cluster-option)).
   
   <ol style="list-style-type: lower-alpha;">
   <li>Select the Batch size percentage (1 - 100%).</li>
@@ -93,7 +93,7 @@ To create or edit an auto-update schedule:
 3. Select whether to schedule once a day or at a specific time. 
 4. If you selected to schedule at a specific time, set the time using the day/week/month/time controls or type a Cron expression.
 
-5. Optionally click **Apply cluster roll with update** (see [Roll Cluster Option](https://docs.spot.io/ocean/features/auto-update-ami-eks-ui?id=roll-cluster-option)).
+5. Optionally click **Apply cluster roll with update** (see [Roll Cluster Option](https://docs.spot.io/ocean/features/ami-auto-update-eks-ui?id=roll-cluster-option)).
   
   <ol style="list-style-type: lower-alpha;">
   <li>Select the Batch size percentage (1 - 100%).</li>
