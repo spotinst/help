@@ -64,7 +64,7 @@ To import the AKS cluster, follow the steps in the Create Ocean Cluster Wizard:
 * Step 4: Automatic Spot Tolerance Injection (optional).
 * Step 5: Review and Configure. 
 
-![aks-create-cluster-main](https://github.com/user-attachments/assets/f248d96a-b2b3-4c1d-bd01-dcacb1cbca40)
+![aks-cluster-wizard-overall](https://github.com/user-attachments/assets/ff3546a7-fb43-45b6-a86b-5c20aa3e9b72)
 
 ## Step 1: Select an AKS Cluster
 
@@ -124,9 +124,7 @@ The selected AKS node pool’s configuration will be imported to the Virtual Nod
 
 ### Select a Node Pool for Your First (Custom) Virtual Node Group
 
-![aks-create-cluster-2-select-node-pool](https://github.com/user-attachments/assets/2a166fc3-26ce-47ce-830c-6f37fbb611d5)
-
-1. Select a node pool. The Virtual Node Group Template dialog box is displayed.
+1. Select a node pool.
 
 2. Optionally edit [Virtual Node Group Template](https://docs.spot.io/ocean/features/vngs/) attributes.
 
@@ -155,11 +153,11 @@ Create Virtual Node Groups to handle different workload requirements. For exampl
 
 * If no node pools are selected, Ocean will create a Virtual Node Group based on the Template Virtual Node Group.
 
-* Spot recommends creating a Virtual Node Group for each workload configuration, not per node pool. Create Virtual Node Groups that are different from one to another so that each Virtual Node Group serves several node pools.
+* Spot recommends creating a Virtual Node Group for each set of requirements, not per node pool. Create Virtual Node Groups that are different from one to another so that each Virtual Node Group serves several node pools.
 
 Example:
 
-Each of the two node pools also represents several other node pools with similar workload configurations:
+Each of the two node pools also represents several other node pools with similar configurations:
 
 1. Select the two node pools for import and leave the rest unselected. You can then consolidate all your node pools into the two custom Virtual Node Groups.
 2. click the link for a custom Virtual Node Group and edit attributes if needed.
@@ -169,6 +167,9 @@ Each of the two node pools also represents several other node pools with similar
 ### Step 3: Connectivity  
 
 This step describes how the Ocean integration starts and the installation of the [Ocean Controller](ocean/tutorials/ocean-controller-v2/) (as a Deployment) in your AKS cluster. This establishes the connection between the Ocean SaaS backend engine and your cluster. This step does not affect existing workloads, which continue to run on existing nodes in node pools managed by AKS. 
+
+
+
 
 Complete the following steps: 
 
