@@ -33,7 +33,7 @@ The Updates History list for completed runs is displayed at the top with these a
   * Error (red): Error at Virtual Node Group level: The update has failed for this specific VNG. Hover over the error icon for more information.
   * Cluster Error (red): The cluster update has failed. Hover over the cluster error icon for more information.
 
->**Note**: See also [Auto Update Troubleshooting](https://docs.spot.io/ocean/features/auto-update-ami-eks-ui?id=auto-update-troubleshooting).
+>**Note**: See also [Auto Update Troubleshooting](https://docs.spot.io/ocean/features/ami-auto-update-eks-ui?id=auto-update-troubleshooting).
 
 * Old AMI/New AMI: version numbers before and after the run.
 * Virtual Node Group: Click the link to view the Virtual Node Group attributes.
