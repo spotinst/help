@@ -4,14 +4,10 @@ In Spot, a user is a person who accesses the Spot console to perform any action 
 
 A user can also be an application that accesses Spot programmatically using the Spot APIs. Using CRUD actions in the APIs, programmatic users can perform all the same actions that console users do.
 
-It is easy to [create a new user](administration/users-a/create-new-user) with the creation wizard:
-1. Define the basic user details, such as user name and if the user is a console or programmatic user.
-2. Attach the user to groups, which controls the Spot services the user is allowed to use and the kind of actions the user can perform.
-3. If a user needs permissions that are not included in policies inherited from the assigned groups, you can use Step 3 of the wizard to associate the user with additional policies.
-
 If your organization is just starting to use Spot, you will not have any groups defined yet. So when you add new users using the wizard, you will not add the user to any group. Then, after you have added a number of users, you can use the [create new group](administration/groups/create-new-group) wizard to add the users to groups.
 
 From the list of users, you can:
+* [Create a user](administration/users-a/?id=create-a-user)
 * Export the list of users to a CSV
 * View user details
 * Click on a user to view more information and edit the user's:
@@ -19,3 +15,20 @@ From the list of users, you can:
     * [Permission policies](administration/policies/)
     * [API tokens](administration/api/create-api-token)
 * Remove a user from Spot by clicking on a user and then **Delete User** (keep in mind that when you delete a user, all API tokens associated with that user are also deleted)
+
+## Create a User
+
+1. In the Spot console, go to the user icon and click **Settings**.
+2. Click **Organization** > **Users** > **Create New User**.
+4. Select the **Access Type**:
+   - **Console** if the user is a person who uses the Spot console. Console users can also use the Spot API. Enter the person’s **Name** and **Email address**.
+   - **Programmatic** if the user is an application that only uses the Spot API. Enter a **Name** (and **Description**).
+6. Click **Continue**.
+7. Search for and select the [groups](administration/groups/) to associate with the user. The user will inherit the policies associated with the groups you select.
+8. Click **Next**.
+9. If the user needs additional permissions that are not associated with the groups, associate the user with additional [policies](administration/policies/):
+      <ol style="list-style-type: lower-alpha;">
+        <li>Select the <b>Policy</b>.</li>
+        <li>If the policy you are looking for is on the account level, select the <b>Accounts</b>.</li>
+    </ol>
+10. Click **Create User**.
