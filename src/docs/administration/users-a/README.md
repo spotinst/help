@@ -16,9 +16,9 @@ From the list of users, you can:
     * [API tokens](administration/api/create-api-token)
 * Remove a user from Spot by clicking on a user and then **Delete User** (keep in mind that when you delete a user, all API tokens associated with that user are also deleted)
 
-## Create a User
+## Create User
 
-1. In the Spot console, click the user icon > **Settings**.
+1. In the Spot console, click the user icon <img height="14" src="https://github.com/spotinst/help/src/docs/administration/_media/usericon.png">  > **Settings**.
 2. Click **Organization** > **Users** > **Create New User**.
 4. Select the **Access Type**:
    - **Console** if the user is a person who uses the Spot console. Console users can also use the Spot API. Enter the person’s **Name** and **Email address**.
