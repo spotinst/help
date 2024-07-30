@@ -1,5 +1,3 @@
-<meta name=“robots” content=“noindex”>
-
 #  AMI Auto Update for EKS via the Console
 
 You can either run an AMI auto-update immediately or schedule one. For both immediate and scheduled auto-update runs, you can include one or both of these options:
