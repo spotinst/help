@@ -69,7 +69,7 @@ To auto-update immediately:
 ![configure-now-update-ami-dialog-box](https://github.com/user-attachments/assets/814c12a7-8dcf-44e2-8bd3-b9dcd54d8178)
 
 2. Select whether to update Security patches, Kubernetes minor versions, or both options in the Auto Update dialog box.
-3. Optionally click **Apply cluster roll with update** (see [Roll Cluster Option](https://docs.spot.io/ocean/features/auto-update-ami-eks-ui?id=roll-cluster-option)).
+3. Optionally click **Apply cluster roll with update** (see [Roll Cluster Option](https://docs.spot.io/ocean/features/ami-auto-update-eks-ui?id=roll-cluster-option)).
   
   <ol style="list-style-type: lower-alpha;">
   <li>Select the Batch size percentage (1 - 100%).</li>
@@ -93,7 +93,7 @@ To create or edit an auto-update schedule:
 3. Select whether to schedule once a day or at a specific time. 
 4. If you selected to schedule at a specific time, set the time using the day/week/month/time controls or type a Cron expression.
 
-5. Optionally click **Apply cluster roll with update** (see [Roll Cluster Option](https://docs.spot.io/ocean/features/auto-update-ami-eks-ui?id=roll-cluster-option)).
+5. Optionally click **Apply cluster roll with update** (see [Roll Cluster Option](https://docs.spot.io/ocean/features/ami-auto-update-eks-ui?id=roll-cluster-option)).
   
   <ol style="list-style-type: lower-alpha;">
   <li>Select the Batch size percentage (1 - 100%).</li>
