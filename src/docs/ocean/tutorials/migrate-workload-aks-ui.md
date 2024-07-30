@@ -10,7 +10,7 @@ Before starting, review the [prerequisites](https://docs.spot.io/ocean/tutorials
 2.  Select a cluster from the list of clusters.
 3.  Click **Start Migration** on the left of the screen under Ocean Managed Nodes. 
 
-![migration-nodes-sample](https://github.com/user-attachments/assets/f12935ec-2192-43d5-9551-93e2a4bd8e4f)
+![migration-nodes-managed](https://github.com/user-attachments/assets/a669c8d3-3c94-4ec8-bd97-993261428abc)
 
 >**Note**: Worker nodes are the main compute resources running containerized applications in a Kubernetes cluster. System nodes (or master nodes) are the control plane components that manage the overall Kubernetes cluster and the workloads running on the worker nodes. The regular nodes are the on-demand nodes. The recommendation is to migrate the unmanaged worker nodes to become Ocean-managed Nodes. In the example above, before migration, there are no Ocean-managed nodes.
 
