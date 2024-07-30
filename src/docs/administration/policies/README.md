@@ -122,10 +122,10 @@ Conditions include:
    - "spot:elastigroup:tags/Email"
 
    > **Note**: Ocean CD resources are a combination of resource retrieval and resource attribute. For example:
-  - oceancdClusterId
-  - oceancdWorkloadName
-  - oceancdWorkloadType
-  - OceancdNamespace
+   > - oceancdClusterId
+   > - oceancdWorkloadName
+   > - oceancdWorkloadType
+   > - OceancdNamespace
 
 * **Attribute value** is a single string, single variable (such as ${spot:userEmail}), or array of values. You can have multiple attribute values of the same field, for example, `spot:elastigroup:name": ["elastigroup-1","elastigroup-2"]`, an **OR** will be used between them.
 
