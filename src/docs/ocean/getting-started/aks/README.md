@@ -222,7 +222,7 @@ When the Ocean Controller connectivity is successful, click **Next**.
 
 ### Step 4: Automatic Spot Tolerance Injection (optional) 
 
-![ocen-aks-auto-spot-toleration-injection](https://github.com/spotinst/help/assets/159915991/7554d272-4e65-4112-8fd4-d3a54a5e994c)
+![aks-cluster-wizard-step-4-toleration](https://github.com/user-attachments/assets/5a1e1fc4-be0f-457b-8cab-a34d774a5a21)
 
 Microsoft Azure / AKS does not allow pods to run on Spot VMs by default. Rather, it adds a `NoSchedule` taint to all Spot nodes/node pools:`kubernetes.azure.com/scalesetpriority=spot:NoSchedule`
 
@@ -282,13 +282,15 @@ for pod in $pods; do echo "Deleting pod: $pod" kubectl delete pod $pod -n <names
 
 ### Step 5: Review and Configure  
 
+![aks-cluster-wizard-review](https://github.com/user-attachments/assets/baa885cf-728e-4dee-bdf6-f598d22f1dbb)
+
 You can view and edit the Ocean cluster configuration and the VNG Template in JSON.   
 
 You can update Ocean AKS cluster autoscaling configuration, cluster resource limits (vCPU and memory), scale-down percentage, and automatic headroom. 
 
 You can modify the VNG template configuration in this JSON as well.
 
-![connect-aks-cluster-10](https://github.com/spotinst/help/assets/106514736/d9c2d5a1-06a1-4876-9c9a-dd7a8888a488)
+![aks-cluster-wizard-json-review](https://github.com/user-attachments/assets/90560b12-9b55-4a4e-aaee-cdedab530e2f)
 
 When you finish editing the Ocean cluster configuration, click **Create**. This creates the Ocean-managed AKS cluster. 
 When you finish importing the AKS cluster to an Ocean AKS Cluster, it will appear in the Cloud Clusters list under the left Ocean menu. 
