@@ -105,11 +105,11 @@ Conditions include:
     - <i>StringEqualsIgnoreCase</i> compares two strings and returns <i>true</i> if the strings are in the same length, and corresponding characters in the two strings are equal ignoring case.
     - <i>StringPatternMatch</i> compares two strings and returns <i>true</i> if the string matches the given regular expression.
 
-  If the condition contains more than one condition operator, an **AND** will be used between them. This means that all the operators should return <i>true</i>.
+  If the condition contains more than one condition operator, <i>AND</i> is used between them. This means that all the operators should return <i>true</i>.
 
 * **Resource retrieval** supports AWS, Azure, and Ocean CD resources.
-  This part is responsible for the definition of which resource should be tested with the condition operator. It consists of a Spot prefix (`spot`) and resource name (`elastigroup`, `ocean`, etc.), separated by the character `:`.
-  When specifying an Ocean CD resource, the correct usage should be:
+  This part is responsible for the definition of which resource should be tested with the condition operator. It consists of a Spot prefix (`spot`) and resource name (such as `elastigroup`, `ocean`), separated by a colon `:`.
+  When specifying an Ocean CD resource, use:
 
   ```
    "resources": [
@@ -127,14 +127,14 @@ Conditions include:
    > - oceancdWorkloadType
    > - OceancdNamespace
 
-* **Attribute value** is a single string, single variable (such as ${spot:userEmail}), or array of values. You can have multiple attribute values of the same field, for example, `spot:elastigroup:name": ["elastigroup-1","elastigroup-2"]`, an **OR** will be used between them.
+* **Attribute value** is a single string, single variable (such as `${spot:userEmail}`), or array of values. You can have multiple attribute values for the same field. For example, `spot:elastigroup:name": ["elastigroup-1","elastigroup-2"]` and  **OR** is used between them.
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id=”texttolinkto”>Example 1: Update Elastigroup resource</summary>
 
 <div style="padding-left:16px">
 
-Given an Elastigroup resource:
+This policy lets users with example@mail.com email address update the Elastigroup resource:
 
 <pre>
 {
@@ -153,7 +153,8 @@ Given an Elastigroup resource:
     }
 }
 </pre>
-The following policy will allow users with example@mail.com email address to update the Elastigroup resource:
+
+This policy checks for the `DeveloperEmail` tag, and lets users with this email address perform the update Elastigroup action.
 
 <pre>
 {
@@ -176,7 +177,7 @@ The following policy will allow users with example@mail.com email address to upd
 }
 </pre>
 
-The policy checks the existence and value of the `DeveloperEmail` tag, and permits users with this email address to perform the update Elastigroup action.
+
 </div>
  </details>
 
@@ -184,6 +185,9 @@ The policy checks the existence and value of the `DeveloperEmail` tag, and permi
    <summary markdown="span" style="color:#7632FE; font-weight:600" id=”texttolinkto”>Example 2: Resource name contains</summary>
 
 <div style="padding-left:16px">
+
+  This policy lets enables performing Ocean-related operations on clusters with names containing <i>ocean-example-1</i> or <i>ocean-example-2</i>.
+
 <pre>
 {
     "statements": [
@@ -212,7 +216,13 @@ The policy checks the existence and value of the `DeveloperEmail` tag, and permi
    <summary markdown="span" style="color:#7632FE; font-weight:600" id=”texttolinkto”>Example 3: Ocean CD Workload Policy</summary>
 
 <div style="padding-left:16px">
-  The policy enables performing ocean-related operations on clusters with names containing `ocean-example-1` or `ocean-example-2`.
+    
+This policy enables restarting workloads on Ocean CD with specific conditions, including cluster ID, workload type, namespace, and workload name. For example:
+* Workload type - “SpotDeployment”
+* Cluster id - “cluster-labs”
+* Namespace - “nslab”
+* Workload name equals “workload1” or contains “workload2”
+
 <pre>
 {
     "statements": [{
@@ -251,12 +261,7 @@ The policy checks the existence and value of the `DeveloperEmail` tag, and permi
   ]
 }  
 </pre>
-  
-The policy enables restarting workloads on Ocean CD with specific conditions, including cluster ID, workload type, namespace, and workload name. For example:
-* Workload type - “SpotDeployment”
-* Cluster id - “cluster-labs”
-* Namespace - “nslab”
-* Workload name equals “workload1” or contains “workload2”
+
   
 </div>
  </details>
