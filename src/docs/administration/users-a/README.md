@@ -18,7 +18,7 @@ From the list of users, you can:
 
 ## Create a User
 
-1. In the Spot console, go to the user icon and click **Settings**.
+1. In the Spot console, click the user icon > **Settings**.
 2. Click **Organization** > **Users** > **Create New User**.
 4. Select the **Access Type**:
    - **Console** if the user is a person who uses the Spot console. Console users can also use the Spot API. Enter the person’s **Name** and **Email address**.
