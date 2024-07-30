@@ -2,6 +2,9 @@
 
 ## July 2024: Features and Enhancements 
 
+
+*  **OCN-0020: July 30, 2024:** (**<font color="#FC01CC">EKS</font>**) You can now run immediate or scheduled AMI auto-updates for EKS from the Ocean console for security patch and/or Kubernetes minor version updates. [Learn more...](https://docs.spot.io/ocean/features/ami-auto-update-eks-ui)
+
 *  **OCN-0019: July 24, 2024:** (**<font color="#FC01CC">GKE</font>**) You can now set the Ocean Autoscaler `maxScaleDownPercentage` for Virtual Node Groups via the console.
 [Learn More...](https://docs.spot.io/ocean/features/max-scale-down-vng-gke-ui)
 
