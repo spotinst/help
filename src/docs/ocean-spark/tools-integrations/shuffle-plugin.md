@@ -7,7 +7,7 @@ Storing shuffle data on a remote drive accessible from all executors can save ti
 
 ## Configuration
 
-To turn on External Shuffle storage, add the following configuration in your Spark application:
+To turn on External Shuffle Storage, add the following configuration in your Spark application:
 
 ```json
 {
