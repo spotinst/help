@@ -6,19 +6,30 @@ Before starting, review the [prerequisites](https://docs.spot.io/ocean/tutorials
 
 ##  Step 1: Select Instances to Migrate
 
-1.  In the left main menu, click **Ocean** and click **Cloud Clusters**.
+1.  In the left main menu, click **Ocean** and click **Cloud Clusters**. 
 2.  Select a cluster from the list of clusters.
 3.  Click **Start Migration** on the left of the screen under Ocean Managed Nodes. 
 
-![workloads-migration-start-migrations](https://github.com/spotinst/help/assets/159915991/998bb5f0-cdd8-4461-bd66-224df9a28590)
+![migration-nodes-managed](https://github.com/user-attachments/assets/a669c8d3-3c94-4ec8-bd97-993261428abc)
 
-Ocean automatically detects the workloads (nodes and pods) of the associated Kubernetes cluster and displays a list of all the discovered nodes.
+>**Note**: Worker nodes are the main compute resources running containerized applications in a Kubernetes cluster. System nodes (or master nodes) are the control plane components that manage the overall Kubernetes cluster and the workloads running on the worker nodes. The regular nodes are the on-demand nodes. The recommendation is to migrate the unmanaged worker nodes to become Ocean-managed Nodes. In the example above, before migration, there are no Ocean-managed nodes.
 
-![Migration Select Workloads](https://github.com/spotinst/help/assets/159915991/72684d91-4b32-4892-a167-0455bfb1fabc)
+Once you start migration, Ocean automatically detects the workloads (nodes and pods) of the associated Kubernetes cluster and displays a list of all the discovered nodes.
+
+![aks-ready-for-migration](https://github.com/user-attachments/assets/962c3046-fc0a-42ca-8675-dad2d46c6e9c)
 
 4.  Select the nodes (instances) you want to migrate into your Ocean cluster.
+    * If any node entries display the **Required Validation** status in the **Ready for Migration** column, click **Validate** at the bottom left of the screen. When the validation process is completed, if any node entries display the **Unable to migrate** status in the **Ready for Migration** column, click the down arrow on the left to drill down to the workloads.
 
-5.  If any node entries show the Required Validation status under the **Ready for Migration** column, click **Validate** at the bottom left of the screen.
+![aks-migration-validations](https://github.com/user-attachments/assets/c0e4f51f-2de8-4dce-8670-3f8a824641b6)
+
+Nodes are checked before migration to ensure successful migration. If an issue is identified for a node, you can either fix it or select a different node. 
+Validation checks for the following:
+*  Virtual Node Group Match: At least one Virtual Node Group in the cluster must match the specific node.
+*  Support for the Kubernetes version.
+*  Support for the Ocean Controller version.
+*  Whether Spot toleration exists.
+*  Specific Constraints: For example, Restrict Scale Down, Respect Pod Disruption Budget (PDB), PVC.
 
 Node Statuses:
 
@@ -30,8 +41,7 @@ Node Statuses:
 
 Select your workload migration preferences.
 
-![workloads-migration-preferences](https://github.com/spotinst/help/assets/159915991/5ba5714c-88f8-478b-9d56-9ad048d543b4)
-
+![migration-nodes-prefs](https://github.com/user-attachments/assets/dfd21e4b-15da-404e-a81d-6b34d103c421)
 
 *  **Batch Size Percentage**: Indicates the percentage of the cluster's target capacity that will be migrated during migration (per batch). For example, if the cluster's target capacity is 50 nodes, and the Batch Size Percentage is set to 20%, each batch will consist of 20% of the target capacity, 10 nodes (50 nodes * 20% = 10 nodes).   
 *  **Batch Size Healthy Percentage**: indicates the minimum percentage of (migrated) healthy nodes in a single batch.
@@ -41,6 +51,8 @@ The migration will fail if the number of healthy nodes in a single batch is belo
 *  **Respect Pod Disruption Budget (PDB)**: Some pods may have a [Pod Disruption Budget](https://kubernetes.io/docs/concepts/workloads/pods/disruptions/#pod-disruption-budgets). In the Spot API, use respectPdb to instruct Ocean to verify the PDB. When respectPdb is set to True, Ocean will not migrate a node if the PDB is violated. 
 *  **Respect Restrict Scale Down during Roll**: Rolls do not consider the restrict-scale-down label. Ocean will migrate a node even if a task or pod uses this label. Ocean's Autoscaler considers all configured constraints before the roll.
 *  **Delete node from Azure after successful migration**: Select to delete the node from the Azure console because Ocean now manages the node.
+
+>**Note**: Before migration, the Azure-managed node pools are changed from automatic to manual scaling to avoid race conditions.
 
 
 ##  Step 3: Start Migration
@@ -77,7 +89,7 @@ To view previous migrations:
 
 1.   From the Actions drop-down menu at the top-right of the screen, click **Previous Workload Migrations**.
 
- ![workloads-previous-migrations](https://github.com/spotinst/help/assets/159915991/3397a2bb-25e2-4e75-91b9-e1d5ae3d487d)
+![workloads-previous-migrations2](https://github.com/user-attachments/assets/a2f1d1a8-afbb-40d9-bf90-9170421188fc)
 
 2.  Click on the required entry under Migrated Nodes to display the dashboard for that migration.
 
