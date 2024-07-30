@@ -8,15 +8,24 @@ In Spot, a group is a set of [users](administration/users-a/) who have the same 
 
 You can associate one user with multiple groups.
 
-You can easily [create a new group](administration/groups/create-new-group) with the creation wizard:
-1. Define the basic group details such as the group name and a brief description of the group purpose.
-2. Add users to the group.
-3. Attach policies to the group, which controls the permissions that users in the group will have.
-
 From the list of groups, you can:
-* [Create a new group](administration/groups/create-new-group)
+* [Create a new group](administration/groups/?id=create-a-group)
 * View group details
 * Click on a group to view more information and edit the group's:
   * [Users](administration/users-a/)
   * [Permission policies](administration/policies/)
 * Delete a group
+
+## Create a Group
+
+1. In the Spot console, go to the user icon and click **Settings**.
+2. Click **Organization** > **Groups** > **Create New Group**.
+3. Enter a **Name** (and **Description**).
+4. Find and select the users to add to the group.
+5. Click **Next**.
+6. Add [permission policies](administration/policies/):
+      <ol style="list-style-type: lower-alpha;">
+        <li>Select the <b>Policy</b>.</li>
+        <li>If the policy you are looking for is on the account level, select the <b>Accounts</b>.</li>
+    </ol>
+7. Click **Create Group**.
