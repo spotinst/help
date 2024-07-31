@@ -57,12 +57,23 @@ If you need multiple organizations, for example, for multiple divisions or units
 If your user is mapped to more than one organization, you can easily switch from one organization to another:
 
 1. In the Spot console, click the organization.
+   
+   <details>
+    <summary markdown="span">View image</summary>
 
-   <img src="https://github.com/spotinst/help/src/docs/administration/_media/switch-organization-01a.png" />
+     <img width="300" src="https://github.com/user-attachments/assets/2682ac3c-8580-4c25-a869-911765f699a6" />
 
-2. Search for and select the name of the organization to switch to.
+   </details>
+   
+3. Search for and select the name of the organization to switch to.
 
-    <img src="https://github.com/spotinst/help/src/docs/administration/_media/switch-organization-02.png" width="370" height="128" />
+   <details>
+    <summary markdown="span">View image</summary>
+
+     <img width="300" src="https://github.com/user-attachments/assets/e1f3848d-1193-4f94-a5e2-ab5cb6a0df67" />
+
+   </details>
+   
 
 ## Account
 
