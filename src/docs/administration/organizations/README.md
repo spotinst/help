@@ -80,7 +80,7 @@ In the account, you can:
 
 To add an account through the API, go to [Spot API – Create Account](https://docs.spot.io/api/#operation/OrganizationsAndAccountsCreateAccount).
 
-## Get your Account ID
+## Get Your Account ID
 
 The Account ID is required for API and SDK interactions with the Elastigroup configuration, unless it's for the default account.
 
