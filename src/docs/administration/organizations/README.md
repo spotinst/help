@@ -120,3 +120,17 @@ The Account ID is required for API and SDK interactions with the Elastigroup con
       <img width="400" src="https://github.com/user-attachments/assets/9a0378a6-248b-4d06-a3cc-1351386d2a37" />
 
    </details>
+
+## Audit Events
+
+You can view an audit list of events in <font color="#FC01CC">your Elastigroups</font>. The Audit page shows a list of events and enables tracking and visibility of actions on your resources. You can see these details for each event:
+- Event timestamp
+- Event type, such as update, create, detach instances, deploy instances
+- Resources type, such as Elastigroup, Ocean
+- Resource ID
+- User name
+- View the payload
+
+Access the Audit page:
+1. In the Spot console, select the organization and account.
+2. Click the user icon <img height="14" src="https://github.com/spotinst/help/src/docs/administration/_media/usericon.png">  > **Settings** > **Audit**.
