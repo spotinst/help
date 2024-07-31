@@ -2,6 +2,7 @@
 
 ## July 2024: Features and Enhancements 
 
+*  **OCN-0021: July 31, 2024:** (**<font color="#FC01CC">AKS</font>**) Ocean now supports AKS with global regions. From now on, you can create and import clusters set with the global regions in Azure that currently do not support Availability Zones, for which you can create resources at the regional level. [Learn more...](https://docs.spot.io/ocean/getting-started/aks/?id=what-to-do-about-global-regions)
 
 *  **OCN-0020: July 30, 2024:** (**<font color="#FC01CC">EKS</font>**) You can now run immediate or scheduled AMI auto-updates for EKS from the Ocean console for security patch and/or Kubernetes minor version updates. [Learn more...](https://docs.spot.io/ocean/features/ami-auto-update-eks-ui)
 
