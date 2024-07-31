@@ -70,8 +70,7 @@ If your user is mapped to more than one organization, you can easily switch from
    <details>
     <summary markdown="span">View image</summary>
 
-     <img width="300" src="https://github.com/user-attachments/assets/e1f3848d-1193-4f94-a5e2-ab5cb6a0df67" />
-
+     <img width="300" src="https://github.com/user-attachments/assets/6afad223-581c-4121-9066-adc0755fa560" />
    </details>
    
 
