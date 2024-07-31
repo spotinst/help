@@ -12,6 +12,12 @@ This procedure describes using the Spot Console to connect an existing AKS c
 * [Enable Ocean to launch Spot VMs for Workloads](ocean/getting-started/aks/aks-prerequisites?id=enable-ocean-to-launch-spot-vms-for-workloads). 
 * [Update Helm or install via Terraform or Kubectl (Kubernetes command-line tool)](ocean/getting-started/aks/aks-prerequisites?id=install-helm-terraform-or-kubectl-kubernetes-command-line-tool).
 
+## What to do About Global Regions
+
+Ocean supports AKS with global regions, so you can create and import clusters set with the global regions in Azure that currently do not support Availability Zones. For these clusters, you create resources at the regional level.  
+After import, you can view a global region in the Virtual Node Groups tab, where Availability Groups = None.
+
+![ocean-vng-regions](https://github.com/user-attachments/assets/86d2152d-6cf5-4ea7-8538-e8253cd6a90a)
 
 ## What to do About AKS Private Clusters
 
