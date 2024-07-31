@@ -2,7 +2,7 @@
 
 When you set up your Spot account, you create an organization and one or more account entities. You will most likely need only one organization, but you can set up multiple organizations if required. Within an organization, you can define multiple accounts for different teams or projects with the organization. Each account can be set up to use any supported cloud service provider and cloud service provider account.
 
-<img src="/administration/_media/organizations-accounts-01.png" width="500" height="281" />
+<img src="https://github.com/spotinst/help/src/docs/administration/_media/organizations-accounts-01.png" width="500" height="281" />
 
 ## Organization
 
@@ -23,9 +23,12 @@ You can:
 
 1. In the Spot console, click the user icon <img height="14" src="https://github.com/spotinst/help/src/docs/administration/_media/usericon.png">  > **Settings**.
 2. Go to **General Details** > **My Organization** > **Organization ID**.
+   <details>
+    <summary markdown="span">View image</summary>
 
-<img height="400" src="https://github.com/user-attachments/assets/faae59f5-123a-41a2-bd31-c2be6c471856" />
+     <img height="400" src="https://github.com/user-attachments/assets/faae59f5-123a-41a2-bd31-c2be6c471856" />
 
+   </details>
 
 ## Linked Organizations
 
@@ -36,12 +39,18 @@ If you need multiple organizations, for example, for multiple divisions or units
 
 ## Add an Organization
 
-<img src="/administration/_media/organizations-accounts-03.png" width="150" height="93" />
-
 1. In the console, click the organization and click **Add Organization**.
-2. Enter a name for the new organization and click **Create**.
-3. Switch to the new organization.
-4. Choose a cloud service provider and complete the wizard to connect the organization to the provider.
+
+   <details>
+    <summary markdown="span">View image</summary>
+
+     <img width="300" src="https://github.com/user-attachments/assets/2682ac3c-8580-4c25-a869-911765f699a6" />
+
+   </details>
+
+3. Enter a name for the new organization and click **Create**.
+4. Switch to the new organization.
+5. Choose a cloud service provider and complete the wizard to connect the organization to the provider.
 
 ## Switch Organizations
 
@@ -49,11 +58,11 @@ If your user is mapped to more than one organization, you can easily switch from
 
 1. In the Spot console, click the organization.
 
-<img src="/administration/_media/switch-organization-01a.png" />
+   <img src="https://github.com/spotinst/help/src/docs/administration/_media/switch-organization-01a.png" />
 
 2. Search for and select the name of the organization to switch to.
 
-<img src="/administration/_media/switch-organization-02.png" width="370" height="128" />
+    <img src="https://github.com/spotinst/help/src/docs/administration/_media/switch-organization-02.png" width="370" height="128" />
 
 ## Account
 
@@ -69,12 +78,18 @@ In the account, you can:
 
 ## Add an Account Using the Spot Console
 
-1. In the Spot console, click the account and click **Add Account.
+1. In the Spot console, click the account and click **Add Account**.
+   
+   <details>
+    <summary markdown="span">View image</summary>
 
-<img src="/administration/_media/organizations-accounts-04.png" width="300" height="140" />
+     <img width="300" src="https://github.com/user-attachments/assets/6439e166-20c9-4c9d-bc8f-9607ae31b36e" />
 
-2. Enter a name for the new account and click **Create**.
-3. Choose a service provider and complete the wizard to connect the account to the provider.
+
+   </details>
+
+3. Enter a name for the new account and click **Create**.
+4. Choose a service provider and complete the wizard to connect the account to the provider.
 
 ## Add an Account Using the API
 
@@ -88,4 +103,9 @@ The Account ID is required for API and SDK interactions with the Elastigroup con
 2. Click the user icon <img height="14" src="https://github.com/spotinst/help/src/docs/administration/_media/usericon.png">  > **Settings**.
 3. Go to **General Details** > **My Spot Account** > **Cloud Account ID**.
    
-  <img width="400" src="https://github.com/user-attachments/assets/9a0378a6-248b-4d06-a3cc-1351386d2a37" />
+   <details>
+    <summary markdown="span">View image</summary>
+
+      <img width="400" src="https://github.com/user-attachments/assets/9a0378a6-248b-4d06-a3cc-1351386d2a37" />
+
+   </details>
