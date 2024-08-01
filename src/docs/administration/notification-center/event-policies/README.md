@@ -7,6 +7,11 @@ The Spot console provides a robust and flexible tool for configuring and managin
 - Notification mediums such as Slack, email, and SNS
 - Users and stakeholders to be notified
 
+You can create policies for: <font color="#FC01CC">{what else is needed here? what's the type used for and what are the ramifications of what I select}</font>
+* Compute
+* Security
+* Ocean CD
+
 You can access event policies:
 
 1. In the Spot console, click the user icon <img height="14" src="https://github.com/spotinst/help/src/docs/administration/_media/usericon.png">  > **Settings**.
