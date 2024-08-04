@@ -181,17 +181,17 @@ Once configured, whenever the Ocean Autoscaler scales up, Ocean will automatical
 
 <!-- NEW SECTION ADDED - for DOC-1588 -->
 
-## Turn On/Off Utilize Commitment Plans per Virtual Node Group
+## Turn On/Off Utilize Commitments per Virtual Node Group
 
 Relevant for AWS Kubernetes.
 
 These attributes let you control utilization commitments (RI/SP) at the Virtual Node Group level.
 
-In the Spot API, under Virtual Node Groups > strategy, you can configure these attributes:
+In the Spot API, under Virtual Node Groups > strategy, you can configure these attributes as either True or Falso:
 
- * `utilizeReservedInstances`: If there are free reserved instances within the AWS account, Ocean will utilize them before launching spot instances. The initial default value is inherited from the attribute at the cluster level. 
+ * `utilizeReservedInstances`: If there are free reserved instances within the AWS account, Ocean will utilize them before launching spot instances. The initial default value is inherited from the identical attribute at the cluster level. 
 
- * `utilizeCommitments`: If savings plan commitments have available capacity, Ocean will utilize them alongside existing reserved instances to maximize cost efficiency. The initial default value is inherited from the attribute at the cluster level. 
+ * `utilizeCommitments`: If savings plan commitments have available capacity, Ocean will utilize them alongside existing reserved instances to maximize cost efficiency. The initial default value is inherited from the identical attribute at the cluster level. 
 
 Any change you make at the Virtual Node Group level will override the value set at the cluster level.
 
