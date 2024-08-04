@@ -191,13 +191,15 @@ The upper graph displays the autoscaling activity to analyze. By default, it dis
 These are the curves:
 
 *  Lifecycle Types:
-  * Spot.
-  * On-demand.
-  * Reserved.
-  * Savings Plans.
+   * Spot.
+   * On-demand.
+   * Reserved.
+   * Savings Plans.
 
-*  Workload Requests: includes running pods and pending pods requests.
+*  Workload Requests: includes running pods and pending pods requests. 
 *  Workloads with Headroom: includes running pods, running Headroom pods, pending pods, and pending Headroom pods.
+
+>**Note**: The pending pods include all the pods in the Kubernetes cluster (pods that will be scheduled on Ocean nodes and those that won’t).
 
 To set the zoom level for the graph:
 
@@ -215,7 +217,7 @@ To display the autoscaling activity at a specific point on the graph:
 This is the information displayed:
 
 * Autoscaling events (displayed for a period of 12 hours or less):
-One or more autoscaling events are displayed in blue rectangles. These can be any Ocean autoscaling scale-up and scale-down events that are displayed as widgets above the graph.
+One or more autoscaling events are displayed in blue rectangles. These can be any Ocean autoscaling scale-up and scale-down events displayed as widgets above the graph.
 For example, Scale Up, Scale Down, or Autohealing.
 
 For vCPU:
@@ -227,7 +229,7 @@ For vCPU:
     *  deamonSets Requested. 
     *  Pods Requested.
     *  Headroom requested.
-    *  Total workload allocation percentage.
+    *  Total workload allocation percentage (includes only running pods, running headroom pods, and running DaemonSets pods that are scheduled on Ocean nodes).
 
 For Memory: 
 
@@ -238,7 +240,7 @@ For Memory:
     *  deamonSets Requested. 
     *  Pods Requested.
     *  Headroom requested.
-    *  Total workload allocation percentage.
+    *  Total workload allocation percentage (includes only running pods, running headroom pods, and running DaemonSets pods that are scheduled on Ocean nodes).
 
 For GPU:
 
@@ -249,7 +251,7 @@ For GPU:
     *  deamonSets Requested. 
     *  Pods Requested.
     *  Headroom requested.
-    *  Total workload allocation percentage.
+    *  Total workload allocation percentage (includes only running pods, running headroom pods, and running DaemonSets pods that are scheduled on Ocean nodes).
 
 Total Allocation Calculation:
 * Sum of vCPU/Memory/GPU allocation - (running pods + running headroom + running DaemonSets)/nodes allocation. 
