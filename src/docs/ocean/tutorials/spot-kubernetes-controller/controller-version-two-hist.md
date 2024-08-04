@@ -1,5 +1,10 @@
 # Ocean Controller Version 2 History
 
+## [2.0.65] - 2024-08-01
+
+### Added
+* Added Keep Alive mechanism to prevent hanging gRPC calls to the backend.
+
 ## [2.0.64] - 2024-07-11
 
 ### Bug Fixes
