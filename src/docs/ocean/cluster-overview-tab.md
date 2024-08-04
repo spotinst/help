@@ -254,6 +254,7 @@ For GPU:
     *  Total workload allocation percentage (includes only running pods, running headroom pods, and running DaemonSets pods that are scheduled on Ocean nodes).
 
 Total Allocation Calculation:
+
 * Sum of vCPU/Memory/GPU allocation - (running pods + running headroom + running DaemonSets)/nodes allocation. 
 
 
