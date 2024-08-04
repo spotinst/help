@@ -22,6 +22,7 @@
     - [String Transformers](spot-connect/actions/string_transformers)
   - [Integrations](spot-connect/integrations/)
     - [Amazon SNS](spot-connect/integrations/sns)
+    - [Amazon Web Services](spot-connect/integrations/aws)
     - [Ansible](spot-connect/integrations/ansible)
     - [API Keys](spot-connect/integrations/apikeys)
     - [EKS Permissions](spot-connect/integrations/eks)
