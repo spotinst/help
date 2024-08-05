@@ -22,7 +22,7 @@ The Advanced Optimization tab contains these lists:
 
 ##  Workloads Optimization List 
 
-This list displays: 
+This list displays:  
 
 *  Your right-sizing recommendations per workload, and it lets you drill down to view your right-sizing recommendations per container. 
 *  Recommendations for vCPU and memory right sizing per deployment. Recommended increases are shown with a green up arrow, and recommended decreases are shown with a red Down arrow.  
