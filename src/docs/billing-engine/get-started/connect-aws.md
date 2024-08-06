@@ -49,3 +49,5 @@ You can connect an existing AWS account to your new Billing Engine account by re
    ![connect-aws-onboard2](https://github.com/spotinst/help/assets/167069628/47972b71-8a29-4480-b3d6-f96e96312aea)
 
 3. Run the IAM template and **Connect Account**.
+
+Billing Engine checks for updated provider cost data every four hours.

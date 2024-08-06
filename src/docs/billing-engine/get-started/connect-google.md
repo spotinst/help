@@ -24,3 +24,5 @@ Make sure you select key type: **JSON**. Save the key in the JSON format.
 * BigQuery Table ID
 
 After 24 hours, you will receive a confirmation that the Billing Engine processes have run and data will be present within the platform.
+
+Billing Engine checks for updated provider cost data every four hours.

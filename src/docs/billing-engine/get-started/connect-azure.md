@@ -115,6 +115,6 @@ You can connect an existing Spot Account (that is not connected to Azure for oth
 
 5. To connect your Azure billing account, start with Step 2 [here](https://docs.spot.io/billing-engine/get-started/connect-azure?id=step-2-log-in-to-your-azure-account).  
 
-
+Billing Engine checks for updated provider cost data every four hours.
 
  
