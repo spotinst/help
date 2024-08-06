@@ -279,7 +279,10 @@ Make sure your script doesn’t require additional extensions. For example, you 
    <summary markdown="span">Extension for custom data</summary>
 
    In the <b>group</b> > <b>compute</b> > <b>launchSpecification</b> > <b>extensions</b>, add the extension. For example:
-   <pre><code>
+   
+   <pre>
+    
+    <code>
 
     "extensions": [
         {
@@ -298,11 +301,12 @@ Make sure your script doesn’t require additional extensions. For example, you 
         }
       ],
      
-    </code>
+      </code>
      
-    </pre>
+      </pre>
 
    </details>
+   
  </details>
 
 
