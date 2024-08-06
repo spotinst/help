@@ -193,7 +193,7 @@ Each of the two node pools also represents several other node pools with similar
 
 You can now install the [Ocean Controller](ocean/tutorials/ocean-controller-v2/) and establish the connection between the Ocean SaaS and the cluster.
 
-![aks-cluster-wizard-step-3-connect](https://github.com/user-attachments/assets/5a9db943-88e4-495e-a78d-45b2b82b5f0b)
+![controller-tab-helm](https://github.com/user-attachments/assets/66dd55de-77c0-4ba5-8966-49996619eacb)
 
 To install the Ocean Controller and establish connectivity: 
 
@@ -203,20 +203,37 @@ To install the Ocean Controller and establish connectivity:
 
    * **Helm**: This is the preferred method because it lets you to customize using command-line options or `values.yaml`. Install **Helm 3.x** and add the `spotinst` repo. Then, use the `helm install` command with set command-line options to install the Ocean controller in a separate spot-ocean namespace.
 
-   ```yaml
+ ```yaml
 
-      Need correct code
+# add repo
+helm repo add spot https://charts.spot.io
+helm repo update spot
 
-   
-      ```
+# install controller
+
+helm upgrade --install --wait ocean-controller spot/ocean-kubernetes-controller \
+--namespace "spot-ocean" --create-namespace \
+--set spotinst.account=act-0bc6b318 \
+--set spotinst.clusterIdentifier=andrii_test_azure-3f82f93d \
+--set spotinst.token=<ENTER YOUR TOKEN HERE> \
+--set metrics-server.deployChart=false
+
+ ```
      
-   * **Kubectl**: Run the controller `init.sh` (bash) script on a workstation with the `kubectl` command line and ensure that kube-config is set to the AKS cluster context. The script installs the controller in the kube-system namespace (default) and creates the corresponding Kubernetes components—controller deployment, secret, config-map, and service account.
+   * **Connect via Script**: Run the controller `init.sh` (bash) script on a workstation with the `kubectl` command line and ensure that kube-config is set to the AKS cluster context. The script installs the controller in the kube-system namespace (default) and creates the corresponding Kubernetes components—controller deployment, secret, config-map, and service account.
 
-      ```yaml
+```bash
 
-     Need correct code
-      
-      ```
+curl -fsSL https://spotinst-public.s3.amazonaws.com/integrations/kubernetes/cluster-controller-v2/scripts/init.sh | \
+SPOTINST_TOKEN=$SPOTINST_TOKEN \
+SPOTINST_ACCOUNT=$SPOTINST_ACCOUNT \
+SPOTINST_CLUSTER_IDENTIFIER=$SPOTINST_CLUSTER_IDENTIFIER \
+ENABLE_OCEAN_METRIC_EXPORTER=false \
+ENABLE_OCEAN_NETWORK_CLIENT=false \
+INCLUDE_METRIC_SERVER=false \
+bash
+ ```  
+     
    >**Note**:Optionally install the [Ocean Prometheus exporter](https://docs.spot.io/ocean/tools-and-integrations/prometheus/README)
  
 3. Click **Test Connectivity** to confirm that the Ocean Controller is functioning in the cluster. The test takes around two minutes. A green **OK** is displayed when the Ocean Controller pod runs in the AKS cluster and communicates with the Ocean SaaS engine.  
