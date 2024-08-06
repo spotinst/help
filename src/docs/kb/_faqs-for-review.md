@@ -167,7 +167,7 @@ You can create a scaling policy for latency.
     * **Namespace**: <i>AWS/Application ELB</i>
     * **Metric Name**: <i>TargetResponseTime</i>
     * **Dimensions – Name**: <i>LoadBalancer</i>
-    * **Dimensions – Value**: this is the ARN of the load balancer, for example: <code>loadbalancer/app/<load-balancer-name>/<xxxxxxxxxxx></code>
+    * **Dimensions – Value**: this is the ARN of the load balancer, for example: <code>loadbalancer/app/{load-balancer-name}/{xxxxxxxxxxx}</code>
 
      ![scaling-latency3](https://github.com/spotinst/help/assets/167069628/e9de15c8-6714-4f8f-a458-d2b4e182cf03)
 
