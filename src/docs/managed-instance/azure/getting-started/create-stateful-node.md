@@ -160,8 +160,8 @@ You can modify the columns by clicking the column selector ![column-selector-ico
 * Draining Timeout: Set the amount of time (seconds) that the stateful node will allow to de-register and drain VMs before termination.
 * Fallback to On-Demand: A stateful node provides a fallback mechanism in case no Spot VMs are available. Mark this option if you would like the option to automatically fall back to an on-demand VM in such a case.
 * Continuous Optimization: Choose when stateful node may move workloads from on-demand to spot VMs. You may choose from:
-- Once Available: The stateful node moves the workloads when your Spot VM types become available.
-- Custom: Define one or more time windows to allow the move.
+   - Once Available: The stateful node moves the workloads when your Spot VM types become available.
+   - Custom: Define one or more time windows to allow the move.
 
 <img src="/elastigroup/_media/azure-new-stateful-6.png" />
 
@@ -175,11 +175,11 @@ Complete the following steps to utilize your capacity reservation group:
 
 1. Check the ‘Utilize CRG’ checkbox. 
 2. Select the CRG you want Elastigroup to use: 
- * **Automatic**: Elastigroup searches for available CRG slots in your subscription and utilizes the available slots in the configuration of each group.  
- * **Manual**: Provide details for the CRG you want to be utilized as part of the Stateful node or Elastigroup. 
+   * **Automatic**: Elastigroup searches for available CRG slots in your subscription and utilizes the available slots in the configuration of each group.  
+   * **Manual**: Provide details for the CRG you want to be utilized as part of the Stateful node or Elastigroup. 
 3. Select how you want Elastigroup to use your CRG- 
- * **Prioritize over Spot**: Provides CRG utilization as a priority before Elastigroup picks up the next OD market. 
- * **Prioritize over On-Demand**: Provides CRG utilization as a priority before Elastigroup picks up the next OD market. 
+   * **Prioritize over Spot**: Provides CRG utilization as a priority before Elastigroup picks up the next OD market. 
+   * **Prioritize over On-Demand**: Provides CRG utilization as a priority before Elastigroup picks up the next OD market. 
 
 You must create a CRG in Azure before Elastigroup can utilize the CRG.  
 
@@ -229,13 +229,82 @@ Click + Add Task, select an action type, and enter the times you want to define 
 
 <img src="/elastigroup/_media/azure-new-stateful-19.png" />
 
-### Custom Data
+### User Data
+User data is a set of scripts or other metadata inserted into an Azure virtual machine during provisioning. After provision, any application on the virtual machine can access the user data from the Azure Instance Metadata Service (IMDS).
 
-Custom data is useful for launching VMs with all required configurations and software installations. Stateful Node can load custom data (i.e., custom scripts) during the provisioning of VMs.  
+Make sure your script doesn’t require additional extensions. For example, you may need to add an [extension](https://docs.spot.io/managed-instance/azure/tutorials/extensions) for user data to work.
 
-When a Specialized Shared Image is specified, Custom Data is not available.
+ <details>
+ <summary markdown="span">Extension for user data</summary>
 
-When the OS disk persistency is turned on, the Custom Data section is disabled during the edit and import modes of the wizard.  
+  In the <b>group</b> > <b>compute</b> > <b>launchSpecification</b> > <b>extensions</b>, add the extension. For example:
+   <pre><code>
+
+    "extensions": [
+        {
+          "name": "extensionName",
+          "type": "customScript",
+          "publisher": "Microsoft.Azure.Extensions",
+          "apiVersion": "2.0",
+          "minorVersionAutoUpgrade": true,
+          "publicSettings": {},
+          "protectedSettings": {},
+          "enableAutomaticUpgrade": false,
+          "protectedSettingsFromKeyVault": {
+            "sourceVault": "/subscriptions/1234-1234-1234/resourceGroups/rg_test/providers/Microsoft.KeyVault/vaults/testKeyVault",
+            "secretUrl": "https://testKeyVault.vault.azure.net/secrets/SecretTest/123456"
+          }
+        }
+      ],
+     
+   </code>
+     
+   </pre>
+
+ </details>
+
+
+ <details>
+ <summary markdown="span">Custom data</summary>
+
+  Custom data can be used when provisioning VMs.
+
+  When a specialized shared image is used, Custom Data is not available.
+
+  When the OS disk persistency is turned on, the Custom Data section is disabled during the edit and import modes of the wizard. You can use user data instead.
+
+  Make sure your script doesn’t require additional extensions. For example, you may need to add an [extension](https://docs.spot.io/managed-instance/azure/tutorials/extensions) for custom data to work.
+
+  <details>
+   <summary markdown="span">Extension for custom data</summary>
+
+   In the <b>group</b> > <b>compute</b> > <b>launchSpecification</b> > <b>extensions</b>, add the extension. For example:
+   <pre><code>
+
+    "extensions": [
+        {
+          "name": "extensionName",
+          "type": "customScript",
+          "publisher": "Microsoft.Azure.Extensions",
+          "apiVersion": "2.0",
+          "minorVersionAutoUpgrade": true,
+          "publicSettings": {},
+          "protectedSettings": {},
+          "enableAutomaticUpgrade": false,
+          "protectedSettingsFromKeyVault": {
+            "sourceVault": "/subscriptions/1234-1234-1234/resourceGroups/rg_test/providers/Microsoft.KeyVault/vaults/testKeyVault",
+            "secretUrl": "https://testKeyVault.vault.azure.net/secrets/SecretTest/123456"
+          }
+        }
+      ],
+     
+    </code>
+     
+    </pre>
+
+   </details>
+ </details>
+
 
 ### Shutdown Script
 
