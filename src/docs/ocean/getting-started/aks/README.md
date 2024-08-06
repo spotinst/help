@@ -243,8 +243,7 @@ Additional Tips:
 * To change the Ocean Controller init.sh script, download, edit, and execute it from the command line (bash shell). 
 * For private AKS clusters with limited or no Internet connectivity, see [What to do About Private AKS Clusters](https://docs.spot.io/ocean/getting-started/aks/?id=what-to-do-about-aks-private-clusters).  
   * Use a proxy or VPN to add or update the spotinst Helm repo in the private cluster. You need to create the config-map manually. 
-  * For Kubectl, you cannot run the controller init script because remote connectivity is turned off. You must manually create the config-map and install the controller in AKS using a VPN or proxy.  
-
+ 
 ### Step 4: Automatic Spot Tolerance Injection (optional) 
 
 ![aks-cluster-wizard-step-4-toleration](https://github.com/user-attachments/assets/5a1e1fc4-be0f-457b-8cab-a34d774a5a21)
