@@ -1,4 +1,4 @@
-<meta name="“robots”" content="“noindex”">
+<meta name="robots" content="noindex">
 
 # Update RAM and CPU for osDisk and dataDisk on a Stateful Node
 
@@ -14,9 +14,7 @@ You can change the osDisk size and dataDisk size used to launch VMs with this AP
 
 ![update-osdisk-datadisk1](https://github.com/spotinst/help/assets/167069628/a5b8fdd9-7e62-460c-bdf3-d77d0f47df4c)
 
-You can also update the osDisk and dataDisk size in the stateful node’s JSON. Go to **Edit Node** > **Review** > **JSON**.
-
-<font color="#7632FE"> Is this edit a vng > edit in JSON format? https://docs.spot.io/ocean/tutorials/manage-virtual-node-groups?id=edit-a-vng </font>
+You can also [update the osDisk and dataDisk size](https://docs.spot.io/managed-instance/azure/features/persist-os-data-disks) in the stateful node’s JSON. Go to **Edit Node** > **Review** > **JSON**.
 
 **RAM size**
 
