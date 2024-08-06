@@ -100,7 +100,7 @@ You can use your own AMI and configure IMDSv2 on it. All instances launched afte
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceancantspin">Why can't I spin new instances?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceancantspin">Why can't I spin new instances (InvalidSnapshot.NotFound)?</summary>
 
   <div style="padding-left:16px">
 
@@ -322,7 +322,7 @@ You can use your own AMI and configure IMDSv2 on it. All instances launched afte
  </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egcantspin">Why can't I spin new instances?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egcantspin">Why can't I spin new instances (InvalidSnapshot.NotFound)?</summary>
 
 <div style="padding-left:16px">
 
