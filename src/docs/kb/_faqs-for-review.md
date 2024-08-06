@@ -27,8 +27,6 @@ Generate a new client secret <i>value</i> and [update it in the API](https://doc
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="keepjenkinsalive">Can I keep Jenkins Agent alive after a job finishes?</summary>
 
   <div style="padding-left:16px">
-  [old article](https://docs.spot.io/kb/keep-jenkins-agent)
-  [zendesk](https://support.spot.io/hc/en-us/articles/15796192786973-Is-it-possible-to-keep-Jenkins-slave-alive-after-the-job-was-completed)
 
 You can prevent an immediate termination of a specific spot instance that acted as an agent and carried out a certain Jenkins job. For example, this can be useful if you want to:
 
@@ -162,11 +160,8 @@ systemctl restart spotinst-agent
    
 You can create a scaling policy for latency.
 
-<img width=60% src="https://github.com/spotinst/help/assets/167069628/bc4be548-a0d1-4fb3-85dd-0a32853d99c1">
-
 1. In the Elastigroup, go to the Scaling tab.
 2. Under Simple Scaling Policies/Up Scaling Policies, click **Add Policy**.
-https://docs.spot.io/elastigroup/features/scaling/simple-scaling-policies
 3. Select these parameters:
     * **Auto Scale Based on**: <i>Other</i>
     * **Namespace**: <i>AWS/Application ELB</i>
@@ -174,7 +169,7 @@ https://docs.spot.io/elastigroup/features/scaling/simple-scaling-policies
     * **Dimensions – Name**: <i>LoadBalancer</i>
     * **Dimensions – Value**: this is the ARN of the load balancer, for example: <code>loadbalancer/app/<load-balancer-name>/<xxxxxxxxxxx></code>
 
-![scaling-latency3](https://github.com/spotinst/help/assets/167069628/e9de15c8-6714-4f8f-a458-d2b4e182cf03)
+     ![scaling-latency3](https://github.com/spotinst/help/assets/167069628/e9de15c8-6714-4f8f-a458-d2b4e182cf03)
 
 4. Click **Next**.
 
