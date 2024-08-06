@@ -199,40 +199,39 @@ To install the Ocean Controller and establish connectivity:
 
 1. Create a Spot token (or use an existing one) and copy it to the text box. 
 
-2. To install the Ocean Kubernetes controller, use either Helm (the preferred option) or Kubectl. 
+2. To install the Ocean Kubernetes controller, use either Helm (the preferred option) or via script. 
 
    * **Helm**: This is the preferred method because it lets you to customize using command-line options or `values.yaml`. Install **Helm 3.x** and add the `spotinst` repo. Then, use the `helm install` command with set command-line options to install the Ocean controller in a separate spot-ocean namespace.
 
- ```yaml
+    ```yaml
 
-# add repo
-helm repo add spot https://charts.spot.io
-helm repo update spot
+   # add repo
+   helm repo add spot https://charts.spot.io
+   helm repo update spot
+   
+   # install controller
+   
+   helm upgrade --install --wait ocean-controller spot/ocean-kubernetes-controller \
+   --namespace "spot-ocean" --create-namespace \
+   --set spotinst.account=act-0bc6b318 \
+   --set spotinst.clusterIdentifier=ouridentifier-263th37a \
+   --set spotinst.token=<ENTER YOUR TOKEN HERE> \
+   --set metrics-server.deployChart=false
+   
+    ```
+    
+   * **Connect via Script**: Use Spot’s script for a Helm-based installation of the Ocean Controller:
 
-# install controller
+   ```bash
 
-helm upgrade --install --wait ocean-controller spot/ocean-kubernetes-controller \
---namespace "spot-ocean" --create-namespace \
---set spotinst.account=act-0bc6b318 \
---set spotinst.clusterIdentifier=andrii_test_azure-3f82f93d \
---set spotinst.token=<ENTER YOUR TOKEN HERE> \
---set metrics-server.deployChart=false
-
- ```
-     
-   * **Connect via Script**: Run the controller `init.sh` (bash) script on a workstation with the `kubectl` command line and ensure that kube-config is set to the AKS cluster context. The script installs the controller in the kube-system namespace (default) and creates the corresponding Kubernetes components—controller deployment, secret, config-map, and service account.
-
-```bash
-
-curl -fsSL https://spotinst-public.s3.amazonaws.com/integrations/kubernetes/cluster-controller-v2/scripts/init.sh | \
-SPOTINST_TOKEN=$SPOTINST_TOKEN \
-SPOTINST_ACCOUNT=$SPOTINST_ACCOUNT \
-SPOTINST_CLUSTER_IDENTIFIER=$SPOTINST_CLUSTER_IDENTIFIER \
-ENABLE_OCEAN_METRIC_EXPORTER=false \
-ENABLE_OCEAN_NETWORK_CLIENT=false \
-INCLUDE_METRIC_SERVER=false \
-bash
- ```  
+   curl -fsSL https://spotinst-public.s3.amazonaws.com/integrations/kubernetes/cluster-controller-v2/scripts/init.sh | \
+   SPOTINST_TOKEN=<ENTER YOUR TOKEN HERE> \
+   SPOTINST_ACCOUNT=act-243add2f \
+   SPOTINST_CLUSTER_IDENTIFIER=youridentifier-263th37a \
+   ENABLE_OCEAN_METRIC_EXPORTER=false \
+   bash
+   
+    ```  
      
    >**Note**:Optionally install the [Ocean Prometheus exporter](https://docs.spot.io/ocean/tools-and-integrations/prometheus/README)
  
