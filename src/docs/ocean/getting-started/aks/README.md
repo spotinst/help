@@ -261,9 +261,9 @@ The Spot toleration admission controller webhook is triggered by pod create or u
 
 Prerequisites:
 
-*  The Spot admission controller is a deployment with two pods. You must define a PEM certificate as part of CA (Certificate Authority) bundle in the manifest yaml. 
+* The Spot admission controller is a deployment with two pods. You must define a PEM certificate as part of CA (Certificate Authority) bundle in the manifest yaml. 
 * Ensure you have OpenSSL installed in your environment or use [Azure Cloud Shell](https://portal.azure.com/). 
-*  Your current k8s context must be the context of your cluster.
+* Your current k8s context must be the context of your cluster.
 
 Information about Namespaces: 
 
