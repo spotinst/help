@@ -257,9 +257,9 @@ Make sure your script doesn’t require additional extensions. For example, you 
         }
       ],
      
-   </code>
+  </code>
      
-   </pre>
+  </pre>
 
  </details>
 
