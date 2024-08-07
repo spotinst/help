@@ -9,7 +9,6 @@ To enable Ocean to start managing your AKS cluster, you need to connect the clus
 * [Valid AKS Managed cluster](ocean/getting-started/aks/aks-prerequisites?id=valid-aks-managed-cluster-with-at-least-one-node-pool-for-control-plane). 
 * [Connect Spot account to Azure Subscription](ocean/getting-started/aks/aks-prerequisites?id=connect-spot-account-to-azure-subscription).
 * [Verify Connection to Spot Account](ocean/getting-started/aks/aks-prerequisites?id=verify-connection-to-spot-account).
-* [Enable Ocean to launch Spot VMs for Workloads](ocean/getting-started/aks/aks-prerequisites?id=enable-ocean-to-launch-spot-vms-for-workloads). 
 * [Update Helm or install via Terraform or Kubectl (Kubernetes command-line tool)](ocean/getting-started/aks/aks-prerequisites?id=install-helm-terraform-or-kubectl-kubernetes-command-line-tool).
 
 
@@ -199,7 +198,7 @@ To install the Ocean Controller and establish connectivity:
 
 1. Create a Spot token (or use an existing one) and copy it to the text box. 
 
-2. To install the Ocean Kubernetes controller, use either Helm (the preferred option) or via script. 
+2. To install the Ocean Kubernetes Controller, use either Helm (the preferred option) or via script. 
 
    * **Helm**: This is the preferred method because it lets you to customize using command-line options or `values.yaml`. Install **Helm 3.x** and add the `spotinst` repo. Then, use the `helm install` command with set command-line options to install the Ocean controller in a separate spot-ocean namespace.
 
@@ -220,7 +219,7 @@ To install the Ocean Controller and establish connectivity:
    
     ```
     
-   * **Connect via Script**: Use Spot’s script for a Helm-based installation of the Ocean Controller:
+   * **Connect via Script**: Use Spot’s script to install the Ocean Controller:
 
    ```bash
 
@@ -260,7 +259,6 @@ The Spot toleration admission controller webhook is triggered by pod create or u
 
 Prerequisites:
 
-* The Spot admission controller is a deployment with two pods. You must define a PEM certificate as part of CA (Certificate Authority) bundle in the manifest yaml. 
 * Ensure you have OpenSSL installed in your environment or use [Azure Cloud Shell](https://portal.azure.com/). 
 * Your current k8s context must be the context of your cluster.
 
