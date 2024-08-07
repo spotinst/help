@@ -1,15 +1,14 @@
-# Import an AKS Cluster to Ocean 
+# Import an AKS Cluster to Ocean via the Console
 
-Ocean is a managed infrastructure service for Kubernetes that automatically adjusts infrastructure capacity and size to meet the needs of pods, containers, and applications. 
+Ocean is a managed infrastructure service for Kubernetes that automatically adjusts infrastructure capacity and size to meet the needs of pods, containers, and applications.   
 
-This procedure describes using the Spot Console to connect an existing AKS cluster to Ocean. 
+To enable Ocean to start managing your AKS cluster, you need to connect the cluster to Spot. This page includes the procedures to connect an existing AKS cluster to Ocean using the Spot console.
 
 ## Prerequisites 
 
 * [Valid AKS Managed cluster](ocean/getting-started/aks/aks-prerequisites?id=valid-aks-managed-cluster-with-at-least-one-node-pool-for-control-plane). 
 * [Connect Spot account to Azure Subscription](ocean/getting-started/aks/aks-prerequisites?id=connect-spot-account-to-azure-subscription).
 * [Verify Connection to Spot Account](ocean/getting-started/aks/aks-prerequisites?id=verify-connection-to-spot-account).
-* [Enable Ocean to launch Spot VMs for Workloads](ocean/getting-started/aks/aks-prerequisites?id=enable-ocean-to-launch-spot-vms-for-workloads). 
 * [Update Helm or install via Terraform or Kubectl (Kubernetes command-line tool)](ocean/getting-started/aks/aks-prerequisites?id=install-helm-terraform-or-kubectl-kubernetes-command-line-tool).
 
 ## Support for Regions Without Availability Zones
@@ -25,7 +24,10 @@ Ocean supports:
 
 * Management and optimization of AKS private clusters. 
 * Any AKS private cluster configuration, provided the Ocean Controller can establish outbound communication with the Spot SaaS control plane.  
- 
+
+<details>
+   <summary markdown="span">More about...</summary>
+
 This diagram shows the outbound communication connection for AKS private clusters. The Spot SaaS environment on the right is hosted in the public cloud domain and requires internet connectivity for access. 
 Your AKS environment and the components we access to operate the AKS clusters are on the left. In this example, we access the Spot Ocean Controller.  
 
@@ -43,120 +45,213 @@ Refer to the Microsoft documentation to learn about Microsoft Azure Native confi
 * [Customize cluster egress with a user-defined routing table in Azure Kubernetes Service (AKS)](https://learn.microsoft.com/en-us/azure/aks/egress-udr)
 * [Limit network traffic with Azure Firewall in Azure Kubernetes Service (AKS)](https://learn.microsoft.com/en-us/azure/aks/limit-egress-traffic?tabs=aks-with-system-assigned-identities)
 
+ </details>
 
 ## Import Cluster  
 
-You can import an AKS cluster to Ocean when all prerequisites are completed. The instructions below describe the steps to import an existing AKS cluster to Ocean using the Create Cluster wizard in the Spot console. 
+You can import an AKS cluster in the Ocean console Create Cluster Wizard (described in this topic).
 
-You can perform similar steps to import an AKS cluster to Ocean using the Ocean AKS API using [oceanAKSClusterImport](https://docs.spot.io/api/#tag/Ocean-AKS/operation/oceanAKSClusterImport) or Terraform providers for Ocean AKS cluster [ocean-aks-np-k8s](https://registry.terraform.io/modules/spotinst/ocean-aks-np-k8s/spotinst/latest), Ocean AKS VNG [ocean_aks_np_virtual_node_group](https://registry.terraform.io/providers/spotinst/spotinst/latest/docs/resources/ocean_aks_np_virtual_node_group).  
+Other options:
 
-* Step1: Use the Ocean Create Cluster Wizard to import an AKS cluster 
-    * Step 1.1 Select AKS cluster 
-    * Step 1.2 Define VNG Template 
-    * Step 1.3: Connectivity
-    * Step 1.4 Automatic Spot Tolerance Injection (optional)
-    * Step 1.5: Review and Configure 
-* Step 2: Create a VNG (Virtual Node Group) 
-* Step 3: Migrate Workloads to Ocean from the Azure Portal 
+* Spot API using [oceanAKSClusterImport](https://docs.spot.io/api/#tag/Ocean-AKS/operation/oceanAKSClusterImport) 
+* Terraform providers for Ocean AKS cluster [ocean-aks-np-k8s](https://registry.terraform.io/modules/spotinst/ocean-aks-np-k8s/spotinst/latest), Ocean AKS VNG [ocean_aks_np_virtual_node_group](https://registry.terraform.io/providers/spotinst/spotinst/latest/docs/resources/ocean_aks_np_virtual_node_group).  
 
-### Step 1 – Use the Create Ocean Cluster Wizard to import an AKS cluster  
+After importing a cluster, you must Migrate Workloads to Ocean from the Azure Portal.
+
+## Launch the Create Ocean Cluster Wizard
 
 To launch the Create Ocean Cluster Wizard in the Spot Console:  
 * In the top left menu, click **Ocean**.   
    * For **new** Ocean AKS accounts with no existing Clusters, click **Create Cluster** to launch the Create Ocean Cluster wizard. 
    * For **existing** Ocean AKS accounts with active Ocean AKS clusters, select **Cloud Clusters** on the left menu and then click **Create Cluster** on top right above the cluster list table.
 
-To import the AKS cluster, follow the steps in the Create Ocean Cluster Wizard
+To import the AKS cluster, follow the steps in the Create Ocean Cluster Wizard:
 
-![ocean-aks-newclus-create](https://github.com/spotinst/help/assets/159915991/8e6ddd6c-85f5-40ee-a608-802af4ad6ee2)
+* Step 1: Select an AKS cluster. 
+* Step 2: Create Your First Virtual Node Group.  
+* Step 3: Connectivity.
+* Step 4: Automatic Spot Tolerance Injection (optional).
+* Step 5: Review and Configure. 
 
-### Step 1.1: Select AKS Cluster
+![aks-cluster-wizard-overall](https://github.com/user-attachments/assets/ff3546a7-fb43-45b6-a86b-5c20aa3e9b72)
 
-Before initiating the import process, ensure Ocean has the necessary permissions to create and update node pools for autoscaling. Verify your IAM permissions at both the subscription and resource group levels. Specifically, confirm that you have the required permissions for the Ocean AKS product.
+## Step 1: Select an AKS Cluster
+
+Before starting the import process, ensure Ocean has the necessary permissions to create and update node pools for autoscaling. Verify your IAM permissions at both the subscription and resource group levels. Confirm that you have the required permissions for the Ocean AKS product.
 
 1. In the Create Ocean Cluster wizard, select your Azure resource group from the **Resource Group** drop-down menu. 
 2. Select your cluster name from the **AKS Cluster Name** drop-down menu.
 
-   *  If you have multiple clusters in the resource group, you must import them one at a time. 
+   *  If you have multiple clusters in the resource group, import them one at a time. 
 
-   * The AKS cluster name is copied to the Ocean Cluster name, also known as the Cluster Identifier. To ensure uniqueness, the Ocean Cluster Identifier is derived by appending an 8-digit auto-generated random string to the Ocean Cluster name. When [importing the Ocean cluster to Terraform](https://spot.io/blog/import-spot-resources-into-terraform/), and updating the cluster using Terraform, you must use the `clusterIdentifier` (not just the Cluster name). For example, the `clusterIdentifier` could be `aks-cluster1-2475a239`. This `clusterIdentifier` should match the one used when installing the Ocean Controller in the AKS cluster (see Step 1.3: Connectivity). 
+   * The AKS cluster name is copied to the Ocean Cluster name, also known as the Cluster Identifier. To ensure uniqueness, the Ocean Cluster Identifier is derived by appending an 8-digit auto-generated random string to the Ocean Cluster name. When [importing the Ocean cluster to Terraform](https://spot.io/blog/import-spot-resources-into-terraform/), and updating the cluster using Terraform, use the `clusterIdentifier` (not just the Cluster name). For example, the `clusterIdentifier` could be `aks-cluster1-2475a239`. This `clusterIdentifier` should match the one used when installing the Ocean Controller in the AKS cluster (see Step 1.3: Connectivity). 
 
 3. Click **Test Cluster Permissions** and wait for the test to be completed. 
 
 View this sample of [AKS permissions](https://docs.spot.io/administration/api/spot-policy-aks-azure) and the [description of the AKS Permissions](https://docs.spot.io/administration/api/aks-permissions-desc).
 
->**Important:** If you can't complete Step 1.1 due to **Missing Permissions**, refer to the following:
+>**Important:** If you can't complete Step 1 due to **Missing Permissions**, refer to the following:
 
-*   **Issue when selecting the Resource Group:** First, check that your Spot account is correctly set up. We recommend deleting the account and setting it up again with the correct Subscription ID and Tenant ID. If the issue persists: click **Add Permissions** to run the Missing Permissions wizard (described below). Select the **Resource Group permission level** (Spot IAM role) in the Missing Permissions dialog box.
+*   **Issue when selecting the Resource Group:** First, check that your Spot account is correctly set up. We recommend deleting the account and setting it up again with the correct Subscription ID and Tenant ID. If the issue persists, click **Add Permissions** to run the Missing Permissions wizard (described below). Select the **Resource Group permission level** (Spot IAM role) in the Missing Permissions dialog box.
 
 *   **Issue when selecting Cluster Name:** If no AKS clusters are in the drop-down list, the permissions may be incorrect, or the IAM role may be assigned to the wrong resource group (no AKS clusters are available for the required resource group). Click **Add Permissions** to run the Missing Permissions wizard (described below). Select the **Resource Group permission level** (Spot IAM role) in the Missing Permissions dialog box.
 
-*   **Issue when running Test Cluster Permissions:** Your Spot account may not have permissions for the Ocean AKS product or may have read-only permissions at either the subscription level or the resource group level. Click **Add Permissions** to run the Missing Permissions wizard for subscription and resource group levels (see below).
+*   **Issue when running Test Cluster Permissions:** Your Spot account may not have permissions for the Ocean AKS product or may have read-only permissions at either the subscription or resource group levels. Click **Add Permissions** to run the Missing Permissions wizard for subscription and resource group levels (see below).
 
 To run the Missing Permissions wizard: 
 
 1. If you received a Missing Permissions message when selecting an AKS Cluster, Click **Add Permissions**.  
 
-![ocean-aks-newclus-missingsubsrgs](https://github.com/spotinst/help/assets/159915991/e3d201a1-9d94-4dff-b055-47b0e1f4d216)
+   <details>
+     
+      <summary markdown="span">View image</summary>
+      
+      <img src="https://github.com/spotinst/help/assets/159915991/e3d201a1-9d94-4dff-b055-47b0e1f4d216" />
+   
+   </details>
 
-2. In the Missing permissions dialog box, select the required permission level from the drop-down list; either **Resource Group** or **Account Subscription**.
+
+3. In the Missing permissions dialog box, select the required permission level from the drop-down list: either **Resource Group** or **Account Subscription**.
 
    * For the Account Subscription level, update the Subscription ID in the field on the right of the dialog box. You can obtain the subscription ID by either creating a new Spot account in Azure or updating the existing Spot account.
    * For the Resource Group level, enter the name of your AKS resource group and the name of its corresponding infrastructure resource group in the field on the right of the dialog box. You must add both, separated by a comma. 
-3. Continue by downloading the Ocean AKS JSON permissions.
+2. Continue by downloading the Ocean AKS JSON permissions.
 
-![ocean-aks-newclus-missingdownload](https://github.com/spotinst/help/assets/159915991/f5b6b6c9-c8a7-4ca7-8c96-63e0ba60cbce)
+   <details>
+   
+   <summary markdown="span">View image</summary>
+   
+    <img src="https://github.com/spotinst/help/assets/159915991/f5b6b6c9-c8a7-4ca7-8c96-63e0ba60cbce  " />
+ 
+   </details>
 
-4. Continue by creating a new Azure custom role or import permissions to an existing role. Copy the permissions and apply them via the command line. 
+3. Continue by creating a new Azure custom role or import permissions to an existing role. Copy the permissions and apply them via the command line. 
 
-![ocean-aks-newclus-missingview](https://github.com/spotinst/help/assets/159915991/2648fe75-46fa-4cfc-96e3-2c63d5cd1907)
+   <details>
+   
+   <summary markdown="span">View image</summary>
+   
+    <img src="https://github.com/spotinst/help/assets/159915991/2648fe75-46fa-4cfc-96e3-2c63d5cd1907" />
+    
+   </details>
 
->**Note**: You can alternatively apply permissions from the console UI.
+>**Note**: You can alternatively apply permissions from the console.
 
-### Step 1.2: VNG Template  
+## Step 2: Create Your First Virtual Node Group (Template) 
 
-Select the node pool for the VNG Template. A VNG Template contains cluster default node configuration that VNGs ([Virtual Node Groups](ocean/features/vngs/?id=virtual-node-groups)) inherit from. Ocean VNG Template contains cluster default node configuration. For example, availability zones, node pool properties (OS type, OS disk type/size, max pods), auto-scaling configuration (min/max nodes, headroom) as well as default attributes - labels, taints and annotations. 
+Virtual Node Groups (VNGs) provide a single abstraction layer for managing different types of workloads on the same cluster.
 
-You can view and edit the VNG Template configuration in JSON. When the VNG Template configuration is complete, click **Next**. 
+You must create at least one Virtual Node Group in your Ocean AKS cluster. A Virtual Node Group inherits properties and attributes from the Virtual Node Group Template.
 
-![connect-aks-cluster-9](https://github.com/spotinst/help/assets/106514736/f9577321-d7f2-4fdd-b1ad-d2d4a68052aa)
+In this step, you select one of your AKS node pools as a [template](https://docs.spot.io/ocean/features/vngs/?id=default-vng) for your other custom [Virtual Node Groups](https://docs.spot.io/ocean/features/vngs/?id=virtual-node-groups).
 
-Additional Tips: 
+<!--* Select a Node Pool for Your Virtual Node Group Template.
+* Create More Custom Virtual Node Groups.-->
 
-* Some VNG Template properties may not be edited once the cluster is created. Changing the node pool properties (OS type, OS disk type or OS disk size, Kubernetes version) after the cluster is created, creates VNGS that are not supported, and the configuration will be disregarded.  
-* The wizard selects the default system node pool if no node pool is selected for the VNG Template. 
-* Ocean VNG can have one or more node pools with different VM series, VM sizes, and lifecycle. All node pools inherit properties and attributes (labels, taints, tags, annotations) from the VNG. VNGs provide infrastructure guardrails and customization for workloads.  
-* At least one VNG must be defined in the Ocean AKS cluster. A VNG inherits properties and attributes from the VNG Template.  
+The selected AKS node pool’s configuration is imported to the Virtual Node Group Template and used for other custom Virtual Node Groups unless you explicitly override. For example, all Virtual Node Groups inherit the image set of the AKS node pool you imported to the Virtual Node Group Template unless the custom Virtual Node Group is set to a different image.
 
-### Step 1.3: Connectivity  
+<!-- ### Select a Node Pool for Your First Virtual Node Group-->
+To create your first Virtual Node Group:
 
-This step describes how the Ocean integration starts and the installation of the [Ocean Controller](ocean/tutorials/ocean-controller-v2/) (as a Deployment) in your AKS cluster. This establishes the connection between the Ocean SaaS backend engine and your cluster. This step does not affect existing workloads which continue to run on existing nodes in node pools managed by AKS. 
+![aks-cluster-wizard-one-ng-selected](https://github.com/user-attachments/assets/99146522-0fb0-4fdf-b9c7-cd8a0dc140c7)
 
-Complete the following steps: 
+1. Select a node pool.
+
+2. Optionally edit [Virtual Node Group Template](https://docs.spot.io/ocean/features/vngs/) attributes.
+
+>**Note**: To edit the Virtual Node Group Template in JSON format, click **JSON** at the top right of the screen. Define AZs, node pool properties (max Pods, OS Type, OS Disk Type, OS Disk Size, etc.), min/max node counts, and auto-scaling strategy (Spot percentage, fallback to On-Demand). You can create labels, tags, and taints.
+
+>**Note**: Some Virtual Node Group properties, such as node pool properties (OS types, OS Disk type), cannot be edited. If you need to change these properties, delete the Virtual Node Group and create a new one. 
+
+<!--
+A list of all your managed node pools is displayed. The first node pool in the list is the one you selected for your first Virtual Node Group (Template).
+
+![aks-create-cluster-2-managed-node-pools](https://github.com/user-attachments/assets/803d2ddd-c2db-4a75-b853-83b8c2b94180)
+
+### Create More Custom Virtual Node Groups
+
+Define which remaining managed AKS node pools will be imported into Virtual Node Groups by selection in the node pool list. Once you have selected the node pools, Ocean imports their compute configurations into custom Virtual Node Groups. 
+
+Create your custom Virtual Node Groups to handle different workload requirements. For example:   
+
+* VNG with regular VMs—for workloads that cannot run on Spot nodes and must run on Regular (On-demand) VMs, e.g., statefulSets, Spark drivers, and Kafka producers.  
+* Performance VNG—for workloads that need high-performance CPUs (Intel v4 or v5), a minimum vCPU 8 or higher or a larger OS Disk size, and VMs with a minimum disk 4 or higher. 
+* AI/ML VNG – for workloads that need GPUs, say GPU count: 2-4 and specific VM series r GPU families 
+* Windows VNG - for workloads that need Windows nodes.
+
+>**Important**:  Before starting,
+
+* One custom Virtual Node Group is created for each selected node pool. 
+
+* If you don't select any node pools, Ocean creates a Virtual Node Group based on the Template Virtual Node Group.
+
+Example:
+
+Each of the two node pools also represents several other node pools with similar configurations:
+
+1. Select the two node pools for import and leave the rest unselected. You can then consolidate all your node pools into the two custom Virtual Node Groups.
+2. click the link on a custom Virtual Node Group and edit attributes if needed.
+
+![aks-create-cluster-2-example-sel-managed-node-pools](https://github.com/user-attachments/assets/47f3b28b-0078-4e33-8fc5-77fea1bdd2ea) -->
+
+### Step 3: Connectivity  
+
+You can now install the [Ocean Controller](ocean/tutorials/ocean-controller-v2/) and establish the connection between the Ocean SaaS and the cluster.
+
+![controller-tab-helm](https://github.com/user-attachments/assets/66dd55de-77c0-4ba5-8966-49996619eacb)
+
+To install the Ocean Controller and establish connectivity: 
 
 1. Create a Spot token (or use an existing one) and copy it to the text box. 
 
-2. To install the Ocean Kubernetes controller, use either Helm (the preferred option), Terraform (the Ocean Controller module [ocean-controller](https://registry.terraform.io/modules/spotinst/ocean-controller/spotinst/latest)), or Kubectl. 
+2. To install the Ocean Kubernetes Controller, use either Helm (the preferred option) or via script. 
 
-* **Helm**: Installing the Ocean controller with Helm is preferred since it allows you to customize using command-line options or `values.yaml`. Install **Helm 3.x** and add the `spotinst` repo. Then, use the `helm install` command with set command-line options to install the Ocean controller in a separate spot-ocean namespace. 
+   * **Helm**: This is the preferred method because it lets you to customize using command-line options or `values.yaml`. Install **Helm 3.x** and add the `spotinst` repo. Then, use the `helm install` command with set command-line options to install the Ocean controller in a separate spot-ocean namespace.
 
-* **Kubectl**: Run the controller `init.sh` (bash) script on a workstation with the `kubectl` command line and ensure that kube-config is set to the AKS cluster context. The script installs the controller in the kube-system namespace (default) and creates the corresponding Kubernetes components—controller deployment, secret, config-map, and service account. 
+    ```yaml
 
-3. Click **Test Connectivity** to confirm that the Ocean Controller is functioning in the cluster. Allow approximately two minutes for the test to complete. It is successfully completed when a green OK is displayed as soon as the Ocean Controller pod runs in the AKS cluster and can communicate with the Ocean SaaS engine.  
+   # add repo
+   helm repo add spot https://charts.spot.io
+   helm repo update spot
+   
+   # install controller
+   
+   helm upgrade --install --wait ocean-controller spot/ocean-kubernetes-controller \
+   --namespace "spot-ocean" --create-namespace \
+   --set spotinst.account=act-0bc6b318 \
+   --set spotinst.clusterIdentifier=ouridentifier-263th37a \
+   --set spotinst.token=<ENTER YOUR TOKEN HERE> \
+   --set metrics-server.deployChart=false
+   
+    ```
+    
+   * **Connect via Script**: Use Spot’s script to install the Ocean Controller:
+
+   ```bash
+
+   curl -fsSL https://spotinst-public.s3.amazonaws.com/integrations/kubernetes/cluster-controller-v2/scripts/init.sh | \
+   SPOTINST_TOKEN=<ENTER YOUR TOKEN HERE> \
+   SPOTINST_ACCOUNT=act-243add2f \
+   SPOTINST_CLUSTER_IDENTIFIER=youridentifier-263th37a \
+   ENABLE_OCEAN_METRIC_EXPORTER=false \
+   bash
+   
+    ```  
+     
+   >**Note**:Optionally install the [Ocean Prometheus exporter](https://docs.spot.io/ocean/tools-and-integrations/prometheus/README)
+ 
+3. Click **Test Connectivity** to confirm that the Ocean Controller is functioning in the cluster. The test takes around two minutes. A green **OK** is displayed when the Ocean Controller pod runs in the AKS cluster and communicates with the Ocean SaaS engine.  
 
 Additional Tips:  
 
-* If the controller connectivity was unsuccessful, check the token created and verify you have the right permissions. Azure custom role with required [Ocean AKS permissions [JSON]](https://github.com/yaruslavm/spot-Ocean/blob/main/Spot%20Azure%20Infra%20Permissions%20v2.json) should be applied at least 30 -60 min before you start the AKS cluster import or migration.  
-* To make changes to the controller init.sh script, download it, edit it, and then execute it from the command line (bash shell). 
-* For private AKS clusters with limited or no Internet connectivity, please see [What to do About Private AKS Clusters](https://docs.spot.io/ocean/getting-started/aks/?id=what-to-do-about-aks-private-clusters).  
-  *Use a proxy or VPN to add or update the spotinst Helm repo in the private cluster. You need to create the config-map manually. 
-  *For Kubectl, you cannot run the controller init script since remote connectivity is disabled. You need to manually create the config-map and install the controller in the AKS using a VPN or proxy.  
+* For unsuccessful connectivity, check the outbound connection and that the Ocean Controller pods are running.
+* To change the Ocean Controller init.sh script, download, edit, and execute it from the command line (bash shell). 
+* For private AKS clusters with limited or no Internet connectivity, see [What to do About Private AKS Clusters](https://docs.spot.io/ocean/getting-started/aks/?id=what-to-do-about-aks-private-clusters).  
+  * Use a proxy or VPN to add or update the spotinst Helm repo in the private cluster. You need to create the config-map manually. 
+ 
+### Step 4: Automatic Spot Tolerance Injection (optional) 
 
-When the Ocean Controller connectivity is successful, click **Next**. 
-
-### Step 1.4: Automatic Spot Tolerance Injection (optional) 
-
-![ocen-aks-auto-spot-toleration-injection](https://github.com/spotinst/help/assets/159915991/7554d272-4e65-4112-8fd4-d3a54a5e994c)
+![aks-cluster-wizard-step-4-toleration](https://github.com/user-attachments/assets/5a1e1fc4-be0f-457b-8cab-a34d774a5a21)
 
 Microsoft Azure / AKS does not allow pods to run on Spot VMs by default. AKS automatically applies the `NoSchedule` taint to spot nodes/node pools (`kubernetes.azure.com/scalesetpriority=spot:NoSchedule`), ensuring that pods cannot run on them without the appropriate toleration. 
 
@@ -170,9 +265,8 @@ The Spot toleration admission controller webhook is triggered by pod create or u
 
 Prerequisites:
 
-*  The Spot admission controller is a deployment with two pods. You must define a PEM certificate as part of CA (Certificate Authority) bundle in the manifest yaml. 
 * Ensure you have OpenSSL installed in your environment or use [Azure Cloud Shell](https://portal.azure.com/). 
-*  Your current k8s context must be the context of your cluster.
+* Your current k8s context must be the context of your cluster.
 
 Information about Namespaces: 
 
@@ -212,63 +306,28 @@ pods=$(kubectl get pods -n <namepace> -o \ jsonpath='{.items[*].metadata.name}')
 # Loop through each 
 for pod in $pods; do echo "Deleting pod: $pod" kubectl delete pod $pod -n <namespace> done 
 ```
->**Note**: To enable a workload to run on Regular / OD nodes, add Spot label `spot.io/node-lifecycle=od` 
+>**Note**: To enable a workload to run on Regular / Oon-demand nodes, add Spot label `spot.io/node-lifecycle=od` 
 
-### Step 1.5: Review and Configure  
+### Step 5: Review and Configure  
 
-You can view and edit the Ocean cluster configuration and the VNG Template in JSON.   
+![aks-cluster-wizard-review](https://github.com/user-attachments/assets/baa885cf-728e-4dee-bdf6-f598d22f1dbb)
 
-You can update Ocean AKS cluster autoscaling configuration, cluster resource limits (vCPU and memory), scale-down percentage, and automatic headroom. 
+You can:
 
-You can modify the VNG template configuration in this JSON as well.
+* View and edit the Ocean cluster configuration and the VNG Template in JSON.   
+* Update Ocean AKS cluster autoscaling configuration, cluster resource limits (vCPU and memory), scale-down percentage, and automatic headroom. 
+* Modify the Virtual Node Group template configuration in JSON format.
 
-![connect-aks-cluster-10](https://github.com/spotinst/help/assets/106514736/d9c2d5a1-06a1-4876-9c9a-dd7a8888a488)
+![aks-cluster-wizard-json-review](https://github.com/user-attachments/assets/90560b12-9b55-4a4e-aaee-cdedab530e2f)
 
-When you finish editing the Ocean cluster configuration, click **Create**. This creates the Ocean-managed AKS cluster. 
-When you finish importing the AKS cluster to an Ocean AKS Cluster, it will appear in the Cloud Clusters list under the left Ocean menu. 
+When you finish editing the Ocean cluster configuration, click **Create**to create the Ocean-managed AKS cluster. 
+After import, the cluster appears in the Cloud Clusters list under the left Ocean menu. 
 
-The Ocean Auto-scaler cannot scale up until you create a VNG. For Ocean to start launching nodes, you need to create at least one VNG for Ocean to use.  After you close the Create Cluster wizard, the VNG tab opens to create the first VNG.  
-
-**Note**:  
-
-* This does not change the AKS cluster's existing workloads, nodes, or node pools. It does not turn off auto-scaling, but the cluster Auto-scaler is still enabled. It does not automatically roll the workloads to Ocean.  
-* In the Azure portal, turn on manual auto-scaling (turn off the cluster Auto-scaler) and perform workload migration by scaling down existing node pools. 
-
-![connect-aks-cluster-11](https://github.com/spotinst/help/assets/106514736/9d4e13f0-3e6a-4b91-adda-914e42c31068)
-
-### Step 2: Create a VNG (Virtual Node Group) 
-
-Create a VNG ([Virtual Node Group](https://docs.spot.io/ocean/features/vngs/?id=virtual-node-groups)) so Ocean can create node pools and launch nodes. To finish setting up your cluster, you must create at least one VNG. Ocean creates node pools and launches nodes depending on the VNG configuration.   
-
-You can import the configuration from an existing node pool in Azure or manually create a VNG. All properties are inherited from the VNG template created in Step 1.1: Create Ocean AKS Cluster.  
-
-![connect-aks-cluster-12](https://github.com/spotinst/help/assets/106514736/ba679763-9165-48aa-9ad6-956a14a659a6)
- 
-You can edit the VNG JSON configuration. Define AZs, node pool properties (max Pods, OS Type, OS Disk Type, OS Disk Size, etc.), min/max node counts, and auto-scaling strategy (Spot percentage, fallback to On-Demand). You can create labels, tags, and taints. When you are done, click **Save** to complete the VNG creation.  
-
-Once the VNG is created, some properties, such as node pool properties (OS types, OS Disk type), cannot be edited. You need to delete the VNG and create a new one.  
-
-To ensure faster workload migration to Ocean from existing unmanaged node pools with minimum downtime, launch some nodes in the new VNG you just created.  
-
-Select **VNG Actions** and **Launch nodes**. Specify how many nodes you want to launch. 
-
-You can create more VNGs to handle different workload requirements. For example:   
-
-* VNG with regular VMs – for workloads that cannot run on Spot nodes and must run on Regular (On-demand) VMs e.g. statefulSets, Spark drivers, Kafka producers.  
-* Performance VNG—for workloads that need high-performance CPUs (Intel v4 or v5), a minimum vCPU 8 or higher or a larger OS Disk size, and VMs with a minimum disk 4 or higher. 
-* AI/ML VNG – for workloads that need GPUs, say GPU count: 2-4 and specific VM series r GPU families 
-* Windows VNG - for workloads that need Windows nodes.
-
-![connect-aks-cluster-13](https://github.com/spotinst/help/assets/106514736/a48344bd-37ed-47af-9c76-35892de1b62b)
-
-The cluster and VNG are created, and the basic configurations are complete.  
-
-### Step 3: Migrate Workloads to Ocean from the Azure Portal 
+## Migrate Workloads to Ocean from the Azure Portal 
 
 See [Migrate the Workload to Ocean on AKS](https://docs.spot.io/ocean/tutorials/migrate-workload-aks)
 
 ## Related Topics
 
-- Learn how to [Connect an AKS Private Cluster](ocean/tutorials/connect-an-aks-private-cluster).
 - Learn more about Ocean’s [scaling](ocean/features/scaling-kubernetes) and [headroom](ocean/features/headroom) features.
 
