@@ -12,7 +12,7 @@ These are the major Ocean cross-platform features:
 * [Cluster Roll](ocean/features/roll-gen)
 * [Shutdown Hours](ocean/features/running-hours)
 
-## Ocean for Kubernetes
+## Ocean for AWS Kubernetes
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id=”texttolinkto”>AWS Kubernetes</summary>
@@ -28,6 +28,8 @@ These are the major Ocean cross-platform features:
    </div>
     </details>
 
+## Ocean for EKS
+
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id=”texttolinkto”>EKS</summary>
     
@@ -41,7 +43,7 @@ These are the major Ocean cross-platform features:
    </div>
     </details>
 
-
+## Ocean for AKS
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id=”texttolinkto”>AKS</summary>
@@ -62,6 +64,7 @@ These features are ONLY available for Ocean AKS:
  </div>
   </details>
 
+## Ocean for GKE
   
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id=”texttolinkto”>GKE</summary>
