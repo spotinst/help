@@ -47,7 +47,7 @@ These are the major Ocean cross-platform features:
 
 These features are ONLY available for Ocean AKS:
 
-- [AKS Rolls](ocean/features/roll): Includes cluster, Virtual Node Group, and Node Pool rolls.
+- [Scheduled Roll via Console](ocean/features/roll): Includes cluster, Virtual Node Group, and Node Pool rolls.
 - [Log Integration with Azure Blob](ocean/features/log-integration-with-azure-blob)
 - [Migrate Workload to Ocean for AKS](ocean/tutorials/migrate-workload-aks)
 - [Import AKS Cluster with Availability Zone Zero](https://docs.spot.io/ocean/features/vngs/az-zero-feature)
