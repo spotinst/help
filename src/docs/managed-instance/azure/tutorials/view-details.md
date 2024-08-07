@@ -70,6 +70,25 @@ The second table shows information about the storage resources.
 
 <img width="1034" alt="azure-view-stateful-node-details-04" src="https://github.com/spotinst/help/assets/106514736/9920bf60-b3fa-44e4-b5e3-4b12a7a814b4">
 
+### Node Activity
+The node activity bar records the activity in the stateful node in the selected time range at the top right. 
+
+![activity-log-s-node](https://github.com/user-attachments/assets/6776f575-fe69-4895-b6c7-b111f4e9c98f)
+
+Click **Details** below a specific state to view the following:
+
+* Paused- When the stateful node is paused, you can view the actions that occurred on that node until it was paused. You can see the attached or detached disks and the network interface. 
+* Recycled- In a recycled stateful node, you can view the history of actions, such as paused and resumed actions. 
+* Resume- Continues the stateful node using a new VM and the persisted resources. 
+* Import- You can view the steps of the import process of a stateful node. 
+* Stopped- You can view the stopped VM. It might take a few minutes for the stateful node to appear as stopped. 
+
+If an error occurs, the stateful node transitions into an error state. The information of the failed activity will appear in the activity’s details. 
+
+To view scheduled activities, click **Scheduled Activities**. 
+
+To create a new activity, click **Schedule New Activity**.
+
 ## Monitoring
 
 The Monitoring tab provides information regarding the utilization of your stateful node. The monitoring information enables you to optimize resource allocation (right sizing), identify performance, and manage costs effectively. You can view customized graphs that display historical data of CPU and memory utilization for the last hour, day, week, or 14 days.
