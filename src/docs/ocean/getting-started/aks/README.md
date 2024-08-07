@@ -198,7 +198,7 @@ Each of the two node pools also represents several other node pools with similar
 
 You can now install the [Ocean Controller](ocean/tutorials/ocean-controller-v2/) and establish the connection between the Ocean SaaS and the cluster.
 
-![controller-tab-helm](https://github.com/user-attachments/assets/66dd55de-77c0-4ba5-8966-49996619eacb)
+![controller-tab-helm-1](https://github.com/user-attachments/assets/dc732cd1-9158-4fc4-9fda-ade6cae14eac)
 
 To install the Ocean Controller and establish connectivity: 
 
@@ -206,20 +206,19 @@ To install the Ocean Controller and establish connectivity:
 
 2. To install the Ocean Kubernetes Controller, use either Helm (the preferred option) or via script. 
 
-   * **Helm**: This is the preferred method because it lets you to customize using command-line options or `values.yaml`. Install **Helm 3.x** and add the `spotinst` repo. Then, use the `helm install` command with set command-line options to install the Ocean controller in a separate spot-ocean namespace.
+   * **Helm**: This is the preferred method because it lets you customize using command-line options or `values.yaml`. Install **Helm 3.x** and add the `spotinst` repo. Then, use the `helm install` command with set command-line options to install the Ocean controller in a separate spot-ocean namespace.
 
-    ```yaml
+    ```bash
 
    # add repo
    helm repo add spot https://charts.spot.io
    helm repo update spot
    
    # install controller
-   
    helm upgrade --install --wait ocean-controller spot/ocean-kubernetes-controller \
    --namespace "spot-ocean" --create-namespace \
-   --set spotinst.account=act-0bc6b318 \
-   --set spotinst.clusterIdentifier=ouridentifier-263th37a \
+   --set spotinst.account=  \
+   --set spotinst.clusterIdentifier=  \
    --set spotinst.token=<ENTER YOUR TOKEN HERE> \
    --set metrics-server.deployChart=false
    
@@ -231,8 +230,8 @@ To install the Ocean Controller and establish connectivity:
 
    curl -fsSL https://spotinst-public.s3.amazonaws.com/integrations/kubernetes/cluster-controller-v2/scripts/init.sh | \
    SPOTINST_TOKEN=<ENTER YOUR TOKEN HERE> \
-   SPOTINST_ACCOUNT=act-243add2f \
-   SPOTINST_CLUSTER_IDENTIFIER=youridentifier-263th37a \
+   SPOTINST_ACCOUNT=  \
+   SPOTINST_CLUSTER_IDENTIFIER=   \
    ENABLE_OCEAN_METRIC_EXPORTER=false \
    bash
    
