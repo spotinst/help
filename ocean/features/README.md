@@ -4,13 +4,13 @@ Ocean automates cloud infrastructure for containers. It continuously analyzes ho
 
 These are the major Ocean cross-platform features:
 
-- [Scaling for Kubernetes](ocean/features/scaling-kubernetes)
-- [Headroom](ocean/features/headroom)
-- [Right Sizing](ocean/features/right-sizing)
-- [Labels and Taints](ocean/features/labels-and-taints)
-- [Virtual Node Groups](ocean/features/launch-specifications)
-- [Cluster Roll](ocean/features/roll-gen)
-- [Shutdown Hours](ocean/features/running-hours)
+* [Scaling for Kubernetes](ocean/features/scaling-kubernetes)
+* [Headroom](ocean/features/headroom)
+* [Right Sizing](ocean/features/right-sizing)
+* [Labels and Taints](ocean/features/labels-and-taints)
+* [Virtual Node Groups](ocean/features/launch-specifications)
+* [Cluster Roll](ocean/features/roll-gen)
+* [Shutdown Hours](ocean/features/running-hours)
 
 ## Ocean for Kubernetes
 
@@ -22,14 +22,14 @@ These are the major Ocean cross-platform features:
 
   *  [Elastic IP](ocean/features/elastic-ip)
   *  [Distribute Nodes by vCPU](ocean/features/distribute-vcpu)
-  *  [Set up Extended Resource Support](ocean/tutorials/set-up-extended-resource-support)
+  *  [Set up Extended Resource Support](ocean/tutorials/set-up-extended-resource-support)  * 
 
    </div>
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id=”texttolinkto”>EKS</summary>
-   <div style="padding-left:16px">
+     <div style="padding-left:16px">
 
   These features are ONLY available for Ocean EKS:
   
@@ -53,10 +53,8 @@ These features are ONLY available for Ocean AKS:
 - [Import AKS Cluster with Availability Zone Zero](https://docs.spot.io/ocean/features/vngs/az-zero-feature)
 - [Select VMs for an AKS Virtual Node Group](https://docs.spot.io/ocean/features/vm-selection-aks)
 
-### AKS Notes:
-
-- Ocean initiates actions in the Azure account. These actions are bound by the [Azure subscription limits and quotas](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/azure-subscription-service-limits) provided in the account.
-- Ocean for AKS currently supports the import of Linux-based node pools only.
+>**Notes**: Ocean initiates actions in the Azure account. These actions are bound by the [Azure subscription limits and quotas](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/azure-subscription-service-limits) provided in the account.
+>Ocean for AKS currently supports the import of Linux-based node pools only.
 
  </div>
   </details>
