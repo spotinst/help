@@ -208,13 +208,15 @@ To install the Ocean Controller and establish connectivity:
 
    * **Helm**: This is the preferred method because it lets you customize using command-line options or `values.yaml`. Install **Helm 3.x** and add the `spotinst` repo. Then, use the `helm install` command with set command-line options to install the Ocean controller in a separate spot-ocean namespace.
 
-    ```bash
+   <!--```bash
 
    # add repo
+ 
    helm repo add spot https://charts.spot.io
    helm repo update spot
    
    # install controller
+    
    helm upgrade --install --wait ocean-controller spot/ocean-kubernetes-controller \
    --namespace "spot-ocean" --create-namespace \
    --set spotinst.account=  \
@@ -222,7 +224,7 @@ To install the Ocean Controller and establish connectivity:
    --set spotinst.token=<ENTER YOUR TOKEN HERE> \
    --set metrics-server.deployChart=false
    
-    ```
+   ``` -->
     
    * **Connect via Script**: Use Spot’s script to install the Ocean Controller:
 
