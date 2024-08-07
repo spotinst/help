@@ -1,6 +1,6 @@
 # Features
 
-Ocean automates cloud infrastructure for containers. It continuously analyzes how your containers are using infrastructure, automatically scaling compute resources to maximize utilization and availability by utilizing the optimal blend of spot, reserved, and on-demand compute instances.
+Ocean automates cloud infrastructure for containers. It continuously analyzes how your containers use infrastructure, automatically scaling compute resources to maximize utilization and availability by utilizing the optimal blend of spot, reserved, and on-demand compute instances.
 
 These are the major Ocean cross-platform features:
 
@@ -14,32 +14,40 @@ These are the major Ocean cross-platform features:
 
 ## Ocean for Kubernetes
 
-<details>
-  <summary markdown="span">AWS Kubernetes</summary>
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id=”texttolinkto”>AWS Kubernetes</summary>
+   <div style="padding-left:16px">
 
-These features are available for Ocean AWS Kubernetes:
+  These features are ONLY available for Ocean AWS Kubernetes:
 
-*  [Elastic IP](ocean/features/elastic-ip)
-*  [Distribute Nodes by vCPU](ocean/features/distribute-vcpu)
-*  [Set up Extended Resource Support](ocean/tutorials/set-up-extended-resource-support)
+  *  [Elastic IP](ocean/features/elastic-ip)
+  *  [Distribute Nodes by vCPU](ocean/features/distribute-vcpu)
+  *  [Set up Extended Resource Support](ocean/tutorials/set-up-extended-resource-support)
 
-</details><br>
+   </div>
+ </details>
 
-<details>
-  <summary markdown="span">EKS</summary>
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id=”texttolinkto”>EKS</summary>
+   <div style="padding-left:16px">
 
-These features are available for Ocean EKS:
+  These features are ONLY available for Ocean EKS:
   
-*  [EKS AMI Auto Update](ocean/features/eks-auto-ami)
-*  [Upgrade Kubernetes Version in an Ocean EKS Cluster](ocean/tutorials/upgrade-kubernetes-eks)
+  *  [EKS AMI Auto Update](ocean/features/eks-auto-ami)
+  *  [Upgrade Kubernetes Version in an Ocean EKS Cluster](ocean/tutorials/upgrade-kubernetes-eks)
 
-</details><br>
-<details>
-  <summary markdown="span">AKS</summary>
+   </div>
+  </details>
 
-These features are available for Ocean AKS:
 
-- [AKS Rolls](ocean/features/roll): Includes cluster, Virtual Node Group, and Node Pool rolls.
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id=”texttolinkto”>AKS</summary>
+   <div style="padding-left:16px">
+
+These features are ONLY available for Ocean AKS:
+
+- [Scheduled Roll via Console](ocean/features/roll): Includes cluster, Virtual Node Group, and Node Pool rolls.
 - [Log Integration with Azure Blob](ocean/features/log-integration-with-azure-blob)
 - [Migrate Workload to Ocean for AKS](ocean/tutorials/migrate-workload-aks)
 - [Import AKS Cluster with Availability Zone Zero](https://docs.spot.io/ocean/features/vngs/az-zero-feature)
@@ -50,12 +58,15 @@ These features are available for Ocean AKS:
 - Ocean initiates actions in the Azure account. These actions are bound by the [Azure subscription limits and quotas](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/azure-subscription-service-limits) provided in the account.
 - Ocean for AKS currently supports the import of Linux-based node pools only.
 
-</details><br>
+ </div>
+  </details>
 
-<details>
-  <summary markdown="span">GKE</summary>
+  
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id=”texttolinkto”>GKE</summary>
+   <div style="padding-left:16px">
 
-These features are  available for Ocean GKE:
+These features are ONLY available for Ocean GKE:
 
 *  [Auto Update Process for GKE](ocean/features/auto-update-process-gke)
 *  [Create a Cluster for GKE Using Shared VPC](tutorials/create-cluster-gke-shared-vpc)
@@ -64,22 +75,24 @@ These features are  available for Ocean GKE:
 *  [Set Maximum Scale Down % for VNG or Cluster via the Console](https://docs.spot.io/ocean/features/max-scale-down-vng-gke-ui)
 
 
-</details><br>
+ </div>
+  </details>
 
 ## Ocean for ECS
 
-<details>
-  <summary markdown="span">AWS ECS</summary>
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id=”texttolinkto”>ECS</summary>
+   <div style="padding-left:16px">
 
-These features are available for Ocean AWS ECS:
+These features are ONLY available for Ocean AWS ECS:
 
 *  [Scaling for ECS](ocean/features/scaling-ecs)
 *  [Cost Analysis per ECS Service](ocean/features/cost-analysis)
 *  [Migrate Elastigroups to Ocean (ECS)](ocean/tutorials/migrate-existing-egs-ecs)
-*  [Connect a Fargate Service](elastigroup/tutorials/amazon-ecs/import-fargate-services-to-ecs-elastigroup)
-*  
+*  [Connect a Fargate Service](elastigroup/tutorials/amazon-ecs/import-fargate-services-to-ecs-elastigroup)*  
 
-</details><br>
+ </div>
+  </details>
 
 ## Related Topics
 
