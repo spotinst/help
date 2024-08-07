@@ -1,5 +1,7 @@
 #  Dense Mode and Node Pools
 
+Cloud service provider relevance: <font color="#FC01CC">AKS</font>  
+
 ##  AKS Node Pools
 
 In AKS, nodes with the same configuration are grouped into node pools containing the underlying VMs that run your applications.
