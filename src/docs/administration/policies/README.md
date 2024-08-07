@@ -21,14 +21,14 @@ Spot comes with a number of default policies. You can use these out of the box a
 
 ## Custom Policy Conditions
 
-Custom policy conditions give you more granular control of your Spot resources on the organization and account level. This lets you create conditions with policy modification access and add another granular level for the policy effect, which occur only if the condition requirements are met:     
+Custom policy conditions give you more control of your Spot resources on the organization and account level:
 
 * Condition operators that contain the condition keys:
   - Resource retrieval
   - Resource attribute
 * Condition values (attribute value) that should match keys and values received for the given resource in the request.
 
-This feature provides allow or deny access to a specific resource only if the condition in the  policy matches the requested data (such as resource name, resource inner configuration).
+You can allow or deny access to a specific resource if the condition in the policy matches the requested data (such as resource name, resource inner configuration).
 
 This is supported for AWS and Azure users.
 
