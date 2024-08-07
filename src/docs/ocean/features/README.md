@@ -26,7 +26,7 @@ These are the major Ocean cross-platform features:
   * [Set up Extended Resource Support](ocean/tutorials/set-up-extended-resource-support)  * 
 
    </div>
- </details>
+    </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id=”texttolinkto”>EKS</summary>
@@ -39,7 +39,7 @@ These are the major Ocean cross-platform features:
   * [Upgrade Kubernetes Version in an Ocean EKS Cluster](ocean/tutorials/upgrade-kubernetes-eks)
 
    </div>
-  </details>
+    </details>
 
 
 
@@ -50,7 +50,7 @@ These are the major Ocean cross-platform features:
 
 These features are ONLY available for Ocean AKS:
 
-- [Scheduled Roll via Console](ocean/features/roll): Includes cluster, Virtual Node Group, and Node Pool rolls.
+- [Scheduled Roll via Console](ocean/features/roll)
 - [Log Integration with Azure Blob](ocean/features/log-integration-with-azure-blob)
 - [Migrate Workload to Ocean for AKS](ocean/tutorials/migrate-workload-aks)
 - [Import AKS Cluster with Availability Zone Zero](https://docs.spot.io/ocean/features/vngs/az-zero-feature)
