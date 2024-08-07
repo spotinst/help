@@ -1,12 +1,12 @@
 # Organizations and Accounts
 
-When you set up your Spot account, you create an organization and one or more account entities. You will most likely need only one organization, but you can set up multiple organizations if required. Within an organization, you can define multiple accounts for different teams or projects with the organization. Each account can be set up to use any supported cloud service provider and cloud service provider account.
+When you set up your Spot account, you create an organization and one or more account entities. You can set up multiple organizations if required. Within an organization, you can define multiple accounts for different teams or projects in the organization. Each account can be set up to use any supported cloud service provider and cloud service provider account.
 
 <img src="https://github.com/spotinst/help/src/docs/administration/_media/organizations-accounts-01.png" width="500" height="281" />
 
 ## Organization
 
-When you register to Spot, the registration wizard automatically creates an organization. An organization holds your initial company account and is identified by name or by name and division (for example, <i>Spot</i> or <i>Spot-USA</i>).
+When you register to Spot, the registration wizard automatically creates an organization. The name of the organization is the company name entered in the sign up form.
 
 The organization holds one or more Spot accounts which can be associated with your cloud service provider account. An organization helps you manage all your settings across multiple accounts in one place.
 
@@ -107,7 +107,7 @@ To add an account through the API, go to [Spot API – Create Account](https://d
 
 ## Get Your Account ID
 
-The Account ID is required for API and SDK interactions with the Elastigroup configuration, unless it's for the default account.
+The Account ID is required for API and SDK interactions with the account-level Spot products (such as Elastigroup, Ocean), unless it's for the default account.
 
 1. In the Spot console, select the organization and account.
 2. Click the user icon <img height="14" src="https://github.com/spotinst/help/src/docs/administration/_media/usericon.png">  > **Settings**.
@@ -122,7 +122,7 @@ The Account ID is required for API and SDK interactions with the Elastigroup con
 
 ## Audit Events
 
-You can view an audit list of events in <font color="#FC01CC">your Elastigroups</font>. The Audit page shows a list of events and enables tracking and visibility of actions on your resources. You can see these details for each event:
+You can view an audit list of events in your accounts. The Audit page shows a list of events and enables tracking and visibility of actions on your resources. You can see these details for each event:
 - Event timestamp
 - Event type, such as update, create, detach instances, deploy instances
 - Resources type, such as Elastigroup, Ocean
