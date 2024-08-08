@@ -10,7 +10,7 @@ You can use your existing committed-use discounts before adding extra resources.
 
 The utilize commitment plans feature lets you leverage both spend-based and resource-based CUDs in your Ocean clusters and virtual node groups before adding additional resources. Make sure the necessary prerequisites are in place for the method you want to utilize your usage.
 
-**Resource-based and spend-based commitment utilization**
+## Resource-based and Spend-based Commitment Utilization
 
 1. [Sign in to the GCP IAM console](https://console.cloud.google.com/iamadmin/).
 2. On the View by Principals tab, click the Security Insights of a principal that begins with <i>spotinst-role-act-</i>.
@@ -21,7 +21,7 @@ The utilize commitment plans feature lets you leverage both spend-based and reso
 
    <img width="400" src="https://github.com/user-attachments/assets/4c246fa7-6696-453f-8c5b-87b634713734">
 
-**Spend-based commitment utilization only**
+# Spend-based Commitment Utilization Only
 
 [Connect all your GCP projects to Spot accounts](https://docs.spot.io/connect-your-cloud-provider/first-account/gcp-manually?id=connect-gcp-manually), with one account assigned to each project:
 
@@ -59,7 +59,7 @@ The utilize commitment plans feature lets you leverage both spend-based and reso
 
 10. Click **Save**.
 
-### Enable CUD Utilization
+## Enable CUD Utilization
 
 1. In the Spot console, go to **Ocean** > **Cloud Clusters**.
 2. Click on the cluster name, then **click Actions** > **Edit Cluster**.
