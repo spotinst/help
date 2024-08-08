@@ -60,6 +60,7 @@ These features are ONLY available for Ocean AKS:
 - [Log Integration with Azure Blob](ocean/features/log-integration-with-azure-blob)
 - [Migrate Workload to Ocean for AKS](ocean/tutorials/migrate-workload-aks)
 - [Import AKS Cluster with Availability Zone Zero](https://docs.spot.io/ocean/features/vngs/az-zero-feature)
+- [Regions Without AZ Support (AKS)](ocean/getting-started/aks?id=support-for-regions-without-availability-zones)
 - [Select VMs for an AKS Virtual Node Group](https://docs.spot.io/ocean/features/vm-selection-aks)
 
 >**Notes**: Ocean initiates actions in the Azure account. These actions are bound by the [Azure subscription limits and quotas](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/azure-subscription-service-limits) provided in the account.
