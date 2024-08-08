@@ -1,4 +1,4 @@
-
+<meta name="robots" content="noindex">
 
 # Update IMDSv2 | Instance Metadata
 

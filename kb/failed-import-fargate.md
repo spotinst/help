@@ -1,4 +1,4 @@
-<meta name="“robots”" content="“noindex”">
+<meta name="robots" content="noindex">
 
 # Ocean | ECS | Failed to Import Fargate, Too Many Security Groups
 

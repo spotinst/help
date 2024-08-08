@@ -1,4 +1,4 @@
-<meta name="“robots”" content="“noindex”">
+<meta name="robots" content="noindex">
 
 # Elastigroup | Configure Scaling Policy for Latency Metric
 
