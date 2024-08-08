@@ -2,7 +2,7 @@
 
 Ocean automates cloud infrastructure for containers. It continuously analyzes how your containers use infrastructure, automatically scaling compute resources to maximize utilization and availability by utilizing the optimal blend of spot, reserved, and on-demand compute instances.
 
-## Ocean Cross-Platform Features
+## Ocean Cross-Cloud Service Provider Features
 
 These are the Ocean features available for all cloud service providers:
 
@@ -16,23 +16,23 @@ These are the Ocean features available for all cloud service providers:
 
 Features only available for specific cloud service providers are listed below:
 
-## Ocean for AWS Kubernetes ONLY
+## Ocean Features Available for AWS Kubernetes ONLY
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id=”texttolinkto”>View list...</summary>
    
-   <div style="padding-left:16px">
+  <div style="padding-left:16px">
 
   These features are ONLY available for Ocean AWS Kubernetes:
 
   * [Elastic IP](ocean/features/elastic-ip)
   * [Distribute Nodes by vCPU](ocean/features/distribute-vcpu)
-  * [Set up Extended Resource Support](ocean/tutorials/set-up-extended-resource-support)  * 
+  * [Set up Extended Resource Support](ocean/tutorials/set-up-extended-resource-support)
 
    </div>
     </details>
 
-## Ocean for EKS ONLY
+## Ocean Features Available for EKS ONLY
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id=”texttolinkto”>View list...</summary>
@@ -47,7 +47,7 @@ Features only available for specific cloud service providers are listed below:
    </div>
     </details>
 
-## Ocean for AKS ONLY
+## Ocean Features Available for AKS ONLY
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id=”texttolinkto”>View list...</summary>
@@ -64,12 +64,13 @@ These features are ONLY available for Ocean AKS:
 - [Select VMs for an AKS Virtual Node Group](https://docs.spot.io/ocean/features/vm-selection-aks)
 
 >**Notes**: Ocean initiates actions in the Azure account. These actions are bound by the [Azure subscription limits and quotas](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/azure-subscription-service-limits) provided in the account.
->Ocean for AKS currently supports the import of Linux-based node pools only.
+>
+> Ocean for AKS currently supports the import of Linux-based node pools only.
 
  </div>
   </details>
 
-## Ocean for GKE ONLY
+## Ocean Features Available for GKE ONLY
   
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id=”texttolinkto”>View list...</summary>
@@ -88,7 +89,7 @@ These features are ONLY available for Ocean GKE:
  </div>
   </details>
 
-## Ocean for ECS ONLY
+## Ocean Features Available for ECS ONLY
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id=”texttolinkto”>View list...</summary>
