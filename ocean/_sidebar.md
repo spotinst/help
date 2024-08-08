@@ -72,6 +72,7 @@
       - [Manage Virtual Node Groups](ocean/tutorials/manage-virtual-node-groups)
       - [Select VM per Virtual Node Group](ocean/features/vm-selection-aks)
       - [Max Scale Down % per VNG-Console (GKE)](ocean/features/max-scale-down-vng-gke-ui)
+      - [Regions Without AZ Support (AKS)](ocean/getting-started/aks?id=support-for-regions-without-availability-zones)
     - [Upgrade Kubernetes in EKS Cluster](ocean/tutorials/upgrade-kubernetes-eks)
   - [Ocean Controller Version 1](ocean/tutorials/spot-kubernetes-controller/)
     - [Install with Helm](ocean/tutorials/spot-kubernetes-controller/install-with-helm)
