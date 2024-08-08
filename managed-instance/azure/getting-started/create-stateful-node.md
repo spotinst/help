@@ -105,15 +105,55 @@ When OS disk persistency is turned on, the Image section is disabled in edit and
 
 When the data disk persistency is turned on, custom and shared images that contain data disk definitions won’t be available (they will be filtered out).
 
-### Login
+### Security & Login
 
-Specify the authentication details to be used for launching VMs on the stateful node.  
+Specify the authentication details to be used for launching VMs on the stateful node:
 
-<img src="/elastigroup/_media/azure-new-stateful-12.png" />
+* Security type: Standard, Trusted launch virtual machines, Confidential virtual machine
 
-Enter the following information:
+   <details>
+     <summary markdown="span">More about security types</summary>
+
+  Azure has 3 security types when launching a VM:
+
+  * <b>Standard</b> is the basic level of security for your virtual machine.
+    
+    Standard supports all VM sizes.
+
+  * <b>Trusted Launch</b> protects against advanced and persistent attack techniques. Trusted launch includes several coordinated infrastructure technologies that can be enabled independently. Each technology provides another layer of defense against sophisticated threats.
+    Trusted Launch supports V2 generation VMs.
+
+  * <b>Confidential virtual machine</b> is in addition to Trusted Launch and offers confidential VMs based on AMD processors with SEV-SNP technology. Confidential VMs are for tenants with high security and confidentiality requirements. These VMs provide a strong, hardware-enforced boundary to help meet your security needs.
+  
+    Confidential VM supports DCasv5-series, DCadsv5-series, ECasv5-series, ECadsv5-series.
+  
+    <b>vTPM</b> is always used with Confidential VM.
+  
+    You can use <b>Confidential OS disk encryption</b>, which binds the disk encryption keys to the VM's TPM, ensuring VM-only access. The security type must be confidential VM to use it.
+
+
+ </details>
+
+* Configured security features: secure boot and vTPM
+
+   <details>
+     <summary markdown="span">More about secure boot and vTPM</summary>
+
+  Azure has 3 security types when launching a VM:
+
+  * <b>Secure Boot</b> is the root of trusted launch for your VM. This mode, which is implemented in platform firmware, protects against the installation of malware-based rootkits and boot kits. Secure Boot works to ensure that only signed operating systems and drivers can boot. It establishes a root of trust for the software stack on your VM. With Secure Boot enabled, all OS boot components (boot loader, kernel, kernel drivers) must be signed by trusted publishers. Both Windows and select Linux distributions support Secure Boot. If Secure Boot fails to authenticate that the image was signed by a trusted publisher, the VM will not be allowed to boot.
+    
+  * <b>vTPM</b> is a virtualized version of a hardware Trusted Platform Module, compliant with the TPM2.0 spec. It serves as a dedicated secure vault for keys and measurements. Trusted launch provides your VM with its own dedicated TPM instance, running in a secure environment outside the reach of any VM. The vTPM enables attestation by measuring the entire boot chain of your VM (UEFI, OS, system, and drivers).
+
+    
+    Trusted launch uses the vTPM to perform remote attestation by the cloud. This is used for platform health checks and for making trust-based decisions. As a health check, trusted launch can cryptographically certify that your VM booted correctly. If the process fails, possibly because your VM is running an unauthorized component, Microsoft Defender for Cloud will issue integrity alerts. The alerts include details on which components failed to pass integrity checks.
+
+   </details>
+
+* <b>Encryption at Host</b> is a security feature offered by Microsoft Azure that provides end-to-end encryption for virtual machines and their data while at rest in the Azure data centers. It allows you to encrypt your VM data, including the temporary disk, OS and data drives, using platform-managed keys or your own customer-managed keys stored in Azure Key Vault.
+
 * User name
-* Authentication type (relevant for Linux OS only)
+* Authentication type (only for Linux OS)
 * Password
 
 When OS persistency is turned on, the Login section is disabled in edit and import modes of the wizard.
