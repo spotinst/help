@@ -145,10 +145,10 @@ Specify the authentication details to be used for launching VMs on the stateful 
     
   * <b>vTPM</b> is a virtualized version of a hardware Trusted Platform Module, compliant with the TPM2.0 spec. It serves as a dedicated secure vault for keys and measurements. Trusted launch provides your VM with its own dedicated TPM instance, running in a secure environment outside the reach of any VM. The vTPM enables attestation by measuring the entire boot chain of your VM (UEFI, OS, system, and drivers).
 
-    
     Trusted launch uses the vTPM to perform remote attestation by the cloud. This is used for platform health checks and for making trust-based decisions. As a health check, trusted launch can cryptographically certify that your VM booted correctly. If the process fails, possibly because your VM is running an unauthorized component, Microsoft Defender for Cloud will issue integrity alerts. The alerts include details on which components failed to pass integrity checks.
 
    </details>
+   
 
 * <b>Encryption at Host</b> is a security feature offered by Microsoft Azure that provides end-to-end encryption for virtual machines and their data while at rest in the Azure data centers. It allows you to encrypt your VM data, including the temporary disk, OS and data drives, using platform-managed keys or your own customer-managed keys stored in Azure Key Vault.
 
