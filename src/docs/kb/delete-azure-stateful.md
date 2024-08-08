@@ -1,4 +1,4 @@
-<meta name="“robots”" content="“noindex”">
+<meta name="robots" content="noindex">
 
 # Delete an Azure Stateful Node and Make It Run on Azure End
 
