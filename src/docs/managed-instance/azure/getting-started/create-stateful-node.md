@@ -153,7 +153,9 @@ Specify the authentication details to be used for launching VMs on the stateful 
 * <b>Encryption at Host</b> is a security feature offered by Microsoft Azure that provides end-to-end encryption for virtual machines and their data while at rest in the Azure data centers. It allows you to encrypt your VM data, including the temporary disk, OS and data drives, using platform-managed keys or your own customer-managed keys stored in Azure Key Vault.
 
 * User name
+  
 * Authentication type (only for Linux OS)
+  
 * Password
 
 When OS persistency is turned on, the Login section is disabled in edit and import modes of the wizard.
