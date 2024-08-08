@@ -1,4 +1,4 @@
-<meta name="“robots”" content="“noindex”">
+<meta name="robots" content="noindex">
 
 # HostPort Configuration in ECS Workloads Causes Underutilized Nodes
 
