@@ -2,7 +2,9 @@
 
 Ocean automates cloud infrastructure for containers. It continuously analyzes how your containers use infrastructure, automatically scaling compute resources to maximize utilization and availability by utilizing the optimal blend of spot, reserved, and on-demand compute instances.
 
-These are the major Ocean cross-platform features:
+## Ocean Cross-Platform Features
+
+These are the Ocean features available for all cloud service providers:
 
 * [Scaling for Kubernetes](ocean/features/scaling-kubernetes)
 * [Headroom](ocean/features/headroom)
@@ -12,10 +14,12 @@ These are the major Ocean cross-platform features:
 * [Cluster Roll](ocean/features/roll-gen)
 * [Shutdown Hours](ocean/features/running-hours)
 
-## Ocean for AWS Kubernetes
+Features only available for specific cloud service providers are listed below:
+
+## Ocean for AWS Kubernetes ONLY
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id=”texttolinkto”>AWS Kubernetes</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id=”texttolinkto”>View list...</summary>
    
    <div style="padding-left:16px">
 
@@ -28,10 +32,10 @@ These are the major Ocean cross-platform features:
    </div>
     </details>
 
-## Ocean for EKS
+## Ocean for EKS ONLY
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id=”texttolinkto”>EKS</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id=”texttolinkto”>View list...</summary>
     
    <div style="padding-left:16px">
 
@@ -43,10 +47,10 @@ These are the major Ocean cross-platform features:
    </div>
     </details>
 
-## Ocean for AKS
+## Ocean for AKS ONLY
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id=”texttolinkto”>AKS</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id=”texttolinkto”>View list...</summary>
    
    <div style="padding-left:16px">
 
@@ -64,10 +68,10 @@ These features are ONLY available for Ocean AKS:
  </div>
   </details>
 
-## Ocean for GKE
+## Ocean for GKE ONLY
   
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id=”texttolinkto”>GKE</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id=”texttolinkto”>View list...</summary>
   
    <div style="padding-left:16px">
 
@@ -83,10 +87,10 @@ These features are ONLY available for Ocean GKE:
  </div>
   </details>
 
-## Ocean for ECS
+## Ocean for ECS ONLY
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id=”texttolinkto”>ECS</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id=”texttolinkto”>View list...</summary>
    
    <div style="padding-left:16px">
 
