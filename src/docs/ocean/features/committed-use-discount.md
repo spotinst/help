@@ -15,7 +15,7 @@ The utilize commitment plans feature lets you leverage both spend-based and reso
 1. [Sign in to the GCP IAM console](https://console.cloud.google.com/iamadmin/).
 2. On the View by Principals tab, click the Security Insights of a principal that begins with <i>spotinst-role-act-</i>.
 
-   ![ocean-cud-1](https://github.com/user-attachments/assets/1cf99a10-f4c0-4a36-8d9a-1c5792a7ae55)
+   <img width="900" src="https://github.com/user-attachments/assets/1cf99a10-f4c0-4a36-8d9a-1c5792a7ae55">
    
 3. In the Spot policy, make sure the compute.commitments.list permission for Spot’s generated service account is listed.
 
@@ -53,7 +53,7 @@ The utilize commitment plans feature lets you leverage both spend-based and reso
 
 8. In New principals, enter the <i>Service Account Names</i>.
 
-   <img width="900" src="https://github.com/user-attachments/assets/e2395e18-e05f-42fa-9fd6-a0a092dbe53b">
+   <img width="800" src="https://github.com/user-attachments/assets/e2395e18-e05f-42fa-9fd6-a0a092dbe53b">
 
 9. Add the **Consumer Procurement Order Viewer** role to all the Spot service account permissions in your billing account that is linked to all the Spot service accounts that you found.
 
