@@ -26,7 +26,8 @@ Click the bell to preview the notifications.
    <img width="300" src="https://github.com/user-attachments/assets/4fb387cd-54c5-4c68-beb6-965963b23f23" />
 
  </details>
- 
+
+
 The preview panel shows these types of notifications:
 - Spot notifications are sent from Spot by NetApp and may include announcements about new features or information about Spot products and services. Spot notifications are shaded and sticky, meaning that they are pinned to the top of the list for a certain time period. When that time period is up, the notification appears with all the other notifications.
 - Event notifications are about events in your system. The messages appear according to what you have configured in the Notification Policies page. Icons on the notifications indicate the severity of the issue and which product the notification relates to.
@@ -37,7 +38,7 @@ The shaded notifications at the top are sent from Spot by NetApp and may include
 
 The unshaded notifications are about events in your system (except for the Spot messages that have been unshaded). The notifications appear according to what you have configured in the Event Policies page. Icons on the event notifications indicate the severity of the issue and which product the notification relates to.
 
-<img src="/administration/_media/read-messages-07.png" />
+<img width="600" src="/administration/_media/read-messages-07.png" />
 
 ### What’s New
 
