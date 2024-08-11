@@ -6,7 +6,7 @@
   - [Groups](administration/groups/)
   - [Permission Policies](administration/policies/)
   - [Organizations & Accounts](administration/organizations/)
-    - [Billing Details](administration/organizations/billing-details)
+    - [Billing](administration/organizations/billing-details)
   - [Notification Center](administration/notification-center/)
     - [Event Policies](administration/notification-center/event-policies/)
       - [Create a Compute Policy](administration/notification-center/event-policies/create)
