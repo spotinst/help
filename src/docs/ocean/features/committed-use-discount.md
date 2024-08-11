@@ -23,7 +23,7 @@ The utilize commitment plans feature lets you leverage both spend-based and reso
 
    <img width="400" src="https://github.com/user-attachments/assets/4c246fa7-6696-453f-8c5b-87b634713734">
 
-# Spend-based Commitment Utilization Only
+## Spend-based Commitment Utilization Only
 
 [Connect all your GCP projects to Spot accounts](https://docs.spot.io/connect-your-cloud-provider/first-account/gcp-manually?id=connect-gcp-manually), with one account assigned to each project:
 
