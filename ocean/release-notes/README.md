@@ -1,6 +1,13 @@
 # Ocean Release Notes
 
-## July 2024: Features and Enhancements 
+## August 2024: Features and Enhancements 
+
+*  **OCN-0022: August 11, 2024:** (**<font color="#FC01CC">GCP</font>**) You can now use committed use discounts (CUDs) with Ocean clusters and virtual node groups. Committed use discounts provide discounted prices in exchange for customer commitment expense on GCP. [Learn more...](https://docs.spot.io/ocean/features/committed-use-discount)
+
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600">July, 2024 - click to view</summary>
+
+<div style="padding-left:16px">
 
 *  **OCN-0021: July 31, 2024:** (**<font color="#FC01CC">AKS</font>**) Ocean now supports AKS with global regions. From now on, you can create and import clusters set with the global regions in Azure that currently do not support Availability Zones, for which you can create resources at the regional level. [Learn more...](https://docs.spot.io/ocean/getting-started/aks/?id=what-to-do-about-global-regions)
 
@@ -28,6 +35,8 @@
    * [Select VMs for an AKS Virtual Node Group](https://docs.spot.io/ocean/features/vm-selection-aks) 
      
  
+</div>
+</details>
 
 <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600">June, 2024 - click to view</summary>
