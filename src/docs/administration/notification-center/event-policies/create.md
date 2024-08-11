@@ -1,15 +1,11 @@
 # Create a Compute Policy
 
-<font color="#FC01CC">{what are compute policies used for?}</font>
+You can create notifications for compute products, such as Elastigroup and Ocean resources.
 
 1. In the Spot console, click the user icon <img height="14" src="https://github.com/spotinst/help/src/docs/administration/_media/usericon.png">  > **Settings**.
 2. Go to **Notification Center** > **Event Policies** > **Create Policy**.
 3. Enter a **Name** for the policy (and a **Description**).
-4. Select a type: <font color="#FC01CC">{what else is needed here? what's the type used for and what are the ramifications of what I select}</font>
-   * Compute
-   * Ocean CD
-   * Spot Security
-
+4. Select **Type**: Compute.
 5. Select **Personal policy** if you want the policy to be visible only to you. You will not be able to add integrations. If you don't select **Personal policy**, the policy will be available to other members of the account it is in, and you will be able to add integrations.
 6. Click **Continue**.
 
@@ -29,7 +25,7 @@ To complete the policy definition, you need to complete all steps of the wizard.
      <details>
       <summary markdown="span">More about conditions and condition sets</summary>
 
-     * A <i>Condition Set</i> is a group of one or more Conditions. When there are multiple condition sets, they relate to each other with an OR operation.
+     * A <i>Condition Set</i> is a group of one or more conditions. When there are multiple condition sets, they relate to each other with an <i>OR</i> operation.
      * A <i>Condition</i> is a rule within a condition set. Multiple conditions within a condition set, relate to each other with an AND operation.
 
        <img width="583" alt="eventpolicy-createcompute-1" src="https://github.com/user-attachments/assets/0f6692fa-d0dd-4257-927f-120a2d4d3685">
