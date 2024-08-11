@@ -50,7 +50,7 @@ Using the per-workload container aggregated data points, Ocean makes recommendat
 *  Recommendations for decreasing memory requests are based on the maximum memory utilization. If the maximum value * (10% overhead + 5% stability margin) > request, the recommendation = [10% overhead * value + value].
 *  Recommendations for decreasing CPU requests are based on the 99th percentile of the maximum CPU utilization data collected.
 *  Recommendations for increasing memory requests are based on the maximum memory utilization. If the maximum value * (10% overhead - 5% stability margin) < request, the recommendation = [10% overhead * value - value].
-*  Recommendations for increasing CPU requests are based on the 85th Percentile mean resource utilization data collected (e.g., mean_memory_utilization).
+*  Recommendations for increasing CPU requests are based on the 99th percentile of the maximum CPU utilization data collected.
 *  Currently, Ocean generates recommendations for Kubernetes deployments, statefulsets, SpotDeployments, and daemonsets.
 
 You view Right Sizing recommendations via: 
