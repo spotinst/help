@@ -1,22 +1,31 @@
 # Groups
 
-In Spot, a *group* is a set of one or more [users](administration/users-a/) that have the same [policies](administration/policies/). You use groups in order to assign or modify policies for several users at once. You can use different types of groupings for managing users, for example:
+In Spot, a group is a set of [users](administration/users-a/) who have the same [policies](administration/policies/). You use groups to assign or modify policies for several users at once. You can use different types of groupings for managing users, for example:
 
 - By Spot service: Eco users, Elastigroup users, Ocean Users
-- By access role: Admins, Account editors, Account viewers, Credit card editors
-- By organizational department or function: Developers, Finance Dept., Sales Dept.
+- By access role: admins, account editors, account viewers, credit card editors
+- By organizational department or function: developers, finance department, sales department
 
-You can associate a user with multiple groups.
+You can associate one user with multiple groups.
 
-## How it works
+From the list of groups, you can:
+* [Create a new group](administration/groups/?id=create-a-group)
+* View group details
+* Click on a group to view more information and edit the group's:
+  * [Users](administration/users-a/)
+  * [Permission policies](administration/policies/)
+* Delete a group
 
-We make it really easy for you to create a new group with the creation wizard. The wizard includes the simple steps summarized below. For the detailed procedures, see [Create New Group](administration/groups/create-new-group).
-1. Define the most basic group details such as the group name and a brief description of the group purpose.
-2. Add users to the group.
-3. Attach policies to the group. This will determine which permissions the users in that group will have.
+## Create a Group
 
-Once you have created a group, you can edit the group information, add and remove users, and change the policies at any time. You can also remove a group.
-
-## What’s Next?
-
-Learn how to [create a new group](administration/groups/create-new-group).
+1. In the Spot console, click the user icon <img height="14" src="https://github.com/spotinst/help/src/docs/administration/_media/usericon.png">  > **Settings**.
+2. Click **Organization** > **Groups** > **Create New Group**.
+3. Enter a **Name** (and **Description**).
+4. Find and select the users to add to the group.
+5. Click **Next**.
+6. Add [permission policies](administration/policies/):
+      <ol style="list-style-type: lower-alpha;">
+        <li>Select the <b>Policy</b>.</li>
+        <li>If the policy you are looking for is on the account level, select the <b>Accounts</b>.</li>
+    </ol>
+7. Click **Create Group**.
