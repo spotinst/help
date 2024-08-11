@@ -1,82 +1,135 @@
 # Organizations and Accounts
 
-When you set up your Spot account, you create an Organization and one or more Account entities. You will most likely need only one Organization, but you can set up multiple organizations if required. Within an Organization, you can define multiple accounts for different teams or projects with the Organization. Each account can be set up to use any supported cloud provider and cloud provider account.
+When you set up your Spot account, you create an organization and one or more account entities. You can set up multiple organizations if required. Within an organization, you can define multiple accounts for different teams or projects in the organization. Each account can be set up to use any supported cloud service provider and cloud service provider account.
 
-<img src="/administration/_media/organizations-accounts-01.png" width="500" height="281" />
+<img src="https://github.com/spotinst/help/src/docs/administration/_media/organizations-accounts-01.png" width="500" height="281" />
 
 ## Organization
 
-When you register to Spot, the registration wizard automatically creates an Organization. An Organization holds your initial company account and is identified by name or by name and division (for example, Spot or Spot-USA).
+When you register to Spot, the registration wizard automatically creates an organization. The name of the organization is the company name entered in the sign up form.
 
-The Organization holds one or more Spot accounts which can be associated with your cloud account. The purpose of the Organization is to help you manage in one place all of your settings across multiple accounts.
+The organization holds one or more Spot accounts which can be associated with your cloud service provider account. An organization helps you manage all your settings across multiple accounts in one place.
 
-In the Organization, you can define the following:
+You can:
 
-- User Management – Create, manage, delete, and associate users to accounts
-- API Tokens – Generate and delete personal and temporary tokens
-- MFA Authentication – Enable and disable two-factor authentication for your Spot users
-- Identity Provider (SAML) – Connect your Organization to an IDP, or use a Custom SAML
-- Billing – Generate billing reports for your Organization
-- Spot Plan – View your Spot plan and activate your Organization
+- Manage users to create, delete, and associate users with accounts
+- Use API tokens to generate and delete personal and temporary tokens
+- Enable and disable two-factor authentication for your Spot users
+- Connect your organization to an identity provider (IDP), or use a custom SAML
+- Generate billing reports for your organization
+- View your Spot plan and activate your organization
 
-## Get your Organization ID
+## Get Your Organization ID
 
-1. In the console, click on the User icon and click Settings.
-2. You will be automatically presented with the General Details pane under Organization. Within the My Organization section you can find your Organization ID.
+1. In the Spot console, click the user icon <img height="14" src="https://github.com/spotinst/help/src/docs/administration/_media/usericon.png">  > **Settings**.
+2. Go to **General Details** > **My Organization** > **Organization ID**.
+   <details>
+    <summary markdown="span">View image</summary>
 
-<img src="/administration/_media/organizations-accounts-02.png" width="400" height="155" />
+     <img height="400" src="https://github.com/user-attachments/assets/faae59f5-123a-41a2-bd31-c2be6c471856" />
+
+   </details>
 
 ## Linked Organizations
 
-In case you need multiple organizations, e.g., for multiple divisions or units in your company, you can create linked organizations which can share settings and configuration such as:
+If you need multiple organizations, for example, for multiple divisions or units in your company, you can create linked organizations which can share settings and configuration such as:
 
-- Billing Information (can be separate if needed)
-- Management Dashboards and Reports
+- Billing information (can be separate if needed)
+- Management dashboards and reports
 
 ## Add an Organization
 
-<img src="/administration/_media/organizations-accounts-03.png" width="150" height="93" />
+1. In the console, click the organization and click **Add Organization**.
 
-1. In the console, click the Organization and click Add Organization.
-2. Enter the name of the new organization and click CREATE.
-3. Switch to the new organization.
-4. Choose a service provider and complete the corresponding wizard to connect the organization to the provider.
+   <details>
+    <summary markdown="span">View image</summary>
+
+     <img width="300" src="https://github.com/user-attachments/assets/2682ac3c-8580-4c25-a869-911765f699a6" />
+
+   </details>
+
+3. Enter a name for the new organization and click **Create**.
+4. Switch to the new organization.
+5. Choose a cloud service provider and complete the wizard to connect the organization to the provider.
+
+## Switch Organizations
+
+If your user is mapped to more than one organization, you can easily switch from one organization to another:
+
+1. In the Spot console, click the organization.
+   
+   <details>
+    <summary markdown="span">View image</summary>
+
+     <img width="300" src="https://github.com/user-attachments/assets/2682ac3c-8580-4c25-a869-911765f699a6" />
+
+   </details>
+   
+3. Search for and select the name of the organization to switch to.
+
+   <details>
+    <summary markdown="span">View image</summary>
+
+     <img width="300" src="https://github.com/user-attachments/assets/6afad223-581c-4121-9066-adc0755fa560" />
+   </details>
+   
 
 ## Account
 
-When you register to Spot, the registration wizard automatically creates an Account in your Organization. The account is a child entity of your organization. You can manage multiple accounts in which each account is connected to a different Cloud Provider Account. This allows you to manage multiple accounts and users under the same Organization.
+When you register to Spot, the registration wizard automatically creates an account in your organization. The account is a child entity of your organization. You can manage multiple accounts in which each account is connected to a different cloud provider account. This allows you to manage multiple accounts and users under the same organization.
 
-A Spot Account is an equivalent to an AWS account, Azure subscription, or a GCP project.
+A Spot account is an equivalent to an AWS account, Azure subscription, or a GCP project.
 
-In the Account, you can define the following:
+In the account, you can:
 
-- Cloud Provider Account – Connect your Spot account to your Cloud Provider account. (This is not mandatory. You can have an account that is not associated with a Cloud provider.)
-- Attach Users – Attach existing users in your Organization to the account. Users must be created at the Organization level.
-- Notifications – Define Email and Slack notifications for your Organization.
+- Connect a cloud provider account to your Spot account. This is not required. You can have an account that is not associated with a cloud provider.
+- Attach existing users in your organization to the account. Users must be created at the organization level.
+- Define email and Slack notifications for your organization.
 
-## Add an Account using the Console
+## Add an Account Using the Spot Console
 
-<img src="/administration/_media/organizations-accounts-04.png" width="300" height="140" />
+1. In the Spot console, click the account and click **Add Account**.
+   
+   <details>
+    <summary markdown="span">View image</summary>
 
-1. In the console, click the Account and click Add Account.
-2. Enter the name of the new account and click CREATE.
-3. Choose a service provider and complete the corresponding wizard to connect the account to the provider.
+     <img width="300" src="https://github.com/user-attachments/assets/6439e166-20c9-4c9d-bc8f-9607ae31b36e" />
 
-## Add an Account using the API
+
+   </details>
+
+3. Enter a name for the new account and click **Create**.
+4. Choose a service provider and complete the wizard to connect the account to the provider.
+
+## Add an Account Using the API
 
 To add an account through the API, go to [Spot API – Create Account](https://docs.spot.io/api/#operation/OrganizationsAndAccountsCreateAccount).
 
-## Get your Account ID
+## Get Your Account ID
 
-The Account ID is required for API and SDK interactions with the Elastigroup configuration.
+The Account ID is required for API and SDK interactions with the account-level Spot products (such as Elastigroup, Ocean), unless it's for the default account.
 
-1. Log in to the Organization and select the required Account.
-2. In the console, click on the User icon and click Settings.
-3. You will be automatically presented with the General Details pane under Organization. Within the My My Spot Account section, you can find your Spot Account ID.
+1. In the Spot console, select the organization and account.
+2. Click the user icon <img height="14" src="https://github.com/spotinst/help/src/docs/administration/_media/usericon.png">  > **Settings**.
+3. Go to **General Details** > **My Spot Account** > **Cloud Account ID**.
+   
+   <details>
+    <summary markdown="span">View image</summary>
 
-<img src="/administration/_media/organizations-accounts-05.png" width="400" height="117" />
+      <img width="400" src="https://github.com/user-attachments/assets/9a0378a6-248b-4d06-a3cc-1351386d2a37" />
 
-The Account ID is required for any API call or SDK call unless it is for the default Account.
+   </details>
 
-## What’s Next
-Learn how to [switch organizations](administration/organizations/switch-organization).
+## Audit Events
+
+You can view an audit list of events in your accounts. The Audit page shows a list of events and enables tracking and visibility of actions on your resources. You can see these details for each event:
+- Event timestamp
+- Event type, such as update, create, detach instances, deploy instances
+- Resources type, such as Elastigroup, Ocean
+- Resource ID
+- User name
+- View the payload
+
+Access the Audit page:
+1. In the Spot console, select the organization and account.
+2. Click the user icon <img height="14" src="https://github.com/spotinst/help/src/docs/administration/_media/usericon.png">  > **Settings** > **Audit**.

@@ -1,26 +1,51 @@
-<meta name="robots" content="noindex">
-
 # Users
 
-In Spot, a *user* is a person who accesses the Spot console to perform any action such as viewing information, producing reports, or creating and configuring spot clusters.
+In Spot, a user is a person who accesses the Spot console to perform any action such as viewing information, producing reports, or creating and configuring spot clusters.
 
-A user can also be an application that accesses Spot programmatically using the Spot APIs. Using CRUD actions via the APIs, programmatic users can perform all the same actions that console users do.
+A user can also be an application that accesses Spot programmatically using the Spot APIs. Using CRUD actions in the APIs, programmatic users can perform all the same actions that console users do.
 
-## How it works
+If your organization is just starting to use Spot, you will not have any groups defined yet. So when you add new users using the wizard, you will not add the user to any group. Then, after you have added a number of users, you can use the [create new group](administration/groups/create-new-group) wizard to add the users to groups.
 
-We make it really easy for you to create a new user with the creation wizard. The wizard includes the simple steps summarized below. For the detailed procedures, see [Create New User](administration/users-a/create-new-user).
-1. You define the most basic user details such as user name and whether the user is a console or programmatic user.
-2. You attach the user to one or more groups. This will determine which Spot services the user is allowed to use and what kind of actions the user can perform.
-3. Usually, a user will receive all the required permissions simply by assigning the user to one or more groups. However, if the user needs permissions that are not included in policies inherited from the assigned groups, you can use Step 3 of the wizard to associate the user with additional policies.
+From the list of users, you can:
+* [Create a user](administration/users-a/?id=create-a-user)
+* Export the list of users to a CSV
+* View user details
+* Click on a user to view more information and edit the user's:
+    * [Groups](administration/groups/)
+    * [Permission policies](administration/policies/)
+    * [API tokens](administration/api/create-api-token)
+* Remove a user from Spot by clicking on a user and then **Delete User** (keep in mind that when you delete a user, all API tokens associated with that user are also deleted)
 
-### Just starting with Spot
+## Create User
 
-If your organization is just starting to use Spot, you will not have any groups defined yet. So when you add new users using the wizard as described in the process above, you will not add the user to any group. Then, after you have added a number of users, you can use the [group creation wizard](administration/groups/create-new-group) to add the users to groups.
+1. In the Spot console, click the user icon <img height="14" src="https://github.com/spotinst/help/src/docs/administration/_media/usericon.png">  > **Settings**.
+2. Click **Organization** > **Users** > **Create New User**.
+4. Select the **Access Type**:
+   - **Console** if the user is a person who uses the Spot console. Console users can also use the Spot API. Enter the person’s **Name** and **Email address**.
+   - **Programmatic** if the user is an application that only uses the Spot API. Enter a **Name** (and **Description**).
+6. Click **Continue**.
+7. Search for and select the [groups](administration/groups/) to associate with the user. The user will inherit the policies associated with the groups you select.
+8. Click **Next**.
+9. If the user needs additional permissions that are not associated with the groups, associate the user with additional [policies](administration/policies/):
+      <ol style="list-style-type: lower-alpha;">
+        <li>Select the <b>Policy</b>.</li>
+        <li>If the policy you are looking for is on the account level, select the <b>Accounts</b>.</li>
+    </ol>
+10. Click **Create User**.
 
-### Modify User Information
+## Reset Password
 
-Once you have created a user, you can go back at any time and [edit the user information](administration/groups/edit-group-details), change the groups the user belongs to, and change the policies associated with the user. You can also remove the user from the system.
+1. In the Spot console, go to the user icon and click **Settings**.
+2. Click the Security tab and update your password.
 
-## What’s Next?
+> **Tip**: SAML or SSO users who want to create an API Token will have to reset their password first.
 
-Learn how to [create new users](administration/users-a/create-new-user) in Spot.
+### Password Constraints
+
+Your password must have at least eight characters and contain at least:
+
+- One digit
+- One uppercase character
+- One lowercase character
+- One special character
+

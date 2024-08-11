@@ -1,115 +1,99 @@
 # Create a Compute Policy
 
-This page describes the procedures to create a new policy for notifications.
+You can create notifications for compute products, such as Elastigroup and Ocean resources.
 
-## Get Started
+1. In the Spot console, click the user icon <img height="14" src="https://github.com/spotinst/help/src/docs/administration/_media/usericon.png">  > **Settings**.
+2. Go to **Notification Center** > **Event Policies** > **Create Policy**.
+3. Enter a **Name** for the policy (and a **Description**).
+4. Select **Type**: Compute.
+5. Select **Personal policy** if you want the policy to be visible only to you. You will not be able to add integrations. If you don't select **Personal policy**, the policy will be available to other members of the account it is in, and you will be able to add integrations.
+6. Click **Continue**.
 
-To access the notification policies, do the following:
-
-1. In the upper right, click on the User icon, and then click My Account in the menu.
-
-<img src="/administration/_media/notifications-event-policies-001.png" width="400" />
-
-2. In the top center, click Notification Center.
-3. In the left menu, click Event Policies. The Event Policies dashboard appears.
-4. In the upper right, click Create Policy.
-
-## Create New Policy
-
-In the Create New Policy popup, your user name (i.e., your company email address) appears in the Owner field.
-
-<img src="/administration/_media/create-new-notification-policy-01a.png" width="500" />
-
-1. In the Create Policy window, complete the following information:
-   - Policy Name: Give the policy a name.
-   - Policy Type: In the dropdown, choose Compute.
-   - Policy Description: Enter a few words describing what or who the policy is for.
-
-2. Mark Personal Visibility if you want the policy to be visible only to you. You will not be able to add integrations. If you leave the checkbox blank, the policy will be available to other members of the account it is in, and you will be able to add integrations.
-3. Click Continue.
-
-To complete the policy definition, you will need to complete all parts of the wizard to select an account, rules, regions, and integrations. Once the policy is created, you might need to edit it to select users who will have access.
+To complete the policy definition, you need to complete all steps of the wizard. You'll select an account, rules, regions, and integrations. Once the policy is created, you may need to edit it to select users who will have access.
 
 ## Step 1: Select Account
 
-Select the account the notification policy should apply to.
-
-<img src="/administration/_media/create-new-notification-policy-01-1.png" width="400" />
-
-Only accounts that are connected to a cloud provider can create a notification policy.
+1. Select the account the notification policy should apply to. Only accounts that are connected to a cloud service provider can create a notification policy.
+2. Click **Next**.
 
 ## Step 2: Select Resources
 
-Choose one of the options to determine which resources will be monitored. The options are described below.
+1. Select the resources to include in your policy:
+   * **All Resources** in the account will be monitored. Any resources that are added in the future will also be monitored.
+   * **Rule-Based Resources** defines criteria for monitoring in a <i>condition</i> and a <i>condition set</i>. Any new resources added to the account that match the defined criteria will automatically be included in the monitoring.
 
-![select-resources](https://github.com/spotinst/help/assets/159915991/3ee55b04-b23f-4cb1-99c7-823e78c7518c)
+     <details>
+      <summary markdown="span">More about conditions and condition sets</summary>
 
-### All Resources
+     * A <i>Condition Set</i> is a group of one or more conditions. When there are multiple condition sets, they relate to each other with an <i>OR</i> operation.
+     * A <i>Condition</i> is a rule within a condition set. Multiple conditions within a condition set, relate to each other with an AND operation.
 
-When you choose All Resources, all the resources in the account will be monitored. If any resources are added in the future, they will also be monitored.
+       <img width="583" alt="eventpolicy-createcompute-1" src="https://github.com/user-attachments/assets/0f6692fa-d0dd-4257-927f-120a2d4d3685">
+       
+       Each condition contains:
+        - Identifier: the resource type to be monitored, such as:
+          - Name
+          - ID
+          - Region
+          - AMI
+          - Tag
+          - Load Balancer
+          - Availability Zone
+          - Security Group
+        - Operator: The criterion for matching a search, such as:
+          - Is
+          - Is not
+          - Contains
+          - Does Not Contain
+          - Begins with
+          - Ends with
+        - Value: The string to be matched, such as a:
+          - Phrase
+          - Word
+          - Part of a word
+  
+    </details>
 
-### Rule-Based Resources
+   * **Individual Resources** are the only resources that will be monitored for notifications. Any new resources added to the account in the future will not be included unless you edit the policy and add them to the monitoring list.
+     <details>
+      <summary markdown="span">View image</summary>
 
-When you choose Rule-Based Resources, you define criteria for monitoring in a Condition and a Condition Set.
-
-A _Condition Set_ is a group of one or more Conditions. When there are multiple condition sets, they relate to each other with an OR operation.
-
-A _Condition_ is a rule within a condition set. Multiple conditions within a condition set, relate to each other with an AND operation.
-
-<img src="/administration/_media/create-new-notification-policy-02a.png" />
-
-Each condition contains the following:
-
-- Identifier: The resource type to be monitored, such as the following:
-  - Name
-  - Region
-  - AMI
-  - Tag
-  - Load Balancer
-  - Availability Zone
-  - Security Group
-- Operator: The criterion for matching a search, such as:
-  - Is
-  - Is not
-  - Contains
-  - Does Not Contain
-  - Begins with
-  - Ends with
-- Value: The string to be matched, such as a phrase, a word, or part of a word.
-
-Any new resources added to the account that match the defined criteria will automatically be included in the monitoring.
-
-### Individual Resources
-
-When you choose Individual Resources, you then select from a list of existing resources. Only those resources will be monitored for notifications. Any new resources added to the account in the future will not be included unless you edit the policy and add them to the monitoring list.
-
-![individual-resources](https://github.com/spotinst/help/assets/159915991/7f72bda8-8214-429c-b801-4df73c554242)
-
-You can filter the list and search for a resource by entering a type, a name, an ID in the filter box, or you can just type in string and search.
+     <img width="378" alt="eventpolicy-createcompute-2" src="https://github.com/user-attachments/assets/cbd6966b-c849-4d29-841a-45e25e080d2c">
+     
+    </details>
+     
+2. Click **Next**.
 
 ## Step 3: Select Events
 
-Choose the types of events you want to receive notifications about. You can use the filter box to search for a specific event type.
+1. Select the types of events to receive notifications about.
+        <details>
+      <summary markdown="span">View image</summary>
 
-<img src="/administration/_media/create-new-notification-policy-04a.png" width="500" />
-
-If you want to configure integrations, click Next. Otherwise, click Create.
+      <img width="650" alt="eventpolicy-createcompute-3" src="https://github.com/user-attachments/assets/7f6c5803-dd33-437f-8c1a-c8cdbe5f091b">
+     
+    </details>
+3. If you want to configure integrations, click **Next (Optional)**. Otherwise, click **Create Policy Now**.
 
 ## Step 4: Select Integrations (Optional)
 
-If you (an Admin user) are configuring a policy at the Account level, you can select one or more integrations. The integrations determine how the notifications will be delivered.
+If you (as an admin user) are configuring a policy at the account level, you can select the integrations. The integrations decide how the notifications are delivered.
 
-<img src="/administration/_media/create-new-notification-policy-05a.png" width="600" />
+<details>
+      <summary markdown="span">View image</summary>
 
-The following integrations are available:
+  <img width="420" alt="eventpolicy-createcompute-4" src="https://github.com/user-attachments/assets/8b7d1639-cfc3-4e57-9208-73f5ce2b5bde">
+     
+   </details>
 
-- External Email: Add email addresses that will receive notifications.
-- Webhook: Add webhooks to applications.
-- SNS: Add an SNS topic ARN to receive notifications in AWS.
-- Slack: Add the webhook for a slack channel. In order to define the Channel, [create a webhook URL](https://spinnakerteam.slack.com/apps/A0F7XDUAZ-incoming-webhooks).
+You can choose from these integrations:
 
-The following attributes will be sent as part of the JSON message via Webhook, SNS or Slack:
+- External Email to add email addresses that will receive notifications.
+- Webhook to add webhooks to applications.
+- SNS to add an SNS topic ARN to receive notifications in AWS.
+- Slack to add the webhook for a Slack channel. To define the Channel, [create a webhook URL](https://spinnakerteam.slack.com/apps/A0F7XDUAZ-incoming-webhooks).
 
+These attributes are sent as part of the JSON message via Webhook, SNS, or Slack:
 - default
 - accountId
 - resourceId
@@ -122,8 +106,4 @@ The following attributes will be sent as part of the JSON message via Webhook, S
 
 ## Select Users
 
-Once you (an Admin user) have created an Account level policy, only you are registered to the policy. You can now edit the policy and determine which Spot users will receive notifications. See [Edit Registered Users](https://docs.spot.io/administration/notification-center/event-policies/edit?id=edit-registered-users).
-
-## What’s Next?
-
-Learn how to [Edit an Existing Policy](administration/notification-center/edit-a-notification-policy).
+Once you (an admin user) have created an account-level policy, only you are registered to the policy. You can edit the policy and select Spot users to receive notifications.
