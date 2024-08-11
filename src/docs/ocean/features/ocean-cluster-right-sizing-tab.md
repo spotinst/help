@@ -37,7 +37,7 @@ helm install <my-release-name> spot/ocean-vpa
 
 For Ocean Kubernetes clusters, Right Sizing utilizes the Metrics Server and initializes recommendations after one hour of initial data collection. 
 
-Once every fifteen seconds, the controller queries the Metrics Server for pod utilization (the equivalent of kubectl top pods). Based on the last two weeks of collected metrics, Ocean calculates relevant consumption metrics for each resource, such as CPU and Memory, and bases its recommendations on these calculated metrics. 
+Once every 15 seconds, the Ocean Controller queries the Metrics Server for pod utilization (the equivalent of kubectl top pods). Based on the last 14 days of collected metrics, Ocean calculates relevant consumption metrics for each resource, such as CPU and Memory, and bases its recommendations on these calculated metrics. 
 
 ![features-rightsizing-01a](https://github.com/spotinst/help/assets/159915991/4ded53db-21ff-4a17-82b2-77b32c598351)
 
@@ -47,8 +47,10 @@ The aggregation includes maximum, minimum, and mean resource utilization values,
 
 Using the per-workload container aggregated data points, Ocean makes recommendations based on a mechanism that attempts to even out peaks and troughs in resource demand. The Right-Sizing engine runs every hour to generate new recommendations and update existing ones. 
 
-*  Recommendations for decreasing resource requests are based on the above-described calculation using the 99th Percentile of the maximum resource utilization data collected (e.g., max_memory_utilization). 
-*  Recommendations for increasing resource requests are based on the above-described calculation using the 85th Percentile mean resource utilization data collected (e.g., mean_memory_utilization).
+*  Recommendations for decreasing memory requests are based on the maximum memory utilization. If the maximum value * (10% overhead + 5% stability margin) > request, the recommendation = [10% overhead * value + value].
+*  Recommendations for decreasing CPU requests are based on the 99th percentile of the maximum CPU utilization data collected.
+*  Recommendations for increasing memory requests are based on the maximum memory utilization. If the maximum value * (10% overhead - 5% stability margin) < request, the recommendation = [10% overhead * value - value].
+*  Recommendations for increasing CPU requests are based on the 85th Percentile mean resource utilization data collected (e.g., mean_memory_utilization).
 *  Currently, Ocean generates recommendations for Kubernetes deployments, statefulsets, SpotDeployments, and daemonsets.
 
 You view Right Sizing recommendations via: 
@@ -59,9 +61,6 @@ You view Right Sizing recommendations via:
 ##  View Right Sizing for a Cluster 
 
 Ocean provides resource recommendations to assist in adjusting deployment requests based on actual CPU and memory consumption. 
-
-Resource resize recommendations are triggered when the requested resources deviate by 15% or more from the 85th or 99th Percentile mean metric recorded during the last two weeks. 
-If the requested resources are either 15% above or 15% below the 85th or 99th Percentile mean metric, Ocean suggests resizing the resources to align them more closely with the observed consumption patterns. 
 
 These recommendations can help optimize resource allocation and ensure that the requested resources align with the actual CPU and memory consumption, improving efficiency and cost-effectiveness in managing your deployments. 
 
