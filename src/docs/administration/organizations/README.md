@@ -46,9 +46,9 @@ If you need multiple organizations, for example, for multiple divisions or units
 
    </details>
 
-3. Enter a name for the new organization and click **Create**.
-4. Switch to the new organization.
-5. Choose a cloud service provider and complete the wizard to connect the organization to the provider.
+2. Enter a name for the new organization and click **Create**.
+3. Switch to the new organization.
+4. Choose a cloud service provider and complete the wizard to connect the organization to the provider.
 
 ## Switch Organizations
 
@@ -96,8 +96,8 @@ In the account, you can:
 
    </details>
 
-3. Enter a name for the new account and click **Create**.
-4. Choose a service provider and complete the wizard to connect the account to the provider.
+2. Enter a name for the new account and click **Create**.
+3. Choose a service provider and complete the wizard to connect the account to the provider.
 
 ## Add an Account Using the API
 
