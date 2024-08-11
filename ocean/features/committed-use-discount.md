@@ -14,8 +14,6 @@ The utilize commitment plans feature lets you leverage both spend-based and reso
 
 1. [Sign in to the GCP IAM console](https://console.cloud.google.com/iamadmin/).
 2. On the View by Principals tab, click the Security Insights of a principal that begins with <i>spotinst-role-act-</i>.
-
-   <img width="900" src="https://github.com/user-attachments/assets/1cf99a10-f4c0-4a36-8d9a-1c5792a7ae55">
    
 3. In the Spot policy, make sure the compute.commitments.list permission for Spot’s generated service account is listed.
 
@@ -33,27 +31,17 @@ The utilize commitment plans feature lets you leverage both spend-based and reso
 
 2. In the GCP console, search for <i>API Library</i>.
 
-   <img width="900" src="https://github.com/user-attachments/assets/00ba5abc-6a93-4121-bdb4-6fbab61290ae" />
-
 3. In the API Library, search for and select <i>Cloud Commerce Consumer Procurement API</i>.
 
 4. In Cloud Commerce Consumer Procurement API, click **Enable**.
 
-   <img width="500" src="https://github.com/user-attachments/assets/faaff57e-ba66-4415-b5f3-ab9f4bd8ade4" />
-
 5. Return to the search bar and search for and select **Cloud Billing API**.
 
 6. In Cloud Billing API, click **Enable**.
-
-   <img width="500" src="https://github.com/user-attachments/assets/a7cc5aad-25be-4970-8ddc-4566a5075ee7" />
-   
+  
 7. In the GCP console, click **Billing** > **Account Management** > **Add Principal**.
 
-   <img width="900" src="https://github.com/user-attachments/assets/8aa17634-1e00-4b99-b8d3-dfb93dd1dc09">
-
 8. In New principals, enter the <i>Service Account Names</i>.
-
-   <img width="800" src="https://github.com/user-attachments/assets/e2395e18-e05f-42fa-9fd6-a0a092dbe53b">
 
 9. Add the **Consumer Procurement Order Viewer** role to all the Spot service account permissions in your billing account that is linked to all the Spot service accounts that you found.
 
