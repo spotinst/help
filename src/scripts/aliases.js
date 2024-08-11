@@ -1801,42 +1801,6 @@ export const aliases = (() => {
 
     "/ocean/tutorials/connect-an-aks-private-cluster":
       "ocean/getting-started/aks/",
-
-  "/administration/users-a/":
-	  "/administration/users-a/create-new-user",
-    
-	"/administration/users-a/":
-	  "/administration/users-a/edit-user-details",
-    
-	"/administration/users-a/":
-	  "/administration/users/set-password",
-	
-  "/administration/groups/":
-	  "/administration/groups/create-new-group",
-
-  "/administration/groups/":
-	  "/administration/groups/edit-group-details",
-	
-  "/administration/policies/":
-	  "/administration/policies/create-new-policy",
-	
-	"/administration/organizations/":
-	  "/administration/organizations/switch-organization",
-
-  "/administration/organizations/":
-	  "/administration/organizations/audit-events",
-
-  "/administration/organizations/":
-	  "/administration/organizations/configure-payment-details",
-	
-  "/administration/notification-center/":
-	  "/administration/notification-center/notifications/",
-
-  "/administration/notification-center/":
-	  "/administration/notification-center/notifications/read",
-	
-  "/administration/notification-center/event-policies/":
-	  "/administration/notification-center/event-policies/create",
   };
 
   for (let [key, value] of Object.entries(map)) {
