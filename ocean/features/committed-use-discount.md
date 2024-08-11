@@ -1,6 +1,8 @@
 <meta name="robots" content="noindex">
 
-## Committed Use Discount
+# Committed Use Discount
+
+Cloud service provider relevance: <font color="#FC01CC">GCP</font>.
 
 Ocean clusters and virtual node groups help you optimize using [committed use discounts (CUDs)](https://cloud.google.com/compute/docs/instances/committed-use-discounts-overview) to ensure minimal waste. Ocean strategically allocates reservations for maximum benefit, improving estimation accuracy for commitment usage. This provides visibility into savings plans and reserved instance utilization, enabling enhanced methods for effectively utilizing vacant plans and maximizing cost savings.
 
@@ -61,8 +63,34 @@ The utilize commitment plans feature lets you leverage both spend-based and reso
 
 ## Enable CUD Utilization
 
-1. In the Spot console, go to **Ocean** > **Cloud Clusters**.
-2. Click on the cluster name, then **click Actions** > **Edit Cluster**.
-3. Go to the Compute tab and click **Additional Configurations**.
-4. Select **Utilize CUDs**.
-5. Click **Next** > **Update**.
+* For Ocean clusters in the Spot console:
+  <ol style="list-style-type: lower-alpha;">
+   <li>In the Spot console, go to <b>Ocean</b> > <b>Cloud Clusters</b>.</li>
+   <li>Click <b>Create Cluster</b>.</li>
+   <li>Follow the <a href="https://docs.spot.io/ocean/getting-started/">instructions for creating a cluster</a>.</li>
+   <li>Select <b>Utilize CUDs</b> on the Compute tab > <b>Additional Configurations</b>.</li>
+ </ol>
+ 
+* For Ocean clusters in the <a href="https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKEClusterCreate">API</a>, add <i>shouldUtilizeCommitments</i> to <b>strategy</b>:
+    <pre><code>"strategy": {
+      "shouldUtilizeCommitments": true
+    },</code></pre>
+    
+* For virtual node groups in the Spot console:
+  <ol style="list-style-type: lower-alpha;">
+   <li>In the Spot console, go to <b>Ocean</b> > <b>Cloud Clusters</b>.</li>
+   <li>Click <b>Create Cluster</b>.</li>
+   <li>Follow the <a href="https://docs.spot.io/ocean/getting-started/">instructions for creating a cluster</a>.</li>
+   <li><a href="https://docs.spot.io/ocean/tutorials/manage-virtual-node-groups">Create a VNG</a>.</li>
+   <li>Add <i>shouldUtilizeCommitments</i> to <b>strategy</b>:
+         <pre><code>"strategy": {
+      "shouldUtilizeCommitments": true
+    },</code></pre>
+      </li>
+   <li>Click <b>Save</b>.</li>
+ </ol>
+ 
+* For virtual node groups the <a href="https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKELaunchSpecCreate">API</a>, add <i>shouldUtilizeCommitments</i> to <b>strategy</b>:
+    <pre><code>"strategy": {
+      "shouldUtilizeCommitments": true
+    },</code></pre>
