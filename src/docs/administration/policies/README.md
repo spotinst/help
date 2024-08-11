@@ -43,7 +43,7 @@ These rules apply to policies:
   
 ## Create a Permission Policy
 
-1. In the Spot console, click the user icon <img height="14" src="https://github.com/spotinst/help/src/docs/administration/_media/usericon.png">  > **Settings**.
+1. In the Spot console, click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png">  > **Settings**.
 2. Click **Organization** > **Permission Policies** > **Create New Policy**.
 3. Enter a **Policy Name** (and **Policy Description**).
 4. Select the type of **Permission Management**:
@@ -129,8 +129,9 @@ Conditions include:
 
 * **Attribute value** is a single string, single variable (such as `${spot:userEmail}`), or array of values. You can have multiple attribute values for the same field. For example, `spot:elastigroup:name": ["elastigroup-1","elastigroup-2"]` and  **OR** is used between them.
 
+
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id=”texttolinkto”>Example 1: Update Elastigroup resource</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600">Example 1: Update Elastigroup resource</summary>
 
 <div style="padding-left:16px">
 
@@ -177,12 +178,11 @@ This policy checks for the `DeveloperEmail` tag, and lets users with this email 
 }
 </pre>
 
-
 </div>
  </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id=”texttolinkto”>Example 2: Resource name contains</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600">Example 2: Resource name contains</summary>
 
 <div style="padding-left:16px">
 
@@ -213,7 +213,7 @@ This policy checks for the `DeveloperEmail` tag, and lets users with this email 
  </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id=”texttolinkto”>Example 3: Ocean CD Workload Policy</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600">Example 3: Ocean CD Workload Policy</summary>
 
 <div style="padding-left:16px">
     

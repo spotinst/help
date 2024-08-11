@@ -2,8 +2,6 @@
 
 When you set up your Spot account, you create an organization and one or more account entities. You can set up multiple organizations if required. Within an organization, you can define multiple accounts for different teams or projects in the organization. Each account can be set up to use any supported cloud service provider and cloud service provider account.
 
-<img src="https://github.com/spotinst/help/src/docs/administration/_media/organizations-accounts-01.png" width="500" height="281" />
-
 ## Organization
 
 When you register to Spot, the registration wizard automatically creates an organization. The name of the organization is the company name entered in the sign up form.
@@ -21,7 +19,7 @@ You can:
 
 ## Get Your Organization ID
 
-1. In the Spot console, click the user icon <img height="14" src="https://github.com/spotinst/help/src/docs/administration/_media/usericon.png">  > **Settings**.
+1. In the Spot console, click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png">  > **Settings**.
 2. Go to **General Details** > **My Organization** > **Organization ID**.
    <details>
     <summary markdown="span">View image</summary>
@@ -110,7 +108,7 @@ To add an account through the API, go to [Spot API – Create Account](https://d
 The Account ID is required for API and SDK interactions with the account-level Spot products (such as Elastigroup, Ocean), unless it's for the default account.
 
 1. In the Spot console, select the organization and account.
-2. Click the user icon <img height="14" src="https://github.com/spotinst/help/src/docs/administration/_media/usericon.png">  > **Settings**.
+2. Click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png">  > **Settings**.
 3. Go to **General Details** > **My Spot Account** > **Cloud Account ID**.
    
    <details>
@@ -132,4 +130,4 @@ You can view an audit list of events in your accounts. The Audit page shows a li
 
 Access the Audit page:
 1. In the Spot console, select the organization and account.
-2. Click the user icon <img height="14" src="https://github.com/spotinst/help/src/docs/administration/_media/usericon.png">  > **Settings** > **Audit**.
+2. Click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png">  > **Settings** > **Audit**.
