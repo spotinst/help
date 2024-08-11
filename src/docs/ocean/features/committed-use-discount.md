@@ -2,6 +2,8 @@
 
 # Committed Use Discount
 
+Cloud service provider relevance: <font color="#FC01CC">GCP</font>.
+
 Ocean clusters and virtual node groups help you optimize using [committed use discounts (CUDs)](https://cloud.google.com/compute/docs/instances/committed-use-discounts-overview) to ensure minimal waste. Ocean strategically allocates reservations for maximum benefit, improving estimation accuracy for commitment usage. This provides visibility into savings plans and reserved instance utilization, enabling enhanced methods for effectively utilizing vacant plans and maximizing cost savings.
 
 You can use your existing committed-use discounts before adding extra resources. This lets you make efficient use of your cloud resources.
