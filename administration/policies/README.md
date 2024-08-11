@@ -63,7 +63,8 @@ These rules apply to policies:
 
    Since the **Delete** action is unmarked, this policy will not allow users to delete anything in Elastigroup.
  
-   <img src="https://github.com/user-attachments/assets/72c61b07-7867-4909-a7dd-1210bb7ca2cb">
+   <img width="400" src="https://github.com/user-attachments/assets/8fe7f1f8-ec7f-430a-98f6-258a57d69d9a">
+
 
   </details>
 
