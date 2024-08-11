@@ -43,7 +43,7 @@ These rules apply to policies:
   
 ## Create a Permission Policy
 
-1. In the Spot console, click the user icon <img height="14" src="https://github.com/spotinst/help/src/docs/administration/_media/usericon.png">  > **Settings**.
+1. In the Spot console, click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png">  > **Settings**.
 2. Click **Organization** > **Permission Policies** > **Create New Policy**.
 3. Enter a **Policy Name** (and **Policy Description**).
 4. Select the type of **Permission Management**:
