@@ -28,6 +28,7 @@
     - [AZ Recommendations - AWS Kubernetes](ocean/features/avail-zones-scores)
     - [Connect a Fargate Service](elastigroup/tutorials/amazon-ecs/import-fargate-services-to-ecs-elastigroup)
     - [Cluster Orientation](ocean/features/cluster-orientation)
+    - [Committed Use Discount](ocean/features/committed-use-discount)
     - [Cost Analysis](ocean/features/cost-analysis)
       - [Analyze Your Costs](ocean/tutorials/analyze-your-costs)
       - [Create a Cost Analysis Filter](ocean/tutorials/create-a-cost-filter)  
