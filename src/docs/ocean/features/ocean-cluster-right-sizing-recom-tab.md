@@ -122,11 +122,10 @@ To delete a right sizing rule:
 # Best Practices
 
 These are the Right-Sizing Best Practices:
-2. Ensure more than one replica for the Admission Controller and VPA.
-3. Limits (percentage thresholds) should not have the same values as requests.
-4. If you set overheads for resources, Start with a relatively high overhead (20%) and decrease it with time.
-5. Install the Spot VPA project.
-   a. Restart pods.
-   b. Restart policies and flags.
-If you set boundaries (recommendation ranges for resources), do not apply the rule to all workloads. All services have different purposes.
+
+* Ensure more than one replica for the Admission Controller and VPA.
+* Limits (percentage thresholds) should not have the same values as requests.
+* If you set overheads for resources, Start with a relatively high overhead (20%) and decrease it with time.
+* Install the Spot VPA project. Then restart pods, and then restart policies and flags.
+* If you set boundaries (recommendation ranges for resources), do not apply the rule to all workloads. All services have different purposes.
 
