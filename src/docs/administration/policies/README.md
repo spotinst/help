@@ -40,7 +40,8 @@ These rules apply to policies:
 * A policy-based user with no policies is equivalent to a viewer user. Organization administrators, account editors, and policy-based users with the proper permissions are able to grant permissions.
 * All API tokens that belong to you are affected by your current policy.
 * Permissions to create objects (such as <i>elastigroup:create*</i>) do not grant permissions on the created objects themselves.
-  
+
+
 ## Create a Permission Policy
 
 1. In the Spot console, click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png">  > **Settings**.
@@ -65,7 +66,7 @@ These rules apply to policies:
    <img src="https://github.com/user-attachments/assets/72c61b07-7867-4909-a7dd-1210bb7ca2cb">
 
   </details>
-   
+
 ## Edit the JSON
 
 1. In a permission policy, click **JSON**.
@@ -82,7 +83,7 @@ A statement includes:
    * <i>elastigroup:update</i>
    * <i>ocean:roll</i>
    * <i>elastigroup:describe*</i> allows all <i>Describe</i> actions, such as <i>-elastigroup:describeDeployments</i>, <i>elastigroup:describeGroup</i>
-* **elastigroup:*** will allow all Elastigroup actions.
+   * <i>elastigroup:*</i> will allow all Elastigroup actions.
 * **Resources** is an array of resources formatted as <i>[serviceName]:[actionName]</i>. A resource representsa Spot resource, such as an Ocean cluster or an Elastigroup. The effect and actions are applied to the resource. You can use wildcards (*) in the <i>[serviceName]</i> and <i>[actionName]</i>:
    * All resources: <i>*</i>
    * All Elastigroup resources: <i>elastigroup:*</i>
@@ -216,7 +217,7 @@ This policy checks for the `DeveloperEmail` tag, and lets users with this email 
    <summary markdown="span" style="color:#7632FE; font-weight:600">Example 3: Ocean CD Workload Policy</summary>
 
 <div style="padding-left:16px">
-    
+
 This policy enables restarting workloads on Ocean CD with specific conditions, including cluster ID, workload type, namespace, and workload name. For example:
 * Workload type - “SpotDeployment”
 * Cluster id - “cluster-labs”

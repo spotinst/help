@@ -2,7 +2,7 @@
 
 You can create notifications for compute products, such as Elastigroup and Ocean resources.
 
-1. In the Spot console, click the user icon <img height="14" src="https://github.com/spotinst/help/src/docs/administration/_media/usericon.png">  > **Settings**.
+1. In the Spot console, click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png">  > **Settings**.
 2. Go to **Notification Center** > **Event Policies** > **Create Policy**.
 3. Enter a **Name** for the policy (and a **Description**).
 4. Select **Type**: Compute.
@@ -58,7 +58,7 @@ To complete the policy definition, you need to complete all steps of the wizard.
      <details>
       <summary markdown="span">View image</summary>
 
-     <img width="378" alt="eventpolicy-createcompute-2" src="https://github.com/user-attachments/assets/cbd6966b-c849-4d29-841a-45e25e080d2c">
+     <img alt="eventpolicy-createcompute-2" src="https://github.com/user-attachments/assets/cbd6966b-c849-4d29-841a-45e25e080d2c">
      
     </details>
      
@@ -67,13 +67,15 @@ To complete the policy definition, you need to complete all steps of the wizard.
 ## Step 3: Select Events
 
 1. Select the types of events to receive notifications about.
-        <details>
+   
+      <details>
       <summary markdown="span">View image</summary>
 
       <img width="650" alt="eventpolicy-createcompute-3" src="https://github.com/user-attachments/assets/7f6c5803-dd33-437f-8c1a-c8cdbe5f091b">
      
     </details>
-3. If you want to configure integrations, click **Next (Optional)**. Otherwise, click **Create Policy Now**.
+
+2. If you want to configure integrations, click **Next (Optional)**. Otherwise, click **Create Policy Now**.
 
 ## Step 4: Select Integrations (Optional)
 
