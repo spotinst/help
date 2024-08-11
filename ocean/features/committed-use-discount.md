@@ -70,9 +70,13 @@ The utilize commitment plans feature lets you leverage both spend-based and reso
  </ol>
  
 * For Ocean clusters in the <a href="https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKEClusterCreate">API</a>, add <i>shouldUtilizeCommitments</i> to <b>strategy</b>:
+   <details>
+   <summary markdown="span">View code</summary>
     <pre><code>"strategy": {
       "shouldUtilizeCommitments": true
     },</code></pre>
+
+    </details>
     
 * For virtual node groups in the Spot console:
   <ol style="list-style-type: lower-alpha;">
@@ -81,14 +85,22 @@ The utilize commitment plans feature lets you leverage both spend-based and reso
    <li>Follow the <a href="https://docs.spot.io/ocean/getting-started/">instructions for creating a cluster</a>.</li>
    <li><a href="https://docs.spot.io/ocean/tutorials/manage-virtual-node-groups">Create a VNG</a>.</li>
    <li>Add <i>shouldUtilizeCommitments</i> to <b>strategy</b>:
-         <pre><code>"strategy": {
-      "shouldUtilizeCommitments": true
-    },</code></pre>
+     <details>
+     <summary markdown="span">View code</summary>
+      <pre><code>"strategy": {
+        "shouldUtilizeCommitments": true
+      },</code></pre>
+
+     </details>
       </li>
    <li>Click <b>Save</b>.</li>
  </ol>
  
 * For virtual node groups the <a href="https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKELaunchSpecCreate">API</a>, add <i>shouldUtilizeCommitments</i> to <b>strategy</b>:
+   <details>
+   <summary markdown="span">View code</summary>
     <pre><code>"strategy": {
       "shouldUtilizeCommitments": true
     },</code></pre>
+
+    </details>
