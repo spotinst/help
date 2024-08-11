@@ -1,5 +1,3 @@
-<meta name="robots" content="noindex">
-
 # Committed Use Discount
 
 Cloud service provider relevance: <font color="#FC01CC">GCP</font>.
