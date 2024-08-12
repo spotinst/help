@@ -139,8 +139,6 @@ Specify the authentication details to be used for launching VMs on the stateful 
    <details>
      <summary markdown="span">More about secure boot and vTPM</summary>
 
-  Azure has 3 security types when launching a VM:
-
   * <b>Secure Boot</b> is the root of trusted launch for your VM. This mode, which is implemented in platform firmware, protects against the installation of malware-based rootkits and boot kits. Secure Boot works to ensure that only signed operating systems and drivers can boot. It establishes a root of trust for the software stack on your VM. With Secure Boot enabled, all OS boot components (boot loader, kernel, kernel drivers) must be signed by trusted publishers. Both Windows and select Linux distributions support Secure Boot. If Secure Boot fails to authenticate that the image was signed by a trusted publisher, the VM will not be allowed to boot.
     
   * <b>vTPM</b> is a virtualized version of a hardware Trusted Platform Module, compliant with the TPM2.0 spec. It serves as a dedicated secure vault for keys and measurements. Trusted launch provides your VM with its own dedicated TPM instance, running in a secure environment outside the reach of any VM. The vTPM enables attestation by measuring the entire boot chain of your VM (UEFI, OS, system, and drivers).
