@@ -58,7 +58,6 @@ These features are ONLY available for Ocean AKS:
 
 - [Scheduled Roll via Console](ocean/features/roll)
 - [Log Integration with Azure Blob](ocean/features/log-integration-with-azure-blob)
-- [Migrate Workload to Ocean for AKS](ocean/tutorials/migrate-workload-aks)
 - [Import AKS Cluster with Availability Zone Zero](https://docs.spot.io/ocean/features/vngs/az-zero-feature)
 - [Regions Without AZ Support (AKS)](ocean/getting-started/aks?id=support-for-regions-without-availability-zones)
 - [Select VMs for an AKS Virtual Node Group](https://docs.spot.io/ocean/features/vm-selection-aks)
@@ -80,9 +79,6 @@ These features are ONLY available for Ocean AKS:
 These features are ONLY available for Ocean GKE:
 
 * [Auto Update Process for GKE](ocean/features/auto-update-process-gke)
-* [Create a Cluster for GKE Using Shared VPC](tutorials/create-cluster-gke-shared-vpc)
-* [Auto Update Process for GKE](https://docs.spot.io/ocean/features/auto-update-process-gke)
-* [Connect an Existing GKE Cluster](https://docs.spot.io/ocean/getting-started/gke)
 * [Set Maximum Scale Down % for VNG or Cluster via the Console](https://docs.spot.io/ocean/features/max-scale-down-vng-gke-ui)
 * [Committed Use Discount](ocean/features/committed-use-discount)
 
@@ -101,7 +97,6 @@ These features are ONLY available for Ocean AWS ECS:
 
 * [Scaling for ECS](ocean/features/scaling-ecs)
 * [Cost Analysis per ECS Service](ocean/features/cost-analysis)
-* [Migrate Elastigroups to Ocean (ECS)](ocean/tutorials/migrate-existing-egs-ecs)
 * [Connect a Fargate Service](elastigroup/tutorials/amazon-ecs/import-fargate-services-to-ecs-elastigroup)*  
 
  </div>
