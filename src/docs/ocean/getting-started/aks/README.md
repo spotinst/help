@@ -191,7 +191,7 @@ Each of the two node pools also represents several other node pools with similar
 
 ![aks-create-cluster-2-example-sel-managed-node-pools](https://github.com/user-attachments/assets/47f3b28b-0078-4e33-8fc5-77fea1bdd2ea) -->
 
-### Step 3: Connectivity  
+## Step 3: Connectivity  
 
 You can now install the [Ocean Controller](ocean/tutorials/ocean-controller-v2/) and establish the connection between the Ocean SaaS and the cluster.
 
@@ -234,7 +234,7 @@ To install the Ocean Controller and establish connectivity:
    ENABLE_OCEAN_METRIC_EXPORTER=false \
    bash
    
-    ```  
+   ```  
      
    >**Note**:Optionally install the [Ocean Prometheus exporter](https://docs.spot.io/ocean/tools-and-integrations/prometheus/README)
  
@@ -247,7 +247,7 @@ Additional Tips:
 * For private AKS clusters with limited or no Internet connectivity, see [What to do About Private AKS Clusters](https://docs.spot.io/ocean/getting-started/aks/?id=what-to-do-about-aks-private-clusters).  
   * Use a proxy or VPN to add or update the spotinst Helm repo in the private cluster. You need to create the config-map manually. 
  
-### Step 4: Automatic Spot Tolerance Injection (optional) 
+## Step 4: Automatic Spot Tolerance Injection (optional) 
 
 ![aks-cluster-wizard-step-4-toleration](https://github.com/user-attachments/assets/5a1e1fc4-be0f-457b-8cab-a34d774a5a21)
 
@@ -306,7 +306,7 @@ for pod in $pods; do echo "Deleting pod: $pod" kubectl delete pod $pod -n <names
 ```
 >**Note**: To enable a workload to run on Regular / Oon-demand nodes, add Spot label `spot.io/node-lifecycle=od` 
 
-### Step 5: Review and Configure  
+## Step 5: Review and Configure  
 
 ![aks-cluster-wizard-review](https://github.com/user-attachments/assets/baa885cf-728e-4dee-bdf6-f598d22f1dbb)
 
@@ -327,5 +327,6 @@ See [Migrate the Workload to Ocean on AKS](https://docs.spot.io/ocean/tutorials/
 
 ## Related Topics
 
-- Learn more about Ocean’s [scaling](ocean/features/scaling-kubernetes) and [headroom](ocean/features/headroom) features.
+- [Import Prerequisites](https://docs.spot.io/ocean/getting-started/aks/aks-prerequisites)
+- [Migrate Workload](https://docs.spot.io/ocean/tutorials/migrate-workload-aks)
 
