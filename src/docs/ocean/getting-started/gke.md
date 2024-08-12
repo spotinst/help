@@ -91,4 +91,4 @@ To avoid unnecessary downtime, the scale-down of existing nodes should be gradua
 
 ## Related Topics
 
-- Learn how to [connect an existing ECS Cluster](ocean/getting-started/gke)
+- [Create Cluster using Shared VPC](https://docs.spot.io/ocean/tutorials/create-cluster-gke-shared-vpc)
