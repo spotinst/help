@@ -327,5 +327,6 @@ See [Migrate the Workload to Ocean on AKS](https://docs.spot.io/ocean/tutorials/
 
 ## Related Topics
 
-- Learn more about Ocean’s [scaling](ocean/features/scaling-kubernetes) and [headroom](ocean/features/headroom) features.
+- [Import Prerequisites](https://docs.spot.io/ocean/getting-started/aks/aks-prerequisites)
+- [Migrate Workload](https://docs.spot.io/ocean/tutorials/migrate-workload-aks)
 
