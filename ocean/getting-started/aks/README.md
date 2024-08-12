@@ -6,10 +6,7 @@ To enable Ocean to start managing your AKS cluster, you need to connect the clus
 
 ## Prerequisites 
 
-* [Valid AKS Managed cluster](ocean/getting-started/aks/aks-prerequisites?id=valid-aks-managed-cluster-with-at-least-one-node-pool-for-control-plane). 
-* [Connect Spot account to Azure Subscription](ocean/getting-started/aks/aks-prerequisites?id=connect-spot-account-to-azure-subscription).
-* [Verify Connection to Spot Account](ocean/getting-started/aks/aks-prerequisites?id=verify-connection-to-spot-account).
-* [Update Helm or install via Terraform or Kubectl (Kubernetes command-line tool)](ocean/getting-started/aks/aks-prerequisites?id=install-helm-terraform-or-kubectl-kubernetes-command-line-tool).
+See [Prerequisites](ocean/getting-started/aks/aks-prerequisites).
 
 ## Support for Regions Without Availability Zones
 
