@@ -1,6 +1,6 @@
 # Committed Use Discount
 
-Cloud service provider relevance: <font color="#FC01CC">GCP</font>.
+Cloud service provider relevance: <font color="#FC01CC">GKE</font>.
 
 Ocean clusters and virtual node groups help you optimize using [committed use discounts (CUDs)](https://cloud.google.com/compute/docs/instances/committed-use-discounts-overview) to ensure minimal waste. Ocean strategically allocates reservations for maximum benefit, improving estimation accuracy for commitment usage. This provides visibility into savings plans and reserved instance utilization, enabling enhanced methods for effectively utilizing vacant plans and maximizing cost savings.
 
@@ -57,7 +57,7 @@ The utilize commitment plans feature lets you leverage both spend-based and reso
    <li>Select <b>Utilize CUDs</b> on the Compute tab > <b>Additional Configurations</b>.</li>
  </ol>
  
-* For Ocean clusters in the <a href="https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKEClusterCreate">API</a>, add <i>shouldUtilizeCommitments</i> to <b>strategy</b>:
+* For Ocean clusters in the [API](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKEClusterCreate), make sure <b>shouldUtilizeCommitments</b> is <i>true</i>:
    <details>
    <summary markdown="span">View code</summary>
     <pre><code>"strategy": {
@@ -84,7 +84,7 @@ The utilize commitment plans feature lets you leverage both spend-based and reso
    <li>Click <b>Save</b>.</li>
  </ol>
  
-* For virtual node groups the <a href="https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKELaunchSpecCreate">API</a>, add <i>shouldUtilizeCommitments</i> to <b>strategy</b>:
+* For virtual node groups the [API](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKELaunchSpecCreate), add <i>shouldUtilizeCommitments</i> to <b>strategy</b>:
    <details>
    <summary markdown="span">View code</summary>
     <pre><code>"strategy": {
