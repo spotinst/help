@@ -11,24 +11,16 @@ Ocean lets you focus on your workloads, not your infrastructure:
 
 ## Connect Your Cloud Provider Account
 
-If you have not yet connected Spot with your Cloud provider account, connect now: <font color="#FC01CC">[AWS](connect-your-cloud-provider/aws-account)</font>, <font color="#FC01CC">[Azure](connect-your-cloud-provider/azure-account)</font>, <font color="#FC01CC">[GCP](connect-your-cloud-provider/gcp-project)</font>. 
+If you have not yet connected Spot with your Cloud Service Provider account, connect now:
+
+* [<font color="#FC01CC">AWS</font>](connect-your-cloud-provider/aws-account)
+* [<font color="#FC01CC">Azure</font>](connect-your-cloud-provider/azure-account)
+* [<font color="#FC01CC">GCP</font>](connect-your-cloud-provider/gcp-project)
+
 
 ## Get Started With An Ocean Cluster
 
-Once you have connected your account, get started with an Ocean cluster.
-
-Select a method to create an Ocean-managed cluster: 
-
-- EKS
-  - [Connect an Existing Cluster](/ocean/getting-started/eks/join-an-existing-cluster)
-  - [Create a New Cluster](/ocean/getting-started/eks/create-a-new-cluster)
-  - [eksctl](/ocean/tools-and-integrations/eksctl/)
-  - [Terraform](/ocean/getting-started/eks/terraform)
-- [AKS](/ocean/getting-started/aks)
-- [kOps](/ocean/tools-and-integrations/kops/)
-- [GKE](/ocean/getting-started/gke)
-- [ECS](/ocean/getting-started/ecs)
-- [OpenShift](/ocean/tools-and-integrations/openshift/)
+Once you have connected your account, [Get started](ocean/getting-started/) with an Ocean cluster.
 
 ## Related Topics
 
