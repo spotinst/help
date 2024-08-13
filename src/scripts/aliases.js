@@ -1798,6 +1798,10 @@ export const aliases = (() => {
 
     "/elastigroup/tutorials/elastigroup-actions-menu/view-spot-markets":
       "elastigroup/tutorials/elastigroup-actions-menu/",
+
+    "/ocean/tutorials/connect-an-aks-private-cluster":
+      "ocean/getting-started/aks/?id=what-to-do-about-aks-private-clusters",
+    
   };
 
   for (let [key, value] of Object.entries(map)) {
