@@ -22,7 +22,11 @@ If you have multiple accounts with your cloud provider, you will be able to conn
 
 In this step, you make some choices about what type of account you are creating and how you would like to connect the account to Spot. The procedures are explained in detail in the wizard, but to help you along the way, the key concepts are explained below. 
 
-The decisions are slightly different depending on the cloud provider you choose, so please follow the flow for your cloud provider: [AWS](connect-your-cloud-provider/first-account/?id=connect-aws), [GCP](connect-your-cloud-provider/first-account/?id=connect-gcp), [Azure](connect-your-cloud-provider/first-account/?id=connect-azure).
+>**Important**: Follow the flow for your cloud service provider: 
+
+* Connect [<font color="#FC01CC">AWS</font>](connect-your-cloud-provider/first-account/?id=connect-aws)
+* Connect [<font color="#FC01CC">GCP</font>](connect-your-cloud-provider/first-account/?id=connect-gcp)
+* Connect [<font color="#FC01CC">Azure</font>](connect-your-cloud-provider/first-account/?id=connect-azure)
 
 ### Connect AWS
 #### Linked Account
