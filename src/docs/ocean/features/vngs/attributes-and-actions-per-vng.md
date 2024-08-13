@@ -1,4 +1,4 @@
-# Attributes per VNGs 
+# Attributes per VNG
 
 Many attributes you apply to your cluster can be applied specifically per VNG. This enables you to organize and manage customized workload types within the same cluster. For example, you can customize the attributes listed below (per cloud service provider).
 
