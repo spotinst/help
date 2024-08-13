@@ -4,8 +4,10 @@ Many attributes you apply to your cluster can be applied specifically per VNG. T
 
 > **Tip**: Items marked “API only” can also be configured in the JSON in the Review tab of the console.
 
-<details>
-  <summary markdown="span">Ocean for AWS</summary>
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id=”texttolinkto”>Ocean for AWS Kubernetes</summary>
+
+<div style="padding-left:16px">
 
 ## Ocean for AWS Kubernetes
 
@@ -36,10 +38,13 @@ The following is a list of attributes customizable per VNG in Ocean for AWS. Som
 
 For example, you could use the Labels and Taints attributes to instruct Ocean which labels and taints are applied on the nodes using the user data, and effectively connect between the cloud infrastructure properties and Kubernetes node labels that will be used on applications using node affinity.
 
-</details><br>
+</div>
+ </details>
 
-<details>
-  <summary markdown="span">Ocean for ECS</summary>
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id=”texttolinkto”>Ocean for ECS</summary>
+
+<div style="padding-left:16px">
 
 ## Ocean for ECS
 
@@ -65,10 +70,13 @@ The following is a list of attributes customizable per VNG in Ocean for ECS. Som
 
 > **Tip**: If automatic headroom is configured, you must set `autoScaler.enableAutomaticAndManualHeadroom` to True at the Ocean level in order to ensure that the manual headroom will be effective.
 
-</details><br>
+</div>
+ </details>
 
-<details>
-  <summary markdown="span">Ocean for AKS</summary>
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id=”texttolinkto”>Ocean for AKS</summary>
+
+   <div style="padding-left:16px">
 
 ## Ocean for AKS
 
@@ -88,10 +96,13 @@ The following is a list of attributes customizable per VNG in Ocean for AKS.
   - Azure CNI (vnet-subnet)  
   - Azure CNI with Dynamic IP (vnet-subnet and pod-subnet).
 
-</details><br>
+</div>
+ </details>
 
-<details>
-  <summary markdown="span">Ocean for GKE</summary>
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id=”texttolinkto”>Ocean for GKE</summary>
+
+   <div style="padding-left:16px">
 
 ## Ocean for GKE
 
@@ -121,7 +132,8 @@ The following is a list of attributes customizable per VNG in Ocean for GKE. Som
 
 > **Tip**: If automatic headroom is configured, you must set `autoScaler.enableAutomaticAndManualHeadroom` to True at the Ocean level to ensure that the manual headroom will be effective.
 
-</details><br>
+</div>
+ </details>
 
 The following sections describe several of these attributes.
 
