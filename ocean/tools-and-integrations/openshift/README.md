@@ -2,4 +2,4 @@
 
 See:
 
-- [Getting Started with openshift](ocean/getting-started/openshift)
+- [Getting Started with OpenShift](ocean/getting-started/openshift)
