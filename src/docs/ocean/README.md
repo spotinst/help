@@ -13,9 +13,9 @@ Ocean lets you focus on your workloads, not your infrastructure:
 
 If you have not yet connected Spot with your Cloud Service Provider account, connect now:
 
-* [<font color="#FC01CC">AWS</font>](connect-your-cloud-provider/aws-account)
-* [<font color="#FC01CC">Azure</font>](connect-your-cloud-provider/azure-account)
-* [<font color="#FC01CC">GCP</font>](connect-your-cloud-provider/gcp-project)
+* [<font color="#FC01CC">AWS</font>](connect-your-cloud-provider/aws-account?id=connect-aws)
+* [<font color="#FC01CC">Azure</font>](connect-your-cloud-provider/aws-account?id=connect-azure)
+* [<font color="#FC01CC">GCP</font>](connect-your-cloud-provider/aws-account?id=connect-gcp)
 
 
 ## Get Started With An Ocean Cluster
