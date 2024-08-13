@@ -9,7 +9,7 @@
     - [EKS](ocean/getting-started/eks/)
       - [Connect Existing Cluster](ocean/getting-started/eks/join-an-existing-cluster)
       - [Create New Cluster](ocean/getting-started/eks/create-a-new-cluster)
-      - [Create Cluster via eksctl](ocean/tools-and-integrations/eksctl/)
+      - [eksctl Clusters](ocean/tools-and-integrations/eksctl/)
       - [Create Cluster via Terraform](ocean/getting-started/eks/terraform)
       - [Migrate Workload](ocean/tutorials/migrate-workload)
         - [Migrate using Console](ocean/tutorials/migrate-workload-via-ui)
