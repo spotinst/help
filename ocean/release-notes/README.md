@@ -2,7 +2,7 @@
 
 ## August 2024: Features and Enhancements 
 
-*  **OCN-0022: August 11, 2024:** (**<font color="#FC01CC">GCP</font>**) You can now use committed use discounts (CUDs) with Ocean clusters and virtual node groups. Committed use discounts provide discounted prices in exchange for customer commitment expense on GCP. [Learn more...](https://docs.spot.io/ocean/features/committed-use-discount)
+*  **OCN-0022: August 11, 2024:** (**<font color="#FC01CC">GCP</font>**) You can now use committed use discounts (CUDs) with Ocean clusters. Committed use discounts provide discounted prices in exchange for customer commitment expense on GCP. [Learn more...](https://docs.spot.io/ocean/features/committed-use-discount)
 
 <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600">July, 2024 - click to view</summary>
