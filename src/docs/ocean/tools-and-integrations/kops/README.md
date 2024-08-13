@@ -2,5 +2,5 @@
 
 See:
 
-- [Getting Started with kops](docs.spot.io/ocean/getting-started/kops)
+- [Getting Started with kops](ocean/getting-started/kops)
 - [Metadata Labels](ocean/tools-and-integrations/kops/metadata-labels)
