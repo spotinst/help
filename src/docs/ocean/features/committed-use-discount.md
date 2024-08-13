@@ -2,13 +2,13 @@
 
 Cloud service provider relevance: <font color="#FC01CC">GKE</font>.
 
-Ocean clusters and virtual node groups help you optimize using [committed use discounts (CUDs)](https://cloud.google.com/compute/docs/instances/committed-use-discounts-overview) to ensure minimal waste. Ocean strategically allocates reservations for maximum benefit, improving estimation accuracy for commitment usage. This provides visibility into savings plans and reserved instance utilization, enabling enhanced methods for effectively utilizing vacant plans and maximizing cost savings.
+Ocean clusters help you optimize using [committed use discounts (CUDs)](https://cloud.google.com/compute/docs/instances/committed-use-discounts-overview) to ensure minimal waste. Ocean strategically allocates reservations for maximum benefit, improving estimation accuracy for commitment usage. This provides visibility into savings plans and reserved instance utilization, enabling enhanced methods for effectively utilizing vacant plans and maximizing cost savings.
 
 You can use your existing committed-use discounts before adding extra resources. This lets you make efficient use of your cloud resources.
 
 ## Prerequisites
 
-The utilize commitment plans feature lets you leverage both spend-based and resource-based CUDs in your Ocean clusters and virtual node groups before adding additional resources. Make sure the necessary prerequisites are in place for the method you want to utilize your usage.
+The utilize commitment plans feature lets you leverage both spend-based and resource-based CUDs in your Ocean clusters before adding additional resources. Make sure the necessary prerequisites are in place for the method you want to utilize your usage.
 
 ## Resource-based and Spend-based Commitment Utilization
 
@@ -25,7 +25,7 @@ The utilize commitment plans feature lets you leverage both spend-based and reso
 
 1. For projects that are not managed by Spot, create a Spot account with read-only permissions (required for calculating the commitment plans utilization status).
    
-   The required permission for read-only accounts is compute.instances.list on Spot's generated service accounts.
+   The required permission for read-only accounts is `compute.instances.list` on Spot's generated service accounts.
    
    <img width="300" src="https://github.com/user-attachments/assets/bfae81c5-9015-447f-8eb4-e4929d11f707" />
 
