@@ -36,7 +36,7 @@ You can choose from these integrations:
 
 - External Email to add email addresses that will receive notifications.
 
-  The following attributes will be sent as part of the CSV attached in the external email:  
+  These attributes are sent as part of the CSV attached in the external email:  
 
    * Security Rule	 
    * Asset Name	 
