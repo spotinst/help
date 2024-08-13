@@ -1,11 +1,13 @@
-# Attributes per VNGs 
+# Attributes per VNG
 
-Many of the attributes that you apply to your cluster can be applied specifically per VNG. This enables you to organize and manage customized workload types within the same cluster. For example, you can customize the attributes listed below (per cloud service provider).
+Many attributes you apply to your cluster can be applied specifically per VNG. This enables you to organize and manage customized workload types within the same cluster. For example, you can customize the attributes listed below (per cloud service provider).
 
 > **Tip**: Items marked “API only” can also be configured in the JSON in the Review tab of the console.
 
-<details>
-  <summary markdown="span">Ocean for AWS</summary>
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id=”texttolinkto”>Ocean for AWS Kubernetes</summary>
+
+<div style="padding-left:16px">
 
 ## Ocean for AWS Kubernetes
 
@@ -36,10 +38,13 @@ The following is a list of attributes customizable per VNG in Ocean for AWS. Som
 
 For example, you could use the Labels and Taints attributes to instruct Ocean which labels and taints are applied on the nodes using the user data, and effectively connect between the cloud infrastructure properties and Kubernetes node labels that will be used on applications using node affinity.
 
-</details><br>
+</div>
+ </details>
 
-<details>
-  <summary markdown="span">Ocean for ECS</summary>
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id=”texttolinkto”>Ocean for ECS</summary>
+
+<div style="padding-left:16px">
 
 ## Ocean for ECS
 
@@ -65,10 +70,13 @@ The following is a list of attributes customizable per VNG in Ocean for ECS. Som
 
 > **Tip**: If automatic headroom is configured, you must set `autoScaler.enableAutomaticAndManualHeadroom` to True at the Ocean level in order to ensure that the manual headroom will be effective.
 
-</details><br>
+</div>
+ </details>
 
-<details>
-  <summary markdown="span">Ocean for AKS</summary>
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id=”texttolinkto”>Ocean for AKS</summary>
+
+   <div style="padding-left:16px">
 
 ## Ocean for AKS
 
@@ -88,59 +96,13 @@ The following is a list of attributes customizable per VNG in Ocean for AKS.
   - Azure CNI (vnet-subnet)  
   - Azure CNI with Dynamic IP (vnet-subnet and pod-subnet).
 
-### Configure an Ocean AKS Cluster with Multiple VNG Subnets
+</div>
+ </details>
 
-Ocean AKS lets you configure multiple subnets for a Virtual Node Group (VNG) to ensure that your AKS cluster does not run out of IP address capacity.  
-There are several Azure Networking CNI options: 
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id=”texttolinkto”>Ocean for GKE</summary>
 
-*  Kubenet Networking (vnet-subnet) 
-*  Azure CNI (vnet-subnet)  
-*  Azure CNI with Dynamic IP (vnet-subnet and pod-subnet).  
-
-You can add (or remove) vnet-subnets or pod-subnets in a VNG at any time. Ocean AKS will automatically assign subnets to node pools based on IP address capacity. However, a node pool with a subnet that has run out of IP address capacity will be locked for scaling. 
-You can set up multiple subnets when you create or update a Virtual Node Group, and when you update a Virtual Node Group template in the Cloud Cluster Virtual Node Groups tab. 
-
-To access the Virtual Node Groups dashboard and configure multiple subnets: 
-
-1. In the left main menu, click **Ocean**, and click **Cloud Clusters**.
-2. Select a cluster from the list of clusters. 
-3. Click the **Virtual Node Group** tab. 
-4. Click the Virtual Node Group you need to configure from the list.  
-   In the Virtual Node Group dashboard that opens, The Networking panel is in the middle-right of the screen.
-
-![ocean-network-gen](https://github.com/spotinst/help/assets/159915991/4c1c7c3f-0d23-478a-9dd5-92056dab0a44)
-
-
-5. In the Networking panel, you can update subnets for VNG using the Add VNet subnets and Add Pod subnets drop-down lists, according to the AKS cluster Network Type.
-
-    *  For Kubenet, you can add one or more VNet subnets to the VNG (pod subnets are not applicable) 
-    *  For Azure CNI you can add one or more VNet subnets to the VNG (pod subnets are not applicable) 
-    *  For Azure CNI Dynamic IP, you can add one or more VNet subnets and/or pod subnets to the VNG. 
-
-### What to Consider when Selecting Multiple Subnets 
-
-*  If you do not select a subnet, the VNG will use the VNet and/or pod subnet assigned to the cluster. 
-*  If you select multiple subnets, the VNG will distribute the subnets across nodes/node pools and/or pods based on subnet IP address availability. 
-*  To prevent VNet or Pod subnets from running out of capacity, you can add VNet and/or pod subnets. All subnets must be from the same VNet as the cluster. VNG Pod subnet is configurable only with Azure CNI using dynamic IP allocation. 
-*  If you did not specify the VNet subnet when you created the cluster, the VNet is managed by Azure, so you cannot edit or add a VNet and/or pod subnet. 
-
-### Cluster and Subnet Limitations 
-
-*  All subnets (vnet-subnets and pod-subnets) must be a subset of the AKS cluster VNet CIDR. 
-*  After you create an AKS cluster, you cannot change the VNet name or Network plugin (CNI). 
-*  You can expand VNet CIDR, for example, from 10.200.0.0/16 to 10.200.0.0/14. However, you then need to update the AKS cluster to reconcile to the expanded VNet CIDR:  
-```
-az aks update -g <ResourceGroup> -n <ClusterName>
-```
-*  If a vnet-subnet was not specified when you created the AKS cluster, AKS creates the default managed VNet (CIDR 10.224.0.0/12), and you cannot add more subnets to the managed VNet. Ocean does not support adding subnets to AKS clusters with the default managed VNet. 
-*  BYO CNI - Bring Your Own CNI is not currently supported. It may work with Ocean, but there is no capability to add subnets.
-
-
-
-</details><br>
-
-<details>
-  <summary markdown="span">Ocean for GKE</summary>
+   <div style="padding-left:16px">
 
 ## Ocean for GKE
 
@@ -170,17 +132,23 @@ The following is a list of attributes customizable per VNG in Ocean for GKE. Som
 
 > **Tip**: If automatic headroom is configured, you must set `autoScaler.enableAutomaticAndManualHeadroom` to True at the Ocean level to ensure that the manual headroom will be effective.
 
-### Local SSD Support
+</div>
+ </details>
+
+The following sections describe several of these attributes.
+
+## Local SSD Support
+
+Cloud service provider relevance: <font color="#FC01CC">GKE</font>
 
 Ocean for GKE allows the utilization of local SSD disks, high-performance local disks that are useful with specific workloads such as those that heavily use caching. You can define SSD disks in your Ocean VNG configuration by using localSsdCount to configure the number of SSD disks to be connected to each VM in the VNG.
 
 Once configured, whenever the Ocean Autoscaler scales up, Ocean will automatically connect the local SSDs to the new VM. Note that local SSDs are limited to specific machine types. Ocean will automatically filter out the machine types that are not compatible. For information about the API, see Local SSD in the Spot API.
 
-</details><br>
 
 ## Restrict Scale Down per Virtual Node Group
 
-Relevant for AWS Kubernetes, ECS, and GKE.
+Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>, <font color="#FC01CC">ECS</font>, and <font color="#FC01CC">GKE</font>
 
 The restrict-scale-down label is a [Spot label](ocean/features/labels-and-taints?id=spot-labels) that can be applied on a Kubernetes pod or an ECS task and forces Ocean not to scale down the node or container instance running it. It is also possible to restrict scale down at the VNG level using a boolean property with the same name.
 
@@ -188,9 +156,9 @@ A possible use case is protecting a 100% On-demand VNG from any scale-down activ
 
 For more information about the Scale Down feature, see Scaling ([Kubernetes](ocean/features/scaling-kubernetes?id=scale-down) or [ECS](ocean/features/scaling-ecs?id=scale-down-behavior)).
 
-### Multiple AMI Architectures in the Same Virtual Node Group 
+## Multiple AMI Architectures in the Same Virtual Node Group 
 
-AWS Kubernetes and ECS only.
+Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>, <font color="#FC01CC">ECS</font>
 
 Ocean supports instance types with both Arm64 and x86 architectures in the same VNG. This widens the instance selection options because instances that support either the Arm64 or the x86 architectures can be chosen. This enables you to take advantage of the cost and performance benefits of Arm64 when the spot markets allow while maintaining a large whitelist of x86 instances. 
 
@@ -206,7 +174,7 @@ Ocean serves such use cases with the ability to define a list of preferred insta
 
 ### Preferred Spot Instance Types per Virtual Node Group
 
-AWS Kubernetes and ECS only.
+Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>, <font color="#FC01CC">ECS</font>
 
 For your AWS Kubernetes and ECS clusters, you can configure preferred Spot instance types at the Virtual Node Group level.
 
@@ -223,9 +191,9 @@ For information about defining preferred spot instance types in the Spot API (us
 
 <!-- Section below added 15-07-2024 for DOC-1912 -->
 
-###  Preferred On-Demand Instance Types per Virtual Node Group
+##  Preferred On-Demand Instance Types per Virtual Node Group
 
-AWS Kubernetes only.
+Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>
 
 You can configure preferred on-demand types at the Virtual Node Group level for your AWS Kubernetes clusters.
 
@@ -243,7 +211,7 @@ See also [Terraform](https://registry.terraform.io/providers/spotinst/spotinst/l
 
 ##  Ephemeral Storage per Virtual Node Group
 
-AWS Kubernetes only.
+Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>
 
 The Ocean Autoscaler (by default) calculates ephemeral storage using the root volume size when it scales up. If your system uses the data volume size for the calculation, you need to specify an alternative device name to ensure that the Ocean Autoscaler launches nodes with the right size for their workloads.
 
@@ -251,6 +219,56 @@ When the root volume is not applicable for the ephemeral storage, specify the al
 
 * Via the [Spot API](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecUpdate) -  `launchSpec.ephermeralStorage.deviceName`
 * Via [Terraform](https://registry.terraform.io/providers/spotinst/spotinst/latest/docs/resources/ocean_aws_launch_spec#ephemeral_storage)
+
+
+## Configure an Ocean AKS Cluster with Multiple VNG Subnets
+
+Cloud service provider relevance: <font color="#FC01CC">AKS</font>
+
+Ocean AKS lets you configure multiple subnets for a Virtual Node Group (VNG) to ensure that your AKS cluster does not run out of IP address capacity.  
+There are several Azure Networking CNI options: 
+
+*  Kubenet Networking (vnet-subnet) 
+*  Azure CNI (vnet-subnet)  
+*  Azure CNI with Dynamic IP (vnet-subnet and pod-subnet).  
+
+You can add (or remove) vnet-subnets or pod-subnets in a VNG at any time. Ocean AKS will automatically assign subnets to node pools based on IP address capacity. However, a node pool with a subnet that has run out of IP address capacity will be locked for scaling. 
+You can set up multiple subnets when you create or update a Virtual Node Group, and when you update a Virtual Node Group template in the Cloud Cluster Virtual Node Groups tab. 
+
+To access the Virtual Node Groups dashboard and configure multiple subnets: 
+
+1. In the left main menu, click **Ocean**, and click **Cloud Clusters**.
+2. Select a cluster from the list of clusters. 
+3. Click the **Virtual Node Group** tab. 
+4. Click the Virtual Node Group you need to configure from the list.  
+   In the Virtual Node Group dashboard that opens, The Networking panel is in the middle-right of the screen.
+
+![ocean-network-gen](https://github.com/spotinst/help/assets/159915991/4c1c7c3f-0d23-478a-9dd5-92056dab0a44)
+
+
+5. In the Networking panel, you can update subnets for VNG using the Add VNet subnets and Add Pod subnets drop-down lists, according to the AKS cluster Network Type.
+
+    *  For Kubenet, you can add one or more VNet subnets to the VNG (pod subnets are not applicable) 
+    *  For Azure CNI you can add one or more VNet subnets to the VNG (pod subnets are not applicable) 
+    *  For Azure CNI Dynamic IP, you can add one or more VNet subnets and/or pod subnets to the VNG. 
+
+## What to Consider when Selecting Multiple Subnets 
+
+*  If you do not select a subnet, the VNG will use the VNet and/or pod subnet assigned to the cluster. 
+*  If you select multiple subnets, the VNG will distribute the subnets across nodes/node pools and/or pods based on subnet IP address availability. 
+*  To prevent VNet or Pod subnets from running out of capacity, you can add VNet and/or pod subnets. All subnets must be from the same VNet as the cluster. VNG Pod subnet is configurable only with Azure CNI using dynamic IP allocation. 
+*  If you did not specify the VNet subnet when you created the cluster, the VNet is managed by Azure, so you cannot edit or add a VNet and/or pod subnet. 
+
+## Cluster and Subnet Limitations 
+
+*  All subnets (vnet-subnets and pod-subnets) must be a subset of the AKS cluster VNet CIDR. 
+*  After you create an AKS cluster, you cannot change the VNet name or Network plugin (CNI). 
+*  You can expand VNet CIDR, for example, from 10.200.0.0/16 to 10.200.0.0/14. However, you then need to update the AKS cluster to reconcile to the expanded VNet CIDR:  
+```
+az aks update -g <ResourceGroup> -n <ClusterName>
+```
+*  If a vnet-subnet was not specified when you created the AKS cluster, AKS creates the default managed VNet (CIDR 10.224.0.0/12), and you cannot add more subnets to the managed VNet. Ocean does not support adding subnets to AKS clusters with the default managed VNet. 
+*  BYO CNI - Bring Your Own CNI is not currently supported. It may work with Ocean, but there is no capability to add subnets.
 
 ### Related Topics
 
