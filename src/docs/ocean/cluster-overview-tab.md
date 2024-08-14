@@ -22,8 +22,7 @@ To access the Ocean Cluster Overview dashboard:
 
 ## Ocean Savings Panel 
 
-![ocean-savings](https://github.com/spotinst/help/assets/159915991/32d5bf93-6125-4194-9f4a-143b05b25f39)
-
+![savings-panel-14-08](https://github.com/user-attachments/assets/1bd1c543-fd13-486c-9c6a-c37a3707bf7f)
 
 The Ocean Savings panel contains a set of savings widgets (displayed as tabs), which show your savings according to Ocean’s main autoscaling processes for cluster optimization in a selected time range:  
 
@@ -111,8 +110,7 @@ This tab displays:
 
 ## Autoscaling Activity Panel 
 
-![autoscaling-widgets](https://github.com/spotinst/help/assets/159915991/122f5d97-ba0f-4044-be51-5211a7ad399a)
-
+![autoscaling-panel-14-08](https://github.com/user-attachments/assets/6db596fa-2705-4af4-96c0-060cfaefd6cb)
 
 The Autoscaling Activity panel contains the following widgets:  
 
