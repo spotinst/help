@@ -9,7 +9,7 @@ The Ocean Cloud Cluster Overview dashboard is divided into the following panels:
 *   **Ocean Savings panel**: Shows the amount of money, CPU, memory, and GPU compute resources saved when you utilize Ocean to manage your Kubernetes cluster. Specifically, these are savings from running spot instances, bin packing, and reverting to lower-cost nodes. 
 
 * **Autoscaling Activity panel**: The Ocean Autoscaler automatically performs scale-up and scale-down, autohealing, and reverts nodes to lower-cost nodes, spots, and commitments based on resources or availability. This panel shows a summary of these autoscaling activities as widgets.
-<!--In addition, an interactive Autoscaling Activity graph lets you display data at a specific point in time. -->
+  * Interactive Autoscaling Activity graph lets you display data at a specific point in time.
 
 <!--Add info about the Autoscaling Activity graph-->
 
