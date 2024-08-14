@@ -11,8 +11,6 @@ The Ocean Cloud Cluster Overview dashboard is divided into the following panels:
 * **Autoscaling Activity panel**: The Ocean Autoscaler automatically performs scale-up and scale-down, autohealing, and reverts nodes to lower-cost nodes, spots, and commitments based on resources or availability. This panel shows a summary of these autoscaling activities as widgets.
   * Interactive Autoscaling Activity graph lets you display data at a specific point in time.
 
-<!--Add info about the Autoscaling Activity graph-->
-
 ## Access the Ocean Cloud Cluster Overview  
 
 To access the Ocean Cluster Overview dashboard: 
