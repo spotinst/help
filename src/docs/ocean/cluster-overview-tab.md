@@ -9,9 +9,7 @@ The Ocean Cloud Cluster Overview dashboard is divided into the following panels:
 *   **Ocean Savings panel**: Shows the amount of money, CPU, memory, and GPU compute resources saved when you utilize Ocean to manage your Kubernetes cluster. Specifically, these are savings from running spot instances, bin packing, and reverting to lower-cost nodes. 
 
 * **Autoscaling Activity panel**: The Ocean Autoscaler automatically performs scale-up and scale-down, autohealing, and reverts nodes to lower-cost nodes, spots, and commitments based on resources or availability. This panel shows a summary of these autoscaling activities as widgets.
-<!--In addition, an interactive Autoscaling Activity graph lets you display data at a specific point in time. -->
-
-<!--Add info about the Autoscaling Activity graph-->
+  * Interactive Autoscaling Activity graph lets you display data at a specific point in time.
 
 ## Access the Ocean Cloud Cluster Overview  
 
@@ -119,7 +117,7 @@ The Autoscaling Activity panel contains the following widgets:
 
 *   Scale Up widget. 
 *   Set of Continuous Optimization widgets.
-<!--*   Autoscaler graph.-->
+*   Autoscaler graph.
 
 ### Scale Up 
 
@@ -177,7 +175,7 @@ Auto Healing monitors the status of each Kubernetes node by examining the condit
 
 The Autohealing widget shows the number of events for which AWS autohealing replaced an unhealthy instance with a healthy instance. By monitoring these autohealing events on the Autoscaling Activity panel, you can track how effectively Ocean Autoscaler maintains your cluster's health and resilience to failures. 
 
-<!-- ###   Autoscaling Activity Graph
+###   Autoscaling Activity Graph
 
 The Autoscaling Activity Graph provides intuitive insights into the interaction between the Ocean infrastructure and the applications it supports. It also provides cluster activity insights at a granular 
 level so you can see why the Ocean Autoscaler triggered a specific scale event within the cluster.
@@ -191,13 +189,15 @@ The upper graph displays the autoscaling activity to analyze. By default, it dis
 These are the curves:
 
 *  Lifecycle Types:
-  * Spot.
-  * On-demand.
-  * Reserved.
-  * Savings Plans.
+   * Spot.
+   * On-demand.
+   * Reserved.
+   * Savings Plans.
 
-*  Workload Requests: includes running pods and pending pods requests.
+*  Workload Requests: includes running pods and pending pods requests. 
 *  Workloads with Headroom: includes running pods, running Headroom pods, pending pods, and pending Headroom pods.
+
+>**Note**: The pending pods include all the pods in the Kubernetes cluster (pods that will be scheduled on Ocean nodes and those that won’t).
 
 To set the zoom level for the graph:
 
@@ -215,7 +215,7 @@ To display the autoscaling activity at a specific point on the graph:
 This is the information displayed:
 
 * Autoscaling events (displayed for a period of 12 hours or less):
-One or more autoscaling events are displayed in blue rectangles. These can be any Ocean autoscaling scale-up and scale-down events that are displayed as widgets above the graph.
+One or more autoscaling events are displayed in blue rectangles. These can be any Ocean autoscaling scale-up and scale-down events displayed as widgets above the graph.
 For example, Scale Up, Scale Down, or Autohealing.
 
 For vCPU:
@@ -227,7 +227,7 @@ For vCPU:
     *  deamonSets Requested. 
     *  Pods Requested.
     *  Headroom requested.
-    *  Total workload allocation percentage.
+    *  Total workload allocation percentage (includes only running pods, running headroom pods, and running DaemonSets pods that are scheduled on Ocean nodes).
 
 For Memory: 
 
@@ -238,7 +238,7 @@ For Memory:
     *  deamonSets Requested. 
     *  Pods Requested.
     *  Headroom requested.
-    *  Total workload allocation percentage.
+    *  Total workload allocation percentage (includes only running pods, running headroom pods, and running DaemonSets pods that are scheduled on Ocean nodes).
 
 For GPU:
 
@@ -249,10 +249,11 @@ For GPU:
     *  deamonSets Requested. 
     *  Pods Requested.
     *  Headroom requested.
-    *  Total workload allocation percentage.
+    *  Total workload allocation percentage (includes only running pods, running headroom pods, and running DaemonSets pods that are scheduled on Ocean nodes).
 
 Total Allocation Calculation:
-* Sum of vCPU/Memory/GPU allocation - (running pods + running headroom + running DaemonSets)/nodes allocation. -->
+
+* Sum of vCPU/Memory/GPU allocation - (running pods + running headroom + running DaemonSets)/nodes allocation. 
 
 
 ##  Related Topics 
