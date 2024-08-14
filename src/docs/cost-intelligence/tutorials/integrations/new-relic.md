@@ -1,5 +1,3 @@
-<meta name="robots" content="noindex">
-
 # New Relic 
 
 Use New Relic integration to collect billable and usage metrics for your organization.
