@@ -19,5 +19,8 @@
     - [Workflow Builder](cost-intelligence/tutorials/workflow-builder/)
       - [Sending Emails](cost-intelligence/tutorials/workflow-builder/configuring-and-sending-emails)
       - [Basic Alerts for Budgets and Thresholds](cost-intelligence/tutorials/workflow-builder/configuring-budgets-thresholds)
+    - [Integrations](cost-intelligence/tutorials/integrations/)
+      - [Datadog](cost-intelligence/tutorials/integrations/datadog)
+      - [New Relic](cost-intelligence/tutorials/integrations/new-relic)
     - [Administration](cost-intelligence/tutorials/administration/)
       - [FinOps Permission Policies](cost-intelligence/tutorials/administration/policies)
