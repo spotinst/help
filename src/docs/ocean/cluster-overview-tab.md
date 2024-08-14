@@ -181,7 +181,7 @@ level so you can see why the Ocean Autoscaler triggered a specific scale event w
 
 The graph displays a breakdown by lifecycle, which you can view by vCPU, Memory, or GPU, together with workload and headroom requests.
 
-<img width="652" alt="autoscaler-graph" src="https://github.com/spotinst/help/assets/159915991/30ac2b63-29b2-459e-9433-a33297f25eb4">
+![activity-graph-screen-1](https://github.com/user-attachments/assets/9be9c4db-ea65-4bd1-a195-dd549d76770a)
 
 The upper graph displays the autoscaling activity to analyze. By default, it displays a full set of activity curves. Click an item on the legend above the graph to turn its associated curve on or off.
 
@@ -204,7 +204,7 @@ To set the zoom level for the graph:
 2. Use the lower graph to zoom in or out of the selected period by dragging the sizing handles left or right.
 >**Tip**: Set the period on the graph to 12 hours or less to view autoscaling events, which are displayed as dots on the graph.
 
-<img width="652" alt="autoscaling-events" src="https://github.com/spotinst/help/assets/159915991/90035e20-8375-4207-8549-7a3f3314ed5e">
+![activity-graph-screen-2](https://github.com/user-attachments/assets/0583b815-7e68-4208-9edb-049171ccb3a6)
 
 To display the autoscaling activity at a specific point on the graph:
 
