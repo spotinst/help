@@ -187,6 +187,8 @@ Relevant for AWS Kubernetes.
 
 These attributes let you control utilization commitments (RI/SP) at the Virtual Node Group level.
 
+You might want to distribute reservation instances/savings plans according to Virtual Node Groups for different types of workloads on the same cluster.
+
 In the Spot API, under Virtual Node Groups > strategy, you can configure these attributes as either True or Falso:
 
  * `utilizeReservedInstances`: If there are free reserved instances within the AWS account, Ocean will utilize them before launching spot instances. The initial default value is inherited from the identical attribute at the cluster level. 
