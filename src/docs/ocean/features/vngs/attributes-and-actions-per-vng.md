@@ -185,9 +185,9 @@ Once configured, whenever the Ocean Autoscaler scales up, Ocean will automatical
 
 Relevant for AWS Kubernetes.
 
-These attributes let you control utilization commitments (RI/SP) at the Virtual Node Group level.
-
 You might want to distribute reservation instances/savings plans according to Virtual Node Groups for different types of workloads on the same cluster.
+
+Ocean provides attributes that let you control utilization commitments at the Virtual Node Group level.
 
 In the Spot API, under Virtual Node Groups > strategy, you can configure these attributes as either True or Falso:
 
