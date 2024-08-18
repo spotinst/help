@@ -2,6 +2,8 @@
 
 ## August 2024: Features and Enhancements 
 
+*  **OCN-0024: August 18, 2024:** (**<font color="#FC01CC">AWS Kubernetes</font>**) You can now set draining timeout (`drainingTimeout`) at the Virtual Node Group level. [Learn more...](https://docs.spot.io/ocean/features/scaling-kubernetes?id=draining-timeout-per-virtual-node-group-aws-kubernetes-only)
+
 *  **OCN-0023: August 14, 2024:** (**<font color="#FC01CC">AWS Kubernetes</font>**) Ocean's Cluster Overview dashboard now contains an Autoscaling Activity Graph to give you intuitive insights into the interaction between the Ocean infrastructure and the applications it supports. View cluster activity insights at a granular level to see why the Ocean Autoscaler triggered a specific scale event within the cluster. [Learn more...](https://docs.spot.io/ocean/cluster-overview-tab?id=autoscaling-activity-graph)
 
 *  **OCN-0022: August 11, 2024:** (**<font color="#FC01CC">GCP</font>**) You can now use committed use discounts (CUDs) with Ocean clusters. Committed use discounts provide discounted prices in exchange for customer commitment expense on GCP. [Learn more...](https://docs.spot.io/ocean/features/committed-use-discount)
