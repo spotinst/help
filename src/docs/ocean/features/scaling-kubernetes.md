@@ -121,7 +121,7 @@ To configure Accelerated scale-down
 
 ## Draining Timeout per Virtual Node Group (AWS Kubernetes Only)
 
-The draining timeout (drainingTimeout) is the time span that Ocean waits for the draining process to complete before terminating an instance. The default is 300 seconds.
+The draining timeout (`drainingTimeout`) is the time span that Ocean waits for the draining process to complete before terminating an instance. The default is 300 seconds.
 
 Setting the draining timeout at the Virtual Node Group level (rather than the cluster level) lets you:
 
