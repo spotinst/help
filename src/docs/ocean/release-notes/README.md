@@ -2,7 +2,7 @@
 
 ## August 2024: Features and Enhancements 
 
-*  **OCN-0025: August 18, 2024:** (**<font color="#FC01CC">AKS</font>**) For AKS only, you can now set a suspension hours (suspensionHours) time frame for critical periods to exempt your cluster from Ocean's scaling-down activities and ensure uninterrupted operations.[Learn more...](https://docs.spot.io/ocean/features/scaling-kubernetes?id=suspension-hours-to-suppress-ocean-restrict-scale-down-aks-only)
+*  **OCN-0025: August 18, 2024:** (**<font color="#FC01CC">AKS</font>**) For AKS only, you can now set a suspension hours (`suspensionHours`) time frame for critical periods to exempt your cluster from Ocean's scaling-down activities and ensure uninterrupted operations.[Learn more...](https://docs.spot.io/ocean/features/scaling-kubernetes?id=suspension-hours-to-suppress-ocean-restrict-scale-down-aks-only)
 
 *  **OCN-0024: August 18, 2024:** (**<font color="#FC01CC">AWS Kubernetes</font>**) You can now set draining timeout (`drainingTimeout`) at the Virtual Node Group level. The draining timeout is the time span that Ocean waits for the draining process to complete before terminating an instance. [Learn more...](https://docs.spot.io/ocean/features/scaling-kubernetes?id=draining-timeout-per-virtual-node-group-aws-kubernetes-only)
 
