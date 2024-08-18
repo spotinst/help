@@ -128,7 +128,7 @@ Setting the draining timeout at the Virtual Node Group level (rather than the cl
 * Minimize infrastructure costs by efficiently terminating nodes that are no longer needed,
 * Customize Virtual Node Groups based on the time it takes to terminate a workload.
 
- You can set the draining timeout via the [Spot API](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecCreate) or via [Terraform](https://registry.terraform.io/providers/spotinst/spotinst/latest/docs/resources/ocean_aws_launch_spec#draining_timeout).
+ You can set the draining timeout (under `strategy`) via the [Spot API](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecCreate) or via [Terraform](https://registry.terraform.io/providers/spotinst/spotinst/latest/docs/resources/ocean_aws_launch_spec#draining_timeout).
 
 ## Headroom
 
