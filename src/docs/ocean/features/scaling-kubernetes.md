@@ -130,6 +130,18 @@ Setting the draining timeout at the Virtual Node Group level (rather than the cl
 
  You can set the draining timeout (under `strategy`) via the [Spot API](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecCreate) or via [Terraform](https://registry.terraform.io/providers/spotinst/spotinst/latest/docs/resources/ocean_aws_launch_spec#draining_timeout).
 
+##  Suspension Hours to Suppress Ocean Restrict Scale-Down (AKS Only)
+
+You can set a suspension hours (`suspensionHours`) time frame for critical periods to exempt your cluster from Ocean's scaling-down activities and ensure uninterrupted operations.
+
+During suspension hours, Ocean Autoscaler scales down all instances. Suspension hours override the restricted scale-down setting, which prevents scale-down for time frames when there is no Ocean activity, such as bin packing, reverting to lower-cost nodes, or reverting to reserved instances.
+
+>**Note**: Shutdown hours are when the nodes in the cluster are taken down.
+
+You can only set the suspension hours via the [Spot API](https://docs.spot.io/api/#tag/Ocean-AKS/operation/oceanAKSClusterUpdate) (under Update Cluster).
+* To enable suspension hours, set `isEnabled` to TRUE
+* To set the time frame,  edit start and end times in `timeWindows`.
+
 ## Headroom
 
 One of Ocean’s key features for optimizing scaling is [_headroom_](ocean/features/headroom), a buffer of spare capacity ensuring that a cluster is always ready for a rapid application scale up. When you configure headroom in specific amounts of resources (i.e., vCPU, memory, and GPU), or specify headroom as a percentage of the cluster’s total requested resources, the cluster can scale workloads without waiting for new instances to be provisioned.
