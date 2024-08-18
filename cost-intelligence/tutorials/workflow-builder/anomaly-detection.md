@@ -24,7 +24,7 @@ The example below shows how to generate a metric that identifies the percentage 
 3. On the right panel, click the Bar chart <img height="18px" src="https://github.com/user-attachments/assets/b2800812-13f5-424e-a8be-087e44d7d372">.
 4. On the left panel, drag **ServiceCategory** to the <i>Values</i> field.
 
-   <video src="https://github.com/user-attachments/assets/72f9cbc4-1b49-4182-9125-e8f4111b9bf8">
+   <video src="https://github.com/user-attachments/assets/72f9cbc4-1b49-4182-9125-e8f4111b9bf8" controls>
 
 5. In the <i>Values</i> field, click the three vertical dots <img height="16px" alt="kebab" src="https://github.com/user-attachments/assets/4220ff97-90c3-4801-8edf-06f7addcf60a"> and select **Aggregation** > **Distinct Count**.
 6. In the menu in the right panel, click **Comparison**. The <i>Date Column</i> field opens. From the left panel, drag **BillingPeriodStart** into the <i>Date Column</i> field.
