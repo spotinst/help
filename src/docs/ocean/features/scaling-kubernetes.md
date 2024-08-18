@@ -119,6 +119,17 @@ To configure Accelerated scale-down
 
 3.  Optionally increase scale down further by increasing the maxScaleDownPercentage value up to 100%. 
 
+## Draining Timeout per Virtual Node Group (AWS Kubernetes Only)
+
+The draining timeout (`drainingTimeout`) is the time span that Ocean waits for the draining process to complete before terminating an instance. The default is 300 seconds.
+
+Setting the draining timeout at the Virtual Node Group level (rather than the cluster level) lets you:
+
+* Minimize infrastructure costs by efficiently terminating nodes that are no longer needed,
+* Customize Virtual Node Groups based on the time it takes to terminate a workload.
+
+ You can set the draining timeout via the [Spot API](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecCreate) or via [Terraform](https://registry.terraform.io/providers/spotinst/spotinst/latest/docs/resources/ocean_aws_launch_spec#draining_timeout).
+
 ## Headroom
 
 One of Ocean’s key features for optimizing scaling is [_headroom_](ocean/features/headroom), a buffer of spare capacity ensuring that a cluster is always ready for a rapid application scale up. When you configure headroom in specific amounts of resources (i.e., vCPU, memory, and GPU), or specify headroom as a percentage of the cluster’s total requested resources, the cluster can scale workloads without waiting for new instances to be provisioned.

@@ -15,6 +15,7 @@ The following is a list of attributes customizable per VNG in Ocean for AWS. Som
 
 - Associate Public IP (API only)
 - Block Device Mappings
+- [Draining Timeout](ocean/features/scaling-kubernetes?id=timeout-per-virtual-node-group-aws-kubernetes-only)
 - Elastic IPs
 - Headroom
 - Instance Types- whitelist or blacklist (these must be a subset of the instance types defined for the Ocean cluster.)
