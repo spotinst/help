@@ -24,13 +24,19 @@ The example below shows how to generate a metric that identifies the percentage 
 3. On the right panel, click the Indicator chart <img height="18" alt="Anomaly-indicatorChart" src="https://github.com/user-attachments/assets/7b750c6f-e8c2-483b-b9fd-c603eb93d22f">.
 
 4. On the left panel, drag **ServiceCategory** to the <i>Values</i> field.
+   <details>
+    <summary markdown="span">View clip</summary>
+    <video width=800 src="https://github.com/user-attachments/assets/26f8591c-46a6-453f-a660-fa4d896653b1" controls />
 
-   <video width=800 src="https://github.com/user-attachments/assets/26f8591c-46a6-453f-a660-fa4d896653b1" controls>
+    </details>
 
 5. In the <i>Values</i> field, click the three vertical dots <img height="16px" alt="kebab" src="https://github.com/user-attachments/assets/4220ff97-90c3-4801-8edf-06f7addcf60a"> and select **Distinct Count**.
 6. In the menu in the right panel, click **Comparison**. The <i>Date Column</i> field opens. From the left panel, drag **BillingPeriodStart** into the <i>Date Column</i> field.
+   <details>
+    <summary markdown="span">View clip</summary>
+    <video width=800 src="https://github.com/user-attachments/assets/61f78cd1-882f-4457-81d4-7865e69db7e1" controls />
 
-   <video width=800 src="https://github.com/user-attachments/assets/61f78cd1-882f-4457-81d4-7865e69db7e1" controls>
+    </details>
    
 8. Select the two time periods to compare between in the <i>Time Period</i> field and the <i>Comparison field</i>. In this example:
     * **Time Period**: select <i>Today</i>.
@@ -49,10 +55,12 @@ The example below shows how to generate a metric that identifies the percentage 
     <li>Click <b>Add Filters</b> again to add a filter. Select <b>ServiceCategory</b> from the <i>Columns</i> dropdown list.</li>
     <li>Search for and select <b>Compute</b>.</li>
        
-    The applied filters should appear as:
-    
-    <img width="150" alt="Anomaly-filters" src="https://github.com/user-attachments/assets/8a77ad68-7a92-4445-8b0b-c9f90bf2a90e">
+    <details>
+     <summary markdown="span">View image</summary>     
+     <img width="150" alt="Anomaly-filters" src="https://github.com/user-attachments/assets/8a77ad68-7a92-4445-8b0b-c9f90bf2a90e">
 
+     </details>
+    
     </ol>
 
 11. Click the <i>Untitled Chart</i> field and enter a unique name for the metric, such as **Anomaly—AWS Compute US-East**.
@@ -70,13 +78,20 @@ The example below shows how to create an alert flow. You can create more complex
 1. In the left menu of the Cost Intelligence console, click **Workflow Builder** > **Create New Flow**.
 2. Click the <i>Untitled</i> field and enter a name and description.
 3. Go to **Triggers** and drag **Scheduling** to <i>Add a trigger to start</i>. Configure it to start today, to never end, and repeat every 1 day.
-   
-   <video width=800 src="https://github.com/user-attachments/assets/6154d0ce-73a8-4829-b02a-37f5ada5d2a3" controls>
- 
+   <details>
+    <summary markdown="span">View clip</summary> 
+    <video width=800 src="https://github.com/user-attachments/assets/6154d0ce-73a8-4829-b02a-37f5ada5d2a3" controls />
+
+    </details>
+
 4. From the Conditions menu on the right panel, drag **If** to the <i>Trigger</i> widget in the workflow builder.
 
-   <video width=800 src="https://github.com/user-attachments/assets/716c4092-6b2d-4491-9eab-8d1d5e110cf5" controls>
-
+   <details>
+    <summary markdown="span">View clip</summary>
+    <video width=800 src="https://github.com/user-attachments/assets/716c4092-6b2d-4491-9eab-8d1d5e110cf5" controls />
+       
+    </details>
+    
 5. Click the arrow in the <i>If Field</i> widget. Select **If Metric**.
 6. Select:
     * **Metric**: Select the metric you created in Step 1. Tip: The metric you recently created is at the bottom of the list.
@@ -85,7 +100,11 @@ The example below shows how to create an alert flow. You can create more complex
     * **Value**: Enter an appropriate numeric value of the percentage.
 7. From the Send Actions menu on the right panel, drag [Send Email](cost-intelligence/tutorials/workflow-builder/configuring-and-sending-emails) under the **If** condition that was created in the previous steps.
 
-      <video width=800 src="https://github.com/user-attachments/assets/e2eddd9f-a3f5-420a-adc4-adc92faa7b75" controls>
+   <details>
+    <summary markdown="span">View clip</summary>
+      <video width=800 src="https://github.com/user-attachments/assets/e2eddd9f-a3f5-420a-adc4-adc92faa7b75" controls />
+         
+    </details>
 
 8. Configure the email:
     * **To**: You can configure the email to send to a number of email addresses.
