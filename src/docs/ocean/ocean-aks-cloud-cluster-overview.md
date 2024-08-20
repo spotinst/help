@@ -20,7 +20,7 @@ To access the Ocean Cluster Overview dashboard:
 
 ## Ocean Savings Panel
 
-placeholder for screencap
+![savings-tab-sample2](https://github.com/user-attachments/assets/d36f3ea4-215a-4eb1-bad3-a6acdd3533f6)
 
 The Ocean Savings panel contains a set of savings widgets (displayed as tabs), which show your savings according to Ocean’s main autoscaling processes for cluster optimization in a selected time range:  
 
@@ -57,9 +57,11 @@ This process ensures high resource utilization, reducing the number of nodes req
 
 To view these savings, click the **Bin Packing** tab (unless already displayed). 
 
+![bin-packing-tab](https://github.com/user-attachments/assets/9f1de767-b7c3-4336-9f16-bc150a914397)
+
 This tab displays: 
 
-* Scaled-down nodes: If one or more nodes have been scaled down, the number of scaled-down nodes appears. Click to view the number of nodes scaled down in the selected time range in the Bin Packing window. An entry for each scaled-down node is listed with these details:
+* Scaled-down nodes: If one or more nodes have been scaled down, the number of scaled-down nodes appears. Click to view the number of nodes scaled down in the selected time range in the Bin Packing window. 
   * Pie-chart - Virtual Node Group percentage breakdown for nodes.
   * Pie-chart - Lifecycle percentage breakdown (On-Demand, Savings Plans, Reserved Instances, and spots).
   * Node Name.
@@ -68,6 +70,9 @@ This tab displays:
   * VM Size
   * Lifecycle: (On-Demand, Savings Plans, Reserved Instances, and spots).
   * Scale-Down Timestamp, for example, 06/25/2023 09:23:15
+ 
+ ![bin-packing-sample](https://github.com/user-attachments/assets/1fe92079-590a-4fb2-a844-77e6c5e74621)
+
 * Resource savings from bin packing in the following units:
   * CPU resources saved in vCPU Hours.
   * Memory resources saved in GiB Hours.
