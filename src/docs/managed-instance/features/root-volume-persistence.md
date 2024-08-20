@@ -70,7 +70,3 @@ WMIC USERACCOUNT WHERE "Name='$Username'" SET PasswordExpires=FALSE
 ```
 
 > **Tip**: For the updated user data to take effect the  must be [Recycled](managed-node/features/managed-instance-actions).
-
-## What’s Next
-
-Learn more about [data volume persistence](managed-instance/features/data-volume-persistence).
