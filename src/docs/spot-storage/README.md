@@ -23,7 +23,3 @@ To achieve a simplified management experience, the dashboard aggregates the stor
 Spot’s analysis of your cloud provides several types of recommendations regarding the use of EBS volumes and file systems. We recommend that you click on all the recommended actions, review the affected objects, and take the appropriate actions.
 
 From the dashboard, you can see lists of specific items to remove or modify, mark your choices, and take action immediately.
-
-## What’s Next?
-
-Learn more about the Spot Storage [Dashboard](spot-storage/dashboard).
