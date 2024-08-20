@@ -25,8 +25,3 @@ When a task fails to start, ECS writes events that describe why the task was una
 The figure below shows how the Spot Infrastructure-aware Scheduler deals with various tasks types and assigns them to the right machine. If required – a machine with the right resources for the task to be executed is launched.
 
 <img src="/elastigroup/_media/ecs-tetris-05.png" />
-
-## What's Next?
-
-- [Get started with Elastigroup for Amazon ECS](elastigroup/tutorials/amazon-ecs/get-started-with-ecs-on-elastigroup).
-- Learn about easy task placement in your cluster by using [ECS constraints](elastigroup/tutorials/amazon-ecs/configure-attributes-for-task-placement-constraints).
