@@ -149,7 +149,3 @@ The percentage option allows you to add a charge proportionate to the overall sa
 The Flat Fee option allows you to add a fee to each subset or account. The fee will be the same each month.
 
 The Distributed Eco option allows you to distribute the fee evenly across accounts based on usage. From this option, you may choose Estimate or Spot Billing Cycle Actuals. Estimate will distribute the fee based on a tentative estimate of the usage, while Spot Billing Cycle Actuals will leverage data from the previous month to distribute the fee accordingly.
-
-## What’s Next?
-
-Learn about the [Workflow Details](eco/tutorials/view-workflow-details) summary and how to create a workflow report.

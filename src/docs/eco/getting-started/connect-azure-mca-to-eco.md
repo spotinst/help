@@ -73,7 +73,3 @@ Apply the Reservation Reader Role to the User Group created earlier.
 Apply the Billing Account Reader Access to the user group created earlier.
 
 <img src="/connect-your-cloud-provider/_media/connect-azure-ea-n010.png" />
-
-## What’s Next?
-
- Learn [how Eco works](eco/azure-tutorials/) to provide significant savings on your cloud spend.

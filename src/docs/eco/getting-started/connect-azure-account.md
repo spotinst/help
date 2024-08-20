@@ -132,8 +132,6 @@ Enter the following details in the App Registration page: Application ID, Tenant
 
 If you need assistance, read our [troubleshooting guide](https://docs.spot.io/eco/troubleshooting/azure-faq). Additionally, the Eco Azure team can assist with setting up the registered application and transferring the application credentials. Contact https://spot.io/contact/ for further information. 
  
-## What's Next?
-
 Let your account team know when you have completed the steps above.
 
 A detailed cost savings analysis will be available within 5 business days.

@@ -12,7 +12,3 @@ Eco enables you to get the most out of cloud commitment purchases. This includes
 * Reduced commitment lock-in 
 * FinOps synergy 
 * No Engineering Effort 
-
-## What's Next?
-
-Learn how to [Get Started with Eco](eco/getting-started/) today.

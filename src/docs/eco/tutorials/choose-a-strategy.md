@@ -30,7 +30,3 @@ This chart shows the yearly savings that can be achieved with reserved instances
 ## Apply Strategy
 
 Once you have marked a strategy, click Apply Strategy. Eco will then analyze your AWS strategy and start managing your RIs and Savings Plans.
-
-## What's Next?
-
-Learn about the Eco dashboard, where you can [View your Savings](eco/tutorials/view-your-savings) and get the full picture on your RI commitments.

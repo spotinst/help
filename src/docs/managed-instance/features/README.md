@@ -44,7 +44,3 @@ Once a stateful instance is deallocated, the stateful persisted resources (Image
  
 Please keep in mind AWS does not charge based on the number of snapshots as [EBS Snapshots](https://aws.amazon.com/ebs/pricing/) are stored incrementally, which means you are billed only for the changed data blocks stored. The main reason for the periodic snapshots is to make the snapshot process quicker and not wait too long to complete the snapshot creation process for any data changes in the volumes that are persisted. 
 In case of large Data volumes, you can use Reattach and single AZ configuration to avoid any data volume snapshots from being created. 
-
-## What's Next?
-
-This section describes Stateful Node features in detail. To learn about Stateful Node, choose a topic in the sidebar on the left.

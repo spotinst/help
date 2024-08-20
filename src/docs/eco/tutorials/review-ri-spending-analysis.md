@@ -21,7 +21,3 @@ The Analysis page presents the following information:
 Your next step is to click Choose Strategy. Eco will produce recommendations for an optimized RI portfolio, and you will specify your preferred commitment length.
 
 Once the strategy is set, Eco will move to the active execution stage and present the [Overview Dashboard](eco/tutorials/view-your-savings).
-
-## What's Next?
-
-Learn how to [Choose an RI Strategy](eco/tutorials/choose-a-strategy).

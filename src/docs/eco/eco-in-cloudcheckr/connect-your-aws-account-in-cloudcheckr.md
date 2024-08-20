@@ -79,7 +79,3 @@ Once the stack is created, copy the Spot Role ARN from the CloudFormation stack 
 <img src="/eco/_media/gettingstarted-aws-connect-08.png" width="546" height="484" />
 
 Once your Organization is connected to Eco, initial data processing will take up to 48 hours.
-
-## What’s Next?
-
-Learn how to [view your savings](eco/eco-in-cloudcheckr/view-savings-in-dashboard) in the dashboard.

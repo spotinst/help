@@ -37,7 +37,3 @@ This document describes how to swap the OS disk for stateful nodes using the Spo
 6. Click **Update** or **Update and resume**.  
   * **Update**: to change the configuration of the stateful node. 
   * **Update and resume**: to resume the stateful node with one click.
-
-## What's Next?
-
-Learn more about [persisting OS and data disks](managed-instance/azure/features/persist-os-data-disks). 

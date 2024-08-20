@@ -52,7 +52,3 @@ Stateful Nodes utilize a combination of snapshots, volumes and ENIs to ensure st
   - Snapshot Backups: During the launch of a new node, new EBS volumes are created and attached to it as part of the launch specifications.
 - [Persist Network Interface](managed-instance/features/network-persistence): New nodes are provisioned with the same private IP using the same Elastic Network Interface.
   - Private IP Pool – Specify a pool of private IPs to be used by the Stateful nodes.
-
-## What's Next?
-
-Learn more about [root volume persistence](managed-instance/features/root-volume-persistence).

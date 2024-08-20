@@ -46,7 +46,3 @@ This is a strategic replacement intended to revert back to spot after falling ba
 ### Revert to Preferred Node Types
 
 This is a strategic replacement intended to change the market of the underlying spot node to a preferred type. This is performed according to the maintenance window configuration.
-
-## What’s Next?
-
-Learn more about [Stateful Node Actions](managed-instance/features/managed-instance-actions).
