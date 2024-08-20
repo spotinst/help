@@ -184,9 +184,8 @@ For more information, see [Scheduling in Elastigroup](elastigroup/features/core-
 
 3. Click Create and launch your new EMR cluster.
 
-## What’s Next?
 
-Learn more about:
+## Learn More About
 
 - [Scaling Policies for EMR](elastigroup/tools-integrations/elastic-mapreduce/scaling-policies-for-emr)
 - [Termination policies for EMR](elastigroup/tools-integrations/elastic-mapreduce/termination-policies-for-emr)
