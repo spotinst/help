@@ -29,7 +29,3 @@ In the Events filter, you can choose one or more of the following events to show
 ## Download
 
 Click Download to obtain a CSV file of the log. The downloaded file includes all the records in the log, and is not according to any of the filters you may have applied.
-
-## What’s Next?
-
-Learn more about [Spot Storage features](spot-storage/).

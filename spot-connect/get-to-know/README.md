@@ -57,7 +57,3 @@ Webhook URL requires an API key to authenticate. For instance, the API key can b
 Postman can be used to quickly test the execution of the workflow with example data provided in the body.
 
 <img src="/spot-connect/_media/get-to-know-wkflw-bldr-7.png" />
-
-## What's Next?
-
-Create your first workflow with [Spot integration](spot-connect/get-to-know/create-first-workflow-spot) or [AWS integration](spot-connect/get-to-know/create-first-workflow-aws).

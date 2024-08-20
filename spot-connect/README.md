@@ -26,7 +26,3 @@ In addition, Spot Connect integrates third-party applications as well as manage 
 Spot Connect also allows users to optimize and automate public cloud operations to essentially deploy and automate the management of a large number of applications on the public cloud.
 
 From the menu on the left, you can navigate to any of the reference documentation that covers Spot Connect's components: integrations and workflows.
-
-## What's Next?
-
-Get to know the [Workflow Builder](spot-connect/get-to-know/).  
