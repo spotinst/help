@@ -26,9 +26,3 @@ To set the preferred AZ parameter for your Elastigroup, you can use the Elastigr
 ``` 
 
 For detailed instructions on using the Elastigroup API to set the preferred AZ parameter, refer to the [Elastigroup API documentation](https://docs.spot.io/api/#tag/Elastigroup-Azure-Spot-VMs).
-
-## What's next?
-
-Learn about [shutdown scripts](elastigroup/features-azure/shutdown-script-in-elastigroup-for-azure).
-
-  

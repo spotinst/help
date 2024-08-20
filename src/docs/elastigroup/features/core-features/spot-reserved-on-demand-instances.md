@@ -17,9 +17,4 @@ AWS offers a discount of 31-75% in exchange for a long-term commitment. The exac
 ## Utilize Commitment Plans 
 
 Elastigroup assists in optimizing the utilization of account commitment plans to ensure minimal waste. The Utilize Commitment Plans feature enables Elastigroup to check On-demand instances to ensure there aren’t any vacant savings plans or reserved instances that match instance types defined in its configuration.  
-Note: The default behavior of this feature is to utilize commitment plans associated to the connected cloud account. If you want to enable cross-account utilization, contact our support team.  
-
-## What's Next?
-
-- Get started and [launch your first Elastigroup](elastigroup/getting-started/create-an-elastigroup-for-aws).
-- Learn more about [how Spot works](elastigroup/features/core-features/market-scoring-managing-interruptions).
+Note: The default behavior of this feature is to utilize commitment plans associated to the connected cloud account. If you want to enable cross-account utilization, contact our support team.

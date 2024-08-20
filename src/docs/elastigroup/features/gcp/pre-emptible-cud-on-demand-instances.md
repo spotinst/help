@@ -21,8 +21,3 @@ Unlike Preemptible VMs that can be terminated by GCP for up to 24 hours, Spot VM
 ## Committed Use Discounts (CUD)
 
 GCE offers a discount of 37-55% in exchange for a long-term commitment. The exact discount depends on the length of commitment (1 or 3 years), the instance type and region.
-
-## What's Next?
-
-- [Launch your first Elastigroup](elastigroup/getting-started/create-an-elastigroup-for-gcp).
-- Learn more about [Elastigroups](elastigroup/getting-started/elastigroup-for-gcp).

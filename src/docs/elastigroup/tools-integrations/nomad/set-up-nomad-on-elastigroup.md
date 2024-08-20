@@ -42,6 +42,3 @@ sudo nomad agent -config client.hcl -node <CustomNodeName> &
 
 The user data script will register new resources with the existing Nomad lead primary-server. Upon execution, the instance will be fully integrated into the current Nomad cluster. During startup, the node name of the instance will be overwritten in order to identify the Instance. The address of the Nomad primary-server should be injected into the configuration in order for the instance to register itself with the server. Upon instance termination, when an instance is about to be detached from the group, Elastigroup will fetch the agent clients and filter the id according to the hostname and instigate a draining procedure before the resource is detached in order to ensure complete draining and graceful termination.
 
-## What's Next?
-
-Head to Elastigroup's [Use Cases](https://console.spotinst.com/#/aws/ec2/elastigroup/create/setup) to explore other supported services and integrations.

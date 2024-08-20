@@ -13,8 +13,3 @@ Based on historical and statistical data, Spot's Elastigroup predicts preemption
 To get started with Spot Elastigroup on Azure, begin by connecting your Spot Account with Azure.
 
 Note that you can take a Demo tour of the console before actually connecting your Account, by selecting the `Get a Console Walkthrough` from the Cloud Provider selection screen.
-
-## What's Next?
-
-- [Connect your Azure account](connect-your-cloud-provider/azure-account)
-- [Create an Elastigroup](elastigroup/getting-started/create-an-elastigroup-for-azure)

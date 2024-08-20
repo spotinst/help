@@ -21,7 +21,3 @@ In the event of a fallback to on-demand, when the Elastigroup launches on-demand
 The Custom option is used to limit the replacement of on-demand instances to specific time windows. Multiple maintenance time windows can be selected. Below is an example of a maintenance time window set for Saturdays, from 00:00 (UTC) to 04:00 (UTC).
 
 <img src="/elastigroup/_media/corefeatures-maintenancewindow-01.png" />
-
-## What's Next?
-
-Learn more about [scheduling](elastigroup/features/core-features/scheduling).

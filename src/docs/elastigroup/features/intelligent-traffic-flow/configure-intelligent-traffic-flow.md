@@ -62,7 +62,3 @@ If you would like to configure the advanced health check settings, click the arr
 ## Autohealing
 
 After you complete the Advanced Health Check Settings, continue to the [Autohealing](elastigroup/tutorials/elastigroup-tasks/create-an-elastigroup-from-scratch?id=autohealing) section and click the arrow to open the Autohealing configuration. In this section, you must define the minimum healthiness parameter, which is important for the migration process.
-
-## What’s Next?
-
-Learn more about how the [Migration Process](elastigroup/features/intelligent-traffic-flow/migration-process) works.

@@ -98,7 +98,3 @@ Now another Elastigroup target group is added.
 <img src="/elastigroup/_media/features-itf-migration-process-11.png" width="476" height="162" />
 
 In cases where there are more than three Elastigroup target groups, this process is repeated until all the target groups are added, and then Elastigroup continues to Step 5 above.
-
-## What’s Next?
-
-Learn more about the [Load Balancers](elastigroup/tutorials/elastigroup-actions-menu/view-load-balancers) tab.

@@ -37,7 +37,3 @@ BDM in group configuration (JSON):
 <img src="/elastigroup/_media/corefeatures-config-alerts-05.png" />
 
 Resolution: Remove the BDM configuration block from the group's JSON.
-
-## What's Next?
-
-Learn more about [Block Device Mapping](elastigroup/features/compute/block-device-mapping).
