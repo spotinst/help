@@ -86,7 +86,3 @@ Once you have added the script for installing the Spot Agent, you can add the ac
 - The shutdown script does not run interactively. You cannot include commands that require user feedback (such as rm without the -f flag).
 
 > **Tip**: It is recommended to define at least 120 seconds as the draining timeout to give the shutdown script enough time to run properly.  
-
-## What’s Next?
-
-Learn more about [Health Checks and Autohealing](https://docs.spot.io/elastigroup/tutorials/azure/set-health-checks-and-autohealing).
