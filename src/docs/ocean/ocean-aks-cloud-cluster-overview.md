@@ -71,7 +71,12 @@ This tab displays:
   * Lifecycle: (On-Demand, Savings Plans, Reserved Instances, and spots).
   * Scale-Down Timestamp, for example, 06/25/2023 09:23:15
  
- ![bin-packing-sample](https://github.com/user-attachments/assets/1fe92079-590a-4fb2-a844-77e6c5e74621)
+<details>
+   <summary markdown="span">View image</summary>
+ 
+<img src="https://github.com/user-attachments/assets/1fe92079-590a-4fb2-a844-77e6c5e74621">
+
+ </details>
 
 * Resource savings from bin packing in the following units:
   * CPU resources saved in vCPU Hours.
@@ -80,7 +85,7 @@ This tab displays:
 
 ## Ocean Managed Nodes and Resources Panel
 
-placeholder for screencap
+![managed-nodes-resources](https://github.com/user-attachments/assets/3b5a9bb0-b3d2-4b75-b510-88f5de04afbc)
 
 This panel contains a set of widgets that display categorized information on your managed nodes and resources.
 
@@ -92,7 +97,7 @@ This panel contains a set of widgets that display categorized information on you
 
 ## Resource Allocation Panel
 
-placeholder for screencap
+![resource-allocation-sample](https://github.com/user-attachments/assets/7aa25b61-8260-4aa4-a122-274786d1ef15)
 
 This panel displays a cluster-level summary with widgets for CPU /Memory /GPU resources allocated to pods. You can review allocation trends over time. Use this information to verify that infrastructure utilization is maintained at 70-80%.
 * CPU
