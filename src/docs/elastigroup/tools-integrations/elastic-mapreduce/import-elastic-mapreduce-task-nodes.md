@@ -10,6 +10,10 @@ _Wrap_: Elastigroup manages scaling of only the task nodes of an existing EMR cl
 
 The procedures below describe each import strategy in detail.
 
+Amazon EMR can occasionally get stuck with a Resizing status during changes in an instance group capacity. In this case, the actual number of running instances will not match the request number. Learn how [Elastigroup EMR Auto-Recovery](elastigroup/tools-integrations/elastic-mapreduce/elastigroup-auto-recover-for-emr) process handles these situations.
+
+Check out our [API Reference](https://docs.spot.io/api/) and learn how to create an Elastigroup to run your task nodes using RESTful APIs.
+
 ## Prerequisites
 
 - A verified Spot account
@@ -104,7 +108,3 @@ You can define scaling policies as described in [Create a New EMR Cluster](elast
 
 In the Review tab, you can review your EMR cluster configuration in the JSON format that Elastigroup will use to create the Elastigroup. If you need to make changes, you can go back to the other tabs and edit, or you can make your changes directly in the JSON. When you are finished reviewing, click Create.
 
-## What’s Next?
-
-- Amazon EMR can occasionally get stuck with a Resizing status during changes in an instance group capacity. In this case, the actual number of running instances will not match the request number. Learn how [Elastigroup EMR Auto-Recovery](elastigroup/tools-integrations/elastic-mapreduce/elastigroup-auto-recover-for-emr) process handles these situations.
-- Check out our [API Reference](https://docs.spot.io/api/) and learn how to create an Elastigroup to run your task nodes using RESTful APIs.
