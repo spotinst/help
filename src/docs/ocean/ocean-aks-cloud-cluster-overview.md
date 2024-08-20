@@ -108,6 +108,12 @@ To view the details you need:
 > * % Workload allocation.
 > * % Total allocation (Including headroom).
 
+## Related Topics
+
+[Scaling - Kubernetes](https://docs.spot.io/ocean/features/scaling-kubernetes)
+
+
+
 
 
 
