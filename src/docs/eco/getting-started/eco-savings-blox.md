@@ -17,7 +17,3 @@ With or without Blox, Eco continues to manage all savings. Using Blox, Eco guara
 If the customer usage dips below the Blox on-demand equivalent, Eco will do everything possible to reduce waste on the customer’s behalf.
 
 At the present time, there is no Eco dashboard component related to the Blox offering.
-
-## What’s Next?
-
-Learn more about Eco’s cost savings features in the [Eco Tutorials](eco/tutorials/).
