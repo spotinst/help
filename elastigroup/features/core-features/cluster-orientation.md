@@ -33,7 +33,3 @@ The Availability orientation is primarily suitable for `jobs` or `batch` computi
 Optimize towards the most cost-effective infrastructure.
 
 In addition to basic cost optimization of moving workloads from on-demand to spot, Elastigroup will take an aggressive approach to cost-savings by replacing spot instances with less expensive instances whenever a less expensive market becomes available, even when no interruption is anticipated.
-
-## What's Next?
-
-- [Create an Elastigroup](elastigroup/getting-started/create-an-elastigroup-for-aws).

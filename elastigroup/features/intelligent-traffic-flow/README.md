@@ -44,7 +44,3 @@ The weights are used to ensure that whatever the capacity of the instances, each
 ## Application Load Balancer Quotas
 
 Your AWS Application Load Balancers are subject to quotas defined by AWS. For more information, see [Quotas for your Application Load Balancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-limits.html).
-
-## What’s Next?
-
-Learn more about setting up ITF in [Configure Intelligent Traffic Flow](elastigroup/features/intelligent-traffic-flow/configure-intelligent-traffic-flow).

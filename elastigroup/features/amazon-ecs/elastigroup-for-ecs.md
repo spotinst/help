@@ -22,7 +22,3 @@ Whenever an EC2 instance is scheduled for a replacement (Scale down activity or 
 
 Elastigroup automatically scales the infrastructure cluster up and down based on tasks and services utilization, providing optimized container placement.
 
-## What's Next?
-
-- Learn more about the [automatic autoscaler for ECS](elastigroup/features/amazon-ecs/automatic-autoscaler-for-ecs).
-- Start integrating your [ECS cluster with Elastigroup](elastigroup/tutorials/amazon-ecs/get-started-with-ecs-on-elastigroup).

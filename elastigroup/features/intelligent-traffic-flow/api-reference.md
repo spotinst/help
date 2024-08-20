@@ -85,7 +85,3 @@ The table below shows the description of each object and parameter in the API.
 | targetGroupConfig.tags                       | array of object     | Optional (default empty)                           |                                                                                                             | The tags to assign to the target group.                                                                                                                                                                                   |
 | targetGroupConfig.tags.tagKey                | String              | Optional (required - can’t create tag without key) |                                                                                                             |                                                                                                                                                                                                                           |
 | targetGroupConfig.tags.tagValue              | String              | Optional (default empty string)                    |                                                                                                             |                                                                                                                                                                                                                           |
-
-## What's Next?
-
-Learn more about the Spot by NetApp [API Reference](https://docs.spot.io/api/).

@@ -46,7 +46,3 @@ The major parts of the setup include:
 - Instance Availability
 
 The detailed procedure and parameter definitions for configuring predictive rebalancing are described in [Create an Elastigroup from Scratch](elastigroup/tutorials/elastigroup-tasks/create-an-elastigroup-from-scratch-a.md).
-
-## What’s Next?
-
-Learn more about [Cluster Orientation](elastigroup/features/core-features/cluster-orientation.md) and [Equal AZ Instance Distribution](elastigroup/features/core-features/equal-az-instance-distribution-orientation.md).

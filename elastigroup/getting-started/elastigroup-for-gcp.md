@@ -13,8 +13,3 @@ Based on historical and statistical data, Spot's Elastigroup predicts preemption
 To get started with Spot Elastigroup on GCP, begin by connecting your GCP Project to your Spot Account.
 
 Note that you can take a Demo tour of the console before actually connecting your Account, by selecting Get a Console Walkthrough from the Cloud Provider selection screen.
-
-## What's Next?
-
-- [Connect your GCP project](connect-your-cloud-provider/gcp-project)
-- [Create an Elastigroup](elastigroup/getting-started/create-an-elastigroup-for-gcp)

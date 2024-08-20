@@ -112,7 +112,3 @@ The step scaling parameters (e.g., Action Type, Threshold, Amount) are the same 
 ## Configure Simple Scaling with Multiple Metrics
 
 You can configure simple scaling to use multiple metrics when you create an Elastigroup or by editing an existing Elastigroup. For the detailed procedure, see [Use Multiple Metrics with Simple Scaling](elastigroup/features/scaling/multiple-metrics?id=use-multiple-metrics-with-simple-scaling).
-
-## What’s Next?
-
-Learn more about the Metric List and how to set up [Multiple Metrics](elastigroup/features/scaling/multiple-metrics).
