@@ -49,7 +49,41 @@ This tab displays:
 * Memory resources in GiB Hours.
 * GPU resources in GPU Hours. 
 
+## Ocean Savings from Bin Packing
 
+In the context of autoscaling, bin packing savings are calculated based on the vCPU, memory, and GPU resources of the nodes that have been [Scaled Down](https://docs.spot.io/ocean/features/scaling-kubernetes?id=scale-down) by the Ocean Autoscaler. Once a minute, Ocean simulates whether any running pods can be moved to other nodes within the cluster. If so, Ocean drains those nodes to ensure continuous infrastructure optimization and increased cloud savings.   
+
+This process ensures high resource utilization, reducing the number of nodes required and the overall cost. This efficient resource allocation shows you how much you're saving. 
+
+To view these savings, click the **Bin Packing** tab (unless already displayed). 
+
+This tab displays: 
+
+* Scaled-down nodes: If one or more nodes have been scaled down, the number of scaled-down nodes appears. Click to view the number of nodes scaled down in the selected time range in the Bin Packing window. An entry for each scaled-down node is listed with these details:
+  * Pie-chart - Virtual Node Group percentage breakdown for nodes.
+  * Pie-chart - Lifecycle percentage breakdown (On-Demand, Savings Plans, Reserved Instances, and spots).
+  * Node Name.
+  * Virtual Node Group: You can click the link for a listed VNG to display your custom VNG details.
+  * Node Pool
+  * VM Size
+  * Lifecycle: (On-Demand, Savings Plans, Reserved Instances, and spots).
+  * Scale-Down Timestamp, for example, 06/25/2023 09:23:15
+* Resource savings from bin packing in the following units:
+  * CPU resources saved in vCPU Hours.
+  * Memory resources saved in GiB Hours.
+  * GPU resources saved in GPU Hours.
+
+## Ocean Managed Nodes and Resources Panel
+
+placeholder for screencap
+
+This panel contains a set of widgets that display categorized information on your managed nodes and resources.
+
+* Ocean-Managed Nodes: a widget that shows the following:
+  * Pie-chart - numerical breakdown for managed/unmanaged nodes. Hover over the chart to view more information.
+  * List of % and # of Spot. regular (on-demand) and unmanaged nodes.
+* Ocean Managed Resources: a widget showing your managed resources.
+  * CPU - Total # units, #, and % for managed spot nodes / regular nodes.
 
 
 
