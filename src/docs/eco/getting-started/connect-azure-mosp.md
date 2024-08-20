@@ -65,7 +65,3 @@ To apply the Reservation Reader role to the user group, complete the procedure b
 3. For the first user, click Invite. This sends a notification to the Eco guest user via email.
 
 <img src="/connect-your-cloud-provider/_media/connect-azure-ea-n008.png" width="500" />
-
-## What’s Next?
-
- Learn [how Eco works](eco/azure-tutorials/) to provide significant savings on your cloud spend.
