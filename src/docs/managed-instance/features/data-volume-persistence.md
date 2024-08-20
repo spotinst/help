@@ -84,7 +84,3 @@ Stateful Nodes perform various backend actions for different states of the nodes
 <img src="/managed-instance/_media/data-volume-persistence-delete.png" />
 
 > **Tip**: Data storage time can be configured on an hourly basis. For more information, reach out to the Customer Support team.
-
-## What’s Next?
-
-Learn more about [network persistence](managed-instance/features/network-persistence).
