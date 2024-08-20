@@ -61,13 +61,13 @@ To view these savings, click the **Bin Packing** tab (unless already displayed).
 
 This tab displays: 
 
-* Scaled-down nodes: If one or more nodes have been scaled down, the number of scaled-down nodes appears. Click to view the number of nodes scaled down in the selected time range in the Bin Packing window. 
+* Number of Scaled-down nodes: If one or more nodes have been scaled down, click the link on the button to view details. 
   * Pie-chart - Virtual Node Group percentage breakdown for nodes.
   * Pie-chart - Lifecycle percentage breakdown (On-Demand, Savings Plans, Reserved Instances, and spots).
   * Node Name.
   * Virtual Node Group: You can click the link for a listed VNG to display your custom VNG details.
-  * Node Pool
-  * VM Size
+  * Node Pool (name of node pool)
+  * VM Size: For example, standard_f4s
   * Lifecycle: (On-Demand, Savings Plans, Reserved Instances, and spots).
   * Scale-Down Timestamp, for example, 06/25/2023 09:23:15
  
