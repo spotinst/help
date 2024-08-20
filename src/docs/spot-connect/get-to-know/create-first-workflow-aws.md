@@ -123,7 +123,3 @@ In the left main menu, click **Connect** and **Executions**. This page gives a g
 After the execution of the workflow, you can view the status of your EC2 instance in the AWS console to see that it has shut down. You can see that the EC2 instance with the name “demo-spotconnect” state changed to Stopped.
 
 <img src="/spot-connect/_media/create-wrkflw-aws-9.png" />
-
-## What's next?
-
-Learn how to [create your first workflow with Spot](spot-connect/get-to-know/create-first-workflow-spot).
