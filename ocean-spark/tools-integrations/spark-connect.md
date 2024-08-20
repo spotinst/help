@@ -18,7 +18,7 @@ To start a Spark application with SparkConnect server, either run the mainClass 
 ```json
 "mainClass": "com.netapp.spark.SparkConnectServer",
 "deps": {
-    "packages": ["org.apache.spark:spark-connect_2.12:3.5.1", "com.netapp.spark:spark-connect:1.2.9"],
+    "packages": ["org.apache.spark:spark-connect_2.12:3.4.3", "com.netapp.spark:spark-connect:1.2.9"],
     "repositories": ["https://us-central1-maven.pkg.dev/ocean-spark/ocean-spark-adapters"]
 }
 ```
@@ -30,7 +30,7 @@ To start a Spark application with SparkConnect server, either run the mainClass 
     "spark.plugins": "org.apache.spark.sql.connect.SparkConnectPlugin"
 },
 "deps": {
-    "packages": ["org.apache.spark:spark-connect_2.12:3.5.1"]
+    "packages": ["org.apache.spark:spark-connect_2.12:3.4.3"]
 }
 ```
 
@@ -94,10 +94,17 @@ curl -k -X POST 'https://api.spotinst.io/ocean/spark/cluster/{clusterId}/app?acc
   "jobId": "spark-connect",
   "configOverrides": {
     "type": "Scala",
-    "sparkVersion": "3.4.0",
-    "mainClass": "org.apache.spark.connect.sql.service.SparkConnectServer",
+    "sparkVersion": "3.4.3",
+    "mainApplicationFile": "local:///opt/spark/jars/spark-core_2.12-3.4.3.jar",
+    "mainClass": "com.netapp.spark.SparkConnectServer",
     "deps": {
-      "packages": ["org.apache.spark:spark-connect_2.12:3.4.1"]
+      "packages": [
+        "org.apache.spark:spark-connect_2.12:3.4.3",
+        "com.netapp.spark:spark-connect:1.2.9"
+      ],
+      "repositories": [
+        "https://us-central1-maven.pkg.dev/ocean-spark/ocean-spark-adapters"
+      ]
     }
   }
 }
