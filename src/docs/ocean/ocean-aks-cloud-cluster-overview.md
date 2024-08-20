@@ -104,7 +104,7 @@ This panel displays a cluster-level summary with widgets for CPU /Memory /GPU re
 * Memory
 * GPU
 
-Each widget displays curves for:
+Each widget displays:
 * % Workload allocation.
 * % Total allocation (including headroom). Total workload allocation percentage (includes only running pods, running headroom pods, and running DaemonSets pods that are scheduled on Ocean nodes).
   
