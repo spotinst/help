@@ -15,7 +15,7 @@ Ocean continuously analyzes the utilization of your nodes in the cloud infrastru
 ## Access the Ocean Cloud Cluster Overview
 
 To access the Ocean Cluster Overview dashboard: 
-1. In the left main menu, click Ocean > Cloud Clusters.
+1. click **Ocean > Cloud Clusters**in the left main menu.
 2. Select a cluster from the list of clusters. 
 
 ## Ocean Savings Panel
