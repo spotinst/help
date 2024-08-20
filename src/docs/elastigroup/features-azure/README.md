@@ -9,7 +9,3 @@ drive extreme cost-efficiency, and simplify infrastructure management. This incl
 - Dramatic savings - access to spare compute capacity for up to 90% less than pay-as-you-go pricing
 
 Elastigroup uses machine learning and analytics to automate and optimize cloud infrastructure on Azure, freeing application teams to focus on their applications, without worrying about their infrastructure.
-
-## What's Next?
-
-- This section describes Elastigroup features relating specifically to use with the Microsoft Azure platform. To learn more, choose a topic in the sidebar on the left.
