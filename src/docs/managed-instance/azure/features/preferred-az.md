@@ -25,8 +25,4 @@ To set the preferred AZ parameter for your Stateful Node, you can use the Statef
   "preferredZone": "1", 
 ```
 
-For detailed instructions on using the Stateful Node API to set the preferred AZ parameter, refer to the [Stateful Node API documentation](https://docs.spot.io/api/#tag/Elastigroup-Azure-Spot-VMs). 
-
-## What's next? 
-
-Learn about more [stateful node actions](managed-instance/azure/features/actions).  
+For detailed instructions on using the Stateful Node API to set the preferred AZ parameter, refer to the [Stateful Node API documentation](https://docs.spot.io/api/#tag/Elastigroup-Azure-Spot-VMs).
