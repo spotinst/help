@@ -135,7 +135,3 @@ A filterable table and corresponding chart which displays your commitments in a 
 #### Export Data
 
 To export the Commitment Usage Distribution Over Time Details table to a CSV file, click Export above the table.
-
-## What's Next?
-
-Learn more about Eco in the [Eco FAQ](eco/troubleshooting/eco-faq).
