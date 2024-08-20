@@ -93,8 +93,6 @@ Windows:
 <powershell> Write-Host "Goodbye old instance"
 ```
 
-## What's Next?
-
 The system also supports a signal to let the Elastigroup know that the instance is ready for shutdown. This signal can be used at the end of the shutdown script.
 
 Learn about the INSTANCE_READY_TO_SHUTDOWN signal in [Using Signals in Elastigroups](elastigroup/features/compute/using-signals-in-elastigroups).
