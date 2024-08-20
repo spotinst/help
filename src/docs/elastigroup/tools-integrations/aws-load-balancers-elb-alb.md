@@ -23,7 +23,3 @@ To connect a load balancer to an existing Elastigroup, do the following:
 2. When the Elastigroup page opens, go to the Actions menu and click Edit Configuration.
 3. Go to the Compute tab and scroll down to Load Balancers. Complete the Load Balancer and Autohealing configurations as described in [Import an Existing Elastic Load Balancer](elastigroup/tutorials/elastigroup-tasks/join-an-existing-elb).
 4. Save your updates to the configuration.
-
-## What’s Next?
-
-Learn more about Elastigroup [Capacity Management](elastigroup/features/core-features/elastigroup-capacity-instances-or-weighted).
