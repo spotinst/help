@@ -9,7 +9,3 @@ Elastigroup also gives Azure users more flexibility and control over infrastruct
 - Improving infrastructure efficiencies by using the built-in scheduling mechanism to determine exact running hours for stateful nodes.
 - Easily managing stateful resources such as adding and removing data disks.
 - Taking actions on nodes (e.g., pause, resume, recycle, and delete) in just a few clicks.
-
-## What’s Next?
-- Learn how to [manage your stateful nodes](managed-instance/azure/tutorials/manage).
-- Learn more about [stateful node features](managed-instance/azure/).
