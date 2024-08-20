@@ -57,8 +57,3 @@ When the network persistency is also activated, the following actions will be do
 * Snapshots will be taken from the Azure VM resources (i.e., OS disk and data disks) and the resources will be kept for 96 hours (configurable in the API).
 * A new VM will be launched with new resources (using the saved snapshots) and the original private and public IP addresses.
 * The original data resources will be deleted at the end of the 96 hour period.
-
-## What's Next?
-
-* Learn how to [create a stateful node from scratch](managed-instance/azure/getting-started/create-stateful-node).
-* Learn how to [manage your existing stateful nodes](https://docs.spot.io/managed-instance/azure/tutorials/manage?id=manage-stateful-nodes).  

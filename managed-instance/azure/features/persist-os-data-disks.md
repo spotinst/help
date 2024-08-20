@@ -25,7 +25,3 @@ The same disk is detached from the original VM and reattached to the newly launc
 A snapshot is taken from the disk while the VM is terminated. Once a new VM is launched, a new disk is created by restoring the previous disk’s snapshot.
 
 <img src="/elastigroup/_media/azure-persist-os-data-disks-02.png" width="200" />
-
-## What's Next?
-
-Learn more about [persisting the network](managed-instance/azure/features/persist-network).

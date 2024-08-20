@@ -86,7 +86,3 @@ Apply the Reservation Reader Role to the User Group created earlier.
    - Auth Type: Work or school account
    - Notification frequency: None
    - Lifecycle Notification Suppression: No
-
-## What’s Next?
-
-Learn [how Eco works](eco/azure-tutorials/) to provide significant savings on your cloud spend.

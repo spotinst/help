@@ -117,7 +117,3 @@ TotalSavings, RISavingsOnly, Eco RI Savings, SPSavingsOnly, and Eco SP Savings a
 ## Delete a Workflow
 
 You can delete a workflow from the Workflow Details page. In the upper right of the page, click Delete workflow.
-
-## What’s Next?
-
-Learn more about how to [Manage Subsets](eco/tutorials/manage-subsets).

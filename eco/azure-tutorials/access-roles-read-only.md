@@ -41,7 +41,3 @@ The Eco team requests users to assign the Azure Reservation Owner role to the 
 ### Savings Plan Purchaser Role
 
 The Eco team requests users to assign the Azure Savings Plan Purchaser role to the registered application in order to purchase a savings plan. 
-
-## What's Next?
-
-Learn more about [connecting your account for Eco analysis](eco/getting-started/connect-azure-ea-to-eco).

@@ -2,6 +2,8 @@
 
 A _subset_ is a group of accounts within an organization that are assigned to the same logical unit. Within your organization, you can create subsets of accounts for the purpose of analyzing data of several related accounts together and creating reports relevant to your organization.
 
+Once you have set up your subsets, you can view important information about the subsets in the Cost Analysis page. Learn more about viewing and filtering subset information in [Analyze your Costs](cloud-analyzer/tutorials/analyze-your-costs.md).
+
 Example scenarios that utilize subsets include:
 
 - A managed service provider (MSP) or reseller that manages customers and needs the ability to group several accounts together for cost analysis. For example, you can define each customer as a subset and then manage the AWS accounts for that customer as a unit.
@@ -89,7 +91,3 @@ If you would like to change the name of a subset, do the following:
 2. Select the name of the subset you need to rename.
 3. Click Edit subset name.
 4. Change the name and Save.
-
-## What’s Next?
-
-Once you have set up your subsets, you can view important information about the subsets in the Cost Analysis page. Learn more about viewing and filtering subset information in [Analyze your Costs](cloud-analyzer/tutorials/analyze-your-costs.md).

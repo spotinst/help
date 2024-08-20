@@ -13,7 +13,3 @@ Preferred Spot VM sizes enable you to set priority tiers on the Stateful Node co
 4. Click the **Compute** tab. Under VM Sizes, click **Spot** and then **Preferred** to select the preferred VM sizes. For example: 
 
 ![preffered-vm-size-2](https://github.com/spotinst/help/assets/106514736/eb12f225-4eb7-4240-b2a6-84e8b8151b11)
-
-## What’s Next? 
-
-Learn how to view your [stateful node’s information](managed-instance/azure/tutorials/view-details).  

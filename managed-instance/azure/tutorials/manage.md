@@ -83,7 +83,3 @@ The following parameters cannot be edited and are not included in the JSON confi
 `compute.os`
 
 > Tip: You can edit a node only when it is in Running or Paused state.
-
-## What’s Next?
-
-Learn more about the [Stateful Node Details](managed-instance/azure/tutorials/view-details) view.

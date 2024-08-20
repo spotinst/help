@@ -21,7 +21,3 @@ With data and IP persistence, instance auto-recovery, automated data, cross-AZ m
 ## Reliability, Efficiency and Cost Savings
 
 With Stateful Node, you can maintain your configurations with zero data loss while taking advantage of the cost savings provided by spot nodes. You can obtain dramatic cost reduction with maximum efficiency for stateful nodes running in AWS and Azure.
-
-## What’s Next?
-
-Learn more about the specific features provided in Elastigroup Stateful Node for [AWS](managed-instance/features/stateful-managed-instances) and [Azure](managed-instance/azure/).

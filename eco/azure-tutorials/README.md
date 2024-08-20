@@ -17,9 +17,3 @@ Eco uses those analytics to determine optimal purchasing strategies tailored to 
 ### Step 3: Act
 
 Based on those analytics and strategies, Eco helps you build and manage your portfolio of committed capacity purchases. Constantly tweaking strategies based on market availability and new data, Eco continuously buys, exchanges, cancels, and manages your portfolio to maximize savings with an optimal mix of reserved instances and savings plans.
-
-## What's Next?
-
-This section includes information you need to optimize your reserved instance and savings plan portfolio.
-
-

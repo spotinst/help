@@ -31,7 +31,3 @@ Using this action, you can choose to terminate the VM, delete disks, delete snap
 <img src="/elastigroup/_media/azure-stateful-node-actions-02a.png" width="350"/>
 
 Both the node and the selected resources will be deleted after 96 hours. You can use the [Delete Stateful Node API](https://docs.spot.io/api/#operation/azureStatefulNodeDelete) in order to specify a different time period to wait.
-
-## What’s Next?
-
-Learn how to [schedule stateful node actions](managed-instance/azure/features/schedule).
