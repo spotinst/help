@@ -59,9 +59,13 @@ If all the subnets set for a Virtual Node Group run out of available IP addresse
 
 In order to enable import of GKE clusters to Ocean and registration of new nodes in the cluster, the [Ocean Controller](ocean/tutorials/spot-kubernetes-controller/) will function as the approver of the signing requests instead of the GKE mechanism. This allows the Kubernetes mechanism to sign the request and let the node be registered to the cluster. The result is that Ocean can seamlessly scale up nodes in your Ocean-managed GKE cluster, and the nodes will benefit from the protection provided by the Shielded GKE Nodes feature.
 
+### Kubernetes namespaceSelector Scaling Constraint Label 
+
+Ocean Controller Version 2 supports the `namespaceSelector` scaling constraint label introduced in Kubernetes Version 1,24. When you apply this label, Ocean's Autoscaler scales up nodes based on the Namespace selector to schedule pods. [See Kubernetes documentation](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#namespace-selector).
+
 ## Scale Down
 
-Ocean proactively identifies underutilized nodes and [bin-packs](https://en.wikipedia.org/wiki/Bin_packing_problem) the pods on the nodes more efficiently to be able to scale down the nodes and reduce the cluster cost. This is reflected by a higher resource allocation. Every minute, Ocean simulates whether there are any running pods that can be moved to other nodes within the cluster. If so, Ocean drains those nodes (cordon the nodes and evicts the pods gracefully) to ensure continuous infrastructure optimization and increased cloud savings.
+Ocean proactively identifies underutilized nodes and [bin-packs](https://en.wikipedia.org/wiki/Bin_packing_problem) the pods on the nodes more efficiently to be able to scale down the nodes and reduce the cluster cost. A higher resource allocation reflects this. Every minute, Ocean simulates whether there are any running pods that can be moved to other nodes within the cluster. If so, Ocean drains those nodes (cordon the nodes and evicts the pods gracefully) to ensure continuous infrastructure optimization and increased cloud savings.
 
 ### Scale Down Behavior
 
