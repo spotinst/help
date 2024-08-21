@@ -13,7 +13,7 @@ To view your right-sizing recommendations and rules:
 3. Click the **Right Sizing** tab.  
 4. Click **Advanced Optimization**. 
 
-![right-sizing-workloads-opt-list-2](https://github.com/spotinst/help/assets/159915991/d119783f-015c-4b4a-9a1d-e559baea5a5f)
+![workload-optim-list](https://github.com/user-attachments/assets/919a8903-9906-4201-8a93-0a6240d92eec)
 
 The Advanced Optimization tab contains these lists:  
 
