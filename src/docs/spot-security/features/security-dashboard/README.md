@@ -57,7 +57,3 @@ The table shows the most prevalent alerts detected in your environment. You can 
 The Risks Over Time chart gives you a view of the risk trends over time. You can view the trends over a period of two weeks, one month or three months. The line represents the number of resources scanned. The bars show the number of risks per time block and are broken down in colors by severity.
 
 <img src="/spot-security/_media/spot-security-dashboard-e.png" />
-
-## What’s Next?
-
-Learn more about the detailed information you can see in the [Risk Analysis](spot-security/features/analyze-risks/) page.
