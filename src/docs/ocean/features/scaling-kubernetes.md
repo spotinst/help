@@ -61,7 +61,7 @@ In order to enable import of GKE clusters to Ocean and registration of new nodes
 
 ### Kubernetes namespaceSelector Scaling Constraint Label 
 
-Ocean Controller Version 2 supports the `namespaceSelector` scaling constraint label introduced in Kubernetes Version 1,24 for the GKE platform. When you apply this label, Ocean's Autoscaler scales up nodes based on the Namespace selector to schedule pods. [Learn more...](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#namespace-selector) about the `namespaceSelector` label.
+Ocean Controller Version 2 supports the `namespaceSelector` scaling constraint label introduced in Kubernetes Version 1,24. When you apply this label, Ocean's Autoscaler scales up nodes based on the Namespace selector to schedule pods. [See Kubernetes documentation](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#namespace-selector).
 
 ## Scale Down
 
