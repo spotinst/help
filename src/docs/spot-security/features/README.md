@@ -37,7 +37,3 @@ The Asset [Inventory](spot-security/features/inventory) provides a list of all a
 ### Compliance
 
 Spot Security provides information on how compliant each asset is with global security standards.
-
-## What’s Next?
-
-Learn more about the visibility provided in the [Dashboard](spot-security/features/security-dashboard).
