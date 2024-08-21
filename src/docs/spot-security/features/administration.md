@@ -4,7 +4,7 @@ The Administration page enables you to see an overview of all of the cloud accou
 
 To manage your accounts in the Spot console, click Administration in the menu on the left.
 
-
+Learn more about Spot Security [compliance](spot-security/features/compliance) with global security standards.
 
 ## View List of Groups
 
@@ -28,6 +28,3 @@ If it is your first time adding a new account, the Spot Security introductory pa
 To delete a cloud account, do the following:
 1. Mark one or more cloud accounts in the list.
 2. On the upper right, click Actions and Delete.
-
-## What’s Next?
-Learn more about Spot Security [compliance](spot-security/features/compliance) with global security standards.
