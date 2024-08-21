@@ -2,23 +2,27 @@
 
 Configuring an IDP to authenticate using SAML requires the following information:
 
-- Service Provider Information
+- Service provider information
 - Attributes
-- Spot Configuration
+- Spot configuration
 
 ## Service Provider Information
 
-- Single Sign-On URL (ACS URL): https://console.spotinst.com/auth/saml
+- Single sign-on URL (ACS URL): https://console.spotinst.com/auth/saml
 - Recipient URL: https://console.spotinst.com/auth/saml
-- RelayState (Used in IDP Initiated SSO):
-  1. Login to your Spot account as an Admin. Click the user icon on the top right side of the screen and click Settings.
-  2. Click the Security tab on the top and then select Identity Providers. Make a copy of the Relay State value.
+- RelayState used in IDP-initiated SSO:
+  <ol style="list-style-type: lower-alpha;">
+  <li>Sign in to your Spot account as an Admin.</li>
+  <li>In the Spot console, click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png">  > <b>Settings</b>.</li>
+  <li>Click <b>Security</b> > <b>Identity Providers</b>.</li>
+  <li>Make a copy of the Relay State value.</li>
+  </ol>
 
-The Relay State should be used while setting up the IDP. Google users should enter this value (as is) to the `start url` field under Service Provider Details.
+The Relay State should be used while setting up the IDP. Google users should enter this value (as is) to the `start url` field under **Service Provider Details**.
 
 ## Attributes
 
-We expect the following attributes to be sent to the SAML response:
+The following attributes should be sent to the SAML response:
 
 - Email
 - FirstName
@@ -26,12 +30,7 @@ We expect the following attributes to be sent to the SAML response:
 
 ## Spot Configuration
 
-1. Login to your Spot account as an Admin.
-2. Click on the user icon on the top right side of the screen and click Settings.
-
-<img src="/administration/_media/custom-saml-01.png" width="298" height="300" />
-
-3. Click on the Security tab on the top and then select Identity Providers.
-4. Click BROWSE, Select your metadata file, and click SAVE.
-
-<img src="/administration/_media/custom-saml-02.png" width="484" height="302" />
+1. Sign in to your Spot account as an Admin.
+2. In the Spot console, click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png">  > **Settings**.
+3. Click **Security** > **Identity Providers**.
+4. Click **Browse**, select your metadata file, and click **Save**.
