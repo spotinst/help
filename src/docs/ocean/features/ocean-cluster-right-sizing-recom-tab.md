@@ -28,10 +28,19 @@ This list displays:
 *  Recommendations for vCPU and memory right sizing per deployment. Recommended increases are shown with a green up arrow, and recommended decreases are shown with a red Down arrow.  
 *  Optimized [Right Sizing rules]() that are attached to specific workloads.
 *  Potential monthly max. savings if you adopt these recommendations.
-*  Rules/Status: If the workload is [attached](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=attach-a-right-sizing-rule-to-one-or-more-workloads) to a right-sizing rule, the name of the rule appears. Hover over the rule name to see the workload status (pending or activated).
+*  Rules: If the workload is [attached](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=attach-a-right-sizing-rule-to-one-or-more-workloads) to a right-sizing rule, the name of the rule appears. The rule has one of the following workload (colored) optimization statuses:
+   *  Green: The Workload is fully optimized, and no action is required.
+   *  Yellow: The Workload is partially optimized. For example, recommendations were not applied due to Resource threshold(s) on the attached rule.
+   *  Gray: The rule for the workload has not yet been activated. 
+   *  Red: The Workload is not optimized.
 
->**Notes**: If a workload is attached to an activated right-sizing rule, no vCPU / memory recommendations or Potential monthly max. savings are displayed for the workload because Ocean is already optimizing it.
->
+> **Notes**:
+
+> Hover over the workload optimization status to view more details in a tooltip.
+
+> If a workload is attached to an activated right-sizing rule, no vCPU / memory recommendations or Potential monthly max. savings are displayed for the workload because Ocean is already optimizing it.
+   
+The graphical display above the list shows the breakdown of these workload optimization statuses.
 
 To view a list of your potential savings and recommendations per container: 
 
@@ -46,7 +55,7 @@ To view a list of your potential savings and recommendations per container:
 This list displays your existing right-sizing rules.  
 Each rule entry shows relevant information about the parameters that trigger the rule and its scheduling plan. 
 
-##   Work with Right Sizing Rules 
+##  Work with Right Sizing Rules 
 
 You can create the right sizing rules and immediately attach them to specific workloads. Alternatively, you can create and save a rule and later attach it to one or more workloads. 
 You can create right-sizing rules to trigger immediately after a specific set of requirements is met or at a specific time after the requirements are met. 
