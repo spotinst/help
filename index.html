@@ -26,7 +26,26 @@
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css" />
 
   <!-- Custom Styles -->
-  <link rel="stylesheet" href="styles/spot.css" />
+  <style type="text/css">
+    .helpful-content {
+      position: fixed;
+      z-index:9999;
+      background:#0086FF;
+      color:#fff;
+      padding:20px 40px;
+      width:100%;
+    }
+    .sidebar, .content {
+      top: 145px;
+    }
+    .content {
+      position: absolute!important;
+    }
+    .sidebar-toggle {
+      top: 195px!important;
+    }
+</style>
+  
 </head>
 
 <body>
