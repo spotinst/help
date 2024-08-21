@@ -85,8 +85,3 @@ Click the service map list on the top right corner of the page to view the overa
 You can also create a new service map from this view. 
 
 ![topology-d11](https://github.com/spotinst/help/assets/106514736/02be45be-6492-467c-b210-6c2ca3c02b15)
-
-
-## What’s Next? 
-
-View more information about all of the [events](spot-security/features/events) in your network. 
