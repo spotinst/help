@@ -39,8 +39,3 @@ Spot uses `Custom::Resource` in your Cloud Formation templates which triggers th
 This Lambda function is hosted by Spot and can be invoked by every Spot customer
 
 <img src="/tools-and-provisioning/_media/AWS-lambda-function.png" />
-
-## What's Next?
-
-- [Activate a Resource in CloudFormation Public Extensions Registry](tools-and-provisioning/cloudformation/activate-a-resource-in-public-extensions-registry)
-- [Get started](tools-and-provisioning/cloudformation/getting-started/) with AWS Lambda.

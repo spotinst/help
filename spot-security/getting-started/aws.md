@@ -1,6 +1,4 @@
-<meta name="robots" content="noindex">
-
-## Onboard AWS Account
+# Onboard AWS Account
 
 This procedure describes how to connect your AWS account to Spot Security.
 
@@ -93,7 +91,3 @@ When this is complete, you can return to the Spot Security onboarding process to
 Review the information and ensure all information is correct. Click **Finish Onboarding**.
 
 <img src="/spot-security/_media/getting-started-k1.png" width="750" height="600" />
-
-## What's Next?
-
-Learn more about the [security features](spot-security/features/) in Spot Security.

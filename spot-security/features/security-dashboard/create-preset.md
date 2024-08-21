@@ -39,7 +39,3 @@ The edit function enables you to change the preset name or to change the default
   <img src="/spot-security/_media/features-dashboard-presets-05.png" width="185"/>
 
 To delete the preset, click the trash can icon and confirm that you want to delete.
-
-## What's Next?
-
-Learn more about the detailed information you can see in the [Risk Analysis](spot-security/features/analyze-risks/) page.

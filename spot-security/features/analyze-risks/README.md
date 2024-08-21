@@ -77,7 +77,3 @@ To view the suppressed assets:
 
 * Click Supressed Assets Column in the Risk Table **or** 
 * Click the Show Suppressed Assets toggle in the Failed Asset table. 
-
-
-## What’s Next?
-Learn more about how you can [remediate](spot-security/features/analyze-risks/remediate) your risks.
