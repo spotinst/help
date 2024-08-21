@@ -44,7 +44,3 @@ curl  -sS -f -I -H "Authorization: token $ACCESS_TOKEN" https://api.github.com
 # On success you will see a 200 response code with several HTTP headers.
 # Eg: github-authentication-token-expiration
 ```
-
-## References
-
-* [Permissions required for fine-grained personal access tokens - GitHub Docs](https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens?apiVersion=2022-11-28#statuses)
