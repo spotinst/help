@@ -10,7 +10,7 @@ You can configure role and organization attributes using a SAML attribute. The o
 <Attribute Name="OrgAndRole" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"> <AttributeValue>SPOTINST-OrganizationID-ADMIN</AttributeValue> <AttributeValue>SPOTINST-OrganizationID-VIEWER</AttributeValue> <AttributeValue>SPOTINST-OrganizationID-VIEWER</AttributeValue> </Attribute>
 ```
 
-The SAML attribute <i>OrgAndRole</i> allows the organization ID to be set dynamically on each request, and not once as a RelayState. Use this format "Spotinst-{organizationID}-{role}".
+The SAML attribute <i>OrgAndRole</i> allows the organization ID to be set dynamically on each request, and not once as a RelayState. Use this format "`SPOTINST-<AccountId>-<Role>`".
 
 This attribute lets a user sign in to different organizations using the same user and IDP app, while setting the organization ID dynamically.
 
