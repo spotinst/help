@@ -1,5 +1,3 @@
-<meta name="robots" content="noindex">
-
 # Events
 
 Spot Security strives to reduce the Signal-to-Noise ratio of cloud security events for the users and highlight the events that have occurred on your cloud network within a defined time period based on event security.   
