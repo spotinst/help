@@ -10,12 +10,15 @@ Ocean continuously analyzes the utilization of your nodes in the cloud infrastru
 * Ocean Savings panel shows the amount of money, CPU, memory (GiB/TiB), and GPU compute resources saved when you utilize Ocean to manage your Kubernetes cluster. Specifically, these are savings from running spot instances, bin packing, and reverting to lower-cost nodes. 
 * The Ocean Managed Nodes and Resources panel shows information about your Ocean-managed and unmanaged nodes and your managed CPU, memory, and GPU resources.
 * Resource Allocation panel shows resource allocation information about your managed CPU, memory (GiB/TiB), and GPU resources at the cluster level.
-  * Drill down to view resource allocation information at the node level in the Nodes tab.
+  * Drill down to view resource allocation information at the namespace, Virtual Node Group, node pool, or node level. Each has a dedicated tab to the right of the Overview tab.
 
 ## Access the Ocean Cloud Cluster Overview
 
 To access the Ocean Cluster Overview dashboard: 
 1. click **Ocean > Cloud Clusters** in the left main menu.
+
+  
+ 
 2. Select a cluster from the list of clusters. 
 
 ## Ocean Savings Panel
@@ -46,8 +49,8 @@ This tab displays:
   * Percentage of cluster costs = [total price for running on-demand instances – total price for running spot instances] / total price for running on-demand instances x 100. 
 
 * CPU resources in vCPU Hours.
-* Memory resources in GiB Hours.
-* GPU resources in GPU Hours. 
+* Memory resources in GiB/TiB Hours.
+* GPU resources in GPU Hours.
 
 ## Ocean Savings from Bin Packing
 
