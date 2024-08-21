@@ -86,6 +86,3 @@ For each security rule, you can see the Event Impact Map to visualize the assetâ
 Event Detail Records present the time of an event, the source, region and more for each event. 
 
 ![events-10](https://github.com/spotinst/help/assets/106514736/85e5db8b-47a1-4464-8e52-b11218be0781)
-
-## Whatâ€™s Next?
-Learn more about Spot Security [Inventory](spot-security/features/inventory).
