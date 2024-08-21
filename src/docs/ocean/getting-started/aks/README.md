@@ -166,7 +166,7 @@ To create your Virtual Node Groups:
 
 >**Important**: One custom Virtual Node Group is created for each selected node pool. 
 
-Example:
+Example: 
 
 Each selected node pool in the example below also represents several other unselected node pools with similar configurations:
 
