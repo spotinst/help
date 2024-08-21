@@ -14,6 +14,7 @@ You can use these identity providers with Spot:
 - [Custom SAMLs](administration/identity-providers/custom-saml-idp-configuration)
 - [Google SAML](administration/identity-providers/google-saml-authentication)
 - [Okta SAML](administration/identity-providers/okta-saml-authentication)
+- [SCIM](administration/identity-providers/scim)
 - [OneLogin SAML](administration/identity-providers/onelogin-saml-authentication)
 
 ## Set Up SAML SSO in the Console
