@@ -140,30 +140,22 @@ Virtual Node Groups (VNGs) provide a single abstraction layer for managing diffe
 
 You must create at least one Virtual Node Group in your Ocean AKS cluster. A Virtual Node Group inherits properties and attributes from the Virtual Node Group Template.
 
-In this step, you select one of your AKS node pools as a [template](https://docs.spot.io/ocean/features/vngs/?id=default-vng) for your other custom [Virtual Node Groups](https://docs.spot.io/ocean/features/vngs/?id=virtual-node-groups).
+In this step:
 
-<!--* Select a Node Pool for Your Virtual Node Group Template.
-* Create More Custom Virtual Node Groups.-->
+* You select one of your AKS node pools as a [template](https://docs.spot.io/ocean/features/vngs/?id=default-vng) for your other custom [Virtual Node Groups](https://docs.spot.io/ocean/features/vngs/?id=virtual-node-groups).
+* Create more custom Virtual Node Groups as required.
 
-The selected AKS node pool’s configuration is imported to the Virtual Node Group Template and used for other custom Virtual Node Groups unless you explicitly override. For example, all Virtual Node Groups inherit the image set of the AKS node pool you imported to the Virtual Node Group Template unless the custom Virtual Node Group is set to a different image.
-
-<!-- ### Select a Node Pool for Your First Virtual Node Group-->
 To create your first Virtual Node Group:
 
-![aks-cluster-wizard-one-ng-selected](https://github.com/user-attachments/assets/99146522-0fb0-4fdf-b9c7-cd8a0dc140c7)
+![aks-create-cluster-2-managed-node-pools](https://github.com/user-attachments/assets/803d2ddd-c2db-4a75-b853-83b8c2b94180)
 
-1. Select a node pool.
+1. Select a node pool. A list of all your managed node pools is displayed. The first node pool in the list is the one you selected for your first Virtual Node Group (Template). The selected node pool’s configuration is imported to the Virtual Node Group Template and used for other custom Virtual Node Groups unless you explicitly override. For example, all Virtual Node Groups inherit the image set of the AKS node pool you imported to the Virtual Node Group Template unless the custom Virtual Node Group is set to a different image.
 
-2. Optionally edit [Virtual Node Group Template](https://docs.spot.io/ocean/features/vngs/) attributes.
+2. Optionally edit [Virtual Node Group Template](https://docs.spot.io/ocean/features/vngs/) attributes for the selected node pool.
 
 >**Note**: To edit the Virtual Node Group Template in JSON format, click **JSON** at the top right of the screen. Define AZs, node pool properties (max Pods, OS Type, OS Disk Type, OS Disk Size, etc.), min/max node counts, and auto-scaling strategy (Spot percentage, fallback to On-Demand). You can create labels, tags, and taints.
 
 >**Note**: Some Virtual Node Group properties, such as node pool properties (OS types, OS Disk type), cannot be edited. If you need to change these properties, delete the Virtual Node Group and create a new one. 
-
-<!--
-A list of all your managed node pools is displayed. The first node pool in the list is the one you selected for your first Virtual Node Group (Template).
-
-![aks-create-cluster-2-managed-node-pools](https://github.com/user-attachments/assets/803d2ddd-c2db-4a75-b853-83b8c2b94180)
 
 ### Create More Custom Virtual Node Groups
 
