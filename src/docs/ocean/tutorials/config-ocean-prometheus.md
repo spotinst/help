@@ -150,5 +150,3 @@ These metrics track the hourly aggregated networking information of the total cl
 - traffic_type – only for the networking metrics, its value can be ‘internet’, ‘interRegion’, ‘interAZ’, ‘intraAZ’.
 - direction - only for the networking metrics, its value can be ‘In’ or ‘Out’.
 
-## What's Next
-Learn more about [Prometheus metrics](ocean/tools-and-integrations/prometheus/).

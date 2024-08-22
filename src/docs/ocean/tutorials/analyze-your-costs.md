@@ -76,6 +76,3 @@ Sometimes it is useful to create an analysis that takes only certain workloads i
 To apply a filter to your cost analysis, choose a filter from the list of saved filters.
 To create a new filter, click Add Filter and a fill out the filter criteria.
 
-## What's Next?
-
-Learn how to [Create a Cost Analysis Filter](ocean/tutorials/create-a-cost-filter).

@@ -284,6 +284,3 @@ Filesystem                                                     Size  Used Avail 
 1.1.178.130:/trident_pvc_9d83906d_d3f0_4ac0_bf91_72a69720c1dc  1.0G  256K  1.0G   1% /usr/share/nginx/html
 ```
 
-## What’s Next?
-
-Learn more about different ways you can manage Kubernetes clusters with [Ocean](ocean/).

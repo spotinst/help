@@ -53,6 +53,4 @@ In addition to the above content, the Right Sizing tab may display one of severa
 - Data collection works as intended. There are no suggestions to make, or all previous suggestions have been applied or dismissed.
 - The Metrics Server is installed, but the system is still collecting data.
 
-## What's Next?
 
-Learn how to [View Scaling Constraints](ocean/tutorials/view-scaling-constraints).

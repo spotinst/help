@@ -54,6 +54,3 @@ These are clusters that were created by kOps natively.
 
 3. Run `kops update cluster`.
 
-## What's Next?
-
-Learn how to [Manage Virtual Node Groups](ocean/tutorials/manage-virtual-node-groups).

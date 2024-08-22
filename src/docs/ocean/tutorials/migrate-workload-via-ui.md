@@ -81,6 +81,3 @@ You have the option to stop the migration process once it has started.
 3. Click Yes.
 4. Click Stop.
 
-## What's Next?
-
-Learn how to migrate your workload using the [Spot API](ocean/tutorials/migrate-workload-via-api).

@@ -45,6 +45,3 @@ Note that `isEnabled` must be set to True in order to enable the shutdown hours.
 
 <img src="/ocean/_media/tutorials-set-running-hours-03.png" width="278" height="514" />
 
-## What's Next?
-
-Learn more about the Create Cluster in Ocean APIs: [K8s AWS](https://docs.spot.io/api/#operation/OceanAWSClusterCreate), [ECS](https://docs.spot.io/api/#operation/OceanECSClusterCreate), [GKE](https://docs.spot.io/api/#operation/OceanGKEClusterCreate)
