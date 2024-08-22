@@ -1,7 +1,14 @@
 # Ocean Tools and Integrations
 
-Spot integrates with a number of tools to help streamline your workflow. This section describes tools integrated with Ocean such as eksctl, kOps, OpenShift, and Prometheus.
+Spot integrates with several tools to help streamline your workflow:
 
-## What's Next?
+* [eksctl](ocean/tools-and-integrations/eksctl/)
+   * [Create a New Cluster with eksctl](ocean/tools-and-integrations/eksctl/create-a-new-cluster-with-eksctl)
+   * [Connect an Existing Cluster](ocean/tools-and-integrations/eksctl/join-an-existing-cluster)
+* [kOps](ocean/tools-and-integrations/kops/)
+   * [Metadata Labels](ocean/tools-and-integrations/kops/metadata-labels)
+* [OpenShift](ocean/tools-and-integrations/openshift/)
+* [Prometheus](ocean/tools-and-integrations/prometheus/)
+  * [Scrape Ocean Metrics](ocean/tools-and-integrations/prometheus/scrape)
 
-To learn more tools and integrations, choose a topic in the sidebar on the left.
+
