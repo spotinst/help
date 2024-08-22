@@ -127,7 +127,3 @@ The breakdown also gives you cost information about different Kubernetes element
 
 Ocean captures and displays data only from instances (nodes) that are managed by Ocean. If you have instances in your cluster that are not managed by Ocean, they are not included in the analysis.
 
-## What's Next?
-
-Learn about the charts, views, and reports you can create in Ocean in [Analyze Your Costs](ocean/tutorials/analyze-your-costs).
-Learn how to [Create a Cost Analysis Filter](ocean/tutorials/create-a-cost-filter) and customize the information displayed.

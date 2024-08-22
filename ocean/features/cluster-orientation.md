@@ -39,6 +39,3 @@ The valid values are: costOriented, balanced, cheapest
 
 > **Tip**: If you have already configured cluster orientation at the Elastigroup level (i.e., using the Elastigroup API), those configurations will not be impacted, and will still apply in Ocean. Going forward, all cluster orientation configurations for Ocean should be made in the Ocean APIs only.
 
-## What's Next?
-
-Learn more about using the [Create Cluster](https://docs.spot.io/api/#operation/OceanAWSClusterCreate) and Update [Cluster](https://docs.spot.io/api/#operation/OceanAWSClusterUpdate) APIs for configuring your Ocean cluster.

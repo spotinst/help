@@ -74,6 +74,3 @@ For a given resource, you can see the specific recommendations per container by 
 
 <img src="/ocean/_media/features-rightsizing-04.png" />
 
-## What’s Next?
-
-Learn more about Ocean’s [shut down hours](ocean/features/running-hours).
