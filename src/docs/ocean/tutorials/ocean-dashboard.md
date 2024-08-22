@@ -100,6 +100,4 @@ The table includes the following information:
 - Activated. Number of instance recommendations that have been activated already.
 - Pending. Number of instance recommendations that have not yet been activated. For more detailed information about the recommendations, click on the number. The detailed [Right Sizing](ocean/features/right-sizing) analysis for that cluster will appear.
 
-## What's Next?
 
-Learn how to [Analyze Your Costs](ocean/tutorials/analyze-your-costs).
