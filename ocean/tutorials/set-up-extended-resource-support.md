@@ -55,6 +55,3 @@ You can use the Ocean APIs to set up Ocean to use the extended resources feature
 - In the Update Extended Resource Definition API, it is not possible to update the name.
 - Ensure that each extended resource that pods in the cluster are using has an extendedResourceDefinition. If an extended resource does not have an extendedResourceDefinition attached to Ocean, the pod might remain pending.
 
-## What’s Next?
-
-Learn more about performing a [cluster roll](ocean/features/roll).

@@ -207,6 +207,3 @@ In this view, you can see the full JSON configuration of the VNG. If you would l
 
 Alternatively, if you are already on the configuration page of a VNG, just click Delete VNG at the bottom.
 
-## What’s Next?
-
-Learn more about using VNGs in the API: [AWS Kubernetes](https://docs.spot.io/api/#operation/OceanAWSLaunchSpecCreate).

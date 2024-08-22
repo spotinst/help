@@ -66,6 +66,3 @@ For a drill-down of more detail about the constraints on a specific pod, click o
 
 <img src="/ocean/_media/tutorials-scaling-constraints-05.png" width="422" height="303" />
 
-## What’s Next?
-
-Learn more about the [constraints](ocean/features/labels-and-taints.md) supported by Ocean.
