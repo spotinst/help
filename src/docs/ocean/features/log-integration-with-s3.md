@@ -97,7 +97,3 @@ Each Ocean log file on S3 contains three minutes of logging and has the followin
 For example, a filename would look like:
 
 `act-12345_o-12345678_cluster.k8s.com_2021-08-18T08:06:00Z.log`
-
-## What’s Next?
-
-Learn more about related APIs: [List Data Integration](https://docs.spot.io/api/#operation/dataIntegrationList), [Update](https://docs.spot.io/api/#operation/updateDataIntegration), [Get](https://docs.spot.io/api/#operation/dataIntegrationGet), and [Delete](https://docs.spot.io/api/#operation/dataIntegrationDelete).
