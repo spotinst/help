@@ -48,6 +48,3 @@ Once you have set to spread nodes by vCPU, the following Ocean functions will us
 * Scale per VNG
 * Replacement process (out of strategy, auto-healing)
 
-## Related Topics
-
-Learn how Ocean uses the [Headroom](ocean/features/headroom) feature to be ready for rapid application scale-up.
