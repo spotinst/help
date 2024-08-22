@@ -10,7 +10,7 @@ IDP-initiated flows, service provider (SP) initiated flows, and just-in-time pro
 2. In the Spot console, click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png">  > **Settings**.
 3. Click **Security** > **Identity Providers**.
 4. Copy the **Relay State** value.
-5. Login to the Okta Admin console, choose Applications, select Browse App Integration Catalog and search for Spotinst, select Add Integration:
+5. Sign in to the Okta Admin console, choose Applications, select Browse App Integration Catalog and search for Spotinst, select Add Integration:
 6. In Okta, go to the admin panel and select the new Spot app you just added.
    <ol style="list-style-type: lower-alpha;">
    <li>Click **Sign On** > **Edit**.</li>
