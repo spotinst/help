@@ -11,12 +11,14 @@ This feature makes it easy to manage your accounts and works with the most popul
    * Credentials are Configured by admin.
 7. Click **Save**.
 8. Go to **More Actions** > Download SAML Metadata to configure your Spot account with OneLogin's SAML settings. Note the location of your saved XML file.
-   1. In a new browser tab, open the Spot console as an Admin.
-   2. Click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png">  > **Settings**.
-   3. Click **Security** > **Identity Providers**.
-   4. Browse and import the XML metadata file you downloaded earlier. SSO will become enabled after uploading the OneLogin metadata.
-9. On the OneLogin Access tab, assign the [OneLogin roles](https://support.onelogin.com/hc/en-us/articles/202123144-Roles) that should have access to Spot and provide any [app security policy](https://support.onelogin.com/hc/en-us/articles/202361530) that you want to apply to Spot. You can also go to **Users** > **All Users** to add the app to individual user accounts.
-10. Click **Save**.
+   <ol style="list-style-type: lower-alpha;">
+   <li>In a new browser tab, open the Spot console as an Admin.</li>
+   <li>Click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png">  > **Settings**.</li>
+   <li>Click **Security** > **Identity Providers**.</li>
+   <li>Browse and import the XML metadata file you downloaded earlier. SSO will become enabled after uploading the OneLogin metadata.</li>
+   </ol>
+10. On the OneLogin Access tab, assign the [OneLogin roles](https://support.onelogin.com/hc/en-us/articles/202123144-Roles) that should have access to Spot and provide any [app security policy](https://support.onelogin.com/hc/en-us/articles/202361530) that you want to apply to Spot. You can also go to **Users** > **All Users** to add the app to individual user accounts.
+11. Click **Save**.
 
 ## Test the SAML Connection
 
