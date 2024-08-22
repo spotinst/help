@@ -1,42 +1,42 @@
 ## PRODUCTS
 
-### [Ocean](ocean/)
+[Ocean](ocean/)
 
-### [Elastigroup](/elastigroup/)
+[Elastigroup](/elastigroup/)
 
-### [Elastigroup Stateful Node](managed-instance/)
+[Elastigroup Stateful Node](managed-instance/)
 
-### [Eco](eco/)
+[Eco](eco/)
 
-### [Cost Intelligence](cost-intelligence/)
+[Cost Intelligence](cost-intelligence/)
 
-### [Billing Engine](billing-engine/)
+[Billing Engine](billing-engine/)
 
-### [Ocean for Apache Spark](ocean-spark/)
+[Ocean for Apache Spark](ocean-spark/)
 
-### [Spot Security](spot-security/)
+[Spot Security](spot-security/)
 
-### [Spot Connect](spot-connect/)
+[Spot Connect](spot-connect/)
 
-### [Spot Storage for AWS](spot-storage/)
+[Spot Storage for AWS](spot-storage/)
 
-### [Ocean CD](ocean-cd/)
+[Ocean CD](ocean-cd/)
 
 ## GETTING STARTED
 
-### [Connect your Cloud Account to Spot](connect-your-cloud-provider/first-account/)
+[Connect your Cloud Account to Spot](connect-your-cloud-provider/first-account/)
 
 ## ADMINISTRATION
 
-### [Manage users, permissions, and accounts](administration/)
+[Manage users, permissions, and accounts](administration/)
 
 ## MORE LINKS
 
-### [Integration Tools](tools-and-provisioning/)
+[Integration Tools](tools-and-provisioning/)
 
-### [Spot by NetApp OpenAPI Specification](https://docs.spot.io/api/)
+[Spot by NetApp OpenAPI Specification](https://docs.spot.io/api/)
 
-### [FAQ](faqs/)
+ [FAQ](faqs/)
 
 
 
