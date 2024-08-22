@@ -214,6 +214,3 @@ If you have already configured maximum pods per node on your AKS cluster, this c
 
 This feature is available via API on the [cluster level](https://docs.spot.io/api/#operation/oceanAKSClusterCreate) and the [VNG level](https://docs.spot.io/api/#operation/oceanAKSVirtualNodeGroupCreate).
 
-## What’s Next?
-
-Learn more about how Ocean manages [headroom](ocean/features/headroom).
