@@ -118,13 +118,13 @@ There are two options for restricting pods from scaling down:
 
 You get this error in the log:
 
-<pre><code>Kubernetes Autoscaler, Deadlock for Pod: '{pod-name}' 
+<code>Kubernetes Autoscaler, Deadlock for Pod: '{pod-name}' 
 Can't scale up an Instance since PersistentVolumeClaim: 
 '{PVC-name}' 
 VolumeId: '{vol-name}' is already attached to an existing Instance: 
 '{instance-ID}' Please consider using a new PersistentVolumeClaim or open a 
 support ticket.
-</code></pre>
+</code>
 
 This can happen when the pod has a claim for a specific volume owned by a different instance, and that instance does not have free space for the pod.
 
@@ -206,7 +206,7 @@ An on-demand instance may not start, for example, if it hits an AWS instance typ
   <div style="padding-left:16px">
 
 When you import a new group to Elastigroup, you may get this error:
-<pre>"value" contains a conflict between exclusive peers [resourceRequirements, spot]</pre>
+<code>"value" contains a conflict between exclusive peers [resourceRequirements, spot]</code>
 
 This happens if the <code>resourceRequirements</code> value is <i>null</i>.
 
@@ -226,7 +226,9 @@ Remove the <i>resourceRequirements</i> field from the JSON file and reimport the
   <div style="padding-left:16px">
    
 1. Go to the stateful node in the Spot console and click <b>Actions</b> > <b>Edit Configuration</b>.
-2. Go to <b>Review</b>, switch to <b>JSON review<b>, and select <b>Edit Mode</b>.
+
+2. Go to <b>Review</b>, switch to <b>JSON review</b>, and select <b>Edit Mode</b>.
+
 3. Change `revertToSpot` to <i>never</i>:
 
    <pre><code>
