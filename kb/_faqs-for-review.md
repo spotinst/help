@@ -73,8 +73,9 @@ In the Recommendations table, you can see the exact amount of resources to chang
    
    <font color="#FC01CC">I need more info for this kb. Which API is this for? Where do I see this parameter? I can’t find it in the API documentation</font>
 Keep  in mind that it may not be necessary to increase the target capacity. Instances will not be launched if the virtual node group is a template.
-If you want to edit the target capacity, change the useAsTemplateOnly parameter to false.
-<pre>"useAsTemplateOnly": false,</pre>
+If you want to edit the target capacity, change the <b>useAsTemplateOnly</b> parameter to <i>false</i>.
+
+<code>"useAsTemplateOnly": false,</code>
 
    <font color="#FC01CC">I need more info about target capacity--how much should I increase the target capacity? is the a recommendation or a max?
    if it's not necessary to increase the target capacity, what do I need to do? how do I know if I should increase it?
@@ -111,19 +112,19 @@ There are two options for restricting pods from scaling down:
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceank8spvcerror">Why am I getting a Kubernetes Autosacler, Deadlock for Pod error?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceank8spvcerror">Why am I getting a <i>Kubernetes Autoscaler, Deadlock for Pod</i> error?</summary>
 
   <div style="padding-left:16px">
 
 You get this error in the log:
 
-<pre>Kubernetes Autoscaler, Deadlock for Pod: '{pod-name}' 
+<pre><code>Kubernetes Autoscaler, Deadlock for Pod: '{pod-name}' 
 Can't scale up an Instance since PersistentVolumeClaim: 
 '{PVC-name}' 
 VolumeId: '{vol-name}' is already attached to an existing Instance: 
 '{instance-ID}' Please consider using a new PersistentVolumeClaim or open a 
 support ticket.
- </pre>
+</code></pre>
 
 This can happen when the pod has a claim for a specific volume owned by a different instance, and that instance does not have free space for the pod.
 
@@ -159,12 +160,12 @@ Initially, the costs are compared with the on demand value of the instance types
 ## Elastigroup
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egbeanstalkgrouperror">Why am I getting a group is in error state message when I try to delete an Elastigroup Beanstalk from the Spot console?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egbeanstalkgrouperror">Why am I getting a <i>group is in error state</i> message when I try to delete an Elastigroup Beanstalk from the Spot console?</summary>
 
   <div style="padding-left:16px">
 If you get this message when you try to delete an Elastigroup Beanstalk from the Spot console:
 
-<pre>Group is in ERROR state and not in READY state, cannot delete it</pre>
+<code>Group is in ERROR state and not in READY state, cannot delete it</code>
 
 You need to put the group in maintenance mode and detach the remaining instances, then you can delete the Elastigroup. <font color="#7632FE">how do you put the group in maintenance mode and detach the remining instances? need instructions or links to instructions. is this relevant? https://docs.spot.io/elastigroup/tools-integrations/elastic-beanstalk/in-asg</font>
 
@@ -200,7 +201,7 @@ An on-demand instance may not start, for example, if it hits an AWS instance typ
  </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egerrorpeers">Why am I getting a "value" contains a conflict between peers error?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egerrorpeers">Why am I getting a <i>"value" contains a conflict between peers</i> error?</summary>
 
   <div style="padding-left:16px">
 
@@ -223,8 +224,9 @@ Remove the <i>resourceRequirements</i> field from the JSON file and reimport the
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="azurestatefulnode">Can I delete an Azure stateful node and manage it in the Azure console?</summary>
 
   <div style="padding-left:16px">
-1. Go to the stateful node in the Spot console and click **Edit node**.
-2. Go to **Review**, switch to **JSON review**, and select **Edit mode**.
+   
+1. Go to the stateful node in the Spot console and click <b>Actions</b> > <b>Edit Configuration</b>.
+2. Go to <b>Review</b>, switch to <b>JSON review<b>, and select <b>Edit Mode</b>.
 3. Change `revertToSpot` to <i>never</i>:
 
    <pre><code>
@@ -261,7 +263,7 @@ Remove the <i>resourceRequirements</i> field from the JSON file and reimport the
 
 5. Recycle the stateful node. <font color="#7632FE">How do you recycle?</font>
 6. Make sure the stateful node is not running on the Spot VM. <font color="#7632FE">How do you check?</font>
-7. Go to **Edit Node** and delete the node.
+7. Go to <b>Edit Node</b> and delete the node.
 
    <img width="275" alt="delete-azure-stateful1" src="https://github.com/spotinst/help/assets/167069628/2c4635fe-6ce2-40c3-aded-7170c4a93f1f">
 
