@@ -47,7 +47,7 @@ spec:
 
 > **Tip**: In the [affinity syntax](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#resources-that-support-set-based-requirements), Ocean supports both `matchExpressions` and `matchLabels`.
 
-###  Scale Up According to Available IPs (EKS only)
+###  Scale Up According to Available IPs (AWS Kubernetes only)
 
 When the Ocean Autoscaler needs to scale up an instance, it selects the Availability Zone and the included subnet with the most available IPv4 addresses. This avoids IP address exhaustion in a specific subnet and prevents scaling up a node in a subnet that does not have enough IP addresses.
 If all the subnets set for a Virtual Node Group run out of available IP addresses, scaling up is blocked, and the Spot Monitoring team will email you to request that you add more subnets to the Virtual Node Group.
