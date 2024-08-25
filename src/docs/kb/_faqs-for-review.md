@@ -167,10 +167,10 @@ If you get this message when you try to delete an Elastigroup Beanstalk from the
 
 <code>Group is in ERROR state and not in READY state, cannot delete it</code>
 
-You need to put the group in maintenance mode and detach the remaining instances, then you can delete the Elastigroup. <font color="#7632FE">how do you put the group in maintenance mode and detach the remining instances? need instructions or links to instructions. is this relevant? https://docs.spot.io/elastigroup/tools-integrations/elastic-beanstalk/in-asg</font>
+You need to put the group in maintenance mode and detach the remaining instances, then you can delete the Elastigroup. <font color="#FC01CC">how do you put the group in maintenance mode and detach the remining instances? need instructions or links to instructions. is this relevant? https://docs.spot.io/elastigroup/tools-integrations/elastic-beanstalk/in-asg</font>
 
 Keep in mind, you cannot delete a Beanstalk group if:
-* The attached Beanstalk group was deleted. <font color="#7632FE">Is this accurate? An attached Beanstalk group was deleted. so you can’t delete a subgroup and then the parent group? Is that the case?</font>
+* The attached Beanstalk group was deleted. <font color="#FC01CC">Is this accurate? An attached Beanstalk group was deleted. so you can’t delete a subgroup and then the parent group? Is that the case?</font>
 * One of the resources was deleted, such as a security group or Elastic Beanstalk.
 
 If you get an error, you can force delete the group by deselecting **Rollback beanstalk configuration**.
@@ -188,7 +188,7 @@ If you need to attach a Beanstalk environment, you can manually [rebuild your Be
   <div style="padding-left:16px">
 An on-demand instance may be launched instead of a spot instance even if a spot instance is available in the markets selected in the Elastigroup.
 
-<font color="#7632FE">are the 2 hyperlinks below correct?</font>
+<font color="#FC01CC">are the 2 hyperlinks below correct?</font>
 
 You can set [Equal AZ Distribution](https://docs.spot.io/elastigroup/features/core-features/equal-az-instance-distribution-orientation?id=equal-az-instance-distribution-orientation) for cluster orientation in Elastigroup. Despite this, Spot may prioritize a certain availability zone to maintain equal distribution. 
 
@@ -224,7 +224,7 @@ Remove the <i>resourceRequirements</i> field from the JSON file and reimport the
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="azurestatefulnode">Can I delete an Azure stateful node and manage it in the Azure console?</summary>
 
   <div style="padding-left:16px">
-   
+
 1. Go to the stateful node in the Spot console and click <b>Actions</b> > <b>Edit Configuration</b>.
 
 2. Go to <b>Review</b>, switch to <b>JSON review</b>, and select <b>Edit Mode</b>.
@@ -263,8 +263,8 @@ Remove the <i>resourceRequirements</i> field from the JSON file and reimport the
         "optimizationWindows": null,
    </code></pre>
 
-5. Recycle the stateful node. <font color="#7632FE">How do you recycle?</font>
-6. Make sure the stateful node is not running on the Spot VM. <font color="#7632FE">How do you check?</font>
+5. Recycle the stateful node. <font color="#FC01CC">How do you recycle?</font>
+6. Make sure the stateful node is not running on the Spot VM. <font color="#FC01CC">How do you check?</font>
 7. Go to <b>Edit Node</b> and delete the node.
 
    <img width="275" alt="delete-azure-stateful1" src="https://github.com/spotinst/help/assets/167069628/2c4635fe-6ce2-40c3-aded-7170c4a93f1f">
