@@ -23,13 +23,11 @@ In the Spot Console's left menu, click **Ocean > Cloud Clusters** and then click
 
 ![gke-import-cluster-general](https://github.com/user-attachments/assets/32012514-48a5-4b1d-9140-6c772d364950)
 
-3. Click Next.
-
 ## Step 2: Compute
 
 1. Ocean imports the compute configuration from your GKE cluster and displays it on the Compute page. Confirm or edit the configuration if needed:
    - Machine Types.
-     All types are selected by default to grant Ocean the most freedom of operation possible. Click Customize if an adjustment is required.
+     All types are selected by default to grant Ocean the most freedom of operation possible. Click **Customize** if you need to adjust them.
    - Resource Limit
      - Max vCPUs
      - Max Memory (GB)
@@ -41,8 +39,6 @@ In the Spot Console's left menu, click **Ocean > Cloud Clusters** and then click
 2. Optionally, you can import all GKE node pools into Ocean as [virtual node groups](ocean/features/launch-specifications). (The default node pool will be automatically imported.)
 
 <img src="/ocean/_media/gke-compute-vng.png" />
-
-3. Click Next.
 
 ## Step 3: Connectivity
 
