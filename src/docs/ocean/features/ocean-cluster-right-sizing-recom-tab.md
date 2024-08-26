@@ -33,7 +33,7 @@ This list displays:
    *  Orange: The Workload has optimization limitations (constrained by settings). 
    *  Gray: The rule for the workload has been attached but is out of schedule.
  
-See also 
+You can also view workloads status in the [Right Sizing Savings panel](ocean/features/ocean-cluster-right-sizing-tab?id=right-sizing-savings-panel)
 
 > **Notes**:
 
