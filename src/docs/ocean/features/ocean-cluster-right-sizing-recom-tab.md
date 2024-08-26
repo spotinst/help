@@ -94,6 +94,14 @@ To create/edit a right-sizing rule:
 9. Click the **Set overhead for resources** down arrow and set the CPU and memory percentage overheads. An overhead specifies the percentage of extra resources to add to the new request recommendation.
 10. After you save the rule, it appears in the area under the [Workloads Optimization list](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=workloads-optimization-list).
 
+> **Notes**:
+
+> Default values for Overhead and Automation Threshold are **10%** and **5%** respectively.
+
+> The **10%** default overhead is calculated within the recommendation itself.
+
+> Threshold value is only used for down-sizing cases
+
 ###   Attach a Right-Sizing Rule to One or More Workloads 
 
 To attach a rule to one or more workloads: 
