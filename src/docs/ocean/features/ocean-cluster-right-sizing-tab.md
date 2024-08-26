@@ -86,7 +86,11 @@ The Right-Sizing tab displays a Dashboard divided into the following panels:
 
 The Right-Sizing Savings panel contains a set of savings widgets, which show your potential savings from Ocean cluster right sizing, derived from data collected in the last two weeks:  
 
-*  Potential Monthly Maximum Savings. 
+*  Workload statuses: One of these:
+*
+*
+*
+*  Potential Monthly Maximum Savings (
 *  vCPU Usage: Used and allocated vCPU resources, recommended increasing or decreasing the vCPU resources, and the percentage of overprovisioning. 
 *  Memory Usage: Used and allocated memory resources, a recommendation to increase or decrease the memory resources, and the percentage of overprovisioning. 
 
