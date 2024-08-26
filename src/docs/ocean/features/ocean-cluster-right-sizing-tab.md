@@ -93,7 +93,7 @@ The workload status widget (on the left) shows one of the following statuses:
 
 If you have workloads with differing statuses, the workload status widget shows a status according to the following logic:
 * The potential savings are shown if at least one workload has potential savings, one is fully optimized, one is pending, and one has limited optimization.
-* The limited optimization status is shown if at least one workload is pending, one is fully optimized, and one has limited optimization, but none have potential savings.
+* The limited optimization status is shown if at least one workload is pending, one is fully optimized, one has limited optimization, but none have potential savings.
 * The pending status is shown if at least one workload is pending and one is optimized, but there are no workloads with limited optimization and no workloads with potential savings.
 
 > **Note**: The status changes according to the filters applied in the panel and the [Workloads Optimization list]()
