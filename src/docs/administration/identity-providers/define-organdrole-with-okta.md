@@ -9,7 +9,7 @@ You can create multiple organization and role (OrgAndRole) definitions in Spot u
 
 ## Get Started
 
-1. Login to the Okta Admin console, choose Applications, select your Spot app you want to edit.
+1. Login to the Okta Admin console, choose Applications, select the Spot app you want to edit.
 2. Click **Sign On** > **Edit**.
 
 ## Step 1: Add Organization and Role Values
