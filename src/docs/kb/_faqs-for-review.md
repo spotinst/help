@@ -43,7 +43,7 @@ You can set up PagerDuty alerts in Spot:
    * **Name Format**: <i>Unspecified</i>
    * **Value**: <i>appuser.OrgAndUserGroups</i>
 
-7. Generate a new [certificate](/administration/identity-providers/okta-saml-authentication) and upload it to your Spot Organization.
+7. Generate a [new certificate](/administration/identity-providers/okta-saml-authentication) and upload it to your Spot Organization.
 8. Add users to groups:
    <ol style="list-style-type: lower-alpha;">
    <li>For each user in your organization who needs to be assigned to groups, go to Okta Admin <b>Directory</b> > <b>People</b>.</li>
