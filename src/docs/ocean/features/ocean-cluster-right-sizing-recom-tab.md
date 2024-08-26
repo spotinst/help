@@ -31,15 +31,15 @@ This list displays:
 *  Rules: If the workload is [attached](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=attach-a-right-sizing-rule-to-one-or-more-workloads) to a right-sizing rule, the name of the rule appears. The rule has one of the following workload (colored) optimization statuses:
    *  Green: The Workload is fully optimized, and no action is required.
    *  Yellow: The Workload is partially optimized (constrained by settings). 
-   *  Gray: The rule for the workload has been attached, but is out of schedule.    * 
+   *  Gray: The rule for the workload has been attached but is out of schedule.    * 
 
 > **Notes**:
 
->  Red status: The Workload is not optimized.
+> Red status: The Workload is not optimized.
 
-> Hover over the workload optimization status to view more details in a tooltip.
+> Yellow or gray status: Hover over the workload optimization status to view more details in a tooltip.
 
-> If a workload is attached to an activated right-sizing rule, no vCPU / memory recommendations or Potential monthly max. savings are displayed for the workload because Ocean is already optimizing it.
+> If a workload is attached to an activated right-sizing rule, no vCPU / memory recommendations or Potential monthly max. Savings are displayed for the workload because Ocean is already optimizing it.
    
 The graphical display above the list shows the breakdown of these workload optimization statuses.
 
