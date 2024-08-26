@@ -83,12 +83,18 @@ The Right-Sizing tab displays a Dashboard divided into the following panels:
 
 The Right-Sizing Savings panel contains a set of savings widgets, which show your potential savings from Ocean cluster right sizing, derived from data collected in the last two weeks:  
 
-*  Workload statuses: One of these:
-*
-*
-*
-*  Potential Monthly Maximum Savings (
-*  vCPU Usage: Used and allocated vCPU resources, recommended increasing or decreasing the vCPU resources, and the percentage of overprovisioning. 
+*  Workload statuses (change according to the selected filters): One of these:
+   * Optimization maximized status (green color): Only optimized workloads were selected.
+   * Limited optimization status (orange color): Only Workloads with limited configuration were selected. A link is provided so you can see how to achieve full optimization.
+   * No optimization status (green color): Only non-optimized Workloads were selected, and the Potential Monthly Maximum Savings are shown.
+   * Pending optimization status (gray color): Only pending workloads were selected. Pending workloads will be optimized according to the configured schedule. 
+
+> **Notes**: If workloads with differing statuses are selected.
+> If at least one selected workload has potential savings, the no optimization status and potential savings are shown.
+> If at least one workload has limited optimization, the limited optimization status is shown.
+> If at least one workload is pending (and is fully optimized), the pending optimization status is shown.
+
+*  vCPU Usage: Used and allocated vCPU resources, recommended increase or decrease of vCPU resources, and the percentage of overprovisioning. 
 *  Memory Usage: Used and allocated memory resources, a recommendation to increase or decrease the memory resources, and the percentage of overprovisioning. 
 
 ![right-sizing-savings-panel](https://github.com/spotinst/help/assets/159915991/3693d491-2caa-4254-ae5c-4eafa6123b89)
