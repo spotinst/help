@@ -30,11 +30,12 @@ This list displays:
 *  Potential monthly max. savings if you adopt these recommendations.
 *  Rules: If the workload is [attached](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=attach-a-right-sizing-rule-to-one-or-more-workloads) to a right-sizing rule, the name of the rule appears. The rule has one of the following workload (colored) optimization statuses:
    *  Green: The Workload is fully optimized, and no action is required.
-   *  Yellow: The Workload is partially optimized. For example, recommendations were not applied due to Resource threshold(s) on the attached rule.
-   *  Gray: The rule for the workload has not yet been activated. 
-   *  Red: The Workload is not optimized.
+   *  Yellow: The Workload is partially optimized (constrained by settings). 
+   *  Gray: The rule for the workload has been attached, but is out of schedule.    * 
 
 > **Notes**:
+
+>  Red status: The Workload is not optimized.
 
 > Hover over the workload optimization status to view more details in a tooltip.
 
@@ -128,7 +129,7 @@ To delete a right sizing rule:
 
 >**Important**: You cannot restore a deleted right-sizing rule. In addition, a rule may be deleted only if it is no longer attached to a workload.
 
-# Best Practices
+<!-- # Best Practices
 
 These are the Right-Sizing Best Practices:
 
