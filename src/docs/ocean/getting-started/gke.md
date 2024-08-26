@@ -12,18 +12,16 @@ In this procedure, you will connect an existing GKE cluster to Ocean using the [
 
 ## Get Started
 
-In the left menu of the Spot Console, click Ocean/Cloud Clusters, and click Create Cluster.
-
-<img src="/ocean/_media/gke-create-cluster.png" />
+In the Spot Console's left menu, click **Ocean > Cloud Clusters** and then click **Create Cluster**.
 
 ## Step 1: General
 
-1. In the General page, enter a Cluster Name and the Location Type and click the Region where the cluster is running.
-   - Cluster Name is the name of the Ocean entity that will be created. For a cluster that you are importing, we recommend that you give it the same name as the original GKE cluster. This will make it easier to identify related entities in each system.
-   - Location Type can be either Zonal or Regional.
+1. In the General page, enter a Cluster Name and the Location Type and click the Region where the cluster runs.
+   * Cluster Name is the name of the Ocean entity to create. We recommend giving a cluster you import the same name as the original GKE cluster. This will make it easier to identify related entities in each system.
+   * Location Type can be either Zonal or Regional.
 2. Select the GKE cluster from which to import the configuration.
 
-<img src="/ocean/_media/gke-general.png" width="400" height="384" />
+![gke-import-cluster-general](https://github.com/user-attachments/assets/32012514-48a5-4b1d-9140-6c772d364950)
 
 3. Click Next.
 
