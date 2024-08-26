@@ -83,28 +83,33 @@ The Right-Sizing tab displays a Dashboard divided into the following panels:
 
 The Right-Sizing Savings panel contains a set of savings widgets, which show your potential savings from Ocean cluster right sizing, derived from data collected in the last two weeks:  
 
-*  Workload statuses (change according to the selected filters): One of these:
-   * Optimization maximized status (green color): Only optimized workloads were selected.
-   * Limited optimization status (orange color): Only Workloads with limited configuration were selected. A link is provided so you can see how to achieve full optimization.
-   * No optimization status (green color): Only non-optimized Workloads were selected, and the Potential Monthly Maximum Savings are shown.
-   * Pending optimization status (gray color): Only pending workloads were selected. Pending workloads will be optimized according to the configured schedule. 
+![right-sizing-savings-panel](https://github.com/spotinst/help/assets/159915991/3693d491-2caa-4254-ae5c-4eafa6123b89)
 
-> **Notes**: If workloads with differing statuses are selected.
-> If at least one selected workload has potential savings, the no optimization status and potential savings are shown.
-> If at least one workload has limited optimization, the limited optimization status is shown.
-> If at least one workload is pending (and is fully optimized), the pending optimization status is shown.
+The workload status widget (on the left) shows one of the following statuses:
+* Optimization maximized status (green color): All workloads are optimized.
+* Limited optimization status (orange color): All workloads have limited optimization, and a link is provided to see how to achieve full optimization.
+* No optimization status (green color): All Workloads are not optimized, and the total Potential Monthly Maximum Savings are shown.
+* Pending optimization status (gray color): All workloads are pending and will be optimized according to the configured schedule. 
 
+If you have workloads with mixed statuses, the workload status widget shows a status according to the following logic:
+* The potential savings are shown if at least one workload has potential savings, one is fully optimized, one is pending, and one has limited optimization.
+* The limited optimization status is shown if at least one workload is pending, one is fully optimized, and one has limited optimization, but none have potential savings.
+* The pending status is shown if at least one workload is pending and one is optimized, but there are no workloads with limited optimization and no workloads with potential savings.
+
+> **Note**: The status changes according to the filters applied in the panel and the [Workloads Optimization list]()
+
+vCPU and memory usage widgets:
 *  vCPU Usage: Used and allocated vCPU resources, recommended increase or decrease of vCPU resources, and the percentage of overprovisioning. 
 *  Memory Usage: Used and allocated memory resources, a recommendation to increase or decrease the memory resources, and the percentage of overprovisioning. 
 
-![right-sizing-savings-panel](https://github.com/spotinst/help/assets/159915991/3693d491-2caa-4254-ae5c-4eafa6123b89)
-
 ###  Right Sizing Resource Usage Panel 
+
+![right-sizing-usage-panel](https://github.com/spotinst/help/assets/159915991/82488c4a-5683-432b-b589-a30b1d15ed99)
 
 The right Sizing Resources Usage panel contains two widgets: 
 
 *  vCPU usage in the last two weeks: Displays graphs for used, allocated, and recommended vCPU usage, based on data from the last two weeks. 
 *  Memory usage in the last two weeks: Displays graphs for used, allocated, and recommended memory usage based on data from the last two weeks. 
 
-![right-sizing-usage-panel](https://github.com/spotinst/help/assets/159915991/82488c4a-5683-432b-b589-a30b1d15ed99)
+
 
