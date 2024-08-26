@@ -88,10 +88,10 @@ The Right-Sizing Savings panel contains a set of savings widgets, which show you
 The workload status widget (on the left) shows one of the following statuses:
 * Optimization maximized status (green color): All workloads are optimized.
 * Limited optimization status (orange color): All workloads have limited optimization, and a link is provided to see how to achieve full optimization.
-* No optimization status (green color): All Workloads are not optimized, and the total Potential Monthly Maximum Savings are shown.
+* No optimization status (green color): No workloads are optimized, and the total Potential Monthly Maximum Savings are shown.
 * Pending optimization status (gray color): All workloads are pending and will be optimized according to the configured schedule. 
 
-If you have workloads with mixed statuses, the workload status widget shows a status according to the following logic:
+If you have workloads with differing statuses, the workload status widget shows a status according to the following logic:
 * The potential savings are shown if at least one workload has potential savings, one is fully optimized, one is pending, and one has limited optimization.
 * The limited optimization status is shown if at least one workload is pending, one is fully optimized, and one has limited optimization, but none have potential savings.
 * The pending status is shown if at least one workload is pending and one is optimized, but there are no workloads with limited optimization and no workloads with potential savings.
