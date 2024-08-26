@@ -43,8 +43,6 @@ Once every 15 seconds, the Ocean Controller queries the Metrics Server for pod u
 
 The output produces a single point-in-time data point for each pod. Ocean then aggregates the pods' data per workload container. 
 
-The aggregation includes maximum, minimum, and mean resource utilization values, which will be used in the recommendation generation process to ensure that each pod’s utilization is considered properly. 
-
 Using the per-workload container aggregated data points, Ocean makes recommendations based on a mechanism that attempts to even out peaks and troughs in resource demand. The Right-Sizing engine runs every hour to generate new recommendations and update existing ones. 
 
 *  Recommendations for decreasing memory requests are based on the maximum memory utilization. If the maximum value * (10% overhead + 5% stability margin) > request, the recommendation = [10% overhead * value + value].
