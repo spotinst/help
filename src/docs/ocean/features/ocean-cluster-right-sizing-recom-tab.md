@@ -28,18 +28,18 @@ This list displays:
 *  Recommendations for vCPU and memory right sizing per deployment. Recommended increases are shown with a green up arrow, and recommended decreases are shown with a red Down arrow.  
 *  Optimized [Right Sizing rules]() that are attached to specific workloads.
 *  Potential monthly max. savings if you adopt these recommendations.
-*  Rules: If the workload is [attached](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=attach-a-right-sizing-rule-to-one-or-more-workloads) to a right-sizing rule, the name of the rule appears. The rule has one of the following workload (colored) optimization statuses:
+*  Rules: If the workload is [attached](ocean/features/ocean-cluster-right-sizing-recom-tab?id=attach-a-right-sizing-rule-to-one-or-more-workloads) to a right-sizing rule, the name of the rule appears. The rule has one of the following workload (colored) optimization statuses:
    *  Green: The Workload is fully optimized, and no action is required.
-   *  Yellow: The Workload is partially optimized (constrained by settings). 
+   *  Orange: The Workload has optimization limitations (constrained by settings). 
    *  Gray: The rule for the workload has been attached but is out of schedule.
-   *
-   Add link to savings panel on first page
+ 
+See also 
 
 > **Notes**:
 
 > Red status: The Workload is not optimized.
 
-> Yellow or gray status: Hover over the workload optimization status to view more details in a tooltip.
+> Orange or gray status: Hover over the workload optimization status to view more details in a tooltip.
 
 > If a workload is attached to an activated right-sizing rule, no vCPU / memory recommendations or Potential monthly max. Savings are displayed for the workload because Ocean is already optimizing it.
    
