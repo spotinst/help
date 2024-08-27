@@ -1,6 +1,6 @@
 # OpenShift
 
->**Note**: OpenShift integration is currently only supported for AWS Kuberneted.
+>**Note**: OpenShift integration is currently only supported for AWS Kubernetes.
 
 Red Hat OpenShift is an open-source container application platform based on the Kubernetes container orchestrator for enterprise application development and deployment.
 Ocean improves on the foundation of our tried-and-true Kubernetes Autoscaler and provides pod-driven autoscaling for Kubernetes clusters. Ocean adjusts infrastructure capacity and size to meet pod, container, and application needs and ensures that all pods in the cluster have a place and capacity to run. Apart from eliminating the overhead of maintaining and scaling the infrastructure, Ocean significantly reduces costs by reliably leveraging excess capacity and automatically bin-packing containers to ensure the most efficient use of infrastructure. Ocean recognizes when multiple containers should be placed on the same instance or when they should spread out across a group.
