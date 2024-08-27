@@ -97,7 +97,7 @@ This panel contains a set of widgets that display categorized information on you
 
 ![resource-allocation-sample](https://github.com/user-attachments/assets/7aa25b61-8260-4aa4-a122-274786d1ef15)
 
-This panel displays a cluster-level summary with widgets for CPU /Memory /GPU resources allocated to pods. You can review allocation trends over time. Use this information to verify that infrastructure utilization is maintained at 70-80%.
+This panel displays a **cluster-level** summary with widgets for CPU /Memory /GPU resources allocated to pods. You can review allocation trends over time. Use this information to verify that infrastructure utilization is maintained at 70-80%.
 * CPU
 * Memory
 * GPU
@@ -105,14 +105,13 @@ This panel displays a cluster-level summary with widgets for CPU /Memory /GPU re
 Each widget displays:
 * % Workload allocation.
 * % Total allocation (including headroom). Total workload allocation percentage (includes only running pods, running headroom pods, and running DaemonSets pods that are scheduled on Ocean nodes).
-  
-To view more details:
 
+To view more details:
 * Click an item on the legend above the graph to turn its associated curve on or off.
 * Select the time period to view at the top-right of the screen ( last 6 hours/1 day/7 days).
 * Hover over a curve to see the resource allocation and percentage value at a specific point in time.
 
->**Note**: The **Nodes** tab shows the percentage workload allocation at the node level.
+>**Note**: The **Nodes** tab shows the percentage workload allocation at the **node level**.
 > The Resource Allocation panel contains widgets for CPU, memory, and GPU allocation per node over time.
 > * % Workload allocation.
 > * % Total allocation (Including headroom).
