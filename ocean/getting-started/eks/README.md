@@ -10,4 +10,3 @@ If you have already connected your AWS account to Ocean, you can start with Ocea
 - [Create New Cluster](/ocean/getting-started/eks/create-a-new-cluster): Create new AWS EKS clusters directly from the Spot Console.
 - [Create Cluster via eksctl](/ocean/tools-and-integrations/eksctl/): Use eksctl to create a new EKS cluster managed by Ocean.
 - [Create Cluster via Terraform](/ocean/getting-started/eks/terraform): Use a Terraform resource to create a new EKS cluster with Ocean.
-- [Migrate Workload to Ocean](https://docs.spot.io/ocean/tutorials/migrate-workload): Migrate and register your workloads (nodes and pods) into Ocean so they will be managed by Spot.
