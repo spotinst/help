@@ -8,7 +8,7 @@ When adding a node to an OpenShift cluster, a Certificate Signing Request (CSR) 
 
 Ocean now officially supports OpenShift v3.11 and later, leveraging its security and management advantages. Using Ocean, OpenShift users can now enjoy the `Serverless Containers` experience.
 
-## OenShift Getting Started Tasks
+## OpenShift Getting Started Tasks
 
 - [Cluster Creation from OpenShift (v4.x)](ocean/tools-and-integrations/openshift/create-cluster-v4x)
 - [Cluster Creation from OpenShift (v3.11+)](ocean/tools-and-integrations/openshift/create-cluster-v311)
