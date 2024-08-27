@@ -14,8 +14,7 @@ Ocean takes care of time-consuming DevOps activities, with container-driven auto
 
 Integration with excel lets you streamline and optimize the entire EKS process, from initially creating your cluster to managing and optimizing it on an ongoing basis.
 
-## Related Links
+## eksctl Getting Started Tasks
 
-- [Create a New Cluster with eksctl](ocean/tools-and-integrations/eksctl/create-a-new-cluster-with-eksctl)
-- [Connect an Existing Cluster](ocean/tools-and-integrations/eksctl/join-an-existing-cluster) to Ocean using eksctl.
-- Learn more about [eksctl](https://github.com/spotinst/weaveworks-eksctl).
+- [Cluster Creation via eksctl](ocean/tools-and-integrations/eksctl/create-a-new-cluster-with-eksctl).
+- [Connect Existing Cluster via eksctl](ocean/tools-and-integrations/eksctl/join-an-existing-cluster).
