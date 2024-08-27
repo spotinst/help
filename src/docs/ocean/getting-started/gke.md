@@ -42,13 +42,64 @@ In the Spot Console's left menu, click **Ocean > Cloud Clusters** and then click
 
 ## Step 3: Connectivity
 
-1. Create a Spot token or use an existing one.
-2. Install the Ocean Controller. You can do this using [Helm](ocean/tutorials/spot-kubernetes-controller/install-with-helm) or by running [kubectl](ocean/tutorials/spot-kubernetes-controller/install-with-kubectl) commands.
-3. Click Test Connectivity to ensure the controller functionality.
+You can now install the [Ocean Controller](ocean/tutorials/ocean-controller-v2/) and establish the connection between the Ocean SaaS and the cluster.
 
-<img src="/ocean/_media/gke-connectivity.png" />
+![gke-import-connect](https://github.com/user-attachments/assets/45abcc14-406d-42ae-ba79-b247c1d2fbc4)
 
-4. Click Next.
+To install the Ocean Controller and establish connectivity: 
+
+1. Create a Spot token (or use an existing one) and copy it to the text box.
+2. Enter the Namespace. The default is spot-system.
+
+3. To install the Ocean Kubernetes Controller, use either Helm (the preferred option) or via script. 
+
+   * **Helm**: This is the preferred method because it lets you customize using command-line options or `values.yaml`. Install **Helm 3.x** and add the `spotinst` repo. Then, use the `helm install` command with set command-line options to install the Ocean controller in a separate spot-ocean namespace.
+
+      ```
+    
+       # add repo
+     
+       helm repo add spot https://charts.spot.io
+       helm repo update spot
+   
+       # install controller
+        
+      helm upgrade --install --wait ocean-controller spot/ocean-kubernetes-controller \
+      --namespace "${NAMESPACE}" --create-namespace \ 
+      --set spotinst.account="${SPOTINST_ACCOUNT}" \
+      --set spotinst.clusterIdentifier="${SPOTINST_CLUSTER_IDENTIFIER}" \
+      --set spotinst.token="${SPOTINST_TOKEN}"
+       
+       ```
+    
+   * **Connect via Script**: Use Spot’s script to install the Ocean Controller:
+
+       ```bash
+    
+      curl -fsSL https://spotinst-public.s3.amazonaws.com/integrations/kubernetes/cluster-controller-v2/scripts/init.sh | \
+      SPOTINST_TOKEN=$SPOTINST_TOKEN \
+      SPOTINST_ACCOUNT=$SPOTINST_ACCOUNT \
+      SPOTINST_CLUSTER_IDENTIFIER=$SPOTINST_CLUSTER_IDENTIFIER \
+      ENABLE_OCEAN_METRIC_EXPORTER=false \
+      INCLUDE_METRIC_SERVER=false \
+      bash
+       
+       ```  
+      If you need admin privileges for this script, run the following command:
+
+      ```kubectl create clusterrolebinding cluster-provisioning-model-test --clusterrole=cluster-admin --user=<userEmail>```
+
+     
+ >**Note**: Optionally install the [Ocean Prometheus exporter](https://docs.spot.io/ocean/tools-and-integrations/prometheus/README)
+
+
+ 
+4. Click **Test Connectivity** to confirm that the Ocean Controller is functioning in the cluster. The test takes around two minutes. A green **OK** is displayed when the Ocean Controller pod runs in the AKS cluster and communicates with the Ocean SaaS engine.  
+
+Additional Tips:  
+
+* For unsuccessful connectivity, check the outbound connection and that the Ocean Controller pods are running.
+* To change the Ocean Controller init.sh script, download, edit, and execute it from the command line (bash shell). 
 
 ### For a Private GKE Cluster
 
@@ -63,9 +114,9 @@ kubectl apply -f https://spotinst-public.s3.amazonaws.com/integrations/kubernete
 
 ### Preserve Original Node Pool
 
-Preserve the original node pool and its name in order to sync upgrades of the node pool. The original node pool can be drained from all nodes as long as it is preserved.
+Preserve the original node pool and its name to sync upgrades of the node pool. The original node pool can be drained from all nodes as long as it is preserved.
 
-For any change in the original node pool please contact us.
+For any changes to the original node pool, contact Spot Support.
 
 ## Step 4: Review
 
