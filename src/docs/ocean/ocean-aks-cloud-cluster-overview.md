@@ -1,5 +1,3 @@
-<meta name="robots" content="noindex">
-
 # Ocean AKS Cloud Cluster Overview Dashboard
 
 The Cloud Cluster Overview dashboard provides enhanced functionality to analyze the Ocean Autoscaler actions with high granularity and gain deeper insights into its behavior. 
@@ -16,9 +14,6 @@ Ocean continuously analyzes the utilization of your nodes in the cloud infrastru
 
 To access the Ocean Cluster Overview dashboard: 
 1. click **Ocean > Cloud Clusters** in the left main menu.
-
-  
- 
 2. Select a cluster from the list of clusters. 
 
 ## Ocean Savings Panel
@@ -76,10 +71,10 @@ This tab displays:
  
 <details>
    <summary markdown="span">View image</summary>
- 
-<img src="https://github.com/user-attachments/assets/1fe92079-590a-4fb2-a844-77e6c5e74621">
 
- </details>
+ ![image-bin-packs](https://github.com/user-attachments/assets/3661f5dd-fd9e-4584-9767-3701d7dda39a)
+ 
+</details>
 
 * Resource savings from bin packing in the following units:
   * CPU resources saved in vCPU Hours.
@@ -120,6 +115,13 @@ To view the details you need:
 > The Resource Allocation panel contains widgets for CPU, memory, and GPU allocation per node over time.
 > * % Workload allocation.
 > * % Total allocation (Including headroom).
+
+<details>
+   <summary markdown="span">View image</summary>
+
+![nodes-tab](https://github.com/user-attachments/assets/75ec851a-71c0-4170-8c78-8361f3944f16)
+
+ </details>
 
 ## Related Topics
 
