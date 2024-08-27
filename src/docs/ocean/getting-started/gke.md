@@ -87,7 +87,7 @@ To install the Ocean Controller and establish connectivity:
        ```  
       If you need admin privileges for this script, run the following command:
 
-      ```kubectl create clusterrolebinding cluster-provisioning-model-test --clusterrole=cluster-admin --user=<userEmail>```
+      ```kubectl create clusterrolebinding <cluster name> --clusterrole=cluster-admin --user=<userEmail>```
 
      
  >**Note**: Optionally install the [Ocean Prometheus exporter](https://docs.spot.io/ocean/tools-and-integrations/prometheus/README)
