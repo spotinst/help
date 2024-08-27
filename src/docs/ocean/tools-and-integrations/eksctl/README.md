@@ -16,6 +16,5 @@ Integration with excel lets you streamline and optimize the entire EKS process, 
 
 ## eksctl Getting Started Tasks
 
-- [Cluster Creation via eksctl](ocean/tools-and-integrations/eksctl/create-a-new-cluster-with-eksctl)
-- [Connect Existing Cluster via eksctl](ocean/tools-and-integrations/eksctl/join-an-existing-cluster) to Ocean using eksctl.
-- Learn more about [eksctl](https://github.com/spotinst/weaveworks-eksctl).
+- [Cluster Creation via eksctl](ocean/tools-and-integrations/eksctl/create-a-new-cluster-with-eksctl).
+- [Connect Existing Cluster via eksctl](ocean/tools-and-integrations/eksctl/join-an-existing-cluster).
