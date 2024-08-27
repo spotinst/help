@@ -325,8 +325,4 @@ After import, the cluster appears in the Cloud Clusters list under the left Ocea
 
 See [Workload Migration](https://docs.spot.io/ocean/tutorials/migrate-workload-aks)
 
-## Related Topics
-
-- [Import Prerequisites](https://docs.spot.io/ocean/getting-started/aks/aks-prerequisites)
-- [Migrate Workload](https://docs.spot.io/ocean/tutorials/migrate-workload-aks)
 
