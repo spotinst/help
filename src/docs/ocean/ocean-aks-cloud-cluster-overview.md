@@ -106,7 +106,8 @@ Each widget displays:
 * % Workload allocation.
 * % Total allocation (including headroom). Total workload allocation percentage (includes only running pods, running headroom pods, and running DaemonSets pods that are scheduled on Ocean nodes).
   
-To view the details you need:
+To view more details:
+
 * Click an item on the legend above the graph to turn its associated curve on or off.
 * Select the time period to view at the top-right of the screen ( last 6 hours/1 day/7 days).
 * Hover over a curve to see the resource allocation and percentage value at a specific point in time.
