@@ -1,6 +1,8 @@
 <meta name=“robots” content=“noindex”>
 
-#  Ocean Cluster Automatic Right Sizing (EKS and AKS)
+#  Ocean Cluster Automatic Right Sizing
+
+Cloud service provider relevance: <font color="#FC01CC">EKS</font> and <font color="#FC01CC">AKS</font>
 
 To help you improve the efficiency and performance of your cloud environments, Ocean’s rightsizing capabilities provide recommendations that target over-provisioning and underutilization. 
 
@@ -96,7 +98,7 @@ If you have workloads with differing statuses, the workload status widget shows 
 * The limited optimization status is shown if at least one workload is pending, one is fully optimized, one has limited optimization, but none have potential savings.
 * The pending status is shown if at least one workload is pending and one is optimized, but there are no workloads with limited optimization and no workloads with potential savings.
 
-> **Note**: The status changes according to the filters applied in the panel and the [Workloads Optimization list]()
+> **Note**: The status changes according to the filters applied in this panel and the Workloads Optimization list in the [Advanced Optimization tab](ocean/features/ocean-cluster-right-sizing-recom-tab?id=automatic-right-sizing-recommendations-and-rules)
 
 vCPU and memory usage widgets:
 *  vCPU Usage: Used and allocated vCPU resources, recommended increase or decrease of vCPU resources, and the percentage of overprovisioning. 
