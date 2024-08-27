@@ -321,9 +321,9 @@ You can:
 When you finish editing the Ocean cluster configuration, click **Create**to create the Ocean-managed AKS cluster. 
 After import, the cluster appears in the Cloud Clusters list under the left Ocean menu. 
 
-## Migrate Workloads to Ocean from the Azure Portal 
+## Migrate Workloads to Ocean
 
-See [Migrate the Workload to Ocean on AKS](https://docs.spot.io/ocean/tutorials/migrate-workload-aks)
+See [Workload Migration](https://docs.spot.io/ocean/tutorials/migrate-workload-aks)
 
 ## Related Topics
 
