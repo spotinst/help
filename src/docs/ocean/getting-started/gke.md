@@ -120,15 +120,14 @@ For any changes to the original node pool, contact Spot Support.
 
 ## Step 4: Review
 
-Review all of the Ocean settings you have configured. Click Create to finish or use the generated JSON template to create the Ocean cluster using other tooling.
+Review all of the Ocean settings you have configured. Click **Create** to finish or use the generated JSON template to create the Ocean cluster using other tooling.
 
-You're all set! Ocean will now ensure the most cost-effective capacity and sizing possible for your cluster.
 
-You can manually scale down your existing GKE nodes in the node pools you migrated to get Ocean to provision pod-driven optimized infrastructure for your existing workloads. To do this, you can use the following command:
-
+Optional: You can manually scale down your existing GKE nodes in migrated node pools so that Ocean provisions pod-driven optimized infrastructure for your existing workload. 
+To do this, run the following command:
 ```sh
 gcloud container clusters resize <cluster_name> --num-nodes=0 --region=<region/zone> --node-pool <node_pool_name>
 ```
 
-To avoid unnecessary downtime, the scale-down of existing nodes should be gradual. For example, run the above command several times, reducing the value of `num-nodes` gradually. Use `num-nodes=0` only on the last time you run the command.
+To avoid unnecessary downtime, the scale-down of existing nodes should be gradual. For example, run the above command several times, gradually reducing the value of `num-nodes`. Only Use `num-nodes=0` for the last time you run the command.
 
