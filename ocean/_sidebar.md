@@ -15,7 +15,6 @@
     - [AWS-Migrate Workload](ocean/tutorials/migrate-workload)
        - [Migrate using Console](ocean/tutorials/migrate-workload-via-ui)
        - [Migrate using API](ocean/tutorials/migrate-workload-via-api)
-       - [Migrate Elastigroups](ocean/tutorials/migrate-existing-egs-ekskops)
     - [AKS](ocean/getting-started/aks/)
       - [Import Prerequisites](ocean/getting-started/aks/aks-prerequisites)
       - [Migrate Workload](ocean/tutorials/migrate-workload-aks)
