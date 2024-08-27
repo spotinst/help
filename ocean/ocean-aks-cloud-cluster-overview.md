@@ -1,5 +1,3 @@
-<meta name="robots" content="noindex">
-
 # Ocean AKS Cloud Cluster Overview Dashboard
 
 The Cloud Cluster Overview dashboard provides enhanced functionality to analyze the Ocean Autoscaler actions with high granularity and gain deeper insights into its behavior. 
@@ -7,15 +5,15 @@ This topic delves into this dashboard's various components and sections, offerin
 
 Ocean continuously analyzes the utilization of your nodes in the cloud infrastructure. It automatically scales compute resources to optimize utilization and availability. It achieves this by intelligently combining Spot, Reserved, and On-Demand compute instances.
 
-* Ocean Savings panel shows the amount of money, CPU, memory, and GPU compute resources saved when you utilize Ocean to manage your Kubernetes cluster. Specifically, these are savings from running spot instances, bin packing, and reverting to lower-cost nodes. 
+* Ocean Savings panel shows the amount of money, CPU, memory (GiB/TiB), and GPU compute resources saved when you utilize Ocean to manage your Kubernetes cluster. Specifically, these are savings from running spot instances, bin packing, and reverting to lower-cost nodes. 
 * The Ocean Managed Nodes and Resources panel shows information about your Ocean-managed and unmanaged nodes and your managed CPU, memory, and GPU resources.
-* Resource Allocation panel shows resource allocation information about your managed CPU, memory, and GPU resources at the cluster level.
-  * Drill down to view resource allocation information at the node level in the Nodes tab.
+* Resource Allocation panel shows resource allocation information about your managed CPU, memory (GiB/TiB), and GPU resources at the cluster level.
+  * Drill down to view resource allocation information at the namespace, Virtual Node Group, node pool, or node level. Each has a dedicated tab to the right of the Overview tab.
 
 ## Access the Ocean Cloud Cluster Overview
 
 To access the Ocean Cluster Overview dashboard: 
-1. click **Ocean > Cloud Clusters**in the left main menu.
+1. click **Ocean > Cloud Clusters** in the left main menu.
 2. Select a cluster from the list of clusters. 
 
 ## Ocean Savings Panel
@@ -46,8 +44,8 @@ This tab displays:
   * Percentage of cluster costs = [total price for running on-demand instances – total price for running spot instances] / total price for running on-demand instances x 100. 
 
 * CPU resources in vCPU Hours.
-* Memory resources in GiB Hours.
-* GPU resources in GPU Hours. 
+* Memory resources in GiB/TiB Hours.
+* GPU resources in GPU Hours.
 
 ## Ocean Savings from Bin Packing
 
@@ -73,10 +71,10 @@ This tab displays:
  
 <details>
    <summary markdown="span">View image</summary>
- 
-<img src="https://github.com/user-attachments/assets/1fe92079-590a-4fb2-a844-77e6c5e74621">
 
- </details>
+ ![image-bin-packs](https://github.com/user-attachments/assets/3661f5dd-fd9e-4584-9767-3701d7dda39a)
+ 
+</details>
 
 * Resource savings from bin packing in the following units:
   * CPU resources saved in vCPU Hours.
@@ -111,12 +109,19 @@ Each widget displays:
 To view the details you need:
 * Click an item on the legend above the graph to turn its associated curve on or off.
 * Select the time period to view at the top-right of the screen ( last 6 hours/1 day/7 days).
-* Hover over a curve to see the resource allocation (GB) and percentage value at a specific point in time.
+* Hover over a curve to see the resource allocation and percentage value at a specific point in time.
 
 >**Note**: The **Nodes** tab shows the percentage workload allocation at the node level.
-> The Resource Allocation panel contains widgets for CPU and memory allocation per node over time.
+> The Resource Allocation panel contains widgets for CPU, memory, and GPU allocation per node over time.
 > * % Workload allocation.
 > * % Total allocation (Including headroom).
+
+<details>
+   <summary markdown="span">View image</summary>
+
+![nodes-tab](https://github.com/user-attachments/assets/75ec851a-71c0-4170-8c78-8361f3944f16)
+
+ </details>
 
 ## Related Topics
 
