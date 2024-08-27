@@ -22,6 +22,8 @@ The Advanced Optimization tab contains these lists:
 *  Workloads Optimization List. 
 *  Automation Rules List.
 
+Your workload optimization activities impact the status of the workloads in the [Right Sizing Savings panel](ocean/features/ocean-cluster-right-sizing-tab?id=right-sizing-savings-panel)
+
 ##  Workloads Optimization List 
 
 This list displays:  
@@ -35,8 +37,6 @@ This list displays:
    *  Orange: The Workload has optimization limitations (constrained by settings). 
    *  Gray: The rule for the workload has been attached but is out of schedule.
  
-You can also view workloads status in the [Right Sizing Savings panel](ocean/features/ocean-cluster-right-sizing-tab?id=right-sizing-savings-panel)
-
 > **Notes**:
 
 > Red status: The Workload is not optimized.
