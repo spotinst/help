@@ -34,11 +34,11 @@ In the Spot Console's left menu, click **Ocean > Cloud Clusters** and then click
    - Additional Configurations
      - Draining Timeout
 
-<img src="/ocean/_media/gke-compute-a.png" width="462" height="322" />
+![gke-machine-types](https://github.com/user-attachments/assets/7a7ca8f0-3180-413a-9d59-ef380309248c)
 
 2. Optionally, you can import all GKE node pools into Ocean as [virtual node groups](ocean/features/launch-specifications). (The default node pool will be automatically imported.)
 
-<img src="/ocean/_media/gke-compute-vng.png" />
+![gke-import-node-pools](https://github.com/user-attachments/assets/43e81df7-219f-464b-9cfe-dc29a407214a)
 
 ## Step 3: Connectivity
 
@@ -124,9 +124,7 @@ Review all of the Ocean settings you have configured. Click Create to finish or 
 
 You're all set! Ocean will now ensure the most cost-effective capacity and sizing possible for your cluster.
 
-## What's Next?
-
-Manually scale down your existing GKE nodes in the node pools you migrated to get Ocean to provision pod-driven optimized infrastructure for your existing workloads. To do this, you can use the following command:
+You can manually scale down your existing GKE nodes in the node pools you migrated to get Ocean to provision pod-driven optimized infrastructure for your existing workloads. To do this, you can use the following command:
 
 ```sh
 gcloud container clusters resize <cluster_name> --num-nodes=0 --region=<region/zone> --node-pool <node_pool_name>
@@ -134,6 +132,3 @@ gcloud container clusters resize <cluster_name> --num-nodes=0 --region=<region/z
 
 To avoid unnecessary downtime, the scale-down of existing nodes should be gradual. For example, run the above command several times, reducing the value of `num-nodes` gradually. Use `num-nodes=0` only on the last time you run the command.
 
-## Related Topics
-
-- [Create Cluster using Shared VPC](https://docs.spot.io/ocean/tutorials/create-cluster-gke-shared-vpc)
