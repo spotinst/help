@@ -4,13 +4,16 @@ Ocean automates cloud infrastructure for containers. It continuously analyzes ho
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ryCUbWgLCwk " title="Kubernetes and Containers with Spot Ocean" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-## Connect Your Cloud Service Provider Account
+## Ocean Release Notes
+Check out the [Ocean Release Notes](ocean/release-notes/) for information about the latest released ocean features.
+
+## Connect Your Cloud Service Provider Account to Spot
 
 If you have not yet connected your cloud service provider (AWS, GCP, or Azure) account with Spot, [connect your first cloud account to Spot](connect-your-cloud-provider/aws-account?id=connect-your-first-cloud-account-to-spot).
 
 ## Get Started With An Ocean Cluster
 
-Once you have connected your account, [get started](ocean/getting-started/) with an Ocean cluster.
+Once you have connected your service provider account to Spot, [get started](ocean/getting-started/) with an Ocean cluster.
 
 ## Related Topics
 
