@@ -72,8 +72,8 @@ This tab displays:
 <details>
    <summary markdown="span">View image</summary>
 
-![bin-packing-sample-2](https://github.com/user-attachments/assets/cd441ec3-7fe1-4e8f-9c31-888a000105ef)
- 
+   <img src="https://github.com/user-attachments/assets/cd441ec3-7fe1-4e8f-9c31-888a000105ef"/>
+
 </details>
 
 * Resource savings from bin packing in the following units:
