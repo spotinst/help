@@ -149,7 +149,7 @@ Once configured, whenever the Ocean Autoscaler scales up, Ocean will automatical
 
 ## Restrict Scale Down per Virtual Node Group
 
-Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>, <font color="#FC01CC">ECS</font>, and <font color="#FC01CC">GKE</font>
+Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>, <font color="#FC01CC">ECS</font>, <font color="#FC01CC">GKE</font>, and <font color="#FC01CC">AKS</font>
 
 The restrict-scale-down label is a [Spot label](ocean/features/labels-and-taints?id=spot-labels) that can be applied on a Kubernetes pod or an ECS task and forces Ocean not to scale down the node or container instance running it. It is also possible to restrict scale down at the VNG level using a boolean property with the same name.
 
