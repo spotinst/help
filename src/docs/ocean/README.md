@@ -1,15 +1,10 @@
 # Ocean
 
-Ocean automates cloud infrastructure for containers. It continuously analyzes how your containers use infrastructure, automatically scaling compute resources to maximize utilization and availability, and utilizing the optimal blend of spot, reserved, and on-demand compute instances.
+Ocean automates cloud infrastructure for containers. It continuously analyzes how your containers use infrastructure, automatically scaling compute resources to maximize utilization and availability and utilizing the optimal blend of spot, reserved, and on-demand compute instances.
 
-Ocean lets you focus on your workloads, not your infrastructure:
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ryCUbWgLCwk " title="Kubernetes and Containers with Spot Ocean" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-- **Automate container infrastructure**: Continuously manages scaling and sizing your cluster infrastructure based on container resource needs.
-- **Understand your costs**: Provides real-time insight into infrastructure costs by services, applications, and tasks to enable showback and accountability.
-- **Deliver on SLAs**: Ensures availability and performance by predicting and automatically addressing resource needs and instance interruptions.
-- **Minimize costs**: Automatically uses the optimal mix of on-demand, reserved, and spot instances to reduce costs by up to 90%.
-
-## Connect Your Cloud Provider Account
+## Connect Your Cloud Service Provider Account
 
 If you have not yet connected your cloud service provider (AWS, GCP, or Azure) account with Spot, [connect your first cloud account to Spot](connect-your-cloud-provider/aws-account?id=connect-your-first-cloud-account-to-spot).
 
