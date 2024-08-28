@@ -138,7 +138,7 @@ Setting the draining timeout at the Virtual Node Group level (rather than the cl
 
 You can set a suspension hours (`suspensionHours`) time frame for critical periods to exempt your cluster from Ocean's scaling-down activities and ensure uninterrupted operations.
 
-During suspension hours, Ocean Autoscaler scales down all instances. Suspension hours override the restricted scale-down setting, which prevents scale-down for time frames when there is no Ocean activity, such as bin packing, reverting to lower-cost nodes, or reverting to reserved instances.
+During suspension hours, During suspension hours, Ocean Autoscaler does not scale down instances. Suspension hours override the restricted scale-down setting, which prevents scale-down for time frames when there is no Ocean activity, such as bin packing, reverting to lower-cost nodes, or reverting to reserved instances.
 
 >**Note**: Shutdown hours are when the nodes in the cluster are taken down.
 
