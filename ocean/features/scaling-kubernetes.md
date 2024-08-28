@@ -134,13 +134,11 @@ Setting the draining timeout at the Virtual Node Group level (rather than the cl
 
  You can set the draining timeout (under `strategy`) via the [Spot API](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecCreate) or via [Terraform](https://registry.terraform.io/providers/spotinst/spotinst/latest/docs/resources/ocean_aws_launch_spec#draining_timeout).
 
-##  Suspension Hours to Suppress Ocean Restrict Scale-Down (AKS Only)
+##  Suspension Hours (AKS Only)
 
 You can set a suspension hours (`suspensionHours`) time frame for critical periods to exempt your cluster from Ocean's scaling-down activities and ensure uninterrupted operations.
 
-During suspension hours, Ocean Autoscaler scales down all instances. Suspension hours override the restricted scale-down setting, which prevents scale-down for time frames when there is no Ocean activity, such as bin packing, reverting to lower-cost nodes, or reverting to reserved instances.
-
->**Note**: Shutdown hours are when the nodes in the cluster are taken down.
+During suspension hours, Ocean Autoscaler stops scaling down nodes for Ocean-initiated actions, such as bin packing, reverting to lower-cost nodes, or reverting to reserved nodes.
 
 You can only set the suspension hours via the [Spot API](https://docs.spot.io/api/#tag/Ocean-AKS/operation/oceanAKSClusterUpdate) (under Update Cluster).
 * To enable suspension hours, set `isEnabled` to TRUE
