@@ -9,7 +9,9 @@ This procedure describes how you can utilize your GCP committed use discounts in
 ## Prerequisites 
 
 * Resource-based and spend-based commitments
+
 or only
+
 * Spend-based commitments
 * Resource-based commitment with a billing account
 
