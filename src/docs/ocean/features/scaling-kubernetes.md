@@ -203,13 +203,13 @@ To customize the scaling configuration:
 
 ## Supported Operating Systems
 
-Ocean supports launching instances using any operating system (OS) type, including container-optimized OSs such as Bottlerocket OS, Container Optimized OS, and RancherOS.
+Ocean supports launching instances using any operating system (OS) type, including container-optimized ones such as Bottlerocket, Container Optimized, and RancherOS.
 
 ### Windows and Linux Instances in the same Cluster
 
-Ocean provides the flexibility to use different operating systems in a Kubernetes cluster. For example, using the [virtual node group](ocean/features/launch-specifications) (VNG) concept, you can have Ocean manage Windows nodes alongside other nodes in the cluster.
+Ocean allows you to use different operating systems in a Kubernetes cluster. For example, using the [virtual node group](ocean/features/launch-specifications) (VNG) concept, you can have Ocean manage Windows nodes alongside other nodes in the cluster.
 
-Create a Virtual Node Group with a Windows AMI and you are all set.
+Create a Virtual Node Group with a Windows AMI.
 
 >**Note**: For EKS, use an EKS-optimized Windows AMI. For Windows workloads, the Autoscaler automatically launches nodes only from dedicated VNGs. This means you don't need to set any specific label on the Virtual Node Group unless you have multiple VNGs and wish to ensure the workload runs on a specific Virtual Node Group.
 
@@ -217,12 +217,12 @@ Create a Virtual Node Group with a Windows AMI and you are all set.
 
 Cloud service provider relevance: <font color="#FC01CC">AKS</font> 
 
-There is a default configuration in AKS of maximum pods that can be scheduled on each node, and this default number of pods can be adjusted.
+AKS has a default configuration of the maximum number of pods that can be scheduled on each node, which can be adjusted.
 
 The feature is also available in Ocean to improve node utilization and bin packing. With Ocean, you can set a max pods per node parameter in the following different ways:
 * At the cluster level, so that all nodes have a unified configuration.
 * Per virtual Node Group, so that you can have different configurations for different workloads.
-If you have already configured the maximum pods per node on your AKS cluster, this configuration will be imported during the connection of the AKS cluster to Ocean.
+If you have already configured the maximum pods per node on your AKS cluster, this configuration will be imported when the cluster is connected to Ocean.
 
 This feature is available via API on the [cluster level](https://docs.spot.io/api/#operation/oceanAKSClusterCreate) and the [VNG level](https://docs.spot.io/api/#operation/oceanAKSVirtualNodeGroupCreate).
 
@@ -230,8 +230,10 @@ This feature is available via API on the [cluster level](https://docs.spot.io/ap
 
 Cloud service provider relevance: <font color="#FC01CC">AKS</font> 
 
-Ocean Controller V2 supports Pod Scheduling Readiness (included in Kubernetes 1.3), which considers whether a pod is ready to be scheduled. This feature lets you reduce the churn of pods that stay in a "miss-essential-resources" state for a long time. 
+Ocean with [Controller V2](ocean/tutorials/ocean-controller-v2) supports Pod Scheduling Readiness (included in Kubernetes 1.3), which considers whether a pod is ready to be scheduled. This feature lets you reduce the churn of pods that stay in a "miss-essential-resources" state for a long time. 
 Pods with the `SchedulingGated` status are not scheduled. By specifying/removing a Pod's `.spec.schedulingGates`, you can control when a pod is ready to be considered for scheduling.
 
 Use Pod Scheduling Readiness according to the [Kubernetes documentation](https://kubernetes.io/docs/concepts/scheduling-eviction/pod-scheduling-readiness/).
+
+
 
