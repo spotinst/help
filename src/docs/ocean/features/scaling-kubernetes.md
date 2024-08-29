@@ -24,7 +24,7 @@ It may take a few moments before the created nodes join the Kubernetes cluster. 
 
 ### Affinity and Anti-affinity
 
-You may want to have multiple replicas of a pod running in the cluster, but ensure that each pod does not run on the same node as other replicas of itself. In order to distribute the replicas properly, you can set an anti-affinity across availability zones. The autoscaler will then automatically launch instances satisfying the pod requirements.
+You may want to have multiple replicas of a pod running in the cluster, but ensure that each pod does not run on the same node as other replicas of itself. In order to distribute the replicas properly, you can set an anti-affinity across availability zones. The Autoscaler will then automatically launch instances satisfying the pod requirements.
 
 Example: Anti-affinity across availability zones: 
 
@@ -199,16 +199,29 @@ Ocean supports launching instances using any operating system (OS) type, includi
 
 Ocean provides the flexibility to use different operating systems in a Kubernetes cluster. For example, using the [virtual node group](ocean/features/launch-specifications) (VNG) concept, you can have Ocean manage Windows nodes alongside other nodes in the cluster.
 
-All you need to do is to create a VNG with a Windows AMI and you are all set. (Please note for EKS users, you must use an EKS optimized Windows AMI.) For Windows workloads, the Autoscaler automatically launches nodes only from dedicated VNGs. This means that there is no need to set any specific label on the VNG, unless you have multiple VNGs and you wish to ensure the workload runs on a specific VNG.
+Create a Virtual Node Group with a Windows AMI and you are all set.
+
+>**Note**: For EKS, use an EKS-optimized Windows AMI. For Windows workloads, the Autoscaler automatically launches nodes only from dedicated VNGs. This means you don't need to set any specific label on the Virtual Node Group unless you have multiple VNGs and wish to ensure the workload runs on a specific Virtual Node Group.
 
 ## AKS Support for Max Pods Configuration
 
-There is a default configuration in AKS of maximum pods that can be scheduled on each node and this default number of pods can be adjusted.
+Cloud service provider relevance: <font color="#FC01CC">AKS</font> 
 
-The feature is also available in Ocean in order to improve node utilization and bin packing. With Ocean, you can set a max pods per node parameter in the following different ways:
+There is a default configuration in AKS of maximum pods that can be scheduled on each node, and this default number of pods can be adjusted.
+
+The feature is also available in Ocean to improve node utilization and bin packing. With Ocean, you can set a max pods per node parameter in the following different ways:
 * At the cluster level, so that all nodes have a unified configuration.
 * Per virtual Node Group, so that you can have different configurations for different workloads.
-If you have already configured maximum pods per node on your AKS cluster, this configuration will be imported during the connection of the AKS cluster to Ocean.
+If you have already configured the maximum pods per node on your AKS cluster, this configuration will be imported during the connection of the AKS cluster to Ocean.
 
 This feature is available via API on the [cluster level](https://docs.spot.io/api/#operation/oceanAKSClusterCreate) and the [VNG level](https://docs.spot.io/api/#operation/oceanAKSVirtualNodeGroupCreate).
+
+## AKS Support for Pod Scaling Readiness
+
+Cloud service provider relevance: <font color="#FC01CC">AKS</font> 
+
+Ocean supports Pod Scheduling Readiness (included in Kubernetes 1.3), which considers whether a pod is ready to be scheduled. This feature lets you reduce the churn of pods that stay in a "miss-essential-resources" state for a long time. 
+Pods with the `SchedulingGated` status are not scheduled. By specifying/removing a Pod's `.spec.schedulingGates`, you can control when a pod is ready to be considered for scheduling.
+
+Use Pod Scheduling Readiness according to the [Kubernetes documentation](https://kubernetes.io/docs/concepts/scheduling-eviction/pod-scheduling-readiness/).
 
