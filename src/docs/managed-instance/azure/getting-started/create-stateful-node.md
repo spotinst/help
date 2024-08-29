@@ -67,7 +67,7 @@ Choose the image for launching VMs on the stateful node. The list of images chan
 Custom and shared images are indicated as <i>Generalized</i> or <i>Specialized</i>. When you choose a specialized image, the login and custom data scripts fields are disabled.
 
 Keep in mind:
-* If OS disk persistency is turned on, image section is disabled when you edit or import.
+* If OS disk persistency is turned on, image section is disabled when you edit.
 * If data disk persistency is turned on, custom and shared images that contain data disk definitions are not available (they are filtered out).
 
 ### Persist VM Name
