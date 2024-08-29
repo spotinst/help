@@ -17,7 +17,7 @@ In the Spot Console, go to **Elastigroup** > **Stateful Nodes** > **Create Node*
 ### Basic Settings
 
 * **Name**: Enter a name for the node. You can use a naming convention based on the specific workload the node will manage, for example <i>dev-eu1-worker</i>.
-* **VM Prefix Name**: You can use VM Prefix Name if VM name persistence is set to <i>Off</i>.
+* **VM Prefix Name**: You can give a prefix to all your VMs. It can be used if **VM name persistence** is set to <i>Off</i>.
 * **Description**
 * **Resource Group**: Select a resource group where the VMs will be launched.  
 * **Region**: Select a region where the VMs will be launched.  
