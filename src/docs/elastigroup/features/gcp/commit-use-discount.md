@@ -41,7 +41,7 @@ When this step is completed, you can start utilizing resource-based CUDs.
 
 ## Resource-Based Commitment with a Billing Account
 
-A resource-based commitment with a billing account scope enables you to use the same CUD in multiple projects, as mentioned in [GCP](https://cloud.google.com/billing/docs/how-to/cud-analysis-resource-based#understanding_discount_sharing). Connect all of your GCP projects to Spot accounts, with one account assigned to each project, similar to Spend-Based Commitments.
+A resource-based commitment with a billing account scope enables you to use the same CUD in multiple projects, as mentioned in [GCP](https://cloud.google.com/billing/docs/how-to/cud-analysis-resource-based#understanding_discount_sharing). Connect all of your GCP projects to Spot accounts, with one account assigned to each project, similar to [Spend-Based Commitments](/elastigroup/features/gcp/commit-use-discount?id=spend-based-commitments).
 
 For projects that Spot does not manage, a Spot account with read-only permissions should be created to calculate the status of the commitment plan usage: `compute.instances.list` on Spot's generated service accounts.
 
