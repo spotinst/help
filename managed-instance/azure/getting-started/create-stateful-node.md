@@ -138,7 +138,7 @@ You can use attribute-based Spot VM size selection, or you can manually create a
   <details>
     <summary markdown="span">View image</summary>
 
-    <img height="700" src="https://github.com/spotinst/help/assets/106514736/71fe648d-e8e5-4e4c-9b30-4174d3dcf86a" />
+    <img width="700" src="https://github.com/spotinst/help/assets/106514736/71fe648d-e8e5-4e4c-9b30-4174d3dcf86a" />
 
   </details>
 
@@ -147,7 +147,7 @@ You can use attribute-based Spot VM size selection, or you can manually create a
   <details>
     <summary markdown="span">View image</summary>
 
-    <img height="700" src="https://github.com/spotinst/help/assets/106514736/c0bb5dac-ed78-4afb-81d4-49d00677265e" />
+    <img width="700" src="https://github.com/spotinst/help/assets/106514736/c0bb5dac-ed78-4afb-81d4-49d00677265e" />
 
   </details>
 
@@ -163,7 +163,7 @@ Each VM size provides the following information:
 * **Spot Cost/Month**: the cost per month according to Azure pricing.
 * **Preferred Spot**: select preferred Spot VM sizes. Selecting a VM size as preferred indicates that the stateful node should launch the preferred VM sizes prior to the remaining VM sizes that are defined as Spot sizes.
 
-You can change the columns by clicking the column selector ![column-selector-icon](https://github.com/spotinst/help/assets/106514736/8dfec009-0d19-47d9-bb0d-92bb02cebaef).
+You can change the columns by clicking the column selector <img height="14" src="https://github.com/spotinst/help/assets/106514736/8dfec009-0d19-47d9-bb0d-92bb02cebaef">.
 
 
 ### On-Demand
@@ -319,26 +319,25 @@ Make sure your script doesn’t require additional extensions. For example, you 
 ### Shutdown Script
 
 Defining a shutdown script requires the Spot agent to be installed on the VM.
+
 Click Add Python 2.x/3.x script OR Add Windows script (depending on the OS defined in the selected image) to add the script for installing the Spot agent within the custom data. You can find more information on shutdown scripts on this [page](https://docs.spot.io/elastigroup/features-azure/shutdown-script-in-elastigroup-for-azure?id=install-the-spot-agent).
 
-When the OS disk persistency is turned on, the Shutdown Script section is disabled during edit and import modes of the wizard.
+When the OS disk persistency is turned on, the Shutdown Script section is disabled during edit.
 
 ### Tags
 
-Click + Add Tag to add tags you want the VMs to be created with. Tagged stateful nodes can be filtered by tag keys and values on the Stateful Nodes page.
+Click **+ Add Tag** to add tags you want the VMs to be created with. Tagged stateful nodes can be filtered by tag keys and values on the Stateful Nodes page.
 
 <img src="/elastigroup/_media/azure-new-stateful-20.png" />
 
 All tags created in the Spot console are updated in the Azure console and can be viewed there as well.  
-
-When you have completed the information in the Advanced tab, click Next to continue.
 
 ## Step 5: Review
 
 1. Review your configuration in the:
     * **Summary**
 
-      You can make changes to the configuration for each section by clicking edit.
+      You can make changes to the configuration for each section by clicking edit <img height="14" src="https://github.com/user-attachments/assets/0a75403e-c258-4738-bcae-bda2e2c955ed">.
 
     * **JSON**
 
