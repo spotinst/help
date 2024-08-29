@@ -4,14 +4,8 @@ Elastigroup assists in optimizing the usage of [committed use discounts (CUDs)](
 
 This feature enables you to utilize your existing committed use discounts before considering the addition of extra resources and makes efficient use of your cloud resources. 
 
-This procedure describes how you can utilize your GCP committed use discounts in your Elastigroup. 
-
-## Prerequisites 
-
+This procedure describes how you can utilize your GCP committed use discounts in your Elastigroup:
 * [Resource-based and spend-based commitments](/elastigroup/features/gcp/commit-use-discount?id=resource-based-and-spend-based-commitments)
-
-or only
-
 * [Spend-based commitments](/elastigroup/features/gcp/commit-use-discount?id=spend-based-commitments)
 * [Resource-based commitment with a billing account](/elastigroup/features/gcp/commit-use-discount?id=resource-based-commitment-with-a-billing-account)
 
