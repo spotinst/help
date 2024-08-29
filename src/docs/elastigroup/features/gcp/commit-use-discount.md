@@ -8,12 +8,12 @@ This procedure describes how you can utilize your GCP committed use discounts in
 
 ## Prerequisites 
 
-* Resource-based and spend-based commitments
+* [Resource-based and spend-based commitments](/elastigroup/features/gcp/commit-use-discount?id=resource-based-and-spend-based-commitments)
 
 or only
 
-* Spend-based commitments
-* Resource-based commitment with a billing account
+* [Spend-based commitments](/elastigroup/features/gcp/commit-use-discount?id=spend-based-commitments)
+* [Resource-based commitment with a billing account](/elastigroup/features/gcp/commit-use-discount?id=resource-based-commitment-with-a-billing-account)
 
 ## Resource-Based and Spend-Based Commitments  
 
