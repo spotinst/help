@@ -138,7 +138,7 @@ You can use attribute-based Spot VM size selection, or you can manually create a
   <details>
     <summary markdown="span">View image</summary>
 
-    <img width="700" src="https://github.com/spotinst/help/assets/106514736/71fe648d-e8e5-4e4c-9b30-4174d3dcf86a" />
+    <img width="900" src="https://github.com/spotinst/help/assets/106514736/71fe648d-e8e5-4e4c-9b30-4174d3dcf86a" />
 
   </details>
 
@@ -147,7 +147,7 @@ You can use attribute-based Spot VM size selection, or you can manually create a
   <details>
     <summary markdown="span">View image</summary>
 
-    <img width="700" src="https://github.com/spotinst/help/assets/106514736/c0bb5dac-ed78-4afb-81d4-49d00677265e" />
+    <img width="900" src="https://github.com/spotinst/help/assets/106514736/c0bb5dac-ed78-4afb-81d4-49d00677265e" />
 
   </details>
 
@@ -345,7 +345,7 @@ All tags created in the Spot console are updated in the Azure console and can be
 
       Changes made in the JSON file won’t be reflected in the Summary page. If you make changes in the JSON file and then navigate back to one of the wizard tabs, the changes won’t be saved.
 
-      Learn more about using API to [configure your stateful node](https://docs.spot.io/api/#tag/Elastigroup-Azure-Stateful/operation/azureStatefulNodeCreate).
+      Learn more about using the API to [configure your stateful node](https://docs.spot.io/api/#tag/Elastigroup-Azure-Stateful/operation/azureStatefulNodeCreate).
 
     * **Terraform**
 
