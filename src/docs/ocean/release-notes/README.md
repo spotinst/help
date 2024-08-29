@@ -2,6 +2,8 @@
 
 ## August 2024: Features and Enhancements 
 
+*  **OCN-0027: August 29, 2024:** (**<font color="#FC01CC">AWS Kubernetes</font>**) Turn On/Off Utilize Commitments per Virtual Node Group: You can now distribute reservation instances/savings plans according to Virtual Node Groups for different types of workloads on the same cluster via the utilizeReservedInstances and utilizeCommitments attributes. [Learn more...](https://docs.spot.io/ocean/features/vngs/attributes-and-actions-per-vng?id=turn-onoff-utilize-commitments-per-virtual-node-group)
+
 *  **OCN-0026: August 21, 2024:** (**<font color="#FC01CC">AKS</font>**) Ocean Controller Version 2 now supports the `namespaceSelector` scaling constraint label introduced in Kubernetes Version 1,24 for the AKS platform. When you apply this label, Ocean's Autoscaler scales up nodes based on the Namespace selector to schedule pods. [Learn more...](https://docs.spot.io/ocean/features/scaling-kubernetes?id=kubernetes-namespaceselector-scaling-constraint-label) about the `namespaceSelector` label.
 
 *  **OCN-0025: August 18, 2024:** (**<font color="#FC01CC">AKS</font>**) For AKS only, you can now set a suspension hours (`suspensionHours`) time frame for critical periods to exempt your cluster from Ocean's scaling-down activities and ensure uninterrupted operations.[Learn more...](https://docs.spot.io/ocean/features/scaling-kubernetes?id=suspension-hours-to-suppress-ocean-restrict-scale-down-aks-only)
