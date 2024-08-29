@@ -4,106 +4,74 @@ This procedure describes how to create a new stateful node from scratch in Elast
 
 ## Prerequisite
 
-Ensure your Azure account is connected to your Spot account. For more information, see [Connect your Azure Account](https://docs.spot.io/connect-your-cloud-provider/azure-account).
+Make sure your Azure account is [connected to your Spot account](https://docs.spot.io/connect-your-cloud-provider/azure-account).
 
 ## Get Started
 
-1. In the Spot Console under Elastigroup, click Stateful Nodes.
-2. Click Create Node.
-3. Click Start from scratch.
+In the Spot Console, go to **Elastigroup** > **Stateful Nodes** > **Create Node** > **Start from scratch**.
 
 <img src="/elastigroup/_media/azure-new-stateful-1.png" width="1000" />
 
-The following steps are included in the creation wizard:
-
-* Basics
-* Compute
-* Networking
-* Advanced
-* Review
-
 ## Step 1: Basics
-
-Enter the information described below. Required fields are indicated with an asterisk (*).
 
 ### Basic Settings
 
-* Name: Enter a name for the node. Spot recommends using a naming convention based on the specific workload the node will manage, for example dev-eu1-worker.
-* Description: Add a few words indicating the purpose of this node.
-* Resource Group: Select a resource group where the VMs will be launched.  
-* Region: Select a region where the VMs will be launched.  
-* Availability Zones (AZ): Selecting availability zones is optional. Spot recommends selecting multiple availability zones to expand the Spot markets available for the Stateful Node.  
-
-<img src="/elastigroup/_media/azure-new-stateful-2.png" />
+* **Name**: Enter a name for the node. You can use a naming convention based on the specific workload the node will manage, for example <i>dev-eu1-worker</i>.
+* **VM Prefix Name**: You can give a prefix to all your VMs. It can be used if **VM name persistence** is set to <i>Off</i>.
+* **Description**
+* **Resource Group**: Select a resource group where the VMs will be launched.  
+* **Region**: Select a region where the VMs will be launched.  
+* **Availability Zones (AZ)**: Selecting availability zones is optional. You can select multiple availability zones to expand the spot markets available for the stateful node.
 
 ### Persist Storage
 
-You can choose to persist the OS disk and data disks for the node by snapshotting the disk or reattaching existing ones between VM replacements.  
+You can choose to [persist the OS disk and data disks](/managed-instance/azure/features/persist-os-data-disks?id=persist-os-and-data-disks) for the node by snapshotting the disk or reattaching existing ones between VM replacements.  
 
-<img src="/elastigroup/_media/azure-new-stateful-9.png" />
-
-* The re-attach persistency method is supported only for regional or a single AZ selection. If you select the multiple AZs with the re-attach method, Spot will use the snapshot persistency method in case the current AZ is not available for the new VM.
-* Persisting the OS disk will disable editing the Login, Image and Custom Data/Shutdown scripts fields after the VM is created. This also applies to the process of importing a stateful node.   
+* Reattach persistency is supported only for regional or a single availability zone selection. If you select the multiple availability zones with reattach, Spot will use snapshot persistency if the current availability zone is not available for the new VM.
+* Persisting the OS disk disables editing the Login, Image, and Custom Data/Shutdown scripts fields after the VM is created. This also applies to the process of importing a stateful node.
 * Editing the persist storage isn’t available when the stateful node is paused.
-
-Learn more about [persisting storage methods](managed-instance/azure/features/persist-os-data-disks?id=persist-os-and-data-disks).  
 
 ### Persist Network
 
-You can choose persisting both private and public IPs for the underlying VM between VM replacements.  
-
-<img src="/elastigroup/_media/azure-new-stateful-10.png" />
+You can choose [persisting](managed-instance/azure/features/persist-network) both private and public IPs for the underlying VM between VM replacements.  
 
 * Persisting the network disables the ability to edit all the Network interfaces configurations after the VM is created. This also applies to the process of importing a stateful node.   
 * Editing the persist network isn’t available when the stateful node is paused.
-
-Learn more about [persisting network](managed-instance/azure/features/persist-network).
-
-When you have completed the information in the Basics tab, click Next to continue.
 
 ## Step 2: Compute
 
 ### Image
 
-Specify the image to be used for launching VMs on the stateful node.  
+Choose the image for launching VMs on the stateful node. The list of images changes according to the region you select in the Basics tab.
 
-The list of images is affected by the region you select in the Basics tab.  
+* [Marketplace](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/cli-ps-findimage). An image available in the Azure Marketplace. You'll need to select the:
+  * Publisher
+  * Offer
+  * SKU
 
-<img src="/elastigroup/_media/azure-new-stateful-21.png" />
+* Custom. One of your custom made VM images. You'll need to select the:
+  * Image resource group
+  * [Image Name](https://docs.microsoft.com/en-us/dynamics-nav/how-to--get-the-microsoft-azure-image-name).  
 
-Choose one of the following types of images:
+* [Shared Image](https://docs.microsoft.com/en-us/azure/virtual-machines/shared-image-galleries). Lets you create a stateful node with an image from your organization’s shared image gallery.
+   * You'll need to select the:
+     - Image Resource Group
+     - Gallery Name
+     - Image Name 
+     - Version: if you need the most recent version, select <i>Latest</i>
 
-* [Marketplace](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/cli-ps-findimage). An image available in the Azure Marketplace. You will need to select options from each of the following dropdowns:
-  * Publisher.  
-  * Offer.  
-  * SKU.  
-
-* Custom. One of your custom made VM images. Select options from each of the following dropdowns:
-  * Image Resource Group.  
-
-* [Image Name](https://docs.microsoft.com/en-us/dynamics-nav/how-to--get-the-microsoft-azure-image-name).  
-
-* [Shared Image](https://docs.microsoft.com/en-us/azure/virtual-machines/shared-image-galleries). Enables you to create a stateful node with an image from your organization’s Shared Image Gallery.
-  * Select options from each of the following dropdowns:
-    - Image Resource Group.  
-    - Gallery Name.  
-    - Image Name.  
-    - Version. If you need the most recent version, choose Latest from the list.
-
-  * Learn how to [define cross-subscription images](elastigroup/features-azure/shared-image-galleries?id=cross-subscription-shared-galleries).
+  * [Define cross-subscription images](elastigroup/features-azure/shared-image-galleries?id=cross-subscription-shared-galleries).
 
 #### Define Custom or Shared Specialized Image
 
-Custom and shared images are indicated as Generalized or Specialized. When you choose a Specialized image, the following applies:
+Custom and shared images are indicated as <i>Generalized</i> or <i>Specialized</i>. When you choose a specialized image, the login and custom data scripts fields are disabled.
 
-* The Login fields will be disabled.
-* The Custom Data script field will be disabled.
+Keep in mind:
+* If OS disk persistency is turned on, image section is disabled when you edit.
+* If data disk persistency is turned on, custom and shared images that contain data disk definitions are not available (they are filtered out).
 
-When OS disk persistency is turned on, the Image section is disabled in edit and import modes of the wizard.
-
-<img src="/elastigroup/_media/azure-new-stateful-11.png" />
-
-When the data disk persistency is turned on, custom and shared images that contain data disk definitions won’t be available (they will be filtered out).
+### Persist VM Name
+Select **Persist VM Name** to set a VM name for the entire node lifecycle. It cannot be used with **VM prefix name**.
 
 ### Security & Login
 
@@ -161,72 +129,77 @@ When OS persistency is turned on, the Login section is disabled in edit and impo
 
 <img src="/elastigroup/_media/azure-new-stateful-13.png" />
 
-#### VM Sizes
-
-After entering the image and login details, you can select the VM sizes.
+### VM Sizes
 
 You can use attribute-based Spot VM size selection, or you can manually create a list of VM sizes to launch:
 
-* **Attribute-based**- You can specify a set of VM size attributes (such as vCPU, memory, and storage) and select VM sizes to exclude. 
+* **Attribute-based**: you can specify a set of VM size attributes (such as vCPU, memory, and storage) and select VM sizes to exclude. 
 
-![attribute-based-1](https://github.com/spotinst/help/assets/106514736/71fe648d-e8e5-4e4c-9b30-4174d3dcf86a)
+  <details>
+    <summary markdown="span">View image</summary>
 
-* **Manual**- Find and select the VM size to update.  
+    <img height="700" src="https://github.com/spotinst/help/assets/106514736/71fe648d-e8e5-4e4c-9b30-4174d3dcf86a" />
 
-![attrbute-based-manual](https://github.com/spotinst/help/assets/106514736/c0bb5dac-ed78-4afb-81d4-49d00677265e)
+  </details>
 
-You must select one method and cannot use both at the same time.
+* **Manual**: find and select the VM size to update.  
+
+  <details>
+    <summary markdown="span">View image</summary>
+
+    <img height="700" src="https://github.com/spotinst/help/assets/106514736/c0bb5dac-ed78-4afb-81d4-49d00677265e" />
+
+  </details>
 
 **You need to select at least one Spot VM size and one On-demand (OD) VM size**.
 
 Each VM size provides the following information:
 
-* **VM Size**: List of relevant VM sizes. This list can change according to the selected image (associated OS type) and the region selected in the Basics tab.
+* **VM Size**: list of relevant VM sizes. This list can change according to the selected image (the OS type) and the region selected in the Basics tab.
 * **Type**
 * **vCPUs**
 * **Memory (GiB)**
 * **Storage (GiB)**
-* **Spot Cost/ Month**: The cost per month according to Azure pricing.
-* **Preferred Spot**: Select preferred Spot VM sizes. Selecting a VM size as preferred indicates that the stateful node should launch the preferred VM sizes prior to the remaining VM sizes that are defined as Spot sizes.
+* **Spot Cost/Month**: the cost per month according to Azure pricing.
+* **Preferred Spot**: select preferred Spot VM sizes. Selecting a VM size as preferred indicates that the stateful node should launch the preferred VM sizes prior to the remaining VM sizes that are defined as Spot sizes.
 
-You can modify the columns by clicking the column selector ![column-selector-icon](https://github.com/spotinst/help/assets/106514736/8dfec009-0d19-47d9-bb0d-92bb02cebaef).
+You can change the columns by clicking the column selector ![column-selector-icon](https://github.com/spotinst/help/assets/106514736/8dfec009-0d19-47d9-bb0d-92bb02cebaef).
 
 
-**On-Demand**: Select an on-demand VM size. At least one VM needs to be defined as on- demand. This is applicable when you have on-demand as the preferred lifecycle or significant as it provides a fallback in case Spot VMs are unavailable.
+### On-Demand
+Select an on-demand VM size. At least one VM needs to be defined as on demand. This is applicable when you have on demand as the preferred lifecycle or significant as it provides a fallback in case Spot VMs are unavailable.
 
->**Tip**: To maximize cost savings, provide the stateful node with all possible Spot VMs compatible with the expected workload. The more VM sizes you select, the higher the chances that the stateful node will find an available Spot VM to run on.  
+>**Tip**: To maximize cost savings, provide the stateful node with all possible Spot VMs compatible with the expected workload. The more VM sizes you select, the greater the chances that the stateful node will find an available Spot VM to run on.  
 
-#### Availability Settings
+### Availability Settings
 
-* Draining Timeout: Set the amount of time (seconds) that the stateful node will allow to de-register and drain VMs before termination.
-* Fallback to On-Demand: A stateful node provides a fallback mechanism in case no Spot VMs are available. Mark this option if you would like the option to automatically fall back to an on-demand VM in such a case.
-* Continuous Optimization: Choose when stateful node may move workloads from on-demand to spot VMs. You may choose from:
-   - Once Available: The stateful node moves the workloads when your Spot VM types become available.
-   - Custom: Define one or more time windows to allow the move.
+* **Draining Timeout**: set the amount of time (seconds) that the stateful node will allow to deregister and drain VMs before termination.
+* **Fallback to On-Demand**: a stateful node provides a fallback mechanism if no Spot VMs are available.
+* **Continuous Optimization**: choose when stateful node may move workloads from on demand to spot VMs:
+   - **Once Available**: the stateful node moves the workloads when your Spot VM types become available.
+   - **Custom**: define time windows to allow the move.
 
-<img src="/elastigroup/_media/azure-new-stateful-6.png" />
+### Strategy
+* Cluster orientation:
+   * Availability: VM selection ensures the best market availability within your Elastigroup.
+   * Cost: VM selection is prioritized by their cost. The selection also takes availability into consideration as part of the selection process.
+* Capacity reservation group (CRG) can be used in Stateful Node and Elastigroup. You must create a CRG in Azure before Elastigroup can utilize the CRG.
+  CRG is only be available when it correlates with the enabled VMs in the Elastigroup configuration.
+  <ol style="list-style-type: lower-alpha;">
+  <li><p>Select Utilize CRG and how you want Elastigroup to use your CRG:</p>
+   <ul>
+    <li>Prioritize over Spot: Provides CRG utilization as a priority before Elastigroup picks up the next OD market.</li>
+    <li>Prioritize over On-Demand: Provides CRG utilization as a priority before Elastigroup picks up the next OD market.</li>
+   </ul>
+  </li>
+  <li><p>Select the CRG you want Elastigroup to use:</p>
+   <ul>
+    <li>Automatic: Elastigroup searches for available CRG slots in your subscription and utilizes the available slots in the configuration of each group.</li>
+    <li>Manual: Provide details for the CRG you want to be utilized as part of the Stateful node or Elastigroup.</li>
+   </ul>
+  </li>
+</ol>
 
-#### Capacity Reservation Group 
-
-Capacity reservation group (CRG) can be utilized in Stateful Node and Elastigroup. 
- 
-![azure-new-stateful-22](https://github.com/spotinst/help/assets/106514736/804beca7-7cec-4d06-b0e5-e330073377e5)
-
-Complete the following steps to utilize your capacity reservation group: 
-
-1. Check the ‘Utilize CRG’ checkbox. 
-2. Select the CRG you want Elastigroup to use: 
-   * **Automatic**: Elastigroup searches for available CRG slots in your subscription and utilizes the available slots in the configuration of each group.  
-   * **Manual**: Provide details for the CRG you want to be utilized as part of the Stateful node or Elastigroup. 
-3. Select how you want Elastigroup to use your CRG- 
-   * **Prioritize over Spot**: Provides CRG utilization as a priority before Elastigroup picks up the next OD market. 
-   * **Prioritize over On-Demand**: Provides CRG utilization as a priority before Elastigroup picks up the next OD market. 
-
-You must create a CRG in Azure before Elastigroup can utilize the CRG.  
-
-CRG will only be available for selection when it correlates with the enabled VMs in the Elastigroup configuration. 
-
-When you have completed the information in the Compute tab, click Next to continue.
 
 ## Step 3: Networking
 
@@ -236,27 +209,19 @@ Define the networking settings for your stateful node. At least one network inte
 
 ### General Networking Definitions
 
-* Virtual Network: The virtual network that will be associated with your VM. The dropdown menu presents a list of virtual networks and their associated resource groups. The list of Virtual Networks is affected by the region you selected in the Basics tab. This field is mandatory.  
-* Public IP SKU for all network interfaces: If you need to assign a public IP to your VM - select the SKU for all the public IP addresses that will be defined for the VM.
+* Virtual Network that will be associated with your VM. This is the list of virtual networks and their associated resource groups, which is affected by the region you selected in the Basics tab. This field is mandatory.
+* Public IP SKU for all network interfaces. If you need to assign a public IP to your VM, select the SKU for all the public IP addresses that will be defined for the VM.
 
 ### Specific Network Interface Definitions
 
-* Subnet: Define the subnet that the network interface will be assigned to. This field is mandatory.
-* Network Security Group: The network security group that will be associated with the network interface. In the dropdown menu, the network security groups are listed under the resource groups (optional value).
-
-<img src="/elastigroup/_media/azure-new-stateful-16.png" />
+* Subnet: define the subnet that the network interface will be assigned to. This field is mandatory.
+* Network Security Group: the network security group that will be associated with the network interface. In the dropdown menu, the network security groups are listed under the resource groups (optional value).
 
 * Application Security Groups: The application Security Groups that will be associated with your network interface. Choose one or more application security groups for your network interface (optional value).  
 
-<img src="/elastigroup/_media/azure-new-stateful-17.png" />
-
 * Assign Public IP: Select this option to auto-assign a public IP to the launched VMs.
 
-Note: this action will be enabled once the public IP SKU is defined. When the network 	persistency is turned on, the Networking section is disabled during the edit and import 	modes of the wizard.
-
-<img src="/elastigroup/_media/azure-new-stateful-18.png" />
-
-When you have completed the information in the Networking tab, click Next to continue.
+   > **Note**: this action will be enabled once the public IP SKU is defined. When the network	persistency is turned on, the Networking section is disabled during the edit and import 	modes of the wizard.
 
 ## Step 4: Advanced
 
@@ -264,9 +229,9 @@ This step is optional.
 
 ### Scheduling
 
-You can define actions to occur at specific times on the VM. You can shut down the VM and turn it back on with the same persisted resources (Storage & Network) at specific times. This is done by defining the times in the Cron expressions.   
+You can define actions that occur at specific times on the VM. For example, you can shut down the VM and turn it back on with the same persisted resources (Storage & Network) at specific times. This is done by defining the times in the Cron expressions.
 
-Click + Add Task, select an action type, and enter the times you want to define with Cron expressions.  
+Click **+ Add Task**, select an action type, and enter the times you want to define with Cron expressions.  
 
 <img src="/elastigroup/_media/azure-new-stateful-19.png" />
 
@@ -370,24 +335,21 @@ When you have completed the information in the Advanced tab, click Next to conti
 
 ## Step 5: Review
 
-There are two ways you can review your configuration:
+1. Review your configuration in the:
+    * **Summary**
 
-* Summary:
+      You can make changes to the configuration for each section by clicking edit.
 
-<img src="/elastigroup/_media/azure-import-stateful-4.png" />
+    * **JSON**
 
-Click the edit button located near each section’s title in order to edit the section’s configuration (you will be navigated to the relevant tab in the wizard).   
+      You can make changes in the configuration by editing the JSON directly by turning on Edit mode. You can collapse and expand each section of the JSON. You can export the configuration to a JSON file and you can also copy it to your clipboard.
 
-**OR**
+      Changes made in the JSON file won’t be reflected in the Summary page. If you make changes in the JSON file and then navigate back to one of the wizard tabs, the changes won’t be saved.
 
-* JSON:
+      Learn more about using API to [configure your stateful node](https://docs.spot.io/api/#tag/Elastigroup-Azure-Stateful/operation/azureStatefulNodeCreate).
 
-<img src="/elastigroup/_media/azure-import-stateful-5.png" />
+    * **Terraform**
 
-You can make changes in the configuration by editing the JSON directly by turning on Edit mode. You can collapse and expand each section of the JSON. You can export the configuration to a JSON file and you can also copy it to your clipboard.
+      You can make changes in the Terraform by turning on Edit mode.
 
-Note: Changes made in the JSON file won’t be reflected in the Summary page. If you make changes in the JSON file and then navigate back to one of the wizard tabs, the changes won’t be saved.  
-
-Learn more about using API to [configure your stateful node](https://docs.spot.io/api/#tag/Elastigroup-Azure-Stateful/operation/azureStatefulNodeCreate).
-
-To create the Stateful Node, click **Create**.
+2.  To create the Stateful Node, click **Create**.
