@@ -147,6 +147,25 @@ Ocean for GKE allows the utilization of local SSD disks, high-performance local 
 Once configured, whenever the Ocean Autoscaler scales up, Ocean will automatically connect the local SSDs to the new VM. Note that local SSDs are limited to specific machine types. Ocean will automatically filter out the machine types that are not compatible. For information about the API, see Local SSD in the Spot API.
 
 
+<!-- NEW SECTION ADDED - for DOC-1588 -->
+
+## Turn On/Off Utilize Commitments per Virtual Node Group
+
+Relevant for AWS Kubernetes.
+
+You might want to distribute reservation instances/savings plans according to Virtual Node Groups for different types of workloads on the same cluster.
+
+Ocean provides attributes that let you control utilization commitments at the Virtual Node Group level.
+
+In the Spot API, under Virtual Node Groups > strategy, you can configure these attributes as either True or Falso:
+
+ * `utilizeReservedInstances`: If there are free reserved instances within the AWS account, Ocean will utilize them before launching spot instances. The initial default value is inherited from the identical attribute at the cluster level. 
+
+ * `utilizeCommitments`: If savings plan commitments have available capacity, Ocean will utilize them alongside existing reserved instances to maximize cost efficiency. The initial default value is inherited from the identical attribute at the cluster level. 
+
+Any change you make at the Virtual Node Group level will override the value set at the cluster level.
+
+
 ## Restrict Scale Down per Virtual Node Group
 
 Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>, <font color="#FC01CC">ECS</font>, <font color="#FC01CC">GKE</font>, and <font color="#FC01CC">AKS</font>
