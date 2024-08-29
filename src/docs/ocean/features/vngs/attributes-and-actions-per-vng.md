@@ -151,7 +151,7 @@ Once configured, whenever the Ocean Autoscaler scales up, Ocean will automatical
 
 ## Turn On/Off Utilize Commitments per Virtual Node Group
 
-Relevant for AWS Kubernetes.
+Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>
 
 You might want to distribute reservation instances/savings plans according to Virtual Node Groups for different types of workloads on the same cluster.
 
