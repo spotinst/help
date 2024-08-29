@@ -101,6 +101,4 @@ $ cat < ~/.ssh/id_rsa.pub
 3. Copy the token and paste it in GitHub in the following step.
 4. Complete this [GitHub procedure](https://docs.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account) to pair the SSH key to your GitHub account.
 
-## What’s Next?
-
 Continue to the next stage of the Spinnaker integration where you will [set up Halyard](tools-and-provisioning/spinnaker/install-configure) and expose Spinnaker to external users.

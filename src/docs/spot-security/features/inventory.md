@@ -1,5 +1,3 @@
-<meta name="robots" content="noindex">
-
 # Inventory
 
 Spot Security provides a list of all supported assets within your cloud network. Analytics are provided to help increase your visibility. 
@@ -79,6 +77,3 @@ You can search for specific assets in the table by entering the asset name and a
 ![inventory-06](https://github.com/spotinst/help/assets/106514736/1a3cdc87-6571-4284-a973-3907f24d3462) 
 
 You can also click the export icon to export the table.  
-
-## What’s Next?
-Learn more about Spot Security [compliance](spot-security/features/compliance) with global security standards.

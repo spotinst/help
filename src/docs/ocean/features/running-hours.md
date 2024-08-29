@@ -44,6 +44,3 @@ You can define shutdown hours per virtual node group (VNG) so that VNGs will shu
 
 This feature is available using the [Create](https://docs.spot.io/api/#operation/OceanAWSLaunchSpecCreate) and [Update](https://docs.spot.io/api/#operation/OceanAWSLaunchSpecUpdate) APIs for AWS. For setup information, see [Set Shutdown Hours per VNG](ocean/tutorials/set-running-hours?id=set-shutdown-hours-per-vng).
 
-## What's Next?
-
-Learn how to [Set Shutdown Hours](ocean/tutorials/set-running-hours)

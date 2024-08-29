@@ -105,15 +105,56 @@ When OS disk persistency is turned on, the Image section is disabled in edit and
 
 When the data disk persistency is turned on, custom and shared images that contain data disk definitions won’t be available (they will be filtered out).
 
-### Login
+### Security & Login
 
-Specify the authentication details to be used for launching VMs on the stateful node.  
+Specify the authentication details to be used for launching VMs on the stateful node:
 
-<img src="/elastigroup/_media/azure-new-stateful-12.png" />
+* Security type: Standard, Trusted launch virtual machines, Confidential virtual machine
 
-Enter the following information:
+   <details>
+     <summary markdown="span">More about security types</summary>
+
+  Azure has 3 security types when launching a VM:
+
+  * <b>Standard</b> is the basic level of security for your virtual machine.
+    
+    Standard supports all VM sizes.
+
+  * <b>Trusted Launch</b> protects against advanced and persistent attack techniques. Trusted launch includes several coordinated infrastructure technologies that can be enabled independently. Each technology provides another layer of defense against sophisticated threats.
+    Trusted Launch supports V2 generation VMs.
+
+  * <b>Confidential virtual machine</b> is in addition to Trusted Launch and offers confidential VMs based on AMD processors with SEV-SNP technology. Confidential VMs are for tenants with high security and confidentiality requirements. These VMs provide a strong, hardware-enforced boundary to help meet your security needs.
+  
+    Confidential VM supports DCasv5-series, DCadsv5-series, ECasv5-series, ECadsv5-series.
+  
+    <b>vTPM</b> is always used with Confidential VM.
+  
+    You can use <b>Confidential OS disk encryption</b>, which binds the disk encryption keys to the VM's TPM, ensuring VM-only access. The security type must be confidential VM to use it.
+
+
+ </details>
+
+* Configured security features: secure boot and vTPM
+
+   <details>
+     <summary markdown="span">More about secure boot and vTPM</summary>
+
+  * <b>Secure Boot</b> is the root of trusted launch for your VM. This mode, which is implemented in platform firmware, protects against the installation of malware-based rootkits and boot kits. Secure Boot works to ensure that only signed operating systems and drivers can boot. It establishes a root of trust for the software stack on your VM. With Secure Boot enabled, all OS boot components (boot loader, kernel, kernel drivers) must be signed by trusted publishers. Both Windows and select Linux distributions support Secure Boot. If Secure Boot fails to authenticate that the image was signed by a trusted publisher, the VM will not be allowed to boot.
+    
+  * <b>vTPM</b> is a virtualized version of a hardware Trusted Platform Module, compliant with the TPM2.0 spec. It serves as a dedicated secure vault for keys and measurements. Trusted launch provides your VM with its own dedicated TPM instance, running in a secure environment outside the reach of any VM. The vTPM enables attestation by measuring the entire boot chain of your VM (UEFI, OS, system, and drivers).
+
+    Trusted launch uses the vTPM to perform remote attestation by the cloud. This is used for platform health checks and for making trust-based decisions. As a health check, trusted launch can cryptographically certify that your VM booted correctly. If the process fails, possibly because your VM is running an unauthorized component, Microsoft Defender for Cloud will issue integrity alerts. The alerts include details on which components failed to pass integrity checks.
+
+  </details>
+   
+
+
+* Encryption at Host is a security feature offered by Microsoft Azure that provides end-to-end encryption for virtual machines and their data while at rest in the Azure data centers. It allows you to encrypt your VM data, including the temporary disk, OS and data drives, using platform-managed keys or your own customer-managed keys stored in Azure Key Vault.
+
 * User name
-* Authentication type (relevant for Linux OS only)
+  
+* Authentication type (only for Linux OS)
+  
 * Password
 
 When OS persistency is turned on, the Login section is disabled in edit and import modes of the wizard.
@@ -160,8 +201,8 @@ You can modify the columns by clicking the column selector ![column-selector-ico
 * Draining Timeout: Set the amount of time (seconds) that the stateful node will allow to de-register and drain VMs before termination.
 * Fallback to On-Demand: A stateful node provides a fallback mechanism in case no Spot VMs are available. Mark this option if you would like the option to automatically fall back to an on-demand VM in such a case.
 * Continuous Optimization: Choose when stateful node may move workloads from on-demand to spot VMs. You may choose from:
-- Once Available: The stateful node moves the workloads when your Spot VM types become available.
-- Custom: Define one or more time windows to allow the move.
+   - Once Available: The stateful node moves the workloads when your Spot VM types become available.
+   - Custom: Define one or more time windows to allow the move.
 
 <img src="/elastigroup/_media/azure-new-stateful-6.png" />
 
@@ -175,11 +216,11 @@ Complete the following steps to utilize your capacity reservation group:
 
 1. Check the ‘Utilize CRG’ checkbox. 
 2. Select the CRG you want Elastigroup to use: 
- * **Automatic**: Elastigroup searches for available CRG slots in your subscription and utilizes the available slots in the configuration of each group.  
- * **Manual**: Provide details for the CRG you want to be utilized as part of the Stateful node or Elastigroup. 
+   * **Automatic**: Elastigroup searches for available CRG slots in your subscription and utilizes the available slots in the configuration of each group.  
+   * **Manual**: Provide details for the CRG you want to be utilized as part of the Stateful node or Elastigroup. 
 3. Select how you want Elastigroup to use your CRG- 
- * **Prioritize over Spot**: Provides CRG utilization as a priority before Elastigroup picks up the next OD market. 
- * **Prioritize over On-Demand**: Provides CRG utilization as a priority before Elastigroup picks up the next OD market. 
+   * **Prioritize over Spot**: Provides CRG utilization as a priority before Elastigroup picks up the next OD market. 
+   * **Prioritize over On-Demand**: Provides CRG utilization as a priority before Elastigroup picks up the next OD market. 
 
 You must create a CRG in Azure before Elastigroup can utilize the CRG.  
 
@@ -229,13 +270,86 @@ Click + Add Task, select an action type, and enter the times you want to define 
 
 <img src="/elastigroup/_media/azure-new-stateful-19.png" />
 
-### Custom Data
+### User Data
+User data is a set of scripts or other metadata inserted into an Azure virtual machine during provisioning. After provision, any application on the virtual machine can access the user data from the Azure Instance Metadata Service (IMDS).
 
-Custom data is useful for launching VMs with all required configurations and software installations. Stateful Node can load custom data (i.e., custom scripts) during the provisioning of VMs.  
+Make sure your script doesn’t require additional extensions. For example, you may need to add an [extension](https://docs.spot.io/managed-instance/azure/tutorials/extensions) for user data to work.
 
-When a Specialized Shared Image is specified, Custom Data is not available.
+ <details>
+ <summary markdown="span">Extension for user data</summary>
 
-When the OS disk persistency is turned on, the Custom Data section is disabled during the edit and import modes of the wizard.  
+  In the <b>group</b> > <b>compute</b> > <b>launchSpecification</b> > <b>extensions</b>, add the extension. For example:
+   <pre><code>
+
+    "extensions": [
+        {
+          "name": "extensionName",
+          "type": "customScript",
+          "publisher": "Microsoft.Azure.Extensions",
+          "apiVersion": "2.0",
+          "minorVersionAutoUpgrade": true,
+          "publicSettings": {},
+          "protectedSettings": {},
+          "enableAutomaticUpgrade": false,
+          "protectedSettingsFromKeyVault": {
+            "sourceVault": "/subscriptions/1234-1234-1234/resourceGroups/rg_test/providers/Microsoft.KeyVault/vaults/testKeyVault",
+            "secretUrl": "https://testKeyVault.vault.azure.net/secrets/SecretTest/123456"
+          }
+        }
+      ],
+     
+  </code>
+     
+  </pre>
+
+ </details>
+
+
+ <details>
+ <summary markdown="span">Custom data</summary>
+
+  Custom data can be used when provisioning VMs.
+
+  When a specialized shared image is used, Custom Data is not available.
+
+  When the OS disk persistency is turned on, the Custom Data section is disabled during the edit and import modes of the wizard. You can use user data instead.
+
+  Make sure your script doesn’t require additional extensions. For example, you may need to add an [extension](https://docs.spot.io/managed-instance/azure/tutorials/extensions) for custom data to work.
+
+  <details>
+   <summary markdown="span">Extension for custom data</summary>
+
+   In the <b>group</b> > <b>compute</b> > <b>launchSpecification</b> > <b>extensions</b>, add the extension. For example:
+   
+   <pre>
+    
+    <code>
+
+    "extensions": [
+        {
+          "name": "extensionName",
+          "type": "customScript",
+          "publisher": "Microsoft.Azure.Extensions",
+          "apiVersion": "2.0",
+          "minorVersionAutoUpgrade": true,
+          "publicSettings": {},
+          "protectedSettings": {},
+          "enableAutomaticUpgrade": false,
+          "protectedSettingsFromKeyVault": {
+            "sourceVault": "/subscriptions/1234-1234-1234/resourceGroups/rg_test/providers/Microsoft.KeyVault/vaults/testKeyVault",
+            "secretUrl": "https://testKeyVault.vault.azure.net/secrets/SecretTest/123456"
+          }
+        }
+      ],
+     
+      </code>
+     
+      </pre>
+
+   </details>
+   
+ </details>
+
 
 ### Shutdown Script
 
@@ -276,9 +390,4 @@ Note: Changes made in the JSON file won’t be reflected in the Summary page. If
 
 Learn more about using API to [configure your stateful node](https://docs.spot.io/api/#tag/Elastigroup-Azure-Stateful/operation/azureStatefulNodeCreate).
 
-To create the Stateful Node, click Create.
-
-## What's Next?
-
-* Learn how to [import a stateful node](managed-instance/azure/getting-started/import-stateful-node).
-* Learn how to [manage your existing stateful nodes](https://docs.spot.io/managed-instance/azure/tutorials/manage?id=manage-stateful-nodes).  
+To create the Stateful Node, click **Create**.

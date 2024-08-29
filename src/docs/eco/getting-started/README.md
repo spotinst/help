@@ -4,6 +4,4 @@ Eco is an automation and optimization solution for cloud commitment purchasing a
 
 It is really easy to get started with Eco. All you need to do is [connect your cloud provider](eco/getting-started/connect-your-aws-account).
 
-## What's Next?
-
 Learn more about optimizing your use of reserved instances ([AWS](eco/tutorials/), [Azure](eco/azure-tutorials/)).

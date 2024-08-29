@@ -26,7 +26,3 @@ In the Spot Connect console, click Workflows and then the Templates tab to view 
   - Security Management
 
 You can also search for workflows by entering the name of a workflow or tag in the search bar.
-
-## What's Next?
-
-Learn how to [run your first workflow](spot-connect/get-to-know/run-first-workflow).

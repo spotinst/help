@@ -33,11 +33,3 @@ To set up preferred AZs, follow the steps below.
 <img src="/elastigroup/_media/compute-preferred-azs-02.png" />
 
 3. Complete any additional required information in the configuration and click Update (for a new Elastigroup, click Create).
-
-## What’s Next?
-
-You may want to learn more about:
-
-- [Equal AZ Instance Distribution](elastigroup/features/core-features/equal-az-instance-distribution-orientation.md)
-- Configuring [Preferred Instance Types](elastigroup/features/compute/preferred-instance-types.md)
-- All the options available in [Predictive Rebalancing](elastigroup/features/core-features/predictive-rebalancing.md)

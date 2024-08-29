@@ -1,4 +1,4 @@
-<meta name="“robots”" content="“noindex”">
+<meta name="robots" content="noindex">
 
 # Ocean | Error Message "Can't Spin Spot Instances"
 

@@ -67,7 +67,3 @@ You can also use images from shared galleries when you use the Spot APIs to crea
 In the JSON specification of the Elastigroup, fill in the parameters under:
 
 `compute.launchSpecification.image.gallery`
-
-## What’s Next?
-
-Learn more about Elastigroup for Azure in the [Tutorials](elastigroup/tutorials-azure/) documentation.

@@ -124,6 +124,4 @@ spec:
       image: registry.k8s.io/pause:2.0
 ```
 
-## What’s next?
 
-- Learn how to [Manage Virtual Node Groups](ocean/tutorials/manage-virtual-node-groups) and customize configurations per VNG.

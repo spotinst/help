@@ -161,6 +161,4 @@ $ less deck.log
 
 Connect to the Spinnaker instance by entering the IP address in the browser.
 
-## What’s Next?
-
 Now you are ready to start using Elastigroups within the Spinnaker environment and take advantage of all the Spot optimization, scaling, and cost-saving features.

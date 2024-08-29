@@ -4,6 +4,8 @@ The Spot Storage Dashboard provides an overview of your storage resources in the
 
 To get started, go to Spot Storage in the left sidebar and click Dashboard.
 
+Spot Storage keeps a log of the actions you have taken based on the Recommendations presented. Learn more about the [Recommendations Log](spot-storage/recommendations-log).
+
 ## Storage Highlights
 
 Storage highlights for this account are displayed at the top of the Dashboard and include an overview of your storage resources. All information is on the account level.
@@ -119,7 +121,3 @@ Spot checks the last read time on your EFS file systems. An EFS is recommended f
 3. You will be prompted to confirm the deletion. Enter the information requested and click Yes, Delete.
 
 <img src="/spot-storage/_media/dashboard-n012.png" width="400" />
-
-## What’s Next?
-
-Spot Storage keeps a log of the actions you have taken based on the Recommendations presented. Learn more about the [Recommendations Log](spot-storage/recommendations-log).

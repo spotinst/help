@@ -71,6 +71,3 @@ You can remediate failed assets by completing the following steps:
 ![compliance-6a](https://github.com/spotinst/help/assets/106514736/2f445668-3ec4-4a9b-b62e-8aacf529f5be)
 
 You can also accept the risk by clicking Suppress. This removes the risk from your list. You can suppress one or multiple rules by selecting them and clicking Suppress in the Actions Menu. You can suppress a security rule completely for all assets. To learn more about security rules see the Analyze Risk Page.
-
-## What’s Next?
-Learn more about Spot Security [features](spot-security/features/).

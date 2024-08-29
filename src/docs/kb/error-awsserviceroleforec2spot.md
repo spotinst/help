@@ -1,4 +1,4 @@
-<meta name="“robots”" content="“noindex”">
+<meta name="robots" content="noindex">
 
 # Error - You must grant the AWSServiceRoleForEC2Spot service-linked role access to any custom KMS keys
 

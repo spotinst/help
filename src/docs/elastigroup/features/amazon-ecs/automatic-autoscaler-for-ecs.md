@@ -36,9 +36,3 @@ Daemon tasks run on each instance or on a selected set of instances in an Amazon
 
 - Scale down: Daemon task which was a part of a scaled-down instance won't initialize a launch of a new instance and will not be placed on a different container instance.
 - Scale up: In case there is a Daemon scheduling strategy configured to one of the cluster services, Elastigroup will consider all newly launched instances to have enough spare capacity available in order to run the Daemon task properly in addition to other pending tasks.
-
-## What's Next?
-
-- [Set up the automatic autoscaler](elastigroup/tutorials/amazon-ecs/enable-autoscaling-for-ecs).
-- [Configure custom attributes](elastigroup/tutorials/amazon-ecs/configure-attributes-for-task-placement-constraints) for task placement constraints.
-- Learn how the autoscaler utilizes [Tetris scaling](elastigroup/features/amazon-ecs/autoscaler-tetris-scaling).

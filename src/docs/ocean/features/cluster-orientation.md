@@ -1,6 +1,6 @@
 # Cluster Orientation
 
-Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>, <font color="#FC01CC">AWS ECS</font>    
+Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>, <font color="#FC01CC">ECS</font>    
 
 While Ocean is designed to optimize for both availability and cost, you may want have control over which optimizations are given priority. For example, in a development environment you might want to use cheaper nodes for dev clusters. In contrast, in a production environment, where availability is more important, you might want Ocean to apply a balanced orientation regarding cost and availability.
 
@@ -39,6 +39,3 @@ The valid values are: costOriented, balanced, cheapest
 
 > **Tip**: If you have already configured cluster orientation at the Elastigroup level (i.e., using the Elastigroup API), those configurations will not be impacted, and will still apply in Ocean. Going forward, all cluster orientation configurations for Ocean should be made in the Ocean APIs only.
 
-## What's Next?
-
-Learn more about using the [Create Cluster](https://docs.spot.io/api/#operation/OceanAWSClusterCreate) and Update [Cluster](https://docs.spot.io/api/#operation/OceanAWSClusterUpdate) APIs for configuring your Ocean cluster.

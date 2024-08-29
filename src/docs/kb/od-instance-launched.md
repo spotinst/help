@@ -1,4 +1,4 @@
-<meta name="“robots”" content="“noindex”">
+<meta name="robots" content="noindex">
 
 # On-Demand Instance Launched When Spot Instances in Other Markets Are Available
 

@@ -116,7 +116,3 @@ After you enable the scaling policy with predictive autoscaling, additional grap
 ## Configure Target Scaling with Multiple Metrics
 
 You can configure target scaling to use multiple metrics when you create an Elastigroup or by editing an existing Elastigroup. For the detailed procedure, see [Use Multiple Metrics with Target Scaling](elastigroup/features/scaling/multiple-metrics?id=use-multiple-metrics-with-target-scaling).
-
-## What’s Next?
-
-Learn more about [Simple Scaling Policies](elastigroup/features/scaling/simple-scaling-policies).

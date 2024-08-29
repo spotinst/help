@@ -1,4 +1,4 @@
-<meta name="“robots”" content="“noindex”">
+<meta name="robots" content="noindex">
 
 # Disable Spotinst Agent from sending logs to Syslog.Spotinst-Agent Log Path
 

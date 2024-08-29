@@ -1,4 +1,4 @@
-<meta name="“robots”" content="“noindex”">
+<meta name="robots" content="noindex">
 
 # Azure | Stateful | Increase Disk Size for Stateful Nodes
 

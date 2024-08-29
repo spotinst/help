@@ -9,7 +9,3 @@ Enables you to automate and optimize your stateless application workload.
 
 [Create a Stateful Elastigroup from Scratch](elastigroup/tutorials/elastigroup-tasks/create-a-stateful-elastigroup-from-scratch) -
 Enables you to automate and optimize your stateful application workload.
-
-## What's Next?
-
-Learn more about [Elastigroup features](elastigroup/features/).

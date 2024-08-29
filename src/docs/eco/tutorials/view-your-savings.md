@@ -148,8 +148,3 @@ You can customize the columns in the table. The following information is availab
 ### Export Data
 
 To export the Reservation Details report to a CSV file, click Export above the table. The exported data will include the ARN for each reservation.
-
-## What’s Next?
-
-- Learn how to [Manage Subsets](eco/tutorials/manage-subsets).
-- Learn more about analyzing and tracking all of your cloud compute expenses with [Cloud Analyzer](cloud-analyzer/).

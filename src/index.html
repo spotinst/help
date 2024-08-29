@@ -24,10 +24,38 @@
 
   <!-- Theme -->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css" />
+
+  <!-- Custom Styles -->
+  <style type="text/css">
+    .helpful-content {
+      position: fixed;
+      z-index:9999;
+      background:#0086FF;
+      color:#fff;
+      padding:20px 40px;
+      width:100%;
+    }
+    .sidebar, .content {
+      top: 145px;
+    }
+    .content {
+      position: absolute!important;
+    }
+    .sidebar-toggle {
+      top: 195px!important;
+    }
+</style>
+  
 </head>
 
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
+
+  <div class="helpful-content">
+    <h2>Spot by NetApp Documentation</h2>
+    <p>How to use Spot Products</p>
+  </div>
+  
   <div id="app"></div>
 
   <script type="text/javascript">

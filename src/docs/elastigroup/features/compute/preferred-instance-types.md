@@ -44,7 +44,3 @@ When scaling, Elastigroup will distribute the instances across different availab
 | ----------------- | ------------- |
 | 75%               | 25%           |
 | 24 instances      | 8 instances   |
-
-## What's Next?
-
-Elastigroup gives you the ability to optimize your data-transfer costs by selecting Preferred Availability Zones. Learn more about configuring [Preferred Availability Zones](elastigroup/features/compute/preferred-availability-zones.md) in the console and in the [API](https://docs.spot.io/api/#operation/elastigroupAwsCreate).

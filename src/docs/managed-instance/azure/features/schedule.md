@@ -7,6 +7,7 @@ To schedule an action, use the `Scheduling` function in the [Create](https://doc
 You can schedule actions in the Advanced tab of the creation wizard when you [create a new stateful node](managed-instance/azure/getting-started/create-stateful-node) or you can schedule by editing the configuration of an existing stateful node.
 
 Learn how to [schedule](managed-instance/azure/getting-started/create-stateful-node?id=scheduling) a stateful node.  
+Learn how to [create a stateful node](https://docs.spot.io/api/#operation/azureStatefulNodeCreate) from scratch using the Spot API.
 
 ## Cron Expressions
 
@@ -20,7 +21,3 @@ Scheduling is based on cron expressions. Each line of a cron expression represen
 For example, the expression 5 21 * * 1-5 runs a job at 21:05 on every day from Monday through Friday. The asterisks indicate that this applies to all days of the month in all months of the year.
 
 > **Tip**: We recommend using [Crontab Guru](https://crontab.guru/) to create and verify your Cron expressions.
-
-## What’s Next?
-
-Learn how to [create a stateful node](https://docs.spot.io/api/#operation/azureStatefulNodeCreate) from scratch using the Spot API.

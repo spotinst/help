@@ -19,7 +19,3 @@ Create a policy using the actions shown below.
 After creating the policy, apply the new policy to the user with Account Viewer access.
 
 <img src="/eco/_media/set-subset-and-workflow-permissions-02.png" width="350" />
-
-## What’s Next?
-
-Learn more about managing [Subsets](eco/tutorials/manage-subsets) and [Workflows](eco/tutorials/manage-workflows).

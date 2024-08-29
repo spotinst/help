@@ -27,7 +27,3 @@ The Spinnaker integration with Spot includes the following tasks:
 2. [Set up Halyard](tools-and-provisioning/spinnaker/install-configure)
 
 Once you have completed these steps (in the order above), you will be able to use the Spot features directly from Spinnaker.
-
-## What's Next?
-
-Go to the [Set up Environment as Local Git](tools-and-provisioning/spinnaker/set-up-environment-as-local-git) procedures and get started with your Spinnaker integration.

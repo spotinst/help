@@ -143,10 +143,42 @@ In order to minimize ad hoc creation of new IPs on VM launchers, the following i
 
 - Managed Identity. Select the Managed Identity for your VMSS instances.
 - Tags. Add tag keys and values you want associated with the Elastigroup VMs.
-- Custom Data. Custom data is useful for launching VMs with all required configurations and software installations. Elastigroup can load custom user data (i.e., custom scripts) during the provisioning of VMs. When a Specialized Shared Image is specified, Custom Data is not available.
+- Custom Data. You can configure a script that will run during every VM startup. It’s useful for launching VMs with all the preset configurations and software installations. Elastigroup can load custom user data (such as custom scripts) when provisioning VMs. Custom data is not available for specialized shared images.
+
+  Make sure your script doesn’t require additional extensions. For example, you may need to add an [extension](https://docs.spot.io/managed-instance/azure/tutorials/extensions) for custom data to work.
+
+   <details>
+   <summary markdown="span">Extension for custom data</summary>
+
+   In the <b>group</b> > <b>compute</b> > <b>launchSpecification</b> > <b>extensions</b>, add the extension. For example:
+   <pre><code>
+
+      "extensions": [
+          {
+            "name": "extensionName",
+            "type": "customScript",
+            "publisher": "Microsoft.Azure.Extensions",
+            "apiVersion": "2.0",
+            "minorVersionAutoUpgrade": true,
+            "publicSettings": {},
+            "protectedSettings": {},
+            "enableAutomaticUpgrade": false,
+            "protectedSettingsFromKeyVault": {
+              "sourceVault": "/subscriptions/1234-1234-1234/resourceGroups/rg_test/providers/Microsoft.KeyVault/vaults/testKeyVault",
+              "secretUrl": "https://testKeyVault.vault.azure.net/secrets/SecretTest/123456"
+            }
+          }
+        ],
+     
+   </code>
+     
+   </pre>
+
+ </details>
+  
 - Shutdown Script. You can configure a shutdown script, but this requires an agent to be installed on the instance. [Learn more](elastigroup/features/azure/shutdown-script-in-elastigroup-for-azure).
 
-<img src="/elastigroup/_media/gettingstarted-eg-azure-05.png" />
+    <img src="/elastigroup/_media/gettingstarted-eg-azure-05.png" />
 
 ### Load Balancers (optional)
 
