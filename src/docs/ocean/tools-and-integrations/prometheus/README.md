@@ -49,9 +49,11 @@ nodes_added_total{reason="scaleUpForPendingPods", lifecycle="Spot", az="us-west-
 ```
 
 ### ocean_failed_scale_up and ocean_failed_scale_down
-
 These counter-type metrics help track the rate of failed scale-ups and scale-down operations in the cluster and the
 reasons behind them, as reflected in a dedicated label called `Reason.` `Reason` includes values such as:
+
+<details>
+   <summary markdown="span">See more...</summary>
 
 * `auto_scaler_can't_handle_pvc` - failed to scale up. PVC can’t be handled.
 * `no_instances_with_requested_resources`- failed to scale up. No instances matched all the pods' requested resources.
@@ -67,21 +69,21 @@ group configuration.
 of running instances.
 * `cluster_min_instance_count_reached` - failed to scale down. Clusters have reached the minimum capacity of
 running instances.
-* `unsupported_markets` = instance type is not supported in the AZ. 
-* `markets_with_insufficient_capacity` = insufficient requested instance type in the requested zone.
-* `insufficient_ip_in_subnet` = insufficient free addresses in subnet.
-* `ip_address_in_use` = can’t create spot instance in AWS for invalid parameter value.
-* `AMI_and_instance_type_architecture_mismatch` = AMI architecture mismatch
-* `invalid_request_parameter_value` = can’t create spot instance in AWS for invalid parameter value.
-* `request_failed_validation` = Can't create spot instances in AWS because of validation error.
-* `max_spot_instances_exceeded` = max amount of spots reached. 
-* `rate_limit_exceeded` = request limit exceeded. 
-* `unsupported_emr_release` = instance type not supported by emr release.
-* `unsupported_ami_architecture` = The architecture of the specified instance type we were trying to scale does not match the architecture of the specified AMI.
-* `duplicate_target_group_name` = Have 2 or more target groups with the same name.
-* `authorization_failure` = The provided credentials could not be validated. This can occur while trying to associate an Elastic IP address you don’t own, or trying to use an AMI for which you do not have permissions.
-* ` Invalid_AMI_configuration` = invalid AMI configuration
-* ` Unauthorized_Operation ` = Failed to create a target group, or failed fetching subnets from AWS due to ש permission error
+* `unsupported_markets` - instance type is not supported in the AZ. 
+* `markets_with_insufficient_capacity` - insufficient requested instance type in the requested zone.
+* `insufficient_ip_in_subnet` - insufficient free addresses in subnet.
+* `ip_address_in_use` - can’t create spot instance in AWS for invalid parameter value.
+* `AMI_and_instance_type_architecture_mismatch` = AMI architecture mismatch.
+* `invalid_request_parameter_value` - can’t create spot instance in AWS for invalid parameter value.
+* `request_failed_validation` - Can't create spot instances in AWS because of validation error.
+* `max_spot_instances_exceeded` - max amount of spots reached. 
+* `rate_limit_exceeded` - request limit exceeded. 
+* `unsupported_emr_release` - instance type not supported by emr release.
+* `unsupported_ami_architecture` - The architecture of the specified instance type we were trying to scale does not match the architecture of the specified AMI.
+* `duplicate_target_group_name` - Have 2 or more target groups with the same name.
+* `authorization_failure` - The provided credentials could not be validated. This can occur while trying to associate an Elastic IP address you don’t own or trying to use an AMI for which you do not have permission.
+* `Invalid_AMI_configuration` - invalid AMI configuration.
+* `Unauthorized_Operation ` - Failed to create a target group or failed fetching subnets from AWS due to ש permission error.
 
 Prometheus metric type: counter
 
@@ -92,7 +94,9 @@ Example:
 ocean_failed_scale_ups{oceanId="o-2cf2e886", reason="oceanId="o-2cf2e886", reason="cant_scale_up_pods_for_vngs", vngId="ols-9238181b", vngName="test-new”", vngId="ols-9238181b", vngName="test-new”}
 ocean_failed_scale_downs{oceanId="o-2cf2e886", reason="cluster_min_instance_count_reached", vngId="Unknown", vngName="unKnown”}
 ```
->**Note**: If the vngId and vngName are ‘unknown’: at this point, when the pod was pending and waiting for the Ocean Autoscaler to scale up a node, the Ocean Autoscaler did not know which Virtual Node Group the pod should run in. 
+>**Note**: If the vngId and vngName are ‘unknown’: at this point, when the pod was pending and waiting for the Ocean Autoscaler to scale up a node, the Ocean Autoscaler did not know which Virtual Node Group the pod should run in.
+
+</details>
 
 ## Tracking Ocean Managed Resources
 
