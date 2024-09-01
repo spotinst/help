@@ -1801,6 +1801,10 @@ export const aliases = (() => {
 
     "/ocean/tutorials/connect-an-aks-private-cluster":
       "ocean/getting-started/aks/",
+
+    "/administration/access-policies/":
+      "administration/policies/",
+
   };
 
   for (let [key, value] of Object.entries(map)) {
