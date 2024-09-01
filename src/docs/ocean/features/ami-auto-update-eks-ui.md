@@ -23,28 +23,31 @@ Otherwise, the screen will display the history of the previous runs and the curr
 
 ![auto-update-eks-full-screen-ud1](https://github.com/user-attachments/assets/c2a70b0e-43e7-46c5-a608-4e696df3bc2a)
 
-The Updates History list for completed runs is displayed at the top with these attributes:
+The Updates History list for completed runs is displayed at the top with these attributes **per batch**:
 
 * Execution date/time.
-* Update Type: Security patches, Kubernetes minor version, or both.
-* Status:
-  * Success (green): The update was successful.
-  * No update required (blue): Hover over the status icon for more information.
-  * Error (red): Error at Virtual Node Group level: The update has failed for this specific VNG. Hover over the error icon for more information.
-  * Cluster Error (red): The cluster update has failed. Hover over the cluster error icon for more information.
-
->**Note**: See also [Auto Update Troubleshooting](https://docs.spot.io/ocean/features/ami-auto-update-eks-ui?id=auto-update-troubleshooting).
-
-* Old AMI/New AMI: version numbers before and after the run.
-* Virtual Node Group: Click the link to view the Virtual Node Group attributes.
-
->**Note**: A Virtual Node Group is listed only if an update was needed.
-
-* Roll ID: Listed if the cluster was rolled after auto-update. Click the link to view Roll ID attributes.
 * Trigger Type: Manual (auto-update was run immediately) or Scheduled (auto-update was scheduled and run).
+* Status (per batch):
+  * Completed (green): All Virtual Node Groups in the batch were updated successfully.
+  * Partially completed (orange): Due to a mixture of failed VNG updates + Virtual Node Groups with updates not required. 
+  * Partially completed (orange): Due to a mixture of Virtual Node Groups updated successfully + failed Virtual Node Groups updates.
+  * Partially completed (orange): Due to a mixture of Virtual Node Groups being updated successfully + Virtual Node Groups with updates not required,
+  * No update required (blue): No Virtual Node Groups required update.
+  * Failed (red): The batch update failed. Hover over the error icon for more information.
 
+Click on a batch down arrow to view the status of each Virtual Node Group in the batch:
+
+* Virtual Node Group: Click the link to view the Virtual Node Group attributes.
+* Type: Security patches, Kubernetes minor version, or both.
+* Old AMI/New AMI: version numbers before and after the run.
+* Roll ID: This is listed if the cluster was rolled after the auto-update. Click the link to view Roll ID attributes.
+* Status:
+  * Completed (green): The Virtual Node Group update was successful.
+  * No update required (blue): The Virtual Node Group did not require an update. Hover over the status icon for more information.
+  * Error (red): Error at Virtual Node Group level: The update has failed for the Virtual Node Group. Hover over the error icon for more information.
 
 >**Tip**: Use the Updates History filter to search for auto-update runs by Virtual Node Groups, Status, or Trigger Type.
+>**Note**: See also [Auto Update Troubleshooting](https://docs.spot.io/ocean/features/ami-auto-update-eks-ui?id=auto-update-troubleshooting)
 
 The configured schedules are displayed at the bottom of the screen with these attributes:
 
