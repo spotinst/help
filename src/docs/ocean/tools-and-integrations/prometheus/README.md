@@ -32,7 +32,7 @@ These counter-type metrics help track the rate of addition and removal of nodes 
 * `odToSpotReplacement`—The node was scaled up/down due to a replacement from an on-demand to a spot node. The on-demand node was launched because there was no available spot node in the market then. Ocean continues scanning the market for an available spot node and reverts as soon as one is available.  
 * `autoHealingReplacement`—The node was scaled up/down due to a replacement from an unhealthy instance to a new one. Ocean checks the instance’s status after the grace period, and if an instance fails the health check, it is automatically replaced with a new one.  
 * `riUtilizationReplacement` (relevant only to AWS)—The node was scaled up/down due to a replacement from spot/OD to RI. Ocean constantly monitors your account's available RIs or Savings Plans (when the `strategy.utilizeReservedInstances` or `utilizeCommitments` flag is	enabled). If an Ocean-monitored node runs as a spot or OD, Ocean will try to replace it with the available RI or Savings Plan nodes. 
-* `recoveryReplacement`—Since the provider took the instance, the node was scaled down. A new node was scaled up to replace it as part of the recovery process. 
+* `recoveryReplacement`—Since the provider took the instance, the node was scaled down. As part of the recovery process, a new node was scaled up to replace it. 
 * `revertToLowerCostReplacement` -  The node was scaled up/down due to the ‘Revert to lower cost’ process. For more information, click [here](ocean/features/revert-to-lower-cost-node?id=revert-to-lower-cost-node). 
 * `shutdownHoursActivity` - The node was scaled up/down due to shutdown hours set on your cluster. For more information, click [here](ocean/features/running-hours?id=shutdown-hours).  
 * `clusterRollReplacement` - The node was scaled up/down due to a cluster roll in your cluster. For more information, click [here](ocean/features/roll?id=roll).  
@@ -53,11 +53,11 @@ These counter-type metrics help track the rate of failed scale-ups and scale-dow
 reasons behind them, as reflected in a dedicated label called `Reason.` `Reason` includes values such as:
 
 <details>
-   <summary markdown="span">See more...</summary>
+   <summary markdown="span">More about...</summary>
 
 * `auto_scaler_can't_handle_pvc` - failed to scale up. PVC can’t be handled.
 * `no_instances_with_requested_resources`- failed to scale up. No instances matched all the pods' requested resources.
-* `vngs_labels_not_match_all_affinities` - failed to scale up the instance. Pod’s affinity/ anti-affinity could not be
+* `vngs_labels_not_match_all_affinities` - failed to scale up the instance. Pod’s affinity/anti-affinity could not be
 satisfied by the current group’s Virtual Node Group configuration.
 * `topology_spread_constrains` - failed to scale up. pod topology spread constraints could not be satisfied by the current
 group configuration.
