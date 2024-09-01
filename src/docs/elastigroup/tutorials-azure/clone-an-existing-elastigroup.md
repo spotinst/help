@@ -14,7 +14,7 @@ Before starting this procedure, you must have:
 1. In the Spot console under Elastigroup, click Groups.
 2. On the upper right of the Elastigroups page, click Create Elastigroup and choose Clone.
 
-<img src="/elastigroup/_media/azure-clone-an-existing-eg-01.png" />
+![azure-clone-an-existing-eg-01](https://github.com/user-attachments/assets/5d0e1b1e-b95a-48f8-8a3f-ce632159f804)
 
 ## Choose Elastigroup
 
