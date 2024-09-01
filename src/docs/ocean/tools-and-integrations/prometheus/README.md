@@ -67,20 +67,21 @@ group configuration.
 of running instances.
 * `cluster_min_instance_count_reached` - failed to scale down. Clusters have reached the minimum capacity of
 running instances.
-
-
-<!--Adding new reasons below.........-->
-
-
-* `instance_type_is_not_supported_in_AZ` = failed to scale up. The instance type is not supported in the Availability Zone.
-* `insufficient_instance_capacity` = failed to scale up. Insufficient requested instance type in the requested zone
-* `insufficient_ip_in_subnet` = failed to scale up. Insufficient free addresses in subnet.
-* `ip_address_in_use` = failed to scale up. Can’t create spot instance in AWS for invalid parameter value.
-* `AMI_and_instance_type_architecture_mismatch` = failed to scale up. A mismatch between the architecture of the AMI set on the Virtual Node Group and the instance type to launch.
-* `invalid_request_parameter_value` = failed to scale up. Can’t create spot instance in AWS due to an invalid parameter value.
-* `request_failed_validation` = failed to scale up. Can't create spot instances in AWS due to a validation error.
-* `max_spot_instances_exceeded` = failed to scale up. The maximum limit for Spot Instances in your AWS account has been reached.
-* `rate_limit_exceeded` = failed to scale up. The number of requests has exceeded the rate limit set by AWS for your account.
+* `unsupported_markets` = instance type is not supported in the AZ. 
+* `markets_with_insufficient_capacity` = insufficient requested instance type in the requested zone.
+* `insufficient_ip_in_subnet` = insufficient free addresses in subnet.
+* `ip_address_in_use` = can’t create spot instance in AWS for invalid parameter value.
+* `AMI_and_instance_type_architecture_mismatch` = AMI architecture mismatch
+* `invalid_request_parameter_value` = can’t create spot instance in AWS for invalid parameter value.
+* `request_failed_validation` = Can't create spot instances in AWS because of validation error.
+* `max_spot_instances_exceeded` = max amount of spots reached. 
+* `rate_limit_exceeded` = request limit exceeded. 
+* `unsupported_emr_release` = instance type not supported by emr release.
+* `unsupported_ami_architecture` = The architecture of the specified instance type we were trying to scale does not match the architecture of the specified AMI.
+* `duplicate_target_group_name` = Have 2 or more target groups with the same name.
+* `authorization_failure` = The provided credentials could not be validated. This can occur while trying to associate an Elastic IP address you don’t own, or trying to use an AMI for which you do not have permissions.
+* ` Invalid_AMI_configuration` = invalid AMI configuration
+* ` Unauthorized_Operation ` = Failed to create a target group, or failed fetching subnets from AWS due to ש permission error
 
 Prometheus metric type: counter
 
