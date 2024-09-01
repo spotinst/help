@@ -88,7 +88,7 @@ To create or edit an auto-update schedule:
 
 1. In the AMI Auto Update tab, click **Schedule Update** to create an auto-update schedule if no configured schedules exist. If at least one configured schedule exists, click Schedule Update from the Actions list below the table. 
 
->**Note**: To edit an existing auto-update schedule, click Edit in the entry for the schedule.
+>**Note**: To edit an existing auto-update schedule, click the pencil icon in the entry for the schedule.
 
 ![schedule--update-ami-dialog-box](https://github.com/user-attachments/assets/76858a5d-8713-4e0f-9129-aee65c401128)
 
