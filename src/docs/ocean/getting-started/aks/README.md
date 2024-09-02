@@ -12,8 +12,14 @@ See [Prerequisites](ocean/getting-started/aks/aks-prerequisites).
 
 Ocean supports AKS with global regions, so you can create and import clusters set with the global regions in [Azure](https://azure.microsoft.com/en-gb/explore/global-infrastructure/geographies/#geographies) that currently do not support Availability Zones. For these clusters, you create resources at the regional level.  
 After import, you can view a global region in the Virtual Node Groups tab, where Availability Zones = None.
+ 
+<details>
+   
+<summary markdown="span">View image</summary>
 
-![ocean-vng-regions](https://github.com/user-attachments/assets/86d2152d-6cf5-4ea7-8538-e8253cd6a90a)
+<img height="400" src="https://github.com/user-attachments/assets/86d2152d-6cf5-4ea7-8538-e8253cd6a90a"/>
+
+</details>
 
 ## What to do About AKS Private Clusters
 
@@ -142,14 +148,14 @@ You must create at least one Virtual Node Group in your Ocean AKS cluster. A Vir
 
 In this step:
 
-* You select one of your AKS node pools as a Virtual Node Group [template](https://docs.spot.io/ocean/features/vngs/?id=default-vng) for other (custom) Virtual Node Groups.
-* Create custom Virtual Node Groups as required.
+* First, select one of your AKS node pools as a Virtual Node Group [template](https://docs.spot.io/ocean/features/vngs/?id=default-vng) for other (custom) Virtual Node Groups.
+* Then, create custom Virtual Node Groups as required.
 
 To create your Virtual Node Groups:
 
 ![aks-node-pools-listed](https://github.com/user-attachments/assets/ca9f6120-45e7-46db-b465-0e1830ec73d5)
 
-1. Select a node pool. A list of all your managed node pools is displayed. The first node pool in the list is the one you selected for your first Virtual Node Group (Template). The selected node pool’s configuration is imported to the Virtual Node Group Template and used for other custom Virtual Node Groups unless you explicitly override. For example, all Virtual Node Groups inherit the image set of the AKS node pool you imported to the Virtual Node Group Template unless the custom Virtual Node Group is set to a different image.
+1. Select 1 node pool. A list of all your managed node pools is displayed. The first node pool in the list is the one you selected for your first Virtual Node Group (Template). The selected node pool’s configuration is imported to the Virtual Node Group Template and used later for other custom Virtual Node Groups you create.
 
 2. Optionally edit [Virtual Node Group Template](https://docs.spot.io/ocean/features/vngs/) attributes for the selected node pool.
 
@@ -157,23 +163,22 @@ To create your Virtual Node Groups:
 
 >**Note**: Some Virtual Node Group properties, such as node pool properties (OS types, OS Disk type), cannot be edited. If you need to change these properties, delete the Virtual Node Group and create a new one. 
 
-3. Create custom Virtual Node Groups: Define which remaining managed AKS node pools will be imported into Virtual Node Groups by selection in the node pool list. Once you have selected the node pools, Ocean imports their compute configurations into custom Virtual Node Groups. Create your custom Virtual Node Groups to handle different workload requirements. For example:   
+3. Create custom Virtual Node Groups: Define which remaining managed AKS node pools will be imported into Virtual Node Groups by selecting them in the node pool list. When you complete this wizard step, Ocean imports the node pool compute configurations into custom Virtual Node Groups. Select node pools to create custom Virtual Node Groups that handle different workload requirements, such as: 
 
-   * VNG with regular VMs: for workloads that cannot run on Spot nodes and must run on Regular (On-demand) VMs, e.g., statefulSets, Spark drivers, and Kafka producers.  
-   * Performance VNG: for workloads that need high-performance CPUs (Intel v4 or v5), a minimum vCPU 8 or higher or a larger OS Disk size, and VMs with a minimum disk 4 or higher. 
-   * AI/ML VNG: for workloads that need GPUs, say GPU count: 2-4 and specific VM series r GPU families 
-   * Windows VNG: for workloads that need Windows nodes.
+   * Virtual Node Group with regular VMs: workloads that cannot run on Spot nodes and must run on Regular (On-demand) VMs, e.g., statefulSets, Spark drivers, and Kafka producers.  
+   * Performance Virtual Node Group: for workloads that need high-performance CPUs (Intel v4 or v5), a minimum vCPU 8 or higher or a larger OS Disk size, and VMs with a minimum disk 4 or higher. 
+   * AI/ML Virtual Node Group: for workloads that need GPUs, say GPU count: 2-4 and specific VM series r GPU families 
+   * Windows Virtual Node Group: for workloads that need Windows nodes.
 
->**Important**: One custom Virtual Node Group is created for each selected node pool. 
+>**Important**: One custom Virtual Node Group is created for each node pool you select. 
 
-Example: 
+**Example:** 
 
-The selected node pool in the example below also represents the following 4 node pools with similar configurations:
-
-1. Select the node pool to import and leave the rest unselected. Later, when you migrate your nodes to Ocean, You can consolidate all your node pools into one custom Virtual Node Group.
-2. click the link on a custom Virtual Node Group and edit attributes if needed.
+The selected node pool in this example has a similar configuration to the 4 node pools listed after it. Later, when you migrate your nodes to Ocean, You can consolidate the 5 node pools into the custom Virtual Node Group (created from the 1 selected node pool).
 
 ![aks-node-pools-listed-rep](https://github.com/user-attachments/assets/cf367d88-f022-4c32-a178-76206e3ceaf6)
+
+4. Click the custom Virtual Node Group link and edit attributes as required.
 
 ## Step 3: Connectivity  
 
@@ -183,13 +188,13 @@ You can now install the [Ocean Controller](ocean/tutorials/ocean-controller-v2/)
 
 <summary markdown="span">View image</summary>
    
-<img src="https://github.com/user-attachments/assets/39d751b2-df52-4cab-9ffd-5c02ce048bb4" />
+<img height="400" src="https://github.com/user-attachments/assets/39d751b2-df52-4cab-9ffd-5c02ce048bb4" />
    
 </details>
 
 To install the Ocean Controller and establish connectivity: 
 
-1. Create a Spot token (or use an existing one) and copy it to the text box. 
+1. Generate a Spot token (or use an existing one) and copy it to the text box. 
 2. To install the Ocean Kubernetes Controller, use either Helm (the preferred option) or via script. 
 
    * **Helm**: This is the preferred method because it lets you customize using command-line options or `values.yaml`. Install **Helm 3.x** and add the `spotinst` repo. Then, use the `helm install` command with set command-line options to install the Ocean controller in a separate spot-ocean namespace.
@@ -303,7 +308,7 @@ for pod in $pods; do echo "Deleting pod: $pod" kubectl delete pod $pod -n <names
 
 ## Step 5: Review and Configure  
 
-![aks-cluster-wizard-review](https://github.com/user-attachments/assets/baa885cf-728e-4dee-bdf6-f598d22f1dbb)
+<img height="400" src="https://github.com/user-attachments/assets/baa885cf-728e-4dee-bdf6-f598d22f1dbb" />
 
 You can:
 
@@ -311,7 +316,7 @@ You can:
 * Update Ocean AKS cluster autoscaling configuration, cluster resource limits (vCPU and memory), scale-down percentage, and automatic headroom. 
 * Modify the Virtual Node Group template configuration in JSON format.
 
-![aks-cluster-wizard-json-review](https://github.com/user-attachments/assets/90560b12-9b55-4a4e-aaee-cdedab530e2f)
+<img height="400" src="https://github.com/user-attachments/assets/90560b12-9b55-4a4e-aaee-cdedab530e2f" />
 
 When you finish editing the Ocean cluster configuration, click **Create**to create the Ocean-managed AKS cluster. 
 After import, the cluster appears in the Cloud Clusters list under the left Ocean menu. 
