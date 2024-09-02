@@ -551,6 +551,33 @@ This can happen if your virtual node group was deleted in Terraform. When you de
  
  </details>
 
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceandisconnectcluster">How can I disconnect a cluster from Ocean?</summary>
+
+  <div style="padding-left:16px">
+
+   You can safely disconnect Ocean from an existing EKS Cluster:
+
+1. Increase the number of instances in the ASG attached to the EKS cluster. This way, the pods that run on the nodes managed by Spot will be able to reschedule on the new instances and avoid downtime.
+2. In the Spot console, go to **Ocean** > **Cloud Clusters**, and select the cluster.
+3. Click **Actions** > **Edit Cluster**.
+4. On the Review tab, click **JSON** > **Edit Mode**.
+5. Change **capacity** > **target** to <i>0</i>.<font color="#FC01CC"> is this accurate? if target is 0, then do the min and max also need to be changed? it was: In order to update the capacity navigate to Actions --> Edit cluster --> Review tab --> Toggle to JSON --> Edit mode --> Update capacity to '0' --> Update.</font>
+
+   <img width="144" alt="oceandisconnectcluster" src="https://github.com/user-attachments/assets/ec722def-980f-4754-ab0d-b2751bf67a81">
+
+   The instances managed by Ocean will be detached and the pods will be rescheduled on the new instances launched by AWS ASG.
+6. In the Spot console, go to **Ocean** > **Cloud Clusters**, and select the cluster.
+7. Click **Actions** > **Delete**.
+
+<font color="#FC01CC">this was also in the article, what do I need to change to make this FAQ generic?
+
+The above information is a guide to disconnecting an EKS cluster but the same method can apply on other services(ECS/Kops) and other cloud providers(Azure/GCP).</font>
+ 
+ </div>
+
+ </details>
+
 <!----------------------------------elastigroup---------------------------------->
 ## Elastigroup
 
