@@ -578,6 +578,20 @@ The above information is a guide to disconnecting an EKS cluster but the same me
 
  </details>
 
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanhelm">Can I manage my Kubernetes cluster deployment using Helm charts?</summary>
+
+  <div style="padding-left:16px">
+
+  You can manage your Kubernetes cluster deployment using Helm charts. You can can also [update the Ocean controller version](/tutorials/spot-kubernetes-controller/install-with-helm) using Helm charts.
+
+The Helm chart YAML file has a version that points to a specific app version in the relevant [Spotinst repository](https://github.com/spotinst/spotinst-kubernetes-helm-charts/blob/master/charts/spotinst-kubernetes-cluster-controller/Chart.yaml). Every version in the repository is compatible with a [specific controller version](https://artifacthub.io/packages/helm/spotinst/spotinst-kubernetes-cluster-controller). 
+   
+ </div>
+
+ </details>
+
 <!----------------------------------elastigroup---------------------------------->
 ## Elastigroup
 
