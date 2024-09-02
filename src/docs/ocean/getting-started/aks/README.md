@@ -181,9 +181,9 @@ You can now install the [Ocean Controller](ocean/tutorials/ocean-controller-v2/)
 
 <details>
 
-<summary markdown="span">Click for image</summary>
+<summary markdown="span">View image</summary>
    
-<img src="https://github.com/user-attachments/assets/39d751b2-df52-4cab-9ffd-5c02ce048bb4)" />
+<img src="https://github.com/user-attachments/assets/39d751b2-df52-4cab-9ffd-5c02ce048bb4" />
    
 </details>
 
@@ -238,7 +238,13 @@ Additional Tips:
  
 ## Step 4: Automatic Spot Tolerance Injection (optional) 
 
-![aks-cluster-wizard-step-4-toleration](https://github.com/user-attachments/assets/5a1e1fc4-be0f-457b-8cab-a34d774a5a21)
+<details>
+
+<summary markdown="span">View image</summary>
+
+<img src="https://github.com/user-attachments/assets/982f9e23-230c-4538-bd13-6c227d896a14" />
+
+</details>
 
 Microsoft Azure / AKS does not allow pods to run on Spot VMs by default. AKS automatically applies the `NoSchedule` taint to spot nodes/node pools (`kubernetes.azure.com/scalesetpriority=spot:NoSchedule`), ensuring that pods cannot run on them without the appropriate toleration. 
 
