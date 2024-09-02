@@ -147,7 +147,7 @@ In this step:
 
 To create your Virtual Node Groups:
 
-![aks-create-cluster-2-managed-node-pools](https://github.com/user-attachments/assets/803d2ddd-c2db-4a75-b853-83b8c2b94180)
+![aks-node-pools-listed](https://github.com/user-attachments/assets/ca9f6120-45e7-46db-b465-0e1830ec73d5)
 
 1. Select a node pool. A list of all your managed node pools is displayed. The first node pool in the list is the one you selected for your first Virtual Node Group (Template). The selected node pool’s configuration is imported to the Virtual Node Group Template and used for other custom Virtual Node Groups unless you explicitly override. For example, all Virtual Node Groups inherit the image set of the AKS node pool you imported to the Virtual Node Group Template unless the custom Virtual Node Group is set to a different image.
 
@@ -168,18 +168,23 @@ To create your Virtual Node Groups:
 
 Example: 
 
-Each selected node pool in the example below also represents several other unselected node pools with similar configurations:
+The selected node pool in the example below also represents the following 4 node pools with similar configurations:
 
-1. Select the two node pools to import and leave the rest unselected. Later, when you migrate your nodes to Ocean, You can consolidate all your node pools into the two custom Virtual Node Groups.
+1. Select the node pool to import and leave the rest unselected. Later, when you migrate your nodes to Ocean, You can consolidate all your node pools into one custom Virtual Node Group.
 2. click the link on a custom Virtual Node Group and edit attributes if needed.
 
-![aks-create-cluster-2-example-sel-managed-node-pools](https://github.com/user-attachments/assets/47f3b28b-0078-4e33-8fc5-77fea1bdd2ea) -->
+![aks-node-pools-listed-rep](https://github.com/user-attachments/assets/cf367d88-f022-4c32-a178-76206e3ceaf6)
 
 ## Step 3: Connectivity  
 
 You can now install the [Ocean Controller](ocean/tutorials/ocean-controller-v2/) and establish the connection between the Ocean SaaS and the cluster.
 
-![controller-tab-helm-1](https://github.com/user-attachments/assets/dc732cd1-9158-4fc4-9fda-ade6cae14eac)
+<details>
+   <summary markdown="span">Click for image.</summary>
+   
+<img src="https://github.com/user-attachments/assets/39d751b2-df52-4cab-9ffd-5c02ce048bb4)" />
+
+ </details>
 
 To install the Ocean Controller and establish connectivity: 
 
