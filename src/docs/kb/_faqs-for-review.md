@@ -1,7 +1,48 @@
 <meta name="robots" content="noindex">
 
-# FAQs in progress
+# FAQs for review
 
+<!----------------------------------where to put these?---------------------------------->
+
+## Where do these go?
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="xxxx">?</summary>
+
+  <div style="padding-left:16px">
+
+   text
+   
+ </div>
+
+ </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="odresp">Why is my on-demand instance utilized as a reserved instance/savings plan?</summary>
+
+  <div style="padding-left:16px">
+
+   When is an on-demand (OD) instance a reserved instance (RI), savings plan (SP), or full-priced on demand?
+   
+   When launching an on-demand instance, you cannot specifically request it to run as a reserved instance or savings plan.
+
+AWS decides according to:
+
+1.	If the market matches a free zonal RI commitment, then the instance is a reserved instance.
+2.	If the market matches a free regional RI commitment, then the instance is a reserved instance.
+3.	If the market matches a free EC2 Instance SP commitment, then the instance is a savings plan.
+4.	If there is any free Compute SP commitment, then the instance is a savings plan.
+5.	Otherwise, the instance will run as a full-price OD.
+
+Throughout the lifetime of an instance, it can change its “price” whenever there’s any change in the commitments utilization rate. For example, if an instance is running as a full price on-demand, and another instance that was utilizing a compute savings plan commitment was terminated, the first instance will start utilizing this commitment if its hourly price rate has enough free space under this commitment. It might take a couple of minutes for this change to show, but since the billing is being calculated retroactively, in practice it’s starting to utilize the commitment right away.
+   
+ </div>
+
+ </details>
+
+
+
+ 
 <!----------------------------------general---------------------------------->
 
 ## General
@@ -495,6 +536,21 @@ In the Recommendations table, you can see the exact amount of resources to chang
  
  </details>
 
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanunnamedvng">Why is my instance in an unnamed virtual node group?</summary>
+
+  <div style="padding-left:16px">
+
+A node is running in an Ocean cluster and is an unnamed virtual node group.
+
+<img width="900" src="https://github.com/user-attachments/assets/5e581d00-b1c8-4bdb-8e89-c19ef79ad1f1">
+
+This can happen if your virtual node group was deleted in Terraform. When you delete a virtual node group in Terraform, the `delete_nodes` needs to be manually set to <i>true</i> in the [Terraform registry](https://registry.terraform.io/providers/spotinst/spotinst/latest/docs/resources/ocean_aws_launch_spec#delete_nodes). If it's not set to <i>true</i>, the node will keep running and not be in a virtual node group.
+
+ </div>
+ 
+ </details>
+
 <!----------------------------------elastigroup---------------------------------->
 ## Elastigroup
 
@@ -721,6 +777,23 @@ client {
 8. In the Delete Stateful Node window, make sure to deselect all the options because you need the VM to run on the Azure side.
 9. Verify that the VM with the resources is running in Azure.
 
+ </div>
+
+ </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egsn-stopped">Why am I getting an <i>Instance have been detected as stopped</i> error?</summary>
+
+  <div style="padding-left:16px">
+
+   You can see this error in the log:
+
+   <pre><code>08/20/2023, 5:36 AM, WARN, Instance: [i-01234567890abcdefg] have been detected as Stopped.</code></pre>
+
+   It's possible to [stop an instance in AWS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html), but Spot doesn't support the Stop action. This causes out-of-sync issues.
+
+   Restart the instance in AWS, then the Elastigroup will sync again. Use [Pause/Resume](/managed-instance/features/managed-instance-actions?id=stateful-node-actions) instead of Stop.
+   
  </div>
 
  </details>
