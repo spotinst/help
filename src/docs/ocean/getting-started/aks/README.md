@@ -180,11 +180,12 @@ The selected node pool in the example below also represents the following 4 node
 You can now install the [Ocean Controller](ocean/tutorials/ocean-controller-v2/) and establish the connection between the Ocean SaaS and the cluster.
 
 <details>
-   <summary markdown="span">Click for image.</summary>
+
+<summary markdown="span">Click for image</summary>
    
 <img src="https://github.com/user-attachments/assets/39d751b2-df52-4cab-9ffd-5c02ce048bb4)" />
-
- </details>
+   
+</details>
 
 To install the Ocean Controller and establish connectivity: 
 
