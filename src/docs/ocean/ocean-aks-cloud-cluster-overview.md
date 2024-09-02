@@ -63,7 +63,7 @@ This tab displays:
   * Pie-chart - Virtual Node Group percentage breakdown for nodes.
   * Pie-chart - Lifecycle percentage breakdown (On-Demand, Savings Plans, Reserved Instances, and spots).
   * Node Name.
-  * Virtual Node Group: You can click the link for a listed VNG to display your custom VNG details.
+  * Virtual Node Group: You can click the link for a listed Virtual Node Group to display more details.
   * Node Pool (name of node pool)
   * VM Size: For example, standard_f4s
   * Lifecycle: (On-Demand, Savings Plans, Reserved Instances, and spots).
@@ -104,7 +104,7 @@ This panel displays a **cluster-level** summary with widgets for CPU /Memory /GP
 
 Each widget displays:
 * % Workload allocation.
-* % Total allocation (including headroom). Total workload allocation percentage (includes only running pods, running headroom pods, and running DaemonSets pods that are scheduled on Ocean nodes).
+* % Total allocation (including headroom). Total workload allocation percentage (includes only running pods, running headroom pods, and running DaemonSets pods scheduled on Ocean nodes).
 
 To view more details:
 * Click an item on the legend above the graph to turn its associated curve on or off.
