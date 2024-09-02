@@ -94,7 +94,7 @@ The default entity ID is https://console.spotinst.com/auth/saml. If you need add
 
   <div style="padding-left:16px">
    
-https://console.spotinst.com/auth/saml
+The ACS URL is https://console.spotinst.com/auth/saml.
 
  </div>
 
@@ -138,8 +138,10 @@ The X.509 certificate needs to be a standard strength certificate (2048-bit) wit
 
   <div style="padding-left:16px">
    
-There are a number of [attributes that can be sent](/administration/sso-access-control). These are the default and required attributes:
+There are a number of <a href="/administration/sso-access-control">attributes that can be sent</a>. These are the default and required attributes:
+
 <font color="#FC01CC">I don't see in the documentation what attributes can be sent. is this the correct link?</font>
+
 * Relay State
 * Email
 * FirstName
@@ -280,6 +282,7 @@ In the Recommendations table, you can see the exact amount of resources to chang
   <div style="padding-left:16px">
   
 Your newly launched Ocean ECS container instance:
+
 * Has unregistered contain instance events
 * Doesn’t have a Container Instance ID
 * Is eventually scaled down
@@ -554,7 +557,7 @@ You can configure a custom scaling policy that is based on another metric. For e
     * <b>Custom Namespace</b>: <i>CWagent</i>
     * <b>Metric Name</b>: this [AWS document](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/metrics-collected-by-CloudWatch-agent.html) contains the metrics you can use. These metrics are collected by the CloudWatch agent. For example, you can use <i>mem_used</i> or <i>mem_used_percent</i>.
      
-     <img src="https://github.com/user-attachments/assets/430e1adc-458b-4723-ba8a-061c766daef3" >
+     <img width=450 src="https://github.com/user-attachments/assets/430e1adc-458b-4723-ba8a-061c766daef3" >
     
 5. Verify the [CloudWatch agent is installed](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/install-CloudWatch-Agent-on-EC2-Instance.html).
 
@@ -588,9 +591,7 @@ data_dir = "/tmp/client1"
 client {
     enabled = true
     servers = ["<NomadServerElasticIP>"]
-}
-     </code>
-    </pre>
+}</code></pre>
  
 <b>Create an Elastigroup with Nomad:</b>
 
@@ -598,11 +599,9 @@ client {
 
 2.	On the Compute tab, go to <b>Additional Configurations</b>, add this user data script:
 
-<pre><code>#!/bin/bash
-export INSTANCE_ID=`curl -s http://169.254.169.254/latest/meta-data/instance-id` <font color="#FC01CC">keep the url as is?</font>
-sudo nomad agent -config client.hcl -node $INSTANCE_ID &
-      </code>
-    </pre>
+    <pre><code>#!/bin/bash
+    export INSTANCE_ID=`curl -s http://169.254.169.254/latest/meta-data/instance-id` <font color="#FC01CC">keep the url as is?</font>
+    sudo nomad agent -config client.hcl -node $INSTANCE_ID &</code></pre>
 
 3.	On the Compute tab, go to <b>3rd party integration</b> and select <b>Nomad</b>.
 4.	Enter your <b>Nomad Master Host</b> and <b>Port</b>.
