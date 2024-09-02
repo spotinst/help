@@ -93,7 +93,7 @@ The default entity ID is https://console.spotinst.com/auth/saml. If you need add
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="SSO-ACSURL">SSO: What is the ACS URL?</summary>
 
   <div style="padding-left:16px">
-   
+
 The ACS URL is https://console.spotinst.com/auth/saml.
 
  </div>
