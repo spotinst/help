@@ -194,7 +194,7 @@ You can now install the [Ocean Controller](ocean/tutorials/ocean-controller-v2/)
 
 To install the Ocean Controller and establish connectivity: 
 
-1. Generate a Spot token (or use an existing one) and copy it to the text box. 
+1. Generate and enter a Spot token (or use an existing one), and then enter the namespace.
 2. To install the Ocean Kubernetes Controller, use either Helm (the preferred option) or via script. 
 
    * **Helm**: This is the preferred method because it lets you customize using command-line options or `values.yaml`. Install **Helm 3.x** and add the `spotinst` repo. Then, use the `helm install` command with set command-line options to install the Ocean controller in a separate spot-ocean namespace.
