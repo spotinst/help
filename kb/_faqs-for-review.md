@@ -1,7 +1,48 @@
 <meta name="robots" content="noindex">
 
-# FAQs in progress
+# FAQs for review
 
+<!----------------------------------where to put these?---------------------------------->
+
+## Where do these go?
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="xxxx">?</summary>
+
+  <div style="padding-left:16px">
+
+   text
+   
+ </div>
+
+ </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="odresp">Why is my on-demand instance utilized as a reserved instance/savings plan?</summary>
+
+  <div style="padding-left:16px">
+
+   When is an on-demand (OD) instance a reserved instance (RI), savings plan (SP), or full-priced on demand?
+   
+   When launching an on-demand instance, you cannot specifically request it to run as a reserved instance or savings plan.
+
+AWS decides according to:
+
+1.	If the market matches a free zonal RI commitment, then the instance is a reserved instance.
+2.	If the market matches a free regional RI commitment, then the instance is a reserved instance.
+3.	If the market matches a free EC2 Instance SP commitment, then the instance is a savings plan.
+4.	If there is any free Compute SP commitment, then the instance is a savings plan.
+5.	Otherwise, the instance will run as a full-price OD.
+
+Throughout the lifetime of an instance, it can change its “price” whenever there’s any change in the commitments utilization rate. For example, if an instance is running as a full price on-demand, and another instance that was utilizing a compute savings plan commitment was terminated, the first instance will start utilizing this commitment if its hourly price rate has enough free space under this commitment. It might take a couple of minutes for this change to show, but since the billing is being calculated retroactively, in practice it’s starting to utilize the commitment right away.
+   
+ </div>
+
+ </details>
+
+
+
+ 
 <!----------------------------------general---------------------------------->
 
 ## General
@@ -10,7 +51,8 @@
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="pagerdutynotifications">Can I set up PagerDuty alerts from Spot?</summary>
 
   <div style="padding-left:16px">
-You can set up PagerDuty alerts in Spot:
+
+   You can set up PagerDuty alerts in Spot:
 
    1. Set up [PagerDuty email integration](https://support.pagerduty.com/docs/email-integration-guide).
    2. In the Spot console, click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png">  > **Settings**.
@@ -248,33 +290,6 @@ However, it’s not possible to do with Ocean AKS clusters because you cannot ch
  
  </details>
 
- <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanallocationutilization">What's the difference between allocation and utilization for Ocean right sizing?</summary>
-
-  <div style="padding-left:16px">
-  
-Estimating the proper amount of CPU and memory when assigning resource requests to workloads is a challenge that teams face when designing Kubernetes or ECS clusters. To address this challenge and create even more resource-efficient clusters, Ocean has implemented a right-sizing recommendation mechanism.
-
-Right-sizing recommendations are provided per container and summarized for the entire workload for easy presentation at a high level. Recommendations per container enable you to easily understand exactly which applications require changes in resource requests and implement those changes quickly.
-
-Applying the changes suggested by those notifications helps utilize resources in the cluster in a more precise manner and lowers the chances of cluster issues resulting from under- or over-utilization of resources.
-
-Sometimes, there’s a difference between the number of resources in use in the Spot console and AWS.
-
-Ocean performs scaling according to allocation. There are times when a pod’s request fully utilizes the number of resources allocated. Ocean’s scaling takes this into consideration. This is why a discrepancy may occur. The workload can use fewer resources than the number of resources that were initially allocated or requested.
-
-Ocean’s solution to this mismatch is a feature called [Right Sizing](/ocean/features/right-sizing). The Right Sizing tab shows the discrepancy between the number of resources allocated (Requested) and the number of resources that are currently utilized (Recommended). This can help you make changes to your current resource utilization.
-
-![oceanrightsizing1](https://github.com/user-attachments/assets/499116be-1d13-45bf-9ca4-fc57d4b3bd3a)
-
-In the Recommendations table, you can see the exact amount of resources to change from the pod’s request.
-
-![oceanrightsizing2](https://github.com/user-attachments/assets/89944cd8-124f-4d2e-b509-104a92077a7c)
-
- </div>
- 
- </details>
-
  
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanunregcontainer">Why are my container instances unregistered?</summary>
@@ -403,6 +418,49 @@ By freeing up space, the pod can be placed on its attached node and can use the 
 
  </details>
 
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceank8sreadiness">Why am I getting an <i>exit code 137</i> error?</summary>
+
+  <div style="padding-left:16px">
+
+Your liveness probe failed, and you’re getting exit code 137. <font color="#FC01CC">liveliness or readiness probe failed?</font>
+
+Controller pod error:
+<code>Warning Unhealthy 3m44s (x273 over 78m) kubelet Readiness probe failed: Get http://172.16.6.53:4401/healthcheck: dial tcp 172.16.6.53:4401: connect: connection refused</code> <font color="#FC01CC">is all this okay to include? or do I need to anonymize the urls?</font>
+
+Exit code from controller logs:
+<pre><code>INFO [2024-01-03 19:10:31,863] [main] PushAutoScalerDataCmd - Pushing autoScaler data
+
+command terminated with exit code 137</code></pre>
+
+The liveness probe failed error typically happens when a node is overcommitted, and the controller pod does not respond to the check at the right time.
+Exit code 137 usually means out-of-memory issues.<font color="#FC01CC">livelness or readiness?</font>
+
+**Liveness probe failure** <font color="#FC01CC">include these links? livelness or readiness?</font>
+
+•	Define readiness probes: https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/#define-readiness-probes
+•	Kubernetes readiness probe failed error: https://stackoverflow.com/questions/48540929/kubernetes-readiness-probe-failed-error
+
+**Exit code 137** <font color="#FC01CC">include these links?</font>
+What Is Exit Code 137? https://foxutech.medium.com/how-to-fix-exit-code-137-kubernetes-memory-issues-c3a40f89c90d#:~:text=A%20137%20code%20is%20issued,encounter%20a%20137%20exit%20code
+
+
+<code>Kubernetes Autoscaler, Deadlock for Pod: '{pod-name}' 
+Can't scale up an Instance since PersistentVolumeClaim: 
+'{PVC-name}' 
+VolumeId: '{vol-name}' is already attached to an existing Instance: 
+'{instance-ID}' Please consider using a new PersistentVolumeClaim or open a 
+support ticket.
+</code>
+
+This can happen when the pod has a claim for a specific volume owned by a different instance, and that instance does not have free space for the pod.
+
+By freeing up space, the pod can be placed on its attached node and can use the volume it claimed.
+
+ </div>
+
+ </details>
+
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceancost">Why is the cost analysis in the Ocean dashboard unusually high for yesterday?</summary>
 
@@ -447,6 +505,89 @@ The specific number of evaluation periods before a scale-down action takes place
 
 > **Note**: The evaluation period is calculated based on cooldown plus 3 minutes of padding due to delay in Cloudwatch metrics. So if the cooldown is set to 300 seconds, the evaluation period is 8 minutes (3 minutes + 5 cooldown).
 
+ </div>
+
+ </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanallocationutilization">What's the difference between allocation and utilization for Ocean right sizing?</summary>
+
+  <div style="padding-left:16px">
+  
+Estimating the proper amount of CPU and memory when assigning resource requests to workloads is a challenge that teams face when designing Kubernetes or ECS clusters. To address this challenge and create even more resource-efficient clusters, Ocean has implemented a right-sizing recommendation mechanism.
+
+Right-sizing recommendations are provided per container and summarized for the entire workload for easy presentation at a high level. Recommendations per container enable you to easily understand exactly which applications require changes in resource requests and implement those changes quickly.
+
+Applying the changes suggested by those notifications helps utilize resources in the cluster in a more precise manner and lowers the chances of cluster issues resulting from under- or over-utilization of resources.
+
+Sometimes, there’s a difference between the number of resources in use in the Spot console and AWS.
+
+Ocean performs scaling according to allocation. There are times when a pod’s request fully utilizes the number of resources allocated. Ocean’s scaling takes this into consideration. This is why a discrepancy may occur. The workload can use fewer resources than the number of resources that were initially allocated or requested.
+
+Ocean’s solution to this mismatch is a feature called [Right Sizing](/ocean/features/right-sizing). The Right Sizing tab shows the discrepancy between the number of resources allocated (Requested) and the number of resources that are currently utilized (Recommended). This can help you make changes to your current resource utilization.
+
+![oceanrightsizing1](https://github.com/user-attachments/assets/499116be-1d13-45bf-9ca4-fc57d4b3bd3a)
+
+In the Recommendations table, you can see the exact amount of resources to change from the pod’s request.
+
+![oceanrightsizing2](https://github.com/user-attachments/assets/89944cd8-124f-4d2e-b509-104a92077a7c)
+
+ </div>
+ 
+ </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanunnamedvng">Why is my instance in an unnamed virtual node group?</summary>
+
+  <div style="padding-left:16px">
+
+A node is running in an Ocean cluster and is an unnamed virtual node group.
+
+<img width="900" src="https://github.com/user-attachments/assets/5e581d00-b1c8-4bdb-8e89-c19ef79ad1f1">
+
+This can happen if your virtual node group was deleted in Terraform. When you delete a virtual node group in Terraform, the `delete_nodes` needs to be manually set to <i>true</i> in the [Terraform registry](https://registry.terraform.io/providers/spotinst/spotinst/latest/docs/resources/ocean_aws_launch_spec#delete_nodes). If it's not set to <i>true</i>, the node will keep running and not be in a virtual node group.
+
+ </div>
+ 
+ </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceandisconnectcluster">How can I disconnect a cluster from Ocean?</summary>
+
+  <div style="padding-left:16px">
+
+   You can safely disconnect Ocean from an existing EKS Cluster:
+
+1. Increase the number of instances in the ASG attached to the EKS cluster. This way, the pods that run on the nodes managed by Spot will be able to reschedule on the new instances and avoid downtime.
+2. In the Spot console, go to **Ocean** > **Cloud Clusters**, and select the cluster.
+3. Click **Actions** > **Edit Cluster**.
+4. On the Review tab, click **JSON** > **Edit Mode**.
+5. Change **capacity** > **target** to <i>0</i>.<font color="#FC01CC"> is this accurate? if target is 0, then do the min and max also need to be changed? it was: In order to update the capacity navigate to Actions --> Edit cluster --> Review tab --> Toggle to JSON --> Edit mode --> Update capacity to '0' --> Update.</font>
+
+   <img width="144" alt="oceandisconnectcluster" src="https://github.com/user-attachments/assets/ec722def-980f-4754-ab0d-b2751bf67a81">
+
+   The instances managed by Ocean will be detached and the pods will be rescheduled on the new instances launched by AWS ASG.
+6. In the Spot console, go to **Ocean** > **Cloud Clusters**, and select the cluster.
+7. Click **Actions** > **Delete**.
+
+<font color="#FC01CC">this was also in the article, what do I need to change to make this FAQ generic?
+
+The above information is a guide to disconnecting an EKS cluster but the same method can apply on other services(ECS/Kops) and other cloud providers(Azure/GCP).</font>
+ 
+ </div>
+
+ </details>
+
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanhelm">Can I manage my Kubernetes cluster deployment using Helm charts?</summary>
+
+  <div style="padding-left:16px">
+
+  You can manage your Kubernetes cluster deployment using Helm charts. You can can also [update the Ocean controller version](/tutorials/spot-kubernetes-controller/install-with-helm) using Helm charts.
+
+The Helm chart YAML file has a version that points to a specific app version in the relevant [Spotinst repository](https://github.com/spotinst/spotinst-kubernetes-helm-charts/blob/master/charts/spotinst-kubernetes-cluster-controller/Chart.yaml). Every version in the repository is compatible with a [specific controller version](https://artifacthub.io/packages/helm/spotinst/spotinst-kubernetes-cluster-controller). 
+   
  </div>
 
  </details>
@@ -677,6 +818,23 @@ client {
 8. In the Delete Stateful Node window, make sure to deselect all the options because you need the VM to run on the Azure side.
 9. Verify that the VM with the resources is running in Azure.
 
+ </div>
+
+ </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egsn-stopped">Why am I getting an <i>Instance have been detected as stopped</i> error?</summary>
+
+  <div style="padding-left:16px">
+
+   You can see this error in the log:
+
+   <pre><code>08/20/2023, 5:36 AM, WARN, Instance: [i-01234567890abcdefg] have been detected as Stopped.</code></pre>
+
+   It's possible to [stop an instance in AWS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html), but Spot doesn't support the Stop action. This causes out-of-sync issues.
+
+   Restart the instance in AWS, then the Elastigroup will sync again. Use [Pause/Resume](/managed-instance/features/managed-instance-actions?id=stateful-node-actions) instead of Stop.
+   
  </div>
 
  </details>
