@@ -506,6 +506,61 @@ The next steps are intuitive and should be configured according to the customer'
 
  </details>
 
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egnomad">How is Nomad integrated with Elastigroup?</summary>
+
+  <div style="padding-left:16px">
+
+Nomad is an open-source system by Hashicorp. It is used to easily manage containerized applications across multiple hosts.
+
+Nomad groups your containers into logical units, called jobs, to simplify management and discovery. It provides deployment scheduling, workload, resource usage optimization, and easy scaling. Its workload management, scalability, and flexibility are simple and lightweight to use.
+
+Nomad and Kubernetes are popular container orchestration platforms for managing and scaling containerized applications. However, they have different design philosophies and features.
+
+<img width=700 src="https://github.com/user-attachments/assets/e1ea38cb-33a5-447f-9556-3c5f23b0e03d" >
+
+With the Nomad integration, you can easily set up a new group by adding the required user data script and providing the Nomad lead master-server IP and primary host and port.
+
+Add <i>setup data dir</i> to your AMI. Replace `<NomadServerElasticIP>` with the Elastic IP of the master:
+
+<pre><code># Setup data dir
+data_dir = "/tmp/client1"
+# Enable the client
+client {
+    enabled = true
+    servers = ["<NomadServerElasticIP>"]
+}
+     </code>
+    </pre>
+ 
+<b>Create an Elastigroup with Nomad:</b>
+
+1.	Create a new Elastigroup for [AWS](/elastigroup/getting-started/create-an-elastigroup-for-aws), [Azure](/elastigroup/getting-started/create-an-elastigroup-for-azure), or [GCP](/elastigroup/getting-started/create-an-elastigroup-for-gcp).
+
+2.	On the Compute tab, go to <b>Additional Configurations</b>, add this user data script:
+
+<pre><code>#!/bin/bash
+export INSTANCE_ID=`curl -s http://169.254.169.254/latest/meta-data/instance-id` <font color="#FC01CC">keep the url as is?</font>
+sudo nomad agent -config client.hcl -node $INSTANCE_ID &
+      </code>
+    </pre>
+
+3.	On the Compute tab, go to <b>3rd party integration</b> and select <b>Nomad</b>.
+4.	Enter your <b>Nomad Master Host</b> and <b>Port</b>.
+5.	Click <b>Validate</b> to make sure the connection is successful.
+6.	Create the Elastigroup. <font color="#FC01CC">Click Next how do they create the elastigroup?</font>
+
+<b>More about Nomad</b>
+* [Nomad autoscaling](/elastigroup/tools-integrations/nomad/)
+* [Set up Nomad](/elastigroup/tools-integrations/nomad/set-up-nomad-on-elastigroup)
+* [Configure Nomad autoscaler](/elastigroup/tools-integrations/nomad/configure-nomad-autoscaler)
+* [Down scaling](/elastigroup/tools-integrations/nomad/?id=down-scaling)
+
+
+ </div>
+
+ </details>
+
 
 <!----------------------------------elastigroup stateful node---------------------------------->
 
