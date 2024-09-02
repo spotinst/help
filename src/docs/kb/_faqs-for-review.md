@@ -10,7 +10,8 @@
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="pagerdutynotifications">Can I set up PagerDuty alerts from Spot?</summary>
 
   <div style="padding-left:16px">
-You can set up PagerDuty alerts in Spot:
+
+   You can set up PagerDuty alerts in Spot:
 
    1. Set up [PagerDuty email integration](https://support.pagerduty.com/docs/email-integration-guide).
    2. In the Spot console, click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png">  > **Settings**.
@@ -248,33 +249,6 @@ However, it’s not possible to do with Ocean AKS clusters because you cannot ch
  
  </details>
 
- <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanallocationutilization">What's the difference between allocation and utilization for Ocean right sizing?</summary>
-
-  <div style="padding-left:16px">
-  
-Estimating the proper amount of CPU and memory when assigning resource requests to workloads is a challenge that teams face when designing Kubernetes or ECS clusters. To address this challenge and create even more resource-efficient clusters, Ocean has implemented a right-sizing recommendation mechanism.
-
-Right-sizing recommendations are provided per container and summarized for the entire workload for easy presentation at a high level. Recommendations per container enable you to easily understand exactly which applications require changes in resource requests and implement those changes quickly.
-
-Applying the changes suggested by those notifications helps utilize resources in the cluster in a more precise manner and lowers the chances of cluster issues resulting from under- or over-utilization of resources.
-
-Sometimes, there’s a difference between the number of resources in use in the Spot console and AWS.
-
-Ocean performs scaling according to allocation. There are times when a pod’s request fully utilizes the number of resources allocated. Ocean’s scaling takes this into consideration. This is why a discrepancy may occur. The workload can use fewer resources than the number of resources that were initially allocated or requested.
-
-Ocean’s solution to this mismatch is a feature called [Right Sizing](/ocean/features/right-sizing). The Right Sizing tab shows the discrepancy between the number of resources allocated (Requested) and the number of resources that are currently utilized (Recommended). This can help you make changes to your current resource utilization.
-
-![oceanrightsizing1](https://github.com/user-attachments/assets/499116be-1d13-45bf-9ca4-fc57d4b3bd3a)
-
-In the Recommendations table, you can see the exact amount of resources to change from the pod’s request.
-
-![oceanrightsizing2](https://github.com/user-attachments/assets/89944cd8-124f-4d2e-b509-104a92077a7c)
-
- </div>
- 
- </details>
-
  
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanunregcontainer">Why are my container instances unregistered?</summary>
@@ -403,6 +377,49 @@ By freeing up space, the pod can be placed on its attached node and can use the 
 
  </details>
 
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceank8sreadiness">Why am I getting an <i>exit code 137</i> error?</summary>
+
+  <div style="padding-left:16px">
+
+Your liveness probe failed, and you’re getting exit code 137. <font color="#FC01CC">liveliness or readiness probe failed?</font>
+
+Controller pod error:
+<code>Warning Unhealthy 3m44s (x273 over 78m) kubelet Readiness probe failed: Get http://172.16.6.53:4401/healthcheck: dial tcp 172.16.6.53:4401: connect: connection refused</code> <font color="#FC01CC">is all this okay to include? or do I need to anonymize the urls?</font>
+
+Exit code from controller logs:
+<pre><code>INFO [2024-01-03 19:10:31,863] [main] PushAutoScalerDataCmd - Pushing autoScaler data
+
+command terminated with exit code 137</code></pre>
+
+The liveness probe failed error typically happens when a node is overcommitted, and the controller pod does not respond to the check at the right time.
+Exit code 137 usually means out-of-memory issues.<font color="#FC01CC">livelness or readiness?</font>
+
+**Liveness probe failure** <font color="#FC01CC">include these links? livelness or readiness?</font>
+
+•	Define readiness probes: https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/#define-readiness-probes
+•	Kubernetes readiness probe failed error: https://stackoverflow.com/questions/48540929/kubernetes-readiness-probe-failed-error
+
+**Exit code 137** <font color="#FC01CC">include these links?</font>
+What Is Exit Code 137? https://foxutech.medium.com/how-to-fix-exit-code-137-kubernetes-memory-issues-c3a40f89c90d#:~:text=A%20137%20code%20is%20issued,encounter%20a%20137%20exit%20code
+
+
+<code>Kubernetes Autoscaler, Deadlock for Pod: '{pod-name}' 
+Can't scale up an Instance since PersistentVolumeClaim: 
+'{PVC-name}' 
+VolumeId: '{vol-name}' is already attached to an existing Instance: 
+'{instance-ID}' Please consider using a new PersistentVolumeClaim or open a 
+support ticket.
+</code>
+
+This can happen when the pod has a claim for a specific volume owned by a different instance, and that instance does not have free space for the pod.
+
+By freeing up space, the pod can be placed on its attached node and can use the volume it claimed.
+
+ </div>
+
+ </details>
+
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceancost">Why is the cost analysis in the Ocean dashboard unusually high for yesterday?</summary>
 
@@ -449,6 +466,33 @@ The specific number of evaluation periods before a scale-down action takes place
 
  </div>
 
+ </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanallocationutilization">What's the difference between allocation and utilization for Ocean right sizing?</summary>
+
+  <div style="padding-left:16px">
+  
+Estimating the proper amount of CPU and memory when assigning resource requests to workloads is a challenge that teams face when designing Kubernetes or ECS clusters. To address this challenge and create even more resource-efficient clusters, Ocean has implemented a right-sizing recommendation mechanism.
+
+Right-sizing recommendations are provided per container and summarized for the entire workload for easy presentation at a high level. Recommendations per container enable you to easily understand exactly which applications require changes in resource requests and implement those changes quickly.
+
+Applying the changes suggested by those notifications helps utilize resources in the cluster in a more precise manner and lowers the chances of cluster issues resulting from under- or over-utilization of resources.
+
+Sometimes, there’s a difference between the number of resources in use in the Spot console and AWS.
+
+Ocean performs scaling according to allocation. There are times when a pod’s request fully utilizes the number of resources allocated. Ocean’s scaling takes this into consideration. This is why a discrepancy may occur. The workload can use fewer resources than the number of resources that were initially allocated or requested.
+
+Ocean’s solution to this mismatch is a feature called [Right Sizing](/ocean/features/right-sizing). The Right Sizing tab shows the discrepancy between the number of resources allocated (Requested) and the number of resources that are currently utilized (Recommended). This can help you make changes to your current resource utilization.
+
+![oceanrightsizing1](https://github.com/user-attachments/assets/499116be-1d13-45bf-9ca4-fc57d4b3bd3a)
+
+In the Recommendations table, you can see the exact amount of resources to change from the pod’s request.
+
+![oceanrightsizing2](https://github.com/user-attachments/assets/89944cd8-124f-4d2e-b509-104a92077a7c)
+
+ </div>
+ 
  </details>
 
 <!----------------------------------elastigroup---------------------------------->
