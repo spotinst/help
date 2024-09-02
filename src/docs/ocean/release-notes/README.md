@@ -1,6 +1,13 @@
 # Ocean Release Notes
 
-## August 2024: Features and Enhancements 
+## September 2024: Features and Enhancements 
+
+*  **OCN-0028: September 02, 2024:** (**<font color="#FC01CC">AKS</font>**) The AKS Cluster overview dashboard now includes details about Ocean savings from bin packing and a panel that displays a cluster-level summary with widgets for CPU /Memory /GPU resources allocated to pods. [Learn more...](https://docs.spot.io/ocean/ocean-aks-cloud-cluster-overview) 
+
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600">August, 2024 - click to view</summary>
+
+<div style="padding-left:16px">
 
 *  **OCN-0027: August 29, 2024:** (**<font color="#FC01CC">AWS Kubernetes</font>**) Turn On/Off Utilize Commitments per Virtual Node Group: You can now distribute reservation instances/savings plans according to Virtual Node Groups for different types of workloads on the same cluster via the `utilizeReservedInstances` and `utilizeCommitments` attributes. [Learn more...](https://docs.spot.io/ocean/features/vngs/attributes-and-actions-per-vng?id=turn-onoff-utilize-commitments-per-virtual-node-group)
 
@@ -13,6 +20,9 @@
 *  **OCN-0023: August 14, 2024:** (**<font color="#FC01CC">AWS Kubernetes</font>**) Ocean's Cluster Overview dashboard now contains an Autoscaling Activity Graph to give you intuitive insights into the interaction between the Ocean infrastructure and the applications it supports. View cluster activity insights at a granular level to see why the Ocean Autoscaler triggered a specific scale event within the cluster. [Learn more...](https://docs.spot.io/ocean/cluster-overview-tab?id=autoscaling-activity-graph)
 
 *  **OCN-0022: August 11, 2024:** (**<font color="#FC01CC">GCP</font>**) You can now use committed use discounts (CUDs) with Ocean clusters. Committed use discounts provide discounted prices in exchange for customer commitment expense on GCP. [Learn more...](https://docs.spot.io/ocean/features/committed-use-discount)
+
+</div>
+</details>
 
 <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600">July, 2024 - click to view</summary>
