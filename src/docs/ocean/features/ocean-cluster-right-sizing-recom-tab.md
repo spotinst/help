@@ -108,7 +108,9 @@ To detach a rule from one or more workloads:
 >**Note**: You can only detach workloads already attached to rules.
 
 1.   Select workloads in the Workloads Optimization list.
-2.   From the Actions drop-down menu above the list, click **Detach Rule**. 
+2.   From the Actions drop-down menu above the list, click **Detach Rule**.
+
+>**Important**: If you encounter any Kubernetes issues, we recommend detaching workloads from rules and rolling them in your cluster.
 
 ###   Delete a Right-Sizing Rule 
 
