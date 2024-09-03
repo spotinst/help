@@ -35,13 +35,22 @@ This list displays:
    *  Green: The Workload is fully optimized, and no action is required.
    *  Orange: The Workload has optimization limitations (constrained by settings). 
    *  Gray: The rule for the workload has been attached but is out of schedule.
- * Potential monthly max. Savings if you adopt these recommendations. 
-
-    > **Notes**:
-    > Red status: The Workload is not optimized.
-    > Orange or gray status: Hover over the workload optimization status to view more details in a tooltip.
-    > There are no vCPU / memory recommendations or Potential monthly max if a workload is fully optimized. Savings are displayed for the workload because Ocean is already optimizing it.
+ * Potential monthly max. Savings if you adopt these recommendations.
    
+   > **Notes**:
+   > Red status: The Workload is not optimized.
+   > Orange or gray status: Hover over the workload optimization status to view more details in a tooltip.
+   > There are no vCPU / memory recommendations or Potential monthly max if a workload is fully optimized. Savings are displayed for the workload because Ocean is already optimizing it.
+
+      
+   > **Notes**:
+
+   > Red status: The Workload is not optimized.
+   
+   > Orange or gray status: Hover over the workload optimization status to view more details in a tooltip.
+
+   > There are no vCPU / memory recommendations or Potential monthly max if a workload is fully optimized. Savings are displayed for the workload because Ocean is already optimizing it.
+
 The graphical display above the list shows the breakdown of these workload optimization statuses.
 
 To view a list of your potential savings and recommendations per container: 
