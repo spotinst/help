@@ -502,6 +502,22 @@ By freeing up space, the pod can be placed on its attached node and can use the 
 
  </details>
 
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanunauthorized">Why am I getting a <i>You must be logged in to the server (unauthorized)</i> error when creating an EKS cluster?</summary>
+
+  <div style="padding-left:16px">
+
+   When you create an Ocean EKS cluster, you may get this error when in step 4 (run 'kubectl get svc'):
+   <code>You must be logged in to the server (Unauthorized).</code>
+
+   This can happen:
+   * When an Amazon EKS cluster is created, the IAM entity (user or role) that creates the cluster is added to the Kubernetes RBAC authorization table as the administrator. Initially, only that IAM user can make calls to the Kubernetes API server using kubectl. The user trying to run the 'kubectl get svc' command has no permission at all. You need to [add access to other AWS users](https://stackoverflow.com/questions/50791303/kubectl-error-you-must-be-logged-in-to-the-server-unauthorized-when-accessing).<font color="#FC01CC">should we link to stackoverflow or to an AWS page?</font>
+   * If you're using a different IAM account for AWS CLI than the IAM account you used for the CloudFormation template when you created the EKS in the AWS console. Run 'aws configure' and switch the AWS CLI to use the same IAM account that was used for the CloudFormation template when you created the EKS.
+   
+ </div>
+
+ </details>
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceansnapshotid">Why am I getting a <i>snapshotId cannot be modified on the root device</i> error?</summary>
 
