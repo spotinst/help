@@ -110,7 +110,7 @@ To detach a rule from one or more workloads:
 1.   Select workloads in the Workloads Optimization list.
 2.   From the Actions drop-down menu above the list, click **Detach Rule**.
 
->**Important**: If you encounter throttling or OOM events, we recommend detaching workloads from rules and rolling them in your cluster. Soon automatic rollbacks will be available. 
+>**Important**: If you encounter any Kubernetes issues, we recommend detaching workloads from rules and rolling them in your cluster.
 
 ###   Delete a Right-Sizing Rule 
 
