@@ -2,10 +2,6 @@
 
 # FAQs for review
 
-<!----------------------------------where to put these?---------------------------------->
-
-## Where do these go?
-
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="xxxx">?</summary>
 
@@ -16,6 +12,10 @@
  </div>
 
  </details>
+
+<!----------------------------------where to put these?---------------------------------->
+
+## Where do these go?
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="odresp">Why is my on-demand instance utilized as a reserved instance/savings plan?</summary>
@@ -40,7 +40,20 @@ Throughout the lifetime of an instance, it can change its “price” whenever t
 
  </details>
 
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="elasticsearch">Can Elasticsearch integrate with Spot?</summary>
 
+  <div style="padding-left:16px">
+
+   You can stream Elastigroup logs to an AWS S3 bucket. Then, you can configure Elasticsearch and Kibana to collect logs from the S3 bucket:
+   * [Ocean](/ocean/features/log-integration-with-s3)
+   * [Elastigroup](url) <font color="#FC01CC">broken url: Note: The above document addresses the integration of Ocean with S3, but is also available for Elastigroup as well: https://spotinst.com/blog/elasticsearch-on-spot-instances-step-by-step/ </font>
+
+   <font color="#FC01CC">Here's how to use Spot Connect to integrate Elasticsearch. is it relevant? https://docs.spot.io/spot-connect/integrations/elasticsearch </font>
+
+ </div>
+
+ </details>
 
  
 <!----------------------------------general---------------------------------->
@@ -351,7 +364,7 @@ Your newly launched Ocean ECS container instance:
 
 <img alt="unregistered-container-instance1" src="https://github.com/spotinst/help/assets/167069628/acd9d60a-4952-4955-b119-593ccfb9c067">
 
-
+    
 
 <img alt="unregistered-container-instance2" src="https://github.com/spotinst/help/assets/167069628/d7713e91-2850-48ee-9d1a-aa439dcf91d1">
 
@@ -396,27 +409,51 @@ Registering a container instance with an ECS cluster means you are telling the E
  
  </details>
 
-
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanlaunchspec">Why am I getting the error: <i>when default launchSpec is used as a template only, can't raise target of Ocean</i>?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceank8sheadroom">Can I configure automatic headroom using Kubernetes Operations (kOps)?</summary>
 
   <div style="padding-left:16px">
 
-   When the <code>useAsTemplateOnly</code> parameter is <i>true</i>, you cannot edit the target capacity in the Ocean cluster configuration.
-   
-Keep in mind that it may not be necessary to increase the target capacity because Ocean automatically scales instances up and down as needed.
+You can configure [automatic headroom](ocean/features/headroom) using kOps at the cluster level, not at a virtual node level. Add these [metadata labels](/ocean/tools-and-integrations/kops/metadata-labels):
 
-If you want to edit the target capacity:
-1. In the [API](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterCreate), go to **Compute** > **launchSpecification**.
-2. Change the <b>useAsTemplateOnly</b> parameter to <i>false</i>.
+<code>spotinst.io/autoscaler-auto-config: "true"
+spotinst.io/autoscaler-auto-headroom-percentage : {Value}
+spotinst.io/ocean-default-launchspec: "true"</code>
 
-This will let you manually increase the target of the duster and the nodes will launch in the default virtual node group.
+Here's an example of a config file:
 
-<img width=900 src="https://github.com/user-attachments/assets/6e422a64-db48-4b43-90d0-d6b5ddc35464" >
+<code>apiVersion: kops.k8s.io/v1alpha2
+kind: InstanceGroup
+metadata:
+name: "test-vng-2"
+
+labels:
+kops.k8s.io/cluster: "erez-via-2.ts.ek8s.com"
+spotinst.io/spot-percentage: "50"
+spotinst.io/autoscaler-auto-config: "true"
+spotinst.io/ocean-default-launchspec: "true"
+spotinst.io/autoscaler-auto-headroom-percentage: "20"
+spotinst.io/autoscaler-headroom-num-of-units: "2"
+spotinst.io/autoscaler-resource-limits-max-vcpu: "2"
+spotinst.io/autoscaler-headroom-mem-per-unit: "1024"
+spotinst.io/autoscaler-headroom-gpu-per-unit: "0"
+
+spec:
+role: Node
+maxSize: 1
+minSize: 1</code>
+
+<font color="#FC01CC">is that specifically with **kops** that you can't do it at the vng level? because in the help:
+https://docs.spot.io/ocean/features/headroom?id=automatic-headroom-per-virtual-node-group
+Automatic Headroom per Virtual Node Group
+It is possible to define automatic headroom per virtual node group (VNG). The calculation of the automatic headroom in the VNG is the same as the calculation for the cluster as described above. This means that Ocean takes all of the workloads that run on a given VNG and calculates the headroom for that VNG using the same method it would for calculating headroom for the cluster.
+
+The automatic headroom and the headroom per VNG are calculated independently. Therefore, there is a possibility that the headroom per cluster and per VNG will save headroom for the same workload. In order to avoid this situation, you should set the headroom only at VNG level.</font>
 
  </div>
 
  </details>
+
  
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceank8sscaledown">Can I stop Kubernetes workloads from scaling down in Ocean?</summary>
@@ -463,6 +500,81 @@ By freeing up space, the pod can be placed on its attached node and can use the 
 
  </details>
 
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanunauthorized">Why am I getting a <i>You must be logged in to the server (unauthorized)</i> error when creating an EKS cluster?</summary>
+
+  <div style="padding-left:16px">
+
+   When you create an Ocean EKS cluster, you may get this error when in step 4 (run 'kubectl get svc'):
+   <code>You must be logged in to the server (Unauthorized).</code>
+
+   This can happen:
+   * When an Amazon EKS cluster is created, the IAM entity (user or role) that creates the cluster is added to the Kubernetes RBAC authorization table as the administrator. Initially, only that IAM user can make calls to the Kubernetes API server using kubectl. The user trying to run the 'kubectl get svc' command has no permission at all. You need to [add access to other AWS users](https://stackoverflow.com/questions/50791303/kubectl-error-you-must-be-logged-in-to-the-server-unauthorized-when-accessing).<font color="#FC01CC">should we link to stackoverflow or to an AWS page?</font>
+   * If you're using a different IAM account for AWS CLI than the IAM account you used for the CloudFormation template when you created the EKS in the AWS console. Run 'aws configure' and switch the AWS CLI to use the same IAM account that was used for the CloudFormation template when you created the EKS.
+   
+ </div>
+
+ </details>
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceansnapshotid">Why am I getting a <i>snapshotId cannot be modified on the root device</i> error?</summary>
+
+  <div style="padding-left:16px">
+
+   If you get a `snapshotId cannot be modified on the root device` error:
+
+   1. In the Spot console, go to **Ocean** > **Cloud Clusters**, and select the cluster.
+   2. On the Virtual Nodes Groups tab, select the virtual node group.<font color="#FC01CC">I don't see the blockDeviceMappings when I edit a cluster, only for vng</font>
+   3. Click **JSON**.
+   4. In the blockDeviceMappings, update the snapshotID or remove it:
+
+      <code>"blockDeviceMappings": [
+      {
+        "deviceName": "/dev/xvda",
+        "ebs": {
+          "deleteOnTerminaspoton": true,
+          "encrypted": false,
+          "iops": 3000,
+          "throughput": 125,
+          "snapshotId": "snap-1234",
+          "volumeSize": 100,
+          "volumeType": "GP3"
+        }
+      }
+    ],</code>
+
+   5. Click **Save**.
+
+<font color="#FC01CC">cluster:
+   1. In the Spot console, go to **Ocean** > **Cloud Clusters**, and select the cluster or virtual node group.<font color="#purple">I don't see the blockDeviceMappings when I edit a cluster, only for vng</font><font color="#FC01CC">
+   2. Click **Actions** > **Edit**.
+   3. On the Review tab, click **JSON** > **Edit Mode**.</font> 
+   
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanlaunchspec">Why am I getting the error: <i>when default launchSpec is used as a template only, can't raise target of Ocean</i>?</summary>
+
+  <div style="padding-left:16px">
+
+   When the <code>useAsTemplateOnly</code> parameter is <i>true</i>, you cannot edit the target capacity in the Ocean cluster configuration.
+   
+Keep in mind that it may not be necessary to increase the target capacity because Ocean automatically scales instances up and down as needed.
+
+If you want to edit the target capacity:
+1. In the [API](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterCreate), go to **Compute** > **launchSpecification**.
+2. Change the <b>useAsTemplateOnly</b> parameter to <i>false</i>.
+
+This will let you manually increase the target of the duster and the nodes will launch in the default virtual node group.
+
+<img width=900 src="https://github.com/user-attachments/assets/6e422a64-db48-4b43-90d0-d6b5ddc35464" >
+
+ </div>
+
+ </details>
+
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceank8sreadiness">Why am I getting an <i>exit code 137</i> error?</summary>
 
@@ -479,7 +591,7 @@ Exit code from controller logs:
 command terminated with exit code 137</code></pre>
 
 The liveness probe failed error typically happens when a node is overcommitted, and the controller pod does not respond to the check at the right time.
-Exit code 137 usually means out-of-memory issues.<font color="#FC01CC">livelness or readiness?</font>
+Exit code 137 usually means out-of-memory issues.vlivelness or readiness?</font>
 
 **Liveness probe failure** <font color="#FC01CC">include these links? livelness or readiness?</font>
 
@@ -505,6 +617,41 @@ By freeing up space, the pod can be placed on its attached node and can use the 
  </div>
 
  </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanmaxpods">I got a <i>Maximum Pods configuration reached</i> message, how do I troubleshoot?</summary>
+
+  <div style="padding-left:16px">
+
+   If you get a `Maximum Pods configuration reached` message for a node in the console:
+   * It usually means that you reached the EKS [maximum pod limit](https://github.com/awslabs/amazon-eks-ami/blob/master/files/eni-max-pods.txt). For example, the EKS maximum pod limitation for r4.large is 29.<font color="#FC01CC">broken link..is one of these correct?
+     https://github.com/awslabs/amazon-eks-ami/blob/main/templates/shared/runtime/eni-max-pods.txt
+     https://github.com/awslabs/amazon-eks-ami/blob/main/nodeadm/internal/kubelet/eni-max-pods.txt
+     </font>
+     You can [increase the EKS maximum pods](https://aws.amazon.com/blogs/containers/amazon-vpc-cni-increases-pods-per-node-limits/) in AWS.<font color="#FC01CC">should I include the stackoverflow in addition? https://stackoverflow.com/questions/57970896/pod-limit-on-node-aws-eks#:~:text=For%20t3.,22%20pods%20in%20your%20cluster</font>
+     
+   * If the node has less pods than the EKS maximum pod limit, then it's likely the **max-pods** limit set at the user data level in the Ocean configuration. Increase this limit for the user data in Ocean and roll the cluster.<font color="#FC01CC">how do they do this? is this relevant: https://docs.spot.io/ocean/features/roll</font>
+   If you continue to get this error, roll the cluster again and disable **Respect Pod Disruption Budget (PDB)**. You can also manually terminate the node.
+   
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanhpa">Can I check Ocean EKS clusters' horizontal pod autoscaling (HPA) policy?</summary>
+
+  <div style="padding-left:16px">
+
+   Ocean doesn't actually have a horizontal pod autoscaling (HPA) policy. The HPA is essentially operating on the Kubernetes side so Ocean itself doesn't have an HPA.
+
+The cluster autoscaler only takes care of provisioning the required number of nodes. There might still be inefficiencies within the cluster, such as nodes scheduled to pods that do not provide the required computing resources. This can be addressed by other [Kubernetes scaling mechanisms](https://spot.io/resources/kubernetes-autoscaling/kubernetes-cluster-autoscaler-features-limitations-and-comparisons-to-ocean-by-spot/), such as horizontal pod autoscaler (HPA) and vertical pod autoscaler (VPA).
+
+Essentially, if the load increases on your cluster, then Kubernetes will create more replicas, and Ocean will launch nodes for the new pods. Kubernetes HPA will create pods and Ocean will launch new nodes for pods to be scheduled.
+   
+ </div>
+
+ </details>
+
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceancost">Why is the cost analysis in the Ocean dashboard unusually high for yesterday?</summary>
@@ -756,6 +903,22 @@ The next steps are intuitive and should be configured according to the customer'
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egscalingRIs">If <i>Utilize Reserved Instances</i> is enabled, what is the scaling behavior?</summary>
+
+  <div style="padding-left:16px">
+
+By default, Elastigroup monitors the status of your account's reservations and acts accordingly at the launch time of an on-demand instance. When an on-demand instance is scaled up, if the account has an available reservation to use in the specific market (instance type + availability zone), Elastigroup will utilize it and will use the reserved instance payment method.
+
+If **Utilize Reserved Instances** is enabled, it automatically triggers constant attempts to revert the group's instances to on demand (reserved instance) if there are available reservations. It triggers a replacement for all instances, even spot, and uses your account's available reservations. The priority of launching instances in this group is:
+1. It will see if there is an option to launch an reserved instance instance
+2. If it cannot, it will launch a spot instance.
+3. If a spot instance is unavailable for any reason, an on-demand instance will be launched based on the fallback to on-demand configuration.
+
+ </div>
+ 
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="egnomad">How is Nomad integrated with Elastigroup?</summary>
 
   <div style="padding-left:16px">
@@ -923,6 +1086,24 @@ You can find the URL by navigating to Azure console --> VM details --> JSON view
    It's possible to [stop an instance in AWS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html), but Spot doesn't support the Stop action. This causes out-of-sync issues.
 
    Restart the instance in AWS, then the Elastigroup will sync again. Use [Pause/Resume](/managed-instance/features/managed-instance-actions?id=stateful-node-actions) instead of Stop.
+   
+ </div>
+
+ </details>
+
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egsn-stopped2">Why am I getting a <i>botocore.exceptions.ClientError</i> error?</summary>
+
+  <div style="padding-left:16px">
+
+   You may get this error:
+   <code>botocore.exceptions.ClientError: An error occurred (UnsupportedOperation) when calling the StopInstances operation: You can't stop the Spot Instance '<Instance-ID>' because it is associated with a one-time Spot Instance request. You can only stop Spot Instances associated with persistent Spot Instance requests.</code>
+
+   It's possible to [stop an instance in AWS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html), but Spot doesn't support the Stop action.
+
+<font color="#FC01CC">is this relevant here, too?
+
+   Restart the instance in AWS, then the Elastigroup will sync again. Use [Pause/Resume](/managed-instance/features/managed-instance-actions?id=stateful-node-actions) instead of Stop.</font>
    
  </div>
 
