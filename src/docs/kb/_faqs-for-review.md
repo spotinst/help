@@ -2,7 +2,7 @@
 
 # FAQs for review
 
- <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+<!---------------------------------- <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="xxxx">?</summary>
 
   <div style="padding-left:16px">
@@ -12,6 +12,7 @@
  </div>
 
  </details>
+ ---------------------------------->
 
 <!----------------------------------where to put these?---------------------------------->
 
@@ -563,8 +564,8 @@ By freeing up space, the pod can be placed on its attached node and can use the 
    5. Click **Save**.
 
 <font color="#FC01CC">cluster:
-   1. In the Spot console, go to **Ocean** > **Cloud Clusters**, and select the cluster or virtual node group.<font color="#purple">I don't see the blockDeviceMappings when I edit a cluster, only for vng</font><font color="#FC01CC">
-   2. Click **Actions** > **Edit**.
+   1. In the Spot console, go to **Ocean** > **Cloud Clusters**, and select the cluster or virtual node group.</font><font color="#purple">I don't see the blockDeviceMappings when I edit a cluster, only for vng</font>
+   <font color="#FC01CC">2. Click **Actions** > **Edit**.
    3. On the Review tab, click **JSON** > **Edit Mode**.</font> 
    
  </div>
