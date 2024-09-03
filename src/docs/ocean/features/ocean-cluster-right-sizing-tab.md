@@ -88,10 +88,10 @@ The Right-Sizing Savings panel contains a set of savings widgets, which show you
 ![right-sizing-savings-panel](https://github.com/spotinst/help/assets/159915991/3693d491-2caa-4254-ae5c-4eafa6123b89)
 
 The workload status widget (on the left) shows one of the following statuses:
-* Optimization maximized status (green color): All workloads are optimized.
-* Limited optimization status (orange color): All workloads have limited optimization, and a link is provided to see how to achieve full optimization.
-* No optimization status (green color): No workloads are optimized, and the total Potential Monthly Maximum Savings are shown.
-* Pending optimization status (gray color): All workloads are pending and will be optimized according to the configured schedule. 
+* Optimization maximized status: All workloads are optimized.
+* Limited optimization status: All workloads have limited optimization. Hover over the widget and click the link to access the [Right Sizing Optimization list]().
+* No optimization status: No workloads are optimized, and the total Potential Monthly Maximum Savings are shown.
+* Pending optimization status: All pending workloads will be optimized according to the configured schedule. 
 
 If you have workloads with differing statuses, the workload status widget shows a status according to the following logic:
 * The potential savings are shown if at least one workload has potential savings, one is fully optimized, one is pending, and one has limited optimization.
