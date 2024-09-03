@@ -761,7 +761,7 @@ client {
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egimportvm">Why am I getting a <i>failed to import virtual machine</i> message?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egimportvm">Why am I getting a <i>Failed to import virtual machine</i> or <i>The create/import has failed</i> message?</summary>
 
   <div style="padding-left:16px">
 
@@ -770,30 +770,40 @@ client {
   * <pre><code>The create/import has failed. The storage account https://`<storage-account>` that was defined for the boot diagnostic preferences was not found.”
 </code></pre>
 
-This can happen when the image or storage account does not exist in the Azure portal.
+This can happen when the image or storage account does not exist in the Azure portal. Elastigroup validates the resources configured in the VM before importing to make sure the import process will not fail.
 
-Elastigroup validates the resources configured in the VM before importing to make sure the import process will not fail. One of the resources checked is the image, which is taken from the VM JSON configuration file.
+**Failed to import virtual machine**
+One of the resources checked is the image, which is taken from the VM JSON configuration file.
 
-The error, 'Failed to import virtual machine.Could not retrieve custom image' indicates that Elastigroup did not succeed in validating the custom image configured.
+If you get the `Failed to import virtual machine. Could not retrieve custom image.` message, it means that Elastigroup couldn't find the custom image configured.
  
-You can find the image details in the Azure console --> VM details --> JSON view  --> imageReference-
+Find the name of the image in the Azure console. Go to **VM details** > **JSON view** > **imageReference**. Verify that this image also exists in ______________?
 
+<font color="#FC01CC">this is from the original kb article:
 For example - we could see that the machine was configured with the image in the following URL:
-
 /subscriptions/390bd210-33e0-4b8f-b7d6-764938e92b79/resourceGroups/MavericksTechLab_RG/providers/Microsoft.Compute/images/MavericksTechLab-IMG
 When we checked the Azure portal, we could not find this image.
 
-The same troubleshooting steps should be taken when the following error appears. -
+............where's the URL from? Spot or Azure? I don't understand where they look to compare the values....
+</font>
 
-The create/import has failed. The storage account <Service account> that was defined for the boot diagnostic preferences was not found.
-Before starting the import process, Elastigroup verifies that the Service account configured exists in the subscription.
-The error above indicates that Elastigroup did not find a valid storage account in the subscription, and therefore the error was displayed.
- 
+**The create/import has failed**
+The storage account `<Service account>` that was defined for the boot diagnostic preferences was not found.
+
+Before starting the import process, Elastigroup verifies that the service account configured exists in the subscription.
+
+This error means that Elastigroup didn't find a valid storage account in the subscription.
+
+Find the storage account URL in the Azure console. Go to **VM details** > **JSON view** > **diagnosticsProfile**. Verify that this URL is also in ______________?
+
+<font color="#FC01CC">this is from the original kb article:
 You can verify it on your end as well by checking if the URL of the storage account is valid -
 You can find the URL by navigating to Azure console --> VM details --> JSON view  --> diagnosticsProfile.
- 
-Solution
-Elastigroup will not be able to import VMs that are configured with invalid Image/Service Accounts. In addition, please make sure that the desired resources to import all reside in a subscription that is associated with Spot. Otherwise, we won’t be able to import them.
+
+............how do they verify it on their end? Spot or Azure? I don't understand where they look to compare the values....
+</font>
+
+
  
  </div>
 
