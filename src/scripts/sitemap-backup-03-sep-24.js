@@ -1,4 +1,3 @@
-/**
  
  #!/usr/bin/env node
 
@@ -125,5 +124,4 @@ const generateSitemap = async (hostname, dir) => {
 })();
 
 
-*/
--->
+
