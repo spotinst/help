@@ -28,9 +28,12 @@ helm install <my-release-name> spot/ocean-vpa
 
 ##  Limitations  
 
-*  If Vertical Pod Autoscaler custom resources already exist for your workloads before using Ocean Automatic right sizing, do not create any Rule Matching for them. 
 *  Supported manifests: Deployments, DaemonSets, and statefulSets.  
-*  Workloads must have more than one replica for restart capability. 
+*  JVM xms and xmx are not considered in Ocean’s sizing recommendations
+*  Unsupported HPA types: Any HPA not managed by GitOps or Helm
+*  Recommendations are calculated based on hard-coded percentile values. This cannot be modified manually.
+*  For supported HPA types - Righy Sizing will apply recommendations to the resource opposite to the trigger set.
+*  If Vertical Pod Autoscaler custom resources already exist for your workloads before using Ocean Automatic right sizing, do not create any Rule Matching for them. 
 
 
 ##  How It Works 
