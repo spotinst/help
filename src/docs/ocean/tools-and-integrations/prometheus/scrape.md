@@ -63,7 +63,7 @@ Each category represents a group of metrics. If the categories are not set - all
 
 * scaling  
 * cost_analysis
-* Automatic right-sizing  
+* rightsizing
 
 ### Metrics  
 
