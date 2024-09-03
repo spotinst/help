@@ -36,14 +36,11 @@ This list displays:
    *  Orange: The Workload has optimization limitations (constrained by settings). 
    *  Gray: The rule for the workload has been attached but is out of schedule.
  * Potential monthly max. Savings if you adopt these recommendations. 
- 
-> **Notes**:
 
-> Red status: The Workload is not optimized.
-
-> Orange or gray status: Hover over the workload optimization status to view more details in a tooltip.
-
-> there are no vCPU / memory recommendations or Potential monthly max if a workload is fully optimized. Savings are displayed for the workload because Ocean is already optimizing it.
+    > **Notes**:
+    > Red status: The Workload is not optimized.
+    > Orange or gray status: Hover over the workload optimization status to view more details in a tooltip.
+    > There are no vCPU / memory recommendations or Potential monthly max if a workload is fully optimized. Savings are displayed for the workload because Ocean is already optimizing it.
    
 The graphical display above the list shows the breakdown of these workload optimization statuses.
 
@@ -96,10 +93,10 @@ To create/edit a right-sizing rule:
 9. Click the **Set overhead for resources** down arrow and set the CPU and memory percentage overheads. An overhead specifies the percentage of extra resources to add to the new request recommendation.
 10. After you save the rule, it appears in the area under the [Workloads Optimization list](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=workloads-optimization-list).
 
-> **Notes**:
-> Default values for Overhead and Automation Threshold are **10%** and **5%** respectively.
-> The **10%** default overhead is calculated within the recommendation itself.
-> Threshold value is only used for down-sizing cases
+    > **Notes**:
+    > Default values for Overhead and Automation Threshold are **10%** and **5%** respectively.
+    > The **10%** default overhead is calculated within the recommendation itself.
+    > Threshold value is only used for down-sizing cases
 
 ###   Attach a Right-Sizing Rule to One or More Workloads 
 
