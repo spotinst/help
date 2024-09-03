@@ -28,13 +28,13 @@
 
 AWS decides according to:
 
-1.	If the market matches a free zonal RI commitment, then the instance is a reserved instance.
-2.	If the market matches a free regional RI commitment, then the instance is a reserved instance.
-3.	If the market matches a free EC2 Instance SP commitment, then the instance is a savings plan.
-4.	If there is any free Compute SP commitment, then the instance is a savings plan.
-5.	Otherwise, the instance will run as a full-price OD.
+1.	If the market matches a free zonal reserved instance commitment, then the instance is a reserved instance.
+2.	If the market matches a free regional reserved instance commitment, then the instance is a reserved instance.
+3.	If the market matches a free EC2 instance savings plan commitment, then the instance is a savings plan.
+4.	If there is any free compute service plan commitment, then the instance is a savings plan.
+5.	Otherwise, the instance will run as a full-price on-demand instance.
 
-Throughout the lifetime of an instance, it can change its “price” whenever there’s any change in the commitments utilization rate. For example, if an instance is running as a full price on-demand, and another instance that was utilizing a compute savings plan commitment was terminated, the first instance will start utilizing this commitment if its hourly price rate has enough free space under this commitment. It might take a couple of minutes for this change to show, but since the billing is being calculated retroactively, in practice it’s starting to utilize the commitment right away.
+Throughout the lifetime of an instance, it can change its “price” whenever there’s any change in the commitments utilization rate. For example, if an instance is running as a full price on-demand instance, and another instance that was utilizing a compute savings plan commitment was terminated, the first instance will start utilizing this commitment if its hourly price rate has enough free space under this commitment. It might take a couple of minutes for this change to show, but since the billing is being calculated retroactively, in practice it’s starting to utilize the commitment right away.
    
  </div>
 
@@ -46,6 +46,53 @@ Throughout the lifetime of an instance, it can change its “price” whenever t
 <!----------------------------------general---------------------------------->
 
 ## General
+
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="jq">Can I use JQ to extract data from an API call?</summary>
+
+  <div style="padding-left:16px">
+
+<font color="#FC01CC">check this whole answer really well. not sure about the content</font>
+   JQ is a tool that lets you extract, manipulate, and transform JSON data. You can use it extract data from an API call.
+
+You can [download JQ](https://jqlang.github.io/jq/download/) and use the [online curl command line builder](https://curlbuilder.com/). Curl lets you interact with web services, APIs, and services using command line.
+
+For curl, use this template:
+<pre><code>curl -X GET '{URL}' \
+-H 'Authorization: Bearer {TOKEN}' \
+-H 'Content-Type: application/json'</code></pre>
+
+For example:
+* Get the value of the maximum number of instances set in an Elastigroup using CLI
+
+    * Use this API:
+
+      https://docs.spot.io/api/#tag/Elastigroup-AWS/operation/elastigroupAwsListElastigroup
+  
+    * Enter this in JQ:
+  
+      <pre><code>curl -X GET 'https://api.spotinst.io/aws/ec2/group/{groupID}' \
+      -H 'Authorization: Bearer {token}' \
+      -H 'Content-Type: application/json' | jq '.response.items[0].capacity.maximum'</code></pre>  
+  
+* Get the cluster-ocean id by cluster name
+
+    * Use this API:
+
+      https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterList
+
+    * Enter this in JQ:
+  
+      <pre><code>curl –X GET 'https://api.spotinst.io/ocean/aws/k8s/cluster?accountId={accountID}' \
+      -H 'Authorization: Bearer {token}' \
+      -H 'Content-Type: application/json' 
+       | jq '.response.items[] | select(.controllerClusterId | contains("{cluster-name}")) | .id'
+</code></pre>
+  
+   
+ </div>
+ </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="pagerdutynotifications">Can I set up PagerDuty alerts from Spot?</summary>
@@ -604,7 +651,6 @@ Beanstalk [environment variables](https://docs.aws.amazon.com/elasticbeanstalk/l
 
 Add variables in the [Elastic Beanstalk console](https://console.aws.amazon.com/elasticbeanstalk). Go to **Beanstalk configuration** > **software settings**. Maintenance mode is not required as this change does not affect the infrastructure.
 
-
  </div>
  
  </details>
@@ -614,6 +660,7 @@ Add variables in the [Elastic Beanstalk console](https://console.aws.amazon.com/
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="egbeanstalkgrouperror">Why am I getting a <i>group is in error state</i> message when I try to delete an Elastigroup Beanstalk from the Spot console?</summary>
 
   <div style="padding-left:16px">
+   
 If you get this message when you try to delete an Elastigroup Beanstalk from the Spot console:
 
 <code>Group is in ERROR state and not in READY state, cannot delete it</code>
@@ -637,6 +684,7 @@ If you need to attach a Beanstalk environment, you can manually [rebuild your Be
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="egodlaunched">Why is an on-demand instance launched instead of a spot instance?</summary>
 
   <div style="padding-left:16px">
+   
 An on-demand instance may be launched instead of a spot instance even if a spot instance is available in the markets selected in the Elastigroup.
 
 <font color="#FC01CC">are the 2 hyperlinks below correct?</font>
@@ -760,6 +808,52 @@ client {
 
  </details>
 
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egimportvm">Why am I getting a <i>Failed to import virtual machine</i> or <i>The create/import has failed</i> message?</summary>
+
+  <div style="padding-left:16px">
+
+  You may get one of these error messages when you're trying to import VMs to Elastigroup:
+  * <pre><code>Failed to import virtual machine. Could not retrieve custom image.</code></pre>
+  * <pre><code>The create/import has failed. The storage account https://`<storage-account>` that was defined for the boot diagnostic preferences was not found.”
+</code></pre>
+
+This can happen when the image or storage account does not exist in the Azure portal. Elastigroup validates the resources configured in the VM before importing to make sure the import process will not fail.
+
+**Failed to import virtual machine**
+One of the resources checked is the image, which is taken from the VM JSON configuration file.
+
+If you get the `Failed to import virtual machine. Could not retrieve custom image.` message, it means that Elastigroup couldn't find the custom image configured.
+ 
+Find the name of the image in the Azure console. Go to **VM details** > **JSON view** > **imageReference**. Verify that this image also exists in ______________?
+
+<font color="#FC01CC">this is from the original kb article:
+For example - we could see that the machine was configured with the image in the following URL:
+/subscriptions/390bd210-33e0-4b8f-b7d6-764938e92b79/resourceGroups/MavericksTechLab_RG/providers/Microsoft.Compute/images/MavericksTechLab-IMG
+When we checked the Azure portal, we could not find this image.
+
+............where's the URL from? Spot or Azure? I don't understand where they look to compare the values....
+</font>
+
+**The create/import has failed**
+The storage account `<Service account>` that was defined for the boot diagnostic preferences was not found.
+
+Before starting the import process, Elastigroup verifies that the service account configured exists in the subscription.
+
+This error means that Elastigroup didn't find a valid storage account in the subscription.
+
+Find the storage account URL in the Azure console. Go to **VM details** > **JSON view** > **diagnosticsProfile**. Verify that this URL is also in ______________?
+
+<font color="#FC01CC">this is from the original kb article:
+You can verify it on your end as well by checking if the URL of the storage account is valid -
+You can find the URL by navigating to Azure console --> VM details --> JSON view  --> diagnosticsProfile.
+
+............how do they verify it on their end? Spot or Azure? I don't understand where they look to compare the values....
+</font>
+
+ </div>
+
+ </details>
 
 <!----------------------------------elastigroup stateful node---------------------------------->
 
@@ -813,7 +907,6 @@ client {
 7. Go to <b>Edit Node</b> and delete the node.
 
    <img width="275" alt="delete-azure-stateful1" src="https://github.com/spotinst/help/assets/167069628/2c4635fe-6ce2-40c3-aded-7170c4a93f1f">
-
    
 8. In the Delete Stateful Node window, make sure to deselect all the options because you need the VM to run on the Azure side.
 9. Verify that the VM with the resources is running in Azure.
