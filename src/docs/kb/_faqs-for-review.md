@@ -237,7 +237,7 @@ The X.509 certificate needs to be a standard strength certificate (2048-bit) wit
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="SSOaddlattributes">SSO: What additional attributes (if any) does the application need from the assertion?</summary>
 
   <div style="padding-left:16px">
-   
+
 There are a number of <a href="/administration/sso-access-control">attributes that can be sent</a>. These are the default and required attributes:
 
 <font color="#FC01CC">I don't see in the documentation what attributes can be sent. is this the correct link?</font>
@@ -313,6 +313,23 @@ These internal logging errors occur because of a misconfiguration in the Okta SS
 ## Ocean
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceantokens">What are the minimum permissions needed for a programmatic token for creating an Ocean cluster controller?</summary>
+
+  <div style="padding-left:16px">
+
+   You can use a programmatic token for creating Ocean cluster controllers. The benefit of programmatic tokens is they aren't linked to a specific user. If the user is deleted, it doesn't affect the Ocean controller. This helps prevent interruptions and heartbeat issues.
+
+   At minimum, the token must have **account viewer** [permissions](/administration/policies/). Viewer permission is the only permission required for a cluster controller to operate. Cluster controllers don't manage resources in Ocean, the autoscaler does. If you want this same programmatic user to manage other resources in your cluster, additional permission policies are required.
+
+For a network client, only the **account viewer** permission is required for the client to operate.
+   
+ </div>
+
+ </details>
+
+
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanvmarch">Can I create VMs with specific architecture in Ocean AKS?</summary>
 
   <div style="padding-left:16px">
@@ -354,7 +371,7 @@ However, it’s not possible to do with Ocean AKS clusters because you cannot ch
 
   <div style="padding-left:16px">
 
-Your newly launched Ocean ECS container instance:
+Your container instances may be unregistered if the newly launched Ocean ECS container instance:
 
 * Has unregistered contain instance events
 * Doesn’t have a Container Instance ID
@@ -574,6 +591,7 @@ This will let you manually increase the target of the duster and the nodes will 
  </div>
 
  </details>
+
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceank8sreadiness">Why am I getting an <i>exit code 137</i> error?</summary>
