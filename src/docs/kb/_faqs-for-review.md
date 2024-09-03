@@ -2,10 +2,6 @@
 
 # FAQs for review
 
-<!----------------------------------where to put these?---------------------------------->
-
-## Where do these go?
-
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="xxxx">?</summary>
 
@@ -16,6 +12,10 @@
  </div>
 
  </details>
+
+<!----------------------------------where to put these?---------------------------------->
+
+## Where do these go?
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="odresp">Why is my on-demand instance utilized as a reserved instance/savings plan?</summary>
@@ -40,7 +40,20 @@ Throughout the lifetime of an instance, it can change its “price” whenever t
 
  </details>
 
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="elasticsearch">Can Elasticsearch integrate with Spot?</summary>
 
+  <div style="padding-left:16px">
+
+   You can stream Elastigroup logs to an AWS S3 bucket. Then, you can configure Elasticsearch and Kibana to collect logs from the S3 bucket:
+   * [Ocean](/ocean/features/log-integration-with-s3)
+   * [Elastigroup](url) <font color="#FC01CC">broken url: Note: The above document addresses the integration of Ocean with S3, but is also available for Elastigroup as well: https://spotinst.com/blog/elasticsearch-on-spot-instances-step-by-step/ </font>
+
+   <font color="#FC01CC">Here's how to use Spot Connect to integrate Elasticsearch. is it relevant? https://docs.spot.io/spot-connect/integrations/elasticsearch </font>
+
+ </div>
+
+ </details>
 
  
 <!----------------------------------general---------------------------------->
@@ -489,6 +502,44 @@ By freeing up space, the pod can be placed on its attached node and can use the 
 
  </details>
 
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceansnapshotid">Why am I getting a <i>snapshotId cannot be modified on the root device</i> error?</summary>
+
+  <div style="padding-left:16px">
+
+   If you get a `snapshotId cannot be modified on the root device` error:
+
+   1. In the Spot console, go to **Ocean** > **Cloud Clusters**, and select the cluster.
+   2. On the Virtual Nodes Groups tab, select the virtual node group.<font color="#FC01CC">I don't see the blockDeviceMappings when I edit a cluster, only for vng</font>
+   3. Click **JSON**.
+   4. In the blockDeviceMappings, update the snapshotID or remove it:
+
+      <code>"blockDeviceMappings": [
+      {
+        "deviceName": "/dev/xvda",
+        "ebs": {
+          "deleteOnTerminaspoton": true,
+          "encrypted": false,
+          "iops": 3000,
+          "throughput": 125,
+          "snapshotId": "snap-1234",
+          "volumeSize": 100,
+          "volumeType": "GP3"
+        }
+      }
+    ],</code>
+
+   5. Click **Save**.
+
+<font color="#FC01CC">cluster:
+   1. In the Spot console, go to **Ocean** > **Cloud Clusters**, and select the cluster or virtual node group.<font color="#purple">I don't see the blockDeviceMappings when I edit a cluster, only for vng</font><font color="#FC01CC">
+   2. Click **Actions** > **Edit**.
+   3. On the Review tab, click **JSON** > **Edit Mode**.</font> 
+   
+ </div>
+
+ </details>
+
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanlaunchspec">Why am I getting the error: <i>when default launchSpec is used as a template only, can't raise target of Ocean</i>?</summary>
 
@@ -803,6 +854,22 @@ The next steps are intuitive and should be configured according to the customer'
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egscalingRIs">If <i>Utilize Reserved Instances</i> is enabled, what is the scaling behavior?</summary>
+
+  <div style="padding-left:16px">
+
+By default, Elastigroup monitors the status of your account's reservations and acts accordingly at the launch time of an on-demand instance. When an on-demand instance is scaled up, if the account has an available reservation to use in the specific market (instance type + availability zone), Elastigroup will utilize it and will use the reserved instance payment method.
+
+If **Utilize Reserved Instances** is enabled, it automatically triggers constant attempts to revert the group's instances to on demand (reserved instance) if there are available reservations. It triggers a replacement for all instances, even spot, and uses your account's available reservations. The priority of launching instances in this group is:
+1. It will see if there is an option to launch an reserved instance instance
+2. If it cannot, it will launch a spot instance.
+3. If a spot instance is unavailable for any reason, an on-demand instance will be launched based on the fallback to on-demand configuration.
+
+ </div>
+ 
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="egnomad">How is Nomad integrated with Elastigroup?</summary>
 
   <div style="padding-left:16px">
@@ -970,6 +1037,24 @@ You can find the URL by navigating to Azure console --> VM details --> JSON view
    It's possible to [stop an instance in AWS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html), but Spot doesn't support the Stop action. This causes out-of-sync issues.
 
    Restart the instance in AWS, then the Elastigroup will sync again. Use [Pause/Resume](/managed-instance/features/managed-instance-actions?id=stateful-node-actions) instead of Stop.
+   
+ </div>
+
+ </details>
+
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egsn-stopped2">Why am I getting a <i>botocore.exceptions.ClientError</i> error?</summary>
+
+  <div style="padding-left:16px">
+
+   You may get this error:
+   <code>botocore.exceptions.ClientError: An error occurred (UnsupportedOperation) when calling the StopInstances operation: You can't stop the Spot Instance '<Instance-ID>' because it is associated with a one-time Spot Instance request. You can only stop Spot Instances associated with persistent Spot Instance requests.</code>
+
+   It's possible to [stop an instance in AWS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html), but Spot doesn't support the Stop action.
+
+<font color="#FC01CC">is this relevant here, too?
+
+   Restart the instance in AWS, then the Elastigroup will sync again. Use [Pause/Resume](/managed-instance/features/managed-instance-actions?id=stateful-node-actions) instead of Stop.</font>
    
  </div>
 
