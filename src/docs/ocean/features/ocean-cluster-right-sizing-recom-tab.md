@@ -15,7 +15,7 @@ To view your right-sizing recommendations and rules:
 3. Click the **Right Sizing** tab.  
 4. Click **Advanced Optimization**. 
 
-![workload-optim-list](https://github.com/user-attachments/assets/919a8903-9906-4201-8a93-0a6240d92eec)
+![workloads-dashboard](https://github.com/user-attachments/assets/37d2a1b6-61bb-4a77-acf7-32ea66df9e5d)
 
 The Advanced Optimization tab contains these lists:  
 
@@ -43,7 +43,7 @@ This list displays:
 
 > Orange or gray status: Hover over the workload optimization status to view more details in a tooltip.
 
-> If a workload is fully optimized, there are no vCPU / memory recommendations or Potential monthly max. Savings are displayed for the workload because Ocean is already optimizing it.
+> there are no vCPU / memory recommendations or Potential monthly max if a workload is fully optimized. Savings are displayed for the workload because Ocean is already optimizing it.
    
 The graphical display above the list shows the breakdown of these workload optimization statuses.
 
