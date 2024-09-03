@@ -85,7 +85,7 @@ The Right-Sizing tab displays a Dashboard divided into the following panels:
 
 The Right-Sizing Savings panel contains a set of savings widgets, which show your potential savings from Ocean cluster right sizing, derived from data collected in the last two weeks:  
 
-![right-sizing-savings-panel](https://github.com/spotinst/help/assets/159915991/3693d491-2caa-4254-ae5c-4eafa6123b89)
+![saving-right-sizing](https://github.com/user-attachments/assets/e4d21c74-b667-40a2-92fe-e5b77de75954)
 
 The workload status widget (on the left) shows one of the following statuses:
 * Optimization maximized status: All workloads are optimized.
@@ -106,7 +106,7 @@ vCPU and memory usage widgets:
 
 ###  Right Sizing Resource Usage Panel 
 
-![right-sizing-usage-panel](https://github.com/spotinst/help/assets/159915991/82488c4a-5683-432b-b589-a30b1d15ed99)
+![right-sizing-usage](https://github.com/user-attachments/assets/2cac8b8e-fcbd-4492-8f32-81b63f5f2efc)
 
 The right Sizing Resources Usage panel contains two widgets: 
 
