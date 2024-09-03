@@ -760,6 +760,44 @@ client {
 
  </details>
 
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egimportvm">Why am I getting a <i>failed to import virtual machine</i> message?</summary>
+
+  <div style="padding-left:16px">
+
+  You may get one of these error messages when you're trying to import VMs to Elastigroup:
+  * <pre><code>Failed to import virtual machine. Could not retrieve custom image.</code></pre>
+  * <pre><code>The create/import has failed. The storage account https://`<storage-account>` that was defined for the boot diagnostic preferences was not found.”
+</code></pre>
+
+This can happen when the image or storage account does not exist in the Azure portal.
+
+Elastigroup validates the resources configured in the VM before importing to make sure the import process will not fail. One of the resources checked is the image, which is taken from the VM JSON configuration file.
+
+The error, 'Failed to import virtual machine.Could not retrieve custom image' indicates that Elastigroup did not succeed in validating the custom image configured.
+ 
+You can find the image details in the Azure console --> VM details --> JSON view  --> imageReference-
+
+For example - we could see that the machine was configured with the image in the following URL:
+
+/subscriptions/390bd210-33e0-4b8f-b7d6-764938e92b79/resourceGroups/MavericksTechLab_RG/providers/Microsoft.Compute/images/MavericksTechLab-IMG
+When we checked the Azure portal, we could not find this image.
+
+The same troubleshooting steps should be taken when the following error appears. -
+
+The create/import has failed. The storage account <Service account> that was defined for the boot diagnostic preferences was not found.
+Before starting the import process, Elastigroup verifies that the Service account configured exists in the subscription.
+The error above indicates that Elastigroup did not find a valid storage account in the subscription, and therefore the error was displayed.
+ 
+You can verify it on your end as well by checking if the URL of the storage account is valid -
+You can find the URL by navigating to Azure console --> VM details --> JSON view  --> diagnosticsProfile.
+ 
+Solution
+Elastigroup will not be able to import VMs that are configured with invalid Image/Service Accounts. In addition, please make sure that the desired resources to import all reside in a subscription that is associated with Spot. Otherwise, we won’t be able to import them.
+ 
+ </div>
+
+ </details>
 
 <!----------------------------------elastigroup stateful node---------------------------------->
 
