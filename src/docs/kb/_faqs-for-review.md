@@ -351,7 +351,7 @@ Your newly launched Ocean ECS container instance:
 
 <img alt="unregistered-container-instance1" src="https://github.com/spotinst/help/assets/167069628/acd9d60a-4952-4955-b119-593ccfb9c067">
 
-
+    
 
 <img alt="unregistered-container-instance2" src="https://github.com/spotinst/help/assets/167069628/d7713e91-2850-48ee-9d1a-aa439dcf91d1">
 
@@ -396,27 +396,53 @@ Registering a container instance with an ECS cluster means you are telling the E
  
  </details>
 
-
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanlaunchspec">Why am I getting the error: <i>when default launchSpec is used as a template only, can't raise target of Ocean</i>?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceank8sheadroom">Can I configure automatic headroom using Kubernetes Operations (kOps)?</summary>
 
   <div style="padding-left:16px">
 
-   When the <code>useAsTemplateOnly</code> parameter is <i>true</i>, you cannot edit the target capacity in the Ocean cluster configuration.
-   
-Keep in mind that it may not be necessary to increase the target capacity because Ocean automatically scales instances up and down as needed.
+You can configure [automatic headroom](ocean/features/headroom) using kOps at the cluster level, not at a virtual node level. Add these [metadata labels](/ocean/tools-and-integrations/kops/metadata-labels):
 
-If you want to edit the target capacity:
-1. In the [API](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterCreate), go to **Compute** > **launchSpecification**.
-2. Change the <b>useAsTemplateOnly</b> parameter to <i>false</i>.
+<code>spotinst.io/autoscaler-auto-config: "true"
+spotinst.io/autoscaler-auto-headroom-percentage : {Value}
+spotinst.io/ocean-default-launchspec: "true"</code>
 
-This will let you manually increase the target of the duster and the nodes will launch in the default virtual node group.
+Here's an example of a config file:
 
-<img width=900 src="https://github.com/user-attachments/assets/6e422a64-db48-4b43-90d0-d6b5ddc35464" >
+<code>apiVersion: kops.k8s.io/v1alpha2
+kind: InstanceGroup
+metadata:
+name: "test-vng-2"
+
+labels:
+kops.k8s.io/cluster: "erez-via-2.ts.ek8s.com"
+spotinst.io/spot-percentage: "50"
+spotinst.io/autoscaler-auto-config: "true"
+spotinst.io/ocean-default-launchspec: "true"
+spotinst.io/autoscaler-auto-headroom-percentage: "20"
+spotinst.io/autoscaler-headroom-num-of-units: "2"
+spotinst.io/autoscaler-resource-limits-max-vcpu: "2"
+spotinst.io/autoscaler-headroom-mem-per-unit: "1024"
+spotinst.io/autoscaler-headroom-gpu-per-unit: "0"
+
+spec:
+role: Node
+maxSize: 1
+minSize: 1</code>
+
+<font color="#FC01CC">is that specifically with **kops** that you can't do it at the vng level? because in the help:
+https://docs.spot.io/ocean/features/headroom?id=automatic-headroom-per-virtual-node-group
+Automatic Headroom per Virtual Node Group
+It is possible to define automatic headroom per virtual node group (VNG). The calculation of the automatic headroom in the VNG is the same as the calculation for the cluster as described above. This means that Ocean takes all of the workloads that run on a given VNG and calculates the headroom for that VNG using the same method it would for calculating headroom for the cluster.
+
+The automatic headroom and the headroom per VNG are calculated independently. Therefore, there is a possibility that the headroom per cluster and per VNG will save headroom for the same workload. In order to avoid this situation, you should set the headroom only at VNG level.</font>
+
+
 
  </div>
 
  </details>
+
  
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceank8sscaledown">Can I stop Kubernetes workloads from scaling down in Ocean?</summary>
@@ -464,6 +490,27 @@ By freeing up space, the pod can be placed on its attached node and can use the 
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanlaunchspec">Why am I getting the error: <i>when default launchSpec is used as a template only, can't raise target of Ocean</i>?</summary>
+
+  <div style="padding-left:16px">
+
+   When the <code>useAsTemplateOnly</code> parameter is <i>true</i>, you cannot edit the target capacity in the Ocean cluster configuration.
+   
+Keep in mind that it may not be necessary to increase the target capacity because Ocean automatically scales instances up and down as needed.
+
+If you want to edit the target capacity:
+1. In the [API](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterCreate), go to **Compute** > **launchSpecification**.
+2. Change the <b>useAsTemplateOnly</b> parameter to <i>false</i>.
+
+This will let you manually increase the target of the duster and the nodes will launch in the default virtual node group.
+
+<img width=900 src="https://github.com/user-attachments/assets/6e422a64-db48-4b43-90d0-d6b5ddc35464" >
+
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceank8sreadiness">Why am I getting an <i>exit code 137</i> error?</summary>
 
   <div style="padding-left:16px">
@@ -479,7 +526,7 @@ Exit code from controller logs:
 command terminated with exit code 137</code></pre>
 
 The liveness probe failed error typically happens when a node is overcommitted, and the controller pod does not respond to the check at the right time.
-Exit code 137 usually means out-of-memory issues.<font color="#FC01CC">livelness or readiness?</font>
+Exit code 137 usually means out-of-memory issues.vlivelness or readiness?</font>
 
 **Liveness probe failure** <font color="#FC01CC">include these links? livelness or readiness?</font>
 
