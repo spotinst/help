@@ -67,11 +67,9 @@ For example:
 * Get the value of the maximum number of instances set in an Elastigroup using CLI
 
     * Use this API:
-
       https://docs.spot.io/api/#tag/Elastigroup-AWS/operation/elastigroupAwsListElastigroup
   
-    * Enter this in JQ:
-  
+    * Enter this in JQ:  
       <pre><code>curl -X GET 'https://api.spotinst.io/aws/ec2/group/{groupID}' \
       -H 'Authorization: Bearer {token}' \
       -H 'Content-Type: application/json' | jq '.response.items[0].capacity.maximum'</code></pre>  
@@ -79,17 +77,14 @@ For example:
 * Get the cluster-ocean id by cluster name
 
     * Use this API:
-
       https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterList
 
-    * Enter this in JQ:
-  
+    * Enter this in JQ:  
       <pre><code>curl –X GET 'https://api.spotinst.io/ocean/aws/k8s/cluster?accountId={accountID}' \
       -H 'Authorization: Bearer {token}' \
       -H 'Content-Type: application/json' 
        | jq '.response.items[] | select(.controllerClusterId | contains("{cluster-name}")) | .id'
 </code></pre>
-  
    
  </div>
  </details>
@@ -116,12 +111,15 @@ For example:
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="AWSIAM">Can I remove permissions from the Spot IAM policy?</summary>
 
   <div style="padding-left:16px">
-   
+
 You can choose to remove some of these permissions from the [Spot IAM policy](/administration/api/spot-policy-in-aws):
 
 * **iam:PutRolePolicy** is not required as it is only used if the instance profile itself needs to create inline policies.
+
 * **iam:CreateServiceLinkedRole** is only needed for an initial spot request, then it can be removed. This means it's only required to create the first spot instance in your account. After creating an Ocean or Elastigroup and launching a Spot instance through Spot, you can remove this permission from the policy.
+
 * **iam:AddRoleToInstanceProfile** is generally not required. It is only used to change the role associated with an instance profile and is required for Beanstalk.
+
 * **iam:PassRole** is only required when you custom metrics. Ocean EKS does not require <i>iam:PassRole</i> in the Spot policy. However, if you use custom metrics, you need an account with this role configured for putting metric data into CloudWatch, which is in use by both Ocean (PublishOceanKubernetesCwMetricsExecutor ) and EG (ReportCWMetricsNewCmd).
 
  </div>
@@ -305,7 +303,7 @@ These internal logging errors occur because of a misconfiguration in the Okta SS
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanvmarch">Can I create VMs with specific architecture in Ocean AKS?</summary>
 
   <div style="padding-left:16px">
-  
+
 You may want to run workloads (pods) on VMs with a specified architecture.
 
 For Ocean clusters (AWS), you can use an AMI with the required architecture. Update the AMI in the cluster or virtual node group (VNG) configuration to make sure the instances are launched according to the architecture specified in the AMI.
@@ -342,7 +340,7 @@ However, it’s not possible to do with Ocean AKS clusters because you cannot ch
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanunregcontainer">Why are my container instances unregistered?</summary>
 
   <div style="padding-left:16px">
-  
+
 Your newly launched Ocean ECS container instance:
 
 * Has unregistered contain instance events
@@ -535,7 +533,7 @@ Initially, the costs are compared with the on demand value of the instance types
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceancooldowneval">What's the difference between cooldown period and evaluation period?</summary>
 
   <div style="padding-left:16px">
-  
+
 Whenever Spot performs a scaling action, there is a cooldown period during which no further scaling action takes place. After the cooldown period, another scaling action can take place if required.
 
 **Cooldown Period**
@@ -560,7 +558,7 @@ The specific number of evaluation periods before a scale-down action takes place
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanallocationutilization">What's the difference between allocation and utilization for Ocean right sizing?</summary>
 
   <div style="padding-left:16px">
-  
+
 Estimating the proper amount of CPU and memory when assigning resource requests to workloads is a challenge that teams face when designing Kubernetes or ECS clusters. To address this challenge and create even more resource-efficient clusters, Ocean has implemented a right-sizing recommendation mechanism.
 
 Right-sizing recommendations are provided per container and summarized for the entire workload for easy presentation at a high level. Recommendations per container enable you to easily understand exactly which applications require changes in resource requests and implement those changes quickly.
@@ -660,7 +658,7 @@ Add variables in the [Elastic Beanstalk console](https://console.aws.amazon.com/
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="egbeanstalkgrouperror">Why am I getting a <i>group is in error state</i> message when I try to delete an Elastigroup Beanstalk from the Spot console?</summary>
 
   <div style="padding-left:16px">
-   
+
 If you get this message when you try to delete an Elastigroup Beanstalk from the Spot console:
 
 <code>Group is in ERROR state and not in READY state, cannot delete it</code>
@@ -684,7 +682,7 @@ If you need to attach a Beanstalk environment, you can manually [rebuild your Be
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="egodlaunched">Why is an on-demand instance launched instead of a spot instance?</summary>
 
   <div style="padding-left:16px">
-   
+
 An on-demand instance may be launched instead of a spot instance even if a spot instance is available in the markets selected in the Elastigroup.
 
 <font color="#FC01CC">are the 2 hyperlinks below correct?</font>
@@ -814,9 +812,8 @@ client {
   <div style="padding-left:16px">
 
   You may get one of these error messages when you're trying to import VMs to Elastigroup:
-  * <pre><code>Failed to import virtual machine. Could not retrieve custom image.</code></pre>
-  * <pre><code>The create/import has failed. The storage account https://`<storage-account>` that was defined for the boot diagnostic preferences was not found.”
-</code></pre>
+  * <code>Failed to import virtual machine. Could not retrieve custom image.</code>
+  * <code>The create/import has failed. The storage account https://`<storage-account>` that was defined for the boot diagnostic preferences was not found.”</code>
 
 This can happen when the image or storage account does not exist in the Azure portal. Elastigroup validates the resources configured in the VM before importing to make sure the import process will not fail.
 
@@ -921,8 +918,7 @@ You can find the URL by navigating to Azure console --> VM details --> JSON view
   <div style="padding-left:16px">
 
    You can see this error in the log:
-
-   <pre><code>08/20/2023, 5:36 AM, WARN, Instance: [i-01234567890abcdefg] have been detected as Stopped.</code></pre>
+   <code>08/20/2023, 5:36 AM, WARN, Instance: [i-01234567890abcdefg] have been detected as Stopped.</code>
 
    It's possible to [stop an instance in AWS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html), but Spot doesn't support the Stop action. This causes out-of-sync issues.
 
