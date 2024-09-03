@@ -450,8 +450,6 @@ It is possible to define automatic headroom per virtual node group (VNG). The ca
 
 The automatic headroom and the headroom per VNG are calculated independently. Therefore, there is a possibility that the headroom per cluster and per VNG will save headroom for the same workload. In order to avoid this situation, you should set the headroom only at VNG level.</font>
 
-
-
  </div>
 
  </details>
@@ -619,6 +617,41 @@ By freeing up space, the pod can be placed on its attached node and can use the 
  </div>
 
  </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanmaxpods">I got a <i>Maximum Pods configuration reached</i> message, how do I troubleshoot?</summary>
+
+  <div style="padding-left:16px">
+
+   If you get a `Maximum Pods configuration reached` message for a node in the console:
+   * It usually means that you reached the EKS [maximum pod limit](https://github.com/awslabs/amazon-eks-ami/blob/master/files/eni-max-pods.txt). For example, the EKS maximum pod limitation for r4.large is 29.<font color="#FC01CC">broken link..is one of these correct?
+     https://github.com/awslabs/amazon-eks-ami/blob/main/templates/shared/runtime/eni-max-pods.txt
+     https://github.com/awslabs/amazon-eks-ami/blob/main/nodeadm/internal/kubelet/eni-max-pods.txt
+     </font>
+     You can [increase the EKS maximum pods](https://aws.amazon.com/blogs/containers/amazon-vpc-cni-increases-pods-per-node-limits/) in AWS.<font color="#FC01CC">should I include the stackoverflow in addition? https://stackoverflow.com/questions/57970896/pod-limit-on-node-aws-eks#:~:text=For%20t3.,22%20pods%20in%20your%20cluster</font>
+     
+   * If the node has less pods than the EKS maximum pod limit, then it's likely the **max-pods** limit set at the user data level in the Ocean configuration. Increase this limit for the user data in Ocean and roll the cluster.<font color="#FC01CC">how do they do this? is this relevant: https://docs.spot.io/ocean/features/roll</font>
+   If you continue to get this error, roll the cluster again and disable **Respect Pod Disruption Budget (PDB)**. You can also manually terminate the node.
+   
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanhpa">Can I check Ocean EKS clusters' horizontal pod autoscaling (HPA) policy?</summary>
+
+  <div style="padding-left:16px">
+
+   Ocean doesn't actually have a horizontal pod autoscaling (HPA) policy. The HPA is essentially operating on the Kubernetes side so Ocean itself doesn't have an HPA.
+
+The cluster autoscaler only takes care of provisioning the required number of nodes. There might still be inefficiencies within the cluster, such as nodes scheduled to pods that do not provide the required computing resources. This can be addressed by other [Kubernetes scaling mechanisms](https://spot.io/resources/kubernetes-autoscaling/kubernetes-cluster-autoscaler-features-limitations-and-comparisons-to-ocean-by-spot/), such as horizontal pod autoscaler (HPA) and vertical pod autoscaler (VPA).
+
+Essentially, if the load increases on your cluster, then Kubernetes will create more replicas, and Ocean will launch nodes for the new pods. Kubernetes HPA will create pods and Ocean will launch new nodes for pods to be scheduled.
+   
+ </div>
+
+ </details>
+
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceancost">Why is the cost analysis in the Ocean dashboard unusually high for yesterday?</summary>
