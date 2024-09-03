@@ -89,7 +89,7 @@ The Right-Sizing Savings panel contains a set of savings widgets, which show you
 
 The workload status widget (on the left) shows one of the following statuses:
 * Optimization maximized status: All workloads are optimized.
-* Limited optimization status: All workloads have limited optimization. Hover over the widget and click the link to access the [Right Sizing Optimization list]().
+* Limited optimization status: All workloads have limited optimization. Hover over the widget and click the link to access the [Right Sizing Optimization list](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab).
 * No optimization status: No workloads are optimized, and the total Potential Monthly Maximum Savings are shown.
 * Pending optimization status: All pending workloads will be optimized according to the configured schedule. 
 
