@@ -91,7 +91,7 @@ The workload status widget (on the left) shows one of the following statuses:
 * Optimization maximized status: All workloads are optimized.
 * Limited optimization status: All workloads have limited optimization. Hover over the widget and click the link to access the [Right Sizing Optimization list](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=workloads-optimization-list).
 * No optimization status: No workloads are optimized, and the total Potential Monthly Maximum Savings are shown.
-* Pending optimization status: All pending workloads will be optimized according to the configured schedule. 
+* Pending optimization status: All pending workloads will be optimized according to the configured [schedule](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=work-with-right-sizing-rules). 
 
 If you have workloads with differing statuses, the workload status widget shows a status according to the following logic:
 * The potential savings are shown if at least one workload has potential savings.
