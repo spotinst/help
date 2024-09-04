@@ -109,7 +109,7 @@ vCPU and memory usage widgets:
 
 ###  Right Sizing Resource Usage Panel 
 
-<img width="900" src="https://github.com/user-attachments/assets/dafd9413-bc3b-495c-b553-8d528226b8b4" />
+<img width="900" src="https://github.com/user-attachments/assets/ceba9d89-5e1b-4cad-b600-8b3e969b7325" />
 
 The right Sizing Resources Usage panel contains two widgets: 
 
