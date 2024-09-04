@@ -69,12 +69,12 @@ You can create right-sizing rules to trigger immediately after a specific set of
 To create/edit a right-sizing rule: 
 
 1.   Click the **Advanced Optimization** tab if not already displayed.
-2.   Click **+ Add new rule** above the Automation Rules list to create a new rule (or to edit an existing rule, click the pencil icon in the rule).
+2.   To create a new rule, click **+ Add new rule** above the Automation Rules list (or to edit an existing rule, click the pencil icon in the rule).
 
 ![rs-conf-auto-rule2](https://github.com/user-attachments/assets/fa96a30d-15ad-443a-b5a0-925edbbb98be)
 
 3.   In the Configure Automation Rule dialog box, enter/edit the unique rule name.
-4.   Select when to apply the recommendation by clicking the relevant radio button: 
+4.   Select when to apply the recommendation by selecting one of the following options: 
 
       *   **Once available**: The recommendation is applied immediately after it becomes available. 
       *   **At a specific time**: You select when to apply the recommendation after it becomes available.
