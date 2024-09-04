@@ -10,8 +10,8 @@ To view a comprehensive breakdown of your cloud cluster costs, go to the Cost An
 
 The Ocean Network Cost banner is displayed in the Cost Analysis tab above the Cost Over Time graph and contains an estimate of the network usage costs as follows: 
 
-* Cluster network cost used (GB): Overall cost since the start of the month
-* Average hourly network usage (GB):
+* Cluster network cost used (GB): Overall cost since the start of the month.
+* Average hourly network usage (GB).
 
 These costs are updated hourly.
 
@@ -21,10 +21,16 @@ Before adopting the paid service, you can use this feature as a proof of concept
 
 >**Note**: The average hourly network usage is only displayed if enough data has been collected over the last 24 hours.
 
+When the POC expires:
+
+* Expiry during the middle of the month: the average hourly network usage is shown until the expiration date.
+* Expiry during the previous month: the average hourly network usage is shown as 0 GB.
+
+In both cases, you can activate your license via the link to Support, which appears in the banner.
 
 ## Bar Chart
 
-The bar chart shows the cost of your workloads over time. The default display is that each bar is broken down into the different namespaces and represents the cost per day over the last week. You can modify the time period and groupings shown to suit your needs. See Grouping Options below for more information.
+The bar chart shows the cost of your workload over time. The default display breaks down each bar into different namespaces and represents the cost per day over the last week. You can modify the time period and groupings shown according to your needs. See Grouping Options below for more information.
 
 <img src="/ocean/_media/cost-analysis-5.png" />
 
