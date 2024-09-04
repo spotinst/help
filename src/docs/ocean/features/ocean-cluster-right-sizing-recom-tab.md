@@ -54,7 +54,7 @@ To view a list of your potential savings and recommendations per container:
 
 ##  Automation Rules List 
 
-![workloads-dashboard-a](https://github.com/user-attachments/assets/e56404be-4303-4b46-addf-4f05f14aad44)
+![automation-rules](https://github.com/user-attachments/assets/8289d519-7ae1-4bbf-a2ef-e66cfaa39946)
 
 This list displays your existing right-sizing rules.  
 Each rule entry shows relevant information about the parameters that trigger the rule and its scheduling plan. 
