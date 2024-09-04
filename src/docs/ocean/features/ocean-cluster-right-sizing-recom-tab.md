@@ -54,7 +54,7 @@ To view a list of your potential savings and recommendations per container:
 
 ##  Automation Rules List 
 
-![automation-rules](https://github.com/user-attachments/assets/fed83440-e9a3-4ec5-80b2-e0f2f6562f87)
+<img width="900" src="https://github.com/user-attachments/assets/fed83440-e9a3-4ec5-80b2-e0f2f6562f87" />
 
 This list displays your existing right-sizing rules.  
 Each rule entry shows relevant information about the parameters that trigger the rule and its scheduling plan. 
