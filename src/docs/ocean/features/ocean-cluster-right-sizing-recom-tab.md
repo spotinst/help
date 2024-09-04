@@ -69,9 +69,7 @@ You can create right-sizing rules to trigger immediately after a specific set of
 To create/edit a right-sizing rule: 
 
 1.   Click the **Advanced Optimization** tab if not already displayed.
-2.   To create a new rule,	click **+ Add new rule** above the Automation Rules list.
-     
-     >**Note**: To edit an existing rule: To the right of the row for the rule in the Automation Rules list at the bottom of the tab, click **Edit Rule**. 
+2.   Click **+ Add new rule** above the Automation Rules list to create a new rule (or to edit an existing rule, click the pencil icon in the rule).
 
 ![rs-conf-auto-rule2](https://github.com/user-attachments/assets/fa96a30d-15ad-443a-b5a0-925edbbb98be)
 
@@ -109,13 +107,14 @@ To attach a rule to one or more workloads:
 
 ![right-sizing-attach-rule](https://github.com/spotinst/help/assets/159915991/dbc36aec-bc82-4b01-a75a-a6776970a785)
 
-3.   You can attach a rule you already created or create a new rule from scratch:
+3.   You can attach a rule you already created or create a new rule from scratch. Once you create the rule, it will be attached to the workload(s) you selected at the start of this procedure:
+
       *   Existing rule: Click the **Select from existing rule** drop-down menu and then select a rule. 
       *   New rule: Click **Create new rule from scratch** (see [Create or Edit a Right-Sizing Rule]())
   
->**Note**: Once you create the rule, it will be attached to the workload(s) you selected at the start of this procedure. 
 
-4.   Save and apply the rule. 
+
+5.   Save and apply the rule. 
 
 ###   Detach a Right-Sizing Rule from One or More Workloads 
 
