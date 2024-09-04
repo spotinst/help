@@ -1806,17 +1806,17 @@ export const aliases = (() => {
 
     "/administration/users-a/create-new-user": "/administration/users-a/",
     
-	  "/administration/users-a/edit-user-details": "/administration/users-a/",
+    "/administration/users-a/edit-user-details": "/administration/users-a/",
     
-	 	"/administration/users-a/set-password": "/administration/users/",
+    "/administration/users-a/set-password": "/administration/users/",
     
     "/administration/groups/create-new-group": "/administration/groups/",
 
- 	  "/administration/groups/edit-group-details": "/administration/groups/",
+    "/administration/groups/edit-group-details": "/administration/groups/",
 	
     "/administration/policies/create-new-policy": "/administration/policies/",
 	
-  	"/administration/organizations/switch-organization": "/administration/organizations/",
+    "/administration/organizations/switch-organization": "/administration/organizations/",
 
     "/administration/organizations/audit-events": "/administration/organizations/",
 
