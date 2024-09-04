@@ -1,6 +1,6 @@
 # Ocean Controller Version 2 History
 
-## [2.0.66] - 2024-08-01
+## [2.0.66] - 2024-09-04
 
 ### Added
 * Trim whitespace characters from `CLUSTER_IDENTIFIER`, `SPOTINST_TOKEN` and `SPOTINST_ACCOUNT` environment variables to prevent accidental misconfigurations.
