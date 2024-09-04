@@ -20,7 +20,3 @@ In this section, you will learn where to go for top-level information about your
 This section also includes procedures and information relating to the Elastigroup Actions menu. To learn more, choose a tutorial in the sidebar on the left.
 
 <img src="/elastigroup/_media/tutorials-getting-to-know-01.png" />
-
-## What's Next?
-
-To learn more about other Elastigroup procedures, read about Elastigroup [Tasks](elastigroup/tutorials/elastigroup-tasks/) and Elastigroup [Budgets](elastigroup/tutorials/elastigroup-budgets/).
