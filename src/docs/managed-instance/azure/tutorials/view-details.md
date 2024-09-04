@@ -17,6 +17,7 @@ The node status is indicated next to the name and can be one of the statuses sho
 ![azure-view-stateful-node-details-001](https://github.com/spotinst/help/assets/106514736/55155909-f7a0-4ebc-8f0d-2a41d887ec2e)
 
 ### Node Summary
+
 The Node Summary provides insights into your node usage and displays two panels. 
 
 The top panel shows statistics from the first of the month to the current date. You can also see the statistics for the last seven and 30 days.
@@ -61,16 +62,19 @@ This area provides a summary of the node's persisted resources. At the top, stat
 This panel displays two lists:
 
 #### Network
+
 The tables are not displayed when the node is in a Paused state. The first table shows information about the network interfaces attached to the node.
 
 <img width="900" alt="azure-view-stateful-node-details-03" src="https://github.com/spotinst/help/assets/106514736/b07195d9-a343-4b55-8539-8193d08564ee">
 
 #### Storage
+
 The second table shows information about the storage resources.
 
 <img width="1034" alt="azure-view-stateful-node-details-04" src="https://github.com/spotinst/help/assets/106514736/9920bf60-b3fa-44e4-b5e3-4b12a7a814b4">
 
 ### Node Activity
+
 The node activity bar records the activity in the stateful node in the selected time range at the top right. 
 
 ![activity-log-s-node](https://github.com/user-attachments/assets/6776f575-fe69-4895-b6c7-b111f4e9c98f)
@@ -97,12 +101,14 @@ The Monitoring tab provides information regarding the utilization of your statef
 
 
 ## Costs
+
 The cost breakdown data provides a comprehensive overview of your stateful node’s costs. It is available through both the console and the API. 
 
 ![azure-view-stateful-node-details-05](https://github.com/spotinst/help/assets/106514736/3103b23b-a8c6-42c8-8aa9-80480d0e493a)
 
 #### Daily Spend Breakdown
-The bar chart shows how much your compute cost was on each day of the selected time period. Each bar is broken down by spot, on-demand, and reserved instance cost for that day. The All Resources data display showcases the cost breakdown of compute, storage, and network resources. It presents the information in a stacked bar chart format.
+
+The compute lifecycle shows how much your compute cost was on each day of the selected time period. Each bar is broken down by spot, on-demand, and reserved instance cost for that day. The All Resources data display showcases the cost breakdown of compute, storage, and network resources. It presents the information in a stacked bar chart format.
 
 Hovering over a specific bar in the chart displays the following information:
 
@@ -113,6 +119,7 @@ Hovering over a specific bar in the chart displays the following information:
 * Total spend for all resources
 
 #### Summary
+
 The doughnut chart summarizes overall costs within the selected time range.
 
 Hovering over a certain section in the chart displays the following information:
