@@ -15,8 +15,6 @@ To view your right-sizing recommendations and rules:
 3. Click the **Right Sizing** tab.  
 4. Click **Advanced Optimization**. 
 
-![workloads-dashboard](https://github.com/user-attachments/assets/37d2a1b6-61bb-4a77-acf7-32ea66df9e5d)
-
 The Advanced Optimization tab contains these lists:  
 
 *  Workloads Optimization List. 
@@ -25,6 +23,8 @@ The Advanced Optimization tab contains these lists:
 Your workload optimization activities impact the status of the workloads in the [Right Sizing Savings panel](ocean/features/ocean-cluster-right-sizing-tab?id=right-sizing-savings-panel)
 
 ##  Workloads Optimization List 
+
+![table-advanced-optimization](https://github.com/user-attachments/assets/9543bf13-9f96-450b-b892-758e264c46e9)
 
 This list displays:  
 
@@ -54,6 +54,8 @@ To view a list of your potential savings and recommendations per container:
 
 ##  Automation Rules List 
 
+![automation-rules](https://github.com/user-attachments/assets/8289d519-7ae1-4bbf-a2ef-e66cfaa39946)
+
 This list displays your existing right-sizing rules.  
 Each rule entry shows relevant information about the parameters that trigger the rule and its scheduling plan. 
 
@@ -67,13 +69,9 @@ You can create right-sizing rules to trigger immediately after a specific set of
 To create/edit a right-sizing rule: 
 
 1.   Click the **Advanced Optimization** tab if not already displayed.
-2.   To create a new rule,	click **+ Add new rule** above the Automation Rules list.
-     
-     >**Note**: To edit an existing rule: To the right of the row for the rule in the Automation Rules list at the bottom of the tab, click **Edit Rule**. 
+2.   Click **+ Add new rule** above the Automation Rules list to create a new rule (or to edit an existing rule, click the pencil icon in the rule).
 
 ![rs-conf-auto-rule2](https://github.com/user-attachments/assets/fa96a30d-15ad-443a-b5a0-925edbbb98be)
-
-<!--NEW SCREEN REQUIRED - NEW SCREEN REQUIRED -NEW SCREEN REQUIRED NEW SCREEN REQUIRED-->
 
 3.   In the Configure Automation Rule dialog box, enter/edit the unique rule name.
 4.   Select when to apply the recommendation by clicking the relevant radio button: 
@@ -100,28 +98,27 @@ To create/edit a right-sizing rule:
 
 ###   Attach a Right-Sizing Rule to One or More Workloads 
 
-To attach a rule to one or more workloads: 
+You can only attach workloads that are not already attached to rules.
 
->**Note**: You can only attach workloads that are not already attached to rules.
+To attach a rule to one or more workloads: 
 
 1.   Select one or more workloads in the Workloads Optimization list. 
 2.   From the Actions drop-down menu above the table, click **Attach Rule**.
 
 ![right-sizing-attach-rule](https://github.com/spotinst/help/assets/159915991/dbc36aec-bc82-4b01-a75a-a6776970a785)
 
-3.   You can attach a rule you already created or create a new rule from scratch:
+3.   You can attach a rule you already created or create a new rule from scratch. Once you create the rule, it will be attached to the workload(s) you selected at the start of this procedure:
+
       *   Existing rule: Click the **Select from existing rule** drop-down menu and then select a rule. 
       *   New rule: Click **Create new rule from scratch** (see [Create or Edit a Right-Sizing Rule]())
   
->**Note**: Once you create the rule, it will be attached to the workload(s) you selected at the start of this procedure. 
-
 4.   Save and apply the rule. 
 
 ###   Detach a Right-Sizing Rule from One or More Workloads 
 
-To detach a rule from one or more workloads: 
+You can only detach workloads already attached to rules.
 
->**Note**: You can only detach workloads already attached to rules.
+To detach a rule from one or more workloads: 
 
 1.   Select workloads in the Workloads Optimization list.
 2.   From the Actions drop-down menu above the list, click **Detach Rule**.
