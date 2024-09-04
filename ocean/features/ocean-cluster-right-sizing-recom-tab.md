@@ -6,7 +6,7 @@ Cloud service provider relevance: <font color="#FC01CC">EKS</font> and <font col
 
 This topic shows you how to view right-sizing recommendations for workloads and containers and work with right-sizing rules.
 
-Before proceeding, see [Ocean EKS Cluster Automatic Right-Sizing](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-tab) for a full description of this Ocean feature.
+Before you begin, see [Ocean EKS Cluster Automatic Right-Sizing](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-tab) for a full description of this Ocean feature.
 
 To view your right-sizing recommendations and rules: 
 
@@ -69,12 +69,12 @@ You can create right-sizing rules to trigger immediately after a specific set of
 To create/edit a right-sizing rule: 
 
 1.   Click the **Advanced Optimization** tab if not already displayed.
-2.   Click **+ Add new rule** above the Automation Rules list to create a new rule (or to edit an existing rule, click the pencil icon in the rule).
+2.   To create a new rule, click **+ Add new rule** above the Automation Rules list (or to edit an existing rule, click the pencil icon in the rule).
 
 ![rs-conf-auto-rule2](https://github.com/user-attachments/assets/fa96a30d-15ad-443a-b5a0-925edbbb98be)
 
 3.   In the Configure Automation Rule dialog box, enter/edit the unique rule name.
-4.   Select when to apply the recommendation by clicking the relevant radio button: 
+4.   Select when to apply the recommendation by selecting one of the following options: 
 
       *   **Once available**: The recommendation is applied immediately after it becomes available. 
       *   **At a specific time**: You select when to apply the recommendation after it becomes available.
@@ -98,8 +98,6 @@ To create/edit a right-sizing rule:
 
 ###   Attach a Right-Sizing Rule to One or More Workloads 
 
-You can only attach workloads that are not already attached to rules.
-
 To attach a rule to one or more workloads: 
 
 1.   Select one or more workloads in the Workloads Optimization list. 
@@ -107,16 +105,14 @@ To attach a rule to one or more workloads:
 
 ![right-sizing-attach-rule](https://github.com/spotinst/help/assets/159915991/dbc36aec-bc82-4b01-a75a-a6776970a785)
 
-3.   You can attach a rule you already created or create a new rule from scratch. Once you create the rule, it will be attached to the workload(s) you selected at the start of this procedure:
+3.   You can either attach an existing or new rule you create from scratch (a new rule will be attached to the workload(s) you selected earlier):
 
-      *   Existing rule: Click the **Select from existing rule** drop-down menu and then select a rule. 
-      *   New rule: Click **Create new rule from scratch** (see [Create or Edit a Right-Sizing Rule]())
+      *   Click the **Select from existing rule** drop-down menu and then select a rule. 
+      *   Click **Create new rule from scratch** (see [Create or Edit a Right-Sizing Rule](ocean/features/ocean-cluster-right-sizing-recom-tab?id=create-or-edit-a-right-sizing-rule))
   
 4.   Save and apply the rule. 
 
 ###   Detach a Right-Sizing Rule from One or More Workloads 
-
-You can only detach workloads already attached to rules.
 
 To detach a rule from one or more workloads: 
 
