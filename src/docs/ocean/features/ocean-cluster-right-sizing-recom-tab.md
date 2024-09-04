@@ -112,13 +112,12 @@ To attach a rule to one or more workloads:
       *   Existing rule: Click the **Select from existing rule** drop-down menu and then select a rule. 
       *   New rule: Click **Create new rule from scratch** (see [Create or Edit a Right-Sizing Rule]())
   
-
-
-5.   Save and apply the rule. 
+4.   Save and apply the rule. 
 
 ###   Detach a Right-Sizing Rule from One or More Workloads 
 
 You can only detach workloads already attached to rules.
+
 To detach a rule from one or more workloads: 
 
 1.   Select workloads in the Workloads Optimization list.
