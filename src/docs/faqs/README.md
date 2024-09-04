@@ -454,7 +454,7 @@ You can use AWS EventBridge to send spot interruption warnings to the Spot platf
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="ebsvolumeerror">Why am I getting instance launch failed because an EBS volume cannot be encrypted error?</summary>
 
 <div style="padding-left:16px">
-   
+
 If you get this error:
 
 <pre>Spot Bad Parameters: Spot Request id: Optional<instance ID>. Code: bad-parameters Message: <timestamp>: Instance launch failed because an EBS volume cannot be encrypted. If your launch specification includes an encrypted EBS volume, you must grant the AWSServiceRoleForEC2Spot service-linked role access to any custom KMS keys.</pre>
@@ -492,7 +492,7 @@ systemctl restart spotinst-agent
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="scalinglatency">Can I configure a scaling policy for the latency metric?</summary>
 
   <div style="padding-left:16px">
-   
+
 You can create a scaling policy for latency.
 
 1. In the Elastigroup, go to the Scaling tab.
@@ -602,7 +602,7 @@ You can only update the RAM size in the Azure portal or change the VM sizes in y
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="increasedisk">Can I increase the disk size for stateful nodes?</summary>
 
   <div style="padding-left:16px">
-   
+
 Yes, you can increase the disk size for stateful nodes:
 1. [Pause the stateful node](https://docs.spot.io/managed-instance/features/managed-instance-actions?id=pause) in the Spot console.
 2. Once the stateful node is paused, open the Azure Portal and click **Disks**.
