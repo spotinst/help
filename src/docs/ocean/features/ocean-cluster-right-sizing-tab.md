@@ -77,7 +77,7 @@ The Right-Sizing tab displays a Dashboard divided into the following panels:
 *  The Right-Sizing Savings panel summarizes your potential maximum savings from right-sizing, vCPU, and memory usage and recommendations for a selected namespace, workload, and container. 
 *  Right-sizing Resource Usage panel: This panel graphically displays your vCPU and memory resource usage in the last two weeks. 
 
->**Note**: If the Right Sizing tab does not display any data: 
+If the Right Sizing tab does not display any data: 
 
 *  Make sure that your metrics server is installed and functioning correctly. 
 *  The initial one-hour data collection period may not have elapsed. 
@@ -104,8 +104,8 @@ If you have workloads with differing statuses, the workload status widget shows 
 > **Note**: The status changes according to the filters applied in this panel and the Workloads Optimization list in the [Advanced Optimization tab](ocean/features/ocean-cluster-right-sizing-recom-tab?id=automatic-right-sizing-recommendations-and-rules)
 
 vCPU and memory usage widgets:
-*  vCPU Usage: Used and allocated vCPU resources, recommended increase or decrease of vCPU resources, and the percentage of overprovisioning. 
-*  Memory Usage: Used and allocated memory resources, a recommendation to increase or decrease the memory resources, and the percentage of overprovisioning. 
+*  vCPU Usage: Used and allocated vCPU resources, recommended increase or decrease of vCPU resources, and overprovisioning. 
+*  Memory Usage: Used and allocated memory resources, a recommendation to increase or decrease the memory resources, and the overprovisioning. 
 
 ###  Right Sizing Resource Usage Panel 
 
@@ -113,7 +113,7 @@ vCPU and memory usage widgets:
 
 The right Sizing Resources Usage panel contains two widgets: 
 
-*  vCPU usage in the last two weeks: Displays graphs for used, allocated, and recommended vCPU usage, based on data from the last two weeks. 
+*  vCPU usage in the last two weeks: Displays graphs for used, allocated, and recommended vCPU usage based on data from the last two weeks. 
 *  Memory usage in the last two weeks: Displays graphs for used, allocated, and recommended memory usage based on data from the last two weeks. 
 
 
