@@ -200,8 +200,3 @@ When you have finished filling in the information in the template, you can revie
 <img src="/elastigroup/_media/tutorials-create-eg-from-scratch-5.png" width="500" height="500" />
 
 After reviewing and making any required changes, click **Next** and launch your Elastigroup. 
-
-## What's Next?
-
-- Learn more about the [Features](elastigroup/features/) and integrations supported in [Elastigroup for AWS](elastigroup/getting-started/elastigroup-for-aws.md).
-- Learn more about the [Predictive Rebalancing](elastigroup/features/core-features/predictive-rebalancing.md) algorithm, [Cluster Orientation](elastigroup/features/core-features/cluster-orientation.md), and defining [Maintenance Windows](elastigroup/features/core-features/maintenance-windows.md).

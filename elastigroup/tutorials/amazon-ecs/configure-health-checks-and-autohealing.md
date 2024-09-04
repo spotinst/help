@@ -42,7 +42,3 @@ Auto Healing is configured in the Compute view of the Creation Wizard, under Loa
 
 - **Health Check Grace Period**: Specify the time (in seconds) to allow an instance to boot and applications to fully start before the first health check. If an instance fails the health check after the given delay, it will be terminated and replaced with a new instance.
 - **Unhealthy Duration**: Specify the amount of time (in seconds) you want to keep existing instances that are deemed unhealthy before the instance is terminated and replaced with a new one.
-
-## What's Next?
-
-Learn more about [Elastigroup Integration with ECS clusters](elastigroup/features/amazon-ecs/elastigroup-for-ecs.md).
