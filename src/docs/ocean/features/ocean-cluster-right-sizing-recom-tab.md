@@ -15,8 +15,6 @@ To view your right-sizing recommendations and rules:
 3. Click the **Right Sizing** tab.  
 4. Click **Advanced Optimization**. 
 
-![workloads-dashboard](https://github.com/user-attachments/assets/37d2a1b6-61bb-4a77-acf7-32ea66df9e5d)
-
 The Advanced Optimization tab contains these lists:  
 
 *  Workloads Optimization List. 
@@ -25,6 +23,8 @@ The Advanced Optimization tab contains these lists:
 Your workload optimization activities impact the status of the workloads in the [Right Sizing Savings panel](ocean/features/ocean-cluster-right-sizing-tab?id=right-sizing-savings-panel)
 
 ##  Workloads Optimization List 
+
+![table-advanced-optimization](https://github.com/user-attachments/assets/9543bf13-9f96-450b-b892-758e264c46e9)
 
 This list displays:  
 
@@ -53,6 +53,8 @@ To view a list of your potential savings and recommendations per container:
     *  Right-Sizing Recommendations: Show the recommended changes in vCPU and memory. Click on the Copy icon to save these changes for later. 
 
 ##  Automation Rules List 
+
+![automation-rules](https://github.com/user-attachments/assets/fed83440-e9a3-4ec5-80b2-e0f2f6562f87)
 
 This list displays your existing right-sizing rules.  
 Each rule entry shows relevant information about the parameters that trigger the rule and its scheduling plan. 
