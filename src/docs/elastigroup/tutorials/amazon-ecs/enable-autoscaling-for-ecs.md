@@ -10,8 +10,3 @@ This tutorial covers the setup for an automatic Elastigroup Instance autoscaling
 
 - Enter the Elastigroup Creation Wizard or edit your existing ECS-integrated Elastigroup.
 - Under the Compute tab, scroll down to the Integrations section and enable the ECS AutoScaler.
-
-## What's Next?
-
-- Head to an overview of running ECS on Elastigroup by clicking [here](elastigroup/features/amazon-ecs/elastigroup-for-ecs.md).
-- Learn more about how the Autoscaler works [here](elastigroup/features/amazon-ecs/automatic-autoscaler-for-ecs.md).
