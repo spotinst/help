@@ -124,10 +124,3 @@ There are several reasons that a deployment could fail. Some of the more common 
 If a deployment fails, the instance remains running for troubleshooting purposes. Some instances in the Elastigroup may have the old configuration, while the rest may have the new configuration. To fix the failed roll, you will need to stop and detach either the old instances or the new onew. You will have the option to decide which instances. Then, update the Elastigroup configuration and deploy again to apply the configuration updates.
 
 Elastigroup will not start new deployments or any scale down activities until the failed deployment is completely stopped or resolved.
-
-## What’s Next?
-
-Learn more about:
-
-- [Scheduling](elastigroup/features/core-features/scheduling) deployments and other tasks.
-- The information and tabs available on the [Elastigroup Overview](elastigroup/tutorials/elastigroup-actions-menu/elastigroup-overview) page.
