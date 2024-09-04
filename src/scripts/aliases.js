@@ -1814,17 +1814,23 @@ export const aliases = (() => {
 
     "/administration/policies/create-new-policy": "/administration/policies/",
 
-    "/administration/organizations/switch-organization": "/administration/organizations/",
+    "/administration/organizations/switch-organization":
+      "/administration/organizations/",
 
-    "/administration/organizations/audit-events": "/administration/organizations/",
+    "/administration/organizations/audit-events":
+      "/administration/organizations/",
 
-    "/administration/organizations/configure-payment-details": "/administration/organizations/",
+    "/administration/organizations/configure-payment-details":
+      "/administration/organizations/",
 
-    "/administration/notification-center/notifications/": "/administration/notification-center/",
+    "/administration/notification-center/notifications/":
+      "/administration/notification-center/",
 
-    "/administration/notification-center/notifications/read": "/administration/notification-center/",
+    "/administration/notification-center/notifications/read":
+      "/administration/notification-center/",
 
-    "/administration/notification-center/event-policies/create": "/administration/notification-center/event-policies/",
+    "/administration/notification-center/event-policies/create":
+      "/administration/notification-center/event-policies/",
   };
 
   for (let [key, value] of Object.entries(map)) {
