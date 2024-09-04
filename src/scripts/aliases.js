@@ -1804,7 +1804,7 @@ export const aliases = (() => {
 
     "/administration/groups/create-new-group":
       "administration/groups/",
-};
+  };
 
   for (let [key, value] of Object.entries(map)) {
     if (key.endsWith("/")) {
