@@ -69,7 +69,3 @@ When you have predictive autoscaling enabled, you will see the following graphs:
 
 - Distribution: The number of your instances in each market.
 - CPU Utilization: The CPU utilization in the group. This is presented as the sum of CPU utilization per instance type in the group. (For example, if there are two m5.2xalrge instances with a CPU utilizaiton of 2 percent each, then the value in this graph will be 4.)
-
-## What’s Next?
-
-Learn more about the different [scaling features](elastigroup/features/scaling/) available in Elastigroup.
