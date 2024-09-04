@@ -30,7 +30,7 @@ This list displays:
 
 *  Your right-sizing recommendations per workload, and it lets you drill down to view your right-sizing recommendations per container. 
 *  Recommendations for vCPU and memory right sizing per deployment. Recommended increases are shown with a green up arrow, and recommended decreases are shown with a red Down arrow.  
-*  [Right Sizing rules]() that are attached to specific workloads.
+*  [Right Sizing rules](ocean/features/ocean-cluster-right-sizing-recom-tab?id=automation-rules-list) that are attached to specific workloads.
 *  Workload Status: If the workload is [attached](ocean/features/ocean-cluster-right-sizing-recom-tab?id=attach-a-right-sizing-rule-to-one-or-more-workloads) to a right-sizing rule, the name of the rule appears. The rule has one of the following workload (colored) optimization statuses:
    *  Green: The Workload is fully optimized, and no action is required.
    *  Orange: The Workload has optimization limitations (constrained by settings). 
