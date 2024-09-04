@@ -1,5 +1,11 @@
 # Ocean Controller Version 2 History
 
+## [2.0.66] - 2024-08-01
+
+### Added
+* Trim whitespace characters from `CLUSTER_IDENTIFIER`, `SPOTINST_TOKEN` and `SPOTINST_ACCOUNT` environment variables to prevent accidental misconfigurations.
+* Report pod eviction failures due to `PodDisruptionBudget` violations during node drain process.
+
 ## [2.0.65] - 2024-08-01
 
 ### Added
