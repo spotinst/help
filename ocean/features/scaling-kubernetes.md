@@ -230,7 +230,7 @@ This feature is available via API on the [cluster level](https://docs.spot.io/ap
 
 Cloud service provider relevance: <font color="#FC01CC">AKS</font> 
 
-Ocean with [Controller V2](ocean/tutorials/ocean-controller-v2) supports Pod Scheduling Readiness (included in Kubernetes 1.3), which considers whether a pod is ready to be scheduled. This feature lets you reduce the churn of pods that stay in a "miss-essential-resources" state for a long time. 
+Ocean with [Controller V2](ocean/tutorials/ocean-controller-v2) supports Pod Scheduling Readiness (included in Kubernetes 1.30), which considers whether a pod is ready to be scheduled. This feature lets you reduce the churn of pods that stay in a "miss-essential-resources" state for a long time. 
 Pods with the `SchedulingGated` status are not scheduled. By specifying/removing a Pod's `.spec.schedulingGates`, you can control when a pod is ready to be considered for scheduling.
 
 Use Pod Scheduling Readiness according to the [Kubernetes documentation](https://kubernetes.io/docs/concepts/scheduling-eviction/pod-scheduling-readiness/).
