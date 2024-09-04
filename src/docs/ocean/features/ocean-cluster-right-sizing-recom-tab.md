@@ -54,7 +54,7 @@ To view a list of your potential savings and recommendations per container:
 
 ##  Automation Rules List 
 
-![automation-rules](https://github.com/user-attachments/assets/fed83440-e9a3-4ec5-80b2-e0f2f6562f87)
+![automation-rules](https://github.com/user-attachments/assets/8289d519-7ae1-4bbf-a2ef-e66cfaa39946)
 
 This list displays your existing right-sizing rules.  
 Each rule entry shows relevant information about the parameters that trigger the rule and its scheduling plan. 
@@ -112,13 +112,12 @@ To attach a rule to one or more workloads:
       *   Existing rule: Click the **Select from existing rule** drop-down menu and then select a rule. 
       *   New rule: Click **Create new rule from scratch** (see [Create or Edit a Right-Sizing Rule]())
   
-
-
-5.   Save and apply the rule. 
+4.   Save and apply the rule. 
 
 ###   Detach a Right-Sizing Rule from One or More Workloads 
 
 You can only detach workloads already attached to rules.
+
 To detach a rule from one or more workloads: 
 
 1.   Select workloads in the Workloads Optimization list.
