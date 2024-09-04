@@ -105,10 +105,10 @@ To attach a rule to one or more workloads:
 
 ![right-sizing-attach-rule](https://github.com/spotinst/help/assets/159915991/dbc36aec-bc82-4b01-a75a-a6776970a785)
 
-3.   You can attach an existing or new rule you create from scratch. A new rule will be attached to the workload(s) you selected earlier.
+3.   You can either attach an existing or new rule you create from scratch (a new rule will be attached to the workload(s) you selected earlier):
 
-      *   For existing rule: Click the **Select from existing rule** drop-down menu and then select a rule. 
-      *   For new rule: Click **Create new rule from scratch** (see [Create or Edit a Right-Sizing Rule](ocean/features/ocean-cluster-right-sizing-recom-tab?id=create-or-edit-a-right-sizing-rule))
+      *   Click the **Select from existing rule** drop-down menu and then select a rule. 
+      *   Click **Create new rule from scratch** (see [Create or Edit a Right-Sizing Rule](ocean/features/ocean-cluster-right-sizing-recom-tab?id=create-or-edit-a-right-sizing-rule))
   
 4.   Save and apply the rule. 
 
