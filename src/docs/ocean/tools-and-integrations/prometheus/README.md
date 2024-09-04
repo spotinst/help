@@ -78,7 +78,6 @@ running instances.
 * `request_failed_validation` - Can't create spot instances in AWS because of validation error.
 * `max_spot_instances_exceeded` - max amount of spots reached. 
 * `rate_limit_exceeded` - request limit exceeded. 
-* `unsupported_emr_release` - instance type not supported by emr release.
 * `unsupported_ami_architecture` - The architecture of the specified instance type we were trying to scale does not match the architecture of the specified AMI.
 * `duplicate_target_group_name` - Have 2 or more target groups with the same name.
 * `authorization_failure` - The provided credentials could not be validated. This can occur while trying to associate an Elastic IP address you don’t own or trying to use an AMI for which you do not have permission.
