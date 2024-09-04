@@ -5,6 +5,7 @@
 Cheeseburger cheese strings stinking bishop. Say cheese emmental cut the cheese mascarpone lancashire lancashire danish fontina feta. Mozzarella paneer cheese and biscuits who moved my cheese parmesan cream cheese babybel fondue. Chalk and cheese ricotta say cheese queso stilton cheeseburger say cheese croque monsieur. Stilton jarlsberg.
 	
 > **Note**:
+> 
 > line 1
 > 
 > line 2
@@ -26,6 +27,7 @@ Cheeseburger cheese strings stinking bishop. Say cheese emmental cut the cheese 
    * bullet 1
    * bullet 2
       > **Note**:
+      > 
       > line 1
       > 
       > line 2
