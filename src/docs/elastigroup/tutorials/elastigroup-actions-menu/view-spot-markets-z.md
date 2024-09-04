@@ -43,6 +43,3 @@ You might see that Elastigroup does not manage a specific instance type in an AZ
 
 <img src="/elastigroup/_media/tutorials-view-spot-markets-05.png" />
 
-## What’s Next?
-
-Learn how to view details about the [Load Balancers](elastigroup/tutorials/elastigroup-actions-menu/view-load-balancers) in your Elastigroup.

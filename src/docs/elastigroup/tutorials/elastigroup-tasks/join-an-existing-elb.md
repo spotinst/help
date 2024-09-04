@@ -57,10 +57,3 @@ After you import a target group, this target group will be selected as the load 
    - Health Check Grace Period: Specify the timeout (in seconds) until newly launched instances become healthy. If an instance fails the health check after the given grace period, it will be terminated and replaced with a new one.
    - Unhealthy Duration: Specify the amount of time (in seconds) you want to keep existing instances that are deemed unhealthy before the instance is terminated and replaced with a new one.
 3. Click Next.
-
-## What's Next?
-
-Learn more about:
-
-- [AWS Load Balancers & Autohealing](elastigroup/tools-integrations/aws-load-balancers-elb-alb)
-- [Elastigroup Instance Actions](elastigroup/features/core-features/instance-actions)

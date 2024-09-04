@@ -172,8 +172,3 @@ The following is a list of values that can be in the `reason` field and an expla
  "resourceName": "ElasticSearch_Test"
 }
 ```
-
-## What's Next?
-
-- Configure [Slack Notifications](administration/users/configure-slack-notifications)
-- Configure [Email Notifications](administration/users/configure-email-notifications)
