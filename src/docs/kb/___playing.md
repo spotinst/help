@@ -5,8 +5,11 @@
 Cheeseburger cheese strings stinking bishop. Say cheese emmental cut the cheese mascarpone lancashire lancashire danish fontina feta. Mozzarella paneer cheese and biscuits who moved my cheese parmesan cream cheese babybel fondue. Chalk and cheese ricotta say cheese queso stilton cheeseburger say cheese croque monsieur. Stilton jarlsberg.
 	
 > **Note**:
+> 
 > line 1
+> 
 > line 2
+> 
 > line 3
 
 
@@ -21,8 +24,13 @@ Cheeseburger cheese strings stinking bishop. Say cheese emmental cut the cheese 
 
 2. Parmesan halloumi melted cheese macaroni cheese cheese and biscuits smelly cheese swiss cheese on toast.
 3. Cow gouda edam boursin the big cheese danish fontina rubber cheese monterey jack.
-   > **Note**:
-   > line 1
-   > line 2
-   > line 3
-4. Rubber cheese cheese strings red leicester when the cheese comes out everybody's happy goat.
+   * bullet 1
+   * bullet 2
+      > **Note**:
+      > 
+      > line 1
+      > 
+      > line 2
+      > 
+      > line 3
+5. Rubber cheese cheese strings red leicester when the cheese comes out everybody's happy goat.
