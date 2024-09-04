@@ -75,8 +75,6 @@ To create/edit a right-sizing rule:
 
 ![rs-conf-auto-rule2](https://github.com/user-attachments/assets/fa96a30d-15ad-443a-b5a0-925edbbb98be)
 
-<!--NEW SCREEN REQUIRED - NEW SCREEN REQUIRED -NEW SCREEN REQUIRED NEW SCREEN REQUIRED-->
-
 3.   In the Configure Automation Rule dialog box, enter/edit the unique rule name.
 4.   Select when to apply the recommendation by clicking the relevant radio button: 
 
@@ -102,9 +100,9 @@ To create/edit a right-sizing rule:
 
 ###   Attach a Right-Sizing Rule to One or More Workloads 
 
-To attach a rule to one or more workloads: 
+You can only attach workloads that are not already attached to rules.
 
->**Note**: You can only attach workloads that are not already attached to rules.
+To attach a rule to one or more workloads: 
 
 1.   Select one or more workloads in the Workloads Optimization list. 
 2.   From the Actions drop-down menu above the table, click **Attach Rule**.
@@ -121,9 +119,8 @@ To attach a rule to one or more workloads:
 
 ###   Detach a Right-Sizing Rule from One or More Workloads 
 
+You can only detach workloads already attached to rules.
 To detach a rule from one or more workloads: 
-
->**Note**: You can only detach workloads already attached to rules.
 
 1.   Select workloads in the Workloads Optimization list.
 2.   From the Actions drop-down menu above the list, click **Detach Rule**.
