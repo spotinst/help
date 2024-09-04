@@ -83,7 +83,3 @@ These graphs show the number of cores in use:
 - By Instance Lifecycle
 
 <img src="/elastigroup/_media/tutorials-elastigroup-dashboard-06.png" />
-
-## What’s Next?
-
-To see a list of the Elastigroups in your account with high-level summary information, see [Elastigroup Management](elastigroup/tutorials/elastigroup-actions-menu/elastigroup-management).
