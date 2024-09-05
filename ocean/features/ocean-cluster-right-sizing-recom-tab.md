@@ -71,7 +71,7 @@ To create/edit a right-sizing rule:
 1.   Click the **Advanced Optimization** tab if not already displayed.
 2.   To create a new rule, click **+ Add new rule** above the Automation Rules list (or to edit an existing rule, click the pencil icon in the rule).
 
-![rs-conf-auto-rule2](https://github.com/user-attachments/assets/fa96a30d-15ad-443a-b5a0-925edbbb98be)
+![rs-conf-auto-rule2](https://github.com/user-attachments/assets/aa5b9543-1143-4286-badb-84c898ded75b)
 
 3.   In the Configure Automation Rule dialog box, enter/edit the unique rule name.
 4.   Select when to apply the recommendation by selecting one of the following options: 
@@ -79,7 +79,7 @@ To create/edit a right-sizing rule:
       *   **Once available**: The recommendation is applied immediately after it becomes available. 
       *   **At a specific time**: You select when to apply the recommendation after it becomes available.
 
-![rs-time-settings](https://github.com/user-attachments/assets/aca5e891-e382-4863-aa4e-7972c4f362df)
+![rs-time-settings](https://github.com/user-attachments/assets/ada6260e-f4e0-48cf-acaf-cb08498b5559)
 
 5. Turn on **Exclude preliminary recommendation** if you want to suppress recommendations as long as the workload is considered preliminary.
 6. Select one of the **Restart replicas** options:
@@ -103,7 +103,7 @@ To attach a rule to one or more workloads:
 1.   Select one or more workloads in the Workloads Optimization list. 
 2.   From the Actions drop-down menu above the table, click **Attach Rule**.
 
-![right-sizing-attach-rule](https://github.com/spotinst/help/assets/159915991/dbc36aec-bc82-4b01-a75a-a6776970a785)
+![right-sizing-attach-rule](https://github.com/user-attachments/assets/c9c6d9ef-3ee3-494b-9813-06ef887a00e0)
 
 3.   You can either attach an existing or new rule you create from scratch (a new rule will be attached to the workload(s) you selected earlier):
 
