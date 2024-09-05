@@ -24,7 +24,7 @@ Your workload optimization activities impact the status of the workloads in the 
 
 ##  Workloads Optimization List 
 
-![workloads-dashboard-d](https://github.com/user-attachments/assets/41e01533-23e6-4368-9ad4-1024aac6b575)
+![workloads-dashboard-e](https://github.com/user-attachments/assets/f2a7d846-b906-4222-8cca-3db98754e948)
 
 This list displays:  
 
