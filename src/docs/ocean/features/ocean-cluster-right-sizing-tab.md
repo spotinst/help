@@ -88,7 +88,7 @@ If the Right Sizing tab does not display any data:
 
 The Right-Sizing Savings panel contains a set of savings widgets, which show your potential savings from Ocean cluster right sizing, derived from data collected in the last two weeks:  
 
-![saving-right-sizing](https://github.com/user-attachments/assets/e4d21c74-b667-40a2-92fe-e5b77de75954)
+![saving-right-sizing](https://github.com/user-attachments/assets/0be792e0-0a94-42ac-aea1-42e1acce8f5f)
 
 The workload status widget (on the left) shows one of the following statuses:
 * Optimization maximized status: All workloads are optimized.
@@ -109,7 +109,7 @@ vCPU and memory usage widgets:
 
 ###  Right Sizing Resource Usage Panel 
 
-![usage-in-last-2-weeks-b](https://github.com/user-attachments/assets/74b65b39-1734-47d9-bf86-07ec1433d7da)
+![usage-in-last-2-weeks-b](https://github.com/user-attachments/assets/8e2e3411-489b-4480-9b15-c4c047785f5e)
 
 The right Sizing Resources Usage panel contains two widgets: 
 
