@@ -48,7 +48,7 @@ nodes_added_total{reason="revertToLowerCostReplacement", lifecycle="Spot", az="u
 nodes_added_total{reason="scaleUpForPendingPods", lifecycle="Spot", az="us-west-2b", vm_type="r5a.4xlarge", vng_name = “Vng2”, ocean_id= “o-XXXXX”} 13
 ```
 
-### ocean_failed_scale_up and ocean_failed_scale_down
+### ocean_failed_scale_up_total and ocean_failed_scale_down_total
 These counter-type metrics help track the rate of failed scale-ups and scale-down operations in the cluster and the
 reasons behind them, as reflected in a dedicated label called `Reason.` `Reason` includes values such as:
 
