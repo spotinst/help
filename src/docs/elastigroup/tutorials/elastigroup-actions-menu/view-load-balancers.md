@@ -70,10 +70,3 @@ This graph illustrates that the number of requests that each target group serves
 ### CPUs & Instances per TG
 
 This graph indicates how many instances and vCPUs each target group has. The graph appears only when you have ITF activated.
-
-## What’s Next?
-
-Learn how to:
-
-- [Create a New Elastigroup](elastigroup/tutorials/elastigroup-tasks/create-an-elastigroup-from-scratch).
-- Get an [Overview](elastigroup/tutorials/elastigroup-actions-menu/elastigroup-overview) of your Elastigroup details.

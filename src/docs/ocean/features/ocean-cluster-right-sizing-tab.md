@@ -1,6 +1,8 @@
 <meta name=“robots” content=“noindex”>
 
-#  Ocean Cluster Automatic Right Sizing (EKS and AKS)
+#  Ocean Cluster Automatic Right Sizing
+
+Cloud service provider relevance: <font color="#FC01CC">EKS</font> and <font color="#FC01CC">AKS</font>
 
 To help you improve the efficiency and performance of your cloud environments, Ocean’s rightsizing capabilities provide recommendations that target over-provisioning and underutilization. 
 
@@ -28,28 +30,30 @@ helm install <my-release-name> spot/ocean-vpa
 
 ##  Limitations  
 
-*  If Vertical Pod Autoscaler custom resources already exist for your workloads before using Ocean Automatic right sizing, do not create any Rule Matching for them. 
 *  Supported manifests: Deployments, DaemonSets, and statefulSets.  
-*  Workloads must have more than one replica for restart capability. 
+*  JVM xms and xmx are not considered in Ocean’s sizing recommendations
+*  Unsupported HPA types: Any HPA not managed by GitOps or Helm
+*  Recommendations are calculated based on hard-coded percentile values. This cannot be modified manually.
+*  For supported HPA types - Righy Sizing will apply recommendations to the resource opposite to the trigger set.
+*  If Vertical Pod Autoscaler custom resources already exist for your workloads before using Ocean Automatic right sizing, do not create any Rule Matching for them. 
 
 
 ##  How It Works 
 
 For Ocean Kubernetes clusters, Right Sizing utilizes the Metrics Server and initializes recommendations after one hour of initial data collection. 
 
-Once every fifteen seconds, the controller queries the Metrics Server for pod utilization (the equivalent of kubectl top pods). Based on the last two weeks of collected metrics, Ocean calculates relevant consumption metrics for each resource, such as CPU and Memory, and bases its recommendations on these calculated metrics. 
+Once every 15 seconds, the Ocean Controller queries the Metrics Server for pod utilization (the equivalent of kubectl top pods). Based on the last 14 days of collected metrics, Ocean calculates relevant consumption metrics for each resource, such as CPU and Memory, and bases its recommendations on these calculated metrics. 
 
 ![features-rightsizing-01a](https://github.com/spotinst/help/assets/159915991/4ded53db-21ff-4a17-82b2-77b32c598351)
 
 The output produces a single point-in-time data point for each pod. Ocean then aggregates the pods' data per workload container. 
 
-The aggregation includes maximum, minimum, and mean resource utilization values, which will be used in the recommendation generation process to ensure that each pod’s utilization is considered properly. 
-
 Using the per-workload container aggregated data points, Ocean makes recommendations based on a mechanism that attempts to even out peaks and troughs in resource demand. The Right-Sizing engine runs every hour to generate new recommendations and update existing ones. 
 
-*  Recommendations for decreasing resource requests are based on the above-described calculation using the 99th Percentile of the maximum resource utilization data collected (e.g., max_memory_utilization). 
-*  Recommendations for increasing resource requests are based on the above-described calculation using the 85th Percentile mean resource utilization data collected (e.g., mean_memory_utilization).
-*  Currently, Ocean generates recommendations for Kubernetes deployments, statefulsets, SpotDeployments, and daemonsets.
+*  Recommendations for decreasing memory requests are based on the maximum memory utilization. If the maximum value * (10% overhead + 5% stability margin) > request, the recommendation = [10% overhead * value + value].
+*  Recommendations for decreasing CPU requests are based on the 99th percentile of the maximum CPU utilization data collected.
+*  Recommendations for increasing memory requests are based on the maximum memory utilization. If the maximum value * (10% overhead - 5% stability margin) < request, the recommendation = [10% overhead * value - value].
+*  Recommendations for increasing CPU requests are based on the 99th percentile of the maximum CPU utilization data collected.
 
 You view Right Sizing recommendations via: 
 
@@ -59,9 +63,6 @@ You view Right Sizing recommendations via:
 ##  View Right Sizing for a Cluster 
 
 Ocean provides resource recommendations to assist in adjusting deployment requests based on actual CPU and memory consumption. 
-
-Resource resize recommendations are triggered when the requested resources deviate by 15% or more from the 85th or 99th Percentile mean metric recorded during the last two weeks. 
-If the requested resources are either 15% above or 15% below the 85th or 99th Percentile mean metric, Ocean suggests resizing the resources to align them more closely with the observed consumption patterns. 
 
 These recommendations can help optimize resource allocation and ensure that the requested resources align with the actual CPU and memory consumption, improving efficiency and cost-effectiveness in managing your deployments. 
 
@@ -76,7 +77,7 @@ The Right-Sizing tab displays a Dashboard divided into the following panels:
 *  The Right-Sizing Savings panel summarizes your potential maximum savings from right-sizing, vCPU, and memory usage and recommendations for a selected namespace, workload, and container. 
 *  Right-sizing Resource Usage panel: This panel graphically displays your vCPU and memory resource usage in the last two weeks. 
 
->**Note**: If the Right Sizing tab does not display any data: 
+If the Right Sizing tab does not display any data: 
 
 *  Make sure that your metrics server is installed and functioning correctly. 
 *  The initial one-hour data collection period may not have elapsed. 
@@ -87,18 +88,33 @@ The Right-Sizing tab displays a Dashboard divided into the following panels:
 
 The Right-Sizing Savings panel contains a set of savings widgets, which show your potential savings from Ocean cluster right sizing, derived from data collected in the last two weeks:  
 
-*  Potential Monthly Maximum Savings. 
-*  vCPU Usage: Used and allocated vCPU resources, recommended increasing or decreasing the vCPU resources, and the percentage of overprovisioning. 
-*  Memory Usage: Used and allocated memory resources, a recommendation to increase or decrease the memory resources, and the percentage of overprovisioning. 
+![saving-right-sizing](https://github.com/user-attachments/assets/0be792e0-0a94-42ac-aea1-42e1acce8f5f)
 
-![right-sizing-savings-panel](https://github.com/spotinst/help/assets/159915991/3693d491-2caa-4254-ae5c-4eafa6123b89)
+The workload status widget (on the left) shows one of the following statuses:
+* Optimization maximized status: All workloads are optimized.
+* Limited optimization status: All workloads have limited optimization. Hover over the widget and click the link to access the [Right Sizing Optimization list](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=workloads-optimization-list).
+* No optimization status: No workloads are optimized, and the total Potential Monthly Maximum Savings are shown.
+* Pending optimization status: All pending workloads will be optimized according to the configured [schedule](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=work-with-right-sizing-rules). 
+
+If you have workloads with differing statuses, the workload status widget shows a status according to the following logic:
+* The potential savings are shown if at least one workload has potential savings.
+* The limited optimization status is shown if at least one workload is pending, but none have potential savings.
+* The pending status is shown if at least one workload is pending, but there are neither workloads with limited optimization nor workloads with potential savings.
+
+> **Note**: The status changes according to the filters applied in this panel and the Workloads Optimization list in the [Advanced Optimization tab](ocean/features/ocean-cluster-right-sizing-recom-tab?id=automatic-right-sizing-recommendations-and-rules)
+
+vCPU and memory usage widgets:
+*  vCPU Usage: Used and allocated vCPU resources, recommended increase or decrease of vCPU resources, and overprovisioning. 
+*  Memory Usage: Used and allocated memory resources, a recommendation to increase or decrease the memory resources, and the overprovisioning. 
 
 ###  Right Sizing Resource Usage Panel 
 
+![usage-in-last-2-weeks-b](https://github.com/user-attachments/assets/8e2e3411-489b-4480-9b15-c4c047785f5e)
+
 The right Sizing Resources Usage panel contains two widgets: 
 
-*  vCPU usage in the last two weeks: Displays graphs for used, allocated, and recommended vCPU usage, based on data from the last two weeks. 
+*  vCPU usage in the last two weeks: Displays graphs for used, allocated, and recommended vCPU usage based on data from the last two weeks. 
 *  Memory usage in the last two weeks: Displays graphs for used, allocated, and recommended memory usage based on data from the last two weeks. 
 
-![right-sizing-usage-panel](https://github.com/spotinst/help/assets/159915991/82488c4a-5683-432b-b589-a30b1d15ed99)
+
 

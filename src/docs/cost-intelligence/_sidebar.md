@@ -19,6 +19,7 @@
     - [Workflow Builder](cost-intelligence/tutorials/workflow-builder/)
       - [Sending Emails](cost-intelligence/tutorials/workflow-builder/configuring-and-sending-emails)
       - [Basic Alerts for Budgets and Thresholds](cost-intelligence/tutorials/workflow-builder/configuring-budgets-thresholds)
+      - [Alerts and Actions Based on Anomaly Detection](cost-intelligence/tutorials/workflow-builder/anomaly-detection)
     - [Integrations](cost-intelligence/tutorials/integrations/)
       - [Datadog](cost-intelligence/tutorials/integrations/datadog)
       - [New Relic](cost-intelligence/tutorials/integrations/new-relic)

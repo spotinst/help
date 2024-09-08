@@ -10,8 +10,8 @@ Although the exporter application is independent of the Ocean controller, a func
 
 ## Prerequisites
 
-* Ocean running in a cluster with a reporting controller
-* Prometheus installed in the cluster 
+* Ocean running in a cluster with a reporting controller.
+* Prometheus installed in the cluster.
 
 ## Install the Exporter
 
@@ -63,7 +63,7 @@ Each category represents a group of metrics. If the categories are not set - all
 
 * scaling  
 * cost_analysis
-* Automatic right-sizing  
+* rightsizing
 
 ### Metrics  
 

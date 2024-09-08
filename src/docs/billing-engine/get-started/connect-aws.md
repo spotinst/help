@@ -23,14 +23,14 @@ If you have a legacy CUR data export, connect your Spot account to the AWS Accou
    
 ![connect-aws-connect-spot1](https://github.com/spotinst/help/assets/167069628/5bcedf9e-b361-4909-a3f7-c278a532fdf4)
 
-5. Enter the CUR information:
+4. Enter the CUR information:
    <ol style="list-style-type: lower-alpha;">
       <li><b>Bucket Name</b> is the S3 bucket the CUR is in.</li>
       <li><b>Bucket Region</b> is the S3 bucket’s AWS region.</li>
-      <li><b>Bucket Prefix</b> is the prefix path to the CUR file. If you copy it from the AWS console, remove the CUR filename.</li>
+      <li><b>S3 Path Prefix (including Report Name)</b> is the prefix path and report name generated for the CUR you configured.</li>
   </ol>
-  
-  ![connect-aws-connect-spot2](https://github.com/spotinst/help/assets/167069628/b17b7763-7888-4a6f-8c00-67aa52f3f4b2)
+
+![connect-aws-s3](https://github.com/user-attachments/assets/e4bbcda0-1ee9-47f1-a609-1ea8ce0451ad)
   
 5. Run the IAM tempate and **Connect Account**.
    

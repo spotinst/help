@@ -1,10 +1,12 @@
 <meta name=“robots” content=“noindex”>
 
-#  Automatic Right-Sizing Recommendations and Rules (EKS and AKS)
+#  Automatic Right-Sizing Recommendations and Rules
+
+Cloud service provider relevance: <font color="#FC01CC">EKS</font> and <font color="#FC01CC">AKS</font>
 
 This topic shows you how to view right-sizing recommendations for workloads and containers and work with right-sizing rules.
 
-Before proceeding, see [Ocean EKS Cluster Automatic Right-Sizing](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-tab) for a full description of this Ocean feature.
+Before you begin, see [Ocean EKS Cluster Automatic Right-Sizing](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-tab) for a full description of this Ocean feature.
 
 To view your right-sizing recommendations and rules: 
 
@@ -13,25 +15,34 @@ To view your right-sizing recommendations and rules:
 3. Click the **Right Sizing** tab.  
 4. Click **Advanced Optimization**. 
 
-![right-sizing-workloads-opt-list-2](https://github.com/spotinst/help/assets/159915991/d119783f-015c-4b4a-9a1d-e559baea5a5f)
-
 The Advanced Optimization tab contains these lists:  
 
 *  Workloads Optimization List. 
 *  Automation Rules List.
 
+Your workload optimization activities impact the status of the workloads in the [Right Sizing Savings panel](ocean/features/ocean-cluster-right-sizing-tab?id=right-sizing-savings-panel)
+
 ##  Workloads Optimization List 
+
+![workloads-dashboard-e](https://github.com/user-attachments/assets/f2a7d846-b906-4222-8cca-3db98754e948)
 
 This list displays:  
 
 *  Your right-sizing recommendations per workload, and it lets you drill down to view your right-sizing recommendations per container. 
 *  Recommendations for vCPU and memory right sizing per deployment. Recommended increases are shown with a green up arrow, and recommended decreases are shown with a red Down arrow.  
-*  Optimized [Right Sizing rules]() that are attached to specific workloads.
-*  Potential monthly max. savings if you adopt these recommendations.
-*  Rules/Status: If the workload is [attached](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=attach-a-right-sizing-rule-to-one-or-more-workloads) to a right-sizing rule, the name of the rule appears. Hover over the rule name to see the workload status (pending or activated).
+*  [Right Sizing rules](ocean/features/ocean-cluster-right-sizing-recom-tab?id=automation-rules-list) that are attached to specific workloads.
+*  Workload Status: If the workload is [attached](ocean/features/ocean-cluster-right-sizing-recom-tab?id=attach-a-right-sizing-rule-to-one-or-more-workloads) to a right-sizing rule, the name of the rule appears. The rule has one of the following workload (colored) optimization statuses:
+   *  Green: The Workload is fully optimized, and no action is required.
+   *  Orange: The Workload has optimization limitations (constrained by settings). 
+   *  Gray: The rule for the workload has been attached but is out of schedule.
+ * Potential monthly max. Savings if you adopt these recommendations.
 
->**Notes**: If a workload is attached to an activated right-sizing rule, no vCPU / memory recommendations or Potential monthly max. savings are displayed for the workload because Ocean is already optimizing it.
->
+   > **Notes**:
+   > - Red status: The Workload is not optimized.
+   > - Orange or gray status: Hover over the workload optimization status to view more details in a tooltip.
+   > - There are no vCPU / memory recommendations or Potential monthly max if a workload is fully optimized. Savings are displayed for the workload because Ocean is already optimizing it.
+
+The graphical display above the list shows the breakdown of these workload optimization statuses.
 
 To view a list of your potential savings and recommendations per container: 
 
@@ -43,10 +54,12 @@ To view a list of your potential savings and recommendations per container:
 
 ##  Automation Rules List 
 
+![automation-rules-e](https://github.com/user-attachments/assets/f128606b-a91d-4935-a36a-c3c4984287b8)
+
 This list displays your existing right-sizing rules.  
 Each rule entry shows relevant information about the parameters that trigger the rule and its scheduling plan. 
 
-##   Work with Right Sizing Rules 
+##  Work with Right Sizing Rules 
 
 You can create the right sizing rules and immediately attach them to specific workloads. Alternatively, you can create and save a rule and later attach it to one or more workloads. 
 You can create right-sizing rules to trigger immediately after a specific set of requirements is met or at a specific time after the requirements are met. 
@@ -56,21 +69,17 @@ You can create right-sizing rules to trigger immediately after a specific set of
 To create/edit a right-sizing rule: 
 
 1.   Click the **Advanced Optimization** tab if not already displayed.
-2.   To create a new rule,	click **+ Add new rule** above the Automation Rules list.
-     
-     >**Note**: To edit an existing rule: To the right of the row for the rule in the Automation Rules list at the bottom of the tab, click **Edit Rule**. 
+2.   To create a new rule, click **+ Add new rule** above the Automation Rules list (or to edit an existing rule, click the pencil icon in the rule).
 
-![rs-conf-auto-rule2](https://github.com/user-attachments/assets/fa96a30d-15ad-443a-b5a0-925edbbb98be)
-
-<!--NEW SCREEN REQUIRED - NEW SCREEN REQUIRED -NEW SCREEN REQUIRED NEW SCREEN REQUIRED-->
+![rs-conf-auto-rule2](https://github.com/user-attachments/assets/aa5b9543-1143-4286-badb-84c898ded75b)
 
 3.   In the Configure Automation Rule dialog box, enter/edit the unique rule name.
-4.   Select when to apply the recommendation by clicking the relevant radio button: 
+4.   Select when to apply the recommendation by selecting one of the following options: 
 
       *   **Once available**: The recommendation is applied immediately after it becomes available. 
       *   **At a specific time**: You select when to apply the recommendation after it becomes available.
 
-![rs-time-settings](https://github.com/user-attachments/assets/aca5e891-e382-4863-aa4e-7972c4f362df)
+![rs-time-settings](https://github.com/user-attachments/assets/ada6260e-f4e0-48cf-acaf-cb08498b5559)
 
 5. Turn on **Exclude preliminary recommendation** if you want to suppress recommendations as long as the workload is considered preliminary.
 6. Select one of the **Restart replicas** options:
@@ -82,33 +91,35 @@ To create/edit a right-sizing rule:
 9. Click the **Set overhead for resources** down arrow and set the CPU and memory percentage overheads. An overhead specifies the percentage of extra resources to add to the new request recommendation.
 10. After you save the rule, it appears in the area under the [Workloads Optimization list](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=workloads-optimization-list).
 
+    > **Notes**:
+    > - Default values for Overhead and Automation Threshold are **10%** and **5%** respectively.
+    > - The **10%** default overhead is calculated within the recommendation itself.
+    > - Threshold value is only used for down-sizing cases
+
 ###   Attach a Right-Sizing Rule to One or More Workloads 
 
 To attach a rule to one or more workloads: 
 
->**Note**: You can only attach workloads that are not already attached to rules.
-
 1.   Select one or more workloads in the Workloads Optimization list. 
 2.   From the Actions drop-down menu above the table, click **Attach Rule**.
 
-![right-sizing-attach-rule](https://github.com/spotinst/help/assets/159915991/dbc36aec-bc82-4b01-a75a-a6776970a785)
+![right-sizing-attach-rule](https://github.com/user-attachments/assets/c9c6d9ef-3ee3-494b-9813-06ef887a00e0)
 
-3.   You can attach a rule you already created or create a new rule from scratch:
-      *   Existing rule: Click the **Select from existing rule** drop-down menu and then select a rule. 
-      *   New rule: Click **Create new rule from scratch** (see [Create or Edit a Right-Sizing Rule]())
+3.   You can either attach an existing or new rule you create from scratch (a new rule will be attached to the workload(s) you selected earlier):
+
+      *   Click the **Select from existing rule** drop-down menu and then select a rule. 
+      *   Click **Create new rule from scratch** (see [Create or Edit a Right-Sizing Rule](ocean/features/ocean-cluster-right-sizing-recom-tab?id=create-or-edit-a-right-sizing-rule))
   
->**Note**: Once you create the rule, it will be attached to the workload(s) you selected at the start of this procedure. 
-
 4.   Save and apply the rule. 
 
 ###   Detach a Right-Sizing Rule from One or More Workloads 
 
 To detach a rule from one or more workloads: 
 
->**Note**: You can only detach workloads already attached to rules.
-
 1.   Select workloads in the Workloads Optimization list.
-2.   From the Actions drop-down menu above the list, click **Detach Rule**. 
+2.   From the Actions drop-down menu above the list, click **Detach Rule**.
+
+>**Important**: If you encounter any Kubernetes issues, we recommend detaching workloads from rules and rolling them in your cluster.
 
 ###   Delete a Right-Sizing Rule 
 
@@ -119,5 +130,13 @@ To delete a right sizing rule:
 
 >**Important**: You cannot restore a deleted right-sizing rule. In addition, a rule may be deleted only if it is no longer attached to a workload.
 
+<!-- # Best Practices
 
+These are the Right-Sizing Best Practices:
+
+* Ensure more than one replica for the Admission Controller and VPA.
+* Limits (percentage thresholds) should not have the same values as requests.
+* If you set overheads for resources, Start with a relatively high overhead (20%) and decrease it with time.
+* Install the Spot VPA project. Then restart pods, and then restart policies and flags.
+* If you set boundaries (recommendation ranges for resources), do not apply the rule to all workloads. All services have different purposes.
 

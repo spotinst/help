@@ -41,7 +41,3 @@ To delete an Elastigroup you don’t need any more, do the following:
 1. Mark one or more Elastigroups in the list.
 2. On the upper right, click Actions and Delete Group.
 3. Complete the requested information and click .
-
-## What’s Next?
-
-Learn how to use the detailed [Elastigroup Overview](elastigroup/tutorials/elastigroup-actions-menu/elastigroup-overview) page.
