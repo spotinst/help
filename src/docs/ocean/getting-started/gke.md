@@ -72,6 +72,7 @@ To install the Ocean Controller and establish connectivity:
       --set spotinst.account="${SPOTINST_ACCOUNT}" \
       --set spotinst.clusterIdentifier="${SPOTINST_CLUSTER_IDENTIFIER}" \
       --set spotinst.token="${SPOTINST_TOKEN}"
+      --set metrics-server.deployChart=false
        
        ```
     
