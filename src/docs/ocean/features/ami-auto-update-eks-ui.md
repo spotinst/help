@@ -29,7 +29,7 @@ The Updates History list for completed runs is displayed at the top with these a
 * Trigger Type: Manual (auto-update was run immediately) or Scheduled (auto-update was scheduled and run).
 * Status (per batch):
   * Completed (green): All Virtual Node Groups in the batch were updated successfully.
-  * Partially completed (orange): Either at least one Virtual Node Group did not require updates or update failed
+  * Partially completed (orange): Either at least one Virtual Node Group did not require updates or the update failed.
   * No update required (blue): No Virtual Node Groups required update.
   * Failed (red): The batch update failed. Hover over the error icon for more information.
  * Status (per cluster):
