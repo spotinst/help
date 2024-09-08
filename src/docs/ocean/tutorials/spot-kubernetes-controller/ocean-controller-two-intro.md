@@ -28,10 +28,10 @@ Ocean Controller supports Linux OS only.
 
 ## Ocean Controller Version 2 Limitations
 
-Ocean Controller Version 2 ONLY retains a subset of start-up taints to enhance the scale-up process, increasing accuracy and speed.
+Ocean Controller Version 2 ONLY supports a subset of start-up taints to enhance the scale-up process, increasing accuracy and speed.
 When Ocean encounters unknown (custom taints) that are not predefined on the Virtual Node Group, the Controller removes them. This action is crucial for preventing scaling issues when scaling up nodes for specific pods. If the Virtual Node Group lacks these taints, the Ocean Autoscaler will still try to simulate the pods on the nodes, but without the taints, the pods won't be able to be scheduled on those nodes. Consequently, the Controller's default behavior is to remove unknown custom taints to ensure smooth scaling operations.
 
-These are the known taints that the Ocean Controller retains during start-up:
+These are the known taints that the Ocean Controller supports during start-up:
 
  * "node.kubernetes.io/"
  * "node-role.kubernetes.io/"
