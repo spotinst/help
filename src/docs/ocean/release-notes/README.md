@@ -2,6 +2,8 @@
 
 ## September 2024: Features and Enhancements 
 
+*  **OCN-0030: September 08, 2024:** (**<font color="#FC01CC">EKS</font>**) The **Ocean Network Cost Banner** under **Cost Analysis** now contains an estimate of your average hourly network usage (GB), calculated on an hourly basis. [Learn more...](https://docs.spot.io/ocean/tutorials/analyze-your-costs?id=ocean-network-cost-banner)
+
 *  **OCN-0029: September 04, 2024:** (**<font color="#FC01CC">AKS</font>**) Ocean with [Controller V2](https://docs.spot.io/ocean/tutorials/ocean-controller-v2/) supports Pod Scheduling Readiness (included in Kubernetes 1.30), which considers whether a pod is ready to be scheduled. [Learn more...](https://docs.spot.io/ocean/features/scaling-kubernetes?id=support-for-pod-scaling-readiness)
 
 *  **OCN-0028: September 02, 2024:** (**<font color="#FC01CC">AKS</font>**) The AKS Cluster overview dashboard now includes details about Ocean savings from bin packing and a panel that displays a cluster-level summary with widgets for CPU /Memory /GPU resources allocated to pods. [Learn more...](https://docs.spot.io/ocean/ocean-aks-cloud-cluster-overview) 
