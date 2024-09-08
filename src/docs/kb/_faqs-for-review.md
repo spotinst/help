@@ -18,6 +18,26 @@
 
 ## Where do these go?
 
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="elasticsearch">Can Elasticsearch integrate with Spot?</summary>
+
+  <div style="padding-left:16px">
+
+   You can stream Elastigroup logs to an AWS S3 bucket. Then, you can configure Elasticsearch and Kibana to collect logs from the S3 bucket:
+   * [Ocean](/ocean/features/log-integration-with-s3)
+   * [Elastigroup](url) <font color="#FC01CC">broken url: Note: The above document addresses the integration of Ocean with S3, but is also available for Elastigroup as well: https://spotinst.com/blog/elasticsearch-on-spot-instances-step-by-step/ </font>
+
+   <font color="#FC01CC">Here's how to use Spot Connect to integrate Elasticsearch. is it relevant? https://docs.spot.io/spot-connect/integrations/elasticsearch </font>
+
+ </div>
+
+ </details>
+
+ 
+<!----------------------------------general---------------------------------->
+
+## General
+
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="odresp">Why is my on-demand instance utilized as a reserved instance/savings plan?</summary>
 
@@ -40,26 +60,6 @@ Throughout the lifetime of an instance, it can change its “price” whenever t
  </div>
 
  </details>
-
- <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="elasticsearch">Can Elasticsearch integrate with Spot?</summary>
-
-  <div style="padding-left:16px">
-
-   You can stream Elastigroup logs to an AWS S3 bucket. Then, you can configure Elasticsearch and Kibana to collect logs from the S3 bucket:
-   * [Ocean](/ocean/features/log-integration-with-s3)
-   * [Elastigroup](url) <font color="#FC01CC">broken url: Note: The above document addresses the integration of Ocean with S3, but is also available for Elastigroup as well: https://spotinst.com/blog/elasticsearch-on-spot-instances-step-by-step/ </font>
-
-   <font color="#FC01CC">Here's how to use Spot Connect to integrate Elasticsearch. is it relevant? https://docs.spot.io/spot-connect/integrations/elasticsearch </font>
-
- </div>
-
- </details>
-
- 
-<!----------------------------------general---------------------------------->
-
-## General
 
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
@@ -353,8 +353,7 @@ However, it’s not possible to do with Ocean AKS clusters because you cannot ch
     }</code>
    </pre>
    
-   * <b>Architectures</b> is a list of strings, and the values can be: <i>x86_64</i> (includes both <i>intel64</i> and <i>amd64</i>), <i>intel64</i>, <i>amd64</i>, and <i>arm64</i>.
-     <font color="#FC01CC">I don't understand this: The filtered VM sizes support at least one of the architectures from this list.</font>
+   * <b>Architectures</b> is a list of strings, and the values can be a combination of <i>x86_64</i> (includes both <i>intel64</i> and <i>amd64</i>), <i>intel64</i>, <i>amd64</i>, and <i>arm64</i>.
 
    * Add <b>series</b> with the VM series for the particular architecture.
      For example, run VMs with <i>arm64</i> and launch the VMs with <i>Dps_V5</i> as the series.
@@ -510,7 +509,7 @@ VolumeId: '{vol-name}' is already attached to an existing Instance:
 support ticket.
 </code>
 
-This can happen when the pod has a claim for a specific volume owned by a different instance, and that instance does not have free space for the pod.
+This can happen when the pod has a claim for a specific volume attached to a different instance, and that instance does not have free space for the pod.
 
 By freeing up space, the pod can be placed on its attached node and can use the volume it claimed.
 
