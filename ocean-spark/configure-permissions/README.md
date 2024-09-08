@@ -235,7 +235,9 @@ If you want to **force users to use a config-template when submitting an app**, 
           {
             "StringEquals": {
               "sparkClusterId": "osc-xxxxxx"
-            },
+            }
+          },
+          {
             "StringPatternMatch": {
               "sparkConfigTemplateId": "ct-team-a-*"
             }
