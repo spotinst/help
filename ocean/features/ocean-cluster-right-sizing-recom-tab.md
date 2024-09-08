@@ -130,13 +130,12 @@ To delete a right sizing rule:
 
 >**Important**: You cannot restore a deleted right-sizing rule. In addition, a rule may be deleted only if it is no longer attached to a workload.
 
-<!-- # Best Practices
+Best Practices
 
 These are the Right-Sizing Best Practices:
 
-* Ensure more than one replica for the Admission Controller and VPA.
-* Limits (percentage thresholds) should not have the same values as requests.
-* If you set overheads for resources, Start with a relatively high overhead (20%) and decrease it with time.
-* Install the Spot VPA project. Then restart pods, and then restart policies and flags.
-* If you set boundaries (recommendation ranges for resources), do not apply the rule to all workloads. All services have different purposes.
+* Set two replicas for the Admission Controller to ensure continuous operation if one stops reporting. 
+* Workload limits should not have the same values as requests.
+* If you set overheads for resources, start with a relatively high overhead (20%) and decrease it with time.
+* If you set boundaries (recommendation ranges for resources), avoid applying the specific rule to all workloads. All services have different purposes.
 
