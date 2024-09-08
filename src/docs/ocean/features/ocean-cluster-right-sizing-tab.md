@@ -26,7 +26,7 @@ helm repo add spot https://charts.spot.io
 helm repo update 
 helm install <my-release-name> spot/ocean-vpa
 ```
->**Note**:To turn on Automatic Right-Sizing, contact your [support](https://spot.io/support/) team via email or chat.
+>**Note**: To turn on Automatic Right-Sizing, contact your [support](https://spot.io/support/) team via email or chat.
 
 ##  Limitations  
 
@@ -34,8 +34,9 @@ helm install <my-release-name> spot/ocean-vpa
 *  JVM xms and xmx are not considered in Ocean’s sizing recommendations
 *  Unsupported HPA types: Any HPA not managed by GitOps or Helm
 *  Recommendations are calculated based on hard-coded percentile values. This cannot be modified manually.
-*  For supported HPA types - Righy Sizing will apply recommendations to the resource opposite to the trigger set.
-*  If Vertical Pod Autoscaler custom resources already exist for your workloads before using Ocean Automatic right sizing, do not create any Rule Matching for them. 
+*  For supported HPA types - Right Sizing will apply recommendations to the resource not configured in the HPA manifest.
+*  If Vertical Pod Autoscaler custom resources already exist for your workloads before using Ocean Automatic Right Sizing, do not create any Rule Matching for them.
+*  Make sure to install Spot VPA’s project so that the restart policy functions according to the right-sizing rules. Otherwise, the flags set in your current VPA will not allow smooth operation.
 
 
 ##  How It Works 
