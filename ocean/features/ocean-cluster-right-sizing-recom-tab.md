@@ -130,7 +130,7 @@ To delete a right sizing rule:
 
 >**Important**: You cannot restore a deleted right-sizing rule. In addition, a rule may be deleted only if it is no longer attached to a workload.
 
-Best Practices
+## Best Practices
 
 These are the Right-Sizing Best Practices:
 
