@@ -31,13 +31,12 @@ helm install <my-release-name> spot/ocean-vpa
 ##  Limitations  
 
 *  Supported workloads are Deployments, DaemonSets, StatefulSets, and ReplicaSets.
-*  Supported manifests: Deployments, DaemonSets, and statefulSets.  
-*  JVM xms and xmx are not considered in Ocean’s sizing recommendations
+*  JVM xms and xmx are not considered in Ocean’s sizing recommendations.
 *  Recommendations are calculated based on hard-coded percentile values. This cannot be modified manually.
 *  Supported HPA types: Any HPA not managed by GitOps or Helm.
 *  Unsupported HPA types: Any HPA managed by Gitops or Helm.
 *  For supported HPA types: Right Sizing will apply recommendations to the resource not configured in the HPA manifest.
-*  Do not create any rule matching for Vertical Pod Autoscaler custom resources that already exist for your workloads before using Ocean Automatic Right-Sizing.
+*  Do not create any rule matching for Vertical Pod Autoscaler custom resources already existing for your workloads before using Ocean Automatic Right-Sizing.
 *  Make sure to install Spot VPA’s project so that the restart policy functions according to the right-sizing rules. Otherwise, the flags set in your current VPA will affect smooth operation.
 
 
