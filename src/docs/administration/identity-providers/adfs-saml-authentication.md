@@ -1,6 +1,6 @@
 # ADFS SAML Authentication
 
-Active Directory Federation Services (ADFS) is one of the leading Identity Provider (IDP) solutions on the market. This step-by-step guide will help you to configure your Spot account to be authenticated using the SAML protocol using ADFS.
+Active Directory Federation Services (ADFS) is one of the leading Identity Provider (IDP) solutions in the market. This step-by-step guide will help you to configure your Spot account to be authenticated using the SAML protocol using ADFS.
 
 ## Prerequisites
 
