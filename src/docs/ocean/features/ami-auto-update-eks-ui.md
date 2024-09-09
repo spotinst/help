@@ -7,7 +7,7 @@ You can either run an AMI auto-update immediately or schedule one. For both imme
 
 >**Note**: You can optionally roll the cluster after the AMI auto-update to align the cluster infrastructure with the new AMI.
 
-## Access the AMI Auto Update Tab
+## Access the AMI Auto Update Tab 
 
 To access the AMI Auto Update tab:
 
