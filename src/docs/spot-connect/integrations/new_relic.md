@@ -9,8 +9,8 @@ New Relic is a cloud-based observability platform built to help you create more 
 
 New Relic in a Spot Connect workflow lets you:
 
-* Trigger a workflow in Spot Connect when a specific New Relic Alert condition goes into the state of <i>Alert</i>.
-* Run New Relic NRQL Query to gather data from curated monitoring that spans your entire estate, from applications and infrastructure to logs and serverless apps.
+* [Run New Relic NRQL Query](/integrations/new_relic?id=integration-action-new-relic-nrql-query) to gather data from curated monitoring that spans your entire estate, from applications and infrastructure to logs and serverless apps.
+* [Trigger a workflow in Spot Connect](/integrations/new_relic?id=integration-action-new-relic-webhook-trigger) when a specific New Relic Alert condition goes into the state of <i>Alert</i>.
 
 ## Configure New Relic in Spot Connect
 
