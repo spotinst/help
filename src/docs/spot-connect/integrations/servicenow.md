@@ -17,3 +17,20 @@ The integration between Spot Connect and ServiceNow lets you:
 * ServiceNow Search Incidents - Get the incident list according to the supplied query
 * ServiceNow Update Incident - Update a specific ServiceNow Incident
 
+## Configure ServiceNow in Spot Connect
+
+1. In ServiceNow, [create a user](https://docs.servicenow.com/bundle/xanadu-customer-service-management/page/administer/users-and-groups/task/t_CreateAUser.html):
+    * Make sure **Password needs reset** is <i>not</i> selected
+    * Make sure **Locked out** is <i>not</i> selected
+    * Select: Active
+    * You can select **Web service acess only** to make this user a non-interactive user
+2. In the Spot Console, go to **Connect** > **Settings** > **Integarations**.
+5. Click  **ServiceNow** > **Add Integration**.
+6. Enter your ServiceNow instance URL. For example, `https://dev12345.service-now.com`.
+7. Enter the username and password for the ServiceNow user you created.
+8. Click **Add Instance**.
+
+## Integration Action: ServiceNow Create
+
+Creates a new incident in ServiceNow.
+
