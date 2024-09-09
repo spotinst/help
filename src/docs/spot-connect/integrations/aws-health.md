@@ -7,27 +7,36 @@ Webhooks are automated messages sent from applications when some alerts and noti
 AWS Health provides ongoing visibility into your resource performance and the availability of your AWS services. The AWS Health delivers alerts and notifications triggered by changes in the health of AWS resources.
 
 ## Prerequisites
-Set up an [API key](spot-connect/integrations/apikeys)
+Set up an [API key](spot-connect/integrations/apikeys).
 
 ## Create a Workflow using AWS Health Trigger Node
 1. In the Spot console, select **Connect** > **Workflows**.  
 2. Click **New Workflow** and enter a name for the workflow.
 3. Select **AWS Health Trigger** > **Create Workflow**.
 
+   <details>
+   <summary markdown="span">View image</summary>
    <img width=900 src="/spot-connect/_media/general-webhook-integration-1.png" />
 
-4. In the center panel of the workflow builder, click the Generic Webhook trigger node to open the right panel. Under Webhook API Key Name, select the API Key you created earlier.  
-5. Compose your workflow and save it.
-6. In the workflow builder, copy the Webhook API Key Value and the Workflow Webhook URL. When you configure the third-party application, use those saved values.
+   </details>
 
-   <img width="700" src="https://github.com/user-attachments/assets/94c4e7be-f3f6-42ba-8e5a-5ae1a2420ff2">
+4. In the center panel of the workflow builder, click the Generic Webhook trigger node to open the right panel.
+5. In the **Webhook API Key Name**, select the API key you created earlier.  
+6. Compose your workflow and save it.
+7. In the workflow builder, copy the Webhook API Key Value and the Workflow Webhook URL. When you configure the third-party application, use those saved values.
+
+   <details>
+   <summary markdown="span">View image</summary>
+    <img width="700" src="https://github.com/user-attachments/assets/94c4e7be-f3f6-42ba-8e5a-5ae1a2420ff2">
+
+   </details>
 
 ## Create an Amazon EventBridge API Destination
 
 1. [Create an EventBridge rule for AWS Health](https://docs.aws.amazon.com/health/latest/ug/cloudwatch-events-health.html#creating-event-bridge-events-rule-for-aws-health).
 2. On the Define rule detail page, select:
     * **Enable the rule to run on the selected event bus**
-    * **Rule type**: <i>Rule with an event pattern<i>
+    * **Rule type**: <i>Rule with an event pattern</i>
 3. On the Build event pattern page, select:
     * **Event type**: <i>All Events</i>
 4. On the Select target(s) page, select:
