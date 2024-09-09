@@ -18,7 +18,7 @@ Before you attempt to fine-tune your cluster resources according to Ocean's reco
 * Ocean cluster managing your Kubernetes worker nodes. 
 *  [Ocean Controller Version 2.0.52 and above](https://docs.spot.io/ocean/tutorials/ocean-controller-v2/) installed and running.
    *  Make sure to install the [Metrics Server](https://github.com/kubernetes-incubator/metrics-server#deployment).
-*  Vertical Pod Autoscaler project (VPA) Version 1.0.0 and above installed on your cluster. Otherwise, run the following commands:
+*  Vertical Pod Autoscaler project (VPA) Version 1.0.0 and above installed on your cluster. If the VPA is not already running on your cluster, run the following helm commands:
 
 ```sh
 
@@ -30,13 +30,14 @@ helm install <my-release-name> spot/ocean-vpa
 
 ##  Limitations  
 
-*  Supported manifests: Deployments, DaemonSets, and statefulSets.  
-*  JVM xms and xmx are not considered in Ocean’s sizing recommendations
-*  Unsupported HPA types: Any HPA not managed by GitOps or Helm
+*  Supported workloads are Deployments, DaemonSets, StatefulSets, and ReplicaSets.
+*  JVM xms and xmx are not considered in Ocean’s sizing recommendations.
 *  Recommendations are calculated based on hard-coded percentile values. This cannot be modified manually.
-*  For supported HPA types - Right Sizing will apply recommendations to the resource not configured in the HPA manifest.
-*  If Vertical Pod Autoscaler custom resources already exist for your workloads before using Ocean Automatic Right Sizing, do not create any Rule Matching for them.
-*  Make sure to install Spot VPA’s project so that the restart policy functions according to the right-sizing rules. Otherwise, the flags set in your current VPA will not allow smooth operation.
+*  Supported HPA types: Any HPA not managed by GitOps or Helm.
+*  Unsupported HPA types: Any HPA managed by Gitops or Helm.
+*  For supported HPA types: Right Sizing will apply recommendations to the resource not configured in the HPA manifest.
+*  Do not create any rule matching for Vertical Pod Autoscaler custom resources already existing for your workloads before using Ocean Automatic Right-Sizing.
+*  Make sure to install Spot VPA’s project so that the restart policy functions according to the right-sizing rules. Otherwise, the flags set in your current VPA will affect smooth operation.
 
 
 ##  How It Works 
@@ -53,8 +54,8 @@ Using the per-workload container aggregated data points, Ocean makes recommendat
 
 *  Recommendations for decreasing memory requests are based on the maximum memory utilization. If the maximum value * (10% overhead + 5% stability margin) > request, the recommendation = [10% overhead * value + value].
 *  Recommendations for decreasing CPU requests are based on the 99th percentile of the maximum CPU utilization data collected.
-*  Recommendations for increasing memory requests are based on the maximum memory utilization. If the maximum value * (10% overhead - 5% stability margin) < request, the recommendation = [10% overhead * value - value].
-*  Recommendations for increasing CPU requests are based on the 99th percentile of the maximum CPU utilization data collected.
+*  Recommendations for increasing memory requests are based on the maximum memory utilization. If maximum value * ( 1 + 10% overhead - 5% stability margin) < request, the recommendation = [10% overhead * value + value].
+*  Recommendations for increasing CPU: The calculation is the same for memory requests, except that we use the 99th percentile instead of the maximum value.
 
 You view Right Sizing recommendations via: 
 
