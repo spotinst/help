@@ -28,7 +28,7 @@ New Relic in a Spot Connect workflow lets you:
 
 Use the action to run New Relic NRQL Query and retrieve data in Spot Connect
 
-### Input
+#### Input
 
 | Parameter          | Description                                                        | Required |
 |--------------------|--------------------------------------------------------------------|----------|
@@ -36,7 +36,7 @@ Use the action to run New Relic NRQL Query and retrieve data in Spot Connect
 | NRQL Query         | NRQL query to be run on the given New Relic account                | Required |
 | S3 Bucket          | An S3 bucket to store the query and the result.                    | Optional |
 
-### Output
+#### Output
 
 | Parameter           | Type    | Description                                                   |
 |---------------------|---------|---------------------------------------------------------------|
@@ -46,7 +46,7 @@ Use the action to run New Relic NRQL Query and retrieve data in Spot Connect
 | s3_bucket           | String  | Name of the bucket                                            |
 | execution_status    | String  | The execution status of the query run (ie: S_OK / E_FAIL)     |
 
-### Action Example
+#### Action Example
 
 1. Drag and drop the New Relic NRQL Query action node onto the workflow builder center panel.
 2. Select the New Relic NRQL Query action node.
