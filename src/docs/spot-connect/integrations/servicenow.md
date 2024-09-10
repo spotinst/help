@@ -58,7 +58,7 @@ Creates a new incident in ServiceNow.
 
 #### Output
 
-| Parameter Nname   | Type   | Description                            |
+| Parameter Nname  | Type   | Description                            |
 |------------------|--------|----------------------------------------|
 | output           | Object | JSON of the newly created incident.    |
 | execution_status | String | S_OK if successful, E_FAIL if errored. |
