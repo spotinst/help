@@ -32,9 +32,9 @@ Use the action to run New Relic NRQL Query and retrieve data in Spot Connect
 
 | Parameter          | Description                                                        | Required |
 |--------------------|--------------------------------------------------------------------|----------|
-| New Relic Instance | Select a New Relic integration instance configured in Spot Connect | True     |
-| NRQL Query         | NRQL query to be run on the given New Relic account                | True     |
-| S3 Bucket          | An S3 bucket to store the query and the result.                    | False    |
+| New Relic Instance | Select a New Relic integration instance configured in Spot Connect | Required |
+| NRQL Query         | NRQL query to be run on the given New Relic account                | Required |
+| S3 Bucket          | An S3 bucket to store the query and the result.                    | Optional |
 
 ### Output
 
