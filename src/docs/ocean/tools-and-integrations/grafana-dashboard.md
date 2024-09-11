@@ -112,8 +112,18 @@ Network Metrics:
 * Cluster Inter-Region network cost over time. Source: Ocean.
 * Cluster Inter-Region network usage over time. Source: Ocean.
 
+### Right-Sizing
 
+* Ocean metrics are relevant to Ocean Prometheus Exporter for EKS, AKS, and GKE.
+* [More information at](https://docs.spot.io/ocean/tools-and-integrations/prometheus/)
 
+## Cluster Dependencies / Prerequisites
+
+* Ocean controller. [More information at](https://docs.spot.io/ocean/overview-kubernetes)
+* Ocean network client. [More information at](https://docs.spot.io/ocean/tutorials/install-network-client-v2)
+* Ocean metric exporter. [More information at](https://docs.spot.io/ocean/tools-and-integrations/prometheus/scrape)
+* kube-state-metrics service.
+* Prometheus server.
 
 
 
