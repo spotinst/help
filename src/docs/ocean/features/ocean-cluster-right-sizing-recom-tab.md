@@ -66,6 +66,7 @@ You can create right-sizing rules to trigger immediately after a specific set of
 
 ###   Create or Edit a Right-Sizing Rule 
 
+<!-- Need to add HPA info here -->
 To create/edit a right-sizing rule: 
 
 1.   Click the **Advanced Optimization** tab if not already displayed.
