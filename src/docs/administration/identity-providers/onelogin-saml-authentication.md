@@ -17,7 +17,7 @@ This feature makes it easy to manage your accounts and works with the most popul
    <li>Click <b>Security</b> > <b>Identity Providers</b>.</li>
    <li>Browse and import the XML metadata file you downloaded earlier. SSO will become enabled after uploading the OneLogin metadata.</li>
    </ol>
-10. On the OneLogin Access tab, assign the [OneLogin roles](https://support.onelogin.com/hc/en-us/articles/202123144-Roles) that should have access to Spot and provide any [app security policy](https://support.onelogin.com/hc/en-us/articles/202361530) that you want to apply to Spot. You can also go to **Users** > **All Users** to add the app to individual user accounts.
+10. On the OneLogin Access tab, assign the OneLogin roles that should have access to Spot and provide any app security policy that you want to apply to Spot. You can also go to **Users** > **All Users** to add the app to individual user accounts.
 11. Click **Save**.
 
 ## Test the SAML Connection
