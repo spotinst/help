@@ -121,7 +121,7 @@ You can choose to remove some of these permissions from the [Spot IAM policy](/a
 
   <div style="padding-left:16px">
 
-   You can configure a user to one or many user groups under a certain [organization](/administration/sso-access-control/organization-level-sso?id=organization-and-user-group) in Okta spotinst application:
+   You can add a user to one or many user groups in an [organization](/administration/sso-access-control/organization-level-sso?id=organization-and-user-group) in Okta spotinst application:
 1.	Make sure [Okta SAML 2.0 authentication](/administration/identity-providers/okta-saml-authentication) is configured with Spot.
 2.	Sign in to Okta Admin, go to **Directory** > **Profile Editor**, and select **Spotinst User**.
 3.	Click **Add Attribute** and add a custom attribute:
