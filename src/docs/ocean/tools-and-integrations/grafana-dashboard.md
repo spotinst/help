@@ -38,13 +38,80 @@ By monitoring the following key metrics, you can understand how Ocean scales.
 
 ### Current Status
 
-Ocean controller status. Source: Ocean.
-Kubernetes cluster Nodes. Source: Kubernetes API server.
-Nodes managed by Ocean. Source: Ocean.
-Cluster resources utilization - coming soon.
-Cluster cost during the selected aggregation interval. Source: Ocean.
-Top 5 workloads with maximum cost during the selected aggregation interval. Source: Ocean.
-Cluster cost’s potential savings suggested by the right-sizing feature. Source: Ocean.
+* Ocean controller status. Source: Ocean.
+* Kubernetes cluster Nodes. Source: Kubernetes API server.
+* Nodes managed by Ocean. Source: Ocean.
+* Cluster resources utilization - coming soon.
+* Cluster cost during the selected aggregation interval. Source: Ocean.
+* Top 5 workloads with maximum cost during the selected aggregation interval. Source: Ocean.
+* Cluster cost’s potential savings suggested by the right-sizing feature. Source: Ocean.
+
+### Scaling
+
+Overview:
+
+* Cluster nodes’ allocatable resources (CPU, memory, GPU). Source: Ocean.
+* Ocean cluster headroom allocatable resources (CPU, memory, GPU). Source: Ocean.
+* Ocean cluster resources limit (CPU, memory). Source: Ocean.
+* Ocean nodes breakdown by instance lifecycle and availability zone. Source: Ocean.
+* Cluster nodes’ allocatable resources breakdown by instance lifecycle and availability zone. Source: Ocean
+
+Nodes Managed by Ocean Metrics:
+
+* Ocean nodes count over time. Source: Ocean.
+* Ocean nodes count by instance lifecycle and availability zone over time. Source: Ocean.
+* Cluster nodes’ allocatable resources count by instance lifecycle and availability zone over time. Source: Ocean.
+
+Resources Utilization Metrics: Cluster resources (CPU, memory, GPU) utilization over time.
+
+Pods Metrics:
+
+* Average time for Pod to become ready over time. Source: Kubernetes API server.
+* Pods in Running state. Source: Kubernetes API server.
+
+Scaling Activity Overview:
+
+* Scaling up and down events summaries. Source: Ocean.
+* Failed to scale up and down event summaries. Source: Ocean.
+
+Ocean Controllers Metrics:
+
+* Ocean Kubernetes controller status over time. Source: Ocean.
+* Ocean Kubernetes controller pods over time. Source: Kubernetes API server.
+* Ocean Kubernetes controller memory consumption over time. Source: Kubernetes API server.
+* Ocean metrics controller memory consumption over time. Source: Kubernetes API server.
+
+### Cost Metrics
+
+* Month-to-Date cluster cost. Source: Ocean.
+* Average daily cluster cost during the selected aggregation interval. Source: Ocean.
+* Cluster cost breakdown during the selected aggregation interval. Source: Ocean.
+* Cluster cost over time during the selected aggregation interval vs the previous period. Source: Ocean.
+
+Compute and Storage Metrics:
+
+* Average cost per CPU during the selected aggregation interval. Source: Ocean.
+* CPU by instance lifecycle breakdown during the selected aggregation interval. Source: Ocean.
+* Cluster storage cost during the selected aggregation interval. Source: Ocean.
+* Cluster storage cost breakdown during the selected aggregation interval. Source: Ocean.
+* Cluster compute cost over time. Source: Ocean.
+* Cluster storage cost over time. Source: Ocean.
+* Cluster CPU usage over time. Source: Ocean.
+* Cluster memory usage over time. Source: Ocean
+
+Network Metrics:
+
+* Cluster network cost during the selected aggregation interval. Source: Ocean.
+* Cluster network usage during the selected aggregation interval. Source: Ocean.
+* Cluster network cost breakdown during the selected aggregation interval. Source: Ocean.
+* Cluster Intra-AZ network usage over time. Source: Ocean.
+* Cluster Inter-AZ network cost over time. Source: Ocean.
+* Cluster Inter-AZ network usage over time. Source: Ocean.
+* Cluster Internet network cost over time. Source: Ocean.
+* Cluster Internet network usage over time. Source: Ocean.
+* Cluster Inter-Region network cost over time. Source: Ocean.
+* Cluster Inter-Region network usage over time. Source: Ocean.
+
 
 
 
