@@ -22,7 +22,6 @@
     - [Google SAML Authentication](administration/identity-providers/google-saml-authentication)
     - [Okta SAML Authentication](administration/identity-providers/okta-saml-authentication)
     - [Define OrgAndRole with Okta](administration/identity-providers/define-organdrole-with-okta)
-    - [Define OrgAndUserGroups with Okta](administration/identity-providers/define-organdusergroups-with-okta)
     - [SCIM Integration](administration/identity-providers/scim)
     - [OneLogin SAML Authentication](administration/identity-providers/onelogin-saml-authentication)
   - [API Administration](administration/api/)
