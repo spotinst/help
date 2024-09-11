@@ -4,15 +4,19 @@
 
 This dashboard provides real-time insights into the scaling, cost, usage, and right-sizing activities managed by Spot Ocean within your Kubernetes cluster. It showcases metrics related to node provisioning, optimization, cost efficiency, and recovery operations. The visualizations help you understand how Spot Ocean dynamically manages Kubernetes cluster resources to ensure optimal performance, cost savings, and high availability. Key actions such as scale-ups, scale-downs, node replacements, and manual interventions are highlighted to give a comprehensive view of your cluster's operational status and health. It includes comprehensive data on compute, storage, and networking expenses, helping you monitor and optimize cloud spending. Visualizations highlight the cost distribution across different resource types and track usage patterns over time. This information empowers customers to make informed decisions about resource allocation, identify cost-saving opportunities, and ensure efficient utilization of cloud infrastructure. Additionally, the dashboard enables the evaluation of Ocean's right-sizing capability, demonstrating how efficient resource adjustments contribute to cost reduction while maintaining optimal cluster performance.
 
-sample
+<img width="2037" alt="grafana-dashboard-1" src="https://github.com/user-attachments/assets/e7f07b57-9e46-4f7e-a787-97d6ea4c88bc">
 
 <details>
   <summary markdown="span">Click to view sample</summary>
+
+![grafana-dashboard-sample-2](https://github.com/user-attachments/assets/b7bea58d-dd81-41bb-91cb-9596918e686a)
 
 </details>
 
 <details>
   <summary markdown="span">Click to view sample</summary>
+
+<img width="2040" alt="grafana-dashboard-3" src="https://github.com/user-attachments/assets/70478d0c-5e70-4878-b8b8-eccf15f2be8d">
 
 </details>
 
