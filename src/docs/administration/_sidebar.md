@@ -18,7 +18,6 @@
   - [Identity Providers](administration/identity-providers/)
     - [ADFS SAML Authentication](administration/identity-providers/adfs-saml-authentication)
     - [Azure Active Directory Integration](administration/identity-providers/azure-active-directory-integration)
-    - [Bitium SAML Authentication](administration/identity-providers/bitium-saml-authentication)
     - [Custom SAML IDP Configuration](administration/identity-providers/custom-saml-idp-configuration)
     - [Google SAML Authentication](administration/identity-providers/google-saml-authentication)
     - [Okta SAML Authentication](administration/identity-providers/okta-saml-authentication)
