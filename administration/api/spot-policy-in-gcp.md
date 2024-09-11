@@ -1,8 +1,8 @@
 # Spot Policy in GCP
 
-The latest Spot policy in GCP appears below.
-
 You can find and modify your Spot Policy in the [GCP IAM Console](https://console.cloud.google.com/iamadmin/).
+
+## Latest Spot Policy in GCP
 
 ```
 compute.addresses.create  

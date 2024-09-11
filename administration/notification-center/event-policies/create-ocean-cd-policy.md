@@ -1,58 +1,57 @@
 # Create an Ocean CD Policy
 
-This page describes the procedures to create a new policy for notifications.
+You can create notifications for Ocean CD.
 
-## Get Started
+1. In the Spot console, click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png">  > **Settings**.
+2. Go to **Notification Center** > **Event Policies** > **Create Policy**.
+3. Enter a **Name** for the policy (and a **Description**).
+4. Select **Type**: Ocean CD.
+5. Select **Personal policy** if you want the policy to be visible only to you. You will not be able to add integrations. If you don't select **Personal policy**, the policy will be available to other members of the account it is in, and you will be able to add integrations.
+6. Click **Continue**.
 
-To access the notification policies, do the following:
-
-1. In the top right, click on the User icon, and then click Settings in the menu.
-
-<img src="/administration/_media/create-security-policy-1.png" width="400" />
-
-2. In the left menu, click Notification Center and Event Policies. The Event Policies dashboard opens.
-3. In the top right, click Create Policy.
-
-## Create New Policy
-
-In the Create Policy window, complete the following information:
-
-* Policy Name: Give the policy a name.
-* Policy Type: In the dropdown menu, choose Ocean CD.
-* Policy Description: Enter a short description of what or who the policy is for.
-
-<img src="/administration/_media/notifications-ocean-cd-4.png" />
-
-1. Mark Personal Visibility if you want the policy to be visible only to you. You will not be able to add integrations. If you leave the checkbox blank, the policy will be available to other members of the account it is in, and you will be able to add integrations.
-
-2. Click Continue.
+To complete the policy definition, you need to complete all steps of the wizard. You'll select an account, rules, regions, and integrations. Once the policy is created, you may need to edit it to select users who will have access.
 
 ## Step 1: Select Resources
 
-Select resource types for the policy and click Next. You can select three types of notifications you want to receive: notifications for [clusters](ocean-cd/tutorials/view-settings/?id=clusters), [rollouts](ocean-cd/tutorials/view-rollouts/) or [entities](ocean-cd/getting-started/rollout-entities/).  
-
-<img src="/administration/_media/notifications-ocean-cd-1.png" />
+1. Select resource types for the policy. You can select the types of notifications you want to receive:
+   * [Clusters](ocean-cd/tutorials/view-settings/?id=clusters)
+   * [Rollouts](ocean-cd/tutorials/view-rollouts/)
+   * [Entities](ocean-cd/getting-started/rollout-entities/)
+3. Click **Next**.
 
 ## Step 2: Select Events
 
-Select the events you want to include in your policy according to their resource type and click Create Policy Now.
-
-<img src="/administration/_media/notifications-ocean-cd-2.png" />
-
-If you want to add integrations to your policy to get notifications of the clusters, rollouts or entities, click Next (Optional).  
-
-If you do not want to add notifications and complete the policy creation process, click Create Policy Now.    
+1. Select the types of events to receive notifications about.
+2. If you want to configure integrations, click **Next (Optional)**. Otherwise, click **Create Policy Now**.
 
 ## Step 3: Add Integrations (Optional)
 
-The integrations determine how the notifications will be delivered.
+If you (as an admin user) are configuring a policy at the account level, you can select the integrations. The integrations decide how the notifications are delivered.
 
-<img src="/administration/_media/notifications-ocean-cd-3.png" width="450" height="200" />
+<details>
+      <summary markdown="span">View image</summary>
 
-You can receive notifications by external email. Turn the External Email toggle on and add email addresses that will receive notifications.
+  <img width="420" alt="eventpolicy-createcompute-4" src="https://github.com/user-attachments/assets/8b7d1639-cfc3-4e57-9208-73f5ce2b5bde">
+     
+   </details>
 
-You can now edit the policy and determine which Spot users will receive notifications.
+You can choose from these integrations:
 
-## What’s Next?
+- External Email to add email addresses that will receive notifications.
+- Webhook to add webhooks to applications.
+- Slack to add the webhook for a Slack channel. To define the Channel, [create a webhook URL](https://spinnakerteam.slack.com/apps/A0F7XDUAZ-incoming-webhooks).
 
-Learn how to [Edit an Existing Policy](administration/notification-center/edit-a-notification-policy).
+These attributes are sent as part of the JSON message via Webhook or Slack:
+- default
+- accountId
+- resourceId
+- organizationName
+- trigger_policies
+- accountName
+- resourceName
+- title
+- message
+
+## Select Users
+
+Once you (an admin user) have created an account-level policy, only you are registered to the policy. You can edit the policy and select Spot users to receive notifications.

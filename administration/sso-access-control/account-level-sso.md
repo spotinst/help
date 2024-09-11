@@ -1,10 +1,10 @@
-# Account Level SSO
+# Account-Level SSO
 
-Assign Account Permissions with SAML Attribute. For account level login, it is possible to grant a user permissions to accounts per [user role](administration/users/) and per [access policy](administration/access-policies/). These are defined using SAML attributes. The attributes allow login to different accounts by the same user and the same IDP app while setting the roles dynamically on each request.
+Assign account permissions with SAML attribute. For account-level login, you can grant a user permissions to accounts per [user role](administration/users/) and per [access policy](administration/access-policies/). These are defined using SAML attributes. The attributes allow login to different accounts by the same user and the same IDP app while setting the roles dynamically on each request.
 
 ## Account and Role
 
-Login to an account with a specific role is defined with an Account and Role combination. The combination is configured using the following IDP format:
+Sign in to an account with a specific role is defined with an Account and Role combination. The combination is configured using this IDP format:
 
 ```
 <Attribute Name="AccAndRole" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
@@ -14,16 +14,13 @@ Login to an account with a specific role is defined with an Account and Role com
 </Attribute>
 ```
 
-The attribute value is in the format:
-`SPOTINST-<AccountId>-<Role>`
-
-The <AccountId> and <Role> are separated by a dash.
+The attribute value is in this format: `SPOTINST-<AccountId>-<Role>`. Make sure the `<AccountId>` and `<Role>` are separated by a dash.
 
 ## Account and Policy
 
-It is also possible to assign Account and Policy combinations for each user so that a user can get policy-based permissions. This user can also log in to an account with one or multiple policies applied.
+It is also possible to assign account and policy combinations for each user so that a user can get policy-based permissions. This user can also log in to an account with one or multiple policies applied.
 
-The format is shown below:
+This is the format:
 
 ```
 <Attribute Name="AccAndPolicyIds" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
@@ -33,26 +30,18 @@ The format is shown below:
 </Attribute>
 ```
 
-- Multiple PolicyIds for the same account are separated with a comma.
-- All PolicyIds provided in the configuration must exist for the relevant AccountId.
-
-The attribute value is in the format:
-`SPOTINST-<AccountId>:<PolicyId>`
-
-- The <AccountId> and <PolicyId> are separated by a colon.
-
-If multiple policies are applied to an account, the format is as follows:
-
-`SPOTINST-<AccountId>:<PolicyId1>,<PolicyId2>,<PolicyId3>`
+Keep in mind:
+- Multiple <i>PolicyIds</i> for the same account are separated with a comma.
+- All <i>PolicyIds</i> provided in the configuration must exist for the relevant <i>AccountId</i>.
+- The attribute value is in the format: `SPOTINST-<AccountId>:<PolicyId>`. Make sure the `<AccountId>` and `<PolicyId>` are separated by a colon.
+- If multiple policies are applied to an account, this is the format: `SPOTINST-<AccountId>:<PolicyId1>,<PolicyId2>,<PolicyId3>`
+- For a given user, an attribute may be assigned by itself (for example, just an <i>AccAndRole</i> definition or just an <i>AccAndPolicyIds</i> definition). If the user is accessing multiple accounts, both the attributes <i>AccAndRole</i> and <i>AccAndPolicyIds</i> may be specified.
+- <i>AccAndRole</i> and <i>AccAndPolicyIds</i> cannot be used for the same account of the same user.
+- For <i>AccAndRole</i> and <i>AccAndPolicyIds</i>, the attribute name and the attribute value are case sensitive.
 
 ## Example
 
-The example below from Onelogin shows entries in the Custom Fields for both AccAndRole and AccAndPolicyIds.
+This example from Onelogin shows entries in the Custom Fields for both <i>AccAndRole</i> and <i>AccAndPolicyIds</i>:
 
-<img src="/administration/_media/account-level-sso-01.png" />
+<img width=600 src="/administration/_media/account-level-sso-01.png" />
 
-## Usage Notes
-
-- For a given user, an attribute may be assigned by itself (i.e., just an AccAndRole definition or just an AccAndPolicyIds definition). If the user is accessing multiple accounts, both the attributes AccAndRole and AccAndPolicyIds may be specified.
-- AccAndRole and AccAndPolicyIds cannot be used for the same account of the same user.
-- For AccAndRole and AccAndPolicyIds, the attribute name and the attribute value are case sensitive.
