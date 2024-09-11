@@ -87,8 +87,8 @@ To create/edit a right-sizing rule:
    * All manifests.
    * Manifests with more than 1 replica only.
    * No restart.
-7. Click the **Set the resources percentage change** down arrow to apply the recommendation, and set the CPU and Memory percentage thresholds. This is the minimum percentage change from the current request for applying a recommendation.
-8. Click the **Set recommendation ranges for resources** down arrow and enter the upper and lower boundary values for CPU (millicpu) and Memory (mib) requests for applying a recommendation.
+7. Click the **Set the resources percentage change** down arrow to apply the recommendation, and set the CPU and Memory percentage thresholds. This is the minimum percentage change from the current request for applying a recommendation. Please note that if the rightsizing recommendations exceed the percentage threshold for either one of the resources ( CPU or Memory), they will still be applied. The reason for that is that the original purpose of the threshold is to prevent unnecessary pod's deletion but if the deletion occurs for one of the resources, we could already apply the recommendation to the other one. 
+8. Click the **Set recommendation ranges for resources** down arrow and enter the upper and lower boundary values for CPU (millicpu) and Memory (mib) requests for applying a recommendation. By default, the minimum values are 100m for CPU and 128 Mib for memory, no lower values will be accepted. In addition please note that if the recommendations exceed the boundaries set, Automatic RightSizing will still apply recommendations using the max values configured in the rule. 
 9. Click the **Set overhead for resources** down arrow and set the CPU and memory percentage overheads. An overhead specifies the percentage of extra resources to add to the new request recommendation.
 10. After you save the rule, it appears in the area under the [Workloads Optimization list](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=workloads-optimization-list).
 
@@ -135,7 +135,7 @@ To delete a right sizing rule:
 
 These are the Right-Sizing Best Practices:
 
-* Set two replicas for the Admission Controller to ensure continuous operation if one stops reporting. 
+* For production clusters, we recommend setting two replicas for the Admission Controller to ensure continuous operation if one stops reporting. 
 * Workload limits should not have the same values as requests.
 * If you set overheads for resources, start with a relatively high overhead (20%) and decrease it with time.
 * If you set boundaries (recommendation ranges for resources), avoid applying the specific rule to all workloads. All services have different purposes.
