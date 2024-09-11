@@ -125,6 +125,9 @@ Network Metrics:
 * kube-state-metrics service.
 * Prometheus server.
 
+## Customer Feedback
+
+The template is also available in the [Spot Ocean public repository](https://github.com/spotinst/spot-ocean-grafana-dashboards), where you can submit feedback regarding any issues or propose new features to further enhance the dashboard’s functionality.
 
 
 
