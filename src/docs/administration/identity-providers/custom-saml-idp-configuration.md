@@ -1,6 +1,6 @@
 # Custom SAML IDP Configuration
 
-Configuring an IDP to authenticate using SAML requires the following information:
+Configuring an IDP to authenticate using SAML requires the:
 
 - Service provider information
 - Attributes
