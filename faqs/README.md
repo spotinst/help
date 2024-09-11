@@ -5,7 +5,7 @@
 ## General
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="odresp">Why is my on-demand instance utilized as a reserved instance/savings plan?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="genodresp">Why is my on-demand instance utilized as a reserved instance/savings plan?</summary>
 
   <div style="padding-left:16px">
 
@@ -83,7 +83,7 @@ Increase the <i>Idle minutes before termination</i> in the [Spot Jenkins plugin]
 ## Ocean
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="odresp">Why is my on-demand instance utilized as a reserved instance/savings plan?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanodresp">Why is my on-demand instance utilized as a reserved instance/savings plan?</summary>
 
   <div style="padding-left:16px">
 
@@ -487,7 +487,7 @@ Ocean ensures that the cluster resources are utilized and scales down underutili
 ## Elastigroup
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="odresp">Why is my on-demand instance utilized as a reserved instance/savings plan?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egodresp">Why is my on-demand instance utilized as a reserved instance/savings plan?</summary>
 
   <div style="padding-left:16px">
 
@@ -699,7 +699,7 @@ You can create a scaling policy for latency.
 ## Elastigroup Stateful Node
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="odresp">Why is my on-demand instance utilized as a reserved instance/savings plan?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="snodresp">Why is my on-demand instance utilized as a reserved instance/savings plan?</summary>
 
   <div style="padding-left:16px">
 
