@@ -581,10 +581,13 @@ By freeing up space, the pod can be placed on its attached node and can use the 
 Keep in mind that it may not be necessary to increase the target capacity because Ocean automatically scales instances up and down as needed.
 
 If you want to edit the target capacity:
-1. In the [API](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterCreate), go to **Compute** > **launchSpecification**.
-2. Change the <b>useAsTemplateOnly</b> parameter to <i>false</i>.
+1. In the Spot console, go to **Ocean** > **Cloud Clusters**, and select the cluster.
+2. Click **Actions** > **Edit**.
+3. On the Review tab, click **JSON** > **Edit Mode**.
+4. Go to **Compute** > **launchSpecification**.
+5. Change the <b>useAsTemplateOnly</b> parameter to <i>false</i>.
 
-This will let you manually increase the target of the duster and the nodes will launch in the default virtual node group.
+This will let you manually increase the target of the cluster and the nodes will launch in the default virtual node group.
 
 <img width=900 src="https://github.com/user-attachments/assets/6e422a64-db48-4b43-90d0-d6b5ddc35464" >
 
