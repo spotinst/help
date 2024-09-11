@@ -1,6 +1,3 @@
-<!-- : # (title: SSO Access Control) -->
-<!-- : # (tags: #SSO, #SAML) -->
-
 # SSO Access Control
 
 In the console, you can enable single sign-on (SSO) for your organization.
@@ -21,7 +18,7 @@ You can use these identity providers with Spot:
 
 1. In the Spot console, click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png">  > **Settings**.
 2. Click **Security** > **Identity Providers**.
-4. Enter the 
+4. Enter the:
     * **Relay state**: this is the Organization ID. It's used as the relay state configuration for the identity provider (used in IDP-initiated SSO).
     * **Provider type**: currently, the only supported standard is security assertion markup language (SAML).
     * **Metadata**: this is the data provided by the identity provider to sync the settings properly.
