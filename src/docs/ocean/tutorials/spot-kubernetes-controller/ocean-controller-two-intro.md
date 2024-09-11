@@ -28,12 +28,7 @@ Ocean Controller supports Linux OS only.
 
 ## Ocean Controller Version 2 Limitations
 
-Ocean Controller Version 2 handles start-up taints differently. In Ocean Controller Version 1, start-up taints were not supported, but the Controller did not actively remove unknown taints.
-Version 2 does not support start-up taints other than those listed below. This change was implemented to enhance the scale-up process, making it more accurate and faster.
-
-When Ocean encounters unknown (custom taints) not predefined on the Virtual Node Group, the Controller removes them. This action is crucial for preventing scaling issues when scaling up nodes for specific pods. If the Virtual Node Group lacks these taints, the Ocean Autoscaler will still try to simulate the pods on the nodes, but without the taints, the pods won't be able to be scheduled on those nodes. Consequently, the Controller's default behavior is to remove unknown custom taints to ensure smooth scaling operations.
-
-These are the known taints that the Ocean Controller supports during start-up:
+Ocean Controller Version 2 handles start-up taints differently. In Ocean Controller Version 1, start-up taints were not supported. In Ocean Controller Version 2, the Controller actively removes unknown taints other than those listed below. This change was implemented to enhance the scale-up process, making it more accurate and faster.
 
  * "node.kubernetes.io/"
  * "node-role.kubernetes.io/"
@@ -44,6 +39,8 @@ These are the known taints that the Ocean Controller supports during start-up:
  * "ebs.csi.aws.com/"
  * "efs.csi.aws.com/"
  * "node.cilium.io/"
+
+When Ocean encounters unknown (custom taints) not predefined on the Virtual Node Group, the Controller removes them. This action is crucial for preventing scaling issues when scaling up nodes for specific pods. If the Virtual Node Group lacks these taints, the Ocean Autoscaler will still try to simulate the pods on the nodes, but without the taints, the pods won't be able to be scheduled on those nodes. Consequently, the Controller's default behavior is to remove unknown custom taints to ensure smooth scaling operations.
 
 ## Related Topics
 
