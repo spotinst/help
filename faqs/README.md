@@ -3,6 +3,30 @@
 <!----------------------------------general---------------------------------->
 
 ## General
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="odresp">Why is my on-demand instance utilized as a reserved instance/savings plan?</summary>
+
+  <div style="padding-left:16px">
+
+   When is an on-demand (OD) instance a reserved instance (RI), savings plan (SP), or full-priced on demand?
+   
+   When launching an on-demand instance, you cannot specifically request it to run as a reserved instance or savings plan.
+
+AWS decides according to:
+
+1.	If the market matches a free zonal reserved instance commitment, then the instance is a reserved instance.
+2.	If the market matches a free regional reserved instance commitment, then the instance is a reserved instance.
+3.	If the market matches a free EC2 instance savings plan commitment, then the instance is a savings plan.
+4.	If there is any free compute service plan commitment, then the instance is a savings plan.
+5.	Otherwise, the instance will run as a full-price on-demand instance.
+
+Throughout the lifetime of an instance, it can change its “price” whenever there’s any change in the commitments utilization rate. For example, if an instance is running as a full price on-demand instance, and another instance that was utilizing a compute savings plan commitment was terminated, the first instance will start utilizing this commitment if its hourly price rate has enough free space under this commitment. It might take a couple of minutes for this change to show, but since the billing is being calculated retroactively, in practice it’s starting to utilize the commitment right away.
+   
+ </div>
+
+ </details>
+ 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="runninghours">How are running hours calculated in the Spot console and AWS?</summary>
 
@@ -57,6 +81,44 @@ Increase the <i>Idle minutes before termination</i> in the [Spot Jenkins plugin]
 <!----------------------------------ocean---------------------------------->
 
 ## Ocean
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="odresp">Why is my on-demand instance utilized as a reserved instance/savings plan?</summary>
+
+  <div style="padding-left:16px">
+
+   When is an on-demand (OD) instance a reserved instance (RI), savings plan (SP), or full-priced on demand?
+   
+   When launching an on-demand instance, you cannot specifically request it to run as a reserved instance or savings plan.
+
+AWS decides according to:
+
+1.	If the market matches a free zonal reserved instance commitment, then the instance is a reserved instance.
+2.	If the market matches a free regional reserved instance commitment, then the instance is a reserved instance.
+3.	If the market matches a free EC2 instance savings plan commitment, then the instance is a savings plan.
+4.	If there is any free compute service plan commitment, then the instance is a savings plan.
+5.	Otherwise, the instance will run as a full-price on-demand instance.
+
+Throughout the lifetime of an instance, it can change its “price” whenever there’s any change in the commitments utilization rate. For example, if an instance is running as a full price on-demand instance, and another instance that was utilizing a compute savings plan commitment was terminated, the first instance will start utilizing this commitment if its hourly price rate has enough free space under this commitment. It might take a couple of minutes for this change to show, but since the billing is being calculated retroactively, in practice it’s starting to utilize the commitment right away.
+   
+ </div>
+
+ </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceantokens">What are the minimum permissions needed for a programmatic token for creating an Ocean cluster controller?</summary>
+
+  <div style="padding-left:16px">
+
+   You can use a programmatic token for creating Ocean cluster controllers. The benefit of programmatic tokens is they aren't linked to a specific user. If the user is deleted, it doesn't affect the Ocean controller. This helps prevent interruptions and heartbeat issues.
+
+   At minimum, the token must have **account viewer** [permissions](/administration/policies/). Viewer permission is the only permission required for a cluster controller to operate. Cluster controllers don't manage resources in Ocean, the autoscaler does. If you want this same programmatic user to manage other resources in your cluster, additional permission policies are required.
+
+For a network client, only the **account viewer** permission is required for the client to operate.
+   
+ </div>
+
+ </details>
  
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanfailinstancetypes">Why does Ocean fail to update instance types?</summary>
@@ -205,6 +267,42 @@ If you have another snapshot, then you can use that snapshot ID for the block de
  </div>
 
  </details>
+
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanvmarch">Can I create VMs with specific architecture in Ocean AKS?</summary>
+
+  <div style="padding-left:16px">
+
+You may want to run workloads (pods) on VMs with a specified architecture.
+
+For Ocean clusters (AWS), you can use an AMI with the required architecture. Update the AMI in the cluster or virtual node group (VNG) configuration to make sure the instances are launched according to the architecture specified in the AMI.
+
+However, it’s not possible to do with Ocean AKS clusters because you cannot choose a particular image to run VMs when you create an AKS cluster.
+
+1.	Create a new virtual node group in the Ocean AKS cluster and configure it manually or import the configuration of a node pool.
+2.	Add vmSizes to the virtual node group JSON file.
+    <pre><code>"vmSizes": {
+        "filters": {
+            "architectures": [
+                 "x86_64"
+            ],
+            "series": []
+                }
+    }</code>
+   </pre>
+   
+   * <b>Architectures</b> is a list of strings, and the values can be a combination of <i>x86_64</i> (includes both <i>intel64</i> and <i>amd64</i>), <i>intel64</i>, <i>amd64</i>, and <i>arm64</i>.
+
+   * Add <b>series</b> with the VM series for the particular architecture.
+     For example, run VMs with <i>arm64</i> and launch the VMs with <i>Dps_V5</i> as the series.
+ 
+     <img width=450 src="https://github.com/user-attachments/assets/1c0fccc2-2847-4cad-a01d-ce60a109db8e">
+
+
+ </div>
+ 
+ </details>
  
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="hostportunderutilized">Can hostPort cause underutilized nodes?</summary>
@@ -269,6 +367,51 @@ You can allow, [block](https://docs.spot.io/ocean/tips-and-best-practices/manage
 
  </details>
 
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceank8sscaledown">Can I stop Kubernetes workloads from scaling down in Ocean?</summary>
+
+  <div style="padding-left:16px">
+
+You can restrict specific pods from scaling down by configuring Ocean and Kubernetes. The instance will be replaced only if:
+* It goes into an unhealthy state.
+* Forced by a cloud provider interruption.
+
+There are two options for restricting pods from scaling down:
+* Kubernetes deployments/pods: spotinst.io/restrict-scale-down: true
+
+  Use the <code>spotinst.io/restrict-scale-down</code> label set to <i>true</i> to block proactive scaling down for more efficient bin packing. This will leave the instance running as long as possible. It gets defined as a label in the pod's configuration. See [restrict scale down](ocean/features/labels-and-taints?id=spotinstiorestrict-scale-down).
+
+* Virtual node group (VNG): restrict scale down (only available for AWS, ECS, and GKE)
+
+  You can configure [Restrict Scale Down](ocean/features/vngs/attributes-and-actions-per-vng) at the VNG level so the nodes and pods within the VNG are not replaced or scaled down due to the auto scaler resource optimization.  Create a VNG, go to the Advanced tab, then select **Restrict Scale Down**.
+
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceank8spvcerror">Why am I getting a <i>Kubernetes Autoscaler, Deadlock for Pod</i> error?</summary>
+
+  <div style="padding-left:16px">
+
+You get this error in the log:
+
+<code>Kubernetes Autoscaler, Deadlock for Pod: '{pod-name}' 
+Can't scale up an Instance since PersistentVolumeClaim: 
+'{PVC-name}' 
+VolumeId: '{vol-name}' is already attached to an existing Instance: 
+'{instance-ID}' Please consider using a new PersistentVolumeClaim or open a 
+support ticket.
+</code>
+
+This can happen when the pod has a claim for a specific volume attached to a different instance, and that instance does not have free space for the pod.
+
+By freeing up space, the pod can be placed on its attached node and can use the volume it claimed.
+
+ </div>
+
+ </details>
+ 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="invalidblockdevicemapping">Why am I getting an InvalidBlockDeviceMapping error?</summary>
 
@@ -342,6 +485,29 @@ Ocean ensures that the cluster resources are utilized and scales down underutili
 
 <!----------------------------------elastigroup---------------------------------->
 ## Elastigroup
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="odresp">Why is my on-demand instance utilized as a reserved instance/savings plan?</summary>
+
+  <div style="padding-left:16px">
+
+   When is an on-demand (OD) instance a reserved instance (RI), savings plan (SP), or full-priced on demand?
+   
+   When launching an on-demand instance, you cannot specifically request it to run as a reserved instance or savings plan.
+
+AWS decides according to:
+
+1.	If the market matches a free zonal reserved instance commitment, then the instance is a reserved instance.
+2.	If the market matches a free regional reserved instance commitment, then the instance is a reserved instance.
+3.	If the market matches a free EC2 instance savings plan commitment, then the instance is a savings plan.
+4.	If there is any free compute service plan commitment, then the instance is a savings plan.
+5.	Otherwise, the instance will run as a full-price on-demand instance.
+
+Throughout the lifetime of an instance, it can change its “price” whenever there’s any change in the commitments utilization rate. For example, if an instance is running as a full price on-demand instance, and another instance that was utilizing a compute savings plan commitment was terminated, the first instance will start utilizing this commitment if its hourly price rate has enough free space under this commitment. It might take a couple of minutes for this change to show, but since the billing is being calculated retroactively, in practice it’s starting to utilize the commitment right away.
+   
+ </div>
+
+ </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="egimds">How can I update the instance metadata (IMDS) in my cluster?</summary>
@@ -489,6 +655,22 @@ systemctl restart spotinst-agent
  </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egerrorpeers">Why am I getting a <i>"value" contains a conflict between peers</i> error?</summary>
+
+  <div style="padding-left:16px">
+
+When you import a new group to Elastigroup, you may get this error:
+<code>"value" contains a conflict between exclusive peers [resourceRequirements, spot]</code>
+
+This happens if the <code>resourceRequirements</code> value is <i>null</i>.
+
+Remove the <i>resourceRequirements</i> field from the JSON file and reimport the group.
+
+ </div>
+
+ </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="scalinglatency">Can I configure a scaling policy for the latency metric?</summary>
 
   <div style="padding-left:16px">
@@ -516,6 +698,29 @@ You can create a scaling policy for latency.
 
 ## Elastigroup Stateful Node
 
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="odresp">Why is my on-demand instance utilized as a reserved instance/savings plan?</summary>
+
+  <div style="padding-left:16px">
+
+   When is an on-demand (OD) instance a reserved instance (RI), savings plan (SP), or full-priced on demand?
+   
+   When launching an on-demand instance, you cannot specifically request it to run as a reserved instance or savings plan.
+
+AWS decides according to:
+
+1.	If the market matches a free zonal reserved instance commitment, then the instance is a reserved instance.
+2.	If the market matches a free regional reserved instance commitment, then the instance is a reserved instance.
+3.	If the market matches a free EC2 instance savings plan commitment, then the instance is a savings plan.
+4.	If there is any free compute service plan commitment, then the instance is a savings plan.
+5.	Otherwise, the instance will run as a full-price on-demand instance.
+
+Throughout the lifetime of an instance, it can change its “price” whenever there’s any change in the commitments utilization rate. For example, if an instance is running as a full price on-demand instance, and another instance that was utilizing a compute savings plan commitment was terminated, the first instance will start utilizing this commitment if its hourly price rate has enough free space under this commitment. It might take a couple of minutes for this change to show, but since the billing is being calculated retroactively, in practice it’s starting to utilize the commitment right away.
+   
+ </div>
+
+ </details>
+ 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="egsnimds">How can I update the instance metadata (IMDS) in my cluster?</summary>
 
@@ -610,6 +815,40 @@ Yes, you can increase the disk size for stateful nodes:
 4. [Change the Performance Tier](https://learn.microsoft.com/en-us/azure/virtual-machines/disks-performance-tiers-portal#change-performance-tier).
 5. Resume the stateful node in the Spot console.
 
+ </div>
+
+ </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egsn-stopped">Why am I getting an <i>Instance have been detected as stopped</i> error?</summary>
+
+  <div style="padding-left:16px">
+
+   You can see this error in the log:
+   <code>08/20/2023, 5:36 AM, WARN, Instance: [i-01234567890abcdefg] have been detected as Stopped.</code>
+
+   It's possible to [stop an instance in AWS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html), but Spot doesn't support the Stop action. This causes out-of-sync issues.
+
+   Restart the instance in AWS, then the Elastigroup will sync again. Use [Pause/Resume](/managed-instance/features/managed-instance-actions?id=stateful-node-actions) instead of Stop.
+   
+ </div>
+
+ </details>
+
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egsn-stopped2">Why am I getting a <i>botocore.exceptions.ClientError</i> error?</summary>
+
+  <div style="padding-left:16px">
+
+   You may get this error:
+   <code>botocore.exceptions.ClientError: An error occurred (UnsupportedOperation) when calling the StopInstances operation: You can't stop the Spot Instance '<Instance-ID>' because it is associated with a one-time Spot Instance request. You can only stop Spot Instances associated with persistent Spot Instance requests.</code>
+
+   It's possible to [stop an instance in AWS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html), but Spot doesn't support the Stop action.
+
+<font color="#FC01CC">is this relevant here, too?
+
+   Restart the instance in AWS, then the Elastigroup will sync again. Use [Pause/Resume](/managed-instance/features/managed-instance-actions?id=stateful-node-actions) instead of Stop.</font>
+   
  </div>
 
  </details>
