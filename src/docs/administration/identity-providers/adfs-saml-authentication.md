@@ -12,25 +12,51 @@ Active Directory Federation Services (ADFS) is one of the leading Identity Provi
 1. Open the Active Directory Federation Services (ADFS) Management Console.
 2. Right click **Relying Party Trusts** and select **Add Relying Party Trust**.
 
-   <img src="/administration/_media/adfs-saml-01.png" width="250" height="289" />
+   <details>
+   <summary markdown="span">View image</summary>
+      
+    <img src="/administration/_media/adfs-saml-01.png" width="250" height="289" />
+    
+   </details>
 
 3. Select **Claims-aware** > **Start**.
 
-   <img src="/administration/_media/adfs-saml-02.png" />
+
+   <details>
+   <summary markdown="span">View image</summary>
+      
+    <img width=700px src="/administration/_media/adfs-saml-02.png" />
+
+   </details>
 
 4. Select **Enter data about the relying party manually** and click **Next**.
 
-   <img src="/administration/_media/adfs-saml-03.png" />
+   <details>
+   <summary markdown="span">View image</summary>
+      
+    <img width=700px src="/administration/_media/adfs-saml-03.png" />
 
-5. Enter a **Name** for the RP and click **Next**.
-6. When asked for a certificate, click **Next**.
-7. Select **Enable support for the SAML 2.0 WebSSO protocol** and enter the URL: <i>https://console.spotinst.com/auth/saml</i>.
+   </details>
 
-   <img src="/administration/_media/adfs-saml-04.png" />
+6. Enter a **Name** for the RP and click **Next**.
+7. When asked for a certificate, click **Next**.
+8. Select **Enable support for the SAML 2.0 WebSSO protocol** and enter the URL <i>https://console.spotinst.com/auth/saml</i>.
+
+   <details>
+   <summary markdown="span">View image</summary>
+   
+    <img width=700px src="/administration/_media/adfs-saml-04.png" />
+    
+   </details>
 
 9. In **Relying party identity (RPID)**, enter the URL: <i>https://console.spotinst.com/auth/saml</i>.
 
-   <img src="/administration/_media/adfs-saml-05.png" />
+   
+   <details>
+   <summary markdown="span">View image</summary>
+    <img width=700px src="/administration/_media/adfs-saml-05.png" />
+
+   </details>
 
 10. Click **Next** and then **Finish** to complete the wizard.
 
@@ -39,7 +65,7 @@ Active Directory Federation Services (ADFS) is one of the leading Identity Provi
 1. A new wizard will open allowing you to configure the Claim Rules.
 2. Click **Next** when prompted for Rule Type.
 3. Enter a **Name** for the Claim Rule and choose **Active Directory** as the attribute store.
-4. Enter the following **Attribute Mappings**:
+4. Enter these **Attribute Mappings**:
 
 | LDAP Attribute | Outgoing Claim |
 | -------------- | -------------- |
@@ -47,7 +73,7 @@ Active Directory Federation Services (ADFS) is one of the leading Identity Provi
 | Given-Name     | FirstName      |
 | Surname        | LastName       |
 
-5. Click **Finish** to complete the wizard.
+5. Click **Finish**.
 
 ## Step 2: Getting and Inserting the Metadata
 
@@ -65,13 +91,13 @@ Active Directory Federation Services (ADFS) is one of the leading Identity Provi
 
 To configure IDP Initiated SSO, additional settings must be configured:
 
-1. Login to your Spot account as an Admin.
+1. Sign in to your Spot account as an Admin.
 2. In the Spot console, click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png">  > **Settings**.
 3. Click **Security** > **Identity Providers**.
 4. Copy the Relay State value.
 5. Connect to your ADFS Server.
 6. Open Powershell with administrative permissions.
-7. Run the following command to enable IDP Initiated SSO:
+7. Run this command to enable IDP Initiated SSO:
    `Set-ADFSProperties -EnableIdPInitiatedSignonPage $true`
 
    - If running on Windows Server 2016, run the following command to enable Relay State:
@@ -84,7 +110,7 @@ To configure IDP Initiated SSO, additional settings must be configured:
 
 8. Restart the Active Directory Federation Services Service
 
-### IDP initiated SSO URL
+### IDP-Initiated SSO URL
 
 - RPID
   - This value is the relying party identifier
