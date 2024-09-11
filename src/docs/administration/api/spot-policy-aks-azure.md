@@ -1,6 +1,7 @@
 # Spot Policy in Azure (AKS)
-The latest Spot policy in Azure appears below.
-```
+
+This is the latest Spot policy in Azure:
+```json
 {
     "properties": {
         "roleName": "Spot Ocean 2.0 Permissions",

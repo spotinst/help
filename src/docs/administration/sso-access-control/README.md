@@ -5,54 +5,39 @@
 
 In the console, you can enable single sign-on (SSO) for your organization.
 
-## Identity Providers Supported
+## Identity Providers
 
-The system supports the following identity providers:
+You can use these identity providers with Spot:
 
 - [ADFS SAML](administration/identity-providers/adfs-saml-authentication)
 - [Azure AD Integration](administration/identity-providers/azure-active-directory-integration)
-- [Bitium SAML](administration/identity-providers/bitium-saml-authentication)
 - [Custom SAMLs](administration/identity-providers/custom-saml-idp-configuration)
+- [Google SAML](administration/identity-providers/google-saml-authentication)
 - [Okta SAML](administration/identity-providers/okta-saml-authentication)
+- [SCIM](administration/identity-providers/scim)
 - [OneLogin SAML](administration/identity-providers/onelogin-saml-authentication)
 
-## Set up SAML SSO in the Console
+## Set Up SAML SSO in the Console
 
-1. Login to the Spot account as an administrator: [Spot Console](https://console.spotinst.com/#/dashboard)
-2. Click on the user icon and choose Settings.
-3. Click on the `SECURITY` tab on the left sidebar and select Identity Providers.
-4. Complete the required information in the form and save.
+1. In the Spot console, click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png">  > **Settings**.
+2. Click **Security** > **Identity Providers**.
+4. Enter the 
+    * **Relay state**: this is the Organization ID. It's used as the relay state configuration for the identity provider (used in IDP-initiated SSO).
+    * **Provider type**: currently, the only supported standard is security assertion markup language (SAML).
+    * **Metadata**: this is the data provided by the identity provider to sync the settings properly.
+    * **User Default Organization Role**: this is the role given to [users](administration/users/) who sign in using the Identity Provider (Viewer/Editor). Roles can be defined only by organization or by account, not both.
+    * **User Allowed Accounts**: the [accounts](https://docs.spot.io/administration/organizations/) the user has access to (<i>Default Account</i> or <i>All Accounts</i>).
+    
+   <details>
+        <summary markdown="span">View image</summary>
+        <img width="500" src="/administration/_media/sss-access-control-01a.png" />
 
-## Identity Provider Information
-
-<img src="/administration/_media/sss-access-control-01a.png" />
-
-**Relay state** – The Organization ID – Used as the Relay State configuration for the identity provider (Used in IDP Initiated SSO)
-
-**Provider type** – Currently the only supported standard is SAML (Security Assertion Markup Language)
-
-**Metadata** – Data provided by the identity provider in order to sync our settings properly.
-
-**User Default Organization Role** – The role which is given to users who logged in via the Identity Provider (Viewer/Editor). For further information, see [User Roles](administration/users/).
-
-**User Allowed Accounts** – The accounts which the user will have access to (Default Account or All Accounts)
-
-For further information, see [Organizations and Accounts](https://docs.spot.io/administration/organizations/).
+      </details>
 
 ## Organization and Role Selection
 
-When you want to determine different user roles per account, you can choose the organization and role the user will sign in with when signing in with SSO.
+If you want to define different user roles per account, you can choose the organization and role the user signs in with when signing in with SSO.
 
-Configure the IDP to create a SAML response with the parameter `OrgAndRole`.
-This configuration will generate another screen which will let the user choose an organization and role:
+Configure the IDP to create a SAML response with the parameter `OrgAndRole`. When this is defined, the user must select an organization and role when signing in:
 
 <img src="/administration/_media/sss-access-control-02.jpg" />
-
-## Usage
-
-Roles can be defined only by organization or by account, not both.
-
-## What's Next?
-
-- [Organization Level SSO](administration/sso-access-control/organization-level-sso)
-- [Account Level SSO](administration/sso-access-control/account-level-sso)

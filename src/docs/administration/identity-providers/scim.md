@@ -46,10 +46,10 @@ You can manage user lifecycle events between Okta and Spot seamlessly. This auto
 ## Step 4: Assign Users to the Spot by NetApp App
 
 1. Go to the Assignments tab.
-2. Click **Assign** and select **Assign to People**.
+2. Click **Assign** > **Assign to People**.
 3. Select the users to provision in Spot:
      * <i>Viewer</i> role assigns the user a viewer policy for each account in the organization.
-     * <i>Editor</i> role assigns the user as an organization admin.     * 
+     * <i>Editor</i> role assigns the user as an organization admin.
 4. Click **Assign**.
 
     <details>
@@ -60,7 +60,8 @@ You can manage user lifecycle events between Okta and Spot seamlessly. This auto
 
 ## Step 5: Verify User Provisioning
 
-1. In the Spot console, go to **Settings** > **Organization** > **Users**.
+1. In the Spot console, click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png">  > **Settings**.
+3. Go to **Organization** > **Users**.
 2. Verify that the users assigned in Okta are showing correctly in Spot.
     <details>
    <summary markdown="span">View image</summary>
@@ -72,5 +73,5 @@ You can manage user lifecycle events between Okta and Spot seamlessly. This auto
 
 ## Troubleshooting
 
-* **API Credentials Error**: Ensure that the SCIM API credentials are correct and have the necessary permissions.
-* **User Provisioning Issues**: Check the Okta logs for any errors related to user provisioning. Ensure that the users have the required attributes filled out in Okta.
+* **API Credentials Error**: Make sure that the SCIM API credentials are correct and have the necessary permissions.
+* **User Provisioning Issues**: Check the Okta logs for any errors related to user provisioning. Make sure that the users have the required attributes filled out in Okta.
