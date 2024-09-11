@@ -1,6 +1,3 @@
-<meta name="robots" content="noindex">
-
-
 # Define OrgAndUserGroups with Okta
 
 You can add a user to one or many user groups in an [organization](/administration/sso-access-control/organization-level-sso?id=organization-and-user-group) in Okta spotinst application:
