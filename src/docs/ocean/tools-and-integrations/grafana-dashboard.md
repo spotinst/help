@@ -23,6 +23,8 @@ This dashboard provides real-time insights into the scaling, cost, usage, and ri
 <details>
   <summary markdown="span">Click to view sample</summary>
 
+  ![grafana-dashboard-sample-4](https://github.com/user-attachments/assets/e4e0c2c2-1f0b-4586-8514-f707be037480)
+
 </details>
 
 
