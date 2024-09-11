@@ -18,7 +18,7 @@ If you select Eco, you’re redirected to the Eco Optimization page.
 * View estimated vCPU running hour statistics, either yearly or monthly (only available for Ocean and AWS).
 * View missed and estimated savings.
 * Filter workloads by service, account, and name to see an actionable list of workloads by resource.
-* From the list of resources, you can import resources to Elastigroup or Ocean, depending on which product you're viewing. Click Get started on a resource to import it.
+* From the list of resources, you can import resources to Elastigroup or Ocean, depending on which product you're viewing. Click **Get started** on a resource to import it.
 * Create preset from filters.
 * Export to CSV.
 * Select the fields to view in the list.
