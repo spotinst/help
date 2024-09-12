@@ -148,14 +148,14 @@ You must create at least one Virtual Node Group in your Ocean AKS cluster. A Vir
 
 In this step:
 
-* First, select one of your AKS node pools as a Virtual Node Group [template](https://docs.spot.io/ocean/features/vngs/?id=default-vng) for other (custom) Virtual Node Groups.
-* Then, create custom Virtual Node Groups as required.
+* Select one of your AKS node pools as a Virtual Node Group [template](https://docs.spot.io/ocean/features/vngs/?id=default-vng)
+* Optional: Create one or more Virtual Node Groups as required.
 
 To create your Virtual Node Groups:
 
 ![aks-node-pools-listed](https://github.com/user-attachments/assets/ca9f6120-45e7-46db-b465-0e1830ec73d5)
 
-1. Select 1 node pool. A list of all your managed node pools is displayed. The first node pool in the list is the one you selected for your first Virtual Node Group (Template). The selected node pool’s configuration is imported to the Virtual Node Group Template and used later for other custom Virtual Node Groups you create.
+1. Select 1 node pool from the list. The selected node pool’s configuration is imported to the Virtual Node Group Template and used later for other Virtual Node Groups you create.
 
 2. Optionally edit [Virtual Node Group Template](https://docs.spot.io/ocean/features/vngs/) attributes for the selected node pool.
 
@@ -163,14 +163,14 @@ To create your Virtual Node Groups:
 
 >**Note**: Some Virtual Node Group properties, such as node pool properties (OS types, OS Disk type), cannot be edited. If you need to change these properties, delete the Virtual Node Group and create a new one. 
 
-3. Create custom Virtual Node Groups: Define which remaining managed AKS node pools will be imported into Virtual Node Groups by selecting them in the node pool list. When you complete this wizard step, Ocean imports the node pool compute configurations into custom Virtual Node Groups. Select node pools to create custom Virtual Node Groups that handle different workload requirements, such as: 
+3. Optional: You can create more Virtual Node Groups from existing node pools in the cluster by selecting them in the node pool list. When you complete this wizard step, Ocean imports the node pool compute configurations into Virtual Node Groups. You might need different Virtual Node Groups to handle different workload requirements, such as: 
 
    * Virtual Node Group with regular VMs: workloads that cannot run on Spot nodes and must run on Regular (On-demand) VMs, e.g., statefulSets, Spark drivers, and Kafka producers.  
    * Performance Virtual Node Group: for workloads that need high-performance CPUs (Intel v4 or v5), a minimum vCPU 8 or higher or a larger OS Disk size, and VMs with a minimum disk 4 or higher. 
    * AI/ML Virtual Node Group: for workloads that need GPUs, say GPU count: 2-4 and specific VM series r GPU families 
    * Windows Virtual Node Group: for workloads that need Windows nodes.
 
->**Important**: One custom Virtual Node Group is created for each node pool you select. 
+>**Important**: One Virtual Node Group is created for each node pool you select. 
 
 **Example:** 
 
@@ -178,7 +178,7 @@ The selected node pool in this example has a similar configuration to the 4 node
 
 ![aks-node-pools-listed-rep](https://github.com/user-attachments/assets/cf367d88-f022-4c32-a178-76206e3ceaf6)
 
-4. Click the custom Virtual Node Group link and edit attributes as required.
+4. Click the Virtual Node Group link and edit attributes as required.
 
 ## Step 3: Connectivity  
 
