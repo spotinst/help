@@ -94,7 +94,7 @@ const generateSitemap = async (hostname, dir) => {
   // Map files to URL entries.
   const urls = contentFiles.map((file) => {
     let url = file.replace(dir, "").replace(".md", "").replace("/README", "/");
-    if (url !== apiRef) url = `${url}`; // https://git.io/JTpz9
+    if (url !== apiRef) url = `?${url}`; // https://git.io/JTpz9
     let links = langs.map((lang) => ({ url, lang }));
     return { url, links, ...tags };
   });
