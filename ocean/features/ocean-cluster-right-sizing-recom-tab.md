@@ -71,8 +71,7 @@ To create/edit a right-sizing rule:
 1.   Click the **Advanced Optimization** tab if not already displayed.
 2.   To create a new rule, click **+ Add new rule** above the Automation Rules list (or to edit an existing rule, click the pencil icon in the rule).
 
-![rule-configure](https://github.com/user-attachments/assets/41ae6849-c6a1-4ad4-bbeb-48f0020641f5)
-
+![rule-configure-hpa-3](https://github.com/user-attachments/assets/d4f27b25-6d88-463f-bc2a-dbe3db46594c)
 
 3.   In the Configure Automation Rule dialog box, enter/edit the unique rule name.
 4.   Select when to apply the recommendation by selecting one of the following options: 
@@ -80,17 +79,18 @@ To create/edit a right-sizing rule:
       *   **Once available**: The recommendation is applied immediately after it becomes available. 
       *   **At a specific time**: You select when to apply the recommendation after it becomes available.
 
-![rule-when-to-apply](https://github.com/user-attachments/assets/3c8e6126-9587-4e0e-bbfa-76f24d6beac4)
+![rule-when-to-apply-3](https://github.com/user-attachments/assets/5cb76163-9f33-477e-95d6-b99b36f0f200)
 
 5. Turn on **Exclude preliminary recommendation** if you want to suppress recommendations as long as the workload is considered preliminary.
 6. Select one of the **Restart replicas** options:
    * All manifests.
    * Manifests with more than 1 replica only.
    * No restart.
-7. Click the **Set the resources percentage change** down arrow to apply the recommendation, and set the CPU and Memory percentage thresholds. This is the minimum percentage change from the current request for applying a recommendation. Note that if the right-sizing recommendations exceed the percentage threshold for either resource (CPU or Memory), they will still be applied to prevent unnecessary pod deletion. However, if a deletion occurs for one of the resources, we can already apply the recommendation to the other. 
-8. Click the **Set recommendation ranges for resources** down arrow and enter the upper and lower boundary values for CPU (millicpu) and Memory (mib) requests to apply a recommendation. By default, the minimum values are 100m for CPU and 128 Mib for memory; no lower values will be accepted. Note also that if the recommendations exceed the set boundaries, automatic right-sizing will still apply recommendations using the maximum values configured in the rule. 
+7. Click the **Set the resources percentage change** down arrow to apply the recommendation, and set the CPU and Memory percentage thresholds. This is the minimum percentage change from the current request for applying a recommendation. If the right-sizing recommendations exceed the percentage threshold for either resource (CPU or Memory), they will be applied to both because the original purpose of the threshold is to prevent unnecessary pod deletion. The status will be fully optimized after applying the recommendation to both resources. 
+8. Click the **Set recommendation ranges for resources** down arrow and enter the upper and lower boundary values for CPU (millicpu) and Memory (mib) requests to apply a recommendation. By default, the minimum values are 100m for CPU and 128 Mib for memory; no lower values will be accepted. In addition, if the recommendations exceed the set boundaries, automatic right-sizing will still apply recommendations using the maximum values configured in the rule. 
 9. Click the **Set overhead for resources** down arrow and set the CPU and memory percentage overheads. An overhead specifies the percentage of extra resources to add to the new request recommendation.
-10. After you save the rule, it appears in the area under the [Workloads Optimization list](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=workloads-optimization-list).
+10. Turn on the **Apply HPA on associated workload** if you want to apply HPA. Ocean automatically applies recommendations for metrics not covered by the HPA trigger. For example, Ocean applies memory recommendations to a CPU-based HPA. Ocean applies recommendations for both metrics for other triggers, such as Kafka queue.
+11. After you save the rule, it appears in the area under the [Workloads Optimization list](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=workloads-optimization-list).
 
     > **Notes**:
     > - Default values for Overhead and Automation Threshold are **10%** and **5%** respectively.
