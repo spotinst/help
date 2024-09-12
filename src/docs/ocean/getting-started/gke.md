@@ -12,7 +12,7 @@ In this procedure, you will connect an existing GKE cluster to Ocean using the [
 
 ## Limitations
 
-You cannot import a GKE cluster with Autopilot mode turned on.
+You cannot connect a GKE cluster with Autopilot mode turned on.
 
 ## Getting Started
 
