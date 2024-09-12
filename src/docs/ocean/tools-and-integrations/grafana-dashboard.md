@@ -1,27 +1,34 @@
 <meta name="robots" content="noindex">
 
-# Spot Ocean Scaling and Cost Optimization Dashboard
+# Spot Ocean Scaling and Cost Optimization Dashboards
 
-This dashboard provides real-time insights into the scaling, cost, usage, and right-sizing activities managed by Spot Ocean within your Kubernetes cluster. It showcases metrics related to node provisioning, optimization, cost efficiency, and recovery operations. The visualizations help you understand how Spot Ocean dynamically manages Kubernetes cluster resources to ensure optimal performance, cost savings, and high availability. Key actions such as scale-ups, scale-downs, node replacements, and manual interventions are highlighted to give a comprehensive view of your cluster's operational status and health. It includes comprehensive data on compute, storage, and networking expenses, helping you monitor and optimize cloud spending. Visualizations highlight the cost distribution across different resource types and track usage patterns over time. This information empowers customers to make informed decisions about resource allocation, identify cost-saving opportunities, and ensure efficient utilization of cloud infrastructure. Additionally, the dashboard enables the evaluation of Ocean's right-sizing capability, demonstrating how efficient resource adjustments contribute to cost reduction while maintaining optimal cluster performance.
+This dashboard provides real-time insights into the scaling, cost, usage, and right-sizing activities managed by Spot Ocean within your Kubernetes cluster. It displays metrics for node provisioning, optimization, cost efficiency, and recovery operations. The visualizations help you understand how Spot Ocean dynamically manages Kubernetes cluster resources to ensure optimal performance, cost savings, and high availability. Key actions such as scale-ups, scale-downs, node replacements, and manual interventions are highlighted to give a comprehensive view of your cluster's operational status and health. It includes comprehensive data on compute, storage, and networking expenses, helping you monitor and optimize cloud spending. Visualizations highlight the cost distribution across different resource types and track usage patterns over time. This information empowers customers to make informed decisions about resource allocation, identify cost-saving opportunities, and ensure efficient utilization of cloud infrastructure. Additionally, the dashboard enables the evaluation of Ocean's right-sizing capability, demonstrating how efficient resource adjustments contribute to cost reduction while maintaining optimal cluster performance.
+
+## Dashboard Visualizations
+
+<details>
+  <summary markdown="span">Current Status</summary>
 
 <img width="2037" alt="grafana-dashboard-1" src="https://github.com/user-attachments/assets/e7f07b57-9e46-4f7e-a787-97d6ea4c88bc">
 
+</details>
+
 <details>
-  <summary markdown="span">Click to view sample</summary>
+  <summary markdown="span">Cost and Usage</summary>
 
 ![grafana-dashboard-sample-2](https://github.com/user-attachments/assets/b7bea58d-dd81-41bb-91cb-9596918e686a)
 
 </details>
 
 <details>
-  <summary markdown="span">Click to view sample</summary>
+  <summary markdown="span">Network Metrics</summary>
 
 <img width="2040" alt="grafana-dashboard-3" src="https://github.com/user-attachments/assets/70478d0c-5e70-4878-b8b8-eccf15f2be8d">
 
 </details>
 
 <details>
-  <summary markdown="span">Click to view sample</summary>
+  <summary markdown="span">Scaling Activity Overview</summary>
 
   ![grafana-dashboard-sample-4](https://github.com/user-attachments/assets/e4e0c2c2-1f0b-4586-8514-f707be037480)
 
@@ -47,7 +54,7 @@ By monitoring the following key metrics, you can understand how Ocean scales.
 * Ocean controller status. Source: Ocean.
 * Kubernetes cluster Nodes. Source: Kubernetes API server.
 * Nodes managed by Ocean. Source: Ocean.
-* Cluster resources utilization - coming soon.
+* Cluster resources utilization - TBD
 * Cluster cost during the selected aggregation interval. Source: Ocean.
 * Top 5 workloads with maximum cost during the selected aggregation interval. Source: Ocean.
 * Cluster cost’s potential savings suggested by the right-sizing feature. Source: Ocean.
@@ -103,7 +110,7 @@ Compute and Storage Metrics:
 * Cluster compute cost over time. Source: Ocean.
 * Cluster storage cost over time. Source: Ocean.
 * Cluster CPU usage over time. Source: Ocean.
-* Cluster memory usage over time. Source: Ocean
+* Cluster memory usage over time. Source: Ocean.
 
 Network Metrics:
 
@@ -121,7 +128,7 @@ Network Metrics:
 ### Right-Sizing
 
 * Ocean metrics are relevant to Ocean Prometheus Exporter for EKS, AKS, and GKE.
-* [More information at](https://docs.spot.io/ocean/tools-and-integrations/prometheus/)
+* [More info](https://docs.spot.io/ocean/tools-and-integrations/prometheus/)
 
 ## Cluster Dependencies / Prerequisites
 
@@ -133,7 +140,7 @@ Network Metrics:
 
 ## Customer Feedback
 
-The template is also available in the [Spot Ocean public repository](https://github.com/spotinst/spot-ocean-grafana-dashboards), where you can submit feedback regarding any issues or propose new features to further enhance the dashboard’s functionality.
+The template is also available in the [Spot Ocean public repository](https://github.com/spotinst/spot-ocean-grafana-dashboards), where you can submit feedback regarding any issues or propose new features to enhance the dashboard’s functionality further.
 
 
 
