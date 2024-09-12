@@ -9,7 +9,8 @@ AWS Health provides ongoing visibility into your resource performance and the av
 ## Prerequisites
 Set up an [API key](spot-connect/integrations/apikeys).
 
-## Create a Workflow using AWS Health Trigger Node
+## Create a Workflow Using AWS Health Trigger Node
+
 1. In the Spot console, select **Connect** > **Workflows**.  
 2. Click **New Workflow** and enter a name for the workflow.
 3. Select **AWS Health Trigger** > **Create Workflow**.
