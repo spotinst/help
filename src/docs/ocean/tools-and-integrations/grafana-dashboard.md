@@ -3,6 +3,9 @@
 # Spot Ocean Scaling and Cost Optimization Dashboards
 
 This dashboard provides real-time insights into the scaling, cost, usage, and right-sizing activities managed by Spot Ocean within your Kubernetes cluster. It displays metrics for node provisioning, optimization, cost efficiency, and recovery operations. The visualizations help you understand how Spot Ocean dynamically manages Kubernetes cluster resources to ensure optimal performance, cost savings, and high availability. Key actions such as scale-ups, scale-downs, node replacements, and manual interventions are highlighted to give a comprehensive view of your cluster's operational status and health. It includes comprehensive data on compute, storage, and networking expenses, helping you monitor and optimize cloud spending. Visualizations highlight the cost distribution across different resource types and track usage patterns over time. This information empowers customers to make informed decisions about resource allocation, identify cost-saving opportunities, and ensure efficient utilization of cloud infrastructure. Additionally, the dashboard enables the evaluation of Ocean's right-sizing capability, demonstrating how efficient resource adjustments contribute to cost reduction while maintaining optimal cluster performance.
+[Spot Ocean](https://spot.io/product/ocean/) manages the scaling of the Kubernetes data plane, and the data generated in the process can be valuable for monitoring your containerized environment. Using well-defined Prometheus metrics for monitoring Ocean helps you understand cluster scaling and debug any issues that may arise. In addition, you can build alerts based on the metrics to address issues in real time and track important trends on a dashboard of different Ocean metrics.
+
+Ocean maintains an official set of metrics, natively scrapable by Prometheus. This set of metrics helps build a 360-degree view of Ocean’s actions while providing application-driven infrastructure.
 
 ## Dashboard Visualizations
 
@@ -33,11 +36,6 @@ This dashboard provides real-time insights into the scaling, cost, usage, and ri
   ![grafana-dashboard-sample-4](https://github.com/user-attachments/assets/e4e0c2c2-1f0b-4586-8514-f707be037480)
 
 </details>
-
-
-[Spot Ocean](https://spot.io/product/ocean/) manages the scaling of the Kubernetes data plane, and the data generated in the process can be valuable for monitoring your containerized environment. Using well-defined Prometheus metrics for monitoring Ocean helps you understand cluster scaling and debug any issues that may arise. In addition, you can build alerts based on the metrics to address issues in real time and track important trends on a dashboard of different Ocean metrics.
-
-Ocean maintains an official set of metrics, natively scrapable by Prometheus. This set of metrics helps build a 360-degree view of Ocean’s actions while providing application-driven infrastructure.
 
 ## Variables
 
@@ -128,7 +126,7 @@ By monitoring the following key metrics, you can understand how Ocean scales.
 ### Right-Sizing
 
 * Ocean metrics are relevant to Ocean Prometheus Exporter for EKS, AKS, and GKE.
-* [More info](https://docs.spot.io/ocean/tools-and-integrations/prometheus/)
+* [More details](https://docs.spot.io/ocean/tools-and-integrations/prometheus/)
 
 ## Cluster Dependencies / Prerequisites
 
