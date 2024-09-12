@@ -61,7 +61,7 @@ By monitoring the following key metrics, you can understand how Ocean scales.
 
 ### Scaling
 
-Overview:
+**Overview:**
 
 * Cluster nodes’ allocatable resources (CPU, memory, GPU). Source: Ocean.
 * Ocean cluster headroom allocatable resources (CPU, memory, GPU). Source: Ocean.
@@ -69,25 +69,25 @@ Overview:
 * Ocean nodes breakdown by instance lifecycle and availability zone. Source: Ocean.
 * Cluster nodes’ allocatable resources breakdown by instance lifecycle and availability zone. Source: Ocean
 
-Nodes Managed by Ocean Metrics:
+**Nodes Managed by Ocean Metrics**
 
 * Ocean nodes count over time. Source: Ocean.
 * Ocean nodes count by instance lifecycle and availability zone over time. Source: Ocean.
 * Cluster nodes’ allocatable resources count by instance lifecycle and availability zone over time. Source: Ocean.
 
-Resources Utilization Metrics: Cluster resources (CPU, memory, GPU) utilization over time.
+*8Resources Utilization Metrics:** Cluster resources (CPU, memory, GPU) utilization over time.
 
-Pods Metrics:
+**Pods Metrics:**
 
 * Average time for Pod to become ready over time. Source: Kubernetes API server.
 * Pods in Running state. Source: Kubernetes API server.
 
-Scaling Activity Overview:
+**Scaling Activity Overview:**
 
 * Scaling up and down events summaries. Source: Ocean.
 * Failed to scale up and down event summaries. Source: Ocean.
 
-Ocean Controllers Metrics:
+**Ocean Controllers Metrics:**
 
 * Ocean Kubernetes controller status over time. Source: Ocean.
 * Ocean Kubernetes controller pods over time. Source: Kubernetes API server.
@@ -101,7 +101,7 @@ Ocean Controllers Metrics:
 * Cluster cost breakdown during the selected aggregation interval. Source: Ocean.
 * Cluster cost over time during the selected aggregation interval vs the previous period. Source: Ocean.
 
-Compute and Storage Metrics:
+**Compute and Storage Metrics:**
 
 * Average cost per CPU during the selected aggregation interval. Source: Ocean.
 * CPU by instance lifecycle breakdown during the selected aggregation interval. Source: Ocean.
@@ -112,7 +112,7 @@ Compute and Storage Metrics:
 * Cluster CPU usage over time. Source: Ocean.
 * Cluster memory usage over time. Source: Ocean.
 
-Network Metrics:
+**Network Metrics:**
 
 * Cluster network cost during the selected aggregation interval. Source: Ocean.
 * Cluster network usage during the selected aggregation interval. Source: Ocean.
@@ -132,9 +132,9 @@ Network Metrics:
 
 ## Cluster Dependencies / Prerequisites
 
-* Ocean controller. [More information at](https://docs.spot.io/ocean/overview-kubernetes)
-* Ocean network client. [More information at](https://docs.spot.io/ocean/tutorials/install-network-client-v2)
-* Ocean metric exporter. [More information at](https://docs.spot.io/ocean/tools-and-integrations/prometheus/scrape)
+* Ocean controller. [More details](https://docs.spot.io/ocean/overview-kubernetes)
+* Ocean network client. [More details](https://docs.spot.io/ocean/tutorials/install-network-client-v2)
+* Ocean metric exporter. [More details](https://docs.spot.io/ocean/tools-and-integrations/prometheus/scrape)
 * kube-state-metrics service.
 * Prometheus server.
 
