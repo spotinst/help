@@ -350,6 +350,36 @@ You can have multiple containers defined in a single task definition. Check all 
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="awsnodeterminationhandler">Can I deploy AWS node termination handler on Spot nodes?</summary>
+   
+<div style="padding-left:16px">
+
+<a href="https://ec2spotworkshops.com/using_ec2_spot_instances_with_eks/070_selfmanagednodegroupswithspot/deployhandler.html">AWS node termination handler</a> is a DaemonSet pod that is deployed on each spot instance. It detects the instance termination notification signal so that there will be a graceful termination of any pod running on that node, drain from load balancers, and redeploy applications elsewhere in the cluster.
+
+AWS node termination handler makes sure that the Kubernetes control plane responds as it should to events that can cause EC2 instances to become unavailable. Some reasons EC2 instances may become unavailable include:
+* EC2 maintenance events
+* EC2 spot interruptions
+* ASG scale-in
+* ASG AZ rebalance
+* EC2 instance termination using the API or Console
+
+If not handled, the application code may not stop gracefully, take longer to recover full availability, or accidentally schedule work to nodes going down.
+
+The workflow of the node termination handler DaemonSet is:
+1. Identify that a spot instance is being reclaimed.
+2. Use the 2-minute notification window to prepare the node for graceful termination.
+3. Taint the node and cordon it off to prevent new pods from being placed.
+4. Drain connections on the running pods.
+5. Replace the pods on the remaining nodes to maintain the desired capacity.
+
+Ocean does not conflict with aws-node-termination-handler. It is possible to install it, but using aws-node-termination-handler is not required. Ocean continuously analyzes how your containers use infrastructure, automatically scaling compute resources to maximize utilization and availability.
+Ocean ensures that the cluster resources are utilized and scales down underutilized nodes to optimize maximal cost.
+ 
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="excludeinstanceocean">Can I include or exclude instance types in my Ocean cluster?</summary>
 
 <div style="padding-left:16px">
@@ -383,7 +413,7 @@ There are two options for restricting pods from scaling down:
 
 * Virtual node group (VNG): restrict scale down (only available for AWS, ECS, and GKE)
 
-  You can configure [Restrict Scale Down](ocean/features/vngs/attributes-and-actions-per-vng) at the VNG level so the nodes and pods within the VNG are not replaced or scaled down due to the auto scaler resource optimization.  Create a VNG, go to the Advanced tab, then select **Restrict Scale Down**.
+  You can configure [Restrict Scale Down](ocean/features/vngs/attributes-and-actions-per-vng) at the VNG level so the nodes and pods within the VNG are not replaced or scaled down due to the auto scaler resource optimization. Create a VNG, go to the Advanced tab, then select **Restrict Scale Down**.
 
  </div>
 
@@ -454,34 +484,29 @@ Reimport Fargate services with less than 5 security groups and choose only one s
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="awsnodeterminationhandler">Can I deploy AWS node termination handler on Spot nodes?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanlaunchspec">Why am I getting the error: <i>when default launchSpec is used as a template only, can't raise target of Ocean</i>?</summary>
+
+  <div style="padding-left:16px">
+
+   When the <code>useAsTemplateOnly</code> parameter is <i>true</i>, you cannot edit the target capacity in the Ocean cluster configuration.
    
-<div style="padding-left:16px">
+Keep in mind that it may not be necessary to increase the target capacity because Ocean automatically scales instances up and down as needed.
 
-<a href="https://ec2spotworkshops.com/using_ec2_spot_instances_with_eks/070_selfmanagednodegroupswithspot/deployhandler.html">AWS node termination handler</a> is a DaemonSet pod that is deployed on each spot instance. It detects the instance termination notification signal so that there will be a graceful termination of any pod running on that node, drain from load balancers, and redeploy applications elsewhere in the cluster.
+If you want to edit the target capacity:
+1. In the Spot console, go to **Ocean** > **Cloud Clusters**, and select the cluster.
+2. Click **Actions** > **Edit**.
+3. On the Review tab, click **JSON** > **Edit Mode**.
+4. Go to **Compute** > **launchSpecification**.
+5. Change the <b>useAsTemplateOnly</b> parameter to <i>false</i>.
 
-AWS node termination handler makes sure that the Kubernetes control plane responds as it should to events that can cause EC2 instances to become unavailable. Some reasons EC2 instances may become unavailable include:
-* EC2 maintenance events
-* EC2 spot interruptions
-* ASG scale-in
-* ASG AZ rebalance
-* EC2 instance termination using the API or Console
+This will let you manually increase the target of the cluster and the nodes will launch in the default virtual node group.
 
-If not handled, the application code may not stop gracefully, take longer to recover full availability, or accidentally schedule work to nodes going down.
+<img width=900 src="https://github.com/user-attachments/assets/6e422a64-db48-4b43-90d0-d6b5ddc35464" >
 
-The workflow of the node termination handler DaemonSet is:
-1. Identify that a spot instance is being reclaimed.
-2. Use the 2-minute notification window to prepare the node for graceful termination.
-3. Taint the node and cordon it off to prevent new pods from being placed.
-4. Drain connections on the running pods.
-5. Replace the pods on the remaining nodes to maintain the desired capacity.
-
-Ocean does not conflict with aws-node-termination-handler. It is possible to install it, but using aws-node-termination-handler is not required. Ocean continuously analyzes how your containers use infrastructure, automatically scaling compute resources to maximize utilization and availability.
-Ocean ensures that the cluster resources are utilized and scales down underutilized nodes to optimize maximal cost.
- 
  </div>
 
  </details>
+
 
 <!----------------------------------elastigroup---------------------------------->
 ## Elastigroup

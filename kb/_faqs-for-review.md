@@ -448,31 +448,6 @@ The automatic headroom and the headroom per VNG are calculated independently. Th
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanlaunchspec">Why am I getting the error: <i>when default launchSpec is used as a template only, can't raise target of Ocean</i>?</summary>
-
-  <div style="padding-left:16px">
-
-   When the <code>useAsTemplateOnly</code> parameter is <i>true</i>, you cannot edit the target capacity in the Ocean cluster configuration.
-   
-Keep in mind that it may not be necessary to increase the target capacity because Ocean automatically scales instances up and down as needed.
-
-If you want to edit the target capacity:
-1. In the Spot console, go to **Ocean** > **Cloud Clusters**, and select the cluster.
-2. Click **Actions** > **Edit**.
-3. On the Review tab, click **JSON** > **Edit Mode**.
-4. Go to **Compute** > **launchSpecification**.
-5. Change the <b>useAsTemplateOnly</b> parameter to <i>false</i>.
-
-This will let you manually increase the target of the cluster and the nodes will launch in the default virtual node group.
-
-<img width=900 src="https://github.com/user-attachments/assets/6e422a64-db48-4b43-90d0-d6b5ddc35464" >
-
- </div>
-
- </details>
-
-
- <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceank8sreadiness">Why am I getting an <i>exit code 137</i> error?</summary>
 
   <div style="padding-left:16px">
