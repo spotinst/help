@@ -20,10 +20,10 @@ Set up an [API key](spot-connect/integrations/apikeys).
 
    </details>
 
-4. In the center panel of the workflow builder, click the Generic Webhook trigger node to open the right panel.
+4. In the center panel of the workflow builder, click the AWS Health trigger node to open the right panel.
 5. In the **Webhook API Key Name**, select the API key you created earlier.  
 6. Compose your workflow and save it.
-7. In the workflow builder, copy the Webhook API Key Value and the Workflow Webhook URL. When you configure the third-party application, use those saved values.
+7. In the workflow builder, copy the **Webhook API Key Value** and the **Workflow Webhook URL**. When you configure the third-party application, use those saved values.
 
    <details>
    <summary markdown="span">View image</summary>
