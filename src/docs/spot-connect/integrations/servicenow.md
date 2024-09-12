@@ -144,6 +144,95 @@ Update an incident in ServiceNow.
 
 ## Integration Action: ​ServiceNow Webhook Trigger
 
+The integration node triggers the automatic execution of a workflow from a selected ServiceNow Category.
 
+1. [Create an API key](spot-connect/integrations/apikeys) to use for ServiceNow webhooks.
+2. In the Spot console, select **Connect** > **Workflows**.
+3. Click **New Workflow** and enter a name for the workflow.
+4. Select trigger type **ServiceNow** > **Create Workflow**.
 
+   <details>
+   <summary markdown="span">View image</summary>
+   <img width=900 src="https://github.com/user-attachments/assets/8ae3f041-326d-49dd-a35d-cf5457443556" />
 
+   </details>
+
+5. In the center panel of the workflow builder, click the ServiceNow trigger node to open the right panel.
+6. In the **Webhook API Key Name**, select the API key you created earlier.  
+7. Compose your workflow and save it.
+8. In the workflow builder, copy the **Webhook API Key Value** and the **Workflow Webhook URL**. When you configure the third-party application, use those saved values.
+
+#### Setting up Webhook Trigger Action for ServiceNow
+
+1. [Create an outbound REST message](https://developer.servicenow.com/dev.do#!/learn/learning-plans/xanadu/servicenow_application_developer/app_store_learnv2_rest_xanadu_creating_an_outbound_rest_message) in ServiceNow:
+   * Paste the <i>webhook API key value</i> in the **Endpoint**.
+   * Set **Authentication** to <i>No Authentication</i>.
+
+2. Reopen the REST message.
+3. Create an [HTTP method](https://developer.servicenow.com/dev.do#!/learn/learning-plans/xanadu/servicenow_application_developer/app_store_learnv2_rest_xanadu_http_methods) in ServiceNow:
+   * Name it **POSTCall**
+   * Select **HTTP method** <i>POST</i>
+   * In **HTTP Request**, add these to the headers:
+      * **x-api-key**: paste the <i>webhook API key value</i>
+      * **accept**: <i>application/json</i>
+      * **content-type**: <i>application/json</i>
+   * In **Content**, paste in the sample JSON and add the fields from the incident table:
+      ````json
+      {
+        "sys_id":"${sys_id}",
+        "number":"${number}",
+        "short_description": "${short_description}",
+        "urgency": "${urgency}",
+        "description": "${description}",
+        "impact": "${impact}",
+        "state": "${state}",
+        "instance_id":"${instance_id}"
+       }
+      ````
+
+4. Reopen the HTTP method.
+5. In **Related Links**, click **Auto-generate variables** > **Update**.
+6. Go to **Business Rules** > **New**.
+7. Enter a name and select a table.
+8. Select **Active** > **Advanced**.
+9. Enter this sample script and edit it to include your fields. Make sure:
+    * **YourOutboundRestCall** is the name you gave in the outbound REST call
+    * **sn_ws.RESTMessageV2()** is the name of your HTTP method
+
+    ````javascript
+    (function executeRule(current, previous /*null when async*/ ) {
+    // Add your code here
+    function jsonEncode(str) {
+        str = new JSON().encode(str);
+        return str.substring(1, str.length - 1);
+    }
+
+    try {
+        var r = new sn_ws.RESTMessageV2('YourOutboundRestCall', 'POSTCall');
+        r.setStringParameter("sys_id", current.sys_id);
+        r.setStringParameter("number", current.number);
+        r.setStringParameter("short_description", current.short_description);
+        r.setStringParameter("urgency", current.urgency);
+        r.setStringParameter("description", jsonEncode(current.description + ''));
+        r.setStringParameter("impact", current.impact);
+        r.setStringParameter("state", current.state);
+        r.setStringParameter("instance_id", gs.getProperty("instance_name"));
+        
+        var response = r.execute();
+        var responseBody = response.getBody();
+        var httpStatus = response.getStatusCode();
+        gs.log("getBody: " + response.getBody());
+        gs.log("getStatusCode: " + response.getStatusCode());
+        gs.log("getHeaders " + response.getHeaders());
+    } catch (ex) {
+        var message = ex.message;
+    }
+   })(current, previous);
+ 
+   ````
+11. On When to Run, select **After** > **Insert**.
+12. Click **Submit**.
+
+When you create a new incident in the incident table, a call will be made to Spot Connect with the JSON you defined. The JSON will include the fields in the new incident.
+
+You can create a new Spot Connect workflow and add the ServiceNow_Alert action to it.
