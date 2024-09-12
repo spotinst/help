@@ -10,7 +10,8 @@ The data on the page is summarized by cloud service provider. If you have multip
 
 If you select Eco, you’re redirected to the Eco Optimization page.
 
-<img width="900" alt="optimizationvcpuhours1" src="https://github.com/user-attachments/assets/a59baaf9-2a9b-4f26-b34b-91696eec84e7">
+<img width="900" src="https://github.com/user-attachments/assets/736d6406-ee62-4196-aa82-c92a595e49e7" />
+
 
 ## What can you do in the dashboard?
 
