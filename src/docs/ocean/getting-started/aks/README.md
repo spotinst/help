@@ -153,7 +153,7 @@ In this step:
 
 To create your Virtual Node Groups:
 
-![aks-node-pools-listed](https://github.com/user-attachments/assets/ca9f6120-45e7-46db-b465-0e1830ec73d5)
+![vng-template-a](https://github.com/user-attachments/assets/56ffec63-8243-4840-9a19-8709da334a9f)
 
 1. Select 1 node pool from the list. The selected node pool’s configuration is imported to the Virtual Node Group Template and used later for other Virtual Node Groups you create.
 
@@ -176,7 +176,7 @@ To create your Virtual Node Groups:
 
 The selected node pool in this example has a similar configuration to the 4 node pools listed after it. Later, when you migrate your nodes to Ocean, You can consolidate the 5 node pools into the custom Virtual Node Group (created from the 1 selected node pool).
 
-![aks-node-pools-listed-rep](https://github.com/user-attachments/assets/cf367d88-f022-4c32-a178-76206e3ceaf6)
+![vng-template-b](https://github.com/user-attachments/assets/f74b10c9-a730-4f1b-9f65-e0ff7c50dbb6)
 
 4. Click the Virtual Node Group link and edit attributes as required.
 
@@ -247,7 +247,7 @@ Additional Tips:
 
 <summary markdown="span">View image</summary>
 
-<img src="https://github.com/user-attachments/assets/982f9e23-230c-4538-bd13-6c227d896a14" />
+![tolerance1](https://github.com/user-attachments/assets/0794cb95-0db2-4cb0-bceb-66150dc45cf4)
 
 </details>
 
@@ -308,7 +308,7 @@ for pod in $pods; do echo "Deleting pod: $pod" kubectl delete pod $pod -n <names
 
 ## Step 5: Review and Configure  
 
-<img height="400" src="https://github.com/user-attachments/assets/baa885cf-728e-4dee-bdf6-f598d22f1dbb" />
+![aks-create-cluster-review2](https://github.com/user-attachments/assets/d7479a65-8536-4a34-a62a-b46106128443)
 
 You can:
 
