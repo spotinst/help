@@ -1,41 +1,35 @@
-# Manage Virtual Node Groups
+# Manage AWS Virtual Node Groups
+
+Cloud service provider relevance: AWS Kubernetes
+
+This topic describes how to work with Virtual Mode Groups for AWS Kubernetes.
 
 [Virtual Node Groups](ocean/features/launch-specifications.md) (VNGs) provide a single layer of abstraction that enables you to manage different types of workloads on the same cluster.
 
-This tutorial describes how to create, view, edit, and delete VNGs in Ocean.
-
-## Relevance
-
-The following procedures are relevant for users of Ocean Kubernetes on AWS.
-
 ## Prerequisites
 
-- An Ocean cluster up and running
+An Ocean cluster up and running
 
-## Create a VNG
+## Create a Virtual Node Group From Scratch
 
-This procedure describes how to create a VNG from scratch.
+1. In the left main menu, click **Ocean > Cloud Clusters**.
+2. Select a cluster from the list of clusters.
+3. Click the **Virtual Node Groups** tab
+4. Click **Create VNG**.
 
-1. In the console, go to Ocean/Cloud Clusters and click the Ocean Cluster you want to add a VNG to.
-2. Click the Virtual Node Groups tab.
+![import-or-manual](https://github.com/user-attachments/assets/63cb8805-eb79-449c-858e-dc3d483bb473)
 
-<img src="/ocean/_media/tutorials-manage-vngs-02.png" width="719" height="262" />
-
-3. Click Create New Virtual Node Group.
-
-<img src="/ocean/_media/tutorials-manage-vngs-03.png" />
-
-4. Click Configure Manually or choose to import from an existing [Autoscaling Group](ocean/tutorials/manage-virtual-node-groups?id=create-a-vng-from-an-asg) (AWS) or Node Pool (AKS and GKE).
-5. Click Continue.
+4. Click **Configure Manually** or choose to import from an existing [Autoscaling Group](ocean/tutorials/manage-virtual-node-groups?id=create-a-vng-from-an-asg) (AWS) or Node Pool (AKS and GKE).
+5. Click **Continue**.
 
 When you choose Import, a one-time process occurs. Import copies values from the cloud provider node group entity to the Ocean configuration. Afterwards, there is no active connection between these two entities. Ocean will provision new VMs, not as part of a managed Kubernetes service of node group entities.
 
 ### New Virtual Node Group Page
 
 1. In the New Virtual Node Group page, enter the VNG parameters you want to customize. Parameters that are left blank use values from the default VNG, as indicated in the illustration below.
-2. When you have finished customizing the VNG, click Save. The VNG parameters are described below.
+2. When you have finished customizing the Virtual Node Group, click **Save**. The VNG parameters are described below.
 
-<img src="/ocean/_media/tutorials-manage-vngs-02a1.png" width="496" height="433" />
+![create-custom-vng](https://github.com/user-attachments/assets/1dd6db4f-b7e5-40fa-a5d9-26680179a59e)
 
 ## Configuration Parameters
 
@@ -58,14 +52,17 @@ This section enables you to inform Ocean about the labels and taints that are se
 
 ## Advanced Parameters
 
-- Maximum Nodes: The upper limit number of instances that you can scale up to.
-- Block Device Mapping: Block devices that are exposed to the instance. You can specify virtual devices and EBS volumes. This parameter and rootVolumeSize cannot be in the spec at the same time.
-- Tags: Key and Value pairs used to apply tags on the EC2 machine. Specific tags can be applied per VNG.
-- Headroom: Spare resource capacity management enabling fast assignment of Pods without waiting for new resources to launch.
-- Reserve: The number of units to retain as headroom, where each unit has the defined headroom CPU and memory.
-- CPU (millicpu): Optionally configure the number of CPUs to allocate to the headroom. CPUs are denoted in millicores, where 1000 millicores = 1 vCPU.
-- Memory (MiB): Optionally configure the amount of memory (MiB) to allocate to the headroom.
-- GPUs: Optionally configure the number of GPUs to allocate for headroom unit.
+* Maximum Nodes: The upper limit number of instances that you can scale up to.
+* Minimum Nodes: 
+* Spot %: The percentage of spot nodes to use in the Virtual Node Group.
+* Restrict Scale-Down. When turned on, Ocean will not scale down nodes in this Virtual Node Group for bin packing purposes unless they are empty.
+* Block Device Mapping: Block devices that are exposed to the instance. You can specify virtual devices and EBS volumes. This parameter and rootVolumeSize cannot be in the spec at the same time.
+* Tags: Key and Value pairs used to apply tags on the EC2 machine. Specific tags can be applied per VNG.
+* Headroom: Spare resource capacity management enabling fast assignment of Pods without waiting for new resources to launch.
+  * Reserve: The number of units to retain as headroom, where each unit has the defined headroom CPU and memory.
+  * CPU (millicpu): You can optionally configure the number of CPUs to allocate to the headroom. CPUs are denoted in millicuries, where 1000 millicuries = 1 vCPU.
+  * Memory (MiB): You can optionally configure the amount of memory (MiB) to allocate to the headroom.
+  * GPUs: Optionally configure the number of GPUs to allocate for headroom unit. 
 
 ## Example: GPU Instance
 
@@ -80,6 +77,8 @@ resources:
 You can use a node selector or node affinity that requires your GPU-based pods to select the specific VNG containing the GPU image, based on the custom node label configured in the GPU VNG.
 
 ## Choose Instance Types per VNG
+
+**I ASSUME THAT THIS NOW STARTS WITH MANUAL SELECTION** 
 
 To choose spot instance types for a specific VNG, do the following:
 
@@ -132,7 +131,7 @@ Note that when you update the default VNG instance types, Ocean actually updates
 <img src="/ocean/_media/tutorials-manage-vngs-02-5.png" />
 
 
-## Set Advanced Parameters via the Console
+## Configure Instance Types
 
 This section describes selecting instance sizes in your cluster per Virtual Node Group (custom or template) according to your application needs. An advanced attributes filter lets you search for the optimal instances for the task from any of the families available on the [Amazon - LINK REQUIRED]() cloud. Once you have sized your instances, Ocean can use your customization for scaling processes.
 
@@ -142,11 +141,23 @@ This section describes selecting instance sizes in your cluster per Virtual Node
   * Automatic: Let Spot select your instance types and sizes according to the needs of your applications.
   * Advanced Selection: Use attribute filters to select instance types with customized sizes from which Ocean can scale.
 
-![aws-instance-panel](https://github.com/user-attachments/assets/2a8feba5-6817-4ad3-975e-62b653eb30ba)
+![aws-instance-panel](https://github.com/user-attachments/assets/28053b9c-359c-406a-b158-5be3c8d7caee)
 
 2. If you selected Manual,...
 3. If you selected Automatic, click **Save** to complete the procedure.
-4. If you selected Advanced Selection: In the VM Selection list, view each VM type's currently selected size, vCPU, Memory (GiB), and GPU units.
+4. If you selected Advanced Selection: 
+
+
+### Configure Instance Types Manually
+
+![aws-instance-panel-man-selection](https://github.com/user-attachments/assets/d83b3563-ea28-49e4-be5e-25ddb406e3a1)
+
+### Configure Instance Types Using Advanced Filters
+
+![advanced-filters](https://github.com/user-attachments/assets/e7b40473-c45d-432f-a50b-166f9411f047)
+
+
+In the VM Selection list, view each VM type's currently selected size, vCPU, Memory (GiB), and GPU units.
 The Advanced VM Size Filtering controls to the right of the VM Selection list let you filter these attributes for the VMs:
   * Upper and lower limits for No. Of vCPUs (up to 256).
   * Upper and lower limits for the Memory (up to 1024 GiB).
@@ -161,11 +172,6 @@ VM Types.
   * Minimum no. of NICs (up to 16).
   * Turn Accelerated networking on or off.
   * Click Apply to filter the VM Selection list. All your filters are applied to the VM list. A color-coded bar appears above the list to provide a rating for the applied filter.
-
-
-
-
-
 
 
 ## Create a VNG from an ASG
