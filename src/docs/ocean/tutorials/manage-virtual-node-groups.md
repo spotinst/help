@@ -136,13 +136,29 @@ Note that when you update the default VNG instance types, Ocean actually updates
 
 This section describes selecting instance sizes in your cluster per Virtual Node Group (custom or template) according to your application needs. An advanced attributes filter lets you search for the optimal instances for the task from any of the families available on the [Amazon - LINK REQUIRED]() cloud. Once you have sized your instances, Ocean can use your customization for scaling processes.
 
-In the Virtual Node Groups tab, scroll down to the Instance Types panel, which provides these options:
+1. In the Virtual Node Groups tab, scroll down to the Instance Types panel, which provides these options:
 
-* Manual Selection: You can manually define a list of instance types that Ocean can scale from:
-* Automatic: Let Spot select your instance types and sizes according to the needs of your applications.
-* Advanced Selection: Use attribute filters to select instance types with customized sizes from which Ocean can scale.
+  * Manual Selection: You can manually define a list of instance types that Ocean can scale from:
+  * Automatic: Let Spot select your instance types and sizes according to the needs of your applications.
+  * Advanced Selection: Use attribute filters to select instance types with customized sizes from which Ocean can scale.
 
-
+2. If you selected Manual,...
+3. If you selected Automatic, click **Save** to complete the procedure.
+4. If you selected Advanced Selection: In the VM Selection list, view each VM type's currently selected size, vCPU, Memory (GiB), and GPU units.
+The Advanced VM Size Filtering controls to the right of the VM Selection list let you filter these attributes for the VMs:
+  * Upper and lower limits for No. Of vCPUs (up to 256).
+  * Upper and lower limits for the Memory (up to 1024 GiB).
+  * Upper and lower limits for the No. Of GPUs (up to 8).
+  * GPU type.
+  * Exclude Series: You can exclude any series by clicking Exclude in the VM Selection List row for that series (or by typing the series in the Exclude Series field. The series then appears in the Exclude Series filter in the filtering controls.
+  * Include Series: You can include VMs in the Include Series field. For example, to select a GPU type, include the series and VM types.
+VM Types.
+  * Architectures (values taken from your Virtual Node Group template).
+  * Disk performance (standard or premium).
+  * Minimum no of data disks (up to 64).
+  * Minimum no. of NICs (up to 16).
+  * Turn Accelerated networking on or off.
+  * Click Apply to filter the VM Selection list. All your filters are applied to the VM list. A color-coded bar appears above the list to provide a rating for the applied filter.
 
 
 
@@ -210,7 +226,7 @@ To see the configuration details of a VNG, click on the Name of the VNG.
 
 ### Edit in JSON Format
 
-In the console, you can also review and edit the configuration directly in JSON format. This provides more flexibility and enables you to utilize VNG features that are supported in the API without leaving the Ocean console. (These are usually new features that have been implemented in the API, but are not yet accessible in the UI.)
+You can also review and edit the configuration directly in JSON format in the console. This provides more flexibility and enables you to utilize VNG features that are supported in the API without leaving the Ocean console. (These are usually new features that have been implemented in the API, but are not yet accessible in the UI.)
 
 1. To review and edit a VNG in JSON format, go to the Virtual Node Groups tab and click on the Name of the VNG.
 2. Click JSON on the upper right.
