@@ -142,6 +142,8 @@ This section describes selecting instance sizes in your cluster per Virtual Node
   * Automatic: Let Spot select your instance types and sizes according to the needs of your applications.
   * Advanced Selection: Use attribute filters to select instance types with customized sizes from which Ocean can scale.
 
+![aws-instance-panel](https://github.com/user-attachments/assets/2a8feba5-6817-4ad3-975e-62b653eb30ba)
+
 2. If you selected Manual,...
 3. If you selected Automatic, click **Save** to complete the procedure.
 4. If you selected Advanced Selection: In the VM Selection list, view each VM type's currently selected size, vCPU, Memory (GiB), and GPU units.
