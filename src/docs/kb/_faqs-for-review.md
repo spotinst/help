@@ -297,7 +297,7 @@ These internal logging errors occur because of a misconfiguration in the Okta SS
 
 After you upgrade to Ocean Controller Version 2, you may get many SIEM alerts due to <i>SelfSubjectAccessReview</i> requests to your API server. This is expected behavior.
 
-With the Version 2 Ocean Controller, Spot gets reports for any custom resouce you gave it access to through the controller cluster role. For example, Argo rollout custom resrouce or VerticalPodAutoscaler for rightsizing. These require Spot to list the custom resources in the cluster and make sure there's read access. This happens on controller start up and periodically in addition.
+With the Version 2 Ocean Controller, Spot gets reports for any custom resource you gave it access to through the controller cluster role. For example, an Argo Rollouts custom resource or a VerticalPodAutoscaler for rightsizing. These require Spot to list the custom resources in the cluster and make sure there's read access. This happens when the  controller starts up and on a regular basis when it's running.
 
  </div>
 
