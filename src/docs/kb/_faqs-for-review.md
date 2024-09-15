@@ -290,7 +290,7 @@ These internal logging errors occur because of a misconfiguration in the Okta SS
 ## Ocean
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanssar">Should I get many <i>SelfSubjectAccessReview</i> requests after upgrading to Ocean Controller Version 2?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanssar">Should I get frequent <i>SelfSubjectAccessReview</i> requests after upgrading to Ocean Controller Version 2?</summary>
 
   <div style="padding-left:16px">
 
