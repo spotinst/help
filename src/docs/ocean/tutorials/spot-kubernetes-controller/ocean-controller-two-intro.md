@@ -16,7 +16,7 @@ The Ocean Controller offers the following functionality and benefits:
 
 *   Establishes a binding between the Kubernetes cluster and the pertinent Ocean resources using the configured Spot Account ID, Spot Token, and a unique Cluster Identifier for each cluster. 
 
-*   Resides within your Kubernetes cluster and actively listens for resource events. It seamlessly pushes modified resources to the Spot SaaS environment. The Spot SaaS environment houses a dedicated Ocean Autoscaler, which promptly scales your Kubernetes clusters in an optimized manner when triggered. 
+*   Resides within your Kubernetes cluster and actively listens for resource events. It seamlessly pushes modified resources to the Spot SaaS environment. The Spot SaaS environment houses a dedicated Ocean Autoscaler, which promptly scales your Kubernetes clusters optimally when triggered. 
 
 *   Minimizes its footprint within the cluster, resulting in low external network traffic when no changes occur. This attribute presents opportunities for cost savings. 
 
@@ -25,6 +25,22 @@ By installing Ocean Controller Version 2, you can effortlessly integrate Ocean w
 Ocean Controller supports Linux OS only. 
 
 >**Note**: Windows OS is not supported.
+
+## Ocean Controller Version 2 Limitations
+
+Ocean Controller Version 2 handles start-up taints differently. In Ocean Controller Version 1, start-up taints were not supported. In Ocean Controller Version 2, the Controller actively removes unknown taints other than those listed below. This change was implemented to enhance the scale-up process, making it more accurate and faster.
+
+ * "node.kubernetes.io/"
+ * "node-role.kubernetes.io/"
+ * "node.cloudprovider.kubernetes.io/"
+ * "kubernetes.azure.com/"
+ * "cloud.google.com/"
+ * "cni.istio.io/"
+ * "ebs.csi.aws.com/"
+ * "efs.csi.aws.com/"
+ * "node.cilium.io/"
+
+When Ocean encounters unknown (custom taints) not predefined on the Virtual Node Group, the Controller removes them. This action is crucial for preventing scaling issues when scaling up nodes for specific pods. If the Virtual Node Group lacks these taints, the Ocean Autoscaler will still try to simulate the pods on the nodes, but without the taints, the pods won't be able to be scheduled on those nodes. Consequently, the Controller's default behavior is to remove unknown custom taints to ensure smooth scaling operations.
 
 ## Related Topics
 
