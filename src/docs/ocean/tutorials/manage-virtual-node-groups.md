@@ -125,11 +125,30 @@ Above the sliders, Instance Types Selected indicates how many of the available i
 To restore the instance types in a VNG to the default configuration, click Restore to Default. This behaves as follows:
 
 - For a Custom VNG: The instance types are set to all the instance types that are available in the Default VNG.
-- For Default VNG: The instance types are set to the default Ocean configuration, which means that all instance types are available. Then Ocean can choose any combination of instance types that best fit the workload requirements.
+- For Default VNG: The instance types are set to the default Ocean configuration, meaning all instance types are available. Then, Ocean can choose any combination of instance types that best fit the workload requirements.
 
 Note that when you update the default VNG instance types, Ocean actually updates the Ocean cluster types since these have the same configuration.
 
 <img src="/ocean/_media/tutorials-manage-vngs-02-5.png" />
+
+
+## Set Advanced Parameters via the Console
+
+This section describes selecting instance sizes in your cluster per Virtual Node Group (custom or template) according to your application needs. An advanced attributes filter lets you search for the optimal instances for the task from any of the families available on the [Amazon - LINK REQUIRED]() cloud. Once you have sized your instances, Ocean can use your customization for scaling processes.
+
+In the Virtual Node Groups tab, scroll down to the Instance Types panel, which provides these options:
+
+* Manual Selection: You can manually define a list of instance types that Ocean can scale from:
+* Automatic: Let Spot select your instance types and sizes according to the needs of your applications.
+* Advanced Selection: Use attribute filters to select instance types with customized sizes from which Ocean can scale.
+
+
+
+
+
+
+
+
 
 ## Create a VNG from an ASG
 
