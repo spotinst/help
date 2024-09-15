@@ -12,7 +12,7 @@ Your account or agreement type must be either:
 * You must be an [Enterprise Agreement (EA) Administrator](https://learn.microsoft.com/en-us/azure/cost-management-billing/manage/understand-ea-roles) or [Microsoft Customer Agreement (MCA) Billing Account Reader](https://learn.microsoft.com/en-us/azure/cost-management-billing/manage/understand-mca-roles). 
 * A Member Account only. The account cannot be a guest user account. 
  
-## Step 1: Connect to your Spot Account 
+## Connect to your Spot Account 
 
 1. Enter an account name and click **Create Account**. 
 
@@ -42,7 +42,7 @@ Your account or agreement type must be either:
 
 ![connect-azure-sub-4](https://github.com/spotinst/help/assets/106514736/9cf7236f-9d94-488d-aa24-0a13db61d595)
 
-11. In the Register an application window, enter the application you registered in the previous steps and copy the Application (client) ID and Directory (tenant) ID to provide in the next step. Click **Register**. 
+11. In the _Register an application_ window, enter the application you registered in the previous steps and copy the Application (client) ID and Directory (tenant) ID to provide in the next step. Click **Register**. 
 
 ![connect-azure-sub-5](https://github.com/spotinst/help/assets/106514736/6cae12e2-2b45-463e-a079-9ad94775d61a)
 
@@ -54,7 +54,7 @@ Your account or agreement type must be either:
   - Enterprise Agreement Only: Select the _Agreement Type_ **Enterprise Agreement** and enter the [Enterprise Agreement Billing Account ID](https://learn.microsoft.com/en-us/azure/cost-management-billing/manage/direct-ea-administration#view-enrollment-details). 
   - Microsoft Customer Agreement Only: Select the _Agreement Type_ **Microsoft Customer Agreement** and enter the [Microsoft Customer Agreement Billing Account ID](https://learn.microsoft.com/en-us/azure/cost-management-billing/understand/mca-overview#check-access-to-a-microsoft-customer-agreement). 
 
-## Step 4: Create Certificates and Secrets 
+## Create Certificates and Secrets 
 
 In the previous app registration that was created, complete the following steps to create a client secret: 
  
@@ -67,17 +67,13 @@ In the previous app registration that was created, complete the following steps 
 
 4. In the Billing Engine Wizard, paste the application secret.  
 
-## Step 5: Assign Enrollment Reader Role to the App Registration 
+## Assign Enrollment Reader Role to the App Registration 
 
 Assign the enrollment reader role only for Enterprise Agreement. The Enrollment Reader Role can only be applied using a Microsoft API. Learn how to [add the role using an API call](https://learn.microsoft.com/en-us/azure/cost-management-billing/manage/assign-roles-azure-service-principals#assign-enrollment-account-role-permission-to-the-spn). 
 
-
-| ROLE              | ACTIONS ALLOWED                                                                                                                                                                                                                                                                                       | ROLE DEFINITION ID                    |
-|-------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|
-| EnrollmentReader  | Enrollment readers can view data at the enrollment, department, and account scopes. The data contains charges for all of the subscriptions under the scopes, including across tenants. Enrollment readers can view the Azure Prepayment (previously called monetary commitment) balance associated with the enrollment.  | 24f8edb6-1668-4659-b5e2-40bb5f3a7d7e  |
-|                   |                                                                                                                                                                                                                                                                                                       |                                       |
-|                   |                                                                                                                                                                                                                                                                                                       |                                       |
-|                   |                                                                                                                                                                                                                                                                                                       |                                       |
+| ROLE             | ACTIONS ALLOWED                                                                                                                                                                                                                                                                                                         | ROLE DEFINITION ID                   |
+|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------|
+| EnrollmentReader | Enrollment readers can view data at the enrollment, department, and account scopes. The data contains charges for all of the subscriptions under the scopes, including across tenants. Enrollment readers can view the Azure Prepayment (previously called monetary commitment) balance associated with the enrollment. | 24f8edb6-1668-4659-b5e2-40bb5f3a7d7e |
 
 **Example of Header Input**: 
 
