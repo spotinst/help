@@ -147,10 +147,9 @@ This section describes selecting instance sizes in your cluster per Virtual Node
 3. If you selected Automatic, click **Save** to complete the procedure.
 4. If you selected Advanced Selection: 
 
-
 ### Configure Instance Types Manually
 
-![aws-instance-panel-man-selection](https://github.com/user-attachments/assets/d83b3563-ea28-49e4-be5e-25ddb406e3a1)
+![aws-instance-panel-man-selection](https://github.com/user-attachments/assets/b116f33a-d93c-43ce-bed8-9e0225be3770)
 
 ### Configure Instance Types Using Advanced Filters
 
@@ -174,7 +173,7 @@ VM Types.
   * Click Apply to filter the VM Selection list. All your filters are applied to the VM list. A color-coded bar appears above the list to provide a rating for the applied filter.
 
 
-## Create a VNG from an ASG
+## Create a VNG from an Autoscaling Group
 
 The following procedure describes how to create a VNG in an Ocean cluster using the configuration from an existing Amazon autoscaling group. This process is referred to as importing a VNG from an ASG.
 
