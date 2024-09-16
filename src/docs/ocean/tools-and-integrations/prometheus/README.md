@@ -32,7 +32,7 @@ These counter-type metrics help track the rate of addition and removal of nodes 
 * `odToSpotReplacement`—The node was scaled up/down due to a replacement from an on-demand to a spot node. The on-demand node was launched because there was no available spot node in the market then. Ocean continues scanning the market for an available spot node and reverts as soon as one is available.  
 * `autoHealingReplacement`—The node was scaled up/down due to a replacement from an unhealthy instance to a new one. Ocean checks the instance’s status after the grace period, and if an instance fails the health check, it is automatically replaced with a new one.  
 * `riUtilizationReplacement` (relevant only to AWS)—The node was scaled up/down due to a replacement from spot/OD to RI. Ocean constantly monitors your account's available RIs or Savings Plans (when the `strategy.utilizeReservedInstances` or `utilizeCommitments` flag is	enabled). If an Ocean-monitored node runs as a spot or OD, Ocean will try to replace it with the available RI or Savings Plan nodes. 
-* `recoveryReplacement`—Since the provider took the instance, the node was scaled down. A new node was scaled up to replace it as part of the recovery process. 
+* `recoveryReplacement`—Since the provider took the instance, the node was scaled down. As part of the recovery process, a new node was scaled up to replace it. 
 * `revertToLowerCostReplacement` -  The node was scaled up/down due to the ‘Revert to lower cost’ process. For more information, click [here](ocean/features/revert-to-lower-cost-node?id=revert-to-lower-cost-node). 
 * `shutdownHoursActivity` - The node was scaled up/down due to shutdown hours set on your cluster. For more information, click [here](ocean/features/running-hours?id=shutdown-hours).  
 * `clusterRollReplacement` - The node was scaled up/down due to a cluster roll in your cluster. For more information, click [here](ocean/features/roll?id=roll).  
@@ -48,14 +48,16 @@ nodes_added_total{reason="revertToLowerCostReplacement", lifecycle="Spot", az="u
 nodes_added_total{reason="scaleUpForPendingPods", lifecycle="Spot", az="us-west-2b", vm_type="r5a.4xlarge", vng_name = “Vng2”, ocean_id= “o-XXXXX”} 13
 ```
 
-### ocean_failed_scale_up and ocean_failed_scale_down
-
+### ocean_failed_scale_up_total and ocean_failed_scale_down_total
 These counter-type metrics help track the rate of failed scale-ups and scale-down operations in the cluster and the
 reasons behind them, as reflected in a dedicated label called `Reason.` `Reason` includes values such as:
 
+<details>
+   <summary markdown="span">More about...</summary>
+
 * `auto_scaler_can't_handle_pvc` - failed to scale up. PVC can’t be handled.
 * `no_instances_with_requested_resources`- failed to scale up. No instances matched all the pods' requested resources.
-* `vngs_labels_not_match_all_affinities` - failed to scale up the instance. Pod’s affinity/ anti-affinity could not be
+* `vngs_labels_not_match_all_affinities` - failed to scale up the instance. Pod’s affinity/anti-affinity could not be
 satisfied by the current group’s Virtual Node Group configuration.
 * `topology_spread_constrains` - failed to scale up. pod topology spread constraints could not be satisfied by the current
 group configuration.
@@ -67,6 +69,20 @@ group configuration.
 of running instances.
 * `cluster_min_instance_count_reached` - failed to scale down. Clusters have reached the minimum capacity of
 running instances.
+* `unsupported_markets` - instance type is not supported in the AZ. 
+* `markets_with_insufficient_capacity` - insufficient requested instance type in the requested zone.
+* `insufficient_ip_in_subnet` - insufficient free addresses in subnet.
+* `ip_address_in_use` - can’t create spot instance in AWS for invalid parameter value.
+* `AMI_and_instance_type_architecture_mismatch` = AMI architecture mismatch.
+* `invalid_request_parameter_value` - can’t create spot instance in AWS for invalid parameter value.
+* `request_failed_validation` - Can't create spot instances in AWS because of validation error.
+* `max_spot_instances_exceeded` - max amount of spots reached. 
+* `rate_limit_exceeded` - request limit exceeded. 
+* `unsupported_ami_architecture` - The architecture of the specified instance type we were trying to scale does not match the architecture of the specified AMI.
+* `duplicate_target_group_name` - Have 2 or more target groups with the same name.
+* `authorization_failure` - The provided credentials could not be validated. This can occur while trying to associate an Elastic IP address you don’t own or trying to use an AMI for which you do not have permission.
+* `Invalid_AMI_configuration` - invalid AMI configuration.
+* `Unauthorized_Operation ` - Failed to create a target group or failed fetching subnets from AWS due to ש permission error.
 
 Prometheus metric type: counter
 
@@ -77,7 +93,9 @@ Example:
 ocean_failed_scale_ups{oceanId="o-2cf2e886", reason="oceanId="o-2cf2e886", reason="cant_scale_up_pods_for_vngs", vngId="ols-9238181b", vngName="test-new”", vngId="ols-9238181b", vngName="test-new”}
 ocean_failed_scale_downs{oceanId="o-2cf2e886", reason="cluster_min_instance_count_reached", vngId="Unknown", vngName="unKnown”}
 ```
->**Note**: If the vngId and vngName are ‘unknown’: at this point, when the pod was pending and waiting for the Ocean Autoscaler to scale up a node, the Ocean Autoscaler did not know which Virtual Node Group the pod should run in. 
+>**Note**: If the vngId and vngName are ‘unknown’: at this point, when the pod was pending and waiting for the Ocean Autoscaler to scale up a node, the Ocean Autoscaler did not know which Virtual Node Group the pod should run in.
+
+</details>
 
 ## Tracking Ocean Managed Resources
 
