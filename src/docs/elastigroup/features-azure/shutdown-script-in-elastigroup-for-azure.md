@@ -46,7 +46,7 @@ The Spot Agent is required to run a shutdown script. You can add the script for 
 
 For Python 3.x versions, click Add Python 3.x script. The following script is added to the Custom Data.
 
-Note: Only version 3.7 and later is supported.  
+Note: Only version 3.7 and later is supported.
 
 ```bash
 #!/usr/bin/env bash
@@ -85,8 +85,4 @@ Once you have added the script for installing the Spot Agent, you can add the ac
 - Shutdown scripts are executed as the root user, sudo is not required in the script. Remember that any files you create will be owned by root. For non-root permissions to files, modify permissions accordingly.
 - The shutdown script does not run interactively. You cannot include commands that require user feedback (such as rm without the -f flag).
 
-> **Tip**: It is recommended to define at least 120 seconds as the draining timeout to give the shutdown script enough time to run properly.  
-
-## What’s Next?
-
-Learn more about [Health Checks and Autohealing](https://docs.spot.io/elastigroup/tutorials/azure/set-health-checks-and-autohealing).
+> **Tip**: It is recommended to define at least 120 seconds as the draining timeout to give the shutdown script enough time to run properly.

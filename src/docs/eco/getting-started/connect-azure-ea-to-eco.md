@@ -18,8 +18,10 @@ Microsoft EA Azure administrators
 ### Step 1. Create User Group for Eco Cost Specialist Guest Users
 
 Complete the procedure below.
+
 1. Log into the [Azure portal](https://portal.azure.com/).
 2. Create an Azure user group for the Eco Cost Specialist Team.
+
    - In your Microsoft Azure account go to the Groups page and click New Group.
 
    <img src="/connect-your-cloud-provider/_media/connect-azure-ea-n001.png" />
@@ -47,6 +49,7 @@ To apply the Cost Management Reader role to the Management Group or Subscription
 ### Step 3: Apply Reservation Reader Role
 
 To apply the Reservation Reader role to the user group, complete the procedure below.
+
 1. Navigate to the Reservations Page
 
 <img src="/connect-your-cloud-provider/_media/connect-azure-ea-n006.png" />
@@ -60,9 +63,9 @@ Apply the Reservation Reader Role to the User Group created earlier.
 1. Navigate to Users.
 2. Select New Guest User and complete the required fields. Use the following name and email address:
 
-|  |  |
-|---|---|
-|  Eco Cost Specialist   |  ECOAZAD@netapp.com   |
+|                     |                    |
+| ------------------- | ------------------ |
+| Eco Cost Specialist | ECOAZAD@netapp.com |
 
 3. For the user, click Invite. This sends a notification to the Eco guest user via email.
 
@@ -86,7 +89,3 @@ Apply the Reservation Reader Role to the User Group created earlier.
    - Auth Type: Work or school account
    - Notification frequency: None
    - Lifecycle Notification Suppression: No
-
-## What’s Next?
-
-Learn [how Eco works](eco/azure-tutorials/) to provide significant savings on your cloud spend.

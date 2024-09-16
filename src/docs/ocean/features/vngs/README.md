@@ -61,8 +61,10 @@ In AKS, the default behavior is that the Ocean configuration is the template.
 
 Ocean takes the following parameters from the default Virtual Node Group unless explicitly set in a Virtual Node Group.
 
-<details>
-  <summary markdown="span">AWS Kubernetes</summary>
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+  <summary markdown="span" style="color:#7632FE; font-weight:600">AWS Kubernetes</summary>
+
+  <div style="padding-left:16px">
 
 - Image
 - Instance profile
@@ -74,10 +76,13 @@ Ocean takes the following parameters from the default Virtual Node Group unless 
 - Tags
 - User data
 
-</details><br>
+</div>
+ </details>
 
-<details>
-  <summary markdown="span">AWS ECS</summary>
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+  <summary markdown="span" style="color:#7632FE; font-weight:600">AWS ECS</summary>
+
+  <div style="padding-left:16px">
 
 - Block device mapping
 - Image
@@ -89,10 +94,13 @@ Ocean takes the following parameters from the default Virtual Node Group unless 
 - Tags
 - User data
 
-</details><br>
+</div>
+ </details>
 
-<details>
-  <summary markdown="span">GKE</summary>
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+  <summary markdown="span" style="color:#7632FE; font-weight:600">GKE</summary>
+
+  <div style="padding-left:16px">
 
 - Availability zone
 - Image
@@ -100,21 +108,23 @@ Ocean takes the following parameters from the default Virtual Node Group unless 
 - Minimum nodes per VNG
 - Root volume size
 
-</details><br>
+</div>
+ </details>
 
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+  <summary markdown="span" style="color:#7632FE; font-weight:600">AKS</summary>
 
-<details>
-  <summary markdown="span">AKS</summary>
+  <div style="padding-left:16px">
 
- - Kubernetes Version
- - Automatic and Advanced VM Size Selection
- - Availability zone (1,2,3 +0 )
- - Root volume type
- - OS SKU type
- - Max pods per VM
+- Kubernetes Version
+- Automatic and Advanced VM Size Selection
+- Availability zone (1,2,3 +0 )
+- Root volume type
+- OS SKU type
+- Max pods per VM
 
- </details><br> 
-
+</div>
+ </details>
 
 ## Learn more about:
 

@@ -132,8 +132,6 @@ You can configure target scaling to use multiple metrics when you create an Elas
 
 This policy will be saved when you finish creating or updating the Elastigroup (and you click Create or Update at the bottom of the Review tab).
 
-## What’s Next?
-
 Learn how to create a scaling policy that uses multiple metrics in:
 
 - [Simple Scaling Policies](elastigroup/features/scaling/simple-scaling-policies)

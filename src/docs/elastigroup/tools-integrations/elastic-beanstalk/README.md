@@ -37,8 +37,6 @@ We recommend using a deployment policy that is supported by the in-ASG approach 
 
 > **Tip**: Before starting, verify that the most up-to-date [Spot IAM policy](administration/api/spot-policy-in-aws) is configured in your AWS account.
 
-## What's Next?
-
 The following sections explain how each integration mode works to help you better understand the concepts behind Elastigroup for Elastic Beanstalk as well as debugging in case of a potential failure in the setup and scale process.
 
 - [In-ASG integration](elastigroup/tools-integrations/elastic-beanstalk/in-asg). This is the recommended approach whenever possible.

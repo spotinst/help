@@ -7,6 +7,7 @@ With Spot by NetApp, you don’t have to choose between resiliency, performance,
 ## Common Use Cases
 
 Managing your stateful workload using a single instance solution is a very popular approach for many compute workloads such as:
+
 - Personal developer machines
 - Single DB instances
 - Machine learning environments
@@ -19,6 +20,7 @@ The Stateful Node feature provides the ability to persist your OS disk, data dis
 ### Persist Data and OS Disks
 
 Data and OS disks are maintained using one of the following methods:
+
 - Re-attach: The same disks are detached from the original VM and reattached to the new VM. If the new VM is launched in a different availability zone, a new disk is created from the latest snapshot and attached to the new VM. (Disks cannot be migrated between availability zones.)
 - Take Snapshot: Periodic snapshots of the data disk are taken while the VM is running. Upon VM replacement, a new disk is created from the latest snapshot and is attached to the new VM.
 
@@ -27,7 +29,3 @@ Data and OS disks are maintained using one of the following methods:
 New VMs are provisioned with the same private IP and public IP using the same network interface.
 
 <img src="/elastigroup/_media/azure-features-stateful-nodes-01.png" width="350"/>
-
-## What’s Next?
-- Learn more about [persisting the OS and data disks](managed-instance/azure/features/persist-os-data-disks).
-- Try out the [Stateful Node Tutorials](managed-instance/azure/tutorials/).

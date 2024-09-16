@@ -3,6 +3,7 @@
 # Connect your AWS Account in CloudCheckr
 
 This page describes how to connect your AWS account in CloudCheckr.
+
 ## Prerequisite
 
 A formal agreement with CloudCheckr is required prior to enabling the feature.
@@ -10,6 +11,7 @@ A formal agreement with CloudCheckr is required prior to enabling the feature.
 Getting started with Eco on AWS requires read-only permissions to the Cost and Usage Reports, which are located in the Management account, or in specially configured [member accounts](https://aws.amazon.com/about-aws/whats-new/2020/12/cost-and-usage-report-now-available-to-member-linked-accounts/).
 
 Eco will read data from your Direct-to-AWS Management Account and connect as described below.
+
 ## AWS Region
 
 All actions in this procedure should be made in the US-East-1 (Northern Virginia) AWS region. (This includes generating the CUR file into a bucket in us-east-1.) If there is a problem doing this, please contact Support.
@@ -36,6 +38,7 @@ Set up Cost and Usage Reports as described below.
 
 1. To go to AWS Cost and Usage Report setup, click [here](https://console.aws.amazon.com/billing/home?#/reports).
 2. To create a new report, follow the illustrations below. Important guidelines:
+
    - Include Resource IDs under `Additional report details`
    - Enable Data refresh settings.
    - Time granularity Units should be Hourly.
@@ -79,7 +82,3 @@ Once the stack is created, copy the Spot Role ARN from the CloudFormation stack 
 <img src="/eco/_media/gettingstarted-aws-connect-08.png" width="546" height="484" />
 
 Once your Organization is connected to Eco, initial data processing will take up to 48 hours.
-
-## What’s Next?
-
-Learn how to [view your savings](eco/eco-in-cloudcheckr/view-savings-in-dashboard) in the dashboard.

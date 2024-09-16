@@ -1,5 +1,11 @@
 # Controller Version History
 
+## [1.0.101] - 2024-08-14
+
+Added
+
+- Fixed security vulnerabilities
+
 ## [1.0.100] - 2024-05-15
 
 Added
@@ -69,7 +75,6 @@ Added
 
 - Update 3rd party libraries versions
 - Improve the removal process of a large number of nodes
-
 
 ## [1.0.89] - 2023-03-20
 

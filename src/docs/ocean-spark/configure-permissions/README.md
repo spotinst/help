@@ -22,10 +22,10 @@ In Ocean for Apache Spark, clusters are identified by an id with the format `osc
 To get started, you can use one of the following managed policies, which apply at the account level.  
 If you want to set permissions with more granularity, see [Granular Permissions Policies How-to Guides](#granular-permissions-policies-how-to-guides).
 
-| Policy                                | Level        | Effect                                                    | Product Scope                                      | Ocean Spark Resource Scope                                                                      |
-| ------------------------------------- | ------------ | --------------------------------------------------------- | -------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| Account Viewer                        | Spot account | Give read access                                          | All Spot products including Ocean for Apache Spark | All Resources                                                                                   |
-| Account Editor                        | Spot account | Give edit access<br>**including app submission**          | All Spot products including Ocean for Apache Spark | All Resources                                                                                   |
+| Policy         | Level        | Effect                                           | Product Scope                                      | Ocean Spark Resource Scope |
+| -------------- | ------------ | ------------------------------------------------ | -------------------------------------------------- | -------------------------- |
+| Account Viewer | Spot account | Give read access                                 | All Spot products including Ocean for Apache Spark | All Resources              |
+| Account Editor | Spot account | Give edit access<br>**including app submission** | All Spot products including Ocean for Apache Spark | All Resources              |
 
 ## Granular Permissions Policies How-to Guides
 
@@ -235,7 +235,9 @@ If you want to **force users to use a config-template when submitting an app**, 
           {
             "StringEquals": {
               "sparkClusterId": "osc-xxxxxx"
-            },
+            }
+          },
+          {
             "StringPatternMatch": {
               "sparkConfigTemplateId": "ct-team-a-*"
             }

@@ -10,9 +10,13 @@ In this procedure, you will connect an existing GKE cluster to Ocean using the [
 - Ensure that billing is enabled for your project: Learn how to [enable billing](https://cloud.google.com/billing/docs/how-to/modify-project).
 - Ensure that you have enabled the Google Kubernetes Engine API: Enable the [GKE API](https://console.cloud.google.com/apis/library/container.googleapis.com?q=kubernetes%20engine&_ga=2.13270391.-1955943244.1544264785).
 
-## Get Started
+## Limitations
 
-In the left menu of the Spot Console, click Ocean/Cloud Clusters, and click Create Cluster.
+You cannot connect a GKE cluster with Autopilot mode turned on.
+
+## Getting Started
+
+In the left menu of the Spot Console, click **Ocean > Cloud Clusters**, and then click **Create Cluster**.
 
 <img src="/ocean/_media/gke-create-cluster.png" />
 
@@ -91,4 +95,4 @@ To avoid unnecessary downtime, the scale-down of existing nodes should be gradua
 
 ## Related Topics
 
-- Learn how to [connect an existing ECS Cluster](ocean/getting-started/gke)
+- [Create Cluster using Shared VPC](https://docs.spot.io/ocean/tutorials/create-cluster-gke-shared-vpc)

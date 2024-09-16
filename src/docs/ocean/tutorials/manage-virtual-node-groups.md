@@ -54,7 +54,7 @@ This section enables you to inform Ocean about the labels and taints that are se
 - Node Labels: Key/Value pairs defined on the Kubernetes nodes.
 - Node [Taints](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/): Triplets of Key, Value, and Effect defined on the Kubernetes nodes.
 
-> **Important**: **You must enter custom labels in both the VNG Node Selection configuration and in the VNG User Data (Startup Script) configuration for the labels to take full effect. For Kubernetes user data, see [Create Custom Labels](https://docs.spot.io/ocean/tutorials/create-custom-labels).** 
+> **Important**: **You must enter custom labels in both the VNG Node Selection configuration and in the VNG User Data (Startup Script) configuration for the labels to take full effect. For Kubernetes user data, see [Create Custom Labels](https://docs.spot.io/ocean/tutorials/create-custom-labels).**
 
 ## Advanced Parameters
 
@@ -206,7 +206,3 @@ In this view, you can see the full JSON configuration of the VNG. If you would l
 2. In the VNG summary table, mark the VNG(s) to delete and click Delete.
 
 Alternatively, if you are already on the configuration page of a VNG, just click Delete VNG at the bottom.
-
-## What’s Next?
-
-Learn more about using VNGs in the API: [AWS Kubernetes](https://docs.spot.io/api/#operation/OceanAWSLaunchSpecCreate).

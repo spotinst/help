@@ -1,83 +1,60 @@
-<meta name="robots" content="noindex">
-
 # Analyze Risks
 
-The risk analysis feature provides visibility into your risks on several levels of granularity including a top-level aggregation per risk level, a list of all risks, and a drill-down level of [Risk Details](spot-security/features/analyze-risks/view-risk-details) for each risk.
+Risk analysis gives you visibility into your misconfigurations on several levels:
 
-To analyze your risks, go to Spot Security in the left menu of the console and click Risk Analysis.
+- Top-level aggregation per security level
+- List of all risks
+- Drilldown level of [risk details](spot-security/features/analyze-risks/view-risk-details) per risk
 
-## Filters and Presets
+Spot Security has comprehensive security rules with many different asset types, including EC2, S3 buckets, IAM groups, and virtual machines.
 
-You can use the filters to customize the findings as per their requirements. Different teams can create presets based on the cloud providers, account names, regions, and asset types that they are responsible for. You can also set a preset as a default view that stays steady throughout the console to help focus only on the necessary findings.
+To analyze your risks, go to **Spot Security** > **Risk Analysis**.
 
-## Risk Table
+You can create filter presets based on the cloud providers, account names, regions, and asset types. For example, you can create presets for different teams so they have just the assets they’re responsible for. You can also set a preset as a default view to help focus only on the necessary findings.
 
-The risk distribution at the top gives the total number of open and suppressed risks for each severity-level and acts as a quick filter when you click on each level. Spot Security has comprehensive security rules for over 25 different asset types including EC2, S3 buckets, IAM groups, Virtual Machines etc.
+Risk distribution cards show the total number of open and suppressed risks for each severity level. You can click them to filter the results. For example, you can click on High Risks to filter on the high risks.
 
-For each rule, you can see the:
+You can export the data as a CSV.
 
-* Security Rule Name
-* Severity  
-* Asset Type
-* Cloud
-* Compliance
-* Failed Assets
-* Suppressed Assets
-* Remediation Effort  
+## Notification Policies
 
-<img src="/spot-security/_media/risk-analysis-1.png" />
+You can create notifications for failing security rules. You decide:
 
-You can click the filter icon and filter the list by severity level (low, medium or high), remediation effort (advanced or easy) and asset type (S3, Virtual Machine etc.).
+- The security rules
+- How often to send the notifications
+- A password for the email attachment, and how long the attachment link is valid for
+  Keep in mind, you can only see the password when you are creating the notification. This password is used for opening the email attachment. If you lose it, you can change the password in **Spot Security** > **Administration** > **Webhooks**.
+- Who to send the notifications to
+  You can enter multiple email addresses, separated by a comma
 
-<img src="/spot-security/_media/risk-analysis-2.png" />
+Select the security rules you want to create notifications for and click Actions > Set Up Notifications.
 
-Click Export to export the data to an Excel sheet.
+You can view all your rules in the **Spot Security** > **Administration** > **Webhooks**. Select **Notification Type** as <i>Security Rules</i> to view only these webhooks.
+
+ <details>
+   <summary markdown="span">View image</summary>
+
+<img width="880" alt="analyze-risks1" src="https://github.com/user-attachments/assets/cf915942-29d4-4771-89cf-7abf9288cdb3">
+
+ </details>
 
 ## View Failed Assets
 
-Click a failed asset of an Asset Name in the Failed Asset column to view the Failed Asset list that presents the assets at risk due to a specific security rule that is failing in the asset.
+Click the failed asset number to view the list of failed assets for that security rule.
 
-<img src="/spot-security/_media/risk-analysis-3.png" />
+You can click on the name of an asset to view the risk details, such as risk maps and affected assets.
 
-For each asset, you can see the:
+Click Remediation Steps for instructions on how to remediate the risk.
 
-* Asset Name
-* Asset ID
-* Risk Attribute
-* Asset Type
-* Cloud Provider
-* Cloud Account ID
-* Open Since
-* First Discovered
-* Last Scanned
-* Remediation   
+## Suppress a Rule
 
-Click an asset to view the Risk Details page. The Risk Details page provides you with risk maps and affected assets due to the failing rules and more.  
+You can also accept a risk by selecting the security rules from the list and clicking **Actions** > **Suppress**. This removes the risk from your list.
 
-Click [Remediation Steps](spot-security/features/analyze-risks/remediate) to view a step by step guide of how to remediate the risk.   
+If you want to suppress specific assets instead of rules, click the number of failed assets and then click **Actions** > **Suppress**.
 
-### Suppress a Rule  
+To see the suppressed rules, click **Show Suppressed** in the Risk table.
 
-You can also accept a risk by selecting the check box near the Sevurity Rule Name and clicking Suppress in the Actions menu. This removes the risk from your list. You can suppress one or multiple rules.
+You can see suppressed assets by clicking:
 
-<img src="/spot-security/_media/risk-analysis-4.png" />
-
-You can also suppress specific assets for selected security rules by following these steps:
-
-1. Click the number of failed assets for the security rule name you want to view.  
-2. Select the asset name or names you want to suppress and click Suppress in the Actions menu on the top right.  
-
-<img src="/spot-security/_media/risk-analysis-5.png" />
-
-To view the suppressed rules:  
-
-* Click the Show Suppressed toggle in the Risk table.
-
-To view the suppressed assets: 
-
-* Click Supressed Assets Column in the Risk Table **or** 
-* Click the Show Suppressed Assets toggle in the Failed Asset table. 
-
-
-## What’s Next?
-Learn more about how you can [remediate](spot-security/features/analyze-risks/remediate) your risks.
+- **Show Suppressed** in the Risk table, then clicking on the number in Suppressed Assets.
+- **Show Suppressed Assets** in the Failed Asset table.

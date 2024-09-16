@@ -89,8 +89,3 @@ Now that you have your WordPress site up and running, it's time to log into its 
 <img src="/elastigroup/_media/wordpress-on-spot-step-by-step-guide_7.png" width="300" height="354" />
 
 Congratulations! You now have your WordPress site up and running. You can now manage, customise, and configure it as you like.
-
-## What's Next?
-
-Learn about advanced Elastigroup configurations in the Compute Concepts section.
-Check out the tutorials for other Elastigroup supported workloads and integrations.

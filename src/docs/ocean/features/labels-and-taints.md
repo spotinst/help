@@ -12,13 +12,13 @@ To make scheduling more efficient and compatible with Kubernetes, Ocean supports
 
 Spot labels allow you to adjust the default scaling behavior in Ocean; by adding Spot labels to your pods, you can control the node termination process or its life cycle. The Spot labels are described below.
 
-### spotinst.io/azure-premium-storage  
+### spotinst.io/azure-premium-storage
 
 The AKS scheduler does not guarantee that pods requiring premium storage will schedule on nodes that support premium storage disks.
-The Spot Ocean label `spotinst.io/azure-premium-storage`is injected into every node in a node pool that supports premium storage. 
+The Spot Ocean label `spotinst.io/azure-premium-storage`is injected into every node in a node pool that supports premium storage.
 We recommended using `spotinst.io/azure-premium-storage` on your pods in cases where the pod requires premium storage disks.
-This enables pods to be provisioned on the most appropriate nodes for their workloads. 
-For more information, see [Azure premium storage](https://learn.microsoft.com/en-us/azure/virtual-machines/premium-storage-performance). 
+This enables pods to be provisioned on the most appropriate nodes for their workloads.
+For more information, see [Azure premium storage](https://learn.microsoft.com/en-us/azure/virtual-machines/premium-storage-performance).
 
 ### spotinst.io/restrict-scale-down
 
@@ -123,7 +123,3 @@ spec:
     - name: with-node-affinity
       image: registry.k8s.io/pause:2.0
 ```
-
-## What’s next?
-
-- Learn how to [Manage Virtual Node Groups](ocean/tutorials/manage-virtual-node-groups) and customize configurations per VNG.

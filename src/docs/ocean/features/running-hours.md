@@ -25,7 +25,7 @@ The controller immediately reports the unscheduled pods in the cluster to Ocean'
 
 At the end of this process, all pods are satisfied, and the cluster is fully functioning in the running hours scheduled.
 
-Note: The Shutdown Hours feature is not supported for GKE clusters with shielded nodes. If you use the Shutdown Hours feature with shielded nodes, you need to ensure that the Ocean controller is available at the end of the off time, by checking that it is running on a node that is not managed by Ocean. This is because the Ocean controller is part of the node registration process and requires an available node to run on. 
+Note: The Shutdown Hours feature is not supported for GKE clusters with shielded nodes. If you use the Shutdown Hours feature with shielded nodes, you need to ensure that the Ocean controller is available at the end of the off time, by checking that it is running on a node that is not managed by Ocean. This is because the Ocean controller is part of the node registration process and requires an available node to run on.
 
 ## Scaling Behavior (Ocean For ECS)
 
@@ -43,7 +43,3 @@ You can define shutdown hours per virtual node group (VNG) so that VNGs will shu
 - When a VNG comes back up, it automatically scales to the minimum nodes configured.
 
 This feature is available using the [Create](https://docs.spot.io/api/#operation/OceanAWSLaunchSpecCreate) and [Update](https://docs.spot.io/api/#operation/OceanAWSLaunchSpecUpdate) APIs for AWS. For setup information, see [Set Shutdown Hours per VNG](ocean/tutorials/set-running-hours?id=set-shutdown-hours-per-vng).
-
-## What's Next?
-
-Learn how to [Set Shutdown Hours](ocean/tutorials/set-running-hours)

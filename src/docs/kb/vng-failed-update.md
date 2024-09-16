@@ -1,8 +1,9 @@
-<meta name="“robots”" content="“noindex”">
+<meta name="robots" content="noindex">
 
-# Error Message "Virtual Node Group configuration failed to update" 
+# Error Message "Virtual Node Group configuration failed to update"
 
 ## Question
+
 What does this error message mean?
 
 `Virtual Node Group configuration failed to update. Reason: Error while trying to create LaunchSpec. spotPercentage cannot be set on both ocean cluster and launch spec.`

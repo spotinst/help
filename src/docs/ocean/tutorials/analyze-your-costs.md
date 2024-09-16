@@ -1,14 +1,38 @@
 # Analyze Your Costs
 
-In a containerized world, in which multiple applications and services share the same infrastructure, it is often hard to distinguish the costs of different applications, services, and environments.
+In a containerized world, where multiple applications and services share the same infrastructure, it is often hard to distinguish the costs of different applications, services, and environments.
 
-Ocean breaks down the infrastructure costs of your clusters and provides insights on each of the layers which can be used to analyze the application costs and perform chargebacks.
+Ocean breaks down the infrastructure costs of your clusters and provides insights on each layer that can be used to analyze the application costs and perform chargebacks.
 
-To view a comprehensive breakdown of your cloud cluster costs, go to the Cost Analysis tab in the Ocean console. The cost analysis is presented in two formats, a bar chart and a detailed breakdown table.
+To view a comprehensive breakdown of your cloud cluster costs, go to the Cost Analysis tab in the Ocean console. The cost analysis is presented in several formats, as described below.
+
+## Ocean Network Cost Banner
+
+Cloud service provider relevance: <font color="#FC01CC">EKS</font>
+
+The Ocean Network Cost banner is displayed in the Cost Analysis tab above the Cost Over Time graph and contains an estimate of the network usage costs as follows:
+
+- Cluster network cost used (GB): Overall cost since the start of the month.
+- Average hourly network usage (GB).
+
+These costs are updated hourly.
+
+![network-cost-banner](https://github.com/user-attachments/assets/4ba7f1eb-ce35-4e8c-9e97-d2b485ba15c2)
+
+Before adopting the paid service, you can use this feature as a proof of concept (POC).
+
+> **Note**: The average hourly network usage is only displayed if enough data has been collected over the last 24 hours.
+
+When the POC expires:
+
+- Expiry during the middle of the month: the average hourly network usage is shown until the expiration date.
+- Expiry during the previous month: the average hourly network usage is shown as 0 GB.
+
+In both cases, you can activate your license via the link to Support, which appears in the banner.
 
 ## Bar Chart
 
-The bar chart shows the cost of your workloads over time. The default display is that each bar is broken down into the different namespaces and represents the cost per day over the last week. You can modify the time period and groupings shown to suit your needs. See Grouping Options below for more information.
+The bar chart shows the cost of your workload over time. The default display breaks down each bar into different namespaces and represents the cost per day over the last week. You can modify the time period and groupings shown according to your needs. See Grouping Options below for more information.
 
 <img src="/ocean/_media/cost-analysis-5.png" />
 
@@ -75,7 +99,3 @@ Sometimes it is useful to create an analysis that takes only certain workloads i
 
 To apply a filter to your cost analysis, choose a filter from the list of saved filters.
 To create a new filter, click Add Filter and a fill out the filter criteria.
-
-## What's Next?
-
-Learn how to [Create a Cost Analysis Filter](ocean/tutorials/create-a-cost-filter).

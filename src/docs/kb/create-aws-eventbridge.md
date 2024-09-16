@@ -1,4 +1,4 @@
-<meta name="“robots”" content="“noindex”">
+<meta name="robots" content="noindex">
 
 # Create AWS EventBridge
 
@@ -29,16 +29,15 @@ https://support.spot.io/hc/en-us/articles/13175145326749-How-to-create-AWS-Event
 
 1. Manual configuration
    Create Rule
-   
+
    Rule detail
 
    Rule type – choose “Rule with event pattern”.
 
-3. Build event pattern
+2. Build event pattern
    Event source – Choose “AWS events or EventBridge partner events”
 
    Sample event (Optional) – Choose “AWS event”
-
 
    Event pattern
 
@@ -48,7 +47,7 @@ https://support.spot.io/hc/en-us/articles/13175145326749-How-to-create-AWS-Event
 
    Event type – Choose “EC2 Spot Instance Interruption Warning”
 
-5. Target
+3. Target
 
    Target types
 
@@ -58,15 +57,11 @@ https://support.spot.io/hc/en-us/articles/13175145326749-How-to-create-AWS-Event
 
    Name + description – free text
 
-
-
    API destination
 
    API destination endpoint = https://api.spotinst.io/aws/ec2/instance/interruptionNotification
 
    HTTP method – POST
-
-
 
    Connection
 
@@ -77,8 +72,6 @@ https://support.spot.io/hc/en-us/articles/13175145326749-How-to-create-AWS-Event
    Destination type – choose “Other”
 
    Authorization type – choose “API Key”
-
-
 
    API key
 
@@ -92,11 +85,10 @@ https://support.spot.io/hc/en-us/articles/13175145326749-How-to-create-AWS-Event
 
    Key – “accountId” value - <CUSTOMER_SPOT_ACCOUNT_ID>
 
-
 Next, we need to do the following action on our end:
 
-1. Contact the SRE team to enable monitoring and provide them with the following details - 
-   
+1. Contact the SRE team to enable monitoring and provide them with the following details -
+
    Account ID
 
    Region
@@ -110,6 +102,6 @@ Next, we need to do the following action on our end:
 
    "606079873399" AND "/interruptionNotification" AND "act-d7320fba"
 
-   DB -  'aws_ec2_events' --> Look for 'spot-interruption-notification' in the value column.
+   DB - 'aws_ec2_events' --> Look for 'spot-interruption-notification' in the value column.
 
 </font>

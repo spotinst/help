@@ -21,6 +21,7 @@ You can set the following filters:
 ## Summary Line
 
 The Overview dashboard includes a summary line which displays the following information:
+
 - Total Saved: Total amount saved as a result of reserved instance and savings plan coverage.
 - Current Commitment: The amount currently committed to reserved instances. The lower the commitment, the more flexible and dynamic the account's compute resources can be.
 - MTD Savings: Total generated savings from day one of the month to the most recent update.
@@ -37,7 +38,7 @@ A bar graph shows the amount of savings each month broken down by type of saving
 - Eco: This source filter displays all savings provide by Eco.
 - Non-Eco: This source filter displays all savings provided by the customer.
 - Support Savings: This source filter displays all savings Eco saved you on AWS Support Plans. AWS provides different Support Tiers and charges differently for each tier. We retrieve and calculate how much a customer would be spending on support if they weren’t using Eco. Eco does not charge customers based on these savings.
-- Savings Data vs. Billing Data: The savings data displayed is the total saved by Eco and Non-Eco services from AWS data. This data may differ from the billing data presented in the Spot console retrieved from AWS on the 5th of every month. For further insights into the calculation of fees, please refer to the following documentation: [Fee Calculation Details](connect-your-cloud-provider/dashboard?id=fee-calculation). 
+- Savings Data vs. Billing Data: The savings data displayed is the total saved by Eco and Non-Eco services from AWS data. This data may differ from the billing data presented in the Spot console retrieved from AWS on the 5th of every month. For further insights into the calculation of fees, please refer to the following documentation: [Fee Calculation Details](connect-your-cloud-provider/dashboard?id=fee-calculation).
 
 <img src="/eco/_media/view-savings-savings_overtime-1.png" />
 
@@ -59,16 +60,16 @@ The export from this table provides an amortization report, which breaks down ea
 - Instance Family or Type: The instance family of the reservation or type of the savings plan.
 - Region: The region in which the commitment was purchased.
 - Upfront Commitment: The basis for the amortized commitment. If there was no upfront commitment, this will be zero.
-- Recurring Commitment: The monthly commitment charge.  
+- Recurring Commitment: The monthly commitment charge.
 - Total Commitment: Total commitment spend.
 
 ### Coverage Over Time
 
-A line graph that breaks down the story of how reservations, savings plan coverage, and commitments relate to your overall savings. The left chart is the simplest, showing the difference between your actual spend and what could have been your costs for reservable services without a savings strategy. On the right, you see the same data, but with your actual spend explained as the combination of commitment cost and uncovered spend. The coverage calculation considers dollars or your investment used instead of hours, which is different from AWS Cost Explorer. For actual spend, the calculation only considers what is reservable for a service (e.g., Eco only uses the on-demand purchase option, with the Running Hours usage type groups and the Usage charge type). You can use the source filter specific to the Coverage Over Time graph.  
+A line graph that breaks down the story of how reservations, savings plan coverage, and commitments relate to your overall savings. The left chart is the simplest, showing the difference between your actual spend and what could have been your costs for reservable services without a savings strategy. On the right, you see the same data, but with your actual spend explained as the combination of commitment cost and uncovered spend. The coverage calculation considers dollars or your investment used instead of hours, which is different from AWS Cost Explorer. For actual spend, the calculation only considers what is reservable for a service (e.g., Eco only uses the on-demand purchase option, with the Running Hours usage type groups and the Usage charge type). You can use the source filter specific to the Coverage Over Time graph.
 
-* All  
-* Eco  
-* Non-Eco
+- All
+- Eco
+- Non-Eco
 
 <img src="/eco/_media/view-savings-coverage_overtime-1.png" />
 
@@ -148,8 +149,3 @@ You can customize the columns in the table. The following information is availab
 ### Export Data
 
 To export the Reservation Details report to a CSV file, click Export above the table. The exported data will include the ARN for each reservation.
-
-## What’s Next?
-
-- Learn how to [Manage Subsets](eco/tutorials/manage-subsets).
-- Learn more about analyzing and tracking all of your cloud compute expenses with [Cloud Analyzer](cloud-analyzer/).

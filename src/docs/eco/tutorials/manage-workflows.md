@@ -66,8 +66,8 @@ To create a new workflow, do the following:
 The billing rules available in the user interface are sufficient to capture most use cases. However, the Spot system is flexible enough to create numerous custom workflows. If you require a billing rule or a workflow sequence that cannot be created through the UI, contact the Support team and Spot will work with you to create a custom workflow. The rules available in the UI are described below.
 
 ### Create workflow with no billing rules
-You can create a workflow without billing rules to run reports on raw data. The advantage to this choice is that it provides you with the cost and savings data quicker. See the article titled "[View Workflow Details](eco/tutorials/view-workflow-details)".
 
+You can create a workflow without billing rules to run reports on raw data. The advantage to this choice is that it provides you with the cost and savings data quicker. See the article titled "[View Workflow Details](eco/tutorials/view-workflow-details)".
 
 ### Replace RI Discounts with Public OD Price:
 
@@ -149,7 +149,3 @@ The percentage option allows you to add a charge proportionate to the overall sa
 The Flat Fee option allows you to add a fee to each subset or account. The fee will be the same each month.
 
 The Distributed Eco option allows you to distribute the fee evenly across accounts based on usage. From this option, you may choose Estimate or Spot Billing Cycle Actuals. Estimate will distribute the fee based on a tentative estimate of the usage, while Spot Billing Cycle Actuals will leverage data from the previous month to distribute the fee accordingly.
-
-## What’s Next?
-
-Learn about the [Workflow Details](eco/tutorials/view-workflow-details) summary and how to create a workflow report.

@@ -1,104 +1,122 @@
 <meta name=“robots” content=“noindex”>
 
-#  Ocean Cluster Automatic Right Sizing (EKS and AKS)
+# Ocean Cluster Automatic Right Sizing
 
-To help you improve the efficiency and performance of your cloud environments, Ocean’s rightsizing capabilities provide recommendations that target over-provisioning and underutilization. 
+Cloud service provider relevance: <font color="#FC01CC">EKS</font> and <font color="#FC01CC">AKS</font>
 
-Container resource requests, defined in a Kubernetes cluster, determine a pod’s allocation to a node. Incorrect CPU and memory requirements assumptions can incur unnecessary and costly cloud infrastructure waste. Ocean lets you access detailed right-sizing recommendations that fine-tune these resource requests based on the actual resource utilization of any running application over time. This way, you can define better resource requirements based on actual consumption to avoid over-provisioning or underutilizing a cluster and increase the cluster's efficiency. 
+To help you improve the efficiency and performance of your cloud environments, Ocean’s rightsizing capabilities provide recommendations that target over-provisioning and underutilization.
 
-Ocean provides container-level right-sizing recommendations so you can focus on improving specific application resource requests and make impactful changes to resource utilization.  
+Container resource requests, defined in a Kubernetes cluster, determine a pod’s allocation to a node. Incorrect CPU and memory requirements assumptions can incur unnecessary and costly cloud infrastructure waste. Ocean lets you access detailed right-sizing recommendations that fine-tune these resource requests based on the actual resource utilization of any running application over time. This way, you can define better resource requirements based on actual consumption to avoid over-provisioning or underutilizing a cluster and increase the cluster's efficiency.
 
-##  Prerequisites
+Ocean provides container-level right-sizing recommendations so you can focus on improving specific application resource requests and make impactful changes to resource utilization.
 
-Before you attempt to fine-tune your cluster resources according to Ocean's recommendation, you will need: 
+## Prerequisites
 
-*  A Spot account. 
-* Ocean cluster managing your Kubernetes worker nodes. 
-*  [Ocean Controller Version 2.0.52 and above](https://docs.spot.io/ocean/tutorials/ocean-controller-v2/) installed and running.
-   *  Make sure to install the [Metrics Server](https://github.com/kubernetes-incubator/metrics-server#deployment).
-*  Vertical Pod Autoscaler project (VPA) Version 1.0.0 and above installed on your cluster. Otherwise, run the following commands:
+Before you attempt to fine-tune your cluster resources according to Ocean's recommendation, you will need:
+
+- A Spot account.
+- Ocean cluster managing your Kubernetes worker nodes.
+- [Ocean Controller Version 2.0.52 and above](https://docs.spot.io/ocean/tutorials/ocean-controller-v2/) installed and running.
+  - Make sure to install the [Metrics Server](https://github.com/kubernetes-incubator/metrics-server#deployment).
+- Vertical Pod Autoscaler project (VPA) Version 1.0.0 and above installed on your cluster. If the VPA is not already running on your cluster, run the following helm commands:
 
 ```sh
 
-helm repo add spot https://charts.spot.io 
-helm repo update 
+helm repo add spot https://charts.spot.io
+helm repo update
 helm install <my-release-name> spot/ocean-vpa
 ```
->**Note**:To turn on Automatic Right-Sizing, contact your [support](https://spot.io/support/) team via email or chat.
 
-##  Limitations  
+> **Note**: To turn on Automatic Right-Sizing, contact your [support](https://spot.io/support/) team via email or chat.
 
-*  If Vertical Pod Autoscaler custom resources already exist for your workloads before using Ocean Automatic right sizing, do not create any Rule Matching for them. 
-*  Supported manifests: Deployments, DaemonSets, and statefulSets.  
-*  Workloads must have more than one replica for restart capability. 
+## Limitations
 
+- Supported workloads are Deployments, DaemonSets, StatefulSets, and ReplicaSets.
+- JVM xms and xmx are not considered in Ocean’s sizing recommendations.
+- Recommendations are calculated based on hard-coded percentile values. This cannot be modified manually.
+- Supported HPA types: Any HPA not managed by GitOps or Helm.
+- Unsupported HPA types: Any HPA managed by Gitops or Helm.
+- For supported HPA types: Right Sizing will apply recommendations to the resource not configured in the HPA manifest.
+- Do not create any rule matching for Vertical Pod Autoscaler custom resources already existing for your workloads before using Ocean Automatic Right-Sizing.
+- Install Spot VPA’s project so that the restart policy functions according to the right-sizing rules. Otherwise, the flags set in your current VPA will affect smooth operation.
 
-##  How It Works 
+## How It Works
 
-For Ocean Kubernetes clusters, Right Sizing utilizes the Metrics Server and initializes recommendations after one hour of initial data collection. 
+For Ocean Kubernetes clusters, Right Sizing utilizes the Metrics Server and initializes recommendations after one hour of initial data collection.
 
-Once every fifteen seconds, the controller queries the Metrics Server for pod utilization (the equivalent of kubectl top pods). Based on the last two weeks of collected metrics, Ocean calculates relevant consumption metrics for each resource, such as CPU and Memory, and bases its recommendations on these calculated metrics. 
+Once every 15 seconds, the Ocean Controller queries the Metrics Server for pod utilization (the equivalent of kubectl top pods). Based on the last 14 days of collected metrics, Ocean calculates relevant consumption metrics for each resource, such as CPU and Memory, and bases its recommendations on these calculated metrics.
 
 ![features-rightsizing-01a](https://github.com/spotinst/help/assets/159915991/4ded53db-21ff-4a17-82b2-77b32c598351)
 
-The output produces a single point-in-time data point for each pod. Ocean then aggregates the pods' data per workload container. 
+The output produces a single point-in-time data point for each pod. Ocean then aggregates the pods' data per workload container.
 
-The aggregation includes maximum, minimum, and mean resource utilization values, which will be used in the recommendation generation process to ensure that each pod’s utilization is considered properly. 
+Using the per-workload container aggregated data points, Ocean makes recommendations based on a mechanism that attempts to even out peaks and troughs in resource demand. The Right-Sizing engine runs every hour to generate new recommendations and update existing ones.
 
-Using the per-workload container aggregated data points, Ocean makes recommendations based on a mechanism that attempts to even out peaks and troughs in resource demand. The Right-Sizing engine runs every hour to generate new recommendations and update existing ones. 
+- Recommendations for decreasing memory requests are based on the maximum memory utilization. If the maximum value _ (10% overhead + 5% stability margin) > request, the recommendation = [10% overhead _ value + value].
+- Recommendations for decreasing CPU requests: The calculation is the same as for memory requests, except that we use the 99th percentile instead of the maximum value.
+- Recommendations for increasing memory requests are based on the maximum memory utilization. If maximum value _ ( 1 + 10% overhead - 5% stability margin) < request, the recommendation = [10% overhead _ value + value].
+- Recommendations for increasing CPU requests: The calculation is the same as for memory requests, except that we use the 99th percentile instead of the maximum value.
 
-*  Recommendations for decreasing resource requests are based on the above-described calculation using the 99th Percentile of the maximum resource utilization data collected (e.g., max_memory_utilization). 
-*  Recommendations for increasing resource requests are based on the above-described calculation using the 85th Percentile mean resource utilization data collected (e.g., mean_memory_utilization).
-*  Currently, Ocean generates recommendations for Kubernetes deployments, statefulsets, SpotDeployments, and daemonsets.
+You view Right Sizing recommendations via:
 
-You view Right Sizing recommendations via: 
+- Ocean console, under the Cloud Cluster Right Sizing [Advanced Optimization](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab) tab.
+- [Spot API](https://docs.spot.io/api/#tag/Ocean-AWS/operation/oceanAwsFilterRightSizingWithFilter).
 
-*  Ocean console, under the Cloud Cluster Right Sizing [Advanced Optimization](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab) tab. 
-*  [Spot API](https://docs.spot.io/api/#tag/Ocean-AWS/operation/oceanAwsFilterRightSizingWithFilter).
+## View Right Sizing for a Cluster
 
-##  View Right Sizing for a Cluster 
+Ocean provides resource recommendations to assist in adjusting deployment requests based on actual CPU and memory consumption.
 
-Ocean provides resource recommendations to assist in adjusting deployment requests based on actual CPU and memory consumption. 
+These recommendations can help optimize resource allocation and ensure that the requested resources align with the actual CPU and memory consumption, improving efficiency and cost-effectiveness in managing your deployments.
 
-Resource resize recommendations are triggered when the requested resources deviate by 15% or more from the 85th or 99th Percentile mean metric recorded during the last two weeks. 
-If the requested resources are either 15% above or 15% below the 85th or 99th Percentile mean metric, Ocean suggests resizing the resources to align them more closely with the observed consumption patterns. 
+To view right-sizing for a cluster:
 
-These recommendations can help optimize resource allocation and ensure that the requested resources align with the actual CPU and memory consumption, improving efficiency and cost-effectiveness in managing your deployments. 
+1.  In the left main menu, click **Ocean** > **Cloud Clusters**.
+2.  Select a cluster from the list of clusters.
+3.  Click the **Right Sizing** tab.
 
-To view right-sizing for a cluster:   
+The Right-Sizing tab displays a Dashboard divided into the following panels:
 
-1.  In the left main menu, click **Ocean** > **Cloud Clusters**. 
-2.  Select a cluster from the list of clusters. 
-3.  Click the **Right Sizing** tab. 
+- The Right-Sizing Savings panel summarizes your potential maximum savings from right-sizing, vCPU, and memory usage and recommendations for a selected namespace, workload, and container.
+- Right-sizing Resource Usage panel: This panel graphically displays your vCPU and memory resource usage in the last two weeks.
 
-The Right-Sizing tab displays a Dashboard divided into the following panels: 
+If the Right Sizing tab does not display any data:
 
-*  The Right-Sizing Savings panel summarizes your potential maximum savings from right-sizing, vCPU, and memory usage and recommendations for a selected namespace, workload, and container. 
-*  Right-sizing Resource Usage panel: This panel graphically displays your vCPU and memory resource usage in the last two weeks. 
+- Make sure that your metrics server is installed and functioning correctly.
+- The initial one-hour data collection period may not have elapsed.
 
->**Note**: If the Right Sizing tab does not display any data: 
+> **Note**: You can filter your data according to namespaces, workloads/containers, or labels from the provided drop-down menus.
 
-*  Make sure that your metrics server is installed and functioning correctly. 
-*  The initial one-hour data collection period may not have elapsed. 
+### Right Sizing Savings Panel
 
->**Note**: You can filter your data according to namespaces, workloads/containers, or labels from the provided drop-down menus.
+The Right-Sizing Savings panel contains a set of savings widgets, which show your potential savings from Ocean cluster right sizing, derived from data collected in the last two weeks:
 
-###  Right Sizing Savings Panel 
+![saving-right-sizing](https://github.com/user-attachments/assets/0be792e0-0a94-42ac-aea1-42e1acce8f5f)
 
-The Right-Sizing Savings panel contains a set of savings widgets, which show your potential savings from Ocean cluster right sizing, derived from data collected in the last two weeks:  
+The workload status widget (on the left) shows one of the following statuses:
 
-*  Potential Monthly Maximum Savings. 
-*  vCPU Usage: Used and allocated vCPU resources, recommended increasing or decreasing the vCPU resources, and the percentage of overprovisioning. 
-*  Memory Usage: Used and allocated memory resources, a recommendation to increase or decrease the memory resources, and the percentage of overprovisioning. 
+- Optimization maximized status: All workloads are optimized.
+- Limited optimization status: All workloads have limited optimization. Hover over the widget and click the link to access the [Right Sizing Optimization list](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=workloads-optimization-list).
+- No optimization status: No workloads are optimized, and the total Potential Monthly Maximum Savings are shown.
+- Pending optimization status: All pending workloads will be optimized according to the configured [schedule](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=work-with-right-sizing-rules).
 
-![right-sizing-savings-panel](https://github.com/spotinst/help/assets/159915991/3693d491-2caa-4254-ae5c-4eafa6123b89)
+If you have workloads with differing statuses, the workload status widget shows a status according to the following logic:
 
-###  Right Sizing Resource Usage Panel 
+- The potential savings are shown if at least one workload has potential savings.
+- The limited optimization status is shown if at least one workload is pending, but none have potential savings.
+- The pending status is shown if at least one workload is pending, but there are neither workloads with limited optimization nor workloads with potential savings.
 
-The right Sizing Resources Usage panel contains two widgets: 
+> **Note**: The status changes according to the filters applied in this panel and the Workloads Optimization list in the [Advanced Optimization tab](ocean/features/ocean-cluster-right-sizing-recom-tab?id=automatic-right-sizing-recommendations-and-rules)
 
-*  vCPU usage in the last two weeks: Displays graphs for used, allocated, and recommended vCPU usage, based on data from the last two weeks. 
-*  Memory usage in the last two weeks: Displays graphs for used, allocated, and recommended memory usage based on data from the last two weeks. 
+vCPU and memory usage widgets:
 
-![right-sizing-usage-panel](https://github.com/spotinst/help/assets/159915991/82488c4a-5683-432b-b589-a30b1d15ed99)
+- vCPU Usage: Used and allocated vCPU resources, recommended increase or decrease of vCPU resources, and overprovisioning.
+- Memory Usage: Used and allocated memory resources, a recommendation to increase or decrease the memory resources, and the overprovisioning.
 
+### Right Sizing Resource Usage Panel
+
+![usage-in-last-2-weeks-b](https://github.com/user-attachments/assets/8e2e3411-489b-4480-9b15-c4c047785f5e)
+
+The right Sizing Resources Usage panel contains two widgets:
+
+- vCPU usage in the last two weeks: Displays graphs for used, allocated, and recommended vCPU usage based on data from the last two weeks.
+- Memory usage in the last two weeks: Displays graphs for used, allocated, and recommended memory usage based on data from the last two weeks.

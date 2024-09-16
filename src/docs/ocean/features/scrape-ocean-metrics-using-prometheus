@@ -41,7 +41,4 @@ Ocean metrics will be scraped every 30 seconds and saved into Prometheus.
 
 One popular use of metrics saved in Prometheus is dashboarding. As Grafana is a popular dashboarding tool, Spot has created a Grafana dashboard template link) that you can download. The dashboard enables you to visualize Ocean metrics and may be incorporated into your existing dashboard base.
 
-## What’s next?
 
-In Ocean, click Roadmap to share feedback and request future metrics.
-Get started (link to Getting Started page) with Ocean.

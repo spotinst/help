@@ -26,8 +26,8 @@ For example, if a workload requests 20% of the total cluster allocatable resourc
 
 The major elements of cluster resource allocation are vCPU and memory. Ocean assigns weights for costs for CPU and Memory depending on the following:
 
-* The cloud provider pricing for vCPU when compared to memory.
-* The ratio of equivalent compute (vCPU) to memory (GiB) resources allocated in the cluster, i.e., CPU to memory ratio. The CPU to memory ratio indicates if the cluster is more CPU optimized or memory optimized.
+- The cloud provider pricing for vCPU when compared to memory.
+- The ratio of equivalent compute (vCPU) to memory (GiB) resources allocated in the cluster, i.e., CPU to memory ratio. The CPU to memory ratio indicates if the cluster is more CPU optimized or memory optimized.
 
 For a cloud provider, the cost of 1 vCPU varies from 7 to 13 times the cost of 1 GiB of memory, depending on instance family and type.
 
@@ -35,9 +35,9 @@ In addition, a cluster that is optimized for memory, using more memory optimized
 
 For example, in two clusters, Cluster-1 (memory optimized) and Cluster-2 (CPU optimized):
 
-* Cluster-1 with 40 vCPU and 320 GiB Memory (1:8 CPU:Mem ratio)
+- Cluster-1 with 40 vCPU and 320 GiB Memory (1:8 CPU:Mem ratio)
   - Cost weight for Compute (vCPU) = 48% and Memory (GiB) = 52%
-* Cluster-2 with 120 vCPU and 120 GiB Memory (1:1 CPU:Mem ratio)
+- Cluster-2 with 120 vCPU and 120 GiB Memory (1:1 CPU:Mem ratio)
   - Cost weight for Compute (vCPU) = 91% and Memory (GiB) = 9%
 
 In Cluster-1, if workload-1 requests resources for 2 vCPUs and 12 GiB of memory and the total cluster allocatable resources are 40 vCPUs and 320 GiB of memory, then the resource allocation of that workload is calculated as:
@@ -102,10 +102,10 @@ The different types of cloud provider data transfer costs which can be associate
 
 <img src="/ocean/_media/network-costs-1.png" />
 
-* **Internet**: When an application sends traffic out to the internet, to an IP address external to the cloud provider, the application is assigned cloud provider Internet data transfer costs based on the amount of data (in GB) transferred. For example, a streaming service that sends videos to external clients on the internet or a sales application backing up data to DB service in a private cloud. Cloud providers do not charge for internet traffic coming into the cluster.
-* **Inter-Region**: When an application sends traffic that crosses a cloud provider regional boundary and goes to a cluster or service in a different region, the application entails cloud provider Inter-region data transfer costs based on the amount of data (in GB) transferred. For example: backing up DB data between North America and Europe regions. The cost typically depends on the source region of the application generating the traffic.
-* **Inter-AZ**:  When an application sends traffic that traverses a cloud provider availability zone (AZ) boundary and goes to a service or application pod in a different availability zone but in the same region, the cloud provider charges Inter-AZ data transfer cost in both ingress and egress directions. As a result, both source and destination applications or services will have Inter-AZ  data transfer costs based on the amount of data transferred (in GB).
-* **Intra-AZ**: Typically traffic within the same AZ (Intra-AZ) has no cost, but there are cases when an application sends traffic to a different cluster or accesses an application or service using public IPs. In those cases, the cloud provider charges similar Inter-AZ data transfer costs in both ingress and egress directions. This typically happens when traffic uses Public IP for services like DNS, Ingress, Load Balancer, Transit Gateway, NAT Gateway etc. For example:
+- **Internet**: When an application sends traffic out to the internet, to an IP address external to the cloud provider, the application is assigned cloud provider Internet data transfer costs based on the amount of data (in GB) transferred. For example, a streaming service that sends videos to external clients on the internet or a sales application backing up data to DB service in a private cloud. Cloud providers do not charge for internet traffic coming into the cluster.
+- **Inter-Region**: When an application sends traffic that crosses a cloud provider regional boundary and goes to a cluster or service in a different region, the application entails cloud provider Inter-region data transfer costs based on the amount of data (in GB) transferred. For example: backing up DB data between North America and Europe regions. The cost typically depends on the source region of the application generating the traffic.
+- **Inter-AZ**: When an application sends traffic that traverses a cloud provider availability zone (AZ) boundary and goes to a service or application pod in a different availability zone but in the same region, the cloud provider charges Inter-AZ data transfer cost in both ingress and egress directions. As a result, both source and destination applications or services will have Inter-AZ data transfer costs based on the amount of data transferred (in GB).
+- **Intra-AZ**: Typically traffic within the same AZ (Intra-AZ) has no cost, but there are cases when an application sends traffic to a different cluster or accesses an application or service using public IPs. In those cases, the cloud provider charges similar Inter-AZ data transfer costs in both ingress and egress directions. This typically happens when traffic uses Public IP for services like DNS, Ingress, Load Balancer, Transit Gateway, NAT Gateway etc. For example:
   - DNS or Ingress path url is resolved to a Public IP.
   - Load balancer service that is resolved by NodePort public IP instead of private pod IP or service ClusterIP.
 
@@ -113,7 +113,7 @@ The different types of cloud provider data transfer costs which can be associate
 
 #### High-level Architecture for Network Costs
 
-The [Ocean network client is installed](ocean/tutorials/install-network-client?id=install-the-ocean-network-client-in-the-cluster) in the Kubernetes cluster and runs as a Kubernetes DeamonSet on each node in the cluster. The Ocean network client includes an exporter and an eBPF packet counter. They collect network flow metrics from pods on the node and send aggregated flow data at regular intervals to the Ocean backend cluster (AWS) for network cost calculation and further aggregation which can be up to 90 days.   
+The [Ocean network client is installed](ocean/tutorials/install-network-client?id=install-the-ocean-network-client-in-the-cluster) in the Kubernetes cluster and runs as a Kubernetes DeamonSet on each node in the cluster. The Ocean network client includes an exporter and an eBPF packet counter. They collect network flow metrics from pods on the node and send aggregated flow data at regular intervals to the Ocean backend cluster (AWS) for network cost calculation and further aggregation which can be up to 90 days.
 
 <img src="/ocean/_media/network-costs-3.png" />
 
@@ -126,8 +126,3 @@ The breakdown also gives you cost information about different Kubernetes element
 ## Data Captured
 
 Ocean captures and displays data only from instances (nodes) that are managed by Ocean. If you have instances in your cluster that are not managed by Ocean, they are not included in the analysis.
-
-## What's Next?
-
-Learn about the charts, views, and reports you can create in Ocean in [Analyze Your Costs](ocean/tutorials/analyze-your-costs).
-Learn how to [Create a Cost Analysis Filter](ocean/tutorials/create-a-cost-filter) and customize the information displayed.

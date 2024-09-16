@@ -24,9 +24,9 @@ From the list on the left, choose the instances you want to migrate into your Oc
 
 Choose your preferred Workload Migration process by selecting the relevant checkbox:
 
-* **Terminate Instances** – Ocean terminates the old instances once the pods that reside in them are migrated, and the old instances are fully drained.
-* **Evict stand-alone Pods** – Ocean terminates pods that do not belong to a Kubernetes deployment. This means that you need to launch the pod manually (after the migration) because there is no object that can launch it automatically.
-* **Force PDB covered Pod Eviction** – By selecting this checkbox, Ocean forces the Pod eviction from the instance, even if the distributed budget is not satisfied.
+- **Terminate Instances** – Ocean terminates the old instances once the pods that reside in them are migrated, and the old instances are fully drained.
+- **Evict stand-alone Pods** – Ocean terminates pods that do not belong to a Kubernetes deployment. This means that you need to launch the pod manually (after the migration) because there is no object that can launch it automatically.
+- **Force PDB covered Pod Eviction** – By selecting this checkbox, Ocean forces the Pod eviction from the instance, even if the distributed budget is not satisfied.
 
 > **Tip**: If you have Stand-Alone pods and you have not chosen Evict stand-alone Pods, you will be required to manually evict those pods at the end of the migration process.
 
@@ -49,11 +49,13 @@ During the migration, you have visibility into the process in the Workload Migra
 The following information is displayed:
 
 1. The overall status of the migration process:
-* Running – The migration process is concurrent and pods are being migrated.
-* Stopping – The migration process has been interrupted by the user, and Spot is gracefully completing the current batch.
-* Stopped – The migration process has officially stopped, after completing the stopping phase.
-* Completed – The migration process has completed successfully.
-* Failed – The migration process has failed due to technical fault during the process.
+
+- Running – The migration process is concurrent and pods are being migrated.
+- Stopping – The migration process has been interrupted by the user, and Spot is gracefully completing the current batch.
+- Stopped – The migration process has officially stopped, after completing the stopping phase.
+- Completed – The migration process has completed successfully.
+- Failed – The migration process has failed due to technical fault during the process.
+
 2. The stage of the migration process.
 3. The number of new instances spun up by Spot. This number increases from 0 during the first few minutes of the migration process.
 4. The number of pods launched on new instances. This number increases as the migration proceeds. Note that Kubernetes might schedule other pods that do not belong to the workloads being migrated.
@@ -66,9 +68,9 @@ The following information is displayed:
 
 ### Instance Color Status
 
-* Green: The instance has completed the migration successfully.
-* Yellow: The instance has partially completed the migration.
-* Red: The instance has failed the migration.
+- Green: The instance has completed the migration successfully.
+- Yellow: The instance has partially completed the migration.
+- Red: The instance has failed the migration.
 
 If you want to review previous migrations, click Previous Migrations on the top right corner of the Workload Migration screen.
 
@@ -76,11 +78,7 @@ If you want to review previous migrations, click Previous Migrations on the top 
 
 You have the option to stop the migration process once it has started.
 
-1. Click Stop Migration.  
+1. Click Stop Migration.
 2. Mark Terminate Drained Instances if you want Ocean to terminate the already drained instances before stopping the entire process.
 3. Click Yes.
 4. Click Stop.
-
-## What's Next?
-
-Learn how to migrate your workload using the [Spot API](ocean/tutorials/migrate-workload-via-api).

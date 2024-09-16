@@ -38,23 +38,17 @@ You will need to configure several items as described below.
 ```yaml
 {
   "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Principal": {
-        "Service": "resources.cloudformation.amazonaws.com"
+  "Statement":
+    [
+      {
+        "Effect": "Allow",
+        "Principal": { "Service": "resources.cloudformation.amazonaws.com" },
+        "Action": "sts:AssumeRole",
       },
-      "Action": "sts:AssumeRole"
-    }
-  ]
+    ],
 }
 ```
 
 5. Copy and paste the newly created role’s ARN into the Public extension configuration screen and click Activate.
 6. You will now see “Spot::Elastigroup::Group” under Activated extensions. Your CloudFormation stacks can now refer to it as a native resource type.
 7. If you or your organization uses multiple AWS regions, simply repeat the activation process in each specific region. Remember that you can use the same Execution role ARN across all regions.
-
-## What’s Next?
-
-- Learn more about the CloudFormation [template structure](tools-and-provisioning/cloudformation/template-structure/) and [tools](tools-and-provisioning/cloudformation/tools/) available.
-- Try out one of the many example templates available.

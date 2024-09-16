@@ -1,4 +1,4 @@
-<meta name="“robots”" content="“noindex”">
+<meta name="robots" content="noindex">
 
 # HostPort Configuration in ECS Workloads Causes Underutilized Nodes
 
@@ -8,21 +8,21 @@ If a node only has one task running, then it causes the node to be underutilized
 
 Example service:
 
-````json
+```json
 "placementConstraints": [],
    "placementStrategy": [],
-````
+```
 
 The task definition doesn't have constraints to spread tasks across nodes.
 
-````json
+```json
 "placementConstraints": [
   {
   "type": "memberOf",
   "expression": "attribute:nd.type == default"
   }
   ],
-````
+```
 
 ## Instructions
 
@@ -31,13 +31,14 @@ Check the **portMappings: hostPort** value in teh task/service defintion.
 Port mappings allow containers to access ports on the host container instances to send or receive traffic. This configuration can be found in the task definition. The hostPort value in port mapping is normally left blank or set to 0.
 
 Example:
-````json
+
+```json
       "portMappings": [
             {
                "protocol": "tcp",
                "hostPort": 0,
                "containerPort": 443
-````
+```
 
 However, if the hostPort value equals the containerPort value, then each task needs its own container. Any pending tasks trigger a scale-up, and the number of launched instances is equal to the number of pending tasks. This leads to underutilized instances and higher costs.
 

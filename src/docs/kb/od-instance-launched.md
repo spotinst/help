@@ -1,4 +1,4 @@
-<meta name="“robots”" content="“noindex”">
+<meta name="robots" content="noindex">
 
 # On-Demand Instance Launched When Spot Instances in Other Markets Are Available
 
@@ -10,7 +10,7 @@ Why is an on-demand instance launched instead of a spot instance even if a spot 
 
 <font color="#7632FE">are the 2 hyperlinks below correct?</font>
 
-You can set [Equal AZ Distribution](https://docs.spot.io/elastigroup/features/core-features/equal-az-instance-distribution-orientation?id=equal-az-instance-distribution-orientation) for cluster orientation in Elastigroup. Despite this, Spot may prioritize a certain availability zone to maintain equal distribution. 
+You can set [Equal AZ Distribution](https://docs.spot.io/elastigroup/features/core-features/equal-az-instance-distribution-orientation?id=equal-az-instance-distribution-orientation) for cluster orientation in Elastigroup. Despite this, Spot may prioritize a certain availability zone to maintain equal distribution.
 
 An [Elastigroup may have Equal AZ Distribution](https://docs.spot.io/elastigroup/features/core-features/equal-az-instance-distribution-orientation?id=equal-az-instance-distribution-orientation) set for cluster orientation, but the system sometimes prioritizes a certain availability zone to maintain equal distribution. When no spot instances are available, an on-demand instance spins up in the relevant availability zone. If it’s not possible to start an on-demand instance in the same market, it starts in a different market.
 

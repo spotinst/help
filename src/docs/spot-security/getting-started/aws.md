@@ -1,11 +1,9 @@
-<meta name="robots" content="noindex">
-
-## Onboard AWS Account
+# Onboard AWS Account
 
 This procedure describes how to connect your AWS account to Spot Security.
 
 1. If you are using Spot Security for the first time, click **Spot Security** in the left main menu of the Spot console. Click **Start With 30 Days Free Trial**.
-2. If you already onboarded a cloud account(s) on Spot Security, in the left main menu in the console click **Spot Security** and **Administration**.  
+2. If you already onboarded a cloud account(s) on Spot Security, in the left main menu in the console click **Spot Security** and **Administration**.
 3. Under the Cloud Accounts Tab, click **+ Cloud Account**.
 
 <img src="/spot-security/_media/getting-started-a1.png" />
@@ -42,7 +40,7 @@ You need to connect a CloudTrail account to your Spot Security account. If you h
 <img src="/spot-security/_media/getting-started-g1.png" width="350" height="360" />
 
 2. If the selected account is centralized, choose **Yes**.
-You can connect all of the dependent accounts in bulk if you have selected a centralized bucket. Select all the accounts you wish to onboard and click **Next**.
+   You can connect all of the dependent accounts in bulk if you have selected a centralized bucket. Select all the accounts you wish to onboard and click **Next**.
 
 <img src="/spot-security/_media/getting-started-h1.png" />
 
@@ -58,7 +56,7 @@ You can connect all of the dependent accounts in bulk if you have selected a cen
 
 #### Create CloudFormation Stack
 
-1. In the Prepare Template field, select **Template is ready**, and click **Next**.  
+1. In the Prepare Template field, select **Template is ready**, and click **Next**.
 
 <img src="/spot-security/_media/gs-cloudformation-stack-1.png" />
 
@@ -93,7 +91,3 @@ When this is complete, you can return to the Spot Security onboarding process to
 Review the information and ensure all information is correct. Click **Finish Onboarding**.
 
 <img src="/spot-security/_media/getting-started-k1.png" width="750" height="600" />
-
-## What's Next?
-
-Learn more about the [security features](spot-security/features/) in Spot Security.

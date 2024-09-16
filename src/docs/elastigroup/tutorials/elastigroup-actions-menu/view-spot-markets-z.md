@@ -42,7 +42,3 @@ This chart shows how many instances (of all types) are managed by Spot in real t
 You might see that Elastigroup does not manage a specific instance type in an AZ or that there are only a small number of instances in an AZ. This indicates that the market is a low score market and, therefore, Elastigroup prefers to not launch instances in this market to most of our customers.
 
 <img src="/elastigroup/_media/tutorials-view-spot-markets-05.png" />
-
-## What’s Next?
-
-Learn how to view details about the [Load Balancers](elastigroup/tutorials/elastigroup-actions-menu/view-load-balancers) in your Elastigroup.

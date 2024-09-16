@@ -8,15 +8,15 @@ Ocean's pod-driven scaling for Kubernetes clusters serves three main goals:
 
 ## Spot Ocean vs. Metric-Based Node Autoscaling
 
-Ocean ensures that all pods in the cluster have a place and capacity to run, regardless of the current cluster's load. Moreover, it ensures that there are no underutilized nodes in the cluster. Metric-based cluster autoscalers are not aware of pods when scaling up and down. As a result, they may add a node that will not have any pods or remove a node that has some system-critical pods on it, like kube-dns. Usage of these autoscalers with Kubernetes is discouraged.
+Ocean ensures that all pods in the cluster have a place and capacity to run, regardless of the current cluster's load. Moreover, it ensures that there are no underutilized nodes in the cluster. Metric-based cluster autoscalers are not aware of pods when scaling up and down. As a result, they may add a node that will not have any pods or remove a node with some system-critical pods on it, like kube-dns. Usage of these autoscalers with Kubernetes is discouraged.
 
 ## Scale Up
 
-Ocean continuously checks for unschedulable pods. A pod is unschedulable when the Kubernetes scheduler is unable to find a node that can accommodate the pod. This can happen due to insufficient CPU, Memory, GPU, or [custom resource](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/), for example, when a pod requests more CPU than what is available on any of the cluster nodes. In addition, the Ocean Autoscaler supports the Extended Resources feature as described below.
+Ocean continuously checks for unschedulable pods. A pod is unschedulable when the Kubernetes scheduler cannot find a node that can accommodate the pod. This can happen due to insufficient CPU, Memory, GPU, or [custom resource](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/), for example, when a pod requests more CPU than what is available on any of the cluster nodes. In addition, the Ocean Autoscaler supports the Extended Resources feature, as described below.
 
 Unschedulable pods are recognized by their PodCondition. Whenever a Kubernetes scheduler fails to find a place to run a pod, it sets the `schedulable` PodCondition to false and the reason to `unschedulable`.
 
-Ocean calculates and aggregates the number of unschedulable pods waiting to be placed and finds the optimal nodes for the pod. Ocean ensures that all the pods will have enough resources to be placed. It also distributes the Pods on the most efficient number of VMs from the desired cloud provider. In some scenarios, it will provide a distribution of certain machine types and sizes based on the pod requirements and the spot/preemptible VM prices in the relevant region.
+Ocean calculates and aggregates the number of unschedulable pods waiting to be placed and finds the optimal nodes for the pod. Ocean ensures that all the pods will have enough resources to be placed. It also distributes the Pods on the most efficient number of VMs from the desired cloud provider. In some scenarios, it will distribute certain machine types and sizes based on the pod requirements and the spot/preemptible VM prices in the relevant region.
 
 It may take a few moments before the created nodes join the Kubernetes cluster. To minimize this time (to zero), learn more about cluster [Headroom](ocean/features/headroom.md).
 
@@ -24,9 +24,9 @@ It may take a few moments before the created nodes join the Kubernetes cluster. 
 
 ### Affinity and Anti-affinity
 
-You may want to have multiple replicas of a pod running in the cluster, but ensure that each pod does not run on the same node as other replicas of itself. In order to distribute the replicas properly, you can set an anti-affinity across availability zones. The autoscaler will then automatically launch instances satisfying the pod requirements.
+You may want to have multiple replicas of a pod running in the cluster, but ensure that each pod does not run on the same node as other replicas of itself. In order to distribute the replicas properly, you can set an anti-affinity across availability zones. The Autoscaler will then automatically launch instances satisfying the pod requirements.
 
-Example: Anti-affinity across availability zones: 
+Example: Anti-affinity across availability zones:
 
 ```json
 spec:
@@ -47,26 +47,33 @@ spec:
 
 > **Tip**: In the [affinity syntax](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#resources-that-support-set-based-requirements), Ocean supports both `matchExpressions` and `matchLabels`.
 
-###  Scale Up According to Available IPs (EKS only)
+### Scale Up According to Available IPs
+
+Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>
 
 When the Ocean Autoscaler needs to scale up an instance, it selects the Availability Zone and the included subnet with the most available IPv4 addresses. This avoids IP address exhaustion in a specific subnet and prevents scaling up a node in a subnet that does not have enough IP addresses.
 If all the subnets set for a Virtual Node Group run out of available IP addresses, scaling up is blocked, and the Spot Monitoring team will email you to request that you add more subnets to the Virtual Node Group.
 
+### Support for Shielded GKE Nodes
 
-### Support for Shielded GKE Nodes (GKE only)
+Cloud service provider relevance: <font color="#FC01CC">GKE</font>
 
 [Shielded GKE Nodes](https://cloud.google.com/kubernetes-engine/docs/how-to/shielded-gke-nodes) is a security feature intended to prevent attacks based on impersonating a node in the cluster. The GKE mechanism achieves this by requiring a certification procedure before a new node can be registered to the cluster.
 
 In order to enable import of GKE clusters to Ocean and registration of new nodes in the cluster, the [Ocean Controller](ocean/tutorials/spot-kubernetes-controller/) will function as the approver of the signing requests instead of the GKE mechanism. This allows the Kubernetes mechanism to sign the request and let the node be registered to the cluster. The result is that Ocean can seamlessly scale up nodes in your Ocean-managed GKE cluster, and the nodes will benefit from the protection provided by the Shielded GKE Nodes feature.
 
+### Kubernetes namespaceSelector Scaling Constraint Label
+
+Ocean Controller Version 2 supports the `namespaceSelector` scaling constraint label introduced in Kubernetes Version 1,24. When you apply this label, Ocean's Autoscaler scales up nodes based on the Namespace selector to schedule pods. [See Kubernetes documentation](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#namespace-selector).
+
 ## Scale Down
 
-Ocean proactively identifies underutilized nodes and [bin-packs](https://en.wikipedia.org/wiki/Bin_packing_problem) the pods on the nodes more efficiently to be able to scale down the nodes and reduce the cluster cost. This is reflected by a higher resource allocation. Every minute, Ocean simulates whether there are any running pods that can be moved to other nodes within the cluster. If so, Ocean drains those nodes (cordon the nodes and evicts the pods gracefully) to ensure continuous infrastructure optimization and increased cloud savings.
+Ocean proactively identifies underutilized nodes and [bin-packs](https://en.wikipedia.org/wiki/Bin_packing_problem) the pods on the nodes more efficiently to be able to scale down the nodes and reduce the cluster cost. A higher resource allocation reflects this. Every minute, Ocean simulates whether there are any running pods that can be moved to other nodes within the cluster. If so, Ocean drains those nodes (cordon the nodes and evicts the pods gracefully) to ensure continuous infrastructure optimization and increased cloud savings.
 
 ### Scale Down Behavior
 
-- When scale down of a node is expected, Ocean utilizes a configurable draining timeout of at least 300 seconds. (This can be configured using the drainingTimeout parameter on the Ocean level). At this time, Ocean marks the node as unschedulable and evicts all pods running on the node.
-  - Ocean spreads out the evictions instead of just deleting the pods all at once.  All the pods that run on the nodes are spread across a 120 seconds period of time. For example, if there are 10 pods running on the nodes, one pod is evicted every 12 seconds.
+- When scaling down a node is expected, Ocean utilizes a configurable draining timeout of at least 300 seconds. (This can be configured using the drainingTimeout parameter on the Ocean level). At this time, Ocean marks the node as unschedulable and evicts all pods running on the node.
+  - Ocean spreads out the evictions instead of just deleting the pods all at once. All the pods that run on the nodes are spread across a 120 seconds period of time. For example, if there are 10 pods running on the nodes, one pod is evicted every 12 seconds.
   - If the eviction fails, Ocean has a retry mechanism that tries to evict the pods a few seconds later. If eviction still fails after one minute, Ocean forces deletion of the pod.
 - After the draining timeout has expired, Ocean terminates the node and removes any pods that were not successfully evicted.
 - Scale down will start only if no PDB is violated by removing the pods on the node. That is the default behavior. However, you could decide to ignore the PDB restriction during scale down. (Please contact the Support team to enable ignoring the restriction.) If ignoring PDB restriction is configured, the drain still occurs, and the spread described above provides a "best effort" to prevent violating the PDB.
@@ -76,11 +83,12 @@ Ocean proactively identifies underutilized nodes and [bin-packs](https://en.wiki
 
 ### Scale Down Prevention
 
-Some workloads are not as resilient to instance replacements as others, so you may wish to prevent replacement of the nodes, while still getting the benefit of spot instance pricing. A good example of these cases are jobs or batch processes that need to finish their work without termination by the Ocean autoscaler.
+Some workloads are not as resilient to instance replacements as others, so you may wish to prevent replacement of the nodes while still getting the benefit of spot instance pricing. A good example of these cases is jobs or batch processes that need to finish their work without termination by the Ocean autoscale.
 
 Ocean makes it easy to prevent scaling down of nodes running pods configured with one of the following labels:
+
 - spotinst.io/restrict-scale-down:true label – This label is a proprietary Spot label ([additional Spot labels](https://docs.spot.io/ocean/features/labels-and-taints?id=spot-labels)) and can be configured on a pod level. When configured, it instructs the Ocean autoscaler to prevent scaling down a node that runs any pod with this label specified.
-- cluster-autoscaler.kubernetes.io/safe-to-evict: false annotation – Cluster autoscaler annotation; works similarly to the restrict-scale-down label. Ocean supports the annotation to ensure easy migration from the cluster autoscaler to Ocean.
+- cluster-autoscaler.kubernetes.io/safe-to-evict: false annotation – Cluster autoscaler annotation; works similarly to the restrict-scale-down label. Ocean supports the annotation to ensure easy migration from the cluster Autoscaler to Ocean.
 
 Another method is to disable the option to scale down from a specific [virtual node group](ocean/features/vngs/). You could do this in the console.
 
@@ -89,35 +97,63 @@ Another method is to disable the option to scale down from a specific [virtual n
 Using the [API](https://docs.spot.io/api/#operation/OceanAWSLaunchSpecUpdate), you could simply set the restrictScaleDown parameter to True.
 Once enabled, VNG nodes are treated as if all pods running have the restrict-scale-down label. Therefore, Ocean would not scale nodes down from the virtual node group unless they are empty.
 
-## Accelerated Scale Down (EKS and GKE)
+## Accelerated Scale Down
 
-Accelerated Scale Down is an Ocean Autoscaler feature that enhances efficiency and cost-effectiveness in your Kubernetes clusters. This feature monitors your Ocean cluster for underutilized nodes and terminates those that are not necessary, so you are not paying for idle resources. 
+Cloud service provider relevance: <font color="#FC01CC">GKE</font> and <font color="#FC01CC">EKS</font>
 
-Kubernetes dynamically scales resources based on demand. However, as workloads decrease, you may find your cluster with an excess of underutilized nodes. These idle resources incur unnecessary costs. 
+Accelerated Scale Down is an Ocean Autoscaler feature that enhances efficiency and cost-effectiveness in your Kubernetes clusters. This feature monitors your Ocean cluster for underutilized nodes and terminates those that are not necessary, so you are not paying for idle resources.
 
-Accelerated Scale-Down significantly reduces the time regular scale-down processes take to scale down nodes. Once a node is identified as eligible for scale down, it is immediately scaled down by the Ocean Autoscaler, depending on a scale-down percentage parameter, `maxScaleDownPercentage`.  
+Kubernetes dynamically scales resources based on demand. However, as workloads decrease, you may find your cluster with an excess of underutilized nodes. These idle resources incur unnecessary costs.
 
-`maxScaleDownPercentage` is the percentage out of the cluster nodes that can be simultaneously scaled down. You can set the maximum scale-down percentage from 1-100, 100% for maximum acceleration. 
+Accelerated Scale-Down significantly reduces the time regular scale-down processes take to scale down nodes. Once a node is identified as eligible for scale down, it is immediately scaled down by the Ocean Autoscaler, depending on a scale-down percentage parameter, `maxScaleDownPercentage`.
 
-Use Accelerated Scale Down for: 
+`maxScaleDownPercentage` is the percentage out of the cluster nodes that can be simultaneously scaled down. You can set the maximum scale-down percentage from 1-100, 100% for maximum acceleration.
 
-*   Prioritizing cost optimization: Scale down resources in larger or more complex environments that do not require continuous operation, such as development and testing.  
+Use Accelerated Scale Down for:
 
-*   Batch processing for short runs: Scale down remaining underutilized nodes after jobs with short run duration (such as every hour for 10-15 minutes) end. 
+- Prioritizing cost optimization: Scale down resources in larger or more complex environments that do not require continuous operation, such as development and testing.
 
-*   Workload Balancing in CI / CD pipelines: For pipelines that involve workloads that are resource-intensive during specific stages, and less demanding during others, scale down resources during the lighter stages. 
+- Batch processing for short runs: Scale down remaining underutilized nodes after jobs with short run duration (such as every hour for 10-15 minutes) end.
 
-*   Handling sudden drops in demand: Scale down resources when traffic decreases.  
+- Workload Balancing in CI / CD pipelines: For pipelines that involve workloads that are resource-intensive during specific stages, and less demanding during others, scale down resources during the lighter stages.
 
-### Configure Accelerated Scale Down 
+- Handling sudden drops in demand: Scale down resources when traffic decreases.
+
+### Configure Accelerated Scale Down
 
 To configure Accelerated scale-down
 
-1.  Use the [Spot by NetApp API](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterGet) to configure Accelerated Scale Down on the Ocean cluster: 
+1.  Use the [Spot by NetApp API](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterGet) to configure Accelerated Scale Down on the Ocean cluster:
 
-2.  Set `cluster.autoScaler.down.aggressiveScaleDown.isEnabled = true`. 
+2.  Set `cluster.autoScaler.down.aggressiveScaleDown.isEnabled = true`.
 
-3.  Optionally increase scale down further by increasing the maxScaleDownPercentage value up to 100%. 
+3.  Optionally increase scale down further by increasing the maxScaleDownPercentage value up to 100%.
+
+## Draining Timeout per Virtual Node Group
+
+Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>
+
+The draining timeout (`drainingTimeout`) is the time span that Ocean waits for the draining process to complete before terminating an instance. The default is 300 seconds.
+
+Setting the draining timeout at the Virtual Node Group level (rather than the cluster level) lets you:
+
+- Minimize infrastructure costs by efficiently terminating nodes that are no longer needed,
+- Customize Virtual Node Groups based on the time it takes to terminate a workload.
+
+You can set the draining timeout (under `strategy`) via the [Spot API](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecCreate) or via [Terraform](https://registry.terraform.io/providers/spotinst/spotinst/latest/docs/resources/ocean_aws_launch_spec#draining_timeout).
+
+## Suspension Hours
+
+Cloud service provider relevance: <font color="#FC01CC">AKS</font>
+
+You can set a suspension hours (`suspensionHours`) time frame for critical periods to exempt your cluster from Ocean's scaling-down activities and ensure uninterrupted operations.
+
+During suspension hours, Ocean Autoscaler stops scaling down nodes for Ocean-initiated actions, such as bin packing, reverting to lower-cost nodes, or reverting to reserved nodes.
+
+You can only set the suspension hours via the [Spot API](https://docs.spot.io/api/#tag/Ocean-AKS/operation/oceanAKSClusterUpdate) (under Update Cluster).
+
+- To enable suspension hours, set `isEnabled` to TRUE
+- To set the time frame, edit start and end times in `timeWindows`.
 
 ## Headroom
 
@@ -131,7 +167,7 @@ Ocean supports Kubernetes [pod topology spread constraints](https://kubernetes.i
 
 Ocean automatically launches nodes while ensuring that the `maxSkew` is maintained. Similarly, Ocean will only scale down a node if `maxSkew` is maintained.
 
-When pods contain spread constraints, Ocean is aware of their labels and can provision nodes from all relevant topologies. Before the initial apply action of these pods, Ocean is required to have at least a single node from each topology so that Kuberentes is aware of their existence. A single node from each topology can easily be configured in Ocean’s [headroom](ocean/features/headroom) feature or by setting [minimum nodes per VNG](ocean/features/launch-specifications?id=attributes-and-actions-per-vng).
+When pods contain spread constraints, Ocean knows their labels and can provision nodes from all relevant topologies. Before the initial apply action of these pods, Ocean is required to have at least a single node from each topology so that Kuberentes is aware of their existence. A single node from each topology can easily be configured in Ocean’s [headroom](ocean/features/headroom) feature or by setting [minimum nodes per VNG](ocean/features/launch-specifications?id=attributes-and-actions-per-vng).
 
 To support the Kubernetes feature, Ocean requires the following:
 
@@ -146,7 +182,7 @@ When you use the topology key `spotinst.io/node-lifecycle`, a running node in ea
 
 ## Support for Extended Resources Feature
 
-The Kubernetes [extended resources](https://kubernetes.io/docs/tasks/administer-cluster/extended-resource-node/) feature allows cluster administrators to advertise node-level resources that would otherwise be unknown to Kubernetes. Ocean supports this feature (for AWS users) both in scale up and scale down, improving cluster performance and cost savings. To learn more about Ocean support for extended resources and how to set it up, see the tutorial [Set up Extended Resource Support](ocean/tutorials/set-up-extended-resource-support).
+The Kubernetes [extended resources](https://kubernetes.io/docs/tasks/administer-cluster/extended-resource-node/) feature allows cluster administrators to advertise node-level resources that would otherwise be unknown to Kubernetes. Ocean supports this feature (for AWS users) both in scale-up and scale-down, improving cluster performance and cost savings. To learn more about Ocean support for extended resources and how to set it up, see the tutorial [Set up Extended Resource Support](ocean/tutorials/set-up-extended-resource-support).
 
 ## Resource Limits
 
@@ -159,7 +195,7 @@ If you wish to override the default configuration, you can customize the scaling
 To customize the scaling configuration:
 
 1. Navigate to your Ocean cluster.
-2. Click on the Actions button on the top-right side of the screen to open the actions menu.
+2. Click on the Actions button on the top-right side of the screen to open the Actions menu.
 3. Choose Customize Scaling.
 
 <img src="/ocean/_media/features-scaling-k8s-03.png" />
@@ -168,25 +204,35 @@ To customize the scaling configuration:
 
 ## Supported Operating Systems
 
-Ocean supports launching instances using any operating system (OS) type, including container-optimized OSs such as Bottlerocket OS, Container Optimized OS, and RancherOS.
+Ocean supports launching instances using any operating system (OS) type, including container-optimized ones such as Bottlerocket, Container Optimized, and RancherOS.
 
 ### Windows and Linux Instances in the same Cluster
 
-Ocean provides the flexibility to use different operating systems in a Kubernetes cluster. For example, using the [virtual node group](ocean/features/launch-specifications) (VNG) concept, you can have Ocean manage Windows nodes alongside other nodes in the cluster.
+Ocean allows you to use different operating systems in a Kubernetes cluster. For example, using the [virtual node group](ocean/features/launch-specifications) (VNG) concept, you can have Ocean manage Windows nodes alongside other nodes in the cluster.
 
-All you need to do is to create a VNG with a Windows AMI and you are all set. (Please note for EKS users, you must use an EKS optimized Windows AMI.) For Windows workloads, the Autoscaler automatically launches nodes only from dedicated VNGs. This means that there is no need to set any specific label on the VNG, unless you have multiple VNGs and you wish to ensure the workload runs on a specific VNG.
+Create a Virtual Node Group with a Windows AMI.
 
-## AKS Support for Max Pods Configuration
+> **Note**: For EKS, use an EKS-optimized Windows AMI. For Windows workloads, the Autoscaler automatically launches nodes only from dedicated VNGs. This means you don't need to set any specific label on the Virtual Node Group unless you have multiple VNGs and wish to ensure the workload runs on a specific Virtual Node Group.
 
-There is a default configuration in AKS of maximum pods that can be scheduled on each node and this default number of pods can be adjusted.
+## Support for Max Pods Configuration
 
-The feature is also available in Ocean in order to improve node utilization and bin packing. With Ocean, you can set a max pods per node parameter in the following different ways:
-* At the cluster level, so that all nodes have a unified configuration.
-* Per virtual Node Group, so that you can have different configurations for different workloads.
-If you have already configured maximum pods per node on your AKS cluster, this configuration will be imported during the connection of the AKS cluster to Ocean.
+Cloud service provider relevance: <font color="#FC01CC">AKS</font>
+
+AKS has a default configuration of the maximum number of pods that can be scheduled on each node, which can be adjusted.
+
+The feature is also available in Ocean to improve node utilization and bin packing. With Ocean, you can set a max pods per node parameter in the following different ways:
+
+- At the cluster level, so that all nodes have a unified configuration.
+- Per virtual Node Group, so that you can have different configurations for different workloads.
+  If you have already configured the maximum pods per node on your AKS cluster, this configuration will be imported when the cluster is connected to Ocean.
 
 This feature is available via API on the [cluster level](https://docs.spot.io/api/#operation/oceanAKSClusterCreate) and the [VNG level](https://docs.spot.io/api/#operation/oceanAKSVirtualNodeGroupCreate).
 
-## What’s Next?
+## Support for Pod Scaling Readiness
 
-Learn more about how Ocean manages [headroom](ocean/features/headroom).
+Cloud service provider relevance: <font color="#FC01CC">AKS</font>
+
+Ocean with [Controller V2](ocean/tutorials/ocean-controller-v2) supports Pod Scheduling Readiness (included in Kubernetes 1.30), which considers whether a pod is ready to be scheduled. This feature lets you reduce the churn of pods that stay in a "miss-essential-resources" state for a long time.
+Pods with the `SchedulingGated` status are not scheduled. By specifying/removing a Pod's `.spec.schedulingGates`, you can control when a pod is ready to be considered for scheduling.
+
+Use Pod Scheduling Readiness according to the [Kubernetes documentation](https://kubernetes.io/docs/concepts/scheduling-eviction/pod-scheduling-readiness/).

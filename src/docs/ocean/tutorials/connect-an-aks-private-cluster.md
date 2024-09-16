@@ -223,7 +223,3 @@ Once you have completed all the procedures in the Connectivity section, there ar
 - Terraform: Use Terraform resources. You will need to create both an Ocean cluster and a virtual node group using the following Terraform resources:
   - [Ocean AKS](https://registry.terraform.io/providers/spotinst/spotinst/latest/docs/resources/ocean_aks)
   - [Ocean AKS Virtual Node Group](https://registry.terraform.io/providers/spotinst/spotinst/latest/docs/resources/ocean_aks_virtual_node_group)
-
-## What’s Next?
-
-Learn more about Ocean’s [scaling](ocean/features/scaling-kubernetes) and [headroom](ocean/features/headroom) features.

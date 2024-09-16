@@ -7,7 +7,3 @@ Stateful Node provides recovery and flexibility by enabling customers to leverag
 Stateful Node provides quick access to lossless state maintenance on Spot, with root, data volume, and network persistence. This is ideal for use cases such as monolithic applications, dev/test machines, or database workloads.
 
 Stateful Node also supports scheduling actions and provides continuous backup options to enable cross-AZ and cross-Region resilience and recovery.
-
-## What's Next?
-
-This section describes Stateful Node features for Azure in detail. To learn about Stateful Node, choose a topic in the sidebar on the left.

@@ -2,6 +2,8 @@
 
 Scaling Nomad nodes has always been difficult, our solution is our own proprietary Nomad Autoscaler which will allow our customers to scale Nomad workloads economically based on Spot prices and trends based on aggregated node utilization.
 
+To learn how to configure the Elastigroup Integration with Nomad Autoscaler, see [Configure Nomad Autoscaler](elastigroup/tools-integrations/nomad/configure-nomad-autoscaler).
+
 ## How Nomad Autoscaler Works
 
 Nomad Autoscaler periodically checks whether there are Jobs that have queued allocations and if there is enough capacity to schedule these allocations. If there isn't enough capacity, a scale up event will be triggered.
@@ -46,7 +48,3 @@ When an instance is found idle for the specified amount of consecutive periods, 
 <img src="/elastigroup/_media/nomad-autoscaling-03.png" />
 
 > **Tip**: Scale-Down actions are limited to 10% of the cluster size at a time.
-
-## What's Next?
-
-To learn how to configure the Elastigroup Integration with Nomad Autoscaler, see [Configure Nomad Autoscaler](elastigroup/tools-integrations/nomad/configure-nomad-autoscaler).

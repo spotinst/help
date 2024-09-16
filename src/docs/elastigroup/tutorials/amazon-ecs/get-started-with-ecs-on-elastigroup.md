@@ -66,7 +66,3 @@ Initialize-ECSAgent -Cluster CLUSTER_NAME -EnableTaskIAMRole -LoggingDrivers '["
 
 - In the Compute tab, under the Integrations section, select ECS and provide your Cluster Name.
 - Continue with the Creation Wizard and create your Elastigroup.
-
-## What's Next?
-
-Now that you have created an ECS-integrated Elastigroup, learn more about the [ECS Auto-Scaler](elastigroup/features/amazon-ecs/automatic-autoscaler-for-ecs.md) and how it efficiently and automatically scales your cluster.

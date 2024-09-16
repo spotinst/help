@@ -1,4 +1,4 @@
-<meta name="“robots”" content="“noindex”">
+<meta name="robots" content="noindex">
 
 # Ocean | Error Message "Can't Spin Spot Instances"
 
@@ -15,6 +15,7 @@ This message is shown in the console logs if Ocean attempts to scale up a certai
 Ocean is aware of a pending pod and is spinning up an instance. Based on your current instance market, Ocean chooses the instance type in a particular availability zone and attempts to scale up. If it fails due to a lack of capacity, the error message is shown in the console logs.
 
 ## Solution
-* Have many instance types so Ocean can choose the best available markets.
-* Have multiple availability zones to provide more availability.
-* For workloads that are not resilient to disruptions, configure the [on demand label](https://docs.spot.io/ocean/features/labels-and-taints?id=spotinstionode-lifecycle) `spotinst.io/node-lifecycle`.
+
+- Have many instance types so Ocean can choose the best available markets.
+- Have multiple availability zones to provide more availability.
+- For workloads that are not resilient to disruptions, configure the [on demand label](https://docs.spot.io/ocean/features/labels-and-taints?id=spotinstionode-lifecycle) `spotinst.io/node-lifecycle`.

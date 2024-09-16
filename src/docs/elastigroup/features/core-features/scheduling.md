@@ -44,7 +44,3 @@ You can schedule one or more tasks in Elastigroup when you create a new Elastigr
 5. Fill in the cron expression to schedule the action.
 
 The task schedule will take effect when you save your modifications to the configuration, e.g., when you click Update in the Review page. If you are creating a new Elastigroup, the task will take effect when you click Create on the Review page.
-
-## What's Next?
-
-Learn more about the kinds of [scaling policies](elastigroup/features/scaling/) you can define in Elastigroup.

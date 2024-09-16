@@ -9,14 +9,15 @@ To manage your stateful nodes in the Spot console, go to Elastigroup in the left
 ## View List of Stateful Nodes
 
 The list of stateful nodes gives you a quick view of your nodes and basic information including:
+
 - Node Name: The user-given name of the node.
 - ID: The unique identifier that Elastigroup assigned to the node upon creation.
-- Instance Type: The instance type of the stateful node.  
-- Availability Zone: The Azure availability zone where the VM is located. 
-- Public IP: The public IP address which is assigned to the VM. 
-- Status: The activity status of the node (e.g., Running, Paused). 
-- Node ID: The ID of the node.  
-- Launched at: When the node was launched.  
+- Instance Type: The instance type of the stateful node.
+- Availability Zone: The Azure availability zone where the VM is located.
+- Public IP: The public IP address which is assigned to the VM.
+- Status: The activity status of the node (e.g., Running, Paused).
+- Node ID: The ID of the node.
+- Launched at: When the node was launched.
 - Agent Health: The health of the agent of the node.
 
 ## Filter Node List
@@ -33,14 +34,15 @@ To get detailed information, statistics, and operational information about a sta
 
 You can do the following from the dropdown menu:
 
-* Create a new node from scratch.
-* Import an existing VM from Azure.  
+- Create a new node from scratch.
+- Import an existing VM from Azure.
 
 <img src="/elastigroup/_media/azure-manage-stateful-edit-5.png" width="300"/>
 
 ## Use Node Actions
 
 To perform one of the [node actions](managed-instance/azure/features/actions), click on the Actions menu on the top right and click one of the actions. The actions available include:
+
 - View Configuration
 - Recycle
 - Pause
@@ -51,7 +53,7 @@ To perform one of the [node actions](managed-instance/azure/features/actions), c
 
 ## Edit Node Configuration
 
-When the node status is either Running or Paused, you can edit the node’s configuration in the creation wizard.  
+When the node status is either Running or Paused, you can edit the node’s configuration in the creation wizard.
 
 Hover over the relevant row of the node you want to configure in the table and click the Edit icon that appears on the right.
 
@@ -67,7 +69,7 @@ You can then edit any of the fields in the Basics page that appear.
 
 You can also go to the Review page and edit directly in the JSON configuration. In the Review page, do the following:
 
-1. Click JSON and click Edit Mode.  
+1. Click JSON and click Edit Mode.
 
 <img src="/elastigroup/_media/azure-manage-stateful-edit-4.png" />
 
@@ -83,7 +85,3 @@ The following parameters cannot be edited and are not included in the JSON confi
 `compute.os`
 
 > Tip: You can edit a node only when it is in Running or Paused state.
-
-## What’s Next?
-
-Learn more about the [Stateful Node Details](managed-instance/azure/tutorials/view-details) view.

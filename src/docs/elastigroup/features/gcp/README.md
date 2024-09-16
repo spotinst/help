@@ -9,7 +9,6 @@ drive extreme cost-efficiency, and simplify infrastructure management. This incl
 
 Elastigroup uses machine learning and analytics to automate and optimize cloud infrastructure on GCP, freeing application teams to focus on their applications, without worrying about their infrastructure.
 
-## What's Next?
+This section describes Elastigroup features relating specifically to use with Google Cloud Platform. To learn more, choose a topic in the sidebar on the left.
 
-- This section describes Elastigroup features relating specifically to use with Google Cloud Platform. To learn more, choose a topic in the sidebar on the left.
-- To learn more about general Elastigroup features that are available with the major cloud providers (AWS, Azure, and GCP, unless otherwise specified), read about Elastigroup [Core](elastigroup/features/core-features/), [Compute](elastigroup/features/compute/), and [Scaling](elastigroup/features/scaling/) features.
+To learn more about general Elastigroup features that are available with the major cloud providers (AWS, Azure, and GCP, unless otherwise specified), read about Elastigroup [Core](elastigroup/features/core-features/), [Compute](elastigroup/features/compute/), and [Scaling](elastigroup/features/scaling/) features.

@@ -53,7 +53,3 @@ The following principles apply for setting up placement groups.
 - Capacity reservation (using reserved instances) can be used by instances in a placement group that are assigned to the same AZ. However, it is not possible to explicitly reserve capacity for a placement group.
 - Members of the placement group must address each other using their private IP addresses.
 - If there is not enough capacity in the specific placement group configured within an AZ, then Elastigroup will launch new instances in the AZ.
-
-## What’s Next?
-
-Learn more about [availability zones](elastigroup/features/compute/preferred-availability-zones) and [preferred instance types](elastigroup/features/compute/preferred-instance-types).

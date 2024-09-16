@@ -1,4 +1,4 @@
-<meta name="“robots”" content="“noindex”">
+<meta name="robots" content="noindex">
 
 # Troubleshoot InvalidBlockDeviceMapping Error
 
@@ -12,8 +12,9 @@ Troubleshoot error:
 
 This happens when the group's device name (for Block Device Mapping) and the AMI's device name do not match:
 
-* AMI - "deviceName": "xvda"
-* Group's configuration - "deviceName": "/dev/xvda"
+- AMI - "deviceName": "xvda"
+- Group's configuration - "deviceName": "/dev/xvda"
 
 ## Solution
+
 Change the device name from `xvda` to `/dev/xvda` on the group's side. Go to **Actions** > **Edit Configuration** > **Review Tab** > **Switch to Json Edit format** > **Apply the changes and save**.

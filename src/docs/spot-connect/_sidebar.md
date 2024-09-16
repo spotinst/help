@@ -22,10 +22,11 @@
     - [String Transformers](spot-connect/actions/string_transformers)
   - [Integrations](spot-connect/integrations/)
     - [Amazon SNS](spot-connect/integrations/sns)
+    - [Amazon Web Services](spot-connect/integrations/aws)
     - [Ansible](spot-connect/integrations/ansible)
     - [API Keys](spot-connect/integrations/apikeys)
     - [EKS Permissions](spot-connect/integrations/eks)
-    - [Elasticsearch](spot-connect/integrations/elasticsearch) 
+    - [Elasticsearch](spot-connect/integrations/elasticsearch)
     - [CloudFormation Templates](spot-connect/integrations/cloudformation)
     - [Datadog](spot-connect/integrations/datadog)
     - [Generic Webhook](spot-connect/integrations/webhook)
@@ -50,4 +51,3 @@
     - [Terraform CLI](spot-connect/integrations/terraform-cli)
     - [Terraform Cloud](spot-connect/integrations/terraform)
     - [Twilio](spot-connect/integrations/twilio)
-

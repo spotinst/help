@@ -52,6 +52,4 @@ The following table covers the MachineOptions parameters used above. Note that t
 
 You just configured Docker-Machine to provision instances through Elastigroup.
 
-## What's Next?
-
-- To learn more about the Elastigroup Docker-Machine integration, click [here](https://github.com/spotinst/docker-machine-driver-spotinst).
+To learn more about the Elastigroup Docker-Machine integration, click [here](https://github.com/spotinst/docker-machine-driver-spotinst).

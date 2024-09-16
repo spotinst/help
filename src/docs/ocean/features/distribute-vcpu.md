@@ -1,6 +1,6 @@
 # Distribute Nodes by vCPU
 
-Cloud sevice provider relevance: <font color="#FC01CC">AWS Kubernetes</font>  
+Cloud sevice provider relevance: <font color="#FC01CC">AWS Kubernetes</font>
 
 The Spot team understands that one of your main concerns in running your applications is high availability (HA). Ocean provides several methods of distributing resources that contribute to HA, significantly reducing the chances of an interruption of service.
 
@@ -36,18 +36,14 @@ strategy{
 
 Values for spreadNodesBy can be:
 
-* vCPU
-* Count
+- vCPU
+- Count
 
 If no option is set, the default behavior is spread by count.
 
 Once you have set to spread nodes by vCPU, the following Ocean functions will use this method:
 
-* Scale up
-* Spot percentage
-* Scale per VNG
-* Replacement process (out of strategy, auto-healing)
-
-## Related Topics
-
-Learn how Ocean uses the [Headroom](ocean/features/headroom) feature to be ready for rapid application scale-up.
+- Scale up
+- Spot percentage
+- Scale per VNG
+- Replacement process (out of strategy, auto-healing)

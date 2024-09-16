@@ -42,7 +42,3 @@ In the example below, the filter will operate on Kubernetes resources. The filte
 The applied filter produces a breakdown table as shown below.
 
 <img src="/ocean/_media/cost-analysis-4.png" />
-
-## What's Next?
-
-Learn how to [Migrate the Workload to Ocean](ocean/tutorials/migrate-workload).

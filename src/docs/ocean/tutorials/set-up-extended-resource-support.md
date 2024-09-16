@@ -22,13 +22,13 @@ You can use the Ocean APIs to set up Ocean to use the extended resources feature
 
 ```json
 {
-    "extendedResourceDefinition": {
-        "name": "spot.io/myGpu",
-        "mapping": {
-            "c3.large": "1",
-            "c5.large": "3"
-        }
+  "extendedResourceDefinition": {
+    "name": "spot.io/myGpu",
+    "mapping": {
+      "c3.large": "1",
+      "c5.large": "3"
     }
+  }
 }
 ```
 
@@ -54,7 +54,3 @@ You can use the Ocean APIs to set up Ocean to use the extended resources feature
 - It is not possible to add two different ERDs with the same name to a single Ocean cluster.
 - In the Update Extended Resource Definition API, it is not possible to update the name.
 - Ensure that each extended resource that pods in the cluster are using has an extendedResourceDefinition. If an extended resource does not have an extendedResourceDefinition attached to Ocean, the pod might remain pending.
-
-## What’s Next?
-
-Learn more about performing a [cluster roll](ocean/features/roll).

@@ -1,4 +1,4 @@
-<meta name="“robots”" content="“noindex”">
+<meta name="robots" content="noindex">
 
 # Ocean | EKS | Kubernetes Status Unhealthy
 
@@ -9,6 +9,7 @@ Kubernetes nodes in the cluster have <i>Unhealthy</i> status—the node has a <i
 ## Solution
 
 You can debug unhealthy Kubernetes nodes:
+
 1. Check the nodes' status by running this command in CLI: `kubectl get nodes`
    Look for nodes in a <i>NotReady</i> or <i>Unknown</i> state. This indicates that the nodes are unhealthy or experiencing issues.
 2. Get detailed information about the problematic nodes by running the `kubectl describe` command: `kubectl describe node <node-name>`.
