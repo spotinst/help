@@ -4684,6 +4684,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/spot-connect/integrations/webhook"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/spot-connect/integrations/zendesk</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/spot-connect/integrations/zendesk"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/spot-connect/integrations/zendesk"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/spot-connect/integrations/zoom</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
