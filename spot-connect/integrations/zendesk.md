@@ -34,7 +34,7 @@ These action snippets allow you send comments made on a Jira ticket to its linke
 
 #### Input
 
-| **Parameter**                              | **Description**                                 | **Required ** |
+| Parameter                                  | Description                                     | Required      |
 |--------------------------------------------|-------------------------------------------------|---------------|
 | Zendesk Instance                           | Select Zendesk Instance to post comment to      | Required      |
 | Zendesk Ticket Id                          | Zendesk Ticket Ids to post comment to. ex - 123 | Required      |
