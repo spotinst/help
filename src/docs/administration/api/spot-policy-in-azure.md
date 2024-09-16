@@ -1,7 +1,3 @@
-# Spot Policy in Azure
-
-The latest Spot policy in Azure appears below.
-
 <html>
 <script>
         fetch('https://spotinst-public.s3.amazonaws.com/assets/azure/custom_role_file.json')
@@ -9,9 +5,9 @@ The latest Spot policy in Azure appears below.
             .then(res => {
                 document.querySelector('#spot-azure-permissions').textContent = JSON.stringify(
                     {
-                        permissions:[
+                        properties:[
                             {
-                               actions: res.properties.permissions[0].actions
+                               actions: res.properties
                           }
                         ]
                     }

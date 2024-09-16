@@ -1,3 +1,5 @@
+<meta name=“robots” content=“noindex”>
+
 # Spot PC: Troubleshooting Resources
 
 There are many sources of data to help with troubleshooting in general. Specific troubleshooting articles are also found in this section.

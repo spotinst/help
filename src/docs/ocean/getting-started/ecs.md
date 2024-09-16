@@ -63,8 +63,8 @@ Review all the Ocean settings you have configured. Click Create to finish or use
 
 You're all set! Ocean will now ensure the most cost-effective capacity and sizing possible for your cluster.
 
-## What's Next?
+## Related Topics
 
-- If you wish to run different types of workloads in the same cluster, be sure to create a [Virtual Node Group](ocean/features/vngs/).
+- If you need to run different workloads in the same cluster, create a [Virtual Node Group](ocean/features/vngs/).
 - [Manually scale down](https://docs.aws.amazon.com/cli/latest/reference/ecs/update-container-instances-state.html#update-container-instances-state) your existing ECS nodes in the node pools you migrated to get Ocean to provision pod-driven optimized infrastructure for your existing workloads.
 - [Import Fargate services](https://docs.spot.io/api/#operation/oceanEcsFargateImportToNew) to Ocean clusters using the Spot APIs.

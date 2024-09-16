@@ -1,163 +1,108 @@
 # Strategies 
 
-The calculations and logic associated to strategies are what would be used broadly by an organization as a default. As organizations purchase and sell Reserved Instances (RI) and Savings Plans, as well as manage discounts, the Strategies feature assists in establishing default methods to handle these processes. The feature also enables you to create exceptions for cases where the usage may need to be treated differently than what would be considered the default for a given Billing Strategy. Billing Strategies are available for AWS, Azure, and Google Cloud. 
+Strategies are the highest-level calculations most commonly used across individual cloud organizations.
 
-To find the Strategies page complete the following steps:  
-1. In the left main menu, click **Billing Engine** and click **Rules**.  
-2. Click **Strategies**.   
+## Reserved Instance and Savings Plan Discount Sharing
 
-![strategies-1](https://github.com/spotinst/help/assets/106514736/ef5b9f73-5ffc-40f0-9023-88c436fede02)
+Billing Engine lets you deactivate sharing discounts for reserved instances and savings plans. This means the Billed Cost is the full-priced, on-demand cost instead of the reserved instance or savings plan price.
 
-Types of strategies:  
+Unshare AWS/Azure Reserved Instances and Savings Plans is only applicable for AWS and Microsoft Azure accounts.
 
-* Remove Published Taxes 
-* Eco AWS Cost Sharing 
-* AWS Billing Account Strategy 
-* AWS Custom Support 
-* Amortize Azure Reserved Instances 
+## Amortization (Reservations)
+It can be hard to amortize reserved instance costs for each team in your organization. When you have reserved instances, you need to amortize based on usage hours. The instance payment is prorated by usage hour for each team using tags. Tags are assigned to resources to tie them back to the reserved instance usage. The result is that the upfront and recurring costs of reserved instance and saving plan benefits are amortized.
 
-## Remove Published Taxes 
+Amortization is only applicable for AWS and Microsoft Azure accounts.
 
-You can choose to remove taxes. If you turn the **Removed Published Taxes** toggle on, you are electing to remove published taxes from the cloud provider.  
 
-## Eco AWS Cost Sharing 
+ <details>
+   <summary markdown="span">Example</summary>
 
-You can choose to share the cost of Eco RI or savings plan-related savings with consumers of the savings. 
+   A payer account has purchased 1,000 reserved instances with an upfront amortized fee of $1,000 per month. There are 500 instances running 24/7 for the month across the consolidated billing family.
 
-### Percentage 
+   One payee is using 100 instances running 24/7 for the month. That payee is allocated $200 per month of reserved instance upfront fees: 
+   <i>$1,000 / 500 total instances x 100 instances used = $200</i>
+   
+ </details>
 
-The percentage option enables you to add a charge proportionate to the overall savings provided by Eco. You can enter the exact same percentage as your contract with Spot, or you may enter a different percentage depending on your business model. It is possible for an account to appear in the report, but if no Eco-generated savings are attributed to it, then no Eco fee will be attributed to it.
+## Eco Cost Sharing
 
-### Flat Fee 
+You can share the cost of Eco reserved instance savings or savings plan-related savings with consumers of the savings:
 
-The Flat Fee option enables you to add a fee to each subset or account. The fee will be the same each month.  
+* **Percentage** lets you add a charge relative to the overall savings provided by Eco. For example, you can enter the same percentage as your contract with Spot, or a percentage depending on your business model.
+  An account only has Eco-generated fees showing for it if there are Eco-generated savings attributed to it.
 
-### Distributed Eco 
+* **Flat Fee** lets you add a fixed monthly fee to each family or account.
+* **Distributed Eco** lets you spread the fee evenly across accounts based on usage. You can choose <i>Estimate</i> or <i>Spot Billing Cycle Actuals</i>. Estimate distributes the fee based on a tentative estimate of the usage. <i>Spot Billing Cycle Actuals</i> divides the fee using data from the previous month.
 
-The Distributed Eco option enables you to distribute the fee evenly across accounts based on usage. From this option, you can choose Estimate or Spot Billing Cycle Actuals.  
-* Estimate: Distributes the fee based on a tentative estimate of the usage. 
-* Spot Billing Cycle Actuals: Leverages data from the previous month to distribute the fee accordingly. 
+Eco Cost Sharing is only applicable for AWS accounts.
 
-## AWS Billing Accounts Strategy
+## Recalculating Pricing Tiers
 
-Select a billing account strategy to optimize cost management and maximize financial efficiency. 
+Recalculating pricing tiers is the actual spend per family by tier. The standard pricing tiers and discounts are not taken into consideration. This gives you a more accurate bill by family.
 
-### Amortize Reserved Instances 
+This is only applicable for AWS accounts.
 
-Recalculate the pricing with your AWS accounts based on how you grouped accounts together into billing families. 
+## Recalculating AWS Reserved Instance Volume Discounts
 
-### Recalculate Pricing Tiers based on Billing Families 
+Calculate the volume discounts based on costs associated with the family by tier. The volume discounts are based on the costs associated with the family itself. This gives you a more accurate bill by family.
 
-By selecting this option, you will be recalculating the pricing with your AWS accounts based on how you grouped accounts together into Billing Families. 
+This is only applicable for AWS accounts.
 
-### Recalculate RI Volume Discounts based on Billing Families 
+## Custom AWS Support Tiering
 
-Recalculate your Reserved Instance Volume discounts based on how you chose to group accounts into billing families.  
+You can calculate the pricing of support more accurately for an entity. With Custom AWS Support Tiering, you can recalculate AWS support plans and their tiers.
 
-## AWS Custom Support 
+This is only applicable for AWS accounts.
 
-You can apply Custom AWS Support Charges or repress existing published support charges. By default, Billing Engine returns what is published by AWS.  
+By default, Billing Engine always includes what is published to the native usage file. You can also select how the plans are applied:
 
-### Repress Custom Support Charges 
+* Suppress lets you hide the published charges from AWS. This is commonly used in cases where you are not charging or reporting on AWS Support in any way. 
 
-If you choose to repress custom support charges, Billing Engine removes those customer support charges. 
+* Developer applies a charge based on 3% of monthly spend.
+  You also choose to include or exclude the $29 minimum charge and if the tier costs are applied based on account or family spend.
 
-### Apply Custom Support Charges  
+* Business applies charges based on the following tiers:
+  * 10% of monthly AWS charges for first $0 to $10,000.
+  * 7% of monthly AWS charges from $10,001 to $80,000.
+  * 5% of monthly AWS charges from $80,001 to $250,000.
+  * 3% of monthly AWS charges over $250,000.
+  You also choose to include or exclude the $100 minimum charge and if the tier costs are applied based on account or family spend.
 
-If you choose to apply custom support charges, you have the option to apply these charges based on several options. 
+* Enterprise On-Ramp applies a charge based on 10% of monthly spend.
+  You also choose to include or exclude the $5,500 minimum charge and if the tier costs are applied based on account or family spend.
 
-#### Developer 
+* Enterprise applies charges based on the following tiers:
+  * 10% of monthly AWS charges for first $0 to $150,000.
+  * 7% of monthly AWS charges from $150,001 to $500,000.
+  * 5% of monthly AWS charges from $500,001 to $1,000,000.
+  * 3% of monthly AWS charges over $1,000,000.
+  You also choose to include or exclude the $15,000 minimum charge and if the tier costs are applied based on account or family spend.
 
-This option charges 3% of Monthly AWS usage.  
+## Remove Published Taxes
 
-#### Business 
+This removes the published tax-related usage rows from the bill.
 
-This option applies a tiered charge based on: 
-• 10% of monthly AWS charges for first $0 to $10,000. 
-• 7% of monthly AWS charges from $10,001 to $80,000. 
-• 5% of monthly AWS charges from $80,001 to $250,000. 
-• 3% of monthly AWS charges over $250,000. 
+This is only applicable  for AWS and Google Cloud usage data. Provider cost from Microsoft usage data does not include tax data.
 
-#### Enterprise On-Ramp 
+## Managing Credits
 
-This option charges 10% of Monthly AWS usage. 
+Credit functionality is split into two concepts:
 
-#### Enterprise  
+* Provider driven and published credits.
+* Credit memos applied by Billing Engine.
 
-This option applies a tiered charge based on: 
-• 10% of monthly AWS charges for first $0 to $150,000. 
-• 7% of monthly AWS charges from $150,001 to $500,000. 
-• 5% of monthly AWS charges from $500,001 to $1,000,000. 
-• 3% of monthly AWS charges over $1,000,000. 
+You can manage your credit memos in Credit Management. Credits can be set to:
 
-## Amortize Azure Reserved Instances 
+* **Show All Credits** shows the usage rows published by the provider for various discounts and credits from the resulting List Cost.  It does not include discounts related to reserved instances and savings plans.
 
-If you turn the **Amortize Azure Reserved Instances** toggle on, Billing Engine applies amortization to Azure Reserved Instances. 
+* **Hide All Credits** removes the usage rows published by the provider for various discounts and credits from the resulting List Cost.  It does not include discounts related to reserved instances and savings plans.
 
-## Reserved Instances 
+* **Hide All Credits, Except…** is only available for AWS. You can exclude these credit and discount types:
 
-### Amortization 
-
-Amortization in a Cloud Computing sense is the even spreading of the upfront fees out for the duration of the reservation. For example, if you purchased a 1-year reservation with $1200 in upfront fees, costing $500 per month, your records would reflect the $500 per month charge plus $100 per month in amortization ($1200/12 months).  
-
-![strategies-2](https://github.com/spotinst/help/assets/106514736/a8feac6a-4fe3-49db-8bae-30f7025b93a1)
-
-This rule affects accounts that are using a reservation. The account using the reservation will be allocated a proportional amount of the reservation fees equal to its usage. 
-
-By default, this is DISABLED, but you can always enable it as need be.  
-
-## Managing Discounts and Credits 
-
-### Provider Credits 
-
-Provider credits are credits and discounts that are provided from AWS, Azure, or Google Cloud to lower the costs of your bill for a variety of reasons: 
-
-#### AWS 
-
-* EDP - Enterprise Discount Program 
-* Data Egress Waiver 
-* APN Partner Accelerator 
-* Solution Provider Program 
-
-#### Azure 
-
-* Hybrid Benefit 
-* BYOL 
-* Reservations 
-* Savings Plans 
-* Credits 
-* Program discounts are baked into the rate associated to the EA/MCA/CSP 
-
-#### Google Cloud 
-
-* Sustained Use Discounts (SUDs) 
-* Committed Used Discounts (CUDs) 
-* Credits 
-
-With these credits, Spot offers several options: 
-
-* Show All Credits - All credits will be reflected in the end list cost 
-* Show All But - AWS offers a variety of discounts, and with that, we give you the opportunity to remove discounts as needed. **For AWS Only** 
-* Hide All Credits - All Credits will be removed from the end list cost. 
-
-### Credit Memos 
-
-To mirror how cloud providers handle discounts like credits, you may want the ability to create your own values that the providers would not have created themselves. These credits are created to discount the usage for several reasons, but the originator of the credit becomes the Billing Engine user looking to rebill their consumption to their potential end customer. This functionality affects providers. 
-
-#### Create a Credit Memo 
-
-To create a new Credit Memo, select **Create a Credit Memo**. 
-
-![strategies-3](https://github.com/spotinst/help/assets/106514736/e4afb381-d468-442b-916f-9505c4ba57a2)
-
-1. Provide a description for the Credit Memo. Ideally your name for the Credit Memo should describe the reason for the Credit Memo. These names do not have to be unique. 
-2. Enter the amount for the credit. This can be positive or negative. Then, assign the credit memo to your desired accounts or billing families. 
-3. Click Create to create the Credit Memo.
- 
-#### Edit a Credit Memo 
-
-To edit a Credit Memo, click **Edit**. From here, you can edit the memo as needed. 
-
-#### Delete a Credit Memo 
-
-To delete a Credit Memo, click the trash icon on the chart.  
+  * Private Pricing Agreements
+  * CloudFront Security Bundles
+  * SPP
+  * EDP
+  * Tax Refunds
+
+  All credits and discounts are hidden from the List Cost except the selected types. It does not include discounts related to reserved instances and savings plans. This lets you show true credits, while excluding credits that are meant to benefit your margin enhancement activities.

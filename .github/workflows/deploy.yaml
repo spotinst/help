@@ -40,7 +40,7 @@ jobs:
       - name: Deploy Upstream
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          ACCESS_TOKEN: ${{ secrets.GIT_ACCESS_TOKEN }}
           REPOSITORY_NAME: spotinst/docs
           BRANCH: gh-pages
           FOLDER: build

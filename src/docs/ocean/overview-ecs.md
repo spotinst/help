@@ -16,7 +16,7 @@ The result of the Ocean features is an optimally utilized and cost-efficient clu
 
 <img src="/ocean/_media/ocean-ecs-architecture.png" />
 
-## What's Next?
+## Related Topics
 
 - If you have not already connected your AWS account, [Connect your AWS Account](connect-your-cloud-provider/aws-account).
 - [Get started with an Ocean Cluster](ocean/getting-started/ecs).

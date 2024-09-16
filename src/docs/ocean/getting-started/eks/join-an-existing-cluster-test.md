@@ -47,8 +47,8 @@ The Ocean Cluster Name that is created in this step will also be used as a Clust
  <img width="621" alt="connect-eks-cluster-00" src="https://github.com/spotinst/help/assets/106514736/d732e75d-cf73-40fb-80c7-9ff9783aa627">
 
 1. Choose the region where the cluster is running.  
-2. Choose the EKS cluster you wish to import. The Ocean Cluster Name will automatically generate according to the EKS cluster name and can be edited. For a cluster that you are importing, we recommend that you give it the same name as the original cluster. This will make it easier to identify the Ocean cluster associated with your EKS cluster . 
-3. The Ocean name will be also used as a Cluster Identifier which is the unique key used to connect between the Ocean SaaS and the Kubernetes cluster. Click Next.
+2. Choose the EKS cluster you wish to import. The Ocean Cluster Name will automatically generate according to the EKS cluster name and can be edited. For a cluster that you are importing, we recommend that you give it the same name as the original cluster. This will make it easier to identify the Ocean cluster associated with your EKS cluster. 
+3. The Ocean name will also be used as a Cluster Identifier, which is the unique key used to connect the Ocean SaaS to the Kubernetes cluster. Click Next.
 
 ## Step 2: VNG Template 
 
@@ -57,7 +57,7 @@ In this step, choose one of your EKS Node Groups you want to use as a [template]
 ![connect-eks-cluster-03](https://github.com/spotinst/help/assets/106514736/bf017c1a-d942-4850-8fd0-cb796ed47c2b)
 
 
-The selected EKS Node Group’s configuration will be imported to the template VNG and will be used for other custom VNGs, unless explicitly set in a VNG. For example, all VNGs inherit the image set of the EKS Node Group you imported to the Template VNG unless the custom VNG is set to a different image. 
+The selected EKS Node Group’s configuration will be imported to the template VNG and will be used for other custom VNGs unless explicitly set in a VNG. For example, all VNGs inherit the image set of the EKS Node Group you imported to the Template VNG unless the custom VNG is set to a different image. 
 
 
 ### Template Configuration 
@@ -69,7 +69,7 @@ Complete the VNG template configuration as described below.
 
 ### Instance Types 
 
-All instance types are selected by default to grant Ocean the ability to choose the best types for your workload.  It is recommended to use the automatic configurations.  
+All instance types are selected by default to allow Ocean to choose the best types for your workload. It is recommended that you use the automatic configurations.  
 
 There are three options:
 
@@ -97,7 +97,7 @@ There are two ways to consolidate node groups:
 
 **Node groups with different capacity types (Spot and OD)** 
 
-Using Ocean VNGs, you can use only one VNG by setting the Spot percentage so that a specific percentage of the infrastructure will run on an OD instance and a specific percentage on a Spot instance. By default, the VNG is running on spot instances, and in case no spot is available it would fall back to OD instances. 
+Using Ocean VNGs, you can use only one VNG by setting the Spot percentage so that a specific percentage of the infrastructure will run on an OD instance and a specific percentage on a Spot instance. By default, the VNG is running on spot instances, and if no spot is available, it will fall back to OD instances. 
 
  ![connect-eks-cluster-09](https://github.com/spotinst/help/assets/106514736/481a0107-55e2-42fa-acc1-6a10ff0772a2)
 
@@ -109,7 +109,7 @@ Ocean is a pod-driven Autoscaler that launches the node that best fits the pod's
 
 Since Ocean provides the flexibility to configure multiple types of infrastructure configurations in the same Ocean cluster, we recommend consolidating node groups that contain similar or the same configurations to one VNG according to the suggestions below:  
 
-If you have two or more node groups that have similar configurations, mark one of them for import and unmark the others.  (In the example below, the two node groups shown will be consolidated into a single VNG called Intelligent-COM-Frozen-46.) 
+If you have two or more node groups with similar configurations, mark one for import and unmark the others.  (In the example below, the two node groups shown will be consolidated into a single VNG called Intelligent-COM-Frozen-46.) 
  
  ![connect-eks-cluster-10](https://github.com/spotinst/help/assets/106514736/7aab974d-6def-48ee-b395-54576f762040)
  
@@ -117,7 +117,7 @@ If you have two or more node groups that have similar configurations, mark one o
 
 You can define which EKS Node Group or Node Groups will be imported to a VNG by marking the checkbox by the node group. Once you have chosen the node groups, Ocean imports the compute configurations of the chosen EKS node groups. A virtual node group will be created with the same configurations. A separate VNG is created for each node group you marked. 
 
-In case no VNG is chosen, Ocean will create a VNG based on the Template VNG. 
+If no VNG is chosen, Ocean will create a VNG based on the Template VNG. 
 
 1. Mark the Node Group or Node Groups you want to import in the checkbox.  
  
@@ -152,7 +152,7 @@ You can customize the following parameters:
     * Spot % - Percentage of total instances in this VNG that should be Spot instances. The rest will be on-demand instances. This setting can be used in a VNG configuration only if it is not set already in the cluster configuration (i.e., using the attribute cluster.strategy.spotPercentage). 
     * [Restrict Scale Down](https://docs.spot.io/ocean/features/vngs/attributes-and-actions-per-vng?id=restrict-scale-down-per-vng) 
     * Block Device Mappings 
-* Tags – In case any additional tag is added to the VNG, the Template VNG tags are overriden. Make sure to add the required EKS tag. 
+* Tags — If an additional tag is added to the VNG, the Template VNG tags are overridden. Make sure to add the required EKS tag. 
 * [Headroom](https://docs.spot.io/ocean/features/headroom?id=headroom)
 
 ## Step 4: Connectivity 
@@ -173,11 +173,8 @@ Complete the following steps:
 
 ## Step 5: Review  
 
-Review all the Ocean settings you have configured. Click Create to finish or use the JSON or Terraform generated templates to create the Ocean cluster using other tools. 
+Review all the Ocean settings you have configured. Click Create to finish or use the JSON or Terraform-generated templates to create the Ocean cluster using other tools. 
 
 Ocean will now ensure the most cost-effective capacity and sizing possible for your cluster. 
 
-## What's Next? 
-
-Learn how to [Migrate your Workloads](https://docs.spot.io/ocean/tutorials/migrate-workload) to Ocean. 
 

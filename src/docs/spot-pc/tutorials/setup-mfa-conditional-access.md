@@ -1,3 +1,5 @@
+<meta name=“robots” content=“noindex”>
+
 # Spot PC Tutorial: Azure AD Conditional Access and MFA
 
 Requiring Multi-factor authentication for end users connecting to Spot PC is highly recommended as a bare-minimum security policy. Adding additional conditions via Conditional Access is a great idea as well. Configuration of Conditional Access is not a feature of Spot PC and licensing required for Conditional Access is not included in the Spot PC service. However, we believe this is such a critical component of a modern security approach that we've documented how Conditional Access can be setup to protect the end user connection into Spot PC. This is not the only method for securing end user connections, and more advanced configurations (e.g., geographic blocking, corporate network exceptions, etc.) are certainly possible and encouraged.

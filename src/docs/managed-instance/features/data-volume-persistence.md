@@ -79,8 +79,7 @@ Stateful Nodes perform various backend actions for different states of the nodes
 ### Deallocated
 
 - When you delete a stateful node, you can choose which parts to delete.
-  - If you select all parts, then they will be deleted immediately.
-  - If you select only some of the parts for deletion, then those parts will be kept for four days and then deleted.
+- Selected resources will be kept for four days (96 hours) by default and then deleted.
 
 <img src="/managed-instance/_media/data-volume-persistence-delete.png" />
 

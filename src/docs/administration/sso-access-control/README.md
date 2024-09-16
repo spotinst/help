@@ -1,3 +1,6 @@
+<!-- : # (title: SSO Access Control) -->
+<!-- : # (tags: #SSO, #SAML) -->
+
 # SSO Access Control
 
 In the console, you can enable single sign-on (SSO) for your organization.

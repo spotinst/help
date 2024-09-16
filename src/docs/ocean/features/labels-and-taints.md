@@ -10,11 +10,19 @@ To make scheduling more efficient and compatible with Kubernetes, Ocean supports
 
 ## Spot Labels
 
-Spot labels allow you to adjust the default behavior of scaling in Ocean, by adding Spot labels to your pods you can control the node termination process or its life cycle. The Spot labels are described below.
+Spot labels allow you to adjust the default scaling behavior in Ocean; by adding Spot labels to your pods, you can control the node termination process or its life cycle. The Spot labels are described below.
+
+### spotinst.io/azure-premium-storage  
+
+The AKS scheduler does not guarantee that pods requiring premium storage will schedule on nodes that support premium storage disks.
+The Spot Ocean label `spotinst.io/azure-premium-storage`is injected into every node in a node pool that supports premium storage. 
+We recommended using `spotinst.io/azure-premium-storage` on your pods in cases where the pod requires premium storage disks.
+This enables pods to be provisioned on the most appropriate nodes for their workloads. 
+For more information, see [Azure premium storage](https://learn.microsoft.com/en-us/azure/virtual-machines/premium-storage-performance). 
 
 ### spotinst.io/restrict-scale-down
 
-Some workloads are not as resilient to spot instance replacements as others, so you may wish to lower the frequency of replacing the nodes they are running on as much as possible, while still getting the benefit of spot instance pricing. For these workloads, use the `spotinst.io/restrict-scale-down` label (set to `true`) to block the proactive scaling down of the instance for the purposes of more efficient bin packing. This will leave the instance running as long as possible. The instance will be replaced only if it goes into an unhealthy state or if forced by a cloud provider interruption.
+Some workloads are not as resilient to spot instance replacements as others, so you may want to lower the frequency of replacing the nodes they are running on as much as possible, while still getting the benefit of spot instance pricing. For these workloads, use the `spotinst.io/restrict-scale-down` label (set to `true`) to block the proactive scaling down of the instance for the purposes of more efficient bin packing. This will leave the instance running as long as possible. The instance will be replaced only if it goes into an unhealthy state or if forced by a cloud provider interruption.
 
 ### spotinst.io/node-lifecycle
 

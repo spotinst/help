@@ -1,12 +1,10 @@
 # Cluster Orientation
 
+Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>, <font color="#FC01CC">AWS ECS</font>    
+
 While Ocean is designed to optimize for both availability and cost, you may want have control over which optimizations are given priority. For example, in a development environment you might want to use cheaper nodes for dev clusters. In contrast, in a production environment, where availability is more important, you might want Ocean to apply a balanced orientation regarding cost and availability.
 
 You can control the approach that Ocean takes by configuring the Cluster Orientation.
-
-### Relevance
-
-This feature is available to users of Ocean for AWS Kubernetes and ECS.
 
 ## Ocean Orientations
 

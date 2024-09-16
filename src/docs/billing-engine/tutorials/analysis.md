@@ -1,35 +1,67 @@
 # Billing Analysis 
 
-The Billing Analysis page is a table that captures your cloud spend and the finer details to give you further insight to your financial presence in the cloud. 
+The Analysis page shows your cloud expenditures and detailed information. You can view your cloud spending across AWS, Microsoft Azure, and Google Cloud. Your data is processed at specific intervals to give you a quick turnaround from when the cloud provider publishes the data to when you can view the data in the Spot console. As Billing Engine processes your cloud data, the more specific details from the bill are translated into the [FOCUS](https://focus.finops.org/) model. The data is then displayed in different reports, including Analysis. This lets you analyze your data in real time. You can create a pivot report to focus on different data points.
 
-You can sort your data according to the following columns: 
+**What can you do in Analysis?**
+* Add fields to the report. Click <img width="23" alt="fields" src="https://github.com/spotinst/help/assets/167069628/83a14e59-6b07-4305-a76e-e8d8846cf0ae"> and then check the box next to the fields you want to add to the report.
+* Drag fields to group the data. The group includes all values in that column. You can add more groups to nest the values under each parent group’s values.
 
-Billing Account Id, Sub Account Id, Billing Family, Service Name, Service Category, Region, Availability Zone, Resource ID, Operation, Usage Type, Charge Type, Native Charge Type, Provider Tag Key & Provider Tag Value.  
+  <details>
+    <summary markdown="span">View the list of fields that can be grouped</summary>
 
-You can click on the column icon to add the additional filters: 
+  * Billing Period Start 
+  * Billing Period End 
+  * Charge Period Start 
+  * Charge Period End 
+  * Billing Account Id 
+  *  Billing Account Name 
+  * Sub Account Id 
+  * Sub Account Name 
+  * Resource ID 
+  * Billing Family ID 
+  * Service 
+  * Service Category 
+  * Region 
+  * Availability Zone 
+  * Provider 
+  * Publisher 
+  * Invoice Issuer 
+  * Charge Category 
+  * Charge Category Native 
+  * Pricing Category 
+  * SKU ID 
+  * SKU Price ID 
+  * Pricing Unit 
+  * Usage Type 
+  * Commitment Discount ID 
+  * Commitment Discount Name 
+  * Commitment Discount Type 
+  * Commitment Discount Category 
+  * Operation 
+  * Description 
+  * Charge Frequency 
+  * Resource Name 
+  * Resource Type 
+  * Provider Tag Key 
+  * Provider Tag Value 
+  * Billing Currency 
+  * Provider Cost
+  * List Cost 
+  * Profit 
+  * Usage Quantity
 
-![billing-analysis-1](https://github.com/spotinst/help/assets/106514736/8fccc756-99ff-4119-8368-112813cca095)
+  </details><br>
 
-## Billing Rule Columns 
+* Click **Show Rules** to view the list of rule columns. Rule columns give you insight into the cost impacts of the rules.
 
-These are columns that show you the impact of the rules you have chosen to apply. By toggling the Show Rules option, you can see how much the rules you applied effected your list cost. 
+**Understanding the fields in the list**
 
-![billing-analysis-2](https://github.com/spotinst/help/assets/106514736/9083ebd8-c580-4f4e-8f37-ba3c71f8f170)
+* **Provider cost**: the cost data pulled directly from your usage file for AWS, Microsoft Azure, and Google Cloud.
 
-## Provider Cost 
+* **Billed cost**: the final results of all billing rules you have turned on in Billing Engine.  Billed cost does not include amortization.
 
-This is the Cost that comes from the Cloud Provider (AWS, Azure, GCP) 
+* **Profit**: profit is calculated by subtracting the provider list from the list cost. If you don’t have rules turned on for the usage row, the expected profit is $0.00. Profit can be positive or negative. It depends on the rules and usage.
 
-![billing-analysis-3](https://github.com/spotinst/help/assets/106514736/ef1c8cec-65a8-4076-a0bc-ff83983dcfd3)
+* **Effective cost**: the final results of all billing rules you have turned on in Billing Engine. It always includes amortization for the upfront costs related to reserved instances and saving plans.
 
-## List Cost 
-
-This is the cost shown after the effects of the rules that you applied.  
-
-![billing-analysis-4](https://github.com/spotinst/help/assets/106514736/7c6e78f5-82e4-4b60-ab90-5acf07861c12)
-  
-## Profit 
-
-The profit is calculated by subtracting the provider cost from the list cost. 
-
-![billing-analysis-5](https://github.com/spotinst/help/assets/106514736/f3c96432-93d7-4f13-b05e-d6bcea6ff0f7)
+* **List cost**: the on-demand price and comes from the cloud providers.

@@ -1,3 +1,5 @@
+<meta name=“robots” content=“noindex”>
+
 # Spot PC: Getting Started
 
 ## Workflow Focused

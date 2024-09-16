@@ -6,8 +6,8 @@ This tutorial covers the creation of an Ocean cluster using [Spot](https://conso
 
 ## Prerequisites
 
-- OpenShift is installed and configured on AWS, Azure, or GCP.
-- At least one worker node is up and running, with a primed image and user-data. To set up the primed image and user data, you may follow the procedures below.
+- OpenShift is installed and configured on AWS.
+- At least one worker node is up and running, with a primed image and user data. See the procedures below to set up the primed image and user data.
 
 ### Create Primed Image
 
@@ -68,7 +68,7 @@ Use the following request to approve the one that is relevant to the instance yo
 
 `oc approve csr csrname`
 
-When the new instance with the correct user data, image, and tags is joined to the cluster, you are ready integrate OpenShift with Ocean.
+When the new instance with the correct user data, image, and tags is joined to the cluster, you are ready to integrate OpenShift with Ocean.
 
 ## Get Started
 

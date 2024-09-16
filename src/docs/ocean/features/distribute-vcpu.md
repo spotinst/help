@@ -1,10 +1,8 @@
 # Distribute Nodes by vCPU
 
+Cloud sevice provider relevance: <font color="#FC01CC">AWS Kubernetes</font>  
+
 The Spot team understands that one of your main concerns in running your applications is high availability (HA). Ocean provides several methods of distributing resources that contribute to HA, significantly reducing the chances of an interruption of service.
-
-## Relevance
-
-This page (specifically, the Nodes by vCPU feature) is relevant to users of Ocean for AWS (Kubernetes).
 
 ## Nodes by Count
 
@@ -12,9 +10,9 @@ When scaling up new nodes, Ocean’s default distribution method is to spread th
 
 ## Nodes by vCPU
 
-Distribution of resources strictly by node count does not always lead to equal distribution of vCPU and can even lead to very large differences in vCPU between AZs. To minimize this risk and add another method of maintaining HA, Ocean enables you to choose distribution by vCPU.
+Resource distribution strictly by node count does not always lead to equal distribution of vCPU and can even lead to very large differences in vCPU between AZs. To minimize this risk and add another method of maintaining HA, Ocean enables you to choose distribution by vCPU.
 
-In distribution by vCPU, Ocean also takes the number of vCPUs into account when scaling up. For example, if you have five small nodes in AZ A and three large nodes in AZ B, the next scale up would be a large node in AZ A. This would act to even out the vCPUs across the AZs (even though there are already more nodes by count in AZ A).
+In distribution by vCPU, Ocean also considers the number of vCPUs when scaling up. For example, if you have five small nodes in AZ A and three large nodes in AZ B, the next scale-up would be a large node in AZ A. This would act to even out the vCPUs across the AZs (even though there are already more nodes by count in AZ A).
 
 Distribution by vCPU also affects the spread by spot% feature (in case configured) that distributes resources across spot and on-demand (OD) nodes. In other words, configuring spread by vCPU has two effects:
 
@@ -22,7 +20,7 @@ Distribution by vCPU also affects the spread by spot% feature (in case configure
 
 - Ocean decides which AZ to choose for scale-up based on the current vCPU in each, and not node count.
 
-For the scale up, Ocean can only predict the size of node that will be used, so the goal is for a “best effort” distribution of vCPU.
+For the scale-up, Ocean can only predict the size of the node that will be used, so the goal is for a “best effort” distribution of vCPU.
 
 ## Set up in Ocean API
 
@@ -50,6 +48,6 @@ Once you have set to spread nodes by vCPU, the following Ocean functions will us
 * Scale per VNG
 * Replacement process (out of strategy, auto-healing)
 
-## What’s Next?
+## Related Topics
 
-Learn how Ocean uses the [Headroom](ocean/features/headroom) feature to always be ready for rapid application scale-up.
+Learn how Ocean uses the [Headroom](ocean/features/headroom) feature to be ready for rapid application scale-up.

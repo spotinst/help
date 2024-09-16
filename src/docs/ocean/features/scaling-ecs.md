@@ -46,6 +46,11 @@ In order to use this feature, you will need to do the following:
 1. Add `ecs:putAttributes` permissions to your AWS IAM role (see [Spot Policy for AWS](administration/api/spot-policy-in-aws.md)). As soon as Spot sees pending tasks that ask for this placement constraint, auto scaler will scale up an on-demand instance and use the `ecs:putAttributes` permissions to add this attribute to the on-demand instance spun up by the auto scaler.
 2. Contact the Spot support team via chat or email, and request to enable the ECS lifecycle support per service. Once enabled, the label above will take effect.
 
+###  Scale Up According to Available IPs
+
+When the Ocean Autoscaler needs to scale up an instance, it selects the Availability Zone and the included subnet with the most available IPv4 addresses. This avoids IP address exhaustion in a specific subnet and prevents scaling up a node in a subnet that does not have enough IP addresses. If all the subnets set for a Virtual Node Group run out of available IP addresses, scaling up is blocked, and the Spot Monitoring team will email you to request that you add more subnets to the Virtual Node Group.
+
+
 ### Scaling Block Mechanism
 
 Since tasks are created only after the proper infrastructure exists (meaning that Ocean actually scales for an unsatisfied ECS service), there is a potential for an infinite scaling to occur. This could happen, for example, if there is a task that keeps failing and the service continues to be unsatisfied.

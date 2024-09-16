@@ -16,9 +16,10 @@ To start a Spark application with SparkConnect server, either run the mainClass 
 ### Spark Connect Launch using the SparkConnectServer
 
 ```json
-"mainClass": "org.apache.spark.sql.connect.service.SparkConnectServer",
+"mainClass": "com.netapp.spark.SparkConnectServer",
 "deps": {
-    "packages": ["org.apache.spark:spark-connect_2.12:3.4.1"]
+    "packages": ["org.apache.spark:spark-connect_2.12:3.5.1", "com.netapp.spark:spark-connect:1.2.9"],
+    "repositories": ["https://us-central1-maven.pkg.dev/ocean-spark/ocean-spark-adapters"]
 }
 ```
 
@@ -29,7 +30,7 @@ To start a Spark application with SparkConnect server, either run the mainClass 
     "spark.plugins": "org.apache.spark.sql.connect.SparkConnectPlugin"
 },
 "deps": {
-    "packages": ["org.apache.spark:spark-connect_2.12:3.4.1"]
+    "packages": ["org.apache.spark:spark-connect_2.12:3.5.1"]
 }
 ```
 

@@ -1,6 +1,6 @@
 # Spot Security Support Matrix
 
-## Supported AWS Asset Types:
+## Supported AWS Asset Types
 
 |  |  |
 |---|---|
@@ -10,8 +10,10 @@
 |  EC2 (Elastic Compute Cloud)  |  S3 (Simple Storage Service)   |
 |  ELB (Elastic Load Balancing)   |  SNS (Simple Notification Service)   |
 |  EBS (Elastic Block Store)   |  EKS(Elastic Kubernetes Service)   |
+|  SES (Simple Email Service)   |  Lambda   |
+|  VPC (Virtual Private Cloud)   |     |
 
-## Supported Azure Asset Types:
+## Supported Azure Asset Types
 
 |  |  |
 |---|---|
@@ -20,8 +22,9 @@
 |  Key Vaults   |  Virtual Machine Scale Sets |
 |  Load Balancers  |  Virtual Networks   |
 |  Network Security Groups   |  AKS (Azure Kubernetes Services)   |
+|  Storage Account   |  Monitor   |
 
-## Supported Compliance Standards:
+## Supported Compliance Standards
 
 |  |  |
 |---|---|

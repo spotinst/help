@@ -1,3 +1,5 @@
+<meta name=“robots” content=“noindex”>
+  
 # Install the Ocean Network Client in the Cluster
 
 This tutorial describes how to install the Ocean Network Client as a DaemonSet in your Ocean managed Kubernetes cluster. In order to measure [Network Costs](ocean/features/cost-analysis?id=network-costs) for container or Kubernetes workloads, the Ocean network client needs to run with privileged access on every node in the cluster.
@@ -63,13 +65,13 @@ helm install <NAME> spot/ocean-network-client
 Replace <NAME> with a name for Ocean network client chart.
 `helm install ocean-net spot/ocean-network-client`
 
-NOTE: Configure all required chart values using the `set` command line argument or a `values.yaml` file.
+>**NOTE**: Configure all required chart values using the `set` command line argument or a `values.yaml` file.
 
 ### Update the Ocean network client version with Helm 3.x
 
 1. Discover all the available released Ocean network client versions using command `helm search`.  
 
-2. Then upgrade to a specific version or latest version from the list above using command `helm upgrade`.
+2. Then, upgrade to a specific version or the latest version from the list above using the command `helm upgrade`.
 
 ```
 helm search spot/ocean-network-client –version
@@ -138,7 +140,7 @@ module "ocean-network-client" {
 
 ## Install the Ocean Network Client with Controller Init Script
 
-The Init script (init.sh) is used to install the Ocean Kubernetes controller in the cluster. Using the Init script (init.sh) option to install the Ocean Network Client can only be done when creating a new Ocean cluster or importing an new Kubernetes cluster to Ocean.  
+The Init script (init.sh) installs the Ocean Kubernetes controller in the cluster. Using the Init script (init.sh) option to install the Ocean Network Client can only be done when creating a new Ocean cluster or importing a new Kubernetes cluster to Ocean.  
 
 To enable the Ocean Network client in the new Ocean managed cluster set `ENABLE_OCEAN_NETWORK_CLIENT=true,` in the Ocean controller init.sh script.
 
@@ -154,6 +156,4 @@ ENABLE_OCEAN_METRIC_EXPORTER=true \
 ENABLE_OCEAN_NETWORK_CLIENT=true
 ```
 
-## What's Next?
 
-Learn more about [Network Costs](ocean/features/cost-analysis?id=network-costs).

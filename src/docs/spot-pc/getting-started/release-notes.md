@@ -1,3 +1,5 @@
+<meta name=“robots” content=“noindex”>
+
 # Spot PC: Release Notes
 
 ## 1/26/2023

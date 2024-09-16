@@ -1,22 +1,23 @@
 # Create a New EKS Cluster
 
-In this procedure, you complete the steps to create an Amazon EKS cluster directly from the Spot Console and an Ocean object to manage the cluster worker nodes.
+In this procedure, you will create an Amazon EKS cluster directly from the Spot Console and an Ocean object to manage the cluster worker nodes.
 
 ## Prerequisites
 
 - Ensure you have an IAM user in your AWS account with both Console and Programmatic Access credentials. If you do not have one, you can follow this [AWS procedure](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html) to create one or refer to your account administrator for the necessary permissions.
 - [Connect your AWS account to Spot](connect-your-cloud-provider/aws-account).
+- The Ocean Controller V2 installation is based on Helm, so make sure to have Helm installed on your machine.
 - Install [awscli](https://docs.aws.amazon.com/cli/latest/userguide/installing.html) 1.16.18+ and configure [AWS credentials](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html#cli-configure-quickstart-config).
 - Install [kubectl](https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html) (Amazon EKS-vended).
 - Install [aws-iam-authenticator](https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html) (only for awscli versions below 1.16.156).
 
 ## Get Started
 
-1. In the left menu of the Spot Console, click Ocean/Cloud Clusters, and click Create Cluster.
+1. In the Spot Console's left menu, click Ocean/Cloud Clusters > Create Cluster.
 
 <img src="/ocean/_media/create-cluster.png" />
 
-2. When the Create Ocean Cluster page appears, you will need to choose a use case template. Under Create a New Cluster, click Create an EKS Cluster.
+2. When the Create Ocean Cluster page appears, you must choose a use case template. Under Create a New Cluster, click Create an EKS Cluster.
 
 <img src="/ocean/_media/create-new-eks.png" width="500" height="320" />
 
@@ -39,7 +40,7 @@ Fill in general details including Cluster Name, Region, and the Key Pair used fo
 Provision the cluster resources using a CloudFormation template.
 
 1. Use existing VPC & Subnets. Mark this box to launch CloudFormation with your existing VPC & Subnets. Leave unchecked to launch within a new VPC that CloudFormation will create for you.
-   2.Click Launch CloudFormation Stack.
+   2. Click Launch CloudFormation Stack.
 
 <img src="/ocean/_media/new-eks-step3.png" />
 
@@ -55,15 +56,13 @@ Before you can continue to the next step, CloudFormation must complete creation 
 
 > **Tip**: Click on the command to copy it.
 
-<img src="/ocean/_media/new-eks-step4-c.png" />
+![create-cluster-aws-step-4](https://github.com/user-attachments/assets/f7b16531-a09a-400d-96bb-cb7382cfce7b)
 
-2. Verify that kubectl is connected to your EKS cluster by running the next command shown:
-   `kubectl get svc`
-3. To install the controller on the EKS cluster, run the predefined script from your command line.
+2. To install the controller on the EKS cluster, run the predefined [script](https://docs.spot.io/ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-install?id=install-via-script) from your command line. 
 
-(Optional) To install the [Ocean Prometheus Exporter](ocean/tools-and-integrations/prometheus/scrape), mark the checkbox. Validate that the [Configure Prometheus](ocean/tools-and-integrations/prometheus/) step is complete.
+3. (Optional) To install the [Ocean Prometheus Exporter](ocean/tools-and-integrations/prometheus/scrape), mark the checkbox. Validate that the [Configure Prometheus](ocean/tools-and-integrations/prometheus/) step is complete.
 
-<img src="/ocean/_media/new-eks-step4-d.png" />
+![create-cluster-aws](https://github.com/user-attachments/assets/8bfc5da3-30ee-4819-8a00-12523f5e14ac)
 
 ## Step 5: Update AWS Authentication ConfigMap
 
@@ -84,5 +83,7 @@ That's it! Ocean will now manage the worker nodes, optimizing cluster resource u
 If you receive the error "aws-iam-authenticator": executable file not found in \$PATH, then your kubectl is not configured for Amazon EKS. For more information, see [Configure kubectl for Amazon EKS](https://docs.aws.amazon.com/eks/latest/userguide/configure-kubectl.html).
 You can list your cluster nodes with the following command:
 `kubectl get nodes`.
+
+##   Related Topics
 
 - Learn more about [eksctl](https://github.com/spotinst/weaveworks-eksctl).

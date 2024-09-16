@@ -1,3 +1,5 @@
+<meta name=“robots” content=“noindex”>
+
 # Spot PC: Getting Support
 
 <!--- Support Issues - Support cases can be created and updated within the Spot PC console under [Support Issues](spot-pc/features/spot-pc-console/support-issues/) -->

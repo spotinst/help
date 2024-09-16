@@ -182,10 +182,3 @@ To create a scaling policy, complete the following steps.
 <img src="/elastigroup/_media/gettingstarted-eg-azure-07.png" />
 
 2. To create the Elastigroup, click Create.
-
-## What's Next?
-
-Learn how to:
-
-- [Import Existing Azure Resources](elastigroup/azure/getting-started/import-an-existing-azure-resource.md) such as a Scale Set, an Application Gateway, or a VM.
-- [Clone an Existing Elastigroup](elastigroup/tutorials/azure/clone-an-existing-elastigroup).

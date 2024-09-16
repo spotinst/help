@@ -1795,6 +1795,12 @@ export const aliases = (() => {
 
     "/connect-your-cloud-provider/first-account/aws-manually":
       "connect-your-cloud-provider/first-account/aws",
+
+    "/elastigroup/tutorials/elastigroup-actions-menu/view-spot-markets":
+      "elastigroup/tutorials/elastigroup-actions-menu/",
+
+    "/ocean/tutorials/connect-an-aks-private-cluster":
+      "ocean/getting-started/aks/",
   };
 
   for (let [key, value] of Object.entries(map)) {

@@ -21,7 +21,6 @@
 - [**Billing Engine**](billing-engine/)
 - [**Security**](spot-security/)
 - [**Spot Connect**](spot-connect/)
-- [**Spot PC**](spot-pc/)
 - [**Spot Storage**](spot-storage/)
 - [**Administration**](administration/)
 - [**Tools & Provisioning**](tools-and-provisioning/)

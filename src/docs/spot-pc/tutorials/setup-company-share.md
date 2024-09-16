@@ -1,3 +1,5 @@
+<meta name=“robots” content=“noindex”>
+
 # Spot PC Tutorial: Add Company Share
 
 Spot PC does not automatically assign a company share folder, nor do we managed the permissions on any file shares. This guide is a quick and simple way you can add a company share a manage the permissions, similar to a traditional on-premises sysadmin.

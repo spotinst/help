@@ -122,29 +122,36 @@ When OS persistency is turned on, the Login section is disabled in edit and impo
 
 #### VM Sizes
 
-The selection of VM sizes is enabled after the image and login details have been entered.  
+After entering the image and login details, you can select the VM sizes.
 
-**You need to select at least one Spot VM size and one On-demand (OD) VM size.**
+You can use attribute-based Spot VM size selection, or you can manually create a list of VM sizes to launch:
 
-<img src="/elastigroup/_media/azure-new-stateful-5.png" />
+* **Attribute-based**- You can specify a set of VM size attributes (such as vCPU, memory, and storage) and select VM sizes to exclude. 
+
+![attribute-based-1](https://github.com/spotinst/help/assets/106514736/71fe648d-e8e5-4e4c-9b30-4174d3dcf86a)
+
+* **Manual**- Find and select the VM size to update.  
+
+![attrbute-based-manual](https://github.com/spotinst/help/assets/106514736/c0bb5dac-ed78-4afb-81d4-49d00677265e)
+
+You must select one method and cannot use both at the same time.
+
+**You need to select at least one Spot VM size and one On-demand (OD) VM size**.
 
 Each VM size provides the following information:
 
-* VM Size: List of relevant VM sizes. This list can change according to the selected image (associated OS type) and the region selected in the Basics tab.  
-* Spot and Preferred: Select Spot VM sizes. At least one VM needs to be defined as a Spot VM. Selecting a VM size as preferred indicates that Spot should launch the preferred VM sizes prior to the remaining VM sizes that are defined as Spot sizes.   
-* Type
-* vCPUs
-* RAM (GiB)
-* Storage (GiB)
-* Spot Cost/ Month: The cost per month according to Azure pricing.  
-* On-demand Cost/ Month: The cost per month according to Azure on-demand pricing.
-* On-Demand: Select an on-demand VM size. At least one VM needs to be defined as on- demand. This is applicable when you have on-demand as the preferred lifecycle or significant as it provides a fallback in case Spot VMs are unavailable.  
+* **VM Size**: List of relevant VM sizes. This list can change according to the selected image (associated OS type) and the region selected in the Basics tab.
+* **Type**
+* **vCPUs**
+* **Memory (GiB)**
+* **Storage (GiB)**
+* **Spot Cost/ Month**: The cost per month according to Azure pricing.
+* **Preferred Spot**: Select preferred Spot VM sizes. Selecting a VM size as preferred indicates that the stateful node should launch the preferred VM sizes prior to the remaining VM sizes that are defined as Spot sizes.
 
-You can select the columns to view by clicking the column selector in the furthest right column in the table.   
+You can modify the columns by clicking the column selector ![column-selector-icon](https://github.com/spotinst/help/assets/106514736/8dfec009-0d19-47d9-bb0d-92bb02cebaef).
 
-The list of VMs can be filtered according to VM size.  
 
-<img src="/elastigroup/_media/azure-new-stateful-14.png" width="450" />
+**On-Demand**: Select an on-demand VM size. At least one VM needs to be defined as on- demand. This is applicable when you have on-demand as the preferred lifecycle or significant as it provides a fallback in case Spot VMs are unavailable.
 
 >**Tip**: To maximize cost savings, provide the stateful node with all possible Spot VMs compatible with the expected workload. The more VM sizes you select, the higher the chances that the stateful node will find an available Spot VM to run on.  
 
