@@ -116,7 +116,6 @@ If you lost the service principal you used, you can access it in the Spot Accoun
   <summary markdown="span">View image</summary>
     <img src="https://github.com/user-attachments/assets/1358628d-cf21-43df-adb8-31561c9177f7" />
 
-
  </details>
 
 2. Click **Finish Onboarding**.
