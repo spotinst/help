@@ -111,13 +111,6 @@ The instance types that are grayed out are disabled for the following reasons:
 
 When you hover the cursor over the instance type, a tooltip appears stating which reason.
 
-### Use the Sliders
-
-Instead of unmarking individual instances, you can use the vCPU, memory, or GPU sliders. When you use these, the instance types that are not in the range will be unmarked automatically.
-
-<img src="/ocean/_media/tutorials-manage-vngs-02-4.png" />
-
-Above the sliders, Instance Types Selected indicates how many of the available instances you have marked (specifically: number of instances marked/number of instances available). This figure changes automatically when you move the sliders or when click or unclick instances. There are similar indicators in the Types column. For example, the illustration above shows that you have marked two Compute Optimized instances out of four that are available.
 
 ### Restore to Default
 
@@ -141,7 +134,7 @@ This section describes selecting instance sizes in your cluster per Virtual Node
   * Automatic: Let Spot select your instance types and sizes according to the needs of your applications.
   * Advanced Selection: Use attribute filters to select instance types with customized sizes from which Ocean can scale.
 
-![aws-instance-panel](https://github.com/user-attachments/assets/28053b9c-359c-406a-b158-5be3c8d7caee)
+![instance-types](https://github.com/user-attachments/assets/5cd0bbb7-af8e-40ae-ba40-3b671de497bd)
 
 2. If you selected Manual,...
 3. If you selected Automatic, click **Save** to complete the procedure.
@@ -149,12 +142,11 @@ This section describes selecting instance sizes in your cluster per Virtual Node
 
 ### Configure Instance Types Manually
 
-![aws-instance-panel-man-selection](https://github.com/user-attachments/assets/b116f33a-d93c-43ce-bed8-9e0225be3770)
+![aws-instance-panel-man-selection](https://github.com/user-attachments/assets/d1f79716-509a-49c3-be33-7583a05c9ecb)
 
 ### Configure Instance Types Using Advanced Filters
 
-![advanced-filters](https://github.com/user-attachments/assets/e7b40473-c45d-432f-a50b-166f9411f047)
-
+![advanced-filtering](https://github.com/user-attachments/assets/cee0e71f-cdf0-4fec-a7d3-b97589ee7627)
 
 In the VM Selection list, view each VM type's currently selected size, vCPU, Memory (GiB), and GPU units.
 The Advanced VM Size Filtering controls to the right of the VM Selection list let you filter these attributes for the VMs:
@@ -171,6 +163,13 @@ VM Types.
   * Minimum no. of NICs (up to 16).
   * Turn Accelerated networking on or off.
   * Click Apply to filter the VM Selection list. All your filters are applied to the VM list. A color-coded bar appears above the list to provide a rating for the applied filter.
+
+## Instance Parameters Available via API Only
+
+
+
+
+
 
 
 ## Create a VNG from an Autoscaling Group
