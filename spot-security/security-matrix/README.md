@@ -9,8 +9,8 @@
 |     Config                                  |     RDS (Relational Database Service)    |
 |     EBS (Elastic Block Store)               |     S3 (Simple Storage Service)          |
 |     EC2 (Elastic Compute Cloud)             |     SES (Simple Email Service)           |
-|     ESC (Elastic Container Service)         |     SNS (Simple Notification Service)    |
-|     EKS(Elastic Kubernetes Service)         |     SQS (Simple Queue Service)           |
+|     ECS (Elastic Container Service)         |     SNS (Simple Notification Service)    |
+|     EKS (Elastic Kubernetes Service)         |     SQS (Simple Queue Service)           |
 |     ELB (Elastic Load Balancing)            |     VPC (Virtual Private Cloud)          |
 |     IAM (Identity and Access Management)    |                                          |
 

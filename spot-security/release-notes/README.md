@@ -2,6 +2,8 @@
 
 ## Features and Enhancements
 
+* **SEC-006: September 16th, 2024** Spot Security supports two new AWS service types: ECS (Elastic Container Service) and SQS (Simple Queue Service).
+
 * **SEC-005: September 16th, 2024** You can get email notifications when a set of specific security rules fail. The email notification contains details about the rules and the failing assets. [Learn more](spot-security/features/analyze-risks/)
 
 <details>
