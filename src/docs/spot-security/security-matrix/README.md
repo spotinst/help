@@ -4,34 +4,35 @@
 
 |  |  |
 |---|---|
-|  Config   |  IAM (Identity and Access Management)   |
-|  CloudTrail   |  KMS (Key Management Service)  |
-|  CloudWatch   |  RDS (Relational Database Service) |
-|  EC2 (Elastic Compute Cloud)  |  S3 (Simple Storage Service)   |
-|  ELB (Elastic Load Balancing)   |  SNS (Simple Notification Service)   |
-|  EBS (Elastic Block Store)   |  EKS(Elastic Kubernetes Service)   |
-|  SES (Simple Email Service)   |  Lambda   |
-|  VPC (Virtual Private Cloud)   |     |
+|     CloudTrail                              |     KMS (Key Management Service)         |
+|     CloudWatch                              |     Lambda                               |
+|     Config                                  |     RDS (Relational Database Service)    |
+|     EBS (Elastic Block Store)               |     S3 (Simple Storage Service)          |
+|     EC2 (Elastic Compute Cloud)             |     SES (Simple Email Service)           |
+|     ESC (Elastic Container Service)         |     SNS (Simple Notification Service)    |
+|     EKS(Elastic Kubernetes Service)         |     SQS (Simple Queue Service)           |
+|     ELB (Elastic Load Balancing)            |     VPC (Virtual Private Cloud)          |
+|     IAM (Identity and Access Management)    |                                          |
 
 ## Supported Azure Asset Types
 
 |  |  |
 |---|---|
-|  Application Gateways   |  SQL Servers   |
-|  Disks   |  Virtual Machines  |
-|  Key Vaults   |  Virtual Machine Scale Sets |
-|  Load Balancers  |  Virtual Networks   |
-|  Network Security Groups   |  AKS (Azure Kubernetes Services)   |
-|  Storage Account   |  Monitor   |
+|     AKS (Azure Kubernetes Services)    |     Network Security Groups       |
+|     Application Gateways               |     SQL Servers                   |
+|     Disks                              |     Storage Account               |
+|     Key Vaults                         |     Virtual Machine Scale Sets    |
+|     Load Balancers                     |     Virtual Machines              |
+|     Monitor                            |     Virtual Networks              |
 
 ## Supported Compliance Standards
 
 |  |  |
 |---|---|
-|  SOC2   |  NIST 800-52 rev2   |
-|  AWS CIS Benchmark v1.4.0   |  NIST 800-53 rev5  |
-|  GDPR   |  NIST CSF 1.1 |
-|  HIPAA  |  NIST SMB Guide   |
-|  ISO IEC 27001-2018   |  PCI DSS 3.2   |
-|  NIST 800-171   |  PCI DSS 4.0   |
-|  CSA CCM v4   |  ISO IEC 27001-2022   |
+|     AWS CIS Benchmark v1.4.0    |     NIST 800-52 rev2    |
+|     CSA CCM v4                  |     NIST 800-53 rev5    |
+|     GDPR                        |     NIST CSF 1.1        |
+|     HIPAA                       |     NIST SMB Guide      |
+|     ISO IEC 27001-2018          |     PCI DSS 3.2         |
+|     ISO IEC 27001-2022          |     PCI DSS 4.0         |
+|     NIST 800-171                |     SOC2                |
