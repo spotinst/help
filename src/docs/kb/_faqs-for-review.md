@@ -757,7 +757,7 @@ You can configure a custom scaling policy that is based on another metric. For e
    - <b>Namespace</b>: <i>Custom</i>
    - <b>Custom Namespace</b>: <i>CWagent</i>
    - <b>Metric Name</b>: this [AWS document](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/metrics-collected-by-CloudWatch-agent.html) contains the metrics you can use. These metrics are collected by the CloudWatch agent. For example, you can use <i>mem_used</i> or <i>mem_used_percent</i>.
-    <img width=450 src="https://github.com/user-attachments/assets/430e1adc-458b-4723-ba8a-061c766daef3" >
+     <img width=450 src="https://github.com/user-attachments/assets/430e1adc-458b-4723-ba8a-061c766daef3" >
 5. Verify the [CloudWatch agent is installed](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/install-CloudWatch-Agent-on-EC2-Instance.html).
 
 The next steps are intuitive and should be configured according to the customer's considerations.
@@ -801,7 +801,7 @@ One of the resources checked is the image, which is taken from the VM JSON confi
 
 If you get the `Failed to import virtual machine. Could not retrieve custom image.` message, it means that Elastigroup couldn't find the custom image configured.
 
-Find the name of the image in the Azure console. Go to **VM details** > **JSON view** > **imageReference**. Verify that this image also exists in ******\_\_******?
+Find the name of the image in the Azure console. Go to **VM details** > **JSON view** > **imageReference**. Verify that this image also exists in **\*\***\_\_**\*\***?
 
 <font color="#FC01CC">this is from the original kb article:
 For example - we could see that the machine was configured with the image in the following URL:
@@ -818,7 +818,7 @@ Before starting the import process, Elastigroup verifies that the service accoun
 
 This error means that Elastigroup didn't find a valid storage account in the subscription.
 
-Find the storage account URL in the Azure console. Go to **VM details** > **JSON view** > **diagnosticsProfile**. Verify that this URL is also in ******\_\_******?
+Find the storage account URL in the Azure console. Go to **VM details** > **JSON view** > **diagnosticsProfile**. Verify that this URL is also in **\*\***\_\_**\*\***?
 
 <font color="#FC01CC">this is from the original kb article:
 You can verify it on your end as well by checking if the URL of the storage account is valid -

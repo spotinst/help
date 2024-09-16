@@ -67,6 +67,7 @@ The utilize commitment plans feature lets you leverage both spend-based and reso
 
   <!--
 
+
 - For virtual node groups in the Spot console:
    <ol style="list-style-type: lower-alpha;">
     <li>In the Spot console, go to <b>Ocean</b> > <b>Cloud Clusters</b>.</li>

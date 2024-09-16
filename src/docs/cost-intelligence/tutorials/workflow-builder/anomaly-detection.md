@@ -93,7 +93,6 @@ The example below shows how to create an alert flow. You can create more complex
        
     </details>
 
-
 5. Click the arrow in the <i>If Field</i> widget. Select **If Metric**.
 6. Select:
    - **Metric**: Select the metric you created in Step 1. Tip: The metric you recently created is at the bottom of the list.

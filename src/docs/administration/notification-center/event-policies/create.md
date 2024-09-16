@@ -64,7 +64,6 @@ To complete the policy definition, you need to complete all steps of the wizard.
 
     </details>
 
-
 2. Click **Next**.
 
 ## Step 3: Select Events
