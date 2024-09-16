@@ -27,3 +27,26 @@ Use Datadog integration to collect billable and usage metrics for your organizat
 6. In the **Webhook API Key Name**, select the API key you created earlier.  
 7. Compose your workflow and save it.
 8. In the workflow builder, copy the **Webhook API Key Value** and the **Workflow Webhook URL**. When you configure the third-party application, use those saved values.
+
+#### Input
+
+| Parameter           | Description                                                    | Required  |
+|---------------------|----------------------------------------------------------------|-----------|
+| Datadog Instance    | The instance added in the integration                          | Required  |
+| Usage Category      | Hourly usage by product family                                 | Required  |
+| Product families    | The list of product family to retrieve                         | Required  |
+| Start Time          | Date time for usage starting this hour, such as 2024-03-01 T06 | Required  |
+| End time            | End time for usage ending this hour, such as 2024-05-01 T06    | Optional  |
+| Include descendants | Include child org usage in response (true/false)               | Optional  |
+| S3 Bucket           | The S3 bucket to store the query result.                       | Optional  |
+| S3 Bucket Key       | Name of S3 key                                                 | Optional  |
+
+
+#### Output
+
+| Parameter        | Type   | Description                         |
+|------------------|--------|-------------------------------------|
+| execution_status | String | Status of run (ie: S_OK / E_FAIL)   |
+| output           | Map    | Usage API response                  |
+| s3_url           | String | URL where the data/output is saved  |
+
