@@ -1,4 +1,4 @@
-# Spot Policy in GCP
+_# Spot Policy in GCP
 
 You can find and modify your Spot Policy in the [GCP IAM Console](https://console.cloud.google.com/iamadmin/).
 
@@ -9,7 +9,7 @@ You can find and modify your Spot Policy in the [GCP IAM Console](https://consol
         fetch('https://spotinst-public.s3.amazonaws.com/assets/gcp/spot_policy_in_gcp.json')
             .then(res => res.json())
             .then(res => {
-                document.querySelector('#json-content').textContent = JSON.stringify({properties:[{actions: res.properties}]}, null, 2);
+                document.querySelector('#json-content').textContent = JSON.stringify(res, null, 2);
             })
             .then(() => window.Prism.highlightAll())
     </script>
