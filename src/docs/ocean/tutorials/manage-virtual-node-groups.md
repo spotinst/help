@@ -1,6 +1,6 @@
 # Manage AWS Virtual Node Groups
 
-Cloud service provider relevance: AWS Kubernetes
+Cloud service provider relevance: AWS Kubernetes and EKS
 
 This topic describes how to work with Virtual Mode Groups for AWS Kubernetes.
 
@@ -41,7 +41,10 @@ The Virtual Node Groups Summary List can display the following columns:
 
 ![import-or-manual](https://github.com/user-attachments/assets/63cb8805-eb79-449c-858e-dc3d483bb473)
 
-2. Click **Configure Manually** or choose to import from an existing [Autoscaling Group](ocean/tutorials/manage-virtual-node-groups?id=create-a-vng-from-an-asg) (AWS) or Node Pool (AKS and GKE).
+2. Select one of these options:
+   *  Click **Configure Manually**
+   *  For AWS Kubernetes only, select to import from an existing [Autoscaling Group](ocean/tutorials/manage-virtual-node-groups?id=create-a-vng-from-an-asg)
+   *  For EKS only, select to import from an existing [node group](NEED LINK)
 3. Click **Continue**.
 
 When you select Import, a one-time process occurs. Import copies values from the cloud provider node group entity to the Ocean configuration. Later, there is no active connection between these two entities. Ocean will provision new VMs, not as part of a managed Kubernetes service of node group entities.
