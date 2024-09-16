@@ -48,6 +48,9 @@ The Virtual Node Groups Summary List can display the following columns:
 3. Click **Continue**.
 
 When you select Import, a one-time process occurs. Import copies values from the cloud provider node group entity to the Ocean configuration. Later, there is no active connection between these two entities. Ocean will provision new VMs, not as part of a managed Kubernetes service of node group entities.
+Review all of the parameters and update them if necessary before saving.
+
+If you are configuring manually, see [New Virtual Node Group Page]()
 
 ### New Virtual Node Group Page
 
@@ -175,22 +178,6 @@ See [Spot API](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchS
 * Max. vCPU: Maximum number of vCPUs available.
 * Min. vCPU: Minimum number of vCPUs available.
 * Min. ENIs: Minimum number of network interfaces (ENIs).
-
-## Create a VNG from an Autoscaling Group
-
-IS THIS STILL VALID???
-
-This section describes creating a Virtual Node Group in an Ocean cluster using the configuration from an existing Amazon autoscaling group. This process is referred to as importing a Virtual Node Group from an Autoscaling Group (ASG).
-
-1. In the console, go to Ocean/Cloud Clusters and click the Cluster Name you want to add a VNG to.
-2. In the summary page for the cluster, click Virtual Node Groups.
-3. Click Create New Virtual Node Group.
-4. Choose Import Configurations from an Autoscaling Group, choose the Autoscaling Group in the dropdown list, and click Continue.
-
-<img src="/ocean/_media/tutorials-manage-vngs-04.png" width="394" height="226" />
-
-5. When the New Virtual Node Group page appears, the fields will be populated with the values from the Autoscaling Group you chose. Review all of the parameters and update them if necessary.
-6. When you are finished reviewing and updating the imported configuration, click Save.
 
 ## Edit a Virtual Node Group
 
