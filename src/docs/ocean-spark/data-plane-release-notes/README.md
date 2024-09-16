@@ -22,8 +22,9 @@ Changelog
 
   - vulnerability fixes
 
-- [0.4.2] bigdata-notebook-service
+- [0.4.3] bigdata-notebook-service
   - vulnerability fixes
+  - a failsafe has been added to make sure notebook pods are always killed when kernel is shutdown
 
 ## [0.4.21-79] - 2024-07-24
 
