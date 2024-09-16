@@ -166,6 +166,19 @@ VM Types.
 
 ## Instance Parameters Available via API Only
 
+* Categories: One of the following: Accelerated_computing, Compute_optimized, General_purpose, Memory_optimized, Storage_optimized".
+* Disk Types: NVMe, EBS, SSD, HDD.
+* Excude Families: Types that will not be available for scaling (asterisk wildcard is also supported). For example, C* will exclude instance types from these families: c5, c4, c4a, etc.
+* Exclude Metal: Metal types will not be available for scaling when set to true.
+* Hypervisor TYpes: nitro, xen.
+* Include Families: Types that will be available for scaling (asterisk wildcard is also supported). For example, C* will include instance types from these families: c5, c4, c4a, etc.
+* Ena Support: Ena support when set to True.
+* Max GPU: Maximum total number of GPUs.
+* Max. Memory (GIB): Maximum amount of Memory (GiB).
+* Max. Network Performance: Maximum Bandwidth in Gib/s of network performance.
+* Max. vCPU: Maximum number of vCPUs available.
+* Min. ENIs: Minimum number of network interfaces (ENIs).
+* Min GPUs: Minimum total number of GPUs.
 
 
 
