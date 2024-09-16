@@ -1,4 +1,4 @@
-_# Spot Policy in GCP
+# Spot Policy in GCP
 
 You can find and modify your Spot Policy in the [GCP IAM Console](https://console.cloud.google.com/iamadmin/).
 
