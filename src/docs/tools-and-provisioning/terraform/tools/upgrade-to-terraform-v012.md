@@ -1,6 +1,7 @@
 # Upgrade to Terraform v0.12
 
 ## Introduction
+
 This article discusses the latest Terraform v0.12 update and its effects on Spot users who are using the official Spot provider from HashiCorp.
 
 ## The Update

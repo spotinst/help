@@ -8,7 +8,7 @@ There are two methods to set a budget for an Elastigroup:
 <img src="/elastigroup/_media/configure-budgets_1.png" />
 
 - From the Budgets Dashboard
-  
+
   <img src="/elastigroup/_media/configure-budgets_2.png" />
 
 In order to access the Budgets dashboard, please click on the new `Budgets` icon in the left hand menu.

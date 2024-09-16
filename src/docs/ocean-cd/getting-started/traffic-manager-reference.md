@@ -34,7 +34,7 @@ traffic:
     stickinessConfig:
       enabled: true
       durationSeconds: 3600
-    annotationPrefix: string     
+    annotationPrefix: string
 ```
 
 Whenever `rootService` is used, the value must not be the same as the `stableService` value.
@@ -47,7 +47,7 @@ traffic:
   stableService: rollouts-demo-stable
   ambassador:
     mappings:
-    - echo
+      - echo
 ```
 
 ### Istio: Host Level
@@ -70,9 +70,9 @@ traffic:
   stableService: rollouts-demo-stable
   istio:
     virtualServices:
-    - name: rollout-vsvc
-      routes:
-      - primary
+      - name: rollout-vsvc
+        routes:
+          - primary
     destinationRule:
       name: rollout-destrule
       canarySubsetName: canary
@@ -89,7 +89,7 @@ traffic:
     stableIngress: rollouts-demo-ingress-nginx
     additionalIngressAnnotations:
       canary-by-header: X-Canary
-      canary-by-header-value: iwantsit    
+      canary-by-header-value: iwantsit
 ```
 
 ### SMI
@@ -104,20 +104,21 @@ traffic:
 
 Whenever `rootService` is used, the value must not be the same as the `stableService` value.
 
-### Without Traffic Manager  
-If a traffic manager is not explicitly configured, Ocean CD by default uses Kubernetes traffic methods based on replicas.  
+### Without Traffic Manager
 
-In this case, you have two options:  
+If a traffic manager is not explicitly configured, Ocean CD by default uses Kubernetes traffic methods based on replicas.
 
-* Add both service names (Canary and Stable) as shown in the template below.
+In this case, you have two options:
+
+- Add both service names (Canary and Stable) as shown in the template below.
 
 ```yaml
 traffic:
- canaryService: rollouts-demo-canary
- stableService: rollouts-demo-stable
- ```
+  canaryService: rollouts-demo-canary
+  stableService: rollouts-demo-stable
+```
 
-* Remove the traffic object entirely. Ocean CD pinpoints the relevant services by using labels.
+- Remove the traffic object entirely. Ocean CD pinpoints the relevant services by using labels.
 
 In both options, the YAML created must be applied in the namespace chosen for the Spot deployment.
 

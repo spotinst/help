@@ -1,12 +1,12 @@
 # Trigger Rollouts with ConfigMap
 
-Ocean CD enables you to update SpotDeployments and trigger rollouts accordingly through the change of a ConfigMap.  
+Ocean CD enables you to update SpotDeployments and trigger rollouts accordingly through the change of a ConfigMap.
 
-This feature is designed for users or processes that deploy new versions through the use of ConfigMap, instead of applying changes directly to their SpotDeployment manifest.  
+This feature is designed for users or processes that deploy new versions through the use of ConfigMap, instead of applying changes directly to their SpotDeployment manifest.
 
-This tutorial describes how to use the feature together with Ocean CD:  
+This tutorial describes how to use the feature together with Ocean CD:
 
-1. Create and apply a ConfigMap YAML in your cluster. An example of a manifest:  
+1. Create and apply a ConfigMap YAML in your cluster. An example of a manifest:
 
 ```yaml
 apiVersion: v1
@@ -18,7 +18,7 @@ data:
   example: firstconfigmap
 ```
 
-2. Refer your ConfigMap to your SpotDeployment using the Volumes Object and apply the change into your cluster. An example of a referral:  
+2. Refer your ConfigMap to your SpotDeployment using the Volumes Object and apply the change into your cluster. An example of a referral:
 
 ```yaml
 apiVersion: spot.io/v1beta1
@@ -41,22 +41,22 @@ spec:
         app: nginx
     spec:
       containers:
-      - name: nginx
-        image: nginx:1.21.0
-        ports:
-        - containerPort: 8080
-        volumeMounts:
-        - name: config-volume
-          mountPath: /etc/config
+        - name: nginx
+          image: nginx:1.21.0
+          ports:
+            - containerPort: 8080
+          volumeMounts:
+            - name: config-volume
+              mountPath: /etc/config
       volumes:
         - name: config-volume
           configMap:
             name: myconfigmap
 ```
 
-**Note**: The annotation added to the example is compulsory. It ensures that the ConfigMap feature described above is enabled.   
+**Note**: The annotation added to the example is compulsory. It ensures that the ConfigMap feature described above is enabled.
 
-3. Ensure that the connection between the ConfigMap and your SpotDeployment was performed in your terminal using the following command:  
+3. Ensure that the connection between the ConfigMap and your SpotDeployment was performed in your terminal using the following command:
 
 `kubectl describe configmap myconfigmap -n mynamespace`
 
@@ -78,11 +78,11 @@ Annotations:  oceancd.spot.io/broadcasting: true
 
 The annotations and how they work:
 
-* Oceancd.spot.io/broadcasting: Whether or not you want the ConfigMap to be connected to the SpotDeployment. If you want your ConfigMap to not trigger a rollout upon changes, momentarily or for a longer period, set this to false.  
+- Oceancd.spot.io/broadcasting: Whether or not you want the ConfigMap to be connected to the SpotDeployment. If you want your ConfigMap to not trigger a rollout upon changes, momentarily or for a longer period, set this to false.
 
-* Oceancd.spot.io/dataSum: An internal hash number depicting the difference between two ConfigMap versions.  
+- Oceancd.spot.io/dataSum: An internal hash number depicting the difference between two ConfigMap versions.
 
-* Oceancd.spot.io/spotdeployment.nginx-deployment: An additional annotation added in case more than one SpotDeployment is related to your ConfigMap. This gives you the flexibility to disconnect specific SpotDeployments partially from the ConfigMap.
+- Oceancd.spot.io/spotdeployment.nginx-deployment: An additional annotation added in case more than one SpotDeployment is related to your ConfigMap. This gives you the flexibility to disconnect specific SpotDeployments partially from the ConfigMap.
 
 4. Update your ConfigMap YAML, apply it in your cluster, and monitor your newly triggered rollout.
 

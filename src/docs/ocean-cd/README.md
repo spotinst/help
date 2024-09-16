@@ -11,16 +11,17 @@ Ocean CD resides within Kubernetes and communicates with Spot to connect all par
 <img src="/ocean-cd/_media/overview-01.png" width="450"/>
 
 To automate deliveries with Ocean CD, you will perform the following basic steps:
+
 - Create a SpotDeployment CRD: Ocean CD replacement of a Deployment Resource
 - Define Strategy: An entity including a definition of phases that manage
-the way your workload changes are being exposed in the desired
-cluster and namespace
+  the way your workload changes are being exposed in the desired
+  cluster and namespace
 - Define RolloutSpec: An entity including the CD strategy and traffic definitions
-for the selected SpotDeployment
+  for the selected SpotDeployment
 
 The Ocean CD Operator detects every applied SpotDeployment, monitors all of your resources, and manages rollouts based on the SaaS logic. Whenever the SpotDeployment is applied, the SaaS will trigger a rollout.
 
-This process enables full automation of the rollout, and will support a manual failure policy should you choose to make use of it. Throughout a rollout, automatic traffic management, rollbacks, and informative errors (if needed)  will be displayed. Ocean CD will include full monitoring and tracking of the deployment.
+This process enables full automation of the rollout, and will support a manual failure policy should you choose to make use of it. Throughout a rollout, automatic traffic management, rollbacks, and informative errors (if needed) will be displayed. Ocean CD will include full monitoring and tracking of the deployment.
 
 ## Entities and Architecture
 
@@ -29,6 +30,7 @@ Ocean CD makes use of a set of fundamental entities for building a rollout. Exam
 ### Ocean CD Operator
 
 The Ocean CD Operator resides in a pod in your Kubernetes cluster and provides the following major functions:
+
 - Detects changes that are applied to SpotDeployments
 - Continuously fetches from the SaaS operations to execute
 - Reports events to the SaaS that are relevant to the well functioning of the Ocean CD processes, such as changes in the cluster resources
@@ -46,6 +48,7 @@ Once the SpotDeployment CRD is applied to the Kubernetes cluster, the Operator r
 [Argo Rollouts](https://argoproj.github.io/argo-rollouts/) is a progressive deployment strategies engine, but it's not a product that can act at scale. While Argo Rollouts get the desired rollout configuration and have strong capabilities of running it inside the cluster, Ocean CD manages the configurations which make it more scalable.
 
 Ocean CD recognizes the advantages of Argo rollouts as an engine for CD strategies and uses it accordingly to manage and enable it as a scalable CD product providing the following benefits:
+
 - From zero to canary in production readiness in minutes
 - Easy adjustment of multiple deployment pipelines
 - Re-usable canary strategies for all services and environments
@@ -67,6 +70,7 @@ Argo CD has been provided with the ability to synchronize directly with SpotDepl
 ## Putting it all Together
 
 Ocean CD fits right into your Cloud Kubernetes environment with:
+
 - Your service provider (e.g., AWS, Google Cloud or Microsoft Azure) providing your cloud layer
 - Spot Ocean providing container management and numerous optimization features in your infrastructure layer
 - Ocean CD providing visibility, deployment automation, and continuous verification at the application level

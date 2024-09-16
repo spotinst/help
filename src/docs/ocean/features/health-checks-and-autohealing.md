@@ -18,9 +18,9 @@ Each condition type is assigned a status:
 
 To ensure optimal performance, Ocean monitors the nodes' status every 30 seconds. If it identifies that the Ready condition is False or Unknown, it considers this node Unhealthy and triggers a replacement.
 
-###  Control When to Replace an Unhealthy Node
+### Control When to Replace an Unhealthy Node
 
->**Note**: Available for AWS Kubernetes clusters only.
+> **Note**: Available for AWS Kubernetes clusters only.
 
 You may want to control how fast to replace a node once it’s unhealthy. For example, if you want to reduce the time for quicker response. Alternatively, you might want to increase this time.
 
@@ -33,8 +33,9 @@ The minimum duration before replacement is 60 seconds and can be increased in mu
 When the attribute's value is not configured ('null'), the default value 120 applies.
 
 To access this attribute:
-*  For the Spot API, see [Create cluster](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterCreate) level (under `compute.launchSpecification`).
-*  For [Terraform](https://registry.terraform.io/providers/spotinst/spotinst/latest/docs/resources/ocean_aws#health_check_unhealthy_duration_before_replacement).
+
+- For the Spot API, see [Create cluster](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterCreate) level (under `compute.launchSpecification`).
+- For [Terraform](https://registry.terraform.io/providers/spotinst/spotinst/latest/docs/resources/ocean_aws#health_check_unhealthy_duration_before_replacement).
 
 ## ECS Clusters
 
@@ -56,4 +57,3 @@ Every Container Instance within the Amazon ECS cluster has the following two par
 To ensure cluster functioning and availability, Ocean monitors those parameters and will consider a container instance as healthy when its status value is either ACTIVE or DRAINING and the agentConnected value returns True .
 
 When either of the above parameters return different values, or when the container instance does not respond at all, Ocean will consider the container instance unhealthy and a replacement will be triggered.
-

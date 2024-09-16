@@ -4,15 +4,15 @@ This procedure describes how to migrate your SpotDeployment and create your enti
 
 ## Step 1: Create your SpotDeployment
 
-In order to create a SpotDeployment, choose one of the following options:  
+In order to create a SpotDeployment, choose one of the following options:
 
-* Create a SpotDepolyment from scratch. For further assistance regarding the template, refer to the [Ocean CD Public Repository](https://github.com/spotinst/spot-oceancd-releases/tree/main/Quick%20Start%20%26%20Examples).
+- Create a SpotDepolyment from scratch. For further assistance regarding the template, refer to the [Ocean CD Public Repository](https://github.com/spotinst/spot-oceancd-releases/tree/main/Quick%20Start%20%26%20Examples).
 
-* Migrate an existing deployment to SpotDeployment. Copy the deployment and change the apiVersion and kind.
+- Migrate an existing deployment to SpotDeployment. Copy the deployment and change the apiVersion and kind.
 
 <img src="/ocean-cd/_media/migrate-api-1.png" />
 
-> Tip: The namespace where you apply your SpotDeployment is important. You need to use the same for your services and Ocean CD Entities.  
+> Tip: The namespace where you apply your SpotDeployment is important. You need to use the same for your services and Ocean CD Entities.
 
 When you apply a SpotDeployment for the first time, Ocean CD displays the first replicas, but does **not** trigger a deployment.
 
@@ -20,15 +20,15 @@ When you apply a SpotDeployment for the first time, Ocean CD displays the first 
 
 Create one or more services that will be used during the rollout. Choose one of the following options:
 
-* Create the services from scratch. For further assistance regarding the template, refer to the Ocean CD Public Repository.
+- Create the services from scratch. For further assistance regarding the template, refer to the Ocean CD Public Repository.
 
-* Use your existing services.
+- Use your existing services.
 
 > Tip: Ensure you apply the services in the same namespace as the one used for your SpotDeployment.
 
 ## Step 3: Create and Apply Entities
 
-All of the Ocean CD entities are related to each other and must be created in a specific order. Create your entities and apply them in the following order.  
+All of the Ocean CD entities are related to each other and must be created in a specific order. Create your entities and apply them in the following order.
 
 1. Create your [Verification Provider](https://docs.spot.io/ocean-cd/concepts-features/entities?id=verification-provider)
 2. Create your [Verification Template](https://docs.spot.io/ocean-cd/concepts-features/entities?id=verification-template)
@@ -44,7 +44,7 @@ YAML templates and examples can be found in the Ocean CD public repository or JS
 
 ## Step 4: Trigger Canary Deployment
 
-To trigger your rollout, make one or more changes to the SpotDeployment.Spec object you created in Step 1 and apply it into your terminal.  
+To trigger your rollout, make one or more changes to the SpotDeployment.Spec object you created in Step 1 and apply it into your terminal.
 
 ## What’s Next?
 

@@ -60,7 +60,7 @@ The jdbc url looks like
 jdbc:ofas://api.spotinst.io/{clusterId}/{appId}?profile=default
 ```
 
-additional url parameters are token, account and mode. 
+additional url parameters are token, account and mode.
 Mode is the thrift transport mode and can be 'http' or 'thrift'.
 
 ### Spotctl

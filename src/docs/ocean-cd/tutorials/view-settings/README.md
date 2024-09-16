@@ -6,7 +6,7 @@ OceanCD supports the creation, update, delete and duplicate actions of all of th
 
 ## Verification Provider
 
-The verification provider tab provides an overview of the providers set for your verification template.  
+The verification provider tab provides an overview of the providers set for your verification template.
 
 <img src="/ocean-cd/_media/verification-provider.png" />
 
@@ -30,7 +30,7 @@ The Strategy tab provides an overview of the phases, traffic splits and verifica
 
 ## Rollout Spec
 
-The RolloutSpec tab provides a description of the link between the entities created above, and the Kubernetes resources such as the SpotDeployment & Namespace.  
+The RolloutSpec tab provides a description of the link between the entities created above, and the Kubernetes resources such as the SpotDeployment & Namespace.
 
 <img src="/ocean-cd/_media/rollout-spec.png" />
 

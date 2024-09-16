@@ -1,8 +1,8 @@
 # Onboard Azure Account
 
-If you are using Spot Security for the first time, in the left main menu of the Spot console click **Spot Security** > **Start With 30 Days Free Trial**.  
+If you are using Spot Security for the first time, in the left main menu of the Spot console click **Spot Security** > **Start With 30 Days Free Trial**.
 
-## Prerequisites 
+## Prerequisites
 
 Use the same service principal you created when you onboarded the Azure subscription to the Spot console for the Spot Security onboarding (based on individual subscriptions).
 
@@ -20,7 +20,7 @@ If you lost the service principal you used, you can access it in the Spot Accoun
 2. Click **Cloud Account** > **Azure** > **Log in to Azure Account**.
 3. Enter your Azure Management Console and click **Azure**.
 
-## Step 2:  Elevate Access to your Subscription ID
+## Step 2: Elevate Access to your Subscription ID
 
 ### Step 2.1:  Assign Reader, Storage Blob Data Reader Role
 
@@ -95,27 +95,28 @@ If you lost the service principal you used, you can access it in the Spot Accoun
 6. Select **Archive to a storage account** and select the Subscription with the storage account. Make sure the service principal used for onboarding has access to the storage account.
 7. Select the logs you want to archive from the **Storage Account**. [Create a storage account](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-create?tabs=azure-portal) if needed.
 8. Copy the Storage account name and save it for the next step of onboarding.
-9. Click **Save**.  
+9. Click **Save**.
 
 ### Step 3.2: Enter Storage Account Name
 
 1. Go to the Spot console, enter the storage account name copied in the previous step and click **Validate**.
-   
+
   <details>
     <summary markdown="span">View image</summary>
       <img src="https://github.com/user-attachments/assets/f33b100b-5a4d-4a7a-b383-63c707bc272d" />
           
    </details>
 
-2. When the storage account name is validated, click **Next**.  
+2. When the storage account name is validated, click **Next**.
 
 ## Step 4: Review and Finalize
 
 1. Review the information and ensure all details are correct.
-  <details>
-    <summary markdown="span">View image</summary>
-      <img src="https://github.com/user-attachments/assets/1358628d-cf21-43df-adb8-31561c9177f7" />
-      
-   </details>
+<details>
+  <summary markdown="span">View image</summary>
+    <img src="https://github.com/user-attachments/assets/1358628d-cf21-43df-adb8-31561c9177f7" />
+
+
+ </details>
 
 2. Click **Finish Onboarding**.

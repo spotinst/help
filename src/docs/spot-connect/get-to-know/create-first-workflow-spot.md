@@ -2,7 +2,7 @@
 
 With Spot Connect, you can automatically execute a workflow with actionable results, including Slack notifications, approval policies, and Elastigroup-specific actions like scale up, scale-down, delete a group, and more.
 
-The following procedure is an example of an automatic scale-down action on a budgeted Elastigroup.  
+The following procedure is an example of an automatic scale-down action on a budgeted Elastigroup.
 
 ## Create a Budget for an Elastigroup
 
@@ -13,26 +13,26 @@ Create a budgeted alert in Elastigroup for the automatic scale-down.
 
 <img src="/spot-connect/_media/create-wkflw-spot-elastigroup-2.png" width="500" height="160" />
 
-3. Set the threshold.  
+3. Set the threshold.
 
 <img src="/spot-connect/_media/create-wkflw-spot-elastigroup-3.png" width="350" height="200" />
 
-4. Set the SNS alert type.  
+4. Set the SNS alert type.
 
 <img src="/spot-connect/_media/create-wkflw-spot-elastigroup-4.png" />
 
 ## Configure the Integrations
 
-Adding a Spot Programmatic Access Token is required to authenticate and execute Spot Operations in a workflow.  
+Adding a Spot Programmatic Access Token is required to authenticate and execute Spot Operations in a workflow.
 
 1. In the left main menu, click **Connect** and **Integrations**.
-2. Under Cloud Services, click **Spot by Netapp**.  
+2. Under Cloud Services, click **Spot by Netapp**.
 3. Click **Add Authorization**.
 
-<img src="/spot-connect/_media/create-wrkflw-spot-2.png" />  
+<img src="/spot-connect/_media/create-wrkflw-spot-2.png" />
 
 4. Provide an alias for the Spot Token.
-5. Enter your Spot Programmatic Access Token. If a Programmatic token is unavailable, you can [create a personal token](https://docs.spot.io/administration/api/create-api-token), but a Programmatic Access Token is recommended.  
+5. Enter your Spot Programmatic Access Token. If a Programmatic token is unavailable, you can [create a personal token](https://docs.spot.io/administration/api/create-api-token), but a Programmatic Access Token is recommended.
 6. Click **Add Authorization**.
 
 ### Slack
@@ -40,7 +40,7 @@ Adding a Spot Programmatic Access Token is required to authenticate and execute 
 The Slack integration enables you to send notifications and messages from a workflow to a specific Slack Channel and manage workflow approvals.
 
 1. In the left main menu, click **Connect and Integrations**.
-2. Under Integrations, click **Slack**.  
+2. Under Integrations, click **Slack**.
 3. In the top right, click **Add integration**.
 
 <img src="/spot-connect/_media/create-wrkflw-spot-3.png" />
@@ -50,16 +50,16 @@ The Slack integration enables you to send notifications and messages from a work
 
 <img src="/spot-connect/_media/create-wrkflw-spot-7.png" width="400" height="500" />
 
-6. In the top right corner, verify that you selected the correct workspace and click **Submit**.  
+6. In the top right corner, verify that you selected the correct workspace and click **Submit**.
 
 _If you do not have permission to access the Slack Workspace, you can request to install it, which is sent to the App Manager for approval_.
 
 #### Enable a Slack Channel for Selection
 
 1. In the Slack App, right-click the channel and select **View Channel Details**.
-2. Click the Integrations tab and click **Add a Workflow**.  
-4. Search for and add the Spot Connect by Netapp app.
-5. Verify the app is listed in the integrations.
+2. Click the Integrations tab and click **Add a Workflow**.
+3. Search for and add the Spot Connect by Netapp app.
+4. Verify the app is listed in the integrations.
 
 <img src="/spot-connect/_media/create-wrkflw-spot-4.png" width="500" height="500" />
 
@@ -67,7 +67,7 @@ _If you do not have permission to access the Slack Workspace, you can request to
 
 API keys are unique to a Spot Organization. The webhook requires an API key to trigger a workflow and send the webhook body payload to the workflow.
 
-1. In the left main menu, click **Connect** and **Integrations**. Scroll down to Resources.  
+1. In the left main menu, click **Connect** and **Integrations**. Scroll down to Resources.
 2. Click API keys and click **Add New**.
 3. Enter an API Key Name and click **Save**.
 
@@ -102,8 +102,9 @@ Create a workflow using the Spot Elastigroup AWS node.
 3. The API key can be added as a Header or Query Parameter, which is embedded in the URL for usage with AWS SNS Topics.
 
 **Note**:
-* The workflow cannot be saved with the trigger node configured and requires at least one additional node added.
-* Since the Generic Webhook trigger is configured, Spot Connect is unaware of which third-party application sends the webhook payload. Therefore, the Output of the trigger node does not show the JSON Schema of the webhook. However, his can be copied by following the steps listed [here](spot-connect/get-to-know/create-first-workflow-spot?id=workflow-execution-alert-body).
+
+- The workflow cannot be saved with the trigger node configured and requires at least one additional node added.
+- Since the Generic Webhook trigger is configured, Spot Connect is unaware of which third-party application sends the webhook payload. Therefore, the Output of the trigger node does not show the JSON Schema of the webhook. However, his can be copied by following the steps listed [here](spot-connect/get-to-know/create-first-workflow-spot?id=workflow-execution-alert-body).
 
 #### Extract the Elastigroup ID from the Webhook JSON Formatted Alert Body
 
@@ -114,16 +115,16 @@ The JSONPath node provides another way to extract information from a node's outp
 3. JSONPath node extracts values from keys in JSON arrays and objects.
 4. Manually connect the trigger node with the JSONPath node.
 5. Change the name of the node to a descriptive name. For example: Elastigroup_ID.
-6. In the center panel, select the JSONPath node in the node. The JSONPath expression is an expression language to filter JSON Data. The JSONPath window opens.  
+6. In the center panel, select the JSONPath node in the node. The JSONPath expression is an expression language to filter JSON Data. The JSONPath window opens.
 
 <img src="/spot-connect/_media/create-wrkflw-spot-11.png" />
 
-7. In the JSON Inputs, select the Trigger node from the dropdown menu.  
+7. In the JSON Inputs, select the Trigger node from the dropdown menu.
 
 <img src="/spot-connect/_media/create-wrkflw-spot-12.png" />
 
 8. In the Previous Step Output field, select **output_json**.
-9. In the JSON Path Expression, set the path as **$.Account_ID**. The following output is displayed:  
+9. In the JSON Path Expression, set the path as **$.Account_ID**. The following output is displayed:
 
 <img src="/spot-connect/_media/create-wrkflw-spot-13.png" />
 
@@ -139,8 +140,8 @@ The trigger node output JSON schema is essential for setting values from previou
 
 To update the output schema of the trigger node, complete the following steps:
 
-* Verify the workflow is saved
-* Execute the workflow via the third-party application webhook notification. If you know the webhook JSON formatted payload, you can also use Postman while building your workflow.
+- Verify the workflow is saved
+- Execute the workflow via the third-party application webhook notification. If you know the webhook JSON formatted payload, you can also use Postman while building your workflow.
 
 1. Select **Executions**.
 2. Select the workflow.
@@ -187,7 +188,7 @@ The value of the Elastigroup_Id will automatically be entered in the groupId fie
 
 ## Send a Notification to a Slack Channel
 
-The following tutorial describes how to receive a notification in a Slack channel that informs that the budgeted Elastigroup has reached the threshold.  
+The following tutorial describes how to receive a notification in a Slack channel that informs that the budgeted Elastigroup has reached the threshold.
 
 1. Click + on the left panel and click **Core**.
 2. Drag and drop the Slack Send Message node onto the canvas.
@@ -202,13 +203,13 @@ b. Click **+ Add Slack Variables**.
 <img src="/spot-connect/_media/create-wrkflw-spot-18.png" />
 
 5. In the Set Slack Variable field, enter the variable name EG-Name.
-6. Select the **List Elastigroup node** and `output` in the Previous Step Output field.  
+6. Select the **List Elastigroup node** and `output` in the Previous Step Output field.
 7. Select **Configure**.
 8. Select the key name and click **Save Output**.
 
 <img src="/spot-connect/_media/create-wrkflw-spot-19.png" />
 
-9. Click **Save Variable**.  
+9. Click **Save Variable**.
 10. Enter the message in the Message Text Input. Type the variable with double brackets **or** click **Insert variable** and select the created variable.
 
 `Budget threshold reached for {{EG-Name}}`
@@ -220,9 +221,9 @@ b. Click **+ Add Slack Variables**.
 Send an approval notification to the slack channel, and if approved, automatically scale down the cluster by a set number of nodes.
 
 1. Click + on the left panel and click **Control Structures**.
-2. Drag and drop the Approval node onto the canvas.  
+2. Drag and drop the Approval node onto the canvas.
 3. Manually connect the Slack Send Message node with the new Approval Node.
-4. Manually add the two paths for approval and denial by completing the following steps:  
+4. Manually add the two paths for approval and denial by completing the following steps:
 
 a. To create one path, drag and drop the Spot Elastigroup AWS onto the canvas.
 
@@ -239,18 +240,19 @@ f. Manually connect the Approval Node with the Spot Elastigroup AWS node.
 ### Configure the Approval Node
 
 1. Select the Slack Instance created earlier.
-2. Select the Slack Channel. If your Slack channel does not appear in the dropdown menu, make sure to add the Spot Connect integration to the channel.  
+2. Select the Slack Channel. If your Slack channel does not appear in the dropdown menu, make sure to add the Spot Connect integration to the channel.
 3. In the Slack App, right-click the channel and select **View Channel Details**.
 4. Select the **Integrations** tab and click **Add apps**.
 5. Search for and add the Spot Connect app.
 6. Verify the app is listed in the integrations and enter notes to the reviewer.
 7. Set the Interval before triggering a time out.
-  * For approved, select the node **Spot Elastigroup AWS #2**.  
-  * For denied, select the node **Stop #1**.
+
+- For approved, select the node **Spot Elastigroup AWS #2**.
+- For denied, select the node **Stop #1**.
 
 <img src="/spot-connect/_media/create-wrkflw-spot-20.png" width="400" height="800" />
 
-## Scale Down the Elastigroup Cluster  
+## Scale Down the Elastigroup Cluster
 
 If you approved the flow in Slack, configure the scale down of the Elastigroup that reached the budget threshold.
 
@@ -264,14 +266,14 @@ If you approved the flow in Slack, configure the scale down of the Elastigroup t
 6. Select **Set value from the previous step**.
 7. Select **Trigger [trigger_1]**.
 8. In the Previous Step Output field, select `output`.
-9. Click **Configure**.  
+9. Click **Configure**.
 10. Select **Elastigroup_Id** from the trigger node JSON Schema.
 11. Click **Save Output**. The value of the Elastigroup_Id will be automatically entered in the groupId field.
 12. In the adjustment field, set the number of nodes by which you want to scale the Elastigroup.
 
 <img src="/spot-connect/_media/create-wrkflw-spot-26.png" />
 
-13. Click **Save Workflow** to save the new workflow version.  
+13. Click **Save Workflow** to save the new workflow version.
 
 ## Run the Workflow using Webhook
 
@@ -279,7 +281,7 @@ Open your API platform. The following procedure is an example that uses Postman.
 
 ### Configure Postman
 
-1. Log in to Postman and create a new HTTP Request.  
+1. Log in to Postman and create a new HTTP Request.
 2. Select the Generic webhook trigger node.
 3. Copy the Workflow Webhook URL
 4. In Postman, paste the webhook URL in the request URL.
@@ -309,8 +311,8 @@ Open your API platform. The following procedure is an example that uses Postman.
 
 <img src="/spot-connect/_media/create-wrkflw-spot-21.png" />
 
-* Each step is shown with the description of the status as completed successfully, failed, or waiting.
-* Each step can be selected and reviewed.
+- Each step is shown with the description of the status as completed successfully, failed, or waiting.
+- Each step can be selected and reviewed.
 
 <img src="/spot-connect/_media/create-wrkflw-spot-22.png" />
 
@@ -324,7 +326,7 @@ Open your API platform. The following procedure is an example that uses Postman.
 
 ## View Executions
 
-You can view the executions you created in the Execution Detail page after you have successfully run your workflow.  
+You can view the executions you created in the Execution Detail page after you have successfully run your workflow.
 
 In the left main menu, click **Connect** and **Executions**. This page gives a general overview of an execution. You can review each step individually by clicking on the step.
 

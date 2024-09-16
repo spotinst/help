@@ -1,49 +1,49 @@
-# End-to-End Setup 
+# End-to-End Setup
 
-This procedure describes how to install the Ocean CD operator and the entities using the Spot console’s QuickStart guide. This procedure describes how to set up the necessary components to quickly deploy your first rollout using the Spot console.  
+This procedure describes how to install the Ocean CD operator and the entities using the Spot console’s QuickStart guide. This procedure describes how to set up the necessary components to quickly deploy your first rollout using the Spot console.
 
-## Prerequisites 
+## Prerequisites
 
-* A Kubernetes cluster running (cloud agnostic) 
-* At least one worker node running 
+- A Kubernetes cluster running (cloud agnostic)
+- At least one worker node running
 
-## Step 1: Install the Operator Manager 
+## Step 1: Install the Operator Manager
 
-Install the operator manager to connect your cluster to Ocean CD. 
+Install the operator manager to connect your cluster to Ocean CD.
 
-In the left main menu, click **Ocean CD** and then click **Settings**. If you are connecting your first Ocean CD cluster, complete the following steps: 
+In the left main menu, click **Ocean CD** and then click **Settings**. If you are connecting your first Ocean CD cluster, complete the following steps:
 
-1. Click **+ Add Cluster**.   
+1. Click **+ Add Cluster**.
 
 ![end-to-end-ui-1](https://github.com/spotinst/help/assets/106514736/fa6de04c-474c-46c4-994e-c9b150119896)
 
-2. Complete the following information: 
+2. Complete the following information:
 
-* Cluster Identifier: This is a logical identifier for your cluster that must be unique and have up to 30 alphanumeric characters without any spaces. You can choose any ID and it does not need to be coupled to the Ocean cluster ID (o-xxxxxx). Ocean CD can run on clusters that are not managed by Ocean. 
+- Cluster Identifier: This is a logical identifier for your cluster that must be unique and have up to 30 alphanumeric characters without any spaces. You can choose any ID and it does not need to be coupled to the Ocean cluster ID (o-xxxxxx). Ocean CD can run on clusters that are not managed by Ocean.
 
-* Spot API Token: This token is required for authentication and authorization of your API requests. 
+- Spot API Token: This token is required for authentication and authorization of your API requests.
 
-3. Run the following command:  
+3. Run the following command:
 
 ```
-helm repo add oceancd https://charts.oceancd.io 
+helm repo add oceancd https://charts.oceancd.io
 
-helm repo update 
+helm repo update
 
-helm install my-release oceancd/spot-oceancd-operator \ 
-  --namespace oceancd \ 
-  --create-namespace \ 
-  --set token= \ 
+helm install my-release oceancd/spot-oceancd-operator \
+  --namespace oceancd \
+  --create-namespace \
+  --set token= \
   --set clusterId= \
 ```
- 
-When the Ocean CD operator is installed, you can create your Kubernetes entities: Services and SpotDeployment.  
 
-## Step 2: Create a Namespace and Service 
+When the Ocean CD operator is installed, you can create your Kubernetes entities: Services and SpotDeployment.
 
-When a namespace is created, create the canary and stable services to expose and manage the traffic that is divided between the canary and stable replicasets. 
+## Step 2: Create a Namespace and Service
 
-_For demo purposes, a traffic manager will not be used._ 
+When a namespace is created, create the canary and stable services to expose and manage the traffic that is divided between the canary and stable replicasets.
+
+_For demo purposes, a traffic manager will not be used._
 
 1. Copy and save the following YAML files. Each YAML is dedicated to one service:
 
@@ -120,9 +120,9 @@ After the SpotDeployment and services are created, the remaining steps are to cr
 
 ## Step 4: Create your Ocean CD Resources using the Ocean CD Quick Start
 
-1. In the Ocean CD menu, click **Quick start**. 
-2. In the Spot Deployment step, select your existing cluster ID, Spot Deployment and namespace.  
-3. In the Verification Provider step, enter the information of your chosen provider. The quick start panel automatically populates YAML templates for all the Ocean CD entities required to support a canary deployment in seconds. 
+1. In the Ocean CD menu, click **Quick start**.
+2. In the Spot Deployment step, select your existing cluster ID, Spot Deployment and namespace.
+3. In the Verification Provider step, enter the information of your chosen provider. The quick start panel automatically populates YAML templates for all the Ocean CD entities required to support a canary deployment in seconds.
 
 ![end-to-end-ui-2](https://github.com/spotinst/help/assets/106514736/3465677e-22b1-476a-a10f-b7121dc750e1)
 

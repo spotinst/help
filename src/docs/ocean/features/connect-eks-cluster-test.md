@@ -1,4 +1,4 @@
-# Connect an Existing Cluster 
+# Connect an Existing Cluster
 
 We are currently changing the process of importing EKS clusters to Ocean, so we should also align the documentation with the new changes.
 

@@ -4,9 +4,9 @@ The Dashboard provides a compute overview of your entire organization. On the Da
 
 ## Go to the Dashboard
 
-If you have just connected your cloud account using one of the connection wizards in the Spot console, the Dashboard will open when you complete the wizard. 
+If you have just connected your cloud account using one of the connection wizards in the Spot console, the Dashboard will open when you complete the wizard.
 
-Click Overview at the top of the left sidebar and click Dashboard. 
+Click Overview at the top of the left sidebar and click Dashboard.
 
 <img src="/connect-your-cloud-provider/_media/view-dashboard-000.png" />
 
@@ -18,7 +18,8 @@ Once you have connected your cloud provider, Spot provides recommendations based
 
 <img src="/connect-your-cloud-provider/_media/view-dashboard-001.png" />
 
-If Spot presents a lot of recommendations, be sure to click **View All** so that you can see all the recommendations for savings and optimization. The following recommendations you may see: 
+If Spot presents a lot of recommendations, be sure to click **View All** so that you can see all the recommendations for savings and optimization. The following recommendations you may see:
+
 - Connect a Linked Account: You can link additional accounts to Spot, including accounts from different cloud providers.
 - Connect a Management Account: This enables you to use Eco (AWS only). Appears if you do not already have a management account connected.
 - Invite more users to Spot: This opens the user administration in Spot where you can add more users in your organization. Appears only if you have administrator rights in Spot.
@@ -73,18 +74,18 @@ Your actual GCP Spot VMs charges deducted from the published cost of GCP On-Dema
 
 For each cloud provider, Savings is defined:
 
-#### AWS Reserved Instances (RIs) and Savings Plans (SPs)  
+#### AWS Reserved Instances (RIs) and Savings Plans (SPs)
 
 Your actual AWS RIs and/or SPs charges deducted from the published cost of AWS EC2 On-Demand Instances. The On-Demand Instance charges can be found on AWS’s website at https://aws.amazon.com/ec2/pricing/on-demand/.
 
-#### Microsoft Azure RIs, SPs and Reserved Capacity (RC)  
+#### Microsoft Azure RIs, SPs and Reserved Capacity (RC)
 
 Your actual Azure RIs and/or SPs and/or RCs charges deducted from the cost of Microsoft Azure Pay-As-You-Go Instances, as published in the Customer’s Azure price sheet, which is presented to Spot by NetApp.
 
-#### GCP Committed Usage Discounts (CUD)  
+#### GCP Committed Usage Discounts (CUD)
 
 Your actual GCP CUD charges deducted from the published cost of GCP On-Demand VMs. The On-Demand VMs charges can be found on GCP’s website at https://cloud.google.com/compute/pricing.
 
-#### Billing Engine and Cost Intelligence Fee Calculation 
+#### Billing Engine and Cost Intelligence Fee Calculation
 
-The monthly fee is calculated each month as a percentage of the total cloud spend. Unless otherwise specified, “Spend” is your charges as detailed in your cloud provider’s bills at the end of each month. This includes taxes, credits, and program discounts, but excludes your cloud provider’s support services. 
+The monthly fee is calculated each month as a percentage of the total cloud spend. Unless otherwise specified, “Spend” is your charges as detailed in your cloud provider’s bills at the end of each month. This includes taxes, credits, and program discounts, but excludes your cloud provider’s support services.

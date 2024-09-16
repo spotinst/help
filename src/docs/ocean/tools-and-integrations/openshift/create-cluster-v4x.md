@@ -34,10 +34,10 @@ Confirm or change the settings imported by the Ocean Creation Wizard.
 
 <img src="/ocean/_media/tools-openshift-4x-04.png" />
 
-##  Step 3: Set up Connectivity
+## Step 3: Set up Connectivity
 
 1. Create a Spot token or use an existing one.
-2. Install the [Ocean Controller](https://docs.spot.io/ocean/tutorials/ocean-controller-v2) Pod. 
+2. Install the [Ocean Controller](https://docs.spot.io/ocean/tutorials/ocean-controller-v2) Pod.
 3. Ensure enable-csr-approval is set to True.
 4. Click **Test Connectivity** to ensure the controller functionality.
 
@@ -58,5 +58,3 @@ bash
 5. When the connectivity test is complete, click **Create**.
 
 Ocean will now ensure the most cost-effective capacity and size possible for your cluster.
-
-

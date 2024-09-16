@@ -6,7 +6,7 @@ Horizontal scaling means that the response to increased load is to deploy more p
 
 Ocean CD supports HPA resources that acknowledge SpotDeployments. The templates below give an example of triggering the launch of pods using Prometheus query or using Kubernetes metric server.
 
-## SpotDeployment YAML  
+## SpotDeployment YAML
 
 ```yaml
 apiVersion: spot.io/v1beta1
@@ -26,16 +26,16 @@ spec:
         app: nginx
     spec:
       containers:
-      - name: nginx
-        image: nginx:1.21.0
-        ports:
-        - name: http
-          containerPort: 8080
-          protocol: TCP
-        resources:
-          requests:
-            memory: 32Mi
-            cpu: 5m
+        - name: nginx
+          image: nginx:1.21.0
+          ports:
+            - name: http
+              containerPort: 8080
+              protocol: TCP
+          resources:
+            requests:
+              memory: 32Mi
+              cpu: 5m
 ```
 
 ## HPA YAML
@@ -46,16 +46,16 @@ To set HPA using Kubernetes metric server, use the following template:
 apiVersion: autoscaling/v1
 kind: HorizontalPodAutoscaler
 metadata:
- name: nginx-hpa
+  name: nginx-hpa
 spec:
- maxReplicas: 6
- minReplicas: 2
- scaleTargetRef:
-   apiVersion: spot.io/v1beta1
-   kind: SpotDeployment
-   name: nginx
- targetCPUUtilizationPercentage: 20
- ```
+  maxReplicas: 6
+  minReplicas: 2
+  scaleTargetRef:
+    apiVersion: spot.io/v1beta1
+    kind: SpotDeployment
+    name: nginx
+  targetCPUUtilizationPercentage: 20
+```
 
 ## Scaled Object YAML
 
@@ -82,7 +82,7 @@ spec:
     metricName: pod_cpu_with_keda
     query: |
       sum (rate (container_cpu_usage_seconds_total{pod=~"nginx.*"}[1m]))
-    threshold: "0.1"  
+    threshold: "0.1"
 ```
 
 ## What’s Next

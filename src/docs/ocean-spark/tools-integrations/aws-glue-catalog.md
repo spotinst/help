@@ -13,18 +13,18 @@ You should replace `<AWS ACCOUNT ID>` with your actual account ID.
 
 ```json
 {
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Effect": "Allow",
-            "Action": "glue:*",
-            "Resource": [
-                "arn:aws:glue:*:<AWS ACCOUNT ID>:catalog",
-                "arn:aws:glue:*:<AWS ACCOUNT ID>:database/*",
-                "arn:aws:glue:*:<AWS ACCOUNT ID>:table/*/*"
-            ]
-        }
-    ]
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "glue:*",
+      "Resource": [
+        "arn:aws:glue:*:<AWS ACCOUNT ID>:catalog",
+        "arn:aws:glue:*:<AWS ACCOUNT ID>:database/*",
+        "arn:aws:glue:*:<AWS ACCOUNT ID>:table/*/*"
+      ]
+    }
+  ]
 }
 ```
 
@@ -57,21 +57,21 @@ In the AWS console in account B, go to Glue > Settings, and add the following pe
 
 ```json
 {
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Effect": "Allow",
-            "Action": "glue:*",
-            "Principal": {
-              "AWS": [ "<OCEAN-NODE-INSTANCE-ROLE>" ]
-            },
-            "Resource": [
-                "arn:aws:glue:<REGION>:<AWS ACCOUNT ID B>:database/*",                                                     
-                "arn:aws:glue:<REGION>:<AWS ACCOUNT ID B>:catalog",
-                "arn:aws:glue:<REGION>:<AWS ACCOUNT ID B>:table/*/*"
-            ]
-        }
-    ]
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "glue:*",
+      "Principal": {
+        "AWS": ["<OCEAN-NODE-INSTANCE-ROLE>"]
+      },
+      "Resource": [
+        "arn:aws:glue:<REGION>:<AWS ACCOUNT ID B>:database/*",
+        "arn:aws:glue:<REGION>:<AWS ACCOUNT ID B>:catalog",
+        "arn:aws:glue:<REGION>:<AWS ACCOUNT ID B>:table/*/*"
+      ]
+    }
+  ]
 }
 ```
 
@@ -81,18 +81,18 @@ Then in the AWS console in account A, create the following IAM policy:
 
 ```json
 {
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Effect": "Allow",
-            "Action": "glue:*",
-            "Resource": [
-                "arn:aws:glue:<REGION>:<AWS ACCOUNT ID B>:database/*",                                                     
-                "arn:aws:glue:<REGION>:<AWS ACCOUNT ID B>:catalog",
-                "arn:aws:glue:<REGION>:<AWS ACCOUNT ID B>:table/*/*"
-            ]
-        }
-    ]
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "glue:*",
+      "Resource": [
+        "arn:aws:glue:<REGION>:<AWS ACCOUNT ID B>:database/*",
+        "arn:aws:glue:<REGION>:<AWS ACCOUNT ID B>:catalog",
+        "arn:aws:glue:<REGION>:<AWS ACCOUNT ID B>:table/*/*"
+      ]
+    }
+  ]
 }
 ```
 

@@ -2,14 +2,14 @@
 
 OceanCD provides support for the Headers-based Traffic feature using Istio Traffic Manager that enables to send all of your traffic during any phase of your Canary rollouts to an http request header value.
 
-The feature works in a similar manner for both subset and host levels.  
+The feature works in a similar manner for both subset and host levels.
 
 You can set the Headers-based Traffic feature while using Ocean CD according to the following tutorial.
 
 **OceanCD’s tutorial uses a Subset Level Istio Traffic.**
 
 1. Make sure to configure the relevant YAML services as part of your rolloutSpec and apply them accordingly into your cluster.  
-These include: DestinationRule, Stable Service, Gateway & Virtual Service YAMLs.
+   These include: DestinationRule, Stable Service, Gateway & Virtual Service YAMLs.
 
 **Note: Templates can be found in Spot's [GitHub repository](https://github.com/spotinst/spot-oceancd-releases/tree/main/examples/features/headers_based_traffic).**
 
@@ -47,20 +47,19 @@ kind: Strategy
 
 A detailed explanation of all of the above parameters can be found in Spot's [API documentation](https://docs.spot.io/api/#tag/Ocean-CD/operation/OceanCDStrategyCreate).
 
-**Rules of the behavior of the headers**:  
+**Rules of the behavior of the headers**:
 
-* Any header that was set as a part of any phase, will remain running until the end of the rollout. Headers can not be deleted throughout the rollout, they need to be part of consecutive phases.  
-* There is no limitation to the amount of headers you can add along the way.
-* There is no limitation to the number of Matches per HeaderRoute.
-* Each headerValue must include one of the following options: exact, prefix, regex.
+- Any header that was set as a part of any phase, will remain running until the end of the rollout. Headers can not be deleted throughout the rollout, they need to be part of consecutive phases.
+- There is no limitation to the amount of headers you can add along the way.
+- There is no limitation to the number of Matches per HeaderRoute.
+- Each headerValue must include one of the following options: exact, prefix, regex.
 
 3. Create the OceanCD remaining entities: RolloutSpec, Verification Template & Verification Providers.
-4. Trigger a rollout. With the detailed rollout you can see the amount of headers set per phase as well as their details when clicking on the rollout details button.  
+4. Trigger a rollout. With the detailed rollout you can see the amount of headers set per phase as well as their details when clicking on the rollout details button.
 
 <img src="/ocean-cd/_media/headers-1.png" />
 
-**Note**: Headers can not be configured using the console. Use Spot's API to set the strategy accordingly.  
-
+**Note**: Headers can not be configured using the console. Use Spot's API to set the strategy accordingly.
 
 ## What's Next?
 

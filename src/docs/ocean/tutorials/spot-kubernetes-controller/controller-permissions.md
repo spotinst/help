@@ -39,109 +39,124 @@ rules:
   # ----------------------------------------------------------------------------
   # Required for functional operation (read-only).
   # ----------------------------------------------------------------------------
-- apiGroups: [""]
-  resources: ["pods", "nodes", "services", "namespaces", "replicationcontrollers", "limitranges", "events", "persistentvolumes", "persistentvolumeclaims"]
-  verbs: ["get", "list"]
-- apiGroups: ["apps"]
-  resources: ["deployments", "daemonsets", "statefulsets", "replicasets"]
-  verbs: ["get","list"]
-- apiGroups: ["storage.k8s.io"]
-  resources: ["storageclasses"]
-  verbs: ["get", "list"]
-- apiGroups: ["batch"]
-  resources: ["jobs"]
-  verbs: ["get", "list"]
-- apiGroups: ["extensions"]
-  resources: ["replicasets", "daemonsets"]
-  verbs: ["get","list"]
-- apiGroups: ["policy"]
-  resources: ["poddisruptionbudgets"]
-  verbs: ["get", "list"]
-- apiGroups: ["metrics.k8s.io"]
-  resources: ["pods"]
-  verbs: ["get", "list"]
-- apiGroups: ["autoscaling"]
-  resources: ["horizontalpodautoscalers"]
-  verbs: ["get", "list"]
-- nonResourceURLs: ["/version/", "/version"]
-  verbs: ["get"]
-- apiGroups: ["apiextensions.k8s.io"]
-  resources: ["customresourcedefinitions"]
-  verbs: ["list", "get"]
-  # ----------------------------------------------------------------------------
-  # Required by the draining feature and for functional operation.
-  # ----------------------------------------------------------------------------
-- apiGroups: [""]
-  resources: ["nodes"]
-  verbs: ["patch", "update"]
-- apiGroups: [""]
-  resources: ["pods"]
-  verbs: ["delete"]
-- apiGroups: [""]
-  resources: ["pods/eviction"]
-  verbs: ["create"]
-  # ----------------------------------------------------------------------------
-  # Required by the Spotinst CleanUp feature.
-  # ----------------------------------------------------------------------------
-- apiGroups: [""]
-  resources: ["nodes"]
-  verbs: ["delete"]
-  # ----------------------------------------------------------------------------
-  # Required by the Spotinst CSR Approval feature.
-  # ----------------------------------------------------------------------------
-- apiGroups: ["certificates.k8s.io"]
-  resources: ["certificatesigningrequests"]
-  verbs: ["get", "list", "delete", "create"]
-- apiGroups: ["certificates.k8s.io"]
-  resources: ["certificatesigningrequests/approval"]
-  verbs: ["patch", "update"]
-- apiGroups: ["certificates.k8s.io"]
-  resources: ["signers"]
-  resourceNames: ["kubernetes.io/kubelet-serving", "kubernetes.io/kube-apiserver-client-kubelet"]
-  verbs: ["approve"]
-  # ----------------------------------------------------------------------------
-  # Required by the Spotinst Auto Update feature.
-  # ----------------------------------------------------------------------------
-- apiGroups: ["rbac.authorization.k8s.io"]
-  resources: ["clusterroles"]
-  resourceNames: ["spotinst-kubernetes-cluster-controller"]
-  verbs: ["patch", "update", "escalate"]
-- apiGroups: ["apps"]
-  resources: ["deployments"]
-  resourceNames: ["spotinst-kubernetes-cluster-controller"]
-  verbs: ["patch","update"]
-  # ----------------------------------------------------------------------------
-  # Required by the Spotinst Apply feature.
-  # ----------------------------------------------------------------------------
-- apiGroups: ["apps"]
-  resources: ["deployments", "daemonsets"]
-  verbs: ["get", "list", "patch","update","create","delete"]
-- apiGroups: ["extensions"]
-  resources: ["daemonsets"]
-  verbs: ["get", "list", "patch","update","create","delete"]
-- apiGroups: [""]
-  resources: ["pods"]
-  verbs: ["get", "list", "patch", "update", "create", "delete"]
-- apiGroups: ["batch"]
-  resources: ["jobs"]
-  verbs: ["get", "list", "patch","update","create","delete"]
-  # ----------------------------------------------------------------------------
-  # Required by the Spotinst Big Data feature
-  # ----------------------------------------------------------------------------
-- apiGroups: ["sparkoperator.k8s.io"]
-  resources: ["sparkapplications", "scheduledsparkapplications"]
-  verbs: ["get", "list", "create", "patch", "delete"]
-- apiGroups: ["bigdata.spot.io"]
-  resources: ["bigdataenvironments"]
-  verbs: ["get", "list", "create", "patch", "delete"]
-  # ----------------------------------------------------------------------------
-  # Required by the Netwrok Cost anaysis feature
-  # Add to your controller RBAC permissions for any apiGroup and custom object
-  # resource belonging to the apiGroup
-  # ----------------------------------------------------------------------------
-- apiGroups: [YOUR_API_GROUP]
-  resources: [YOUR_CUSTOM_OBJECT_RESOURCE]
-  verbs: ["list", "get"]
+  - apiGroups: [""]
+    resources:
+      [
+        "pods",
+        "nodes",
+        "services",
+        "namespaces",
+        "replicationcontrollers",
+        "limitranges",
+        "events",
+        "persistentvolumes",
+        "persistentvolumeclaims",
+      ]
+    verbs: ["get", "list"]
+  - apiGroups: ["apps"]
+    resources: ["deployments", "daemonsets", "statefulsets", "replicasets"]
+    verbs: ["get", "list"]
+  - apiGroups: ["storage.k8s.io"]
+    resources: ["storageclasses"]
+    verbs: ["get", "list"]
+  - apiGroups: ["batch"]
+    resources: ["jobs"]
+    verbs: ["get", "list"]
+  - apiGroups: ["extensions"]
+    resources: ["replicasets", "daemonsets"]
+    verbs: ["get", "list"]
+  - apiGroups: ["policy"]
+    resources: ["poddisruptionbudgets"]
+    verbs: ["get", "list"]
+  - apiGroups: ["metrics.k8s.io"]
+    resources: ["pods"]
+    verbs: ["get", "list"]
+  - apiGroups: ["autoscaling"]
+    resources: ["horizontalpodautoscalers"]
+    verbs: ["get", "list"]
+  - nonResourceURLs: ["/version/", "/version"]
+    verbs: ["get"]
+  - apiGroups: ["apiextensions.k8s.io"]
+    resources: ["customresourcedefinitions"]
+    verbs: ["list", "get"]
+    # ----------------------------------------------------------------------------
+    # Required by the draining feature and for functional operation.
+    # ----------------------------------------------------------------------------
+  - apiGroups: [""]
+    resources: ["nodes"]
+    verbs: ["patch", "update"]
+  - apiGroups: [""]
+    resources: ["pods"]
+    verbs: ["delete"]
+  - apiGroups: [""]
+    resources: ["pods/eviction"]
+    verbs: ["create"]
+    # ----------------------------------------------------------------------------
+    # Required by the Spotinst CleanUp feature.
+    # ----------------------------------------------------------------------------
+  - apiGroups: [""]
+    resources: ["nodes"]
+    verbs: ["delete"]
+    # ----------------------------------------------------------------------------
+    # Required by the Spotinst CSR Approval feature.
+    # ----------------------------------------------------------------------------
+  - apiGroups: ["certificates.k8s.io"]
+    resources: ["certificatesigningrequests"]
+    verbs: ["get", "list", "delete", "create"]
+  - apiGroups: ["certificates.k8s.io"]
+    resources: ["certificatesigningrequests/approval"]
+    verbs: ["patch", "update"]
+  - apiGroups: ["certificates.k8s.io"]
+    resources: ["signers"]
+    resourceNames:
+      [
+        "kubernetes.io/kubelet-serving",
+        "kubernetes.io/kube-apiserver-client-kubelet",
+      ]
+    verbs: ["approve"]
+    # ----------------------------------------------------------------------------
+    # Required by the Spotinst Auto Update feature.
+    # ----------------------------------------------------------------------------
+  - apiGroups: ["rbac.authorization.k8s.io"]
+    resources: ["clusterroles"]
+    resourceNames: ["spotinst-kubernetes-cluster-controller"]
+    verbs: ["patch", "update", "escalate"]
+  - apiGroups: ["apps"]
+    resources: ["deployments"]
+    resourceNames: ["spotinst-kubernetes-cluster-controller"]
+    verbs: ["patch", "update"]
+    # ----------------------------------------------------------------------------
+    # Required by the Spotinst Apply feature.
+    # ----------------------------------------------------------------------------
+  - apiGroups: ["apps"]
+    resources: ["deployments", "daemonsets"]
+    verbs: ["get", "list", "patch", "update", "create", "delete"]
+  - apiGroups: ["extensions"]
+    resources: ["daemonsets"]
+    verbs: ["get", "list", "patch", "update", "create", "delete"]
+  - apiGroups: [""]
+    resources: ["pods"]
+    verbs: ["get", "list", "patch", "update", "create", "delete"]
+  - apiGroups: ["batch"]
+    resources: ["jobs"]
+    verbs: ["get", "list", "patch", "update", "create", "delete"]
+    # ----------------------------------------------------------------------------
+    # Required by the Spotinst Big Data feature
+    # ----------------------------------------------------------------------------
+  - apiGroups: ["sparkoperator.k8s.io"]
+    resources: ["sparkapplications", "scheduledsparkapplications"]
+    verbs: ["get", "list", "create", "patch", "delete"]
+  - apiGroups: ["bigdata.spot.io"]
+    resources: ["bigdataenvironments"]
+    verbs: ["get", "list", "create", "patch", "delete"]
+    # ----------------------------------------------------------------------------
+    # Required by the Netwrok Cost anaysis feature
+    # Add to your controller RBAC permissions for any apiGroup and custom object
+    # resource belonging to the apiGroup
+    # ----------------------------------------------------------------------------
+  - apiGroups: [YOUR_API_GROUP]
+    resources: [YOUR_CUSTOM_OBJECT_RESOURCE]
+    verbs: ["list", "get"]
 ---
 ```
 
@@ -188,9 +203,9 @@ roleRef:
   kind: ClusterRole
   name: spotinst-kubernetes-cluster-controller
 subjects:
-- kind: ServiceAccount
-  name: spotinst-kubernetes-cluster-controller
-  namespace: kube-system
+  - kind: ServiceAccount
+    name: spotinst-kubernetes-cluster-controller
+    namespace: kube-system
 ---
 ```
 

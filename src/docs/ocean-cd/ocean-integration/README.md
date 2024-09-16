@@ -6,7 +6,7 @@ You can also use Ocean CD independently of Ocean.
 
 ## Update Ocean Controller’s Permission
 
-To integrate Ocean and Ocean CD, the cluster’s owner needs to change its controller’s permissions in the following manner:  
+To integrate Ocean and Ocean CD, the cluster’s owner needs to change its controller’s permissions in the following manner:
 
 1. Run the following command:
 
@@ -27,7 +27,7 @@ kubectl edit clusterrole spotinst-kubernetes-cluster-controller
   - list
 ```
 
-3. Restart your controller using the following command:  
+3. Restart your controller using the following command:
 
 ```
 kubectl rollout restart deployment spotinst-kubernetes-cluster-controller -n kube-system
@@ -35,4 +35,4 @@ kubectl rollout restart deployment spotinst-kubernetes-cluster-controller -n kub
 
 ## What’s Next?
 
-Learn how to view your [detailed rollouts](ocean-cd/tutorials/view-rollouts/detailed-rollout).  
+Learn how to view your [detailed rollouts](ocean-cd/tutorials/view-rollouts/detailed-rollout).

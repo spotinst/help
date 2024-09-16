@@ -1,21 +1,21 @@
 # Create Spot Deployment
 
-SpotDeployment is the Ocean CD custom resource (CRD) that provides advanced deployment capabilities of workloads in Kubernetes.  
+SpotDeployment is the Ocean CD custom resource (CRD) that provides advanced deployment capabilities of workloads in Kubernetes.
 
 The SpotDeployment CRD replaces the standard Kubernetes deployment so Ocean CD can manage it using progressive deployment strategies.
 
 There are two ways of creating SpotDeployments:
 
-* Migrating a SpotDeployment from a Deployment YAML.
-* Creating a SpotDeployment from scratch.
+- Migrating a SpotDeployment from a Deployment YAML.
+- Creating a SpotDeployment from scratch.
 
 ## Option 1: Migrate your SpotDeployment
 
-In order to migrate a SpotDeployment complete the following steps:  
+In order to migrate a SpotDeployment complete the following steps:
 
-1. Copy the deployment.  
+1. Copy the deployment.
 
-2. Change the apiVersion and kind.  
+2. Change the apiVersion and kind.
 
 3. Apply your SpotDeployment using the command:
 
@@ -52,12 +52,12 @@ spec:
         app: nginx
     spec:
       containers:
-      - name: nginx
-        image: nginx:1.21.0
-        ports:
-        - containerPort: 8080
+        - name: nginx
+          image: nginx:1.21.0
+          ports:
+            - containerPort: 8080
 ```
 
 ## What’s Next?
 
-Learn how to [create Ocean CD entities](ocean-cd/getting-started/rollout-entities/).  
+Learn how to [create Ocean CD entities](ocean-cd/getting-started/rollout-entities/).

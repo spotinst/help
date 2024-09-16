@@ -39,8 +39,7 @@ Fill in general details including Cluster Name, Region, and the Key Pair used fo
 
 Provision the cluster resources using a CloudFormation template.
 
-1. Use existing VPC & Subnets. Mark this box to launch CloudFormation with your existing VPC & Subnets. Leave unchecked to launch within a new VPC that CloudFormation will create for you.
-   2. Click Launch CloudFormation Stack.
+1. Use existing VPC & Subnets. Mark this box to launch CloudFormation with your existing VPC & Subnets. Leave unchecked to launch within a new VPC that CloudFormation will create for you. 2. Click Launch CloudFormation Stack.
 
 <img src="/ocean/_media/new-eks-step3.png" />
 
@@ -58,7 +57,7 @@ Before you can continue to the next step, CloudFormation must complete creation 
 
 ![create-cluster-aws-step-4](https://github.com/user-attachments/assets/f7b16531-a09a-400d-96bb-cb7382cfce7b)
 
-2. To install the controller on the EKS cluster, run the predefined [script](https://docs.spot.io/ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-install?id=install-via-script) from your command line. 
+2. To install the controller on the EKS cluster, run the predefined [script](https://docs.spot.io/ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-install?id=install-via-script) from your command line.
 
 3. (Optional) To install the [Ocean Prometheus Exporter](ocean/tools-and-integrations/prometheus/scrape), mark the checkbox. Validate that the [Configure Prometheus](ocean/tools-and-integrations/prometheus/) step is complete.
 
@@ -84,6 +83,6 @@ If you receive the error "aws-iam-authenticator": executable file not found in \
 You can list your cluster nodes with the following command:
 `kubectl get nodes`.
 
-##   Related Topics
+## Related Topics
 
 - Learn more about [eksctl](https://github.com/spotinst/weaveworks-eksctl).

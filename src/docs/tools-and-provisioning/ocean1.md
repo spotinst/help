@@ -10,7 +10,7 @@ Read about [Kubernetes](https://docs.spot.io/ocean/overview-kubernetes)
 
 <img src="/tools-and-provisioning/_media/Jenkins_1.png" />
 
-----
+---
 
 <img src="/_media/images/slack.png" />
 
@@ -27,13 +27,13 @@ Paragraph Paragraph Paragraph
    2. Indented item
 4. Fourth item
 
-| Default aligned | Left aligned | Center aligned  |
-|-----------------|:-------------|:---------------:|
-| First body part | Second cell  | Third cell      |
-| Second line     | foo          | **strong**      |
-| Third line      | quux         | baz             |
-|-----------------|--------------|-----------------|
-| Second body     |              |                 |               
-| 2nd line        |              |                 |   
-|-----------------|--------------|-----------------|
-| Third body      |              |                 |
+| Default aligned   | Left aligned   |  Center aligned   |
+| ----------------- | :------------- | :---------------: |
+| First body part   | Second cell    |    Third cell     |
+| Second line       | foo            |    **strong**     |
+| Third line        | quux           |        baz        |
+| ----------------- | -------------- | ----------------- |
+| Second body       |                |                   |
+| 2nd line          |                |                   |
+| ----------------- | -------------- | ----------------- |
+| Third body        |                |                   |

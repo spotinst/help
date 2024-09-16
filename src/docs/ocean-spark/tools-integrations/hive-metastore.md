@@ -2,7 +2,6 @@
 
 Configuring a Hive Metastore makes your table metadata persistent across your Apache Spark applications and enables the sharing of Spark tables across multiple Spark infrastructures.
 
-
 We recommend the Hive local mode in which the Spark driver of your application communicates directly to a remote database, as it is easy to set up and does not require any maintenance.
 
 The first section below explains how to create a Hive Metastore database. If you already have one, you can skip to the next section, Connect to a Hive Metastore.
@@ -10,6 +9,7 @@ The first section below explains how to create a Hive Metastore database. If you
 ## Create a Hive Metastore database
 
 To create a Hive Metastore database, complete the following procedures:
+
 1. Create a database service
 2. Configure Connectivity
 3. Create the database
@@ -51,6 +51,7 @@ You can create the Hive database directly in SQL or through the UI by using a da
 
 The last step to prepare the Hive metastore is to create the Hive schema.
 Retrieve the following SQL scripts:
+
 - [Hive Schema](https://github.com/apache/hive/blob/rel/release-2.3.4/metastore/scripts/upgrade/postgres/hive-schema-2.3.0.postgres.sql)
 - [Hive Transactional Schema](https://github.com/apache/hive/blob/rel/release-2.3.4/metastore/scripts/upgrade/postgres/hive-txn-schema-2.3.0.postgres.sql)
 
@@ -63,6 +64,7 @@ Hive version 2.3 is the Spark default. Unless you have specific constraints, you
 ## Connect to a Hive Metastore database
 
 To connect to a Hive Metastore database, complete the following procedures:
+
 1. Add the JDBC Driver JAR file
 2. Configure your Spark applications to connect to the metastore
 
@@ -91,7 +93,7 @@ The JAR will then be downloaded at runtime when each Spark application starts:
       "https://repo1.maven.org/maven2/org/postgresql/postgresql/42.2.20/postgresql-42.2.20.jar"
     ]
   }
-  ```
+```
 
 For a complete reference on template attributes see the Spot [API reference](https://docs.spot.io/api/#operation/OceanSparkClusterApplicationSubmit).
 
@@ -113,7 +115,7 @@ Define or modify a configuration template to include the following flags:
     "spark.hadoop.javax.jdo.option.ConnectionDriverName": "org.postgresql.Driver",
     "spark.hadoop.hive.metastore.warehouse.dir": "... Accessible Cloud Storage ..."
   }
-  ```
+```
 
 Additionally if you use an older version of Hive, you can add:
 
@@ -168,9 +170,10 @@ Alternatively, you can define the hive-site.xml file as a Kubernetes secret and 
 
 To do this, you will need [kubectl](https://kubernetes.io/docs/tasks/tools/) access to your cluster. Write the desired hive-site.xml file locally, and then run the following command:
 
-``` kubectl create secret generic <your-secret-name> --from-file=/path/to/hive-site.xml -n spark-apps ```
+`kubectl create secret generic <your-secret-name> --from-file=/path/to/hive-site.xml -n spark-apps`
 
 You should then make a few edits to your Spark application configurations:
+
 1. Add a `volumes` key with a reference to the Kubernetes secret you created and a name
 2. Add a `volumeMounts` section to your driver and executor configurations. Its `name` field references the volume name defined above, while the mountPath tells Kubernetes where to mount the file.
 3. Do not forget to set the HADOOP_CONF_DIR environment variable so Spark knows to look for the hive-site.xml file at the right location.

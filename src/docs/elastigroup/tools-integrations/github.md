@@ -6,17 +6,17 @@ Scale and manage your GitHub workflow jobs by hosting your GitHub runners in Ela
 
 ## Prerequisites
 
-* Connect your AWS account to Spot. Refer to the following link for details: https://docs.spot.io/connect-your-cloud-provider/first-account/
-* Spot Connect in private preview mode. You can enable it in your account by contacting your sales representative or by contacting the Spot support team at support@spot.io.
-* Integrate Spot Connect with your Spot Elastigroup account that hosts the GitHub runners by creating an API token in the Spot console with a minimum of Elastigroup create and update permissions.
+- Connect your AWS account to Spot. Refer to the following link for details: https://docs.spot.io/connect-your-cloud-provider/first-account/
+- Spot Connect in private preview mode. You can enable it in your account by contacting your sales representative or by contacting the Spot support team at support@spot.io.
+- Integrate Spot Connect with your Spot Elastigroup account that hosts the GitHub runners by creating an API token in the Spot console with a minimum of Elastigroup create and update permissions.
 
 ## Step 1: Add Spot Services to Spot Connect
 
-The following procedure describes how to add the Spot integrations to Spot Connect.  
+The following procedure describes how to add the Spot integrations to Spot Connect.
 
 1. In the left main menu in the Spot console, click **Connect** and click **Settings**.
 
-<img src="/elastigroup/_media/elast-spot-connect-github-1.png" />  
+<img src="/elastigroup/_media/elast-spot-connect-github-1.png" />
 
 2. Under the Cloud Services tab, select **Spot by NetApp** and click **Add Authorization**.
 
@@ -28,7 +28,7 @@ The following procedure describes how to add the Spot integrations to Spot Conne
 
 The following procedure describes how to configure the GitHub integration in Spot Connect.
 
-1. In the left main menu in the Spot console, click **Connect** and click **Settings**.   
+1. In the left main menu in the Spot console, click **Connect** and click **Settings**.
 2. In the Integrations section, select **GitHub/Bitbucket Cloud** and click **Add Integration**.
 
 <img src="/elastigroup/_media/elast-spot-connect-github-3.png" />
@@ -42,7 +42,7 @@ Create an API Key in Spot Connect that GitHub Webhook uses to trigger the scale 
 
 1. In the left main menu in the Spot console, click **Connect** and click **Settings**.
 2. In the Resources section, select **API Keys** and in the top right click **+ Add New**.
-3. Create and note down the API Key.  
+3. Create and note down the API Key.
 
 ## Step 4: Configure Elastigroup
 
@@ -51,9 +51,9 @@ Elastigroup hosts your GitHub runners. After you create an access token in GitHu
 An example of a user data template that installs and configures the latest x86 based Linux GitHub runner:
 
 ```
-#!/bin/bash  
+#!/bin/bash
 
-# GitHub credentials  
+# GitHub credentials
 
 github_user=<Your GitHub User>
 
@@ -61,27 +61,27 @@ github_repo=<Your GitHub Repository>
 
 PAT=<Your GitHub Token>
 
-# Download jq for extracting the Token  
+# Download jq for extracting the Token
 
-yum install jq -y  
+yum install jq -y
 
-# Create and move to the working directory  
+# Create and move to the working directory
 
-mkdir /actions-runner && cd /actions-runner  
+mkdir /actions-runner && cd /actions-runner
 
 # Download the latest runner package
 
 curl -o actions-runner-linux-x64-2.304.0.tar.gz -L https://github.com/actions/runner/releases/download/v2.304.0/actions-runner-linux-x64-2.304.0.tar.gz
 
-# Extract the installer  
+# Extract the installer
 
 tar xzf ./actions-runner-linux-x64-2.304.0.tar.gz
 
-# Change the owner of the directory to ec2-user  
+# Change the owner of the directory to ec2-user
 
-chown ec2-user -R /actions-runner  
+chown ec2-user -R /actions-runner
 
-# Get instance id to set it as a runner name  
+# Get instance id to set it as a runner name
 
 MetadataToken=`curl -X PUT "http://169.254.169.254/latest/api/token" -H "X-aws-ec2-metadata-token-ttl-seconds: 21600"`
 
@@ -89,19 +89,19 @@ instance_id=$(curl -H "X-aws-ec2-metadata-token: $MetadataToken" http://169.254.
 
 echo "$instance_id"
 
-# Get the runner's token  
+# Get the runner's token
 
-token=$(curl -s -XPOST -H "authorization: token $PAT" https://api.github.com/repos/$github_user/$github_repo/actions/runners/registration-token | jq -r .token)  
+token=$(curl -s -XPOST -H "authorization: token $PAT" https://api.github.com/repos/$github_user/$github_repo/actions/runners/registration-token | jq -r .token)
 
-# Create the runner and start the configuration experience  
+# Create the runner and start the configuration experience
 
 sudo -u ec2-user ./config.sh --url https://github.com/${github_user}/${github_repo} --token $token --name "${instance_id}" --labels spot --unattended
 
-# Create the runner's service  
+# Create the runner's service
 
-./svc.sh install  
+./svc.sh install
 
-# Start the service  
+# Start the service
 
 ./svc.sh start
 ```
@@ -114,15 +114,15 @@ You can find more information on how to create and manage Elastigroup [here](htt
 
 Create the Elastigroup from the following [provisioning tools](https://docs.spot.io/tools-and-provisioning/) of your choice and note down the Elastigroup Id (sig-...):
 
-* The Spot Console
-* The Spot API
-* Terraform
-* CFN
-* SDK
+- The Spot Console
+- The Spot API
+- Terraform
+- CFN
+- SDK
 
 ### Configure Spot Connect Scale Up Template
 
-You can configure the Generic Webhook by duplicating the scale up template.  
+You can configure the Generic Webhook by duplicating the scale up template.
 
 1. In the left main menu in the Spot console, click **Connect** and click **Workflows**.
 
@@ -132,7 +132,7 @@ You can configure the Generic Webhook by duplicating the scale up template.
 3. Click **Duplicate**.
 4. Click the Generic Webhook resource and select the Spot Connect API Key created in Step 3 as the Webhook API Key Name. Note down the generated Webhook API key value and URL.
 
-<img src="/elastigroup/_media/elast-spot-connect-github-5.png" />  
+<img src="/elastigroup/_media/elast-spot-connect-github-5.png" />
 
 5. To configure the GitHub webhook, refer to the [GitHub repository settings](https://docs.github.com/en/webhooks-and-events/webhooks/creating-webhooks) where the workflow and runners will be hosted in.
 
@@ -151,8 +151,8 @@ https://api.connect.fylamynt.com/api/webhooks/run_workflow/webhook/KBMfw0ISfXPCg
 
 7. Add the GitHub Token in Query Job Status resource. You can use:
 
-* the GitHub token you already created **or**
-* create an access token with a minimum of the repo scope.
+- the GitHub token you already created **or**
+- create an access token with a minimum of the repo scope.
 
 <img src="/elastigroup/_media/elast-spot-connect-github-8.png" />
 
@@ -162,20 +162,20 @@ Configure the GitHub Filter Runners resource by selecting the GitHub repository 
 
 <img src="/elastigroup/_media/elast-spot-connect-github-9.png" />
 
-1. Click the Github Filter Runners action node.  
-2. Ensure the Busy filter is set as `false` and the Status filter is set as `online`.  
+1. Click the Github Filter Runners action node.
+2. Ensure the Busy filter is set as `false` and the Status filter is set as `online`.
 3. Match the Specify labels in the GitHub Filter Runners with the workflow jobs and the user data. In this guide, the Workflow Jobs use the custom spot label and the inbuilt `self-hosted` label.
-The GitHub resource ensures that the scale-up is triggered only if there are no idle instances alive that match the labels required by Workflow Jobs. This results in avoiding any unnecessary scale-ups.
+   The GitHub resource ensures that the scale-up is triggered only if there are no idle instances alive that match the labels required by Workflow Jobs. This results in avoiding any unnecessary scale-ups.
 4. Configure the Spot Elastigroup AWS resource by selecting Spot Instance configured in Step 1. Select the Spot Account and Elastigroup ID you created in Step 4.
-The Spot Operation must be kept as Scale Up in the Spot Operation field with an adjustment of one instance at a time.
+   The Spot Operation must be kept as Scale Up in the Spot Operation field with an adjustment of one instance at a time.
 
 <img src="/elastigroup/_media/elast-spot-connect-github-10.png" />
 
-### Configure Spot Connect Scale Down Template  
+### Configure Spot Connect Scale Down Template
 
 1. In the left main menu in the Spot console, click **Connect** and click **Workflows**.
 2. Under the Templates tab, select the **Spot Elastigroup Remove All Idle GitHub Runners** template and Click **Duplicate**.
-3. Configure the GitHub Filter Runners resource and select the GitHub repository configured in Step 2, make sure the Busy filter is set to `false` and the Status filter is set to `online`.  
+3. Configure the GitHub Filter Runners resource and select the GitHub repository configured in Step 2, make sure the Busy filter is set to `false` and the Status filter is set to `online`.
 4. Add the Specify labels required by the GitHub workflow jobs. The resource discovers any idle instances matching the labels specified.
 
 <img src="/elastigroup/_media/elast-spot-connect-github-11.png" />

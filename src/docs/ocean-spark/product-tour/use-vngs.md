@@ -3,6 +3,7 @@
 Ocean for Apache Spark (also referred to as Ocean Spark) is built on top of [Ocean](ocean/), the engine automating cloud infrastructure management for containers. As a result, when Ocean Spark customers run Spark applications, they benefit from all the features of Ocean at no additional cost. For example, your Ocean Spark cluster is also visible from the Ocean user interface, giving you visibility over its nodes, pods, and cloud provider costs in real time.
 
 You can use the same cluster to run both Spark and non-Spark workloads. In this situation:
+
 - The Spark workloads will benefit from the features of Ocean Spark and will be charged a fee according to the Ocean Spark pricing, and nothing else.
 - The non-Spark workloads will benefit from the features of Ocean only and will be charged a fee according to the Ocean pricing, and nothing else.
 
@@ -29,6 +30,7 @@ Additional VNGs can be created in the console, using Terraform, or using the Spo
 ## VNG Applications
 
 VNGs are a powerful abstraction, you can use them to:
+
 - Control the instance profile (IAM role) or service account. This is a convenient way to give your Spark applications access to the data they need.
 - Define headroom and reduce your Spark application startup time.
 - Control scaling by setting minimum and maximum sizes on a VNG, restricting the list of allowed instance types, or setting the percentage of nodes that can be scaled down in a single operation (we recommend 100% for fast scale down).

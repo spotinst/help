@@ -15,7 +15,7 @@ The Cost Analysis tab opens and shows the cluster name at the top. A graph of Sp
 
 ## Spark App Cost over Time
 
-The top part of the cost analysis page is a bar chart showing your Spark application usage metrics on the cluster over time.  
+The top part of the cost analysis page is a bar chart showing your Spark application usage metrics on the cluster over time.
 
 Cloud compute costs, Core Hours, and App Hours are the usage metrics presented. The metrics are calculated for each Spark application that runs on the cluster. Cloud compute costs correspond to your cloud provider bill, while the Core Hours and App Hours metrics can influence your Ocean Spark service fee. These metrics are then aggregated per day, based on the timestamp (in UTC time zone) at which the application finished running in your cloud account.
 
@@ -24,6 +24,7 @@ Cloud compute costs, Core Hours, and App Hours are the usage metrics presented. 
 ### Filtering and Grouping
 
 You can adjust your view of the data by setting the following parameters:
+
 - Filter by: Set the time range for displaying data in the chart.
 
 <img src="/ocean-spark/_media/tutorial-wave-cost-analysis-02a-1.png" width="300" />
@@ -34,13 +35,14 @@ You can adjust your view of the data by setting the following parameters:
 
 ### Narrow down Information in the Chart
 
-Each bar shows the total cost of the cluster for that time increment and is broken down to show the cost of each job or user in the cluster.  
+Each bar shows the total cost of the cluster for that time increment and is broken down to show the cost of each job or user in the cluster.
+
 - You can include or exclude jobs or users from the display by clicking on the names in the key above the bars.
 - To see a subtotal for a particular job or user, click on its color in a bar.
 
 ## Cloud Cost View
 
-*Cloud cost* is defined as the sum of compute (instances) and storage (volumes) costs incurred by running your Spark application in your cloud account. This information is estimated by Spot based on the cloud provider billing data, and based on your application resource requirements. You can also find similar information in the Ocean console.
+_Cloud cost_ is defined as the sum of compute (instances) and storage (volumes) costs incurred by running your Spark application in your cloud account. This information is estimated by Spot based on the cloud provider billing data, and based on your application resource requirements. You can also find similar information in the Ocean console.
 
 Cloud Cost is the default view (as shown in the example [above](ocean-spark/product-tour/analyze-costs?id=get-started)). Each bar in this chart shows the cost broken down into jobs. Each color in the bar represents a job. You can hover your mouse over the different colors in a bar to see information about each job.
 
@@ -50,14 +52,15 @@ Cloud Cost is the default view (as shown in the example [above](ocean-spark/prod
 
 ## Core Hours View
 
-Your Spark applications define the number of cores allocated to the driver pod and the number of cores allocated to each executor pod. The *core hours* used by an application correspond to the sum over each of these pods of the uptime duration of the pod multiplied by the number of cores allocated to it.
+Your Spark applications define the number of cores allocated to the driver pod and the number of cores allocated to each executor pod. The _core hours_ used by an application correspond to the sum over each of these pods of the uptime duration of the pod multiplied by the number of cores allocated to it.
 
 Sample calculation:
+
 - A driver pod with one core runs for 30 minutes
 - An executor pod with four cores runs for 30 minutes
 - A second executor pod with four cores runs for 10 minutes and 15 seconds
 
-This application used 1 * 30/60 + 4 * 30/60 + 4 * 615 / 3600 = 3.18 core hours.
+This application used 1 _ 30/60 + 4 _ 30/60 + 4 \* 615 / 3600 = 3.18 core hours.
 
 In the Core Hours view, each bar shows the total number of core hours, and the different colors show the breakdown of core hours used by each job.
 
@@ -65,7 +68,7 @@ In the Core Hours view, each bar shows the total number of core hours, and the d
 
 ## App Hours View
 
-The *App Hours* metric is defined as the sum of the runtime durations of your application, where the runtime duration corresponds to the difference between the application’s completion time, and the time when the application entered the Running state (meaning the Spark driver has started running).
+The _App Hours_ metric is defined as the sum of the runtime durations of your application, where the runtime duration corresponds to the difference between the application’s completion time, and the time when the application entered the Running state (meaning the Spark driver has started running).
 
 In the App Hours view, each bar shows the total number of application hours, and the different colors show the breakdown of core hours used by each application.
 
@@ -110,7 +113,7 @@ Here is an example configuration which you can insert in your configuration temp
   "labels": {
     "team": "data-engineering",
     "project": "etl",
-    "environment": "production",
+    "environment": "production"
   }
 }
 ```

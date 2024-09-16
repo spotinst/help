@@ -132,5 +132,3 @@ After you have created the roll, click the Cluster Roll tab.
 In this tab you can see the details of the roll you created in Step 1, and you can follow the progress of the roll.
 
 <img src="/ocean/_media/features-roll-03.png" />
-
-

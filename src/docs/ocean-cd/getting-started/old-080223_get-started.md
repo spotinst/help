@@ -10,10 +10,10 @@ If you do not want to use the console, you can [install the Operator using the A
 
 ### Prerequisites
 
-* A Kubernetes cluster running in AWS, Azure or GCP
-* OLM installation
-* Permissions from your CI tool to deploy new deployments into your clusters
-* If you use permission lists or tools such as OPA, allow all of the images Ocean CD uses
+- A Kubernetes cluster running in AWS, Azure or GCP
+- OLM installation
+- Permissions from your CI tool to deploy new deployments into your clusters
+- If you use permission lists or tools such as OPA, allow all of the images Ocean CD uses
 
 ## Get Started
 
@@ -31,13 +31,13 @@ When the Add Cluster window opens, complete the procedure below.
 
 <img src="/ocean-cd/_media/getting-started-n02a.png" width="440" />
 
-Complete the information below:  
+Complete the information below:
 
 - Cluster Identifier: Your cluster ID must be unique, have up to 30 alphanumeric characters, and not contain spaces. It does not need to be related to the Ocean cluster ID (o-xxxxxx). Ocean CD can run on clusters that are not managed by Ocean.
 
 - [Argo Rollout Installation](ocean-cd/?id=argo-rollouts-as-an-engine): Ocean CD dynamically generates and manages Argo rollout manifests. In the dropdown, indicate that you already have Argo installed in your cluster by choosing the option that applies to you.
 
-- Click Download YAML. A YAML file is downloaded to your computer, and a new row appears in the Clusters list. Then, apply the YAML in your Kubernetes cluster.  
+- Click Download YAML. A YAML file is downloaded to your computer, and a new row appears in the Clusters list. Then, apply the YAML in your Kubernetes cluster.
 
 <img src="/ocean-cd/_media/getting-started-n03.png" />
 
@@ -53,7 +53,7 @@ When the Add Cluster popup appears, complete the procedure below.
 
 1. Click HELM and complete the information below:
 
-- Cluster Identifier: Your cluster ID must be unique, have up to 30 alphanumeric characters, and not contain spaces. It is not coupled to the Ocean cluster ID (o-xxxxxx). Ocean CD can run on clusters that are not managed by Ocean.  
+- Cluster Identifier: Your cluster ID must be unique, have up to 30 alphanumeric characters, and not contain spaces. It is not coupled to the Ocean cluster ID (o-xxxxxx). Ocean CD can run on clusters that are not managed by Ocean.
 
 - Token: The API Spot Token pre-generated via our console. If you do not have one, you may click on the generate button above the field. The API is saved as a personal token by Ocean CD.
 
@@ -65,7 +65,7 @@ When the Add Cluster popup appears, complete the procedure below.
 
 <img src="/ocean-cd/_media/getting-started-n042.png" width="440" />
 
-#### Template Not Supported  
+#### Template Not Supported
 
 Installation with a Helm template is not supported. Ocean CD enables you to run the commands pre-configured into your cluster or to download the values.yaml file where you can add additional requirements. In addition, the values.yaml file will accept any secret.yaml of yours instead of a hard-coded token.
 
@@ -122,5 +122,6 @@ Migrate your workload by completing the steps below. When you click Create, Ocea
 4. Add changes to your SpotDeployment container spec and apply. A new rollout is created and triggered.
 
 ## What’s Next?
+
 - Learn about viewing the [list of rollouts](ocean-cd/tutorials/view-rollouts/) and the information provided in the [detailed rollout](ocean-cd/tutorials/view-rollouts/detailed-rollout) page.
 - Get going fast with the [end-to-end setup](ocean-cd/getting-started/end-to-end).

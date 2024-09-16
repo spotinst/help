@@ -6,16 +6,16 @@ Before diving into these topics, it is important to realize that the final confi
 
 ### Source #1: Config Overrides (Highest precedence)
 
-This is an application-specific configuration that you specify directly in your [API request](https://docs.spot.io/api/#operation/OceanSparkClusterApplicationSubmit). 
+This is an application-specific configuration that you specify directly in your [API request](https://docs.spot.io/api/#operation/OceanSparkClusterApplicationSubmit).
 This source of configuration takes precedence over the other sources.
 
 ### Source #2: Job Configurations
 
 Configurations defined at the level of a job are automatically applied to the future executions of the job.
-In other words, applications inherit the configurations defined at the job level. 
+In other words, applications inherit the configurations defined at the job level.
 
 Job configurations are a handy way to define fields such as the `mainApplicationFile`, the file corresponding to your job. You can also insert specific configurations at this level to improve the performance of your jobs.
-For example, if a job requires a lot of memory, you may modify your job configuration to set the  `instanceAllowList` field to target specifically high-memory instances.
+For example, if a job requires a lot of memory, you may modify your job configuration to set the `instanceAllowList` field to target specifically high-memory instances.
 
 ### Source #3: Auto-tuning
 
@@ -133,7 +133,7 @@ To edit the configuration for a job from the Spot console, go to Ocean Spark in 
 
 <img src="/ocean-spark/_media/configure-jobs-01.png" />
 
-Job configurations have a higher precedence than configuration templates, but a lower precedence than config overrides. 
+Job configurations have a higher precedence than configuration templates, but a lower precedence than config overrides.
 
 ### Auto-tuning
 

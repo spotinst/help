@@ -27,22 +27,23 @@ docker run -d -p 8080:8080 -e FERNET_KEY=`openssl rand -base64 32` \
 The Airflow UI is now available at http://localhost:8080/.
 Connect to the container with the following command:
 
-```docker exec -ti test-airflow /bin/bash```
+`docker exec -ti test-airflow /bin/bash`
 
 When you are finished with the tutorial, kill the docker image with this command:
 
-```docker kill test-airflow```
+`docker kill test-airflow`
 
 ## Install the Ocean Spark Airflow Provider
+
 ### Docker Sandbox
 
-If you use the Docker sandbox, run all the commands in this section from within the Docker container.  Connect to it with the following command:
+If you use the Docker sandbox, run all the commands in this section from within the Docker container. Connect to it with the following command:
 
-```docker exec -ti test-airflow /bin/bash```
+`docker exec -ti test-airflow /bin/bash`
 
-Install the  Ocean Spark [Airflow Provider](https://pypi.org/project/ocean-spark-airflow-provider/) using pip:
+Install the Ocean Spark [Airflow Provider](https://pypi.org/project/ocean-spark-airflow-provider/) using pip:
 
-```pip install ocean-spark-airflow-provider```
+`pip install ocean-spark-airflow-provider`
 
 Configure a connection to Ocean Spark in Airflow:
 
@@ -93,15 +94,17 @@ Your Ocean Spark cluster ID is visible in the Clusters list in the Spot console 
 
 The Airflow UI is available at http://localhost:8080/.
 
-####  Airflow 2
+#### Airflow 2
 
 You can also configure the connection using the Airflow UI.
+
 1. Go to Admin -> Connections -> Add a new record (+ sign).
 2. Select “Ocean For Apache Spark” in the Connection Type dropdown.
 
 <img src="/ocean-spark/_media/tools-airflow-01.png" />
 
 3. Enter the following details in the connection window, and then click Save.
+
    - Connection ID: Use ocean_spark_default by default. You may use a different name.
    - Connection Type: Select “Ocean For Apache Spark” from the dropdown
    - Description: Enter any optional text to describe the connection.
@@ -111,7 +114,7 @@ You can also configure the connection using the Airflow UI.
 
 4. If you do not see Ocean for Apache Spark in the connection types, restart the Airflow web server using the following command:
 
-```docker restart test-airflow```
+`docker restart test-airflow`
 
 #### Airflow 1
 
@@ -177,7 +180,7 @@ If you use the Docker sandbox, copy the file into the local folder dags/. This f
 
 Depending on your configuration, you may need to restart the Airflow webserver for the DAG to appear in the DAG list.
 
-```docker restart test-airflow```
+`docker restart test-airflow`
 
 ## Run the DAG
 
@@ -203,7 +206,7 @@ A URL to Ocean Spark Application Page can also be found in the log. It brings yo
 
 1. If you do not see the DAGs, restart the Airflow webserver.
 
-```docker restart test-airflow```
+`docker restart test-airflow`
 
 2. To run the DAG, toggle the switch on the left to On and click the Play button on the right.
 

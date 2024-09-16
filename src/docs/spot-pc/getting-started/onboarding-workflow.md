@@ -11,11 +11,13 @@ A walkthrough of the Onboarding Workflow functionality is detailed here:
 <iframe src="https://www.youtube-nocookie.com/embed/YLDgldXgVzA?vq=hd1080&modestbranding=1&rel=0&theme=light&color=white" height="480" frameborder="0"></iframe>
 
 ## Add New Tenant
+
 The Onboarding Workflow can be accessed by clicking "+ Add New Tenant" from the Spot PC Dashboard.
 
 <a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow-01.png" target="_blank"><img src="/spot-pc/_media/onboarding-workflow-01.png" alt="Click Image for Full Size" width="1000"> </a>
 
 ## Connect Your Azure Account
+
 The first step is to enter the Azure Tenant ID for the target tenant. The tenant ID can be located in the Azure Portal for the tenant. After entering, click "Connect Account" to authorize Spot PC for this Tenant. Clicking the refresh icon will force Spot PC to re-check for an existing link. Once the link is confirmed, you can move on to Step 2, "Authorize Spot PC Discovery."
 
 <a href="https://docs.spot.io/spot-pc/_media/onboarding-workflow-02.png" target="_blank"><img src="/spot-pc/_media/onboarding-workflow-02.png" alt="Click to Enlarge" width="1000"> </a>
@@ -65,9 +67,9 @@ After the region is selected, the initialization of the tenant begins. Several r
 While the users' identity must be a part of the Azure AD, each machine must authenticate against AD (AD DC, AADDS or Azure AD). The following options are supported by Spot PC:
 
 1. Hybrid AD with Azure site-to-site VPN allowing Spot PC VMs to joing the local AD DC.
-2. Hybrid AD with Azure vNet Peering allowing Spot PC VMs to join Azure-hosted AD DC. 
+2. Hybrid AD with Azure vNet Peering allowing Spot PC VMs to join Azure-hosted AD DC.
 3. Azure AD Domain Services (AADDS) acting as the AD DC within the end-customer's Azure Tenant.
-4. Azure AD Direct Join (in currently in Preview) can joing Spot PC VMs to Azure AD without any AD DC. 
+4. Azure AD Direct Join (in currently in Preview) can joing Spot PC VMs to Azure AD without any AD DC.
 
 Therefore if used, the existing AD DC must be accessible from the Spot PC Azure subscription. As noted in the [pre-deployment article]((/spot-pc/getting-started/prerequisites/?id=existing-domain-controller), this is done via site-to-site VPN or vNet Peering from Spot PC to any other Azure vNet that has established connectivity to the AD DC.
 

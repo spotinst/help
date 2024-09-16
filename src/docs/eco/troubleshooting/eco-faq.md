@@ -94,7 +94,7 @@ Please review the [Getting Started](https://docs.spot.io/eco/getting-started/con
 
 If this error persists, please contact [Spot support](https://spot.io/support/) for additional assistance.
 
-## Question: I am seeing a notification “No new data in S3 Bucket for over 48 hours״.  
+## Question: I am seeing a notification “No new data in S3 Bucket for over 48 hours״.
 
 <img src="/eco/_media/faq-no-new-data-s3-bucket-48-hours.png" />
 
@@ -130,7 +130,7 @@ Please contact [Spot support](https://spot.io/support/) for additional assistanc
 
 ### Answer:
 
-Review [Getting Started](https://docs.spot.io/eco/getting-started/connect-your-aws-account) documentation. If needed, contact [Spot support](https://spot.io/support/) for additional assistance.  
+Review [Getting Started](https://docs.spot.io/eco/getting-started/connect-your-aws-account) documentation. If needed, contact [Spot support](https://spot.io/support/) for additional assistance.
 
 ## Question: No Data in Eco AWS Dashboard
 

@@ -5,6 +5,7 @@ Now that you have created your first [Ocean Spark cluster](ocean-spark/getting-s
 ## Prerequisites
 
 To run your first app, you will need to have:
+
 - The Ocean Spark cluster ID of the cluster you just created (of the format osc-e4089a00). You can find this in the console in the [list of clusters](ocean-spark/product-tour/manage-clusters), or by using the Get Cluster List in the API.
 - A [Spot token](administration/api/create-api-token) to interact with [Spot API](https://docs.spot.io/api/).
 - A Spot Account ID, this can be found in the same menu location as the API key
@@ -40,6 +41,7 @@ curl -k -X POST \
 ```
 
 Here's a breakdown of the payload:
+
 - We assign the job ID "spark-pi" to the application. A job is a logical grouping of applications. It is typically a scheduled workload that runs every day or every hour. Every run of a job is called an application in Ocean Spark. In the console, the Jobs view lets you track performance of jobs over time. A unique app ID will be generated from the job ID (although you can specify one yourself).
 - Default configurations are overridden in configOverrides:
   - This is a Scala application running Spark 3.2.0.

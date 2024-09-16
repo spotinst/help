@@ -18,13 +18,13 @@ The relevant section for Ocean in GCP:
 
 You can use the instanceTypes attribute in the API to specify machine types that are allowed or not allowed in the cluster. The following options are available:
 
-* instanceTypes.blacklist - Specify instance types to avoid in the cluster.
-* instanceTypes.whitelist - Specify instance types that are allowed in the cluster.
+- instanceTypes.blacklist - Specify instance types to avoid in the cluster.
+- instanceTypes.whitelist - Specify instance types that are allowed in the cluster.
 
 The following rules apply to these:
 
-* The permit list and the deny list may not be used at the same time.
-* If no instance types are defined for both options, then all instance types are available.
+- The permit list and the deny list may not be used at the same time.
+- If no instance types are defined for both options, then all instance types are available.
 
 ## Set Instance Size Ranges
 
@@ -44,7 +44,7 @@ This can be done in the GCP console as seen below:
 
 This section is relevant for AWS Kubernetes clusters.
 
-By default Ocean launches the best instance type suitable for your workload. However, there are cases where clients would like to restrict the types available for scale in the Ocean cluster or in a specific Virtual Node Group. Since there are hundreds of types, selecting as many instance types as possible that meet the specific criteria you need may be challenging and requires manual work.   
+By default Ocean launches the best instance type suitable for your workload. However, there are cases where clients would like to restrict the types available for scale in the Ocean cluster or in a specific Virtual Node Group. Since there are hundreds of types, selecting as many instance types as possible that meet the specific criteria you need may be challenging and requires manual work.
 
 **As best practice it is recommended to configure as many instance types as possible, to let Ocean choose the best market for your workloads**.
 
@@ -61,33 +61,33 @@ Depending on the sensitivity of your workloads and the general size of your clus
 The Nitro system enables AWS to innovate faster, reduce costs, and deliver added benefits like increased security and new instance types.
 In some use cases, it is the best practice to use Nitro instance types for your workloads due to the following reasons:
 
-* **More IP Addresses per Instance** - The AWS Nitro System instance types support significantly more IP addresses than non-Nitro System instance types. So if you want to use instance types that more pods can run on you should use the Nitro system instance types which have more IP addresses.
+- **More IP Addresses per Instance** - The AWS Nitro System instance types support significantly more IP addresses than non-Nitro System instance types. So if you want to use instance types that more pods can run on you should use the Nitro system instance types which have more IP addresses.
 
-* **Use IPv6** - If you want to use the IPv6 family for your cluster, then you must use AWS Nitro System instance type.
+- **Use IPv6** - If you want to use the IPv6 family for your cluster, then you must use AWS Nitro System instance type.
 
 ### Supported Filters
 
 The following are the Filters Ocean supports:
 
-* **Min vCPU**: Minimum number of vCPU.
-* **Max vCPU**:  Maximum number of vCPU
-* **Min Memory GiB**: Minimum size of Memory (GiB).  
-* **Max Memory GiB**: Maximum size of Memory (GiB).  
-* **Min GPU**: Minimum numbers of GPUs.  
-* **Max GPU**: Maximum numbers of GPUs.    
-* **Include Families**: The filtered instance types belong to one of the instance families in this list. For example, c* includes all the families start with C - c4, c5, c6g, etc.
-* **Exclude Families**: The filtered instance types must not belong to one of the instance families in this list.
-* **Exclude Metal**: The default is false. This determines whether metal instance types are allowed or disallowed.   
-* **Is Ena Supported**: Ena is supported or not.  
-* **Architectures**: “i386”, “x86_64”, “arm64”. The filtered instance types belongs to one of the category types from this list.
-* **Virtualization Types**: “hvm”, “paravirtual”, “arm64”. The filtered instance types will support at least one of the virtualization types from this list.  
-* **Categories**: “Accelerated _computing”, “Compute_optimized”, “General_purpose”, “Memory_optimized”, “Storage_optimized”. The filtered instance types belongs to one of the categories types from this list.             
-* **Min Enis**: Minimum number of network interfaces (ENIs).  
-* **Disk Types**: “NVMe”, “EBS”, “SSD”, “HDD”. The filtered instance types has one of the disk types from this list.  
-* **Min Network Performance**: Minimum Bandwidth in Gib/s of network performance.  
-* **Max Network Performance**: Maximum Bandwidth in Gib/s of network performance.
-* **Hypervisor**: "nitro", "xen". The filtered instance types will have a hypervisor type from this list.  
-* **Root Device Type**: "Instance Store", "ebs". The filtered instance types will have a root device types from this list.  
+- **Min vCPU**: Minimum number of vCPU.
+- **Max vCPU**: Maximum number of vCPU
+- **Min Memory GiB**: Minimum size of Memory (GiB).
+- **Max Memory GiB**: Maximum size of Memory (GiB).
+- **Min GPU**: Minimum numbers of GPUs.
+- **Max GPU**: Maximum numbers of GPUs.
+- **Include Families**: The filtered instance types belong to one of the instance families in this list. For example, c\* includes all the families start with C - c4, c5, c6g, etc.
+- **Exclude Families**: The filtered instance types must not belong to one of the instance families in this list.
+- **Exclude Metal**: The default is false. This determines whether metal instance types are allowed or disallowed.
+- **Is Ena Supported**: Ena is supported or not.
+- **Architectures**: “i386”, “x86_64”, “arm64”. The filtered instance types belongs to one of the category types from this list.
+- **Virtualization Types**: “hvm”, “paravirtual”, “arm64”. The filtered instance types will support at least one of the virtualization types from this list.
+- **Categories**: “Accelerated \_computing”, “Compute_optimized”, “General_purpose”, “Memory_optimized”, “Storage_optimized”. The filtered instance types belongs to one of the categories types from this list.
+- **Min Enis**: Minimum number of network interfaces (ENIs).
+- **Disk Types**: “NVMe”, “EBS”, “SSD”, “HDD”. The filtered instance types has one of the disk types from this list.
+- **Min Network Performance**: Minimum Bandwidth in Gib/s of network performance.
+- **Max Network Performance**: Maximum Bandwidth in Gib/s of network performance.
+- **Hypervisor**: "nitro", "xen". The filtered instance types will have a hypervisor type from this list.
+- **Root Device Type**: "Instance Store", "ebs". The filtered instance types will have a root device types from this list.
 
 Once the Filters are set, Ocean scales up nodes according to these parameters.
 
@@ -96,4 +96,5 @@ In case you would like to validate the filters before configuring them in your c
 **The whitelist, the blacklist, and the filters objects cannot be used at the same time. If you want to use one of them, all the others should be null**.
 
 ## What’s Next?
+
 Learn more about [Virtual Node Groups](ocean/features/vngs/).

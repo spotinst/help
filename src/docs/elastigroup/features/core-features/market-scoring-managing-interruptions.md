@@ -24,7 +24,7 @@ Whenever the Spot Instance Replacement flow (described above) requires a fallbac
 
 <img src="/elastigroup/_media/corefeatures-interruptions-02.png" />
 
-### Revert to RI/SP  
+### Revert to RI/SP
 
 The Elastigroup replacement process checks if there are any vacant reservations or savings plan every hour. It replaces any Spot instances with the applicable RI/SP instance types provided and utilizes the RI or the Commitments flag that is enabled for the group.
 

@@ -12,6 +12,7 @@ Deploying Windows 365 Cloud PC requires Windows 365 licensing in Azure before th
 <br><a href="https://docs.spot.io/spot-pc/_media/tutorials-deploy-windows-365-cloud-pc-07.png" target="_blank"><img src="/spot-pc/_media/tutorials-deploy-windows-365-cloud-pc-07.png" alt="Click to Enlarge" width="1000"> </a>
 
 ## Create Connection
+
 To begin this workflow, navigate to _Config Actions > Create Connection_ from within the appropriate tenant.
 <br><a href="https://docs.spot.io/spot-pc/_media/tutorials-deploy-windows-365-cloud-pc-01.png" target="_blank"><img src="/spot-pc/_media/tutorials-deploy-windows-365-cloud-pc-01.png" alt="Click to Enlarge" width="1000"> </a>
 
@@ -68,6 +69,7 @@ Select an image from the available list.
 Review your selections, navigate to _previous_ steps to make changes.
 
 ## Create Provisioning Policy
+
 To begin this workflow, navigate to _Config Actions > Create Provisioning Policy_ from within the appropriate tenant.
 <br><a href="https://docs.spot.io/spot-pc/_media/tutorials-deploy-windows-365-cloud-pc-05.png" target="_blank"><img src="/spot-pc/_media/tutorials-deploy-windows-365-cloud-pc-05.png" alt="Click to Enlarge" width="1000"> </a>
 

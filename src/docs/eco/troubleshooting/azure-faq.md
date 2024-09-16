@@ -10,7 +10,7 @@ Tenant ID in the request does not match tenant ID where the Eco Azure App was co
 
 During the setup for Eco Azure please verify the account that you signed into is the Azure tenant where you would like to place the Eco Azure registered application and start over.
 
-## Question: Invalid Billing Permission  
+## Question: Invalid Billing Permission
 
 Permission is not valid, please update permission as needed and try again.
 
@@ -25,7 +25,7 @@ If you have an enterprise agreement you can use these instructions to check your
 If you have a Microsoft Customer Agreement you can use these instructions to check your access:
 https://learn.microsoft.com/en-us/azure/cost-management-billing/manage/understand-mca-roles.
 
-## Question: Invalid Reservation Permission  
+## Question: Invalid Reservation Permission
 
 Permission is not valid. Please update permissions as needed and try again.
 
@@ -51,10 +51,10 @@ Please contact the Spot support team, and the Eco team will investigate.
 
 ## Question: Tenant ID and Billing Account ID
 
-How do I find my tenant ID and billing account ID?  
+How do I find my tenant ID and billing account ID?
 
 <img src="/eco/_media/eco-azure-faq-4.png" />
 
-### Answer:  
+### Answer:
 
-Learn how to [find your Tenant ID](https://learn.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-how-to-find-tenant) and how to [find your Billing ID](https://learn.microsoft.com/en-us/azure/cost-management-billing/manage/direct-ea-administration#manage-your-enrollment).  
+Learn how to [find your Tenant ID](https://learn.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-how-to-find-tenant) and how to [find your Billing ID](https://learn.microsoft.com/en-us/azure/cost-management-billing/manage/direct-ea-administration#manage-your-enrollment).

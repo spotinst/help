@@ -2,8 +2,8 @@
 
 There are two options for configuring the desired number of Spot virtual machines within an Elastigroup:
 
-* OD count
-*  Spot Percentage
+- OD count
+- Spot Percentage
 
 ## OD Count
 
@@ -18,4 +18,3 @@ Alternatively, you can configure the percentage of Spot virtual machines within 
 ![od-vs-spot-2](https://github.com/spotinst/help/assets/106514736/5f096793-e9ac-4f4b-9528-66a12c7796d6)
 
 Understanding the differences between OD and Spot virtual machines is crucial when configuring an Elastigroup. By carefully considering the OD Count and Spot Percentage parameters, you can balance cost optimization and availability based on their specific requirements. Spot recommends evaluating the potential risks and benefits of each option to make an informed decision.
-

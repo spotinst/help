@@ -103,6 +103,7 @@ spec:
    - [Spot Automated Workload Migration](ocean/tutorials/migrate-workload)
    - Gradually scale down your existing Auto Scaling Groups to zero. Ocean will automatically provision the required instances to ensure your pods are scheduled.
 5. Clean up (optional):
+
    1. Delete imported Auto Scaling Groups.
    2. Delete all Launch Configurations.
 

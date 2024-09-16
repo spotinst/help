@@ -113,7 +113,7 @@ Use the policy below to if you are creating an Eco policy with Cloudformation.
     "SpotFinOpsRole": {
       "Type": "AWS::IAM::Role",
       "Properties": {
-        "Description" :"This role is for Spot by Netapp for use with the Cloud Analyzer, Eco and other FinOps products. If you have any questions, please contact us at: eco@netapp.com",
+        "Description": "This role is for Spot by Netapp for use with the Cloud Analyzer, Eco and other FinOps products. If you have any questions, please contact us at: eco@netapp.com",
         "AssumeRolePolicyDocument": {
           "Version": "2012-10-17",
           "Statement": [

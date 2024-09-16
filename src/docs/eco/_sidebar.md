@@ -26,7 +26,7 @@
     - [View your Savings](eco/azure-tutorials/view-your-savings)
   - [Eco in CloudCheckr](eco/eco-in-cloudcheckr/)
     - [Connect your AWS Account in CloudCheckr](eco/eco-in-cloudcheckr/connect-your-aws-account-in-cloudcheckr)
-    - [View Savings in Dashboard](eco/eco-in-cloudcheckr/view-savings-in-dashboard)      
+    - [View Savings in Dashboard](eco/eco-in-cloudcheckr/view-savings-in-dashboard)
   - [Troubleshooting](eco/troubleshooting/)
     - [Eco FAQ](eco/troubleshooting/eco-faq)
     - [Azure FAQ](eco/troubleshooting/azure-faq)

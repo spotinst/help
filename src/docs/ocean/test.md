@@ -30,7 +30,7 @@ If you choose to upgrade the control plane only, make sure you upgrade each of t
 ` kubectl delete job get-waagent-data -n kube-system`
 
 2. Run the script below that will create a new get-waagent-data Job.
-Replace the ACD_ID with any unique string (you cannot use an ACD_ID that was previously used), and run the following script:
+   Replace the ACD_ID with any unique string (you cannot use an ACD_ID that was previously used), and run the following script:
 
 `curl -fsSL https://spotinst-public.s3.amazonaws.com/integrations/kubernetes/aks/spot-aks-connector/init.sh | \ bash -s <ACD_ID>`
 
@@ -64,81 +64,76 @@ curl --location --request POST 'https://api.spotinst.io/ocean/azure/k8s/cluster/
 
 ```yaml
 {
-   "cluster":{
-      "aks":{
-         "name":"AmitAKS",
-         "resourceGroupName":"amit-test"
-      },
-      "virtualNodeGroupTemplate":{
-         "launchSpecification":{
-            "resourceGroupName":"MC_amit-test_AmitAKS_westus2",
-            "customData":"REDACTED",
-            "network":{
-               "resourceGroupName":"MC_amit-test_AmitAKS_westus2",
-               "virtualNetworkName":"aks-vnet-28390561",
-               "networkInterfaces":[
+  "cluster":
+    {
+      "aks": { "name": "AmitAKS", "resourceGroupName": "amit-test" },
+      "virtualNodeGroupTemplate":
+        {
+          "launchSpecification":
+            {
+              "resourceGroupName": "MC_amit-test_AmitAKS_westus2",
+              "customData": "REDACTED",
+              "network":
+                {
+                  "resourceGroupName": "MC_amit-test_AmitAKS_westus2",
+                  "virtualNetworkName": "aks-vnet-28390561",
+                  "networkInterfaces":
+                    [
+                      {
+                        "isPrimary": true,
+                        "subnetName": "aks-subnet",
+                        "assignPublicIp": false,
+                        "publicIpSku": "Standard",
+                        "securityGroup":
+                          {
+                            "name": "aks-agentpool-28390561-nsg",
+                            "resourceGroupName": "MC_amit-test_AmitAKS_westus2",
+                          },
+                        "enableIPForwarding": true,
+                        "additionalIpConfigurations": [],
+                      },
+                    ],
+                },
+              "login": { "userName": "azureuser" },
+              "loadBalancersConfig":
+                {
+                  "loadBalancers":
+                    [
+                      {
+                        "type": "loadBalancer",
+                        "resourceGroupName": "MC_amit-test_AmitAKS_westus2",
+                        "name": "kubernetes",
+                        "loadBalancerSku": "Standard",
+                        "backendPoolNames":
+                          ["aksOutboundBackendPool", "kubernetes"],
+                      },
+                    ],
+                },
+              "tags": [{ "tagKey": "Creator", "tagValue": "amit.baroz" }],
+              "extensions":
+                [
                   {
-                     "isPrimary":true,
-                     "subnetName":"aks-subnet",
-                     "assignPublicIp":false,
-                     "publicIpSku":"Standard",
-                     "securityGroup":{
-                        "name":"aks-agentpool-28390561-nsg",
-                        "resourceGroupName":"MC_amit-test_AmitAKS_westus2"
-                     },
-                     "enableIPForwarding":true,
-                     "additionalIpConfigurations":[
-
-                     ]
-                  }
-               ]
+                    "name": "OceanAKS",
+                    "type": "customScript",
+                    "publisher": "Microsoft.Azure.Extensions",
+                    "apiVersion": "2.0",
+                    "minorVersionAutoUpgrade": true,
+                    "protectedSettings": { "script": "REDACTED" },
+                  },
+                ],
+              "image":
+                {
+                  "marketplace":
+                    {
+                      "publisher": "microsoft-aks",
+                      "offer": "aks",
+                      "sku": "aks-ubuntu-1804-gen2-2021-q2",
+                      "version": "2021.05.01",
+                    },
+                },
             },
-            "login":{
-               "userName":"azureuser"
-            },
-            "loadBalancersConfig":{
-               "loadBalancers":[
-                  {
-                     "type":"loadBalancer",
-                     "resourceGroupName":"MC_amit-test_AmitAKS_westus2",
-                     "name":"kubernetes",
-                     "loadBalancerSku":"Standard",
-                     "backendPoolNames":[
-                        "aksOutboundBackendPool",
-                        "kubernetes"
-                     ]
-                  }
-               ]
-            },
-            "tags":[
-               {
-                  "tagKey":"Creator",
-                  "tagValue":"amit.baroz"
-               }
-            ],
-            "extensions":[
-               {
-                  "name":"OceanAKS",
-                  "type":"customScript",
-                  "publisher":"Microsoft.Azure.Extensions",
-                  "apiVersion":"2.0",
-                  "minorVersionAutoUpgrade":true,
-                  "protectedSettings":{
-                     "script":"REDACTED"
-                  }
-               }
-            ],
-            "image":{
-               "marketplace":{
-                  "publisher":"microsoft-aks",
-                  "offer":"aks",
-                  "sku":"aks-ubuntu-1804-gen2-2021-q2",
-                  "version":"2021.05.01"
-               }
-            }
-         }
-      }
-   }
+        },
+    },
 }
 ```
 
@@ -153,7 +148,7 @@ virtualNodeGroupTemplate.launchSpecification.resourceGroupName:
 `"resourceGroupName": "MC_amit-test_AmitAKS_westus2",`
 
 5. **Optional** The JSON above includes the old image, you should replace it with the updated one by updating the following:
-`"image": { "marketplace": { "publisher": "microsoft-aks", "offer": "aks", "sku": "aks-ubuntu-1804-gen2-2021-q2", "version": "2021.05.01", }, }`
+   `"image": { "marketplace": { "publisher": "microsoft-aks", "offer": "aks", "sku": "aks-ubuntu-1804-gen2-2021-q2", "version": "2021.05.01", }, }`
 
 ### Step 3: Upgrade the Ocean Cluster
 

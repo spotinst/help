@@ -4,5 +4,5 @@ Running single node workloads on Stateful Node will provide you with a simple an
 
 There are several ways to create a stateful node. Choose the method right for you.
 
-*	[Import an Azure Stateful Node](managed-instance/azure/getting-started/import-stateful-node)
-*	[Create a New Stateful Node from scratch](managed-instance/azure/getting-started/create-stateful-node)
+- [Import an Azure Stateful Node](managed-instance/azure/getting-started/import-stateful-node)
+- [Create a New Stateful Node from scratch](managed-instance/azure/getting-started/create-stateful-node)

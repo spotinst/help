@@ -2,16 +2,16 @@
 
 As part of the verification processes Ocean CD supports, credentials to the monitoring tools must be configured through the creation of the Verification Provider entity.
 
-This page provides template examples of the required credentials and fields in order to enable Ocean CD to fetch data from your monitoring tool.   
+This page provides template examples of the required credentials and fields in order to enable Ocean CD to fetch data from your monitoring tool.
 
 ## Supported Providers
 
-Ocean CD supports the following providers:  
+Ocean CD supports the following providers:
 
-* Prometheus
-* NewRelic  
-* DataDog
-* Cloudwatch
+- Prometheus
+- NewRelic
+- DataDog
+- Cloudwatch
 
 ### Prometheus
 
@@ -23,7 +23,7 @@ clusterIds:
   - cluster-name-2
 prometheus:
   address: http://<svc name>.<ns name>.svc.cluster.local:<portnumber>
-```  
+```
 
 ### NewRelic
 
@@ -36,7 +36,7 @@ newRelic:
   personalApiKey: <personalApiKey-newrelic>
   accountId: <accountid-newrelic>
   region: "us"
-```  
+```
 
 For more information on how to retrieve the data above, see the official NewRelic documentation: https://docs.newrelic.com/docs/accounts/accounts-billing/general-account-settings/intro-account-settings/.
 
@@ -70,4 +70,4 @@ For more information on how to retrieve the data above, see the official CloudWa
 
 ## What’s next?
 
-Take a look at our [features](https://docs.spot.io/ocean-cd/concepts-features/).  
+Take a look at our [features](https://docs.spot.io/ocean-cd/concepts-features/).

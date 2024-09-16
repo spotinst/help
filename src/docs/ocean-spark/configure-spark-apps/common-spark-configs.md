@@ -11,6 +11,7 @@ Dynamic allocation is enabled by default for interactive notebooks. For applicat
 by default Ocean Spark will use 6 executors.
 
 You can control how many executors to use by modifying this configuration:
+
 ```json
 {
   "sparkConf": {
@@ -27,6 +28,7 @@ You can control how many executors to use by modifying this configuration:
 For Spark versions 3.0 and above, dynamic allocation is enabled by default on your notebooks.
 
 It will cause the Spark driver to dynamically adjust the number of Spark executors at runtime based on load:
+
 - When there are pending tasks, the Spark driver will request more executors.
 - When an executor is idle for a while (not running any task), it is removed.
 
@@ -53,6 +55,7 @@ You can configure a duration after which a Spark application will be forcibly te
 By default, Ocean Spark sets a 24-hour (1440 minutes) timeout on Spark applications.
 
 You can change this timeout duration by using the following configuration:
+
 ```json
 "timeout": {
     "minutes": 120,
@@ -61,17 +64,19 @@ You can change this timeout duration by using the following configuration:
 ```
 
 You can also disable this timeout entirely - for example if you're running streaming applications, as follows:
+
 ```json
 "timeout": "DISABLED"
 ```
 
 Additional notes:
+
 - Timed out applications wll enter the terminal "Timed Out" state.
-- The timeout clock starts ticking once you make the API call to submit a Spark application, or once you 
-open up a notebook. This can be a few seconds or a few minutes before your Spark code starts running.
+- The timeout clock starts ticking once you make the API call to submit a Spark application, or once you
+  open up a notebook. This can be a few seconds or a few minutes before your Spark code starts running.
 - Ocean Spark checks applications every 5 minutes to enforce their timeout. As a result, setting a very short
-timeout (or a very precise timeout) may not produce the desired effect. Applications should be
-timed out a few minutes after they reach their configuration timeout duration.
+  timeout (or a very precise timeout) may not produce the desired effect. Applications should be
+  timed out a few minutes after they reach their configuration timeout duration.
 
 ## Enable Adaptive Query Execution (AQE)
 
@@ -121,9 +126,9 @@ Spark executors will need to have read and write permissions to the target stora
 
 ## Using the S3A protocol instead of S3
 
-The [S3 protocol has been deprecated in favor of S3A since Hadoop 3.x](https://hadoop.apache.org/docs/current3/hadoop-aws/tools/hadoop-aws/index.html#Introducing_the_Hadoop_S3A_client.), because S3A provides better performance and security. 
+The [S3 protocol has been deprecated in favor of S3A since Hadoop 3.x](https://hadoop.apache.org/docs/current3/hadoop-aws/tools/hadoop-aws/index.html#Introducing_the_Hadoop_S3A_client.), because S3A provides better performance and security.
 
-You should therefore always use S3 paths starting with "s3a://", attempting to use an "s3://" path would give you an error "No FileSystem for scheme 's3'". 
+You should therefore always use S3 paths starting with "s3a://", attempting to use an "s3://" path would give you an error "No FileSystem for scheme 's3'".
 
 If you can't change the path, there's a workaround to instruct Spark to actually use the S3AFileSystem when it encounters an "s3://" path, by adding the following configuration to your applications:
 
