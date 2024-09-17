@@ -21,7 +21,7 @@ If you have not run or scheduled an auto-update in this cluster, the AMI Auto Up
 
 Otherwise, the screen will display the history of the previous runs and the currently configured schedules.
 
-![eks-auto-updates-10](https://github.com/user-attachments/assets/7847e160-2443-4a1b-a52c-a5aee2dc6514)
+![updates-history-schedules](https://github.com/user-attachments/assets/62a035d1-bc1a-45db-bcd6-9eb8dd06468a)
 
 The Updates History list for completed runs is displayed at the top with these attributes **per batch**:
 
