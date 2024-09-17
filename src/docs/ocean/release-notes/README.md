@@ -2,10 +2,7 @@
 
 ## September 2024: Features and Enhancements 
 
-OCN-0032: September 17, 2024: (GKE) Google recently informed their customers that node pools will use regional instance templates starting from their latest versions 1.29 & 1.30. In response, Ocean now supports node pools with regional instance templates as well as global instance templates. For more information, see the [Google Cloud release notes](https://cloud.google.com/kubernetes-engine/docs/release-notes#August_16_2024).
-
-
-
+*  **OCN-0032: September 17, 2024:** (**<font color="#FC01CC">GKE</font>**) Google recently informed their customers that node pools will use regional instance templates starting from their latest versions 1.29 & 1.30. In response, Ocean now supports node pools with regional instance templates as well as global instance templates. For more information, see the [Google Cloud release notes](https://cloud.google.com/kubernetes-engine/docs/release-notes#August_16_2024).
 
 *  **OCN-0031: September 17, 2024:** (**<font color="#FC01CC">GKE</font>**) For Ocean GKE, you can now set `pd-balanced` as a `rootVolumeType` on both cluster and Virtual Node Group levels. For more information on disk types, see the [Google Cloud documentation](https://cloud.google.com/compute/docs/disks).
 
