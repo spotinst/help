@@ -8,30 +8,19 @@ This topic describes how to update the Ocean Controller Version 2 in your Kubern
 
 The Ocean Controller Version 2 installation is based on Helm, so make sure to have Helm installed on your machine before starting.
 
-## Install the Latest Version 
+## Update to the Latest Version  
 
-To install the latest Ocean Controller version: 
-
-1.  Add the Spot Helm chart repository: 
-
-```bash
-helm repo add spot https://charts.spot.io 
-```
-
-2.  Update your local Helm chart repository cache: 
+1.  Update your local Helm chart repository cache: 
 
 ```bash
 helm repo update 
 ```
 
-3.  Install ocean-kubernetes-controller: 
+3.  Run the command to update the ocean-kubernetes-controller: 
 
 ```bash
 helm upgrade --install --wait ocean-controller spot/ocean-kubernetes-controller \
---namespace "spot-system" --create-namespace \
---set spotinst.account="${SPOTINST_ACCOUNT}" \
---set spotinst.clusterIdentifier="${SPOTINST_CLUSTER_IDENTIFIER}" \
---set spotinst.token="${SPOTINST_TOKEN}"
+--namespace "spot-system"
 ```
 
 If the Ocean Controller is already installed, this action will start a rollout of the Ocean Controller deployment, which will launch the new controller pods and terminate the old ones. When the Ocean Controller boots up, the log will print the version. 
