@@ -16,7 +16,7 @@ The Ocean Controller Version 2 installation is based on Helm, so make sure to ha
 helm repo update 
 ```
 
-3.  Run the command to update the ocean-kubernetes-controller: 
+2.  Run the command to update the ocean-kubernetes-controller: 
 
 ```bash
 helm upgrade --install --wait ocean-controller spot/ocean-kubernetes-controller \
