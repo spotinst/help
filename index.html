@@ -27,17 +27,18 @@
 
   <!-- Custom Styles -->
   <style type="text/css">
-    .helpful-content {
-      position: fixed;
+    .helpful-content { 
       z-index:9999;
       background:#0086FF;
       color:#fff;
-      padding:20px 40px;
+      padding:26px 40px;
       width:100%;
+      margin-left:300px;      
+      transition: transform .25s ease-out;
     }
-    .sidebar, .content {
-      top: 145px;
-    }
+    body.close .helpful-content {
+      margin-left:0!important;
+    } 
     .content {
       position: absolute!important;
     }
