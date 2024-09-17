@@ -24,7 +24,7 @@ The integration between Spot Connect and ServiceNow lets you:
     * Make sure **Locked out** is <i>not</i> selected
     * Select: Active
     * You can select **Web service acess only** to make this user a non-interactive user
-2. In the Spot Console, go to **Connect** > **Settings** > **Integarations**.
+2. In the Spot Console, go to **Connect** > **Settings** > **Integrations**.
 5. Click  **ServiceNow** > **Add Integration**.
 6. Enter your ServiceNow instance URL. For example, `https://dev12345.service-now.com`.
 7. Enter the username and password for the ServiceNow user you created.
