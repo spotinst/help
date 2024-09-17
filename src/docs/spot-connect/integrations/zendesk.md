@@ -7,7 +7,7 @@ These action snippets allow you send comments made on a Jira ticket to its linke
 ## Configure Zendesk in Spot Connect
 
 1. In Zendesk, [create an API token](https://developer.zendesk.com/api-reference/introduction/security-and-auth/#api-token).
-2. In the Spot Console, go to **Connect** > **Settings** > **Integarations**.
+2. In the Spot Console, go to **Connect** > **Settings** > **Integrations**.
 3. Click **Zendesk** > **Add Integration**.
 4. Enter the email associated with your Zendesk account.
 5. Paste the Zendesk API token.
@@ -19,7 +19,7 @@ These action snippets allow you send comments made on a Jira ticket to its linke
 1. Set up [linked ticket reporting in Jira](https://support.zendesk.com/hc/en-us/articles/4408843823642-Reporting-on-the-number-of-Zendesk-tickets-linked-to-a-Jira-issue).
 2. In Jira, [create an action](https://support.atlassian.com/cloud-automation/docs/create-and-edit-jira-automation-rules/) for any new comment posted in any Jira ticket:
    * The first node in the action needs to be All comment to ticket.
-   * The second node in the action needs to be [Send web request](https://support.atlassian.com/cloud-automation/docs/jira-automation-actions/#Send-web-request). The <b>HTTP method</b> needs to be <i>POST</i> and the <b>Web reqeust body</b> needs to be <i>Issue data (Automation format)</i>     
+   * The second node in the action needs to be [Send web request](https://support.atlassian.com/cloud-automation/docs/jira-automation-actions/#Send-web-request). The <b>HTTP method</b> needs to be <i>POST</i> and the <b>Web request body</b> needs to be <i>Issue data (Automation format)</i>     
 
 3. In the Spot console, select **Connect** > **Workflows**.
 4. Click **New Workflow** and enter a name for the workflow.
@@ -56,7 +56,7 @@ These action snippets allow you send comments made on a Jira ticket to its linke
 1. Set up [linked ticket reporting in Jira](https://support.zendesk.com/hc/en-us/articles/4408843823642-Reporting-on-the-number-of-Zendesk-tickets-linked-to-a-Jira-issue).
 2. In Jira, [create an action](https://support.atlassian.com/cloud-automation/docs/create-and-edit-jira-automation-rules/) for any new comment posted in any Jira ticket:
   * The first node in the action needs to be All comment to ticket.
-  * The second node in the action needs to be [Send web request](https://support.atlassian.com/cloud-automation/docs/jira-automation-actions/#Send-web-request). The <b>HTTP method</b> needs to be <i>POST</i> and the <b>Web reqeust body</b> needs to be <i>Issue data (Automation format)</i>     
+  * The second node in the action needs to be [Send web request](https://support.atlassian.com/cloud-automation/docs/jira-automation-actions/#Send-web-request). The <b>HTTP method</b> needs to be <i>POST</i> and the <b>Web request body</b> needs to be <i>Issue data (Automation format)</i>     
 
 3. In the Spot console, select **Connect** > **Workflows**.
 4. Click **New Workflow** and enter a name for the workflow.
