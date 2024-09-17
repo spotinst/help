@@ -23,8 +23,8 @@ The integration between Spot Connect and ServiceNow lets you:
     * Make sure **Password needs reset** is <i>not</i> selected
     * Make sure **Locked out** is <i>not</i> selected
     * Select: Active
-    * You can select **Web service acess only** to make this user a non-interactive user
-2. In the Spot Console, go to **Connect** > **Settings** > **Integarations**.
+    * You can select **Web service access only** to make this user a non-interactive user
+2. In the Spot Console, go to **Connect** > **Settings** > **Integrations**.
 5. Click  **ServiceNow** > **Add Integration**.
 6. Enter your ServiceNow instance URL. For example, `https://dev12345.service-now.com`.
 7. Enter the username and password for the ServiceNow user you created.
@@ -58,7 +58,7 @@ Creates a new incident in ServiceNow.
 
 #### Output
 
-| Parameter Nname  | Type   | Description                            |
+| Parameter Name   | Type   | Description                            |
 |------------------|--------|----------------------------------------|
 | output           | Object | JSON of the newly created incident.    |
 | execution_status | String | S_OK if successful, E_FAIL if errored. |
@@ -132,7 +132,7 @@ Update an incident in ServiceNow.
 | Priority            | The priority of the incident.                                    | Optional |
 | Template            | The ID of a template to use to create the incident.              | Optional |
 | State               | The current state of the incident.                               | Optional |
-| Calller             | The name of the person submitting the incident.                  | Optional |
+| Caller              | The name of the person submitting the incident.                  | Optional |
 
 ### Output
 

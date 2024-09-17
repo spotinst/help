@@ -17,7 +17,7 @@ New Relic in a Spot Connect workflow lets you:
 1. Sign in to your New Relic account.
 2. [Create a user key](https://docs.newrelic.com/docs/apis/intro-apis/new-relic-api-keys/) in New Relic.
 3. Copy the user key value.
-4. In the Spot console, go to **Connect** > **Settings** > **Integarations**.
+4. In the Spot console, go to **Connect** > **Settings** > **Integrations**.
 5. Click  **New Relic** > **Add Integration**.
 6. Copy the [Account ID](https://docs.newrelic.com/docs/accounts/accounts-billing/account-structure/account-id/) from New Relic.
 7. Paste the Account ID from New Relic in <i>New Relic Account Id</i>.
@@ -38,13 +38,13 @@ Use the action to run New Relic NRQL Query and retrieve data in Spot Connect
 
 #### Output
 
-| Parameter           | Type    | Description                                                   |
-|---------------------|---------|---------------------------------------------------------------|
-| result              | Object  | The output of the NRQL Query                                  |
-| is_result_truncated | Boolean | Boolean value which denotes if the result is truncated or not |
-| result_bucket_key   | String  | Name of the file where result is written                      |
-| s3_bucket           | String  | Name of the bucket                                            |
-| execution_status    | String  | The execution status of the query run (ie: S_OK / E_FAIL)     |
+| Parameter           | Type    | Description                                                       |
+|---------------------|---------|-------------------------------------------------------------------|
+| result              | Object  | The output of the NRQL Query                                      |
+| is_result_truncated | Boolean | Boolean value which denotes if the result is truncated or not     |
+| result_bucket_key   | String  | Name of the file where result is written                          |
+| s3_bucket           | String  | Name of the bucket                                                |
+| execution_status    | String  | The execution status of the query run (such as S_OK / E_FAIL)     |
 
 #### Action Example
 
