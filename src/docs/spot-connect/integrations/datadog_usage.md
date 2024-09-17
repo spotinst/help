@@ -30,16 +30,16 @@ Use Datadog integration to collect billable and usage metrics for your organizat
 
 #### Input
 
-| Parameter           | Description                                                    | Required  |
-|---------------------|----------------------------------------------------------------|-----------|
-| Datadog Instance    | The instance added in the integration                          | Required  |
-| Usage Category      | Hourly usage by product family                                 | Required  |
-| Product families    | The list of product family to retrieve                         | Required  |
-| Start Time          | Date time for usage starting this hour, such as 2024-03-01 T06 | Required  |
-| End time            | End time for usage ending this hour, such as 2024-05-01 T06    | Optional  |
-| Include descendants | Include child org usage in response (true/false)               | Optional  |
-| S3 Bucket           | The S3 bucket to store the query result.                       | Optional  |
-| S3 Bucket Key       | Name of S3 key                                                 | Optional  |
+| Parameter           | Description                                                                  | Required  |
+|---------------------|------------------------------------------------------------------------------|-----------|
+| Datadog Instance    | The instance added in the integration                                        | Required  |
+| Usage Category      | Hourly usage by product family                                               | Required  |
+| Product families    | The list of product family to retrieve                                       | Required  |
+| Start Time          | Date and time for usage starting at a specific time, such as 2024-03-01 T06  | Required  |
+| End time            | Date and time for usage ending at a specific time, such as 2024-05-01 T06    | Optional  |
+| Include descendants | Include child org usage in response (true/false)                             | Optional  |
+| S3 Bucket           | The S3 bucket to store the query result.                                     | Optional  |
+| S3 Bucket Key       | Name of S3 key                                                               | Optional  |
 
 
 #### Output
