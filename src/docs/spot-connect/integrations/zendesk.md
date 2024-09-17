@@ -7,7 +7,7 @@ These action snippets allow you send comments made on a Jira ticket to its linke
 ## Configure Zendesk in Spot Connect
 
 1. In Zendesk, [create an API token](https://developer.zendesk.com/api-reference/introduction/security-and-auth/#api-token).
-2. In the Spot Console, go to **Connect** > **Settings** > **Integarations**.
+2. In the Spot Console, go to **Connect** > **Settings** > **Integrations**.
 3. Click **Zendesk** > **Add Integration**.
 4. Enter the email associated with your Zendesk account.
 5. Paste the Zendesk API token.
