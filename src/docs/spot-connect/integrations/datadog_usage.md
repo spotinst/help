@@ -49,7 +49,7 @@ Use Datadog integration to collect billable and usage metrics for your organizat
 | output           | Map    | Usage API response                    |
 | s3_url           | String | URL where the data/output is saved    |
 
-##  Integration Action: Hourly Usage by Product Family
+##  Integration Action: Billable Across Account<font color="#FC01CC"> is each action supposed to be its own flow or are all the actions just nodes in a single flow?</font>
 
 1. [Set up usage metering](https://docs.datadoghq.com/api/latest/scopes/#:~:text=Get%20user%20memberships-,Usage%20Metering,-SCOPE%20NAME) in Datadog: [Get hourly usage by product family](https://docs.datadoghq.com/api/latest/usage-metering/#get-hourly-usage-by-product-family).
 2. In the Spot console, select **Connect** > **Workflows**.
@@ -58,3 +58,5 @@ Use Datadog integration to collect billable and usage metrics for your organizat
 5. In the center panel of the workflow builder, click the **Datadog** <font color="#FC01CC">manual trigger or datadog?</font> node to open the right panel.
 6. In the **Webhook API Key Name**, select the API key you created earlier.  
 7. <font color="#FC01CC">We need to run this snippet node within loop node as it exceeds more than 5 mins of run time for longer time frame (start month and end month). --- **how do you do this?** and what's the next step?</font>
+
+
