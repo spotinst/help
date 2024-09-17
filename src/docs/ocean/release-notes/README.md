@@ -2,9 +2,8 @@
 
 ## September 2024: Features and Enhancements 
 
-GKE had recently informed their customers that starting from their latest versions 1.29 & 1.30, node pools will make use of regional instance templates  instead of the global instance templates we were solely supporting up until now. Thanks to our team, we were able to rapidly adapt and are now supporting node pools with regional instance templates too
+OCN-0032: September 17, 2024: (GKE) Google recently informed their customers that node pools will use regional instance templates starting from their latest versions 1.29 & 1.30. In response, Ocean now supports node pools with regional instance templates as well as global instance templates. For more information, see the [Google Cloud release notes](https://cloud.google.com/kubernetes-engine/docs/release-notes#August_16_2024).
 
-https://cloud.google.com/kubernetes-engine/docs/release-notes#August_16_2024
 
 
 
