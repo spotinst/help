@@ -1,6 +1,18 @@
 # Billing Engine Release Notes
 
+<details>
+  <summary markdown="span">September 2024</summary>
+
+* **BIE-0005**: **September 16th, 2024** Azure MCA users can now connect to Billing Engine. [Learn more](billing-engine/get-started/connect-azure) 
+
+</details><br>
+
+<details>
+  <summary markdown="span">May 2024</summary>
+
 * **BIE-0004**: **May 18th, 2024** Billing Engine now supports the FinOps Foundation's [FOCUS](https://focus.finops.org/) Specifications. [Learn more](billing-engine/tutorials/analysis) 
+
+</details><br>
 
 <details>
   <summary markdown="span">April 2024</summary>
