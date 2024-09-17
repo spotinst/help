@@ -38,13 +38,13 @@ Use the action to run New Relic NRQL Query and retrieve data in Spot Connect
 
 #### Output
 
-| Parameter           | Type    | Description                                                   |
-|---------------------|---------|---------------------------------------------------------------|
-| result              | Object  | The output of the NRQL Query                                  |
-| is_result_truncated | Boolean | Boolean value which denotes if the result is truncated or not |
-| result_bucket_key   | String  | Name of the file where result is written                      |
-| s3_bucket           | String  | Name of the bucket                                            |
-| execution_status    | String  | The execution status of the query run (ie: S_OK / E_FAIL)     |
+| Parameter           | Type    | Description                                                       |
+|---------------------|---------|-------------------------------------------------------------------|
+| result              | Object  | The output of the NRQL Query                                      |
+| is_result_truncated | Boolean | Boolean value which denotes if the result is truncated or not     |
+| result_bucket_key   | String  | Name of the file where result is written                          |
+| s3_bucket           | String  | Name of the bucket                                                |
+| execution_status    | String  | The execution status of the query run (such as S_OK / E_FAIL)     |
 
 #### Action Example
 
