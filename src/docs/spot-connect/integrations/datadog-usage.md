@@ -54,7 +54,7 @@ Use Datadog integration to collect billable and usage metrics for your organizat
 
 ##  Integration Action: Billable Across Account<font color="#FC01CC"> is each action supposed to be its own flow or are all the actions just nodes in a single flow?</font>
 
-1. [Set up usage metering](https://docs.datadoghq.com/api/latest/scopes/#:~:text=Get%20user%20memberships-,Usage%20Metering,-SCOPE%20NAME) in Datadog: [Get hourly usage by product family](https://docs.datadoghq.com/api/latest/usage-metering/#get-hourly-usage-by-product-family).
+1. [Set up usage metering](https://docs.datadoghq.com/api/latest/scopes/#:~:text=Get%20user%20memberships-,Usage%20Metering,-SCOPE%20NAME) in Datadog: [Get billable usage across your account](https://docs.datadoghq.com/api/latest/usage-metering/#get-billable-usage-across-your-account).
 2. In the Spot console, select **Connect** > **Workflows**.
 3. Click **New Workflow** and enter a name for the workflow.
 4. Select **Datadog** <font color="#FC01CC">manual trigger or datadog?</font> > **Create Workflow**.
@@ -85,7 +85,7 @@ Use Datadog integration to collect billable and usage metrics for your organizat
 
 ##  Integration Action: Usage Across Account<font color="#FC01CC"> is each action supposed to be its own flow or are all the actions just nodes in a single flow?</font>
 
-1. [Set up usage metering](https://docs.datadoghq.com/api/latest/scopes/#:~:text=Get%20user%20memberships-,Usage%20Metering,-SCOPE%20NAME) in Datadog: [Get hourly usage by product family](https://docs.datadoghq.com/api/latest/usage-metering/#get-hourly-usage-by-product-family).
+1. [Set up usage metering](https://docs.datadoghq.com/api/latest/scopes/#:~:text=Get%20user%20memberships-,Usage%20Metering,-SCOPE%20NAME) in Datadog: [Get usage across your account](https://docs.datadoghq.com/api/latest/usage-metering/#get-usage-across-your-account).
 2. In the Spot console, select **Connect** > **Workflows**.
 3. Click **New Workflow** and enter a name for the workflow.
 4. Select **Datadog** <font color="#FC01CC">manual trigger or datadog?</font> > **Create Workflow**.
@@ -117,7 +117,7 @@ Use Datadog integration to collect billable and usage metrics for your organizat
 
 ##  Integration Action: Historical Cost Across Account<font color="#FC01CC"> is each action supposed to be its own flow or are all the actions just nodes in a single flow?</font>
 
-1. [Set up usage metering](https://docs.datadoghq.com/api/latest/scopes/#:~:text=Get%20user%20memberships-,Usage%20Metering,-SCOPE%20NAME) in Datadog: [Get hourly usage by product family](https://docs.datadoghq.com/api/latest/usage-metering/#get-hourly-usage-by-product-family).
+1. [Set up usage metering](https://docs.datadoghq.com/api/latest/scopes/#:~:text=Get%20user%20memberships-,Usage%20Metering,-SCOPE%20NAME) in Datadog: [Get historical cost across your account](https://docs.datadoghq.com/api/latest/usage-metering/#get-historical-cost-across-your-account).
 2. In the Spot console, select **Connect** > **Workflows**.
 3. Click **New Workflow** and enter a name for the workflow.
 4. Select **Datadog** <font color="#FC01CC">manual trigger or datadog?</font> > **Create Workflow**.
