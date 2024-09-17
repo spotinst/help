@@ -2,7 +2,7 @@
 
 ## September 2024: Features and Enhancements 
 
-*  **OCN-0031: September 17, 2024:** (**<font color="#FC01CC">GKE</font>**) For Ocean GKE, you can now set `pd-balanced` as a `rootVolumeType` on both cluster and Virtual Node Group levels. For more information on disk types, see the [Google Cloud documentation](https://cloud.google.com/compute/docs/disks)
+*  **OCN-0031: September 17, 2024:** (**<font color="#FC01CC">GKE</font>**) For Ocean GKE, you can now set `pd-balanced` as a `rootVolumeType` on both cluster and Virtual Node Group levels. For more information on disk types, see the [Google Cloud documentation](https://cloud.google.com/compute/docs/disks).
 
 
 *  **OCN-0030: September 08, 2024:** (**<font color="#FC01CC">EKS</font>**) The **Ocean Network Cost Banner** under **Cost Analysis** now contains an estimate of your average hourly network usage (GB), calculated on an hourly basis. [Learn more...](https://docs.spot.io/ocean/tutorials/analyze-your-costs?id=ocean-network-cost-banner)
