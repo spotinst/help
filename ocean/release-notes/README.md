@@ -2,6 +2,10 @@
 
 ## September 2024: Features and Enhancements 
 
+*  **OCN-0032: September 17, 2024:** (**<font color="#FC01CC">GKE</font>**) Google recently informed their customers that node pools will use regional instance templates starting from their latest versions 1.29 & 1.30. In response, Ocean now supports node pools with regional instance templates as well as global instance templates. For more information, see the [Google Cloud release notes](https://cloud.google.com/kubernetes-engine/docs/release-notes#August_16_2024).
+
+*  **OCN-0031: September 17, 2024:** (**<font color="#FC01CC">GKE</font>**) For Ocean GKE, you can now set `pd-balanced` as a `rootVolumeType` on both cluster and Virtual Node Group levels. For more information on disk types, see the [Google Cloud documentation](https://cloud.google.com/compute/docs/disks).
+
 *  **OCN-0030: September 08, 2024:** (**<font color="#FC01CC">EKS</font>**) The **Ocean Network Cost Banner** under **Cost Analysis** now contains an estimate of your average hourly network usage (GB), calculated on an hourly basis. [Learn more...](https://docs.spot.io/ocean/tutorials/analyze-your-costs?id=ocean-network-cost-banner)
 
 *  **OCN-0029: September 04, 2024:** (**<font color="#FC01CC">AKS</font>**) Ocean with [Controller V2](https://docs.spot.io/ocean/tutorials/ocean-controller-v2/) supports Pod Scheduling Readiness (included in Kubernetes 1.30), which considers whether a pod is ready to be scheduled. [Learn more...](https://docs.spot.io/ocean/features/scaling-kubernetes?id=support-for-pod-scaling-readiness)
