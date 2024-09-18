@@ -1,6 +1,6 @@
 # Cost Intelligence Release Notes
 
-* **COI-0009**: September 16th, 2024: You can now integrate Splunk with Cost Intelligence to collect billable and usage metrics for your organization. [Learn more](cost-intelligence/tutorials/integrations/)
+* **COI-0009**: September 16th, 2024: You can now integrate Splunk with Cost Intelligence to collect billable and usage metrics for your organization. [Learn more](cost-intelligence/tutorials/integrations/splunk)
 
 <details>
   <summary markdown="span">August 2024</summary>
