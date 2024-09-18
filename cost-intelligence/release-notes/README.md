@@ -1,8 +1,16 @@
 # Cost Intelligence Release Notes
 
+* **COI-0009**: September 16th, 2024: You can now integrate Splunk with Cost Intelligence to collect billable and usage metrics for your organization. [Learn more](cost-intelligence/tutorials/integrations/)
+
+<details>
+  <summary markdown="span">August 2024</summary>
+  
 * **COI-0008**: August 22nd, 2024: The best practice checks page now includes cards for quick filtering of failures by importance or category. Once you’ve identified failures, you can see the remediation steps in Cost Intelligence. [Learn more](cost-intelligence/tutorials/best-practice-checks/)
 
 * **COI-0007**: August 14th, 2024: You can now integrate [Datadog](cost-intelligence/tutorials/integrations/datadog) and [New Relic](cost-intelligence/tutorials/integrations/new-relic) with Cost Intelligence to collect billable and usage metrics for your organization. [Learn more](cost-intelligence/tutorials/integrations/)
+
+</details>
+
 
 <details>
   <summary markdown="span">May 2024</summary>
