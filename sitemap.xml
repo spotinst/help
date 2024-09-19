@@ -722,11 +722,25 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/connect-your-cloud-provider/optimize"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/connect-your-cloud-provider/overview-dashboards</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/connect-your-cloud-provider/overview-dashboards"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/connect-your-cloud-provider/overview-dashboards"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/connect-your-cloud-provider/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/connect-your-cloud-provider/"/>
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/connect-your-cloud-provider/"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/connect-your-cloud-provider/release-notes-dashboard/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/connect-your-cloud-provider/release-notes-dashboard/"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/connect-your-cloud-provider/release-notes-dashboard/"/>
     </url>
     <url>
         <loc>https://docs.spot.io/cost-intelligence/_media/</loc>

@@ -1,8 +1,6 @@
-<meta name=“robots” content=“noindex”>
+<meta name="robots" content="noindex">
 
-#  Core Services Release Notes
+#  Administration Release Notes
 
-##  Features and Enhancements
-
-*  COR-002: May 19, 2024: ipsemlorem. [Learn more]()
-*  COR-001: May 16, 2024: ipsemlorem. [Learn more]()
+*  ADM-0002: May 19, 2024: ipsemlorem. [Learn more]()
+*  ADM-0001: May 16, 2024: ipsemlorem. [Learn more]()
