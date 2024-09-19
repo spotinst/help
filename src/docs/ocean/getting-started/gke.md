@@ -7,6 +7,7 @@ This topic describes connecting an existing GKE cluster to Ocean using the [Spot
 - [Connect](connect-your-cloud-provider/gcp-project) your GCP project to Spot. If you don't have a GCP project, see [Manage Resources](https://console.cloud.google.com/cloud-resource-manager?_ga=2.24189306.-1955943244.1544264785).
 - Ensure that billing is enabled for your project: Learn how to [enable billing](https://cloud.google.com/billing/docs/how-to/modify-project).
 - Ensure that you have enabled the Google Kubernetes Engine API: Enable the [GKE API](https://console.cloud.google.com/apis/library/container.googleapis.com?q=kubernetes%20engine&_ga=2.13270391.-1955943244.1544264785).
+- [Ocean Controller Version 2](ocean/tutorials/ocean-controller-v2/).
 
 ## Access the Cluster Creation Wizard
 
@@ -48,7 +49,7 @@ This topic describes connecting an existing GKE cluster to Ocean using the [Spot
 
 ## Step 3: Connectivity
 
-Install the [Ocean Controller](ocean/tutorials/ocean-controller-v2/) and establish the connection between the Ocean SaaS and the cluster.
+Install the [Ocean Controller Version 2](ocean/tutorials/ocean-controller-v2/) and establish the connection between the Ocean SaaS and the cluster.
 
 <details>
   <summary markdown="span">Click for image</summary>
