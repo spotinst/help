@@ -45,7 +45,7 @@ You cannot connect a GKE cluster with Autopilot mode turned on.
 <details>
   <summary markdown="span">Click for image</summary>
   
-![gke-import-node-pools](https://github.com/user-attachments/assets/43e81df7-219f-464b-9cfe-dc29a407214a)
+<img src="https://github.com/user-attachments/assets/43e81df7-219f-464b-9cfe-dc29a407214a" />
 
 </details>
 
