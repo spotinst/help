@@ -18,8 +18,6 @@ You cannot connect a GKE cluster with Autopilot mode turned on.
 1. In the left menu of the Spot Console, click **Ocean > Cloud Clusters**. 
 2. Click **Create Cluster**.
 
-<img src="/ocean/_media/gke-create-cluster.png" />
-
 ## Step 1: General
 
 1. Enter a Cluster Name and the Location Type and click the Region where the cluster runs.
