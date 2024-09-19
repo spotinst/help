@@ -32,9 +32,9 @@ This list displays your right-sizing recommendations per workload and lets you d
    *  Green: The Workload is fully optimized, and no action is required.
    *  Orange: The Workload has optimization limitations (constrained by settings). 
    *  Gray: The rule for the workload has been attached but is out of schedule.
-*  Deployment type and namespace.
+*  Workload type and namespace.
 *  Recommendations for vCPU and memory right sizing per deployment. Recommended increases are shown with a green up arrow, and recommended decreases are shown with a red Down arrow.  
-*  If the workload has HPA activated, **ON** is displayed under HPA.
+*  If the workload is configured with HPA, **ON** is displayed under HPA.
 * Potential monthly max. Savings if you adopt these recommendations.
 
    > **Notes**:
