@@ -31,20 +31,40 @@
       z-index:9999;
       background:#0086FF;
       color:#fff;
-      padding:26px 40px;
-      width:100%;
-      margin-left:300px;      
+      padding:10px 40px;
+      width:100%;  
       transition: transform .25s ease-out;
+      margin-left:300px;  
+    }
+    .helpful-content h2 {
+      padding: 10px 0;
+      margin: 0;
+    }
+    .helpful-content p {
+      margin:0;
+      padding: 0 0 10px 0;
     }
     body.close .helpful-content {
       margin-left:0!important;
     } 
     .content {
       position: absolute!important;
+      padding-top:30px!important;
     }
     .sidebar-toggle {
-      top: 195px!important;
+      top: 173px!important;
     }
+    .page_toc .lv3 {
+      display:none;
+    }
+    @media only screen and (max-width: 768px) {
+      .helpful-content {
+        margin-left: 0!important;
+      }
+      body.sticky.close .helpful-content {
+        margin-left:300px!important;    
+      }
+    } 
 </style>
   
 </head>
