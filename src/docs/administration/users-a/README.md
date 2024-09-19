@@ -4,7 +4,7 @@ In Spot, a user is a person who accesses the Spot console to perform any action 
 
 A user can also be an application that accesses Spot programmatically using the Spot APIs. Using CRUD actions in the APIs, programmatic users can perform all the same actions that console users do.
 
-If your organization is just starting to use Spot, you will not have any groups defined yet. So when you add new users using the wizard, you will not add the user to any group. Then, after you have added a number of users, you can use the [create new group](administration/groups/create-new-group) wizard to add the users to groups.
+If your organization is just starting to use Spot, you will not have any groups defined yet. So when you add new users using the wizard, you will not add the user to any group. Then, after you have added a number of users, you can use the [create new group](administration/groups/) wizard to add the users to groups.
 
 From the list of users, you can:
 * [Create a user](administration/users-a/?id=create-a-user)

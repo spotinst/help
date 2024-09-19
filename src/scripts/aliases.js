@@ -1733,9 +1733,6 @@ export const aliases = (() => {
     "/elastigroup-for-azure/shutdown-script-in-elastigroup":
       "/elastigroup/features-azure/shutdown-script-in-elastigroup-for-azure",
 
-    "/administration/notification-center/create-a-notification-policy":
-      "/administration/notification-center/event-policies/create",
-
     "/administration/notification-center/edit-a-notification-policy":
       "/administration/notification-center/event-policies/edit",
 
@@ -1829,8 +1826,8 @@ export const aliases = (() => {
     "/administration/notification-center/notifications/read":
       "/administration/notification-center/",
 
-    "/administration/notification-center/event-policies/create":
-      "/administration/notification-center/event-policies/",
+    "/administration/notification-center/create-a-notification-policy":
+      "/administration/notification-center/event-policies/create",
   };
 
   for (let [key, value] of Object.entries(map)) {

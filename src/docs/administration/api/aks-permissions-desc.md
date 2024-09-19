@@ -2,8 +2,8 @@
 
 This topic describes:
 
-* AKS infrastructure permissions.
-* Azure RBAC Enabled Cluster, Kubernetes Permissions.
+* AKS infrastructure permissions
+* Azure RBAC enabled cluster, Kubernetes permissions
 
 ##   AKS Infrastructure Permissions
 
@@ -102,7 +102,7 @@ The AKS cluster identity, which is created and associated with the AKS cluster, 
 
 * Microsoft.Compute/locations/vmSizes/read, Microsoft.Compute/locations/operations/read
   * (These permissions are required to find virtual machine sizes for finding AzureDisk volume limits).
-   
+
 ###  Additional Cluster Identity Permissions
 
 When creating a cluster with specific attributes, you need these additional permissions for the cluster identity. Since these permissions are not automatically assigned, you must add them to the cluster identity after creation.
@@ -121,7 +121,7 @@ When creating a cluster with specific attributes, you need these additional perm
  
 * Microsoft.Network/privatednszones/*
   * (These permissions are required if using a private DNS zone in another resource group, such as a custom privateDNSZone).
-  	
+
 ##  Azure RBAC Enabled Cluster, Kubernetes Permissions
 
 ### Azure Kubernetes Service Contributor Role

@@ -26,16 +26,16 @@ Your workload optimization activities impact the status of the workloads in the 
 
 ![workloads-dashboard-e](https://github.com/user-attachments/assets/f2a7d846-b906-4222-8cca-3db98754e948)
 
-This list displays:  
-
-*  Your right-sizing recommendations per workload, and it lets you drill down to view your right-sizing recommendations per container. 
-*  Recommendations for vCPU and memory right sizing per deployment. Recommended increases are shown with a green up arrow, and recommended decreases are shown with a red Down arrow.  
+This list displays your right-sizing recommendations per workload and lets you drill down per container.
 *  [Right Sizing rules](ocean/features/ocean-cluster-right-sizing-recom-tab?id=automation-rules-list) that are attached to specific workloads.
-*  Workload Status: If the workload is [attached](ocean/features/ocean-cluster-right-sizing-recom-tab?id=attach-a-right-sizing-rule-to-one-or-more-workloads) to a right-sizing rule, the name of the rule appears. The rule has one of the following workload (colored) optimization statuses:
+*  Workload Status: If the workload is [attached](ocean/features/ocean-cluster-right-sizing-recom-tab?id=attach-a-right-sizing-rule-to-one-or-more-workloads) to a right-sizing rule, the name of the rule appears under **Rules**. The rule has one of the following workload (colored) optimization statuses:
    *  Green: The Workload is fully optimized, and no action is required.
    *  Orange: The Workload has optimization limitations (constrained by settings). 
    *  Gray: The rule for the workload has been attached but is out of schedule.
- * Potential monthly max. Savings if you adopt these recommendations.
+*  Workload type and namespace.
+*  Recommendations for vCPU and memory right sizing per deployment. Recommended increases are shown with a green up arrow, and recommended decreases are shown with a red Down arrow.  
+*  If the workload is configured with HPA, **ON** is displayed under HPA.
+* Potential monthly max. Savings if you adopt these recommendations.
 
    > **Notes**:
    > - Red status: The Workload is not optimized.
@@ -71,7 +71,7 @@ To create/edit a right-sizing rule:
 1.   Click the **Advanced Optimization** tab if not already displayed.
 2.   To create a new rule, click **+ Add new rule** above the Automation Rules list (or to edit an existing rule, click the pencil icon in the rule).
 
-![rs-conf-auto-rule2](https://github.com/user-attachments/assets/aa5b9543-1143-4286-badb-84c898ded75b)
+![rule-configure-hpa-3](https://github.com/user-attachments/assets/d4f27b25-6d88-463f-bc2a-dbe3db46594c)
 
 3.   In the Configure Automation Rule dialog box, enter/edit the unique rule name.
 4.   Select when to apply the recommendation by selecting one of the following options: 
@@ -79,17 +79,18 @@ To create/edit a right-sizing rule:
       *   **Once available**: The recommendation is applied immediately after it becomes available. 
       *   **At a specific time**: You select when to apply the recommendation after it becomes available.
 
-![rs-time-settings](https://github.com/user-attachments/assets/ada6260e-f4e0-48cf-acaf-cb08498b5559)
+![rule-when-to-apply-3](https://github.com/user-attachments/assets/5cb76163-9f33-477e-95d6-b99b36f0f200)
 
 5. Turn on **Exclude preliminary recommendation** if you want to suppress recommendations as long as the workload is considered preliminary.
 6. Select one of the **Restart replicas** options:
    * All manifests.
    * Manifests with more than 1 replica only.
    * No restart.
-7. Click the **Set the resources percentage change** down arrow to apply the recommendation, and set the CPU and Memory percentage thresholds. This is the minimum percentage change from the current request for applying a recommendation.
-8. Click the **Set recommendation ranges for resources** down arrow and enter the upper and lower boundary values for CPU (millicpu) and Memory (mib) requests for applying a recommendation.
+7. Click the **Set the resources percentage change** down arrow to apply the recommendation, and set the CPU and Memory percentage thresholds. This is the minimum percentage change from the current request for applying a recommendation. If the right-sizing recommendation exceeds the percentage threshold for either resource (CPU or Memory), it will be applied to both resources, and the resulting status will be **fully optimized**. We do this because the original purpose of the threshold is to prevent unnecessary pod deletion. However, if we need to delete a pod and relaunch a new one for one resource, we do the same for the other. 
+8. Click the **Set recommendation ranges for resources** down arrow and enter the upper and lower boundary values for CPU (millicpu) and Memory (MiB) requests to apply a recommendation. By default, the minimum values are 100 for CPU and 128 MiB for memory; no lower values will be accepted. If the recommendation exceeds the set boundaries, automatic right-sizing will apply recommendations using the maximum values configured in the rule. 
 9. Click the **Set overhead for resources** down arrow and set the CPU and memory percentage overheads. An overhead specifies the percentage of extra resources to add to the new request recommendation.
-10. After you save the rule, it appears in the area under the [Workloads Optimization list](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=workloads-optimization-list).
+10. Turn on the **Apply HPA on associated workload** if you want to apply HPA. Ocean automatically applies recommendations for metrics not covered by the HPA trigger. For example, Ocean applies memory recommendations to a CPU-based HPA. Ocean applies recommendations for both metrics for other triggers, such as Kafka queue.
+11. After you save the rule, it appears in the area under the [Workloads Optimization list](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=workloads-optimization-list).
 
     > **Notes**:
     > - Default values for Overhead and Automation Threshold are **10%** and **5%** respectively.
@@ -103,7 +104,7 @@ To attach a rule to one or more workloads:
 1.   Select one or more workloads in the Workloads Optimization list. 
 2.   From the Actions drop-down menu above the table, click **Attach Rule**.
 
-![right-sizing-attach-rule](https://github.com/user-attachments/assets/c9c6d9ef-3ee3-494b-9813-06ef887a00e0)
+![attach-rule-to-workload](https://github.com/user-attachments/assets/be315afa-0ef8-4d30-b1f3-422e8caf8633)
 
 3.   You can either attach an existing or new rule you create from scratch (a new rule will be attached to the workload(s) you selected earlier):
 
@@ -130,13 +131,12 @@ To delete a right sizing rule:
 
 >**Important**: You cannot restore a deleted right-sizing rule. In addition, a rule may be deleted only if it is no longer attached to a workload.
 
-<!-- # Best Practices
+## Best Practices
 
 These are the Right-Sizing Best Practices:
 
-* Ensure more than one replica for the Admission Controller and VPA.
-* Limits (percentage thresholds) should not have the same values as requests.
-* If you set overheads for resources, Start with a relatively high overhead (20%) and decrease it with time.
-* Install the Spot VPA project. Then restart pods, and then restart policies and flags.
-* If you set boundaries (recommendation ranges for resources), do not apply the rule to all workloads. All services have different purposes.
+* For production clusters, we recommend setting two replicas for the Admission Controller to ensure continuous operation if one stops reporting. 
+* Workload limits should not have the same values as requests.
+* If you set overheads for resources, start with a relatively high overhead (20%) and decrease it with time.
+* If you set boundaries (recommendation ranges for resources), avoid applying the specific rule to all workloads. All services have different purposes.
 

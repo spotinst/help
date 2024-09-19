@@ -25,9 +25,15 @@
 
    You can stream Elastigroup logs to an AWS S3 bucket. Then, you can configure Elasticsearch and Kibana to collect logs from the S3 bucket:
    * [Ocean](/ocean/features/log-integration-with-s3)
-   * [Elastigroup](url) <font color="#FC01CC">broken url: Note: The above document addresses the integration of Ocean with S3, but is also available for Elastigroup as well: https://spotinst.com/blog/elasticsearch-on-spot-instances-step-by-step/ </font>
-
-   <font color="#FC01CC">Here's how to use Spot Connect to integrate Elasticsearch. is it relevant? https://docs.spot.io/spot-connect/integrations/elasticsearch </font>
+   * [Elastigroup](https://docs.spot.io/api/#tag/Elastigroup-AWS/operation/elastigroupAwsCreate) add this code to the JSON:
+     <pre><code> "logging": {
+       "export": {
+         "s3": {
+           "id": "di-123"
+         }
+       }
+     }
+   </pre></code>
 
  </div>
 
@@ -37,30 +43,6 @@
 <!----------------------------------general---------------------------------->
 
 ## General
-
-  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="odresp">Why is my on-demand instance utilized as a reserved instance/savings plan?</summary>
-
-  <div style="padding-left:16px">
-
-   When is an on-demand (OD) instance a reserved instance (RI), savings plan (SP), or full-priced on demand?
-   
-   When launching an on-demand instance, you cannot specifically request it to run as a reserved instance or savings plan.
-
-AWS decides according to:
-
-1.	If the market matches a free zonal reserved instance commitment, then the instance is a reserved instance.
-2.	If the market matches a free regional reserved instance commitment, then the instance is a reserved instance.
-3.	If the market matches a free EC2 instance savings plan commitment, then the instance is a savings plan.
-4.	If there is any free compute service plan commitment, then the instance is a savings plan.
-5.	Otherwise, the instance will run as a full-price on-demand instance.
-
-Throughout the lifetime of an instance, it can change its “price” whenever there’s any change in the commitments utilization rate. For example, if an instance is running as a full price on-demand instance, and another instance that was utilizing a compute savings plan commitment was terminated, the first instance will start utilizing this commitment if its hourly price rate has enough free space under this commitment. It might take a couple of minutes for this change to show, but since the billing is being calculated retroactively, in practice it’s starting to utilize the commitment right away.
-   
- </div>
-
- </details>
-
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="jq">Can I use JQ to extract data from an API call?</summary>
@@ -121,31 +103,13 @@ For example:
 
  </details>
 
- <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="AWSIAM">Can I remove permissions from the Spot IAM policy?</summary>
-
-  <div style="padding-left:16px">
-
-You can choose to remove some of these permissions from the [Spot IAM policy](/administration/api/spot-policy-in-aws):
-
-* **iam:PutRolePolicy** is not required as it is only used if the instance profile itself needs to create inline policies.
-
-* **iam:CreateServiceLinkedRole** is only needed for an initial spot request, then it can be removed. This means it's only required to create the first spot instance in your account. After creating an Ocean or Elastigroup and launching a Spot instance through Spot, you can remove this permission from the policy.
-
-* **iam:AddRoleToInstanceProfile** is generally not required. It is only used to change the role associated with an instance profile and is required for Beanstalk.
-
-* **iam:PassRole** is only required when you custom metrics. Ocean EKS does not require <i>iam:PassRole</i> in the Spot policy. However, if you use custom metrics, you need an account with this role configured for putting metric data into CloudWatch, which is in use by both Ocean (PublishOceanKubernetesCwMetricsExecutor ) and EG (ReportCWMetricsNewCmd).
-
- </div>
-
- </details>
  
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="SSO-groupokta">SSO: How can I add a user to groups in an organization in Okta?</summary>
 
   <div style="padding-left:16px">
 
-   You can configure a user to one or many user groups under a certain [organization](/administration/sso-access-control/organization-level-sso?id=organization-and-user-group) in Okta spotinst application:
+   You can add a user to one or many user groups in an [organization](/administration/sso-access-control/organization-level-sso?id=organization-and-user-group) in Okta spotinst application:
 1.	Make sure [Okta SAML 2.0 authentication](/administration/identity-providers/okta-saml-authentication) is configured with Spot.
 2.	Sign in to Okta Admin, go to **Directory** > **Profile Editor**, and select **Spotinst User**.
 3.	Click **Add Attribute** and add a custom attribute:
@@ -275,12 +239,8 @@ The SAML metadata file is generated by the customer from the IDP, and it needs t
 
 You cannot sign in to your Spot org due to a user provisioning error in your Okta SSO environment. For example, you're getting one of these errors:
 
-*	<code>Automatic provisioning of user {name of user} to app Spotinst failed: Matching user not found.</code>
+* <code>Automatic provisioning of user {name of user} to app Spotinst failed: Matching user not found.</code>
 * <code>Automatic profile push of user {name of user} to app Spotinst failed: Error while trying to push profile update for {user email}: No user returned for user {user id}</code>
-
-When either of these errors occurs, you see in the Kibana log:
-<code>Unhandled Exception! Need to investigate the request</code>
-</code>{org id} and "SSO" in logstash-ums*</code>
 
 These internal logging errors occur because of a misconfiguration in the Okta SSO environment.
 1.	Make sure edit is set up for provisioning:
@@ -299,12 +259,6 @@ These internal logging errors occur because of a misconfiguration in the Okta SS
    
 3.	Unassign the users from the Spotinst app in Okta. Once unassigned, reassign these specific users to the Spotinst app.
 
-<font color="#FC01CC">should I include these links?
-* https://support.okta.com/help/s/article/DocuSign-Provisioning-Error-Error-while-trying-to-push-profile-update-forXXXXX-Username-and-email-combination-already-exists-for-this-account?language=en_US
-* https://help.okta.com/en-us/Content/Topics/Provisioning/lcm/troubleshooting.htm
-* https://help.okta.com/en-us/Content/Topics/Apps/Apps_App_Integration_Wizard_SCIM.htm
-* https://stackoverflowteams.com/c/spotinst/questions/595?rq=1</font>
-
  </div>
 
  </details>
@@ -314,58 +268,19 @@ These internal logging errors occur because of a misconfiguration in the Okta SS
 ## Ocean
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceantokens">What are the minimum permissions needed for a programmatic token for creating an Ocean cluster controller?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanssar">Should I get frequent <i>SelfSubjectAccessReview</i> requests after upgrading to Ocean Controller Version 2?</summary>
 
   <div style="padding-left:16px">
 
-   You can use a programmatic token for creating Ocean cluster controllers. The benefit of programmatic tokens is they aren't linked to a specific user. If the user is deleted, it doesn't affect the Ocean controller. This helps prevent interruptions and heartbeat issues.
 
-   At minimum, the token must have **account viewer** [permissions](/administration/policies/). Viewer permission is the only permission required for a cluster controller to operate. Cluster controllers don't manage resources in Ocean, the autoscaler does. If you want this same programmatic user to manage other resources in your cluster, additional permission policies are required.
+After you upgrade to Ocean Controller Version 2, you may get many SIEM alerts due to <i>SelfSubjectAccessReview</i> requests to your API server. This is expected behavior.
 
-For a network client, only the **account viewer** permission is required for the client to operate.
-   
+With the Version 2 Ocean Controller, Spot gets reports for any custom resource you gave it access to through the controller cluster role. For example, an Argo Rollouts custom resource or a VerticalPodAutoscaler for rightsizing. These require Spot to list the custom resources in the cluster and make sure there's read access. This happens when the  controller starts up and on a regular basis when it's running.
+
  </div>
 
  </details>
 
-
-
- <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanvmarch">Can I create VMs with specific architecture in Ocean AKS?</summary>
-
-  <div style="padding-left:16px">
-
-You may want to run workloads (pods) on VMs with a specified architecture.
-
-For Ocean clusters (AWS), you can use an AMI with the required architecture. Update the AMI in the cluster or virtual node group (VNG) configuration to make sure the instances are launched according to the architecture specified in the AMI.
-
-However, it’s not possible to do with Ocean AKS clusters because you cannot choose a particular image to run VMs when you create an AKS cluster.
-
-1.	Create a new virtual node group in the Ocean AKS cluster and configure it manually or import the configuration of a node pool.
-2.	Add vmSizes to the virtual node group JSON file.
-    <pre><code>"vmSizes": {
-        "filters": {
-            "architectures": [
-                 "x86_64"
-            ],
-            "series": []
-                }
-    }</code>
-   </pre>
-   
-   * <b>Architectures</b> is a list of strings, and the values can be a combination of <i>x86_64</i> (includes both <i>intel64</i> and <i>amd64</i>), <i>intel64</i>, <i>amd64</i>, and <i>arm64</i>.
-
-   * Add <b>series</b> with the VM series for the particular architecture.
-     For example, run VMs with <i>arm64</i> and launch the VMs with <i>Dps_V5</i> as the series.
- 
-     <img width=450 src="https://github.com/user-attachments/assets/1c0fccc2-2847-4cad-a01d-ce60a109db8e">
-
-
- </div>
- 
- </details>
-
- 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanunregcontainer">Why are my container instances unregistered?</summary>
 
@@ -471,53 +386,6 @@ The automatic headroom and the headroom per VNG are calculated independently. Th
 
  </details>
 
- 
- <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceank8sscaledown">Can I stop Kubernetes workloads from scaling down in Ocean?</summary>
-
-  <div style="padding-left:16px">
-
-You can restrict specific pods from scaling down by configuring Ocean and Kubernetes. The instance will be replaced only if:
-* It goes into an unhealthy state.
-* Forced by a cloud provider interruption.
-
-There are two options for restricting pods from scaling down:
-* Kubernetes deployments/pods: spotinst.io/restrict-scale-down: true
-
-  Use the <code>spotinst.io/restrict-scale-down</code> label set to <i>true</i> to block proactive scaling down for more efficient bin packing. This will leave the instance running as long as possible. It gets defined as a label in the pod's configuration. See [restrict scale down](ocean/features/labels-and-taints?id=spotinstiorestrict-scale-down).
-
-* Virtual node group (VNG): restrict scale down (only available for AWS, ECS, and GKE)
-
-  You can configure [Restrict Scale Down](ocean/features/vngs/attributes-and-actions-per-vng) at the VNG level so the nodes and pods within the VNG are not replaced or scaled down due to the auto scaler resource optimization.  Create a VNG, go to the Advanced tab, then select **Restrict Scale Down**.
-
- </div>
-
- </details>
-
- <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceank8spvcerror">Why am I getting a <i>Kubernetes Autoscaler, Deadlock for Pod</i> error?</summary>
-
-  <div style="padding-left:16px">
-
-You get this error in the log:
-
-<code>Kubernetes Autoscaler, Deadlock for Pod: '{pod-name}' 
-Can't scale up an Instance since PersistentVolumeClaim: 
-'{PVC-name}' 
-VolumeId: '{vol-name}' is already attached to an existing Instance: 
-'{instance-ID}' Please consider using a new PersistentVolumeClaim or open a 
-support ticket.
-</code>
-
-This can happen when the pod has a claim for a specific volume attached to a different instance, and that instance does not have free space for the pod.
-
-By freeing up space, the pod can be placed on its attached node and can use the volume it claimed.
-
- </div>
-
- </details>
-
-
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanunauthorized">Why am I getting a <i>You must be logged in to the server (unauthorized)</i> error when creating an EKS cluster?</summary>
 
@@ -570,28 +438,6 @@ By freeing up space, the pod can be placed on its attached node and can use the 
  </div>
 
  </details>
-
- <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanlaunchspec">Why am I getting the error: <i>when default launchSpec is used as a template only, can't raise target of Ocean</i>?</summary>
-
-  <div style="padding-left:16px">
-
-   When the <code>useAsTemplateOnly</code> parameter is <i>true</i>, you cannot edit the target capacity in the Ocean cluster configuration.
-   
-Keep in mind that it may not be necessary to increase the target capacity because Ocean automatically scales instances up and down as needed.
-
-If you want to edit the target capacity:
-1. In the [API](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterCreate), go to **Compute** > **launchSpecification**.
-2. Change the <b>useAsTemplateOnly</b> parameter to <i>false</i>.
-
-This will let you manually increase the target of the duster and the nodes will launch in the default virtual node group.
-
-<img width=900 src="https://github.com/user-attachments/assets/6e422a64-db48-4b43-90d0-d6b5ddc35464" >
-
- </div>
-
- </details>
-
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceank8sreadiness">Why am I getting an <i>exit code 137</i> error?</summary>
@@ -755,7 +601,7 @@ A node is running in an Ocean cluster and is an unnamed virtual node group.
 
 <img width="900" src="https://github.com/user-attachments/assets/5e581d00-b1c8-4bdb-8e89-c19ef79ad1f1">
 
-This can happen if your virtual node group was deleted in Terraform. When you delete a virtual node group in Terraform, the `delete_nodes` needs to be manually set to <i>true</i> in the [Terraform registry](https://registry.terraform.io/providers/spotinst/spotinst/latest/docs/resources/ocean_aws_launch_spec#delete_nodes). If it's not set to <i>true</i>, the node will keep running and not be in a virtual node group.
+This can happen if your virtual node group was deleted in Terraform. When you delete a virtual node group in Terraform, the `spotinst_ocean_aws_launch_spec` > `delete_nodes` needs to be manually set to <i>true</i> in the [Terraform registry](https://registry.terraform.io/providers/spotinst/spotinst/latest/docs/resources/ocean_aws_launch_spec#delete_nodes). If it's not set to <i>true</i>, the node will keep running and not be in a virtual node group.
 
  </div>
  
@@ -862,22 +708,6 @@ An on-demand instance may not start, for example, if it hits an AWS instance typ
 
  </details>
 
-  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egerrorpeers">Why am I getting a <i>"value" contains a conflict between peers</i> error?</summary>
-
-  <div style="padding-left:16px">
-
-When you import a new group to Elastigroup, you may get this error:
-<code>"value" contains a conflict between exclusive peers [resourceRequirements, spot]</code>
-
-This happens if the <code>resourceRequirements</code> value is <i>null</i>.
-
-Remove the <i>resourceRequirements</i> field from the JSON file and reimport the group.
-
- </div>
-
- </details>
-
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="egmemoryscalepolicy">How can I set a memory-based scaling policy in Elastigroup?</summary>
 
@@ -934,57 +764,6 @@ If **Utilize Reserved Instances** is enabled, it automatically triggers constant
 
  </div>
  
- </details>
-
- <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egnomad">How is Nomad integrated with Elastigroup?</summary>
-
-  <div style="padding-left:16px">
-
-Nomad is an open-source system by Hashicorp. It is used to easily manage containerized applications across multiple hosts.
-
-Nomad groups your containers into logical units, called jobs, to simplify management and discovery. It provides deployment scheduling, workload, resource usage optimization, and easy scaling. Its workload management, scalability, and flexibility are simple and lightweight to use.
-
-Nomad and Kubernetes are popular container orchestration platforms for managing and scaling containerized applications. However, they have different design philosophies and features.
-
-<img width=700 src="https://github.com/user-attachments/assets/e1ea38cb-33a5-447f-9556-3c5f23b0e03d" >
-
-With the Nomad integration, you can easily set up a new group by adding the required user data script and providing the Nomad lead master-server IP and primary host and port.
-
-Add <i>setup data dir</i> to your AMI. Replace `<NomadServerElasticIP>` with the Elastic IP of the master:
-
-<pre><code># Setup data dir
-data_dir = "/tmp/client1"
-# Enable the client
-client {
-    enabled = true
-    servers = ["<NomadServerElasticIP>"]
-}</code></pre>
- 
-<b>Create an Elastigroup with Nomad:</b>
-
-1.	Create a new Elastigroup for [AWS](/elastigroup/getting-started/create-an-elastigroup-for-aws), [Azure](/elastigroup/getting-started/create-an-elastigroup-for-azure), or [GCP](/elastigroup/getting-started/create-an-elastigroup-for-gcp).
-
-2.	On the Compute tab, go to <b>Additional Configurations</b>, add this user data script:
-
-    <pre><code>#!/bin/bash
-    export INSTANCE_ID=`curl -s http://169.254.169.254/latest/meta-data/instance-id` <font color="#FC01CC">keep the url as is?</font>
-    sudo nomad agent -config client.hcl -node $INSTANCE_ID &</code></pre>
-
-3.	On the Compute tab, go to <b>3rd party integration</b> and select <b>Nomad</b>.
-4.	Enter your <b>Nomad Master Host</b> and <b>Port</b>.
-5.	Click <b>Validate</b> to make sure the connection is successful.
-6.	Create the Elastigroup. <font color="#FC01CC">Click Next how do they create the elastigroup?</font>
-
-<b>More about Nomad</b>
-* [Nomad autoscaling](/elastigroup/tools-integrations/nomad/)
-* [Set up Nomad](/elastigroup/tools-integrations/nomad/set-up-nomad-on-elastigroup)
-* [Configure Nomad autoscaler](/elastigroup/tools-integrations/nomad/configure-nomad-autoscaler)
-* [Down scaling](/elastigroup/tools-integrations/nomad/?id=down-scaling)
-
-
- </div>
-
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
@@ -1089,40 +868,6 @@ You can find the URL by navigating to Azure console --> VM details --> JSON view
 8. In the Delete Stateful Node window, make sure to deselect all the options because you need the VM to run on the Azure side.
 9. Verify that the VM with the resources is running in Azure.
 
- </div>
-
- </details>
-
-  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egsn-stopped">Why am I getting an <i>Instance have been detected as stopped</i> error?</summary>
-
-  <div style="padding-left:16px">
-
-   You can see this error in the log:
-   <code>08/20/2023, 5:36 AM, WARN, Instance: [i-01234567890abcdefg] have been detected as Stopped.</code>
-
-   It's possible to [stop an instance in AWS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html), but Spot doesn't support the Stop action. This causes out-of-sync issues.
-
-   Restart the instance in AWS, then the Elastigroup will sync again. Use [Pause/Resume](/managed-instance/features/managed-instance-actions?id=stateful-node-actions) instead of Stop.
-   
- </div>
-
- </details>
-
-   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egsn-stopped2">Why am I getting a <i>botocore.exceptions.ClientError</i> error?</summary>
-
-  <div style="padding-left:16px">
-
-   You may get this error:
-   <code>botocore.exceptions.ClientError: An error occurred (UnsupportedOperation) when calling the StopInstances operation: You can't stop the Spot Instance '<Instance-ID>' because it is associated with a one-time Spot Instance request. You can only stop Spot Instances associated with persistent Spot Instance requests.</code>
-
-   It's possible to [stop an instance in AWS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html), but Spot doesn't support the Stop action.
-
-<font color="#FC01CC">is this relevant here, too?
-
-   Restart the instance in AWS, then the Elastigroup will sync again. Use [Pause/Resume](/managed-instance/features/managed-instance-actions?id=stateful-node-actions) instead of Stop.</font>
-   
  </div>
 
  </details>

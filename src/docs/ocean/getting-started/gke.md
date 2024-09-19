@@ -9,6 +9,10 @@ This topic describes connecting an existing GKE cluster to Ocean using the [Spot
 - Ensure that you have enabled the Google Kubernetes Engine API: Enable the [GKE API](https://console.cloud.google.com/apis/library/container.googleapis.com?q=kubernetes%20engine&_ga=2.13270391.-1955943244.1544264785).
 - [Ocean Controller Version 2](ocean/tutorials/ocean-controller-v2/).
 
+## Limitations
+
+You cannot connect a GKE cluster with Autopilot mode turned on.
+
 ## Access the Cluster Creation Wizard
 
 1. In the left menu of the Spot Console, click **Ocean > Cloud Clusters**. 
