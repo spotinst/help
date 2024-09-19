@@ -69,7 +69,7 @@ Click on Date to open the calendar. You can choose from the following time perio
 - 7D: The last seven days. This is the default display.
 - Today: Costs for Today.
 - 1M: The last 30 days.
-- Custom: You can also create a custom time period by clicking on the start date and end date in the calendar.
+- Custom: You can also create a custom time period by clicking on the calendar's start and end dates.
 
 The example below shows a custom definition for the days of February 5 – 8.
 
@@ -88,17 +88,17 @@ To select a different grouping, click **Group By** and then select one of the fo
 - Label (Resource)
 - Annotation (Resource)
 
-For ECS: The default grouping is by service. You can optionally click **Group By** and then select **tag**.
+For ECS: The default grouping is by service. You can optionally click **Group By** and then select **Tag**.
 
 Once you have chosen a grouping, choose the Key from the list of keys in your cluster.
 
-The example below shows the grouping by Label (Resource) with Key equal to `Family`. The table details all of the values for the Label Key `Family` that exist in the cluster.
+The example below shows the grouping by Label (Resource) with Key equal to `Family`. The table details all the values for the Label Key `Family` in the cluster.
 
 <img src="/ocean/_media/cost-analysis-2.png" />
 
 ## Add Filter
 
-It may be useful to create an analysis that takes only certain workloads into consideration. You can do this by adding a filter.
+It may be useful to create an analysis that considers only certain workloads. You can do this by adding a filter.
 
 To apply a filter to your cost analysis, select a filter from the list of saved filters.
 To create a new filter, click Add Filter and fill out the filter criteria.
