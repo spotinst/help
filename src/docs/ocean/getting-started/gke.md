@@ -39,13 +39,23 @@ This topic describes connecting an existing GKE cluster to Ocean using the [Spot
 
 2. Optionally, you can import all GKE node pools into Ocean as [virtual node groups](ocean/features/launch-specifications). (The default node pool will be automatically imported).
 
+<details>
+  <summary markdown="span">Click for image</summary>
+  
 ![gke-import-node-pools](https://github.com/user-attachments/assets/43e81df7-219f-464b-9cfe-dc29a407214a)
+
+</details>
 
 ## Step 3: Connectivity
 
 Install the [Ocean Controller](ocean/tutorials/ocean-controller-v2/) and establish the connection between the Ocean SaaS and the cluster.
 
+<details>
+  <summary markdown="span">Click for image</summary>
+
 ![gke-import-connect](https://github.com/user-attachments/assets/45abcc14-406d-42ae-ba79-b247c1d2fbc4)
+
+</details>
 
 To install the Ocean Controller and establish connectivity: 
 
@@ -80,7 +90,7 @@ To install the Ocean Controller and establish connectivity:
     
       curl -fsSL https://spotinst-public.s3.amazonaws.com/integrations/kubernetes/cluster-controller-v2/scripts/init.sh | \
       SPOTINST_TOKEN=$SPOTINST_TOKEN \
-      SPOTINST_ACCOUNT=$SPOTINST_ACCOUNT \
+      SPOTINST_ACCOUNT=$SPOTINST_ACCOUNT Let me know if there is anything else I can help you with.
       SPOTINST_CLUSTER_IDENTIFIER=$SPOTINST_CLUSTER_IDENTIFIER \
       ENABLE_OCEAN_METRIC_EXPORTER=false \
       INCLUDE_METRIC_SERVER=false \
