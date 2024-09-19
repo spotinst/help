@@ -1,25 +1,23 @@
 # Connect an Existing GKE Cluster
 
-Ocean is a managed infrastructure service for Kubernetes that automatically adjusts infrastructure capacity and size to meet the needs of pods, containers, and applications.
-
-In this procedure, you will connect an existing GKE cluster to Ocean using the [Spot Console](http://console.spotinst.com/).
+This topic describes connecting an existing GKE cluster to Ocean using the [Spot Console](http://console.spotinst.com/).
 
 ## Prerequisites
 
-- [Connect your GCP project to Spot](connect-your-cloud-provider/gcp-project). If you have done this already, go on to the next step. If you don't have a GCP project, go to the [Manage Resources](https://console.cloud.google.com/cloud-resource-manager?_ga=2.24189306.-1955943244.1544264785) page.
+- [Connect](connect-your-cloud-provider/gcp-project) your GCP project to Spot. If you don't have a GCP project, see [Manage Resources](https://console.cloud.google.com/cloud-resource-manager?_ga=2.24189306.-1955943244.1544264785).
 - Ensure that billing is enabled for your project: Learn how to [enable billing](https://cloud.google.com/billing/docs/how-to/modify-project).
 - Ensure that you have enabled the Google Kubernetes Engine API: Enable the [GKE API](https://console.cloud.google.com/apis/library/container.googleapis.com?q=kubernetes%20engine&_ga=2.13270391.-1955943244.1544264785).
 
-## Getting Started
+## Access the Cluster Creation Wizard
 
-In the Spot Console's left menu, click **Ocean > Cloud Clusters** and then click **Create Cluster**.
+1. In the left menu of the Spot Console, click **Ocean > Cloud Clusters**. 
+2. Click **Create Cluster**.
 
 <img src="/ocean/_media/gke-create-cluster.png" />
 
-
 ## Step 1: General
 
-1. In the General page, enter a Cluster Name and the Location Type and click the Region where the cluster runs.
+1. Enter a Cluster Name and the Location Type and click the Region where the cluster runs.
    * Cluster Name is the name of the Ocean entity to create. We recommend giving a cluster you import the same name as the original GKE cluster. This will make it easier to identify related entities in each system.
    * Location Type can be either Zonal or Regional.
 2. Select the GKE cluster from which to import the configuration.
@@ -28,9 +26,9 @@ In the Spot Console's left menu, click **Ocean > Cloud Clusters** and then click
 
 ## Step 2: Compute
 
-1. Ocean imports the compute configuration from your GKE cluster and displays it on the Compute page. Confirm or edit the configuration if needed:
+1. Ocean imports the compute configuration from your GKE cluster and displays it on the Compute page. Edit the configuration if needed:
    - Machine Types.
-     All types are selected by default to grant Ocean the most freedom of operation possible. Click **Customize** if you need to adjust them.
+     All types are selected by default to provide Ocean with maximum flexibility. Click **Customize** to adjust them.
    - Resource Limit
      - Max vCPUs
      - Max Memory (GB)
@@ -39,20 +37,20 @@ In the Spot Console's left menu, click **Ocean > Cloud Clusters** and then click
 
 ![gke-machine-types](https://github.com/user-attachments/assets/7a7ca8f0-3180-413a-9d59-ef380309248c)
 
-2. Optionally, you can import all GKE node pools into Ocean as [virtual node groups](ocean/features/launch-specifications). (The default node pool will be automatically imported.)
+2. Optionally, you can import all GKE node pools into Ocean as [virtual node groups](ocean/features/launch-specifications). (The default node pool will be automatically imported).
 
 ![gke-import-node-pools](https://github.com/user-attachments/assets/43e81df7-219f-464b-9cfe-dc29a407214a)
 
 ## Step 3: Connectivity
 
-You can now install the [Ocean Controller](ocean/tutorials/ocean-controller-v2/) and establish the connection between the Ocean SaaS and the cluster.
+Install the [Ocean Controller](ocean/tutorials/ocean-controller-v2/) and establish the connection between the Ocean SaaS and the cluster.
 
 ![gke-import-connect](https://github.com/user-attachments/assets/45abcc14-406d-42ae-ba79-b247c1d2fbc4)
 
 To install the Ocean Controller and establish connectivity: 
 
 1. Create a Spot token (or use an existing one) and copy it to the text box.
-2. Enter the Namespace. The default is spot-system.
+2. Enter the Namespace. The default is **spot-system**.
 
 3. To install the Ocean Kubernetes Controller, use either Helm (the preferred option) or via script. 
 
@@ -95,7 +93,6 @@ To install the Ocean Controller and establish connectivity:
 
      
  >**Note**: Optionally install the [Ocean Prometheus exporter](https://docs.spot.io/ocean/tools-and-integrations/prometheus/README)
-
 
  
 4. Click **Test Connectivity** to confirm that the Ocean Controller is functioning in the cluster. The test takes around two minutes. A green **OK** is displayed when the Ocean Controller pod runs in the AKS cluster and communicates with the Ocean SaaS engine.  
