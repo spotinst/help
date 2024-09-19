@@ -136,7 +136,7 @@ For any changes to the original node pool, contact Spot Support.
 
 ## Step 4: Review
 
-Review all of the Ocean settings you have configured. Click **Create** to finish or use the generated JSON template to create the Ocean cluster using other tooling.
+Review all the Ocean settings you have configured. Click **Create** to finish or use the generated JSON template to create the Ocean cluster using other tooling.
 
 
 Optional: You can manually scale down your existing GKE nodes in migrated node pools so that Ocean provisions pod-driven optimized infrastructure for your existing workload. 
