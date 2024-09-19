@@ -26,16 +26,16 @@ Your workload optimization activities impact the status of the workloads in the 
 
 ![workloads-dashboard-e](https://github.com/user-attachments/assets/f2a7d846-b906-4222-8cca-3db98754e948)
 
-This list displays:  
-
-*  Your right-sizing recommendations per workload, and it lets you drill down to view your right-sizing recommendations per container. 
-*  Recommendations for vCPU and memory right sizing per deployment. Recommended increases are shown with a green up arrow, and recommended decreases are shown with a red Down arrow.  
+This list displays your right-sizing recommendations per workload and lets you drill down per container.
 *  [Right Sizing rules](ocean/features/ocean-cluster-right-sizing-recom-tab?id=automation-rules-list) that are attached to specific workloads.
-*  Workload Status: If the workload is [attached](ocean/features/ocean-cluster-right-sizing-recom-tab?id=attach-a-right-sizing-rule-to-one-or-more-workloads) to a right-sizing rule, the name of the rule appears. The rule has one of the following workload (colored) optimization statuses:
+*  Workload Status: If the workload is [attached](ocean/features/ocean-cluster-right-sizing-recom-tab?id=attach-a-right-sizing-rule-to-one-or-more-workloads) to a right-sizing rule, the name of the rule appears under **Rules**. The rule has one of the following workload (colored) optimization statuses:
    *  Green: The Workload is fully optimized, and no action is required.
    *  Orange: The Workload has optimization limitations (constrained by settings). 
    *  Gray: The rule for the workload has been attached but is out of schedule.
- * Potential monthly max. Savings if you adopt these recommendations.
+*  Workload type and namespace.
+*  Recommendations for vCPU and memory right sizing per deployment. Recommended increases are shown with a green up arrow, and recommended decreases are shown with a red Down arrow.  
+*  If the workload is configured with HPA, **ON** is displayed under HPA.
+* Potential monthly max. Savings if you adopt these recommendations.
 
    > **Notes**:
    > - Red status: The Workload is not optimized.
