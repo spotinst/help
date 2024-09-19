@@ -8,7 +8,7 @@ To view a comprehensive breakdown of your cloud cluster costs, go to the Cost An
 
 ## Ocean Network Cost Banner
 
-Cloud service provider relevance: <font color="#FC01CC">EKS</font>  
+Cloud service provider relevance: <font color="#FC01CC">EKS</font>   
 
 The Ocean Network Cost banner is displayed in the Cost Analysis tab above the Cost Over Time graph and contains an estimate of the network usage costs as follows: 
 
