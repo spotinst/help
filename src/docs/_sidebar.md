@@ -12,6 +12,7 @@
   - [Optimize Your Cloud](connect-your-cloud-provider/optimize)
   - [Analyze Your Costs](connect-your-cloud-provider/cost-analysis/)
     - [Save Analysis Reports](connect-your-cloud-provider/cost-analysis/save-reports)
+  - [Release Notes - Dashboard](connect-your-cloud-provider/release-notes-dashboard/)
 - [**Elastigroup**](elastigroup/)
 - [**Elastigroup Stateful Node**](managed-instance/)
 - [**Ocean**](ocean/)
