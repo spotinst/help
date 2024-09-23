@@ -44,7 +44,7 @@ Click on the down arrow for a batch to view information **per Virtual Node Group
   * No update required (blue): The Virtual Node Group did not require an update. Hover over the status icon for more information.
   * Failed (red): Update failed at Virtual Node Group level.
   
->**Tip**: Use the Updates History filter to search for auto-update runs by Virtual Node Groups, Status, or Trigger Type.
+>**Tip**: Use the Updates History filter to search for auto-update runs by Status or Trigger Type.
 >**Note**: See also [Auto Update Troubleshooting](https://docs.spot.io/ocean/features/ami-auto-update-eks-ui?id=auto-update-troubleshooting)
 
 The configured schedules are displayed at the bottom of the screen with these attributes:
