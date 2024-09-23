@@ -140,7 +140,7 @@ By monitoring the following key metrics, you can understand how Ocean scales.
 
 * Ocean controller. [More details](https://docs.spot.io/ocean/tutorials/ocean-controller-v2/)
 * Ocean network client. [More details](https://docs.spot.io/ocean/tutorials/install-network-client-v2)
-* Ocean metric exporter. [More details](https://docs.spot.io/ocean/tools-and-integrations/prometheus/scrape)
+* Ocean metric exporter. [More details](https://docs.spot.io/ocean/tools-and-integrations/prometheus/scrape?id=install-the-exporter)
 * kube-state-metrics service.
 * Prometheus server.
 
