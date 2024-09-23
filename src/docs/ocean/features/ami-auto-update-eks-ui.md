@@ -31,7 +31,7 @@ The Updates History list for completed runs is displayed at the top with these a
   * Completed (green): All Virtual Node Groups in the batch were updated successfully.
   * Partially completed (orange): Either at least one Virtual Node Group did not require updates or the update failed.
   * No update required (blue): No Virtual Node Groups required update.
-  * Failed (red): Either the whole update has failed (click the tooltip on the icon for more information), or all the Virtual Node Groups could not be updated (see the error description in the list for the specific Virtual Node Group.
+  * Failed (red): Either the whole update has failed (click the tooltip on the icon for more information), or all the Virtual Node Groups could not be updated (see the issue description in the list for the specific Virtual Node Group).
 
 Click on a batch down arrow to view the status of each Virtual Node Group in the batch:
 
@@ -42,7 +42,7 @@ Click on a batch down arrow to view the status of each Virtual Node Group in the
 * Status:
   * Completed (green): The Virtual Node Group update was successful.
   * No update required (blue): The Virtual Node Group did not require an update. Hover over the status icon for more information.
-  * Failed (red): Update failed at Virtual Node Group level
+  * Failed (red): Update failed at Virtual Node Group level.
   
 >**Tip**: Use the Updates History filter to search for auto-update runs by Virtual Node Groups, Status, or Trigger Type.
 >**Note**: See also [Auto Update Troubleshooting](https://docs.spot.io/ocean/features/ami-auto-update-eks-ui?id=auto-update-troubleshooting)
