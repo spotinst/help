@@ -80,6 +80,45 @@ This tab displays:
   * CPU resources saved in vCPU Hours.
   * Memory resources saved in GiB Hours.
   * GPU resources saved in GPU Hours.
+ 
+ ## Ocean Savings from Reverting to a Lower Cost Node 
+
+This process is applied to nodes with underutilized compute resources that cannot be scaled down from the cluster's set of nodes. For example, suppose a pod was initially placed on a more expensive node due to resource constraints. In that case, Ocean Autoscaler can replace it with a less expensive node when it becomes available, consequently saving costs. This tab lets you see how much you save from this dynamic resource allocation. 
+
+Ocean savings for reverting to a lower-cost node are calculated from the difference in price between the old node and the new node. For more information, see [Revert to Lower Cost](https://docs.spot.io/ocean/features/revert-to-lower-cost-node?id=revert-to-lower-cost-node) Node. 
+
+To view these savings, click the **Revert to Lower Cost** tab (unless already displayed). 
+
+NEW SCREEN REQUIRED 
+
+This tab displays:
+
+*   Nodes reverted to lower cost: If one or more nodes have been reverted to lower cost, the number of reverted nodes appears. Click to view the number of nodes reverted to lower cost in the selected time range in the Revert to Lower Cost window. View the types and costs of the nodes, etc).
+
+*   Avg. percentage hourly cost saved: Avg. percentage cost reduction from reverting to the new VM type [SUM (% hourly cost saved)].
+
+     * Pie chart - Virtual Node Group percentage breakdown for nodes.
+      
+    List showing replacement information: an entry for each reverted node is listed with these details:
+      
+     * Node pools for the original and reverted nodes.
+     * Number nodes in the old and new node pools.
+     * Hourly cost of the original and reverted nodes.
+     * Hourly cost saved as a percentage: Cost reduction from converting to the new VM type: [old hourly cost - SUM (new hourly cost) * 100]
+     * The Virtual Node Group's name (click the link for a listed VNG to display your custom VNG details).
+     * Scale-down timestamp in format MM/DD/YYYY HH: MM: SS
+ 
+<details>
+   <summary markdown="span">View image</summary>
+
+   <img src="  NEW SCREEN REQUIRED  "/>   NEW SCREEN REQUIRED
+
+</details> 
+
+*   Resource savings from reverting to lower cost in the following units:  
+     * CPU resources saved in vCPU Hours. 
+     * Memory resources saved in GiB Hours. 
+     * GPU resources saved in GPU Hours. 
 
 ## Ocean Managed Nodes and Resources Panel
 
