@@ -31,9 +31,9 @@ The Updates History list for completed runs is displayed at the top with these a
   * Completed (green): All Virtual Node Groups in the batch were updated successfully.
   * Partially completed (orange): Either at least one Virtual Node Group did not require updates or the update failed.
   * No update required (blue): No Virtual Node Groups required update.
-  * Failed (red): The batch update failed. Hover over the error icon for more information.
+  * Failed (red): Either the whole update has failed (click the tooltip on the icon for more information), or all the Virtual Node Groups could not update (see the error description in the list for the specific Virtual Node Group.
  * Status (per cluster):
-  * Failed (red - with no down arrow for Virtual Node Groups): Cluster failed. Hover over the error icon for more information.
+  * Failed (red - with no down arrow): Cluster failed. Hover over the error icon for more information.
 
 Click on a batch down arrow to view the status of each Virtual Node Group in the batch:
 
