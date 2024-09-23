@@ -63,7 +63,7 @@ By monitoring the following key metrics, you can understand how Ocean scales.
 * Cluster resources utilization - TBD
 * Cluster cost during the selected aggregation interval. Source: Ocean.
 * Top 5 workloads with maximum cost during the selected aggregation interval. Source: Ocean.
-* Cluster cost’s potential savings suggested by the right-sizing feature. Source: Ocean.
+* Cluster cost’s potential savings are suggested by the right-sizing feature. Source: Ocean.
 
 ### Scaling
 
@@ -138,7 +138,7 @@ By monitoring the following key metrics, you can understand how Ocean scales.
 
 ## Cluster Dependencies / Prerequisites
 
-* Ocean controller. [More details](https://docs.spot.io/ocean/overview-kubernetes)
+* Ocean controller. [More details](https://docs.spot.io/ocean/tutorials/ocean-controller-v2/)
 * Ocean network client. [More details](https://docs.spot.io/ocean/tutorials/install-network-client-v2)
 * Ocean metric exporter. [More details](https://docs.spot.io/ocean/tools-and-integrations/prometheus/scrape)
 * kube-state-metrics service.
