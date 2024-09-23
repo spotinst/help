@@ -144,23 +144,6 @@ Click **Restore to Default** to restore the instance types in a Virtual Node Gro
 
 In the VM Selection list, view each VM type's currently selected size, vCPU, Memory (GiB), and GPU units.
 The Advanced VM Size Filtering controls to the right of the VM Selection list let you filter these attributes for the VMs:
-  * Upper and lower limits for No. Of vCPUs (up to 256).
-  * Upper and lower limits for the Memory (up to 1024 GiB).
-  * Upper and lower limits for the No. Of GPUs (up to 8).
-  * GPU type.
-  * Exclude Series: You can exclude any series by clicking Exclude in the VM Selection List row for that series (or by typing the series in the Exclude Series field. The series then appears in the Exclude Series filter in the filtering controls.
-  * Include Series: You can include VMs in the Include Series field. For example, to select a GPU type, include the series and VM types.
-VM Types.
-  * Architectures (values taken from your Virtual Node Group template).
-  * Disk performance (standard or premium).
-  * Minimum no of data disks (up to 64).
-  * Minimum no. of NICs (up to 16).
-  * Turn Accelerated networking on or off.
-  * Click Apply to filter the VM Selection list. All your filters are applied to the VM list. A color-coded bar appears above the list to provide a rating for the applied filter.
-
-## Instance Parameters Available via API
-
-See [Spot API](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecCreate)
 
 * Categories: One of the following: Accelerated_computing, Compute_optimized, General_purpose, Memory_optimized, Storage_optimized".
 * Disk Types: NVMe, EBS, SSD, HDD.
@@ -178,6 +161,8 @@ See [Spot API](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchS
 * Max. vCPU: Maximum number of vCPUs available.
 * Min. vCPU: Minimum number of vCPUs available.
 * Min. ENIs: Minimum number of network interfaces (ENIs).
+
+You can also configure these parameters via the [Spot API](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecCreate)
 
 ## Edit a Virtual Node Group
 
