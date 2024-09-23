@@ -38,7 +38,7 @@ Click on the down arrow for a batch to view information **per Virtual Node Group
 * Virtual Node Group: Click the link to view the Virtual Node Group attributes.
 * Type: Security patches, Kubernetes minor version, or both.
 * Old AMI/New AMI: Version numbers before and after the run.
-* Roll ID: This is listed if the cluster was rolled after the auto-update. Click the link to view Roll ID attributes.
+* Roll ID: This is listed if the Virtual Node Group was rolled after the auto-update. Click the link to view Roll ID attributes.
 * Status:
   * Completed (green): The Virtual Node Group update was successful.
   * No update required (blue): The Virtual Node Group did not require an update. Hover over the status icon for more information.
