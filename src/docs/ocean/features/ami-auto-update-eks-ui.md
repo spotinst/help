@@ -33,7 +33,7 @@ The Updates History list for completed runs is displayed at the top with these a
   * No update required (blue): No Virtual Node Groups required update.
   * Failed (red): Either the whole update has failed (click the tooltip on the icon for more information), or all the Virtual Node Groups could not be updated (see the issue description in the list for the specific Virtual Node Group).
 
-Click on a batch down arrow to view the status of each Virtual Node Group in the batch:
+Click on the down arrow for a batch to view information **per Virtual Node Group**:
 
 * Virtual Node Group: Click the link to view the Virtual Node Group attributes.
 * Type: Security patches, Kubernetes minor version, or both.
