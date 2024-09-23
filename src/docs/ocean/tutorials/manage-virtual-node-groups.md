@@ -18,7 +18,9 @@ An Ocean cluster is up and running.
 
 The Virtual Node Groups tab lets you track live data per Virtual Node Group. You can review the resource allocation, number of nodes and pods running, and other information about the Virtual Node Groups.
 
-The Virtual Node Groups Summary List can display the following columns:
+ADD SCREENSHOT HERE
+
+The Virtual Node Groups Summary List displays the following columns:
 
 * ID: The identification code of the VNG.
 * Name: The user-defined name of the VNG. (If a VNG was defined without a time, it will appear in this column as Unnamed Virtual Node Group.)
@@ -43,8 +45,8 @@ The Virtual Node Groups Summary List can display the following columns:
 
 2. Select one of these options:
    *  Click **Configure Manually**
-   *  For AWS Kubernetes only, select to import from an existing [Autoscaling Group](ocean/tutorials/manage-virtual-node-groups?id=create-a-vng-from-an-asg)
-   *  For EKS only, select to import from an existing [node group](NEED LINK)
+   *  For AWS Kubernetes only, select to import from an existing [Autoscaling Group](ocean/tutorials/manage-virtual-node-groups?id=create-a-vng-from-an-asg).
+   *  For EKS only, select to import from an existing node group.
 3. Click **Continue**.
 
 When you select Import, a one-time process occurs. Import copies values from the cloud provider node group entity to the Ocean configuration. Later, there is no active connection between these two entities. Ocean will provision new VMs, not as part of a managed Kubernetes service of node group entities.
@@ -176,11 +178,11 @@ You can also review and edit the configuration directly in JSON format in the co
 
 <img src="/ocean/_media/tutorials-manage-vngs-07.png" />
 
-In this view, you can see the full JSON configuration of the VNG. If you would like to edit the JSON, just click Edit Mode, make your changes, and click Save.
+In this view, you can see the full JSON configuration of the VNG. To edit the JSON, click **Edit** Mode and make changes.
 
 ## Delete a VNG
 
 In the Virtual Node Groups summary list, check the Virtual Node Groups to delete and click **Delete**.
 OR
-If you are already configuring a Virtual Node Group, click *8Delete VNG** at the bottom.
+If you are already configuring a Virtual Node Group, click **Delete VNG**.
 
