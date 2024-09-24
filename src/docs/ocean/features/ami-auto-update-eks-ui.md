@@ -7,7 +7,7 @@ You can either run an AMI auto-update immediately or schedule one. For both imme
 
 >**Note**: You can optionally roll the cluster after the AMI auto-update to align the cluster infrastructure with the new AMI.
 
-## Access the AMI Auto Update Tab
+## Access the AMI Auto Update Tab 
 
 To access the AMI Auto Update tab:
 
@@ -21,30 +21,31 @@ If you have not run or scheduled an auto-update in this cluster, the AMI Auto Up
 
 Otherwise, the screen will display the history of the previous runs and the currently configured schedules.
 
-![auto-update-eks-full-screen-ud1](https://github.com/user-attachments/assets/c2a70b0e-43e7-46c5-a608-4e696df3bc2a)
+![updates-history-schedules](https://github.com/user-attachments/assets/8d8fccd8-f110-47db-a1f9-0fce974764f8)
 
-The Updates History list for completed runs is displayed at the top with these attributes:
+The Updates History list for completed runs is displayed at the top with these attributes **per batch**:
 
 * Execution date/time.
-* Update Type: Security patches, Kubernetes minor version, or both.
-* Status:
-  * Success (green): The update was successful.
-  * No update required (blue): Hover over the status icon for more information.
-  * Error (red): Error at Virtual Node Group level: The update has failed for this specific VNG. Hover over the error icon for more information.
-  * Cluster Error (red): The cluster update has failed. Hover over the cluster error icon for more information.
-
->**Note**: See also [Auto Update Troubleshooting](https://docs.spot.io/ocean/features/ami-auto-update-eks-ui?id=auto-update-troubleshooting).
-
-* Old AMI/New AMI: version numbers before and after the run.
-* Virtual Node Group: Click the link to view the Virtual Node Group attributes.
-
->**Note**: A Virtual Node Group is listed only if an update was needed.
-
-* Roll ID: Listed if the cluster was rolled after auto-update. Click the link to view Roll ID attributes.
 * Trigger Type: Manual (auto-update was run immediately) or Scheduled (auto-update was scheduled and run).
+* Status (per batch):
+  * Completed (green): All Virtual Node Groups in the batch were updated successfully.
+  * Partially completed (orange): Either at least one Virtual Node Group did not require updates or the update failed.
+  * No update required (blue): No Virtual Node Groups required update.
+  * Failed (red): Either the whole update has failed (click the tooltip on the icon for more information), or all the Virtual Node Groups could not be updated (see the issue description in the list for the specific Virtual Node Group).
 
+Click on the down arrow for a batch to view information **per Virtual Node Group**:
 
->**Tip**: Use the Updates History filter to search for auto-update runs by Virtual Node Groups, Status, or Trigger Type.
+* Virtual Node Group: Click the link to view the Virtual Node Group attributes.
+* Type: Security patches, Kubernetes minor version, or both.
+* Old AMI/New AMI: Version numbers before and after the run.
+* Roll ID: This is listed if the Virtual Node Group was rolled after the auto-update. Click the link to view Roll ID attributes.
+* Status:
+  * Completed (green): The Virtual Node Group update was successful.
+  * No update required (blue): The Virtual Node Group did not require an update. Hover over the status icon for more information.
+  * Failed (red): Update failed at Virtual Node Group level. Hover over the status icon for more information.
+  
+>**Tip**: Use the Updates History filter to search for auto-update runs by Status or Trigger Type.
+>**Note**: See also [Auto Update Troubleshooting](https://docs.spot.io/ocean/features/ami-auto-update-eks-ui?id=auto-update-troubleshooting)
 
 The configured schedules are displayed at the bottom of the screen with these attributes:
 
@@ -85,7 +86,7 @@ To create or edit an auto-update schedule:
 
 1. In the AMI Auto Update tab, click **Schedule Update** to create an auto-update schedule if no configured schedules exist. If at least one configured schedule exists, click Schedule Update from the Actions list below the table. 
 
->**Note**: To edit an existing auto-update schedule, click Edit in the entry for the schedule.
+>**Note**: To edit an existing auto-update schedule, click the pencil icon in the entry for the schedule.
 
 ![schedule--update-ami-dialog-box](https://github.com/user-attachments/assets/76858a5d-8713-4e0f-9129-aee65c401128)
 
@@ -105,19 +106,22 @@ To create or edit an auto-update schedule:
 
 ## Auto Update Troubleshooting
 
+ <details>
+   <summary markdown="span">Click to view</summary>
+
 ### Auto Update not Successful Due to Virtual Node Group Issues
 
 These are the errors per Virtual Node Group:
 
 * The VNG was in Shutdown Hours: When the cluster is in Shutdown Hours, the Ocean Controller is not running, so the AMI Auto Update cannot be triggered.
-* The VNG is already using the most updated AMI, so no update is required. The Virtual Node Group is set with the most updated image.
+* The VNG already uses the most updated AMI, so no update is required. The Virtual Node Group is set with the most updated image.
 * The VNG is not set with an imageId: The Virtual Node Group image id field is 'null', so no update is required.
 * The VNG has double AMIs, which is not supported by AMI Auto Updates: EKS AMI Auto Update does not support double AMI configuration. Manually update these Virtual Node Groups.
 * The control plane version is lower than the VNG image version: There is no need for the update. Make sure to upgrade your control plane or change the Virtual Node Group image to the same version as the EKS cluster control plane.
 * Not supported: The new image's Kubernetes version is more than two versions ahead of the cluster’s. AWS typically allows the worker nodes to be at the same version as the control plane or up to two minor versions behind. For example, if your control plane runs Kubernetes version 1.20, your worker nodes can run versions 1.20, 1.19, or 1.18.
-* No latest image was found: The Virtual Node Group is using the most updated image.
-* Not supported: The image set for the Virtual Node Group is not an EKS-optimized image: EKS AMI Auto Update does not support non-EKS-optimized images. Manually update these Virtual Node Groups.
-* Not supported: The VNG image is private: EKS AMI Auto Update does not support private images. Manually update these Virtual Node Groups.
+* No latest image was found: The Virtual Node Group uses the most updated image.
+* Not supported: The image set for the Virtual Node Group is not an EKS-optimized image. EKS AMI Auto Update does not support non-EKS-optimized images. Manually update these Virtual Node Groups.
+* Not supported: The VNG image is private. EKS AMI Auto Update does not support private images. Manually update these Virtual Node Groups.
 * The Kubernetes version for the VNG image was not found: EKS AMI Auto Update failed to get the Kubernetes version of the image's version. Contact the Support Team.
 * The architecture type for the VNG image was not found: EKS AMI Auto Update failed to get the architecture type of the image's version. Contact the Support Team.
 * The control plane or VNG image minor version was not found: EKS AMI Auto Update failed to get the control plane or Virtual Node Group image minor version.  Contact the Support Team.
@@ -127,4 +131,6 @@ These are the errors per Virtual Node Group:
 
 ### Auto Update not Successful Due to Cluster Issues
 
-For example, an AMI auto-update might fail for the entire cluster if the Ocean Controller was not reported. The console displays this as a “Cluster Error:”
+For example, an AMI auto-update might fail for the entire cluster if the Ocean Controller was not reported. The console displays this as a “Failed”
+
+ </details>
