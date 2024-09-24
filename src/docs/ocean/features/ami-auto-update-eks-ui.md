@@ -42,7 +42,7 @@ Click on the down arrow for a batch to view information **per Virtual Node Group
 * Status:
   * Completed (green): The Virtual Node Group update was successful.
   * No update required (blue): The Virtual Node Group did not require an update. Hover over the status icon for more information.
-  * Failed (red): Update failed at Virtual Node Group level.
+  * Failed (red): Update failed at Virtual Node Group level. Hover over the status icon for more information.
   
 >**Tip**: Use the Updates History filter to search for auto-update runs by Status or Trigger Type.
 >**Note**: See also [Auto Update Troubleshooting](https://docs.spot.io/ocean/features/ami-auto-update-eks-ui?id=auto-update-troubleshooting)
