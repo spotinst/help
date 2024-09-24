@@ -131,6 +131,6 @@ These are the errors per Virtual Node Group:
 
 ### Auto Update not Successful Due to Cluster Issues
 
-For example, an AMI auto-update might fail for the entire cluster if the Ocean Controller was not reported. The console displays this as a “Cluster Error:”
+For example, an AMI auto-update might fail for the entire cluster if the Ocean Controller was not reported. The console displays this as a “Failed”
 
  </details>
