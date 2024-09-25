@@ -8,12 +8,12 @@
 
 ## Stateful Node
   
-* **STN-0002: September 25th, 2024**: Elastigroup can now change the import flow to keep the virtual machine's status after an import is complete, depending on whether the original virtual machine is running or stopped. [Learn more](managed-instance/azure/getting-started/import-stateful-node?id=import-process-steps)
+* **STN-0003: September 25th, 2024**: Elastigroup can now change the import flow to keep the virtual machine's status after an import is complete, depending on whether the original virtual machine is running or stopped. [Learn more](managed-instance/azure/getting-started/import-stateful-node?id=import-process-steps)
 
 <details>
   <summary markdown="span">July 2024</summary>
   
-* **STN-0003: July 10th, 2024**: You can now select VM sizes based on specific attributes that utilize the best markets in the selected ranges. [Learn more](managed-instance/azure/getting-started/create-stateful-node?id=vm-sizes)
+* **STN-0002: July 10th, 2024**: You can now select VM sizes based on specific attributes that utilize the best markets in the selected ranges. [Learn more](managed-instance/azure/getting-started/create-stateful-node?id=vm-sizes)
 
 </details><br>
 
