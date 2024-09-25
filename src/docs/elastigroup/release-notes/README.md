@@ -13,7 +13,7 @@
 <details>
   <summary markdown="span">July 2024</summary>
   
-* **STN-0002: July 10th, 2024**: You can now select VM sizes based on specific attributes that utilize the best markets in the selected ranges. [Learn more](managed-instance/azure/getting-started/create-stateful-node?id=vm-sizes)
+* **STN-0003: July 10th, 2024**: You can now select VM sizes based on specific attributes that utilize the best markets in the selected ranges. [Learn more](managed-instance/azure/getting-started/create-stateful-node?id=vm-sizes)
 
 </details><br>
 
