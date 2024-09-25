@@ -1,6 +1,8 @@
 # Eco AWS Policy
 
-The Eco policy is shown below. The policy below is relevant only for customers who have not yet signed a contract for Eco. If you have signed a contract and need the Eco policy, please contact Spot Support.
+The Eco policy shown below is the read policy for analysis and is relevant only if you have not yet signed a contract for Eco. 
+
+Contact Spot Support if you have signed a contract and need the full Eco policy.
 
 ```json
 { 
