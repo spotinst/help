@@ -32,7 +32,7 @@ In both cases, you can activate your license via the link to Support, which appe
 
 ## Bar Chart
 
-The bar chart shows the cost of your workload over time. The default display breaks down each bar into different namespaces and represents the cost per day over the last week. You can modify the time period and groupings shown according to your needs. See Grouping Options below for more information.
+The bar chart shows the cost of your workload over time. The default display breaks down each bar into different namespaces and represents the daily cost over the last week. Modify the time period and groupings according to your needs. See Grouping Options below for more information.
 
 <img src="/ocean/_media/cost-analysis-5.png" />
 
@@ -90,7 +90,7 @@ To select a different grouping, click **Group By** and then select one of the fo
 
 For ECS: The default grouping is by service. You can optionally click **Group By** and then select **Tag**.
 
-Once you have chosen a grouping, choose the Key from the list of keys in your cluster.
+Once you have selected a grouping, choose the Key from the list of keys in your cluster.
 
 The example below shows the grouping by Label (Resource) with Key equal to `Family`. The table details all the values for the Label Key `Family` in the cluster.
 
