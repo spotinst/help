@@ -1,8 +1,8 @@
 # Manage AWS Virtual Node Groups
 
-Cloud service provider relevance: AWS Kubernetes and EKS
+Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>
 
-This topic describes how to work with Virtual Mode Groups for AWS Kubernetes.
+This topic describes how to work with Virtual Node Groups for AWS Kubernetes.
 
 [Virtual Node Groups](ocean/features/launch-specifications.md) (VNGs) provide a single layer of abstraction that enables you to manage different types of workloads on the same cluster.
 
@@ -23,8 +23,8 @@ ADD SCREENSHOT HERE
 The Virtual Node Groups Summary List displays the following columns:
 
 * ID: The identification code of the VNG.
-* Name: The user-defined name of the VNG. (If a VNG was defined without a time, it will appear in this column as Unnamed Virtual Node Group.)
-* Resource Allocation: Percent of defined resources (CPU, Memory, and GPU) currently used by the VNG.
+* Name: The user-defined name of the VNG. (If a VNG was defined without a name, it will appear in this column as Unnamed Virtual Node Group.)
+* Resource Allocation: Percent of defined resources (CPU, Memory, and GPU) currently running on nodes from this VNG.
 * Running Pods: Number of pods the VNG currently uses.
 * Nodes: Number of nodes the VNG currently uses.
 * Node Labels: Number of node labels the VNG uses.
