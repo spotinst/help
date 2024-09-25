@@ -26,11 +26,11 @@ When you connect your cloud account to Spot, you decide the type of account you'
 
 ### Connect AWS
 
-You can connect your AWS account as a:
+You can connect your AWS account:
 * **Linked account** is a regular spot account. You use it to optimize costs and usage by using spot instances and taking advantage of many of Spot's features. Choose **Linked Account** to use Elastigroup or Ocean.
   
-     You can connect your AWS account:
-     * **Automatically** using CloudFormation stack. This is the quicker option, which chooses a policy and role, and associates them for you.
+     Linked accounts can be connected:
+     * Automatically using CloudFormation stack. This is the quicker option, which chooses a policy and role, and associates them for you.
      * [Manually](connect-your-cloud-provider/first-account/aws-manually) using the AWS console to choose the policy and role, and associate them. 
   
 * **Management account** is required to use Eco. A management account lets Spot analyze your cost and usage reports and helps you save even more on your cloud expenses. [Connect to Eco](eco/getting-started/connect-your-aws-account).
@@ -46,7 +46,7 @@ You can connect your GCP account:
 
 ### Connect Azure
 
-You can connect your Azure account as a:
+You can connect your Azure account:
 * **Subscription** is required to use Elastigroup or Ocean. [Connect your Azure account to Spot](connect-your-cloud-provider/first-account/azure).
   
 * **Billing account** is required to use Eco. A billing account lets Spot analyze your cost, usage, and commitment data, and helps you save even more on your cloud expenses. [Connect to Eco](connect-your-cloud-provider/azure-ea-account).
