@@ -71,6 +71,6 @@ You can connect your Azure account:
 
 Once you have successfully completed the setup and connected your cloud service provider to Spot, you will see the Spot Dashboard. 
 
-> Note: It can take up to 24 hours for Spot to get all the data to display in the Dashboard.
-
 The [Dashboard](connect-your-cloud-provider/dashboard) shows a compute overview of your entire organization. You can see insights and recommendations, potential savings, and an overview of savings for the Spot products you are using, including Elastigroup, Ocean, and Eco.
+
+> Note: It can take up to 24 hours for Spot to get all the data to display in the Dashboard.
