@@ -4,8 +4,8 @@
 
 The Spot FinOps suite helps you manage and control your cloud expenses. You connect your cloud accounts to:
 
-* Billing Engine so Spot can collect cost data.
-* Cost Intelligence to collect inventory data and provide an end-to-end solution.
+* [Billing Engine](connect-your-cloud-provider/finops.md#connect-billing-data-for-billing-engine) so Spot can collect cost data.
+* [Cost Intelligence](connect-your-cloud-provider/finops.md#connect-your-subaccount-resource-data-for-cost-intelligence) to collect inventory data and provide an end-to-end solution.
 
 Billing Engine and Cost Intelligence work together. They are powered by data from multiple cloud and software vendors:
 
