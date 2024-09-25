@@ -20,10 +20,6 @@ This procedure describes how to import the configuration of an existing Azure st
 
 4. Click the virtual machine you want to import and click **Review & Import**.
 
-### Choose a Virtual Machine
-
-In the table, click the virtual machine you want to import and click Review & Import.
-
 <img src="/elastigroup/_media/azure-import-stateful-6.png" />
 
 **Note: Spot does not support generalized virtual machines nor ephemeral storage virtual machines.**
