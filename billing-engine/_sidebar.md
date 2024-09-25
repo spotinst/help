@@ -7,7 +7,7 @@
     - [Connect Azure](billing-engine/get-started/connect-azure)
     - [Connect GC](billing-engine/get-started/connect-google)
   - [Release Notes](billing-engine/release-notes/) 
-  - [Tutorials](billing-engine/get-started/)
+  - [Tutorials](billing-engine/tutorials/)
     - [Analysis](billing-engine/tutorials/analysis)
     - [Families](billing-engine/tutorials/families)
     - [Allocation Assignments](billing-engine/tutorials/allocation-assignments)
