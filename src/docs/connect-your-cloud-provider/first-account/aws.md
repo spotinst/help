@@ -106,7 +106,7 @@ After you've [created your first Spot organization](connect-your-cloud-provider/
    This step can take a few minutes. When the stack is successfully created, a message will open and you will be redirected to the new account in the Spot console.  
 
 
-### Step 1.6 Create IAM Policy
+6. Create an IAM policy. 
 
 In this step you create the policy that the Spot role will use to manage resources in your AWS account. Complete this step in the order of the instructions in the wizard.
 
