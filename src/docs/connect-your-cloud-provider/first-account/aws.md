@@ -23,7 +23,7 @@ After you've [created your first Spot organization](connect-your-cloud-provider/
 
 4. Set up the permissions:
 
-    * **Default Permissions** provides the default IAM policy.
+    * **Default Permissions** uses the default IAM policy.
     * **Customize Permissions** lets you select specific products and integrations you want to enable in your account. Each product or integration contains a list of actions required for it to operate in the console.
       
       <details>
@@ -76,7 +76,7 @@ After you've [created your first Spot organization](connect-your-cloud-provider/
 
   4. Set up the permissions:
 
-      * **Default Permissions** provides the default IAM policy.
+      * **Default Permissions** uses the default IAM policy.
       * **Customize Permissions** lets you select specific products and integrations you want to enable in your account. Each product or integration contains a list of actions required for it to operate in the console.
       
         <details>
