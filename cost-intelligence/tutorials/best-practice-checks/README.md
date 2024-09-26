@@ -5,11 +5,11 @@ Cloud service providers have many options to customize your deployment. Using be
 * Beneficial features that are hidden in an API.
 * Cost-effective deployment options.
 
-Select a cloud provider, account, and date.
+Select one or more cloud providers, accounts, and a date.
 
 You can click on a card to filter the checks and failed resources by importance or category. For example, click on Availability Category to see a list of the failed resources for Availability.
 
-![bestpracticechecks1](https://github.com/user-attachments/assets/afa552c4-4dfa-4278-b994-61af1821098e)
+![bestpracticechecks1](https://github.com/user-attachments/assets/16a1c43f-708a-46ee-83b3-8c9b345914b8)
 
 ## Categories
 
