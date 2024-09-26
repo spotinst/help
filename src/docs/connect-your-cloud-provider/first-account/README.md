@@ -37,8 +37,8 @@ You can connect your AWS account:
 * **Linked account** is a regular spot account. You use it to optimize costs and usage by using spot instances and taking advantage of many of Spot's features. Choose **Linked Account** to use Elastigroup or Ocean.
   
      Linked accounts can be connected:
-     * Automatically using CloudFormation stack. This is the quicker option, which chooses a policy and role, and associates them for you.
-     * [Manually](connect-your-cloud-provider/first-account/aws-manually) using the AWS console to choose the policy and role, and associate them. 
+     * [Automatically](connect-your-cloud-provider/first-account/aws?id=connect-automatically) using CloudFormation stack. This is the quicker option, which chooses a policy and role, and associates them for you.
+     * [Manually](connect-your-cloud-provider/first-account/aws?id=connect-manually) using the AWS console to choose the policy and role, and associate them. 
   
 * **Management account** is required to use Eco. A management account lets Spot analyze your cost and usage reports and helps you save even more on your cloud expenses. [Connect to Eco](eco/getting-started/connect-your-aws-account).
 * **FinOps products** to connect your account to Cost Intelligence or Billing Engine. This gives you advanced analysis, rating, and reporting on your cloud accounts.
