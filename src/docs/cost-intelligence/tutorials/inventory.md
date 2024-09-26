@@ -2,7 +2,7 @@
 
 Cost Intelligence provides detailed inventory reports for a variety of services for both AWS and Azure cloud services. These reports allow you to view your entire infrastructure by service, and with the snapshot feature, you’re able to view snapshots by service by day. 
 
-![inventory-1](https://github.com/spotinst/help/assets/106514736/2d328ca7-3146-4aaa-97fa-d089dcc8f203)
+![inventory](https://github.com/user-attachments/assets/6a22447c-8b12-4fc2-a029-ade322ef3e59)
 
 * **Provider**: Select the cloud provider. 
 * **Account**: Select the account you wish to view a snapshot of. 
