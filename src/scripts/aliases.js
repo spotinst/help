@@ -1828,6 +1828,9 @@ export const aliases = (() => {
 
     "/administration/notification-center/create-a-notification-policy":
       "/administration/notification-center/event-policies/create",
+
+    "/connect-your-cloud-provider/first-account/aws-manually":
+      "/connect-your-cloud-provider/first-account/aws",
   };
 
   for (let [key, value] of Object.entries(map)) {
