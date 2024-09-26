@@ -2,77 +2,68 @@
 
 Connect your cloud account to Spot to get the most out of Spot's optimization and cost-saving features.
 
-## Step 1: Create Your Spot Organization 
+1. Create your Spot organization
 
-Sign in to [Spot](https://spot.io/) or [start a free trial](https://console.spotinst.com/spt/auth/signUp).
+   Sign in to [Spot](https://spot.io/) or [start a free trial](https://console.spotinst.com/spt/auth/signUp).
 
-Keep in mind that the company name you enter will be your organization name in Spot. This can be the company you represent or any other name you would like to use as your organization name in Spot.
+   Keep in mind that the company name you enter will be your organization name in Spot. This can be the company you represent or any other name you would like to use as your organization name in Spot.
 
- <details>
-   <summary markdown="span">View image</summary>
+    <details>
+    <summary markdown="span">View image</summary>
 
-  <img width=400 src="https://github.com/user-attachments/assets/9e025524-bd58-4c6c-8b80-7e6b6e11ca04">
+    <img width=400 src="https://github.com/user-attachments/assets/9e025524-bd58-4c6c-8b80-7e6b6e11ca04">
 
-   </details>
+    </details>
 
-## Step 2: Select a Cloud Provider
+2. Select a cloud provider
 
-Select the cloud service provider to connect to your Spot account and click **Next**.
+   Select the cloud service provider to connect to your Spot account and click **Next**.
 
- <details>
-   <summary markdown="span">View image</summary>
+   If you have multiple accounts with a cloud provider, you can connect them all later, after you have connected your first account. You can also connect accounts from multiple cloud providers.
 
-  <img width=600 src="https://github.com/user-attachments/assets/e7c57da8-e690-476f-a628-0e09c079dbfa">
-
-   </details>
-
-If you have multiple accounts with a cloud provider, you can connect them all later, after you have connected your first account. You can also connect accounts from multiple cloud providers.
-
-## Step 3: Connect Your Cloud Account 
+3. Connect your cloud account 
  
- <details>
-   <summary markdown="span">Amazon Web Services (AWS)</summary>
+   <details>
+     <summary markdown="span">Amazon Web Services (AWS)</summary>
 
-You can connect your AWS account:
-* **Linked account** is a regular spot account. You use it to optimize costs and usage by using spot instances and taking advantage of many of Spot's features. Choose **Linked Account** to use Elastigroup or Ocean.
+   You can connect your AWS account:
+    * **Linked account** is a regular spot account. You use it to optimize costs and usage by using spot instances and taking advantage of many of Spot's features. Choose **Linked Account** to use Elastigroup or Ocean.
   
-     Linked accounts can be connected:
-     * [Automatically](connect-your-cloud-provider/first-account/aws?id=connect-automatically) using CloudFormation stack. This is the quicker option, which chooses a policy and role, and associates them for you.
-     * [Manually](connect-your-cloud-provider/first-account/aws?id=connect-manually) using the AWS console to choose the policy and role, and associate them. 
+        Linked accounts can be connected:
+        * [Automatically](connect-your-cloud-provider/first-account/aws?id=connect-automatically) using CloudFormation stack. This is the quicker option, which chooses a policy and role, and associates them for you.
+        * [Manually](connect-your-cloud-provider/first-account/aws?id=connect-manually) using the AWS console to choose the policy and role, and associate them. 
   
-* **Management account** is required to use Eco. A management account lets Spot analyze your cost and usage reports and helps you save even more on your cloud expenses. [Connect to Eco](eco/getting-started/connect-your-aws-account).
-* **FinOps products** to connect your account to Cost Intelligence or Billing Engine. This gives you advanced analysis, rating, and reporting on your cloud accounts.
+   * **Management account** is required to use Eco. A management account lets Spot analyze your cost and usage reports and helps you save even more on your cloud expenses. [Connect to Eco](eco/getting-started/connect-your-aws-account).
+   * **FinOps products** to connect your account to Cost Intelligence or Billing Engine. This gives you advanced analysis, rating, and reporting on your cloud accounts.
 
-</details>
+   </details>
 
- <details>
-   <summary markdown="span">Google Cloud Platform (GCP)</summary>
+   <details>
+     <summary markdown="span">Google Cloud Platform (GCP)</summary>
 
-You can connect your GCP account as a **linked account**. A linked account is a regular spot account. You use it to optimize costs and usage by using spot instances and taking advantage of many of Spot's features.
+   You can connect your GCP account as a **linked account**. A linked account is a regular spot account. You use it to optimize costs and usage by using spot instances and taking advantage of many of Spot's features.
 
-You can connect your GCP account:
+   You can connect your GCP account:
 
-* **Automatically** This option automatically chooses a policy and a role and associates the two for you. To connect automatically with GCP, you must have gcloud with permissions to create a service account.
+   * **Automatically** This option automatically chooses a policy and a role and associates the two for you. To connect automatically with GCP, you must have gcloud with permissions to create a service account.
 
-* [Manually](connect-your-cloud-provider/first-account/gcp-manually) using the GCP console to choose the policy and role, and associate them. This is the recommended method and is a simple process.
+   * [Manually](connect-your-cloud-provider/first-account/gcp-manually) using the GCP console to choose the policy and role, and associate them. This is the recommended method and is a simple process.
 
-</details>
+   </details>
 
- <details>
-   <summary markdown="span">Microsoft Azure</summary>
+   <details>
+     <summary markdown="span">Microsoft Azure</summary>
 
-You can connect your Azure account:
-* **Subscription** is required to use Elastigroup or Ocean. [Connect your Azure account to Spot](connect-your-cloud-provider/first-account/azure).
+   You can connect your Azure account:
+   * **Subscription** is required to use Elastigroup or Ocean. [Connect your Azure account to Spot](connect-your-cloud-provider/first-account/azure).
   
-* **Billing account** is required to use Eco. A billing account lets Spot analyze your cost, usage, and commitment data, and helps you save even more on your cloud expenses. [Connect to Eco](connect-your-cloud-provider/azure-ea-account).
-* **FinOps products** to connect your account to Cost Intelligence or Billing Engine. This gives you advanced analysis, rating, and reporting on your cloud accounts.
+   * **Billing account** is required to use Eco. A billing account lets Spot analyze your cost, usage, and commitment data, and helps you save even more on your cloud expenses. [Connect to Eco](connect-your-cloud-provider/azure-ea-account).
+   * **FinOps products** to connect your account to Cost Intelligence or Billing Engine. This gives you advanced analysis, rating, and reporting on your cloud accounts.
 
-</details>
+   </details>
 
-## Step 4: Complete Your Connection 
+Once you have successfully completed the setup and connected your cloud service provider to Spot, you will see the Spot [Dashboard](connect-your-cloud-provider/dashboard). 
 
-Once you have successfully completed the setup and connected your cloud service provider to Spot, you will see the Spot Dashboard. 
-
-The [Dashboard](connect-your-cloud-provider/dashboard) shows a compute overview of your entire organization. You can see insights and recommendations, potential savings, and an overview of savings for the Spot products you are using, including Elastigroup, Ocean, and Eco.
+The Dashboard shows a compute overview of your entire organization. You can see insights and recommendations, potential savings, and an overview of savings for the Spot products you are using, including Elastigroup, Ocean, and Eco.
 
 > Note: It can take up to 24 hours for Spot to get all the data to display in the Dashboard.
