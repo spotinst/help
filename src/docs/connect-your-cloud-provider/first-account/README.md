@@ -4,7 +4,7 @@ Connect your cloud account to Spot to get the most out of Spot's optimization an
 
 ## Step 1: Create Your Spot Organization 
 
-Sign in to [Spot](https://spot.io/) or register for a free trial.
+Sign in to [Spot](https://spot.io/) or [start a free trial](https://console.spotinst.com/spt/auth/signUp).
 
 Keep in mind that the company name you enter will be your organization name in Spot. This can be the company you represent or any other name you would like to use as your organization name in Spot.
 
