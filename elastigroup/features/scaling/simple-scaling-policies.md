@@ -23,7 +23,7 @@ Complete the steps below:
 
    - Policy Name: Enter the name to assign to the policy. It is recommended to use a meaningful name to help you understand scaling actions better in the future.
    - Policy Type: Choose Simple Scaling.
-   - Source: The scaling policy can utilize metrics from either AWS CloudWatch or Spectrum.
+   - Source: The scaling policy can utilize metrics from either AWS CloudWatch.
    - Autoscale Based on: The metric used to trigger the policy's scaling action. Available options:
      - EC2: CPU Utilization
      - ELB: Latency
