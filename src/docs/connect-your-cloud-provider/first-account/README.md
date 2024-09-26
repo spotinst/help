@@ -2,7 +2,7 @@
 
 Connect your cloud account to Spot to get the most out of Spot's optimization and cost-saving features.
 
-1. Create your Spot organization
+1. Create your Spot organization.
 
    Sign in to [Spot](https://spot.io/) or [start a free trial](https://console.spotinst.com/spt/auth/signUp).
 
@@ -15,13 +15,13 @@ Connect your cloud account to Spot to get the most out of Spot's optimization an
 
     </details>
 
-2. Select a cloud provider
+2. Select a cloud provider.
 
    Select the cloud service provider to connect to your Spot account and click **Next**.
 
    If you have multiple accounts with a cloud provider, you can connect them all later, after you have connected your first account. You can also connect accounts from multiple cloud providers.
 
-3. Connect your cloud account 
+3. Connect your cloud account.
  
    <details>
      <summary markdown="span" id="connect-aws">Amazon Web Services (AWS)</summary>
