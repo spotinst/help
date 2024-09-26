@@ -31,7 +31,7 @@ If you have multiple accounts with a cloud provider, you can connect them all la
 ## Step 3: Connect Your Cloud Account 
  
  <details>
-   <summary markdown="span">Connect AWS</summary>
+   <summary markdown="span">Amazon Web Services (AWS)</summary>
 
 You can connect your AWS account:
 * **Linked account** is a regular spot account. You use it to optimize costs and usage by using spot instances and taking advantage of many of Spot's features. Choose **Linked Account** to use Elastigroup or Ocean.
@@ -46,7 +46,7 @@ You can connect your AWS account:
 </details>
 
  <details>
-   <summary markdown="span">Connect GCP</summary>
+   <summary markdown="span">Google Cloud Platform (GCP)</summary>
 
 You can connect your GCP account as a **linked account**. A linked account is a regular spot account. You use it to optimize costs and usage by using spot instances and taking advantage of many of Spot's features.
 
@@ -59,7 +59,7 @@ You can connect your GCP account:
 </details>
 
  <details>
-   <summary markdown="span">Connect Azure</summary>
+   <summary markdown="span">Microsoft Azure</summary>
 
 You can connect your Azure account:
 * **Subscription** is required to use Elastigroup or Ocean. [Connect your Azure account to Spot](connect-your-cloud-provider/first-account/azure).
