@@ -47,9 +47,9 @@ After you've [created your first Spot organization](connect-your-cloud-provider/
 5. Run the IAM template. The IAM Policy is created in the AWS console. Click **Run IAM Template** to generate the IAM policy:
 
     <ol style="list-style-type: lower-alpha;">
-      <li>In the AWS console, go to the **Capabilities** tab, mark ‘I acknowledge that AWS CloudFormation might create IAM resources’.</li>
-      <li>Click **Create stack** and return to the Spot console.</li>
-      <li>Click **Connect**.</li>
+      <li>In the AWS console, go to the Capabilities tab, and select <i>I acknowledge that AWS CloudFormation might create IAM resources</i>.</li>
+      <li>Click <b>Create stack</b> and return to the Spot console.</li>
+      <li>Click <b>Connect</b>.</li>
     </ol>
 
    This step can take a few minutes. When the stack is successfully created, a message will open and you will be redirected to the new account in the Spot console.  
@@ -103,8 +103,9 @@ After you've [created your first Spot organization](connect-your-cloud-provider/
       <li>Set the policy name to <i>Spot-Policy</i> and click <b>Create Policy</b>.</li>
       <li>In the Spot console, click <b>Next</b>.</li>
     </ol>
+6. In the wizard in the Spot console, click **Next**.
 
-6. Create an IAM role in the AWS console.
+7. Create an IAM role in the AWS console.
        <ol style="list-style-type: lower-alpha;">
       <li><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html">Create an IAM role in AWS.</a></li>
       <li>Enter the <b>Account ID</b> <i>922761411349</i>.</li>
@@ -112,33 +113,10 @@ After you've [created your first Spot organization](connect-your-cloud-provider/
       <li>Attach <i>Spot Policy</i> to the <b>permissions policies</b>.</li>
       <li>Enter the <b>role name</b> <i>Spot-Role</i>.</li>
     </ol>
-8. In the wizard in the Spot console, click **Next**.
-9. Create the IAM role by completing the steps in the order of the instructions in the wizard. 
-10. Paste the RoleArn from the role’s page and paste it in the field and click **Connect**.  
-
-![connect-aws-manually-009a](https://github.com/spotinst/help/assets/106514736/790c8c36-f8d9-45e2-a476-d9b07f7d149e)
-
-11. The success message below indicates that your AWS account is linked to Spot. 
-
-<img width="1145" alt="connect-aws-manually-018" src="https://github.com/spotinst/help/assets/106514736/9ddbfeaa-a0f4-4632-b13b-01e111b656c8">
+8. In the Spot console, paste the **RoleArn** from the role’s page and click **Connect**.
 
 ## Edit a Policy
 
-In order to edit the policy after the account has been created, you need to update the policy directly in AWS. You can edit the policy after it has been created in the AWS console.  
+If you need to edit the policy after you create the account, you need to [update it directly in AWS](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-edit.html).
 
-1. In AWS, go to the IAM dashboard. In the sidebar on the left, click **Policies**. 
-
-![connect-aws-manually-008a](https://github.com/spotinst/help/assets/106514736/f7fbfc90-4619-4ba9-b695-31912b57b3bc)
-
-2. Enter the policy you want to edit. You can search for a policy in the searchbar. Enter the `spotinst-iam-stack` prefix in the searchbar to find your policy.  
-3. Select the policy and click **Edit**. You can edit directly in the JSON policy editor.  
-
-![connect-aws-manually-016a](https://github.com/spotinst/help/assets/106514736/a59ef32c-b490-4fa0-be74-ec9b637be2f4)
-
-4. Click **Next**.  
-
-**Permissions Page** 
-
-![connect-aws-manually-017a](https://github.com/spotinst/help/assets/106514736/87db1b00-6fec-4c82-8cad-21627bce21b3)
-
-This page displays the permissions and you can review them.  If you aprrove the changes, click **Save changes** and your policy will successfully be updated.  
+You can search for the policy using `spotinst-iam-stack`.  
