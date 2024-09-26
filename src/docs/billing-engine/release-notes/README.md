@@ -3,6 +3,7 @@
 <details>
   <summary markdown="span">September 2024</summary>
 
+* **BIE-0007**: **September 26th, 2024** With Allocation Assignments, you can now generate reports that show costs based on identifiers of your choice. [Learn more](billing-engine/tutorials/allocation-assignments)
 * **BIE-0006**: **September 25th, 2024** The onboarding process of connecting your Google Cloud billing account to your Billing Engine account has been updated. [Learn more](billing-engine/get-started/connect-google)
 * **BIE-0005**: **September 16th, 2024** Azure MCA users can now connect to Billing Engine. [Learn more](billing-engine/get-started/connect-azure) 
 
