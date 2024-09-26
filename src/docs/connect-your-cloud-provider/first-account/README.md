@@ -51,8 +51,10 @@ You can connect your AWS account:
 You can connect your GCP account as a **linked account**. A linked account is a regular spot account. You use it to optimize costs and usage by using spot instances and taking advantage of many of Spot's features.
 
 You can connect your GCP account:
-     * **Automatically** This option automatically chooses a policy and a role and associates the two for you. To connect automatically with GCP, you must have gcloud with permissions to create a service account.
-     * [Manually](connect-your-cloud-provider/first-account/gcp-manually) using the GCP console to choose the policy and role, and associate them. This is the recommended method and is a simple process.
+
+* **Automatically** This option automatically chooses a policy and a role and associates the two for you. To connect automatically with GCP, you must have gcloud with permissions to create a service account.
+
+* [Manually](connect-your-cloud-provider/first-account/gcp-manually) using the GCP console to choose the policy and role, and associate them. This is the recommended method and is a simple process.
 
 </details>
 
