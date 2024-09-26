@@ -8,6 +8,7 @@
     - [Create your First Workflow- AWS](spot-connect/get-to-know/create-first-workflow-aws)
     - [Run Your First Workflow](spot-connect/get-to-know/run-first-workflow)
     - [Sample Workflows](spot-connect/get-to-know/quickstart-workflow-templates)
+  - [Release Notes](spot-connect/release-notes/)
   - [API Keys](spot-connect/integrations/apikeys)
   - [Actions](spot-connect/actions/)
     - [AWS System Status](spot-connect/actions/aws_system_status)
