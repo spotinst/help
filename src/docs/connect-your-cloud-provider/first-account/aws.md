@@ -23,6 +23,7 @@ After you've [created your first Spot organization](connect-your-cloud-provider/
 
 4. Set up the permissions:
 
+    * **Default Permissions** provides the default IAM Policy.
     * **Customize Permissions** lets you select specific products and integrations you want to enable in your account. Each product or integration contains a list of actions that are required for it to operate in the console.
       
       <details>
@@ -41,8 +42,6 @@ After you've [created your first Spot organization](connect-your-cloud-provider/
         Click **View JSON** to view the permissions in the JSON preview that is updated according to your selection.
 
        </details>
-
-    * **Default Permissions** provides the default IAM Policy.
 
 5. Run the IAM template. The IAM Policy is created in the AWS console. Click **Run IAM Template** to generate the IAM policy:
 
@@ -77,6 +76,7 @@ After you've [created your first Spot organization](connect-your-cloud-provider/
 
   4. Set up the permissions:
 
+      * **Default Permissions** provides the default IAM Policy.
       * **Customize Permissions** lets you select specific products and integrations you want to enable in your account. Each product or integration contains a list of actions that are required for it to operate in the console.
       
         <details>
@@ -96,27 +96,29 @@ After you've [created your first Spot organization](connect-your-cloud-provider/
 
          </details>
 
-      * **Default Permissions** provides the default IAM Policy.
-
   5. Create an IAM policy in the AWS console. This is the policy that the Spot role will use to manage resources in your AWS account.
-         <ol style="list-style-type: lower-alpha;">
+
+       <ol style="list-style-type: lower-alpha;">
         <li>In the Spot console, click <b>View JSON</b> and copy the JSON file.</li>
         <li><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create-console.html">Create an IAM policy in AWS.</a></li>
         <li>In the AWS console, paste the JSON with the Spot policy.</li>
         <li>Set the policy name to <i>Spot-Policy</i> and click <b>Create Policy</b>.</li>
         <li>In the Spot console, click <b>Next</b>.</li>
       </ol>
+  
   6. In the wizard in the Spot console, click **Next**.
 
   7. Create an IAM role in the AWS console.
-         <ol style="list-style-type: lower-alpha;">
+
+       <ol style="list-style-type: lower-alpha;">
         <li><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html">Create an IAM role in AWS.</a></li>
         <li>Enter the <b>Account ID</b> <i>922761411349</i>.</li>
         <li>Select <b>Require external ID</b> and enter the <b>External ID</b> <i>pzwWFQdK8ih4ei1T3BpX5EI-OlzFWTRamyq-ckdopWk-</i>.</li>
         <li>Attach <i>Spot Policy</i> to the <b>permissions policies</b>.</li>
         <li>Enter the <b>role name</b> <i>Spot-Role</i>.</li>
       </ol>
-  8. In the Spot console, paste the **RoleArn** from the role’s page and click **Connect**.
+
+  9. In the Spot console, paste the **RoleArn** from the role’s page and click **Connect**.
 
 </details>
 
