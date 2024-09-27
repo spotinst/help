@@ -1,5 +1,13 @@
 # Cluster Release Notes
 
+## [0.4.23-81] - 2024-09-30
+
+Changelog
+
+- [0.6.0] bigdata-spark-watcher
+
+  - spark-apps kube event collector performance improvement
+
 ## [0.4.22-80] - 2024-09-16
 
 Changelog
