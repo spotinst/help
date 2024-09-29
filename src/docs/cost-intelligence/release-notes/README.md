@@ -1,5 +1,7 @@
 # Cost Intelligence Release Notes
 
+* **COI-0010**: September 29th, 2024: You can now use the Workflow Builder to create highly configurable flows within Cost Intelligence Dashboards to generate data-driven alerts and export them in various formats such as PDF and Excel. [Learn more](cost-intelligence/tutorials/workflow-builder/)
+
 * **COI-0009**: September 16th, 2024: You can now integrate Splunk with Cost Intelligence to collect billable and usage metrics for your organization. [Learn more](cost-intelligence/tutorials/integrations/splunk)
 
 <details>
