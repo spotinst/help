@@ -41,6 +41,32 @@ ADD SCREENSHOT HERE
 
 ### General Parameters
 
+* Name: The name you assign to the new Virtual Node Group.
+* Availability Zones.
+
+### Node Pool Properties
+
+* OS Type and OS SKU.
+* OS Disk Type.
+* OS Disk Size (up to 2048 GiB). Minimum requirement. Ocean selects a node with at least this size.
+* Maximum # pods per node. (from 10 to 250).
+* Node Public IP.
+* Kubernetes Version.
+
+### Ocean Autoscaler Configuration
+
+* Minimum and maximum nodes for autoscaling.
+* Spot %: Percentage of spot nodes you want in the virtual node group.
+* Fallback to Regular: Turn on to allow Ocean to launch regular (on-demand) nodes when spot markets are unavailable.
+
+>**Tip** You may have configured virtual node groups with either Spot % to 100 or turned off Fallback to Regular but still have regular nodes running on them. This occurs for regular nodes from the kube-system namespaces. Kube system pods are mission-critical AKS pods that allow the cluster to function correctly.
+
+ADD SCREENSHOT HERE
+
+### VM Selection
+
+
+
 
 
 
