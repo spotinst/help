@@ -1,10 +1,79 @@
 # Cluster Release Notes
 
+## [0.4.23-81] - 2024-09-30
+
+Changelog
+
+- [0.6.0] bigdata-spark-watcher
+
+  - spark-apps kube event collector performance improvement
+
+## [0.4.22-80] - 2024-09-16
+
+Changelog
+
+- [0.4.22] bigdata-operator
+
+  - bug fixes
+    - handle multiple bigdata-environments
+
+- [0.5.21] bigdata-spark-watcher
+
+  - vulnerability fixes
+
+- [0.1.32] spark-operator
+
+  - vulnerability fixes
+  - handle double spark-application submission
+
+- [0.4.13] bigdata-proxy
+
+  - vulnerability fixes
+
+- [0.4.3] bigdata-notebook-service
+  - vulnerability fixes
+  - a failsafe has been added to make sure notebook pods are always killed when kernel is shutdown
+
+## [0.4.21-79] - 2024-07-24
+
+Changelog
+
+- [0.4.21] bigdata-operator
+
+  - bug fixes
+    - handle extra spark app namespaces
+
+- [0.5.20] bigdata-spark-watcher
+
+  - check for existence of spark-application CR before running spark submit
+  - enable spark-apps kube event collector
+  - vulnerability fixes
+
+- [1.11.0] ofas-ingress-nginx
+  - vulnerability fixes
+
+## [0.4.20-78] - 2024-07-11
+
+Changelog
+
+- [0.1.32] spark-operator
+
+  - vulnerability fixes
+  - custom configs for the telemetry sidecars
+
+- [0.4.12] bigdata-proxy
+
+  - custom configs for the telemetry sidecars
+
+- [0.4.1] bigdata-notebook-service
+  - custom configs for the telemetry sidecars
+
 ## [0.4.20-77] - 2024-07-02
 
 Changelog
 
 - [0.4.20] bigdata-operator
+
   - use spark watcher 0.5.17
   - restart no longer required when installing new Ocean controller
 
@@ -16,6 +85,7 @@ Changelog
 Changelog
 
 - [0.4.19] bigdata-operator
+
   - use notebook service 0.4.0
 
 - [0.4.0] bigdata-notebook-service
@@ -40,20 +110,24 @@ Changelog
 Changelog
 
 - [0.4.16] bigdata-operator
+
   - upgrade to go 1.21
   - modify logic to allow removal of following charts:
     - `bigdata-notebook-service-storage-server`
     - `bigdata-notebook-service-storage`
 
 - [0.3.2] bigdata-notebook-service
+
   - Use new backend session storage
   - max port moved down to 50100
   - use appVersion 0.82.3
 
 - [0.1.3] bigdata-notebook-service-static
+
   - max port moved down to 50100
 
 - [0.5.15] bigdata-spark-watcher
+
   - support for new Ocean controller (rbac)
 
 - [removed] bigdata-notebook-service-storage-server
@@ -61,6 +135,7 @@ Changelog
 - [removed] bigdata-notebook-service-storage
 
 - [0.4.15] bigdata-operator
+
   - deployerNamespace fixes
   - use helm force when upgrading the spark-operator-static
   - go package upgrade, security fixes
@@ -70,12 +145,12 @@ Changelog
   - update `bigdata-operator-cluster-manager` cluster role
   - telemetry fixes
 
-
 ## [0.4.11-74] - 2024-04-08
 
 Changelog
 
 - [0.5.12] bigdata-spark-watcher
+
   - support for new Ocean controller
   - k8s event logs collector
   - custom configs for the telemetry sidecars
@@ -88,16 +163,18 @@ Changelog
 Changelog
 
 - [0.4.7] bigdata-proxy
-  - Fix workspace save with large notebook file 
+  - Fix workspace save with large notebook file
 
 ## [0.4.10-72] - 2024-03-27
 
 Changelog
 
-- [0.4.6] bigdata-proxy 
-  - Fix workspace large file upload 
+- [0.4.6] bigdata-proxy
+
+  - Fix workspace large file upload
 
 - [0.4.10] bigdata-operator
+
   - Support for embedded helm charts
 
 - [0.4.9] bigdata-operator
@@ -107,10 +184,11 @@ Changelog
 
 Changelog
 
-- [0.5.9] bigdata-spark-watcher 
+- [0.5.9] bigdata-spark-watcher
+
   - enable leader election for the high-availability
 
-- [0.1.26] spark-operator 
+- [0.1.26] spark-operator
   - enable leader election for the high-availability
 
 ## [0.4.8-70] - 2024-02-20
@@ -118,9 +196,11 @@ Changelog
 Changelog
 
 - [0.4.8] bigdata-operator
+
   - store cluster cloud provider and region in CM
 
 - [0.5.8] bigdata-spark-watcher
+
   - Annotate spark driver pod exit code and exit time
 
 - [0.1.25] spark-operator
@@ -131,10 +211,12 @@ Changelog
 Changelog
 
 - [0.4.7] bigdata-operator
+
   - enable telemetry
   - run as non-root
 
 - [0.2.4] bigdata-notebook-service
+
   - upgrade workflow notebook image to JupyterLab 4
   - show kernel launchers in the JupyterLab UI for each Spark Connect app running in the cluster
   - enable telemetry
@@ -145,6 +227,7 @@ Changelog
   - enable telemetry
 
 - [0.1.24] spark-operator
+
   - enable telemetry
 
 - [0.5.4] bigdata-spark-watcher
