@@ -125,7 +125,7 @@ Throughout the lifetime of an instance, it can change its “price” whenever t
  </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceantokens">What are the minimum permissions needed for a programmatic token for creating an Ocean cluster controller?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceantokens">AKS, EKS, GCP: What are the minimum permissions needed for a programmatic token for creating an Ocean cluster controller?</summary>
 
   <div style="padding-left:16px">
 
@@ -140,7 +140,7 @@ For a network client, only the **account viewer** permission is required for the
  </details>
  
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanfailinstancetypes">Why does Ocean fail to update instance types?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanfailinstancetypes">AKS, ECS, EKS, GCP: Why does Ocean fail to update instance types?</summary>
 
   <div style="padding-left:16px">
 
