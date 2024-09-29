@@ -5,7 +5,7 @@
 ## General
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="genodresp">Why is my on-demand instance utilized as a reserved instance/savings plan?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="genodresp">AKS, ECS, EKS, GCP: Why is my on-demand instance utilized as a reserved instance/savings plan?</summary>
 
   <div style="padding-left:16px">
 
@@ -28,7 +28,7 @@ Throughout the lifetime of an instance, it can change its “price” whenever t
  </details>
  
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="runninghours">How are running hours calculated in the Spot console and AWS?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="runninghours">AWS: How are running hours calculated in the Spot console and AWS?</summary>
 
   <div style="padding-left:16px">
 
@@ -43,7 +43,7 @@ Here are some reasons for large differences between the numbers in the Spot Cons
  </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="secretnotvalid">Why can my cluster not perform scaling actions (invalid client secret)?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="secretnotvalid">AKS, ECS, EKS, GCP: Why can my cluster not perform scaling actions (invalid client secret)?</summary>
 
   <div style="padding-left:16px">
 
@@ -58,25 +58,7 @@ Generate a new client secret <i>value</i> and [update it in the API](https://doc
  </div>
 
  </details>
- 
- <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="keepjenkinsalive">Can I keep Jenkins Agent alive after a job finishes?</summary>
 
-  <div style="padding-left:16px">
-
-You can prevent an immediate termination of a specific spot instance that acted as an agent and carried out a certain Jenkins job. For example, this can be useful if you want to:
-
-* Start additional jobs immediately after
-* Optimize resource utilization
-* Debug or review logs
-
-<i>Idle minutes before termination</i> defines how long the Spot plugin should wait before terminating an idle instance.
-
-Increase the <i>Idle minutes before termination</i> in the [Spot Jenkins plugin](https://docs.spot.io/tools-and-provisioning/ci-cd/jenkins).
-
- </div>
-
- </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="AWSIAM">Can I remove permissions from the Spot IAM policy?</summary>
@@ -747,6 +729,25 @@ You can create a scaling policy for latency.
      ![scaling-latency3](https://github.com/spotinst/help/assets/167069628/e9de15c8-6714-4f8f-a458-d2b4e182cf03)
 
 4. Click **Next**.
+
+ </div>
+
+ </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="keepjenkinsalive">Integration: Can I keep Jenkins Agent alive after a job finishes?</summary>
+
+  <div style="padding-left:16px">
+
+You can prevent an immediate termination of a specific spot instance that acted as an agent and carried out a certain Jenkins job. For example, this can be useful if you want to:
+
+* Start additional jobs immediately after
+* Optimize resource utilization
+* Debug or review logs
+
+<i>Idle minutes before termination</i> defines how long the Spot plugin should wait before terminating an idle instance.
+
+Increase the <i>Idle minutes before termination</i> in the [Spot Jenkins plugin](https://docs.spot.io/tools-and-provisioning/ci-cd/jenkins).
 
  </div>
 
