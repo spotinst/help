@@ -28,21 +28,21 @@ The Updates History list for completed runs is displayed at the top with these a
 * Execution date/time.
 * Trigger Type: Manual (auto-update was run immediately) or Scheduled (auto-update was scheduled and run).
 * Status (per batch):
-  * Completed (green): All Virtual Node Groups in the batch were updated successfully.
-  * Partially completed (orange): Either at least one Virtual Node Group did not require updates or the update failed.
-  * No update required (blue): No Virtual Node Groups required update.
-  * Failed (red): Either the whole update has failed (click the tooltip on the icon for more information), or all the Virtual Node Groups could not be updated (see the issue description in the list for the specific Virtual Node Group).
+  * Completed (green): All virtual node groups in the batch were updated successfully.
+  * Partially completed (orange): Either at least one virtual node group did not require updates or the update failed.
+  * No update required (blue): No virtual node groups required update.
+  * Failed (red): Either the whole update has failed (click the tooltip on the icon for more information), or all the virtual node groups could not be updated (see the issue description in the list for the specific virtual node group).
 
-Click on the down arrow for a batch to view information **per Virtual Node Group**:
+Click on the down arrow for a batch to view information **per virtual node group**:
 
-* Virtual Node Group: Click the link to view the Virtual Node Group attributes.
+* Virtual Node Group: Click the link to view the virtual node group attributes.
 * Type: Security patches, Kubernetes minor version, or both.
 * Old AMI/New AMI: Version numbers before and after the run.
-* Roll ID: This is listed if the Virtual Node Group was rolled after the auto-update. Click the link to view Roll ID attributes.
+* Roll ID: This is listed when the virtual node group was rolled after the auto-update. Click the link to view Roll ID attributes.
 * Status:
-  * Completed (green): The Virtual Node Group update was successful.
-  * No update required (blue): The Virtual Node Group did not require an update. Hover over the status icon for more information.
-  * Failed (red): Update failed at Virtual Node Group level. Hover over the status icon for more information.
+  * Completed (green): The virtual node group update was successful.
+  * No update required (blue): The virtual node group did not require an update. Hover over the status icon for more information.
+  * Failed (red): Update failed at virtual node group level. Hover over the status icon for more information.
   
 >**Tip**: Use the Updates History filter to search for auto-update runs by Status or Trigger Type.
 >**Note**: See also [Auto Update Troubleshooting](https://docs.spot.io/ocean/features/ami-auto-update-eks-ui?id=auto-update-troubleshooting)
@@ -109,22 +109,22 @@ To create or edit an auto-update schedule:
  <details>
    <summary markdown="span">Click to view</summary>
 
-### Auto Update not Successful Due to Virtual Node Group Issues
+### Auto Update not Successful Due to virtual node group Issues
 
-These are the errors per Virtual Node Group:
+These are the errors per virtual node group:
 
 * The VNG was in Shutdown Hours: When the cluster is in Shutdown Hours, the Ocean Controller is not running, so the AMI Auto Update cannot be triggered.
-* The VNG already uses the most updated AMI, so no update is required. The Virtual Node Group is set with the most updated image.
-* The VNG is not set with an imageId: The Virtual Node Group image id field is 'null', so no update is required.
-* The VNG has double AMIs, which is not supported by AMI Auto Updates: EKS AMI Auto Update does not support double AMI configuration. Manually update these Virtual Node Groups.
-* The control plane version is lower than the VNG image version: There is no need for the update. Make sure to upgrade your control plane or change the Virtual Node Group image to the same version as the EKS cluster control plane.
+* The VNG already uses the most updated AMI, so no update is required. The virtual node group is set with the most updated image.
+* The VNG is not set with an imageId: The virtual node group image id field is 'null', so no update is required.
+* The VNG has double AMIs, which is not supported by AMI Auto Updates: EKS AMI Auto Update does not support double AMI configuration. Manually update these virtual node groups.
+* The control plane version is lower than the VNG image version: There is no need for the update. Make sure to upgrade your control plane or change the virtual node group image to the same version as the EKS cluster control plane.
 * Not supported: The new image's Kubernetes version is more than two versions ahead of the cluster’s. AWS typically allows the worker nodes to be at the same version as the control plane or up to two minor versions behind. For example, if your control plane runs Kubernetes version 1.20, your worker nodes can run versions 1.20, 1.19, or 1.18.
-* No latest image was found: The Virtual Node Group uses the most updated image.
-* Not supported: The image set for the Virtual Node Group is not an EKS-optimized image. EKS AMI Auto Update does not support non-EKS-optimized images. Manually update these Virtual Node Groups.
-* Not supported: The VNG image is private. EKS AMI Auto Update does not support private images. Manually update these Virtual Node Groups.
+* No latest image was found: The virtual node group uses the most updated image.
+* Not supported: The image set for the virtual node group is not an EKS-optimized image. EKS AMI Auto Update does not support non-EKS-optimized images. Manually update these virtual node groups.
+* Not supported: The VNG image is private. EKS AMI Auto Update does not support private images. Manually update these virtual node groups.
 * The Kubernetes version for the VNG image was not found: EKS AMI Auto Update failed to get the Kubernetes version of the image's version. Contact the Support Team.
 * The architecture type for the VNG image was not found: EKS AMI Auto Update failed to get the architecture type of the image's version. Contact the Support Team.
-* The control plane or VNG image minor version was not found: EKS AMI Auto Update failed to get the control plane or Virtual Node Group image minor version.  Contact the Support Team.
+* The control plane or VNG image minor version was not found: EKS AMI Auto Update failed to get the control plane or virtual node group image minor version.  Contact the Support Team.
 * The image could not be found in AWS: EKS AMI Auto Update failed to get the image from AWS. Contact the Support Team.
 * The VNG was not updated with the new image: EKS AMI Auto Update failed.  Contact the Support Team.
 
