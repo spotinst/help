@@ -2,16 +2,8 @@
 
 >**IMPORTANT**: Ocean Controller Version 1 will be deprecated as follows:
 
->
-
 > - AWS Kubernetes: November 1, 2024
-
->
-
 > - GKE: December 18, 2024
-
->
-
 > - AKS: January 1, 2025
 
 > This means that it will not support new features, and any unexpected behaviors or security issues identified after this date will not be addressed. To ensure the best performance and support, we recommend upgrading to Ocean Controller Version 2.0. [Learn more...](https://docs.spot.io/ocean/tutorials/ocean-controller-v2/)
