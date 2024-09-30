@@ -40,10 +40,7 @@ You will receive your new application ID (apc-123456789) in Postman’s output. 
 
 Example of Postman’s response:
 
- 
-Open image-20240602-093621.png
-image-20240602-093621.png
- 
+![app-pers-1](https://github.com/user-attachments/assets/58dae9ec-673c-4bdd-8d8f-7aa53fdb47e9)
 
 **Body Explanation**
 
@@ -75,8 +72,7 @@ To run stateful nodes with application persistency, you need to create a custom 
 1. Log in to your AWS account and click **Identity and Access Management (IAM)**.
 2. Click **Policies** > **Create Policy**. 
 
-Open image-20240603-094445.png
-image-20240603-094445.png
+![app-pers-2](https://github.com/user-attachments/assets/1df3565c-2917-48c1-a101-51df234b1ec3)
 
 3. In the policy creation wizard, change the display to JSON view and copy the following policy:
 
@@ -118,24 +114,20 @@ image-20240603-094445.png
 1. In your AWS account, click **Identity and Access Management (IAM)**.
 2. Click **Roles** > **Create Role**. 
 
-Open image-20240603-094022.png
-image-20240603-094022.png
+![app-pers-3](https://github.com/user-attachments/assets/f7594b9f-f9a3-4401-a7a0-7f02ae01acfc)
 
 3. Select **AWS service**, and in the _Service or use case_ field, select **EC2**.
 4. Select the policy you created in the previous step.
 
-Open image-20240603-095110.png
-image-20240603-095110.png
+![app-pers-4](https://github.com/user-attachments/assets/6d9448a6-1049-443f-bda1-c5289867d248)
 
 5. Enter a name for your role and click **Create Role**.
 
-Open image-20240603-095227.png
-image-20240603-095227.png
+![app-pers-5](https://github.com/user-attachments/assets/19e2181f-32fa-41e7-91e2-f2265c772af1)
 
 6. Copy the ARN. This is the ID for the stateful node.
 
-Open image-20240603-095344.png
-image-20240603-095344.png
+![app-pers-6](https://github.com/user-attachments/assets/c2382d72-844f-4e3c-86ed-302fc30c19e7)
 
 ## Step 3: Create a Stateful Node (API) (Optional)
 
