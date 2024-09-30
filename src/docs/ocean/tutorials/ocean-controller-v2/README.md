@@ -3,7 +3,6 @@
 Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>, <font color="#FC01CC">GKE</font>, and <font color="#FC01CC">AKS</font> 
 
 >**IMPORTANT**: Ocean Controller Version 1 will be deprecated as follows:
-
 > - AWS Kubernetes: November 1, 2024
 > - GKE: December 18, 2024
 > - AKS: January 1, 2025
