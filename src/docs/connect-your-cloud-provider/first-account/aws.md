@@ -15,7 +15,7 @@ After you've [created your first Spot organization](connect-your-cloud-provider/
 
   </details>
 
-2. If you're not connecting an AWS GovCLoud or China account, select **No**.
+2. If you're not connecting an AWS GovCloud or China account, select **No**.
 
     **Note**: If you are connected to an AWS GovCloud or China account, you cannot customize your policy.  
 
