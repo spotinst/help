@@ -1,6 +1,20 @@
 # Ocean Controller Version 1
 
->**IMPORTANT: Ocean Controller Version 1 will be deprecated on November 1, 2024. This means that it will not support new features, and any unexpected behaviors or security issues identified after this date will not be addressed. To ensure the best performance and support, we recommend upgrading to Ocean Controller Version 2.0. [Learn more...](https://docs.spot.io/ocean/tutorials/ocean-controller-v2/)**
+>**IMPORTANT**: Ocean Controller Version 1 will be deprecated as follows:
+
+>
+
+> - AWS Kubernetes: November 1, 2024
+
+>
+
+> - GKE: December 18, 2024
+
+>
+
+> - AKS: January 1, 2025
+
+> This means that it will not support new features, and any unexpected behaviors or security issues identified after this date will not be addressed. To ensure the best performance and support, we recommend upgrading to Ocean Controller Version 2.0. [Learn more...](https://docs.spot.io/ocean/tutorials/ocean-controller-v2/)
 
 The Ocean Controller is a pod that resides within your Kubernetes cluster, enabling the integration with the Spot platform. The Controller collects metrics and events that are pushed via a secured link to the Spot SaaS platform to support capacity scaling activities and other functions of the Spot Kubernetes integration. The Ocean Controller is able to run on ARM64 as well as x86 based architectures.
 
