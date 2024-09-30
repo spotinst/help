@@ -7,7 +7,7 @@ Application persistency adds a layer of persistence by saving the application's 
 ## Prerequisites
 * AMI with LINUX OS
 * Spot account with valid permissions
-* Spot token
+* [Spot token](https://docs.spot.io/administration/api/create-api-token)
 * S3 bucket or EFS
 * Security Group with an inbound rule for port 9527. If you want to connect to the instance, additionally enable the SSH port (22).
 * Python scripts.
@@ -72,7 +72,7 @@ To run stateful nodes with application persistency, you need to create a custom 
 1. Log in to your AWS account and click **Identity and Access Management (IAM)**.
 2. Click **Policies** > **Create Policy**. 
 
-![app-pers-2](https://github.com/user-attachments/assets/1df3565c-2917-48c1-a101-51df234b1ec3)
+![app-pers-2](https://github.com/user-attachments/assets/90dba569-3891-42ad-bf0f-eaea1aadcf52)
 
 3. In the policy creation wizard, change the display to JSON view and copy the following policy:
 
@@ -114,20 +114,20 @@ To run stateful nodes with application persistency, you need to create a custom 
 1. In your AWS account, click **Identity and Access Management (IAM)**.
 2. Click **Roles** > **Create Role**. 
 
-![app-pers-3](https://github.com/user-attachments/assets/f7594b9f-f9a3-4401-a7a0-7f02ae01acfc)
+![app-pers-3](https://github.com/user-attachments/assets/88c3969b-8a58-4422-ae55-3cf06df28045)
 
 3. Select **AWS service**, and in the _Service or use case_ field, select **EC2**.
 4. Select the policy you created in the previous step.
 
-![app-pers-4](https://github.com/user-attachments/assets/6d9448a6-1049-443f-bda1-c5289867d248)
+![app-pers-4](https://github.com/user-attachments/assets/45cc769b-9cc2-44dc-848c-269e8a916122)
 
 5. Enter a name for your role and click **Create Role**.
 
-![app-pers-5](https://github.com/user-attachments/assets/19e2181f-32fa-41e7-91e2-f2265c772af1)
+![app-pers-5](https://github.com/user-attachments/assets/ec6d9942-cdbe-48ad-8b24-434ee487b7f5)
 
 6. Copy the ARN. This is the ID for the stateful node.
 
-![app-pers-6](https://github.com/user-attachments/assets/c2382d72-844f-4e3c-86ed-302fc30c19e7)
+![app-pers-6](https://github.com/user-attachments/assets/ae8ce9e9-c901-4930-8e83-58cf08d0901f)
 
 ## Step 3: Create a Stateful Node (API) (Optional)
 
