@@ -1,6 +1,6 @@
 <!-- Table of Contents -->
 
-- <a href="/" class="sidebar-home"><i data-feather="arrow-left" class="sidebar-back-icon"></i>Back to Main Tree</a>
+- <a href="/" class="sidebar-home"><i data-feather="arrow-left" class="sidebar-back-icon"></i>Back to Home</a>
 - [Spot-Connect](spot-connect/)
   - [Get to Know the Workflow Builder](spot-connect/get-to-know/)
     - [Video- Spot Connect](spot-connect/get-to-know/promo-video)
