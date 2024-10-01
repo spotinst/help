@@ -1,6 +1,6 @@
 <!-- Table of Contents -->
 
-- <a href="/" class="sidebar-home"><i data-feather="arrow-left" class="sidebar-back-icon"></i>Back to Main Tree</a>
+- <a href="/" class="sidebar-home"><i data-feather="arrow-left" class="sidebar-back-icon"></i>Back to Home</a>
 - [Ocean CD](ocean-cd/)
   - [Getting Started](ocean-cd/getting-started/)
     - [Install Operator](ocean-cd/getting-started/install-operator-manager)

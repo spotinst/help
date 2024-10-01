@@ -1,6 +1,6 @@
 <!-- Table of Contents -->
 
-- <a href="/" class="sidebar-home"><i data-feather="arrow-left" class="sidebar-back-icon"></i>Back to Main Tree</a>
+- <a href="/" class="sidebar-home"><i data-feather="arrow-left" class="sidebar-back-icon"></i>Back to Home</a>
 - [Tools and Provisioning](tools-and-provisioning/)
   - [Ansible](tools-and-provisioning/ansible)
   - [CloudFormation](tools-and-provisioning/cloudformation/)
