@@ -72,9 +72,9 @@ To create/edit a Virtual Node Group:
 * Spot %: Percentage of spot nodes you want in the virtual node group.
 * Fallback to Regular: Turn on to allow Ocean to launch regular (on-demand) nodes when spot markets are unavailable.
 
->**Tip** You may have configured virtual node groups with either Spot % to 100 or turned off Fallback to Regular but still have regular nodes running on them. This occurs for regular nodes from the kube-system namespaces. Kube system pods are mission-critical AKS pods that allow the cluster to function correctly.
+>**Edge case** You may have configured virtual node groups with either Spot % to 100 or turned off Fallback to Regular but still have regular nodes running on them. This occurs for regular nodes from the kube-system namespaces. Kube system pods are mission-critical AKS pods that allow the cluster to function correctly.
 
-ADD SCREENSHOT HERE
+![regular-kube](https://github.com/user-attachments/assets/5b2b8e03-7c29-48a2-940f-6aa93dcc21db)
 
 ### VM Selection
 
@@ -87,10 +87,13 @@ To select the VMs for your Cluster:
    * Automatic: Let Spot select your VM sizes according to the needs of your applications.
    * Advanced VM Size Selection: Use attribute filters to select VMs with customized sizes from which Ocean can scale.
 
-![vm-selection-panel](https://github.com/spotinst/help/assets/159915991/ea743bc6-0a06-4fa9-a958-7b4410bc7bd3)
+![aks-vng-vmsel-options](https://github.com/user-attachments/assets/b2cc113b-5a04-4d14-b329-f3b0529414ae)
 
 2. If you selected **Automatic**, click **Save** to complete the procedure.
 3. If you selected **Advanced VM Size Selection**: View each VM type's currently selected size, vCPU, Memory (GiB), and GPU units in the VM Selection list.
+
+![aks-vngs-vms-advanced](https://github.com/user-attachments/assets/4ed5d4a7-f17a-4c07-8093-46d8144fc3b3)
+
 The Advanced VM Size Filtering controls to the right of the VM Selection list let you filter these attributes for the VMs:
    * Upper and lower limits for No. Of vCPUs (up to 256).
    * Upper and lower limits for the Memory (up to 1024 GiB).
@@ -105,7 +108,7 @@ The Advanced VM Size Filtering controls to the right of the VM Selection list le
    * Minimum no. of NICs (up to 16).
    * Turn Accelerated networking on or off.
 
-4. Click **Apply** to filter the VM Selection list. All your filters are applied to the VM list. A color-coded bar appears above the list to provide a rating for the applied filter.
+5. Click **Apply** to filter the VM Selection list. All your filters are applied to the VM list. A color-coded bar appears above the list to provide a rating for the applied filter.
 
 >**Note**: An error is displayed if you define an incorrect VM type.
 
