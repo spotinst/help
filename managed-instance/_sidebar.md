@@ -1,6 +1,6 @@
 <!-- Table of Contents -->
 
-- <a href="/" class="sidebar-home"><i data-feather="arrow-left" class="sidebar-back-icon"></i>Back to Main Tree</a>
+- <a href="/" class="sidebar-home"><i data-feather="arrow-left" class="sidebar-back-icon"></i>Back to Home</a>
 - [Elastigroup Stateful Node](managed-instance/)
   - [AWS](managed-instance/features/stateful-managed-instances)
     - [Getting Started](managed-instance/getting-started/)
