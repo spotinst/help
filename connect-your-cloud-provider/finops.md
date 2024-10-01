@@ -23,12 +23,19 @@ Onboard your accounts to Billing Engine:
 
 * [AWS](billing-engine/get-started/connect-aws)
 
-  Your AWS billing account data is stored by AWS account. Onboarding AWS billing accounts (payers/master accounts) lets you onboard the cost data and inventory data owned by the master account. It will not include data from subaccounts. This is not the case for subaccounts or other vendors so both Billing Engine and Cost Intelligence will be connected. 
+   Your AWS billing account data is stored in the master AWS account. Onboarding AWS billing accounts (payers/master accounts) lets you onboard the cost data owned by the master account. It will not include inventory data from subaccounts for Cost Intelligence.
+
 
 * [Azure](billing-engine/get-started/connect-azure)
+
+   Your Azure billing data is tied to your Azure agreement type. Giving Billing Engine access to the usage detail lets you onboard the cost data for your subaccounts. It will not include inventory data from subaccounts for Cost Intelligence.
+
 * [Google Cloud](billing-engine/get-started/connect-google)
 
-## Connect Your Subaccount Resource Data for Cost Intelligence
+  Your Google Cloud billing account data is pulled from BigQuery. Giving Billing Engine access to the BigQuery Table lets you onboard the cost data for your subaccounts. It will not include inventory data from subaccounts for Cost Intelligence.
+
+
+## Connect Resource Data for Cost Intelligence
 
 Connecting your resource data centralizes all your inventory data in a single location. This lets you analyze a holistic view of your cloud resources and services. This inventory and usage data is then processed by the Cost Intelligence Best Practice Check to identify and recommend ways to improve efficiency, availability, and reduce costs.
 
