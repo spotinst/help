@@ -13,8 +13,13 @@ This topic describes how to create, view, edit, and delete virtual node groups i
 2. Select a cluster from the list of clusters.
 3. Click the **Virtual Node Groups** tab to display the virtual node groups list.
 
-ADD SCREENSHOT HERE
+<details>
+   <summary markdown="span">Click for image</summary>
+  
+![aks-vng-list-1](https://github.com/user-attachments/assets/022151e5-b902-4dca-937c-49ee30696e24)
 
+</details>
+  
 This list lets you track live data per virtual node group and contains the following information:
 *  ID: The identification code of the virtual node group.
 *  Name: The user-defined name of the virtual node group. (If a virtual node group were defined without a name, it would appear as Unnamed).
@@ -35,9 +40,17 @@ To create/edit a Virtual Node Group:
    * Configure Manually: All virtual node group fields will be taken from the virtual node group Template.
    * Import configurations from Node Pools: Values are copied from the cloud service provider node group entity to the Ocean configuration. Later, there will be no active connection between these two entities. Ocean will provision new VMs, not as part of a managed Kubernetes service of node group entities.
   
-ADD SCREENSHOT HERE
+![aks-create-vng-dialog](https://github.com/user-attachments/assets/2ef75104-baf7-45a4-a661-80c564167a40)
 
-3. Edit the parameters in the New Virtual Node Group screen. Parameters left blank take values from the virtual node group Template.
+3. Click **Continue**.
+4. Edit the parameters in the New Virtual Node Group screen. Parameters left blank take values from the virtual node group template.
+
+<details>
+   <summary markdown="span">Click for image</summary>
+ 
+  ![aks-new-vng](https://github.com/user-attachments/assets/9e5f9916-8737-4df3-8967-64de04c32600)
+
+</details>
 
 ### General Parameters
 
