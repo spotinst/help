@@ -135,7 +135,11 @@ Example: GPU Instance
 
 If a pod requires a GPU node, add the relevant GPU image in a virtual node group so Ocean can spin up nodes. Specific labels are not required in this case.
 
-ADD SCREENSHOT HERE
+```
+resources:
+  limits:
+    nvidia.com/gpu: 1
+```
 
 You can use a node selector or node affinity that requires your GPU-based pods to select the specific VNG containing the GPU image based on the custom node label configured in the GPU virtual node group.
 
@@ -147,7 +151,45 @@ In the console, you can optionally review and edit the VNG configuration in JSON
 2. Click the link on the name of the virtual node Group in the list.
 3. Click **JSON** on the upper right.
 
-ADD SCREENSHOT HERE
+```
+{
+  "name": "vngname",
+  "oceanId": "o-66963661",
+  "availabilityZones": [
+    "1"
+  ],
+  "nodePoolProperties": {
+    "kubernetesVersion": null,
+    "maxPodsPerNode": 110,
+    "enableNodePublicIP": false,
+    "osDiskSizeGB": 128,
+    "osDiskType": "Ephemeral",
+    "osType": "Linux",
+    "osSKU": "Ubuntu"
+  },
+  "nodeCountLimits": {
+    "minCount": 0,
+    "maxCount": 1000
+  },
+  "strategy": {
+    "spotPercentage": 100,
+    "fallbackToOd": true
+  },
+  "autoScale": {
+    "headrooms": []
+  },
+  "labels": {},
+  "taints": [],
+  "tags": {},
+  "vmSizes": {
+    "filters": {
+      "architectures": [
+        "X86_64"
+      ]
+    }
+  }
+}
+```
 
 4. Click **Edit Mode**, edit the JSON, and save your changes.
 
