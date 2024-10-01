@@ -1,6 +1,6 @@
 <!-- Table of Contents -->
 
-- <a href="/" class="sidebar-home"><i data-feather="arrow-left" class="sidebar-back-icon"></i>Back to Main Tree</a>
+- <a href="/" class="sidebar-home"><i data-feather="arrow-left" class="sidebar-back-icon"></i>Back to Home</a>
 - [Ocean for Apache Spark](ocean-spark/)
   - [Getting Started](ocean-spark/getting-started/)
     - [Create an Ocean Spark Cluster](ocean-spark/getting-started/create-cluster)
