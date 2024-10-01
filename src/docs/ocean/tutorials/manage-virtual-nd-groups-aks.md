@@ -191,7 +191,7 @@ In the console, you can optionally review and edit the VNG configuration in JSON
 }
 ```
 
-4. Click **Edit Mode**, edit the JSON, and save your changes.
+4. Edit the JSON and save your changes.
 
 You can switch between Form (console) and JSON views multiple times, make changes separately in each view, and then click **Save All**.
 
