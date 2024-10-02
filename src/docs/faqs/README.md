@@ -877,7 +877,7 @@ You can use your own AMI and configure IMDSv2 on it. All instances launched afte
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="increaseramcpu">Can I increase RAM or CPU for osDisk and dataDisk on a stateful node?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="increaseramcpu">Azure: Can I increase RAM or CPU for osDisk and dataDisk on a stateful node?</summary>
 
   <div style="padding-left:16px">
 
@@ -902,7 +902,7 @@ You can only update the RAM size in the Azure portal or change the VM sizes in y
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="increasedisk">Can I increase the disk size for stateful nodes?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="increasedisk">Azure: Can I increase the disk size for stateful nodes?</summary>
 
   <div style="padding-left:16px">
 
@@ -918,7 +918,7 @@ Yes, you can increase the disk size for stateful nodes:
  </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egsn-stopped">Why am I getting an <i>Instance have been detected as stopped</i> error?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egsn-stopped">AWS: Why am I getting an <i>Instance have been detected as stopped</i> error?</summary>
 
   <div style="padding-left:16px">
 
@@ -934,7 +934,7 @@ Yes, you can increase the disk size for stateful nodes:
  </details>
 
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egsn-stopped2">Why am I getting a <i>botocore.exceptions.ClientError</i> error?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egsn-stopped2">AWS: Why am I getting a <i>botocore.exceptions.ClientError</i> error?</summary>
 
   <div style="padding-left:16px">
 
@@ -942,10 +942,6 @@ Yes, you can increase the disk size for stateful nodes:
    <code>botocore.exceptions.ClientError: An error occurred (UnsupportedOperation) when calling the StopInstances operation: You can't stop the Spot Instance '<Instance-ID>' because it is associated with a one-time Spot Instance request. You can only stop Spot Instances associated with persistent Spot Instance requests.</code>
 
    It's possible to [stop an instance in AWS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html), but Spot doesn't support the Stop action.
-
-<font color="#FC01CC">is this relevant here, too?
-
-   Restart the instance in AWS, then the Elastigroup will sync again. Use [Pause/Resume](/managed-instance/features/managed-instance-actions?id=stateful-node-actions) instead of Stop.</font>
    
  </div>
 
