@@ -5,7 +5,7 @@
 ## General
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="genodresp">AKS, ECS, EKS, GCP: Why is my on-demand instance utilized as a reserved instance/savings plan?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="genodresp">AKS, ECS, EKS: Why is my on-demand instance utilized as a reserved instance/savings plan?</summary>
 
   <div style="padding-left:16px">
 
@@ -61,7 +61,7 @@ Generate a new client secret <i>value</i> and [update it in the API](https://doc
 
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="AWSIAM">Can I remove permissions from the Spot IAM policy?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="AWSIAM">AWS: Can I remove permissions from the Spot IAM policy?</summary>
 
   <div style="padding-left:16px">
 
@@ -84,7 +84,7 @@ You can choose to remove some of these permissions from the [Spot IAM policy](/a
 ## Ocean
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanodresp">Why is my on-demand instance utilized as a reserved instance/savings plan?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanodresp">ECS, EKS: Why is my on-demand instance utilized as a reserved instance/savings plan?</summary>
 
   <div style="padding-left:16px">
 
@@ -142,7 +142,7 @@ Instance types of the virtual node group are always a subset of the Ocean cluste
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanimds">How can I update the instance metadata (IMDS) in my cluster?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanimds">AWS: How can I update the instance metadata (IMDS) in my cluster?</summary>
 
   <div style="padding-left:16px">
 
@@ -199,7 +199,7 @@ You can use your own AMI and configure IMDSv2 on it. All instances launched afte
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceaneventbridge">How do I create spot interruption notifications?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceaneventbridge">ECS, EKS: How do I create spot interruption notifications?</summary>
 
   <div style="padding-left:16px">
 
@@ -236,7 +236,7 @@ With the Version 2 Ocean Controller, Spot gets reports for any custom resource y
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="spinspotinstances">Why can't I spin new spot instances (InsufficientInstanceCapacity)?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="spinspotinstances">ECS, EKS: Why can't I spin new spot instances (InsufficientInstanceCapacity)?</summary>
 
   <div style="padding-left:16px">
 
@@ -458,7 +458,7 @@ By freeing up space, the pod can be placed on its attached node and can use the 
  </details>
  
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="invalidblockdevicemapping">Why am I getting an InvalidBlockDeviceMapping error?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocinvalidblockdevicemapping">ECS, EKS: Why am I getting an InvalidBlockDeviceMapping error?</summary>
 
 <div style="padding-left:16px">
 
@@ -527,7 +527,7 @@ This will let you manually increase the target of the cluster and the nodes will
 ## Elastigroup
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egodresp">Why is my on-demand instance utilized as a reserved instance/savings plan?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egodresp">AWS: Why is my on-demand instance utilized as a reserved instance/savings plan?</summary>
 
   <div style="padding-left:16px">
 
@@ -550,7 +550,7 @@ Throughout the lifetime of an instance, it can change its “price” whenever t
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egimds">How can I update the instance metadata (IMDS) in my cluster?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egimds">AWS: How can I update the instance metadata (IMDS) in my cluster?</summary>
 
 <div style="padding-left:16px">
 
@@ -607,6 +607,26 @@ You can use your own AMI and configure IMDSv2 on it. All instances launched afte
  </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egspinspotinstances">AWS: Why can't I spin new spot instances (InsufficientInstanceCapacity)?</summary>
+
+  <div style="padding-left:16px">
+
+This message is shown in the console logs if Ocean attempts to scale up a certain spot instance type in a particular availability zone. This happens because of a lack of capacity on the AWS side.
+
+<code>Can't Spin Spot Instances: Code: InsufficientInstanceCapacity, Message: We currently do not have sufficient m5.2xlarge capacity in the Availability Zone you requested (us-east-1a). Our system will be working on provisioning additional capacity. You can currently get m5.2xlarge capacity by not specifying an Availability Zone in your request or choosing us-east-1b, us-east-1c, us-east-1d, us-east-1f.</code>
+
+Ocean is aware of a pending pod and is spinning up an instance. Based on your current instance market, Ocean chooses the instance type in a particular availability zone and attempts to scale up. If it fails due to a lack of capacity, the error message is shown in the console logs.
+
+You can solve this by:
+* Having many instance types so Ocean can choose the best available markets.
+* Having multiple availability zones to provide more availability.
+* For workloads that are not resilient to disruptions, configure the [on demand label](https://docs.spot.io/ocean/features/labels-and-taints?id=spotinstionode-lifecycle) <code>spotinst.io/node-lifecycle</code>.
+
+ </div>
+
+ </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="egcantspin">Why can't I spin new instances (InvalidSnapshot.NotFound)?</summary>
 
 <div style="padding-left:16px">
@@ -632,9 +652,27 @@ If you have another snapshot, then you can use that snapshot ID for the block de
  </div>
 
  </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="eginvalidblockdevicemapping">ECS, EKS: Why am I getting an InvalidBlockDeviceMapping error?</summary>
+
+<div style="padding-left:16px">
+
+You can get this error when the group's device name (for Block Device Mapping) and the AMI's device name do not match:
+
+<code>Can't Spin Spot Instance: Code: InvalidBlockDeviceMapping, Message: The device 'xvda' is used in more than one block-device mapping</code>
+
+* AMI - "deviceName": "xvda"
+* Group's configuration - "deviceName": "/dev/xvda"
+
+Change the device name from <code>xvda</code> to <code>/dev/xvda</code> on the group's side. Go to **Actions** > **Edit Configuration** > **Review Tab** > **Switch to Json Edit format** > **Apply the changes and save**.
+
+ </div>
+
+ </details>
  
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egeventbridge">How do I create spot interruption notifications?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egeventbridge">AWS: How do I create spot interruption notifications?</summary>
 
   <div style="padding-left:16px">
 
@@ -781,7 +819,7 @@ Throughout the lifetime of an instance, it can change its “price” whenever t
  </details>
  
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egsnimds">How can I update the instance metadata (IMDS) in my cluster?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egsnimds">AWS: How can I update the instance metadata (IMDS) in my cluster?</summary>
 
 <div style="padding-left:16px">
 
