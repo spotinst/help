@@ -4,13 +4,13 @@
 
 The Spot FinOps suite helps you manage and control your cloud expenses. You connect your cloud accounts to:
 
-* [Billing Engine](connect-your-cloud-provider/finops.md#connect-billing-data-for-billing-engine) so Spot can collect cost data.
-* [Cost Intelligence](connect-your-cloud-provider/finops.md#connect-your-subaccount-resource-data-for-cost-intelligence) to collect inventory data and provide an end-to-end solution.
+* [Billing Engine](connect-your-cloud-provider/finops.md#connect-billing-data-for-billing-engine) to collect cost data.
+* [Cost Intelligence](connect-your-cloud-provider/finops.md#connect-your-subaccount-resource-data-for-cost-intelligence) to collect inventory data.
 
-Billing Engine and Cost Intelligence work together. They are powered by data from multiple cloud and software vendors:
+Billing Engine and Cost Intelligence work together to give an end-to-end solution. They are powered by data from multiple cloud and software vendors:
 
-* Billing Engine requires native provider data from vendor usage and billing files to provide visibility and control of your costs.
-* Cost Intelligence requires the same cost data plus resource data from onboarded accounts. Cost Intelligence uses that information to provide insight into inventory and utilization of vendor resources. 
+* Billing Engine requires access to vendor usage and billing files to give you visibility and control of your costs.
+* Cost Intelligence requires access to resource data from onboarded accounts. Cost Intelligence uses this information to provide insight into inventory and utilization of vendor resources. Cost Intelligence is also able to leverage your cost data from Billing Engine.
 
 ## Connect Billing Data for Billing Engine
 Connect your cost data by onboarding as many of your billing accounts as you like. You can onboard your AWS, Azure, and Google Cloud billing accounts. Once onboarded, you can review cost data and create dashboards in Cost Intelligence using the same cost data.
