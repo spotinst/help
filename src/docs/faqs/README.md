@@ -43,7 +43,7 @@ Here are some reasons for large differences between the numbers in the Spot Cons
  </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="secretnotvalid">AKS, ECS, EKS, GCP: Why can my cluster not perform scaling actions (invalid client secret)?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="secretnotvalid">Azure: Why can my cluster not perform scaling actions (invalid client secret)?</summary>
 
   <div style="padding-left:16px">
 
@@ -107,7 +107,7 @@ Throughout the lifetime of an instance, it can change its “price” whenever t
  </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceantokens">AKS, EKS, GCP: What are the minimum permissions needed for a programmatic token for creating an Ocean cluster controller?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceantokens">AKS, EKS, GKE: What are the minimum permissions needed for a programmatic token for creating an Ocean cluster controller?</summary>
 
   <div style="padding-left:16px">
 
@@ -256,7 +256,7 @@ You can solve this by:
  </details>
  
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceancantspin">Why can't I spin new instances (InvalidSnapshot.NotFound)?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceancantspin">ECS, EKS: Why can't I spin new instances (InvalidSnapshot.NotFound)?</summary>
 
   <div style="padding-left:16px">
 
@@ -285,7 +285,7 @@ If you have another snapshot, then you can use that snapshot ID for the block de
 
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanvmarch">Can I create VMs with specific architecture in Ocean AKS?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanvmarch">AKS: Can I create VMs with specific architecture in Ocean AKS?</summary>
 
   <div style="padding-left:16px">
 
@@ -320,7 +320,7 @@ However, it’s not possible to do with Ocean AKS clusters because you cannot ch
  </details>
  
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="hostportunderutilized">Can hostPort cause underutilized nodes?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="hostportunderutilized">ECS: Can hostPort cause underutilized nodes?</summary>
 
 <div style="padding-left:16px">
 
@@ -365,7 +365,7 @@ You can have multiple containers defined in a single task definition. Check all 
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="awsnodeterminationhandler">Can I deploy AWS node termination handler on Spot nodes?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="awsnodeterminationhandler">EKS: Can I deploy AWS node termination handler on Spot nodes?</summary>
    
 <div style="padding-left:16px">
 
@@ -395,7 +395,7 @@ Ocean ensures that the cluster resources are utilized and scales down underutili
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="excludeinstanceocean">Can I include or exclude instance types in my Ocean cluster?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="excludeinstanceocean">AKS, ECS, EKS, GKE: Can I include or exclude instance types in my Ocean cluster?</summary>
 
 <div style="padding-left:16px">
 
@@ -413,7 +413,7 @@ You can allow, [block](https://docs.spot.io/ocean/tips-and-best-practices/manage
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceank8sscaledown">Can I stop Kubernetes workloads from scaling down in Ocean?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceank8sscaledown">AKS, ECS, EKS, GKE: Can I stop Kubernetes workloads from scaling down in Ocean?</summary>
 
   <div style="padding-left:16px">
 
@@ -435,7 +435,7 @@ There are two options for restricting pods from scaling down:
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceank8spvcerror">Why am I getting a <i>Kubernetes Autoscaler, Deadlock for Pod</i> error?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceank8spvcerror">AKS, EKS, GKE: Why am I getting a <i>Kubernetes Autoscaler, Deadlock for Pod</i> error?</summary>
 
   <div style="padding-left:16px">
 
@@ -476,7 +476,7 @@ Change the device name from <code>xvda</code> to <code>/dev/xvda</code> on the g
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="importfargateerror">Why am I getting an import Fargate services error?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="importfargateerror">ECS: Why am I getting an import Fargate services error?</summary>
 
 <div style="padding-left:16px">
 
@@ -499,7 +499,7 @@ Reimport Fargate services with less than 5 security groups and choose only one s
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanlaunchspec">Why am I getting the error: <i>when default launchSpec is used as a template only, can't raise target of Ocean</i>?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanlaunchspec">EKS, GKE: Why am I getting the error: <i>when default launchSpec is used as a template only, can't raise target of Ocean</i>?</summary>
 
   <div style="padding-left:16px">
 
@@ -627,7 +627,7 @@ You can solve this by:
  </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egcantspin">Why can't I spin new instances (InvalidSnapshot.NotFound)?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egcantspin">AWS: Why can't I spin new instances (InvalidSnapshot.NotFound)?</summary>
 
 <div style="padding-left:16px">
 
@@ -695,7 +695,7 @@ You can use AWS EventBridge to send spot interruption warnings to the Spot platf
  </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ebsvolumeerror">Why am I getting instance launch failed because an EBS volume cannot be encrypted error?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ebsvolumeerror">AWS: Why am I getting instance launch failed because an EBS volume cannot be encrypted error?</summary>
 
 <div style="padding-left:16px">
 
@@ -712,28 +712,7 @@ Then there are missing permissions in the KMS custom key. You can configure KMS 
  </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="spotinstagentlogs">Can I disable Spotinst Agent logging?</summary>
-
-  <div style="padding-left:16px">
-
-You can run this script to stop Spotinst-Agent from sending logs to syslog:
-<pre>
- <code>
-
-sed -i 's/[Service]/[Service]\nStandardOutput=null\nStandardError=null/g' /lib/systemd/system/spotinst-agent.service
-systemctl daemon-reload
-systemctl restart spotinst-agent
- 
-  </code>
- 
- </pre>
-
- </div>
-
- </details>
-
-  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egerrorpeers">Why am I getting a <i>"value" contains a conflict between peers</i> error?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egerrorpeers">AWS: Why am I getting a <i>"value" contains a conflict between peers</i> error?</summary>
 
   <div style="padding-left:16px">
 
@@ -749,7 +728,7 @@ Remove the <i>resourceRequirements</i> field from the JSON file and reimport the
  </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="scalinglatency">Can I configure a scaling policy for the latency metric?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="scalinglatency">AWS: Can I configure a scaling policy for the latency metric?</summary>
 
   <div style="padding-left:16px">
 
@@ -771,6 +750,28 @@ You can create a scaling policy for latency.
  </div>
 
  </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="spotinstagentlogs">Integration: Can I disable Spotinst Agent logging?</summary>
+
+  <div style="padding-left:16px">
+
+You can run this script to stop Spotinst-Agent from sending logs to syslog:
+<pre>
+ <code>
+
+sed -i 's/[Service]/[Service]\nStandardOutput=null\nStandardError=null/g' /lib/systemd/system/spotinst-agent.service
+systemctl daemon-reload
+systemctl restart spotinst-agent
+ 
+  </code>
+ 
+ </pre>
+
+ </div>
+
+ </details>
+
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="keepjenkinsalive">Integration: Can I keep Jenkins Agent alive after a job finishes?</summary>
@@ -796,7 +797,7 @@ Increase the <i>Idle minutes before termination</i> in the [Spot Jenkins plugin]
 ## Elastigroup Stateful Node
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="snodresp">Why is my on-demand instance utilized as a reserved instance/savings plan?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="snodresp">AWS: Why is my on-demand instance utilized as a reserved instance/savings plan?</summary>
 
   <div style="padding-left:16px">
 
