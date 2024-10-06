@@ -5,7 +5,7 @@
 ## General
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="genodresp">Why is my on-demand instance utilized as a reserved instance/savings plan?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="genodresp">AWS: Why is my on-demand instance utilized as a reserved instance/savings plan?</summary>
 
   <div style="padding-left:16px">
 
@@ -28,7 +28,7 @@ Throughout the lifetime of an instance, it can change its “price” whenever t
  </details>
  
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="runninghours">How are running hours calculated in the Spot console and AWS?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="runninghours">AWS: How are running hours calculated in the Spot console and AWS?</summary>
 
   <div style="padding-left:16px">
 
@@ -43,7 +43,7 @@ Here are some reasons for large differences between the numbers in the Spot Cons
  </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="secretnotvalid">Why can my cluster not perform scaling actions (invalid client secret)?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="secretnotvalid">Azure: Why can my cluster not perform scaling actions (invalid client secret)?</summary>
 
   <div style="padding-left:16px">
 
@@ -58,28 +58,10 @@ Generate a new client secret <i>value</i> and [update it in the API](https://doc
  </div>
 
  </details>
- 
- <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="keepjenkinsalive">Can I keep Jenkins Agent alive after a job finishes?</summary>
 
-  <div style="padding-left:16px">
-
-You can prevent an immediate termination of a specific spot instance that acted as an agent and carried out a certain Jenkins job. For example, this can be useful if you want to:
-
-* Start additional jobs immediately after
-* Optimize resource utilization
-* Debug or review logs
-
-<i>Idle minutes before termination</i> defines how long the Spot plugin should wait before terminating an idle instance.
-
-Increase the <i>Idle minutes before termination</i> in the [Spot Jenkins plugin](https://docs.spot.io/tools-and-provisioning/ci-cd/jenkins).
-
- </div>
-
- </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="AWSIAM">Can I remove permissions from the Spot IAM policy?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="AWSIAM">AWS: Can I remove permissions from the Spot IAM policy?</summary>
 
   <div style="padding-left:16px">
 
@@ -102,7 +84,7 @@ You can choose to remove some of these permissions from the [Spot IAM policy](/a
 ## Ocean
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanodresp">Why is my on-demand instance utilized as a reserved instance/savings plan?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanodresp">ECS, EKS: Why is my on-demand instance utilized as a reserved instance/savings plan?</summary>
 
   <div style="padding-left:16px">
 
@@ -125,7 +107,7 @@ Throughout the lifetime of an instance, it can change its “price” whenever t
  </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceantokens">What are the minimum permissions needed for a programmatic token for creating an Ocean cluster controller?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceantokens">AKS, EKS, GKE: What are the minimum permissions needed for a programmatic token for creating an Ocean cluster controller?</summary>
 
   <div style="padding-left:16px">
 
@@ -140,7 +122,7 @@ For a network client, only the **account viewer** permission is required for the
  </details>
  
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanfailinstancetypes">Why does Ocean fail to update instance types?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanfailinstancetypes">AKS, ECS, EKS, GCP: Why does Ocean fail to update instance types?</summary>
 
   <div style="padding-left:16px">
 
@@ -160,7 +142,7 @@ Instance types of the virtual node group are always a subset of the Ocean cluste
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanimds">How can I update the instance metadata (IMDS) in my cluster?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanimds">AWS: How can I update the instance metadata (IMDS) in my cluster?</summary>
 
   <div style="padding-left:16px">
 
@@ -217,7 +199,7 @@ You can use your own AMI and configure IMDSv2 on it. All instances launched afte
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceaneventbridge">How do I create spot interruption notifications?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceaneventbridge">ECS, EKS: How do I create spot interruption notifications?</summary>
 
   <div style="padding-left:16px">
 
@@ -254,7 +236,7 @@ With the Version 2 Ocean Controller, Spot gets reports for any custom resource y
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="spinspotinstances">Why can't I spin new spot instances (InsufficientInstanceCapacity)?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="spinspotinstances">ECS, EKS: Why can't I spin new spot instances (InsufficientInstanceCapacity)?</summary>
 
   <div style="padding-left:16px">
 
@@ -274,7 +256,7 @@ You can solve this by:
  </details>
  
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceancantspin">Why can't I spin new instances (InvalidSnapshot.NotFound)?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceancantspin">ECS, EKS: Why can't I spin new instances (InvalidSnapshot.NotFound)?</summary>
 
   <div style="padding-left:16px">
 
@@ -303,7 +285,7 @@ If you have another snapshot, then you can use that snapshot ID for the block de
 
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanvmarch">Can I create VMs with specific architecture in Ocean AKS?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanvmarch">AKS: Can I create VMs with specific architecture in Ocean AKS?</summary>
 
   <div style="padding-left:16px">
 
@@ -338,7 +320,7 @@ However, it’s not possible to do with Ocean AKS clusters because you cannot ch
  </details>
  
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="hostportunderutilized">Can hostPort cause underutilized nodes?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="hostportunderutilized">ECS: Can hostPort cause underutilized nodes?</summary>
 
 <div style="padding-left:16px">
 
@@ -383,7 +365,7 @@ You can have multiple containers defined in a single task definition. Check all 
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="awsnodeterminationhandler">Can I deploy AWS node termination handler on Spot nodes?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="awsnodeterminationhandler">EKS: Can I deploy AWS node termination handler on Spot nodes?</summary>
    
 <div style="padding-left:16px">
 
@@ -413,7 +395,7 @@ Ocean ensures that the cluster resources are utilized and scales down underutili
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="excludeinstanceocean">Can I include or exclude instance types in my Ocean cluster?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="excludeinstanceocean">AKS, ECS, EKS, GKE: Can I include or exclude instance types in my Ocean cluster?</summary>
 
 <div style="padding-left:16px">
 
@@ -431,7 +413,7 @@ You can allow, [block](https://docs.spot.io/ocean/tips-and-best-practices/manage
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceank8sscaledown">Can I stop Kubernetes workloads from scaling down in Ocean?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceank8sscaledown">AKS, ECS, EKS, GKE: Can I stop Kubernetes workloads from scaling down in Ocean?</summary>
 
   <div style="padding-left:16px">
 
@@ -453,7 +435,7 @@ There are two options for restricting pods from scaling down:
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceank8spvcerror">Why am I getting a <i>Kubernetes Autoscaler, Deadlock for Pod</i> error?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceank8spvcerror">AKS, EKS, GKE: Why am I getting a <i>Kubernetes Autoscaler, Deadlock for Pod</i> error?</summary>
 
   <div style="padding-left:16px">
 
@@ -476,7 +458,7 @@ By freeing up space, the pod can be placed on its attached node and can use the 
  </details>
  
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="invalidblockdevicemapping">Why am I getting an InvalidBlockDeviceMapping error?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocinvalidblockdevicemapping">ECS, EKS: Why am I getting an InvalidBlockDeviceMapping error?</summary>
 
 <div style="padding-left:16px">
 
@@ -494,7 +476,7 @@ Change the device name from <code>xvda</code> to <code>/dev/xvda</code> on the g
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="importfargateerror">Why am I getting an import Fargate services error?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="importfargateerror">ECS: Why am I getting an import Fargate services error?</summary>
 
 <div style="padding-left:16px">
 
@@ -517,7 +499,7 @@ Reimport Fargate services with less than 5 security groups and choose only one s
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanlaunchspec">Why am I getting the error: <i>when default launchSpec is used as a template only, can't raise target of Ocean</i>?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanlaunchspec">EKS, GKE: Why am I getting the error: <i>when default launchSpec is used as a template only, can't raise target of Ocean</i>?</summary>
 
   <div style="padding-left:16px">
 
@@ -545,7 +527,7 @@ This will let you manually increase the target of the cluster and the nodes will
 ## Elastigroup
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egodresp">Why is my on-demand instance utilized as a reserved instance/savings plan?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egodresp">AWS: Why is my on-demand instance utilized as a reserved instance/savings plan?</summary>
 
   <div style="padding-left:16px">
 
@@ -568,7 +550,7 @@ Throughout the lifetime of an instance, it can change its “price” whenever t
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egimds">How can I update the instance metadata (IMDS) in my cluster?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egimds">AWS: How can I update the instance metadata (IMDS) in my cluster?</summary>
 
 <div style="padding-left:16px">
 
@@ -625,7 +607,27 @@ You can use your own AMI and configure IMDSv2 on it. All instances launched afte
  </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egcantspin">Why can't I spin new instances (InvalidSnapshot.NotFound)?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egspinspotinstances">AWS: Why can't I spin new spot instances (InsufficientInstanceCapacity)?</summary>
+
+  <div style="padding-left:16px">
+
+This message is shown in the console logs if Ocean attempts to scale up a certain spot instance type in a particular availability zone. This happens because of a lack of capacity on the AWS side.
+
+<code>Can't Spin Spot Instances: Code: InsufficientInstanceCapacity, Message: We currently do not have sufficient m5.2xlarge capacity in the Availability Zone you requested (us-east-1a). Our system will be working on provisioning additional capacity. You can currently get m5.2xlarge capacity by not specifying an Availability Zone in your request or choosing us-east-1b, us-east-1c, us-east-1d, us-east-1f.</code>
+
+Ocean is aware of a pending pod and is spinning up an instance. Based on your current instance market, Ocean chooses the instance type in a particular availability zone and attempts to scale up. If it fails due to a lack of capacity, the error message is shown in the console logs.
+
+You can solve this by:
+* Having many instance types so Ocean can choose the best available markets.
+* Having multiple availability zones to provide more availability.
+* For workloads that are not resilient to disruptions, configure the [on demand label](https://docs.spot.io/ocean/features/labels-and-taints?id=spotinstionode-lifecycle) <code>spotinst.io/node-lifecycle</code>.
+
+ </div>
+
+ </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egcantspin">AWS: Why can't I spin new instances (InvalidSnapshot.NotFound)?</summary>
 
 <div style="padding-left:16px">
 
@@ -650,9 +652,27 @@ If you have another snapshot, then you can use that snapshot ID for the block de
  </div>
 
  </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="eginvalidblockdevicemapping">ECS, EKS: Why am I getting an InvalidBlockDeviceMapping error?</summary>
+
+<div style="padding-left:16px">
+
+You can get this error when the group's device name (for Block Device Mapping) and the AMI's device name do not match:
+
+<code>Can't Spin Spot Instance: Code: InvalidBlockDeviceMapping, Message: The device 'xvda' is used in more than one block-device mapping</code>
+
+* AMI - "deviceName": "xvda"
+* Group's configuration - "deviceName": "/dev/xvda"
+
+Change the device name from <code>xvda</code> to <code>/dev/xvda</code> on the group's side. Go to **Actions** > **Edit Configuration** > **Review Tab** > **Switch to Json Edit format** > **Apply the changes and save**.
+
+ </div>
+
+ </details>
  
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egeventbridge">How do I create spot interruption notifications?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egeventbridge">AWS: How do I create spot interruption notifications?</summary>
 
   <div style="padding-left:16px">
 
@@ -675,7 +695,7 @@ You can use AWS EventBridge to send spot interruption warnings to the Spot platf
  </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ebsvolumeerror">Why am I getting instance launch failed because an EBS volume cannot be encrypted error?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ebsvolumeerror">AWS: Why am I getting instance launch failed because an EBS volume cannot be encrypted error?</summary>
 
 <div style="padding-left:16px">
 
@@ -692,28 +712,7 @@ Then there are missing permissions in the KMS custom key. You can configure KMS 
  </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="spotinstagentlogs">Can I disable Spotinst Agent logging?</summary>
-
-  <div style="padding-left:16px">
-
-You can run this script to stop Spotinst-Agent from sending logs to syslog:
-<pre>
- <code>
-
-sed -i 's/[Service]/[Service]\nStandardOutput=null\nStandardError=null/g' /lib/systemd/system/spotinst-agent.service
-systemctl daemon-reload
-systemctl restart spotinst-agent
- 
-  </code>
- 
- </pre>
-
- </div>
-
- </details>
-
-  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egerrorpeers">Why am I getting a <i>"value" contains a conflict between peers</i> error?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egerrorpeers">AWS: Why am I getting a <i>"value" contains a conflict between peers</i> error?</summary>
 
   <div style="padding-left:16px">
 
@@ -729,7 +728,7 @@ Remove the <i>resourceRequirements</i> field from the JSON file and reimport the
  </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="scalinglatency">Can I configure a scaling policy for the latency metric?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="scalinglatency">AWS: Can I configure a scaling policy for the latency metric?</summary>
 
   <div style="padding-left:16px">
 
@@ -752,12 +751,53 @@ You can create a scaling policy for latency.
 
  </details>
 
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="spotinstagentlogs">Integration: Can I disable Spotinst Agent logging?</summary>
+
+  <div style="padding-left:16px">
+
+You can run this script to stop Spotinst-Agent from sending logs to syslog:
+<pre>
+ <code>
+
+sed -i 's/[Service]/[Service]\nStandardOutput=null\nStandardError=null/g' /lib/systemd/system/spotinst-agent.service
+systemctl daemon-reload
+systemctl restart spotinst-agent
+ 
+  </code>
+ 
+ </pre>
+
+ </div>
+
+ </details>
+
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="keepjenkinsalive">Integration: Can I keep Jenkins Agent alive after a job finishes?</summary>
+
+  <div style="padding-left:16px">
+
+You can prevent an immediate termination of a specific spot instance that acted as an agent and carried out a certain Jenkins job. For example, this can be useful if you want to:
+
+* Start additional jobs immediately after
+* Optimize resource utilization
+* Debug or review logs
+
+<i>Idle minutes before termination</i> defines how long the Spot plugin should wait before terminating an idle instance.
+
+Increase the <i>Idle minutes before termination</i> in the [Spot Jenkins plugin](https://docs.spot.io/tools-and-provisioning/ci-cd/jenkins).
+
+ </div>
+
+ </details>
+
 <!----------------------------------elastigroup stateful node---------------------------------->
 
 ## Elastigroup Stateful Node
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="snodresp">Why is my on-demand instance utilized as a reserved instance/savings plan?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="snodresp">AWS: Why is my on-demand instance utilized as a reserved instance/savings plan?</summary>
 
   <div style="padding-left:16px">
 
@@ -780,7 +820,7 @@ Throughout the lifetime of an instance, it can change its “price” whenever t
  </details>
  
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egsnimds">How can I update the instance metadata (IMDS) in my cluster?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egsnimds">AWS: How can I update the instance metadata (IMDS) in my cluster?</summary>
 
 <div style="padding-left:16px">
 
@@ -837,7 +877,7 @@ You can use your own AMI and configure IMDSv2 on it. All instances launched afte
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="increaseramcpu">Can I increase RAM or CPU for osDisk and dataDisk on a stateful node?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="increaseramcpu">Azure: Can I increase RAM or CPU for osDisk and dataDisk on a stateful node?</summary>
 
   <div style="padding-left:16px">
 
@@ -862,7 +902,7 @@ You can only update the RAM size in the Azure portal or change the VM sizes in y
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="increasedisk">Can I increase the disk size for stateful nodes?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="increasedisk">Azure: Can I increase the disk size for stateful nodes?</summary>
 
   <div style="padding-left:16px">
 
@@ -878,7 +918,7 @@ Yes, you can increase the disk size for stateful nodes:
  </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egsn-stopped">Why am I getting an <i>Instance have been detected as stopped</i> error?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egsn-stopped">AWS: Why am I getting an <i>Instance have been detected as stopped</i> error?</summary>
 
   <div style="padding-left:16px">
 
@@ -894,7 +934,7 @@ Yes, you can increase the disk size for stateful nodes:
  </details>
 
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egsn-stopped2">Why am I getting a <i>botocore.exceptions.ClientError</i> error?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egsn-stopped2">AWS: Why am I getting a <i>botocore.exceptions.ClientError</i> error?</summary>
 
   <div style="padding-left:16px">
 
@@ -902,10 +942,6 @@ Yes, you can increase the disk size for stateful nodes:
    <code>botocore.exceptions.ClientError: An error occurred (UnsupportedOperation) when calling the StopInstances operation: You can't stop the Spot Instance '<Instance-ID>' because it is associated with a one-time Spot Instance request. You can only stop Spot Instances associated with persistent Spot Instance requests.</code>
 
    It's possible to [stop an instance in AWS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html), but Spot doesn't support the Stop action.
-
-<font color="#FC01CC">is this relevant here, too?
-
-   Restart the instance in AWS, then the Elastigroup will sync again. Use [Pause/Resume](/managed-instance/features/managed-instance-actions?id=stateful-node-actions) instead of Stop.</font>
    
  </div>
 
