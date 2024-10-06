@@ -42,24 +42,6 @@ Here are some reasons for large differences between the numbers in the Spot Cons
 
  </details>
 
-  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="secretnotvalid">Azure: Why can my cluster not perform scaling actions (invalid client secret)?</summary>
-
-  <div style="padding-left:16px">
-
-You got this error in the logs, and it’s not possible for the cluster to perform any scaling actions:
-
-<code>Invalid client secret provided. Ensure the secret being sent in the request is the client secret value, not the client secret ID, for a secret added to app</code>
-
-In Azure Kubernetes Service (AKS), there are two kinds of secrets: <i>client secret ID</i> and <i>client secret value</i>.
-
-Generate a new client secret <i>value</i> and [update it in the API](https://docs.spot.io/api/#tag/Accounts/operation/OrganizationsAndAccountsSetCloudCredentialsForAzure).
-
- </div>
-
- </details>
-
-
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="AWSIAM">AWS: Can I remove permissions from the Spot IAM policy?</summary>
 
@@ -79,63 +61,36 @@ You can choose to remove some of these permissions from the [Spot IAM policy](/a
 
  </details>
 
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="secretnotvalid">Azure: Why can my cluster not perform scaling actions (invalid client secret)?</summary>
+
+  <div style="padding-left:16px">
+
+You got this error in the logs, and it’s not possible for the cluster to perform any scaling actions:
+
+<code>Invalid client secret provided. Ensure the secret being sent in the request is the client secret value, not the client secret ID, for a secret added to app</code>
+
+In Azure Kubernetes Service (AKS), there are two kinds of secrets: <i>client secret ID</i> and <i>client secret value</i>.
+
+Generate a new client secret <i>value</i> and [update it in the API](https://docs.spot.io/api/#tag/Accounts/operation/OrganizationsAndAccountsSetCloudCredentialsForAzure).
+
+ </div>
+
+ </details>
+
 <!----------------------------------ocean---------------------------------->
 
 ## Ocean
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanodresp">ECS, EKS: Why is my on-demand instance utilized as a reserved instance/savings plan?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanssar">Should I get frequent <i>SelfSubjectAccessReview</i> requests after upgrading to Ocean Controller Version 2?</summary>
 
   <div style="padding-left:16px">
 
-   When is an on-demand (OD) instance a reserved instance (RI), savings plan (SP), or full-priced on demand?
-   
-   When launching an on-demand instance, you cannot specifically request it to run as a reserved instance or savings plan.
 
-AWS decides according to:
+After you upgrade to Ocean Controller Version 2, you may get many SIEM alerts due to <i>SelfSubjectAccessReview</i> requests to your API server. This is expected behavior.
 
-1.	If the market matches a free zonal reserved instance commitment, then the instance is a reserved instance.
-2.	If the market matches a free regional reserved instance commitment, then the instance is a reserved instance.
-3.	If the market matches a free EC2 instance savings plan commitment, then the instance is a savings plan.
-4.	If there is any free compute service plan commitment, then the instance is a savings plan.
-5.	Otherwise, the instance will run as a full-price on-demand instance.
-
-Throughout the lifetime of an instance, it can change its “price” whenever there’s any change in the commitments utilization rate. For example, if an instance is running as a full price on-demand instance, and another instance that was utilizing a compute savings plan commitment was terminated, the first instance will start utilizing this commitment if its hourly price rate has enough free space under this commitment. It might take a couple of minutes for this change to show, but since the billing is being calculated retroactively, in practice it’s starting to utilize the commitment right away.
-   
- </div>
-
- </details>
-
-  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceantokens">AKS, EKS, GKE: What are the minimum permissions needed for a programmatic token for creating an Ocean cluster controller?</summary>
-
-  <div style="padding-left:16px">
-
-   You can use a programmatic token for creating Ocean cluster controllers. The benefit of programmatic tokens is they aren't linked to a specific user. If the user is deleted, it doesn't affect the Ocean controller. This helps prevent interruptions and heartbeat issues.
-
-   At minimum, the token must have **account viewer** [permissions](/administration/policies/). Viewer permission is the only permission required for a cluster controller to operate. Cluster controllers don't manage resources in Ocean, the autoscaler does. If you want this same programmatic user to manage other resources in your cluster, additional permission policies are required.
-
-For a network client, only the **account viewer** permission is required for the client to operate.
-   
- </div>
-
- </details>
- 
- <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanfailinstancetypes">AKS, ECS, EKS, GCP: Why does Ocean fail to update instance types?</summary>
-
-  <div style="padding-left:16px">
-
-You cannot update the instance types in the default virtual node group. For example, it’s not supported to remove <i>m4.large</i> and <i>m5.large</i>, add <i>m5d.xlarge</i> and <i>m6i.xlarge</i> to the default virtual node group, and then update the cluster.
-
-If you do, you’ll get this error:
-<pre><code>
-Launch spec ols-xxxxxxxx instance types are not a subset of ocean cluster
-</code></pre>
-
-Remove the instance types at the cluster level, add <i>m5d.xlarge</i> and <i>m6i.xlarge</i> instance types, and then update the cluster.
-
-Instance types of the virtual node group are always a subset of the Ocean cluster.
+With the Version 2 Ocean Controller, Spot gets reports for any custom resource you gave it access to through the controller cluster role. For example, an Argo Rollouts custom resource or a VerticalPodAutoscaler for rightsizing. These require Spot to list the custom resources in the cluster and make sure there's read access. This happens when the  controller starts up and on a regular basis when it's running.
 
  </div>
 
@@ -197,6 +152,29 @@ You can use your own AMI and configure IMDSv2 on it. All instances launched afte
  </div>
 
  </details>
+ 
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanodresp">ECS, EKS: Why is my on-demand instance utilized as a reserved instance/savings plan?</summary>
+
+  <div style="padding-left:16px">
+
+   When is an on-demand (OD) instance a reserved instance (RI), savings plan (SP), or full-priced on demand?
+   
+   When launching an on-demand instance, you cannot specifically request it to run as a reserved instance or savings plan.
+
+AWS decides according to:
+
+1.	If the market matches a free zonal reserved instance commitment, then the instance is a reserved instance.
+2.	If the market matches a free regional reserved instance commitment, then the instance is a reserved instance.
+3.	If the market matches a free EC2 instance savings plan commitment, then the instance is a savings plan.
+4.	If there is any free compute service plan commitment, then the instance is a savings plan.
+5.	Otherwise, the instance will run as a full-price on-demand instance.
+
+Throughout the lifetime of an instance, it can change its “price” whenever there’s any change in the commitments utilization rate. For example, if an instance is running as a full price on-demand instance, and another instance that was utilizing a compute savings plan commitment was terminated, the first instance will start utilizing this commitment if its hourly price rate has enough free space under this commitment. It might take a couple of minutes for this change to show, but since the billing is being calculated retroactively, in practice it’s starting to utilize the commitment right away.
+   
+ </div>
+
+ </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceaneventbridge">ECS, EKS: How do I create spot interruption notifications?</summary>
@@ -216,20 +194,6 @@ You can use AWS EventBridge to send spot interruption warnings to the Spot platf
      <li>Fill in the stack name, spot account ID, and Spot token, then click <b>Next</b>.</li>
      <li>Repeat for each active region.</li>
    </ol>
-
- </div>
-
- </details>
-
-  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanssar">Should I get frequent <i>SelfSubjectAccessReview</i> requests after upgrading to Ocean Controller Version 2?</summary>
-
-  <div style="padding-left:16px">
-
-
-After you upgrade to Ocean Controller Version 2, you may get many SIEM alerts due to <i>SelfSubjectAccessReview</i> requests to your API server. This is expected behavior.
-
-With the Version 2 Ocean Controller, Spot gets reports for any custom resource you gave it access to through the controller cluster role. For example, an Argo Rollouts custom resource or a VerticalPodAutoscaler for rightsizing. These require Spot to list the custom resources in the cluster and make sure there's read access. This happens when the  controller starts up and on a regular basis when it's running.
 
  </div>
 
@@ -285,40 +249,47 @@ If you have another snapshot, then you can use that snapshot ID for the block de
 
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanvmarch">AKS: Can I create VMs with specific architecture in Ocean AKS?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocinvalidblockdevicemapping">ECS, EKS: Why am I getting an InvalidBlockDeviceMapping error?</summary>
 
-  <div style="padding-left:16px">
+<div style="padding-left:16px">
 
-You may want to run workloads (pods) on VMs with a specified architecture.
+You can get this error when the group's device name (for Block Device Mapping) and the AMI's device name do not match:
 
-For Ocean clusters (AWS), you can use an AMI with the required architecture. Update the AMI in the cluster or virtual node group (VNG) configuration to make sure the instances are launched according to the architecture specified in the AMI.
+<code>Can't Spin Spot Instance: Code: InvalidBlockDeviceMapping, Message: The device 'xvda' is used in more than one block-device mapping</code>
 
-However, it’s not possible to do with Ocean AKS clusters because you cannot choose a particular image to run VMs when you create an AKS cluster.
+* AMI - "deviceName": "xvda"
+* Group's configuration - "deviceName": "/dev/xvda"
 
-1.	Create a new virtual node group in the Ocean AKS cluster and configure it manually or import the configuration of a node pool.
-2.	Add vmSizes to the virtual node group JSON file.
-    <pre><code>"vmSizes": {
-        "filters": {
-            "architectures": [
-                 "x86_64"
-            ],
-            "series": []
-                }
-    }</code>
-   </pre>
-   
-   * <b>Architectures</b> is a list of strings, and the values can be a combination of <i>x86_64</i> (includes both <i>intel64</i> and <i>amd64</i>), <i>intel64</i>, <i>amd64</i>, and <i>arm64</i>.
-
-   * Add <b>series</b> with the VM series for the particular architecture.
-     For example, run VMs with <i>arm64</i> and launch the VMs with <i>Dps_V5</i> as the series.
- 
-     <img width=450 src="https://github.com/user-attachments/assets/1c0fccc2-2847-4cad-a01d-ce60a109db8e">
-
+Change the device name from <code>xvda</code> to <code>/dev/xvda</code> on the group's side. Go to **Actions** > **Edit Configuration** > **Review Tab** > **Switch to Json Edit format** > **Apply the changes and save**.
 
  </div>
- 
+
  </details>
- 
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="importfargateerror">ECS: Why am I getting an import Fargate services error?</summary>
+
+<div style="padding-left:16px">
+
+When you import Fargate services with more than 5 security groups, you get an error: 
+
+<code>Failed to import Fargate services into Ocean. Please verify Spot IAM policy has the right permissions and try again.</code>
+
+In Spot, you see this warning:
+
+<code>Fargate import failed for xxx-xxxxxx, due to Failed to import services, too many security groups. Import less services to this group (Group ID: xxxx-xxxxxx).</code>
+
+You can have up to 5 security groups in each service according to this [article](https://spot.io/blog/import-ecs-fargate-into-spot-ocean/#:~:text=more%20than%20five-,security,-groups%20as%20only). This means that if more than 5 security groups are defined in one of the services, the import doesn’t succeed.
+
+Check the Ocean log to see if you see the error <code>too many security groups</code>, as it will get the same error.
+
+Reimport Fargate services with less than 5 security groups and choose only one service at a time to import it successfully.
+
+ </div>
+
+ </details>
+
+
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="hostportunderutilized">ECS: Can hostPort cause underutilized nodes?</summary>
 
@@ -394,6 +365,65 @@ Ocean ensures that the cluster resources are utilized and scales down underutili
 
  </details>
 
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanlaunchspec">EKS, GKE: Why am I getting the error: <i>when default launchSpec is used as a template only, can't raise target of Ocean</i>?</summary>
+
+  <div style="padding-left:16px">
+
+   When the <code>useAsTemplateOnly</code> parameter is <i>true</i>, you cannot edit the target capacity in the Ocean cluster configuration.
+   
+Keep in mind that it may not be necessary to increase the target capacity because Ocean automatically scales instances up and down as needed.
+
+If you want to edit the target capacity:
+1. In the Spot console, go to **Ocean** > **Cloud Clusters**, and select the cluster.
+2. Click **Actions** > **Edit**.
+3. On the Review tab, click **JSON** > **Edit Mode**.
+4. Go to **Compute** > **launchSpecification**.
+5. Change the <b>useAsTemplateOnly</b> parameter to <i>false</i>.
+
+This will let you manually increase the target of the cluster and the nodes will launch in the default virtual node group.
+
+<img width=900 src="https://github.com/user-attachments/assets/6e422a64-db48-4b43-90d0-d6b5ddc35464" >
+
+ </div>
+
+ </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceantokens">AKS, EKS, GKE: What are the minimum permissions needed for a programmatic token for creating an Ocean cluster controller?</summary>
+
+  <div style="padding-left:16px">
+
+   You can use a programmatic token for creating Ocean cluster controllers. The benefit of programmatic tokens is they aren't linked to a specific user. If the user is deleted, it doesn't affect the Ocean controller. This helps prevent interruptions and heartbeat issues.
+
+   At minimum, the token must have **account viewer** [permissions](/administration/policies/). Viewer permission is the only permission required for a cluster controller to operate. Cluster controllers don't manage resources in Ocean, the autoscaler does. If you want this same programmatic user to manage other resources in your cluster, additional permission policies are required.
+
+For a network client, only the **account viewer** permission is required for the client to operate.
+   
+ </div>
+
+ </details>
+ 
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanfailinstancetypes">AKS, ECS, EKS, GKE: Why does Ocean fail to update instance types?</summary>
+
+  <div style="padding-left:16px">
+
+You cannot update the instance types in the default virtual node group. For example, it’s not supported to remove <i>m4.large</i> and <i>m5.large</i>, add <i>m5d.xlarge</i> and <i>m6i.xlarge</i> to the default virtual node group, and then update the cluster.
+
+If you do, you’ll get this error:
+<pre><code>
+Launch spec ols-xxxxxxxx instance types are not a subset of ocean cluster
+</code></pre>
+
+Remove the instance types at the cluster level, add <i>m5d.xlarge</i> and <i>m6i.xlarge</i> instance types, and then update the cluster.
+
+Instance types of the virtual node group are always a subset of the Ocean cluster.
+
+ </div>
+
+ </details>
+
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="excludeinstanceocean">AKS, ECS, EKS, GKE: Can I include or exclude instance types in my Ocean cluster?</summary>
 
@@ -456,70 +486,41 @@ By freeing up space, the pod can be placed on its attached node and can use the 
  </div>
 
  </details>
- 
- <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocinvalidblockdevicemapping">ECS, EKS: Why am I getting an InvalidBlockDeviceMapping error?</summary>
 
-<div style="padding-left:16px">
-
-You can get this error when the group's device name (for Block Device Mapping) and the AMI's device name do not match:
-
-<code>Can't Spin Spot Instance: Code: InvalidBlockDeviceMapping, Message: The device 'xvda' is used in more than one block-device mapping</code>
-
-* AMI - "deviceName": "xvda"
-* Group's configuration - "deviceName": "/dev/xvda"
-
-Change the device name from <code>xvda</code> to <code>/dev/xvda</code> on the group's side. Go to **Actions** > **Edit Configuration** > **Review Tab** > **Switch to Json Edit format** > **Apply the changes and save**.
-
- </div>
-
- </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="importfargateerror">ECS: Why am I getting an import Fargate services error?</summary>
-
-<div style="padding-left:16px">
-
-When you import Fargate services with more than 5 security groups, you get an error: 
-
-<code>Failed to import Fargate services into Ocean. Please verify Spot IAM policy has the right permissions and try again.</code>
-
-In Spot, you see this warning:
-
-<code>Fargate import failed for xxx-xxxxxx, due to Failed to import services, too many security groups. Import less services to this group (Group ID: xxxx-xxxxxx).</code>
-
-You can have up to 5 security groups in each service according to this [article](https://spot.io/blog/import-ecs-fargate-into-spot-ocean/#:~:text=more%20than%20five-,security,-groups%20as%20only). This means that if more than 5 security groups are defined in one of the services, the import doesn’t succeed.
-
-Check the Ocean log to see if you see the error <code>too many security groups</code>, as it will get the same error.
-
-Reimport Fargate services with less than 5 security groups and choose only one service at a time to import it successfully.
-
- </div>
-
- </details>
-
- <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanlaunchspec">EKS, GKE: Why am I getting the error: <i>when default launchSpec is used as a template only, can't raise target of Ocean</i>?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanvmarch">AKS: Can I create VMs with specific architecture in Ocean AKS?</summary>
 
   <div style="padding-left:16px">
 
-   When the <code>useAsTemplateOnly</code> parameter is <i>true</i>, you cannot edit the target capacity in the Ocean cluster configuration.
+You may want to run workloads (pods) on VMs with a specified architecture.
+
+For Ocean clusters (AWS), you can use an AMI with the required architecture. Update the AMI in the cluster or virtual node group (VNG) configuration to make sure the instances are launched according to the architecture specified in the AMI.
+
+However, it’s not possible to do with Ocean AKS clusters because you cannot choose a particular image to run VMs when you create an AKS cluster.
+
+1.	Create a new virtual node group in the Ocean AKS cluster and configure it manually or import the configuration of a node pool.
+2.	Add vmSizes to the virtual node group JSON file.
+    <pre><code>"vmSizes": {
+        "filters": {
+            "architectures": [
+                 "x86_64"
+            ],
+            "series": []
+                }
+    }</code>
+   </pre>
    
-Keep in mind that it may not be necessary to increase the target capacity because Ocean automatically scales instances up and down as needed.
+   * <b>Architectures</b> is a list of strings, and the values can be a combination of <i>x86_64</i> (includes both <i>intel64</i> and <i>amd64</i>), <i>intel64</i>, <i>amd64</i>, and <i>arm64</i>.
 
-If you want to edit the target capacity:
-1. In the Spot console, go to **Ocean** > **Cloud Clusters**, and select the cluster.
-2. Click **Actions** > **Edit**.
-3. On the Review tab, click **JSON** > **Edit Mode**.
-4. Go to **Compute** > **launchSpecification**.
-5. Change the <b>useAsTemplateOnly</b> parameter to <i>false</i>.
+   * Add <b>series</b> with the VM series for the particular architecture.
+     For example, run VMs with <i>arm64</i> and launch the VMs with <i>Dps_V5</i> as the series.
+ 
+     <img width=450 src="https://github.com/user-attachments/assets/1c0fccc2-2847-4cad-a01d-ce60a109db8e">
 
-This will let you manually increase the target of the cluster and the nodes will launch in the default virtual node group.
-
-<img width=900 src="https://github.com/user-attachments/assets/6e422a64-db48-4b43-90d0-d6b5ddc35464" >
 
  </div>
-
+ 
  </details>
 
 
@@ -653,24 +654,6 @@ If you have another snapshot, then you can use that snapshot ID for the block de
 
  </details>
 
- <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="eginvalidblockdevicemapping">ECS, EKS: Why am I getting an InvalidBlockDeviceMapping error?</summary>
-
-<div style="padding-left:16px">
-
-You can get this error when the group's device name (for Block Device Mapping) and the AMI's device name do not match:
-
-<code>Can't Spin Spot Instance: Code: InvalidBlockDeviceMapping, Message: The device 'xvda' is used in more than one block-device mapping</code>
-
-* AMI - "deviceName": "xvda"
-* Group's configuration - "deviceName": "/dev/xvda"
-
-Change the device name from <code>xvda</code> to <code>/dev/xvda</code> on the group's side. Go to **Actions** > **Edit Configuration** > **Review Tab** > **Switch to Json Edit format** > **Apply the changes and save**.
-
- </div>
-
- </details>
- 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="egeventbridge">AWS: How do I create spot interruption notifications?</summary>
 
@@ -751,6 +734,25 @@ You can create a scaling policy for latency.
 
  </details>
 
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="eginvalidblockdevicemapping">AWS: Why am I getting an InvalidBlockDeviceMapping error?</summary>
+
+<div style="padding-left:16px">
+
+You can get this error when the group's device name (for Block Device Mapping) and the AMI's device name do not match:
+
+<code>Can't Spin Spot Instance: Code: InvalidBlockDeviceMapping, Message: The device 'xvda' is used in more than one block-device mapping</code>
+
+* AMI - "deviceName": "xvda"
+* Group's configuration - "deviceName": "/dev/xvda"
+
+Change the device name from <code>xvda</code> to <code>/dev/xvda</code> on the group's side. Go to **Actions** > **Edit Configuration** > **Review Tab** > **Switch to Json Edit format** > **Apply the changes and save**.
+
+ </div>
+
+ </details>
+ 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="spotinstagentlogs">Integration: Can I disable Spotinst Agent logging?</summary>
 
@@ -876,6 +878,36 @@ You can use your own AMI and configure IMDSv2 on it. All instances launched afte
 
  </details>
 
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egsn-stopped">AWS: Why am I getting an <i>Instance have been detected as stopped</i> error?</summary>
+
+  <div style="padding-left:16px">
+
+   You can see this error in the log:
+   <code>08/20/2023, 5:36 AM, WARN, Instance: [i-01234567890abcdefg] have been detected as Stopped.</code>
+
+   It's possible to [stop an instance in AWS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html), but Spot doesn't support the Stop action. This causes out-of-sync issues.
+
+   Restart the instance in AWS, then the Elastigroup will sync again. Use [Pause/Resume](/managed-instance/features/managed-instance-actions?id=stateful-node-actions) instead of Stop.
+   
+ </div>
+
+ </details>
+
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egsn-stopped2">AWS: Why am I getting a <i>botocore.exceptions.ClientError</i> error?</summary>
+
+  <div style="padding-left:16px">
+
+   You may get this error:
+   <code>botocore.exceptions.ClientError: An error occurred (UnsupportedOperation) when calling the StopInstances operation: You can't stop the Spot Instance '<Instance-ID>' because it is associated with a one-time Spot Instance request. You can only stop Spot Instances associated with persistent Spot Instance requests.</code>
+
+   It's possible to [stop an instance in AWS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html), but Spot doesn't support the Stop action.
+   
+ </div>
+
+ </details>
+ 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="increaseramcpu">Azure: Can I increase RAM or CPU for osDisk and dataDisk on a stateful node?</summary>
 
@@ -913,36 +945,6 @@ Yes, you can increase the disk size for stateful nodes:
 4. [Change the Performance Tier](https://learn.microsoft.com/en-us/azure/virtual-machines/disks-performance-tiers-portal#change-performance-tier).
 5. Resume the stateful node in the Spot console.
 
- </div>
-
- </details>
-
-  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egsn-stopped">AWS: Why am I getting an <i>Instance have been detected as stopped</i> error?</summary>
-
-  <div style="padding-left:16px">
-
-   You can see this error in the log:
-   <code>08/20/2023, 5:36 AM, WARN, Instance: [i-01234567890abcdefg] have been detected as Stopped.</code>
-
-   It's possible to [stop an instance in AWS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html), but Spot doesn't support the Stop action. This causes out-of-sync issues.
-
-   Restart the instance in AWS, then the Elastigroup will sync again. Use [Pause/Resume](/managed-instance/features/managed-instance-actions?id=stateful-node-actions) instead of Stop.
-   
- </div>
-
- </details>
-
-   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egsn-stopped2">AWS: Why am I getting a <i>botocore.exceptions.ClientError</i> error?</summary>
-
-  <div style="padding-left:16px">
-
-   You may get this error:
-   <code>botocore.exceptions.ClientError: An error occurred (UnsupportedOperation) when calling the StopInstances operation: You can't stop the Spot Instance '<Instance-ID>' because it is associated with a one-time Spot Instance request. You can only stop Spot Instances associated with persistent Spot Instance requests.</code>
-
-   It's possible to [stop an instance in AWS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html), but Spot doesn't support the Stop action.
-   
  </div>
 
  </details>
