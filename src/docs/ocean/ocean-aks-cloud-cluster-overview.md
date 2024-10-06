@@ -110,8 +110,8 @@ This tab displays:
  
 <details>
    <summary markdown="span">View image</summary>
-
-   <img src="  NEW SCREEN REQUIRED  "/>   NEW SCREEN REQUIRED
+   
+![aks-cluster-rev-to-lower-cost](https://github.com/user-attachments/assets/bd0f30f4-7280-4d74-aef7-50a714809c80)
 
 </details> 
 
