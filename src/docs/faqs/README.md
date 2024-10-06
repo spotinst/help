@@ -78,11 +78,23 @@ Generate a new client secret <i>value</i> and [update it in the API](https://doc
 
  </details>
 
-
-
 <!----------------------------------ocean---------------------------------->
 
 ## Ocean
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanssar">Should I get frequent <i>SelfSubjectAccessReview</i> requests after upgrading to Ocean Controller Version 2?</summary>
+
+  <div style="padding-left:16px">
+
+
+After you upgrade to Ocean Controller Version 2, you may get many SIEM alerts due to <i>SelfSubjectAccessReview</i> requests to your API server. This is expected behavior.
+
+With the Version 2 Ocean Controller, Spot gets reports for any custom resource you gave it access to through the controller cluster role. For example, an Argo Rollouts custom resource or a VerticalPodAutoscaler for rightsizing. These require Spot to list the custom resources in the cluster and make sure there's read access. This happens when the  controller starts up and on a regular basis when it's running.
+
+ </div>
+
+ </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanimds">AWS: How can I update the instance metadata (IMDS) in my cluster?</summary>
@@ -187,20 +199,6 @@ You can use AWS EventBridge to send spot interruption warnings to the Spot platf
 
  </details>
 
-  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanssar">Should I get frequent <i>SelfSubjectAccessReview</i> requests after upgrading to Ocean Controller Version 2?</summary>
-
-  <div style="padding-left:16px">
-
-
-After you upgrade to Ocean Controller Version 2, you may get many SIEM alerts due to <i>SelfSubjectAccessReview</i> requests to your API server. This is expected behavior.
-
-With the Version 2 Ocean Controller, Spot gets reports for any custom resource you gave it access to through the controller cluster role. For example, an Argo Rollouts custom resource or a VerticalPodAutoscaler for rightsizing. These require Spot to list the custom resources in the cluster and make sure there's read access. This happens when the  controller starts up and on a regular basis when it's running.
-
- </div>
-
- </details>
-
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="spinspotinstances">ECS, EKS: Why can't I spin new spot instances (InsufficientInstanceCapacity)?</summary>
 
@@ -251,6 +249,24 @@ If you have another snapshot, then you can use that snapshot ID for the block de
 
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocinvalidblockdevicemapping">ECS, EKS: Why am I getting an InvalidBlockDeviceMapping error?</summary>
+
+<div style="padding-left:16px">
+
+You can get this error when the group's device name (for Block Device Mapping) and the AMI's device name do not match:
+
+<code>Can't Spin Spot Instance: Code: InvalidBlockDeviceMapping, Message: The device 'xvda' is used in more than one block-device mapping</code>
+
+* AMI - "deviceName": "xvda"
+* Group's configuration - "deviceName": "/dev/xvda"
+
+Change the device name from <code>xvda</code> to <code>/dev/xvda</code> on the group's side. Go to **Actions** > **Edit Configuration** > **Review Tab** > **Switch to Json Edit format** > **Apply the changes and save**.
+
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="importfargateerror">ECS: Why am I getting an import Fargate services error?</summary>
 
 <div style="padding-left:16px">
@@ -273,29 +289,7 @@ Reimport Fargate services with less than 5 security groups and choose only one s
 
  </details>
 
- <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanlaunchspec">EKS, GKE: Why am I getting the error: <i>when default launchSpec is used as a template only, can't raise target of Ocean</i>?</summary>
 
-  <div style="padding-left:16px">
-
-   When the <code>useAsTemplateOnly</code> parameter is <i>true</i>, you cannot edit the target capacity in the Ocean cluster configuration.
-   
-Keep in mind that it may not be necessary to increase the target capacity because Ocean automatically scales instances up and down as needed.
-
-If you want to edit the target capacity:
-1. In the Spot console, go to **Ocean** > **Cloud Clusters**, and select the cluster.
-2. Click **Actions** > **Edit**.
-3. On the Review tab, click **JSON** > **Edit Mode**.
-4. Go to **Compute** > **launchSpecification**.
-5. Change the <b>useAsTemplateOnly</b> parameter to <i>false</i>.
-
-This will let you manually increase the target of the cluster and the nodes will launch in the default virtual node group.
-
-<img width=900 src="https://github.com/user-attachments/assets/6e422a64-db48-4b43-90d0-d6b5ddc35464" >
-
- </div>
-
- </details>
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="hostportunderutilized">ECS: Can hostPort cause underutilized nodes?</summary>
 
@@ -371,20 +365,25 @@ Ocean ensures that the cluster resources are utilized and scales down underutili
 
  </details>
 
- 
- <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocinvalidblockdevicemapping">ECS, EKS: Why am I getting an InvalidBlockDeviceMapping error?</summary>
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanlaunchspec">EKS, GKE: Why am I getting the error: <i>when default launchSpec is used as a template only, can't raise target of Ocean</i>?</summary>
 
-<div style="padding-left:16px">
+  <div style="padding-left:16px">
 
-You can get this error when the group's device name (for Block Device Mapping) and the AMI's device name do not match:
+   When the <code>useAsTemplateOnly</code> parameter is <i>true</i>, you cannot edit the target capacity in the Ocean cluster configuration.
+   
+Keep in mind that it may not be necessary to increase the target capacity because Ocean automatically scales instances up and down as needed.
 
-<code>Can't Spin Spot Instance: Code: InvalidBlockDeviceMapping, Message: The device 'xvda' is used in more than one block-device mapping</code>
+If you want to edit the target capacity:
+1. In the Spot console, go to **Ocean** > **Cloud Clusters**, and select the cluster.
+2. Click **Actions** > **Edit**.
+3. On the Review tab, click **JSON** > **Edit Mode**.
+4. Go to **Compute** > **launchSpecification**.
+5. Change the <b>useAsTemplateOnly</b> parameter to <i>false</i>.
 
-* AMI - "deviceName": "xvda"
-* Group's configuration - "deviceName": "/dev/xvda"
+This will let you manually increase the target of the cluster and the nodes will launch in the default virtual node group.
 
-Change the device name from <code>xvda</code> to <code>/dev/xvda</code> on the group's side. Go to **Actions** > **Edit Configuration** > **Review Tab** > **Switch to Json Edit format** > **Apply the changes and save**.
+<img width=900 src="https://github.com/user-attachments/assets/6e422a64-db48-4b43-90d0-d6b5ddc35464" >
 
  </div>
 
@@ -406,7 +405,7 @@ For a network client, only the **account viewer** permission is required for the
  </details>
  
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanfailinstancetypes">AKS, ECS, EKS, GCP: Why does Ocean fail to update instance types?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanfailinstancetypes">AKS, ECS, EKS, GKE: Why does Ocean fail to update instance types?</summary>
 
   <div style="padding-left:16px">
 
@@ -423,40 +422,6 @@ Instance types of the virtual node group are always a subset of the Ocean cluste
 
  </div>
 
- </details>
- <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanvmarch">AKS: Can I create VMs with specific architecture in Ocean AKS?</summary>
-
-  <div style="padding-left:16px">
-
-You may want to run workloads (pods) on VMs with a specified architecture.
-
-For Ocean clusters (AWS), you can use an AMI with the required architecture. Update the AMI in the cluster or virtual node group (VNG) configuration to make sure the instances are launched according to the architecture specified in the AMI.
-
-However, it’s not possible to do with Ocean AKS clusters because you cannot choose a particular image to run VMs when you create an AKS cluster.
-
-1.	Create a new virtual node group in the Ocean AKS cluster and configure it manually or import the configuration of a node pool.
-2.	Add vmSizes to the virtual node group JSON file.
-    <pre><code>"vmSizes": {
-        "filters": {
-            "architectures": [
-                 "x86_64"
-            ],
-            "series": []
-                }
-    }</code>
-   </pre>
-   
-   * <b>Architectures</b> is a list of strings, and the values can be a combination of <i>x86_64</i> (includes both <i>intel64</i> and <i>amd64</i>), <i>intel64</i>, <i>amd64</i>, and <i>arm64</i>.
-
-   * Add <b>series</b> with the VM series for the particular architecture.
-     For example, run VMs with <i>arm64</i> and launch the VMs with <i>Dps_V5</i> as the series.
- 
-     <img width=450 src="https://github.com/user-attachments/assets/1c0fccc2-2847-4cad-a01d-ce60a109db8e">
-
-
- </div>
- 
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
@@ -522,6 +487,41 @@ By freeing up space, the pod can be placed on its attached node and can use the 
 
  </details>
 
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanvmarch">AKS: Can I create VMs with specific architecture in Ocean AKS?</summary>
+
+  <div style="padding-left:16px">
+
+You may want to run workloads (pods) on VMs with a specified architecture.
+
+For Ocean clusters (AWS), you can use an AMI with the required architecture. Update the AMI in the cluster or virtual node group (VNG) configuration to make sure the instances are launched according to the architecture specified in the AMI.
+
+However, it’s not possible to do with Ocean AKS clusters because you cannot choose a particular image to run VMs when you create an AKS cluster.
+
+1.	Create a new virtual node group in the Ocean AKS cluster and configure it manually or import the configuration of a node pool.
+2.	Add vmSizes to the virtual node group JSON file.
+    <pre><code>"vmSizes": {
+        "filters": {
+            "architectures": [
+                 "x86_64"
+            ],
+            "series": []
+                }
+    }</code>
+   </pre>
+   
+   * <b>Architectures</b> is a list of strings, and the values can be a combination of <i>x86_64</i> (includes both <i>intel64</i> and <i>amd64</i>), <i>intel64</i>, <i>amd64</i>, and <i>arm64</i>.
+
+   * Add <b>series</b> with the VM series for the particular architecture.
+     For example, run VMs with <i>arm64</i> and launch the VMs with <i>Dps_V5</i> as the series.
+ 
+     <img width=450 src="https://github.com/user-attachments/assets/1c0fccc2-2847-4cad-a01d-ce60a109db8e">
+
+
+ </div>
+ 
+ </details>
 
 
 <!----------------------------------elastigroup---------------------------------->
