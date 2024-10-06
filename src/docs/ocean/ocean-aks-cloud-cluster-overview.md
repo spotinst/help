@@ -72,7 +72,7 @@ This tab displays:
 <details>
    <summary markdown="span">View image</summary>
 
-   <img src="https://github.com/user-attachments/assets/cd441ec3-7fe1-4e8f-9c31-888a000105ef"/>
+![bin-packs-image-bin-packs](https://github.com/user-attachments/assets/db6177b2-82fa-4eb0-9ca5-2cd31bcf8ef9)
 
 </details>
 
@@ -80,10 +80,49 @@ This tab displays:
   * CPU resources saved in vCPU Hours.
   * Memory resources saved in GiB Hours.
   * GPU resources saved in GPU Hours.
+ 
+ ## Ocean Savings from Reverting to a Lower Cost Node 
+
+This process is applied to nodes with underutilized compute resources that cannot be scaled down from the cluster's set of nodes. For example, suppose a pod was initially placed on a more expensive node due to resource constraints. In that case, Ocean Autoscaler can replace it with a less expensive node when it becomes available, consequently saving costs. This tab lets you see how much you save from this dynamic resource allocation. 
+
+Ocean savings for reverting to a lower-cost node are calculated from the difference in price between the old node and the new node. For more information, see [Revert to Lower Cost](https://docs.spot.io/ocean/features/revert-to-lower-cost-node?id=revert-to-lower-cost-node) Node. 
+
+To view these savings, click the **Revert to Lower Cost** tab (unless already displayed). 
+
+NEW SCREEN REQUIRED 
+
+This tab displays:
+
+*   Nodes reverted to lower cost: If one or more nodes have been reverted to lower cost, the number of reverted nodes appears. Click to view the number of nodes reverted to lower cost in the selected time range in the Revert to Lower Cost window. View the types and costs of the nodes, etc).
+
+*   Avg. percentage hourly cost saved: Avg. percentage cost reduction from reverting to the new VM type [SUM (% hourly cost saved)].
+
+     * Pie chart - Virtual Node Group percentage breakdown for nodes.
+      
+    List showing replacement information: an entry for each reverted node is listed with these details:
+      
+     * Node pools for the original and reverted nodes.
+     * Number nodes in the old and new node pools.
+     * Hourly cost of the original and reverted nodes.
+     * Hourly cost saved as a percentage: Cost reduction from converting to the new VM type: [old hourly cost - SUM (new hourly cost) * 100]
+     * The Virtual Node Group's name (click the link for a listed VNG to display your custom VNG details).
+     * Scale-down timestamp in format MM/DD/YYYY HH: MM: SS
+ 
+<details>
+   <summary markdown="span">View image</summary>
+   
+![aks-cluster-rev-to-lower-cost](https://github.com/user-attachments/assets/bd0f30f4-7280-4d74-aef7-50a714809c80)
+
+</details> 
+
+*   Resource savings from reverting to lower cost in the following units:  
+     * CPU resources saved in vCPU Hours. 
+     * Memory resources saved in GiB Hours. 
+     * GPU resources saved in GPU Hours. 
 
 ## Ocean Managed Nodes and Resources Panel
 
-![managed-nodes-resources](https://github.com/user-attachments/assets/3b5a9bb0-b3d2-4b75-b510-88f5de04afbc)
+![aks-ocean-managed-nodes](https://github.com/user-attachments/assets/5a2650bf-56d7-4407-9cc3-b2340f4c2d89)
 
 This panel contains a set of widgets that display categorized information on your managed nodes and resources.
 
@@ -95,7 +134,7 @@ This panel contains a set of widgets that display categorized information on you
 
 ## Resource Allocation Panel
 
-![resource-allocation-sample](https://github.com/user-attachments/assets/7aa25b61-8260-4aa4-a122-274786d1ef15)
+![resource-allocation-sample](https://github.com/user-attachments/assets/59749462-10a2-436b-9663-b7479da0de1a)
 
 This panel displays a **cluster-level** summary with widgets for CPU /Memory /GPU resources allocated to pods. You can review allocation trends over time. Use this information to verify that infrastructure utilization is maintained at 70-80%.
 * CPU
