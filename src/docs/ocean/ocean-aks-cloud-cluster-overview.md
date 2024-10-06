@@ -122,7 +122,7 @@ This tab displays:
 
 ## Ocean Managed Nodes and Resources Panel
 
-![managed-nodes-resources](https://github.com/user-attachments/assets/3b5a9bb0-b3d2-4b75-b510-88f5de04afbc)
+![aks-ocean-managed-nodes](https://github.com/user-attachments/assets/5a2650bf-56d7-4407-9cc3-b2340f4c2d89)
 
 This panel contains a set of widgets that display categorized information on your managed nodes and resources.
 
@@ -134,7 +134,7 @@ This panel contains a set of widgets that display categorized information on you
 
 ## Resource Allocation Panel
 
-![resource-allocation-sample](https://github.com/user-attachments/assets/7aa25b61-8260-4aa4-a122-274786d1ef15)
+![resource-allocation-sample](https://github.com/user-attachments/assets/59749462-10a2-436b-9663-b7479da0de1a)
 
 This panel displays a **cluster-level** summary with widgets for CPU /Memory /GPU resources allocated to pods. You can review allocation trends over time. Use this information to verify that infrastructure utilization is maintained at 70-80%.
 * CPU
