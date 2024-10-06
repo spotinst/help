@@ -72,7 +72,7 @@ This tab displays:
 <details>
    <summary markdown="span">View image</summary>
 
-   <img src="https://github.com/user-attachments/assets/cd441ec3-7fe1-4e8f-9c31-888a000105ef"/>
+![bin-packs-image-bin-packs](https://github.com/user-attachments/assets/db6177b2-82fa-4eb0-9ca5-2cd31bcf8ef9)
 
 </details>
 
