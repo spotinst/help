@@ -20,28 +20,28 @@ Ocean maintains an official set of metrics, natively scrapable by Prometheus. Th
 <details>
   <summary markdown="span">Current Status</summary>
 
-<img width="2037" alt="grafana-dashboard-1" src="https://github.com/user-attachments/assets/e7f07b57-9e46-4f7e-a787-97d6ea4c88bc">
+<img src="https://github.com/user-attachments/assets/e7f07b57-9e46-4f7e-a787-97d6ea4c88bc" />
 
 </details>
 
 <details>
   <summary markdown="span">Cost and Usage</summary>
 
-![grafana-dashboard-sample-2](https://github.com/user-attachments/assets/b7bea58d-dd81-41bb-91cb-9596918e686a)
+<img src="https://github.com/user-attachments/assets/b7bea58d-dd81-41bb-91cb-9596918e686a" />
 
 </details>
 
 <details>
   <summary markdown="span">Network Metrics</summary>
 
-<img width="2040" alt="grafana-dashboard-3" src="https://github.com/user-attachments/assets/70478d0c-5e70-4878-b8b8-eccf15f2be8d">
+<img src="https://github.com/user-attachments/assets/70478d0c-5e70-4878-b8b8-eccf15f2be8d" />
 
 </details>
 
 <details>
   <summary markdown="span">Scaling Activity Overview</summary>
 
-  ![grafana-dashboard-sample-4](https://github.com/user-attachments/assets/e4e0c2c2-1f0b-4586-8514-f707be037480)
+<img src="https://github.com/user-attachments/assets/e4e0c2c2-1f0b-4586-8514-f707be037480" />
 
 </details>
 
