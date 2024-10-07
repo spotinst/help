@@ -41,7 +41,7 @@ Ocean maintains an official set of metrics, natively scrapable by Prometheus. Th
   * Month-to-Date cluster cost.
   * Average daily cluster cost during a specified time period.
   * Cluster cost breakdown during a specified time period.
-  * Cluster cost over time: Compare costs for two time periods.  * 
+  * Cluster cost over time: Compare costs for two time periods.
 
 </details>
 
