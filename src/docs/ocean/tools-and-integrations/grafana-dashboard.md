@@ -136,14 +136,6 @@ By monitoring the following key metrics, you can understand how Ocean scales.
 * Ocean metrics are relevant to Ocean Prometheus Exporter for EKS, AKS, and GKE.
 * [More details](https://docs.spot.io/ocean/tools-and-integrations/prometheus/)
 
-## Cluster Dependencies / Prerequisites
-
-* Ocean controller. [More details](https://docs.spot.io/ocean/tutorials/ocean-controller-v2/)
-* Ocean network client. [More details](https://docs.spot.io/ocean/tutorials/install-network-client-v2)
-* Ocean metric exporter. [More details](https://docs.spot.io/ocean/tools-and-integrations/prometheus/scrape?id=install-the-exporter)
-* kube-state-metrics service.
-* Prometheus server.
-
 ## Customer Feedback
 
 The template is also available in the [Spot Ocean public repository](https://github.com/spotinst/spot-ocean-grafana-dashboards), where you can submit feedback regarding any issues or propose new features to enhance the dashboard’s functionality further.
