@@ -12,13 +12,15 @@ This topic describes how to create, view, edit, and delete virtual node groups i
 3. Click the **Virtual Node Groups** tab to display the virtual node groups list.
 
 <details>
-   <summary markdown="span">Click for image</summary>
   
-![aks-vng-list-1](https://github.com/user-attachments/assets/022151e5-b902-4dca-937c-49ee30696e24)
+ <summary markdown="span">Click for image</summary>
+  
+ <img src="https://github.com/user-attachments/assets/022151e5-b902-4dca-937c-49ee30696e24" />
 
 </details>
   
 This list lets you track live data per virtual node group and contains the following information:
+
 *  ID: The identification code of the virtual node group.
 *  Name: The user-defined name of the virtual node group. (If a virtual node group was defined without a name, it would appear as Unnamed).
 *  Resource Allocation: Percent of defined CPU, Memory, and GPU currently used by the virtual node group.
@@ -46,7 +48,7 @@ To create/edit a Virtual Node Group:
 <details>
    <summary markdown="span">Click for image</summary>
  
-  ![aks-new-vng](https://github.com/user-attachments/assets/9e5f9916-8737-4df3-8967-64de04c32600)
+  <img src="https://github.com/user-attachments/assets/9e5f9916-8737-4df3-8967-64de04c32600" />
 
 </details>
 
