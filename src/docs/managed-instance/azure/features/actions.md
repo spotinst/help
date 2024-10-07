@@ -14,9 +14,13 @@ View the JSON configuration for the stateful node. You can also copy the configu
 
 This action is equivalent to rebooting or restarting a machine. The action is relevant to apply changes which were made in the node configuration and then require launching a new node in order to apply them (for example, updating the availability zone list and updating the VM size list). When this action is used, the node is paused, the current VM is terminated and a new VM is launched instead, while saving the original VM resources according to the persistence preferences.
 
+## Start
+
+You can start a Spot-managed VM in the Spot console when a stateful node is stopped.
+
 ## Stop
 
-You can stop a Spot-managed VM directly from Azure (moving it to the stopped (deallocated) state). The stateful node will detect that the VM is in a stopped (deallocated) status and, by default, move to a stopped state. It might take a few minutes for the stateful node to appear as stopped. If the information from the user that initiated the stop operation is not received within 3 minutes after the virtual machine has stopped, it will be regarded as an interruption.
+You can stop the Azure VM in the Spot console and in the Azure console when a stateful node is running. The stateful node will detect that the VM is in a stopped status and, by default, move to a stopped state. It might take a few minutes for the stateful node to appear as stopped. If the information from the user that initiated the stop operation is not received within 3 minutes after the virtual machine has stopped, it will be regarded as an interruption.
 
 Use the API to specify an allow-list. When a VM is stopped by a user containing a string on this list, it will not be considered an interruption. If a VM is stopped by anyone not included in the list, it will be considered an interruption. This will help determine the required format for the names in the API. For example, the format could be user.name@email.com, uname@email.com, uname, user.name, or service.
 
