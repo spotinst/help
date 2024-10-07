@@ -4,17 +4,19 @@ In a containerized world, in which multiple applications and services share the 
 
 Ocean breaks down the infrastructure costs of your clusters and provides insights on each of the layers which can be used to analyze the application costs and perform chargebacks without having to tag resources extensively.
 
-Instead of seeing the cost of an entire cluster, you can see costs broken down into namespaces and individual workloads within each namespace, and you can filter according to your container labels and annotations. You can see this information further broken down into compute costs and storage costs for each workload. This enables you to gain a detailed understanding of the costs in your cloud infrastructure and provides an essential tool for managing your cloud expenses.
+Instead of seeing the cost of an entire cluster, you can see costs broken down into namespaces and individual workloads within each namespace, and you can filter according to your container labels and annotations. This information is further broken down into compute and storage costs for each workload. This enables you to understand the costs of your cloud infrastructure and provides an essential tool for managing your cloud expenses.
 
 <img src="/ocean/_media/cost-analysis-2.png" />
 
+>**Note:** For ECS only, costs are broken down into services instead of namespaces. Also, ECS cost analysis does not include network costs.
+
 ## How It Works
 
-For the cost analysis, Ocean calculates both compute and storage costs broken down into their sources. Ocean considers all workloads in the cluster, and the managed infrastructure cost is divided across all workloads according to their relative weights.
+Ocean calculates compute and storage costs broken down into their sources for the cost analysis. Ocean considers all workloads in the cluster, and the managed infrastructure cost is divided across all workloads according to their relative weights.
 
 ### Compute Costs
 
-In order to provide a cost breakdown for the cluster, Ocean performs the following process:
+To provide a cost breakdown for the cluster, Ocean performs the following process:
 
 1. Ocean continually (every hour) aggregates the resource allocation (CPU and memory) for each workload from the workload specification as collected from the container orchestrator.
 2. Ocean calculates the overall managed infrastructure costs across Spot, reserved, and on-demand instances.
