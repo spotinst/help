@@ -82,7 +82,7 @@
       - [VNG AZ=Zero (AKS)](ocean/features/vngs/az-zero-feature)
       - [VNG K8s Minor Versions](ocean/tips-and-best-practices/vng-minor-versions)
       - [Manage Virtual Node Groups](ocean/tutorials/manage-virtual-node-groups)
-      - [Manage Virtual Node Groups (AKS)](ocean/tutorials/manage-virtual-nd-groups-aks)
+      - [Manage AKS Virtual Node Groups](ocean/tutorials/manage-virtual-nd-groups-aks)
       - [Select VM per Virtual Node Group](ocean/features/vm-selection-aks)
       - [Max Scale Down % per VNG-Console (GKE)](ocean/features/max-scale-down-vng-gke-ui)
       - [Regions Without AZ Support (AKS)](ocean/getting-started/aks?id=support-for-regions-without-availability-zones)
