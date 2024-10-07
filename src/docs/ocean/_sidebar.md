@@ -67,6 +67,8 @@
     - [Manage VM Types](ocean/tips-and-best-practices/manage-machine-types)
     - [Mount FSx for ONTAP to Kubernetes Pods](ocean/tutorials/mount-fsx-for-ontap-volumes-to-kubernetes-pods)
     - [Revert to Lower-Cost Node](ocean/features/revert-to-lower-cost-node)
+    - [Right-Sizing (Automatic)](ocean/features/ocean-cluster-right-sizing-tab)
+      - [Right-Sizing Recommendations](ocean/features/ocean-cluster-right-sizing-recom-tab)
     - [Right Sizing (Manual)](ocean/features/right-sizing)
       - [Use Right Sizing](ocean/tutorials/use-right-sizing)
     - [Rolls (AKS)](ocean/features/roll)
