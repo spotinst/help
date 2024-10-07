@@ -4068,6 +4068,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/ocean/tutorials/install-network-client"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/ocean/tutorials/manage-virtual-nd-groups-aks</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/ocean/tutorials/manage-virtual-nd-groups-aks"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/ocean/tutorials/manage-virtual-nd-groups-aks"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/ocean/tutorials/manage-virtual-node-groups</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
