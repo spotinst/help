@@ -1,5 +1,3 @@
-<meta name=“robots” content=“noindex”>
-
 #  Ocean Cluster Automatic Right Sizing
 
 Cloud service provider relevance: <font color="#FC01CC">EKS</font> and <font color="#FC01CC">AKS</font>
