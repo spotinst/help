@@ -20,28 +20,58 @@ Ocean maintains an official set of metrics, natively scrapable by Prometheus. Th
 <details>
   <summary markdown="span">Current Status</summary>
 
-<img src="https://github.com/user-attachments/assets/e7f07b57-9e46-4f7e-a787-97d6ea4c88bc" />
+  <img src="https://github.com/user-attachments/assets/dfca3f37-24e2-4a6c-b038-59156444491d" />
+
+  This dashboard contains the following widgets:
+  * Ocean controller: Status in the cluster.
+  * Kubernetes Cluster Nodes: Number of nodes in the Kubernetes cluster.
+  * Nodes managed by Ocean: Nodes managed by Ocean, with drill-down for optimized and scaled nodes.
+  * Cluster resources utilization: Resource utilization (CPU, memory, etc.) across the cluster.
+  * Cluster cost during a specified time period.
+  * Top 5 workloads with maximum cost.
 
 </details>
 
 <details>
   <summary markdown="span">Cost and Usage</summary>
 
-<img src="https://github.com/user-attachments/assets/b7bea58d-dd81-41bb-91cb-9596918e686a" />
+ <img src="https://github.com/user-attachments/assets/9ba3bd90-357c-411c-bba4-84101275c9dd" />
+
+  This dashboard contains the following widgets:
+  * Month-to-Date cluster cost.
+  * Average daily cluster cost during a specified time period.
+  * Cluster cost breakdown during a specified time period.
+  * Cluster cost over time: Compare costs for two time periods.  * 
 
 </details>
 
 <details>
   <summary markdown="span">Network Metrics</summary>
 
-<img src="https://github.com/user-attachments/assets/70478d0c-5e70-4878-b8b8-eccf15f2be8d" />
+<img src="https://github.com/user-attachments/assets/24ef6087-97f4-490d-9c0d-ba7655fe9be3" />
+
+This dashboard contains the following widgets:
+* Cluster network cost for a specified time period.
+* Cluster network usage for a specified time period.
+* Cluster network cost breakdown for a specified time period.
+* Cluster Intra-AZ network usage over time: Network usage within the same availability zone over time.
+* Cluster Inter-AZ network cost over time: Network costs associated with traffic between different availability zones over time.
+* Cluster Inter-AZ network usage over time: Network traffic between different availability zones over time.
+* Cluster Internet network cost over time: Network costs associated with internet traffic over time.
+* Cluster Internet network usage over time: Internet network traffic over time.
+* Cluster Inter-Region network cost over time: Network costs related to traffic between different regions over time.
+* Cluster Inter-Region network usage over time: Network traffic between different regions over time.
+
+
 
 </details>
 
 <details>
   <summary markdown="span">Scaling Activity Overview</summary>
 
-<img src="https://github.com/user-attachments/assets/e4e0c2c2-1f0b-4586-8514-f707be037480" />
+<img src="https://github.com/user-attachments/assets/6b632cb9-5ef4-4272-9400-5bcc6850a4a4" />
+
+This dashboard contains the following widgets: TBD
 
 </details>
 
@@ -81,7 +111,7 @@ By monitoring the following key metrics, you can understand how Ocean scales.
 * Ocean nodes count by instance lifecycle and availability zone over time. Source: Ocean.
 * Cluster nodes’ allocatable resources count by instance lifecycle and availability zone over time. Source: Ocean.
 
-*8Resources Utilization Metrics:** Cluster resources (CPU, memory, GPU) utilization over time.
+**8Resources Utilization Metrics:** Cluster resources (CPU, memory, GPU) utilization over time.
 
 **Pods Metrics:**
 
