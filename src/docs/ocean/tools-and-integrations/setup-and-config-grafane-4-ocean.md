@@ -12,6 +12,27 @@ Before you begin, make sure you have all of the following:
 * kube-state-metrics service.
 * Prometheus server.
 
+### Configure Prometheus
+
+1. Configure Prometheus to scrape Ocean metrics by adding the Ocean Metric Exporter as a scrape target.
+2. Define necessary jobs and targets in your Prometheus configuration file to ensure metrics are accurately collected.
+
+### Link to the Grafana Cloud Dashboard
+
+Download the Spot Ocean Scaling Dashboard Template and follow the instructions provided to import and configure the dashboard in your Grafana instance.
+
+### Configure Grafana
+
+1. Connect Grafana to Prometheus as a data source.
+2. Import the Spot Ocean Scaling and Cost Optimization Dashboard into Grafana using either:
+    * The template link provided
+    * Grafana.com ID: 21768
+
+
+
+
+
+
 
 
 
