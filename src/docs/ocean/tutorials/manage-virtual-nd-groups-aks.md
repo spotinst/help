@@ -3,7 +3,7 @@
 # Manage Virtual Node Groups (AKS)
 
 Virtual Node Groups (VNGs) provide a single layer of abstraction that enables you to manage different types of workloads on the same cluster. 
-This topic describes how to create, view, edit, and delete virtual node groups in Ocean.
+This topic describes how to create, view, edit, and delete virtual node groups in Ocean. See also [Default Virtual Node Group](https://docs.spot.io/ocean/features/vngs/?id=default-virtual-node-group)
 
 >**IMPORTANT:** Before starting, make sure you have an up-and-running Ocean cluster.
 
@@ -22,7 +22,7 @@ This topic describes how to create, view, edit, and delete virtual node groups i
   
 This list lets you track live data per virtual node group and contains the following information:
 *  ID: The identification code of the virtual node group.
-*  Name: The user-defined name of the virtual node group. (If a virtual node group were defined without a name, it would appear as Unnamed).
+*  Name: The user-defined name of the virtual node group. (If a virtual node group was defined without a name, it would appear as Unnamed).
 *  Resource Allocation: Percent of defined CPU, Memory, and GPU currently used by the virtual node group.
 *  Running Pods: Number of pods used by the virtual node group.
 *  Nodes: Number of nodes used by the virtual node group.
