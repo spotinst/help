@@ -1,6 +1,11 @@
 # Ocean Release Notes
 
-## September 2024: Features and Enhancements 
+## October 2024: Features and Enhancements 
+
+*  **OCN-0034: October 07, 2024:** (**<font color="#FC01CC">AKS</font>**) Documentation update: see how to manage AKS virtual node groups. [Learn more...](https://docs.spot.io/ocean/tutorials/manage-virtual-nd-groups-aks)
+
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600">September, 2024 - click to view</summary>
 
 *  **OCN-0033: September 19, 2024:** (**<font color="#FC01CC">GKE</font>**) Changes were made to the cluster import process connectivity options with enhanced Ocean Controller Version 2. [Learn more...](https://docs.spot.io/ocean/getting-started/gke)
 
@@ -12,7 +17,10 @@
 
 *  **OCN-0029: September 04, 2024:** (**<font color="#FC01CC">AKS</font>**) Ocean with [Controller V2](https://docs.spot.io/ocean/tutorials/ocean-controller-v2/) supports Pod Scheduling Readiness (included in Kubernetes 1.30), which considers whether a pod is ready to be scheduled. [Learn more...](https://docs.spot.io/ocean/features/scaling-kubernetes?id=support-for-pod-scaling-readiness)
 
-*  **OCN-0028: September 02, 2024:** (**<font color="#FC01CC">AKS</font>**) The AKS Cluster overview dashboard now includes details about Ocean savings from bin packing and a panel that displays a cluster-level summary with widgets for CPU /Memory /GPU resources allocated to pods. [Learn more...](https://docs.spot.io/ocean/ocean-aks-cloud-cluster-overview) 
+*  **OCN-0028: September 02, 2024:** (**<font color="#FC01CC">AKS</font>**) The AKS Cluster overview dashboard now includes details about Ocean savings from bin packing and a panel that displays a cluster-level summary with widgets for CPU /Memory /GPU resources allocated to pods. [Learn more...](https://docs.spot.io/ocean/ocean-aks-cloud-cluster-overview)
+
+</div>
+</details>
 
 <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600">August, 2024 - click to view</summary>
