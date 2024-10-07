@@ -108,7 +108,7 @@ The Advanced VM Size Filtering controls to the right of the VM Selection list le
    * Minimum no. of NICs (up to 16).
    * Turn Accelerated networking on or off.
 
-5. Click **Apply** to filter the VM Selection list. All your filters are applied to the VM list. A color-coded bar appears above the list to provide a rating for the applied filter.
+4. Click **Apply** to filter the VM Selection list. All your filters are applied to the VM list. A color-coded bar appears above the list to provide a rating for the applied filter.
 
 >**Note**: An error is displayed if you define an incorrect VM type.
 
