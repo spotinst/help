@@ -133,8 +133,7 @@ By monitoring the following key metrics, you can understand how Ocean scales.
 
 ### Right-Sizing
 
-* Ocean metrics are relevant to Ocean Prometheus Exporter for EKS, AKS, and GKE.
-* [More details](https://docs.spot.io/ocean/tools-and-integrations/prometheus/)
+* Ocean metrics are relevant to Ocean Prometheus Exporter for EKS, AKS, and GKE.[More details](https://docs.spot.io/ocean/tools-and-integrations/prometheus/)
 
 ## Customer Feedback
 
