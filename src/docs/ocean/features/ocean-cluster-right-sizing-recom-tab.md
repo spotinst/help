@@ -1,5 +1,3 @@
-<meta name=“robots” content=“noindex”>
-
 #  Automatic Right-Sizing Recommendations and Rules
 
 Cloud service provider relevance: <font color="#FC01CC">EKS</font> and <font color="#FC01CC">AKS</font>
