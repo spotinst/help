@@ -8,7 +8,7 @@ To view a comprehensive breakdown of your cloud cluster costs, go to the Cost An
 
 ## Ocean Network Cost Banner
 
-Cloud service provider relevance: <font color="#FC01CC">EKS</font>  
+Cloud service provider relevance: <font color="#FC01CC">EKS</font>   
 
 The Ocean Network Cost banner is displayed in the Cost Analysis tab above the Cost Over Time graph and contains an estimate of the network usage costs as follows: 
 
@@ -32,7 +32,7 @@ In both cases, you can activate your license via the link to Support, which appe
 
 ## Bar Chart
 
-The bar chart shows the cost of your workload over time. The default display breaks down each bar into different namespaces and represents the cost per day over the last week. You can modify the time period and groupings shown according to your needs. See Grouping Options below for more information.
+The bar chart shows the cost of your workload over time. The default display breaks down each bar into different namespaces and represents the daily cost over the last week. Modify the time period and groupings according to your needs. See Grouping Options below for more information.
 
 <img src="/ocean/_media/cost-analysis-5.png" />
 
@@ -42,9 +42,9 @@ The breakdown table presents an itemization of costs per namespace and costs wit
 
 - Namespace: Name of the namespace
 - % of total costs: Cost of the namespace as a portion of the total of the entire cluster
-- Compute Cost: The portion of the cost for computing
+- Compute Cost: The portion of the cost of computing
 - Storage Cost: The portion of the cost for Kubernetes persistent volumes and instance volumes
-- Network Cost: Part of costs pertaining to amount of data transfer between workloads and services such as Inter-AZ, Internet, Inter-Region and Intra-AZ costs
+- Network Cost: Part of costs pertaining to the amount of data transfer between workloads and services such as Inter-AZ, Internet, Inter-Region and Intra-AZ costs
 - Total Cost: Total cost of that namespace
 
 <img src="/ocean/_media/cost-analysis-4.png" />
@@ -53,8 +53,8 @@ Double-click on the arrow to show a breakdown of the workloads within the namesp
 
 - Name: Name of the workload in the namespace
 - Kind: The Kubernetes kind, such as deployment, daemonSet, statefulSet, cronJob
-- % of Namespace Costs: Cost of the workload as a portion of the all the workloads in the namespace
-- Compute Cost: The portion of the cost for computing
+- % of Namespace Costs: Cost of the workload as a portion of all the workloads in the namespace
+- Compute Cost: The portion of the cost of computing
 - Storage Cost: The portion of the cost for data storage
 - Total Cost: The total cost of that workload
 
@@ -69,34 +69,37 @@ Click on Date to open the calendar. You can choose from the following time perio
 - 7D: The last seven days. This is the default display.
 - Today: Costs for Today.
 - 1M: The last 30 days.
-- Custom: In addition, you can create a custom time period by clicking on the start date and end date in the calendar.
+- Custom: You can also create a custom time period by clicking on the calendar's start and end dates.
 
-The example below shows a custom definition for the days February 5 – 8.
+The example below shows a custom definition for the days of February 5 – 8.
 
 <img src="/ocean/_media/tutorials-analyze-your-costs-03.png" />
 
-After you change the time period, Ocean will recalculate the presentation of the bar chart and the breakdown table.
+After you change the time period, Ocean will recalculate the bar chart presentation and the breakdown table.
 
 ### Group By
 
-The default grouping is by namespace. To choose a different grouping, click Group By and choose one of the groupings which include:
+For Kubernetes: The default grouping is by namespace. 
 
-- Namespace
+To select a different grouping, click **Group By** and then select one of the following:
+
 - Label (Namespace)
 - Annotation (Namespace)
 - Label (Resource)
 - Annotation (Resource)
 
-Once you have chosen a grouping, choose the Key from the list of keys in your cluster.
+For ECS: The default grouping is by service. You can optionally click **Group By** and then select **Tag**.
 
-The example below shows the grouping by Label (Resource) with Key equal to `Family`. The table details all of the values for the Label Key `Family` that exist in the cluster.
+Once you have selected a grouping, choose the Key from the list of keys in your cluster.
+
+The example below shows the grouping by Label (Resource) with Key equal to `Family`. The table details all the values for the Label Key `Family` in the cluster.
 
 <img src="/ocean/_media/cost-analysis-2.png" />
 
 ## Add Filter
 
-Sometimes it is useful to create an analysis that takes only certain workloads into consideration. You can do this by adding a filter.
+It may be useful to create an analysis that considers only certain workloads. You can do this by adding a filter.
 
-To apply a filter to your cost analysis, choose a filter from the list of saved filters.
-To create a new filter, click Add Filter and a fill out the filter criteria.
+To apply a filter to your cost analysis, select a filter from the list of saved filters.
+To create a new filter, click Add Filter and fill out the filter criteria.
 
