@@ -1,12 +1,14 @@
 # Import an AKS Cluster to Ocean via the Console
 
-Ocean is a managed infrastructure service for Kubernetes that automatically adjusts infrastructure capacity and size to meet the needs of pods, containers, and applications.   
+These are the options for importing an AKS cluster to Ocean:
 
-To enable Ocean to start managing your AKS cluster, you need to connect the cluster to Spot. This page includes the procedures to connect an existing AKS cluster to Ocean using the Spot console.
+* Via the Ocean console [create cluster wizard](ocean/getting-started/aks/?id=launch-the-create-ocean-cluster-wizard) (described in this topic).
+* Spot API using [oceanAKSClusterImport](https://docs.spot.io/api/#tag/Ocean-AKS/operation/oceanAKSClusterImport).
+* Terraform providers for Ocean AKS cluster [ocean-aks-np-k8s](https://registry.terraform.io/modules/spotinst/ocean-aks-np-k8s/spotinst/latest), Ocean AKS VNG [ocean_aks_np_virtual_node_group](https://registry.terraform.io/providers/spotinst/spotinst/latest/docs/resources/ocean_aks_np_virtual_node_group).
 
-## Prerequisites 
+>**IMPORTANT**: Before you begin, see [Import Cluster Prerequisites](ocean/getting-started/aks/aks-prerequisites).
 
-See [Prerequisites](ocean/getting-started/aks/aks-prerequisites).
+After importing a cluster, you must migrate workloads from the Azure Portal to Ocean.
 
 ## Support for Regions Without Availability Zones
 
@@ -48,17 +50,6 @@ Refer to the Microsoft documentation to learn about Microsoft Azure Native confi
 * [Limit network traffic with Azure Firewall in Azure Kubernetes Service (AKS)](https://learn.microsoft.com/en-us/azure/aks/limit-egress-traffic?tabs=aks-with-system-assigned-identities)
 
  </details>
-
-## Import Cluster  
-
-You can import an AKS cluster in the Ocean console Create Cluster Wizard (described in this topic).
-
-Other options:
-
-* Spot API using [oceanAKSClusterImport](https://docs.spot.io/api/#tag/Ocean-AKS/operation/oceanAKSClusterImport) 
-* Terraform providers for Ocean AKS cluster [ocean-aks-np-k8s](https://registry.terraform.io/modules/spotinst/ocean-aks-np-k8s/spotinst/latest), Ocean AKS VNG [ocean_aks_np_virtual_node_group](https://registry.terraform.io/providers/spotinst/spotinst/latest/docs/resources/ocean_aks_np_virtual_node_group).  
-
-After importing a cluster, you must Migrate Workloads to Ocean from the Azure Portal.
 
 ## Launch the Create Ocean Cluster Wizard
 
@@ -229,7 +220,7 @@ To install the Ocean Controller and establish connectivity:
    
    ```  
      
-   >**Note**:Optionally install the [Ocean Prometheus exporter](https://docs.spot.io/ocean/tools-and-integrations/prometheus/README)
+   >**Note**: Optionally install the [Ocean Prometheus exporter](https://docs.spot.io/ocean/tools-and-integrations/prometheus/README)
  
 3. Click **Test Connectivity** to confirm that the Ocean Controller is functioning in the cluster. The test takes around two minutes. A green **OK** is displayed when the Ocean Controller pod runs in the AKS cluster and communicates with the Ocean SaaS engine.  
 
@@ -239,7 +230,7 @@ Additional Tips:
 * To change the Ocean Controller init.sh script, download, edit, and execute it from the command line (bash shell). 
 * For private AKS clusters with limited or no Internet connectivity, see [What to do About Private AKS Clusters](https://docs.spot.io/ocean/getting-started/aks/?id=what-to-do-about-aks-private-clusters).  
   * Use a proxy or VPN to add or update the spotinst Helm repo in the private cluster. You need to create the config-map manually. 
- 
+
 ## Step 4: Automatic Spot Tolerance Injection (optional) 
 
 <details>
