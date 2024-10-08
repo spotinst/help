@@ -2,9 +2,17 @@
 
 ## Features and Enhancements
 
+* **SEC-007: October 8th, 2024** Spot Security supports two new AWS service types: CloudFront and DynamoDB. [Learn more](spot-security/security-matrix/)
+
+<details>
+  <summary markdown="span">September 2024</summary>
+
 * **SEC-006: September 16th, 2024** Spot Security supports two new AWS service types: ECS (Elastic Container Service) and SQS (Simple Queue Service). [Learn more](spot-security/security-matrix/)
 
 * **SEC-005: September 16th, 2024** You can get email notifications when a set of specific security rules fail. The email notification contains details about the rules and the failing assets. [Learn more](spot-security/features/analyze-risks/)
+
+</details>
+
 
 <details>
   <summary markdown="span">June 2024</summary>
