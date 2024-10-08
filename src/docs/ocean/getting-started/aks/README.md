@@ -15,9 +15,9 @@ After import, you can view a global region in the virtual node groups tab, where
  
 <details>
    
-<summary markdown="span">View image</summary>
+ <summary markdown="span">View image</summary>
 
-<img height="400" src="https://github.com/user-attachments/assets/86d2152d-6cf5-4ea7-8538-e8253cd6a90a"/>
+ <img src="https://github.com/user-attachments/assets/86d2152d-6cf5-4ea7-8538-e8253cd6a90a" />
 
 </details>
 
