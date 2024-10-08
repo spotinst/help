@@ -14,10 +14,9 @@ Ocean supports AKS with global regions, so you can create and import clusters se
 After import, you can view a global region in the virtual node groups tab, where Availability Zones = None.
  
 <details>
-   
- <summary markdown="span">View image</summary>
+   <summary markdown="span">View image...</summary>
 
- <img src="https://github.com/user-attachments/assets/86d2152d-6cf5-4ea7-8538-e8253cd6a90a" />
+   <img src="https://github.com/user-attachments/assets/86d2152d-6cf5-4ea7-8538-e8253cd6a90a" />
 
 </details>
 
@@ -272,10 +271,10 @@ Information about Namespaces:
 *  The Spot admission controller automatically excludes all [AKS system namespaces](https://learn.microsoft.com/en-us/azure/aks/faq#can-i-use-admission-controller-webhooks-on-aks) with control-plane labels like kube-system.
 
 >**Notes**:
-
-*  You can adjust your non-system namespaces after installation (described later). 
-*  You can install the Spot admission controller from this wizard or later (after importing the cluster) from the Cluster **Actions** drop-down menu. 
-*  If the Spot admission controller is not installed in your cluster, the banner at the top of the screen displays installation instructions.
+>
+> - You can adjust your non-system namespaces after installation (described later). 
+> - You can install the Spot admission controller from this wizard or later (after importing the cluster) from the Cluster **Actions** drop-down menu. 
+> - If the Spot admission controller is not installed in your cluster, the banner at the top of the screen displays installation instructions.
 
 To Install the Spot Admission Controller:
 
