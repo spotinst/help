@@ -2,7 +2,7 @@
 
 ## October 2024: Features and Enhancements 
 
-*  **OCN-0035: October 08, 2024:** (**<font color="#FC01CC">AKS</font>**) You can now create multiple virtual node groups from your node pools when you import an AKS cluster into Ocean.
+*  **OCN-0035: October 08, 2024:** (**<font color="#FC01CC">AKS</font>**) You can now create multiple virtual node groups from your node pools when you import an AKS cluster into Ocean. [Learn more...](https://docs.spot.io/ocean/getting-started/aks/?id=launch-the-create-ocean-cluster-wizard).
 
 *  **OCN-0034: October 07, 2024:** (**<font color="#FC01CC">AKS</font>**) Documentation update: see how to manage AKS virtual node groups. [Learn more...](https://docs.spot.io/ocean/tutorials/manage-virtual-nd-groups-aks)
 
