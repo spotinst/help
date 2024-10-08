@@ -14,10 +14,9 @@ Ocean supports AKS with global regions, so you can create and import clusters se
 After import, you can view a global region in the virtual node groups tab, where Availability Zones = None.
  
 <details>
-   
-<summary markdown="span">View image</summary>
+   <summary markdown="span">View image...</summary>
 
-<img height="400" src="https://github.com/user-attachments/assets/86d2152d-6cf5-4ea7-8538-e8253cd6a90a"/>
+   <img src="https://github.com/user-attachments/assets/86d2152d-6cf5-4ea7-8538-e8253cd6a90a" />
 
 </details>
 
@@ -159,9 +158,9 @@ To create your Virtual Node Groups:
 
 2. Optionally edit [Virtual Node Group Template](https://docs.spot.io/ocean/features/vngs/) attributes for the selected node pool.
 
->**Note**: To edit the virtual node group template in JSON format, click **JSON** at the top right of the screen. Define AZs, node pool properties (max Pods, OS Type, OS Disk Type, OS Disk Size, etc.), min/max node counts, and auto-scaling strategy (Spot percentage, fallback to On-Demand). You can create labels, tags, and taints.
-
->**Note**: Some virtual node group properties, such as node pool properties (OS types, OS Disk type), cannot be edited. If you need to change these properties, delete the virtual node group and create a new one. 
+>**Note**:
+> - To edit the virtual node group template in JSON format, click **JSON** at the top right of the screen. Define AZs, node pool properties (max Pods, OS Type, OS Disk Type, OS Disk Size, etc.), min/max node counts, and auto-scaling strategy (Spot percentage, fallback to On-Demand). You can create labels, tags, and taints.
+> - Some virtual node group properties, such as node pool properties (OS types, OS Disk type), cannot be edited. If you need to change these properties, delete the virtual node group and create a new one. 
 
 3. Optional: You can create more virtual node groups from existing node pools in the cluster by selecting them in the node pool list. When you complete this wizard step, Ocean imports the node pool compute configurations into virtual node groups. You might need different virtual node groups to handle different workload requirements, such as: 
 
@@ -272,10 +271,10 @@ Information about Namespaces:
 *  The Spot admission controller automatically excludes all [AKS system namespaces](https://learn.microsoft.com/en-us/azure/aks/faq#can-i-use-admission-controller-webhooks-on-aks) with control-plane labels like kube-system.
 
 >**Notes**:
-
-*  You can adjust your non-system namespaces after installation (described later). 
-*  You can install the Spot admission controller from this wizard or later (after importing the cluster) from the Cluster **Actions** drop-down menu. 
-*  If the Spot admission controller is not installed in your cluster, the banner at the top of the screen displays installation instructions.
+>
+> - You can adjust your non-system namespaces after installation (described later). 
+> - You can install the Spot admission controller from this wizard or later (after importing the cluster) from the Cluster **Actions** drop-down menu. 
+> - If the Spot admission controller is not installed in your cluster, the banner at the top of the screen displays installation instructions.
 
 To Install the Spot Admission Controller:
 
