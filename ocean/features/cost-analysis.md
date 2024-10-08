@@ -8,7 +8,9 @@ Instead of seeing the cost of an entire cluster, you can see costs broken down i
 
 <img src="/ocean/_media/cost-analysis-2.png" />
 
->**Note:** For ECS only, costs are broken down into services instead of namespaces. Also, ECS cost analysis does not include network costs.
+>**Note:**
+> - For ECS only, costs are broken down into services instead of namespaces. 
+> - Only AWS Kubernetes cost analysis  includes network costs.
 
 ## How It Works
 
@@ -94,7 +96,7 @@ To retrieve the necessary EFS information, Ocean requires the following permissi
 
 `elasticfilesystem:DescribeFileSystems`
 
-### Network Costs
+### Network Costs (for AWS Kubernetes only)
 
 Ocean network costs measure data transfer costs (in $) and bandwidth usage (in GB) for Kubernetes applications.
 
