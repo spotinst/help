@@ -11,7 +11,7 @@ See [Prerequisites](ocean/getting-started/aks/aks-prerequisites).
 ## Support for Regions Without Availability Zones
 
 Ocean supports AKS with global regions, so you can create and import clusters set with the global regions in [Azure](https://azure.microsoft.com/en-gb/explore/global-infrastructure/geographies/#geographies) that currently do not support Availability Zones. For these clusters, you create resources at the regional level.  
-After import, you can view a global region in the Virtual Node Groups tab, where Availability Zones = None.
+After import, you can view a global region in the virtual node groups tab, where Availability Zones = None.
  
 <details>
    
@@ -34,7 +34,7 @@ Ocean supports:
 This diagram shows the outbound communication connection for AKS private clusters. The Spot SaaS environment on the right is hosted in the public cloud domain and requires internet connectivity for access. 
 Your AKS environment and the components we access to operate the AKS clusters are on the left. In this example, we access the Spot Ocean Controller.  
 
-![AKS-PRIVATE_CLUSTER-1](https://github.com/spotinst/help/assets/159915991/6f9107f4-f6a5-469a-a55b-bde1543cb165)
+<img src="https://github.com/spotinst/help/assets/159915991/6f9107f4-f6a5-469a-a55b-bde1543cb165"/>
 
 The Ocean Controller is an AKS deployment that resides in the cluster and communicates with the Spot SaaS environment to trigger scale up and scale down.  
 
@@ -66,7 +66,7 @@ After importing a cluster, you must Migrate Workloads to Ocean from the Azure Po
 To launch the Create Ocean Cluster Wizard in the Spot Console:  
 * In the top left menu, click **Ocean**.   
    * For **new** Ocean AKS accounts with no existing Clusters, click **Create Cluster** to launch the Create Ocean Cluster wizard. 
-   * For **existing** Ocean AKS accounts with active Ocean AKS clusters, select **Cloud Clusters** on the left menu and then click **Create Cluster** on top right above the cluster list table.
+   * For **existing** Ocean AKS accounts with active Ocean AKS clusters, select **Cloud Clusters** on the left menu and then click **Create Cluster** on the top right above the cluster list table.
 
 To import the AKS cluster, follow the steps in the Create Ocean Cluster Wizard:
 
@@ -144,41 +144,41 @@ To run the Missing Permissions wizard:
 
 Virtual Node Groups (VNGs) provide a single abstraction layer for managing different types of workloads on the same cluster.
 
-You must create at least one Virtual Node Group in your Ocean AKS cluster. A Virtual Node Group inherits properties and attributes from the Virtual Node Group Template.
+You must create at least one virtual node group in your Ocean AKS cluster. A Virtual Node Group inherits properties and attributes from the virtual node group template.
 
 In this step:
 
-* Select one of your AKS node pools as a Virtual Node Group [template](https://docs.spot.io/ocean/features/vngs/?id=default-vng)
-* Optional: Create one or more Virtual Node Groups as required.
+* Select one of your AKS node pools as a virtual node group [template](https://docs.spot.io/ocean/features/vngs/?id=default-vng)
+* Optional: Create one or more virtual node groups as required.
 
 To create your Virtual Node Groups:
 
 ![vng-template-a](https://github.com/user-attachments/assets/56ffec63-8243-4840-9a19-8709da334a9f)
 
-1. Select 1 node pool from the list. The selected node pool’s configuration is imported to the Virtual Node Group Template and used later for other Virtual Node Groups you create.
+1. Select 1 node pool from the list. The selected node pool’s configuration is imported to the virtual node group template and used later for other virtual node groups you create.
 
 2. Optionally edit [Virtual Node Group Template](https://docs.spot.io/ocean/features/vngs/) attributes for the selected node pool.
 
->**Note**: To edit the Virtual Node Group Template in JSON format, click **JSON** at the top right of the screen. Define AZs, node pool properties (max Pods, OS Type, OS Disk Type, OS Disk Size, etc.), min/max node counts, and auto-scaling strategy (Spot percentage, fallback to On-Demand). You can create labels, tags, and taints.
+>**Note**: To edit the virtual node group template in JSON format, click **JSON** at the top right of the screen. Define AZs, node pool properties (max Pods, OS Type, OS Disk Type, OS Disk Size, etc.), min/max node counts, and auto-scaling strategy (Spot percentage, fallback to On-Demand). You can create labels, tags, and taints.
 
->**Note**: Some Virtual Node Group properties, such as node pool properties (OS types, OS Disk type), cannot be edited. If you need to change these properties, delete the Virtual Node Group and create a new one. 
+>**Note**: Some virtual node group properties, such as node pool properties (OS types, OS Disk type), cannot be edited. If you need to change these properties, delete the virtual node group and create a new one. 
 
-3. Optional: You can create more Virtual Node Groups from existing node pools in the cluster by selecting them in the node pool list. When you complete this wizard step, Ocean imports the node pool compute configurations into Virtual Node Groups. You might need different Virtual Node Groups to handle different workload requirements, such as: 
+3. Optional: You can create more virtual node groups from existing node pools in the cluster by selecting them in the node pool list. When you complete this wizard step, Ocean imports the node pool compute configurations into virtual node groups. You might need different virtual node groups to handle different workload requirements, such as: 
 
    * Virtual Node Group with regular VMs: workloads that cannot run on Spot nodes and must run on Regular (On-demand) VMs, e.g., statefulSets, Spark drivers, and Kafka producers.  
    * Performance Virtual Node Group: for workloads that need high-performance CPUs (Intel v4 or v5), a minimum vCPU 8 or higher or a larger OS Disk size, and VMs with a minimum disk 4 or higher. 
    * AI/ML Virtual Node Group: for workloads that need GPUs, say GPU count: 2-4 and specific VM series r GPU families 
    * Windows Virtual Node Group: for workloads that need Windows nodes.
 
->**Important**: One Virtual Node Group is created for each node pool you select. 
+>**Important**: One virtual node group is created for each node pool you select. 
 
 **Example:** 
 
-The selected node pool in this example has a similar configuration to the 4 node pools listed after it. Later, when you migrate your nodes to Ocean, You can consolidate the 5 node pools into the custom Virtual Node Group (created from the 1 selected node pool).
+The selected node pool in this example has a similar configuration to the 4 node pools listed after it. Later, when you migrate your nodes to Ocean, You can consolidate the 5 node pools into the custom virtual node group (created from the 1 selected node pool).
 
 ![vng-template-b](https://github.com/user-attachments/assets/f74b10c9-a730-4f1b-9f65-e0ff7c50dbb6)
 
-4. Click the Virtual Node Group link and edit attributes as required.
+4. Click the virtual node group link and edit attributes as required.
 
 ## Step 3: Connectivity  
 
@@ -247,7 +247,7 @@ Additional Tips:
 
 <summary markdown="span">View image</summary>
 
-![tolerance1](https://github.com/user-attachments/assets/0794cb95-0db2-4cb0-bceb-66150dc45cf4)
+<img src="https://github.com/user-attachments/assets/0794cb95-0db2-4cb0-bceb-66150dc45cf4" />
 
 </details>
 
@@ -312,9 +312,9 @@ for pod in $pods; do echo "Deleting pod: $pod" kubectl delete pod $pod -n <names
 
 You can:
 
-* View and edit the Ocean cluster configuration and the VNG Template in JSON.   
+* View and edit the Ocean cluster configuration and the virtual node group template in JSON.   
 * Update Ocean AKS cluster autoscaling configuration, cluster resource limits (vCPU and memory), scale-down percentage, and automatic headroom. 
-* Modify the Virtual Node Group template configuration in JSON format.
+* Modify the virtual node group template configuration in JSON format.
 
 <img height="400" src="https://github.com/user-attachments/assets/90560b12-9b55-4a4e-aaee-cdedab530e2f" />
 
