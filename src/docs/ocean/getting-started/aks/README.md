@@ -1,12 +1,14 @@
 # Import an AKS Cluster to Ocean via the Console
 
-Ocean is a managed infrastructure service for Kubernetes that automatically adjusts infrastructure capacity and size to meet the needs of pods, containers, and applications.   
+These are the options for importing an AKS cluster to Ocean:
 
-To enable Ocean to start managing your AKS cluster, you need to connect the cluster to Spot. This page includes the procedures to connect an existing AKS cluster to Ocean using the Spot console.
+* Via the Ocean console [create cluster wizard](ocean/getting-started/aks/?id=launch-the-create-ocean-cluster-wizard) (described in this topic).
+* Spot API using [oceanAKSClusterImport](https://docs.spot.io/api/#tag/Ocean-AKS/operation/oceanAKSClusterImport).
+* Terraform providers for Ocean AKS cluster [ocean-aks-np-k8s](https://registry.terraform.io/modules/spotinst/ocean-aks-np-k8s/spotinst/latest), Ocean AKS VNG [ocean_aks_np_virtual_node_group](https://registry.terraform.io/providers/spotinst/spotinst/latest/docs/resources/ocean_aks_np_virtual_node_group).
 
-## Cluster Import Prerequisites
+>**IMPORTANT**: Before you begin, see [Import Cluster Prerequisites](ocean/getting-started/aks/aks-prerequisites).
 
-Before you begin, see [Prerequisites](ocean/getting-started/aks/aks-prerequisites).
+After importing a cluster, you must migrate workloads from the Azure Portal to Ocean.
 
 ## Support for Regions Without Availability Zones
 
@@ -48,17 +50,6 @@ Refer to the Microsoft documentation to learn about Microsoft Azure Native confi
 * [Limit network traffic with Azure Firewall in Azure Kubernetes Service (AKS)](https://learn.microsoft.com/en-us/azure/aks/limit-egress-traffic?tabs=aks-with-system-assigned-identities)
 
  </details>
-
-## Import Cluster  
-
-You can import an AKS cluster in the Ocean console Create Cluster Wizard (described in this topic).
-
-Other options:
-
-* Spot API using [oceanAKSClusterImport](https://docs.spot.io/api/#tag/Ocean-AKS/operation/oceanAKSClusterImport) 
-* Terraform providers for Ocean AKS cluster [ocean-aks-np-k8s](https://registry.terraform.io/modules/spotinst/ocean-aks-np-k8s/spotinst/latest), Ocean AKS VNG [ocean_aks_np_virtual_node_group](https://registry.terraform.io/providers/spotinst/spotinst/latest/docs/resources/ocean_aks_np_virtual_node_group).  
-
-After importing a cluster, you must Migrate Workloads to Ocean from the Azure Portal.
 
 ## Launch the Create Ocean Cluster Wizard
 
