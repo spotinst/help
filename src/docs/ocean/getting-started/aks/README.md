@@ -158,9 +158,9 @@ To create your Virtual Node Groups:
 
 2. Optionally edit [Virtual Node Group Template](https://docs.spot.io/ocean/features/vngs/) attributes for the selected node pool.
 
->**Note**: To edit the virtual node group template in JSON format, click **JSON** at the top right of the screen. Define AZs, node pool properties (max Pods, OS Type, OS Disk Type, OS Disk Size, etc.), min/max node counts, and auto-scaling strategy (Spot percentage, fallback to On-Demand). You can create labels, tags, and taints.
-
->**Note**: Some virtual node group properties, such as node pool properties (OS types, OS Disk type), cannot be edited. If you need to change these properties, delete the virtual node group and create a new one. 
+>**Note**:
+> - To edit the virtual node group template in JSON format, click **JSON** at the top right of the screen. Define AZs, node pool properties (max Pods, OS Type, OS Disk Type, OS Disk Size, etc.), min/max node counts, and auto-scaling strategy (Spot percentage, fallback to On-Demand). You can create labels, tags, and taints.
+> - Some virtual node group properties, such as node pool properties (OS types, OS Disk type), cannot be edited. If you need to change these properties, delete the virtual node group and create a new one. 
 
 3. Optional: You can create more virtual node groups from existing node pools in the cluster by selecting them in the node pool list. When you complete this wizard step, Ocean imports the node pool compute configurations into virtual node groups. You might need different virtual node groups to handle different workload requirements, such as: 
 
