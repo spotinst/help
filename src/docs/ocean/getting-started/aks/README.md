@@ -4,9 +4,9 @@ Ocean is a managed infrastructure service for Kubernetes that automatically adju
 
 To enable Ocean to start managing your AKS cluster, you need to connect the cluster to Spot. This page includes the procedures to connect an existing AKS cluster to Ocean using the Spot console.
 
-## Prerequisites 
+## Cluster Import Prerequisites
 
-See [Prerequisites](ocean/getting-started/aks/aks-prerequisites).
+Before you begin, see [Prerequisites](ocean/getting-started/aks/aks-prerequisites).
 
 ## Support for Regions Without Availability Zones
 
@@ -229,7 +229,7 @@ To install the Ocean Controller and establish connectivity:
    
    ```  
      
-   >**Note**:Optionally install the [Ocean Prometheus exporter](https://docs.spot.io/ocean/tools-and-integrations/prometheus/README)
+   >**Note**: Optionally install the [Ocean Prometheus exporter](https://docs.spot.io/ocean/tools-and-integrations/prometheus/README)
  
 3. Click **Test Connectivity** to confirm that the Ocean Controller is functioning in the cluster. The test takes around two minutes. A green **OK** is displayed when the Ocean Controller pod runs in the AKS cluster and communicates with the Ocean SaaS engine.  
 
@@ -239,7 +239,7 @@ Additional Tips:
 * To change the Ocean Controller init.sh script, download, edit, and execute it from the command line (bash shell). 
 * For private AKS clusters with limited or no Internet connectivity, see [What to do About Private AKS Clusters](https://docs.spot.io/ocean/getting-started/aks/?id=what-to-do-about-aks-private-clusters).  
   * Use a proxy or VPN to add or update the spotinst Helm repo in the private cluster. You need to create the config-map manually. 
- 
+
 ## Step 4: Automatic Spot Tolerance Injection (optional) 
 
 <details>
