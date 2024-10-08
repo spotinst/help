@@ -34,7 +34,9 @@ In both cases, you can activate your license via the link to Support, which appe
 
 The bar chart shows the cost of your workload over time. The default display breaks down each bar into different namespaces and represents the daily cost over the last week. Modify the time period and groupings according to your needs. See Grouping Options below for more information.
 
->**Note:** For ECS only, costs are broken down into services instead of namespaces. Also, ECS cost analysis does not include network costs.
+>**Note:**
+> - For ECS only, costs are broken down into services instead of namespaces. 
+> - Only AWS Kubernetes cost analysis includes network costs.
 
 <img src="/ocean/_media/cost-analysis-5.png" />
 
@@ -49,7 +51,9 @@ The breakdown table presents an itemization of costs per namespace and costs wit
 - Network Cost: Part of costs pertaining to the amount of data transfer between workloads and services such as Inter-AZ, Internet, Inter-Region and Intra-AZ costs
 - Total Cost: Total cost of that namespace
 
->**Note:** For ECS only, costs are broken down into services instead of namespaces. Also, ECS cost analysis does not include network costs.
+>**Note:**
+> - For ECS only, costs are broken down into services instead of namespaces. 
+> - Only AWS Kubernetes cost analysis includes network costs.
 
 <img src="/ocean/_media/cost-analysis-4.png" />
 
