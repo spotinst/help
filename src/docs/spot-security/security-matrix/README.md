@@ -8,7 +8,7 @@
 | CloudTrail                       | KMS (Key Management Service)          |
 | CloudWatch                       | Lambda                                |
 | Config                           | RDS (Relational Database Service)     |
-| DynamDB                          | S3 (Simple Storage Service)           |
+| DynamoDB                         | S3 (Simple Storage Service)           |
 | EBS (Elastic Block Store)        | SES (Simple Email Service)            |
 | EC2 (Elastic Compute Cloud)      | SNS (Simple Notification Service)     |
 | ECS (Elastic Container Service)  | SQS (Simple Queue Service)            |
