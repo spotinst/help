@@ -2,15 +2,15 @@
 
 # Grafana Dashboard
 
-This topic describes the integration of Ocean with Grafana and Prometheus to help you identify and investigate real-life anomalies in Spot-managed clusters.
+This topic describes the integration of Ocean with Grafana and Prometheus to help you identify and investigate real-life anomalies in Ocean-managed clusters.
 
 ## Prometheus and Grafana
 
 Prometheus and Grafana are among the most popular observability stacks in the market, especially within the DevOps community. Prometheus is a robust monitoring and alerting toolkit that scrapes and stores time series data, providing real-time insights into various metrics within your cluster. 
 
-Grafana enhances Prometheus by offering powerful data visualization capabilities, allowing you to create informative and interactive dashboards.
+Grafana enhances Prometheus by offering powerful data visualization capabilities so you can create informative and interactive dashboards.
 
-In Kubernetes environments, where the dynamic nature of workloads and infrastructure demands continuous monitoring, the Prometheus and Grafana stack is invaluable. It provides deep visibility into the performance, health, and cost-effectiveness of your Kubernetes clusters, enabling proactive management and optimization.
+In Kubernetes environments, where the dynamic nature of workloads and infrastructure demands continuous monitoring, the Prometheus and Grafana stack provides deep visibility into the performance, health, and cost-effectiveness of your Kubernetes clusters, enabling proactive management and optimization.
 
 ## Spot Ocean Scaling and Cost Optimization Dashboard
 
@@ -20,13 +20,13 @@ Visualizations can help you understand how Ocean dynamically manages Kubernetes 
 
 Visualizations include data on compute, storage, and networking expenses, helping you monitor and optimize cloud spending. They also highlight the cost distribution across different resource types and track usage patterns over time. 
 
-### Dashboard Benefits
+The scaling and cost optimization dashboard exposes data that helps you make informed decisions about resource allocation, identify cost-saving opportunities, and ensure efficient utilization of cloud infrastructure. For Ocean right-sizing evaluations, the dashboard shows how efficient resource adjustments contribute to cost reduction while maintaining optimal cluster performance.
 
-The scaling and cost optimization dashboard data helps you make informed decisions about resource allocation, identify cost-saving opportunities, and ensure efficient utilization of cloud infrastructure. The dashboard also supports Ocean right-sizing evaluations, showing how efficient resource adjustments contribute to cost reduction while maintaining optimal cluster performance.
+### Integration Benefits
 
 [Ocean](https://spot.io/product/ocean/) manages the scaling of the Kubernetes data plane, and the data generated in the process can be valuable for monitoring your containerized environment. 
 
-Using well-defined [Prometheus metrics](https://docs.spot.io/ocean/tools-and-integrations/prometheus/) to monitor Ocean provides insights into cluster scaling and debugging. You can also build alerts based on the metrics to address issues in real-time and track trends on a dashboard with different Ocean metrics.
+Using well-defined [Prometheus metrics](https://docs.spot.io/ocean/tools-and-integrations/prometheus/) to monitor Ocean provides insights into cluster scaling and debugging. You can also build alerts based on the metrics to address issues in real time and track trends on a dashboard with different Ocean metrics.
 
 Ocean maintains an official set of metrics, natively scrapable by Prometheus. This set of metrics helps build a 360-degree view of Ocean’s actions while providing application-driven infrastructure.
 
