@@ -47,10 +47,12 @@ The Billing Engine policy includes the permissions needed to access the AWS Cost
 
  </details>
 
+
 | Resource  | Policy Access Read Only | Purpose of Access                                                                   |
-|-----------|--------=----------------|-------------------------------------------------------------------------------------|
+|-----------|-------------------------|-------------------------------------------------------------------------------------|
 | s3        | "s3:GetObject",         | Needed to copy the CUR from the customer                                            |
 | ce        | "s3:ListBucket"         | Needed to get Account Names from the cost explorer for Billing Engine Account names |
+
 
 ## Billing Engine Azure 
 
