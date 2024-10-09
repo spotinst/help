@@ -36,9 +36,28 @@ Import the Ocean Scaling and Cost Optimization Dashboard to Grafana
 
 Before you begin, you need to have a working Grafana account.
 
+Method 1
+
 1. Copy the Ocean Grafana ID **21768** to the clipboard.
 2. Click this [link](https://grafana.com/grafana/dashboards/21768-spot-ocean-scaling-and-cost-optimization-dashboard/).
-3. On the right of the screen, click **Copy ID to Clipboard**. 
+3. On the right of the screen, click **Copy ID to Clipboard**.
+
+Method 2
+
+1. Copy the Ocean Grafana ID **21768** to the clipboard.
+2. In your Grafana screen, click New > Import
+
+3. Paste in the ID and click **Load**.
+4. Select the **Prometheus** datasource.
+5. Click **Import**. 
+
+The following set of dashboards will now be available in Grafana:
+
+* Current Status (displayed by default).
+* Scaling.
+* Cost and Usage.
+
+See a description of these dashboards at [link].
 
 
 
