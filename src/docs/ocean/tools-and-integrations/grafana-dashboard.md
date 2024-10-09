@@ -89,8 +89,7 @@ This dashboard contains the following widgets:
 This dashboard contains the following widgets:
 
 * Scaling up and down events summaries.
-* Failed scale up events summary.
-* 
+* Failed scale-up events summary.* 
 
 
 </details>
