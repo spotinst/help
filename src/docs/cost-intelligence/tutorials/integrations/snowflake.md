@@ -11,7 +11,7 @@ Use Snowflake integration to collect billable and usage metrics for your organiz
 3. Click **Integrations** > **Snowflake** > **Add Instance**.
 4. Paste the name of the warehouse from Snowflake in <i>Warehouse</i>.
 5. In Snowflake, [get the account ID](https://docs.snowflake.com/en/user-guide/admin-account-identifier).
-6. Paste the account ID from Snowflake in <i>Account Id</i>.
+6. In the Spot Console, paste the account ID from Snowflake in <i>Account Id</i>.
 7. Enter your Snowflake username in <i>Username</i>.
 8. Enter your Snowflake password in <i>Password</i>.
 9. Click **Add Instance**.
