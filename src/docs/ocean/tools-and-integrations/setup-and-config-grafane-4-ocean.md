@@ -2,54 +2,34 @@
 
 # Set up and Configure Grafana for Ocean
 
-## Prerequisites
+Before you begin, make sure you have all of the following prerequisites:
 
-Before you begin, make sure you have all of the following:
-
+* Working Grafana account.
+* Prometheus server.
 * [Ocean controller](https://docs.spot.io/ocean/tutorials/ocean-controller-v2/): Manages scaling the Kubernetes data plane.
 * [Ocean network client](https://docs.spot.io/ocean/tutorials/install-network-client-v2): Handles network cost analysis in an Ocean-managed cluster.
 * [Ocean metrics exporter](https://docs.spot.io/ocean/tools-and-integrations/prometheus/scrape?id=install-the-exporter): Exposes Ocean-specific metrics to Prometheus.
 * kube-state-metrics service.
-* Prometheus server.
 
-### Configure Prometheus
+## Configure Prometheus
 
 1. Configure Prometheus to scrape Ocean metrics by adding the Ocean Metric Exporter as a scrape target.
 2. Define necessary jobs and targets in your Prometheus configuration file to ensure metrics are accurately collected.
+3. Add Prometheus as a data source in Grafana (under New Connection) and connect with your cluster.
 
-### Link to the Grafana Cloud Dashboard
-
-Download the Spot Ocean Scaling Dashboard Template and follow the instructions provided to import and configure the dashboard in your Grafana instance.
-
-### Configure Grafana
-
-1. Connect Grafana to Prometheus as a data source.
-2. Import the Spot Ocean Scaling and Cost Optimization Dashboard into Grafana using either:
-    * The template link provided
-    * Grafana.com ID: 21768
-  
-
-
-like this
-
-Import the Ocean Scaling and Cost Optimization Dashboard to Grafana
-
-Before you begin, you need to have a working Grafana account.
-
-Method 1
+## Import the Ocean Scaling and Cost Optimization Dashboard to Grafana
 
 1. Copy the Ocean Grafana ID **21768** to the clipboard.
-2. Click this [link](https://grafana.com/grafana/dashboards/21768-spot-ocean-scaling-and-cost-optimization-dashboard/).
-3. On the right of the screen, click **Copy ID to Clipboard**.
+2. In your Grafana dashboard screen, click **New > Import**.
 
-Method 2
-
-1. Copy the Ocean Grafana ID **21768** to the clipboard.
-2. In your Grafana screen, click New > Import
+<img width = 400 alt="grafana-import-dashboard" src="https://github.com/user-attachments/assets/2c4ae5fc-114a-4134-b429-6bc4d798c4df" />
 
 3. Paste in the ID and click **Load**.
-4. Select the **Prometheus** datasource.
-5. Click **Import**. 
+
+<img width = 400 alt="grafana-import-part2-dashboard" src="https://github.com/user-attachments/assets/4d95f01d-9613-46ee-94ac-73baea4823aa" />
+
+5. Select the **Prometheus** datasource.
+6. Click **Import**. 
 
 The following set of dashboards will now be available in Grafana:
 
@@ -57,7 +37,9 @@ The following set of dashboards will now be available in Grafana:
 * Scaling.
 * Cost and Usage.
 
-See a description of these dashboards at [link].
+See a description of these dashboards at [link to the first Grafana page].
+
+## Ocean-Grafana Version History
 
 
 
