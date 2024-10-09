@@ -27,6 +27,20 @@ Download the Spot Ocean Scaling Dashboard Template and follow the instructions p
 2. Import the Spot Ocean Scaling and Cost Optimization Dashboard into Grafana using either:
     * The template link provided
     * Grafana.com ID: 21768
+  
+
+
+like this
+
+Import the Ocean Scaling and Cost Optimization Dashboard to Grafana
+
+Before you begin, you need to have a working Grafana account.
+
+1. Copy the Ocean Grafana ID **21768** to the clipboard.
+2. Click this [link](https://grafana.com/grafana/dashboards/21768-spot-ocean-scaling-and-cost-optimization-dashboard/).
+3. On the right of the screen, click **Copy ID to Clipboard**. 
+
+
 
 
 
