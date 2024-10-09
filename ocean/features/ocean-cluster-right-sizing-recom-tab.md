@@ -135,7 +135,6 @@ To delete a right sizing rule:
 
 These are the Right-Sizing Best Practices:
 
-* For production clusters, we recommend setting two replicas for the Admission Controller to ensure continuous operation if one stops reporting. 
 * Workload limits should not have the same values as requests.
 * If you set overheads for resources, start with a relatively high overhead (20%) and decrease it with time.
 * If you set boundaries (recommendation ranges for resources), avoid applying the specific rule to all workloads. All services have different purposes.
