@@ -4,15 +4,16 @@
 
 |  |  |
 |---|---|
-|     CloudTrail                              |     KMS (Key Management Service)         |
-|     CloudWatch                              |     Lambda                               |
-|     Config                                  |     RDS (Relational Database Service)    |
-|     EBS (Elastic Block Store)               |     S3 (Simple Storage Service)          |
-|     EC2 (Elastic Compute Cloud)             |     SES (Simple Email Service)           |
-|     ECS (Elastic Container Service)         |     SNS (Simple Notification Service)    |
-|     EKS (Elastic Kubernetes Service)         |     SQS (Simple Queue Service)           |
-|     ELB (Elastic Load Balancing)            |     VPC (Virtual Private Cloud)          |
-|     IAM (Identity and Access Management)    |                                          |
+| CloudFront                       | IAM (Identity and Access Management)  |
+| CloudTrail                       | KMS (Key Management Service)          |
+| CloudWatch                       | Lambda                                |
+| Config                           | RDS (Relational Database Service)     |
+| DynamoDB                         | S3 (Simple Storage Service)           |
+| EBS (Elastic Block Store)        | SES (Simple Email Service)            |
+| EC2 (Elastic Compute Cloud)      | SNS (Simple Notification Service)     |
+| ECS (Elastic Container Service)  | SQS (Simple Queue Service)            |
+| EKS (Elastic Kubernetes Service) | VPC (Virtual Private Cloud)           |
+| ELB (Elastic Load Balancing)     |                                       |
 
 ## Supported Azure Asset Types
 
