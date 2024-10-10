@@ -1,4 +1,4 @@
-# Manage AWS virtual node groups
+# Manage AWS Virtual Node Groups
 
 Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>
 
