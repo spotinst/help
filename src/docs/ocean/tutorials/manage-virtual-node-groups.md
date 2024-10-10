@@ -18,7 +18,7 @@ An Ocean cluster is up and running.
 
 The virtual node groups tab lets you track live data per virtual node group. You can review the resource allocation, number of nodes and pods running, and other information about the virtual node groups.
 
-![vng-aws-list-ocean-listed-summed](https://github.com/user-attachments/assets/5d00cf04-b9e0-4881-9b3f-9bdadc54aa18)
+![aws_vng-aws-list](https://github.com/user-attachments/assets/6bd98303-54ee-44c4-9f96-4bc89b7faa5f)
 
 The virtual node groups Summary List displays the following columns:
 
@@ -100,10 +100,7 @@ resources:
     nvidia.com/gpu: 1
 ```
 
-You can use a node selector or node affinity that requires your GPU-based pods to select the specific VNG containing the GPU image based on the custom node label configured in the GPU VNG.
-
-<img src="/ocean/_media/tutorials-manage-vngs-02-5.png" />
-
+You can use a node selector or node affinity that requires your GPU-based pods to select the specific virtual node group containing the GPU image based on the custom node label configured in the GPU virtual node group.
 
 ## Configure Instance Types
 
