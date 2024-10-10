@@ -131,7 +131,7 @@ In other Virtual Node Groups, Ocean automatically grays out instance types that 
 
 Click a down arrow to see the available instance options. Check/uncheck options as required.
 
-Click **Restore to Default** to restore the instance types in a Virtual Node Group to their default configuration.
+Click **Restore to default values** (above and to the right of the instance types list) to restore the instance types in a Virtual Node Group to their default configuration.
 
 * For the default VNG: The instance types are set to the default Ocean configuration to make all instance types available. Then, Ocean can choose any combination of instance types that best fits the workload requirements.
 * For other Virtual Node Groups: The instance types are those available in the Default Virtual Node Group.
