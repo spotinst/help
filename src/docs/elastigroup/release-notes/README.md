@@ -10,8 +10,8 @@
 
 * **STN-004: October 9th, 2024**:
 You can now use the console to:
-* start a Spot-managed VM when a stateful node is stopped 
-* stop an Azure VM when a stateful node is running
+  * start a Spot-managed VM when a stateful node is stopped 
+  * stop an Azure VM when a stateful node is running
 
 <details>
   <summary markdown="span">September 2024</summary>
