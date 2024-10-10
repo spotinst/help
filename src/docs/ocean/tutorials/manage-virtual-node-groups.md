@@ -18,6 +18,7 @@ An Ocean cluster is up and running.
 
 The virtual node groups tab lets you track live data per virtual node group. You can review the resource allocation, number of nodes and pods running, and other information about the virtual node groups.
 
+![vng-aws-list-ocean-listed-summed](https://github.com/user-attachments/assets/5d00cf04-b9e0-4881-9b3f-9bdadc54aa18)
 
 The virtual node groups Summary List displays the following columns:
 
@@ -48,16 +49,12 @@ The virtual node groups Summary List displays the following columns:
    *  For EKS only, select to import from an existing node group.
 3. Click **Continue**.
 
-When you select Import, a one-time process occurs. Import copies values from the cloud provider node group entity to the Ocean configuration. Later, there is no active connection between these two entities. Ocean will provision new VMs, not as part of a managed Kubernetes service of node group entities.
-Review all of the parameters and update them if necessary before saving.
+When you select Import, a one-time process occurs. Import copies values from the cloud provider node group entity to the Ocean configuration. Later, there is no active connection between these two entities. Ocean will provision new instance types, not as part of a managed Kubernetes service of node group entities.
 
-If you are configuring manually, see [New virtual node group Page]()
+4. Review all the virtual node group parameters (listed below) and update if necessary before saving.
 
-### New Virtual Node Group
-
-1. On the New Virtual Node Group page, enter the virtual node group parameters you want to customize. Parameters left blank use values from the default VNG, as indicated in the illustration below.
-2. After customizing the virtual node group, click **Save**. The VNG parameters are described below.
-
+>**Note**: Parameters left blank use values from the default virtual node group.
+ 
 ![create-custom-vng](https://github.com/user-attachments/assets/1dd6db4f-b7e5-40fa-a5d9-26680179a59e)
 
 ## Configuration Parameters
@@ -67,12 +64,12 @@ If you are configuring manually, see [New virtual node group Page]()
 * Security Groups: The security groups that apply to the VNG. You can choose up to five groups as per the [AWS limitation](https://docs.aws.amazon.com/vpc/latest/userguide/amazon-vpc-limits.html#vpc-limits-security-groups).
 * Subnets: The subnets that apply to the VNG. You can choose multiple subnets.
 * Root Volume Size: The root volume size in GiB. This field and `blockDeviceMappings` cannot be used in the same VNG.
-* Instance Profile: The iamRole object that is applicable to the instance profile.
+* Instance Profile: The iamRole object that applies to the instance profile.
 * User Data (Startup Script): User data script to set in Base64-encoded MIME.
 
 ### Node Selection Parameters
 
-This section lets you inform Ocean about the labels and taints set on the nodes. Ocean will use them to select the right VNG for a pending pod when they are set.
+This section lets you inform Ocean about the labels and taints set on the nodes. When they are set, Ocean will use them to select the right VNG for a pending pod.
 
 * Node Labels: Key/Value pairs defined on the Kubernetes nodes.
 * Node [Taints](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/): Triplets of Key, Value, and Effect defined on the Kubernetes nodes.
@@ -84,7 +81,7 @@ This section lets you inform Ocean about the labels and taints set on the nodes.
 * Maximum Nodes: The upper limit number of instances that you can scale up to.
 * Minimum Nodes: 
 * Spot %: The percentage of spot nodes used in the virtual node group.
-* Restrict Scale-Down. When turned on, Ocean will not scale down nodes in this virtual node group for bin packing purposes unless they are empty.
+* Restrict Scale-Down. When turned on, Ocean will not scale down nodes in this virtual node group for bin-packing purposes unless they are empty.
 * Block Device Mapping: Block devices that are exposed to the instance. You can specify virtual devices and EBS volumes. This parameter and rootVolumeSize cannot be in the spec simultaneously.
 * Tags: Key and Value pairs are used to apply tags to the EC2 machine. Specific tags can be applied per VNG.
 * Headroom: Spare resource capacity management enabling fast assignment of Pods without waiting for new resources to launch.
@@ -103,7 +100,7 @@ resources:
     nvidia.com/gpu: 1
 ```
 
-You can use a node selector or node affinity that requires your GPU-based pods to select the specific VNG containing the GPU image, based on the custom node label configured in the GPU VNG.
+You can use a node selector or node affinity that requires your GPU-based pods to select the specific VNG containing the GPU image based on the custom node label configured in the GPU VNG.
 
 <img src="/ocean/_media/tutorials-manage-vngs-02-5.png" />
 
@@ -129,10 +126,10 @@ The instance types shown in the default virtual node group are only those suppor
 In other virtual node groups, Ocean automatically grays out instance types that are not selected in the default virtual node group or do not meet AMI architecture requirements for the specific virtual node group. Hover over the instance type to view the reason.
 
 You can manually configure the instance types as follows:
-  * Click a down arrow to see the available instance options. Check/uncheck options as required.
+  * Click a down arrow to see the available options and check/uncheck as required.
   * Click **Restore to default values** (above and to the right of the instance types list) to restore the instance types in a virtual node group to their default configuration.
-    * For the default virtual node group, the instance types are set to the default Ocean configuration to make all instance types available. Ocean can select the combination of instance types that match the workload requirements.
-    * For other virtual node groups, the instance types are those available in the Default virtual node group.
+    * The instance types are set to the default Ocean configuration for the default virtual node group (all types available). Ocean selects the combination of instance types that match the workload requirements.
+    * For other virtual node groups, the instance types are those available in the default virtual node group.
 
 >**Note**: When you update the default virtual node group instance types, Ocean updates the Ocean cluster types because these have the same configuration.
 
@@ -149,8 +146,8 @@ Before configuring with this option, consider the following limitations:
   
 ![advanced-filtering](https://github.com/user-attachments/assets/cee0e71f-cdf0-4fec-a7d3-b97589ee7627)
 
-In the VM Selection list, view each VM type's currently selected size, vCPU, Memory (GiB), and GPU units.
-The Advanced VM Size Filtering controls to the right of the VM Selection list let you filter these attributes for the VMs:
+In the instance types Selection list, view each instance type's currently selected size, vCPU, Memory (GiB), and GPU units.
+The Advanced instance types Size Filtering controls to the right of the instance types Selection list let you filter these attributes for the instance types:
 
 * Categories: One of the following: Accelerated_computing, Compute_optimized, General_purpose, Memory_optimized, Storage_optimized".
 * Disk Types: NVMe, EBS, SSD, HDD.
