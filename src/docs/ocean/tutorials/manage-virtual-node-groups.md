@@ -109,7 +109,7 @@ You can use a node selector or node affinity that requires your GPU-based pods t
 <img src="/ocean/_media/tutorials-manage-vngs-02-5.png" />
 
 
-## Configure Instance Types per Virtual Node Group
+## Configure Instance Types
 
 This section describes selecting instance sizes in your cluster per Virtual Node Group (custom or template) according to your application needs. An advanced attributes filter lets you search for the optimal instances for the task from any of the families available on the [Amazon - LINK REQUIRED]() cloud. Once you have sized your instances, Ocean can use your customization to scale processes.
 
