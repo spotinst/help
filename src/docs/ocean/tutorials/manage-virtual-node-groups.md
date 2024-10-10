@@ -18,7 +18,6 @@ An Ocean cluster is up and running.
 
 The virtual node groups tab lets you track live data per virtual node group. You can review the resource allocation, number of nodes and pods running, and other information about the virtual node groups.
 
-![fig-create-vng-2](https://github.com/user-attachments/assets/6d4dd7e0-6dc7-4d1d-8193-27e34a517432)
 
 The virtual node groups Summary List displays the following columns:
 
@@ -54,7 +53,7 @@ Review all of the parameters and update them if necessary before saving.
 
 If you are configuring manually, see [New virtual node group Page]()
 
-### New Virtual Node Group Page
+### New Virtual Node Group
 
 1. On the New Virtual Node Group page, enter the virtual node group parameters you want to customize. Parameters left blank use values from the default VNG, as indicated in the illustration below.
 2. After customizing the virtual node group, click **Save**. The VNG parameters are described below.
