@@ -129,9 +129,7 @@ The instance types shown in the default Virtual Node Group are only those suppor
 
 In other Virtual Node Groups, Ocean automatically grays out instance types that are not selected in the default Virtual Node Group and instance types that do not meet AMI architecture requirements for the specific Virtual Node Group. Hover over the instance type to view the reason.
 
-1. Click the name of the Virtual Node Group to configure.
-2. Click **Configure**.
-3. Click a down arrow to see the available instance options. Check/uncheck options as required.
+Click a down arrow to see the available instance options. Check/uncheck options as required.
 
 Click **Restore to Default** to restore the instance types in a Virtual Node Group to their default configuration.
 
