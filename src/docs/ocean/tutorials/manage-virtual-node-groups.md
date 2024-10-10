@@ -18,7 +18,7 @@ An Ocean cluster is up and running.
 
 The virtual node groups tab lets you track live data per virtual node group. You can review the resource allocation, number of nodes and pods running, and other information about the virtual node groups.
 
-ADD SCREENSHOT HERE
+![fig-create-vng-2](https://github.com/user-attachments/assets/6d4dd7e0-6dc7-4d1d-8193-27e34a517432)
 
 The virtual node groups Summary List displays the following columns:
 
