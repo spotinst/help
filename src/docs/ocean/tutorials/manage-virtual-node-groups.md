@@ -22,15 +22,15 @@ The virtual node groups tab lets you track live data per virtual node group. You
 
 The virtual node groups Summary List displays the following columns:
 
-* ID: The identification code of the VNG.
-* Name: The user-defined name of the VNG. (If a VNG was defined without a name, it will appear in this column as Unnamed virtual node group.)
-* Resource Allocation: Percent of defined resources (CPU, Memory, and GPU) currently running on nodes from this VNG.
+* ID: The identification code of the virtual node group.
+* Name: The user-defined name of the virtual node group. (If a virtual node group were defined without a name, it would appear as an Unnamed virtual node group.)
+* Resource Allocation: Percent of defined resources (CPU, Memory, and GPU) currently running on nodes from this virtual node group.
 * Running Pods: Number of pods the VNG currently uses.
-* Nodes: Number of nodes the VNG currently uses.
-* Node Labels: Number of node labels the VNG uses.
-* Node Taints: Number of taints the VNG uses.
-* Tags: Number of tags the VNG uses.
-* Max Nodes: The maximum number of nodes defined for the VNG.
+* Max Nodes: The maximum number of nodes defined for the virtual node group.
+* Node Count: Number of nodes the VNG currently uses.
+* Node Labels: Number of node labels the virtual node group uses.
+* Node Taints: Number of taints the virtual node group uses.
+* Tags: Number of tags the virtual node group uses.
 
 > Notes: 
 > - Click the three dots on the right to select which columns to display in the list.
@@ -173,11 +173,12 @@ You can also configure these parameters via the [Spot API](https://docs.spot.io/
 
 You can also review and edit the configuration directly in JSON format in the console. This provides more flexibility and enables you to utilize VNG features supported in the API without leaving the Ocean console. (These are usually new features that have been implemented in the API but are not yet accessible in the console.)
 
-* Click on the name of the virtual node group in the virtual node groups Summary List, and click **JSON** on the upper right.
+To edit in JSON format:
 
-<img src="/ocean/_media/tutorials-manage-vngs-07.png" />
+1.  Click on the name of the virtual node group in the virtual node groups Summary List, and click **JSON** on the upper right.
+2.  Click **Edit Mode**, edit and save your changes.
 
-In this view, you can see the full JSON configuration of the VNG. To edit the JSON, click **Edit** Mode and make changes.
+![json-example-edit-mode](https://github.com/user-attachments/assets/13fd52bb-067b-44ba-a03f-139ef0e7d71b)
 
 ## Delete a VNG
 
