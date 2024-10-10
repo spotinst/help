@@ -4,7 +4,7 @@ Elastigroup enables you to see an overview of all your stateful nodes, get statu
 
 To manage your stateful nodes, in the Spot console, click **Elastigroup** and click **Stateful Nodes**.
 
-![azure-manage-stateful-1a](https://github.com/spotinst/help/assets/106514736/e9c36f9b-d0a4-4b98-9527-8e620758d5b1)
+![azure-manage-stateful-1](https://github.com/user-attachments/assets/a55cf8c2-61b8-42d3-bf07-2531f367e9f8)
 
 ## View List of Stateful Nodes
 
@@ -27,13 +27,13 @@ The list of stateful nodes gives you a quick view of your nodes and basic inform
 
 ## Filter Node List
 
-If you have many stateful nodes, you can use the filter above the list to find one or multiple nodes. Enter a tag, a node attribute, a keyword or simply a string of text into the filter box and type enter.
+If you have a number of stateful nodes, you can use the filter above the list to find one or multiple nodes. Enter a tag, a node attribute, a keyword or simply a string of text into the filter box and type enter.
 
 <img src="/elastigroup/_media/azure-manage-stateful-nodes-02.png" />
 
 ## View Node Details
 
-Click the node name to get detailed information, statistics, and operational information about a stateful node. This will open the Node Details page for that node, which will serve as your operational dashboard for the node.
+Click the node name to view detailed information, statistics, and operational information about a stateful node. This will open the Node Details page for that node, which will serve as your operational dashboard for the node.
 
 ## Create Node
 
