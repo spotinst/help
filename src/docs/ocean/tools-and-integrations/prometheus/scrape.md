@@ -144,8 +144,4 @@ Not relevant to ocean_controller_heartbeat_info. For this metric, only the defau
 * rule_name
 * rule_status
 
-## Grafana Dashboard
-One popular use of metrics saved in Prometheus is dashboarding. As Grafana is a popular dashboarding tool, Spot has created a [Grafana dashboard](https://grafana.com/grafana/dashboards/16475) that you can download. The dashboard enables you to visualize Ocean metrics, which may be incorporated into your existing dashboard base.
-
-<img src="/ocean/_media/prometheus-scrape-02.png" />
 
