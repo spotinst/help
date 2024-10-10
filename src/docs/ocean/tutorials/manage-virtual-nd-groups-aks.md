@@ -94,6 +94,11 @@ To select the VMs for your Cluster:
 
 ![aks-vngs-vms-advanced](https://github.com/user-attachments/assets/4ed5d4a7-f17a-4c07-8093-46d8144fc3b3)
 
+>**Note**: The VM types shown in the virtual node group template are only those supported in the cluster's region.
+
+* Click a VM type down arrow to view all the selected options.
+* Click **Restore to template values** (to the right and above the VM types list) to restore the VM types to the virtual node group template values.
+
 The Advanced VM Size Filtering controls to the right of the VM Selection list let you filter these attributes for the VMs:
    * Upper and lower limits for No. Of vCPUs (up to 256).
    * Upper and lower limits for the Memory (up to 1024 GiB).
