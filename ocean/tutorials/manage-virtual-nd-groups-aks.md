@@ -90,9 +90,13 @@ To select the VMs for your Cluster:
 ![aks-vng-vmsel-options](https://github.com/user-attachments/assets/b2cc113b-5a04-4d14-b329-f3b0529414ae)
 
 2. If you selected **Automatic**, click **Save** to complete the procedure.
-3. If you selected **Advanced VM Size Selection**: View each VM type's currently selected size, vCPU, Memory (GiB), and GPU units in the VM Selection list.
+3. If you selected **Advanced VM Size Selection**: View each VM type's currently selected size, vCPU, Memory (GiB), and GPU units in the VM Selection list (click the down arrow for the VM type).
 
 ![aks-vngs-vms-advanced](https://github.com/user-attachments/assets/4ed5d4a7-f17a-4c07-8093-46d8144fc3b3)
+
+>**Note**:
+> - The VM types shown in the virtual node group template are only those supported in the cluster's region.
+> - Click **Restore to template values** (to the right and above the VM types list) to restore the VM types to the virtual node group template values.
 
 The Advanced VM Size Filtering controls to the right of the VM Selection list let you filter these attributes for the VMs:
    * Upper and lower limits for No. Of vCPUs (up to 256).
