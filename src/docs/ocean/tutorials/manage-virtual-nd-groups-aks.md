@@ -96,8 +96,8 @@ To select the VMs for your Cluster:
 
 >**Note**: The VM types shown in the virtual node group template are only those supported in the cluster's region.
 
-* Click a VM type down arrow to view all the selected options.
-* Click **Restore to template values** (to the right and above the VM types list) to restore the VM types to the virtual node group template values.
+   * Click a VM type down arrow to view all the selected options.
+   * Click **Restore to template values** (to the right and above the VM types list) to restore the VM types to the virtual node group template values.
 
 The Advanced VM Size Filtering controls to the right of the VM Selection list let you filter these attributes for the VMs:
    * Upper and lower limits for No. Of vCPUs (up to 256).
