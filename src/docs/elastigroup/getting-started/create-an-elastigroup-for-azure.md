@@ -44,7 +44,7 @@ Choose one of the following:
 
 ### Availability Settings
 
-- Draining Timeout. Set the amount of time (seconds) that Elastigroup will allow to de-register and drain VMs before termination.
+- Draining Timeout. Set the time (in seconds) to de-register the virtual machine and drain before its termination. During the detachment process, the virtual machine is unregistered from the Load Balancer/Application Gateway, DNS, and other relevant components. Typically, the draining timeout is utilized for load-balanced integrations. In default scenarios, the timeout is set to 120 seconds, but it can be customized or overridden during virtual machine detachment or deployment processes.
 - Cluster Orientation. Specify the prediction algorithm strategy. You can choose for the following:
   - Availability. VM selection will be performed to ensure the best market availability within your Elastigroup.
   - Cost. VM types will be prioritized by their costs so the selection is based on this list using availability considerations.
