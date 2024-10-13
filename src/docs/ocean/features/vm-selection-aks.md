@@ -1,4 +1,7 @@
-#  Select VMs for an AKS Virtual Node Group
+<meta name="robots" content="noindex">
+
+[Redirect](https://docs.spot.io/ocean/tutorials/manage-virtual-nd-groups-aks?id=vm-selection)...
+<!--#  Select VMs for an AKS Virtual Node Group
 
 Cloud service provider relevance: <font color="#FC01CC">AKS</font> 
 
