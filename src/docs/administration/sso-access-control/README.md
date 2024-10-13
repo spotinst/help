@@ -35,6 +35,4 @@ You can use these identity providers with Spot:
 
 If you want to define different user roles per account, you can choose the organization and role the user signs in with when signing in with SSO.
 
-Configure the IDP to create a SAML response with the parameter `OrgAndRole`. When this is defined, the user must select an organization and role when signing in:
-
-<img src="/administration/_media/sss-access-control-02.jpg" />
+Configure the IDP to create a SAML response with the parameter `OrgAndRole`. When this is defined, the user must select an organization and role when signing in.
