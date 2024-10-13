@@ -1782,8 +1782,8 @@ export const aliases = (() => {
 
     "/ocean/getting-started/aks": "ocean/getting-started/aks/",
 
-    "/ocean/features/vm-selection-aks/vm-selection":
-      "ocean/tutorials/manage-virtual-nd-groups-aks",
+    "/ocean/features/vm-selection-aks":
+      "ocean/tutorials/manage-virtual-nd-groups-aks/vm-selection",
 
     "/ocean/tutorials/run-workloads": "ocean/",
 
