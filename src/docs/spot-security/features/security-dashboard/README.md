@@ -48,28 +48,28 @@ To delete an asset group, hover over a group in the list and click **Edit** <img
 
 ## Prioritized Risk Analysis
 
-Spot Security helps you prioritize risks by providing the Prioritized Actionable Insights. The Risks in this table are sorted according to priorities, starting from 1 to 100 by default. Spot Security considers asset’s status (Internet facing), asset type, severity of the security rule, blast radius and access type (external access, public access) to calculate the priority. You can accept the risks using the Suppress action, and you will be presented with the next set of priorities. You can also filter the table, customize its columns, and export the table to a CSV file.  
+Spot Security helps you prioritize risks by providing the prioritized actionable insights. The risks are sorted according to priorities, starting from 1 to 100 by default. Spot Security considers the asset status (internet facing), asset type, severity of the security rule, blast radius and access type (external access, public access) to calculate the priority. You can accept the risks using the Suppress action, and you will be presented with the next set of priorities. You can also filter the table, customize its columns, and export the table to a CSV file.  
 
 <img src="/spot-security/_media/dashboard-1.png" />
 
 ## Prioritized Vulnerability
 
-The Prioritized Vulnerabilities table presents the vulnerability findings based on their priorities, ranging from 1 to 100 by default. Spot Security considers multiple criteria to provide you with a contextual ranking for the CVE (Common Vulnerabilities and Exposures) and the asset. This feature lets you identify and address the most critical vulnerabilities first.
+The Prioritized Vulnerabilities table shows the vulnerability findings based on their priorities, ranging from 1 to 100 by default. Spot Security considers multiple criteria to provide you with a contextual ranking for the common vulnerabilities and exposures (CVE) and the asset. This lets you identify and address the most critical vulnerabilities first.
 
 ![dashboard-5](https://github.com/spotinst/help/assets/106514736/cb2872db-e221-469e-a92d-658feacd6e88)
 
-Click the number of the Total Findings column of a vulnerability to view additional information, such as the OS, packages, etc.
+Click the number of the Total Findings column of a vulnerability to view additional information, such as the OS, packages.
 
 ![dashboard-6](https://github.com/spotinst/help/assets/106514736/d75dbf9d-44f0-472a-87c2-b615497082d6)
 
 ## Most Prevalent Alerts
 
-The table shows the most prevalent alerts detected in your environment. You can  export the complete list of alerts.  
+The shows the most common alerts detected in your environment. You can export the complete list of alerts.  
 
 <img src="/spot-security/_media/dashboard-2.png" />
 
 ## View Trends
 
-The Risks Over Time chart gives you a view of the risk trends over time. You can view the trends over a period of two weeks, one month or three months. The line represents the number of resources scanned. The bars show the number of risks per time block and are broken down in colors by severity.
+You can see the risk trends over time. The line represents the number of resources scanned. The bars show the number of risks per time block and are broken down in colors by severity.
 
 <img src="/spot-security/_media/spot-security-dashboard-e.png" />
