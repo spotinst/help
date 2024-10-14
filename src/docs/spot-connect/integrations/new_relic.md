@@ -34,6 +34,9 @@ Use the action to run New Relic NRQL Query and retrieve data in Spot Connect
 |--------------------|--------------------------------------------------------------------|----------|
 | New Relic Instance | Select a New Relic integration instance configured in Spot Connect | Required |
 | NRQL Query         | NRQL query to be run on the given New Relic account                | Required |
+| Timeout            | Query timeout in seconds (default is 30 seconds)                   | Optional |
+| S3 Bucket Key      | Name of S3 key                                                     | Optional |
+| Export File Name   | Change the name of the S3 file                                     | Optional |
 | S3 Bucket          | An S3 bucket to store the query and the result.                    | Optional |
 
 #### Output
@@ -43,6 +46,7 @@ Use the action to run New Relic NRQL Query and retrieve data in Spot Connect
 | result              | Object  | The output of the NRQL Query                                      |
 | is_result_truncated | Boolean | Boolean value which denotes if the result is truncated or not     |
 | result_bucket_key   | String  | Name of the file where result is written                          |
+| s3_url              | String  | URL of the bucket                                                 |
 | s3_bucket           | String  | Name of the bucket                                                |
 | execution_status    | String  | The execution status of the query run (such as S_OK / E_FAIL)     |
 
