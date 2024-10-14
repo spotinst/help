@@ -13,7 +13,7 @@ You can get to the dashboard by clicking **Spot Security** > **Dashboard**.
 
 ## Security Summary
 
-The dashboard shows your main security statistics:
+You can see your main security statistics:
 * Identified Risks: The total number of misconfigurations currently in your environment based on the filters you’ve selected. Click **View All Risks** to see a detailed list of all the misconfigurations.
 * Security Rules Passed: The total number of security rules passed for all your assets.
 * Resources Scanned: Under Identified Risks, Spot displays the date and time of the last scan.
