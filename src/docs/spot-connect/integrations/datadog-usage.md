@@ -42,6 +42,7 @@ Use Datadog integration to collect billable and usage metrics for your organizat
 | Include descendants | Include child org usage in response (true/false)                    | Optional  |
 | S3 Bucket           | The S3 bucket to store the query result.                            | Optional  |
 | S3 Bucket Key       | Name of S3 key                                                      | Optional  |
+| Export File Name    | Change the name of the S3 file                                      | Optional  |
 
 
 #### Output
@@ -73,6 +74,7 @@ Use Datadog integration to collect billable and usage metrics for your organizat
 | Start Month         | Date for usage starting at a specific time, such as 2024-03-01 T06  | Required  |
 | S3 Bucket           | The S3 bucket to store the query result.                            | Optional  |
 | S3 Bucket Key       | Name of S3 key                                                      | Optional  |
+| Export File Name    | Change the name of the S3 file                                      | Optional  |
 
 
 #### Output
@@ -105,6 +107,7 @@ Use Datadog integration to collect billable and usage metrics for your organizat
 | Include org details | Include usage summaries for each suborg (true/false)                | Optional  |
 | S3 Bucket           | The S3 bucket to store the query result.                            | Optional  |
 | S3 Bucket Key       | Name of S3 key                                                      | Optional  |
+| Export File Name    | Change the name of the S3 file                                      | Optional  |
 
 
 #### Output
@@ -137,7 +140,7 @@ Use Datadog integration to collect billable and usage metrics for your organizat
 | Include org details | Include usage summaries for each suborg (true/false)                | Optional  |
 | S3 Bucket           | The S3 bucket to store the query result.                            | Optional  |
 | S3 Bucket Key       | Name of S3 key                                                      | Optional  |
-
+| Export File Name    | Change the name of the S3 file                                      | Optional  |
 
 #### Output
 
