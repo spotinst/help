@@ -1832,9 +1832,8 @@ export const aliases = (() => {
     "/administration/notification-center/create-a-notification-policy":
       "/administration/notification-center/event-policies/create",
 
-    "/spot-security/features/security-dashboard/create-preset": 
+    "/spot-security/features/security-dashboard/create-preset":
       "/spot-security/features/security-dashboard/",
-
   };
 
   for (let [key, value] of Object.entries(map)) {
