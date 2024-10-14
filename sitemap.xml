@@ -3914,6 +3914,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/ocean/tools-and-integrations/eksctl/"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/ocean/tools-and-integrations/grafana-dashboard</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/ocean/tools-and-integrations/grafana-dashboard"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/ocean/tools-and-integrations/grafana-dashboard"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/ocean/tools-and-integrations/kops/get-started</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
@@ -4010,6 +4017,13 @@
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/ocean/tools-and-integrations/"/>
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/ocean/tools-and-integrations/"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/ocean/tools-and-integrations/setup-and-config-grafane-4-ocean</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/ocean/tools-and-integrations/setup-and-config-grafane-4-ocean"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/ocean/tools-and-integrations/setup-and-config-grafane-4-ocean"/>
     </url>
     <url>
         <loc>https://docs.spot.io/ocean/troubleshooting/</loc>
