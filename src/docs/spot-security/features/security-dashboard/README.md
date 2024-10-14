@@ -9,7 +9,7 @@ The dashboard includes:
 * Most common alerts
 * Risks over time
 
-To use the dashboard, in the left main menu, click **Spot Security** and then **Dashboard**. 
+You can get to the dashboard by clicking **Spot Security** > **Dashboard**. 
 
 ## Security Summary
 
