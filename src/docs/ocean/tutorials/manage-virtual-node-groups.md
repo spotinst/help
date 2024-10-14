@@ -104,13 +104,13 @@ You can use a node selector or node affinity that requires your GPU-based pods t
 
 ## Configure Instance Types
 
-This section describes selecting instance sizes in your cluster per virtual node group (custom or template) according to your application needs. An advanced attributes filter lets you search for the optimal instances for the task from any of the families available on the [Amazon - LINK REQUIRED]() cloud. Once you have sized your instances, Ocean can use your customization to scale processes.
+This section describes selecting instance types and sizes in your cluster per virtual node group (custom or template) according to your application needs.
 
 1. In the virtual node groups tab, scroll down to the Instance Types panel and select one of the options:
 
+  * Automatic: Let Ocean Autoscaler select your instance types and sizes according to your applications' needs. In this case, click **Save** to complete the procedure. 
   * Manual Selection: You can manually define a list of instance types from which Ocean can scale. See [Configure Instance Types Manually]()
-  * Automatic: Let Spot select your instance types and sizes according to your applications' needs. In this case, click **Save** to complete the procedure.
-  * Advanced Selection: Use attribute filters to select instance types with customized sizes from which Ocean can scale. See [Configure Instance Types Using Advanced Filters](). 
+  * Advanced Selection: Use multiple filters to optimize instance types and sizes based on your application needs (supports all families available on the [Amazon link]() cloud). See [Configure Instance Types Using Advanced Filters](). 
 
 ![instance-types](https://github.com/user-attachments/assets/5cd0bbb7-af8e-40ae-ba40-3b671de497bd)
 
@@ -144,7 +144,7 @@ Before configuring with this option, consider the following limitations:
 ![advanced-filtering](https://github.com/user-attachments/assets/cee0e71f-cdf0-4fec-a7d3-b97589ee7627)
 
 In the instance types Selection list, view each instance type's currently selected size, vCPU, Memory (GiB), and GPU units.
-The Advanced instance types Size Filtering controls to the right of the instance types Selection list let you filter these attributes for the instance types:
+The Advanced instance types size filtering controls to the right of the instance types selection list let you filter these attributes for the instance types:
 
 * Categories: One of the following: Accelerated_computing, Compute_optimized, General_purpose, Memory_optimized, Storage_optimized".
 * Disk Types: NVMe, EBS, SSD, HDD.
