@@ -1,5 +1,3 @@
-<meta name="robots" content="noindex">
-
 # New Relic
 
 New Relic is a cloud-based observability platform built to help you create more perfect software. It includes these core components:
