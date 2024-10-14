@@ -67,10 +67,6 @@ Hover over the relevant row of the node you want to configure in the table and c
 
 <img src="/elastigroup/_media/azure-manage-stateful-edit-1.png" />
 
-If you are on the Overview page, click **Edit Node**.
-
-<img src="/elastigroup/_media/azure-manage-stateful-edit-2.png" />
-
 On the Review page you can edit directly in the JSON configuration. 
 
 1. Click **JSON** and click **Edit Mode**.  
