@@ -2,7 +2,7 @@
 
 # Zendesk
 
-These action snippets allow you send comments made on a Jira ticket to its linked Zendesk tickets. It also offers to send individual comment on Zendesk ticket.
+These action snippets let you send comments made on a Jira ticket to its linked Zendesk tickets. You can also send individual comments on a Zendesk ticket.
 
 ## Configure Zendesk in Spot Connect
 
@@ -18,15 +18,15 @@ These action snippets allow you send comments made on a Jira ticket to its linke
 
 1. Set up [linked ticket reporting in Jira](https://support.zendesk.com/hc/en-us/articles/4408843823642-Reporting-on-the-number-of-Zendesk-tickets-linked-to-a-Jira-issue).
 2. In Jira, [create an action](https://support.atlassian.com/cloud-automation/docs/create-and-edit-jira-automation-rules/) for any new comment posted in any Jira ticket:
-   * The first node in the action needs to be All comment to ticket.
-   * The second node in the action needs to be [Send web request](https://support.atlassian.com/cloud-automation/docs/jira-automation-actions/#Send-web-request). The <b>HTTP method</b> needs to be <i>POST</i> and the <b>Web request body</b> needs to be <i>Issue data (Automation format)</i>     
+    * The first node in the action needs to be All comment to ticket.
+    * The second node in the action needs to be [Send web request](https://support.atlassian.com/cloud-automation/docs/jira-automation-actions/#Send-web-request). The <b>HTTP method</b> needs to be <i>POST</i> and the <b>Web request body</b> needs to be <i>Issue data (Automation format)</i>     
 
 3. In the Spot console, select **Connect** > **Workflows**.
 4. Click **New Workflow** and enter a name for the workflow.
 5. Select **Generic Webhook** > **Create Workflow**.
 6. In the center panel of the workflow builder, click the **Generic Webhook** node to open the right panel.
 7. In the **Webhook API Key Name**, select the API key you created earlier.
-8. In Jira, get the [custom field ID value](https://confluence.atlassian.com/jirakb/how-to-find-any-custom-field-s-ids-744522503.html)
+8. In Jira, get the [custom field ID value](https://confluence.atlassian.com/jirakb/how-to-find-any-custom-field-s-ids-744522503.html).
 9. In the Spot console, add a **JSONPath** node.
 10. In the **JSON Path Expression**, add the Jira custom field ID in this format: `$.fields.customfield_{ID}`.
 11. Add a **Zendesk Update Tickets with Comment** node.
@@ -55,15 +55,15 @@ These action snippets allow you send comments made on a Jira ticket to its linke
 
 1. Set up [linked ticket reporting in Jira](https://support.zendesk.com/hc/en-us/articles/4408843823642-Reporting-on-the-number-of-Zendesk-tickets-linked-to-a-Jira-issue).
 2. In Jira, [create an action](https://support.atlassian.com/cloud-automation/docs/create-and-edit-jira-automation-rules/) for any new comment posted in any Jira ticket:
-  * The first node in the action needs to be All comment to ticket.
-  * The second node in the action needs to be [Send web request](https://support.atlassian.com/cloud-automation/docs/jira-automation-actions/#Send-web-request). The <b>HTTP method</b> needs to be <i>POST</i> and the <b>Web request body</b> needs to be <i>Issue data (Automation format)</i>     
+    * The first node in the action needs to be All comment to ticket.
+    * The second node in the action needs to be [Send web request](https://support.atlassian.com/cloud-automation/docs/jira-automation-actions/#Send-web-request). The <b>HTTP method</b> needs to be <i>POST</i> and the <b>Web request body</b> needs to be <i>Issue data (Automation format)</i>     
 
 3. In the Spot console, select **Connect** > **Workflows**.
 4. Click **New Workflow** and enter a name for the workflow.
 5. Select **Generic Webhook** > **Create Workflow**.
 6. In the center panel of the workflow builder, click the **Generic Webhook** node to open the right panel.
 7. In the **Webhook API Key Name**, select the API key you created earlier.
-8. In Jira, get the [custom field ID value](https://confluence.atlassian.com/jirakb/how-to-find-any-custom-field-s-ids-744522503.html)
+8. In Jira, get the [custom field ID value](https://confluence.atlassian.com/jirakb/how-to-find-any-custom-field-s-ids-744522503.html).
 9. In the Spot console, add a **JSONPath** node.
 10. In the **JSON Path Expression**, add the Jira custom field ID in this format: `$.fields.customfield_{ID}`.
 11. Add a **Zendesk Update Tickets with Comment** node.
