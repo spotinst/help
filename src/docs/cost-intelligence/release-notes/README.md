@@ -1,6 +1,9 @@
 # Cost Intelligence Release Notes
 
+* **COI-0012**: October 15th, 2024: AWS and Azure give recommendations for qualifying accounts, called AWS Trusted Advisor and Azure Advisor. Cost Intelligence automatically pulls in that information to the Best Practice Checks page. You can view the advisor content along with the Cost Intelligence content. This gives you an overall view of how to streamline your cloud resources. [Learn more](cost-intelligence/tutorials/best-practice-checks/)
+
 * **COI-0011**: October 8th, 2024: You can integrate [Snowflake](cost-intelligence/tutorials/integrations/snowflake) with Cost Intelligence to collect billable and usage metrics for your organization. [Learn more](cost-intelligence/tutorials/integrations/)
+
 
 <details>
   <summary markdown="span">September 2024</summary>
