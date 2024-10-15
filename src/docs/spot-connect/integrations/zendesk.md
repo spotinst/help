@@ -11,13 +11,12 @@ These action snippets let you send comments made on a Jira ticket to its linked 
 3. Click **Zendesk** > **Add Integration**.
 4. Enter the email associated with your Zendesk account.
 5. Paste the Zendesk API token.
-6. Enter your Zendesk instance URL. For example, `https://{subdomain_name}.zendesk.com`.
+6. Enter your Zendesk subdomain name.
 7. Click **Add Instance**.
 
 ## Integration Action: Add a Comment to Zendesk Tickets
 
-1. Set up [linked ticket reporting in Jira](https://support.zendesk.com/hc/en-us/articles/4408843823642-Reporting-on-the-number-of-Zendesk-tickets-linked-to-a-Jira-issue).
-2. In Jira, [create an action](https://support.atlassian.com/cloud-automation/docs/create-and-edit-jira-automation-rules/) for any new comment posted in any Jira ticket:
+1. In Jira, [create an action](https://support.atlassian.com/cloud-automation/docs/create-and-edit-jira-automation-rules/) for any new comment posted in any Jira ticket:
     * The first node in the action needs to be <i>All comment to ticket</i>.
     * The second node in the action needs to be [Send web request](https://support.atlassian.com/cloud-automation/docs/jira-automation-actions/#Send-web-request). The <b>HTTP method</b> needs to be <i>POST</i> and the <b>Web request body</b> needs to be <i>Issue data (Automation format)</i>     
 
@@ -56,7 +55,10 @@ These action snippets let you send comments made on a Jira ticket to its linked 
 1. Set up [linked ticket reporting in Jira](https://support.zendesk.com/hc/en-us/articles/4408843823642-Reporting-on-the-number-of-Zendesk-tickets-linked-to-a-Jira-issue).
 2. In Jira, [create an action](https://support.atlassian.com/cloud-automation/docs/create-and-edit-jira-automation-rules/) for any new comment posted in any Jira ticket:
     * The first node in the action needs to be <i>All comment to ticket</i>.
-    * The second node in the action needs to be [Send web request](https://support.atlassian.com/cloud-automation/docs/jira-automation-actions/#Send-web-request). The <b>HTTP method</b> needs to be <i>POST</i> and the <b>Web request body</b> needs to be <i>Issue data (Automation format)</i>     
+    * The second node in the action needs to be [Send web request](https://support.atlassian.com/cloud-automation/docs/jira-automation-actions/#Send-web-request). In the node:
+        * The <b>HTTP method</b> needs to be <i>POST</i>.
+        * The <b>Web request body</b> needs to be <i>Issue data (Automation format)</i>.
+        * In the Spot console, copy the <i>Webhook API key value</i> and <i>workflow webhook URL</i> and paste in the Jira node.
 
 3. In the Spot console, select **Connect** > **Workflows**.
 4. Click **New Workflow** and enter a name for the workflow.
@@ -68,6 +70,7 @@ These action snippets let you send comments made on a Jira ticket to its linked 
 10. In the **JSON Path Expression**, add the Jira custom field ID in this format: `$.fields.customfield_{ID}`.
 11. Add a **Zendesk Update Tickets with Comment** node.
 12. Select the **Zendesk Instance**, **Zendesk Ticket IDs**, and the **Type of Comment Input**: <i>Get Comment from Jira Payload</i>.
+13. Click **Save**.
 
 #### Input
 
