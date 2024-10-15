@@ -2,7 +2,7 @@
 
 ## October 2024: Features and Enhancements
 
-*  **OCN-0036: October October 15, 2024:** (**<font color="#FC01CC">GKE</font>**) GKE now supports advanced filter criteria for optimally selecting instance types according to your application needs, for example, including/excluding specific instance type families, or maximum/minimum values for a specific resource. See the [Spot API](https://docs.spot.io/api/) for Create/Update cluster and Create/Update virtual node group.
+*  **OCN-0036: October 15, 2024:** (**<font color="#FC01CC">GKE</font>**) GKE now supports advanced filter criteria for optimally selecting instance types according to your application needs, for example, including/excluding specific instance type families, or maximum/minimum values for a specific resource. See the [Spot API](https://docs.spot.io/api/) for Create/Update cluster and Create/Update virtual node group.
 
 *  **OCN-0035: October 08, 2024:** (**<font color="#FC01CC">AKS</font>**) When you import an AKS cluster into Ocean via the console cluster creation wizard, you can now create multiple virtual node groups from your node pools, using the default virtual node group as a template on which to base your custom virtual node groups. [Learn more...](https://docs.spot.io/ocean/getting-started/aks/?id=launch-the-create-ocean-cluster-wizard).
 
