@@ -41,8 +41,12 @@
       margin-right: 0!important;
     }
     .page_toc {
+      top: 0;
       position: static!important;
       margin-top:20px!important;
+    }
+    .page_toc.scrolled {
+      position: fixed!important;
     }
     .markdown-section {
       padding: 20px!important;
@@ -74,6 +78,9 @@
     .sidebar-toggle {
       top: 134px!important;
     }
+    .sidebar-toggle.scrolled {
+      top: 20px!important;
+    }
     .page_toc .lv3 {
       display:none;
     }
@@ -85,7 +92,7 @@
         margin-left:300px!important;    
       }
     } 
-</style>
+  </style>
   
 </head>
 
@@ -161,6 +168,40 @@
   <script type="text/javascript"
     src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse@1.3.5/dist/docsify-sidebar-collapse.min.js"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/ga.min.js"></script>
+  
+  <!-- Sticky Nav -->
+  <script type="text/javascript">
+    (function () {
+      function tocPlugin(hook) {
+        hook.doneEach(function () {
+          const observer = new MutationObserver(function (mutations) {
+            mutations.forEach(function () {
+              const tocElement = document.querySelector(".page_toc");
+
+              // Moved function declaration outside the if block
+              function checkScroll() {
+                if (window.scrollY > 100) {
+                  tocElement.classList.add("scrolled");
+                } else {
+                  tocElement.classList.remove("scrolled");
+                }
+              }
+
+              if (tocElement) {
+                window.addEventListener("scroll", checkScroll);
+                observer.disconnect();
+              }
+            });
+          });
+          observer.observe(document.body, { childList: true, subtree: true });
+        });
+      }
+
+      window.$docsify.plugins = [].concat(tocPlugin, window.$docsify.plugins || []);
+    })();
+  </script>
+
+  
 </body>
 
 </html>
