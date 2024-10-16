@@ -1,6 +1,8 @@
 # Ocean Release Notes
 
-## October 2024: Features and Enhancements 
+## October 2024: Features and Enhancements
+
+*  **OCN-0036: October 15, 2024:** (**<font color="#FC01CC">GKE</font>**) For your GKE clusters and at the API level only, you can now define filter criteria so that Ocean selects instances to fit your applicative needs. See the Spot API for [cluster](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKEClusterCreate) and [virtual node group](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKELaunchSpecCreate) filter criteria.
 
 *  **OCN-0035: October 08, 2024:** (**<font color="#FC01CC">AKS</font>**) When you import an AKS cluster into Ocean via the console cluster creation wizard, you can now create multiple virtual node groups from your node pools, using the default virtual node group as a template on which to base your custom virtual node groups. [Learn more...](https://docs.spot.io/ocean/getting-started/aks/?id=launch-the-create-ocean-cluster-wizard).
 
