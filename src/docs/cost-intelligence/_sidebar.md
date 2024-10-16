@@ -23,6 +23,7 @@
     - [Integrations](cost-intelligence/tutorials/integrations/)
       - [Datadog](cost-intelligence/tutorials/integrations/datadog)
       - [New Relic](cost-intelligence/tutorials/integrations/new-relic)
+      - [Ocean Insights](cost-intelligence/tutorials/integrations/ocean-insights)
       - [Snowflake](cost-intelligence/tutorials/integrations/snowflake)
       - [Splunk](cost-intelligence/tutorials/integrations/splunk)
     - [Administration](cost-intelligence/tutorials/administration/)
