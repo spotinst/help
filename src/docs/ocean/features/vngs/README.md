@@ -5,8 +5,6 @@ Other equivalent terms used in our industry include **node groups** and **node p
 
 ## What’s a Virtual Node Group?
 
-<img src="/ocean/_media/features-vngs-01.png" width="578" height="69" />
-
 A virtual node group is a subset of nodes on a cluster that you can configure for a specific purpose. They let you configure multiple types of infrastructure configuration on the same Ocean cluster.
 
 The following are common virtual node group scenarios:
