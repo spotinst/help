@@ -4,21 +4,19 @@
 
 Users with the Cost Intelligence Admin permissions can determine the organization’s default dashboard for all users.  The dashboard page has an action bar at the top that provides the options to edit, clone, create, delete, manage files, and select default dashboards.     
 
-## Create a New Dashboard  
+## Create a Dashboard  
 
-Users with the correct permissions will have the ability to create new dashboards for Cost Intelligence. 
+Users with Cost Intelligence Administrator permissions or Creator Policy permissions can create new dashboards for Cost Intelligence. 
 
-Complete the following steps to create a new dashboard.   
+To create a dashboard:   
 
-1. In the Dashboard page, at the top right of the page, click **+ Create**.    
+1. In the Dashboard page, click **Actions** > **+ Create**.    
 
-![dashboard-3](https://github.com/spotinst/help/assets/106514736/8c947153-d95b-49e9-9e98-6323d4005800) 
+![dashboard-7](https://github.com/user-attachments/assets/a4c06695-1f6b-497a-9311-3acae5d9197e)
 
-2. Modify the dashboard as desired.  
-3. To finalize the dashboard, enter a new name.   
-4. Click **Publish Dashboard**. This publishes the dashboard and makes it available to all users in the organization.     
+2. Enter a name for the dashboard and click **Publish Dashboard**. This publishes the dashboard and makes it available to all users in the organization.
 
-NOTE: If you do not publish the dashboard, the newly created dashboard will display in the list of available dashboards as an empty dashboard.    
+NOTE: If you do not publish the dashboard, the newly created dashboard will display as an empty dashboard in the list of available dashboards.  
 
 ## Set Default Dashboard for an Organization
 
@@ -26,41 +24,33 @@ Cost Intelligence Dashboards come with a default dashboard that is set for all u
 
 Complete the following steps to set the default dashboard.
 
-1. In the left main tree, click **Cost Intelligence** and click **Dashboard**.   
-2. In the Change Dashboard drop-down menu, select the dashboard you want to set as the default.  
-
-![dashboard-1](https://github.com/spotinst/help/assets/106514736/724f724f-5013-49bf-8e76-0b6388fb3669) 
-
-3. In the action bar, click **Select Default Dashboard**, and confirm the action. The selected dashboard is the default dashboard for all the users in this organization.    
-
-![dashboard-2](https://github.com/spotinst/help/assets/106514736/ac8a9589-4eb3-48b7-b1f3-764759296286)  
+1. In the _Actions_ drop down menu, click **Select Default Dashboard**.
+2. In the _Change Dashboard_ window, select the default dashboard you want to set.
 
 ## Edit an Existing Dashboard    
 
-Users with the correct permissions will have the ability to edit all organization-level dashboards that are not system managed dashboards. If you want to modify a system managed dashboard, you can clone it and modify it.  
+Users with admin permissions can edit all organization-level dashboards that are not system-managed. If you want to modify a system-managed dashboard, you can clone and modify it.
 
 ![dashboard-4](https://github.com/spotinst/help/assets/106514736/72c9a54a-5292-47cd-b845-8097e802ad27)   
 
-The Edit Dashboard is the interface where you can edit the organization-level dashboards and it consists of the following sections (from the left to right):  
+The Edit Dashboard is the interface where you can edit the organization-level dashboards, and it consists of the following sections (from the left to right):  
 
 ![dashboard-5](https://github.com/spotinst/help/assets/106514736/762309f4-7860-4eb3-b23d-c6e2f3c3ec56) 
 
-* **Add description**: In this field you set a description of the dashboard. This is the only place that description is shown. Dashboard names do not need to be unique.  
+* **Add description**: In this field, enter a description of the dashboard. This is the only place where the description is shown. Dashboard names do not need to be unique.  
 * **The center panel**: The center panel is a canvas where you can place charts, panels, text, images, and filters. Anything placed within this canvas will be displayed in the final dashboard.  
-* **Add Chart**: In this field you can build and add a new panel from scratch using the existing datasets. The composer bar contains a variety of functionalities to help build and customize the dashboard. You can add a new chart, a new text element, images, and page filters.   
-* **Discard Dashboard**: To discard changes that you’ve made and have not saved/published yet, click Discard Dashboard.   
-* **Publish Dashboard**: To publish any changes to the dashboard, click Publish Dashboard.  
-* **Data**: This drop-down menu lists previously built drag-and-drop panels and charts for each dataset that is available to the user.    
-
-This is also a way to duplicate charts between dashboards. All charts are available here for that specific data set. Find the desired data set and chart, and drag it onto the canvas.  
+* **Add Chart**: In this field, you can create a panel using the existing datasets. The composer bar contains various functionalities to help you build and customize the dashboard. You can add a chart, text, images, and page filters.   
+* **Discard Dashboard**: To discard changes that you’ve made and have not saved/published yet, click **Discard Dashboard**.   
+* **Publish Dashboard**: To publish changes to the dashboard, click **Publish Dashboard**.  
+* **Data**: This drop-down menu lists previously built drag-and-drop panels and charts for each dataset that is available to the user. This is also a way to duplicate charts between dashboards. All charts are available here for that specific data set. Find the desired data set and chart, and drag it onto the canvas.  
 
 ## Clone a Dashboard   
 
-Users with permissions will have the ability to clone existing dashboards, including any system managed dashboards. 
+Users with Cost Intelligence Administrator permissions or Creator Policy permissions can clone existing dashboards, including any system-managed dashboards. 
 
-Complete the following steps to clone a dashboard.   
+To clone a dashboard:   
 
-1. In the Dashboard page, click **Clone** in the action bar.  
+1. In the Dashboard page, **Actions** > **Clone**.  
 2. Modify the dashboard as desired.  
 3. To finalize the cloned dashboard, enter a new name. Then click the **Publish Dashboard** button.   
 
@@ -70,18 +60,16 @@ NOTE: If you do not publish the dashboard, the newly cloned dashboard will displ
 
 ## Upload a CSV/Create a Dataset    
 
-With Cost Intelligence Dashboards, you can upload your data directly into the product to create customized data views that enable you to make better decisions. Complete the following steps to upload a CSV.    
+With Cost Intelligence Dashboards, you can upload your data directly into the product to create customized data views that enable you to make better decisions. 
 
-1. In the Dashboard page, click **Manage Files** in the action bar.  
-2. Click **Create New Dataset +** to begin the process of uploading a CSV file and creating a new dataset.  
+To upload a CSV:    
 
-![datasets-1](https://github.com/spotinst/help/assets/106514736/9aa8bcaa-ee99-4792-8027-9dc19999b4e8) 
+1. In the Dashboard page, click **Actions** > **Manage Files**.  
+2. Click **Create New Dataset +** to begin the process of uploading a CSV file and creating a new dataset. When the upload is completed, you can view information about the specific dataset and gather insights.
 
-3. When the upload has been completed, you’ll see a page similar to the page displayed below. It provides information regarding the specific dataset, enabling you to gather insights.     
+![dashboard-8](https://github.com/user-attachments/assets/910dc425-5e39-4b6f-9d73-06d064f1efce)
 
-![datasets-2](https://github.com/spotinst/help/assets/106514736/34a2d45c-c669-48fe-b1a0-a87cd3d80fd2) 
-
-* You can rename the dataset. You’ll also find important metadata regarding this dataset here, such as status, last load, number of columns, number of records.  
+* You can rename the dataset. This page contains important metadata about it, such as its status, last load, number of columns, and number of records.  
 * You can manage any changes made since the last save by discarding changes, saving changes, or even reloading the dataset by re-uploading the CSV file. 
 * You can manage specific details of the uploaded dataset. You can:  
   - Determine if the column should be read and stored into the dataset.  
@@ -91,24 +79,22 @@ With Cost Intelligence Dashboards, you can upload your data directly into the pr
   - Manage the display format, such as DateTime.  
   - Manage any unique transformations.    
 
-You can perform additional dataset functions such as editing connections, joining datasets, etc by clicking the following icon.   
+You can also edit connections, join datasets, and more by clicking the menu icon next to the dataset name.  
 
 ![datasets-3](https://github.com/spotinst/help/assets/106514736/170e83b8-0e10-4982-a727-61934572eedb)   
 
 ## Manage Datasets  
 
-To manage existing datasets, click the **Manage Files** page via the Dashboard action bar.  
+To manage existing datasets, click **Actions** > **Manage Files**.  
 
-You can quickly determine which datasets are active and being utilized vs datasets that are still in draft. You can also refresh an existing dataset by editing a dataset and simply reuploading the file.  
+You can refresh an existing dataset by editing and reuploading the file.
 
-![datasets-4](https://github.com/spotinst/help/assets/106514736/3f94acd9-7c77-443d-9a15-a7caac69aca3) 
+To edit a file, hover over the menu icon of the dataset name, and click **Edit**.
 
-To edit a file, hover over the three dots icon to open a sub menu and select **Edit**.  
-
-![datasets-5](https://github.com/spotinst/help/assets/106514736/4d1af696-2634-4eae-9ec3-16eb3d8c377c) 
+![dashboard-9](https://github.com/user-attachments/assets/baed5d91-9eb6-49f3-9cd5-ea4ba1241653)
   
-To refresh an existing dataset, while editing the dataset, click **Reload Dataset** (#2 in the image above) to go through the process of reloading the CSV file and refreshing the data in the application. 
+To refresh an existing dataset, while editing the dataset, click **Reload Dataset** at the top right to reload the CSV file and refresh the data in the application. 
 
-To delete a dataset, hover over the icon of three dots on the Manage Files page and select the delete option. **This action removes any charts from all dashboards that contain this dataset**. 
+To delete a dataset, hover over the menu icon of the dataset name, and click **Delete**. **This action removes any charts from all dashboards that contain this dataset**. 
 
   
