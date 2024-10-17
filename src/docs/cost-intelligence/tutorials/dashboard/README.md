@@ -1,7 +1,5 @@
 # Dashboards    
 
-## Setting Default Dashboard for the Org  
-
 Users with the Cost Intelligence Admin permissions can determine the organization’s default dashboard for all users.  The dashboard page has an action bar at the top that provides the options to edit, clone, create, delete, manage files, and select default dashboards.     
 
 ## Create a Dashboard  
