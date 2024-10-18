@@ -1,5 +1,7 @@
 # Cost Intelligence Release Notes
 
+* **COI-0014**: October 17th, 2024: You can now allow Ocean Insights to be imported into Cost Intelligence dashboards that is joined with Billing Engine data. [Learn more](cost-intelligence/tutorials/integrations/ocean-insights)
+
 * **COI-0013**: October 16th, 2024: You can now export the [inventory report](cost-intelligence/tutorials/inventory) and the [best practice checks](cost-intelligence/tutorials/best-practice-checks/) data to a CSV file. 
 
 * **COI-0012**: October 15th, 2024: AWS and Azure give recommendations for qualifying accounts, called AWS Trusted Advisor and Azure Advisor. Cost Intelligence automatically pulls in that information to the Best Practice Checks page. You can view the advisor content along with the Cost Intelligence content. This gives you an overall view of how to streamline your cloud resources. [Learn more](cost-intelligence/tutorials/best-practice-checks/)
