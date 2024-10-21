@@ -22,21 +22,22 @@ These action snippets let you send comments made on a Jira ticket to its linked 
     * The second node in the action needs to be [Send web request](https://support.atlassian.com/cloud-automation/docs/jira-automation-actions/#Send-web-request). In the node:
         * The <b>HTTP method</b> needs to be <i>POST</i>.
         * The <b>Web request body</b> needs to be <i>Issue data (Automation format)</i>.
-        * In the Spot console, copy the <i>Webhook API key value</i> and <i>workflow webhook URL</i> and paste in the Jira node.
 
 3. In the Spot console, select **Connect** > **Workflows**.
-4. Click **New Workflow** and enter a name for the workflow.
-5. Select **Generic Webhook** > **Create Workflow**.
-6. In the center panel of the workflow builder, click the **Generic Webhook** node to open the right panel.
-7. In the **Webhook API Key Name**, select the API key you created earlier.
-8. In Jira, get the [custom field ID value](https://confluence.atlassian.com/jirakb/how-to-find-any-custom-field-s-ids-744522503.html).
-9. In the Spot console, add a **JSONPath** node.
-10. In the **JSON Path Expression**, add the Jira custom field ID in this format: `$.fields.customfield_{ID}`.
-11. Add a **Zendesk Update Tickets with Comment** node.
-12. Select the **Zendesk Instance**, **Zendesk Ticket IDs**, and the **Type of Comment Input**: <i>Get Comment from Jira Payload</i>.
-13. Click **Save**.
+4. Go to Templates and search for **Update Zendesk Tickets with Comment from Linked Jira Issue**.
+5. Click <img height=18 src="https://github.com/user-attachments/assets/41e9c493-0e32-40f8-9721-cfecaca9fb9f"> and select **Duplicate**.
+6. Enter a name for the workflow and click **Duplicate Workflow**.
+7. Click the **Generic Webhook** node to open the right panel.
+9. In the **Webhook API Key Name**, select the API key you created earlier.
+10. Enter the **Webhook API Key Value** and the **Workflow Webhook URL**.
+11. In Jira, get the [custom field ID value](https://confluence.atlassian.com/jirakb/how-to-find-any-custom-field-s-ids-744522503.html).
+12. In the Spot console, click the **JSONPath** node.
+13. In the **JSON Path Expression**, add the Jira custom field ID in this format: `$.fields.customfield_{ID}`.
+14. Click the **Zendesk Update Tickets with Comment** node.
+15. Select the **Zendesk Instance**, **Zendesk Ticket IDs**, the **Type of Comment Input**: <i>Get Comment from Jira Payload</i>, and the **Jira Instance**.
+16. Click **Save**.
 
-#### Input
+### Input
 
 | Parameter                                             | Description                                             | Required  |
 |-------------------------------------------------------|---------------------------------------------------------|-----------|
@@ -47,14 +48,14 @@ These action snippets let you send comments made on a Jira ticket to its linked 
 | Comment Payload                                       | Get payload from Jira webhook response                  | Required  |
 | Jira Instance                                         | Select Jira instance                                    | Required  |
 
-#### Output
+### Output
 
 | Parameter          | Type       | Description                                                                           |
 |--------------------|------------|---------------------------------------------------------------------------------------|
 | zendesk_ticket_ids | StringList | Comments posted to Zendesk tickets linked to Jira ticket                              |
 | comment_posted     | String     | The “Comment” which was posted in Jira ticket will be sent to linked Zendesk tickets  |
 | response           | String     | Zendesk post comment API response.                                                    |
-| execution_status   | String     | Status of run (ie: S_OK / E_FAIL)                                                     |
+| execution_status   | String     | Status of run (for example, S_OK, E_FAIL)                                             |
 
 ## Integration Action: Add a Comment to Zendesk Tickets
 
@@ -63,17 +64,19 @@ These action snippets let you send comments made on a Jira ticket to its linked 
     * The second node in the action needs to be [Send web request](https://support.atlassian.com/cloud-automation/docs/jira-automation-actions/#Send-web-request). The <b>HTTP method</b> needs to be <i>POST</i> and the <b>Web request body</b> needs to be <i>Issue data (Automation format)</i>     
 
 3. In the Spot console, select **Connect** > **Workflows**.
-4. Click **New Workflow** and enter a name for the workflow.
-5. Select **Generic Webhook** > **Create Workflow**.
-6. In the center panel of the workflow builder, click the **Generic Webhook** node to open the right panel.
-7. In the **Webhook API Key Name**, select the API key you created earlier.
-8. In Jira, get the [custom field ID value](https://confluence.atlassian.com/jirakb/how-to-find-any-custom-field-s-ids-744522503.html).
-9. In the Spot console, add a **JSONPath** node.
-10. In the **JSON Path Expression**, add the Jira custom field ID in this format: `$.fields.customfield_{ID}`.
-11. Add a **Zendesk Update Tickets with Comment** node.
-12. Select the **Zendesk Instance**, **Zendesk Ticket IDs**, and the **Type of Comment Input**: <i>Add a single comment</i>.
+4. Go to Templates and search for **Update Zendesk Tickets with Comment from Linked Jira Issue**.
+5. Click <img height=18 src="https://github.com/user-attachments/assets/41e9c493-0e32-40f8-9721-cfecaca9fb9f"> and select **Duplicate**.
+6. Enter a name for the workflow and click **Duplicate Workflow**.
+7. Click the **Generic Webhook** node to open the right panel.
+9. In the **Webhook API Key Name**, select the API key you created earlier.
+10. Enter the **Webhook API Key Value** and the **Workflow Webhook URL**.
+12. Delete the **JSONPath** and **String Transformers** nodes.
+13. In Jira, get the [custom field ID value](https://confluence.atlassian.com/jirakb/how-to-find-any-custom-field-s-ids-744522503.html).
+14. In the Spot console, click the **Zendesk Update Tickets with Comment** node.
+15. Select the **Zendesk Instance**, **Zendesk Ticket IDs**, the **Type of Comment Input**: <i>Add single comment</i>, and enter a **comment**.
+16. Click **Save**.
 
-#### Input
+### Input
 
 | Parameter                                  | Description                                     | Required      |
 |--------------------------------------------|-------------------------------------------------|---------------|
@@ -81,13 +84,13 @@ These action snippets let you send comments made on a Jira ticket to its linked 
 | Zendesk Ticket Id                          | Zendesk Ticket Ids to post comment to. ex - 123 | Required      |
 | Type of Comment Input                      | Select the type of comment input                | Required      |
 | Type of Comment Input - Add Single Comment | Single comment to post in Zendesk tickets       | Required      |
-| Comment                                    | Add comment to post to                          | Required      |
+| Comment                                    | Add comment to post to Zendesk ticket           | Required      |
 
-#### Output
+### Output
 
 | Parameter          | Type       | Description                                        |
 |--------------------|------------|----------------------------------------------------|
 | zendesk_ticket_ids | StringList | Comments posted to Zendesk tickets                 |
 | comment_posted     | String     | The “Comment” which was posted in Zendesk tickets  |
 | response           | String     | Zendesk post comment API response.                 |
-| execution_status   | String     | Status of run (ie: S_OK / E_FAIL)                  |
+| execution_status   | String     | Status of run (for example, S_OK, E_FAIL)          |
