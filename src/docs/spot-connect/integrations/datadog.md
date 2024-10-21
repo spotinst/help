@@ -10,7 +10,8 @@ Datadog in a Spot Connect workflow enables you to:
 
 * Trigger a workflow in Spot Connect, when a specific DataDog monitor goes into the state of Alert. 
 * Retrieve data from Datadog Monitors based on a search query. 
-* Return the test result from all the synthetic tests. 
+* Return the test result from all the synthetic tests.
+* Retrieve usage metrics by product family.
 
 ## Configure Datadog in Spot Connect 
 
@@ -20,11 +21,11 @@ Datadog in a Spot Connect workflow enables you to:
 
 Details needed to set up a Datadog instance in Spot Connect: 
 
-|       Parameter               |                     Description                |      Required  |   |
-|-------------------------------|:----------------------------------------------:|:--------------:|---|
-|      Integration Alias        |     A name for the integration instance        |     True       |   |
-|      Datadog API Key          |     API key for your Datadog instance          |     True       |   |
-|      Datadog Application Key  |     Application key for your Datadog instance  |     True       |   |
+|       Parameter               |                     Description                |      Required   |
+|-------------------------------|:----------------------------------------------:|:---------------:|
+|      Integration Alias        |     A name for the integration instance        |     Required    |
+|      Datadog API Key          |     API key for your Datadog instance          |     Required    |
+|      Datadog Application Key  |     Application key for your Datadog instance  |     Required    |
 
 Follow these steps in your Datadog account to obtain the desired parameter values to enter in Spot Connect. 
 1. Log in to your Datadog account.  
@@ -56,6 +57,7 @@ You can add these actions in the Spot Connect workflow builder as part of your w
 * [Datadog Alert Trigger](spot-connect/integrations/datadog?id=datadog-alert-trigger) 
 * [Datadog Get API Test Results](spot-connect/integrations/datadog?id=datadog-get-api-test-results) 
 * [Datadog Search Monitors](spot-connect/integrations/datadog?id=datadog-search-monitors)
+* [Datadog Usage Metering](spot-connect/integrations/datadog?id=datadog-usage-metering)
 
 ### Datadog Alert Trigger 
 
@@ -127,17 +129,18 @@ Use the action to get the last 50 test results summaries for all Synthetic API t
 
 #### Input
 
-|       Parameter        |                                Description                            |      Required  |   |
-|------------------------|:---------------------------------------------------------------------:|:--------------:|---|
-|      Datadog Instance  |     Select a Datadog integration instance configured in Spot Connect  |     True       |   |
-|      Start Timestamp   |     Date-time from which to start querying results                    |     False      |   |
-|      End Timestamp     |     Date-time up to which to query results                            |     False      |   |
+|       Parameter        |                                Description                            |      Required     |
+|------------------------|:---------------------------------------------------------------------:|:-----------------:|
+|      Datadog Instance  |     Select a Datadog integration instance configured in Spot Connect  |     Required      |
+|      Start Timestamp   |     Date-time from which to start querying results                    |     Optional      |
+|      End Timestamp     |     Date-time up to which to query results                            |     Optional      |
 
 #### Output
 
-|       Parameter  |       Type  |                   Description               |   |
-|------------------|:-----------:|:-------------------------------------------:|---|
-|      result      |     Object  |     A list of test result objects in JSON   |   |
+|       Parameter        |     Type  |                   Description                 |
+|------------------------|:---------:|:---------------------------------------------:|
+|      result            |   Object  |     A list of test result objects in JSON     |
+|      execution_status  |   String  |     Status of run (for example, S-OK, E_FAIL) |
 
 #### Action Example 
 
@@ -156,13 +159,13 @@ Perform a search query and return matching monitors.
 
 #### Input 
 
-|       Parameter Name    |                                                                                   Description                                                                               |      Required  |   |
-|-------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:--------------:|---|
-|      Datadog Instance   |     Select a Datadog integration instance configured in Spot Connect                                                                                                        |     True       |   |
-|      Query              |     The query to be executed. Query documentation: https://docs.datadoghq.com/monitors/manage_monitor/#find-the-monitors                                                    |     True       |   |
-|      Page Index         |     Page to start paginating from                                                                                                                                           |     False      |   |
-|      Monitors Per Page  |     Number of monitors to return per page                                                                                                                                   |     False      |   |
-|      Sort Order         |     String for sort order, composed of field and sort order separate by a comma, e.g. name,asc. Supported sort directions: asc, desc. Supported fields: name, status, tags  |     False      |   |
+|       Parameter Name    |                                                                                   Description                                                                               |      Required  |
+|-------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:--------------:|
+|      Datadog Instance   |     Select a Datadog integration instance configured in Spot Connect                                                                                                        |     Required   |
+|      Query              |     The query to be executed. Query documentation: https://docs.datadoghq.com/monitors/manage_monitor/#find-the-monitors                                                    |     Required   |
+|      Page Index         |     Page to start paginating from                                                                                                                                           |     Optional   |
+|      Monitors Per Page  |     Number of monitors to return per page                                                                                                                                   |     Optional   |
+|      Sort Order         |     String for sort order, composed of field and sort order separate by a comma, e.g. name,asc. Supported sort directions: asc, desc. Supported fields: name, status, tags  |     Optional   |
 
 #### Output
 
