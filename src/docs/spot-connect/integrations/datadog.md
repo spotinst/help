@@ -27,24 +27,23 @@ Details needed to set up a Datadog instance in Spot Connect:
 |      Datadog API Key          |     API key for your Datadog instance          |     Required    |
 |      Datadog Application Key  |     Application key for your Datadog instance  |     Required    |
 
-Follow these steps in your Datadog account to obtain the desired parameter values to enter in Spot Connect. 
 1. Log in to your Datadog account.  
 2. In your Datadog account, click **Organization Settings**.  
 3. Click your username in the bottom left corner. 
 4. Select **Organization Settings**.
 
-![datadog-1](https://github.com/spotinst/help/assets/106514736/a8c627d5-635d-4436-89cc-059b0750d122)
+    ![datadog-1](https://github.com/spotinst/help/assets/106514736/a8c627d5-635d-4436-89cc-059b0750d122)
 
 5. Select **Access** and then **API Keys**.
 
-![datadog-2](https://github.com/spotinst/help/assets/106514736/a6acfc61-7fe4-4df6-95c3-1aa4b29d034b)
+    ![datadog-2](https://github.com/spotinst/help/assets/106514736/a6acfc61-7fe4-4df6-95c3-1aa4b29d034b)
 
 6. Click **+New Key**. 
 7. Provide a new name for the API Key and click **Create Key**. 
 8. Copy the API Key value and paste it into the Datadog API Key field in Spot Connect. 
 9. Select **Access** and then **Application Keys**.
 
-![datadog-3](https://github.com/spotinst/help/assets/106514736/2fd299e1-d818-41f9-ba0a-456b26d12772)
+   ![datadog-3](https://github.com/spotinst/help/assets/106514736/2fd299e1-d818-41f9-ba0a-456b26d12772)
 
 10. Click **+New Key**. 
 11. Enter a new name for Application Key field and click **Create Key**. 
@@ -74,7 +73,7 @@ If you do not already have a Spot Connect API Key, first create one by completin
 5. Click Datadog and open the workflow builder. 
 6. In the workflow builder, click the Datadog trigger node to open the right panel.
  
-![datadog-4](https://github.com/spotinst/help/assets/106514736/3274b5f9-f5d2-4566-804e-63447994fe8c)
+    ![datadog-4](https://github.com/spotinst/help/assets/106514736/3274b5f9-f5d2-4566-804e-63447994fe8c)
 
 7. Under the Webhook API Key Name, select an API Key you created earlier. 
 8. Compose your workflow and save it.   
@@ -83,45 +82,45 @@ If you do not already have a Spot Connect API Key, first create one by completin
 
 1. Click **Integrations** and then click the **Integration** tab. 
 
-![datadog-5](https://github.com/spotinst/help/assets/106514736/3a847ecb-d0bb-4088-96ef-112ee8cd153b)
+    ![datadog-5](https://github.com/spotinst/help/assets/106514736/3a847ecb-d0bb-4088-96ef-112ee8cd153b)
 
 2. In the search bar, search and select **Webhooks**.  
 3. Click **+ New** to create a new Webhook.
 
-![datadog-6](https://github.com/spotinst/help/assets/106514736/ba9f9b99-7a32-411a-a664-a3916466a6c7)
+    ![datadog-6](https://github.com/spotinst/help/assets/106514736/ba9f9b99-7a32-411a-a664-a3916466a6c7)
 
 4. Complete the New Webhook interface with the following information: 
 
-* Enter a Datadog Webhook Name. 
-* Copy the Workflow Webhook URL from the Spot Connect Workflow as the URL of the New Webhook. 
-* Add "alert_id": "$ALERT_ID" in the JSON object for Payload. Optionally, add or remove any other fields. 
-* Mark the Custom Headers box. 
-* Copy the JSON header information below and paste it into the Custom Header field:
+    * Enter a Datadog Webhook Name. 
+    * Copy the Workflow Webhook URL from the Spot Connect Workflow as the URL of the New Webhook. 
+    * Add "alert_id": "$ALERT_ID" in the JSON object for Payload. Optionally, add or remove any other fields. 
+    * Mark the Custom Headers box. 
+    * Copy the JSON header information below and paste it into the Custom Header field:
 
-```
-{
- "x-api-key": "<Spot-Connect-api-key>",
- "Content-Type": "application/json"
-}
-```
+      ````
+       {
+        "x-api-key": "<Spot-Connect-api-key>",
+        "Content-Type": "application/json"
+       }
+      ````
 
 5. Replace < Spot-Connect-api-key >. 
 6. Choose one of the Webhook API Key Names from the dropdown menu in the Spot Connect Workflow panel, and the corresponding Webhook API Key Value will appear.
 
-**Note**: If no options are available for the Webhook API Key Name, click **Settings**. Under the Integrations tab, click **API Keys** to create a New API Key.   
+   **Note**: If no options are available for the Webhook API Key Name, click **Settings**. Under the Integrations tab, click **API Keys** to create a New API Key.   
 
 7. Copy the Webhook API Key Value and replace < Spot-Connect-api-key > in the header. 
 8. Click **Save** to complete Webhook creation.  
 
-![datadog-7](https://github.com/spotinst/help/assets/106514736/50acc75b-59cf-43f1-90f6-ffad5fc0a112)
+    ![datadog-7](https://github.com/spotinst/help/assets/106514736/50acc75b-59cf-43f1-90f6-ffad5fc0a112)
 
-Below is an example monitor created in Datadog that sends notifications to the selected Webhook.  
+    This is an example monitor created in Datadog that sends notifications to the selected Webhook:
 
-![datadog-8](https://github.com/spotinst/help/assets/106514736/e8fe529d-4e18-421b-bb59-80500ae5f31d)
+    ![datadog-8](https://github.com/spotinst/help/assets/106514736/e8fe529d-4e18-421b-bb59-80500ae5f31d)
 
-The page below shows that the webhook triggered the Spot Connect workflow.  
+    You can see that the webhook triggered the Spot Connect workflow.  
 
-![datadog-9](https://github.com/spotinst/help/assets/106514736/60203b74-318b-42d0-92aa-64d0f39534ae)
+    ![datadog-9](https://github.com/spotinst/help/assets/106514736/60203b74-318b-42d0-92aa-64d0f39534ae)
 
 ### Datadog Get API Test Results 
 
@@ -130,7 +129,7 @@ Use the action to get the last 50 test results summaries for all Synthetic API t
 #### Input
 
 |       Parameter        |                                Description                            |      Required     |
-|------------------------|:---------------------------------------------------------------------:|:-----------------:|
+|------------------------|-----------------------------------------------------------------------|-------------------|
 |      Datadog Instance  |     Select a Datadog integration instance configured in Spot Connect  |     Required      |
 |      Start Timestamp   |     Date-time from which to start querying results                    |     Optional      |
 |      End Timestamp     |     Date-time up to which to query results                            |     Optional      |
@@ -138,7 +137,7 @@ Use the action to get the last 50 test results summaries for all Synthetic API t
 #### Output
 
 |       Parameter        |     Type  |                   Description                 |
-|------------------------|:---------:|:---------------------------------------------:|
+|------------------------|-----------|-----------------------------------------------|
 |      result            |   Object  |     A list of test result objects in JSON     |
 |      execution_status  |   String  |     Status of run (for example, S-OK, E_FAIL) |
 
@@ -160,7 +159,7 @@ Perform a search query and return matching monitors.
 #### Input 
 
 |       Parameter Name    |                                                                                   Description                                                                               |      Required  |
-|-------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:--------------:|
+|-------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------|
 |      Datadog Instance   |     Select a Datadog integration instance configured in Spot Connect                                                                                                        |     Required   |
 |      Query              |     The query to be executed. Query documentation: https://docs.datadoghq.com/monitors/manage_monitor/#find-the-monitors                                                    |     Required   |
 |      Page Index         |     Page to start paginating from                                                                                                                                           |     Optional   |
@@ -169,9 +168,10 @@ Perform a search query and return matching monitors.
 
 #### Output
 
-|       Parameter Name  |       Type  |              Description         |   |
-|-----------------------|:-----------:|:--------------------------------:|---|
-|      result           |     Object  |     A list of Monitors in Json.  |   |
+|       Parameter Name   |       Type  |              Description                      |
+|------------------------|-------------|-----------------------------------------------|
+|      result            |     Object  |     A list of Monitors in JSON                |
+|      execution_status  |   String    |     Status of run (for example, S-OK, E_FAIL) |
 
 #### Action Example 
 
@@ -180,11 +180,13 @@ Perform a search query and return matching monitors.
 3. Select a Datadog integration instance. 
 4. Enter a datadog monitor search query. View the [syntax](https://docs.datadoghq.com/monitors/manage/search/). 
 
-![datadog-12](https://github.com/spotinst/help/assets/106514736/83270494-5690-468e-8ddb-95479a5eb757)
+    ![datadog-12](https://github.com/spotinst/help/assets/106514736/83270494-5690-468e-8ddb-95479a5eb757)
 
 5. Enter Optional inputs such as Page Index, Monitors Per Page, Sort Index for further filtering. 
 6. Save and execute the workflow. 
 
-![datadog-13](https://github.com/spotinst/help/assets/106514736/7e58c546-d070-4acb-bab1-5059e7b6bbe8)
+    ![datadog-13](https://github.com/spotinst/help/assets/106514736/7e58c546-d070-4acb-bab1-5059e7b6bbe8)
 
+### Datadog Usage Metering
 
+See [Datadog usage metering](spot-connect/integrations/datadog-usage)
