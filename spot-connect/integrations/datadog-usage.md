@@ -20,13 +20,13 @@ Use Datadog integration to collect billable and usage metrics for your organizat
 1. [Set up usage metering](https://docs.datadoghq.com/api/latest/scopes/#:~:text=Get%20user%20memberships-,Usage%20Metering,-SCOPE%20NAME) in Datadog: [Get hourly usage by product family](https://docs.datadoghq.com/api/latest/usage-metering/#get-hourly-usage-by-product-family).
 2. In the Spot console, select **Connect** > **Workflows**.
 3. Click **New Workflow** and enter a name for the workflow.
-4. Select **Datadog** <font color="#FC01CC">manual trigger or datadog?</font> > **Create Workflow**.
-5. In the center panel of the workflow builder, click the **Datadog** <font color="#FC01CC">manual trigger or datadog?</font> node to open the right panel.
+4. Select **Manual Trigger** > **Create Workflow**.
+5. In the center panel of the workflow builder, click the **Manual Trigger** node to open the right panel.
 6. In the **Webhook API Key Name**, select the API key you created earlier.
-7. <font color="#FC01CC">We need to run this snippet node within loop node as it exceeds more than 5 mins of run time for longer time frame (start month and end month). --- **how do you do this?** and what's the next step?</font>
-8. Add a **Loop** action with <font color="#FC01CC">what does the loop action need?</font>.
-9. In the **Loop** action, add a **Datadog Usage Metering** action. Make sure to select **Usage category** > <i>Hourly usage by product family</i>.
-10. Click **Save Workflow**.
+7. Add a **Loop** action, update **List of Items** to be <i>1</i>, and click **Save**.
+9. Add a **Datadog Usage Metering** action to the **Loop** action.
+10. Select the **Datadog Instance**, **Usage Category** > <i>Hourly usage by product family</i>, **Product Familes**, and **Start time**.
+11. Click **Save Workflow**.
 
 #### Input
 
@@ -51,16 +51,19 @@ Use Datadog integration to collect billable and usage metrics for your organizat
 | output           | Map    | Usage API response                    |
 | s3_url           | String | URL where the data/output is saved    |
 
-##  Integration Action: Billable Across Account<font color="#FC01CC"> is each action supposed to be its own flow or are all the actions just nodes in a single flow?</font>
+##  Integration Action: Billable Across Account
 
 1. [Set up usage metering](https://docs.datadoghq.com/api/latest/scopes/#:~:text=Get%20user%20memberships-,Usage%20Metering,-SCOPE%20NAME) in Datadog: [Get billable usage across your account](https://docs.datadoghq.com/api/latest/usage-metering/#get-billable-usage-across-your-account).
 2. In the Spot console, select **Connect** > **Workflows**.
 3. Click **New Workflow** and enter a name for the workflow.
-4. Select **Datadog** <font color="#FC01CC">manual trigger or datadog?</font> > **Create Workflow**.
-5. In the center panel of the workflow builder, click the **Datadog** <font color="#FC01CC">manual trigger or datadog?</font> node to open the right panel.
+4. Select **Manual Trigger** > **Create Workflow**.
+5. In the center panel of the workflow builder, click the **Manual Trigger** node to open the right panel.
 6. In the **Webhook API Key Name**, select the API key you created earlier.
-7. Add a **Datadog Usage Metering** action. Make sure to select **Usage category** > <i>Billable across account</i>.
-8. Click **Save Workflow**.
+7. Add a **Loop** action, update **List of Items** to be <i>1</i>, and click **Save**.
+9. Add a **Datadog Usage Metering** action to the **Loop** action.
+10. Select the **Datadog Instance**, **Usage Category** > <i>Billable across account</i>, and **Start Month**.
+11. Click **Save Workflow**.
+
 
 
 #### Input
@@ -83,16 +86,18 @@ Use Datadog integration to collect billable and usage metrics for your organizat
 | output           | Map    | Usage API response                    |
 | s3_url           | String | URL where the data/output is saved    |
 
-##  Integration Action: Usage Across Account<font color="#FC01CC"> is each action supposed to be its own flow or are all the actions just nodes in a single flow?</font>
+##  Integration Action: Usage Across Account
 
 1. [Set up usage metering](https://docs.datadoghq.com/api/latest/scopes/#:~:text=Get%20user%20memberships-,Usage%20Metering,-SCOPE%20NAME) in Datadog: [Get usage across your account](https://docs.datadoghq.com/api/latest/usage-metering/#get-usage-across-your-account).
 2. In the Spot console, select **Connect** > **Workflows**.
 3. Click **New Workflow** and enter a name for the workflow.
-4. Select **Datadog** <font color="#FC01CC">manual trigger or datadog?</font> > **Create Workflow**.
-5. In the center panel of the workflow builder, click the **Datadog** <font color="#FC01CC">manual trigger or datadog?</font> node to open the right panel.
+4. Select **Manual Trigger** > **Create Workflow**.
+5. In the center panel of the workflow builder, click the **Manual Trigger** node to open the right panel.
 6. In the **Webhook API Key Name**, select the API key you created earlier.
-7. Add a **Datadog Usage Metering** action. Make sure to select **Usage category** > <i>Usage across account</i>.
-8. Click **Save Workflow**.
+7. Add a **Loop** action, update **List of Items** to be <i>1</i>, and click **Save**.
+9. Add a **Datadog Usage Metering** action to the **Loop** action.
+10. Select the **Datadog Instance**, **Usage Category** > <i>Usage across account</i>, and **Start Month**.
+11. Click **Save Workflow**.
 
 #### Input
 
@@ -121,10 +126,12 @@ Use Datadog integration to collect billable and usage metrics for your organizat
 1. [Set up usage metering](https://docs.datadoghq.com/api/latest/scopes/#:~:text=Get%20user%20memberships-,Usage%20Metering,-SCOPE%20NAME) in Datadog: [Get historical cost across your account](https://docs.datadoghq.com/api/latest/usage-metering/#get-historical-cost-across-your-account).
 2. In the Spot console, select **Connect** > **Workflows**.
 3. Click **New Workflow** and enter a name for the workflow.
-4. Select **Datadog** <font color="#FC01CC">manual trigger or datadog?</font> > **Create Workflow**.
-5. In the center panel of the workflow builder, click the **Datadog** <font color="#FC01CC">manual trigger or datadog?</font> node to open the right panel.
+4. Select **Manual Trigger** > **Create Workflow**.
+5. In the center panel of the workflow builder, click the **Manual Trigger** node to open the right panel.
 6. In the **Webhook API Key Name**, select the API key you created earlier.
-7. Add a **Datadog Usage Metering** action. Make sure to select **Usage category** > <i>Historical cost across account</i>.
+7. Add a **Loop** action, update **List of Items** to be <i>1</i>, and click **Save**.
+9. Add a **Datadog Usage Metering** action to the **Loop** action.
+10. Select the **Datadog Instance**, **Usage Category** > <i>Historical cost across account</i>, and **Start Month**.
 8. Click **Save Workflow**.
 
 #### Input
