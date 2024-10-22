@@ -13,7 +13,7 @@ Use Datadog integration to collect billable and usage metrics for your organizat
 7. Click  **Datadog** > **Add Integration**.
 8. Paste the application key in <i>Datadog Application Key</i>.
 9. Paste the API key in <i>Datadog API Key</i>.
-11. Click **Add Instance**.
+10. Click **Add Instance**.
 
 ##  Integration Action: Hourly Usage by Product Family
 
@@ -22,11 +22,10 @@ Use Datadog integration to collect billable and usage metrics for your organizat
 3. Click **New Workflow** and enter a name for the workflow.
 4. Select **Manual Trigger** > **Create Workflow**.
 5. In the center panel of the workflow builder, click the **Manual Trigger** node to open the right panel.
-6. In the **Webhook API Key Name**, select the API key you created earlier.
-7. Add a **Loop** action, update **List of Items** to be <i>1</i>, and click **Save**.
-9. Add a **Datadog Usage Metering** action to the **Loop** action.
-10. Select the **Datadog Instance**, **Usage Category** > <i>Hourly usage by product family</i>, **Product Familes**, and **Start time**.
-11. Click **Save Workflow**.
+6. Add a **Loop** action, update **List of Items** to be <i>1</i>, and click **Save**.
+7. Add a **Datadog Usage Metering** action to the **Loop** action.
+8. Select the **Datadog Instance**, **Usage Category** > <i>Hourly usage by product family</i>, **Product Familes**, and **Start time**.
+9. Click **Save Workflow**.
 
 #### Input
 
@@ -58,11 +57,10 @@ Use Datadog integration to collect billable and usage metrics for your organizat
 3. Click **New Workflow** and enter a name for the workflow.
 4. Select **Manual Trigger** > **Create Workflow**.
 5. In the center panel of the workflow builder, click the **Manual Trigger** node to open the right panel.
-6. In the **Webhook API Key Name**, select the API key you created earlier.
-7. Add a **Loop** action, update **List of Items** to be <i>1</i>, and click **Save**.
-9. Add a **Datadog Usage Metering** action to the **Loop** action.
-10. Select the **Datadog Instance**, **Usage Category** > <i>Billable across account</i>, and **Start Month**.
-11. Click **Save Workflow**.
+6. Add a **Loop** action, update **List of Items** to be <i>1</i>, and click **Save**.
+7. Add a **Datadog Usage Metering** action to the **Loop** action.
+8. Select the **Datadog Instance**, **Usage Category** > <i>Billable across account</i>, and **Start Month**.
+9. Click **Save Workflow**.
 
 
 
@@ -93,11 +91,10 @@ Use Datadog integration to collect billable and usage metrics for your organizat
 3. Click **New Workflow** and enter a name for the workflow.
 4. Select **Manual Trigger** > **Create Workflow**.
 5. In the center panel of the workflow builder, click the **Manual Trigger** node to open the right panel.
-6. In the **Webhook API Key Name**, select the API key you created earlier.
-7. Add a **Loop** action, update **List of Items** to be <i>1</i>, and click **Save**.
-9. Add a **Datadog Usage Metering** action to the **Loop** action.
-10. Select the **Datadog Instance**, **Usage Category** > <i>Usage across account</i>, and **Start Month**.
-11. Click **Save Workflow**.
+6. Add a **Loop** action, update **List of Items** to be <i>1</i>, and click **Save**.
+7. Add a **Datadog Usage Metering** action to the **Loop** action.
+8. Select the **Datadog Instance**, **Usage Category** > <i>Usage across account</i>, and **Start Month**.
+9. Click **Save Workflow**.
 
 #### Input
 
@@ -128,11 +125,10 @@ Use Datadog integration to collect billable and usage metrics for your organizat
 3. Click **New Workflow** and enter a name for the workflow.
 4. Select **Manual Trigger** > **Create Workflow**.
 5. In the center panel of the workflow builder, click the **Manual Trigger** node to open the right panel.
-6. In the **Webhook API Key Name**, select the API key you created earlier.
-7. Add a **Loop** action, update **List of Items** to be <i>1</i>, and click **Save**.
-9. Add a **Datadog Usage Metering** action to the **Loop** action.
-10. Select the **Datadog Instance**, **Usage Category** > <i>Historical cost across account</i>, and **Start Month**.
-8. Click **Save Workflow**.
+6. Add a **Loop** action, update **List of Items** to be <i>1</i>, and click **Save**.
+7. Add a **Datadog Usage Metering** action to the **Loop** action.
+8. Select the **Datadog Instance**, **Usage Category** > <i>Historical cost across account</i>, and **Start Month**.
+9. Click **Save Workflow**.
 
 #### Input
 
