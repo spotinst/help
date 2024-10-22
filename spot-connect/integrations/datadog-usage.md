@@ -121,7 +121,7 @@ Use Datadog integration to collect billable and usage metrics for your organizat
 | output           | Map    | Usage API response                    |
 | s3_url           | String | URL where the data/output is saved    |
 
-##  Integration Action: Historical Cost Across Account<font color="#FC01CC"> is each action supposed to be its own flow or are all the actions just nodes in a single flow?</font>
+##  Integration Action: Historical Cost Across Account
 
 1. [Set up usage metering](https://docs.datadoghq.com/api/latest/scopes/#:~:text=Get%20user%20memberships-,Usage%20Metering,-SCOPE%20NAME) in Datadog: [Get historical cost across your account](https://docs.datadoghq.com/api/latest/usage-metering/#get-historical-cost-across-your-account).
 2. In the Spot console, select **Connect** > **Workflows**.
