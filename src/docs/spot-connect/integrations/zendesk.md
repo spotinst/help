@@ -1,5 +1,3 @@
-<meta name="robots" content="noindex">
-
 # Zendesk
 
 These action snippets let you send comments made on a Jira ticket to its linked Zendesk tickets. You can also send individual comments on a Zendesk ticket.
