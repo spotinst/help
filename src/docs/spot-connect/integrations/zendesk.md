@@ -38,7 +38,6 @@ These action snippets let you send comments made on a Jira ticket to its linked 
 |-------------------------------------------------------|---------------------------------------------------------|-----------|
 | Zendesk Instance                                      | Select Zendesk Instance to post comment to              | Required  |
 | Zendesk Ticket Id                                     | Zendesk Ticket IDs to post comment to, for example, 123 | Required  |
-| Type of Comment Input                                 | Select the type of comment input                        | Required  |
 | Type of Comment Input - Get comment from JIRA payload | Get payload directly from Jira                          | Required  |
 | Comment Payload                                       | Get payload from Jira webhook response                  | Required  |
 | Jira Instance                                         | Select Jira instance                                    | Required  |
@@ -67,7 +66,6 @@ These action snippets let you send comments made on a Jira ticket to its linked 
 |--------------------------------------------|-------------------------------------------------|---------------|
 | Zendesk Instance                           | Select Zendesk Instance to post comment to      | Required      |
 | Zendesk Ticket Id                          | Zendesk Ticket Ids to post comment to. ex - 123 | Required      |
-| Type of Comment Input                      | Select the type of comment input                | Required      |
 | Type of Comment Input - Add Single Comment | Single comment to post in Zendesk tickets       | Required      |
 | Comment                                    | Add comment to post to Zendesk ticket           | Required      |
 
