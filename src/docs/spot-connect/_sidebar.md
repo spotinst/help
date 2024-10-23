@@ -56,4 +56,5 @@
     - [Terraform CLI](spot-connect/integrations/terraform-cli)
     - [Terraform Cloud](spot-connect/integrations/terraform)
     - [Twilio](spot-connect/integrations/twilio)
+    - [Zendesk](spot-connect/integrations/zendesk)
 
