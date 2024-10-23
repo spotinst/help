@@ -107,7 +107,7 @@ The following is a list of attributes customizable per VNG in Ocean for AKS.
 
 ## Ocean for GKE
 
-The following is a list of attributes customizable per VNG in Ocean for GKE. Some of the features can be accessed using the [API only](https://docs.spot.io/api/#operation/OceanGKELaunchSpecUpdate), as indicated below.
+The following is a list of attributes customizable per VNG in Ocean for GKE. As indicated below, some of the features can be accessed using the [API only](https://docs.spot.io/api/#operation/OceanGKELaunchSpecUpdate).
 
 - Automatic Headroom
 - Availability zone
@@ -144,7 +144,7 @@ Cloud service provider relevance: <font color="#FC01CC">GKE</font>
 
 Ocean for GKE allows the utilization of local SSD disks, high-performance local disks that are useful with specific workloads such as those that heavily use caching. You can define SSD disks in your Ocean VNG configuration by using localSsdCount to configure the number of SSD disks to be connected to each VM in the VNG.
 
-Once configured, whenever the Ocean Autoscaler scales up, Ocean will automatically connect the local SSDs to the new VM. Note that local SSDs are limited to specific machine types. Ocean will automatically filter out the machine types that are not compatible. For information about the API, see Local SSD in the Spot API.
+Once configured, whenever the Ocean Autoscaler scales up, Ocean will automatically connect the local SSDs to the new VM. Note that local SSDs are limited to specific machine types. Ocean will automatically filter out the incompatible machine types. For information about the API, see Local SSD in the Spot API.
 
 
 <!-- NEW SECTION ADDED - for DOC-1588 -->
@@ -157,7 +157,7 @@ You might want to distribute reservation instances/savings plans according to Vi
 
 Ocean provides attributes that let you control utilization commitments at the Virtual Node Group level.
 
-In the Spot API, under Virtual Node Groups > strategy, you can configure these attributes as either True or Falso:
+In the Spot API, under Virtual Node Groups > strategy, you can configure these attributes as either True or False:
 
  * `utilizeReservedInstances`: If there are free reserved instances within the AWS account, Ocean will utilize them before launching spot instances. The initial default value is inherited from the identical attribute at the cluster level. 
 
@@ -182,7 +182,7 @@ Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>, <
 
 Ocean supports instance types with both Arm64 and x86 architectures in the same VNG. This widens the instance selection options because instances that support either the Arm64 or the x86 architectures can be chosen. This enables you to take advantage of the cost and performance benefits of Arm64 when the spot markets allow while maintaining a large whitelist of x86 instances. 
 
-Whenever you create a Virtual Node Group with the Arm64 and x86 instance types, ensure that the workloads can run on both architectures. In addition, ensure by using node selectors that only the relevant pods will trigger a scale-up from this VNG. 
+Whenever you create a Virtual Node Group with the Arm64 and x86 instance types, ensure that the workloads can run on both architectures. In addition, use node selectors to ensure that only the relevant pods will trigger a scale-up from this VNG. 
 
 <!-- I took the generic intro information from Preferred Spot Instance Types per Virtual Node Group and put it above -->
 
@@ -190,13 +190,13 @@ Whenever you create a Virtual Node Group with the Arm64 and x86 instance types, 
 
 Ocean provides a serverless experience in which the specific instances don’t matter, and the best practice is to allow the use of all instance types. However, there are some cases in which a specific instance type may provide better performance or increased cost savings. For example, if you know that your application performs significantly better on M5 instances, then you can save costs by preferring this instance type over others.
 
-Ocean serves such use cases with the ability to define a list of preferred instance types out of all types allowed in the Virtual Node Group. When your preferences are defined, Ocean takes them into consideration alongside other considerations when scaling up. In this way, Ocean strives towards a well-distributed and highly available spot-instance/on-demand-based Virtual Node that uses preferred types as broadly as possible.
+Ocean serves such use cases with the ability to define a list of preferred instance types out of all types allowed in the virtual node group. When your preferences are defined, Ocean considers them alongside other considerations when scaling up. In this way, Ocean strives towards a well-distributed and highly available spot-instance/on-demand-based virtual node group that uses preferred types as broadly as possible.
 
 ### Preferred Spot Instance Types per Virtual Node Group
 
 Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>, <font color="#FC01CC">ECS</font>
 
-For your AWS Kubernetes and ECS clusters, you can configure preferred Spot instance types at the Virtual Node Group level.
+You can configure preferred Spot instance types at the virtual node group level for your AWS Kubernetes and ECS clusters.
 
 In each scale-up action, Ocean provisions the new instances from the preferred types, using:
 
@@ -215,15 +215,15 @@ For information about defining preferred spot instance types in the Spot API (us
 
 Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>
 
-You can configure preferred on-demand types at the Virtual Node Group level for your AWS Kubernetes clusters.
+You can configure preferred on-demand types at the virtual node group level for your AWS Kubernetes clusters.
 
 In each scale-up action, Ocean provisions the new instances from the preferred types as follows:
 
 * Ocean selects the On-Demand instance types from the preferred list.
 * Ocean filters out unavailable markets when selecting On-Demand nodes.
-* If all the preferred On-Demand instance types are unavailable when scaling up, Ocean will select the types from the Virtual Node Group whitelist `instanceTypes` (if it exists). If the Virtual Node Group whitelist does not exist, Ocean will use the cluster's whitelist.
+* If all the preferred On-Demand instance types are unavailable when scaling up, Ocean will select the types from the virtual node group whitelist `instanceTypes` (if it exists). If the Virtual Node Group whitelist does not exist, Ocean will use the cluster's whitelist.
 
-For information about defining preferred on-demand instance types in the Spot API using the `preferredOnDemandTypes` attribute, see the Create Virtual Node Group APIs for [Ocean AWS Kubernetes](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecCreate).
+For information about defining preferred on-demand instance types in the Spot API using the `preferredOnDemandTypes` attribute, see the Create virtual node group APIs for [Ocean AWS Kubernetes](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecCreate).
 
 When you set `preferredOnDemandTypes`, the Ocean Autoscaler will launch on-demand nodes from the listed types.​
 
@@ -235,7 +235,7 @@ Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>
 
 The Ocean Autoscaler (by default) calculates ephemeral storage using the root volume size when it scales up. If your system uses the data volume size for the calculation, you need to specify an alternative device name to ensure that the Ocean Autoscaler launches nodes with the right size for their workloads.
 
-When the root volume is not applicable for the ephemeral storage, specify the alternative device name `deviceName` with either the Virtual Node Group (VNG’s) BDM or the AMI’s BDM.
+When the root volume is not applicable for the ephemeral storage, specify the alternative device name `deviceName` with either the virtual node group (VNG’s) BDM or the AMI’s BDM.
 
 * Via the [Spot API](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecUpdate) -  `launchSpec.ephermeralStorage.deviceName`
 * Via [Terraform](https://registry.terraform.io/providers/spotinst/spotinst/latest/docs/resources/ocean_aws_launch_spec#ephemeral_storage)
@@ -245,7 +245,7 @@ When the root volume is not applicable for the ephemeral storage, specify the al
 
 Cloud service provider relevance: <font color="#FC01CC">AKS</font>
 
-Ocean AKS lets you configure multiple subnets for a Virtual Node Group (VNG) to ensure that your AKS cluster does not run out of IP address capacity.  
+Ocean AKS lets you configure multiple subnets for a virtual node group to ensure that your AKS cluster does not run out of IP address capacity.  
 There are several Azure Networking CNI options: 
 
 *  Kubenet Networking (vnet-subnet) 
@@ -253,7 +253,7 @@ There are several Azure Networking CNI options:
 *  Azure CNI with Dynamic IP (vnet-subnet and pod-subnet).  
 
 You can add (or remove) vnet-subnets or pod-subnets in a VNG at any time. Ocean AKS will automatically assign subnets to node pools based on IP address capacity. However, a node pool with a subnet that has run out of IP address capacity will be locked for scaling. 
-You can set up multiple subnets when you create or update a Virtual Node Group, and when you update a Virtual Node Group template in the Cloud Cluster Virtual Node Groups tab. 
+You can set up multiple subnets when you create or update a virtual node group or a virtual node group template in the cloud cluster virtual node groups tab. 
 
 To access the Virtual Node Groups dashboard and configure multiple subnets: 
 
@@ -266,7 +266,7 @@ To access the Virtual Node Groups dashboard and configure multiple subnets:
 ![ocean-network-gen](https://github.com/spotinst/help/assets/159915991/4c1c7c3f-0d23-478a-9dd5-92056dab0a44)
 
 
-5. In the Networking panel, you can update subnets for VNG using the Add VNet subnets and Add Pod subnets drop-down lists, according to the AKS cluster Network Type.
+5. In the Networking panel, you can update subnets for the virtual node group using the Add VNet subnets and Add Pod subnets drop-down lists, according to the AKS cluster Network Type.
 
     *  For Kubenet, you can add one or more VNet subnets to the VNG (pod subnets are not applicable) 
     *  For Azure CNI you can add one or more VNet subnets to the VNG (pod subnets are not applicable) 
@@ -283,12 +283,12 @@ To access the Virtual Node Groups dashboard and configure multiple subnets:
 
 *  All subnets (vnet-subnets and pod-subnets) must be a subset of the AKS cluster VNet CIDR. 
 *  After you create an AKS cluster, you cannot change the VNet name or Network plugin (CNI). 
-*  You can expand VNet CIDR, for example, from 10.200.0.0/16 to 10.200.0.0/14. However, you then need to update the AKS cluster to reconcile to the expanded VNet CIDR:  
+*  For example, You can expand VNet CIDR from 10.200.0.0/16 to 10.200.0.0/14. However, you then need to update the AKS cluster to reconcile to the expanded VNet CIDR:  
 ```
 az aks update -g <ResourceGroup> -n <ClusterName>
 ```
 *  If a vnet-subnet was not specified when you created the AKS cluster, AKS creates the default managed VNet (CIDR 10.224.0.0/12), and you cannot add more subnets to the managed VNet. Ocean does not support adding subnets to AKS clusters with the default managed VNet. 
-*  BYO CNI - Bring Your Own CNI is not currently supported. It may work with Ocean, but there is no capability to add subnets.
+*  BYO CNI—Bring Your Own CNI is not currently supported. It may work with Ocean, but it cannot add subnets.
 
 ### Related Topics
 
