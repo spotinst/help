@@ -92,17 +92,24 @@ If you have workloads with differing statuses, the workload status widget shows 
 > **Note**: The status changes according to the filters applied in this panel and the Workloads Optimization list in the [Advanced Optimization tab](ocean/features/ocean-cluster-right-sizing-recom-tab?id=automatic-right-sizing-recommendations-and-rules)
 
 vCPU and memory usage widgets:
-*  vCPU Usage: Used and allocated vCPU resources, recommended increase or decrease of vCPU resources, and overprovisioning. 
+*  vCPU Usage: Used and allocated vCPU resources, recommended increase or decrease of vCPU resources, and over-provisioning. 
 *  Memory Usage: Used and allocated memory resources, a recommendation to increase or decrease the memory resources, and the overprovisioning. 
 
 ###  Right Sizing Resource Usage Panel 
 
-![usage-in-last-2-weeks-b](https://github.com/user-attachments/assets/8e2e3411-489b-4480-9b15-c4c047785f5e)
+![usage](https://github.com/user-attachments/assets/0335a764-de6f-459b-8e5e-b4fa3119306d)
 
 The right Sizing Resources Usage panel contains two widgets: 
 
-*  vCPU usage in the last two weeks: Displays graphs for used, allocated, and recommended vCPU usage based on data from the last two weeks. 
-*  Memory usage in the last two weeks: Displays graphs for used, allocated, and recommended memory usage based on data from the last two weeks. 
+* vCPU usage in the last two weeks: displays graphs for used, allocated, and recommended vCPU usage based on data from the last two weeks, with the following selected usage options:
+  * 99th percentile vCPU usage (default)
+  * 95th percentile
+  * 90th percentile
+  * 85th percentile
+  * Average
+* Memory usage in the last two weeks: displays graphs for used, allocated, and recommended memory usage based on data from the last two weeks, with the following selected usage options:
+  * Maximum memory usage (default)
+  * Average 
 
 
 
