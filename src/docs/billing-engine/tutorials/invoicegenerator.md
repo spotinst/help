@@ -17,28 +17,28 @@ Once you’ve created an invoice, you can:
 ## Create an Invoice
 
 1. Go to **Billing Engine** > **Invoice Generator**.
-2. On the out-of-the-box Billing Invoice template, click <img height=14 src="https://github.com/user-attachments/assets/ef26a4db-838f-4fed-a187-d0d30d03f9fa"> > **Duplicate**.
+2. On the out-of-the-box Billing Invoice template, click <img height=18 src="https://github.com/user-attachments/assets/ef26a4db-838f-4fed-a187-d0d30d03f9fa"> > **Duplicate**.
     You should always make a copy of the out-of-the-box template rather than editing it. As you work, your changes are saved automatically.
 
 3. Update the invoice:
 
-    * Customize the data. Make sure your invoice includes a filter for the billing period, including a start and end date field. For example, BillingPeriodStart with start and end date fields selected.
+    * [Customize the data](billing-engine/tutorials/invoicegenerator?id=customize-the-data-in-your-invoice). Make sure your invoice includes a filter for the billing period, including a start and end date field. For example, <i>BillingPeriodStart</i> with start and end date fields selected.
 
        If you group your invoice by a field, it’s a good idea to also add that field to the header so it’s easy to see what the invoice is for.
 
        <img width=250 src="https://github.com/user-attachments/assets/a845d17b-c0d1-4569-93c5-e75fb6f2f33d">
 
-    * Customize the form.
+    * [Customize the form](billing-engine/tutorials/invoicegenerator?id=customize-the-invoice-form).
 
 4. Click **Preview**.
 5. Update the parameters (such as customer name, address, invoice number, description, dates) for the invoice and click **Preview Report**. You can select **Null** to exclude that field from the invoice.
 6. In the preview, you can:
     * View the invoices by clicking the tabs at the bottom.
     * Edit.
-    * Download the invoices <img height=14 src="https://github.com/user-attachments/assets/9e88f94e-c828-4dbe-90bb-ed29fee96027">.
+    * Download the invoices <img height=18 src="https://github.com/user-attachments/assets/9e88f94e-c828-4dbe-90bb-ed29fee96027">.
     * **Schedule invoice** in the workflow builder.
 
-7. To rename the invoice, click <img height=14 src="https://github.com/user-attachments/assets/c095227c-4efb-41a2-bda2-e4a9c7714d7b"> to go back to the list of invoice reports. On the report, click <img height=14 src="https://github.com/user-attachments/assets/ef26a4db-838f-4fed-a187-d0d30d03f9fa"> > Rename.
+7. To rename the invoice, click <img height=18 src="https://github.com/user-attachments/assets/c095227c-4efb-41a2-bda2-e4a9c7714d7b"> to go back to the list of invoice reports. On the report, click <img height=18 src="https://github.com/user-attachments/assets/ef26a4db-838f-4fed-a187-d0d30d03f9fa"> > **Rename**.
 
 ## Customize the Data in Your Invoice
 Make sure your invoice includes a filter for the billing period, including a start and end date field. For example, BillingPeriodStart with start and end date fields selected.
@@ -79,7 +79,7 @@ Let’s say you want to create an invoice by family and you have a total of 50 a
 * If you use <b>Configuration</b> > <b>Report Group</b> > <b>Associated Column</b> and select <i>BillingFamilyName</i>, you’ll get one invoice per family with one row per account in the family, so a total of 5 invoices.
 * If you use <b>Configuration</b> > <b>Report Group</b> > <b>Associated Column</b> and select <i>None</i>, you’ll get one invoice with a total of 50 rows (one row for each family).
 
-You can also use multiple data fields to subtotal. For example, you may want to show totals by both Service and Description. In the Body, hover over the table and click <img height=14 src="https://github.com/user-attachments/assets/503b582c-fce2-4e87-8a5c-402915e6f619"> to view the Dynamic Table Configuration, where you can select the groups and columns for your table.
+You can also use multiple data fields to subtotal. For example, you may want to show totals by both Service and Description. In the Body, hover over the table and click <img height=18 src="https://github.com/user-attachments/assets/503b582c-fce2-4e87-8a5c-402915e6f619"> to view the Dynamic Table Configuration, where you can select the groups and columns for your table.
 
 <img width=250 src="https://github.com/user-attachments/assets/208e4c20-edf7-49d8-9c90-ffad52a26a35">
 
@@ -107,7 +107,7 @@ You can change the cost field you show in the invoice. The out-of-the-box templa
 
 You can create a custom formula to include in your invoices.
 
-1. Click <b>Formula</b> <img height=14 src="https://github.com/user-attachments/assets/0e63f319-b8f1-45c2-9b1a-a4ff523c1129">.
+1. Click <b>Formula</b> <img height=18 src="https://github.com/user-attachments/assets/0e63f319-b8f1-45c2-9b1a-a4ff523c1129">.
 2. Select <b>Standardized Syntax</b>.
 3. Enter your formula. For example, you can create a field called <i>Profit</i>. The formula can be <i>BilledCost - ProviderCost</i>.
 
@@ -159,13 +159,13 @@ You can add a text box on your invoice to display a message or banner. Change th
 
 <div style="padding-left:16px">
 
-Dynamic tables <img height=14 src="https://github.com/user-attachments/assets/f2f5d6ad-452d-4920-8371-a039b530c445"> automatically add rows for each record in the data column. You can also add static text to the cells.
+Dynamic tables <img height=18 src="https://github.com/user-attachments/assets/f2f5d6ad-452d-4920-8371-a039b530c445"> automatically add rows for each record in the data column. You can also add static text to the cells.
 
-In the Body, hover over the table and click <img height=14 src="https://github.com/user-attachments/assets/503b582c-fce2-4e87-8a5c-402915e6f619"> to view the Dynamic Table Configuration, where you can select the groups and columns for your table.
+In the Body, hover over the table and click <img height=18 src="https://github.com/user-attachments/assets/503b582c-fce2-4e87-8a5c-402915e6f619"> to view the Dynamic Table Configuration, where you can select the groups and columns for your table.
 
 <img width=250 src="https://github.com/user-attachments/assets/208e4c20-edf7-49d8-9c90-ffad52a26a35">
 
-Simple tables <img height=14 src="https://github.com/user-attachments/assets/6701b51d-cb7c-438c-8f49-3a5b11914a63"> show one item per cell. It can be either text or a field.
+Simple tables <img height=18 src="https://github.com/user-attachments/assets/6701b51d-cb7c-438c-8f49-3a5b11914a63"> show one item per cell. It can be either text or a field.
 
  </div>
  </details>
@@ -175,9 +175,10 @@ Simple tables <img height=14 src="https://github.com/user-attachments/assets/670
 
 <div style="padding-left:16px">
 
-For example, you may want to show both Service and Description. In the Body, hover over the table and click <img height=14 src="https://github.com/user-attachments/assets/503b582c-fce2-4e87-8a5c-402915e6f619"> to view the Dynamic Table Configuration, where you can select the groups and columns for your table.
+For example, you may want to show both Service and Description. In the Body, hover over the table and click <img height=18 src="https://github.com/user-attachments/assets/503b582c-fce2-4e87-8a5c-402915e6f619"> to view the Dynamic Table Configuration, where you can select the groups and columns for your table.
 
 <img width=250 src="https://github.com/user-attachments/assets/208e4c20-edf7-49d8-9c90-ffad52a26a35">
 
+You may need to manually resize the widths of the existing columns to add more columns.
  </div>
  </details>
