@@ -89,7 +89,7 @@ This dashboard contains the following widgets:
 This dashboard contains the following widgets:
 
 * Scaling up and down events summaries.
-* Failed scale-up events summary.* 
+* Failed scale-up events summary. 
 
 </details>
 
@@ -102,9 +102,9 @@ This dashboard contains the following widgets:
 
 This dashboard contains the following widgets:
 
-* 
-
-
+* vCPU suggestions over time.
+* Memory suggestions over time.
+* Top 5 workloads with potential monthly max. savings.
 
 ## Variables
 
@@ -132,7 +132,7 @@ Monitor the following key metrics to understand how Ocean scales.
 
 * Cluster nodes’ allocatable resources (CPU, memory, GPU). Source: Ocean.
 * Ocean cluster headroom allocatable resources (CPU, memory, GPU). Source: Ocean.
-* Ocean cluster resources limit (CPU, memory). Source: Ocean.
+* Ocean cluster resource limit (CPU, memory). Source: Ocean.
 * Ocean nodes breakdown by instance lifecycle and availability zone. Source: Ocean.
 * Cluster nodes’ allocatable resources breakdown by instance lifecycle and availability zone. Source: Ocean
 
@@ -142,7 +142,7 @@ Monitor the following key metrics to understand how Ocean scales.
 * Ocean nodes count by instance lifecycle and availability zone over time. Source: Ocean.
 * Cluster nodes’ allocatable resources count by instance lifecycle and availability zone over time. Source: Ocean.
 
-**8Resources Utilization Metrics:** Cluster resources (CPU, memory, GPU) utilization over time.
+**Resources Utilization Metrics:** Cluster resources (CPU, memory, GPU) utilization over time.
 
 **Pods Metrics:**
 
@@ -191,6 +191,12 @@ Monitor the following key metrics to understand how Ocean scales.
 * Cluster Internet network usage over time. Source: Ocean.
 * Cluster Inter-Region network cost over time. Source: Ocean.
 * Cluster Inter-Region network usage over time. Source: Ocean.
+
+**Right-Sizing Metrics**
+
+* VCPU Suggestions over time. Source: Ocean.
+* Memory suggestions over time. Source: Ocean.
+* Top 5 workloads with potential monthly max. savings. Source: Ocean.
 
 ### Right-Sizing
 
