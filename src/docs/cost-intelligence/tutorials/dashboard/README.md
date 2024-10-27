@@ -95,4 +95,30 @@ To refresh an existing dataset, while editing the dataset, click **Reload Datase
 
 To delete a dataset, hover over the menu icon of the dataset name, and click **Delete**. **This action removes any charts from all dashboards that contain this dataset**. 
 
+## Asset Groups
+
+Asset groups are a set of defined filters that are automatically applied to different pages to view and manage data collectively. After you’ve set up an asset group, you can use it in [Billing Engine](billing-engine/), [Cost Intelligence](cost-intelligence/), and [Spot Security](spot-security/).
+
+![dashboard-asset-group](https://github.com/user-attachments/assets/7546c0f8-1461-4dcf-afc5-a826531fa78f) 
+
+The icons displayed next to **All Product Filters** indicate that the selected filters can be applied to the Cost Intelligence pages, Billing Engine pages, and Spot Security pages.
+
+The assets you see in a group will be different if:
+
+* The accounts have been onboarded to all or just some of the products. For example, you may have onboarded an account to Spot Security and Cost Intelligence but not to Billing Engine.
+
+* The filters are available for that product. For example, in Spot Security, you can also filter services and regions. When you view that same asset group in Billing Engine or Cost Intelligence, which do not use the service and region filters, you will see all assets for the providers and accounts selected.
+
+## Create an Asset Group
+
+1. Go to **Cost Intelligence** > **Dashboard** > **Create Asset Group**.
+2. Give the asset group a name (and mark as default asset group if needed).
+3. Filter the cloud provider, account, service, and region.
+4. You can edit the filters and then click **Save**.
+
+## Edit or Delete an Asset Group
+
+To edit an asset group, hover over a group in the list and click **Edit**.
+
+To delete an asset group, hover over a group in the list and click **Edit** > **Delete Asset Group**.
   
