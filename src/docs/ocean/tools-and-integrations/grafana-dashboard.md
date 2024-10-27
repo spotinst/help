@@ -35,7 +35,7 @@ Ocean maintains an official set of metrics, natively scrapable by Prometheus. Th
 <details>
   <summary markdown="span">Current Status</summary>
 
-  <img src="https://github.com/user-attachments/assets/dfca3f37-24e2-4a6c-b038-59156444491d" />
+  <img width="1024" alt="grafana-dashboard-current-status" src="https://github.com/user-attachments/assets/3e46cfab-2f88-4a76-87d5-10ad16afcc38">
 
   This dashboard contains the following widgets:
   * Ocean controller: Status in the cluster.
@@ -49,10 +49,10 @@ Ocean maintains an official set of metrics, natively scrapable by Prometheus. Th
 
 <details>
   <summary markdown="span">Cost and Usage</summary>
+  
+<img width="1024" alt="grafana-dashboard-cost-and-usage" src="https://github.com/user-attachments/assets/cd688d9c-fec7-4b6b-9519-df97a466a362">
 
- <img src="https://github.com/user-attachments/assets/9ba3bd90-357c-411c-bba4-84101275c9dd" />
-
-  This dashboard contains the following widgets:
+This dashboard contains the following widgets:
   * Month-to-Date cluster cost.
   * Average daily cluster cost during a specified time period.
   * Cluster cost breakdown during a specified time period.
@@ -63,8 +63,8 @@ Ocean maintains an official set of metrics, natively scrapable by Prometheus. Th
 <details>
   <summary markdown="span">Network Metrics</summary>
 
-<img src="https://github.com/user-attachments/assets/24ef6087-97f4-490d-9c0d-ba7655fe9be3" />
-
+ <img width="1024" alt="grafana-dashboard-network-metrics" src="https://github.com/user-attachments/assets/f1616d7b-1b7b-4260-b2ab-fdfd196be4f5">
+ 
 This dashboard contains the following widgets:
 * Cluster network cost for a specified time period.
 * Cluster network usage for a specified time period.
@@ -84,7 +84,7 @@ This dashboard contains the following widgets:
 <details>
   <summary markdown="span">Scaling Activity Overview</summary>
 
-<img src="https://github.com/user-attachments/assets/6b632cb9-5ef4-4272-9400-5bcc6850a4a4" />
+  <img width="1024" alt="grafana-dashboard-scaling-activity" src="https://github.com/user-attachments/assets/20c59bdb-4a66-4906-9fcb-399bdf12de26">
 
 This dashboard contains the following widgets:
 
