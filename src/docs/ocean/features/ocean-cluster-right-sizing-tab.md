@@ -97,19 +97,28 @@ vCPU and memory usage widgets:
 
 ###  Right Sizing Resource Usage Panel 
 
+This panel contains two widgets:
+
+* vCPU usage in the last 2 weeks: Displays graphs for used, allocated, and recommended vCPU usage based on data from the last 2 weeks.
+* Memory usage in the last 2 weeks: Displays graphs for used, allocated, and recommended memory usage based on data from the last 2 weeks.
+
 ![usage](https://github.com/user-attachments/assets/0335a764-de6f-459b-8e5e-b4fa3119306d)
 
-The right Sizing Resources Usage panel contains two widgets: 
-
-* vCPU usage in the last two weeks: Displays graphs for used, allocated, and recommended vCPU usage based on data from the last two weeks, with the following selected usage options:
+Hover over a data point in the **vCPU usage in the last 2 weeks** widget to view:
+* Allocated vCPU usage based on data from the last 2 weeks.
+* Actual vCPU usage based on data from the last 2 weeks (you can change the default from the **Usage** drop-down menu).
   * 99th percentile vCPU usage (default)
   * 95th percentile vCPU usage
   * 90th percentile vCPU usage
   * 85th percentile vCPU usage
-  * Average
-* Memory usage in the last two weeks: Displays graphs for used, allocated, and recommended memory usage based on data from the last two weeks, with the following selected usage options:
-  * Maximum memory usage (default)
-  * Average memory usage 
+  * Average vCPU usage
+* Suggested vCPU usage based on data from the last 2 weeks.
 
+Hover over a data point in the **Memory usage in the last 2 weeks** widget to view:
+* Allocated memory usage in GiB based on data from the last 2 weeks.
+* Actual memory usage in GiB based on data from the last 2 weeks (you can change the default from the **Usage** drop-down menu).
+  * Maximum memory usage in GiB (default)
+  * Average memory usage in GiB
+* Suggested memory usage in GiB based on data from the last 2 weeks.
 
 
