@@ -91,8 +91,20 @@ This dashboard contains the following widgets:
 * Scaling up and down events summaries.
 * Failed scale-up events summary.* 
 
+</details>
+
+<details>
+  <summary markdown="span">Right Sizing</summary>
+
+<img width="1024" alt="grafana-dashboard-right-sizing" src="https://github.com/user-attachments/assets/393bd4d8-03fa-43f9-b99f-5db7fb457017">
 
 </details>
+
+This dashboard contains the following widgets:
+
+* 
+
+
 
 ## Variables
 
