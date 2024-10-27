@@ -103,13 +103,13 @@ The right Sizing Resources Usage panel contains two widgets:
 
 * vCPU usage in the last two weeks: Displays graphs for used, allocated, and recommended vCPU usage based on data from the last two weeks, with the following selected usage options:
   * 99th percentile vCPU usage (default)
-  * 95th percentile
-  * 90th percentile
-  * 85th percentile
+  * 95th percentile vCPU usage
+  * 90th percentile vCPU usage
+  * 85th percentile vCPU usage
   * Average
 * Memory usage in the last two weeks: Displays graphs for used, allocated, and recommended memory usage based on data from the last two weeks, with the following selected usage options:
   * Maximum memory usage (default)
-  * Average 
+  * Average memory usage 
 
 
 
