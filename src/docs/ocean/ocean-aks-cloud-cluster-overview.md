@@ -206,8 +206,6 @@ These are the curves:
    * Spot.
    * Regular.
    * Reserved.
-   * Savings Plans.
-
 *  Workload Requests: includes running pods and pending pods requests. 
 *  Workloads with Headroom: includes running pods, running Headroom pods, pending pods, and pending Headroom pods.
 
