@@ -3,7 +3,7 @@
 The Cloud Cluster Overview dashboard provides enhanced functionality to analyze the Ocean Autoscaler actions with high granularity and gain deeper insights into its behavior. 
 This topic delves into this dashboard's various components and sections, offering a detailed exploration of its capabilities. 
 
-Ocean continuously analyzes the utilization of your nodes in the cloud infrastructure. It automatically scales compute resources to optimize utilization and availability. It achieves this by intelligently combining Spot, Reserved, and On-Demand compute instances.
+Ocean continuously analyzes the utilization of your nodes in the cloud infrastructure. It automatically scales compute resources to optimize utilization and availability. It achieves this by intelligently combining spot, reserved, and regular compute instances.
 
 * Ocean Savings panel shows the amount of money, CPU, memory (GiB/TiB), and GPU compute resources saved when you utilize Ocean to manage your Kubernetes cluster. Specifically, these are savings from running spot instances, bin packing, and reverting to lower-cost nodes. 
 * The Ocean Managed Nodes and Resources panel shows information about your Ocean-managed and unmanaged nodes and your managed CPU, memory, and GPU resources.
@@ -33,15 +33,15 @@ In this panel:
 ## Ocean Savings from Running on Spot
 
 Ocean Autoscaler intelligently leverages these spot instances when appropriate, reducing costs while maintaining high availability. This tab lets you view the cost benefits of using spot instances in your cluster. 
-Ocean savings from running on spot are calculated as the difference between the price of on-demand and spot nodes within a specified time range. This calculation considers the number of CPUs, memory, and GPUs running as spot nodes. 
+Ocean savings from running on spot are calculated as the difference between the price of regular and spot nodes within a specified time range. This calculation considers the number of CPUs, memory, and GPUs running as spot nodes. 
 
 To view these savings, click the **Running on Spot** tab (unless already displayed). 
 
 This tab displays: 
 
 * Total cluster savings and the percentage of the saved cluster costs in the selected time range, where: 
-  * Total cluster savings = price for running on-demand instances – price for running spot instances. 
-  * Percentage of cluster costs = [total price for running on-demand instances – total price for running spot instances] / total price for running on-demand instances x 100. 
+  * Total cluster savings = price for running regular instances – price for running spot instances. 
+  * Percentage of cluster costs = [total price for running regular instances – total price for running spot instances] / total price for running regular instances x 100. 
 
 * CPU resources in vCPU Hours.
 * Memory resources in GiB/TiB Hours.
@@ -61,12 +61,12 @@ This tab displays:
 
 * Number of Scaled-down nodes: If one or more nodes have been scaled down, click the link on the button to view details. 
   * Pie-chart - Virtual Node Group percentage breakdown for nodes.
-  * Pie-chart - Lifecycle percentage breakdown (On-Demand, Savings Plans, Reserved Instances, and spots).
+  * Pie-chart - Lifecycle percentage breakdown (regular, Savings Plans, Reserved Instances, and spots).
   * Node Name.
   * Virtual Node Group: You can click the link for a listed Virtual Node Group to display more details.
   * Node Pool (name of node pool)
   * VM Size: For example, standard_f4s
-  * Lifecycle: (On-Demand, Savings Plans, Reserved Instances, and spots).
+  * Lifecycle: (regular, Savings Plans, Reserved Instances, and spots).
   * Scale-Down Timestamp, for example, 06/25/2023 09:23:15
  
 <details>
@@ -89,7 +89,7 @@ This panel contains a set of widgets that display categorized information on you
 
 * Ocean-Managed Nodes: a widget that shows the following:
   * Pie-chart - numerical breakdown for managed/unmanaged nodes. Hover over the chart to view more information.
-  * List of % and # of Spot. regular (on-demand) and unmanaged nodes.
+  * List of % and # of Spot. regular (regular) and unmanaged nodes.
 * Ocean Managed Resources: a widget showing your managed resources.
   * CPU - Total # units, #, and % for managed spot nodes / regular nodes.
 
@@ -125,7 +125,19 @@ To view more details:
 
 
 <!--! new-->
+## Autoscaling Activity Panel 
 
+![autoscaling-panel-14-08](https://github.com/user-attachments/assets/6db596fa-2705-4af4-96c0-060cfaefd6cb)
+
+The Autoscaling Activity panel contains the following widgets:  
+
+*   Scale Up widget. 
+*   Set of Continuous Optimization widgets.
+*   Autoscaler graph.
+
+### Scale Up 
+
+This widget displays scaling-up events, which are instances when the Ocean Autoscaler increases the resources (CPU, memory, storage) in your cluster to accommodate higher workloads. A scale-up event is triggered when there are 'unschedulable' pods, i.e., pods that cannot be placed due to insufficient resources like CPU, memory, or GPU on the existing nodes. In response, Ocean Autoscaler identifies the optimal nodes to place these pods and increases the resources accordingly. This process ensures efficient resource allocation, improved performance, and shorter processing times. 
 
 Scaling down nodes refers to reducing the resources (such as CPU, memory, GPU) of individual nodes in a cluster. 
 
@@ -133,7 +145,7 @@ Ocean Autoscaler scales down nodes when the cluster is over-provisioned and does
 
 For more information, see [Scale Down](https://docs.spot.io/ocean/features/scaling-kubernetes?id=scale-down). 
 
-The Scale Down widget shows the number of scale-down events and the number of scaled-down nodes in the selected time range. By monitoring these events on the Autoscaling Activity panel, you can track how your cluster optimizes resources and reduces costs. 
+The Scale Down widget shows the number of scale-down events and scaled-down nodes in the selected time range. By monitoring these events on the Autoscaling Activity panel, you can track how your cluster optimizes resources and reduces costs. 
 
 #### Revert to Spots
 
@@ -161,12 +173,6 @@ The Revert to Lower Cost widget shows the number of events for which a node was 
 
 Tracking these events on the Autoscaling Activity panel lets you see when and how often your cluster is optimizing for cost savings. 
 
-#### Autohealing
-
-Auto Healing monitors the status of each Kubernetes node by examining the condition object, which provides information about various aspects of the node. Specifically, Autohealing focuses on the Ready condition. If the Ready condition indicates a status of False or Unknown, the instance is deemed unhealthy, prompting the initiation of a replacement process. 
-
-The Autohealing widget shows the number of events for which AWS autohealing replaced an unhealthy instance with a healthy instance. By monitoring these autohealing events on the Autoscaling Activity panel, you can track how effectively Ocean Autoscaler maintains your cluster's health and resilience to failures. 
-
 ###   Autoscaling Activity Graph
 
 The Autoscaling Activity Graph provides intuitive insights into the interaction between the Ocean infrastructure and the applications it supports. It also provides cluster activity insights at a granular 
@@ -182,7 +188,7 @@ These are the curves:
 
 *  Lifecycle Types:
    * Spot.
-   * On-demand.
+   * Regular.
    * Reserved.
    * Savings Plans.
 
