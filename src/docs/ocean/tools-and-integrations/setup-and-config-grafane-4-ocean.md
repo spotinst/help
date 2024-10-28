@@ -8,11 +8,11 @@ Before you begin, make sure you have all of the following prerequisites:
 * [Ocean controller](https://docs.spot.io/ocean/tutorials/ocean-controller-v2/): Manages scaling the Kubernetes data plane.
 * [Ocean network client](https://docs.spot.io/ocean/tutorials/install-network-client-v2): Handles network cost analysis in an Ocean-managed cluster.
 * [Ocean metrics exporter](https://docs.spot.io/ocean/tools-and-integrations/prometheus/scrape?id=install-the-exporter): Exposes Ocean-specific metrics to Prometheus.
-* kube-state-metrics service.
+* kube-state-metrics service: A listening service that generates metrics about the state of Kubernetes objects by leveraging the Kubernetes API.
 
 ## Configure Prometheus
 
-1. Configure Prometheus to scrape Ocean metrics by adding the Ocean Metric Exporter as a scrape target.
+1. [Configure Prometheus](https://docs.spot.io/ocean/tools-and-integrations/prometheus/scrape?id=configure-prometheus) to scrape Ocean metrics by adding the Ocean Metric Exporter as a scrape target.
 2. Define necessary jobs and targets in your Prometheus configuration file to ensure metrics are accurately collected.
 3. Add Prometheus as a data source in Grafana (under New Connection) and connect with your cluster.
 
@@ -30,12 +30,13 @@ Before you begin, make sure you have all of the following prerequisites:
 5. Select the **Prometheus** datasource.
 6. Click **Import**. 
 
-The following set of dashboards will now be available in Grafana:
+The following set of [dashboards](https://docs.spot.io/ocean/tools-and-integrations/grafana-dashboard) is available in Grafana:
 
 * Current Status (displayed by default).
-* Scaling.
 * Cost and Usage.
-* Right Sizing
+* Network Metrics.
+* Scaling Overview.
+* Right Sizing.
 
 
 
