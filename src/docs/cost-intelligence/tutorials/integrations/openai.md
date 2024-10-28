@@ -2,7 +2,7 @@
 
 Use OpenAI integration to collect billable and usage metrics for your organization.
 
-## Configure MongoDB Atlas in Cost Intelligence
+## Configure OpenAI in Cost Intelligence
 
 1. In OpenAI, get the [OpenAI API key](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key).
 2. In the Spot Console, go to **Cost Intelligence** > **Administration**.
