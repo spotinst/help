@@ -123,6 +123,13 @@ To view more details:
 
  </details>
 
+
+<!--! new-->
+
+
+
+ 
+
 ## Related Topics
 
 [Scaling - Kubernetes](https://docs.spot.io/ocean/features/scaling-kubernetes)
