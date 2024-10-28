@@ -149,9 +149,7 @@ For more information, see [Scale Up](https://docs.spot.io/ocean/features/scaling
 
 Ocean Autoscaler performs several automatic processes to optimize cluster resources.  
 
-
-
-
+#### Scale Down
 
 Scaling down nodes refers to reducing the resources (such as CPU, memory, GPU) of individual nodes in a cluster. 
 
@@ -167,9 +165,11 @@ Suppose a node was launched as OD due to the unavailability of spot nodes in the
 
 The Revert to Spots widget shows the number of events for which a regular node was reverted to a spot node in the selected time range. 
 
-By monitoring these events on the Autoscaling Activity panel, you can see when and how often your cluster utilizes spot nodes to take advantage of cost-saving opportunities. 
+By monitoring these events on the Autoscaling Activity panel, you can see when and how often your cluster utilizes spot nodes to exploit cost-saving opportunities. 
 
 #### Revert to Commitments
+
+Coming soon (not available at the time of writing).
 
 If a node was launched as a spot due to the absence of available commitments (Reserved Instances or Savings Plans) to utilize, Ocean persistently scans the market for an available commitment and promptly reverts upon finding one. 
 
@@ -180,6 +180,8 @@ By monitoring these events on the Autoscaling Activity panel, you can understand
 For more information, see [Reserved Instances](https://docs.spot.io/ocean/tips-and-best-practices/?id=utilize-reserved-instances-for-aws-users). 
 
 #### Revert to Lower Cost
+
+Coming soon (not available at the time of writing).
 
 Ocean Autoscaler searches for nodes with underutilized compute resources that cannot be scaled down from the cluster's set of nodes and reverts these nodes to lower-cost nodes. 
 
