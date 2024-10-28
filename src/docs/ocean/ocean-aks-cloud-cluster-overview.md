@@ -151,13 +151,13 @@ The Scale Down widget shows the number of scale-down events and scaled-down node
 
 Suppose a node was launched as OD due to the unavailability of spot nodes in the market. In that case, Ocean continuously scans the market for an available spot node and reverts promptly upon finding one. 
 
-The Revert to Spots widget shows the number of events for which an OD node was reverted to a spot node in the selected time range. 
+The Revert to Spots widget shows the number of events for which a regular node was reverted to a spot node in the selected time range. 
 
-By monitoring these events on the Autoscaling Activity panel, you can see when and how often your cluster takes advantage of cost-saving opportunities by utilizing Spot nodes. 
+By monitoring these events on the Autoscaling Activity panel, you can see when and how often your cluster utilizes spot nodes to take advantage of cost-saving opportunities. 
 
 #### Revert to Commitments
 
-If a node was launched as spot due to the absence of available commitments (Reserved Instances or Savings Plans) to utilize, Ocean persistently scans the market for an available commitment and promptly reverts upon finding one. 
+If a node was launched as a spot due to the absence of available commitments (Reserved Instances or Savings Plans) to utilize, Ocean persistently scans the market for an available commitment and promptly reverts upon finding one. 
 
 The Revert to Commitments widget shows the number of events for which a spot node was reverted to a commitment in the selected time range.  
 
@@ -214,7 +214,7 @@ This is the information displayed:
 
 * Autoscaling events (displayed for a period of 12 hours or less):
 One or more autoscaling events are displayed in blue rectangles. These can be any Ocean autoscaling scale-up and scale-down events displayed as widgets above the graph.
-For example, Scale Up, Scale Down, or Autohealing.
+For example, Scale Up or Scale Down.
 
 For vCPU:
 
