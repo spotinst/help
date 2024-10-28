@@ -8,7 +8,7 @@ Before you begin, make sure you have all of the following prerequisites:
 * [Ocean controller](https://docs.spot.io/ocean/tutorials/ocean-controller-v2/): Manages scaling the Kubernetes data plane.
 * [Ocean network client](https://docs.spot.io/ocean/tutorials/install-network-client-v2): Handles network cost analysis in an Ocean-managed cluster.
 * [Ocean metrics exporter](https://docs.spot.io/ocean/tools-and-integrations/prometheus/scrape?id=install-the-exporter): Exposes Ocean-specific metrics to Prometheus.
-* kube-state-metrics service: A listening service that generates metrics about the state of Kubernetes objects by leveraging the Kubernetes API.
+* kube-state-metrics service: (installed with Prometheus) A listening service that generates metrics about the state of Kubernetes objects by leveraging the Kubernetes API.
 
 ## Configure Prometheus
 
