@@ -30,7 +30,7 @@ Before you begin, make sure you have all of the following prerequisites:
 4. Select the **Prometheus** datasource.
 5. Click **Import**. 
 
-The following set of [dashboards](https://docs.spot.io/ocean/tools-and-integrations/grafana-dashboard) is available in Grafana:
+The following set of Ocean [dashboards](https://docs.spot.io/ocean/tools-and-integrations/grafana-dashboard) is available in Grafana:
 
 * Current Status (displayed by default).
 * Cost and Usage.
