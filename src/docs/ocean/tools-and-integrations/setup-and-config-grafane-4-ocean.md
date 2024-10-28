@@ -27,8 +27,8 @@ Before you begin, make sure you have all of the following prerequisites:
 
 <img width = 400 alt="grafana-import-part2-dashboard" src="https://github.com/user-attachments/assets/4d95f01d-9613-46ee-94ac-73baea4823aa" />
 
-5. Select the **Prometheus** datasource.
-6. Click **Import**. 
+4. Select the **Prometheus** datasource.
+5. Click **Import**. 
 
 The following set of [dashboards](https://docs.spot.io/ocean/tools-and-integrations/grafana-dashboard) is available in Grafana:
 
