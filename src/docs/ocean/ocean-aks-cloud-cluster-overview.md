@@ -127,6 +127,125 @@ To view more details:
 <!--! new-->
 
 
+Scaling down nodes refers to reducing the resources (such as CPU, memory, GPU) of individual nodes in a cluster. 
+
+Ocean Autoscaler scales down nodes when the cluster is over-provisioned and does not utilize the full capacity of the nodes. In this case, scaling down right-sizes the resources to match the workload. In addition, if specific nodes in a cluster are consistently underutilized, Ocean Autoscaler scales down to redistribute the resources to other nodes or consolidate the workload onto fewer nodes. 
+
+For more information, see [Scale Down](https://docs.spot.io/ocean/features/scaling-kubernetes?id=scale-down). 
+
+The Scale Down widget shows the number of scale-down events and the number of scaled-down nodes in the selected time range. By monitoring these events on the Autoscaling Activity panel, you can track how your cluster optimizes resources and reduces costs. 
+
+#### Revert to Spots
+
+Suppose a node was launched as OD due to the unavailability of spot nodes in the market. In that case, Ocean continuously scans the market for an available spot node and reverts promptly upon finding one. 
+
+The Revert to Spots widget shows the number of events for which an OD node was reverted to a spot node in the selected time range. 
+
+By monitoring these events on the Autoscaling Activity panel, you can see when and how often your cluster takes advantage of cost-saving opportunities by utilizing Spot nodes. 
+
+#### Revert to Commitments
+
+If a node was launched as spot due to the absence of available commitments (Reserved Instances or Savings Plans) to utilize, Ocean persistently scans the market for an available commitment and promptly reverts upon finding one. 
+
+The Revert to Commitments widget shows the number of events for which a spot node was reverted to a commitment in the selected time range.  
+
+By monitoring these events on the Autoscaling Activity panel, you can understand how your cluster is dynamically adapting to changes in the cloud market to maintain optimal operation and taking advantage of cost-saving opportunities by utilizing commitments. 
+
+For more information, see [Reserved Instances](https://docs.spot.io/ocean/tips-and-best-practices/?id=utilize-reserved-instances-for-aws-users). 
+
+#### Revert to Lower Cost
+
+Ocean Autoscaler searches for nodes with underutilized compute resources that cannot be scaled down from the cluster's set of nodes and reverts these nodes to lower-cost nodes. 
+
+The Revert to Lower Cost widget shows the number of events for which a node was reverted to a lower-cost node in the selected time range. For more information, see [Revert to Lower Cost Node](https://docs.spot.io/ocean/features/revert-to-lower-cost-node?id=revert-to-lower-cost-node).  
+
+Tracking these events on the Autoscaling Activity panel lets you see when and how often your cluster is optimizing for cost savings. 
+
+#### Autohealing
+
+Auto Healing monitors the status of each Kubernetes node by examining the condition object, which provides information about various aspects of the node. Specifically, Autohealing focuses on the Ready condition. If the Ready condition indicates a status of False or Unknown, the instance is deemed unhealthy, prompting the initiation of a replacement process. 
+
+The Autohealing widget shows the number of events for which AWS autohealing replaced an unhealthy instance with a healthy instance. By monitoring these autohealing events on the Autoscaling Activity panel, you can track how effectively Ocean Autoscaler maintains your cluster's health and resilience to failures. 
+
+###   Autoscaling Activity Graph
+
+The Autoscaling Activity Graph provides intuitive insights into the interaction between the Ocean infrastructure and the applications it supports. It also provides cluster activity insights at a granular 
+level so you can see why the Ocean Autoscaler triggered a specific scale event within the cluster.
+
+The graph displays a breakdown by lifecycle, which you can view by vCPU, Memory, or GPU, together with workload and headroom requests.
+
+![activity-graph-screen-1](https://github.com/user-attachments/assets/9be9c4db-ea65-4bd1-a195-dd549d76770a)
+
+The upper graph displays the autoscaling activity to analyze. By default, it displays a full set of activity curves. Click an item on the legend above the graph to turn its associated curve on or off.
+
+These are the curves:
+
+*  Lifecycle Types:
+   * Spot.
+   * On-demand.
+   * Reserved.
+   * Savings Plans.
+
+*  Workload Requests: includes running pods and pending pods requests. 
+*  Workloads with Headroom: includes running pods, running Headroom pods, pending pods, and pending Headroom pods.
+
+>**Note**: The pending pods include all the pods in the Kubernetes cluster (pods that will be scheduled on Ocean nodes and those that won’t).
+
+To set the zoom level for the graph:
+
+1. On the top-right of the screen, select to zoom by 1 hour / 12 hours / 7 days.
+2. Use the lower graph to zoom in or out of the selected period by dragging the sizing handles left or right.
+>**Tip**: Set the period on the graph to 12 hours or less to view autoscaling events, which are displayed as dots on the graph.
+
+![activity-graph-screen-2](https://github.com/user-attachments/assets/0583b815-7e68-4208-9edb-049171ccb3a6)
+
+To display the autoscaling activity at a specific point on the graph:
+
+1. Mouse over the upper graph to view the main details.
+2. Click **Cluster State Details** to view more information.
+
+This is the information displayed:
+
+* Autoscaling events (displayed for a period of 12 hours or less):
+One or more autoscaling events are displayed in blue rectangles. These can be any Ocean autoscaling scale-up and scale-down events displayed as widgets above the graph.
+For example, Scale Up, Scale Down, or Autohealing.
+
+For vCPU:
+
+* Nodes Allocation (vCPU):
+  * Total node allocation. 
+  * Split according to lifecycle types.
+*  vCPU of Workload:
+    *  deamonSets Requested. 
+    *  Pods Requested.
+    *  Headroom requested.
+    *  Total workload allocation percentage (includes only running pods, running headroom pods, and running DaemonSets pods that are scheduled on Ocean nodes).
+
+For Memory: 
+
+* Nodes Allocation (GiB):
+  * Total node allocation. 
+  * Split according to lifecycle types.
+*  Workload (GiB):
+    *  deamonSets Requested. 
+    *  Pods Requested.
+    *  Headroom requested.
+    *  Total workload allocation percentage (includes only running pods, running headroom pods, and running DaemonSets pods that are scheduled on Ocean nodes).
+
+For GPU:
+
+* Nodes Allocation (GPU):
+  * Total node allocation. 
+  * Split according to lifecycle types.
+*  GPU of Workload:
+    *  deamonSets Requested. 
+    *  Pods Requested.
+    *  Headroom requested.
+    *  Total workload allocation percentage (includes only running pods, running headroom pods, and running DaemonSets pods that are scheduled on Ocean nodes).
+
+Total Allocation Calculation:
+
+* Sum of vCPU/Memory/GPU allocation - (running pods + running headroom + running DaemonSets)/nodes allocation. 
 
  
 
