@@ -4,8 +4,7 @@
 
 Before you begin, make sure you have all of the following prerequisites:
 
-* Working Grafana account.
-* Prometheus server.
+* Prometheus server and Grafana server: employed in the cluster.
 * [Ocean controller](https://docs.spot.io/ocean/tutorials/ocean-controller-v2/): Manages scaling the Kubernetes data plane.
 * [Ocean network client](https://docs.spot.io/ocean/tutorials/install-network-client-v2): Handles network cost analysis in an Ocean-managed cluster.
 * [Ocean metrics exporter](https://docs.spot.io/ocean/tools-and-integrations/prometheus/scrape?id=install-the-exporter): Exposes Ocean-specific metrics to Prometheus.
@@ -36,15 +35,7 @@ The following set of dashboards will now be available in Grafana:
 * Current Status (displayed by default).
 * Scaling.
 * Cost and Usage.
-
-See a description of these dashboards at [link to the first Grafana page].
-
-## Ocean-Grafana Version History
-
-------Maintain history here or on a separate page???--------
-
-
-
+* Right Sizing
 
 
 
