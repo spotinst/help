@@ -444,6 +444,29 @@ Ocean ensures that the cluster resources are utilized and scales down underutili
 
  </details>
 
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="pythonsdkdebug">EKS: Can I debug the Python SDK?</summary>
+   
+<div style="padding-left:16px">
+
+You can update this line in the SDK to debug:
+
+Change:
+
+`client = session.client("ocean_aws")`
+
+To:
+
+`client = session.client("ocean_aws", log_level="debug")`
+
+Then [create or update](https://github.com/spotinst/spotinst-sdk-python/blob/v2/docs/clients/ocean/ocean_aws_client.md#create_ocean_cluster) the cluster again.
+
+ 
+ </div>
+
+ </details>
+
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanlaunchspec">EKS, GKE: Why am I getting the error: <i>when default launchSpec is used as a template only, can't raise target of Ocean</i>?</summary>
 
