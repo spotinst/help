@@ -203,7 +203,6 @@ These internal logging errors occur because of a misconfiguration in the Okta SS
 
   <div style="padding-left:16px">
 
-<font color="#FC01CC">check this whole answer really well. not sure about the content</font>
    JQ is a tool that lets you extract, manipulate, and transform JSON data. You can use it extract data from an API call.
 
 You can [download JQ](https://jqlang.github.io/jq/download/) and use the [online curl command line builder](https://curlbuilder.com/). Curl lets you interact with web services, APIs, and services using command line.
@@ -1346,8 +1345,8 @@ Yes, you can increase the disk size for stateful nodes:
         "optimizationWindows": null,
    </code></pre>
 
-5. Recycle the stateful node. <font color="#FC01CC">How do you recycle?</font>
-6. Make sure the stateful node is not running on the Spot VM. <font color="#FC01CC">How do you check?</font>
+5. [Recycle the stateful node](https://docs.spot.io/managed-instance/azure/features/actions).
+6. Make sure the stateful node is not running on the Spot VM.
 7. Go to <b>Edit Node</b> and delete the node.
 
    <img width="275" alt="delete-azure-stateful1" src="https://github.com/spotinst/help/assets/167069628/2c4635fe-6ce2-40c3-aded-7170c4a93f1f">
