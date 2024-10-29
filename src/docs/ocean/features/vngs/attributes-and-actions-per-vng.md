@@ -13,7 +13,7 @@ The following sections describe several of these attributes.
 
 Cloud service provider relevance: <font color="#FC01CC">GKE</font>
 
-Ocean for GKE allows the utilization of local SSD disks, high-performance local disks that are useful with specific workloads such as those that heavily use caching. You can define SSD disks in your Ocean VNG configuration by using localSsdCount to configure the number of SSD disks to be connected to each VM in the VNG.
+Ocean for GKE allows the utilization of local SSD disks, high-performance local disks that are useful with specific workloads such as those that heavily use caching. You can define SSD disks in your Ocean VNG configuration by using localSsdCount to configure the number of SSD disks to be connected to each VM in the virtual node group.
 
 Once configured, whenever the Ocean Autoscaler scales up, Ocean will automatically connect the local SSDs to the new VM. Note that local SSDs are limited to specific machine types. Ocean will automatically filter out the incompatible machine types. For information about the API, see Local SSD in the Spot API.
 
@@ -24,11 +24,11 @@ Once configured, whenever the Ocean Autoscaler scales up, Ocean will automatical
 
 Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>
 
-You might want to distribute reservation instances/savings plans according to Virtual Node Groups for different types of workloads on the same cluster.
+You might want to distribute reservation instances/savings plans according to virtual node groups for different types of workloads on the same cluster.
 
-Ocean provides attributes that let you control utilization commitments at the Virtual Node Group level.
+Ocean provides attributes that let you control utilization commitments at the virtual node group level.
 
-In the Spot API, under Virtual Node Groups > strategy, you can configure these attributes as either True or False:
+In the Spot API, under **Virtual Node Groups > strategy**, you can configure these attributes as either True or False:
 
  * `utilizeReservedInstances`: If there are free reserved instances within the AWS account, Ocean will utilize them before launching spot instances. The initial default value is inherited from the identical attribute at the cluster level. 
 
@@ -67,14 +67,14 @@ Ocean serves such use cases with the ability to define a list of preferred insta
 
 Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>, <font color="#FC01CC">ECS</font>
 
-You can configure preferred Spot instance types at the virtual node group level for your AWS Kubernetes and ECS clusters.
+For your AWS Kubernetes and ECS clusters, you can configure preferred Spot instance types at the virtual node group level.
 
 In each scale-up action, Ocean provisions the new instances from the preferred types, using:
 
 - 100% of the new instances if three or more different preferred types are defined.
 - 0-80% of the new instances, when 0-2 different preferred types are defined.
 
-The remaining new instances will have non-preferred types to maintain a distribution in the VNG. For example, when scaling up 10 instances in a VNG with a R5.xlarge defined as the preferred type, Ocean tries to provision five R5.xlarge instances and five from others.
+The remaining new instances will have non-preferred types to maintain a distribution in the VNG. For example, when scaling up 10 instances in a virtual node group with a R5.xlarge defined as the preferred type, Ocean tries to provision five R5.xlarge instances and five from others.
 
 As the preferred instance type is a soft requirement, the general spot instance availability of both preferred and non-preferred types is considered before considering type preference.
 
@@ -106,7 +106,7 @@ Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>
 
 The Ocean Autoscaler (by default) calculates ephemeral storage using the root volume size when it scales up. If your system uses the data volume size for the calculation, you need to specify an alternative device name to ensure that the Ocean Autoscaler launches nodes with the right size for their workloads.
 
-When the root volume is not applicable for the ephemeral storage, specify the alternative device name `deviceName` with either the virtual node group (VNG’s) BDM or the AMI’s BDM.
+When the root volume is not applicable for the ephemeral storage, specify the alternative device name `deviceName` with either the virtual node group's BDM or the AMI’s BDM.
 
 * Via the [Spot API](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecUpdate) -  `launchSpec.ephermeralStorage.deviceName`
 * Via [Terraform](https://registry.terraform.io/providers/spotinst/spotinst/latest/docs/resources/ocean_aws_launch_spec#ephemeral_storage)
@@ -123,7 +123,7 @@ There are several Azure Networking CNI options:
 *  Azure CNI (vnet-subnet)  
 *  Azure CNI with Dynamic IP (vnet-subnet and pod-subnet).  
 
-You can add (or remove) vnet-subnets or pod-subnets in a VNG at any time. Ocean AKS will automatically assign subnets to node pools based on IP address capacity. However, a node pool with a subnet that has run out of IP address capacity will be locked for scaling. 
+You can add (or remove) vnet-subnets or pod-subnets in a virtual node group at any time. Ocean AKS will automatically assign subnets to node pools based on IP address capacity. However, a node pool with a subnet that has run out of IP address capacity will be locked for scaling. 
 You can set up multiple subnets when you create or update a virtual node group or a virtual node group template in the cloud cluster virtual node groups tab. 
 
 To access the Virtual Node Groups dashboard and configure multiple subnets: 
@@ -131,22 +131,22 @@ To access the Virtual Node Groups dashboard and configure multiple subnets:
 1. In the left main menu, click **Ocean**, and click **Cloud Clusters**.
 2. Select a cluster from the list of clusters. 
 3. Click the **Virtual Node Group** tab. 
-4. Click the Virtual Node Group you need to configure from the list.  
-   In the Virtual Node Group dashboard that opens, The Networking panel is in the middle-right of the screen.
+4. Click the virtual node group you need to configure from the list.  
+   In the virtual node group dashboard that opens, The Networking panel is in the middle right of the screen.
 
 ![ocean-network-gen](https://github.com/spotinst/help/assets/159915991/4c1c7c3f-0d23-478a-9dd5-92056dab0a44)
 
 
 5. In the Networking panel, you can update subnets for the virtual node group using the Add VNet subnets and Add Pod subnets drop-down lists, according to the AKS cluster Network Type.
 
-    *  For Kubenet, you can add one or more VNet subnets to the VNG (pod subnets are not applicable) 
-    *  For Azure CNI you can add one or more VNet subnets to the VNG (pod subnets are not applicable) 
-    *  For Azure CNI Dynamic IP, you can add one or more VNet subnets and/or pod subnets to the VNG. 
+    *  For Kubenet, you can add one or more VNet subnets to the virtual node group (pod subnets are not applicable) 
+    *  For Azure CNI you can add one or more VNet subnets to the virtual node group (pod subnets are not applicable) 
+    *  For Azure CNI Dynamic IP, you can add one or more VNet subnets and/or pod subnets to the virtual node group. 
 
 ## What to Consider when Selecting Multiple Subnets 
 
-*  If you do not select a subnet, the VNG will use the VNet and/or pod subnet assigned to the cluster. 
-*  If you select multiple subnets, the VNG will distribute the subnets across nodes/node pools and/or pods based on subnet IP address availability. 
+*  If you do not select a subnet, the virtual node group will use the VNet and/or pod subnet assigned to the cluster. 
+*  If you select multiple subnets, the virtual node group will distribute the subnets across nodes/node pools and/or pods based on subnet IP address availability. 
 *  To prevent VNet or Pod subnets from running out of capacity, you can add VNet and/or pod subnets. All subnets must be from the same VNet as the cluster. VNG Pod subnet is configurable only with Azure CNI using dynamic IP allocation. 
 *  If you did not specify the VNet subnet when you created the cluster, the VNet is managed by Azure, so you cannot edit or add a VNet and/or pod subnet. 
 
