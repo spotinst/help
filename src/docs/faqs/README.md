@@ -292,6 +292,39 @@ In the Recommendations table, you can see the exact amount of resources to chang
  </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceansnapshotid">AWS, Azure, GCP: Why am I getting a <i>snapshotId cannot be modified on the root device</i> error?</summary>
+
+  <div style="padding-left:16px">
+
+   If you get a `snapshotId cannot be modified on the root device` error:
+
+   1. In the Spot console, go to **Ocean** > **Cloud Clusters**, and select the cluster.
+   2. On the Virtual Nodes Groups tab, select the virtual node group.
+   3. Click **JSON**.
+   4. In the blockDeviceMappings, update the snapshotID or remove it:
+
+      <code>"blockDeviceMappings": [
+      {
+        "deviceName": "/dev/xvda",
+        "ebs": {
+          "deleteOnTerminaspoton": true,
+          "encrypted": false,
+          "iops": 3000,
+          "throughput": 125,
+          "snapshotId": "snap-1234",
+          "volumeSize": 100,
+          "volumeType": "GP3"
+        }
+      }
+    ],</code>
+
+   5. Click **Save**.
+
+ </div>
+
+ </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oelasticsearch">Can Elasticsearch integrate with Spot?</summary>
 
   <div style="padding-left:16px">
@@ -1046,6 +1079,53 @@ You can get this error when the group's device name (for Block Device Mapping) a
 * Group's configuration - "deviceName": "/dev/xvda"
 
 Change the device name from <code>xvda</code> to <code>/dev/xvda</code> on the group's side. Go to **Actions** > **Edit Configuration** > **Review Tab** > **Switch to Json Edit format** > **Apply the changes and save**.
+
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egscalingRIs">AWS If <i>Utilize Reserved Instances</i> is enabled, what is the scaling behavior?</summary>
+
+  <div style="padding-left:16px">
+
+By default, Elastigroup monitors the status of your account's reservations and acts accordingly at the launch time of an on-demand instance. When an on-demand instance is scaled up, if the account has an available reservation to use in the specific market (instance type + availability zone), Elastigroup will utilize it and will use the reserved instance payment method.
+
+If **Utilize Reserved Instances** is enabled, it automatically triggers constant attempts to revert the group's instances to on demand (reserved instance) if there are available reservations. It triggers a replacement for all instances, even spot, and uses your account's available reservations. The priority of launching instances in this group is:
+1. It will see if there is an option to launch an reserved instance instance
+2. If it cannot, it will launch a spot instance.
+3. If a spot instance is unavailable for any reason, an on-demand instance will be launched based on the fallback to on-demand configuration.
+
+ </div>
+ 
+ </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egimportvm">Azure: Why am I getting a <i>Failed to import virtual machine</i> or <i>The create/import has failed</i> message?</summary>
+
+  <div style="padding-left:16px">
+
+  You may get one of these error messages when you're trying to import VMs to Elastigroup:
+  * <code>Failed to import virtual machine. Could not retrieve custom image.</code>
+  * <code>The create/import has failed. The storage account https://`<storage-account>` that was defined for the boot diagnostic preferences was not found.”</code>
+
+This can happen when the image or storage account does not exist in the Azure portal. Elastigroup validates the resources configured in the VM before importing to make sure the import process will not fail.
+
+**Failed to import virtual machine**
+One of the resources checked is the image, which is taken from the VM JSON configuration file.
+
+If you get the `Failed to import virtual machine. Could not retrieve custom image.` message, it means that Elastigroup couldn't find the custom image configured.
+ 
+Find the name of the image in the Azure console. Go to **VM details** > **JSON view** > **imageReference**.
+
+**The create/import has failed**
+The storage account `<Service account>` that was defined for the boot diagnostic preferences was not found.
+
+Before starting the import process, Elastigroup verifies that the service account configured exists in the subscription.
+
+This error means that Elastigroup didn't find a valid storage account in the subscription.
+
+Find the storage account URL in the Azure console. Go to **VM details** > **JSON view** > **diagnosticsProfile**.
 
  </div>
 
