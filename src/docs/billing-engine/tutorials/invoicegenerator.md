@@ -4,11 +4,13 @@
 
 You can create custom PDF invoices to send to customers. For example, invoices can be by provider, subaccount, family, or cost (billed, effective, list).
 
-To access the invoice generator, you must have FinOps Organization Admin, Billing Engine Admin, or Cost Intelligence Admin permissions.
+To access the invoice generator, you must have either:
+* FinOps Organization Admin permissions.
+* Billing Engine Admin and Cost Intelligence Admin permissions.
 
-You can take an out-of-the-box invoice template and customize it or create an invoice from scratch. Keep in mind that if you create a new invoice from scratch, make sure you include a filter on the date range.
-
-You should always make a copy of the out-of-the-box template rather than editing it. As you work, your changes are saved automatically.
+>**Note**: As you work, your changes are saved automatically. So, it's  recommended to always make a copy of the out-of-the-box invoice template and customize it rather than editing it. This way, you'll always have a clean copy to start from. You can also manually make a backup copy of your template to use as a starting point for new invoices.
+>
+> If you do create an invoice from scratch, make sure you include a filter on the date range.
 
 Once you’ve created an invoice, you can:
 * Download each invoice report (template) with all the invoices for that template.
