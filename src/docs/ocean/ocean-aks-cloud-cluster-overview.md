@@ -127,7 +127,7 @@ To view more details:
 <!--! new-->
 ## Autoscaling Activity Panel 
 
-<img width=1000 src="https://github.com/user-attachments/assets/23a8d22c-f556-44c6-a9cf-845305ccb619" />
+<img width=1000 height=200 src="https://github.com/user-attachments/assets/7c509207-9289-4c70-b9b9-75d1a4cb3745" />
 
 The Autoscaling Activity panel contains the following widgets:  
 
