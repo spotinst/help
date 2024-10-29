@@ -1399,52 +1399,52 @@ Yes, you can increase the disk size for stateful nodes:
 
   <div style="padding-left:16px">
 
-1. Go to the stateful node in the Spot console and click <b>Actions</b> > <b>Edit Configuration</b>.
+   1. Go to the stateful node in the Spot console and click <b>Actions</b> > <b>Edit Configuration</b>.
 
-2. Go to <b>Review</b>, switch to <b>JSON review</b>, and select <b>Edit Mode</b>.
+   2. Go to <b>Review</b>, switch to <b>JSON review</b>, and select <b>Edit Mode</b>.
 
-3. Change `revertToSpot` to <i>never</i>:
+   3. Change `revertToSpot` to <i>never</i>:
 
-   <pre><code>
-   {
-    "statefulNode": {
-      "name": "Spot Stateful Node",
-      "region": "westus2",
-      "resourceGroupName": "spotResourceGroup",
-      "description": "This is my example stateful node",
-      "strategy": {
-        "fallbackToOd": true,
-        "drainingTimeout": 120,
-        "preferredLifecycle": "od",
-        "revertToSpot": "never",
-        "optimizationWindows": null,
-   </code></pre>
+      <pre><code>
+      {
+       "statefulNode": {
+         "name": "Spot Stateful Node",
+         "region": "westus2",
+         "resourceGroupName": "spotResourceGroup",
+         "description": "This is my example stateful node",
+         "strategy": {
+           "fallbackToOd": true,
+           "drainingTimeout": 120,
+           "preferredLifecycle": "od",
+           "revertToSpot": "never",
+           "optimizationWindows": null,
+      </code></pre>
 
-4. Add the `"preferredLifecycle": "od",` parameter:
+   4. Add the `"preferredLifecycle": "od",` parameter:
    
-   <pre><code>
-   {
-    "statefulNode": {
-      "name": "Spot Stateful Node",
-      "region": "westus2",
-      "resourceGroupName": "spotResourceGroup",
-      "description": "This is my example stateful node",
-      "strategy": {
-        "fallbackToOd": true,
-        "drainingTimeout": 120,
-        "preferredLifecycle": "od",
-        "revertToSpot": "never",
-        "optimizationWindows": null,
-   </code></pre>
+      <pre><code>
+      {
+       "statefulNode": {
+         "name": "Spot Stateful Node",
+         "region": "westus2",
+         "resourceGroupName": "spotResourceGroup",
+         "description": "This is my example stateful node",
+         "strategy": {
+           "fallbackToOd": true,
+           "drainingTimeout": 120,
+           "preferredLifecycle": "od",
+           "revertToSpot": "never",
+           "optimizationWindows": null,
+      </code></pre>
 
-5. [Recycle the stateful node](https://docs.spot.io/managed-instance/azure/features/actions).
-6. Make sure the stateful node is not running on the Spot VM.
-7. Go to <b>Edit Node</b> and delete the node.
+   5. [Recycle the stateful node](https://docs.spot.io/managed-instance/azure/features/actions).
+   6. Make sure the stateful node is not running on the Spot VM.
+   7. Go to <b>Edit Node</b> and delete the node.
 
-   <img width="275" alt="delete-azure-stateful1" src="https://github.com/spotinst/help/assets/167069628/2c4635fe-6ce2-40c3-aded-7170c4a93f1f">
+      <img width="275" alt="delete-azure-stateful1" src="https://github.com/spotinst/help/assets/167069628/2c4635fe-6ce2-40c3-aded-7170c4a93f1f">
    
-8. In the Delete Stateful Node window, make sure to deselect all the options because you need the VM to run on the Azure side.
-9. Verify that the VM with the resources is running in Azure.
+   8. In the Delete Stateful Node window, make sure to deselect all the options because you need the VM to run on the Azure side.
+   9. Verify that the VM with the resources is running in Azure.
 
  </div>
 
