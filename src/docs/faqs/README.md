@@ -35,24 +35,6 @@ Supported products: Ocean, Elastigroup.
 
  </details>
 
- <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="pagerdutynotifications">Can I set up PagerDuty alerts from Spot?</summary>
-
-  <div style="padding-left:16px">
-
-   You can set up PagerDuty alerts in Spot:
-
-   1. Set up [PagerDuty email integration](https://support.pagerduty.com/docs/email-integration-guide).
-   2. In the Spot console, click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png">  > **Settings**.
-   3. Click **Notification Center** > **Event Policies**.
-   4. Click on the name of the event policy to add the integration.
-   5. Go to **Users & Integrations** > **Add Integration**.
-   6. Select **External Email** and enter the PagerDuty email address. This allows Spot to send notifications to external email addresses. Any email sent to the PagerDuty email address will trigger a PagerDuty alert.
-
- </div>
-
- </details>
-
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="genodresp">AWS: Why is my on-demand instance utilized as a reserved instance/savings plan?</summary>
 
@@ -198,6 +180,24 @@ These internal logging errors occur because of a misconfiguration in the Okta SS
 
  </details>
 
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="pagerdutynotifications">Can I set up PagerDuty alerts from Spot?</summary>
+
+  <div style="padding-left:16px">
+
+   You can set up PagerDuty alerts in Spot:
+
+   1. Set up [PagerDuty email integration](https://support.pagerduty.com/docs/email-integration-guide).
+   2. In the Spot console, click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png">  > **Settings**.
+   3. Click **Notification Center** > **Event Policies**.
+   4. Click on the name of the event policy to add the integration.
+   5. Go to **Users & Integrations** > **Add Integration**.
+   6. Select **External Email** and enter the PagerDuty email address. This allows Spot to send notifications to external email addresses. Any email sent to the PagerDuty email address will trigger a PagerDuty alert.
+
+ </div>
+
+ </details>
+ 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="jq">Can I use JQ to extract data from an API call?</summary>
 
