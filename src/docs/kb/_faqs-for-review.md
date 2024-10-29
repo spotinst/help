@@ -252,43 +252,7 @@ The automatic headroom and the headroom per VNG are calculated independently. Th
  </div>
 
  </details>
-  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceansnapshotid">Why am I getting a <i>snapshotId cannot be modified on the root device</i> error?</summary>
 
-  <div style="padding-left:16px">
-
-   If you get a `snapshotId cannot be modified on the root device` error:
-
-   1. In the Spot console, go to **Ocean** > **Cloud Clusters**, and select the cluster.
-   2. On the Virtual Nodes Groups tab, select the virtual node group.<font color="#FC01CC">I don't see the blockDeviceMappings when I edit a cluster, only for vng</font>
-   3. Click **JSON**.
-   4. In the blockDeviceMappings, update the snapshotID or remove it:
-
-      <code>"blockDeviceMappings": [
-      {
-        "deviceName": "/dev/xvda",
-        "ebs": {
-          "deleteOnTerminaspoton": true,
-          "encrypted": false,
-          "iops": 3000,
-          "throughput": 125,
-          "snapshotId": "snap-1234",
-          "volumeSize": 100,
-          "volumeType": "GP3"
-        }
-      }
-    ],</code>
-
-   5. Click **Save**.
-
-<font color="#FC01CC">cluster:
-   1. In the Spot console, go to **Ocean** > **Cloud Clusters**, and select the cluster or virtual node group.</font><font color="#purple">I don't see the blockDeviceMappings when I edit a cluster, only for vng</font>
-   <font color="#FC01CC">2. Click **Actions** > **Edit**.
-   3. On the Review tab, click **JSON** > **Edit Mode**.</font> 
-   
- </div>
-
- </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceank8sreadiness">Why am I getting an <i>exit code 137</i> error?</summary>
@@ -561,67 +525,7 @@ The next steps are intuitive and should be configured according to the customer'
 
  </details>
 
- <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egscalingRIs">If <i>Utilize Reserved Instances</i> is enabled, what is the scaling behavior?</summary>
 
-  <div style="padding-left:16px">
-
-By default, Elastigroup monitors the status of your account's reservations and acts accordingly at the launch time of an on-demand instance. When an on-demand instance is scaled up, if the account has an available reservation to use in the specific market (instance type + availability zone), Elastigroup will utilize it and will use the reserved instance payment method.
-
-If **Utilize Reserved Instances** is enabled, it automatically triggers constant attempts to revert the group's instances to on demand (reserved instance) if there are available reservations. It triggers a replacement for all instances, even spot, and uses your account's available reservations. The priority of launching instances in this group is:
-1. It will see if there is an option to launch an reserved instance instance
-2. If it cannot, it will launch a spot instance.
-3. If a spot instance is unavailable for any reason, an on-demand instance will be launched based on the fallback to on-demand configuration.
-
- </div>
- 
- </details>
-
- <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egimportvm">Why am I getting a <i>Failed to import virtual machine</i> or <i>The create/import has failed</i> message?</summary>
-
-  <div style="padding-left:16px">
-
-  You may get one of these error messages when you're trying to import VMs to Elastigroup:
-  * <code>Failed to import virtual machine. Could not retrieve custom image.</code>
-  * <code>The create/import has failed. The storage account https://`<storage-account>` that was defined for the boot diagnostic preferences was not found.”</code>
-
-This can happen when the image or storage account does not exist in the Azure portal. Elastigroup validates the resources configured in the VM before importing to make sure the import process will not fail.
-
-**Failed to import virtual machine**
-One of the resources checked is the image, which is taken from the VM JSON configuration file.
-
-If you get the `Failed to import virtual machine. Could not retrieve custom image.` message, it means that Elastigroup couldn't find the custom image configured.
- 
-Find the name of the image in the Azure console. Go to **VM details** > **JSON view** > **imageReference**. Verify that this image also exists in ______________?
-
-<font color="#FC01CC">this is from the original kb article:
-For example - we could see that the machine was configured with the image in the following URL:
-/subscriptions/390bd210-33e0-4b8f-b7d6-764938e92b79/resourceGroups/MavericksTechLab_RG/providers/Microsoft.Compute/images/MavericksTechLab-IMG
-When we checked the Azure portal, we could not find this image.
-
-............where's the URL from? Spot or Azure? I don't understand where they look to compare the values....
-</font>
-
-**The create/import has failed**
-The storage account `<Service account>` that was defined for the boot diagnostic preferences was not found.
-
-Before starting the import process, Elastigroup verifies that the service account configured exists in the subscription.
-
-This error means that Elastigroup didn't find a valid storage account in the subscription.
-
-Find the storage account URL in the Azure console. Go to **VM details** > **JSON view** > **diagnosticsProfile**. Verify that this URL is also in ______________?
-
-<font color="#FC01CC">this is from the original kb article:
-You can verify it on your end as well by checking if the URL of the storage account is valid -
-You can find the URL by navigating to Azure console --> VM details --> JSON view  --> diagnosticsProfile.
-
-............how do they verify it on their end? Spot or Azure? I don't understand where they look to compare the values....
-</font>
-
- </div>
-
- </details>
 
 <!----------------------------------elastigroup stateful node---------------------------------->
 
