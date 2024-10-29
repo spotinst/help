@@ -166,4 +166,3 @@ az aks update -g <ResourceGroup> -n <ClusterName>
 * [Virtual Node Groups](https://docs.spot.io/ocean/features/vngs/)
 * [Manage AWS Virtual Node Groups](https://docs.spot.io/ocean/tutorials/manage-virtual-node-groups)
 * [Manage AKS Virtual Node Groups](https://docs.spot.io/ocean/tutorials/manage-virtual-nd-groups-aks)
-* [Spot API-Create Virtual Node Group](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecCreate)
