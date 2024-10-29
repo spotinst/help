@@ -47,8 +47,6 @@ Keep in mind, workflows can be up to 64 KB.
 
    The content in a workflow is saved as a JSON. Workflows can be up to 64 KB, which can be around 70 steps. The number of steps depends on the types of nodes included.
 
-The node’s input (JSON file) is included in the overall workflow file size.
-
 Once you reach the 64 KB file size, you won’t be able to save the workflow. Try to simplify your workflow using loops, or dividing it into multiple workflows. For example, you can divide your workflow into sections (logical units) and have them send results to your server using HTTP send request. You can then trigger the next workflow using a generic webhook trigger.
 
  </details>
