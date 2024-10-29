@@ -26,6 +26,7 @@
       - [MongoDB Atlas](cost-intelligence/tutorials/integrations/mongodb)
       - [New Relic](cost-intelligence/tutorials/integrations/new-relic)
       - [Ocean Insights](cost-intelligence/tutorials/integrations/ocean-insights)
+      - [OpenAI](cost-intelligence/tutorials/integrations/openai)
       - [Snowflake](cost-intelligence/tutorials/integrations/snowflake)
       - [Splunk](cost-intelligence/tutorials/integrations/splunk)
     - [Administration](cost-intelligence/tutorials/administration/)
