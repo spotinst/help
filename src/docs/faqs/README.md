@@ -1152,18 +1152,6 @@ Find the storage account URL in the Azure console. Go to **VM details** > **JSON
 
  </details>
 
- <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egbeanstalkvariables">Integration: Is maintenance mode needed when I add Beanstalk environment variables?</summary>
-
-  <div style="padding-left:16px">
-
-Beanstalk [environment variables](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/environments-cfg-softwaresettings.html) are part of the application managed on the Beanstalk side, independently from the Elastigroup. Variables are automatically picked by instances that Spotinst launches into the environment.
-
-Add variables in the [Elastic Beanstalk console](https://console.aws.amazon.com/elasticbeanstalk). Go to **Beanstalk configuration** > **software settings**. Maintenance mode is not required as this change does not affect the infrastructure.
-
- </div>
- 
- </details>
  
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="spotinstagentlogs">Integration: Can I disable Spotinst Agent logging?</summary>
@@ -1201,6 +1189,30 @@ You can prevent an immediate termination of a specific spot instance that acted 
 <i>Idle minutes before termination</i> defines how long the Spot plugin should wait before terminating an idle instance.
 
 Increase the <i>Idle minutes before termination</i> in the [Spot Jenkins plugin](https://docs.spot.io/tools-and-provisioning/ci-cd/jenkins).
+
+ </div>
+
+ </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egbeanstalkgrouperror">Integration: Why am I getting a <i>group is in error state</i> message when I try to delete an Elastigroup Beanstalk from the Spot console?</summary>
+
+  <div style="padding-left:16px">
+
+If you get this message when you try to delete an Elastigroup Beanstalk from the Spot console:
+
+<code>Group is in ERROR state and not in READY state, cannot delete it</code>
+
+You need to put the group in maintenance mode and detach the remaining instances, then you can delete the Elastigroup. 
+
+Keep in mind, you cannot delete a Beanstalk group if:
+* The attached Beanstalk group was deleted.
+* One of the resources was deleted, such as a security group or Elastic Beanstalk.
+
+If you get an error, you can force delete the group by deselecting **Rollback beanstalk configuration**.
+  
+If you need to attach a Beanstalk environment, you can manually [rebuild your Beanstalk environment](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/environment-management-rebuild.html).
+
 
  </div>
 
