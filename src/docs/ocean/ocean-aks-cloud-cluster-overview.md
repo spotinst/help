@@ -127,10 +127,7 @@ To view more details:
 <!--! new-->
 ## Autoscaling Activity Panel 
 
-![aks-autoscaler-widgets](https://github.com/user-attachments/assets/23a8d22c-f556-44c6-a9cf-845305ccb619)
-
-
-![autoscaling-panel-14-08](https://github.com/user-attachments/assets/6db596fa-2705-4af4-96c0-060cfaefd6cb)
+<img width=1000 src="https://github.com/user-attachments/assets/23a8d22c-f556-44c6-a9cf-845305ccb619" />
 
 The Autoscaling Activity panel contains the following widgets:  
 
@@ -199,7 +196,7 @@ level so you can see why the Ocean Autoscaler triggered a specific scale event w
 
 The graph displays a breakdown by lifecycle, which you can view by vCPU, Memory, or GPU, together with workload and headroom requests.
 
-![activity-graph-screen-1](https://github.com/user-attachments/assets/9be9c4db-ea65-4bd1-a195-dd549d76770a)
+<img width=1000 src="https://github.com/user-attachments/assets/a125322a-9672-4ce8-b744-8ed3cee2bf9d" />
 
 The upper graph displays the autoscaling activity to analyze. By default, it displays a full set of activity curves. Click an item on the legend above the graph to turn its associated curve on or off.
 
@@ -207,8 +204,7 @@ These are the curves:
 
 *  Lifecycle Types:
    * Spot.
-   * Regular.
-   * Reserved.
+   * Regular.  
 *  Workload Requests: includes running pods and pending pods requests. 
 *  Workloads with Headroom: includes running pods, running Headroom pods, pending pods, and pending Headroom pods.
 
@@ -220,7 +216,7 @@ To set the zoom level for the graph:
 2. Use the lower graph to zoom in or out of the selected period by dragging the sizing handles left or right.
 >**Tip**: Set the period on the graph to 12 hours or less to view autoscaling events, which are displayed as dots on the graph.
 
-![activity-graph-screen-2](https://github.com/user-attachments/assets/0583b815-7e68-4208-9edb-049171ccb3a6)
+<img width=1000 src="https://github.com/user-attachments/assets/0f65c1b4-bf6d-42e1-a3f9-6b61d39f321d" />
 
 To display the autoscaling activity at a specific point on the graph:
 
