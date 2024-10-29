@@ -127,6 +127,9 @@ To view more details:
 <!--! new-->
 ## Autoscaling Activity Panel 
 
+![aks-autoscaler-widgets](https://github.com/user-attachments/assets/23a8d22c-f556-44c6-a9cf-845305ccb619)
+
+
 ![autoscaling-panel-14-08](https://github.com/user-attachments/assets/6db596fa-2705-4af4-96c0-060cfaefd6cb)
 
 The Autoscaling Activity panel contains the following widgets:  
