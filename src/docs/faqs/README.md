@@ -35,8 +35,23 @@ Supported products: Ocean, Elastigroup.
 
  </details>
 
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="pagerdutynotifications">Can I set up PagerDuty alerts from Spot?</summary>
 
-  
+  <div style="padding-left:16px">
+
+   You can set up PagerDuty alerts in Spot:
+
+   1. Set up [PagerDuty email integration](https://support.pagerduty.com/docs/email-integration-guide).
+   2. In the Spot console, click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png">  > **Settings**.
+   3. Click **Notification Center** > **Event Policies**.
+   4. Click on the name of the event policy to add the integration.
+   5. Go to **Users & Integrations** > **Add Integration**.
+   6. Select **External Email** and enter the PagerDuty email address. This allows Spot to send notifications to external email addresses. Any email sent to the PagerDuty email address will trigger a PagerDuty alert.
+
+ </div>
+
+ </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="genodresp">AWS: Why is my on-demand instance utilized as a reserved instance/savings plan?</summary>
@@ -112,12 +127,125 @@ Generate a new client secret <i>value</i> and [update it in the API](https://doc
 
  </details>
 
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="SSO-oktaerror">SSO: Why am I getting a user provisioning error in Okta?</summary>
+
+  <div style="padding-left:16px">
+
+You cannot sign in to your Spot org due to a user provisioning error in your Okta SSO environment. For example, you're getting one of these errors:
+
+* <code>Automatic provisioning of user {name of user} to app Spotinst failed: Matching user not found.</code>
+* <code>Automatic profile push of user {name of user} to app Spotinst failed: Error while trying to push profile update for {user email}: No user returned for user {user id}</code>
+
+These internal logging errors occur because of a misconfiguration in the Okta SSO environment.
+1.	Make sure edit is set up for provisioning:
+    <ol style="list-style-type: lower-alpha;">
+    <li>Go to Okta Admin Console and click <b>Applications</b> > <b>Spotinst</b> > <b>Provisioning</b> > <b>To App</b>.</li>
+    <li>Click <b>Edit</b> and then <b>Enable</b> for <i>Create Users</i>, <i>Update User Attributes</i>, and <i>Deactivate Users</i>.</li>
+    </ol>
+ 
+2.	Check for failed tasks:
+    <ol style="list-style-type: lower-alpha;">
+    <li>Go to the Okta Admin Console and navigate to <b>Dashboard</b> > <b>Tasks</b>. Look for failed provisioning assignments under <b>Tasks</b>.</li>
+    <li>If there are failed tasks for the users who were getting errors, retry the tasks by selecting the task and then clicking <b>Retry Selected</b>b>.</li>
+    </ol>
+
+    After retrying the failed tasks, the errors should be resolved and the users should have complete access to the Spotinst app after signing in using SSO. If there are no failed tasks associated with these users or if the issue isn’t resolved, unassign them.
+   
+3.	Unassign the users from the Spotinst app in Okta. Once unassigned, reassign these specific users to the Spotinst app.
+
+ </div>
+
+ </details>
+
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="SSO-groupokta">SSO: How can I add a user to groups in an organization in Okta?</summary>
+
+  <div style="padding-left:16px">
+
+   You can add a user to one or many user groups in an [organization](/administration/sso-access-control/organization-level-sso?id=organization-and-user-group) in Okta spotinst application:
+1.	Make sure [Okta SAML 2.0 authentication](/administration/identity-providers/okta-saml-authentication) is configured with Spot.
+2.	Sign in to Okta Admin, go to **Directory** > **Profile Editor**, and select **Spotinst User**.
+3.	Click **Add Attribute** and add a custom attribute:
+    * **Data Type**: <i>string</i>
+    * **Display Name**: <i>OrgAndUserGroups</i>
+    * **Variable Name**: <i>OrgAndUserGroups</i>
+
+4. Click **Save**.
+5. In Okta Admin, go to **Applications** > **Applications**, and select **Spotinst app**.
+6. On the Sign On tab, add this custom attribute under the **SAML 2.0 settings**:
+   * **Attribute Name**: <i>OrgAndUserGroups</i>
+   * **Name Format**: <i>Unspecified</i>
+   * **Value**: <i>appuser.OrgAndUserGroups</i>
+
+7. Generate a [new certificate](/administration/identity-providers/okta-saml-authentication) and upload it to your Spot Organization.
+8. Add users to groups:
+   <ol style="list-style-type: lower-alpha;">
+   <li>For each user in your organization who needs to be assigned to groups, go to Okta Admin <b>Directory</b> > <b>People</b>.</li>
+   <li>On the Applications tab, locate the Spotinst app and click <b>Edit</b> to add the <i>OrgAndUserGroups</i>:</li>
+      <ul>
+       <li><p>For a single user: <code>SPOTINST-{OrganizationID}:{UserGroupId}</code></p>
+        <p>For example: <code>SPOTINST-606012345678:ugr-1234</code></p>
+       </li>
+       <li><p>Multiple UserGroupIds for the same organization are separated with a comma: <code>SPOTINST-{OrganizationID}:{UserGroupId1},{UserGroupId2}</code></p>
+        <p>For example: <code>SPOTINST-606012345678:ugr-1234,ugr-5678</code></p>
+       </li>
+      </ul>
+
+
+ </div>
+
+ </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="jq">Can I use JQ to extract data from an API call?</summary>
+
+  <div style="padding-left:16px">
+
+<font color="#FC01CC">check this whole answer really well. not sure about the content</font>
+   JQ is a tool that lets you extract, manipulate, and transform JSON data. You can use it extract data from an API call.
+
+You can [download JQ](https://jqlang.github.io/jq/download/) and use the [online curl command line builder](https://curlbuilder.com/). Curl lets you interact with web services, APIs, and services using command line.
+
+For curl, use this template:
+<pre><code>curl -X GET '{URL}' \
+-H 'Authorization: Bearer {TOKEN}' \
+-H 'Content-Type: application/json'</code></pre>
+
+For example:
+* Get the value of the maximum number of instances set in an Elastigroup using CLI
+
+    * Use this API:
+      https://docs.spot.io/api/#tag/Elastigroup-AWS/operation/elastigroupAwsListElastigroup
+  
+    * Enter this in JQ:  
+      <pre><code>curl -X GET 'https://api.spotinst.io/aws/ec2/group/{groupID}' \
+      -H 'Authorization: Bearer {token}' \
+      -H 'Content-Type: application/json' | jq '.response.items[0].capacity.maximum'</code></pre>  
+  
+* Get the cluster-ocean id by cluster name
+
+    * Use this API:
+      https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterList
+
+    * Enter this in JQ:  
+      <pre><code>curl –X GET 'https://api.spotinst.io/ocean/aws/k8s/cluster?accountId={accountID}' \
+      -H 'Authorization: Bearer {token}' \
+      -H 'Content-Type: application/json' 
+       | jq '.response.items[] | select(.controllerClusterId | contains("{cluster-name}")) | .id'
+</code></pre>
+   
+ </div>
+ </details>
+
+ 
 <!----------------------------------ocean---------------------------------->
 
 ## Ocean
 
 <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="genodresp">AWS, Azure, GCP:  What regions does Spot support for my cloud provider?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="genodresp">AWS, Azure, GCP: What regions does Spot support for my cloud provider?</summary>
 
  <div style="padding-left:16px">
 
@@ -134,6 +262,54 @@ australia-central, australia-central-2, australia-east, australia-south-east, br
 us-east1, us-east1, us-east1, us-east4, us-east4, us-east4, us-central1, us-central1, us-central1, us-central1, us-west1, us-west1, us-west1, europe-west4, europe-west4, europe-west4, europe-west1, europe-west1, europe-west1, europe-west3, europe-west3, europe-west3, europe-west2, europe-west2, europe-west2, asia-east1, asia-east1, asia-east1, asia-southeast1, asia-southeast1, asia-southeast1, asia-northeast1, asia-northeast1, asia-northeast1, asia-south1, asia-south1, asia-south1, australia-southeast1, australia-southeast1, australia-southeast1, southamerica-east1, southamerica-east1, southamerica-east1, asia-east2, asia-east2, asia-east2, asia-northeast2, asia-northeast2, asia-northeast2, europe-north1, europe-north1, europe-north1, europe-west6, europe-west6, europe-west6, northamerica-northeast1, northamerica-northeast1, northamerica-northeast1, us-west2, us-west2, us-west2.
 
 </div>
+
+ </details>
+
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanallocationutilization">AWS, Azure, GCP: What's the difference between allocation and utilization for Ocean right sizing?</summary>
+
+  <div style="padding-left:16px">
+
+Estimating the proper amount of CPU and memory when assigning resource requests to workloads is a challenge that teams face when designing Kubernetes or ECS clusters. To address this challenge and create even more resource-efficient clusters, Ocean has implemented a right-sizing recommendation mechanism.
+
+Right-sizing recommendations are provided per container and summarized for the entire workload for easy presentation at a high level. Recommendations per container enable you to easily understand exactly which applications require changes in resource requests and implement those changes quickly.
+
+Applying the changes suggested by those notifications helps utilize resources in the cluster in a more precise manner and lowers the chances of cluster issues resulting from under- or over-utilization of resources.
+
+Sometimes, there’s a difference between the number of resources in use in the Spot console and AWS.
+
+Ocean performs scaling according to allocation. There are times when a pod’s request fully utilizes the number of resources allocated. Ocean’s scaling takes this into consideration. This is why a discrepancy may occur. The workload can use fewer resources than the number of resources that were initially allocated or requested.
+
+Ocean’s solution to this mismatch is a feature called [Right Sizing](/ocean/features/right-sizing). The Right Sizing tab shows the discrepancy between the number of resources allocated (Requested) and the number of resources that are currently utilized (Recommended). This can help you make changes to your current resource utilization.
+
+![oceanrightsizing1](https://github.com/user-attachments/assets/499116be-1d13-45bf-9ca4-fc57d4b3bd3a)
+
+In the Recommendations table, you can see the exact amount of resources to change from the pod’s request.
+
+![oceanrightsizing2](https://github.com/user-attachments/assets/89944cd8-124f-4d2e-b509-104a92077a7c)
+
+ </div>
+ 
+ </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oelasticsearch">Can Elasticsearch integrate with Spot?</summary>
+
+  <div style="padding-left:16px">
+
+   You can stream Elastigroup logs to an AWS S3 bucket. Then, you can configure Elasticsearch and Kibana to collect logs from the S3 bucket:
+   * [Ocean](/ocean/features/log-integration-with-s3)
+   * [Elastigroup](https://docs.spot.io/api/#tag/Elastigroup-AWS/operation/elastigroupAwsCreate) add this code to the JSON:
+     <pre><code> "logging": {
+       "export": {
+         "s3": {
+           "id": "di-123"
+         }
+       }
+     }
+   </pre></code>
+
+ </div>
 
  </details>
   
@@ -875,6 +1051,40 @@ Change the device name from <code>xvda</code> to <code>/dev/xvda</code> on the g
  </div>
 
  </details>
+
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egelasticsearch">Integration: Can Elasticsearch integrate with Spot?</summary>
+
+  <div style="padding-left:16px">
+
+   You can stream Elastigroup logs to an AWS S3 bucket. Then, you can configure Elasticsearch and Kibana to collect logs from the S3 bucket:
+   * [Ocean](/ocean/features/log-integration-with-s3)
+   * [Elastigroup](https://docs.spot.io/api/#tag/Elastigroup-AWS/operation/elastigroupAwsCreate) add this code to the JSON:
+     <pre><code> "logging": {
+       "export": {
+         "s3": {
+           "id": "di-123"
+         }
+       }
+     }
+   </pre></code>
+
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egbeanstalkvariables">Integration: Is maintenance mode needed when I add Beanstalk environment variables?</summary>
+
+  <div style="padding-left:16px">
+
+Beanstalk [environment variables](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/environments-cfg-softwaresettings.html) are part of the application managed on the Beanstalk side, independently from the Elastigroup. Variables are automatically picked by instances that Spotinst launches into the environment.
+
+Add variables in the [Elastic Beanstalk console](https://console.aws.amazon.com/elasticbeanstalk). Go to **Beanstalk configuration** > **software settings**. Maintenance mode is not required as this change does not affect the infrastructure.
+
+ </div>
+ 
+ </details>
  
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="spotinstagentlogs">Integration: Can I disable Spotinst Agent logging?</summary>
@@ -1088,6 +1298,62 @@ Yes, you can increase the disk size for stateful nodes:
 3. Click **Custom Disk Size**, update the disk size, and save the changes.
 4. [Change the Performance Tier](https://learn.microsoft.com/en-us/azure/virtual-machines/disks-performance-tiers-portal#change-performance-tier).
 5. Resume the stateful node in the Spot console.
+
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="azurestatefulnode">Azure: Can I delete an Azure stateful node and manage it in the Azure console?</summary>
+
+  <div style="padding-left:16px">
+
+1. Go to the stateful node in the Spot console and click <b>Actions</b> > <b>Edit Configuration</b>.
+
+2. Go to <b>Review</b>, switch to <b>JSON review</b>, and select <b>Edit Mode</b>.
+
+3. Change `revertToSpot` to <i>never</i>:
+
+   <pre><code>
+   {
+    "statefulNode": {
+      "name": "Spot Stateful Node",
+      "region": "westus2",
+      "resourceGroupName": "spotResourceGroup",
+      "description": "This is my example stateful node",
+      "strategy": {
+        "fallbackToOd": true,
+        "drainingTimeout": 120,
+        "preferredLifecycle": "od",
+        "revertToSpot": "never",
+        "optimizationWindows": null,
+   </code></pre>
+
+4. Add the `"preferredLifecycle": "od",` parameter:
+   
+   <pre><code>
+   {
+    "statefulNode": {
+      "name": "Spot Stateful Node",
+      "region": "westus2",
+      "resourceGroupName": "spotResourceGroup",
+      "description": "This is my example stateful node",
+      "strategy": {
+        "fallbackToOd": true,
+        "drainingTimeout": 120,
+        "preferredLifecycle": "od",
+        "revertToSpot": "never",
+        "optimizationWindows": null,
+   </code></pre>
+
+5. Recycle the stateful node. <font color="#FC01CC">How do you recycle?</font>
+6. Make sure the stateful node is not running on the Spot VM. <font color="#FC01CC">How do you check?</font>
+7. Go to <b>Edit Node</b> and delete the node.
+
+   <img width="275" alt="delete-azure-stateful1" src="https://github.com/spotinst/help/assets/167069628/2c4635fe-6ce2-40c3-aded-7170c4a93f1f">
+   
+8. In the Delete Stateful Node window, make sure to deselect all the options because you need the VM to run on the Azure side.
+9. Verify that the VM with the resources is running in Azure.
 
  </div>
 
