@@ -127,22 +127,9 @@ The parameter <i>spotPercentage</i> cannot be used for both a cluster and one of
 
  </details>
 
- <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanssar">Should I get frequent <i>SelfSubjectAccessReview</i> requests after upgrading to Ocean Controller Version 2?</summary>
-
-  <div style="padding-left:16px">
-
-
-After you upgrade to Ocean Controller Version 2, you may get many SIEM alerts due to <i>SelfSubjectAccessReview</i> requests to your API server. This is expected behavior.
-
-With the Version 2 Ocean Controller, Spot gets reports for any custom resource you gave it access to through the controller cluster role. For example, an Argo Rollouts custom resource or a VerticalPodAutoscaler for rightsizing. These require Spot to list the custom resources in the cluster and make sure there's read access. This happens when the  controller starts up and on a regular basis when it's running.
-
- </div>
-
- </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanunregcontainer">Why are my container instances unregistered?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanunregcontainer">ECS: Why are my container instances unregistered?</summary>
 
   <div style="padding-left:16px">
 
@@ -240,7 +227,7 @@ minSize: 1</code>
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanunauthorized">Why am I getting a <i>You must be logged in to the server (unauthorized)</i> error when creating an EKS cluster?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanunauthorized">EKS: Why am I getting a <i>You must be logged in to the server (unauthorized)</i> error when creating an EKS cluster?</summary>
 
   <div style="padding-left:16px">
 
@@ -257,7 +244,7 @@ minSize: 1</code>
 
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceank8sreadiness">Why am I getting an <i>exit code 137</i> error?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceank8sreadiness">AKS, EKS, GKE: Why am I getting an <i>exit code 137</i> error?</summary>
 
   <div style="padding-left:16px">
 
@@ -300,7 +287,7 @@ By freeing up space, the pod can be placed on its attached node and can use the 
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanmaxpods">I got a <i>Maximum Pods configuration reached</i> message, how do I troubleshoot?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanmaxpods">EKS: I got a <i>Maximum Pods configuration reached</i> message, how do I troubleshoot?</summary>
 
   <div style="padding-left:16px">
 
@@ -335,7 +322,7 @@ Essentially, if the load increases on your cluster, then Kubernetes will create 
 
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceancost">Why is the cost analysis in the Ocean dashboard unusually high for yesterday?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceancost">AKS, ECS, EKS, GKE: Why is the cost analysis in the Ocean dashboard unusually high for yesterday?</summary>
 
   <div style="padding-left:16px">
 
@@ -358,7 +345,7 @@ Initially, the costs are compared with the on demand value of the instance types
 
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceancooldowneval">What's the difference between cooldown period and evaluation period?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceancooldowneval">EKS, GKE: What's the difference between cooldown period and evaluation period?</summary>
 
   <div style="padding-left:16px">
 
@@ -423,7 +410,7 @@ This can happen if your virtual node group was deleted in Terraform. When you de
 
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanhelm">Can I manage my Kubernetes cluster deployment using Helm charts?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanhelm">AKS, EKS, GKE: Can I manage my Kubernetes cluster deployment using Helm charts?</summary>
 
   <div style="padding-left:16px">
 
@@ -469,7 +456,7 @@ An on-demand instance may not start, for example, if it hits an AWS instance typ
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egmemoryscalepolicy">How can I set a memory-based scaling policy in Elastigroup?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egmemoryscalepolicy">AWS: How can I set a memory-based scaling policy in Elastigroup?</summary>
 
   <div style="padding-left:16px">
 
