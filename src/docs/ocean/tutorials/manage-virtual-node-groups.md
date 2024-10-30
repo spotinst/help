@@ -112,11 +112,11 @@ This section describes selecting instance types and sizes in your cluster per vi
   * Manual Selection: You can manually define a list of instance types from which Ocean can scale. See [Configure Instance Types Manually]()
   * Advanced Selection: Use multiple filters to optimize instance types and sizes based on your application needs (supports all families available on the [Amazon link]() cloud). See [Configure Instance Types Using Advanced Filters](). 
 
-![instance-types](https://github.com/user-attachments/assets/5cd0bbb7-af8e-40ae-ba40-3b671de497bd)
+<img width="800" src="https://github.com/user-attachments/assets/5cd0bbb7-af8e-40ae-ba40-3b671de497bd" />
 
 ### Configure Instance Types Manually
 
-![aws-instance-panel-man-selection](https://github.com/user-attachments/assets/d1f79716-509a-49c3-be33-7583a05c9ecb)
+![eks-manage-vngs](https://github.com/user-attachments/assets/6fbb580b-ac79-4d11-b649-985eccc3b8f3)
 
 The instance types shown in the default virtual node group are only those supported in the cluster's region.
 
