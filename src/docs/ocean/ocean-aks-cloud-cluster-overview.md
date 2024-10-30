@@ -94,8 +94,6 @@ This panel contains a set of widgets that display categorized information on you
   * CPU - Total # units, #, and % for managed spot nodes / regular nodes.
 
 
-
-
 <!--! new-->
 ## Autoscaling Activity Panel 
 
@@ -139,6 +137,8 @@ The Revert to Spots widget shows the number of events for which a regular node w
 
 By monitoring these events on the Autoscaling Activity panel, you can see when and how often your cluster utilizes spot nodes to exploit cost-saving opportunities. 
 
+<!--!   ->
+
 #### Revert to Commitments
 
 Coming soon (not available at the time of writing).
@@ -160,6 +160,8 @@ Ocean Autoscaler searches for nodes with underutilized compute resources that ca
 The Revert to Lower Cost widget shows the number of events for which a node was reverted to a lower-cost node in the selected time range. For more information, see [Revert to Lower Cost Node](https://docs.spot.io/ocean/features/revert-to-lower-cost-node?id=revert-to-lower-cost-node).  
 
 Tracking these events on the Autoscaling Activity panel lets you see when and how often your cluster is optimizing for cost savings. 
+
+-->
 
 ###   Autoscaling Activity Graph
 
