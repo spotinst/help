@@ -116,7 +116,7 @@ This section describes selecting instance types and sizes in your cluster per vi
 
 ### Configure Instance Types Manually
 
-![eks-manage-vngs](https://github.com/user-attachments/assets/6fbb580b-ac79-4d11-b649-985eccc3b8f3)
+![eks-manage-vngs](https://github.com/user-attachments/assets/4443dc84-eb72-4a58-9855-fa597b3776a2)
 
 The instance types shown in the default virtual node group are only those supported in the cluster's region.
 
