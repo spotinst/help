@@ -496,7 +496,7 @@ You can use your own AMI and configure IMDSv2 on it. All instances launched afte
  </details>
  
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanodresp">ECS, EKS: Why is my on-demand instance utilized as a reserved instance/savings plan?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanodresp">AWS: Why is my on-demand instance utilized as a reserved instance/savings plan?</summary>
 
   <div style="padding-left:16px">
 
