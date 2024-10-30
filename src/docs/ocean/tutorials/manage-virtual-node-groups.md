@@ -53,9 +53,11 @@ When you select Import, a one-time process occurs. Import copies values from the
 
 4. Review all the virtual node group parameters (listed below) and update if necessary before saving.
 
->**Note**: Parameters left blank use values from the default virtual node group.
- 
-![create-custom-vng](https://github.com/user-attachments/assets/1dd6db4f-b7e5-40fa-a5d9-26680179a59e)
+>**Note**:
+>- Parameters left blank use values from the default virtual node group.
+>- To restore attributes to default (template) virtual node group values, click the **Restore to vng template values** for the field or list.
+
+<img width="800" src="https://github.com/user-attachments/assets/d8a0a58e-5b62-47e6-9161-edff6d600431" />
 
 ## Configuration Parameters
 
@@ -110,7 +112,7 @@ This section describes selecting instance types and sizes in your cluster per vi
 
   * Automatic: Let Ocean Autoscaler select your instance types and sizes according to your applications' needs. In this case, click **Save** to complete the procedure. 
   * Manual Selection: You can manually define a list of instance types from which Ocean can scale. See [Configure Instance Types Manually]()
-  * Advanced Selection: Use multiple filters to optimize instance types and sizes based on your application needs (supports all families available on the [Amazon link]() cloud). See [Configure Instance Types Using Advanced Filters](). 
+  * Advanced Selection: Use multiple filters to optimize instance types and sizes based on your application needs (supports all families available on the [Amazon link](https://aws.amazon.com/ec2/instance-types/) cloud). See [Configure Instance Types Using Advanced Filters](). 
 
 <img width="800" src="https://github.com/user-attachments/assets/5cd0bbb7-af8e-40ae-ba40-3b671de497bd" />
 
@@ -124,27 +126,26 @@ In other virtual node groups, Ocean automatically grays out instance types that 
 
 You can manually configure the instance types as follows:
   * Click a down arrow to see the available options and check/uncheck as required.
-  * Click **Restore to default values** (above and to the right of the instance types list) to restore the instance types in a virtual node group to their default configuration.
-    * The instance types are set to the default Ocean configuration for the default virtual node group (all types available). Ocean selects the combination of instance types that match the workload requirements.
-    * For other virtual node groups, the instance types are those available in the default virtual node group.
-
+  
 >**Note**: When you update the default virtual node group instance types, Ocean updates the Ocean cluster types because these have the same configuration.
 
 ### Configure Instance Types Using Advanced Filters
 
 Before configuring with this option, consider the following limitations:
 
-* If the VNG template/Default is set with `cluster.instanceTypes`,` filters != null` or `cluster.instanceTypes.whitelist/blacklist != null`, you cannot add filters on the custom VNG level. The **Advanced Selection** radio button is grayed with a tooltip on hover and a banner indicating the reason.
+* If the VNG template/Default is set with `cluster.instanceTypes`.`filters != null` or `cluster.instanceTypes.whitelist/blacklist != null`, you cannot add filters on the custom VNG level. The **Advanced Selection** radio button is grayed with a tooltip on hover and a banner indicating the reason.
   1. Click **set to automatic** in the banner or the tooltip. The dialog that appears reflects the current configuration of the Template/Default VNG and the recommended change.
   2. Set the instanceTypes on the template/Default VNG to null and use filters on the custom VNG or accept the settings.
 * If any custom VNG is set with `launchSpec.instanceTypesFilters!=null`, you cannot add a whitelist or filters on the template/default VNG level. The **Advanced Selection** and **Manual Selection** radio buttons are grayed, with a tooltip on hover and a banner indicating the reason.
-  1. Click **view details** in the banner or the tooltip. The dialog that appears includes all the custom VNGs set with `launchSpec.instanceTypesFilters != null`.
-  2. If you want to set filters on the template/default VNG, click the VNG name and then configure by either **Manual Selection** or **Automatic Selection**.
+  1. Click **view details** in the banner or the tooltip. The dialog that appears includes all the custom VNGs set with `launchSpec.instanceTypesFilters != null`
+ 
+ need screen here with good example
+ 
+  3. If you want to set filters on the template/default VNG, click the VNG name and then configure by either **Manual Selection** or **Automatic Selection**.
   
 ![advanced-filtering](https://github.com/user-attachments/assets/cee0e71f-cdf0-4fec-a7d3-b97589ee7627)
 
-In the instance types Selection list, view each instance type's currently selected size, vCPU, Memory (GiB), and GPU units.
-The Advanced instance types size filtering controls to the right of the instance types selection list let you filter these attributes for the instance types:
+The Advanced instance types size filtering controls to the right of the instance types selection list let you filter the following attributes:
 
 * Categories: One of the following: Accelerated_computing, Compute_optimized, General_purpose, Memory_optimized, Storage_optimized".
 * Disk Types: NVMe, EBS, SSD, HDD.
