@@ -133,15 +133,15 @@ You can manually configure the instance types as follows:
 
 Before configuring with this option, consider the following limitations:
 
-* If the VNG template/Default is set with `cluster.instanceTypes`.`filters != null` or `cluster.instanceTypes.whitelist/blacklist != null`, you cannot add filters on the custom VNG level. The **Advanced Selection** radio button is grayed with a tooltip on hover and a banner indicating the reason.
+* If the default virtual node group (template) is set with `cluster.instanceTypes`.`filters != null` or `cluster.instanceTypes.whitelist/blacklist != null`, you cannot add filters on the custom virtual node group level. The **Advanced Selection** radio button is grayed with a tooltip on hover and a banner indicating the reason.
   1. Click **set to automatic** in the banner or the tooltip. The dialog that appears reflects the current configuration of the Template/Default VNG and the recommended change.
-  2. Set the instanceTypes on the template/Default VNG to null and use filters on the custom VNG or accept the settings.
+  2. Set the instanceTypes on the template/Default VNG to null and use filters on the custom virtual node group or accept the settings.
 * If any custom VNG is set with `launchSpec.instanceTypesFilters!=null`, you cannot add a whitelist or filters on the template/default VNG level. The **Advanced Selection** and **Manual Selection** radio buttons are grayed, with a tooltip on hover and a banner indicating the reason.
   1. Click **view details** in the banner or the tooltip. The dialog that appears includes all the custom VNGs set with `launchSpec.instanceTypesFilters != null`
  
  need screen here with good example
  
-  3. If you want to set filters on the template/default VNG, click the VNG name and then configure by either **Manual Selection** or **Automatic Selection**.
+  3. If you want to set filters on the default virtual node group, click the virtual node group name and then configure by either **Manual Selection** or **Automatic Selection**.
   
 ![advanced-filtering](https://github.com/user-attachments/assets/cee0e71f-cdf0-4fec-a7d3-b97589ee7627)
 
