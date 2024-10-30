@@ -43,7 +43,3 @@ To delete a report, do the following:
 1. In the drop-down list of reports, find the report you need to delete.
 2. Click the trash can icon.
 3. Confirm the deletion and click Yes, Delete.
-
-## What’s Next?
-
-Learn how to [connect an additional account](connect-your-cloud-provider/additional-account) to Spot.
