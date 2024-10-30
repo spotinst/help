@@ -438,6 +438,28 @@ With the Version 2 Ocean Controller, Spot gets reports for any custom resource y
 
  </details>
 
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanodresp">AWS: Why is my on-demand instance utilized as a reserved instance/savings plan?</summary>
+
+  <div style="padding-left:16px">
+
+   When is an on-demand (OD) instance a reserved instance (RI), savings plan (SP), or full-priced on demand?
+   
+   When launching an on-demand instance, you cannot specifically request it to run as a reserved instance or savings plan.
+
+AWS decides according to:
+
+1.	If the market matches a free zonal reserved instance commitment, then the instance is a reserved instance.
+2.	If the market matches a free regional reserved instance commitment, then the instance is a reserved instance.
+3.	If the market matches a free EC2 instance savings plan commitment, then the instance is a savings plan.
+4.	If there is any free compute service plan commitment, then the instance is a savings plan.
+5.	Otherwise, the instance will run as a full-price on-demand instance.
+
+Throughout the lifetime of an instance, it can change its “price” whenever there’s any change in the commitments utilization rate. For example, if an instance is running as a full price on-demand instance, and another instance that was utilizing a compute savings plan commitment was terminated, the first instance will start utilizing this commitment if its hourly price rate has enough free space under this commitment. It might take a couple of minutes for this change to show, but since the billing is being calculated retroactively, in practice it’s starting to utilize the commitment right away.
+   
+ </div>
+
+ </details>
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanimds">AWS: How can I update the instance metadata (IMDS) in my cluster?</summary>
 
@@ -495,28 +517,6 @@ You can use your own AMI and configure IMDSv2 on it. All instances launched afte
 
  </details>
  
-  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanodresp">AWS: Why is my on-demand instance utilized as a reserved instance/savings plan?</summary>
-
-  <div style="padding-left:16px">
-
-   When is an on-demand (OD) instance a reserved instance (RI), savings plan (SP), or full-priced on demand?
-   
-   When launching an on-demand instance, you cannot specifically request it to run as a reserved instance or savings plan.
-
-AWS decides according to:
-
-1.	If the market matches a free zonal reserved instance commitment, then the instance is a reserved instance.
-2.	If the market matches a free regional reserved instance commitment, then the instance is a reserved instance.
-3.	If the market matches a free EC2 instance savings plan commitment, then the instance is a savings plan.
-4.	If there is any free compute service plan commitment, then the instance is a savings plan.
-5.	Otherwise, the instance will run as a full-price on-demand instance.
-
-Throughout the lifetime of an instance, it can change its “price” whenever there’s any change in the commitments utilization rate. For example, if an instance is running as a full price on-demand instance, and another instance that was utilizing a compute savings plan commitment was terminated, the first instance will start utilizing this commitment if its hourly price rate has enough free space under this commitment. It might take a couple of minutes for this change to show, but since the billing is being calculated retroactively, in practice it’s starting to utilize the commitment right away.
-   
- </div>
-
- </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceaneventbridge">ECS, EKS: How do I create spot interruption notifications?</summary>
