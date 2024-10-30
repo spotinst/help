@@ -94,7 +94,3 @@ The Spend Analysis table has an Amortized view switch, which is on by default. I
 ### Spend Analysis Table
 
 Below the chart, you can find the spend analysis breakdown in table format which can be exported to CSV.
-
-## What's Next?
-
-- Learn how to [save your Spend Analysis reports](connect-your-cloud-provider/cost-analysis/save-reports.md) and manage them for convenient future reference.
