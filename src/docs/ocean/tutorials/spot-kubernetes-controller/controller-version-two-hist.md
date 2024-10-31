@@ -1,5 +1,15 @@
 # Ocean Controller Version 2 History
 
+## [2.0.67] - 2024-10-31
+
+### Added
+* Support for OpenShift on AWS.
+* Updated fluentbit sidecar to version `3.1.9`.
+
+### Removed
+* Legacy auto-update permissions from controller `ClusterRole`.
+
+
 ## [2.0.66] - 2024-09-04
 
 ### Added
