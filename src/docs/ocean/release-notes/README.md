@@ -2,7 +2,7 @@
 
 ## October 2024: Features and Enhancements
 
-*  **OCN-0037: October 31, 2024:** (**<font color="#FC01CC">AKS</font>**) Ocean's Cluster Overview dashboard now contains an Autoscaling Activity Graph to give you intuitive insights into the interaction between the Ocean infrastructure and the applications it supports. View cluster activity insights at a granular level to see why the Ocean Autoscaler triggered a specific scale event within the cluster. [Learn more...](https://docs.spot.io/ocean/ocean-aks-cloud-cluster-overview)
+*  **OCN-0037: October 31, 2024:** (**<font color="#FC01CC">AKS</font>**) Ocean's Cluster Overview dashboard now contains an Autoscaling Activity Graph to give you intuitive insights into the interaction between the Ocean infrastructure and the applications it supports. View cluster activity insights at a granular level to see why the Ocean Autoscaler triggered a specific scale event within the cluster. [Learn more...](https://docs.spot.io/ocean/ocean-aks-cloud-cluster-overview?id=autoscaling-activity-panel)
 
 *  **OCN-0036: October 15, 2024:** (**<font color="#FC01CC">GKE</font>**) For your GKE clusters and at the API level only, you can now define filter criteria so that Ocean selects instances to fit your applicative needs. See the Spot API for [cluster](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKEClusterCreate) and [virtual node group](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKELaunchSpecCreate) filter criteria.
 
