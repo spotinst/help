@@ -2,7 +2,7 @@
 
 Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>, <font color="#FC01CC">GKE</font>, and <font color="#FC01CC">AKS</font> 
 
->**IMPORTANT**: Ocean Controller Version 1 is now deprecated for **<font color="#FC01CC">AWS Kubernetes</font>** (from November 1, 2024). This means that Version 1 will not support new features, and any unexpected behaviors or security issues identified after this date will not be addressed. We recommend upgrading to Ocean Controller Version 2.0 for the best performance and support.   
+>**IMPORTANT NOTICE**: Ocean Controller Version 1 is now deprecated for **<font color="#FC01CC">AWS Kubernetes</font>** (from November 1, 2024). This means that Version 1 will not support new features, and any unexpected behaviors or security issues identified after this date will not be addressed. We recommend upgrading to Ocean Controller Version 2.0 for the best performance and support.   
 
 >Ocean Controller Version 1 will be deprecated for other cloud service providers as follows:
 > - **<font color="#FC01CC">GKE</font>**: December 18, 2024
