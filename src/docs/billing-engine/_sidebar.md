@@ -8,6 +8,7 @@
     - [Connect GC](billing-engine/get-started/connect-google)
   - [Release Notes](billing-engine/release-notes/) 
   - [Tutorials](billing-engine/tutorials/)
+    - [Dashboard](billing-engine/tutorials/dashboard/)  
     - [Billing Engine Policy](billing-engine/tutorials/billing-engine-policy)
     - [Analysis](billing-engine/tutorials/analysis)
     - [Families](billing-engine/tutorials/families)
