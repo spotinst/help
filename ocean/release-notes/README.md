@@ -1,6 +1,14 @@
 # Ocean Release Notes
 
-## October 2024: Features and Enhancements
+## November 2024: Features and Enhancements
+
+*  **OCN-0038: IMPORTANT NOTICE - November 01, 2024:** Ocean Controller Version 1 is now deprecated for **<font color="#FC01CC">AWS Kubernetes</font>** (from **November 1, 2024**). This means that Version 1 will not support new features, and any unexpected behaviors or security issues identified after this date will not be addressed. We recommend upgrading to Ocean Controller Version 2.0 for the best performance and support. [Learn more...](https://docs.spot.io/ocean/tutorials/ocean-controller-v2/)    
+Ocean Controller Version 1 will be deprecated for other cloud service providers as follows:
+   * **<font color="#FC01CC">GKE</font>**: December 18, 2024
+   * **<font color="#FC01CC">AKS</font>**: January 1, 2025
+
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600">October, 2024 - click to view</summary>
 
 *  **OCN-0037: October 31, 2024:** (**<font color="#FC01CC">AKS</font>**) Ocean's Cluster Overview dashboard now contains an Autoscaling Activity Graph to give you intuitive insights into the interaction between the Ocean infrastructure and the applications it supports. View cluster activity insights at a granular level to see why the Ocean Autoscaler triggered a specific scale event within the cluster. [Learn more...](https://docs.spot.io/ocean/ocean-aks-cloud-cluster-overview?id=autoscaling-activity-panel)
 
@@ -9,6 +17,9 @@
 *  **OCN-0035: October 08, 2024:** (**<font color="#FC01CC">AKS</font>**) When you import an AKS cluster into Ocean via the console cluster creation wizard, you can now create multiple virtual node groups from your node pools, using the default virtual node group as a template on which to base your custom virtual node groups. [Learn more...](https://docs.spot.io/ocean/getting-started/aks/?id=launch-the-create-ocean-cluster-wizard).
 
 *  **OCN-0034: October 07, 2024:** (**<font color="#FC01CC">AKS</font>**) Documentation update: see how to manage AKS virtual node groups. [Learn more...](https://docs.spot.io/ocean/tutorials/manage-virtual-nd-groups-aks)
+
+</div>
+</details>
 
 <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600">September, 2024 - click to view</summary>
