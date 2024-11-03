@@ -104,20 +104,20 @@ This panel contains two widgets:
 
 ![usage](https://github.com/user-attachments/assets/0335a764-de6f-459b-8e5e-b4fa3119306d)
 
-Hover over a data point in the **vCPU usage in the last 2 weeks** widget to view:
+Hover over a data point in the **vCPU usage in the last 2 weeks** widget to view usage details:
+>**Note**: The default options are used to calculate the right-sizing recommendations for all usage parameters.
 * Allocated vCPU usage based on data from the last 2 weeks.
-* Actual vCPU usage based on data from the last 2 weeks (you can change the default from the **Usage** drop-down menu).
-  * 99th percentile vCPU usage (default)
+* Actual vCPU usage based on data from the last 2 weeks (you can change the default from the **Usage drop-down menu**).
+  * 99th percentile vCPU usage (**default**)
   * 95th percentile vCPU usage
   * 90th percentile vCPU usage
   * 85th percentile vCPU usage
   * Average vCPU usage
 * Suggested vCPU usage based on data from the last 2 weeks.
-
 Hover over a data point in the **Memory usage in the last 2 weeks** widget to view:
 * Allocated memory usage in GiB based on data from the last 2 weeks.
-* Actual memory usage in GiB based on data from the last 2 weeks (you can change the default from the **Usage** drop-down menu).
-  * Maximum memory usage in GiB (default)
+* Actual memory usage in GiB based on data from the last 2 weeks (you can change the default from the **Usage drop-down menu**).
+  * Maximum memory usage in GiB (**default**)
   * Average memory usage in GiB
 * Suggested memory usage in GiB based on data from the last 2 weeks.
 
