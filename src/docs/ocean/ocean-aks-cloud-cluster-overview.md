@@ -97,7 +97,7 @@ This panel contains a set of widgets that display categorized information on you
 <!--! new-->
 ## Autoscaling Activity Panel 
 
-<img width=1000 src="https://github.com/user-attachments/assets/8f92d7ee-c034-4dc6-a93d-c09f90177f61" />
+<img width=800 src="https://github.com/user-attachments/assets/e077fe98-6c2b-4be1-9c6d-1cb97a3404f6" />
 
 The Autoscaling Activity panel contains the following widgets:  
 
@@ -170,7 +170,7 @@ level so you can see why the Ocean Autoscaler triggered a specific scale event w
 
 The graph displays a breakdown by lifecycle, which you can view by vCPU, Memory, or GPU, together with workload and headroom requests.
 
-<img width=1000 src="https://github.com/user-attachments/assets/a125322a-9672-4ce8-b744-8ed3cee2bf9d" />
+<img width=800 src="https://github.com/user-attachments/assets/0db05178-69b0-475e-a07f-5439ec48b8fd" />
 
 The upper graph displays the autoscaling activity to analyze. By default, it displays a full set of activity curves. Click an item on the legend above the graph to turn its associated curve on or off.
 
@@ -190,7 +190,7 @@ To set the zoom level for the graph:
 2. Use the lower graph to zoom in or out of the selected period by dragging the sizing handles left or right.
 >**Tip**: Set the period on the graph to 12 hours or less to view autoscaling events, which are displayed as dots on the graph.
 
-<img width=1000 src="https://github.com/user-attachments/assets/0f65c1b4-bf6d-42e1-a3f9-6b61d39f321d" />
+<img width=800 src="https://github.com/user-attachments/assets/96bc9f5c-48e9-445d-b451-267397c723db" />
 
 To display the autoscaling activity at a specific point on the graph:
 
