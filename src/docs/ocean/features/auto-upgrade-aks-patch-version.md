@@ -23,5 +23,7 @@ View the installed version number of the control plane at the bottom of the tab,
 * Red: The minor version of the control plane needs an immediate upgrade. Otherwise, you will not be able to launch a new node. Spot does not provide support for Kubernetes minor version upgrades.
 * Gray: The Ocean controller is not valid or is not reporting, so there is no indication of the control plane patch version. See [Troubleshoot the Ocean Controller](https://docs.spot.io/ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-ts).
 
+
+
   
 
