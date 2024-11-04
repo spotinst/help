@@ -186,7 +186,7 @@ These are the curves:
 
 To set the zoom level for the graph:
 
-1. On the top-right of the screen, select to zoom by 1 hour / 12 hours / 7 days.
+1. On the top-right of the screen, select to zoom by 1 hour / 12 hours / 3 days/ 7 days.
 2. Use the lower graph to zoom in or out of the selected period by dragging the sizing handles left or right.
 >**Tip**: Set the period on the graph to 12 hours or less to view autoscaling events, which are displayed as dots on the graph.
 
