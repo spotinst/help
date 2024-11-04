@@ -92,17 +92,33 @@ If you have workloads with differing statuses, the workload status widget shows 
 > **Note**: The status changes according to the filters applied in this panel and the Workloads Optimization list in the [Advanced Optimization tab](ocean/features/ocean-cluster-right-sizing-recom-tab?id=automatic-right-sizing-recommendations-and-rules)
 
 vCPU and memory usage widgets:
-*  vCPU Usage: Used and allocated vCPU resources, recommended increase or decrease of vCPU resources, and overprovisioning. 
+*  vCPU Usage: Used and allocated vCPU resources, recommended increase or decrease of vCPU resources, and over-provisioning. 
 *  Memory Usage: Used and allocated memory resources, a recommendation to increase or decrease the memory resources, and the overprovisioning. 
 
 ###  Right Sizing Resource Usage Panel 
 
-![usage-in-last-2-weeks-b](https://github.com/user-attachments/assets/8e2e3411-489b-4480-9b15-c4c047785f5e)
+This panel contains two widgets:
 
-The right Sizing Resources Usage panel contains two widgets: 
+* vCPU usage in the last 2 weeks: Displays graphs for used, allocated, and recommended vCPU usage based on data from the last 2 weeks.
+* Memory usage in the last 2 weeks: Displays graphs for used, allocated, and recommended memory usage based on data from the last 2 weeks.
 
-*  vCPU usage in the last two weeks: Displays graphs for used, allocated, and recommended vCPU usage based on data from the last two weeks. 
-*  Memory usage in the last two weeks: Displays graphs for used, allocated, and recommended memory usage based on data from the last two weeks. 
+![usage](https://github.com/user-attachments/assets/0335a764-de6f-459b-8e5e-b4fa3119306d)
 
+Hover over a data point in the **vCPU usage in the last 2 weeks** widget to view usage details:
+>**Note**: The default **99th percentile vCPU usage** and **Maximum memory usage** options are used to calculate the right-sizing recommendations for all usage parameters.
+* Allocated vCPU usage based on data from the last 2 weeks.
+* Actual vCPU usage based on data from the last 2 weeks (you can change the default from the **Usage drop-down menu**).
+  * 99th percentile vCPU usage (**default**)
+  * 95th percentile vCPU usage
+  * 90th percentile vCPU usage
+  * 85th percentile vCPU usage
+  * Average vCPU usage
+* Suggested vCPU usage based on data from the last 2 weeks.
+Hover over a data point in the **Memory usage in the last 2 weeks** widget to view:
+* Allocated memory usage in GiB based on data from the last 2 weeks.
+* Actual memory usage in GiB based on data from the last 2 weeks (you can change the default from the **Usage drop-down menu**).
+  * Maximum memory usage in GiB (**default**)
+  * Average memory usage in GiB
+* Suggested memory usage in GiB based on data from the last 2 weeks.
 
 
