@@ -57,7 +57,10 @@ To schedule an auto-upgrade:
 1. Ensure that the [Azure Kubernetes upgrades feature](https://spotinst.atlassian.net/wiki/pages/resumedraft.action?draftId=3271589937) is not enabled for your cluster. You cannot enable Ocean and Azure Kubernetes auto-upgrades simultaneously.
 2. In the Auto Upgrade tab, click **Scheduled Auto-Upgrade** (or to edit an existing auto-update schedule, click **Edit** in the schedule entry).
 
+Screenshot 
+
 >**Note**: If the following message appears, click to turn off the Azure Kubernetes upgrades feature.
+screenshot
 
   
 
