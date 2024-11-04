@@ -1,6 +1,6 @@
 <meta name="robots" content="noindex">
 
-# Auto-Upgrade the AKS Patch Version (Control Plane) for AKS in the Console
+# Auto-Upgrade the AKS Control Plane Patch Version in the Console
 
 You can schedule an auto-upgrade of an AKS patch version when it becomes available or at a specific time. For both types of auto-upgrade runs, you can set one of these options:
 
