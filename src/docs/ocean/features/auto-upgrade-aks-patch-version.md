@@ -62,10 +62,36 @@ Screenshot
 >**Note**: If the following message appears, click to turn off the Azure Kubernetes upgrades feature.
 screenshot
 
-  
+3. Select whether to auto-upgrade the Control Plane or to auto-upgrade the Control Plane and Roll. 
 
-  
+* Ocean will roll all virtual node groups applicable to the available control-plane patch upgrade version if you select to roll.
+* You can only roll if an upgrade version for the virtual node groups is available. If an upgrade version is unavailable, a record will only appear in the logs, not the auto-upgrades history.
+* If an option appears grayed, you have already run it and cannot select it again.
 
+4. If you selected to roll, set the [roll parameters](https://docs.spot.io/ocean/features/roll).
+screenshot
+   * Select the Batch size percentage (1 - 100%).
+   * Select the Batch size healthy percentage (20-100%).
+   * Optionally, turn on the Pod Disruption Budget (PDB) option.
+   * Optionally, turn on the Restrict Scale-Down option.
+
+screenshot
+
+5. Select whether to schedule the auto upgrade when it becomes available or at a specific time.
+6. If you selected to schedule at a specific time, set the time using the day/week/month/time controls or type a Cron expression.
+
+screenshot
+
+   * The created schedule is turned on by default. To turn off the schedule, move the slider at the right of the entry for the schedule to the turned-off position.
+   * After the update is run, an entry will appear in the auto-upgrades history list.
+
+## Delete an Auto-Upgrade Schedule
+
+To delete an auto-upgrade schedule:
+
+1. Click the garbage bin icon to the right of the entry for the schedule.
+2. In the confirmation window, type **Delete** in the field provided and then click **Delete**.
+3. Click **Schedule**. The schedule will appear at the bottom of the screen in the auto-upgrades schedules list. 
 
   
 
