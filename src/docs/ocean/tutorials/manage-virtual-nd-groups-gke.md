@@ -95,4 +95,83 @@ Screenshot
 6. Repeat the previous steps until you are satisfied with the results.
 7. Save the changes for the virtual node group.
 
+## Advanced Properties
+
+* Tags: Key and Value pairs apply tags to the instance type. Specific tags can be applied per virtual node group.
+* Headroom: Spare resource capacity management enabling fast assignment of Pods without waiting for new resources to launch.
+  * Reserve: The number of units to retain as headroom, each with the defined headroom CPU and memory.
+  * CPU (millicpu): You can optionally configure the number of CPUs to allocate to the headroom. CPUs are denoted in millicuries, where 1000 millicuries = 1 vCPU.
+  * Memory (MiB): You can optionally configure the amount of memory (MiB) to allocate to the headroom.
+  * GPUs: Optionally configure the number of GPUs to allocate for the headroom unit.
+
+Example: GPU Instance
+
+If a pod requires a GPU node, add the relevant GPU image in a virtual node group so Ocean can spin up nodes. Specific labels are not required in this case.
+
+```bash
+resources:
+  limits:
+    nvidia.com/gpu: 1
+```
+You can use a node selector or node affinity that requires your GPU-based pods to select the specific VNG containing the GPU image based on the custom node label configured in the GPU virtual node group.
+
+## Editing a Virtual Node Group in JSON View
+
+In the console, you can optionally review and edit the VNG configuration in JSON format. This provides more flexibility and lets you use VNG features that are supported in the Spot API without leaving the Ocean console. (These are often new features available in the Spot API but are not yet available in the console).
+
+1. Click the **Virtual Node Groups** tab.
+2. Click the link on the name of the virtual node Group in the list.
+3. Click **JSON** on the upper right.
+
+```bash
+{
+  "name": "vngname",
+  "oceanId": "o-66963661",
+  "availabilityZones": [
+    "1"
+  ],
+  "nodePoolProperties": {
+    "kubernetesVersion": null,
+    "maxPodsPerNode": 110,
+    "enableNodePublicIP": false,
+    "osDiskSizeGB": 128,
+    "osDiskType": "Ephemeral",
+    "osType": "Linux",
+    "osSKU": "Ubuntu"
+  },
+  "nodeCountLimits": {
+    "minCount": 0,
+    "maxCount": 1000
+  },
+  "strategy": {
+    "spotPercentage": 100,
+    "fallbackToOd": true
+  },
+  "autoScale": {
+    "headrooms": []
+  },
+  "labels": {},
+  "taints": [],
+  "tags": {},
+  "vmSizes": {
+    "filters": {
+      "architectures": [
+        "X86_64"
+      ]
+    }
+  }
+}
+```
+
+
+
+4. Edit the JSON and save your changes.
+
+You can switch between Form (console) and JSON views multiple times, make changes separately in each view, and then click **Save All**
+
+
+## Delete a VNG
+
+* In the virtual node groups list, check the groups you want to delete and click **Delete**.
+* If you are already configuring a virtual node group, click **Delete VNG** at the bottom of the screen.
 
