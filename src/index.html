@@ -55,10 +55,9 @@
       z-index:9999;
       background:#0086FF;
       color:#fff;
-      padding:10px 40px;
-      width:100%;  
+      padding:10px 40px; 
       transition: transform .25s ease-out;
-      margin-left:300px;  
+      margin-left:300px;   
     }
     .helpful-content h2 {
       padding: 10px 0;
@@ -92,6 +91,83 @@
         margin-left:300px!important;    
       }
     } 
+    .spot-btn {
+      background-color: transparent;
+      border: 2px solid #fff;
+      border-radius: 45px;
+      color: #fff;
+      font-family: 'Axiforma', Helvetica, sans-serif; 
+      font-size: 16px;
+      font-weight: 600; 
+      padding: 5px 30px; 
+      transition: .3s;
+    }
+    .spot-btn:hover {
+      background-color: #fff;
+      color: #0086ff; 
+      cursor: pointer;
+      transition: .3s;
+    }
+
+    @media only screen and (max-width: 1024px) {
+      .helpful-content h2 {
+        font-size: 20px;
+        padding: 5px 0;
+        margin: 0;
+      }
+      .helpful-content .col-right {
+        padding: 10px 0;
+      }
+      .sidebar-toggle {
+        top: 160px!important;
+      }
+    }
+    @media only screen and (min-width: 1024px) {  
+      .helpful-content .col-left {
+        width:70%;
+      }
+      .helpful-content .col-right {
+        width:30%;  
+      }
+      .helpful-content { 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .spot-btn { 
+        float:right;
+        position: relative;
+      }
+    } 
+    @media only screen and (min-width: 1300px) { 
+      .spot-btn { 
+        left: -45px;
+      }
+    }
+    @media only screen and (min-width: 1500px) { 
+      .spot-btn { 
+        left: -80px;
+      }
+    }
+
+    @media only screen and (min-width: 1650px) { 
+      .spot-btn { 
+        left: -90px;
+      }
+    }
+    @media only screen and (min-width: 1750px) { 
+      .spot-btn { 
+        left: -100px;
+      }
+    }
+    @media only screen and (min-width: 1800px) { 
+      .spot-btn { 
+        left: -110px;
+      }
+    }
+    
+    
+
   </style>
   
 </head>
@@ -100,8 +176,13 @@
   <noscript>You need to enable JavaScript to run this app.</noscript>
 
   <div class="helpful-content">
-    <h2>Spot by NetApp Documentation</h2>
-    <p>How to use Spot Products</p>
+    <div class="col-left">
+      <h2>Spot by NetApp Documentation</h2>
+      <p>How to use Spot Products</p>
+    </div>
+    <div class="col-right">
+      <a class="spot-btn feedback-button" href="mailto:spotdocs@netapp.com?subject=Documentation topic: General Inquiry&body=Documentation topic: https://docs.spot.io/" target="_blank">Feedback</a>
+    </div>
   </div>
   
   <div id="app"></div>
@@ -169,11 +250,31 @@
     src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse@1.3.5/dist/docsify-sidebar-collapse.min.js"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/ga.min.js"></script>
   
-  <!-- Sticky Nav -->
+  <!-- Custom Plugins -->
   <script type="text/javascript">
     (function () {
-      function tocPlugin(hook) {
+      function customPlugins(hook) {
         hook.doneEach(function () {
+          // Feedback Button
+          const updateFeedbackButton = () => {
+            const markdownSection = document.querySelector(".markdown-section");
+            if (!markdownSection) return;
+
+            const h1 = markdownSection.querySelector("h1");
+            const currentURL = window.location.href;
+            if (h1) {
+              const h1Content = encodeURIComponent(h1.textContent.trim());
+              const feedbackButton = document.querySelector(".feedback-button");
+              if (feedbackButton) {
+                feedbackButton.href = `mailto:spotdocs@netapp.com?subject=Documentation topic: ${h1Content}&body=Documentation topic: ${currentURL}`;
+              } else {
+                feedbackButton.href = `mailto:spotdocs@netapp.com?subject=Documentation topic: General Inquiry&body=Documentation topic: https://docs.spot.io/`;
+              }
+            }
+          };
+          updateFeedbackButton();
+
+          // Sticky Sidebar
           const observer = new MutationObserver(function (mutations) {
             mutations.forEach(function () {
               const tocElement = document.querySelector(".page_toc");
@@ -197,7 +298,7 @@
         });
       }
 
-      window.$docsify.plugins = [].concat(tocPlugin, window.$docsify.plugins || []);
+      window.$docsify.plugins = [].concat(customPlugins, window.$docsify.plugins || []);
     })();
   </script>
 
