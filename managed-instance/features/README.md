@@ -40,7 +40,7 @@ Only the latest Snapshot for each volume is kept after the instance is paused.
 * Reattach + The instance is launched in the same AZ as the previous instance: The existing volumes are being attached to the new instance. 
 * Reattach + The instance is launched in a different AZ from the previous instance: New volumes are created in the same AZ as the new instance and are attached. 
 
-Once a stateful instance is deallocated, the stateful persisted resources (Images, Volumes, and Snapshots) are kept for 4 days by default. If you want our – If you want the persisted stateful resources to delete quicker and even on an hourly basis, you can reach out to our support team support@spot.io. 
+Once a stateful instance is deallocated, the stateful persisted resources (Images, Volumes, and Snapshots) are kept for 4 days by default. If you want the persisted stateful resources to delete quicker and even on an hourly basis, you can reach out to our support team support@spot.io. 
  
 Please keep in mind AWS does not charge based on the number of snapshots as [EBS Snapshots](https://aws.amazon.com/ebs/pricing/) are stored incrementally, which means you are billed only for the changed data blocks stored. The main reason for the periodic snapshots is to make the snapshot process quicker and not wait too long to complete the snapshot creation process for any data changes in the volumes that are persisted. 
 In case of large Data volumes, you can use Reattach and single AZ configuration to avoid any data volume snapshots from being created. 
