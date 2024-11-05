@@ -8,6 +8,7 @@
     - [Connect GC to Eco](eco/getting-started/connect-gc-account)
     - [Connect Account: Customer Working with AWS MSP](eco/getting-started/connect-account-customer-working-with-msp)
     - [Eco Savings Blox](eco/getting-started/eco-savings-blox)
+  - [Release Notes](eco/release-notes/)
   - [AWS Tutorials](eco/tutorials/)
     - [Review AWS Commitment Spending Analysis](eco/tutorials/review-ri-spending-analysis)
     - [Choose AWS RI Strategy](eco/tutorials/choose-a-strategy)
