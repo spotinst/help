@@ -120,7 +120,7 @@ To detach a rule from one or more workloads:
 1.   Select workloads in the Workloads Optimization list.
 2.   From the Actions drop-down menu above the list, click **Detach Rule**.
 
->**Important**: If you encounter any Kubernetes issues, we recommend detaching workloads from rules and rolling them in your cluster.
+>**Important**: If you encounter Kubernetes issues, we recommend detaching workloads from rules and rolling them in your cluster.
 
 ###   Delete a Right-Sizing Rule 
 
@@ -130,6 +130,11 @@ To delete a right sizing rule:
 2.   When the confirmation message appears, Click **Delete**, or **Cancel** (if you are unsure). 
 
 >**Important**: You cannot restore a deleted right-sizing rule. In addition, a rule may be deleted only if it is no longer attached to a workload.
+
+### Workload Rollbacks
+
+
+
 
 ## Best Practices
 
