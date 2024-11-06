@@ -39,6 +39,7 @@ This list displays your right-sizing recommendations per workload and lets you d
    > - Red status: The Workload is not optimized.
    > - Orange or gray status: Hover over the workload optimization status to view more details in a tooltip.
    > - There are no vCPU / memory recommendations or Potential monthly max if a workload is fully optimized. Savings are displayed for the workload because Ocean is already optimizing it.
+   > - If the <img height="20" src="https://github.com/user-attachments/assets/6160df45-992e-41a8-bcc2-5af1bee732ff" /> button appears on the right of the screen, workloads were moved to rollback status back see [Acknowledge a Workload Rollback]()
 
 The graphical display above the list shows the breakdown of these workload optimization statuses.
 
@@ -131,10 +132,27 @@ To delete a right sizing rule:
 
 >**Important**: You cannot restore a deleted right-sizing rule. In addition, a rule may be deleted only if it is no longer attached to a workload.
 
-### Workload Rollbacks
+### Acknowledge a Workload Rollback
 
+When Ocean cannot apply the attached right-sizing rule to a workload because of OOM or other Kubernetes issues, the workload is automatically rolled back and moved to **rollback** status. When at least one workload is in rollback status, the <img height="20" src="https://github.com/user-attachments/assets/6160df45-992e-41a8-bcc2-5af1bee732ff" /> button appears at the top-right of the screen. 
 
+To acknowledge a workload rollback:
 
+1. Click **Acknowledge Rollback** to view all the workloads with the rollback status.
+
+![right-sozomg-rollback-dialog](https://github.com/user-attachments/assets/4bb206f5-73e3-4b26-b7fb-19e5e519505f)
+
+* The Rollback Drill Down list contains the following information:
+   * Workload name.
+   * Namespace.
+   * CPU Update in vCPUs (before and after rollback).
+   * Memory update in MiBs (before and after update).
+   * Rollback Time: In format MM/DD/YYYY HH:MM:SS AM/PM
+
+2. Select the checkboxes for the workloads to roll back.
+3. Click **I Acknowledge the Rollback**.
+
+The workloads are then displayed in the Workloads Optimization List without any attached rules. Before attaching a rule to a rolled-back workload, first fix the issue.
 
 ## Best Practices
 
