@@ -1,5 +1,9 @@
 # Cost Intelligence Release Notes
 
+* **COI-0016**: November 5th, 2024: You can now define asset groups, which allow you to view and manage data with a set of filters that apply to different pages. [Learn more](cost-intelligence/tutorials/dashboard/?id=asset-groups)
+
+<details>
+  <summary markdown="span">October 2024</summary>
 
 * **COI-0015**: October 29th, 2024: You can integrate [Databricks](cost-intelligence/tutorials/integrations/databricks), [MongoDB Atlas](cost-intelligence/tutorials/integrations/mongodb), and [OpenAI](cost-intelligence/tutorials/integrations/openai) with Cost Intelligence to collect billable and usage metrics for your organization. [Learn more](cost-intelligence/tutorials/integrations/)
 
@@ -11,6 +15,7 @@
 
 * **COI-0011**: October 8th, 2024: You can integrate [Snowflake](cost-intelligence/tutorials/integrations/snowflake) with Cost Intelligence to collect billable and usage metrics for your organization. [Learn more](cost-intelligence/tutorials/integrations/)
 
+</details>
 
 <details>
   <summary markdown="span">September 2024</summary>
