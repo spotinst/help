@@ -2,7 +2,7 @@
 
 ## Features and Enhancements
 
-* **SEC-008: October 14th, 2024** Presets are now called Asset Groups. You can use asset groups to filter findings for specific crown jewels, teams, or production accounts. After you've set up an asset group, you can use it in Billing Engine, Cost Intelligence, and Spot Security. [Learn more](spot-security/features/security-dashboard/)
+* **SEC-008: October 14th, 2024** Presets are now called Asset Groups. You can use asset groups to filter findings for specific crown jewels, teams, or production accounts. After you've set up an asset group, you can use it in [Billing Engine](billing-engine/tutorials/dashboard/), [Cost Intelligence](cost-intelligence/tutorials/dashboard/?id=asset-groups), and Spot Security. [Learn more](spot-security/features/security-dashboard/)
 
 * **SEC-007: October 8th, 2024** Spot Security supports two new AWS service types: CloudFront and DynamoDB. [Learn more](spot-security/security-matrix/)
 
