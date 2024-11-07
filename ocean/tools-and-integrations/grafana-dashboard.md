@@ -2,7 +2,7 @@
 
 # Grafana Dashboard
 
-This topic describes the integration of Ocean with Grafana and Prometheus to help you identify and investigate real-life anomalies in Ocean-managed clusters.
+This topic describes the integration of [Ocean](https://docs.spot.io/ocean/) with Grafana and Prometheus to help you identify and investigate real-life anomalies in Ocean-managed clusters.
 
 ## Prometheus and Grafana
 
@@ -14,7 +14,7 @@ In Kubernetes environments, where the dynamic nature of workloads and infrastruc
 
 ## Spot Ocean Scaling and Cost Optimization Grafana Dashboard
 
-The Ocean scaling and cost optimization dashboard provides real-time insights into the scaling, cost, usage, and right-sizing activities managed by Ocean within your Kubernetes cluster. It displays metrics for node provisioning, optimization, cost efficiency, and recovery operations.  
+The Ocean scaling and cost optimization dashboard provides real-time insights into the scaling, cost, usage, and right-sizing activities managed by Ocean within your Kubernetes cluster. It displays node provisioning, optimization, cost efficiency, and recovery operations metrics.  
 
 Visualizations can help you understand how Ocean dynamically manages Kubernetes cluster resources to ensure optimal performance, cost savings, and high availability. Key actions such as scale-ups, scale-downs, node replacements, and manual interventions are highlighted to give a comprehensive view of your cluster's operational status and health. 
 
@@ -24,9 +24,9 @@ The scaling and cost optimization dashboard exposes data that helps you make inf
 
 ### Integration Benefits
 
-[Ocean](https://spot.io/product/ocean/) manages the scaling of the Kubernetes data plane, and the data generated in the process can be valuable for monitoring your containerized environment. 
+Ocean manages the scaling of the Kubernetes data plane, and the data generated in the process can be valuable for monitoring your containerized environment. 
 
-Using well-defined [Prometheus metrics](https://docs.spot.io/ocean/tools-and-integrations/prometheus/) to monitor Ocean provides insights into cluster scaling and debugging. You can also build alerts based on the metrics to address issues in real-time and track trends on a dashboard with different Ocean metrics.
+Using well-defined [Prometheus metrics](https://docs.spot.io/ocean/tools-and-integrations/prometheus/) to monitor Ocean provides insights into cluster scaling and debugging. You can also build alerts based on the metrics to address real-time issues and track trends on a dashboard with different Ocean metrics.
 
 Ocean maintains an official set of metrics, natively scrapable by Prometheus. This set of metrics helps build a 360-degree view of Ocean’s actions while providing application-driven infrastructure.
 
@@ -115,7 +115,7 @@ This dashboard contains the following widgets:
 
 ## Metrics
 
-Ocean metrics are relevant to Ocean Prometheus Exporter for EKS, AKS, and GKE. [More details](https://docs.spot.io/ocean/tools-and-integrations/prometheus/)
+Ocean metrics are relevant to Ocean Prometheus [Exporter](https://docs.spot.io/ocean/tools-and-integrations/prometheus/scrape) for EKS, AKS, and GKE.
 
 Monitor the following key metrics to understand how Ocean scales.
 
@@ -203,9 +203,8 @@ Monitor the following key metrics to understand how Ocean scales.
 
 ## Related Links
 
-The template is also available in the [Spot Ocean public repository](https://github.com/spotinst/spot-ocean-grafana-dashboards), where you can submit feedback regarding any issues or propose new features to enhance the dashboard’s functionality further.
-
----I will add a link to the Grafana setup and configuration file---
+* The Grafana template is also available in the [Spot Ocean public repository](https://github.com/spotinst/spot-ocean-grafana-dashboards), where you can submit feedback regarding any issues or propose new features to enhance the dashboard’s functionality.
+* [Grafana Setup and Configuration](https://github.com/spotinst/help/tree/master/src/docs/ocean/tools-and-integrations/setup-and-config-grafane-4-ocean)
 
 
 
