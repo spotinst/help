@@ -12,9 +12,9 @@ Grafana enhances Prometheus by offering powerful data visualization capabilities
 
 In Kubernetes environments, where the dynamic nature of workloads and infrastructure demands continuous monitoring, the Prometheus and Grafana stack provides deep visibility into the performance, health, and cost-effectiveness of your Kubernetes clusters, enabling proactive management and optimization.
 
-## Spot Ocean Scaling and Cost Optimization Dashboard
+## Spot Ocean Scaling and Cost Optimization Grafana Dashboard
 
-The Ocean scaling and cost optimization dashboard provides real-time insights into the scaling, cost, usage, and right-sizing activities managed by Ocean within your Kubernetes cluster. It displays node provisioning, optimization, cost efficiency, and recovery operations metrics. 
+The Ocean scaling and cost optimization dashboard provides real-time insights into the scaling, cost, usage, and right-sizing activities managed by Ocean within your Kubernetes cluster. It displays metrics for node provisioning, optimization, cost efficiency, and recovery operations.  
 
 Visualizations can help you understand how Ocean dynamically manages Kubernetes cluster resources to ensure optimal performance, cost savings, and high availability. Key actions such as scale-ups, scale-downs, node replacements, and manual interventions are highlighted to give a comprehensive view of your cluster's operational status and health. 
 
@@ -26,7 +26,7 @@ The scaling and cost optimization dashboard exposes data that helps you make inf
 
 [Ocean](https://spot.io/product/ocean/) manages the scaling of the Kubernetes data plane, and the data generated in the process can be valuable for monitoring your containerized environment. 
 
-Using well-defined [Prometheus metrics](https://docs.spot.io/ocean/tools-and-integrations/prometheus/) to monitor Ocean provides insights into cluster scaling and debugging. You can also build alerts based on the metrics to address issues in real time and track trends on a dashboard with different Ocean metrics.
+Using well-defined [Prometheus metrics](https://docs.spot.io/ocean/tools-and-integrations/prometheus/) to monitor Ocean provides insights into cluster scaling and debugging. You can also build alerts based on the metrics to address issues in real-time and track trends on a dashboard with different Ocean metrics.
 
 Ocean maintains an official set of metrics, natively scrapable by Prometheus. This set of metrics helps build a 360-degree view of Ocean’s actions while providing application-driven infrastructure.
 
@@ -35,7 +35,7 @@ Ocean maintains an official set of metrics, natively scrapable by Prometheus. Th
 <details>
   <summary markdown="span">Current Status</summary>
 
-  <img src="https://github.com/user-attachments/assets/dfca3f37-24e2-4a6c-b038-59156444491d" />
+  <img width="1024" alt="grafana-dashboard-current-status" src="https://github.com/user-attachments/assets/3e46cfab-2f88-4a76-87d5-10ad16afcc38">
 
   This dashboard contains the following widgets:
   * Ocean controller: Status in the cluster.
@@ -44,15 +44,16 @@ Ocean maintains an official set of metrics, natively scrapable by Prometheus. Th
   * Cluster resources utilization: Resource utilization (CPU, memory, etc.) across the cluster.
   * Cluster cost during a specified time period.
   * Top 5 workloads with maximum cost.
+  * Potential savings from right-sizing.
 
 </details>
 
 <details>
   <summary markdown="span">Cost and Usage</summary>
+  
+<img width="1024" alt="grafana-dashboard-cost-and-usage" src="https://github.com/user-attachments/assets/cd688d9c-fec7-4b6b-9519-df97a466a362">
 
- <img src="https://github.com/user-attachments/assets/9ba3bd90-357c-411c-bba4-84101275c9dd" />
-
-  This dashboard contains the following widgets:
+This dashboard contains the following widgets:
   * Month-to-Date cluster cost.
   * Average daily cluster cost during a specified time period.
   * Cluster cost breakdown during a specified time period.
@@ -63,8 +64,8 @@ Ocean maintains an official set of metrics, natively scrapable by Prometheus. Th
 <details>
   <summary markdown="span">Network Metrics</summary>
 
-<img src="https://github.com/user-attachments/assets/24ef6087-97f4-490d-9c0d-ba7655fe9be3" />
-
+ <img width="1024" alt="grafana-dashboard-network-metrics" src="https://github.com/user-attachments/assets/f1616d7b-1b7b-4260-b2ab-fdfd196be4f5">
+ 
 This dashboard contains the following widgets:
 * Cluster network cost for a specified time period.
 * Cluster network usage for a specified time period.
@@ -84,15 +85,27 @@ This dashboard contains the following widgets:
 <details>
   <summary markdown="span">Scaling Activity Overview</summary>
 
-<img src="https://github.com/user-attachments/assets/6b632cb9-5ef4-4272-9400-5bcc6850a4a4" />
+  <img width="1024" alt="grafana-dashboard-scaling-activity" src="https://github.com/user-attachments/assets/20c59bdb-4a66-4906-9fcb-399bdf12de26">
 
 This dashboard contains the following widgets:
 
 * Scaling up and down events summaries.
-* Failed scale-up events summary.* 
-
+* Failed scale-up events summary. 
 
 </details>
+
+<details>
+  <summary markdown="span">Right Sizing</summary>
+
+<img width="1024" alt="grafana-dashboard-right-sizing" src="https://github.com/user-attachments/assets/393bd4d8-03fa-43f9-b99f-5db7fb457017">
+
+</details>
+
+This dashboard contains the following widgets:
+
+* vCPU suggestions over time.
+* Memory suggestions over time.
+* Top 5 workloads with potential monthly max. savings.
 
 ## Variables
 
@@ -101,6 +114,8 @@ This dashboard contains the following widgets:
 * Aggregation Interval: Used to set a relative time in panels with aggregated data. The relative time will be shown on the panel title.
 
 ## Metrics
+
+Ocean metrics are relevant to Ocean Prometheus Exporter for EKS, AKS, and GKE. [More details](https://docs.spot.io/ocean/tools-and-integrations/prometheus/)
 
 Monitor the following key metrics to understand how Ocean scales.
 
@@ -120,7 +135,7 @@ Monitor the following key metrics to understand how Ocean scales.
 
 * Cluster nodes’ allocatable resources (CPU, memory, GPU). Source: Ocean.
 * Ocean cluster headroom allocatable resources (CPU, memory, GPU). Source: Ocean.
-* Ocean cluster resources limit (CPU, memory). Source: Ocean.
+* Ocean cluster resource limit (CPU, memory). Source: Ocean.
 * Ocean nodes breakdown by instance lifecycle and availability zone. Source: Ocean.
 * Cluster nodes’ allocatable resources breakdown by instance lifecycle and availability zone. Source: Ocean
 
@@ -130,7 +145,7 @@ Monitor the following key metrics to understand how Ocean scales.
 * Ocean nodes count by instance lifecycle and availability zone over time. Source: Ocean.
 * Cluster nodes’ allocatable resources count by instance lifecycle and availability zone over time. Source: Ocean.
 
-**8Resources Utilization Metrics:** Cluster resources (CPU, memory, GPU) utilization over time.
+**Resources Utilization Metrics:** Cluster resources (CPU, memory, GPU) utilization over time. TBD.
 
 **Pods Metrics:**
 
@@ -180,9 +195,11 @@ Monitor the following key metrics to understand how Ocean scales.
 * Cluster Inter-Region network cost over time. Source: Ocean.
 * Cluster Inter-Region network usage over time. Source: Ocean.
 
-### Right-Sizing
+### Right-Sizing Metrics
 
-* Ocean metrics are relevant to Ocean Prometheus Exporter for EKS, AKS, and GKE. [More details](https://docs.spot.io/ocean/tools-and-integrations/prometheus/)
+* VCPU Suggestions over time. Source: Ocean.
+* Memory suggestions over time. Source: Ocean.
+* Top 5 workloads with potential monthly max. savings. Source: Ocean.
 
 ## Related Links
 
