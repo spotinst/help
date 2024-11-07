@@ -81,6 +81,26 @@ Initially, the costs are compared with the on demand value of the instance types
 
  </details>
 
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanscaleup">AKS, EKS, GKE: How does the scale-up recovery process work?</summary>
+
+  <div style="padding-left:16px">
+
+Ocean monitors for pending Kubernetes pods and automatically adjusts the size of the cluster based on the workload constraints and labels. Ocean ensures that the cluster resources are utilized and scales down underutilized nodes to ensure maximal cost optimization.
+
+When it comes to a scale-up as part of an instance recovery, the scale-up mechanism behaves differently. The recovery process receives a list of markets that can accommodate the pods' requirements according to the virtual node group configuration and not the workload configuration (the pod's metadata constraints). Ocean scales a new instance to replace the old instance that was reclaimed as quickly as possible. This means the node affinity is not taken into account.
+
+If the list of required instance types is not part of the virtual node group, the list includes different types than what is set in the workload configuration.
+
+If one of the workloads is unscheduled after the launching of the new instance, the autoscaler scales up an instance to accommodate the requirements of that particular workload. When this happens, there's a long list of optional instance types that the workload can be scheduled on. These workloads are configured by the Kubernetes labels on the dedicated deployment.
+
+You should configure the allowlist instance types at the virtual node group level, not for the deployment. This will prevent launching of other instance types and, eventually, a momentary scenario in which the workload is unscheduled.
+
+If you have multiple deployments that can be scheduled on different instance types, you can create different virtual node groups for each use case.
+
+ </div>
+
+ </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceank8sheadroom">AKS, EKS, GKE: Can I configure automatic headroom using Kubernetes Operations (kOps)?</summary>
