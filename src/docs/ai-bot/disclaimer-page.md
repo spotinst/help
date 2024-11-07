@@ -6,9 +6,9 @@
 
 ### Terms of Use
 
-<font color="#FC01CC">AISA</font> is Spot by NetApp's generative **AI-powered Support Assistant** on the [Spot by NetApp console](http://console.spotinst.com).
+<font color="#FC01CC">AISA</font> is Spot by NetApp's generative **AI-powered Support Assistant** on the [Spot by NetApp console](https://console.spotinst.com/overview/dashboard).
 
-<font color="#FC01CC">AISA</font> has been designed to respond to questions about Spot By NetApp services. It can do so based on the content available on the [Spot by NetApp Documentation Portal](docs.spot.io) and the [Spot by NetApp Resource Center](https://spot.io/).
+<font color="#FC01CC">AISA</font> has been designed to respond to questions about Spot By NetApp services. It can do so based on the content available on the [Spot by NetApp Documentation Portal](https://docs.spot.io/) and the [Spot by NetApp Resource Center](https://spot.io/).
 
 Please be informed that this Beta version of <font color="#FC01CC">AISA</font> generates algorithmically generated content, which may contain errors or inaccuracies. It is important to consider all generated content as a starting point rather than definitive information.
 
