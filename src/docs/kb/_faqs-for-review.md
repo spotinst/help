@@ -198,6 +198,32 @@ By freeing up space, the pod can be placed on its attached node and can use the 
  </details>
 
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceancooldowneval">EKS, GKE: What's the difference between cooldown period and evaluation period?</summary>
+
+  <div style="padding-left:16px">
+
+Whenever Spot performs a scaling action, there is a cooldown period during which no further scaling action takes place. After the cooldown period, another scaling action can take place if required.
+
+**Cooldown Period**
+
+The cooldown period is the amount of time, in seconds, after a scaling activity completes before any further trigger-related scaling activities can start.
+
+For example, if scaling policy A has cooldown set to 60 seconds and a scale-down is triggered, then new scale-downs cannot start because of policy A for the next minute. New policies cannot go into effect while policy A is in cooldown.
+
+Cooldown period is the amount of time, in seconds, that Ocean must wait between scaling actions.
+
+**Evaluation Period**
+
+The specific number of evaluation periods before a scale-down action takes place. Each cycle is one minute. Evaluation period is the length of time to collect and evaluate the metric.
+
+> **Note**: The evaluation period is calculated based on cooldown plus 3 minutes of padding due to delay in Cloudwatch metrics. So if the cooldown is set to 300 seconds, the evaluation period is 8 minutes (3 minutes + 5 cooldown).
+
+ </div>
+
+ </details>
+
+
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceandisconnectcluster">EKS: How can I disconnect a cluster from Ocean?</summary>
 
   <div style="padding-left:16px">
@@ -267,32 +293,6 @@ The cluster autoscaler only takes care of provisioning the required number of no
 
 Essentially, if the load increases on your cluster, then Kubernetes will create more replicas, and Ocean will launch nodes for the new pods. Kubernetes HPA will create pods and Ocean will launch new nodes for pods to be scheduled.
    
- </div>
-
- </details>
-
-
-  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceancooldowneval">EKS, GKE: What's the difference between cooldown period and evaluation period?</summary>
-
-  <div style="padding-left:16px">
-
-Whenever Spot performs a scaling action, there is a cooldown period during which no further scaling action takes place. After the cooldown period, another scaling action can take place if required.
-
-**Cooldown Period**
-
-The cooldown period is the amount of time, in seconds, after a scaling activity completes before any further trigger-related scaling activities can start.
-
-For example, if scaling policy A has cooldown set to 60 seconds and a scale-down is triggered, then new scale-downs cannot start because of policy A for the next minute. New policies cannot go into effect while policy A is in cooldown.
-
-Cooldown period is the amount of time, in seconds, that Ocean must wait between scaling actions.
-
-**Evaluation Period**
-
-The specific number of evaluation periods before a scale-down action takes place. Each cycle is one minute. Evaluation period is the length of time to collect and evaluate the metric.
-
-> **Note**: The evaluation period is calculated based on cooldown plus 3 minutes of padding due to delay in Cloudwatch metrics. So if the cooldown is set to 300 seconds, the evaluation period is 8 minutes (3 minutes + 5 cooldown).
-
  </div>
 
  </details>
