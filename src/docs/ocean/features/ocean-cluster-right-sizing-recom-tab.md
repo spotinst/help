@@ -135,7 +135,7 @@ To delete a right sizing rule:
 
 ### Acknowledge a Workload Rollback
 
-If a workload encounters an OOM error, Ocean rolls back to the original deployment request and suspends the attachment of the workload to the rule. The workload moves to **rollback** status. When at least one workload has rollback status, the <img height="20" src="https://github.com/user-attachments/assets/6160df45-992e-41a8-bcc2-5af1bee732ff" /> button appears at the top-right of the screen. 
+If a workload encounters an OOM error, Ocean rolls back to the original deployment request and suspends the workload's attachment to the rule. The workload moves to **rollback** status. When at least one workload has rollback status, the <img height="20" src="https://github.com/user-attachments/assets/6160df45-992e-41a8-bcc2-5af1bee732ff" /> button appears at the top-right of the screen. 
 
 To acknowledge a workload rollback:
 
