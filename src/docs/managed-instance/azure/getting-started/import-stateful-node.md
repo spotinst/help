@@ -58,3 +58,10 @@ When the network persistency is also activated, the following actions will be do
 
 * If the original virtual machine is running- the new virtual machine will run after the import.
 * If the original virtual machine is stopped- after the import, the new virtual machine will be launched and transitioned to the running status, ensuring its functionality and confirming a successful import. The virtual machine will then transition directly to the stopped state.
+* Default Behavior of VM size selection: If the `spotSizeAttributes` or `spotSizes` are not set, then the stateful node’s spot sizes are defined with the attributes of the imported virtual machine. 
+
+**Example**:
+
+When the default attributes are used, the list of available spot virtual machine sizes expands to include all the virtual machine sizes that share the same attributes:
+
+<img width="1197" alt="import-stateful-azure" src="https://github.com/user-attachments/assets/c94a32cb-a714-48ae-beea-128cae9e479b">
