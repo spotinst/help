@@ -203,9 +203,8 @@ Monitor the following key metrics to understand how Ocean scales.
 
 ## Related Links
 
-The template is also available in the [Spot Ocean public repository](https://github.com/spotinst/spot-ocean-grafana-dashboards), where you can submit feedback regarding any issues or propose new features to enhance the dashboard’s functionality further.
-
----I will add a link to the Grafana setup and configuration file---
+* The Grafana template is also available in the [Spot Ocean public repository](https://github.com/spotinst/spot-ocean-grafana-dashboards), where you can submit feedback regarding any issues or propose new features to enhance the dashboard’s functionality.
+* [Grafana Setup and Configuration](https://github.com/spotinst/help/tree/master/src/docs/ocean/tools-and-integrations/setup-and-config-grafane-4-ocean)
 
 
 
