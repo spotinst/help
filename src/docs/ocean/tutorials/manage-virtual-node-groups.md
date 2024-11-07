@@ -2,9 +2,9 @@
 
 Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>
 
-This topic describes how to work with virtual node groups for AWS Kubernetes.
+This topic describes how to work with [virtual node groups (VNGs)](ocean/features/launch-specifications.md) for AWS Kubernetes.
 
-[virtual node groups](ocean/features/launch-specifications.md) (VNGs) provide a single layer of abstraction that enables you to manage different types of workloads on the same cluster.
+Virtual node groups provide a single layer of abstraction that enables you to manage different types of workloads on the same cluster.
 
 ## Prerequisites
 
