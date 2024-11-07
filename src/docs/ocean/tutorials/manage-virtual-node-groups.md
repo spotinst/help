@@ -137,13 +137,13 @@ Before configuring with this option, consider the following limitations:
   1. Click **set to automatic** in the banner or the tooltip. The dialog that appears reflects the current configuration of the Template/Default VNG and the recommended change.
   2. Set the instanceTypes on the template/Default VNG to null and use filters on the custom virtual node group or accept the settings.
 * If any custom VNG is set with `launchSpec.instanceTypesFilters!=null`, you cannot add a whitelist or filters on the template/default VNG level. The **Advanced Selection** and **Manual Selection** radio buttons are grayed, with a tooltip on hover and a banner indicating the reason.
+need screen here with good example
   1. Click **view details** in the banner or the tooltip. The dialog that appears includes all the custom VNGs set with `launchSpec.instanceTypesFilters != null`
+  2. If you want to set filters on the default virtual node group, click the virtual node group name and then configure by either **Manual Selection** or **Automatic Selection**.
  
- need screen here with good example
  
-  3. If you want to set filters on the default virtual node group, click the virtual node group name and then configure by either **Manual Selection** or **Automatic Selection**.
-  
-![advanced-filtering](https://github.com/user-attachments/assets/cee0e71f-cdf0-4fec-a7d3-b97589ee7627)
+   
+<img width="800" src="https://github.com/user-attachments/assets/cb469345-e56d-400d-9560-4e7df11fbcee" />
 
 The Advanced instance types size filtering controls to the right of the instance types selection list let you filter the following attributes:
 
