@@ -2,6 +2,8 @@
 
 # Set up and Configure Grafana for Ocean
 
+Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>
+
 Before you begin, make sure you have all of the following prerequisites:
 
 * Prometheus server and Grafana server: employed in the cluster.
