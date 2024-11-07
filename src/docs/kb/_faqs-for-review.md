@@ -448,7 +448,7 @@ The next steps are intuitive and should be configured according to the customer'
    
    * [In the Spot console](managed-instance/features/data-volume-persistence?id=deallocated), you choose what gets deallocated.
 
-   * [Using the API](api/#tag/Stateful-Node-AWS/operation/AWSManagedInstanceDelete), `deallocationConfig` defaults to <i>false</i> and the <font color="#FC01CC">resrouces are deallocated</font>.
+   * [Using the API](api/#tag/Stateful-Node-AWS/operation/AWSManagedInstanceDelete), `deallocationConfig` defaults to <i>false</i> and the <font color="#FC01CC">resources are deallocated</font>.
 
    * Using Terraform, ______________
 <font color="#FC01CC">link? and what's the command?  When using Terraform and executing the following command - terraform destroy the default values for deleting a node are set to true.</font>
