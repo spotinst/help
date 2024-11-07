@@ -439,4 +439,20 @@ The next steps are intuitive and should be configured according to the customer'
 
 ## Elastigroup Stateful Node
 
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ssn-delete">AWS: Are stateful node resources deallocated when I delete an instance?</summary>
 
+  <div style="padding-left:16px">
+
+   When you delete a stateful node:
+   
+   * [In the Spot console](managed-instance/features/data-volume-persistence?id=deallocated), you choose what gets deallocated.
+
+   * [Using the API](api/#tag/Stateful-Node-AWS/operation/AWSManagedInstanceDelete), `deallocationConfig` defaults to <i>false</i> and the <font color="#FC01CC">resrouces are deallocated</font>.
+
+   * Using Terraform, ______________
+<font color="#FC01CC">link? and what's the command?  When using Terraform and executing the following command - terraform destroy the default values for deleting a node are set to true.</font>
+   
+ </div>
+
+ </details>
