@@ -134,7 +134,7 @@ To delete a right sizing rule:
 
 ### Acknowledge a Workload Rollback
 
-When Ocean cannot apply the attached right-sizing rule to a workload because of OOM or other Kubernetes issues, the workload is automatically rolled back and moved to **rollback** status. When at least one workload is in rollback status, the <img height="20" src="https://github.com/user-attachments/assets/6160df45-992e-41a8-bcc2-5af1bee732ff" /> button appears at the top-right of the screen. 
+If a workload encounters an OOM error, Ocean rolls back to the original deployment request and suspends the attachment of the workload to the rule. The workload moves to **rollback** status. When at least one workload has rollback status, the <img height="20" src="https://github.com/user-attachments/assets/6160df45-992e-41a8-bcc2-5af1bee732ff" /> button appears at the top-right of the screen. 
 
 To acknowledge a workload rollback:
 
@@ -142,7 +142,7 @@ To acknowledge a workload rollback:
 
 ![right-sozomg-rollback-dialog](https://github.com/user-attachments/assets/4bb206f5-73e3-4b26-b7fb-19e5e519505f)
 
-* The rollback drill down list contains the following information:
+* The rollback drill-down list contains the following information:
    * Workload name.
    * Namespace.
    * CPU Update in vCPUs (before and after rollback).
