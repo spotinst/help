@@ -150,7 +150,7 @@ To acknowledge a workload rollback:
    * Memory Update in MiBs (before and after update).
    * Rollback Time: In format MM/DD/YYYY HH:MM:SS AM/PM
 
-2. Select the checkboxes for the workloads to roll back.
+2. Select the checkboxes for the required workloads.
 3. Click **I Acknowledge the Rollback**.
 
 The workloads are displayed in the [Workloads Optimization List](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=workloads-optimization-list) without any attached rules. Before attaching a rule to a rolled-back workload, first fix the issue.
