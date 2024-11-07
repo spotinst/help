@@ -39,6 +39,7 @@ This list displays your right-sizing recommendations per workload and lets you d
    > - Red status: The Workload is not optimized.
    > - Orange or gray status: Hover over the workload optimization status to view more details in a tooltip.
    > - There are no vCPU / memory recommendations or Potential monthly max if a workload is fully optimized. Savings are displayed for the workload because Ocean is already optimizing it.
+   > - If the <img height="20" src="https://github.com/user-attachments/assets/6160df45-992e-41a8-bcc2-5af1bee732ff" /> button appears on the right of the screen, workloads were moved to rollback status. See [Acknowledge a Workload Rollback](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=acknowledge-a-workload-rollback)
 
 The graphical display above the list shows the breakdown of these workload optimization statuses.
 
@@ -120,7 +121,7 @@ To detach a rule from one or more workloads:
 1.   Select workloads in the Workloads Optimization list.
 2.   From the Actions drop-down menu above the list, click **Detach Rule**.
 
->**Important**: If you encounter any Kubernetes issues, we recommend detaching workloads from rules and rolling them in your cluster.
+>**Important**: If you encounter Kubernetes issues, we recommend detaching workloads from rules and rolling them in your cluster.
 
 ###   Delete a Right-Sizing Rule 
 
@@ -130,6 +131,28 @@ To delete a right sizing rule:
 2.   When the confirmation message appears, Click **Delete**, or **Cancel** (if you are unsure). 
 
 >**Important**: You cannot restore a deleted right-sizing rule. In addition, a rule may be deleted only if it is no longer attached to a workload.
+
+### Acknowledge a Workload Rollback
+
+If a workload encounters an OOM error, Ocean rolls back to the original deployment request and suspends the attachment of the workload to the rule. The workload moves to **rollback** status. When at least one workload has rollback status, the <img height="20" src="https://github.com/user-attachments/assets/6160df45-992e-41a8-bcc2-5af1bee732ff" /> button appears at the top-right of the screen. 
+
+To acknowledge a workload rollback:
+
+1. Click **Acknowledge Rollback** to view all the workloads with the rollback status.
+
+![right-sozomg-rollback-dialog](https://github.com/user-attachments/assets/4bb206f5-73e3-4b26-b7fb-19e5e519505f)
+
+* The rollback drill-down list contains the following information:
+   * Workload name.
+   * Namespace.
+   * CPU Update in vCPUs (before and after rollback).
+   * Memory update in MiBs (before and after update).
+   * Rollback Time: In format MM/DD/YYYY HH:MM:SS AM/PM
+
+2. Select the checkboxes for the workloads to roll back.
+3. Click **I Acknowledge the Rollback**.
+
+The workloads are displayed in the Workloads Optimization List without any attached rules. Before attaching a rule to a rolled-back workload, first fix the issue.
 
 ## Best Practices
 
