@@ -63,8 +63,8 @@ When you select Import, a one-time process occurs. Import copies values from the
 
 * Name: The name you assign to the new virtual node group.
 * Image: The Amazon machine image (AMI) used for the virtual node group.
-* Security Groups: The security groups that apply to the VNG. You can choose up to five groups as per the [AWS limitation](https://docs.aws.amazon.com/vpc/latest/userguide/amazon-vpc-limits.html#vpc-limits-security-groups).
-* Subnets: The subnets that apply to the VNG. You can choose multiple subnets.
+* Security Groups: These are the security groups that apply to the virtual node group. As per the [AWS limitation](https://docs.aws.amazon.com/vpc/latest/userguide/amazon-vpc-limits.html#vpc-limits-security-groups), you can select up to five groups.
+* Subnets: The subnets that apply to the virtual node group. You can choose multiple subnets.
 * Root Volume Size: The root volume size in GiB. This field and `blockDeviceMappings` cannot be used in the same VNG.
 * Instance Profile: The iamRole object that applies to the instance profile.
 * User Data (Startup Script): User data script to set in Base64-encoded MIME.
@@ -140,10 +140,8 @@ Before configuring with this option, consider the following limitations:
 need screen here with good example
   1. Click **view details** in the banner or the tooltip. The dialog that appears includes all the custom VNGs set with `launchSpec.instanceTypesFilters != null`
   2. If you want to set filters on the default virtual node group, click the virtual node group name and then configure by either **Manual Selection** or **Automatic Selection**.
- 
- 
-   
-<img width="800" src="https://github.com/user-attachments/assets/cb469345-e56d-400d-9560-4e7df11fbcee" />
+  
+<img width="1000" src="https://github.com/user-attachments/assets/cb469345-e56d-400d-9560-4e7df11fbcee" />
 
 The Advanced instance types size filtering controls to the right of the instance types selection list let you filter the following attributes:
 
