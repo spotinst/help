@@ -43,6 +43,241 @@ There are a number of <a href="/administration/sso-access-control">attributes th
 
 ## Ocean
 
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanunnamedvng">AWS, Azure, GCP: Why is my instance in an unnamed virtual node group?</summary>
+
+  <div style="padding-left:16px">
+
+A node is running in an Ocean cluster and is an unnamed virtual node group.
+
+<img width="900" src="https://github.com/user-attachments/assets/5e581d00-b1c8-4bdb-8e89-c19ef79ad1f1">
+
+This can happen if your virtual node group was deleted in Terraform. When you delete a virtual node group in Terraform, the `spotinst_ocean_aws_launch_spec` > `delete_nodes` needs to be manually set to <i>true</i> in the [Terraform resource](https://registry.terraform.io/providers/spotinst/spotinst/latest/docs/resources/ocean_aws_launch_spec#delete_nodes). If it's not set to <i>true</i>, the node will keep running and not be in a virtual node group.
+
+ </div>
+ 
+ </details>
+
+ 
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceancost">AKS, ECS, EKS, GKE: Why is the cost analysis in the Ocean dashboard unusually high for yesterday?</summary>
+
+  <div style="padding-left:16px">
+
+Cost Analysis in the Ocean Dashboard can show an unusually high cost for yesterday.
+
+![oceancostanalysis](https://github.com/user-attachments/assets/96cbe1c7-fa63-4df1-89bb-18154e9778cb)
+
+If you look at the same day a few days later, the cost will be similar to the other days.
+
+![oceancostanalysis2](https://github.com/user-attachments/assets/6a11a3a9-a2b1-405a-b274-c2a5370bff43)
+
+Spot's Cost Analysis reviews the cost data after one day. For instance, if today is August 20, the cost analysis data will be finalized only on August 21.
+
+Initially, the costs are compared with the on demand value of the instance types, followed by the Spot value. Afterwards, the costs are compared with reserved instances and saving plans. So, if the you have reserved instances and saving plans configured, the cost gap from the previous day can be higher. 
+
+
+ </div>
+
+ </details>
+
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceank8sheadroom">AKS, EKS, GKE: Can I configure automatic headroom using Kubernetes Operations (kOps)?</summary>
+
+  <div style="padding-left:16px">
+
+You can configure [automatic headroom](ocean/features/headroom) using kOps at the cluster level, not at a virtual node group level. Add these [metadata labels](/ocean/tools-and-integrations/kops/metadata-labels):
+
+<code>spotinst.io/autoscaler-auto-config: "true"
+spotinst.io/autoscaler-auto-headroom-percentage : {Value}
+spotinst.io/ocean-default-launchspec: "true"</code>
+
+Here's an example of a config file:
+
+<code>apiVersion: kops.k8s.io/v1alpha2
+kind: InstanceGroup
+metadata:
+name: "test-vng-2"
+
+labels:
+kops.k8s.io/cluster: "erez-via-2.ts.ek8s.com"
+spotinst.io/spot-percentage: "50"
+spotinst.io/autoscaler-auto-config: "true"
+spotinst.io/ocean-default-launchspec: "true"
+spotinst.io/autoscaler-auto-headroom-percentage: "20"
+spotinst.io/autoscaler-headroom-num-of-units: "2"
+spotinst.io/autoscaler-resource-limits-max-vcpu: "2"
+spotinst.io/autoscaler-headroom-mem-per-unit: "1024"
+spotinst.io/autoscaler-headroom-gpu-per-unit: "0"
+
+spec:
+role: Node
+maxSize: 1
+minSize: 1</code>
+
+ </div>
+
+ </details>
+
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanhelm">AKS, EKS, GKE: Can I manage my Kubernetes cluster deployment using Helm charts?</summary>
+
+  <div style="padding-left:16px">
+
+  You can manage your Kubernetes cluster deployment using Helm charts. You can can also [update the Ocean controller version](/tutorials/spot-kubernetes-controller/install-with-helm) using Helm charts.
+
+The Helm chart YAML file has a version that points to a specific app version in the relevant [Spotinst repository](https://github.com/spotinst/spotinst-kubernetes-helm-charts/blob/master/charts/spotinst-kubernetes-cluster-controller/Chart.yaml). Every version in the repository is compatible with a [specific controller version](https://artifacthub.io/packages/helm/spotinst/spotinst-kubernetes-cluster-controller). 
+   
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceank8sreadiness">AKS, EKS, GKE: Why am I getting an <i>exit code 137</i> error?</summary>
+
+  <div style="padding-left:16px">
+
+Your liveness probe failed, and you’re getting exit code 137. <font color="#FC01CC">liveliness or readiness probe failed?</font>
+
+Controller pod error:
+<code>Warning Unhealthy 3m44s (x273 over 78m) kubelet Readiness probe failed: Get http://172.16.6.53:4401/healthcheck: dial tcp 172.16.6.53:4401: connect: connection refused</code> <font color="#FC01CC">is all this okay to include? or do I need to anonymize the urls?</font>
+
+Exit code from controller logs:
+<pre><code>INFO [2024-01-03 19:10:31,863] [main] PushAutoScalerDataCmd - Pushing autoScaler data
+
+command terminated with exit code 137</code></pre>
+
+The liveness probe failed error typically happens when a node is overcommitted, and the controller pod does not respond to the check at the right time.
+Exit code 137 usually means out-of-memory issues.vlivelness or readiness?</font>
+
+**Liveness probe failure** <font color="#FC01CC">include these links? livelness or readiness?</font>
+
+•	Define readiness probes: https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/#define-readiness-probes
+•	Kubernetes readiness probe failed error: https://stackoverflow.com/questions/48540929/kubernetes-readiness-probe-failed-error
+
+**Exit code 137** <font color="#FC01CC">include these links?</font>
+What Is Exit Code 137? https://foxutech.medium.com/how-to-fix-exit-code-137-kubernetes-memory-issues-c3a40f89c90d#:~:text=A%20137%20code%20is%20issued,encounter%20a%20137%20exit%20code
+
+
+<code>Kubernetes Autoscaler, Deadlock for Pod: '{pod-name}' 
+Can't scale up an Instance since PersistentVolumeClaim: 
+'{PVC-name}' 
+VolumeId: '{vol-name}' is already attached to an existing Instance: 
+'{instance-ID}' Please consider using a new PersistentVolumeClaim or open a 
+support ticket.
+</code>
+
+This can happen when the pod has a claim for a specific volume owned by a different instance, and that instance does not have free space for the pod.
+
+By freeing up space, the pod can be placed on its attached node and can use the volume it claimed.
+
+ </div>
+
+ </details>
+
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceandisconnectcluster">EKS: How can I disconnect a cluster from Ocean?</summary>
+
+  <div style="padding-left:16px">
+
+   You can safely disconnect Ocean from an existing EKS Cluster:
+
+1. Increase the number of instances in the ASG attached to the EKS cluster. This way, the pods that run on the nodes managed by Spot will be able to reschedule on the new instances and avoid downtime.
+2. In the Spot console, go to **Ocean** > **Cloud Clusters**, and select the cluster.
+3. Click **Actions** > **Edit Cluster**.
+4. On the Review tab, click **JSON** > **Edit Mode**.
+5. Change **capacity** > **Minimum**, **Maximum**, and **Target** to <i>0</i>.
+
+   <img width="144" alt="oceandisconnectcluster" src="https://github.com/user-attachments/assets/ec722def-980f-4754-ab0d-b2751bf67a81">
+
+   The instances managed by Ocean will be detached and the pods will be rescheduled on the new instances launched by AWS ASG.
+6. In the Spot console, go to **Ocean** > **Cloud Clusters**, and select the cluster.
+7. Click **Actions** > **Delete**.
+ 
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanunauthorized">EKS: Why am I getting a <i>You must be logged in to the server (unauthorized)</i> error when creating an EKS cluster?</summary>
+
+  <div style="padding-left:16px">
+
+   When you create an Ocean EKS cluster, you may get this error when in step 4 (run 'kubectl get svc'):
+   <code>You must be logged in to the server (Unauthorized).</code>
+
+   This can happen:
+   * When an Amazon EKS cluster is created, the IAM entity (user or role) that creates the cluster is added to the Kubernetes RBAC authorization table as the administrator. Initially, only that IAM user can make calls to the Kubernetes API server using kubectl. The user trying to run the 'kubectl get svc' command has no permission at all. You need to [add access to other AWS users](https://stackoverflow.com/questions/50791303/kubectl-error-you-must-be-logged-in-to-the-server-unauthorized-when-accessing).<font color="#FC01CC">should we link to stackoverflow or to an AWS page?</font>
+   * If you're using a different IAM account for AWS CLI than the IAM account you used for the CloudFormation template when you created the EKS in the AWS console. Run 'aws configure' and switch the AWS CLI to use the same IAM account that was used for the CloudFormation template when you created the EKS.
+   
+ </div>
+
+ </details>
+
+ 
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanmaxpods">EKS: I got a <i>Maximum Pods configuration reached</i> message, how do I troubleshoot?</summary>
+
+  <div style="padding-left:16px">
+
+   If you get a `Maximum Pods configuration reached` message for a node in the console:
+   * It usually means that you reached the EKS [maximum pod limit](https://github.com/awslabs/amazon-eks-ami/blob/master/files/eni-max-pods.txt). For example, the EKS maximum pod limitation for r4.large is 29.<font color="#FC01CC">broken link..is one of these correct?
+     https://github.com/awslabs/amazon-eks-ami/blob/main/templates/shared/runtime/eni-max-pods.txt
+     https://github.com/awslabs/amazon-eks-ami/blob/main/nodeadm/internal/kubelet/eni-max-pods.txt
+     </font>
+     You can [increase the EKS maximum pods](https://aws.amazon.com/blogs/containers/amazon-vpc-cni-increases-pods-per-node-limits/) in AWS.<font color="#FC01CC">should I include the stackoverflow in addition? https://stackoverflow.com/questions/57970896/pod-limit-on-node-aws-eks#:~:text=For%20t3.,22%20pods%20in%20your%20cluster</font>
+     
+   * If the node has less pods than the EKS maximum pod limit, then it's likely the **max-pods** limit set at the user data level in the Ocean configuration. Increase this limit for the user data in Ocean and roll the cluster.<font color="#FC01CC">how do they do this? is this relevant: https://docs.spot.io/ocean/features/roll</font>
+   If you continue to get this error, roll the cluster again and disable **Respect Pod Disruption Budget (PDB)**. You can also manually terminate the node.
+   
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanhpa">EKS: Can I check Ocean EKS clusters' horizontal pod autoscaling (HPA) policy?</summary>
+
+  <div style="padding-left:16px">
+
+   Ocean doesn't actually have a horizontal pod autoscaling (HPA) policy. The HPA is essentially operating on the Kubernetes side so Ocean itself doesn't have an HPA.
+
+The cluster autoscaler only takes care of provisioning the required number of nodes.
+
+Essentially, if the load increases on your cluster, then Kubernetes will create more replicas, and Ocean will launch nodes for the new pods. Kubernetes HPA will create pods and Ocean will launch new nodes for pods to be scheduled.
+   
+ </div>
+
+ </details>
+
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceancooldowneval">EKS, GKE: What's the difference between cooldown period and evaluation period?</summary>
+
+  <div style="padding-left:16px">
+
+Whenever Spot performs a scaling action, there is a cooldown period during which no further scaling action takes place. After the cooldown period, another scaling action can take place if required.
+
+**Cooldown Period**
+
+The cooldown period is the amount of time, in seconds, after a scaling activity completes before any further trigger-related scaling activities can start.
+
+For example, if scaling policy A has cooldown set to 60 seconds and a scale-down is triggered, then new scale-downs cannot start because of policy A for the next minute. New policies cannot go into effect while policy A is in cooldown.
+
+Cooldown period is the amount of time, in seconds, that Ocean must wait between scaling actions.
+
+**Evaluation Period**
+
+The specific number of evaluation periods before a scale-down action takes place. Each cycle is one minute. Evaluation period is the length of time to collect and evaluate the metric.
+
+> **Note**: The evaluation period is calculated based on cooldown plus 3 minutes of padding due to delay in Cloudwatch metrics. So if the cooldown is set to 300 seconds, the evaluation period is 8 minutes (3 minutes + 5 cooldown).
+
+ </div>
+
+ </details>
+
+ 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanunregcontainer">ECS: Why are my container instances unregistered?</summary>
 
@@ -101,240 +336,6 @@ Registering a container instance with an ECS cluster means you are telling the E
 
  </div>
  
- </details>
-
- <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceank8sheadroom">AKS, EKS, GKE: Can I configure automatic headroom using Kubernetes Operations (kOps)?</summary>
-
-  <div style="padding-left:16px">
-
-You can configure [automatic headroom](ocean/features/headroom) using kOps at the cluster level, not at a virtual node group level. Add these [metadata labels](/ocean/tools-and-integrations/kops/metadata-labels):
-
-<code>spotinst.io/autoscaler-auto-config: "true"
-spotinst.io/autoscaler-auto-headroom-percentage : {Value}
-spotinst.io/ocean-default-launchspec: "true"</code>
-
-Here's an example of a config file:
-
-<code>apiVersion: kops.k8s.io/v1alpha2
-kind: InstanceGroup
-metadata:
-name: "test-vng-2"
-
-labels:
-kops.k8s.io/cluster: "erez-via-2.ts.ek8s.com"
-spotinst.io/spot-percentage: "50"
-spotinst.io/autoscaler-auto-config: "true"
-spotinst.io/ocean-default-launchspec: "true"
-spotinst.io/autoscaler-auto-headroom-percentage: "20"
-spotinst.io/autoscaler-headroom-num-of-units: "2"
-spotinst.io/autoscaler-resource-limits-max-vcpu: "2"
-spotinst.io/autoscaler-headroom-mem-per-unit: "1024"
-spotinst.io/autoscaler-headroom-gpu-per-unit: "0"
-
-spec:
-role: Node
-maxSize: 1
-minSize: 1</code>
-
- </div>
-
- </details>
-
- <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanunauthorized">EKS: Why am I getting a <i>You must be logged in to the server (unauthorized)</i> error when creating an EKS cluster?</summary>
-
-  <div style="padding-left:16px">
-
-   When you create an Ocean EKS cluster, you may get this error when in step 4 (run 'kubectl get svc'):
-   <code>You must be logged in to the server (Unauthorized).</code>
-
-   This can happen:
-   * When an Amazon EKS cluster is created, the IAM entity (user or role) that creates the cluster is added to the Kubernetes RBAC authorization table as the administrator. Initially, only that IAM user can make calls to the Kubernetes API server using kubectl. The user trying to run the 'kubectl get svc' command has no permission at all. You need to [add access to other AWS users](https://stackoverflow.com/questions/50791303/kubectl-error-you-must-be-logged-in-to-the-server-unauthorized-when-accessing).<font color="#FC01CC">should we link to stackoverflow or to an AWS page?</font>
-   * If you're using a different IAM account for AWS CLI than the IAM account you used for the CloudFormation template when you created the EKS in the AWS console. Run 'aws configure' and switch the AWS CLI to use the same IAM account that was used for the CloudFormation template when you created the EKS.
-   
- </div>
-
- </details>
-
-
- <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceank8sreadiness">AKS, EKS, GKE: Why am I getting an <i>exit code 137</i> error?</summary>
-
-  <div style="padding-left:16px">
-
-Your liveness probe failed, and you’re getting exit code 137. <font color="#FC01CC">liveliness or readiness probe failed?</font>
-
-Controller pod error:
-<code>Warning Unhealthy 3m44s (x273 over 78m) kubelet Readiness probe failed: Get http://172.16.6.53:4401/healthcheck: dial tcp 172.16.6.53:4401: connect: connection refused</code> <font color="#FC01CC">is all this okay to include? or do I need to anonymize the urls?</font>
-
-Exit code from controller logs:
-<pre><code>INFO [2024-01-03 19:10:31,863] [main] PushAutoScalerDataCmd - Pushing autoScaler data
-
-command terminated with exit code 137</code></pre>
-
-The liveness probe failed error typically happens when a node is overcommitted, and the controller pod does not respond to the check at the right time.
-Exit code 137 usually means out-of-memory issues.vlivelness or readiness?</font>
-
-**Liveness probe failure** <font color="#FC01CC">include these links? livelness or readiness?</font>
-
-•	Define readiness probes: https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/#define-readiness-probes
-•	Kubernetes readiness probe failed error: https://stackoverflow.com/questions/48540929/kubernetes-readiness-probe-failed-error
-
-**Exit code 137** <font color="#FC01CC">include these links?</font>
-What Is Exit Code 137? https://foxutech.medium.com/how-to-fix-exit-code-137-kubernetes-memory-issues-c3a40f89c90d#:~:text=A%20137%20code%20is%20issued,encounter%20a%20137%20exit%20code
-
-
-<code>Kubernetes Autoscaler, Deadlock for Pod: '{pod-name}' 
-Can't scale up an Instance since PersistentVolumeClaim: 
-'{PVC-name}' 
-VolumeId: '{vol-name}' is already attached to an existing Instance: 
-'{instance-ID}' Please consider using a new PersistentVolumeClaim or open a 
-support ticket.
-</code>
-
-This can happen when the pod has a claim for a specific volume owned by a different instance, and that instance does not have free space for the pod.
-
-By freeing up space, the pod can be placed on its attached node and can use the volume it claimed.
-
- </div>
-
- </details>
-
- <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanmaxpods">EKS: I got a <i>Maximum Pods configuration reached</i> message, how do I troubleshoot?</summary>
-
-  <div style="padding-left:16px">
-
-   If you get a `Maximum Pods configuration reached` message for a node in the console:
-   * It usually means that you reached the EKS [maximum pod limit](https://github.com/awslabs/amazon-eks-ami/blob/master/files/eni-max-pods.txt). For example, the EKS maximum pod limitation for r4.large is 29.<font color="#FC01CC">broken link..is one of these correct?
-     https://github.com/awslabs/amazon-eks-ami/blob/main/templates/shared/runtime/eni-max-pods.txt
-     https://github.com/awslabs/amazon-eks-ami/blob/main/nodeadm/internal/kubelet/eni-max-pods.txt
-     </font>
-     You can [increase the EKS maximum pods](https://aws.amazon.com/blogs/containers/amazon-vpc-cni-increases-pods-per-node-limits/) in AWS.<font color="#FC01CC">should I include the stackoverflow in addition? https://stackoverflow.com/questions/57970896/pod-limit-on-node-aws-eks#:~:text=For%20t3.,22%20pods%20in%20your%20cluster</font>
-     
-   * If the node has less pods than the EKS maximum pod limit, then it's likely the **max-pods** limit set at the user data level in the Ocean configuration. Increase this limit for the user data in Ocean and roll the cluster.<font color="#FC01CC">how do they do this? is this relevant: https://docs.spot.io/ocean/features/roll</font>
-   If you continue to get this error, roll the cluster again and disable **Respect Pod Disruption Budget (PDB)**. You can also manually terminate the node.
-   
- </div>
-
- </details>
-
- <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanhpa">EKS: Can I check Ocean EKS clusters' horizontal pod autoscaling (HPA) policy?</summary>
-
-  <div style="padding-left:16px">
-
-   Ocean doesn't actually have a horizontal pod autoscaling (HPA) policy. The HPA is essentially operating on the Kubernetes side so Ocean itself doesn't have an HPA.
-
-The cluster autoscaler only takes care of provisioning the required number of nodes.
-
-Essentially, if the load increases on your cluster, then Kubernetes will create more replicas, and Ocean will launch nodes for the new pods. Kubernetes HPA will create pods and Ocean will launch new nodes for pods to be scheduled.
-   
- </div>
-
- </details>
-
-
-  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceancost">AKS, ECS, EKS, GKE: Why is the cost analysis in the Ocean dashboard unusually high for yesterday?</summary>
-
-  <div style="padding-left:16px">
-
-Cost Analysis in the Ocean Dashboard can show an unusually high cost for yesterday.
-
-![oceancostanalysis](https://github.com/user-attachments/assets/96cbe1c7-fa63-4df1-89bb-18154e9778cb)
-
-If you look at the same day a few days later, the cost will be similar to the other days.
-
-![oceancostanalysis2](https://github.com/user-attachments/assets/6a11a3a9-a2b1-405a-b274-c2a5370bff43)
-
-Spot's Cost Analysis reviews the cost data after one day. For instance, if today is August 20, the cost analysis data will be finalized only on August 21.
-
-Initially, the costs are compared with the on demand value of the instance types, followed by the Spot value. Afterwards, the costs are compared with reserved instances and saving plans. So, if the you have reserved instances and saving plans configured, the cost gap from the previous day can be higher. 
-
-
- </div>
-
- </details>
-
-
-  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceancooldowneval">EKS, GKE: What's the difference between cooldown period and evaluation period?</summary>
-
-  <div style="padding-left:16px">
-
-Whenever Spot performs a scaling action, there is a cooldown period during which no further scaling action takes place. After the cooldown period, another scaling action can take place if required.
-
-**Cooldown Period**
-
-The cooldown period is the amount of time, in seconds, after a scaling activity completes before any further trigger-related scaling activities can start.
-
-For example, if scaling policy A has cooldown set to 60 seconds and a scale-down is triggered, then new scale-downs cannot start because of policy A for the next minute. New policies cannot go into effect while policy A is in cooldown.
-
-Cooldown period is the amount of time, in seconds, that Ocean must wait between scaling actions.
-
-**Evaluation Period**
-
-The specific number of evaluation periods before a scale-down action takes place. Each cycle is one minute. Evaluation period is the length of time to collect and evaluate the metric.
-
-> **Note**: The evaluation period is calculated based on cooldown plus 3 minutes of padding due to delay in Cloudwatch metrics. So if the cooldown is set to 300 seconds, the evaluation period is 8 minutes (3 minutes + 5 cooldown).
-
- </div>
-
- </details>
-
-
-  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanunnamedvng">AWS, Azure, GCP: Why is my instance in an unnamed virtual node group?</summary>
-
-  <div style="padding-left:16px">
-
-A node is running in an Ocean cluster and is an unnamed virtual node group.
-
-<img width="900" src="https://github.com/user-attachments/assets/5e581d00-b1c8-4bdb-8e89-c19ef79ad1f1">
-
-This can happen if your virtual node group was deleted in Terraform. When you delete a virtual node group in Terraform, the `spotinst_ocean_aws_launch_spec` > `delete_nodes` needs to be manually set to <i>true</i> in the [Terraform resource](https://registry.terraform.io/providers/spotinst/spotinst/latest/docs/resources/ocean_aws_launch_spec#delete_nodes). If it's not set to <i>true</i>, the node will keep running and not be in a virtual node group.
-
- </div>
- 
- </details>
-
-  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceandisconnectcluster">EKS: How can I disconnect a cluster from Ocean?</summary>
-
-  <div style="padding-left:16px">
-
-   You can safely disconnect Ocean from an existing EKS Cluster:
-
-1. Increase the number of instances in the ASG attached to the EKS cluster. This way, the pods that run on the nodes managed by Spot will be able to reschedule on the new instances and avoid downtime.
-2. In the Spot console, go to **Ocean** > **Cloud Clusters**, and select the cluster.
-3. Click **Actions** > **Edit Cluster**.
-4. On the Review tab, click **JSON** > **Edit Mode**.
-5. Change **capacity** > **Minimum**, **Maximum**, and **Target** to <i>0</i>.
-
-   <img width="144" alt="oceandisconnectcluster" src="https://github.com/user-attachments/assets/ec722def-980f-4754-ab0d-b2751bf67a81">
-
-   The instances managed by Ocean will be detached and the pods will be rescheduled on the new instances launched by AWS ASG.
-6. In the Spot console, go to **Ocean** > **Cloud Clusters**, and select the cluster.
-7. Click **Actions** > **Delete**.
- 
- </div>
-
- </details>
-
-
- <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanhelm">AKS, EKS, GKE: Can I manage my Kubernetes cluster deployment using Helm charts?</summary>
-
-  <div style="padding-left:16px">
-
-  You can manage your Kubernetes cluster deployment using Helm charts. You can can also [update the Ocean controller version](/tutorials/spot-kubernetes-controller/install-with-helm) using Helm charts.
-
-The Helm chart YAML file has a version that points to a specific app version in the relevant [Spotinst repository](https://github.com/spotinst/spotinst-kubernetes-helm-charts/blob/master/charts/spotinst-kubernetes-cluster-controller/Chart.yaml). Every version in the repository is compatible with a [specific controller version](https://artifacthub.io/packages/helm/spotinst/spotinst-kubernetes-cluster-controller). 
-   
- </div>
-
  </details>
 
 <!----------------------------------elastigroup---------------------------------->
