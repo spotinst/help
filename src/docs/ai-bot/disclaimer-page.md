@@ -1,10 +1,8 @@
 <meta name="robots" content="noindex">
 
-# SPOT BY NETAPP AI SUPPORT ASSISTANT (AISA) 
+# SPOT BY NETAPP AI SUPPORT ASSISTANT (AISA) DISCLAIMER
 
-## DISCLAIMER
-
-### Terms of Use
+## Terms of Use
 
 <font color="#FC01CC">AISA</font> is Spot by NetApp's generative **AI-powered Support Assistant** on the [Spot by NetApp console](https://console.spotinst.com/overview/dashboard).
 
