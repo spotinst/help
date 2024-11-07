@@ -4,7 +4,15 @@ Elastigroup assists in optimizing the usage of [committed use discounts (CUDs)](
 
 This feature enables you to utilize your existing committed use discounts before considering the addition of extra resources and makes efficient use of your cloud resources. 
 
-This procedure describes how you can utilize your GCP committed use discounts in your Elastigroup:
+Elastigroup manages the committed use discount virtual machines by automatic: 
+
+* **Scale up**: Elastigroup uses the commitment utilization status to decide when to scale up on-demand virtual machines instead of spot instances. This helps utilize commitment plans in markets they apply to.
+
+* **Scale down**: Instances that use commitment plans are given priority during the scale down process, ensuring the commitment plan strategy is maintained.
+
+* **Revert to reserved**: Elastigroup ensures that the group’s strategy to utilize commitment plans is maintained. This is done by checking if there are spot instances in the group that can be replaced with on-demand instances that utilize commitment plans.
+
+You can utilize your GCP committed use discounts in your Elastigroup:
 * [Resource-based and spend-based commitments](/elastigroup/features/gcp/commit-use-discount?id=resource-based-and-spend-based-commitments)
 * [Spend-based commitments](/elastigroup/features/gcp/commit-use-discount?id=spend-based-commitments)
 * [Resource-based commitment with a billing account](/elastigroup/features/gcp/commit-use-discount?id=resource-based-commitment-with-a-billing-account)
