@@ -82,7 +82,7 @@ For information about defining preferred spot instance types in the Spot API (us
 
 <!-- Section below added 15-07-2024 for DOC-1912 -->
 
-##  Preferred On-Demand Instance Types per Virtual Node Group
+###  Preferred On-Demand Instance Types per Virtual Node Group
 
 Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>
 
