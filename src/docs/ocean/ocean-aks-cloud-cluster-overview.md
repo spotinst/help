@@ -103,8 +103,8 @@ This tab displays:
       
      * Node pools for the original and reverted nodes.
      * Number nodes in the old and new node pools.
-     * Hourly cost of the original and reverted nodes.
-     * Hourly cost saved as a percentage: Cost reduction from converting to the new VM type: [old hourly cost - SUM (new hourly cost) * 100]
+     * Hourly cost of the original and reverted nodes. Displays the total cost of all nodes in the same node pool: [nodes count * hourly cost].
+     * Hourly cost saved as a percentage: Cost reduction from converting to the new VM type: [old hourly cost - SUM (new hourly cost) * 100].
      * The Virtual Node Group's name (click the link for a listed VNG to display your custom VNG details).
      * Scale-down timestamp in format MM/DD/YYYY HH: MM: SS
  
