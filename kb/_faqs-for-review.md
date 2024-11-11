@@ -405,11 +405,11 @@ The next steps are intuitive and should be configured according to the customer'
 ## Elastigroup Stateful Node
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ssn-delete">AWS: Are stateful node resources deallocated when I delete an instance?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600">AWS: Are stateful node resources deallocated when I delete an instance?</summary>
 
   <div style="padding-left:16px">
 
-   When you delete a stateful node:
+   <p id="ssn-delete">When you delete a stateful node:</p>
    
    * [In the Spot console](managed-instance/features/data-volume-persistence?id=deallocated), you choose what gets deallocated.
 
