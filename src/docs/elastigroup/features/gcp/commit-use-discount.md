@@ -21,7 +21,7 @@ You can utilize your GCP committed use discounts in your Elastigroup:
 
 1. Log in to the GCP console and type **IAM & Admin** in the search bar.  
 2. In the left main menu, click **IAM**.
-3. Under the *View by Principal* tab, click the Security Insights of a principal that begins with spotinst-role-act-xyz. The <i>Current permissions for Owner role</i> window opens.  
+3. Under the <i>View by Principal</i> tab, click the Security Insights of a principal that begins with spotinst-role-act-xyz. The <i>Current permissions for Owner role</i> window opens.  
 
    <img width="400" height="300" alt="commited-use-discounts-2" src="https://github.com/spotinst/help/assets/106514736/d03723af-d0b9-4730-8680-972c90dd519f">
 
