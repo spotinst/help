@@ -152,49 +152,6 @@ The Helm chart YAML file has a version that points to a specific app version in 
 
  </details>
 
- <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceank8sreadiness">AKS, EKS, GKE: Why am I getting an <i>exit code 137</i> error?</summary>
-
-  <div style="padding-left:16px">
-
-Your liveness probe failed, and you’re getting exit code 137. <font color="#FC01CC">liveliness or readiness probe failed?</font>
-
-Controller pod error:
-<code>Warning Unhealthy 3m44s (x273 over 78m) kubelet Readiness probe failed: Get http://172.16.6.53:4401/healthcheck: dial tcp 172.16.6.53:4401: connect: connection refused</code> <font color="#FC01CC">is all this okay to include? or do I need to anonymize the urls?</font>
-
-Exit code from controller logs:
-<pre><code>INFO [2024-01-03 19:10:31,863] [main] PushAutoScalerDataCmd - Pushing autoScaler data
-
-command terminated with exit code 137</code></pre>
-
-The liveness probe failed error typically happens when a node is overcommitted, and the controller pod does not respond to the check at the right time.
-Exit code 137 usually means out-of-memory issues.vlivelness or readiness?</font>
-
-**Liveness probe failure** <font color="#FC01CC">include these links? livelness or readiness?</font>
-
-•	Define readiness probes: https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/#define-readiness-probes
-•	Kubernetes readiness probe failed error: https://stackoverflow.com/questions/48540929/kubernetes-readiness-probe-failed-error
-
-**Exit code 137** <font color="#FC01CC">include these links?</font>
-What Is Exit Code 137? https://foxutech.medium.com/how-to-fix-exit-code-137-kubernetes-memory-issues-c3a40f89c90d#:~:text=A%20137%20code%20is%20issued,encounter%20a%20137%20exit%20code
-
-
-<code>Kubernetes Autoscaler, Deadlock for Pod: '{pod-name}' 
-Can't scale up an Instance since PersistentVolumeClaim: 
-'{PVC-name}' 
-VolumeId: '{vol-name}' is already attached to an existing Instance: 
-'{instance-ID}' Please consider using a new PersistentVolumeClaim or open a 
-support ticket.
-</code>
-
-This can happen when the pod has a claim for a specific volume owned by a different instance, and that instance does not have free space for the pod.
-
-By freeing up space, the pod can be placed on its attached node and can use the volume it claimed.
-
- </div>
-
- </details>
-
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceancooldowneval">EKS, GKE: What's the difference between cooldown period and evaluation period?</summary>
 
