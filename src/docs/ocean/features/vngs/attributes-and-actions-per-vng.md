@@ -112,6 +112,8 @@ If launching nodes from this preferred list is not feasible, Ocean uses the conf
 
 For information about defining preferred instance types in the Spot API using the `preferreTypes` attribute, see the Create virtual node group API for [Ocean GKE](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKELaunchSpecCreate).  
 
+For the same attribute at cluster level, see the Create Cluster API for [Ocean GKE](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKEClusterCreate)
+
 
 ##  Ephemeral Storage per Virtual Node Group
 
