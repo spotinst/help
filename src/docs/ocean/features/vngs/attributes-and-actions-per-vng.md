@@ -106,13 +106,13 @@ See also [Terraform](https://registry.terraform.io/providers/spotinst/spotinst/l
 
 Cloud service provider relevance: <font color="#FC01CC">GKE</font>
 
-You can set preferred instance types for GKE clusters and virtual node groups (Spot API only). 
-When Ocean scales up VMs, it prioritizes the preferred instance types for launching new nodes. 
-If launching nodes from this preferred list is not feasible, Ocean uses the configured instance types available within the cluster/vng.
+Use the `preferredTypes` attribute for GKE clusters and virtual node groups (Spot API only). 
 
-For information about defining preferred instance types in the Spot API using the `preferreTypes` attribute, see the Create virtual node group API for [Ocean GKE](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKELaunchSpecCreate).  
+When scaling up VMs, Ocean prioritizes preferred instance types for launching new nodes (with 100% weight) unless they are unavailable, in which case Ocean falls back to non-preferred types.
 
-For the same attribute at cluster level, see the Create Cluster API for [Ocean GKE](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKEClusterCreate)
+Use this option if you want to launch new nodes on the cluster (for a specific app or virtual node group) from the list of preferred instance types because they are a good match for workload performance. If GKE cannot launch from preferred VM types for reasons such as out of quotas or low market availability, etc) Ocean will use the configured instance types available within the cluster or virtual node group
+
+For information about defining preferred instance types in the Spot API using the `preferredTypes` attribute, see the Create virtual node group API for [Ocean GKE](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKELaunchSpecCreate), and the Create Cluster API for [Ocean GKE](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKEClusterCreate)
 
 
 ##  Ephemeral Storage per Virtual Node Group
