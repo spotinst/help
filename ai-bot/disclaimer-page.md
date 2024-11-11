@@ -12,6 +12,8 @@ Please be informed that this Beta version of <font color="#FC01CC">AISA</font> g
 
 To ensure accuracy, it is recommended that you verify <font color="#FC01CC">AISA</font> responses by referring to the Spot by NetApp official product documentation. Relying on <font color="#FC01CC">AISA</font> - generated responses are made at your own risk, and Spot by NetApp cannot be held responsible for any issues or difficulties that may arise as a result.
 
+Though <font color="#FC01CC">AISA</font> can respond in several languages, to ensure you have the most accurate information possible, always verify <font color="#FC01CC">AISA</font> responses in the English language.
+
 We encourage you to exercise caution and use <font color="#FC01CC">AISA</font> responses as a supplementary resource rather than the sole basis for decision-making or actions.
 
 ### Conditions
