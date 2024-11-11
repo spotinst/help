@@ -792,6 +792,29 @@ For a network client, only the **account viewer** permission is required for the
  </div>
 
  </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceank8spvcerror">AKS, EKS, GKE: Why am I getting a <i>Kubernetes Autoscaler, Deadlock for Pod</i> error?</summary>
+
+  <div style="padding-left:16px">
+
+You get this error in the log:
+
+<code>Kubernetes Autoscaler, Deadlock for Pod: '{pod-name}' 
+Can't scale up an Instance since PersistentVolumeClaim: 
+'{PVC-name}' 
+VolumeId: '{vol-name}' is already attached to an existing Instance: 
+'{instance-ID}' Please consider using a new PersistentVolumeClaim or open a 
+support ticket.
+</code>
+
+This can happen when the pod has a claim for a specific volume attached to a different instance, and that instance does not have free space for the pod.
+
+By freeing up space, the pod can be placed on its attached node and can use the volume it claimed.
+
+ </div>
+
+ </details>
  
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanfailinstancetypes">AKS, ECS, EKS, GKE: Why does Ocean fail to update instance types?</summary>
@@ -853,24 +876,23 @@ There are two options for restricting pods from scaling down:
 
  </details>
 
- <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceank8spvcerror">AKS, EKS, GKE: Why am I getting a <i>Kubernetes Autoscaler, Deadlock for Pod</i> error?</summary>
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceancost">AKS, ECS, EKS, GKE: Why is the cost analysis in the Ocean dashboard unusually high for yesterday?</summary>
 
   <div style="padding-left:16px">
 
-You get this error in the log:
+Cost Analysis in the Ocean Dashboard can show an unusually high cost for yesterday.
 
-<code>Kubernetes Autoscaler, Deadlock for Pod: '{pod-name}' 
-Can't scale up an Instance since PersistentVolumeClaim: 
-'{PVC-name}' 
-VolumeId: '{vol-name}' is already attached to an existing Instance: 
-'{instance-ID}' Please consider using a new PersistentVolumeClaim or open a 
-support ticket.
-</code>
+![oceancostanalysis](https://github.com/user-attachments/assets/96cbe1c7-fa63-4df1-89bb-18154e9778cb)
 
-This can happen when the pod has a claim for a specific volume attached to a different instance, and that instance does not have free space for the pod.
+If you look at the same day a few days later, the cost will be similar to the other days.
 
-By freeing up space, the pod can be placed on its attached node and can use the volume it claimed.
+![oceancostanalysis2](https://github.com/user-attachments/assets/6a11a3a9-a2b1-405a-b274-c2a5370bff43)
+
+Spot's Cost Analysis reviews the cost data after one day. For instance, if today is August 20, the cost analysis data will be finalized only on August 21.
+
+Initially, the costs are compared with the on demand value of the instance types, followed by the Spot value. Afterwards, the costs are compared with reserved instances and saving plans. So, if the you have reserved instances and saving plans configured, the cost gap from the previous day can be higher. 
+
 
  </div>
 
