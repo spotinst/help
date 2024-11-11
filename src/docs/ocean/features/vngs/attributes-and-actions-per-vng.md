@@ -57,7 +57,7 @@ Whenever you create a Virtual Node Group with the Arm64 and x86 instance types, 
 
 <!-- I took the generic intro information from Preferred Spot Instance Types per Virtual Node Group and put it above -->
 
-##  Preferred Instance Types per Virtual Node Group
+##  Preferred Instance Types per Virtual Node Group (AWS)
 
 Ocean provides a serverless experience in which the specific instances don’t matter, and the best practice is to allow the use of all instance types. However, there are some cases in which a specific instance type may provide better performance or increased cost savings. For example, if you know that your application performs significantly better on M5 instances, then you can save costs by preferring this instance type over others.
 
@@ -99,6 +99,19 @@ For information about defining preferred on-demand instance types in the Spot AP
 When you set `preferredOnDemandTypes`, the Ocean Autoscaler will launch on-demand nodes from the listed types.​
 
 See also [Terraform](https://registry.terraform.io/providers/spotinst/spotinst/latest/docs/resources/ocean_aws_launch_spec#preferred_od_types)
+
+<!-- Section below added for DOC-2009 -->
+
+## Preferred Instance Types per Virtual Node Group (GKE)
+
+Cloud service provider relevance: <font color="#FC01CC">GKE</font>
+
+You can set preferred instance types for GKE clusters and virtual node groups (Spot API only). 
+When Ocean scales up VMs, it prioritizes the preferred instance types for launching new nodes. 
+If launching nodes from this preferred list is not feasible, Ocean uses the configured instance types available within the cluster/vng.
+
+For information about defining preferred instance types in the Spot API using the `preferreTypes` attribute, see the Create virtual node group API for [Ocean GKE](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKELaunchSpecCreate).  
+
 
 ##  Ephemeral Storage per Virtual Node Group
 
