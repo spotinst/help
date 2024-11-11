@@ -243,6 +243,32 @@ The specific number of evaluation periods before a scale-down action takes place
 
  </details>
 
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceandaemonsetpods">EKS: Why are DaemonSet pods not scheduled on all nodes in the cluster?</summary>
+
+  <div style="padding-left:16px">
+
+Your DaemonSet pods are only scheduled on one specific virtual node group, not on all the nodes in a virtual node group in cluster.
+
+This can happen if you use taints on your pods in virtual node groups. You can either use taints on all your pods, or not use taints. You can't mix pods with taints and without taints.
+
+Update your tolerances in the DaemonSet YAML so you can schedule DaemonSet pods on the nodes in virtual node groups with taints.
+
+For example, you can update your [DaemonSet pod YAML](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/) to include:
+
+<pre><code>
+   spec:
+      tolerations:
+      - key: dedicated
+        operator: Equal
+        value: statefulset
+        effect: NoSchedule
+</code></pre>
+
+
+   </div>
+
+ </details>
 
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceandisconnectcluster">EKS: How can I disconnect a cluster from Ocean?</summary>
