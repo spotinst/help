@@ -21,20 +21,20 @@ You can utilize your GCP committed use discounts in Ocean for:
 * [Spend-based commitments](/ocean/features/commited-use-discount?id=spend-based-commitment-utilization-only)
 * [Resource-based commitment with a billing account](/ocean/features/commited-use-discount?id=resource-based-commitment-with-a-billing-account)
 
-## Resource-based and Spend-based Commitment Utilization
+## Resource based and Spend-based Commitment Utilization
 
 1. [Sign in to the GCP IAM console](https://console.cloud.google.com/iamadmin/).
 2. On the View by Principals tab, click the Security Insights of a principal that begins with <i>spotinst-role-act-</i>.
    
-3. In the Spot policy, make sure the compute.commitments.list permission for Spot’s generated service account is listed.
+3. In the Spot policy, ensure the compute.commitments.list permission for Spot’s generated service account is listed.
 
    <img width="400" src="https://github.com/user-attachments/assets/4c246fa7-6696-453f-8c5b-87b634713734">
 
-## Spend-based Commitment Utilization Only
+## Spend based Commitment Utilization Only
 
 [Connect all your GCP projects to Spot accounts](https://docs.spot.io/connect-your-cloud-provider/first-account/gcp-manually?id=connect-gcp-manually), with one account assigned to each project:
 
-1. For projects that are not managed by Spot, create a Spot account with read-only permissions (required for calculating the commitment plans utilization status).
+1. For projects not managed by Spot, create a Spot account with read-only permissions (required for calculating the commitment plans utilization status).
    
    The required permission for read-only accounts is `compute.instances.list` on Spot's generated service accounts.
    
@@ -58,7 +58,7 @@ You can utilize your GCP committed use discounts in Ocean for:
 
 10. Click **Save**.
 
-## Resource-Based Commitment with a Billing Account
+## Resource Based Commitment with a Billing Account
 
 A resource-based commitment with a billing account scope enables you to use the same CUD in multiple projects, as mentioned in [GCP](https://cloud.google.com/billing/docs/how-to/cud-analysis-resource-based#understanding_discount_sharing). Connect all of your GCP projects to Spot accounts, with one account assigned to each project, similar to [Spend-Based Commitments](/ocean/features/commited-use-discount?id=spend-based-commitment-utilization-only).  
 
