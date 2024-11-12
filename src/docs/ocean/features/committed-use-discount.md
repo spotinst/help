@@ -6,9 +6,20 @@ Ocean clusters help you optimize using [committed use discounts (CUDs)](https://
 
 You can use your existing committed-use discounts before adding extra resources. This lets you make efficient use of your cloud resources.
 
-## Prerequisites
+The utilize commitment plans feature lets you leverage spend- and resource-based CUDs in your Ocean clusters before adding additional resources. Ensure the prerequisites are in place for the method you want to use.
 
-The utilize commitment plans feature lets you leverage both spend-based and resource-based CUDs in your Ocean clusters before adding additional resources. Make sure the necessary prerequisites are in place for the method you want to utilize your usage.
+Ocean manages the committed use discount virtual machines by automatically: 
+
+* **Scale up**: Ocean uses the commitment utilization status to decide when to scale up on-demand virtual machines instead of spot instances. This helps utilize commitment plans in markets they apply to.
+
+* **Scale down**: Instances that use commitment plans are given priority during the scale-down process, ensuring the commitment plan strategy is maintained.
+
+* **Revert to reserved**: Ocean maintains the group’s strategy to utilize commitment plans. This is done by checking if there are spot instances in the group that can be replaced with on-demand instances that utilize commitment plans.
+
+You can utilize your GCP committed use discounts in Ocean for:
+* [Resource-based and spend-based commitment Utilization](/ocean/features/commited-use-discount?id=resource-based-and-spend-based-commitment-utilization)
+* [Spend-based commitments](/ocean/features/commited-use-discount?id=spend-based-commitment-utilization-only)
+* [Resource-based commitment with a billing account](/ocean/features/commited-use-discount?id=resource-based-commitment-with-a-billing-account)
 
 ## Resource-based and Spend-based Commitment Utilization
 
@@ -46,6 +57,14 @@ The utilize commitment plans feature lets you leverage both spend-based and reso
 9. Add the **Consumer Procurement Order Viewer** role to all the Spot service account permissions in your billing account that is linked to all the Spot service accounts that you found.
 
 10. Click **Save**.
+
+## Resource-Based Commitment with a Billing Account
+
+A resource-based commitment with a billing account scope enables you to use the same CUD in multiple projects, as mentioned in [GCP](https://cloud.google.com/billing/docs/how-to/cud-analysis-resource-based#understanding_discount_sharing). Connect all of your GCP projects to Spot accounts, with one account assigned to each project, similar to [Spend-Based Commitments](/ocean/features/commited-use-discount?id=spend-based-commitment-utilization-only).  
+
+For projects that Spot does not manage, a Spot account with read-only permissions should be created to calculate the status of the commitment plan usage: `compute.instances.list` on Spot's generated service accounts.
+
+The `compute.instances.list` permission for the project that purchased the CUD.
 
 ## Enable CUD Utilization
 
