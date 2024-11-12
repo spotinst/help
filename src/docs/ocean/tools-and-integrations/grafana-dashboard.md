@@ -137,7 +137,7 @@ Monitor the following key metrics to understand how Ocean scales.
 
 * Cluster nodes’ allocatable resources (CPU, memory, GPU). Source: Ocean. This metric shows the allocatable resources (CPU, memory, GPU) available on cluster nodes. Providing insights into the available resources for scheduling new workloads ensures that you can achieve optimal resource allocation, allowing for better planning and efficient utilization of cluster resources. 
 * Ocean cluster headroom allocatable resources (CPU, memory, GPU). Source: Ocean. This metric displays the headroom resources available for scaling within the Ocean-managed cluster. It helps ensure that there is sufficient headroom for scaling up applications without facing immediate resource constraints, thereby letting you maintain smooth operations even during demand spikes.
-* Ocean cluster resource limit (CPU, memory). Source: Ocean. This metric shows the maximum resource limits (CPU, memory) configured for the Ocean-managed cluster. By monitoring these limits, avoid over-provisioning and ensure that your resource usage stays within the defined capacity, which is crucial for maintaining cost efficiency and compliance with cluster settings. 
+* Ocean cluster resource limit (CPU, memory). Source: Ocean. This metric shows the maximum resource limits (CPU, memory) configured for the Ocean-managed cluster. Monitoring these limits can avoid overprovisioning and ensure that resource usage stays within the defined capacity, which is crucial for maintaining cost efficiency and compliance with cluster settings. 
 * Ocean nodes breakdown by instance lifecycle and availability zone.  Source: Ocean. This metric breaks down Ocean-managed nodes by their lifecycle stage (e.g., pending, active) and availability zone. Detailed visibility into node distribution and lifecycle assists your capacity planning and troubleshooting, ensuring your resources are effectively distributed and managed across the cluster. 
 * Cluster nodes’ allocatable resources breakdown by instance lifecycle and availability zone. Source: Ocean. This metric displays allocatable resources across nodes, categorized by instance lifecycle and availability zone. It helps you understand how resources are distributed and utilized across different nodes and zones, helping optimize resource allocation and improve overall cluster efficiency. 
 
@@ -168,17 +168,19 @@ Monitor the following key metrics to understand how Ocean scales.
 
 ### Cost Metrics
 
-* Month-to-Date cluster cost. Source: Ocean.
-* Average daily cluster cost during the selected aggregation interval. Source: Ocean.
-* Cluster cost breakdown during the selected aggregation interval. Source: Ocean.
-* Cluster cost over time during the selected aggregation interval vs the previous period. Source: Ocean.
+**Overview**
+
+* Month-to-Date cluster cost. Source: Ocean. This graph metric shows the cost incurred by the cluster from the start of the current month. It provides a real-time view of your monthly spending, helping you track costs and budget effectively, ensuring they stay within financial targets. 
+* Average daily cluster cost during the selected aggregation interval variable value. Source: Ocean. This graph metric shows the average daily cost of the cluster during a specified time period. By analyzing daily spending patterns, you can better manage your costs, making informed decisions to optimize daily expenditures and improve overall cost efficiency.
+* Cluster cost breakdown during the selected aggregation interval variable value. Source: Ocean. This graph metric breaks down the cluster cost into categories during a selected time period. It provides detailed insights into cost distribution, helping identify areas where spending can be optimized and uncover opportunities for cost savings.
+* Cluster cost over time during the selected aggregation interval variable value: Source: Ocean. This graph metric compares cluster costs over time between the selected and previous periods. It helps you evaluate cost trends and assess the impact of changes on overall spending so you understand the financial implications of your decisions and adjust strategies as required.
 
 **Compute and Storage Metrics:**
 
-* Average cost per CPU during the selected aggregation interval. Source: Ocean.
-* CPU by instance lifecycle breakdown during the selected aggregation interval. Source: Ocean.
-* Cluster storage cost during the selected aggregation interval. Source: Ocean.
-* Cluster storage cost breakdown during the selected aggregation interval. Source: Ocean.
+* Average cost per CPU during the selected aggregation interval variable. Source: Ocean. This graph metric shows the average cost per CPU during a specified time period. Understanding the financial impact of CPU utilization can help optimize resource usage and manage costs effectively.
+* CPU by instance lifecycle breakdown during the selected aggregation interval variable value. Source: Ocean. This graph metric breaks down CPU costs by instance lifecycle during a selected time period. It helps you understand CPU cost distribution across different instance stages, enabling more informed resource allocation and cost management decisions. 
+* Cluster storage cost during the selected aggregation interval variable value. Source: Ocean. This graph metric shows the cost associated with cluster storage during a specified time period. It provides visibility into storage costs, helping to optimize storage usage and manage expenditures related to storage resources.
+* Cluster storage cost breakdown during the selected aggregation interval variable value. Source: Ocean. This graph metric breaks down storage costs by different categories during a selected time period. It identifies cost drivers in storage, helping you manage and optimize your storage expenditures by focusing on the most significant cost areas. 
 * Cluster compute cost over time. Source: Ocean.
 * Cluster storage cost over time. Source: Ocean.
 * Cluster CPU usage over time. Source: Ocean.
