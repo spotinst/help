@@ -361,7 +361,7 @@ An on-demand instance may not start, for example, if it hits an AWS instance typ
 ## Elastigroup Stateful Node
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600">AWS: Are stateful node resources deallocated when I delete an instance?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ssndeallocated">AWS: Are stateful node resources deallocated when I delete an instance?</summary>
 
   <div style="padding-left:16px">
 
@@ -374,6 +374,85 @@ An on-demand instance may not start, for example, if it hits an AWS instance typ
    * Using Terraform, ______________
 <font color="#FC01CC">link? and what's the command?  When using Terraform and executing the following command - terraform destroy the default values for deleting a node are set to true.</font>
    
+ </div>
+
+ </details>
+
+ 
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="increasedisk">Azure: Can I increase the disk size for stateful nodes?</summary>
+
+  <div style="padding-left:16px">
+
+Yes, you can increase the disk size for stateful nodes.
+
+* If you have reattach persistance for OS disk:
+   1. [Pause the stateful node](https://docs.spot.io/managed-instance/features/managed-instance-actions?id=pause) in the Spot console.
+   2. Once the stateful node is paused, open the Azure Portal and click **Disks**.
+   3. Click **Custom Disk Size**, update the disk size, and save the changes.
+   4. [Change the Performance Tier](https://learn.microsoft.com/en-us/azure/virtual-machines/disks-performance-tiers-portal#change-performance-tier).
+   5. Resume the stateful node in the Spot console.
+
+* If you have on-launch OS disk persistance:
+
+   1. In the Azure portal, [take a snapshot of the OS disk](https://learn.microsoft.com/en-us/azure/virtual-machines/snapshot-copy-managed-disk) running the stateful node (VM).
+   2. [Create a new disk](https://learn.microsoft.com/en-us/azure/virtual-machines/snapshot-copy-managed-disk#next-steps) from the snapshot and change the disk size.
+   3. You might also need to [change the performance tier](https://learn.microsoft.com/en-us/azure/virtual-machines/disks-performance-tiers-portal#change-the-performance-tier-of-an-existing-disk).
+
+ </div>
+
+ </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ssn-bdm">AWS: Why am I getting a <i>Volume of size</i> (InvalidBlockDeviceMapping) error?</summary>
+
+  <div style="padding-left:16px">
+
+You get this message:
+
+<code>ERROR, Can't Spin Spot Instances: Code: InvalidBlockDeviceMapping, Message: Volume of size xx GB is smaller than snapshot 'snap-xxx', expect size >= xx GB"</code>
+
+If the current volume size is updated, it can cause a mismatch between the volume size and the snapshot size.
+
+Update the 
+In the stateful node, go to Go to **Actions** > **Edit Configuration** > **Review** > **JSON** > **Edit Mode**. Update the group configuration and click **Update**.
+
+
+<font color="#FC01CC">original:
+
+In order to resolve this issue, you need to adjust the Block Device Mapping configuration and increase the Volume size in order to match the Snapshots size.
+
+You need to edit the Block Device Mapping configuration.
+
+Kindly navigate to Edit Configuration under the Actions button on the upper right side of your EG, then hop to the review tab and switch to JSON. Then turn on Edit Mode and go ahead and edit your group configuration as needed.
+
+Because the EG is behind the scene, I initiated the update for the customer 
+
+-> I executed the EG ID associated with the SMI from the DB - managed_instance table
+
+(keep the current BDM in JSON editor in order to modify it without losing any configuration)
+
+-> Via the UI, I updated the group with the following BDM section -> volumeSize - I increased the Volume size in order to match the Snapshots size. (according to the UI log was 1500)
+
+<pre><code>"blockDeviceMappings": [
+                {
+                    "deviceName": "/dev/sda1",
+                    "ebs": {
+                        "deleteOnTermination": false,
+                        "volumeSize": 1500,
+                        "volumeType": "GP2"
+                    }
+                }
+            ]
+</code></pre>
+   
+Once this is done, the SMI is updated to paused state.
+
+I asked the customer to initiate a resume action - 
+
+The SMI is active, and the instance is running as expected. </font>
+
+
  </div>
 
  </details>
