@@ -60,7 +60,7 @@ You can utilize your GCP committed use discounts in Ocean for:
 
 ## Resource Based Commitment with a Billing Account
 
-A resource-based commitment with a billing account scope enables you to use the same CUD in multiple projects, as mentioned in [GCP](https://cloud.google.com/billing/docs/how-to/cud-analysis-resource-based#understanding_discount_sharing). Connect all of your GCP projects to Spot accounts, with one account assigned to each project, similar to [Spend-Based Commitments](/ocean/features/committed-use-discount?id=spend-based-commitment-utilization-only).  docs.spot.io
+A resource-based commitment with a billing account scope enables you to use the same CUD in multiple projects, as mentioned in [GCP](https://cloud.google.com/billing/docs/how-to/cud-analysis-resource-based#understanding_discount_sharing). Connect all of your GCP projects to Spot accounts, with one account assigned to each project, similar to [Spend-Based Commitments](/ocean/features/committed-use-discount?id=spend-based-commitment-utilization-only).  
 
 For projects that Spot does not manage, a Spot account with read-only permissions should be created to calculate the status of the commitment plan usage: `compute.instances.list` on Spot's generated service accounts.
 
