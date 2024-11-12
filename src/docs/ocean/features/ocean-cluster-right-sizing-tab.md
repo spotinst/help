@@ -12,10 +12,11 @@ Ocean provides container-level right-sizing recommendations so you can focus on 
 
 Before you attempt to fine-tune your cluster resources according to Ocean's recommendation, you will need: 
 
-*  A Spot account. 
+* Spot account. 
 * Ocean cluster managing your Kubernetes worker nodes. 
-*  [Ocean Controller Version 2.0.52 and above](https://docs.spot.io/ocean/tutorials/ocean-controller-v2/) installed and running.
+* [Ocean Controller Version 2.0.52 and above](https://docs.spot.io/ocean/tutorials/ocean-controller-v2/) installed and running.
    *  Make sure to install the [Metrics Server](https://github.com/kubernetes-incubator/metrics-server#deployment).
+* Create an inbound rule for your node group's security group, allowing traffic to the Spot webhook listening port. This enables communication between the Kubernetes Server API and the webhook. See [Create a security group for your Amazon EC2 instance - Amazon Elastic Compute Cloud](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/creating-security-group.html)
 *  Vertical Pod Autoscaler project (VPA) Version 1.0.0 and above installed on your cluster. If the VPA is not already running on your cluster, run the following helm commands:
 
 ```sh
