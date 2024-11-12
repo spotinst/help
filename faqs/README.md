@@ -1141,9 +1141,6 @@ You can configure a custom scaling policy that is based on another metric. For e
     
 5. Verify the [CloudWatch agent is installed](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/install-CloudWatch-Agent-on-EC2-Instance.html).
 
-The next steps are intuitive and should be configured according to the customer's considerations.
-<font color="#FC01CC">what are the next steps? should I delete this line?</font>
-
  </div>
 
  </details>
