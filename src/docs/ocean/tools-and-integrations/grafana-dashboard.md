@@ -125,26 +125,27 @@ Monitor the following key metrics to understand how Ocean scales.
 
 * Ocean controller status. Source: Ocean. Shows the current status of the Ocean controller within your Kubernetes cluster, providing real-time insights into its health and operational status. Monitor this metric to ensure that the controller functions correctly and effectively manages resources, which is crucial for maintaining optimal cluster performance.
 * Kubernetes cluster Nodes. Source: Kubernetes API server. This metric shows the number of nodes within your Kubernetes cluster, helping you monitor whether your cluster is adequately scaled to handle workloads. Use this metric to ensure that your cluster's node count aligns with the demands of your applications, maintain smooth operations, and prevent resource bottlenecks.
-* Nodes managed by Ocean. Source: Ocean. This metric lists the nodes managed by Spot Ocean, providing transparency into which nodes are being optimized and scaled. This metric is valuable in verifying that Spot Ocean effectively manages and optimizes your cluster resources, leading to better resource utilization and cost efficiency. 
+* Nodes managed by Ocean. Source: Ocean. This metric lists the nodes managed by Spot Ocean, providing transparency into which nodes are being optimized and scaled. This metric verifies that Spot Ocean effectively manages and optimizes your cluster resources, improving resource utilization and cost efficiency. 
 * Cluster cost during the selected aggregation interval. Source: Ocean. This metric displays the cost associated with the cluster during a specified time period, letting you track and manage your spending. By understanding the cost implications of running your cluster, you can make informed decisions to optimize resource usage and reduce overall costs.
-* Top 5 workloads with maximum cost during the selected aggregation interval. Source: Ocean.
-* The right-sizing feature suggests potential savings for cluster costs. Source: Ocean.
+* Top 5 workloads with maximum cost during the selected aggregation interval. Source: Ocean. This metric shows the top 5 workloads contributing the most to cluster costs, helping you identify high-cost areas. By focusing optimization efforts on these workloads, you can reduce unnecessary expenses and improve the cost-efficiency of your cluster operations. 
+
+<!--* The right-sizing feature suggests potential savings for cluster costs. Source: Ocean -->
 
 ### Scaling
 
 **Overview:**
 
-* Cluster nodes’ allocatable resources (CPU, memory, GPU). Source: Ocean.
-* Ocean cluster headroom allocatable resources (CPU, memory, GPU). Source: Ocean.
-* Ocean cluster resource limit (CPU, memory). Source: Ocean.
-* Ocean nodes breakdown by instance lifecycle and availability zone. Source: Ocean.
-* Cluster nodes’ allocatable resources breakdown by instance lifecycle and availability zone. Source: Ocean
+* Cluster nodes’ allocatable resources (CPU, memory, GPU). Source: Ocean. This metric shows the allocatable resources (CPU, memory, GPU) available on cluster nodes. Providing insights into the available resources for scheduling new workloads ensures that you can achieve optimal resource allocation, allowing for better planning and efficient utilization of cluster resources. 
+* Ocean cluster headroom allocatable resources (CPU, memory, GPU). Source: Ocean. This metric displays the headroom resources available for scaling within the Ocean-managed cluster. It helps ensure that there is sufficient headroom for scaling up applications without facing immediate resource constraints, thereby letting you maintain smooth operations even during demand spikes.
+* Ocean cluster resource limit (CPU, memory). Source: Ocean. This metric shows the maximum resource limits (CPU, memory) configured for the Ocean-managed cluster. By monitoring these limits, avoid over-provisioning and ensure that your resource usage stays within the defined capacity, which is crucial for maintaining cost efficiency and compliance with cluster settings. 
+* Ocean nodes breakdown by instance lifecycle and availability zone.  Source: Ocean. This metric breaks down Ocean-managed nodes by their lifecycle stage (e.g., pending, active) and availability zone. Detailed visibility into node distribution and lifecycle assists your capacity planning and troubleshooting, ensuring your resources are effectively distributed and managed across the cluster. 
+* Cluster nodes’ allocatable resources breakdown by instance lifecycle and availability zone. Source: Ocean. This metric displays allocatable resources across nodes, categorized by instance lifecycle and availability zone. It helps you understand how resources are distributed and utilized across different nodes and zones, helping optimize resource allocation and improve overall cluster efficiency. 
 
 **Nodes Managed by Ocean Metrics**
 
-* Ocean nodes count over time. Source: Ocean.
-* Ocean nodes count by instance lifecycle and availability zone over time. Source: Ocean.
-* Cluster nodes’ allocatable resources count by instance lifecycle and availability zone over time. Source: Ocean.
+* Ocean nodes count over time. Source: Ocean. This metric tracks the count of Ocean-managed nodes over time, providing insights into how the number of managed nodes changes. It helps understand scaling trends and capacity adjustments, ensuring that resources are aligned with workload demands over time.
+* Ocean nodes count by instance lifecycle and availability zone over time. Source: Ocean. This metric shows the count of Ocean-managed nodes categorized by instance lifecycle and availability zone over time. Offering historical insights into node lifecycle and zone distribution helps your long-term capacity planning and resource allocation across different zones. 
+* Cluster nodes’ allocatable resources count by instance lifecycle and availability zone over time. Source: Ocean. This metric shows the count of allocatable resources on cluster nodes, categorized by lifecycle and availability zone over time. It helps you track how resource availability evolves, providing valuable information for effective resource management and ensuring that resources are consistently aligned with operational needs. 
 
 **Resources Utilization Metrics:** Cluster resources (CPU, memory, GPU) utilization over time. TBD.
 
