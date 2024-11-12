@@ -123,11 +123,10 @@ Monitor the following key metrics to understand how Ocean scales.
 
 ### Current Status
 
-* Ocean controller status. Source: Ocean.
-* Kubernetes cluster Nodes. Source: Kubernetes API server.
-* Nodes managed by Ocean. Source: Ocean.
-* Cluster resources utilization - TBD
-* Cluster cost during the selected aggregation interval. Source: Ocean.
+* Ocean controller status. Source: Ocean. Shows the current status of the Ocean controller within your Kubernetes cluster, providing real-time insights into its health and operational status. Monitor this metric to ensure that the controller functions correctly and effectively manages resources, which is crucial for maintaining optimal cluster performance.
+* Kubernetes cluster Nodes. Source: Kubernetes API server. This metric shows the number of nodes within your Kubernetes cluster, helping you monitor whether your cluster is adequately scaled to handle workloads. Use this metric to ensure that your cluster's node count aligns with the demands of your applications, maintain smooth operations, and prevent resource bottlenecks.
+* Nodes managed by Ocean. Source: Ocean. This metric lists the nodes managed by Spot Ocean, providing transparency into which nodes are being optimized and scaled. This metric is valuable in verifying that Spot Ocean effectively manages and optimizes your cluster resources, leading to better resource utilization and cost efficiency. 
+* Cluster cost during the selected aggregation interval. Source: Ocean. This metric displays the cost associated with the cluster during a specified time period, letting you track and manage your spending. By understanding the cost implications of running your cluster, you can make informed decisions to optimize resource usage and reduce overall costs.
 * Top 5 workloads with maximum cost during the selected aggregation interval. Source: Ocean.
 * The right-sizing feature suggests potential savings for cluster costs. Source: Ocean.
 
