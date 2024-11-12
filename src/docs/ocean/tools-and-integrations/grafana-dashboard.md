@@ -147,17 +147,16 @@ Monitor the following key metrics to understand how Ocean scales.
 * Ocean nodes count by instance lifecycle and availability zone over time. Source: Ocean. This metric shows the count of Ocean-managed nodes categorized by instance lifecycle and availability zone over time. Offering historical insights into node lifecycle and zone distribution helps your long-term capacity planning and resource allocation across different zones. 
 * Cluster nodes’ allocatable resources count by instance lifecycle and availability zone over time. Source: Ocean. This metric shows the count of allocatable resources on cluster nodes, categorized by lifecycle and availability zone over time. It helps you track how resource availability evolves, providing valuable information for effective resource management and ensuring that resources are consistently aligned with operational needs. 
 
-**Resources Utilization Metrics:** Cluster resources (CPU, memory, GPU) utilization over time. TBD.
-
 **Pods Metrics:**
 
-* Average time for Pod to become ready over time. Source: Kubernetes API server.
-* Pods in Running state. Source: Kubernetes API server.
+* Average time for Pod to become ready over time. Source: Kubernetes API server. This metric tracks the average time required for a pod to transition to a ready state. It helps you measure the responsiveness of their Kubernetes cluster, identifying potential delays or issues in pod startup, which is crucial for maintaining efficient and reliable application deployments. 
+* Pods in Running state. Source: Kubernetes API server. This metric shows the number of pods currently running, providing a snapshot of active pods. It helps you monitor your applications' health and activity level, ensuring that the necessary workloads are operational and performing as expected. 
 
 **Scaling Activity Overview:**
 
-* Scaling up and down events summaries. Source: Ocean.
-* Failed to scale up and down event summaries. Source: Ocean.
+* Scaling up and down events summaries. Source: Ocean. This table metric summarizes events related to scaling up and down within the cluster. It provides visibility into scaling activities, helping you understand how your cluster adapts to changing workloads and ensuring that resources are being managed dynamically to meet demand. 
+* Failed to scale up events summaries. Source: Ocean.  This table metric summarizes events related to failed scale-up attempts within the cluster. It provides insight into scaling errors so you can identify root causes and quickly resolve issues. 
+ 
 
 **Ocean Controllers Metrics:**
 
