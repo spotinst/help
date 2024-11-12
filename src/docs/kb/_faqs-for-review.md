@@ -43,6 +43,136 @@ There are a number of <a href="/administration/sso-access-control">attributes th
 
 ## Ocean
 
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanpodod"><font color="#FC01CC">???</font>: How can I make sure my pods only schedule on-demand nodes?</summary>
+
+  <div style="padding-left:16px">
+
+   You can use taints, tolerations, and node selector to make sure that only pods with the on-demand lifecycle label are scheduled on on-demand nodes. Pods that don't have this label cannot be scheduled on these nodes. Taints and tolerations work together to make sure pods are scheduled on the right nodes.
+
+   1. Make sure your [pod has the tolerations](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/) set to:
+
+      <pre><code>tolerations:
+      - key: "key"
+        operator: "Equal"
+        value: "value"
+        effect: "NoSchedule"</code></pre>
+
+   > **Note**: If the <b>operator</b> is <i>Exists</i>, the LS <font color="#FC01CC">what's LS?? launch specification - is this a virtual node group??</font> needs to be <i>null</i>.
+
+2. Configure a [node selector](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/) with the on-demand lifecycle label (<code>spotinst.io/node-lifecycle: od</code>).<font color="#FC01CC">where do they do this?? is this link useful?</font>
+
+    <details>
+   <summary markdown="span">Sample deployment with node selector set to <i>od</i></summary>
+
+   <pre><code>apiVersion: apps/v1
+   kind: Deployment
+   metadata:
+     name: nginx-deployment
+     labels:
+       app: nginx
+   spec:
+     replicas: 3
+     selector:
+       matchLabels:
+         app: nginx
+     template:
+       metadata:
+         labels:
+           app: nginx
+       spec:
+         containers:
+         - name: nginx
+           image: nginx:1.14.2
+           ports:
+           - containerPort: 80
+         tolerations:
+         - key: "key"
+           operator: "Equal"
+           value: "value"
+           effect: "NoSchedule"
+         nodeSelector:
+           spotinst.io/node-lifecycle: od</code></pre>
+
+   </details>
+
+
+   <font color="#FC01CC">On the pod side -
+
+You should configure the tolerations:
+
+For example:
+
+<pre><code>
+ tolerations:
+  - key: "key"
+    operator: "Equal"
+    value: "value"
+    effect: "NoSchedule"
+</code></pre>
+
+Important note! If the operator is Exists - no value should be specified (in that case the value in the LS should be ‘null’).
+
+You should configure a node selector with the od lifecycle label.
+
+Here is an example of a deployment:
+
+<pre><code>apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels:
+    app: nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.14.2
+        ports:
+        - containerPort: 80
+      tolerations:
+      - key: "key"
+        operator: "Equal"
+        value: "value"
+        effect: "NoSchedule"
+      nodeSelector:
+        spotinst.io/node-lifecycle: od
+</code></pre>
+   
+</font>
+
+3. In the Spot console, configure 
+
+<font color="#FC01CC">original
+
+On the node side (Ocean configuration) -
+
+You should configure a LS with a “matching” taints (a toleration "matches" a taint if the keys and the effects are the same).
+
+For example:
+####no example in the article.....####
+
+
+Important note:
+
+If there are several LS configured in the cluster, you should add a custom label to the specific LS, as well as to the pod. The reason another custom label should be added is that only tolerations that configured on the pod, will not trigger a scale-up from the dedicated LS.
+
+Please note, in case a customer wishes to run only a specific workload on the nodes launched from the LS, simply adjust the node selector to the dedicated node selector of the workload.
+
+For example, in case the customer uses LS for GPU instance and he wishes only pods with a dedicated node selector would run on the node, he should follow the same steps and simply adjust the node selector to the dedicated one.
+
+</font>
+ </div>
+
+ </details>
 
 <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanmaxspot">AWS: Why can't I spin new spot instances (MaxSpotInstanceCountExceeded)?</summary>
