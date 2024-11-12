@@ -356,50 +356,6 @@ An on-demand instance may not start, for example, if it hits an AWS instance typ
 
  </details>
 
- <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egmemoryscalepolicy">AWS: How can I set a memory-based scaling policy in Elastigroup?</summary>
-
-  <div style="padding-left:16px">
-
-Scaling policies typically include CloudWatch metrics such as CPU utilization, network out, and latency.
-
-You can configure a custom scaling policy that is based on another metric. For example, you may want to scale according to memory utilization.
-
-1.	To set a simple scaling policy, revert the Elastigroup configurations to the legacy design:
-
-    <ol style="list-style-type: lower-alpha;">
-     <li>In the Spot console, go to <b>Elastigroup</b> > <b>Groups</b>, and click on the name of an Elastigroup.</li>
-     <li>Go to <b>Actions</b> > <b>Edit Configuration</b>.</li>
-     <li>Click <b>Revert to Legacy Design</b>.
-     
-     <img src="https://github.com/user-attachments/assets/edd8803d-a05b-4850-82e1-e87104006879" />
-     </li>
-
-    </ol>
-
-2.	Click <b>Scaling</b> > <b>Simple Scaling Policies</b>.
-3.	Select <b>Up Scaling Policies</b> or <b>Down Scaling Policies</b> and click <b>Add Policy</b>.
-4.	Set these parameters:
-    * <b>Policy Type</b>: <i>Simple scaling</i>
-    * <b>Source</b>: <i>AWS CloudWatch</i>
-    * <b>Auto Scale Based On</b>: <i>Other</i>
-    * <b>Namespace</b>: <i>Custom</i>
-    * <b>Custom Namespace</b>: <i>CWagent</i>
-    * <b>Metric Name</b>: this [AWS document](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/metrics-collected-by-CloudWatch-agent.html) contains the metrics you can use. These metrics are collected by the CloudWatch agent. For example, you can use <i>mem_used</i> or <i>mem_used_percent</i>.
-     
-     <img width=450 src="https://github.com/user-attachments/assets/430e1adc-458b-4723-ba8a-061c766daef3" >
-    
-5. Verify the [CloudWatch agent is installed](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/install-CloudWatch-Agent-on-EC2-Instance.html).
-
-The next steps are intuitive and should be configured according to the customer's considerations.
-<font color="#FC01CC">what are the next steps? should I delete this line?</font>
-
- </div>
-
- </details>
-
-
-
 <!----------------------------------elastigroup stateful node---------------------------------->
 
 ## Elastigroup Stateful Node
