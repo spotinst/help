@@ -96,6 +96,7 @@ This dashboard contains the following widgets:
 
 </details>
 
+<!--
 <details>
   <summary markdown="span">Right Sizing</summary>
 
@@ -107,7 +108,7 @@ This dashboard contains the following widgets:
 
 * vCPU suggestions over time.
 * Memory suggestions over time.
-* Top 5 workloads with potential monthly max. savings.
+* Top 5 workloads with potential monthly max. savings. -->
 
 ## Variables
 
@@ -123,21 +124,21 @@ Monitor the following key metrics to understand how Ocean scales.
 
 ### Current Status
 
-* Ocean controller status. Source: Ocean. This graph shows the current status of the Ocean controller within your Kubernetes cluster, providing real-time insights into its health and operational status. Monitor this metric to ensure that the controller functions correctly and effectively manages resources, which is crucial for maintaining optimal cluster performance.
-* Kubernetes cluster Nodes. Source: Kubernetes API server. This graph shows the number of nodes within your Kubernetes cluster, helping you monitor whether your cluster is adequately scaled to handle workloads. Use this metric to ensure that your cluster's node count aligns with the demands of your applications, maintain smooth operations, and prevent resource bottlenecks.
+* Ocean controller status. Source: Ocean. This graph shows the current status of the Ocean controller within your Kubernetes cluster, providing real-time insights into controller health and operational status. Monitor to ensure that the controller functions correctly and effectively manages resources, which is crucial for maintaining optimal cluster performance.
+* Kubernetes cluster Nodes. Source: Kubernetes API server. This graph shows the number of nodes within your Kubernetes cluster, helping you monitor whether your cluster is correctly scaled to handle workloads. You can use this to ensure that your cluster's node count aligns with your applications' demands, to maintain smooth operations, and to prevent resource bottlenecks.
 * Nodes managed by Ocean. Source: Ocean. This graph shows the nodes managed by Spot Ocean, providing transparency into which nodes are being optimized and scaled. This metric verifies that Spot Ocean effectively manages and optimizes your cluster resources, improving resource utilization and cost efficiency. 
 * Cluster cost during the selected aggregation interval. Source: Ocean. This graph shows the cost associated with the cluster during a specified time period, letting you track and manage your spending. By understanding the cost implications of running your cluster, you can make informed decisions to optimize resource usage and reduce overall costs.
-* Top 5 workloads with maximum cost during the selected aggregation interval. Source: Ocean. This graph shows the top 5 workloads contributing the most to cluster costs, helping you identify high-cost areas. By focusing optimization efforts on these workloads, you can reduce unnecessary expenses and improve the cost-efficiency of your cluster operations. 
+* Top 5 workloads with maximum cost during the selected aggregation interval. Source: Ocean. This graph shows the top 5 workloads contributions to cluster costs, helping you identify high-cost areas. By focusing optimization efforts on these workloads, you can reduce unnecessary expenses and improve the cost-efficiency of your cluster operations. 
 
 <!--* The right-sizing feature suggests potential savings for cluster costs. Source: Ocean -->
 
 ### Scaling Overview
 
-* Cluster nodes’ allocatable resources (CPU, memory, GPU). Source: Ocean. This graph shows the allocatable resources (CPU, memory, GPU) available on cluster nodes. Providing insights into the available resources for scheduling new workloads ensures optimal resource allocation, allowing for better planning and efficient utilization of cluster resources. 
-* Ocean cluster headroom allocatable resources (CPU, memory, GPU). Source: Ocean. This graph shows the headroom resources available for scaling within the Ocean-managed cluster. It helps ensure that there is sufficient headroom for scaling up applications without facing immediate resource constraints, thereby letting you maintain smooth operations even during demand spikes.
-* Ocean cluster resource limit (CPU, memory). Source: Ocean. This graph shows the maximum resource limits (CPU, memory) configured for the Ocean-managed cluster. Monitoring these limits can avoid overprovisioning and ensure that resource usage stays within the defined capacity, which is crucial for maintaining cost efficiency and compliance with cluster settings. 
-* Ocean nodes breakdown by instance lifecycle and availability zone.  Source: Ocean. This graph breaks down Ocean-managed nodes by their lifecycle stage (e.g., pending, active) and availability zone. Detailed visibility into node distribution and lifecycle assists your capacity planning and troubleshooting, ensuring your resources are effectively distributed and managed across the cluster. 
-* Cluster nodes’ allocatable resources breakdown by instance lifecycle and availability zone. Source: Ocean. This graph shows allocatable resources across nodes, categorized by instance lifecycle and availability zone. It helps you understand how resources are distributed and utilized across different nodes and zones, helping optimize resource allocation and improve overall cluster efficiency. 
+* Cluster nodes’ allocatable resources (CPU, memory, GPU). Source: Ocean. This graph shows the allocatable resources (CPU, memory, GPU) available on cluster nodes. The provided insights into the available resources for scheduling new workloads ensure optimal resource allocation, allowing for better planning and efficient utilization of cluster resources. 
+* Ocean cluster headroom allocatable resources (CPU, memory, GPU). Source: Ocean. This graph shows the headroom resources available for scaling within the Ocean-managed cluster. It helps ensure that there is sufficient headroom for scaling up applications without facing immediate resource constraints, so you can maintain smooth operations even during demand spikes.
+* Ocean cluster resource limit (CPU, memory). Source: Ocean. This graph shows the maximum resource limits (CPU, memory) configured for the Ocean-managed cluster. Monitor these limits to avoid overprovisioning and ensure that resource usage stays within the defined capacity, which is crucial for maintaining cost efficiency and compliance with cluster settings. 
+* Ocean nodes breakdown by instance lifecycle and availability zone.  Source: Ocean. This graph breaks down Ocean-managed nodes by their lifecycle stage (e.g., pending, active) and availability zone. Detailed visibility into node distribution and lifecycle can help your capacity planning and troubleshooting, ensuring your resources are effectively distributed and managed across the cluster. 
+* Cluster nodes’ allocatable resources breakdown by instance lifecycle and availability zone. Source: Ocean. This graph shows allocatable resources across nodes, categorized by instance lifecycle and availability zone. Understanding how resources are distributed and utilized across different nodes and zones can help optimize resource allocation and improve overall cluster efficiency. 
 
 ### Nodes Managed by Ocean Metrics
 
@@ -183,16 +184,16 @@ Monitor the following key metrics to understand how Ocean scales.
 
 ### Network Metrics
 
-* Cluster network cost during the selected aggregation interval. Source: Ocean.
-* Cluster network usage during the selected aggregation interval. Source: Ocean.
-* Cluster network cost breakdown during the selected aggregation interval. Source: Ocean.
-* Cluster Intra-AZ network usage over time. Source: Ocean.
-* Cluster Inter-AZ network cost over time. Source: Ocean.
-* Cluster Inter-AZ network usage over time. Source: Ocean.
-* Cluster Internet network cost over time. Source: Ocean.
-* Cluster Internet network usage over time. Source: Ocean.
-* Cluster Inter-Region network cost over time. Source: Ocean.
-* Cluster Inter-Region network usage over time. Source: Ocean.
+* Cluster network cost during the selected aggregation interval variable value. Source: Ocean. This graph shows the cost of network usage during a specified time period. It helps you monitor network-related expenses to manage and optimize network costs by clearly showing how much is spent on network resources. 
+* Cluster network usage during the selected aggregation interval variable value. Source: Ocean. This graph shows network usage during a specified time period. It provides visibility into network traffic, helps understand network resource needs, and ensures that the infrastructure is correctly scaled to meet demand.
+* Cluster network cost breakdown during the selected aggregation interval variable value. Source: Ocean. This graph breaks down network costs by different categories during a selected time period. It helps identify network cost drivers so you can manage network expenses effectively by focusing on areas where savings can be made.
+* Cluster Intra-AZ network usage over time. Source: Ocean. This graph tracks network usage within the same availability zone over time. It provides insights into intra-zone traffic, helping optimize network resources by understanding how traffic flows within a single zone. 
+* Cluster Inter-AZ network cost over time. Source: Ocean. This graph shows network costs associated with traffic between different availability zones over time. It helps you manage costs related to inter-zone network traffic, ensuring that expenses are controlled and resources are efficiently utilized. 
+* Cluster Inter-AZ network usage over time. Source: Ocean. This graph shows the network traffic between different availability zones over time. It provides insights into inter-zone network usage patterns, helping resource planning and optimizing network performance across zones. 
+* Cluster Internet network cost over time. Source: Ocean. This graph tracks network costs associated with internet traffic over time. It helps you to manage costs related to internet traffic, optimizing network expenditures by understanding the financial impact of external network usage. 
+* Cluster Internet network usage over time. Source: Ocean. This graph shows internet network traffic over time. It provides insights into internet traffic patterns, helping you optimize network resources and manage external traffic efficiently. 
+* Cluster Inter-Region network cost over time. Source: Ocean. This graph shows network costs related to traffic between different regions over time. It helps you manage costs associated with inter-region traffic, ensuring that cross-regional network expenses are aligned with budgetary goals.
+* Cluster Inter-Region network usage over time. Source: Ocean. This graph shows network traffic between different regions over time. It provides insights into inter-region traffic patterns, helping resource planning and cost management by highlighting how network resources are used across regions. 
 
 ### Right-Sizing Metrics
 
