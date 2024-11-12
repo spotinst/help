@@ -160,10 +160,11 @@ Monitor the following key metrics to understand how Ocean scales.
 
 **Ocean Controllers Metrics:**
 
-* Ocean Kubernetes controller status over time. Source: Ocean.
-* Ocean Kubernetes controller pods over time. Source: Kubernetes API server.
-* Ocean Kubernetes controller memory consumption over time. Source: Kubernetes API server.
-* Ocean metrics controller memory consumption over time. Source: Kubernetes API server.
+* Ocean Kubernetes controller status over time. Source: Ocean. This metric displays the status of Ocean's Kubernetes controllers over time so you can monitor their health and performance. This metric helps maintain the smooth functioning of the cluster's resource management by ensuring that controllers operate efficiently. 
+
+* Ocean Kubernetes controller pods over time. Source: Kubernetes API server. This metric shows the number of Ocean Kubernetes controller pods over time. It helps you track the deployment of controller pods so that enough controllers are running to manage the cluster effectively and meet operational demands.
+* Ocean Kubernetes controller memory consumption over time. Source: Kubernetes API server. This metric tracks the memory usage of Ocean Kubernetes controller pods over time. It helps you monitor memory usage and identify potential resource bottlenecks to proactively manage memory resources and maintain optimal controller performance. 
+* Ocean metrics controller memory consumption over time. Source: Kubernetes API server. This metric displays the memory consumption of Ocean metrics controllers over time. It helps you manage memory resources and optimize the performance of controllers so they have the necessary resources to function efficiently without causing performance issues.
 
 ### Cost Metrics
 
