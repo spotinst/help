@@ -96,7 +96,6 @@ This dashboard contains the following widgets:
 
 </details>
 
-<!--
 <details>
   <summary markdown="span">Right Sizing</summary>
 
@@ -108,7 +107,7 @@ This dashboard contains the following widgets:
 
 * vCPU suggestions over time.
 * Memory suggestions over time.
-* Top 5 workloads with potential monthly max. savings. -->
+* Top 5 workloads with potential monthly max. savings.
 
 ## Variables
 
@@ -118,26 +117,25 @@ This dashboard contains the following widgets:
 
 ## Metrics
 
-Ocean metrics are relevant to Ocean Prometheus [Exporter](https://docs.spot.io/ocean/tools-and-integrations/prometheus/scrape) for EKS, AKS, and GKE.
+Ocean metrics are relevant to Ocean Prometheus [Exporter](https://docs.spot.io/ocean/tools-and-integrations/prometheus/scrape).
 
 Monitor the following key metrics to understand how Ocean scales.
 
 ### Current Status
 
-* **Ocean controller status:** This graph shows the current status of the Ocean controller within your Kubernetes cluster, providing real-time insights into controller health and operational status. Monitor to ensure that the controller functions correctly and effectively manages resources, which is crucial for maintaining optimal cluster performance.
+* **Ocean controller status:** This graph shows the current status of the Ocean controller within your Kubernetes cluster, providing real-time insights into controller health and operational status. Monitor to ensure the controller functions correctly and effectively manages resources, which is crucial for maintaining optimal cluster performance.
 * **Kubernetes cluster Nodes:** Source: Kubernetes API server. This graph shows the number of nodes within your Kubernetes cluster, helping you monitor whether your cluster is correctly scaled to handle workloads. You can use this to ensure that your cluster's node count aligns with your applications' demands, to maintain smooth operations, and to prevent resource bottlenecks.
-* **Nodes managed by Ocean**: This graph shows the nodes managed by Spot Ocean, providing transparency into which nodes are being optimized and scaled. This metric verifies that Spot Ocean effectively manages and optimizes your cluster resources, improving resource utilization and cost efficiency. 
+* **Nodes managed by Ocean**: This graph shows the nodes managed by Spot Ocean, providing transparency into which nodes are optimized and scaled. This metric verifies that Spot Ocean effectively manages and optimizes your cluster resources, improving resource utilization and cost efficiency. 
 * **Cluster cost during the selected aggregation interval:**. This graph shows the cost associated with the cluster during a specified time period, letting you track and manage your spending. By understanding the cost implications of running your cluster, you can make informed decisions to optimize resource usage and reduce overall costs.
-* **Top 5 workloads with maximum cost during the selected aggregation interval:** This graph shows the top 5 workloads contributions to cluster costs, helping you identify high-cost areas. By focusing optimization efforts on these workloads, you can reduce unnecessary expenses and improve the cost-efficiency of your cluster operations. 
-
-<!--* The right-sizing feature suggests potential savings for cluster costs.  -->
+* **Top 5 workloads with maximum cost during the selected aggregation interval:** This graph shows the top 5 workloads contributions to cluster costs, helping you identify high-cost areas. By focusing optimization efforts on these workloads, you can reduce unnecessary expenses and improve the cost-efficiency of your cluster operations.
+* **Cluster cost's potential savings suggested by the right-sizing feature during the selected Aggregation Interval variable value:** This graph indicates the cost savings that could be achieved through Spot Ocean's right-sizing recommendations. This metric provides you with valuable insights into potential cost reductions so you can optimize resource allocations and ensure efficient use of cloud resources, ultimately leading to significant savings. 
 
 ### Scaling Overview
 
 * **Cluster nodes’ allocatable resources (CPU, memory, GPU):** This graph shows the allocatable resources (CPU, memory, GPU) available on cluster nodes. The provided insights into the available resources for scheduling new workloads ensure optimal resource allocation, allowing for better planning and efficient utilization of cluster resources. 
 * **Ocean cluster headroom allocatable resources (CPU, memory, GPU):** This graph shows the headroom resources available for scaling within the Ocean-managed cluster. It helps ensure that there is sufficient headroom for scaling up applications without facing immediate resource constraints, so you can maintain smooth operations even during demand spikes.
 * **Ocean cluster resource limit (CPU, memory):** This graph shows the maximum resource limits (CPU, memory) configured for the Ocean-managed cluster. Monitor these limits to avoid overprovisioning and ensure that resource usage stays within the defined capacity, which is crucial for maintaining cost efficiency and compliance with cluster settings. 
-* **Ocean nodes breakdown by instance lifecycle and availability zone:** This graph breaks down Ocean-managed nodes by their lifecycle stage (e.g., pending, active) and availability zone. Detailed visibility into node distribution and lifecycle can help your capacity planning and troubleshooting, ensuring your resources are effectively distributed and managed across the cluster. 
+* **Ocean nodes breakdown by instance lifecycle and availability zone:** This graph breaks down Ocean-managed nodes by their lifecycle stage (e.g., Spot/On-Demand/RI/SP). Detailed visibility into node distribution and lifecycle can help your capacity planning and troubleshooting, ensuring your resources are effectively distributed and managed across the cluster. 
 * **Cluster nodes’ allocatable resources breakdown by instance lifecycle and availability zone:** This graph shows allocatable resources across nodes, categorized by instance lifecycle and availability zone. Understanding how resources are distributed and utilized across different nodes and zones can help optimize resource allocation and improve overall cluster efficiency. 
 
 ### Nodes Managed by Ocean Metrics
@@ -156,7 +154,6 @@ Monitor the following key metrics to understand how Ocean scales.
 * **Scaling up and down events summaries:** This table summarizes events related to scaling up and down within the cluster. Visibility into scaling activities can help you understand how your cluster adapts to changing workloads and ensure that resources are being managed dynamically to meet demand. 
 * **Failed to scale-up events summaries:** This table summarizes events related to failed scale-up attempts within the cluster. It provides insight into scaling errors so you can identify root causes and quickly resolve issues. 
  
-
 ### Ocean Controllers Metrics
 
 * **Ocean Kubernetes controller status over time:** This graph displays the status of Ocean's Kubernetes controllers over time so you can monitor their health and performance. This can help maintain the smooth functioning of the cluster's resource management by ensuring that controllers operate efficiently. 
@@ -195,13 +192,12 @@ Monitor the following key metrics to understand how Ocean scales.
 * **Cluster Inter-Region network cost over time:** This graph shows network costs related to traffic between different regions over time. It can help you manage costs associated with inter-region traffic, ensuring that cross-regional network expenses are aligned with budgetary goals.
 * **Cluster Inter-Region network usage over time:** This graph shows network traffic between different regions over time. It provides insights into inter-region traffic patterns and can help you with resource planning and cost management by highlighting how network resources are used across regions. 
 
-<!--
-
 ### Right-Sizing Metrics
 
-* VCPU Suggestions over time.
-* Memory suggestions over time.
-* Top 5 workloads with potential monthly max. savings. . -->
+
+* **VCPU Suggestions Overtime:** This graph shows Spot Ocean's recommended VCPU allocation through right-sizing recommendations compared to the actual allocated VCPU and the average usage of VCPU by the cluster’s workloads. By visualizing these metrics, you can identify opportunities to optimize VCPU resources, leading to potential cost savings and more efficient cluster operations.
+* **Memory Suggestions Overtime:** This graph shows Spot Ocean's recommended memory allocation through right-sizing recommendations compared to the allocated memory and the average memory usage by the cluster’s workloads. By analyzing these insights, you can uncover potential cost savings and enhance memory resource utilization, ensuring efficient use of cloud resources.
+* **Top 5 Workloads with Potential Monthly Max. Savings:** This graph highlights the top 5 workloads that could achieve the maximum cost savings through Spot Ocean's right-sizing recommendations. By focusing on these high-potential savings areas, you can significantly reduce your cloud expenses and optimize resource allocations, ultimately improving the overall cost-efficiency of their cluster operations.
 
 ## Related Links
 
