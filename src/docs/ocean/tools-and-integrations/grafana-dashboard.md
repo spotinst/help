@@ -124,6 +124,8 @@ Monitor the following key metrics to understand how Ocean scales.
 
 ### Current Status
 
+ <img width="1024" src="https://github.com/user-attachments/assets/586d3a48-8174-4f5e-8ec0-0034f977ed4c" />
+
 * **Ocean controller status:** This graph shows the current status of the Ocean controller within your Kubernetes cluster, providing real-time insights into controller health and operational status. Monitor to ensure the controller functions correctly and effectively manages resources, which is crucial for maintaining optimal cluster performance.
 * **Kubernetes cluster Nodes:** Source: Kubernetes API server. This graph shows the number of nodes within your Kubernetes cluster, helping you monitor whether your cluster is correctly scaled to handle workloads. You can use this to ensure that your cluster's node count aligns with your applications' demands, to maintain smooth operations, and to prevent resource bottlenecks.
 * **Nodes managed by Ocean**: This graph shows the nodes managed by Spot Ocean, providing transparency into which nodes are optimized and scaled. This metric verifies that Spot Ocean effectively manages and optimizes your cluster resources, improving resource utilization and cost efficiency. 
@@ -141,21 +143,30 @@ Monitor the following key metrics to understand how Ocean scales.
 
 ### Nodes Managed by Ocean Metrics
 
+ <img width="1024" src="https://github.com/user-attachments/assets/12dffc9c-ec42-4a75-89f6-693800a99ab3" />
+
 * **Ocean nodes count over time:** This graph tracks the count of Ocean-managed nodes over time, providing insights into how the number of managed nodes changes. It can help you understand scaling trends and capacity adjustments, ensuring that resources are aligned with workload demands over time.
 * **Ocean nodes count by instance lifecycle and availability zone over time:** This graph shows the count of Ocean-managed nodes categorized by instance lifecycle and availability zone over time. Historical insights into node lifecycle and zone distribution can help your long-term capacity planning and resource allocation across different zones. 
 * **Cluster nodes’ allocatable resources count by instance lifecycle and availability zone over time:** This graph shows the count of allocatable resources on cluster nodes, categorized by lifecycle and availability zone over time. It can help you track how resource availability evolves, providing valuable information for effective resource management and ensuring that resources are consistently aligned with operational needs. 
 
 ### Pods Metrics
 
+ <img width="1024" src="https://github.com/user-attachments/assets/a2f650ca-dc58-45dc-8feb-b77e206cabb2" />
+
+
 * **Average time for Pod to become ready over time:** Source: Kubernetes API server. This graph tracks the average time required for a pod to transition to a ready state. It can help you measure the responsiveness of your Kubernetes cluster, identifying potential delays or issues in pod startup, which is crucial for maintaining efficient and reliable application deployments. 
 * **Pods in Running state. Source: Kubernetes API server:** This graph shows the number of currently running pods, providing a snapshot of active pods. It can help you monitor your applications' health and activity level, ensuring that the necessary workloads are operational and performing as expected. 
 
 ### Scaling Activity Overview
 
+<img width="1024" src="https://github.com/user-attachments/assets/57c3e498-a5d5-42d8-a72e-8f537dd8a4b5" />
+
 * **Scaling up and down events summaries:** This table summarizes events related to scaling up and down within the cluster. Visibility into scaling activities can help you understand how your cluster adapts to changing workloads and ensure that resources are being managed dynamically to meet demand. 
 * **Failed to scale-up events summaries:** This table summarizes events related to failed scale-up attempts within the cluster. It provides insight into scaling errors so you can identify root causes and quickly resolve issues. 
  
 ### Ocean Controllers Metrics
+
+<img width="1024" src="https://github.com/user-attachments/assets/9703db2c-16b3-4a1b-8cb9-c44cb920d941" />
 
 * **Ocean Kubernetes controller status over time:** This graph displays the status of Ocean's Kubernetes controllers over time so you can monitor their health and performance. This can help maintain the smooth functioning of the cluster's resource management by ensuring that controllers operate efficiently. 
 * **Ocean Kubernetes controller pods over time:** Source: Kubernetes API server. This graph shows the number of Ocean Kubernetes controller pods over time. It helps you track the deployment of controller pods so enough controllers are running to manage the cluster effectively and meet operational demands.
@@ -164,12 +175,16 @@ Monitor the following key metrics to understand how Ocean scales.
 
 ### Cost Metrics Overview
 
+<img width="1024" src="https://github.com/user-attachments/assets/1474a9a1-25ee-48bc-a40e-653e05a0305a" />
+
 * **Month-to-Date cluster cost:** This graph shows the cost incurred by the cluster from the start of the current month. It provides a real-time view of your monthly spending and can help you track costs and budget effectively, ensuring they remain within financial targets. 
 * **Average daily cluster cost during the selected aggregation interval variable value:** This graph shows the average daily cost of the cluster during a specified time period. By analyzing daily spending patterns, you can better manage your costs, making informed decisions to optimize daily expenditures and improve overall cost efficiency.
 * **Cluster cost breakdown during the selected aggregation interval variable value:** This graph breaks down the cluster cost into categories during a selected time period. It provides detailed insights into cost distribution, helping identify areas where spending can be optimized and uncover opportunities for cost savings.
 * **Cluster cost over time during the selected aggregation interval variable value:** This graph compares cluster costs over time between the selected and previous periods. It can help you evaluate cost trends and assess the impact of changes on overall spending so you understand the financial implications of your decisions and adjust strategies as required.
 
 ### Compute and Storage Metrics
+
+<img width="1024" src="https://github.com/user-attachments/assets/3d0e961c-858c-48eb-b9cf-4799be1a554d" />
 
 * **Average cost per CPU during the selected aggregation interval variable:** This graph shows the average cost per CPU during a specified time period. Understanding the financial impact of CPU utilization can help you optimize resource usage and manage costs effectively.
 * **CPU by instance lifecycle breakdown during the selected aggregation interval variable value:** This graph breaks down CPU costs by instance lifecycle during a selected time period. It can help you understand CPU cost distribution across different instance stages, enabling more informed resource allocation and cost management decisions. 
@@ -181,6 +196,8 @@ Monitor the following key metrics to understand how Ocean scales.
 * **Cluster memory usage over time:** This graph shows memory usage metrics over time, providing insights into memory utilization. It can help you optimize resource allocation by identifying patterns in memory usage and ensuring that resources are aligned with operational needs.
 
 ### Network Metrics
+
+<img width="1024" src="https://github.com/user-attachments/assets/d7402b87-2a03-449f-9439-bb1424ce1ecc" />
 
 * **Cluster network cost during the selected aggregation interval variable value:** This graph shows the cost of network usage during a specified time period. It can help you monitor network-related expenses to manage and optimize network costs by clearly showing how much is spent on network resources. 
 * **Cluster network usage during the selected aggregation interval variable value:** This graph shows network usage during a specified time period. It provides visibility into network traffic, can help you understand network resource needs, and ensures that the infrastructure is correctly scaled to meet demand.
@@ -195,6 +212,7 @@ Monitor the following key metrics to understand how Ocean scales.
 
 ### Right-Sizing Metrics
 
+<img width="1024" src="https://github.com/user-attachments/assets/eecdf36a-a4a6-4297-bcce-ad4567113b7e" />
 
 * **VCPU Suggestions Overtime:** This graph shows Spot Ocean's recommended VCPU allocation through right-sizing recommendations compared to the actual allocated VCPU and the average usage of VCPU by the cluster’s workloads. By visualizing these metrics, you can identify opportunities to optimize VCPU resources, leading to potential cost savings and more efficient cluster operations.
 * **Memory Suggestions Overtime:** This graph shows Spot Ocean's recommended memory allocation through right-sizing recommendations compared to the allocated memory and the average memory usage by the cluster’s workloads. By analyzing these insights, you can uncover potential cost savings and enhance memory resource utilization, ensuring efficient use of cloud resources.
