@@ -456,8 +456,6 @@ You can set [Equal AZ Distribution](https://docs.spot.io/elastigroup/features/co
 
 An [Elastigroup may have Equal AZ Distribution](https://docs.spot.io/elastigroup/features/core-features/equal-az-instance-distribution-orientation?id=equal-az-instance-distribution-orientation) set for cluster orientation, but the system sometimes prioritizes a certain availability zone to maintain equal distribution. When no spot instances are available, an on-demand instance spins up in the relevant availability zone.
 
-An on-demand instance may not start, for example, if it hits an AWS instance type limit. This is like an on-demand instance that didn’t launch successfully and was replaced with spot instances in a different market.
-
  </div>
 
  </details>
@@ -504,6 +502,9 @@ Yes, you can increase the disk size for stateful nodes.
    1. In the Azure portal, [take a snapshot of the OS disk](https://learn.microsoft.com/en-us/azure/virtual-machines/snapshot-copy-managed-disk) running the stateful node (VM).
    2. [Create a new disk](https://learn.microsoft.com/en-us/azure/virtual-machines/snapshot-copy-managed-disk#next-steps) from the snapshot and change the disk size.
    3. You might also need to [change the performance tier](https://learn.microsoft.com/en-us/azure/virtual-machines/disks-performance-tiers-portal#change-the-performance-tier-of-an-existing-disk).
+   4. In the Spot console, [pause the stateful node](managed-instance/features/managed-instance-actions?id=pause).
+   5. Go to **Actions** > **Swap OS Disk**.
+   6. Select the **Resource Group** and **New Disk Name**, and click **Update & Resume**.
 
  </div>
 
@@ -521,7 +522,7 @@ You get this message:
 If the current volume size is updated, it can cause a mismatch between the volume size and the snapshot size.
 
 Update the 
-In the stateful node, go to Go to **Actions** > **Edit Configuration** > **Review** > **JSON** > **Edit Mode**. Update the group configuration and click **Update**.
+In the stateful node, go to **Actions** > **Edit Configuration** > **Review** > **JSON** > **Edit Mode**. Update the group configuration and click **Update**.
 
 
 <font color="#FC01CC">original:
