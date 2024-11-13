@@ -39,6 +39,7 @@ Ocean maintains an official set of metrics, natively scrapable by Prometheus. Th
 
   <img width="1024" alt="grafana-dashboard-current-status" src="https://github.com/user-attachments/assets/3e46cfab-2f88-4a76-87d5-10ad16afcc38">
 
+  <!--
   This dashboard contains the following widgets:
   * Ocean controller: Status in the cluster.
   * Kubernetes Cluster Nodes: Number of nodes in the Kubernetes cluster.
@@ -46,7 +47,7 @@ Ocean maintains an official set of metrics, natively scrapable by Prometheus. Th
   * Cluster resources utilization: Resource utilization (CPU, memory, etc.) across the cluster.
   * Cluster cost during a specified time period.
   * Top 5 workloads with maximum cost.
-  * Potential savings from right-sizing.
+  * Potential savings from right-sizing.-->
 
 </details>
 
@@ -55,11 +56,11 @@ Ocean maintains an official set of metrics, natively scrapable by Prometheus. Th
   
 <img width="1024" alt="grafana-dashboard-cost-and-usage" src="https://github.com/user-attachments/assets/cd688d9c-fec7-4b6b-9519-df97a466a362">
 
-This dashboard contains the following widgets:
+ <!--This dashboard contains the following widgets:
   * Month-to-Date cluster cost.
   * Average daily cluster cost during a specified time period.
   * Cluster cost breakdown during a specified time period.
-  * Cluster cost over time: Compare costs for two time periods.
+  * Cluster cost over time: Compare costs for two time periods. -->
 
 </details>
 
@@ -68,7 +69,7 @@ This dashboard contains the following widgets:
 
  <img width="1024" alt="grafana-dashboard-network-metrics" src="https://github.com/user-attachments/assets/f1616d7b-1b7b-4260-b2ab-fdfd196be4f5">
  
-This dashboard contains the following widgets:
+ <!--This dashboard contains the following widgets:
 * Cluster network cost for a specified time period.
 * Cluster network usage for a specified time period.
 * Cluster network cost breakdown for a specified time period.
@@ -78,7 +79,7 @@ This dashboard contains the following widgets:
 * Cluster Internet network cost over time: Network costs associated with internet traffic over time.
 * Cluster Internet network usage over time: Internet network traffic over time.
 * Cluster Inter-Region network cost over time: Network costs related to traffic between different regions over time.
-* Cluster Inter-Region network usage over time: Network traffic between different regions over time.
+* Cluster Inter-Region network usage over time: Network traffic between different regions over time. -->
 
 
 
@@ -89,10 +90,10 @@ This dashboard contains the following widgets:
 
   <img width="1024" alt="grafana-dashboard-scaling-activity" src="https://github.com/user-attachments/assets/20c59bdb-4a66-4906-9fcb-399bdf12de26">
 
-This dashboard contains the following widgets:
+ <!--This dashboard contains the following widgets:
 
 * Scaling up and down events summaries.
-* Failed scale-up events summary. 
+* Failed scale-up events summary. -->
 
 </details>
 
@@ -103,11 +104,11 @@ This dashboard contains the following widgets:
 
 </details>
 
-This dashboard contains the following widgets:
+ <!--This dashboard contains the following widgets:
 
 * vCPU suggestions over time.
 * Memory suggestions over time.
-* Top 5 workloads with potential monthly max. savings.
+* Top 5 workloads with potential monthly max. savings.-->
 
 ## Variables
 
