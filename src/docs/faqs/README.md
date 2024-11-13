@@ -587,7 +587,7 @@ You can get this error when the group's device name (for Block Device Mapping) a
 * AMI - "deviceName": "xvda"
 * Group's configuration - "deviceName": "/dev/xvda"
 
-Change the device name from <code>xvda</code> to <code>/dev/xvda</code> on the group's side. In the stateful node, go to Go to **Actions** > **Edit Configuration** > **Review** > **JSON** > **Edit Mode**. Change the device name from <code>xvda</code> to <code>/dev/xvda</code> and click **Update**.
+Change the device name from <code>xvda</code> to <code>/dev/xvda</code> on the group's side. In the stateful node, go to **Actions** > **Edit Configuration** > **Review** > **JSON** > **Edit Mode**. Change the device name from <code>xvda</code> to <code>/dev/xvda</code> and click **Update**.
 
  </div>
 
