@@ -8,10 +8,17 @@
 
 ## Stateful Node
 
+* **STN-005: November 12th, 2024**: Attribute-based virtual machine selection is now the default behavior for stateful node imports as it extends their spot size whitelist, offering more market options and potentially reducing interruption rates. [Learn more](managed-instance/azure/getting-started/import-stateful-node)
+
+<details>
+  <summary markdown="span">October 2024</summary>
+
 * **STN-004: October 9th, 2024**:
 You can now use the console to:
   * start a Spot-managed VM when a stateful node is stopped 
   * stop an Azure VM when a stateful node is running
+ 
+ </details><br>
 
 <details>
   <summary markdown="span">September 2024</summary>
