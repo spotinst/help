@@ -35,7 +35,7 @@ Ocean maintains an official set of metrics, natively scrapable by Prometheus. Th
 ## Dashboard Visualizations
 
 <details>
-  <summary markdown="span">Current Status</summary>
+  <summary markdown="span">Current Status, Scaling Overview, Nodes Managed by Ocean, and Pods Metrics</summary>
 
   <img width="1024" alt="grafana-dashboard-current-status" src="https://github.com/user-attachments/assets/3e46cfab-2f88-4a76-87d5-10ad16afcc38">
 
@@ -51,7 +51,7 @@ Ocean maintains an official set of metrics, natively scrapable by Prometheus. Th
 </details>
 
 <details>
-  <summary markdown="span">Cost and Usage</summary>
+  <summary markdown="span">Cost and Usage, and Compute and Storage Metrics</summary>
   
 <img width="1024" alt="grafana-dashboard-cost-and-usage" src="https://github.com/user-attachments/assets/cd688d9c-fec7-4b6b-9519-df97a466a362">
 
@@ -64,7 +64,7 @@ This dashboard contains the following widgets:
 </details>
 
 <details>
-  <summary markdown="span">Network Metrics</summary>
+  <summary markdown="span">Network Cost and Usage Metrics</summary>
 
  <img width="1024" alt="grafana-dashboard-network-metrics" src="https://github.com/user-attachments/assets/f1616d7b-1b7b-4260-b2ab-fdfd196be4f5">
  
