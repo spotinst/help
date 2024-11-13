@@ -116,11 +116,11 @@ Ocean maintains an official set of metrics, natively scrapable by Prometheus. Th
 * Ocean Cluster ID: This option filters data only for the selected ID, making it suitable for data sources with data from several Ocean clusters.
 * Aggregation Interval: Used to set a relative time in panels with aggregated data. The relative time will be shown on the panel title.
 
-## Metrics
+## Dashboard Metrics Breakdown
 
-Ocean metrics are relevant to Ocean Prometheus [Exporter](https://docs.spot.io/ocean/tools-and-integrations/prometheus/scrape).
+This section describes the metrics for the previously shown dashboard visualizations.
 
-Monitor the following key metrics to understand how Ocean scales.
+>**Note:** Ocean metrics are relevant to the Ocean Prometheus [Exporter](https://docs.spot.io/ocean/tools-and-integrations/prometheus/scrape).
 
 ### Current Status
 
