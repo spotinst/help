@@ -3,7 +3,7 @@
 ## Chart Version [0.1.57] (v2.0.67) - 2024-11-12
 
 ### Added
-* Added the following permission to the controller ClusterRole (opt-out with `--set spotinst.disableAutomaticRightSizing=true`):
+* Added the following permissions to the controller ClusterRole, required for the automatic rightsizing feature (opt-out with `--set spotinst.disableAutomaticRightSizing=true`):
 
     ```
     - apiGroups: ["apps"]
