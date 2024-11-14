@@ -3578,6 +3578,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/ocean/features/scaling-kubernetes"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/ocean/features/troubleshoot-right-sizing</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/ocean/features/troubleshoot-right-sizing"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/ocean/features/troubleshoot-right-sizing"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/ocean/features/vm-selection-aks</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
