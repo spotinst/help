@@ -194,20 +194,7 @@ You can read the AWS documentation on [spot instance quotas](https://docs.aws.am
 
  </details>
 
-  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanunnamedvng">AWS, Azure, GCP: Why is my instance in an unnamed virtual node group?</summary>
 
-  <div style="padding-left:16px">
-
-A node is running in an Ocean cluster and is an unnamed virtual node group.
-
-<img width="900" src="https://github.com/user-attachments/assets/5e581d00-b1c8-4bdb-8e89-c19ef79ad1f1">
-
-This can happen if your virtual node group was deleted in Terraform. When you delete a virtual node group in Terraform, the `spotinst_ocean_aws_launch_spec` > `delete_nodes` needs to be manually set to <i>true</i> in the [Terraform resource](https://registry.terraform.io/providers/spotinst/spotinst/latest/docs/resources/ocean_aws_launch_spec#delete_nodes). If it's not set to <i>true</i>, the node will keep running and not be in a virtual node group.
-
- </div>
- 
- </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanscaleup">AKS, EKS, GKE: How does the scale-up recovery process work?</summary>
@@ -230,43 +217,7 @@ If you have multiple deployments that can be scheduled on different instance typ
 
  </details>
 
- <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceank8sheadroom">AKS, EKS, GKE: Can I configure automatic headroom using Kubernetes Operations (kOps)?</summary>
 
-  <div style="padding-left:16px">
-
-You can configure [automatic headroom](ocean/features/headroom) using kOps at the cluster level, not at a virtual node group level. Add these [metadata labels](/ocean/tools-and-integrations/kops/metadata-labels):
-
-<code>spotinst.io/autoscaler-auto-config: "true"
-spotinst.io/autoscaler-auto-headroom-percentage : {Value}
-spotinst.io/ocean-default-launchspec: "true"</code>
-
-Here's an example of a config file:
-
-<code>apiVersion: kops.k8s.io/v1alpha2
-kind: InstanceGroup
-metadata:
-name: "test-vng-2"
-
-labels:
-kops.k8s.io/cluster: "erez-via-2.ts.ek8s.com"
-spotinst.io/spot-percentage: "50"
-spotinst.io/autoscaler-auto-config: "true"
-spotinst.io/ocean-default-launchspec: "true"
-spotinst.io/autoscaler-auto-headroom-percentage: "20"
-spotinst.io/autoscaler-headroom-num-of-units: "2"
-spotinst.io/autoscaler-resource-limits-max-vcpu: "2"
-spotinst.io/autoscaler-headroom-mem-per-unit: "1024"
-spotinst.io/autoscaler-headroom-gpu-per-unit: "0"
-
-spec:
-role: Node
-maxSize: 1
-minSize: 1</code>
-
- </div>
-
- </details>
 
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceandaemonsetpods">EKS: Why are DaemonSet pods not scheduled on all nodes in the cluster?</summary>
@@ -295,28 +246,7 @@ For example, you can update your [DaemonSet pod YAML](https://kubernetes.io/docs
 
  </details>
 
-   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceandisconnectcluster">EKS: How can I disconnect a cluster from Ocean?</summary>
 
-  <div style="padding-left:16px">
-
-   You can safely disconnect Ocean from an existing EKS Cluster:
-
-1. Increase the number of instances in the ASG attached to the EKS cluster. This way, the pods that run on the nodes managed by Spot will be able to reschedule on the new instances and avoid downtime.
-2. In the Spot console, go to **Ocean** > **Cloud Clusters**, and select the cluster.
-3. Click **Actions** > **Edit Cluster**.
-4. On the Review tab, click **JSON** > **Edit Mode**.
-5. Change **capacity** > **Minimum**, **Maximum**, and **Target** to <i>0</i>.
-
-   <img width="144" alt="oceandisconnectcluster" src="https://github.com/user-attachments/assets/ec722def-980f-4754-ab0d-b2751bf67a81">
-
-   The instances managed by Ocean will be detached and the pods will be rescheduled on the new instances launched by AWS ASG.
-6. In the Spot console, go to **Ocean** > **Cloud Clusters**, and select the cluster.
-7. Click **Actions** > **Delete**.
- 
- </div>
-
- </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceaniaminstance">EKS: Why am I getting an <i>Invalid IAMInstanceProfile</i> error?</summary>
@@ -351,22 +281,6 @@ Once the cluster is configured to use the default virtual node group as a templa
 
  </details>
 
- <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanhpa">EKS: Can I check Ocean EKS clusters' horizontal pod autoscaling (HPA) policy?</summary>
-
-  <div style="padding-left:16px">
-
-   Ocean doesn't actually have a horizontal pod autoscaling (HPA) policy. The HPA is essentially operating on the Kubernetes side so Ocean itself doesn't have an HPA.
-
-The cluster autoscaler only takes care of provisioning the required number of nodes.
-
-Essentially, if the load increases on your cluster, then Kubernetes will create more replicas, and Ocean will launch nodes for the new pods. Kubernetes HPA will create pods and Ocean will launch new nodes for pods to be scheduled.
-   
- </div>
-
- </details>
-
- 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanunregcontainer">ECS: Why are my container instances unregistered?</summary>
 
@@ -432,33 +346,8 @@ If your container is unregistered, you should make sure:
 <!----------------------------------elastigroup---------------------------------->
 ## Elastigroup
 
- <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egbeanstalkvariables">Integration: Is maintenance mode needed when I add Beanstalk environment variables?</summary>
 
-  <div style="padding-left:16px">
 
-Beanstalk [environment variables](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/environments-cfg-softwaresettings.html) are part of the application managed on the Beanstalk side, independently from the Elastigroup. Variables are automatically picked by instances that Spotinst launches into the environment.
-
-Add variables in the [Elastic Beanstalk console](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/environments-cfg-softwaresettings.html?icmpid=docs_elasticbeanstalk_console#environments-cfg-softwaresettings-specific). Maintenance mode is not required as this change does not affect the infrastructure.
-
- </div>
- 
- </details>
-
- <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egodlaunched">AWS, Azure, GCP: Why is an on-demand instance launched instead of a spot instance?</summary>
-
-  <div style="padding-left:16px">
-
-An on-demand instance may be launched instead of a spot instance even if a spot instance is available in the markets selected in the Elastigroup.
-
-You can set [Equal AZ Distribution](https://docs.spot.io/elastigroup/features/core-features/equal-az-instance-distribution-orientation?id=equal-az-instance-distribution-orientation) for cluster orientation in Elastigroup. Despite this, Spot may prioritize a certain availability zone to maintain equal distribution. 
-
-An [Elastigroup may have Equal AZ Distribution](https://docs.spot.io/elastigroup/features/core-features/equal-az-instance-distribution-orientation?id=equal-az-instance-distribution-orientation) set for cluster orientation, but the system sometimes prioritizes a certain availability zone to maintain equal distribution. When no spot instances are available, an on-demand instance spins up in the relevant availability zone.
-
- </div>
-
- </details>
 
 <!----------------------------------elastigroup stateful node---------------------------------->
 
@@ -483,32 +372,7 @@ An [Elastigroup may have Equal AZ Distribution](https://docs.spot.io/elastigroup
  </details>
 
  
- <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="increasedisk">Azure: Can I increase the disk size for stateful nodes?</summary>
 
-  <div style="padding-left:16px">
-
-Yes, you can increase the disk size for stateful nodes.
-
-* If you have reattach persistance for OS disk:
-   1. [Pause the stateful node](https://docs.spot.io/managed-instance/features/managed-instance-actions?id=pause) in the Spot console.
-   2. Once the stateful node is paused, open the Azure Portal and click **Disks**.
-   3. Click **Custom Disk Size**, update the disk size, and save the changes.
-   4. [Change the Performance Tier](https://learn.microsoft.com/en-us/azure/virtual-machines/disks-performance-tiers-portal#change-performance-tier).
-   5. Resume the stateful node in the Spot console.
-
-* If you have on-launch OS disk persistance:
-
-   1. In the Azure portal, [take a snapshot of the OS disk](https://learn.microsoft.com/en-us/azure/virtual-machines/snapshot-copy-managed-disk) running the stateful node (VM).
-   2. [Create a new disk](https://learn.microsoft.com/en-us/azure/virtual-machines/snapshot-copy-managed-disk#next-steps) from the snapshot and change the disk size.
-   3. You might also need to [change the performance tier](https://learn.microsoft.com/en-us/azure/virtual-machines/disks-performance-tiers-portal#change-the-performance-tier-of-an-existing-disk).
-   4. In the Spot console, [pause the stateful node](managed-instance/features/managed-instance-actions?id=pause).
-   5. Go to **Actions** > **Swap OS Disk**.
-   6. Select the **Resource Group** and **New Disk Name**, and click **Update & Resume**.
-
- </div>
-
- </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="ssn-bdm">AWS: Why am I getting a <i>Volume of size</i> (InvalidBlockDeviceMapping) error?</summary>
