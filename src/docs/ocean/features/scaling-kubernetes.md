@@ -82,10 +82,10 @@ Ensure you set the attribute large enough for the instance type in the whitelist
 
 When configuring `reservedENIs` for an Ocean cluster virtual node group, if you set a custom maximum number of pods using the `maxPods` attribute in the user data, ensure it aligns with the `reservedENIs` attribute. The `reservedENIs` attribute determines the maximum number of pods per instance based on available ENIs, so any discrepancy between these settings may lead to scheduling issues or suboptimal resources.
 
-Use the Spot API to set a custom value for autoscaling to include reservedENIs:
+Use the Spot API to set a custom value for autoscaling to include `reservedENIs`:
 
-*  Cluster [add the link when in production]
-*  VNG: [add the link when in production]
+*  [Cluster](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterCreate)
+*  [VNG](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecCreate)
 
 ## Scale Down
 
