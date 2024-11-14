@@ -27,13 +27,9 @@ An organization hierarchy includes:
 
    New roles for the parent organization:
 
-    * **Organization Admin**
+    * **Organization Admin** has access to the child organization page and <i>write</i> permissions for user management.
 
-      Has access to the child organization page and write permissions for user management.
-
-    * **Organization Editor**
-
-       Has Organization Admin permissions for the parent org only. Doesn’t have access to the child organization page.
+    * **Organization Editor** has <i>Organization Admin</i> permissions for the parent org only. Doesn’t have access to the child organization page.
 
 * **Child** organizations (L2)
 
@@ -45,9 +41,9 @@ An organization hierarchy includes:
    <li>Click <b>Organization</b> > <b>Child Organizations</b>.</li>
    <li><p>Switch to any of the orgs by hovering the child org in the list and clicking <b>Switch</b> <img height="18" src="https://github.com/user-attachments/assets/9d90a800-44d7-4446-ae4a-f90d04f20c7e">.</p>
 
-     <p><img height="18" src="https://github.com/user-attachments/assets/bd7a64ba-72bb-48cc-952e-f71ebaac8a17"></p>
+     <p><img src="https://github.com/user-attachments/assets/bd7a64ba-72bb-48cc-952e-f71ebaac8a17"></p></li>
 
-    <p>From the list of child orgs, click the Total Users number to go to the Users page. The Users page shows the users for that child org.</p></li>
+    <p>From the list of child orgs, click the Total Users number to go to the Users page. The Users page shows the users for that child org.</p>
     </ol>
 
 ## Create a Child Organization
@@ -55,14 +51,14 @@ An organization hierarchy includes:
 1. In the Spot console, click the user icon <img height="18" src="https://docs.spot.io/administration/_media/usericon.png"> > <b>Settings</b>.
 2. Make sure you’re in the parent org.
 3. Click <b>Organization</b> > <b>Child Organizations</b> > **Add Organization**.
-4. Enter a Name and click Create.
-5. Click Product Access <img height="18" src="https://github.com/user-attachments/assets/5ca1d4bc-2aea-40d0-85f5-938cdcfbefd3"> for the new child org and select the Spot products for this child org. You can set the default products.
-6. For Billing Engine, you can  assign family and the default provider cost for the child org. Click **Edit** <img height="18" src="https://github.com/user-attachments/assets/b5df3c94-bf99-4ac0-a24a-e4a043668e93"> on the new child org and select the Family Assignments and Organization Cost Default.
+4. Enter a **Name** and click **Create**.
+5. Click **Product Access** <img height="18" src="https://github.com/user-attachments/assets/5ca1d4bc-2aea-40d0-85f5-938cdcfbefd3"> for the new child org and select the Spot products for this child org. You can set the default products.
+6. For Billing Engine, you can  assign family and the default provider cost for the child org. Click **Edit** <img height="18" src="https://github.com/user-attachments/assets/b5df3c94-bf99-4ac0-a24a-e4a043668e93"> on the new child org and select the **Family Assignments** and **Organization Cost Default**.
 7. [Switch to the new child org](administration/organizations/?id=switch-organizations).
 8. [Connect the child org to a cloud service provider](connect-your-cloud-provider/first-account/).
 9. Set up [users](administration/users-a/), [groups](administration/groups/), and [permission policies](administration/policies/).
 
-    Keep in mind, you can only create a user once for each org and all its child orgs.
+    > **Note**: you can only create a user once for each org and all its child orgs.
 
 ## Remove a User from an Org
 
@@ -92,9 +88,12 @@ Let’s say a family represents a customer you provide cloud services for. You c
 3. Click **Edit** <img height="18" src="https://github.com/user-attachments/assets/b5df3c94-bf99-4ac0-a24a-e4a043668e93"> on an existing child org.
 4. Update **Family Assignments**.
 5. Select **Organization Cost Default**.
-     <details>
+     <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span">More about costs</summary>
-       <b>Billed Cost</b>
+
+   <div style="padding-left:16px">
+
+    <b>Billed Cost</b>
        
       Billed cost is the basis for invoicing:
    
@@ -123,6 +122,7 @@ Let’s say a family represents a customer you provide cloud services for. You c
       List cost is calculated: <i>list unit price × corresponding pricing quantity</i>.
    
       List cost is typically used for calculating savings based on rate optimization activities, by comparing it with billed cost and effective cost.
-     </details>
+
+   </div></details>
 
 7. Click **Update**.
