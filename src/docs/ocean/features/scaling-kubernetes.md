@@ -67,9 +67,25 @@ In order to enable import of GKE clusters to Ocean and registration of new nodes
 
 Ocean Controller Version 2 supports the `namespaceSelector` scaling constraint label introduced in Kubernetes Version 1,24. When you apply this label, Ocean's Autoscaler scales up nodes based on the Namespace selector to schedule pods. [See Kubernetes documentation](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#namespace-selector).
 
-### Maximum Pods Custom Configuratrion
+### Maximum Pods Custom Configuration
 
+WS Kubernetes clusters use reserved [elastic network interfaces (ENI)](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html#AvailableIpPerENI) to enhance network stability and predictability. In Ocean, you can use the `reservedENIs` attribute to specify the number of ENIs to reserve per instance type (for cluster / virtual node group) for scaling purposes. Ocean includes reserved ENIs when calculating how many pods can be scheduled on a node. 
 
+The Ocean autoscaler will only spin up an instance that is larger than the reserved ENIs parameter.
+
+Reserved ENI `reservedENIs` behavior is as follows:
+
+* When `reservedENIs = 0`: Default autoscaling behavior.
+* When `reservedENIs = Integer`: Ocean autoscaler calculates how many pods can be scheduled on a node, considering this attribute.
+
+Ensure you set the attribute large enough for the instance type in the whitelist.
+
+When configuring `reservedENIs` for an Ocean cluster virtual node group, if you set a custom maximum number of pods using the `maxPods` attribute in the user data, ensure it aligns with the `reservedENIs` attribute. The `reservedENIs` attribute determines the maximum number of pods per instance based on available ENIs, so any discrepancy between these settings may lead to scheduling issues or suboptimal resources.
+
+Use the Spot API to set a custom value for autoscaling to include reservedENIs:
+
+*  Cluster [add the link when in production]
+*  VNG: [add the link when in production]
 
 ## Scale Down
 
@@ -77,9 +93,9 @@ Ocean proactively identifies underutilized nodes and [bin-packs](https://en.wiki
 
 ### Scale Down Behavior
 
-- When scaling down a node is expected, Ocean utilizes a configurable draining timeout of at least 300 seconds. (This can be configured using the drainingTimeout parameter on the Ocean level). At this time, Ocean marks the node as unschedulable and evicts all pods running on the node.
-  - Ocean spreads out the evictions instead of just deleting the pods all at once.  All the pods that run on the nodes are spread across a 120 seconds period of time. For example, if there are 10 pods running on the nodes, one pod is evicted every 12 seconds.
-  - If the eviction fails, Ocean has a retry mechanism that tries to evict the pods a few seconds later. If eviction still fails after one minute, Ocean forces deletion of the pod.
+- When scaling down a node is expected, Ocean utilizes a configurable draining timeout of at least 300 seconds. (This can be configured using the drainingTimeout parameter on the Ocean level.) At this time, Ocean marks the node as unschedulable and evicts all pods running on it.
+  - Ocean spreads out the evictions instead of deleting the pods simultaneously. All the pods that run on the nodes are evicted over a 120-second period. For example, if there are 10 pods running on the nodes, one pod is evicted every 12 seconds.
+  - If the eviction fails, Ocean has a retry mechanism that tries to evict the pods a few seconds later. If eviction still fails after one minute, Ocean forces the pod to be deleted.
 - After the draining timeout has expired, Ocean terminates the node and removes any pods that were not successfully evicted.
 - Scale down will start only if no PDB is violated by removing the pods on the node. That is the default behavior. However, you could decide to ignore the PDB restriction during scale down. (Please contact the Support team to enable ignoring the restriction.) If ignoring PDB restriction is configured, the drain still occurs, and the spread described above provides a "best effort" to prevent violating the PDB.
 - There is a parameter at the cluster level called `maxScaleDownPercentage`. This parameter indicates the percentage out of the cluster nodes that can be scaled down at once. If you wish to scale down the cluster as quickly as possible, you can increase this parameter value to make the scale down more aggressive.
