@@ -1,6 +1,6 @@
 # Automatic Right-Sizing-Troubleshooting
 
-## Communication issues between the Kuberneres Server API and the Spot webhook
+## Communication issues between the Kubernetes Server API and the Spot webhook
 
 The Spot webhook defines new requests for pods, and without this communication, the pods will be scheduled with incorrect requests regarding rightsizing recommendations.
 
