@@ -69,6 +69,7 @@
   - [Revert to Lower-Cost Node](ocean/features/revert-to-lower-cost-node)
   - [Right-Sizing (Automatic)](ocean/features/ocean-cluster-right-sizing-tab)
     - [Right-Sizing Recommendations](ocean/features/ocean-cluster-right-sizing-recom-tab)
+    - [Troubleshooting](ocean/features/auto-right-sizing-troubleshooting)
   - [Right Sizing (Manual)](ocean/features/right-sizing)
     - [Use Right Sizing](ocean/tutorials/use-right-sizing)
   - [Rolls (AKS)](ocean/features/roll)
