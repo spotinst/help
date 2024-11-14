@@ -69,9 +69,11 @@ Ocean Controller Version 2 supports the `namespaceSelector` scaling constraint l
 
 ### Maximum Pods Custom Configuration
 
+Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font> 
+
 WS Kubernetes clusters use reserved [elastic network interfaces (ENI)](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html#AvailableIpPerENI) to enhance network stability and predictability. In Ocean, you can use the `reservedENIs` attribute to specify the number of ENIs to reserve per instance type (for cluster / virtual node group) for scaling purposes. Ocean includes reserved ENIs when calculating how many pods can be scheduled on a node. 
 
-The Ocean autoscaler will only spin up an instance that is larger than the reserved ENIs parameter.
+The Ocean autoscaler will only spin up an instance that is larger than the `reservedENIs` attribute.
 
 Reserved ENI `reservedENIs` behavior is as follows:
 
