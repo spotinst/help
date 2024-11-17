@@ -86,8 +86,8 @@ When configuring `reservedENIs` for an Ocean cluster virtual node group, if you 
 
 Use the Spot API to set a custom value for autoscaling to include `reservedENIs`:
 
-*  [Cluster](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterCreate)
-*  [VNG](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecCreate)
+*  [Cluster](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterUpdate) 
+*  [VNG](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecUpdate) 
 
 ## Scale Down
 
