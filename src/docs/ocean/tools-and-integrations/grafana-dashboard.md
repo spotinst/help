@@ -33,7 +33,9 @@ Ocean maintains an official set of metrics, natively scrapable by Prometheus. Th
 ## Dashboard Visualizations
 
 <details>
-  <summary markdown="span">Current Status, Scaling Overview, Nodes Managed by Ocean, and Pods Metrics</summary>
+  <summary markdown="span">Click to view - Current Status, Scaling Overview, Nodes Managed by Ocean, and Pods Metrics</summary>
+
+ ### Current Status, Scaling Overview, Nodes Managed by Ocean, and Pods Metrics
 
   <img width="1024" alt="grafana-dashboard-current-status" src="https://github.com/user-attachments/assets/3e46cfab-2f88-4a76-87d5-10ad16afcc38">
 
@@ -50,7 +52,9 @@ Ocean maintains an official set of metrics, natively scrapable by Prometheus. Th
 </details>
 
 <details>
-  <summary markdown="span">Cost and Usage, and Compute and Storage Metrics</summary>
+  <summary markdown="span">Click to view - Cost and Usage, and Compute and Storage Metrics</summary>
+
+### Cost and Usage, and Compute and Storage Metrics
   
 <img width="1024" alt="grafana-dashboard-cost-and-usage" src="https://github.com/user-attachments/assets/cd688d9c-fec7-4b6b-9519-df97a466a362">
 
@@ -63,7 +67,9 @@ Ocean maintains an official set of metrics, natively scrapable by Prometheus. Th
 </details>
 
 <details>
-  <summary markdown="span">Network Cost and Usage Metrics</summary>
+  <summary markdown="span">Click to view - Network Cost and Usage Metrics</summary>
+
+ ### Network Cost and Usage Metrics
 
  <img width="1024" alt="grafana-dashboard-network-metrics" src="https://github.com/user-attachments/assets/f1616d7b-1b7b-4260-b2ab-fdfd196be4f5">
  
@@ -84,7 +90,9 @@ Ocean maintains an official set of metrics, natively scrapable by Prometheus. Th
 </details>
 
 <details>
-  <summary markdown="span">Scaling Activity Overview</summary>
+  <summary markdown="span">Click to view - Scaling Activity Overview Metrics</summary>
+  
+### Scaling Activity Overview Metrics
 
   <img width="1024" alt="grafana-dashboard-scaling-activity" src="https://github.com/user-attachments/assets/20c59bdb-4a66-4906-9fcb-399bdf12de26">
 
@@ -96,7 +104,9 @@ Ocean maintains an official set of metrics, natively scrapable by Prometheus. Th
 </details>
 
 <details>
-  <summary markdown="span">Right Sizing</summary>
+  <summary markdown="span">Click to view - Right Sizing</summary>
+  
+### Right Sizing Metrics
 
 <img width="1024" alt="grafana-dashboard-right-sizing" src="https://github.com/user-attachments/assets/393bd4d8-03fa-43f9-b99f-5db7fb457017">
 
