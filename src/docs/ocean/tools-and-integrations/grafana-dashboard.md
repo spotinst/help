@@ -39,16 +39,6 @@ Ocean maintains an official set of metrics, natively scrapable by Prometheus. Th
 
   <img width="1024" alt="grafana-dashboard-current-status" src="https://github.com/user-attachments/assets/3e46cfab-2f88-4a76-87d5-10ad16afcc38">
 
-  <!--
-  This dashboard contains the following widgets:
-  * Ocean controller: Status in the cluster.
-  * Kubernetes Cluster Nodes: Number of nodes in the Kubernetes cluster.
-  * Nodes managed by Ocean: Nodes managed by Ocean, with drill-down for optimized and scaled nodes.
-  * Cluster resources utilization: Resource utilization (CPU, memory, etc.) across the cluster.
-  * Cluster cost during a specified time period.
-  * Top 5 workloads with maximum cost.
-  * Potential savings from right-sizing.-->
-
 </details>
 
 <details>
@@ -57,12 +47,6 @@ Ocean maintains an official set of metrics, natively scrapable by Prometheus. Th
 ### Cost and Usage, and Compute and Storage Metrics
   
 <img width="1024" alt="grafana-dashboard-cost-and-usage" src="https://github.com/user-attachments/assets/cd688d9c-fec7-4b6b-9519-df97a466a362">
-
- <!--This dashboard contains the following widgets:
-  * Month-to-Date cluster cost.
-  * Average daily cluster cost during a specified time period.
-  * Cluster cost breakdown during a specified time period.
-  * Cluster cost over time: Compare costs for two time periods. -->
 
 </details>
 
@@ -73,20 +57,6 @@ Ocean maintains an official set of metrics, natively scrapable by Prometheus. Th
 
  <img width="1024" alt="grafana-dashboard-network-metrics" src="https://github.com/user-attachments/assets/f1616d7b-1b7b-4260-b2ab-fdfd196be4f5">
  
- <!--This dashboard contains the following widgets:
-* Cluster network cost for a specified time period.
-* Cluster network usage for a specified time period.
-* Cluster network cost breakdown for a specified time period.
-* Cluster Intra-AZ network usage over time: Network usage within the same availability zone over time.
-* Cluster Inter-AZ network cost over time: Network costs associated with traffic between different availability zones over time.
-* Cluster Inter-AZ network usage over time: Network traffic between different availability zones over time.
-* Cluster Internet network cost over time: Network costs associated with internet traffic over time.
-* Cluster Internet network usage over time: Internet network traffic over time.
-* Cluster Inter-Region network cost over time: Network costs related to traffic between different regions over time.
-* Cluster Inter-Region network usage over time: Network traffic between different regions over time. -->
-
-
-
 </details>
 
 <details>
@@ -94,29 +64,18 @@ Ocean maintains an official set of metrics, natively scrapable by Prometheus. Th
   
 ### Scaling Activity Overview Metrics
 
-  <img width="1024" alt="grafana-dashboard-scaling-activity" src="https://github.com/user-attachments/assets/20c59bdb-4a66-4906-9fcb-399bdf12de26">
-
- <!--This dashboard contains the following widgets:
-
-* Scaling up and down events summaries.
-* Failed scale-up events summary. -->
+<img width="1024" alt="grafana-dashboard-scaling-activity" src="https://github.com/user-attachments/assets/20c59bdb-4a66-4906-9fcb-399bdf12de26">
 
 </details>
 
 <details>
-  <summary markdown="span">Click to view - Right Sizing</summary>
+  <summary markdown="span">Click to view - Right Sizing Metrics</summary>
   
-### Right Sizing Metrics
+ ### Right Sizing Metrics
 
-<img width="1024" alt="grafana-dashboard-right-sizing" src="https://github.com/user-attachments/assets/393bd4d8-03fa-43f9-b99f-5db7fb457017">
+ <img width="1024" alt="grafana-dashboard-right-sizing" src="https://github.com/user-attachments/assets/393bd4d8-03fa-43f9-b99f-5db7fb457017">
 
 </details>
-
- <!--This dashboard contains the following widgets:
-
-* vCPU suggestions over time.
-* Memory suggestions over time.
-* Top 5 workloads with potential monthly max. savings.-->
 
 ## Variables
 
