@@ -590,7 +590,7 @@ If you have another snapshot, then you can use that snapshot ID for the block de
  </details>
 
 <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egmaxspot">AWS: Why can't I spin new spot instances (MaxSpotInstanceCountExceeded)?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanmaxspot">ECS, EKS: Why can't I spin new spot instances (MaxSpotInstanceCountExceeded)?</summary>
 
   <div style="padding-left:16px">
 
