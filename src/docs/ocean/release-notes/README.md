@@ -2,6 +2,8 @@
 
 ## November 2024: Features and Enhancements
 
+*  **OCN-0043: November 16, 2024:** (**<font color="#FC01CC">AWS Kubernetes</font>**) In Ocean, you can now use the reservedENIs attribute to specify the number of ENIs to reserve per instance type (for cluster / virtual node group) for scaling purposes. [Learn more..](https://docs.spot.io/ocean/features/scaling-kubernetes?id=maximum-pods-custom-configuration)
+
 *  **OCN-0042: November 16, 2024:** (**<font color="#FC01CC">AWS Kubernetes</font>**) New metrics were added to the Prometheus Exporter to track the total resources that were requested by pods, including deamonSet pods, by all virtual node groups in the cluster. [Learn more…](https://docs.spot.io/ocean/tools-and-integrations/prometheus/?id=ocean_total_pod_vcpu_requests-ocean_total_pod_memory_requests-ocean_total_pod_gpu_requests)
 
 *  **OCN-0041: November 16, 2024:** (**<font color="#FC01CC">AWS Kubernetes</font>**), (**<font color="#FC01CC">AKS</font>**) , (**<font color="#FC01CC">GKE</font>**) You can now view Ocean dashboards using Grafana. The Ocean scaling and cost optimization dashboard provides real-time insights into the scaling, cost, usage, and right-sizing activities managed by Ocean within your Kubernetes cluster. It displays node provisioning, optimization, cost efficiency, and recovery operations metrics. [Learn more…](https://docs.spot.io/ocean/tools-and-integrations/grafana-dashboard)
