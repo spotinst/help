@@ -49,6 +49,10 @@ Best practice checks take data from:
 
    Checks that Cost Intelligence builds and runs against inventory data that Cost Intelligence collects.
 
+* **Ocean**
+
+   Identifies if the resources are managed by Ocean. If not, there’s a button for you to onboard the resource to Ocean to save cost and utilization.
+
 * **AWS Trusted Advisor**
 
   Cost Intelligence lets you view the checks for all your AWS accounts in one place. Data is shown for any account that has been onboarded to Cost Intelligence and that has the recommendations set up in AWS.
