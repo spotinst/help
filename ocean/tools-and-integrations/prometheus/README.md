@@ -101,6 +101,23 @@ ocean_failed_scale_downs{oceanId="o-2cf2e886", reason="cluster_min_instance_coun
 
 It is also useful to track Ocean-managed resources to get a full picture.
 
+<!--DOC-2125   -->
+### ocean_total_pod_vcpu_requests, ocean_total_pod_memory_requests, ocean_total_pod_gpu_requests
+
+These metrics track the total resources that were requested by pods, including deamonSet pods, by all virtual node groups in the cluster.
+
+Prometheus metric type: gauge
+
+Dimensions: `ocean_id`, `vng_id`, `vng_name`
+
+Example:
+```
+ocean_total_pod_vcpu_request  { ocean_id= "o-XXXXX", vng_id="ols-xxxxxxxx", vng_name="Vng1"} 
+ocean_total_pod_memory_request  { ocean_id= "o-XXXXX", vng_id="ols-xxxxxxxx", vng_name="Vng2"} 
+ocean_total_pod_gpu_request  { ocean_id= "o-XXXXX", vng_id="unknown", vng_name="deafult"}
+```
+
+
 ### ocean_allocatable_cpu_vcpus, ocean_allocatable_memory_gibs, ocean_allocatable_gpu_units
 
 These metrics track the total resources that can be allocated by all nodes in the cluster.
