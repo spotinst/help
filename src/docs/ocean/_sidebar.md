@@ -57,6 +57,8 @@
       - [Distribute by vCPU](ocean/features/distribute-vcpu)
       - [Elastic IP](ocean/features/elastic-ip)
       - [Extended Resource Support Setup](ocean/tutorials/set-up-extended-resource-support)
+      - [Grafana Ocean Dashboards](ocean/tools-and-integrations/grafana-dashboard)
+        - [Grafana for Ocean Setup](ocean/tools-and-integrations/setup-and-config-grafana-4-ocean)
       - [Headroom](ocean/features/headroom)
       - [Health Checks & Auto-Healing](ocean/features/health-checks-and-autohealing)
       - [Install Network Client](ocean/tutorials/install-network-client-v2)
