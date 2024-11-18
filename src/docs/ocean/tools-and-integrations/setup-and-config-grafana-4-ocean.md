@@ -1,5 +1,3 @@
-<meta name="robots" content="noindex">
-
 # Set up and Configure Grafana for Ocean
 
 Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>
