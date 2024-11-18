@@ -108,7 +108,7 @@ Cloud service provider relevance: <font color="#FC01CC">GKE</font>
 
 Use the `preferredTypes` attribute for GKE clusters and virtual node groups (Spot API only). 
 
-When scaling up VMs, Ocean prioritizes preferred instance types for launching new nodes (with 100% weight) unless they are unavailable, in which case Ocean falls back to non-preferred types.
+When scaling up VMs, Ocean prioritizes preferred instance types for launching new nodes unless they are unavailable, in which case Ocean falls back to non-preferred types.
 
 Use this option if you want to launch new nodes on the cluster (for a specific app or virtual node group) from the list of preferred instance types because they are a good match for workload performance. If GKE cannot launch from preferred VM types for reasons such as out of quotas, low market availability, etc.) Ocean will use the configured instance types available within the cluster or virtual node group
 
