@@ -1,6 +1,6 @@
 # Automatic Right-Sizing-Troubleshooting
 
-## Pod is not launched according to values defined on a vertical pod autoscaler
+## Pod is not launched according to values defined on a VPA
 
 Ensure that your inbound rule for your node group's security group allows traffic to the Spot webhook listening port. 
 This enables communication between the Kubernetes Server API and the webhook. 
