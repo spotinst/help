@@ -3928,11 +3928,11 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/ocean/tools-and-integrations/"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/ocean/tools-and-integrations/setup-and-config-grafane-4-ocean</loc>
+        <loc>https://docs.spot.io/ocean/tools-and-integrations/setup-and-config-grafana-4-ocean</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/ocean/tools-and-integrations/setup-and-config-grafane-4-ocean"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/ocean/tools-and-integrations/setup-and-config-grafane-4-ocean"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/ocean/tools-and-integrations/setup-and-config-grafana-4-ocean"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/ocean/tools-and-integrations/setup-and-config-grafana-4-ocean"/>
     </url>
     <url>
         <loc>https://docs.spot.io/ocean/troubleshooting/</loc>
