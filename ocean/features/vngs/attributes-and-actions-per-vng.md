@@ -57,7 +57,7 @@ Whenever you create a Virtual Node Group with the Arm64 and x86 instance types, 
 
 <!-- I took the generic intro information from Preferred Spot Instance Types per Virtual Node Group and put it above -->
 
-##  Preferred Instance Types per Virtual Node Group
+##  Preferred Instance Types per Virtual Node Group (AWS)
 
 Ocean provides a serverless experience in which the specific instances don’t matter, and the best practice is to allow the use of all instance types. However, there are some cases in which a specific instance type may provide better performance or increased cost savings. For example, if you know that your application performs significantly better on M5 instances, then you can save costs by preferring this instance type over others.
 
@@ -99,6 +99,24 @@ For information about defining preferred on-demand instance types in the Spot AP
 When you set `preferredOnDemandTypes`, the Ocean Autoscaler will launch on-demand nodes from the listed types.​
 
 See also [Terraform](https://registry.terraform.io/providers/spotinst/spotinst/latest/docs/resources/ocean_aws_launch_spec#preferred_od_types)
+
+<!-- Section below added for DOC-2009 -->
+
+## Preferred Instance Types per Virtual Node Group (GKE)
+
+Cloud service provider relevance: <font color="#FC01CC">GKE</font>
+
+Use the `preferredTypes` attribute for GKE clusters and virtual node groups (Spot API only). 
+
+When scaling up VMs, Ocean prioritizes preferred instance types for launching new nodes unless they are unavailable, in which case Ocean falls back to non-preferred types.
+
+Use this option if you want to launch new nodes on the cluster (for a specific app or virtual node group) from the list of preferred instance types because they are a good match for workload performance. If GKE cannot launch from preferred VM types for reasons such as out of quotas, low market availability, etc.) Ocean will use the configured instance types available within the cluster or virtual node group
+
+For information about defining preferred instance types in the Spot API using the `preferredTypes` attribute, see the following:
+
+* [Create virtual node group API for Ocean GKE](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKELaunchSpecCreate)
+* [Create cluster API for Ocean GKE](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKEClusterCreate)
+
 
 ##  Ephemeral Storage per Virtual Node Group
 
