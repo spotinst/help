@@ -61,7 +61,7 @@ Ocean maintains an official set of metrics, natively scrapable by Prometheus. Th
 
 <details>
   <summary markdown="span">Click to view - Scaling Activity Overview Metrics</summary>
-  
+
 ### Scaling Activity Overview Metrics
 
 <img width="1024" alt="grafana-dashboard-scaling-activity" src="https://github.com/user-attachments/assets/20c59bdb-4a66-4906-9fcb-399bdf12de26">
@@ -70,10 +70,10 @@ Ocean maintains an official set of metrics, natively scrapable by Prometheus. Th
 
 <details>
   <summary markdown="span">Click to view - Right Sizing Metrics</summary>
-  
- ### Right Sizing Metrics
 
- <img width="1024" alt="grafana-dashboard-right-sizing" src="https://github.com/user-attachments/assets/393bd4d8-03fa-43f9-b99f-5db7fb457017">
+  ### Right Sizing Metrics
+
+  <img width="1024" alt="grafana-dashboard-right-sizing" src="https://github.com/user-attachments/assets/393bd4d8-03fa-43f9-b99f-5db7fb457017">
 
 </details>
 
