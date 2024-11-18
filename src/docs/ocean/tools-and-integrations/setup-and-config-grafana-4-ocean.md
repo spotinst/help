@@ -1,6 +1,6 @@
 # Set up and Configure Grafana for Ocean
 
-Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>, <font color="#FC01CC">AKS/font>, <font color="#FC01CC">GKE</font>
+Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>, <font color="#FC01CC">AKS</font>, <font color="#FC01CC">GKE</font>
 
 Before you begin, make sure you have all of the following prerequisites:
 
