@@ -1,8 +1,6 @@
-<meta name="robots" content="noindex">
-
 # Grafana Dashboard
 
-Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>
+Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font> <font color="#FC01CC">AKS Kubernetes</font> <font color="#FC01CC">GCP Kubernetes</font>
 
 This topic describes the integration of [Ocean](https://docs.spot.io/ocean/) with Grafana and Prometheus to help you identify and investigate real-life anomalies in Ocean-managed clusters.
 
