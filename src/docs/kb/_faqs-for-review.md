@@ -174,27 +174,6 @@ For example, in case the customer uses LS for GPU instance and he wishes only po
 
  </details>
 
-<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanmaxspot">AWS: Why can't I spin new spot instances (MaxSpotInstanceCountExceeded)?</summary>
-
-  <div style="padding-left:16px">
-
-   You can get this message if AWS's spot service limit is reached:
-   
-   <code>Can't Spin Spot Instances:Code: MaxSpotInstanceCountExceeded, Message: Max spot instance count exceeded</code>
-
-You may also get an email from AWS: <i>Spot Proactive Monitoring | Max Spot Instance Count Exceeded</i>. This email includes instructions how to create a support request with AWS, including the instance type and region that triggered the error.
-
-Reach out to AWS to open a support case for service limit increase.
-
-You can read the AWS documentation on [spot instance quotas](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-limits.html).
-
-   
- </div>
-
- </details>
-
-
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanscaleup">AKS, EKS, GKE: How does the scale-up recovery process work?</summary>
