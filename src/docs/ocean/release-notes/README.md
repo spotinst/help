@@ -2,6 +2,10 @@
 
 ## November 2024: Features and Enhancements
 
+*  **OCN-0042: November 16, 2024:** (**<font color="#FC01CC">AWS Kubernetes</font>**) New metrics were added to the Prometheus Exporter to track the total resources that were requested by pods, including deamonSet pods, by all virtual node groups in the cluster. [Learn more…](https://docs.spot.io/ocean/tools-and-integrations/prometheus/?id=ocean_total_pod_vcpu_requests-ocean_total_pod_memory_requests-ocean_total_pod_gpu_requests)
+
+*  **OCN-0041: November 16, 2024:** (**<font color="#FC01CC">AWS Kubernetes</font>**), (**<font color="#FC01CC">AKS</font>**) , (**<font color="#FC01CC">GKE</font>**) You can now view Ocean dashboards using Grafana. The Ocean scaling and cost optimization dashboard provides real-time insights into the scaling, cost, usage, and right-sizing activities managed by Ocean within your Kubernetes cluster. It displays node provisioning, optimization, cost efficiency, and recovery operations metrics. [Learn more…](https://docs.spot.io/ocean/tools-and-integrations/grafana-dashboard)
+
 *  **OCN-0040: November 04, 2024:** (**<font color="#FC01CC">EKS and AKS</font>**) Rollbacks let you run right-sizing automation without concerns. Starting now, Ocean automatically rolls back changes made by automatic right-sizing that encounter OOM events. [Learn more...](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=acknowledge-a-workload-rollback)
 
 * **OCN-0039: November 04, 2024:** (**<font color="#FC01CC">EKS and AKS</font>**) New drill-down options for the percentile data points in both right-sizing memory and vCPU usage graphs were added to the percentiles already used for the recommendations (99th percentile for vCPU and maximum usage for memory). [Learn more...](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-tab?id=right-sizing-resource-usage-panel)
