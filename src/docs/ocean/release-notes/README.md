@@ -2,6 +2,8 @@
 
 ## November 2024: Features and Enhancements
 
+*  **OCN-0044: November 19, 2024:** (**<font color="#FC01CC">GKE</font>**)  The `preferredTypes` attribute is now available for GKE clusters and virtual node groups (Spot API only) to launch new nodes on a cluster from the list of preferred instance types. [Learn more...](https://docs.spot.io/ocean/features/vngs/attributes-and-actions-per-vng?id=preferred-instance-types-per-virtual-node-group-gke)
+
 *  **OCN-0043: November 16, 2024:** (**<font color="#FC01CC">AWS Kubernetes</font>**) In Ocean, you can now use the reservedENIs attribute to specify the number of ENIs to reserve per instance type (for cluster / virtual node group) for scaling purposes. [Learn more..](https://docs.spot.io/ocean/features/scaling-kubernetes?id=maximum-pods-custom-configuration)
 
 *  **OCN-0042: November 16, 2024:** (**<font color="#FC01CC">AWS Kubernetes</font>**) New metrics were added to the Prometheus Exporter to track the total resources that were requested by pods, including deamonSet pods, by all virtual node groups in the cluster. [Learn more…](https://docs.spot.io/ocean/tools-and-integrations/prometheus/?id=ocean_total_pod_vcpu_requests-ocean_total_pod_memory_requests-ocean_total_pod_gpu_requests)
