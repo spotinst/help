@@ -170,5 +170,5 @@ These are the Right-Sizing Best Practices:
 ## Related Topics
 
 * [Right-Sizing Troubleshooting](https://docs.spot.io/ocean/features/troubleshoot-right-sizing)
-* [Ocean Cluster Automatic Right-Sizing -Introduction](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-tab)
+* [Automatic Right-Sizing -Introduction](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-tab)
 
