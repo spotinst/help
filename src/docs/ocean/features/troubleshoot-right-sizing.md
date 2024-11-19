@@ -9,7 +9,7 @@ In this case, your pod may not be launched according to the values defined on th
 Ensure that your inbound rule for your node group's security group allows traffic to the Spot webhook listening port for smoot communication between the Kubernetes Server API and the webhook. 
 See [Create a security group for your Amazon EC2 instance - Amazon Elastic Compute Cloud](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/creating-security-group.html).
 
-## VPA not reporting message appears at the top of the right-sizing page.
+## VPA not reporting message appears at the top of the right-sizing page
 
 This may indicate that the VPA updater and admission controller pods are not reporting.
 
