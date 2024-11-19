@@ -1,6 +1,8 @@
 # Automatic Right-Sizing-Troubleshooting
 
->**Note**: Spot only checks the healthiness of the VPA pods belonging to the Spot VPA Project, not the Native VPA one.
+## Does Spot monitor the health of my VPA Project?
+
+Spot only checks the health of the VPA pods belonging to the Spot VPA Project, not the Native VPA one.
 
 ## Security Group not correctly configured
 
