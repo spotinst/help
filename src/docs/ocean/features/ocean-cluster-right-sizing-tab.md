@@ -121,4 +121,11 @@ Hover over a data point in the **Memory usage in the last 2 weeks** widget to vi
   * Average memory usage in GiB
 * Suggested memory usage in GiB based on data from the last 2 weeks.
 
+## Related Topics
+
+* [Right-Sizing Troubleshooting](https://docs.spot.io/ocean/features/troubleshoot-right-sizing)
+* [Right-Sizing Rules and Reommendations](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab)
+
+
+
 
