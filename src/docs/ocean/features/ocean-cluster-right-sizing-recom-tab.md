@@ -167,3 +167,8 @@ These are the Right-Sizing Best Practices:
 * If you set overheads for resources, start with a relatively high overhead (20%) and decrease it with time.
 * If you set boundaries (recommendation ranges for resources), avoid applying the specific rule to all workloads. All services have different purposes.
 
+## Related Topics
+
+* [Right-Sizing Troubleshooting](https://docs.spot.io/ocean/features/troubleshoot-right-sizing)
+* [Ocean Cluster Automatic Right-Sizing -Introduction](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-tab)
+
