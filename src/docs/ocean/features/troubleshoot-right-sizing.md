@@ -1,9 +1,5 @@
 # Automatic Right-Sizing-Troubleshooting
 
-## Does Spot monitor the health of my VPA Project?
-
-Spot only checks the health of the VPA pods belonging to the Spot VPA Project, not the Native VPA one.
-
 ## Security Group not correctly configured
 
 In this case, your pod may not be launched according to the values defined on the VPA.
@@ -18,4 +14,6 @@ See [Create a security group for your Amazon EC2 instance - Amazon Elastic Compu
 This may indicate that the VPA updater and admission controller pods are not reporting.
 
 In this case, the right-sizing recommendations cannot be injected when a pod is launched, and you will not be able to attach a rule to a workload, which will move to the **Limited** status.
+
+>**Note**: Spot only checks the health of the VPA pods belonging to the Spot VPA Project, not the Native VPA one.
 
