@@ -71,16 +71,16 @@ Ocean Controller Version 2 supports the `namespaceSelector` scaling constraint l
 
 Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font> 
 
-AWS Kubernetes clusters use reserved [elastic network interfaces (ENI)](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html#AvailableIpPerENI) to enhance network stability and predictability. In Ocean, you can use the `reservedENIs` attribute to specify the number of ENIs to reserve per instance type (for cluster / virtual node group) for scaling purposes. Ocean includes reserved ENIs when calculating how many pods can be scheduled on a node. 
+AWS Kubernetes clusters use reserved [elastic network interfaces (ENI)](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html#AvailableIpPerENI) to enhance network stability and predictability. In Ocean, you can use the `reservedENIs` attribute to specify the number of ENIs to reserve per instance (for cluster / virtual node group) for scaling purposes. Ocean includes reserved ENIs when calculating how many pods can be scheduled on a node. 
 
-The Ocean autoscaler will only spin up an instance that is larger than the `reservedENIs` attribute.
+The Ocean autoscaler will only be able to spin up instances with enough free IP addresses after considering the reservedENI parameter.
 
-Reserved ENI `reservedENIs` behavior is as follows:
+Reserved ENI behavior is as follows:
 
 * When `reservedENIs = 0`: Default autoscaling behavior.
 * When `reservedENIs = Integer`: Ocean autoscaler calculates how many pods can be scheduled on a node, considering this attribute.
 
-Ensure you set the attribute large enough for the instance type in the whitelist.
+Ensure that the attribute value is not too large, effectively blocking the usage of some instance types.
 
 When configuring `reservedENIs` for an Ocean cluster virtual node group, if you set a custom maximum number of pods using the `maxPods` attribute in the user data, ensure it aligns with the `reservedENIs` attribute. The `reservedENIs` attribute determines the maximum number of pods per instance based on available ENIs, so any discrepancy between these settings may lead to scheduling issues or suboptimal resources.
 
@@ -106,7 +106,7 @@ Ocean proactively identifies underutilized nodes and [bin-packs](https://en.wiki
 
 ### Scale Down Prevention
 
-Some workloads are not as resilient to instance replacements as others, so you may wish to prevent replacement of the nodes while still getting the benefit of spot instance pricing. A good example of these cases is jobs or batch processes that need to finish their work without termination by the Ocean autoscale.
+Some workloads are not as resilient to instance replacements as others, so you can prevent replacement of the nodes while still getting the benefit of spot instance pricing. A good example of these cases is jobs or batch processes that need to finish their work without termination by the Ocean autoscale.
 
 Ocean makes it easy to prevent scaling down of nodes running pods configured with one of the following labels:
 - spotinst.io/restrict-scale-down:true label – This label is a proprietary Spot label ([additional Spot labels](https://docs.spot.io/ocean/features/labels-and-taints?id=spot-labels)) and can be configured on a pod level. When configured, it instructs the Ocean autoscaler to prevent scaling down a node that runs any pod with this label specified.
