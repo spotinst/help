@@ -80,9 +80,7 @@ Reserved ENI behavior is as follows:
 * When `reservedENIs = 0`: Default autoscaling behavior.
 * When `reservedENIs = Integer`: Ocean autoscaler calculates how many pods can be scheduled on a node, considering this attribute.
 
-Ensure you set the attribute large enough for the instance type in the whitelist.
-
-Ensure that the attribute value is not too large, which would effectively block the usage of some instance types.
+Ensure that the attribute value is not too large, effectively blocking the usage of some instance types.
 
 When configuring `reservedENIs` for an Ocean cluster virtual node group, if you set a custom maximum number of pods using the `maxPods` attribute in the user data, ensure it aligns with the `reservedENIs` attribute. The `reservedENIs` attribute determines the maximum number of pods per instance based on available ENIs, so any discrepancy between these settings may lead to scheduling issues or suboptimal resources.
 
