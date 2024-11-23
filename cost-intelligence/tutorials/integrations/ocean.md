@@ -3,7 +3,7 @@
 Ocean exports custom data files into one of Cost Intelligence’s S3 buckets daily. That data is then joined with the Billing Engine data to create a new dataset. Using that dataset, Cost Intelligence builds dashboards and charts.
 
 ## Prerequisites
-* Connect to [Ocean Insights](ocean/getting-started/). 
+* Connect to [Ocean](ocean/getting-started/). 
 * A Billing Engine account. 
 
 ## Request Integration and Export Data
