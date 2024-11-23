@@ -1834,6 +1834,9 @@ export const aliases = (() => {
 
     "/spot-security/features/security-dashboard/create-preset":
       "/spot-security/features/security-dashboard/",
+
+    "/cost-intelligence/tutorials/integrations/ocean-insights":
+      "/cost-intelligence/tutorials/integrations/ocean",
   };
 
   for (let [key, value] of Object.entries(map)) {
