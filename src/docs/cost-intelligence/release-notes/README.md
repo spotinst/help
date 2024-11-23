@@ -9,7 +9,7 @@
 
 * **COI-0015**: October 29th, 2024: You can integrate [Databricks](cost-intelligence/tutorials/integrations/databricks), [MongoDB Atlas](cost-intelligence/tutorials/integrations/mongodb), and [OpenAI](cost-intelligence/tutorials/integrations/openai) with Cost Intelligence to collect billable and usage metrics for your organization. [Learn more](cost-intelligence/tutorials/integrations/)
 
-* **COI-0014**: October 17th, 2024: You can now allow Ocean to be imported into Cost Intelligence dashboards that is joined with Billing Engine data. [Learn more](cost-intelligence/tutorials/integrations/ocean-insights)
+* **COI-0014**: October 17th, 2024: You can now allow Ocean to be imported into Cost Intelligence dashboards that is joined with Billing Engine data. [Learn more](cost-intelligence/tutorials/integrations/ocean)
 
 * **COI-0013**: October 16th, 2024: You can now export the [inventory report](cost-intelligence/tutorials/inventory) and the [best practice checks](cost-intelligence/tutorials/best-practice-checks/) data to a CSV file. 
 
