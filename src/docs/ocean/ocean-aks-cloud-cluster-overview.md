@@ -18,7 +18,7 @@ To access the Ocean Cluster Overview dashboard:
 
 ## Ocean Savings Panel
 
-![savings-tab-sample2](https://github.com/user-attachments/assets/d36f3ea4-215a-4eb1-bad3-a6acdd3533f6)
+![managed-nodes](https://github.com/user-attachments/assets/5b5cf3fe-e652-4287-82d3-5069ce151922)
 
 The Ocean Savings panel contains a set of savings widgets (displayed as tabs), which show your savings according to Ocean’s main autoscaling processes for cluster optimization in a selected time range:  
 
@@ -89,7 +89,7 @@ Ocean savings for reverting to a lower-cost node are calculated from the differe
 
 To view these savings, click the **Revert to Lower Cost** tab (unless already displayed). 
 
-NEW SCREEN REQUIRED 
+![revert-to-lower-cost-tab](https://github.com/user-attachments/assets/5bde8aab-bf61-46b6-8c67-fbd9fe1ef401)
 
 This tab displays:
 
@@ -110,8 +110,8 @@ This tab displays:
  
 <details>
    <summary markdown="span">View image</summary>
-   
-![aks-cluster-rev-to-lower-cost](https://github.com/user-attachments/assets/bd0f30f4-7280-4d74-aef7-50a714809c80)
+
+ ![revert-to-lower-cost-breakdown](https://github.com/user-attachments/assets/c7ead8ba-4f3c-457a-8838-c4d9ff4147e4)
 
 </details> 
 
