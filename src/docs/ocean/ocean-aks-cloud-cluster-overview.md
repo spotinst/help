@@ -117,7 +117,8 @@ This tab displays:
     
    <div style="padding-left:16px">
 
-<img width="1000" src="https://github.com/user-attachments/assets/f789a1b8-8155-43d6-bc8b-d78356d8ae0c" />
+<img width="1000" src="https://github.com/user-attachments/assets/943bed5d-2bd8-49cb-9972-aa2de5a0f563" />
+
 
 </div>
 </details> 
