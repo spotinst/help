@@ -69,10 +69,14 @@ This tab displays:
   * Lifecycle: (On-Demand, Savings Plans, Reserved Instances, and spots).
   * Scale-Down Timestamp, for example, 06/25/2023 09:23:15
  
-<details>
-   <summary markdown="span">View image</summary>
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id=”texttolinkto”>View image...</summary>
+    
+   <div style="padding-left:16px">
 
-![bin-packs-image-bin-packs](https://github.com/user-attachments/assets/db6177b2-82fa-4eb0-9ca5-2cd31bcf8ef9)
+<img width="1000" src="https://github.com/user-attachments/assets/db6177b2-82fa-4eb0-9ca5-2cd31bcf8ef9" />
+
+</div>
 
 </details>
 
@@ -108,11 +112,14 @@ This tab displays:
      * The Virtual Node Group's name (click the link for a listed VNG to display your custom VNG details).
      * Scale-down timestamp in format MM/DD/YYYY HH: MM: SS
  
-<details>
-   <summary markdown="span">View image</summary>
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id=”texttolinkto”>View image...</summary>
+    
+   <div style="padding-left:16px">
 
- ![revert-to-lower-cost-breakdown](https://github.com/user-attachments/assets/c7ead8ba-4f3c-457a-8838-c4d9ff4147e4)
+<img width="1000" src="https://github.com/user-attachments/assets/c7ead8ba-4f3c-457a-8838-c4d9ff4147e4" />
 
+</div>
 </details> 
 
 *   Resource savings from reverting to lower cost in the following units:  
