@@ -10,7 +10,7 @@ Shutdown Hours are recommended for non-production environments (e.g., developmen
 
 <img src="/ocean/_media/features-running-hours-00.png" />
 
-The running hours are shown in blue, and the off hours are shown in gray.
+The running hours are in blue, and the off hours are in gray.
 
 - You can define running hours in minimum chunks of 30 minutes.
 - The schedule appears according to your local time, but Ocean uses the UTC time zone internally.
@@ -41,7 +41,7 @@ At the end of this process, all tasks are satisfied, and the cluster fully funct
 
 ## Shutdown Hours per Virtual Node Group
 
-Cloud service providers AWS Kubernetes and AKS
+Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>, <font color="#FC01CC">AKS</font>  
 
 You can define shutdown hours per virtual node group via the Spot API to shutdown groups at different times. 
 For example, teams working on different virtual node groups may need to scale down the infrastructures related to each group at different times.
