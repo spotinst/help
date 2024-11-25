@@ -30,13 +30,13 @@ Cloud service provider relevance: AWS Kubernetes and AKS
 
 You can use the Spot API to configure [shutdown hours](ocean/features/running-hours?id=shutdown-hours-per-vng) for one or more individual virtual node groups.
 
-For AWS Kubernetes, configure it under: `launchSpec.scheduling.shutdownHours`:
+For AWS Kubernetes, set shutdown hours under: `launchSpec.scheduling.shutdownHours`:
 * [Create VNG](https://docs.spot.io/api/#operation/OceanAWSLaunchSpecCreate)
-* [Update VNG](https://docs.spot.io/api/#operation/OceanAWSLaunchSpecUpdate)  as shown below.
+* [Update VNG](https://docs.spot.io/api/#operation/OceanAWSLaunchSpecUpdate)
 
-Note that `isEnabled` must be set to True to enable the shutdown hours.
+>**Note:** `isEnabled` must be set to **True** to turn on shutdown hours.
 
-For AKS, configure it under:
+For AKS, set shutdown hours under:
 * [Create VNG]()
 * [Update VNG]()
 
