@@ -26,7 +26,7 @@ The value defined in the `shutdownHours.timeWindows` field is effective only whe
 
 ## Schedule Shutdown Hours in the API per Virtual Node Group
 
-Cloud service provider relevance: AWS Kubernetes and AKS
+Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>, <font color="#FC01CC">AKS</font>  
 
 You can use the Spot API to configure [shutdown hours](ocean/features/running-hours?id=shutdown-hours-per-vng) for one or more individual virtual node groups.
 
