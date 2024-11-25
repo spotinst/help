@@ -49,5 +49,8 @@ For example, teams working on different virtual node groups may need to scale do
 - Cluster shutdown hours have higher priority. For example, if the cluster is in shutdown hours, a scheduled wake-up of a virtual node group in the cluster will not occur during this time.
 - When the virtual node group is up again, it automatically scales to the minimum nodes configured.
 
-This feature is available using the [Create](https://docs.spot.io/api/#operation/OceanAWSLaunchSpecCreate) and [Update](https://docs.spot.io/api/#operation/OceanAWSLaunchSpecUpdate) APIs for AWS. For setup information, see [Set Shutdown Hours per VNG](ocean/tutorials/set-running-hours?id=set-shutdown-hours-per-vng).
+## Related Topics
+
+[Set Shutdown Hours (Console and API)](https://docs.spot.io/ocean/tutorials/set-running-hours)
+
 
