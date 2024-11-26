@@ -14,6 +14,7 @@
     - [Core Features](elastigroup/features/core-features/)
       - [On-Demand, Spot & Reserved Instances](elastigroup/features/core-features/spot-reserved-on-demand-instances)
       - [Market Scoring & Managing Interruptions](elastigroup/features/core-features/market-scoring-managing-interruptions)
+      - [Dynamic Commitments](elastigroup/features/core-features/dynamic-commitments)
       - [Predictive Rebalancing](elastigroup/features/core-features/predictive-rebalancing)
       - [Cluster Orientation](elastigroup/features/core-features/cluster-orientation)
       - [Equal AZ Instance Distribution Orientation](elastigroup/features/core-features/equal-az-instance-distribution-orientation)
