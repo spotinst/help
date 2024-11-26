@@ -7,7 +7,7 @@ This procedure describes how application workloads that require on-demand instan
 
 You can track dynamic compute commitment utilization and coverage with your AWS Cost Usage report.
 
-# Feature Benefits 
+## Feature Benefits 
 
 By prioritizing reserved instances and savings plan commitments, this feature continually adapts to the dynamic needs of your environment. Dynamic commitments management lets you:
 
