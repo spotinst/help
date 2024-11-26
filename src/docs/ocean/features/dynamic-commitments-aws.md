@@ -1,4 +1,6 @@
-# Overview
+# Dynamic Commitments 
+
+## Overview
 
 Elastigroup and Ocean automatically revert existing instances using reserved capacity (RI) and savings plans (SP) to spot instances or other commitment deals wherever a reservation is needed elsewhere in your AWS account. This feature optimizes resource allocation and cost efficiency by continuously adjusting to dynamic environment needs. 
 
@@ -43,8 +45,13 @@ The reversion will not occur if:
 
 ## Configure in the API 
 
-To use this feature in your group, in [Create Elastigroup](https://docs.spot.io/api/#tag/Elastigroup-AWS/operation/elastigroupAwsCreate) or [Update Elastigroup](https://docs.spot.io/api/#tag/Elastigroup-AWS/operation/elastigroupAwsUpdate), set `theutilizecommitments` or `utilizeReservedInstances` parameters to true. 
+You can use this feature at the cluster or virtual node group level:
 
-**Note**: The default value for the `utilizeReservedInstances` parameter is `true`.
+* [Create cluster]() or [Update cluster]()
+* [Create virtual node group]() or [Create virtual node group]()
 
-For Ocean, use the cluster or virtual node group parameters.
+Set the `theutilizecommitments` or `utilizeReservedInstances` parameter to true.
+
+>**Note**: The default value for the `utilizeReservedInstances` parameter is `true`.
+
+For Elastigroup, use the [create and update elastigroup parameters](https://docs.spot.io/elastigroup/features/core-features/dynamic-commitment?id=configure-in-the-api).
