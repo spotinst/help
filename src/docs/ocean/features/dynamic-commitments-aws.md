@@ -13,8 +13,8 @@ You can track dynamic compute commitment utilization and coverage with your AWS 
 
 By prioritizing reserved instances and savings plan commitments, this feature continually adapts to the dynamic needs of your environment. Dynamic commitments management lets you:
 
-* Prioritize Available RIs and SPs
-* Revert from On-demand RI and SPs
+* Prioritize available RIs and SPs.
+* Revert from On-demand RI and SPs.
 
 ## Prioritize Available RIs and SPs
 
@@ -47,8 +47,8 @@ The reversion will not occur if:
 
 You can use this feature at the cluster or virtual node group level:
 
-* [Create cluster]() or [Update cluster]()
-* [Create virtual node group]() or [Create virtual node group]()
+* [Create cluster](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterCreate) or [Update cluster](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterUpdate)
+* [Create virtual node group](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecCreate) or [Update virtual node group](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecUpdate)
 
 Set the `theutilizecommitments` or `utilizeReservedInstances` parameter to true.
 
