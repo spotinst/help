@@ -3452,6 +3452,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/ocean/features/distribute-vcpu"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/ocean/features/dynamic-commitments-aws</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/ocean/features/dynamic-commitments-aws"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/ocean/features/dynamic-commitments-aws"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/ocean/features/eks-auto-ami</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
@@ -3534,6 +3541,13 @@
         <priority>0.5</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/ocean/features/ocean-cluster-rights-troubleshooting"/>
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/ocean/features/ocean-cluster-rights-troubleshooting"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/ocean/features/ocean-dynamic-commitments-aws</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/ocean/features/ocean-dynamic-commitments-aws"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/ocean/features/ocean-dynamic-commitments-aws"/>
     </url>
     <url>
         <loc>https://docs.spot.io/ocean/features/</loc>
