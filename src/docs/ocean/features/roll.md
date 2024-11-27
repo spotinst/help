@@ -81,16 +81,16 @@ The following are reasons for failure:
 
 You can schedule a roll in the Create Cluster or Update Cluster [Spot API](https://docs.spot.io/api/#tag/Ocean-AKS/operation/oceanAKSClusterUpdate) using a cron expression. This enables you to run the roll easily during off hours.
 
-##  Roll per Cluster, VNG, or Node Pool
+##  Roll per Cluster, Virtual Node Group, or Node Pool
 
-Ocean VNGs / Node Pools enable you to run different VNGs / Node Pools within a single Ocean cluster, for example:
+Ocean virtual node groups are subsets of nodes on a cluster that you can configure for specific purposes within a single Ocean cluster, for example:
 
 *   Separate development, test, and production environments.
 *   Different teams.
 *   Different applications or microservices.
 
-The Spot API lets you roll one or more nodes in a VNG without having to roll the entire cluster, for example, when you do not want to roll the entire cluster for a local software update. You do this by specifying a list of node IDs or a specific VNG ID.
-The VNG parameter initiates a roll of one or more VNGs in the cluster. When you specify a VNG ID, all the nodes in that VNG are rolled.
+The Spot API lets you roll one or more nodes in a virtual node group without having to roll the entire cluster, for example, when you do not want to roll the entire cluster for a local software update. You do this by specifying a list of node IDs or a specific VNG ID.
+The virtual node group parameter initiates a roll of one or more virtual node groups in the cluster. When you specify a VNG ID, all the nodes in that virtual node group are rolled.
 
 Similarly, the Spot API lets you roll one or more node pools without rolling the entire cluster. Do this by specifying a list of node Pool IDs or a specific Node Pool ID.
 The node pool parameter initiates a roll of one or more node pools in the cluster. When you specify a node pool ID, all the nodes in that node pool are rolled.
@@ -107,12 +107,13 @@ To access the Ocean Cloud Cluster Rolls tab:
 
 In the Rolls tab, you can run immediate rolls for your clusters, VNGs, and node pools or schedule your cluster and VNG rolls.
 
-*    The Rolls tab is empty if you have not run or scheduled a roll in this cluster.
+* The Rolls tab is empty if you have not run or scheduled a roll in this cluster.
 
 ![ocn-roll-ocean-empty-first-roll](https://github.com/spotinst/help/assets/159915991/c4d47fc4-93c9-42a8-ae67-1fe58b986d49)
 
-*    If at least one roll exists, the rolls history list appears.
-*    Configured roll schedules appear below the rolls history list.
+Otherwise:
+* If at least one roll exists, the rolls history list appears.
+* Configured roll schedules appear below the rolls history list.
 
 ![ocn-roll-ocean-existing-rolls-ud3](https://github.com/spotinst/help/assets/159915991/bd00ea00-3119-40b8-8fad-a911f5624499)
 
@@ -143,8 +144,8 @@ To roll immediately:
 
     Alternative options for starting a roll:
 
-    *   From the Cloud Cluster, Virtual Nodes Group tab: Select a VNG from the list, and then select **VNG Roll** from the Actions drop-down menu at the top-right of the screen.
-    *   From the Cloud Cluster Overview, select **Cluster Roll** from the Actions drop-down menu at the top-right of the screen.
+    *   From the Cloud Cluster, virtual node groups tab: Select a virtual node group from the list, and then select **VNG Roll** from the Actions drop-down menu at the top-right of the screen.
+    *   From the Cloud Cluster overview tab, select **Cluster Roll** from the Actions drop-down menu at the top-right of the screen.
 
    >**Note:** The dialog box that appears depends on what you selected to roll (sample shown below).
 
