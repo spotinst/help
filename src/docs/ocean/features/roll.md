@@ -89,6 +89,10 @@ Ocean virtual node groups are subsets of nodes on a cluster that you can configu
 *   Different teams.
 *   Different applications or microservices.
 
+In AKS, nodes with the same configuration are grouped into node pools containing the underlying VMs that run your applications.
+In Ocean, each Virtual Node Group (VNG) manages its own set of node pools, so each Virtual Node Group has multiple node pools but not vice versa.
+AKS is responsible for launching the VMs with the given configuration and registering them with the cluster. Ocean uses the node pool data to get information about a VM
+
 The Spot API lets you roll one or more nodes in a virtual node group without having to roll the entire cluster, for example, when you do not want to roll the entire cluster for a local software update. You do this by specifying a list of node IDs or a specific VNG ID.
 The virtual node group parameter initiates a roll of one or more virtual node groups in the cluster. When you specify a VNG ID, all the nodes in that virtual node group are rolled.
 
