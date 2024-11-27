@@ -119,7 +119,7 @@ Otherwise:
 * If at least one roll exists, the rolls history list appears.
 * Configured roll schedules appear below the rolls history list.
 
-![ocn-roll-ocean-existing-rolls-ud3](https://github.com/spotinst/help/assets/159915991/bd00ea00-3119-40b8-8fad-a911f5624499)
+![aks-rolls-history-drill-down](https://github.com/user-attachments/assets/ddbb0902-9d8c-4c59-87ef-3f6bb51f9399)
 
 The rolls history list contains an entry for each roll under the following columns:
 
@@ -130,6 +130,16 @@ The rolls history list contains an entry for each roll under the following colum
 * End Time for roll
 * Nodes Rolled (number of nodes rolled)
 * Roll [Status](https://docs.spot.io/ocean/features/roll?id=roll-status)
+
+Click a down arrow for an entry to drill down for more information:
+
+* Node Name
+* Node ID
+* Node Pool Name
+* VNG Name
+* VNG ID
+* Batch Number
+* [Status](https://docs.spot.io/ocean/features/roll?id=node-status) (node status)
 
 The roll schedules list contains an entry for each schedule:
 
