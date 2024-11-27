@@ -11,7 +11,7 @@ In this case, the right-sizing recommendations cannot be injected when a pod is 
 
 >**Note**:
 > - Spot checks the health of the VPA pods belonging to the Spot Ocean VPA Project.
-> - For the Native VPA project, health checks are performed as long as the project's name is not changed.
+> - For the Native VPA project, health checks are performed as long as the deployment's name is not changed.
 
 ## Security Group not correctly configured
 
