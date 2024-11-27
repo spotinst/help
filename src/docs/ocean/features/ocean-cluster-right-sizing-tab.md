@@ -102,7 +102,7 @@ This panel contains two widgets:
 * vCPU usage in the last 2 weeks: Displays graphs for used, allocated, and recommended vCPU usage based on data from the last 2 weeks.
 * Memory usage in the last 2 weeks: Displays graphs for used, allocated, and recommended memory usage based on data from the last 2 weeks.
 
-![usage](https://github.com/user-attachments/assets/0335a764-de6f-459b-8e5e-b4fa3119306d)
+<img width="1000" src="https://github.com/user-attachments/assets/a94b2d5f-b191-4142-acbc-085809aa21d4" />
 
 Hover over a data point in the **vCPU usage in the last 2 weeks** widget to view usage details:
 >**Note**: The default **85th percentile vCPU usage** and **Maximum memory usage** options are used to calculate the right-sizing recommendations for all usage parameters.
