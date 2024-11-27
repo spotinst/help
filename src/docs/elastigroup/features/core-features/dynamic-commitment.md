@@ -1,4 +1,4 @@
-# Dynamic Commitments
+# Dynamic Commitment Management
 
 ## Overview
 
