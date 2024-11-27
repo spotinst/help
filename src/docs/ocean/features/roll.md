@@ -113,13 +113,14 @@ In the Rolls tab, you can run immediate rolls for your clusters, VNGs, and node 
 
 * The Rolls tab is empty if you have not run or scheduled a roll in this cluster.
 
-![ocn-roll-ocean-empty-first-roll](https://github.com/spotinst/help/assets/159915991/c4d47fc4-93c9-42a8-ae67-1fe58b986d49)
+<img width="600" src="https://github.com/user-attachments/assets/42033751-b7a9-4cbf-aae0-aa6f255398cb" />
 
 Otherwise:
 * If at least one roll exists, the rolls history list appears.
 * Configured roll schedules appear below the rolls history list.
 
-![aks-rolls-history-drill-down](https://github.com/user-attachments/assets/ddbb0902-9d8c-4c59-87ef-3f6bb51f9399)
+<img width="1000" src="https://github.com/user-attachments/assets/8b34a624-f254-4e2e-a534-a6764018c218" />
+
 
 The rolls history list contains an entry for each roll under the following columns:
 
