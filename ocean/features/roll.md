@@ -113,13 +113,14 @@ In the Rolls tab, you can run immediate rolls for your clusters, VNGs, and node 
 
 * The Rolls tab is empty if you have not run or scheduled a roll in this cluster.
 
-![ocn-roll-ocean-empty-first-roll](https://github.com/spotinst/help/assets/159915991/c4d47fc4-93c9-42a8-ae67-1fe58b986d49)
+<img width="600" src="https://github.com/user-attachments/assets/42033751-b7a9-4cbf-aae0-aa6f255398cb" />
 
 Otherwise:
 * If at least one roll exists, the rolls history list appears.
 * Configured roll schedules appear below the rolls history list.
 
-![aks-rolls-history-drill-down](https://github.com/user-attachments/assets/ddbb0902-9d8c-4c59-87ef-3f6bb51f9399)
+<img width="1000" src="https://github.com/user-attachments/assets/8b34a624-f254-4e2e-a534-a6764018c218" />
+
 
 The rolls history list contains an entry for each roll under the following columns:
 
@@ -166,7 +167,7 @@ To roll immediately:
 ![ocn-roll-ocean-create-roll-dialog-box](https://github.com/spotinst/help/assets/159915991/8f4a9b48-1d2d-49cf-b72c-e0b477dff6e1)
 
 2.	If you are rolling virtual node groups or node pools, select from the drop-down menu at the top of the dialog box. You can optionally select **All**.
-3.	Configure the [Roll Parameters](https://docs.spot.io/ocean/features/roll?id=roll-parameters)):
+3.	Configure the [Roll Parameters](https://docs.spot.io/ocean/features/roll?id=roll-parameters):
 
     *   Set the size of a roll batch (%). 
     *   Set the batch size healthy percentage (%).
@@ -196,7 +197,7 @@ To create a roll schedule:
 
 
 3.	In the second step of the wizard, if you are rolling virtual node groups or node pools, select from the drop-down menu at the top of the dialog box. You can optionally select **All**.
-4.	Configure the [Roll Parameters](https://docs.spot.io/ocean/features/roll?id=roll-parameters)):
+4.	Configure the [Roll Parameters](https://docs.spot.io/ocean/features/roll?id=roll-parameters):
 
     *   Configure the size of a roll batch (%). 
     *   Configure the Batch size healthy percentage (%)
