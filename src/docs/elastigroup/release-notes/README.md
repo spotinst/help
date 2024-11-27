@@ -1,6 +1,6 @@
 # Elastigroup Release Notes
 
-* **ELS-0004: November 26th, 2024**: Elastigroup and Ocean now automatically revert existing instances using reserved capacity and savings plans to spot instances or other commitment deals wherever a reservation is needed elsewhere in your AWS account. [Learn more](elastigroup/features/core-features/dynamic-commitment)
+* **ELS-0004: November 26th, 2024**: Elastigroup and Ocean now automatically revert existing instances utilizing reserved capacity and savings plans to spot instances or other commitment deals wherever a reservation is needed elsewhere in your AWS account. [Learn more](elastigroup/features/core-features/dynamic-commitment)
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600">June, 2024 - click to view</summary>
@@ -41,7 +41,7 @@
 
 <div style="padding-left:16px">
 
-* **STN-0004: STN-004**: October 9th, 2024: You can now use the console to:
+* **STN-0004: October 9th, 2024**: You can now use the console to:
 
   * start a Spot-managed VM when a stateful node is stopped
   * stop an Azure VM when a stateful node is running
