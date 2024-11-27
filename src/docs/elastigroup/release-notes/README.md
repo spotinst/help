@@ -54,7 +54,7 @@
 
 <div style="padding-left:16px">
 
-* **STN-0003: September 25th, 2024**: In the Costs tab, you can now view your stateful node's costs, including a breakdown of daily spend and a summary of overall costs. This new section offers insights into compute, storage, and network expenses. [Learn more](managed-instance/azure/tutorials/view-details?id=costs)
+* **STN-0003: September 25th, 2024**: September 25th, 2024**: Elastigroup can now change the import flow to keep the virtual machine's status after an import is complete, depending on whether the original virtual machine is running or stopped. [Learn more](managed-instance/azure/getting-started/import-stateful-node?id=import-process-steps)
 
  </div>
  </details>
