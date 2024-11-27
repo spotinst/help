@@ -1,6 +1,7 @@
 # Rolls (AKS)
 
 The Ocean Roll feature effortlessly synchronizes cluster infrastructure with a fresh image, user data, or security groups, eliminating the need to disable the Ocean autoscaler or manually detach nodes within the cluster.
+
 With Ocean, you can roll a cluster with just a single click. The roll feature intelligently considers the workloads running in the cluster. It freezes any scale-down activities within the cluster and seamlessly deploys new compute capacity to meet the demands of the workloads. During the startup phase of the new nodes, the existing nodes retain the ability to scale up as needed, ensuring uninterrupted operations. The old nodes are only scaled down once the new nodes are confirmed to be in a healthy state.
 
 Whether you are rolling out changes to your entire Ocean cluster, a particular virtual node group (VNG), or specific nodes, Ocean offers the flexibility to divide the roll into batches based on your chosen batch sizes. For example, if you opt for the default batch size of 20%, Ocean will divide the roll into five batches.
@@ -8,7 +9,7 @@ Whether you are rolling out changes to your entire Ocean cluster, a particular v
 The process is as follows:
 1.	Ocean calculates the number of batches required in the roll based on the batch size you enter and divides the workloads equally among the batches.
 2.	Ocean starts with the first batch, replacing each node to ensure the successful accommodation of the workloads on the new nodes. Ocean's autoscaler considers all relevant constraints in place before the roll.
-3.	When all nodes in a batch complete processing and at least 50% of them have a successful replacement, then Ocean starts to work on the next batch. You can configure the percentage in the Spot API using the batchMinHealthyPercentage parameter, which is explained below.
+3.	When all nodes in a batch complete processing and at least 50% of them have a successful replacement, then Ocean starts to work on the next batch. You can configure the percentage in the Spot API using the batchMinHealthyPercentage parameter explained below.
 
 ## Replace Node with Smaller Nodes
 
@@ -16,7 +17,7 @@ A cluster roll can replace a single node with multiple smaller nodes. This avoid
 
 This is based on the workloads currently running on the nodes chosen for rolling. This is especially helpful when you have modified the list of allowed node types or if your goal is to remove and replace a specific node type with multiple smaller ones.
 
-This logic can improve the cluster's utilization since the workload would run on infrastructure that best matches the workload. Ocean constantly tries to scale down the cluster, but if this is not possible, a cluster roll could improve the utilization.
+This logic can improve the cluster's utilization since the workload would run on infrastructure that best matches the workload. Ocean constantly tries to scale down the cluster, but a cluster roll could improve the utilization if this is not possible.
 
 ## Roll Parameters
 
@@ -32,7 +33,7 @@ This logic can improve the cluster's utilization since the workload would run on
 
 ## Node Status
 
-During the roll process, Ocean provides information about the status of each node:
+During the roll, Ocean provides information about the status of each node:
 
 *   **REPLACED**: A new node successfully replaced the node.
 
@@ -110,9 +111,25 @@ In the Rolls tab, you can run immediate rolls for your clusters, VNGs, and node 
 
 ![ocn-roll-ocean-empty-first-roll](https://github.com/spotinst/help/assets/159915991/c4d47fc4-93c9-42a8-ae67-1fe58b986d49)
 
-*    If at least one roll exists, the Rolls History appears. 
+*    If at least one roll exists, the Rolls History appears.
+*    Configured roll schedules appear below the table.
 
 ![ocn-roll-ocean-existing-rolls-ud3](https://github.com/spotinst/help/assets/159915991/bd00ea00-3119-40b8-8fad-a911f5624499)
+
+The rolls history list contains an entry for each roll under the following columns:
+
+* Roll ID (unique ID for the roll)
+* Role Scope (cluster, virtual node group, or node pool).
+* Comments (optional)
+* Start Time for roll
+* End Time for roll
+* Nodes Rolled (number of nodes rolled)
+* Roll [Status](https://docs.spot.io/ocean/features/roll?id=roll-status)
+
+The roll schedules list contains an entry for each schedule:
+
+* Role Scope (cluster, virtual node group, or node pool).
+* Scheduled frequency.
 
 ##  Roll Now
 
@@ -129,12 +146,12 @@ To roll immediately:
     *   From the Cloud Cluster, Virtual Nodes Group tab: Select a VNG from the list, and then select **VNG Roll** from the Actions drop-down menu at the top-right of the screen.
     *   From the Cloud Cluster Overview, select **Cluster Roll** from the Actions drop-down menu at the top-right of the screen.
 
-   >**Note:** The dialog box depends on the type of object(s) you selected to roll (a sample is shown below).
+   >**Note:** The dialog box that appears depends on what you selected to roll (sample shown below).
 
 ![ocn-roll-ocean-create-roll-dialog-box](https://github.com/spotinst/help/assets/159915991/8f4a9b48-1d2d-49cf-b72c-e0b477dff6e1)
 
-2.	To roll a VNG or Node Pools, select one or more VNGs or Node Groups to run from the drop-down menu at the top of the dialog box. You can optionally select **All**.
-3.	Configure the following (refer to [Roll Parameters](https://docs.spot.io/ocean/features/roll?id=roll-parameters)):
+2.	To roll virtual node groups or node pools only, select from the drop-down menu at the top of the dialog box. You can optionally select **All**.
+3.	Configure the [Roll Parameters](https://docs.spot.io/ocean/features/roll?id=roll-parameters)):
 
     *   Set the size of a roll batch (%). 
     *   Set the batch size healthy percentage (%).
@@ -144,7 +161,7 @@ To roll immediately:
 
  4.	Click **Roll Cluster** / **VNG** / **Node Pool**.
 
->**Note:** To stop a roll while it is running, click the **Stop Roll** button on the screen's right, then click **Stop Roll** in the confirmation box.
+>**Note:** To stop a roll while running, click the **Stop Roll** button on the screen's right, then click **Stop Roll** in the confirmation box.
 
 ##  Create a Roll Schedule 
 
@@ -158,12 +175,13 @@ To create a roll schedule:
 
     From the Create Roll drop-down menu on the right of the screen, click **Schedule Roll**.
     
-2.	In the Schedule Roll wizard's first step, select the roll type. The available roll types depend on your system deployment.
+2.	Select the roll type in the Schedule Roll wizard's first step. The available roll types depend on your system deployment.
  
 ![ocn-roll-ocean-schedule-roll-first-step](https://github.com/spotinst/help/assets/159915991/953f5022-a60c-4662-886e-e5a1009d1a6f)
 
 
-3.	In the second step of the wizard, configure the following (refer to [Roll Parameters](https://docs.spot.io/ocean/features/roll?id=roll-parameters)):
+3.	To roll virtual node groups or node pools only, select from the drop-down menu at the top of the dialog box. You can optionally select **All**.
+4.	Configure the [Roll Parameters](https://docs.spot.io/ocean/features/roll?id=roll-parameters)):
 
     *   Select your VNG or Cluster.
     *   Configure the size of a roll batch (%). 
@@ -174,12 +192,12 @@ To create a roll schedule:
 
 ![ocn-roll-ocean-schedule-roll-second-step](https://github.com/spotinst/help/assets/159915991/47d2c4b4-6ea7-4d51-9d9e-663cfe77f445)
   
-4.	In the third step of the wizard, set the schedule frequency using the day/week/month/time controls or type in a Cron expression.
+5.	In the third step of the wizard, set the schedule frequency using the day/week/month/time controls or type in a Cron expression.
  
  ![ocn-roll-ocean-schedule-roll-third-step](https://github.com/spotinst/help/assets/159915991/e73b2b1f-867c-42ee-a19c-dcb930deb356)
 
 
-5.	Click **Schedule Roll**. Your schedule appears in the Rolls tab - Scheduled Rolls list under Rolls History.
+6.	Click **Schedule Roll**. Your schedule appears in the Rolls tab - Scheduled Rolls list under Rolls History.
 
 ![ocn-roll-ocean-new-schedule-in-history](https://github.com/spotinst/help/assets/159915991/534fc374-4a9c-4a7e-8d9f-76c276ab37a9)
 
