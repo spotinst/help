@@ -17,7 +17,7 @@ A cluster roll can replace a single node with multiple smaller nodes. This avoid
 
 This is based on the workloads currently running on the nodes chosen for rolling. This is especially helpful when you have modified the list of allowed node types or if your goal is to remove and replace a specific node type with multiple smaller ones.
 
-This logic can improve the cluster's utilization since the workload would run on infrastructure that best matches the workload. Ocean constantly tries to scale down the cluster, but a cluster roll could improve the utilization if this is not possible.
+This logic can improve the cluster's utilization since the workload would run on infrastructure that best matches the workload. Ocean constantly tries to scale down the cluster, but a cluster roll could improve the utilization if this is impossible.
 
 ## Roll Parameters
 
@@ -28,7 +28,7 @@ This logic can improve the cluster's utilization since the workload would run on
 *   **Roll Batch Size Percentage**: Indicates the percentage of the cluster's target capacity that will be rolled during a node pool update or scale operation. For example, if the cluster's target capacity is 50 nodes, and the Batch Size Percentage is set to 20%, each batch will consist of 20% of the target capacity, 10 nodes (50 nodes * 20% = 10 nodes). 
 
 *   **Batch Size Healthy Percentage**: indicates the minimum percentage of healthy instances in a single batch.
-    The roll will fail if the number of healthy instances in a single batch is below this percentage. The range is 1-100; if the parameter value is null, the default value will be 50%. Ocean considers instances not replaced due to PDB as healthy.
+    The roll will fail if the number of healthy instances in a single batch is less than this percentage. The range is 1-100; if the parameter value is null, the default value will be 50%. Ocean considers instances not replaced due to PDB as healthy.
     You can override the behavior of the `batchMinHealthyPercentage` parameter by setting the `ignorePdb` parameter to True.
 
 ## Node Status
@@ -39,7 +39,7 @@ During the roll, Ocean provides information about the status of each node:
 
 *   **TO_BE_REPLACED**: Ocean has not yet tried to replace the node.
 
-*   **COULD_NOT_BE_REPLACED**: The node was not replaced. This may occur for example, when no replacement node becomes  healthy within the grace period.
+*   **COULD_NOT_BE_REPLACED**: The node was not replaced. This may occur, for example, when no replacement node becomes  healthy within the grace period.
 
 *   **NOT_REPLACED_DUE_TO_PDB**: Replacing the node violates the PDB configuration on one of the pods running on the node. This status is only relevant when `respectPdb` is set to True. If a node could not be replaced due to PDB, and the allowed PDB % of nodes for the batch was respected, Ocean would continue to the next batch. 
 
@@ -107,12 +107,12 @@ To access the Ocean Cloud Cluster Rolls tab:
 
 In the Rolls tab, you can run immediate rolls for your clusters, VNGs, and node pools or schedule your cluster and VNG rolls.
 
-*    If you have not run or scheduled a roll in this cluster, the Rolls tab appears as shown below.
+*    The Rolls tab is empty if you have not run or scheduled a roll in this cluster.
 
 ![ocn-roll-ocean-empty-first-roll](https://github.com/spotinst/help/assets/159915991/c4d47fc4-93c9-42a8-ae67-1fe58b986d49)
 
-*    If at least one roll exists, the Rolls History appears.
-*    Configured roll schedules appear below the table.
+*    If at least one roll exists, the rolls history list appears.
+*    Configured roll schedules appear below the rolls history list.
 
 ![ocn-roll-ocean-existing-rolls-ud3](https://github.com/spotinst/help/assets/159915991/bd00ea00-3119-40b8-8fad-a911f5624499)
 
@@ -150,7 +150,7 @@ To roll immediately:
 
 ![ocn-roll-ocean-create-roll-dialog-box](https://github.com/spotinst/help/assets/159915991/8f4a9b48-1d2d-49cf-b72c-e0b477dff6e1)
 
-2.	To roll virtual node groups or node pools only, select from the drop-down menu at the top of the dialog box. You can optionally select **All**.
+2.	If you are rolling virtual node groups or node pools, select from the drop-down menu at the top of the dialog box. You can optionally select **All**.
 3.	Configure the [Roll Parameters](https://docs.spot.io/ocean/features/roll?id=roll-parameters)):
 
     *   Set the size of a roll batch (%). 
@@ -180,10 +180,9 @@ To create a roll schedule:
 ![ocn-roll-ocean-schedule-roll-first-step](https://github.com/spotinst/help/assets/159915991/953f5022-a60c-4662-886e-e5a1009d1a6f)
 
 
-3.	To roll virtual node groups or node pools only, select from the drop-down menu at the top of the dialog box. You can optionally select **All**.
+3.	In the second step of the wizard, if you are rolling virtual node groups or node pools, select from the drop-down menu at the top of the dialog box. You can optionally select **All**.
 4.	Configure the [Roll Parameters](https://docs.spot.io/ocean/features/roll?id=roll-parameters)):
 
-    *   Select your VNG or Cluster.
     *   Configure the size of a roll batch (%). 
     *   Configure the Batch size healthy percentage (%)
     *   Add an optional comment.
@@ -203,13 +202,11 @@ To create a roll schedule:
 
 ## Turn a Scheduled Roll On or Off
 
-To turn a scheduled roll on or off: 
-
 *    To the right of the scheduled roll, click the slider right (turn on) or left (turn off).
 
 ##  Delete a Scheduled Roll
 
 To delete a scheduled roll:
 
-1.	To the right of the scheduled roll, click the wastebasket icon.
+1.	Click the wastebasket icon to the right of the scheduled roll.
 2.	When the confirmation message appears, type "Delete" and then click **Delete**, or click **No, Keep** (if you are not sure).   
