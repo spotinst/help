@@ -166,7 +166,7 @@ To roll immediately:
 ![ocn-roll-ocean-create-roll-dialog-box](https://github.com/spotinst/help/assets/159915991/8f4a9b48-1d2d-49cf-b72c-e0b477dff6e1)
 
 2.	If you are rolling virtual node groups or node pools, select from the drop-down menu at the top of the dialog box. You can optionally select **All**.
-3.	Configure the [Roll Parameters](https://docs.spot.io/ocean/features/roll?id=roll-parameters)):
+3.	Configure the [Roll Parameters](https://docs.spot.io/ocean/features/roll?id=roll-parameters):
 
     *   Set the size of a roll batch (%). 
     *   Set the batch size healthy percentage (%).
@@ -196,7 +196,7 @@ To create a roll schedule:
 
 
 3.	In the second step of the wizard, if you are rolling virtual node groups or node pools, select from the drop-down menu at the top of the dialog box. You can optionally select **All**.
-4.	Configure the [Roll Parameters](https://docs.spot.io/ocean/features/roll?id=roll-parameters)):
+4.	Configure the [Roll Parameters](https://docs.spot.io/ocean/features/roll?id=roll-parameters):
 
     *   Configure the size of a roll batch (%). 
     *   Configure the Batch size healthy percentage (%)
