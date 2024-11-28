@@ -7,15 +7,15 @@
 
 * **ECO-0002**: **November 27th, 2024**: You can now view the following Effective Savings Rate (ESR- a FinOps metric that measures the actual ROI of cloud discount instruments) data in the Eco console:
 
- * EC2 ESR
- * Non-EC2 ESR
- * EC2 Commitment
+  * EC2 ESR
+  * Non-EC2 ESR
+  * EC2 Commitment
 
 You can also view the:
 
- * ESR graph- displays the ESR data in more detail 
- * Effective Cost and Waste graph- displays the effective hourly cost (actual incurred cost with upfront costs distributed) and waste over the last 120 days. Costs are displayed across the three main purchase options and any unused commitments. 
- * Utilization Over Time graph- displays the combined utilization of reserved instances and savings plans.
+  * ESR graph- displays the ESR data in more detail 
+  * Effective Cost and Waste graph- displays the effective hourly cost (actual incurred cost with upfront costs distributed) and waste over the last 120 days. Costs are displayed across the three main purchase options and any unused commitments. 
+  * Utilization Over Time graph- displays the combined utilization of reserved instances and savings plans.
 
 * **ECO-0001**: **November 5th, 2024**: The new Ocean integration for Eco allows you to use spot instances more consistently and optimize your savings. [Learn more](eco/tutorials/ocean-int)
 
