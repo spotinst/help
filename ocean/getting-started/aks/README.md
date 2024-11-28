@@ -143,7 +143,7 @@ In this step:
 
 To create your Virtual Node Groups:
 
-![vng-template-a](https://github.com/user-attachments/assets/56ffec63-8243-4840-9a19-8709da334a9f)
+![fix-vngs1](https://github.com/user-attachments/assets/8b675b23-d6eb-4ddb-af3e-7fc7d488d0b1)
 
 1. Select 1 node pool from the list. The selected node pool’s configuration is imported to the virtual node group template and used later for other virtual node groups you create.
 
@@ -166,7 +166,8 @@ To create your Virtual Node Groups:
 
 The selected node pool in this example has a similar configuration to the 4 node pools listed after it. Later, when you migrate your nodes to Ocean, You can consolidate the 5 node pools into the custom virtual node group (created from the 1 selected node pool).
 
-![vng-template-b](https://github.com/user-attachments/assets/f74b10c9-a730-4f1b-9f65-e0ff7c50dbb6)
+![fix-vngs2](https://github.com/user-attachments/assets/05ffe684-7aa6-4c5a-98b4-5978dd31e954)
+
 
 4. Click the virtual node group link and edit attributes as required.
 
@@ -308,7 +309,7 @@ You can:
 
 <img height="400" src="https://github.com/user-attachments/assets/90560b12-9b55-4a4e-aaee-cdedab530e2f" />
 
-When you finish editing the Ocean cluster configuration, click **Create**to create the Ocean-managed AKS cluster. 
+When you finish editing the Ocean cluster configuration, click **Create** to create the Ocean-managed AKS cluster. 
 After import, the cluster appears in the Cloud Clusters list under the left Ocean menu. 
 
 ## Migrate Workloads to Ocean
