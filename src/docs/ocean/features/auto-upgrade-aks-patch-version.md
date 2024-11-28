@@ -13,13 +13,14 @@ To check if your Control Plane version needs upgrading, access the cluster overv
 
 1. Click **Ocean > Cloud Clusters** in the left main menu.
 2. Select a cluster from the list of clusters.
+3. View the installed version number of the control plane at the bottom of the tab.
 
-Screenshot here
+![control-plane -version](https://github.com/user-attachments/assets/6776f5a7-bea6-4a46-9068-daaf0f1c4575)
 
-View the installed version number of the control plane at the bottom of the tab, which will have one of the following statuses:
+The version can have one of the following statuses:
 
 * Green: The control plane is upgraded to the latest patch version.
-* Yellow: The control plane patch version can be upgraded to the new available version.
+* Yellow/orange: The control plane patch version can be upgraded to the new available version.
 * Red: The minor version of the control plane needs an immediate upgrade. Otherwise, you will not be able to launch a new node. Spot does not provide support for Kubernetes minor version upgrades.
 * Gray: The Ocean controller is not valid or is not reporting, so there is no indication of the control plane patch version. See [Troubleshoot the Ocean Controller](https://docs.spot.io/ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-ts).
 
@@ -28,8 +29,8 @@ View the installed version number of the control plane at the bottom of the tab,
 * Click **Auto Upgrade** at the bottom of the cluster overview screen (next to the control plane version), or click the **Auto Upgrade** tab.
 
   >**Note**: If you have not run or scheduled an auto-upgrade in this cluster, the Auto-Upgrades tab appears with a **Scheduled Auto-Upgrade** button in the center of the screen. Otherwise, lists are displayed as shown below.
- 
-   Screenshot
+
+<img width="1000" src="https://github.com/user-attachments/assets/9cfc15c2-e727-45ef-ab94-0ffe8135ca5e" />
 
 The Updates History list for completed runs is displayed at the top of the screen with these attributes:
 
@@ -57,10 +58,10 @@ To schedule an auto-upgrade:
 1. Ensure that the [Azure Kubernetes upgrades feature](https://spotinst.atlassian.net/wiki/pages/resumedraft.action?draftId=3271589937) is not enabled for your cluster. You cannot enable Ocean and Azure Kubernetes auto-upgrades simultaneously.
 2. In the Auto Upgrade tab, click **Scheduled Auto-Upgrade** (or to edit an existing auto-update schedule, click **Edit** in the schedule entry).
 
-Screenshot 
+<img width="500" src="https://github.com/user-attachments/assets/0fbf845d-3595-4111-89c8-2b318b303265" />
 
->**Note**: If the following message appears, click to turn off the Azure Kubernetes upgrades feature.
-screenshot
+>**Note**: If the following message appears at the top of the dialog box, click to turn off the Azure Kubernetes upgrades feature.
+> <img height="70" src="https://github.com/user-attachments/assets/91787c7b-3fea-4778-8ec8-45c867cbf09d" />
 
 3. Select whether to auto-upgrade the Control Plane or to auto-upgrade the Control Plane and Roll. 
 
