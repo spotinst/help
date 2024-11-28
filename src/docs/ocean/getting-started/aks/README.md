@@ -308,7 +308,7 @@ You can:
 
 <img height="400" src="https://github.com/user-attachments/assets/90560b12-9b55-4a4e-aaee-cdedab530e2f" />
 
-When you finish editing the Ocean cluster configuration, click **Create**to create the Ocean-managed AKS cluster. 
+When you finish editing the Ocean cluster configuration, click **Create** to create the Ocean-managed AKS cluster. 
 After import, the cluster appears in the Cloud Clusters list under the left Ocean menu. 
 
 ## Migrate Workloads to Ocean
