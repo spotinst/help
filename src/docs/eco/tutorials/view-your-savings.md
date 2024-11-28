@@ -25,7 +25,7 @@ The Overview dashboard includes a summary line of: 
 * **Total Saved**: Total amount saved as a result of reserved instance and savings plan coverage. 
 * **Current Commitment**: The amount currently committed to reserved instances. The lower the commitment, the more flexible and dynamic the account's compute resources can be. 
 * **MTD Savings**: Total generated savings from the first day of the month to the most recent update. 
-* **EC2 ESR**: Effective Savings Rate (ESR) is the average savings across an entire compute usage. The calculation for Effective Savings Rate (ESR) is [Net Savings]/[On-Demand Cost Equivalent]. Net Savings include the total savings achieved subtracted from the cost of unused commitments. This displays the ESR for EC2, ECS/ Fargate, EKS, and Lambda, excluding Spot instances.
+* **EC2 [ESR](eco/tutorials/view-your-savings?id=esr-effective-savings-rate-chart)**: Effective Savings Rate (ESR) is the average savings across an entire compute usage. The calculation for Effective Savings Rate (ESR) is [Net Savings]/[On-Demand Cost Equivalent]. Net Savings include the total savings achieved subtracted from the cost of unused commitments. This displays the ESR for EC2, ECS/ Fargate, EKS, and Lambda, excluding Spot instances.
 * **Non-EC2 ESR**: The AWS services considered are RDS, Redshift, ElastiCache, and OpenSearch. 
 * **EC2 ESR with Spot**: The AWS services considered are all EC2 usage (including spot usage) plus other services that can be covered by a compute savings plan: EC2, ECS/Fargate, EKS, and Lambda. 
 
