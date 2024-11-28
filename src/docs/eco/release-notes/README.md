@@ -9,7 +9,7 @@
 
   * EC2 ESR
   * Non-EC2 ESR
-  * EC2 Commitment
+  * EC2 ESR with Spot
 
 You can also view the:
 
