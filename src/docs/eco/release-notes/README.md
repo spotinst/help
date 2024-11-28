@@ -13,9 +13,9 @@
 
 You can also view the:
 
-   * ESR graph- displays the ESR data in more detail 
-   * Effective Cost and Waste graph- displays the effective hourly cost (actual incurred cost with upfront costs distributed) and waste over the last 120 days. Costs are displayed across the three main purchase options and any unused commitments. 
-   * Utilization Over Time graph- displays the combined utilization of reserved instances and savings plans. [Learn more](eco/tutorials/view-your-savings)
+     * ESR graph- displays the ESR data in more detail 
+     * Effective Cost and Waste graph- displays the effective hourly cost (actual incurred cost with upfront costs distributed) and waste over the last 120 days. Costs are displayed across the three main purchase options and any unused commitments. 
+     * Utilization Over Time graph- displays the combined utilization of reserved instances and savings plans. [Learn more](eco/tutorials/view-your-savings)
 
 * **ECO-0001**: **November 5th, 2024**: The new Ocean integration for Eco allows you to use spot instances more consistently and optimize your savings. [Learn more](eco/tutorials/ocean-int)
 
