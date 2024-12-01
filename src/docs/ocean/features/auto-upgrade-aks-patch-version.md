@@ -13,7 +13,7 @@ We recommend you schedule once daily and let Ocean manage your upgrades.
 
 To check if your Control Plane version needs upgrading, access the cluster overview tab:
 
-1. Click **Ocean > Cloud Clusters** in the left main menu.
+1. Click **Ocean > Cloud Clusters** in the left main menu. 
 2. Select a cluster from the list of clusters.
 3. View the installed version number of the control plane at the bottom of the tab.
 
