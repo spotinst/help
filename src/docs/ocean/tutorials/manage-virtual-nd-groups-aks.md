@@ -43,7 +43,7 @@ To create/edit a Virtual Node Group:
    * Configure Manually: All virtual node group fields will be taken from the virtual node group Template.
    * Import configurations from Node Pools: Values are copied from the cloud service provider node group entity to the Ocean configuration. Later, there will be no active connection between these two entities. Ocean will provision new VMs, not as part of a managed Kubernetes service of node group entities.
   
-![aks-create-vng-dialog](https://github.com/user-attachments/assets/2ef75104-baf7-45a4-a661-80c564167a40)
+![new-vng-import](https://github.com/user-attachments/assets/ccdd0eb7-9010-446a-a779-bbed53e4e0d2)
 
 3. Click **Continue**.
 4. Edit the parameters in the New Virtual Node Group screen. Parameters left blank take values from the virtual node group template.
