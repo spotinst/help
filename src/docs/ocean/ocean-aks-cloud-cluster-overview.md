@@ -130,7 +130,7 @@ This tab displays:
 
 ## Ocean Managed Nodes and Resources Panel
 
-![aks-ocean-managed-nodes](https://github.com/user-attachments/assets/5a2650bf-56d7-4407-9cc3-b2340f4c2d89)
+<img width="1000" src="https://github.com/user-attachments/assets/065b7f12-769a-4e46-9900-7b17fb81553d" >
 
 This panel contains a set of widgets that display categorized information on your managed nodes and resources.
 
@@ -142,7 +142,7 @@ This panel contains a set of widgets that display categorized information on you
 
 ## Resource Allocation Panel
 
-![resource-allocation-sample](https://github.com/user-attachments/assets/59749462-10a2-436b-9663-b7479da0de1a)
+<img width="1000" src="https://github.com/user-attachments/assets/f74e9936-4700-4b00-8f77-e98178970c66" />
 
 This panel displays a **cluster-level** summary with widgets for CPU /Memory /GPU resources allocated to pods. You can review allocation trends over time. Use this information to verify that infrastructure utilization is maintained at 70-80%.
 * CPU
@@ -163,10 +163,14 @@ To view more details:
 > * % Workload allocation.
 > * % Total allocation (Including headroom).
 
-<details>
-   <summary markdown="span">View image</summary>
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600">Click to view image</summary>
 
-![nodes-tab](https://github.com/user-attachments/assets/75ec851a-71c0-4170-8c78-8361f3944f16)
+<div style="padding-left:16px">
+
+<img width="1000" src="https://github.com/user-attachments/assets/6f036ad5-141d-4afc-9733-5488b1ea2e79" />
+
+</div>
 
  </details>
 
