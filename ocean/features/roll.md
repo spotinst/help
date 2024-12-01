@@ -164,9 +164,10 @@ To roll immediately:
 
    >**Note:** The dialog box that appears depends on what you selected to roll (sample shown below).
 
-![ocn-roll-ocean-create-roll-dialog-box](https://github.com/spotinst/help/assets/159915991/8f4a9b48-1d2d-49cf-b72c-e0b477dff6e1)
-
 2.	If you are rolling virtual node groups or node pools, select from the drop-down menu at the top of the dialog box. You can optionally select **All**.
+
+<img width="600" src="https://github.com/user-attachments/assets/5787db8b-b822-4d25-b66c-b3f8fcc70278" />
+
 3.	Configure the [Roll Parameters](https://docs.spot.io/ocean/features/roll?id=roll-parameters):
 
     *   Set the size of a roll batch (%). 
@@ -193,10 +194,12 @@ To create a roll schedule:
     
 2.	Select the roll type in the Schedule Roll wizard's first step. The available roll types depend on your system deployment.
  
-![ocn-roll-ocean-schedule-roll-first-step](https://github.com/spotinst/help/assets/159915991/953f5022-a60c-4662-886e-e5a1009d1a6f)
-
+<img width="600" src="https://github.com/user-attachments/assets/055d5d3b-0ccd-45bb-ae83-077db6e3d3a7"/>
 
 3.	In the second step of the wizard, if you are rolling virtual node groups or node pools, select from the drop-down menu at the top of the dialog box. You can optionally select **All**.
+
+<img width="600" src="https://github.com/user-attachments/assets/32c306ab-7f7f-4664-beef-f52e52d75291" />
+
 4.	Configure the [Roll Parameters](https://docs.spot.io/ocean/features/roll?id=roll-parameters):
 
     *   Configure the size of a roll batch (%). 
@@ -205,12 +208,9 @@ To create a roll schedule:
     *   Turn on or turn off Respect Pod Disruption Budget (PDB)
     *   Turn on or turn off Respect Restrict Scale Down 
 
-![ocn-roll-ocean-schedule-roll-second-step](https://github.com/spotinst/help/assets/159915991/47d2c4b4-6ea7-4d51-9d9e-663cfe77f445)
-  
 5.	In the third step of the wizard, set the schedule frequency using the day/week/month/time controls or type in a Cron expression.
  
- ![ocn-roll-ocean-schedule-roll-third-step](https://github.com/spotinst/help/assets/159915991/e73b2b1f-867c-42ee-a19c-dcb930deb356)
-
+<img width="600" src="https://github.com/user-attachments/assets/e022e767-bf0a-4e50-9ec7-4c24e4172927" />
 
 6.	Click **Schedule Roll**. Your schedule appears in the Rolls tab - Scheduled Rolls list under Rolls History.
 
