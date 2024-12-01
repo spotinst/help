@@ -2,10 +2,12 @@
 
 # Auto-Upgrade the AKS Control Plane Patch Version in the Console
 
-You can schedule an auto-upgrade of an AKS patch version when it becomes available or at a specific time. For both types of auto-upgrade runs, you can set one of these options:
+You can schedule an auto-upgrade of an AKS patch version once a day (recommended) or at a specific time. For both types of auto-upgrade, you can set one of these options:
 
-* Control Plane Upgrade: Upgrade the Control Plane patch version only.
-* Control Plane Upgrade and Ocean Roll: Upgrade the Control Plane patch version and the nodes in the data plane managed by Ocean. After the upgrade, you must roll the cluster to align the cluster infrastructure with the new version.
+* Control plane upgrade: Upgrade the control plane patch version only.
+* Control plane upgrade and Ocean roll: Upgrade the control plane patch version and the nodes in the data plane managed by Ocean. After the upgrade, you must roll the cluster to align the cluster infrastructure with the new version.
+
+We recommend you schedule once daily and let Ocean handle your upgrades.
 
 ## Check if you need to Upgrade
 
@@ -34,17 +36,17 @@ The version can have one of the following statuses:
 
 The Updates History list for completed runs is displayed at the top of the screen with these attributes:
 
-* Execution Time: Format MM/DD/YYYY, hh: mm: ss
+* Execution Time: Format MM/DD/YYYY, hh: mm: ss.
 * Old Version number (before the run).
 * New Version number (after the run).
 * Roll ID: Listed if the cluster was rolled after auto-update. Click the **Roll ID** link on the list entry to view roll attributes.
 * Run Statuses:
-  * Completed (green): Successfully updated
+  * Completed (green): Successfully updated.
   * Partly completed (green): At least one virtual node group roll was unsuccessful.
   * Failed (red): Either the control plane patch version upgrade or the virtual node group roll failed.
   * Stopped (gray): The virtual node groups roll was stopped.
  
-  >**Tip**: Search for auto-update runs by **Status** using the Updates History filter.
+>**Tip**: Search for auto-update runs by **Status** using the Updates History filter.
 
 The configured schedules are displayed at the bottom of the screen with these attributes:
 
@@ -58,12 +60,12 @@ To schedule an auto-upgrade:
 1. Ensure that the [Azure Kubernetes upgrades feature](https://spotinst.atlassian.net/wiki/pages/resumedraft.action?draftId=3271589937) is not enabled for your cluster. You cannot enable Ocean and Azure Kubernetes auto-upgrades simultaneously.
 2. In the Auto Upgrade tab, click **Scheduled Auto-Upgrade** (or to edit an existing auto-update schedule, click **Edit** in the schedule entry).
 
-<img width="600" src="https://github.com/user-attachments/assets/0fbf845d-3595-4111-89c8-2b318b303265" />
-
 >**Note**: If the following message appears at the top of the dialog box, click to turn off the Azure Kubernetes upgrades feature.
 > <img height="70" src="https://github.com/user-attachments/assets/91787c7b-3fea-4778-8ec8-45c867cbf09d" />
 
 3. Select whether to auto-upgrade the Control Plane or to auto-upgrade the Control Plane and Roll.
+
+<img width="600" src="https://github.com/user-attachments/assets/0fbf845d-3595-4111-89c8-2b318b303265" />
 
 >**Note**: Rolls
 > - Ocean will roll all virtual node groups applicable to the available control-plane patch upgrade version if you select to roll.
@@ -79,13 +81,15 @@ To schedule an auto-upgrade:
    * Optionally, turn on the Pod Disruption Budget (PDB) option.
    * Optionally, turn on the Restrict Scale-Down option.
 
-5. Select whether to schedule the auto upgrade when it becomes available or at a specific time.
+5. Select whether to schedule the auto upgrade once a daye or at a specific time.
 
- ![aks-upgrade-when-to-schedule](https://github.com/user-attachments/assets/9a45bee5-e725-4bad-aaa7-a739f7044772)
+<img width="600" src="https://github.com/user-attachments/assets/9a45bee5-e725-4bad-aaa7-a739f7044772" />
 
 7. If you selected to schedule at a specific time, set the time using the day/week/month/time controls or type a Cron expression.
 
-screenshot
+<img width="600" src="https://github.com/user-attachments/assets/cbc850c8-70d7-4465-bd29-492285ffca9e" />
+
+8. Click **Schedule**.
 
    * The created schedule is turned on by default. To turn off the schedule, move the slider at the right of the entry for the schedule to the turned-off position.
    * After the update is run, an entry will appear in the auto-upgrades history list.
