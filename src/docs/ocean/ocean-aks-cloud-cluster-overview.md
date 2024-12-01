@@ -18,12 +18,13 @@ To access the Ocean Cluster Overview dashboard:
 
 ## Ocean Savings Panel
 
-![managed-nodes](https://github.com/user-attachments/assets/5b5cf3fe-e652-4287-82d3-5069ce151922)
+![aks-running-on-spot](https://github.com/user-attachments/assets/f140c894-e679-4726-b648-95f416b00ab4)
 
 The Ocean Savings panel contains a set of savings widgets (displayed as tabs), which show your savings according to Ocean’s main autoscaling processes for cluster optimization in a selected time range:  
 
 * Running on Spot: Savings from running on spot nodes instead of OD nodes. 
 * Bin Packing: Ocean proactively identifies underutilized nodes and efficiently bin-packs the pods on them to scale down the nodes and reduce the cluster cost.
+* Revert to Lower Cost: Applied to nodes with underutilized compute resources that cannot be scaled down from the cluster's set of nodes.
 
 In this panel: 
 
@@ -55,7 +56,7 @@ This process ensures high resource utilization, reducing the number of nodes req
 
 To view these savings, click the **Bin Packing** tab (unless already displayed). 
 
-![bin-packing-tab](https://github.com/user-attachments/assets/9f1de767-b7c3-4336-9f16-bc150a914397)
+![aks-bin-packing](https://github.com/user-attachments/assets/07cfbd8c-d6d5-4f38-9784-a9f61dfe5dba)
 
 This tab displays: 
 
