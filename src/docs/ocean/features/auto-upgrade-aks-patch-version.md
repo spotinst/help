@@ -7,7 +7,7 @@ You can schedule an auto-upgrade of an AKS patch version once a day (recommended
 * Control plane upgrade: Upgrade the control plane patch version only.
 * Control plane upgrade and Ocean roll: Upgrade the control plane patch version and the nodes in the data plane managed by Ocean. After the upgrade, you must roll the cluster to align the cluster infrastructure with the new version.
 
-We recommend you schedule once daily and let Ocean handle your upgrades.
+We recommend you schedule once daily and let Ocean manage your upgrades.
 
 ## Check if you need to Upgrade
 
@@ -81,7 +81,7 @@ To schedule an auto-upgrade:
    * Optionally, turn on the Pod Disruption Budget (PDB) option.
    * Optionally, turn on the Restrict Scale-Down option.
 
-5. Select whether to schedule the auto upgrade once a daye or at a specific time.
+5. Select whether to schedule the auto upgrade once a day or at a specific time.
 
 <img width="600" src="https://github.com/user-attachments/assets/9a45bee5-e725-4bad-aaa7-a739f7044772" />
 
