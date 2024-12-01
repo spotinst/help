@@ -164,9 +164,10 @@ To roll immediately:
 
    >**Note:** The dialog box that appears depends on what you selected to roll (sample shown below).
 
+2.	If you are rolling virtual node groups or node pools, select from the drop-down menu at the top of the dialog box. You can optionally select **All**.
+
 <img width="600" src="https://github.com/user-attachments/assets/5787db8b-b822-4d25-b66c-b3f8fcc70278" />
 
-2.	If you are rolling virtual node groups or node pools, select from the drop-down menu at the top of the dialog box. You can optionally select **All**.
 3.	Configure the [Roll Parameters](https://docs.spot.io/ocean/features/roll?id=roll-parameters):
 
     *   Set the size of a roll batch (%). 
@@ -199,7 +200,7 @@ To create a roll schedule:
 
 <img width="600" src="https://github.com/user-attachments/assets/32c306ab-7f7f-4664-beef-f52e52d75291" />
 
-5.	Configure the [Roll Parameters](https://docs.spot.io/ocean/features/roll?id=roll-parameters):
+4.	Configure the [Roll Parameters](https://docs.spot.io/ocean/features/roll?id=roll-parameters):
 
     *   Configure the size of a roll batch (%). 
     *   Configure the Batch size healthy percentage (%)
@@ -209,8 +210,7 @@ To create a roll schedule:
 
 5.	In the third step of the wizard, set the schedule frequency using the day/week/month/time controls or type in a Cron expression.
  
- ![ocn-roll-ocean-schedule-roll-third-step](https://github.com/spotinst/help/assets/159915991/e73b2b1f-867c-42ee-a19c-dcb930deb356)
-
+<img width="600" src="https://github.com/user-attachments/assets/e022e767-bf0a-4e50-9ec7-4c24e4172927" />
 
 6.	Click **Schedule Roll**. Your schedule appears in the Rolls tab - Scheduled Rolls list under Rolls History.
 
