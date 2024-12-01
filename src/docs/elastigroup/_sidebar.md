@@ -45,7 +45,7 @@
       - [Run Deployment](elastigroup/tutorials/elastigroup-actions-menu/deploy-or-roll-elastigroup)
       - [Scaling](elastigroup/features/scaling/)
         - [Simple Scaling Policies](elastigroup/features/scaling/simple-scaling-policies)
-        - [Target Scaling & (elastigroup/features/scaling/target-scaling)
+        - [Target Scaling](elastigroup/features/scaling/target-scaling)
         - [Advanced Expressions](elastigroup/features/scaling/advanced-expressions)
         - [Multiple Metrics](elastigroup/features/scaling/multiple-metrics)
       - [Scheduling](elastigroup/features/core-features/scheduling)
