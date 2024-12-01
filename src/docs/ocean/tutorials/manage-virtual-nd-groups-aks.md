@@ -11,11 +11,14 @@ This topic describes how to create, view, edit, and delete virtual node groups i
 2. Select a cluster from the list of clusters.
 3. Click the **Virtual Node Groups** tab to display the virtual node groups list.
 
-<details>
-  
- <summary markdown="span">Click for image</summary>
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" >Click for image</summary>
+
+<div style="padding-left:16px">
   
  <img src="https://github.com/user-attachments/assets/022151e5-b902-4dca-937c-49ee30696e24" />
+
+ </div>
 
 </details>
   
@@ -45,11 +48,14 @@ To create/edit a Virtual Node Group:
 3. Click **Continue**.
 4. Edit the parameters in the New Virtual Node Group screen. Parameters left blank take values from the virtual node group template.
 
-<details>
-   <summary markdown="span">Click for image</summary>
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" >Click for image</summary>
+
+<div style="padding-left:16px">
  
   <img src="https://github.com/user-attachments/assets/9e5f9916-8737-4df3-8967-64de04c32600" />
 
+</div>
 </details>
 
 ### General Parameters
