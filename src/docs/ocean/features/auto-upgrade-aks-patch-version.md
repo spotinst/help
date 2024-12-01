@@ -58,28 +58,32 @@ To schedule an auto-upgrade:
 1. Ensure that the [Azure Kubernetes upgrades feature](https://spotinst.atlassian.net/wiki/pages/resumedraft.action?draftId=3271589937) is not enabled for your cluster. You cannot enable Ocean and Azure Kubernetes auto-upgrades simultaneously.
 2. In the Auto Upgrade tab, click **Scheduled Auto-Upgrade** (or to edit an existing auto-update schedule, click **Edit** in the schedule entry).
 
-<img width="500" src="https://github.com/user-attachments/assets/0fbf845d-3595-4111-89c8-2b318b303265" />
+<img width="600" src="https://github.com/user-attachments/assets/0fbf845d-3595-4111-89c8-2b318b303265" />
 
 >**Note**: If the following message appears at the top of the dialog box, click to turn off the Azure Kubernetes upgrades feature.
 > <img height="70" src="https://github.com/user-attachments/assets/91787c7b-3fea-4778-8ec8-45c867cbf09d" />
 
-3. Select whether to auto-upgrade the Control Plane or to auto-upgrade the Control Plane and Roll. 
+3. Select whether to auto-upgrade the Control Plane or to auto-upgrade the Control Plane and Roll.
 
-* Ocean will roll all virtual node groups applicable to the available control-plane patch upgrade version if you select to roll.
-* You can only roll if an upgrade version for the virtual node groups is available. If an upgrade version is unavailable, a record will only appear in the logs, not the auto-upgrades history.
-* If an option appears grayed, you have already run it and cannot select it again.
+>**Note**: Rolls
+> - Ocean will roll all virtual node groups applicable to the available control-plane patch upgrade version if you select to roll.
+> - You can only roll if an upgrade version for the virtual node groups is available. If an upgrade version is unavailable, a record will only appear in the logs, not the auto-upgrades history.
+> - If an option appears grayed, you have already run it and cannot select it again.
 
 4. If you selected to roll, set the [roll parameters](https://docs.spot.io/ocean/features/roll).
-screenshot
+
+<img width="600" src="https://github.com/user-attachments/assets/991afb10-5867-4bce-aa44-1a480215c149" />
+
    * Select the Batch size percentage (1 - 100%).
    * Select the Batch size healthy percentage (20-100%).
    * Optionally, turn on the Pod Disruption Budget (PDB) option.
    * Optionally, turn on the Restrict Scale-Down option.
 
-screenshot
-
 5. Select whether to schedule the auto upgrade when it becomes available or at a specific time.
-6. If you selected to schedule at a specific time, set the time using the day/week/month/time controls or type a Cron expression.
+
+ ![aks-upgrade-when-to-schedule](https://github.com/user-attachments/assets/9a45bee5-e725-4bad-aaa7-a739f7044772)
+
+7. If you selected to schedule at a specific time, set the time using the day/week/month/time controls or type a Cron expression.
 
 screenshot
 
