@@ -3410,6 +3410,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/ocean/features/auto-update-process-gke"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/ocean/features/auto-upgrade-aks-patch-version</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/ocean/features/auto-upgrade-aks-patch-version"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/ocean/features/auto-upgrade-aks-patch-version"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/ocean/features/avail-zones-scores</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
