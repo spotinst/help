@@ -32,48 +32,58 @@ Ocean maintains an official set of metrics, natively scrapable by Prometheus. Th
 
 ## Dashboard Visualizations
 
-<details>
-  <summary markdown="span">Click to view - Current Status, Scaling Overview, Nodes Managed by Ocean, and Pods Metrics</summary>
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600">Click to view - Current Status, Scaling Overview, Nodes Managed by Ocean, and Pods Metrics</summary>
 
- ### Current Status, Scaling Overview, Nodes Managed by Ocean, and Pods Metrics
+<div style="padding-left:16px">
 
-  <img width="1024" alt="grafana-dashboard-current-status" src="https://github.com/user-attachments/assets/3e46cfab-2f88-4a76-87d5-10ad16afcc38">
+ <img width="1024" alt="grafana-dashboard-current-status" src="https://github.com/user-attachments/assets/3e46cfab-2f88-4a76-87d5-10ad16afcc38">
+
+  </div>
 
 </details>
 
-<details>
-  <summary markdown="span">Click to view - Cost and Usage, and Compute and Storage Metrics</summary>
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600">Click to view - Cost and Usage, and Compute and Storage Metrics</summary>
 
-### Cost and Usage, and Compute and Storage Metrics
-  
+<div style="padding-left:16px">
+
 <img width="1024" alt="grafana-dashboard-cost-and-usage" src="https://github.com/user-attachments/assets/cd688d9c-fec7-4b6b-9519-df97a466a362">
 
+</div>
+
 </details>
 
-<details>
-  <summary markdown="span">Click to view - Network Cost and Usage Metrics</summary>
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600">Click to view - Network Cost and Usage Metrics</summary>
 
- ### Network Cost and Usage Metrics
+<div style="padding-left:16px">
 
- <img width="1024" alt="grafana-dashboard-network-metrics" src="https://github.com/user-attachments/assets/f1616d7b-1b7b-4260-b2ab-fdfd196be4f5">
+<img width="1024" alt="grafana-dashboard-network-metrics" src="https://github.com/user-attachments/assets/f1616d7b-1b7b-4260-b2ab-fdfd196be4f5">
+
+</div>
  
 </details>
 
-<details>
-  <summary markdown="span">Click to view - Scaling Activity Overview Metrics</summary>
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600">Click to view - Scaling Activity Overview Metrics</summary>
 
-### Scaling Activity Overview Metrics
+<div style="padding-left:16px">
 
 <img width="1024" alt="grafana-dashboard-scaling-activity" src="https://github.com/user-attachments/assets/20c59bdb-4a66-4906-9fcb-399bdf12de26">
 
+</div>
+
 </details>
 
-<details>
-  <summary markdown="span">Click to view - Right Sizing Metrics</summary>
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600">Click to view - Right Sizing Metrics</summary>
 
-  ### Right Sizing Metrics
+<div style="padding-left:16px">
 
-  <img width="1024" alt="grafana-dashboard-right-sizing" src="https://github.com/user-attachments/assets/393bd4d8-03fa-43f9-b99f-5db7fb457017">
+<img width="1024" alt="grafana-dashboard-right-sizing" src="https://github.com/user-attachments/assets/393bd4d8-03fa-43f9-b99f-5db7fb457017">
+
+</div>
 
 </details>
 
