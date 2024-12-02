@@ -55,6 +55,7 @@ To access the Node pools tab:
 The node pools list contains these columns:
 
 * Node Pool: Click on the link to open the node pool details, attributes, and list of nodes.
+  * You can sort this column by either name or status.
 * Virtual Node Group: Click on the link to open the configuration for the virtual node group.
 * Availability Zone: Availability zone for the node pool.
 * VM Size: Machine type.
@@ -65,5 +66,17 @@ The node pools list contains these columns:
 * OS SKU: For example, Ubuntu.
 * Image: Image name.
 * K8s version: Kubernetes version number.
+
+## Node Pool Status
+
+
+*  <img width="20" src="https://github.com/user-attachments/assets/4f20c475-4e52-44ae-a21f-7f91ec80c086) Running Successfully" />
+* Spinner (node pool being processed)
+* Locked
+* Warmed-up: Node pool that has been pre-provisioned and is ready to manage workloads:
+  * Pre-provisioning: Nodes in a warmed-up pool are created in advance, which reduces the time needed to scale up when traffic increases. This helps ensure that applications can respond quickly to sudden spikes in demand.
+  * State: The nodes are ready, meaning they are fully initialized and can accept pods without the delay associated with starting new nodes from scratch.
+  * Use Case: This is particularly useful for applications with predictable traffic patterns, improving performance and reliability.
+* Unmanaged Node Pool.
 
 
