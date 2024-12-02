@@ -69,9 +69,8 @@ The node pools list contains these columns:
 
 ## Node Pool Status
 
-
-*  <img width="20" src="https://github.com/user-attachments/assets/4f20c475-4e52-44ae-a21f-7f91ec80c086) Running Successfully" />
-* Spinner (node pool being processed)
+* ![icon-successful-20](https://github.com/user-attachments/assets/ddf18f6c-ebf6-4bf1-a42e-a8625bcc8544) Running successfully.
+* Spinner (node pool being processed).
 * Locked
 * Warmed-up: Node pool that has been pre-provisioned and is ready to manage workloads:
   * Pre-provisioning: Nodes in a warmed-up pool are created in advance, which reduces the time needed to scale up when traffic increases. This helps ensure that applications can respond quickly to sudden spikes in demand.
