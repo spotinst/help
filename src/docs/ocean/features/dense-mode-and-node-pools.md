@@ -55,7 +55,7 @@ To access the Node pools tab:
 The node pools list contains these columns:
 
 * Node Pool: Click on the link to open the node pool details, attributes, and list of nodes.
-  * You can sort this column by either name or status.
+  * You can sort this column by either name or [status](https://docs.spot.io/ocean/features/dense-mode-and-node-pools?id=node-pool-status).
 * Virtual Node Group: Click on the link to open the configuration for the virtual node group.
 * Availability Zone: Availability zone for the node pool.
 * VM Size: Machine type.
