@@ -74,8 +74,8 @@ The node pools list contains these columns:
 * ![icon-lock](https://github.com/user-attachments/assets/4d48eece-0127-4c82-b108-5a5e5530a34f) Locked.
 * ![icon-warmedup](https://github.com/user-attachments/assets/6ade61d6-3bca-44c3-b644-21c5597ae12f) Warmed-up: Node pool that has been pre-provisioned and is ready to manage workloads:
   * Pre-provisioning: Nodes in a warmed-up pool are created in advance, which reduces the time needed to scale up when traffic increases. This helps ensure that applications can respond quickly to sudden spikes in demand.
-  * State: The nodes are ready, meaning they are fully initialized and can accept pods without the delay associated with starting new nodes from scratch.
-  * Use Case: This is particularly useful for applications with predictable traffic patterns, improving performance and reliability.
+  * The nodes are ready, meaning they are fully initialized and can accept pods without the delay associated with starting new nodes from scratch.
+  * Use case: This is particularly useful for applications with predictable traffic patterns, improving performance and reliability.
 *  ![icon-unmanaged1](https://github.com/user-attachments/assets/ec73f5a1-0f69-49ca-87e8-6ecd450da37c)  Unmanaged Node Pool.
 
   
