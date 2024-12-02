@@ -10,6 +10,7 @@ The Cost Intelligence policy contains permissions from the [AWS read only access
    <summary markdown="span">View Cost Intelligence policy</summary>
 
    <pre><code>
+
 {
   "Statement": [
     {
@@ -164,22 +165,26 @@ The Cost Intelligence policy contains permissions from the [AWS read only access
 
 ## Security Essentials AWS Policy (Optional)
 
-The Security Essentials AWS policy can be added using the cloud formation template.
+The Security Essentials AWS policy can be added using the cloud formation template. For Security Essentials, add [SecurityAudit](https://docs.aws.amazon.com/aws-managed-policy/latest/reference/SecurityAudit.html) AWS managed policy.
+
+Along with that, to enable premium features like anomaly and threat detections in the future, add the policy below:
 
  <details>
-   <summary markdown="span">View Security Essentials AWS policy</summary>
+   <summary markdown="span">Security Essentials AWS policy</summary>
 
 <pre><code>
 {
   "Statement": [
     {
       "Action": [
-        "s3:GetObject",
-        "s3:List*"
+"s3:GetObject",
+ "s3:GetObjectTagging",
+ "s3:GetBucketLocation",
+ "s3:ListBucket"
       ],
       "Effect": "Allow",
       "Resource": [
-        "*"
+        ""
       ],
       "Sid": "S3AccessForCloudTrail"
     }
@@ -190,7 +195,8 @@ The Security Essentials AWS policy can be added using the cloud formation templa
 
  </details>
 
+Note: If you enable Cost Intelligence and Security Essentials, all of the permissions in the JSON are included. The additional permissions are s3:GetObject and s3:GetObjectTagging.
 
 ## Cost Intelligence Azure Policy 
 
-Cost Intelligence gathers information on a wide variety of services and metrics for your Azure infrastructure. Our list of supported services and metrics is constantly being updated and expanded to provide a robust, up-to-date reporting and analysis tool for our customers. Cost Intelligence’s default policy leverages the standard [Azure Reader Role](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#reader) and [Blob Storage Reader Role](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles/storage#storage-blob-data-reader) (optional for Security Essentials).
+Cost Intelligence gathers information on a wide variety of services and metrics for your Azure infrastructure. Our list of supported services and metrics is constantly being updated and expanded to provide a robust, up-to-date reporting and analysis tool for our customers. Cost Intelligence’s default policy leverages the standard [Azure Reader Role](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#reader) and [Blob Storage Reader Role](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles/storage#storage-blob-data-reader) (optional for any future requirement to enable premium security features such as events, anomalies, and threats).
