@@ -5,8 +5,10 @@
 *  **OCN-0046: December 03, 2024:** (**<font color="#FC01CC">AKS</font>**) The AKS Cluster overview dashboard now includes details about Ocean savings from reverting to lower cost nodes. [Learn more...](https://docs.spot.io/ocean/ocean-aks-cloud-cluster-overview?id=ocean-savings-from-reverting-to-a-lower-cost-node)
  
 <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600">November, 2024 - click to view</summary>
-   <div style="padding-left:16px">
+  
+  <summary markdown="span" style="color:#7632FE; font-weight:600">November, 2024 - click to view</summary>
+  
+  <div style="padding-left:16px">
 
 *  **OCN-0045:** November 26, 2024: (**<font color="#FC01CC">AWS</font>**) Elastigroup and Ocean now automatically revert existing instances utilizing reserved capacity and savings plans to spot instances or other commitment deals wherever a reservation is needed elsewhere in your AWS account. [Learn more...](https://docs.spot.io/ocean/features/dynamic-commitments-aws?id=dynamic-commitments)...
 
