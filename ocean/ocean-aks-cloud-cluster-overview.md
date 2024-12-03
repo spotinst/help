@@ -75,11 +75,7 @@ This tab displays:
   
    <summary markdown="span" style="color:#7632FE; font-weight:600" id=”texttolinkto”>View image...</summary>
     
-   <div style="padding-left:16px">
-
    <img width="1000" src="https://github.com/user-attachments/assets/db6177b2-82fa-4eb0-9ca5-2cd31bcf8ef9" />
-
-   </div>
 
 </details>
 
@@ -119,12 +115,8 @@ This tab displays:
   
    <summary markdown="span" style="color:#7632FE; font-weight:600" id=”texttolinkto”>View image...</summary>
     
-   <div style="padding-left:16px">
-
    <img width="1000" src="https://github.com/user-attachments/assets/943bed5d-2bd8-49cb-9972-aa2de5a0f563" />
 
-   </div>
-   
 </details> 
 
 *   Resource savings from reverting to lower cost in the following units:  
