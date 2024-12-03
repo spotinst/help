@@ -4,6 +4,8 @@
 
 *  **OCN-0046: December 03, 2024:** (**<font color="#FC01CC">AKS</font>**) The AKS Cluster overview dashboard now includes details about Ocean savings from reverting to lower cost nodes. [Learn more...](https://docs.spot.io/ocean/ocean-aks-cloud-cluster-overview?id=ocean-savings-from-reverting-to-a-lower-cost-node)
 
+Previous months...
+
  
 <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600">November, 2024 - click to view</summary>
