@@ -22,13 +22,13 @@
 
 *  **OCN-0040: November 04, 2024:** (**<font color="#FC01CC">EKS and AKS</font>**) Rollbacks let you run right-sizing automation without concerns. Starting now, Ocean automatically rolls back changes made by automatic right-sizing that encounter OOM events. [Learn more...](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=acknowledge-a-workload-rollback)
 
-* **OCN-0039: November 04, 2024:** (**<font color="#FC01CC">EKS and AKS</font>**) New drill-down options for the percentile data points in both right-sizing memory and vCPU usage graphs were added to the percentiles already used for the recommendations (99th percentile for vCPU and maximum usage for memory). [Learn more...](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-tab?id=right-sizing-resource-usage-panel)
-
 *  **OCN-0038: IMPORTANT NOTICE - November 01, 2024:** Ocean Controller Version 1 is now deprecated for **<font color="#FC01CC">AWS Kubernetes</font>** (from **November 1, 2024**). This means that Version 1 will not support new features, and any unexpected behaviors or security issues identified after this date will not be addressed. We recommend upgrading to Ocean Controller Version 2.0 for the best performance and support. [Learn more...](https://docs.spot.io/ocean/tutorials/ocean-controller-v2/)    
 Ocean Controller Version 1 will be deprecated for other cloud service providers as follows:
    * **<font color="#FC01CC">GKE</font>**: December 18, 2024
    * **<font color="#FC01CC">AKS</font>**: January 1, 2025
- 
+
+* **OCN-0039: November 04, 2024:** (**<font color="#FC01CC">EKS and AKS</font>**) New drill-down options for the percentile data points in both right-sizing memory and vCPU usage graphs were added to the percentiles already used for the recommendations (99th percentile for vCPU and maximum usage for memory). [Learn more...](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-tab?id=right-sizing-resource-usage-panel)
+
 </div>
 </details>
 
