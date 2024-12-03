@@ -6,7 +6,6 @@
  
 <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600">November, 2024 - click to view</summary>
-
    <div style="padding-left:16px">
 
 *  **OCN-0045:** November 26, 2024: (**<font color="#FC01CC">AWS</font>**) Elastigroup and Ocean now automatically revert existing instances utilizing reserved capacity and savings plans to spot instances or other commitment deals wherever a reservation is needed elsewhere in your AWS account. [Learn more...](https://docs.spot.io/ocean/features/dynamic-commitments-aws?id=dynamic-commitments)...
@@ -33,6 +32,8 @@ Ocean Controller Version 1 will be deprecated for other cloud service providers 
 
 <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600">October, 2024 - click to view</summary>
+ 
+   <div style="padding-left:16px">
 
 *  **OCN-0037: October 31, 2024:** (**<font color="#FC01CC">AKS</font>**) Ocean's Cluster Overview dashboard now contains an Autoscaling Activity Graph to give you intuitive insights into the interaction between the Ocean infrastructure and the applications it supports. View cluster activity insights at a granular level to see why the Ocean Autoscaler triggered a specific scale event within the cluster. [Learn more...](https://docs.spot.io/ocean/ocean-aks-cloud-cluster-overview?id=autoscaling-activity-panel)
 
@@ -47,6 +48,8 @@ Ocean Controller Version 1 will be deprecated for other cloud service providers 
 
 <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600">September, 2024 - click to view</summary>
+ 
+ <div style="padding-left:16px">
 
 *  **OCN-0033: September 19, 2024:** (**<font color="#FC01CC">GKE</font>**) Changes were made to the cluster import process connectivity options with enhanced Ocean Controller Version 2. [Learn more...](https://docs.spot.io/ocean/getting-started/gke)
 
@@ -65,7 +68,7 @@ Ocean Controller Version 1 will be deprecated for other cloud service providers 
 
 <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600">August, 2024 - click to view</summary>
-
+ 
 <div style="padding-left:16px">
 
 *  **OCN-0027: August 29, 2024:** (**<font color="#FC01CC">AWS Kubernetes</font>**) Turn On/Off Utilize Commitments per Virtual Node Group: You can now distribute reservation instances/savings plans according to Virtual Node Groups for different types of workloads on the same cluster via the `utilizeReservedInstances` and `utilizeCommitments` attributes. [Learn more...](https://docs.spot.io/ocean/features/vngs/attributes-and-actions-per-vng?id=turn-onoff-utilize-commitments-per-virtual-node-group)
