@@ -3,8 +3,6 @@
 - <a href="/" class="sidebar-home"><i data-feather="arrow-left" class="sidebar-back-icon"></i>Back to Home</a>
 - [Elastigroup](elastigroup/)
   - [Getting Started](elastigroup/getting-started/)
-      - [On-Demand, Spot & Reserved Instances](elastigroup/features/core-features/spot-reserved-on-demand-instances)
-      - [Market Scoring & Managing Interruptions](elastigroup/features/core-features/market-scoring-managing-interruptions)
   - [Release Notes](elastigroup/release-notes/)
   - [Features - AWS](elastigroup/features/)
       - [AMI Auto-Backup](elastigroup/features/compute/ami-auto-backup)
@@ -27,7 +25,9 @@
       - [Health Checks](elastigroup/tutorials/elastigroup-actions-menu/set-health-checks)
       - [Instance Actions](elastigroup/features/core-features/instance-actions)
       - [Maintenance Windows](elastigroup/features/core-features/maintenance-windows)
+      - [Market Scoring & Managing Interruptions](elastigroup/features/core-features/market-scoring-managing-interruptions)
       - [Notifications](elastigroup/tutorials/elastigroup-actions-menu/create-notifications)
+      - [On-Demand, Spot & Reserved Instances](elastigroup/features/core-features/spot-reserved-on-demand-instances)
       - [Placement Groups](elastigroup/features/compute/placement-groups)
       - [Predictive Autoscaling](elastigroup/features/scaling/target-scaling)
       - [Preferred Instance Types](elastigroup/features/compute/preferred-instance-types)
