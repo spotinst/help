@@ -1,6 +1,6 @@
 <!-- Table of Contents -->
 
-- <a href="/" class="sidebar-home"><i data-feather="arrow-left" class="sidebar-back-icon"></i>Back to Main Tree</a>
+- <a href="/" class="sidebar-home"><i data-feather="arrow-left" class="sidebar-back-icon"></i>Back to Home</a>
 - [Eco](eco/)
   - [Getting Started](eco/getting-started/)
     - [Connect AWS to Eco](eco/getting-started/connect-your-aws-account)
@@ -8,11 +8,13 @@
     - [Connect GC to Eco](eco/getting-started/connect-gc-account)
     - [Connect Account: Customer Working with AWS MSP](eco/getting-started/connect-account-customer-working-with-msp)
     - [Eco Savings Blox](eco/getting-started/eco-savings-blox)
+  - [Release Notes](eco/release-notes/)
   - [AWS Tutorials](eco/tutorials/)
     - [Review AWS Commitment Spending Analysis](eco/tutorials/review-ri-spending-analysis)
     - [Choose AWS RI Strategy](eco/tutorials/choose-a-strategy)
     - [View your Savings](eco/tutorials/view-your-savings)
     - [Monthly Value Report](eco/tutorials/monthly-value-report)
+    - [Ocean Integration](eco/tutorials/ocean-int)
     - [Reports Enrollment](eco/tutorials/msp-enrollment)
     - [Manage Subsets](eco/tutorials/manage-subsets)
     - [Manage Workflows](eco/tutorials/manage-workflows)

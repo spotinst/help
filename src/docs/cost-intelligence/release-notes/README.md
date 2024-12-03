@@ -1,10 +1,36 @@
 # Cost Intelligence Release Notes
 
+* **COI-0017**: November 18th, 2024: Cost Intelligence includes recommendations that identify resources that can be managed and optimized by Spot Ocean. You can click the button to onboard these resources to Ocean. [Learn more](cost-intelligence/tutorials/best-practice-checks/?id=source)
+
+* **COI-0016**: November 5th, 2024: You can now define asset groups, which allow you to view and manage data with a set of filters that apply to different pages. [Learn more](cost-intelligence/tutorials/dashboard/?id=asset-groups)
+
+<details>
+  <summary markdown="span">October 2024</summary>
+
+* **COI-0015**: October 29th, 2024: You can integrate [Databricks](cost-intelligence/tutorials/integrations/databricks), [MongoDB Atlas](cost-intelligence/tutorials/integrations/mongodb), and [OpenAI](cost-intelligence/tutorials/integrations/openai) with Cost Intelligence to collect billable and usage metrics for your organization. [Learn more](cost-intelligence/tutorials/integrations/)
+
+* **COI-0014**: October 17th, 2024: You can now allow Ocean to be imported into Cost Intelligence dashboards that is joined with Billing Engine data. [Learn more](cost-intelligence/tutorials/integrations/ocean)
+
+* **COI-0013**: October 16th, 2024: You can now export the [inventory report](cost-intelligence/tutorials/inventory) and the [best practice checks](cost-intelligence/tutorials/best-practice-checks/) data to a CSV file. 
+
+* **COI-0012**: October 15th, 2024: AWS and Azure give recommendations for qualifying accounts, called AWS Trusted Advisor and Azure Advisor. Cost Intelligence automatically pulls in that information to the Best Practice Checks page. You can view the advisor content along with the Cost Intelligence content. This gives you an overall view of how to streamline your cloud resources. [Learn more](cost-intelligence/tutorials/best-practice-checks/)
+
+* **COI-0011**: October 8th, 2024: You can integrate [Snowflake](cost-intelligence/tutorials/integrations/snowflake) with Cost Intelligence to collect billable and usage metrics for your organization. [Learn more](cost-intelligence/tutorials/integrations/)
+
+</details>
+
+<details>
+  <summary markdown="span">September 2024</summary>
+
+* **COI-0010**: September 29th, 2024: You can now use the Workflow Builder to create highly configurable flows within Cost Intelligence Dashboards to generate data-driven alerts and export them in various formats such as PDF and Excel. [Learn more](cost-intelligence/tutorials/workflow-builder/)
+
 * **COI-0009**: September 16th, 2024: You can now integrate Splunk with Cost Intelligence to collect billable and usage metrics for your organization. [Learn more](cost-intelligence/tutorials/integrations/splunk)
+
+</details>
 
 <details>
   <summary markdown="span">August 2024</summary>
-  
+
 * **COI-0008**: August 22nd, 2024: The best practice checks page now includes cards for quick filtering of failures by importance or category. Once you’ve identified failures, you can see the remediation steps in Cost Intelligence. [Learn more](cost-intelligence/tutorials/best-practice-checks/)
 
 * **COI-0007**: August 14th, 2024: You can now integrate [Datadog](cost-intelligence/tutorials/integrations/datadog) and [New Relic](cost-intelligence/tutorials/integrations/new-relic) with Cost Intelligence to collect billable and usage metrics for your organization. [Learn more](cost-intelligence/tutorials/integrations/)

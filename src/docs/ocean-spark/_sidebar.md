@@ -1,6 +1,6 @@
 <!-- Table of Contents -->
 
-- <a href="/" class="sidebar-home"><i data-feather="arrow-left" class="sidebar-back-icon"></i>Back to Main Tree</a>
+- <a href="/" class="sidebar-home"><i data-feather="arrow-left" class="sidebar-back-icon"></i>Back to Home</a>
 - [Ocean for Apache Spark](ocean-spark/)
   - [Getting Started](ocean-spark/getting-started/)
     - [Create an Ocean Spark Cluster](ocean-spark/getting-started/create-cluster)
@@ -34,6 +34,10 @@
     - [Hive Metastore](ocean-spark/tools-integrations/hive-metastore)
     - [AWS Glue Data Catalog](ocean-spark/tools-integrations/aws-glue-catalog)
   - [Docker Images Release Notes](ocean-spark/docker-images-release-notes/)
+    - [gen25](ocean-spark/docker-images-release-notes/gen25.md)
+    - [gen24](ocean-spark/docker-images-release-notes/gen24.md)
+    - [gen23](ocean-spark/docker-images-release-notes/gen23.md)
+    - [gen22](ocean-spark/docker-images-release-notes/gen22.md)
     - [gen21](ocean-spark/docker-images-release-notes/gen21.md)
     - [gen20](ocean-spark/docker-images-release-notes/gen20.md)
     - [gen19](ocean-spark/docker-images-release-notes/gen19.md)

@@ -1,6 +1,6 @@
 <!-- Table of Contents -->
 
-- <a href="/" class="sidebar-home"><i data-feather="arrow-left" class="sidebar-back-icon"></i>Back to Main Tree</a>
+- <a href="/" class="sidebar-home"><i data-feather="arrow-left" class="sidebar-back-icon"></i>Back to Home</a>
 - [Cost Intelligence](cost-intelligence/)
   - [Getting Started](cost-intelligence/get-started/)
     - [Connect to AWS](cost-intelligence/get-started/connect-aws)
@@ -21,8 +21,13 @@
       - [Basic Alerts for Budgets and Thresholds](cost-intelligence/tutorials/workflow-builder/configuring-budgets-thresholds)
       - [Alerts and Actions Based on Anomaly Detection](cost-intelligence/tutorials/workflow-builder/anomaly-detection)
     - [Integrations](cost-intelligence/tutorials/integrations/)
+      - [Databricks](cost-intelligence/tutorials/integrations/databricks)
       - [Datadog](cost-intelligence/tutorials/integrations/datadog)
+      - [MongoDB Atlas](cost-intelligence/tutorials/integrations/mongodb)
       - [New Relic](cost-intelligence/tutorials/integrations/new-relic)
+      - [Ocean](cost-intelligence/tutorials/integrations/ocean)
+      - [OpenAI](cost-intelligence/tutorials/integrations/openai)
+      - [Snowflake](cost-intelligence/tutorials/integrations/snowflake)
       - [Splunk](cost-intelligence/tutorials/integrations/splunk)
     - [Administration](cost-intelligence/tutorials/administration/)
       - [FinOps Permission Policies](cost-intelligence/tutorials/administration/policies)

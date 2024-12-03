@@ -4,7 +4,15 @@ Elastigroup assists in optimizing the usage of [committed use discounts (CUDs)](
 
 This feature enables you to utilize your existing committed use discounts before considering the addition of extra resources and makes efficient use of your cloud resources. 
 
-This procedure describes how you can utilize your GCP committed use discounts in your Elastigroup:
+Elastigroup manages the committed use discount virtual machines by automatic: 
+
+* **Scale up**: Elastigroup uses the commitment utilization status to decide when to scale up on-demand virtual machines instead of spot instances. This helps utilize commitment plans in markets they apply to.
+
+* **Scale down**: Instances that use commitment plans are given priority during the scale down process, ensuring the commitment plan strategy is maintained.
+
+* **Revert to reserved**: Elastigroup ensures that the group’s strategy to utilize commitment plans is maintained. This is done by checking if there are spot instances in the group that can be replaced with on-demand instances that utilize commitment plans.
+
+You can utilize your GCP committed use discounts in your Elastigroup:
 * [Resource-based and spend-based commitments](/elastigroup/features/gcp/commit-use-discount?id=resource-based-and-spend-based-commitments)
 * [Spend-based commitments](/elastigroup/features/gcp/commit-use-discount?id=spend-based-commitments)
 * [Resource-based commitment with a billing account](/elastigroup/features/gcp/commit-use-discount?id=resource-based-commitment-with-a-billing-account)
@@ -13,7 +21,7 @@ This procedure describes how you can utilize your GCP committed use discounts in
 
 1. Log in to the GCP console and type **IAM & Admin** in the search bar.  
 2. In the left main menu, click **IAM**.
-3. Under the *View by Principal* tab, click the Security Insights of a principal that begins with spotinst-role-act-xyz. The _Current permissions for Owner role_ window opens.  
+3. Under the <i>View by Principal</i> tab, click the Security Insights of a principal that begins with spotinst-role-act-xyz. The <i>Current permissions for Owner role</i> window opens.  
 
    <img width="400" height="300" alt="commited-use-discounts-2" src="https://github.com/spotinst/help/assets/106514736/d03723af-d0b9-4730-8680-972c90dd519f">
 
@@ -34,10 +42,10 @@ When this step is completed, you can start utilizing resource-based CUDs.
 2. In the search bar in the GCP console, type **API Library**.
 3. In the search bar, type **Cloud Commerce Consumer Procurement API** and select the option that appears in the dropdown menu.  
 4. Click the **Cloud Commerce Consumer Procurement API** option that opens. 
-5. In the _Cloud Commerce Consumer Procurement API_ window that opens, click **Enable**.
+5. In the <i>Cloud Commerce Consumer Procurement API</i> window that opens, click **Enable**.
 6. Return to the search bar and type **Cloud Billing API** and select the option that appears in the dropdown menu. 
 7. Click the **Cloud Billing API** option that opens. 
-8. In the _Cloud Billing API_ window that opens, click **Enable**.
+8. In the <i>Cloud Billing API</i> window that opens, click **Enable**.
 
 ## Resource-Based Commitment with a Billing Account
 
@@ -52,7 +60,7 @@ The `compute.instances.list` permission for the project that purchased the CUD.
 For all Spot service accounts created by the template `spotinst-role-act`, complete the following steps:  
 
 1. In the left main menu in the GCP console, click **Billing** > **Account Management**.
-2. Click **Add Principal** in the top right. In the _Grant access to My Billing Account_ window, enter the Service Account Name in the _New Principal_ field.
+2. Click **Add Principal** in the top right. In the <i>Grant access to My Billing Account</i> window, enter the Service Account Name in the <i>New Principal</i> field.
 3. Add the **Consumer Procurement Order Viewer** role to all the Spot service accounts permissions in your billing account that is linked to all the Spot service accounts that you found. 
 
 ## Enable Committed Use Discounts  

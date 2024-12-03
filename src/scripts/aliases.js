@@ -1782,6 +1782,9 @@ export const aliases = (() => {
 
     "/ocean/getting-started/aks": "ocean/getting-started/aks/",
 
+    "/ocean/features/vm-selection-aks":
+      "ocean/tutorials/manage-virtual-nd-groups-aks",
+
     "/ocean/tutorials/run-workloads": "ocean/",
 
     "/spot-security/features/vulnerability/configure":
@@ -1828,6 +1831,12 @@ export const aliases = (() => {
 
     "/administration/notification-center/create-a-notification-policy":
       "/administration/notification-center/event-policies/create",
+
+    "/spot-security/features/security-dashboard/create-preset":
+      "/spot-security/features/security-dashboard/",
+
+    "/cost-intelligence/tutorials/integrations/ocean-insights":
+      "/cost-intelligence/tutorials/integrations/ocean",
   };
 
   for (let [key, value] of Object.entries(map)) {

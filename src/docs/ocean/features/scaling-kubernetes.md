@@ -67,15 +67,37 @@ In order to enable import of GKE clusters to Ocean and registration of new nodes
 
 Ocean Controller Version 2 supports the `namespaceSelector` scaling constraint label introduced in Kubernetes Version 1,24. When you apply this label, Ocean's Autoscaler scales up nodes based on the Namespace selector to schedule pods. [See Kubernetes documentation](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#namespace-selector).
 
+### Maximum Pods Custom Configuration
+
+Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font> 
+
+AWS Kubernetes clusters use reserved [elastic network interfaces (ENI)](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html#AvailableIpPerENI) to enhance network stability and predictability. In Ocean, you can use the `reservedENIs` attribute to specify the number of ENIs to reserve per instance (for cluster / virtual node group) for scaling purposes. Ocean includes reserved ENIs when calculating how many pods can be scheduled on a node. 
+
+The Ocean autoscaler will only be able to spin up instances with enough free IP addresses after considering the reservedENI parameter.
+
+Reserved ENI behavior is as follows:
+
+* When `reservedENIs = 0`: Default autoscaling behavior.
+* When `reservedENIs = Integer`: Ocean autoscaler calculates how many pods can be scheduled on a node, considering this attribute.
+
+Ensure that the attribute value is not too large, effectively blocking the usage of some instance types.
+
+When configuring `reservedENIs` for an Ocean cluster virtual node group, if you set a custom maximum number of pods using the `maxPods` attribute in the user data, ensure it aligns with the `reservedENIs` attribute. The `reservedENIs` attribute determines the maximum number of pods per instance based on available ENIs, so any discrepancy between these settings may lead to scheduling issues or suboptimal resources.
+
+Use the Spot API to set a custom value for autoscaling to include `reservedENIs`:
+
+*  [Cluster](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterUpdate) 
+*  [VNG](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecUpdate) 
+
 ## Scale Down
 
 Ocean proactively identifies underutilized nodes and [bin-packs](https://en.wikipedia.org/wiki/Bin_packing_problem) the pods on the nodes more efficiently to be able to scale down the nodes and reduce the cluster cost. A higher resource allocation reflects this. Every minute, Ocean simulates whether there are any running pods that can be moved to other nodes within the cluster. If so, Ocean drains those nodes (cordon the nodes and evicts the pods gracefully) to ensure continuous infrastructure optimization and increased cloud savings.
 
 ### Scale Down Behavior
 
-- When scaling down a node is expected, Ocean utilizes a configurable draining timeout of at least 300 seconds. (This can be configured using the drainingTimeout parameter on the Ocean level). At this time, Ocean marks the node as unschedulable and evicts all pods running on the node.
-  - Ocean spreads out the evictions instead of just deleting the pods all at once.  All the pods that run on the nodes are spread across a 120 seconds period of time. For example, if there are 10 pods running on the nodes, one pod is evicted every 12 seconds.
-  - If the eviction fails, Ocean has a retry mechanism that tries to evict the pods a few seconds later. If eviction still fails after one minute, Ocean forces deletion of the pod.
+- When scaling down a node is expected, Ocean utilizes a configurable draining timeout of at least 300 seconds. (This can be configured using the drainingTimeout parameter on the Ocean level.) At this time, Ocean marks the node as unschedulable and evicts all pods running on it.
+  - Ocean spreads out the evictions instead of deleting the pods simultaneously. All the pods that run on the nodes are evicted over a 120-second period. For example, if there are 10 pods running on the nodes, one pod is evicted every 12 seconds.
+  - If the eviction fails, Ocean has a retry mechanism that tries to evict the pods a few seconds later. If eviction still fails after one minute, Ocean forces the pod to be deleted.
 - After the draining timeout has expired, Ocean terminates the node and removes any pods that were not successfully evicted.
 - Scale down will start only if no PDB is violated by removing the pods on the node. That is the default behavior. However, you could decide to ignore the PDB restriction during scale down. (Please contact the Support team to enable ignoring the restriction.) If ignoring PDB restriction is configured, the drain still occurs, and the spread described above provides a "best effort" to prevent violating the PDB.
 - There is a parameter at the cluster level called `maxScaleDownPercentage`. This parameter indicates the percentage out of the cluster nodes that can be scaled down at once. If you wish to scale down the cluster as quickly as possible, you can increase this parameter value to make the scale down more aggressive.
@@ -84,7 +106,7 @@ Ocean proactively identifies underutilized nodes and [bin-packs](https://en.wiki
 
 ### Scale Down Prevention
 
-Some workloads are not as resilient to instance replacements as others, so you may wish to prevent replacement of the nodes while still getting the benefit of spot instance pricing. A good example of these cases is jobs or batch processes that need to finish their work without termination by the Ocean autoscale.
+Some workloads are not as resilient to instance replacements as others, so you can prevent replacement of the nodes while still getting the benefit of spot instance pricing. A good example of these cases is jobs or batch processes that need to finish their work without termination by the Ocean autoscale.
 
 Ocean makes it easy to prevent scaling down of nodes running pods configured with one of the following labels:
 - spotinst.io/restrict-scale-down:true label – This label is a proprietary Spot label ([additional Spot labels](https://docs.spot.io/ocean/features/labels-and-taints?id=spot-labels)) and can be configured on a pod level. When configured, it instructs the Ocean autoscaler to prevent scaling down a node that runs any pod with this label specified.

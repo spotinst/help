@@ -12,6 +12,8 @@ To get to the Stateful Node Overview tab:
 
 <img width="944" alt="azure-view-stateful-node-details-01a" src="https://github.com/spotinst/help/assets/106514736/12e274e3-0350-44a7-b40e-cf9241357ebf">
 
+Click **Edit Node** to configure the node. 
+
 The node status is indicated next to the name and can be one of the statuses shown in the key below.
 
 ![azure-view-stateful-node-details-001](https://github.com/spotinst/help/assets/106514736/55155909-f7a0-4ebc-8f0d-2a41d887ec2e)

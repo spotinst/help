@@ -1,5 +1,3 @@
-<meta name=“robots” content=“noindex”>
-
 #  Ocean Cluster Automatic Right Sizing
 
 Cloud service provider relevance: <font color="#FC01CC">EKS</font> and <font color="#FC01CC">AKS</font>
@@ -27,18 +25,6 @@ helm repo update
 helm install <my-release-name> spot/ocean-vpa
 ```
 >**Note**: To turn on Automatic Right-Sizing, contact your [support](https://spot.io/support/) team via email or chat.
-
-##  Limitations  
-
-*  Supported workloads are Deployments, DaemonSets, StatefulSets, and ReplicaSets.
-*  JVM xms and xmx are not considered in Ocean’s sizing recommendations.
-*  Recommendations are calculated based on hard-coded percentile values. This cannot be modified manually.
-*  Supported HPA types: Any HPA not managed by GitOps or Helm.
-*  Unsupported HPA types: Any HPA managed by Gitops or Helm.
-*  For supported HPA types: Right Sizing will apply recommendations to the resource not configured in the HPA manifest.
-*  Do not create any rule matching for Vertical Pod Autoscaler custom resources already existing for your workloads before using Ocean Automatic Right-Sizing.
-*  Install Spot VPA’s project so that the restart policy functions according to the right-sizing rules. Otherwise, the flags set in your current VPA will affect smooth operation.
-
 
 ##  How It Works 
 
@@ -106,17 +92,40 @@ If you have workloads with differing statuses, the workload status widget shows 
 > **Note**: The status changes according to the filters applied in this panel and the Workloads Optimization list in the [Advanced Optimization tab](ocean/features/ocean-cluster-right-sizing-recom-tab?id=automatic-right-sizing-recommendations-and-rules)
 
 vCPU and memory usage widgets:
-*  vCPU Usage: Used and allocated vCPU resources, recommended increase or decrease of vCPU resources, and overprovisioning. 
+*  vCPU Usage: Used and allocated vCPU resources, recommended increase or decrease of vCPU resources, and over-provisioning. 
 *  Memory Usage: Used and allocated memory resources, a recommendation to increase or decrease the memory resources, and the overprovisioning. 
 
 ###  Right Sizing Resource Usage Panel 
 
-![usage-in-last-2-weeks-b](https://github.com/user-attachments/assets/8e2e3411-489b-4480-9b15-c4c047785f5e)
+This panel contains two widgets:
 
-The right Sizing Resources Usage panel contains two widgets: 
+* vCPU usage in the last 2 weeks: Displays graphs for used, allocated, and recommended vCPU usage based on data from the last 2 weeks.
+* Memory usage in the last 2 weeks: Displays graphs for used, allocated, and recommended memory usage based on data from the last 2 weeks.
 
-*  vCPU usage in the last two weeks: Displays graphs for used, allocated, and recommended vCPU usage based on data from the last two weeks. 
-*  Memory usage in the last two weeks: Displays graphs for used, allocated, and recommended memory usage based on data from the last two weeks. 
+<img width="1000" src="https://github.com/user-attachments/assets/a94b2d5f-b191-4142-acbc-085809aa21d4" />
+
+Hover over a data point in the **vCPU usage in the last 2 weeks** widget to view usage details:
+>**Note**: The default **85th percentile vCPU usage** and **Maximum memory usage** options are used to calculate the right-sizing recommendations for all usage parameters.
+* Allocated vCPU usage based on data from the last 2 weeks.
+* Actual vCPU usage based on data from the last 2 weeks (you can change the default from the **Usage drop-down menu**).
+  * 85th percentile vCPU usage (**default**)
+  * 99th percentile vCPU usage 
+  * 95th percentile vCPU usage
+  * 90th percentile vCPU usage
+  * Average vCPU usage
+* Suggested vCPU usage based on data from the last 2 weeks.
+Hover over a data point in the **Memory usage in the last 2 weeks** widget to view:
+* Allocated memory usage in GiB based on data from the last 2 weeks.
+* Actual memory usage in GiB based on data from the last 2 weeks (you can change the default from the **Usage drop-down menu**).
+  * Maximum memory usage in GiB (**default**)
+  * Average memory usage in GiB
+* Suggested memory usage in GiB based on data from the last 2 weeks.
+
+## Related Topics
+
+* [Right-Sizing Troubleshooting](https://docs.spot.io/ocean/features/troubleshoot-right-sizing)
+* [Right-Sizing Rules and Reommendations](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab)
+
 
 
 

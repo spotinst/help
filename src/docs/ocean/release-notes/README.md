@@ -1,6 +1,42 @@
 # Ocean Release Notes
 
-## September 2024: Features and Enhancements 
+## November 2024: Features and Enhancements
+
+*  **OCN-0045:** November 26, 2024: (**<font color="#FC01CC">AWS</font>**) Elastigroup and Ocean now automatically revert existing instances utilizing reserved capacity and savings plans to spot instances or other commitment deals wherever a reservation is needed elsewhere in your AWS account. [Learn more](https://docs.spot.io/ocean/features/dynamic-commitments-aws?id=dynamic-commitments)...
+
+*  **OCN-0044: November 19, 2024:** (**<font color="#FC01CC">GKE</font>**)  The `preferredTypes` attribute is now available for GKE clusters and virtual node groups (Spot API only) to launch new nodes on a cluster from the list of preferred instance types. [Learn more...](https://docs.spot.io/ocean/features/vngs/attributes-and-actions-per-vng?id=preferred-instance-types-per-virtual-node-group-gke)
+
+*  **OCN-0043: November 16, 2024:** (**<font color="#FC01CC">AWS Kubernetes</font>**) In Ocean, you can now use the reservedENIs attribute to specify the number of ENIs to reserve per instance type (for cluster / virtual node group) for scaling purposes. [Learn more..](https://docs.spot.io/ocean/features/scaling-kubernetes?id=maximum-pods-custom-configuration)
+
+*  **OCN-0042: November 16, 2024:** (**<font color="#FC01CC">AWS Kubernetes</font>**) New metrics were added to the Prometheus Exporter to track the total resources that were requested by pods, including deamonSet pods, by all virtual node groups in the cluster. [Learn more…](https://docs.spot.io/ocean/tools-and-integrations/prometheus/?id=ocean_total_pod_vcpu_requests-ocean_total_pod_memory_requests-ocean_total_pod_gpu_requests)
+
+*  **OCN-0041: November 16, 2024:** (**<font color="#FC01CC">AWS Kubernetes</font>**), (**<font color="#FC01CC">AKS</font>**) , (**<font color="#FC01CC">GKE</font>**) You can now view Ocean dashboards using Grafana. The Ocean scaling and cost optimization dashboard provides real-time insights into the scaling, cost, usage, and right-sizing activities managed by Ocean within your Kubernetes cluster. It displays node provisioning, optimization, cost efficiency, and recovery operations metrics. [Learn more…](https://docs.spot.io/ocean/tools-and-integrations/grafana-dashboard)
+
+*  **OCN-0040: November 04, 2024:** (**<font color="#FC01CC">EKS and AKS</font>**) Rollbacks let you run right-sizing automation without concerns. Starting now, Ocean automatically rolls back changes made by automatic right-sizing that encounter OOM events. [Learn more...](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=acknowledge-a-workload-rollback)
+
+* **OCN-0039: November 04, 2024:** (**<font color="#FC01CC">EKS and AKS</font>**) New drill-down options for the percentile data points in both right-sizing memory and vCPU usage graphs were added to the percentiles already used for the recommendations (99th percentile for vCPU and maximum usage for memory). [Learn more...](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-tab?id=right-sizing-resource-usage-panel)
+
+*  **OCN-0038: IMPORTANT NOTICE - November 01, 2024:** Ocean Controller Version 1 is now deprecated for **<font color="#FC01CC">AWS Kubernetes</font>** (from **November 1, 2024**). This means that Version 1 will not support new features, and any unexpected behaviors or security issues identified after this date will not be addressed. We recommend upgrading to Ocean Controller Version 2.0 for the best performance and support. [Learn more...](https://docs.spot.io/ocean/tutorials/ocean-controller-v2/)    
+Ocean Controller Version 1 will be deprecated for other cloud service providers as follows:
+   * **<font color="#FC01CC">GKE</font>**: December 18, 2024
+   * **<font color="#FC01CC">AKS</font>**: January 1, 2025
+
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600">October, 2024 - click to view</summary>
+
+*  **OCN-0037: October 31, 2024:** (**<font color="#FC01CC">AKS</font>**) Ocean's Cluster Overview dashboard now contains an Autoscaling Activity Graph to give you intuitive insights into the interaction between the Ocean infrastructure and the applications it supports. View cluster activity insights at a granular level to see why the Ocean Autoscaler triggered a specific scale event within the cluster. [Learn more...](https://docs.spot.io/ocean/ocean-aks-cloud-cluster-overview?id=autoscaling-activity-panel)
+
+*  **OCN-0036: October 15, 2024:** (**<font color="#FC01CC">GKE</font>**) For your GKE clusters and at the API level only, you can now define filter criteria so that Ocean selects instances to fit your applicative needs. See the Spot API for [cluster](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKEClusterCreate) and [virtual node group](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKELaunchSpecCreate) filter criteria.
+
+*  **OCN-0035: October 08, 2024:** (**<font color="#FC01CC">AKS</font>**) When you import an AKS cluster into Ocean via the console cluster creation wizard, you can now create multiple virtual node groups from your node pools, using the default virtual node group as a template on which to base your custom virtual node groups. [Learn more...](https://docs.spot.io/ocean/getting-started/aks/?id=launch-the-create-ocean-cluster-wizard).
+
+*  **OCN-0034: October 07, 2024:** (**<font color="#FC01CC">AKS</font>**) Documentation update: see how to manage AKS virtual node groups. [Learn more...](https://docs.spot.io/ocean/tutorials/manage-virtual-nd-groups-aks)
+
+</div>
+</details>
+
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600">September, 2024 - click to view</summary>
 
 *  **OCN-0033: September 19, 2024:** (**<font color="#FC01CC">GKE</font>**) Changes were made to the cluster import process connectivity options with enhanced Ocean Controller Version 2. [Learn more...](https://docs.spot.io/ocean/getting-started/gke)
 
@@ -12,7 +48,10 @@
 
 *  **OCN-0029: September 04, 2024:** (**<font color="#FC01CC">AKS</font>**) Ocean with [Controller V2](https://docs.spot.io/ocean/tutorials/ocean-controller-v2/) supports Pod Scheduling Readiness (included in Kubernetes 1.30), which considers whether a pod is ready to be scheduled. [Learn more...](https://docs.spot.io/ocean/features/scaling-kubernetes?id=support-for-pod-scaling-readiness)
 
-*  **OCN-0028: September 02, 2024:** (**<font color="#FC01CC">AKS</font>**) The AKS Cluster overview dashboard now includes details about Ocean savings from bin packing and a panel that displays a cluster-level summary with widgets for CPU /Memory /GPU resources allocated to pods. [Learn more...](https://docs.spot.io/ocean/ocean-aks-cloud-cluster-overview) 
+*  **OCN-0028: September 02, 2024:** (**<font color="#FC01CC">AKS</font>**) The AKS Cluster overview dashboard now includes details about Ocean savings from bin packing and a panel that displays a cluster-level summary with widgets for CPU /Memory /GPU resources allocated to pods. [Learn more...](https://docs.spot.io/ocean/ocean-aks-cloud-cluster-overview)
+
+</div>
+</details>
 
 <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600">August, 2024 - click to view</summary>
