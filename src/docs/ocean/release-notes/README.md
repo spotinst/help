@@ -5,12 +5,11 @@
 *  **OCN-0046: December 03, 2024:** (**<font color="#FC01CC">AKS</font>**) The AKS Cluster overview dashboard now includes details about Ocean savings from reverting to lower cost nodes. [Learn more...](https://docs.spot.io/ocean/ocean-aks-cloud-cluster-overview?id=ocean-savings-from-reverting-to-a-lower-cost-node)
  
 <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-  
-  <summary markdown="span" style="color:#7632FE; font-weight:600">November, 2024 - click to view</summary>
-  
-  <div style="padding-left:16px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600">November, 2024 - click to view</summary>
+ 
+   <div style="padding-left:16px">
 
-*  **OCN-0045:** November 26, 2024: (**<font color="#FC01CC">AWS</font>**) Elastigroup and Ocean now automatically revert existing instances utilizing reserved capacity and savings plans to spot instances or other commitment deals wherever a reservation is needed elsewhere in your AWS account. [Learn more...](https://docs.spot.io/ocean/features/dynamic-commitments-aws?id=dynamic-commitments)...
+*  **OCN-0045:** November 26, 2024: (**<font color="#FC01CC">AWS</font>**) Elastigroup and Ocean now automatically revert existing instances utilizing reserved capacity and savings plans to spot instances or other commitment deals wherever a reservation is needed elsewhere in your AWS account. [Learn more...](https://docs.spot.io/ocean/features/dynamic-commitments-aws?id=dynamic-commitments)
 
 *  **OCN-0044: November 19, 2024:** (**<font color="#FC01CC">GKE</font>**)  The `preferredTypes` attribute is now available for GKE clusters and virtual node groups (Spot API only) to launch new nodes on a cluster from the list of preferred instance types. [Learn more...](https://docs.spot.io/ocean/features/vngs/attributes-and-actions-per-vng?id=preferred-instance-types-per-virtual-node-group-gke)
 
@@ -22,12 +21,12 @@
 
 *  **OCN-0040: November 04, 2024:** (**<font color="#FC01CC">EKS and AKS</font>**) Rollbacks let you run right-sizing automation without concerns. Starting now, Ocean automatically rolls back changes made by automatic right-sizing that encounter OOM events. [Learn more...](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=acknowledge-a-workload-rollback)
 
+* **OCN-0039: November 04, 2024:** (**<font color="#FC01CC">EKS and AKS</font>**) New drill-down options for the percentile data points in both right-sizing memory and vCPU usage graphs were added to the percentiles already used for the recommendations (99th percentile for vCPU and maximum usage for memory). [Learn more...](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-tab?id=right-sizing-resource-usage-panel)
+
 *  **OCN-0038: IMPORTANT NOTICE - November 01, 2024:** Ocean Controller Version 1 is now deprecated for **<font color="#FC01CC">AWS Kubernetes</font>** (from **November 1, 2024**). This means that Version 1 will not support new features, and any unexpected behaviors or security issues identified after this date will not be addressed. We recommend upgrading to Ocean Controller Version 2.0 for the best performance and support. [Learn more...](https://docs.spot.io/ocean/tutorials/ocean-controller-v2/)    
 Ocean Controller Version 1 will be deprecated for other cloud service providers as follows:
    * **<font color="#FC01CC">GKE</font>**: December 18, 2024
    * **<font color="#FC01CC">AKS</font>**: January 1, 2025
-
-* **OCN-0039: November 04, 2024:** (**<font color="#FC01CC">EKS and AKS</font>**) New drill-down options for the percentile data points in both right-sizing memory and vCPU usage graphs were added to the percentiles already used for the recommendations (99th percentile for vCPU and maximum usage for memory). [Learn more...](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-tab?id=right-sizing-resource-usage-panel)
 
 </div>
 </details>
