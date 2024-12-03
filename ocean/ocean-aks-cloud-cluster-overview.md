@@ -66,7 +66,7 @@ This tab displays:
   * Pie-chart - Lifecycle percentage breakdown (regular, Savings Plans, Reserved Instances, and spots).
   * Node Name.
   * Virtual Node Group: You can click the link for a listed Virtual Node Group to display more details.
-  * Node Pool (name of node pool)
+  * Node Pool (name of node pool).
   * VM Size: For example, standard_f4s
   * Lifecycle: (regular, Savings Plans, Reserved Instances, and spots).
   * Scale-Down Timestamp, for example, 06/25/2023 09:23:15
