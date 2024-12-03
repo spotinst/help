@@ -89,6 +89,14 @@ Use the Spot API to set a custom value for autoscaling to include `reservedENIs`
 *  [Cluster](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterUpdate) 
 *  [VNG](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecUpdate) 
 
+### Resource Reservation for System Components that Manage Nodes
+
+Cloud service provider relevance: <font color="#FC01CC">GKE</font> 
+
+Ocean now supports node health optimization in your GKE clusters by ensuring resource reservations for system components that manage nodes, such as the Kubelet and Kube-Proxy. Ocean considers these components when calculating the resources that nodes require. Without resource reservations, nodes can become unhealthy even if they are not considered as such in the GKE platform, for example, due to a lack of resources when pods are assigned and run on the node. Resource reservations are available at both cluster and virtual node group levels.
+
+To enable this feature for Ocean GKE, contact [Spot Support](https://spot.io/support/).
+
 ## Scale Down
 
 Ocean proactively identifies underutilized nodes and [bin-packs](https://en.wikipedia.org/wiki/Bin_packing_problem) the pods on the nodes more efficiently to be able to scale down the nodes and reduce the cluster cost. A higher resource allocation reflects this. Every minute, Ocean simulates whether there are any running pods that can be moved to other nodes within the cluster. If so, Ocean drains those nodes (cordon the nodes and evicts the pods gracefully) to ensure continuous infrastructure optimization and increased cloud savings.
