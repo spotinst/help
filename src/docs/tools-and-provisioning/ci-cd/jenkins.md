@@ -107,6 +107,24 @@ If you haven't configured the needed credentials yet, you can use the `Add` butt
 
 Notice that the username (`ec2-user`) must be an existing user in the agent machine.
 
+In advanced versions of Jenkins, it is required to add a nodes directory.
+Please check if the directory exists in the controller by running the following command:
+
+```bash
+ls -ld /var/lib/jenkins/nodes
+```
+
+If the nodes directory does not exist, create it, and then give it the correct permissions by running the following commands on the controller:
+
+```bash
+sudo mkdir -p /var/lib/jenkins/nodes
+sudo chown -R jenkins:jenkins /var/lib/jenkins/nodes
+```
+
+After that, restart Jenkins.
+
+In addition, verify that the `JENKINS_HOME` variable is defined in the environment from `Manage Jenkins` &rarr; `System Information` &rarr; `Environment Variables`. If the variable is not there, see the [Jenkins documentation](https://www.jenkins.io/doc/book/managing/system-configuration/).
+
 That's all! From now on, the Jenkins controller will automatically launch new instances with the Spot plugin and terminate them according to your configuration.
 
 ## JNLP Setup
