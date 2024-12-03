@@ -84,7 +84,7 @@ This tab displays:
   * Memory resources saved in GiB Hours.
   * GPU resources saved in GPU Hours.
  
- ## Ocean Savings from Reverting to a Lower Cost Node 
+## Ocean Savings from Reverting to a Lower Cost Node 
 
 This process is applied to nodes with underutilized compute resources that cannot be scaled down from the cluster's set of nodes. For example, suppose a pod was initially placed on a more expensive node due to resource constraints. In that case, Ocean Autoscaler can replace it with a less expensive node when it becomes available, consequently saving costs. This tab lets you see how much you save from this dynamic resource allocation. 
 

@@ -1,8 +1,13 @@
 # Ocean Release Notes
 
-## November 2024: Features and Enhancements
+## December 2024: Features and Enhancements
 
-*  **OCN-0045:** November 26, 2024: (**<font color="#FC01CC">AWS</font>**) Elastigroup and Ocean now automatically revert existing instances utilizing reserved capacity and savings plans to spot instances or other commitment deals wherever a reservation is needed elsewhere in your AWS account. [Learn more](https://docs.spot.io/ocean/features/dynamic-commitments-aws?id=dynamic-commitments)...
+*  **OCN-0046: December 03, 2024:** (**<font color="#FC01CC">AKS</font>**) The AKS Cluster overview dashboard now includes details about Ocean savings from reverting to lower cost nodes. [Learn more...](https://docs.spot.io/ocean/ocean-aks-cloud-cluster-overview?id=ocean-savings-from-reverting-to-a-lower-cost-node)
+ 
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600">November, 2024 - click to view</summary>
+
+*  **OCN-0045:** November 26, 2024: (**<font color="#FC01CC">AWS</font>**) Elastigroup and Ocean now automatically revert existing instances utilizing reserved capacity and savings plans to spot instances or other commitment deals wherever a reservation is needed elsewhere in your AWS account. [Learn more...](https://docs.spot.io/ocean/features/dynamic-commitments-aws?id=dynamic-commitments)...
 
 *  **OCN-0044: November 19, 2024:** (**<font color="#FC01CC">GKE</font>**)  The `preferredTypes` attribute is now available for GKE clusters and virtual node groups (Spot API only) to launch new nodes on a cluster from the list of preferred instance types. [Learn more...](https://docs.spot.io/ocean/features/vngs/attributes-and-actions-per-vng?id=preferred-instance-types-per-virtual-node-group-gke)
 
@@ -20,6 +25,9 @@
 Ocean Controller Version 1 will be deprecated for other cloud service providers as follows:
    * **<font color="#FC01CC">GKE</font>**: December 18, 2024
    * **<font color="#FC01CC">AKS</font>**: January 1, 2025
+ 
+</div>
+</details>
 
 <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600">October, 2024 - click to view</summary>
