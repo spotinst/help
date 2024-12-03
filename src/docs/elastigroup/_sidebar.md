@@ -7,7 +7,6 @@
       - [Market Scoring & Managing Interruptions](elastigroup/features/core-features/market-scoring-managing-interruptions)
   - [Release Notes](elastigroup/release-notes/)
   - [Features - AWS](elastigroup/features/)
-      - [Elastigroup for AWS](elastigroup/getting-started/elastigroup-for-aws)
       - [AMI Auto-Backup](elastigroup/features/compute/ami-auto-backup)
       - [Autohealing](elastigroup/features/compute/autohealing)
       - [AZ Scores](elastigroup/features/core-features/az-scores)
