@@ -1,21 +1,21 @@
 # Choose AWS RI Strategy
 
-After you click Choose Strategy in the Dashboard’s [Analysis](eco/tutorials/review-ri-spending-analysis) page (Eco AWS), you will choose a reserved instance (RI) strategy in the Strategy Selection page, shown below.
+After you click **Choose Strategy** in the Dashboard’s [Analysis](eco/tutorials/review-ri-spending-analysis) page (Eco AWS), seelect a reserved instance (RI) strategy in the Strategy Selection page.
 
 <img src="/eco/_media/tutorials-choose-strategy-01.png" />
 
-You can choose a strategy that best suits your needs:
+You can select one of the strategies:
 
 - Short Term
 - Medium Term
 - Long Term
 - Custom Term
 
-When you mark a strategy, be sure to check the information to the right which includes summary line and potential yearly savings for the selected strategy.
+When you select a strategy, a summary line with the potential yearly savings for that strategy is displayed on the right.
 
 ## Summary Line
 
-The Summary Line displays the following numbers:
+The Summary Line displays:
 
 - All Time Waste: Amount wasted on unused reserved instances.
 - Current RI Commitment: The monthly amount of reserved instance compute capacity you are currently committed to.
@@ -23,7 +23,7 @@ The Summary Line displays the following numbers:
 
 ## Potential Yearly Savings per AWS Service
 
-This chart shows the yearly savings that can be achieved with reserved instances per AWS service. The figures in this chart will vary according to the strategy you choose.
+This chart shows the yearly savings that can be achieved with reserved instances per AWS service. The figures in this chart vary according to the strategy you choose.
 
 <img src="/eco/_media/tutorials-choose-strategy-02.png" />
 
