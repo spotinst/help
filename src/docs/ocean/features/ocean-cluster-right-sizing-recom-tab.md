@@ -22,7 +22,8 @@ Your workload optimization activities impact the status of the workloads in the 
 
 ##  Workloads Optimization List 
 
-![workloads-dashboard-e](https://github.com/user-attachments/assets/f2a7d846-b906-4222-8cca-3db98754e948)
+<img width="1000" src="https://github.com/user-attachments/assets/129b3cbf-ed65-4a0b-8cba-ad59fbc4ee10" />
+
 
 This list displays your right-sizing recommendations per workload and lets you drill down per container.
 *  [Right Sizing rules](ocean/features/ocean-cluster-right-sizing-recom-tab?id=automation-rules-list) that are attached to specific workloads.
@@ -158,6 +159,19 @@ To acknowledge a workload rollback:
 3. Click **I Acknowledge the Rollback**.
 
 The workloads are displayed in the [Workloads Optimization List](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=workloads-optimization-list) without any attached rules. Before attaching a rule to a rolled-back workload, first fix the issue.
+
+<!-- Adding new section DOC-2093 -->
+### Set the vCPU Percentile
+
+By default, right-sizing uses the 85th percentile to calculate the vCPU recommendations.
+
+>**Important:** Changing the percentile setting will immediately impact the recommendations that have already been applied.
+To change this setting:
+
+1. Click the **Settings** button at the top-right of the screen.
+2. Select your required percentile value in the Settings dialog box and save your changes.
+
+<img width="400" src="https://github.com/user-attachments/assets/da575260-4c33-46df-90aa-c30cc75a5472" />
 
 ## Best Practices
 
