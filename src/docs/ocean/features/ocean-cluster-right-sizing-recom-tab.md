@@ -27,9 +27,9 @@ Your workload optimization activities impact the status of the workloads in the 
 This list displays your right-sizing recommendations per workload and lets you drill down per container.
 *  [Right Sizing rules](ocean/features/ocean-cluster-right-sizing-recom-tab?id=automation-rules-list) that are attached to specific workloads.
 *  Workload Status: If the workload is [attached](ocean/features/ocean-cluster-right-sizing-recom-tab?id=attach-a-right-sizing-rule-to-one-or-more-workloads) to a right-sizing rule, the name of the rule appears under **Rules**. The rule has one of the following workload (colored) optimization statuses:
-   *  Green(Optimized): The Workload is fully optimized, and no action is required.
-   *  Orange(Limited): The Workload has optimization limitations (constrained by settings). 
-   *  Gray(Pending): The rule for the workload has been attached but is out of schedule.
+   *  Green (Optimized): The Workload is fully optimized, and no action is required.
+   *  Orange (Limited): The Workload has optimization limitations (constrained by settings). 
+   *  Gray (Pending): The rule for the workload has been attached but is out of schedule.
 *  Workload type and namespace.
 *  Recommendations for vCPU and memory right sizing per deployment. Recommended increases are shown with a green up arrow, and recommended decreases are shown with a red Down arrow.  
 *  If the workload is configured with HPA, **ON** is displayed under HPA. Hover over the entry for information about the specific HPA trigger (CPU/Memory/other).
