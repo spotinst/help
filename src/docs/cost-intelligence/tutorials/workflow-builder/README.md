@@ -1,6 +1,10 @@
 # Workflow Builder
 You can create automated workflows in Cost Intelligence Workflow Builder. Flows are based on data in the Cost Intelligence dashboards.
 
+## Prerequisites
+
+An alert or action based on automatically identified anomalies (must be indicator, dial or bullet). 
+
 Here are some examples of types of flows you can create:
 * Send scheduled emails
 * Generate alerts based on specific conditions
@@ -14,7 +18,7 @@ Here are some examples of types of flows you can create:
    </details>
 
 ## Create a Workflow
-1. Click Create New Flow.
+1. Click **Create New Flow**.
    <details>
      <summary markdown="span">View image</summary>
 
@@ -97,7 +101,7 @@ Here is a simple example of an SMS sent once a day for 3 days. It includes the m
 
 ## Edit an Existing Workflow
 
-To edit an <i>active</i> flow, click **Pause**, then you can make your changes.
+To edit an <i>active</i> flow, click **Pause**. 
 
 ## Tokens
 
