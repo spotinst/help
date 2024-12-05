@@ -2,6 +2,8 @@
 
 This document describes the requirements for Spot Eco to provide an estimated cost savings analysis using AWS and the connection process. 
 
+> **Note**: If you have an Ocean or Elastigroup account, connect Eco for AWS to your existing Spot account. Eco, Ocean, and Elastigroup are integrated to maximize the usage of spot EC2 instances when commitment management is enabled.
+
 ## Prerequisites
 
 Getting started with Eco on AWS usually requires read-only permissions to the Cost and Usage Reports, which are in the Management account, or in specially configured [member accounts](https://aws.amazon.com/about-aws/whats-new/2020/12/cost-and-usage-report-now-available-to-member-linked-accounts/). Choose one of the following methods:
