@@ -30,3 +30,7 @@ This chart shows the yearly savings that can be achieved with reserved instances
 ## Apply Strategy
 
 Once you have marked a strategy, click Apply Strategy. Eco will then analyze your AWS strategy and start managing your RIs and Savings Plans.
+
+## Reduce Commitments
+
+To reduce commitments, you can launch Spot instances. Commitments are necessary for on-demand usage. However, by leveraging Ocean and Elastigroup to launch EC2 instances as Spot, the overall commitment can be reduced. Eco is integrated with Ocean, allowing it to manage commitments effectively. Eco recognizes when Ocean and Elastigroup have launched instances to utilize commitments and reduces commitments accordingly to maximize Spot usage and savings.
