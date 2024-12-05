@@ -1,11 +1,9 @@
 # Workflow Builder
+
 You can create automated workflows in Cost Intelligence Workflow Builder. Flows are based on data in the Cost Intelligence dashboards.
 
-## Prerequisites
+Examples of types of flows you can create:
 
-An alert or action based on automatically identified anomalies (must be indicator, dial or bullet). 
-
-Here are some examples of types of flows you can create:
 * Send scheduled emails
 * Generate alerts based on specific conditions
 * Update custom datasets
@@ -17,7 +15,12 @@ Here are some examples of types of flows you can create:
 
    </details>
 
+## Prerequisites
+
+An alert or action based on automatically identified anomalies (must be indicator, dial or bullet). 
+
 ## Create a Workflow
+
 1. Click **Create New Flow**.
    <details>
      <summary markdown="span">View image</summary>
@@ -108,6 +111,7 @@ To edit an <i>active</i> flow, click **Pause**.
 A token is a variable or parameter that acts as a container for data. When a metric is created in the Cost Intelligence dashboard, you can use it as a token in workflows. For example, you can use tokens in datasets, and to make alerts dynamic. This lets you generate workflows based on the same data you have in your dashboards. You can use metrics and formulas (tokens) created by any user in the same Spot organization.
 
 ### System Tokens
+
 System tokens can be used with any dataset and focus on more global variable types, for example:
 
 * {{CURRENT_DATE}} inserts the current date.
@@ -115,6 +119,7 @@ System tokens can be used with any dataset and focus on more global variable typ
 * {{TOMORROW}} inserts the date for tomorrow.
 
 ### Custom Tokens Automatically Created in Dashboard
+
 When you create metrics, formulas, and other datapoints used in Cost Intelligence dashboards, a token is automatically created. You can then use these tokens in workflows.
 
 Let’s say you have a chart in the Cost Intelligence dashboard with the number of EC2 instances month to date, filtered by a specific region and cloud account. This number would map to a token that you could then use in workflows.
@@ -122,6 +127,7 @@ Let’s say you have a chart in the Cost Intelligence dashboard with the number 
 Another example is a gauge chart that shows the cost of all your compute services month to date, filtered by a certain set of tags. Each chart generates two tokens: one for the name of the chart and the other for the value of the chart.
 
 ### Custom Tokens Created in Workflow Builder
+
 From the token dropdown menu, click **Add/Manage Tokens** to:
 
 1. Create tokens directly in the Workflow Builder.
