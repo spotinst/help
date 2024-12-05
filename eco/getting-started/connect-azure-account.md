@@ -28,9 +28,7 @@ Complete the following steps:
 
 ### Connect Automatically 
 
-1. Connecting automatically is the quicker option. The Microsoft Application Consent process allows Eco Azure to build the app registration on your behalf and use your credentials. 
-
-<img width="623" alt="connect-azure-3" src="https://github.com/spotinst/help/assets/106514736/6d609735-1712-4f4d-9157-406c104d6a6b"> 
+Connecting automatically is the quicker option. The Microsoft Application Consent process allows Eco Azure to build the app registration on your behalf and use your credentials. 
 
 ### Connect Manually 
 
