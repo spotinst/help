@@ -18,33 +18,34 @@ Create a metric in the **Cost Intelligence** dashboards.
 The example below shows how to generate a metric that identifies the percentage change of compute resources for a specific AWS region, comparing a day to its previous week. 
 
 1. On the left panel, click the **Billing** dataset.
+2. On the right panel, click the Indicator chart <img height="18" alt="Anomaly-indicatorChart" src="https://github.com/user-attachments/assets/7b750c6f-e8c2-483b-b9fd-c603eb93d22f">.
+
+**Note**: The metric must be one of the three chart types: indicator, dial or bullet.
    
    <img width="247" alt="Anomaly1" src="https://github.com/user-attachments/assets/040bd19b-2403-4b51-8ced-125dd9e5bfb4">
-   
-3. On the right panel, click the Indicator chart <img height="18" alt="Anomaly-indicatorChart" src="https://github.com/user-attachments/assets/7b750c6f-e8c2-483b-b9fd-c603eb93d22f">.
 
-4. On the left panel, drag **ServiceCategory** to the <i>Values</i> field.
+3. On the left panel, drag **ServiceCategory** to the <i>Values</i> field.
    <details>
     <summary markdown="span">View clip</summary>
     <video width=800 src="https://github.com/user-attachments/assets/26f8591c-46a6-453f-a660-fa4d896653b1" controls />
 
     </details>
 
-5. In the <i>Values</i> field, click the three vertical dots <img height="16px" alt="kebab" src="https://github.com/user-attachments/assets/4220ff97-90c3-4801-8edf-06f7addcf60a"> and select **Distinct Count**.
-6. In the menu in the right panel, click **Comparison**. The <i>Date Column</i> field opens. From the left panel, drag **BillingPeriodStart** into the <i>Date Column</i> field.
+4. In the <i>Values</i> field, click the three vertical dots <img height="16px" alt="kebab" src="https://github.com/user-attachments/assets/4220ff97-90c3-4801-8edf-06f7addcf60a"> and select **Distinct Count**.
+5. In the menu in the right panel, click **Comparison**. The <i>Date Column</i> field opens. From the left panel, drag **BillingPeriodStart** into the <i>Date Column</i> field.
    <details>
     <summary markdown="span">View clip</summary>
     <video width=800 src="https://github.com/user-attachments/assets/61f78cd1-882f-4457-81d4-7865e69db7e1" controls />
 
     </details>
    
-8. Select the two time periods to compare between in the <i>Time Period</i> field and the <i>Comparison field</i>. In this example:
+6. Select the two time periods to compare between in the <i>Time Period</i> field and the <i>Comparison field</i>. In this example:
     * **Time Period**: select <i>Today</i>.
     * **Comparison field**: select <i>Last Week</i>.
   
-9. Make sure that the **Type** is percent **%**.
+7. Make sure that the **Type** is percent **%**.
 
-10. You can add a number of filters. For example, you can filter on provider, specific regions, and service category:
+8. You can add a number of filters. For example, you can filter on provider, specific regions, and service category:
     
     <ol style="list-style-type: lower-alpha;">
     <li>In the right panel, click <b>Filters</b>.</li>
@@ -63,9 +64,9 @@ The example below shows how to generate a metric that identifies the percentage 
     
     </ol>
 
-11. Click the <i>Untitled Chart</i> field and enter a unique name for the metric, such as **Anomaly—AWS Compute US-East**.
-12. Click **Save**. The workflow is added to the dashboard.
-13. Click **Publish Dashboard**. The metric is prepared for the workflow builder to create an anomaly alert.
+9. Click the <i>Untitled Chart</i> field and enter a unique name for the metric, such as **Anomaly—AWS Compute US-East**.
+10. Click **Save**. The workflow is added to the dashboard.
+11. Click **Publish Dashboard**. The metric is prepared for the workflow builder to create an anomaly alert.
 
 ## Step 2: Create an Anomaly Detection Workflow 
 
