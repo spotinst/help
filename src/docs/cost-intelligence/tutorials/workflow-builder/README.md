@@ -17,7 +17,7 @@ Examples of types of flows you can create:
 
 ## Prerequisites
 
-An alert or action based on automatically identified anomalies (must be indicator, dial or bullet). 
+An alert or action based on automatically identified [anomalies](cost-intelligence/tutorials/workflow-builder/anomaly-detection?id=alerts-and-actions-based-on-anomaly-detection) (must be indicator, dial or bullet). 
 
 ## Create a Workflow
 
