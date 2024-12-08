@@ -2,10 +2,12 @@
 
 - <a href="/" class="sidebar-home"><i data-feather="arrow-left" class="sidebar-back-icon"></i>Back to Home</a>
 - [Administration](administration/)
+  - [Release notes](administration/release-notes-core/)
   - [Users](administration/users-a/)
   - [Groups](administration/groups/)
   - [Permission Policies](administration/policies/)
   - [Organizations & Accounts](administration/organizations/)
+    - [Multitenancy](/administration/organizations/multitenancy)
     - [Billing](administration/organizations/billing-details)
   - [Notification Center](administration/notification-center/)
     - [Event Policies](administration/notification-center/event-policies/)
