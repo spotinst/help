@@ -22,8 +22,8 @@ To check if your Control Plane version needs upgrading, access the cluster overv
 The version can have one of the following statuses:
 
 * Green: The control plane is upgraded to the latest patch version.
-* Yellow/orange: The control plane patch version can be upgraded to the new available version.
-* Red: The minor version of the control plane needs an immediate upgrade. Otherwise, you will not be able to launch a new node. Spot does not provide support for Kubernetes minor version upgrades.
+* Yellow/orange: The control plane patch version can be upgraded to the latest available version.
+* Red: The minor and control plane patch versions need an immediate upgrade. Otherwise, you will not be able to launch a new node. Spot does not provide support for Kubernetes minor version upgrades.
 * Gray: The Ocean controller is not valid or is not reporting, so there is no indication of the control plane patch version. See [Troubleshoot the Ocean Controller](https://docs.spot.io/ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-ts).
 
 ## View the Auto-Upgrades History and Schedules
@@ -41,10 +41,10 @@ The Updates History list for completed runs is displayed at the top of the scree
 * New Version number (after the run).
 * Roll ID: Listed if the cluster was rolled after auto-update. Click the **Roll ID** link on the list entry to view roll attributes.
 * Run Statuses:
-  * Completed (green): Successfully updated.
-  * Partly completed (green): At least one virtual node group roll was unsuccessful.
-  * Failed (red): Either the control plane patch version upgrade or the virtual node group roll failed.
-  * Stopped (gray): The virtual node groups roll was stopped.
+  * Completed (green): The control plane patch version was successfully updated.
+  * Partly completed (green): The control plane was successfully updated but could not roll / could only partially complete the roll.
+  * Failed (red): The control plane patch version could not be updated. Review the logs tab for more details.
+  * Stopped (gray): The roll was stopped.
  
 >**Tip**: Search for auto-update runs by **Status** using the Updates History filter.
 
