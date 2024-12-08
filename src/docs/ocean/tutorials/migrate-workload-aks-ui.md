@@ -18,24 +18,33 @@ Once you start migration, Ocean automatically detects the workloads (nodes and p
 
 ![aks-ready-for-migration](https://github.com/user-attachments/assets/962c3046-fc0a-42ca-8675-dad2d46c6e9c)
 
-4.  Select the nodes (instances) you want to migrate into your Ocean cluster.
-    * If any node entries display the **Required Validation** status in the **Ready for Migration** column, click **Validate** at the bottom left of the screen. When the validation process is completed, if any node entries display the **Unable to migrate** status in the **Ready for Migration** column, click the down arrow on the left to drill down to the workloads.
+![aks-workload-migration-discovery-vals](https://github.com/user-attachments/assets/5b99abd3-88a9-4063-b915-c7dff9fd5322)
 
-![aks-migration-validations](https://github.com/user-attachments/assets/c0e4f51f-2de8-4dce-8670-3f8a824641b6)
+The list of discovered nodes contains these columns:
+
+* Migration Node: Node for migration.
+* Node Group
+* Pod Count: Number of pods on node.
+* Virtual Node Group Match: Indicates whether an existing virtual node group matches the node.
+* Ready for Migration (Node Statuses):
+   * Ready for migration: Node is validated and can be migrated (green color)
+   * Excluded: Node was not selected for migration (gray color).
+   * Unable to migrate: Node cannot be migrated (red color)
 
 Nodes are checked before migration to ensure successful migration. If an issue is identified for a node, you can either fix it or select a different node. 
 Validation checks for the following:
-*  Virtual Node Group Match: At least one Virtual Node Group in the cluster must match the specific node.
+*  Virtual Node Group Match: At least one virtual node group in the cluster must match the specific node.
 *  Support for the Kubernetes version.
 *  Support for the Ocean Controller version.
 *  Whether Spot toleration exists.
 *  Specific Constraints: For example, Restrict Scale Down, Respect Pod Disruption Budget (PDB), PVC.
 
-Node Statuses:
+4.  Select the nodes (instances) you want to migrate into your Ocean cluster.
+    * If any node entries display the **Required Validation** status in the **Ready for Migration** column, click **Validate** at the bottom left of the screen. When the validation process is completed, if any node entries display the **Unable to migrate** status in the **Ready for Migration** column, click the down arrow on the left to drill down to the workloads.
 
-*   Ready for migration: Node is validated and can be migrated (green color)
-*   Excluded: Node was not selected for migration (gray color).
-*   Unable to migrate: Node cannot be migrated (red color)
+![aks-migration-validations](https://github.com/user-attachments/assets/c0e4f51f-2de8-4dce-8670-3f8a824641b6)
+
+![aks-migration-discovery-validated](https://github.com/user-attachments/assets/0c1933b8-8dcf-4517-bea1-6b8252da2373)
 
 ##  Step 2: Set Preferences
 
