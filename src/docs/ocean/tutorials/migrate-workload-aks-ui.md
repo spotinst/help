@@ -46,6 +46,19 @@ Validation checks for the following:
 
 ![aks-migration-discovery-validated](https://github.com/user-attachments/assets/0c1933b8-8dcf-4517-bea1-6b8252da2373)
 
+>**IMPORTANT:** If no nodes pass the validation process, you must fix errors before migrating.
+
+If at least 1 but not all the nodes pass the validation process, you can proceed to migrate them.
+
+To fix a specific node that does not match an existing virtual node group in your cluster:
+
+1. Click **Click to fix** in the virtual node group match column entry.
+2. In the issues dialog box, Ocean provides the labels and taints for a virtual node group to match the node.
+
+
+![aks-vng-match-issues-2](https://github.com/user-attachments/assets/014c4f9b-bc26-44e1-9c91-f4c86392a08a)
+
+
 ##  Step 2: Set Preferences
 
 Select your workload migration preferences.
