@@ -37,7 +37,11 @@ If you need multiple organizations, for example, for multiple divisions or units
 - Billing information (can be separate if needed)
 - Management dashboards and reports
 
-## Add an Organization
+You can also use [multitenancy](administration/organizations/multitenancy) to create hierarchies in your Spot organizations.
+
+## Create an Organization
+
+> **Tip**: If you want to create a child organization, see [multitenancy](administration/organizations/multitenancy?id=create-a-child-organization).
 
 1. In the console, click the organization and click **Add Organization**.
 
