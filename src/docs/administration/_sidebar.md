@@ -6,6 +6,7 @@
   - [Groups](administration/groups/)
   - [Permission Policies](administration/policies/)
   - [Organizations & Accounts](administration/organizations/)
+    - [Multitenancy](/administration/organizations/multitenancy)
     - [Billing](administration/organizations/billing-details)
   - [Notification Center](administration/notification-center/)
     - [Event Policies](administration/notification-center/event-policies/)
