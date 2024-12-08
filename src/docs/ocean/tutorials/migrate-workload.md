@@ -9,7 +9,7 @@ Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>
 Before you start the procedure in this tutorial, you need the following:
 - A Kubernetes cluster running on AWS infrastructure.
 - A Kubernetes cluster connected to an Ocean cluster.
-- Ocean Controller version 1.0.44 installed in the cluster.
+- Ocean Controller Version 2 installed in the cluster.
 - Deactivated Kubernetes Cluster Autoscaler.
 - Dedicated [Virtual Node Groups](ocean/features/vngs/?id=virtual-node-groups) for your workload to enable the Ocean Autoscaler to scale up nodes.  
 
