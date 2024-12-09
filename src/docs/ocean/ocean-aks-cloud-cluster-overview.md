@@ -42,8 +42,10 @@ To view these savings, click the **Running on Spot** tab (unless already display
 This tab displays: 
 
 * Total cluster savings and the percentage of the saved cluster costs in the selected time range, where: 
-  * Total cluster savings = price for running regular instances – price for running spot instances. 
-  * Percentage of cluster costs = [total price for running regular instances – total price for running spot instances] / total price for running regular instances x 100. 
+  * Total cluster savings = <b>[price for running regular instances – price for running spot instances]</b>. 
+  * Percentage of cluster costs: 
+
+<b>[[total price for running regular instances – total price for running spot instances] / [total price for running regular instances] x 100]</b>. 
 
 * CPU resources in vCPU Hours.
 * Memory resources in GiB/TiB Hours.
