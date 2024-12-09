@@ -43,7 +43,7 @@ The Updates History list for completed runs is displayed at the top of the scree
 * Roll ID: Listed if the cluster was rolled after auto-update. Click the **Roll ID** link on the list entry to view roll attributes.
 * Run Statuses:
   * Completed (green): The control plane patch version was successfully updated.
-  * Partly completed (green): The control plane was successfully updated but could not roll / could only partially complete the roll.
+  * Partly completed (orange): The control plane was successfully updated but could not roll / could only partially complete the roll.
   * Failed (red): The control plane patch version could not be updated. Review the logs tab for more details.
   * Stopped (black): The roll was stopped.
  
@@ -84,13 +84,15 @@ To schedule an auto-upgrade:
 
 5. Select whether to schedule the auto upgrade once a day or at a specific time.
 
+>**Note**: Once you schedule the auto-upgrade once a day, you cannot add a schedule for a specific time, and the **Scheduled Auto-Upgrade** button is grayed.
+
 <img width="600" src="https://github.com/user-attachments/assets/9a45bee5-e725-4bad-aaa7-a739f7044772" />
 
-7. If you selected to schedule at a specific time, set the time using the day/week/month/time controls or type a Cron expression.
+6. If you selected to schedule at a specific time, set the time using the day/week/month/time controls or type a Cron expression.
 
 <img width="600" src="https://github.com/user-attachments/assets/cbc850c8-70d7-4465-bd29-492285ffca9e" />
 
-8. Click **Schedule**.
+7. Click **Schedule**.
 
    * The created schedule is turned on by default. To turn off the schedule, move the slider at the right of the entry for the schedule to the turned-off position.
    * After the update is run, an entry will appear in the auto-upgrades history list.
