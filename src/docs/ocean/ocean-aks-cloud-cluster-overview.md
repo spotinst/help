@@ -92,7 +92,7 @@ If one or more nodes have been scaled down, click the link on the **Node Scaled 
 
 This process searches for node pools that can be replaced with lower-cost node pools. For example, suppose a pod was initially placed on a more expensive node due to resource constraints. In that case, Ocean Autoscaler can replace it with a less expensive node when it becomes available, consequently saving costs. This tab lets you see how much you save from this dynamic resource allocation. 
 
-Ocean savings for reverting to a lower-cost node pool are calculated from the difference in price between the old scaled-down nodes and the new scaled-up nodes. For more information, see [Revert to Lower Cost](https://docs.spot.io/ocean/features/revert-to-lower-cost-node?id=revert-to-lower-cost-node) Node pool. 
+Ocean savings for reverting to a lower-cost node pool are calculated from the difference in price between the old scaled-down nodes from the specific node pool and the new scaled-up nodes, which are assumed to be related to several different node pools. For more information, see [Revert to Lower Cost](https://docs.spot.io/ocean/features/revert-to-lower-cost-node?id=revert-to-lower-cost-node) Node pool. 
 
 To view these savings, click the **Revert to Lower Cost** tab (unless already displayed). 
 
@@ -125,7 +125,7 @@ Click **Revert to Lower Cost** to view the number of nodes reverted to lower cos
   * Node pools of the scaled-down and scaled-up nodes.
   * Number of scaled-down and scaled-up nodes.
   * Hourly cost of the scaled-down and scaled-up nodes. Displays the total cost of all nodes in the same node pool: [nodes count * hourly price].
-  * Hourly cost saved as a percentage: Cost reduction from converting to the new VM type: [old hourly cost - SUM (new hourly cost)]/(old hourly cost) * 100].
+  * Hourly cost saved as a percentage: % Cost reduction from converting to all the new VM type: [[SUM(old hourly cost)- SUM (new hourly cost)]/[SUM(old hourly cost) ]*100]
   * The Virtual Node Group's name (click the link for a listed VNG to display your custom VNG details).
   * Scale-down timestamp in format MM/DD/YYYY HH: MM: SS
  
