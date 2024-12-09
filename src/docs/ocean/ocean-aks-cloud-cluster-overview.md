@@ -61,16 +61,15 @@ To view these savings, click the **Bin Packing** tab (unless already displayed).
 
 This tab displays: 
 
-* Number of Scaled-down nodes: If one or more nodes have been scaled down, click the link on the button to view details. 
-  * Pie-chart - Virtual Node Group percentage breakdown for nodes.
-  * Pie-chart - Lifecycle percentage breakdown (regular, Savings Plans, Reserved Instances, and spots).
-  * Node Name.
-  * Virtual Node Group: You can click the link for a listed Virtual Node Group to display more details.
-  * Node Pool (name of node pool).
-  * VM Size: For example, standard_f4s
-  * Lifecycle: (regular, Savings Plans, Reserved Instances, and spots).
-  * Scale-Down Timestamp, for example, 06/25/2023 09:23:15
- 
+* Number of Scaled-down nodes:
+* Resource savings from bin packing in the following units:
+  * CPU resources saved in vCPU.
+  * Memory resources saved in GiB.
+  * GPU resources saved in GPU.
+
+
+If one or more nodes have been scaled down, click the link on the **Node Scaled Down** button to view details in the Bin Packing window.
+
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
   
    <summary markdown="span" style="color:#7632FE; font-weight:600" id=”texttolinkto”>View image...</summary>
@@ -79,10 +78,14 @@ This tab displays:
 
 </details>
 
-* Resource savings from bin packing in the following units:
-  * CPU resources saved in vCPU Hours.
-  * Memory resources saved in GiB Hours.
-  * GPU resources saved in GPU Hours.
+* Pie-chart: Virtual node group percentage breakdown for nodes.
+* Pie-chart: Lifecycle percentage breakdown (regular, Savings Plans, Reserved Instances, and spots).
+* Node Name.
+* Virtual Node Group: You can click the link for a listed virtual node group to display more details.
+* Node Pool (name of node pool).
+* VM Size: For example, standard_f4s
+* Lifecycle: (regular, Savings Plans, Reserved Instances, and spots).
+* Scale-Down Timestamp, for example, 06/25/2023 09:23:15
  
 ## Ocean Savings from Reverting to Lower Cost Node Pools
 
@@ -96,22 +99,16 @@ To view these savings, click the **Revert to Lower Cost** tab (unless already di
 
 This tab displays:
 
-*   Nodes reverted to lower cost: If one or more nodes have been reverted to lower cost, the number of reverted nodes appears. Click to view the number of nodes reverted to lower cost in the selected time range in the Revert to Lower Cost window. View the types and costs of the nodes, etc).
+*   Nodes reverted to lower cost:
+*   Resource savings from reverting to lower cost in the following units:  
+    * CPU resources saved in vCPU.
+    * Memory resources saved in GiB.
+    * GPU resources saved in GPU.
 
-*   Avg. percentage hourly cost saved: Avg. percentage cost reduction from reverting to the new VM type [[SUM(old hourly cost) - SUM (new hourly cost)]/[SUM(old hourly cost)] * 100].
+If one or more nodes have been reverted to lower cost, the number of reverted nodes appears. 
+Click **Revert to Lower Cost** to view the number of nodes reverted to lower cost in the selected time range in the Revert to Lower Cost window. 
 
-     * Pie chart - Virtual Node Group percentage breakdown.
-      
-    List showing replacement information: an entry for each reverted node pool is listed with these details:
-      
-     * Node pools of the scaled-down and scaled-up nodes.
-     * Number of scaled-down and scaled-up nodes.
-     * Hourly cost of the scaled-down and scaled-up nodes. Displays the total cost of all nodes in the same node pool: [nodes count * hourly price].
-     * Hourly cost saved as a percentage: Cost reduction from converting to the new VM type: [old hourly cost - SUM (new hourly cost)]/(old hourly cost) * 100].
-     * The Virtual Node Group's name (click the link for a listed VNG to display your custom VNG details).
-     * Scale-down timestamp in format MM/DD/YYYY HH: MM: SS
- 
- <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
   
    <summary markdown="span" style="color:#7632FE; font-weight:600" id=”texttolinkto”>View image...</summary>
     
@@ -119,11 +116,18 @@ This tab displays:
 
 </details> 
 
-*   Resource savings from reverting to lower cost in the following units:  
-     * CPU resources saved in vCPU
-     * Memory resources saved in GiB
-     * GPU resources saved in GPU
+* Number of nodes reverted to lower cost.
+* Avg. percentage hourly cost saved: Avg. percentage cost reduction from reverting to the new VM type [[SUM(old hourly cost) - SUM (new hourly cost)]/[SUM(old hourly cost)] * 100].
+* Pie chart - Virtual Node Group percentage breakdown.
+* List showing replacement information: an entry for each reverted node pool is listed with these details:
 
+  * Node pools of the scaled-down and scaled-up nodes.
+  * Number of scaled-down and scaled-up nodes.
+  * Hourly cost of the scaled-down and scaled-up nodes. Displays the total cost of all nodes in the same node pool: [nodes count * hourly price].
+  * Hourly cost saved as a percentage: Cost reduction from converting to the new VM type: [old hourly cost - SUM (new hourly cost)]/(old hourly cost) * 100].
+  * The Virtual Node Group's name (click the link for a listed VNG to display your custom VNG details).
+  * Scale-down timestamp in format MM/DD/YYYY HH: MM: SS
+ 
 ## Ocean Managed Nodes and Resources Panel
 
 <img width="1000" src="https://github.com/user-attachments/assets/065b7f12-769a-4e46-9900-7b17fb81553d" >
