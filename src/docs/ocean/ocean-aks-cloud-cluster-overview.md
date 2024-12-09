@@ -84,11 +84,11 @@ This tab displays:
   * Memory resources saved in GiB Hours.
   * GPU resources saved in GPU Hours.
  
-## Ocean Savings from Reverting to a Lower Cost Node Pool
+## Ocean Savings from Reverting to Lower Cost Node Pools
 
-This process is applied to nodes with compute resources that cannot be scaled down from the cluster's set of node pools. For example, suppose a pod was initially placed on a more expensive node due to resource constraints. In that case, Ocean Autoscaler can replace it with a less expensive node when it becomes available, consequently saving costs. This tab lets you see how much you save from this dynamic resource allocation. 
+This process searches for node pools that can be replaced with lower-cost node pools. For example, suppose a pod was initially placed on a more expensive node due to resource constraints. In that case, Ocean Autoscaler can replace it with a less expensive node when it becomes available, consequently saving costs. This tab lets you see how much you save from this dynamic resource allocation. 
 
-Ocean savings for reverting to a lower-cost node pool are calculated from the difference in price between the old node and the new node. For more information, see [Revert to Lower Cost](https://docs.spot.io/ocean/features/revert-to-lower-cost-node?id=revert-to-lower-cost-node) Node pool. 
+Ocean savings for reverting to a lower-cost node pool are calculated from the difference in price between the old scaled-down nodes and the new scaled-up nodes. For more information, see [Revert to Lower Cost](https://docs.spot.io/ocean/features/revert-to-lower-cost-node?id=revert-to-lower-cost-node) Node pool. 
 
 To view these savings, click the **Revert to Lower Cost** tab (unless already displayed). 
 
@@ -98,16 +98,16 @@ This tab displays:
 
 *   Nodes reverted to lower cost: If one or more nodes have been reverted to lower cost, the number of reverted nodes appears. Click to view the number of nodes reverted to lower cost in the selected time range in the Revert to Lower Cost window. View the types and costs of the nodes, etc).
 
-*   Avg. percentage hourly cost saved: Avg. percentage cost reduction from reverting to the new VM type [SUM (% hourly cost saved)].
+*   Avg. percentage hourly cost saved: Avg. percentage cost reduction from reverting to the new VM type [[SUM(old hourly cost) - SUM (new hourly cost)]/[SUM(old hourly cost)] * 100].
 
-     * Pie chart - Virtual Node Group percentage breakdown for nodes.
+     * Pie chart - Virtual Node Group percentage breakdown.
       
-    List showing replacement information: an entry for each reverted node is listed with these details:
+    List showing replacement information: an entry for each reverted node pool is listed with these details:
       
-     * Node pools for the original and reverted nodes.
-     * Number nodes in the old and new node pools.
-     * Hourly cost of the original and reverted nodes. Displays the total cost of all nodes in the same node pool: [nodes count * hourly cost].
-     * Hourly cost saved as a percentage: Cost reduction from converting to the new VM type: [old hourly cost - SUM (new hourly cost) * 100].
+     * Node pools of the scaled-down and scaled-up nodes.
+     * Number of scaled-down and scaled-up nodes.
+     * Hourly cost of the scaled-down and scaled-up nodes. Displays the total cost of all nodes in the same node pool: [nodes count * hourly price].
+     * Hourly cost saved as a percentage: Cost reduction from converting to the new VM type: [old hourly cost - SUM (new hourly cost)]/(old hourly cost) * 100].
      * The Virtual Node Group's name (click the link for a listed VNG to display your custom VNG details).
      * Scale-down timestamp in format MM/DD/YYYY HH: MM: SS
  
@@ -120,9 +120,9 @@ This tab displays:
 </details> 
 
 *   Resource savings from reverting to lower cost in the following units:  
-     * CPU resources saved in vCPU Hours. 
-     * Memory resources saved in GiB Hours. 
-     * GPU resources saved in GPU Hours. 
+     * CPU resources saved in vCPU
+     * Memory resources saved in GiB
+     * GPU resources saved in GPU
 
 ## Ocean Managed Nodes and Resources Panel
 
