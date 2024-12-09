@@ -1,47 +1,45 @@
 # Set Shutdown Hours
 
-This tutorial describes how to build a weekly schedule defining the hours in which the workloads in your cluster will be up and running and the shutdown hours.
+>**Important:** Before you set shutdown hours, you must configure the minimum capacity in the Ocean cluster to 0.
 
-## Relevance
+## Schedule Shutdown Hours in the Console
 
-This tutorial is relevant for Kubernetes and ECS users.
+1. Click **Ocean > Cloud Clusters** on the main menu on the left.
+2. Select a cluster from the list of clusters.
+3. At the top-right of the screen, click the **Actions** menu and select **Customize Scaling**.
+4. Turn on the Cluster Shutdown Hours by moving the slider to the right.
 
-## Prerequisite
+![aks-cluster-shutdown-hours](https://github.com/user-attachments/assets/4561cd2f-598f-4896-9f62-43ac6f83184e)
 
-Before you set the shutdown hours, you must configure the minimum capacity in the Ocean cluster to 0.
+5. Set your shutdown (off)/running hours by clicking or dragging the mouse in the timetable. The selected chunk changes from blue to gray color.
+6. Save your changes.
 
-## Schedule Your Shutdown Hours
+>**Note:** If you need to change the schedule during off-hours, you can do so without instantly waking up the cluster. The cluster will wake up only when you activate it manually by making a capacity change.
 
-To schedule your Shutdown hours, do the following:
+## Schedule Shutdown Hours in the API for the Cluster
 
-1. In your Ocean cluster, click Actions and choose Customize Scaling.
+You can schedule shutdown hours with the Spot API parameter `cluster.scheduling.shutdownHours`. 
+The time range defined in the API represents the ranges in which the cluster will be scaled to zero. 
+The API uses this mechanism to reduce the chances of a human error that would cause an unwanted scale-down to zero.
 
-<img src="/ocean/_media/tutorials-set-running-hours-01a.png" />
+The value defined in the `shutdownHours.timeWindows` field is effective only when the `shutdownHours.isEnabled` field is set to `true`.
 
-2. Click Cluster Shutdown Hours.
+## Schedule Shutdown Hours in the API per Virtual Node Group
 
-<img src="/ocean/_media/tutorials-set-running-hours-02b.png" />
+Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>, <font color="#FC01CC">AKS</font>  
 
-3. Set your shutdown hours by clicking or dragging the mouse in the timetable.
-4. Click Update.
+You can use the Spot API to configure [shutdown hours](ocean/features/running-hours?id=shutdown-hours-per-vng) for one or more individual virtual node groups.
 
-## During Off Hours
+For AWS Kubernetes, set shutdown hours under: `launchSpec.scheduling.shutdownHours`:
+* [Create VNG](https://docs.spot.io/api/#operation/OceanAWSLaunchSpecCreate)
+* [Update VNG](https://docs.spot.io/api/#operation/OceanAWSLaunchSpecUpdate)
 
-If you need to change the schedule during the off hours, you can do so without causing the cluster to `wake up` instantly. The cluster will wake up only when you activate it manually by making a capacity change.
+>**Note:** `isEnabled` must be set to **True** to turn on shutdown hours.
 
-## Using The API
+For AKS, set shutdown hours under:
+* [Create VNG](https://docs.spot.io/api/#tag/Ocean-AKS/operation/oceanAKSVirtualNodeGroupCreate)
+* [Update VNG](https://docs.spot.io/api/#tag/Ocean-AKS/operation/oceanAKSVirtualNodeGroupUpdate)
 
-You can also configure shutdown hours using the API parameter cluster.scheduling.shutdownHours. The time range defined in the API represents the ranges in which the cluster will be scaled to zero. The API uses this mechanism in order to reduce chances of a human error that would cause an undesired scale-down to zero.
 
-> **Tip**: The value defined in the `shutdownHours.timeWindows` field is effective only when the `shutdownHours.isEnabled` field is set to `true`.
 
-## Set Shutdown Hours per VNG
-
-You can use the API (AWS) to configure [shutdown hours](ocean/features/running-hours?id=shutdown-hours-per-vng) for one or more individual VNGs.
-
-Use the [Create](https://docs.spot.io/api/#operation/OceanAWSLaunchSpecCreate) or the [Update](https://docs.spot.io/api/#operation/OceanAWSLaunchSpecUpdate) VNG API to set up the shutdown hours. Configure it under: `launchSpec.scheduling.shutdownHours` as shown below.
-
-Note that `isEnabled` must be set to True in order to enable the shutdown hours.
-
-<img src="/ocean/_media/tutorials-set-running-hours-03.png" width="278" height="514" />
 
