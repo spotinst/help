@@ -107,6 +107,7 @@ This tab displays:
     * GPU resources saved in GPU.
 
 If one or more nodes have been reverted to lower cost, the number of reverted nodes appears. 
+
 Click **Revert to Lower Cost** to view the number of nodes reverted to lower cost in the selected time range in the Revert to Lower Cost window. 
 
 <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
@@ -118,14 +119,23 @@ Click **Revert to Lower Cost** to view the number of nodes reverted to lower cos
 </details> 
 
 * Number of nodes reverted to lower cost.
-* Avg. percentage hourly cost saved: Avg. percentage cost reduction from reverting to the new VM type [[SUM(old hourly cost) - SUM (new hourly cost)]/[SUM(old hourly cost)] * 100].
+* Avg. percentage hourly cost saved: Avg. percentage cost reduction from reverting to the new VM type: 
+
+  <b>[[SUM(old hourly cost) - SUM (new hourly cost)]/[SUM(old hourly cost)] * 100]</b>
+  
 * Pie chart - Virtual Node Group percentage breakdown.
 * List showing replacement information: an entry for each reverted node pool is listed with these details:
 
   * Node pools of the scaled-down and scaled-up nodes.
   * Number of scaled-down and scaled-up nodes.
-  * Hourly cost of the scaled-down and scaled-up nodes. Displays the total cost of all nodes in the same node pool: [nodes count * hourly price].
-  * Hourly cost saved as a percentage: % Cost reduction from converting to all the new VM type: [[SUM(old hourly cost)- SUM (new hourly cost)]/[SUM(old hourly cost) ] * 100]
+  * Hourly cost of the scaled-down and scaled-up nodes. Displays the total cost of all nodes in the same node pool: 
+
+  <b>[nodes count * hourly price]</b>
+  
+  * Hourly cost saved as a percentage: % Cost reduction from converting to all the new VM type: 
+
+  <b>[[SUM(old hourly cost)- SUM (new hourly cost)]/[SUM(old hourly cost) ] * 100]</b>
+  
   * The Virtual Node Group's name (click the link for a listed VNG to display your custom VNG details).
   * Scale-down timestamp in format MM/DD/YYYY HH: MM: SS
  
