@@ -38,7 +38,7 @@ For AWS Kubernetes, set shutdown hours under: `launchSpec.scheduling.shutdownHou
 
 For AKS, set shutdown hours under:
 * [Create VNG](https://docs.spot.io/api/#tag/Ocean-AKS/operation/oceanAKSVirtualNodeGroupCreate)
-* [Update VNG]()
+* [Update VNG](https://docs.spot.io/api/#tag/Ocean-AKS/operation/oceanAKSVirtualNodeGroupUpdate)
 
 
 
