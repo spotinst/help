@@ -46,7 +46,7 @@ To access the Node pools tab:
 
    <div style="padding-left:16px">
 
-   <img width="1000" src="https://github.com/user-attachments/assets/78c534a7-8581-4cbb-a410-1a8be3b75dab" />
+   <img width="1200" src="https://github.com/user-attachments/assets/78c534a7-8581-4cbb-a410-1a8be3b75dab" />
 
 </div>
 
