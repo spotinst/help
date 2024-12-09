@@ -61,7 +61,7 @@ To view these savings, click the **Bin Packing** tab (unless already displayed).
 
 This tab displays: 
 
-* Number of Scaled-down nodes:
+* Number of scaled-down nodes:
 * Resource savings from bin packing in the following units:
   * CPU resources saved in vCPU.
   * Memory resources saved in GiB.
@@ -78,6 +78,7 @@ If one or more nodes have been scaled down, click the link on the **Node Scaled 
 
 </details>
 
+* Number of scaled-down nodes.
 * Pie-chart: Virtual node group percentage breakdown for nodes.
 * Pie-chart: Lifecycle percentage breakdown (regular, Savings Plans, Reserved Instances, and spots).
 * Node Name.
