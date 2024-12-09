@@ -33,7 +33,7 @@ provide support updates for Kubernetes minor version upgrades.
 
   >**Note**: If you have not run or scheduled an auto-upgrade in this cluster, the Auto-Upgrades tab appears with a **Scheduled Auto-Upgrade** button in the center of the screen. Otherwise, lists are displayed as shown below.
 
-<img width="1000" src="https://github.com/user-attachments/assets/9cfc15c2-e727-45ef-ab94-0ffe8135ca5e" />
+![screen-history](https://github.com/user-attachments/assets/a6a8f177-00ce-4dce-a868-2a659e73bb32)
 
 The Updates History list for completed runs is displayed at the top of the screen with these attributes:
 
@@ -48,6 +48,8 @@ The Updates History list for completed runs is displayed at the top of the scree
   * Stopped (black): The roll was stopped.
  
 >**Tip**: Search for auto-update runs by **Status** using the Updates History filter.
+
+![screen-schedule](https://github.com/user-attachments/assets/6384776b-ed1b-4a6b-b86a-7ab5f58db8c5)
 
 The configured schedules are displayed at the bottom of the screen with these attributes:
 
