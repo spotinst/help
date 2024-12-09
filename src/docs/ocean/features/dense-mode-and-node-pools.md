@@ -71,7 +71,7 @@ The node pools list contains these columns:
 
 * ![icon-successful-20](https://github.com/user-attachments/assets/699bf863-e329-4260-965d-3119809a0755) Running successfully.
 * ![icon-spinner](https://github.com/user-attachments/assets/eec9cbca-90d5-43cc-bef6-801ac4caa746) Spinner (node pool being processed).
-* ![icon-lock](https://github.com/user-attachments/assets/4d48eece-0127-4c82-b108-5a5e5530a34f) Locked.
+* ![icon-lock](https://github.com/user-attachments/assets/4d48eece-0127-4c82-b108-5a5e5530a34f) Locked. When a node pool is locked in Azure, modifications, scaling, or deletions by Ocean are restricted to ensure stability and prevent unintended changes. The locking mechanism helps maintain operational integrity during critical operations.
 * ![icon-warmedup](https://github.com/user-attachments/assets/6ade61d6-3bca-44c3-b644-21c5597ae12f) Warmed-up: Node pool that has been pre-provisioned and is ready to manage workloads:
   * Pre-provisioning: Nodes in a warmed-up pool are created in advance, which reduces the time needed to scale up when traffic increases. This helps ensure that applications can respond quickly to sudden spikes in demand.
   * The nodes are ready, meaning they are fully initialized and can accept pods without the delay associated with starting new nodes from scratch.
