@@ -1,5 +1,3 @@
-<meta name="robots" content="noindex">
-
 # Auto-Upgrade the AKS Control Plane Patch Version in the Console
 
 You can schedule an auto-upgrade of an AKS patch version once a day (recommended) or at a specific time. For both types of auto-upgrade, you can set one of these options:
@@ -33,7 +31,7 @@ provide support updates for Kubernetes minor version upgrades.
 
   >**Note**: If you have not run or scheduled an auto-upgrade in this cluster, the Auto-Upgrades tab appears with a **Scheduled Auto-Upgrade** button in the center of the screen. Otherwise, lists are displayed as shown below.
 
-<img width="1000" src="https://github.com/user-attachments/assets/9cfc15c2-e727-45ef-ab94-0ffe8135ca5e" />
+![screen-history](https://github.com/user-attachments/assets/a6a8f177-00ce-4dce-a868-2a659e73bb32)
 
 The Updates History list for completed runs is displayed at the top of the screen with these attributes:
 
@@ -43,11 +41,13 @@ The Updates History list for completed runs is displayed at the top of the scree
 * Roll ID: Listed if the cluster was rolled after auto-update. Click the **Roll ID** link on the list entry to view roll attributes.
 * Run Statuses:
   * Completed (green): The control plane patch version was successfully updated.
-  * Partly completed (green): The control plane was successfully updated but could not roll / could only partially complete the roll.
+  * Partly completed (orange): The control plane was successfully updated but could not roll / could only partially complete the roll.
   * Failed (red): The control plane patch version could not be updated. Review the logs tab for more details.
   * Stopped (black): The roll was stopped.
  
 >**Tip**: Search for auto-update runs by **Status** using the Updates History filter.
+
+![screen-schedule](https://github.com/user-attachments/assets/6384776b-ed1b-4a6b-b86a-7ab5f58db8c5)
 
 The configured schedules are displayed at the bottom of the screen with these attributes:
 
@@ -84,13 +84,15 @@ To schedule an auto-upgrade:
 
 5. Select whether to schedule the auto upgrade once a day or at a specific time.
 
+>**Note**: Once you schedule the auto-upgrade once a day, you cannot add a schedule for a specific time, and the **Scheduled Auto-Upgrade** button is grayed.
+
 <img width="600" src="https://github.com/user-attachments/assets/9a45bee5-e725-4bad-aaa7-a739f7044772" />
 
-7. If you selected to schedule at a specific time, set the time using the day/week/month/time controls or type a Cron expression.
+6. If you selected to schedule at a specific time, set the time using the day/week/month/time controls or type a Cron expression.
 
 <img width="600" src="https://github.com/user-attachments/assets/cbc850c8-70d7-4465-bd29-492285ffca9e" />
 
-8. Click **Schedule**.
+7. Click **Schedule**.
 
    * The created schedule is turned on by default. To turn off the schedule, move the slider at the right of the entry for the schedule to the turned-off position.
    * After the update is run, an entry will appear in the auto-upgrades history list.
