@@ -3,11 +3,11 @@
 ## December 2024: Features and Enhancements
 
 
-*  **OCN-0050: December 12, 2024:** (**<font color="#FC01CC">AKS</font>**) Ocean now supports setting virtual node group shutdown hours via the Spot API. [Learn more...](https://docs.spot.io/ocean/tutorials/set-running-hours?id=schedule-shutdown-hours-in-the-api-per-virtual-node-group)
+*  **OCN-0050: December 10, 2024:** (**<font color="#FC01CC">AKS</font>**) Ocean now supports setting virtual node group shutdown hours via the Spot API. [Learn more...](https://docs.spot.io/ocean/tutorials/set-running-hours?id=schedule-shutdown-hours-in-the-api-per-virtual-node-group)
 
-*  **OCN-0049: December 12, 2024:** (**<font color="#FC01CC">AKS</font>**) Check out the new Auto-Upgrades feature in the Ocean AKS clusters console. Use this feature to automate your clusters' control plane patch version updates, saving time and reducing manual effort and potential errors. [Learn more...](https://docs.spot.io/ocean/features/auto-upgrade-aks-patch-version) 
+*  **OCN-0049: December 10, 2024:** (**<font color="#FC01CC">AKS</font>**) Check out the new Auto-Upgrades feature in the Ocean AKS clusters console. Use this feature to automate your clusters' control plane patch version updates, saving time and reducing manual effort and potential errors. [Learn more...](https://docs.spot.io/ocean/features/auto-upgrade-aks-patch-version) 
 
-*  **OCN-0048: December 12, 2024:** (**<font color="#FC01CC">AKS</font>**) You can now sort your Ocean AKS node pools according to status as well as name in the console. [Learn more...](https://docs.spot.io/ocean/features/dense-mode-and-node-pools?id=view-node-pools-in-the-console)
+*  **OCN-0048: December 10, 2024:** (**<font color="#FC01CC">AKS</font>**) You can now sort your Ocean AKS node pools according to status as well as name in the console. [Learn more...](https://docs.spot.io/ocean/features/dense-mode-and-node-pools?id=view-node-pools-in-the-console)
 
 *  **OCN-0047: December 03, 2024:** (**<font color="#FC01CC">GKE</font>**) For your GKE clusters, Ocean now ensures resource reservations for system components that manage nodes, such as the Kubelet and Kube-Proxy. This feature is currently available through a feature flag and will later be opened to all GKS customers by default. To enable this feature for Ocean GKE, contact [Spot Support](https://spot.io/support/).
 
