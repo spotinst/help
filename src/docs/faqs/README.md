@@ -1780,15 +1780,13 @@ Yes, you can increase the disk size for stateful nodes.
 ## Cost Intelligence
 
 <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="genodresp">AWS: Why do I have a “Not Connected” message for my AWS account?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="genodresp">AWS: Why do I have a <i>Not Connected</i> message for my AWS account?</summary>
 
  <div style="padding-left:16px">
 
- If you are getting this message for your health check on the Cost Intelligence Administration page:
+If you are getting this message for your health check on the Cost Intelligence Administration page:
 
-Open image-20241208-092129.png
-image-20241208-092129.png
-  
+![faq-1](https://github.com/user-attachments/assets/6c19d832-8077-472a-90dc-08a4903d409e)
 
 Review the [Cost Intelligence Policy](cost-intelligence/tutorials/cost-intelligence-policy/) documentation and ensure the Cloud Formation stack providing the ARN has not been changed and the permissions have not changed. Additionally, ensure no AWS Service Control Policies restrict access.
 
@@ -1797,16 +1795,13 @@ Review the [Cost Intelligence Policy](cost-intelligence/tutorials/cost-intellige
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="genodresp">AWS: Why do I have a “Partially Connected” message in the health check for my AWS account?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="cipartialcon">AWS: Why do I have a <i>Partially Connected</i> message in the health check for my AWS account?</summary>
 
  <div style="padding-left:16px">
 
- If you are getting this message for your health check on the Cost Intelligence Administration page:
+If you are getting this message for your health check on the Cost Intelligence Administration page:
 
-
-Open image-20241208-092148.png
-image-20241208-092148.png
-  
+![faq-2](https://github.com/user-attachments/assets/6a972653-ed6c-4b82-954d-c19ca17f4d96) 
 
 Review the [Cost Intelligence Policy](cost-intelligence/tutorials/cost-intelligence-policy/) documentation and ensure the permissions have not changed and that the required permissions are not missing. Additionally, ensure no AWS Service Control Policies restrict access. If nothing has changed, it is possible something else is blocking access (example: resource-level access controls) to the listed services for that account. 
 
@@ -1815,13 +1810,11 @@ Review the [Cost Intelligence Policy](cost-intelligence/tutorials/cost-intellige
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="genodresp">Azure: Why do I have a “Not Connected” message for my Azure account?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="genodresp">Azure: Why do I have a <i>Not Connected</i> message for my Azure account?</summary>
 
 If you are getting this message for your health check on the Cost Intelligence Administration page:
 
-
-
-  
+![faq-3](https://github.com/user-attachments/assets/9f8bbe01-8266-4e39-ba1a-d421d85efc2b)
 
 The connected Azure App Registration or the App Secret Key may have expired. You need to update your Spot Account credentials using the [Spot API](https://docs.spot.io/api/#tag/Accounts/operation/OrganizationsAndAccountsSetCloudCredentialsForAzure).
 
