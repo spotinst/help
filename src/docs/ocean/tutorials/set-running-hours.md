@@ -18,10 +18,7 @@
 
 ## Schedule Shutdown Hours in the API for the Cluster
 
-You can schedule shutdown hours with the Spot API parameter `cluster.scheduling.shutdownHours`. 
-
-* [Create Cluster](https://docs.spot.io/api/#tag/Ocean-AKS/operation/oceanAKSClusterCreate)
-* [Update Cluster](https://docs.spot.io/api/#tag/Ocean-AKS/operation/oceanAKSClusterUpdate)
+You can schedule shutdown hours with the [Spot API](https://docs.spot.io/api/) parameter `cluster.scheduling.shutdownHours` in **Create Cluster** and **Update Cluster** for your platform.
 
 The time range defined in the API represents the ranges in which the cluster will be scaled to zero. 
 The API uses this mechanism to reduce the chances of a human error that would cause an unwanted scale-down to zero.
@@ -44,7 +41,7 @@ For AKS, set virtual node group shutdown hours under:
 * [Create VNG](https://docs.spot.io/api/#tag/Ocean-AKS/operation/oceanAKSVirtualNodeGroupCreate)
 * [Update VNG](https://docs.spot.io/api/#tag/Ocean-AKS/operation/oceanAKSVirtualNodeGroupUpdate)
 
-For AKS, you can also set shutdown hours for the virtual node group **template** under `virtualNodeGroupTemplate,scheduling.shutdownHours` for the cluster so that custom virtual node groups based on the template will inherit the shutdown hours values:
+For AKS, you can also set shutdown hours for the virtual node group **template** under `virtualNodeGroupTemplate.scheduling.shutdownHours` for the cluster so that custom virtual node groups based on the template will inherit the shutdown hours values:
 * [Create Cluster](https://docs.spot.io/api/#tag/Ocean-AKS/operation/oceanAKSClusterCreate)
 * [Update Cluster](https://docs.spot.io/api/#tag/Ocean-AKS/operation/oceanAKSClusterUpdate)
 
