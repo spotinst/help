@@ -18,7 +18,7 @@
 
 ## Schedule Shutdown Hours in the API for the Cluster
 
-You can schedule shutdown hours with the [Spot API](https://docs.spot.io/api/) parameter `cluster.scheduling.shutdownHours` in **Create Cluster** and **Update Cluster** for your platform.
+You can schedule shutdown hours with the [Spot API](https://docs.spot.io/api/) parameter `cluster.scheduling.shutdownHours` in **Create Cluster** and **Update Cluster** for your cloud platform.
 
 The time range defined in the API represents the ranges in which the cluster will be scaled to zero. 
 The API uses this mechanism to reduce the chances of a human error that would cause an unwanted scale-down to zero.
