@@ -11,7 +11,7 @@
 
 *  **OCN-0047: December 03, 2024:** (**<font color="#FC01CC">GKE</font>**) For your GKE clusters, Ocean now ensures resource reservations for system components that manage nodes, such as the Kubelet and Kube-Proxy. This feature is currently available through a feature flag and will later be opened to all GKS customers by default. To enable this feature for Ocean GKE, contact [Spot Support](https://spot.io/support/).
 
-*  **OCN-0046: December 03, 2024:** (**<font color="#FC01CC">AKS</font>**) The AKS Cluster overview dashboard now includes details about Ocean savings from reverting to lower cost nodes. [Learn more...](https://docs.spot.io/ocean/ocean-aks-cloud-cluster-overview?id=ocean-savings-from-reverting-to-a-lower-cost-node)
+*  **OCN-0046: December 03, 2024:** (**<font color="#FC01CC">AKS</font>**) The AKS Cluster overview dashboard now includes details about Ocean savings from reverting to lower cost nodes. [Learn more...](https://docs.spot.io/ocean/ocean-aks-cloud-cluster-overview?id=ocean-savings-from-reverting-to-lower-cost-node-pools)
 
 Previous months...
 
