@@ -42,7 +42,7 @@ To view these savings, click the **Running on Spot** tab (unless already display
 This tab displays: 
 
 * Total cluster savings and the percentage of the saved cluster costs in the selected time range, where: 
-  * Total cluster savings = <b>[price for running regular instances – price for running spot instances]</b>. 
+  * <b>Total cluster savings = [price for running regular instances – price for running spot instances]</b>. 
   * Percentage of cluster costs: 
 
 <b>[[total price for running regular instances – total price for running spot instances] / [total price for running regular instances] x 100]</b>. 
@@ -123,7 +123,7 @@ Click **Revert to Lower Cost** to view the number of nodes reverted to lower cos
 * Number of nodes reverted to lower cost.
 * Avg. percentage hourly cost saved: Avg. percentage cost reduction from reverting to the new VM type: 
 
-  <b>[[SUM(old hourly cost) - SUM (new hourly cost)]/[SUM(old hourly cost)] * 100]</b>
+  <b>[[old hourly cost - SUM (new hourly cost)]/(old hourly cost) * 100]</b>
   
 * Pie chart - Virtual Node Group percentage breakdown.
 * List showing replacement information: an entry for each reverted node pool is listed with these details:
@@ -136,7 +136,7 @@ Click **Revert to Lower Cost** to view the number of nodes reverted to lower cos
   
   * Hourly cost saved as a percentage: % Cost reduction from converting to all the new VM type: 
 
-  <b>[[SUM(old hourly cost)- SUM (new hourly cost)]/[SUM(old hourly cost) ] * 100]</b>
+  <b>[[SUM(old hourly cost) - SUM (new hourly cost)]/[SUM(old hourly cost)] * 100]</b>
   
   * The Virtual Node Group's name (click the link for a listed VNG to display your custom VNG details).
   * Scale-down timestamp in format MM/DD/YYYY HH: MM: SS
