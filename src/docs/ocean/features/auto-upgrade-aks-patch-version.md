@@ -41,7 +41,7 @@ The Updates History list for completed runs is displayed at the top of the scree
 * Roll ID: Listed if the cluster was rolled after auto-update. Click the **Roll ID** link on the list entry to view roll attributes.
 * Run Statuses:
   * Completed (green): The control plane patch version was successfully updated.
-  * Partly completed (orange): The control plane was successfully updated but could not roll / could only partially complete the roll.
+  * Partly completed (orange): The control plane was successfully updated but could not create a roll, start a replacement for the roll, or only partly complete the roll.
   * Failed (red): The control plane patch version could not be updated. Review the logs tab for more details.
   * Stopped (black): The roll was stopped.
  
