@@ -2,9 +2,16 @@
 
 ## Features and Enhancements
 
+* **SEC-008: December 12th, 2024** You can now [set up](spot-security/features/vulnerability/configure/aws) vulnerability scanning for Amazon Elastic Kubernetes Service and view the results in the [Vulnerability Scan Dashboard](spot-security/features/vulnerability/dashboard).
+
+<details>
+  <summary markdown="span">October 2024</summary>
+  
 * **SEC-008: October 14th, 2024** Presets are now called Asset Groups. You can use asset groups to filter findings for specific crown jewels, teams, or production accounts. After you've set up an asset group, you can use it in [Billing Engine](billing-engine/tutorials/dashboard/), [Cost Intelligence](cost-intelligence/tutorials/dashboard/?id=asset-groups), and Spot Security. [Learn more](spot-security/features/security-dashboard/)
 
 * **SEC-007: October 8th, 2024** Spot Security supports two new AWS service types: CloudFront and DynamoDB. [Learn more](spot-security/security-matrix/)
+
+</details>
 
 <details>
   <summary markdown="span">September 2024</summary>
