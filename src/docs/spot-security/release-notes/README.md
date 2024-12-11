@@ -2,7 +2,7 @@
 
 ## Features and Enhancements
 
-* **SEC-008: December 12th, 2024** You can now [set up](spot-security/features/vulnerability/configure/aws) vulnerability scanning for Amazon Elastic Kubernetes Service and view the results in the [Vulnerability Scan Dashboard](spot-security/features/vulnerability/dashboard).
+* **SEC-008: November 19th, 2024** You can now [set up](spot-security/features/vulnerability/configure/aws) vulnerability scanning for Amazon Elastic Kubernetes Service and view the results in the [Vulnerability Scan Dashboard](spot-security/features/vulnerability/dashboard).
 
 <details>
   <summary markdown="span">October 2024</summary>
