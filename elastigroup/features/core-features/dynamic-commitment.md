@@ -45,7 +45,7 @@ The reversion will not occur if:
 
 ## Configure in the API 
 
-To use this feature in your group, in [Create Elastigroup](https://docs.spot.io/api/#tag/Elastigroup-AWS/operation/elastigroupAwsCreate) or [Update Elastigroup](https://docs.spot.io/api/#tag/Elastigroup-AWS/operation/elastigroupAwsUpdate), set `theutilizecommitments` or `utilizeReservedInstances` parameters to true. 
+To use this feature in your group, in [Create Elastigroup](https://docs.spot.io/api/#tag/Elastigroup-AWS/operation/elastigroupAwsCreate) or [Update Elastigroup](https://docs.spot.io/api/#tag/Elastigroup-AWS/operation/elastigroupAwsUpdate), set the `utilizecommitments` or `utilizeReservedInstances` parameter to true. 
 
 >**Note**: The default value for the `utilizeReservedInstances` parameter is `true`.
 
