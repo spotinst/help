@@ -81,7 +81,7 @@ Example of body for API call:
 
 #### Add the Billing Account Reader Role 
 
-**This Adding the Billing Account Reader Role analysis stage applies only to EA, MCA and PAYG customers**. Add the Billing Account Reader Role to the registered application:  
+**This Adding the Billing Account Reader Role analysis stage applies only to Microsoft Customer Agreements**. Add the Billing Account Reader Role to the registered application:  
  
 1. Click the **Cost Management + Billing page** and select the billing account you want to connect. 
  
@@ -95,7 +95,7 @@ Example of body for API call:
 
 #### Assign the Cost Management Reader Role 
 
-**This Assign the Cost Management Reader Role analysis stage applies to PAYG only**. 
+**This Assign the Cost Management Reader Role analysis stage applies to EA, MCA and PAYG agreements**. 
 
 Assign the Cost Management Reader role to the registered application on the subscriptions you want to manage.
 
