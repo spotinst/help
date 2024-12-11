@@ -8,13 +8,15 @@ To access the invoice generator, you must have either:
 * FinOps Organization Admin permissions.
 * Billing Engine Admin and Cost Intelligence Admin permissions.
 
->**Note**: As you work, your changes are saved automatically. So, it's  recommended to always make a copy of the out-of-the-box invoice template and customize it rather than editing it. This way, you'll always have a clean copy to start from. You can also manually make a backup copy of your template to use as a starting point for new invoices.
+>**Note**:
+>
+>As you work, your changes are saved automatically. So, it's  recommended to always make a copy of the out-of-the-box invoice template and customize it rather than editing it. This way, you'll always have a clean copy to start from. You can also manually make a backup copy of your template to use as a starting point for new invoices.
 >
 > If you do create an invoice from scratch, make sure you include a filter on the date range.
 
 Once you’ve created an invoice, you can:
 * Download each invoice report (template) with all the invoices for that template.
-* Schedule an invoice using the [workflow builder](cost-intelligence/tutorials/workflow-builder/).
+* [Schedule an invoice](billing-engine/tutorials/invoicegenerator?id=schedule-invoice) using the workflow builder.
 
 ## Create an Invoice
 
@@ -38,7 +40,7 @@ Once you’ve created an invoice, you can:
     * View the invoices by clicking the tabs at the bottom.
     * Edit.
     * Download the invoices <img height=18 src="https://github.com/user-attachments/assets/9e88f94e-c828-4dbe-90bb-ed29fee96027">.
-    * **Schedule invoice** in the workflow builder.
+    * [Schedule the invoice](billing-engine/tutorials/invoicegenerator?id=schedule-invoice) in the workflow builder.
 
 7. To rename the invoice, click <img height=18 src="https://github.com/user-attachments/assets/c095227c-4efb-41a2-bda2-e4a9c7714d7b"> to go back to the list of invoice reports. On the report, click <img height=18 src="https://github.com/user-attachments/assets/ef26a4db-838f-4fed-a187-d0d30d03f9fa"> > **Rename**.
 
@@ -184,3 +186,26 @@ For example, you may want to show both Service and Description. In the Body, hov
 You may need to manually resize the widths of the existing columns to add more columns.
  </div>
  </details>
+
+
+## Schedule Invoice
+
+You can schedule an invoice to be sent to specific recipients according to a trigger. You define this using the [workflow builder](cost-intelligence/tutorials/workflow-builder/).
+
+1. Go to **Billing Engine** > **Invoice Generator**.
+2. Click **Schedule Invoice** > **Create New Flow**.
+3. **Name** the workflow (and add a **Description**).
+4. Add a [trigger](cost-intelligence/tutorials/workflow-builder/?id=create-a-workflow) for scheduling.
+6. Add a [send action](cost-intelligence/tutorials/workflow-builder/?id=create-a-workflow), such as <i>Send Email</i>.
+7. In the **Action Send Email**, click **Insert/Attach** > **Export Report/Invoice** and select the invoice.
+8. For the dates in the **Report Parameters**, you can either pick a specific date or use a token, such as {{LAST_MONTH_START}} or {{TODAY}}.
+
+   If you use specific dates, make sure the period of the data and the issue date are always the same.
+
+   You can use tokens, for example:
+   
+    * **Invoice Period - Start** set to `{{LAST_MONTH_START}}`
+    * **Invoice Period - End** set to `{{LAST_MONTH_END}}`
+    * **Issued Date** set to `{{TODAY}}`, so the **Issued Date** is the same date that the email (and invoice) are sent
+
+10. Click **Save**.
