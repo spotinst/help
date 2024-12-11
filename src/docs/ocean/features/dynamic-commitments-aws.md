@@ -50,7 +50,7 @@ You can use this feature at the cluster or virtual node group level:
 * [Create cluster](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterCreate) or [Update cluster](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterUpdate)
 * [Create virtual node group](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecCreate) or [Update virtual node group](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecUpdate)
 
-Set the `theutilizecommitments` or `utilizeReservedInstances` parameter to true.
+Set the `utilizecommitments` or `utilizeReservedInstances` parameter to `true`.
 
 >**Note**: The default value for the `utilizeReservedInstances` parameter is `true`.
 
