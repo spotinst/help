@@ -131,7 +131,7 @@ You may get an error when you try to sign in to the Spot console if:
 
 * No accounts are associated with your organization in Spot.
 
-  Connect a cloud account to Spot to be able to sign in.
+  [Connect a cloud account](connect-your-cloud-provider/first-account/) to Spot to be able to sign in.
 
  </div>
 
