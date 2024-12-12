@@ -5,7 +5,7 @@
 ## General
 
 <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="genodresp">AWS, Azure, GCP: What regions does Spot support for my cloud provider?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="genreg">AWS, Azure, GCP: What regions does Spot support for my cloud provider?</summary>
 
  <div style="padding-left:16px">
 
@@ -108,6 +108,36 @@ Generate a new client secret <i>value</i> and [update it in the API](https://doc
  </div>
 
  </details>
+
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="SSO-signin">SSO: Why can't I sign in to the Spot console?</summary>
+
+  <div style="padding-left:16px">
+
+You may get an error when you try to sign in to the Spot console if:
+
+* You’re using username/password when SSO is enabled for your organization.
+
+  Signing in using username/password is turned off if SSO is set up for your organization. All users, including admins, must use SSO if it’s set up.
+
+* You’re using multiple-factor authentication (MFA) when SSO is set up for your organization.
+
+  Signing in using MFA is turned off if SSO is set up for your organization.
+
+* You’re using MFA when SSO is not set up for your organization.
+
+  Make sure you’re using the correct MFA token for the organization you’re signing into. MFA tokens are specific to a user and an organization.
+
+* No accounts are associated with your organization in Spot.
+
+  [Connect a cloud account](connect-your-cloud-provider/first-account/) to Spot to be able to sign in.
+
+ </div>
+
+ </details>
+
+ 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="SSO-SAMLID">SSO: What should be the SAML entity ID for the application?</summary>
 
@@ -309,7 +339,7 @@ For example:
 ## Ocean
 
 <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="genodresp">AWS, Azure, GCP: What regions does Spot support for my cloud provider?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanreg">AWS, Azure, GCP: What regions does Spot support for my cloud provider?</summary>
 
  <div style="padding-left:16px">
 
@@ -1045,7 +1075,7 @@ However, it’s not possible to do with Ocean AKS clusters because you cannot ch
 ## Elastigroup
 
 <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="genodresp">AWS, Azure, GCP:  What regions does Spot support for my cloud provider?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egreg">AWS, Azure, GCP:  What regions does Spot support for my cloud provider?</summary>
 
  <div style="padding-left:16px">
 
@@ -1537,7 +1567,7 @@ If you need to attach a Beanstalk environment, you can manually [rebuild your Be
 ## Elastigroup Stateful Node
 
 <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="genodresp">AWS, Azure, GCP:  What regions does Spot support for my cloud provider?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egsnreg">AWS, Azure, GCP:  What regions does Spot support for my cloud provider?</summary>
 
  <div style="padding-left:16px">
 
@@ -1780,7 +1810,7 @@ Yes, you can increase the disk size for stateful nodes.
 ## Cost Intelligence
 
 <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="genodresp">AWS: Why do I have a <i>Not Connected</i> message for my AWS account?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="cinotconnaws">AWS: Why do I have a <i>Not Connected</i> message for my AWS account?</summary>
 
  <div style="padding-left:16px">
 
@@ -1810,7 +1840,7 @@ Review the [Cost Intelligence Policy](cost-intelligence/tutorials/cost-intellige
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="genodresp">Azure: Why do I have a <i>Not Connected</i> message for my Azure account?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="cinotconnazure">Azure: Why do I have a <i>Not Connected</i> message for my Azure account?</summary>
 
 If you are getting this message for your health check on the Cost Intelligence Administration page:
 
