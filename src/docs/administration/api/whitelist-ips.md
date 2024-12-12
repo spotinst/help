@@ -7,7 +7,7 @@ Ensure that your permit list IPs are always up-to-date with the latest list.
 * 75.2.102.185
 * 99.83.228.8
 
-If your firewall can use FQDNs, add this value to the permit list:
+If your firewall can use FQDNs, add this address to the permit list:
 
 * https://api-static.spotinst.io
 
