@@ -116,7 +116,37 @@ Ocean will use the configured instance types available within the cluster or vir
 For information about defining preferred instance types in the Spot API using the `preferredTypes` attribute, see the following:
 
 * [Virtual node group](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKELaunchSpecCreate)
-* [Cluster](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKEClusterCreate)
+* [Cluster](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKEClusterCreate)* 
+
+## Revert to Preferred Instance Types per Virtual Node Group (GKE)
+
+Suppose a preferred instance is unavailable for a node running on a non-preferred instance, but an instance not in the preferred list or a lower-priority instance becomes available. 
+You might want to replace the non-preferred instance in such a scenario.
+
+Use the `RevertToPreferred` attribute to set this behavior so that Ocean will always run your workloads on your most preferred instance type. The scanning process runs on an hourly basis. 
+
+If a replacement cannot be made due to annotations, restricted down, labels, or PDBs, the process is automatically canceled and appears in the logs as follows: 
+
+`"{instance <instanceId> cannot be replaced due to pdb requirements of pod: {podName}"`
+
+You can configure `RevertToPreferred` at cluster and virtual node group levels.
+
+
+
+
+
+Ocean will replace all the relevant nodes in the default or custom virtual node group. Each time the process is triggered, it will replace an instance in a virtual node group according to the `maxBatchPercentage`. Nodes from different virtual node groups can be replaced simultaneously.
+
+
+
+
+
+
+
+
+
+
+
 
 
 ##  Ephemeral Storage per Virtual Node Group
