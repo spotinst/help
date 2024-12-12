@@ -43,6 +43,14 @@ The Ocean Controller needs an outbound connection to Spot’s public IP address.
 
 To enable the outbound connection, you must configure the internal routing, firewall rules, and/or proxy according to your environment's existing security methods. 
 
+If you need to add an IP address or FQDN to your permit list for your cluster's outbound traffic. see [Permit List](https://docs.spot.io/administration/api/whitelist-ips).
+
+For cases where your cluster has a permit list for outbound traffic, the installation of the Ocean controller must include the following parameter:
+
+ `--set spotinst.baseUrl="https://api-static.spotinst.io"` 
+
+To view a list of all the existing parameters, see [Helm Installation for Ocean Controller](https://artifacthub.io/packages/helm/spot/ocean-kubernetes-controller).
+
 Refer to the Microsoft documentation to learn about Microsoft Azure Native configurations: 
 
 * [Create, change, or delete a route table](https://learn.microsoft.com/en-us/azure/virtual-network/manage-route-table) 
