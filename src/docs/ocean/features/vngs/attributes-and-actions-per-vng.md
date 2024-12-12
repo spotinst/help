@@ -131,12 +131,19 @@ If a replacement cannot be made due to annotations, restricted down, labels, or 
 
 You can configure `RevertToPreferred` at cluster and virtual node group levels.
 
-For virtual node groups under launchSpec.strategy
+For clusters, under `cluster.strategy`:
+
+* [Create Cluster]()
+* [Update Cluster]()
+
+For virtual node groups under `launchSpec.strategy`:
 
 * [Create VNG]()
 * [Update VNG]()
 
-Ocean will replace all the relevant nodes in the default or custom virtual node group. Each time the process is triggered, it will replace an instance in a virtual node group according to the `maxBatchPercentage`. Nodes from different virtual node groups can be replaced simultaneously.
+Ocean will replace all the relevant nodes in the default or custom virtual node group. Each time the process is triggered, it will replace an instance in a virtual node group according to the `maxBatchPercentage`. This is the % of instances that can be replaced simultaneously (default of 10% and maximum of 100%).
+
+Nodes from different virtual node groups can be replaced simultaneously.
 
 The revert to preferred process is only valid for spot instances not running on Preferred. 
 On-demands that are not of type **preferred** will not be reverted.
