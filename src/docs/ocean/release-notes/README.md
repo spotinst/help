@@ -2,7 +2,7 @@
 
 ## December 2024: Features and Enhancements
 
-*  **OCN-0051: December 15, 2024:** (**<font color="#FC01CC">AWS Kubernetes</font>**),  (**<font color="#FC01CC">AKS</font>**),  (**<font color="#FC01CC">GKE</font>**) Our newly released enhanced scale-up delivers significantly faster scaling capabilities and more accurate scale up simulation, bringing pods faster to scheduled state and improving cluster utilization. Enhanced scale-up is available for all customers and requires Ocean Controller 2.0 installed in the cluster.
+*  **OCN-0051: December 15, 2024:** (**<font color="#FC01CC">AWS Kubernetes</font>**) Our newly released enhanced scale-up delivers significantly faster scaling capabilities and more accurate scale-up simulation, bringing pods faster to scheduled state and improving cluster utilization. Enhanced scale-up is available for all customers and requires Ocean Controller 2.0 installed in the cluster.
 
 
 *  **OCN-0050: December 10, 2024:** (**<font color="#FC01CC">AKS</font>**) Ocean now supports setting virtual node group shutdown hours via the Spot API. [Learn more...](https://docs.spot.io/ocean/tutorials/set-running-hours?id=schedule-shutdown-hours-in-the-api-per-virtual-node-group)
