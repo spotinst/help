@@ -1,4 +1,4 @@
-# Preferred Instance Types
+# Preferred Set Up
 
 This article introduces Preferred Instance Types, provides a guide on how to use them and explains how they work. Preferred spot instance types let customers set priority tiers on the Elastigroups' configured spot types. Types that are selected as preferred will be prioritized over other types and will be used whenever possible considering availability and cost.
 In cases that any of the preferred types are not available, Elastigroup will use other types that are selected in the group.
