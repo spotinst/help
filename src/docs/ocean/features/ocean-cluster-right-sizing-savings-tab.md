@@ -29,18 +29,31 @@ At the top of the actual savings overview, you can filter according to:
   * Last 7 days.
   * This month (from the first day of the month until today).
  
-* Requests
+* Savings benchmark:
   * Original requests: Cost is based on the workload requests initially used by right-sizing
   * Current Requests: Cost is based on the latest workload requests.
  
-* Workloads
-* Namespaces
+* Workloads.
+* Namespaces.
  
 The savings panel shows the following:
-* Savings in dollars
-* Selected time-frame
+* Savings in dollars.
+* Selected time frame.
 * Pie chart together with the savings per namespaces (that affected the most savings).
 
+The workload savings list shows your actual right-sizing savings per workload.
+These are the workloads that were optimized based on automated and manual recommendations:
+>**Note**: The list does not show workloads for which there are no actual savings. 
+* Workload Name.
+* Namespace.
+* Workload Type: (if the workload was deleted, it is marked as Deleted).
+* CPU:
+ * With Ocean: The sum of all of the CPU requests recommended by Ocean.
+ * Without Ocean: The sum of all CPU requests in your original workloads.
+* Memory:
+ * With Ocean: The sum of all of the memory requests recommended by Ocean.
+ * Without Ocean: The sum of all the memory requests in your original workloads.
+* Right-sizing savings (dollars) for the workload.
 
   
 
