@@ -54,7 +54,7 @@ This tab displays:
 
 ## Ocean Savings from Right-Sizing
 
-These are your savings from right-sizing recommendations.
+These are your actual savings from using the Ocean right-sizing recommendations feature.
 
 To view these savings, click the **Right-Sizing** tab (unless already displayed). 
 
@@ -73,7 +73,7 @@ This tab displays:
 * Memory resources in GiB/TiB Hours.
 * GPU resources in GPU Hours.
 
-
+to view details of your [actual right-sizing savings](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-savings-tab), click **View Details** on the right of the Right-Sizing tab.
 
 
 ## Ocean Savings from Bin Packing
