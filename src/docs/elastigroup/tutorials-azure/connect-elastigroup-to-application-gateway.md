@@ -1,4 +1,4 @@
-# Connect Elastigroup to Application Gateway
+# Connect Application Gateway
 
 This tutorial demonstrates how to connect an Elastigroup to the Backend Pools of Azure's Application Gateway, the go-to option for application-level load balancing on Azure.
 
