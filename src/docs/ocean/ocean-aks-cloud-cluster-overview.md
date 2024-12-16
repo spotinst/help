@@ -59,6 +59,8 @@ To view these savings, click the **Right-Sizing** tab (unless already displayed)
 
 Screenshot here  -- - --
 
+>**Note**: If no workloads have been optimized with automatic right-sizing, create and attach right-sizing rules to your workloads in the right-sizing [Advanced Optimization tab](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab).
+
 This tab displays: 
 * Total cluster savings from right-sizing recommendations and the percentage of the saved cluster costs in the selected time range, where:
   * <b>Total cluster savings = [costs for workloads based on original requests – cost for workloads based on Ocean-optimized requests]</b>. 
@@ -69,6 +71,8 @@ This tab displays:
 * CPU resources in vCPU Hours.
 * Memory resources in GiB/TiB Hours.
 * GPU resources in GPU Hours.
+
+
 
 
 ## Ocean Savings from Bin Packing
