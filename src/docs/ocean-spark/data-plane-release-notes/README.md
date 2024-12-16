@@ -1,5 +1,50 @@
 # Cluster Release Notes
 
+## [0.5.4-85] - 2024-12-16
+
+Changelog
+
+- [0.6.4] bigdata-spark-watcher
+  - add cleaning up stuck failed apps and orphaned driver pods
+- [0.5.7] bigdata-proxy
+  - support configuring the storage class for the workspace PVC
+
+## [0.5.2-84] - 2024-11-26
+
+Changelog
+
+- [0.6.3] bigdata-spark-watcher
+  - spark-apps kube event collector fix GCP and Azure regional storage.
+- [0.4.6] bigdata-notebook-service
+  - scala notebook kernel disconnection fix
+
+## [0.5.0-83] - 2024-11-17
+
+Changelog
+
+- [0.5.0] bigdata-operator
+
+  - workspace state reporting
+
+- [0.4.5] bigdata-notebook-service
+
+  - kernel persistence fix
+  - always create telemetry ConfigMap
+
+- [0.4.14] bigdata-proxy
+  - always create telemetry ConfigMap
+- [0.6.2] bigdata-spark-watcher
+  - always create telemetry ConfigMap
+- [0.1.34] spark-operator
+  - always create telemetry ConfigMap
+
+## [0.4.24-82] - 2024-11-04
+
+Changelog
+
+- [0.6.1] bigdata-spark-watcher
+  - spark-apps kube event collector bug fix
+
 ## [0.4.23-81] - 2024-09-30
 
 Changelog
