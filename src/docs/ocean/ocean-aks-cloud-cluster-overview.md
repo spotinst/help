@@ -51,6 +51,18 @@ This tab displays:
 * Memory resources in GiB/TiB Hours.
 * GPU resources in GPU Hours.
 
+## Ocean Savings from Right-Sizing
+
+These are your savings from right-sizing recommendations.
+
+To view these savings, click the **Right-Sizing** tab (unless already displayed). 
+
+This tab displays: 
+Total cluster savings from right-sizing recommendations and the percentage of the saved cluster costs in the selected time range, where:
+Total savings from right-sizing 
+
+
+
 ## Ocean Savings from Bin Packing
 
 In the context of autoscaling, bin packing savings are calculated based on the vCPU, memory, and GPU resources of the nodes that have been [Scaled Down](https://docs.spot.io/ocean/features/scaling-kubernetes?id=scale-down) by the Ocean Autoscaler. Once a minute, Ocean simulates whether any running pods can be moved to other nodes within the cluster. If so, Ocean drains those nodes to ensure continuous infrastructure optimization and increased cloud savings.   
