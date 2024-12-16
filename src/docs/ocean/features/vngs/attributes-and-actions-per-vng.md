@@ -78,7 +78,7 @@ The remaining new instances will have non-preferred types to maintain a distribu
 
 As the preferred instance type is a soft requirement, the general spot instance availability of both preferred and non-preferred types is considered before considering type preference.
 
-For information about defining preferred spot instance types in the Spot API (using the `preferredSpotTypes` attribute under `launchSpec.instanceTypes`), see the Create Virtual Node Group APIs for [Ocean AWS Kubernetes](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecCreate) and [Ocean ECS](https://docs.spot.io/api/#tag/Ocean-ECS/operation/OceanECSLaunchSpecCreate).
+For information about defining preferred spot instance types in the Spot API (using the `preferredSpotTypes` attribute under `launchSpec.instanceTypes`), see the Create Virtual Node Group APIs for [Ocean AWS Kubernetes](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecCreate) and [Ocean ECS](https://docs.spot.io/api/#tag/Ocean-ECS/operation/OceanECSLaunchSpecCreate)
 
 <!-- Section below added 15-07-2024 for DOC-1912 -->
 
@@ -116,7 +116,7 @@ Ocean will use the configured instance types available within the cluster or vir
 For information about defining preferred instance types in the Spot API using the `preferredTypes` attribute, see the following:
 
 * [Virtual node group](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKELaunchSpecCreate)
-* [Cluster](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKEClusterCreate)* 
+* [Cluster](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKEClusterCreate)
 
 ## Revert to Preferred Instance Types per Virtual Node Group (GKE)
 
