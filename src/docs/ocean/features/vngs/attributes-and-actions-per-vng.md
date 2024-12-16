@@ -122,8 +122,7 @@ For information about defining preferred instance types in the Spot API using th
 
 Cloud service provider relevance: <font color="#FC01CC">GKE</font>
 
-Suppose a preferred instance is unavailable for a node running on a non-preferred instance, but an instance not in the preferred list or a lower-priority instance becomes available. 
-You might want to replace the non-preferred instance in such a scenario.
+If a spot runs on a non-preferred instance and a preferred instance becomes available, the instance will be replaced.
 
 Use the `RevertToPreferred` attribute to set this behavior so that Ocean will always run your workloads on your most preferred instance type. The scanning process runs on an hourly basis. 
 
