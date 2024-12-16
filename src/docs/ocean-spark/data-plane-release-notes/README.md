@@ -23,14 +23,10 @@ Changelog
 Changelog
 
 - [0.5.0] bigdata-operator
-
   - workspace state reporting
-
 - [0.4.5] bigdata-notebook-service
-
   - kernel persistence fix
   - always create telemetry ConfigMap
-
 - [0.4.14] bigdata-proxy
   - always create telemetry ConfigMap
 - [0.6.2] bigdata-spark-watcher
