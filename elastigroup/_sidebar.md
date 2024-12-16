@@ -63,7 +63,7 @@
     - [DNS Integration](elastigroup/features-azure/dns)
     - [Extensions](elastigroup/tutorials-azure/extensions)
     - [Health Checks and Autohealing](elastigroup/tutorials-azure/set-health-checks-and-autohealing)
-    - [Import Azure Resource](elastigroup/tutorials-azure/getting-started/import-an-existing-azure-resource)
+    - [Import Azure Resources](elastigroup/tutorials-azure/getting-started/import-an-existing-azure-resource)
     - [Networking](elastigroup/features-azure/networking)
     - [Preferred AZ](elastigroup/features-azure/preferred-az)
     - [Preferred VM Sizes](elastigroup/tutorials-azure/preferred-vm-size)
