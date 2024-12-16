@@ -120,6 +120,8 @@ For information about defining preferred instance types in the Spot API using th
 
 ## Revert to Preferred Instance Types per Virtual Node Group (GKE)
 
+Cloud service provider relevance: <font color="#FC01CC">GKE</font>
+
 Suppose a preferred instance is unavailable for a node running on a non-preferred instance, but an instance not in the preferred list or a lower-priority instance becomes available. 
 You might want to replace the non-preferred instance in such a scenario.
 
@@ -133,13 +135,13 @@ You can configure `RevertToPreferred` at cluster and virtual node group levels.
 
 For clusters, under `cluster.strategy`:
 
-* [Create Cluster]()
-* [Update Cluster]()
+* [Create Cluster](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKEClusterCreate)
+* [Update Cluster](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKEClusterUpdate)
 
 For virtual node groups under `launchSpec.strategy`:
 
-* [Create VNG]()
-* [Update VNG]()
+* [Create VNG](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKELaunchSpecCreate)
+* [Update VNG](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKELaunchSpecUpdate)
 
 Ocean will replace all the relevant nodes in the default or custom virtual node group. Each time the process is triggered, it will replace an instance in a virtual node group according to the `maxBatchPercentage`. This is the % of instances that can be replaced simultaneously (default of 10% and maximum of 100%).
 
