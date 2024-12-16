@@ -4,9 +4,9 @@
 
 Cloud service provider relevance: <font color="#FC01CC">EKS</font> and <font color="#FC01CC">AKS</font>
 
-This topic shows you how to view your (actual) right-sizing savings for workloads.
+This topic shows you how to view your (actual) right-sizing savings from applying recommendations to your workloads.
 
-Before you begin, see [Ocean EKS Cluster Automatic Right-Sizing](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-tab) for a full description of this Ocean feature.
+Before you begin, see [Ocean Cluster Automatic Right-Sizing](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-tab) for a full description of this Ocean feature.
 
 To view your right-sizing savings: 
 
