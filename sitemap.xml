@@ -3543,6 +3543,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-savings-tab</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-savings-tab"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-savings-tab"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-tab</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
