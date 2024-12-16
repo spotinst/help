@@ -58,8 +58,10 @@ These are your savings from right-sizing recommendations.
 To view these savings, click the **Right-Sizing** tab (unless already displayed). 
 
 This tab displays: 
-Total cluster savings from right-sizing recommendations and the percentage of the saved cluster costs in the selected time range, where:
-Total savings from right-sizing 
+* Total cluster savings from right-sizing recommendations and the percentage of the saved cluster costs in the selected time range, where:
+  * Total savings from right-sizing is the difference between original requests set for workloads and the right-sizing recommendations:
+  * % savings = [costs for workloads based on original requests]-
+ 
 
 
 
