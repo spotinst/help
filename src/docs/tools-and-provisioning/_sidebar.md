@@ -41,6 +41,7 @@
     - [Tools](tools-and-provisioning/terraform/tools/)
       - [Upgrade to Terraform v0.12](tools-and-provisioning/terraform/tools/upgrade-to-terraform-v012)
       - [Resources](tools-and-provisioning/terraform/tools/resources)
+      - [Create AWS Stateful Nodes](tools-and-provisioning/cloudformation/tools/cfn-statefulnode)
   - [CI/CD](tools-and-provisioning/ci-cd/)
     - [GitLab](tools-and-provisioning/ci-cd/gitlab)
     - [Jenkins](tools-and-provisioning/ci-cd/jenkins)
