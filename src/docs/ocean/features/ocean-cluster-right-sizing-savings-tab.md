@@ -17,22 +17,33 @@ To view your right-sizing savings:
 
 The Savings tab contains these lists:  
 
-*  Right-sizing Savings overview
-*  Optimized workloads List.
+*  Right-sizing Savings panel
+*  Workload savings list.
 
  <img width="1200" src="https://github.com/user-attachments/assets/9bb38bde-1fb1-4313-9efa-1c1ea4e2778a" />
 
 At the top of the actual savings overview, you can filter according to:
 
 * Time
-  * Last 30 days
-  * Last 7 days
-  * This month (from first day of month until today)
+  * Last 30 days.
+  * Last 7 days.
+  * This month (from the first day of the month until today).
  
 * Requests
-  * original requests: Cost based on workload requests
-  * Current request
+  * Original requests: Cost is based on the workload requests initially used by right-sizing
+  * Current Requests: Cost is based on the latest workload requests.
  
-*  
+* Workloads
+* Namespaces
+ 
+The savings panel shows the following:
+* Savings in dollars
+* Selected time-frame
+* Pie chart together with the savings per namespaces (that affected the most savings).
+
+
+  
+
+ 
  
   
