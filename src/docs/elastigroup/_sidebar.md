@@ -53,7 +53,7 @@
         - [Import an Existing ASG](elastigroup/tutorials/elastigroup-tasks/join-an-existing-asg)
         - [Import an Existing ELB](elastigroup/tutorials/elastigroup-tasks/join-an-existing-elb)     
       - [Termination Policy](elastigroup/features/compute/termination-policy)
-      - [Use Cross-Account KMS Key to Encrypt EBS Volumes](elastigroup/tutorials/elastigroup-tasks/use-cross-account-kms-key-to-encrypt-ebs-volumes)
+      - [Cross-Account KMS Key to Encrypt EBS Volumes](elastigroup/tutorials/elastigroup-tasks/use-cross-account-kms-key-to-encrypt-ebs-volumes)
       - [Update Spot Policy](elastigroup/tutorials/elastigroup-tasks/update-spot-policy)
   - [Features - Azure](elastigroup/features-azure/)
     - [Create an Elastigroup](elastigroup/getting-started/create-an-elastigroup-for-azure)

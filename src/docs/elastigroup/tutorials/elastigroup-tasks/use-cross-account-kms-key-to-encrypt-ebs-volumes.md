@@ -1,4 +1,4 @@
-# Use Cross-Account KMS Key to Encrypt EBS Volumes
+# Cross-Account KMS Key to Encrypt EBS Volumes
 
 ## Introduction
 
