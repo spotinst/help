@@ -52,7 +52,7 @@ This tab displays:
 * Memory resources in GiB/TiB Hours.
 * GPU resources in GPU Hours.
 
-## Ocean Savings from Right-Sizing
+## Ocean Savings from Right-Sizing Your Workloads
 
 These are your actual savings from using the Ocean right-sizing recommendations feature.
 
