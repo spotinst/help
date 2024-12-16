@@ -57,12 +57,18 @@ These are your savings from right-sizing recommendations.
 
 To view these savings, click the **Right-Sizing** tab (unless already displayed). 
 
+Screenshot here  -- - --
+
 This tab displays: 
 * Total cluster savings from right-sizing recommendations and the percentage of the saved cluster costs in the selected time range, where:
-  * Total savings from right-sizing is the difference between original requests set for workloads and the right-sizing recommendations:
-  * % savings = [costs for workloads based on original requests]-
+  * <b>Total cluster savings = [costs for workloads based on original requests – cost for workloads based on Ocean-optimized requests]</b>. 
+  * Percentage of cluster costs:
+  
+  <b>% savings = [[costs for workloads based on original requests]-[cost for workloads based on Ocean-optimized requests] / [costs for workloads based on original requests] * 100]</b>
  
-
+* CPU resources in vCPU Hours.
+* Memory resources in GiB/TiB Hours.
+* GPU resources in GPU Hours.
 
 
 ## Ocean Savings from Bin Packing
