@@ -23,7 +23,8 @@ To access the Ocean Cluster Overview dashboard:
 
 The Ocean Savings panel contains a set of savings widgets (displayed as tabs), which show your savings according to Ocean’s main autoscaling processes for cluster optimization in a selected time range:  
 
-* Running on Spot: Savings from running on spot nodes instead of OD nodes. 
+* Running on Spot: Savings from running on spot nodes instead of OD nodes.
+* Right-Sizing: Savings from applying right-sizing to your workloads.
 * Bin Packing: Ocean proactively identifies underutilized nodes and efficiently bin-packs the pods on them to scale down the nodes and reduce the cluster cost.
 * Revert to Lower Cost: Applied to nodes with underutilized compute resources that cannot be scaled down from the cluster's set of nodes.
 
