@@ -4,7 +4,7 @@
 
 Cloud service provider relevance: <font color="#FC01CC">EKS</font> and <font color="#FC01CC">AKS</font>
 
-This topic shows you how to view your actual right-sizing savings for workloads and containers.
+This topic shows you how to view your (actual) right-sizing savings for workloads.
 
 Before you begin, see [Ocean EKS Cluster Automatic Right-Sizing](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-tab) for a full description of this Ocean feature.
 
@@ -33,7 +33,7 @@ At the top of the actual savings overview, you can filter according to:
   * Original requests: Cost is based on the workload requests initially used by right-sizing
   * Current Requests: Cost is based on the latest workload requests.
  
-* Workloads.
+* Workloads (optimized workloads only).
 * Namespaces.
  
 The savings panel shows the following:
