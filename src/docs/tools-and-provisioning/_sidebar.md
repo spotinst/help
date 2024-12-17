@@ -29,6 +29,7 @@
     - [More Examples](tools-and-provisioning/cloudformation/more-examples/)
       - [Notification](tools-and-provisioning/cloudformation/more-examples/notification)
       - [Create HCS on Existing Elastigroup](tools-and-provisioning/cloudformation/more-examples/create-hcs-on-existing-elastigroup)
+      - [Create AWS Stateful Nodes](tools-and-provisioning/cloudformation/tools/cfn-statefulnode)
   - [Python SDK](tools-and-provisioning/python-sdk)
   - [Spinnaker](tools-and-provisioning/spinnaker/)
     - [Set up Environment as Local Git](tools-and-provisioning/spinnaker/set-up-environment-as-local-git)
