@@ -17,7 +17,7 @@ Spot Security helps you manage your cloud security posture by giving a 360-degre
     <li>Click <b>Enable Scanning</b>.</li>
    </ol>
 
-3. To onboard accounts for logging so you can view [events](spot-security/features/events) and [threats](spot-security/features/threats):
+3. To onboard accounts for log analysis so you can view [events](spot-security/features/events), [anomalies, and threats](spot-security/features/threats) and enable realtime scanning:
    * [AWS](spot-security/getting-started/aws)
    * [Azure](spot-security/getting-started/azure)
 
