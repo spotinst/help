@@ -5580,6 +5580,13 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/tools-and-provisioning/cloudformation/getting-started/resource-types"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/tools-and-provisioning/cloudformation/more-examples/cfn-statefulnode</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/tools-and-provisioning/cloudformation/more-examples/cfn-statefulnode"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/tools-and-provisioning/cloudformation/more-examples/cfn-statefulnode"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/tools-and-provisioning/cloudformation/more-examples/create-hcs-on-existing-elastigroup</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
