@@ -78,7 +78,7 @@ The remaining new instances will have non-preferred types to maintain a distribu
 
 As the preferred instance type is a soft requirement, the general spot instance availability of both preferred and non-preferred types is considered before considering type preference.
 
-For information about defining preferred spot instance types in the Spot API (using the `preferredSpotTypes` attribute under `launchSpec.instanceTypes`), see the Create Virtual Node Group APIs for [Ocean AWS Kubernetes](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecCreate) and [Ocean ECS](https://docs.spot.io/api/#tag/Ocean-ECS/operation/OceanECSLaunchSpecCreate).
+For information about defining preferred spot instance types in the Spot API (using the `preferredSpotTypes` attribute under `launchSpec.instanceTypes`), see the Create Virtual Node Group APIs for [Ocean AWS Kubernetes](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecCreate) and [Ocean ECS](https://docs.spot.io/api/#tag/Ocean-ECS/operation/OceanECSLaunchSpecCreate)
 
 <!-- Section below added 15-07-2024 for DOC-1912 -->
 
@@ -118,6 +118,36 @@ For information about defining preferred instance types in the Spot API using th
 * [Virtual node group](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKELaunchSpecCreate)
 * [Cluster](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKEClusterCreate)
 
+## Revert to Preferred Instance Types per Virtual Node Group (GKE)
+
+Cloud service provider relevance: <font color="#FC01CC">GKE</font>
+
+If a spot runs on a non-preferred instance and a preferred instance becomes available, the instance will be replaced.
+
+Use the `RevertToPreferred` attribute to set this behavior so that Ocean will always run your workloads on your most preferred instance type. The scanning process runs on an hourly basis. 
+
+If a replacement cannot be made due to annotations, restricted down, labels, or PDBs, the process is automatically canceled and appears in the logs as follows: 
+
+`"{instance <instanceId> cannot be replaced due to pdb requirements of pod: {podName}"`
+
+You can configure `RevertToPreferred` at cluster and virtual node group levels.
+
+For clusters, under `cluster.strategy`:
+
+* [Create Cluster](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKEClusterCreate)
+* [Update Cluster](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKEClusterUpdate)
+
+For virtual node groups under `launchSpec.strategy`:
+
+* [Create VNG](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKELaunchSpecCreate)
+* [Update VNG](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKELaunchSpecUpdate)
+
+Ocean will replace all the relevant nodes in the default or custom virtual node group. Each time the process is triggered, it will replace an instance in a virtual node group according to the `maxBatchPercentage`. This is the % of instances that can be replaced simultaneously (default of 10% and maximum of 100%).
+
+Nodes from different virtual node groups can be replaced simultaneously.
+
+The revert to preferred process is only valid for spot instances not running on Preferred. 
+On-demands that are not of type **preferred** will not be reverted.
 
 ##  Ephemeral Storage per Virtual Node Group
 
