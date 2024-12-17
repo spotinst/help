@@ -3,7 +3,7 @@
 ## December 2024: Features and Enhancements
 
 
-*  **OCN-0051: December 17, 2024:** (**<font color="#FC01CC">GKE</font>**) As part of the 1.30 version, Kubernetes has released [support for Pod Scheduling Readiness](https://kubernetes.io/docs/concepts/scheduling-eviction/pod-scheduling-readiness/), which allows stating if a pod is ready to be scheduled or not. GKE now supports this feature for any cluster using the new Ocean Controller v2 and Kubernetes version 1.30 and above.
+*  **OCN-0051: December 17, 2024:** (**<font color="#FC01CC">GKE</font>**) As part of the 1.30 version, Kubernetes has released [Support for Pod Scheduling Readiness](https://kubernetes.io/docs/concepts/scheduling-eviction/pod-scheduling-readiness/), which allows stating if a pod is ready to be scheduled or not. GKE now supports this feature for any cluster using the new Ocean Controller v2 and Kubernetes version 1.30 and above.
 
 *  **OCN-0050: December 10, 2024:** (**<font color="#FC01CC">AKS</font>**) Ocean now supports setting virtual node group shutdown hours via the Spot API. [Learn more...](https://docs.spot.io/ocean/tutorials/set-running-hours?id=schedule-shutdown-hours-in-the-api-per-virtual-node-group)
 
