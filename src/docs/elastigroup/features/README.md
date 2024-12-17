@@ -7,3 +7,5 @@ With Elastigroup, you will:
 - Deliver availability and scalability for scale-out applications, at up to 90% lower cost
 
 This section describes Elastigroup features in detail.
+
+
