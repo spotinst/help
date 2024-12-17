@@ -28,7 +28,7 @@ As an example, let’s say you have created an Ocean cluster with VNGs using the
 3. The Ocean-managed VNGs are updated with the new labels to reflect the added NodeLocal DNSCache.
 4. The changes become effective in Ocean, and the daemonset is scheduled as expected.
 
-## Manually trigger the Auto-Update Process
+## Manually Trigger the Auto-Update Process
 
 The auto-update process described above occurs every 30 minutes (by default). If you do not want to wait, use the [Reimport Cluster](https://docs.spot.io/api/#operation/reImportGke) in the Spot API to trigger the auto-update process manually.
 
