@@ -40,7 +40,7 @@ Example:
 
 You will immediately see your changes in the relevant Ocean cluster or Virtual Node Group configurations.
 
-## Trigger the Auto-Update Process vi Spot API
+## Trigger the Auto-Update Process via Spot API
 
 You can trigger the auto-update process via the Spot API at the cluster and virtual node group level.
 
