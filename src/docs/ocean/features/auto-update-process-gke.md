@@ -42,15 +42,11 @@ You will immediately see your changes in the relevant Ocean cluster or Virtual N
 
 ## Trigger the Auto-Update Process via Spot API
 
-You can trigger the auto-update process via the Spot API at the cluster and virtual node group level.
+You can trigger the auto-update process via the Spot API at the cluster level (under cluster).
 
-Cluster:
 *  [Create Cluster](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKEClusterCreate)
 *  [Update Cluster](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKEClusterUpdate)
 
-Virtual Node Group:
-*  [Create Virtual Node Group](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKELaunchSpecCreate)
-*  [Update Virtual Node Group](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKELaunchSpecUpdate)
 
 
 
