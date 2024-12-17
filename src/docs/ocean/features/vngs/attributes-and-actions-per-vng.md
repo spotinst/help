@@ -149,18 +149,6 @@ Nodes from different virtual node groups can be replaced simultaneously.
 The revert to preferred process is only valid for spot instances not running on Preferred. 
 On-demands that are not of type **preferred** will not be reverted.
 
-
-
-
-
-
-
-
-
-
-
-
-
 ##  Ephemeral Storage per Virtual Node Group
 
 Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>
