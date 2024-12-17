@@ -124,20 +124,20 @@ Cloud service provider relevance: <font color="#FC01CC">GKE</font>
 
 If a spot runs on a non-preferred instance and a preferred instance becomes available, the instance will be replaced.
 
-Use the `RevertToPreferred` attribute to set this behavior so that Ocean will always run your workloads on your most preferred instance type. The scanning process runs on an hourly basis. 
+Use the `revertToPreferred` attribute to set this behavior so that Ocean will always run your workloads on your most preferred instance type. The scanning process runs on an hourly basis. 
 
 If a replacement cannot be made due to annotations, restricted down, labels, or PDBs, the process is automatically canceled and appears in the logs as follows: 
 
 `"{instance <instanceId> cannot be replaced due to pdb requirements of pod: {podName}"`
 
-You can configure `RevertToPreferred` at cluster and virtual node group levels.
+You can configure `revertToPreferred` at cluster and virtual node group levels.
 
 For clusters, under `cluster.strategy`:
 
 * [Create Cluster](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKEClusterCreate)
 * [Update Cluster](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKEClusterUpdate)
 
-For virtual node groups under `launchSpec.strategy`:
+For virtual node groups, under `launchSpec.strategy`:
 
 * [Create VNG](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKELaunchSpecCreate)
 * [Update VNG](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKELaunchSpecUpdate)
