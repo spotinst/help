@@ -3,9 +3,9 @@
 ## December 2024: Features and Enhancements
 
 
-*  **OCN-0053: December 17, 2024:** (**<font color="#FC01CC">GKE</font>**) You can now run the GKE Auto-Update process via the Spot API. [Learn more...}().
+*  **OCN-0053: December 17, 2024:** (**<font color="#FC01CC">GKE</font>**) You can now run the GKE Auto-Update process for your clusters via the Spot API. [Learn more...](https://docs.spot.io/ocean/features/auto-update-process-gke)
 
-*  **OCN-0052: December 17, 2024:** (**<font color="#FC01CC">GKE</font>**) Our new `revertToPreferred` attribute ensures that Ocean always runs your workloads on your most preferred instance type. You can configure revertToPreferred at cluster and virtual node group levels. [Learn more...](https://docs.spot.io/ocean/features/vngs/attributes-and-actions-per-vng?id=revert-to-preferred-instance-types-per-virtual-node-group-gke)
+*  **OCN-0052: December 17, 2024:** (**<font color="#FC01CC">GKE</font>**) Our new `revertToPreferred` attribute ensures that Ocean always runs your workloads on your most preferred instance type. You can configure `revertToPreferred` at cluster and virtual node group levels. [Learn more...](https://docs.spot.io/ocean/features/vngs/attributes-and-actions-per-vng?id=revert-to-preferred-instance-types-per-virtual-node-group-gke)
 
 *  **OCN-0051: December 17, 2024:** (**<font color="#FC01CC">GKE</font>**) As part of the 1.30 version, Kubernetes has released [Support for Pod Scheduling Readiness](https://kubernetes.io/docs/concepts/scheduling-eviction/pod-scheduling-readiness/), which allows stating if a pod is ready to be scheduled or not. GKE now supports this feature for any cluster using the new Ocean Controller v2 and Kubernetes version 1.30 and above.
 
