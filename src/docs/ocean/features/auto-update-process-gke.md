@@ -47,8 +47,7 @@ You can trigger the auto-update process via the Spot API at the cluster level (u
 *  [Create Cluster](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKEClusterCreate)
 *  [Update Cluster](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKEClusterUpdate)
 
-
-
+Set `autoUpdate = true` to enable the process.
 
 
 
