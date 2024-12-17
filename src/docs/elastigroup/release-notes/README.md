@@ -27,7 +27,7 @@
 
 ## Stateful Node
 
-* **STN-0006: December 17th, 2024**: You can create and manage AWS stateful nodes and managed instances using a CFN resource. Learn more [Learn more](tools-and-provisioning/cloudformation/more-examples/cfn-statefulnode)
+* **STN-0006: December 17th, 2024**: You can create and manage AWS stateful nodes and managed instances using a CFN resource. [Learn more](tools-and-provisioning/cloudformation/more-examples/cfn-statefulnode)
 
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
