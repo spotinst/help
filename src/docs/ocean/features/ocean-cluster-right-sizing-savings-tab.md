@@ -36,7 +36,7 @@ At the top of the actual savings overview, you can filter according to:
 * Workloads (optimized workloads only).
 * Namespaces.
  
-The savings panel shows the following:
+The right-sizing savings panel shows the following:
 * Savings in dollars.
 * Selected time frame.
 * Pie chart together with the savings per namespaces (that affected the most savings).
