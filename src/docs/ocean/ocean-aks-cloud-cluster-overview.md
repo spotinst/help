@@ -54,7 +54,9 @@ This tab displays:
 
 ## Ocean Savings from Right-Sizing Your Workloads
 
-These are your actual savings from using the Ocean right-sizing recommendations feature.
+>**Note**: This tab will only be available if the optional Ocean automatic right-sizing feature is installed and enabled in your deployment.
+
+These are your actual savings from using the Ocean automatic right-sizing feature.
 
 To view these savings, click the **Right-Sizing** tab (unless already displayed). 
 
