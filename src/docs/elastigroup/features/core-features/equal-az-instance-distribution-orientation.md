@@ -8,15 +8,15 @@ Using this option ensures capacity availability even when no spot instances are 
 
 ## How it Works
 
-1. When creating an Elastigroup or scaling up: Before spinning new instances, Elastigroup checks the current spread of instances. Elastigroup will distribute the instances evenly across the selected availability zones based on the specified area zones in the group.
+* When creating an Elastigroup or scaling up: Before spinning new instances, Elastigroup checks the current spread of instances. Elastigroup will distribute the instances evenly across the selected availability zones based on the specified area zones in the group.
 
-2. When scaling down: According to the current spread of instances across the area zones we will detach instances in a way that they remain equally divided.
+* When scaling down: According to the current spread of instances across the area zones we will detach instances in a way that they remain equally divided.
 
 > **Note**: When using this strategy, the `Spot Instance Percentage` or `On-Demand Count` settings will apply per area zone and not for the whole group. For example, a group with 2 area zones and a `Spot Instance Percentage` of 50%- when launching its first 2 instances, they will both be spots, 1 in each area zone.
 
-## Enabling Equal Area Zone Orientation
+## Enable Equal Area Zone Orientation
 
-This option is available via the API or the UI's `Edit Configuration` option in the Spot console.
+You can enable the equal area zone orientation by using the API or the `Edit Configuration` option in the Spot console.
 
 ### Use the Spot Console
 
