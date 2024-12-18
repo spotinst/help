@@ -3,7 +3,7 @@
 ## December 2024: Features and Enhancements
 
 
-*  **OCN-0053: December 17, 2024:** (**<font color="#FC01CC">GKE</font>**) You can now run the GKE Auto-Update process for your clusters via the Spot API `autoUpdate` attribute. [Learn more...](https://docs.spot.io/ocean/features/auto-update-process-gke)
+*  **OCN-0053: December 17, 2024:** (**<font color="#FC01CC">GKE</font>**) You can now turn the GKE Auto-Update process on or off for your clusters via the Spot API `autoUpdate` attribute. [Learn more...](https://docs.spot.io/ocean/features/auto-update-process-gke?id=turn-the-auto-update-process-on-or-off-for-your-clusters)
 
 *  **OCN-0052: December 17, 2024:** (**<font color="#FC01CC">GKE</font>**) Our new `revertToPreferred` attribute ensures that Ocean always runs your workloads on your most preferred instance types. You can configure `revertToPreferred` at cluster and virtual node group levels. [Learn more...](https://docs.spot.io/ocean/features/vngs/attributes-and-actions-per-vng?id=revert-to-preferred-instance-types-per-virtual-node-group-gke)
 
