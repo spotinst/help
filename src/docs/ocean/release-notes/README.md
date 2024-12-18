@@ -3,6 +3,12 @@
 ## December 2024: Features and Enhancements
 
 
+*  **OCN-0053: December 17, 2024:** (**<font color="#FC01CC">GKE</font>**) You can now run the GKE Auto-Update process for your clusters via the Spot API `autoUpdate` attribute. [Learn more...](https://docs.spot.io/ocean/features/auto-update-process-gke)
+
+*  **OCN-0052: December 17, 2024:** (**<font color="#FC01CC">GKE</font>**) Our new `revertToPreferred` attribute ensures that Ocean always runs your workloads on your most preferred instance types. You can configure `revertToPreferred` at cluster and virtual node group levels. [Learn more...](https://docs.spot.io/ocean/features/vngs/attributes-and-actions-per-vng?id=revert-to-preferred-instance-types-per-virtual-node-group-gke)
+
+*  **OCN-0051: December 17, 2024:** (**<font color="#FC01CC">GKE</font>**) As part of the 1.30 version, Kubernetes has released [Support for Pod Scheduling Readiness](https://kubernetes.io/docs/concepts/scheduling-eviction/pod-scheduling-readiness/), which allows stating if a pod is ready to be scheduled or not. GKE now supports this feature for any cluster using the new Ocean Controller v2 and Kubernetes version 1.30 and above.
+
 *  **OCN-0050: December 10, 2024:** (**<font color="#FC01CC">AKS</font>**) Ocean now supports setting virtual node group shutdown hours via the Spot API. [Learn more...](https://docs.spot.io/ocean/tutorials/set-running-hours?id=schedule-shutdown-hours-in-the-api-per-virtual-node-group)
 
 *  **OCN-0049: December 10, 2024:** (**<font color="#FC01CC">AKS</font>**) Check out the new Auto-Upgrades feature in the Ocean AKS clusters console. Use this feature to automate your clusters' control plane patch version updates, saving time and reducing manual effort and potential errors. [Learn more...](https://docs.spot.io/ocean/features/auto-upgrade-aks-patch-version) 
@@ -14,6 +20,7 @@
 *  **OCN-0046: December 03, 2024:** (**<font color="#FC01CC">AKS</font>**) The AKS Cluster overview dashboard now includes details about Ocean savings from reverting to lower cost nodes. [Learn more...](https://docs.spot.io/ocean/ocean-aks-cloud-cluster-overview?id=ocean-savings-from-reverting-to-lower-cost-node-pools)
 
 Previous months...
+
 
  
 <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
