@@ -1,38 +1,35 @@
-# Equal AZ Instance Distribution Orientation
+# Equal Area Zone Instance Distribution Orientation
 
-Elastigroups support a high-availability deployment structure to allow you to evenly distribute instances across multiple AZs in a single region. This Elastigroup orientation will guarantee equal capacity across all selected AZs.
+Elastigroups support a high-availability deployment structure, allowing you to evenly distribute instances across multiple area zones in a single region. This Elastigroup orientation guarantees equal capacity across all selected area zones (AZ).
 
-Using this option will guarantee capacity even if there are no spot instances available. While no Spot instances are available the Elastigroup will launch on-demand instances instead.
+Using this option ensures capacity availability even when no spot instances are accessible. In the absence of available spot instances, Elastigroup launches on-demand instances instead.
 
-> **Tip**: The target capacity of the group will apply for the entire group. For example, if you want to use X AZs, select a target capacity that is a multiple of X.
+> **Note**: The target capacity of the group applies to the entire group. For example, if you want to use X area zones, select a target capacity that is a multiple of X.
 
-## How this works
+## How it Works
 
-1. Upon Elastigroup creation or Scale up – Before spinning new instances we will check the current spread of instances, according to the current chosen AZs in the group we will spin up the instances in an equally divided manner across the selected AZs.
+1. When creating an Elastigroup or scaling up: Before spinning new instances, Elastigroup checks the current spread of instances. Elastigroup will distribute the instances evenly across the selected availability zones based on the specified area zones in the group.
 
-2. On Scale down – According to the current spread of instances across the AZs we will detach instances in a way that they remain equally divided.
+2. When scaling down: According to the current spread of instances across the area zones we will detach instances in a way that they remain equally divided.
 
-> **Tip**: When using this strategy, the `Spot Instance Percentage` or `On-Demand Count` settings will apply per AZ and not for the whole group. So for example, a group with 2 AZs and a `Spot Instance Percentage` of 50%, when launching its first 2 instances – they will both be spots, 1 in each AZ.
+> **Note**: When using this strategy, the `Spot Instance Percentage` or `On-Demand Count` settings will apply per area zone and not for the whole group. For example, a group with 2 area zones and a `Spot Instance Percentage` of 50%- when launching its first 2 instances, they will both be spots, 1 in each area zone.
 
-## Enabling Equal AZ Orientation
+## Enabling Equal Area Zone Orientation
 
-This option is available via the API or the `Edit Configuration` option in the UI.
+This option is available via the API or the UI's `Edit Configuration` option in the Spot console.
 
-### Using the Spot Console:
+### Use the Spot Console
 
-While creating a new Elastigroup or Editing an existing Elastigorup configuration:
+While creating a new Elastigroup or editing an existing Elastigorup configuration:
 
-1. Set up your group
-2. Make sure that you select a target capacity that will match (or is a multiple of) the amount of AZs
-3. In the Review tab, enable `Edit Mode` and edit the JSON
-
-<img src="/elastigroup/_media/corefeatures-equalaz-01.png" width="600" height="224" />
-
+1. Set up your group.
+2. Make sure that you select a target capacity that will match (or is a multiple of) the amount of area zones.
+3. In the **Review** tab, turn on `Edit Mode` and edit the JSON.
 4. Set the value of `availabilityVsCost` to:`equalAzDistribution`
 
-<img src="/elastigroup/_media/corefeatures-equalaz-02.png" width="600" height="346" />
+![image](https://github.com/user-attachments/assets/286a1217-559f-4dbd-96c0-dfd84f585a23)
 
-### Using the API:
+### Use the API
 
 While creating an Elastigorup – Use the `equalAzDistribution` in the availabilityVsCost field in the Elastigroup JSON
 
