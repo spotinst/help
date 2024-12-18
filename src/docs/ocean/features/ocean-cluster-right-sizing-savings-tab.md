@@ -15,7 +15,7 @@ To view your right-sizing savings:
 3. Click the **Right Sizing** tab.  
 4. Click **Savings**. 
 
-The Savings tab contains these lists:  
+The Savings tab contains the following:  
 
 *  Right-sizing Savings panel
 *  Workload savings list.
