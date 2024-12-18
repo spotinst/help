@@ -6,27 +6,23 @@ When your cloud cluster uses a combination of spot, on-demand, and reserved inst
 
 To view a breakdown of your Elastigroup costs:
 
-1. In the Spot console, go to Elastigroup and click Groups.
-2. Click on the name of the Elastigroup and click the Costs tab.
+1. In the Spot console, go to **Elastigroup** and click **Groups**.
+2. Click on the name of the Elastigroup and click the **Costs** tab.
 
-<img src="/elastigroup/_media/tutorials-analyze-your-costs-01.png" />
+![image](https://github.com/user-attachments/assets/7c0cd5fa-9458-4d13-a2da-2615f6a5a2af)
 
-The default timeframe of the cost data is Month to Date, covering from the first of the current month to the current date. You can also view the data over the last 30 days or last 90 days.
+The default timeframe of the cost data is the current month, starting from the first of the current month to the current date. You can also view the data over the last 7 or 30 days.
 
 ## Daily Spend Breakdown
 
 This bar chart shows how much your compute cost was on each day of the time period. Each bar is broken down by spot, on-demand, and reserved instance cost for that day. To see the amounts for a specific day, hover your mouse over the bar.
 
-<img src="/elastigroup/_media/tutorials-analyze-your-costs-02.png" />
-
-## Daily Cluster Cost
-
-This chart shows the cost of the entire Elastigroup cluster per day. Costs include compute, network, and storage. Hover your mouse over the graph to see the details of a specific day.
-
-<img src="/elastigroup/_media/tutorials-analyze-your-costs-03.png" />
+![image](https://github.com/user-attachments/assets/9f07ea6c-6c67-4ce0-93a6-f8969293016e)
 
 ## Cost by Pricing Option
 
-The circle chart shows your total compute cost over the time period and breaks it down per lifecycle pricing option, including spot, on demand, and reserved instance. Hover your mouse over the circle to see the details for each pricing option, including the portion (as a percent or your total spend) you pay for each option.
+The circle chart shows a summary of your total compute cost over the selected time period and breaks it down per lifecycle pricing option, including spot, on demand, and network. Hover your mouse over the circle to see the details for each pricing option, including the portion (as a percent or your total spend) you pay for each option.
 
-<img src="/elastigroup/_media/tutorials-analyze-your-costs-04.png" width="364" height="238" />
+![image](https://github.com/user-attachments/assets/2b987b81-9926-49c2-b290-1af519e04370)
+
+
