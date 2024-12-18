@@ -153,6 +153,15 @@ You can use attribute-based Spot VM size selection, or you can manually create a
 
 **You need to select at least one Spot VM size and one On-demand (OD) VM size**.
 
+You can expand Unsupported VM sizes to see why a VM size isn’t available.
+
+ <details>
+   <summary markdown="span">View image</summary>
+
+   <img width=800 src="https://github.com/user-attachments/assets/bb9da927-2124-4e53-a296-07b83fc4acc9">
+
+   </details>
+
 Each VM size provides the following information:
 
 * **VM Size**: list of relevant VM sizes. This list can change according to the selected image (the OS type) and the region selected in the Basics tab.
