@@ -17,7 +17,7 @@ A cluster roll can replace a single node with multiple smaller nodes. This avoid
 
 This is based on the workloads currently running on the nodes chosen for rolling. This is especially helpful when you have modified the list of allowed node types or if your goal is to remove and replace a specific node type with multiple smaller ones.
 
-This logic can improve the cluster's utilization since the workload would run on infrastructure that best matches the workload. Ocean constantly tries to scale down the cluster, but a cluster roll could improve the utilization if this is impossible.
+This logic can improve the cluster's utilization since the workload would run on infrastructure that best matches the workload. Ocean constantly tries to scale down the cluster, but a cluster roll could improve the utilization if this is impossible. 
 
 ## Roll Parameters
 
@@ -131,10 +131,10 @@ The rolls history list contains an entry for each roll under the following colum
 * End Time for roll: mm/dd/yyyy, hh:mm:ss
 * Nodes Rolled (number of nodes rolled) x out of y, for example 20/23
 * Roll Status
-  * <img width="20" src="https://github.com/user-attachments/assets/ba7e6a10-b344-4a60-b05d-6123a5ff7a0e" /> Green color  Completed: Roll successfully completed.
-  * <img width="20" src="https://github.com/user-attachments/assets/481e785f-a73d-4c02-8f85-ceb77cf525d3" /> Orange color  Partly completed: At least one node could not be replaced.
-  * <img width="20" src="https://github.com/user-attachments/assets/fbb5322b-7b34-4f41-8883-49a88f10958d" /> Gray color  Stopped: Roll was stopped.
-  * <img width="20" src="https://github.com/user-attachments/assets/f7a3e2b0-94a4-481b-a94d-512277b92449" /> Red color  All nodes could not be replaced.
+  * <img width="20" src="https://github.com/user-attachments/assets/ba7e6a10-b344-4a60-b05d-6123a5ff7a0e" /> Green color:  Completed: Roll successfully completed.
+  * <img width="20" src="https://github.com/user-attachments/assets/481e785f-a73d-4c02-8f85-ceb77cf525d3" /> Orange color:  Partly completed: At least one node could not be replaced.
+  * <img width="20" src="https://github.com/user-attachments/assets/fbb5322b-7b34-4f41-8883-49a88f10958d" /> Gray color:  Stopped: Roll was stopped.
+  * <img width="20" src="https://github.com/user-attachments/assets/f7a3e2b0-94a4-481b-a94d-512277b92449" /> Red color:  All nodes could not be replaced.
  
 Click a down arrow for an entry to drill down for information at the node level:
 
@@ -145,8 +145,8 @@ Click a down arrow for an entry to drill down for information at the node level:
 * VNG ID
 * Batch Number: Number of the batch that was run.
 * Node Status:
-  * <img width="20" src="https://github.com/user-attachments/assets/ba7e6a10-b344-4a60-b05d-6123a5ff7a0e" /> Green color  Completed: Node was replaced.
-  * <img width="20" src="https://github.com/user-attachments/assets/f7a3e2b0-94a4-481b-a94d-512277b92449" /> Red color Node could not be replaced.
+  * <img width="20" src="https://github.com/user-attachments/assets/ba7e6a10-b344-4a60-b05d-6123a5ff7a0e" /> Green color: Completed: Node was replaced.
+  * <img width="20" src="https://github.com/user-attachments/assets/f7a3e2b0-94a4-481b-a94d-512277b92449" /> Red color: Node could not be replaced.
 
 The roll schedules list contains an entry for each schedule:
 
