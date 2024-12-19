@@ -66,7 +66,7 @@ To start an immediate node roll:
     *  Add an optional comment.
     *  Turn on or turn off **Respect Pod Disruption Budget** (PDB)
     *  Turn on or turn off **Respect Restrict Scale Down**
-4. Click **Roll node**. The [roll tab](https://docs.spot.io/ocean/features/roll?id=access-the-ocean-cluster-rolls-tab) opens, and you can follow the roll process. When the roll is complete, it appears in the roll history.
+4. Click **Roll node**. The roll process opens in the [roll tab](https://docs.spot.io/ocean/features/roll?id=access-the-ocean-cluster-rolls-tab). When the roll is complete, it appears in the roll history.
 
 ## Terminate VMs
 
