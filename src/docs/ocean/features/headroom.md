@@ -32,9 +32,9 @@ As these steps are repeated, the required headroom percentage is always maintain
 
 It is possible to define automatic headroom per virtual node group (VNG). The calculation of the automatic headroom in the VNG is the same as the calculation for the cluster as described above. This means that Ocean takes all of the workloads that run on a given VNG and calculates the headroom for that VNG using the same method it would use to calculate headroom for the cluster.
 
-The automatic headroom and the headroom per Virtual Node Group are calculated independently. Therefore, the headroom per cluster and VNG will save the headroom for the same workload. To avoid this situation, you should set the headroom only at the In ECS, the auto headroom is calculated based on the service with the most changed tasks in the cluster, not taking the Virtual Node Group's settings into consideration. 
+The automatic headroom and the headroom per Virtual Node Group are calculated independently. Therefore, the headroom per cluster and VNG will save the headroom for the same workload. To avoid this situation, you should set the headroom only at the cluster level or per VNG.  
 
->**Note**: This option is not applicable to ECS. In ECS, the automatic headroom is calculated based on the service with the most changed tasks in the cluster, regardless of the Virtual Node Group.
+>**Note**: This option is not applicable to ECS. In ECS, the automatic headroom is calculated based on the service with the most changed tasks in the cluster, regardless of the Virtual Node Group settings.
 
 ## Manual Headroom
 
