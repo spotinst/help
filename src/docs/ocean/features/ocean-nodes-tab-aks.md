@@ -16,8 +16,6 @@ To access the Nodes tab:
 
   <img width="1200" src="https://github.com/user-attachments/assets/45be4f9e-c4c1-4cf3-80c3-7e0c6f353fd2" />
 
-   
-
 </div>
 
 </details>
