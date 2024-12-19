@@ -127,20 +127,26 @@ The rolls history list contains an entry for each roll under the following colum
 * Roll ID (unique ID for the roll)
 * Role Scope (cluster, virtual node group, or node pool).
 * Comments (optional)
-* Start Time for roll
-* End Time for roll
-* Nodes Rolled (number of nodes rolled)
-* Roll [Status](https://docs.spot.io/ocean/features/roll?id=roll-status)
-
-Click a down arrow for an entry to drill down for more information:
+* Start Time for roll: mm/dd/yyyy, hh:mm:ss
+* End Time for roll: mm/dd/yyyy, hh:mm:ss
+* Nodes Rolled (number of nodes rolled) x out of y, for example 20/23
+* Roll Status
+  * Green color <img width="20" src="https://github.com/user-attachments/assets/ba7e6a10-b344-4a60-b05d-6123a5ff7a0e" /> Completed: Roll successfully completed.
+  * Orange color <img width="20" src="https://github.com/user-attachments/assets/481e785f-a73d-4c02-8f85-ceb77cf525d3" /> Partly completed: At least one node could not be replaced.
+  * Gray color <img width="20" src="https://github.com/user-attachments/assets/fbb5322b-7b34-4f41-8883-49a88f10958d" /> Stopped: Roll was stopped.
+  * Red color <img width="20" src="https://github.com/user-attachments/assets/f7a3e2b0-94a4-481b-a94d-512277b92449" /> All nodes could not be replaced.
+ 
+Click a down arrow for an entry to drill down for information at the node level:
 
 * Node Name
 * Node ID
 * Node Pool Name
-* VNG Name
+* VNG Name: Click on the link to access settings for the virtual node group.
 * VNG ID
-* Batch Number
-* [Status](https://docs.spot.io/ocean/features/roll?id=node-status) (node status)
+* Batch Number: Number of the batch that was run.
+* Node Status:
+  * Green color <img width="20" src="https://github.com/user-attachments/assets/ba7e6a10-b344-4a60-b05d-6123a5ff7a0e" /> Completed: Node was replaced.
+  * Red color <img width="20" src="https://github.com/user-attachments/assets/f7a3e2b0-94a4-481b-a94d-512277b92449" /> Node could not be replaced.
 
 The roll schedules list contains an entry for each schedule:
 
