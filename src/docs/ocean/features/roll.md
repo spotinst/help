@@ -119,10 +119,9 @@ Otherwise:
 * If at least one roll exists, the rolls history list appears.
 * Configured roll schedules appear below the rolls history list.
 
-<img width="1000" src="https://github.com/user-attachments/assets/8b34a624-f254-4e2e-a534-a6764018c218" />
-
-
 The rolls history list contains an entry for each roll under the following columns:
+
+<img width="1200" src="https://github.com/user-attachments/assets/351f729d-35a2-4c8b-8e80-b917476dab7d" />
 
 * Roll ID (unique ID for the roll)
 * Role Scope (cluster, virtual node group, or node pool).
@@ -149,6 +148,8 @@ Click a down arrow for an entry to drill down for information at the node level:
   * Red color <img width="20" src="https://github.com/user-attachments/assets/f7a3e2b0-94a4-481b-a94d-512277b92449" /> Node could not be replaced.
 
 The roll schedules list contains an entry for each schedule:
+
+<img width="1000" src="https://github.com/user-attachments/assets/8b2eadfc-4fc5-471f-976a-b6cf61da0dc1" />
 
 * Role Scope (cluster, virtual node group, or node pool).
 * Scheduled frequency.
