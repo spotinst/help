@@ -3,6 +3,12 @@
 ## December 2024: Features and Enhancements
 
 
+*  **OCN-0054: IMPORTANT NOTICE - December 18, 2024:** Ocean Controller Version 1 is now deprecated for **<font color="#FC01CC">GKE</font>** (from **December 18, 2024**). This means that Version 1 will not support new features, and any unexpected behaviors or security issues identified after this date will not be addressed. We recommend upgrading to Ocean Controller Version 2.0 for the best performance and support. [Learn more...](https://docs.spot.io/ocean/tutorials/ocean-controller-v2/)    
+Ocean Controller
+Version 1 deprecation for other cloud service providers:
+   * **<font color="#FC01CC">AWS Kubernetes </font>**: Was deprecated November 01, 2024
+   * **<font color="#FC01CC">AKS</font>**: Will be deprecated January 1, 2025
+
 *  **OCN-0053: December 17, 2024:** (**<font color="#FC01CC">GKE</font>**) You can now turn the GKE Auto-Update process on or off for your clusters via the Spot API `autoUpdate` attribute. [Learn more...](https://docs.spot.io/ocean/features/auto-update-process-gke?id=turn-the-auto-update-process-on-or-off-for-your-clusters)
 
 *  **OCN-0052: December 17, 2024:** (**<font color="#FC01CC">GKE</font>**) Our new `revertToPreferred` attribute ensures that Ocean always runs your workloads on your most preferred instance types. You can configure `revertToPreferred` at cluster and virtual node group levels. [Learn more...](https://docs.spot.io/ocean/features/vngs/attributes-and-actions-per-vng?id=revert-to-preferred-instance-types-per-virtual-node-group-gke)
