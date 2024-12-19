@@ -121,7 +121,8 @@ Otherwise:
 
 The rolls history list contains an entry for each roll under the following columns:
 
-<img width="1200" src="https://github.com/user-attachments/assets/351f729d-35a2-4c8b-8e80-b917476dab7d" />
+<img width="1200" src="https://github.com/user-attachments/assets/3f36db34-7ffa-4042-b13e-ed5112ed91ec" />
+
 
 * Roll ID (unique ID for the roll)
 * Role Scope (cluster, virtual node group, or node pool).
@@ -149,7 +150,8 @@ Click a down arrow for an entry to drill down for information at the node level:
 
 The roll schedules list contains an entry for each schedule:
 
-<img width="1000" src="https://github.com/user-attachments/assets/8b2eadfc-4fc5-471f-976a-b6cf61da0dc1" />
+<img width="1000" src="https://github.com/user-attachments/assets/ff88d065-b156-4a5d-86ac-8d9aaf722266" />
+
 
 * Role Scope (cluster, virtual node group, or node pool).
 * Scheduled frequency.
