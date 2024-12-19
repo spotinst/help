@@ -35,7 +35,7 @@ The nodes list contains these columns:
    * Fallback to regular lifecycle: The node has fallen back to regular lifecycle, AND either one or more pods has restricted scale-down constraints or missing spot tolerations.
 * Pods
 
-The following filters above the table let you search according to one or more filter criteria:
+The following filters above the table let you search according to the criteria:
 
 * Workload requirements:
   * Node lifecycle: regular or spot
