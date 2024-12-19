@@ -131,10 +131,10 @@ The rolls history list contains an entry for each roll under the following colum
 * End Time for roll: mm/dd/yyyy, hh:mm:ss
 * Nodes Rolled (number of nodes rolled) x out of y, for example 20/23
 * Roll Status
-  * Green color <img width="20" src="https://github.com/user-attachments/assets/ba7e6a10-b344-4a60-b05d-6123a5ff7a0e" /> Completed: Roll successfully completed.
-  * Orange color <img width="20" src="https://github.com/user-attachments/assets/481e785f-a73d-4c02-8f85-ceb77cf525d3" /> Partly completed: At least one node could not be replaced.
-  * Gray color <img width="20" src="https://github.com/user-attachments/assets/fbb5322b-7b34-4f41-8883-49a88f10958d" /> Stopped: Roll was stopped.
-  * Red color <img width="20" src="https://github.com/user-attachments/assets/f7a3e2b0-94a4-481b-a94d-512277b92449" /> All nodes could not be replaced.
+  * <img width="20" src="https://github.com/user-attachments/assets/ba7e6a10-b344-4a60-b05d-6123a5ff7a0e" /> Green color  Completed: Roll successfully completed.
+  * <img width="20" src="https://github.com/user-attachments/assets/481e785f-a73d-4c02-8f85-ceb77cf525d3" /> Orange color  Partly completed: At least one node could not be replaced.
+  * <img width="20" src="https://github.com/user-attachments/assets/fbb5322b-7b34-4f41-8883-49a88f10958d" /> Gray color  Stopped: Roll was stopped.
+  * <img width="20" src="https://github.com/user-attachments/assets/f7a3e2b0-94a4-481b-a94d-512277b92449" /> Red color  All nodes could not be replaced.
  
 Click a down arrow for an entry to drill down for information at the node level:
 
@@ -145,8 +145,8 @@ Click a down arrow for an entry to drill down for information at the node level:
 * VNG ID
 * Batch Number: Number of the batch that was run.
 * Node Status:
-  * Green color <img width="20" src="https://github.com/user-attachments/assets/ba7e6a10-b344-4a60-b05d-6123a5ff7a0e" /> Completed: Node was replaced.
-  * Red color <img width="20" src="https://github.com/user-attachments/assets/f7a3e2b0-94a4-481b-a94d-512277b92449" /> Node could not be replaced.
+  * <img width="20" src="https://github.com/user-attachments/assets/ba7e6a10-b344-4a60-b05d-6123a5ff7a0e" /> Green color  Completed: Node was replaced.
+  * <img width="20" src="https://github.com/user-attachments/assets/f7a3e2b0-94a4-481b-a94d-512277b92449" /> Red color Node could not be replaced.
 
 The roll schedules list contains an entry for each schedule:
 
