@@ -65,20 +65,27 @@ The following filters above the table let you search according to one or more fi
 To start an immediate node roll:
 
 1. Select one or more nodes to roll in the nodes list by clicking checkboxes on the left.
-2. Select **Node roll** from the Actions menu above the nodes list, top-right:
-3. In the Node roll dialog box, select the nodes to roll by clicking the checkboxes.
+2. Select **Node roll** from the Actions menu above the nodes list, top-right.
+
+<img width="340" src="https://github.com/user-attachments/assets/48011095-350b-473c-b60d-b83cd3919c81" />
 
 >**Note**: You can optionally click **Select all** to roll all the nodes in the list.
 
-3.	Configure the [Roll Parameters](https://docs.spot.io/ocean/features/roll?id=roll-parameters):
-
-    *   Set the size of a roll batch (%). 
-    *   Set the batch size healthy percentage (%).
-    *   Add an optional comment.
-    *   Turn on or turn off **Respect Pod Disruption Budget** (PDB)
-    *   Turn on or turn off **Respect Restrict Scale Down**
+3.	Configure the [Roll Parameters](https://docs.spot.io/ocean/features/roll?id=roll-parameters)
+    *  Set the size of a roll batch (%). 
+    *  Set the batch size healthy percentage (%).
+    *  Add an optional comment.
+    *  Turn on or turn off **Respect Pod Disruption Budget** (PDB)
+    *  Turn on or turn off **Respect Restrict Scale Down**
+4. Click **Roll node**.
 
 ## Terminate VMs
+
+1. Select one or more nodes to terminate in the nodes list by clicking checkboxes on the left.
+2. Select **Terminate VMs** from the Actions menu above the nodes list, top-right.
+3. In the dialog box 
+
+To terminate VMs:
 
 
 
