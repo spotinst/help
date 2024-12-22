@@ -356,18 +356,15 @@ If your container is unregistered, you should make sure:
 ## Elastigroup Stateful Node
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ssndeallocated">AWS: Are stateful node resources deallocated when I delete an instance?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ssn-delete">AWS: Are stateful node resources deallocated when I delete an instance?</summary>
 
   <div style="padding-left:16px">
 
-   <p id="ssn-delete">When you delete a stateful node:</p>
+   <p>When you delete a stateful node, you can choose what gets deallocated using:</p>
 
-   * [In the Spot console](managed-instance/features/data-volume-persistence?id=deallocated), you choose what gets deallocated.
+   * [The Spot console](managed-instance/features/data-volume-persistence?id=deallocated)
 
-   * [Using the API](api/#tag/Stateful-Node-AWS/operation/AWSManagedInstanceDelete), `deallocationConfig` defaults to <i>false</i> and the <font color="#FC01CC">resources are deallocated</font>.
-
-   * Using Terraform, ______________
-<font color="#FC01CC">link? and what's the command?  When using Terraform and executing the following command - terraform destroy the default values for deleting a node are set to true.</font>
+   * [Terraform](https://registry.terraform.io/providers/spotinst/spotinst/latest/docs/resources/stateful_node_aws#delete)
    
  </div>
 
