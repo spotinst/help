@@ -1,5 +1,3 @@
-<meta name="robots" content="noindex">
-
 # Remediate
 
 You can fix risks identified in Spot Security using the remediation flow.
