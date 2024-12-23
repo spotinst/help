@@ -1,5 +1,3 @@
-<meta name="robots" content="noindex">
-
 # Connect Your Billing and Resource Data for FinOps
 
 The Spot FinOps suite helps you manage and control your cloud expenses. You connect your cloud accounts to:

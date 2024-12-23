@@ -1,5 +1,3 @@
-<meta name="robots" content="noindex">
-
 # Features
 
 Spot Security enables public cloud users to rapidly understand their cloud security posture and attack surface. Spot Security provides unprecedented visibility into your cloud deployment and can be set up in minutes. You can analyze your security configurations, detect anomalies, and take remediation and prevention actions from your regular Spot Console, providing you a single focal point for your cloud management. Click on the links below to learn about the major features.

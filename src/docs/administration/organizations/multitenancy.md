@@ -1,5 +1,3 @@
-<meta name="robots" content="noindex">
-
 # Multitenancy
 
 You can use multitenancy to create hierarchies in your Spot organizations. You can set up your child orgs to use role-based access control (RBAC). Admins for your parent orgs can have admin rights for the child orgs.
