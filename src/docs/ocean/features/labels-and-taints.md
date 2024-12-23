@@ -126,4 +126,42 @@ spec:
       image: registry.k8s.io/pause:2.0
 ```
 
+## Startup Taints
+
+Ocean startup taints enhance the accuracy of node scale-up and enable nodes to be correctly initialized without blocking pod scheduling.
+
+Startup taints are temporary taints applied to a node during its initialization phase. Ocean does not consider startup taints during the node scale-up simulation. 
+Once the taints are removed, the pods can be scheduled without launching additional nodes.
+
+### When to Use Startup Taints
+
+You may want to deploy a specific pod to a node before deploying other pods to the same node. When that pod is ready or has completed a defined procedure, such as networking, the deployment of other pods will be allowed.
+
+>**Example: Cilium:** As recommended by the Cilium documentation, involves applying a taint such as `node.cilium.io/agent-not-ready=true:NoExecute` to prevent other pods from starting before Cilium has finished configuring the necessary networking on the node.
+
+The startup taint applied to a node is a dedicated temporary taint. The pod used for initialization will have a tolerance to this taint exclusively. Once the pod is ready, the application running on the pod will remove the taint from the node.
+
+Ocean provides a `startupTaints` attribute to manage startup taints.
+
+### Configure Startup Taints in the Spot API
+
+AWS Kubernetes only
+
+Prerequisite: Ocean controller version at least ?????
+
+Configure Ocean to consider your startup taints using the startupTaints attribute at the Ocean cluster and virtual node group levels.
+
+*  Cluster: under `cluster.compute.launchSpecification`
+   *  [Create Cluster](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterCreate)
+   *  [Update Cluster](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterUpdate)
+
+*  Virtual node group: under `launchSpec`
+   *  [Create virtual node group](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecCreate)
+   *  [Update virtual node group](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecUpdate)
+
+>**Important:** You must also set the `startupTaint` as a regular taint in the `userData` for the cluster or virtual node group.
+
+
+
+
 
