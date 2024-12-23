@@ -1,5 +1,3 @@
-<meta name="robots" content="noindex">
-
 # Overview Dashboards
 
 The dashboards in Overview offer a comprehensive platform for monitoring, optimizing, and analyzing your cloud infrastructure:
