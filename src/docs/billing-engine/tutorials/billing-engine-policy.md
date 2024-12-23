@@ -1,5 +1,3 @@
-<meta name="robots" content="noindex">
-
 # Billing Engine Policy 
 
 Billing Engine collects information on cost and usage data in in the AWS and Azure and Google providers.
