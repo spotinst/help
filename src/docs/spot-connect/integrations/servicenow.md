@@ -1,5 +1,3 @@
-<meta name="robots" content="noindex">
-
 # ServiceNow
 
 Use the ServiceNow integration to streamline your incidents and respond to them automatically.
