@@ -165,7 +165,7 @@ The workloads are displayed in the [Workloads Optimization List](https://docs.sp
 
 By default, right-sizing uses the 85th percentile to calculate the vCPU recommendations.
 
->**Important:** Changing the percentile setting will immediately impact the recommendations that have already been applied.
+>**Important:** Changing the percentile setting will impact the recommendations already applied (the change may take a few minutes).
 To change this setting:
 
 1. Click the **Settings** button at the top-right of the screen.
