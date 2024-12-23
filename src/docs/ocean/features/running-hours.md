@@ -17,7 +17,7 @@ The running hours are in blue, and the off hours are in gray.
 
 ## Scaling Behavior (Kubernetes)
 
-When a period of running time ends, Ocean automatically scales down the entire cluster to 0. During the off time, all nodes are down, the Ocean Controller is down, and does not report information to the autoscaler.
+When a period of running time ends, Ocean automatically scales down the entire cluster to 0. During the off time, all nodes are down, the Ocean Controller is down, and does not report information to the autoscaler. <!--need chan ge for aks here -->
 
 When off time ends, Ocean starts a single node from a virtual node group without taints. 
 If all virtual node groups have taints, Ocean starts a node from the default virtual node group unless `useAsTemplateOnly` is defined, in which case no node is started. 
