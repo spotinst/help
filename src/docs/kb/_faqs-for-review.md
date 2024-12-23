@@ -55,6 +55,20 @@ There are a number of <a href="/administration/sso-access-control">attributes th
  </div>
 
  </details>
+
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceannonservicetask">ECS: What happens if I run a non-service task in a cluster without enough resources?</summary>
+
+  <div style="padding-left:16px">
+
+   A non-service task is a standalone task that isn't part of a service. It's typically used for things such as batch processing, one-time jobs, not continuous, long-running services.
+
+   When you have an independent task running in a cluster and there aren't enough resources, the task launch fails with a CPU error and a memory error. It means that there is no queue of tasks when there is no service for the task. Because there is no service trying to launch the tasks, the task will be launched later.
+   
+ </div>
+
+ </details>
+ 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanoutofstrategy">ECS: Why is the out of strategy replacement getting canceled for standalone tasks?</summary>
 
