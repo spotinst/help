@@ -30,7 +30,7 @@ This list displays your right-sizing recommendations per workload and lets you d
    *  Green (Optimized): The Workload is fully optimized, and no action is required.
    *  Orange (Limited): Ocean has applied recommendations to the workload, but there are limitations due to overhead, VPA, etc.
    *  Gray (Pending): The rule for the workload has been attached but is out of schedule.
-   *  Color?? (Rollback)
+   *  Color?? (Rollback) Ocean rolled back to the original deployment request and suspended the workload's attachment to the rule.
    *  Color?? (Not attached)
 *  Workload type and namespace.
 *  Recommendations for vCPU and memory right sizing per deployment. Recommended increases are shown with a green up arrow, and recommended decreases are shown with a red Down arrow.  
