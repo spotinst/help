@@ -19,7 +19,6 @@
       - [Create Encryption Key](elastigroup/tutorials/elastigroup-tasks/create-encryption-key)
       - [Dashboard](elastigroup/tutorials/elastigroup-actions-menu/elastigroup-dashboard)
       - [Dynamic Commitments](elastigroup/features/core-features/dynamic-commitment)
-      - [Equal AZ Instance Distribution Orientation](elastigroup/features/core-features/equal-az-instance-distribution-orientation)
       - [Filter API Responses](elastigroup/tutorials/elastigroup-tasks/filter-api-responses)
       - [Group Orientation](elastigroup/features/core-features/cluster-orientation)
       - [Health Checks](elastigroup/tutorials/elastigroup-actions-menu/set-health-checks)
