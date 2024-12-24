@@ -174,7 +174,8 @@ To change this setting:
 1. Click the **Settings** button at the top-right of the screen.
 2. Select your required percentile value in the Settings dialog box and save your changes.
 
-<img width="400" src="https://github.com/user-attachments/assets/da575260-4c33-46df-90aa-c30cc75a5472" />
+<img width="320" src="https://github.com/user-attachments/assets/30478c24-f728-4b3a-8aba-113c64573bb0"/>
+
 
 ## Best Practices
 
