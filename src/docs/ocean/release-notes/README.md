@@ -2,6 +2,8 @@
 
 ## December 2024: Features and Enhancements
 
+*  **OCN-0051: December 15, 2024:** (**<font color="#FC01CC">AWS Kubernetes</font>**) Our newly released enhanced scale-up delivers significantly faster scaling capabilities and more accurate scale-up simulation, bringing pods faster to scheduled state and improving cluster utilization. Enhanced scale-up is available for all customers and requires Ocean Controller 2.0 installed in the cluster.
+
 
 *  **OCN-0054: IMPORTANT NOTICE - December 18, 2024:** Ocean Controller Version 1 is now deprecated for **<font color="#FC01CC">GKE</font>** (from **December 18, 2024**). This means that Version 1 will not support new features, and any unexpected behaviors or security issues identified after this date will not be addressed. We recommend upgrading to Ocean Controller Version 2.0 for the best performance and support. [Learn more...](https://docs.spot.io/ocean/tutorials/ocean-controller-v2/)    
 Ocean Controller
