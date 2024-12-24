@@ -34,7 +34,7 @@ Optimize towards the most cost-effective infrastructure.
 
 In addition to basic cost optimization of moving workloads from on-demand to spot, Elastigroup will take an aggressive approach to cost-savings by replacing spot instances with less expensive instances whenever a less expensive market becomes available, even when no interruption is anticipated.
 
-# Equal Area Zone Instance Distribution Orientation
+## Equal Area Zone Instance Distribution Orientation
 
 Elastigroups support a high-availability deployment structure, allowing you to evenly distribute instances across multiple area zones in a single region. This Elastigroup orientation guarantees equal capacity across all selected area zones (AZ).
 
@@ -42,7 +42,7 @@ Using this option ensures capacity availability even when no spot instances are 
 
 > **Note**: The target capacity of the group applies to the entire group. For example, if you want to use X area zones, select a target capacity that is a multiple of X.
 
-## How it Works
+### How it Works
 
 * When creating an Elastigroup or scaling up: Before spinning new instances, Elastigroup checks the current spread of instances. Elastigroup will distribute the instances evenly across the selected availability zones based on the specified area zones in the group.
 
@@ -50,11 +50,11 @@ Using this option ensures capacity availability even when no spot instances are 
 
 > **Note**: When using this strategy, the `Spot Instance Percentage` or `On-Demand Count` settings will apply per area zone and not for the whole group. For example, a group with 2 area zones and a `Spot Instance Percentage` of 50%- when launching its first 2 instances, they will both be spots, 1 in each area zone.
 
-## Enable Equal Area Zone Orientation
+### Enable Equal Area Zone Orientation
 
 You can enable the equal area zone orientation by using the API or the `Edit Configuration` option in the Spot console.
 
-### Use the Spot Console
+#### Use the Spot Console
 
 While creating a new Elastigroup or editing an existing Elastigorup configuration:
 
@@ -65,7 +65,7 @@ While creating a new Elastigroup or editing an existing Elastigorup configuratio
 
 ![image](https://github.com/user-attachments/assets/286a1217-559f-4dbd-96c0-dfd84f585a23)
 
-### Use the API
+#### Use the API
 
 * Create an Elastigorup- Use the `equalAzDistribution` in the availabilityVsCost field in the Elastigroup JSON
 
