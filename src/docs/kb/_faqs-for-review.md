@@ -22,23 +22,7 @@
 
 ## General
 
- <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="SSOaddlattributes">SSO: What additional attributes (if any) does the application need from the assertion?</summary>
 
-  <div style="padding-left:16px">
-
-There are a number of <a href="/administration/sso-access-control">attributes that can be sent</a>. These are the default and required attributes:
-
-<font color="#FC01CC">I don't see in the documentation what attributes can be sent. is this the correct link?</font>
-
-* Relay State
-* Email
-* FirstName
-* LastName
-  
- </div>
-
- </details>
 <!----------------------------------ocean---------------------------------->
 
 ## Ocean
