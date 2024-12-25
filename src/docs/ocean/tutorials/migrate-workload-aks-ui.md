@@ -16,8 +16,6 @@ Before starting, review the [prerequisites](https://docs.spot.io/ocean/tutorials
 
 Once you start migration, Ocean automatically detects the workloads (nodes and pods) of the associated Kubernetes cluster and displays a list of all the discovered nodes.
 
-![aks-ready-for-migration](https://github.com/user-attachments/assets/962c3046-fc0a-42ca-8675-dad2d46c6e9c)
-
 ![aks-workload-migration-discovery-vals](https://github.com/user-attachments/assets/5b99abd3-88a9-4063-b915-c7dff9fd5322)
 
 The list of discovered nodes contains these columns:
@@ -27,36 +25,44 @@ The list of discovered nodes contains these columns:
 * Pod Count: Number of pods on node.
 * Virtual Node Group Match: Indicates whether an existing virtual node group matches the node.
 * Ready for Migration (Node Statuses):
-   * Ready for migration: Node is validated and can be migrated (green color)
+   * <img width="20" src ="https://github.com/user-attachments/assets/41b067f4-9df4-41cd-9aac-0289409a9a73 " /> Ready for migration: Node is validated and can be migrated (green color)
    * Excluded: Node was not selected for migration (gray color).
-   * Unable to migrate: Node cannot be migrated (red color)
+   * <img width="20" src ="https://github.com/user-attachments/assets/1be4c530-7c3c-44b9-8564-f0128c4803c5 " /> Unable to migrate: Node cannot be migrated (red color)
+   * <img width="20" src ="https://github.com/user-attachments/assets/d21899f7-d922-4f36-a2bf-835b8831f112" /> Requires validation: Nodes are checked before migration to ensure successful migration. If an issue is identified for a node, you can either fix it or select a different node. 
 
-Nodes are checked before migration to ensure successful migration. If an issue is identified for a node, you can either fix it or select a different node. 
-Validation checks for the following:
+Node validation checks for the following:
 *  Virtual Node Group Match: At least one virtual node group in the cluster must match the specific node.
 *  Support for the Kubernetes version.
 *  Support for the Ocean Controller version.
 *  Whether Spot toleration exists.
 *  Specific Constraints: For example, Restrict Scale Down, Respect Pod Disruption Budget (PDB), PVC.
 
-4.  Select the nodes (instances) you want to migrate into your Ocean cluster.
-    * If any node entries display the **Required Validation** status in the **Ready for Migration** column, click **Validate** at the bottom left of the screen. When the validation process is completed, if any node entries display the **Unable to migrate** status in the **Ready for Migration** column, click the down arrow on the left to drill down to the workloads.
+4. Select the nodes (instances) you want to migrate into your Ocean cluster.
+5. If any selected node entries display the **Required Validation** status in the **Ready for Migration** column, click **Validate** at the bottom left of the screen.
+6. When the validation process is completed, check if any node entries display the **Unable to migrate** status in the **Ready for Migration** column.
 
-![aks-migration-validations](https://github.com/user-attachments/assets/c0e4f51f-2de8-4dce-8670-3f8a824641b6)
+<img width="900" src ="https://github.com/user-attachments/assets/b2307c92-2fb0-4c60-a28f-17213287ee26" />
 
-![aks-migration-discovery-validated](https://github.com/user-attachments/assets/0c1933b8-8dcf-4517-bea1-6b8252da2373)
+These are the options for nodes that Ocean cannot migrate:
+
+* If the Virtual Node Group Match column displays **No match** and has a **click to fix** link, the node does not contain labels and taints attributes that match any configured virtual node group in the cluster. To fix the selected node:
+  1. Click the link. An issues dialog box displays the labels and taints required for a virtual node group to match the node.
+  
+  ![aks-vng-match-issues-2](https://github.com/user-attachments/assets/014c4f9b-bc26-44e1-9c91-f4c86392a08a)
+  
+  3. Click **Create New VNG** to create a virtual node group with these attributes. See how to configure a [virtual node group](https://docs.spot.io/ocean/tutorials/manage-virtual-nd-groups-aks?id=createedit-a-virtual-node-group) in the edit screen.
+ 
+* If the Virtual Node Group Match column displays **No match** and there is no clickable link, We recommend checking your Azure workloads related to the Ocean virtual node group configuration to ensure accuracy and resolve any mismatches.
+* If you drill down to a workload under a node and the **Spot toleration is missing** message appears <img width="20" src ="https://github.com/user-attachments/assets/2c5d0898-d226-4867-a6d2-acde7ca2fee7" /> check your Azure workloads related to the Ocean virtual node group configuration to ensure accuracy and resolve any mismatches.
 
 >**IMPORTANT:** If no nodes pass the validation process, you must fix errors before migrating.
 
 If at least 1 but not all the nodes pass the validation process, you can proceed to migrate them.
 
-To fix a specific node that does not match an existing virtual node group in your cluster:
-
-1. Click **Click to fix** in the virtual node group match column entry.
-2. In the issues dialog box, Ocean provides the labels and taints for a virtual node group to match the node.
 
 
-![aks-vng-match-issues-2](https://github.com/user-attachments/assets/014c4f9b-bc26-44e1-9c91-f4c86392a08a)
+
+
 
 
 ##  Step 2: Set Preferences
