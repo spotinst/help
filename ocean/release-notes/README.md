@@ -2,6 +2,9 @@
 
 ## December 2024: Features and Enhancements
 
+*  **OCN-0056: December 25, 2024:** (**<font color="#FC01CC">AWS ECS</font>**) You can now set the `instanceMetadataTags` attributes from your Ocean ECS clusters via the Spot API 
+under `cluster.compute.LaunchSpecification`. For example, [Create Cluster](https://docs.spot.io/api/#tag/Ocean-ECS/operation/OceanECSClusterCreate).
+
 *  **OCN-0055: December 24, 2024:** (**<font color="#FC01CC">EKS</font>** and **<font color="#FC01CC">AKS</font>**) For automatic right-sizing, you can now select the percentile setting used to calculate your vCPU recommendations. The lower the percentile, the stronger the recommendations. [Learn more...](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=set-the-vcpu-percentile)
 
 *  **OCN-0054: IMPORTANT NOTICE - December 18, 2024:** Ocean Controller Version 1 is now deprecated for **<font color="#FC01CC">GKE</font>** (from **December 18, 2024**). This means that Version 1 will not support new features, and any unexpected behaviors or security issues identified after this date will not be addressed. We recommend upgrading to Ocean Controller Version 2.0 for the best performance and support. [Learn more...](https://docs.spot.io/ocean/tutorials/ocean-controller-v2/)    
