@@ -2,7 +2,7 @@
 
 ## December 2024: Features and Enhancements
 
-*  **OCN-0056: December 25, 2024:** (**<font color="#FC01CC">AWS ECS</font>**) You can now set the `instanceMetadataTags` attribute for the [IMDSv2](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-service.html) object from your Ocean ECS clusters via the Spot API 
+*  **OCN-0056: December 25, 2024:** (**<font color="#FC01CC">AWS ECS</font>**) You can now set the `instanceMetadataTags` attributes from your Ocean ECS clusters via the Spot API 
 under `cluster.compute.LaunchSpecification`. For example, [Create Cluster](https://docs.spot.io/api/#tag/Ocean-ECS/operation/OceanECSClusterCreate).
 
 *  **OCN-0055: December 24, 2024:** (**<font color="#FC01CC">EKS</font>** and **<font color="#FC01CC">AKS</font>**) For automatic right-sizing, you can now select the percentile setting used to calculate your vCPU recommendations. The lower the percentile, the stronger the recommendations. [Learn more...](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=set-the-vcpu-percentile)
