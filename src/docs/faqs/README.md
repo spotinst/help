@@ -1758,6 +1758,22 @@ You can use your own AMI and configure IMDSv2 on it. All instances launched afte
  </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ssn-delete">AWS: Are stateful node resources deallocated when I delete an instance?</summary>
+
+  <div style="padding-left:16px">
+
+   <p>When you delete a stateful node, you can choose what gets deallocated using:</p>
+
+   * [The Spot console](managed-instance/features/data-volume-persistence?id=deallocated)
+
+   * [Terraform](https://registry.terraform.io/providers/spotinst/spotinst/latest/docs/resources/stateful_node_aws#delete)
+   
+ </div>
+
+ </details>
+
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="egsn-stopped">AWS: Why am I getting an <i>Instance have been detected as stopped</i> error?</summary>
 
   <div style="padding-left:16px">
