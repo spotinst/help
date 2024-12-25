@@ -2,6 +2,9 @@
 
 #  AKS Nodes
 
+View info about servers on the cluster. Monitor nodes as they are launched. resource location
+roll, node-scope narrow at node-leval, actions menu
+
 ## View Nodes in the Console
 
 To access the Nodes tab:
@@ -25,25 +28,24 @@ The nodes list contains these columns:
 * Node Name
 * Virtual Node Group: Click on the link to open the configuration for the virtual node group.
 * Node Pool: Click on the link to open the configuration for the node pool.
-* Availability Zone: Availability zone for the node pool.
+* Availability Zone: Availability zone for the node pool (includes region information).
 * VM Size: Machine type.
 * OS Image: Image name.
 * Lifecycle: Regular or spot. If an <img width="20" src="https://github.com/user-attachments/assets/996cb2d4-a58d-4cbc-9dd3-2d3122a398e0" /> icon appears when lifecycle is regular, click to view the reason, which can be one of the following:
-   * Configurational reason: The node is regular because the cluster/virtual node group configuration (settings) requires a specific number of regular nodes.
-   * Pods requiring regular lifecycle: The node has one or more pods that explicitly require a regular lifecycle. These pods may have specific requirements or dependencies that make them incompatible with Spot VMs.
-   * Pods with missing spot tolerations: The node has pods that lack the required spot tolerations, preventing them from running on spot VMs. This indicates that the node's pods cannot be scheduled on spot VMs.
-   * Fallback to regular lifecycle: The node has fallen back to regular lifecycle, AND either one or more pods has restricted scale-down constraints or missing spot tolerations.
+   * Risk: The percentage of spot nodes configured in the [virtual node group configuration]() impacts the percentage of regular nodes launched. We recommend increasing the risk to continue running spots.
+   * Pods with missing spot tolerations: The node has pods that lack the required spot tolerations, preventing them from running on spot VMs. This indicates that the node's pods cannot be scheduled on spot VMs. To address this issue, install the admission mutating webhook that injects the required [spot toleration](), which AKS requires to run pods on spot nodes.
+   * Fallback to regular lifecycle: The node has fallen back to regular lifecycle. This setting is configured in the [virtual node group](). This lets Ocean launch regular VMs when spot markets are unavailable. When spots become available, regular nodes are reverted to spots.
 * Pods
 
 The following filters above the table let you search according to the criteria:
 
 * Workload requirements:
-  * Node lifecycle: regular or spot
-  * PDB
+  * Node lifecycle: regular or spot. Pods requiring regular lifecycle: The node has one or more pods that explicitly require a regular lifecycle. These pods may have specific requirements or dependencies that make them incompatible with spot VMs.
+  * PDB [link to Azure]
   * Required VM Type
-  * Restrict scale-down
-  * Required zone
-
+  * Restrict scale-down [kub scaling link]
+  * Required availability zone
+ 
 * Reason for regular
   * Risk
   * Missing spot tolerations
