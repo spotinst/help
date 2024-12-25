@@ -48,7 +48,12 @@ These are the options for nodes that Ocean cannot migrate:
 * If the Virtual Node Group Match column displays **No match** and has a **click to fix** link, the node does not contain labels and taints attributes that match any configured virtual node group in the cluster. To fix:
   1. Click the link. An issues dialog box displays the labels and taints required for a virtual node group to match the node.
   
+<details>     
+   <summary markdown="span">View image</summary>
+
 <img width="900" src ="https://github.com/user-attachments/assets/eeabf8ba-8a85-47b3-aa0e-b8cd46218c9b" />
+
+</details>
 
   2. Click **Create New VNG** to create a virtual node group with these attributes. See how to configure a [virtual node group](https://docs.spot.io/ocean/tutorials/manage-virtual-nd-groups-aks?id=createedit-a-virtual-node-group) in the edit screen.
  
