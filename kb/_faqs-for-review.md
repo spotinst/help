@@ -218,20 +218,6 @@ For example, you can update your [DaemonSet pod YAML](https://kubernetes.io/docs
 <!----------------------------------elastigroup---------------------------------->
 ## Elastigroup
 
-<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ecautoscaler"><font color="#FC01CC">???</font>: Why am I getting a <i>Pod X is pending but its constraints differ from the group labels</i> error?</summary>
-
-  <div style="padding-left:16px">
-
-   You can get this log message if the autoscaler isn't scaling up for the pod:
-   
-   `WARN, AutoScaler - Attempt Scale Up, Pod xxxx is pending but its constraints differ from the group labels. NodeSelector: '{"kubernetes.io/os":"linux"}'`
-
-   Autoscaler not scaling up for the pod can happen for several reasons, such as if all the launch specs have taints.
-
-   For Elastigroup, the [custom group labels](elastigroup/tools-integrations/kubernetes-with-elastigroup/custom-label-selectors) must match the node selector for the autoscaler to scale for a pod. For example, if the group has custom labels <i>group1</i>, <i>group2</i>, and <i>group3</i>, the nodeSelector must have identical custom labels <i>group1</i>, <i>group2</i>, and <i>group3</i>. If you're using built-in labels, they don't need to match. Elastigroup autoscaler supports [these built-in labels](https://kubernetes.io/docs/reference/labels-annotations-taints/).
-   
-   </details>
 
 
 <!----------------------------------elastigroup stateful node---------------------------------->
