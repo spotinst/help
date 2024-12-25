@@ -6,11 +6,11 @@ Application persistency adds a layer of persistence by saving the application's 
 
 ## Prerequisites
 * AMI with LINUX OS
-* Spot account with valid permissions
+* Spot account with valid permissions for Stateful Node
 * [Spot token](https://docs.spot.io/administration/api/create-api-token)
 * S3 bucket or EFS
-* Security Group with an inbound rule for port 9527. If you want to connect to the instance, additionally enable the SSH port (22).
-* Python scripts.
+* Security Group with an open inbound rule for port 9527. If you want to connect to the instance, additionally enable the SSH port (22).
+* Install the Python based [Spot Agent](https://docs.spot.io/elastigroup/features-azure/shutdown-script-in-elastigroup-for-azure?id=linux-os) in your EC2, which is responsible for managing the Application snapshots
 
 ## Step 1: Configure Application Persistency
 
@@ -44,10 +44,10 @@ Example of Postman’s response:
 
 **Body Explanation**
 
-* RunCmd: The cmd to run the app, including the full path of the exec file. 
-* SnapshotDestination: The name of the S3 bucket or the ID of the EFS (if you are using EFS, provide the EFS ID).
-* SnapshotScheduler: The cron expression for the frequency of the snapshots. 
-* ExternalFiles (optional): A list of files you want to save, including the full path of the file. 
+* **RunCmd**: The cmd to run the app, including the full path of the exec file. 
+* **SnapshotDestination**: The name of the S3 bucket or the ID of the EFS (if you are using EFS, provide the EFS ID).
+* **SnapshotScheduler**: The cron expression for the frequency of the snapshots. 
+* **ExternalFiles** (optional): A list of files you want to save, including the full path of the file. 
 
 > **Note**: The snapshot will fail if the files do not exist on the path you provided. Make sure the path is correct and the files exist. 
 It is recommended to use absolute paths in your script.
@@ -74,8 +74,8 @@ To run stateful nodes with application persistency, you need to create a custom 
 
 ![app-pers-2](https://github.com/user-attachments/assets/90dba569-3891-42ad-bf0f-eaea1aadcf52)
 
-3. In the policy creation wizard, change the display to JSON view and copy the following policy:
-
+3. In the policy creation wizard, change the display to JSON view and copy the policy below.
+In the `resource` parameter, instead of “*“ you can add the ARN of the S3 bucket ("arn:aws:s3:::mys3bucket") you want the snapshots to be managed in.
 ```json
 {
   "Version": "2012-10-17",
@@ -129,9 +129,21 @@ To run stateful nodes with application persistency, you need to create a custom 
 
 ![app-pers-6](https://github.com/user-attachments/assets/ae8ce9e9-c901-4930-8e83-58cf08d0901f)
 
-## Step 3: Create a Stateful Node (API) (Optional)
+## Step 3: Create a Stateful Node with Application Persistency from Scratch (API)
 
 If you do not have an existing stateful node, run the following command in the Spot API to create a stateful node or follow [these steps](https://docs.spot.io/managed-instance/getting-started/create-a-new-managed-instance). 
+
+Ensure the user data of the stateful node installs the Python Spot agent responsible for taking application snapshots:
+
+```
+curl -fsSL https://s3.amazonaws.com/spotinst-public/services/spotinst-agent-2/elastigroup-agent-init.sh | \
+SPOTINST_ACCOUNT_ID="act-..." \
+SPOTINST_TOKEN="Your Spot Token" \
+bash
+spotinst-agent add-initiator elastigroup-memverge-cmd || echo 'spotinst-agent failed to add the elastigroup-memverge-cmd worker'
+```
+
+Spot recommends adding the agent installation lines at the end of the user data to ensure snapshots are taken after all the application-associated files and libraries are run.
 
 METHOD: `POST`
 
@@ -218,11 +230,23 @@ BODY(JSON):
 }
 ```
 
-## Step 4: Connect Application Persistency 
+## Step 4: Connect Application Persistency to a Stateful Node
 
 To attach application persistency to a stateful node, follow these steps:
 
-1. Edit an existing or newly created stateful node using the API call in step 3 by adding the new section to the configuration:
+1. Ensure the user data of the stateful node installs the Spot Python agent:
+
+```
+curl -fsSL https://s3.amazonaws.com/spotinst-public/services/spotinst-agent-2/elastigroup-agent-init.sh | \
+SPOTINST_ACCOUNT_ID="act-..." \
+SPOTINST_TOKEN="Your Spot Token" \
+bash
+spotinst-agent add-initiator elastigroup-memverge-cmd || echo 'spotinst-agent failed to add the elastigroup-memverge-cmd worker'
+```
+
+2. Click the **Review** tab and turn on **Edit** mode to add the application persistency configuration to the `persistence` section.
+
+<img width="997" alt="app-persist" src="https://github.com/user-attachments/assets/89ea2faf-a208-4ac5-aa6c-e4f0c800e82f" />
 
 ```
    "persistApplication":true,
@@ -231,6 +255,6 @@ To attach application persistency to a stateful node, follow these steps:
          ]
 ``` 
 
-2. Insert the ID assigned to the application persistence configuration in the `apc-123456789` parameter.
-3. Run the command in the Spot API. 
+3. Insert the ID assigned to the application persistence configuration in the `apc-123456789` parameter.
+4. Run the update command in the Spot API or update the stateful node in the console. 
 
