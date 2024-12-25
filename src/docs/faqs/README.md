@@ -712,6 +712,29 @@ Reimport Fargate services with less than 5 security groups and choose only one s
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanoutofstrategy">ECS: Why is the out of strategy replacement getting canceled for standalone tasks?</summary>
+
+  <div style="padding-left:16px">
+
+   If your virtual node group or Elastigroup has more on-demand instances than defined, your extra instances are reverted to spot instances when they become available. This is called the fix strategy.
+
+If you see this message in the log:
+
+<pre><code>DEBUG, Replacement of type Out of strategy for instance i-xxx has been canceled. Reason for cancelation: Instance contains stand-alone tasks, and the group's configuration doesn't allow termination of stand-alone tasks.</code></pre>
+
+It means that your strategy cannot be fixed and your spot instances cannot be reverted to spots. This is because you have standalone tasks in the instances, and the group's configuration can't stop standalone tasks. These instances cannot be scaled down by the autoscaler.
+
+[Update the cluster](https://docs.spot.io/api/#tag/Ocean-ECS/operation/OceanECSClusterUpdate) to include <code>"shouldScaleDownNonServiceTasks": true</code>.
+
+The standalone task and instance are terminated and are not redeployed in Elastigroup because they weren't created as part of a service.
+
+See [What is Amazon Elastic Container Service](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs_run_task.html).
+   
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanunregcontainer">ECS: Why are my container instances unregistered?</summary>
 
   <div style="padding-left:16px">
@@ -851,6 +874,34 @@ You can have multiple containers defined in a single task definition. Check all 
  </div>
 
  </details>
+
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceandaemonsetpods">EKS: Why are DaemonSet pods not scheduled on all nodes in the cluster?</summary>
+
+  <div style="padding-left:16px">
+
+Your DaemonSet pods are only scheduled on one specific virtual node group, not on all the nodes in a virtual node group in cluster.
+
+This can happen if you use taints on your pods in virtual node groups. You can either use taints on all your pods, or not use taints. You can't mix pods with taints and without taints.
+
+Update your tolerances in the DaemonSet YAML so you can schedule DaemonSet pods on the nodes in virtual node groups with taints.
+
+For example, you can update your [DaemonSet pod YAML](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/) to include:
+
+<pre><code>
+   spec:
+      tolerations:
+      - key: dedicated
+        operator: Equal
+        value: statefulset
+        effect: NoSchedule
+</code></pre>
+
+
+   </div>
+
+ </details>
+
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="k8sunhealthy">EKS: Why are my EKS nodes <i>unhealthy</i>?</summary>
