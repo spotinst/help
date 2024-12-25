@@ -121,6 +121,12 @@ You may get an error when you try to sign in to the Spot console if:
 
   Signing in using username/password is turned off if SSO is set up for your organization. All users, including admins, must use SSO if it’s set up.
 
+  You may have multiple organizations, some that use SSO and some that don’t:
+
+    * If your default organization <i>has</i> SSO, then you can only sign in using SSO. You can see your non-SSO organizations in the org list and switch to them.
+      
+    * If your default organization <i>doesn’t</i> have SSO, then sign in with your username/password. When you switch to an org with SSO, you’ll get the SSO sign-in page.
+
 * You’re using multiple-factor authentication (MFA) when SSO is set up for your organization.
 
   Signing in using MFA is turned off if SSO is set up for your organization.
@@ -129,9 +135,7 @@ You may get an error when you try to sign in to the Spot console if:
 
   Make sure you’re using the correct MFA token for the organization you’re signing into. MFA tokens are specific to a user and an organization.
 
-* No accounts are associated with your organization in Spot.
 
-  [Connect a cloud account](connect-your-cloud-provider/first-account/) to Spot to be able to sign in.
 
  </div>
 
