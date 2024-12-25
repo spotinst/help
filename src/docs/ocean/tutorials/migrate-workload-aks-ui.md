@@ -47,16 +47,11 @@ These are the options for nodes that Ocean cannot migrate:
 
 * If the Virtual Node Group Match column displays **No match** and has a **click to fix** link, the node does not contain labels and taints attributes that match any configured virtual node group in the cluster. To fix:
   1. Click the link. An issues dialog box displays the labels and taints required for a virtual node group to match the node.
-  
-<details>     
-   <summary markdown ="span" style="color:#7632FE; font-weight:600">View image</summary>
-
-<img width="900" src ="https://github.com/user-attachments/assets/eeabf8ba-8a85-47b3-aa0e-b8cd46218c9b" />
-
-</details>
-
+   
+   <img width="900" src ="https://github.com/user-attachments/assets/eeabf8ba-8a85-47b3-aa0e-b8cd46218c9b" style="padding-top: 40px;" />
+   
   2. Click **Create New VNG** to create a virtual node group with these attributes. See how to configure a [virtual node group](https://docs.spot.io/ocean/tutorials/manage-virtual-nd-groups-aks?id=createedit-a-virtual-node-group) in the edit screen.
- 
+  
 * If the Virtual Node Group Match column displays **No match** and there is no clickable link, We recommend checking your Azure workloads related to the Ocean virtual node group configuration to ensure accuracy and resolve any mismatches.
 * If you drill down to a workload under a node and the <img width="20" src ="https://github.com/user-attachments/assets/2c5d0898-d226-4867-a6d2-acde7ca2fee7" /> **Spot toleration is missing** message appears  [Install the admission mutating webhook](https://docs.spot.io/ocean/getting-started/aks/?id=step-4-automatic-spot-tolerance-injection-optional) that injects the required spot toleration, which AKS requires to run pods on spot nodes.
 >**IMPORTANT:** If no nodes pass the validation process, you must fix errors before migrating.
