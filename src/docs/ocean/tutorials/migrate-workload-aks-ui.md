@@ -49,7 +49,7 @@ These are the options for nodes that Ocean cannot migrate:
   1. Click the link. An issues dialog box displays the labels and taints required for a virtual node group to match the node.
   
 <details>     
-   <summary markdown="span">View image</summary>
+   <summary markdown ="span" style="color:#7632FE; font-weight:600">View image</summary>
 
 <img width="900" src ="https://github.com/user-attachments/assets/eeabf8ba-8a85-47b3-aa0e-b8cd46218c9b" />
 
