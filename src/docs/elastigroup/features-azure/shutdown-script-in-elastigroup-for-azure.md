@@ -73,11 +73,23 @@ Start-Service SpotinstAgent
 
 Once you have added the script for installing the Spot Agent, you can add the actual shutdown script.
 
-1. Paste your shutdown script into the Shutdown Script box.
+Add your shell script to the shutdown script box. Windows scripts should start with the <powershell> tag.
 
-<img src="/elastigroup/_media/azure-shutdown-script-03.png" />
+Linux:
 
-2. Click Next, and then click Update in the Review tab.
+```bash
+#enter shutdown script here
+#!/usr/bin/env bash
+"Goodbye old instance"
+```
+
+Windows:
+
+```powershell
+<powershell> Write-Host "Goodbye old instance"
+```
+
+The system also supports a signal to let the Elastigroup know that the instance is ready for shutdown. This signal can be used at the end of the shutdown script.
 
 ## Usage Notes for Linux OS
 
