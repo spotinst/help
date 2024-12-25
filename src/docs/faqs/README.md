@@ -280,6 +280,22 @@ These internal logging errors occur because of a misconfiguration in the Okta SS
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="SSOaddlattributes">SSO: What additional attributes (if any) does the application need from the assertion?</summary>
+
+  <div style="padding-left:16px">
+
+There are a number of <a href="/administration/sso-access-control/">attributes that can be sent</a>. These are the default and required attributes:
+
+* Relay State
+* Email
+* FirstName
+* LastName
+  
+ </div>
+
+ </details>
+ 
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="pagerdutynotifications">Can I set up PagerDuty alerts from Spot?</summary>
 
   <div style="padding-left:16px">
