@@ -33,7 +33,7 @@ The nodes list contains these columns:
 * OS Image: Image name.
 * Lifecycle: Regular or spot. 
 
-Workload Requirements (searchable from a filter above the list): 
+Workload requirements (searchable from a filter above the list): 
 
   * Node lifecycle: regular or spot. Pods requiring regular lifecycle: The node has one or more pods that explicitly require a regular lifecycle. These pods may have specific requirements or dependencies that make them incompatible with spot VMs.
   * PDB: Some pods may have a [Pod Disruption Budget](https://kubernetes.io/docs/concepts/workloads/pods/disruptions/#pod-disruption-budgets). When turned on, Ocean verifies the PDB and will not migrate a node if the PDB is violated. 
@@ -44,7 +44,7 @@ Workload Requirements (searchable from a filter above the list):
 >**Note**: When pods have constraints that impact Workload requirements, an <img width="20" src="" /> icon appears in the Pods column of the nodes list, to the right of the number of pods. Click the icon to view the reason(s) and the number of pods affected.
 
  
-Reasons for Regular Node (searchable from a filter above the list): If an <img width="20" src="https://github.com/user-attachments/assets/996cb2d4-a58d-4cbc-9dd3-2d3122a398e0" /> icon appears in the Lifecycle column for the node, click to view the reason, which can be one of the following:
+Reasons that node has regular lifecycle (searchable from a filter above the list): If an <img width="20" src="https://github.com/user-attachments/assets/996cb2d4-a58d-4cbc-9dd3-2d3122a398e0" /> icon appears in the Lifecycle column for the node, click to view the reason, which can be one of the following:
  * Risk: The percentage of spot nodes configured in the [virtual node group configuration]() impacts the percentage of regular nodes launched. We recommend increasing the risk to continue running spots.
  * Pods with missing spot tolerations: The node has pods that lack the required spot tolerations, preventing them from running on spot VMs. This indicates that the node's pods cannot be scheduled on spot VMs. To address this issue, install the admission mutating webhook that injects the [spot toleration](https://docs.spot.io/ocean/getting-started/aks/?id=step-4-automatic-spot-tolerance-injection-optional), which AKS requires to run pods on spot nodes.
     * From the Actions menu, select **Spot Toleration Injection**.
