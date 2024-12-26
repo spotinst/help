@@ -28,21 +28,3 @@ When enabled, auto healing terminates and replaces VMs that were found unhealthy
 After you update the health checks and auto healing, save your changes to the stateful node configuration.
 
 Go to the Review tab and click **Update**.
-
-## View Health Check Status
-
-You can view the health status of VMs in the stateful node:
-
-1. In your stateful node, click the VMs tab. In the table of VMs, you can see the Health column with status icons displayed.
-
-   <img src="/elastigroup/_media/tutorials-azure-set-health-check-03.png" />
-
-2. In the Health column, hover the cursor over a specific icon. A detailed summary of the health checks for that VM appears.
-
-   <img src="/elastigroup/_media/tutorials-azure-set-health-check-04.png" width="309" height="298" />
-
-   In order of increasing severity, the possible statuses are:
-
-   - Healthy
-   - Unknown
-   - Unhealthy
