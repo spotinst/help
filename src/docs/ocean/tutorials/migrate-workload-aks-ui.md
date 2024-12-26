@@ -62,9 +62,12 @@ To fix:
    
 2. Click **Create New VNG** to create a virtual node group with these attributes. See how to configure a [virtual node group](https://docs.spot.io/ocean/tutorials/manage-virtual-nd-groups-aks?id=createedit-a-virtual-node-group) in the edit screen.
   
-If the Virtual Node Group Match column shows **No match** and there is no clickable link, we recommend checking your Azure workloads related to the Ocean virtual node group configuration to ensure they are correct and resolve any mismatches.
+If the Virtual Node Group Match column shows **No match**, view the tooltip to see the reason for the mismatch. We recommend checking your Azure workloads related to the Ocean virtual node group configuration to ensure they are correct and resolve any mismatches.
 
 If you drill down to a workload under a node and the <img width="20" src ="https://github.com/user-attachments/assets/2c5d0898-d226-4867-a6d2-acde7ca2fee7" /> **Spot toleration is missing** message appears  [Install the admission mutating webhook](https://docs.spot.io/ocean/getting-started/aks/?id=step-4-automatic-spot-tolerance-injection-optional) that injects the required spot toleration, which AKS requires to run pods on spot nodes.
+
+
+Actions menu note
 
 >**IMPORTANT:** If no nodes pass the validation process, you must fix errors before migrating.
 
