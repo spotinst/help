@@ -35,17 +35,17 @@ From the list of users, you can:
 
 ## Reset Password
 
-1. In the Spot console, go to the user icon and click **Settings**.
+1. In the Spot console, click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png">  > **Settings**.
 2. Click the Security tab and update your password.
 
 > **Tip**: SAML or SSO users who want to create an API Token will have to reset their password first.
 
-### Password Constraints
+### Passwords
 
-Your password must have at least eight characters and contain at least:
+Your password must have at least 8  characters and contain at least one:
 
-- One digit
-- One uppercase character
-- One lowercase character
-- One special character
+- Digit
+- Uppercase letter
+- Lowercase letter
+- Special character
 
