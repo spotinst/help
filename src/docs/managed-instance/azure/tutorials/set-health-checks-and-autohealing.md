@@ -1,4 +1,4 @@
-# Set Health Checks and Auto Healing
+k# Set Health Checks and Auto Healing
 
 Elastigroup provides configurable health checks to ensure that your VMs are ready and healthy for running your workloads. You can define health checks when you are creating a new Elastigroup or add them to an existing Elastigroup in the Compute configuration.
 
@@ -8,15 +8,12 @@ This tutorial is relevant for users of Elastigroup with Microsoft Azure.
 
 ## Define Health Check
 
-1. In the Elastigroup, click the Compute tab.
-2. Open the Health Check panel.
-
-    <img src="/elastigroup/_media/tutorials-azure-set-health-check-01.png" width="278" height="254" />
-
-3. Select the heath check options:
+1. In the Elastigroup, go to **Networking**.
+2. Select the heath check options:
    - Health Check Types: For auto healing to work, select at least one health check type:
-     - VM State
-     - [Application Gateway](https://docs.spot.io/elastigroup/tutorials-azure/connect-elastigroup-to-application-gateway?id=connect-elastigroup-to-application-gateway) is available only if you have previously defined an application gateway in the Elastigroup.
+     - **VM State** checks the VM's current state in Azure.
+     - **Application Gateway** tests the connection from the [application gateway](elastigroup/tutorials-azure/connect-elastigroup-to-application-gateway?id=connect-elastigroup-to-application-gateway)  to the VM. It’s available if at least one application gateway is defined in the Elastigroup.
+     - **VM Agent** checks the VM agent's current state in Azure.
    - Health Check Grace Period: Specify the time (in seconds) to allow a VM to boot and applications to fully start before the first health check. If a VM fails the health check after the given delay, auto healing terminates and replace the VM. The grace period must be at least 120 seconds.
 
 ## Activate Auto Healing
