@@ -136,18 +136,20 @@ To stop the migration process in progress.
 
 To view previous migrations:
 
-1.   Click **Migrations History** on the right of the screen (above the nodes list).
+* Click **Migrations History** on the right of the screen (above the nodes list).
 
-![workloads-previous-migrations2](https://github.com/user-attachments/assets/a2f1d1a8-afbb-40d9-bf90-9170421188fc)
+![aks-migration-history](https://github.com/user-attachments/assets/26c89422-da5d-4dc5-9a82-af0f584e5bdb)
 
-2.  Click on the required entry under Migrated Nodes to display the dashboard for that migration.
+The list of migrations displays:
 
-    Previous Migration Statuses:
-
-    *  Finished: All nodes were migrated.
-    *  Partly Completed: At least one selected node was not migrated.
-    *  Stopped: Migration was manually stopped.
-    *  Failed: Migration failed.
+* Migration ID.
+* Start Date of migration.
+* Number of migrated nodes (x/y). Click the link to display the dashboard for that migration.
+* Status of the migration.
+   *  <img width="20" src ="https://github.com/user-attachments/assets/41b067f4-9df4-41cd-9aac-0289409a9a73 " /> Completed: All nodes were migrated.
+   *  <img width="20" src ="https://github.com/user-attachments/assets/ed362ecb-bfb5-4d85-aada-8941e96a94a7" /> Partly migrated (in progress): At least one selected node was not migrated.
+   *  <img width="20" src="https://github.com/user-attachments/assets/fbb5322b-7b34-4f41-8883-49a88f10958d" /> Stopped: Migration was manually stopped.
+   *  <img width="20" src ="https://github.com/user-attachments/assets/1be4c530-7c3c-44b9-8564-f0128c4803c5 " /> Failed: Migration failed.
 
 
  
