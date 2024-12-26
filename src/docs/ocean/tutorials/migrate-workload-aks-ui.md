@@ -1,6 +1,6 @@
 #  Migrate AKS Workload using the Console
 
-This topic describes migrating your existing Kubernetes K8s workloads into an Ocean cluster via the Ocean Console.
+This topic describes migrating your existing Kubernetes K8s workloads into an Ocean cluster via the Ocean console.
 
 Before starting, review the [prerequisites](https://docs.spot.io/ocean/tutorials/migrate-workload-aks?id=prerequisites).
 
@@ -14,7 +14,7 @@ Before starting, review the [prerequisites](https://docs.spot.io/ocean/tutorials
 
 >**Note**: Worker nodes are the main compute resources running containerized applications in a Kubernetes cluster. System nodes (or master nodes) are the control plane components that manage the overall Kubernetes cluster and the workloads running on the worker nodes. The regular nodes are the on-demand nodes. The recommendation is to migrate the unmanaged worker nodes to become Ocean-managed Nodes. In the example above, before migration, there are no Ocean-managed nodes.
 
-Once you start migration, Ocean automatically detects the workloads (nodes and pods) of the associated Kubernetes cluster and displays a list of all the discovered nodes.
+Once you start the migration, Ocean automatically detects the workloads (nodes and pods) of the associated Kubernetes cluster and displays a list of all the discovered nodes.
 
 ![aks-workload-migration-discovery-vals](https://github.com/user-attachments/assets/5b99abd3-88a9-4063-b915-c7dff9fd5322)
 
@@ -25,9 +25,9 @@ The list of discovered nodes contains these columns:
 * Pod Count: Number of pods on node.
 * Virtual Node Group Match: Indicates whether an existing virtual node group matches the node.
 * Ready for Migration (Node Statuses):
-   * <img width="20" src ="https://github.com/user-attachments/assets/41b067f4-9df4-41cd-9aac-0289409a9a73 " /> Ready for migration: Node is validated and can be migrated (green color)
-   * Excluded: Node was not selected for migration (gray color).
-   * <img width="20" src ="https://github.com/user-attachments/assets/1be4c530-7c3c-44b9-8564-f0128c4803c5 " /> Unable to migrate: Node cannot be migrated (red color)
+   * <img width="20" src ="https://github.com/user-attachments/assets/41b067f4-9df4-41cd-9aac-0289409a9a73 " /> Ready for migration: Node is validated and can be migrated (green color).
+   * <img width="20" src="https://github.com/user-attachments/assets/fbb5322b-7b34-4f41-8883-49a88f10958d" /> Excluded: Node was not selected for migration (gray color).
+   * <img width="20" src ="https://github.com/user-attachments/assets/1be4c530-7c3c-44b9-8564-f0128c4803c5 " /> Unable to migrate: Node cannot be migrated (red color).
    * <img width="20" src ="https://github.com/user-attachments/assets/d21899f7-d922-4f36-a2bf-835b8831f112" /> Requires validation: Nodes are checked before migration to ensure successful migration. If an issue is identified for a node, you can either fix it or select a different node. 
 
 Node validation checks for the following:
@@ -56,29 +56,28 @@ If the Virtual Node Group Match column displays **No match** and has a **click t
 
 To fix:
 
-1. Click the link. An issues dialog box displays the labels and taints required for a virtual node group to match the node.
+1. Click the link. An issues dialog box displays the labels and taints required for a virtual node group in your cluster to match the selected node.
    
    <img width="900" src ="https://github.com/user-attachments/assets/eeabf8ba-8a85-47b3-aa0e-b8cd46218c9b" />
    
-2. Click **Create New VNG** to create a virtual node group with these attributes. See how to configure a [virtual node group](https://docs.spot.io/ocean/tutorials/manage-virtual-nd-groups-aks?id=createedit-a-virtual-node-group) in the edit screen.
+2. Click **Create New VNG** to create a virtual node group that contains these injected attributes. See how to configure a [virtual node group](https://docs.spot.io/ocean/tutorials/manage-virtual-nd-groups-aks?id=createedit-a-virtual-node-group) in the edit screen.
+
+>**Note**: The new virtual node group's other attributes are inherited from the virtual node group template.
   
 If the Virtual Node Group Match column shows **No match**, view the tooltip to see the reason for the mismatch. We recommend checking your Azure workloads related to the Ocean virtual node group configuration to ensure they are correct and resolve any mismatches.
 
-If you drill down to a workload under a node and the <img width="20" src ="https://github.com/user-attachments/assets/2c5d0898-d226-4867-a6d2-acde7ca2fee7" /> **Spot toleration is missing** message appears  [Install the admission mutating webhook](https://docs.spot.io/ocean/getting-started/aks/?id=step-4-automatic-spot-tolerance-injection-optional) that injects the required spot toleration, which AKS requires to run pods on spot nodes.
+If you drill down to a workload under a node and the <img width="20" src ="https://github.com/user-attachments/assets/2c5d0898-d226-4867-a6d2-acde7ca2fee7" /> **Spot toleration is missing** message appears, [nstall the admission mutating webhook](https://docs.spot.io/ocean/getting-started/aks/?id=step-4-automatic-spot-tolerance-injection-optional)  that injects the required spot toleration, which AKS requires to run pods on spot nodes:
+*  From the Actions menu at the top-right of the screen, click **Spot Toleration Injection**.
 
-
-Actions menu note
+[Install the admission mutating webhook](https://docs.spot.io/ocean/getting-started/aks/?id=step-4-automatic-spot-tolerance-injection-optional) 
 
 >**IMPORTANT:** If no nodes pass the validation process, you must fix errors before migrating.
 
-If at least 1 but not all the nodes pass the validation process, you can proceed to migrate them.
+You can migrate if at least 1 of the selected nodes is successfully validated.
 
  </div>
 
 </details>
-
-
-
 
 
 ##  Step 2: Set Preferences
@@ -111,12 +110,18 @@ Follow the migration in the dashboard.
 
 Node Statuses:
 
-*  In Progress: Migration has started (dark blue color)
-*  Migrated: Node has been migrated (green color)
-*  Not Migrated: Node was not migrated due to stopped migration (gray color).
-*  To be Migrated: Node has not yet been migrated (light blue color)
-*  Failed: Migration failed (red color)
-*  Manually Excluded: Node was not selected for migration (gray color)
+*  <img width="20" src ="https://github.com/user-attachments/assets/ed362ecb-bfb5-4d85-aada-8941e96a94a7" /> In Progress: Migration has started (dark blue color)
+*  <img width="20" src ="https://github.com/user-attachments/assets/41b067f4-9df4-41cd-9aac-0289409a9a73 " /> Migrated: Node has been migrated (green color).
+*  <img width="20" src="https://github.com/user-attachments/assets/fbb5322b-7b34-4f41-8883-49a88f10958d" /> Not Migrated: Node was not migrated due to stopped migration, or was manually excluded for migration (gray color).
+*  <img width="20" src ="https://github.com/user-attachments/assets/1d4e0b3d-de64-490b-a408-e823d3d24a1e" /> To be Migrated: Node has not yet been migrated (light blue color)
+*  <img width="20" src ="https://github.com/user-attachments/assets/1be4c530-7c3c-44b9-8564-f0128c4803c5 " /> Failed: Migration failed (red color)
+
+
+
+
+
+
+
 
 ###  Stop Migration
 
@@ -124,14 +129,14 @@ You can stop a migration in progress. However, migrated workloads remain under t
 
 To stop the migration process in progress.
 
-1.  Click **Stop Migration**.
+1.  Click **Stop Migration** on the right of the screen (above the nodes list).
 2.  Select **Terminate Drained Instances** if you want Ocean to terminate the already drained nodes before stopping the entire process.
 
 ##  View Previous Migrations
 
 To view previous migrations:
 
-1.   From the Actions drop-down menu at the top-right of the screen, click **Previous Workload Migrations**.
+1.   Click **Migrations History** on the right of the screen (above the nodes list).
 
 ![workloads-previous-migrations2](https://github.com/user-attachments/assets/a2f1d1a8-afbb-40d9-bf90-9170421188fc)
 
