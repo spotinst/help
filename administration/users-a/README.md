@@ -42,10 +42,11 @@ From the list of users, you can:
 
 ### Passwords
 
-Your password must have at least 8  characters and contain at least one:
+Your password must have at least:
 
-- Digit
-- Uppercase letter
-- Lowercase letter
-- Special character
+- 8 characters
+- One number
+- One uppercase letter
+- One lowercase letter
+- One special character
 
