@@ -240,7 +240,7 @@ Define the networking settings for your stateful node. At least one network inte
 
   - VM state checks the VM’s current status in Azure.
   - Application gateway tests the connection from the application gateway to the VM. It’s available if at least one application gateway is defined in the Elastigroup. You also select the health check grace period in seconds, which is the time to allow a VM to boot and applications to fully start before the first health check.
-  - VM Agent checks the VM agent's current state in Azure.
+  - VM agent checks the VM agent's current state in Azure.
 
 * [Auto healing](managed-instance/azure/tutorials/set-health-checks-and-autohealing) checks the VM health according to the health check types and replaces unhealthy VMs.
 
