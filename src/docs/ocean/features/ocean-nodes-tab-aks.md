@@ -31,26 +31,25 @@ The nodes list contains these columns:
 * Availability Zone: Availability zone for the node pool (includes region information).
 * VM Size: Machine type.
 * OS Image: Image name.
-* Lifecycle: Regular or spot. If an <img width="20" src="https://github.com/user-attachments/assets/996cb2d4-a58d-4cbc-9dd3-2d3122a398e0" /> icon appears when lifecycle is regular, click to view the reason, which can be one of the following:
-   * Risk: The percentage of spot nodes configured in the [virtual node group configuration]() impacts the percentage of regular nodes launched. We recommend increasing the risk to continue running spots.
-   * Pods with missing spot tolerations: The node has pods that lack the required spot tolerations, preventing them from running on spot VMs. This indicates that the node's pods cannot be scheduled on spot VMs. To address this issue, install the admission mutating webhook that injects the required [spot toleration](), which AKS requires to run pods on spot nodes.
-   * Fallback to regular lifecycle: The node has fallen back to regular lifecycle. This setting is configured in the [virtual node group](). This lets Ocean launch regular VMs when spot markets are unavailable. When spots become available, regular nodes are reverted to spots.
-* Pods
+* Lifecycle: Regular or spot. 
 
-The following filters above the table let you search according to the criteria:
+Workload Requirements (searchable from a filter above the list): 
 
-* Workload requirements:
   * Node lifecycle: regular or spot. Pods requiring regular lifecycle: The node has one or more pods that explicitly require a regular lifecycle. These pods may have specific requirements or dependencies that make them incompatible with spot VMs.
-  * PDB [link to Azure]
+  * PDB: Some pods may have a [Pod Disruption Budget](https://kubernetes.io/docs/concepts/workloads/pods/disruptions/#pod-disruption-budgets). When turned on, Ocean verifies the PDB and will not migrate a node if the PDB is violated. 
   * Required VM Type
-  * Restrict scale-down [kub scaling link]
+  * Restrict scale-down: Rolls do not consider the restrict scale-down label. Ocean will migrate a node even if a task or pod uses this label. Ocean's autoscaler considers all configured constraints before the roll.
   * Required availability zone
+
+>**Note**: When pods have constraints that impact Workload requirements, an <img width="20" src="" /> icon appears in the Pods column of the nodes list, to the right of the number of pods. Click the icon to view the reason(s) and the number of pods affected.
+
  
-* Reason for regular
-  * Risk
-  * Missing spot tolerations
-  * Fallback to regular
- 
+Reasons for Regular Node (searchable from a filter above the list): If an <img width="20" src="https://github.com/user-attachments/assets/996cb2d4-a58d-4cbc-9dd3-2d3122a398e0" /> icon appears in the Lifecycle column for the node, click to view the reason, which can be one of the following:
+ * Risk: The percentage of spot nodes configured in the [virtual node group configuration]() impacts the percentage of regular nodes launched. We recommend increasing the risk to continue running spots.
+ * Pods with missing spot tolerations: The node has pods that lack the required spot tolerations, preventing them from running on spot VMs. This indicates that the node's pods cannot be scheduled on spot VMs. To address this issue, install the admission mutating webhook that injects the [spot toleration](https://docs.spot.io/ocean/getting-started/aks/?id=step-4-automatic-spot-tolerance-injection-optional), which AKS requires to run pods on spot nodes.
+    * From the Actions menu, select **Spot Toleration Injection**.
+ * Fallback to regular lifecycle: The node has fallen back to regular lifecycle. This setting is configured in the [virtual node group](). This lets Ocean launch regular VMs when spot markets are unavailable. When spots become available, regular nodes are reverted to spots.
+
 ## Roll Nodes
 
 To start an immediate node roll:
