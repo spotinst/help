@@ -1,5 +1,6 @@
 # Create an Elastigroup from Scratch
-This procedure describes how to create an Elastigroup using an empty template. To create an Elastigroup based on an existing workload such as AWS Elastic Beanstalk or AutoScaling Groups, choose your workload type under Use Cases and import a copy of your workload configuration.  
+
+You can create an Elastigroup using an empty template. To create an Elastigroup based on an existing workload such as AWS Elastic Beanstalk or AutoScaling Groups, choose your workload type under Use Cases and import a copy of your workload configuration.  
 
 ## Prerequisite
 
