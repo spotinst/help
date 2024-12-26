@@ -1,14 +1,14 @@
-k# Set Health Checks and Auto Healing
+# Set Health Checks and Auto Healing
 
-Elastigroup provides configurable health checks to ensure that your VMs are ready and healthy for running your workloads. You can define health checks when you are creating a new Elastigroup or add them to an existing Elastigroup in the Compute configuration.
+Elastigroup stateful node has configurable health checks make sure your VMs are ready and healthy for running your workloads. You can define health checks when you are creating a stateful node or add them to an existing stateful node in the Networking configuration.
 
-When you activate Elastigroup’s auto healing, health check and auto healing work together to provide a high availability solution. Once the health check has determined that a VM is unhealthy, auto healing will terminate and replace the VM automatically.
+When you activate Elastigroup stateful node’s auto healing, health check and auto healing work together to provide a high availability solution. Once the health check has determined that a VM is unhealthy, auto healing will terminate and replace the VM automatically.
 
-This tutorial is relevant for users of Elastigroup with Microsoft Azure.
+This is relevant for users of Elastigroup stateful nodes with Microsoft Azure.
 
 ## Define Health Check
 
-1. In the Elastigroup, go to **Networking**.
+1. In the stateful node, go to **Networking**.
 2. Select the heath check options:
    - Health Check Types: For auto healing to work, select at least one health check type:
      - **VM State** checks the VM's current state in Azure.
@@ -21,21 +21,19 @@ This tutorial is relevant for users of Elastigroup with Microsoft Azure.
 When enabled, auto healing terminates and replaces VMs that were found unhealthy by the health checks you defined. To use auto healing, you must define at least one health check type.
 
 1. Turn **Auto Healing** to <i>On</i>.
-2. Set Unhealthy Duration. This is the amount of time (in seconds) to keep existing VMs that are found unhealthy before the VM is terminated and replaced with a new one. An instance must be found healthy at least one for this to work.
-
-<img src="/elastigroup/_media/tutorials-azure-set-health-check-02.png" width="261" height="160" />
+2. Set **Unhealthy Duration**. This is the amount of time (in seconds) to keep existing VMs that are found unhealthy before the VM is terminated and replaced with a new one. An instance must be found healthy at least one for this to work.
 
 ## Save Your Changes
 
-After you update the health checks and auto healing, save your changes to the Elastigroup configuration.
+After you update the health checks and auto healing, save your changes to the stateful node configuration.
 
 Go to the Review tab and click **Update**.
 
 ## View Health Check Status
 
-You can view the health status of VMs in the Elastigroup:
+You can view the health status of VMs in the stateful node:
 
-1. In your Elastigroup, click the VMs tab. In the table of VMs, you can see the Health column with status icons displayed.
+1. In your stateful node, click the VMs tab. In the table of VMs, you can see the Health column with status icons displayed.
 
    <img src="/elastigroup/_media/tutorials-azure-set-health-check-03.png" />
 
