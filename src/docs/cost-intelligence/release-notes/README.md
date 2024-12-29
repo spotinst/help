@@ -1,8 +1,15 @@
 # Cost Intelligence Release Notes
 
+* **COI-0018**: December 29th, 2024: Cost Intelligence provides additional cost-related data to key best practice checks. You can see summary and aggregated views at both the check level  and assessment level.  [Learn more](cost-intelligence/tutorials/best-practice-checks/?id=check-detail-page)
+
+<details>
+  <summary markdown="span">November 2024</summary>
+  
 * **COI-0017**: November 18th, 2024: Cost Intelligence includes recommendations that identify resources that can be managed and optimized by Spot Ocean. You can click the button to onboard these resources to Ocean. [Learn more](cost-intelligence/tutorials/best-practice-checks/?id=source)
 
 * **COI-0016**: November 5th, 2024: You can now define asset groups, which allow you to view and manage data with a set of filters that apply to different pages. [Learn more](cost-intelligence/tutorials/dashboard/?id=asset-groups)
+
+</details>
 
 <details>
   <summary markdown="span">October 2024</summary>
