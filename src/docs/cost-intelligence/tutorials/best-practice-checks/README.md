@@ -13,7 +13,7 @@ You can choose to **show checks with no infractions**.
 
 Click **Export** to export your data to a CSV file.
 
-![bestpracticechecks1](https://github.com/user-attachments/assets/16a1c43f-708a-46ee-83b3-8c9b345914b8)
+<img width=900 src="https://github.com/user-attachments/assets/16a1c43f-708a-46ee-83b3-8c9b345914b8">
 
 ## Categories
 
@@ -68,11 +68,12 @@ Best practice checks take data from:
 
 When you click on the name of a check, you can see its details, including the specific resources that triggered it.
 
-You can click info <img height="14" alt="i" src="https://github.com/user-attachments/assets/534c7442-32fe-48c1-996b-d54d9f956281"> to see more details about the issue.
+You can click info <img height="18" src="https://github.com/user-attachments/assets/534c7442-32fe-48c1-996b-d54d9f956281"> to see more details about the issue.
 
 Sort the best practice checks by the Remediation Effort column to identify items to remediate. Click **Remediate** for step-by-step instructions on how to fix the issue.
 
-![bestpracticechecks2](https://github.com/user-attachments/assets/d734dde0-224e-41a4-9f14-40914fdde363)
+<img width=900 src="https://github.com/user-attachments/assets/c92f82ad-ed25-4c80-8f40-d9a9e6cdf4a7">
+
 
 
 ## Remediation
