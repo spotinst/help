@@ -9,7 +9,7 @@ Use Datadog integration to collect billable and usage metrics for your organizat
 3. Copy the API key value.
 4. [Create an application key](https://docs.datadoghq.com/account_management/api-app-keys/#add-application-keys) in Datadog.
 5. Copy the application key.
-6. In the Spot Console, go to **Cost Intelligence** > **Administration**.
+6. In the Spot console, go to **Cost Intelligence** > **Administration**.
 7. Click **Integrations** > **Datadog** > **Add Instance**.
 8. Paste the API key value from Datadog in <i>Datadog API Key</i>.
 9. Click **Access** > **Application Keys** > **+New Key**.
