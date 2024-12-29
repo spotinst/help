@@ -5,7 +5,7 @@ Use Databricks integration to collect billable and usage metrics for your organi
 ## Configure Databricks in Cost Intelligence
 
 1. In Databricks, get the [account ID](https://docs.databricks.com/en/admin/account-settings/index.html#account-console).
-2. In the Spot Console, go to **Cost Intelligence** > **Administration**.
+2. In the Spot console, go to **Cost Intelligence** > **Administration**.
 3. Click **Integrations** > **Databricks** > **Add Instance**.
 4. Enter a <i>Name</i>.
 5. Paste the account ID from Databricks in <i>Client ID</i>.
