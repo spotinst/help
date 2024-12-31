@@ -1,6 +1,6 @@
 # Billing Engine Policy 
 
-Billing Engine collects information on cost and usage data in in the AWS and Azure and Google providers.
+Billing Engine collects cost and usage data from the AWS, Azure, and Google providers.
 
 ## Billing Engine AWS Policy 
 
