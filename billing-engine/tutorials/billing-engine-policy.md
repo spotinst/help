@@ -10,7 +10,8 @@ The Billing Engine policy includes the permissions needed to access the AWS Cost
    <summary markdown="span">View Billing Engine AWS policy</summary>
 
    <pre><code>
-     
+
+  ```json  
      {
   "Statement": [
     {
@@ -40,6 +41,7 @@ The Billing Engine policy includes the permissions needed to access the AWS Cost
   ],
   "Version": "2012-10-17"
 }
+```    
 
 </code></pre>
 
