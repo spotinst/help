@@ -28,17 +28,18 @@ Your workload optimization activities impact the status of the workloads in the 
 This list displays your right-sizing recommendations per workload and lets you drill down per container.
 *  [Right Sizing rules](ocean/features/ocean-cluster-right-sizing-recom-tab?id=automation-rules-list) that are attached to specific workloads.
 *  Workload Status: If the workload is [attached](ocean/features/ocean-cluster-right-sizing-recom-tab?id=attach-a-right-sizing-rule-to-one-or-more-workloads) to a right-sizing rule, the name of the rule appears under **Rules**. The rule has one of the following workload (colored) optimization statuses:
-   *  Green (Optimized): The Workload is fully optimized, and no action is required.
+   *  Green (Fully Optimized): The Workload is fully optimized, and no action is required.
    *  Orange (Limited): The Workload has optimization limitations (constrained by settings). 
-   *  Gray (Pending): The rule for the workload has been attached but is out of schedule.
+   *  Blue (Pending): The rule for the workload has been attached but is out of schedule.
+   *  Gray (Rollback): Ocean rolled back to the original deployment request and suspended the workload's attachment to the rule.
+   *  Red (Not Optimized): The Workload is not optimized.
 *  Workload type and namespace.
 *  Recommendations for vCPU and memory right sizing per deployment. Recommended increases are shown with a green up arrow, and recommended decreases are shown with a red Down arrow.  
 *  If the workload is configured with HPA, **ON** is displayed under HPA. Hover over the entry for information about the specific HPA trigger (CPU/Memory/other).
 * Potential monthly max. Savings if you adopt these recommendations.
 
 > **Notes**:
-> - Red status: The Workload is not optimized.
-> - Orange or gray status: Hover over the workload optimization status to view more details in a tooltip.
+> - Orange or blue status: Hover over the workload optimization status to view more details in a tooltip.
 > - There are no vCPU / memory recommendations or Potential monthly max if a workload is fully optimized. Savings are displayed for the workload because Ocean is already optimizing it.
 >  
 > - If the <img height="20" src="https://github.com/user-attachments/assets/6160df45-992e-41a8-bcc2-5af1bee732ff" /> button appears on the right of the screen, workloads were moved to rollback status. See [Acknowledge a Workload Rollback](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=acknowledge-a-workload-rollback)
