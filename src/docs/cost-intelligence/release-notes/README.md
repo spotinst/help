@@ -4,8 +4,9 @@
    <summary markdown="span" style="color:#7632FE; font-weight:600">December, 2024 - click to view</summary>
 
 <div style="padding-left:16px">
+
   
-* **COI-0018**: December 29th, 2024: Cost Intelligence provides additional cost-related data to key best practice checks. You can see summary and aggregated views at both the check level  and assessment level.  [Learn more](cost-intelligence/tutorials/best-practice-checks/?id=check-detail-page)
+* **COI-0018**: December 29th, 2024: Cost Intelligence provides additional cost-related data to key best practice checks. You can see summary and aggregated views at both the check level and assessment level. [Learn more](cost-intelligence/tutorials/best-practice-checks/?id=check-detail-page)
 
  </div>
  </details>
@@ -14,6 +15,7 @@
    <summary markdown="span" style="color:#7632FE; font-weight:600">November, 2024 - click to view</summary>
 
 <div style="padding-left:16px">
+
   
 * **COI-0017**: November 18th, 2024: Cost Intelligence includes recommendations that identify resources that can be managed and optimized by Spot Ocean. You can click the button to onboard these resources to Ocean. [Learn more](cost-intelligence/tutorials/best-practice-checks/?id=source)
 
@@ -43,6 +45,7 @@
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600">September, 2024 - click to view</summary>
 
+
 * **COI-0010**: September 29th, 2024: You can now use the Workflow Builder to create highly configurable flows within Cost Intelligence Dashboards to generate data-driven alerts and export them in various formats such as PDF and Excel. [Learn more](cost-intelligence/tutorials/workflow-builder/)
 
 * **COI-0009**: September 16th, 2024: You can now integrate Splunk with Cost Intelligence to collect billable and usage metrics for your organization. [Learn more](cost-intelligence/tutorials/integrations/splunk)
@@ -66,6 +69,7 @@
    <summary markdown="span" style="color:#7632FE; font-weight:600">May, 2024 - click to view</summary>
 
 <div style="padding-left:16px">
+
   
 * **COI-0006**: May 7th, 2024: You can now add multiple subscriptions to Cost Intelligence simultaneously using the Azure CLI onboarding tool. [Learn more](cost-intelligence/get-started/connect-with-azure-cli)
 
