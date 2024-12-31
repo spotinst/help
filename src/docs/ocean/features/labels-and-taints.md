@@ -141,6 +141,16 @@ You may want to deploy a specific pod to a node before deploying other pods to t
 
 The startup taint applied to a node is a dedicated temporary taint. The pod used for initialization will have a tolerance to this taint exclusively. Once the pod is ready, the application running on the pod will remove the taint from the node.
 
+The autoscaler treats nodes with the startup taint so that pending pods will be simulated on those nodes, even though the pods do not have the required toleration for the startup taint.
+
+After a short period, the startup taint is removed, and the pods are scheduled on those nodes.
+
+>**Note:** To prevent nodes that are “stuck” with startup taint, for example, if the `startupTaint` attribute could not be removed for a specific node, Ocean will stop simulating pending pods on the nodes with start if the cluster's grace period time passed since the node creation time (the default is 5 minutes, and it can be configured in the cluster under cluser.strategy. gracePeriod)
+
+COMMENT Need clarification.
+
+
+
 Ocean provides a `startupTaints` attribute to manage startup taints.
 
 ### Configure Startup Taints in the Spot API
