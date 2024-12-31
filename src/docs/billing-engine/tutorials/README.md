@@ -12,6 +12,14 @@ Billing Engine includes default strategies for handling Reserved Instances (RI),
 
 Plans is also a feature that is tied to specific commercial offerings or agreements. Plans support three rule types for manipulating billing data across all cloud providers. These rules can be ordered to control their application. Once a plan and its associated rules are configured, they can impact the usage of targeted cloud accounts or accounts within a specific family. 
 
-## Billing Analysis 
+## Analysis 
 
-Billing Analysis displays cloud spending and provides detailed insights into your financial presence in the cloud.  
+Billing Analysis displays cloud spending and provides detailed insights into your financial presence in the cloud. 
+
+## Policies
+
+This page includes permissions for accessing cost and usage data in AWS, Azure, and Google Cloud providers. It explains the specific permissions required for each provider, including accessing the AWS Cost and Usage Report/Data Export, Azure roles like Enrollment Reader and MCA Billing Account Reader, and the Google Cloud Project Viewer Role.
+
+## Allocation Assignments
+
+Allocation Assignments allows the allocation of costs based on specific identifiers, facilitating detailed cost reporting and analysis, and enabling association of accounts with specific entities or identifiers for more granular cost tracking.
