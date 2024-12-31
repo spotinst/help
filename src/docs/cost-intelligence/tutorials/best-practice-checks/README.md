@@ -7,13 +7,13 @@ Cloud service providers have many options to customize your deployment. Using be
 
 Select one or more cloud providers, accounts, and a date.
 
-You can click on a card to filter the checks and failed resources by importance or category. For example, click **Availability Category** to see a list of the failed resources for Availability.
+* You can click on a card to filter the checks and failed resources by importance or category. For example, click **Availability Category** to see a list of the failed resources for Availability.
 
-You can choose to **show checks with no infractions**. 
+* You can choose to **show checks with no infractions**. 
 
-Click **Export** to export your data to a CSV file.
+* Click **Export** to export your data to a CSV file.
 
-<img width=900 src="https://github.com/user-attachments/assets/16a1c43f-708a-46ee-83b3-8c9b345914b8">
+![image](https://github.com/user-attachments/assets/e8d73f06-7fc8-4e45-93bd-165cbe16447a)
 
 ## Categories
 
