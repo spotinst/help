@@ -2,6 +2,8 @@
 
 Spot Cost Intelligence assists you in making informed decisions by providing you with the data you need specifically for your use cases. With powerful dashboards and insight-driven visualizations on cloud costs, services, and your entire environment, you can drive the success of short-term projects and your overall FinOps strategy. 
 
+![image](https://github.com/user-attachments/assets/4f948d2d-c72d-46cb-acaa-e37d5e79382b)
+
 ## Cost Intelligence Release Notes
 
 Check out the [Cost Intelligence Release Notes](https://docs.spot.io/cost-intelligence/release-notes/) for information about the latest released Ocean features.
