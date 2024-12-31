@@ -7,7 +7,7 @@ Ocean exports custom data files into one of Cost Intelligence’s S3 buckets dai
 * A Billing Engine account. 
 
 ## Request Integration and Export Data
-To request the integration and export of data from Ocean to Cost Intelligence, contact Spot’s support team to enable the integration and turn on the data export to the designated S3 bucket.
+To request the integration and export of data from Ocean to Cost Intelligence, contact [Spot’s support team](https://spot.io/support/) to enable the integration and turn on the data export to the designated S3 bucket.
 
 When the integration is enabled, the data is automatically exported, joined, and synchronized in Cost Intelligence. A managed dashboard with pre-built charts, designed to utilize Ocean data, will be created. 
 
