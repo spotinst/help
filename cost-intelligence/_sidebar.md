@@ -8,7 +8,7 @@
     - [Connect to Azure](cost-intelligence/get-started/connect-azure)
     - [Connect with Azure CLI](cost-intelligence/get-started/connect-with-azure-cli)
   - [Release Notes](cost-intelligence/release-notes/)
-  - [Tutorials](cost-intelligence/tutorials/)
+  - [Features](cost-intelligence/tutorials/)
     - [Cost Intelligence Policy](cost-intelligence/tutorials/cost-intelligence-policy/)
     - [Dashboards](cost-intelligence/tutorials/dashboard/)
       - [Generate Derived Values](cost-intelligence/tutorials/dashboard/derived-values)
