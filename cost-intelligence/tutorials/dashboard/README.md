@@ -22,8 +22,8 @@ Cost Intelligence Dashboards come with a default dashboard that is set for all u
 
 Complete the following steps to set the default dashboard.
 
-1. In the _Actions_ drop down menu, click **Select Default Dashboard**.
-2. In the _Change Dashboard_ window, select the default dashboard you want to set.
+1. In the <i>Actions</i> drop down menu, click **Select Default Dashboard**.
+2. In the <i>Change Dashboard</i> window, select the default dashboard you want to set.
 
 ## Edit an Existing Dashboard    
 
