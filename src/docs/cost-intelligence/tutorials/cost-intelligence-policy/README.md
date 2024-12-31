@@ -6,11 +6,7 @@ Cost Intelligence collects information on various services and metrics in the AW
 
 The Cost Intelligence policy contains permissions from the [AWS read only access policy](https://docs.aws.amazon.com/aws-managed-policy/latest/reference/ReadOnlyAccess.html). There are fewer actions as some of the actions from the read only permissions aren't required for Cost Intelligence.
 
- <details>
-   <summary markdown="span">View Cost Intelligence policy</summary>
-
-   <pre><code>
-
+```json
 {
   "Statement": [
     {
@@ -159,9 +155,7 @@ The Cost Intelligence policy contains permissions from the [AWS read only access
   ],
   "Version": "2012-10-17"
 }
-</code></pre>
-
- </details>
+```
 
 ## Security Essentials AWS Policy (Optional)
 
@@ -169,10 +163,7 @@ The Security Essentials AWS policy can be added using the cloud formation templa
 
 Along with that, to enable premium features like anomaly and threat detections in the future, add the policy below:
 
- <details>
-   <summary markdown="span">Security Essentials AWS policy</summary>
-
-<pre><code>
+```json
 {
   "Statement": [
     {
@@ -191,9 +182,7 @@ Along with that, to enable premium features like anomaly and threat detections i
   ],
   "Version": "2012-10-17"
 }
-</code></pre>
-
- </details>
+```
 
 Note: If you enable Cost Intelligence and Security Essentials, all of the permissions in the JSON are included. The additional permissions are s3:GetObject and s3:GetObjectTagging.
 
