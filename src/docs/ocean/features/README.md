@@ -4,7 +4,7 @@ Ocean automates cloud infrastructure for containers. It continuously analyzes ho
 
 ## Ocean Cross-Cloud Service Provider Features
 
-These are the Ocean features available for all cloud service providers:
+These are the main Ocean features available for all cloud service providers:
 
 * [Scaling for Kubernetes](ocean/features/scaling-kubernetes)
 * [Headroom](ocean/features/headroom)
@@ -14,9 +14,11 @@ These are the Ocean features available for all cloud service providers:
 * [Cluster Roll](ocean/features/roll-gen)
 * [Shutdown Hours](ocean/features/running-hours)
 
-Features only available for specific cloud service providers are listed below:
+Features only available for specific cloud service providers are marked (for example) as follows:
 
-## Ocean Features Available for AWS Kubernetes ONLY
+Example: Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>, <font color="#FC01CC">ECS</font>    
+
+<!--## Ocean Features Available for AWS Kubernetes ONLY
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id=”texttolinkto”>View list...</summary>
@@ -105,4 +107,4 @@ These features are ONLY available for Ocean AWS ECS:
 
 ## Related Topics
 
-Select a topic in the sidebar on the left to learn more about Ocean features.
+Select a topic in the sidebar on the left to learn more about Ocean features. -->
