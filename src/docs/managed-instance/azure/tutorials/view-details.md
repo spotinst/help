@@ -1,6 +1,6 @@
 # Stateful Node Details
 
-The Stateful Nodes Overview give you access to key information and summary data about a node. It offers insights into cost efficiency, as well as details about persisted network and storage resources. 
+The Stateful Nodes Overview gives you access to key information and summary data about a node. It offers insights into cost efficiency, as well as details about persisted network and storage resources. 
 
 ## Stateful Nodes Overview
 The Stateful Node Overview tab gives you quick access to insights and summary data about the node. You can obtain an overview of your current cost efficiency status and an overview of your persisted network and storage resources.
@@ -22,19 +22,19 @@ You can see the node status next to the name. It can be one of these statuses:
 
 The Node Summary give you insights into your node usage. 
 
-You can see statistics from the first of the month to the current date. You can also see the statistics for the last seven and 30 days.
+You can see statistics from the first of the month to the current date, as well as the last 7 or 30 days.
 
 <img width="900" src="https://github.com/spotinst/help/assets/106514736/df7fa0a8-c526-4359-b2fa-80cf751c1853">
 
 The widgets show the:
 
-* VM Size: The VM size assigned to the node. An icon to the left indicates the VM life cycle. Green is a spot VM and blue is On-demand.
+* VM Size: The VM size assigned to the node. Green is a spot VM and blue is on-demand.
 * Hours: Number of hours the VM has been used.
 * Potential Costs: The cost calculated if the VM had been on-demand.
 * Actual Costs: The cost of the VM using spot VMs.
-* OD Costs: The cost of on-demand VMs used. (This should be zero unless no spot VMs were available and fallback to OD was required.)
+* OD Costs: The cost of on-demand VMs used. This should be zero unless no spot VMs were available and fallback to on-demand was required.
 * Saved: The amount of money saved using spot VMs.
-* Savings Percentage: The percentage of savings when using spot VMs compared to the potential cost if all OD VMs had been used.
+* Savings Percentage: The percentage of savings when using spot VMs compared to the potential cost if all on-demand VMs had been used.
 
 You can also see a quick reference point for vital information about the stateful node.
 
@@ -45,14 +45,14 @@ You can also see a quick reference point for vital information about the statefu
 * VM Resource Group: The resource group of the VM. 
 * Description: The description you provided when the node was created.
 * Region: The region defined on the node.
-* VM Image: The image defined on the node. It will not be displayed when the node is defined with OS persistence.
+* VM Image: The image defined on the node. It is not shown when the node is defined with OS persistence.
 * Availability Zones: The Azure availability zones that are defined on the node.
 * Creation Date: The date the node was created. 
 * VNet Resource Group: Resource group defined on the virtual network of the node.
 * Virtual Network: The virtual network of the primary network interface.
 * Subnet: The subnet name defined for the primary network interface.
 * Spot VM Sizes: The list of spot VM sizes defined on the node.
-* On-demand VM Sizes: The list of On-demand VM sizes defined on the node.
+* On-demand VM Sizes: The list of on-demand VM sizes defined on the node.
 
 ### Persisted Resources
 
@@ -130,7 +130,7 @@ Hover over a specific bar in the chart to see the:
 
 The doughnut chart summarizes overall costs within the selected time range.
 
-Hover over the chart to see the:
+Hover over the chart to see the costs by:
 
 * Spot
 * OD (On-Demand)
