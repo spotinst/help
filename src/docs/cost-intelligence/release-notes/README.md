@@ -43,7 +43,7 @@
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600">September, 2024 - click to view</summary>
 
- <div style="padding-left:16px">
+<div style="padding-left:16px">
 
 * **COI-0010**: September 29th, 2024: You can now use the Workflow Builder to create highly configurable flows within Cost Intelligence Dashboards to generate data-driven alerts and export them in various formats such as PDF and Excel. [Learn more...](cost-intelligence/tutorials/workflow-builder/)
 
