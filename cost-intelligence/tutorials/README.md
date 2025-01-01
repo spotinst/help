@@ -1,6 +1,8 @@
 # Features
 
-The procedures in this section describe how to maximize your cost intelligence policies, set up dashboards, and ensure that the infrastructure of your deployment is configured properly to reduce your costs by utilizing your usage data.  
+The procedures in this section describe how to maximize your cost intelligence policies, set up dashboards, and ensure that the infrastructure of your deployment is configured properly to reduce costs by utilizing usage data. 
+
+The following list of Cost Intelligence features and terminology includes various tools and functionalities that allow organizations to track, analyze, and optimize their financial performance. 
 
 ## Cost Intelligence Policy
 
