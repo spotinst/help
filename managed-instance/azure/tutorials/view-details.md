@@ -1,32 +1,32 @@
 # Stateful Node Details
 
-The Stateful Nodes Overview provides access to key information and summary data about a node. It offers insights into cost efficiency, as well as details about persisted network and storage resources. 
+The Stateful Nodes Overview give you access to key information and summary data about a node. It offers insights into cost efficiency, as well as details about persisted network and storage resources. 
 
 ## Stateful Nodes Overview
 The Stateful Node Overview tab gives you quick access to insights and summary data about the node. You can obtain an overview of your current cost efficiency status and an overview of your persisted network and storage resources.
 
 To get to the Stateful Node Overview tab:
 
-1. In the Spot console, click **Elastigroup** in the left main menu and click **Stateful Nodes**.
+1. In the Spot console, go to **Elastigroup** > **Stateful Nodes**.
 2. In the [list of stateful nodes](managed-instance/azure/tutorials/manage), click a Node Name.
 
-<img width="944" alt="azure-view-stateful-node-details-01a" src="https://github.com/spotinst/help/assets/106514736/12e274e3-0350-44a7-b40e-cf9241357ebf">
+<img width="900" alt="azure-view-stateful-node-details-01a" src="https://github.com/spotinst/help/assets/106514736/12e274e3-0350-44a7-b40e-cf9241357ebf">
 
 Click **Edit Node** to configure the node. 
 
-The node status is indicated next to the name and can be one of the statuses shown in the key below.
+You can see the node status next to the name. It can be one of these statuses:
 
 ![azure-view-stateful-node-details-001](https://github.com/spotinst/help/assets/106514736/55155909-f7a0-4ebc-8f0d-2a41d887ec2e)
 
 ### Node Summary
 
-The Node Summary provides insights into your node usage and displays two panels. 
+The Node Summary give you insights into your node usage. 
 
-The top panel shows statistics from the first of the month to the current date. You can also see the statistics for the last seven and 30 days.
+You can see statistics from the first of the month to the current date. You can also see the statistics for the last seven and 30 days.
 
-<img width="1091" alt="azure-view-stateful-node-details-002" src="https://github.com/spotinst/help/assets/106514736/df7fa0a8-c526-4359-b2fa-80cf751c1853">
+<img width="900" src="https://github.com/spotinst/help/assets/106514736/df7fa0a8-c526-4359-b2fa-80cf751c1853">
 
-The following information is presented in the widgets:
+The widgets show the:
 
 * VM Size: The VM size assigned to the node. An icon to the left indicates the VM life cycle. Green is a spot VM and blue is On-demand.
 * Hours: Number of hours the VM has been used.
@@ -36,7 +36,7 @@ The following information is presented in the widgets:
 * Saved: The amount of money saved using spot VMs.
 * Savings Percentage: The percentage of savings when using spot VMs compared to the potential cost if all OD VMs had been used.
 
-The lower panel of the node summary gives you a quick reference point for vital information about the stateful node.
+You can also see a quick reference point for vital information about the stateful node.
 
 ![azure-view-stateful-node-details-02](https://github.com/spotinst/help/assets/106514736/74c018f9-153b-498d-9d56-360cb0f647ed)
 
@@ -56,12 +56,10 @@ The lower panel of the node summary gives you a quick reference point for vital 
 
 ### Persisted Resources
 
-This area provides a summary of the node's persisted resources. At the top, status icons indicate the node's type of persistence.
+You can see a summary of the node's persisted resources. The status icons show the node's type of persistence:
 
 * Green: Persistency defined
 * Gray: Persistency not defined
-
-This panel displays two lists:
 
 #### Network
 
@@ -73,21 +71,21 @@ The tables are not displayed when the node is in a Paused state. The first table
 
 The second table shows information about the storage resources.
 
-<img width="1034" alt="azure-view-stateful-node-details-04" src="https://github.com/spotinst/help/assets/106514736/9920bf60-b3fa-44e4-b5e3-4b12a7a814b4">
+<img width="900" alt="azure-view-stateful-node-details-04" src="https://github.com/spotinst/help/assets/106514736/9920bf60-b3fa-44e4-b5e3-4b12a7a814b4">
 
 ### Node Activity
 
-The node activity bar records the activity in the stateful node in the selected time range at the top right. 
+The node activity bar records the activity in the stateful node for the selected time range. 
 
 ![activity-log-s-node](https://github.com/user-attachments/assets/6776f575-fe69-4895-b6c7-b111f4e9c98f)
 
-Click **Details** below a specific state to view the following:
+Click **Details** below a specific state to view:
 
-* Paused- When the stateful node is paused, you can view the actions that occurred on that node until it was paused. You can see the attached or detached disks and the network interface. 
-* Recycled- In a recycled stateful node, you can view the history of actions, such as paused and resumed actions. 
-* Resume- Continues the stateful node using a new VM and the persisted resources. 
-* Import- You can view the steps of the import process of a stateful node. 
-* Stopped- You can view the stopped VM. It might take a few minutes for the stateful node to appear as stopped. 
+* Paused: When the stateful node is paused, you can view the actions that occurred on that node until it was paused. You can see the attached or detached disks and the network interface. 
+* Recycled: In a recycled stateful node, you can view the history of actions, such as paused and resumed actions. 
+* Resume: Continues the stateful node using a new VM and the persisted resources. 
+* Import: You can view the steps of the import process of a stateful node. 
+* Stopped: You can view the stopped VM. It might take a few minutes for the stateful node to appear as stopped. 
 
 If an error occurs, the stateful node transitions into an error state. The information of the failed activity will appear in the activity’s details. 
 
@@ -97,10 +95,18 @@ To create a new activity, click **Schedule New Activity**.
 
 ## Monitoring
 
-The Monitoring tab provides information regarding the utilization of your stateful node. The monitoring information enables you to optimize resource allocation (right sizing), identify performance, and manage costs effectively. You can view customized graphs that display historical data of CPU and memory utilization for the last hour, day, week, or 14 days.
+The Monitoring tab shows you information about the utilization of your stateful node. It gives you recommendations for modifying the preferred spot sizes list and helps you identify performance issues. You can view right sizing recommendations and graphs with historical CPU and memory utilization data for the last hour, 6 hours, day, week, or 14 days.
 
-![azure-manage-stateful-monitor](https://github.com/spotinst/help/assets/106514736/ed0a00c0-4048-49a4-b509-6d0540c61010)
+<img width=900 src="https://github.com/user-attachments/assets/12cea044-b689-4b9c-804d-ae8e79499ed1">
 
+### Right Sizing Recommendations
+Recommendations help you make better decisions about updating the VM list recommendation to update  the list of preferred VM sizes. They are based on data for the last 14 days. The data is scanned once a day for each stateful node.
+
+For **downsizing** recommendations, the highest CPU and memory utilization each hour are used. Recommendations are shown if the utilization is less than 40%. The size recommendations depend on the VM sizes that ran in the previous 12 hours (smallest vCPU number for CPU utilization and RAM size for RAM utilization). The recommendation is for the next smaller size level (unless it’s already the smallest, then it won’t recommend).
+
+For **upsizing** recommendations, the average CPU and memory utilization per hour are used. Recommendations are shown if the utilization is above 80%. The size recommendations depend on the VM sizes that ran in the previous 12 hours (smallest vCPU number for CPU utilization and RAM size for RAM utilization). The recommendation is for the next larger size level (unless it’s already the largest, then it won’t recommend).
+
+You can also see the recommendations in the Elastilog, which is updated once a day, and in the notification center.
 
 ## Costs
 
@@ -110,9 +116,9 @@ The cost breakdown data provides a comprehensive overview of your stateful node�
 
 #### Daily Spend Breakdown
 
-The compute lifecycle shows how much your compute cost was on each day of the selected time period. Each bar is broken down by spot, on-demand, and reserved instance cost for that day. The All Resources data display showcases the cost breakdown of compute, storage, and network resources. It presents the information in a stacked bar chart format.
+The compute lifecycle shows how much your compute cost was on each day of the selected time period. Each bar is broken down by spot, on-demand, and reserved instance cost for that day. The All Resources data shows the cost breakdown of compute, storage, and network resources.
 
-Hovering over a specific bar in the chart displays the following information:
+Hover over a specific bar in the chart to see the:
 
 * Date (format: mm/dd)
 * Compute daily spend
@@ -124,7 +130,7 @@ Hovering over a specific bar in the chart displays the following information:
 
 The doughnut chart summarizes overall costs within the selected time range.
 
-Hovering over a certain section in the chart displays the following information:
+Hover over the chart to see the:
 
 * Spot
 * OD (On-Demand)
