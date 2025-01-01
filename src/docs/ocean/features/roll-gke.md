@@ -19,4 +19,29 @@ A cluster roll can replace a single node with multiple smaller nodes. This avoid
 
 This is based on the workloads currently running on the nodes chosen for rolling. This is especially helpful when you have modified the list of allowed node types or if your goal is to remove and replace a specific node type with multiple smaller ones.
 
-This logic can improve the cluster's utilization since the workload would run on infrastructure that best matches the workload. Ocean constantly tries to scale down the cluster, but a cluster roll could improve the utilization if this is not possible
+This logic can improve the cluster's utilization since the workload would run on infrastructure that best matches the workload. Ocean constantly tries to scale down the cluster, but a cluster roll could improve the utilization if this is impossible.
+
+##  Roll Parameters
+
+*  Respect Pod Disruption Budget (PDB): Some pods may have a Pod Disruption Budget (PDB). In the Spot API, use respectPdb to instruct Ocean to verify the PDB. When respectPdb is set to True, Ocean will not replace a node if the PDB is violated.
+*  Roll Batch Size Percentage: Indicates the percentage of the cluster's target capacity that will be rolled during a node pool update or scale operation. For example, if the cluster's target capacity is 50 nodes, and the Batch Size Percentage is set to 20%, each batch will consist of 20% of the target capacity, 10 nodes (50 nodes * 20% = 10 nodes).
+*  Batch Size Healthy Percentage: indicates the minimum percentage of healthy instances in a single batch.
+The roll will fail if the number of healthy instances in a single batch is less than this percentage. The range is 1-100; if the parameter value is null, the default value will be 50%. Ocean considers instances not replaced due to PDB to be healthy.
+
+>**Note:**  You can override the behavior of the batchMinHealthyPercentage parameter by setting the `ignorePdb` attribute to True.
+
+##  Node Status
+
+During the roll, Ocean provides information about the status of each node:
+
+*  REPLACED: A new node successfully replaced the node.
+*  TO_BE_REPLACED: Ocean has not yet tried to replace the node.
+*  COULD_NOT_BE_REPLACED: The node was not replaced. This may occur, for example, when no replacement node becomes healthy within the grace period.
+*  NOT_REPLACED_DUE_TO_PDB: Replacing the node violates the PDB configuration on one of the pods running on the node. This status is only relevant when respectPdb is set to True. If a node could not be replaced due to PDB, and the allowed PDB % of nodes for the batch was respected, Ocean would continue to the next batch.
+
+##  Roll Status
+
+
+
+
+
