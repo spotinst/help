@@ -41,6 +41,16 @@ During the roll, Ocean provides information about the status of each node:
 
 ##  Roll Status
 
+A roll can have one of the following statuses:
+
+*  IN_PROGRESS: Nodes are being replaced successfully.
+*  FAILED: An error caused the roll to fail. An error message is recorded in the Elastilog.
+*  STOPPED: The roll was manually stopped. When you stop a roll, the nodes remain in the state at the stop time. (For example, there is no rollback to the initial state).
+*  COMPLETED: All nodes have been processed, and at least 50% have been successfully replaced.
+
+
+
+
 
 
 
