@@ -5,14 +5,10 @@ The Stateful Nodes Overview gives you access to key information and summary data
 ## Stateful Nodes Overview
 The Stateful Node Overview tab gives you quick access to insights and summary data about the node. You can obtain an overview of your current cost efficiency status and an overview of your persisted network and storage resources.
 
-To get to the Stateful Node Overview tab:
-
 1. In the Spot console, go to **Elastigroup** > **Stateful Nodes**.
 2. In the [list of stateful nodes](managed-instance/azure/tutorials/manage), click a Node Name.
 
-<img width="900" alt="azure-view-stateful-node-details-01a" src="https://github.com/spotinst/help/assets/106514736/12e274e3-0350-44a7-b40e-cf9241357ebf">
-
-Click **Edit Node** to configure the node. 
+    <img width="900" alt="azure-view-stateful-node-details-01a" src="https://github.com/spotinst/help/assets/106514736/12e274e3-0350-44a7-b40e-cf9241357ebf">
 
 You can see the node status next to the name. It can be one of these statuses:
 
@@ -20,7 +16,7 @@ You can see the node status next to the name. It can be one of these statuses:
 
 ### Node Summary
 
-The Node Summary give you insights into your node usage. 
+The Node Summary gives you insights into your node usage. 
 
 You can see statistics from the first of the month to the current date, as well as the last 7 or 30 days.
 
@@ -61,17 +57,15 @@ You can see a summary of the node's persisted resources. The status icons show t
 * Green: Persistency defined
 * Gray: Persistency not defined
 
-#### Network
+Network and Storage are not displayed when the node is in a Paused state.
 
-The tables are not displayed when the node is in a Paused state. The first table shows information about the network interfaces attached to the node.
+* Network: You can see information about the network interfaces attached to the node.
 
-<img width="900" alt="azure-view-stateful-node-details-03" src="https://github.com/spotinst/help/assets/106514736/b07195d9-a343-4b55-8539-8193d08564ee">
+   <img width="900" alt="azure-view-stateful-node-details-03" src="https://github.com/spotinst/help/assets/106514736/b07195d9-a343-4b55-8539-8193d08564ee">
 
-#### Storage
+* Storage: You can see information about the storage resources.
 
-The second table shows information about the storage resources.
-
-<img width="900" alt="azure-view-stateful-node-details-04" src="https://github.com/spotinst/help/assets/106514736/9920bf60-b3fa-44e4-b5e3-4b12a7a814b4">
+   <img width="900" alt="azure-view-stateful-node-details-04" src="https://github.com/spotinst/help/assets/106514736/9920bf60-b3fa-44e4-b5e3-4b12a7a814b4">
 
 ### Node Activity
 
@@ -79,7 +73,7 @@ The node activity bar records the activity in the stateful node for the selected
 
 ![activity-log-s-node](https://github.com/user-attachments/assets/6776f575-fe69-4895-b6c7-b111f4e9c98f)
 
-Click **Details** below a specific state to view:
+Click **Details** below a specific state:
 
 * Paused: When the stateful node is paused, you can view the actions that occurred on that node until it was paused. You can see the attached or detached disks and the network interface. 
 * Recycled: In a recycled stateful node, you can view the history of actions, such as paused and resumed actions. 
@@ -128,7 +122,7 @@ Hover over a specific bar in the chart to see the:
 
 #### Summary
 
-The doughnut chart summarizes overall costs within the selected time range.
+The donut chart summarizes overall costs within the selected time range.
 
 Hover over the chart to see the costs by:
 
