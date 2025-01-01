@@ -1,5 +1,9 @@
 # Features 
 
+The procedures in this section describe how to maximize your Billing Engine policies, create strategies, and more.
+
+The following list of Billing Engine features and terminology includes various tools and functionalities that allow organizations to track, analyze, and optimize their financial performance.
+
 ## Policies
 
 This page includes permissions for [policies](https://docs.spot.io/billing-engine/tutorials/billing-engine-policy) to access cost and usage data in AWS, Azure, and Google Cloud providers. It explains the specific permissions required for each provider, including accessing the AWS Cost and Usage Report/Data Export, Azure roles like Enrollment Reader and MCA Billing Account Reader, and the Google Cloud Project Viewer Role.
