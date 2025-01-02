@@ -23,7 +23,7 @@ ocean_managed_nodes {vng_id="ols-xxxxxxxx", lifecycle="OD", az="us-west-2b", typ
 ocean_managed_nodes {vng_id="ols-xxxxxxxx", lifecycle="Spot", az="us-west-2b", vm_type="m5.8xlarge",  vng_name = “Vng2”, ocean_id= “o-XXXXX”} 3
 ```
 
-### ocean_nodes_added_total and ocean_nodes_removed_total
+### ocean_nodes_added_total and ocean_nodes_removed_total (counter metrics)
 
 These counter-type metrics help track the rate of addition and removal of nodes in the cluster and their different reasons, as reflected in a dedicated label called `Reason.` `Reason` includes values such as: 
 
@@ -48,7 +48,7 @@ nodes_added_total{reason="revertToLowerCostReplacement", lifecycle="Spot", az="u
 nodes_added_total{reason="scaleUpForPendingPods", lifecycle="Spot", az="us-west-2b", vm_type="r5a.4xlarge", vng_name = “Vng2”, ocean_id= “o-XXXXX”} 13
 ```
 
-### ocean_nodes_added_total and ocean_nodes_removed
+### ocean_nodes_added_total and ocean_nodes_removed_total (gauge metrics)
 
 These gauge-type metrics help track the rate of addition and removal of nodes in the cluster and their different reasons, as reflected in a dedicated label called `Reason.` `Reason` includes values such as: 
 
@@ -74,7 +74,7 @@ nodes_added_total{reason="scaleUpForPendingPods", lifecycle="Spot", az="us-west-
 ```
 
 
-### ocean_failed_scale_up_total and ocean_failed_scale_down_total
+### ocean_failed_scale_up_total and ocean_failed_scale_down_total (counter metrics)
 These counter-type metrics help track the rate of failed scale-ups and scale-down operations in the cluster and the
 reasons behind them, as reflected in a dedicated label called `Reason.` `Reason` includes values such as:
 
@@ -124,7 +124,8 @@ ocean_failed_scale_downs{oceanId="o-2cf2e886", reason="cluster_min_instance_coun
 </details>
 
 
-### ocean_failed_scale_up_total and ocean_failed_scale_down
+### ocean_failed_scale_up_total and ocean_failed_scale_down_total (gauge metrics)
+
 These gauge-type metrics help track the rate of failed scale-ups and scale-down operations in the cluster and the
 reasons behind them, as reflected in a dedicated label called `Reason.` `Reason` includes values such as:
 
