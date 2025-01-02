@@ -1,6 +1,6 @@
 # Ocean Controller Version 2 History
 
-## Chart Version [0.1.57] (v2.0.68) - 2024-01-02
+## Chart Version [0.1.58] (v2.0.68) - 2024-01-02
 
 ### Added
 * Added support for startup taints.
