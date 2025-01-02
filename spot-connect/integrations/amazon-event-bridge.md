@@ -1,1 +1,0 @@
-# Amazon Event Bridge
