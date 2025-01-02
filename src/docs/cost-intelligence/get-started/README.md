@@ -1,7 +1,10 @@
 # Get Started with Cost Intelligence 
 
-Whether you are a new Spot customer or an existing one, we have a streamlined process to ensure a seamless experience. If you are new to Spot, we recommend following our organization creation process, which will enable you to add your cloud accounts.   
+Cost Intelligence allows you to optimize your spending and make informed decisions regarding your cloud resources. If you have multiple accounts, you can easily switch between them. By leveraging the features and capabilities of Cost Intelligence, you can streamline your cloud spending, maximize cost savings, and gain better control over your cloud resources in AWS and Azure. 
 
-Cost Intelligence currently supports AWS and Azure accounts exclusively. This means you can leverage the power of Cost Intelligence to optimize your spending and make informed decisions regarding your cloud resources. If you have multiple accounts, you can easily switch between them by accessing the account switcher located at the top right of the screen.   
+## Connect your Cloud Account
+
+1. To get started with Cost Intelligence, make sure you have [an activated Spot account](https://docs.spot.io/connect-your-cloud-provider/first-account).
+2. Connect your cloud account to one of the providers: [AWS](https://docs.spot.io/cost-intelligence/get-started/connect-aws) or [Azure](https://docs.spot.io/cost-intelligence/get-started/connect-azure). Once you have connected your account, you can use Cost Intelligence to gain insights into your cloud spending and identify cost-saving opportunities. 
 
  
