@@ -79,6 +79,7 @@ These counter-type metrics help track the rate of failed scale-ups and scale-dow
 reasons behind them, as reflected in a dedicated label called `Reason.` `Reason` includes values such as:
 
 <details>
+  
    <summary markdown="span">More about...</summary>
 
 * `auto_scaler_can't_handle_pvc` - failed to scale up. PVC can’t be handled.
@@ -130,6 +131,7 @@ These gauge-type metrics help track the rate of failed scale-ups and scale-down 
 reasons behind them, as reflected in a dedicated label called `Reason.` `Reason` includes values such as:
 
 <details>
+   
    <summary markdown="span">More about...</summary>
 
 * `auto_scaler_can't_handle_pvc` - failed to scale up. PVC can’t be handled.
