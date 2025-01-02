@@ -103,15 +103,13 @@ Ocean proactively identifies underutilized nodes and [bin-packs](https://en.wiki
 
 ### Scale Down Behavior
 
-- When scaling down a node is expected, Ocean utilizes a configurable draining timeout of at least 300 seconds. (This can be configured using the drainingTimeout parameter on the Ocean level.) At this time, Ocean marks the node as unschedulable and evicts all pods running on it.
-  - Ocean spreads out the evictions instead of deleting the pods simultaneously. All the pods that run on the nodes are evicted over a 120-second period. For example, if there are 10 pods running on the nodes, one pod is evicted every 12 seconds.
-  - When all the pods have been successfully evicted from the node, the node is drained (scaled down) immediately without waiting for the draining timeout period to expire
-  - If the eviction fails, Ocean has a retry mechanism that tries to evict the pods a few seconds later. If eviction still fails after one minute, Ocean forces the pod to be deleted.
-- After the draining timeout has expired, Ocean terminates the node and removes any pods that were not successfully evicted.
-- Scale down will start only if no PDB is violated by removing the pods on the node. That is the default behavior. However, you could decide to ignore the PDB restriction during scale down. (Please contact the Support team to enable ignoring the restriction.) If ignoring PDB restriction is configured, the drain still occurs, and the spread described above provides a "best effort" to prevent violating the PDB.
-- There is a parameter at the cluster level called `maxScaleDownPercentage`. This parameter indicates the percentage out of the cluster nodes that can be scaled down at once. If you wish to scale down the cluster as quickly as possible, you can increase this parameter value to make the scale down more aggressive.
-
-The node will now be drained/scaled down by the moment all of the pods will be evicted without having to wait for the full draining timeout period
+- When scaling down a node is expected, Ocean utilizes a configurable draining timeout of at least 300 seconds. (This can be configured using the drainingTimeout parameter at the ocean level.) At this time, Ocean marks the node as unschedulable and evicts all pods running on it.
+  - Ocean spreads out the evictions instead of deleting the pods simultaneously. All the pods that run on the nodes are evicted over a 120-second period. For example, if 10 pods run on the nodes, one pod is evicted every 12 seconds.
+  - When all the pods have been successfully evicted from the node, the node is drained (scaled down) immediately without waiting for the draining timeout period to expire.
+  - If the eviction fails, Ocean has a retry mechanism that tries to evict the pods a few seconds later. If eviction fails after one minute, Ocean forces the pod to be deleted.
+- If there are still pods that cannot be evicted from the node when the full draining timeout period expires, the node is terminated, and the pods are removed.
+- Scale down will start only if no PDB is violated by removing the pods on the node. That is the default behavior. However, you could decide to ignore the PDB restriction during scale down. (Please contact the Support team to enable the restriction to be ignored.) If ignoring PDB restriction is configured, the drain still occurs, and the spread described above provides a "best effort" to prevent violating the PDB.
+- There is a parameter at the cluster level called `maxScaleDownPercentage`. This parameter indicates the percentage of the cluster nodes that can be scaled down at once. If you wish to scale down the cluster as quickly as possible, you can increase this parameter value to make the scale down more aggressive.
 
 <img src="/ocean/_media/features-scaling-k8s-02b.png" />
 
