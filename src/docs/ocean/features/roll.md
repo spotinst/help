@@ -22,11 +22,8 @@ This logic can improve the cluster's utilization since the workload would run on
 ## Roll Parameters
 
 *   **Respect Pod Disruption Budget (PDB)**: Some pods may have a Pod Disruption Budget (PDB). In the Spot API, use `respectPdb` to instruct Ocean to verify the PDB. When `respectPdb` is set to True, Ocean will not replace a node if the PDB is violated.
-
 *   **Respect Restrict Scale Down during Roll**: Rolls do not consider the restrict-scale-down label. Ocean will replace a node even if a task or pod uses this label. Ocean's autoscaler considers all configured constraints before the roll.
-
 *   **Roll Batch Size Percentage**: Indicates the percentage of the cluster's target capacity that will be rolled during a node pool update or scale operation. For example, if the cluster's target capacity is 50 nodes, and the Batch Size Percentage is set to 20%, each batch will consist of 20% of the target capacity, 10 nodes (50 nodes * 20% = 10 nodes). 
-
 *   **Batch Size Healthy Percentage**: indicates the minimum percentage of healthy instances in a single batch.
     The roll will fail if the number of healthy instances in a single batch is less than this percentage. The range is 1-100; if the parameter value is null, the default value will be 50%. Ocean considers instances not replaced due to PDB as healthy.
     You can override the behavior of the `batchMinHealthyPercentage` parameter by setting the `ignorePdb` parameter to True.
@@ -123,7 +120,7 @@ The rolls history list contains an entry for each roll under the following colum
 *   Start Time for roll: mm/dd/yyyy, hh:mm:ss
 *   End Time for roll: mm/dd/yyyy, hh:mm:ss
 *   Nodes Rolled (number of nodes rolled) x out of y, for example 20/23
-*   Roll Status
+*   Roll Status:
     * <img width="20" src="https://github.com/user-attachments/assets/ba7e6a10-b344-4a60-b05d-6123a5ff7a0e" /> Green color:  Completed: Roll successfully completed.
     * <img width="20" src="https://github.com/user-attachments/assets/481e785f-a73d-4c02-8f85-ceb77cf525d3" /> Orange color:  Partly completed: At least one node could not be replaced.
     * <img width="20" src="https://github.com/user-attachments/assets/fbb5322b-7b34-4f41-8883-49a88f10958d" /> Gray color:  Stopped: Roll was stopped.
@@ -175,8 +172,8 @@ To roll immediately:
     *   Set the size of a roll batch (%). 
     *   Set the batch size healthy percentage (%).
     *   Add an optional comment.
-    *   Turn on or turn off **Respect Pod Disruption Budget** (PDB)
-    *   Turn on or turn off **Respect Restrict Scale Down**
+    *   Turn on or turn off **Respect Pod Disruption Budget** (PDB).
+    *   Turn on or turn off **Respect Restrict Scale Down**.
 
  4.	Click **Roll Cluster** / **VNG** / **Node Pool**.
 
@@ -205,10 +202,10 @@ To create a roll schedule:
 4.	Configure the [Roll Parameters](https://docs.spot.io/ocean/features/roll?id=roll-parameters):
 
     *   Configure the size of a roll batch (%). 
-    *   Configure the Batch size healthy percentage (%)
+    *   Configure the Batch size healthy percentage (%).
     *   Add an optional comment.
-    *   Turn on or turn off Respect Pod Disruption Budget (PDB)
-    *   Turn on or turn off Respect Restrict Scale Down 
+    *   Turn on or turn off Respect Pod Disruption Budget (PDB).
+    *   Turn on or turn off Respect Restrict Scale Down.
 
 5.	In the third step of the wizard, set the schedule frequency using the day/week/month/time controls or type in a Cron expression.
  
