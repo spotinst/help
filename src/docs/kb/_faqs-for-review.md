@@ -134,27 +134,12 @@ You get this message:
 
 If the current volume size is updated, it can cause a mismatch between the volume size and the snapshot size.
 
-Update the 
-In the stateful node, go to **Actions** > **Edit Configuration** > **Review** > **JSON** > **Edit Mode**. Update the group configuration and click **Update**.
+Update the block device mapping configuration and increase the volume size to match the snapshot size:
 
+1. In the stateful node, go to **Actions** > **Edit Configuration** > **Review** > **JSON** > **Edit Mode**.
+2. Update the group configuration and click **Update**.
 
-<font color="#FC01CC">original:
-
-In order to resolve this issue, you need to adjust the Block Device Mapping configuration and increase the Volume size in order to match the Snapshots size.
-
-You need to edit the Block Device Mapping configuration.
-
-Kindly navigate to Edit Configuration under the Actions button on the upper right side of your EG, then hop to the review tab and switch to JSON. Then turn on Edit Mode and go ahead and edit your group configuration as needed.
-
-Because the EG is behind the scene, I initiated the update for the customer 
-
--> I executed the EG ID associated with the SMI from the DB - managed_instance table
-
-(keep the current BDM in JSON editor in order to modify it without losing any configuration)
-
--> Via the UI, I updated the group with the following BDM section -> volumeSize - I increased the Volume size in order to match the Snapshots size. (according to the UI log was 1500)
-
-<pre><code>"blockDeviceMappings": [
+   <pre><code>"blockDeviceMappings": [
                 {
                     "deviceName": "/dev/sda1",
                     "ebs": {
@@ -164,14 +149,9 @@ Because the EG is behind the scene, I initiated the update for the customer
                     }
                 }
             ]
-</code></pre>
-   
-Once this is done, the SMI is updated to paused state.
+   </code></pre>
 
-I asked the customer to initiate a resume action - 
-
-The SMI is active, and the instance is running as expected. </font>
-
+3. Start a [resume action](managed-instance/features/managed-instance-actions?id=resume).
 
  </div>
 
