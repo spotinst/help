@@ -14,14 +14,14 @@ When your account is successfully configured in Cost Intelligence, you can creat
     * AWS → Billing account and/or a linked account 
     * Azure → subscription
     
-    **Note**: This does not include data from Spot Security Risk Assessment checks.
+   **Note**: This does not include data from Spot Security Risk Assessment checks.
 
 * Inventory - Created from Cost Intelligence and is available when you onboard an account with inventory-related data. Provides high-level inventory-related data for onboarded accounts. 
 
     * AWS → Billing account and/or a linked account 
     * Azure → subscription
     
-    **Note**: This does not include data from Spot Security Inventory.
+   **Note**: This does not include data from Spot Security Inventory.
 
  </details>
  
