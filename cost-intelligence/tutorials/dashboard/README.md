@@ -26,7 +26,8 @@ When your account is successfully configured in Cost Intelligence, you can creat
 **Note**: This does not include data from Spot Security Inventory.
 
  </details>
- 
+
+
 ## Create a Dashboard  
 
 Users with Cost Intelligence Administrator permissions or Creator Policy permissions can create new dashboards for Cost Intelligence. 
