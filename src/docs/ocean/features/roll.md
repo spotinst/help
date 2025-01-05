@@ -102,7 +102,7 @@ To access the Ocean Cloud Cluster Rolls tab:
 2.	Select a cluster from the list of clusters.
 3.	Click **Rolls**.
 
-In the Rolls tab, you can run immediate rolls for your clusters, VNGs, and node pools or schedule your cluster and VNG rolls.
+In the Rolls tab, you can run immediate rolls for your clusters, virtual node groups, and node pools or schedule your cluster and VNG rolls.
 
 * The Rolls tab is empty if you have not run or scheduled a roll in this cluster.
 
