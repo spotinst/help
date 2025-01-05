@@ -42,7 +42,6 @@
       - [Scheduling](elastigroup/features/core-features/scheduling)
       - [Shutdown Scripts](elastigroup/features/compute/shutdown-scripts)
       - [Signals](elastigroup/features/compute/using-signals-in-elastigroups)
-      - [Spot Markets](elastigroup/tutorials/elastigroup-actions-menu/view-spot-markets)
       - [Suspend Processes](elastigroup/tutorials/elastigroup-actions-menu/suspend-processes)
       - [Tasks](elastigroup/tutorials/elastigroup-tasks/)
         - [Create an Elastigroup- Legacy Design](elastigroup/tutorials/elastigroup-tasks/create-an-elastigroup-from-scratch)
