@@ -122,6 +122,101 @@ The rolls history list contains an entry for each roll under the following colum
    * ![roll-status-partly-completed](https://github.com/user-attachments/assets/6196efa4-08a1-4992-b75e-dea134572c84) (Orange color) Partly completed: At least one node could not be replaced.
    * ![cluster-status-stopped](https://github.com/user-attachments/assets/616b977a-1e76-4c4b-99c2-09587985b19a) (Gray color) Stopped: Roll was stopped.
    * ![cluster-status-failed](https://github.com/user-attachments/assets/7a092501-f1eb-43a7-96b8-5578fd747b7c) (Red color) All nodes could not be replaced.
+   
+Click a down arrow for an entry to drill down for information at the node level:
+
+*  Node Name.
+*  Node ID.
+*  Node Pool Name.
+*  VNG Name: Click on the link to access settings for the virtual node group.
+*  VNG ID.
+*  Batch Number: Number of the batch that was run.
+*  Node Status:
+   * ![roll-status-completed](https://github.com/user-attachments/assets/19e5306e-18b0-4328-9746-ca745a26fc04)(Green color) Completed: Node was replaced.
+   * ![cluster-status-failed](https://github.com/user-attachments/assets/7a092501-f1eb-43a7-96b8-5578fd747b7c)(Red color) Node could not be replaced.
+ 
+ROLLS SCHEDULES SCREEN
+ 
+The roll schedules list contains an entry for each schedule:
+
+*  Role Scope (cluster or virtual node group).
+*  Scheduled frequency.
+
+###  Roll Now
+
+To roll immediately:
+
+1.  From the Rolls tab: If this is your first roll, click **Cluster Roll** or **VNG Roll**.
+    
+    -OR-
+
+    From the Start Roll menu on the right of the screen, click either **Cluster Roll** or **VNG Roll**.
+
+    Alternative options for starting a roll:
+
+    *  From the Cloud Cluster, Virtual Nodes Group tab: Select a virtual node group from the list, and then select **VNG Roll** from the Actions drop-down menu at the top-right of the screen.
+    *  From the Cloud Cluster Overview, select **Cluster Roll** from the Actions menu at the top-right of the screen.
+  
+ >**Note**: The dialog box depends on the type of object(s) you selected to roll.
+
+2.  If you are rolling virtual node groups, select from the drop-down menu at the top of the dialog box. You can optionally select **All**.
+
+ROLL PARAMETERS SCREEN
+
+3. Configure the [Roll Parameters](https://docs.spot.io/ocean/features/roll-gke?id=roll-parameters).
+   * Set the size of a roll batch (%).
+   * Set the batch size healthy percentage (%).
+   * Add an optional comment.
+   * Turn **Respect Pod Disruption Budget (PDB)** on or off.
+  
+4.  Click **Roll**.
+
+>**Note**: To stop a roll while running, click **Stop Roll** on the screen's right, then click **Stop Roll** in the confirmation box.
+
+###  Create a Roll Schedule
+
+You can schedule cluster or virtual node group rolls.
+
+1.  To create your first roll schedule, click **Schedule a Roll**.
+
+  -OR-
+
+  From the Create Roll menu on the right of the screen, click **Schedule Roll**.
+
+2.  In the first step of the wizard, select the roll type. The available roll types depend on your system deployment.
+
+SELECTING WHAT TO ROLL
+
+3. In the second step of the wizard, if you are rolling virtual node groups, select them from the menu at the top of the dialog box. You can optionally select **All**.
+
+NEED SCREEN WITH VNGS
+
+4. Configure the [Roll Parameters](https://docs.spot.io/ocean/features/roll-gke?id=roll-parameters).
+   * Set the size of a roll batch (%).
+   * Set the batch size healthy percentage (%).
+   * Add an optional comment.
+   * Turn **Respect Pod Disruption Budget (PDB)** on or off.
+
+5. In the third step of the wizard, set the schedule frequency using the day/week/month/time controls or type in a Cron expression.
+
+SCHEDULE SCREEN
+
+6. Click **Schedule Roll**. Your schedule appears in the rolls tab - scheduled rolls list under rolls history.
+
+###  Turn a Scheduled Roll On or Off
+
+*  To the right of the scheduled roll, click the slider right (turn on) or left (turn off).
+
+###  Delete a Scheduled Roll
+
+1.  To the right of the scheduled roll, click the wastebasket icon.
+2.  When the confirmation message appears, type **"Delete"** and then click **Delete** to delete.
+
+
+
+
+
+   
  
 
 
