@@ -1,7 +1,30 @@
 # Cost Intelligence Dashboards    
 
-Users with the Cost Intelligence Admin permissions can determine the organization’s default dashboard for all users.  The dashboard page has an action bar at the top that provides the options to edit, clone, create, delete, manage files, and select default dashboards.     
+Users with Cost Intelligence Administrator permissions or Creator Policy permissions can determine the organization’s default dashboard for all users. The dashboard page has an action menu with options to edit, clone, create, delete, manage files, and select default dashboards.
 
+When your account is successfully configured in Cost Intelligence, you can create dashboards and charts in the datasets. 
+
+<details>
+   <summary markdown="span">Click to view account types</summary>
+
+* Billing - Created from the Billing Engine and is available when you connect a billing account to Billing Engine. Data is synced with Billing Engine once a day.
+
+* Best Practice Check - Created from Cost Intelligence and is available when you onboard an account with inventory-related data. Provides data related to all best practice checks available for cost intelligence. 
+
+    * AWS → Billing account and/or a linked account 
+    * Azure → subscription
+    
+    **Note**: This does not include data from Spot Security Risk Assessment checks.
+
+* Inventory - Created from Cost Intelligence and is available when you onboard an account with inventory-related data. Provides high-level inventory-related data for onboarded accounts. 
+
+    * AWS → Billing account and/or a linked account 
+    * Azure → subscription
+    
+    **Note**: This does not include data from Spot Security Inventory.
+
+ </details>
+ 
 ## Create a Dashboard  
 
 Users with Cost Intelligence Administrator permissions or Creator Policy permissions can create new dashboards for Cost Intelligence. 
@@ -54,7 +77,23 @@ To clone a dashboard:
 
 NOTE: If you do not publish the dashboard, the newly cloned dashboard will display in the list of available dashboards.  
 
-![dashboard-6](https://github.com/spotinst/help/assets/106514736/443f9293-861a-4ec1-943f-32d4f053099c)   
+![dashboard-6](https://github.com/spotinst/help/assets/106514736/443f9293-861a-4ec1-943f-32d4f053099c)
+
+## Managed Dashboards
+
+Managed Dashboards are pre-built dashboards created by Cost Intelligence when data is available. These dashboards are designed to facilitate a quick start within the dashboards, focusing on specific use cases. They also serve as configuration references, enabling you to become familiar with them quickly.
+
+* **Cost Intelligence**: Highlights broad cost and resource utilization using billing and inventory data.
+
+* **Best Practice Checks**: Provides trend analysis across the best practices tool. You can visualize how the BPCs progress against various checks and potentially spot erratic resource behavior/utilization.
+
+* **Compute**: Highlights compute-resource utilization and compute-focused best practice checks.
+
+* **Inventory**: This dashboard provides a high-level overview of inventory utilization for both the current date and trends over time.
+
+* **Resource Optimization**: Focuses on best practice checks to reduce costs by identifying underutilized or idle resources. 
+
+* **Cost Intelligence Anomaly Metrics/Threshold Metrics**: Provides a suite of metrics to be utilized alongside CI Workflow Builder to create various alerts.
 
 ## Upload a CSV/Create a Dataset    
 
