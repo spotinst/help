@@ -114,12 +114,12 @@ The Rolls History list contains an entry for each roll.
 <img width="1200" src="https://github.com/user-attachments/assets/3f36db34-7ffa-4042-b13e-ed5112ed91ec" />
 
 The columns are as follows:
-*  Roll ID (unique ID for the roll)
-*  Role Scope (cluster, virtual node group, or node pool).
-*  Comments (optional)
-*  Start Time for roll: mm/dd/yyyy, hh:mm:ss
-*  End Time for roll: mm/dd/yyyy, hh:mm:ss
-*  Nodes Rolled (number of nodes rolled) x out of y, for example 20/23
+* Roll ID (unique ID for the roll).
+* Role Scope (cluster, virtual node group, or node pool).
+* Comments (optional).
+* Start Time for roll: mm/dd/yyyy, hh:mm:ss
+* End Time for roll: mm/dd/yyyy, hh:mm:ss
+* Nodes Rolled (number of nodes rolled) x out of y, for example 20/23
 * Roll Status:
   * <img width="20" src="https://github.com/user-attachments/assets/ba7e6a10-b344-4a60-b05d-6123a5ff7a0e" /> Green color:  Completed: Roll successfully completed.
   * <img width="20" src="https://github.com/user-attachments/assets/481e785f-a73d-4c02-8f85-ceb77cf525d3" /> Orange color:  Partly completed: At least one node could not be replaced.
