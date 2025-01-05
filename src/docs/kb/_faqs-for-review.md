@@ -107,9 +107,16 @@ If you want to run only a specific workload on the nodes launched from the launc
      
      You can [increase the EKS maximum pods](https://aws.amazon.com/blogs/containers/amazon-vpc-cni-increases-pods-per-node-limits/) in AWS. You can see more information about the number of pods per EKS instance on [Stack Overflow](https://stackoverflow.com/questions/57970896/pod-limit-on-node-aws-eks#:~:text=For%20t3.,22%20pods%20in%20your%20cluster).
      
-   * If the node has less pods than the EKS maximum pod limit, then it's likely the **max-pods** limit set at the user data level in the Ocean configuration. Increase this limit for the user data in Ocean and [roll the cluster](ocean/features/roll-gen).
+   * If the node has fewer pods than the EKS maximum pod limit, then it's likely the **max-pods** limit is set at the user data level in the Ocean configuration. Increase this limit for the user data in Ocean and [roll the cluster](ocean/features/roll-gen).
+
+   <font color="#FC01CC">where do they update the max-pods in the user data?
+
+   is this accurate?
    
-   If you continue to get this error, [roll the cluster](ocean/features/roll-gen) again and disable **Respect Pod Disruption Budget (PDB)**. You can also manually terminate the node.
+   Go to the cluster in the Spot console and click **Actions** > **Edit Configuration** > **Compute**.
+   </font>
+   
+   If you continue to get this error, [roll the cluster](ocean/features/roll-gen) again and disable [Respect Pod Disruption Budget (PDB)](ocean/features/roll-gen?id=respect-pod-disruption-budget). You can also manually terminate the node.
    
  </div>
 
