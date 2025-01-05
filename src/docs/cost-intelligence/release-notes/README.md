@@ -5,11 +5,9 @@
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600">January, 2025 - click to view</summary>
 
-**COI-0019**: January 5th, 2025: The Dashboard Forecasting feature now includes confidence upper and lower scores that provide context and indicate the level of confidence in forecasted values. It also supports multi-series line and box charts based on time, enabling more accurate chart predictions. [Learn more...](cost-intelligence/tutorials/dashboard/forecasting)
-
 <div style="padding-left:16px">
 
-* **COI-0018**: December 29th, 2024: Cost Intelligence provides additional cost-related data to key best practice checks. You can see summary and aggregated views at both the check level and assessment level. [Learn more...](cost-intelligence/tutorials/best-practice-checks/?id=check-detail-page)
+* **COI-0019**: January 5th, 2025: The Dashboard Forecasting feature now includes confidence upper and lower scores that provide context and indicate the level of confidence in forecasted values. It also supports multi-series line and box charts based on time, enabling more accurate chart predictions. [Learn more...](cost-intelligence/tutorials/dashboard/forecasting)
 
  </div>
  </details>
