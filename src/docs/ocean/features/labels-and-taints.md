@@ -137,7 +137,7 @@ Once the taints are removed, the pods can be scheduled without launching additio
 
 You may want to deploy a specific pod to a node before deploying other pods to the same node. When that pod is ready or has completed a defined procedure, such as networking, the deployment of other pods will be allowed.
 
->**Example: Cilium:** As recommended by the Cilium documentation, involves applying a taint such as `node.cilium.io/agent-not-ready=true:NoExecute` to prevent other pods from starting before Cilium has finished configuring the necessary networking on the node.
+>**Example: Cilium:** Cilium recommends applying a taint such as `node.cilium.io/agent-not-ready=true:NoExecute` to prevent other pods from starting before Cilium has finished configuring the necessary networking on the node.
 
 The startup taint applied to a node is a dedicated temporary taint. The pod used for initialization will have a tolerance to this taint exclusively. Once the pod is ready, the application running on the pod will remove the taint from the node.
 
@@ -145,11 +145,7 @@ The autoscaler treats nodes with the startup taint so that pending pods will be 
 
 After a short period, the startup taint is removed, and the pods are scheduled on those nodes.
 
->**Note:** To prevent nodes that are “stuck” with startup taint, for example, if the `startupTaint` attribute could not be removed for a specific node, Ocean will stop simulating pending pods on the nodes with start if the cluster's grace period time passed since the node creation time (the default is 5 minutes, and it can be configured in the cluster under cluser.strategy. gracePeriod)
-
-COMMENT Need clarification.
-
-
+>**Note:** If the `startupTaint` attribute cannot be removed for a specific node, Ocean will stop simulating pending pods on that node when the cluster's grace period expires. The grace period starts when a node is created; its default is 5 minutes, and you can configure it in the cluster under `cluster.strategy.gracePeriod`.
 
 Ocean provides a `startupTaints` attribute to manage startup taints.
 
