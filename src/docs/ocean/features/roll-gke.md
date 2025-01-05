@@ -75,6 +75,61 @@ You can schedule a roll in the [Create Cluster](https://docs.spot.io/api/#tag/Oc
 
 You can initiate a cluster roll in [Initiate Roll](https://docs.spot.io/api/#operation/oceanGkeRollInit).
 
+##  Roll per Virtual Node Group
+
+Ocean Virtual Node Groups let you run different node groups within a single Ocean cluster. This makes it possible to run different groups of nodes, such as the examples below, on the same cluster.
+
+*  Separate development, test, and production environments.
+*  Different teams.
+*  Different applications or microservices.
+
+The Ocean API enables you to roll one or more nodes in a virtual node group without having to roll the entire cluster. This is useful when you have different groups of nodes running in the cluster, like those described above, and don't want to roll the entire cluster for a local software update. You can do this by specifying a list of node IDs or a specific VNG ID.
+
+For example, you can use:
+
+*  `instanceNames` to initiate a roll of one or more specific nodes.
+*  `launchSpecIds` to initiate a roll of one or more VNGs in the cluster. When you specify a VNG ID, all the nodes in that VNG are rolled.
+
+##  Roll from Console
+
+###  Access the Ocean Cluster Rolls Tab
+
+1.  In the left main menu, click **Ocean** > **Cloud Clusters**.
+2.  Select a cluster from the list of clusters.
+3.  Click **Rolls**.
+
+In the Rolls tab, you can run immediate rolls for your clusters, VNGs, and node pools or schedule your cluster and VNG rolls.
+
+*  If you have not run or scheduled a roll in this cluster, the Rolls tab appears as shown below.
+
+SCREEN EMPTY STATE NO ROLLS
+
+*  If at least one roll exists, the rolls history list appears.
+*  Configured roll schedules appear below the rolls schedules list.
+
+ROLLS HISTORY LIST
+
+The rolls history list contains an entry for each roll under the following columns:
+
+*  Roll ID (unique ID for the roll).
+*  Role Scope (cluster, virtual node group, or node pool).
+*  Comments (optional).
+*  Start Time for roll: mm/dd/yyyy, hh:mm:ss
+*  End Time for roll: mm/dd/yyyy, hh:mm:ss
+*  Nodes Rolled (number of nodes rolled) x out of y, for example 20/23
+*  Roll Status:
+   * ![roll-status-completed](https://github.com/user-attachments/assets/19e5306e-18b0-4328-9746-ca745a26fc04) (Green color) Completed: Roll successfully completed.
+   * ![roll-status-partly-completed](https://github.com/user-attachments/assets/6196efa4-08a1-4992-b75e-dea134572c84) (Orange color) Partly completed: At least one node could not be replaced.
+   * ![cluster-status-stopped](https://github.com/user-attachments/assets/616b977a-1e76-4c4b-99c2-09587985b19a) (Gray color) Stopped: Roll was stopped.
+   * ![cluster-status-failed](https://github.com/user-attachments/assets/7a092501-f1eb-43a7-96b8-5578fd747b7c) (Red color) All nodes could not be replaced.
+ 
+
+
+
+
+
+
+
 
 
 
