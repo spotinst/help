@@ -109,40 +109,39 @@ Otherwise:
 * If at least one roll exists, the Rolls History list appears.
 * Configured roll schedules appear in the Scheduled Rolls list below the Rolls History list.
 
-The rolls history list contains an entry for each roll under the following columns:
+The Rolls History list contains an entry for each roll.
 
 <img width="1200" src="https://github.com/user-attachments/assets/3f36db34-7ffa-4042-b13e-ed5112ed91ec" />
 
-
-*   Roll ID (unique ID for the roll)
-*   Role Scope (cluster, virtual node group, or node pool).
-*   Comments (optional)
-*   Start Time for roll: mm/dd/yyyy, hh:mm:ss
-*   End Time for roll: mm/dd/yyyy, hh:mm:ss
-*   Nodes Rolled (number of nodes rolled) x out of y, for example 20/23
-*   Roll Status:
-    * <img width="20" src="https://github.com/user-attachments/assets/ba7e6a10-b344-4a60-b05d-6123a5ff7a0e" /> Green color:  Completed: Roll successfully completed.
-    * <img width="20" src="https://github.com/user-attachments/assets/481e785f-a73d-4c02-8f85-ceb77cf525d3" /> Orange color:  Partly completed: At least one node could not be replaced.
-    * <img width="20" src="https://github.com/user-attachments/assets/fbb5322b-7b34-4f41-8883-49a88f10958d" /> Gray color:  Stopped: Roll was stopped.
-    * <img width="20" src="https://github.com/user-attachments/assets/f7a3e2b0-94a4-481b-a94d-512277b92449" /> Red color:  All nodes could not be replaced.
+The columns are as follows:
+*  Roll ID (unique ID for the roll)
+*  Role Scope (cluster, virtual node group, or node pool).
+*  Comments (optional)
+*  Start Time for roll: mm/dd/yyyy, hh:mm:ss
+*  End Time for roll: mm/dd/yyyy, hh:mm:ss
+*  Nodes Rolled (number of nodes rolled) x out of y, for example 20/23
+* Roll Status:
+  * <img width="20" src="https://github.com/user-attachments/assets/ba7e6a10-b344-4a60-b05d-6123a5ff7a0e" /> Green color:  Completed: Roll successfully completed.
+  * <img width="20" src="https://github.com/user-attachments/assets/481e785f-a73d-4c02-8f85-ceb77cf525d3" /> Orange color:  Partly completed: At least one node could not be replaced.
+  * <img width="20" src="https://github.com/user-attachments/assets/fbb5322b-7b34-4f41-8883-49a88f10958d" /> Gray color:  Stopped: Roll was stopped.
+  * <img width="20" src="https://github.com/user-attachments/assets/f7a3e2b0-94a4-481b-a94d-512277b92449" /> Red color:  All nodes could not be replaced.
  
 Click a down arrow for an entry to drill down for information at the node level:
+* Node Name.
+* Node ID.
+* Node Pool Name.
+* VNG Name: Click on the link to access settings for the virtual node group.
+* VNG ID.
+* Batch Number: Number of the batch that was run.
+* Node Status:
+  * <img width="20" src="https://github.com/user-attachments/assets/ba7e6a10-b344-4a60-b05d-6123a5ff7a0e" /> Green color: Completed: Node was replaced.
+  * <img width="20" src="https://github.com/user-attachments/assets/f7a3e2b0-94a4-481b-a94d-512277b92449" /> Red color: Node could not be replaced.
 
-*   Node Name.
-*   Node ID.
-*   Node Pool Name.
-*   VNG Name: Click on the link to access settings for the virtual node group.
-*   VNG ID.
-*   Batch Number: Number of the batch that was run.
-*   Node Status:
-    * <img width="20" src="https://github.com/user-attachments/assets/ba7e6a10-b344-4a60-b05d-6123a5ff7a0e" /> Green color: Completed: Node was replaced.
-    * <img width="20" src="https://github.com/user-attachments/assets/f7a3e2b0-94a4-481b-a94d-512277b92449" /> Red color: Node could not be replaced.
-
-The roll schedules list contains an entry for each schedule:
+The Scheduled Rolls list contains an entry for each schedule:
 
 <img width="1000" src="https://github.com/user-attachments/assets/ff88d065-b156-4a5d-86ac-8d9aaf722266" />
 
-
+The columns are as follows:
 * Role Scope (cluster, virtual node group, or node pool).
 * Scheduled frequency.
 
@@ -165,7 +164,7 @@ To roll immediately:
 
 2.	If you are rolling virtual node groups or node pools, select from the menu at the top of the dialog box. You can optionally select **All**.
 
-<img width="600" src="https://github.com/user-attachments/assets/5787db8b-b822-4d25-b66c-b3f8fcc70278" />
+<img width="450" src="https://github.com/user-attachments/assets/5787db8b-b822-4d25-b66c-b3f8fcc70278" />
 
 3.	Configure the [Roll Parameters](https://docs.spot.io/ocean/features/roll?id=roll-parameters):
 
