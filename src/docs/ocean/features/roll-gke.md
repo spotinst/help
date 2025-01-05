@@ -49,6 +49,40 @@ A roll can have one of the following statuses:
 *  COMPLETED: All nodes have been processed, and at least 50% have been successfully replaced.
 
 
+>**Tip**: In the Console, a specific batch may appear in a pending state. This means that even though the roll process has started, that batch has not yet started to replace its nodes.
+
+## Log Messages
+
+The following messages are recorded in the log:
+
+*  Roll ${ROLL_ID} has completed successfully.
+*  Roll ${ROLL_ID} has failed. Reason ${FAILURE_REASON}.
+*  Roll ${ROLL_ID} has started. Number of batches ${NUM_OF_BATCHES}.
+*  Roll ${ROLL_ID} has stopped.
+
+The following are reasons for failure:
+
+*  The roll has been stuck in the same status for too long.
+*  The Ocean Controller is not active.
+*  More than 50 percent of nodes could not be replaced.
+*  There may be constraint or configuration mismatches such as labels, selectors, taints, or affinity rules.
+*  There may be one or more unhealthy nodes.
+*  Kubernetes version not supported.
+
+##  Schedule or Initiate a Cluster Roll from Spot API
+
+You can schedule a roll in the [Create Cluster](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKEClusterCreate) or [Update Cluster](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKEClusterUpdate) Spot API using a cron expression. This enables you to run the roll easily during off hours.
+
+You can initiate a cluster roll in [Initiate Roll](https://docs.spot.io/api/#operation/oceanGkeRollInit).
+
+
+
+
+
+
+
+
+
 
 
 
