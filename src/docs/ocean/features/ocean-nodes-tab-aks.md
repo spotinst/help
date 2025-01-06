@@ -32,18 +32,23 @@ The nodes list contains these columns:
 * OS Image: Image name.
 * Lifecycle: Regular or spot. 
 
-###   Workload Requirements (searchable from a filter above the list): 
+###   Workload Requirements
+
+>**Note**: Search from the **Workload requirements** filter above the Nodes list.
 
   * Node lifecycle: regular or spot. Pods requiring regular lifecycle: The node has one or more pods that explicitly require a regular lifecycle. These pods may have specific requirements or dependencies that make them incompatible with spot VMs.
   * PDB: Some pods may have a [Pod Disruption Budget](https://kubernetes.io/docs/concepts/workloads/pods/disruptions/#pod-disruption-budgets). When turned on, Ocean verifies the PDB and will not migrate a node if the PDB is violated. 
-  * Required VM Type
+  * Required VM Type.
   * Restrict scale-down: Rolls do not consider the restrict scale-down label. Ocean will migrate a node even if a task or pod uses this label. Ocean's autoscaler considers all configured constraints before the roll.
-  * Required availability zone
+  * Required availability zone.
 
->**Note**: When pods have constraints that impact Workload requirements, an <img width="20" src="" /> icon appears in the Pods column of the nodes list, to the right of the number of pods. Click the icon to view the reason(s) and the number of pods affected.
+>**Note**: When pods have constraints that impact Workload requirements, an <img width="20" src="https://github.com/user-attachments/assets/1bfecd93-5ec4-49fb-a3f8-2d5293ef7e3a" />
+   icon appears in the Pods column of the nodes list, to the right of the number of pods. Click the icon to view the reason(s) and the number of pods affected.
 
  
-###   Reasons for Node with Regular Lifecycle (searchable from a filter above the list)
+###   Reasons for Node with Regular Lifecycle
+
+>**Note**: Search from the **Reason for regular** filter above the Nodes list.
 
 If an <img width="20" src="https://github.com/user-attachments/assets/996cb2d4-a58d-4cbc-9dd3-2d3122a398e0" /> icon appears in the Lifecycle column for the node, click to view the reason, which can be one of the following:
  * Risk: The percentage of spot nodes configured in the [virtual node group configuration]((https://docs.spot.io/ocean/tutorials/manage-virtual-nd-groups-aks?id=manage-virtual-node-groups-aks)) impacts the percentage of regular nodes launched. We recommend increasing the risk to continue running spots.
