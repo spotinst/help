@@ -133,36 +133,3 @@ If you want to run only a specific workload on the nodes launched from the launc
 
 ## Elastigroup Stateful Node
 
-  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ssn-bdm">AWS: Why am I getting a <i>Volume of size</i> (InvalidBlockDeviceMapping) error?</summary>
-
-  <div style="padding-left:16px">
-
-You get this message:
-
-<code>ERROR, Can't Spin Spot Instances: Code: InvalidBlockDeviceMapping, Message: Volume of size xx GB is smaller than snapshot 'snap-xxx', expect size >= xx GB"</code>
-
-If the current volume size is updated, it can cause a mismatch between the volume size and the snapshot size.
-
-Update the block device mapping configuration and increase the volume size to match the snapshot size:
-
-1. In the stateful node, go to **Actions** > **Edit Configuration** > **Review** > **JSON** > **Edit Mode**.
-2. Update the group configuration and click **Update**.
-
-   <pre><code>"blockDeviceMappings": [
-                {
-                    "deviceName": "/dev/sda1",
-                    "ebs": {
-                        "deleteOnTermination": false,
-                        "volumeSize": 1500,
-                        "volumeType": "GP2"
-                    }
-                }
-            ]
-   </code></pre>
-
-3. Start a [resume action](managed-instance/features/managed-instance-actions?id=resume).
-
- </div>
-
- </details>
