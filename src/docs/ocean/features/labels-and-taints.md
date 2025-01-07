@@ -128,6 +128,8 @@ spec:
 
 ## Startup Taints
 
+Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>  
+
 Startup taints are temporary taints applied to a node during its initialization phase. During this phase, the autoscaler will not scale up nodes for additional pending pods that match this node because it has already acknowledged that the start-up taint will soon be removed. Once removed, any pod without toleration matching the node can be scheduled without launching additional nodes.
 
 ### When to Use Startup Taints
