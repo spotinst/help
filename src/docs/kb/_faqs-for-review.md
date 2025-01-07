@@ -36,7 +36,7 @@
 
    You can use taints, tolerations, and node selectors to make sure that only pods with the on-demand lifecycle label are scheduled on on-demand nodes. Pods that don't have this label cannot be scheduled on these nodes. Taints and tolerations work together to make sure pods are scheduled on the right nodes.
 
-   Use taints and tolerations in a virtual node group to create an on-demand virtual node group that includes all your on-demand instances. Because 
+   Use taints and tolerations in a virtual node group to create an on-demand virtual node group that includes all your on-demand instances. If the virtual node group has a taint, only pods with a matching tolerance will be scheduled for this virtual node group.
 
 1. Make sure your [pod has the tolerations](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/) set to:
 
