@@ -36,6 +36,8 @@
 
    You can use taints, tolerations, and node selectors to make sure that only pods with the on-demand lifecycle label are scheduled on on-demand nodes. Pods that don't have this label cannot be scheduled on these nodes. Taints and tolerations work together to make sure pods are scheduled on the right nodes.
 
+   Use taints and tolerations in a virtual node group to create an on-demand virtual node group that includes all your on-demand instances. Because 
+
 1. Make sure your [pod has the tolerations](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/) set to:
 
       <pre><code>tolerations:
@@ -44,7 +46,7 @@
         value: "value"
         effect: "NoSchedule"</code></pre>
 
-     > **Note**: If the <b>operator</b> is <i>Exists</i>, the launch specification needs to be <i>null</i>.
+     > **Note**: If the <b>operator</b> is `Exists`, the launch specification needs to be `null`.
 
 2. Configure a [node selector](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/) with the on-demand [lifecycle label](ocean/features/labels-and-taints?id=spotinstionode-lifecycle) (<code>spotinst.io/node-lifecycle: od</code>).<font color="#FC01CC">where do they do this?? is this link correct?</font>
 
