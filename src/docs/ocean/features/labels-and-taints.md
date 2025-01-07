@@ -130,8 +130,7 @@ spec:
 
 Ocean startup taints enhance the accuracy of node scale-up and enable nodes to be correctly initialized without blocking pod scheduling.
 
-Startup taints are temporary taints applied to a node during its initialization phase. Ocean does not consider startup taints during the node scale-up simulation. 
-Once the taints are removed, the pods can be scheduled without launching additional nodes.
+Startup taints are temporary taints applied to a node during its initialization phase. During this phase, the autoscaler will not scale up nodes for additional pending pods because it has already acknowledged that the start-up taint will soon be removed. Once removed, any pods (even without toleration) can be scheduled without launching additional nodes.
 
 ### When to Use Startup Taints
 
@@ -139,23 +138,17 @@ You may want to deploy a specific pod to a node before deploying other pods to t
 
 >**Example: Cilium:** Cilium recommends applying a taint such as `node.cilium.io/agent-not-ready=true:NoExecute` to prevent other pods from starting before Cilium has finished configuring the necessary networking on the node.
 
-The startup taint applied to a node is a dedicated temporary taint. The pod used for initialization will have a tolerance to this taint exclusively. Once the pod is ready, the application running on the pod will remove the taint from the node.
+The pod used for initialization will have a tolerance to this taint exclusively. Once the pod is ready, the application running on the pod will remove the taint from the node.
 
-The autoscaler treats nodes with the startup taint so that pending pods will be simulated on those nodes, even though the pods do not have the required toleration for the startup taint.
-
-After a short period, the startup taint is removed, and the pods are scheduled on those nodes.
-
->**Note:** If the `startupTaint` attribute cannot be removed for a specific node, Ocean will stop simulating pending pods on that node when the cluster's grace period expires. The grace period starts when a node is created; its default is 5 minutes, and you can configure it in the cluster under `cluster.strategy.gracePeriod`.
-
-Ocean provides a `startupTaints` attribute to manage startup taints.
+>**Note:** If the `startupTaint` attribute has not been removed for a specific node by the end of the cluster's grace period, a new node will be launched for any pending pods. The grace period starts when a node is created; its default is 5 minutes, and you can configure it in the cluster under `cluster.strategy.gracePeriod`.
 
 ### Configure Startup Taints in the Spot API
 
 AWS Kubernetes only
 
-Prerequisite: Ocean controller version at least ?????
+Prerequisite: Ocean controller version at least v2.0.68
 
-Configure Ocean to consider your startup taints using the startupTaints attribute at the Ocean cluster and virtual node group levels.
+Configure Ocean to consider your startup taints using the `startupTaints` attribute at the Ocean cluster and virtual node group levels.
 
 *  Cluster: under `cluster.compute.launchSpecification`
    *  [Create Cluster](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterCreate)
