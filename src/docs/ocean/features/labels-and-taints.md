@@ -128,13 +128,11 @@ spec:
 
 ## Startup Taints
 
-Ocean startup taints enhance the accuracy of node scale-up and enable nodes to be correctly initialized without blocking pod scheduling.
-
-Startup taints are temporary taints applied to a node during its initialization phase. During this phase, the autoscaler will not scale up nodes for additional pending pods because it has already acknowledged that the start-up taint will soon be removed. Once removed, any pods (even without toleration) can be scheduled without launching additional nodes.
+Startup taints are temporary taints applied to a node during its initialization phase. During this phase, the autoscaler will not scale up nodes for additional pending pods because it has already acknowledged that the start-up taint will soon be removed. Once removed, any pod without toleration matching the node can be scheduled without launching additional nodes.
 
 ### When to Use Startup Taints
 
-You may want to deploy a specific pod to a node before deploying other pods to the same node. When that pod is ready or has completed a defined procedure, such as networking, the deployment of other pods will be allowed.
+You may want to deploy a specific pod to a node before deploying other pods to the same node. When that pod is ready or has completed a defined procedure, such as networking, scheduling of other pods will be allowed.
 
 >**Example: Cilium:** Cilium recommends applying a taint such as `node.cilium.io/agent-not-ready=true:NoExecute` to prevent other pods from starting before Cilium has finished configuring the necessary networking on the node.
 
