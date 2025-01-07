@@ -136,7 +136,7 @@ You may want to deploy a specific pod to a node before deploying other pods to t
 
 >**Example: Cilium:** Cilium recommends applying a taint such as `node.cilium.io/agent-not-ready=true:NoExecute` to prevent other pods from starting before Cilium has finished configuring the necessary networking on the node.
 
-The pod used for initialization will have a tolerance to this taint exclusively. Once the pod is ready, the application running on the pod will remove the taint from the node.
+The pod used for initialization will have a tolerance to this taint exclusively. Once the node is ready, the application running on the pod will remove the taint from the node.
 
 >**Note:** If the `startupTaint` attribute has not been removed for a specific node by the end of the cluster's grace period, a new node will be launched for any pending pods. The grace period starts when a node is created; its default is 5 minutes, and you can configure it in the cluster under `cluster.strategy.gracePeriod`.
 
@@ -156,7 +156,7 @@ Configure Ocean to consider your startup taints using the `startupTaints` attrib
    *  [Create virtual node group](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecCreate)
    *  [Update virtual node group](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecUpdate)
 
->**Important:** You must also set the `startupTaint` as a regular taint in the `userData` for the cluster or virtual node group.
+>**Important:** You must also set the `startupTaint` as a regular taint in the `userData` for the cluster or virtual node group. This is because Ocean does not add or remove configured startup taints.
 
 
 
