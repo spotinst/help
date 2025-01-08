@@ -2,17 +2,14 @@
 
 If you have already connected your AWS account, you can start creating Elastigroups.
 
-You can also [create a Stateful Elastigroup from Scratch](elastigroup/tutorials/elastigroup-tasks/create-a-stateful-elastigroup-from-scratch).
 
-# Create an Elastigroup from Scratch
+## Create an Elastigroup from Scratch
 
 You can create an Elastigroup using an empty template. To create an Elastigroup based on an existing workload such as AWS Elastic Beanstalk or AutoScaling Groups, choose your workload type under Use Cases and import a copy of your workload configuration.  
 
-## Prerequisite
+### Prerequisite
 
 [Connect your AWS account to Spot](connect-your-cloud-provider/aws-account). 
-
-## Get Started
 
 ### Create an Elastigroup from Scratch
 
@@ -25,7 +22,7 @@ To create an Elastigroup using an empty template from scratch, complete the foll
 
 3. Click **Start from scratch**.  
 
-#### Create an Elastigroup using Use Cases 
+### Create an Elastigroup using Use Cases 
 
 To create an Elastigroup based on an existing workload, complete the following steps: 
 
@@ -211,7 +208,7 @@ After reviewing and making any required changes, click **Next** and launch your 
 <details>
   <summary markdown="span">Click to learn how to create an Elastigroup from Scratch in the Legacy Design</summary>
 
-# Create an Elastigroup from Scratch- Legacy Design
+## Create an Elastigroup from Scratch- Legacy Design
 
 This procedure describes how to create an Elastigroup using an empty template. To create an Elastigroup based on an existing workload such as AWS Elastic Beanstalk or AutoScaling Groups, choose your workload type under Use Cases and import a copy of your workload configuration.
 
