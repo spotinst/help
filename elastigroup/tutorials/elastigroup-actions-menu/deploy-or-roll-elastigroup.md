@@ -4,9 +4,7 @@ A Deployment is a process in which all of the instances running in an Elastigrou
 
 This tutorial describes how a deployment works, the procedure for running a deployment, and information that Elastigroup provides about a deployment.
 
-## Relevance
-
-This tutorial is relevant for users of Elastigroup with AWS. For Elastigroup with Azure, see [Deploy an Elastigroup](elastigroup/tutorials/azure/deploy-an-elastigroup).
+This tutorial is relevant for users of Elastigroup with AWS. For Elastigroup with Azure, see [Deploy an Elastigroup](elastigroup/tutorials-azure/deploy-an-elastigroup).
 
 ## When to Deploy
 
