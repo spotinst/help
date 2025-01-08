@@ -4,7 +4,7 @@ Spot offers an option for you to use our own custom Health Check Service (HCS) i
 
 ## Relevance
 
-This tutorial is relevant for users of Elastigroup with AWS. For Elastigroup with Azure, see [Set Health Checks and Autohealing](elastigroup/tutorials/azure/set-health-checks-and-autohealing).
+This tutorial is relevant for users of Elastigroup with AWS. For Elastigroup with Azure, see [Set Health Checks and Autohealing](elastigroup/tutorials-azure/set-health-checks-and-autohealing).
 
 ## Configure Elastigroup's Custom Health Checks
 
