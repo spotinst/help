@@ -2,6 +2,10 @@
 
 ## January 2025: Features and Enhancements
 
+*  **OCN-0057: January 08, 2025:** (**<font color="#FC01CC">AWS Kubernetes</font>**) You can now set temporary startup taints for nodes. For example, you can use a startup taint to deploy a specific pod to a node to perform a specific function before deploying other pods to the same node. [Learn more...](https://docs.spot.io/ocean/features/labels-and-taints?id=startup-taints)
+
+Previous months...
+
 <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600">December, 2024 - click to view</summary>
  
