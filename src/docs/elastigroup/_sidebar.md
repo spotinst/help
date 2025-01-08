@@ -11,8 +11,6 @@
       - [AZ Scores](elastigroup/features/core-features/az-scores)
       - [Block Device Mapping](elastigroup/features/compute/block-device-mapping)
       - [Budgets](elastigroup/tutorials/elastigroup-budgets/)
-        - [Configure Budgets](elastigroup/tutorials/elastigroup-budgets/configure-budgets)
-        - [Monitor Budgets](elastigroup/tutorials/elastigroup-budgets/monitor-budgets)
       - [Capacity: Instances or Weighted](elastigroup/features/core-features/elastigroup-capacity-instances-or-weighted)
       - [Compute](elastigroup/features/compute/)
       - [Create an Elastigroup](elastigroup/getting-started/create-an-elastigroup-for-aws)
