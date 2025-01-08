@@ -1,6 +1,15 @@
 # Ocean Release Notes
 
-## December 2024: Features and Enhancements
+## January 2025: Features and Enhancements
+
+*  **OCN-0057: January 08, 2025:** (**<font color="#FC01CC">AWS Kubernetes</font>**) You can now set temporary startup taints for nodes. For example, you can use a startup taint to deploy a specific pod to a node to perform a specific function before deploying other pods to the same node. [Learn more...](https://docs.spot.io/ocean/features/labels-and-taints?id=startup-taints)
+
+Previous months...
+
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600">December, 2024 - click to view</summary>
+ 
+   <div style="padding-left:16px">
 
 *  **OCN-0056: December 25, 2024:** (**<font color="#FC01CC">AWS ECS</font>**) You can now set the `instanceMetadataTags` attributes from your Ocean ECS clusters via the Spot API 
 under `cluster.compute.LaunchSpecification`. For example, [Create Cluster](https://docs.spot.io/api/#tag/Ocean-ECS/operation/OceanECSClusterCreate).
@@ -29,10 +38,9 @@ Version 1 deprecation for other cloud service providers:
 
 *  **OCN-0046: December 03, 2024:** (**<font color="#FC01CC">AKS</font>**) The AKS Cluster overview dashboard now includes details about Ocean savings from reverting to lower cost nodes. [Learn more...](https://docs.spot.io/ocean/ocean-aks-cloud-cluster-overview?id=ocean-savings-from-reverting-to-lower-cost-node-pools)
 
-Previous months...
+</div>
+</details>
 
-
- 
 <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600">November, 2024 - click to view</summary>
  
