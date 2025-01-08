@@ -7,7 +7,7 @@
 *  **OCN-0057: IMPORTANT NOTICE - January 01, 2025:** Ocean Controller Version 1 is now deprecated for **<font color="#FC01CC">AKS</font>** (from **January 01, 2025**). This means that Version 1 will not support new features, and any unexpected behaviors or security issues identified after this date will not be addressed. We recommend upgrading to Ocean Controller Version 2.0 for the best performance and support. [Learn more...](https://docs.spot.io/ocean/tutorials/ocean-controller-v2/)    
 Ocean Controller
 Version 1 was previously deprecated for other cloud service providers:
-   * **<font color="#FC01CC">AWS Kubernetes </font>**: Was deprecated November 01, 2024
+   * **<font color="#FC01CC">AWS Kubernetes </font>**: was deprecated November 01, 2024
    * **<font color="#FC01CC">GKE</font>**: was deprecated December 18, 2024
 
 Previous months...
