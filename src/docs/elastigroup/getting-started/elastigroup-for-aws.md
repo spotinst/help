@@ -11,6 +11,6 @@ Elastigroup seamlessly integrates with several AWS services, such as ALB/ELB, AS
 You can use these [AWS pricing models](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-purchasing-options.html) with Spot:
 
 * On-demand instances: pay for the instances you launch.
-* Savings plans: make a commitment to a consistent amount of usage.
-* Reserved instances: make a commitment to a consistent instance configuration, including instance type and region.
-* Spot instance: request unused EC2 instances.
+* Savings plans: a commitment to a consistent amount of usage.
+* Reserved instances: a commitment to a consistent instance configuration, including instance type and region.
+* Spot instance: use unused EC2 instances.
