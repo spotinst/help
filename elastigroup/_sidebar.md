@@ -72,7 +72,6 @@
     - [Manage Group Capacity](elastigroup/tutorials/elastigroup-actions-menu/manage-group-capacity)
     - [Market Scoring & Managing Interruptions](elastigroup/features/core-features/market-scoring-managing-interruptions)
     - [Notifications](elastigroup/tutorials/elastigroup-actions-menu/create-notifications)
-    - [On-Demand, Spot & Reserved Instances](elastigroup/features/core-features/spot-reserved-on-demand-instances) <font color="#FC01CC">should this go in an overview or stay here?</font>
     - [Placement Groups](elastigroup/features/compute/placement-groups)
     - [Preferred Availability Zones](elastigroup/features/compute/preferred-availability-zones)
     - [Preferred Set Up](elastigroup/features/compute/preferred-instance-types)
