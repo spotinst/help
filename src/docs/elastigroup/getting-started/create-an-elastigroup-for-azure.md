@@ -71,7 +71,7 @@ When you have completed the information in the General tab, click Next to contin
 
 > **Tip**: To maximize cost savings, provide the Elastigroup with all possible low-priority VM sizes compatible with the expected workload. The more VM sizes, the better the odds Elastigroup will find an available low-priority VM to run on.
 
-<img src="/elastigroup/_media/gettingstarted-eg-azure-02a.png" />
+<img width=700 src="/elastigroup/_media/gettingstarted-eg-azure-02a.png" />
 
 ### Image
 
@@ -122,7 +122,7 @@ Enter the information for your network interface. You can define additional netw
 
 - Assign Public IP. Mark this checkbox if you want VMs in this Elastigroup to launch with a Public IP. You will then need to choose one or more Static Public IPs from the dropdown list. The list will include IPs only from AZs that you have chosen for the Elastigroup.
 
-<img src="/elastigroup/_media/gettingstarted-eg-azure-03d.png" width="273" height="362" />
+   <img src="/elastigroup/_media/gettingstarted-eg-azure-03d.png" width="273" height="362" />
 
 #### More on Choosing Public IPs
 
@@ -176,7 +176,7 @@ In order to minimize ad hoc creation of new IPs on VM launchers, the following i
 
  </details>
   
-- Shutdown Script. You can configure a shutdown script, but this requires an agent to be installed on the instance. [Learn more](elastigroup/features/azure/shutdown-script-in-elastigroup-for-azure).
+- Shutdown Script. You can configure a shutdown script, but this requires an agent to be installed on the instance. [Learn more](elastigroup/features-azure/shutdown-script-in-elastigroup-for-azure).
 
     <img src="/elastigroup/_media/gettingstarted-eg-azure-05.png" />
 
@@ -205,12 +205,12 @@ To create a scaling policy, complete the following steps.
 7. Cool-down.
    - Wait Period is the time (in seconds) that all scaling activities will be suspended after the scaling policy is triggered.
 
-<img src="/elastigroup/_media/gettingstarted-eg-azure-06.png" />
+   <img src="/elastigroup/_media/gettingstarted-eg-azure-06.png" />
 
 ## Step 4: Review
 
 1. Review your configuration in JSON format in the Review tab. You can edit the JSON directly by switching on Edit mode.
 
-<img src="/elastigroup/_media/gettingstarted-eg-azure-07.png" />
+   <img src="/elastigroup/_media/gettingstarted-eg-azure-07.png" />
 
 2. To create the Elastigroup, click Create.
