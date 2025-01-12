@@ -260,12 +260,12 @@ This is the information displayed:
 One or more autoscaling events are displayed in blue rectangles. These can be any Ocean autoscaling scale-up and scale-down events displayed as widgets above the graph.
 For example, Scale Up or Scale Down.
 
-For vCPU/Memory/GPU:
+For vCPU/Memory(GiB)/GPU:
 
-* Nodes Allocation vCPU/Memory (GiB)/GPU:
+* Nodes Allocation:
   * Total node allocation. 
   * Split according to lifecycle types.
-*  Workload vCPU/Memory (GiB)/GPU:
+*  Workload:
     *  deamonSets Requested. 
     *  Pods Requested.
     *  Headroom requested.
