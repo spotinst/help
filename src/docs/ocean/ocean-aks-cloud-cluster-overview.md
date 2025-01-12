@@ -288,7 +288,7 @@ To view more detailed information about autoscaling events:
 
 <img width="900" src="https://github.com/user-attachments/assets/25d4f754-c88d-4a04-b414-90a3d1b6e3db" />
 
-The extended details show:
+These are the extended details:
 
 * Affected node pools (new/replaced).
 * Nodes count.
