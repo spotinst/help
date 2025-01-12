@@ -55,7 +55,7 @@ Ocean Spark leverages Ocean under the hood, so it’s easy to import an existing
 3. Create a cluster by running this command, where the Ocean cluster ID is of the format o-XXXXXXXX:
 
 ```
-$ spotctl ocean spark create cluster --cluster-id $YOUR_OCEAN_CLUSTER_ID
+$ spotctl ocean spark create cluster --ocean-cluster-id $YOUR_OCEAN_CLUSTER_ID
 ```
 
 ### Using Terraform
