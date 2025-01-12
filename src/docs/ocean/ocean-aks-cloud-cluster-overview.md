@@ -277,16 +277,19 @@ Total Allocation Calculation:
 
 To view more detailed information about autoscaling events:
 
-### Display More Details for Revert to Spots/Revert to Lower-Cost Events
+### Display Extended Details for Revert to Spots/Revert to Lower-Cost Events
 
-1. Display a period of 12 hours or less.
-2. Click the revert to spots or revert to lower-cost event.
+1. Set the zoom level to 12 hours or less (described above).
+2. Mouse over the revert to spots / revert to lower cost event on the curve.
 
-SCREENSHOT
+<img width="270" src="https://github.com/user-attachments/assets/ef53d900-078d-4da9-89e4-7432d9a0f08e" />
 
-3. Click the button for the event to display the card.
+3. Click the (shaded) revert event in the main details to show the extended details.
 
-SCREENSHOT
+<img width="900" src="https://github.com/user-attachments/assets/25d4f754-c88d-4a04-b414-90a3d1b6e3db" />
+
+
+
 
 ## Resource Allocation Panel
 
