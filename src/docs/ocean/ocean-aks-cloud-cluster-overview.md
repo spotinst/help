@@ -1,6 +1,6 @@
 # Ocean AKS Cloud Cluster Overview Dashboard
 
-The Cloud Cluster Overview dashboard provides enhanced functionality to analyze the Ocean Autoscaler actions with high granularity and gain deeper insights into its behavior. 
+The Cloud Cluster Overview dashboard provides enhanced functionality to analyze the Ocean autoscaler actions with high granularity and gain deeper insights into its behavior. 
 This topic delves into this dashboard's various components and sections, offering a detailed exploration of its capabilities. 
 
 Ocean continuously analyzes the utilization of your nodes in the cloud infrastructure. It automatically scales compute resources to optimize utilization and availability. 
@@ -25,7 +25,8 @@ The Ocean Savings panel contains a set of savings widgets (displayed as tabs), w
 
 * Running on Spot: Savings from running on spot nodes instead of OD nodes. 
 * Bin Packing: Ocean proactively identifies underutilized nodes and efficiently bin-packs the pods on them to scale down the nodes and reduce the cluster cost.
-* Revert to Lower Cost: Applied to nodes with underutilized compute resources that cannot be scaled down from the cluster's set of nodes.
+* Revert to Lower Cost: Ocean scans all nodes managed by Ocean and replaces them with cheaper options. If the savings exceed 40%, it will replace the node pool.
+The mechanism identifies node pool candidates that maximize cost efficiency.
 
 In this panel: 
 
@@ -34,7 +35,7 @@ In this panel:
 
 ## Ocean Savings from Running on Spot
 
-Ocean Autoscaler intelligently leverages these spot instances when appropriate, reducing costs while maintaining high availability. This tab lets you view the cost benefits of using spot instances in your cluster. 
+Ocean autoscaler intelligently leverages these spot instances when appropriate, reducing costs while maintaining high availability. This tab lets you view the cost benefits of using spot instances in your cluster. 
 Ocean savings from running on spot are calculated as the difference between the price of regular and spot nodes within a specified time range. This calculation considers the number of CPUs, memory, and GPUs running as spot nodes. 
 
 To view these savings, click the **Running on Spot** tab (unless already displayed). 
@@ -92,7 +93,7 @@ If one or more nodes have been scaled down, click the link on the **Node Scaled 
  
 ## Ocean Savings from Reverting to Lower Cost Node Pools
 
-This process searches for node pools that can be replaced with lower-cost node pools. For example, suppose a pod was initially placed on a more expensive node due to resource constraints. In that case, Ocean Autoscaler can replace it with a less expensive node when it becomes available, consequently saving costs. This tab lets you see how much you save from this dynamic resource allocation. 
+This process searches for node pools that can be replaced with lower-cost node pools. For example, suppose a pod was initially placed on a more expensive node due to resource constraints. In that case, Ocean autoscaler can replace it with a less expensive node when it becomes available, consequently saving costs. This tab lets you see how much you save from this dynamic resource allocation. 
 
 Ocean savings for reverting to a lower-cost node pool are calculated from the difference in price between the old scaled-down nodes from the specific node pool and the new scaled-up nodes, which are assumed to be related to several different node pools. For more information, see [Revert to Lower Cost](https://docs.spot.io/ocean/features/revert-to-lower-cost-node?id=revert-to-lower-cost-node) Node pool. 
 
@@ -167,7 +168,7 @@ The Autoscaling Activity panel contains the following widgets:
 
 ## Scale Up 
 
-This widget displays scaling-up events, which are instances when the Ocean Autoscaler increases the resources (CPU, memory, storage) in your cluster to accommodate higher workloads. A scale-up event is triggered when there are 'unschedulable' pods, i.e., pods that cannot be placed due to insufficient resources like CPU, memory, or GPU on the existing nodes. In response, Ocean Autoscaler identifies the optimal nodes to place these pods and increases the resources accordingly. This process ensures efficient resource allocation, improved performance, and shorter processing times. 
+This widget displays scaling-up events, which are instances when the Ocean autoscaler increases the resources (CPU, memory, storage) in your cluster to accommodate higher workloads. A scale-up event is triggered when there are 'unschedulable' pods, i.e., pods that cannot be placed due to insufficient resources like CPU, memory, or GPU on the existing nodes. In response, Ocean autoscaler identifies the optimal nodes to place these pods and increases the resources accordingly. This process ensures efficient resource allocation, improved performance, and shorter processing times. 
 
 Scaling up nodes also enables allocating more resources to specific tasks, improving performance and reducing processing time. 
 
@@ -177,13 +178,13 @@ For more information, see [Scale Up](https://docs.spot.io/ocean/features/scaling
 
 ## Continuous Optimization 
 
-Ocean Autoscaler performs several automatic processes to optimize cluster resources.  
+Ocean autoscaler performs several automatic processes to optimize cluster resources.  
 
 ### Scale Down
 
 Scaling down nodes refers to reducing the resources (such as CPU, memory, GPU) of individual nodes in a cluster. 
 
-Ocean Autoscaler scales down nodes when the cluster is over-provisioned and does not utilize the full capacity of the nodes. In this case, scaling down right-sizes the resources to match the workload. In addition, if specific nodes in a cluster are consistently underutilized, Ocean Autoscaler scales down to redistribute the resources to other nodes or consolidate the workload onto fewer nodes. 
+Ocean autoscaler scales down nodes when the cluster is over-provisioned and does not utilize the full capacity of the nodes. In this case, scaling down right-sizes the resources to match the workload. In addition, if specific nodes in a cluster are consistently underutilized, Ocean autoscaler scales down to redistribute the resources to other nodes or consolidate the workload onto fewer nodes. 
 
 For more information, see [Scale Down](https://docs.spot.io/ocean/features/scaling-kubernetes?id=scale-down). 
 
@@ -214,7 +215,9 @@ For more information, see [Reserved Instances](https://docs.spot.io/ocean/tips-a
 
 ### Revert to Lower Cost
 
-Ocean Autoscaler searches for nodes with underutilized compute resources that cannot be scaled down from the cluster's set of nodes and reverts these nodes to lower-cost nodes. 
+Ocean autoscaler searches for nodes with lower-cost alternatives. If the savings exceed 40%, the node pool and associated nodes are replaced. 
+
+The number of scaled-down nodes does not have to match exactly the number of scaled-up nodes, and vice versa. Ocean replaces the node pool and its nodes by identifying cheaper pools that match the existing workloads. Before initiating replacements, Ocean runs various validations and filters. Once all conditions are met, the process guarantees the most suitable replacement for the node pool while maximizing cost efficiency.
 
 The Revert to Lower Cost widget shows the number of events for which a node was reverted to a lower-cost node in the selected time range. For more information, see [Revert to Lower Cost Node](https://docs.spot.io/ocean/features/revert-to-lower-cost-node?id=revert-to-lower-cost-node).  
 
@@ -223,7 +226,7 @@ Tracking these events on the Autoscaling Activity panel lets you see when and ho
 ##   Autoscaling Activity Graph
 
 The Autoscaling Activity Graph provides intuitive insights into the interaction between the Ocean infrastructure and the applications it supports. It also provides cluster activity insights at a granular 
-level so you can see why the Ocean Autoscaler triggered a specific scale event within the cluster.
+level so you can see why the Ocean autoscaler triggered a specific scale event within the cluster.
 
 The graph displays a breakdown by lifecycle, which you can view by vCPU, Memory, or GPU, together with workload and headroom requests.
 
