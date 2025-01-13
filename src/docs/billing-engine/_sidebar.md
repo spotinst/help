@@ -11,6 +11,7 @@
     - [Billing Engine Policy](billing-engine/tutorials/billing-engine-policy)
     - [Analysis](billing-engine/tutorials/analysis)
     - [Families](billing-engine/tutorials/families)
+    - [Invoice Generator](billing-engine/tutorials/invoicegenerator)
     - [Allocation Assignments](billing-engine/tutorials/allocation-assignments)
     - [Strategies](billing-engine/tutorials/strategies)  
     - [Plans](billing-engine/tutorials/plans)  
