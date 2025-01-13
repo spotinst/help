@@ -129,7 +129,7 @@ To stop the migration:
 
 ##  View Previous Migrations
 
-To view previous migrations:
+To view previous migrations (for the past month):
 
 * Click **Migrations History** on the right of the screen (above the nodes list).
 
