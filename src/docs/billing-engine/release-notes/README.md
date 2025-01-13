@@ -1,5 +1,8 @@
 # Billing Engine Release Notes
 
+* **BIE-0009**: **January 13, 2025** You can create custom PDF invoices to send to customers. For example, invoices can be by provider, subaccount, family, or cost. You can customize the data shown in the invoice and the form itself. [Learn more...](billing-engine/tutorials/invoicegenerator)
+
+
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600">November, 2024 - click to view</summary>
 
