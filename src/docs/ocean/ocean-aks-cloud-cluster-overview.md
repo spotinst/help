@@ -298,7 +298,7 @@ These are the extended details:
 * Virtual node group (click on the link to view virtual node group details).
 * VM Size.
 * Availability Zones.
-* LifeCycle (Spot/regular/RI/SP).
+* LifeCycle (Spot/regular).
 
 ## Resource Allocation Panel
 
