@@ -8,22 +8,22 @@ Before starting, review the [prerequisites](https://docs.spot.io/ocean/tutorials
 
 1.  In the left main menu, click **Ocean** and click **Cloud Clusters**. 
 2.  Select a cluster from the list of clusters.
-3.  Click **Start Migration** on the left of the screen under Ocean Managed Nodes. 
+3.  Click **Start Migration** on the right under Ocean Managed Nodes. 
 
-![migration-nodes-managed](https://github.com/user-attachments/assets/a669c8d3-3c94-4ec8-bd97-993261428abc)
+<img width="500" src ="https://github.com/user-attachments/assets/b53d540e-424c-4e9b-b196-d0aab6550496" />
 
 >**Note**: Worker nodes are the main compute resources running containerized applications in a Kubernetes cluster. System nodes (or master nodes) are the control plane components that manage the overall Kubernetes cluster and the workloads running on the worker nodes. The regular nodes are the on-demand nodes. The recommendation is to migrate the unmanaged worker nodes to become Ocean-managed Nodes. In the example above, before migration, there are no Ocean-managed nodes.
 
 Once you start the migration, Ocean automatically detects the workloads (nodes and pods) of the associated Kubernetes cluster and displays a list of all the discovered nodes.
 
-![aks-workload-migration-discovery-vals](https://github.com/user-attachments/assets/5b99abd3-88a9-4063-b915-c7dff9fd5322)
+<img width="900" src ="https://github.com/user-attachments/assets/b447a35b-26fd-4c2c-90e1-10cfce264d2b" />
 
 The list of discovered nodes contains these columns:
 
 * Migration Node: Node for migration.
 * Node Group
 * Pod Count: Number of pods on node.
-* Virtual Node Group Match: Indicates whether an existing virtual node group matches the node.
+* Virtual Node Group Match: Indicates whether an existing virtual node group in the cluster matches the node.
 * Ready for Migration (Node Statuses):
    * <img width="20" src ="https://github.com/user-attachments/assets/41b067f4-9df4-41cd-9aac-0289409a9a73 " /> Ready for migration: Node is validated and can be migrated (green color).
    * <img width="20" src="https://github.com/user-attachments/assets/fbb5322b-7b34-4f41-8883-49a88f10958d" /> Excluded: Node was not selected for migration (gray color).
@@ -41,7 +41,7 @@ Node validation checks for the following:
 5. If any selected node entries display the **Required Validation** status in the **Ready for Migration** column, click **Validate** at the bottom left of the screen.
 6. When the validation process is completed, check if any node entries display the **Unable to migrate** status in the **Ready for Migration** column.
 
-<img width="900" src ="https://github.com/user-attachments/assets/b2307c92-2fb0-4c60-a28f-17213287ee26" />
+<img width="900" src ="https://github.com/user-attachments/assets/9d896950-383c-4648-832c-2646dbc40574" />
 
 7. Fix any required nodes Ocean cannot migrate (see below) before you Click **Next**.
 
