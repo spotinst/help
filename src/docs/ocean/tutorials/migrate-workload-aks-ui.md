@@ -47,29 +47,31 @@ Node validation checks for the following:
 
 <details style="background:#f2f2f2; padding:20px; margin:10px 0px 0px 0px">
    
-  <summary markdown="span" style="color:#7632FE; font-weight:600">What to do about nodes that Ocean cannot migrate:
+  <summary markdown="span" style="color:#7632FE; font-weight:600">What to do about nodes that Ocean cannot migrate (click for more info...)
 </summary>
 
 <div style="padding-left:16px">
 
-If the Virtual Node Group Match column displays **No match** and has a **click to fix** link, the node does not contain labels and taints attributes that match any configured virtual node group in the cluster. 
+If the virtual node group match column displays **No match** and has a **click to edit** link, the node does not contain labels and taints attributes that match any configured virtual node group in the cluster. 
 
-To fix:
+To edit:
 
 1. Click the link. An issues dialog box displays the labels and taints required for a virtual node group in your cluster to match the selected node.
    
-   <img width="900" src ="https://github.com/user-attachments/assets/eeabf8ba-8a85-47b3-aa0e-b8cd46218c9b" />
-   
+   <img width="650" src ="https://github.com/user-attachments/assets/08b4b68f-13d3-4de7-8a07-76993b480740" />
+
 2. Click **Create New VNG** to create a virtual node group that contains these injected attributes. See how to configure a [virtual node group](https://docs.spot.io/ocean/tutorials/manage-virtual-nd-groups-aks?id=createedit-a-virtual-node-group) in the edit screen.
+
+   <img width="650" src ="https://github.com/user-attachments/assets/5b693b5d-cdbc-4ab1-8d43-27dc98779727" />
 
 >**Note**: The new virtual node group's other attributes are inherited from the virtual node group template.
   
-If the Virtual Node Group Match column shows **No match**, view the tooltip to see the reason for the mismatch. We recommend checking your Azure workloads related to the Ocean virtual node group configuration to ensure they are correct and resolve any mismatches.
+If the virtual node group Match column shows **No match** (but there is no link), the tooltip shows the reason for the mismatch. Spot recommends checking your Azure workloads related to the Ocean virtual node group configuration to ensure they are correct and resolve any mismatches.
 
-If you drill down to a workload under a node and the <img width="20" src ="https://github.com/user-attachments/assets/2c5d0898-d226-4867-a6d2-acde7ca2fee7" /> **Spot toleration is missing** message appears, [nstall the admission mutating webhook](https://docs.spot.io/ocean/getting-started/aks/?id=step-4-automatic-spot-tolerance-injection-optional)  that injects the required spot toleration, which AKS requires to run pods on spot nodes:
-*  From the Actions menu at the top-right of the screen, click **Spot Toleration Injection**.
+If you drill down to a workload under a node and the <img width="20" src ="https://github.com/user-attachments/assets/2c5d0898-d226-4867-a6d2-acde7ca2fee7" /> **Spot toleration is missing** message appears, [Install the admission mutating webhook](https://docs.spot.io/ocean/getting-started/aks/?id=step-4-automatic-spot-tolerance-injection-optional)  that injects the required spot toleration, which AKS requires to run pods on spot nodes:
+* To do this, click **Actions > Spot Toleration Injection** (top-right of screen).
 
-[Install the admission mutating webhook](https://docs.spot.io/ocean/getting-started/aks/?id=step-4-automatic-spot-tolerance-injection-optional) 
+
 
 >**IMPORTANT:** If no nodes pass the validation process, you must fix errors before migrating.
 
@@ -106,7 +108,7 @@ The migration will fail if the number of healthy nodes in a single batch is belo
 
 Follow the migration in the dashboard.
 
-<img width="1224" alt="Migration Process" src="https://github.com/spotinst/help/assets/159915991/1fc07669-40d4-4505-8765-1756fc46b79f">
+<img width="900" alt="Migration in Process" src="https://github.com/user-attachments/assets/918ea141-bb49-4853-910f-4cd21d744f70" />
 
 Node Statuses:
 
@@ -116,21 +118,14 @@ Node Statuses:
 *  <img width="20" src ="https://github.com/user-attachments/assets/1d4e0b3d-de64-490b-a408-e823d3d24a1e" /> To be Migrated: Node has not yet been migrated (light blue color)
 *  <img width="20" src ="https://github.com/user-attachments/assets/1be4c530-7c3c-44b9-8564-f0128c4803c5 " /> Failed: Migration failed (red color)
 
-
-
-
-
-
-
-
 ###  Stop Migration
 
 You can stop a migration in progress. However, migrated workloads remain under the new Spot nodes. Spot completes scheduling all the unscheduled pods of the current batch, and undrained nodes become schedulable again.
 
-To stop the migration process in progress.
+To stop the migration:
 
 1.  Click **Stop Migration** on the right of the screen (above the nodes list).
-2.  Select **Terminate Drained Instances** if you want Ocean to terminate the already drained nodes before stopping the entire process.
+2.  Click **Terminate Drained Instances** if you want Ocean to terminate the already drained nodes before stopping the entire process.
 
 ##  View Previous Migrations
 
