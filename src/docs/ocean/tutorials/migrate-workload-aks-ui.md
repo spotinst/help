@@ -1,6 +1,6 @@
 #  Migrate AKS Workload using the Console
 
-This topic describes migrating your existing Kubernetes K8s workloads into an Ocean cluster via the Ocean console.
+This topic describes migrating your existing Kubernetes workloads into an Ocean cluster via the Ocean console.
 
 Before starting, review the [prerequisites](https://docs.spot.io/ocean/tutorials/migrate-workload-aks?id=prerequisites).
 
@@ -21,7 +21,7 @@ Once you start the migration, Ocean automatically detects the workloads (nodes a
 The list of discovered nodes contains these columns:
 
 * Migration Node: Node for migration.
-* Node Group
+* Node Group.
 * Pod Count: Number of pods on node.
 * Virtual Node Group Match: Indicates whether an existing virtual node group in the cluster matches the node.
 * Ready for Migration (Node Statuses):
@@ -131,9 +131,9 @@ To stop the migration:
 
 To view previous migrations (for the past month):
 
-* Click **Migrations History** on the right of the screen (above the nodes list).
+* Click **Actions > Previous migration history** on the top-right of the screen, or click **Migrations History** (from the workload migration dashboard).
 
-![aks-migration-history](https://github.com/user-attachments/assets/26c89422-da5d-4dc5-9a82-af0f584e5bdb)
+  <img width="650" src ="https://github.com/user-attachments/assets/292306b9-ffb1-49fb-9d51-a242d93a98c1" />
 
 The list of migrations displays:
 
