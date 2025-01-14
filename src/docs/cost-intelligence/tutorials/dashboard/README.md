@@ -1,6 +1,11 @@
 # Cost Intelligence Dashboards    
 
-Users with Cost Intelligence Administrator permissions or Creator Policy permissions can determine the organization’s default dashboard for all users. The dashboard page has an action menu with options to edit, clone, create, delete, manage files, and select default dashboards.
+You can set the organization's default dashboard for everyone in an organization if you have these permissions:
+
+* Cost Intelligence Administrator
+* Creator Policy 
+
+The dashboard page has an action menu with options to edit, clone, create, delete, manage files, and select default dashboards.
 
 When your account is successfully configured in Cost Intelligence, you can create dashboards and charts in the datasets. 
 
