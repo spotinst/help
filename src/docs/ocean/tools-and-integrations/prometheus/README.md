@@ -25,7 +25,7 @@ ocean_managed_nodes {vng_id="ols-xxxxxxxx", lifecycle="Spot", az="us-west-2b", v
 
 ### ocean_nodes_added_total and ocean_nodes_removed_total (counter metrics)
 
-These counter-type metrics help track the rate of addition and removal of nodes in the cluster and their different reasons, as reflected in a dedicated label called `Reason.` `Reason` includes values such as: 
+These counter-type metrics help track the aggregated rate of addition and removal of nodes in the cluster and their different reasons, as reflected in a dedicated label called `Reason.` `Reason` includes values such as: 
 
 * `pendingPodsOrHeadroom`—The Ocean Autoscaler scaled up the node due to unscheduled pending pods or missing Headroom units on your cluster.  
 * `scaleDownForOptimization`—The Ocean Autoscaler scaled down the node to optimize resource utilization on your cluster.  
@@ -50,7 +50,7 @@ nodes_added_total{reason="scaleUpForPendingPods", lifecycle="Spot", az="us-west-
 
 ### ocean_current_nodes_added and ocean_current_nodes_removed (gauge metrics)
 
-These gauge-type metrics help track the rate of addition and removal of nodes in the cluster and their different reasons, as reflected in a dedicated label called `Reason.` `Reason` includes values such as: 
+These gauge-type metrics help track the current rate of addition and removal of nodes in the cluster and their different reasons, as reflected in a dedicated label called `Reason.` `Reason` includes values such as: 
 
 * `pendingPodsOrHeadroom`—The Ocean Autoscaler scaled up the node due to unscheduled pending pods or missing Headroom units on your cluster.  
 * `scaleDownForOptimization`—The Ocean Autoscaler scaled down the node to optimize resource utilization on your cluster.  
@@ -75,7 +75,7 @@ nodes_added_total{reason="scaleUpForPendingPods", lifecycle="Spot", az="us-west-
 
 
 ### ocean_failed_scale_ups_total and ocean_failed_scale_downs_total (counter metrics)
-These counter-type metrics help track the rate of failed scale-ups and scale-down operations in the cluster and the
+These counter-type metrics help track the aggregated rate of failed scale-ups and scale-down operations in the cluster and the
 reasons behind them, as reflected in a dedicated label called `Reason.` `Reason` includes values such as:
 
 <details>
@@ -127,7 +127,7 @@ ocean_failed_scale_downs{oceanId="o-2cf2e886", reason="cluster_min_instance_coun
 
 ### ocean_current_failed_scale_ups and ocean_current_failed_scale_downs (gauge metrics)
 
-These gauge-type metrics help track the rate of failed scale-ups and scale-down operations in the cluster and the
+These gauge-type metrics help track the current rate of failed scale-ups and scale-down operations in the cluster and the
 reasons behind them, as reflected in a dedicated label called `Reason.` `Reason` includes values such as:
 
 <details>
