@@ -2,6 +2,8 @@
 
 ## January 2025: Features and Enhancements
 
+*  **OCN-0059: January 14, 2025:** (**<font color="#FC01CC">AKS</font>**) Ocean now identifies missing labels and taints that can cause AKS node migration failures. Before migrating nodes, you can fix mismatches between virtual node groups and workloads in the console. [Learn more...](https://docs.spot.io/ocean/tutorials/migrate-workload-aks-ui?id=migrate-aks-workload-using-the-console)
+
 *  **OCN-0058: January 08, 2025:** (**<font color="#FC01CC">AWS Kubernetes</font>**) You can now set temporary startup taints for nodes. For example, you can use a startup taint to deploy a specific pod to a node to perform a specific function before deploying other pods to the same node. [Learn more...](https://docs.spot.io/ocean/features/labels-and-taints?id=startup-taints)
 
 *  **OCN-0057: IMPORTANT NOTICE - January 01, 2025:** Ocean Controller Version 1 is now deprecated for **<font color="#FC01CC">AKS</font>** (from **January 01, 2025**). This means that Version 1 will not support new features, and any unexpected behaviors or security issues identified after this date will not be addressed. We recommend upgrading to Ocean Controller Version 2.0 for the best performance and support. [Learn more...](https://docs.spot.io/ocean/tutorials/ocean-controller-v2/)    
