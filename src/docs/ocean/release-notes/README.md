@@ -2,6 +2,9 @@
 
 ## January 2025: Features and Enhancements
 
+
+*  **OCN-0060: January 14, 2025:** (**<font color="#FC01CC">AKS</font>**) You can now access extensive information about Ocean AKS revert to spot and revert to lower-cost events from the autoscaler activity graph. [Learn more…](https://docs.spot.io/ocean/ocean-aks-cloud-cluster-overview?id=display-extended-details-for-revert-to-spotsrevert-to-lower-cost-events)
+
 *  **OCN-0059: January 14, 2025:** (**<font color="#FC01CC">AKS</font>**) Ocean now identifies missing labels and taints that can cause AKS node migration failures. Before migrating nodes, you can fix mismatches between virtual node groups and workloads in the console. [Learn more...](https://docs.spot.io/ocean/tutorials/migrate-workload-aks-ui?id=migrate-aks-workload-using-the-console)
 
 *  **OCN-0058: January 08, 2025:** (**<font color="#FC01CC">AWS Kubernetes</font>**) You can now set temporary startup taints for nodes. For example, you can use a startup taint to deploy a specific pod to a node to perform a specific function before deploying other pods to the same node. [Learn more...](https://docs.spot.io/ocean/features/labels-and-taints?id=startup-taints)
