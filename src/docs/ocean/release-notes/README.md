@@ -2,6 +2,7 @@
 
 ## January 2025: Features and Enhancements
 
+*  **OCN-0061: January 15, 2025:** (**<font color="#FC01CC">AWS Kubernetes</font>**) The latest release introduces two major features: Enhanced scale-up for faster pod scheduling and improved cluster utilization, and an enhanced distribution algorithm for balanced node spreading and greater cost savings. These enhancements significantly reduce cluster costs while maintaining cluster availability. Enhanced scale-up is available to all Ocean customers and requires Ocean Controller v2.0.68.
 
 *  **OCN-0060: January 14, 2025:** (**<font color="#FC01CC">AKS</font>**) You can now access extensive information about Ocean AKS revert to spot and revert to lower-cost events from the autoscaler activity graph. [Learn more…](https://docs.spot.io/ocean/ocean-aks-cloud-cluster-overview?id=display-extended-details-for-revert-to-spotsrevert-to-lower-cost-events)
 
