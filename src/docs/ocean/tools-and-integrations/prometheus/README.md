@@ -109,7 +109,7 @@ running instances.
 * `duplicate_target_group_name` - Have 2 or more target groups with the same name.
 * `authorization_failure` - The provided credentials could not be validated. This can occur while trying to associate an Elastic IP address you don’t own or trying to use an AMI for which you do not have permission.
 * `Invalid_AMI_configuration` - invalid AMI configuration.
-* `Unauthorized_Operation ` - Failed to create a target group or failed fetching subnets from AWS due to ש permission error.
+* `Unauthorized_Operation ` - Failed to create a target group or failed fetching subnets from AWS due to permission error.
 
 Prometheus metric type: counter
 
@@ -161,7 +161,7 @@ running instances.
 * `duplicate_target_group_name` - Have 2 or more target groups with the same name.
 * `authorization_failure` - The provided credentials could not be validated. This can occur while trying to associate an Elastic IP address you don’t own or trying to use an AMI for which you do not have permission.
 * `Invalid_AMI_configuration` - invalid AMI configuration.
-* `Unauthorized_Operation ` - Failed to create a target group or failed fetching subnets from AWS due to ש permission error.
+* `Unauthorized_Operation ` - Failed to create a target group or failed fetching subnets from AWS due to permission error.
 
 Prometheus metric type: gauge
 
