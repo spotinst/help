@@ -2,7 +2,7 @@
 
 ## January 2025: Features and Enhancements
 
-*  **OCN-0062: January 15, 2025:** (**<font color="#FC01CC">AWS Kubernetes</font>**), (**<font color="#FC01CC">AKS</font>**), (**<font color="#FC01CC">GKE</font>**) New gauge metrics were added to the Ocean Prometheus exporter (nodes added/removed and failed scale-ups/downs). [Learn more...](https://docs.spot.io/ocean/tools-and-integrations/prometheus/?id=prometheus-for-kubernetes-data-plane-monitoring)
+*  **OCN-0062: January 15, 2025:** (**<font color="#FC01CC">AWS Kubernetes</font>**). New gauge metrics were added to the Ocean Prometheus exporter (nodes added/removed and failed scale-ups/downs). [Learn more...](https://docs.spot.io/ocean/tools-and-integrations/prometheus/?id=prometheus-for-kubernetes-data-plane-monitoring)
 
 *  **OCN-0061: January 15, 2025:** (**<font color="#FC01CC">AWS Kubernetes</font>**) The latest release introduces two major features: Enhanced scale-up for faster pod scheduling and improved cluster utilization, and an enhanced distribution algorithm for balanced node spreading and greater cost savings. These enhancements significantly reduce cluster costs while maintaining cluster availability. Enhanced scale-up is available to all Ocean customers and requires Ocean Controller v2.0.68.
 
