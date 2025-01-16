@@ -48,7 +48,7 @@ These are the workloads that were optimized based on automated and manual recomm
 * Namespace.
 * Workload Type: (if the workload was deleted, it is marked as Deleted).
 * CPU:
- * With Ocean (green color): The sum of all of the CPU requests recommended by Ocean.
+ * With Ocean (green color): The sum of all the CPU requests Ocean recommends.
  * Without Ocean: The sum of all CPU requests in your original workloads.
 * Memory:
  * With Ocean (green color): The sum of all of the memory requests recommended by Ocean.
