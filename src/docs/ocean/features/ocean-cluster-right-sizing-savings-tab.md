@@ -30,7 +30,7 @@ At the top of the actual savings overview, you can filter according to:
   * This month (from the first day of the month until today).
  
 * Savings benchmark:
-  * Original requests: Cost is based on the workload requests initially used by right-sizing
+  * Original requests: Cost is based on the workload requests initially used by right-sizing.
   * Current Requests: Cost is based on the latest workload requests.
  
 * Workloads (optimized workloads only).
@@ -51,8 +51,8 @@ These are the workloads that were optimized based on automated and manual recomm
   * With Ocean (green color): The sum of all the CPU requests Ocean recommends.
   * Without Ocean: The sum of all CPU requests in your original workloads.
 * Memory:
- * With Ocean (green color): The sum of all of the memory requests recommended by Ocean.
- * Without Ocean: The sum of all the memory requests in your original workloads.
+  * With Ocean (green color): The sum of all of the memory requests recommended by Ocean.
+  * Without Ocean: The sum of all the memory requests in your original workloads.
 * Right-sizing savings (dollars) for the workload.
 
   
