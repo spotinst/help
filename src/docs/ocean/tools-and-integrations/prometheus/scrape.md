@@ -86,7 +86,9 @@ For each category, you [can configure allowed metrics and deny specific metrics]
 * ocean_allocated_headroom_memory_gibs_total  
 * ocean_allocated_headroom_gpu_units_total
 * ocean_cluster_limits_cpu_vcpu  
-* ocean_cluster_limits_memory_gib  
+* ocean_cluster_limits_memory_gib
+* ocean_current_failed_scale_ups
+* ocean_current_failed_scale_downs  
 
 #### Cost Analysis Metrics  
 
