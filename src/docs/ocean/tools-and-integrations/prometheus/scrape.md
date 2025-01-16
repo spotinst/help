@@ -74,7 +74,9 @@ For each category, you [can configure allowed metrics and deny specific metrics]
 #### Scaling Metrics  
 
 * ocean_nodes_removed_total  
-* ocean_nodes_added_total  
+* ocean_nodes_added_total
+* ocean_current_nodes_added
+* ocean_current_nodes_removed  
 * ocean_controller_heartbeat_info_total  
 * ocean_managed_nodes_total  
 * ocean_allocated_cpu_vcpus_total  
