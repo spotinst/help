@@ -148,6 +148,8 @@
       - [Install Network Client](ocean/tutorials/install-network-client-v2)
       - [Labels & Taints](ocean/features/labels-and-taints)
         - [Create Custom Labels](ocean/tutorials/create-custom-labels)
+      - [Log Integration with S3](ocean/features/log-integration-with-s3)
+      - [Manage VM Types](ocean/tips-and-best-practices/manage-machine-types)
 
 
 
@@ -170,6 +172,8 @@
       - [Headroom](ocean/features/headroom)
       - [Labels & Taints](ocean/features/labels-and-taints)
         - [Create Custom Labels](ocean/tutorials/create-custom-labels)
+      - [Log Integration with Azure Blob](ocean/features/log-integration-with-azure-blob)
+         
 
 
     - [Azure GCP Features](ocean/gcp-gke/)
