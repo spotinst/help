@@ -120,4 +120,12 @@
   - [Troubleshooting](ocean/troubleshooting/)
       - [Troubleshoot Unscheduled Pods](ocean/troubleshooting/troubleshoot-unscheduled-pods)
  
-      
+      FEATURES
+    AWS Kubernetes
+    AWS ECS
+    Azure AKS
+    GCP GKE
+
+    
+    
+    
