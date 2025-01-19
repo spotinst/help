@@ -7,6 +7,8 @@
 
 <div style="padding-left:16px">
 
+* **COI-0021**: January 19th, 2025: The new Smart Analyzer lets you use NetApp's ChatGPT to gain valuable insights into your chart data. You can use free text and predefined queries. [Learn more...](cost-intelligence/tutorials/dashboard/)
+
 * **COI-0020**: January 8th, 2025: You can now access out-of-the-box datasets for creating dashboards and charts once certain account types are configured in Cost Intelligence. 
 
   You can also find information about [Managed Dashboards](cost-intelligence/tutorials/dashboard/?id=managed-dashboards)   that are pre-built dashboards created by Cost Intelligence. When data is available, they enable a quick start in the     dashboards, focusing on specific use cases. [Learn more...](cost-intelligence/tutorials/dashboard/)
