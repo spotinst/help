@@ -22,7 +22,7 @@
         - [Migration via Console](ocean/tutorials/migrate-workload-aks-ui)
         - [Migration via API](ocean/tutorials/migrate-workload-aks-api)
         - [Troubleshooting Migration](ocean/tutorials/migrate-aks-troubleshooting)
-        - [Cluster Upgrade](ocean/tips-and-best-practices/upgrade-aks-cluster)
+       - [Cluster Upgrade](ocean/tips-and-best-practices/upgrade-aks-cluster)
     - [kOps](ocean/getting-started/kops)
       - [Installation](ocean/tools-and-integrations/kops/install-kops/)
         - [kOps 1.14](ocean/tools-and-integrations/kops/install-kops/kops-114)
@@ -39,6 +39,8 @@
       - [Cluster Creation from v4.x](ocean/tools-and-integrations/openshift/create-cluster-v4x)
       - [Cluster Creation from v3.11](ocean/tools-and-integrations/openshift/create-cluster-v311)
   - [Release Notes](ocean/release-notes/)
+ 
+
   - [Ocean Features Overview](ocean/features/)
       - [Ocean Overview Dashboards](ocean/tutorials/)
          - [Ocean Dashboard](ocean/tutorials/ocean-dashboard)
@@ -119,15 +121,12 @@
       - [Scrape Ocean Metrics](ocean/tools-and-integrations/prometheus/scrape)
   - [Troubleshooting](ocean/troubleshooting/)
       - [Troubleshoot Unscheduled Pods](ocean/troubleshooting/troubleshoot-unscheduled-pods)
- 
+
 
 
     FEATURES
-    AWS Kubernetes
-    AWS ECS
-    Azure AKS
-    1GCP GKE1
-
+  
+    - [Ocean Features Overview](ocean/features/)
     - [AWS Kubernetes Features](ocean/aws-kubernetes/)
       - [Ocean Dashboard](ocean/tutorials/ocean-dashboard)
       - [Ocean AWS Cluster Overview Dashboard](ocean/cluster-overview-tab)
@@ -165,6 +164,19 @@
       - [Virtual Node Groups](ocean/features/vngs/)
         - [Attributes per VNG](ocean/features/vngs/attributes-and-actions-per-vng)
         - [Manage AWS Virtual Node Groups](ocean/tutorials/manage-virtual-node-groups)
+      - [Upgrade Kubernetes in EKS Cluster](ocean/tutorials/upgrade-kubernetes-eks)
+      - [Workload Migration](ocean/tutorials/migrate-workload)
+        - [Migration via Console](ocean/tutorials/migrate-workload-via-ui)
+        - [Migration via API](ocean/tutorials/migrate-workload-via-api)
+        - [Troubleshooting Migration](ocean/tutorials/migration-ts-aws)
+      - [Ocean Controller Version 2](ocean/tutorials/ocean-controller-v2/)
+        - [Install Controller](ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-install)
+        - [Update Controller](ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-update)
+        - [Controller Permissions](ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-permissions)
+        - [Controller Proxy Settings](ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-proxy)
+        - [Controller Troubleshooting](ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-ts)
+        - [Controller V2 History](ocean/tutorials/spot-kubernetes-controller/controller-version-two-hist)
+      - [DEPRECATED-Ocean Controller Version 1](ocean/tutorials/spot-kubernetes-controller/)
 
 
 
@@ -184,6 +196,7 @@
         - [Set Shutdown Hours](ocean/tutorials/set-running-hours)
       - [Virtual Node Groups](ocean/features/vngs/)
         - [Attributes per VNG](ocean/features/vngs/attributes-and-actions-per-vng)
+      - [Elastigroups Migration](ocean/tutorials/migrate-existing-egs-ekskops)
 
    
      
@@ -212,6 +225,19 @@
         - [VNG K8s Minor Versions](ocean/tips-and-best-practices/vng-minor-versions)
         - [Manage AKS Virtual Node Groups](ocean/tutorials/manage-virtual-nd-groups-aks)
         - [Regions Without AZ Support (AKS)](ocean/getting-started/aks?id=support-for-regions-without-availability-zones)
+      - [Workload Migration](ocean/tutorials/migrate-workload-aks)
+        - [Migration via Console](ocean/tutorials/migrate-workload-aks-ui)
+        - [Migration via API](ocean/tutorials/migrate-workload-aks-api)
+        - [Troubleshooting Migration](ocean/tutorials/migrate-aks-troubleshooting)
+      - [Cluster Upgrade](ocean/tips-and-best-practices/upgrade-aks-cluster)
+      - [Ocean Controller Version 2](ocean/tutorials/ocean-controller-v2/)
+        - [Install Controller](ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-install)
+        - [Update Controller](ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-update)
+        - [Controller Permissions](ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-permissions)
+        - [Controller Proxy Settings](ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-proxy)
+        - [Controller Troubleshooting](ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-ts)
+        - [Controller V2 History](ocean/tutorials/spot-kubernetes-controller/controller-version-two-hist)
+      - [DEPRECATED-Ocean Controller Version 1](ocean/tutorials/spot-kubernetes-controller/)
 
          
 
@@ -239,8 +265,27 @@
       - [Virtual Node Groups](ocean/features/vngs/)
         - [Attributes per VNG](ocean/features/vngs/attributes-and-actions-per-vng)
       - [Max Scale Down % per VNG-Console (GKE)](ocean/features/max-scale-down-vng-gke-ui)
+      - [Ocean Controller Version 2](ocean/tutorials/ocean-controller-v2/)
+        - [Install Controller](ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-install)
+        - [Update Controller](ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-update)
+        - [Controller Permissions](ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-permissions)
+        - [Controller Proxy Settings](ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-proxy)
+        - [Controller Troubleshooting](ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-ts)
+        - [Controller V2 History](ocean/tutorials/spot-kubernetes-controller/controller-version-two-hist)
+      - [DEPRECATED-Ocean Controller Version 1](ocean/tutorials/spot-kubernetes-controller/)
 
 
+    - [Tools & Integrations](ocean/tools-and-integrations/)
+      - [eksctl](ocean/tools-and-integrations/eksctl/)
+        - [Create a New Cluster with eksctl](ocean/tools-and-integrations/eksctl/create-a-new-cluster-with-eksctl)
+        - [Connect an Existing Cluster](ocean/tools-and-integrations/eksctl/join-an-existing-cluster)
+      - [kOps](ocean/tools-and-integrations/kops/)
+        - [Metadata Labels](ocean/tools-and-integrations/kops/metadata-labels)
+      - [OpenShift](ocean/tools-and-integrations/openshift/)
+      - [Prometheus](ocean/tools-and-integrations/prometheus/)
+        - [Scrape Ocean Metrics](ocean/tools-and-integrations/prometheus/scrape)
+    - [Troubleshooting](ocean/troubleshooting/)
+      - [Troubleshoot Unscheduled Pods](ocean/troubleshooting/troubleshoot-unscheduled-pods)
 
 
     
