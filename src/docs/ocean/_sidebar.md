@@ -150,6 +150,13 @@
         - [Create Custom Labels](ocean/tutorials/create-custom-labels)
       - [Log Integration with S3](ocean/features/log-integration-with-s3)
       - [Manage VM Types](ocean/tips-and-best-practices/manage-machine-types)
+      - [Mount FSx for ONTAP to Kubernetes Pods](ocean/tutorials/mount-fsx-for-ontap-volumes-to-kubernetes-pods)
+      - [Revert to Lower-Cost Node](ocean/features/revert-to-lower-cost-node)
+      - [Right-Sizing (Automatic)](ocean/features/ocean-cluster-right-sizing-tab)
+        - [Right-Sizing Recommendations](ocean/features/ocean-cluster-right-sizing-recom-tab)
+        - [Right-Sizing Troubleshooting](ocean/features/troubleshoot-right-sizing)
+      - [Right Sizing (Manual)](ocean/features/right-sizing)
+        - [Use Right Sizing](ocean/tutorials/use-right-sizing)
 
 
 
@@ -160,7 +167,9 @@
       - [Cost Analysis](ocean/features/cost-analysis)
         - [Analyze Your Costs](ocean/tutorials/analyze-your-costs)
         - [Create a Cost Analysis Filter](ocean/tutorials/create-a-cost-filter)
-      - [Headroom](ocean/features/headroom) 
+      - [Headroom](ocean/features/headroom)
+      - [Right Sizing (Manual)](ocean/features/right-sizing)
+        - [Use Right Sizing](ocean/tutorials/use-right-sizing)
    
      
     - [Azure AKS Features](ocean/azure-aks/)
@@ -173,6 +182,9 @@
       - [Labels & Taints](ocean/features/labels-and-taints)
         - [Create Custom Labels](ocean/tutorials/create-custom-labels)
       - [Log Integration with Azure Blob](ocean/features/log-integration-with-azure-blob)
+      - [Right-Sizing (Automatic)](ocean/features/ocean-cluster-right-sizing-tab)
+        - [Right-Sizing Recommendations](ocean/features/ocean-cluster-right-sizing-recom-tab)
+        - [Right-Sizing Troubleshooting](ocean/features/troubleshoot-right-sizing)
          
 
 
@@ -188,6 +200,9 @@
       - [Headroom](ocean/features/headroom)
       - [Labels & Taints](ocean/features/labels-and-taints)
         - [Create Custom Labels](ocean/tutorials/create-custom-labels)
+      - [Manage VM Types](ocean/tips-and-best-practices/manage-machine-types)
+      - [Right Sizing (Manual)](ocean/features/right-sizing)
+        - [Use Right Sizing](ocean/tutorials/use-right-sizing)
 
 
 
