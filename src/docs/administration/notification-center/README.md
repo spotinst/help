@@ -1,6 +1,9 @@
 # Notification Center
 
-The Notification Center provides a robust tool for defining the types of notifications you receive. This includes a tool for creating and editing notification policies, and a tool for reading system notifications about events in your clusters, news messages from Spot by NetApp, and previews of the latest [Spot blog pages](https://spot.io/blog/).
+In the notification center, you can:
+* Define the types of notifications you receive
+* Create and edit notification policies
+* Read system notifications about events in your clusters, messages from Spot by NetApp, and previews of the latest [Spot blog pages](https://spot.io/blog/)
 
 <img width="909" alt="notifications-01" src="https://github.com/user-attachments/assets/29971240-0b74-4526-a7e0-471c6835fff2">
 
