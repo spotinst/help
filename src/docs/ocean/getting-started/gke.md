@@ -93,7 +93,7 @@ To install the Ocean Controller and establish connectivity:
     
       curl -fsSL https://spotinst-public.s3.amazonaws.com/integrations/kubernetes/cluster-controller-v2/scripts/init.sh | \
       SPOTINST_TOKEN=$SPOTINST_TOKEN \
-      SPOTINST_ACCOUNT=$SPOTINST_ACCOUNT Let me know if there is anything else I can help you with.
+      SPOTINST_ACCOUNT=$SPOTINST_ACCOUNT \
       SPOTINST_CLUSTER_IDENTIFIER=$SPOTINST_CLUSTER_IDENTIFIER \
       ENABLE_OCEAN_METRIC_EXPORTER=false \
       INCLUDE_METRIC_SERVER=false \
