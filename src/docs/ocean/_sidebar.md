@@ -136,8 +136,11 @@
       - [Cost Analysis](ocean/features/cost-analysis)
         - [Analyze Your Costs](ocean/tutorials/analyze-your-costs)
         - [Create a Cost Analysis Filter](ocean/tutorials/create-a-cost-filter)
-      - [Distribute by vCPU](ocean/features/distribute-vcpu)  -       
-  
+      - [Distribute by vCPU](ocean/features/distribute-vcpu)
+      - [Dynamic Commitments](ocean/features/dynamic-commitments-aws)
+      - [Extended Resource Support Setup](ocean/tutorials/set-up-extended-resource-support)
+      - [Grafana Ocean Dashboards](ocean/tools-and-integrations/grafana-dashboard)
+        - [Grafana for Ocean Setup](ocean/tools-and-integrations/setup-and-config-grafana-4-ocean)
 
     - [AWS ECS Features](ocean/aws-ecs/)
       - [Connect a Fargate Service](elastigroup/tutorials/amazon-ecs/import-fargate-services-to-ecs-elastigroup)
@@ -150,6 +153,8 @@
       - [Ocean Dashboard](ocean/tutorials/ocean-dashboard)
       - [Ocean AKS Cluster Overview Dashboard](ocean/ocean-aks-cloud-cluster-overview)
       - [Auto-Upgrade AKS Control Plane Patch](ocean/features/auto-upgrade-aks-patch-version)
+      - [Grafana Ocean Dashboards](ocean/tools-and-integrations/grafana-dashboard)
+        - [Grafana for Ocean Setup](ocean/tools-and-integrations/setup-and-config-grafana-4-ocean)
 
 
     - [Azure GCP Features](ocean/gcp-gke/)
@@ -158,8 +163,10 @@
       - [Committed Use Discount](ocean/features/committed-use-discount)
       - [Cost Analysis](ocean/features/cost-analysis)
         - [Analyze Your Costs](ocean/tutorials/analyze-your-costs)
-        - [Create a Cost Analysis Filter](ocean/tutorials/create-a-cost-filter)    
-      
+        - [Create a Cost Analysis Filter](ocean/tutorials/create-a-cost-filter)
+      - [Grafana Ocean Dashboards](ocean/tools-and-integrations/grafana-dashboard)
+        - [Grafana for Ocean Setup](ocean/tools-and-integrations/setup-and-config-grafana-4-ocean)
+
      
 
     
