@@ -18,8 +18,8 @@ When your account is successfully configured in Cost Intelligence, you can creat
 
     * AWS → Billing account and/or a linked account 
     * Azure → subscription
-    
 
+    
 **Note**: This does not include data from Spot Security Risk Assessment checks.
 
 * Inventory - Created from Cost Intelligence and is available when you onboard an account with inventory-related data. Provides high-level inventory-related data for onboarded accounts. 
@@ -46,6 +46,28 @@ To create a dashboard:
 2. Enter a name for the dashboard and click **Publish Dashboard**. This publishes the dashboard and makes it available to all users in the organization.
 
 NOTE: If you do not publish the dashboard, the newly created dashboard will display as an empty dashboard in the list of available dashboards.  
+
+### Smart Analyzer
+
+The Smart Analyzer feature connects your chart data to NetApp's ChatGPT models, enabling you to gain deeper insights into your data through natural language interactions. This feature allows you to ask questions and view the summary answer along with the underlying logic and methodology used to generate the analysis results.  
+
+To analyze a chart:
+
+1. Click the robot icon above the chart you want to analyze for detailed insights and automated recommendations.
+2. In the <i>Smart Analyzer</i> window, you can:
+
+![image](https://github.com/user-attachments/assets/06f259fd-9643-4736-9eef-a3d91cf6bc06)
+
+* Select a question from the generated list based on the chart's data.
+* Enter a question.
+
+The Smart Analyzer is enabled for all users and applies to all relevant charts within the Cost Intelligence dashboard.  
+
+The Smart Analyzer does not alter or modify datasets. It operates solely on the data provided in the dashboard charts. 
+
+#### Data Protection 
+
+Your data is strictly protected and siloed. It is important to note that the data used for analysis is not utilized to train the ChatGPT models. This ensures that your data remains confidential and is not used for purposes other than generating insights within the Smart Analyzer feature.
 
 ## Set Default Dashboard for an Organization
 
