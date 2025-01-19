@@ -120,7 +120,9 @@
   - [Troubleshooting](ocean/troubleshooting/)
       - [Troubleshoot Unscheduled Pods](ocean/troubleshooting/troubleshoot-unscheduled-pods)
  
-      FEATURES
+
+<!--
+    FEATURES
     AWS Kubernetes
     AWS ECS
     Azure AKS
@@ -141,13 +143,22 @@
       - [Extended Resource Support Setup](ocean/tutorials/set-up-extended-resource-support)
       - [Grafana Ocean Dashboards](ocean/tools-and-integrations/grafana-dashboard)
         - [Grafana for Ocean Setup](ocean/tools-and-integrations/setup-and-config-grafana-4-ocean)
+      - [Headroom](ocean/features/headroom)
+      - [Health Checks & Auto-Healing](ocean/features/health-checks-and-autohealing)
+      - [Install Network Client](ocean/tutorials/install-network-client-v2)
+      - [Labels & Taints](ocean/features/labels-and-taints)
+
+
+
 
     - [AWS ECS Features](ocean/aws-ecs/)
       - [Connect a Fargate Service](elastigroup/tutorials/amazon-ecs/import-fargate-services-to-ecs-elastigroup)
       - [Cluster Orientation](ocean/features/cluster-orientation)
       - [Cost Analysis](ocean/features/cost-analysis)
         - [Analyze Your Costs](ocean/tutorials/analyze-your-costs)
-        - [Create a Cost Analysis Filter](ocean/tutorials/create-a-cost-filter)   
+        - [Create a Cost Analysis Filter](ocean/tutorials/create-a-cost-filter)
+      - [Headroom](ocean/features/headroom) 
+   
      
     - [Azure AKS Features](ocean/azure-aks/)
       - [Ocean Dashboard](ocean/tutorials/ocean-dashboard)
@@ -155,6 +166,8 @@
       - [Auto-Upgrade AKS Control Plane Patch](ocean/features/auto-upgrade-aks-patch-version)
       - [Grafana Ocean Dashboards](ocean/tools-and-integrations/grafana-dashboard)
         - [Grafana for Ocean Setup](ocean/tools-and-integrations/setup-and-config-grafana-4-ocean)
+      - [Headroom](ocean/features/headroom)
+      - [Labels & Taints](ocean/features/labels-and-taints)
 
 
     - [Azure GCP Features](ocean/gcp-gke/)
@@ -166,8 +179,10 @@
         - [Create a Cost Analysis Filter](ocean/tutorials/create-a-cost-filter)
       - [Grafana Ocean Dashboards](ocean/tools-and-integrations/grafana-dashboard)
         - [Grafana for Ocean Setup](ocean/tools-and-integrations/setup-and-config-grafana-4-ocean)
+      - [Headroom](ocean/features/headroom)
+      - [Labels & Taints](ocean/features/labels-and-taints)
 
-     
+     -->
 
     
     
