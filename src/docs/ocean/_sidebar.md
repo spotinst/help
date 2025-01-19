@@ -126,6 +126,11 @@
     Azure AKS
     GCP GKE
 
+    - [AWS Kubernetes Features](ocean/aws-kubernetes/)
+    - [AWS ECS Features](ocean/aws-ecs/)
+    - [Azure AKS Features](ocean/azure-aks/)
+    - [Azure GCP Features](ocean/gcp-gke/) 
+
     
     
     
