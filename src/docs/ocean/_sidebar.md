@@ -115,7 +115,7 @@
      - [Scaling-Dense Mode (AKS)](ocean/features/dense-mode-and-node-pools)
      - [Shutdown Hours](ocean/features/running-hours)
        - [Set Shutdown Hours](ocean/tutorials/set-running-hours)
-     - [Virtual Node Groups](ocean/features/vngs/)
+     - [Virtual Node Groups](ocean/azure-aks/vngs-aks-main)
      - [Attributes per VNG](ocean/features/vngs/attributes-and-actions-per-vng)
      - [VNG AZ=Zero (AKS)](ocean/features/vngs/az-zero-feature)
      - [VNG K8s Minor Versions](ocean/tips-and-best-practices/vng-minor-versions)
