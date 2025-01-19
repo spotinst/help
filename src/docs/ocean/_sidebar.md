@@ -116,7 +116,7 @@
      - [Shutdown Hours](ocean/features/running-hours)
        - [Set Shutdown Hours](ocean/tutorials/set-running-hours)
      - [Virtual Node Groups](ocean/azure-aks/vngs-aks-main)
-     - [Attributes per VNG](ocean/features/vngs/attributes-and-actions-per-vng)
+     - [Attributes per VNG](ocean/azure-aks/vngs-attribs-aks)
      - [VNG AZ=Zero (AKS)](ocean/features/vngs/az-zero-feature)
      - [VNG K8s Minor Versions](ocean/tips-and-best-practices/vng-minor-versions)
      - [Manage AKS Virtual Node Groups](ocean/tutorials/manage-virtual-nd-groups-aks)
