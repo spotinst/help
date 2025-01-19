@@ -121,12 +121,12 @@
       - [Troubleshoot Unscheduled Pods](ocean/troubleshooting/troubleshoot-unscheduled-pods)
  
 
-<!--
+
     FEATURES
     AWS Kubernetes
     AWS ECS
     Azure AKS
-    GCP GKE
+    1GCP GKE1
 
     - [AWS Kubernetes Features](ocean/aws-kubernetes/)
       - [Ocean Dashboard](ocean/tutorials/ocean-dashboard)
@@ -147,6 +147,7 @@
       - [Health Checks & Auto-Healing](ocean/features/health-checks-and-autohealing)
       - [Install Network Client](ocean/tutorials/install-network-client-v2)
       - [Labels & Taints](ocean/features/labels-and-taints)
+        - [Create Custom Labels](ocean/tutorials/create-custom-labels)
 
 
 
@@ -168,6 +169,7 @@
         - [Grafana for Ocean Setup](ocean/tools-and-integrations/setup-and-config-grafana-4-ocean)
       - [Headroom](ocean/features/headroom)
       - [Labels & Taints](ocean/features/labels-and-taints)
+        - [Create Custom Labels](ocean/tutorials/create-custom-labels)
 
 
     - [Azure GCP Features](ocean/gcp-gke/)
@@ -181,8 +183,9 @@
         - [Grafana for Ocean Setup](ocean/tools-and-integrations/setup-and-config-grafana-4-ocean)
       - [Headroom](ocean/features/headroom)
       - [Labels & Taints](ocean/features/labels-and-taints)
+        - [Create Custom Labels](ocean/tutorials/create-custom-labels)
 
-     -->
+
 
     
     
