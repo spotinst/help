@@ -157,6 +157,14 @@
         - [Right-Sizing Troubleshooting](ocean/features/troubleshoot-right-sizing)
       - [Right Sizing (Manual)](ocean/features/right-sizing)
         - [Use Right Sizing](ocean/tutorials/use-right-sizing)
+      - [Rolls](ocean/features/roll-gen)
+      - [Scaling (Kubernetes)](ocean/features/scaling-kubernetes)
+        - [Scaling Constraints View](ocean/tutorials/view-scaling-constraints)
+      - [Shutdown Hours](ocean/features/running-hours)
+         - [Set Shutdown Hours](ocean/tutorials/set-running-hours)
+      - [Virtual Node Groups](ocean/features/vngs/)
+        - [Attributes per VNG](ocean/features/vngs/attributes-and-actions-per-vng)
+        - [Manage AWS Virtual Node Groups](ocean/tutorials/manage-virtual-node-groups)
 
 
 
@@ -170,6 +178,13 @@
       - [Headroom](ocean/features/headroom)
       - [Right Sizing (Manual)](ocean/features/right-sizing)
         - [Use Right Sizing](ocean/tutorials/use-right-sizing)
+      - [Rolls](ocean/features/roll-gen)
+      - [Scaling (ECS)](ocean/features/scaling-ecs)
+      - [Shutdown Hours](ocean/features/running-hours)
+        - [Set Shutdown Hours](ocean/tutorials/set-running-hours)
+      - [Virtual Node Groups](ocean/features/vngs/)
+        - [Attributes per VNG](ocean/features/vngs/attributes-and-actions-per-vng)
+
    
      
     - [Azure AKS Features](ocean/azure-aks/)
@@ -185,6 +200,19 @@
       - [Right-Sizing (Automatic)](ocean/features/ocean-cluster-right-sizing-tab)
         - [Right-Sizing Recommendations](ocean/features/ocean-cluster-right-sizing-recom-tab)
         - [Right-Sizing Troubleshooting](ocean/features/troubleshoot-right-sizing)
+      - [Rolls (AKS)](ocean/features/roll)
+      - [Scaling (Kubernetes)](ocean/features/scaling-kubernetes)
+        - [Scaling Constraints View](ocean/tutorials/view-scaling-constraints)
+      - [Scaling-Dense Mode (AKS)](ocean/features/dense-mode-and-node-pools)
+      - [Shutdown Hours](ocean/features/running-hours)
+        - [Set Shutdown Hours](ocean/tutorials/set-running-hours)
+      - [Virtual Node Groups](ocean/features/vngs/)
+        - [Attributes per VNG](ocean/features/vngs/attributes-and-actions-per-vng)
+        - [VNG AZ=Zero (AKS)](ocean/features/vngs/az-zero-feature)
+        - [VNG K8s Minor Versions](ocean/tips-and-best-practices/vng-minor-versions)
+        - [Manage AKS Virtual Node Groups](ocean/tutorials/manage-virtual-nd-groups-aks)
+        - [Regions Without AZ Support (AKS)](ocean/getting-started/aks?id=support-for-regions-without-availability-zones)
+
          
 
 
@@ -203,6 +231,15 @@
       - [Manage VM Types](ocean/tips-and-best-practices/manage-machine-types)
       - [Right Sizing (Manual)](ocean/features/right-sizing)
         - [Use Right Sizing](ocean/tutorials/use-right-sizing)
+      - [Rolls](ocean/features/roll-gen)
+      - [Scaling (Kubernetes)](ocean/features/scaling-kubernetes)
+        - [Scaling Constraints View](ocean/tutorials/view-scaling-constraints)
+      - [Shutdown Hours](ocean/features/running-hours)
+        - [Set Shutdown Hours](ocean/tutorials/set-running-hours)
+      - [Virtual Node Groups](ocean/features/vngs/)
+        - [Attributes per VNG](ocean/features/vngs/attributes-and-actions-per-vng)
+      - [Max Scale Down % per VNG-Console (GKE)](ocean/features/max-scale-down-vng-gke-ui)
+
 
 
 
