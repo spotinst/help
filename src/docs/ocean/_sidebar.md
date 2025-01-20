@@ -49,6 +49,7 @@
        - [Scaling Constraints View](ocean/tutorials/view-scaling-constraints)
      - [Shutdown Hours](ocean/features/running-hours)
         - [Set Shutdown Hours](ocean/tutorials/set-running-hours)
+     - [Ocean Dashboard - Kubernetes](ocean/tutorials/ocean-dashboard)
      - [Ocean Controller Version 2](ocean/tutorials/ocean-controller-v2/)
        - [Install Controller](ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-install)
        - [Update Controller](ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-update)
@@ -61,7 +62,7 @@
 
 
   - [AWS Kubernetes Features](ocean/aws-kubernetes/)
-     - [Ocean Dashboard](ocean/tutorials/ocean-dashboard)
+     - [Ocean Dashboard - Kubernetes](ocean/tutorials/ocean-dashboard)
      - [Ocean AWS Cluster Overview Dashboard](ocean/cluster-overview-tab)
      - [AMI Auto-Update (EKS)](ocean/features/eks-auto-ami)
        - [Auto-Update via Console](ocean/features/ami-auto-update-eks-ui)
