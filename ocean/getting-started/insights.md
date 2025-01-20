@@ -120,9 +120,4 @@ In the General page of the connection wizard, complete the following:
 
 ### Review
 
-The Review page presents a summary of all the information you entered to connect the cluster to Ocean. You can review and modify information if necessary. Click Connect to connect the cluster to Ocean. Ocean will then add the cluster to the list of Ocean clusters and start optimization and management of the cluster on spot instances. You can now migrate your workloads to the cluster.
-
-## What’s Next?
-
-- [Migrate your Workloads](ocean/tutorials/migrate-workload) to Ocean.
-- Learn more about importing multiple workload types in the same cluster by using [Virtual Node Groups](ocean/features/launch-specifications).
+The Review page presents a summary of all the information you entered to connect the cluster to Ocean. You can review and modify information if necessary. Click Connect to connect the cluster to Ocean. Ocean will then add the cluster to the list of Ocean clusters and start optimizing and managing the cluster on spot instances. You can now migrate your workloads to the cluster.
