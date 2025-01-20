@@ -166,7 +166,7 @@
        - [Controller Troubleshooting](ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-ts)
        - [Controller V2 History](ocean/tutorials/spot-kubernetes-controller/controller-version-two-hist)
      - [DEPRECATED-Ocean Controller Version 1](ocean/tutorials/spot-kubernetes-controller/)
-   - [Azure GCP Features](ocean/gcp-gke/)
+   - [GCP GKE Features](ocean/gcp-gke/)
      - [Ocean Dashboard](ocean/tutorials/ocean-dashboard)
      - [Auto-Update Process (GKE)](ocean/features/auto-update-process-gke)
      - [Committed Use Discount](ocean/features/committed-use-discount)
