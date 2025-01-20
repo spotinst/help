@@ -31,7 +31,5 @@ Rolls can be triggered for the whole Ocean cluster, per VNG, or per instance. Yo
 
 Once the roll is complete, all of the nodes in the cluster will have the new Kubernetes version.
 
->**Tip**: New Kubernetes versions sometimes introduce significant changes. Therefore, it is recommended to test the behavior of your applications in a Dev cluster against a new Kubernetes version before you update your production clusters.
+>**Tip**: New Kubernetes versions sometimes introduce significant changes. Spot recommends testing the behavior of your applications in a Dev cluster against a new Kubernetes version before updating your production clusters.
 
-## What's Next?
-Learn how to [run your workloads](ocean/tutorials/run-workloads).
