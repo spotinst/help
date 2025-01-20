@@ -1,10 +1,10 @@
-# Attributes per VNG
+# Virtual Node Group Attributes
 
-Many attributes that you can apply to your cluster are also available for virtual node groups. This lets you organize and manage customized workload types within the same cluster. 
+Many attributes you can apply to your cluster are also available for virtual node groups. This lets you organize and manage customized workload types within the same cluster. 
 
-The [Spot API](https://docs.spot.io/api/) provides the full set of virtual node group attributes for your cloud service provider.
+The [Spot API](https://docs.spot.io/api/) provides your cloud service provider's full set of virtual node group attributes.
 
-> **Note**: Some attributes are available in the Spot API but not in the console user interface. However, you can optionally configure these attributes in JSON format in the virtual node groups **review** tab in the console.
+> **Note**: Some attributes are available in the Spot API but not in the console user interface. However, you can optionally configure these attributes in JSON format in the console's virtual node groups **review** tab.
 
 
 The following sections describe several of these attributes.
