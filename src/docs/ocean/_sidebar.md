@@ -1,7 +1,7 @@
 <!-- Table of Contents -->
 
 - <a href="/" class="sidebar-home"><i data-feather="arrow-left" class="sidebar-back-icon"></i>Back to Home</a>
-- [Ocean](ocean/)
+- [OCEAN](ocean/)
   - [Overview (Kubernetes)](ocean/overview-kubernetes)
   - [Overview (ECS)](ocean/overview-ecs)
   - [Getting Started](ocean/getting-started/)
