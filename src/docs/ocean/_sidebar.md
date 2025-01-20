@@ -73,6 +73,7 @@
        - [Create a Cost Analysis Filter](ocean/tutorials/create-a-cost-filter)
      - [Distribute by vCPU](ocean/features/distribute-vcpu)
      - [Dynamic Commitments](ocean/features/dynamic-commitments-aws)
+     - [Elastic IP](ocean/features/elastic-ip)
      - [Extended Resource Support Setup](ocean/tutorials/set-up-extended-resource-support)
      - [Grafana Ocean Dashboards](ocean/tools-and-integrations/grafana-dashboard)
        - [Grafana for Ocean Setup](ocean/tools-and-integrations/setup-and-config-grafana-4-ocean)
