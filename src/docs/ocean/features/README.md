@@ -8,10 +8,12 @@ These are the main Ocean features available for all cloud service providers:
 
 * [Scaling for Kubernetes](ocean/features/scaling-kubernetes)
 * [Headroom](ocean/features/headroom)
-* [Right Sizing](ocean/features/right-sizing)
+* [Right Sizing (Manual)](ocean/features/right-sizing)
+* [Right Sizing (Automatic)](ocean/features/ocean-cluster-right-sizing-tab)
 * [Labels and Taints](ocean/features/labels-and-taints)
 * [Virtual Node Groups](ocean/features/launch-specifications)
-* [Cluster Roll](ocean/features/roll-gen)
+* [Cluster Roll (AWS and GKE)](ocean/features/roll-gen)
+* [Cluster Roll (AKS)](ocean/features/roll)
 * [Shutdown Hours](ocean/features/running-hours)
 
 Features only available for specific cloud service providers are marked (for example) as follows:
