@@ -2,7 +2,7 @@
 
 Ocean for Apache Spark (also referred to as Ocean Spark) is a managed Spark platform deployed on a Kubernetes cluster in your cloud account.
 
-This section of the documentation walks you through the steps to get started with Ocean Spark.
+This documentation section walks you through the steps to get started with Ocean Spark.
 
 ## Prerequisites
 
@@ -18,8 +18,5 @@ If the Ocean Spark menu does not appear in the Spot console navigation bar, plea
 
 Connect the cloud account in which you intend to deploy Ocean Spark: ([AWS](connect-your-cloud-provider/aws-account))
 
-> **Tip**: Other Spot by NetApp products such as [Eco](eco/) and [Cloud Analyzer](cloud-analyzer/) can give you visibility into your entire cloud spend and help you optimize it, so these products may ask you to connect multiple accounts (or your master billing account). For Ocean Spark, connecting only the account in which you intend to deploy an Ocean Spark cluster is enough.
+> **Tip**: Other Spot by NetApp products such as [Eco](https://docs.spot.io/eco/) and [Cost Intelligence](https://docs.spot.io/cost-intelligence/) can give you visibility into your entire cloud spend and help you optimize it. Therefore, these products may require connecting multiple accounts (or your master billing account). For Ocean Spark, connecting only the account in which you intend to deploy an Ocean Spark cluster is enough.
 
-## What’s Next?
-
-Learn how to [create an Ocean Spark cluster](ocean-spark/getting-started/create-cluster).
