@@ -60,7 +60,7 @@ Visit the [Spot API](https://docs.spot.io/api/) to see which parameters you can 
 You can configure this option in the JSON view of the default virtual node group or the cluster. Note that this parameter is case-sensitive.
 
 
-## Learn more about:
+## Related Topics
 
-- [Attributes per VNG](ocean/features/vngs/attributes-and-actions-per-vng).
+- [Virtual Node Group Attributes](ocean/features/vngs/attributes-and-actions-per-vng)
 
