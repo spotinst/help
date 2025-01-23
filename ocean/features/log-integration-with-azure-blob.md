@@ -1,5 +1,7 @@
 #  Log Integration with Azure Blob
 
+Cloud service provider relevance: <font color="#FC01CC">Azure</font>
+
 You can view the Ocean logs in the Spot console or retrieve them via the [Spot OpenAPI](https://docs.spot.io/api/).
 
 This topic describes Ocean’s log integration with Azure Blob. You can configure Ocean to export logs to an Azure Blob, and then you can access the logs using your central monitoring tool. 

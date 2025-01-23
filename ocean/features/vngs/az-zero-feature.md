@@ -1,5 +1,7 @@
 #  Import AKS Cluster with Availability Zone Zero
 
+Cloud service provider relevance: <font color="#FC01CC">AKS</font>
+
 If your AKS cluster configuration has AZ=null (“Availability Zone Zero”), you can safely run your workloads (for any PVC or storage type) in Ocean by setting this option.
 
 >**Note**: Select this option separately or with other Availability Zones.

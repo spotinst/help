@@ -1,5 +1,7 @@
 # Auto-Update Process (Ocean GKE)
 
+Cloud service provider relevance: <font color="#FC01CC">GKE</font>
+
 Ocean auto-updates to ensure that your clusters and virtual node groups (VNGs) always have an up-to-date configuration according to the respective GKE configuration in the control plane manager so that configuration changes made on the GKE cluster or node pools will be updated automatically to the Ocean configuration.
 
 This feature provides a convenient user experience. It lets you quickly update specific GKE parameters, such as Kubernetes Version, NodeLocal DNSCaching, etc., directly and only once in your GKE console. 
