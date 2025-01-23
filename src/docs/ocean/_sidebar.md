@@ -82,6 +82,7 @@
      - [Network Client Installation](ocean/tutorials/install-network-client-v2)
      - [Labels & Taints](ocean/features/labels-and-taints)
        - [Custom Labels Creation](ocean/tutorials/create-custom-labels)
+     - [Startup Taints](ocean/features/labels-and-taints?id=startup-taints)
      - [S3 Log Integration](ocean/features/log-integration-with-s3)
      - [VM Types Management](ocean/tips-and-best-practices/manage-machine-types)
      - [FSx Mount for ONTAP to Pods](ocean/tutorials/mount-fsx-for-ontap-volumes-to-kubernetes-pods)
