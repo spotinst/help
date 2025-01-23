@@ -30,11 +30,11 @@
 
 
 <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanpodod"><font color="#FC01CC">???</font>: How can I make sure my pods only schedule on-demand nodes?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanpodod"><font color="#FC01CC">EKS</font>: How can I make sure my pods only schedule on-demand nodes?</summary>
 
   <div style="padding-left:16px">
 
-   You can use taints, tolerations, and node selectors to make sure that only pods with the on-demand lifecycle label are scheduled on on-demand nodes. Pods that don't have this label cannot be scheduled on these nodes. Taints and tolerations work together to make sure pods are scheduled on the right nodes.
+      You can use taints, tolerations, and node selectors to make sure that only pods with the on-demand lifecycle label are scheduled on on-demand nodes. Pods that don't have this label cannot be scheduled on these nodes. Taints and tolerations work together to make sure pods are scheduled on the right nodes.
 
    Use taints and tolerations in a virtual node group to create an on-demand virtual node group that includes all your on-demand instances. If the virtual node group has a taint, only pods with a matching tolerance will be scheduled for this virtual node group.
 
@@ -46,46 +46,54 @@
         value: "value"
         effect: "NoSchedule"</code></pre>
 
-     > **Note**: If the <b>operator</b> is `Exists`, the launch specification needs to be `null`.
+     If the <b>operator</b> is `Exists`, the launch specification needs to be `null`.
 
-2. Configure a [node selector](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/) with the on-demand [lifecycle label](ocean/features/labels-and-taints?id=spotinstionode-lifecycle) (<code>spotinst.io/node-lifecycle: od</code>).<font color="#FC01CC">where do they do this?? is this link correct?</font>
+2. Configure a [node selector](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/) with the on-demand [lifecycle label](ocean/features/labels-and-taints?id=spotinstionode-lifecycle).
+      <summary markdown="span">Sample deployment with node selector set to <i>od</i></summary>
 
-    <details>
-   <summary markdown="span">Sample deployment with node selector set to <i>od</i></summary>
+      <details>
+          <pre><code>
+          apiVersion: apps/v1
+          kind: Deployment
+          metadata:
+            name: nginx-deployment
+            labels:
+              app: nginx
+          spec:
+            replicas: 3
+            selector:
+              matchLabels:
+                app: nginx
+            template:
+              metadata:
+                labels:
+                  app: nginx
+              spec:
+                containers:
+                - name: nginx
+                  image: nginx:1.14.2
+                  ports:
+                  - containerPort: 80
+                tolerations:
+                - key: "key"
+                  operator: "Equal"
+                  value: "value"
+                  effect: "NoSchedule"
+                nodeSelector:
+                  spotinst.io/node-lifecycle: od
+      </code></pre>
 
-   <pre><code>apiVersion: apps/v1
-   kind: Deployment
-   metadata:
-     name: nginx-deployment
-     labels:
-       app: nginx
-   spec:
-     replicas: 3
-     selector:
-       matchLabels:
-         app: nginx
-     template:
-       metadata:
-         labels:
-           app: nginx
-       spec:
-         containers:
-         - name: nginx
-           image: nginx:1.14.2
-           ports:
-           - containerPort: 80
-         tolerations:
-         - key: "key"
-           operator: "Equal"
-           value: "value"
-           effect: "NoSchedule"
-         nodeSelector:
-           spotinst.io/node-lifecycle: od</code></pre>
-
-   </details>
+      </details>
 
 
-3. In the Spot console, [configure Ocean custom launch specificatoins](ocean/tutorials/migrate-existing-egs-ekskops?id=step-2-configure-ocean-custom-launch-specifications).
+3. Increase the max-pods limit:
+
+   <ol style="list-style-type: lower-alpha;">
+   <li>Go to the cluster in the Spot console and click <b>Actions</b> > <b>Edit Configuration</b> > <b>Compute</b>.</li>
+   <li>In <b>User Data (Startup Script)<b>, increase the max-pods limit.</li>
+   </ol>
+
+4. In the Spot console, [configure Ocean custom launch specificatoins](ocean/tutorials/migrate-existing-egs-ekskops?id=step-2-configure-ocean-custom-launch-specifications).
 
    If there are several launch specifications configured in the cluster, you should add a custom label to the specific launch specification, as well as to the pod. The reason another custom label should be added is that only tolerations that configured on the pod, will not trigger a scale-up from the dedicated launch specification.
 
