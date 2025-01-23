@@ -108,7 +108,7 @@
     - [Getting Started (GCP)](elastigroup/getting-started/elastigroup-for-gcp)
       - [Create an Elastigroup](elastigroup/getting-started/create-an-elastigroup-for-gcp)
     - [Manage](elastigroup/tutorials-gcp/manage)
-    - [Commited Use Discount](elastigroup/features/gcp/commit-use-discount)
+    - [Committed Use Discount](elastigroup/features/gcp/commit-use-discount)
     - [Dashboard](elastigroup/tutorials-gcp/dashboard)
     - [Load Balancers: Backend Services](elastigroup/features/gcp/gcp-load-balancers-backend-services)
     - [On-Demand & Spot VMs](elastigroup/features-azure/od-spotvm)
