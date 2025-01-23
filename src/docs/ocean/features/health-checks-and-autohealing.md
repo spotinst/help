@@ -1,5 +1,7 @@
 # Health Checks and Auto-healing
 
+Cloud service provider relevance: <font color="#FC01CC">AWS</font>
+
 ## Kubernetes Clusters
 
 Each node in the cluster is monitored by the primary nodes and assigned with a condition (state), that describes the status of different aspects of the node. The conditions types are:
