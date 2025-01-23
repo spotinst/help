@@ -2542,27 +2542,6 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/faqs/"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/kb/1</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/kb/1"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/kb/1"/>
-    </url>
-    <url>
-        <loc>https://docs.spot.io/kb/2</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/kb/2"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/kb/2"/>
-    </url>
-    <url>
-        <loc>https://docs.spot.io/kb/3</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/kb/3"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/kb/3"/>
-    </url>
-    <url>
         <loc>https://docs.spot.io/kb/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
