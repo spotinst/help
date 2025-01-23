@@ -1,5 +1,7 @@
 # Auto-Upgrade the AKS Control Plane Patch Version in the Console
 
+Cloud service provider relevance: <font color="#FC01CC">AKS</font>
+
 You can schedule an auto-upgrade of an AKS patch version once a day (recommended) or at a specific time. For both types of auto-upgrade, you can set one of these options:
 
 * Control plane upgrade: Upgrade the control plane patch version only.

@@ -1,5 +1,7 @@
 # Scaling (ECS)
 
+Cloud service provider relevance: <font color="#FC01CC">ECS</font>
+
 Large-scale compute clusters are expensive, so it is important to use them well. Utilization and efficiency can be increased by running a mix of workloads on the same machines: CPU- and memory-intensive jobs, small and large ones, and a mix of offline and low-latency jobs – ones that serve end-user requests or provide infrastructure services such as storage, naming or locking.
 
 ## The Challenge of Scaling Containers
