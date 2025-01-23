@@ -36,22 +36,24 @@
 
    You can use taints, tolerations, and node selectors to make sure that only pods with the on-demand lifecycle label are scheduled on on-demand nodes. Pods that don't have this label cannot be scheduled on these nodes. Taints and tolerations work together to make sure pods are scheduled on the right nodes.
 
-   Use taints and tolerations in a virtual node group to create an on-demand virtual node group that includes all your on-demand instances. If the virtual node group has a taint, only pods with a matching tolerance will be scheduled for this virtual node group.
+   Use taints and tolerations in a virtual node group to create an on-demand virtual node group that includes all your on-demand instances. If the virtual node group has a taint, only pods with a matching tolerance will be scheduled for this virtual node group. If your virtual node group has a taint, only pods with a matching toleration are scheduled for this virtual node group. For example, you can create a virtual node group with only on-demand pods.
 
-1. Make sure your [pod has the tolerations](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/) set to:
+* **Virtual node group with only on-demand instances**
 
-      <pre><code>tolerations:
+   * Make sure your [pod has the tolerations](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/) set to:
+
+     <pre><code>tolerations:
       - key: "key"
         operator: "Equal"
         value: "value"
         effect: "NoSchedule"</code></pre>
+  
+      If the <b>operator</b> is `Exists`, the launch specification needs to be `null`.  
 
-     If the <b>operator</b> is `Exists`, the launch specification needs to be `null`.
+   * Configure a [node selector](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/) with the on-demand [lifecycle label](ocean/features/labels-and-taints?id=spotinstionode-lifecycle). Adding the on-demand label means that this pod will only have on-demand instances.
 
-2. Configure a [node selector](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/) with the on-demand [lifecycle label](ocean/features/labels-and-taints?id=spotinstionode-lifecycle).
-
-   <details>
-   <summary markdown="span">Sample deployment with node selector set to <i>od</i></summary>
+     <details>
+     <summary markdown="span">Sample deployment with node selector set to <i>od</i></summary>
 
      <pre><code>apiVersion: apps/v1
      kind: Deployment
@@ -82,13 +84,23 @@
            nodeSelector:
              spotinst.io/node-lifecycle: od</code></pre>
 
-    </details>
+      </details>
 
-3. In the Spot console, [configure Ocean custom launch specificatoins](ocean/tutorials/migrate-existing-egs-ekskops?id=step-2-configure-ocean-custom-launch-specifications).
+* **Schedule a specific pod on an on-demand instance**
 
-   If there are several launch specifications configured in the cluster, you should add a custom label to the specific launch specification, as well as to the pod. The reason another custom label should be added is that only tolerations that configured on the pod, will not trigger a scale-up from the dedicated launch specification.
+    <ol style="list-style-type: lower-alpha;">
+      <li>Configure a [node selector](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/) with [labels](ocean/features/labels-and-taints).</li>
+      <li>Go to the cluster in the Spot console and click <b>Actions</b> > <b>Edit Configuration</b> > <b>Compute</b>.</li>
+      <li>Set the <b>Spot %</b> to <i>0</i>. This means that all nodes in this virtual node group will be on-demand.<font color="#FC01CC"> I can't find the spot % in ocean clusters, is it still there?</font></li>
+   </ol>
 
-If you want to run only a specific workload on the nodes launched from the launch specification, adjust the node selector to the dedicated node selector of the workload. For example, if you use launch specification for GPU instance and only want pods with a dedicated node selector to run on the node, adjust the node selector to the dedicated one.
+* **Custom launch specifications with labels**
+  
+  In the Spot console, [configure Ocean custom launch specifications](ocean/tutorials/migrate-existing-egs-ekskops?id=step-2-configure-ocean-custom-launch-specifications).
+
+   If there are several launch specifications configured in the cluster, you should add a custom label to the specific launch specification, as well as to the pod. The reason another custom label should be added is that only tolerations configured on the pod will not trigger a scale-up from the dedicated launch specification.
+
+   If you want to run only a specific workload on the nodes launched from the launch specification, adjust the node selector to the dedicated node selector of the workload. For example, if you use launch specification for GPU instance and only want pods with a dedicated node selector to run on the node, adjust the node selector to the dedicated one.
  </div>
 
  </details>
@@ -104,13 +116,13 @@ If you want to run only a specific workload on the nodes launched from the launc
      
      You can [increase the EKS maximum pods](https://aws.amazon.com/blogs/containers/amazon-vpc-cni-increases-pods-per-node-limits/) in AWS. You can see more information about the number of pods per EKS instance on [Stack Overflow](https://stackoverflow.com/questions/57970896/pod-limit-on-node-aws-eks#:~:text=For%20t3.,22%20pods%20in%20your%20cluster).
      
-   * If the node has fewer pods than the EKS maximum pod limit, then it's likely the **max-pods** limit is set at the user data level in the Ocean configuration.
+   * If the node has fewer pods than the EKS maximum pod limit, then check if the **max-pods** limit is set at the user data level in the Ocean configuration.
 
      Increase this limit for the user data in Ocean:
 
       <ol style="list-style-type: lower-alpha;">
       <li>Go to the cluster in the Spot console and click <b>Actions</b> > <b>Edit Configuration</b> > <b>Compute</b>.</li>
-      <li>In <b>User Data (Startup Script)<b>, increase the max-pods limit.</li>
+      <li>In <b>User Data (Startup Script)</b>, increase the max-pods limit.</li>
       <li><a href="ocean/features/roll-gen">Roll the cluster</a>.</li>
    </ol>
    
