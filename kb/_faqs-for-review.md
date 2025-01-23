@@ -89,7 +89,7 @@
 * **Schedule a specific pod on an on-demand instance**
 
     <ol style="list-style-type: lower-alpha;">
-      <li>Configure a [node selector](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/) with [labels](ocean/features/labels-and-taints).</li>
+      <li>Configure a <a href="https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/">node selector</a> with <a href="ocean/features/labels-and-taints">labels</a>.</li>
       <li>Go to the cluster in the Spot console and click <b>Actions</b> > <b>Edit Configuration</b> > <b>Compute</b>.</li>
       <li>Set the <b>Spot %</b> to <i>0</i>. This means that all nodes in this virtual node group will be on-demand.<font color="#FC01CC"> I can't find the spot % in ocean clusters, is it still there?</font></li>
    </ol>
