@@ -30,7 +30,8 @@ The Ocean Savings panel contains a set of savings widgets (displayed as tabs), w
 
 *   **Bin Packing**: Ocean proactively identifies underutilized nodes and efficiently bin-packs the pods on them to scale down the nodes and reduce the cluster cost. 
 
-*   **Reverting to Lower-Cost node**: This process is applied to nodes with underutilized compute resources that cannot be scaled down from the cluster's set of nodes to optimize cluster utilization and reduce costs. 
+*   **Reverting to Lower-Cost node**: This process is applied to nodes with underutilized compute resources that cannot be scaled down from the cluster's set of nodes to optimize cluster utilization and reduce costs.
+*   **Right-sizing**: Ocean savings from right-sizing your workloads.
 
 In this panel: 
 
@@ -107,6 +108,33 @@ This tab displays:
      * CPU resources saved in vCPU Hours. 
      * Memory resources saved in GiB Hours. 
      * GPU resources saved in GPU Hours. 
+
+### Ocean Savings from Right-Sizing Your Workloads
+
+>**Note**: This tab will only be available if the optional Ocean automatic right-sizing feature is installed and enabled in your deployment.
+
+These are your actual savings from using the Ocean automatic right-sizing feature.
+
+To view these savings, click the **Right-Sizing** tab (unless already displayed). 
+
+ <img width="900" src="https://github.com/user-attachments/assets/9a5aea10-6362-4639-af5d-ff2d83fb609b" />
+
+>**Note**: If no workloads have been optimized with automatic right-sizing, create and attach right-sizing rules to your workloads in the right-sizing [Advanced Optimization tab](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab).
+
+This tab displays: 
+* Total cluster savings from right-sizing recommendations and the percentage of the saved cluster costs in the selected time range, where:
+  * <b>Total cluster savings = [costs for workloads based on original requests – cost for workloads based on Ocean-optimized requests]</b>. 
+  * Percentage of cluster costs:
+  
+  <b>% savings = [[costs for workloads based on original requests]-[cost for workloads based on Ocean-optimized requests] / [costs for workloads based on original requests] * 100]</b>
+ 
+* CPU resources in vCPU Hours.
+* Memory resources in GiB/TiB Hours.
+* GPU resources in GPU Hours.
+
+Click **View Details** on the right of the right-sizing tab to see your [actual right-sizing savings](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-savings-tab), 
+
+
 
 ## Autoscaling Activity Panel 
 
@@ -217,34 +245,12 @@ This is the information displayed:
 One or more autoscaling events are displayed in blue rectangles. These can be any Ocean autoscaling scale-up and scale-down events displayed as widgets above the graph.
 For example, Scale Up, Scale Down, or Autohealing.
 
-For vCPU:
+For vCPU/memory(GiB)/GPU:
 
-* Nodes Allocation (vCPU):
+* Nodes Allocation (vCPU/GiB/GPU):
   * Total node allocation. 
   * Split according to lifecycle types.
-*  vCPU of Workload:
-    *  deamonSets Requested. 
-    *  Pods Requested.
-    *  Headroom requested.
-    *  Total workload allocation percentage (includes only running pods, running headroom pods, and running DaemonSets pods that are scheduled on Ocean nodes).
-
-For Memory: 
-
-* Nodes Allocation (GiB):
-  * Total node allocation. 
-  * Split according to lifecycle types.
-*  Workload (GiB):
-    *  deamonSets Requested. 
-    *  Pods Requested.
-    *  Headroom requested.
-    *  Total workload allocation percentage (includes only running pods, running headroom pods, and running DaemonSets pods that are scheduled on Ocean nodes).
-
-For GPU:
-
-* Nodes Allocation (GPU):
-  * Total node allocation. 
-  * Split according to lifecycle types.
-*  GPU of Workload:
+*  vCPU/GiBy/GPU of Workload:
     *  deamonSets Requested. 
     *  Pods Requested.
     *  Headroom requested.
