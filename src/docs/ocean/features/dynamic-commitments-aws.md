@@ -1,6 +1,6 @@
 # Dynamic Commitments 
 
-Cloud service provider relevance: <font color="#FC01CC">EKS/font>
+Cloud service provider relevance: <font color="#FC01CC">EKS</font>
 
 ## Overview
 
