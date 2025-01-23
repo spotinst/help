@@ -23,10 +23,11 @@ To access the Ocean Cluster Overview dashboard:
 
 The Ocean Savings panel contains a set of savings widgets (displayed as tabs), which show your savings according to Ocean’s main autoscaling processes for cluster optimization in a selected time range:  
 
-* Running on Spot: Savings from running on spot nodes instead of OD nodes. 
-* Bin Packing: Ocean proactively identifies underutilized nodes and efficiently bin-packs the pods on them to scale down the nodes and reduce the cluster cost.
-* Revert to Lower Cost: Ocean scans all nodes managed by Ocean and replaces them with cheaper options. If the savings exceed 40%, it will replace the node pool.
+* Running on spot: Savings from running on spot nodes instead of OD nodes. 
+* Bin packing: Ocean proactively identifies underutilized nodes and efficiently bin-packs the pods on them to scale down the nodes and reduce the cluster cost.
+* Revert to lower cost: Ocean scans all nodes managed by Ocean and replaces them with cheaper options. If the savings exceed 40%, it will replace the node pool.
 The mechanism identifies node pool candidates that maximize cost efficiency.
+* Right-sizing: Savings from right-sizing your workloads.
 
 In this panel: 
 
@@ -142,6 +143,32 @@ Click **Revert to Lower Cost** to view the number of nodes reverted to lower cos
   * The Virtual Node Group's name (click the link for a listed VNG to display your custom VNG details).
   * Scale-down timestamp in format MM/DD/YYYY HH: MM: SS
  
+## Ocean Savings from Right-Sizing Your Workloads
+
+>**Note**: This tab will only be available if the optional Ocean automatic right-sizing feature is installed and enabled in your deployment.
+
+These are your actual savings from using the Ocean automatic right-sizing feature.
+
+To view these savings, click the **Right-Sizing** tab (unless already displayed). 
+
+ <img width="900" src="https://github.com/user-attachments/assets/9a5aea10-6362-4639-af5d-ff2d83fb609b" />
+
+>**Note**: If no workloads have been optimized with automatic right-sizing, create and attach right-sizing rules to your workloads in the right-sizing [Advanced Optimization tab](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab).
+
+This tab displays: 
+* Total cluster savings from right-sizing recommendations and the percentage of the saved cluster costs in the selected time range, where:
+  * <b>Total cluster savings = [costs for workloads based on original requests – cost for workloads based on Ocean-optimized requests]</b>. 
+  * Percentage of cluster costs:
+  
+  <b>% savings = [[costs for workloads based on original requests]-[cost for workloads based on Ocean-optimized requests] / [costs for workloads based on original requests] * 100]</b>
+ 
+* CPU resources in vCPU Hours.
+* Memory resources in GiB/TiB Hours.
+* GPU resources in GPU Hours.
+
+Click **View Details** on the right of the right-sizing tab to see your [actual right-sizing savings](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-savings-tab), 
+
+
 ## Ocean Managed Nodes and Resources Panel
 
 <img width="1000" src="https://github.com/user-attachments/assets/065b7f12-769a-4e46-9900-7b17fb81553d" >
