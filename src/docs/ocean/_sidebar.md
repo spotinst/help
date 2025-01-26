@@ -149,6 +149,7 @@
      - [AKS Node Pools](ocean/features/dense-mode-and-node-pools)
      - [Shutdown Hours](ocean/features/running-hours)
        - [Set Shutdown Hours](ocean/tutorials/set-running-hours)
+     - [Suspension Hours](ocean/features/scaling-kubernetes?id=suspension-hours)  
      - [Virtual Node Groups](ocean/features/vngs/)
        - [Attributes per VNG](ocean/features/vngs/attributes-and-actions-per-vng)
      - [AKS VNG AZ=Zero](ocean/features/vngs/az-zero-feature)
@@ -168,6 +169,7 @@
        - [Controller Troubleshooting](ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-ts)
        - [Controller V2 History](ocean/tutorials/spot-kubernetes-controller/controller-version-two-hist)
      - [Ocean Controller Version 1 (Deprecated)](ocean/tutorials/spot-kubernetes-controller/)
+   
    - [GCP GKE Features](ocean/gcp-gke/)
      - [Ocean Dashboard](ocean/tutorials/ocean-dashboard)
      - [GKE Auto-Update Process](ocean/features/auto-update-process-gke)
@@ -186,6 +188,7 @@
      - [Rolls](ocean/features/roll-gen)
      - [Scaling (Kubernetes)](ocean/features/scaling-kubernetes)
        - [Scaling Constraints View](ocean/tutorials/view-scaling-constraints)
+     - [Shielded GKE Nodes](ocean/features/scaling-kubernetes?id=support-for-shielded-gke-nodes)
      - [Shutdown Hours](ocean/features/running-hours)
        - [Shutdown Hours Settings](ocean/tutorials/set-running-hours)
      - [Virtual Node Groups](ocean/features/vngs/)
