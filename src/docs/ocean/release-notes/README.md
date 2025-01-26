@@ -2,6 +2,8 @@
 
 ## January 2025: Features and Enhancements
 
+*  **OCN-0063: January 26, 2025:** (**<font color="#FC01CC">AWS EKS</font>**). Implemented native support for the `topology.k8s.aws/zone-id` label in the Ocean autoscaler. You can use the `topology.k8s.aws/zone-id` label in your workloads' constraints, such as `nodeSelector`, `nodeAffinity` and `topologyKey` (in `topologySpreadConstraints`, `podAffinity` and `podAntiAffinity`). For more information about this label, refer to the [Amazon EKS User Guide](https://docs.aws.amazon.com/eks/latest/userguide/kubernetes-versions-standard.html#kubernetes-1.30).
+
 *  **OCN-0062: January 15, 2025:** (**<font color="#FC01CC">AWS Kubernetes</font>**). New gauge metrics were added to the Ocean Prometheus exporter (nodes added/removed and failed scale-ups/downs). [Learn more...](https://docs.spot.io/ocean/tools-and-integrations/prometheus/?id=prometheus-for-kubernetes-data-plane-monitoring)
 
 *  **OCN-0061: January 15, 2025:** (**<font color="#FC01CC">AWS Kubernetes</font>**) The latest release introduces two major features: Enhanced scale-up for faster pod scheduling and improved cluster utilization, and an enhanced distribution algorithm for balanced node spreading and greater cost savings. These enhancements significantly reduce cluster costs while maintaining cluster availability. Enhanced scale-up is available to all Ocean customers and requires Ocean Controller V2.
