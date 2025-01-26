@@ -14,6 +14,11 @@ Set up your payment method:
 2. Click **Billing** > **Payment Methods** > **Add Credit Card Details**.
 3. Enter the credit card details and click **Add**.
 
+Keep in mind, if you pay by:
+* Bank transfer (wire), you'll still see an option to add a credit card.
+* AWS marketplace and the expiration date is not valid or the subscription status is not <i>success</i>, you'll see an invalid message.
+
+
 ## Monthly Billing Details
 
 Bills shows the monthly costs of the usage for your Spot products. It includes the payment calculation for a month and detailed breakdown of the costs for each product.
