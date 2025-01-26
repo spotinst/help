@@ -936,7 +936,8 @@ export const aliases = (() => {
 
     "/getting-started-with-elastigroup": "/elastigroup/getting-started/",
 
-    "/getting-started-with-spotinst/": "/connect-your-cloud-provider/first-account/",
+    "/getting-started-with-spotinst/":
+      "/connect-your-cloud-provider/first-account/",
 
     "/hc/en-us/articles/115004280909-Spectrum-as-Grafana-Data-Source":
       "/elastigroup/tools-integrations/",
