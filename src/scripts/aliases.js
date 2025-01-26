@@ -39,10 +39,8 @@ export const aliases = (() => {
     "/account-user-management/user-management/access-policies-2/":
       "/administration/access-policies/",
 
-    "/account-user-management/user-management/access-policies-actions/": "/administration/policies/",
-
     "/account-user-management/user-management/access-policies-actions/":
-      "/administration/access-policies/access-policy-actions",
+      "/administration/policies/",
 
     "/account-user-management/user-management/adding-users-2/":
       "/administration/users/add-users",
@@ -147,7 +145,8 @@ export const aliases = (() => {
     "/cloud-analyzer/cost-analysis/":
       "/connect-your-cloud-provider/cost-analysis/",
 
-    "/cloud-analyzer/getting-started/": "/connect-your-cloud-provider/first-account/",
+    "/cloud-analyzer/getting-started/":
+      "/connect-your-cloud-provider/first-account/",
 
     "/cloud-analyzer/getting-started/connect-master-payer-account-first-registration/":
       "/connect-your-cloud-provider/first-account/",
@@ -155,14 +154,16 @@ export const aliases = (() => {
     "/cloud-analyzer/getting-started/connect-your-aws-master-payer-account-existing-customer/":
       "/connect-your-cloud-provider/first-account/",
 
-    "/cloud-analyzer/msp-registration/": "/connect-your-cloud-provider/first-account/",
+    "/cloud-analyzer/msp-registration/":
+      "/connect-your-cloud-provider/first-account/",
 
-    "/cloud-analyzer/msp-registration-2/": "/connect-your-cloud-provider/first-account/",
+    "/cloud-analyzer/msp-registration-2/":
+      "/connect-your-cloud-provider/first-account/",
 
-    "/cloud-analyzer/msp-registration-2-2/": "/connect-your-cloud-provider/first-account/",
+    "/cloud-analyzer/msp-registration-2-2/":
+      "/connect-your-cloud-provider/first-account/",
 
-    "/cloud-analyzer/optimization/":
-      "/connect-your-cloud-provider/optimize",
+    "/cloud-analyzer/optimization/": "/connect-your-cloud-provider/optimize",
 
     "/cloud-analyzer/optimization/containers/":
       "/connect-your-cloud-provider/dashboard",
@@ -173,11 +174,9 @@ export const aliases = (() => {
     "/cloud-analyzer/optimization/reservations/":
       "/connect-your-cloud-provider/dashboard",
 
-    "/cloud-analyzer/policy/":
-      "/connect-your-cloud-provider/cost-analysis/",
+    "/cloud-analyzer/policy/": "/connect-your-cloud-provider/cost-analysis/",
 
-    "/cloud-analyzer/policy-2/":
-      "/connect-your-cloud-provider/cost-analysis/",
+    "/cloud-analyzer/policy-2/": "/connect-your-cloud-provider/cost-analysis/",
 
     "/cloud-analyzer/trends-and-notifications/":
       "/connect-your-cloud-provider/dashboard",
@@ -231,7 +230,8 @@ export const aliases = (() => {
     "/cloud-analyzer/tutorials/view-trends-notifications/view-event-details/":
       "/connect-your-cloud-provider/dashboard",
 
-    "/connect-your-cloud-provider/": "/connect-your-cloud-provider/first-account/",
+    "/connect-your-cloud-provider/":
+      "/connect-your-cloud-provider/first-account/",
 
     "/connect-your-cloud-provider/aws-account":
       "/connect-your-cloud-provider/first-account/",
@@ -251,8 +251,7 @@ export const aliases = (() => {
 
     "/container-management/amazon-ecs/": "/ocean/overview-ecs",
 
-    "/container-management/amazon-ecs/autoscaling/":
-      "/ocean/overview-ecs",
+    "/container-management/amazon-ecs/autoscaling/": "/ocean/overview-ecs",
 
     "/container-management/amazon-ecs/elastigroup-for-ecs/":
       "/ocean/overview-ecs",
@@ -269,11 +268,9 @@ export const aliases = (() => {
     "/container-management/amazon-ecs/elastigroup-for-ecs-concepts/autoscaling/":
       "/ocean/overview-ecs",
 
-    "/container-management/amazon-ecs/getting-started/":
-      "/ocean/overview-ecs",
+    "/container-management/amazon-ecs/getting-started/": "/ocean/overview-ecs",
 
-    "/container-management/amazon-ecs/tutorials/":
-      "/ocean/overview-ecs",
+    "/container-management/amazon-ecs/tutorials/": "/ocean/overview-ecs",
 
     "/container-management/amazon-ecs/tutorials/automatic-autoscaler-for-ecs/":
       "/ocean/overview-ecs",
@@ -310,8 +307,7 @@ export const aliases = (() => {
     "/container-management/kubernetes/autoscaler/":
       "/elastigroup/tools-integrations/kubernetes-with-elastigroup/kubernetes-cluster-autoscaling",
 
-    "/container-management/kubernetes/eks/":
-      "/ocean/getting-started/eks/",
+    "/container-management/kubernetes/eks/": "/ocean/getting-started/eks/",
 
     "/container-management/kubernetes/eks/configure-kubectl-for-eks-and-install-spotinst-controller/":
       "/ocean/getting-started/eks/",
@@ -668,8 +664,7 @@ export const aliases = (() => {
     "/elastigroup-for-aws/concepts/scaling-concepts/target-scaling/":
       "/elastigroup/features/scaling/target-scaling",
 
-    "/elastigroup-for-aws/concepts/stateful-concepts/":
-      "/managed-instance/",
+    "/elastigroup-for-aws/concepts/stateful-concepts/": "/managed-instance/",
 
     "/elastigroup-for-aws/concepts/stateful-concepts/data-volumes/":
       "/managed-instance/features/data-volume-persistence",
@@ -941,8 +936,6 @@ export const aliases = (() => {
 
     "/getting-started-with-elastigroup": "/elastigroup/getting-started/",
 
-    "/getting-started-with-spotinst/": "/connect-your-cloud-provider/",
-
     "/getting-started-with-spotinst/": "/connect-your-cloud-provider/first-account/",
 
     "/hc/en-us/articles/115004280909-Spectrum-as-Grafana-Data-Source":
@@ -1080,8 +1073,7 @@ export const aliases = (() => {
     "/ocean/concepts/health-checks-auto-healing/":
       "/ocean/features/health-checks-and-autohealing",
 
-    "/ocean/concepts/launch-specifications/":
-      "/ocean/features/vngs/",
+    "/ocean/concepts/launch-specifications/": "/ocean/features/vngs/",
 
     "/ocean/concepts/ocean-cloud/cost-analysis/":
       "/ocean/features/cost-analysis",
@@ -1267,8 +1259,7 @@ export const aliases = (() => {
     "/ocean/tutorials/ocean-for-gke/import-a-gke-cluster-using-shared-vpc/":
       "/ocean/tutorials/create-cluster-gke-shared-vpc",
 
-    "/ocean/tutorials/ocean-tutorials-ocean-for-aws-run-workloads/":
-      "/ocean/",
+    "/ocean/tutorials/ocean-tutorials-ocean-for-aws-run-workloads/": "/ocean/",
 
     "/ocean/tutorials/ocean-tutorials-ocean-for-aws-workload-migration/":
       "/ocean/tutorials/migrate-workload",
@@ -1322,14 +1313,14 @@ export const aliases = (() => {
 
     "/ocean-cd/ocean-cd-overview": "/ocean-cd/",
 
-    "/ocean-tutorials-ocean-for-aws-run-workloads/":
-      "/ocean/",
+    "/ocean-tutorials-ocean-for-aws-run-workloads/": "/ocean/",
 
     "/provisioning-ci-cd-sdk/": "/tools-and-provisioning/",
 
     "/provisioning-ci-cd-sdk/ci-cd/": "/tools-and-provisioning/ci-cd/",
 
-    "/provisioning-ci-cd-sdk/ci-cd/chef/": "/connect-your-cloud-provider/first-account/",
+    "/provisioning-ci-cd-sdk/ci-cd/chef/":
+      "/connect-your-cloud-provider/first-account/",
 
     "/provisioning-ci-cd-sdk/ci-cd/gitlab/":
       "/tools-and-provisioning/ci-cd/gitlab",
@@ -1640,7 +1631,8 @@ export const aliases = (() => {
     "/spot-security/features/vulnerability/configure":
       "/spot-security/features/vulnerability/configure/",
 
-    "/tools-and-provisioning/ci-cd/chef": "/connect-your-cloud-provider/first-account/",
+    "/tools-and-provisioning/ci-cd/chef":
+      "/connect-your-cloud-provider/first-account/",
 
     "/tools-and-provisioning/cloudformation/elastigroup-examples/":
       "/tools-and-provisioning/cloudformation/",
@@ -1660,7 +1652,8 @@ export const aliases = (() => {
     "/tools-and-provisioning/cloudformation/elastigroup-examples/import-asg":
       "/tools-and-provisioning/cloudformation/",
 
-    "/tools-and-provisioning/cloudfoundry-bosh": "/connect-your-cloud-provider/first-account/",
+    "/tools-and-provisioning/cloudfoundry-bosh":
+      "/connect-your-cloud-provider/first-account/",
 
     "/wave/": "/ocean-spark/",
 
