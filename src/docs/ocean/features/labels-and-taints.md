@@ -67,7 +67,7 @@ The instance labels are as follows:
 *  `aws.spot.io/instance-cpu`: Reflects the CPU used by the instance(for example., 1).
 *  `aws.spot.io/instance-memory`: Reflects the memory used by the instance (for example., 2).
 
-These labels only launch nodes that fit the required pod labels. 
+These labels only launch nodes that match the required pod labels. 
 
 ## Examples
 
