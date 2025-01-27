@@ -567,8 +567,7 @@ export const aliases = (() => {
     "/elastigroup/features/z-stateful-instance/persist-root-volume":
       "/managed-instance/features/root-volume-persistence",
 
-    "/elastigroup/features/z-stateful-instance/README":
-      "/managed-instance/",
+    "/elastigroup/features/z-stateful-instance/README": "/managed-instance/",
 
     "/elastigroup/features/z-stateful-instance/schedule-stateful-capacity":
       "/managed-instance/features/",
@@ -691,7 +690,8 @@ export const aliases = (() => {
 
     "/elastigroup/tutorials/README": "/elastigroup/features/",
 
-    "/elastigroup/tutorials-azure/azure-aks-engine": "/elastigroup/features-azure/",
+    "/elastigroup/tutorials-azure/azure-aks-engine":
+      "/elastigroup/features-azure/",
 
     "/elastigroup/tutorials-azure/README": "/elastigroup/features-azure/",
 
