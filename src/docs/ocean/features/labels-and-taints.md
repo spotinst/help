@@ -52,6 +52,23 @@ Valid label values are:
 
 > **Note**: Avoid adding Spot labels under the virtual node group (launch specification) node labels section. These labels should be added in your pod configuration only.
 
+###  aws.spot.io/instance Labels
+
+Format: `aws.spot.io/instance-<object>`, for example, `aws.spot.io/instance-category`
+
+This set of labels lets you configure a list of instance types as a constraint at the workload level. For example, you can constrain workloads to "Run on any M6, M7, R7" family without manually listing each specific instance type in those families.
+
+The instance labels are as follows:
+
+*  aws.spot.io/instance-category: Reflects the category of the instance (e.g., c).
+*  aws.spot.io/instance-family: Reflects the family of the instance (e.g., c5a).
+*  aws.spot.io/instance-generation: Reflects the generation of the instance (e.g., 5).
+*  aws.spot.io/instance-hypervisor: Reflects the hypervisor the instance uses (e.g., nitro).
+*  aws.spot.io/instance-cpu: Reflects the CPU used by the instance(e.g., 1).
+*  aws.spot.io/instance-memory: Reflects the memory used by the instance (e.g., 2).
+
+These labels only launch nodes that fit the required pod labels. 
+
 ## Examples
 
 Using restrict scale-down label:
