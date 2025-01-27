@@ -8,6 +8,4 @@ Elastigroup helps you:
 - **Simplify cloud operations**: Managing provisioning, scaling, and monitoring for cloud compute without the complexity and risk of manual and custom approaches.
 - **Slash cloud infrastructure costs**: Reliably leveraging the most cost-effective cloud compute without adding complexity or risking availability, saving up to 90%.
 
-## Connect Your Cloud Provider Account
-
-If you haven't connected Spot with your Cloud provider account yet, [connect your account now](connect-your-cloud-provider/first-account/). Once you have connected your account, you can get started with an Elastigroup or an Ocean cluster.
+Once you have [connected your account](connect-your-cloud-provider/first-account/), you can get started with an Elastigroup or an Ocean cluster.
