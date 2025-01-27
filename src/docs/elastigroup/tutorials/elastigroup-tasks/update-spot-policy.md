@@ -1,42 +1,37 @@
 # Update Spot Policy
 
-## Introduction
+When setting up your Spot account, we use a cloud formation stack to register our IAM role policy in your AWS account. This policy holds permissions that are needed for Spot's account to handle your AWS resources.
 
-While setting up your Spot Account – we use a cloud formation stack to register our IAM Role Policy in your AWS account. This Policy holds permissions that are needed for Spot's account to handle your AWS resources.
+To get AWS ARN of your IAM role:
+1. In the Spot console, click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png">  > **Settings**.
+2. Go to **General Details** > **My Spot Account** > **AWS ARND**.
+   <details>
+    <summary markdown="span">View image</summary>
 
-Refer the link below for the AWS ARN of your IAM role:
-https://console.spotinst.com/#/settings/account/general
+     <img width="800" src="https://github.com/user-attachments/assets/7a2e125e-84af-4df5-8731-fc7b031e64f9" />
 
----
+   </details>
+   
+> **Tip**: It is important to keep [Spot Policy](administration/api/spot-policy-in-aws) updated with the latest version.
 
-**Tip**:
+## Update Your Spot Policy
 
-It is important to keep this policy updated with the latest version listed here – [Spot Policy](administration/api/spot-policy-in-aws).
+1. Sign in to your [AWS IAM Management Console](https://docs.aws.amazon.com/signin/latest/userguide/how-to-sign-in.html).
 
----
+2. Click **Policies** and find your Spot policy.
+3. In the Policy screen, select the `Permissions` tab, view the JSON, and click on `Edit Policy`:
+   <details>
+    <summary markdown="span">View image</summary>
 
-## Step 1: Log in to your AWS IAM Management Console
+   <img width=450 src="/elastigroup/_media/update-spot-policy_3.png" />
 
-Log in to your AWS console and navigate to the IAM management console:
+   </details>
 
-<img src="/elastigroup/_media/update-spot-policy_1.png" />
+4. Remove the JSON and replace it with the latest policy available.
+5. Click **Validate Policy** and **Save**.
+   <details>
+    <summary markdown="span">View image</summary>
 
-## Step 2: Locate your Spot Policy
+     <img width=450 src="/elastigroup/_media/update-spot-policy_4.png" />
 
-Click Policies from the side menu:
-
-<img src="/elastigroup/_media/update-spot-policy_2.png" />
-
-Search for Spot policy and select it.
-
-## Step 3: Edit the Policy
-
-In the Policy screen – select the `Permissions` tab, view the JSON and click on `Edit Policy`:
-
-<img src="/elastigroup/_media/update-spot-policy_3.png" />
-
-You can now remove the JSON and replace it with the latest policy available.
-
-## Step 4: Verify and Save
-
-<img src="/elastigroup/_media/update-spot-policy_4.png" />
+   </details>
