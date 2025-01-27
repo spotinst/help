@@ -39,7 +39,7 @@ This area shows the three most active Elastigroups in the account over the last 
 On each tile you can see the Elastigroup name, number of instances and curve representing CPU activity over the time period.
 
 - To see the [Overview](elastigroup/tutorials/elastigroup-actions-menu/elastigroup-overview) page of the Elastigroup, click on the tile.
-- To see a list of [all Elastigroups](elastigroup/tutorials/elastigroup-actions-menu/elastigroup-management) in the account, click All Elastigroups on the right.
+- To see a list of all Elastigroups in the account, click **All Elastigroups** on the right.
 
 <img src="/elastigroup/_media/tutorials-elastigroup-dashboard-02.png" />
 
