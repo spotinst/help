@@ -56,7 +56,8 @@ Valid label values are:
 
 Format: `aws.spot.io/instance-<object>`, for example, `aws.spot.io/instance-category`
 
-Apply these labels to a workload's constraints (nodeSelector, node affinity, etc.) to reflect instance types. For example, constrain workloads to run on any M6, M7, or R7 family.
+Apply these labels to a workload's constraints (nodeSelector, node affinity, etc.) to reflect instance type properties. For example, constrain workloads to run on any M6, M7, or R7 family. 
+This avoids manually listing all instance types per family.
 
 The instance labels are as follows:
 
@@ -65,7 +66,7 @@ The instance labels are as follows:
 *  `aws.spot.io/instance-generation`: Reflects the generation of the instance (for example., 5).
 *  `aws.spot.io/instance-hypervisor`: Reflects the hypervisor the instance uses (for example., nitro).
 *  `aws.spot.io/instance-cpu`: Reflects the CPU the instance uses (for example., 1).
-*  `aws.spot.io/instance-memory`: Reflects the memory the instance uses (for example., 2).
+*  `aws.spot.io/instance-memory`: Reflects the instance's memory (for example., 2).
 
 These labels only launch nodes that match the required pod labels. 
 
