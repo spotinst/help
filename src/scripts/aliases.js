@@ -656,7 +656,26 @@ export const aliases = (() => {
       "/elastigroup/tutorials/elastigroup-budgets/",
 
     "/elastigroup/tutorials/elastigroup-tasks/create-an-elastigroup-from-scratch-a":
-      "/elastigroup/tutorials/elastigroup-tasks/create-an-elastigroup-from-scratch",
+      "/elastigroup/getting-started/create-an-elastigroup-for-aws",
+
+    "/elastigroup/tutorials/elastigroup-tasks/create-an-elastigroup-from-scratch-nw":
+      "/elastigroup/getting-started/create-an-elastigroup-for-aws",
+
+    "/elastigroup/tutorials/elastigroup-tasks/create-an-elastigroup-from-scratch-OLD":
+      "/elastigroup/getting-started/create-an-elastigroup-for-aws",
+
+    "/elastigroup/tutorials/elastigroup-tasks/create-a-stateful-elastigroup-from-scratch":
+      "/managed-instance/getting-started/create-a-new-managed-instance",
+
+    "/elastigroup/tutorials/elastigroup-tasks/link-ec2-classic-instance-to-vpc":
+      "/elastigroup/features/",
+
+    "/elastigroup/tutorials/elastigroup-tasks/README": "/elastigroup/features/",
+
+    "/elastigroup/tutorials/elastigroup-tasks/wordpress-on-spot-step-by-step-guide":
+      "/elastigroup/features/",
+
+    "/elastigroup/tutorials/README": "/elastigroup/features/",
 
     "/elastigroup/tutorials-azure/use-stateful-nodes/":
       "/managed-instance/azure/tutorials/",
@@ -669,26 +688,6 @@ export const aliases = (() => {
 
     "/elastigroup/tutorials-azure/use-stateful-nodes/view-details":
       "/managed-instance/azure/tutorials/view-details",
-
-    "/elastigroup/tutorials/elastigroup-tasks/create-an-elastigroup-from-scratch-nw":
-      "/elastigroup/tutorials/elastigroup-tasks/create-an-elastigroup-from-scratch",
-
-    "/elastigroup/tutorials/elastigroup-tasks/create-an-elastigroup-from-scratch-OLD":
-      "/elastigroup/tutorials/elastigroup-tasks/create-an-elastigroup-from-scratch",
-
-    "/elastigroup/tutorials/elastigroup-tasks/create-a-stateful-elastigroup-from-scratch":
-      "/managed-instance/getting-started/create-a-new-managed-instance",
-
-    "/elastigroup/tutorials/elastigroup-tasks/link-ec2-classic-instance-to-vpc":
-      "/elastigroup/features/",
-
-    "/elastigroup/tutorials/elastigroup-tasks/README":
-      "/elastigroup/tutorials/elastigroup-budgets/",
-
-    "/elastigroup/tutorials/elastigroup-tasks/wordpress-on-spot-step-by-step-guide":
-      "/elastigroup/features/",
-
-    "/elastigroup/tutorials/README": "/elastigroup/features/",
 
     "/elastigroup/tutorials-azure/azure-aks-engine":
       "/elastigroup/features-azure/",
