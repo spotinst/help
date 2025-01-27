@@ -488,11 +488,40 @@ export const aliases = (() => {
     "/elastigroup/features/compute/preferred-instance-types-a":
       "/elastigroup/features/compute/preferred-instance-types",
 
+    "/elastigroup/features/compute/preferred-instance-types-OLD":
+      "/elastigroup/features/compute/preferred-instance-types",
+
+    "/elastigroup/features/core-features/diagram-predictive-scale-up-flow":
+      "/elastigroup/features/",
+
+    "/elastigroup/features/core-features/diagram-rebalancing-flow":
+      "/elastigroup/features/",
+
+    "/elastigroup/features/core-features/diagram-revert-from-on-demand-to-spot-instance":
+      "/elastigroup/features/",
+
     "/elastigroup/features/core-features/elastigroup-capacity-instances-or-weighted-a":
       "/elastigroup/features/core-features/elastigroup-capacity-instances-or-weighted",
 
+    "/elastigroup/features/core-features/elastigroup-capacity-instances-or-weighted-OLD":
+      "/elastigroup/features/core-features/elastigroup-capacity-instances-or-weighted",
+
+    "/elastigroup/features/core-features/equal-az-instance-distribution-orientation":
+      "/elastigroup/features/core-features/cluster-orientation",
+
     "/elastigroup/features/core-features/market-scoring-managing-interruptions-a":
       "/elastigroup/features/core-features/market-scoring-managing-interruptions",
+
+    "/elastigroup/features/core-features/market-scoring-managing-interruptions-OLD":
+      "/elastigroup/features/core-features/market-scoring-managing-interruptions",
+
+    "/elastigroup/features/core-features/predictive-rebalancing":
+      "/elastigroup/features/",
+
+    "/elastigroup/features/core-features/README": "/elastigroup/features/",
+
+    "/elastigroup/features/core-features/spot-reserved-on-demand-instances":
+      "/elastigroup/",
 
     "/elastigroup/features/scaling/predictive-autoscaling":
       "/elastigroup/features/scaling/target-scaling",
@@ -523,6 +552,36 @@ export const aliases = (() => {
     "/elastigroup/features/stateful-instance/stateful-instances":
       "/managed-instance/",
 
+    "/elastigroup/features/z-stateful-instance/edit-a-stateful-instance":
+      "/managed-instance/getting-started/create-a-new-managed-instance",
+
+    "/elastigroup/features/z-stateful-instance/import-a-stateful-instance":
+      "/managed-instance/getting-started/join-an-existing-managed-instance",
+
+    "/elastigroup/features/z-stateful-instance/persist-data-volumes":
+      "/managed-instance/features/data-volume-persistence",
+
+    "/elastigroup/features/z-stateful-instance/persist-network":
+      "/managed-instance/features/network-persistence",
+
+    "/elastigroup/features/z-stateful-instance/persist-root-volume":
+      "/managed-instance/features/root-volume-persistence",
+
+    "/elastigroup/features/z-stateful-instance/README":
+      "/managed-instance/",
+
+    "/elastigroup/features/z-stateful-instance/schedule-stateful-capacity":
+      "/managed-instance/features/",
+
+    "/elastigroup/features/z-stateful-instance/stateful-elastigroup-flow":
+      "/managed-instance/",
+
+    "/elastigroup/features/z-stateful-instance/stateful-instance-actions":
+      "/managed-instance/features/managed-instance-actions",
+
+    "/elastigroup/features/z-stateful-instance/z-stateful-instances":
+      "/managed-instance/",
+
     "/elastigroup/features-azure/stateful-nodes/": "/managed-instance/azure/",
 
     "/elastigroup/features-azure/stateful-nodes/actions":
@@ -536,6 +595,8 @@ export const aliases = (() => {
 
     "/elastigroup/features-azure/stateful-nodes/schedule":
       "/managed-instance/azure/features/schedule",
+
+    "/elastigroup/getting-started/README": "/elastigroup/",
 
     "/elastigroup/tools-integrations/mesosphere":
       "/connect-your-cloud-provider/",
@@ -560,6 +621,12 @@ export const aliases = (() => {
     "/elastigroup/tutorials/amazon-ecs/get-started-with-ecs-on-elastigroup":
       "/ocean/getting-started/ecs",
 
+    "/elastigroup/tutorials/amazon-ecs/import-fargate-services-to-ecs-elastigroup":
+      "/ocean/getting-started/ecs",
+
+    "/elastigroup/tutorials/amazon-ecs/z-OLD-import-fargate-services-to-ecs-elastigroup":
+      "/ocean/getting-started/ecs",
+
     "/elastigroup/tutorials/amazon-eks/": "/ocean/getting-started/eks/",
 
     "/elastigroup/tutorials/amazon-eks/configure-kubectl-for-eks-install-controller":
@@ -568,10 +635,25 @@ export const aliases = (() => {
     "/elastigroup/tutorials/amazon-eks/create-elastigroup-eks-cluster":
       "/ocean/getting-started/eks/",
 
+    "/elastigroup/tutorials/elastigroup-actions-menu/elastigroup-management":
+      "/elastigroup/tutorials/elastigroup-actions-menu/elastigroup-overview",
+
+    "/elastigroup/tutorials/elastigroup-actions-menu/README":
+      "/elastigroup/tutorials/elastigroup-actions-menu/elastigroup-overview",
+
     "/elastigroup/tutorials/elastigroup-actions-menu/view-spot-markets":
       "/elastigroup/tutorials/elastigroup-actions-menu/",
 
+    "/elastigroup/tutorials/elastigroup-actions-menu/view-spot-markets-z":
+      "/elastigroup/tutorials/elastigroup-actions-menu/elastigroup-overview",
+
     "/elastigroup/tutorials/elastigroup-budgets/budgets":
+      "/elastigroup/tutorials/elastigroup-budgets/",
+
+    "/elastigroup/tutorials/elastigroup-budgets/configure-budgets":
+      "/elastigroup/tutorials/elastigroup-budgets/",
+
+    "/elastigroup/tutorials/elastigroup-budgets/monitor-budgets":
       "/elastigroup/tutorials/elastigroup-budgets/",
 
     "/elastigroup/tutorials/elastigroup-tasks/create-an-elastigroup-from-scratch-a":
@@ -588,6 +670,32 @@ export const aliases = (() => {
 
     "/elastigroup/tutorials-azure/use-stateful-nodes/view-details":
       "/managed-instance/azure/tutorials/view-details",
+
+    "/elastigroup/tutorials/elastigroup-tasks/create-an-elastigroup-from-scratch-nw":
+      "/elastigroup/tutorials/elastigroup-tasks/create-an-elastigroup-from-scratch",
+
+    "/elastigroup/tutorials/elastigroup-tasks/create-an-elastigroup-from-scratch-OLD":
+      "/elastigroup/tutorials/elastigroup-tasks/create-an-elastigroup-from-scratch",
+
+    "/elastigroup/tutorials/elastigroup-tasks/create-a-stateful-elastigroup-from-scratch":
+      "/managed-instance/getting-started/create-a-new-managed-instance",
+
+    "/elastigroup/tutorials/elastigroup-tasks/link-ec2-classic-instance-to-vpc":
+      "/elastigroup/features/",
+
+    "/elastigroup/tutorials/elastigroup-tasks/README":
+      "/elastigroup/tutorials/elastigroup-budgets/",
+
+    "/elastigroup/tutorials/elastigroup-tasks/wordpress-on-spot-step-by-step-guide":
+      "/elastigroup/features/",
+
+    "/elastigroup/tutorials/README": "/elastigroup/features/",
+
+    "/elastigroup/tutorials-azure/azure-aks-engine": "/elastigroup/features-azure/",
+
+    "/elastigroup/tutorials-azure/README": "/elastigroup/features-azure/",
+
+    "/elastigroup/tutorials-gcp/README": "/elastigroup/features/gcp/",
 
     "/elastigroup-for-aws/": "/elastigroup/",
 
