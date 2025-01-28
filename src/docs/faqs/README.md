@@ -1653,6 +1653,23 @@ Find the storage account URL in the Azure console. Go to **VM details** > **JSON
  </details>
 
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="eggcpdisksize">GCP: Why am I getting an <i>Invalid value for field error</i> (disk size)?</summary>
+
+  <div style="padding-left:16px">
+  You can get this message if instances aren’t starting:
+
+<pre><code>Invalid value for field 'resource.disks[0].initializeParams.diskSizeGb': '80'. Requested disk size cannot be smaller than the image size (100 GB)</code></pre>
+
+You need to increase the disk size for the Elastigroup:
+
+1. Go to the Elastigroup in the Spot console and click **Actions** > **Edit Configuration** > **Compute**.
+2. Update **Boot Disk** > **Disk Size** to be bigger than the configured disk size for the image.
+ 
+ </div>
+
+ </details>
+
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="egelasticsearch">Integration: Can Elasticsearch integrate with Spot?</summary>
 
   <div style="padding-left:16px">
