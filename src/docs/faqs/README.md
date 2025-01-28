@@ -1154,7 +1154,18 @@ By freeing up space, the pod can be placed on its attached node and can use the 
  </div>
 
  </details>
+ 
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanhostportunderutilized">AKS, EKS, GKE: Can pods requiring HostPort cause underutilized nodes (Kubernetes)?</summary>
+      
+   If multiple pods request the same port (hostPort), each pod will get the hostPort, but each pod will be scheduled separately on its own node.
 
+Avoid using the hostPort request, unless it’s necessary ([Kubernetes - configuration best practices](https://kubernetes.io/docs/concepts/configuration/overview/)).
+
+ </div>
+
+ </details>
+ 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceank8sheadroom">AKS, EKS, GKE: Can I configure automatic headroom using Kubernetes Operations (kOps)?</summary>
 
