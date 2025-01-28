@@ -506,6 +506,9 @@ export const aliases = (() => {
     "/elastigroup/features/core-features/elastigroup-capacity-instances-or-weighted-OLD":
       "/elastigroup/features/core-features/elastigroup-capacity-instances-or-weighted",
 
+   "/elastigroup/features/core-features/elastigroup-console-configuration-alerts":
+      "/elastigroup/",
+
     "/elastigroup/features/core-features/equal-az-instance-distribution-orientation":
       "/elastigroup/features/core-features/cluster-orientation",
 
@@ -521,6 +524,18 @@ export const aliases = (() => {
     "/elastigroup/features/core-features/README": "/elastigroup/features/",
 
     "/elastigroup/features/core-features/spot-reserved-on-demand-instances":
+      "/elastigroup/",
+
+    "/elastigroup/features/intelligent-traffic-flow/":
+      "/elastigroup/",
+
+    "/elastigroup/features/intelligent-traffic-flow/api-reference":
+      "/elastigroup/",
+
+    "/elastigroup/features/intelligent-traffic-flow/configure-intelligent-traffic-flow":
+      "/elastigroup/",
+
+    "/elastigroup/features/intelligent-traffic-flow/migration-process":
       "/elastigroup/",
 
     "/elastigroup/features/scaling/predictive-autoscaling":
