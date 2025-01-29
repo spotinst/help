@@ -52,7 +52,7 @@ Valid label values are:
 
 > **Note**: Don't add Spot labels under the virtual node group (launch specification) node labels section. Add these labels to the pod configuration only.
 
-###  aws.spot.io/instance Labels
+###  instance Types Labels
 
 Format: `aws.spot.io/instance-<object>`, for example, `aws.spot.io/instance-category`
 
