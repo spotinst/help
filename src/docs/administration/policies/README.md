@@ -16,7 +16,7 @@ Spot comes with a number of default policies. You can use these out of the box a
 - Organization-level permissions:
   - Credit Card Editor
   - Cloud Analyzer Editor
-- Organization and account-level permissions
+- Organization and account-level permissions:
   - Admin
 
 ## Custom Policy Conditions
@@ -47,6 +47,9 @@ These rules apply to policies:
 1. In the Spot console, click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png">  > **Settings**.
 2. Click **Organization** > **Permission Policies** > **Create New Policy**.
 3. Enter a **Policy Name** (and **Policy Description**).
+
+      > **Note**: names cannot include these characters: `+ = @`
+
 4. Select the type of **Permission Management**:
    * **Account Permissions**: These permissions are for products and services that have resources at the account level. You select the relevant accounts separately for each user or group once you attach the policy to them.
    * **Organization Permissions**: These permissions are for products and services that have resources at the organization level.
