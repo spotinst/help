@@ -21,6 +21,9 @@ From the list of groups, you can:
 1. In the Spot console, click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png">  > **Settings**.
 2. Click **Organization** > **Groups** > **Create New Group**.
 3. Enter a **Name** (and **Description**).
+
+    > **Note**: names cannot include these characters: `+ = @`
+   
 4. Find and select the users to add to the group.
 5. Click **Next**.
 6. Add [permission policies](administration/policies/):
