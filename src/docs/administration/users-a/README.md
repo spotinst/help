@@ -23,6 +23,9 @@ From the list of users, you can:
 4. Select the **Access Type**:
    - **Console** if the user is a person who uses the Spot console. Console users can also use the Spot API. Enter the person’s **Name** and **Email address**.
    - **Programmatic** if the user is an application that only uses the Spot API. Enter a **Name** (and **Description**).
+
+   > **Note**: names cannot include these characters: `+ = @`
+
 6. Click **Continue**.
 7. Search for and select the [groups](administration/groups/) to associate with the user. The user will inherit the policies associated with the groups you select.
 8. Click **Next**.
@@ -45,8 +48,8 @@ From the list of users, you can:
 Your password must have at least:
 
 - 8 characters
-- One number
-- One uppercase letter
-- One lowercase letter
-- One special character
+- 1 number
+- 1 uppercase letter
+- 1 lowercase letter
+- 1 special character
 
