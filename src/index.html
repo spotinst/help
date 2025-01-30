@@ -27,88 +27,107 @@
 
   <!-- Custom Styles -->
   <style type="text/css">
+    blockquote p mark {
+      background: #ddd;
+      padding: 5px;
+      border-radius: 4px;
+      margin: 0 5px;
+    }
     .sidebar .sidebar-nav {
-      top: 162px!important;
-      height:calc(90% - 110px)!important;
+      top: 162px !important;
+      height: calc(90% - 110px) !important;
     }
     .sidebar .search {
-      top: 102px!important;
+      top: 102px !important;
     }
     .sidebar h1.app-name {
-      top: 0!important;
+      top: 0 !important;
     }
     .sidebar .logo img {
-      margin-right: 0!important;
+      margin-right: 0 !important;
     }
     .page_toc {
       top: 0;
-      position: static!important;
-      margin-top:20px!important;
+      position: static !important;
+      margin-top: 20px !important;
     }
     .page_toc.scrolled {
-      position: fixed!important;
+      position: fixed !important;
     }
     .markdown-section {
-      padding: 20px!important;
+      padding: 20px !important;
     }
-    .helpful-content { 
-      z-index:9999;
-      background:#0086FF;
-      color:#fff;
-      padding:10px 40px; 
+    .helpful-content {
+      z-index: 9999;
+      background: #0086FF;
+      color: #fff;
+      padding: 10px 40px;
       transition: transform .25s ease-out;
-      margin-left:300px;   
+      margin-left: 300px;
     }
     .helpful-content h2 {
       padding: 10px 0;
       margin: 0;
     }
     .helpful-content p {
-      margin:0;
+      margin: 0;
       padding: 0 0 10px 0;
     }
     body.close .helpful-content {
-      margin-left:0!important;
-    } 
+      margin-left: 0 !important;
+    }
     .content {
-      position: absolute!important;
-      padding-top:0px!important;
+      position: absolute !important;
+      padding-top: 0px !important;
     }
     .sidebar-toggle {
-      top: 134px!important;
+      top: 134px !important;
     }
     .sidebar-toggle.scrolled {
-      top: 20px!important;
+      top: 20px !important;
     }
     .page_toc .lv3 {
-      display:none;
+      display: none;
     }
     @media only screen and (max-width: 768px) {
+      #search-overlay {
+        width: 100vw !important;
+      }
       .helpful-content {
-        margin-left: 0!important;
+        margin-left: 0 !important;
+        min-width: 350px;
+        padding: 10px 20px;
       }
       body.sticky.close .helpful-content {
-        margin-left:300px!important;    
+        margin-left: 300px !important;
       }
-    } 
+    }
     .spot-btn {
       background-color: transparent;
       border: 2px solid #fff;
       border-radius: 45px;
       color: #fff;
-      font-family: 'Axiforma', Helvetica, sans-serif; 
+      font-family: 'Axiforma', Helvetica, sans-serif;
       font-size: 16px;
-      font-weight: 600; 
-      padding: 5px 30px; 
+      font-weight: 600;
+      padding: 5px 30px;
       transition: .3s;
     }
     .spot-btn:hover {
       background-color: #fff;
-      color: #0086ff; 
+      color: #0086ff;
       cursor: pointer;
       transition: .3s;
     }
-
+    .spot-btn.pink {
+      background-color: #ff00ce;
+      border: 2px solid #ff00ce;
+    }
+    .spot-btn.pink:hover {
+      background-color: #ca18a3;
+      border: 2px solid #ca18a3;
+      color: #fff;
+    }
     @media only screen and (max-width: 1024px) {
       .helpful-content h2 {
         font-size: 20px;
@@ -119,55 +138,107 @@
         padding: 10px 0;
       }
       .sidebar-toggle {
-        top: 160px!important;
+        top: 160px !important;
       }
     }
-    @media only screen and (min-width: 1024px) {  
+    @media only screen and (min-width: 1024px) {
       .helpful-content .col-left {
-        width:70%;
+        width: 70%;
       }
       .helpful-content .col-right {
-        width:30%;  
+        width: 30%;
       }
-      .helpful-content { 
+      .helpful-content {
         display: flex;
         align-items: center;
         justify-content: center;
       }
-      .spot-btn { 
-        float:right;
+      .helpful-content .spot-btn {
+        float: right;
         position: relative;
       }
-    } 
-    @media only screen and (min-width: 1300px) { 
-      .spot-btn { 
+    }
+    @media only screen and (min-width: 1300px) {
+      .helpful-content .spot-btn {
         left: -45px;
       }
     }
-    @media only screen and (min-width: 1500px) { 
-      .spot-btn { 
+    @media only screen and (min-width: 1500px) {
+      .helpful-content .spot-btn {
         left: -80px;
       }
     }
-
-    @media only screen and (min-width: 1650px) { 
-      .spot-btn { 
+    @media only screen and (min-width: 1650px) {
+      .helpful-content .spot-btn {
         left: -90px;
       }
     }
-    @media only screen and (min-width: 1750px) { 
-      .spot-btn { 
+    @media only screen and (min-width: 1750px) {
+      .helpful-content .spot-btn {
         left: -100px;
       }
     }
-    @media only screen and (min-width: 1800px) { 
-      .spot-btn { 
+    @media only screen and (min-width: 1800px) {
+      .helpful-content .spot-btn {
         left: -110px;
       }
     }
-    
-    
-
+    .highlight {
+      background-color: yellow;
+      padding: 0 2px;
+    }
+    .matching-post {
+      width: 100%;
+    }
+    .search-results-displayed h1 {
+      padding-left: 50px;
+    }
+    .search-results-displayed {
+      display: block !important;
+    }
+    .results-panel.show {
+      display: none !important;
+    }
+    #search-results {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: white;
+      padding: 20px;
+      height: 100vh;
+      overflow-y: auto;
+    }
+    #search-results h1 {
+      margin-bottom: 30px;
+    }
+    #search-results h2 {
+      font-size: 16px;
+      margin: 40px 0 0 0;
+      padding: 0;
+    }
+    #search-results p {
+      margin: 10px 0 0 0;
+      padding: 0;
+    }
+    #search-overlay {
+      transition: opacity 0.3s ease;
+      position: fixed;
+      top: 0px;
+      left: 300px;
+      width: calc(100vw - 317px);
+      height: 100vh;
+      display: none;
+      z-index: 1000;
+    }
+    #close-search-results {
+      margin-top: 0;
+    }
+    .search-keyword {
+      color: #0086ff;
+      font-style: normal;
+      font-weight: bold;
+    }
   </style>
   
 </head>
@@ -249,61 +320,207 @@
   <script type="text/javascript"
     src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse@1.3.5/dist/docsify-sidebar-collapse.min.js"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/ga.min.js"></script>
-  
+ 
   <!-- Custom Plugins -->
-  <script type="text/javascript">
-    (function () {
-      function customPlugins(hook) {
-        hook.doneEach(function () {
-          // Feedback Button
-          const updateFeedbackButton = () => {
-            const markdownSection = document.querySelector(".markdown-section");
-            if (!markdownSection) return;
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const sidebar = document.querySelector('.sidebar');
+      const mainPanel = document.querySelector('.content article');
+      const searchInput = sidebar ? sidebar.querySelector('input[type="search"]') : null;
+      const clearButton = sidebar ? sidebar.querySelector('.clear-button') : null; // Target the clear button
 
-            const h1 = markdownSection.querySelector("h1");
-            const currentURL = window.location.href;
-            if (h1) {
-              const h1Content = encodeURIComponent(h1.textContent.trim());
-              const feedbackButton = document.querySelector(".feedback-button");
-              if (feedbackButton) {
-                feedbackButton.href = `mailto:spotdocs@netapp.com?subject=Documentation topic: ${h1Content}&body=Documentation topic: ${currentURL}`;
-              } else {
-                feedbackButton.href = `mailto:spotdocs@netapp.com?subject=Documentation topic: General Inquiry&body=Documentation topic: https://docs.spot.io/`;
-              }
-            }
-          };
-          updateFeedbackButton();
+      let isSearchActive = false; // Track whether search is active
+      const overlay = document.createElement('div'); // Create overlay element
 
-          // Sticky Sidebar
-          const observer = new MutationObserver(function (mutations) {
-            mutations.forEach(function () {
-              const tocElement = document.querySelector(".page_toc");
+      if (!sidebar || !mainPanel || !searchInput) {
+        console.error('Required elements are missing: sidebar, content, or search input.');
+        return;
+      } 
+      overlay.id = 'search-overlay'; // Assign an ID to the overlay
 
-              // Moved function declaration outside the if block
-              function checkScroll() {
-                if (window.scrollY > 100) {
-                  tocElement.classList.add("scrolled");
-                } else {
-                  tocElement.classList.remove("scrolled");
-                }
-              }
+      document.body.appendChild(overlay); // Append overlay to body
 
-              if (tocElement) {
-                window.addEventListener("scroll", checkScroll);
-                observer.disconnect();
-              }
-            });
+      // Function to update the overlay with search results
+      function updateSearchResults() {
+        const searchResults = sidebar.querySelector('.results-panel.show');
+        if (!searchResults) return;
+
+        const resultItems = searchResults.querySelectorAll('.matching-post');
+        const resultCount = resultItems.length;
+
+        // Create search result content
+        const searchResultsContent = `
+          <div id="search-results">
+            <button id="close-search-results" class="spot-btn pink">Close Results</button>
+            <h1>Search Results (${resultCount} ${resultCount === 1 ? 'Result' : 'Results'})</h1>
+            ${searchResults.innerHTML}
+          </div>
+        `;
+
+        // Set the overlay content
+        overlay.innerHTML = searchResultsContent;
+        overlay.style.display = 'block'; // Show overlay
+        isSearchActive = true;
+
+        // Add event listener to close the custom search results button
+        const closeButton = document.getElementById('close-search-results');
+        if (closeButton) {
+          closeButton.addEventListener('click', function (event) {
+            event.stopPropagation(); // Prevent click from closing overlay
+            closeOverlayAndResetSearch(); // Close overlay and reset search input
           });
-          observer.observe(document.body, { childList: true, subtree: true });
+        }
+
+        // Add event listener to close overlay when clicking anywhere inside
+        overlay.addEventListener('click', function () {
+          closeOverlayAndResetSearch(); // Close overlay and reset search input
+        });
+
+        // Prevent the overlay from closing when clicking on the search results
+        const resultLinks = overlay.querySelectorAll('.matching-post');
+        resultLinks.forEach(function (link) {
+          link.addEventListener('click', function (event) {
+            event.stopPropagation(); // Prevent the overlay from closing
+          });
         });
       }
 
-      window.$docsify.plugins = [].concat(
-        customPlugins,
-        window.$docsify.plugins || []
-      );
-    })();
+      // Event listener for search input changes
+      searchInput.addEventListener('input', function (event) {
+        const query = event.target.value.trim();
+        if (query) {
+          performGlobalSearch(query); // Trigger global search
+        } else {
+          overlay.style.display = 'none'; // Hide overlay if search is cleared
+          isSearchActive = false;
+        }
+      });
+
+      // Function to close overlay and reset search input (mimicking clear button behavior)
+      function closeOverlayAndResetSearch() {
+        // Hide the overlay
+        overlay.style.display = 'none';
+        isSearchActive = false;
+
+        // Clear search input and reset to default state
+        if (searchInput) {
+          searchInput.value = ''; // Clear the input
+          searchInput.focus(); // Optional: refocus the search input if needed
+        }
+
+        // Remove the .show class from the .clear-button
+        if (clearButton) {
+          clearButton.classList.remove('show');
+        }
+      }
+
+      // Ensure clicking sidebar items restores the original content and closes the overlay
+      sidebar.addEventListener('click', function (event) {
+        const target = event.target.closest('a');
+        if (target && isSearchActive) {
+          // Hide the overlay when clicking a sidebar link if search is active
+          overlay.style.display = 'none'; // Hide overlay
+          isSearchActive = false;
+
+          // Allow the sidebar link to load the content
+          const linkHref = target.getAttribute('href');
+          if (linkHref) {
+            window.location.href = linkHref; // This simulates the navigation
+          }
+        }
+      });
+
+      // Ensure both the native and custom close buttons hide the overlay and reset the search
+      const nativeCloseButton = sidebar.querySelector('.clear-button');
+      if (nativeCloseButton) {
+        nativeCloseButton.addEventListener('click', function (event) {
+          event.stopPropagation(); // Prevent click from closing overlay
+          closeOverlayAndResetSearch(); // Close overlay and reset search input
+        });
+      }
+
+      // Observe sidebar changes to update search results dynamically
+      const sidebarObserver = new MutationObserver(function () {
+        const searchResults = sidebar.querySelector('.results-panel.show');
+        if (searchResults) {
+          updateSearchResults(); // Update overlay with search results
+        }
+      });
+
+      sidebarObserver.observe(sidebar, {
+        childList: true,
+        subtree: true
+      });
+    });
+
+
+
+    (function () {
+    function customPlugins(hook) {
+      hook.doneEach(function () {
+        // Wait for Docsify to initialize
+        document.addEventListener('click', function (event) {
+          // Check if the clicked element is a search result
+          if (event.target.matches('.matching-post') || event.target.closest('.matching-post')) {
+            // Add the class to the body
+            document.body.classList.add('search-result-clicked');
+
+            // Optional: Remove the class after a delay (if needed)
+            setTimeout(() => {
+              document.body.classList.remove('search-result-clicked');
+            }, 2000); // Adjust the delay as needed
+          }
+        });
+        // Feedback Button
+        const updateFeedbackButton = () => {
+          const markdownSection = document.querySelector(".markdown-section");
+          if (!markdownSection) return;
+
+          const h1 = markdownSection.querySelector("h1");
+          const currentURL = window.location.href;
+          if (h1) {
+            const h1Content = encodeURIComponent(h1.textContent.trim());
+            const feedbackButton = document.querySelector(".feedback-button");
+            if (feedbackButton) {
+              feedbackButton.href = `mailto:spotdocs@netapp.com?subject=Documentation topic: ${h1Content}&body=Documentation topic: ${currentURL}`;
+            } else {
+              feedbackButton.href = `mailto:spotdocs@netapp.com?subject=Documentation topic: General Inquiry&body=Documentation topic: https://docs.spot.io/`;
+            }
+          }
+        };
+        updateFeedbackButton();
+        // Sticky Sidebar
+        const observer = new MutationObserver(function (mutations) {
+          mutations.forEach(function () {
+            const tocElement = document.querySelector(".page_toc");
+
+            // Moved function declaration outside the if block
+            function checkScroll() {
+              if (window.scrollY > 100) {
+                tocElement.classList.add("scrolled");
+              } else {
+                tocElement.classList.remove("scrolled");
+              }
+            }
+            if (tocElement) {
+              window.addEventListener("scroll", checkScroll);
+              observer.disconnect();
+            }
+          });
+        });
+        observer.observe(document.body, {
+          childList: true,
+          subtree: true
+        });
+      });
+    }
+    window.$docsify.plugins = [].concat(
+      customPlugins,
+      window.$docsify.plugins || []
+    );
+  })();
   </script>
+  
 
   
 </body>
