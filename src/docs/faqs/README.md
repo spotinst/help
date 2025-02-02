@@ -1203,6 +1203,21 @@ A [limit range](https://kubernetes.io/docs/concepts/policy/limit-range/) is a po
   </div>
 
  </details>
+
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceank8sheadroomnode">AKS, EKS, GKE: Can I configure headroom for a node?</summary>
+
+  <div style="padding-left:16px">
+
+You cannot add headroom at a node level. Headroom is intended for:
+
+* Fast scaling: the infrastructure is ready, no need to wait for scaling.
+* Interruption: there is available capacity for the pod. If the headroom is all on one node and the node is interrupted, then there is no headroom that is readily available.
+
+  </div>
+
+ </details>
  
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceank8sheadroom">AKS, EKS, GKE: Can I configure automatic headroom using Kubernetes Operations (kOps)?</summary>
