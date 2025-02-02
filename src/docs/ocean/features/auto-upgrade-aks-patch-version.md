@@ -2,7 +2,7 @@
 
 Cloud service provider relevance: <font color="#FC01CC">AKS</font>
 
-You can schedule an auto-upgrade of an AKS patch version once a day (recommended) or at a specific time. For both types of auto-upgrade, you can set one of these options:
+You can run an auto-upgrade immediately or schedule an auto-upgrade of an AKS patch version once a day (recommended) or at a specific time. For both types of auto-upgrade, you can set one of these options:
 
 * Control plane upgrade: Upgrade the control plane patch version only.
 * Control plane upgrade and Ocean roll: Upgrade the control plane patch version and the nodes in the data plane managed by Ocean. After the upgrade, you must roll the cluster to align the cluster infrastructure with the updated version.
@@ -31,7 +31,7 @@ provide support updates for Kubernetes minor version upgrades.
 
 * Click **Auto Upgrade** at the bottom of the cluster overview screen (next to the control plane version), or click the **Auto Upgrade** tab.
 
-  >**Note**: If you have not run or scheduled an auto-upgrade in this cluster, the Auto-Upgrades tab appears with a **Scheduled Auto-Upgrade** button in the center of the screen. Otherwise, lists are displayed as shown below.
+  >**Note**: If you have not run or scheduled an auto-upgrade in this cluster, the Auto-Upgrades tab appears with a **Scheduled Update** button in the center of the screen. Otherwise, lists are displayed as shown below.
 
 ![screen-history](https://github.com/user-attachments/assets/a6a8f177-00ce-4dce-a868-2a659e73bb32)
 
@@ -98,6 +98,17 @@ To schedule an auto-upgrade:
 
    * The created schedule is turned on by default. To turn off the schedule, move the slider at the right of the entry for the schedule to the turned-off position.
    * After the update is run, an entry will appear in the auto-upgrades history list.
+  
+##  Auto-Upgrade Immediately
+
+Use this option if you want to auto-upgrade immediately (rather than scheduling an upgrade).
+
+1. See Create or Edit an Auto-Upgrade Schedule steps 1 to 4, except that in Step 2, click **Configure and Update Now**.
+2. Click **Update Now**.
+
+Add screen when available.
+
+3. >**Note**: If no upgrade version is available, the operation will time out.
 
 ## Delete an Auto-Upgrade Schedule
 
