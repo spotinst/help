@@ -39,9 +39,9 @@ The output produces a single point-in-time data point for each pod. Ocean then a
 Using the per-workload container aggregated data points, Ocean makes recommendations based on a mechanism that attempts to even out peaks and troughs in resource demand. The Right-Sizing engine runs every hour to generate new recommendations and update existing ones. 
 
 *  Recommendations for decreasing memory requests are based on the maximum memory utilization. If the maximum value * (10% overhead + 5% stability margin) > request, the recommendation = [10% overhead * value + value].
-*  Recommendations for decreasing CPU requests: The calculation is the same as for memory requests, except that we use the 99th percentile instead of the maximum value.
+*  Recommendations for decreasing CPU requests: The calculation is the same as for memory requests, except that we use the 85th percentile instead of the maximum value.
 *  Recommendations for increasing memory requests are based on the maximum memory utilization. If maximum value * ( 1 + 10% overhead - 5% stability margin) < request, the recommendation = [10% overhead * value + value].
-*  Recommendations for increasing CPU requests: The calculation is the same as for memory requests, except that we use the 99th percentile instead of the maximum value.
+*  Recommendations for increasing CPU requests: The calculation is the same as for memory requests, except that we use the 85th percentile instead of the maximum value.
 
 You view Right Sizing recommendations via: 
 
