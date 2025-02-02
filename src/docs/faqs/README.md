@@ -583,7 +583,25 @@ You can use your own AMI and configure IMDSv2 on it. All instances launched afte
 
  </details>
  
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanebs">Why is EBS optimization disabled on instances optimized by default?</summary>
 
+  <div style="padding-left:16px">
+
+[Amazon EBS–optimized](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html) instances use an optimized configuration stack and provide additional, dedicated bandwidth for Amazon EBS I/O.
+
+Instances that are [EBS-optimized by default](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html#current) are optimized [regardless of the parameter settings](https://github.com/hashicorp/terraform-provider-aws/issues/2667#issuecomment-352622410). There is no need to enable EBS optimization and no effect if you disable EBS optimization in AWS or in Spot.
+
+If an instance type isn’t [EBS-optimized by default](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html#current), you can enable optimization:
+
+1. In the Spot console, go to the Ocean cluster or Elastigroup.
+2. Click **Compute** > **launchSpecification**.
+3. Set **ebsOptimized** to <i>true</i>.
+
+   </div>
+
+ </details>
+ 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceaneventbridge">ECS, EKS: How do I create spot interruption notifications?</summary>
 
@@ -987,7 +1005,17 @@ Ocean ensures that the cluster resources are utilized and scales down underutili
 
  </details>
 
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceannull">EKS: Why are custom parameters in virtual node group <i>null</i>?</summary>
+   
+<div style="padding-left:16px">
 
+The JSON for a virtual node group has all the parameters from the Ocean template/default virtual node group. Any items you haven’t defined yet have a value of <i>null</i>. This way, you can edit the existing parameters.
+    
+ </div>
+
+ </details>
+ 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="pythonsdkdebug">EKS: Can I debug the Python SDK?</summary>
    
@@ -1010,6 +1038,19 @@ Then [create or update](https://github.com/spotinst/spotinst-sdk-python/blob/v2/
 
  </details>
 
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceancontrollerclusterid">EKS: Why am I getting a <i>controllerClusterID already being used by another Ocean cluster</i> message?</summary>
+
+  <div style="padding-left:16px">
+
+A cluster identifier (controllerClusterID) can only be used on one Ocean cluster at a time. This can happen if you’re trying to set up [Ocean Insights](ocean/getting-started/insights) on an existing Ocean cluster, or if the cluster already has [Ocean controller](ocean/tutorials/ocean-controller-v2/) installed on it.
+
+Ocean Insights is intended for <i>unmanaged</i> clusters.
+
+ </div>
+
+ </details>
+ 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceaniaminstance">EKS: Why am I getting an <i>Invalid IAMInstanceProfile</i> error?</summary>
 
@@ -1163,6 +1204,36 @@ By freeing up space, the pod can be placed on its attached node and can use the 
 Avoid using the hostPort request, unless it’s necessary ([Kubernetes - configuration best practices](https://kubernetes.io/docs/concepts/configuration/overview/)).
 
  </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceank8sresourcequota">AKS, EKS, GKE: What’s the difference between Kubernetes ResourceQuota and LimitRange objects?</summary>
+
+A [resource quota](https://kubernetes.io/docs/concepts/policy/resource-quotas/) is defined by a ResourceQuota object. It limits aggregate resources, such as CPU, memory, and GPU consumption per namespace. If creating or updating a resource violates a quota constraint, the request will fail with HTTP status code 403 FORBIDDEN with a message explaining the constraint that would have been violated. You can see the messages using: kubectl get events
+
+A [limit range](https://kubernetes.io/docs/concepts/policy/limit-range/) is a policy to constrain the resource allocations (limits and requests) that you can specify for each applicable object kind (such as Pod or [PersistentVolumeClaim](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims)) in a namespace.
+
+**ResourceQuota** is used to limit the total resource consumption of a <i>namespace</i>.
+
+**LimitRange** manages constraints at a <i>pod and container level</i> within the project.
+
+  </div>
+
+ </details>
+
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceank8sheadroomnode">AKS, EKS, GKE: Can I configure headroom for a node?</summary>
+
+  <div style="padding-left:16px">
+
+You cannot add headroom at a node level. Headroom is intended for:
+
+* Fast scaling: the infrastructure is ready, no need to wait for scaling.
+* Interruption: there is available capacity for the pod. If the headroom is all on one node and the node is interrupted, then there is no headroom that is readily available.
+
+  </div>
 
  </details>
  
@@ -1527,6 +1598,26 @@ You can use AWS EventBridge to send spot interruption warnings to the Spot platf
 
  </details>
 
+ 
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egebs">Why is EBS optimization disabled on instances optimized by default?</summary>
+
+  <div style="padding-left:16px">
+
+[Amazon EBS–optimized](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html) instances use an optimized configuration stack and provide additional, dedicated bandwidth for Amazon EBS I/O.
+
+Instances that are [EBS-optimized by default](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html#current) are optimized [regardless of the parameter settings](https://github.com/hashicorp/terraform-provider-aws/issues/2667#issuecomment-352622410). There is no need to enable EBS optimization and no effect if you disable EBS optimization in AWS or in Spot.
+
+If an instance type isn’t [EBS-optimized by default](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html#current), you can enable optimization:
+
+1. In the Spot console, go to the Ocean cluster or Elastigroup.
+2. Click **Compute** > **launchSpecification**.
+3. Set **ebsOptimized** to <i>true</i>.
+
+   </div>
+
+ </details>
+
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="scalinglatency">AWS: Can I configure a scaling policy for the latency metric?</summary>
 
@@ -1552,6 +1643,22 @@ You can create a scaling policy for latency.
  </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egscalingRIs">AWS: If <i>Utilize Reserved Instances</i> is enabled, how does scaling work?</summary>
+
+  <div style="padding-left:16px">
+
+By default, Elastigroup monitors the status of your account's reservations and acts accordingly at the launch time of an on-demand instance. When an on-demand instance is scaled up, if the account has an available reservation to use in the specific market (instance type + availability zone), Elastigroup will utilize it and will use the reserved instance payment method.
+
+If **Utilize Reserved Instances** is enabled, it automatically triggers constant attempts to revert the group's instances to on demand (reserved instance) if there are available reservations. It triggers a replacement for all instances, even spot, and uses your account's available reservations. The priority of launching instances in this group is:
+1. It will see if there is an option to launch an reserved instance instance
+2. If it cannot, it will launch a spot instance.
+3. If a spot instance is unavailable for any reason, an on-demand instance will be launched based on the fallback to on-demand configuration.
+
+ </div>
+ 
+ </details>
+ 
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="egspinspotinstances">AWS: Why can't I spin new spot instances (InsufficientInstanceCapacity)?</summary>
 
   <div style="padding-left:16px">
@@ -1569,22 +1676,6 @@ You can solve this by:
 
  </div>
 
- </details>
-
-  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egscalingRIs">AWS: If <i>Utilize Reserved Instances</i> is enabled, how does scaling work?</summary>
-
-  <div style="padding-left:16px">
-
-By default, Elastigroup monitors the status of your account's reservations and acts accordingly at the launch time of an on-demand instance. When an on-demand instance is scaled up, if the account has an available reservation to use in the specific market (instance type + availability zone), Elastigroup will utilize it and will use the reserved instance payment method.
-
-If **Utilize Reserved Instances** is enabled, it automatically triggers constant attempts to revert the group's instances to on demand (reserved instance) if there are available reservations. It triggers a replacement for all instances, even spot, and uses your account's available reservations. The priority of launching instances in this group is:
-1. It will see if there is an option to launch an reserved instance instance
-2. If it cannot, it will launch a spot instance.
-3. If a spot instance is unavailable for any reason, an on-demand instance will be launched based on the fallback to on-demand configuration.
-
- </div>
- 
  </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
@@ -1633,13 +1724,13 @@ You can read the AWS documentation on [spot instance quotas](https://docs.aws.am
  </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ebsvolumeerror">AWS: Why am I getting instance launch failed because an EBS volume cannot be encrypted error?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ebsvolumeerror">AWS: Why am I getting an <i>instance launch failed because an EBS volume cannot be encrypted</i> error?</summary>
 
 <div style="padding-left:16px">
 
 If you get this error:
 
-<pre>Spot Bad Parameters: Spot Request id: Optional<instance ID>. Code: bad-parameters Message: <timestamp>: Instance launch failed because an EBS volume cannot be encrypted. If your launch specification includes an encrypted EBS volume, you must grant the AWSServiceRoleForEC2Spot service-linked role access to any custom KMS keys.</pre>
+<pre>Spot Bad Parameters: Spot Request id: Optional{instance ID}. Code: bad-parameters Message: <timestamp>: Instance launch failed because an EBS volume cannot be encrypted. If your launch specification includes an encrypted EBS volume, you must grant the AWSServiceRoleForEC2Spot service-linked role access to any custom KMS keys.</pre>
 
 Then there are missing permissions in the KMS custom key. You can configure KMS keys:
 * [From the same AWS account](https://docs.spot.io/elastigroup/tutorials/elastigroup-tasks/create-encryption-key?id=create-encryption-key)
