@@ -584,7 +584,7 @@ You can use your own AMI and configure IMDSv2 on it. All instances launched afte
  </details>
  
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanebs">Why is EBS optimization disabled on instances optimized by default?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanebs">AWS: Why is EBS optimization disabled on instances optimized by default?</summary>
 
   <div style="padding-left:16px">
 
@@ -1600,7 +1600,7 @@ You can use AWS EventBridge to send spot interruption warnings to the Spot platf
 
  
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egebs">Why is EBS optimization disabled on instances optimized by default?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egebs">AWS: Why is EBS optimization disabled on instances optimized by default?</summary>
 
   <div style="padding-left:16px">
 
