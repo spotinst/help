@@ -20,7 +20,7 @@ When your account is successfully configured in Cost Intelligence, you can creat
     * Azure → subscription
 
     
-**Note**: This does not include data from Spot Security Risk Assessment checks.
+Note: This does not include data from Spot Security Risk Assessment checks.
 
 * Inventory - Created from Cost Intelligence and is available when you onboard an account with inventory-related data. Provides high-level inventory-related data for onboarded accounts. 
 
@@ -45,7 +45,7 @@ To create a dashboard:
 
 2. Enter a name for the dashboard and click **Publish Dashboard**. This publishes the dashboard and makes it available to all users in the organization.
 
-NOTE: If you do not publish the dashboard, the newly created dashboard will display as an empty dashboard in the list of available dashboards.  
+**Note**: If you do not publish the dashboard, the newly created dashboard will display as an empty dashboard in the list of available dashboards.  
 
 ### Smart Analyzer
 
@@ -105,8 +105,7 @@ To clone a dashboard:
 2. Modify the dashboard as desired.  
 3. To finalize the cloned dashboard, enter a new name. Then click the **Publish Dashboard** button.   
 
-NOTE: If you do not publish the dashboard, the newly cloned dashboard will display in the list of available dashboards.  
-
+**Note**: If you do not publish the dashboard, the newly cloned dashboard will display in the list of available dashboards.  
 ![dashboard-6](https://github.com/spotinst/help/assets/106514736/443f9293-861a-4ec1-943f-32d4f053099c)
 
 ## Managed Dashboards
