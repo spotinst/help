@@ -88,7 +88,7 @@ A statement includes:
    * <i>ocean:roll</i>
    * <i>elastigroup:describe*</i> allows all <i>Describe</i> actions, such as <i>-elastigroup:describeDeployments</i>, <i>elastigroup:describeGroup</i>
    * <i>elastigroup:*</i> will allow all Elastigroup actions.
-* **Resources** is an array of resources formatted as <i>[serviceName]:[resourceName]</i>. A resource represents a Spot resource, such as an Ocean cluster or an Elastigroup. The effect and actions are applied to the resource. You can use wildcards (*) in the <i>[serviceName]</i> and <i>[resourceName]</i>:
+* **Resources** is an array of resources formatted as <i>[serviceName]:[resourceId]</i>. A resource represents a Spot resource, such as an Ocean cluster or an Elastigroup. The effect and actions are applied to the resource. You can use wildcards (*) in the <i>[serviceName]</i> and <i>[resourceId]</i>:
    * All resources: <i>*</i>
    * All Elastigroup resources: <i>elastigroup:*</i>
    * All groups starting with sig-214: <i>sig-214*</i>
