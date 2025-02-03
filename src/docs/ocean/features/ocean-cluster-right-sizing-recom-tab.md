@@ -173,7 +173,7 @@ By default:
 
 >**Important:** Changing the percentile setting will impact the recommendations that were already applied (this may take a few minutes to update).
 
-To change this setting:
+To change settings:
 
 1. Click **Settings** above the [workloads optimization list](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=workloads-optimization-list).
 
