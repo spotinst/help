@@ -1838,6 +1838,19 @@ Find the storage account URL in the Azure console. Go to **VM details** > **JSON
  </details>
  
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="eggrace">GCP: How does the grace period work?</summary>
+
+  <div style="padding-left:16px">
+     
+If an Elastigroup has a [grace period](https://docs.spot.io/api/#tag/Elastigroup-GCP/operation/elastigroupGcpUpdate) of 1,000 seconds, the old instances are only detached after the full grace period of 1,000 seconds ends.
+
+You can [decrease the grace period](https://docs.spot.io/api/#tag/Elastigroup-GCP/operation/elastigroupGcpDeploy) for faster deployment.
+
+   </div>
+
+ </details>
+ 
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="egcuds">GCP: Can I set up committed use discounts?</summary>
 
   <div style="padding-left:16px">
