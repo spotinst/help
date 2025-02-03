@@ -602,6 +602,21 @@ If an instance type isn’t [EBS-optimized by default](https://docs.aws.amazon.c
 
  </details>
  
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceancudvng">GCP: Can I set up committed use discounts on virtual node groups?</summary>
+
+  <div style="padding-left:16px">
+     
+You can set up committed use discounts (CUDs) for clusters in Ocean and groups in Elastigroup. It cannot be used for virtual node groups.
+
+Set up committed use discounts for:
+* [Ocean](ocean/features/committed-use-discount)
+* [Elastigroup](elastigroup/features/gcp/commit-use-discount)
+
+   </div>
+
+ </details>
+ 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceaneventbridge">ECS, EKS: How do I create spot interruption notifications?</summary>
 
@@ -1821,7 +1836,22 @@ Find the storage account URL in the Azure console. Go to **VM details** > **JSON
  </div>
 
  </details>
+ 
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egcuds">GCP: Can I set up committed use discounts?</summary>
 
+  <div style="padding-left:16px">
+     
+You can set up committed use discounts (CUDs) for clusters in Ocean and groups in Elastigroup. It cannot be used for virtual node groups.
+
+Set up committed use discounts for:
+* [Ocean](ocean/features/committed-use-discount)
+* [Elastigroup](elastigroup/features/gcp/commit-use-discount)
+
+   </div>
+
+ </details>
+ 
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="eggcpdisksize">GCP: Why am I getting an <i>Invalid value for field error</i> (disk size)?</summary>
 
