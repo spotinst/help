@@ -621,7 +621,7 @@ Set up committed use discounts for:
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanbootdisk">GCP: Why can’t I spin new instances (boot disk architecture)?</summary>
 
   <div style="padding-left:16px">
-     
+
 If Ocean isn’t launching a VM, you might get this log message:
 
 ```Can’t Spin Instance: Name: sin-abcd. Code: Error, Message: Invalid resource usage: 'Requested boot disk architecture (X86_64) is not compatible with machine type architecture (ARM64).'```
