@@ -1408,6 +1408,21 @@ However, it’s not possible to do with Ocean AKS clusters because you cannot ch
  
  </details>
 
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanodnodes">AKS: Why are on-demand nodes running in my virtual node groups?</summary>
+
+  <div style="padding-left:16px">
+
+If you have virtual node groups with Spot % set to 100 or Fallback to Regular set to off, you can still have on-demand nodes running.
+
+This can happen if you have nodes in a [kube-system namespace](https://learn.microsoft.com/en-us/azure/aks/core-aks-concepts#namespaces). Kube-system pods are created by the Kubernetes system and are required to make the cluster work.
+
+AKS only launches spot nodes if the admission controller is enabled and Spot tolerations are injected into the pods.
+
+ </div>
+ 
+ </details>
+
 
 <!----------------------------------elastigroup---------------------------------->
 ## Elastigroup
