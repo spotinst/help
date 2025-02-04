@@ -606,7 +606,7 @@ If an instance type isn’t [EBS-optimized by default](https://docs.aws.amazon.c
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceancudvng">GCP: Can I set up committed use discounts on virtual node groups?</summary>
 
   <div style="padding-left:16px">
-     
+
 You can set up committed use discounts (CUDs) for clusters in Ocean and groups in Elastigroup. It cannot be used for virtual node groups.
 
 Set up committed use discounts for:
@@ -621,7 +621,7 @@ Set up committed use discounts for:
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanbootdisk">GCP: Why can’t I spin new instances (boot disk architecture)?</summary>
 
   <div style="padding-left:16px">
-     
+
 If Ocean isn’t launching a VM, you might get this log message:
 
 ```Can’t Spin Instance: Name: sin-abcd. Code: Error, Message: Invalid resource usage: 'Requested boot disk architecture (X86_64) is not compatible with machine type architecture (ARM64).'```
