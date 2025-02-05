@@ -2202,7 +2202,7 @@ You can set a custom hostname that will continue to be used during the recycle p
      echo "$CUSTOM_HOSTNAME" > /etc/hostname
      sed -i "s/^127\.0\.0\.1.*/127.0.0.1 localhost $CUSTOM_HOSTNAME/" /etc/hosts
      hostnamectl set-hostname "$CUSTOM_HOSTNAME"</code></pre>
-   
+
 If you want to use the instance IPv4 address that the node was originally launched with:
 
 1.	In the metadata file, get the instance IP: `curl -s http://169.254.169.254/latest/meta-data/local-ipv4`
