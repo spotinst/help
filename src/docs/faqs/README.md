@@ -1519,6 +1519,7 @@ AKS only launches spot nodes if the admission controller is enabled and Spot tol
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="sparkretries">How can I set the number of retries for a stage in Ocean Spark?</summary>
 
  <div style="padding-left:16px">
+
 If there is a stage failure when a job runs in Ocean Spark, there’s a [retry mechanism](https://spark.apache.org/docs/3.5.2/configuration.html#:~:text=2.0.3-,spark.stage.maxConsecutiveAttempts,-4). You can change the number of retries for a stage:
 
 1. In the Spot console, go to **Ocean for Spark** > **Configuration Templates**.
@@ -1529,8 +1530,9 @@ If there is a stage failure when a job runs in Ocean Spark, there’s a [retry m
  </div>
  
  </details>
- 
+
 <!----------------------------------elastigroup---------------------------------->
+
 ## Elastigroup
 
 <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
