@@ -1113,6 +1113,27 @@ Once the cluster is configured to use the default virtual node group as a templa
  </details>
 
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocunregnode">EKS: Why am I getting unregistered nodes and syntax error or unexpected EOF messages?</summary>
+
+  <div style="padding-left:16px">
+
+If you have unregistered nodes and are getting log messages such as:
+
+<pre><code>/var/lib/cloud/instance/scripts/part-001: line 5: unexpected EOF while looking for matching `"'
+   
+/var/lib/cloud/instance/scripts/part-001: line 9: syntax error: unexpected end of file
+
+Feb 01 14:03:05 cloud-init[2517]: util.py[WARNING]: Running module scripts-user (<module ‘cloudinit.config.cc_scripts_user' from '/usr/lib/python2.7/site-packages/cloudinit/config/cc_scripts_user.pyc'>) failed</pre></code>
+
+Make sure:
+1. The parameters are configured correctly (such as labels, AMI, IP, user data).
+2. The user data script is executable and working properly.
+
+   </div>
+
+ </details>
+
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocfailedupdate">GKE: Why am I getting a <i>Failed to update the group</i> (launchSpec) error?</summary>
 
   <div style="padding-left:16px">
@@ -1131,11 +1152,10 @@ To resolve the errors, you can either:
 
 Every 30 minutes, [an automatic process](ocean/features/auto-update-process-gke) runs to update the GKE configuration in the control plane manager. You can [trigger the process manually](https://docs.spot.io/api/#tag/Ocean-GKE/operation/reImportGke).
 
-
    </div>
 
  </details>
-
+ 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocinsttax">GKE: Why can't I spin new spot instances (InstanceTaxonomies)?</summary>
 
