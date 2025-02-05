@@ -2164,7 +2164,56 @@ You can use your own AMI and configure IMDSv2 on it. All instances launched afte
 
  </details>
 
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ssn-statichostname">AWS: Can I use a static hostname?</summary>
 
+  <div style="padding-left:16px">
+
+Normally, AWS automatically sets the hostname when the instance is launched. It’s based on the instance’s private IPv4 address.
+
+You can set a custom hostname that will continue to be used during the recycle process:
+
+1.	Edit the hosts file and change the name permanently: `sudo gedit /etc/hostname /etc/hosts`
+2.	Update the CUSTOM_HOSTNAME:
+
+    <pre><code>#!/bin/bash
+     CUSTOM_HOSTNAME="my-custom-hostname"
+     echo "preserve_hostname: true" > /etc/cloud/cloud.cfg.d/99_persist_hostname.cfg
+     echo "$CUSTOM_HOSTNAME" > /etc/hostname
+     sed -i "s/^127\.0\.0\.1.*/127.0.0.1 localhost $CUSTOM_HOSTNAME/" /etc/hosts
+     hostnamectl set-hostname "$CUSTOM_HOSTNAME"</code></pre>
+   
+If you want to use the instance IPv4 address that the node was originally launched with:
+
+1.	In the metadata file, get the instance IP: `curl -s http://169.254.169.254/latest/meta-data/local-ipv4`
+2.	Make sure <b>Persist Private IP</b> is configured. The custom hostname should also persist during replacement because the hostname is connected to the persistent IP.
+
+    <ol style="list-style-type: lower-alpha;">
+    <li>Go to the stateful node in the Spot console and click <b>Actions</b> > <b>Edit Configuration</b>.</li>
+    <li>Click <b>Persistent Resources</b> > <b>Network</b>.</li>
+    <li>Select <b>Persist Private IP</b> and enter the IP address.</li>
+    </ol>
+
+3. In the user data, update the script:
+
+    <ol style="list-style-type: lower-alpha;">
+    <li>Go to the stateful node in the Spot console and click <b>Actions</b> > <b>Edit Configuration</b> > <b>Initialization and Termination</b>.</li>
+    <li><p>Add this script to <b>User Data</b>:</p>
+      <pre><code>#!/bin/bash
+       PRIVATE_IP=$(curl -s http://169.254.169.254/latest/meta-data/local-ipv4)
+       AWS_HOSTNAME="ip-$(echo $PRIVATE_IP | tr '.' '-')"
+       echo "preserve_hostname: true" > /etc/cloud/cloud.cfg.d/99_persist_hostname.cfg
+       echo "$AWS_HOSTNAME" > /etc/hostname
+       sed -i "s/^127\.0\.0\.1.*/127.0.0.1 localhost ${AWS_HOSTNAME}/" /etc/hosts
+       hostnamectl set-hostname "$AWS_HOSTNAME"</code></pre></li>
+   </ol>
+
+You can also persist the hostname for [RHEL 7, 8, and 9, and CentOS 7, 8, and 9](https://repost.aws/knowledge-center/linux-static-hostname-rhel7-centos7).
+
+ </div>
+
+ </details>
+ 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="egsn-stopped">AWS: Why am I getting an <i>Instance have been detected as stopped</i> error?</summary>
 
