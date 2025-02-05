@@ -628,8 +628,21 @@ If Ocean isn’t launching a VM, you might get this log message:
 
 This can happen because Ocean doesn’t validate VM architecture for GCP. You can [troubleshoot this error](https://cloud.google.com/compute/docs/troubleshooting/troubleshooting-arm-vms#errors_when_updating_vms) in GCP.
 
+   </div>
 
+ </details>
 
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanscaleup">GCP: Why am I getting a zone_resource_pool_exhausted (scale up) error?</summary>
+
+  <div style="padding-left:16px">
+
+You may get this log message when a VM is trying to scale up or launch VMs:
+
+<pre><code>Can't Spin Instance: Name: abcde. Code: ZONE_RESOURCE_POOL_EXHAUSTED_WITH_DETAILS,
+Message: The zone 123 does not have enough resources available to fulfill the request, '(resource type:compute)'.</code></pre>
+
+This can happen if the specific VM family and size aren’t available for a certain zone at the moment. Elastigroup or Ocean will try to automatically spin up a different VM in a different zone to compensate.
 
    </div>
 
@@ -1915,6 +1928,22 @@ You need to increase the disk size for the Elastigroup:
 
  </details>
 
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egcaleup">GCP: Why am I getting a zone_resource_pool_exhausted (scale up) error?</summary>
+
+  <div style="padding-left:16px">
+
+You may get this log message when a VM is trying to scale up or launch VMs:
+
+<pre><code>Can't Spin Instance: Name: abcde. Code: ZONE_RESOURCE_POOL_EXHAUSTED_WITH_DETAILS,
+Message: The zone 123 does not have enough resources available to fulfill the request, '(resource type:compute)'.</code></pre>
+
+This can happen if the specific VM family and size aren’t available for a certain zone at the moment. Elastigroup or Ocean will try to automatically spin up a different VM in a different zone to compensate.
+
+   </div>
+
+ </details>
+ 
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="egelasticsearch">Integration: Can Elasticsearch integrate with Spot?</summary>
 
