@@ -628,8 +628,21 @@ If Ocean isn’t launching a VM, you might get this log message:
 
 This can happen because Ocean doesn’t validate VM architecture for GCP. You can [troubleshoot this error](https://cloud.google.com/compute/docs/troubleshooting/troubleshooting-arm-vms#errors_when_updating_vms) in GCP.
 
+   </div>
 
+ </details>
 
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanscaleup">GCP: Why am I getting a zone_resource_pool_exhausted (scale up) error?</summary>
+
+  <div style="padding-left:16px">
+
+You may get this log message when a VM is trying to scale up or launch VMs:
+
+<pre><code>Can't Spin Instance: Name: abcde. Code: ZONE_RESOURCE_POOL_EXHAUSTED_WITH_DETAILS,
+Message: The zone 123 does not have enough resources available to fulfill the request, '(resource type:compute)'.</code></pre>
+
+This can happen if the specific VM family and size aren’t available for a certain zone at the moment. Elastigroup or Ocean will try to automatically spin up a different VM in a different zone to compensate.
 
    </div>
 
@@ -1100,6 +1113,27 @@ Once the cluster is configured to use the default virtual node group as a templa
  </details>
 
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocunregnode">EKS: Why am I getting unregistered nodes and syntax error or unexpected EOF messages?</summary>
+
+  <div style="padding-left:16px">
+
+If you have unregistered nodes and are getting log messages such as:
+
+<pre><code>/var/lib/cloud/instance/scripts/part-001: line 5: unexpected EOF while looking for matching `"'
+   
+/var/lib/cloud/instance/scripts/part-001: line 9: syntax error: unexpected end of file
+
+Feb 01 14:03:05 cloud-init[2517]: util.py[WARNING]: Running module scripts-user (<module ‘cloudinit.config.cc_scripts_user' from '/usr/lib/python2.7/site-packages/cloudinit/config/cc_scripts_user.pyc'>) failed</pre></code>
+
+Make sure:
+1. The parameters are configured correctly (such as labels, AMI, IP, user data).
+2. The user data script is executable and working properly.
+
+   </div>
+
+ </details>
+
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocfailedupdate">GKE: Why am I getting a <i>Failed to update the group</i> (launchSpec) error?</summary>
 
   <div style="padding-left:16px">
@@ -1118,11 +1152,10 @@ To resolve the errors, you can either:
 
 Every 30 minutes, [an automatic process](ocean/features/auto-update-process-gke) runs to update the GKE configuration in the control plane manager. You can [trigger the process manually](https://docs.spot.io/api/#tag/Ocean-GKE/operation/reImportGke).
 
-
    </div>
 
  </details>
-
+ 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocinsttax">GKE: Why can't I spin new spot instances (InstanceTaxonomies)?</summary>
 
@@ -1916,6 +1949,22 @@ You need to increase the disk size for the Elastigroup:
  </details>
 
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egcaleup">GCP: Why am I getting a zone_resource_pool_exhausted (scale up) error?</summary>
+
+  <div style="padding-left:16px">
+
+You may get this log message when a VM is trying to scale up or launch VMs:
+
+<pre><code>Can't Spin Instance: Name: abcde. Code: ZONE_RESOURCE_POOL_EXHAUSTED_WITH_DETAILS,
+Message: The zone 123 does not have enough resources available to fulfill the request, '(resource type:compute)'.</code></pre>
+
+This can happen if the specific VM family and size aren’t available for a certain zone at the moment. Elastigroup or Ocean will try to automatically spin up a different VM in a different zone to compensate.
+
+   </div>
+
+ </details>
+ 
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="egelasticsearch">Integration: Can Elasticsearch integrate with Spot?</summary>
 
   <div style="padding-left:16px">
@@ -2135,7 +2184,56 @@ You can use your own AMI and configure IMDSv2 on it. All instances launched afte
 
  </details>
 
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ssn-statichostname">AWS: Can I use a static hostname?</summary>
 
+  <div style="padding-left:16px">
+
+Normally, AWS automatically sets the hostname when the instance is launched. It’s based on the instance’s private IPv4 address.
+
+You can set a custom hostname that will continue to be used during the recycle process:
+
+1.	Edit the hosts file and change the name permanently: `sudo gedit /etc/hostname /etc/hosts`
+2.	Update the CUSTOM_HOSTNAME:
+
+    <pre><code>#!/bin/bash
+     CUSTOM_HOSTNAME="my-custom-hostname"
+     echo "preserve_hostname: true" > /etc/cloud/cloud.cfg.d/99_persist_hostname.cfg
+     echo "$CUSTOM_HOSTNAME" > /etc/hostname
+     sed -i "s/^127\.0\.0\.1.*/127.0.0.1 localhost $CUSTOM_HOSTNAME/" /etc/hosts
+     hostnamectl set-hostname "$CUSTOM_HOSTNAME"</code></pre>
+   
+If you want to use the instance IPv4 address that the node was originally launched with:
+
+1.	In the metadata file, get the instance IP: `curl -s http://169.254.169.254/latest/meta-data/local-ipv4`
+2.	Make sure <b>Persist Private IP</b> is configured. The custom hostname should also persist during replacement because the hostname is connected to the persistent IP.
+
+    <ol style="list-style-type: lower-alpha;">
+    <li>Go to the stateful node in the Spot console and click <b>Actions</b> > <b>Edit Configuration</b>.</li>
+    <li>Click <b>Persistent Resources</b> > <b>Network</b>.</li>
+    <li>Select <b>Persist Private IP</b> and enter the IP address.</li>
+    </ol>
+
+3. In the user data, update the script:
+
+    <ol style="list-style-type: lower-alpha;">
+    <li>Go to the stateful node in the Spot console and click <b>Actions</b> > <b>Edit Configuration</b> > <b>Initialization and Termination</b>.</li>
+    <li><p>Add this script to <b>User Data</b>:</p>
+      <pre><code>#!/bin/bash
+       PRIVATE_IP=$(curl -s http://169.254.169.254/latest/meta-data/local-ipv4)
+       AWS_HOSTNAME="ip-$(echo $PRIVATE_IP | tr '.' '-')"
+       echo "preserve_hostname: true" > /etc/cloud/cloud.cfg.d/99_persist_hostname.cfg
+       echo "$AWS_HOSTNAME" > /etc/hostname
+       sed -i "s/^127\.0\.0\.1.*/127.0.0.1 localhost ${AWS_HOSTNAME}/" /etc/hosts
+       hostnamectl set-hostname "$AWS_HOSTNAME"</code></pre></li>
+   </ol>
+
+You can also persist the hostname for [RHEL 7, 8, and 9, and CentOS 7, 8, and 9](https://repost.aws/knowledge-center/linux-static-hostname-rhel7-centos7).
+
+ </div>
+
+ </details>
+ 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="egsn-stopped">AWS: Why am I getting an <i>Instance have been detected as stopped</i> error?</summary>
 
