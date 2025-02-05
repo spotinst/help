@@ -1079,11 +1079,29 @@ To:
 
 Then [create or update](https://github.com/spotinst/spotinst-sdk-python/blob/v2/docs/clients/ocean/ocean_aws_client.md#create_ocean_cluster) the cluster again.
 
- 
  </div>
 
  </details>
 
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanshutdownhours">EKS: Why doesn’t Ocean launch a node automatically after shutdown hours end?</summary>
+
+  <div style="padding-left:16px">
+
+You may run into a case where Ocean doesn’t automatically launch a node after the [shutdown hours](ocean/features/running-hours) end. You then need to manually launch a node and reinstall the controller pod after the shutdown hours.
+
+This can happen because Ocean automatically scales down the entire cluster to 0 when the period of running time ends. During the off time, all nodes are down, and the Ocean controller is down and does not report information to the autoscaler.
+
+When the off time ends, Ocean starts a single node from a virtual node group without taints. If all virtual node groups have taints, Ocean starts a node from the default virtual node group unless useAsTemplateOnly is defined, in which case no node is started.
+
+You need to make sure the controller is running, possibly on a node that Ocean does not manage. Once the node launches and is registered to the Kubernetes cluster, the Ocean controller is scheduled.
+
+
+
+ </div>
+
+ </details>
+ 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceancontrollerclusterid">EKS: Why am I getting a <i>controllerClusterID already being used by another Ocean cluster</i> message?</summary>
 
@@ -1181,7 +1199,26 @@ Contact support to decide on the selected instance type for launching and to rem
 
   1. [Change the cgroup_mode in the GKE node pool](https://cloud.google.com/kubernetes-engine/docs/how-to/node-system-config#cgroup-mode-options).
   2. [Reimport the cluster configuration to Ocean](https://docs.spot.io/api/#tag/Ocean-GKE/operation/reImportGke) (or [roll the cluster/virtual node group](ocean/features/roll-gen?id=roll-per-node-or-vng) for all nodes so they have the latest changes).
-  
+
+ </div>
+
+ </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceantimeout">EKS, GKE: How do draining timeout and termination grace period work together?</summary>
+
+  <div style="padding-left:16px">
+
+[Draining timeout](ocean/features/scaling-kubernetes?id=draining-timeout-per-virtual-node-group) (drainingTimeout) is defined in Ocean. It’s how long Ocean waits for the draining process to end before terminating an instance. The default is 300 seconds.
+
+[Termination grace period](https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#pod-termination) (terminationGracePeriodSeconds) is defined in Kubernetes. It’s how long Kubernetes waits before terminating the pod. The default is 30 seconds.
+
+You can use Ocean’s draining timeout to make sure the node isn’t terminated before the pod’s application finishes draining. This is helpful if you have applications in pods that need a specific amount of time to gracefully shut down.
+
+If you have a pod that needs time to gracefully shut down, define a terminationGracePeriodSeconds in the pod. In Ocean, set a draining timeout that is greater than or equal to the pod's terminationGracePeriodSeconds time. This way, the node will not terminate before the application in the pod gracefully shuts down.
+
+For example, if you have a 600 second terminationGracePeriodSeconds, make sure your draining timeout in Ocean is more than 600 seconds.
+
  </div>
 
  </details>
@@ -1474,7 +1511,25 @@ AKS only launches spot nodes if the admission controller is enabled and Spot tol
  
  </details>
 
+<!----------------------------------Ocean for Apache Spark---------------------------------->
 
+## Ocean for Apache Spark
+
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="sparkretries">How can I set the number of retries for a stage in Ocean Spark?</summary>
+
+ <div style="padding-left:16px">
+If there is a stage failure when a job runs in Ocean Spark, there’s a [retry mechanism](https://spark.apache.org/docs/3.5.2/configuration.html#:~:text=2.0.3-,spark.stage.maxConsecutiveAttempts,-4). You can change the number of retries for a stage:
+
+1. In the Spot console, go to **Ocean for Spark** > **Configuration Templates**.
+2. Select the configuration template of the application you need to change.
+3. Add `spark.stage.maxConsecutiveAttempts` with the number of retries.
+
+
+ </div>
+ 
+ </details>
+ 
 <!----------------------------------elastigroup---------------------------------->
 ## Elastigroup
 
@@ -1516,7 +1571,7 @@ An [Elastigroup may have Equal AZ Distribution](https://docs.spot.io/elastigroup
  </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egelasticsearch">AWS: Can Elasticsearch integrate with Spot?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egelasticsearch1">AWS: Can Elasticsearch integrate with Spot?</summary>
 
   <div style="padding-left:16px">
 
@@ -1857,7 +1912,7 @@ Change the device name from <code>xvda</code> to <code>/dev/xvda</code> on the g
 
  
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egimportvm">AWS: Why am I getting errors when I try to delete a Beanstalk group?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egdelbeanstalk">AWS: Why am I getting errors when I try to delete a Beanstalk group?</summary>
 
   <div style="padding-left:16px">
 
@@ -1965,7 +2020,7 @@ This can happen if the specific VM family and size aren’t available for a cert
  </details>
  
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egelasticsearch">Integration: Can Elasticsearch integrate with Spot?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egelasticsearch2">Integration: Can Elasticsearch integrate with Spot?</summary>
 
   <div style="padding-left:16px">
 
@@ -2202,7 +2257,7 @@ You can set a custom hostname that will continue to be used during the recycle p
      echo "$CUSTOM_HOSTNAME" > /etc/hostname
      sed -i "s/^127\.0\.0\.1.*/127.0.0.1 localhost $CUSTOM_HOSTNAME/" /etc/hosts
      hostnamectl set-hostname "$CUSTOM_HOSTNAME"</code></pre>
-   
+
 If you want to use the instance IPv4 address that the node was originally launched with:
 
 1.	In the metadata file, get the instance IP: `curl -s http://169.254.169.254/latest/meta-data/local-ipv4`
