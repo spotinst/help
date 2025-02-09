@@ -1878,6 +1878,30 @@ Then there are missing permissions in the KMS custom key. You can configure KMS 
 
  </details>
 
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egod">AWS: Why am I getting a <i>Cannot set both 'ondemand' and 'onDemandTypes' parameters </i> message?</summary>
+
+<div style="padding-left:16px">
+
+You may get the `Cannot set both 'ondemand' and 'onDemandTypes' parameters` message if <i>ondemand</i> is set for a single on-demand instance and <i>onDemandTypes</i> is set for multiple instance types.
+
+Update the parameters:
+
+* In the Spot console:
+   <ol style="list-style-type: lower-alpha;">
+   <li>Go to <b>Elastigroup</b> > <b>Groups</b>.</li>
+   <li>Select the Elastigroup and click <b>Actions</b> > <b>Edit Configuration</b>.</li>
+   <li>Go to <b>Compute</b> > <b>Instance selection</b>.</li>
+   <li>Update either <i>On-demand Types</i> or <i>Preferred Spot Types</i>.</li>
+   </ol>
+
+* In the Spot API. Set the parameter you’re not using to <i>null</i>.
+* In Terraform. Set the parameter you’re not using to <i>null</i>.
+
+ </div>
+
+ </details>
+
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="egerrorpeers">AWS: Why am I getting a <i>"value" contains a conflict between peers</i> error?</summary>
 
