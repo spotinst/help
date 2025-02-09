@@ -1277,6 +1277,31 @@ For a network client, only the **account viewer** permission is required for the
  </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocjavaheap">AKS, EKS, GKE: Why am I getting a Java heap space message (OutOfMemoryError)?</summary>
+
+  <div style="padding-left:16px">
+
+
+You may see this message in the logs if you use Prometheus to scrape Ocean metrics:
+
+2023-12-05T01:04:50.458Z ERROR 1 --- java.lang.OutOfMemoryError: Java heap space with root cause
+
+java.lang.OutOfMemoryError: Java heap space
+
+This means the application ran out of Java heap space, and the pod will crash temporarily. You may also see that the target on the [Prometheus](ocean/tools-and-integrations/prometheus/scrape) dashboard is down.
+
+Use the JAVA_OPTS variables to increase the minimum and maximum heap space the application can use. You can use podEnvVariables in the [helm chart](https://artifacthub.io/packages/helm/spot/ocean-metric-exporter) and set JAVA_OPTS="-Xms256m -Xmx1g".
+
+Set the amounts according to the needs of your pods.
+
+<img width=450 src="https://github.com/user-attachments/assets/2e2aaf44-b76d-445c-a86d-058e53c634e6">
+
+
+ </div>
+
+ </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceank8spvcerror">AKS, EKS, GKE: Why am I getting a <i>Kubernetes Autoscaler, Deadlock for Pod</i> error?</summary>
 
   <div style="padding-left:16px">
