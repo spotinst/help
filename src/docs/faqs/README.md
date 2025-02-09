@@ -1879,6 +1879,27 @@ Then there are missing permissions in the KMS custom key. You can configure KMS 
  </details>
 
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egansible">AWS: Why can’t I create an Elastigroup using Ansible (Spotinst SDK library is required)?</summary>
+
+<div style="padding-left:16px">
+
+When creating an Elastigroup with Ansible, you may get this message:
+
+<pre><code>TASK [create elastigroup] *****************************
+fatal: [localhost]: FAILED! => {"changed": false, "msg": "the Spotinst SDK library is required. (pip install spotinst_sdk2)"}</code></pre>
+
+You can get this message even if the library is installed. This can happen if Ansible uses the default Python version, which may not include the required packages.
+
+1. Check which version Ansible is using:
+   `ansible localhost -a 'which python'`
+
+2. Add [Ansible Python interpreter](https://docs.ansible.com/ansible/latest/reference_appendices/python_3_support.html#python-3-support) (ansible_python_interpreter) to the ansible.cfg file.
+
+ </div>
+
+ </details>
+ 
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="egod">AWS: Why am I getting a <i>Cannot set both 'ondemand' and 'onDemandTypes' parameters </i> message?</summary>
 
 <div style="padding-left:16px">
