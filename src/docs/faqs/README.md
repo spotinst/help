@@ -2098,7 +2098,8 @@ This can happen if you launch agents via SSH and not JNLP, <b><i>and</i></b> you
 
 Make sure your Jenkins plugin is set to use Private IPs.
 
-![image](https://github.com/user-attachments/assets/15ed0fa6-48f8-473f-9c00-784d90bccf3a)
+<img width=450 src="https://github.com/user-attachments/assets/15ed0fa6-48f8-473f-9c00-784d90bccf3a">
+
    </div>
 
  </details>
