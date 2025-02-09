@@ -4,6 +4,7 @@
 
 * **COI-0022**: February 5th, 2025: You can select the region and more than one service in the inventory report. [Learn more...](cost-intelligence/tutorials/inventory)
 
+
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600">January, 2025 - click to view</summary>
 
