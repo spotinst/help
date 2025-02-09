@@ -6,12 +6,11 @@ Cloud service provider relevance: <font color="#FC01CC">AKS</font>
 
 ## Overview
 
-Elastigroup and Ocean automatically revert existing instances using reserved capacity (RI) and savings plans (SP) to spot instances or other commitment deals wherever a reservation is needed elsewhere in your AWS account. This feature optimizes resource allocation and cost efficiency by continuously adjusting to dynamic environment needs. 
+Ocean Elastigroup and Stateful Node automatically revert existing VMs using reserved instances (RI) and savings plans (SP) to spot VMs or other commitment deals wherever a reservation is needed elsewhere in your Azure account. This feature optimizes resource allocation and cost efficiency by continuously adjusting to dynamic environment needs.
 
-This is in accordance with the Ocean and Elastigroup commitment prioritization mechanism, which prioritizes available reserved instances and savings plan commitments over spot or full-priced on-demand instances.
-This procedure describes how application workloads that require on-demand instances can always benefit from reservations, even if they were previously prioritized for utilization when available.  
+This is in accordance with the Ocean, Elastigroup, and Stateful Node commitment prioritization mechanism, which prioritizes available reserved instances and savings plan commitments over spot or full-priced on-demand VMs. This procedure describes how application workloads that require on-demand VMs can always benefit from reservations, even if they were previously prioritized for utilization when available.
 
-You can track dynamic compute commitment utilization and coverage with your AWS Cost Usage report.
+You can track dynamic compute commitment utilization and coverage with your Azure Cost Usage report
 
 ## Feature Benefits 
 
@@ -23,6 +22,33 @@ By prioritizing reserved instances and savings plan commitments, this feature co
 ## Prioritize Available RIs and SPs
 
 Prioritize available reserved instances and savings plans to prevent their underutilization. See [Utilize Commitment Plans](elastigroup/features/core-features/spot-reserved-on-demand-instances?id=utilize-commitment-plans). 
+
+##  What are Azure Reservations?
+Azure Reservations helps you save money by committing to one-year or three-year plans for multiple products. Committing gets you a discount on the resources you use. Reservations can significantly reduce your resource costs by up to 72% from pay-as-you-go prices. Reservations provide a billing discount and don't affect the runtime state of your resources.  
+
+After purchase, the reservation discount automatically applies to the resource usage that matches the attributes you select when you buy the reservation. Attributes include the SKU, regions (where applicable), and scope. Reservation scope selects where the reservation savings apply. 
+
+##  How are Reservations applied to Azure VM Instances?
+
+You can save money once you commit to an Azure reserved VM instance. The reservation discount is applied automatically to the number of running VMs matching the reservation scope and attributes. You don't need to assign a reservation to a VM to get the discounts. A reserved instance purchase covers only the compute part of your VM usage. For Windows VMs, the usage meter is split into two separate meters. There's a compute meter, which is the same as the Linux meter, and a Windows server license. The charges you see when you purchase are only for the computing costs. Charges don't include Windows software costs. See [Understand Azure Reserved VM Instances Discount - Microsoft Cost Management](https://learn.microsoft.com/en-us/azure/cost-management-billing/manage/understand-vm-reservation-charges#how-reservation-discount-is-applied).
+
+##  What are Azure Commitments?
+
+Azure Commitments are agreements customers make to use a certain amount of Azure resources over a specified period, including RIs and Saving Plans.
+
+Commitments Types are as follows:
+
+*  Capacity Commitments: Involves reserving VM capacity to ensure availability and predictability.
+*  Cost Commitments: Involves committing to a certain spending level to benefit from discounts.
+
+RIs are best for predictable workloads where you can commit to specific VM types and sizes, while Saving Plans offer more flexibility for varying workloads across different services. Both options help reduce costs through committed usage, ensuring better budget management and resource allocation in Azure.
+
+
+
+
+
+
+
 
 ## Revert from On-demand RIs and SPs
 
