@@ -72,11 +72,11 @@ Ocean performs a strategy fix check every **xx (to check)** minutes to determine
 
 1. **Running on-demand (RI/SP)**: A running on-demand instance attached to a certain RI or an SP uses a certain commitment. 
 
-2. **Ocean checks if the commitment is needed elsewhere**: Ocean constantly checks if a commitment can be utilized by a different resource in your AWS account, ultimately meeting the risk percentage and required strategy.
+2. **Ocean checks if the commitment is needed elsewhere**: Ocean constantly checks if a different resource can utilize a commitment in your Azure account, ultimately meeting the risk percentage and required strategy.
 
-3. **Replacement**: If the terms are met, Elastigroup/Ocean performs the replacement.
+3. **Replacement**: Ocean/Elastigroup/Stateful Node will perform the replacement if the terms are met.
 
-4. **Launch spot or an on-demand (RI/SP)**: Elastigroup/Ocean launches a different spot or an alternative on-demand reserved instance to ensure a different plan is used. This increases commitment coverage to help reach optimal allocation.
+5. **Launch spot or an on-demand (RI/SP)**: Ocean/Elastigroup/Stateful Node launches a different spot or an alternative on-demand RI to ensure a different plan is used. This increases commitment coverage to help reach optimal allocation.
 
 The reversion will not occur if:
 
@@ -87,11 +87,11 @@ The reversion will not occur if:
 
 You can use this feature at the cluster or virtual node group level:
 
-* [Create cluster](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterCreate) or [Update cluster](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterUpdate)
-* [Create virtual node group](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecCreate) or [Update virtual node group](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecUpdate)
+* [Create cluster]() or [Update cluster]()
+* [Create virtual node group]() or [Update virtual node group]()
 
 Set the `utilizecommitments` or `utilizeReservedInstances` parameter to `true`.
 
 >**Note**: The default value for the `utilizeReservedInstances` parameter is `true`.
 
-For Elastigroup, use the [create and update elastigroup parameters](https://docs.spot.io/elastigroup/features/core-features/dynamic-commitment?id=configure-in-the-api).
+For Elastigroup, use the [create and update elastigroup parameters]().
