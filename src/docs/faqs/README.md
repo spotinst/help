@@ -1109,10 +1109,10 @@ When [importing EKS clusters to Ocean](ocean/getting-started/eks/join-an-existin
 * If you’re using [ASG](ocean/tutorials/manage-virtual-node-groups?id=create-a-vng-from-an-asg) in your EKS cluster, you need to import the EKS cluster using the legacy design:
 
    <ol style="list-style-type: lower-alpha;">
-   <li>In the Spot console, go to Ocean > Cloud Clusters > Create Cluster.</li>
-   <li>Select Elastic Kubernetes Service (EKS) > Continue.</li>
-   <li>Select Revert to legacy design.</li>
-   <li>Import from Auto Scaling Group.</li>
+   <li>In the Spot console, go to <b>Ocean</b> > <b>Cloud Clusters</b> > <b>Create Cluster</b>.</li>
+   <li>Select <b>Elastic Kubernetes Service (EKS)</b> > <b>Continue</b>.</li>
+   <li>Select <b>Revert to legacy design</b>.</li>
+   <li>Import from <i>Auto Scaling Group</i>.</li>
    </ol>
 
  </div>
