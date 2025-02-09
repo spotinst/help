@@ -1757,6 +1757,17 @@ If an instance type isn’t [EBS-optimized by default](https://docs.aws.amazon.c
  </details>
 
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="eglockedautohealing">AWS: Does autohealing work on locked instances?</summary>
+
+  <div style="padding-left:16px">
+
+You can [lock](elastigroup/features/core-features/instance-actions?id=lock-an-instance) specific instances to prevent them from being scaled down during autoscaling. Instance protection doesn’t work on unhealthy instances. The unhealthy instance handler starts a replacement as a part of the [autohealing](elastigroup/features/compute/autohealing) process, which tries to detach the instance. The detach instances command doesn’t take instance protection into account.
+
+   </div>
+
+ </details>
+ 
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="scalinglatency">AWS: Can I configure a scaling policy for the latency metric?</summary>
 
   <div style="padding-left:16px">
