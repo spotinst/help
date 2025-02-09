@@ -1277,6 +1277,31 @@ For a network client, only the **account viewer** permission is required for the
  </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocjavaheap">AKS, EKS, GKE: Why am I getting a Java heap space message (OutOfMemoryError)?</summary>
+
+  <div style="padding-left:16px">
+
+
+You may see this message in the logs if you use Prometheus to scrape Ocean metrics:
+
+2023-12-05T01:04:50.458Z ERROR 1 --- java.lang.OutOfMemoryError: Java heap space with root cause
+
+java.lang.OutOfMemoryError: Java heap space
+
+This means the application ran out of Java heap space, and the pod will crash temporarily. You may also see that the target on the [Prometheus](ocean/tools-and-integrations/prometheus/scrape) dashboard is down.
+
+Use the JAVA_OPTS variables to increase the minimum and maximum heap space the application can use. You can use podEnvVariables in the [helm chart](https://artifacthub.io/packages/helm/spot/ocean-metric-exporter) and set JAVA_OPTS="-Xms256m -Xmx1g".
+
+Set the amounts according to the needs of your pods.
+
+<img width=450 src="https://github.com/user-attachments/assets/2e2aaf44-b76d-445c-a86d-058e53c634e6">
+
+
+ </div>
+
+ </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceank8spvcerror">AKS, EKS, GKE: Why am I getting a <i>Kubernetes Autoscaler, Deadlock for Pod</i> error?</summary>
 
   <div style="padding-left:16px">
@@ -1757,6 +1782,17 @@ If an instance type isn’t [EBS-optimized by default](https://docs.aws.amazon.c
  </details>
 
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="eglockedautohealing">AWS: Does autohealing work on locked instances?</summary>
+
+  <div style="padding-left:16px">
+
+You can [lock](elastigroup/features/core-features/instance-actions?id=lock-an-instance) specific instances to prevent them from being scaled down during autoscaling. Instance protection doesn’t work on unhealthy instances. The unhealthy instance handler starts a replacement as a part of the [autohealing](elastigroup/features/compute/autohealing) process, which tries to detach the instance. The detach instances command doesn’t take instance protection into account.
+
+   </div>
+
+ </details>
+ 
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="scalinglatency">AWS: Can I configure a scaling policy for the latency metric?</summary>
 
   <div style="padding-left:16px">
@@ -1873,6 +1909,51 @@ If you get this error:
 Then there are missing permissions in the KMS custom key. You can configure KMS keys:
 * [From the same AWS account](https://docs.spot.io/elastigroup/tutorials/elastigroup-tasks/create-encryption-key?id=create-encryption-key)
 * [From a different AWS account](https://docs.spot.io/elastigroup/tutorials/elastigroup-tasks/use-cross-account-kms-key-to-encrypt-ebs-volumes) (cross-account)
+
+ </div>
+
+ </details>
+
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egansible">AWS: Why can’t I create an Elastigroup using Ansible (Spotinst SDK library is required)?</summary>
+
+<div style="padding-left:16px">
+
+When creating an Elastigroup with Ansible, you may get this message:
+
+<pre><code>TASK [create elastigroup] *****************************
+fatal: [localhost]: FAILED! => {"changed": false, "msg": "the Spotinst SDK library is required. (pip install spotinst_sdk2)"}</code></pre>
+
+You can get this message even if the library is installed. This can happen if Ansible uses the default Python version, which may not include the required packages.
+
+1. Check which version Ansible is using:
+   `ansible localhost -a 'which python'`
+
+2. Add [Ansible Python interpreter](https://docs.ansible.com/ansible/latest/reference_appendices/python_3_support.html#python-3-support) (ansible_python_interpreter) to the ansible.cfg file.
+
+ </div>
+
+ </details>
+ 
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egod">AWS: Why am I getting a <i>Cannot set both 'ondemand' and 'onDemandTypes' parameters </i> message?</summary>
+
+<div style="padding-left:16px">
+
+You may get the `Cannot set both 'ondemand' and 'onDemandTypes' parameters` message if <i>ondemand</i> is set for a single on-demand instance and <i>onDemandTypes</i> is set for multiple instance types.
+
+Update the parameters:
+
+* In the Spot console:
+   <ol style="list-style-type: lower-alpha;">
+   <li>Go to <b>Elastigroup</b> > <b>Groups</b>.</li>
+   <li>Select the Elastigroup and click <b>Actions</b> > <b>Edit Configuration</b>.</li>
+   <li>Go to <b>Compute</b> > <b>Instance selection</b>.</li>
+   <li>Update either <i>On-demand Types</i> or <i>Preferred Spot Types</i>.</li>
+   </ol>
+
+* In the Spot API. Set the parameter you’re not using to <i>null</i>.
+* In Terraform. Set the parameter you’re not using to <i>null</i>.
 
  </div>
 
