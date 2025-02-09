@@ -888,6 +888,17 @@ If your container is unregistered, you should make sure:
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocodlifecycle">ECS: Can I enable on-demand lifecycle for Ocean ECS?</summary>
+
+  <div style="padding-left:16px">
+
+You can set on-demand instances using [placement constraints](ocean/features/scaling-ecs?id=placement-constraints).
+
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="hostportunderutilized">ECS: Can hostPort cause underutilized nodes?</summary>
 
 <div style="padding-left:16px">
@@ -1110,6 +1121,37 @@ You need to make sure the controller is running, possibly on a node that Ocean d
 A cluster identifier (controllerClusterID) can only be used on one Ocean cluster at a time. This can happen if you’re trying to set up [Ocean Insights](ocean/getting-started/insights) on an existing Ocean cluster, or if the cluster already has [Ocean controller](ocean/tutorials/ocean-controller-v2/) installed on it.
 
 Ocean Insights is intended for <i>unmanaged</i> clusters.
+
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanmaxpods">EKS: Why am I getting a <i>Maximum Pods configuration reached</i> message?</summary>
+
+  <div style="padding-left:16px">
+
+If you get a `Maximum Pods configuration reached` message for a node in the console:
+
+* It usually means that you reached the EKS [maximum pod limit](https://github.com/awslabs/amazon-eks-ami/blob/main/templates/shared/runtime/eni-max-pods.txt). For example, the EKS maximum pod limit for <b>r4.large</b> is <i>29</i>.
+
+   You can [increase the EKS maximum pods](https://aws.amazon.com/blogs/containers/amazon-vpc-cni-increases-pods-per-node-limits/) in AWS. You can see more information about the number of pods per EKS instance on [Stack Overflow](https://stackoverflow.com/questions/57970896/pod-limit-on-node-aws-eks#:~:text=For%20t3.,22%20pods%20in%20your%20cluster).
+
+* If the node has fewer pods than the EKS maximum pod limit, then check if the <b>max-pods</b> limit is set at the user data level in the Ocean configuration.
+
+   Increase this limit for the user data in Ocean:
+
+   <ol style="list-style-type: lower-alpha;">
+   <li>Go to the cluster in the Spot console and click <b>Actions</b> > <b>Edit Configuration</b> > <b>Compute</b>.</li>
+   <li><p>In <b>User Data (Startup Script)</b>, increase the max-pods limit.</p>
+
+   <img width=900 src="https://github.com/user-attachments/assets/5c209a62-5fef-4f01-ae3e-18c5ed09edbd">
+
+   </li>
+   <li><a href="ocean/features/roll-gen">Roll the cluster</a>.</li>
+   </ol>
+
+   If you continue to get this error, [roll the cluster](ocean/features/roll-gen) again and disable [Respect Pod Disruption Budget (PDB)](ocean/features/roll-gen?id=respect-pod-disruption-budget). You can also manually terminate the node.
 
  </div>
 
@@ -2040,7 +2082,27 @@ Find the storage account URL in the Azure console. Go to **VM details** > **JSON
  </div>
 
  </details>
- 
+
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egjenkinsvm">Azure: Why is my VM showing offline in the Jenkins console?</summary>
+
+  <div style="padding-left:16px">
+
+You may have a VM showing as offline in the Jenkins console, but you can see that it’s running in the Azure console and in Spot’s Elastigroup.
+
+You can see this message in the Jenkins console:
+
+`IP for agent is not available yet not attaching SSH launcher`
+
+This can happen if you launch agents via SSH and not JNLP, <b><i>and</i></b> you’re using private IPs configured in Elastigroup, but not in the Jenkins plugin. The Jenkins plugin then establishes a connection using a public IP.
+
+Make sure your Jenkins plugin is set to use Private IPs.
+
+![image](https://github.com/user-attachments/assets/15ed0fa6-48f8-473f-9c00-784d90bccf3a)
+   </div>
+
+ </details>
+
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="eggrace">GCP: How does the grace period work?</summary>
 
