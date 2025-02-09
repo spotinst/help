@@ -2082,7 +2082,27 @@ Find the storage account URL in the Azure console. Go to **VM details** > **JSON
  </div>
 
  </details>
- 
+
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egjenkinsvm">Azure: Why is my VM showing offline in the Jenkins console?</summary>
+
+  <div style="padding-left:16px">
+
+You may have a VM showing as offline in the Jenkins console, but you can see that it’s running in the Azure console and in Spot’s Elastigroup.
+
+You can see this message in the Jenkins console:
+
+`IP for agent is not available yet not attaching SSH launcher`
+
+This can happen if you launch agents via SSH and not JNLP, <b><i>and</i></b> you’re using private IPs configured in Elastigroup, but not in the Jenkins plugin. The Jenkins plugin then establishes a connection using a public IP.
+
+Make sure your Jenkins plugin is set to use Private IPs.
+
+![image](https://github.com/user-attachments/assets/15ed0fa6-48f8-473f-9c00-784d90bccf3a)
+   </div>
+
+ </details>
+
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="eggrace">GCP: How does the grace period work?</summary>
 
