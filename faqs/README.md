@@ -1284,9 +1284,9 @@ For a network client, only the **account viewer** permission is required for the
 
 You may see this message in the logs if you use Prometheus to scrape Ocean metrics:
 
-2023-12-05T01:04:50.458Z ERROR 1 --- java.lang.OutOfMemoryError: Java heap space with root cause
+<pre><code>2023-12-05T01:04:50.458Z ERROR 1 --- java.lang.OutOfMemoryError: Java heap space with root cause
 
-java.lang.OutOfMemoryError: Java heap space
+java.lang.OutOfMemoryError: Java heap space</code></pre>
 
 This means the application ran out of Java heap space, and the pod will crash temporarily. You may also see that the target on the [Prometheus](ocean/tools-and-integrations/prometheus/scrape) dashboard is down.
 
