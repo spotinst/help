@@ -888,6 +888,17 @@ If your container is unregistered, you should make sure:
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocodlifecycle">ECS: Can I enable on-demand lifecycle for Ocean ECS?</summary>
+
+  <div style="padding-left:16px">
+
+You can set on-demand instances using [placement constraints](ocean/features/scaling-ecs?id=placement-constraints).
+
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="hostportunderutilized">ECS: Can hostPort cause underutilized nodes?</summary>
 
 <div style="padding-left:16px">
