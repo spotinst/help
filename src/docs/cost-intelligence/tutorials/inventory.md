@@ -1,16 +1,10 @@
 # Inventory Reports 
 
-Cost Intelligence provides detailed inventory reports for a variety of services for both AWS and Azure cloud services. These reports allow you to view your entire infrastructure by service, and with the snapshot feature, you’re able to view snapshots by service by day.
+Cost Intelligence provides detailed inventory reports for a variety of services for both AWS and Azure cloud services. These reports let you view your entire infrastructure by service. With the snapshot feature (history), you can view snapshots by service by day. **History** defaults to the last successful snapshot. You can select a different date to view the snapshots.
 
-You can click **Export** to export your data to a CSV file.
+In the inventory reports, you can:
+* Click **Export** to get your data in a CSV file.
+* Click <img height=18 src="https://github.com/user-attachments/assets/27076063-7a46-424b-a4d3-5ee82bfe6d80"> to show the list of columns for the cloud service.
+* You can sort by columns, resize the columns, and reorder them by dragging them around the table.
 
-![inventory](https://github.com/user-attachments/assets/6a22447c-8b12-4fc2-a029-ade322ef3e59)
-
-* **Provider**: Select the cloud provider(s). 
-* **Account**: Select the account(s) you wish to view a snapshot of. 
-* **Service**: Select the service. 
-* **History**: Select the historical snapshot you wish to view. Defaults to the last successfully performed snapshot. 
-* **Show/Hide Columns**: Click the icon to expand the list of available columns for the chosen service. 
-* **Columns**: You can sort by columns as well as resize them, and re-order them by dragging them around the table. 
-
- 
+<img width=800 src="https://github.com/user-attachments/assets/05a072d5-e755-4d5e-8b45-5b8a6584f192">
