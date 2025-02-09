@@ -1094,6 +1094,31 @@ Then [create or update](https://github.com/spotinst/spotinst-sdk-python/blob/v2/
 
  </details>
 
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceaneksclusters">EKS: Why can’t I see EKS clusters in Ocean in the Spot console when I’m importing to Ocean?</summary>
+
+  <div style="padding-left:16px">
+
+When [importing EKS clusters to Ocean](ocean/getting-started/eks/join-an-existing-cluster) in the Spot console, some of your clusters may not show in the list you can import from. Make sure:
+
+* The EKS cluster is in the region you’re trying to import from.
+* You have the [correct permissions](ocean/getting-started/eks/join-an-existing-cluster?id=add-required-permissions) and the most [current Spot policy](administration/api/spot-policy-in-aws).
+* The Kubernetes cluster has an EKS version that is [supported by Amazon](https://docs.aws.amazon.com/eks/latest/userguide/kubernetes-versions.html). Spot supports an EKS version two months after the Amazon [EKS release date](https://docs.aws.amazon.com/eks/latest/userguide/kubernetes-versions.html#kubernetes-release-calendar). A version is considered deprecated for Spot when Amazon [ends standard support](https://docs.aws.amazon.com/eks/latest/userguide/kubernetes-versions.html#kubernetes-release-calendar). A version is considered retired for Spot when Amazon [ends extended support](https://docs.aws.amazon.com/eks/latest/userguide/kubernetes-versions.html#kubernetes-release-calendar).
+* You have at least one node group in your EKS cluster. There don’t need to be any nodes running in the node group, just configured in the AWS console.
+* If you’re using [ASG](ocean/tutorials/manage-virtual-node-groups?id=create-a-vng-from-an-asg) in your EKS cluster, you need to import the EKS cluster using the legacy design:
+
+   <ol style="list-style-type: lower-alpha;">
+   <li>In the Spot console, go to Ocean > Cloud Clusters > Create Cluster.</li>
+   <li>Select Elastic Kubernetes Service (EKS) > Continue.</li>
+   <li>Select Revert to legacy design.</li>
+   <li>Import from Auto Scaling Group.</li>
+   </ol>
+
+ </div>
+
+ </details>
+
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanshutdownhours">EKS: Why doesn’t Ocean launch a node automatically after shutdown hours end?</summary>
 
