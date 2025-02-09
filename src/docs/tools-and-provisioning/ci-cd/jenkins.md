@@ -107,6 +107,8 @@ If you haven't configured the needed credentials yet, you can use the `Add` butt
 
 Notice that the username (`ec2-user`) must be an existing user in the agent machine.
 
+If you launch agents via SSH and your EG is configured to utilize only private IPs, make sure to select **Use Private IPs**. If you don’t, the Jenkins plugin will establish a connection using a public IP, and the SSH launcher will not be attached to instances.
+
 In advanced versions of Jenkins, it is required to add a nodes directory.
 Please check if the directory exists in the controller by running the following command:
 
