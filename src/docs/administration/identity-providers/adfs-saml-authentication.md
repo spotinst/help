@@ -1,11 +1,11 @@
-# ADFS SAML Authentication
+# AD FS SAML Authentication
 
 Active Directory Federation Services (AD FS or ADFS) is one of the leading identity provider (IDP) solutions in the market. You can configure your Spot account to be authenticated using the SAML protocol using AD FS.
 
 ## Prerequisites
 
 - A Spot account and Admin permissions in the account
-- A domain member Windows Server 2012R2/2016 with ADFS role installed
+- A domain member Windows Server 2012R2/2016 with AD FS role installed
 
 ## Step 1: Add Relying Party Trust Wizard
 
