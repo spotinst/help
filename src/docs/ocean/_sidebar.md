@@ -187,7 +187,7 @@
        - [Right Sizing Use](ocean/tutorials/use-right-sizing)
      - [Rolls](ocean/features/roll-gen)
      - [Scaling (Kubernetes)](ocean/features/scaling-kubernetes)
-       - [Scaling Constraints View](ocean/tutorials/view-scaling-constraints)
+     - [Scaling Constraints View](ocean/tutorials/view-scaling-constraints)
      - [Shielded GKE Nodes](ocean/features/scaling-kubernetes?id=support-for-shielded-gke-nodes)
      - [Shutdown Hours](ocean/features/running-hours)
        - [Shutdown Hours Settings](ocean/tutorials/set-running-hours)
