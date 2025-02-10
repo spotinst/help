@@ -281,7 +281,12 @@ Under `compute-launchSpecification-blockDeviceMappings-ebs-dynamiciops`
 
 Under `block_device_mappings`
 
-*  [Terraform Registry](https://registry.terraform.io/providers/spotinst/spotinst/latest/docs/resources/ocean_aws#dynamic_iops) 
+*  [Terraform Registry](https://registry.terraform.io/providers/spotinst/spotinst/latest/docs/resources/ocean_aws#dynamic_iops)
+
+##  Related Links
+
+* [View Scaling Constraints](https://docs.spot.io/ocean/tutorials/view-scaling-constraints)
+  
 
 
 
