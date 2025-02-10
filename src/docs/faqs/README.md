@@ -353,6 +353,15 @@ For example:
  </div>
  </details>
 
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="idle">How long before I get signed out of the Spot console (idle)?</summary>
+
+  <div style="padding-left:16px">
+
+After 12 hours of inactivity, you get signed out of the Spot console.
+   
+ </div>
+ </details>
  
 <!----------------------------------ocean---------------------------------->
 
