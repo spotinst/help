@@ -1,6 +1,17 @@
 # Ocean Release Notes
 
-## January 2025: Features and Enhancements
+## February 2025: Features and Enhancements
+
+*  **OCN-0064: February 10, 2025:** (**<font color="#FC01CC">AWS EKS</font>**) Dynamic IOPS lets you scale IOPS for GP3 EBS volumes based on instance size. [Learn more...](https://docs.spot.io/ocean/features/scaling-kubernetes?id=dynamic-iops)
+
+
+
+Previous months...
+
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600">January, 2025 - click to view</summary>
+ 
+   <div style="padding-left:16px">
 
 *  **OCN-0063: January 26, 2025:** (**<font color="#FC01CC">AWS EKS</font>**). Implemented native support for the `topology.k8s.aws/zone-id` label in the Ocean autoscaler. You can use the `topology.k8s.aws/zone-id` label in your workloads' constraints, such as `nodeSelector`, `nodeAffinity` and `topologyKey` (in `topologySpreadConstraints`, `podAffinity` and `podAntiAffinity`). For more information about this label, refer to the [Amazon EKS User Guide](https://docs.aws.amazon.com/eks/latest/userguide/kubernetes-versions-standard.html#kubernetes-1.30).
 
@@ -19,8 +30,10 @@ Ocean Controller
 Version 1 was previously deprecated for other cloud service providers:
    * **<font color="#FC01CC">AWS Kubernetes </font>**: was deprecated November 01, 2024
    * **<font color="#FC01CC">GKE</font>**: was deprecated December 18, 2024
+   
+</div>
+</details>
 
-Previous months...
 
 <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600">December, 2024 - click to view</summary>
