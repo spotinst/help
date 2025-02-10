@@ -95,6 +95,7 @@
      - [Rolls](ocean/features/roll-gen)
      - [Scaling (Kubernetes)](ocean/features/scaling-kubernetes)
        - [Dynamic IOPS](ocean/features/scaling-kubernetes?id=dynamic-iops)
+       - [Maximum Pods Custom Configuration](ocean/features/scaling-kubernetes?id=maximum-pods-custom-configuration)
        - [Scaling Constraints View](ocean/tutorials/view-scaling-constraints)
      - [Shutdown Hours](ocean/features/running-hours)
         - [Shutdown Hours Settings](ocean/tutorials/set-running-hours)
