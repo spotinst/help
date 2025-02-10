@@ -1,6 +1,6 @@
 # ADFS SAML Authentication
 
-Active Directory Federation Services (ADFS) is one of the leading Identity Provider (IDP) solutions in the market. This step-by-step guide will help you to configure your Spot account to be authenticated using the SAML protocol using ADFS.
+Active Directory Federation Services (ADFS) is one of the leading identity provider (IDP) solutions in the market. You can configure your Spot account to be authenticated using the SAML protocol using ADFS.
 
 ## Prerequisites
 
@@ -20,7 +20,6 @@ Active Directory Federation Services (ADFS) is one of the leading Identity Provi
    </details>
 
 3. Select **Claims-aware** > **Start**.
-
 
    <details>
    <summary markdown="span">View image</summary>
@@ -67,11 +66,11 @@ Active Directory Federation Services (ADFS) is one of the leading Identity Provi
 3. Enter a **Name** for the Claim Rule and choose **Active Directory** as the attribute store.
 4. Enter these **Attribute Mappings**:
 
-| LDAP Attribute | Outgoing Claim |
-| -------------- | -------------- |
-| E-Mail-Address | Email          |
-| Given-Name     | FirstName      |
-| Surname        | LastName       |
+   | LDAP Attribute | Outgoing Claim |
+   | -------------- | -------------- |
+   | E-Mail-Address | Email          |
+   | Given-Name     | FirstName      |
+   | Surname        | LastName       |
 
 5. Click **Finish**.
 
@@ -89,7 +88,7 @@ Active Directory Federation Services (ADFS) is one of the leading Identity Provi
 
 ## Step 3: Configure IDP Initiated SSO
 
-To configure IDP Initiated SSO, additional settings must be configured:
+To configure IDP initiated SSO, additional settings must be configured:
 
 1. Sign in to your Spot account as an Admin.
 2. In the Spot console, click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png">  > **Settings**.
@@ -100,7 +99,7 @@ To configure IDP Initiated SSO, additional settings must be configured:
 7. Run this command to enable IDP Initiated SSO:
    `Set-ADFSProperties -EnableIdPInitiatedSignonPage $true`
 
-   - If running on Windows Server 2016, run the following command to enable Relay State:
+   - If running on Windows Server 2016, run the following command to enable relay state:
      `Set-ADFSProperties -EnableRelayStateForIDPInitiatedSignon $true`
 
    - If running on Windows Server 2012R2:
@@ -127,7 +126,7 @@ To configure IDP Initiated SSO, additional settings must be configured:
 
 When creating a temporary token, the user credentials are validated at the IDP.
 
-1. To create a temporary token, you provide a SAML assertion generated from your IDP. To get a SAML assertion from ADFS, follow [these instructions](https://learn.microsoft.com/en-us/entra/identity-platform/v2-saml-bearer-assertion#get-the-saml-assertion-from-adfs).
+1. To create a temporary token, you provide a SAML assertion generated from your IDP. [Get a SAML assertion from ADFS](https://learn.microsoft.com/en-us/entra/identity-platform/v2-saml-bearer-assertion#get-the-saml-assertion-from-adfs).
 2. Run the following request. Replace '<>' with the SAML assertion response, as plain XML body (without JSON wrappers).
 
 ```
