@@ -349,7 +349,7 @@ For example:
       -H 'Content-Type: application/json' 
        | jq '.response.items[] | select(.controllerClusterId | contains("{cluster-name}")) | .id'
 </code></pre>
-   
+
  </div>
  </details>
 
