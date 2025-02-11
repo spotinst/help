@@ -2,7 +2,7 @@
 
 ## February 2025: Features and Enhancements
 
-*  **OCN-0065: February 10, 2025:** (**<font color="#FC01CC">AWS Kubernetes</font>**) Ocean's enhanced node recovery process improves performance, resulting in faster recovery times when interruptions occur.
+*  **OCN-0065: February 10, 2025:** (**<font color="#FC01CC">AWS EKS</font>**) Ocean's enhanced node recovery process improves performance, resulting in faster recovery times when interruptions occur.
 
 *  **OCN-0064: February 10, 2025:** (**<font color="#FC01CC">AWS EKS</font>**) Dynamic IOPS lets you scale IOPS for GP3 EBS volumes based on instance size. [Learn more...](https://docs.spot.io/ocean/features/scaling-kubernetes?id=dynamic-iops)
 
