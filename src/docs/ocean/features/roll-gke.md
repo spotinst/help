@@ -102,7 +102,7 @@ In the Rolls tab, you can run immediate rolls for your clusters, VNGs, and node 
 
 *  If you have not run or scheduled a roll in this cluster, the Rolls tab appears as shown below.
 
-SCREEN EMPTY STATE NO ROLLS
+<img width="600" src="https://github.com/user-attachments/assets/ca366c44-af5c-45c0-87af-9eff7c35d88d" />
 
 *  If at least one roll exists, the rolls history list appears.
 *  Configured roll schedules appear below the rolls schedules list.
@@ -161,7 +161,7 @@ To roll immediately:
 
 2.  If you are rolling virtual node groups, select from the drop-down menu at the top of the dialog box. You can optionally select **All**.
 
-ROLL PARAMETERS SCREEN
+<img width="500" src="https://github.com/user-attachments/assets/65cb6030-5546-4fbd-9cef-354ee34d06a8" />
 
 3. Configure the [Roll Parameters](https://docs.spot.io/ocean/features/roll-gke?id=roll-parameters).
    * Set the size of a roll batch (%).
@@ -185,11 +185,11 @@ You can schedule cluster or virtual node group rolls.
 
 2.  In the first step of the wizard, select the roll type. The available roll types depend on your system deployment.
 
-SELECTING WHAT TO ROLL
+<img width="600" src="https://github.com/user-attachments/assets/b69a1ced-105d-446d-8d97-e88c8729e71d" />
 
 3. In the second step of the wizard, if you are rolling virtual node groups, select them from the menu at the top of the dialog box. You can optionally select **All**.
 
-NEED SCREEN WITH VNGS
+<img width="600" src="https://github.com/user-attachments/assets/e1d7ee55-9db7-43db-8df9-75ff38200541" />
 
 4. Configure the [Roll Parameters](https://docs.spot.io/ocean/features/roll-gke?id=roll-parameters).
    * Set the size of a roll batch (%).
@@ -199,7 +199,7 @@ NEED SCREEN WITH VNGS
 
 5. In the third step of the wizard, set the schedule frequency using the day/week/month/time controls or type in a Cron expression.
 
-SCHEDULE SCREEN
+<img width="600" src="https://github.com/user-attachments/assets/986c88e7-19c3-4c90-b59a-2f3a6c506343" />
 
 6. Click **Schedule Roll**. Your schedule appears in the rolls tab - scheduled rolls list under rolls history.
 
