@@ -1,4 +1,4 @@
-## PRODUCTS
+## Products
 
 * [Ocean](ocean/)
 * [Elastigroup](/elastigroup/)
@@ -11,15 +11,15 @@
 * [Spot Connect](spot-connect/)
 * [Spot Storage for AWS](spot-storage/)
 
-## GETTING STARTED
+## Getting started
 
 [Connect your cloud account to Spot](connect-your-cloud-provider/first-account/)
 
-## ADMINISTRATION
+## Administration
 
 [Manage users, permissions, and accounts](administration/)
 
-## MORE LINKS
+## More links
 
 * [Integration tools](tools-and-provisioning/)
 * [Spot by NetApp OpenAPI specification](https://docs.spot.io/api/)
