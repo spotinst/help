@@ -2305,7 +2305,18 @@ You can prevent an immediate termination of a specific spot instance that acted 
 
 <i>Idle minutes before termination</i> defines how long the Spot plugin should wait before terminating an idle instance.
 
-Increase the <i>Idle minutes before termination</i> in the [Spot Jenkins plugin](https://docs.spot.io/tools-and-provisioning/ci-cd/jenkins).
+Increase the <i>Idle minutes before termination</i> in the [Spot Jenkins plugin](tools-and-provisioning/ci-cd/jenkins).
+
+ </div>
+
+ </details>
+
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="jenkinsretrigger">Integration: Can I trigger the same Jenkins job on a different instance if it was interrupted?</summary>
+
+  <div style="padding-left:16px">
+
+You can [retrigger the Jenkins job automatically](tools-and-provisioning/ci-cd/jenkins) if a node is interrupted. The interrupted job parameters are transferred to the new job.
 
  </div>
 
