@@ -2,7 +2,8 @@
 
 # FAQs for review
 
-<!---------------------------------- <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+<!----------------------------------
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="xxxx">?</summary>
 
   <div style="padding-left:16px">
@@ -27,32 +28,7 @@
 
 ## Ocean
  
- <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanmaxpods">EKS: Why am I getting a <i>Maximum Pods configuration reached</i> error?</summary>
-
-  <div style="padding-left:16px">
-
-   If you get a `Maximum Pods configuration reached` message for a node in the console:
-   * It usually means that you reached the EKS [maximum pod limit](https://github.com/awslabs/amazon-eks-ami/blob/main/templates/shared/runtime/eni-max-pods.txt). For example, the EKS maximum pod limitation for <i>r4.large</i> is 29.
-     
-     You can [increase the EKS maximum pods](https://aws.amazon.com/blogs/containers/amazon-vpc-cni-increases-pods-per-node-limits/) in AWS. You can see more information about the number of pods per EKS instance on [Stack Overflow](https://stackoverflow.com/questions/57970896/pod-limit-on-node-aws-eks#:~:text=For%20t3.,22%20pods%20in%20your%20cluster).
-     
-   * If the node has fewer pods than the EKS maximum pod limit, then check if the **max-pods** limit is set at the user data level in the Ocean configuration.
-
-     Increase this limit for the user data in Ocean:
-
-      <ol style="list-style-type: lower-alpha;">
-      <li>Go to the cluster in the Spot console and click <b>Actions</b> > <b>Edit Configuration</b> > <b>Compute</b>.</li>
-      <li>In <b>User Data (Startup Script)</b>, increase the max-pods limit.</li>
-      <li><a href="ocean/features/roll-gen">Roll the cluster</a>.</li>
-   </ol>
-   
-   If you continue to get this error, [roll the cluster](ocean/features/roll-gen) again and disable [Respect Pod Disruption Budget (PDB)](ocean/features/roll-gen?id=respect-pod-disruption-budget). You can also manually terminate the node.
-   
- </div>
-
- </details>
-
+ 
 
 
 <!----------------------------------elastigroup---------------------------------->
@@ -64,3 +40,62 @@
 
 ## Elastigroup Stateful Node
 
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ssnchangesub">Azure: Can I move stateful node resources to a new Azure subscription?</summary>
+
+  <div style="padding-left:16px">
+
+   You can change your existing subscription and move the resources to a new Azure subscription:
+
+   1. Deallocate the running VMs:
+
+       <ol style="list-style-type: lower-alpha;">
+      <li>Go to the stateful node in the Spot console and click <b>Actions</b> > <b>Edit Configuration</b>.</li>
+      <li>Go to <b>Review</b>, switch to <b>JSON review</b>, and select <b>Edit Mode</b>.</li>
+      <li><p>Change `revertToSpot` to <i>never</i>:</p>
+         <pre><code>
+      {
+       "statefulNode": {
+         "name": "Spot Stateful Node",
+         "region": "westus2",
+         "resourceGroupName": "spotResourceGroup",
+         "description": "This is my example stateful node",
+         "strategy": {
+           "fallbackToOd": true,
+           "drainingTimeout": 120,
+           "preferredLifecycle": "od",
+           "revertToSpot": "never",
+           "optimizationWindows": null,
+      </code></pre>
+      </li>
+      <li><p>Add the `"preferredLifecycle": "od",` parameter:</p>
+         <pre><code>
+      {
+       "statefulNode": {
+         "name": "Spot Stateful Node",
+         "region": "westus2",
+         "resourceGroupName": "spotResourceGroup",
+         "description": "This is my example stateful node",
+         "strategy": {
+           "fallbackToOd": true,
+           "drainingTimeout": 120,
+           "preferredLifecycle": "od",
+           "revertToSpot": "never",
+           "optimizationWindows": null,
+      </code></pre>
+      </li>
+      <li><a href="https://docs.spot.io/managed-instance/azure/features/actions">Recycle the stateful node</a>.</li>
+      <li>Make sure the stateful node is not running on the Spot VM.</li>
+      <li><p>Go to <b>Edit Node</b> and delete the node.</p>
+         <img width="275" alt="delete-azure-stateful1" src="https://github.com/spotinst/help/assets/167069628/2c4635fe-6ce2-40c3-aded-7170c4a93f1f">
+      </li>
+      <li>In the Delete Stateful Node window, make sure to deselect all the options because you need the VM to run on the Azure side.</li>
+      <li>Verify that the VM with the resources is running in Azure.</li>
+       </ol>
+   2.	[Move the Azure resources to a different subscription](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/move-resource-group-and-subscription).
+   3.	[Connect your Azure subscription](connect-your-cloud-provider/first-account/?id=connect-azure).
+   4.	[Import a stateful VM](managed-instance/azure/getting-started/import-stateful-node).
+
+ </div>
+
+ </details>
