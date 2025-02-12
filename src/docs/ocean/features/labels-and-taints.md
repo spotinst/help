@@ -2,15 +2,15 @@
 
 To make scheduling more efficient and compatible with Kubernetes, Ocean supports the following [Kubernetes constraint mechanisms](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/) for scheduling pods:
 
-- Node Selector – Constrains pods to nodes with particular labels.
-- Node Affinity – Constrains which nodes your pod is eligible to be scheduled on based on labels on the node. Spot supports hard and soft affinity (`requiredDuringSchedulingIgnoredDuringExecution`, `preferredDuringSchedulingIgnoredDuringExecution`).
-- Pod Affinity and Pod Anti-Affinity – Schedules a Pod based on which other Pods are or are not running on a node.
-- Pod Port Restrictions – Validates that each pod will have required ports available on the machine.
+- Node Selector: Constrains pods to nodes with particular labels.
+- Node Affinity: Constrains nodes for pod scheduling eligibility based on node labels. Spot supports hard and soft affinity (`requiredDuringSchedulingIgnoredDuringExecution`, `preferredDuringSchedulingIgnoredDuringExecution`).
+Pod Affinity and Pod Anti-Affinity: This function schedules a pod based on whether other pods run on a node.
+- Pod Port Restrictions: Validates that each pod will have required ports available on the machine.
 - [Well-Known Labels](https://kubernetes.io/docs/reference/kubernetes-api/labels-annotations-taints/).
 
 ## Spot Labels
 
-Spot labels allow you to adjust the default scaling behavior in Ocean; by adding Spot labels to your pods, you can control the node termination process or its life cycle. The Spot labels are described below.
+Spot labels allow you to adjust Ocean's default scaling behavior. Add them to your pods to control the node termination process or lifecycle. 
 
 ### spotinst.io/azure-premium-storage  
 
@@ -22,7 +22,7 @@ For more information, see [Azure premium storage](https://learn.microsoft.com/en
 
 ### spotinst.io/restrict-scale-down
 
-Some workloads are not as resilient to spot instance replacements as others, so you may want to lower the frequency of replacing the nodes they are running on as much as possible, while still getting the benefit of spot instance pricing. For these workloads, use the `spotinst.io/restrict-scale-down` label (set to `true`) to block the proactive scaling down of the instance for the purposes of more efficient bin packing. This will leave the instance running as long as possible. The instance will be replaced only if it goes into an unhealthy state or if forced by a cloud provider interruption.
+Some workloads are not as resilient to spot instance replacements as others, so you may want to lower the frequency of replacing the nodes they are running on as much as possible while still benefiting from spot instance pricing. For these workloads, use the `spotinst.io/restrict-scale-down` label (set to `true`) to block the proactive scaling down of the instance for the purposes of more efficient bin packing. This will leave the instance running as long as possible. The instance will be replaced only if it goes into an unhealthy state or if forced by a cloud provider interruption.
 
 ### spotinst.io/node-lifecycle
 
@@ -50,7 +50,25 @@ Valid label values are:
 - `nvidia-tesla-t4g`
 - `nvidia-tesla-a10`
 
-> **Note**: Avoid adding Spot labels under the virtual node group (launch specification) node labels section. These labels should be added in your pod configuration only.
+> **Note**: Don't add Spot labels under the virtual node group (launch specification) node labels section. Add these labels to the pod configuration only.
+
+###  Instance Types Labels
+
+Format: `aws.spot.io/instance-<object>`, for example, `aws.spot.io/instance-category`
+
+Apply these labels to a workload's constraints (nodeSelector, node affinity, etc.) to reflect instance type properties. For example, constrain workloads to run on any M6, M7, or R7 family. 
+This avoids manually listing all instance types per family.
+
+The instance labels are as follows:
+
+*  `aws.spot.io/instance-category`: Reflects the category of the instance (for example., c).
+*  `aws.spot.io/instance-family`: Reflects the family of the instance (for example., c5a).
+*  `aws.spot.io/instance-generation`: Reflects the generation of the instance (for example., 5).
+*  `aws.spot.io/instance-hypervisor`: Reflects the hypervisor the instance uses (for example., nitro).
+*  `aws.spot.io/instance-cpu`: Reflects the CPU the instance uses (for example., 1).
+*  `aws.spot.io/instance-memory`: Reflects the instance's memory (for example., 2).
+
+These labels only launch nodes that match the required pod labels. 
 
 ## Examples
 
