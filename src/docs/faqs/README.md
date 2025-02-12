@@ -2646,6 +2646,22 @@ Yes, you can increase the disk size for stateful nodes.
 
  </details>
 
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ssnlrs">Azure: Why are my stateful nodes not importing/launching (LRS/ZRS)?</summary>
+
+ <div style="padding-left:16px">
+
+If your stateful nodes aren’t importing or launching, check the disk type and zone. If your disk type (storageAccountType) is:
+
+* [Locally redundant storage](https://learn.microsoft.com/en-us/azure/storage/common/storage-redundancy#locally-redundant-storage) (standard_LRS or premium_LRS), you must have a **zone** defined (it can’t be <i>null</i>).
+* [Zone redundant storage for managed disks](https://learn.microsoft.com/en-us/azure/storage/common/storage-redundancy#zone-redundant-storage) (standard_ZRS or premium_ZRS), the **zone** can be  <i>null</i>.
+
+If you want to use a regional disk (**zone** = <i>null</i>), you need to use ZRS disks.
+
+ </div>
+
+ </details>
+
 <!----------------------------------cost intelligence---------------------------------->
 
 ## Cost Intelligence
