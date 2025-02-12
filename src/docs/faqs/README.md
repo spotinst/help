@@ -15,9 +15,13 @@ us-east-1, us-east-2, us-west-1, us-west-2, ca-central-1, sa-east-1, eu-central-
 
 Supported products: Eco, CloudAnalyzer, Ocean, Elastigroup.
 
->**Note**: For Eco and CloudAnalyzer only, the following China regions are not supported:
+>**Notes**:
+>
+> For Eco and CloudAnalyzer only, the following China regions are not supported:
 > - cn-north-1
 > - cn-northwest-1
+>
+> For Eco, CUR bucket deployment is only supported in [regions](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-available-regions) where the `Opt-in Status` is `not required`.
 
 **Azure Regions**
 
