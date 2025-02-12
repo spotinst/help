@@ -481,6 +481,22 @@ The parameter <i>spotPercentage</i> cannot be used for both a cluster and one of
 
  </details>
 
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocdraining">AWS: What is the default draining timeout?</summary>
+
+  <div style="padding-left:16px">
+
+Draining timeout is the time in seconds to allow the instance or node to be drained before terminating it.
+
+The default draining for:
+* Elastigroup is 120 seconds
+* Ocean is 300 seconds
+* ECS (Elastigroup/Ocean) is 900 seconds
+
+ </div>
+
+ </details>
+
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oelasticsearch">AWS: Can Elasticsearch integrate with Spot?</summary>
 
@@ -1717,6 +1733,23 @@ AWS decides according to:
 
 Throughout the lifetime of an instance, it can change its “price” whenever there’s any change in the commitments utilization rate. For example, if an instance is running as a full price on-demand instance, and another instance that was utilizing a compute savings plan commitment was terminated, the first instance will start utilizing this commitment if its hourly price rate has enough free space under this commitment. It might take a couple of minutes for this change to show, but since the billing is being calculated retroactively, in practice it’s starting to utilize the commitment right away.
    
+ </div>
+
+ </details>
+
+ 
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egdraining">AWS: What is the default draining timeout?</summary>
+
+  <div style="padding-left:16px">
+
+Draining timeout is the time in seconds to allow the instance or node to be drained before terminating it.
+
+The default draining for:
+* Elastigroup is 120 seconds
+* Ocean is 300 seconds
+* ECS (Elastigroup/Ocean) is 900 seconds
+
  </div>
 
  </details>
