@@ -15,9 +15,13 @@ us-east-1, us-east-2, us-west-1, us-west-2, ca-central-1, sa-east-1, eu-central-
 
 Supported products: Eco, CloudAnalyzer, Ocean, Elastigroup.
 
->**Note**: For Eco and CloudAnalyzer only, the following China regions are not supported:
+>**Notes**:
+>
+> For Eco and CloudAnalyzer only, the following China regions are not supported:
 > - cn-north-1
 > - cn-northwest-1
+>
+> For Eco, CUR bucket deployment is only supported in [regions](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-available-regions) where the `Opt-in Status` is `not required`.
 
 **Azure Regions**
 
@@ -87,23 +91,6 @@ You can choose to remove some of these permissions from the [Spot IAM policy](/a
 * **iam:AddRoleToInstanceProfile** is generally not required. It is only used to change the role associated with an instance profile and is required for Beanstalk.
 
 * **iam:PassRole** is only required when you custom metrics. Ocean EKS does not require <i>iam:PassRole</i> in the Spot policy. However, if you use custom metrics, you need an account with this role configured for putting metric data into CloudWatch, which is in use by both Ocean (PublishOceanKubernetesCwMetricsExecutor ) and EG (ReportCWMetricsNewCmd).
-
- </div>
-
- </details>
-
-   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="secretnotvalid">Azure: Why can my cluster not perform scaling actions (invalid client secret)?</summary>
-
-  <div style="padding-left:16px">
-
-You got this error in the logs, and it’s not possible for the cluster to perform any scaling actions:
-
-<code>Invalid client secret provided. Ensure the secret being sent in the request is the client secret value, not the client secret ID, for a secret added to app</code>
-
-In Azure Kubernetes Service (AKS), there are two kinds of secrets: <i>client secret ID</i> and <i>client secret value</i>.
-
-Generate a new client secret <i>value</i> and [update it in the API](https://docs.spot.io/api/#tag/Accounts/operation/OrganizationsAndAccountsSetCloudCredentialsForAzure).
 
  </div>
 
@@ -477,6 +464,22 @@ The parameter <i>spotPercentage</i> cannot be used for both a cluster and one of
 
  </details>
 
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocdraining">AWS: What is the default draining timeout?</summary>
+
+  <div style="padding-left:16px">
+
+Draining timeout is the time in seconds to allow the instance or node to be drained before terminating it.
+
+The default draining for:
+* Elastigroup is 120 seconds
+* Ocean is 300 seconds
+* ECS (Elastigroup/Ocean) is 900 seconds
+
+ </div>
+
+ </details>
+
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oelasticsearch">AWS: Can Elasticsearch integrate with Spot?</summary>
 
@@ -610,6 +613,23 @@ If an instance type isn’t [EBS-optimized by default](https://docs.aws.amazon.c
    </div>
 
  </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="secretnotvalid">Azure: Why can my cluster not perform scaling actions (invalid client secret)?</summary>
+
+  <div style="padding-left:16px">
+
+You got this error in the logs, and it’s not possible for the cluster to perform any scaling actions:
+
+<code>Invalid client secret provided. Ensure the secret being sent in the request is the client secret value, not the client secret ID, for a secret added to app</code>
+
+In Azure Kubernetes Service (AKS), there are two kinds of secrets: <i>client secret ID</i> and <i>client secret value</i>.
+
+Generate a new client secret <i>value</i> and [update it in the API](https://docs.spot.io/api/#tag/Accounts/operation/OrganizationsAndAccountsSetCloudCredentialsForAzure).
+
+ </div>
+
+ </details>
  
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceancudvng">GCP: Can I set up committed use discounts on virtual node groups?</summary>
@@ -656,7 +676,19 @@ This can happen if the specific VM family and size aren’t available for a cert
    </div>
 
  </details>
- 
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocnewnodeaz">ECS, EKS: Are new nodes launched in the same availability zone as the old nodes?</summary>
+
+  <div style="padding-left:16px">
+
+Cluster roll randomly chooses the nodes and divides the instances between batches according to the size of their resources. It doesn’t matter which availability zones the nodes are from.
+
+   </div>
+
+ </details>
+
+
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceaneventbridge">ECS, EKS: How do I create spot interruption notifications?</summary>
 
@@ -1717,6 +1749,23 @@ Throughout the lifetime of an instance, it can change its “price” whenever t
 
  </details>
 
+ 
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egdraining">AWS: What is the default draining timeout?</summary>
+
+  <div style="padding-left:16px">
+
+Draining timeout is the time in seconds to allow the instance or node to be drained before terminating it.
+
+The default draining for:
+* Elastigroup is 120 seconds
+* Ocean is 300 seconds
+* ECS (Elastigroup/Ocean) is 900 seconds
+
+ </div>
+
+ </details>
+
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="egimds">AWS: How can I update the instance metadata (IMDS) in my cluster?</summary>
 
@@ -2256,7 +2305,18 @@ You can prevent an immediate termination of a specific spot instance that acted 
 
 <i>Idle minutes before termination</i> defines how long the Spot plugin should wait before terminating an idle instance.
 
-Increase the <i>Idle minutes before termination</i> in the [Spot Jenkins plugin](https://docs.spot.io/tools-and-provisioning/ci-cd/jenkins).
+Increase the <i>Idle minutes before termination</i> in the [Spot Jenkins plugin](tools-and-provisioning/ci-cd/jenkins).
+
+ </div>
+
+ </details>
+
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="jenkinsretrigger">Integration: Can I trigger the same Jenkins job on a different instance if it was interrupted?</summary>
+
+  <div style="padding-left:16px">
+
+You can [retrigger the Jenkins job automatically](tools-and-provisioning/ci-cd/jenkins) if a node is interrupted. The interrupted job parameters are transferred to the new job.
 
  </div>
 
@@ -2637,6 +2697,22 @@ Yes, you can increase the disk size for stateful nodes.
    
    8. In the Delete Stateful Node window, make sure to deselect all the options because you need the VM to run on the Azure side.
    9. Verify that the VM with the resources is running in Azure.
+
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ssnlrs">Azure: Why are my stateful nodes not importing/launching (LRS/ZRS)?</summary>
+
+ <div style="padding-left:16px">
+
+If your stateful nodes aren’t importing or launching, check the disk type and zone. If your disk type (storageAccountType) is:
+
+* [Locally redundant storage](https://learn.microsoft.com/en-us/azure/storage/common/storage-redundancy#locally-redundant-storage) (standard_LRS or premium_LRS), you must have a **zone** defined (it can’t be <i>null</i>).
+* [Zone redundant storage for managed disks](https://learn.microsoft.com/en-us/azure/storage/common/storage-redundancy#zone-redundant-storage) (standard_ZRS or premium_ZRS), the **zone** can be  <i>null</i>.
+
+If you want to use a regional disk (**zone** = <i>null</i>), you need to use ZRS disks.
 
  </div>
 
