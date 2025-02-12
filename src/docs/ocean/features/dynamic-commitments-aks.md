@@ -95,3 +95,48 @@ Set the `utilizecommitments` or `utilizeReservedInstances` parameter to `true`.
 >**Note**: The default value for the `utilizeReservedInstances` parameter is `true`.
 
 For Elastigroup, use the [create and update elastigroup parameters]().
+
+##  Connect Commitments to Spot Products
+
+###  Step 1: App Registration:
+
+1. Log in to your Azure account.
+2. Go to App Registration.
+3. Create a new application registration.
+4. Set the Redirect URI to `https://spot.io`
+>**Note:** Spot requires this URI for authentication purposes.
+5. Enter the following IDs:
+   *  Application (client) ID.
+   *  Directory (tenant) ID.
+
+###  Step 2: Certificates & Secrets
+
+1.  In Azure, under the newly created application, click **Certificates & secrets**.
+2.  Create a new client secret and set the expiration to **24 months**.
+3.  Enter the following details:
+    * Application secret expiration date.
+    * Client secret value.
+    * Secret ID.
+
+###  Step 3: Permissions Assignment
+
+1.  Use the following Azure PowerShell script to assign the Reservation Reader role at the tenant level with PowerShell:
+
+```
+Import-Module Az.Accounts
+Import-Module Az.Resources
+
+Connect-AzAccount -Tenant {TENANT_ID}
+
+## Assign Reservation Reader role
+New-AzRoleAssignment -Scope "/providers/Microsoft.Capacity" -ApplicationId {CLIENT_ID} -RoleDefinitionName "Reservations Reader"
+
+## Assign Savings Plan Reader role (optional)
+New-AzRoleAssignment -Scope "/providers/Microsoft.BillingBenefits" -ApplicationId {CLIENT_ID} -RoleDefinitionName "Savings plan Reader"
+```
+
+2.  Optional- Check true on the Saving Plan Permission if you want to add and include it. 
+
+
+
+
