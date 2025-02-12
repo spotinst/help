@@ -65,8 +65,8 @@ The instance labels are as follows:
 *  `aws.spot.io/instance-family`: Reflects the family of the instance (for example., c5a).
 *  `aws.spot.io/instance-generation`: Reflects the generation of the instance (for example., 5).
 *  `aws.spot.io/instance-hypervisor`: Reflects the hypervisor the instance uses (for example., nitro).
-*  `aws.spot.io/instance-cpu`: Reflects the CPU the instance uses (for example., 1).
-*  `aws.spot.io/instance-memory`: Reflects the instance's memory (for example., 2).
+*  `aws.spot.io/instance-cpu`: Reflects the CPU the instance uses (for example., 2).
+*  `aws.spot.io/instance-memory`: Reflects the instance's memory (for example., 4096).
 
 These labels only launch nodes that match the required pod labels. 
 
