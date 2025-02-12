@@ -349,6 +349,21 @@ After 12 hours of inactivity, you get signed out of the Spot console.
    
  </div>
  </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="spotinstsdklambda">Can I integrate Spotinst SDK with AWS Lambda?</summary>
+
+  <div style="padding-left:16px">
+
+The Spotinst SDK library is supported just like any other Python package.
+
+Spotinst-sdk2 is not part of the default PyPl. You need to create a deployment package with it to use it in the Lambda function:
+
+1. [Create a ZIP deployment package with dependencies](https://docs.aws.amazon.com/lambda/latest/dg/python-package.html#python-package-create-dependencies). Make sure that all dependencies and Lambda functions are at the same level, zipped together, and uploaded.
+2. Update the [default timeout](https://docs.aws.amazon.com/lambda/latest/dg/configuration-timeout.html) for the Lambda function to 60 seconds.
+
+ </div>
+ </details>
  
 <!----------------------------------ocean---------------------------------->
 
