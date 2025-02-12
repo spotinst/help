@@ -98,6 +98,8 @@ For Elastigroup, use the [create and update elastigroup parameters]().
 
 ##  Connect Commitments to Spot Products
 
+Follow the instructions below while referring to the [Azure documentation](https://learn.microsoft.com/en-us/entra/identity-platform/quickstart-register-app?tabs=certificate):
+
 ###  Step 1: App Registration:
 
 1. Log in to your Azure account.
@@ -135,7 +137,9 @@ New-AzRoleAssignment -Scope "/providers/Microsoft.Capacity" -ApplicationId {CLIE
 New-AzRoleAssignment -Scope "/providers/Microsoft.BillingBenefits" -ApplicationId {CLIENT_ID} -RoleDefinitionName "Savings plan Reader"
 ```
 
-2.  Optional- Check true on the Saving Plan Permission if you want to add and include it. 
+2.  Optional- Check **true** on the Saving Plan Permission if you want to add and include it.
+3.  Click **Test RIs/SPs to Spot Permissions** to verify that your permissions have been successfully granted.
+    *  The toggle should change to **on** for the specific virtual node group.
 
 
 
