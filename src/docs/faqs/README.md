@@ -1451,7 +1451,29 @@ The Ocean Controller saves up to 8 days of logs. The logs for each day are about
    At minimum, the token must have **account viewer** [permissions](/administration/policies/). Viewer permission is the only permission required for a cluster controller to operate. Cluster controllers don't manage resources in Ocean, the autoscaler does. If you want this same programmatic user to manage other resources in your cluster, additional permission policies are required.
 
 For a network client, only the **account viewer** permission is required for the client to operate.
-   
+
+ </div>
+
+ </details>
+
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocjavaheap">AKS, EKS, GKE: Why are my pods unscheduled with event: <i>pod has unbound immediate PersistentVolumeClaims</i>?</summary>
+
+  <div style="padding-left:16px">
+
+You may get this event in your Kubernetes cluster:
+
+0/3 nodes are available: pod has unbound immediate PersistentVolumeClaims
+
+<img width=600 src="https://github.com/user-attachments/assets/cbbf11bc-ea21-405f-a4ce-c479ce2bbdde">
+
+This can happen because:
+
+* Kubernetes needs [storage classes](https://kubernetes.io/docs/concepts/storage/storage-classes/) to create the [persistent volumes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) for [persistent volume claims](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims) (PVCs) dynamically. Make sure you have storage classes configured unless you’re using static persistent volume claims.
+* The [persistent volume](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#access-modes) and [persistent volume claims](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#access-modes-1) access modes don’t match.
+* The persistent volume [capacity](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#capacity) is less than the persistent volume claim.
+* The total number of persistent volume claims is higher than the persistent volume.
+
  </div>
 
  </details>
@@ -1460,7 +1482,6 @@ For a network client, only the **account viewer** permission is required for the
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocjavaheap">AKS, EKS, GKE: Why am I getting a Java heap space message (OutOfMemoryError)?</summary>
 
   <div style="padding-left:16px">
-
 
 You may see this message in the logs if you use Prometheus to scrape Ocean metrics:
 
