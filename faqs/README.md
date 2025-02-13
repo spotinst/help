@@ -316,7 +316,7 @@ Set up OpsGenie email integration and then configure the notifications in Spot:
    2. Click **Notification Center** > **Event Policies**.
    3. Click on the name of the event policy to add the integration.
    4. Go to **Users & Integrations** > **Add Integration**.
-   5. Select **External Email** and enter the OpsGenie email address. This allows Spot to send notifications to external email addresses. Any email sent to the OpsGenie email address will trigger a OpsGenie alert.
+   5. Select **External Email** and enter the OpsGenie email address. This allows Spot to send notifications to external email addresses. Any email sent to the OpsGenie email address will trigger an OpsGenie alert.
 
 * Using the Spot API, [add a notification](https://docs.spot.io/api/#operation/notificationsServiceSubscriptionsSubscribe). For example:
    <pre><code>"resourceId": "xxxxxxx",
