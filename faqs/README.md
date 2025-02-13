@@ -2623,7 +2623,19 @@ Update the block device mapping configuration and increase the volume size to ma
 
  </details>
 
- 
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ssn-memutil">AWS: Why am I getting a <i>No data to display</i> message in the stateful node > Monitoring > Memory Utilization?</summary>
+
+  <div style="padding-left:16px">
+
+Memory utilization graphs require the [CloudWatch agent](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Install-CloudWatch-Agent.html). If you don’t have CloudWatch set up, you’ll get a message in the Spot console when you try to view the memory utilization for a stateful node.
+
+You can set up [CloudWatch agent](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Install-CloudWatch-Agent.html) and then [create](managed-instance/getting-started/create-a-new-managed-instance) or [import](managed-instance/getting-started/join-an-existing-managed-instance) a stateful node.
+
+ </div>
+
+ </details>
+
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="increaseramcpu">Azure: Can I increase RAM or CPU for osDisk and dataDisk on a stateful node?</summary>
 
