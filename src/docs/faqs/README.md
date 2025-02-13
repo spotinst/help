@@ -299,6 +299,48 @@ There are a number of <a href="/administration/sso-access-control/">attributes t
  </div>
 
  </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="opsgenienotifications">Can I set up OpsGenie alerts from Spot?</summary>
+
+  <div style="padding-left:16px">
+
+You can use email or webhook to integrate OpsGenie with the Spot notification center.
+
+**Email**
+
+Set up OpsGenie email integration and then configure the notifications in Spot:
+
+* Using the console
+   1. In the Spot console, click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png">  > **Settings**.
+   2. Click **Notification Center** > **Event Policies**.
+   3. Click on the name of the event policy to add the integration.
+   4. Go to **Users & Integrations** > **Add Integration**.
+   5. Select **External Email** and enter the OpsGenie email address. This allows Spot to send notifications to external email addresses. Any email sent to the OpsGenie email address will trigger a OpsGenie alert.
+
+* Using the Spot API, [add a notification](https://docs.spot.io/api/#operation/notificationsServiceSubscriptionsSubscribe). For example:
+   <pre><code>"resourceId": "xxxxxxx",
+   "protocol": "email ",
+   "endpoint": "YOUR@EMAIL.COM",
+   "eventType": "xxxxx",</code></pre>
+
+* Using the Spot API, [update a notification](https://docs.spot.io/api/#operation/notificationsServiceSubscriptionsUpdate). For example:
+   <pre><code>"resourceId": "xxxxxxx",
+   "protocol": "email ",
+   "endpoint": "YOUR@EMAIL.COM",
+   "eventType": "xxxxx",</code></pre>
+
+**Webhook**
+1. Set up [OpsGenie webhook integration](https://support.atlassian.com/opsgenie/docs/integrate-opsgenie-with-webhook/).
+2. In the Spot console, click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png">  > **Settings**.
+3. Click **Notification Center** > **Event Policies**.
+4. Click on the name of the event policy to add the integration.
+5. Go to **Users & Integrations** > **Add Integration**.
+6. Select **Webhook** and enter the URL address you created in OpsGenie (for example, https://api.opsgenie.com/v2/alerts).
+
+ </div>
+
+ </details>
  
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="jq">Can I use JQ to extract data from an API call?</summary>
