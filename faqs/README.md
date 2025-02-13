@@ -299,6 +299,48 @@ There are a number of <a href="/administration/sso-access-control/">attributes t
  </div>
 
  </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="opsgenienotifications">Can I set up OpsGenie alerts from Spot?</summary>
+
+  <div style="padding-left:16px">
+
+You can use email or webhook to integrate OpsGenie with the Spot notification center.
+
+**Email**
+
+Set up OpsGenie email integration and then configure the notifications in Spot:
+
+* Using the console
+   1. In the Spot console, click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png">  > **Settings**.
+   2. Click **Notification Center** > **Event Policies**.
+   3. Click on the name of the event policy to add the integration.
+   4. Go to **Users & Integrations** > **Add Integration**.
+   5. Select **External Email** and enter the OpsGenie email address. This allows Spot to send notifications to external email addresses. Any email sent to the OpsGenie email address will trigger a OpsGenie alert.
+
+* Using the Spot API, [add a notification](https://docs.spot.io/api/#operation/notificationsServiceSubscriptionsSubscribe). For example:
+   <pre><code>"resourceId": "xxxxxxx",
+   "protocol": "email ",
+   "endpoint": "YOUR@EMAIL.COM",
+   "eventType": "xxxxx",</code></pre>
+
+* Using the Spot API, [update a notification](https://docs.spot.io/api/#operation/notificationsServiceSubscriptionsUpdate). For example:
+   <pre><code>"resourceId": "xxxxxxx",
+   "protocol": "email ",
+   "endpoint": "YOUR@EMAIL.COM",
+   "eventType": "xxxxx",</code></pre>
+
+**Webhook**
+1. Set up [OpsGenie webhook integration](https://support.atlassian.com/opsgenie/docs/integrate-opsgenie-with-webhook/).
+2. In the Spot console, click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png">  > **Settings**.
+3. Click **Notification Center** > **Event Policies**.
+4. Click on the name of the event policy to add the integration.
+5. Go to **Users & Integrations** > **Add Integration**.
+6. Select **Webhook** and enter the URL address you created in OpsGenie (for example, https://api.opsgenie.com/v2/alerts).
+
+ </div>
+
+ </details>
  
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="jq">Can I use JQ to extract data from an API call?</summary>
@@ -1409,7 +1451,29 @@ The Ocean Controller saves up to 8 days of logs. The logs for each day are about
    At minimum, the token must have **account viewer** [permissions](/administration/policies/). Viewer permission is the only permission required for a cluster controller to operate. Cluster controllers don't manage resources in Ocean, the autoscaler does. If you want this same programmatic user to manage other resources in your cluster, additional permission policies are required.
 
 For a network client, only the **account viewer** permission is required for the client to operate.
-   
+
+ </div>
+
+ </details>
+
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocjavaheap">AKS, EKS, GKE: Why are my pods unscheduled with event: <i>pod has unbound immediate PersistentVolumeClaims</i>?</summary>
+
+  <div style="padding-left:16px">
+
+You may get this event in your Kubernetes cluster:
+
+0/3 nodes are available: pod has unbound immediate PersistentVolumeClaims
+
+<img width=600 src="https://github.com/user-attachments/assets/cbbf11bc-ea21-405f-a4ce-c479ce2bbdde">
+
+This can happen because:
+
+* Kubernetes needs [storage classes](https://kubernetes.io/docs/concepts/storage/storage-classes/) to create the [persistent volumes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) for [persistent volume claims](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims) (PVCs) dynamically. Make sure you have storage classes configured unless you’re using static persistent volume claims.
+* The [persistent volume](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#access-modes) and [persistent volume claims](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#access-modes-1) access modes don’t match.
+* The persistent volume [capacity](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#capacity) is less than the persistent volume claim.
+* The total number of persistent volume claims is higher than the persistent volume.
+
  </div>
 
  </details>
@@ -1418,7 +1482,6 @@ For a network client, only the **account viewer** permission is required for the
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocjavaheap">AKS, EKS, GKE: Why am I getting a Java heap space message (OutOfMemoryError)?</summary>
 
   <div style="padding-left:16px">
-
 
 You may see this message in the logs if you use Prometheus to scrape Ocean metrics:
 
@@ -2743,6 +2806,67 @@ Yes, you can increase the disk size for stateful nodes.
  </div>
 
  </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ssnchangesub">Azure: Can I move stateful node resources to a new Azure subscription?</summary>
+
+  <div style="padding-left:16px">
+
+   You can change your existing subscription and move the resources to a new Azure subscription:
+
+   1. Deallocate the running VMs:
+
+       <ol style="list-style-type: lower-alpha;">
+      <li>Go to the stateful node in the Spot console and click <b>Actions</b> > <b>Edit Configuration</b>.</li>
+      <li>Go to <b>Review</b>, switch to <b>JSON review</b>, and select <b>Edit Mode</b>.</li>
+      <li><p>Change `revertToSpot` to <i>never</i>:</p>
+         <pre><code>
+      {
+       "statefulNode": {
+         "name": "Spot Stateful Node",
+         "region": "westus2",
+         "resourceGroupName": "spotResourceGroup",
+         "description": "This is my example stateful node",
+         "strategy": {
+           "fallbackToOd": true,
+           "drainingTimeout": 120,
+           "preferredLifecycle": "od",
+           "revertToSpot": "never",
+           "optimizationWindows": null,
+      </code></pre>
+      </li>
+      <li><p>Add the `"preferredLifecycle": "od",` parameter:</p>
+         <pre><code>
+      {
+       "statefulNode": {
+         "name": "Spot Stateful Node",
+         "region": "westus2",
+         "resourceGroupName": "spotResourceGroup",
+         "description": "This is my example stateful node",
+         "strategy": {
+           "fallbackToOd": true,
+           "drainingTimeout": 120,
+           "preferredLifecycle": "od",
+           "revertToSpot": "never",
+           "optimizationWindows": null,
+      </code></pre>
+      </li>
+      <li><a href="https://docs.spot.io/managed-instance/azure/features/actions">Recycle the stateful node</a>.</li>
+      <li>Make sure the stateful node is not running on the Spot VM.</li>
+      <li><p>Go to <b>Edit Node</b> and delete the node.</p>
+         <img width="275" alt="delete-azure-stateful1" src="https://github.com/spotinst/help/assets/167069628/2c4635fe-6ce2-40c3-aded-7170c4a93f1f">
+      </li>
+      <li>In the Delete Stateful Node window, make sure to deselect all the options because you need the VM to run on the Azure side.</li>
+      <li>Verify that the VM with the resources is running in Azure.</li>
+       </ol>
+   2.	[Move the Azure resources to a different subscription](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/move-resource-group-and-subscription).
+   3.	[Connect your Azure subscription](connect-your-cloud-provider/first-account/?id=connect-azure).
+   4.	[Import a stateful VM](managed-instance/azure/getting-started/import-stateful-node).
+
+ </div>
+
+ </details>
+
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="ssnlrs">Azure: Why are my stateful nodes not importing/launching (LRS/ZRS)?</summary>
