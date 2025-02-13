@@ -1385,6 +1385,21 @@ With the Version 2 Ocean Controller, Spot gets reports for any custom resource y
  </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="occontrollerlogs">AKS, EKS, GKE: How long are Ocean Controller logs kept for?</summary>
+
+  <div style="padding-left:16px">
+
+The Ocean Controller saves up to 8 days of logs. The logs for each day are about 11 MB.
+
+1. Sign in to the container: `kubectl exec -ti <controller_pod_name> bash -n spot-system`.
+2. View the logs: `ls -lah controller/log/spotinst`.
+
+ </div>
+
+ </details>
+
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceantokens">AKS, EKS, GKE: What are the minimum permissions needed for a programmatic token for creating an Ocean cluster controller?</summary>
 
   <div style="padding-left:16px">
