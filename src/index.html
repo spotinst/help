@@ -24,91 +24,110 @@
 
   <!-- Theme -->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css" />
-
+  
   <!-- Custom Styles -->
   <style type="text/css">
+    blockquote p mark {
+      background: #ddd;
+      padding: 5px;
+      border-radius: 4px;
+      margin: 0 5px;
+    }
     .sidebar .sidebar-nav {
-      top: 162px!important;
-      height:calc(90% - 110px)!important;
+      top: 162px !important;
+      height: calc(90% - 110px) !important;
     }
     .sidebar .search {
-      top: 102px!important;
+      top: 102px !important;
     }
     .sidebar h1.app-name {
-      top: 0!important;
+      top: 0 !important;
     }
     .sidebar .logo img {
-      margin-right: 0!important;
+      margin-right: 0 !important;
     }
     .page_toc {
       top: 0;
-      position: static!important;
-      margin-top:20px!important;
+      position: static !important;
+      margin-top: 20px !important;
     }
     .page_toc.scrolled {
-      position: fixed!important;
+      position: fixed !important;
     }
     .markdown-section {
-      padding: 20px!important;
+      padding: 20px !important;
     }
-    .helpful-content { 
-      z-index:9999;
-      background:#0086FF;
-      color:#fff;
-      padding:10px 40px; 
+    .helpful-content {
+      z-index: 9999;
+      background: #0086FF;
+      color: #fff;
+      padding: 10px 40px;
       transition: transform .25s ease-out;
-      margin-left:300px;   
+      margin-left: 300px;
     }
     .helpful-content h2 {
       padding: 10px 0;
       margin: 0;
     }
     .helpful-content p {
-      margin:0;
+      margin: 0;
       padding: 0 0 10px 0;
     }
     body.close .helpful-content {
-      margin-left:0!important;
-    } 
+      margin-left: 0 !important;
+    }
     .content {
-      position: absolute!important;
-      padding-top:0px!important;
+      position: absolute !important;
+      padding-top: 0px !important;
     }
     .sidebar-toggle {
-      top: 134px!important;
+      top: 134px !important;
     }
     .sidebar-toggle.scrolled {
-      top: 20px!important;
+      top: 20px !important;
     }
     .page_toc .lv3 {
-      display:none;
+      display: none;
     }
     @media only screen and (max-width: 768px) {
+      #search-overlay {
+        width: 100vw !important;
+      }
       .helpful-content {
-        margin-left: 0!important;
+        margin-left: 0 !important;
+        min-width: 350px;
+        padding: 10px 20px;
       }
       body.sticky.close .helpful-content {
-        margin-left:300px!important;    
+        margin-left: 300px !important;
       }
-    } 
+    }
     .spot-btn {
       background-color: transparent;
       border: 2px solid #fff;
       border-radius: 45px;
       color: #fff;
-      font-family: 'Axiforma', Helvetica, sans-serif; 
+      font-family: 'Axiforma', Helvetica, sans-serif;
       font-size: 16px;
-      font-weight: 600; 
-      padding: 5px 30px; 
+      font-weight: 600;
+      padding: 5px 30px;
       transition: .3s;
     }
     .spot-btn:hover {
       background-color: #fff;
-      color: #0086ff; 
+      color: #0086ff;
       cursor: pointer;
       transition: .3s;
     }
-
+    .spot-btn.pink {
+      background-color: #ff00ce;
+      border: 2px solid #ff00ce;
+    }
+    .spot-btn.pink:hover {
+      background-color: #ca18a3;
+      border: 2px solid #ca18a3;
+      color: #fff;
+    }
     @media only screen and (max-width: 1024px) {
       .helpful-content h2 {
         font-size: 20px;
@@ -119,55 +138,109 @@
         padding: 10px 0;
       }
       .sidebar-toggle {
-        top: 160px!important;
+        top: 160px !important;
       }
     }
-    @media only screen and (min-width: 1024px) {  
+    @media only screen and (min-width: 1024px) {
       .helpful-content .col-left {
-        width:70%;
+        width: 70%;
       }
       .helpful-content .col-right {
-        width:30%;  
+        width: 30%;
       }
-      .helpful-content { 
+      .helpful-content {
         display: flex;
         align-items: center;
         justify-content: center;
       }
-      .spot-btn { 
-        float:right;
+      .helpful-content .spot-btn {
+        float: right;
         position: relative;
       }
-    } 
-    @media only screen and (min-width: 1300px) { 
-      .spot-btn { 
+    }
+    @media only screen and (min-width: 1300px) {
+      .helpful-content .spot-btn {
         left: -45px;
       }
     }
-    @media only screen and (min-width: 1500px) { 
-      .spot-btn { 
+    @media only screen and (min-width: 1500px) {
+      .helpful-content .spot-btn {
         left: -80px;
       }
     }
-
-    @media only screen and (min-width: 1650px) { 
-      .spot-btn { 
+    @media only screen and (min-width: 1650px) {
+      .helpful-content .spot-btn {
         left: -90px;
       }
     }
-    @media only screen and (min-width: 1750px) { 
-      .spot-btn { 
+    @media only screen and (min-width: 1750px) {
+      .helpful-content .spot-btn {
         left: -100px;
       }
     }
-    @media only screen and (min-width: 1800px) { 
-      .spot-btn { 
+    @media only screen and (min-width: 1800px) {
+      .helpful-content .spot-btn {
         left: -110px;
       }
     }
-    
-    
-
+    .highlight {
+      background-color: yellow;
+      padding: 0 2px;
+    }
+    .matching-post {
+      width: 100%;
+    }
+    .search-results-displayed h1 {
+      padding-left: 50px;
+    }
+    @media only screen and (min-width: 768px) {
+      .search-results-displayed {
+        display: block !important;
+      }
+      .results-panel.show {
+        display: none !important;
+      }
+      #search-results {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        padding: 20px;
+        height: 100vh;
+        overflow-y: auto;
+      }
+      #search-results h1 {
+        margin-bottom: 30px;
+      }
+      #search-results h2 {
+        font-size: 16px;
+        margin: 40px 0 0 0;
+        padding: 0;
+      }
+      #search-results p {
+        margin: 10px 0 0 0;
+        padding: 0;
+      }
+      #search-overlay {
+        transition: opacity 0.3s ease;
+        position: fixed;
+        top: 0px;
+        left: 300px;
+        width: calc(100vw - 317px);
+        height: 100vh;
+        display: none;
+        z-index: 1000;
+      }
+      #close-search-results {
+        margin-top: 0;
+      }
+      .search-keyword {
+        color: #0086ff;
+        font-style: normal;
+        font-weight: bold;
+      } 
+    }
   </style>
   
 </head>
@@ -236,7 +309,607 @@
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-json.min.js"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-yaml.min.js"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markdown.min.js"></script>
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <script type="text/javascript">
+  (function () {
+  function getAndRemoveConfig(str) {
+    if (str === void 0) str = "";
+
+    var config = {};
+
+    if (str) {
+      str = str
+        .replace(/^('|")/, "")
+        .replace(/('|")$/, "")
+        .replace(/(?:^|\s):([\w-]+:?)=?([\w-%]+)?/g, function (m, key, value) {
+          if (key.indexOf(":") === -1) {
+            config[key] = (value && value.replace(/&quot;/g, "")) || true;
+            return "";
+          }
+
+          return m;
+        })
+        .trim();
+    }
+
+    return { str: str, config: config };
+  }
+
+  function removeDocsifyIgnoreTag(str) {
+    return str
+      .replace(/<!-- {docsify-ignore} -->/, "")
+      .replace(/{docsify-ignore}/, "")
+      .replace(/<!-- {docsify-ignore-all} -->/, "")
+      .replace(/{docsify-ignore-all}/, "")
+      .trim();
+  }
+
+  /* eslint-disable no-unused-vars */
+
+  var INDEXS = {};
+
+  var LOCAL_STORAGE = {
+    EXPIRE_KEY: "docsify.search.expires",
+    INDEX_KEY: "docsify.search.index",
+  };
+
+  function resolveExpireKey(namespace) {
+    return namespace
+      ? LOCAL_STORAGE.EXPIRE_KEY + "/" + namespace
+      : LOCAL_STORAGE.EXPIRE_KEY;
+  }
+
+  function resolveIndexKey(namespace) {
+    return namespace
+      ? LOCAL_STORAGE.INDEX_KEY + "/" + namespace
+      : LOCAL_STORAGE.INDEX_KEY;
+  }
+
+  function escapeHtml(string) {
+    var entityMap = {
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      '"': "&quot;",
+      "'": "&#39;",
+    };
+
+    return String(string).replace(/[&<>"']/g, function (s) {
+      return entityMap[s];
+    });
+  }
+
+  function getAllPaths(router) {
+    var paths = [];
+
+    Docsify.dom
+      .findAll(".sidebar-nav a:not(.section-link):not([data-nosearch])")
+      .forEach(function (node) {
+        var href = node.href;
+        var originHref = node.getAttribute("href");
+        var path = router.parse(href).path;
+
+        if (
+          path &&
+          paths.indexOf(path) === -1 &&
+          !Docsify.util.isAbsolutePath(originHref)
+        ) {
+          paths.push(path);
+        }
+      });
+
+    return paths;
+  }
+
+  function getTableData(token) {
+    if (!token.text && token.type === "table") {
+      token.cells.unshift(token.header);
+      token.text = token.cells
+        .map(function (rows) {
+          return rows.join(" | ");
+        })
+        .join(" |\n ");
+    }
+    return token.text;
+  }
+
+  function getListData(token) {
+    if (!token.text && token.type === "list") {
+      token.text = token.raw;
+    }
+    return token.text;
+  }
+
+  function saveData(maxAge, expireKey, indexKey) {
+    localStorage.setItem(expireKey, Date.now() + maxAge);
+    localStorage.setItem(indexKey, JSON.stringify(INDEXS));
+  }
+
+  function genIndex(path, content, router, depth) {
+    if (content === void 0) content = "";
+
+    var tokens = window.marked.lexer(content);
+    var slugify = window.Docsify.slugify;
+    var index = {};
+    var slug;
+    var title = "";
+
+    tokens.forEach(function (token, tokenIndex) {
+      if (token.type === "heading" && token.depth <= depth) {
+        var ref = getAndRemoveConfig(token.text);
+        var str = ref.str;
+        var config = ref.config;
+
+        var text = removeDocsifyIgnoreTag(token.text);
+
+        if (config.id) {
+          slug = router.toURL(path, { id: slugify(config.id) });
+        } else {
+          slug = router.toURL(path, { id: slugify(escapeHtml(text)) });
+        }
+
+        if (str) {
+          title = removeDocsifyIgnoreTag(str);
+        }
+
+        index[slug] = { slug: slug, title: title, body: "" };
+      } else {
+        if (tokenIndex === 0) {
+          slug = router.toURL(path);
+          index[slug] = {
+            slug: slug,
+            title: path !== "/" ? path.slice(1) : "Home Page",
+            body: token.text || "",
+          };
+        }
+
+        if (!slug) {
+          return;
+        }
+
+        if (!index[slug]) {
+          index[slug] = { slug: slug, title: "", body: "" };
+        } else if (index[slug].body) {
+          token.text = getTableData(token);
+          token.text = getListData(token);
+
+          index[slug].body += "\n" + (token.text || "");
+        } else {
+          token.text = getTableData(token);
+          token.text = getListData(token);
+
+          index[slug].body = token.text || "";
+        }
+      }
+    });
+    slugify.clear();
+    return index;
+  }
+
+  function ignoreDiacriticalMarks(keyword) {
+    if (keyword && keyword.normalize) {
+      return keyword.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    }
+    return keyword;
+  }
+
+  /**
+   * @param {String} query Search query
+   * @returns {Array} Array of results
+   */
+  function search(query) {
+    var matchingResults = [];
+    var data = [];
+    Object.keys(INDEXS).forEach(function (key) {
+      data = data.concat(
+        Object.keys(INDEXS[key]).map(function (page) {
+          return INDEXS[key][page];
+        })
+      );
+    });
+
+    query = query.trim();
+    var keywords = query.split(/[\s\-，\\/]+/);
+    if (keywords.length !== 1) {
+      keywords = [].concat(query, keywords);
+    }
+
+    var loop = function (i) {
+      var post = data[i];
+      var matchesScore = 0;
+      var resultStr = "";
+      var handlePostTitle = "";
+      var handlePostContent = "";
+      var postTitle = post.title && post.title.trim();
+      var postContent = post.body && post.body.trim();
+      var postUrl = post.slug || "";
+
+      // Function to remove all Markdown and HTML tags from postContent
+      function stripMarkdownAndHTML(content) {
+        // Remove Markdown images: ![alt](url)
+        content = content.replace(/!\[[^\]]*\]\([^)]*\)/g, "");
+
+        // Remove Markdown links: [text](url)
+        content = content.replace(/\[([^\]]+)\]\(([^)]+)\)/g, "$1");
+
+        // Remove code blocks & inline code
+        content = content.replace(/```[\s\S]*?```|`[^`]*`/g, "");
+
+        // Remove bold (**bold** or __bold__) and italics (*italic* or _italic_)
+        content = content.replace(/(\*\*|__)(.*?)\1/g, "$2"); // Bold
+        content = content.replace(/(\*|_)(.*?)\1/g, "$2"); // Italic
+        content = content.replace(/(\*\*\*|___)(.*?)\1/g, "$2"); // Bold-Italic
+
+        // Remove headers (# H1, ## H2, etc.)
+        content = content.replace(/^#{1,6}\s*(.*)$/gm, "$1");
+
+        // Remove unordered lists (-, *, + at the beginning of a line)
+        content = content.replace(/^\s*[-*+]\s+/gm, "");
+
+        // Remove ordered lists (1., 2., etc.)
+        content = content.replace(/^\s*\d+\.\s+/gm, "");
+
+        // Remove blockquotes (> Some text)
+        content = content.replace(/^\s*>+\s*/gm, "");
+
+        // Remove HTML tags
+        content = content.replace(/<\/?[^>]+(>|$)/g, "");
+
+        return content.trim();
+      }
+
+      // Clean postContent
+      postContent = stripMarkdownAndHTML(postContent);
+
+      // Skip posts that contain iframes, Font Awesome icons, embedly cards
+      if (
+        postContent.includes("iframe") ||
+        postContent.includes(":fas") ||
+        postContent.includes(":fab") ||
+        postContent.includes("embedly-card")
+      ) {
+        return;
+      }
+
+      if (postTitle) {
+        keywords.forEach(function (keyword) {
+          // From https://github.com/sindresorhus/escape-string-regexp
+          var regEx = new RegExp(
+            escapeHtml(ignoreDiacriticalMarks(keyword)).replace(
+              /[|\\{}()[\]^$+*?.]/g,
+              "\\$&"
+            ),
+            "gi"
+          );
+          var indexTitle = -1;
+          var indexContent = -1;
+          handlePostTitle = postTitle
+            ? escapeHtml(ignoreDiacriticalMarks(postTitle))
+            : postTitle;
+          handlePostContent = postContent
+            ? escapeHtml(ignoreDiacriticalMarks(postContent))
+            : postContent;
+
+          indexTitle = postTitle ? handlePostTitle.search(regEx) : -1;
+          indexContent = postContent ? handlePostContent.search(regEx) : -1;
+
+          if (indexTitle >= 0 || indexContent >= 0) {
+            matchesScore += indexTitle >= 0 ? 3 : indexContent >= 0 ? 2 : 0;
+            if (indexContent < 0) {
+              indexContent = 0;
+            }
+
+            var start = 0;
+            var end = 0;
+
+            start = indexContent < 11 ? 0 : indexContent - 10;
+            end = start === 0 ? 70 : indexContent + keyword.length + 60;
+
+            if (postContent && end > postContent.length) {
+              end = postContent.length;
+            }
+
+            var matchContent =
+              handlePostContent &&
+              "..." +
+                handlePostContent
+                  .substring(start, end)
+                  .replace(regEx, function (word) {
+                    return '<em class="search-keyword">' + word + "</em>";
+                  }) +
+                "...";
+
+            resultStr += matchContent;
+          }
+        });
+
+        if (matchesScore > 0) {
+          var matchingPost = {
+            title: handlePostTitle,
+            content: postContent ? resultStr : "",
+            url: postUrl,
+            score: matchesScore,
+          };
+
+          matchingResults.push(matchingPost);
+        }
+      }
+    };
+
+    for (var i = 0; i < data.length; i++) loop(i);
+
+    return matchingResults.sort(function (r1, r2) {
+      return r2.score - r1.score;
+    });
+  }
+
+  function init(config, vm) {
+    var isAuto = config.paths === "auto";
+    var paths = isAuto ? getAllPaths(vm.router) : config.paths;
+
+    var namespaceSuffix = "";
+
+    // only in auto mode
+    if (paths.length && isAuto && config.pathNamespaces) {
+      var path = paths[0];
+
+      if (Array.isArray(config.pathNamespaces)) {
+        namespaceSuffix =
+          config.pathNamespaces.filter(function (prefix) {
+            return path.slice(0, prefix.length) === prefix;
+          })[0] || namespaceSuffix;
+      } else if (config.pathNamespaces instanceof RegExp) {
+        var matches = path.match(config.pathNamespaces);
+
+        if (matches) {
+          namespaceSuffix = matches[0];
+        }
+      }
+      var isExistHome = paths.indexOf(namespaceSuffix + "/") === -1;
+      var isExistReadme = paths.indexOf(namespaceSuffix + "/README") === -1;
+      if (isExistHome && isExistReadme) {
+        paths.unshift(namespaceSuffix + "/");
+      }
+    } else if (paths.indexOf("/") === -1 && paths.indexOf("/README") === -1) {
+      paths.unshift("/");
+    }
+
+    var expireKey = resolveExpireKey(config.namespace) + namespaceSuffix;
+    var indexKey = resolveIndexKey(config.namespace) + namespaceSuffix;
+
+    var isExpired = localStorage.getItem(expireKey) < Date.now();
+
+    INDEXS = JSON.parse(localStorage.getItem(indexKey));
+
+    if (isExpired) {
+      INDEXS = {};
+    } else if (!isAuto) {
+      return;
+    }
+
+    var len = paths.length;
+    var count = 0;
+
+    paths.forEach(function (path) {
+      if (INDEXS[path]) {
+        return count++;
+      }
+
+      Docsify.get(
+        vm.router.getFile(path),
+        false,
+        vm.config.requestHeaders
+      ).then(function (result) {
+        INDEXS[path] = genIndex(path, result, vm.router, config.depth);
+        len === ++count && saveData(config.maxAge, expireKey, indexKey);
+      });
+    });
+  }
+
+  /* eslint-disable no-unused-vars */
+
+  var NO_DATA_TEXT = "";
+  var options;
+
+  function style() {
+    var code =
+      "\n.sidebar {\n  padding-top: 0;\n}\n\n.search {\n  margin-bottom: 20px;\n  padding: 6px;\n  border-bottom: 1px solid #eee;\n}\n\n.search .input-wrap {\n  display: flex;\n  align-items: center;\n}\n\n.search .results-panel {\n  display: none;\n}\n\n.search .results-panel.show {\n  display: block;\n}\n\n.search input {\n  outline: none;\n  border: none;\n  width: 100%;\n  padding: 0.6em 7px;\n  font-size: inherit;\n  border: 1px solid transparent;\n}\n\n.search input:focus {\n  box-shadow: 0 0 5px var(--theme-color, #42b983);\n  border: 1px solid var(--theme-color, #42b983);\n}\n\n.search input::-webkit-search-decoration,\n.search input::-webkit-search-cancel-button,\n.search input {\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  appearance: none;\n}\n\n.search input::-ms-clear {\n  display: none;\n  height: 0;\n  width: 0;\n}\n\n.search .clear-button {\n  cursor: pointer;\n  width: 36px;\n  text-align: right;\n  display: none;\n}\n\n.search .clear-button.show {\n  display: block;\n}\n\n.search .clear-button svg {\n  transform: scale(.5);\n}\n\n.search h2 {\n  font-size: 17px;\n  margin: 10px 0;\n}\n\n.search a {\n  text-decoration: none;\n  color: inherit;\n}\n\n.search .matching-post {\n  border-bottom: 1px solid #eee;\n}\n\n.search .matching-post:last-child {\n  border-bottom: 0;\n}\n\n.search p {\n  font-size: 14px;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  display: -webkit-box;\n  -webkit-line-clamp: 2;\n  -webkit-box-orient: vertical;\n}\n\n.search p.empty {\n  text-align: center;\n}\n\n.app-name.hide, .sidebar-nav.hide {\n  display: none;\n}";
+
+    Docsify.dom.style(code);
+  }
+
+  function tpl(defaultValue) {
+    if (defaultValue === void 0) defaultValue = "";
+
+    var html =
+      '<div class="input-wrap">\n      <input type="search" value="' +
+      defaultValue +
+      '" aria-label="Search text" />\n      <div class="clear-button">\n        <svg width="26" height="24">\n          <circle cx="12" cy="12" r="11" fill="#ccc" />\n          <path stroke="white" stroke-width="2" d="M8.25,8.25,15.75,15.75" />\n          <path stroke="white" stroke-width="2"d="M8.25,15.75,15.75,8.25" />\n        </svg>\n      </div>\n    </div>\n    <div class="results-panel"></div>\n    </div>';
+    var el = Docsify.dom.create("div", html);
+    var aside = Docsify.dom.find("aside");
+
+    Docsify.dom.toggleClass(el, "search");
+    Docsify.dom.before(aside, el);
+  }
+
+  function doSearch(value) {
+    var $search = Docsify.dom.find("div.search");
+    var $panel = Docsify.dom.find($search, ".results-panel");
+    var $clearBtn = Docsify.dom.find($search, ".clear-button");
+    var $sidebarNav = Docsify.dom.find(".sidebar-nav");
+    var $appName = Docsify.dom.find(".app-name");
+
+    if (!value) {
+      $panel.classList.remove("show");
+      $clearBtn.classList.remove("show");
+      $panel.innerHTML = "";
+
+      if (options.hideOtherSidebarContent) {
+        $sidebarNav && $sidebarNav.classList.remove("hide");
+        $appName && $appName.classList.remove("hide");
+      }
+
+      return;
+    }
+
+    var matchs = search(value);
+
+    var html = "";
+    matchs.forEach(function (post) {
+      html +=
+        '<div class="matching-post">\n<a href="' +
+        post.url +
+        '">\n<h2>' +
+        post.title +
+        "</h2>\n<p>" +
+        post.content +
+        "</p>\n</a>\n</div>";
+    });
+
+    $panel.classList.add("show");
+    $clearBtn.classList.add("show");
+    $panel.innerHTML = html || '<p class="empty">' + NO_DATA_TEXT + "</p>";
+    if (options.hideOtherSidebarContent) {
+      $sidebarNav && $sidebarNav.classList.add("hide");
+      $appName && $appName.classList.add("hide");
+    }
+  }
+
+  function bindEvents() {
+    var $search = Docsify.dom.find("div.search");
+    var $input = Docsify.dom.find($search, "input");
+    var $inputWrap = Docsify.dom.find($search, ".input-wrap");
+
+    var timeId;
+
+    /**
+      Prevent to Fold sidebar.
+
+      When searching on the mobile end,
+      the sidebar is collapsed when you click the INPUT box,
+      making it impossible to search.
+     */
+    Docsify.dom.on($search, "click", function (e) {
+      return (
+        ["A", "H2", "P", "EM"].indexOf(e.target.tagName) === -1 &&
+        e.stopPropagation()
+      );
+    });
+    Docsify.dom.on($input, "input", function (e) {
+      clearTimeout(timeId);
+      timeId = setTimeout(function (_) {
+        return doSearch(e.target.value.trim());
+      }, 100);
+    });
+    Docsify.dom.on($inputWrap, "click", function (e) {
+      // Click input outside
+      if (e.target.tagName !== "INPUT") {
+        $input.value = "";
+        doSearch();
+      }
+    });
+  }
+
+  function updatePlaceholder(text, path) {
+    var $input = Docsify.dom.getNode('.search input[type="search"]');
+
+    if (!$input) {
+      return;
+    }
+
+    if (typeof text === "string") {
+      $input.placeholder = text;
+    } else {
+      var match = Object.keys(text).filter(function (key) {
+        return path.indexOf(key) > -1;
+      })[0];
+      $input.placeholder = text[match];
+    }
+  }
+
+  function updateNoData(text, path) {
+    if (typeof text === "string") {
+      NO_DATA_TEXT = text;
+    } else {
+      var match = Object.keys(text).filter(function (key) {
+        return path.indexOf(key) > -1;
+      })[0];
+      NO_DATA_TEXT = text[match];
+    }
+  }
+
+  function updateOptions(opts) {
+    options = opts;
+  }
+
+  function init$1(opts, vm) {
+    var keywords = vm.router.parse().query.s;
+
+    updateOptions(opts);
+    style();
+    tpl(keywords);
+    bindEvents();
+    keywords &&
+      setTimeout(function (_) {
+        return doSearch(keywords);
+      }, 500);
+  }
+
+  function update(opts, vm) {
+    updateOptions(opts);
+    updatePlaceholder(opts.placeholder, vm.route.path);
+    updateNoData(opts.noData, vm.route.path);
+  }
+
+  /* eslint-disable no-unused-vars */
+
+  var CONFIG = {
+    placeholder: "Type to search",
+    noData: "No Results!",
+    paths: "auto",
+    depth: 2,
+    maxAge: 86400000, // 1 day
+    hideOtherSidebarContent: false,
+    namespace: undefined,
+    pathNamespaces: undefined,
+  };
+
+  var install = function (hook, vm) {
+    var util = Docsify.util;
+    var opts = vm.config.search || CONFIG;
+
+    if (Array.isArray(opts)) {
+      CONFIG.paths = opts;
+    } else if (typeof opts === "object") {
+      CONFIG.paths = Array.isArray(opts.paths) ? opts.paths : "auto";
+      CONFIG.maxAge = util.isPrimitive(opts.maxAge)
+        ? opts.maxAge
+        : CONFIG.maxAge;
+      CONFIG.placeholder = opts.placeholder || CONFIG.placeholder;
+      CONFIG.noData = opts.noData || CONFIG.noData;
+      CONFIG.depth = opts.depth || CONFIG.depth;
+      CONFIG.hideOtherSidebarContent =
+        opts.hideOtherSidebarContent || CONFIG.hideOtherSidebarContent;
+      CONFIG.namespace = opts.namespace || CONFIG.namespace;
+      CONFIG.pathNamespaces = opts.pathNamespaces || CONFIG.pathNamespaces;
+    }
+
+    var isAuto = CONFIG.paths === "auto";
+
+    hook.mounted(function (_) {
+      init$1(CONFIG, vm);
+      !isAuto && init(CONFIG, vm);
+    });
+    hook.doneEach(function (_) {
+      update(CONFIG, vm);
+      isAuto && init(CONFIG, vm);
+    });
+  };
+
+  $docsify.plugins = [].concat(install, $docsify.plugins);
+})();
+
+  
+  </script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/external-script.min.js"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
   <script type="text/javascript"
@@ -249,12 +922,162 @@
   <script type="text/javascript"
     src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse@1.3.5/dist/docsify-sidebar-collapse.min.js"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/ga.min.js"></script>
-  
+ 
   <!-- Custom Plugins -->
-  <script type="text/javascript">
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const sidebar = document.querySelector(".sidebar");
+      const mainPanel = document.querySelector(".content article");
+      const searchInput = sidebar
+        ? sidebar.querySelector('input[type="search"]')
+        : null;
+      const clearButton = sidebar ? sidebar.querySelector(".clear-button") : null; // Target the clear button
+
+      let isSearchActive = false; // Track whether search is active
+      const overlay = document.createElement("div"); // Create overlay element
+
+      if (!sidebar || !mainPanel || !searchInput) {
+        console.error(
+          "Required elements are missing: sidebar, content, or search input."
+        );
+        return;
+      }
+      overlay.id = "search-overlay"; // Assign an ID to the overlay
+
+      document.body.appendChild(overlay); // Append overlay to body
+
+      // Function to update the overlay with search results
+      function updateSearchResults() {
+        const searchResults = sidebar.querySelector(".results-panel.show");
+        if (!searchResults) return;
+
+        const resultItems = searchResults.querySelectorAll(".matching-post");
+        const resultCount = resultItems.length;
+
+        // Create search result content
+        const searchResultsContent = `
+          <div id="search-results">
+            <button id="close-search-results" class="spot-btn pink">Close Results</button>
+            <h1>Search Results (${resultCount} ${
+          resultCount === 1 ? "Result" : "Results"
+        })</h1>
+            ${searchResults.innerHTML}
+          </div>
+        `;
+
+        // Set the overlay content
+        overlay.innerHTML = searchResultsContent;
+        overlay.style.display = "block"; // Show overlay
+        isSearchActive = true;
+
+        // Add event listener to close the custom search results button
+        const closeButton = document.getElementById("close-search-results");
+        if (closeButton) {
+          closeButton.addEventListener("click", function (event) {
+            event.stopPropagation(); // Prevent click from closing overlay
+            closeOverlayAndResetSearch(); // Close overlay and reset search input
+          });
+        }
+
+        // Add event listener to close overlay when clicking anywhere inside
+        overlay.addEventListener("click", function () {
+          closeOverlayAndResetSearch(); // Close overlay and reset search input
+        });
+
+        // Prevent the overlay from closing when clicking on the search results
+        const resultLinks = overlay.querySelectorAll(".matching-post");
+        resultLinks.forEach(function (link) {
+          link.addEventListener("click", function (event) {
+            event.stopPropagation(); // Prevent the overlay from closing
+          });
+        });
+      }
+
+      // Event listener for search input changes
+      searchInput.addEventListener("input", function (event) {
+        const query = event.target.value.trim();
+        if (!query) {
+          overlay.style.display = "none"; // Hide overlay if search is cleared
+          isSearchActive = false;
+        }
+      });
+
+      // Function to close overlay and reset search input (mimicking clear button behavior)
+      function closeOverlayAndResetSearch() {
+        // Hide the overlay
+        overlay.style.display = "none";
+        isSearchActive = false;
+
+        // Clear search input and reset to default state
+        if (searchInput) {
+          searchInput.value = ""; // Clear the input
+          searchInput.focus(); // Optional: refocus the search input if needed
+        }
+
+        // Remove the .show class from the .clear-button
+        if (clearButton) {
+          clearButton.classList.remove("show");
+        }
+      }
+
+      // Ensure clicking sidebar items restores the original content and closes the overlay
+      sidebar.addEventListener("click", function (event) {
+        const target = event.target.closest("a");
+        if (target && isSearchActive) {
+          // Hide the overlay when clicking a sidebar link if search is active
+          overlay.style.display = "none"; // Hide overlay
+          isSearchActive = false;
+
+          // Allow the sidebar link to load the content
+          const linkHref = target.getAttribute("href");
+          if (linkHref) {
+            window.location.href = linkHref; // This simulates the navigation
+          }
+        }
+      });
+
+      // Ensure both the native and custom close buttons hide the overlay and reset the search
+      const nativeCloseButton = sidebar.querySelector(".clear-button");
+      if (nativeCloseButton) {
+        nativeCloseButton.addEventListener("click", function (event) {
+          event.stopPropagation(); // Prevent click from closing overlay
+          closeOverlayAndResetSearch(); // Close overlay and reset search input
+        });
+      }
+
+      // Observe sidebar changes to update search results dynamically
+      const sidebarObserver = new MutationObserver(function () {
+        const searchResults = sidebar.querySelector(".results-panel.show");
+        if (searchResults) {
+          updateSearchResults(); // Update overlay with search results
+        }
+      });
+
+      sidebarObserver.observe(sidebar, {
+        childList: true,
+        subtree: true,
+      });
+    });
+
     (function () {
       function customPlugins(hook) {
         hook.doneEach(function () {
+          // Wait for Docsify to initialize
+          document.addEventListener("click", function (event) {
+            // Check if the clicked element is a search result
+            if (
+              event.target.matches(".matching-post") ||
+              event.target.closest(".matching-post")
+            ) {
+              // Add the class to the body
+              document.body.classList.add("search-result-clicked");
+
+              // Optional: Remove the class after a delay (if needed)
+              setTimeout(() => {
+                document.body.classList.remove("search-result-clicked");
+              }, 2000); // Adjust the delay as needed
+            }
+          });
           // Feedback Button
           const updateFeedbackButton = () => {
             const markdownSection = document.querySelector(".markdown-section");
@@ -273,7 +1096,6 @@
             }
           };
           updateFeedbackButton();
-
           // Sticky Sidebar
           const observer = new MutationObserver(function (mutations) {
             mutations.forEach(function () {
@@ -287,23 +1109,25 @@
                   tocElement.classList.remove("scrolled");
                 }
               }
-
               if (tocElement) {
                 window.addEventListener("scroll", checkScroll);
                 observer.disconnect();
               }
             });
           });
-          observer.observe(document.body, { childList: true, subtree: true });
+          observer.observe(document.body, {
+            childList: true,
+            subtree: true,
+          });
         });
       }
-
       window.$docsify.plugins = [].concat(
         customPlugins,
         window.$docsify.plugins || []
       );
-    })();
+})();
   </script>
+  
 
   
 </body>
