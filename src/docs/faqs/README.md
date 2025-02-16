@@ -894,19 +894,17 @@ Reimport Fargate services with less than 5 security groups and choose only one s
 
   <div style="padding-left:16px">
 
-   If your virtual node group or Elastigroup has more on-demand instances than defined, your extra instances are reverted to spot instances when they become available. This is called the fix strategy.
+   If your virtual node group has more on-demand instances than defined, your extra instances are reverted to spot instances when they become available. This is called the fix strategy.
 
 If you see this message in the log:
 
 <pre><code>DEBUG, Replacement of type Out of strategy for instance i-xxx has been canceled. Reason for cancelation: Instance contains stand-alone tasks, and the group's configuration doesn't allow termination of stand-alone tasks.</code></pre>
 
-It means that your strategy cannot be fixed and your spot instances cannot be reverted to spots. This is because you have standalone tasks in the instances, and the group's configuration can't stop standalone tasks. These instances cannot be scaled down by the autoscaler.
+It means that your strategy cannot be fixed and your spot instances cannot be reverted to spot instances. This is because you have standalone tasks in the instances, and the group's configuration can't stop standalone tasks. The autoscaler cannot scale down these instances.
 
-[Update the cluster](https://docs.spot.io/api/#tag/Ocean-ECS/operation/OceanECSClusterUpdate) to include <code>"shouldScaleDownNonServiceTasks": true</code>.
+Update the cluster [in the API](https://docs.spot.io/api/#tag/Ocean-ECS/operation/OceanECSClusterUpdate) or in the cluster's JSON file to include <code>"shouldScaleDownNonServiceTasks": true</code>.
 
-The standalone task and instance are terminated and are not redeployed in Elastigroup because they weren't created as part of a service.
-
-See [What is Amazon Elastic Container Service](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs_run_task.html).
+The standalone task and instance are terminated and are not redeployed because they weren't created as part of a service.
    
  </div>
 
