@@ -894,19 +894,17 @@ Reimport Fargate services with less than 5 security groups and choose only one s
 
   <div style="padding-left:16px">
 
-   If your virtual node group or Elastigroup has more on-demand instances than defined, your extra instances are reverted to spot instances when they become available. This is called the fix strategy.
+   If your virtual node group has more on-demand instances than defined, your extra instances are reverted to spot instances when they become available. This is called the fix strategy.
 
 If you see this message in the log:
 
 <pre><code>DEBUG, Replacement of type Out of strategy for instance i-xxx has been canceled. Reason for cancelation: Instance contains stand-alone tasks, and the group's configuration doesn't allow termination of stand-alone tasks.</code></pre>
 
-It means that your strategy cannot be fixed and your spot instances cannot be reverted to spots. This is because you have standalone tasks in the instances, and the group's configuration can't stop standalone tasks. These instances cannot be scaled down by the autoscaler.
+It means that your strategy cannot be fixed and your spot instances cannot be reverted to spot instances. This is because you have standalone tasks in the instances, and the group's configuration can't stop standalone tasks. The autoscaler cannot scale down these instances.
 
-[Update the cluster](https://docs.spot.io/api/#tag/Ocean-ECS/operation/OceanECSClusterUpdate) to include <code>"shouldScaleDownNonServiceTasks": true</code>.
+Update the cluster [in the API](https://docs.spot.io/api/#tag/Ocean-ECS/operation/OceanECSClusterUpdate) or in the cluster's JSON file to include <code>"shouldScaleDownNonServiceTasks": true</code>.
 
-The standalone task and instance are terminated and are not redeployed in Elastigroup because they weren't created as part of a service.
-
-See [What is Amazon Elastic Container Service](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs_run_task.html).
+The standalone task and instance are terminated and are not redeployed because they weren't created as part of a service.
    
  </div>
 
@@ -2572,7 +2570,6 @@ You can use your own AMI and configure IMDSv2 on it. All instances launched afte
 
  </details>
 
-
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="ssn-deletedeni">AWS: What happens if an elastic network interface (ENI) is deleted?</summary>
 
@@ -2589,6 +2586,45 @@ When the IP is in use, the node is rolled back. You can see more information in 
 
  </details>
 
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ssn-ippersist">AWS: What happens if a node has IP persistence and its security groups are updated?</summary>
+
+  <div style="padding-left:16px">
+
+If a stateful node has [IP persistence](managed-instance/features/network-persistence), the persistent elastic network interface (ENI) is set with the node’s current security groups. When the node resumes:
+
+* If the ENI has security groups that aren’t in the node, the security nodes are removed from the ENI.
+* If the group has security groups that aren’t in the ENI, the security nodes are added to the ENI.
+
+ </div>
+
+ </details>
+ 
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ssn-publicip">AWS: Can I use a public IP if the node has private IP persistence?</summary>
+
+  <div style="padding-left:16px">
+
+   Depending on your setup, you can assign a public IP:
+
+* If the instance has [Elastic IP](managed-instance/features/network-persistence?id=public-ip-persistence), you can assign a public IP after it is launched.
+* You can assign a public IP before launching an instance, or set up the subnet for [automatically assigning public IPs](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-ip-addressing.html#vpc-public-ipv4-addresses) when launching a new instance.
+* If the instance has private IP persistence, you need to:
+   
+   <ol style="list-style-type: lower-alpha;">
+   <li>In the AWS console, enable <a href="https://docs.aws.amazon.com/vpc/latest/userguide/subnet-public-ip.html">auto-assign IPv4</a>.</li>
+   <li>In the Spot console, <a href="https://docs.spot.io/managed-instance/features/managed-instance-actions?id=pause">pause</a> the stateful node.</li>
+   <li>Edit the stateful node > <b>Advanced</b> > <b>Public IP Assignment</b> and select <i>According to subnet default</i> or <i>Associate public IP</i>.</li>
+   <li>In the AWS console, <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/delete_eni.html">delete the ENI</a>.</li>
+   <li>In the Spot console, <a href="https://docs.spot.io/managed-instance/features/managed-instance-actions?id=resume">resume</a> the stateful node. This will create a new ENI with the private IP from the IP pool and assign it with a public IP according to the subnet settings.</li>
+  </ol>
+
+
+ </div>
+
+ </details>
+ 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="ssn-statichostname">AWS: Can I use a static hostname?</summary>
 
