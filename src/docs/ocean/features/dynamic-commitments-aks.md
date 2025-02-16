@@ -64,7 +64,23 @@ Azure SPs offer a flexible pricing model that lets you save up to 65% on your Az
 
 Revert from on-demand RIs when they can be used in other workloads to increase commitments coverage replacement. When working with dynamic workloads in the cloud, Ocean, Elastgroup, and Stateful Node adjust to application requirements, needs, and usage changes at any time. Ocean, Elastgroup, and Stateful track commitments are necessary conditions for initiating proactive replacements, thus increasing the account’s commitment coverage to decrease excessive on-demand usage. Ocean, Elastgroup, and Stateful achieve this by reverting to a different allocation plan or potentially using spot instances based on the user's risk configuration, therefore providing ongoing optimal adjustments.
 
-## How It Works
+## Commitments Scenarios
+
+###  Launching a VM
+
+Ocean checks if an RI or SP applies to the market selection. If so, Ocean utilizes that RI/SP.
+
+###  Running Spot Instances
+
+Ocean replaces spot VMs with regular VMs and utilizes RI/SP if applicable.
+
+###  Running Regular Instances
+
+Ocean utilizes RI/SP as a wrapper for a regular VM if applicable to cost savings.
+
+###  Running Regular (RI/SP) VMs
+
+Ocean Checks if RI/SP is needed elsewhere. If so, Ocean replaces it with a spot or regular (RI/SP) from a different plan, as follows:
 
 Ocean performs a strategy fix check every **xx (to check)** minutes to determine if a running RI or SP can be replaced to free up the commitment needed elsewhere in the account. 
 
@@ -74,14 +90,16 @@ Ocean performs a strategy fix check every **xx (to check)** minutes to determine
 
 2. **Ocean checks if the commitment is needed elsewhere**: Ocean constantly checks if a different resource can utilize a commitment in your Azure account, ultimately meeting the risk percentage and required strategy.
 
-3. **Replacement**: Ocean/Elastigroup/Stateful Node will perform the replacement if the terms are met.
+3. **Replacement**: Ocean/Elastigroup/Stateful Node will replace if the terms are met.
 
-5. **Launch spot or an on-demand (RI/SP)**: Ocean/Elastigroup/Stateful Node launches a different spot or an alternative on-demand RI to ensure a different plan is used. This increases commitment coverage to help reach optimal allocation.
+4. **Launch spot or regular(RI/SP)**: Ocean/Elastigroup/Stateful Node launches a different spot or an alternative regular RI/SP to ensure a different plan is used. This increases commitment coverage to help reach optimal allocation.
 
 The reversion will not occur if:
 
-* There is no alternative commitment or spot instance to revert back to. 
-* It violates the group's on-demand count request. 
+* There is no alternative commitment or spot VM to revert back to. 
+* It violates the group's regular VM count request. 
+
+
 
 ## Configure in the API 
 
@@ -122,6 +140,11 @@ Follow the instructions below while referring to the [Azure documentation](https
 
 ###  Step 3: Permissions Assignment
 
+The first time you want to use dynamic commitments, you must add permissions at the tenant level so Spot can connect to Azure cluster environments. These permissions provide you with access to all the resources under the same tenant.
+Once the permissions exist, you can turn on dynamic commitments at the virtual node group level.
+>Note: If this step is not successful, check your Azure environment.
+
+
 1.  Use the following Azure PowerShell script to assign the Reservation Reader role at the tenant level with PowerShell:
 
 ```
@@ -140,6 +163,10 @@ New-AzRoleAssignment -Scope "/providers/Microsoft.BillingBenefits" -ApplicationI
 2.  Optional- Check **true** on the Saving Plan Permission if you want to add and include it.
 3.  Click **Test RIs/SPs to Spot Permissions** to verify that your permissions have been successfully granted.
     *  The toggle should change to **on** for the specific virtual node group.
+  
+##  Turn Utilize Commitments On/Off per Virtual Node Group
+
+1. Make sure that tenant-level permissions are successfully granted.
 
 
 
