@@ -2608,18 +2608,19 @@ If a stateful node has [IP persistence](managed-instance/features/network-persis
 
    Depending on your setup, you can assign a public IP:
 
-* If the instance has [Elastic IP](managed-instance/features/network-persistence?id=public-ip-persistence), you can assign a public IP after it is launched.
-* You can assign a public IP before launching an instance, or set up the subnet for [automatically assigning public IPs](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-ip-addressing.html#vpc-public-ipv4-addresses) when launching a new instance.
-* If the instance has private IP persistence, you need to:
-   
-   <ol style="list-style-type: lower-alpha;">
-   <li>In the AWS console, enable <a href="https://docs.aws.amazon.com/vpc/latest/userguide/subnet-public-ip.html">auto-assign IPv4</a>.</li>
-   <li>In the Spot console, <a href="https://docs.spot.io/managed-instance/features/managed-instance-actions?id=pause">pause</a> the stateful node.</li>
-   <li>Edit the stateful node > <b>Advanced</b> > <b>Public IP Assignment</b> and select <i>According to subnet default</i> or <i>Associate public IP</i>.</li>
-   <li>In the AWS console, <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/delete_eni.html">delete the ENI</a>.</li>
-   <li>In the Spot console, <a href="https://docs.spot.io/managed-instance/features/managed-instance-actions?id=resume">resume</a> the stateful node. This will create a new ENI with the private IP from the IP pool and assign it with a public IP according to the subnet settings.</li>
-  </ol>
+   * If the instance has [Elastic IP](managed-instance/features/network-persistence?id=public-ip-persistence), you can assign a public IP after it is launched.
+  
+   * You can assign a public IP before launching an instance, or set up the subnet for [automatically assigning public IPs](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-ip-addressing.html#vpc-public-ipv4-addresses) when launching a new instance.
 
+   * If the instance has private IP persistence, you need to:
+   
+      <ol style="list-style-type: lower-alpha;">
+      <li>In the AWS console, enable <a href="https://docs.aws.amazon.com/vpc/latest/userguide/subnet-public-ip.html">auto-assign IPv4</a>.</li>
+      <li>In the Spot console, <a href="https://docs.spot.io/managed-instance/features/managed-instance-actions?id=pause">pause</a> the stateful node.</li>
+      <li>Edit the stateful node > <b>Advanced</b> > <b>Public IP Assignment</b> and select <i>According to subnet default</i> or <i>Associate public IP</i>.</li>
+      <li>In the AWS console, <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/delete_eni.html">delete the ENI</a>.</li>
+      <li>In the Spot console, <a href="https://docs.spot.io/managed-instance/features/managed-instance-actions?id=resume">resume</a> the stateful node. This will create a new ENI with the private IP from the IP pool and assign it with a public IP according to the subnet settings.</li>
+     </ol>
 
  </div>
 
