@@ -2580,7 +2580,7 @@ You can use your own AMI and configure IMDSv2 on it. All instances launched afte
 
 When an elastic network interface (ENI) is deleted, the stateful node tries to create a new ENI. If the stateful node can’t create a new ENI for the specific free IP, you will get a message that the ENI doesn’t exist. Elastigroup rolls back the node to a paused state.
 
-When the IP is in use, the node is rolled back. You can see more information in the Spot console. Go to Elastigroup > Stateful Nodes and select the node. In the node:
+When the IP is in use, the node is rolled back. You can see more information in the Spot console. Go to **Elastigroup** > **Stateful Nodes** and select the node. In the node:
 
 * You can see a message with the details.
 * On the Log tab, you can see an entry with the details.
