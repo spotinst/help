@@ -44,6 +44,7 @@ For example, you can see:
 
     </details>
 
+
 * Activity broken down by events, such as scaling up/down and replacement (predictive rebalancing, commitment coverage, recovery, revert to spot, preferred, commitments). You can see activity for 6 hours, 24 hours, or 7 days. Hover over an event in the graph to see the details of the activity.
 
 * Details of the group, such as ID, instance types, availability zones, when it was created, load balancers, integrations, AMI, persisted resources.
