@@ -1,7 +1,5 @@
 # Dynamic Commitment Management
 
-## Overview
-
 Elastigroup and Ocean automatically revert existing instances using reserved capacity (RI) and savings plans (SP) to spot instances or other commitment deals wherever a reservation is needed elsewhere in your AWS account. This feature optimizes resource allocation and cost efficiency by continuously adjusting to dynamic environment needs. 
 
 This is in accordance with the Ocean and Elastigroup commitment prioritization mechanism, which prioritizes available reserved instances and savings plan commitments over spot or full-priced on-demand instances.
@@ -9,18 +7,20 @@ This procedure describes how application workloads that require on-demand instan
 
 You can track dynamic compute commitment utilization and coverage with your AWS Cost Usage report.
 
-## Feature Benefits 
-
 By prioritizing reserved instances and savings plan commitments, this feature continually adapts to the dynamic needs of your environment. Dynamic commitments management lets you:
 
-* Prioritize Available RIs and SPs.
-* Revert from On-demand RI and SPs.
+* Prioritize available reserved instances and savings plans
+* Revert from on-demand reserved instances and savings plans
 
-## Prioritize Available RIs and SPs
+## Prioritize Available Reserved Instances and Savings Plans
 
-Prioritize available reserved instances and savings plans to prevent their underutilization. See [Utilize Commitment Plans](elastigroup/features/core-features/spot-reserved-on-demand-instances?id=utilize-commitment-plans). 
+Prioritize available reserved instances and savings plans to prevent their underutilization. 
 
-## Revert from On-demand RIs and SPs
+Elastigroup assists in optimizing the utilization of account commitment plans to ensure minimal waste. Utilize commitment plans enables Elastigroup to check on-demand instances to ensure there aren’t any vacant savings plans or reserved instances that match instance types defined in its configuration.
+
+The default behavior of this feature is to utilize commitment plans associated to the connected cloud account. If you want to enable cross-account utilization, contact the support team.
+
+## Revert from On-demand Reserved Instances and Savings Plans
 
 Revert from on-demand reserved instances when they can be used in other workloads to increase commitments coverage replacement. When working with dynamic workloads in the cloud, Elastigroup/Ocean adjusts to changes in the application requirements, needs, and usage at any time. Elastigroup/Ocean tracks commitments as a necessary condition for initiating proactive replacements, thus increasing the account’s commitment coverage to decrease excessive on-demand usage. Ocean/Elastgroup achieves this by reverting to a different allocation plan or potentially using spot instances based on the user's risk configuration, therefore providing ongoing optimal adjustments.
 
