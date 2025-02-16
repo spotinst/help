@@ -1,71 +1,114 @@
-# Elastigroup Overview
+# Groups
 
-The Elastigroup Overview tab gives you quick access to insights and summary data about the group. You can obtain an overview of your current cost efficiency status, detailed Elastigroup information, and tracking of group analytics.
+The Groups page shows you all the details about your Elastigroup. In addition, you can edit and manage the group from this page. The information you can see depends on your features and integrations.
 
-To get to the Elastigroup Overview tab, do the following:
+1. In the Spot console, go to **Elastigroup** > **Groups**.
+2. Click an **Elastigroup Name**.
 
-1. In the Spot console, go to Elastigroup in the menu tree and click Groups.
-2. In the [list of Elastigroups](elastigroup/tutorials/elastigroup-actions-menu/elastigroup-management), click on an Elastigroup Name.
+<details>
+   <summary markdown="span">View image</summary>
 
-<img src="/elastigroup/_media/tutorials-elastigroup-overview-01.png" />
+  <img width=700 src="https://github.com/user-attachments/assets/3698a171-263b-44c4-aa77-2080773e21a1">
 
-The Elastigroup page opens with the Overview tab open and the group name at the top.
+</details>
 
-The Overview page includes the following main areas:
 
-- Elastigroup Stats
-- Elastigroup Info
-- Summary Charts
-- [Predictive Autoscaling](elastigroup/features/scaling/predictive-autoscaling) Analytics
+In an Elastigroup, from Actions, you can:
 
-## Elastigroup Stats
+* Edit configuration
+* [Manage capacity](elastigroup/tutorials/elastigroup-actions-menu/manage-group-capacity)
+* [Deploy](elastigroup/tutorials/elastigroup-actions-menu/deploy-or-roll-elastigroup)
+* [Add notification](elastigroup/tutorials/elastigroup-actions-menu/create-notifications)
+* View configuration to see or export the config JSON
+* [Set health check](elastigroup/tutorials/elastigroup-actions-menu/set-health-checks)
+* [Suspend processes](elastigroup/tutorials/elastigroup-actions-menu/suspend-processes)
+* Delete group
 
-Elastigroup Stats is a summary line providing insights into your group usage. The default display shows statistics from the first of the month to the current date. You can also see the numbers for the last seven days and the last 30 days. The following information is presented:
+## Overview
 
-- Instances: The number of instances running in the Elastigroup.
-- Hours: Total number of instance running hours in the selected time period.
-- Potential: Your estimated compute cost if you had run all on-demand instances in the selected time period.
-- Actual: Your calculated compute cost for the selected time period using spot instances.
-- Savings: Percent savings comparing your actual cost to your potential cost.
-- Saved: The amount of money (in dollars) you saved during the selected time period.
+The overview tab gives you quick access to insights and summary data about the group. You can see an overview of your current cost efficiency status, detailed Elastigroup information, and track group analytics.
 
-## Elastigroup Info
+For example, you can see:
 
-The Elastigroup Info area gives you a quick point of reference for vital information about the group.
+* Summary information about the group
 
-<img src="/elastigroup/_media/tutorials-elastigroup-overview-02.png" />
+   <details>
+    <summary markdown="span">See more about the group</summary>
 
-The list of items appearing in this area may vary according to the specific features and integrations (such as load balancers) you have enabled in your Elastigroup configuration. Typically, the following items will appear:
+    * <b>Running instances</b> is the number of instances running in the Elastigroup.
+    * <b>Spot running hours</b> is the total number of spot instances running hours in the selected time period.
+    * <b>Actual cost</b> is your calculated compute cost for the selected time period using spot instances.
+    * <b>On-demand costs</b> is the amount of money in dollars you spent for on-demand instances.
+    * <b>Saved</b> is the amount of money in dollars you saved during the selected time period.
+    * <b>Savings percentage</b> is the percent savings comparing your actual cost to your potential cost.
 
-- Name
-- Group ID
-- Availability Zone
-- AMI
-- Allowed Instance Types
-- Creation Date
-- VPC
-- Security Groups
+    </details>
 
-## Summary Charts
+* Activity broken down by events, such as scaling up/down and replacement (predictive rebalancing, commitment coverage, recovery, revert to spot, preferred, commitments). You can see activity for 6 hours, 24 hours, or 7 days. Hover over an event in the graph to see the details of the activity.
 
-If you do not have predictive autoscaling enabled, the following charts are displayed:
+* Details of the group, such as ID, instance types, availability zones, when it was created, load balancers, integrations, AMI, persisted resources.
 
-- Instance Count: This chart shows the number of active instances over time and enables you to see events that triggered a scale up or a scale down.
-- Distribution: This chart shows the number of your instances in each market. Elastigroup distributes instances among different markets to increase high-availability.
+## Instances
 
-<img src="/elastigroup/_media/tutorials-elastigroup-overview-03.png" />
+The instances tab shows you the list of instances in your Elastigroup. You can select the fields you see by clicking the column selector <img height=18 src="https://github.com/user-attachments/assets/e5bc0ee3-3053-443d-a9b4-7642b68f95fe">. Click on an instance to open it in the AWS console.
 
-## Predictive Autoscaling Analytics
+From **Actions**, you can:
 
-When you have predictive autoscaling enabled, you will see the following graphs:
+* Detach instances to remove them and launch new ones:
+   * **Draining timeout** in seconds lets you set how long to keep the instance active before terminating.
+   * **Decrement group’s capacity** lets you change the group instance count target, reducing it by a single instance. This means no replacement instance is launched. If you want replacement instances launched, do <i>not</i> select Decrement group’s capacity.
 
-- Activity & Prediction: Shows the instance counts and events over time along with the forecast of the number of instances that will be required at any time.
+* Lock instances to prevent them from being scaled down during autoscaling. You set how long the protection lasts. Fix strategy is also prevented.
+   Locking does not prevent:
+    * A spot interruption if one occurs.
+    * Node replacement during a cluster roll.
 
-<img src="/elastigroup/_media/tutorials-elastigroup-overview-04.png" />
+## Costs
 
-- Predicted vs. Actual: The predicted sum of vCPUs vs. the exact count of vCPUs in the group at that time.
+The costs tab gives you a clear breakdown of expenses for the group, identifying trends, and helps you make decisions about your Elastigroup usage. You can view by compute lifecycle or all resources.
 
-<img src="/elastigroup/_media/tutorials-elastigroup-overview-05.png" />
+Daily spend breakdown shows you how much your compute cost was on each day of the time period. Hover on the graph to see the amounts for a specific day.
 
-- Distribution: The number of your instances in each market.
-- CPU Utilization: The CPU utilization in the group. This is presented as the sum of CPU utilization per instance type in the group. (For example, if there are two m5.2xalrge instances with a CPU utilizaiton of 2 percent each, then the value in this graph will be 4.)
+You can see the compute lifecycle broken down by spot, on-demand, reserved instances, and commitments. For all resources, you have network, storage, and compute.
+
+<details>
+   <summary markdown="span">View image</summary>
+
+  <img width=700 src="https://github.com/user-attachments/assets/a65ab46e-5c43-4404-a01c-6aab83750779">
+
+</details>
+
+The summary shows the totals for both compute lifecycle and all resources.
+
+<details>
+   <summary markdown="span">View image</summary>
+
+  <img width=300 src="https://github.com/user-attachments/assets/d04681a1-68fd-4147-8990-a6fcb82fe230">
+
+</details>
+
+## Deployments
+
+The deployments tab shows you the list of deployments in your Elastigroup. Click on an ID to view details for the [deployment](elastigroup/tutorials/elastigroup-actions-menu/deploy-or-roll-elastigroup), such as when it was started and finished, launching new instances, detaching old instances.
+
+There are several reasons that a deployment could fail. Some of the more common issues are:
+
+* The grace period was too short.
+* A version of your application is problematic, for example, the codebase or a new AMI.
+* If more than 50% of the instances in a specific batch are unhealthy after the grace period, the deployment will fail.
+
+If a deployment fails, the instance remains running for troubleshooting purposes. Some instances in the Elastigroup may have the old configuration, while the rest may have the new configuration. To fix the failed roll, stop and detach either the old instances or the new onew. Update the Elastigroup configuration and deploy again to apply the configuration updates.
+
+Elastigroup will not start new deployments or any scaledown activities until the failed deployment is completely stopped or resolved.
+
+## Recommendations
+
+[Availability zone scores and recommendations](elastigroup/features/core-features/az-scores) assist you in making informed decisions when choosing the best availability zones to launch instances at. The data on the recommendation page is based on availability zone scores calculated by Elastigroup, taking both Cost and Spot markets availability into account. To ensure tailor-made data is displayed, the data comprising the availability zone scores is directly related to the allowed instance types configured in your group.
+
+## Monitoring
+
+The monitoring tab shows you information about the utilization of your Elastigroups. It helps you optimize resource allocation (right sizing), identify performance issues, and manage costs effectively. You can view graphs with historical vCPU and memory utilization data for the last 6 hours, 24 hours, 7 days, or 30 days. Memory utilization is available if a [CloudWatch agent](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/install-CloudWatch-Agent-on-EC2-Instance.html) is installed.
+
+## Log
+
+The log tab lists up to 1,000 logged messages at a time. You can filter on the date range, a severity, or a specific resource.
