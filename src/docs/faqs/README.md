@@ -2570,7 +2570,6 @@ You can use your own AMI and configure IMDSv2 on it. All instances launched afte
 
  </details>
 
-
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="ssn-deletedeni">AWS: What happens if an elastic network interface (ENI) is deleted?</summary>
 
@@ -2586,6 +2585,21 @@ When the IP is in use, the node is rolled back. You can see more information in 
  </div>
 
  </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ssn-ippersist">AWS: What happens if a node has IP persistence and its security groups are updated?</summary>
+
+  <div style="padding-left:16px">
+
+If a stateful node has [IP persistence](managed-instance/features/network-persistence), the persistent elastic network interface (ENI) is set with the node’s current security groups. When the node resumes:
+
+* If the ENI has security groups that aren’t in the node, the security nodes are removed from the ENI.
+* If the group has security groups that aren’t in the ENI, the security nodes are added to the ENI.
+
+ </div>
+
+ </details>
+ 
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="ssn-publicip">AWS: Can I use a public IP if the node has private IP persistence?</summary>
