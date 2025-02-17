@@ -617,6 +617,8 @@ export const aliases = (() => {
     "/elastigroup/tools-integrations/rightscale":
       "/elastigroup/tools-integrations/",
 
+    "/elastigroup/tutorials/": "/elastigroup/features/",
+
     "/elastigroup/tutorials/amazon-ecs/": "/ocean/getting-started/ecs",
 
     "/elastigroup/tutorials/amazon-ecs/configure-attributes-for-task-placement-constraints":
