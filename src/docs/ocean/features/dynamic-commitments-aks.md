@@ -66,7 +66,7 @@ Revert from on-demand RIs when they can be used in other workloads to increase c
 
 ## Commitments Scenarios
 
-<img width="1000" src="https://github.com/user-attachments/assets/309aefb3-ab96-4d3b-9c71-4f51d428426d" />
+<img width="1000" src="https://github.com/user-attachments/assets/ae781249-3fff-4647-9cc4-35bd8573abf8" />
 
 
 ###  Launching a VM
