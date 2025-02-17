@@ -66,15 +66,18 @@ Revert from on-demand RIs when they can be used in other workloads to increase c
 
 ## Commitments Scenarios
 
+<img width="1000" src="https://github.com/user-attachments/assets/309aefb3-ab96-4d3b-9c71-4f51d428426d" />
+
+
 ###  Launching a VM
 
 Ocean checks if an RI or SP applies to the market selection. If so, Ocean utilizes that RI/SP.
 
-###  Running Spot Instances
+###  Running Spot VMs
 
 Ocean replaces spot VMs with regular VMs and utilizes RI/SP if applicable.
 
-###  Running Regular Instances
+###  Running Regular VMs
 
 Ocean utilizes RI/SP as a wrapper for a regular VM if applicable to cost savings.
 
@@ -84,35 +87,18 @@ Ocean Checks if RI/SP is needed elsewhere. If so, Ocean replaces it with a spot 
 
 Ocean performs a strategy fix check every **xx (to check)** minutes to determine if a running RI or SP can be replaced to free up the commitment needed elsewhere in the account. 
 
-<img width="902" alt="dynamic-commitment" src="https://github.com/user-attachments/assets/00766f8d-2f81-4219-b394-c9a1004614f0"> **need to check workflow**
+1. **Running regular (RI/SP)**: A running regular VM attached to a specific RI or an SP uses a specific commitment. 
 
-1. **Running on-demand (RI/SP)**: A running on-demand instance attached to a certain RI or an SP uses a certain commitment. 
+2. **Ocean checks if the commitment is required elsewhere**: Ocean constantly checks if a different resource can utilize a commitment in your Azure account, ultimately meeting the risk percentage and required strategy.
 
-2. **Ocean checks if the commitment is needed elsewhere**: Ocean constantly checks if a different resource can utilize a commitment in your Azure account, ultimately meeting the risk percentage and required strategy.
+3. **Replacement**: Ocean will replace if the terms are met.
 
-3. **Replacement**: Ocean/Elastigroup/Stateful Node will replace if the terms are met.
-
-4. **Launch spot or regular(RI/SP)**: Ocean/Elastigroup/Stateful Node launches a different spot or an alternative regular RI/SP to ensure a different plan is used. This increases commitment coverage to help reach optimal allocation.
+4. **Launch spot or regular(RI/SP)**: Ocean launches a different spot or an alternative regular RI/SP to ensure a different plan is used. This increases commitment coverage to help reach optimal allocation.
 
 The reversion will not occur if:
 
 * There is no alternative commitment or spot VM to revert back to. 
 * It violates the group's regular VM count request. 
-
-
-
-## Configure in the API 
-
-You can use this feature at the cluster or virtual node group level:
-
-* [Create cluster]() or [Update cluster]()
-* [Create virtual node group]() or [Update virtual node group]()
-
-Set the `utilizecommitments` or `utilizeReservedInstances` parameter to `true`.
-
->**Note**: The default value for the `utilizeReservedInstances` parameter is `true`.
-
-For Elastigroup, use the [create and update elastigroup parameters]().
 
 ##  Connect Commitments to Spot Products
 
@@ -142,7 +128,7 @@ Follow the instructions below while referring to the [Azure documentation](https
 
 The first time you want to use dynamic commitments, you must add permissions at the tenant level so Spot can connect to Azure cluster environments. These permissions provide you with access to all the resources under the same tenant.
 Once the permissions exist, you can turn on dynamic commitments at the virtual node group level.
->Note: If this step is not successful, check your Azure environment.
+>Note: If this step is unsuccessful, check your Azure environment.
 
 
 1.  Use the following Azure PowerShell script to assign the Reservation Reader role at the tenant level with PowerShell:
@@ -164,10 +150,28 @@ New-AzRoleAssignment -Scope "/providers/Microsoft.BillingBenefits" -ApplicationI
 3.  Click **Test RIs/SPs to Spot Permissions** to verify that your permissions have been successfully granted.
     *  The toggle should change to **on** for the specific virtual node group.
   
-##  Turn Utilize Commitments On/Off per Virtual Node Group
+##  Enable Utilize Commitments per Virtual Node Group
 
 1. Make sure that tenant-level permissions are successfully granted.
 
 
 
+
+
+
+
+
+
+## Configure in the API 
+
+**COMMENT: Need to put AKS links and parameter names.**
+
+You can use this feature at the cluster or virtual node group level:
+
+* [Create cluster]() or [Update cluster]()
+* [Create virtual node group]() or [Update virtual node group]()
+
+Set the `utilizecommitments` or `utilizeReservedInstances` parameter to `true`.
+
+>**Note**: The default value for the `utilizeReservedInstances` parameter is `true`.
 
