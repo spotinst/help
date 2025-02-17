@@ -648,6 +648,9 @@ export const aliases = (() => {
     "/elastigroup/tutorials/amazon-eks/create-elastigroup-eks-cluster":
       "/ocean/getting-started/eks/",
 
+    "/elastigroup/tutorials/elastigroup-actions-menu/analyze-your-costs":
+      "/elastigroup/tutorials/elastigroup-actions-menu/elastigroup-overview",
+
     "/elastigroup/tutorials/elastigroup-actions-menu/elastigroup-management":
       "/elastigroup/tutorials/elastigroup-actions-menu/elastigroup-overview",
 
@@ -655,7 +658,10 @@ export const aliases = (() => {
       "/elastigroup/tutorials/elastigroup-actions-menu/elastigroup-overview",
 
     "/elastigroup/tutorials/elastigroup-actions-menu/view-spot-markets":
-      "/elastigroup/tutorials/elastigroup-actions-menu/",
+      "/elastigroup/tutorials/elastigroup-actions-menu/elastigroup-overview",
+
+    "/elastigroup/tutorials/elastigroup-actions-menu/view-load-balancers":
+      "/elastigroup/tutorials/elastigroup-actions-menu/elastigroup-overview",
 
     "/elastigroup/tutorials/elastigroup-actions-menu/view-spot-markets-z":
       "/elastigroup/tutorials/elastigroup-actions-menu/elastigroup-overview",
@@ -756,7 +762,7 @@ export const aliases = (() => {
       "/elastigroup/features/core-features/equal-az-instance-distribution-orientation",
 
     "/elastigroup-for-aws/concepts/general-concepts/instance-actions/":
-      "/elastigroup/features/core-features/instance-actions",
+      "/elastigroup/tutorials/elastigroup-actions-menu/elastigroup-overview",
 
     "/elastigroup-for-aws/concepts/general-concepts/maintenance-windows/":
       "/elastigroup/features/core-features/maintenance-windows",
@@ -901,13 +907,13 @@ export const aliases = (() => {
     "/elastigroup-for-aws/services-integrations/spotinst-custom-health-check-service-hcs-2/":
       "/elastigroup/tools-integrations/custom-health-check-service",
 
-    "/elastigroup-for-aws/tutorials/": "/elastigroup/tutorials/",
+    "/elastigroup-for-aws/tutorials/": "/elastigroup/features/",
 
     "/elastigroup-for-aws/tutorials/create-an-elastigroup-from-scratch/":
       "/elastigroup/tutorials/elastigroup-tasks/create-an-elastigroup-from-scratch",
 
     "/elastigroup-for-aws/tutorials/elastigroup-actions-menu/":
-      "/elastigroup/tutorials/elastigroup-actions-menu/",
+      "/elastigroup/tutorials/elastigroup-actions-menu/elastigroup-overview",
 
     "/elastigroup-for-aws/tutorials/elastigroup-actions-menu/deploy-roll-elastigroup/":
       "/elastigroup/tutorials/elastigroup-actions-menu/deploy-or-roll-elastigroup",
