@@ -1,11 +1,8 @@
-# Elastigroup Features
+# Elastigroup for AWS
 
-With Elastigroup, you will:
+With Elastigroup, you can:
 
 - Deliver fully optimized and automated infrastructure scaling
 - Automate infrastructure scaling, performance, and cost savings
 - Deliver availability and scalability for scale-out applications, at up to 90% lower cost
-
-This section describes Elastigroup features in detail.
-
 
