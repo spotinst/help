@@ -648,6 +648,9 @@ export const aliases = (() => {
     "/elastigroup/tutorials/amazon-eks/create-elastigroup-eks-cluster":
       "/ocean/getting-started/eks/",
 
+    "/elastigroup/tutorials/elastigroup-actions-menu/analyze-your-costs":
+      "/elastigroup/tutorials/elastigroup-actions-menu/elastigroup-overview",
+
     "/elastigroup/tutorials/elastigroup-actions-menu/elastigroup-management":
       "/elastigroup/tutorials/elastigroup-actions-menu/elastigroup-overview",
 
@@ -655,6 +658,9 @@ export const aliases = (() => {
       "/elastigroup/tutorials/elastigroup-actions-menu/elastigroup-overview",
 
     "/elastigroup/tutorials/elastigroup-actions-menu/view-spot-markets":
+      "/elastigroup/tutorials/elastigroup-actions-menu/elastigroup-overview",
+
+    "/elastigroup/tutorials/elastigroup-actions-menu/view-load-balancers":
       "/elastigroup/tutorials/elastigroup-actions-menu/elastigroup-overview",
 
     "/elastigroup/tutorials/elastigroup-actions-menu/view-spot-markets-z":
