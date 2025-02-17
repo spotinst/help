@@ -11,8 +11,9 @@ By prioritizing reserved instances and savings plan commitments, this feature co
 
 * Prioritize available reserved instances and savings plans
 * Revert from on-demand reserved instances and savings plans
+<p id=prioritize-available-ris-and-sps></p>
 
-<h2 id=prioritize-available-ris-and-sps>Prioritize Available Reserved Instances and Savings Plans</h2>
+## Prioritize Available Reserved Instances and Savings Plans
 
 Prioritize available reserved instances and savings plans to prevent their underutilization. 
 
