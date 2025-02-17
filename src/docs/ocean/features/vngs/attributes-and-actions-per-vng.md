@@ -20,7 +20,7 @@ Once configured, whenever the Ocean Autoscaler scales up, Ocean will automatical
 
 <p>id=turn-on/off-utilize-commitments-per-virtual-node-group</p>
 
-## Utilize Commitments per Virtual Node Group
+## Enable Utilize Commitments per Virtual Node Group
 
 Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>
 
