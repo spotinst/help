@@ -1,11 +1,11 @@
 # Ocean Controller Version 2 History
 
-## Chart Version [0.1.59] (v2.0.69) - 2024-01-02
+## Chart Version [0.1.59] (v2.0.69) - 2024-02-17
 
 ### Added
 * Added support for an enhanced draining operation, allowing more graceful pod shutdowns.
   
-## Chart Version [0.1.58] (v2.0.68) - 2024-01-02
+## Chart Version [0.1.58] (v2.0.68) - 2025-01-02
 
 ### Added
 * Added support for startup taints.
