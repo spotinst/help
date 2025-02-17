@@ -1,4 +1,4 @@
-# Elastigroup Features
+# Elastigroup for AWS
 
 With Elastigroup, you can:
 
