@@ -117,6 +117,22 @@ You can choose to remove some of these permissions from the [Spot IAM policy](/a
 
  </details>
 
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="scaleupdown">AWS: Why am I getting a <i>Scale down as part of instance recovery</i> or <i>Scale up as part of instance recovery</i> message?</summary>
+
+   <div style="padding-left:16px">
+
+You can get this log message if:
+
+* The instance is scaled down because of AWS’s capacity.
+* An instance replacement was initiated because of AWS’s capacity. A new instance is launched to replace an instance that was taken back because of AWS’s capacity.
+* An instance is manually terminated in AWS.
+
+You can add more [instance types](elastigroup/features/compute/preferred-instance-types?id=preferred-instance-types) and [availability zones](elastigroup/features/compute/preferred-availability-zones) to your group or cluster to reduce these types of replacements.
+
+ </div>
+
+ </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="SSO-signin">SSO: Why can't I sign in to the Spot console?</summary>
