@@ -159,7 +159,11 @@ You may get an error when you try to sign in to the Spot console if:
 
   Make sure you’re using the correct MFA token for the organization you’re signing into. MFA tokens are specific to a user and an organization.
 
+* **(AWS)** The username in AWS Active Directory doesn’t exactly match the email address in the Spot console.
 
+   Make sure your [Active Directory](https://docs.aws.amazon.com/singlesignon/latest/userguide/get-started-connect-id-source-ad-idp-specify-user.html) is using the same email address as the Spot console.
+  
+   You can access the users in the Spot console: click the user icon <img height="18" src="https://docs.spot.io/administration/_media/usericon.png"> > **Settings** > **Organization** > **Users**.
 
  </div>
 
