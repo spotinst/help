@@ -183,7 +183,7 @@
         left: -110px;
       }
     }
-    .highlight {
+    .highlight, .highlighted {
       background-color: yellow;
       padding: 0 2px;
     }
@@ -309,7 +309,7 @@
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-json.min.js"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-yaml.min.js"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markdown.min.js"></script>
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/gh/UpTrendingLLC/docsify/search.js"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/external-script.min.js"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
   <script type="text/javascript"
@@ -324,209 +324,210 @@
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/ga.min.js"></script>
  
   <!-- Custom Plugins -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const sidebar = document.querySelector(".sidebar");
-      const mainPanel = document.querySelector(".content article");
-      const searchInput = sidebar
-        ? sidebar.querySelector('input[type="search"]')
-        : null;
-      const clearButton = sidebar ? sidebar.querySelector(".clear-button") : null; // Target the clear button
+  <!-- Custom Plugins -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const sidebar = document.querySelector(".sidebar");
+    const mainPanel = document.querySelector(".content article");
+    const searchInput = sidebar
+      ? sidebar.querySelector('input[type="search"]')
+      : null;
+    const clearButton = sidebar ? sidebar.querySelector(".clear-button") : null; // Target the clear button
 
-      let isSearchActive = false; // Track whether search is active
-      const overlay = document.createElement("div"); // Create overlay element
+    let isSearchActive = false; // Track whether search is active
+    const overlay = document.createElement("div"); // Create overlay element
+    let searchTerm = ''; // Variable to store the search term
 
-      if (!sidebar || !mainPanel || !searchInput) {
-        console.error(
-          "Required elements are missing: sidebar, content, or search input."
-        );
-        return;
-      }
-      overlay.id = "search-overlay"; // Assign an ID to the overlay
+    if (!sidebar || !mainPanel || !searchInput) {
+      console.error(
+        "Required elements are missing: sidebar, content, or search input."
+      );
+      return;
+    }
+    overlay.id = "search-overlay"; // Assign an ID to the overlay
 
-      document.body.appendChild(overlay); // Append overlay to body
+    document.body.appendChild(overlay); // Append overlay to body
 
-      // Function to update the overlay with search results
-      function updateSearchResults() {
-        const searchResults = sidebar.querySelector(".results-panel.show");
-        if (!searchResults) return;
+    // Function to update the overlay with search results
+    function updateSearchResults() {
+      const searchResults = sidebar.querySelector(".results-panel.show");
+      if (!searchResults) return;
 
-        const resultItems = searchResults.querySelectorAll(".matching-post");
-        const resultCount = resultItems.length;
+      const resultItems = searchResults.querySelectorAll(".matching-post");
+      const resultCount = resultItems.length;
 
-        // Create search result content
-        const searchResultsContent = `
-          <div id="search-results">
-            <button id="close-search-results" class="spot-btn pink">Close Results</button>
-            <h1>Search Results (${resultCount} ${
-          resultCount === 1 ? "Result" : "Results"
-        })</h1>
-            ${searchResults.innerHTML}
-          </div>
-        `;
+      // Create search result content
+      const searchResultsContent = `
+        <div id="search-results">
+          <button id="close-search-results" class="spot-btn pink">Close Results</button>
+          <h1>Search Results (${resultCount} ${
+        resultCount === 1 ? "Result" : "Results"
+      })</h1>
+          ${searchResults.innerHTML}
+        </div>
+      `;
 
-        // Set the overlay content
-        overlay.innerHTML = searchResultsContent;
-        overlay.style.display = "block"; // Show overlay
-        isSearchActive = true;
+      // Set the overlay content
+      overlay.innerHTML = searchResultsContent;
+      overlay.style.display = "block"; // Show overlay
+      isSearchActive = true;
 
-        // Add event listener to close the custom search results button
-        const closeButton = document.getElementById("close-search-results");
-        if (closeButton) {
-          closeButton.addEventListener("click", function (event) {
-            event.stopPropagation(); // Prevent click from closing overlay
-            closeOverlayAndResetSearch(); // Close overlay and reset search input
-          });
-        }
-
-        // Add event listener to close overlay when clicking anywhere inside
-        overlay.addEventListener("click", function () {
-          closeOverlayAndResetSearch(); // Close overlay and reset search input
-        });
-
-        // Prevent the overlay from closing when clicking on the search results
-        const resultLinks = overlay.querySelectorAll(".matching-post");
-        resultLinks.forEach(function (link) {
-          link.addEventListener("click", function (event) {
-            event.stopPropagation(); // Prevent the overlay from closing
-          });
-        });
-      }
-
-      // Event listener for search input changes
-      searchInput.addEventListener("input", function (event) {
-        const query = event.target.value.trim();
-        if (!query) {
-          overlay.style.display = "none"; // Hide overlay if search is cleared
-          isSearchActive = false;
-        }
-      });
-
-      // Function to close overlay and reset search input (mimicking clear button behavior)
-      function closeOverlayAndResetSearch() {
-        // Hide the overlay
-        overlay.style.display = "none";
-        isSearchActive = false;
-
-        // Clear search input and reset to default state
-        if (searchInput) {
-          searchInput.value = ""; // Clear the input
-          searchInput.focus(); // Optional: refocus the search input if needed
-        }
-
-        // Remove the .show class from the .clear-button
-        if (clearButton) {
-          clearButton.classList.remove("show");
-        }
-      }
-
-      // Ensure clicking sidebar items restores the original content and closes the overlay
-      sidebar.addEventListener("click", function (event) {
-        const target = event.target.closest("a");
-        if (target && isSearchActive) {
-          // Hide the overlay when clicking a sidebar link if search is active
-          overlay.style.display = "none"; // Hide overlay
-          isSearchActive = false;
-
-          // Allow the sidebar link to load the content
-          const linkHref = target.getAttribute("href");
-          if (linkHref) {
-            window.location.href = linkHref; // This simulates the navigation
-          }
-        }
-      });
-
-      // Ensure both the native and custom close buttons hide the overlay and reset the search
-      const nativeCloseButton = sidebar.querySelector(".clear-button");
-      if (nativeCloseButton) {
-        nativeCloseButton.addEventListener("click", function (event) {
+      // Add event listener to close the custom search results button
+      const closeButton = document.getElementById("close-search-results");
+      if (closeButton) {
+        closeButton.addEventListener("click", function (event) {
           event.stopPropagation(); // Prevent click from closing overlay
           closeOverlayAndResetSearch(); // Close overlay and reset search input
         });
       }
 
-      // Observe sidebar changes to update search results dynamically
-      const sidebarObserver = new MutationObserver(function () {
-        const searchResults = sidebar.querySelector(".results-panel.show");
-        if (searchResults) {
-          updateSearchResults(); // Update overlay with search results
-        }
+      // Add event listener to close overlay when clicking anywhere inside
+      overlay.addEventListener("click", function () {
+        closeOverlayAndResetSearch(); // Close overlay and reset search input
       });
 
-      sidebarObserver.observe(sidebar, {
-        childList: true,
-        subtree: true,
+      // Prevent the overlay from closing when clicking on the search results
+      const resultLinks = overlay.querySelectorAll(".matching-post");
+      resultLinks.forEach(function (link) {
+        link.addEventListener("click", function (event) {
+          event.stopPropagation(); // Prevent the overlay from closing
+        });
       });
+    }
+
+    // Event listener for search input changes
+    searchInput.addEventListener("input", function (event) {
+      searchTerm = event.target.value.trim(); // Store the search term
+      if (!searchTerm) {
+        overlay.style.display = "none"; // Hide overlay if search is cleared
+        isSearchActive = false;
+      }
     });
 
-    (function () {
-      function customPlugins(hook) {
-        hook.doneEach(function () {
-          // Wait for Docsify to initialize
-          document.addEventListener("click", function (event) {
-            // Check if the clicked element is a search result
-            if (
-              event.target.matches(".matching-post") ||
-              event.target.closest(".matching-post")
-            ) {
-              // Add the class to the body
-              document.body.classList.add("search-result-clicked");
+    // Function to close overlay and reset search input (mimicking clear button behavior)
+    function closeOverlayAndResetSearch() {
+      // Hide the overlay
+      overlay.style.display = "none";
+      isSearchActive = false;
 
-              // Optional: Remove the class after a delay (if needed)
-              setTimeout(() => {
-                document.body.classList.remove("search-result-clicked");
-              }, 2000); // Adjust the delay as needed
-            }
-          });
-          // Feedback Button
-          const updateFeedbackButton = () => {
-            const markdownSection = document.querySelector(".markdown-section");
-            if (!markdownSection) return;
-
-            const h1 = markdownSection.querySelector("h1");
-            const currentURL = window.location.href;
-            if (h1) {
-              const h1Content = encodeURIComponent(h1.textContent.trim());
-              const feedbackButton = document.querySelector(".feedback-button");
-              if (feedbackButton) {
-                feedbackButton.href = `mailto:spotdocs@netapp.com?subject=Documentation topic: ${h1Content}&body=Documentation topic: ${currentURL}`;
-              } else {
-                feedbackButton.href = `mailto:spotdocs@netapp.com?subject=Documentation topic: General Inquiry&body=Documentation topic: https://docs.spot.io/`;
-              }
-            }
-          };
-          updateFeedbackButton();
-          // Sticky Sidebar
-          const observer = new MutationObserver(function (mutations) {
-            mutations.forEach(function () {
-              const tocElement = document.querySelector(".page_toc");
-
-              // Moved function declaration outside the if block
-              function checkScroll() {
-                if (window.scrollY > 100) {
-                  tocElement.classList.add("scrolled");
-                } else {
-                  tocElement.classList.remove("scrolled");
-                }
-              }
-              if (tocElement) {
-                window.addEventListener("scroll", checkScroll);
-                observer.disconnect();
-              }
-            });
-          });
-          observer.observe(document.body, {
-            childList: true,
-            subtree: true,
-          });
-        });
+      // Clear search input and reset to default state
+      if (searchInput) {
+        searchInput.value = ""; // Clear the input
+        searchInput.focus(); // Optional: refocus the search input if needed
       }
-      window.$docsify.plugins = [].concat(
-        customPlugins,
-        window.$docsify.plugins || []
-      );
-})();
+
+      // Remove the .show class from the .clear-button
+      if (clearButton) {
+        clearButton.classList.remove("show");
+      }
+    }
+
+    // Ensure clicking sidebar items restores the original content and closes the overlay
+    sidebar.addEventListener("click", function (event) {
+      const target = event.target.closest("a");
+      if (target && isSearchActive) {
+        // Hide the overlay when clicking a sidebar link if search is active
+        overlay.style.display = "none"; // Hide overlay
+        isSearchActive = false;
+
+        // Allow the sidebar link to load the content
+        const linkHref = target.getAttribute("href");
+        if (linkHref) {
+          window.location.href = linkHref; // This simulates the navigation
+        }
+      }
+    });
+
+    // Ensure both the native and custom close buttons hide the overlay and reset the search
+    const nativeCloseButton = sidebar.querySelector(".clear-button");
+    if (nativeCloseButton) {
+      nativeCloseButton.addEventListener("click", function (event) {
+        event.stopPropagation(); // Prevent click from closing overlay
+        closeOverlayAndResetSearch(); // Close overlay and reset search input
+      });
+    }
+
+    // Observe sidebar changes to update search results dynamically
+    const sidebarObserver = new MutationObserver(function () {
+      const searchResults = sidebar.querySelector(".results-panel.show");
+      if (searchResults) {
+        updateSearchResults(); // Update overlay with search results
+      }
+    });
+
+    sidebarObserver.observe(sidebar, {
+      childList: true,
+      subtree: true,
+    });
+  });
+
+  (function () {
+    function customPlugins(hook) {
+      hook.doneEach(function () {
+        // Wait for Docsify to initialize
+        document.addEventListener("click", function (event) {
+          // Check if the clicked element is a search result
+          if (
+            event.target.matches(".matching-post") ||
+            event.target.closest(".matching-post")
+          ) {
+            // Add the class to the body
+            document.body.classList.add("search-result-clicked");
+
+            // Highlight the search term in the content
+            highlightSearchTerm();
+
+            // Optional: Remove the class after a delay (if needed)
+            setTimeout(() => {
+              document.body.classList.remove("search-result-clicked");
+            }, 2000); // Adjust the delay as needed
+          }
+        });
+      });
+    }
+
+    // Function to highlight the search term in the content
+    function highlightSearchTerm() {
+      if (!searchTerm) return;
+
+      // Find all the text nodes within the content area
+      const content = document.querySelector('.content article');
+      if (!content) return;
+
+      // Create a regex to search for the term, case insensitive
+      const regex = new RegExp(`(${searchTerm})`, 'gi');
+
+      // Function to highlight text within a node
+      function highlightNode(node) {
+        const nodeText = node.textContent;
+        const highlightedText = nodeText.replace(regex, (match) => {
+          return `<span class="highlighted">${match}</span>`;
+        });
+        node.innerHTML = highlightedText; // Replace text with highlighted version
+      }
+
+      // Iterate through all text nodes in the content and highlight them
+      const walker = document.createTreeWalker(content, NodeFilter.SHOW_TEXT, null, false);
+      let currentNode;
+      while (currentNode = walker.nextNode()) {
+        highlightNode(currentNode);
+      }
+    }
+
+    window.$docsify.plugins = [].concat(
+      customPlugins,
+      window.$docsify.plugins || []
+    );
+  })();
 </script>
+
+<!-- Add this CSS to highlight the search term -->
+<style>
+  .highlighted {
+    background-color: yellow; /* Highlight color */
+    font-weight: bold;
+  }
+</style>
   
 
   
