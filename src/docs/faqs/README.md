@@ -39,6 +39,27 @@ Supported products: Ocean, Elastigroup.
 
  </details>
 
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="gennews">AWS, Azure, GCP: Where can I get the latest Spot and cloud provider news?</summary>
+
+ <div style="padding-left:16px">
+
+You can get information about releases and new features:
+
+* [Spot blog](https://spot.io/blog/)
+* [Spot news](https://spot.io/resource-center/?post_types=news)
+* [AWS blog](https://aws.amazon.com/blogs/aws/)
+* [AWS news](https://aws.amazon.com/new/)
+* [Azure blog](https://azure.microsoft.com/en-us/blog/)
+* [Azure news](https://azure.microsoft.com/en-us/blog/content-type/announcements/)
+* [GCP blog](https://cloud.google.com/blog)
+* [GCP news](https://cloud.google.com/blog/topics/inside-google-cloud/whats-new-google-cloud)
+
+
+   </div>
+
+ </details>
+
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="genodresp">AWS: Why is my on-demand instance utilized as a reserved instance/savings plan?</summary>
 
@@ -226,8 +247,20 @@ These internal logging errors occur because of a misconfiguration in the Okta SS
 
  </details>
 
-
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="SSO-oktadel">SSO: If I delete a user in Okta, is the user deleted in the Spot console?</summary>
+
+  <div style="padding-left:16px">
+
+If you delete or deactivate a user in Okta, the user typically is not deleted or deactivated in the Spot console.
+
+The exception is if you have Okta with [system for cross-domain identity management](https://help.okta.com/en-us/content/topics/apps/apps_app_integration_wizard_scim.htm) (SCIM) and selected Deactivate Users in provisioning. In this case, the user will be deleted. All tokens for that user are also deleted.
+
+  </div>
+
+ </details>
+
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="SSO-groupokta">SSO: How can I add a user to groups in an organization in Okta?</summary>
 
   <div style="padding-left:16px">
@@ -403,6 +436,18 @@ Spotinst-sdk2 is not part of the default PyPl. You need to create a deployment p
 
 1. [Create a ZIP deployment package with dependencies](https://docs.aws.amazon.com/lambda/latest/dg/python-package.html#python-package-create-dependencies). Make sure that all dependencies and Lambda functions are at the same level, zipped together, and uploaded.
 2. Update the [default timeout](https://docs.aws.amazon.com/lambda/latest/dg/configuration-timeout.html) for the Lambda function to 60 seconds.
+
+ </div>
+ </details>
+
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="billing">What day of the month can I see my Spot bill?</summary>
+
+  <div style="padding-left:16px">
+
+You can [see your invoice](administration/organizations/billing-details?id=monthly-billing-details) on the 15th of the following month. For example, to see data that includes April, you can view the invoices on or after May 15. The charge is about 3 business days after the invoice (around May 18).
+
+Depending on holidays, the invoice and charges may be slightly delayed.
 
  </div>
  </details>
@@ -1058,6 +1103,17 @@ You can have multiple containers defined in a single task definition. Check all 
 6. In the Spot console, go to **Ocean** > **Cloud Clusters**, and select the cluster.
 7. Click **Actions** > **Delete**.
  
+ </div>
+
+ </details>
+
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanamiid">EKS: How can I get the AMI ID for EKS-optimized Amazon Linux?</summary>
+
+  <div style="padding-left:16px">
+
+You can get the AMI ID using the [AWS Systems Manager Parameter Store API](https://docs.aws.amazon.com/eks/latest/userguide/retrieve-ami-id.html).
+
  </div>
 
  </details>
