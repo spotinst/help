@@ -117,6 +117,22 @@ You can choose to remove some of these permissions from the [Spot IAM policy](/a
 
  </details>
 
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="scaleupdown">AWS: Why am I getting a <i>Scale down as part of instance recovery</i> or <i>Scale up as part of instance recovery</i> message?</summary>
+
+   <div style="padding-left:16px">
+
+You can get this log message if:
+
+* The instance is scaled down because of AWS’s capacity.
+* An instance replacement was initiated because of AWS’s capacity. A new instance is launched to replace an instance that was taken back because of AWS’s capacity.
+* An instance is manually terminated in AWS.
+
+You can add more [instance types](elastigroup/features/compute/preferred-instance-types?id=preferred-instance-types) and [availability zones](elastigroup/features/compute/preferred-availability-zones) to your group or cluster to reduce these types of replacements.
+
+ </div>
+
+ </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="SSO-signin">SSO: Why can't I sign in to the Spot console?</summary>
@@ -143,7 +159,19 @@ You may get an error when you try to sign in to the Spot console if:
 
   Make sure you’re using the correct MFA token for the organization you’re signing into. MFA tokens are specific to a user and an organization.
 
+* **(AWS)** The username in AWS Active Directory doesn’t exactly match the email address in the Spot console.
 
+   Make sure your [Active Directory](https://docs.aws.amazon.com/singlesignon/latest/userguide/get-started-connect-id-source-ad-idp-specify-user.html) is using the same email address as the Spot console.
+  
+   You can access the users in the Spot console: click the user icon <img height="18" src="https://docs.spot.io/administration/_media/usericon.png"> > **Settings** > **Organization** > **Users**.
+
+* The [Identifier (Entity ID) URL](https://learn.microsoft.com/en-us/azure/active-directory/saas-apps/spotinst-tutorial#configure-azure-ad-sso) is not set up correctly. If the URL isn't correct, you might get this message when you sign in to the Spot console:
+
+  ````AADSTS650056: Misconfigured application. This could be due to one of the following: the client has not listed any permissions for 'AAD Graph' in the requested permissions in the client's application registration. Or, the admin has not consented in the tenant. Or, check the application identifier in the request to ensure it matches the configured client application identifier. Or, check the certificate in the request to ensure it's valid. Please contact your admin to fix the configuration or consent on behalf of the tenant. Client app ID: Idl xxxxx.````
+
+  The [Identifier (Entity ID) URL](https://learn.microsoft.com/en-us/azure/active-directory/saas-apps/spotinst-tutorial#configure-azure-ad-sso) must be `https://console.spotinst.com/auth/saml`. It cannot be a different URL or blank.
+
+  Delete the Spotinst app in Azure AD and recreate it with the correct URL.
 
  </div>
 
@@ -1167,8 +1195,22 @@ You can debug unhealthy Kubernetes nodes:
 * Ensure that the container runtime (such as Docker, containerd) is properly installed and functioning on the nodes. Check the runtime logs for any errors or warnings.
 * If you think that a specific component is causing the node health issues, consider updating or reinstalling that component to resolve any known bugs or conflicts.
 
+  </div>
+
  </details>
 
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="k8smigration">EKS: How do unhealthy replacements work during workload migration?</summary>
+   
+<div style="padding-left:16px">
+
+When you have a [workload migration](ocean/tutorials/migrate-workload) in progress, there may be unhealthy instances. They are not replaced until after the migration finishes. This happens because Ocean’s scaler does not handle replacements in the cluster during workload migration.
+
+If there is no active migration, after the configured unhealthy duration ends (the default is 120 seconds), the unhealthy instances are terminated and immediately replaced with new ones.
+
+ </div>
+
+ </details>
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanhpa">EKS: Can I check Ocean EKS clusters' horizontal pod autoscaling (HPA) policy?</summary>
 
@@ -1461,6 +1503,19 @@ If you want to edit the target capacity:
 This will let you manually increase the target of the cluster and the nodes will launch in the default virtual node group.
 
 <img width=900 src="https://github.com/user-attachments/assets/6e422a64-db48-4b43-90d0-d6b5ddc35464" >
+
+ </div>
+
+ </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceannodeutil">AKS, EKS, GKE: Why is there a difference in node utilization in AWS and the Spot console)?</summary>
+
+  <div style="padding-left:16px">
+
+When you look in the Spot console (**Ocean** > **Cloud Clusters** > node > **Nodes**), the memory and CPU are requests by pod. The <i>requests</i> are grouped at the node. This is the pod <i>allocation</i>.
+
+When you look in the AWS console, you can see the actual <i>utilization</i>, which is different than the <i>allocation</i>.
 
  </div>
 
@@ -1805,6 +1860,69 @@ If there is a stage failure when a job runs in Ocean Spark, there’s a [retry m
 1. In the Spot console, go to **Ocean for Spark** > **Configuration Templates**.
 2. Select the configuration template of the application you need to change.
 3. Add `spark.stage.maxConsecutiveAttempts` with the number of retries.
+
+
+ </div>
+ 
+ </details>
+
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="sparkwrongvng">Why are my pods going to the wrong virtual node group?</summary>
+
+ <div style="padding-left:16px">
+
+If your Ocean Spark pods are going to the wrong virtual node group, it’s typically because the virtual node group was updated or deleted.
+
+You can either recreate the Ocean Spark cluster or update the labels and taints. These are the definitions for virtual node group labels and taints:
+
+**ocean-spark-system**
+
+<pre><code>    "labels": [
+      {
+        "key": "nodegroup-name",
+        "value": "ofas-system"
+      }
+    ],
+    "taints": [],</code></pre>
+
+**ocean-spark-on-demand**
+<pre><code>    "labels": [
+      {
+        "key": "bigdata.spot.io/vng",
+        "value": "ocean-spark"
+      },
+      {
+        "key": "nodegroup-name",
+        "value": "ocean-spark-on-demand"
+      }
+    ],
+    "taints": [
+      {
+        "key": "bigdata.spot.io/unschedulable",
+        "value": "ocean-spark",
+        "effect": "NoSchedule"
+      }
+    ],</code></pre>
+
+**ocean-spark-spot**
+
+<pre><code>    "labels": [
+      {
+        "key": "bigdata.spot.io/vng",
+        "value": "ocean-spark"
+      },
+      {
+        "key": "nodegroup-name",
+        "value": "ocean-spark-spot"
+      }
+    ],
+    "taints": [
+      {
+        "key": "bigdata.spot.io/unschedulable",
+        "value": "ocean-spark",
+        "effect": "NoSchedule"
+      }
+    ],</code></pre>
 
 
  </div>
@@ -2310,6 +2428,23 @@ This error means that Elastigroup didn't find a valid storage account in the sub
 Find the storage account URL in the Azure console. Go to **VM details** > **JSON view** > **diagnosticsProfile**.
 
  </div>
+
+ </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egimportvm">Azure: Why am I getting a <i>Failed to launch VM with RequestDisallowedByPolicy</i> message?</summary>
+
+  <div style="padding-left:16px">
+
+When an instance is imported or launched, you may see this message in the Spot console:
+
+```ERROR Failed to launch virtual machine. Azure error code : RequestDisallowedByPolicy, message : Resource xxxxx was disallowed by policy. Policy identifiers: '[{"policyAssignment":{"name":"Allowed virtual machine size SKUs","id":"/providers/Microsoft.Management/managementGroups/mgid-bcbsri-root-001/providers/Microsoft.Authorization/policyAssignments/xxxxxx"},"policyDefinition":{"name":"Allowed virtual machine size SKUs","id":"/providers/Microsoft.Authorization/policyDefinitions/xxxxx"}}]'```
+
+This can happen if the policy limits launching VMs, which would limit launching instances.
+
+Check the policy definition and policy assignment included in the message. See what part of the policy is [blocking deployment](https://learn.microsoft.com/en-us/azure/azure-resource-manager/troubleshooting/error-policy-requestdisallowedbypolicy).
+
+   </div>
 
  </details>
 
