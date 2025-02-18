@@ -2103,9 +2103,9 @@ You can configure a custom scaling policy that is based on another metric. For e
     <ol style="list-style-type: lower-alpha;">
      <li>In the Spot console, go to <b>Elastigroup</b> > <b>Groups</b>, and click on the name of an Elastigroup.</li>
      <li>Go to <b>Actions</b> > <b>Edit Configuration</b>.</li>
-     <li>Click <b>Revert to Legacy Design</b>.
+     <li><p>Click <b>Revert to Legacy Design</b>.</p>
      
-     <img src="https://github.com/user-attachments/assets/edd8803d-a05b-4850-82e1-e87104006879" />
+     <p><img width=700 src="https://github.com/user-attachments/assets/edd8803d-a05b-4850-82e1-e87104006879" /></p>
      </li>
 
     </ol>
