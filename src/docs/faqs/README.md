@@ -165,6 +165,14 @@ You may get an error when you try to sign in to the Spot console if:
   
    You can access the users in the Spot console: click the user icon <img height="18" src="https://docs.spot.io/administration/_media/usericon.png"> > **Settings** > **Organization** > **Users**.
 
+* The [Identifier (Entity ID) URL](https://learn.microsoft.com/en-us/azure/active-directory/saas-apps/spotinst-tutorial#configure-azure-ad-sso) is not set up correctly. If the URL isn't correct, you might get this message when you sign in to the Spot console:
+
+  ````AADSTS650056: Misconfigured application. This could be due to one of the following: the client has not listed any permissions for 'AAD Graph' in the requested permissions in the client's application registration. Or, the admin has not consented in the tenant. Or, check the application identifier in the request to ensure it matches the configured client application identifier. Or, check the certificate in the request to ensure it's valid. Please contact your admin to fix the configuration or consent on behalf of the tenant. Client app ID: Idl xxxxx.````
+
+  The [Identifier (Entity ID) URL](https://learn.microsoft.com/en-us/azure/active-directory/saas-apps/spotinst-tutorial#configure-azure-ad-sso) must be `https://console.spotinst.com/auth/saml`. It cannot be a different URL or blank.
+
+  Delete the Spotinst app in Azure AD and recreate it with the correct URL.
+
  </div>
 
  </details>
