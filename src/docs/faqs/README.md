@@ -1852,6 +1852,69 @@ If there is a stage failure when a job runs in Ocean Spark, there’s a [retry m
  
  </details>
 
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="sparkwrongvng">Why are my pods going to the wrong virtual node group?</summary>
+
+ <div style="padding-left:16px">
+
+If your Ocean Spark pods are going to the wrong virtual node group, it’s typically because the virtual node group was updated or deleted.
+
+You can either recreate the Ocean Spark cluster or update the labels and taints. These are the definitions for virtual node group labels and taints:
+
+**ocean-spark-system**
+
+<pre><code>    "labels": [
+      {
+        "key": "nodegroup-name",
+        "value": "ofas-system"
+      }
+    ],
+    "taints": [],</code></pre>
+
+**ocean-spark-on-demand**
+<pre><code>    "labels": [
+      {
+        "key": "bigdata.spot.io/vng",
+        "value": "ocean-spark"
+      },
+      {
+        "key": "nodegroup-name",
+        "value": "ocean-spark-on-demand"
+      }
+    ],
+    "taints": [
+      {
+        "key": "bigdata.spot.io/unschedulable",
+        "value": "ocean-spark",
+        "effect": "NoSchedule"
+      }
+    ],</code></pre>
+
+**ocean-spark-spot**
+
+<pre><code>    "labels": [
+      {
+        "key": "bigdata.spot.io/vng",
+        "value": "ocean-spark"
+      },
+      {
+        "key": "nodegroup-name",
+        "value": "ocean-spark-spot"
+      }
+    ],
+    "taints": [
+      {
+        "key": "bigdata.spot.io/unschedulable",
+        "value": "ocean-spark",
+        "effect": "NoSchedule"
+      }
+    ],</code></pre>
+
+
+ </div>
+ 
+ </details>
+
 <!----------------------------------elastigroup---------------------------------->
 
 ## Elastigroup
