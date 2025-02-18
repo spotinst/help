@@ -39,6 +39,27 @@ Supported products: Ocean, Elastigroup.
 
  </details>
 
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="gennews">AWS, Azure, GCP: WWhere can I get the latest Spot and cloud provider news?</summary>
+
+ <div style="padding-left:16px">
+
+You can get information about releases and new features:
+
+* [Spot blog](https://spot.io/blog/)
+* [Spot news](https://spot.io/resource-center/?post_types=news)
+* [AWS blog](https://aws.amazon.com/blogs/aws/)
+* [AWS news](https://aws.amazon.com/new/)
+* [Azure blog](https://azure.microsoft.com/en-us/blog/)
+* [Azure news](https://azure.microsoft.com/en-us/blog/content-type/announcements/)
+* [GCP blog](https://cloud.google.com/blog)
+* [GCP news](https://cloud.google.com/blog/topics/inside-google-cloud/whats-new-google-cloud)
+
+
+   </div>
+
+ </details>
+
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="genodresp">AWS: Why is my on-demand instance utilized as a reserved instance/savings plan?</summary>
 
