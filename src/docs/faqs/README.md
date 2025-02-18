@@ -1483,6 +1483,19 @@ This will let you manually increase the target of the cluster and the nodes will
  </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceannodeutil">AKS, EKS, GKE: Why is there a difference in node utilization in AWS and the Spot console)?</summary>
+
+  <div style="padding-left:16px">
+
+When you look in the Spot console (**Ocean** > **Cloud Clusters** > node > **Nodes**), the memory and CPU are requests by pod. The <i>requests</i> are grouped at the node. This is the pod <i>allocation</i>.
+
+When you look in the AWS console, you can see the actual <i>utilization</i>, which is different than the <i>allocation</i>.
+
+ </div>
+
+ </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanssar">AKS, EKS, GKE: Should I get frequent <i>SelfSubjectAccessReview</i> requests after upgrading to Ocean Controller Version 2?</summary>
 
   <div style="padding-left:16px">
