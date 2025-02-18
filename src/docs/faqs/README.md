@@ -1195,8 +1195,22 @@ You can debug unhealthy Kubernetes nodes:
 * Ensure that the container runtime (such as Docker, containerd) is properly installed and functioning on the nodes. Check the runtime logs for any errors or warnings.
 * If you think that a specific component is causing the node health issues, consider updating or reinstalling that component to resolve any known bugs or conflicts.
 
+  </div>
+
  </details>
 
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="k8smigration">EKS: How do unhealthy replacements work during workload migration?</summary>
+   
+<div style="padding-left:16px">
+
+When you have a [workload migration](ocean/tutorials/migrate-workload) in progress, there may be unhealthy instances. They are not replaced until after the migration finishes. This happens because Ocean’s scaler does not handle replacements in the cluster during workload migration.
+
+If there is no active migration, after the configured unhealthy duration ends (the default is 120 seconds), the unhealthy instances are terminated and immediately replaced with new ones.
+
+ </div>
+
+ </details>
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanhpa">EKS: Can I check Ocean EKS clusters' horizontal pod autoscaling (HPA) policy?</summary>
 
