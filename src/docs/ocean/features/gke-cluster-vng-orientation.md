@@ -4,9 +4,9 @@
 
 Cloud service provider relevance: <font color="#FC01CC">GKE</font> 
 
-While Ocean is designed to optimize for both availability and cost, you may want to have control over which optimizations are given priority. For example, you might want to use cheaper nodes for dev clusters in a development environment. In contrast, in a production environment where availability is more important, Ocean should apply a balanced orientation regarding cost and availability.
+While Ocean is designed to optimize for both availability and cost, you may want to have control over which optimizations are given priority. For example, you might want to use cheaper nodes for clusters in a development environment. In contrast, in a production environment where availability is more important, Ocean should apply a balanced orientation regarding cost and availability.
 
-You can control the approach that Ocean takes by configuring the Cluster Orientation.
+You can control the approach that Ocean takes by configuring the cluster (and vng) orientation.
 
 ## Ocean Orientations
 
@@ -23,10 +23,16 @@ Ocean (GKE) supports the following orientations:
 To define the cluster orientation for your Ocean cluster, you can use the Create Cluster or Update Cluster APIs. Look for the following attributes:
 
 ```
-cluster.strategy.clusterOrientation.availabilityVsCost
+cluster.strategy.clusterOrientation.xxxxxxxxxxxxxt
 ```
 
-The valid values are: costOriented, balanced, cheapest
+The valid values are: xxxxxx, balanced, cheapest
+
+For virtual node groups:
+
+```
+lauchSpex xxxxxx
+```
 
 
 
