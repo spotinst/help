@@ -1108,6 +1108,17 @@ You can have multiple containers defined in a single task definition. Check all 
  </details>
 
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanamiid">EKS: How can I get the AMI ID for EKS-optimized Amazon Linux?</summary>
+
+  <div style="padding-left:16px">
+
+You can get the AMI ID using the [AWS Systems Manager Parameter Store API](https://docs.aws.amazon.com/eks/latest/userguide/retrieve-ami-id.html).
+
+ </div>
+
+ </details>
+
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceandaemonsetpods">EKS: Why are DaemonSet pods not scheduled on all nodes in the cluster?</summary>
 
   <div style="padding-left:16px">
