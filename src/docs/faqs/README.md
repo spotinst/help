@@ -40,7 +40,7 @@ Supported products: Ocean, Elastigroup.
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="gennews">AWS, Azure, GCP: WWhere can I get the latest Spot and cloud provider news?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="gennews">AWS, Azure, GCP: Where can I get the latest Spot and cloud provider news?</summary>
 
  <div style="padding-left:16px">
 
@@ -424,6 +424,18 @@ Spotinst-sdk2 is not part of the default PyPl. You need to create a deployment p
 
 1. [Create a ZIP deployment package with dependencies](https://docs.aws.amazon.com/lambda/latest/dg/python-package.html#python-package-create-dependencies). Make sure that all dependencies and Lambda functions are at the same level, zipped together, and uploaded.
 2. Update the [default timeout](https://docs.aws.amazon.com/lambda/latest/dg/configuration-timeout.html) for the Lambda function to 60 seconds.
+
+ </div>
+ </details>
+
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="billing">What day of the month can I see my Spot bill?</summary>
+
+  <div style="padding-left:16px">
+
+You can [see your invoice](administration/organizations/billing-details?id=monthly-billing-details) on the 15th of the following month. For example, to see data that includes April, you can view the invoices on or after May 15. The charge is about 3 business days after the invoice (around May 18).
+
+Depending on holidays, the invoice and charges may be slightly delayed.
 
  </div>
  </details>
