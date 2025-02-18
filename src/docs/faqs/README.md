@@ -2346,6 +2346,23 @@ Find the storage account URL in the Azure console. Go to **VM details** > **JSON
 
  </details>
 
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egimportvm">Azure: Why am I getting a <i>Failed to launch VM with RequestDisallowedByPolicy</i> message?</summary>
+
+  <div style="padding-left:16px">
+
+When an instance is imported or launched, you may see this message in the Spot console:
+
+```ERROR Failed to launch virtual machine. Azure error code : RequestDisallowedByPolicy, message : Resource xxxxx was disallowed by policy. Policy identifiers: '[{"policyAssignment":{"name":"Allowed virtual machine size SKUs","id":"/providers/Microsoft.Management/managementGroups/mgid-bcbsri-root-001/providers/Microsoft.Authorization/policyAssignments/xxxxxx"},"policyDefinition":{"name":"Allowed virtual machine size SKUs","id":"/providers/Microsoft.Authorization/policyDefinitions/xxxxx"}}]'```
+
+This can happen if the policy limits launching VMs, which would limit launching instances.
+
+Check the policy definition and policy assignment included in the message. See what part of the policy is [blocking deployment](https://learn.microsoft.com/en-us/azure/azure-resource-manager/troubleshooting/error-policy-requestdisallowedbypolicy).
+
+   </div>
+
+ </details>
+
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="egjenkinsvm">Azure: Why is my VM showing offline in the Jenkins console?</summary>
 
