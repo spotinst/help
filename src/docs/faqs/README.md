@@ -247,8 +247,20 @@ These internal logging errors occur because of a misconfiguration in the Okta SS
 
  </details>
 
-
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="SSO-oktadel">SSO: If I delete a user in Okta, is the user deleted in the Spot console?</summary>
+
+  <div style="padding-left:16px">
+
+If you delete or deactivate a user in Okta, the user typically is not deleted or deactivated in the Spot console.
+
+The exception is if you have Okta with [system for cross-domain identity management](https://help.okta.com/en-us/content/topics/apps/apps_app_integration_wizard_scim.htm) (SCIM) and selected Deactivate Users in provisioning. In this case, the user will be deleted. All tokens for that user are also deleted.
+
+  </div>
+
+ </details>
+
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="SSO-groupokta">SSO: How can I add a user to groups in an organization in Okta?</summary>
 
   <div style="padding-left:16px">
