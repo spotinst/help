@@ -4,7 +4,7 @@
 
 ## General
 
-<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px" open on search>
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="genreg">AWS, Azure, GCP: What regions does Spot support for my cloud provider?</summary>
 
  <div style="padding-left:16px">
