@@ -20,7 +20,7 @@ Features only available for specific cloud service providers are marked (for exa
 
 Example: Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>, <font color="#FC01CC">ECS</font>
 
-See the full feature sets per cloud service provider:
+See the specific feature sets per cloud service provider:
 
 *  [AWS Kubernetes](https://docs.spot.io/ocean/aws-kubernetes/)
 *  [AWS ECS](https://docs.spot.io/ocean/aws-ecs/)
