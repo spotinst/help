@@ -3221,7 +3221,7 @@ The connected Azure App Registration or the App Secret Key may have expired. You
   <div style="padding-left:16px">
 
    Eco gathers data about all of your instances before you are using reserved instances. Savings are calculated each month. This means that you are not charged at the purchasing moment, but for each month separately. The calculation of each purchase is multiplied by the number of instances. For example, Eco purchases one reserved instance at a price of $24 for a duration of one year (amounting to $2 per month). Running an on-demand instance would cost $3 per month. Therefore, Eco saves you $1 per month, and you are charged based on $1 savings each month.
-   
+
  </div>
 
  </details>
@@ -3243,7 +3243,7 @@ The connected Azure App Registration or the App Secret Key may have expired. You
   <div style="padding-left:16px">
 
    Eco charges only for the reserved instances that have a start date after Eco started.
-   
+
  </div>
 
  </details>
@@ -3254,7 +3254,7 @@ The connected Azure App Registration or the App Secret Key may have expired. You
   <div style="padding-left:16px">
 
    Reserved instance volume discounts drive the cost of reservations down. When Eco makes a large reserved instance purchase which generates the reserved instance volume discount, it is by design. Eco includes the cost reductions in the net savings calculations, which may impact your Eco fee.
-   
+
  </div>
 
  </details>
@@ -3276,7 +3276,7 @@ You can use the [AWS restricted Eco policy](https://github.com/spotinst/spotinst
   <div style="padding-left:16px">
 
    If there is a fee for selling on the marketplace, you pay AWS based on the current AWS selling fee. Eco pricing is based on the actual savings you achieve.
-   
+
  </div>
 
  </details>
@@ -3287,7 +3287,7 @@ You can use the [AWS restricted Eco policy](https://github.com/spotinst/spotinst
   <div style="padding-left:16px">
 
    Yes. Eco is not able to sell convertible reserved instances. It can only replace them with other reserved instances under AWS constraints. Therefore, Eco suggests how to manage your convertibles. Also, Eco may purchase convertibles for you.
-   
+
  </div>
 
  </details>
@@ -3298,7 +3298,126 @@ You can use the [AWS restricted Eco policy](https://github.com/spotinst/spotinst
   <div style="padding-left:16px">
 
    Contact your account manager for more information.
-   
+
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ecoarn">AWS: Why am I getting an <i>Invalid ARN</i> message?</summary>
+
+  <div style="padding-left:16px">
+
+   Review the [Getting Started documentation](eco/getting-started/connect-your-aws-account) for Eco and compare it to your management account resources. Make sure the CloudFormation stack providing the ARN has not been changed. Additionally, make sure no AWS Service Control Policies restrict access.
+
+Contact [Spot support](https://spot.io/support/).
+
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="econos3-1">AWS: Why am I getting a <i>No access to S3 bucket</i> message?</summary>
+
+  <div style="padding-left:16px">
+
+   There are insufficient permissions. Review the [Getting Started documentation](eco/getting-started/connect-your-aws-account) for Eco. Confirm that the S3 bucket still exists, bucket policies and Service Control policies have not changed, and the Cost and Usage report is still scheduled to create data within the bucket.
+
+If you continue to get this message, contact [Spot support](https://spot.io/support/).
+
+ </div>
+
+ </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="econos3-2">AWS: Why am I getting a <i>S3 bucket no longer exists</i> message?</summary>
+
+  <div style="padding-left:16px">
+
+   Review the [Getting Started documentation](eco/getting-started/connect-your-aws-account) for Eco. Confirm that the S3 bucket still exists, bucket policies and Service Control policies have not changed, and the Cost and Usage report is still scheduled to create data within the bucket.
+
+If you continue to get this message, contact [Spot support](https://spot.io/support/).
+
+ </div>
+
+ </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="econos3-3">AWS: Why am I getting a <i>No new data in S3 bucket for over 48 hours</i> message?</summary>
+
+  <div style="padding-left:16px">
+
+   Review the [Getting Started documentation](eco/getting-started/connect-your-aws-account) for Eco. Confirm that the Cost and Usage report is still scheduled to create data within the bucket.
+
+If you continue to get this message, contact [Spot support](https://spot.io/support/).
+
+ </div>
+
+ </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="econoce">AWS: Why am I getting a <i>No CE access</i> message?</summary>
+
+  <div style="padding-left:16px">
+
+Make sure the [Eco permissions policy](eco/tutorials/eco-policy/?id=account-billing-cost-explorer-cost-and-usage-report-invoicing-payments-and-taxes) includes reading Cost Explorer data.
+
+If you continue to get this message, contact [Spot support](https://spot.io/support/).
+
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="econodataaccess">AWS: Why am I getting a <i>No CE access</i> message?</summary>
+
+  <div style="padding-left:16px">
+
+This is normal if the AWS CUR was only recently configured. If your CUR was configured more than 48 hours ago, submit a [support ticket](https://spot.io/support/).
+
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ecofailure">AWS: Why am I getting a <i>Failure to retrieve data</i> message?</summary>
+
+  <div style="padding-left:16px">
+
+   If you get a `Failure to retrieve data from < bucket >. Last Successful sync is < insert last_cur_sync_timestamp >. Expecting parquet format.` message, review the [Getting Started documentation](eco/getting-started/connect-your-aws-account) for Eco.
+
+If you continue to get this message, contact [Spot support](https://spot.io/support/).
+
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="econodata">AWS: Why don't I see data in the Eco Dashboard?</summary>
+
+  <div style="padding-left:16px">
+
+If you cannot see data in the Eco Dashboard, check if:
+
+* 48 hours have passed since registration with Eco. Data appears for the first time 48 hours after registration.
+* The S3 bucket name is missing. Verify that the bucket name you inserted during your registration to Eco appears in the AWS Cost and Usage report list.
+* The IAMRole permissions may be missing or incorrect. Verify that your permissions are complete and the same as in the [Eco Policy](eco/tutorials/eco-policy/).
+
+If you continue to get this message, contact [Spot support](https://spot.io/support/).
+
+ </div>
+
+ </details>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="xxxx">?</summary>
+
+  <div style="padding-left:16px">
+
+   text
+
  </div>
 
  </details>
@@ -3309,7 +3428,20 @@ You can use the [AWS restricted Eco policy](https://github.com/spotinst/spotinst
   <div style="padding-left:16px">
 
    text
-   
+
+ </div>
+
+ </details>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="xxxx">?</summary>
+
+  <div style="padding-left:16px">
+
+   text
+
  </div>
 
  </details>
@@ -3320,7 +3452,20 @@ You can use the [AWS restricted Eco policy](https://github.com/spotinst/spotinst
   <div style="padding-left:16px">
 
    text
-   
+
+ </div>
+
+ </details>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="xxxx">?</summary>
+
+  <div style="padding-left:16px">
+
+   text
+
  </div>
 
  </details>
@@ -3331,7 +3476,20 @@ You can use the [AWS restricted Eco policy](https://github.com/spotinst/spotinst
   <div style="padding-left:16px">
 
    text
-   
+
+ </div>
+
+ </details>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="xxxx">?</summary>
+
+  <div style="padding-left:16px">
+
+   text
+
  </div>
 
  </details>
@@ -3342,91 +3500,8 @@ You can use the [AWS restricted Eco policy](https://github.com/spotinst/spotinst
   <div style="padding-left:16px">
 
    text
-   
+
  </div>
 
  </details>
 
-
- <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="xxxx">?</summary>
-
-  <div style="padding-left:16px">
-
-   text
-   
- </div>
-
- </details>
-
-
- <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="xxxx">?</summary>
-
-  <div style="padding-left:16px">
-
-   text
-   
- </div>
-
- </details>
-
-
- <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="xxxx">?</summary>
-
-  <div style="padding-left:16px">
-
-   text
-   
- </div>
-
- </details>
-
-
- <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="xxxx">?</summary>
-
-  <div style="padding-left:16px">
-
-   text
-   
- </div>
-
- </details>
-
-
- <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="xxxx">?</summary>
-
-  <div style="padding-left:16px">
-
-   text
-   
- </div>
-
- </details>
-
-
- <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="xxxx">?</summary>
-
-  <div style="padding-left:16px">
-
-   text
-   
- </div>
-
- </details>
-
-
- <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="xxxx">?</summary>
-
-  <div style="padding-left:16px">
-
-   text
-   
- </div>
-
- </details>
