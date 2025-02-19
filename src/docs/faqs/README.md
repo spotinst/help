@@ -216,7 +216,7 @@ The SAML is Base64encoded by the IDP. Encrypted assertions such as AES-256-CBC a
 
   <div style="padding-left:16px">
 
-   Single log out service ULRs are not supported. After logging in, users need to manually log out using the Spot console.
+   Single log out service URLs are not supported. After logging in, users need to manually log out using the Spot console.
    
  </div>
 
@@ -3380,7 +3380,7 @@ If you continue to get this message, contact [Spot support](https://spot.io/supp
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="econodataaccess">AWS: Why am I getting a <i>No CE access</i> message?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="econodataaccess">AWS: Why am I getting a <i>We were not able to access data in the S3 bucket</i> message?</summary>
 
   <div style="padding-left:16px">
 
