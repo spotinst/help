@@ -745,6 +745,24 @@ If an instance type isn’t [EBS-optimized by default](https://docs.aws.amazon.c
  </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocinvalidkeypair">AWS: Why am I getting a <i>Can't Spin On-Demand Instances: Code: InvalidKeyPair.NotFound</i> message?</summary>
+
+  <div style="padding-left:16px">
+
+You can get this message if the key pair is missing or not valid: `Can't Spin On-Demand Instances: Code: InvalidKeyPair.NotFound, Message: The key pair 'xxxxx' does not exist`.
+
+Update the key pair:
+
+1. In the Spot console, go to **Ocean** > **Cloud Clusters**, and click on the name of a cluster.
+2. Click **Actions** > **Edit Cluster** > **Compute**.
+3. In **Instance Specifications**, select a **Key Pair**.
+
+   </div>
+
+ </details>
+
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="secretnotvalid">Azure: Why can my cluster not perform scaling actions (invalid client secret)?</summary>
 
   <div style="padding-left:16px">
@@ -2284,6 +2302,23 @@ You can read the AWS documentation on [spot instance quotas](https://docs.aws.am
 
    
  </div>
+
+ </details>
+
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="eginvalidkeypair">AWS: Why am I getting a <i>Can't Spin On-Demand Instances: Code: InvalidKeyPair.NotFound</i> message?</summary>
+
+  <div style="padding-left:16px">
+
+You can get this message if the key pair is missing or not valid: `Can't Spin On-Demand Instances: Code: InvalidKeyPair.NotFound, Message: The key pair 'xxxxx' does not exist`.
+
+Update the key pair:
+
+1. In the Spot console, go to **Elastigroup** > **Groups**, and click on the name of an Elastigroup.
+2. Click **Actions** > **Edit Configuration**.
+3. In **Basic Settings**, select a **Key Pair**.
+
+   </div>
 
  </details>
 
