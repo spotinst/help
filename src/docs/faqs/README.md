@@ -3215,6 +3215,50 @@ The connected Azure App Registration or the App Secret Key may have expired. You
 
 ## Eco
 
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ecosavings">How are savings calculated when I purchase reserved instances?</summary>
+
+  <div style="padding-left:16px">
+
+   Eco gathers data about all of your instances before you are using reserved instances. Savings are calculated each month. This means that you are not charged at the purchasing moment, but for each month separately. The calculation of each purchase is multiplied by the number of instances. For example, Eco purchases one reserved instance at a price of $24 for a duration of one year (amounting to $2 per month). Running an on-demand instance would cost $3 per month. Therefore, Eco saves you $1 per month, and you are charged based on $1 savings each month.
+   
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ecospot">Does Eco also recommend Spot instances in the projected savings?</summary>
+
+  <div style="padding-left:16px">
+
+   Eco is a tool for management and optimization of commitment discounts (reservations and savings plans). The projected savings by using Eco relate to commitments. You can use Eco for managing commitments in your organization, while using Elastigroup or Ocean to optimize the combined use of Spot and reserved instances in the workload.
+   
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ecoexistingri">If my management account already has reserved instances when I install Eco, how are the savings calculated?</summary>
+
+  <div style="padding-left:16px">
+
+   Eco charges only for the reserved instances that have a start date after Eco started.
+   
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ecoridiscounts">How does ECO consider reserved instance volume discounts?</summary>
+
+  <div style="padding-left:16px">
+
+   Reserved instance volume discounts drive the cost of reservations down. When Eco makes a large reserved instance purchase which generates the reserved instance volume discount, it is by design. Eco includes the cost reductions in the net savings calculations, which may impact your Eco fee.
+   
+ </div>
+
+ </details>
+
 <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="ecopolicy">AWS: Is there a best practice template for limiting a policy?</summary>
 
@@ -3222,6 +3266,167 @@ The connected Azure App Registration or the App Secret Key may have expired. You
 
 You can use the [AWS restricted Eco policy](https://github.com/spotinst/spotinst-examples/blob/master/Policies/AWS/Spot-AWS-Eco-Restricted-Full-Permission.json).
 
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ecosellfee">AWS: Does the pricing for Eco include the AWS charge for selling reserved instances in the marketplace?</summary>
+
+  <div style="padding-left:16px">
+
+   If there is a fee for selling on the marketplace, you pay AWS based on the current AWS selling fee. Eco pricing is based on the actual savings you achieve.
+   
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ecoconvri">AWS: If I have convertible AWS reserved instances, does the savings recommendation include the savings by exchanging these?</summary>
+
+  <div style="padding-left:16px">
+
+   Yes. Eco is not able to sell convertible reserved instances. It can only replace them with other reserved instances under AWS constraints. Therefore, Eco suggests how to manage your convertibles. Also, Eco may purchase convertibles for you.
+   
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="econonus">AWS: Can I connect my bank account to the AWS marketplace if my company is not in the United States?</summary>
+
+  <div style="padding-left:16px">
+
+   Contact your account manager for more information.
+   
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="xxxx">?</summary>
+
+  <div style="padding-left:16px">
+
+   text
+   
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="xxxx">?</summary>
+
+  <div style="padding-left:16px">
+
+   text
+   
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="xxxx">?</summary>
+
+  <div style="padding-left:16px">
+
+   text
+   
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="xxxx">?</summary>
+
+  <div style="padding-left:16px">
+
+   text
+   
+ </div>
+
+ </details>
+
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="xxxx">?</summary>
+
+  <div style="padding-left:16px">
+
+   text
+   
+ </div>
+
+ </details>
+
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="xxxx">?</summary>
+
+  <div style="padding-left:16px">
+
+   text
+   
+ </div>
+
+ </details>
+
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="xxxx">?</summary>
+
+  <div style="padding-left:16px">
+
+   text
+   
+ </div>
+
+ </details>
+
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="xxxx">?</summary>
+
+  <div style="padding-left:16px">
+
+   text
+   
+ </div>
+
+ </details>
+
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="xxxx">?</summary>
+
+  <div style="padding-left:16px">
+
+   text
+   
+ </div>
+
+ </details>
+
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="xxxx">?</summary>
+
+  <div style="padding-left:16px">
+
+   text
+   
+ </div>
+
+ </details>
+
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="xxxx">?</summary>
+
+  <div style="padding-left:16px">
+
+   text
+   
  </div>
 
  </details>
