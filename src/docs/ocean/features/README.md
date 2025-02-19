@@ -15,6 +15,8 @@ These are the main Ocean features available for all cloud service providers:
 * [Cluster Roll (AWS and GKE)](ocean/features/roll-gen)
 * [Cluster Roll (AKS)](ocean/features/roll)
 * [Shutdown Hours](ocean/features/running-hours)
+* [Ocean integration with Grafana - Kubernetes](ocean/tools-and-integrations/grafana-dashboard)
+* [Ocean Controller V2 - Kubernetes](ocean/tutorials/ocean-controller-v2/)
 
 Features only available for specific cloud service providers are marked (for example) as follows:
 
