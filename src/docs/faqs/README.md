@@ -3259,6 +3259,17 @@ The connected Azure App Registration or the App Secret Key may have expired. You
 
  </details>
 
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ecolease">What does the reservation end date mean for renewals?</summary>
+
+  <div style="padding-left:16px">
+
+When a reservation expires, Eco first makes sure a renewal is the right course of action. If so, expired coverage is replaced with the best commitment to provide a blend of flexibility and savings. When an expiration is renewed, a new lease ID is created. Depending on the situation, an expired reservation may be renewed under different parameters, so do not be concerned if you do not see an exact match.
+
+ </div>
+
+ </details>
+
 <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="ecopolicy">AWS: Is there a best practice template for limiting a policy?</summary>
 
@@ -3393,7 +3404,7 @@ If you continue to get this message, contact [Spot support](https://spot.io/supp
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="econodata">AWS: Why don't I see data in the Eco Dashboard?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="econodataaws">AWS: Why don't I see data in the Eco Dashboard?</summary>
 
   <div style="padding-left:16px">
 
@@ -3409,97 +3420,61 @@ If you continue to get this message, contact [Spot support](https://spot.io/supp
 
  </details>
 
- </details>
-
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="xxxx">?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ecotenantid">Azure: Why I am getting an <i>Invalid credentials</i> (tenant ID doesn't match) message?</summary>
 
   <div style="padding-left:16px">
 
-   text
+   If you get a `Tenant ID in request does not match tenant ID where Eco Azuer app was consented` message during setup, make sure to sign in to the Azure tenant that you would like to register for Eco.
 
  </div>
 
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="xxxx">?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ecoinvalidbilling">Azure: Why I am getting a billing permission message?</summary>
 
   <div style="padding-left:16px">
 
-   text
+   If you get a `Permission is not valid, pleae update permissions as needed and try again` message during setup, make sure you have <i>billing account admin</i> access to Azure. Check your access:
 
- </div>
-
- </details>
-
- </details>
-
- <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="xxxx">?</summary>
-
-  <div style="padding-left:16px">
-
-   text
+* [Enterprise agreement](https://learn.microsoft.com/en-us/azure/cost-management-billing/manage/direct-ea-administration#add-another-enterprise-administrator)
+* [Microsoft customer agreement](https://learn.microsoft.com/en-us/azure/cost-management-billing/manage/understand-mca-roles)
 
  </div>
 
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="xxxx">?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ecoreservation">Azure: Why I am getting a <i>Registration failure</i> (permission is not valid) message?</summary>
 
   <div style="padding-left:16px">
 
-   text
+If you get a `Permission is not valid, pleae update permissions as needed and try again` message during setup, make sure you have <i>reservation admin</i> access to Azure. [Check your access](https://blog.hametbenoit.info/2022/08/03/azure-you-can-now-delegate-management-of-reservations/#.ZDmJ7OzMJf0).
 
- </div>
-
- </details>
-
- </details>
-
- <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="xxxx">?</summary>
-
-  <div style="padding-left:16px">
-
-   text
+ If you are not able to add reservation administrator permissions to your user, you might need to elevate the [global admin](https://learn.microsoft.com/en-us/azure/role-based-access-control/elevate-access-global-admin#elevate-access-for-a-global-administrator) access first.
 
  </div>
 
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="xxxx">?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="econodataaz">Azure: Why don't I see data in the Eco Dashboard?</summary>
 
   <div style="padding-left:16px">
 
-   text
-
- </div>
-
- </details>
-
- </details>
-
- <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="xxxx">?</summary>
-
-  <div style="padding-left:16px">
-
-   text
+   Contact [Spot support](https://spot.io/support/).
 
  </div>
 
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="xxxx">?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ecoids">Azure: Where can I find my tenant ID and billing account ID?</summary>
 
   <div style="padding-left:16px">
 
-   text
+You can get your [tenant ID](https://learn.microsoft.com/en-us/entra/fundamentals/how-to-find-tenant) and [billing ID](https://learn.microsoft.com/en-us/azure/cost-management-billing/manage/direct-ea-administration#manage-your-enrollment) from Azure.
 
  </div>
 
