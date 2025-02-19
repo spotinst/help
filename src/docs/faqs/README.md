@@ -3175,3 +3175,18 @@ The connected Azure App Registration or the App Secret Key may have expired. You
 </div>
 
  </details>
+
+<!----------------------------------eco---------------------------------->
+
+## Eco
+
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ecopolicy">AWS: Is there a best practice template for limiting a policy?</summary>
+
+ <div style="padding-left:16px">
+
+You can use the [AWS restricted Eco policy](https://github.com/spotinst/spotinst-examples/blob/master/Policies/AWS/Spot-AWS-Eco-Restricted-Full-Permission.json).
+
+ </div>
+
+ </details>
