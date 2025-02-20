@@ -371,6 +371,17 @@ There are a number of <a href="/administration/sso-access-control/">attributes t
  </div>
 
  </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="verificationemail">Why are existing users getting new verification emails?</summary>
+
+  <div style="padding-left:16px">
+
+Each time a user is added to an organization, the user gets a verification email from Spot. So if a user gets added to 3 organizations, they’ll receive 3 emails so they can confirm their email address all 3 times.
+
+ </div>
+
+ </details>
  
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="pagerdutynotifications">Can I set up PagerDuty alerts from Spot?</summary>
