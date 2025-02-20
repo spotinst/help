@@ -184,8 +184,8 @@
       }
     }
     .highlight {
-      background-color: yellow;
-      padding: 0 2px;
+      background-color: rgba(255, 0, 206, .4);  
+      border-radius: 3px;
     }
     .matching-post {
       width: 100%;
@@ -324,6 +324,108 @@
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/ga.min.js"></script>
  
   <!-- Custom Plugins -->
+  
+  <script>
+    (function () {
+      function storeSearchTermOnInput() {
+        const searchInput = document.querySelector('.sidebar input[type="search"]');
+        if (!searchInput) {
+          console.error("Search input not found!");
+          return;
+        }
+
+        function saveSearchTerm() {
+          const searchTerm = searchInput.value.trim();
+          if (searchTerm) {
+            sessionStorage.setItem("highlightSearchTerm", searchTerm);
+          }
+        }
+
+        searchInput.addEventListener("input", saveSearchTerm);
+        searchInput.addEventListener("blur", saveSearchTerm);
+      }
+
+      function highlightStoredSearchTerm() {
+        const searchTerm = sessionStorage.getItem("highlightSearchTerm");
+        if (!searchTerm) {
+          return;
+        }
+
+        sessionStorage.removeItem("highlightSearchTerm");
+
+        const content = document.querySelector(".markdown-section");
+        if (!content) {
+          console.error("Content section not found for highlighting.");
+          return;
+        }
+
+        const regex = new RegExp(`(${searchTerm})`, "gi");
+
+        function wrapMatches(node) {
+          if (node.nodeType === Node.TEXT_NODE && node.nodeValue.trim() !== "") {
+            if (
+              !node.parentNode ||
+              !node.parentNode.classList.contains("highlight")
+            ) {
+              const fragment = document.createDocumentFragment();
+              let lastIndex = 0;
+
+              node.nodeValue.replace(regex, (match, p1, offset) => {
+                fragment.appendChild(
+                  document.createTextNode(node.nodeValue.slice(lastIndex, offset))
+                );
+
+                const span = document.createElement("span");
+                span.className = "highlight";
+                span.textContent = p1;
+                fragment.appendChild(span);
+
+                lastIndex = offset + p1.length;
+              });
+
+              fragment.appendChild(
+                document.createTextNode(node.nodeValue.slice(lastIndex))
+              );
+              return fragment;
+            }
+          }
+
+          const clonedNode = node.cloneNode(false);
+          for (const child of node.childNodes) {
+            clonedNode.appendChild(wrapMatches(child));
+          }
+
+          return clonedNode;
+        }
+
+        content.querySelectorAll(".highlight").forEach((el) => {
+          el.replaceWith(document.createTextNode(el.textContent));
+        });
+
+        const nodes = [...content.childNodes];
+        for (const node of nodes) {
+          content.replaceChild(wrapMatches(node), node);
+        }
+      }
+
+      function customHighlightPlugin(hook) {
+        hook.doneEach(() => {
+          setTimeout(highlightStoredSearchTerm, 500);
+        });
+      }
+
+      window.$docsify.plugins = [].concat(
+        customHighlightPlugin,
+        window.$docsify.plugins || []
+      );
+
+      document.addEventListener("DOMContentLoaded", storeSearchTermOnInput);
+    })();
+  </script>
+
+
+
+
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const sidebar = document.querySelector(".sidebar");
