@@ -38,7 +38,7 @@ Supported products: Ocean, Elastigroup.
    </div>
 
  </details>
- <a href="#id="genreg">AWS, Azure, GCP: What regions does Spot support for my cloud provider?</a>
+ <a href="faqs/frequently-asked-questions/general#genreg"></a>
 
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="billing">AWS, Azure, GCP: How are costs and savings calculated in the Spot console and the API?</summary>
