@@ -1603,6 +1603,23 @@ The Ocean Controller saves up to 8 days of logs. The logs for each day are about
 
  </details>
 
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocnorestrict">AKS, EKS, GKE: Why is the out of strategy replacement getting canceled for pods <i>without</i> the `restrict-scale-down` label?</summary>
+
+  <div style="padding-left:16px">
+
+If a node replacement is canceled, you may see this log message in the cluster in the Spot console:
+
+```DEBUG, Replacement of type Out of strategy for instance has been canceled. Reason for cancellation: A pod with the restrict-scale-down label is currently running on the node.```
+
+You can also get this message if you’re using the `cluster-autoscaler.kubernetes.io/safe-to-evict` label. It works the same as the `restrict-scale-down` label. When you have one of those labels, the node is not scaled down or replaced.
+
+Make sure that labels and annotations don’t prevent scaling down [on the virtual node groups](ocean/features/scaling-kubernetes?id=scale-down-prevention) or [on the pods](ocean/features/labels-and-taints?id=spotinstiorestrict-scale-down).
+
+ </div>
+
+ </details>
+
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceantokens">AKS, EKS, GKE: What are the minimum permissions needed for a programmatic token for creating an Ocean cluster controller?</summary>
