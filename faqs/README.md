@@ -763,6 +763,21 @@ If an instance type isn’t [EBS-optimized by default](https://docs.aws.amazon.c
  </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocvpnsec">AWS: Why am I getting an <i>exceeded the number of VPC security allowed per instance</i> message?</summary>
+
+  <div style="padding-left:16px">
+
+You may get this message when creating or importing an Elastigroup or cluster if you reach your AWS service quota limit for security groups per network interface:
+
+````POST https://api.spotinst.io/aws/ec2/group?accountId=act-xxxxx: 400 (request: "xxxxx") SecurityGroupLimitExceeded: You have exceeded the number of VPC security groups allowed per instance.````
+
+You can [request a quota increase from AWS](https://docs.aws.amazon.com/vpc/latest/userguide/amazon-vpc-limits.html).
+
+   </div>
+
+ </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocinvalidkeypair">AWS: Why am I getting a <i>Can't Spin On-Demand Instances: Code: InvalidKeyPair.NotFound</i> message?</summary>
 
   <div style="padding-left:16px">
@@ -779,7 +794,6 @@ Update the key pair:
 
  </details>
 
-
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="secretnotvalid">Azure: Why can my cluster not perform scaling actions (invalid client secret)?</summary>
 
@@ -794,52 +808,6 @@ In Azure Kubernetes Service (AKS), there are two kinds of secrets: <i>client sec
 Generate a new client secret <i>value</i> and [update it in the API](https://docs.spot.io/api/#tag/Accounts/operation/OrganizationsAndAccountsSetCloudCredentialsForAzure).
 
  </div>
-
- </details>
- 
-   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceancudvng">GCP: Can I set up committed use discounts on virtual node groups?</summary>
-
-  <div style="padding-left:16px">
-
-You can set up committed use discounts (CUDs) for clusters in Ocean and groups in Elastigroup. It cannot be used for virtual node groups.
-
-Set up committed use discounts for:
-* [Ocean](ocean/features/committed-use-discount)
-* [Elastigroup](elastigroup/features/gcp/commit-use-discount)
-
-   </div>
-
- </details>
-
-   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanbootdisk">GCP: Why can’t I spin new instances (boot disk architecture)?</summary>
-
-  <div style="padding-left:16px">
-
-If Ocean isn’t launching a VM, you might get this log message:
-
-```Can’t Spin Instance: Name: sin-abcd. Code: Error, Message: Invalid resource usage: 'Requested boot disk architecture (X86_64) is not compatible with machine type architecture (ARM64).'```
-
-This can happen because Ocean doesn’t validate VM architecture for GCP. You can [troubleshoot this error](https://cloud.google.com/compute/docs/troubleshooting/troubleshooting-arm-vms#errors_when_updating_vms) in GCP.
-
-   </div>
-
- </details>
-
-   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanscaleup">GCP: Why am I getting a zone_resource_pool_exhausted (scale up) error?</summary>
-
-  <div style="padding-left:16px">
-
-You may get this log message when a VM is trying to scale up or launch VMs:
-
-<pre><code>Can't Spin Instance: Name: abcde. Code: ZONE_RESOURCE_POOL_EXHAUSTED_WITH_DETAILS,
-Message: The zone 123 does not have enough resources available to fulfill the request, '(resource type:compute)'.</code></pre>
-
-This can happen if the specific VM family and size aren’t available for a certain zone at the moment. Elastigroup or Ocean will try to automatically spin up a different VM in a different zone to compensate.
-
-   </div>
 
  </details>
 
@@ -1452,24 +1420,6 @@ Once the cluster is configured to use the default virtual node group as a templa
  </details>
 
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocgkezone">GKE: How do zones and regions work with clusters?</summary>
-
-  <div style="padding-left:16px">
-
-In GKE, regional clusters replicate the cluster’s control plane and nodes in the region's zones. Using multiple regions and zones helps protect against unexpected failures. Workloads can be redirected to nodes in different zones.
-
-In Spot, when you import a regional cluster, the cluster is not integrated with its existing node pools. The instances are registered to the cluster. Spot does not replicate the nodes in all the zones. It acts as a zonal cluster.
-
-Keep in mind:
-
-* The control planes are managed in GKE and are replicated when a regional cluster is selected. This gives you high reliability in the control planes.
-* Ocean autoscaler chooses the best markets available for the pending pods. Ocean quickly launches instances in a different zone if there's a zonal outage.
-
- </div>
-
- </details>
-
-   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocunregnode">EKS: Why am I getting unregistered nodes and syntax error or unexpected EOF messages?</summary>
 
   <div style="padding-left:16px">
@@ -1485,6 +1435,71 @@ Feb 01 14:03:05 cloud-init[2517]: util.py[WARNING]: Running module scripts-user 
 Make sure:
 1. The parameters are configured correctly (such as labels, AMI, IP, user data).
 2. The user data script is executable and working properly.
+
+   </div>
+
+ </details>
+
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocgkezone">GKE: How do zones and regions work with clusters?</summary>
+
+  <div style="padding-left:16px">
+
+In GKE, regional clusters replicate the cluster’s control plane and nodes in the region's zones. Using multiple regions and zones helps protect against unexpected failures. Workloads can be redirected to nodes in different zones.
+
+In Spot, when you import a regional cluster, the cluster is <b>not</b> integrated with its existing node pools. The instances are registered to the cluster. Spot does <b>not</b> replicate the nodes in all the zones. It acts as a zonal cluster.
+
+Keep in mind:
+
+* The control planes are managed in GKE and are replicated when a regional cluster is selected. This gives you high reliability in the control planes.
+* Ocean autoscaler chooses the best markets available for the pending pods. Ocean quickly launches instances in a different zone if there's a zonal outage.
+
+ </div>
+
+ </details>
+
+ 
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceancudvng">GKE: Can I set up committed use discounts on virtual node groups?</summary>
+
+  <div style="padding-left:16px">
+
+You can set up committed use discounts (CUDs) for clusters in Ocean and groups in Elastigroup. It cannot be used for virtual node groups.
+
+Set up committed use discounts for:
+* [Ocean](ocean/features/committed-use-discount)
+* [Elastigroup](elastigroup/features/gcp/commit-use-discount)
+
+   </div>
+
+ </details>
+
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanbootdisk">GKE: Why can’t I spin new instances (boot disk architecture)?</summary>
+
+  <div style="padding-left:16px">
+
+If Ocean isn’t launching a VM, you might get this log message:
+
+```Can’t Spin Instance: Name: sin-abcd. Code: Error, Message: Invalid resource usage: 'Requested boot disk architecture (X86_64) is not compatible with machine type architecture (ARM64).'```
+
+This can happen because Ocean doesn’t validate VM architecture for GCP. You can [troubleshoot this error](https://cloud.google.com/compute/docs/troubleshooting/troubleshooting-arm-vms#errors_when_updating_vms) in GCP.
+
+   </div>
+
+ </details>
+
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanscaleup">GKE: Why am I getting a zone_resource_pool_exhausted (scale up) error?</summary>
+
+  <div style="padding-left:16px">
+
+You may get this log message when a VM is trying to scale up or launch VMs:
+
+<pre><code>Can't Spin Instance: Name: abcde. Code: ZONE_RESOURCE_POOL_EXHAUSTED_WITH_DETAILS,
+Message: The zone 123 does not have enough resources available to fulfill the request, '(resource type:compute)'.</code></pre>
+
+This can happen if the specific VM family and size aren’t available for a certain zone at the moment. Elastigroup or Ocean will try to automatically spin up a different VM in a different zone to compensate.
 
    </div>
 
@@ -1628,7 +1643,7 @@ The Ocean Controller saves up to 8 days of logs. The logs for each day are about
  </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocnorestrict">AKS, EKS, GKE: Why is the out of strategy replacement getting canceled for pods <i>without</i> the `restrict-scale-down` label?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocnorestrict">AKS, EKS, GKE: Why is the out of strategy replacement getting canceled for pods <i>without</i> the restrict-scale-down label?</summary>
 
   <div style="padding-left:16px">
 
@@ -2633,6 +2648,21 @@ You need to increase the disk size for the Elastigroup:
 2. Update **Boot Disk** > **Disk Size** to be bigger than the configured disk size for the image.
  
  </div>
+
+ </details>
+
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egbootdisk">GCP: Why can’t I spin new instances (boot disk architecture)?</summary>
+
+  <div style="padding-left:16px">
+
+If Elastigroup isn’t launching a VM, you might get this log message:
+
+```Can’t Spin Instance: Name: sin-abcd. Code: Error, Message: Invalid resource usage: 'Requested boot disk architecture (X86_64) is not compatible with machine type architecture (ARM64).'```
+
+This can happen because Elastigroup doesn’t validate VM architecture for GCP. You can [troubleshoot this error](https://cloud.google.com/compute/docs/troubleshooting/troubleshooting-arm-vms#errors_when_updating_vms) in GCP.
+
+   </div>
 
  </details>
 
