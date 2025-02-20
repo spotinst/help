@@ -1859,8 +1859,18 @@ If you look at the same day a few days later, the cost will be similar to the ot
 
 Spot's Cost Analysis reviews the cost data after one day. For instance, if today is August 20, the cost analysis data will be finalized only on August 21.
 
-Initially, the costs are compared with the on demand value of the instance types, followed by the Spot value. Afterwards, the costs are compared with reserved instances and saving plans. So, if the you have reserved instances and saving plans configured, the cost gap from the previous day can be higher. 
+Initially, the costs are compared with the on demand value of the instance types, followed by the Spot value. Afterwards, the costs are compared with reserved instances and saving plans. So, if the you have reserved instances and saving plans configured, the cost gap from the previous day can be higher.
 
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocworkload">AKS: Why is the workload marked as unable to migrate?</summary>
+
+  <div style="padding-left:16px">
+
+If you’re seeing an unable to migrate status in workload migration, check if the node affinity has `kubernetes.azure.com/scalesetpriority`. Do not use this nodeAffinity. If you have both the Spot toleration and nodeAffinity configured, then Ocean [autoscaling fails](https://docs.spot.io/ocean/getting-started/aks/aks-prerequisites?id=enable-ocean-to-launch-spot-vms-for-workloads). You can see a message in the cluster log in the Spot console.
 
  </div>
 
