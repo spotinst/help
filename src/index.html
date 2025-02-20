@@ -184,8 +184,8 @@
       }
     }
     .highlight {
-      background-color: yellow;
-      padding: 0 2px;
+      background-color: rgba(255, 0, 206, .4);  
+      border-radius: 3px;
     }
     .matching-post {
       width: 100%;
@@ -324,6 +324,105 @@
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/ga.min.js"></script>
  
   <!-- Custom Plugins -->
+  
+  <script>
+  (function () {
+    function storeSearchTermOnInput() {
+      const searchInput = document.querySelector('.sidebar input[type="search"]');
+      if (!searchInput) {
+        console.error("Search input not found!");
+        return;
+      }
+
+      searchInput.addEventListener("input", function () {
+        const searchTerm = searchInput.value.trim();
+        if (searchTerm) {
+          sessionStorage.setItem("highlightSearchTerm", searchTerm);
+          console.log("Updated stored search term:", searchTerm);
+        }
+      });
+
+      searchInput.addEventListener("blur", function () {
+        const searchTerm = searchInput.value.trim();
+        if (searchTerm) {
+          sessionStorage.setItem("highlightSearchTerm", searchTerm);
+          console.log("Stored search term on blur:", searchTerm);
+        }
+      });
+    }
+
+    function highlightStoredSearchTerm() {
+      const searchTerm = sessionStorage.getItem("highlightSearchTerm");
+      if (!searchTerm) {
+        console.log("No stored search term to highlight.");
+        return;
+      }
+
+      console.log("Highlighting search term:", searchTerm);
+      sessionStorage.removeItem("highlightSearchTerm"); // Clear after use
+
+      const content = document.querySelector(".markdown-section");
+      if (!content) {
+        console.error("Content section not found for highlighting.");
+        return;
+      }
+
+      const regex = new RegExp(`(${searchTerm})`, "gi");
+
+      function wrapMatches(node) {
+        if (node.nodeType === 3 && node.nodeValue.trim() !== "") {
+          // Ensure we don't wrap inside an existing highlight
+          if (
+            !node.parentNode.classList ||
+            !node.parentNode.classList.contains("highlight")
+          ) {
+            const span = document.createElement("span");
+            span.innerHTML = node.nodeValue.replace(
+              regex,
+              `<span class="highlight">$1</span>`
+            );
+            return span;
+          }
+          return node;
+        }
+
+        const clonedNode = node.cloneNode(false);
+        node.childNodes.forEach((child) => {
+          clonedNode.appendChild(wrapMatches(child));
+        });
+
+        return clonedNode;
+      }
+
+      content.querySelectorAll(".highlight").forEach((el) => {
+        // Remove existing highlights to prevent duplicates
+        const parent = el.parentNode;
+        parent.replaceChild(document.createTextNode(el.textContent), el);
+      });
+
+      content.childNodes.forEach((node) => {
+        content.replaceChild(wrapMatches(node), node);
+      });
+    }
+
+    function customHighlightPlugin(hook) {
+      hook.doneEach(function () {
+        console.log("Docsify page loaded, attempting to highlight.");
+        setTimeout(() => {
+          highlightStoredSearchTerm();
+        }, 500); // Delay to ensure content is fully loaded
+      });
+    }
+
+    window.$docsify.plugins = [].concat(
+      customHighlightPlugin,
+      window.$docsify.plugins || []
+  );
+    document.addEventListener("DOMContentLoaded", storeSearchTermOnInput);
+  })();
+</script>
+
+
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const sidebar = document.querySelector(".sidebar");
