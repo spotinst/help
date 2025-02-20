@@ -1452,24 +1452,6 @@ Once the cluster is configured to use the default virtual node group as a templa
  </details>
 
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocgkezone">GKE: How do zones and regions work with clusters?</summary>
-
-  <div style="padding-left:16px">
-
-In GKE, regional clusters replicate the cluster’s control plane and nodes in the region's zones. Using multiple regions and zones helps protect against unexpected failures. Workloads can be redirected to nodes in different zones.
-
-In Spot, when you import a regional cluster, the cluster is not integrated with its existing node pools. The instances are registered to the cluster. Spot does not replicate the nodes in all the zones. It acts as a zonal cluster.
-
-Keep in mind:
-
-* The control planes are managed in GKE and are replicated when a regional cluster is selected. This gives you high reliability in the control planes.
-* Ocean autoscaler chooses the best markets available for the pending pods. Ocean quickly launches instances in a different zone if there's a zonal outage.
-
- </div>
-
- </details>
-
-   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocunregnode">EKS: Why am I getting unregistered nodes and syntax error or unexpected EOF messages?</summary>
 
   <div style="padding-left:16px">
@@ -1487,6 +1469,24 @@ Make sure:
 2. The user data script is executable and working properly.
 
    </div>
+
+ </details>
+
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocgkezone">GKE: How do zones and regions work with clusters?</summary>
+
+  <div style="padding-left:16px">
+
+In GKE, regional clusters replicate the cluster’s control plane and nodes in the region's zones. Using multiple regions and zones helps protect against unexpected failures. Workloads can be redirected to nodes in different zones.
+
+In Spot, when you import a regional cluster, the cluster is <b>not</b> integrated with its existing node pools. The instances are registered to the cluster. Spot does <b>not</b> replicate the nodes in all the zones. It acts as a zonal cluster.
+
+Keep in mind:
+
+* The control planes are managed in GKE and are replicated when a regional cluster is selected. This gives you high reliability in the control planes.
+* Ocean autoscaler chooses the best markets available for the pending pods. Ocean quickly launches instances in a different zone if there's a zonal outage.
+
+ </div>
 
  </details>
 
