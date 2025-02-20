@@ -465,7 +465,8 @@ The following permissions are required to write information from your AWS Cost &
                   "s3:ListTagsForResource", 
                   "s3:PutObject", 
                   "s3:PutObjectTagging", 
-                  "s3:PutObjectAcl" 
+                  "s3:PutObjectAcl"
+````
 
 ### IAM Role 
 
