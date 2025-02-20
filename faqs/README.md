@@ -39,6 +39,35 @@ Supported products: Ocean, Elastigroup.
 
  </details>
 
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="billing">AWS, Azure, GCP: How are costs and savings calculated in the Spot console and the API?</summary>
+
+  <div style="padding-left:16px">
+
+Savings in the Spot API shows you the total cost of the cluster/group.
+
+Savings in the Spot console (click the user icon <img height="18" src="https://docs.spot.io/administration/_media/usericon.png"> > **Settings** > **Savings**) shows you how much you saved by using spot nodes instead of on-demand nodes:
+
+* **Potential cost** is the price of the resource based on on-demand pricing.
+* **Actual cost** is the actual payment made to the cloud provider after Ocean/EG optimization.
+* **Savings %** is the percent of potential cost saved, calculated as (amount saved / potential cost) x 100.
+* **Amount saved** is the difference between the potential cost (on-demand pricing) and the actual cost for the selected period.
+
+ </div>
+ </details>
+
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="billing">AWS, Azure, GCP: What day of the month can I see my Spot bill?</summary>
+
+  <div style="padding-left:16px">
+
+You can [see your invoice](administration/organizations/billing-details?id=monthly-billing-details) on the 15th of the following month. For example, to see data that includes April, you can view the invoices on or after May 15. The charge is about 3 business days after the invoice (around May 18).
+
+Depending on holidays, the invoice and charges may be slightly delayed.
+
+ </div>
+ </details>
+
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="gennews">AWS, Azure, GCP: Where can I get the latest Spot and cloud provider news?</summary>
 
@@ -468,17 +497,6 @@ Spotinst-sdk2 is not part of the default PyPl. You need to create a deployment p
  </div>
  </details>
 
-   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="billing">What day of the month can I see my Spot bill?</summary>
-
-  <div style="padding-left:16px">
-
-You can [see your invoice](administration/organizations/billing-details?id=monthly-billing-details) on the 15th of the following month. For example, to see data that includes April, you can view the invoices on or after May 15. The charge is about 3 business days after the invoice (around May 18).
-
-Depending on holidays, the invoice and charges may be slightly delayed.
-
- </div>
- </details>
  
 <!----------------------------------ocean---------------------------------->
 
@@ -968,6 +986,30 @@ Reimport Fargate services with less than 5 security groups and choose only one s
  </details>
 
 <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocspecificlaunchspec">ECS: Can I launch an instance with a specific launch specification or virtual node group?</summary>
+
+  <div style="padding-left:16px">
+
+Yes, you can launch an instance with a specific launch specification or virtual node group:
+
+1. In the Spot console, go to **Ocean** > **Cloud Clusters**.
+2. Click on the name of the cluster.
+3. Go to **Virtual Node Groups** > **Create VNG**.
+4. If you want to create a launch specification with custom attributes, in **Node Selection**, add attribute keys and values. For example, **key**: <i>stack</i>, **value**: <i>dev</i>.
+
+   <img width=300 src="https://github.com/user-attachments/assets/e8399504-8a32-424f-a9f5-9606a036f945">
+
+5. Add the custom attribute to the user data startup script: `echo ECS_INSTANCE_ATTRIBUTES='{"stack":"dev"}' >> /etc/ecs/ecs.config`.
+6. Add the constraints to the [task definition](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-placement-constraints.html) or service: `memberOf(attribute:stack==dev)`.
+
+When a new instance is launched, it will be from the dedicated virtual node group.
+
+   
+ </div>
+
+ </details>
+
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanecsseparately">ECS: Why are ECS instances launched separately for each task?</summary>
 
   <div style="padding-left:16px">
@@ -1410,6 +1452,24 @@ Once the cluster is configured to use the default virtual node group as a templa
  </details>
 
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocgkezone">GKE: How do zones and regions work with clusters?</summary>
+
+  <div style="padding-left:16px">
+
+In GKE, regional clusters replicate the cluster’s control plane and nodes in the region's zones. Using multiple regions and zones helps protect against unexpected failures. Workloads can be redirected to nodes in different zones.
+
+In Spot, when you import a regional cluster, the cluster is not integrated with its existing node pools. The instances are registered to the cluster. Spot does not replicate the nodes in all the zones. It acts as a zonal cluster.
+
+Keep in mind:
+
+* The control planes are managed in GKE and are replicated when a regional cluster is selected. This gives you high reliability in the control planes.
+* Ocean autoscaler chooses the best markets available for the pending pods. Ocean quickly launches instances in a different zone if there's a zonal outage.
+
+ </div>
+
+ </details>
+
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocunregnode">EKS: Why am I getting unregistered nodes and syntax error or unexpected EOF messages?</summary>
 
   <div style="padding-left:16px">
@@ -1562,6 +1622,23 @@ The Ocean Controller saves up to 8 days of logs. The logs for each day are about
 
 1. Sign in to the container: `kubectl exec -ti <controller_pod_name> bash -n spot-system`.
 2. View the logs: `ls -lah controller/log/spotinst`.
+
+ </div>
+
+ </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocnorestrict">AKS, EKS, GKE: Why is the out of strategy replacement getting canceled for pods <i>without</i> the `restrict-scale-down` label?</summary>
+
+  <div style="padding-left:16px">
+
+If a node replacement is canceled, you may see this log message in the cluster in the Spot console:
+
+```DEBUG, Replacement of type Out of strategy for instance has been canceled. Reason for cancellation: A pod with the restrict-scale-down label is currently running on the node.```
+
+You can also get this message if you’re using the `cluster-autoscaler.kubernetes.io/safe-to-evict` label. It works the same as the `restrict-scale-down` label. When you have one of those labels, the node is not scaled down or replaced.
+
+Make sure that labels and annotations don’t prevent scaling down [on the virtual node groups](ocean/features/scaling-kubernetes?id=scale-down-prevention) or [on the pods](ocean/features/labels-and-taints?id=spotinstiorestrict-scale-down).
 
  </div>
 
@@ -1806,8 +1883,18 @@ If you look at the same day a few days later, the cost will be similar to the ot
 
 Spot's Cost Analysis reviews the cost data after one day. For instance, if today is August 20, the cost analysis data will be finalized only on August 21.
 
-Initially, the costs are compared with the on demand value of the instance types, followed by the Spot value. Afterwards, the costs are compared with reserved instances and saving plans. So, if the you have reserved instances and saving plans configured, the cost gap from the previous day can be higher. 
+Initially, the costs are compared with the on demand value of the instance types, followed by the Spot value. Afterwards, the costs are compared with reserved instances and saving plans. So, if the you have reserved instances and saving plans configured, the cost gap from the previous day can be higher.
 
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocworkload">AKS: Why is the workload marked as unable to migrate?</summary>
+
+  <div style="padding-left:16px">
+
+If you’re seeing an unable to migrate status in workload migration, check if the node affinity has `kubernetes.azure.com/scalesetpriority`. Do not use this nodeAffinity. If you have both the Spot toleration and nodeAffinity configured, then Ocean [autoscaling fails](https://docs.spot.io/ocean/getting-started/aks/aks-prerequisites?id=enable-ocean-to-launch-spot-vms-for-workloads). You can see a message in the cluster log in the Spot console.
 
  </div>
 
