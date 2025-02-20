@@ -145,6 +145,25 @@ You can choose to remove some of these permissions from the [Spot IAM policy](/a
  </div>
 
  </details>
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="awscw">AWS: Why am I getting an alert in CloudWatch that the AMI ID does not exist?</summary>
+
+  <div style="padding-left:16px">
+
+You might get this alert in CloudWatch:
+
+````"eventType": "AwsApiCall",
+"error": {
+"kind": "Client.InvalidAMIID.NotFound",
+"message": "The image id '[ami-xxxxx]' does not exist"
+},
+````
+
+This can happen if you have AWS resources that are not managed by Spot. Spot scans all regions for each account to show you how you can get savings. This information is shown in the [Optimization dashboard](connect-your-cloud-provider/optimize).
+
+ </div>
+
+ </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="SSO-signin">SSO: Why can't I sign in to the Spot console?</summary>
