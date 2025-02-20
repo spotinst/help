@@ -986,6 +986,30 @@ Reimport Fargate services with less than 5 security groups and choose only one s
  </details>
 
 <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocspecificlaunchspec">ECS: Can I launch an instance with a specific launch specification or virtual node group?</summary>
+
+  <div style="padding-left:16px">
+
+Yes, you can launch an instance with a specific launch specification or virtual node group:
+
+1. In the Spot console, go to **Ocean** > **Cloud Clusters**.
+2. Click on the name of the cluster.
+3. Go to **Virtual Node Groups** > **Create VNG**.
+4. If you want to create a launch specification with custom attributes, in **Node Selection**, add attribute keys and values. For example, **key**: <i>stack</i>, **value**: <i>dev</i>.
+
+   <img width=300 src="https://github.com/user-attachments/assets/e8399504-8a32-424f-a9f5-9606a036f945">
+
+5. Add the custom attribute to the user data startup script: `echo ECS_INSTANCE_ATTRIBUTES='{"stack":"dev"}' >> /etc/ecs/ecs.config`.
+6. Add the constraints to the [task definition](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-placement-constraints.html) or service: `memberOf(attribute:stack==dev)`.
+
+When a new instance is launched, it will be from the dedicated virtual node group.
+
+   
+ </div>
+
+ </details>
+
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanecsseparately">ECS: Why are ECS instances launched separately for each task?</summary>
 
   <div style="padding-left:16px">
