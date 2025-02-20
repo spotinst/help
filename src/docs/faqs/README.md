@@ -796,52 +796,6 @@ Generate a new client secret <i>value</i> and [update it in the API](https://doc
  </div>
 
  </details>
- 
-   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceancudvng">GCP: Can I set up committed use discounts on virtual node groups?</summary>
-
-  <div style="padding-left:16px">
-
-You can set up committed use discounts (CUDs) for clusters in Ocean and groups in Elastigroup. It cannot be used for virtual node groups.
-
-Set up committed use discounts for:
-* [Ocean](ocean/features/committed-use-discount)
-* [Elastigroup](elastigroup/features/gcp/commit-use-discount)
-
-   </div>
-
- </details>
-
-   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanbootdisk">GCP: Why can’t I spin new instances (boot disk architecture)?</summary>
-
-  <div style="padding-left:16px">
-
-If Ocean isn’t launching a VM, you might get this log message:
-
-```Can’t Spin Instance: Name: sin-abcd. Code: Error, Message: Invalid resource usage: 'Requested boot disk architecture (X86_64) is not compatible with machine type architecture (ARM64).'```
-
-This can happen because Ocean doesn’t validate VM architecture for GCP. You can [troubleshoot this error](https://cloud.google.com/compute/docs/troubleshooting/troubleshooting-arm-vms#errors_when_updating_vms) in GCP.
-
-   </div>
-
- </details>
-
-   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanscaleup">GCP: Why am I getting a zone_resource_pool_exhausted (scale up) error?</summary>
-
-  <div style="padding-left:16px">
-
-You may get this log message when a VM is trying to scale up or launch VMs:
-
-<pre><code>Can't Spin Instance: Name: abcde. Code: ZONE_RESOURCE_POOL_EXHAUSTED_WITH_DETAILS,
-Message: The zone 123 does not have enough resources available to fulfill the request, '(resource type:compute)'.</code></pre>
-
-This can happen if the specific VM family and size aren’t available for a certain zone at the moment. Elastigroup or Ocean will try to automatically spin up a different VM in a different zone to compensate.
-
-   </div>
-
- </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocnewnodeaz">ECS, EKS: Are new nodes launched in the same availability zone as the old nodes?</summary>
@@ -1487,6 +1441,53 @@ Keep in mind:
 * Ocean autoscaler chooses the best markets available for the pending pods. Ocean quickly launches instances in a different zone if there's a zonal outage.
 
  </div>
+
+ </details>
+
+ 
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceancudvng">GKE: Can I set up committed use discounts on virtual node groups?</summary>
+
+  <div style="padding-left:16px">
+
+You can set up committed use discounts (CUDs) for clusters in Ocean and groups in Elastigroup. It cannot be used for virtual node groups.
+
+Set up committed use discounts for:
+* [Ocean](ocean/features/committed-use-discount)
+* [Elastigroup](elastigroup/features/gcp/commit-use-discount)
+
+   </div>
+
+ </details>
+
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanbootdisk">GKE: Why can’t I spin new instances (boot disk architecture)?</summary>
+
+  <div style="padding-left:16px">
+
+If Ocean isn’t launching a VM, you might get this log message:
+
+```Can’t Spin Instance: Name: sin-abcd. Code: Error, Message: Invalid resource usage: 'Requested boot disk architecture (X86_64) is not compatible with machine type architecture (ARM64).'```
+
+This can happen because Ocean doesn’t validate VM architecture for GCP. You can [troubleshoot this error](https://cloud.google.com/compute/docs/troubleshooting/troubleshooting-arm-vms#errors_when_updating_vms) in GCP.
+
+   </div>
+
+ </details>
+
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanscaleup">GKE: Why am I getting a zone_resource_pool_exhausted (scale up) error?</summary>
+
+  <div style="padding-left:16px">
+
+You may get this log message when a VM is trying to scale up or launch VMs:
+
+<pre><code>Can't Spin Instance: Name: abcde. Code: ZONE_RESOURCE_POOL_EXHAUSTED_WITH_DETAILS,
+Message: The zone 123 does not have enough resources available to fulfill the request, '(resource type:compute)'.</code></pre>
+
+This can happen if the specific VM family and size aren’t available for a certain zone at the moment. Elastigroup or Ocean will try to automatically spin up a different VM in a different zone to compensate.
+
+   </div>
 
  </details>
 
@@ -2633,6 +2634,21 @@ You need to increase the disk size for the Elastigroup:
 2. Update **Boot Disk** > **Disk Size** to be bigger than the configured disk size for the image.
  
  </div>
+
+ </details>
+
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egbootdisk">GCP: Why can’t I spin new instances (boot disk architecture)?</summary>
+
+  <div style="padding-left:16px">
+
+If Elastigroup isn’t launching a VM, you might get this log message:
+
+```Can’t Spin Instance: Name: sin-abcd. Code: Error, Message: Invalid resource usage: 'Requested boot disk architecture (X86_64) is not compatible with machine type architecture (ARM64).'```
+
+This can happen because Elastigroup doesn’t validate VM architecture for GCP. You can [troubleshoot this error](https://cloud.google.com/compute/docs/troubleshooting/troubleshooting-arm-vms#errors_when_updating_vms) in GCP.
+
+   </div>
 
  </details>
 
