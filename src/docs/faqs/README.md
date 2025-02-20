@@ -39,6 +39,35 @@ Supported products: Ocean, Elastigroup.
 
  </details>
 
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="billing">AWS, Azure, GCP: How are costs and savings calculated in the Spot console and the API?</summary>
+
+  <div style="padding-left:16px">
+
+Savings in the Spot API shows you the total cost of the cluster/group.
+
+Savings in the Spot console (click the user icon <img height="18" src="https://docs.spot.io/administration/_media/usericon.png"> > **Settings** > **Savings**) shows you how much you saved by using spot nodes instead of on-demand nodes:
+
+* **Potential cost** is the price of the resource based on on-demand pricing.
+* **Actual cost** is the actual payment made to the cloud provider after Ocean/EG optimization.
+* **Savings %** is the percent of potential cost saved, calculated as (amount saved / potential cost) x 100.
+* **Amount saved** is the difference between the potential cost (on-demand pricing) and the actual cost for the selected period.
+
+ </div>
+ </details>
+
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="billing">AWS, Azure, GCP: What day of the month can I see my Spot bill?</summary>
+
+  <div style="padding-left:16px">
+
+You can [see your invoice](administration/organizations/billing-details?id=monthly-billing-details) on the 15th of the following month. For example, to see data that includes April, you can view the invoices on or after May 15. The charge is about 3 business days after the invoice (around May 18).
+
+Depending on holidays, the invoice and charges may be slightly delayed.
+
+ </div>
+ </details>
+
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="gennews">AWS, Azure, GCP: Where can I get the latest Spot and cloud provider news?</summary>
 
@@ -468,17 +497,6 @@ Spotinst-sdk2 is not part of the default PyPl. You need to create a deployment p
  </div>
  </details>
 
-   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="billing">What day of the month can I see my Spot bill?</summary>
-
-  <div style="padding-left:16px">
-
-You can [see your invoice](administration/organizations/billing-details?id=monthly-billing-details) on the 15th of the following month. For example, to see data that includes April, you can view the invoices on or after May 15. The charge is about 3 business days after the invoice (around May 18).
-
-Depending on holidays, the invoice and charges may be slightly delayed.
-
- </div>
- </details>
  
 <!----------------------------------ocean---------------------------------->
 
@@ -1405,6 +1423,24 @@ If you want to use <i>IAMInstanceProfileName</i> in Terraform, set <b>use_as_tem
 
 Once the cluster is configured to use the default virtual node group as a template, <i>IAMInstanceProfileName</i> can be used instead of <i>Invalid IAMInstanceProfile</i>.
       
+ </div>
+
+ </details>
+
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocgkezone">GKE: How do zones and regions work with clusters?</summary>
+
+  <div style="padding-left:16px">
+
+In GKE, regional clusters replicate the cluster’s control plane and nodes in the region's zones. Using multiple regions and zones helps protect against unexpected failures. Workloads can be redirected to nodes in different zones.
+
+In Spot, when you import a regional cluster, the cluster is not integrated with its existing node pools. The instances are registered to the cluster. Spot does not replicate the nodes in all the zones. It acts as a zonal cluster.
+
+Keep in mind:
+
+* The control planes are managed in GKE and are replicated when a regional cluster is selected. This gives you high reliability in the control planes.
+* Ocean autoscaler chooses the best markets available for the pending pods. Ocean quickly launches instances in a different zone if there's a zonal outage.
+
  </div>
 
  </details>
