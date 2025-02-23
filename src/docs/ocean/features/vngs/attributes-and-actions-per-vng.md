@@ -124,7 +124,7 @@ For information about defining preferred instance types in the Spot API using th
 * [Virtual node group](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKELaunchSpecCreate)
 * [Cluster](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKEClusterCreate)
 
-<p id=revert-to-preferred-instance-types-per-virtual-node-group-(gke)></p>
+<p id=revert-to-preferred-instance-types-per-virtual-node-group></p>
 
 ## Revert to Preferred Instance Types (GKE)
 
