@@ -17,7 +17,6 @@ Ocean for GKE allows the utilization of local SSD disks, high-performance local 
 
 Once configured, whenever the Ocean Autoscaler scales up, Ocean will automatically connect the local SSDs to the new VM. Note that local SSDs are limited to specific machine types. Ocean will automatically filter out the incompatible machine types. For information about the API, see Local SSD in the Spot API.
 
-
 <p id=turn-on/off-utilize-commitments-per-virtual-node-group></p>
 
 ## Enable Utilize Commitments
@@ -35,7 +34,6 @@ In the Spot API, under **Virtual Node Groups > strategy**, you can configure the
  * `utilizeCommitments`: If savings plan commitments have available capacity, Ocean will utilize them alongside existing reserved instances to maximize cost efficiency. The initial default value is inherited from the identical attribute at the cluster level. 
 
 Any change you make at the Virtual Node Group level will override the value set at the cluster level.
-
 
 <p id=restrict-scale-down-per-virtual-node-group></p>
 
@@ -57,11 +55,9 @@ Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>, <
 
 Ocean supports instance types with both Arm64 and x86 architectures in the same VNG. This widens the instance selection options because instances that support either the Arm64 or the x86 architectures can be chosen. This enables you to take advantage of the cost and performance benefits of Arm64 when the spot markets allow while maintaining a large whitelist of x86 instances. 
 
-Whenever you create a Virtual Node Group with the Arm64 and x86 instance types, ensure that the workloads can run on both architectures. In addition, use node selectors to ensure that only the relevant pods will trigger a scale-up from this VNG. 
+Whenever you create a Virtual Node Group with the Arm64 and x86 instance types, ensure that the workloads can run on both architectures. In addition, use node selectors to ensure that only the relevant pods will trigger a scale-up from this VNG.
 
-<!-- I took the generic intro information from Preferred Spot Instance Types per Virtual Node Group and put it above -->
-
-<p id=preferred-instance-types-per-virtual-node-group-(was)></p>
+<p id=preferred-instance-types-per-virtual-node-group-(aws)></p>
 
 ##  Preferred Instance Types
 
@@ -90,8 +86,6 @@ As the preferred instance type is a soft requirement, the general spot instance 
 
 For information about defining preferred spot instance types in the Spot API (using the `preferredSpotTypes` attribute under `launchSpec.instanceTypes`), see the Create Virtual Node Group APIs for [Ocean AWS Kubernetes](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecCreate) and [Ocean ECS](https://docs.spot.io/api/#tag/Ocean-ECS/operation/OceanECSLaunchSpecCreate)
 
-<!-- Section below added 15-07-2024 for DOC-1912 -->
-
 <p id=preferred-on-demand-instance-types-per-virtual-node-group></p>
 
 ###  Preferred On-Demand Instance Types
@@ -112,11 +106,9 @@ When you set `preferredOnDemandTypes`, the Ocean Autoscaler will launch on-deman
 
 See also [Terraform](https://registry.terraform.io/providers/spotinst/spotinst/latest/docs/resources/ocean_aws_launch_spec#preferred_od_types)
 
-<!-- Section below added for DOC-2009 -->
-
 <p id=preferred-instance-types-per-virtual-node-group-(gke)></p>
 
-## Preferred Instance Types - GKE
+## Preferred Instance Types (GKE)
 
 Cloud service provider relevance: <font color="#FC01CC">GKE</font>
 
@@ -134,7 +126,7 @@ For information about defining preferred instance types in the Spot API using th
 
 <p id=revert-to-preferred-instance-types-per-virtual-node-group-(gke)></p>
 
-## Revert to Preferred Instance Types - GKE
+## Revert to Preferred Instance Types (GKE)
 
 Cloud service provider relevance: <font color="#FC01CC">GKE</font>
 
