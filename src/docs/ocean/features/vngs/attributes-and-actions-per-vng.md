@@ -20,7 +20,7 @@ Once configured, whenever the Ocean Autoscaler scales up, Ocean will automatical
 
 <p>id=turn-on/off-utilize-commitments-per-virtual-node-group</p>
 
-## Enable Utilize Commitments per Virtual Node Group
+## Enable Utilize Commitments
 
 Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>
 
@@ -63,7 +63,7 @@ Whenever you create a Virtual Node Group with the Arm64 and x86 instance types, 
 
 <p>id=preferred-instance-types-per-virtual-node-group-(aws)</p>
 
-##  Preferred Instance Types per Virtual Node Group
+##  Preferred Instance Types
 
 Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>
 
