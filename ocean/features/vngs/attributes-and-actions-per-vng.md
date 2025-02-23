@@ -18,7 +18,7 @@ Ocean for GKE allows the utilization of local SSD disks, high-performance local 
 Once configured, whenever the Ocean Autoscaler scales up, Ocean will automatically connect the local SSDs to the new VM. Note that local SSDs are limited to specific machine types. Ocean will automatically filter out the incompatible machine types. For information about the API, see Local SSD in the Spot API.
 
 
-<p>id=turn-on/off-utilize-commitments-per-virtual-node-group</p>
+<p> id=turn-on/off-utilize-commitments-per-virtual-node-group</p>
 
 ## Enable Utilize Commitments
 
@@ -37,7 +37,7 @@ In the Spot API, under **Virtual Node Groups > strategy**, you can configure the
 Any change you make at the Virtual Node Group level will override the value set at the cluster level.
 
 
-<p>id=restrict-scale-down-per-virtual-node-group</p>
+<p> id=restrict-scale-down-per-virtual-node-group</p>
 
 ## Restrict Scale Down
 
@@ -49,7 +49,7 @@ A possible use case is protecting a 100% On-demand VNG from any scale-down activ
 
 For more information about the Scale Down feature, see Scaling ([Kubernetes](ocean/features/scaling-kubernetes?id=scale-down) or [ECS](ocean/features/scaling-ecs?id=scale-down-behavior)).
 
-<p>id=multiple-ami-architectures-in-the-same-virtual-node-group</p>
+<p> id=multiple-ami-architectures-in-the-same-virtual-node-group</p>
 
 ## Multiple AMI Architectures in the Same Virtual Node Group 
 
@@ -61,7 +61,7 @@ Whenever you create a Virtual Node Group with the Arm64 and x86 instance types, 
 
 <!-- I took the generic intro information from Preferred Spot Instance Types per Virtual Node Group and put it above -->
 
-<p>id=preferred-instance-types-per-virtual-node-group-(aws)</p>
+<p> id=preferred-instance-types-per-virtual-node-group-(aws)</p>
 
 ##  Preferred Instance Types
 
@@ -71,7 +71,7 @@ Ocean provides a serverless experience in which the specific instances don’t m
 
 Ocean serves such use cases with the ability to define a list of preferred instance types out of all types allowed in the virtual node group. When your preferences are defined, Ocean considers them alongside other considerations when scaling up. In this way, Ocean strives towards a well-distributed and highly available spot-instance/on-demand-based virtual node group that uses preferred types as broadly as possible.
 
-<p>id=preferred-spot-instance-types-per-virtual-node-group</p>
+<p> id=preferred-spot-instance-types-per-virtual-node-group</p>
 
 ### Preferred Spot Instance Types
 
@@ -92,7 +92,7 @@ For information about defining preferred spot instance types in the Spot API (us
 
 <!-- Section below added 15-07-2024 for DOC-1912 -->
 
-<p>id=preferred-on-demand-instance-types-per-virtual-node-group</p>
+<p> id=preferred-on-demand-instance-types-per-virtual-node-group</p>
 
 ###  Preferred On-Demand Instance Types
 
@@ -114,7 +114,7 @@ See also [Terraform](https://registry.terraform.io/providers/spotinst/spotinst/l
 
 <!-- Section below added for DOC-2009 -->
 
-<p>id=preferred-instance-types-per-virtual-node-group-(gke)</p>
+<p> id=preferred-instance-types-per-virtual-node-group-(gke)</p>
 
 ## Preferred Instance Types - GKE
 
@@ -132,7 +132,7 @@ For information about defining preferred instance types in the Spot API using th
 * [Virtual node group](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKELaunchSpecCreate)
 * [Cluster](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKEClusterCreate)
 
-<p>id=revert-to-preferred-instance-types-per-virtual-node-group-(gke)</p>
+<p> id=revert-to-preferred-instance-types-per-virtual-node-group-(gke)</p>
 
 ## Revert to Preferred Instance Types - GKE
 
@@ -165,7 +165,7 @@ Nodes from different virtual node groups can be replaced simultaneously.
 The revert to preferred process is only valid for spot instances not running on Preferred. 
 On-demands that are not of type **preferred** will not be reverted.
 
-<p>id=ephemeral-storage-per-virtual-node-group</p>
+<p> id=ephemeral-storage-per-virtual-node-group</p>
 
 ##  Ephemeral Storage
 
