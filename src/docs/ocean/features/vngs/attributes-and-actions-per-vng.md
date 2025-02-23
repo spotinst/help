@@ -17,7 +17,7 @@ Ocean for GKE allows the utilization of local SSD disks, high-performance local 
 
 Once configured, whenever the Ocean Autoscaler scales up, Ocean will automatically connect the local SSDs to the new VM. Note that local SSDs are limited to specific machine types. Ocean will automatically filter out the incompatible machine types. For information about the API, see Local SSD in the Spot API.
 
-<p id=turn-on/off-utilize-commitments-per-virtual-node-group></p>
+<p id=turn-onoff-utilize-commitments-per-virtual-node-group></p>
 
 ## Enable Utilize Commitments
 
