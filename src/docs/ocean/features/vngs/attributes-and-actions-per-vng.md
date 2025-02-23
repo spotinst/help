@@ -106,7 +106,7 @@ When you set `preferredOnDemandTypes`, the Ocean Autoscaler will launch on-deman
 
 See also [Terraform](https://registry.terraform.io/providers/spotinst/spotinst/latest/docs/resources/ocean_aws_launch_spec#preferred_od_types)
 
-<p id=preferred-instance-types-per-virtual-node-group-(gke)></p>
+<p id=preferred-instance-types-per-virtual-node-group-gke></p>
 
 ## Preferred Instance Types (GKE)
 
