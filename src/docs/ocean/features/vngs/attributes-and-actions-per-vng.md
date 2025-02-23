@@ -37,7 +37,9 @@ In the Spot API, under **Virtual Node Groups > strategy**, you can configure the
 Any change you make at the Virtual Node Group level will override the value set at the cluster level.
 
 
-## Restrict Scale Down per Virtual Node Group
+<p>id=restrict-scale-down-per-virtual-node-group</p>
+
+## Restrict Scale Down
 
 Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>, <font color="#FC01CC">ECS</font>, <font color="#FC01CC">GKE</font>, and <font color="#FC01CC">AKS</font>
 
@@ -46,6 +48,8 @@ The restrict-scale-down label is a [Spot label](ocean/features/labels-and-taints
 A possible use case is protecting a 100% On-demand VNG from any scale-down activity, as Ocean will treat the nodes or container instances in this VNG as if all pods or tasks running on them have the restrict-scale-down label. This will ensure that scale-down will not cause interruptions to sensitive workloads.
 
 For more information about the Scale Down feature, see Scaling ([Kubernetes](ocean/features/scaling-kubernetes?id=scale-down) or [ECS](ocean/features/scaling-ecs?id=scale-down-behavior)).
+
+<p>id=multiple-ami-architectures-in-the-same-virtual-node-group</p>
 
 ## Multiple AMI Architectures in the Same Virtual Node Group 
 
@@ -57,13 +61,19 @@ Whenever you create a Virtual Node Group with the Arm64 and x86 instance types, 
 
 <!-- I took the generic intro information from Preferred Spot Instance Types per Virtual Node Group and put it above -->
 
-##  Preferred Instance Types per Virtual Node Group (AWS)
+<p>id=preferred-instance-types-per-virtual-node-group-(aws)</p>
+
+##  Preferred Instance Types per Virtual Node Group
+
+Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>
 
 Ocean provides a serverless experience in which the specific instances don’t matter, and the best practice is to allow the use of all instance types. However, there are some cases in which a specific instance type may provide better performance or increased cost savings. For example, if you know that your application performs significantly better on M5 instances, then you can save costs by preferring this instance type over others.
 
 Ocean serves such use cases with the ability to define a list of preferred instance types out of all types allowed in the virtual node group. When your preferences are defined, Ocean considers them alongside other considerations when scaling up. In this way, Ocean strives towards a well-distributed and highly available spot-instance/on-demand-based virtual node group that uses preferred types as broadly as possible.
 
-### Preferred Spot Instance Types per Virtual Node Group
+<p>id=preferred-spot-instance-types-per-virtual-node-group</p>
+
+### Preferred Spot Instance Types
 
 Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>, <font color="#FC01CC">ECS</font>
 
@@ -82,7 +92,9 @@ For information about defining preferred spot instance types in the Spot API (us
 
 <!-- Section below added 15-07-2024 for DOC-1912 -->
 
-###  Preferred On-Demand Instance Types per Virtual Node Group
+<p>id=preferred-on-demand-instance-types-per-virtual-node-group</p>
+
+###  Preferred On-Demand Instance Types
 
 Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>
 
@@ -102,7 +114,9 @@ See also [Terraform](https://registry.terraform.io/providers/spotinst/spotinst/l
 
 <!-- Section below added for DOC-2009 -->
 
-## Preferred Instance Types per Virtual Node Group (GKE)
+<p>id=preferred-instance-types-per-virtual-node-group-(gke)</p>
+
+## Preferred Instance Types - GKE
 
 Cloud service provider relevance: <font color="#FC01CC">GKE</font>
 
@@ -118,7 +132,9 @@ For information about defining preferred instance types in the Spot API using th
 * [Virtual node group](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKELaunchSpecCreate)
 * [Cluster](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKEClusterCreate)
 
-## Revert to Preferred Instance Types per Virtual Node Group (GKE)
+<p>id=revert-to-preferred-instance-types-per-virtual-node-group-(gke)</p>
+
+## Revert to Preferred Instance Types - GKE
 
 Cloud service provider relevance: <font color="#FC01CC">GKE</font>
 
@@ -149,7 +165,9 @@ Nodes from different virtual node groups can be replaced simultaneously.
 The revert to preferred process is only valid for spot instances not running on Preferred. 
 On-demands that are not of type **preferred** will not be reverted.
 
-##  Ephemeral Storage per Virtual Node Group
+<p>id=ephemeral-storage-per-virtual-node-group</p>
+
+##  Ephemeral Storage
 
 Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>
 
