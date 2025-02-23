@@ -7,7 +7,7 @@ You can immediately run an auto-upgrade of an AKS patch version or schedule an a
 * Control plane upgrade: Upgrade the control plane patch version only.
 * Control plane upgrade and Ocean roll: Upgrade the control plane patch version and the nodes in the data plane managed by Ocean. After the upgrade, you must roll the cluster to align the cluster infrastructure with the updated version.
 
-We recommend you schedule once daily and let Ocean manage your upgrades.
+Spot recommends you schedule once daily and let Ocean manage your upgrades.
 
 ## Check if you need to Upgrade
 
@@ -35,7 +35,7 @@ provide support updates for Kubernetes minor version upgrades.
 
 ![screen-history](https://github.com/user-attachments/assets/a6a8f177-00ce-4dce-a868-2a659e73bb32)
 
-The Updates History list for completed runs is displayed at the top of the screen with these attributes:
+The auto-upgrades history list for completed runs is displayed at the top of the screen with these attributes:
 
 * Execution Time: Format MM/DD/YYYY, hh: mm: ss.
 * Old Version number (before the run).
@@ -109,7 +109,9 @@ Add a screen with the Update Now button when available.
 
 2. Click **Update Now**.
 
->**Note**: The operation will time out if no upgrade version is available.
+>**IMPORTANT**: This operation cannot be undone. If no upgrade version is available, this operation will time out.
+
+After the update is complete, a new entry is added to the auto-upgrades history list.
 
 ## Delete an Auto-Upgrade Schedule
 
