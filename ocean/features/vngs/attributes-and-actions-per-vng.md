@@ -17,7 +17,7 @@ Ocean for GKE allows the utilization of local SSD disks, high-performance local 
 
 Once configured, whenever the Ocean Autoscaler scales up, Ocean will automatically connect the local SSDs to the new VM. Note that local SSDs are limited to specific machine types. Ocean will automatically filter out the incompatible machine types. For information about the API, see Local SSD in the Spot API.
 
-<p id=turn-on/off-utilize-commitments-per-virtual-node-group></p>
+<p id=turn-onoff-utilize-commitments-per-virtual-node-group></p>
 
 ## Enable Utilize Commitments
 
@@ -106,7 +106,7 @@ When you set `preferredOnDemandTypes`, the Ocean Autoscaler will launch on-deman
 
 See also [Terraform](https://registry.terraform.io/providers/spotinst/spotinst/latest/docs/resources/ocean_aws_launch_spec#preferred_od_types)
 
-<p id=preferred-instance-types-per-virtual-node-group-(gke)></p>
+<p id=preferred-instance-types-per-virtual-node-group-gke></p>
 
 ## Preferred Instance Types (GKE)
 
@@ -124,7 +124,7 @@ For information about defining preferred instance types in the Spot API using th
 * [Virtual node group](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKELaunchSpecCreate)
 * [Cluster](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKEClusterCreate)
 
-<p id=revert-to-preferred-instance-types-per-virtual-node-group-(gke)></p>
+<p id=revert-to-preferred-instance-types-per-virtual-node-group></p>
 
 ## Revert to Preferred Instance Types (GKE)
 
