@@ -4,7 +4,7 @@
 
 Cloud service provider relevance: <font color="#FC01CC">EKS</font> and <font color="#FC01CC">AKS</font>
 
-This topic shows you how to view your (actual) right-sizing savings from applying recommendations to your workloads.
+This topic shows you how to view your (actual) right-sizing savings from applying down-sizing recommendations to your workloads.
 
 Before you begin, see [Ocean Cluster Automatic Right-Sizing](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-tab) for a full description of this Ocean feature.
 
@@ -29,10 +29,6 @@ At the top of the actual savings overview, you can filter according to:
   * Last 7 days.
   * This month (from the first day of the month until today).
  
-* Savings benchmark:
-  * Original requests: Cost is based on the workload requests initially used by right-sizing.
-  * Current Requests: Cost is based on the latest workload requests.
- 
 * Workloads (optimized workloads only).
 * Namespaces.
  
@@ -42,16 +38,18 @@ The right-sizing savings panel shows the following:
 * Pie chart together with the savings per namespaces (that affected the most savings).
 
 The workload savings list shows your actual right-sizing savings per workload.
-These are the workloads that were optimized based on automated and manual recommendations:
->**Note**: The list does not show workloads for which there are no actual savings. 
+These are the workloads that were optimized based on automated recommendations:
+
+<Note: Only down-sizing recommendations apply.
+
 * Workload Name.
 * Namespace.
 * Workload Type: (if the workload was deleted, it is marked as Deleted).
 * CPU:
-  * With Ocean (green color): The sum of all the CPU requests Ocean recommends.
+  * With Ocean (green color): The sum of all the CPU requests that Ocean recommended and applied automatically.
   * Without Ocean: The sum of all CPU requests in your original workloads.
 * Memory:
-  * With Ocean (green color): The sum of all of the memory requests recommended by Ocean.
+  * With Ocean (green color): The sum of all of the memory requests that Ocean recommended and applied automatically.
   * Without Ocean: The sum of all the memory requests in your original workloads.
 * Right-sizing savings (dollars) for the workload.
 
