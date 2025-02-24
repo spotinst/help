@@ -40,7 +40,7 @@ The right-sizing savings panel shows the following:
 The workload savings list shows your actual right-sizing savings per workload.
 These are the workloads that were optimized based on automated recommendations:
 
-<Note: Only down-sizing recommendations apply.
+>Note: Only down-sizing recommendations apply.
 
 * Workload Name.
 * Namespace.
