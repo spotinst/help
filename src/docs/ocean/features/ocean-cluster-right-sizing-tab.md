@@ -45,8 +45,8 @@ Using the per-workload container aggregated data points, Ocean makes recommendat
 
 Ocean handles the right-sizing workload limits as follows:
 
-*  Automatic tuning for size-up recommendations: Ocean automatically adjusts the workload's limit values for scaling up based on the recommended resource allocations while maintaining the same ratio between the requests and the limit.
-*  Size-Down recommendations: Ocean keeps the existing limits.
+*  Automatic tuning for up-sizing recommendations: Ocean automatically adjusts the workload's limit values for up-sizing based on the recommended resource allocations while maintaining the same ratio between the requests and the limit.
+*   Automatic tuning for down-sizing recommendations: Ocean keeps the existing limits.
 
 You view the right-sizing recommendations via: 
 
