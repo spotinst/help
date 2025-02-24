@@ -24,11 +24,11 @@ helm repo add spot https://charts.spot.io
 helm repo update 
 helm install <my-release-name> spot/ocean-vpa
 ```
->**Note**: To turn on Automatic Right-Sizing, contact your [support](https://spot.io/support/) team via email or chat.
+>**Note**: To turn on automatic right-sizing, contact your [support](https://spot.io/support/) team via email or chat.
 
 ##  How It Works 
 
-For Ocean Kubernetes clusters, Right Sizing utilizes the Metrics Server and initializes recommendations after one hour of initial data collection. 
+For Ocean Kubernetes clusters, Right-sizing utilizes the Metrics Server and initializes recommendations after one hour of initial data collection. 
 
 Once every 15 seconds, the Ocean Controller queries the Metrics Server for pod utilization (the equivalent of kubectl top pods). Based on the last 14 days of collected metrics, Ocean calculates relevant consumption metrics for each resource, such as CPU and Memory, and bases its recommendations on these calculated metrics. 
 
@@ -43,7 +43,12 @@ Using the per-workload container aggregated data points, Ocean makes recommendat
 *  Recommendations for increasing memory requests are based on the maximum memory utilization. If maximum value * ( 1 + 10% overhead - 5% stability margin) < request, the recommendation = [10% overhead * value + value].
 *  Recommendations for increasing CPU requests: The calculation is the same as for memory requests, except that we use the 85th percentile instead of the maximum value.
 
-You view Right Sizing recommendations via: 
+Ocean handles the right-sizing workload limits as follows:
+
+*  Automatic tuning for up-sizing recommendations: Ocean automatically adjusts the workload's limit values for up-sizing based on the recommended resource allocations while maintaining the same ratio between the requests and the limit.
+*   Automatic tuning for down-sizing recommendations: Ocean keeps the existing limits.
+
+You view the right-sizing recommendations via: 
 
 *  Ocean console, under the Cloud Cluster Right Sizing [Advanced Optimization](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab) tab. 
 *  [Spot API](https://docs.spot.io/api/#tag/Ocean-AWS/operation/oceanAwsFilterRightSizingWithFilter).
