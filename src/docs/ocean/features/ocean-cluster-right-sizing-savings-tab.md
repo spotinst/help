@@ -12,15 +12,14 @@ To view your right-sizing savings:
 
 1. In the left main menu, click **Ocean** > **Cloud Clusters**.
 2. Select a cluster from the list of clusters.
-3. Click the **Right Sizing** tab.  
-4. Click **Savings**. 
+3. Click **Right Sizing > Savings**.
 
 The Savings tab contains the following:  
 
 *  Right-sizing Savings panel
 *  Workload savings list.
 
- <img width="1200" src="https://github.com/user-attachments/assets/9bb38bde-1fb1-4313-9efa-1c1ea4e2778a" />
+<img width="1000" src="https://github.com/user-attachments/assets/83e6c80e-9533-480d-a171-9d872e07550e" />
 
 At the top of the actual savings overview, you can filter according to:
 
