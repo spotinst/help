@@ -789,6 +789,37 @@ If an instance type isn’t [EBS-optimized by default](https://docs.aws.amazon.c
 
  </details>
 
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="octagpol">AWS: Why can’t I spin new instances (tag policies)?</summary>
+
+  <div style="padding-left:16px">
+
+If you’re getting this message:
+
+`Can't Spin Spot Instances: Message: The tag policy does not allow the specified value for the following tag key: 'XXX'.`
+
+It means a tag defined in your Elastigroup or cluster doesn’t comply with AWS’s tag policy.
+
+1. In the Spot console, go to:
+
+   * **Elastigroup** > **Groups** > click on the Elastigroup > **Log**.
+   * **Ocean** > **Cloud Clusters** > click on the cluster > **Log**.
+
+2. Identify the problematic tag keys/values.
+
+3. Review [AWS’s tag policies](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_tag-policies.html) and how to [set up tag policies](https://aws.amazon.com/about-aws/whats-new/2019/11/aws-launches-tag-policies/).
+
+4. In the Spot console, update the tag keys/values:
+
+   * **Elastigroup** > **Groups** > click on the Elastigroup > **Actions** > **Edit Configuration** > **Compute** > **Advanced Settings**.
+   * **Ocean** > **Cloud Clusters** > click on the cluster > **Actions** > **Edit Cluster** > **Compute**.
+
+The instance will be launched when the tags in Spot groups comply with the tag policy defined in AWS.
+
+   </div>
+
+ </details>
+
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocvpnsec">AWS: Why am I getting an <i>exceeded the number of VPC security allowed per instance</i> message?</summary>
 
