@@ -20,18 +20,20 @@ Ocean (GKE) supports the following orientations:
 
 ## Set up in Ocean API
 
-To define the cluster orientation for your Ocean cluster, you can use the Create Cluster or Update Cluster APIs. Look for the following attributes:
+To define the cluster scaling orientation for your Ocean cluster, you can use the [Create Cluster](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKEClusterCreate) or [Update Cluster](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKEClusterUpdate) APIs. 
+
+Look for the following attributes:
 
 ```
-cluster.strategy.clusterOrientation.xxxxxxxxxxxxxt
+cluster.strategy.scaingOrientation
 ```
 
-The valid values are: xxxxxx, balanced, cheapest
+For virtual node groups: [Create Virtual Node Group](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKELaunchSpecCreate) and [Update Virtual Node Group](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKELaunchSpecUpdate). 
 
-For virtual node groups:
+Look for the following attributes:
 
 ```
-lauchSpex xxxxxx
+launchSpec.strategy.scalingOrientation
 ```
 
 
