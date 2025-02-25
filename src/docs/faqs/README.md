@@ -3526,7 +3526,7 @@ If you want to use a regional disk (**zone** = <i>null</i>), you need to use ZRS
 
  <div style="padding-left:16px">
 
-Let’s say you want your on-demand instances to revert to spot instances daily, Monday through Friday, between 9 AM and 8 PM. You need to set your optimization hours for each day between those hours. For example:
+Let’s say you want your on-demand instances to revert to spot instances daily, Monday through Friday, between 9 AM and 8 PM. You need to set your [optimization hours](managed-instance/azure/getting-started/create-stateful-node?id=availability-settings) for each day between those hours. For example:
 
 1. In the Spot console, go to **Elastigroup** > **Stateful Nodes** and select the node.
 2. Click **Actions** > **Edit Configuration**.
