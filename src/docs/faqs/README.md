@@ -638,6 +638,24 @@ The parameter <i>spotPercentage</i> cannot be used for both a cluster and one of
  </div>
 
  </details>
+ 
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocduptags">AWS, Azure, GCP: Why can’t I spin new instances (duplicate tags)?</summary>
+
+  <div style="padding-left:16px">
+
+You can get this message when the group or cluster is scaling up instances:
+
+`Can't Spin Instances: Code: ValidationError, Message: can't spin spot due to duplicate tags error`
+
+This happens if you have duplicate tags configured:
+
+* The cluster has more than one of the same custom tags.
+* You created a custom tag key with spotinst—Spot automatically creates scaling tags that start with spotinst, resulting in multiple identical tags.
+
+ </div>
+
+ </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocdraining">AWS: What is the default draining timeout?</summary>
@@ -2221,6 +2239,24 @@ An on-demand instance may be launched instead of a spot instance even if a spot 
 You can set [Equal AZ Distribution](https://docs.spot.io/elastigroup/features/core-features/equal-az-instance-distribution-orientation?id=equal-az-instance-distribution-orientation) for cluster orientation in Elastigroup. Despite this, Spot may prioritize a certain availability zone to maintain equal distribution. 
 
 An [Elastigroup may have Equal AZ Distribution](https://docs.spot.io/elastigroup/features/core-features/equal-az-instance-distribution-orientation?id=equal-az-instance-distribution-orientation) set for cluster orientation, but the system sometimes prioritizes a certain availability zone to maintain equal distribution. When no spot instances are available, an on-demand instance spins up in the relevant availability zone.
+
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egduptags">AWS, Azure, GCP: Why can’t I spin new instances (duplicate tags)?</summary>
+
+  <div style="padding-left:16px">
+
+You can get this message when the group or cluster is scaling up instances:
+
+`Can't Spin Instances: Code: ValidationError, Message: can't spin spot due to duplicate tags error`
+
+This happens if you have duplicate tags configured:
+
+* The cluster has more than one of the same custom tags.
+* You created a custom tag key with spotinst—Spot automatically creates scaling tags that start with spotinst, resulting in multiple identical tags.
 
  </div>
 
