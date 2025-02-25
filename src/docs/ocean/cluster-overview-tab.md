@@ -109,7 +109,7 @@ This tab displays:
      * Memory resources saved in GiB Hours. 
      * GPU resources saved in GPU Hours. 
 
-### Ocean Savings from Right-Sizing Your Workloads
+## Ocean Savings from Right-Sizing Your Workloads
 
 >**Note**: This tab will only be available if the optional Ocean automatic right-sizing feature is installed and enabled in your deployment.
 
@@ -117,12 +117,12 @@ These are your actual savings from using the Ocean automatic right-sizing featur
 
 To view these savings, click the **Right-Sizing** tab (unless already displayed). 
 
- <img width="900" src="https://github.com/user-attachments/assets/9a5aea10-6362-4639-af5d-ff2d83fb609b" />
+<img width="750" src="https://github.com/user-attachments/assets/d6c9ba02-430a-4132-ae17-72264dbb8fea" />
 
 >**Note**: If no workloads have been optimized with automatic right-sizing, create and attach right-sizing rules to your workloads in the right-sizing [Advanced Optimization tab](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab).
 
 This tab displays: 
-* Total cluster savings from right-sizing recommendations and the percentage of the saved cluster costs in the selected time range, where:
+* Total cluster savings from down-sizing recommendations and the percentage of the saved cluster costs in the selected time range, where:
   * <b>Total cluster savings = [costs for workloads based on original requests – cost for workloads based on Ocean-optimized requests]</b>. 
   * Percentage of cluster costs:
   
@@ -133,7 +133,6 @@ This tab displays:
 * GPU resources in GPU Hours.
 
 Click **View Details** on the right of the right-sizing tab to see your [actual right-sizing savings](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-savings-tab), 
-
 
 
 ## Autoscaling Activity Panel 
