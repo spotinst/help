@@ -3520,6 +3520,31 @@ If you want to use a regional disk (**zone** = <i>null</i>), you need to use ZRS
 
  </details>
 
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ssnrevert">Azure: Why is my on-demand instance reverting to spot outside of my configured hours?</summary>
+
+ <div style="padding-left:16px">
+
+Let’s say you want your on-demand instances to revert to spot instances daily, Monday through Friday, between 9 AM and 8 PM. You need to set your optimization hours for each day between those hours. For example:
+
+1. In the Spot console, go to **Elastigroup** > **Stateful Nodes** and select the node.
+2. Click **Actions** > **Edit Configuration**.
+3. Go to **Compute** > **Availability Settings**.
+4. In **Continuous Optimization** > **Custom**, you need to set the timeframe for each day. For example, if you want your on-demand instances to revert to spot instances daily, Monday through Friday, between 9 AM and 8 PM, you need to select:
+
+   * **From**: <i>Monday</i>, **start time**: <i>09:00</i>, **to**: <i>Monday</i>, **end time**: <i>20:00</i>.
+   * **From**: <i>Tuesday</i>, **start time**: <i>09:00</i>, **to**: <i>Tuesday</i>, **end time**: <i>20:00</i>.
+   * **From**: <i>Wednesday</i>, **start time**: <i>9:00</i>, **to**: <i>Wednesday</i>, **end time**: <i>20:00</i>.
+   * **From**: <i>Thursday</i>, **start tim**e: <i>09:00</i>, **to**: <i>Thursday</i>, **end time**: <i>20:00</i>.
+   * **From**: <i>Friday</i>, **start time**: <i>09:00</i>, **to**: <i>Friday</i>, **end time**: <i>20:00</i>.
+
+   Keep in mind, if you select **From**: <i>Monday</i>, **start time**: <i>09:00</i>, **to**: <i>Friday</i>, **end time**: <i>20:00</i>, it will set <i>the entire time</i> between Monday at 9 AM all the way through Friday at 8 PM, <i>not daily</i> between 9 AM and 8 PM. This means that your on-demand instances can revert to spot instances past 8 PM on Mondays, Tuesdays, Wednesdays, and Thursdays.
+
+ </div>
+
+ </details>
+
 <!----------------------------------cost intelligence---------------------------------->
 
 ## Cost Intelligence
