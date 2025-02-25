@@ -90,6 +90,19 @@ You can get information about releases and new features:
 
  </details>
 
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="editname">AWS, Azure, GCP: Can I edit my organization name or my Spot account name?</summary>
+
+ <div style="padding-left:16px">
+
+Yes, you can edit your:
+* [Organization name](administration/organizations/?id=update-your-organization-name)
+* [Spot account name](administration/organizations/?id=update-your-spot-account-name)
+
+   </div>
+
+ </details>
+
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="genodresp">AWS: Why is my on-demand instance utilized as a reserved instance/savings plan?</summary>
 
@@ -625,6 +638,24 @@ The parameter <i>spotPercentage</i> cannot be used for both a cluster and one of
  </div>
 
  </details>
+ 
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocduptags">AWS, Azure, GCP: Why can’t I spin new instances (duplicate tags)?</summary>
+
+  <div style="padding-left:16px">
+
+You can get this message when the group or cluster is scaling up instances:
+
+`Can't Spin Instances: Code: ValidationError, Message: can't spin spot due to duplicate tags error`
+
+This happens if you have duplicate tags configured:
+
+* The cluster has more than one of the same custom tags.
+* You created a custom tag key with spotinst—Spot automatically creates scaling tags that start with spotinst, resulting in multiple identical tags.
+
+ </div>
+
+ </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocdraining">AWS: What is the default draining timeout?</summary>
@@ -771,6 +802,37 @@ If an instance type isn’t [EBS-optimized by default](https://docs.aws.amazon.c
 1. In the Spot console, go to the Ocean cluster or Elastigroup.
 2. Click **Compute** > **launchSpecification**.
 3. Set **ebsOptimized** to <i>true</i>.
+
+   </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="octagpol">AWS: Why can’t I spin new instances (tag policies)?</summary>
+
+  <div style="padding-left:16px">
+
+If you’re getting this message:
+
+`Can't Spin Spot Instances: Message: The tag policy does not allow the specified value for the following tag key: 'XXX'.`
+
+It means a tag defined in your Elastigroup or cluster doesn’t comply with AWS’s tag policy.
+
+1. In the Spot console, go to:
+
+   * **Elastigroup** > **Groups** > click on the Elastigroup > **Log**.
+   * **Ocean** > **Cloud Clusters** > click on the cluster > **Log**.
+
+2. Identify the problematic tag keys/values.
+
+3. Review [AWS’s tag policies](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_tag-policies.html) and how to [set up tag policies](https://aws.amazon.com/about-aws/whats-new/2019/11/aws-launches-tag-policies/).
+
+4. In the Spot console, update the tag keys/values:
+
+   * **Elastigroup** > **Groups** > click on the Elastigroup > **Actions** > **Edit Configuration** > **Compute** > **Advanced Settings**.
+   * **Ocean** > **Cloud Clusters** > click on the cluster > **Actions** > **Edit Cluster** > **Compute**.
+
+The instance will be launched when the tags in Spot clusters/groups comply with the tag policy defined in AWS.
 
    </div>
 
@@ -1235,6 +1297,46 @@ For example, you can update your [DaemonSet pod YAML](https://kubernetes.io/docs
 
  </details>
 
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocmaxcap">EKS: Can I set a maximum capacity per virtual node group using eksctl?</summary>
+
+  <div style="padding-left:16px">
+
+Yes, you can use this parameter to set capacity using [eksctl](ocean/tools-and-integrations/eksctl):
+
+`autoScaler: resourceLimits: maxInstanceCount: 10`
+
+For example:
+
+<pre><code>
+apiVersion: eksctl.io/v1alpha5
+
+kind: ClusterConfig
+
+metadata:
+
+  name: example
+
+  region: us-west-2nodeGroups:
+
+name: ng1
+
+  spotOcean:
+
+    # ...
+
+    autoScaler:
+
+      resourceLimits:
+
+        maxInstanceCount: 10
+
+    # ...
+</code></pre>
+
+   </div>
+   
+   </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="k8sunhealthy">EKS: Why are my EKS nodes <i>unhealthy</i>?</summary>
@@ -1647,6 +1749,24 @@ When you look in the AWS console, you can see the actual <i>utilization</i>, whi
  </div>
 
  </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocstaticendpoint">AKS, EKS, GKE: Can I use a static endpoint with Ocean Controller Version 2?</summary>
+
+  <div style="padding-left:16px">
+
+A dynamic endpoint can change with scaling or other operational activities.
+
+A static endpoint in cloud computing is a fixed, unchanged network address used to access a resource or service reliably. This lets applications and users connect to a stable address that doesn’t change.
+
+You can set a static endpoint to use with Ocean Controller Version 2:
+
+* Install the latest [controller Helm chart and update the ocean-kubernetes-controller](ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-update?id=update-to-the-latest-version).
+* When you’re installing ocean-kubernetes-controller, also include: `--set spotinst.baseUrl=https://api-static.spotinst.io`.
+
+ </div>
+
+</details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanssar">AKS, EKS, GKE: Should I get frequent <i>SelfSubjectAccessReview</i> requests after upgrading to Ocean Controller Version 2?</summary>
@@ -2124,6 +2244,24 @@ An [Elastigroup may have Equal AZ Distribution](https://docs.spot.io/elastigroup
 
  </details>
 
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egduptags">AWS, Azure, GCP: Why can’t I spin new instances (duplicate tags)?</summary>
+
+  <div style="padding-left:16px">
+
+You can get this message when the group or cluster is scaling up instances:
+
+`Can't Spin Instances: Code: ValidationError, Message: can't spin spot due to duplicate tags error`
+
+This happens if you have duplicate tags configured:
+
+* The cluster has more than one of the same custom tags.
+* You created a custom tag key with spotinst—Spot automatically creates scaling tags that start with spotinst, resulting in multiple identical tags.
+
+ </div>
+
+ </details>
+
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="egelasticsearch1">AWS: Can Elasticsearch integrate with Spot?</summary>
 
@@ -2320,6 +2458,37 @@ If an instance type isn’t [EBS-optimized by default](https://docs.aws.amazon.c
 1. In the Spot console, go to the Ocean cluster or Elastigroup.
 2. Click **Compute** > **launchSpecification**.
 3. Set **ebsOptimized** to <i>true</i>.
+
+   </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egtagpol">AWS: Why can’t I spin new instances (tag policies)?</summary>
+
+  <div style="padding-left:16px">
+
+If you’re getting this message:
+
+`Can't Spin Spot Instances: Message: The tag policy does not allow the specified value for the following tag key: 'XXX'.`
+
+It means a tag defined in your Elastigroup or cluster doesn’t comply with AWS’s tag policy.
+
+1. In the Spot console, go to:
+
+   * **Elastigroup** > **Groups** > click on the Elastigroup > **Log**.
+   * **Ocean** > **Cloud Clusters** > click on the cluster > **Log**.
+
+2. Identify the problematic tag keys/values.
+
+3. Review [AWS’s tag policies](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_tag-policies.html) and how to [set up tag policies](https://aws.amazon.com/about-aws/whats-new/2019/11/aws-launches-tag-policies/).
+
+4. In the Spot console, update the tag keys/values:
+
+   * **Elastigroup** > **Groups** > click on the Elastigroup > **Actions** > **Edit Configuration** > **Compute** > **Advanced Settings**.
+   * **Ocean** > **Cloud Clusters** > click on the cluster > **Actions** > **Edit Cluster** > **Compute**.
+
+The instance will be launched when the tags in Spot clusters/groups comply with the tag policy defined in AWS.
 
    </div>
 
