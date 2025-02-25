@@ -1279,6 +1279,46 @@ For example, you can update your [DaemonSet pod YAML](https://kubernetes.io/docs
 
  </details>
 
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocmaxcap">EKS: Can I set a maximum capacity per virtual node group using eksctl?</summary>
+
+  <div style="padding-left:16px">
+
+Yes, you can use this parameter to set capacity using [eksctl](ocean/tools-and-integrations/eksctl):
+
+`autoScaler: resourceLimits: maxInstanceCount: 10`
+
+For example:
+
+<pre><code>
+apiVersion: eksctl.io/v1alpha5
+
+kind: ClusterConfig
+
+metadata:
+
+  name: example
+
+  region: us-west-2nodeGroups:
+
+name: ng1
+
+  spotOcean:
+
+    # ...
+
+    autoScaler:
+
+      resourceLimits:
+
+        maxInstanceCount: 10
+
+    # ...
+</code></pre>
+
+   </div>
+   
+   </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="k8sunhealthy">EKS: Why are my EKS nodes <i>unhealthy</i>?</summary>
