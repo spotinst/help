@@ -1761,8 +1761,8 @@ A static endpoint in cloud computing is a fixed, unchanged network address used 
 
 You can set a static endpoint to use with Ocean Controller Version 2:
 
-* Install the latest [controller Helm chart and update the ocean-kubernetes-controller](ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-update?id=update-to-the-latest-version).
-* When you’re installing ocean-kubernetes-controller, also include: `--set spotinst.baseUrl=https://api-static.spotinst.io`.
+1. Install the latest [controller Helm chart and update the ocean-kubernetes-controller](ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-update?id=update-to-the-latest-version).
+2. When you’re installing ocean-kubernetes-controller, also include: `--set spotinst.baseUrl=https://api-static.spotinst.io`.
 
  </div>
 
