@@ -196,7 +196,7 @@ Select an on-demand VM size. At least one VM needs to be defined as on demand. T
         * **From**: <i>Thursday</i>, **start tim**e: <i>09:00</i>, **to**: <i>Thursday</i>, **end time**: <i>20:00</i>.
         * **From**: <i>Friday</i>, **start time**: <i>09:00</i>, **to**: <i>Friday</i>, **end time**: <i>20:00</i>.
 
-       If you select **From**: <i>Monday</i>, **start time**: <i>09:00</i>, **to**: <i>Friday</i>, **end time**: <i>20:00</i>, your on-demand instances can revert to spot instances past 8 PM on Mondays, Tuesdays, Wednesdays, and Thursdays. It will set <i>the entire time</i> between Monday at 9 AM all the way through Friday at 8 PM, <i>not daily</i> between 9 AM and 8 PM.
+     If you select **From**: <i>Monday</i>, **start time**: <i>09:00</i>, **to**: <i>Friday</i>, **end time**: <i>20:00</i>, your on-demand instances can revert to spot instances past 8 PM on Mondays, Tuesdays, Wednesdays, and Thursdays. It will set <i>the entire time</i> between Monday at 9 AM all the way through Friday at 8 PM, <i>not daily</i> between 9 AM and 8 PM.
 
 
 ### Strategy
