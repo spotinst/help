@@ -90,6 +90,19 @@ You can get information about releases and new features:
 
  </details>
 
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="editname">AWS, Azure, GCP: Can I edit my organization name or my Spot account name?</summary>
+
+ <div style="padding-left:16px">
+
+Yes, you can edit your:
+* [Organization name](administration/organizations/?id=update-your-organization-name)
+* [Spot account name](administration/organizations/?id=update-your-spot-account-name)
+
+   </div>
+
+ </details>
+
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="genodresp">AWS: Why is my on-demand instance utilized as a reserved instance/savings plan?</summary>
 
@@ -1647,6 +1660,24 @@ When you look in the AWS console, you can see the actual <i>utilization</i>, whi
  </div>
 
  </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocstaticendpoint">AKS, EKS, GKE: Can I use a static endpoint with Ocean Controller Version 2?</summary>
+
+  <div style="padding-left:16px">
+
+A dynamic endpoint can change with scaling or other operational activities.
+
+A static endpoint in cloud computing is a fixed, unchanged network address used to access a resource or service reliably. This lets applications and users connect to a stable address that doesn’t change.
+
+You can set a static endpoint to use with Ocean Controller Version 2:
+
+* Install the latest [controller Helm chart and update the ocean-kubernetes-controller](ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-update?id=update-to-the-latest-version).
+* When you’re installing ocean-kubernetes-controller, also include: `--set spotinst.baseUrl=https://api-static.spotinst.io`.
+
+ </div>
+
+</details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanssar">AKS, EKS, GKE: Should I get frequent <i>SelfSubjectAccessReview</i> requests after upgrading to Ocean Controller Version 2?</summary>
