@@ -1976,7 +1976,30 @@ minSize: 1</code>
  </div>
 
  </details>
- 
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceank8sscaledown">AKS, EKS, GKE: Can I stop Kubernetes workloads from scaling down in Ocean?</summary>
+
+  <div style="padding-left:16px">
+
+You can restrict specific pods from scaling down by configuring Ocean and Kubernetes. The instance will be replaced only if:
+* It goes into an unhealthy state.
+* Forced by a cloud provider interruption.
+
+There are two options for restricting pods from scaling down:
+* Kubernetes deployments/pods: spotinst.io/restrict-scale-down: true
+
+  Use the <code>spotinst.io/restrict-scale-down</code> label set to <i>true</i> to block proactive scaling down for more efficient bin packing. This will leave the instance running as long as possible. It gets defined as a label in the pod's configuration. See [restrict scale down](ocean/features/labels-and-taints?id=spotinstiorestrict-scale-down).
+
+* Virtual node group (VNG): restrict scale down (only available for AWS, ECS, and GKE)
+
+  You can configure [Restrict Scale Down](ocean/features/vngs/attributes-and-actions-per-vng) at the VNG level so the nodes and pods within the VNG are not replaced or scaled down due to the auto scaler resource optimization. Create a VNG, go to the Advanced tab, then select **Restrict Scale Down**.
+
+ </div>
+
+ </details>
+
+
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanfailinstancetypes">AKS, ECS, EKS, GKE: Why does Ocean fail to update instance types?</summary>
 
@@ -2012,28 +2035,6 @@ You can allow, [block](https://docs.spot.io/ocean/tips-and-best-practices/manage
 ![exclude-instance-ocean1](https://github.com/spotinst/help/assets/167069628/be29e0f4-5a2c-4e46-a823-f72c218e0460)
 
 </div>
-
- </details>
-
- <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceank8sscaledown">AKS, ECS, EKS, GKE: Can I stop Kubernetes workloads from scaling down in Ocean?</summary>
-
-  <div style="padding-left:16px">
-
-You can restrict specific pods from scaling down by configuring Ocean and Kubernetes. The instance will be replaced only if:
-* It goes into an unhealthy state.
-* Forced by a cloud provider interruption.
-
-There are two options for restricting pods from scaling down:
-* Kubernetes deployments/pods: spotinst.io/restrict-scale-down: true
-
-  Use the <code>spotinst.io/restrict-scale-down</code> label set to <i>true</i> to block proactive scaling down for more efficient bin packing. This will leave the instance running as long as possible. It gets defined as a label in the pod's configuration. See [restrict scale down](ocean/features/labels-and-taints?id=spotinstiorestrict-scale-down).
-
-* Virtual node group (VNG): restrict scale down (only available for AWS, ECS, and GKE)
-
-  You can configure [Restrict Scale Down](ocean/features/vngs/attributes-and-actions-per-vng) at the VNG level so the nodes and pods within the VNG are not replaced or scaled down due to the auto scaler resource optimization. Create a VNG, go to the Advanced tab, then select **Restrict Scale Down**.
-
- </div>
 
  </details>
 
