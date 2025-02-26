@@ -891,6 +891,20 @@ Update the key pair:
  </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocssh">Azure: Can I use SSH to connect to an Azure VM?</summary>
+
+  <div style="padding-left:16px">
+
+Yes, you can connect using SSH to a VM running:
+
+* [Linux](https://learn.microsoft.com/en-us/azure/virtual-machines/linux-vm-connect?tabs=Linux)
+* [Windows](https://learn.microsoft.com/en-us/azure/virtual-machines/windows/connect-ssh?tabs=azurecli)
+
+   </div>
+
+ </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="secretnotvalid">Azure: Why can my cluster not perform scaling actions (invalid client secret)?</summary>
 
   <div style="padding-left:16px">
@@ -1235,6 +1249,22 @@ You can have multiple containers defined in a single task definition. Check all 
  </div>
 
  </details>
+
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocagentlogs">ECS: How can I check the ECS agent logs? Can I push the agent logs to CloudWatch?</summary>
+
+  <div style="padding-left:16px">
+
+You can check the logs for ECS instances, for example, to see why an instance was unhealthy.
+
+If the instance hasn’t been terminated yet, you can [connect to the instance](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/logs.html) to view the agent logs.
+
+You can also [push the ECS agent logs to CloudWatch](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_cloudwatch_logs.html). This lets you check the agent logs even after the instance is replaced.
+
+ </div>
+
+ </details>
+
 
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceandisconnectcluster">EKS: How can I disconnect a cluster from Ocean?</summary>
@@ -1594,7 +1624,6 @@ Keep in mind:
 
  </details>
 
- 
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceancudvng">GKE: Can I set up committed use discounts on virtual node groups?</summary>
 
@@ -1605,6 +1634,17 @@ You can set up committed use discounts (CUDs) for clusters in Ocean and groups i
 Set up committed use discounts for:
 * [Ocean](ocean/features/committed-use-discount)
 * [Elastigroup](elastigroup/features/gcp/commit-use-discount)
+
+   </div>
+
+ </details>
+
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocshutdownhrs">GKE: Are shutdown hours supported in shielded node clusters?</summary>
+
+  <div style="padding-left:16px">
+
+[Shutdown hours](ocean/features/running-hours?id=scaling-behavior-ocean-for-kubernetes) are not supported for GKE clusters with shielded nodes. If you use shutdown hours with shielded nodes, make sure that the Ocean controller is available at the end of the off time by checking that it runs on a node that Ocean does not manage. This is because the controller is part of the node registration process and requires an available node to run on.
 
    </div>
 
@@ -1976,7 +2016,30 @@ minSize: 1</code>
  </div>
 
  </details>
- 
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceank8sscaledown">AKS, EKS, GKE: Can I stop Kubernetes workloads from scaling down in Ocean?</summary>
+
+  <div style="padding-left:16px">
+
+You can restrict specific pods from scaling down by configuring Ocean and Kubernetes. The instance will be replaced only if:
+* It goes into an unhealthy state.
+* Forced by a cloud provider interruption.
+
+There are two options for restricting pods from scaling down:
+* Kubernetes deployments/pods: spotinst.io/restrict-scale-down: true
+
+  Use the <code>spotinst.io/restrict-scale-down</code> label set to <i>true</i> to block proactive scaling down for more efficient bin packing. This will leave the instance running as long as possible. It gets defined as a label in the pod's configuration. See [restrict scale down](ocean/features/labels-and-taints?id=spotinstiorestrict-scale-down).
+
+* Virtual node group (VNG): restrict scale down (only available for AWS, ECS, and GKE)
+
+  You can configure [Restrict Scale Down](ocean/features/vngs/attributes-and-actions-per-vng) at the VNG level so the nodes and pods within the VNG are not replaced or scaled down due to the auto scaler resource optimization. Create a VNG, go to the Advanced tab, then select **Restrict Scale Down**.
+
+ </div>
+
+ </details>
+
+
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanfailinstancetypes">AKS, ECS, EKS, GKE: Why does Ocean fail to update instance types?</summary>
 
@@ -2012,28 +2075,6 @@ You can allow, [block](https://docs.spot.io/ocean/tips-and-best-practices/manage
 ![exclude-instance-ocean1](https://github.com/spotinst/help/assets/167069628/be29e0f4-5a2c-4e46-a823-f72c218e0460)
 
 </div>
-
- </details>
-
- <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceank8sscaledown">AKS, ECS, EKS, GKE: Can I stop Kubernetes workloads from scaling down in Ocean?</summary>
-
-  <div style="padding-left:16px">
-
-You can restrict specific pods from scaling down by configuring Ocean and Kubernetes. The instance will be replaced only if:
-* It goes into an unhealthy state.
-* Forced by a cloud provider interruption.
-
-There are two options for restricting pods from scaling down:
-* Kubernetes deployments/pods: spotinst.io/restrict-scale-down: true
-
-  Use the <code>spotinst.io/restrict-scale-down</code> label set to <i>true</i> to block proactive scaling down for more efficient bin packing. This will leave the instance running as long as possible. It gets defined as a label in the pod's configuration. See [restrict scale down](ocean/features/labels-and-taints?id=spotinstiorestrict-scale-down).
-
-* Virtual node group (VNG): restrict scale down (only available for AWS, ECS, and GKE)
-
-  You can configure [Restrict Scale Down](ocean/features/vngs/attributes-and-actions-per-vng) at the VNG level so the nodes and pods within the VNG are not replaced or scaled down due to the auto scaler resource optimization. Create a VNG, go to the Advanced tab, then select **Restrict Scale Down**.
-
- </div>
 
  </details>
 
@@ -2125,7 +2166,7 @@ AKS only launches spot nodes if the admission controller is enabled and Spot tol
 ## Ocean for Apache Spark
 
 <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="sparkretries">How can I set the number of retries for a stage in Ocean Spark?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="sparkretries">Can I set the number of retries for a stage in Ocean Spark?</summary>
 
  <div style="padding-left:16px">
 
@@ -2139,6 +2180,31 @@ If there is a stage failure when a job runs in Ocean Spark, there’s a [retry m
  </div>
  
  </details>
+
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="sparkdriver">Can I run Spark jobs on the driver, not on executors?</summary>
+
+ <div style="padding-left:16px">
+
+Yes, you can define your configuration template to run your Spark application on the driver and not on the executors.
+
+Define a [Jupyter kernel](ocean-spark/tools-integrations/connect-jupyter-notebooks?id=define-jupyter-kernels-with-configuration-templates) with a low idle timeout so it’s scaled down quickly if it’s not in use:
+
+<pre><code>"spark.dynamicAllocation.enabled": "true",
+
+"spark.dynamicAllocation.maxExecutors": "1",
+
+"spark.dynamicAllocation.minExecutors": "0",
+
+"spark.dynamicAllocation.initialExecutors": "0",
+
+"spark.dynamicAllocation.executorIdleTimeout": "10s"
+</code></pre>
+
+ </div>
+ 
+ </details>
+
 
 <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="sparkwrongvng">Why are my pods going to the wrong virtual node group?</summary>
@@ -2529,6 +2595,22 @@ You can create a scaling policy for latency.
 
  </details>
 
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egscalingRIs">AWS: If <i>Utilize Reserved Instances</i> is enabled, how does scaling work?</summary>
+
+  <div style="padding-left:16px">
+
+By default, Elastigroup monitors the status of your account's reservations and acts accordingly at the launch time of an on-demand instance. When an on-demand instance is scaled up, if the account has an available reservation to use in the specific market (instance type + availability zone), Elastigroup will utilize it and will use the reserved instance payment method.
+
+If **Utilize Reserved Instances** is enabled, it automatically triggers constant attempts to revert the group's instances to on demand (reserved instance) if there are available reservations. It triggers a replacement for all instances, even spot, and uses your account's available reservations. The priority of launching instances in this group is:
+1. It will see if there is an option to launch an reserved instance instance
+2. If it cannot, it will launch a spot instance.
+3. If a spot instance is unavailable for any reason, an on-demand instance will be launched based on the fallback to on-demand configuration.
+
+ </div>
+ 
+ </details>
+ 
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="egscale">AWS: Why am I getting a <i>Scale down as part of instance recovery</i> or <i>Scale up as part of instance recovery</i> message?</summary>
 
@@ -2548,23 +2630,26 @@ This means that there are no [spot markets](elastigroup/features/core-features/m
    </div>
 
  </details>
-
+ 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egscalingRIs">AWS: If <i>Utilize Reserved Instances</i> is enabled, how does scaling work?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egoutofstrategy">AWS: Why am I getting an  <i>Out Of Strategy - On Demand No Replacement Will Be Created</i> message?</summary>
 
   <div style="padding-left:16px">
 
-By default, Elastigroup monitors the status of your account's reservations and acts accordingly at the launch time of an on-demand instance. When an on-demand instance is scaled up, if the account has an available reservation to use in the specific market (instance type + availability zone), Elastigroup will utilize it and will use the reserved instance payment method.
+If your Elastigroup has more on-demand instances than the on-demand workload capacity, Elastigroup tries to revert to spot instances. This is called [fix strategy](elastigroup/features/core-features/market-scoring-managing-interruptions?id=fix-strategy).
 
-If **Utilize Reserved Instances** is enabled, it automatically triggers constant attempts to revert the group's instances to on demand (reserved instance) if there are available reservations. It triggers a replacement for all instances, even spot, and uses your account's available reservations. The priority of launching instances in this group is:
-1. It will see if there is an option to launch an reserved instance instance
-2. If it cannot, it will launch a spot instance.
-3. If a spot instance is unavailable for any reason, an on-demand instance will be launched based on the fallback to on-demand configuration.
+When this happens, you can get this message in the Spot console logs:
+
+`Out Of Strategy - On Demand Above Strategy: Desired OD count: 0.0. Actual OD Count: xx. No Replacement Will Be Created Due To The Following Reason: Account Out Of Strategy procedure is currently suspended.`
+
+The fix strategy can be paused if:
+* There are no [spot markets](elastigroup/features/core-features/market-scoring-managing-interruptions?id=fix-strategy) available to launch spot instances. You can add more [instance types](elastigroup/features/compute/preferred-instance-types?id=preferred-instance-types) and [availability zones](elastigroup/features/compute/preferred-availability-zones) to your group to improve availability.
+* The spot instance vCPU quota is exceeded for your AWS account. You can [request a quota increase from AWS](https://docs.aws.amazon.com/servicequotas/latest/userguide/request-quota-increase.html).
 
  </div>
  
  </details>
- 
+
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="egspinspotinstances">AWS: Why can't I spin new spot instances (InsufficientInstanceCapacity)?</summary>
 
@@ -2775,6 +2860,21 @@ When you delete a Beanstalk group, make sure you deselect **Rollback beanstalk c
    </div>
 
  </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egssh">Azure: Can I use SSH to connect to an Azure VM?</summary>
+
+  <div style="padding-left:16px">
+
+Yes, you can connect using SSH to a VM running:
+
+* [Linux](https://learn.microsoft.com/en-us/azure/virtual-machines/linux-vm-connect?tabs=Linux)
+* [Windows](https://learn.microsoft.com/en-us/azure/virtual-machines/windows/connect-ssh?tabs=azurecli)
+
+   </div>
+
+ </details>
+
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="egimportvm">Azure: Why am I getting a <i>Failed to import virtual machine</i> or <i>The create/import has failed</i> message?</summary>
@@ -3690,6 +3790,17 @@ You can use the [AWS restricted Eco policy](https://github.com/spotinst/spotinst
   <div style="padding-left:16px">
 
    Contact your account manager for more information.
+
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ecos3">AWS: Why does Eco need to sync my S3 bucket instead of just reading it?</summary>
+
+  <div style="padding-left:16px">
+
+Eco [syncs your S3 bucket](eco/tutorials/eco-policy/?id=s3) to Spot instead of reading the data each time from your S3 bucket. This improves response time and reduces your costs. Also, if you delete your S3 bucket, then Spot still has the historical data saved.
 
  </div>
 
