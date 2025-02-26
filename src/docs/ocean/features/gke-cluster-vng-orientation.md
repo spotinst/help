@@ -1,4 +1,7 @@
 # Cluster (and Virtual Node Group) Orientation
+
+Cloud service provider relevance: <font color="#FC01CC">GKE</font>.
+
 While Ocean is designed to optimize for both availability and cost, you may want to have control over which optimizations are given priority. For example, you might want to run cheaper nodes for clusters on a less stable platform rather than running expensive nodes on a more stable platform.
 
 You can control the approach that Ocean takes by configuring the cluster (and vng) orientation.
