@@ -2844,7 +2844,6 @@ Change the device name from <code>xvda</code> to <code>/dev/xvda</code> on the g
 
  </details>
 
- 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="egdelbeanstalk">AWS: Why am I getting errors when I try to delete a Beanstalk group?</summary>
 
@@ -2856,6 +2855,62 @@ When you delete a Beanstalk group, make sure you deselect **Rollback beanstalk c
 2. Deselect **Rollback beanstalk configuration**.
 3. Type the name of the group to confirm.
 4. Click **Delete**.
+
+   </div>
+
+ </details>
+ 
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egcodedeploy">AWS: What are the deployment states for CodeDeploy?</summary>
+
+  <div style="padding-left:16px">
+
+This is the list of values you can get for the items.state in the [Get CodeDeploy B/G Deployment API](https://docs.spot.io/api/#tag/Elastigroup-AWS/operation/elastigroupAwsGetCodeDeployB_GDeployment):
+
+AWAITING_DEPLOYMENT_TO_FINISH<br>
+AWAITING_INSTANCES_LAUNCH<br>
+AWAITING_USER_DEPLOYMENT<br>
+ERROR<br>
+FINISHED<br>
+FINISHED_ERROR<br>
+FINISHED_STOPPED<br>
+LAUNCHING_NEW_INSTANCES<br>
+REMOVE_ALL_SUSPENSIONS<br>
+REMOVE_NEW_INSTANCES<br>
+REMOVE_OLD_INSTANCES<br>
+ROLLBACK_CREATE_DEPLOYMENT<br>
+ROLLBACK_REPLACE_OLD_NEW_INSTANCES<br>
+ROLLBACK_START<br>
+STARTING<br>
+STOPPING<br>
+TAG_INSTANCES_WITH_GREEN_TAG<br>
+UNSTABLE_DEPLOYMENT<br>
+VALIDATE_TAGS<br>
+WAIT_BEFORE_TERMINATION<br>
+
+Sample code with items.state:
+
+<pre><code>
+  "response": {
+    "status": {
+      "code": 200,
+      "message": "OK"
+    },
+    <font color="#FC01CC">"items": [</font>
+      {
+        "id": "cdbg-3ccf1234",
+        "groupId": "sig-87231234",
+        <font color="#FC01CC">"state": "STARTING",</font>
+        "config": {
+          "timeout": 20,
+          "tags": [
+            {
+              "tagKey": "ver",
+              "tagValue": "pink"
+            }
+          ],
+
+</code></pre>
 
    </div>
 
