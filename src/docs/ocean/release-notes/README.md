@@ -2,6 +2,8 @@
 
 ## February 2025: Features and Enhancements
 
+*  **OCN-0068: February 26, 2025:** (**<font color="#FC01CC">AKS</font>**) and (**<font color="#FC01CC">EKS</font>**) Ocean right-sizing auto-tuning is implemented to handle workload limits. [Learn more…](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-tab?id=how-it-works)
+
 *  **OCN-0067: February 26, 2025:** (**<font color="#FC01CC">AKS</font>**) Ocean now supports the Azure Linux 3.0 image type on AKS version 1.31 for new clusters.
 [Learn more...](https://learn.microsoft.com/en-us/azure/azure-linux/how-to-enable-azure-linux-3)
 
