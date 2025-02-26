@@ -2142,7 +2142,7 @@ AKS only launches spot nodes if the admission controller is enabled and Spot tol
 ## Ocean for Apache Spark
 
 <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="sparkretries">How can I set the number of retries for a stage in Ocean Spark?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="sparkretries">Can I set the number of retries for a stage in Ocean Spark?</summary>
 
  <div style="padding-left:16px">
 
@@ -2156,6 +2156,31 @@ If there is a stage failure when a job runs in Ocean Spark, there’s a [retry m
  </div>
  
  </details>
+
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="sparkdriver">Can I run Spark jobs on the driver, not on executors?</summary>
+
+ <div style="padding-left:16px">
+
+Yes, you can define your configuration template to run your Spark application on the driver and not on the executors.
+
+Define a [Jupyter kernel](ocean-spark/tools-integrations/connect-jupyter-notebooks?id=define-jupyter-kernels-with-configuration-templates) with a low idle timeout so it’s scaled down quickly if it’s not in use:
+
+<pre><code>"spark.dynamicAllocation.enabled": "true",
+
+"spark.dynamicAllocation.maxExecutors": "1",
+
+"spark.dynamicAllocation.minExecutors": "0",
+
+"spark.dynamicAllocation.initialExecutors": "0",
+
+"spark.dynamicAllocation.executorIdleTimeout": "10s"
+</code></pre>
+
+ </div>
+ 
+ </details>
+
 
 <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="sparkwrongvng">Why are my pods going to the wrong virtual node group?</summary>
