@@ -13,7 +13,7 @@ Ocean (GKE) supports the following orientations:
 
 >Note: Ocean will fall back to a regular instance if the required instance type or the lowest price for an instance type is unavailable.
 
-## Set up in Ocean API
+## Set Up Cluster or VNG Orientation for GKE in the Spot API
 
 To define the cluster scaling orientation for your Ocean cluster, you can use the [Create Cluster](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKEClusterCreate) or [Update Cluster](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKEClusterUpdate) APIs. 
 
