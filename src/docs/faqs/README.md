@@ -891,6 +891,20 @@ Update the key pair:
  </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocssh">Azure: Can I use SSH to connect to an Azure VM?</summary>
+
+  <div style="padding-left:16px">
+
+Yes, you can connect using SSH to a VM running:
+
+* [Linux](https://learn.microsoft.com/en-us/azure/virtual-machines/linux-vm-connect?tabs=Linux)
+* [Windows](https://learn.microsoft.com/en-us/azure/virtual-machines/windows/connect-ssh?tabs=azurecli)
+
+   </div>
+
+ </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="secretnotvalid">Azure: Why can my cluster not perform scaling actions (invalid client secret)?</summary>
 
   <div style="padding-left:16px">
@@ -2817,6 +2831,21 @@ When you delete a Beanstalk group, make sure you deselect **Rollback beanstalk c
    </div>
 
  </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egssh">Azure: Can I use SSH to connect to an Azure VM?</summary>
+
+  <div style="padding-left:16px">
+
+Yes, you can connect using SSH to a VM running:
+
+* [Linux](https://learn.microsoft.com/en-us/azure/virtual-machines/linux-vm-connect?tabs=Linux)
+* [Windows](https://learn.microsoft.com/en-us/azure/virtual-machines/windows/connect-ssh?tabs=azurecli)
+
+   </div>
+
+ </details>
+
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="egimportvm">Azure: Why am I getting a <i>Failed to import virtual machine</i> or <i>The create/import has failed</i> message?</summary>
