@@ -2595,6 +2595,22 @@ You can create a scaling policy for latency.
 
  </details>
 
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egscalingRIs">AWS: If <i>Utilize Reserved Instances</i> is enabled, how does scaling work?</summary>
+
+  <div style="padding-left:16px">
+
+By default, Elastigroup monitors the status of your account's reservations and acts accordingly at the launch time of an on-demand instance. When an on-demand instance is scaled up, if the account has an available reservation to use in the specific market (instance type + availability zone), Elastigroup will utilize it and will use the reserved instance payment method.
+
+If **Utilize Reserved Instances** is enabled, it automatically triggers constant attempts to revert the group's instances to on demand (reserved instance) if there are available reservations. It triggers a replacement for all instances, even spot, and uses your account's available reservations. The priority of launching instances in this group is:
+1. It will see if there is an option to launch an reserved instance instance
+2. If it cannot, it will launch a spot instance.
+3. If a spot instance is unavailable for any reason, an on-demand instance will be launched based on the fallback to on-demand configuration.
+
+ </div>
+ 
+ </details>
+ 
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="egscale">AWS: Why am I getting a <i>Scale down as part of instance recovery</i> or <i>Scale up as part of instance recovery</i> message?</summary>
 
@@ -2614,23 +2630,26 @@ This means that there are no [spot markets](elastigroup/features/core-features/m
    </div>
 
  </details>
-
+ 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egscalingRIs">AWS: If <i>Utilize Reserved Instances</i> is enabled, how does scaling work?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egoutofstrategy">AWS: Why am I getting an  <i>Out Of Strategy - On Demand No Replacement Will Be Created</i> message?</summary>
 
   <div style="padding-left:16px">
 
-By default, Elastigroup monitors the status of your account's reservations and acts accordingly at the launch time of an on-demand instance. When an on-demand instance is scaled up, if the account has an available reservation to use in the specific market (instance type + availability zone), Elastigroup will utilize it and will use the reserved instance payment method.
+If your Elastigroup has more on-demand instances than the on-demand workload capacity, Elastigroup tries to revert to spot instances. This is called [fix strategy](elastigroup/features/core-features/market-scoring-managing-interruptions?id=fix-strategy).
 
-If **Utilize Reserved Instances** is enabled, it automatically triggers constant attempts to revert the group's instances to on demand (reserved instance) if there are available reservations. It triggers a replacement for all instances, even spot, and uses your account's available reservations. The priority of launching instances in this group is:
-1. It will see if there is an option to launch an reserved instance instance
-2. If it cannot, it will launch a spot instance.
-3. If a spot instance is unavailable for any reason, an on-demand instance will be launched based on the fallback to on-demand configuration.
+When this happens, you can get this message in the Spot console logs:
+
+`Out Of Strategy - On Demand Above Strategy: Desired OD count: 0.0. Actual OD Count: xx. No Replacement Will Be Created Due To The Following Reason: Account Out Of Strategy procedure is currently suspended.`
+
+The fix strategy can be paused if:
+* There are no [spot markets](elastigroup/features/core-features/market-scoring-managing-interruptions?id=fix-strategy) available to launch spot instances. You can add more [instance types](elastigroup/features/compute/preferred-instance-types?id=preferred-instance-types) and [availability zones](elastigroup/features/compute/preferred-availability-zones) to your group to improve availability.
+* The spot instance vCPU quota is exceeded for your AWS account. You can [request a quota increase from AWS](https://docs.aws.amazon.com/servicequotas/latest/userguide/request-quota-increase.html).
 
  </div>
  
  </details>
- 
+
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="egspinspotinstances">AWS: Why can't I spin new spot instances (InsufficientInstanceCapacity)?</summary>
 
