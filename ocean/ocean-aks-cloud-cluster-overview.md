@@ -91,7 +91,7 @@ If one or more nodes have been scaled down, click the link on the **Node Scaled 
 * VM Size: For example, standard_f4s
 * Lifecycle: (regular, Savings Plans, Reserved Instances, and spots).
 * Scale-Down Timestamp, for example, 06/25/2023 09:23:15
- 
+
 ## Ocean Savings from Reverting to Lower Cost Node Pools
 
 This process searches for node pools that can be replaced with lower-cost node pools. For example, suppose a pod was initially placed on a more expensive node due to resource constraints. In that case, Ocean autoscaler can replace it with a less expensive node when it becomes available, consequently saving costs. This tab lets you see how much you save from this dynamic resource allocation. 
@@ -142,7 +142,7 @@ Click **Revert to Lower Cost** to view the number of nodes reverted to lower cos
   
   * The Virtual Node Group's name (click the link for a listed VNG to display your custom VNG details).
   * Scale-down timestamp in format MM/DD/YYYY HH: MM: SS
- 
+
 ## Ocean Savings from Right-Sizing Your Workloads
 
 >**Note**: This tab will only be available if the optional Ocean automatic right-sizing feature is installed and enabled in your deployment.
