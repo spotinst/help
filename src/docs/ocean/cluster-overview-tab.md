@@ -109,7 +109,7 @@ This tab displays:
      * Memory resources saved in GiB Hours. 
      * GPU resources saved in GPU Hours.
 
-## Ocean Savings from Right-Sizing Your Workloads
+### Ocean Savings from Right-Sizing Your Workloads
 
 >**Note**: This tab will only be available if the optional Ocean automatic right-sizing feature is installed and enabled in your deployment.
 
