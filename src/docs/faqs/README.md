@@ -1237,6 +1237,22 @@ You can have multiple containers defined in a single task definition. Check all 
  </details>
 
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocagentlogs">ECS: How can I check the ECS agent logs? Can I push the agent logs to CloudWatch?</summary>
+
+  <div style="padding-left:16px">
+
+You can check the logs for ECS instances, for example, to see why an instance was unhealthy.
+
+If the instance hasn’t been terminated yet, you can [connect to the instance](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/logs.html) to view the agent logs.
+
+You can also [push the ECS agent logs to CloudWatch](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_cloudwatch_logs.html). This lets you check the agent logs even after the instance is replaced.
+
+ </div>
+
+ </details>
+
+
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceandisconnectcluster">EKS: How can I disconnect a cluster from Ocean?</summary>
 
   <div style="padding-left:16px">
