@@ -2,6 +2,8 @@
 
 ## February 2025: Features and Enhancements
 
+*  **OCN-0067: February 26, 2025:** (**<font color="#FC01CC">AKS</font>**) Ocean now supports the Azure Linux 3.0 image type on AKS version 1.31 for new clusters.
+[Learn more...](https://learn.microsoft.com/en-us/azure/azure-linux/how-to-enable-azure-linux-3)
 
 *  **OCN-0066: February 26, 2025:** (**<font color="#FC01CC">GKE</font>**) You can now set up GKE cluster and virtual node group orientation via the Spot API. [Learn more...](https://docs.spot.io/ocean/features/gke-cluster-vng-orientation)
 
