@@ -34,7 +34,7 @@ In this panel:
 * You can select a time range for displayed data from the drop-down list to the right of the savings widgets. Available options are Last 30 Days, Last 7 Days, and This Month. 
 * For each savings widget, click on "How is it calculated?  
 
-## Ocean Savings from Running on Spot
+### Ocean Savings from Running on Spot
 
 Ocean autoscaler intelligently leverages these spot instances when appropriate, reducing costs while maintaining high availability. This tab lets you view the cost benefits of using spot instances in your cluster. 
 Ocean savings from running on spot are calculated as the difference between the price of regular and spot nodes within a specified time range. This calculation considers the number of CPUs, memory, and GPUs running as spot nodes. 
@@ -53,7 +53,7 @@ This tab displays:
 * Memory resources in GiB/TiB Hours.
 * GPU resources in GPU Hours.
 
-## Ocean Savings from Bin Packing
+### Ocean Savings from Bin Packing
 
 In the context of autoscaling, bin packing savings are calculated based on the vCPU, memory, and GPU resources of the nodes that have been [Scaled Down](https://docs.spot.io/ocean/features/scaling-kubernetes?id=scale-down) by the Ocean Autoscaler. Once a minute, Ocean simulates whether any running pods can be moved to other nodes within the cluster. If so, Ocean drains those nodes to ensure continuous infrastructure optimization and increased cloud savings.   
 
@@ -92,7 +92,7 @@ If one or more nodes have been scaled down, click the link on the **Node Scaled 
 * Lifecycle: (regular, Savings Plans, Reserved Instances, and spots).
 * Scale-Down Timestamp, for example, 06/25/2023 09:23:15
 
-## Ocean Savings from Reverting to Lower Cost Node Pools
+### Ocean Savings from Reverting to Lower Cost Node Pools
 
 This process searches for node pools that can be replaced with lower-cost node pools. For example, suppose a pod was initially placed on a more expensive node due to resource constraints. In that case, Ocean autoscaler can replace it with a less expensive node when it becomes available, consequently saving costs. This tab lets you see how much you save from this dynamic resource allocation. 
 
@@ -143,7 +143,7 @@ Click **Revert to Lower Cost** to view the number of nodes reverted to lower cos
   * The Virtual Node Group's name (click the link for a listed VNG to display your custom VNG details).
   * Scale-down timestamp in format MM/DD/YYYY HH: MM: SS
 
-## Ocean Savings from Right-Sizing Your Workloads
+### Ocean Savings from Right-Sizing Your Workloads
 
 >**Note**: This tab will only be available if the optional Ocean automatic right-sizing feature is installed and enabled in your deployment.
 
