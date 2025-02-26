@@ -1624,7 +1624,6 @@ Keep in mind:
 
  </details>
 
- 
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceancudvng">GKE: Can I set up committed use discounts on virtual node groups?</summary>
 
@@ -1635,6 +1634,17 @@ You can set up committed use discounts (CUDs) for clusters in Ocean and groups i
 Set up committed use discounts for:
 * [Ocean](ocean/features/committed-use-discount)
 * [Elastigroup](elastigroup/features/gcp/commit-use-discount)
+
+   </div>
+
+ </details>
+
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocshutdownhrs">GKE: Are shutdown hours supported in shielded node clusters?</summary>
+
+  <div style="padding-left:16px">
+
+[Shutdown hours](ocean/features/running-hours?id=scaling-behavior-ocean-for-kubernetes) are not supported for GKE clusters with shielded nodes. If you use shutdown hours with shielded nodes, make sure that the Ocean controller is available at the end of the off time by checking that it runs on a node that Ocean does not manage. This is because the controller is part of the node registration process and requires an available node to run on.
 
    </div>
 
