@@ -41,6 +41,7 @@
      - [Headroom](ocean/features/headroom)
      - [Right-Sizing (Automatic)](ocean/features/ocean-cluster-right-sizing-tab)
        - [Right-Sizing Recommendations](ocean/features/ocean-cluster-right-sizing-recom-tab)
+       - [Right-Sizing Savings](ocean/features/ocean-cluster-right-sizing-savings-tab)
        - [Right-Sizing Troubleshooting](ocean/features/troubleshoot-right-sizing)
      - [Right Sizing (Manual)](ocean/features/right-sizing)
        - [Right Sizing Use](ocean/tutorials/use-right-sizing)
