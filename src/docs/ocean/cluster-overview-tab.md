@@ -124,9 +124,7 @@ To view these savings, click the **Right-Sizing** tab (unless already displayed)
 This tab displays: 
 * Total cluster savings from down-sizing recommendations and the percentage of the saved cluster costs in the selected time range, where:
   * <b>Total cluster savings = [costs for workloads based on original requests – cost for workloads based on Ocean-optimized requests]</b>. 
-  * Percentage of cluster costs:
-  
-  <b>% savings = [[costs for workloads based on original requests]-[cost for workloads based on Ocean-optimized requests] / [costs for workloads based on original requests] * 100]</b>
+  * Percentage of cluster costs: <b>% savings = [[costs for workloads based on original requests]-[cost for workloads based on Ocean-optimized requests] / [costs for workloads based on original requests] * 100]</b>
  
 * CPU resources in vCPU Hours.
 * Memory resources in GiB/TiB Hours.
