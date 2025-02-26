@@ -35,7 +35,7 @@ The right-sizing savings panel shows the following:
 * Pie chart together with the savings per namespaces (that affected the most savings).
 
 The workload savings list shows your actual right-sizing savings per workload.
-These are the workloads that were optimized based on automated recommendations:
+These are the workloads that were optimized automatically based on Ocean's recommendations.
 
 >Note: Only down-sizing recommendations apply.
 
