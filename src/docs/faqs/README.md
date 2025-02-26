@@ -3796,6 +3796,17 @@ You can use the [AWS restricted Eco policy](https://github.com/spotinst/spotinst
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ecos3">AWS: Why does Eco need to sync my S3 bucket instead of just reading it?</summary>
+
+  <div style="padding-left:16px">
+
+Eco [syncs your S3 bucket](eco/tutorials/eco-policy/?id=s3) to Spot instead of reading the data each time from your S3 bucket. This improves response time and reduces your costs. Also, if you delete your S3 bucket, then Spot still has the historical data saved.
+
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="ecoarn">AWS: Why am I getting an <i>Invalid ARN</i> message?</summary>
 
   <div style="padding-left:16px">
