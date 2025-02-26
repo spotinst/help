@@ -190,6 +190,11 @@
     .matching-post {
       width: 100%;
     }
+    .matching-post p {
+      width: 100%;
+      overflow:hidden; 
+      white-space:nowrap; 
+    }
     .search-results-displayed h1 {
       padding-left: 50px;
     }
@@ -309,7 +314,7 @@
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-json.min.js"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-yaml.min.js"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markdown.min.js"></script>
-  <script type="text/javascript" src="//cdn.jsdelivr.net/gh/UpTrendingLLC/docsify/search.1.1.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/gh/UpTrendingLLC/docsify/search.1.2.js"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/external-script.min.js"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
   <script type="text/javascript"
@@ -326,7 +331,7 @@
   <!-- Custom Plugins -->
   
   <script>
-    (function () {
+   (function () {
       function storeSearchTermOnInput() {
         const searchInput = document.querySelector('.sidebar input[type="search"]');
         if (!searchInput) {
@@ -363,10 +368,7 @@
 
         function wrapMatches(node) {
           if (node.nodeType === Node.TEXT_NODE && node.nodeValue.trim() !== "") {
-            if (
-              !node.parentNode ||
-              !node.parentNode.classList.contains("highlight")
-            ) {
+            if (!node.parentNode || !node.parentNode.classList.contains("highlight")) {
               const fragment = document.createDocumentFragment();
               let lastIndex = 0;
 
@@ -406,6 +408,14 @@
         for (const node of nodes) {
           content.replaceChild(wrapMatches(node), node);
         }
+
+        // Find and open nearest <details> element
+        content.querySelectorAll(".highlight").forEach((el) => {
+          let detailsParent = el.closest("details");
+          if (detailsParent) {
+            detailsParent.setAttribute("open", "");
+          }
+        });
       }
 
       function customHighlightPlugin(hook) {
@@ -421,6 +431,7 @@
 
       document.addEventListener("DOMContentLoaded", storeSearchTermOnInput);
     })();
+
   </script>
 
 
