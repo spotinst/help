@@ -1,4 +1,7 @@
 # Cluster (and Virtual Node Group) Orientation
+
+Cloud service provider relevance: <font color="#FC01CC">GKE</font>.
+
 While Ocean is designed to optimize for both availability and cost, you may want to have control over which optimizations are given priority. For example, you might want to run cheaper nodes for clusters on a less stable platform rather than running expensive nodes on a more stable platform.
 
 You can control the approach that Ocean takes by configuring the cluster (and vng) orientation.
@@ -13,7 +16,7 @@ Ocean (GKE) supports the following orientations:
 
 >Note: Ocean will fall back to a regular instance if the required instance type or the lowest price for an instance type is unavailable.
 
-## Set up in Ocean API
+## Set Up Cluster or VNG Orientation for GKE in the Spot API
 
 To define the cluster scaling orientation for your Ocean cluster, you can use the [Create Cluster](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKEClusterCreate) or [Update Cluster](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKEClusterUpdate) APIs. 
 

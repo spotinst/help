@@ -114,6 +114,7 @@
      - [Committed Use Discount](ocean/features/committed-use-discount)
      - [VM Types Management](ocean/tips-and-best-practices/manage-machine-types)
      - [Max Scale Down % per VNG-Console (GKE)](ocean/features/max-scale-down-vng-gke-ui)
+     - [Cluster and VNG Orientation for GKE](ocean/features/gke-cluster-vng-orientation)
   
    - [Tools & Integrations](ocean/tools-and-integrations/)
      - [eksctl](ocean/tools-and-integrations/eksctl/)

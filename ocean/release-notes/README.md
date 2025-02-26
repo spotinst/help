@@ -2,6 +2,10 @@
 
 ## February 2025: Features and Enhancements
 
+
+*  **OCN-0066: February 26, 2025:** (**<font color="#FC01CC">GKE</font>**) You can now set up GKE cluster and virtual node group orientation via the Spot API. [Learn more...](https://docs.spot.io/ocean/features/gke-cluster-vng-orientation)
+
+ 
 *  **OCN-0065: February 12, 2025:** (**<font color="#FC01CC">AWS Kubernetes</font>**) Introduced a set of instance types labels. All nodes will be automatically labeled according to node criteria, and you can apply those labels to a workload's constraints (nodeSelector, node affinity, etc.) to reflect instance-types properties such as category and family. [Learn more…](https://docs.spot.io/ocean/features/labels-and-taints?id=instance-types-labels)
 
 *  **OCN-0064: February 10, 2025:** (**<font color="#FC01CC">AWS EKS</font>**) Dynamic IOPS lets you scale IOPS for GP3 EBS volumes based on instance size. [Learn more...](https://docs.spot.io/ocean/features/scaling-kubernetes?id=dynamic-iops)
