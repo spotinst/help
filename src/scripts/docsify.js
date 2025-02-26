@@ -31,7 +31,7 @@ window.$docsify = {
   // ---------------------------------------------------------------------------
   search: {
     paths: "auto",
-    placeholder: `Search (Press "/" to focus)`,
+    placeholder: `Search...`,
     noData: "No Results.",
   },
 
