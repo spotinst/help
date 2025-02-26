@@ -79,7 +79,7 @@ This tab displays:
 *   Resource savings from bin packing in the following units:  
     * CPU resources saved in vCPU Hours. 
     * Memory resources saved in GiB Hours. 
-    * GPU resources saved in GPU Hours. 
+    * GPU resources saved in GPU Hours.
 
 ### Ocean Savings from Reverting to a Lower Cost Node 
 
@@ -107,7 +107,7 @@ This tab displays:
 *   Resource savings from reverting to lower cost in the following units:  
      * CPU resources saved in vCPU Hours. 
      * Memory resources saved in GiB Hours. 
-     * GPU resources saved in GPU Hours. 
+     * GPU resources saved in GPU Hours.
 
 ## Ocean Savings from Right-Sizing Your Workloads
 
