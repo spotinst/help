@@ -14,7 +14,7 @@ To view your right-sizing savings:
 
 The Savings tab contains the following:  
 
-*  Right-sizing Savings panel
+*  Right-sizing savings panel
 *  Workload savings list.
 
 <img width="1000" src="https://github.com/user-attachments/assets/83e6c80e-9533-480d-a171-9d872e07550e" />
