@@ -1653,6 +1653,47 @@ Set up committed use discounts for:
  </details>
 
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocunregistered">GKE: Why are my nodes unregistered?</summary>
+
+  <div style="padding-left:16px">
+
+Some of the common reasons your GKE nodes can be unregistered are if:
+* You have shielded nodes. [Shutdown hours](ocean/features/running-hours?id=scaling-behavior-ocean-for-kubernetes) are not supported for GKE clusters with shielded nodes. If you use shutdown hours with shielded nodes, make sure that the Ocean controller is available at the end of the off time by checking that it runs on a node that Ocean does not manage. This is because the controller is part of the node registration process and requires an available node to run on.
+* The cluster is in a private network. You need to configure NAT gateway on the cluster in GKE so it’ll have access to the internet.
+
+  Make sure the cluster has <i>external-nat</i> and <i>ONE_TO_ONE_NAT</i> set:
+
+   * In the Spot console, go to **Ocean** > **Cloud Clusters** > select the cluster > **Action** > **Edit Cluster** > **Review** > **JSON**
+   * In the [API](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKEClusterGet)
+
+   For example:
+````json
+    "compute": {
+       "networkInterfaces": [
+         {
+           "network": "networkname",
+           "accessConfigs": [
+             {
+               "name": "external-nat",
+               "type": "ONE_TO_ONE_NAT"
+             }
+           ],
+           "aliasIpRanges": [
+             {
+               "ipCidrRange": "/24",
+               "subnetworkRangeName": "subnetworkRangeName"
+             }
+           ],
+           "projectId": "projectId"
+         }
+       ],
+````
+
+   </div>
+
+ </details>
+
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanbootdisk">GKE: Why can’t I spin new instances (boot disk architecture)?</summary>
 
   <div style="padding-left:16px">
