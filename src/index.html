@@ -190,6 +190,11 @@
     .matching-post {
       width: 100%;
     }
+    .matching-post p {
+      width: 100%;
+      overflow:hidden; 
+      white-space:nowrap; 
+    }
     .search-results-displayed h1 {
       padding-left: 50px;
     }
@@ -326,101 +331,109 @@
   <!-- Custom Plugins -->
   
   <script>
-    (function () {
-      function storeSearchTermOnInput() {
-        const searchInput = document.querySelector('.sidebar input[type="search"]');
-        if (!searchInput) {
-          console.error("Search input not found!");
-          return;
-        }
+   (function () {
+     function storeSearchTermOnInput() {
+       const searchInput = document.querySelector('.sidebar input[type="search"]');
+       if (!searchInput) {
+         console.error("Search input not found!");
+         return;
+       }
 
-        function saveSearchTerm() {
-          const searchTerm = searchInput.value.trim();
-          if (searchTerm) {
-            sessionStorage.setItem("highlightSearchTerm", searchTerm);
-          }
-        }
+       function saveSearchTerm() {
+         const searchTerm = searchInput.value.trim();
+         if (searchTerm) {
+           sessionStorage.setItem("highlightSearchTerm", searchTerm);
+         }
+       }
 
-        searchInput.addEventListener("input", saveSearchTerm);
-        searchInput.addEventListener("blur", saveSearchTerm);
-      }
+       searchInput.addEventListener("input", saveSearchTerm);
+       searchInput.addEventListener("blur", saveSearchTerm);
+     }
 
-      function highlightStoredSearchTerm() {
-        const searchTerm = sessionStorage.getItem("highlightSearchTerm");
-        if (!searchTerm) {
-          return;
-        }
+     function highlightStoredSearchTerm() {
+       const searchTerm = sessionStorage.getItem("highlightSearchTerm");
+       if (!searchTerm) {
+         return;
+       }
 
-        sessionStorage.removeItem("highlightSearchTerm");
+       sessionStorage.removeItem("highlightSearchTerm");
 
-        const content = document.querySelector(".markdown-section");
-        if (!content) {
-          console.error("Content section not found for highlighting.");
-          return;
-        }
+       const content = document.querySelector(".markdown-section");
+       if (!content) {
+         console.error("Content section not found for highlighting.");
+         return;
+       }
 
-        const regex = new RegExp(`(${searchTerm})`, "gi");
+       const regex = new RegExp(`(${searchTerm})`, "gi");
 
-        function wrapMatches(node) {
-          if (node.nodeType === Node.TEXT_NODE && node.nodeValue.trim() !== "") {
-            if (
-              !node.parentNode ||
-              !node.parentNode.classList.contains("highlight")
-            ) {
-              const fragment = document.createDocumentFragment();
-              let lastIndex = 0;
+       function wrapMatches(node) {
+         if (node.nodeType === Node.TEXT_NODE && node.nodeValue.trim() !== "") {
+           if (
+             !node.parentNode ||
+             !node.parentNode.classList.contains("highlight")
+           ) {
+             const fragment = document.createDocumentFragment();
+             let lastIndex = 0;
 
-              node.nodeValue.replace(regex, (match, p1, offset) => {
-                fragment.appendChild(
-                  document.createTextNode(node.nodeValue.slice(lastIndex, offset))
-                );
+             node.nodeValue.replace(regex, (match, p1, offset) => {
+               fragment.appendChild(
+                 document.createTextNode(node.nodeValue.slice(lastIndex, offset))
+               );
 
-                const span = document.createElement("span");
-                span.className = "highlight";
-                span.textContent = p1;
-                fragment.appendChild(span);
+               const span = document.createElement("span");
+               span.className = "highlight";
+               span.textContent = p1;
+               fragment.appendChild(span);
 
-                lastIndex = offset + p1.length;
-              });
+               lastIndex = offset + p1.length;
+             });
 
-              fragment.appendChild(
-                document.createTextNode(node.nodeValue.slice(lastIndex))
-              );
-              return fragment;
-            }
-          }
+             fragment.appendChild(
+               document.createTextNode(node.nodeValue.slice(lastIndex))
+             );
+             return fragment;
+           }
+         }
 
-          const clonedNode = node.cloneNode(false);
-          for (const child of node.childNodes) {
-            clonedNode.appendChild(wrapMatches(child));
-          }
+         const clonedNode = node.cloneNode(false);
+         for (const child of node.childNodes) {
+           clonedNode.appendChild(wrapMatches(child));
+         }
 
-          return clonedNode;
-        }
+         return clonedNode;
+       }
 
-        content.querySelectorAll(".highlight").forEach((el) => {
-          el.replaceWith(document.createTextNode(el.textContent));
-        });
+       content.querySelectorAll(".highlight").forEach((el) => {
+         el.replaceWith(document.createTextNode(el.textContent));
+       });
 
-        const nodes = [...content.childNodes];
-        for (const node of nodes) {
-          content.replaceChild(wrapMatches(node), node);
-        }
-      }
+       const nodes = [...content.childNodes];
+       for (const node of nodes) {
+         content.replaceChild(wrapMatches(node), node);
+       }
 
-      function customHighlightPlugin(hook) {
-        hook.doneEach(() => {
-          setTimeout(highlightStoredSearchTerm, 500);
-        });
-      }
+       // Find and open nearest <details> element
+       content.querySelectorAll(".highlight").forEach((el) => {
+         let detailsParent = el.closest("details");
+         if (detailsParent) {
+           detailsParent.setAttribute("open", "");
+         }
+       });
+     }
 
-      window.$docsify.plugins = [].concat(
-        customHighlightPlugin,
-        window.$docsify.plugins || []
-      );
+     function customHighlightPlugin(hook) {
+       hook.doneEach(() => {
+         setTimeout(highlightStoredSearchTerm, 500);
+       });
+     }
 
-      document.addEventListener("DOMContentLoaded", storeSearchTermOnInput);
-    })();
+     window.$docsify.plugins = [].concat(
+       customHighlightPlugin,
+       window.$docsify.plugins || []
+     );
+
+     document.addEventListener("DOMContentLoaded", storeSearchTermOnInput);
+   })();
   </script>
 
 
