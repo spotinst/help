@@ -98,6 +98,7 @@ You can get information about releases and new features:
  <div style="padding-left:16px">
 
 Yes, you can edit your:
+
 * [Organization name](administration/organizations/?id=update-your-organization-name)
 * [Spot account name](administration/organizations/?id=update-your-spot-account-name)
 
@@ -136,6 +137,7 @@ Throughout the lifetime of an instance, it can change its “price” whenever t
 Running hours are calculated from the moment an instance is launched until it is <i>detached</i> and not <i>terminated</i>. AWS calculates the entire lifetime of the instance.
 
 Here are some reasons for large differences between the numbers in the Spot Console and AWS:
+
 * Groups of instances with long draining periods
 * Shutdown scripts with long grace periods
 
@@ -156,7 +158,7 @@ You can choose to remove some of these permissions from the [Spot IAM policy](/a
 
 * **iam:AddRoleToInstanceProfile** is generally not required. It is only used to change the role associated with an instance profile and is required for Beanstalk.
 
-* **iam:PassRole** is only required when you custom metrics. Ocean EKS does not require <i>iam:PassRole</i> in the Spot policy. However, if you use custom metrics, you need an account with this role configured for putting metric data into CloudWatch, which is in use by both Ocean (PublishOceanKubernetesCwMetricsExecutor ) and EG (ReportCWMetricsNewCmd).
+* **iam:PassRole** is only required when you custom metrics. Ocean EKS does not require <i>iam:PassRole</i> in the Spot policy. However, if you use custom metrics, you need an account with this role configured for putting metric data into CloudWatch, which is in use by both Ocean (PublishOceanKubernetesCwMetricsExecutor) and EG (ReportCWMetricsNewCmd).
 
  </div>
 
@@ -362,11 +364,11 @@ The exception is if you have Okta with [system for cross-domain identity managem
    <li>For each user in your organization who needs to be assigned to groups, go to Okta Admin <b>Directory</b> > <b>People</b>.</li>
    <li>On the Applications tab, locate the Spotinst app and click <b>Edit</b> to add the <i>OrgAndUserGroups</i>:</li>
       <ul>
-       <li><p>For a single user: `SPOTINST-{OrganizationID}:{UserGroupId}`</p>
-        <p>For example: `SPOTINST-606012345678:ugr-1234`</p>
+       <li><p>For a single user: <code>SPOTINST-{OrganizationID}:{UserGroupId}</code></p>
+        <p>For example: <code>SPOTINST-606012345678:ugr-1234</code></p>
        </li>
-       <li><p>Multiple UserGroupIds for the same organization are separated with a comma: `SPOTINST-{OrganizationID}:{UserGroupId1},{UserGroupId2}`</p>
-        <p>For example: `SPOTINST-606012345678:ugr-1234,ugr-5678`</p>
+       <li><p>Multiple UserGroupIds for the same organization are separated with a comma: <code>SPOTINST-{OrganizationID}:{UserGroupId1},{UserGroupId2}</code></p>
+        <p>For example: <code>SPOTINST-606012345678:ugr-1234,ugr-5678</code></p>
        </li>
       </ul>
 
@@ -477,7 +479,8 @@ For curl, use this template:
 ````Curl
 curl -X GET '{URL}' \
 -H 'Authorization: Bearer {TOKEN}' \
--H 'Content-Type: application/json'````
+-H 'Content-Type: application/json'
+````
 
 For example:
 * Get the value of the maximum number of instances set in an Elastigroup using CLI
@@ -489,7 +492,8 @@ For example:
       ````Curl
 	  curl -X GET 'https://api.spotinst.io/aws/ec2/group/{groupID}' \
       -H 'Authorization: Bearer {token}' \
-      -H 'Content-Type: application/json' | jq '.response.items[0].capacity.maximum'````
+      -H 'Content-Type: application/json' | jq '.response.items[0].capacity.maximum'
+      ````
   
 * Get the cluster-ocean id by cluster name
 
@@ -502,7 +506,7 @@ For example:
       -H 'Authorization: Bearer {token}' \
       -H 'Content-Type: application/json' 
        | jq '.response.items[] | select(.controllerClusterId | contains("{cluster-name}")) | .id'
-````
+      ````
 
  </div>
  </details>
@@ -626,7 +630,8 @@ This can happen if your virtual node group was deleted in Terraform. When you de
           "volumeType": "GP3"
         }
       }
-    ],````
+    ],
+    ````
 
    5. Click **Save**.
 
@@ -640,6 +645,7 @@ This can happen if your virtual node group was deleted in Terraform. When you de
   <div style="padding-left:16px">
 
 No, you will get this error:
+
 `Virtual Node Group configuration failed to update. Reason: Error while trying to create LaunchSpec. spotPercentage cannot be set on both ocean cluster and launch spec`
 
 The parameter <i>spotPercentage</i> cannot be used for both a cluster and one of its virtual node groups at the same time. This is intentional. Either remove it from the  cluster or from the virtual node group.
@@ -674,6 +680,7 @@ This happens if you have duplicate tags configured:
 Draining timeout is the time in seconds to allow the instance or node to be drained before terminating it.
 
 The default draining for:
+
 * Elastigroup is 120 seconds
 * Ocean is 300 seconds
 * ECS (Elastigroup/Ocean) is 900 seconds
@@ -688,8 +695,10 @@ The default draining for:
   <div style="padding-left:16px">
 
    You can stream Elastigroup logs to an AWS S3 bucket. Then, you can configure Elasticsearch and Kibana to collect logs from the S3 bucket:
+   
    * [Ocean](/ocean/features/log-integration-with-s3)
    * [Elastigroup](https://docs.spot.io/api/#tag/Elastigroup-AWS/operation/elastigroupAwsCreate) add this code to the JSON:
+
      ````JSON
 	 "logging": {
        "export": {
@@ -698,7 +707,7 @@ The default draining for:
          }
        }
      }
-   ````
+    ````
 
  </div>
 
@@ -715,11 +724,11 @@ The default draining for:
 
 AWS decides according to:
 
-1.	If the market matches a free zonal reserved instance commitment, then the instance is a reserved instance.
-2.	If the market matches a free regional reserved instance commitment, then the instance is a reserved instance.
-3.	If the market matches a free EC2 instance savings plan commitment, then the instance is a savings plan.
-4.	If there is any free compute service plan commitment, then the instance is a savings plan.
-5.	Otherwise, the instance will run as a full-price on-demand instance.
+1. If the market matches a free zonal reserved instance commitment, then the instance is a reserved instance.
+2. If the market matches a free regional reserved instance commitment, then the instance is a reserved instance.
+3. If the market matches a free EC2 instance savings plan commitment, then the instance is a savings plan.
+4. If there is any free compute service plan commitment, then the instance is a savings plan.
+5. Otherwise, the instance will run as a full-price on-demand instance.
 
 Throughout the lifetime of an instance, it can change its “price” whenever there’s any change in the commitments utilization rate. For example, if an instance is running as a full price on-demand instance, and another instance that was utilizing a compute savings plan commitment was terminated, the first instance will start utilizing this commitment if its hourly price rate has enough free space under this commitment. It might take a couple of minutes for this change to show, but since the billing is being calculated retroactively, in practice it’s starting to utilize the commitment right away.
    
@@ -1162,8 +1171,10 @@ If your container is unregistered, you should make sure:
   1. Go to the cluster in the Spot console and click **Actions** > **Edit Configuration** > **Compute**.
   2. Add this script to **User Data**, using your cluster name.
 
-       ````#!/bin/bash  
-       echo ECS_CLUSTER="<font color="#FC01CC">MyCluster</font>" >> /etc/ecs/ecs.config````
+       ````
+       #!/bin/bash
+       echo ECS_CLUSTER="<font color="#FC01CC">MyCluster</font>" >> /etc/ecs/ecs.config
+       ````
   
 * **AMI**
 
@@ -1346,35 +1357,22 @@ For example, you can update your [DaemonSet pod YAML](https://kubernetes.io/docs
 
   <div style="padding-left:16px">
 
-Yes, you can use this parameter to set capacity using [eksctl](ocean/tools-and-integrations/eksctl):
-
-`autoScaler: resourceLimits: maxInstanceCount: 10`
+Yes, you can use `autoScaler: resourceLimits: maxInstanceCount: 10` to set capacity using [eksctl](ocean/tools-and-integrations/eksctl).
 
 For example:
 
 ````JSON
 apiVersion: eksctl.io/v1alpha5
-
 kind: ClusterConfig
-
 metadata:
-
   name: example
-
   region: us-west-2nodeGroups:
-
 name: ng1
-
   spotOcean:
-
     # ...
-
     autoScaler:
-
       resourceLimits:
-
         maxInstanceCount: 10
-
     # ...
 ````
 
@@ -1482,15 +1480,8 @@ The JSON for a virtual node group has all the parameters from the Ocean template
 
 You can update this line in the SDK to debug:
 
-Change:
-
-`client = session.client("ocean_aws")`
-
-To:
-
-`client = session.client("ocean_aws", log_level="debug")`
-
-Then [create or update](https://github.com/spotinst/spotinst-sdk-python/blob/v2/docs/clients/ocean/ocean_aws_client.md#create_ocean_cluster) the cluster again.
+1. Change `client = session.client("ocean_aws")` to `client = session.client("ocean_aws", log_level="debug")`.
+2. [Create or update](https://github.com/spotinst/spotinst-sdk-python/blob/v2/docs/clients/ocean/ocean_aws_client.md#create_ocean_cluster) the cluster again.
 
  </div>
 
@@ -1606,11 +1597,13 @@ Once the cluster is configured to use the default virtual node group as a templa
 
 If you have unregistered nodes and are getting log messages such as:
 
-````/var/lib/cloud/instance/scripts/part-001: line 5: unexpected EOF while looking for matching `"'
+````
+/var/lib/cloud/instance/scripts/part-001: line 5: unexpected EOF while looking for matching `"'
    
 /var/lib/cloud/instance/scripts/part-001: line 9: syntax error: unexpected end of file
 
-Feb 01 14:03:05 cloud-init[2517]: util.py[WARNING]: Running module scripts-user (<module ‘cloudinit.config.cc_scripts_user' from '/usr/lib/python2.7/site-packages/cloudinit/config/cc_scripts_user.pyc'>) failed````
+Feb 01 14:03:05 cloud-init[2517]: util.py[WARNING]: Running module scripts-user (<module ‘cloudinit.config.cc_scripts_user' from '/usr/lib/python2.7/site-packages/cloudinit/config/cc_scripts_user.pyc'>) failed
+````
 
 Make sure:
 1. The parameters are configured correctly (such as labels, AMI, IP, user data).
@@ -1646,6 +1639,7 @@ Keep in mind:
 You can set up committed use discounts (CUDs) for clusters in Ocean and groups in Elastigroup. It cannot be used for virtual node groups.
 
 Set up committed use discounts for:
+
 * [Ocean](ocean/features/committed-use-discount)
 * [Elastigroup](elastigroup/features/gcp/commit-use-discount)
 
@@ -1743,9 +1737,9 @@ This can happen if the specific VM family and size aren’t available for a cert
 
 If you update the Kubernetes version and pods launch with the old version, you may get these errors:
 
-```ERROR, Failed to update the launchSpec ols-f775236b with the latest changes in GKE cluster tagging-stg-eu1-1. Reason: Node pool tagging-stg-eu1-1-pool does not exist.
+* `ERROR, Failed to update the launchSpec ols-f775236b with the latest changes in GKE cluster tagging-stg-eu1-1. Reason: Node pool tagging-stg-eu1-1-pool does not exist.`
 
-ERROR, Failed to update the group with the latest changes in GKE cluster tagging-stg-eu1-1. Reason: Node pool tagging-stg-eu1-1-pool does not exist.```
+* `ERROR, Failed to update the group with the latest changes in GKE cluster tagging-stg-eu1-1. Reason: Node pool tagging-stg-eu1-1-pool does not exist.`
 
 This can happen if the original node pool is deleted, which prevents Ocean from fetching/updating the new GKE configuration. In the future, [preserve the original node pool](ocean/getting-started/gke?id=preserve-original-node-pool) instead of deleting it.
 
