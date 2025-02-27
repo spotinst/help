@@ -1947,7 +1947,8 @@ This can happen because:
 
 If the Ocean autoscaler scales up an instance for your pod at least 5 times, but the Kubernetes scheduler can’t schedule the pod, you may get this message:
 
-````WARN, Pod Metrics-Server-xxxxx Has Failed To Schedule For 76 Minutes. Autoscaling Disabled For Pod Metrics-Server-xxxxx
+````
+WARN, Pod Metrics-Server-xxxxx Has Failed To Schedule For 76 Minutes. Autoscaling Disabled For Pod Metrics-Server-xxxxx
 WARN, Pod Redis-0 Has Failed To Schedule For 76 Minutes. Autoscaling Disabled For Pod Redis-0
 WARN, Pod Kube-Dns-Autoscaler-xxxxx Has Failed To Schedule For 76 Minutes. Autoscaling Disabled For Pod Kube-Dns-Autoscaler-xxxxx
 WARN, Pod Worker-Deployment-xxxxx Has Failed To Schedule For 76 Minutes. Autoscaling Disabled For Pod Worker-Deployment-xxxxx
@@ -1973,9 +1974,11 @@ This can happen if:
 
 You may see this message in the logs if you use Prometheus to scrape Ocean metrics:
 
-````2023-12-05T01:04:50.458Z ERROR 1 --- java.lang.OutOfMemoryError: Java heap space with root cause
+````
+2023-12-05T01:04:50.458Z ERROR 1 --- java.lang.OutOfMemoryError: Java heap space with root cause
 
-java.lang.OutOfMemoryError: Java heap space````
+java.lang.OutOfMemoryError: Java heap space
+````
 
 This means the application ran out of Java heap space, and the pod will crash temporarily. You may also see that the target on the [Prometheus](ocean/tools-and-integrations/prometheus/scrape) dashboard is down.
 
@@ -1997,7 +2000,8 @@ Set the amounts according to the needs of your pods.
 
 You get this error in the log:
 
-````Kubernetes Autoscaler, Deadlock for Pod: '{pod-name}' 
+````
+Kubernetes Autoscaler, Deadlock for Pod: '{pod-name}' 
 Can't scale up an Instance since PersistentVolumeClaim: 
 '{PVC-name}' 
 VolumeId: '{vol-name}' is already attached to an existing Instance: 
@@ -2015,8 +2019,8 @@ By freeing up space, the pod can be placed on its attached node and can use the 
  
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanhostportunderutilized">AKS, EKS, GKE: Can pods requiring HostPort cause underutilized nodes (Kubernetes)?</summary>
-      
-   If multiple pods request the same port (hostPort), each pod will get the hostPort, but each pod will be scheduled separately on its own node.
+
+If multiple pods request the same port (hostPort), each pod will get the hostPort, but each pod will be scheduled separately on its own node.
 
 Avoid using the hostPort request, unless it’s necessary ([Kubernetes - configuration best practices](https://kubernetes.io/docs/concepts/configuration/overview/)).
 
@@ -2061,7 +2065,8 @@ You cannot add headroom at a node level. Headroom is intended for:
 
 You can configure [automatic headroom](ocean/features/headroom) using kOps at the cluster level, not at a virtual node group level. Add these [metadata labels](/ocean/tools-and-integrations/kops/metadata-labels):
 
-````spotinst.io/autoscaler-auto-config: "true"
+````
+spotinst.io/autoscaler-auto-config: "true"
 spotinst.io/autoscaler-auto-headroom-percentage : {Value}
 spotinst.io/ocean-default-launchspec: "true"````
 
@@ -2087,7 +2092,8 @@ spotinst.io/autoscaler-headroom-gpu-per-unit: "0"
 spec:
 role: Node
 maxSize: 1
-minSize: 1````
+minSize: 1
+````
 
  </div>
 
