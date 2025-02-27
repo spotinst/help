@@ -1173,7 +1173,7 @@ If your container is unregistered, you should make sure:
 
        ````
        #!/bin/bash
-       echo ECS_CLUSTER="<font color="#FC01CC">MyCluster</font>" >> /etc/ecs/ecs.config
+       echo ECS_CLUSTER="xxxxx" >> /etc/ecs/ecs.config
        ````
   
 * **AMI**
@@ -2068,7 +2068,8 @@ You can configure [automatic headroom](ocean/features/headroom) using kOps at th
 ````
 spotinst.io/autoscaler-auto-config: "true"
 spotinst.io/autoscaler-auto-headroom-percentage : {Value}
-spotinst.io/ocean-default-launchspec: "true"````
+spotinst.io/ocean-default-launchspec: "true"
+````
 
 Here's an example of a config file:
 
@@ -2220,8 +2221,9 @@ For Ocean clusters (AWS), you can use an AMI with the required architecture. Upd
 
 However, it’s not possible to do with Ocean AKS clusters because you cannot choose a particular image to run VMs when you create an AKS cluster.
 
-1.	Create a new virtual node group in the Ocean AKS cluster and configure it manually or import the configuration of a node pool.
-2.	Add vmSizes to the virtual node group JSON file.
+1. Create a new virtual node group in the Ocean AKS cluster and configure it manually or import the configuration of a node pool.
+2. Add vmSizes to the virtual node group JSON file.
+
     ````JSON
 	   "vmSizes": {
         "filters": {
@@ -2230,7 +2232,8 @@ However, it’s not possible to do with Ocean AKS clusters because you cannot ch
             ],
             "series": []
                 }
-    }````
+    }
+    ````
    
    * <b>Architectures</b> is a list of strings, and the values can be a combination of <i>x86_64</i> (includes both <i>intel64</i> and <i>amd64</i>), <i>intel64</i>, <i>amd64</i>, and <i>arm64</i>.
 
@@ -2288,14 +2291,11 @@ Yes, you can define your configuration template to run your Spark application on
 
 Define a [Jupyter kernel](ocean-spark/tools-integrations/connect-jupyter-notebooks?id=define-jupyter-kernels-with-configuration-templates) with a low idle timeout so it’s scaled down quickly if it’s not in use:
 
-````"spark.dynamicAllocation.enabled": "true",
-
+````
+"spark.dynamicAllocation.enabled": "true",
 "spark.dynamicAllocation.maxExecutors": "1",
-
 "spark.dynamicAllocation.minExecutors": "0",
-
 "spark.dynamicAllocation.initialExecutors": "0",
-
 "spark.dynamicAllocation.executorIdleTimeout": "10s"
 ````
 
@@ -2322,9 +2322,11 @@ You can either recreate the Ocean Spark cluster or update the labels and taints.
         "value": "ofas-system"
       }
     ],
-    "taints": [],````
+    "taints": [],
+````
 
 **ocean-spark-on-demand**
+
 ````JSON
     "labels": [
       {
@@ -3006,11 +3008,11 @@ Sample code with items.state:
       "code": 200,
       "message": "OK"
     },
-    <font color="#FC01CC">"items": [</font>
+    "items": [
       {
         "id": "cdbg-3ccf1234",
         "groupId": "sig-87231234",
-        <font color="#FC01CC">"state": "STARTING",</font>
+        "state": "STARTING",
         "config": {
           "timeout": 20,
           "tags": [
