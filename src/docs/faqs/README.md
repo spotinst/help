@@ -3318,20 +3318,20 @@ You can use your own AMI and configure IMDSv2 on it. All instances launched afte
 
    You can reimport the stateful instance to Elastigroup:
 
-1. In the Spot console, go to **Elastigroup** > **Stateful Nodes**, select the stateful node, and click **Actions** > **Edit Configuration**.
-2. Go to **Review** > **JSON** and select **Edit Mode**.
-3. Change <b>lifeCycle</b> to <i>on_demand</i> and click **Update**. For example:
+   1. In the Spot console, go to **Elastigroup** > **Stateful Nodes**, select the stateful node, and click **Actions** > **Edit Configuration**.
+   2. Go to **Review** > **JSON** and select **Edit Mode**.
+   3. Change <b>lifeCycle</b> to <i>on_demand</i> and click **Update**. For example:
 
-    <pre><code>"strategy": {
-       "lifeCycle": "on_demand”,
-    </code></pre>
+       <pre><code>"strategy": {
+          "lifeCycle": "on_demand”,
+       </code></pre>
 
-4. [Recycle](managed-instance/features/replacement-process) the stateful node to launch an on-demand instance.
-5. Wait until the new on-demand instance is running and healthy in the Spot console.
-6. When you [delete](managed-instance/features/managed-instance-actions?id=delete) the stateful node, select **Terminate VM** <i>no</i>.
-7. Make sure the stateful node <i>is not</i> running in the Spot console.
-8. In the AWS console, make sure the stateful node instance <i>is</i> running.
-9. In the Spot console, [import a stateful node](managed-instance/getting-started/join-an-existing-managed-instance).
+   4. [Recycle](managed-instance/features/replacement-process) the stateful node to launch an on-demand instance.
+   5. Wait until the new on-demand instance is running and healthy in the Spot console.
+   6. When you [delete](managed-instance/features/managed-instance-actions?id=delete) the stateful node, select **Terminate VM** <i>no</i>.
+   7. Make sure the stateful node <i>is not</i> running in the Spot console.
+   8. In the AWS console, make sure the stateful node instance <i>is</i> running.
+   9. In the Spot console, [import a stateful node](managed-instance/getting-started/join-an-existing-managed-instance).
 
  </div>
 
