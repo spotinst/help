@@ -1653,6 +1653,47 @@ Set up committed use discounts for:
  </details>
 
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocunregistered">GKE: Why are my nodes unregistered?</summary>
+
+  <div style="padding-left:16px">
+
+Some of the common reasons your GKE nodes can be unregistered are if:
+* You have shielded nodes. [Shutdown hours](ocean/features/running-hours?id=scaling-behavior-ocean-for-kubernetes) are not supported for GKE clusters with shielded nodes. If you use shutdown hours with shielded nodes, make sure that the Ocean controller is available at the end of the off time by checking that it runs on a node that Ocean does not manage. This is because the controller is part of the node registration process and requires an available node to run on.
+* The cluster is in a private network. You need to configure NAT gateway on the cluster in GKE so it’ll have access to the internet.
+
+  Make sure the cluster has <i>external-nat</i> and <i>ONE_TO_ONE_NAT</i> set:
+
+   * In the Spot console, go to **Ocean** > **Cloud Clusters** > select the cluster > **Action** > **Edit Cluster** > **Review** > **JSON**
+   * In the [API](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKEClusterGet)
+
+   For example:
+````json
+    "compute": {
+       "networkInterfaces": [
+         {
+           "network": "networkname",
+           "accessConfigs": [
+             {
+               "name": "external-nat",
+               "type": "ONE_TO_ONE_NAT"
+             }
+           ],
+           "aliasIpRanges": [
+             {
+               "ipCidrRange": "/24",
+               "subnetworkRangeName": "subnetworkRangeName"
+             }
+           ],
+           "projectId": "projectId"
+         }
+       ],
+````
+
+   </div>
+
+ </details>
+
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanbootdisk">GKE: Why can’t I spin new instances (boot disk architecture)?</summary>
 
   <div style="padding-left:16px">
@@ -1893,6 +1934,32 @@ This can happen because:
 
  </details>
 
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocautoscalingdisabled">AKS, EKS, GKE: Why is my pod unschedulable (autoscaling disabled)?</summary>
+
+  <div style="padding-left:16px">
+
+If the Ocean autoscaler scales up an instance for your pod at least 5 times, but the Kubernetes scheduler can’t schedule the pod, you may get this message:
+
+<pre><code>WARN, Pod Metrics-Server-xxxxx Has Failed To Schedule For 76 Minutes. Autoscaling Disabled For Pod Metrics-Server-xxxxx
+WARN, Pod Redis-0 Has Failed To Schedule For 76 Minutes. Autoscaling Disabled For Pod Redis-0
+WARN, Pod Kube-Dns-Autoscaler-xxxxx Has Failed To Schedule For 76 Minutes. Autoscaling Disabled For Pod Kube-Dns-Autoscaler-xxxxx
+WARN, Pod Worker-Deployment-xxxxx Has Failed To Schedule For 76 Minutes. Autoscaling Disabled For Pod Worker-Deployment-xxxxx
+WARN, Pod Kube-Dns-xxxxx Has Failed To Schedule For 76 Minutes. Autoscaling Disabled For Pod Kube-Dns-xxxxx
+   </code></pre>
+
+Ocean stops trying to scale up this pod to prevent infinite scaling.
+
+This can happen if:
+
+* Ocean launches instances for the pending pod but they don’t fully register to the Kubernetes cluster because the pod has no node to schedule.
+* You’re using AWS ebs-csi-driver PV/PVC. It’s possible that the [ebs-csi-node](https://docs.aws.amazon.com/eks/latest/userguide/ebs-csi.html) DaemonSet pods are not running on the nodes. This can happen if the DaemonSet object is having issues, the DaemonSet pods are not running, or if taints on a custom virtual node group are stopping the DaemonSet pods from being scheduled on the node. If you’re using DaemonSet, then the DaemonSet pods must run on every node if a pending pod has a PVC.
+* You’re using GPU nodes. The [Nvidia GPU DaemonSet](https://github.com/NVIDIA/k8s-device-plugin) is required to run on every GPU node for the nodes to expose their GPU resources. If a pending node is requesting GPU, then Ocean launches a GPU instance. You need to make sure the nodes are exposing the GPU resources. Typically, you do this with the Nvidia GPU DaemonSet. If the DaemonSet has issues, then the pod may not be scheduled on the node because the node won’t be exposing the GPU.
+
+ </div>
+
+ </details>
+
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocjavaheap">AKS, EKS, GKE: Why am I getting a Java heap space message (OutOfMemoryError)?</summary>
 
@@ -2102,6 +2169,24 @@ Initially, the costs are compared with the on demand value of the instance types
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocparsing">AKS: Why won't my cluster scale up (parsing version)?</summary>
+
+  <div style="padding-left:16px">
+
+If your Ocean cluster won’t scale up, you may see a message like this in the Spot console logs:
+
+`Failed to perform scale up for virtual node group xxxxx (vng-xxxxx). Got status code different from SC_OK : 400 Body { "code": "BadRequest", "details": null, "message": "Client Error: error parsing version(1.26). If you would like to use alias minor version, please use api version starting from 2022-03-02-preview", "subcode": "" }`
+
+This happens when the Ocean cluster tries to create a node pool using a specific Kubernetes version. In this message, it’s version 1.26.
+
+* If you want to use a specific version, you also need to give the exact patch version (the alias minor version).
+* You also need to make sure your [AKS API version](https://learn.microsoft.com/en-us/azure/aks/supported-kubernetes-versions?tabs=azure-cli#alias-minor-version) is at least the version mentioned in the message.
+
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocworkload">AKS: Why is the workload marked as unable to migrate?</summary>
 
   <div style="padding-left:16px">
@@ -2111,7 +2196,6 @@ If you’re seeing an unable to migrate status in workload migration, check if t
  </div>
 
  </details>
-
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanvmarch">AKS: Can I create VMs with specific architecture in Ocean AKS?</summary>
