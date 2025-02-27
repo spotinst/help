@@ -2102,6 +2102,24 @@ Initially, the costs are compared with the on demand value of the instance types
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocparsing">AKS: Why won't my cluster scale up (parsing version)?</summary>
+
+  <div style="padding-left:16px">
+
+If your Ocean cluster won’t scale up, you may see a message like this in the Spot console logs:
+
+`Failed to perform scale up for virtual node group xxxxx (vng-xxxxx). Got status code different from SC_OK : 400 Body { "code": "BadRequest", "details": null, "message": "Client Error: error parsing version(1.26). If you would like to use alias minor version, please use api version starting from 2022-03-02-preview", "subcode": "" }`
+
+This happens when the Ocean cluster tries to create a node pool using a specific Kubernetes version. In this message, it’s version 1.26.
+
+* If you want to use a specific version, you also need to give the exact patch version (the alias minor version).
+* You also need to make sure your [AKS API version](https://learn.microsoft.com/en-us/azure/aks/supported-kubernetes-versions?tabs=azure-cli#alias-minor-version) is at least the version mentioned in the message.
+
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocworkload">AKS: Why is the workload marked as unable to migrate?</summary>
 
   <div style="padding-left:16px">
@@ -2111,7 +2129,6 @@ If you’re seeing an unable to migrate status in workload migration, check if t
  </div>
 
  </details>
-
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanvmarch">AKS: Can I create VMs with specific architecture in Ocean AKS?</summary>
