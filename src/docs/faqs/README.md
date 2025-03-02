@@ -718,6 +718,65 @@ The default draining for:
  </div>
 
  </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocgp3">AWS: Can I set up gp3 volumes in Ocean?</summary>
+
+  <div style="padding-left:16px">
+
+ You can change your volume type to gp3 by:
+
+* Adding a block device mapping for a single virtual node group in the Spot console:
+   1. In the Spot console, go to **Ocean** > **Cloud Cluster**s and select the cluster.
+   2. On the Virtual Nodes Groups tab, select the virtual node group.
+   3. Go to **Advanced** > **Block Device Mapping**.
+   4. Add the block device mapping and click **Save**.
+   5. [Roll the virtual node group](ocean/features/roll-gen?id=roll-per-node-or-vng) if you want the changes to apply immediately on new nodes.
+
+* Changing the AMI to an AMI with gp3 volume type:
+
+   1. In the Spot console, go to **Ocean** > **Cloud Cluster**s and select the cluster.
+   2. On the Virtual Nodes Groups tab, select the virtual node group.
+   3. Go to **Advanced** > **Image**.
+   4. Select an AMI with gp3.
+
+* Making the [default virtual node group](ocean/features/launch-specifications?id=default-virtual-node-group) gp3 by adding a block device mapping at the cluster level.
+
+   1. Add the block device mapping:
+
+      * In the JSON: select the cluster > **Actions** > **Edit Cluster** > **Review** > **JSON** > **Edit Mode**.
+      * Using the [Ocean AWS cluster update API](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterUpdate).
+
+      Keep in mind, you cannot use both [block device mapping](ocean/tutorials/manage-virtual-node-groups?id=advanced-parameters) and [root volume size](ocean/tutorials/manage-virtual-node-groups?id=configuration-parameters) at the same time.
+
+      Sample block device mapping:
+
+     ````json
+	{
+	  "group": {
+    	   "compute": {
+      	    "launchSpecification": {
+             "blockDeviceMappings": [
+              {
+               "deviceName": "/dev/sda1",
+               "ebs": {
+                 "deleteOnTermination": true,
+                 "volumeSize": 24,
+                 "volumeType": "gp2"
+               }
+              }
+             ]
+            }
+           }
+          }
+         }
+    ````
+
+   2. Make sure to [roll the cluster](ocean/features/roll-gen) to replace the current instance gracefully with the changes.
+
+ </div>
+
+ </details>
  
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanodresp">AWS: Why is my on-demand instance utilized as a reserved instance/savings plan?</summary>
@@ -952,6 +1011,30 @@ Invalid client secret provided. Ensure the secret being sent in the request is t
 In Azure Kubernetes Service (AKS), there are two kinds of secrets: <i>client secret ID</i> and <i>client secret value</i>.
 
 Generate a new client secret <i>value</i> and [update it in the API](https://docs.spot.io/api/#tag/Accounts/operation/OrganizationsAndAccountsSetCloudCredentialsForAzure).
+
+ </div>
+
+ </details>
+
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="occooldown">ECS, EKS, GKE: How does cooldown work in Ocean?</summary>
+
+  <div style="padding-left:16px">
+
+For scale-up events, Ocean scales up as quickly as possible.
+
+For scale-down events, cooldown is the number of seconds that Ocean waits after the end of a scaling action before starting another scaling action. The default is 300 seconds (5 minutes).
+
+Cooldown is set at the cluster level and is applied across all virtual node groups in the cluster. So if a node of one virtual node group is scaled down, then Ocean waits for the cooldown time to pass before scaling down another node in a virtual node group.
+
+You can set the cooldown period:
+
+* In the Spot console, go to **Ocean** > **Cloud Clusters** > select the cluster > **Actions** > **Edit Cluster** > **Review** > **JSON** > **Edit Mode**.
+* Using the APIs:
+
+   * [Ocean AWS cluster update](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterUpdate)
+   * [Ocean ECS cluster update](https://docs.spot.io/api/#tag/Ocean-ECS/operation/OceanECSClusterUpdate)
+   * [Ocean GKE cluster update](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKEClusterUpdate)
 
  </div>
 
@@ -1319,7 +1402,6 @@ You can also [push the ECS agent logs to CloudWatch](https://docs.aws.amazon.com
  </div>
 
  </details>
-
 
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceandisconnectcluster">EKS: How can I disconnect a cluster from Ocean?</summary>
@@ -1918,6 +2000,25 @@ The Ocean Controller saves up to 8 days of logs. The logs for each day are about
  </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocrightsizingmetrics">AKS, EKS, GKE: Why is rightsizing information not showing after installing the metrics server?</summary>
+
+  <div style="padding-left:16px">
+
+[Rightsizing](ocean/features/ocean-cluster-right-sizing-tab) data may not show after installing the metrics server:
+
+1. Make sure you’re using the [latest version of the controller](ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-update). It takes around 4 days for the metrics to show after upgrading.
+2. If you’re using an EKS cluster, make sure you have 2 [security groups](https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html):
+
+    * Worker node group with an inbound rule that allows communication with the control plane’s security group through port 443.
+    * Cluster’s control plane.
+
+3. Check the [common issues with the metrics server](https://repost.aws/knowledge-center/eks-metrics-server).
+
+ </div>
+
+ </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocnorestrict">AKS, EKS, GKE: Why is the out of strategy replacement getting canceled for pods <i>without</i> the restrict-scale-down label?</summary>
 
   <div style="padding-left:16px">
@@ -1935,7 +2036,6 @@ Make sure that labels and annotations don’t prevent scaling down [on the virtu
  </div>
 
  </details>
-
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceantokens">AKS, EKS, GKE: What are the minimum permissions needed for a programmatic token for creating an Ocean cluster controller?</summary>
