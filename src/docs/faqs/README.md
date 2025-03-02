@@ -724,9 +724,10 @@ The default draining for:
 
   <div style="padding-left:16px">
 
- You can change your volume type to gp3 by:
+You can change your volume type to gp3 by:
 
 * Adding a block device mapping for a single virtual node group in the Spot console:
+
    1. In the Spot console, go to **Ocean** > **Cloud Cluster**s and select the cluster.
    2. On the Virtual Nodes Groups tab, select the virtual node group.
    3. Go to **Advanced** > **Block Device Mapping**.
