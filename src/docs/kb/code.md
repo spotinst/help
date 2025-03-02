@@ -170,7 +170,7 @@ You can choose to remove some of these permissions from the [Spot IAM policy](/a
 
 You might get this alert in CloudWatch:
 
-````JSON
+````json
 "eventType": "AwsApiCall",
 "error": {
 "kind": "Client.InvalidAMIID.NotFound",
@@ -218,7 +218,7 @@ You may get an error when you try to sign in to the Spot console if:
 * The [Identifier (Entity ID) URL](https://learn.microsoft.com/en-us/azure/active-directory/saas-apps/spotinst-tutorial#configure-azure-ad-sso) is not set up correctly. If the URL isn't correct, you might get this message when you sign in to the Spot console:
 
   ````
-  AADSTS650056: Misconfigured application. This could be due to one of the following: the client has not listed any permissions for 'AAD Graph' in the requested permissions in the client's application registration. Or, the admin has not consented in the tenant. Or, check the application identifier in the request to ensure it matches the configured client application identifier. Or, check the certificate in the request to ensure it's valid. Please contact your admin to fix the configuration or consent on behalf of the tenant. Client app ID: Idl xxxxx.
+    AADSTS650056: Misconfigured application. This could be due to one of the following: the client has not listed any permissions for 'AAD Graph' in the requested permissions in the client's application registration. Or, the admin has not consented in the tenant. Or, check the application identifier in the request to ensure it matches the configured client application identifier. Or, check the certificate in the request to ensure it's valid. Please contact your admin to fix the configuration or consent on behalf of the tenant. Client app ID: Idl xxxxx.
   ````
 
   The [Identifier (Entity ID) URL](https://learn.microsoft.com/en-us/azure/active-directory/saas-apps/spotinst-tutorial#configure-azure-ad-sso) must be `https://console.spotinst.com/auth/saml`. It cannot be a different URL or blank.
@@ -443,18 +443,20 @@ Set up OpsGenie email integration and then configure the notifications in Spot:
    5. Select **External Email** and enter the OpsGenie email address. This allows Spot to send notifications to external email addresses. Any email sent to the OpsGenie email address will trigger an OpsGenie alert.
 
 * Using the Spot API, [add a notification](https://docs.spot.io/api/#operation/notificationsServiceSubscriptionsSubscribe). For example:
-   ````JSON
+   ````json
    "resourceId": "xxxxxxx",
    "protocol": "email ",
    "endpoint": "YOUR@EMAIL.COM",
-   "eventType": "xxxxx",````
+   "eventType": "xxxxx",
+   ````
 
 * Using the Spot API, [update a notification](https://docs.spot.io/api/#operation/notificationsServiceSubscriptionsUpdate). For example:
-   ````JSON
+   ````json
    "resourceId": "xxxxxxx",
    "protocol": "email ",
    "endpoint": "YOUR@EMAIL.COM",
-   "eventType": "xxxxx",````
+   "eventType": "xxxxx",
+   ````
 
 **Webhook**
 1. Set up [OpsGenie webhook integration](https://support.atlassian.com/opsgenie/docs/integrate-opsgenie-with-webhook/).
@@ -478,7 +480,7 @@ Set up OpsGenie email integration and then configure the notifications in Spot:
 You can [download JQ](https://jqlang.github.io/jq/download/) and use the [online curl command line builder](https://curlbuilder.com/). Curl lets you interact with web services, APIs, and services using command line.
 
 For curl, use this template:
-````Curl
+````curl
 curl -X GET '{URL}' \
 -H 'Authorization: Bearer {TOKEN}' \
 -H 'Content-Type: application/json'
@@ -491,7 +493,7 @@ For example:
       https://docs.spot.io/api/#tag/Elastigroup-AWS/operation/elastigroupAwsListElastigroup
   
     * Enter this in JQ:  
-      ````Curl
+      ````curl
 	  curl -X GET 'https://api.spotinst.io/aws/ec2/group/{groupID}' \
       -H 'Authorization: Bearer {token}' \
       -H 'Content-Type: application/json' | jq '.response.items[0].capacity.maximum'
@@ -618,7 +620,7 @@ This can happen if your virtual node group was deleted in Terraform. When you de
    3. Click **JSON**.
    4. In the blockDeviceMappings, update the snapshotID or remove it:
 
-      ````JSON
+      ````json
 	  "blockDeviceMappings": [
       {
         "deviceName": "/dev/xvda",
@@ -705,7 +707,7 @@ The default draining for:
    * [Ocean](/ocean/features/log-integration-with-s3)
    * [Elastigroup](https://docs.spot.io/api/#tag/Elastigroup-AWS/operation/elastigroupAwsCreate) add this code to the JSON:
 
-     ````JSON
+     ````json
 	 "logging": {
        "export": {
          "s3": {
@@ -769,7 +771,7 @@ Instance metadata service version 2 (IMDSv2) addresses security concerns and vul
 You can define metadata for autoscaling groups in AWS that gets imported when you import the groups from AWS to Spot. You can manually configure them in Spot to use IMDSv2.
 
 1. Follow the [Ocean AWS Cluster Create](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterCreate) or [Elastigroup AWS Create](https://docs.spot.io/api/#tag/Elastigroup-AWS/operation/elastigroupAwsCreate) API instructions and add this configuration for the cluster:
-   ````JSON
+   ````json
    "compute": {
     "launchSpecification": {
         "instanceMetadataOptions": {
@@ -1230,7 +1232,7 @@ If your container is unregistered, you should make sure:
   <img alt="unregistered-container-instance4" src="https://github.com/spotinst/help/assets/167069628/98a19d66-d218-41da-bb88-5a99220dcac3">
 
 
-* [AWS troubleshooting](https://aws.amazon.com/premiumsupport/knowledge-center/ecs-instance-unable-join-cluster/)   
+* [AWS troubleshooting](https://aws.amazon.com/premiumsupport/knowledge-center/ecs-instance-unable-join-cluster/)
 
 
  </div>
@@ -1268,14 +1270,14 @@ If a node only has one task running, then it causes the node to be underutilized
 
 Example service:
 
-````JSON
+````json
 "placementConstraints": [],
    "placementStrategy": [],
 ````
 
 The task definition doesn't have constraints to spread tasks across nodes.
 
-````JSON
+````json
 "placementConstraints": [
   {
   "type": "memberOf",
@@ -1289,7 +1291,7 @@ Check the **portMappings: hostPort** value in the task/service defintion.
 Port mappings allow containers to access ports on the host container instances to send or receive traffic. This configuration can be found in the task definition. The hostPort value in port mapping is normally left blank or set to 0.
 
 Example:
-````JSON
+````json
       "portMappings": [
             {
                "protocol": "tcp",
@@ -1368,7 +1370,7 @@ Update your tolerances in the DaemonSet YAML so you can schedule DaemonSet pods 
 
 For example, you can update your [DaemonSet pod YAML](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/) to include:
 
-````JSON
+````json
    spec:
       tolerations:
       - key: dedicated
@@ -1391,7 +1393,7 @@ Yes, you can use `autoScaler: resourceLimits: maxInstanceCount: 10` to set capac
 
 For example:
 
-````JSON
+````json
 apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 metadata:
@@ -2010,7 +2012,6 @@ You may see this message in the logs if you use Prometheus to scrape Ocean metri
 
 ````
 ERROR 1 --- java.lang.OutOfMemoryError: Java heap space with root cause
-
 java.lang.OutOfMemoryError: Java heap space
 ````
 
@@ -2107,7 +2108,7 @@ spotinst.io/ocean-default-launchspec: "true"
 
 Here's an example of a config file:
 
-````JSON
+````json
 apiVersion: kops.k8s.io/v1alpha2
 kind: InstanceGroup
 metadata:
@@ -2262,7 +2263,7 @@ However, it’s not possible to do with Ocean AKS clusters because you cannot ch
 1. Create a new virtual node group in the Ocean AKS cluster and configure it manually or import the configuration of a node pool.
 2. Add vmSizes to the virtual node group JSON file.
 
-    ````JSON
+    ````json
 	   "vmSizes": {
         "filters": {
             "architectures": [
@@ -2353,7 +2354,7 @@ You can either recreate the Ocean Spark cluster or update the labels and taints.
 
 **ocean-spark-system**
 
-````JSON
+````json
     "labels": [
       {
         "key": "nodegroup-name",
@@ -2365,7 +2366,7 @@ You can either recreate the Ocean Spark cluster or update the labels and taints.
 
 **ocean-spark-on-demand**
 
-````JSON
+````json
     "labels": [
       {
         "key": "bigdata.spot.io/vng",
@@ -2387,7 +2388,7 @@ You can either recreate the Ocean Spark cluster or update the labels and taints.
 
 **ocean-spark-spot**
 
-````JSON
+````json
     "labels": [
       {
         "key": "bigdata.spot.io/vng",
@@ -2481,7 +2482,7 @@ This happens if you have duplicate tags configured:
    You can stream Elastigroup logs to an AWS S3 bucket. Then, you can configure Elasticsearch and Kibana to collect logs from the S3 bucket:
    * [Ocean](/ocean/features/log-integration-with-s3)
    * [Elastigroup](https://docs.spot.io/api/#tag/Elastigroup-AWS/operation/elastigroupAwsCreate) add this code to the JSON:
-     ````JSON
+     ````json
 	 "logging": {
        "export": {
          "s3": {
@@ -2548,7 +2549,7 @@ Instance metadata service version 2 (IMDSv2) addresses security concerns and vul
 You can define metadata for autoscaling groups in AWS that gets imported when you import the groups from AWS to Spot. You can manually configure them in Spot to use IMDSv2.
 
 1. Follow the [Ocean AWS Cluster Create](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterCreate) or [Elastigroup AWS Create](https://docs.spot.io/api/#tag/Elastigroup-AWS/operation/elastigroupAwsCreate) API instructions and add this configuration for the cluster:
-   ````JSON
+   ````json
    "compute": {
     "launchSpecification": {
         "instanceMetadataOptions": {
@@ -3059,7 +3060,7 @@ WAIT_BEFORE_TERMINATION<br>
 
 Sample code with items.state:
 
-````JSON
+````json
   "response": {
     "status": {
       "code": 200,
@@ -3265,7 +3266,7 @@ This can happen if the specific VM family and size aren’t available for a cert
    You can stream Elastigroup logs to an AWS S3 bucket. Then, you can configure Elasticsearch and Kibana to collect logs from the S3 bucket:
    * [Ocean](/ocean/features/log-integration-with-s3)
    * [Elastigroup](https://docs.spot.io/api/#tag/Elastigroup-AWS/operation/elastigroupAwsCreate) add this code to the JSON:
-     ````JSON
+     ````json
 	 "logging": {
        "export": {
          "s3": {
@@ -3428,7 +3429,7 @@ Instance metadata service version 2 (IMDSv2) addresses security concerns and vul
 You can define metadata for autoscaling groups in AWS that gets imported when you import the groups from AWS to Spot. You can manually configure them in Spot to use IMDSv2.
 
 1. Follow the [Ocean AWS Cluster Create](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterCreate) or [Elastigroup AWS Create](https://docs.spot.io/api/#tag/Elastigroup-AWS/operation/elastigroupAwsCreate) API instructions and add this configuration for the cluster:
-   ````JSON
+   ````json
    "compute": {
     "launchSpecification": {
         "instanceMetadataOptions": {
@@ -3499,7 +3500,7 @@ You can use your own AMI and configure IMDSv2 on it. All instances launched afte
    2. Go to **Review** > **JSON** and select **Edit Mode**.
    3. Change <b>lifeCycle</b> to <i>on_demand</i> and click **Update**. For example:
 
-       ````JSON
+       ````json
 	   "strategy": {
           "lifeCycle": "on_demand”,
        ````
@@ -3580,8 +3581,8 @@ Normally, AWS automatically sets the hostname when the instance is launched. It�
 
 You can set a custom hostname that will continue to be used during the recycle process:
 
-1.	Edit the hosts file and change the name permanently: `sudo gedit /etc/hostname /etc/hosts`
-2.	Update the CUSTOM_HOSTNAME:
+1. Edit the hosts file and change the name permanently: `sudo gedit /etc/hostname /etc/hosts`
+2. Update the CUSTOM_HOSTNAME:
 
     ````
     #!/bin/bash
@@ -3594,8 +3595,8 @@ You can set a custom hostname that will continue to be used during the recycle p
 
 If you want to use the instance IPv4 address that the node was originally launched with:
 
-1.	In the metadata file, get the instance IP: `curl -s http://169.254.169.254/latest/meta-data/local-ipv4`
-2.	Make sure <b>Persist Private IP</b> is configured. The custom hostname should also persist during replacement because the hostname is connected to the persistent IP.
+1. In the metadata file, get the instance IP: `curl -s http://169.254.169.254/latest/meta-data/local-ipv4`
+2. Make sure <b>Persist Private IP</b> is configured. The custom hostname should also persist during replacement because the hostname is connected to the persistent IP.
 
     <ol style="list-style-type: lower-alpha;">
     <li>Go to the stateful node in the Spot console and click <b>Actions</b> > <b>Edit Configuration</b>.</li>
@@ -3608,13 +3609,17 @@ If you want to use the instance IPv4 address that the node was originally launch
     <ol style="list-style-type: lower-alpha;">
     <li>Go to the stateful node in the Spot console and click <b>Actions</b> > <b>Edit Configuration</b> > <b>Initialization and Termination</b>.</li>
     <li><p>Add this script to <b>User Data</b>:</p>
-      ````#!/bin/bash
+
+      ````
+	    #!/bin/bash
        PRIVATE_IP=$(curl -s http://169.254.169.254/latest/meta-data/local-ipv4)
        AWS_HOSTNAME="ip-$(echo $PRIVATE_IP | tr '.' '-')"
        echo "preserve_hostname: true" > /etc/cloud/cloud.cfg.d/99_persist_hostname.cfg
        echo "$AWS_HOSTNAME" > /etc/hostname
        sed -i "s/^127\.0\.0\.1.*/127.0.0.1 localhost ${AWS_HOSTNAME}/" /etc/hosts
-       hostnamectl set-hostname "$AWS_HOSTNAME"````</li>
+       hostnamectl set-hostname "$AWS_HOSTNAME"
+    ````
+    </li>
    </ol>
 
 You can also persist the hostname for [RHEL 7, 8, and 9, and CentOS 7, 8, and 9](https://repost.aws/knowledge-center/linux-static-hostname-rhel7-centos7).
@@ -3677,7 +3682,7 @@ Update the block device mapping configuration and increase the volume size to ma
 1. In the stateful node, go to **Actions** > **Edit Configuration** > **Review** > **JSON** > **Edit Mode**.
 2. Update the group configuration and click **Update**.
 
-   ````JSON
+   ````json
            "blockDeviceMappings": [
                 {
                     "deviceName": "/dev/sda1",
@@ -3772,7 +3777,7 @@ Yes, you can increase the disk size for stateful nodes.
 
    3. Change `revertToSpot` to <i>never</i>:
 
-      ````JSON
+      ````json
       {
        "statefulNode": {
          "name": "Spot Stateful Node",
@@ -3789,7 +3794,7 @@ Yes, you can increase the disk size for stateful nodes.
 
    4. Add the `"preferredLifecycle": "od",` parameter:
    
-      ````JSON
+      ````json
       {
        "statefulNode": {
          "name": "Spot Stateful Node",
@@ -3831,7 +3836,7 @@ Yes, you can increase the disk size for stateful nodes.
       <li>Go to <b>Review</b>, switch to <b>JSON review</b>, and select <b>Edit Mode</b>.</li>
       <li><p>Change `revertToSpot` to <i>never</i>:</p>
         
-         ````JSON
+         <pre><code>
       {
        "statefulNode": {
          "name": "Spot Stateful Node",
@@ -3844,11 +3849,11 @@ Yes, you can increase the disk size for stateful nodes.
            "preferredLifecycle": "od",
            "revertToSpot": "never",
            "optimizationWindows": null,
-        ````
+	  </code></pre>
       </li>
       <li><p>Add the `"preferredLifecycle": "od",` parameter:</p>
         
-         ````JSON
+         <pre><code>
       {
        "statefulNode": {
          "name": "Spot Stateful Node",
@@ -3861,7 +3866,8 @@ Yes, you can increase the disk size for stateful nodes.
            "preferredLifecycle": "od",
            "revertToSpot": "never",
            "optimizationWindows": null,
-         ````
+         </code></pre>
+	 
       </li>
       <li><a href="https://docs.spot.io/managed-instance/azure/features/actions">Recycle the stateful node</a>.</li>
       <li>Make sure the stateful node is not running on the Spot VM.</li>
