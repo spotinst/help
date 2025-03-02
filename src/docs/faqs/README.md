@@ -25,7 +25,7 @@ Supported products: Eco, CloudAnalyzer, Ocean, Elastigroup.
 
 **Azure Regions**
 
-australia-central, australia-central-2, australia-east, australia-south-east, brazil-south, canada-central, canada-east, central-india, central-us, east-asia, east-us, east-us-2, france-central, france-south, germany-central, germany-north, germany-north-east, germany-west-central, japan-east, japan-west, korea-central, korea-south, north-central-us, north-europe, norway-east, norway-west, south-africa-north, south-africa-west, south-central-us, south-east-asia, south-india, switzerland-north, switzerland-west, uae-central, uae-north, uk-south, uk-west, west-central-us, west-europe, west-india, us-gov-arizona, us-gov-texas ,us-gov-virginia , ,west-us, west-us-2, west-us-3.
+australia-central, australia-central-2, australia-east, australia-south-east, brazil-south, canada-central, canada-east, central-india, central-us, east-asia, east-us, east-us-2, france-central, france-south, germany-central, germany-north, germany-north-east, germany-west-central, japan-east, japan-west, korea-central, korea-south, north-central-us, north-europe, norway-east, norway-west, south-africa-north, south-africa-west, south-central-us, south-east-asia, south-india, switzerland-north, switzerland-west, uae-central, uae-north, uk-south, uk-west, west-central-us, west-europe, west-india, us-gov-arizona, us-gov-texas, us-gov-virginia, west-us, west-us-2, west-us-3.
 
 Supported products: Ocean, Elastigroup.
 
@@ -96,6 +96,7 @@ You can get information about releases and new features:
  <div style="padding-left:16px">
 
 Yes, you can edit your:
+
 * [Organization name](administration/organizations/?id=update-your-organization-name)
 * [Spot account name](administration/organizations/?id=update-your-spot-account-name)
 
@@ -114,11 +115,11 @@ Yes, you can edit your:
 
 AWS decides according to:
 
-1.	If the market matches a free zonal reserved instance commitment, then the instance is a reserved instance.
-2.	If the market matches a free regional reserved instance commitment, then the instance is a reserved instance.
-3.	If the market matches a free EC2 instance savings plan commitment, then the instance is a savings plan.
-4.	If there is any free compute service plan commitment, then the instance is a savings plan.
-5.	Otherwise, the instance will run as a full-price on-demand instance.
+1. If the market matches a free zonal reserved instance commitment, then the instance is a reserved instance.
+2. If the market matches a free regional reserved instance commitment, then the instance is a reserved instance.
+3. If the market matches a free EC2 instance savings plan commitment, then the instance is a savings plan.
+4. If there is any free compute service plan commitment, then the instance is a savings plan.
+5. Otherwise, the instance will run as a full-price on-demand instance.
 
 Throughout the lifetime of an instance, it can change its “price” whenever there’s any change in the commitments utilization rate. For example, if an instance is running as a full price on-demand instance, and another instance that was utilizing a compute savings plan commitment was terminated, the first instance will start utilizing this commitment if its hourly price rate has enough free space under this commitment. It might take a couple of minutes for this change to show, but since the billing is being calculated retroactively, in practice it’s starting to utilize the commitment right away.
    
@@ -134,6 +135,7 @@ Throughout the lifetime of an instance, it can change its “price” whenever t
 Running hours are calculated from the moment an instance is launched until it is <i>detached</i> and not <i>terminated</i>. AWS calculates the entire lifetime of the instance.
 
 Here are some reasons for large differences between the numbers in the Spot Console and AWS:
+
 * Groups of instances with long draining periods
 * Shutdown scripts with long grace periods
 
@@ -154,7 +156,7 @@ You can choose to remove some of these permissions from the [Spot IAM policy](/a
 
 * **iam:AddRoleToInstanceProfile** is generally not required. It is only used to change the role associated with an instance profile and is required for Beanstalk.
 
-* **iam:PassRole** is only required when you custom metrics. Ocean EKS does not require <i>iam:PassRole</i> in the Spot policy. However, if you use custom metrics, you need an account with this role configured for putting metric data into CloudWatch, which is in use by both Ocean (PublishOceanKubernetesCwMetricsExecutor ) and EG (ReportCWMetricsNewCmd).
+* **iam:PassRole** is only required when you custom metrics. Ocean EKS does not require <i>iam:PassRole</i> in the Spot policy. However, if you use custom metrics, you need an account with this role configured for putting metric data into CloudWatch, which is in use by both Ocean (PublishOceanKubernetesCwMetricsExecutor) and EG (ReportCWMetricsNewCmd).
 
  </div>
 
@@ -166,7 +168,8 @@ You can choose to remove some of these permissions from the [Spot IAM policy](/a
 
 You might get this alert in CloudWatch:
 
-````"eventType": "AwsApiCall",
+````json
+"eventType": "AwsApiCall",
 "error": {
 "kind": "Client.InvalidAMIID.NotFound",
 "message": "The image id '[ami-xxxxx]' does not exist"
@@ -212,7 +215,9 @@ You may get an error when you try to sign in to the Spot console if:
 
 * The [Identifier (Entity ID) URL](https://learn.microsoft.com/en-us/azure/active-directory/saas-apps/spotinst-tutorial#configure-azure-ad-sso) is not set up correctly. If the URL isn't correct, you might get this message when you sign in to the Spot console:
 
-  ````AADSTS650056: Misconfigured application. This could be due to one of the following: the client has not listed any permissions for 'AAD Graph' in the requested permissions in the client's application registration. Or, the admin has not consented in the tenant. Or, check the application identifier in the request to ensure it matches the configured client application identifier. Or, check the certificate in the request to ensure it's valid. Please contact your admin to fix the configuration or consent on behalf of the tenant. Client app ID: Idl xxxxx.````
+  ````
+    AADSTS650056: Misconfigured application. This could be due to one of the following: the client has not listed any permissions for 'AAD Graph' in the requested permissions in the client's application registration. Or, the admin has not consented in the tenant. Or, check the application identifier in the request to ensure it matches the configured client application identifier. Or, check the certificate in the request to ensure it's valid. Please contact your admin to fix the configuration or consent on behalf of the tenant. Client app ID: Idl xxxxx.
+  ````
 
   The [Identifier (Entity ID) URL](https://learn.microsoft.com/en-us/azure/active-directory/saas-apps/spotinst-tutorial#configure-azure-ad-sso) must be `https://console.spotinst.com/auth/saml`. It cannot be a different URL or blank.
 
@@ -296,17 +301,17 @@ The attributes that can be sent depend on your [identify provider](administratio
 
 You cannot sign in to your Spot org due to a user provisioning error in your Okta SSO environment. For example, you're getting one of these errors:
 
-* <code>Automatic provisioning of user {name of user} to app Spotinst failed: Matching user not found.</code>
-* <code>Automatic profile push of user {name of user} to app Spotinst failed: Error while trying to push profile update for {user email}: No user returned for user {user id}</code>
+* `Automatic provisioning of user {name of user} to app Spotinst failed: Matching user not found.`
+* `Automatic profile push of user {name of user} to app Spotinst failed: Error while trying to push profile update for {user email}: No user returned for user {user id}`
 
 These internal logging errors occur because of a misconfiguration in the Okta SSO environment.
-1.	Make sure edit is set up for provisioning:
+1. Make sure edit is set up for provisioning:
     <ol style="list-style-type: lower-alpha;">
     <li>Go to Okta Admin Console and click <b>Applications</b> > <b>Spotinst</b> > <b>Provisioning</b> > <b>To App</b>.</li>
     <li>Click <b>Edit</b> and then <b>Enable</b> for <i>Create Users</i>, <i>Update User Attributes</i>, and <i>Deactivate Users</i>.</li>
     </ol>
  
-2.	Check for failed tasks:
+2. Check for failed tasks:
     <ol style="list-style-type: lower-alpha;">
     <li>Go to the Okta Admin Console and navigate to <b>Dashboard</b> > <b>Tasks</b>. Look for failed provisioning assignments under <b>Tasks</b>.</li>
     <li>If there are failed tasks for the users who were getting errors, retry the tasks by selecting the task and then clicking <b>Retry Selected</b>.</li>
@@ -314,7 +319,7 @@ These internal logging errors occur because of a misconfiguration in the Okta SS
 
     After retrying the failed tasks, the errors should be resolved and the users should have complete access to the Spotinst app after signing in using SSO. If there are no failed tasks associated with these users or if the issue isn’t resolved, unassign them.
    
-3.	Unassign the users from the Spotinst app in Okta. Once unassigned, reassign these specific users to the Spotinst app.
+3. Unassign the users from the Spotinst app in Okta. Once unassigned, reassign these specific users to the Spotinst app.
 
  </div>
 
@@ -339,9 +344,9 @@ The exception is if you have Okta with [system for cross-domain identity managem
   <div style="padding-left:16px">
 
    You can add a user to one or many user groups in an [organization](/administration/sso-access-control/organization-level-sso?id=organization-and-user-group) in Okta spotinst application:
-1.	Make sure [Okta SAML 2.0 authentication](/administration/identity-providers/okta-saml-authentication) is configured with Spot.
-2.	Sign in to Okta Admin, go to **Directory** > **Profile Editor**, and select **Spotinst User**.
-3.	Click **Add Attribute** and add a custom attribute:
+1. Make sure [Okta SAML 2.0 authentication](/administration/identity-providers/okta-saml-authentication) is configured with Spot.
+2. Sign in to Okta Admin, go to **Directory** > **Profile Editor**, and select **Spotinst User**.
+3. Click **Add Attribute** and add a custom attribute:
     * **Data Type**: <i>string</i>
     * **Display Name**: <i>OrgAndUserGroups</i>
     * **Variable Name**: <i>OrgAndUserGroups</i>
@@ -436,16 +441,20 @@ Set up OpsGenie email integration and then configure the notifications in Spot:
    5. Select **External Email** and enter the OpsGenie email address. This allows Spot to send notifications to external email addresses. Any email sent to the OpsGenie email address will trigger an OpsGenie alert.
 
 * Using the Spot API, [add a notification](https://docs.spot.io/api/#operation/notificationsServiceSubscriptionsSubscribe). For example:
-   <pre><code>"resourceId": "xxxxxxx",
+   ````json
+   "resourceId": "xxxxxxx",
    "protocol": "email ",
    "endpoint": "YOUR@EMAIL.COM",
-   "eventType": "xxxxx",</code></pre>
+   "eventType": "xxxxx",
+   ````
 
 * Using the Spot API, [update a notification](https://docs.spot.io/api/#operation/notificationsServiceSubscriptionsUpdate). For example:
-   <pre><code>"resourceId": "xxxxxxx",
+   ````json
+   "resourceId": "xxxxxxx",
    "protocol": "email ",
    "endpoint": "YOUR@EMAIL.COM",
-   "eventType": "xxxxx",</code></pre>
+   "eventType": "xxxxx",
+   ````
 
 **Webhook**
 1. Set up [OpsGenie webhook integration](https://support.atlassian.com/opsgenie/docs/integrate-opsgenie-with-webhook/).
@@ -469,9 +478,11 @@ Set up OpsGenie email integration and then configure the notifications in Spot:
 You can [download JQ](https://jqlang.github.io/jq/download/) and use the [online curl command line builder](https://curlbuilder.com/). Curl lets you interact with web services, APIs, and services using command line.
 
 For curl, use this template:
-<pre><code>curl -X GET '{URL}' \
+````curl
+curl -X GET '{URL}' \
 -H 'Authorization: Bearer {TOKEN}' \
--H 'Content-Type: application/json'</code></pre>
+-H 'Content-Type: application/json'
+````
 
 For example:
 * Get the value of the maximum number of instances set in an Elastigroup using CLI
@@ -480,9 +491,11 @@ For example:
       https://docs.spot.io/api/#tag/Elastigroup-AWS/operation/elastigroupAwsListElastigroup
   
     * Enter this in JQ:  
-      <pre><code>curl -X GET 'https://api.spotinst.io/aws/ec2/group/{groupID}' \
+      ````curl
+	  curl -X GET 'https://api.spotinst.io/aws/ec2/group/{groupID}' \
       -H 'Authorization: Bearer {token}' \
-      -H 'Content-Type: application/json' | jq '.response.items[0].capacity.maximum'</code></pre>  
+      -H 'Content-Type: application/json' | jq '.response.items[0].capacity.maximum'
+      ````
   
 * Get the cluster-ocean id by cluster name
 
@@ -490,11 +503,12 @@ For example:
       https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterList
 
     * Enter this in JQ:  
-      <pre><code>curl –X GET 'https://api.spotinst.io/ocean/aws/k8s/cluster?accountId={accountID}' \
+      ````Curl
+	  curl –X GET 'https://api.spotinst.io/ocean/aws/k8s/cluster?accountId={accountID}' \
       -H 'Authorization: Bearer {token}' \
       -H 'Content-Type: application/json' 
        | jq '.response.items[] | select(.controllerClusterId | contains("{cluster-name}")) | .id'
-</code></pre>
+      ````
 
  </div>
  </details>
@@ -540,7 +554,7 @@ us-east-1, us-east-2, us-west-1, us-west-2, ca-central-1, sa-east-1, eu-central-
 
 **Azure Regions**
 
-australia-central, australia-central-2, australia-east, australia-south-east, brazil-south, canada-central, canada-east, central-india, central-us, east-asia, east-us, east-us-2, france-central, france-south, germany-central, germany-north, germany-north-east, germany-west-central, japan-east, japan-west, korea-central, korea-south, north-central-us, north-europe, norway-east, norway-west, south-africa-north, south-africa-west, south-central-us, south-east-asia, south-india, switzerland-north, switzerland-west, uae-central, uae-north, uk-south, uk-west, west-central-us, west-europe, west-india, us-gov-arizona, us-gov-texas ,us-gov-virginia , ,west-us, west-us-2, west-us-3.
+australia-central, australia-central-2, australia-east, australia-south-east, brazil-south, canada-central, canada-east, central-india, central-us, east-asia, east-us, east-us-2, france-central, france-south, germany-central, germany-north, germany-north-east, germany-west-central, japan-east, japan-west, korea-central, korea-south, north-central-us, north-europe, norway-east, norway-west, south-africa-north, south-africa-west, south-central-us, south-east-asia, south-india, switzerland-north, switzerland-west, uae-central, uae-north, uk-south, uk-west, west-central-us, west-europe, west-india, us-gov-arizona, us-gov-texas, us-gov-virginia, west-us, west-us-2, west-us-3.
 
 **GCP Regions**
 
@@ -604,7 +618,8 @@ This can happen if your virtual node group was deleted in Terraform. When you de
    3. Click **JSON**.
    4. In the blockDeviceMappings, update the snapshotID or remove it:
 
-      <code>"blockDeviceMappings": [
+      ````json
+	  "blockDeviceMappings": [
       {
         "deviceName": "/dev/xvda",
         "ebs": {
@@ -617,7 +632,8 @@ This can happen if your virtual node group was deleted in Terraform. When you de
           "volumeType": "GP3"
         }
       }
-    ],</code>
+    ],
+    ````
 
    5. Click **Save**.
 
@@ -631,7 +647,10 @@ This can happen if your virtual node group was deleted in Terraform. When you de
   <div style="padding-left:16px">
 
 No, you will get this error:
-<code>Virtual Node Group configuration failed to update. Reason: Error while trying to create LaunchSpec. spotPercentage cannot be set on both ocean cluster and launch spec</code>
+
+````
+Virtual Node Group configuration failed to update. Reason: Error while trying to create LaunchSpec. spotPercentage cannot be set on both ocean cluster and launch spec
+````
 
 The parameter <i>spotPercentage</i> cannot be used for both a cluster and one of its virtual node groups at the same time. This is intentional. Either remove it from the  cluster or from the virtual node group.
 
@@ -646,7 +665,9 @@ The parameter <i>spotPercentage</i> cannot be used for both a cluster and one of
 
 You can get this message when the group or cluster is scaling up instances:
 
-`Can't Spin Instances: Code: ValidationError, Message: can't spin spot due to duplicate tags error`
+````
+Can't Spin Instances: Code: ValidationError, Message: can't spin spot due to duplicate tags error
+````
 
 This happens if you have duplicate tags configured:
 
@@ -665,6 +686,7 @@ This happens if you have duplicate tags configured:
 Draining timeout is the time in seconds to allow the instance or node to be drained before terminating it.
 
 The default draining for:
+
 * Elastigroup is 120 seconds
 * Ocean is 300 seconds
 * ECS (Elastigroup/Ocean) is 900 seconds
@@ -679,16 +701,19 @@ The default draining for:
   <div style="padding-left:16px">
 
    You can stream Elastigroup logs to an AWS S3 bucket. Then, you can configure Elasticsearch and Kibana to collect logs from the S3 bucket:
+   
    * [Ocean](/ocean/features/log-integration-with-s3)
    * [Elastigroup](https://docs.spot.io/api/#tag/Elastigroup-AWS/operation/elastigroupAwsCreate) add this code to the JSON:
-     <pre><code> "logging": {
+
+     ````json
+	 "logging": {
        "export": {
          "s3": {
            "id": "di-123"
          }
        }
      }
-   </pre></code>
+    ````
 
  </div>
 
@@ -705,11 +730,11 @@ The default draining for:
 
 AWS decides according to:
 
-1.	If the market matches a free zonal reserved instance commitment, then the instance is a reserved instance.
-2.	If the market matches a free regional reserved instance commitment, then the instance is a reserved instance.
-3.	If the market matches a free EC2 instance savings plan commitment, then the instance is a savings plan.
-4.	If there is any free compute service plan commitment, then the instance is a savings plan.
-5.	Otherwise, the instance will run as a full-price on-demand instance.
+1. If the market matches a free zonal reserved instance commitment, then the instance is a reserved instance.
+2. If the market matches a free regional reserved instance commitment, then the instance is a reserved instance.
+3. If the market matches a free EC2 instance savings plan commitment, then the instance is a savings plan.
+4. If there is any free compute service plan commitment, then the instance is a savings plan.
+5. Otherwise, the instance will run as a full-price on-demand instance.
 
 Throughout the lifetime of an instance, it can change its “price” whenever there’s any change in the commitments utilization rate. For example, if an instance is running as a full price on-demand instance, and another instance that was utilizing a compute savings plan commitment was terminated, the first instance will start utilizing this commitment if its hourly price rate has enough free space under this commitment. It might take a couple of minutes for this change to show, but since the billing is being calculated retroactively, in practice it’s starting to utilize the commitment right away.
    
@@ -740,10 +765,11 @@ Instance metadata service (IMDS) is data about your instance that you can use to
 Instance metadata service version 2 (IMDSv2) addresses security concerns and vulnerabilities from IMDSv1. IMDSv2 has more security measures to protect against potential exploitation and unauthorized access to instance metadata.
 
 **Scenario 1: Ocean and Elastigroup**
+
 You can define metadata for autoscaling groups in AWS that gets imported when you import the groups from AWS to Spot. You can manually configure them in Spot to use IMDSv2.
 
 1. Follow the [Ocean AWS Cluster Create](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterCreate) or [Elastigroup AWS Create](https://docs.spot.io/api/#tag/Elastigroup-AWS/operation/elastigroupAwsCreate) API instructions and add this configuration for the cluster:
-   <pre><code class="lang-json">
+   ````json
    "compute": {
     "launchSpecification": {
         "instanceMetadataOptions": {
@@ -753,7 +779,7 @@ You can define metadata for autoscaling groups in AWS that gets imported when yo
           }
       }
     }
-   </code></pre>
+   ````
 
 2. Apply these changes to the currently running instances so the clusters are restarted and have the new definitions:
     * [Deploy an Elastigroup](https://docs.spot.io/elastigroup/tutorials/elastigroup-actions-menu/deploy-or-roll-elastigroup?id=deploy-an-elastigroup)
@@ -766,21 +792,21 @@ When a stateful managed node is imported from AWS, Spot creates an image from th
 You can use your own AMI and configure IMDSv2 on it. All instances launched after recycling will have IMDSv2 by default.
 
 1. Configure IMDSv2 on your AMI:
-    * If create a new AMI, you can add IMDSv2 support using AWS CLI:
-     <pre><code>
+    * If you're creating a new AMI, you can add IMDSv2 support using AWS CLI:
+     ````
       aws ec2 register-image Let me know if there is anything else I can help you with.
       --name my-image \
       --root-device-name /dev/xvda \
       --block-device-mappings DeviceName=/dev/xvda,Ebs={SnapshotId=snap-0123456789example} \
       --imds-support v2.0
-      </code></pre>
+      ````
 
     * If you use an existing AMI, you can add IMDSv2 using AWS CLI:
-      <pre><code>
+      ````
       aws ec2 modify-image-attribute \
       --image-id ami-0123456789example \
       --imds-support v2.0
-      </code></pre>
+      ````
 
 2. In the Spot console, [create a stateful node](https://docs.spot.io/managed-instance/getting-started/create-a-new-managed-instance) with the custom AMI.
 
@@ -814,7 +840,9 @@ If an instance type isn’t [EBS-optimized by default](https://docs.aws.amazon.c
 
 If you’re getting this message:
 
-`Can't Spin Spot Instances: Message: The tag policy does not allow the specified value for the following tag key: 'XXX'.`
+````
+Can't Spin Spot Instances: Message: The tag policy does not allow the specified value for the following tag key: 'XXX'.
+````
 
 It means a tag defined in your Elastigroup or cluster doesn’t comply with AWS’s tag policy.
 
@@ -845,7 +873,9 @@ The instance will be launched when the tags in Spot clusters/groups comply with 
 
 You may get this message when creating or importing an Elastigroup or cluster if you reach your AWS service quota limit for security groups per network interface:
 
-````POST https://api.spotinst.io/aws/ec2/group?accountId=act-xxxxx: 400 (request: "xxxxx") SecurityGroupLimitExceeded: You have exceeded the number of VPC security groups allowed per instance.````
+````
+POST https://api.spotinst.io/aws/ec2/group?accountId=act-xxxxx: 400 (request: "xxxxx") SecurityGroupLimitExceeded: You have exceeded the number of VPC security groups allowed per instance.
+````
 
 You can [request a quota increase from AWS](https://docs.aws.amazon.com/vpc/latest/userguide/amazon-vpc-limits.html).
 
@@ -878,7 +908,11 @@ This means that there are no [spot markets](elastigroup/features/core-features/m
 
   <div style="padding-left:16px">
 
-You can get this message if the key pair is missing or not valid: `Can't Spin On-Demand Instances: Code: InvalidKeyPair.NotFound, Message: The key pair 'xxxxx' does not exist`.
+You can get this message if the key pair is missing or not valid:
+
+````
+Can't Spin On-Demand Instances: Code: InvalidKeyPair.NotFound, Message: The key pair 'xxxxx' does not exist
+````
 
 Update the key pair:
 
@@ -911,7 +945,9 @@ Yes, you can connect using SSH to a VM running:
 
 You got this error in the logs, and it’s not possible for the cluster to perform any scaling actions:
 
-<code>Invalid client secret provided. Ensure the secret being sent in the request is the client secret value, not the client secret ID, for a secret added to app</code>
+````
+Invalid client secret provided. Ensure the secret being sent in the request is the client secret value, not the client secret ID, for a secret added to app
+````
 
 In Azure Kubernetes Service (AKS), there are two kinds of secrets: <i>client secret ID</i> and <i>client secret value</i>.
 
@@ -963,14 +999,16 @@ You can use AWS EventBridge to send spot interruption warnings to the Spot platf
 
 This message is shown in the console logs if Ocean attempts to scale up a certain spot instance type in a particular availability zone. This happens because of a lack of capacity on the AWS side.
 
-<code>Can't Spin Spot Instances: Code: InsufficientInstanceCapacity, Message: We currently do not have sufficient m5.2xlarge capacity in the Availability Zone you requested (us-east-1a). Our system will be working on provisioning additional capacity. You can currently get m5.2xlarge capacity by not specifying an Availability Zone in your request or choosing us-east-1b, us-east-1c, us-east-1d, us-east-1f.</code>
+````
+Can't Spin Spot Instances: Code: InsufficientInstanceCapacity, Message: We currently do not have sufficient m5.2xlarge capacity in the Availability Zone you requested (us-east-1a). Our system will be working on provisioning additional capacity. You can currently get m5.2xlarge capacity by not specifying an Availability Zone in your request or choosing us-east-1b, us-east-1c, us-east-1d, us-east-1f.
+````
 
 Ocean is aware of a pending pod and is spinning up an instance. Based on your current instance market, Ocean chooses the instance type in a particular availability zone and attempts to scale up. If it fails due to a lack of capacity, the error message is shown in the console logs.
 
 You can solve this by:
 * Having many instance types so Ocean can choose the best available markets.
 * Having multiple availability zones to provide more availability.
-* For workloads that are not resilient to disruptions, configure the [on demand label](https://docs.spot.io/ocean/features/labels-and-taints?id=spotinstionode-lifecycle) <code>spotinst.io/node-lifecycle</code>.
+* For workloads that are not resilient to disruptions, configure the [on demand label](https://docs.spot.io/ocean/features/labels-and-taints?id=spotinstionode-lifecycle) `spotinst.io/node-lifecycle`.
 
  </div>
 
@@ -983,7 +1021,9 @@ You can solve this by:
 
 You have scaling up instances for your Elastigroup or Ocean clusters and you get this message:
 
-<code>ERROR, Can't Spin Instances: Code: InvalidSnapshot.NotFound, Message: The snapshot 'snap-xyz' does not exist.`</code>
+````
+ERROR, Can't Spin Instances: Code: InvalidSnapshot.NotFound, Message: The snapshot 'snap-xyz' does not exist.
+````
 
 If you have a block device that is mapped to a snapshot ID of an Elastigroup or Ocean cluster and the snapshot isn't available, you will get this error. This can happen if the snapshot is deleted.
 
@@ -1013,7 +1053,9 @@ If you have another snapshot, then you can use that snapshot ID for the block de
 
    You can get this message if AWS's spot service limit is reached:
    
-   <code>Can't Spin Spot Instances:Code: MaxSpotInstanceCountExceeded, Message: Max spot instance count exceeded</code>
+   ````
+   Can't Spin Spot Instances:Code: MaxSpotInstanceCountExceeded, Message: Max spot instance count exceeded
+````
 
 You may also get an email from Spot: <i>Spot Proactive Monitoring | Max Spot Instance Count Exceeded</i>. This email includes instructions for opening a support request with AWS, such as the instance type and region that triggered the error.
 
@@ -1031,12 +1073,14 @@ You can read the AWS documentation on [spot instance quotas](https://docs.aws.am
 
 You can get this error when the group's device name (for Block Device Mapping) and the AMI's device name do not match:
 
-<code>Can't Spin Spot Instance: Code: InvalidBlockDeviceMapping, Message: The device 'xvda' is used in more than one block-device mapping</code>
+````
+Can't Spin Spot Instance: Code: InvalidBlockDeviceMapping, Message: The device 'xvda' is used in more than one block-device mapping
+````
 
 * AMI - "deviceName": "xvda"
 * Group's configuration - "deviceName": "/dev/xvda"
 
-Change the device name from <code>xvda</code> to <code>/dev/xvda</code> on the group's side. In the stateful node, go to **Actions** > **Edit Configuration** > **Review** > **JSON** > **Edit Mode**. Change the device name from <code>xvda</code> to <code>/dev/xvda</code> and click **Update**.
+Change the device name from `xvda` to `/dev/xvda` on the group's side. In the stateful node, go to **Actions** > **Edit Configuration** > **Review** > **JSON** > **Edit Mode**. Change the device name from `xvda` to `/dev/xvda` and click **Update**.
 
  </div>
 
@@ -1049,15 +1093,19 @@ Change the device name from <code>xvda</code> to <code>/dev/xvda</code> on the g
 
 When you import Fargate services with more than 5 security groups, you get an error: 
 
-<code>Failed to import Fargate services into Ocean. Please verify Spot IAM policy has the right permissions and try again.</code>
+````
+Failed to import Fargate services into Ocean. Please verify Spot IAM policy has the right permissions and try again.
+````
 
 In Spot, you see this warning:
 
-<code>Fargate import failed for xxx-xxxxxx, due to Failed to import services, too many security groups. Import less services to this group (Group ID: xxxx-xxxxxx).</code>
+````
+Fargate import failed for xxx-xxxxxx, due to Failed to import services, too many security groups. Import less services to this group (Group ID: xxxx-xxxxxx).
+````
 
 You can have up to 5 security groups in each service according to this [article](https://spot.io/blog/import-ecs-fargate-into-spot-ocean/#:~:text=more%20than%20five-,security,-groups%20as%20only). This means that if more than 5 security groups are defined in one of the services, the import doesn’t succeed.
 
-Check the Ocean log to see if you see the error <code>too many security groups</code>, as it will get the same error.
+Check the Ocean log to see if you see the error `too many security groups`, as it will get the same error.
 
 Reimport Fargate services with less than 5 security groups and choose only one service at a time to import it successfully.
 
@@ -1111,11 +1159,13 @@ When a new instance is launched, it will be from the dedicated virtual node grou
 
 If you see this message in the log:
 
-<pre><code>DEBUG, Replacement of type Out of strategy for instance i-xxx has been canceled. Reason for cancelation: Instance contains stand-alone tasks, and the group's configuration doesn't allow termination of stand-alone tasks.</code></pre>
+````
+DEBUG, Replacement of type Out of strategy for instance i-xxx has been canceled. Reason for cancelation: Instance contains stand-alone tasks, and the group's configuration doesn't allow termination of stand-alone tasks.
+````
 
 It means that your strategy cannot be fixed and your spot instances cannot be reverted to spot instances. This is because you have standalone tasks in the instances, and the group's configuration can't stop standalone tasks. The autoscaler cannot scale down these instances.
 
-Update the cluster [in the API](https://docs.spot.io/api/#tag/Ocean-ECS/operation/OceanECSClusterUpdate) or in the cluster's JSON file to include <code>"shouldScaleDownNonServiceTasks": true</code>.
+Update the cluster [in the API](https://docs.spot.io/api/#tag/Ocean-ECS/operation/OceanECSClusterUpdate) or in the cluster's JSON file to include `"shouldScaleDownNonServiceTasks": true`.
 
 The standalone task and instance are terminated and are not redeployed because they weren't created as part of a service.
    
@@ -1151,8 +1201,10 @@ If your container is unregistered, you should make sure:
   1. Go to the cluster in the Spot console and click **Actions** > **Edit Configuration** > **Compute**.
   2. Add this script to **User Data**, using your cluster name.
 
-       <pre><code>#!/bin/bash  
-       echo ECS_CLUSTER="<font color="#FC01CC">MyCluster</font>" >> /etc/ecs/ecs.config</code></pre>
+       ````
+       #!/bin/bash
+       echo ECS_CLUSTER="xxxxx" >> /etc/ecs/ecs.config
+       ````
   
 * **AMI**
 
@@ -1178,7 +1230,7 @@ If your container is unregistered, you should make sure:
   <img alt="unregistered-container-instance4" src="https://github.com/spotinst/help/assets/167069628/98a19d66-d218-41da-bb88-5a99220dcac3">
 
 
-* [AWS troubleshooting](https://aws.amazon.com/premiumsupport/knowledge-center/ecs-instance-unable-join-cluster/)   
+* [AWS troubleshooting](https://aws.amazon.com/premiumsupport/knowledge-center/ecs-instance-unable-join-cluster/)
 
 
  </div>
@@ -1216,33 +1268,34 @@ If a node only has one task running, then it causes the node to be underutilized
 
 Example service:
 
-<pre><code class="lang-json">"placementConstraints": [],
+````json
+"placementConstraints": [],
    "placementStrategy": [],
-</code></pre>
+````
 
 The task definition doesn't have constraints to spread tasks across nodes.
 
-<pre><code class="lang-json">
+````json
 "placementConstraints": [
   {
   "type": "memberOf",
   "expression": "attribute:nd.type == default"
   }
   ],
-</code></pre>
+````
 
 Check the **portMappings: hostPort** value in the task/service defintion.
 
 Port mappings allow containers to access ports on the host container instances to send or receive traffic. This configuration can be found in the task definition. The hostPort value in port mapping is normally left blank or set to 0.
 
 Example:
-<pre><code class="lang-json">
+````json
       "portMappings": [
             {
                "protocol": "tcp",
                "hostPort": 0,
                "containerPort": 443
-</code></pre>
+````
 
 However, if the hostPort value equals the containerPort value, then each task needs its own container. Any pending tasks trigger a scale-up, and the number of launched instances is equal to the number of pending tasks. This leads to underutilized instances and higher costs.
 
@@ -1315,14 +1368,14 @@ Update your tolerances in the DaemonSet YAML so you can schedule DaemonSet pods 
 
 For example, you can update your [DaemonSet pod YAML](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/) to include:
 
-<pre><code>
+````json
    spec:
       tolerations:
       - key: dedicated
         operator: Equal
         value: statefulset
         effect: NoSchedule
-</code></pre>
+````
 
 
    </div>
@@ -1334,37 +1387,24 @@ For example, you can update your [DaemonSet pod YAML](https://kubernetes.io/docs
 
   <div style="padding-left:16px">
 
-Yes, you can use this parameter to set capacity using [eksctl](ocean/tools-and-integrations/eksctl):
-
-`autoScaler: resourceLimits: maxInstanceCount: 10`
+Yes, you can use `autoScaler: resourceLimits: maxInstanceCount: 10` to set capacity using [eksctl](ocean/tools-and-integrations/eksctl).
 
 For example:
 
-<pre><code>
+````json
 apiVersion: eksctl.io/v1alpha5
-
 kind: ClusterConfig
-
 metadata:
-
   name: example
-
   region: us-west-2nodeGroups:
-
 name: ng1
-
   spotOcean:
-
     # ...
-
     autoScaler:
-
       resourceLimits:
-
         maxInstanceCount: 10
-
     # ...
-</code></pre>
+````
 
    </div>
    
@@ -1470,15 +1510,8 @@ The JSON for a virtual node group has all the parameters from the Ocean template
 
 You can update this line in the SDK to debug:
 
-Change:
-
-`client = session.client("ocean_aws")`
-
-To:
-
-`client = session.client("ocean_aws", log_level="debug")`
-
-Then [create or update](https://github.com/spotinst/spotinst-sdk-python/blob/v2/docs/clients/ocean/ocean_aws_client.md#create_ocean_cluster) the cluster again.
+1. Change `client = session.client("ocean_aws")` to `client = session.client("ocean_aws", log_level="debug")`.
+2. [Create or update](https://github.com/spotinst/spotinst-sdk-python/blob/v2/docs/clients/ocean/ocean_aws_client.md#create_ocean_cluster) the cluster again.
 
  </div>
 
@@ -1521,8 +1554,6 @@ This can happen because Ocean automatically scales down the entire cluster to 0 
 When the off time ends, Ocean starts a single node from a virtual node group without taints. If all virtual node groups have taints, Ocean starts a node from the default virtual node group unless useAsTemplateOnly is defined, in which case no node is started.
 
 You need to make sure the controller is running, possibly on a node that Ocean does not manage. Once the node launches and is registered to the Kubernetes cluster, the Ocean controller is scheduled.
-
-
 
  </div>
 
@@ -1594,11 +1625,13 @@ Once the cluster is configured to use the default virtual node group as a templa
 
 If you have unregistered nodes and are getting log messages such as:
 
-<pre><code>/var/lib/cloud/instance/scripts/part-001: line 5: unexpected EOF while looking for matching `"'
+````
+/var/lib/cloud/instance/scripts/part-001: line 5: unexpected EOF while looking for matching `"'
    
 /var/lib/cloud/instance/scripts/part-001: line 9: syntax error: unexpected end of file
 
-Feb 01 14:03:05 cloud-init[2517]: util.py[WARNING]: Running module scripts-user (<module ‘cloudinit.config.cc_scripts_user' from '/usr/lib/python2.7/site-packages/cloudinit/config/cc_scripts_user.pyc'>) failed</pre></code>
+Feb 01 14:03:05 cloud-init[2517]: util.py[WARNING]: Running module scripts-user (<module ‘cloudinit.config.cc_scripts_user' from '/usr/lib/python2.7/site-packages/cloudinit/config/cc_scripts_user.pyc'>) failed
+````
 
 Make sure:
 1. The parameters are configured correctly (such as labels, AMI, IP, user data).
@@ -1634,6 +1667,7 @@ Keep in mind:
 You can set up committed use discounts (CUDs) for clusters in Ocean and groups in Elastigroup. It cannot be used for virtual node groups.
 
 Set up committed use discounts for:
+
 * [Ocean](ocean/features/committed-use-discount)
 * [Elastigroup](elastigroup/features/gcp/commit-use-discount)
 
@@ -1669,24 +1703,24 @@ Some of the common reasons your GKE nodes can be unregistered are if:
    For example:
 ````json
     "compute": {
-       "networkInterfaces": [
-         {
-           "network": "networkname",
-           "accessConfigs": [
-             {
-               "name": "external-nat",
-               "type": "ONE_TO_ONE_NAT"
-             }
-           ],
-           "aliasIpRanges": [
-             {
-               "ipCidrRange": "/24",
-               "subnetworkRangeName": "subnetworkRangeName"
-             }
-           ],
-           "projectId": "projectId"
-         }
-       ],
+       "networkInterfaces": [
+         {
+          "network": "networkname",
+          "accessConfigs": [
+             {
+              "name": "external-nat",
+              "type": "ONE_TO_ONE_NAT"
+            }
+           ],
+          "aliasIpRanges": [
+            {
+             "ipCidrRange": "/24",
+             "subnetworkRangeName": "subnetworkRangeName"
+            }
+           ],
+          "projectId": "projectId"
+         }
+        ],
 ````
 
    </div>
@@ -1700,7 +1734,9 @@ Some of the common reasons your GKE nodes can be unregistered are if:
 
 If Ocean isn’t launching a VM, you might get this log message:
 
-```Can’t Spin Instance: Name: sin-abcd. Code: Error, Message: Invalid resource usage: 'Requested boot disk architecture (X86_64) is not compatible with machine type architecture (ARM64).'```
+````
+Can’t Spin Instance: Name: sin-abcd. Code: Error, Message: Invalid resource usage: 'Requested boot disk architecture (X86_64) is not compatible with machine type architecture (ARM64).'
+````
 
 This can happen because Ocean doesn’t validate VM architecture for GCP. You can [troubleshoot this error](https://cloud.google.com/compute/docs/troubleshooting/troubleshooting-arm-vms#errors_when_updating_vms) in GCP.
 
@@ -1715,8 +1751,10 @@ This can happen because Ocean doesn’t validate VM architecture for GCP. You ca
 
 You may get this log message when a VM is trying to scale up or launch VMs:
 
-<pre><code>Can't Spin Instance: Name: abcde. Code: ZONE_RESOURCE_POOL_EXHAUSTED_WITH_DETAILS,
-Message: The zone 123 does not have enough resources available to fulfill the request, '(resource type:compute)'.</code></pre>
+````
+Can't Spin Instance: Name: abcde. Code: ZONE_RESOURCE_POOL_EXHAUSTED_WITH_DETAILS,
+Message: The zone 123 does not have enough resources available to fulfill the request, '(resource type:compute)'.
+````
 
 This can happen if the specific VM family and size aren’t available for a certain zone at the moment. Elastigroup or Ocean will try to automatically spin up a different VM in a different zone to compensate.
 
@@ -1731,9 +1769,9 @@ This can happen if the specific VM family and size aren’t available for a cert
 
 If you update the Kubernetes version and pods launch with the old version, you may get these errors:
 
-```ERROR, Failed to update the launchSpec ols-f775236b with the latest changes in GKE cluster tagging-stg-eu1-1. Reason: Node pool tagging-stg-eu1-1-pool does not exist.```
+* `ERROR, Failed to update the launchSpec ols-f775236b with the latest changes in GKE cluster tagging-stg-eu1-1. Reason: Node pool tagging-stg-eu1-1-pool does not exist.`
 
-```ERROR, Failed to update the group with the latest changes in GKE cluster tagging-stg-eu1-1. Reason: Node pool tagging-stg-eu1-1-pool does not exist.```
+* `ERROR, Failed to update the group with the latest changes in GKE cluster tagging-stg-eu1-1. Reason: Node pool tagging-stg-eu1-1-pool does not exist.`
 
 This can happen if the original node pool is deleted, which prevents Ocean from fetching/updating the new GKE configuration. In the future, [preserve the original node pool](ocean/getting-started/gke?id=preserve-original-node-pool) instead of deleting it.
 
@@ -1754,12 +1792,13 @@ Every 30 minutes, [an automatic process](ocean/features/auto-update-process-gke)
 
 You can get this message if the instance type is not compatible with the boot disk type:
 
-```ERROR, Can't Spin Instance: Name: sin-xxxx. Code: Error, Message: [pd-standard] features and [instance_type: VIRTUAL_MACHINE family: COMPUTE_OPTIMIZED generation: GEN_3 cpu_vendor: INTEL architecture: X86_64 ] InstanceTaxonomies are not compatible for creating instance.```
+````
+ERROR, Can't Spin Instance: Name: sin-xxxx. Code: Error, Message: [pd-standard] features and [instance_type: VIRTUAL_MACHINE family: COMPUTE_OPTIMIZED generation: GEN_3 cpu_vendor: INTEL architecture: X86_64 ] InstanceTaxonomies are not compatible for creating instance.
+````
 
 [Compare the machine family](https://cloud.google.com/compute/docs/machine-resource#machine_type_comparison) and PD-standard disk type to decide which is appropriate for your workload.
 
 Contact support to decide on the selected instance type for launching and to remove the problematic instance type or family from the allowlist.
-
 
  </div>
 
@@ -1801,7 +1840,7 @@ For example, if you have a 600 second terminationGracePeriodSeconds, make sure y
 
   <div style="padding-left:16px">
 
-   When the <code>useAsTemplateOnly</code> parameter is <i>true</i>, you cannot edit the target capacity in the Ocean cluster configuration.
+   When the `useAsTemplateOnly` parameter is <i>true</i>, you cannot edit the target capacity in the Ocean cluster configuration.
    
 Keep in mind that it may not be necessary to increase the target capacity because Ocean automatically scales instances up and down as needed.
 
@@ -1856,7 +1895,6 @@ You can set a static endpoint to use with Ocean Controller Version 2:
 
   <div style="padding-left:16px">
 
-
 After you upgrade to Ocean Controller Version 2, you may get many SIEM alerts due to <i>SelfSubjectAccessReview</i> requests to your API server. This is expected behavior.
 
 With the Version 2 Ocean Controller, Spot gets reports for any custom resource you gave it access to through the controller cluster role. For example, an Argo Rollouts custom resource or a VerticalPodAutoscaler for rightsizing. These require Spot to list the custom resources in the cluster and make sure there's read access. This happens when the  controller starts up and on a regular basis when it's running.
@@ -1886,7 +1924,9 @@ The Ocean Controller saves up to 8 days of logs. The logs for each day are about
 
 If a node replacement is canceled, you may see this log message in the cluster in the Spot console:
 
-```DEBUG, Replacement of type Out of strategy for instance has been canceled. Reason for cancellation: A pod with the restrict-scale-down label is currently running on the node.```
+````
+DEBUG, Replacement of type Out of strategy for instance has been canceled. Reason for cancellation: A pod with the restrict-scale-down label is currently running on the node.
+````
 
 You can also get this message if you’re using the `cluster-autoscaler.kubernetes.io/safe-to-evict` label. It works the same as the `restrict-scale-down` label. When you have one of those labels, the node is not scaled down or replaced.
 
@@ -1941,12 +1981,13 @@ This can happen because:
 
 If the Ocean autoscaler scales up an instance for your pod at least 5 times, but the Kubernetes scheduler can’t schedule the pod, you may get this message:
 
-<pre><code>WARN, Pod Metrics-Server-xxxxx Has Failed To Schedule For 76 Minutes. Autoscaling Disabled For Pod Metrics-Server-xxxxx
+````
+WARN, Pod Metrics-Server-xxxxx Has Failed To Schedule For 76 Minutes. Autoscaling Disabled For Pod Metrics-Server-xxxxx
 WARN, Pod Redis-0 Has Failed To Schedule For 76 Minutes. Autoscaling Disabled For Pod Redis-0
 WARN, Pod Kube-Dns-Autoscaler-xxxxx Has Failed To Schedule For 76 Minutes. Autoscaling Disabled For Pod Kube-Dns-Autoscaler-xxxxx
 WARN, Pod Worker-Deployment-xxxxx Has Failed To Schedule For 76 Minutes. Autoscaling Disabled For Pod Worker-Deployment-xxxxx
 WARN, Pod Kube-Dns-xxxxx Has Failed To Schedule For 76 Minutes. Autoscaling Disabled For Pod Kube-Dns-xxxxx
-   </code></pre>
+   ````
 
 Ocean stops trying to scale up this pod to prevent infinite scaling.
 
@@ -1967,9 +2008,10 @@ This can happen if:
 
 You may see this message in the logs if you use Prometheus to scrape Ocean metrics:
 
-<pre><code>2023-12-05T01:04:50.458Z ERROR 1 --- java.lang.OutOfMemoryError: Java heap space with root cause
-
-java.lang.OutOfMemoryError: Java heap space</code></pre>
+````
+ERROR 1 --- java.lang.OutOfMemoryError: Java heap space with root cause
+java.lang.OutOfMemoryError: Java heap space
+````
 
 This means the application ran out of Java heap space, and the pod will crash temporarily. You may also see that the target on the [Prometheus](ocean/tools-and-integrations/prometheus/scrape) dashboard is down.
 
@@ -1991,13 +2033,14 @@ Set the amounts according to the needs of your pods.
 
 You get this error in the log:
 
-<code>Kubernetes Autoscaler, Deadlock for Pod: '{pod-name}' 
+````
+Kubernetes Autoscaler, Deadlock for Pod: '{pod-name}' 
 Can't scale up an Instance since PersistentVolumeClaim: 
 '{PVC-name}' 
 VolumeId: '{vol-name}' is already attached to an existing Instance: 
 '{instance-ID}' Please consider using a new PersistentVolumeClaim or open a 
 support ticket.
-</code>
+````
 
 This can happen when the pod has a claim for a specific volume attached to a different instance, and that instance does not have free space for the pod.
 
@@ -2009,8 +2052,8 @@ By freeing up space, the pod can be placed on its attached node and can use the 
  
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanhostportunderutilized">AKS, EKS, GKE: Can pods requiring HostPort cause underutilized nodes (Kubernetes)?</summary>
-      
-   If multiple pods request the same port (hostPort), each pod will get the hostPort, but each pod will be scheduled separately on its own node.
+
+If multiple pods request the same port (hostPort), each pod will get the hostPort, but each pod will be scheduled separately on its own node.
 
 Avoid using the hostPort request, unless it’s necessary ([Kubernetes - configuration best practices](https://kubernetes.io/docs/concepts/configuration/overview/)).
 
@@ -2055,13 +2098,16 @@ You cannot add headroom at a node level. Headroom is intended for:
 
 You can configure [automatic headroom](ocean/features/headroom) using kOps at the cluster level, not at a virtual node group level. Add these [metadata labels](/ocean/tools-and-integrations/kops/metadata-labels):
 
-<code>spotinst.io/autoscaler-auto-config: "true"
+````
+spotinst.io/autoscaler-auto-config: "true"
 spotinst.io/autoscaler-auto-headroom-percentage : {Value}
-spotinst.io/ocean-default-launchspec: "true"</code>
+spotinst.io/ocean-default-launchspec: "true"
+````
 
 Here's an example of a config file:
 
-<code>apiVersion: kops.k8s.io/v1alpha2
+````json
+apiVersion: kops.k8s.io/v1alpha2
 kind: InstanceGroup
 metadata:
 name: "test-vng-2"
@@ -2080,7 +2126,8 @@ spotinst.io/autoscaler-headroom-gpu-per-unit: "0"
 spec:
 role: Node
 maxSize: 1
-minSize: 1</code>
+minSize: 1
+````
 
  </div>
 
@@ -2098,7 +2145,7 @@ You can restrict specific pods from scaling down by configuring Ocean and Kubern
 There are two options for restricting pods from scaling down:
 * Kubernetes deployments/pods: spotinst.io/restrict-scale-down: true
 
-  Use the <code>spotinst.io/restrict-scale-down</code> label set to <i>true</i> to block proactive scaling down for more efficient bin packing. This will leave the instance running as long as possible. It gets defined as a label in the pod's configuration. See [restrict scale down](ocean/features/labels-and-taints?id=spotinstiorestrict-scale-down).
+  Use the `spotinst.io/restrict-scale-down` label set to <i>true</i> to block proactive scaling down for more efficient bin packing. This will leave the instance running as long as possible. It gets defined as a label in the pod's configuration. See [restrict scale down](ocean/features/labels-and-taints?id=spotinstiorestrict-scale-down).
 
 * Virtual node group (VNG): restrict scale down (only available for AWS, ECS, and GKE)
 
@@ -2117,9 +2164,10 @@ There are two options for restricting pods from scaling down:
 You cannot update the instance types in the default virtual node group. For example, it’s not supported to remove <i>m4.large</i> and <i>m5.large</i>, add <i>m5d.xlarge</i> and <i>m6i.xlarge</i> to the default virtual node group, and then update the cluster.
 
 If you do, you’ll get this error:
-<pre><code>
+
+````
 Launch spec ols-xxxxxxxx instance types are not a subset of ocean cluster
-</code></pre>
+````
 
 Remove the instance types at the cluster level, add <i>m5d.xlarge</i> and <i>m6i.xlarge</i> instance types, and then update the cluster.
 
@@ -2175,7 +2223,9 @@ Initially, the costs are compared with the on demand value of the instance types
 
 If your Ocean cluster won’t scale up, you may see a message like this in the Spot console logs:
 
-`Failed to perform scale up for virtual node group xxxxx (vng-xxxxx). Got status code different from SC_OK : 400 Body { "code": "BadRequest", "details": null, "message": "Client Error: error parsing version(1.26). If you would like to use alias minor version, please use api version starting from 2022-03-02-preview", "subcode": "" }`
+````
+Failed to perform scale up for virtual node group xxxxx (vng-xxxxx). Got status code different from SC_OK : 400 Body { "code": "BadRequest", "details": null, "message": "Client Error: error parsing version(1.26). If you would like to use alias minor version, please use api version starting from 2022-03-02-preview", "subcode": "" }
+````
 
 This happens when the Ocean cluster tries to create a node pool using a specific Kubernetes version. In this message, it’s version 1.26.
 
@@ -2208,17 +2258,19 @@ For Ocean clusters (AWS), you can use an AMI with the required architecture. Upd
 
 However, it’s not possible to do with Ocean AKS clusters because you cannot choose a particular image to run VMs when you create an AKS cluster.
 
-1.	Create a new virtual node group in the Ocean AKS cluster and configure it manually or import the configuration of a node pool.
-2.	Add vmSizes to the virtual node group JSON file.
-    <pre><code>"vmSizes": {
+1. Create a new virtual node group in the Ocean AKS cluster and configure it manually or import the configuration of a node pool.
+2. Add vmSizes to the virtual node group JSON file.
+
+    ````json
+	   "vmSizes": {
         "filters": {
             "architectures": [
                  "x86_64"
             ],
             "series": []
                 }
-    }</code>
-   </pre>
+    }
+    ````
    
    * <b>Architectures</b> is a list of strings, and the values can be a combination of <i>x86_64</i> (includes both <i>intel64</i> and <i>amd64</i>), <i>intel64</i>, <i>amd64</i>, and <i>arm64</i>.
 
@@ -2276,16 +2328,13 @@ Yes, you can define your configuration template to run your Spark application on
 
 Define a [Jupyter kernel](ocean-spark/tools-integrations/connect-jupyter-notebooks?id=define-jupyter-kernels-with-configuration-templates) with a low idle timeout so it’s scaled down quickly if it’s not in use:
 
-<pre><code>"spark.dynamicAllocation.enabled": "true",
-
+````
+"spark.dynamicAllocation.enabled": "true",
 "spark.dynamicAllocation.maxExecutors": "1",
-
 "spark.dynamicAllocation.minExecutors": "0",
-
 "spark.dynamicAllocation.initialExecutors": "0",
-
 "spark.dynamicAllocation.executorIdleTimeout": "10s"
-</code></pre>
+````
 
  </div>
  
@@ -2303,16 +2352,20 @@ You can either recreate the Ocean Spark cluster or update the labels and taints.
 
 **ocean-spark-system**
 
-<pre><code>    "labels": [
+````json
+    "labels": [
       {
         "key": "nodegroup-name",
         "value": "ofas-system"
       }
     ],
-    "taints": [],</code></pre>
+    "taints": [],
+````
 
 **ocean-spark-on-demand**
-<pre><code>    "labels": [
+
+````json
+    "labels": [
       {
         "key": "bigdata.spot.io/vng",
         "value": "ocean-spark"
@@ -2328,11 +2381,13 @@ You can either recreate the Ocean Spark cluster or update the labels and taints.
         "value": "ocean-spark",
         "effect": "NoSchedule"
       }
-    ],</code></pre>
+    ],
+````
 
 **ocean-spark-spot**
 
-<pre><code>    "labels": [
+````json
+    "labels": [
       {
         "key": "bigdata.spot.io/vng",
         "value": "ocean-spark"
@@ -2348,7 +2403,8 @@ You can either recreate the Ocean Spark cluster or update the labels and taints.
         "value": "ocean-spark",
         "effect": "NoSchedule"
       }
-    ],</code></pre>
+    ],
+````
 
 
  </div>
@@ -2370,7 +2426,7 @@ us-east-1, us-east-2, us-west-1, us-west-2, ca-central-1, sa-east-1, eu-central-
 
 **Azure Regions**
 
-australia-central, australia-central-2, australia-east, australia-south-east, brazil-south, canada-central, canada-east, central-india, central-us, east-asia, east-us, east-us-2, france-central, france-south, germany-central, germany-north, germany-north-east, germany-west-central, japan-east, japan-west, korea-central, korea-south, north-central-us, north-europe, norway-east, norway-west, south-africa-north, south-africa-west, south-central-us, south-east-asia, south-india, switzerland-north, switzerland-west, uae-central, uae-north, uk-south, uk-west, west-central-us, west-europe, west-india, us-gov-arizona, us-gov-texas ,us-gov-virginia , ,west-us, west-us-2, west-us-3.
+australia-central, australia-central-2, australia-east, australia-south-east, brazil-south, canada-central, canada-east, central-india, central-us, east-asia, east-us, east-us-2, france-central, france-south, germany-central, germany-north, germany-north-east, germany-west-central, japan-east, japan-west, korea-central, korea-south, north-central-us, north-europe, norway-east, norway-west, south-africa-north, south-africa-west, south-central-us, south-east-asia, south-india, switzerland-north, switzerland-west, uae-central, uae-north, uk-south, uk-west, west-central-us, west-europe, west-india, us-gov-arizona, us-gov-texas, us-gov-virginia, west-us, west-us-2, west-us-3.
 
 **GCP Regions**
 
@@ -2403,7 +2459,9 @@ An [Elastigroup may have Equal AZ Distribution](https://docs.spot.io/elastigroup
 
 You can get this message when the group or cluster is scaling up instances:
 
-`Can't Spin Instances: Code: ValidationError, Message: can't spin spot due to duplicate tags error`
+````
+Can't Spin Instances: Code: ValidationError, Message: can't spin spot due to duplicate tags error
+````
 
 This happens if you have duplicate tags configured:
 
@@ -2422,14 +2480,15 @@ This happens if you have duplicate tags configured:
    You can stream Elastigroup logs to an AWS S3 bucket. Then, you can configure Elasticsearch and Kibana to collect logs from the S3 bucket:
    * [Ocean](/ocean/features/log-integration-with-s3)
    * [Elastigroup](https://docs.spot.io/api/#tag/Elastigroup-AWS/operation/elastigroupAwsCreate) add this code to the JSON:
-     <pre><code> "logging": {
+     ````json
+	 "logging": {
        "export": {
          "s3": {
            "id": "di-123"
          }
        }
      }
-   </pre></code>
+     ````
 
  </div>
 
@@ -2484,10 +2543,11 @@ Instance metadata service (IMDS) is data about your instance that you can use to
 Instance metadata service version 2 (IMDSv2) addresses security concerns and vulnerabilities from IMDSv1. IMDSv2 has more security measures to protect against potential exploitation and unauthorized access to instance metadata.
 
 **Scenario 1: Ocean and Elastigroup**
+
 You can define metadata for autoscaling groups in AWS that gets imported when you import the groups from AWS to Spot. You can manually configure them in Spot to use IMDSv2.
 
 1. Follow the [Ocean AWS Cluster Create](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterCreate) or [Elastigroup AWS Create](https://docs.spot.io/api/#tag/Elastigroup-AWS/operation/elastigroupAwsCreate) API instructions and add this configuration for the cluster:
-   <pre><code class="lang-json">
+   ````json
    "compute": {
     "launchSpecification": {
         "instanceMetadataOptions": {
@@ -2497,7 +2557,7 @@ You can define metadata for autoscaling groups in AWS that gets imported when yo
           }
       }
     }
-   </code></pre>
+   ````
 
 2. Apply these changes to the currently running instances so the clusters are restarted and have the new definitions:
     * [Deploy an Elastigroup](https://docs.spot.io/elastigroup/tutorials/elastigroup-actions-menu/deploy-or-roll-elastigroup?id=deploy-an-elastigroup)
@@ -2510,21 +2570,21 @@ When a stateful managed node is imported from AWS, Spot creates an image from th
 You can use your own AMI and configure IMDSv2 on it. All instances launched after recycling will have IMDSv2 by default.
 
 1. Configure IMDSv2 on your AMI:
-    * If create a new AMI, you can add IMDSv2 support using AWS CLI:
-     <pre><code>
+    * If you're creating a new AMI, you can add IMDSv2 support using AWS CLI:
+     ````
       aws ec2 register-image Let me know if there is anything else I can help you with.
       --name my-image \
       --root-device-name /dev/xvda \
       --block-device-mappings DeviceName=/dev/xvda,Ebs={SnapshotId=snap-0123456789example} \
       --imds-support v2.0
-      </code></pre>
+      ````
 
     * If you use an existing AMI, you can add IMDSv2 using AWS CLI:
-      <pre><code>
+      ````
       aws ec2 modify-image-attribute \
       --image-id ami-0123456789example \
       --imds-support v2.0
-      </code></pre>
+      ````
 
 2. In the Spot console, [create a stateful node](https://docs.spot.io/managed-instance/getting-started/create-a-new-managed-instance) with the custom AMI.
 
@@ -2542,7 +2602,7 @@ Scaling policies typically include CloudWatch metrics such as CPU utilization, n
 
 You can configure a custom scaling policy that is based on another metric. For example, you may want to scale according to memory utilization.
 
-1.	To set a simple scaling policy, revert the Elastigroup configurations to the legacy design:
+1. To set a simple scaling policy, revert the Elastigroup configurations to the legacy design:
 
     <ol style="list-style-type: lower-alpha;">
      <li>In the Spot console, go to <b>Elastigroup</b> > <b>Groups</b>, and click on the name of an Elastigroup.</li>
@@ -2554,9 +2614,9 @@ You can configure a custom scaling policy that is based on another metric. For e
 
     </ol>
 
-2.	Click <b>Scaling</b> > <b>Simple Scaling Policies</b>.
-3.	Select <b>Up Scaling Policies</b> or <b>Down Scaling Policies</b> and click <b>Add Policy</b>.
-4.	Set these parameters:
+2. Click <b>Scaling</b> > <b>Simple Scaling Policies</b>.
+3. Select <b>Up Scaling Policies</b> or <b>Down Scaling Policies</b> and click <b>Add Policy</b>.
+4. Set these parameters:
     * <b>Policy Type</b>: <i>Simple scaling</i>
     * <b>Source</b>: <i>AWS CloudWatch</i>
     * <b>Auto Scale Based On</b>: <i>Other</i>
@@ -2622,7 +2682,9 @@ If an instance type isn’t [EBS-optimized by default](https://docs.aws.amazon.c
 
 If you’re getting this message:
 
-`Can't Spin Spot Instances: Message: The tag policy does not allow the specified value for the following tag key: 'XXX'.`
+````
+Can't Spin Spot Instances: Message: The tag policy does not allow the specified value for the following tag key: 'XXX'.
+````
 
 It means a tag defined in your Elastigroup or cluster doesn’t comply with AWS’s tag policy.
 
@@ -2671,7 +2733,7 @@ You can create a scaling policy for latency.
     * **Namespace**: <i>AWS/Application ELB</i>
     * **Metric Name**: <i>TargetResponseTime</i>
     * **Dimensions – Name**: <i>LoadBalancer</i>
-    * **Dimensions – Value**: this is the ARN of the load balancer, for example: <code>loadbalancer/app/{load-balancer-name}/{xxxxxxxxxxx}</code>
+    * **Dimensions – Value**: this is the ARN of the load balancer, for example: `loadbalancer/app/{load-balancer-name}/{xxxxxxxxxxx}`
 
      ![scaling-latency3](https://github.com/spotinst/help/assets/167069628/e9de15c8-6714-4f8f-a458-d2b4e182cf03)
 
@@ -2726,7 +2788,9 @@ If your Elastigroup has more on-demand instances than the on-demand workload cap
 
 When this happens, you can get this message in the Spot console logs:
 
-`Out Of Strategy - On Demand Above Strategy: Desired OD count: 0.0. Actual OD Count: xx. No Replacement Will Be Created Due To The Following Reason: Account Out Of Strategy procedure is currently suspended.`
+````
+Out Of Strategy - On Demand Above Strategy: Desired OD count: 0.0. Actual OD Count: xx. No Replacement Will Be Created Due To The Following Reason: Account Out Of Strategy procedure is currently suspended.
+````
 
 The fix strategy can be paused if:
 * There are no [spot markets](elastigroup/features/core-features/market-scoring-managing-interruptions?id=fix-strategy) available to launch spot instances. You can add more [instance types](elastigroup/features/compute/preferred-instance-types?id=preferred-instance-types) and [availability zones](elastigroup/features/compute/preferred-availability-zones) to your group to improve availability.
@@ -2743,14 +2807,16 @@ The fix strategy can be paused if:
 
 This message is shown in the console logs if Ocean attempts to scale up a certain spot instance type in a particular availability zone. This happens because of a lack of capacity on the AWS side.
 
-<code>Can't Spin Spot Instances: Code: InsufficientInstanceCapacity, Message: We currently do not have sufficient m5.2xlarge capacity in the Availability Zone you requested (us-east-1a). Our system will be working on provisioning additional capacity. You can currently get m5.2xlarge capacity by not specifying an Availability Zone in your request or choosing us-east-1b, us-east-1c, us-east-1d, us-east-1f.</code>
+````
+Can't Spin Spot Instances: Code: InsufficientInstanceCapacity, Message: We currently do not have sufficient m5.2xlarge capacity in the Availability Zone you requested (us-east-1a). Our system will be working on provisioning additional capacity. You can currently get m5.2xlarge capacity by not specifying an Availability Zone in your request or choosing us-east-1b, us-east-1c, us-east-1d, us-east-1f.
+````
 
 Ocean is aware of a pending pod and is spinning up an instance. Based on your current instance market, Ocean chooses the instance type in a particular availability zone and attempts to scale up. If it fails due to a lack of capacity, the error message is shown in the console logs.
 
 You can solve this by:
 * Having many instance types so Ocean can choose the best available markets.
 * Having multiple availability zones to provide more availability.
-* For workloads that are not resilient to disruptions, configure the [on demand label](https://docs.spot.io/ocean/features/labels-and-taints?id=spotinstionode-lifecycle) <code>spotinst.io/node-lifecycle</code>.
+* For workloads that are not resilient to disruptions, configure the [on demand label](https://docs.spot.io/ocean/features/labels-and-taints?id=spotinstionode-lifecycle) `spotinst.io/node-lifecycle`.
 
  </div>
 
@@ -2763,7 +2829,9 @@ You can solve this by:
 
 You have scaling up instances for your Elastigroup or Ocean clusters and you get this message:
 
-<code>ERROR, Can't Spin Instances: Code: InvalidSnapshot.NotFound, Message: The snapshot 'snap-xyz' does not exist.`</code>
+````
+ERROR, Can't Spin Instances: Code: InvalidSnapshot.NotFound, Message: The snapshot 'snap-xyz' does not exist.
+````
 
 If you have a block device that is mapped to a snapshot ID of an Elastigroup or Ocean cluster and the snapshot isn't available, you will get this error. This can happen if the snapshot is deleted.
 
@@ -2792,7 +2860,9 @@ If you have another snapshot, then you can use that snapshot ID for the block de
 
    You can get this message if AWS's spot service limit is reached:
    
-   <code>Can't Spin Spot Instances:Code: MaxSpotInstanceCountExceeded, Message: Max spot instance count exceeded</code>
+   ````
+   Can't Spin Spot Instances:Code: MaxSpotInstanceCountExceeded, Message: Max spot instance count exceeded
+````
 
 You may also get an email from Spot: <i>Spot Proactive Monitoring | Max Spot Instance Count Exceeded</i>. This email includes instructions for opening a support request with AWS, such as the instance type and region that triggered the error.
 
@@ -2827,7 +2897,9 @@ Update the key pair:
 
 If you get this error:
 
-<pre>Spot Bad Parameters: Spot Request id: Optional{instance ID}. Code: bad-parameters Message: <timestamp>: Instance launch failed because an EBS volume cannot be encrypted. If your launch specification includes an encrypted EBS volume, you must grant the AWSServiceRoleForEC2Spot service-linked role access to any custom KMS keys.</pre>
+````
+Spot Bad Parameters: Spot Request id: Optional{instance ID}. Code: bad-parameters Message: {timestamp}: Instance launch failed because an EBS volume cannot be encrypted. If your launch specification includes an encrypted EBS volume, you must grant the AWSServiceRoleForEC2Spot service-linked role access to any custom KMS keys.
+````
 
 Then there are missing permissions in the KMS custom key. You can configure KMS keys:
 * [From the same AWS account](https://docs.spot.io/elastigroup/tutorials/elastigroup-tasks/create-encryption-key?id=create-encryption-key)
@@ -2844,13 +2916,14 @@ Then there are missing permissions in the KMS custom key. You can configure KMS 
 
 When creating an Elastigroup with Ansible, you may get this message:
 
-<pre><code>TASK [create elastigroup] *****************************
-fatal: [localhost]: FAILED! => {"changed": false, "msg": "the Spotinst SDK library is required. (pip install spotinst_sdk2)"}</code></pre>
+````
+TASK [create elastigroup] *****************************
+fatal: [localhost]: FAILED! => {"changed": false, "msg": "the Spotinst SDK library is required. (pip install spotinst_sdk2)"}
+````
 
 You can get this message even if the library is installed. This can happen if Ansible uses the default Python version, which may not include the required packages.
 
-1. Check which version Ansible is using:
-   `ansible localhost -a 'which python'`
+1. Check which version Ansible is using: `ansible localhost -a 'which python'`
 
 2. Add [Ansible Python interpreter](https://docs.ansible.com/ansible/latest/reference_appendices/python_3_support.html#python-3-support) (ansible_python_interpreter) to the ansible.cfg file.
 
@@ -2888,9 +2961,12 @@ Update the parameters:
   <div style="padding-left:16px">
 
 When you import a new group to Elastigroup, you may get this error:
-<code>"value" contains a conflict between exclusive peers [resourceRequirements, spot]</code>
 
-This happens if the <code>resourceRequirements</code> value is <i>null</i>.
+````
+"value" contains a conflict between exclusive peers [resourceRequirements, spot]
+````
+
+This happens if the `resourceRequirements` value is <i>null</i>.
 
 Remove the <i>resourceRequirements</i> field from the JSON file and reimport the group.
 
@@ -2905,7 +2981,9 @@ Remove the <i>resourceRequirements</i> field from the JSON file and reimport the
 
 You may get this message when creating or importing an Elastigroup or cluster if you reach your AWS service quota limit for security groups per network interface:
 
-````POST https://api.spotinst.io/aws/ec2/group?accountId=act-xxxxx: 400 (request: "xxxxx") SecurityGroupLimitExceeded: You have exceeded the number of VPC security groups allowed per instance.````
+````
+POST https://api.spotinst.io/aws/ec2/group?accountId=act-xxxxx: 400 (request: "xxxxx") SecurityGroupLimitExceeded: You have exceeded the number of VPC security groups allowed per instance.
+````
 
 You can [request a quota increase from AWS](https://docs.aws.amazon.com/vpc/latest/userguide/amazon-vpc-limits.html).
 
@@ -2921,12 +2999,14 @@ You can [request a quota increase from AWS](https://docs.aws.amazon.com/vpc/late
 
 You can get this error when the group's device name (for Block Device Mapping) and the AMI's device name do not match:
 
-<code>Can't Spin Spot Instance: Code: InvalidBlockDeviceMapping, Message: The device 'xvda' is used in more than one block-device mapping</code>
+````
+Can't Spin Spot Instance: Code: InvalidBlockDeviceMapping, Message: The device 'xvda' is used in more than one block-device mapping
+````
 
 * AMI - "deviceName": "xvda"
 * Group's configuration - "deviceName": "/dev/xvda"
 
-Change the device name from <code>xvda</code> to <code>/dev/xvda</code> on the group's side. Go to **Actions** > **Edit Configuration** > **Review Tab** > **Switch to Json Edit format** > **Apply the changes and save**.
+Change the device name from `xvda` to `/dev/xvda` on the group's side. Go to **Actions** > **Edit Configuration** > **Review Tab** > **Switch to Json Edit format** > **Apply the changes and save**.
 
  </div>
 
@@ -2978,17 +3058,17 @@ WAIT_BEFORE_TERMINATION<br>
 
 Sample code with items.state:
 
-<pre><code>
+````json
   "response": {
     "status": {
       "code": 200,
       "message": "OK"
     },
-    <font color="#FC01CC">"items": [</font>
+    "items": [
       {
         "id": "cdbg-3ccf1234",
         "groupId": "sig-87231234",
-        <font color="#FC01CC">"state": "STARTING",</font>
+        "state": "STARTING",
         "config": {
           "timeout": 20,
           "tags": [
@@ -2997,8 +3077,7 @@ Sample code with items.state:
               "tagValue": "pink"
             }
           ],
-
-</code></pre>
+````
 
    </div>
 
@@ -3025,12 +3104,14 @@ Yes, you can connect using SSH to a VM running:
   <div style="padding-left:16px">
 
   You may get one of these error messages when you're trying to import VMs to Elastigroup:
-  * <code>Failed to import virtual machine. Could not retrieve custom image.</code>
-  * <code>The create/import has failed. The storage account https://`<storage-account>` that was defined for the boot diagnostic preferences was not found.”</code>
+
+*   `Failed to import virtual machine. Could not retrieve custom image.`
+*   `The create/import has failed. The storage account https://{storage-account} that was defined for the boot diagnostic preferences was not found.”`
 
 This can happen when the image or storage account does not exist in the Azure portal. Elastigroup validates the resources configured in the VM before importing to make sure the import process will not fail.
 
 **Failed to import virtual machine**
+
 One of the resources checked is the image, which is taken from the VM JSON configuration file.
 
 If you get the `Failed to import virtual machine. Could not retrieve custom image.` message, it means that Elastigroup couldn't find the custom image configured.
@@ -3038,6 +3119,7 @@ If you get the `Failed to import virtual machine. Could not retrieve custom imag
 Find the name of the image in the Azure console. Go to **VM details** > **JSON view** > **imageReference**.
 
 **The create/import has failed**
+
 The storage account `<Service account>` that was defined for the boot diagnostic preferences was not found.
 
 Before starting the import process, Elastigroup verifies that the service account configured exists in the subscription.
@@ -3057,7 +3139,9 @@ Find the storage account URL in the Azure console. Go to **VM details** > **JSON
 
 When an instance is imported or launched, you may see this message in the Spot console:
 
-```ERROR Failed to launch virtual machine. Azure error code : RequestDisallowedByPolicy, message : Resource xxxxx was disallowed by policy. Policy identifiers: '[{"policyAssignment":{"name":"Allowed virtual machine size SKUs","id":"/providers/Microsoft.Management/managementGroups/mgid-bcbsri-root-001/providers/Microsoft.Authorization/policyAssignments/xxxxxx"},"policyDefinition":{"name":"Allowed virtual machine size SKUs","id":"/providers/Microsoft.Authorization/policyDefinitions/xxxxx"}}]'```
+````
+ERROR Failed to launch virtual machine. Azure error code : RequestDisallowedByPolicy, message : Resource xxxxx was disallowed by policy. Policy identifiers: '[{"policyAssignment":{"name":"Allowed virtual machine size SKUs","id":"/providers/Microsoft.Management/managementGroups/mgid-bcbsri-root-001/providers/Microsoft.Authorization/policyAssignments/xxxxxx"},"policyDefinition":{"name":"Allowed virtual machine size SKUs","id":"/providers/Microsoft.Authorization/policyDefinitions/xxxxx"}}]'
+````
 
 This can happen if the policy limits launching VMs, which would limit launching instances.
 
@@ -3076,7 +3160,9 @@ You may have a VM showing as offline in the Jenkins console, but you can see tha
 
 You can see this message in the Jenkins console:
 
-`IP for agent is not available yet not attaching SSH launcher`
+````
+IP for agent is not available yet not attaching SSH launcher
+````
 
 This can happen if you launch agents via SSH and not JNLP, <b><i>and</i></b> you’re using private IPs configured in Elastigroup, but not in the Jenkins plugin. The Jenkins plugin then establishes a connection using a public IP.
 
@@ -3122,7 +3208,9 @@ Set up committed use discounts for:
   <div style="padding-left:16px">
   You can get this message if instances aren’t starting:
 
-<pre><code>Invalid value for field 'resource.disks[0].initializeParams.diskSizeGb': '80'. Requested disk size cannot be smaller than the image size (100 GB)</code></pre>
+````
+Invalid value for field 'resource.disks[0].initializeParams.diskSizeGb': '80'. Requested disk size cannot be smaller than the image size (100 GB)
+````
 
 You need to increase the disk size for the Elastigroup:
 
@@ -3140,7 +3228,9 @@ You need to increase the disk size for the Elastigroup:
 
 If Elastigroup isn’t launching a VM, you might get this log message:
 
-```Can’t Spin Instance: Name: sin-abcd. Code: Error, Message: Invalid resource usage: 'Requested boot disk architecture (X86_64) is not compatible with machine type architecture (ARM64).'```
+````
+Can’t Spin Instance: Name: sin-abcd. Code: Error, Message: Invalid resource usage: 'Requested boot disk architecture (X86_64) is not compatible with machine type architecture (ARM64).'
+````
 
 This can happen because Elastigroup doesn’t validate VM architecture for GCP. You can [troubleshoot this error](https://cloud.google.com/compute/docs/troubleshooting/troubleshooting-arm-vms#errors_when_updating_vms) in GCP.
 
@@ -3155,8 +3245,10 @@ This can happen because Elastigroup doesn’t validate VM architecture for GCP. 
 
 You may get this log message when a VM is trying to scale up or launch VMs:
 
-<pre><code>Can't Spin Instance: Name: abcde. Code: ZONE_RESOURCE_POOL_EXHAUSTED_WITH_DETAILS,
-Message: The zone 123 does not have enough resources available to fulfill the request, '(resource type:compute)'.</code></pre>
+````
+Can't Spin Instance: Name: abcde. Code: ZONE_RESOURCE_POOL_EXHAUSTED_WITH_DETAILS,
+Message: The zone 123 does not have enough resources available to fulfill the request, '(resource type:compute)'.
+````
 
 This can happen if the specific VM family and size aren’t available for a certain zone at the moment. Elastigroup or Ocean will try to automatically spin up a different VM in a different zone to compensate.
 
@@ -3172,14 +3264,15 @@ This can happen if the specific VM family and size aren’t available for a cert
    You can stream Elastigroup logs to an AWS S3 bucket. Then, you can configure Elasticsearch and Kibana to collect logs from the S3 bucket:
    * [Ocean](/ocean/features/log-integration-with-s3)
    * [Elastigroup](https://docs.spot.io/api/#tag/Elastigroup-AWS/operation/elastigroupAwsCreate) add this code to the JSON:
-     <pre><code> "logging": {
+     ````json
+	 "logging": {
        "export": {
          "s3": {
            "id": "di-123"
          }
        }
      }
-   </pre></code>
+     ````
 
  </div>
 
@@ -3192,16 +3285,12 @@ This can happen if the specific VM family and size aren’t available for a cert
   <div style="padding-left:16px">
 
 You can run this script to stop Spotinst-Agent from sending logs to syslog:
-<pre>
- <code>
 
+````
 sed -i 's/[Service]/[Service]\nStandardOutput=null\nStandardError=null/g' /lib/systemd/system/spotinst-agent.service
 systemctl daemon-reload
 systemctl restart spotinst-agent
- 
-  </code>
- 
- </pre>
+````
 
  </div>
 
@@ -3258,7 +3347,9 @@ Add variables in the [Elastic Beanstalk console](https://docs.aws.amazon.com/ela
 
 If you get this message when you try to delete an Elastigroup Beanstalk from the Spot console:
 
-<code>Group is in ERROR state and not in READY state, cannot delete it</code>
+````
+Group is in ERROR state and not in READY state, cannot delete it
+````
 
 You need to put the group in maintenance mode and detach the remaining instances, then you can delete the Elastigroup. 
 
@@ -3290,7 +3381,7 @@ us-east-1, us-east-2, us-west-1, us-west-2, ca-central-1, sa-east-1, eu-central-
 
 **Azure Regions**
 
-australia-central, australia-central-2, australia-east, australia-south-east, brazil-south, canada-central, canada-east, central-india, central-us, east-asia, east-us, east-us-2, france-central, france-south, germany-central, germany-north, germany-north-east, germany-west-central, japan-east, japan-west, korea-central, korea-south, north-central-us, north-europe, norway-east, norway-west, south-africa-north, south-africa-west, south-central-us, south-east-asia, south-india, switzerland-north, switzerland-west, uae-central, uae-north, uk-south, uk-west, west-central-us, west-europe, west-india, us-gov-arizona, us-gov-texas ,us-gov-virginia , ,west-us, west-us-2, west-us-3.
+australia-central, australia-central-2, australia-east, australia-south-east, brazil-south, canada-central, canada-east, central-india, central-us, east-asia, east-us, east-us-2, france-central, france-south, germany-central, germany-north, germany-north-east, germany-west-central, japan-east, japan-west, korea-central, korea-south, north-central-us, north-europe, norway-east, norway-west, south-africa-north, south-africa-west, south-central-us, south-east-asia, south-india, switzerland-north, switzerland-west, uae-central, uae-north, uk-south, uk-west, west-central-us, west-europe, west-india, us-gov-arizona, us-gov-texas, us-gov-virginia, west-us, west-us-2, west-us-3.
 
 **GCP Regions**
 
@@ -3311,11 +3402,11 @@ us-east1, us-east1, us-east1, us-east4, us-east4, us-east4, us-central1, us-cent
 
 AWS decides according to:
 
-1.	If the market matches a free zonal reserved instance commitment, then the instance is a reserved instance.
-2.	If the market matches a free regional reserved instance commitment, then the instance is a reserved instance.
-3.	If the market matches a free EC2 instance savings plan commitment, then the instance is a savings plan.
-4.	If there is any free compute service plan commitment, then the instance is a savings plan.
-5.	Otherwise, the instance will run as a full-price on-demand instance.
+1. If the market matches a free zonal reserved instance commitment, then the instance is a reserved instance.
+2. If the market matches a free regional reserved instance commitment, then the instance is a reserved instance.
+3. If the market matches a free EC2 instance savings plan commitment, then the instance is a savings plan.
+4. If there is any free compute service plan commitment, then the instance is a savings plan.
+5. Otherwise, the instance will run as a full-price on-demand instance.
 
 Throughout the lifetime of an instance, it can change its “price” whenever there’s any change in the commitments utilization rate. For example, if an instance is running as a full price on-demand instance, and another instance that was utilizing a compute savings plan commitment was terminated, the first instance will start utilizing this commitment if its hourly price rate has enough free space under this commitment. It might take a couple of minutes for this change to show, but since the billing is being calculated retroactively, in practice it’s starting to utilize the commitment right away.
    
@@ -3332,10 +3423,11 @@ Instance metadata service (IMDS) is data about your instance that you can use to
 Instance metadata service version 2 (IMDSv2) addresses security concerns and vulnerabilities from IMDSv1. IMDSv2 has more security measures to protect against potential exploitation and unauthorized access to instance metadata.
 
 **Scenario 1: Ocean and Elastigroup**
+
 You can define metadata for autoscaling groups in AWS that gets imported when you import the groups from AWS to Spot. You can manually configure them in Spot to use IMDSv2.
 
 1. Follow the [Ocean AWS Cluster Create](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterCreate) or [Elastigroup AWS Create](https://docs.spot.io/api/#tag/Elastigroup-AWS/operation/elastigroupAwsCreate) API instructions and add this configuration for the cluster:
-   <pre><code class="lang-json">
+   ````json
    "compute": {
     "launchSpecification": {
         "instanceMetadataOptions": {
@@ -3345,7 +3437,7 @@ You can define metadata for autoscaling groups in AWS that gets imported when yo
           }
       }
     }
-   </code></pre>
+   ````
 
 2. Apply these changes to the currently running instances so the clusters are restarted and have the new definitions:
     * [Deploy an Elastigroup](https://docs.spot.io/elastigroup/tutorials/elastigroup-actions-menu/deploy-or-roll-elastigroup?id=deploy-an-elastigroup)
@@ -3358,23 +3450,23 @@ When a stateful managed node is imported from AWS, Spot creates an image from th
 You can use your own AMI and configure IMDSv2 on it. All instances launched after recycling will have IMDSv2 by default.
 
 1. Configure IMDSv2 on your AMI:
-    * If create a new AMI, you can add IMDSv2 support using AWS CLI:
-     <pre><code>
+    * If you're creating a new AMI, you can add IMDSv2 support using AWS CLI:
+     ````
       aws ec2 register-image Let me know if there is anything else I can help you with.
       --name my-image \
       --root-device-name /dev/xvda \
       --block-device-mappings DeviceName=/dev/xvda,Ebs={SnapshotId=snap-0123456789example} \
       --imds-support v2.0
-      </code></pre>
+     ````
 
     * If you use an existing AMI, you can add IMDSv2 using AWS CLI:
-      <pre><code>
+      ````
       aws ec2 modify-image-attribute \
       --image-id ami-0123456789example \
       --imds-support v2.0
-      </code></pre>
+   ````
 
-2. In the Spot console, [create a stateful node](https://docs.spot.io/managed-instance/getting-started/create-a-new-managed-instance) with the custom AMI.
+3. In the Spot console, [create a stateful node](https://docs.spot.io/managed-instance/getting-started/create-a-new-managed-instance) with the custom AMI.
    
  </div>
 
@@ -3406,9 +3498,10 @@ You can use your own AMI and configure IMDSv2 on it. All instances launched afte
    2. Go to **Review** > **JSON** and select **Edit Mode**.
    3. Change <b>lifeCycle</b> to <i>on_demand</i> and click **Update**. For example:
 
-       <pre><code>"strategy": {
+       ````json
+	   "strategy": {
           "lifeCycle": "on_demand”,
-       </code></pre>
+       ````
 
    4. [Recycle](managed-instance/features/replacement-process) the stateful node to launch an on-demand instance.
    5. Wait until the new on-demand instance is running and healthy in the Spot console.
@@ -3486,20 +3579,22 @@ Normally, AWS automatically sets the hostname when the instance is launched. It�
 
 You can set a custom hostname that will continue to be used during the recycle process:
 
-1.	Edit the hosts file and change the name permanently: `sudo gedit /etc/hostname /etc/hosts`
-2.	Update the CUSTOM_HOSTNAME:
+1. Edit the hosts file and change the name permanently: `sudo gedit /etc/hostname /etc/hosts`
+2. Update the CUSTOM_HOSTNAME:
 
-    <pre><code>#!/bin/bash
+    ````
+    #!/bin/bash
      CUSTOM_HOSTNAME="my-custom-hostname"
      echo "preserve_hostname: true" > /etc/cloud/cloud.cfg.d/99_persist_hostname.cfg
      echo "$CUSTOM_HOSTNAME" > /etc/hostname
      sed -i "s/^127\.0\.0\.1.*/127.0.0.1 localhost $CUSTOM_HOSTNAME/" /etc/hosts
-     hostnamectl set-hostname "$CUSTOM_HOSTNAME"</code></pre>
+     hostnamectl set-hostname "$CUSTOM_HOSTNAME"
+    ````
 
 If you want to use the instance IPv4 address that the node was originally launched with:
 
-1.	In the metadata file, get the instance IP: `curl -s http://169.254.169.254/latest/meta-data/local-ipv4`
-2.	Make sure <b>Persist Private IP</b> is configured. The custom hostname should also persist during replacement because the hostname is connected to the persistent IP.
+1. In the metadata file, get the instance IP: `curl -s http://169.254.169.254/latest/meta-data/local-ipv4`
+2. Make sure <b>Persist Private IP</b> is configured. The custom hostname should also persist during replacement because the hostname is connected to the persistent IP.
 
     <ol style="list-style-type: lower-alpha;">
     <li>Go to the stateful node in the Spot console and click <b>Actions</b> > <b>Edit Configuration</b>.</li>
@@ -3512,13 +3607,17 @@ If you want to use the instance IPv4 address that the node was originally launch
     <ol style="list-style-type: lower-alpha;">
     <li>Go to the stateful node in the Spot console and click <b>Actions</b> > <b>Edit Configuration</b> > <b>Initialization and Termination</b>.</li>
     <li><p>Add this script to <b>User Data</b>:</p>
-      <pre><code>#!/bin/bash
+
+      ````
+	    #!/bin/bash
        PRIVATE_IP=$(curl -s http://169.254.169.254/latest/meta-data/local-ipv4)
        AWS_HOSTNAME="ip-$(echo $PRIVATE_IP | tr '.' '-')"
        echo "preserve_hostname: true" > /etc/cloud/cloud.cfg.d/99_persist_hostname.cfg
        echo "$AWS_HOSTNAME" > /etc/hostname
        sed -i "s/^127\.0\.0\.1.*/127.0.0.1 localhost ${AWS_HOSTNAME}/" /etc/hosts
-       hostnamectl set-hostname "$AWS_HOSTNAME"</code></pre></li>
+       hostnamectl set-hostname "$AWS_HOSTNAME"
+    ````
+    </li>
    </ol>
 
 You can also persist the hostname for [RHEL 7, 8, and 9, and CentOS 7, 8, and 9](https://repost.aws/knowledge-center/linux-static-hostname-rhel7-centos7).
@@ -3533,7 +3632,10 @@ You can also persist the hostname for [RHEL 7, 8, and 9, and CentOS 7, 8, and 9]
   <div style="padding-left:16px">
 
    You can see this error in the log:
-   <code>08/20/2023, 5:36 AM, WARN, Instance: [i-01234567890abcdefg] have been detected as Stopped.</code>
+   
+   ````
+   WARN, Instance: [i-01234567890abcdefg] have been detected as Stopped.
+````
 
    It's possible to [stop an instance in AWS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html), but Spot doesn't support the Stop action. This causes out-of-sync issues.
 
@@ -3549,7 +3651,10 @@ You can also persist the hostname for [RHEL 7, 8, and 9, and CentOS 7, 8, and 9]
   <div style="padding-left:16px">
 
    You may get this error:
-   <code>botocore.exceptions.ClientError: An error occurred (UnsupportedOperation) when calling the StopInstances operation: You can't stop the Spot Instance '<Instance-ID>' because it is associated with a one-time Spot Instance request. You can only stop Spot Instances associated with persistent Spot Instance requests.</code>
+   
+   ````
+   botocore.exceptions.ClientError: An error occurred (UnsupportedOperation) when calling the StopInstances operation: You can't stop the Spot Instance {Instance-ID} because it is associated with a one-time Spot Instance request. You can only stop Spot Instances associated with persistent Spot Instance requests.
+````
 
    It's possible to [stop an instance in AWS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html), but Spot doesn't support the Stop action.
    
@@ -3564,7 +3669,9 @@ You can also persist the hostname for [RHEL 7, 8, and 9, and CentOS 7, 8, and 9]
 
 You get this message:
 
-<code>ERROR, Can't Spin Spot Instances: Code: InvalidBlockDeviceMapping, Message: Volume of size xx GB is smaller than snapshot 'snap-xxx', expect size >= xx GB"</code>
+````
+ERROR, Can't Spin Spot Instances: Code: InvalidBlockDeviceMapping, Message: Volume of size xx GB is smaller than snapshot 'snap-xxx', expect size >= xx GB"
+````
 
 If the current volume size is updated, it can cause a mismatch between the volume size and the AMI snapshot size.
 
@@ -3573,7 +3680,8 @@ Update the block device mapping configuration and increase the volume size to ma
 1. In the stateful node, go to **Actions** > **Edit Configuration** > **Review** > **JSON** > **Edit Mode**.
 2. Update the group configuration and click **Update**.
 
-   <pre><code>"blockDeviceMappings": [
+   ````json
+           "blockDeviceMappings": [
                 {
                     "deviceName": "/dev/sda1",
                     "ebs": {
@@ -3583,7 +3691,7 @@ Update the block device mapping configuration and increase the volume size to ma
                     }
                 }
             ]
-   </code></pre>
+   ````
 
 3. Start a [resume action](managed-instance/features/managed-instance-actions?id=resume).
 
@@ -3667,7 +3775,7 @@ Yes, you can increase the disk size for stateful nodes.
 
    3. Change `revertToSpot` to <i>never</i>:
 
-      <pre><code>
+      ````json
       {
        "statefulNode": {
          "name": "Spot Stateful Node",
@@ -3680,11 +3788,11 @@ Yes, you can increase the disk size for stateful nodes.
            "preferredLifecycle": "od",
            "revertToSpot": "never",
            "optimizationWindows": null,
-      </code></pre>
+      ````
 
    4. Add the `"preferredLifecycle": "od",` parameter:
    
-      <pre><code>
+      ````json
       {
        "statefulNode": {
          "name": "Spot Stateful Node",
@@ -3697,7 +3805,7 @@ Yes, you can increase the disk size for stateful nodes.
            "preferredLifecycle": "od",
            "revertToSpot": "never",
            "optimizationWindows": null,
-      </code></pre>
+      ````
 
    5. [Recycle the stateful node](https://docs.spot.io/managed-instance/azure/features/actions).
    6. Make sure the stateful node is not running on the Spot VM.
@@ -3725,6 +3833,7 @@ Yes, you can increase the disk size for stateful nodes.
       <li>Go to the stateful node in the Spot console and click <b>Actions</b> > <b>Edit Configuration</b>.</li>
       <li>Go to <b>Review</b>, switch to <b>JSON review</b>, and select <b>Edit Mode</b>.</li>
       <li><p>Change `revertToSpot` to <i>never</i>:</p>
+        
          <pre><code>
       {
        "statefulNode": {
@@ -3738,9 +3847,10 @@ Yes, you can increase the disk size for stateful nodes.
            "preferredLifecycle": "od",
            "revertToSpot": "never",
            "optimizationWindows": null,
-      </code></pre>
+	  </code></pre>
       </li>
       <li><p>Add the `"preferredLifecycle": "od",` parameter:</p>
+        
          <pre><code>
       {
        "statefulNode": {
@@ -3754,7 +3864,8 @@ Yes, you can increase the disk size for stateful nodes.
            "preferredLifecycle": "od",
            "revertToSpot": "never",
            "optimizationWindows": null,
-      </code></pre>
+         </code></pre>
+	 
       </li>
       <li><a href="https://docs.spot.io/managed-instance/azure/features/actions">Recycle the stateful node</a>.</li>
       <li>Make sure the stateful node is not running on the Spot VM.</li>
@@ -3764,9 +3875,9 @@ Yes, you can increase the disk size for stateful nodes.
       <li>In the Delete Stateful Node window, make sure to deselect all the options because you need the VM to run on the Azure side.</li>
       <li>Verify that the VM with the resources is running in Azure.</li>
        </ol>
-   2.	[Move the Azure resources to a different subscription](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/move-resource-group-and-subscription).
-   3.	[Connect your Azure subscription](connect-your-cloud-provider/first-account/?id=connect-azure).
-   4.	[Import a stateful VM](managed-instance/azure/getting-started/import-stateful-node).
+   2. [Move the Azure resources to a different subscription](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/move-resource-group-and-subscription).
+   3. [Connect your Azure subscription](connect-your-cloud-provider/first-account/?id=connect-azure).
+   4. [Import a stateful VM](managed-instance/azure/getting-started/import-stateful-node).
 
  </div>
 
@@ -4140,4 +4251,3 @@ You can get your [tenant ID](https://learn.microsoft.com/en-us/entra/fundamental
  </div>
 
  </details>
-
