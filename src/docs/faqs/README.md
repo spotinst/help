@@ -2000,6 +2000,25 @@ The Ocean Controller saves up to 8 days of logs. The logs for each day are about
  </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocrightsizingmetrics">AKS, EKS, GKE: Why is rightsizing information not showing after installing the metrics server?</summary>
+
+  <div style="padding-left:16px">
+
+[Rightsizing](ocean/features/ocean-cluster-right-sizing-tab) data may not show after installing the metrics server:
+
+1. Make sure you’re using the [latest version of the controller](ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-update). It takes around 4 days for the metrics to show after upgrading.
+2. If you’re using an EKS cluster, make sure you have 2 [security groups](https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html):
+
+    * Worker node group with an inbound rule that allows communication with the control plane’s security group through port 443.
+    * Cluster’s control plane.
+
+3. Check the [common issues with the metrics server](https://repost.aws/knowledge-center/eks-metrics-server).
+
+ </div>
+
+ </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocnorestrict">AKS, EKS, GKE: Why is the out of strategy replacement getting canceled for pods <i>without</i> the restrict-scale-down label?</summary>
 
   <div style="padding-left:16px">
@@ -2017,7 +2036,6 @@ Make sure that labels and annotations don’t prevent scaling down [on the virtu
  </div>
 
  </details>
-
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceantokens">AKS, EKS, GKE: What are the minimum permissions needed for a programmatic token for creating an Ocean cluster controller?</summary>
