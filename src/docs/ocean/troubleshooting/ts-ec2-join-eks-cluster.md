@@ -44,9 +44,9 @@ Follow these steps to ensure that the EC2 instances created by Ocean successfull
        --group system:nodes
      ```
 2.  Replace the placeholders with your actual values:
-    *   `<EKS_CLUSTER_NAME>`: Your EKS cluster name
-    *   `<AWS_ACCOUNT_ID>`: Your AWS account ID
-    *   `<NODE_IAM_ROLE>`: The IAM Role ARN retrieved in the previous step
+    *  `<EKS_CLUSTER_NAME>`: Your EKS cluster name
+    *  `<AWS_ACCOUNT_ID>`: Your AWS account ID
+    *  `<NODE_IAM_ROLE>`: The IAM Role ARN retrieved in the previous step
 
 ## Additional Notes
 
