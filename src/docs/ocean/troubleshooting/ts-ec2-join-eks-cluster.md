@@ -27,22 +27,22 @@ Follow these steps to ensure that the EC2 instances created by Ocean successfull
 
 2.  Run the following command to retrieve the IAM Role ARN:
 
-```sh
-aws iam get-instance-profile --instance-profile-name <INSTANCE_PROFILE_NAME>
-```
-Replace `<INSTANCE_PROFILE_NAME>` with the name of the Instance Profile selected in the VNG.
+   ```sh
+   aws iam get-instance-profile --instance-profile-name <INSTANCE_PROFILE_NAME>
+   ```
+   Replace `<INSTANCE_PROFILE_NAME>` with the name of the Instance Profile selected in the VNG.
 
 ###  Step 2: Pre-map IAM Role in `aws-auth` ConfigMap
 
 1.  Use the following `eksctl` command to create the IAM identity mapping:
-  ```sh
-  eksctl create iamidentitymapping \  
-    --cluster <EKS_CLUSTER_NAME> \  
-    --arn arn:aws:iam::<AWS_ACCOUNT_ID>:role/<NODE_IAM_ROLE> \  
-    --username system:node:{{EC2PrivateDNSName}} \  
-    --group system:bootstrappers \  
-    --group system:nodes
-  ```
+     ```sh
+     eksctl create iamidentitymapping \  
+       --cluster <EKS_CLUSTER_NAME> \  
+       --arn arn:aws:iam::<AWS_ACCOUNT_ID>:role/<NODE_IAM_ROLE> \  
+       --username system:node:{{EC2PrivateDNSName}} \  
+       --group system:bootstrappers \  
+       --group system:nodes
+     ```
 2.  Replace the placeholders with your actual values:
     *   `<EKS_CLUSTER_NAME>`: Your EKS cluster name
     *   `<AWS_ACCOUNT_ID>`: Your AWS account ID
