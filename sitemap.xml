@@ -2542,13 +2542,6 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/faqs/"/>
     </url>
     <url>
-        <loc>https://docs.spot.io/kb/code</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/kb/code"/>
-        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/kb/code"/>
-    </url>
-    <url>
         <loc>https://docs.spot.io/kb/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
