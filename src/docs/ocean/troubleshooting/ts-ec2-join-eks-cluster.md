@@ -30,7 +30,7 @@ Follow these steps to ensure that the EC2 instances created by Ocean successfull
       ```sh
       aws iam get-instance-profile --instance-profile-name <INSTANCE_PROFILE_NAME>
       ```
-   >   Where `<INSTANCE_PROFILE_NAME>` is the name of the instance profile selected in the VNG.
+   >   Replace `<INSTANCE_PROFILE_NAME>` with the name of the instance profile selected in the VNG.
 
 ###  Step 2: Pre-map IAM Role in `aws-auth` ConfigMap
 
