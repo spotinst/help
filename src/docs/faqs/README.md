@@ -1016,6 +1016,30 @@ Generate a new client secret <i>value</i> and [update it in the API](https://doc
 
  </details>
 
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="occooldown">ECS, EKS, GKE: How does cooldown work in Ocean?</summary>
+
+  <div style="padding-left:16px">
+
+For scale-up events, Ocean scales up as quickly as possible.
+
+For scale-down events, cooldown is the number of seconds that Ocean waits after the end of a scaling action before starting another scaling action. The default is 300 seconds (5 minutes).
+
+Cooldown is set at the cluster level and is applied across all virtual node groups in the cluster. So if a node of one virtual node group is scaled down, then Ocean waits for the cooldown time to pass before scaling down another node in a virtual node group.
+
+You can set the cooldown period:
+
+* In the Spot console, go to **Ocean** > **Cloud Clusters** > select the cluster > **Actions** > **Edit Cluster** > **Review** > **JSON** > **Edit Mode**.
+* Using the APIs:
+
+   * [Ocean AWS cluster update](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterUpdate)
+   * [Ocean ECS cluster update](https://docs.spot.io/api/#tag/Ocean-ECS/operation/OceanECSClusterUpdate)
+   * [Ocean GKE cluster update](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKEClusterUpdate)
+
+ </div>
+
+ </details>
+
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocnewnodeaz">ECS, EKS: Are new nodes launched in the same availability zone as the old nodes?</summary>
 
@@ -1378,7 +1402,6 @@ You can also [push the ECS agent logs to CloudWatch](https://docs.aws.amazon.com
  </div>
 
  </details>
-
 
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceandisconnectcluster">EKS: How can I disconnect a cluster from Ocean?</summary>
