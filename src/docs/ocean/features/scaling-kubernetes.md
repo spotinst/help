@@ -184,7 +184,7 @@ You can only set the suspension hours via the [Spot API](https://docs.spot.io/ap
 
 ## Headroom
 
-One of Ocean’s key features for optimizing scaling is [_headroom_](ocean/features/headroom), a buffer of spare capacity ensuring that a cluster is always ready for a rapid application scale up. When you configure headroom in specific amounts of resources (i.e., vCPU, memory, and GPU), or specify headroom as a percentage of the cluster’s total requested resources, the cluster can scale workloads without waiting for new instances to be provisioned.
+One of Ocean’s key features for optimizing scaling is [headroom](ocean/features/headroom), a buffer of spare capacity ensuring that a cluster is always ready for a rapid application scale up. When you configure headroom in specific amounts of resources (i.e., vCPU, memory, and GPU), or specify headroom as a percentage of the cluster’s total requested resources, the cluster can scale workloads without waiting for new instances to be provisioned.
 
 In addition to the benefits of using headroom, it is important to know how headroom could affect scaling. The compute resources saved as headroom restrict the scale-down of a node, as if those were actual containers running, to keep the amount of headroom required. In addition, if there is missing headroom, a scale-up will be triggered to ensure that headroom is maintained.
 
@@ -257,7 +257,7 @@ This feature is available via API on the [cluster level](https://docs.spot.io/ap
 
 Cloud service provider relevance: <font color="#FC01CC">AKS</font> 
 
-Ocean with [Controller V2](ocean/tutorials/ocean-controller-v2) supports Pod Scheduling Readiness (included in Kubernetes 1.30), which considers whether a pod is ready to be scheduled. This feature lets you reduce the churn of pods that stay in a "miss-essential-resources" state for a long time. 
+Ocean with [Controller V2](https://docs.spot.io/ocean/tutorials/ocean-controller-v2) supports Pod Scheduling Readiness (included in Kubernetes 1.30), which considers whether a pod is ready to be scheduled. This feature lets you reduce the churn of pods that stay in a "miss-essential-resources" state for a long time. 
 Pods with the `SchedulingGated` status are not scheduled. By specifying/removing a Pod's `.spec.schedulingGates`, you can control when a pod is ready to be considered for scheduling.
 
 Use Pod Scheduling Readiness according to the [Kubernetes documentation](https://kubernetes.io/docs/concepts/scheduling-eviction/pod-scheduling-readiness/).
