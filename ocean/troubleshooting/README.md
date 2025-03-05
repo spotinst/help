@@ -5,4 +5,5 @@ This topic includes information to help you troubleshoot and resolve issues that
 *  [Troubleshoot Ocean Controller V1](ocean/troubleshooting/troubleshoot-controller.md)
 *  [Troubleshoot Ocean Controller V2](https://docs.spot.io/ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-ts)
 *  [Troubleshoot Unscheduled Pods](https://docs.spot.io/ocean/troubleshooting/troubleshoot-unscheduled-pods)
+*  [Troubleshoot EC2 Instances created by Ocean that cannot join EKS cluster](https://docs.spot.io/ocean/troubleshooting/ts-ec2-join-eks-cluster)
 
