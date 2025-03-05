@@ -1,5 +1,3 @@
-<meta name="robots" content="noindex">
-
 #  EC2 Instances Created by Ocean Cannot Join EKS Cluster
 
 ## Issue
