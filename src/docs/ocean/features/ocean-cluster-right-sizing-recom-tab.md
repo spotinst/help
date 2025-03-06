@@ -34,8 +34,8 @@ This list displays your right-sizing recommendations per workload and lets you d
    *  Brown (Not Attached): The Workload is not optimized.
 *  Workload type and names.
 *  vCPU and memory right sizing recommendations per deployment. Recommended increases are shown with a green up arrow, and recommended decreases are shown with a red Down arrow.  
-*  If the workload is configured with HPA, **ON** is displayed under HPA. Hover over the entry for information about the specific HPA trigger (CPU/Memory/other).
-* Potential monthly maximums savings if you adopt the recommendations.
+*  HPA: If the workload is configured with HPA, **ON** is displayed under HPA. Hover over the entry for information about the specific HPA trigger (CPU/Memory/other).
+*  Potential monthly maximums savings if you adopt the recommendations.
 
 > **Notes**:
 > - Orange or gray status: Hover over the workload optimization status to view more details in a tooltip.
