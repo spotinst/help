@@ -926,6 +926,30 @@ The instance will be launched when the tags in Spot clusters/groups comply with 
 
  </details>
 
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocencodedauth">AWS: Why can’t I spin new instances (encoded authorization)?</summary>
+
+  <div style="padding-left:16px">
+
+You can get these messages when the group or cluster is scaling up instances:
+
+* `Can’t Spin Instances: Message: You are not authorized to perform this operation. Encoded authorization failure message`
+* `Can’t Spin On-Demand Instances: Message: You are not authorized to perform this operation. Encoded authorization failure message`
+
+These messages could be related to [service control policies](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps.html) (SCP). Keep in mind, Spot doesn’t get SCP information from AWS, so doesn’t know which instance types AWS blocks because of the SCP restrictions. As a result, Spot cannot launch a new instance of a different type.
+
+1. You need to [identify the reason for the error](https://docs.aws.amazon.com/STS/latest/APIReference/API_DecodeAuthorizationMessage.html) in AWS.
+2. In the Spot console, update the instance types:
+
+   * [Ocean](ocean/tips-and-best-practices/manage-machine-types?id=opt-out-of-machine-types)
+   * [Elastigroup](elastigroup/features/compute/preferred-instance-types)
+   * [Ocean ECS cluster update API](https://docs.spot.io/api/#tag/Ocean-ECS/operation/OceanECSClusterUpdate)
+   * [Elastigroup AWS update API](https://docs.spot.io/api/#tag/Elastigroup-AWS/operation/elastigroupAwsUpdate)
+
+   </div>
+
+ </details>
+
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocvpnsec">AWS: Why am I getting an <i>exceeded the number of VPC security allowed per instance</i> message?</summary>
 
@@ -2804,6 +2828,30 @@ It means a tag defined in your Elastigroup or cluster doesn’t comply with AWS�
    * **Ocean** > **Cloud Clusters** > click on the cluster > **Actions** > **Edit Cluster** > **Compute**.
 
 The instance will be launched when the tags in Spot clusters/groups comply with the tag policy defined in AWS.
+
+   </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egencodedauth">AWS: Why can’t I spin new instances (encoded authorization)?</summary>
+
+  <div style="padding-left:16px">
+
+You can get these messages when the group or cluster is scaling up instances:
+
+* `Can’t Spin Instances: Message: You are not authorized to perform this operation. Encoded authorization failure message`
+* `Can’t Spin On-Demand Instances: Message: You are not authorized to perform this operation. Encoded authorization failure message`
+
+These messages could be related to [service control policies](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps.html) (SCP). Keep in mind, Spot doesn’t get SCP information from AWS, so doesn’t know which instance types AWS blocks because of the SCP restrictions. As a result, Spot cannot launch a new instance of a different type.
+
+1. You need to [identify the reason for the error](https://docs.aws.amazon.com/STS/latest/APIReference/API_DecodeAuthorizationMessage.html) in AWS.
+2. In the Spot console, update the instance types:
+
+   * [Ocean](ocean/tips-and-best-practices/manage-machine-types?id=opt-out-of-machine-types)
+   * [Elastigroup](elastigroup/features/compute/preferred-instance-types)
+   * [Ocean ECS cluster update API](https://docs.spot.io/api/#tag/Ocean-ECS/operation/OceanECSClusterUpdate)
+   * [Elastigroup AWS update API](https://docs.spot.io/api/#tag/Elastigroup-AWS/operation/elastigroupAwsUpdate)
 
    </div>
 
