@@ -10,8 +10,7 @@ To view your right-sizing recommendations and rules:
 
 1. In the left main menu, click **Ocean** > **Cloud Clusters**.
 2. Select a cluster from the list of clusters.
-3. Click the **Right Sizing** tab.  
-4. Click **Advanced Optimization**. 
+3. Click **Right Sizing > Advanced Optimization**. 
 
 The Advanced Optimization tab contains these lists:  
 
@@ -26,19 +25,19 @@ Your workload optimization activities impact the status of the workloads in the 
 
 This list displays your right-sizing recommendations per workload and lets you drill down per container.
 *  [Right Sizing rules](ocean/features/ocean-cluster-right-sizing-recom-tab?id=automation-rules-list) that are attached to specific workloads.
-*  Workload Status: If the workload is [attached](ocean/features/ocean-cluster-right-sizing-recom-tab?id=attach-a-right-sizing-rule-to-one-or-more-workloads) to a right-sizing rule, the name of the rule appears under **Rules**. The rule has one of the following workload (colored) optimization statuses:
-   *  Green (Optimized): The Workload is fully optimized, and no action is required.
-   *  Orange (Limited): Ocean has applied recommendations to the workload, but there are limitations due to overhead, VPA, etc.
-   *  Blue (Pending): The rule for the workload has been attached but is out of schedule.
+*  Workload optimization status: If the workload is [attached](ocean/features/ocean-cluster-right-sizing-recom-tab?id=attach-a-right-sizing-rule-to-one-or-more-workloads) to a right-sizing rule, the name of the rule appears under the **Rules** column. The rule can have one of the following workload (colored) optimization statuses:
+   *  Green (Optimized): Workload is fully optimized, and no action is required.
+   *  Orange (Limited): Ocean applied recommendations to the workload, but there are limitations due to overhead, VPA, etc.
+   *  Blue (Pending): Rule has been attached to the workload but is out of schedule.
+   *  Red (Not Optimized): Workloads for which Ocean cannot apply the recommendation due to HPA, Thresholds, etc.
    *  Gray (Rollback) Ocean rolled back to the original deployment request and suspended the workload's attachment to the rule.
-   *  Color?? (Not attached)
-*  Workload type and namespace.
-*  Recommendations for vCPU and memory right sizing per deployment. Recommended increases are shown with a green up arrow, and recommended decreases are shown with a red Down arrow.  
+   *  Brown (Not Attached): The Workload is not optimized.
+*  Workload type and names.
+*  vCPU and memory right sizing recommendations per deployment. Recommended increases are shown with a green up arrow, and recommended decreases are shown with a red Down arrow.  
 *  If the workload is configured with HPA, **ON** is displayed under HPA. Hover over the entry for information about the specific HPA trigger (CPU/Memory/other).
-* Potential monthly max. Savings if you adopt these recommendations.
+* Potential monthly maximums savings if you adopt the recommendations.
 
 > **Notes**:
-> - Red (Not optimized): Ocean cannot apply recommendations to the workload because of HPA, thresholds, etc.
 > - Orange or gray status: Hover over the workload optimization status to view more details in a tooltip.
 > - There are no vCPU / memory recommendations or Potential monthly max if a workload is fully optimized. Savings are displayed for the workload because Ocean is already optimizing it.
 >  
