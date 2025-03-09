@@ -10,8 +10,7 @@ To view your right-sizing recommendations and rules:
 
 1. In the left main menu, click **Ocean** > **Cloud Clusters**.
 2. Select a cluster from the list of clusters.
-3. Click the **Right Sizing** tab.  
-4. Click **Advanced Optimization**. 
+3. Click **Right Sizing > Advanced Optimization**. 
 
 The Advanced Optimization tab contains these lists:  
 
@@ -22,24 +21,24 @@ Your workload optimization activities impact the status of the workloads in the 
 
 ##  Workloads Optimization List 
 
-<img width="1000" src="https://github.com/user-attachments/assets/129b3cbf-ed65-4a0b-8cba-ad59fbc4ee10" />
-
+<img width="1000" src="https://github.com/user-attachments/assets/a6070749-5c8f-4871-b4ff-2c3faccc5755" />
 
 This list displays your right-sizing recommendations per workload and lets you drill down per container.
 *  [Right Sizing rules](ocean/features/ocean-cluster-right-sizing-recom-tab?id=automation-rules-list) that are attached to specific workloads.
-*  Workload Status: If the workload is [attached](ocean/features/ocean-cluster-right-sizing-recom-tab?id=attach-a-right-sizing-rule-to-one-or-more-workloads) to a right-sizing rule, the name of the rule appears under **Rules**. The rule has one of the following workload (colored) optimization statuses:
-   *  Green (Fully Optimized): The Workload is fully optimized, and no action is required.
-   *  Orange (Limited): The Workload has optimization limitations (constrained by settings). 
-   *  Blue (Pending): The rule for the workload has been attached but is out of schedule.
+*  Workload optimization status: If the workload is [attached](ocean/features/ocean-cluster-right-sizing-recom-tab?id=attach-a-right-sizing-rule-to-one-or-more-workloads) to a right-sizing rule, the name of the rule appears under the **Rules** column. The rule can have one of the following workload (colored) optimization statuses:
+   *  Green (Optimized): Workload is fully optimized, and no action is required.
+   *  Orange (Limited): Ocean applied recommendations to the workload, but there are limitations due to overhead, VPA, etc.
+   *  Blue (Pending): Rule has been attached to the workload but is out of schedule.
+   *  Red (Not Optimized): Workloads for which Ocean cannot apply the recommendation due to HPA, Thresholds, etc.
    *  Gray (Rollback): Ocean rolled back to the original deployment request and suspended the workload's attachment to the rule.
-   *  Red (Not Optimized): The Workload is not optimized.
-*  Workload type and namespace.
-*  Recommendations for vCPU and memory right sizing per deployment. Recommended increases are shown with a green up arrow, and recommended decreases are shown with a red Down arrow.  
-*  If the workload is configured with HPA, **ON** is displayed under HPA. Hover over the entry for information about the specific HPA trigger (CPU/Memory/other).
-* Potential monthly max. Savings if you adopt these recommendations.
+   *  Brown (Not Attached): The Workload is not optimized.
+*  Workload type and names.
+*  vCPU and memory right sizing recommendations per deployment. Recommended increases are shown with a green up arrow, and recommended decreases are shown with a red Down arrow.  
+*  HPA: If the workload is configured with HPA, **ON** is displayed under HPA. Hover over the entry for information about the specific HPA trigger (CPU/Memory/other).
+*  Potential monthly maximums savings if you adopt the recommendations.
 
 > **Notes**:
-> - Orange or blue status: Hover over the workload optimization status to view more details in a tooltip.
+> - Hover over the workload optimization status to view more details in a tooltip.
 > - There are no vCPU / memory recommendations or Potential monthly max if a workload is fully optimized. Savings are displayed for the workload because Ocean is already optimizing it.
 >  
 > - If the <img height="20" src="https://github.com/user-attachments/assets/6160df45-992e-41a8-bcc2-5af1bee732ff" /> button appears on the right of the screen, workloads were moved to rollback status. See [Acknowledge a Workload Rollback](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=acknowledge-a-workload-rollback)
