@@ -690,6 +690,21 @@ This happens if you have duplicate tags configured:
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="oclogsdkevents">AWS, GCP: Can I log events for the Spotinst SDK for Python?</summary>
+
+  <div style="padding-left:16px">
+
+You can get a detailed response for the [Python SDK](tools-and-provisioning/python-sdk). For example, you can include request IDs and times.
+
+Add the log_level to your scripts: `client = session.client("elastigroup_aws", log_level="debug")`.
+
+Change the session client from <i>elastigroup_aws</i> to [the client you need](https://github.com/spotinst/spotinst-sdk-python?tab=readme-ov-file#client-options).
+
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocdraining">AWS: What is the default draining timeout?</summary>
 
   <div style="padding-left:16px">
@@ -2624,6 +2639,21 @@ This happens if you have duplicate tags configured:
  </div>
 
  </details>
+ 
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="eglogsdkevents">AWS, GCP: Can I log events for the Spotinst SDK for Python?</summary>
+
+  <div style="padding-left:16px">
+
+You can get a detailed response for the [Python SDK](tools-and-provisioning/python-sdk). For example, you can include request IDs and times.
+
+Add the log_level to your scripts: `client = session.client("elastigroup_aws", log_level="debug")`.
+
+Change the session client from <i>elastigroup_aws</i> to [the client you need](https://github.com/spotinst/spotinst-sdk-python?tab=readme-ov-file#client-options).
+
+ </div>
+
+ </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="egelasticsearch1">AWS: Can Elasticsearch integrate with Spot?</summary>
@@ -2658,11 +2688,11 @@ This happens if you have duplicate tags configured:
 
 AWS decides according to:
 
-1.	If the market matches a free zonal reserved instance commitment, then the instance is a reserved instance.
-2.	If the market matches a free regional reserved instance commitment, then the instance is a reserved instance.
-3.	If the market matches a free EC2 instance savings plan commitment, then the instance is a savings plan.
-4.	If there is any free compute service plan commitment, then the instance is a savings plan.
-5.	Otherwise, the instance will run as a full-price on-demand instance.
+1. If the market matches a free zonal reserved instance commitment, then the instance is a reserved instance.
+2. If the market matches a free regional reserved instance commitment, then the instance is a reserved instance.
+3. If the market matches a free EC2 instance savings plan commitment, then the instance is a savings plan.
+4. If there is any free compute service plan commitment, then the instance is a savings plan.
+5. Otherwise, the instance will run as a full-price on-demand instance.
 
 Throughout the lifetime of an instance, it can change its “price” whenever there’s any change in the commitments utilization rate. For example, if an instance is running as a full price on-demand instance, and another instance that was utilizing a compute savings plan commitment was terminated, the first instance will start utilizing this commitment if its hourly price rate has enough free space under this commitment. It might take a couple of minutes for this change to show, but since the billing is being calculated retroactively, in practice it’s starting to utilize the commitment right away.
    
