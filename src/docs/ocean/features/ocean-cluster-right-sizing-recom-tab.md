@@ -92,7 +92,7 @@ To create/edit a right-sizing rule:
    * Manifests with more than 1 replica only.
    * No restart.
 7. Click the **Set the resources percentage change** down arrow to apply the recommendation, and set the CPU and Memory percentage thresholds. This is the minimum percentage change from the current request for applying a recommendation. If the right-sizing recommendation exceeds the percentage threshold for either resource (CPU or Memory), it will be applied to both resources, and the resulting status will be **fully optimized**. We do this because the original purpose of the threshold is to prevent unnecessary pod deletion. However, if we need to delete a pod and relaunch a new one for one resource, we do the same for the other. 
-8. Click the **Set recommendation ranges for resources** down arrow and enter the upper and lower boundary values for CPU (millicpu) and Memory (MiB) requests to apply a recommendation. By default, the minimum values are 100 for CPU and 128 MiB for memory; no lower values will be accepted.
+8. Click the **Set recommendation ranges for resources** down arrow and enter the upper and lower boundary values for CPU (millicpu) and Memory (MiB) requests to apply a recommendation. By default, the minimum values are 10 millicpu for CPU and 32 MiB for memory; no lower values will be accepted.
    * If a recommendation is above the set boundaries, automatic right-sizing will apply the recommendation using the maximum value configured in the rule.
    * If a recommendation is below the set boundaries, automatic right-sizing will apply the recommendation using the minimum value configured in the rule.
 10. Click the **Set overhead for resources** down arrow and set the CPU and memory percentage overheads. An overhead specifies the percentage of extra resources to add to the new request recommendation.
@@ -159,6 +159,23 @@ To acknowledge a workload rollback:
 3. Click **I Acknowledge the Rollback**.
 
 The workloads are displayed in the [Workloads Optimization List](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=workloads-optimization-list) without any attached rules. Before attaching a rule to a rolled-back workload, first fix the issue.
+
+### Set the vCPU Percentile
+
+You can select the percentile setting right-sizing uses to calculate the vCPU recommendations.
+The lower the percentile, the stronger the recommendations.
+
+By default, right-sizing uses the 85th percentile.
+
+>**Important:** Changing the percentile setting will impact the recommendations that were already applied (this may take a few minutes to update).
+
+To change this setting:
+
+1. Click the **Settings** button at the top-right of the screen.
+2. Select your required percentile value in the Settings dialog box and save your changes.
+
+<img width="320" src="https://github.com/user-attachments/assets/30478c24-f728-4b3a-8aba-113c64573bb0"/>
+
 
 ## Best Practices
 

@@ -101,7 +101,7 @@ EOF
 
 <img src="/ocean/_media/tutorials-mount-fsx-11.png" />
 
-- dataLIF: Go to the StorageVirutalMachine and search for the Endpoints section.
+- dataLIF: Go to the StorageVirtualMachine and search for the Endpoints section.
 
 <img src="/ocean/_media/tutorials-mount-fsx-12.png" />
 

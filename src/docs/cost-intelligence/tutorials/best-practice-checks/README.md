@@ -7,17 +7,17 @@ Cloud service providers have many options to customize your deployment. Using be
 
 Select one or more cloud providers, accounts, and a date.
 
-You can click on a card to filter the checks and failed resources by importance or category. For example, click **Availability Category** to see a list of the failed resources for Availability.
+* You can click on a widget to filter the checks and failed resources by importance or category. For example, click **Availability Category** to see a list of the failed resources for Availability.
 
-You can choose to **show checks with no infractions**. 
+* You can choose to **show checks with no infractions**. 
 
-Click **Export** to export your data to a CSV file.
+* Click **Export** to export your data to a CSV file.
 
-![bestpracticechecks1](https://github.com/user-attachments/assets/16a1c43f-708a-46ee-83b3-8c9b345914b8)
+![image](https://github.com/user-attachments/assets/e8d73f06-7fc8-4e45-93bd-165cbe16447a)
 
 ## Categories
 
-Cost Intelligence makes sure your infrastructure is configured correctly and highlights areas that may be a cause for concern.
+Cost Intelligence ensures your infrastructure is configured correctly and highlights areas that may be a cause for concern.
 
 Health checks focus on these critical areas:
 
@@ -53,7 +53,7 @@ Best practice checks take data from:
 
 * **Ocean**
 
-   Identifies if the resources are managed by Ocean. If not, there’s a button for you to onboard the resource to Ocean to save cost and utilization.
+   Identifies if the resources are managed by Ocean. If not, you can onboard the resource to Ocean to save cost and utilization.
 
 * **AWS Trusted Advisor**
 
@@ -63,17 +63,15 @@ Best practice checks take data from:
 
    Cost Intelligence lets you view the checks for all your Azure accounts in one place. Data is shown for any account that has been onboarded to Cost Intelligence and that has the recommendations set up in Azure.
 
-
 ## Check Detail Page
 
 When you click on the name of a check, you can see its details, including the specific resources that triggered it.
 
-You can click info <img height="14" alt="i" src="https://github.com/user-attachments/assets/534c7442-32fe-48c1-996b-d54d9f956281"> to see more details about the issue.
+You can click info <img height="18" src="https://github.com/user-attachments/assets/534c7442-32fe-48c1-996b-d54d9f956281"> to see more details about the issue.
 
 Sort the best practice checks by the Remediation Effort column to identify items to remediate. Click **Remediate** for step-by-step instructions on how to fix the issue.
 
-![bestpracticechecks2](https://github.com/user-attachments/assets/d734dde0-224e-41a4-9f14-40914fdde363)
-
+<img width=900 src="https://github.com/user-attachments/assets/c92f82ad-ed25-4c80-8f40-d9a9e6cdf4a7">
 
 ## Remediation
 

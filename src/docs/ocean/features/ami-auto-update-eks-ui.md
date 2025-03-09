@@ -1,5 +1,7 @@
 #  AMI Auto Update for EKS via the Console
 
+Cloud service provider relevance: <font color="#FC01CC">EKS</font>
+
 You can either run an AMI auto-update immediately or schedule one. For both immediate and scheduled auto-update runs, you can include one or both of these options:
 
 * Security patch updates: Once Ocean identifies that EKS released a security patch, update the nodes in the data plane managed by Ocean.

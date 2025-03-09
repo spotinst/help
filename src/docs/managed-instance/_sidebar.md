@@ -20,6 +20,7 @@
       - [Import a Stateful Node](managed-instance/azure/getting-started/import-stateful-node)   
     - [Features](managed-instance/azure/features/)
       - [Extensions](managed-instance/azure/tutorials/extensions)
+      - [Health Checks and Auto Healing](managed-instance/azure/tutorials/set-health-checks-and-autohealing)
       - [Persist OS & Data Disks](managed-instance/azure/features/persist-os-data-disks)
       - [Persist Network](managed-instance/azure/features/persist-network)
       - [Preferred AZ](managed-instance/azure/features/preferred-az)

@@ -11,26 +11,26 @@ Before starting this procedure, you must have:
 
 ## Get Started
 
-1. In the Spot console under Elastigroup, click Groups.
-2. On the upper right of the Elastigroups page, click Create Elastigroup and choose Clone.
+1. In the Spot console under Elastigroup, click **Groups**.
+2. On the upper right of the Elastigroups page, click **Create** > **Clone**.
 
-![azure-clone-an-existing-eg-01](https://github.com/user-attachments/assets/5d0e1b1e-b95a-48f8-8a3f-ce632159f804)
+<img width=700 src="https://github.com/user-attachments/assets/5d0e1b1e-b95a-48f8-8a3f-ce632159f804">
 
 ## Choose Elastigroup
 
-1. In the Clone popup, complete the following:
+1. In Clone, select:
    - Clone from: Choose Elastigroup.
-   - Select an existing Elastigroup: Choose an Elastigroup from the dropdown list.
+   - Select an existing Elastigroup.
 
-<img src="/elastigroup/_media/azure-clone-an-existing-eg-02.png" width="305" height="210" />
+   <img src="/elastigroup/_media/azure-clone-an-existing-eg-02.png" width="305" height="210" />
 
 2. If the existing Elastigroup has a password configured, you will be prompted to enter a password. Enter the user credentials if prompted.
    - User Name: The administrator user name for the VMs in Azure. Cannot include reserved words.
    - Password: The administrator password to be used for the Azure VMs. The password may be Linux or Windows depending on the OS of the VM. The password you enter must comply with the relevant OS password rules.
 
-<img src="/elastigroup/_media/azure-clone-an-existing-eg-03.png" width="295" height="176" />
+   <img src="/elastigroup/_media/azure-clone-an-existing-eg-03.png" width="295" height="176" />
 
-3. Click Continue.
+3. Click **Continue**.
 
 ## Review
 
@@ -43,7 +43,3 @@ After viewing the summary of the configuration, just click Create to produce an 
 ### Edit Configuration
 
 If you would like to modify the configuration before creating the new Elastigroup, just click on one of the tabs above (e.g., General, Compute or Scaling) or on one of the Edit icons in the Review page. Alternatively, you can click on the JSON tab and make your modifications in the JSON view of the configuration.
-
-## What’s Next?
-
-Learn how to [import existing Azure resources](elastigroup/azure/getting-started/import-an-existing-azure-resource) such as a Scale Set, an Application Gateway, a Classic Load Balancer or a VM.

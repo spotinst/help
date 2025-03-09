@@ -19,17 +19,6 @@ You can:
 - Generate billing reports for your organization
 - View your Spot plan and activate your organization
 
-## Get Your Organization ID
-
-1. In the Spot console, click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png">  > **Settings**.
-2. Go to **General Details** > **My Organization** > **Organization ID**.
-   <details>
-    <summary markdown="span">View image</summary>
-
-     <img height="400" src="https://github.com/user-attachments/assets/faae59f5-123a-41a2-bd31-c2be6c471856" />
-
-   </details>
-
 ## Linked Organizations
 
 If you need multiple organizations, for example, for multiple divisions or units in your company, you can create linked organizations which can share settings and configuration such as:
@@ -55,6 +44,30 @@ You can also use [multitenancy](administration/organizations/multitenancy) to cr
 2. Enter a name for the new organization and click **Create**.
 3. Switch to the new organization.
 4. Choose a cloud service provider and complete the wizard to connect the organization to the provider.
+
+## Get Your Organization ID
+
+1. In the Spot console, click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png">  > **Settings**.
+2. Go to **General Details** > **My Organization** > **Organization ID**.
+   <details>
+    <summary markdown="span">View image</summary>
+
+     <img height="400" src="https://github.com/user-attachments/assets/faae59f5-123a-41a2-bd31-c2be6c471856" />
+
+   </details>
+
+## Update Your Organization Name
+
+1. In the Spot console, click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png">  > **Settings**.
+2. Go to **General Details** > **My Organization** > **Organization ID**.
+   <details>
+    <summary markdown="span">View image</summary>
+
+     <img height="400" src="https://github.com/user-attachments/assets/faae59f5-123a-41a2-bd31-c2be6c471856" />
+
+   </details>
+
+3. Click **Edit** <img height="14" src="https://github.com/user-attachments/assets/07c5484f-c695-464b-837d-2ce9345800f9"> to update the organization name.
 
 ## Switch Organizations
 
@@ -123,6 +136,21 @@ The Account ID is required for API and SDK interactions with the account-level S
       <img width="400" src="https://github.com/user-attachments/assets/9a0378a6-248b-4d06-a3cc-1351386d2a37" />
 
    </details>
+
+## Update Your Spot Account Name
+
+1. In the Spot console, select the organization and account.
+2. Click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png">  > **Settings**.
+3. Go to **General Details** > **My Spot Account** > **Cloud Account ID**.
+   
+   <details>
+    <summary markdown="span">View image</summary>
+
+      <img width="400" src="https://github.com/user-attachments/assets/9a0378a6-248b-4d06-a3cc-1351386d2a37" />
+
+   </details>
+
+4. Click **Edit** <img height="14" src="https://github.com/user-attachments/assets/07c5484f-c695-464b-837d-2ce9345800f9"> to update the Spot account name.
 
 ## Audit Events
 

@@ -6,4 +6,4 @@ This section provides the information and procedures you can use to integrate El
 
 To get started, choose an integration from the sidebar on the left.
 
-Learn about additional integrations supported by the Spot platform (such as Terraform, CloudFormation, Spinnaker, and others) under [Tools and Provisioning](ocean/tools-and-provisioning/).
+Learn about additional integrations supported by the Spot platform (such as Terraform, CloudFormation, Spinnaker, and others) under [Tools and Provisioning](ocean/tools-and-integrations/).

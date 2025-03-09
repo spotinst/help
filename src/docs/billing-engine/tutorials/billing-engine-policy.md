@@ -1,16 +1,12 @@
 # Billing Engine Policy 
 
-Billing Engine collects information on cost and usage data in in the AWS and Azure and Google providers.
+Billing Engine collects cost and usage data from the AWS, Azure, and Google providers.
 
 ## Billing Engine AWS Policy 
 
-The Billing Engine policy includes the permissions needed to access the AWS Cost and Usage Report/Data Export.
+The Billing Engine policy includes the permissions to access the AWS Cost and Usage Report/Data Export.
 
- <details>
-   <summary markdown="span">View Billing Engine AWS policy</summary>
-
-   <pre><code>
-     
+  ```json  
      {
   "Statement": [
     {
@@ -40,11 +36,7 @@ The Billing Engine policy includes the permissions needed to access the AWS Cost
   ],
   "Version": "2012-10-17"
 }
-
-</code></pre>
-
- </details>
-
+```    
 
 | Resource  | Policy Access Read Only | Purpose of Access                                                                   |
 |-----------|-------------------------|-------------------------------------------------------------------------------------|

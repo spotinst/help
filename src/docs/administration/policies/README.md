@@ -16,7 +16,7 @@ Spot comes with a number of default policies. You can use these out of the box a
 - Organization-level permissions:
   - Credit Card Editor
   - Cloud Analyzer Editor
-- Organization and account-level permissions
+- Organization and account-level permissions:
   - Admin
 
 ## Custom Policy Conditions
@@ -47,6 +47,9 @@ These rules apply to policies:
 1. In the Spot console, click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png">  > **Settings**.
 2. Click **Organization** > **Permission Policies** > **Create New Policy**.
 3. Enter a **Policy Name** (and **Policy Description**).
+
+      > **Note**: names cannot include these characters: `+ = @`
+
 4. Select the type of **Permission Management**:
    * **Account Permissions**: These permissions are for products and services that have resources at the account level. You select the relevant accounts separately for each user or group once you attach the policy to them.
    * **Organization Permissions**: These permissions are for products and services that have resources at the organization level.
@@ -85,7 +88,7 @@ A statement includes:
    * <i>ocean:roll</i>
    * <i>elastigroup:describe*</i> allows all <i>Describe</i> actions, such as <i>-elastigroup:describeDeployments</i>, <i>elastigroup:describeGroup</i>
    * <i>elastigroup:*</i> will allow all Elastigroup actions.
-* **Resources** is an array of resources formatted as <i>[serviceName]:[actionName]</i>. A resource representsa Spot resource, such as an Ocean cluster or an Elastigroup. The effect and actions are applied to the resource. You can use wildcards (*) in the <i>[serviceName]</i> and <i>[actionName]</i>:
+* **Resources** is an array of resources formatted as <i>[serviceName]:[resourceId]</i>. A resource represents a Spot resource, such as an Ocean cluster or an Elastigroup. The effect and actions are applied to the resource. You can use wildcards (*) in the <i>[serviceName]</i> and <i>[resourceId]</i>:
    * All resources: <i>*</i>
    * All Elastigroup resources: <i>elastigroup:*</i>
    * All groups starting with sig-214: <i>sig-214*</i>
@@ -96,9 +99,7 @@ Custom policy conditions let you create conditions within policies for granular 
 
 Conditions include:
 
-* **Logical operator** (optional) defines the logic between the value based operators.
-
-  >**Note**: Using a logical operator requires at least two value-based operators.
+* **Logical operator** (optional) defines the logic between the value based operators. Using a logical operator requires at least two value-based operators.
 
 * **Value-based operator**:  
     - <i>StringEquals</i> compares two strings and returns <i>true</i> if equals, otherwise returns <i>false</i>.
@@ -110,7 +111,9 @@ Conditions include:
   If the condition contains more than one condition operator, <i>AND</i> is used between them. This means that all the operators should return <i>true</i>.
 
 * **Resource retrieval** supports AWS, Azure, and Ocean CD resources.
+  
   This part is responsible for the definition of which resource should be tested with the condition operator. It consists of a Spot prefix (`spot`) and resource name (such as `elastigroup`, `ocean`), separated by a colon `:`.
+  
   When specifying an Ocean CD resource, use:
 
   ```
@@ -129,7 +132,7 @@ Conditions include:
    > - oceancdWorkloadType
    > - OceancdNamespace
 
-* **Attribute value** is a single string, single variable (such as `${spot:userEmail}`), or array of values. You can have multiple attribute values for the same field. For example, `spot:elastigroup:name": ["elastigroup-1","elastigroup-2"]` and  **OR** is used between them.
+* **Attribute value** is a single string, single variable (such as `${spot:userEmail}`), or array of values. You can have multiple attribute values for the same field. For example, `"spot:elastigroup:name": ["elastigroup-1","elastigroup-2"]` and  **OR** is used between them.
 
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
@@ -188,7 +191,7 @@ This policy checks for the `DeveloperEmail` tag, and lets users with this email 
 
 <div style="padding-left:16px">
 
-  This policy lets enables performing Ocean-related operations on clusters with names containing <i>ocean-example-1</i> or <i>ocean-example-2</i>.
+  This policy enables performing Ocean-related operations on clusters with names containing <i>ocean-example-1</i> or <i>ocean-example-2</i>.
 
 <pre>
 {

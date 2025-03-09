@@ -2,15 +2,15 @@
 
 To make scheduling more efficient and compatible with Kubernetes, Ocean supports the following [Kubernetes constraint mechanisms](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/) for scheduling pods:
 
-- Node Selector – Constrains pods to nodes with particular labels.
-- Node Affinity – Constrains which nodes your pod is eligible to be scheduled on based on labels on the node. Spot supports hard and soft affinity (`requiredDuringSchedulingIgnoredDuringExecution`, `preferredDuringSchedulingIgnoredDuringExecution`).
-- Pod Affinity and Pod Anti-Affinity – Schedules a Pod based on which other Pods are or are not running on a node.
-- Pod Port Restrictions – Validates that each pod will have required ports available on the machine.
+- Node Selector: Constrains pods to nodes with particular labels.
+- Node Affinity: Constrains nodes for pod scheduling eligibility based on node labels. Spot supports hard and soft affinity (`requiredDuringSchedulingIgnoredDuringExecution`, `preferredDuringSchedulingIgnoredDuringExecution`).
+Pod Affinity and Pod Anti-Affinity: This function schedules a pod based on whether other pods run on a node.
+- Pod Port Restrictions: Validates that each pod will have required ports available on the machine.
 - [Well-Known Labels](https://kubernetes.io/docs/reference/kubernetes-api/labels-annotations-taints/).
 
 ## Spot Labels
 
-Spot labels allow you to adjust the default scaling behavior in Ocean; by adding Spot labels to your pods, you can control the node termination process or its life cycle. The Spot labels are described below.
+Spot labels allow you to adjust Ocean's default scaling behavior. Add them to your pods to control the node termination process or lifecycle. 
 
 ### spotinst.io/azure-premium-storage  
 
@@ -22,7 +22,7 @@ For more information, see [Azure premium storage](https://learn.microsoft.com/en
 
 ### spotinst.io/restrict-scale-down
 
-Some workloads are not as resilient to spot instance replacements as others, so you may want to lower the frequency of replacing the nodes they are running on as much as possible, while still getting the benefit of spot instance pricing. For these workloads, use the `spotinst.io/restrict-scale-down` label (set to `true`) to block the proactive scaling down of the instance for the purposes of more efficient bin packing. This will leave the instance running as long as possible. The instance will be replaced only if it goes into an unhealthy state or if forced by a cloud provider interruption.
+Some workloads are not as resilient to spot instance replacements as others, so you may want to lower the frequency of replacing the nodes they are running on as much as possible while still benefiting from spot instance pricing. For these workloads, use the `spotinst.io/restrict-scale-down` label (set to `true`) to block the proactive scaling down of the instance for the purposes of more efficient bin packing. This will leave the instance running as long as possible. The instance will be replaced only if it goes into an unhealthy state or if forced by a cloud provider interruption.
 
 ### spotinst.io/node-lifecycle
 
@@ -50,7 +50,25 @@ Valid label values are:
 - `nvidia-tesla-t4g`
 - `nvidia-tesla-a10`
 
-> **Note**: Avoid adding Spot labels under the virtual node group (launch specification) node labels section. These labels should be added in your pod configuration only.
+> **Note**: Don't add Spot labels under the virtual node group (launch specification) node labels section. Add these labels to the pod configuration only.
+
+###  Instance Types Labels
+
+Format: `aws.spot.io/instance-<object>`, for example, `aws.spot.io/instance-category`
+
+Apply these labels to a workload's constraints (nodeSelector, node affinity, etc.) to reflect instance type properties. For example, constrain workloads to run on any M6, M7, or R7 family. 
+This avoids manually listing all instance types per family.
+
+The instance labels are as follows:
+
+*  `aws.spot.io/instance-category`: Reflects the category of the instance (for example., c).
+*  `aws.spot.io/instance-family`: Reflects the family of the instance (for example., c5a).
+*  `aws.spot.io/instance-generation`: Reflects the generation of the instance (for example., 5).
+*  `aws.spot.io/instance-hypervisor`: Reflects the hypervisor the instance uses (for example., nitro).
+*  `aws.spot.io/instance-cpu`: Reflects the CPU the instance uses (for example., 2).
+*  `aws.spot.io/instance-memory`: Reflects the instance's memory (for example., 4096).
+
+These labels only launch nodes that match the required pod labels. 
 
 ## Examples
 
@@ -125,5 +143,42 @@ spec:
     - name: with-node-affinity
       image: registry.k8s.io/pause:2.0
 ```
+
+## Startup Taints
+
+Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>  
+
+Startup taints are temporary taints applied to a node during its initialization phase. During this phase, the autoscaler will not scale up nodes for additional pending pods that match this node because it has already acknowledged that the start-up taint will soon be removed. Once removed, any pod without toleration matching the node can be scheduled without launching additional nodes.
+
+### When to Use Startup Taints
+
+You may want to deploy a specific pod to a node before deploying other pods to the same node. When that pod is ready or has completed a defined procedure, such as networking, scheduling of other pods will be allowed.
+
+>**Example: Cilium:** Cilium recommends applying a taint such as `node.cilium.io/agent-not-ready=true:NoExecute` to prevent other pods from starting before Cilium has finished configuring the necessary networking on the node.
+
+The pod used for initialization will have a tolerance to this taint exclusively. Once the node is ready, the application running on the pod will remove the taint from the node.
+
+>**Note:** If the `startupTaint` attribute has not been removed for a specific node by the end of the cluster's grace period, a new node will be launched for any pending pods. The grace period starts when a node is created; its default is 5 minutes, and you can configure it in the cluster under `cluster.strategy.gracePeriod`.
+
+### Configure Startup Taints in the Spot API
+
+AWS Kubernetes only
+
+Prerequisite: Ocean controller version at least v2.0.68
+
+Configure Ocean to consider your startup taints using the `startupTaints` attribute at the Ocean cluster and virtual node group levels.
+
+*  Cluster: under `cluster.compute.launchSpecification`
+   *  [Create Cluster](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterCreate)
+   *  [Update Cluster](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterUpdate)
+
+*  Virtual node group: under `launchSpec`
+   *  [Create virtual node group](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecCreate)
+   *  [Update virtual node group](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecUpdate)
+
+>**Important:** You must also set the `startupTaint` as a regular taint in the `userData` for the cluster or virtual node group. This is because Ocean does not add or remove configured startup taints.
+
+
+
 
 

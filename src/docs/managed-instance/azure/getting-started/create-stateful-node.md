@@ -1,6 +1,6 @@
-# Create a New Stateful Node
+# Create a Stateful Node
 
-This procedure describes how to create a new stateful node from scratch in Elastigroup Azure.
+This procedure describes how to create a stateful node from scratch in Elastigroup Azure.
 
 ## Prerequisite
 
@@ -71,6 +71,7 @@ Keep in mind:
 * If data disk persistency is turned on, custom and shared images that contain data disk definitions are not available (they are filtered out).
 
 ### Persist VM Name
+
 Select **Persist VM Name** to set a VM name for the entire node lifecycle. It cannot be used with **VM prefix name**.
 
 ### Security & Login
@@ -172,10 +173,11 @@ Each VM size provides the following information:
 * **Spot Cost/Month**: the cost per month according to Azure pricing.
 * **Preferred Spot**: select preferred Spot VM sizes. Selecting a VM size as preferred indicates that the stateful node should launch the preferred VM sizes prior to the remaining VM sizes that are defined as Spot sizes.
 
-You can change the columns by clicking the column selector <img height="14" src="https://github.com/spotinst/help/assets/106514736/8dfec009-0d19-47d9-bb0d-92bb02cebaef">.
+You can change the columns by clicking the column selector <img height="18" src="https://github.com/spotinst/help/assets/106514736/8dfec009-0d19-47d9-bb0d-92bb02cebaef">.
 
 
 ### On-Demand
+
 Select an on-demand VM size. At least one VM needs to be defined as on demand. This is applicable when you have on demand as the preferred lifecycle or significant as it provides a fallback in case Spot VMs are unavailable.
 
 >**Tip**: To maximize cost savings, provide the stateful node with all possible Spot VMs compatible with the expected workload. The more VM sizes you select, the greater the chances that the stateful node will find an available Spot VM to run on.  
@@ -186,7 +188,16 @@ Select an on-demand VM size. At least one VM needs to be defined as on demand. T
 * **Fallback to On-Demand**: a stateful node provides a fallback mechanism if no Spot VMs are available.
 * **Continuous Optimization**: choose when stateful node may move workloads from on demand to spot VMs:
    - **Once Available**: the stateful node moves the workloads when your Spot VM types become available.
-   - **Custom**: define time windows to allow the move.
+   - **Custom**: define time windows to allow the move. For example, if you want your on-demand instances to revert to spot instances daily, Monday through Friday, between 9 AM and 8 PM, you need to select:
+
+        * **From**: <i>Monday</i>, **start time**: <i>09:00</i>, **to**: <i>Monday</i>, **end time**: <i>20:00</i>.
+        * **From**: <i>Tuesday</i>, **start time**: <i>09:00</i>, **to**: <i>Tuesday</i>, **end time**: <i>20:00</i>.
+        * **From**: <i>Wednesday</i>, **start time**: <i>9:00</i>, **to**: <i>Wednesday</i>, **end time**: <i>20:00</i>.
+        * **From**: <i>Thursday</i>, **start tim**e: <i>09:00</i>, **to**: <i>Thursday</i>, **end time**: <i>20:00</i>.
+        * **From**: <i>Friday</i>, **start time**: <i>09:00</i>, **to**: <i>Friday</i>, **end time**: <i>20:00</i>.
+
+     If you select **From**: <i>Monday</i>, **start time**: <i>09:00</i>, **to**: <i>Friday</i>, **end time**: <i>20:00</i>, your on-demand instances can revert to spot instances past 8 PM on Mondays, Tuesdays, Wednesdays, and Thursdays. It will set <i>the entire time</i> between Monday at 9 AM all the way through Friday at 8 PM, <i>not daily</i> between 9 AM and 8 PM.
+
 
 ### Strategy
 * Cluster orientation:
@@ -234,12 +245,13 @@ Define the networking settings for your stateful node. At least one network inte
 
 #### Health Checks
 
-* **Health check types**:
+* [Health check](managed-instance/azure/tutorials/set-health-checks-and-autohealing?id=define-health-check) types:
 
   - VM state checks the VM’s current status in Azure.
   - Application gateway tests the connection from the application gateway to the VM. It’s available if at least one application gateway is defined in the Elastigroup. You also select the health check grace period in seconds, which is the time to allow a VM to boot and applications to fully start before the first health check.
+  - VM agent checks the VM agent's current state in Azure.
 
-* **Auto healing** checks the VM health according to the health check types and replaces unhealthy VMs.
+* [Auto healing](managed-instance/azure/tutorials/set-health-checks-and-autohealing?id=activate-auto-healing) checks the VM health according to the health check types and replaces unhealthy VMs.
 
 ## Step 4: Advanced
 
@@ -254,6 +266,7 @@ Click **+ Add Task**, select an action type, and enter the times you want to def
 <img src="/elastigroup/_media/azure-new-stateful-19.png" />
 
 ### User Data
+
 User data is a set of scripts or other metadata inserted into an Azure virtual machine during provisioning. After provision, any application on the virtual machine can access the user data from the Azure Instance Metadata Service (IMDS).
 
 Make sure your script doesn’t require additional extensions. For example, you may need to add an [extension](https://docs.spot.io/managed-instance/azure/tutorials/extensions) for user data to work.

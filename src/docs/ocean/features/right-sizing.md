@@ -1,5 +1,9 @@
 # Right Sizing
 
+
+Check out Spot's New [Automatic Right-Sizing feature!](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-tab)
+
+
 Ocean ensures pods and tasks are placed on the best possible VM that fits their resource requirements and other scheduling constraints such as labels, attributes, taints, tolerations, and affinity rules.
 
 However, estimating the proper amount of CPU and Memory when assigning resource requests to workloads is also a challenge which teams face when designing Kubernetes or ECS clusters. To address this challenge and create even more resource-efficient clusters, Ocean has implemented a Right Sizing recommendation mechanism.

@@ -1,5 +1,7 @@
 # Dynamic Commitments 
 
+Cloud service provider relevance: <font color="#FC01CC">EKS</font>
+
 ## Overview
 
 Elastigroup and Ocean automatically revert existing instances using reserved capacity (RI) and savings plans (SP) to spot instances or other commitment deals wherever a reservation is needed elsewhere in your AWS account. This feature optimizes resource allocation and cost efficiency by continuously adjusting to dynamic environment needs. 
@@ -43,7 +45,7 @@ The reversion will not occur if:
 * There is no alternative commitment or spot instance to revert back to. 
 * It violates the group's on-demand count request. 
 
-## Configure in the API 
+## Enable Utilize Commitments via the API
 
 You can use this feature at the cluster or virtual node group level:
 

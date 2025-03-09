@@ -23,6 +23,9 @@ From the list of users, you can:
 4. Select the **Access Type**:
    - **Console** if the user is a person who uses the Spot console. Console users can also use the Spot API. Enter the person’s **Name** and **Email address**.
    - **Programmatic** if the user is an application that only uses the Spot API. Enter a **Name** (and **Description**).
+
+   > **Note**: names cannot include these characters: `+ = @`
+
 6. Click **Continue**.
 7. Search for and select the [groups](administration/groups/) to associate with the user. The user will inherit the policies associated with the groups you select.
 8. Click **Next**.
@@ -35,17 +38,18 @@ From the list of users, you can:
 
 ## Reset Password
 
-1. In the Spot console, go to the user icon and click **Settings**.
+1. In the Spot console, click the user icon <img height="14" src="https://docs.spot.io/administration/_media/usericon.png">  > **Settings**.
 2. Click the Security tab and update your password.
 
 > **Tip**: SAML or SSO users who want to create an API Token will have to reset their password first.
 
-### Password Constraints
+### Passwords
 
-Your password must have at least eight characters and contain at least:
+Your password must have at least:
 
-- One digit
-- One uppercase character
-- One lowercase character
-- One special character
+- 8 characters
+- 1 number
+- 1 uppercase letter
+- 1 lowercase letter
+- 1 special character
 

@@ -1,12 +1,14 @@
 # Log Integration with S3
 
-There are several ways to view the Ocean logs, for example, you can view them directly in the Spot console or use the [Spot OpenAPI](https://docs.spot.io/api/) to fetch them.
+Cloud service provider relevance: <font color="#FC01CC">AWS</font>
+
+There are several ways to view the Ocean logs; for example, you can view them directly in the Spot console or use the [Spot OpenAPI](https://docs.spot.io/api/) to fetch them.
 
 This page describes Ocean’s log integration with AWS S3. You can configure Ocean to export its logs to an S3 bucket. You can then use your central monitoring tool to access the logs in the S3 bucket. This enables you to read and troubleshoot the Ocean logs in the same central interface where you access all of your other logs. An example of a specific case would be to use [AWS Lambda to send logs from S3](https://docs.newrelic.com/docs/logs/enable-log-management-new-relic/enable-log-monitoring-new-relic/aws-lambda-sending-logs-s3/) to the New Relic monitoring application.
 
 ## Prerequisite
 
-You will need to add to the Spot policy permissions to write to your S3 bucket. For example:
+You must add Spot policy write permissions for the S3 bucket. For example:
 
 ```json
 {
@@ -86,7 +88,7 @@ Use either the [Create Cluster](https://docs.spot.io/api/#operation/OceanAWSClus
 }
 ```
 
-If you want to monitor several Ocean clusters, repeat the same procedure for each cluster. You will be able to use the name format of the log files (described below) to distinguish between the logs from different clusters.
+If you want to monitor several Ocean clusters, repeat the same procedure for each cluster. You can use the name format of the log files (described below) to distinguish between the logs from different clusters.
 
 ### Log Files
 
@@ -94,6 +96,6 @@ Each Ocean log file on S3 contains three minutes of logging and has the followin
 
 `accountId_oceanId_oceanName_startDate.log`
 
-For example, a filename would look like:
+For example, a filename:
 
 `act-12345_o-12345678_cluster.k8s.com_2021-08-18T08:06:00Z.log`

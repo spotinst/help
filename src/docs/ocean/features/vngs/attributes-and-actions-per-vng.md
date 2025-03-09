@@ -1,10 +1,10 @@
-# Attributes per VNG
+# Attributes and Actions per VNG
 
-Many attributes that you can apply to your cluster are also available for virtual node groups. This lets you organize and manage customized workload types within the same cluster. 
+Many attributes you can apply to your cluster are also available for virtual node groups. This lets you organize and manage customized workload types within the same cluster. 
 
-The [Spot API](https://docs.spot.io/api/) provides the full set of virtual node group attributes for your cloud service provider.
+The [Spot API](https://docs.spot.io/api/) provides your cloud service provider's full set of virtual node group attributes.
 
-> **Note**: Some attributes are available in the Spot API but not in the console user interface. However, you can optionally configure these attributes in JSON format in the virtual node groups **review** tab in the console.
+> **Note**: Some attributes are available in the Spot API but not in the console user interface. However, you can optionally configure these attributes in JSON format in the console's virtual node groups **review** tab.
 
 
 The following sections describe several of these attributes.
@@ -17,10 +17,9 @@ Ocean for GKE allows the utilization of local SSD disks, high-performance local 
 
 Once configured, whenever the Ocean Autoscaler scales up, Ocean will automatically connect the local SSDs to the new VM. Note that local SSDs are limited to specific machine types. Ocean will automatically filter out the incompatible machine types. For information about the API, see Local SSD in the Spot API.
 
+<p id=turn-onoff-utilize-commitments-per-virtual-node-group></p>
 
-<!-- NEW SECTION ADDED - for DOC-1588 -->
-
-## Turn On/Off Utilize Commitments per Virtual Node Group
+## Enable Utilize Commitments
 
 Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>
 
@@ -36,8 +35,9 @@ In the Spot API, under **Virtual Node Groups > strategy**, you can configure the
 
 Any change you make at the Virtual Node Group level will override the value set at the cluster level.
 
+<p id=restrict-scale-down-per-virtual-node-group></p>
 
-## Restrict Scale Down per Virtual Node Group
+## Restrict Scale Down
 
 Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>, <font color="#FC01CC">ECS</font>, <font color="#FC01CC">GKE</font>, and <font color="#FC01CC">AKS</font>
 
@@ -47,23 +47,29 @@ A possible use case is protecting a 100% On-demand VNG from any scale-down activ
 
 For more information about the Scale Down feature, see Scaling ([Kubernetes](ocean/features/scaling-kubernetes?id=scale-down) or [ECS](ocean/features/scaling-ecs?id=scale-down-behavior)).
 
+<p id=multiple-ami-architectures-in-the-same-virtual-node-group></p>
+
 ## Multiple AMI Architectures in the Same Virtual Node Group 
 
 Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>, <font color="#FC01CC">ECS</font>
 
 Ocean supports instance types with both Arm64 and x86 architectures in the same VNG. This widens the instance selection options because instances that support either the Arm64 or the x86 architectures can be chosen. This enables you to take advantage of the cost and performance benefits of Arm64 when the spot markets allow while maintaining a large whitelist of x86 instances. 
 
-Whenever you create a Virtual Node Group with the Arm64 and x86 instance types, ensure that the workloads can run on both architectures. In addition, use node selectors to ensure that only the relevant pods will trigger a scale-up from this VNG. 
+Whenever you create a Virtual Node Group with the Arm64 and x86 instance types, ensure that the workloads can run on both architectures. In addition, use node selectors to ensure that only the relevant pods will trigger a scale-up from this VNG.
 
-<!-- I took the generic intro information from Preferred Spot Instance Types per Virtual Node Group and put it above -->
+<p id=preferred-instance-types-per-virtual-node-group-(aws)></p>
 
-##  Preferred Instance Types per Virtual Node Group (AWS)
+##  Preferred Instance Types
+
+Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>
 
 Ocean provides a serverless experience in which the specific instances don’t matter, and the best practice is to allow the use of all instance types. However, there are some cases in which a specific instance type may provide better performance or increased cost savings. For example, if you know that your application performs significantly better on M5 instances, then you can save costs by preferring this instance type over others.
 
 Ocean serves such use cases with the ability to define a list of preferred instance types out of all types allowed in the virtual node group. When your preferences are defined, Ocean considers them alongside other considerations when scaling up. In this way, Ocean strives towards a well-distributed and highly available spot-instance/on-demand-based virtual node group that uses preferred types as broadly as possible.
 
-### Preferred Spot Instance Types per Virtual Node Group
+<p id=preferred-spot-instance-types-per-virtual-node-group></p>
+
+### Preferred Spot Instance Types
 
 Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>, <font color="#FC01CC">ECS</font>
 
@@ -80,9 +86,9 @@ As the preferred instance type is a soft requirement, the general spot instance 
 
 For information about defining preferred spot instance types in the Spot API (using the `preferredSpotTypes` attribute under `launchSpec.instanceTypes`), see the Create Virtual Node Group APIs for [Ocean AWS Kubernetes](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecCreate) and [Ocean ECS](https://docs.spot.io/api/#tag/Ocean-ECS/operation/OceanECSLaunchSpecCreate)
 
-<!-- Section below added 15-07-2024 for DOC-1912 -->
+<p id=preferred-on-demand-instance-types-per-virtual-node-group></p>
 
-###  Preferred On-Demand Instance Types per Virtual Node Group
+###  Preferred On-Demand Instance Types
 
 Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>
 
@@ -100,9 +106,9 @@ When you set `preferredOnDemandTypes`, the Ocean Autoscaler will launch on-deman
 
 See also [Terraform](https://registry.terraform.io/providers/spotinst/spotinst/latest/docs/resources/ocean_aws_launch_spec#preferred_od_types)
 
-<!-- Section below added for DOC-2009 -->
+<p id=preferred-instance-types-per-virtual-node-group-gke></p>
 
-## Preferred Instance Types per Virtual Node Group (GKE)
+## Preferred Instance Types (GKE)
 
 Cloud service provider relevance: <font color="#FC01CC">GKE</font>
 
@@ -118,7 +124,9 @@ For information about defining preferred instance types in the Spot API using th
 * [Virtual node group](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKELaunchSpecCreate)
 * [Cluster](https://docs.spot.io/api/#tag/Ocean-GKE/operation/OceanGKEClusterCreate)
 
-## Revert to Preferred Instance Types per Virtual Node Group (GKE)
+<p id=revert-to-preferred-instance-types-per-virtual-node-group-gke></p>
+
+## Revert to Preferred Instance Types (GKE)
 
 Cloud service provider relevance: <font color="#FC01CC">GKE</font>
 
@@ -149,7 +157,9 @@ Nodes from different virtual node groups can be replaced simultaneously.
 The revert to preferred process is only valid for spot instances not running on Preferred. 
 On-demands that are not of type **preferred** will not be reverted.
 
-##  Ephemeral Storage per Virtual Node Group
+<p id=ephemeral-storage-per-virtual-node-group></p>
+
+##  Ephemeral Storage
 
 Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>
 
