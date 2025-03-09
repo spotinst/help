@@ -462,9 +462,9 @@ export const aliases = (() => {
 
     "/eco/strategy-selection/": "/eco/tutorials/choose-a-strategy",
 
-    "eco/troubleshooting/eco-faq": "/faqs/",
+    "/eco/troubleshooting/eco-faq": "/faqs/",
 
-    "eco/troubleshooting/azure-faq": "/faqs/",
+    "/eco/troubleshooting/azure-faq": "/faqs/",
 
     "/elastigroup/amazon-web-services/":
       "/elastigroup/getting-started/elastigroup-for-aws",
