@@ -1835,6 +1835,23 @@ Some of the common reasons your GKE nodes can be unregistered are if:
  </details>
 
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocmigrateworkloads">GKE: Can I migrate workloads?</summary>
+
+  <div style="padding-left:16px">
+
+You can migrate workloads for GKE:
+
+1. In the Spot console, [create a virtual node group](ocean/tutorials/manage-virtual-node-groups) with [labels that match your workload](ocean/tutorials/manage-virtual-node-groups?id=node-selection-parameters).
+2. In GKE, [disable the autoscaler](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-autoscaler#disable_autoscaling) so GKE won’t launch nodes for the pending pod which should be scheduled in Ocean’s managed nodes.
+3. In GKE, [resize the clusters](https://cloud.google.com/sdk/gcloud/reference/container/clusters/resize) to <i>0</i> to drain the nodes: `gcloud container clusters resize <cluster_name> --num-nodes=0 --region=<region/zone> --node-pool <node_pool_name>`.
+
+Ocean then detects the pending pods and launches virtual node groups for the nodes.
+
+   </div>
+
+ </details>
+
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanbootdisk">GKE: Why can’t I spin new instances (boot disk architecture)?</summary>
 
   <div style="padding-left:16px">
