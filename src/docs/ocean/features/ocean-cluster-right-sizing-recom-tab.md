@@ -180,7 +180,7 @@ To change settings:
 
 2. Click the arrow on the right for **vCPU** or **Memory** as required (vCPU shown in the example).
 
-<img width="500" src="https://github.com/user-attachments/assets/59b2e755-04d8-4967-9b39-9fc0904e5231" />
+ <img width="500" src="https://github.com/user-attachments/assets/59b2e755-04d8-4967-9b39-9fc0904e5231" />
 
 3. Change the current value(s) and save.
 
