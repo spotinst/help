@@ -405,6 +405,17 @@ Each time a user is added to an organization, the user gets a verification email
  </details>
  
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="supporttix">How can I see my open support tickets for Spot?</summary>
+
+  <div style="padding-left:16px">
+
+You can go to the [Spot support center](https://support.spot.io/hc/en-us) to submit requests and view ticket history.
+
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="pagerdutynotifications">Can I set up PagerDuty alerts from Spot?</summary>
 
   <div style="padding-left:16px">
