@@ -1,6 +1,19 @@
 # Ocean Release Notes
 
-## February 2025: Features and Enhancements
+
+
+## March 2025: Features and Enhancements
+
+*  **OCN-0070: March 09, 2025:** (**<font color="#FC01CC">AKS</font>**) and (**<font color="#FC01CC">EKS</font>**) Changes were made to right-sizing statuses. [Learn more...](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=workloads-optimization-list)
+
+*  **OCN-0071: March 09, 2025:** (**<font color="#FC01CC">AKS</font>**) and (**<font color="#FC01CC">EKS</font>**) You can select the right-sizing percentile settings to calculate the memory recommendations.[Learn more...](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=set-the-vcpumemory-percentile)
+
+Previous months...
+
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600">February, 2025 - click to view</summary>
+ 
+   <div style="padding-left:16px">
 
 *  **OCN-0069: February 26, 2025:** (**<font color="#FC01CC">AKS</font>**) and (**<font color="#FC01CC">EKS</font>**) You can now view your (actual) right-sizing savings from applying down-sizing recommendations to your workloads. [Learn more...](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-savings-tab)
 
@@ -16,8 +29,9 @@
 
 *  **OCN-0064: February 10, 2025:** (**<font color="#FC01CC">AWS EKS</font>**) Dynamic IOPS lets you scale IOPS for GP3 EBS volumes based on instance size. [Learn more...](https://docs.spot.io/ocean/features/scaling-kubernetes?id=dynamic-iops)
 
+</div>
+</details>
 
-Previous months...
 
 <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600">January, 2025 - click to view</summary>
