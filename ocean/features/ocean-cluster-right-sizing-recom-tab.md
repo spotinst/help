@@ -27,7 +27,7 @@ This list displays your right-sizing recommendations per workload and lets you d
 *  [Right Sizing rules](ocean/features/ocean-cluster-right-sizing-recom-tab?id=automation-rules-list) that are attached to specific workloads.
 *  Workload optimization status: If the workload is [attached](ocean/features/ocean-cluster-right-sizing-recom-tab?id=attach-a-right-sizing-rule-to-one-or-more-workloads) to a right-sizing rule, the name of the rule appears under the **Rules** column. The rule can have one of the following workload (colored) optimization statuses:
    *  Green (Optimized): Workload is fully optimized, and no action is required.
-   *  Orange (Limited): Ocean applied recommendations to the workload, but there are limitations due to overhead, VPA, etc.
+   *  Orange (Limited): Ocean applied recommendations to the workload, but there are limitations due to overhead, HPA, etc.
    *  Blue (Pending): Rule has been attached to the workload but is out of schedule.
    *  Red (Not Optimized): Workloads for which Ocean cannot apply the recommendation due to HPA, Thresholds, etc.
    *  Gray (Rollback): Ocean rolled back to the original deployment request and suspended the workload's attachment to the rule.
@@ -38,7 +38,7 @@ This list displays your right-sizing recommendations per workload and lets you d
 *  Potential monthly maximums savings if you adopt the recommendations.
 
 > **Notes**:
-> - Hover over the workload optimization status to view more details in a tooltip.
+> - Hover over the Limited and Not optimized statuses to view more details in a tooltip.
 > - There are no vCPU / memory recommendations or Potential monthly max if a workload is fully optimized. Savings are displayed for the workload because Ocean is already optimizing it.
 >  
 > - If the <img height="20" src="https://github.com/user-attachments/assets/6160df45-992e-41a8-bcc2-5af1bee732ff" /> button appears on the right of the screen, workloads were moved to rollback status. See [Acknowledge a Workload Rollback](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=acknowledge-a-workload-rollback)
