@@ -1,12 +1,8 @@
 # Introduction to Elastic Beanstalk
 
-## What is Elastic Beanstalk?
-
 AWS Elastic Beanstalk is an easy-to-use service for deploying and scaling web applications and services developed with Java, .NET, PHP, Node.js, Python, Ruby, Go, and Docker on familiar servers such as Apache, Nginx, Passenger, and IIS.
 
-To begin, simply upload your code and Elastic Beanstalk automatically handles the deployment, from capacity provisioning, load balancing, auto-scaling to application health monitoring. At the same time, you retain full control over the AWS resources powering your application and can access the underlying resources at any time.
-
-## Elastic Beanstalk Architecture
+To begin, simply upload your code and Elastic Beanstalk automatically handles the deployment, from capacity provisioning, load balancing, autoscaling to application health monitoring. At the same time, you retain full control over the AWS resources powering your application and can access the underlying resources at any time.
 
 Elastic Beanstalk automatically provisions the resources required to run application deployment. AWS resources created for an environment include Route53 entry, an Elastic Load Balancer (ELB), an Auto Scaling Group (ASG), and one or more instances.
 
@@ -14,13 +10,11 @@ Once configured, the Beanstalk environment is highly dependent on its provisione
 
 <img src="/elastigroup/_media/elastic-beanstalkREADME_1.png" />
 
-## How does the Integration Work?
-
-Due to the fact that the Elastic Beanstalk environment is dependent on its provisioned resources (i.e., CloudFormation, ELB and ASG), it is necessary to keep those in place and integrate only with the underlying ASG.
+Due to the fact that the Elastic Beanstalk environment is dependent on its provisioned resources (such as CloudFormation, ELB, ASG), it is necessary to keep those in place and integrate only with the underlying ASG.
 
 Elastic Beanstalk uses several strategies for rolling deployments: `All at once`, `Rolling`, `Rolling with additional batch`, `Immutable`.
 
-Depending on the Deployment Policy configured in the Elastic Beanstalk environment, Elastigroup will identify it and use one of the following approaches to manage the cluster: in-ASG or Independent Elastigroup.
+Depending on the deployment policy configured in the Elastic Beanstalk environment, Elastigroup will identify it and use one of the following approaches to manage the cluster: in-ASG or independent Elastigroup.
 
 | **Elastic Beanstalk Deployment Policy** | **Spot Integration Method** |
 | --------------------------------------- | --------------------------- |
@@ -33,7 +27,7 @@ Single-instance environments will be integrated with Independent Elastigroup met
 
 To learn more about Elastic Beanstalk deployment methods, see the following AWS documentation: [Deployment Policies and Settings](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/using-features.rolling-version-deploy.html)
 
-We recommend using a deployment policy that is supported by the in-ASG approach whenever possible.
+Use a deployment policy that is supported by the in-ASG approach whenever possible.
 
 > **Tip**: Before starting, verify that the most up-to-date [Spot IAM policy](administration/api/spot-policy-in-aws) is configured in your AWS account.
 

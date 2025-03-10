@@ -1,6 +1,6 @@
 # Independent Elastigroup Integration
 
-When Beanstalk deployment policy is set as: `Immutable` or `Rolling with additional batch` Elastigroup will use the `Independent` integration method to manage the cluster instances.
+When Beanstalk deployment policy is set as: `Immutable` or `Rolling with additional batch`, Elastigroup uses `Independent` integration to manage the cluster instances.
 
 ## Group Initialization
 
@@ -10,17 +10,17 @@ Once an Elastigroup is created with Beanstalk `Independent` integration, the fol
 2. The new instances are registered to the Elastic Beanstalk environment.
 3. The new instances are registered to the Load Balancer.
 
-> **Tip**: As a policy, the system avoids downscaling pre-existing workloads. Downscaling the original auto-scaling group can be done manually once the integration process is completed and the Elastigroup is running.
+> **Tip**: As a policy, the system avoids downscaling preexisting workloads. Downscaling the original autoscaling group can be done manually once the integration process is completed and the Elastigroup is running.
 
 ## Capacity Management
 
-All capacity changes must be done via Elastigroup. Failing to do so may result in unexpected behavior. This includes detaching instances, Elastigroup/Beanstalk environment termination, scaling policies, and manual capacity changes.
+All capacity changes must be done in Elastigroup. Failing to do so may result in unexpected behavior. This includes detaching instances, Elastigroup/Beanstalk environment termination, scaling policies, and manual capacity changes.
 
 ## Application Updates and Deployment
 
 For non-capacity changes only. In the following steps the Beanstalk environment is updated, then the new version is imported and a blue/green deployment is initiated to gracefully replace the existing Elastigroup's instances with new, updated instances.
 
-1. Configure the Blue-Green deployment settings – Edit the group configuration and navigate to the Compute tab. In the bottom of the screen under Integrations, configure Strategy, Grace Period, and Batch Size. These settings will apply in the deployment that will start in step 3.
+1. Configure the Blue-Green deployment settings – Edit the group configuration and navigate to the Compute tab. In Integrations, configure Strategy, Grace Period, and Batch Size. These settings will apply in the deployment that will start in step 3.
 
 <img src="/elastigroup/_media/independent-elastigroup-integration_1.png" />
 
