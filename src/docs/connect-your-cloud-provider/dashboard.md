@@ -79,7 +79,7 @@ Your actual AWS RIs and/or SPs charges deducted from the published cost of AWS E
 
 #### Microsoft Azure RIs, SPs and Reserved Capacity (RC)  
 
-Your actual Azure RIs and/or SPs and/or RCs charges deducted from the cost of Microsoft Azure Pay-As-You-Go Instances, as published in the Customer’s Azure price sheet, which is presented to Spot by NetApp.
+Your actual Azure RIs and/or SPs and/or RCs charges deducted from the cost of Microsoft Azure Pay-As-You-Go Instances, as published in the Customer’s Azure price sheet, which is presented to Spot.
 
 #### GCP Committed Usage Discounts (CUD)  
 

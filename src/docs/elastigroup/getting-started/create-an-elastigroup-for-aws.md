@@ -46,7 +46,7 @@ Enter the following information:
 
 #### Multiple AMI Support 
 
-Spot by NetApp’s Elastigroup can support the use of multiple AMIs in a single Elastigroup. You can utilize both AWS Graviton and x86 instances in the same groups and the feature also allows the Elastigroup autoscaler to launch instances based on the best Spot pricing and availability in real time.  
+Spot’s Elastigroup can support the use of multiple AMIs in a single Elastigroup. You can utilize both AWS Graviton and x86 instances in the same groups and the feature also allows the Elastigroup autoscaler to launch instances based on the best Spot pricing and availability in real time.  
 
 You can select up to three images and they must follow the following criteria: 
 
