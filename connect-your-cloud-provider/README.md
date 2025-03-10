@@ -22,5 +22,5 @@
 ## More links
 
 * [Integration tools](tools-and-provisioning/)
-* [Spot by NetApp OpenAPI specification](https://docs.spot.io/api/)
+* [Spot OpenAPI specification](https://docs.spot.io/api/)
 * [FAQs](faqs/)

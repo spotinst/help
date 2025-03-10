@@ -151,7 +151,7 @@ Use Accelerated Scale Down for:
 
 To configure Accelerated scale-down:
 
-1.  Use the [Spot by NetApp API](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterGet) to configure Accelerated Scale Down on the Ocean cluster: 
+1.  Use the [Spot API](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterGet) to configure Accelerated Scale Down on the Ocean cluster: 
 
 2.  Set `cluster.autoScaler.down.aggressiveScaleDown.isEnabled = true`. 
 
