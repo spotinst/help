@@ -21,7 +21,7 @@ There are two options available for creating resources:
 
 This second option provides two important benefits:
 
-- Installation is simplified, as it is no longer necessary to manually add Spot by NetApp’s custom private registry/resource type.
+- Installation is simplified, as it is no longer necessary to manually add Spot’s custom private registry/resource type.
 - Maintenance and version update overhead is greatly reduced so customers receive the latest Spot feature without delay.
 
 This means that you can easily use CloudFormation to provision cloud infrastructure through Spot Elastigroup, helping you save more time and optimize your cloud cost and utilization.
