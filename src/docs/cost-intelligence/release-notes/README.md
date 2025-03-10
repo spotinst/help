@@ -36,7 +36,7 @@
 
 * **COI-0017 November 18, 2024**: Cost Intelligence includes recommendations that identify resources that can be managed and optimized by Spot Ocean. You can click the button to onboard these resources to Ocean. [Learn more](cost-intelligence/tutorials/best-practice-checks/?id=source).
 
-* **COI-0016 November 5**, 2024: You can define asset groups, which allow you to view and manage data with a set of filters that apply to different pages. [Learn more](cost-intelligence/tutorials/dashboard/?id=asset-groups).
+* **COI-0016 November 5, 2024**: You can define asset groups, which allow you to view and manage data with a set of filters that apply to different pages. [Learn more](cost-intelligence/tutorials/dashboard/?id=asset-groups).
 
  </div>
  </details>
