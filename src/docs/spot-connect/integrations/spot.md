@@ -1,8 +1,8 @@
 # Spot Integration 
 
-The Spot by NetApp integration automates Elastigroup and Ocean operations and optimizes your cloud infrastructure. 
+The Spot integration automates Elastigroup and Ocean operations and optimizes your cloud infrastructure. 
 
-## Configure Spot by NetApp in Spot Connect 
+## Configure Spot n Spot Connect 
 
 1. In the left main menu, click **Connect** and click **Settings**.  
 2. Under the Cloud Services tab, select **Spot by NetApp**.  
@@ -15,7 +15,7 @@ Details needed to set up a Spot Authorization instance in Spot Connect:
 |      Integration Alias               |     A name for the integration instance                                                     |     True       |   |
 |      Spot Programmatic Access Token  |     A Spot Programmatic Access Token is recommended or you may use a Personal Access Token  |     True       |   |
 
-Follow the steps below in your Spot by NetApp account to generate Spot Programmatic Access Token.  
+Follow the steps below in your Spot account to generate Spot Programmatic Access Token.  
 1. In the top right, click the user icon and click **Settings**.  
 2. In the left menu, click Settings and click **API**. 
 3. Click **Permanent Tokens** and on the top right, click **Generate Token**.
@@ -66,7 +66,7 @@ There can be additional required or optional input values to enter based on the 
 
 Complete the following information:  
 
-* Spot Instance: Select a Spot by NetApp instance. 
+* Spot Instance: Select a Spot instance. 
 * Spot Account: Select a Spot account. 
 * Spot Operation: Select a Spot operation.
 * Group ID: Provide groupId of Spot Elastigroup AWS for Scale Up operation.  
@@ -100,7 +100,7 @@ There can be additional required or optional input values to enter based on the 
 
 Complete the following information:  
 
-* Spot Instance: Select a Spot by NetApp instance. 
+* Spot Instance: Select a Spot instance. 
 * Spot Account: Select a Spot account. 
 * Spot Operation: Select a Spot operation. 
 * OceanClusterId: Provide oceanClusterId for Get Cluster operation. 
@@ -135,7 +135,7 @@ Use this action to detach an instance from Spot Elastigroup AWS.
 
 Complete the following information: 
 
-* Spot Instance: Select a Spot by NetApp instance.  
+* Spot Instance: Select a Spot instance.  
 * Spot Account: Select a Spot account.  
 * Group ID: Select Elastigroup Id. 
 * Instance Id to Detach: Enter an instance ID to detach.  
@@ -170,7 +170,7 @@ Use this action to update a stateful instance.
 
 Complete the following information: 
 
-* Spot Instance: Select a Spot by NetApp instance. 
+* Spot Instance: Select a Spot instance. 
 * Spot Account: Select a Spot account.  
 * Managed Instance Ids: Select Spot managed instance Ids. 
 * Operation: Select operation on stateful instance.
@@ -205,7 +205,7 @@ Use this action to detach a Spot Elastigroup AWS instance and remove idle GitHub
 
 Complete the following information: 
 
-* Spot Instance: Select a Spot by NetApp instance. 
+* Spot Instance: Select a Spot instance. 
 * GitHub Repository: Select a GitHub repository.  
 * Spot Account: Select a Spot account. 
 * Elastigroup: Select Spot Elastigroup AWS 
@@ -244,7 +244,7 @@ Use this action to create a new Virtual Node Group from an existing Spot Ocean C
 
 Complete the following information: 
 
-* Spot Instance: Select a Spot by NetApp instance. 
+* Spot Instance: Select a Spot instance. 
 * Spot Account: Select a Spot account. 
 * Ocean Cluster: Select Spot Ocean AWS cluster. 
 * Ocean Cluster VNG: Select Spot Ocean AWS cluster Virtual Node Group. 
@@ -319,7 +319,7 @@ Action to fetch Rightsizing recommendations from Spot Ocean cluster and update K
 
 Complete the following information:  
 
-* Spot API Token/ Alias: Select a Spot API Token/ Alias.  
+* Spot API Token/ Alias: Select a Spot API Token/Alias.  
 * Spot Account: Select a Spot account. 
 * Ocean AWS Cluster: Select a Spot Ocean AWS cluster.
 * AWS S3 Bucket with K8s Manifests or Helm Config: Select AWS S3 bucket.  
