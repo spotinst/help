@@ -2,7 +2,7 @@
 
 ## Features and Enhancements
 
-  * **SEC-009: December 17, 2024** In a few clicks, you can onboard cloud accounts to Spot Security for misconfiguration and compliance assessment. [Learn more](spot-security/getting-started/)
+  * **SEC-009: December 17, 2024** In a few clicks, you can [onboard cloud accounts](spot-security/getting-started/) to Spot Security for misconfiguration and compliance assessment.
 
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
