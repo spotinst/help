@@ -1,6 +1,6 @@
 # Elastigroup Networking 
 
-Elastigroup enables you to define a configuration of rationally similar workloads and enables the scaling of Virtual Machines (VMs) in the Azure cloud vendor. Defining the network configuration enables Elastigroup to provision the VMs in the appropriate Azure Virtual Network and configure the individual network interfaces that are initialized to meet the requirements of your workloads.  
+Elastigroup enables you to define a configuration of rationally similar workloads and enables the scaling of virtual machines (VMs) in the Azure cloud vendor. Defining the network configuration enables Elastigroup to provision the VMs in the appropriate Azure virtual network and configure the individual network interfaces that are initialized to meet the requirements of your workloads.  
 
 ## Virtual Network 
 
@@ -8,15 +8,15 @@ The Networking field mandates the definition of the resource group of the releva
 
 ![azure-networking-1](https://github.com/spotinst/help/assets/106514736/5d0945f2-251c-4ed6-849b-f3c340477097)
 
-The Virtual Network must be a valid virtual network in Azure that is registered under the same region as the Elastigroup. 
+The virtual network must be a valid virtual network in Azure that is registered under the same region as the Elastigroup. 
  
 Each network interface defines a subnet it will launch to. A number of network interfaces can reference the same subnet. It is possible to define under each network interface a single Azure Network Security Group. It is also possible to use several Azure Application Security Groups on a single network interface.  
 
-You can have Elastigroup define a Public IP on a network interface and describe the SKU (Standard or Basic) to provision a Public IP. When a public IP SKU is selected, it must be upheld between all the network interfaces of the Elastigroup. Note: The Public IP’s SKU can affect the applicable load balancers that the Elastigroup can utilize. 
+You can have Elastigroup define a public IP on a network interface and describe the SKU (standard or basic) to provision a public IP. When a public IP SKU is selected, it must be upheld between all the network interfaces of the Elastigroup. Note: the public IP’s SKU can affect the applicable load balancers that the Elastigroup can utilize. 
 
 ## Static IP Pools 
 
-With Elastigroup, you can view how your application scales up and down with our Auto-scaler. During the provisioning of your VMs, Elastigroup can effectively employ pools of various IP addresses, and upon scaling down, it will release or detatch the addresses.  
+With Elastigroup, you can view how your application scales up and down with our autoscaler. During the provisioning of your VMs, Elastigroup can effectively employ pools of various IP addresses, and upon scaling down, it will release or detatch the addresses.  
 
 ### Private IP Pool 
 
@@ -24,7 +24,7 @@ You can define a pool of private IPs for Elastigroup to provision IPs under the 
 
 ![azure-networking-2](https://github.com/spotinst/help/assets/106514736/8c2426a1-c6d1-4146-845a-45bbfa2fb0f9)
  
-In the example above, there is a Virtual Network in Azure: TestVirtualNetwork, that has a subnet, TestSubnet3, where 10.0.1.1, 10.0.1.2, and 10.0.1.3 are already taken and provisioned (marked as red). If an Elastigroup defines a pool that includes [10.0.1.0, 10.0.1.1, 10.0.1.2, 10.0.1.3], upon the next scale-up in the Elastigroup, the VM launched will provision a static private IP on the address 10.0.1.0.   
+In the example above, there is a virtual network in Azure: TestVirtualNetwork, that has a subnet, TestSubnet3, where 10.0.1.1, 10.0.1.2, and 10.0.1.3 are already taken and provisioned (marked as red). If an Elastigroup defines a pool that includes [10.0.1.0, 10.0.1.1, 10.0.1.2, 10.0.1.3], upon the next scale-up in the Elastigroup, the VM launched will provision a static private IP on the address 10.0.1.0.   
 
 Upon the next scaling operation, the pool of static private IPs will be exhausted and the Elastigroup will need an IP address outside of the pool. The Elastigroup will provision a dynamic private IP inside the subnet TestSubnet3. Upon scaling down operations, Elastigroup will deprovision the network interfaces with these IP addresses to be reused in the future. 
 
