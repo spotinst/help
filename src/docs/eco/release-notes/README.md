@@ -5,7 +5,7 @@
 
 <div style="padding-left:16px">
 
-* **ECO-0002**: **November 27, 2024**: You can now view the following Effective Savings Rate (ESR is a FinOps metric that measures the actual ROI of cloud discount instruments) data in the Eco console:
+* **ECO-0002 November 27, 2024**: You can now view the following Effective Savings Rate (ESR is a FinOps metric that measures the actual ROI of cloud discount instruments) data in the Eco console:
 
   * EC2 ESR
   * Non-EC2 ESR
@@ -21,7 +21,7 @@
 
 
 
-* **ECO-0001**: **November 5, 2024**: The new Ocean integration for Eco allows you to use spot instances more consistently and optimize your savings. [Learn more](eco/tutorials/ocean-int).
+* **ECO-0001 November 5, 2024**: The new Ocean integration for Eco allows you to use spot instances more consistently and optimize your savings. [Learn more](eco/tutorials/ocean-int).
 
  </div>
  </details>
