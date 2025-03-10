@@ -2,7 +2,7 @@
 
 ## Features and Enhancements
 
-  * **SEC-009 December 17, 2024** In a few clicks, you can [onboard cloud accounts](spot-security/getting-started/) to Spot Security for misconfiguration and compliance assessment.
+  * **SEC-010 December 17, 2024** In a few clicks, you can [onboard cloud accounts](spot-security/getting-started/) to Spot Security for misconfiguration and compliance assessment.
 
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
@@ -10,7 +10,7 @@
 
 <div style="padding-left:16px">
 
-  * **SEC-008 November 19, 2024** You can [set up](spot-security/features/vulnerability/configure/aws) vulnerability scanning for Amazon Elastic Kubernetes Service and view the results in the [Vulnerability Scan Dashboard](spot-security/features/vulnerability/dashboard).
+  * **SEC-009 November 19, 2024** You can [set up](spot-security/features/vulnerability/configure/aws) vulnerability scanning for Amazon Elastic Kubernetes Service and view the results in the [Vulnerability Scan Dashboard](spot-security/features/vulnerability/dashboard).
 
  </div>
 </details>
