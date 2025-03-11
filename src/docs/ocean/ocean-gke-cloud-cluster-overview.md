@@ -10,7 +10,7 @@ The Ocean Cloud Cluster Overview dashboard is divided into the following panels:
 
 *   **Ocean Savings panel**: Shows the amount of money, CPU, memory, and GPU compute resources saved when you utilize Ocean to manage your Kubernetes cluster. Specifically, these are savings from running spot instances, bin packing, and reverting to lower-cost nodes. 
 
-* **Autoscaling Activity panel**: The Ocean Autoscaler automatically performs scale-up and scale-down, and reverts nodes to lower-cost nodes, spots, and commitments based on resources or availability. This panel shows a summary of these autoscaling activities as widgets.
+* **Autoscaling Activity panel**: The Ocean Autoscaler automatically performs scale-up and scale-down, autohealing, and reverts nodes to lower-cost nodes, spots, and commitments based on resources or availability. This panel shows a summary of these autoscaling activities as widgets.
 
 * **Interactive Autoscaling Activity graph**: This graph displays autoscaling activity over time, providing insights into the Ocean infrastructure/applications and cluster activity.
 
@@ -195,6 +195,12 @@ The Revert to Lower Cost widget shows the number of events for which a node was 
 
 Tracking these events on the Autoscaling Activity panel lets you see when and how often your cluster is optimizing for cost savings. 
 
+#### Autohealing
+
+Auto Healing monitors the status of each Kubernetes node by examining the condition object, which provides information about various aspects of the node. Specifically, Autohealing focuses on the Ready condition. If the Ready condition indicates a status of False or Unknown, the instance is deemed unhealthy, prompting the initiation of a replacement process. 
+
+The Autohealing widget shows the number of events for which AWS autohealing replaced an unhealthy instance with a healthy instance. By monitoring these autohealing events on the Autoscaling Activity panel, you can track how effectively Ocean Autoscaler maintains your cluster's health and resilience to failures. 
+
 ###   Autoscaling Activity Graph
 
 The Autoscaling Activity Graph provides intuitive insights into the interaction between the Ocean infrastructure and the applications it supports. It also provides cluster activity insights at a granular 
@@ -236,7 +242,7 @@ This is the information displayed:
 
 * Autoscaling events (displayed for a period of 12 hours or less):
 One or more autoscaling events are displayed in blue rectangles. These can be any Ocean autoscaling scale-up and scale-down events displayed as widgets above the graph.
-For example, Scale Up or Scale Down.
+For example, Scale Up, Scale Down, or Autohealing.
 
 For vCPU/memory(GiB)/GPU:
 
@@ -257,6 +263,24 @@ Total Allocation Calculation:
 ##  Related Topics 
 
 [Scaling (Kubernetes)](https://docs.spot.io/ocean/features/scaling-kubernetes)
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
 
  
 
