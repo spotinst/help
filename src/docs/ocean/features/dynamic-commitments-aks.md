@@ -188,8 +188,26 @@ New-AzRoleAssignment -Scope "/providers/Microsoft.BillingBenefits" -ApplicationI
 3.  Click **Test RIs/SPs to Spot Permissions** to verify that your permissions have been successfully granted.
    
 
+Contrinue from figma
 
-## Configure in the API 
+
+
+
+## Turn Utilize Commitments on or off per Virtual Node Group via the API
+
+You might want to distribute reservation instances/savings plans according to virtual node groups for different types of workloads on the same cluster.
+
+Ocean provides attributes that let you control utilization commitments at the virtual node group level.
+
+In the Spot API, under Virtual Node Groups > XXX, you can configure these attributes as either True or False:
+
+--Need to check the path and the parameters in the API- ToDo
+
+utilizeReservedInstances: If there are free reserved instances within the AWS account, Ocean will utilize them before launching spot instances. The initial default value is inherited from the identical attribute at the cluster level.
+
+utilizeSavingPlans: If savings plan commitments have available capacity, Ocean will utilize them alongside existing reserved instances to maximize cost efficiency. The initial default value is inherited from the identical attribute at the cluster level.
+
+Any change you make at the Virtual Node Group level will override the value set at the cluster level.
 
 **COMMENT: Need to put AKS links and parameter names.**
 
