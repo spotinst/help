@@ -2639,6 +2639,20 @@ This happens if you have duplicate tags configured:
  </div>
 
  </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egagentlogs">AWS, Azure: Where are the agent logs saved?</summary>
+
+  <div style="padding-left:16px">
+
+The Spotinst agent logs are saved:
+
+* Linux: /var/log/spotinst/spotinst-agent.log
+* Windows: C:\Spotinst
+
+   </div>
+
+ </details>
  
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="eglogsdkevents">AWS, GCP: Can I log events for the Spotinst SDK for Python?</summary>
