@@ -2405,6 +2405,24 @@ This happens when the Ocean cluster tries to create a node pool using a specific
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocworkloadbutton">AKS: Why can’t I migrate a workload for an AKS Ocean cluster?</summary>
+
+  <div style="padding-left:16px">
+
+The Start Migration button can be grayed out for an AKS Ocean cluster if:
+
+* The cluster has system node pools, which must run as regular nodes and don’t require scaling.
+* The Kubernetes cluster isn’t running on AKS infrastructure.
+* Kubernetes cluster isn’t connected to an Ocean cluster. You can [import an AKS cluster to Ocean](ocean/getting-started/aks/?id=import-an-aks-cluster-to-ocean).
+* The Ocean Controller wasn’t installed, updated, and running in the cluster.
+* Cluster or virtual node group doesn’t have a [supported Kubernetes version](https://learn.microsoft.com/en-us/azure/aks/supported-kubernetes-versions?tabs=azure-cli#aks-kubernetes-release-calendar).
+* You don’t have dedicated [virtual node groups](ocean/features/vngs/?id=virtual-node-groups) for your workload to let Ocean autoscaler scale up nodes.
+
+ </div>
+
+ </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocworkload">AKS: Why is the workload marked as unable to migrate?</summary>
 
   <div style="padding-left:16px">
@@ -2414,6 +2432,8 @@ If you’re seeing an unable to migrate status in workload migration, check if t
  </div>
 
  </details>
+
+ 
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanvmarch">AKS: Can I create VMs with specific architecture in Ocean AKS?</summary>
