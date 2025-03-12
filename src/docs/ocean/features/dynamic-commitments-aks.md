@@ -6,45 +6,29 @@ Cloud service provider relevance: <font color="#FC01CC">AKS</font>
 
 ## Overview
 
-Ocean Elastigroup and Stateful Node automatically revert existing VMs using reserved instances (RIs) and savings plans (SPs) to spot VMs or other commitment deals wherever a reservation is needed elsewhere in your Azure account. This feature optimizes resource allocation and cost efficiency by continuously adjusting to dynamic environment needs.
+Ocean, Elastigroup and Stateful Node automatically revert existing VMs using reserved instances (RIs) and savings plans (SPs) to spot VMs or other commitment deals wherever a reservation is needed elsewhere in your Azure account. This feature optimizes resource allocation and cost efficiency by continuously adjusting to dynamic environment needs.
 
 This is in accordance with the Ocean, Elastigroup, and Stateful Node commitment prioritization mechanism, which prioritizes available reserved instances and savings plan commitments over spot or full-priced on-demand VMs. This procedure describes how application workloads that require on-demand VMs can always benefit from reservations, even if they were previously prioritized for utilization when available.
 
 You can track dynamic compute commitment utilization and coverage with your Azure Cost Usage report
 
-## Feature Benefits 
-
 By prioritizing RI and SP commitments, this feature continually adapts to the dynamic needs of your environment. Dynamic commitments management lets you:
 
-* Prioritize available RIs and SPs.
+* Prioritize available RIs and SPs: Prioritize to prevent their underutilization. See [Utilize Commitment Plans](elastigroup/features/core-features/spot-reserved-on-demand-instances?id=utilize-commitment-plans). 
 * Revert from On-demand RI and SPs.
 
-## Prioritize Available RIs and SPs
-
-Prioritize available RIs and SPs to prevent their underutilization. See [Utilize Commitment Plans](elastigroup/features/core-features/spot-reserved-on-demand-instances?id=utilize-commitment-plans). 
-
-<!--
-##  What are Azure Reservations?
-Azure Reservations helps you save money by committing to one-year or three-year plans for multiple products. Committing gets you a discount on the resources you use. Reservations can significantly reduce your resource costs by up to 72% from pay-as-you-go prices. Reservations provide a billing discount and don't affect the runtime state of your resources.  
-
-After purchase, the reservation discount automatically applies to the resource usage that matches the attributes you select when you buy the reservation. Attributes include the SKU, regions (where applicable), and scope. Reservation scope selects where the reservation savings apply. 
-
-##  How are Reservations applied to Azure VM Instances?
-
-You can save money once you commit to an Azure reserved VM instance. The reservation discount is applied automatically to the number of running VMs matching the reservation scope and attributes. You don't need to assign a reservation to a VM to get the discounts. A reserved instance purchase covers only the compute part of your VM usage. For Windows VMs, the usage meter is split into two separate meters. There's a compute meter, which is the same as the Linux meter, and a Windows server license. The charges you see when you purchase are only for the computing costs. Charges don't include Windows software costs. See [Understand Azure Reserved VM Instances Discount - Microsoft Cost Management](https://learn.microsoft.com/en-us/azure/cost-management-billing/manage/understand-vm-reservation-charges#how-reservation-discount-is-applied). -->
-
-##  What are Azure Commitments?
+##  Azure Commitments
 
 Azure Commitments are agreements customers make to use a certain amount of Azure resources over a specified period, including RIs and Saving Plans.
 
-Commitments Types are as follows:
+Commitments types are as follows:
 
 *  Capacity Commitments: Involves reserving VM capacity to ensure availability and predictability.
 *  Cost Commitments: Involves committing to a certain spending level to benefit from discounts.
 
 RIs are best for predictable workloads where you can commit to specific VM types and sizes, while SPs offer more flexibility for varying workloads across different services. Both options help reduce costs through committed usage, ensuring better budget management and resource allocation in Azure.
 
-##  What are Azure Reserved Instances?
+##  Azure Reserved Instances
 
 Azure RIs let you reserve VMs in Azure for a one- or three-year term, providing significant cost savings compared to pay-as-you-go pricing, and provide the following benefits:
 
@@ -52,7 +36,7 @@ Azure RIs let you reserve VMs in Azure for a one- or three-year term, providing 
 *  Predictable Billing: Helps budget and forecast costs as you pre-purchase capacity.
 *  Flexibility: You can exchange or cancel RIs, providing flexibility in your commitment.
 
-What are Azure Savings Plans?
+##  Azure Savings Plans
 
 Azure SPs offer a flexible pricing model that lets you save up to 65% on your Azure compute costs in exchange for a commitment to spend a specific amount over a one- or three-year period and provide the following benefits:
 
@@ -99,6 +83,21 @@ The reversion will not occur if:
 
 * There is no alternative commitment or spot VM to revert back to. 
 * It violates the group's regular VM count request. 
+
+
+I WILL MOVE EVERYTHIING BELOW TO A SEPRATE PAGE AFTER CONTENT APPROVAL
+
+
+#  Set up Dynamic Commitments
+
+Cloud service provider relevance: <font color="#FC01CC">AKS</font>
+
+Before you can turn on dynamic commitments for your cluster or virtual node groups, you need to:
+
+*  [Get your Azure credentials](link)
+*  [Connect Commitments to Spot Products](link)
+
+Once you have your Azure credentials, you can turn on dynamic commitments via either the Spot console or the Spot API.
 
 ##  Get the Azure Credentials Required to Connect Commitments to Spot Products
 
@@ -188,12 +187,15 @@ New-AzRoleAssignment -Scope "/providers/Microsoft.BillingBenefits" -ApplicationI
 3.  Click **Test RIs/SPs to Spot Permissions** to verify that your permissions have been successfully granted.
    
 
-Contrinue from figma
+----Continue from figma-----
+
+##  Turn on Utilize Commitments from the Spot Console
+
+1. Go to the virtual node group where you want to turn on the utilize RSs/SPs feature.
+2. In the Ocean autoscaler strategy area, click Utilize RIs/SPs.
 
 
-
-
-## Turn Utilize Commitments on or off per Virtual Node Group via the API
+## Turn on Utilize Commitments per Virtual Node Group via the Spot API
 
 You might want to distribute reservation instances/savings plans according to virtual node groups for different types of workloads on the same cluster.
 
