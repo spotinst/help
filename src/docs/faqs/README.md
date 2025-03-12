@@ -2067,6 +2067,30 @@ You can set a static endpoint to use with Ocean Controller Version 2:
 
 </details>
 
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocupgradehelm">AKS, EKS, GKE: Why can’t I upgrade the Ocean Controller Version 2 using Helm?</summary>
+
+  <div style="padding-left:16px">
+
+If you get this message when you’re [upgrading the Ocean Controller Version 2](ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-install?id=install-via-helm) using Helm:
+
+````
+Release "ocean-controller" does not exist. Installing it now.
+Error: parse error at (ocean-kubernetes-controller/templates/_helpers.tpl:320): unclosed action
+````
+
+You need to:
+
+1. Check if the cluster already has the metrics-server installed: `kubectl get apiservice v1beta1.metrics.k8s.io`.
+2. Check the Helm [Charts](https://helm.sh/docs/topics/charts/) version: `helm search repo spot`.
+3. Update the [Helm Chart to the latest version](https://helm.sh/docs/helm/helm_upgrade/).
+
+If these don’t work, add the `--set metrics-server.deloyChart=false` flag to the `helm upgrade –install` cmd.
+
+ </div>
+
+</details>
+
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanssar">AKS, EKS, GKE: Should I get frequent <i>SelfSubjectAccessReview</i> requests after upgrading to Ocean Controller Version 2?</summary>
 
