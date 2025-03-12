@@ -41,7 +41,7 @@ Supported products: Ocean, Elastigroup.
  <a href="faqs/frequently-asked-questions/general#genreg"></a>
 
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="billing">AWS, Azure, GCP: How are costs and savings calculated in the Spot console and the API?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="savings">AWS, Azure, GCP: How are costs and savings calculated in the Spot console and the API?</summary>
 
   <div style="padding-left:16px">
 
@@ -182,6 +182,19 @@ This can happen if you have AWS resources that are not managed by Spot. Spot sca
 
  </details>
 
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="serviceaccountkey">GCP: Can I change the service account key for my GCP account?</summary>
+
+  <div style="padding-left:16px">
+
+You can reset your credentials using the [set credentials for GCP API](https://docs.spot.io/api/#operation/OrganizationsAndAccountsSetCloudCredentialsForGCP). It typically changes immediately. If it doesn’t, the service runs at the beginning of each hour.
+
+Try launching an instance to see that it’s working correctly.
+
+ </div>
+
+ </details>
+ 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="SSO-signin">SSO: Why can't I sign in to the Spot console?</summary>
 
@@ -1478,6 +1491,20 @@ You can also [push the ECS agent logs to CloudWatch](https://docs.aws.amazon.com
  </details>
 
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocimportcluster">EKS: Why can’t I select my EKS cluster in the Ocean import cluster wizard?</summary>
+
+  <div style="padding-left:16px">
+
+Your EKS cluster may not be included in the list of clusters when you’re trying to import to Ocean. This can happen if there aren’t any node groups in the cluster.
+
+Add a [node group to your EKS cluster](https://docs.aws.amazon.com/eks/latest/userguide/create-managed-node-group.html) then [import the cluster](ocean/getting-started/eks/join-an-existing-cluster) again.
+
+ </div>
+
+ </details>
+
+
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanamiid">EKS: How can I get the AMI ID for EKS-optimized Amazon Linux?</summary>
 
   <div style="padding-left:16px">
@@ -1954,6 +1981,27 @@ Contact support to decide on the selected instance type for launching and to rem
 
  </details>
 
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocquotaexceeded">GKE: Why can’t I spin new instances (quota_exceeded)?</summary>
+
+  <div style="padding-left:16px">
+
+You may get this message when scaling up instances:
+
+````
+ERROR, Can't Spin Instance: Name: sin-xxxxx. Code: QUOTA_EXCEEDED, Message: Quota 'M1_CPUS' exceeded. Limit: 0.0 in region us-east4
+````
+
+GCP has [allocation quotas](https://cloud.google.com/compute/resource-usage), which limit the number of resources that your project has access to. The limit is per region.
+
+[Check your current quota](https://cloud.google.com/docs/quotas/view-manage). You can [request a quota adjustment](https://cloud.google.com/docs/quotas/view-manage#requesting_higher_quota) from GCP.
+
+The prefix in some of the [machine names changed from n1 to m1](https://cloud.google.com/compute/docs/memory-optimized-machines#m1_series), so will also cause the message to show in the Spot console.
+
+ </div>
+
+ </details>
+
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceancgroupmode">GKE: How can I change the CGROUP_MODE for a GKE cluster?</summary>
 
@@ -2040,6 +2088,30 @@ You can set a static endpoint to use with Ocean Controller Version 2:
 
 </details>
 
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocupgradehelm">AKS, EKS, GKE: Why can’t I upgrade the Ocean Controller Version 2 using Helm?</summary>
+
+  <div style="padding-left:16px">
+
+If you get this message when you’re [upgrading the Ocean Controller Version 2](ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-install?id=install-via-helm) using Helm:
+
+````
+Release "ocean-controller" does not exist. Installing it now.
+Error: parse error at (ocean-kubernetes-controller/templates/_helpers.tpl:320): unclosed action
+````
+
+You need to:
+
+1. Check if the cluster already has the metrics-server installed: `kubectl get apiservice v1beta1.metrics.k8s.io`.
+2. Check the Helm [Charts](https://helm.sh/docs/topics/charts/) version: `helm search repo spot`.
+3. Update the [Helm Chart to the latest version](https://helm.sh/docs/helm/helm_upgrade/).
+
+If these don’t work, add the `--set metrics-server.deloyChart=false` flag to the `helm upgrade –install` cmd.
+
+ </div>
+
+</details>
+
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanssar">AKS, EKS, GKE: Should I get frequent <i>SelfSubjectAccessReview</i> requests after upgrading to Ocean Controller Version 2?</summary>
 
@@ -2121,7 +2193,7 @@ For a network client, only the **account viewer** permission is required for the
  </details>
 
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocjavaheap">AKS, EKS, GKE: Why are my pods unscheduled with event: <i>pod has unbound immediate PersistentVolumeClaims</i>?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocpersistvol">AKS, EKS, GKE: Why are my pods unscheduled with event: <i>pod has unbound immediate PersistentVolumeClaims</i>?</summary>
 
   <div style="padding-left:16px">
 
@@ -2405,6 +2477,51 @@ This happens when the Ocean cluster tries to create a node pool using a specific
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocudr">AKS: Why is my node not registering in my AKS cluster (UDRWithNodePublicIPNotAllowed)?</summary>
+
+  <div style="padding-left:16px">
+
+If your pods are not registering in your AKS cluster, you may get this message:
+
+````
+Could not scale up for pending pod xxxxx due to technical failure to launch required instances. Scale down has been disabled in the cluster until pod is scheduled.
+ERROR Failed to perform scale up for virtual node group xxxxx (vng-xxxxx). Got status code different from SC_OK : 400 Body { "code": "UDRWithNodePublicIPNotAllowed", "details": null, "message": "OutboundType UserDefinedRouting can not be combined with Node Public IP.", "subcode": "" }
+ERROR Failed to scale up 1 new nodes as part of scaling the virtual node groups vng-xxxxx (xxxxx).
+````
+
+You cannot use **enableNodePublicIP** set to <i>True</i> with **userDefinedRouting** set to <i>outboundType</i>.
+
+If you’re using [outbound types of userDefinedRouting](https://learn.microsoft.com/en-us/azure/aks/egress-outboundtype#outbound-type-of-userdefinedrouting), change `"enableNodePublicIP": true`, to <i>false</i>. For example:
+
+````json
+    "nodePoolProperties": {
+        "maxPodsPerNode": 250,
+        "enableNodePublicIP": false,
+````
+
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocworkloadbutton">AKS: Why can’t I migrate a workload for an AKS Ocean cluster?</summary>
+
+  <div style="padding-left:16px">
+
+The Start Migration button can be grayed out for an AKS Ocean cluster if:
+
+* The cluster has system node pools, which must run as regular nodes and don’t require scaling.
+* The Kubernetes cluster isn’t running on AKS infrastructure.
+* Kubernetes cluster isn’t connected to an Ocean cluster. You can [import an AKS cluster to Ocean](ocean/getting-started/aks/?id=import-an-aks-cluster-to-ocean).
+* The Ocean Controller wasn’t installed, updated, and running in the cluster.
+* Cluster or virtual node group doesn’t have a [supported Kubernetes version](https://learn.microsoft.com/en-us/azure/aks/supported-kubernetes-versions?tabs=azure-cli#aks-kubernetes-release-calendar).
+* You don’t have dedicated [virtual node groups](ocean/features/vngs/?id=virtual-node-groups) for your workload to let Ocean autoscaler scale up nodes.
+
+ </div>
+
+ </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocworkload">AKS: Why is the workload marked as unable to migrate?</summary>
 
   <div style="padding-left:16px">
@@ -2414,6 +2531,8 @@ If you’re seeing an unable to migrate status in workload migration, check if t
  </div>
 
  </details>
+
+ 
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanvmarch">AKS: Can I create VMs with specific architecture in Ocean AKS?</summary>
@@ -2637,6 +2756,20 @@ This happens if you have duplicate tags configured:
 * You created a custom tag key with spotinst—Spot automatically creates scaling tags that start with spotinst, resulting in multiple identical tags.
 
  </div>
+
+ </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egagentlogs">AWS, Azure: Where are the agent logs saved?</summary>
+
+  <div style="padding-left:16px">
+
+The Spotinst agent logs are saved:
+
+* Linux: /var/log/spotinst/spotinst-agent.log
+* Windows: C:\Spotinst
+
+   </div>
 
  </details>
  
@@ -3340,7 +3473,7 @@ Find the storage account URL in the Azure console. Go to **VM details** > **JSON
  </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egimportvm">Azure: Why am I getting a <i>Failed to launch VM with RequestDisallowedByPolicy</i> message?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egreqdisallowed">Azure: Why am I getting a <i>Failed to launch VM with RequestDisallowedByPolicy</i> message?</summary>
 
   <div style="padding-left:16px">
 
@@ -4090,6 +4223,24 @@ Yes, you can increase the disk size for stateful nodes.
 
  </details>
 
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ssnnotboot">Azure: Why isn’t my VM booting after recycling?</summary>
+
+ <div style="padding-left:16px">
+
+If the VM agent isn’t ready after recycling, it could be because the VM device name changed.
+
+If you’re using a Linux storage device driver with several devices, the driver assigns major and minor numbers from the availability range to the device.
+
+You should [troubleshoot Linux VM device name changes](https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/linux/troubleshoot-device-names-problems). For example, you can use device names that persist when rebooting:
+
+* Filesystem label
+* UUID
+* Derived device path
+
+ </div>
+
+ </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="ssnlrs">Azure: Why are my stateful nodes not importing/launching (LRS/ZRS)?</summary>
