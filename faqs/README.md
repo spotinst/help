@@ -2497,6 +2497,7 @@ If you’re using [outbound types of userDefinedRouting](https://learn.microsoft
     "nodePoolProperties": {
         "maxPodsPerNode": 250,
         "enableNodePublicIP": false,
+    }
 ````
 
  </div>
