@@ -1491,6 +1491,20 @@ You can also [push the ECS agent logs to CloudWatch](https://docs.aws.amazon.com
  </details>
 
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocimportcluster">EKS: Why can’t I select my EKS cluster in the Ocean import cluster wizard?</summary>
+
+  <div style="padding-left:16px">
+
+Your EKS cluster may not be included in the list of clusters when you’re trying to import to Ocean. This can happen if there aren’t any node groups in the cluster.
+
+Add a [node group to your EKS cluster](https://docs.aws.amazon.com/eks/latest/userguide/create-managed-node-group.html) then [import the cluster](ocean/getting-started/eks/join-an-existing-cluster) again.
+
+ </div>
+
+ </details>
+
+
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanamiid">EKS: How can I get the AMI ID for EKS-optimized Amazon Linux?</summary>
 
   <div style="padding-left:16px">
