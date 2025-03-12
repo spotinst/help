@@ -2405,6 +2405,33 @@ This happens when the Ocean cluster tries to create a node pool using a specific
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocudr">AKS: Why is my node not registering in my AKS cluster (UDRWithNodePublicIPNotAllowed)?</summary>
+
+  <div style="padding-left:16px">
+
+If your pods are not registering in your AKS cluster, you may get this message:
+
+````
+Could not scale up for pending pod xxxxx due to technical failure to launch required instances. Scale down has been disabled in the cluster until pod is scheduled.
+ERROR Failed to perform scale up for virtual node group xxxxx (vng-xxxxx). Got status code different from SC_OK : 400 Body { "code": "UDRWithNodePublicIPNotAllowed", "details": null, "message": "OutboundType UserDefinedRouting can not be combined with Node Public IP.", "subcode": "" }
+ERROR Failed to scale up 1 new nodes as part of scaling the virtual node groups vng-xxxxx (xxxxx).
+````
+
+You cannot use **enableNodePublicIP** set to <i>True</i> with **userDefinedRouting** set to <i>outboundType</i>.
+
+If you’re using [outbound types of userDefinedRouting](https://learn.microsoft.com/en-us/azure/aks/egress-outboundtype#outbound-type-of-userdefinedrouting), change `"enableNodePublicIP": true`, to <i>false</i>. For example:
+
+````json
+    "nodePoolProperties": {
+        "maxPodsPerNode": 250,
+        "enableNodePublicIP": false,
+````
+
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocworkloadbutton">AKS: Why can’t I migrate a workload for an AKS Ocean cluster?</summary>
 
   <div style="padding-left:16px">
