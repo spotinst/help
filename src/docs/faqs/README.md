@@ -4124,6 +4124,24 @@ Yes, you can increase the disk size for stateful nodes.
 
  </details>
 
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ssnnotboot">Azure: Why isn’t my VM booting after recycling?</summary>
+
+ <div style="padding-left:16px">
+
+If the VM agent isn’t ready after recycling, it could be because the VM device name changed.
+
+If you’re using a Linux storage device driver with several devices, the driver assigns major and minor numbers from the availability range to the device.
+
+You should [troubleshoot Linux VM device name changes](https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/linux/troubleshoot-device-names-problems). For example, you can use device names that persist when rebooting:
+
+* Filesystem label
+* UUID
+* Derived device path
+
+ </div>
+
+ </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="ssnlrs">Azure: Why are my stateful nodes not importing/launching (LRS/ZRS)?</summary>
