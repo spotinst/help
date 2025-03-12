@@ -128,8 +128,8 @@ Follow the instructions below while referring to the [Azure documentation](https
 ##  Connect Commitments to Spot Products
 
 1.  Obtain the credentials from your Azure app. Refer to [Get the Azure Credentials Required to Connect Commitments to Spot Products]()
-2.  Go to the virtual node group where you want to turn on the utilize RSs/SPs feature.
-3.  In the Ocean autoscaler strategy area, click **Missing permissions**.
+2.  Go to the virtual node group where you want to turn on the utilize RSs/SPs feature. This can be any of your virtual node groups or the virtual node group template. Ocean rtecommends enabling this feature on the virtual node group template so that it is applied to all your virtual node groups. See [Manage AKS Virtual Node Groups]()
+3.  In the Ocean autoscaler strategy area of the virtual node group, click **Missing permissions**.
 
 <img width="600" src="https://github.com/user-attachments/assets/9fa2fd52-3d18-447f-a11c-68a0764da146" />
 
@@ -189,10 +189,16 @@ New-AzRoleAssignment -Scope "/providers/Microsoft.BillingBenefits" -ApplicationI
 
 ----Continue from figma-----
 
-##  Turn on Utilize Commitments from the Spot Console
+##  Enable Utilize Commitments for Virtual Node Groups from the Spot Console
 
-1. Go to the virtual node group where you want to turn on the utilize RSs/SPs feature.
-2. In the Ocean autoscaler strategy area, click Utilize RIs/SPs.
+1. Go to the virtual node group where you want to turn on the utilize RSs/SPs feature. This can be any of your virtual node groups or the virtual node group template. Ocean rtecommends enabling this feature on the virtual node group template so that it is applied to all your virtual node groups. See [Manage AKS Virtual Node Groups]()
+2. In the Ocean autoscaler strategy area, click **Utilize RIs/SPs**.
+
+>**Important**: If the **Missing permissions** link appears, and Utilize RIs/SPs is grayed, make sure you have completed the following tasks with no errors:
+>
+>  - [Get Your Azure Credentials](link)
+>
+>  - [Connect Commitments to Spot Products](link)
 
 
 ## Turn on Utilize Commitments per Virtual Node Group via the Spot API
