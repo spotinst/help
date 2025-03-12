@@ -1981,6 +1981,27 @@ Contact support to decide on the selected instance type for launching and to rem
 
  </details>
 
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocquotaexceeded">GKE: Why can’t I spin new instances (quota_exceeded)?</summary>
+
+  <div style="padding-left:16px">
+
+You may get this message when scaling up instances:
+
+````
+ERROR, Can't Spin Instance: Name: sin-xxxxx. Code: QUOTA_EXCEEDED, Message: Quota 'M1_CPUS' exceeded. Limit: 0.0 in region us-east4
+````
+
+GCP has [allocation quotas](https://cloud.google.com/compute/resource-usage), which limit the number of resources that your project has access to. The limit is per region.
+
+[Check your current quota](https://cloud.google.com/docs/quotas/view-manage). You can [request a quota adjustment](https://cloud.google.com/docs/quotas/view-manage#requesting_higher_quota) from GCP.
+
+The prefix in some of the [machine names changed from n1 to m1](https://cloud.google.com/compute/docs/memory-optimized-machines#m1_series), so will also cause the message to show in the Spot console.
+
+ </div>
+
+ </details>
+
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceancgroupmode">GKE: How can I change the CGROUP_MODE for a GKE cluster?</summary>
 
