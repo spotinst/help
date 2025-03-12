@@ -41,7 +41,7 @@ Supported products: Ocean, Elastigroup.
  <a href="faqs/frequently-asked-questions/general#genreg"></a>
 
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="billing">AWS, Azure, GCP: How are costs and savings calculated in the Spot console and the API?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="savings">AWS, Azure, GCP: How are costs and savings calculated in the Spot console and the API?</summary>
 
   <div style="padding-left:16px">
 
@@ -2121,7 +2121,7 @@ For a network client, only the **account viewer** permission is required for the
  </details>
 
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocjavaheap">AKS, EKS, GKE: Why are my pods unscheduled with event: <i>pod has unbound immediate PersistentVolumeClaims</i>?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocpersistvol">AKS, EKS, GKE: Why are my pods unscheduled with event: <i>pod has unbound immediate PersistentVolumeClaims</i>?</summary>
 
   <div style="padding-left:16px">
 
@@ -3340,7 +3340,7 @@ Find the storage account URL in the Azure console. Go to **VM details** > **JSON
  </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egimportvm">Azure: Why am I getting a <i>Failed to launch VM with RequestDisallowedByPolicy</i> message?</summary>
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egreqdisallowed">Azure: Why am I getting a <i>Failed to launch VM with RequestDisallowedByPolicy</i> message?</summary>
 
   <div style="padding-left:16px">
 
