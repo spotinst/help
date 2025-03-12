@@ -183,6 +183,19 @@ This can happen if you have AWS resources that are not managed by Spot. Spot sca
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="serviceaccountkey">GCP: Can I change the service account key for my GCP account?</summary>
+
+  <div style="padding-left:16px">
+
+You can reset your credentials using the [set credentials for GCP API](https://docs.spot.io/api/#operation/OrganizationsAndAccountsSetCloudCredentialsForGCP). It typically changes immediately. If it doesn’t, the service runs at the beginning of each hour.
+
+Try launching an instance to see that it’s working correctly.
+
+ </div>
+
+ </details>
+ 
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="SSO-signin">SSO: Why can't I sign in to the Spot console?</summary>
 
   <div style="padding-left:16px">
