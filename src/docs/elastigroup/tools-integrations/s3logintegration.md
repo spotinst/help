@@ -88,4 +88,4 @@ If you want to monitor several groups, repeat the same procedure for each group.
 
 ### Log Files
 
-Each Elastigroup log file on S3 contains three minutes of logging. The file name is formatted as `accountId_oceanId_oceanName_startDate.log`, for example, `act-12345_o-12345678_cluster.k8s.com_2021-08-18T08:06:00Z.log`.
+Each Elastigroup log file on S3 contains three minutes of logging. The file name is formatted as `accountId_groupId_groupName_startDate.log`, for example, `act-12345_sig-12345678_example1_2021-08-18T08:06:00Z.log`.
