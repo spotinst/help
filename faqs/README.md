@@ -2070,6 +2070,28 @@ When you look in the AWS console, you can see the actual <i>utilization</i>, whi
 
  </details>
 
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocautoscalerdis">AKS, ECS, EKS: Why did an instance launch even though the autoscaler is disabled</i>?</summary>
+
+  <div style="padding-left:16px">
+
+If you have shutdown hours set up and autoscaler is disabled, you may see one of these messages in the Spot console:
+
+* `Info Instances: [i-xxxxx] have been launched. Reason: Shutdown hours period finished`
+* `Info Instances: [i-xxxxx] have been detached. Reason: Scale-down as part of instance recovery`
+* `Info Instances: [i-xxxxx] have been launched. Reason: Scale-up as part of instance recovery`
+
+If shutdown hours are set up and autoscaler is disabled, new nodes are not scaled up based on pending pods. [An existing node is <i>still</i> launched](ocean/features/running-hours?id=scaling-behavior-kubernetes):
+
+* At the end of the shutdown hours.
+* If the spot node launched at the end of shutdown hours has an interruption or recovery.
+
+You can disable shutdown hours in the Spot console: go to **Ocean** > **Cloud Clusters** > select the cluster > **Actions** > **Customize Scaling** > **Cluster Shutdown Hours**.
+
+ </div>
+
+ </details>
+
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocstaticendpoint">AKS, EKS, GKE: Can I use a static endpoint with Ocean Controller Version 2?</summary>
 
