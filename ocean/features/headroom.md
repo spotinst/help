@@ -50,7 +50,9 @@ Manual headroom can be defined at the [Virtual Node Group](ocean/features/launch
 
 For example, a VNG is configured to maintain two headroom units of 2048 MiB and 2000 CPU, and another Virtual Node Group is configured to maintain two headroom units of the same size. Thus, four headroom units will always be maintained, two units each matching the corresponding VNGs.
 
+Accelerated
+
 ### Note for AWS and GKE Users
 
-Due to backward compatibility considerations, you will need to activate a switch in the configuration in order to enable automatic and manual headroom to work in parallel. Otherwise, automatic headroom overrides all other manually configured headroom definitions, whether at cluster or VNG level. You may enable automatic and manual headroom at the Ocean level by setting `autoScaler.enableAutomaticAndManualHeadroom` to True.
+Due to backward compatibility considerations, you will need to activate a switch in the configuration in order to enable automatic and manual headroom to work in parallel. Otherwise, automatic headroom overrides all other manually configured headroom definitions, whether at cluster or VNG level. You may enable automatic and manual headroom at the Ocean level by setting `autoScaler.enableAutomaticAndManualHeadroom` to True. 
 
