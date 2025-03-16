@@ -56,6 +56,7 @@
         - [Configure Autohealing for Kubernetes](elastigroup/tools-integrations/kubernetes-with-elastigroup/configure-autohealing-for-kubernetes)
         - [Custom Label Selectors](elastigroup/tools-integrations/kubernetes-with-elastigroup/custom-label-selectors)
         - [Create a Kubernetes Bearer Token](elastigroup/tools-integrations/kubernetes-with-elastigroup/create-a-kubernetes-bearer-token)
+      - [Log Integration with S3](elastigroup/tools-integrations/s3logintegration.md)
       - [Nomad](elastigroup/tools-integrations/nomad/)
         - [Set up Nomad on Elastigroup](elastigroup/tools-integrations/nomad/set-up-nomad-on-elastigroup)
         - [Configure Nomad Autoscaler](elastigroup/tools-integrations/nomad/configure-nomad-autoscaler)
