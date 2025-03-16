@@ -701,7 +701,7 @@ This happens if you have duplicate tags configured:
  </div>
 
  </details>
-
+ 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oclogsdkevents">AWS, GCP: Can I log events for the Spotinst SDK for Python?</summary>
 
@@ -2775,6 +2775,21 @@ This happens if you have duplicate tags configured:
 
 * The cluster has more than one of the same custom tags.
 * You created a custom tag key with spotinst—Spot automatically creates scaling tags that start with spotinst, resulting in multiple identical tags.
+
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="eglogfiles">AWS, Azure, GCP: Why can I only see some of the logs in the Spot console?</summary>
+
+  <div style="padding-left:16px">
+
+The log file shows up to 1,000 items at a time.
+
+In the Spot console, try filtering on a shorter date range, a severity, or a specific resource.
+
+You can also [export the logs to an S3 bucket](elastigroup/tools-integrations/s3logintegration).
 
  </div>
 
