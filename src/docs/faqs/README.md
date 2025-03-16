@@ -2481,9 +2481,11 @@ This happens when the Ocean cluster tries to create a node pool using a specific
 
   <div style="padding-left:16px">
 
-If your pods are scheduled on [B-series nodes](https://learn.microsoft.com/en-us/azure/virtual-machines/b-series-cpu-credit-model/b-series-cpu-credit-model), the nodes and VMs are burstable. This means that they outperform their actual limits for a short period. After the burst credits are used, the pods will fail, and you might see this message:
+If your pods are scheduled on [B-series nodes](https://learn.microsoft.com/en-us/azure/virtual-machines/b-series-cpu-credit-model/b-series-cpu-credit-model), the nodes and VMs are burstable. This means that they outperform their actual limits for a short period. After the burst credits are used, the pods will fail, and you may see this message:
 
-message: "The node was low on resource: memory. Threshold quantity: 750Mi, available: 757424Ki. Container terrakube-registry was using 339556Ki, request is 0, has larger consumption of memory. "
+````
+The node was low on resource: memory. Threshold quantity: 750Mi, available: 757424Ki. Container terrakube-registry was using 339556Ki, request is 0, has larger consumption of memory.
+````
 
 You can:
 * Make sure your resource allocation is set up correctly. You can use the [resource quotas and limit ranges](https://kubernetes.io/docs/concepts/policy/resource-quotas/) as a reference.
