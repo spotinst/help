@@ -122,6 +122,8 @@ AWS decides according to:
 5. Otherwise, the instance will run as a full-price on-demand instance.
 
 Throughout the lifetime of an instance, it can change its “price” whenever there’s any change in the commitments utilization rate. For example, if an instance is running as a full price on-demand instance, and another instance that was utilizing a compute savings plan commitment was terminated, the first instance will start utilizing this commitment if its hourly price rate has enough free space under this commitment. It might take a couple of minutes for this change to show, but since the billing is being calculated retroactively, in practice it’s starting to utilize the commitment right away.
+
+accelerated
    
  </div>
 
@@ -753,7 +755,7 @@ The default draining for:
        }
      }
     ````
-accelerated
+
  </div>
 
  </details>
