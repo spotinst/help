@@ -2477,6 +2477,24 @@ This happens when the Ocean cluster tries to create a node pool using a specific
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocbseries">AKS: Why are my pods failing after scheduling (b-series/burstable VMs)?</summary>
+
+  <div style="padding-left:16px">
+
+If your pods are scheduled on [B-series nodes](https://learn.microsoft.com/en-us/azure/virtual-machines/b-series-cpu-credit-model/b-series-cpu-credit-model), the nodes and VMs are burstable. This means that they outperform their actual limits for a short period. After the burst credits are used, the pods will fail, and you might see this message:
+
+message: "The node was low on resource: memory. Threshold quantity: 750Mi, available: 757424Ki. Container terrakube-registry was using 339556Ki, request is 0, has larger consumption of memory. "
+
+You can:
+* Make sure your resource allocation is set up correctly. You can use the [resource quotas and limit ranges](https://kubernetes.io/docs/concepts/policy/resource-quotas/) as a reference.
+* [Exclude b-series (Bs) nodes](ocean/tutorials/manage-virtual-nd-groups-aks?id=vm-selection) from your virtual node groups.
+* Set up [rightsizing recommendations](ocean/features/ocean-cluster-right-sizing-recom-tab).
+
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocudr">AKS: Why is my node not registering in my AKS cluster (UDRWithNodePublicIPNotAllowed)?</summary>
 
   <div style="padding-left:16px">
