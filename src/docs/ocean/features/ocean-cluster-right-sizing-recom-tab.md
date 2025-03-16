@@ -69,6 +69,8 @@ Each rule entry shows relevant information about the parameters that trigger the
 You can create the right sizing rules and immediately attach them to specific workloads. Alternatively, you can create and save a rule and later attach it to one or more workloads. 
 You can create right-sizing rules to trigger immediately after a specific set of requirements is met or at a specific time after the requirements are met. 
 
+---add something here about auto-attach---
+
 ###   Create or Edit a Right-Sizing Rule 
 
 To create/edit a right-sizing rule: 
@@ -97,6 +99,11 @@ To create/edit a right-sizing rule:
    * If a recommendation is below the set boundaries, automatic right-sizing will apply the recommendation using the minimum value configured in the rule.
 10. Click the **Set overhead for resources** down arrow and set the CPU and memory percentage overheads. An overhead specifies the percentage of extra resources to add to the new request recommendation.
 11. Turn on the **Apply HPA on associated workload** if you want to apply HPA. Ocean automatically applies recommendations for metrics not covered by the HPA trigger. For example, Ocean applies memory recommendations to a CPU-based HPA. Ocean applies recommendations for both metrics for other triggers, such as Kafka queue.
+
+
+---add auto-attach part here---
+
+
 12. After you save the rule, it appears in the area under the [Workloads Optimization list](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=workloads-optimization-list).
 
     > **Notes**:
