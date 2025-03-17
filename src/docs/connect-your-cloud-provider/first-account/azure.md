@@ -36,7 +36,7 @@ Click **Log in to Azure Account** and continue to the next step.
 
    ![connect-azure-sub-5](https://github.com/spotinst/help/assets/106514736/ec2b6c10-23b0-4bb4-8919-a2f1dce66ede)
 
-7. Paste the Application (client) ID and Directory (tenant) ID in the fields respectively: 
+7. Paste the Application (client) ID and Directory (tenant) ID: 
 
    ![connect-azure-sub-6](https://github.com/spotinst/help/assets/106514736/5fad3158-3d39-4f94-8985-883f9e4595cd)
 
@@ -54,7 +54,7 @@ In the previous app registration that was created, create a client secret:
 
 4. In the wizard in the Spot console, paste the secret value and and expiration date, then click **Next**. 
 
-    ![connect-azure-sub-8](https://github.com/spotinst/help/assets/106514736/333125ce-e84e-4ae7-8a44-d0cb0385df73)
+    <img width=600 src="https://github.com/user-attachments/assets/81ac2ce4-f982-4f49-b672-d07cc54de4ee">
 
 5. Enter the Subscription ID you want to associate with spot.io and then continue to the next step in the Azure connection wizard. 
  
