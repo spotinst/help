@@ -1239,6 +1239,41 @@ Make sure:
  </details>
 
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocfailedsandbox">EKS: Why am I getting a <i>Failed to create pod sandbox</i> message in Kubernetes (failed to assign an IP address to container)?</summary>
+
+  <div style="padding-left:16px">
+
+You may get this message in Kubernetes:
+
+````
+Failed to create pod sandbox: rpc error: code = Unknown desc = 
+failed to set up sandbox container "xxxxx"
+network for pod "coreservice-xxxxx": 
+networkPlugin cni failed to set up pod "coreservice-xxxxx" 
+network: add cmd: failed to assign an IP address to container
+````
+
+Each node on Kubernetes has a [different number of elastic network interfaces (ENI) available](https://github.com/aws/amazon-vpc-cni-k8s/blob/master/misc/eni-max-pods.txt). For example, M5.Large can only have 29+2*31 ENIs.
+
+You can create a script to dynamically calculate the `--max-pods` value based on the instance type and CNI version. For example:
+
+````
+CNI_VERSION=<such as 1.11.4-eksbuild.1> MAX_PODS=$(/etc/eks/max-pods-calculator.sh --instance-type-from-imds --cni-version $CNI_VERSION)
+````
+
+`--instance-type-from-imds` gets the instance type from the instance metadata service (IMDS).
+
+`--cni-version $CNI_VERSION` specifies the CNI version.
+
+If you don’t define a value for `--max-pods` in the user data startup script for a virtual node group, the default AWS value is <i>110</i>.
+
+Defining a static value for `--max-pods` in the user data startup script for a virtual node group can cause overutilization and underutilization issues.
+
+   </div>
+
+ </details>
+
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocgkezone">GKE: How do zones and regions work with clusters?</summary>
 
   <div style="padding-left:16px">
