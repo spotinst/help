@@ -1,4 +1,4 @@
-# Frequently Asked Questions - Ocean and Ocean for Apache Spark
+# FAQs - Ocean and Ocean for Apache Spark
 
 <!----------------------------------ocean---------------------------------->
 
