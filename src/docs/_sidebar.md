@@ -16,7 +16,7 @@
   - [Release Notes - Dashboard](connect-your-cloud-provider/release-notes-dashboard/)
 - [**Elastigroup**](elastigroup/)
 - [**Elastigroup Stateful Node**](managed-instance/)
-- [**Ocean**](ocean/)
+- [Ocean](ocean/)
 - [**Ocean for Apache Spark**](ocean-spark/)
 - [**Eco**](eco/)
 - [**Cost Intelligence**](cost-intelligence/)
