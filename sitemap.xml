@@ -2542,6 +2542,27 @@
         <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/elastigroup/tutorials/"/>
     </url>
     <url>
+        <loc>https://docs.spot.io/faqs/faqs-eg</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/faqs/faqs-eg"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/faqs/faqs-eg"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/faqs/faqs-finops</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/faqs/faqs-finops"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/faqs/faqs-finops"/>
+    </url>
+    <url>
+        <loc>https://docs.spot.io/faqs/faqs-ocean</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://docs.spot.io/faqs/faqs-ocean"/>
+        <xhtml:link rel="alternate" hreflang="en-us" href="https://docs.spot.io/faqs/faqs-ocean"/>
+    </url>
+    <url>
         <loc>https://docs.spot.io/faqs/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
