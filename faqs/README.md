@@ -5,7 +5,7 @@ Find answers to common questions about the Spot products:
 * [Ocean](faqs/faqs-ocean)
 * [Ocean for Apache Spark](faqs/faqs-ocean?id=ocean-for-apache-spark)
 * [Elastigroup](faqs/faqs-eg)
-* [Elastigroup stateful node](/faqs/faqs-eg/?id=elastigroup-stateful-node)
+* [Elastigroup stateful node](/faqs/faqs-eg?id=elastigroup-stateful-node)
 * [Cost Intelligence](faqs/faqs-finops)
 * [Eco](faqs/faqs-finops?id=eco)
 
