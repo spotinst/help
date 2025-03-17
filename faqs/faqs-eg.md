@@ -774,7 +774,7 @@ You can remove your stateful instance from Elastigroup and manage it only in AWS
     <li><b>Decrement Group’s Capacity</b> <i>is</i> selected.</li>
     </ol>
 
-13. The on-demand instance is detached from the Elastigroup and you can manage it in AWS. You can choose to delete the Elastigroup if it’s not needed.
+The on-demand instance is detached from the Elastigroup and you can manage it in AWS. You can choose to delete the Elastigroup if it’s not needed.
 
    </div>
 
