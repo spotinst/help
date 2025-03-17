@@ -741,6 +741,46 @@ Sample code with items.state:
  </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egdelinstance">AWS: Can I delete a stateful instance from Spot and manage it in AWS?</summary>
+
+  <div style="padding-left:16px">
+
+You can remove your stateful instance from Elastigroup and manage it only in AWS:
+
+1. In the Spot console, go to **Elastigroup** > **Groups** and select the stateful group.
+2. Click **Actions** > **Edit Configuration** > **Instance Type**.
+3. Go to **Advanced** and change **Spot vs On-Demand Spot Percentage** to <i>0%</i>.
+4. Click **Next** > **Review** > **Update**.
+5. Select the stateful group and go to the Instances tab.
+6. Select the managed instance and click **Actions** > **Recycle**. This will launch an on-demand instance.
+7. Once the new on-demand instance is running, select the stateful group.
+8. Click **Actions** > **Edit Configuration**.
+9. Go to the Review tab > **JSON** > **Edit Mode**.
+10. Change all persistence options to <i>false</i> and click **Update**. For example:
+
+     ````json
+           "persistence": {
+             "shouldPersistBlockDevices": false,
+             "shouldPersistRootDevice": false,
+             "shouldPersistPrivateIp": false
+           }
+     ````
+
+11. Select the stateful group, and go to the Instance tab.
+12. Select the instance, then click **Actions** > **Detach**. Make sure:
+
+    <ol style="list-style-type: lower-alpha;">
+    <li><b>Terminate Instances</b> <i>is not</i> selected.</li>
+    <li><b>Decrement Group’s Capacity</b> <i>is</i> selected.</li>
+    </ol>
+
+13. The on-demand instance is detached from the Elastigroup and you can manage it in AWS. You can choose to delete the Elastigroup if it’s not needed.
+
+   </div>
+
+ </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="egssh">Azure: Can I use SSH to connect to an Azure VM?</summary>
 
   <div style="padding-left:16px">
@@ -753,7 +793,6 @@ Yes, you can connect using SSH to a VM running:
    </div>
 
  </details>
-
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="egimportvm">Azure: Why am I getting a <i>Failed to import virtual machine</i> or <i>The create/import has failed</i> message?</summary>
@@ -1366,6 +1405,33 @@ Memory utilization graphs require the [CloudWatch agent](https://docs.aws.amazon
 You can set up [CloudWatch agent](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Install-CloudWatch-Agent.html) and then [create](managed-instance/getting-started/create-a-new-managed-instance) or [import](managed-instance/getting-started/join-an-existing-managed-instance) a stateful node.
 
  </div>
+
+ </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egssndelinstance">AWS: Can I delete a stateful node from Spot and manage it in AWS?</summary>
+
+  <div style="padding-left:16px">
+
+You can remove your stateful instance from Elastigroup and manage it only in AWS:
+
+1. In the Spot console, go to **Elastigroup** > **Stateful Nodes** and select the stateful node.
+2. Click **Actions** > **Edit Configuration** > **Review** > **JSON** > **Edit Mode**.
+3. Change **lifeCycle** to <i>on_demand</i> and click **Update**. For example:
+   
+     ````json
+           "strategy": {
+            "lifeCycle": "on_demand",
+     ````
+
+4. Select the stateful node and click **Actions** > **Recycle**. This will launch an on-demand node.
+5. Once the new on-demand instance is running, select the stateful node.
+6. Click **Actions** > **Edit Configuration**.
+7. Go to the Review tab > **JSON** > **Edit Mode**.
+8. Use the API to delete the stateful node. Make sure to change **shouldTerminateInstance** to <i>false</i> if you want to keep the instance.
+   >**Note**: If you don’t select false, the instance will be terminated, and the node will be deleted.
+
+   </div>
 
  </details>
 
