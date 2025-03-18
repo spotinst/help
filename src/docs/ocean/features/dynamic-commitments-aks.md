@@ -1,21 +1,8 @@
 <meta name="robots" content="noindex">
 
-# Dynamic Commitments (AKS)
+# Commitments (AKS)
 
 Cloud service provider relevance: <font color="#FC01CC">AKS</font>
-
-## Overview
-
-Ocean, Elastigroup and Stateful Node automatically revert existing VMs using reserved instances (RIs) and savings plans (SPs) to spot VMs or other commitment deals wherever a reservation is needed elsewhere in your Azure account. This feature optimizes resource allocation and cost efficiency by continuously adjusting to dynamic environment needs.
-
-This is in accordance with the Ocean, Elastigroup, and Stateful Node commitment prioritization mechanism, which prioritizes available reserved instances and savings plan commitments over spot or full-priced on-demand VMs. This procedure describes how application workloads that require on-demand VMs can always benefit from reservations, even if they were previously prioritized for utilization when available.
-
-You can track dynamic compute commitment utilization and coverage with your Azure Cost Usage report
-
-By prioritizing RI and SP commitments, this feature continually adapts to the dynamic needs of your environment. Dynamic commitments management lets you:
-
-* Prioritize available RIs and SPs: Prioritize to prevent their underutilization. See [Utilize Commitment Plans](elastigroup/features/core-features/spot-reserved-on-demand-instances?id=utilize-commitment-plans). 
-* Revert from On-demand RI and SPs.
 
 ##  Azure Commitments
 
@@ -26,9 +13,10 @@ Commitments types are as follows:
 *  Capacity Commitments: Involves reserving VM capacity to ensure availability and predictability.
 *  Cost Commitments: Involves committing to a certain spending level to benefit from discounts.
 
-RIs are best for predictable workloads where you can commit to specific VM types and sizes, while SPs offer more flexibility for varying workloads across different services. Both options help reduce costs through committed usage, ensuring better budget management and resource allocation in Azure.
+RIs are best for predictable workloads where you can commit to specific VM types and sizes, while SPs offer more flexibility for varying workloads across different services. Both options help reduce costs through committed usage, ensuring better budget management and resource allocation in Azure. 
+You can prioritize available RIs and SPs: Prioritize to prevent their underutilization. See [Utilize Commitment Plans](elastigroup/features/core-features/spot-reserved-on-demand-instances?id=utilize-commitment-plans). 
 
-##  Azure Reserved Instances
+###  Azure Reserved Instances
 
 Azure RIs let you reserve VMs in Azure for a one- or three-year term, providing significant cost savings compared to pay-as-you-go pricing, and provide the following benefits:
 
@@ -36,7 +24,7 @@ Azure RIs let you reserve VMs in Azure for a one- or three-year term, providing 
 *  Predictable Billing: Helps budget and forecast costs as you pre-purchase capacity.
 *  Flexibility: You can exchange or cancel RIs, providing flexibility in your commitment.
 
-##  Azure Savings Plans
+###  Azure Savings Plans
 
 Azure SPs offer a flexible pricing model that lets you save up to 65% on your Azure compute costs in exchange for a commitment to spend a specific amount over a one- or three-year period and provide the following benefits:
 
@@ -44,9 +32,7 @@ Azure SPs offer a flexible pricing model that lets you save up to 65% on your Az
 *  Automatic Savings: Automatically applies savings to eligible resources, making managing costs across multiple services easier.
 *  No Commitment to Specific VM Sizes: You can switch between different VM sizes and types without losing savings.
 
-## Revert from On-demand RIs and SPs
 
-Revert from on-demand RIs when they can be used in other workloads to increase commitments coverage replacement. When working with dynamic workloads in the cloud, Ocean, Elastgroup, and Stateful Node adjust to application requirements, needs, and usage changes at any time. Ocean, Elastgroup, and Stateful track commitments are necessary conditions for initiating proactive replacements, thus increasing the account’s commitment coverage to decrease excessive on-demand usage. Ocean, Elastgroup, and Stateful achieve this by reverting to a different allocation plan or potentially using spot instances based on the user's risk configuration, therefore providing ongoing optimal adjustments.
 
 ## Commitments Scenarios
 
@@ -85,14 +71,14 @@ The reversion will not occur if:
 * It violates the group's regular VM count request. 
 
 
-I WILL MOVE EVERYTHIING BELOW TO A SEPRATE PAGE AFTER CONTENT APPROVAL
+I WILL MOVE EVERYTHING BELOW TO A SEPARATE PAGE AFTER CONTENT APPROVAL
 
 
-#  Set up Dynamic Commitments
+#  Set up Commitments
 
 Cloud service provider relevance: <font color="#FC01CC">AKS</font>
 
-Before you can turn on dynamic commitments for your cluster or virtual node groups, you need to:
+Before you can turn on commitments for your cluster or virtual node groups, you need to:
 
 *  [Get your Azure credentials](link)
 *  [Connect Commitments to Spot Products](link)
@@ -228,3 +214,22 @@ Set the `utilizecommitments` or `utilizeReservedInstances` parameter to `true`.
 
 >**Note**: The default value for the `utilizeReservedInstances` parameter is `true`.
 
+
+
+
+## Azure Dynamic Commitments
+
+Ocean, Elastigroup and Stateful Node automatically revert existing VMs using reserved instances (RIs) and savings plans (SPs) to spot VMs or other commitment deals wherever a reservation is needed elsewhere in your Azure account. This feature optimizes resource allocation and cost efficiency by continuously adjusting to dynamic environment needs.
+
+This is in accordance with the Ocean, Elastigroup, and Stateful Node commitment prioritization mechanism, which prioritizes available reserved instances and savings plan commitments over spot or full-priced on-demand VMs. This procedure describes how application workloads that require on-demand VMs can always benefit from reservations, even if they were previously prioritized for utilization when available.
+
+You can track dynamic compute commitment utilization and coverage with your Azure Cost Usage report
+
+By prioritizing RI and SP commitments, this feature continually adapts to the dynamic needs of your environment. Dynamic commitments management lets you:
+
+*  You can prioritize available RIs and SPs to prevent their underutilization. See [Utilize Commitment Plans](elastigroup/features/core-features/spot-reserved-on-demand-instances?id=utilize-commitment-plans).
+*  Revert from On-demand RIs and SPs
+
+### Revert from On-demand to RIs and SPs
+
+Revert from on-demand to RIs when they can be used in other workloads to increase commitments coverage replacement. When working with dynamic workloads in the cloud, Ocean, Elastgroup, and Stateful Node adjust to application requirements, needs, and usage changes at any time. Ocean, Elastgroup, and Stateful track commitments are necessary conditions for initiating proactive replacements, thus increasing the account’s commitment coverage to decrease excessive on-demand usage. Ocean, Elastgroup, and Stateful achieve this by reverting to a different allocation plan or potentially using spot instances based on the user's risk configuration, therefore providing ongoing optimal adjustments.
