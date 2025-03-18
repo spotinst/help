@@ -740,6 +740,20 @@ Sample code with items.state:
 
  </details>
 
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egsnvol">AWS: Can I increase the volume size of a stateful instance?</summary>
+
+  <div style="padding-left:16px">
+
+If you have a stateful Elastigroup with root or data volume persistence, you can increase the root or data volume size. Make sure the new volume is greater or equal to the existing volume size:
+
+* In the [AWS console](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-modify-volume.html), modify the volume. The new increased volume will show in the stateful instance.
+* In the Spot console, configure [block device mapping](elastigroup/features/compute/block-device-mapping) to override the size of the root or data volumes (if you are using [snapshot backups](elastigroup/tutorials/elastigroup-tasks/create-a-stateful-elastigroup-from-scratch?id=select-storage-persistence-options)). Then, [recycle](managed-instance/features/replacement-process?id=recycle) the stateful instance.
+
+   </div>
+
+ </details>
+
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="egdelinstance">AWS: Can I delete a stateful instance from Spot and manage it in AWS?</summary>
 
