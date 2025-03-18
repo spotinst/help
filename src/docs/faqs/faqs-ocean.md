@@ -872,6 +872,21 @@ You can set on-demand instances using [placement constraints](ocean/features/sca
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocpubipfargate">ECS: Why is auto-assigned public IP disabled when a Fargate service is created by Spot?</summary>
+
+  <div style="padding-left:16px">
+
+Your Fargate cluster has auto-assigned public IP enabled. When Spot clones the Fargate services and runs them with the same VPC and subnet settings on EC2 spot instances, it creates a new Fargate service.
+
+AWS prevents EC2 cluster services from auto-assigning public IP addresses. You can see this message: `code='InvalidParameterException', message='Assign public IP is not supported for this launch type.'`
+
+As a result, the new instances have auto-assign public IP disabled.
+
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="hostportunderutilized">ECS: Can hostPort cause underutilized nodes?</summary>
 
 <div style="padding-left:16px">
