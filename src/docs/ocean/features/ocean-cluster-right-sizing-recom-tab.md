@@ -71,6 +71,9 @@ You can create right-sizing rules to trigger immediately after a specific set of
 
 ---add something here about auto-attach---
 
+Auto-attach enables you to automatically attach right-sizing rules to your workloads based on workload criteria, such as a specific namespace and/or specific labels. Auto-attach reduces the manual attachment overhead and ensures new workloads are optimized immediately.
+
+
 ###   Create or Edit a Right-Sizing Rule 
 
 To create/edit a right-sizing rule: 
@@ -101,10 +104,13 @@ To create/edit a right-sizing rule:
 11. Turn on the **Apply HPA on associated workload** if you want to apply HPA. Ocean automatically applies recommendations for metrics not covered by the HPA trigger. For example, Ocean applies memory recommendations to a CPU-based HPA. Ocean applies recommendations for both metrics for other triggers, such as Kafka queue.
 
 
----add auto-attach part here---
+---adding auto-attach part here---
+
+12.  Turn on **Auto-attach** if you want to automatically attach rules to your workloads based on workload criteria.
+     *  In the Auto-attach dialog box, select required namespaces / labels.
 
 
-12. After you save the rule, it appears in the area under the [Workloads Optimization list](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=workloads-optimization-list).
+13. After you save the rule, it appears in the area under the [Workloads Optimization list](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=workloads-optimization-list).
 
     > **Notes**:
     > - Default values for Overhead and Automation Threshold are **10%** and **5%** respectively.
