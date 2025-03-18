@@ -218,7 +218,9 @@ Set the `utilizecommitments` or `utilizeReservedInstances` parameter to `true`.
 
 ____________________________________
 INFO BELOW WILL GO SOMEWHERE ELSE
-____________________________________
+___________________________________
+
+<!--- 
 
 ## Azure Dynamic Commitments
 
@@ -236,3 +238,6 @@ By prioritizing RI and SP commitments, this feature continually adapts to the dy
 ### Revert from On-demand to RIs and SPs
 
 Revert from on-demand to RIs when they can be used in other workloads to increase commitments coverage replacement. When working with dynamic workloads in the cloud, Ocean, Elastgroup, and Stateful Node adjust to application requirements, needs, and usage changes at any time. Ocean, Elastgroup, and Stateful track commitments are necessary conditions for initiating proactive replacements, thus increasing the account’s commitment coverage to decrease excessive on-demand usage. Ocean, Elastgroup, and Stateful achieve this by reverting to a different allocation plan or potentially using spot instances based on the user's risk configuration, therefore providing ongoing optimal adjustments.
+
+
+ -->
