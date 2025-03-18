@@ -8,6 +8,7 @@
   - [Connect Azure Billing Account](connect-your-cloud-provider/azure-ea-account)
   - [Connect Billing/Resource Data (FinOps)](connect-your-cloud-provider/finops)
   - [Connect an Additional Account](connect-your-cloud-provider/additional-account)
+  - [Release Notes - Connect Your Cloud Account](connect-your-cloud-provider/release-notes-connecting)
 - [**Overview Dashboards**](connect-your-cloud-provider/overview-dashboards)
   - [Overview Dashboard](connect-your-cloud-provider/dashboard)
   - [Optimize Your Cloud](connect-your-cloud-provider/optimize)
