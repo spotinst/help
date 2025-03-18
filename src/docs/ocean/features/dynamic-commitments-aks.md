@@ -33,7 +33,6 @@ Azure SPs offer a flexible pricing model that lets you save up to 65% on your Az
 *  No Commitment to Specific VM Sizes: You can switch between different VM sizes and types without losing savings.
 
 
-
 ## Commitments Scenarios
 
 <img width="1000" src="https://github.com/user-attachments/assets/ae781249-3fff-4647-9cc4-35bd8573abf8" />
@@ -71,7 +70,9 @@ The reversion will not occur if:
 * It violates the group's regular VM count request. 
 
 
-I WILL MOVE EVERYTHING BELOW TO A SEPARATE PAGE AFTER CONTENT APPROVAL
+_________________________________
+THIS IS THE END OF THE FIRST PAGE
+_________________________________
 
 
 #  Set up Commitments
@@ -215,7 +216,9 @@ Set the `utilizecommitments` or `utilizeReservedInstances` parameter to `true`.
 >**Note**: The default value for the `utilizeReservedInstances` parameter is `true`.
 
 
-
+____________________________________
+INFO BELOW WILL GO SOMEWHERE ELSE
+____________________________________
 
 ## Azure Dynamic Commitments
 
