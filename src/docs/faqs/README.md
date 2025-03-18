@@ -1,6 +1,6 @@
 # Frequently Asked Questions
 
-Find answers to common questions about the Spot products:
+Find answers to common questions about Spot products:
 * [General](faqs/?id=general)
 * [Ocean](faqs/faqs-ocean)
 * [Ocean for Apache Spark](faqs/faqs-ocean?id=ocean-for-apache-spark)

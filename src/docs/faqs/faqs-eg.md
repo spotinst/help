@@ -530,6 +530,34 @@ You can read the AWS documentation on [spot instance quotas](https://docs.aws.am
 
  </details>
 
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egunsupportedop">AWS: Why can’t I spin new instances (UnsupportedOperation)?</summary>
+
+  <div style="padding-left:16px">
+
+You can get this message when the group or cluster is scaling up instances:
+
+````
+Can't spin spot instance: Code: UnsupportedOperation, Message: The instance configuration for this AWS Marketplace product is not supported. Please see the AWS Marketplace site for more information about supported instance types, regions, and operating systems.
+````
+
+This typically happens if the group/cluster AMI product doesn’t support specific instance types in the group/cluster instance list.
+
+1. Identify the AMI:
+
+   * [Search AWS Marketplace for the AMI ID](https://aws.amazon.com/marketplace/search/results?ref_=nav_search_box&searchTerms=ami).
+   * **Elastigroup**: in the Spot console, go to **Elastigroup** > **Groups** > select the group > **Group Information** and click **Details** > **productCodeId**.
+   * **Ocean**: in the Spot console, go to **Ocean** > **Cloud Clusters** > select the cluster > **Actions** > **Edit Cluster** > **Compute** > **Instance specifications** > **View AMI details** > **productCodeId**.
+
+2. [Troubleshoot AWS Marketplace AMIs](https://repost.aws/knowledge-center/ami-marketplace-troubleshoot). For example, check the instance types, regions, and availability zones. You can compare the instance types in AWS with the Spot console:
+
+   * **Elastigroup**: in the Spot console, go to **Elastigroup** > **Groups** > select the group > **Compute** > **Instance types**.
+   * **Ocean**: in the Spot console, go to **Ocean** > **Cloud Clusters** > select the cluster > **Actions** > **Edit Cluster** > **Compute** > **Instance types**.
+   
+ </div>
+
+ </details>
+
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="eginvalidkeypair">AWS: Why am I getting a <i>Can't Spin On-Demand Instances: Code: InvalidKeyPair.NotFound</i> message?</summary>
 
@@ -735,6 +763,20 @@ Sample code with items.state:
             }
           ],
 ````
+
+   </div>
+
+ </details>
+
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egsnvol">AWS: Can I increase the volume size of a stateful instance?</summary>
+
+  <div style="padding-left:16px">
+
+If you have a stateful Elastigroup with root or data volume persistence, you can increase the root or data volume size. Make sure the new volume is greater or equal to the existing volume size:
+
+* In the [AWS console](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-modify-volume.html), modify the volume. The new increased volume will show in the stateful instance.
+* In the Spot console, configure [block device mapping](elastigroup/features/compute/block-device-mapping) to override the size of the root or data volumes (if you are using [snapshot backups](elastigroup/tutorials/elastigroup-tasks/create-a-stateful-elastigroup-from-scratch?id=select-storage-persistence-options)). Then, [recycle](managed-instance/features/replacement-process?id=recycle) the stateful instance.
 
    </div>
 

@@ -427,6 +427,34 @@ These messages could be related to [service control policies](https://docs.aws.a
  </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocunsupportedop">AWS: Why can’t I spin new instances (UnsupportedOperation)?</summary>
+
+  <div style="padding-left:16px">
+
+You can get this message when the group or cluster is scaling up instances:
+
+````
+Can't spin spot instance: Code: UnsupportedOperation, Message: The instance configuration for this AWS Marketplace product is not supported. Please see the AWS Marketplace site for more information about supported instance types, regions, and operating systems.
+````
+
+This typically happens if the group/cluster AMI product doesn’t support specific instance types in the group/cluster instance list.
+
+1. Identify the AMI:
+
+   * [Search AWS Marketplace for the AMI ID](https://aws.amazon.com/marketplace/search/results?ref_=nav_search_box&searchTerms=ami).
+   * **Elastigroup**: in the Spot console, go to **Elastigroup** > **Groups** > select the group > **Group Information** and click **Details** > **productCodeId**.
+   * **Ocean**: in the Spot console, go to **Ocean** > **Cloud Clusters** > select the cluster > **Actions** > **Edit Cluster** > **Compute** > **Instance specifications** > **View AMI details** > **productCodeId**.
+
+2. [Troubleshoot AWS Marketplace AMIs](https://repost.aws/knowledge-center/ami-marketplace-troubleshoot). For example, check the instance types, regions, and availability zones. You can compare the instance types in AWS with the Spot console:
+
+   * **Elastigroup**: in the Spot console, go to **Elastigroup** > **Groups** > select the group > **Compute** > **Instance types**.
+   * **Ocean**: in the Spot console, go to **Ocean** > **Cloud Clusters** > select the cluster > **Actions** > **Edit Cluster** > **Compute** > **Instance types**.
+   
+ </div>
+
+ </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocvpnsec">AWS: Why am I getting an <i>exceeded the number of VPC security allowed per instance</i> message?</summary>
 
   <div style="padding-left:16px">
@@ -838,6 +866,21 @@ If your container is unregistered, you should make sure:
   <div style="padding-left:16px">
 
 You can set on-demand instances using [placement constraints](ocean/features/scaling-ecs?id=placement-constraints).
+
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocpubipfargate">ECS: Why is auto-assigned public IP disabled when a Fargate service is created by Spot?</summary>
+
+  <div style="padding-left:16px">
+
+Your Fargate cluster has auto-assigned public IP enabled. When Spot clones the Fargate services and runs them with the same VPC and subnet settings on EC2 spot instances, it creates a new Fargate service.
+
+AWS prevents EC2 cluster services from auto-assigning public IP addresses. You can see this message: `code='InvalidParameterException', message='Assign public IP is not supported for this launch type.'`
+
+As a result, the new instances have auto-assign public IP disabled.
 
  </div>
 
