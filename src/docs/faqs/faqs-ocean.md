@@ -1252,7 +1252,20 @@ You need to make sure the controller is running, possibly on a node that Ocean d
  </div>
 
  </details>
- 
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocnodetaint">EKS: Why did my node launch without a taint?</summary>
+
+  <div style="padding-left:16px">
+
+You can force nodes to scale up from a dedicated virtual node group using custom [taints and tolerations](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/) or custom [nodeSelector labels](ocean/features/labels-and-taints).
+
+Keep in mind, if you add taints or labels on the pod, you need to add matching labels and toleration on the virtual node group in both [Node Selection and in the User Data (startup script)](ocean/tutorials/manage-virtual-node-groups?id=node-selection-parameters). This launches the nodes with the correct taint and your workloads are scheduled properly.
+
+ </div>
+
+ </details>
+
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceancontrollerclusterid">EKS: Why am I getting a <i>controllerClusterID already being used by another Ocean cluster</i> message?</summary>
 
