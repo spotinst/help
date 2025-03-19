@@ -887,6 +887,33 @@ As a result, the new instances have auto-assign public IP disabled.
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocheadroomtask">ECS: Why can’t autoscaler find an applicable instance type to scale up (pending headroom task)?</summary>
+
+  <div style="padding-left:16px">
+
+Headroom can only be scheduled if there are enough instance types. If you’re using [manual headroom](ocean/features/headroom?id=manual-headroom) and there aren’t enough instance types, you may get this message:
+
+````
+WARN, AutoScaler - Attempt Scale Up, Task service:spotinst-headroom-task-ols-e72002a2-4 is pending but could not find any applicable instance type to scale up in order to schedule the pending Task.
+````
+
+You can:
+
+* Add more [instance types](ocean/features/vngs/attributes-and-actions-per-vng?id=preferred-spot-instance-types) (bigger instance types) to the virtual node group, which gives Ocean more options to choose from. This can reduce your costs.
+* Decrease the **Reserve**, **CPU**, **Memory**:
+
+   1. In the Spot console, go to **Ocean** > **Cloud Clusters** and select the cluster.
+   2. On the Virtual Node Groups tab, click on the virtual node group.
+   3. Go to **Advanced** > **Headroom** and update the **Reserve**, **CPU**, and/or **Memory**.
+
+
+
+
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="hostportunderutilized">ECS: Can hostPort cause underutilized nodes?</summary>
 
 <div style="padding-left:16px">
