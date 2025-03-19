@@ -20,8 +20,8 @@ window.$docsify = {
   // ---------------------------------------------------------------------------
   routerMode: "history", // default: 'hash'
   alias: { ...aliases }, // routing rules for backwards compatibility
-  maxLevel: 1,
-  subMaxLevel: 1,
+  maxLevel: 0,
+  subMaxLevel: 0,
   loadSidebar: true,
   auto2top: true,
   autoHeader: false,
@@ -30,9 +30,11 @@ window.$docsify = {
   // Search
   // ---------------------------------------------------------------------------
   search: {
-    paths: "auto",
+    paths: "*",
     placeholder: `Type here to search...`,
     noData: "No Results.",
+    depth: 4,
+    maxAge: 0
   },
 
   // Theme
