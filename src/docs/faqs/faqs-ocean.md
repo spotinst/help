@@ -906,8 +906,35 @@ You can:
    2. On the Virtual Node Groups tab, click on the virtual node group.
    3. Go to **Advanced** > **Headroom** and update the **Reserve**, **CPU**, and/or **Memory**.
 
+ </div>
 
+ </details>
 
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocvngarch">ECS: Why am I getting a message that the virtual node group’s architecture doesn’t match the virtual node group template filter?</summary>
+
+  <div style="padding-left:16px">
+
+You may get this message if you create a custom virtual node group and then change the AMI:
+
+````
+error: The Virtual Node Group’s architecture doesn’t match the Virtual Node Group Template filter.
+````
+
+This can happen if the new AMI architecture does not support the instance types set in the default virtual node group.
+
+Create a custom virtual node group with the new AMI:
+
+1. In the Spot console, go to **Ocean** > **Cloud Clusters**, and select the cluster.
+2. On the Virtual Node Groups tab, click **Create VNG** > **Go to vng template**.
+3. Update the template virtual node group to include more instances and click **Save**.
+4. Go back to the new virtual node group and finish setting it up.
+
+You can choose to just update the default virtual node group to include more instance types:
+
+1. In the Spot console, go to **Ocean** > **Cloud Clusters**, and select the cluster.
+2. On the Virtual Node Groups tab, click **VNG Template** > **Edit Mode**.
+3. Update the **Instance Types** and click **Save**.
 
  </div>
 
