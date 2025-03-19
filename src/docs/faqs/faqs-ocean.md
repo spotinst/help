@@ -2210,6 +2210,37 @@ However, it’s not possible to do with Ocean AKS clusters because you cannot ch
  </details>
 
   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="octoleration">AKS: Can I inject spot toleration for a cluster with shutdown hours?</summary>
+
+  <div style="padding-left:16px">
+
+If you use spot toleration injection in clusters configured with shutdown hours, Ocean will launch regular VMs in addition to the spot VMs once the shutdown hours are finished. This happens even if the Spot % is set to 100% because the regular VMs are created before the Ocean webhook boots up.
+
+You can force the pods to wait until the admission controller pods are running, to make sure that toleration is added to the workload.
+
+Do not set this up on production clusters because if the admission controller pods are failing or stuck, you can get pending pods.
+
+1. Edit the webhook configuration: `kubectl edit MutatingWebhookConfiguration spot-admission-controller.kube-system.svc`.
+
+3. Make sure this object is in the configuration file:
+
+   ````yaml
+   objectSelector:
+     matchExpressions:
+     - key: app.kubernetes.io/name
+       operator: NotIn
+       values:
+       - spot-admission-controller
+   ````
+
+3. If the object is not there, [reinstall the Spot admission controller](ocean/getting-started/aks/?id=step-4-automatic-spot-tolerance-injection-optional).
+4. Change `failurePolicy` to <i>Fail</i> (`failurePolicy: Fail`).
+
+ </div>
+ 
+ </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceanodnodes">AKS: Why are on-demand nodes running in my virtual node groups?</summary>
 
   <div style="padding-left:16px">
