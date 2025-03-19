@@ -1774,6 +1774,19 @@ For a network client, only the **account viewer** permission is required for the
 
  </details>
 
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocpodalltaints">AKS, EKS, GKE: Can my Kubernetes pods tolerate all taints?</summary>
+
+  <div style="padding-left:16px">
+
+You may have critical workloads in your Kubernetes cluster that require constant high availability. You don’t want specific node taints to block these critical pods from being scheduled.
+
+You can add a universal toleration to your workloads to allow these pods to [tolerate any and all taints](https://docs.redhat.com/en/documentation/openshift_container_platform/4.8/html/nodes/controlling-pod-placement-onto-nodes-scheduling#nodes-scheduler-taints-tolerations-all_nodes-scheduler-taints-tolerations).
+
+ </div>
+
+ </details>
+
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocpersistvol">AKS, EKS, GKE: Why are my pods unscheduled with event: <i>pod has unbound immediate PersistentVolumeClaims</i>?</summary>
 
