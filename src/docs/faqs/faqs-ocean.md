@@ -887,6 +887,60 @@ As a result, the new instances have auto-assign public IP disabled.
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocheadroomtask">ECS: Why can’t autoscaler find an applicable instance type to scale up (pending headroom task)?</summary>
+
+  <div style="padding-left:16px">
+
+Headroom can only be scheduled if there are enough instance types. If you’re using [manual headroom](ocean/features/headroom?id=manual-headroom) and there aren’t enough instance types, you may get this message:
+
+````
+WARN, AutoScaler - Attempt Scale Up, Task service:spotinst-headroom-task-ols-e72002a2-4 is pending but could not find any applicable instance type to scale up in order to schedule the pending Task.
+````
+
+You can:
+
+* Add more [instance types](ocean/features/vngs/attributes-and-actions-per-vng?id=preferred-spot-instance-types) (bigger instance types) to the virtual node group, which gives Ocean more options to choose from. This can reduce your costs.
+* Decrease the **Reserve**, **CPU**, **Memory**:
+
+   1. In the Spot console, go to **Ocean** > **Cloud Clusters** and select the cluster.
+   2. On the Virtual Node Groups tab, click on the virtual node group.
+   3. Go to **Advanced** > **Headroom** and update the **Reserve**, **CPU**, and/or **Memory**.
+
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocvngarch">ECS: Why am I getting a message that the virtual node group’s architecture doesn’t match the virtual node group template filter?</summary>
+
+  <div style="padding-left:16px">
+
+You may get this message if you create a custom virtual node group and then change the AMI:
+
+````
+error: The Virtual Node Group’s architecture doesn’t match the Virtual Node Group Template filter.
+````
+
+This can happen if the new AMI architecture does not support the instance types set in the default virtual node group.
+
+Create a custom virtual node group with the new AMI:
+
+1. In the Spot console, go to **Ocean** > **Cloud Clusters**, and select the cluster.
+2. On the Virtual Node Groups tab, click **Create VNG** > **Go to vng template**.
+3. Update the template virtual node group to include more instances and click **Save**.
+4. Go back to the new virtual node group and finish setting it up.
+
+You can choose to just update the default virtual node group to include more instance types:
+
+1. In the Spot console, go to **Ocean** > **Cloud Clusters**, and select the cluster.
+2. On the Virtual Node Groups tab, click **VNG Template** > **Edit Mode**.
+3. Update the **Instance Types** and click **Save**.
+
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="hostportunderutilized">ECS: Can hostPort cause underutilized nodes?</summary>
 
 <div style="padding-left:16px">
@@ -1198,7 +1252,20 @@ You need to make sure the controller is running, possibly on a node that Ocean d
  </div>
 
  </details>
- 
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocnodetaint">EKS: Why did my node launch without a taint?</summary>
+
+  <div style="padding-left:16px">
+
+You can force nodes to scale up from a dedicated virtual node group using custom [taints and tolerations](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/) or custom [nodeSelector labels](ocean/features/labels-and-taints).
+
+Keep in mind, if you add taints or labels on the pod, you need to add matching labels and toleration on the virtual node group in both [Node Selection and in the User Data (startup script)](ocean/tutorials/manage-virtual-node-groups?id=node-selection-parameters). This launches the nodes with the correct taint and your workloads are scheduled properly.
+
+ </div>
+
+ </details>
+
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="oceancontrollerclusterid">EKS: Why am I getting a <i>controllerClusterID already being used by another Ocean cluster</i> message?</summary>
 
@@ -1585,28 +1652,6 @@ When you look in the AWS console, you can see the actual <i>utilization</i>, whi
 
  </details>
 
-   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocautoscalerdis">AKS, ECS, EKS: Why did an instance launch even though the autoscaler is disabled</i>?</summary>
-
-  <div style="padding-left:16px">
-
-If you have shutdown hours set up and autoscaler is disabled, you may see one of these messages in the Spot console:
-
-* `Info Instances: [i-xxxxx] have been launched. Reason: Shutdown hours period finished`
-* `Info Instances: [i-xxxxx] have been detached. Reason: Scale-down as part of instance recovery`
-* `Info Instances: [i-xxxxx] have been launched. Reason: Scale-up as part of instance recovery`
-
-If shutdown hours are set up and autoscaler is disabled, new nodes are not scaled up based on pending pods. [An existing node is <i>still</i> launched](ocean/features/running-hours?id=scaling-behavior-kubernetes):
-
-* At the end of the shutdown hours.
-* If the spot node launched at the end of shutdown hours has an interruption or recovery.
-
-You can disable shutdown hours in the Spot console: go to **Ocean** > **Cloud Clusters** > select the cluster > **Actions** > **Customize Scaling** > **Cluster Shutdown Hours**.
-
- </div>
-
- </details>
-
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocstaticendpoint">AKS, EKS, GKE: Can I use a static endpoint with Ocean Controller Version 2?</summary>
 
@@ -1724,6 +1769,19 @@ Make sure that labels and annotations don’t prevent scaling down [on the virtu
    At minimum, the token must have **account viewer** [permissions](/administration/policies/). Viewer permission is the only permission required for a cluster controller to operate. Cluster controllers don't manage resources in Ocean, the autoscaler does. If you want this same programmatic user to manage other resources in your cluster, additional permission policies are required.
 
 For a network client, only the **account viewer** permission is required for the client to operate.
+
+ </div>
+
+ </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocpodalltaints">AKS, EKS, GKE: Can my Kubernetes pods tolerate all taints?</summary>
+
+  <div style="padding-left:16px">
+
+You may have critical workloads in your Kubernetes cluster that require constant high availability. You don’t want specific node taints to block these critical pods from being scheduled.
+
+You can add a universal toleration to your workloads to allow these pods to [tolerate any and all taints](https://docs.redhat.com/en/documentation/openshift_container_platform/4.8/html/nodes/controlling-pod-placement-onto-nodes-scheduling#nodes-scheduler-taints-tolerations-all_nodes-scheduler-taints-tolerations).
 
  </div>
 
@@ -1993,6 +2051,28 @@ Initially, the costs are compared with the on demand value of the instance types
 
  </details>
 
+   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocautoscalerdis">AKS, ECS, EKS: Why did an instance launch even though the autoscaler is disabled</i>?</summary>
+
+  <div style="padding-left:16px">
+
+If you have shutdown hours set up and autoscaler is disabled, you may see one of these messages in the Spot console:
+
+* `Info Instances: [i-xxxxx] have been launched. Reason: Shutdown hours period finished`
+* `Info Instances: [i-xxxxx] have been detached. Reason: Scale-down as part of instance recovery`
+* `Info Instances: [i-xxxxx] have been launched. Reason: Scale-up as part of instance recovery`
+
+If shutdown hours are set up and autoscaler is disabled, new nodes are not scaled up based on pending pods. [An existing node is <i>still</i> launched](ocean/features/running-hours?id=scaling-behavior-kubernetes):
+
+* At the end of the shutdown hours.
+* If the spot node launched at the end of shutdown hours has an interruption or recovery.
+
+You can disable shutdown hours in the Spot console: go to **Ocean** > **Cloud Clusters** > select the cluster > **Actions** > **Customize Scaling** > **Cluster Shutdown Hours**.
+
+ </div>
+
+ </details>
+
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocparsing">AKS: Why won't my cluster scale up (parsing version)?</summary>
 
@@ -2124,6 +2204,37 @@ However, it’s not possible to do with Ocean AKS clusters because you cannot ch
  
      <img width=450 src="https://github.com/user-attachments/assets/1c0fccc2-2847-4cad-a01d-ce60a109db8e">
 
+
+ </div>
+ 
+ </details>
+
+  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="octoleration">AKS: Can I inject spot toleration for a cluster with shutdown hours?</summary>
+
+  <div style="padding-left:16px">
+
+If you use spot toleration injection in clusters configured with shutdown hours, Ocean will launch regular VMs in addition to the spot VMs once the shutdown hours are finished. This happens even if the Spot % is set to 100% because the regular VMs are created before the Ocean webhook boots up.
+
+You can force the pods to wait until the admission controller pods are running, to make sure that toleration is added to the workload.
+
+Do not set this up on production clusters because if the admission controller pods are failing or stuck, you can get pending pods.
+
+1. Edit the webhook configuration: `kubectl edit MutatingWebhookConfiguration spot-admission-controller.kube-system.svc`.
+
+3. Make sure this object is in the configuration file:
+
+   ````yaml
+   objectSelector:
+     matchExpressions:
+     - key: app.kubernetes.io/name
+       operator: NotIn
+       values:
+       - spot-admission-controller
+   ````
+
+3. If the object is not there, [reinstall the Spot admission controller](ocean/getting-started/aks/?id=step-4-automatic-spot-tolerance-injection-optional).
+4. Change `failurePolicy` to <i>Fail</i> (`failurePolicy: Fail`).
 
  </div>
  
