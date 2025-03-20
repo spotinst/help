@@ -52,7 +52,7 @@ Ocean utilizes RI/SP as a wrapper for a regular VM if applicable to cost savings
 
 ###  Running Regular (RI/SP) VMs
 
-Ocean Checks if RI/SP is needed elsewhere. If so, Ocean replaces it with a spot or regular (RI/SP) from a different plan, as follows:
+This is the dynamic commitments scenario. Ocean Checks if RI/SP is needed elsewhere. If so, Ocean replaces it with a spot or regular (RI/SP) from a different plan, as follows:
 
 Ocean performs a strategy fix check every **xx (to check)** minutes to determine if a running RI or SP can be replaced to free up the commitment needed elsewhere in the account. 
 
@@ -219,25 +219,11 @@ Set the `utilizecommitments` or `utilizeReservedInstances` parameter to `true`.
 ____________________________________
 INFO BELOW WILL GO SOMEWHERE ELSE
 ___________________________________
-
-<!--- 
-
-## Azure Dynamic Commitments
-
-Ocean, Elastigroup and Stateful Node automatically revert existing VMs using reserved instances (RIs) and savings plans (SPs) to spot VMs or other commitment deals wherever a reservation is needed elsewhere in your Azure account. This feature optimizes resource allocation and cost efficiency by continuously adjusting to dynamic environment needs.
-
-This is in accordance with the Ocean, Elastigroup, and Stateful Node commitment prioritization mechanism, which prioritizes available reserved instances and savings plan commitments over spot or full-priced on-demand VMs. This procedure describes how application workloads that require on-demand VMs can always benefit from reservations, even if they were previously prioritized for utilization when available.
-
-You can track dynamic compute commitment utilization and coverage with your Azure Cost Usage report
-
-By prioritizing RI and SP commitments, this feature continually adapts to the dynamic needs of your environment. Dynamic commitments management lets you:
-
-*  You can prioritize available RIs and SPs to prevent their underutilization. See [Utilize Commitment Plans](elastigroup/features/core-features/spot-reserved-on-demand-instances?id=utilize-commitment-plans).
-*  Revert from On-demand RIs and SPs
-
-### Revert from On-demand to RIs and SPs
-
-Revert from on-demand to RIs when they can be used in other workloads to increase commitments coverage replacement. When working with dynamic workloads in the cloud, Ocean, Elastgroup, and Stateful Node adjust to application requirements, needs, and usage changes at any time. Ocean, Elastgroup, and Stateful track commitments are necessary conditions for initiating proactive replacements, thus increasing the account’s commitment coverage to decrease excessive on-demand usage. Ocean, Elastgroup, and Stateful achieve this by reverting to a different allocation plan or potentially using spot instances based on the user's risk configuration, therefore providing ongoing optimal adjustments.
-
+Lior added:
+Need to add a note in the document in the part of the Set up Commitments:
+Customers who didn't define this commitment in the Azure console need not set this feature in Ocean.
+first, the customer needs to buy the commitments via Azure and then turn on the feature in Ocean
+when the customer wants to define this feature at the cluster level or for some VNG, you can set this through the Template VNG and then the other custom VNG inherent in this capability feature.
+if the customer didn't select at least one permission- RI/ SP the customer couldn't continue to the next step in the dialog (step #3
 
  -->
