@@ -843,8 +843,8 @@ Yes, you can connect using SSH to a VM running:
 
   You may get one of these error messages when you're trying to import VMs to Elastigroup:
 
-*   `Failed to import virtual machine. Could not retrieve custom image.`
-*   `The create/import has failed. The storage account https://{storage-account} that was defined for the boot diagnostic preferences was not found.”`
+* `Failed to import virtual machine. Could not retrieve custom image.`
+* `The create/import has failed. The storage account https://{storage-account} that was defined for the boot diagnostic preferences was not found.”`
 
 This can happen when the image or storage account does not exist in the Azure portal. Elastigroup validates the resources configured in the VM before importing to make sure the import process will not fail.
 
