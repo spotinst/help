@@ -22,7 +22,8 @@ In the workflow interface you can drag, drop, and connect nodes on the canvas to
 
     * **Left Panel** – A library of integration actions. Click the + icon in the top left to open and close the library.
 
-      <img src="/spot-connect/_media/get-to-know-wkflw-bldr-3.png" width="400" height="650" />
+      <img width=350 src="https://github.com/user-attachments/assets/4f45be6c-ca32-44ca-a863-765a7037477a">
+
 
     * **Center Panel** - A canvas where you can drag and drop action nodes to connect them and create a workflow.
 

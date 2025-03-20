@@ -12,7 +12,7 @@ Permissions to create app registrations and assign subscription reader role in A
 
    <details>
    <summary markdown="span">View image</summary>
-    <img width=600 src="https://github.com/spotinst/help/assets/106514736/60985019-a37d-4faa-a24c-d2d15ffa77fe">
+    <img width=500 src="https://github.com/user-attachments/assets/78b5a9d4-cd4a-4025-a26a-ec2c8e49f48b">
 
 </details>
 
@@ -62,7 +62,7 @@ Click **Log in to Azure Account** and continue to the next step.
 
    <details>
    <summary markdown="span">View image</summary>
-      <img width="800" src="https://github.com/user-attachments/assets/9e249697-a5cb-45bf-acf9-428378d8fbec">
+      <img width="800" src="https://github.com/user-attachments/assets/cc7f69fe-58d4-4763-b4de-3350a09d277e">
 
 </details>
 
@@ -70,7 +70,7 @@ Click **Log in to Azure Account** and continue to the next step.
 
    <details>
    <summary markdown="span">View image</summary>
-      <img width="800" src="https://github.com/user-attachments/assets/afcff02b-3645-48fa-826e-d0f5737225e7">
+      <img width="800" src="https://github.com/user-attachments/assets/fae37c2c-8dff-4481-b7a6-2f89f0c0445c">
 
 </details>
 
@@ -92,7 +92,7 @@ In the previous app registration that was created, complete the following steps 
  
    <details>
    <summary markdown="span">View image</summary>
-      <img width="700" src="https://github.com/user-attachments/assets/4cc946a6-0e89-43e2-bac4-0f796b9a0fab">
+      <img width="700" src="https://github.com/user-attachments/assets/624f5c53-f1be-402b-bef9-b7ef57d18737">
 
       </details>
 

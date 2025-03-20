@@ -4,8 +4,6 @@ This tutorial covers the creation of a Load Balanced Elastigroup from scratch. T
 
 ## Get Started
 
-<img src="/elastigroup/_media/gettingstarted-eg-gcp-01.png" />
-
 The creation template is available under `Use Cases` in the Creation Wizard:
 
 1. In the [Spot Console](https://console.spotinst.com/), on the lefthand menu, select Elastigroups.
