@@ -16,39 +16,39 @@ Your account or agreement type must be either:
 
 1. Enter an account name and click **Create Account**. 
 
-<img width="991" alt="connect-azure-1" src="https://github.com/spotinst/help/assets/106514736/f403c577-5250-454a-8c18-b0bcc2a3cee9">
+   <img width=500 src="https://github.com/user-attachments/assets/3cd14e51-577e-4608-92d0-9ee0107542ca">
 
 2. Select **Microsoft Azure** as your cloud provider. 
 3. Select **FinOps Products** > **Next**.  
 4. Select **Billing Engine**.
 
-<img width="811" alt="connect-azure-2" src="https://github.com/spotinst/help/assets/106514736/eaa1784b-10ca-4d2d-8d12-a4ca92f4e6eb">
+   <img width=500 src="https://github.com/spotinst/help/assets/106514736/eaa1784b-10ca-4d2d-8d12-a4ca92f4e6eb">
 
 5. Click **Log in to your Azure Account**.  
  
-![connect-azure-5](https://github.com/spotinst/help/assets/106514736/b5fc0731-6d5b-4aa9-81a8-8aafa906e72b)
+   ![connect-azure-5](https://github.com/spotinst/help/assets/106514736/b5fc0731-6d5b-4aa9-81a8-8aafa906e72b)
 
 6. In the Azure console, type **App Registration** in the search bar and click **App Registrations**.
 
-![connect-azure-sub-2](https://github.com/spotinst/help/assets/106514736/629e5c8b-00e1-44bd-9515-3908a404d2e5)
+   ![connect-azure-sub-2](https://github.com/spotinst/help/assets/106514736/629e5c8b-00e1-44bd-9515-3908a404d2e5)
 
 7. Click the **+ New registration** tab. 
 
-![connect-azure-sub-3](https://github.com/spotinst/help/assets/106514736/969f0960-db36-47c7-9123-58a657bd47bd)
+   ![connect-azure-sub-3](https://github.com/spotinst/help/assets/106514736/969f0960-db36-47c7-9123-58a657bd47bd)
 
-8. In the _Register Application_ window, enter a name for the application. 
+8. In **Register Application**, enter a name for the application. 
 9. In the Support account types section, select **Accounts in this organizational directory only (Spotinst only - Single tenant)**. 
-10. In the _Redirect URI_ dropdown menu, select **Web** and enter: [https://spot.io](https://spot.io/). 
+10. In **Redirect URI**, select **Web** and enter: [https://spot.io](https://spot.io/). 
 
-![connect-azure-sub-4](https://github.com/spotinst/help/assets/106514736/9cf7236f-9d94-488d-aa24-0a13db61d595)
+    <img width=550 src="https://github.com/user-attachments/assets/9621718c-1133-4597-a01b-b799b6b2a86f">
 
-11. In the _Register an application_ window, enter the application you registered in the previous steps and copy the Application (client) ID and Directory (tenant) ID to provide in the next step. Click **Register**. 
+11. In **Register an application**, enter the application you registered in the previous steps and copy the Application (client) ID and Directory (tenant) ID to provide in the next step. Click **Register**. 
 
-![connect-azure-sub-5](https://github.com/spotinst/help/assets/106514736/6cae12e2-2b45-463e-a079-9ad94775d61a)
+    ![image](https://github.com/user-attachments/assets/e1fd6bb7-b5ee-4d0f-b251-da93c12ae59c)
 
 12. Paste the **Application (client) ID** and **Directory (tenant) ID** in the fields. 
  
-<img width="454" alt="connect-azure-3" src="https://github.com/spotinst/help/assets/106514736/f78cc81a-c852-4853-892e-1f64279d0b42">
+    <img width="454" alt="connect-azure-3" src="https://github.com/spotinst/help/assets/106514736/f78cc81a-c852-4853-892e-1f64279d0b42">
 
 13. Enter the agreement type:
   - Enterprise Agreement Only: Select the _Agreement Type_ **Enterprise Agreement** and enter the [Enterprise Agreement Billing Account ID](https://learn.microsoft.com/en-us/azure/cost-management-billing/manage/direct-ea-administration#view-enrollment-details). 
@@ -61,9 +61,8 @@ In the previous app registration that was created, complete the following steps 
 1. In the left menu, click **Certificates & secrets**. 
 2. Click the **Create secrets** tab and then **+ New client secret**. 
 3. Copy the secret value. 
- 
-![connect-azure-sub-7](https://github.com/spotinst/help/assets/106514736/421e99fb-4266-4d1f-8a63-1e84d81d0bb9)
 
+   <img width=800 src="https://github.com/user-attachments/assets/99f9b9ca-bdad-47f8-9d96-85cbe79e3add">
 
 4. In the Billing Engine Wizard, paste the application secret.  
 
@@ -106,7 +105,7 @@ To add the billing account reader role to the registered application:
 ## Connect 
 When the validation is complete, your Azure Billing Account will be connected to Billing Engine. 
 
-<img width="1036" alt="connect-azure-4" src="https://github.com/spotinst/help/assets/106514736/1dee88b7-daa5-4516-ba71-2f99f231ef6f">
+<img width="550" alt="connect-azure-4" src="https://github.com/spotinst/help/assets/106514736/1dee88b7-daa5-4516-ba71-2f99f231ef6f">
 
 ### Connect an Existing Spot Account 
 
@@ -117,10 +116,8 @@ You can connect an existing Spot Account (that is not connected to Azure for oth
 3. Click the Azure cloud provider you want to connect to your Spot account. 
 4. Click the **Existing Spot Account** dropdown menu and select the Spot account you want to connect Billing Engine and click **Next**.
 
-![connect-azure-6](https://github.com/spotinst/help/assets/106514736/284ad4fa-343c-4bad-80ee-ac1bedb490ed)
+   ![connect-azure-6](https://github.com/spotinst/help/assets/106514736/284ad4fa-343c-4bad-80ee-ac1bedb490ed)
 
 5. To connect your Azure billing account, start with Step 2 [here](https://docs.spot.io/billing-engine/get-started/connect-azure?id=step-2-log-in-to-your-azure-account).  
 
 Billing Engine checks for updated provider cost data every four hours.
-
- 
