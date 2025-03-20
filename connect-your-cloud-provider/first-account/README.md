@@ -6,7 +6,7 @@ In order to take advantage of Spot’s optimization and cost savings features, y
 
 If you are signing in to Spot for the first time (e.g., signing in from a [spot.io](https://spot.io/) page or registering for a free trial), complete the basic information as shown in the example below. 
 
-<img width="502" alt="connect-your-first-cloud-account-001" src="https://github.com/spotinst/help/assets/106514736/e34449cc-b29f-4b1e-80ac-17abeded0492">
+<img width="350" alt="connect-your-first-cloud-account-001" src="https://github.com/spotinst/help/assets/106514736/e34449cc-b29f-4b1e-80ac-17abeded0492">
 
 When you complete the initial registration, the company name you enter will be your Organization name in Spot. This can be the company you represent or any other name you would like to use as your organization name in Spot. 
 
@@ -16,24 +16,26 @@ On the Dashboard page, click the cloud provider that you would like to connect t
 
 If you have multiple accounts with your cloud provider, you will be able to connect them all later, after you have connected your first account. In addition, you will be able to connect accounts from multiple cloud providers. 
  
-![connect-1st-cloud-account-12](https://github.com/spotinst/help/assets/106514736/a8ad87bb-40f4-4647-be81-5e3c1efd0f01)
+<img width=500 src="https://github.com/user-attachments/assets/65471999-45fa-46a1-b451-716dbe39a738">
 
 ## Step 3: Connect Your Cloud Account 
 
 In this step, you make some choices about what type of account you are creating and how you would like to connect the account to Spot. The procedures are explained in detail in the wizard, but to help you along the way, the key concepts are explained below. 
 
 >**Important**: Follow the flow for your cloud service provider: 
-
-* Connect [<font color="#FC01CC">AWS</font>](connect-your-cloud-provider/first-account/?id=connect-aws)
-* Connect [<font color="#FC01CC">GCP</font>](connect-your-cloud-provider/first-account/?id=connect-gcp)
-* Connect [<font color="#FC01CC">Azure</font>](connect-your-cloud-provider/first-account/?id=connect-azure)
+>
+> - Connect [<font color="#FC01CC">AWS</font>](connect-your-cloud-provider/first-account/?id=connect-aws)
+>
+> - Connect [<font color="#FC01CC">GCP</font>](connect-your-cloud-provider/first-account/?id=connect-gcp)
+>
+> - Connect [<font color="#FC01CC">Azure</font>](connect-your-cloud-provider/first-account/?id=connect-azure)
 
 ### Connect AWS
 #### Linked Account
 
 A linked account is an “ordinary” Spot account you use for optimizing cost and usage by using spot instances and taking advantage of numerous Spot features. Choose Linked Account to use Elastigroup or Ocean. 
 
-![connect-1st-cloud-account-1](https://github.com/spotinst/help/assets/106514736/6247bed1-a377-4446-b9f4-09b65f0fdf31)
+<img width=750 src="https://github.com/spotinst/help/assets/106514736/6247bed1-a377-4446-b9f4-09b65f0fdf31">
 
 You can connect a linked account in two ways:  
 * Automatically
@@ -57,13 +59,13 @@ Please see the detailed [procedures](connect-your-cloud-provider/first-account
 
 Connection to a management account is required to use Eco. A management account will enable Spot to analyze your cost and usage reports and help you to save even more on your cloud expenses. Learn how to connect to [Eco](https://docs.spot.io/eco/getting-started/connect-your-aws-account). 
 
-![connect-1st-cloud-account-2](https://github.com/spotinst/help/assets/106514736/d34a05ab-6316-4744-80e2-d93148d2efa5)
+<img width=750 src="https://github.com/spotinst/help/assets/106514736/d34a05ab-6316-4744-80e2-d93148d2efa5">
 
 #### FinOps Products 
 
 Connect an account to the Billing Engine or Cost Intelligence solutions. This enables advanced analysis, rating and reporting on your cloud accounts. 
 
-![connect-1st-cloud-account-13](https://github.com/spotinst/help/assets/106514736/c32be20a-120b-4355-a307-fdc1808b2473)
+<img width=750 src="https://github.com/spotinst/help/assets/106514736/c32be20a-120b-4355-a307-fdc1808b2473">
 
 ### Connect GCP 
 #### Linked Account 
@@ -93,7 +95,7 @@ This option automatically chooses a policy and a role and associates the two for
 
 Connection to your Azure subscription is required to use Spot Elastigroup or Spot Ocean. Continue with the wizard in Spot after you choose Azure as the cloud provider. You can find a detailed description of this procedure in [Connect Azure Subscription](https://docs.spot.io/connect-your-cloud-provider/first-account/azure). 
 
-![connect-1st-cloud-account-9](https://github.com/spotinst/help/assets/106514736/aeddf12d-f678-4e53-837b-4fe989963d10)
+<img width=750 src="https://github.com/spotinst/help/assets/106514736/aeddf12d-f678-4e53-837b-4fe989963d10">
 
 #### Billing Account 
 
@@ -101,13 +103,13 @@ Connection to your Azure Billing Account is required to use Spot Eco. A connecte
  
 To connect your Azure Billing Account to Spot Eco, use the procedure described in [Connect Azure billing account to Spot](https://docs.spot.io/connect-your-cloud-provider/azure-ea-account). 
 
-![connect-1st-cloud-account-10](https://github.com/spotinst/help/assets/106514736/be43db83-c19d-4585-b0bf-92a79b3e5b38)
+<img width=750 src="https://github.com/spotinst/help/assets/106514736/be43db83-c19d-4585-b0bf-92a79b3e5b38">
 
 #### FinOps Products 
 
 Connect an account to the Billing Engine or Cost Intelligence solutions. This enables advanced analysis, rating and reporting on your cloud accounts. 
 
-![connect-1st-cloud-account-11](https://github.com/spotinst/help/assets/106514736/58d85cba-1b80-403b-bab6-2138c87daca2)
+<img width=750 src="https://github.com/spotinst/help/assets/106514736/58d85cba-1b80-403b-bab6-2138c87daca2">
 
 ## Step 4: Complete Your Connection 
 
