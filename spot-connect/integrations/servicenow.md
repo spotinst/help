@@ -222,7 +222,6 @@ The integration node triggers the automatic execution of a workflow from a selec
         var message = ex.message;
     }
    })(current, previous);
-
    ````
 
 11. On When to Run, select **After** > **Insert**.
