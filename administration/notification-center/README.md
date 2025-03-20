@@ -15,7 +15,7 @@ Spot provides notifications about the resources it manages. In the [Event Polici
  <details>
    <summary markdown="span">View image</summary>
 
-   <img width="800" src="https://github.com/user-attachments/assets/4290dc23-59f9-46cf-b75d-2323d331ee6c" />
+   <img width="800" src="https://github.com/user-attachments/assets/9bfa200b-4cba-46a7-bc96-bab0e9c15c10" />
 
  </details>
 

@@ -52,7 +52,7 @@ You can also use [multitenancy](administration/organizations/multitenancy) to cr
    <details>
     <summary markdown="span">View image</summary>
 
-     <img height="400" src="https://github.com/user-attachments/assets/faae59f5-123a-41a2-bd31-c2be6c471856" />
+     <img height="400" src="https://github.com/user-attachments/assets/39192efb-d15b-4189-885a-ba278eef3502" />
 
    </details>
 
@@ -63,7 +63,7 @@ You can also use [multitenancy](administration/organizations/multitenancy) to cr
    <details>
     <summary markdown="span">View image</summary>
 
-     <img height="400" src="https://github.com/user-attachments/assets/faae59f5-123a-41a2-bd31-c2be6c471856" />
+     <img height="400" src="https://github.com/user-attachments/assets/39192efb-d15b-4189-885a-ba278eef3502" />
 
    </details>
 
@@ -88,6 +88,7 @@ If your user is mapped to more than one organization, you can easily switch from
     <summary markdown="span">View image</summary>
 
      <img width="300" src="https://github.com/user-attachments/assets/6afad223-581c-4121-9066-adc0755fa560" />
+
    </details>
    
 
@@ -112,7 +113,6 @@ In the account, you can:
 
      <img width="300" src="https://github.com/user-attachments/assets/6439e166-20c9-4c9d-bc8f-9607ae31b36e" />
 
-
    </details>
 
 2. Enter a name for the new account and click **Create**.
@@ -133,7 +133,7 @@ The Account ID is required for API and SDK interactions with the account-level S
    <details>
     <summary markdown="span">View image</summary>
 
-      <img width="400" src="https://github.com/user-attachments/assets/9a0378a6-248b-4d06-a3cc-1351386d2a37" />
+      <img width="400" src="https://github.com/user-attachments/assets/8270659c-02eb-4eee-9beb-7479a70df491" />
 
    </details>
 
@@ -146,7 +146,7 @@ The Account ID is required for API and SDK interactions with the account-level S
    <details>
     <summary markdown="span">View image</summary>
 
-      <img width="400" src="https://github.com/user-attachments/assets/9a0378a6-248b-4d06-a3cc-1351386d2a37" />
+      <img width="400" src="https://github.com/user-attachments/assets/8270659c-02eb-4eee-9beb-7479a70df491" />
 
    </details>
 
