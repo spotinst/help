@@ -26,7 +26,7 @@ You can remediate the risks using:
    <details>
      <summary markdown="span">View image</summary>
    
-   <img src="https://github.com/spotinst/help/assets/167069628/dbc2f36b-cb7d-418d-a95f-c41ffe4a3c70" width=40% />
+   <img width=450 src="https://github.com/spotinst/help/assets/167069628/dbc2f36b-cb7d-418d-a95f-c41ffe4a3c70" />
 
    </details>
    </li>
