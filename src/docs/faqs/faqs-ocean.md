@@ -798,9 +798,10 @@ Your container instances may be unregistered if the newly launched Ocean ECS con
 * CPU and memory resource allocations are 0%
 * Status: Can’t determine
 
-<img alt="unregistered-container-instance1" src="https://github.com/spotinst/help/assets/167069628/acd9d60a-4952-4955-b119-593ccfb9c067">
+<img src="https://github.com/user-attachments/assets/a21d2179-18d4-4968-b85d-cf71c0ed959f" />
 
-</br>
+ </br>
+  </br>
 
 <img alt="unregistered-container-instance2" src="https://github.com/spotinst/help/assets/167069628/d7713e91-2850-48ee-9d1a-aa439dcf91d1">
 
@@ -1633,8 +1634,6 @@ If you want to edit the target capacity:
 
 This will let you manually increase the target of the cluster and the nodes will launch in the default virtual node group.
 
-<img width=900 src="https://github.com/user-attachments/assets/6e422a64-db48-4b43-90d0-d6b5ddc35464" >
-
  </div>
 
  </details>
@@ -2194,7 +2193,7 @@ However, it’s not possible to do with Ocean AKS clusters because you cannot ch
             ],
             "series": []
                 }
-    }
+        }
     ````
    
    * <b>Architectures</b> is a list of strings, and the values can be a combination of <i>x86_64</i> (includes both <i>intel64</i> and <i>amd64</i>), <i>intel64</i>, <i>amd64</i>, and <i>arm64</i>.
