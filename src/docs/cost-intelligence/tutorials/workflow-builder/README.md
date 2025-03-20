@@ -11,7 +11,7 @@ Examples of types of flows you can create:
 <details>
      <summary markdown="span">View image</summary>
 
-![image](https://github.com/spotinst/help/assets/167069628/b733cc21-b45f-4d0e-aa17-93dbd7961bf3)
+<img width=800 src="https://github.com/user-attachments/assets/02fbbeff-c601-4348-81b2-ccf2120d50cb">
 
    </details>
 
@@ -100,7 +100,8 @@ An alert or action based on automatically identified [anomalies](cost-intelligen
 
 Here is a simple example of an SMS sent once a day for 3 days. It includes the month-to-date AWS cost of all configured AWS accounts.
 
-![image](https://github.com/spotinst/help/assets/167069628/6c49c47f-672a-48ff-a839-3711a8f83b0b)
+![image](https://github.com/user-attachments/assets/29403aee-1606-475b-896e-27209efe73be)
+
 
 ## Edit an Existing Workflow
 
@@ -144,6 +145,6 @@ Click **Refresh** to get new activity log events.
 <details>
      <summary markdown="span">View image</summary>
 
-![image](https://github.com/spotinst/help/assets/167069628/4fef9e64-3011-4325-8765-d5d14812c97e)
+![image](https://github.com/user-attachments/assets/aa95804a-75b0-491e-bee0-2116dd366641)
 
    </details>
