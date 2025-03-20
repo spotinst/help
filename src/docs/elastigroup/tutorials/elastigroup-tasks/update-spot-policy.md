@@ -10,7 +10,7 @@ To get AWS ARN of your IAM role:
    <details>
     <summary markdown="span">View image</summary>
 
-     <img width="800" src="https://github.com/user-attachments/assets/7a2e125e-84af-4df5-8731-fc7b031e64f9" />
+     <img width="800" src="https://github.com/user-attachments/assets/ef5fced5-df4a-446c-85f6-e5abad896ebf" />
 
    </details>
 
