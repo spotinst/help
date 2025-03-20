@@ -10,7 +10,7 @@ The subject line contains the name of your company as it appears in the Spot con
 
 The header restates the goal and provides the date of the report.
 
-<img src="/eco/_media/tutorials-monthly-value-report-01.png" />
+<img width=500 src="https://github.com/user-attachments/assets/08419c4c-7d97-4ff5-b42b-925d089dedee">
 
 ### Total Actions Provided by Eco
 
@@ -72,7 +72,3 @@ Recipients must be a direct-to-aws customer. Companies we know to be MSPs and th
 ### Unsubscribe
 
 At the bottom of the email, you have the option to unsubscribe.
-
-## What’s Next?
-
-Learn more about the savings information you can view in the [Eco dashboard](eco/tutorials/view-your-savings).
