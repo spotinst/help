@@ -223,20 +223,24 @@ The Revert to Spots widget shows the number of events for which a regular node w
 
 By monitoring these events on the Autoscaling Activity panel, you can see when and how often your cluster utilizes spot nodes to exploit cost-saving opportunities. 
 
-<!--!   ->
-
-#### Revert to Commitments
-
-Coming soon (not available at the time of writing).
+### Revert to Commitments
 
 If a node was launched as a spot due to the absence of available commitments (Reserved Instances or Savings Plans) to utilize, Ocean persistently scans the market for an available commitment and promptly reverts upon finding one. 
 
-The Revert to Commitments widget shows the number of events for which a spot node was reverted to a commitment in the selected time range.  
+The Revert to Commitments widget shows the number of events for which a spot instance was reverted to a commitment in the selected time range.  
 
 By monitoring these events on the Autoscaling Activity panel, you can understand how your cluster is dynamically adapting to changes in the cloud market to maintain optimal operation and taking advantage of cost-saving opportunities by utilizing commitments. 
 
 For more information, see [Reserved Instances](https://docs.spot.io/ocean/tips-and-best-practices/?id=utilize-reserved-instances-for-aws-users). 
--->
+
+
+### Dynamic Commitments
+
+TBD
+
+The Dynamic commitments widget shows the number of events for which an RI/SP was reverted to a spot instance / other commitments plans to utilize commitments.
+
+
 
 ### Revert to Lower Cost
 
@@ -263,7 +267,9 @@ These are the curves:
 
 *  Lifecycle Types:
    * Spot.
-   * Regular.  
+   * Regular.
+   * Reserved instances.
+   * Savings plans.  
 *  Workload Requests: includes running pods and pending pods requests. 
 *  Workloads with Headroom: includes running pods, running Headroom pods, pending pods, and pending Headroom pods.
 
