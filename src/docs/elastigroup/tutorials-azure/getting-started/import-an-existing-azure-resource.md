@@ -95,6 +95,3 @@ In the Import dialog, complete the following:
    - If you want to import the configuration as is, click Import.
    - If you would like to edit the configuration, click on the other tabs (General, Compute or Scaling) and edit the parameters as needed. Alternatively, you can click JSON and edit the configuration directly in JSON format. When you are finished reviewing and editing, click Import.
 
-## What’s Next?
-
-Learn how to [create an Elastigroup for Azure from scratch](elastigroup/getting-started/create-an-elastigroup-for-azure.md).
