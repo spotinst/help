@@ -205,7 +205,7 @@ If you already have the VS Code editor installed, connect a notebook to your clu
 
 2. Click Install. When the VS Code editor is installed, the VS Code window opens.
 
- <img src="/ocean-spark/_media/jupyter-vscode-ide-1.png" />
+<img width = 1000 src="https://github.com/user-attachments/assets/52fc2c43-cd34-46ea-93fc-16b0fade097a" />
 
 3. Click Install.
 
