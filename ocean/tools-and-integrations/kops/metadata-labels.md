@@ -48,6 +48,3 @@ name: nodes
 spec:
 ```
 
-## What's Next?
-
-Learn about [OpenShift](ocean/tools-and-integrations/openshift).

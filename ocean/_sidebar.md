@@ -52,6 +52,7 @@
        - [Scaling Constraints View](ocean/tutorials/view-scaling-constraints)
       - [Shutdown Hours](ocean/features/running-hours)
         - [Shutdown Hours Settings](ocean/tutorials/set-running-hours)
+     - [VM Types Management](ocean/tips-and-best-practices/manage-machine-types)
      - [Ocean Dashboard - Kubernetes](ocean/tutorials/ocean-dashboard)
      - [Ocean Controller Version 2](ocean/tutorials/ocean-controller-v2/)
        - [Controller Installation](ocean/tutorials/spot-kubernetes-controller/ocean-controller-two-install)
@@ -77,7 +78,6 @@
      - [Health Checks & Auto-Healing](ocean/features/health-checks-and-autohealing)
      - [Network Client Installation](ocean/tutorials/install-network-client-v2)
      - [S3 Log Integration](ocean/features/log-integration-with-s3)
-     - [VM Types Management](ocean/tips-and-best-practices/manage-machine-types)
      - [FSx Mount for ONTAP to Pods](ocean/tutorials/mount-fsx-for-ontap-volumes-to-kubernetes-pods)
      - [Revert to Lower-Cost Node](ocean/features/revert-to-lower-cost-node)
      - [AWS Virtual Node Groups Management](ocean/tutorials/manage-virtual-node-groups)
@@ -94,7 +94,6 @@
      - [Elastigroups Migration](ocean/tutorials/migrate-existing-egs-ekskops)
 
    - [Azure AKS Features](ocean/azure-aks/)
-     - [Ocean Dashboard](ocean/tutorials/ocean-dashboard)
      - [Ocean AKS Cluster Overview Dashboard](ocean/ocean-aks-cloud-cluster-overview)
      - [Auto-Upgrade AKS Control Plane Patch](ocean/features/auto-upgrade-aks-patch-version)
      - [Azure Blob Log Integration](ocean/features/log-integration-with-azure-blob)
@@ -113,7 +112,6 @@
    - [GCP GKE Features](ocean/gcp-gke/)
      - [GKE Auto-Update Process](ocean/features/auto-update-process-gke)
      - [Committed Use Discount](ocean/features/committed-use-discount)
-     - [VM Types Management](ocean/tips-and-best-practices/manage-machine-types)
      - [Max Scale Down % per VNG-Console (GKE)](ocean/features/max-scale-down-vng-gke-ui)
      - [Cluster and VNG Orientation for GKE](ocean/features/gke-cluster-vng-orientation)
   
