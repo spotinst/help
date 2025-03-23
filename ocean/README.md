@@ -2,8 +2,6 @@
 
 Ocean automates cloud infrastructure for containers. It continuously analyzes how your containers use infrastructure, automatically scaling compute resources to maximize utilization and availability and utilizing the optimal blend of spot, reserved, and on-demand compute instances.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ryCUbWgLCwk " title="Kubernetes and Containers with Spot Ocean" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
 ## Ocean Release Notes
 Check out the [Ocean Release Notes](ocean/release-notes/) for information about the latest released Ocean features.
 
