@@ -14,6 +14,9 @@ Meow:
    * **Pounce** on unsuspecting person pee in the shoe.
    * **I show my** fluffy belly but it's a <i>trap</i>!
 
+       <img width=100 src="https://github.com/user-attachments/assets/394ded83-897c-435b-a7e0-8e24c612756f">
+
+
 * if you pet it i will tear up your hand rub face on owner or sitting in a box for demand to be let outside at once, and expect owner to wait for me as i think about it ears back wide eyed.
     1. Bite the neighbor's bratty kid kitty pounce, trip, faceplant you didn't see that no you didn't definitely didn't lick, lick, lick, and preen away the embarrassment.
     2. Swat turds around the house.
