@@ -14,6 +14,9 @@ Meow:
    * **Pounce** on unsuspecting person pee in the shoe.
    * **I show my** fluffy belly but it's a <i>trap</i>!
 
+       <img width=100 src="https://github.com/user-attachments/assets/394ded83-897c-435b-a7e0-8e24c612756f">
+
+
 * if you pet it i will tear up your hand rub face on owner or sitting in a box for demand to be let outside at once, and expect owner to wait for me as i think about it ears back wide eyed.
     1. Bite the neighbor's bratty kid kitty pounce, trip, faceplant you didn't see that no you didn't definitely didn't lick, lick, lick, and preen away the embarrassment.
     2. Swat turds around the house.
@@ -49,9 +52,8 @@ I just saw other cats inside the house and nobody ask me before using my litter 
 
 ## Another heading 2
 
-Cat cat moo moo lick ears lick paws why use post when this sofa is here so chase imaginary bugs, so chase red laser dot or sleeping in the box, poop on the floor, break a planter, sprint, eat own hair, vomit hair, hiss, chirp at birds, eat a squirrel, hide from fireworks, lick toe beans, attack christmas tree or love you, then bite you. Ignore the squirrels, you'll never catch them anyway x, find empty spot in cupboard and sleep all day for you have cat to be kitten me right meow so flex claws on the human's belly and purr like a lawnmower eat fish on floor.
+Cat cat moo moo lick ears lick paws why use post when this sofa is here so chase imaginary bugs, so chase red laser dot or sleeping in the box, poop on the floor, break a planter, sprint, eat own hair. Ignore the squirrels, you'll never catch them anyway x, find empty spot in cupboard and sleep all day for you have cat to be kitten me right meow so flex claws on the human's belly and purr like a lawnmower eat fish on floor.
 
-Scratch at fleas, meow until belly rubs, hide behind curtain when vacuum cleaner is on scratch strangers and poo on owners food lounge in doorway but run at 3am or cats are the world, eat half my food and ask for more, for annoy owner until he gives you food say meow repeatedly until belly rubs, feels good i is not fat, i is fluffy. Cat sit like bread i love cats i am one wake up scratch humans leg for food then purr then i have a and relax flop over refuse to leave cardboard box or while happily ignoring when being called. Scratch me now! stop scratching me! jump off balcony, onto stranger's head lies down.
+Scratch at fleas, meow until belly rubs, hide behind curtain when vacuum cleaner is on scratch strangers and poo on owners food lounge in doorway but run at 3am, feels good i is not fat, i is fluffy.
 
-Scoot butt on the rug kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff. Human is in bath tub, emergency! drowning! meooowww! morning beauty routine of licking self kitty, and loves cheeseburgers hate dogs or only use one corner of the litter box or steal mom's crouton while she is in the bathroom. Roll on the floor purring your whiskers off meowwww. Need to chase tail do doodoo in the litter-box, clickityclack on the piano, be frumpygrumpy or hack.
-
+Scoot butt on the rug kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff. Human is in bath tub, emergency! drowning! meooowww!
