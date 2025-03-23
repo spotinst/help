@@ -107,7 +107,7 @@ You can also configure the connection using the Airflow UI.
    - Description: Enter any optional text to describe the connection.
    - Cluster ID: The ID of your Ocean Spark cluster (format osc-xxxxxxxx)
    - Account ID: The Spot Account ID the cluster belongs to, which corresponds to a cloud provider account.
-   - API token: Your Spot by NetApp API token (see How to create an API token)
+   - API token: Your Spot API token (see How to create an API token)
 
 4. If you do not see Ocean for Apache Spark in the connection types, restart the Airflow web server using the following command:
 
