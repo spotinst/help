@@ -33,7 +33,7 @@ window.$docsify = {
     paths: "auto",
     placeholder: `Type here to search...`,
     noData: "No results.",
-    depth: 5,
+    depth: 4,
     maxAge: 0,
   },
 
