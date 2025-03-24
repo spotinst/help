@@ -66,11 +66,6 @@ Each rule entry shows relevant information about the parameters that trigger the
 
 ##  Work with Right Sizing Rules 
 
-You can create right sizing rules and manually attach them to specific workloads. 
-
-Alternatively, you can use auto-attach to automatically attach right-sizing rules to existing and added workloads based on workload criteria, such as a specific namespace and/or specific labels. 
-Auto-attach reduces the manual attachment overhead and ensures new workloads are optimized immediately. 
-
 You can create right-sizing rules to trigger immediately after a specific set of requirements is met or at a specific time after the requirements are met. 
 
 ###   Create or Edit a Right-Sizing Rule 
@@ -80,13 +75,14 @@ To create/edit a right-sizing rule:
 1.   Click the **Advanced Optimization** tab if not already displayed.
 2.   To create a new rule, click **+ Add new rule** above the Automation Rules list (or to edit an existing rule, click the pencil icon in the rule).
 
-![rule-configure-hpa-3](https://github.com/user-attachments/assets/d4f27b25-6d88-463f-bc2a-dbe3db46594c)
+<img height="700" src="https://github.com/user-attachments/assets/7ec1ae5d-696d-4318-8a66-a87f6e3897ce" />
+
 
 3.   In the Configure Automation Rule dialog box, enter/edit the unique rule name.
 4.   Select when to apply the recommendation by selecting one of the following options: 
 
       *   **Once available**: The recommendation is applied immediately after it becomes available. 
-      *   **At a specific time**: You select when to apply the recommendation after it becomes available.
+      *   **Specific time**: You select when to apply the recommendation after it becomes available.
 
 ![rule-when-to-apply-3](https://github.com/user-attachments/assets/5cb76163-9f33-477e-95d6-b99b36f0f200)
 
@@ -105,8 +101,6 @@ To create/edit a right-sizing rule:
 11. Turn on **Auto-attach** if you want to automatically attach rules to your workloads based on workload criteria.
      *  In the Auto-attach dialog box, select required namespaces / labels.
    
-   add auto-attach screen
-
 12. After you save the rule, it appears in the area under the [Workloads Optimization list](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=workloads-optimization-list).
 
     > **Notes**:
@@ -114,9 +108,14 @@ To create/edit a right-sizing rule:
     > - The **10%** default overhead is calculated within the recommendation itself.
     > - Threshold value is only used for down-sizing cases
 
-###   Attach a Right-Sizing Rule to One or More Workloads 
+###   Attach a Right-Sizing Rule to One or More Workloads
 
-To attach a rule to one or more workloads: 
+Options:
+
+* Auto-apply: To turn on auto-apply right-sizing rules and let Ocean automatically attach rules to workloads according to selected criteria, see [Create or Edit a Right-Sizing Rule](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=create-or-edit-a-right-sizing-rule).
+* Manual attach: Manually attach a specific right-sizing rule to one or more workloads.
+
+To manually attach a rule:
 
 1.   Select one or more workloads in the Workloads Optimization list. 
 2.   From the Actions drop-down menu above the table, click **Attach Rule**.
