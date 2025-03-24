@@ -1,117 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <base href="/" />
+    <meta charset="UTF-8" />
+    <title>Spot Documentation</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="Spot Documentation" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
 
-<head>
-  <base href="/" />
-  <meta charset="UTF-8" />
-  <title>Spot Documentation</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="description" content="Spot Documentation" />
-  <meta name="viewport"
-    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/_media/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/_media/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/_media/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/_media/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/_media/favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
 
-  <!-- Favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/_media/favicon/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/_media/favicon/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/_media/favicon/favicon-16x16.png" />
-  <link rel="manifest" href="/_media/favicon/site.webmanifest" />
-  <link rel="mask-icon" href="/_media/favicon/safari-pinned-tab.svg" color="#5bbad5" />
-  <meta name="msapplication-TileColor" content="#da532c" />
-  <meta name="theme-color" content="#ffffff" />
+    <!-- Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap"
+    />
 
-  <!-- Fonts -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" />
+    <!-- Theme -->
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css"
+    />
 
-  <!-- Theme -->
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css" />
-  
-  <!-- Custom Styles -->
-  
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/UpTrendingLLC/docsify/styles.1.5.css" />
+    <!-- Custom Styles -->
 
-</head>
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/gh/UpTrendingLLC/docsify/styles.1.5.css"
+    />
+  </head>
 
-<body>
-  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
 
-  <div class="helpful-content">
-    <div class="col-left">
-      <h2>Spot Documentation</h2>
-      <p>How to use Spot products</p>
+    <div class="helpful-content">
+      <div class="col-left">
+        <h2>Spot Documentation</h2>
+        <p>How to use Spot products</p>
+      </div>
+      <div class="col-right">
+        <a
+          class="spot-btn feedback-button"
+          href="mailto:docsportal-feedback@flexera.com?subject=Documentation topic: General Inquiry&body=Documentation topic: https://docs.spot.io/"
+          target="_blank"
+          >Feedback</a
+        >
+      </div>
     </div>
-    <div class="col-right">
-      <a class="spot-btn feedback-button" href="mailto:docsportal-feedback@flexera.com?subject=Documentation topic: General Inquiry&body=Documentation topic: https://docs.spot.io/" target="_blank">Feedback</a>
-    </div>
-  </div>
-  
-  <div id="app"></div>
 
-  <script type="text/javascript">
-    /**
-     * Single Page Apps for GitHub Pages
-     *
-     * Ref: https://github.com/rafrex/spa-github-pages
-     * Copyright (c) 2016 Rafael Pedicini, licensed under the MIT License
-     *
-     * This script checks whether a redirect is present in the query string.
-     * If so, it converts it back into the correct URL and adds it to the
-     * browser's history using `window.history.replaceState(...)`,
-     * which won't cause the browser to attempt to load the new URL.
-     *
-     * When the Single Page App is loaded further down in this file,
-     * the correct URL will be waiting in the browser's history for
-     * the app to route accordingly.
-     */
-    ((l) => {
-      if (l.search[1] === "/") {
-        let decoded = l.search
-          .slice(1)
-          .split("&")
-          .map((s) => s.replace(/~and~/g, "&"))
-          .join("?");
-        window.history.replaceState(
-          null,
-          null,
-          l.pathname.slice(0, -1) + decoded + l.hash
-        );
-      }
-    })(window.location);
-  </script>
+    <div id="app"></div>
 
-  <!-- Single Page App -->
-  <script type="text/javascript" src="/bundle.js"></script>
+    <script type="text/javascript">
+      /**
+       * Single Page Apps for GitHub Pages
+       *
+       * Ref: https://github.com/rafrex/spa-github-pages
+       * Copyright (c) 2016 Rafael Pedicini, licensed under the MIT License
+       *
+       * This script checks whether a redirect is present in the query string.
+       * If so, it converts it back into the correct URL and adds it to the
+       * browser's history using `window.history.replaceState(...)`,
+       * which won't cause the browser to attempt to load the new URL.
+       *
+       * When the Single Page App is loaded further down in this file,
+       * the correct URL will be waiting in the browser's history for
+       * the app to route accordingly.
+       */
+      ((l) => {
+        if (l.search[1] === "/") {
+          let decoded = l.search
+            .slice(1)
+            .split("&")
+            .map((s) => s.replace(/~and~/g, "&"))
+            .join("?");
+          window.history.replaceState(
+            null,
+            null,
+            l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      })(window.location);
+    </script>
 
-  <!-- Vue -->
+    <!-- Single Page App -->
+    <script type="text/javascript" src="/bundle.js"></script>
 
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.min.js"></script>
+    <!-- Vue -->
 
-  <!-- Icons -->
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/feather-icons@4.29.0/dist/feather.min.js"></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.min.js"
+    ></script>
 
-  <!-- Docsify -->
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/docsify@4.13.0/lib/docsify.min.js"></script>
+    <!-- Icons -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/feather-icons@4.29.0/dist/feather.min.js"
+    ></script>
 
-  <!-- Docsify Plugins -->
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-bash.min.js"></script>
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-json.min.js"></script>
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-yaml.min.js"></script>
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markdown.min.js"></script>
-  <script type="text/javascript" src="//cdn.jsdelivr.net/gh/UpTrendingLLC/docsify/search.1.8.js"></script>
-  <script type="text/javascript" src="//cdn.jsdelivr.net/gh/UpTrendingLLC/docsify/plugins.1.5.js"></script>
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/external-script.min.js"></script>
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
-  <script type="text/javascript"
-    src="//cdn.jsdelivr.net/npm/docsify-page-toc@1.0.4/dist/docsify-page-toc.min.js"></script>
-  <script type="text/javascript"
-    src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
-  <script type="text/javascript"
-    src="//cdn.jsdelivr.net/npm/docsify-scroll-to-top@1.0.2/dist/docsify-scroll-to-top.min.js"></script>
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
-  <script type="text/javascript"
-    src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse@1.3.5/dist/docsify-sidebar-collapse.min.js"></script>
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/ga.min.js"></script>
+    <!-- Docsify -->
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/docsify@4.13.0/lib/docsify.min.js"
+    ></script>
 
-  
-</body>
+    <script>
+      fetch("/paths.json")
+        .then((response) => response.json())
+        .then((paths) => {
+          window.$docsify.search.paths = paths;
+        })
+        .catch((error) => console.error("Failed to load search paths:", error));
+    </script>
 
+    <!-- Docsify Plugins -->
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-bash.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-json.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-yaml.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markdown.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/gh/UpTrendingLLC/docsify/search.1.8.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/gh/UpTrendingLLC/docsify/plugins.1.5.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/external-script.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/docsify-page-toc@1.0.4/dist/docsify-page-toc.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/docsify-scroll-to-top@1.0.2/dist/docsify-scroll-to-top.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/docsify-tabs@1"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse@1.3.5/dist/docsify-sidebar-collapse.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/ga.min.js"
+    ></script>
+  </body>
 </html>
