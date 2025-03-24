@@ -98,7 +98,7 @@ To create/edit a right-sizing rule:
 9. Click the **Set overhead for resources** down arrow and set the CPU and memory percentage overheads. An overhead specifies the percentage of extra resources to add to the new request recommendation.
 10. Turn on the **Apply HPA on associated workload** if you want to apply HPA. Ocean automatically applies recommendations for metrics not covered by the HPA trigger. For example, Ocean applies memory recommendations to a CPU-based HPA. Ocean applies recommendations for both metrics for other triggers, such as Kafka queue.
 
-11. Turn on **Auto-attach** if you want to automatically attach rules to your workloads based on workload criteria.
+11. Turn on **Auto-attach** if you want to automatically attach rules to workloads based on selected criteria.
      *  In the Auto-attach dialog box, select required namespaces / labels.
    
 12. After you save the rule, it appears in the area under the [Workloads Optimization list](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=workloads-optimization-list).
@@ -112,8 +112,11 @@ To create/edit a right-sizing rule:
 
 Options:
 
-* Auto-apply: To turn on auto-apply right-sizing rules and let Ocean automatically attach rules to workloads according to selected criteria, see [Create or Edit a Right-Sizing Rule](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=create-or-edit-a-right-sizing-rule).
+* Auto-apply: Turn on auto-apply and let Ocean automatically attach rules to workloads based on selected criteria. See [Create or Edit a Right-Sizing Rule](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=create-or-edit-a-right-sizing-rule).
+>**Note**: Auto-apply attaches rules to existing and newly-added workloads.
+  
 * Manual attach: Manually attach a specific right-sizing rule to one or more workloads.
+
 
 To manually attach a rule:
 
