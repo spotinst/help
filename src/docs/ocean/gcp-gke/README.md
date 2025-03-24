@@ -4,6 +4,6 @@ Ocean automates cloud infrastructure for containers. It continuously analyzes ho
 
 Use the pages in this area to access descriptions of all Ocean features available to GCP GKE.
 
-For descriptions of features available to all cloud service provider platforms, see the [Ocean features overview](https://docs.spot.io/ocean/features/)
+For descriptions of features available to all cloud service provider platforms, see the [Ocean features overview](https://docs.spot.io/ocean/features/).
 
 
