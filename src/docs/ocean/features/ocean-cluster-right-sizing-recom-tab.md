@@ -66,13 +66,12 @@ Each rule entry shows relevant information about the parameters that trigger the
 
 ##  Work with Right Sizing Rules 
 
-You can create the right sizing rules and immediately attach them to specific workloads. Alternatively, you can create and save a rule and later attach it to one or more workloads. 
+You can create right sizing rules and manually attach them to specific workloads. 
+
+Alternatively, you can use auto-attach to automatically attach right-sizing rules to existing and added workloads based on workload criteria, such as a specific namespace and/or specific labels. 
+Auto-attach reduces the manual attachment overhead and ensures new workloads are optimized immediately. 
+
 You can create right-sizing rules to trigger immediately after a specific set of requirements is met or at a specific time after the requirements are met. 
-
----add something here about auto-attach---
-
-Auto-attach enables you to automatically attach right-sizing rules to your workloads based on workload criteria, such as a specific namespace and/or specific labels. Auto-attach reduces the manual attachment overhead and ensures new workloads are optimized immediately.
-
 
 ###   Create or Edit a Right-Sizing Rule 
 
@@ -103,11 +102,10 @@ To create/edit a right-sizing rule:
 10. Click the **Set overhead for resources** down arrow and set the CPU and memory percentage overheads. An overhead specifies the percentage of extra resources to add to the new request recommendation.
 11. Turn on the **Apply HPA on associated workload** if you want to apply HPA. Ocean automatically applies recommendations for metrics not covered by the HPA trigger. For example, Ocean applies memory recommendations to a CPU-based HPA. Ocean applies recommendations for both metrics for other triggers, such as Kafka queue.
 
-
----adding auto-attach part here---
-
 12.  Turn on **Auto-attach** if you want to automatically attach rules to your workloads based on workload criteria.
      *  In the Auto-attach dialog box, select required namespaces / labels.
+   
+   add auto-attach screen--
 
 
 13. After you save the rule, it appears in the area under the [Workloads Optimization list](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=workloads-optimization-list).
