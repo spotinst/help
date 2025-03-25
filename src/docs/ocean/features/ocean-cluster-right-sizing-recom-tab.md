@@ -77,7 +77,6 @@ To create/edit a right-sizing rule:
 
 <img height="700" src="https://github.com/user-attachments/assets/7ec1ae5d-696d-4318-8a66-a87f6e3897ce" />
 
-
 3.   In the Configure Automation Rule dialog box, enter/edit the unique rule name.
 4.   Select when to apply the recommendation by selecting one of the following options: 
 
@@ -112,8 +111,8 @@ To create/edit a right-sizing rule:
 
 Options:
 
-* Auto-apply: Turn on auto-apply and let Ocean automatically attach rules to workloads based on selected criteria. See [Create or Edit a Right-Sizing Rule](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=create-or-edit-a-right-sizing-rule).
->**Note**: Auto-apply attaches rules to existing and newly-added workloads.
+* Auto-attach: Turn on auto-attach and let Ocean automatically attach rules to workloads based on selected criteria. See [Create or Edit a Right-Sizing Rule](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=create-or-edit-a-right-sizing-rule).
+>**Note**: Auto-attach attaches rules to existing and newly-added workloads.
   
 * Manual attach: Manually attach a specific right-sizing rule to one or more workloads.
 
