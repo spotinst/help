@@ -73,7 +73,7 @@ To create/edit a Virtual Node Group:
 * Node Public IP.
 * Kubernetes Version.
 
-### Ocean Autoscaler Configuration
+### Ocean Autoscaler Strategy
 
 * Minimum and maximum nodes for autoscaling.
 * Spot %: Percentage of spot nodes you want in the virtual node group.
