@@ -94,12 +94,12 @@ To select the VMs for your Cluster:
    * Automatic: Let Spot select your VM sizes according to the needs of your applications.
    * Advanced VM Size Selection: Use attribute filters to select VMs with customized sizes from which Ocean can scale.
 
-![aks-vng-vmsel-options](https://github.com/user-attachments/assets/b2cc113b-5a04-4d14-b329-f3b0529414ae)
+<img width=1250 src="https://github.com/user-attachments/assets/727d82f4-c240-4aaa-8b4b-39d5d0cc3236" />
 
 2. If you selected **Automatic**, click **Save** to complete the procedure.
 3. If you selected **Advanced VM Size Selection**: View each VM type's currently selected size, vCPU, Memory (GiB), and GPU units in the VM Selection list (click the down arrow for the VM type).
 
-![aks-vngs-vms-advanced](https://github.com/user-attachments/assets/4ed5d4a7-f17a-4c07-8093-46d8144fc3b3)
+<img width=1250 src="https://github.com/user-attachments/assets/5871dbd6-cf85-42c8-b568-1940e635cdc2" />
 
 >**Note**:
 > - The VM types shown in the virtual node group template are only those supported in the cluster's region.
