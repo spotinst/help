@@ -987,6 +987,23 @@ You can have multiple containers defined in a single task definition. Check all 
 
  </details>
 
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocmonitortags">ECS: Can I monitor detached instances using tags?</summary>
+
+<div style="padding-left:16px">
+
+You can monitor your detached instances using tags. When an instance gets detached, Spot tags it with:
+
+`Key: spotinst:aws:ec2:state`
+
+`Value: detached`
+
+For a spot instance, the spot request is tagged. For an on-demand instance, the instance is tagged.
+
+ </div>
+
+ </details>
+
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="ocagentlogs">ECS: How can I check the ECS agent logs? Can I push the agent logs to CloudWatch?</summary>
 
