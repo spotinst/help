@@ -192,6 +192,23 @@ This can happen if you have AWS resources that are not managed by Spot. Spot sca
  </details>
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="dashboardnodata">Azure: Why isn’t the optimization dashboard showing data?</summary>
+
+  <div style="padding-left:16px">
+
+If data isn’t showing in the optimization dashboard, make sure you have:
+
+* An Azure account connected to Spot with VMs running in Azure.
+* A [custom role](connect-your-cloud-provider/first-account/azure?id=step-5-create-a-custom-role) and [assigned it in IAM](connect-your-cloud-provider/first-account/azure?id=step-6-assign-a-role).
+* A [client secret in Spot](connect-your-cloud-provider/first-account/azure?id=step-4-create-certificates-and-secrets).
+* The correct Azure [subscription ID and tenant ID](administration/organizations/?id=get-your-account-id).
+* https://spot.io for the [redirect URI](https://learn.microsoft.com/en-us/entra/identity-platform/reply-url).
+
+ </div>
+
+ </details>
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="serviceaccountkey">GCP: Can I change the service account key for my GCP account?</summary>
 
   <div style="padding-left:16px">
