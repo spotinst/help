@@ -192,7 +192,7 @@ For virtual node groups: Under launchSpecification: { instanceStorePolicy: { typ
 
 >Important: When you enable machine ephemeral storage for specific virtual node groups or the cluster, you must also enable `raid0` under `userData`.
 
-This sets the allocatable ephemeral-storage of each node to the total size of the instance store volume(s). This configuration is useful for workloads that leverage dense storage instance types or require the low latency from instance-stores that are nvme ssd based.
+This sets the allocatable ephemeral-storage of each node to the total size of the instance store volume(s). This is  valuable for workloads with dense storage instance types or require low latency from ssd nvme based instance-stores.
 
 ## Configure an Ocean AKS Cluster with Multiple VNG Subnets
 
