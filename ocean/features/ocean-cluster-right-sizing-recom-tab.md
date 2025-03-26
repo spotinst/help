@@ -66,7 +66,6 @@ Each rule entry shows relevant information about the parameters that trigger the
 
 ##  Work with Right Sizing Rules 
 
-You can create the right sizing rules and immediately attach them to specific workloads. Alternatively, you can create and save a rule and later attach it to one or more workloads. 
 You can create right-sizing rules to trigger immediately after a specific set of requirements is met or at a specific time after the requirements are met. 
 
 ###   Create or Edit a Right-Sizing Rule 
@@ -76,13 +75,13 @@ To create/edit a right-sizing rule:
 1.   Click the **Advanced Optimization** tab if not already displayed.
 2.   To create a new rule, click **+ Add new rule** above the Automation Rules list (or to edit an existing rule, click the pencil icon in the rule).
 
-![rule-configure-hpa-3](https://github.com/user-attachments/assets/d4f27b25-6d88-463f-bc2a-dbe3db46594c)
+<img height="700" src="https://github.com/user-attachments/assets/0dcc58d8-86c3-4496-bde8-b1cce5dc2109" />
 
 3.   In the Configure Automation Rule dialog box, enter/edit the unique rule name.
 4.   Select when to apply the recommendation by selecting one of the following options: 
 
       *   **Once available**: The recommendation is applied immediately after it becomes available. 
-      *   **At a specific time**: You select when to apply the recommendation after it becomes available.
+      *   **Specific time**: You select when to apply the recommendation after it becomes available.
 
 ![rule-when-to-apply-3](https://github.com/user-attachments/assets/5cb76163-9f33-477e-95d6-b99b36f0f200)
 
@@ -95,8 +94,14 @@ To create/edit a right-sizing rule:
 8. Click the **Set recommendation ranges for resources** down arrow and enter the upper and lower boundary values for CPU (millicpu) and Memory (MiB) requests to apply a recommendation. By default, the minimum values are 10 millicpu for CPU and 32 MiB for memory; no lower values will be accepted.
    * If a recommendation is above the set boundaries, automatic right-sizing will apply the recommendation using the maximum value configured in the rule.
    * If a recommendation is below the set boundaries, automatic right-sizing will apply the recommendation using the minimum value configured in the rule.
-10. Click the **Set overhead for resources** down arrow and set the CPU and memory percentage overheads. An overhead specifies the percentage of extra resources to add to the new request recommendation.
-11. Turn on the **Apply HPA on associated workload** if you want to apply HPA. Ocean automatically applies recommendations for metrics not covered by the HPA trigger. For example, Ocean applies memory recommendations to a CPU-based HPA. Ocean applies recommendations for both metrics for other triggers, such as Kafka queue.
+9. Click the **Set overhead for resources** down arrow and set the CPU and memory percentage overheads. An overhead specifies the percentage of extra resources to add to the new request recommendation.
+10. Turn on the **Apply HPA on associated workload** if you want to apply HPA. Ocean automatically applies recommendations for metrics not covered by the HPA trigger. For example, Ocean applies memory recommendations to a CPU-based HPA. Ocean applies recommendations for both metrics for other triggers, such as Kafka queue.
+
+11. Turn on **Auto-attach** if you want to automatically attach rules to workloads based on selected criteria.
+     *  In the Auto-attach area, select required namespaces / labels.
+   
+<img width="500" src="https://github.com/user-attachments/assets/dae038b7-6dda-4a85-8e2f-bea04c12f517" />
+
 12. After you save the rule, it appears in the area under the [Workloads Optimization list](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=workloads-optimization-list).
 
     > **Notes**:
@@ -104,9 +109,17 @@ To create/edit a right-sizing rule:
     > - The **10%** default overhead is calculated within the recommendation itself.
     > - Threshold value is only used for down-sizing cases
 
-###   Attach a Right-Sizing Rule to One or More Workloads 
+###   Attach a Right-Sizing Rule to One or More Workloads
 
-To attach a rule to one or more workloads: 
+Options:
+
+* Auto-attach: Turn on auto-attach and let Ocean automatically attach rules to workloads based on selected criteria. See [Create or Edit a Right-Sizing Rule](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=create-or-edit-a-right-sizing-rule).
+>**Note**: Auto-attach attaches rules to existing and newly-added workloads.
+  
+* Manual attach: Manually attach a specific right-sizing rule to one or more workloads.
+
+
+To manually attach a rule:
 
 1.   Select one or more workloads in the Workloads Optimization list. 
 2.   From the Actions drop-down menu above the table, click **Attach Rule**.
