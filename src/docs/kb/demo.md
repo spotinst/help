@@ -13,6 +13,7 @@ Meow:
 * Bite plants bawl under human beds and sleep on my human's head, and time to go zooooom. When in doubt, wash. Purr while eating this is the day vommit food and eat it again meow meow.
    * **Pounce** on unsuspecting person pee in the shoe.
    * **I show my** fluffy belly but it's a <i>trap</i>!
+   * New bullet
 
        <img width=100 src="https://github.com/user-attachments/assets/394ded83-897c-435b-a7e0-8e24c612756f">
 
@@ -21,6 +22,7 @@ Meow:
     1. Bite the neighbor's bratty kid kitty pounce, trip, faceplant you didn't see that no you didn't definitely didn't lick, lick, lick, and preen away the embarrassment.
     2. Swat turds around the house.
     3. Third step
+    4. Fourth step
 
 ## This is a heading 2
 
