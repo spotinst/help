@@ -14,6 +14,7 @@ Meow:
    * **Pounce** on unsuspecting person pee in the shoe.
    * **I show my** fluffy belly but it's a <i>trap</i>!
    * Bullet #3
+   * Next bullet
 
        <img width=100 src="https://github.com/user-attachments/assets/394ded83-897c-435b-a7e0-8e24c612756f">
 
@@ -22,6 +23,7 @@ Meow:
     1. Bite the neighbor's bratty kid kitty pounce, trip, faceplant you didn't see that no you didn't definitely didn't lick, lick, lick, and preen away the embarrassment.
     2. Swat turds around the house.
     3. Step 3
+    4. Step 4
 
 ## This is a heading 2
 
