@@ -75,7 +75,7 @@ To create/edit a right-sizing rule:
 1.   Click the **Advanced Optimization** tab if not already displayed.
 2.   To create a new rule, click **+ Add new rule** above the Automation Rules list (or to edit an existing rule, click the pencil icon in the rule).
 
-<img height="700" src="https://github.com/user-attachments/assets/110230c4-00c1-4bb5-959f-d94ef4a32a77" />
+<img height="700" src="https://github.com/user-attachments/assets/0dcc58d8-86c3-4496-bde8-b1cce5dc2109" />
 
 3.   In the Configure Automation Rule dialog box, enter/edit the unique rule name.
 4.   Select when to apply the recommendation by selecting one of the following options: 
