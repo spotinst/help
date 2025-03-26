@@ -75,7 +75,7 @@ To create/edit a right-sizing rule:
 1.   Click the **Advanced Optimization** tab if not already displayed.
 2.   To create a new rule, click **+ Add new rule** above the Automation Rules list (or to edit an existing rule, click the pencil icon in the rule).
 
-<img height="700" src="https://github.com/user-attachments/assets/7ec1ae5d-696d-4318-8a66-a87f6e3897ce" />
+<img height="700" src="https://github.com/user-attachments/assets/110230c4-00c1-4bb5-959f-d94ef4a32a77" />
 
 3.   In the Configure Automation Rule dialog box, enter/edit the unique rule name.
 4.   Select when to apply the recommendation by selecting one of the following options: 
@@ -98,8 +98,10 @@ To create/edit a right-sizing rule:
 10. Turn on the **Apply HPA on associated workload** if you want to apply HPA. Ocean automatically applies recommendations for metrics not covered by the HPA trigger. For example, Ocean applies memory recommendations to a CPU-based HPA. Ocean applies recommendations for both metrics for other triggers, such as Kafka queue.
 
 11. Turn on **Auto-attach** if you want to automatically attach rules to workloads based on selected criteria.
-     *  In the Auto-attach dialog box, select required namespaces / labels.
+     *  In the Auto-attach area, select required namespaces / labels.
    
+<img width="500" src="https://github.com/user-attachments/assets/dae038b7-6dda-4a85-8e2f-bea04c12f517" />
+
 12. After you save the rule, it appears in the area under the [Workloads Optimization list](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=workloads-optimization-list).
 
     > **Notes**:
