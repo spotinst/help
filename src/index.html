@@ -112,7 +112,6 @@
 
     <!-- Single Page App -->
     <script type="text/javascript" src="/bundle.js"></script>
-
     <!-- Vue -->
 
     <script
@@ -133,7 +132,7 @@
     ></script>
 
     <script>
-      fetch("paths.json")
+      fetch("/paths.json")
         .then((response) => response.json())
         .then((paths) => {
           window.$docsify.search.paths = paths;
