@@ -174,9 +174,9 @@ When the root volume is not applicable for the ephemeral storage, specify the al
 
 Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>
 
-Instance stores on nodes for ephemeral storage significantly enhance cost optimization and resource utilization. Ocean autoscaler considers the instance-store when scaling up, preventing unnecessary node additions, which reduces costs and improves cluster efficiency. The scaling process takes into account the increased storage available for the pods on the node, which leads to better node utilization.
+Use this feature to configure how the allocatable ephemeral storage is used (as an aggregate of the available instance stores).
 
-Machine ephemeral storage addresses over-provisioning and under-utilization, leading to a more efficient and cost-effective environment.
+Instance stores on nodes for ephemeral storage significantly enhance cost optimization and resource utilization. Ocean autoscaler considers the instance-store when scaling up, preventing unnecessary node additions, which reduces costs and improves cluster efficiency. The scaling process takes into account the increased storage available for the pods on the node, which leads to better node utilization.
 
 You can enable this feature via the Spot API for the entire cluster or specific virtual node groups only.
 
@@ -190,9 +190,7 @@ For virtual node groups: Under launchSpecification: { instanceStorePolicy: { typ
 * [Create virtual node groups](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecCreate)
 * [Update virtual node group](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecUpdate)
 
->Important: When you enable machine ephemeral storage for specific virtual node groups or the cluster, you must also enable `raid0` under `userData`.
-
-This sets the allocatable ephemeral-storage of each node to the total size of the instance store volume(s). This is  valuable for workloads with dense storage instance types or require low latency from ssd nvme based instance-stores.
+>Note: If you want to use the instance store on your nodes as the node ephemeral storage, you must enable `raid0` in your `userData` and also set it on your Ocean / virtual node group so that Ocean can take it into consideration.
 
 ## Configure an Ocean AKS Cluster with Multiple VNG Subnets
 
