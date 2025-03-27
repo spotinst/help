@@ -8,7 +8,7 @@ export const aliases = (() => {
     "/account-user-management/": "/administration/",
 
     "/account-user-management/customizing-email-notifications/":
-      "/administration/notification-center/",
+      "/administr ation/notification-center/",
 
     "/account-user-management/elastigroup-notifications-for-slack/":
       "/administration/notification-center/",
