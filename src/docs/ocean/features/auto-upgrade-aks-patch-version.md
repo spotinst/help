@@ -101,11 +101,13 @@ To schedule an auto-upgrade:
   
 ##  Auto-Upgrade Now
 
-Use this option if you want to auto-upgrade immediately (rather than scheduling an upgrade).
+Use this option if you want to auto-upgrade immediately (rather than schedule an upgrade).
 
 1. See [Create or Edit an Auto-Upgrade Schedule](https://docs.spot.io/ocean/features/auto-upgrade-aks-patch-version?id=create-or-edit-an-auto-upgrade-schedule) steps 1 to 4 (in Step 2, click **Configure and Update Now**).
 
-Add a screen with the Update Now button when available.
+<img width="600" src="https://github.com/user-attachments/assets/8df2d910-0653-4f73-8036-8c128490fe20" />
+
+>Note: The first time you upgrade immediately, the screen appears as shown above. The next time, a **Configure and Update Now** link appears on the top-right of the screen.
 
 2. Click **Update Now**.
 
@@ -122,4 +124,5 @@ To delete an auto-upgrade schedule:
 3. Click **Schedule**. The schedule will appear at the bottom of the screen in the auto-upgrades schedules list. 
 
   
+
 
