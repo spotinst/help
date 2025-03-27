@@ -12,6 +12,7 @@
     "url": "https://spot.io"
   },
   "scripts": {
+    "prebuild": "node generatePaths.js",
     "build": "webpack",
     "build:watch": "webpack -w",
     "start": "concurrently --kill-others-on-fail \"npm:build:watch\" \"npm:serve\"",
