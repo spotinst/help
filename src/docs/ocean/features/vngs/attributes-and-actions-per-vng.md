@@ -163,13 +163,34 @@ On-demands that are not of type **preferred** will not be reverted.
 
 Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>
 
-The Ocean Autoscaler (by default) calculates ephemeral storage using the root volume size when it scales up. If your system uses the data volume size for the calculation, you need to specify an alternative device name to ensure that the Ocean Autoscaler launches nodes with the right size for their workloads.
+The Ocean autoscaler (by default) calculates ephemeral storage using the root volume size when it scales up. If your system uses the data volume size for the calculation, you need to specify an alternative device name to ensure that the Ocean Autoscaler launches nodes with the right size for their workloads.
 
 When the root volume is not applicable for the ephemeral storage, specify the alternative device name `deviceName` with either the virtual node group's BDM or the AMI’s BDM.
 
 * Via the [Spot API](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecUpdate) -  `launchSpec.ephermeralStorage.deviceName`
 * Via [Terraform](https://registry.terraform.io/providers/spotinst/spotinst/latest/docs/resources/ocean_aws_launch_spec#ephemeral_storage)
 
+## Machine Ephemeral Storage
+
+Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>
+
+Use this feature to configure how the allocatable ephemeral storage is used (as an aggregate of the available instance stores).
+
+Instance stores on nodes for ephemeral storage significantly enhance cost optimization and resource utilization. Ocean autoscaler considers the instance-store when scaling up, preventing unnecessary node additions, which reduces costs and improves cluster efficiency. The scaling process takes into account the increased storage available for the pods on the node, which leads to better node utilization.
+
+You can enable this feature via the Spot API for the entire cluster or specific virtual node groups only.
+
+For clusters: Under compute > instanceTypes > launchSpecification: { instanceStorePolicy: { type: RAID0 } }
+
+* [Create Cluster](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterCreate)
+* [Update Cluster](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterUpdate)
+
+For virtual node groups: Under launchSpecification: { instanceStorePolicy: { type: RAID0 } }
+
+* [Create virtual node groups](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecCreate)
+* [Update virtual node group](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecUpdate)
+
+>Note: If you want to use the instance store on your nodes as the node ephemeral storage, you must enable `raid0` in your `userData` and also set it on your Ocean / virtual node group so that Ocean can take it into consideration.
 
 ## Configure an Ocean AKS Cluster with Multiple VNG Subnets
 
