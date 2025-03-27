@@ -15,8 +15,8 @@ This topic describes how to create, view, edit, and delete virtual node groups i
    <summary markdown="span" style="color:#7632FE; font-weight:600" >Click for image</summary>
 
 <div style="padding-left:16px">
-  
- <img src="https://github.com/user-attachments/assets/022151e5-b902-4dca-937c-49ee30696e24" />
+
+ <img width=1200 src="https://github.com/user-attachments/assets/2fc53731-83e7-4cdc-984e-3f3e3e2392db" />
 
  </div>
 
@@ -28,11 +28,11 @@ This list lets you track live data per virtual node group and contains the follo
 *  Name: The user-defined name of the virtual node group. (If a virtual node group was defined without a name, it would appear as Unnamed).
 *  Resource Allocation: Percent of defined CPU, Memory, and GPU currently used by the virtual node group.
 *  Running Pods: Number of pods used by the virtual node group.
-*  Nodes: Number of nodes used by the virtual node group.
+*  Max Nodes: Maximum number of nodes defined for the virtual node group.
+*  Node Count: Number of nodes used by the virtual node group.
 *  Node Labels: Number of node labels the virtual node group uses.
 *  Node Taints: Number of taints used by the virtual node group.
-*  Tags: Number of tags used by the virtual node group.
-*  Max Nodes: Maximum number of nodes defined for the virtual node group.
+*  Tags: Number of tags used by the virtual node group. 
 
 ## Create/Edit a Virtual Node Group
 
@@ -43,7 +43,7 @@ To create/edit a Virtual Node Group:
    * Configure Manually: All virtual node group fields will be taken from the virtual node group Template.
    * Import configurations from Node Pools: Values are copied from the cloud service provider node group entity to the Ocean configuration. Later, there will be no active connection between these two entities. Ocean will provision new VMs, not as part of a managed Kubernetes service of node group entities.
   
-![new-vng-import](https://github.com/user-attachments/assets/ccdd0eb7-9010-446a-a779-bbed53e4e0d2)
+<img width=430 src="https://github.com/user-attachments/assets/21e1c2f4-08b8-4180-8eed-194682628737" />
 
 3. Click **Continue**.
 4. Edit the parameters in the New Virtual Node Group screen. Parameters left blank take values from the virtual node group template.
@@ -53,7 +53,8 @@ To create/edit a Virtual Node Group:
 
 <div style="padding-left:16px">
  
-  <img src="https://github.com/user-attachments/assets/9e5f9916-8737-4df3-8967-64de04c32600" />
+<img width=1250 src="https://github.com/user-attachments/assets/23026512-9c01-433f-84b1-35e5babd4551" />
+
 
 </div>
 </details>
@@ -72,7 +73,7 @@ To create/edit a Virtual Node Group:
 * Node Public IP.
 * Kubernetes Version.
 
-### Ocean Autoscaler Configuration
+### Ocean Autoscaler Strategy
 
 * Minimum and maximum nodes for autoscaling.
 * Spot %: Percentage of spot nodes you want in the virtual node group.
@@ -93,12 +94,12 @@ To select the VMs for your Cluster:
    * Automatic: Let Spot select your VM sizes according to the needs of your applications.
    * Advanced VM Size Selection: Use attribute filters to select VMs with customized sizes from which Ocean can scale.
 
-![aks-vng-vmsel-options](https://github.com/user-attachments/assets/b2cc113b-5a04-4d14-b329-f3b0529414ae)
+<img width=1250 src="https://github.com/user-attachments/assets/727d82f4-c240-4aaa-8b4b-39d5d0cc3236" />
 
 2. If you selected **Automatic**, click **Save** to complete the procedure.
 3. If you selected **Advanced VM Size Selection**: View each VM type's currently selected size, vCPU, Memory (GiB), and GPU units in the VM Selection list (click the down arrow for the VM type).
 
-![aks-vngs-vms-advanced](https://github.com/user-attachments/assets/4ed5d4a7-f17a-4c07-8093-46d8144fc3b3)
+<img width=1250 src="https://github.com/user-attachments/assets/5871dbd6-cf85-42c8-b568-1940e635cdc2" />
 
 >**Note**:
 > - The VM types shown in the virtual node group template are only those supported in the cluster's region.
