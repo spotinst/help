@@ -98,7 +98,7 @@ To schedule an auto-upgrade:
 
    * The created schedule is turned on by default. To turn off the schedule, move the slider at the right of the entry for the schedule to the turned-off position.
    * After the update is run, an entry will appear in the auto-upgrades history list.
-  
+
 ##  Auto-Upgrade Now
 
 Use this option if you want to auto-upgrade immediately (rather than schedule an upgrade).
@@ -107,7 +107,7 @@ Use this option if you want to auto-upgrade immediately (rather than schedule an
 
 <img width="600" src="https://github.com/user-attachments/assets/8df2d910-0653-4f73-8036-8c128490fe20" />
 
->Note: The first time you upgrade immediately, the screen appears as shown above. The next time, a **Configure and Update Now** link appears on the top-right of the screen.
+>Note: The first time you upgrade immediately, the screen appears as shown above. The next time, a **Configure & Update Now** link appears on the top-right of the screen.
 
 2. Click **Update Now**.
 
