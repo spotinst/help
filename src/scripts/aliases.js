@@ -13,8 +13,7 @@ export const aliases = (() => {
     "/account-user-management/elastigroup-notifications-for-slack/":
       "/administration/notification-center/",
 
-    "/account-user-management/gcp-policy/":
-      "/administration/api/spot-policy-in-gcp",
+    "/account-user-management/gcp-policy/":"/administration/api/spot-policy-in-gcp",
 
     "/account-user-management/organization-management/":
       "/administration/organizations/",
