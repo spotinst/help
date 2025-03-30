@@ -45,7 +45,17 @@
 
    </div>
    </details>
-      
+
+      <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+        <summary markdown="span"; font-weight:600" >What the script does</summary>
+
+   <div style="padding-left:16px">
+
+   test
+
+   </div>
+   </details>
+
     </li>
     <li>Save and close the file you just created with the script. If you’re using nano, <b>Ctrl+O</b> &gt; <b>Enter</b> &gt; <b>Ctrl+X</b>.</li>
     <li>Make the script executable by running this command: <code>chmod +x setup_gcloud_iam_roles_and_service_accounts.sh</code>.</li>
