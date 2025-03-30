@@ -17,7 +17,7 @@ Each stack instance creates these resources in the target AWS account:
 The generated Lambdas don’t have permissions granted to them. They are unable to modify any other resources within the AWS account. 
 * **SpotExternalId**: The external ID used by Spot for AssumeRole on the SpotRole resource. 
 * **SpotLinkedCredentials**: Creates the actual link between the AWS account and the Spot account. 
-* **RenamedSpotAccountByAlias**: This Lambda-backed resource renames the newly associated Spot account to the current AWS account’s alias (billing name). This resource is optional. Remove this resource from the template if you don’t want the accounts renamed. 
+* **RenamedSpotAccountByAlias**: This Lambda-backed resource renames the newly associated Spot account to the current AWS account’s alias (billing name). This resource is optional. Remove this resource from the template if you don’t want the accounts renamed. Your AWS account must have an [alias](https://docs.aws.amazon.com/IAM/latest/UserGuide/console-account-alias.html) (billing name) or you will get an error when connecting your Spot account with AWS.
 * **EnableCostIntelligence**: The Lambda-backed resource that communicates with the Spot API to enroll in Cost Intelligence. 
 
 ## Important 
