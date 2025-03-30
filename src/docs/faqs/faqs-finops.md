@@ -5,6 +5,21 @@
 ## Cost Intelligence
 
 <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="cistacksets">AWS: Why am I getting a message when connecting my Spot account with AWS using StackSets?</summary>
+
+ <div style="padding-left:16px">
+
+If you’re using StackSets, the [template](cost-intelligence/get-started/connect-aws-stacksets?id=stacksets-template) includes the RenamedSpotAccountByAlias parameter. Your AWS account must have an [alias](https://docs.aws.amazon.com/IAM/latest/UserGuide/console-account-alias.html) (billing name) or you will get this error when connecting your Spot account with AWS:
+
+````
+Received response status [FAILED] from custom resource. Message returned: SpotAPIErrorException('response for https://api.spotinst.io/setup/account/accountProvider/aws/alias is not 200, reason: Bad Request (code: 400') - response: { "request": { "id": "xxxxx", "url": "/account/accountProvider/aws/alias?accountId=act-40308d12", "method": "GET", "timestamp": "xxxxx" }, "response": { "status": { "code": 400, "message": "Bad Request" }, "errors": [ { "code": "NotFoundError", "message": "Not Found: \"The account provided does not have valid credentials\"" } ] } } (RequestId: xxxxx) xxxxx RenamedSpotAccountByAlias
+````
+
+ </div>
+
+ </details>
+
+<details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="cinotconnaws">AWS: Why do I have a <i>Not Connected</i> message for my AWS account?</summary>
 
  <div style="padding-left:16px">
