@@ -36,8 +36,8 @@
     <p>Copy this script and paste it into the file you just created:</p>
 
 
-      <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-         <summary markdown="span"; font-weight:600">What the script does</summary>
+      <details style="background:#f2f2f2 padding:6px; margin:10px 0px 0px 0px">
+         <summary markdown="span" font-weight=600>What the script does</summary>
 
       <div style="padding-left:16px">
 
