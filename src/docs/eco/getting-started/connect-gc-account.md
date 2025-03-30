@@ -35,10 +35,23 @@
     <li>
       <p>Create a file in Cloud Shell using a text editor, such as nano or vi. For example: <code>nano setup_gcloud_iam_roles_and_service_accounts.sh</code>.</p>
       <p>Copy this script and paste it into the file you just created:</p>
+
+      <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+        <summary markdown="span"; font-weight:600" >script</summary>
+
+   <div style="padding-left:16px">
+
+   test
+
+   </div>
+   </details>
+      
     </li>
     <li>Save and close the file you just created with the script. If you’re using nano, <b>Ctrl+O</b> &gt; <b>Enter</b> &gt; <b>Ctrl+X</b>.</li>
     <li>Make the script executable by running this command: <code>chmod +x setup_gcloud_iam_roles_and_service_accounts.sh</code>.</li>
     <li>Run the script: <code>./setup_gcloud_iam_roles_and_service_accounts.sh</code>.</li>
     <li>Click <b>Download</b> to save the service account key to your default downloads folder.</li>
    </ol>
-4. Click **Upload Saved JSON File**, browse to find your service key: `spot-programmatic-access-sa-key.json` and click **Next**. 5. Enter your [BigQuery dataset and table IDs](https://cloud.google.com/bigquery/docs/listing-datasets) and click **Next**. 6. Click **Connect to Eco**. It can take a few hours for your data to show up in the dashboard.
+4. Click **Upload Saved JSON File**, browse to find your service key: `spot-programmatic-access-sa-key.json` and click **Next**.
+5. Enter your [BigQuery dataset and table IDs](https://cloud.google.com/bigquery/docs/listing-datasets) and click **Next**.
+6. Click **Connect to Eco**. It can take a few hours for your data to show up in the dashboard.
