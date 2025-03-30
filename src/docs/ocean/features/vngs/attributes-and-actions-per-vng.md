@@ -174,22 +174,23 @@ When the root volume is not applicable for the ephemeral storage, specify the al
 
 Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>
 
-Instance stores on nodes for ephemeral storage significantly enhance cost optimization and resource utilization. 
-The autoscaler takes into account the increased storage available for the pods on the node, which leads to better node utilization.
+The `instanceStorePolicy` parameter controls how instance store volumes are handled. By default, they are ignored.
 
-You can enable this feature via the Spot API for the entire cluster or specific virtual node groups only.
+The Machine Ephemeral Storage feature lets you use these volumes for faster node ephemeral-storage by setting `instanceStorePolicy` to `RAID0`.
 
-For clusters: Under compute > instanceTypes > launchSpecification: { instanceStorePolicy: { type: RAID0 } }
+As a result, the scaling process considers the increased available storage for better node utilization.
+
+Set for clusters: Under compute > instanceTypes > launchSpecification: { instanceStorePolicy: { type: RAID0 } }
 
 * [Create Cluster](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterCreate)
 * [Update Cluster](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterUpdate)
 
-For virtual node groups: Under launchSpecification: { instanceStorePolicy: { type: RAID0 } }
+Set For virtual node groups: Under launchSpecification: { instanceStorePolicy: { type: RAID0 } }
 
 * [Create virtual node groups](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecCreate)
 * [Update virtual node group](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecUpdate)
 
->Note: If you want to use the instance store on your nodes as the node ephemeral storage, you must enable `raid0` in your `userData` and also set it on your Ocean / virtual node group so that Ocean can take it into consideration.
+>Note: For clusters and virtual node groups, you must also enable `raid0` in your `userData`.
 
 ## Configure an Ocean AKS Cluster with Multiple VNG Subnets
 
