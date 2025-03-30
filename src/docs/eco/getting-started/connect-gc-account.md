@@ -22,8 +22,8 @@
 3. Create a service account and grant permissions to your Google Cloud environment:
 
     <ol style="list-style-type: lower-alpha;">
-    <li>Open Cloud Shell.</li>
-    <li><p>Set the project property in the core section to your project ID. This makes the project the default project, where the service account is bound. Make sure your data exports to this account.</p>
+    <li><a href="https://cloud.google.com/shell/docs/using-cloud-shell">Open Cloud Shell.</a></li>
+    <li><p><a href="https://cloud.google.com/sdk/gcloud/reference/config/set?id=examples#:~:text=gcloud_command%2Dline_tool_preferences.-,EXAMPLES,-To%20set%20the">Set the project property in the core section to your project ID</a>. This makes the project the default project, where the service account is bound. Make sure your data exports to this account.</p>
     <p>For example, <code>gcloud config set project YOUR_MAIN_PROJECT_ID</code>.</p></li>
     <li><p>Grant permissions to your account by running these commands in Cloud Shell:</p>
      <p><code>gcloud projects add-iam-policy-binding YOUR_MAIN_PROJECT_ID --member="user:YOUR_EMAIL" --role="roles/iam.organizationRoleAdmin"</code></p>
@@ -34,10 +34,10 @@
 
     <li><p>Create a file in Cloud Shell using a text editor, such as nano or vi. For example: <code>nano setup_gcloud_iam_roles_and_service_accounts.sh</code>.</p>
     <p>Copy this script and paste it into the file you just created:</p>
-       <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-     <summary markdown="span"; font-weight:600">Script</summary>
+         <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+       <summary markdown="span"; font-weight:600">Script</summary>
 
-    <div style="padding-left:16px">
+      <div style="padding-left:16px">
 
      ````script
      ANALYSIS_ORG_ID="$(gcloud projects get-ancestors ingresruletesting | awk '/TYPE: organization/{print id} {id=$2}')"
@@ -99,8 +99,8 @@
      cloudshell download spot-programmatic-access-sa-key.json
      ````
 
-    </div>
-    </details>
+      </div>
+      </details>
 
    <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
      <summary markdown="span"; font-weight:600">What the script does</summary>
@@ -116,6 +116,7 @@
 
     </div>
     </details>
+
    </li>
 
     <li>Save and close the file you just created with the script. If you’re using nano, <b>Ctrl+O</b> > <b>Enter</b> > <b>Ctrl+X</b>.</li>
