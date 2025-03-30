@@ -26,6 +26,7 @@
     - [Access Roles and Permissions - Read-Only](eco/azure-tutorials/access-roles-read-only)
     - [Choose Azure RI Strategy](eco/azure-tutorials/choose-ri-strategy)
     - [View your Savings](eco/azure-tutorials/view-your-savings)
+  - [GCP Tutorials](eco/gcp-tutorials/)
   - [Eco in CloudCheckr](eco/eco-in-cloudcheckr/)
     - [Connect your AWS Account in CloudCheckr](eco/eco-in-cloudcheckr/connect-your-aws-account-in-cloudcheckr)
     - [View Savings in Dashboard](eco/eco-in-cloudcheckr/view-savings-in-dashboard)      
