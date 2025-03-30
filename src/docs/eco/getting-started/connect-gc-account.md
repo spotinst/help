@@ -50,7 +50,7 @@
      </div>
      </details>
 
-   </li>
+    </li>
 
     <li>Save and close the file you just created with the script. If you’re using nano, <b>Ctrl+O</b> > <b>Enter</b> > <b>Ctrl+X</b>.</li>
 
