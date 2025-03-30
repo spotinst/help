@@ -190,6 +190,7 @@ window.$docsify = {
       "/eco/eco-in-cloudcheckr/connect-your-aws-account-in-cloudcheckr.md",
       "/eco/eco-in-cloudcheckr/README.md",
       "/eco/eco-in-cloudcheckr/view-savings-in-dashboard.md",
+      "/eco/gcp-tutorials/README.md",
       "/eco/getting-started/connect-account-customer-working-with-msp.md",
       "/eco/getting-started/connect-account-multiple-organizations-to-single-master-payer.md",
       "/eco/getting-started/connect-azure-account.md",
