@@ -36,87 +36,19 @@
     <p>Copy this script and paste it into the file you just created:</p>
 
      <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-       <summary markdown="span"; font-weight:600">Script</summary>
-
-      <div style="padding-left:16px">
-
-     ````script
-     ANALYSIS_ORG_ID="$(gcloud projects get-ancestors ingresruletesting | awk '/TYPE: organization/{print id} {id=$2}')"
-     SERVICE_ACCOUNT_ORG_ID="$(gcloud projects get-ancestors ingresruletesting | awk '/TYPE: organization/{print id} {id=$2}')"
-     ANALYSIS_PROJECTS=("$(gcloud config get-value project --quiet)")
-     SERVICE_ACCOUNT_PROJECT_LIST=("$(gcloud config get-value project --quiet)")
-     ANALYSIS_ORG_ROLES=("roles/billing.viewer" "roles/browser")
-     ANALYSIS_EMAILS=("rhardin@netapp.com" "gkuderna@netapp.com" "antevans@netapp.com")
-     ANALYSIS_PROJECT_ROLE="roles/bigquery.dataViewer"
-     ANALYSIS_CUSTOM_ROLE_NAME="spot-read-only-custom-role"
-     ANALYSIS_CUSTOM_ROLE_TITLE="Spot Read-Only Custom Role"
-     ANALYSIS_CUSTOM_ROLE_DESCRIPTION="Spot Read-Only Permissions needed for programmatic visibility into commitment and cost data"
-     ANALYSIS_CUSTOM_ROLE_PERMISSIONS="bigquery.capacityCommitments.get,bigquery.capacityCommitments.list,bigquery.jobs.listAll,cloudasset.assets.exportComputeCommitments,cloudasset.assets.listComputeCommitments,compute.commitments.get,compute.commitments.list,compute.instances.get,compute.instances.list,recommender.bigqueryCapacityCommitmentsInsights.get,recommender.bigqueryCapacityCommitmentsInsights.list,recommender.bigqueryCapacityCommitmentsRecommendations.get,recommender.bigqueryCapacityCommitmentsRecommendations.list,recommender.commitmentUtilizationInsights.get,recommender.commitmentUtilizationInsights.list,recommender.spendBasedCommitmentInsights.get,recommender.spendBasedCommitmentInsights.list,recommender.spendBasedCommitmentRecommendations.get,recommender.spendBasedCommitmentRecommendations.list,recommender.spendBasedCommitmentRecommenderConfig.get,recommender.usageCommitmentRecommendations.get,recommender.usageCommitmentRecommendations.list"
-     SERVICE_ACCOUNT_PROJECT_ROLES=("roles/bigquery.dataViewer")
-     CURRENT_PROJECT_ID=$(gcloud config get-value project --quiet)
-     SERVICE_ACCOUNT_NAME="spot-programmatic-access-sa" #between 6 and 30 characters
-     SERVICE_ACCOUNT_DESCRIPTION="Spot Service Account created for Programmatic Access to Resources"
-     SERVICE_ACCOUNT_DISPLAY_NAME="spot-programmatic-access-service-account"
-     SERVICE_ACCOUNT_CUSTOM_ROLE_NAME="Spot_Programmatic_Access_Role"
-     SERVICE_ACCOUNT_CUSTOM_ROLE_TITLE="Spot Programmatic Access Role"
-     SERVICE_ACCOUNT_CUSTOM_ROLE_DESCRIPTION="Spot Custom Role for Programmatic Access"
-     SERVICE_ACCOUNT_CUSTOM_ROLE_PERMISSIONS="monitoring.timeSeries.list,cloudquotas.quotas.get,cloudquotas.quotas.update,serviceusage.quotas.get,serviceusage.quotas.update,serviceusage.services.get,serviceusage.services.list"
-     # Define organization roles needed for analysis.
-     for ROLE in "${ANALYSIS_ORG_ROLES[@]}"; do
-       for EMAIL in "${ANALYSIS_EMAILS[@]}"; do
-         echo "Adding member: user:$EMAIL to role $ROLE ..."
-         gcloud organizations add-iam-policy-binding $ANALYSIS_ORG_ID --role=$ROLE --member="user:$EMAIL"
-       done
-     done
-     # Define the project role for BigQuery data viewing.
-     for PROJECT in "${ANALYSIS_PROJECTS[@]}"; do
-       for EMAIL in "${ANALYSIS_EMAILS[@]}"; do
-         echo "Adding member: user:$EMAIL to role $ANALYSIS_PROJECT_ROLE in project $PROJECT ..."
-         gcloud ANALYSIS_PROJECTS add-iam-policy-binding $PROJECT --role=$ANALYSIS_PROJECT_ROLE --member="user:$EMAIL"
-       done
-     done
-     # Create a custom role with the defined permissions at the organization level.
-     gcloud iam roles create "$ANALYSIS_CUSTOM_ROLE_NAME" --organization=$ANALYSIS_ORG_ID --description="$ANALYSIS_CUSTOM_ROLE_DESCRIPTION" --permissions="$ANALYSIS_CUSTOM_ROLE_PERMISSIONS" --stage="GA" --title="$ANALYSIS_CUSTOM_ROLE_TITLE"
-     # Assign the custom role permissions to our team members at the organization level.
-     for EMAIL in "${ANALYSIS_EMAILS[@]}"; do
-       gcloud organizations add-iam-policy-binding $ANALYSIS_ORG_ID --member="user:$EMAIL" --role="organizations/$ANALYSIS_ORG_ID/roles/$ANALYSIS_CUSTOM_ROLE_NAME"
-     done
-     # Create the service account on the designated project.
-     gcloud iam service-accounts create $SERVICE_ACCOUNT_NAME --description="$SERVICE_ACCOUNT_DESCRIPTION" --display-name="$SERVICE_ACCOUNT_DISPLAY_NAME"
-     # Assign BigQuery data viewer permissions to the service account for each project that contains billing data.
-     for PROJECT in "${SERVICE_ACCOUNT_PROJECT_LIST[@]}"; do
-       for ROLE in "${SERVICE_ACCOUNT_PROJECT_ROLES[@]}"; do
-         echo "Adding member: serviceAccount:$SERVICE_ACCOUNT_NAME@$CURRENT_PROJECT_ID.iam.gserviceaccount.com to role $ROLE ..."
-         gcloud projects add-iam-policy-binding $PROJECT --role=$ROLE --member="serviceAccount:$SERVICE_ACCOUNT_NAME@$CURRENT_PROJECT_ID.iam.gserviceaccount.com"
-       done
-     done
-     # Create a custom role at the organization level that will be assigned to the service account.
-     gcloud iam roles create "$SERVICE_ACCOUNT_CUSTOM_ROLE_NAME" --organization=$SERVICE_ACCOUNT_ORG_ID --description="$SERVICE_ACCOUNT_CUSTOM_ROLE_DESCRIPTION" --permissions="$SERVICE_ACCOUNT_CUSTOM_ROLE_PERMISSIONS" --stage="GA" --title="$SERVICE_ACCOUNT_CUSTOM_ROLE_TITLE"
-     # Assign the custom role to the service account at the organization level.
-     gcloud organizations add-iam-policy-binding $SERVICE_ACCOUNT_ORG_ID --member="serviceAccount:$SERVICE_ACCOUNT_NAME@$CURRENT_PROJECT_ID.iam.gserviceaccount.com" --role="organizations/$SERVICE_ACCOUNT_ORG_ID/roles/$SERVICE_ACCOUNT_CUSTOM_ROLE_NAME"
-     # Create an API key for the service account, download the key .json file, and save it to the current Cloud Shell instance.
-     gcloud iam service-accounts keys create ~/spot-programmatic-access-sa-key.json --iam-account="$SERVICE_ACCOUNT_NAME@$CURRENT_PROJECT_ID.iam.gserviceaccount.com"
-     # Attempt to download the key from the Cloud Shell instance to your local machine through the browser.
-     cloudshell download spot-programmatic-access-sa-key.json
-     ````
-
-      </div>
-      </details>
-
-   <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
      <summary markdown="span"; font-weight:600">What the script does</summary>
 
-    <div style="padding-left:16px">
-    The script automates setting up IAM roles and service accounts in Google Cloud for programmatic access and analysis:
+     <div style="padding-left:16px">
+     The script automates setting up IAM roles and service accounts in Google Cloud for programmatic access and analysis:
       
-     * Retrieves organization IDs and project IDs for the GCP projects.
-     * Assigns predefined roles to specific email addresses for both organizational and project-level access.
-     * Creates a custom IAM role with specific permissions for data visibility and analysis.
-     * Sets up a service account with a custom role and permissions for programmatic access to resources.
-     * Generates and downloads a service account key for use in automated processes.
+      * Retrieves organization IDs and project IDs for the GCP projects.
+      * Assigns predefined roles to specific email addresses for both organizational and project-level access.
+      * Creates a custom IAM role with specific permissions for data visibility and analysis.
+      * Sets up a service account with a custom role and permissions for programmatic access to resources.
+      * Generates and downloads a service account key for use in automated processes.
 
-    </div>
-    </details>
+     </div>
+     </details>
 
    </li>
 
