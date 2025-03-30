@@ -174,9 +174,8 @@ When the root volume is not applicable for the ephemeral storage, specify the al
 
 Cloud service provider relevance: <font color="#FC01CC">AWS Kubernetes</font>
 
-Use this feature to configure how the allocatable ephemeral storage is used (as an aggregate of the available instance stores).
-
-Instance stores on nodes for ephemeral storage significantly enhance cost optimization and resource utilization. Ocean autoscaler considers the instance-store when scaling up, preventing unnecessary node additions, which reduces costs and improves cluster efficiency. The scaling process takes into account the increased storage available for the pods on the node, which leads to better node utilization.
+Instance stores on nodes for ephemeral storage significantly enhance cost optimization and resource utilization. 
+The autoscaler takes into account the increased storage available for the pods on the node, which leads to better node utilization.
 
 You can enable this feature via the Spot API for the entire cluster or specific virtual node groups only.
 
