@@ -29,7 +29,7 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 
 
 
-```{include} src/docs/_media/reusable-sample-media.md
+```{include} ../_media/reusable-sample-media.md
 ```
 
 
