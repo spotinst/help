@@ -36,20 +36,21 @@
     <p>Copy this script and paste it into the file you just created:</p>
 
 
-     <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
-      <summary markdown="span"; font-weight:600">What the script does</summary>
+      <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+         <summary markdown="span"; font-weight:600">What the script does</summary>
 
-     <div style="padding-left:16px">
-     The script automates setting up IAM roles and service accounts in Google Cloud for programmatic access and analysis:
-      
+      <div style="padding-left:16px">
+
+    The script automates setting up IAM roles and service accounts in Google Cloud for programmatic access and analysis:
+
       * Retrieves organization IDs and project IDs for the GCP projects.
       * Assigns predefined roles to specific email addresses for both organizational and project-level access.
       * Creates a custom IAM role with specific permissions for data visibility and analysis.
       * Sets up a service account with a custom role and permissions for programmatic access to resources.
       * Generates and downloads a service account key for use in automated processes.
 
-     </div>
-     </details>
+      </div>
+        </details>
 
 
     </li>
