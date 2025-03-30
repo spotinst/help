@@ -33,27 +33,7 @@
 
 
     <li><p>Create a file in Cloud Shell using a text editor, such as nano or vi. For example: <code>nano setup_gcloud_iam_roles_and_service_accounts.sh</code>.</p>
-    <p>Copy this script and paste it into the file you just created:</p>
-
-
-      <details style="background:#f2f2f2 padding:6px; margin:10px 0px 0px 0px">
-         <summary markdown="span" font-weight=600>What the script does</summary>
-
-      <div style="padding-left:16px">
-
-    The script automates setting up IAM roles and service accounts in Google Cloud for programmatic access and analysis:
-
-      * Retrieves organization IDs and project IDs for the GCP projects.
-      * Assigns predefined roles to specific email addresses for both organizational and project-level access.
-      * Creates a custom IAM role with specific permissions for data visibility and analysis.
-      * Sets up a service account with a custom role and permissions for programmatic access to resources.
-      * Generates and downloads a service account key for use in automated processes.
-
-      </div>
-        </details>
-
-
-    </li>
+    <p>Copy this script and paste it into the file you just created:</p></li>
 
 
     <li>Save and close the file you just created with the script. If you’re using nano, <b>Ctrl+O</b> > <b>Enter</b> > <b>Ctrl+X</b>.</li>
