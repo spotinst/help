@@ -34,7 +34,8 @@
 
     <li><p>Create a file in Cloud Shell using a text editor, such as nano or vi. For example: <code>nano setup_gcloud_iam_roles_and_service_accounts.sh</code>.</p>
     <p>Copy this script and paste it into the file you just created:</p>
-         <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+
+     <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
        <summary markdown="span"; font-weight:600">Script</summary>
 
       <div style="padding-left:16px">
