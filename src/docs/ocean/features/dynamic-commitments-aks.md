@@ -189,7 +189,7 @@ New-AzRoleAssignment -Scope "/providers/Microsoft.BillingBenefits" -ApplicationI
 >  - [Connect Commitments to Spot Products](link)
 
 
-## Turn on Utilize Commitments for Virtual Node Groups via the Spot API
+## Turn on Utilize Commitments for Virtual Node Groups from the Spot API
 
 ---------------------------------------------------------------------
 ----------THIS WAS TAKEN FROM AWS. NEED TO CHECK FOR AKS-------------
