@@ -226,6 +226,8 @@ Monitor these events on the autoscaling activity panel to see when (and how ofte
 
 Nodes may be launched as spots or regulars due to unavailable commitments (RI or SP). Ocean continuously scans the market for available commitments. When it finds them, it reverts the spots/regulars to commitments.
 
+>Note: Spots are first reverted to regular nodes and then associated with RIs or SPs.
+
 The Revert to Commitments widget shows the number of events for which a spot/regular nodes was reverted to a commitment in the selected time range.  
 
 Monitor these events on the autoscaling activity panel to see how your cluster dynamically adapts to changes in the cloud market and exploits the cost-saving opportunities of commitments.
