@@ -310,6 +310,8 @@ To view more detailed information about autoscaling events:
 
 ### Display Extended Details for Revert to Spots/Revert to Lower-Cost Events
 
+WILL ADD DYNAMIC COMMITMENTS EXTENDED DETAILS
+
 1. Set the zoom level to 12 hours or less (described above).
 2. Mouse over the revert to spots / revert to lower cost event on the curve.
 
