@@ -232,12 +232,12 @@ Monitor these events on the autoscaling activity panel to see how your cluster d
 
 For more information, see [Reserved Instances](https://docs.spot.io/ocean/tips-and-best-practices/?id=utilize-reserved-instances-for-aws-users). 
 
-
+<!--
 ### Dynamic Commitments
 
 Ocean reverts from regular reserved instances when they can be used in other workloads to increase commitments coverage replacement. When working with dynamic workloads in the cloud, Ocean continually adjusts to changes in application requirements and usage. 
 
-Ocean tracks commitments and initiates proactive replacements, increasing the account’s commitment coverage, and decreasing excessive regular node usage. Ocean does this by reverting to a different allocation plan or potentially using spot instances based on risk configuration to provide ongoing optimal adjustments.
+Ocean tracks commitments and initiates proactive replacements, increasing the account’s commitment coverage, and decreasing excessive regular node usage. Ocean does this by reverting to a different allocation plan or potentially using spot instances based on risk configuration to provide ongoing optimal adjustments. -->
 
 ### Revert to Lower Cost
 
