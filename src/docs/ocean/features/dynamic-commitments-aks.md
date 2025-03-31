@@ -199,11 +199,10 @@ You might want to distribute reservation instances/savings plans according to vi
 
 Ocean provides attributes that let you control utilization commitments at the virtual node group level.
 
-In the Spot API, under Virtual Node Groups > XXX, you can configure these attributes as either True or False:
+In the Spot API, under Virtual Node Groups > XXX, you can configure these attributes as either `True` or `False`:
 
-utilizeReservedInstances: If there are free reserved instances within the AWS account, Ocean will utilize them before launching spot instances. The initial default value is inherited from the identical attribute at the cluster level.
-
-utilizeSavingPlans: If savings plan commitments have available capacity, Ocean will utilize them alongside existing reserved instances to maximize cost efficiency. The initial default value is inherited from the identical attribute at the cluster level.
+*  `utilizeReservedInstances`: If there are free reserved instances within the AWS account, Ocean will utilize them before launching spot instances. The initial default value is inherited from the identical attribute at the cluster level.
+*  `utilizeSavingPlans`: If savings plan commitments have available capacity, Ocean will utilize them alongside existing reserved instances to maximize cost efficiency. The initial default value is inherited from the identical attribute at the cluster level.
 
 Any change you make at the Virtual Node Group level will override the value set at the cluster level.
 
