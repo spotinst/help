@@ -6,7 +6,7 @@ This topic delves into this dashboard's various components and sections, offerin
 Ocean continuously analyzes the utilization of your nodes in the cloud infrastructure. It automatically scales compute resources to optimize utilization and availability. 
 It achieves this by intelligently combining spot, reserved, and regular compute instances.
 
-* Ocean Savings panel shows the amount of money, CPU, memory (GiB/TiB), and GPU compute resources saved when you utilize Ocean to manage your Kubernetes cluster. Specifically, these are savings from running spot instances, bin packing, and reverting to lower-cost nodes. 
+* Ocean Savings panel shows the amount of money, CPU, memory (GiB/TiB), and GPU compute resources saved when you utilize Ocean to manage your Kubernetes cluster. Specifically, these are savings from running spot nodes, bin packing, and reverting to lower-cost nodes. 
 * The Ocean Managed Nodes and Resources panel shows information about your Ocean-managed and unmanaged nodes and your managed CPU, memory, and GPU resources.
 * Resource Allocation panel shows resource allocation information about your managed CPU, memory (GiB/TiB), and GPU resources at the cluster level.
   * Drill down to view resource allocation information at the namespace, Virtual Node Group, node pool, or node level. Each has a dedicated tab to the right of the Overview tab.
@@ -36,7 +36,7 @@ In this panel:
 
 ### Ocean Savings from Running on Spot
 
-Ocean autoscaler intelligently leverages these spot instances when appropriate, reducing costs while maintaining high availability. This tab lets you view the cost benefits of using spot instances in your cluster. 
+Ocean autoscaler intelligently leverages these spot nodes when appropriate, reducing costs while maintaining high availability. This tab lets you view the cost benefits of using spot nodes in your cluster. 
 Ocean savings from running on spot are calculated as the difference between the price of regular and spot nodes within a specified time range. This calculation considers the number of CPUs, memory, and GPUs running as spot nodes. 
 
 To view these savings, click the **Running on Spot** tab (unless already displayed). 
@@ -224,9 +224,9 @@ Monitor these events on the autoscaling activity panel to see when (and how ofte
 
 ### Revert to Commitments
 
-Nodes may be launched as spots due to unavailable commitments (Reserved Instances or Savings Plans). Ocean continuously scans the market for available commitments. When it finds them, it reverts the spots to commitments.
+Nodes may be launched as spots or regulars due to unavailable commitments (RI or SP). Ocean continuously scans the market for available commitments. When it finds them, it reverts the spots/regulars to commitments.
 
-The Revert to Commitments widget shows the number of events for which a spot instance was reverted to a commitment in the selected time range.  
+The Revert to Commitments widget shows the number of events for which a spot/regular nodes was reverted to a commitment in the selected time range.  
 
 Monitor these events on the autoscaling activity panel to see how your cluster dynamically adapts to changes in the cloud market and exploits the cost-saving opportunities of commitments.
 
