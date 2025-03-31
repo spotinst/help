@@ -236,7 +236,7 @@ For more information, see [Reserved Instances](https://docs.spot.io/ocean/tips-a
 
 ### Dynamic Commitments
 
-Revert from on-demand reserved instances when they can be used in other workloads to increase commitments coverage replacement. When working with dynamic workloads in the cloud, Ocean adjusts to changes in the application requirements, needs, and usage at any time. Ocean tracks commitments as a necessary condition for initiating proactive replacements, increasing the account’s commitment coverage to decrease excessive on-demand usage. Ocean does this by reverting to a different allocation plan or potentially using spot instances based on risk configuration, providing ongoing optimal adjustments.
+Ocean reverts from on-demand reserved instances when they can be used in other workloads to increase commitments coverage replacement. When working with dynamic workloads in the cloud, Ocean adjusts to changes in the application requirements, needs, and usage at any time. Ocean tracks commitments as a necessary condition for initiating proactive replacements, increasing the account’s commitment coverage and decreasing excessive on-demand usage. Ocean does this by reverting to a different allocation plan or potentially using spot instances based on risk configuration, to provide ongoing optimal adjustments.
 
 The Dynamic commitments widget shows the number of events for which an RI/SP was reverted to a spot instance / other commitments plans to utilize commitments.
 
