@@ -217,28 +217,25 @@ The Scale Down widget shows the number of scale-down events and scaled-down node
 
 ### Revert to Spots
 
-Suppose a node was launched as OD due to the unavailability of spot nodes in the market. In that case, Ocean continuously scans the market for an available spot node and reverts promptly upon finding one. 
-
+Nodes may be launched as regular nodes due to unavailable spot nodes. Ocean continuously scans the market for available spot nodes. When it finds them, it reverts the regular nodes to spots.
 The Revert to Spots widget shows the number of events for which a regular node was reverted to a spot node in the selected time range. 
 
-By monitoring these events on the Autoscaling Activity panel, you can see when and how often your cluster utilizes spot nodes to exploit cost-saving opportunities. 
+Monitor these events on the autoscaling activity panel to see when (and how often) your cluster utilizes spot nodes to exploit cost-saving opportunities. 
 
 ### Revert to Commitments
 
-If a node was launched as a spot due to the absence of available commitments (Reserved Instances or Savings Plans) to utilize, Ocean persistently scans the market for an available commitment and promptly reverts upon finding one. 
+Nodes may be launched as spots due to unavailable commitments (Reserved Instances or Savings Plans). Ocean continuously scans the market for available commitments. When it finds them, it reverts the spots to commitments.
 
 The Revert to Commitments widget shows the number of events for which a spot instance was reverted to a commitment in the selected time range.  
 
-By monitoring these events on the Autoscaling Activity panel, you can understand how your cluster is dynamically adapting to changes in the cloud market to maintain optimal operation and taking advantage of cost-saving opportunities by utilizing commitments. 
+Monitor these events on the autoscaling activity panel to see how your cluster dynamically adapts to changes in the cloud market and exploits the cost-saving opportunities of commitments.
 
 For more information, see [Reserved Instances](https://docs.spot.io/ocean/tips-and-best-practices/?id=utilize-reserved-instances-for-aws-users). 
 
 
 ### Dynamic Commitments
 
-Ocean reverts from on-demand reserved instances when they can be used in other workloads to increase commitments coverage replacement. When working with dynamic workloads in the cloud, Ocean adjusts to changes in the application requirements, needs, and usage at any time. Ocean tracks commitments as a necessary condition for initiating proactive replacements, increasing the account’s commitment coverage and decreasing excessive on-demand usage. Ocean does this by reverting to a different allocation plan or potentially using spot instances based on risk configuration, to provide ongoing optimal adjustments.
-
-The Dynamic commitments widget shows the number of events for which an RI/SP was reverted to a spot instance / other commitments plans to utilize commitments.
+Ocean reverts from regular reserved instances when they can be used in other workloads to increase commitments coverage replacement. When working with dynamic workloads in the cloud, Ocean continually adjusts to changes in application requirements and usage. Ocean tracks commitments as necessary for initiating proactive replacements, increasing the account’s commitment coverage, and decreasing excessive regular node usage. Ocean does this by reverting to a different allocation plan or potentially using spot instances based on risk configuration to provide ongoing optimal adjustments.
 
 ### Revert to Lower Cost
 
@@ -248,11 +245,11 @@ The number of scaled-down nodes does not have to match exactly the number of sca
 
 The Revert to Lower Cost widget shows the number of events for which a node was reverted to a lower-cost node in the selected time range. For more information, see [Revert to Lower Cost Node](https://docs.spot.io/ocean/features/revert-to-lower-cost-node?id=revert-to-lower-cost-node).  
 
-Tracking these events on the Autoscaling Activity panel lets you see when and how often your cluster is optimizing for cost savings. 
+Tracking these events on the autoscaling activity panel lets you see when and how often your cluster is optimizing for cost savings.
 
 ##   Autoscaling Activity Graph
 
-The Autoscaling Activity Graph provides intuitive insights into the interaction between the Ocean infrastructure and the applications it supports. It also provides cluster activity insights at a granular 
+The autoscaling activity graph provides intuitive insights into the interaction between the Ocean infrastructure and the applications it supports. It also provides cluster activity insights at a granular 
 level so you can see why the Ocean autoscaler triggered a specific scale event within the cluster.
 
 The graph displays a breakdown by lifecycle, which you can view by vCPU, Memory, or GPU, together with workload and headroom requests.
