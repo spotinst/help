@@ -4,9 +4,11 @@
 
 Cloud service provider relevance: <font color="#FC01CC">AKS</font>
 
+>Prerequisites: Before you can utilize commitments in Ocean for AKS, you must first purchase commitments from Azure.
+
 ##  Azure Commitments
 
-Azure Commitments are agreements customers make to use a certain amount of Azure resources over a specified period, including RIs and Saving Plans.
+Azure Commitments are agreements you make to use a certain amount of Azure resources over a specified period, including RIs and Saving Plans.
 
 Commitment types are as follows:
 
