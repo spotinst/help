@@ -8,7 +8,7 @@ Cloud service provider relevance: <font color="#FC01CC">AKS</font>
 
 Azure Commitments are agreements customers make to use a certain amount of Azure resources over a specified period, including RIs and Saving Plans.
 
-Commitments types are as follows:
+Commitment types are as follows:
 
 *  Capacity Commitments: Involves reserving VM capacity to ensure availability and predictability.
 *  Cost Commitments: Involves committing to a certain spending level to benefit from discounts.
@@ -56,13 +56,13 @@ This is the dynamic commitments scenario. Ocean Checks if RI/SP is needed elsewh
 
 Ocean performs a strategy fix check every **xx (to check)** minutes to determine if a running RI or SP can be replaced to free up the commitment needed elsewhere in the account. 
 
-1. **Running regular (RI/SP)**: A running regular VM attached to a specific RI or an SP uses a specific commitment. 
+1. **Running regular (RI/SP)**: A running regular VM attached to a specific RI or SP uses a particular commitment. 
 
 2. **Ocean checks if the commitment is required elsewhere**: Ocean constantly checks if a different resource can utilize a commitment in your Azure account, ultimately meeting the risk percentage and required strategy.
 
 3. **Replacement**: Ocean will replace if the terms are met.
 
-4. **Launch spot or regular(RI/SP)**: Ocean launches a different spot or an alternative regular RI/SP to ensure a different plan is used. This increases commitment coverage to help reach optimal allocation.
+4. **Launch spot or regular (RI/SP)**: Ocean launches a different spot or an alternative regular RI/SP to ensure a different plan is used. This increases commitment coverage to help reach optimal allocation.
 
 The reversion will not occur if:
 
@@ -115,14 +115,14 @@ Follow the instructions below while referring to the [Azure documentation](https
 ##  Connect Commitments to Spot Products
 
 1.  Obtain the credentials from your Azure app. Refer to [Get the Azure Credentials Required to Connect Commitments to Spot Products]()
-2.  Go to the virtual node group where you want to turn on the utilize RSs/SPs feature. This can be any of your virtual node groups or the virtual node group template. Ocean rtecommends enabling this feature on the virtual node group template so that it is applied to all your virtual node groups in the cluster. See [Manage AKS Virtual Node Groups]()
+2.  Go to the virtual node group where you want to turn on the utilize RSs/SPs feature. This can be any of your virtual node groups or the virtual node group template. Ocean recommends enabling this feature on the virtual node group template so that it is applied to all your virtual node groups in the cluster. See [Manage AKS Virtual Node Groups]()
 3.  In the Ocean autoscaler strategy area of the virtual node group, click **Missing permissions**.
 
 <img width="600" src="https://github.com/user-attachments/assets/9fa2fd52-3d18-447f-a11c-68a0764da146" />
 
 ###  Step 1: App Registrations
 
-1.  In the Connect RIs/SPs to Spot wizard, step 1, select to create (register) a new Azure app or upgrade an existing one.
+1.  In Connect RIs/SPs to Spot wizard, step 1, create (register) a new Azure app or upgrade an existing one.
 
 <img width="600" src="https://github.com/user-attachments/assets/a36fc22d-03b5-4b60-a8a7-72806cf71648" />
 
@@ -149,8 +149,9 @@ Follow the instructions below while referring to the [Azure documentation](https
 
 <img width="600" src="https://github.com/user-attachments/assets/2cb2085e-acd0-4096-b646-040eedcae654" />
 
-The first time you need to use dynamic commitments, you must add permissions at the tenant level so Spot can connect to Azure cluster environments. These permissions give you access to all the resources under the same tenant.
-You need these permissions to turn on virtual node group-level dynamic commitments.
+The first time you use dynamic commitments, you must add permissions at the tenant level so Spot can connect to Azure cluster environments. 
+
+These permissions give you access to all the resources under the same tenant. You need these permissions to turn on virtual node group-level dynamic commitments.
 
 >IMPORTANT: If this step is unsuccessful, check your Azure environment.
 
@@ -174,11 +175,9 @@ New-AzRoleAssignment -Scope "/providers/Microsoft.BillingBenefits" -ApplicationI
 3.  Click **Test RIs/SPs to Spot Permissions** to verify that your permissions have been successfully granted.
    
 
-----Continue from figma-----
+##  Turn on Utilize Commitments for Virtual Node Groups from the Spot Console
 
-##  Enable Utilize Commitments for Virtual Node Groups from the Spot Console
-
-1. Go to the virtual node group where you want to turn on the utilize RSs/SPs feature. This can be any of your virtual node groups or the virtual node group template. Ocean rtecommends enabling this feature on the virtual node group template so that it is applied to all your virtual node groups in the cluster. See [Manage AKS Virtual Node Groups]()
+1. Go to the virtual node group where you want to turn on the utilize RSs/SPs feature. This can be any of your virtual node groups or the virtual node group template. Ocean recommends enabling this feature on the virtual node group template so that it is applied to all your virtual node groups in the cluster. See [Manage AKS Virtual Node Groups]()
 2. In the Ocean autoscaler strategy area, click **Utilize RIs/SPs**.
 
 >**Important**: If the **Missing permissions** link appears, and Utilize RIs/SPs is grayed, make sure you have completed the following tasks with no errors:
@@ -190,7 +189,7 @@ New-AzRoleAssignment -Scope "/providers/Microsoft.BillingBenefits" -ApplicationI
 
 ## Turn on Utilize Commitments per Virtual Node Group via the Spot API
 
-You might want to distribute reservation instances/savings plans according to virtual node groups for different types of workloads on the same cluster.
+You might want to distribute reservation instances/savings plans according to virtual node groups for several types of workloads on the same cluster.
 
 Ocean provides attributes that let you control utilization commitments at the virtual node group level.
 
@@ -216,14 +215,5 @@ Set the `utilizecommitments` or `utilizeReservedInstances` parameter to `true`.
 >**Note**: The default value for the `utilizeReservedInstances` parameter is `true`.
 
 
-____________________________________
-INFO BELOW WILL GO SOMEWHERE ELSE
-___________________________________
-Lior added:
-Need to add a note in the document in the part of the Set up Commitments:
-Customers who didn't define this commitment in the Azure console need not set this feature in Ocean.
-first, the customer needs to buy the commitments via Azure and then turn on the feature in Ocean
-when the customer wants to define this feature at the cluster level or for some VNG, you can set this through the Template VNG and then the other custom VNG inherent in this capability feature.
-if the customer didn't select at least one permission- RI/ SP the customer couldn't continue to the next step in the dialog (step #3
 
- -->
+
