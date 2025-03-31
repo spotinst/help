@@ -14,7 +14,7 @@ Commitment types are as follows:
 *  Cost Commitments: Involves committing to a certain spending level to benefit from discounts.
 
 RIs are best for predictable workloads where you can commit to specific VM types and sizes, while SPs offer more flexibility for varying workloads across different services. Both options help reduce costs through committed usage, ensuring better budget management and resource allocation in Azure. 
-You can prioritize available RIs and SPs: Prioritize to prevent their underutilization. See [Utilize Commitment Plans](elastigroup/features/core-features/spot-reserved-on-demand-instances?id=utilize-commitment-plans). 
+You can prioritize available RIs and SPs: Prioritize to prevent their underutilization.
 
 ###  Azure Reserved Instances
 
@@ -189,21 +189,21 @@ New-AzRoleAssignment -Scope "/providers/Microsoft.BillingBenefits" -ApplicationI
 
 ## Turn on Utilize Commitments per Virtual Node Group via the Spot API
 
+---------------------------------------------------------------------
+----------THIS WAS TAKEN FROM AWS. NEED TO CHECK FOR AKS-------------
+---------------------------------------------------------------------
+
 You might want to distribute reservation instances/savings plans according to virtual node groups for several types of workloads on the same cluster.
 
 Ocean provides attributes that let you control utilization commitments at the virtual node group level.
 
 In the Spot API, under Virtual Node Groups > XXX, you can configure these attributes as either True or False:
 
---Need to check the path and the parameters in the API- ToDo
-
 utilizeReservedInstances: If there are free reserved instances within the AWS account, Ocean will utilize them before launching spot instances. The initial default value is inherited from the identical attribute at the cluster level.
 
 utilizeSavingPlans: If savings plan commitments have available capacity, Ocean will utilize them alongside existing reserved instances to maximize cost efficiency. The initial default value is inherited from the identical attribute at the cluster level.
 
 Any change you make at the Virtual Node Group level will override the value set at the cluster level.
-
-**COMMENT: Need to put AKS links and parameter names.**
 
 You can use this feature at the cluster or virtual node group level:
 
