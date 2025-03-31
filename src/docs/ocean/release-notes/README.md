@@ -4,9 +4,15 @@
 
 ## March 2025: Features and Enhancements
 
-*  **OCN-0070: March 09, 2025:** (**<font color="#FC01CC">AKS</font>**) and (**<font color="#FC01CC">EKS</font>**) Changes were made to right-sizing statuses. [Learn more...](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=workloads-optimization-list)
+*  **OCN-0073: March 27, 2025:** (**<font color="#FC01CC">AKS</font>**) and (**<font color="#FC01CC">EKS</font>**) Enable **auto-attach** and let Ocean automatically attach your right-sizing rules to workloads based on selected namespace/labels criteria [Learn more...](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=attach-a-right-sizing-rule-to-one-or-more-workloads)
+
+*  **OCN-0072: March 27 2025:** (**<font color="#FC01CC">AKS</font>**) You can now run **immediate** or scheduled auto-updates for AKS from the Ocean console for Kubernetes patch version updates to avoid potential errors and keep updated with the latest version. [Learn more...](https://docs.spot.io/ocean/features/auto-upgrade-aks-patch-version)
 
 *  **OCN-0071: March 09, 2025:** (**<font color="#FC01CC">AKS</font>**) and (**<font color="#FC01CC">EKS</font>**) You can now select the right-sizing percentile settings to calculate the memory recommendations.[Learn more...](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=set-the-vcpumemory-percentile)
+
+*  **OCN-0070: March 09, 2025:** (**<font color="#FC01CC">AKS</font>**) and (**<font color="#FC01CC">EKS</font>**) Changes were made to right-sizing statuses. [Learn more...](https://docs.spot.io/ocean/features/ocean-cluster-right-sizing-recom-tab?id=workloads-optimization-list)
+
+
 
 Previous months...
 

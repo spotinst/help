@@ -225,7 +225,25 @@ You can use your own AMI and configure IMDSv2 on it. All instances launched afte
 
  </details>
 
- 
+
+ <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
+   <summary markdown="span" style="color:#7632FE; font-weight:600" id="egmonitortags">AWS: Can I monitor detached instances using tags?</summary>
+
+<div style="padding-left:16px">
+
+You can monitor your detached instances using tags. When an instance gets detached, Spot tags it with:
+
+`Key: spotinst:aws:ec2:state`
+
+`Value: detached`
+
+For a spot instance, the spot request is tagged. For an on-demand instance, the instance is tagged.
+
+ </div>
+
+ </details>
+
+
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600" id="egmemoryscalepolicy">AWS: How can I set a memory-based scaling policy in Elastigroup?</summary>
 

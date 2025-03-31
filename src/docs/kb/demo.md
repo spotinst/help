@@ -13,6 +13,8 @@ Meow:
 * Bite plants bawl under human beds and sleep on my human's head, and time to go zooooom. When in doubt, wash. Purr while eating this is the day vommit food and eat it again meow meow.
    * **Pounce** on unsuspecting person pee in the shoe.
    * **I show my** fluffy belly but it's a <i>trap</i>!
+   * Bullet #3
+   * Next bullet
 
        <img width=100 src="https://github.com/user-attachments/assets/394ded83-897c-435b-a7e0-8e24c612756f">
 
@@ -20,6 +22,8 @@ Meow:
 * if you pet it i will tear up your hand rub face on owner or sitting in a box for demand to be let outside at once, and expect owner to wait for me as i think about it ears back wide eyed.
     1. Bite the neighbor's bratty kid kitty pounce, trip, faceplant you didn't see that no you didn't definitely didn't lick, lick, lick, and preen away the embarrassment.
     2. Swat turds around the house.
+    3. Step 3
+    4. Step 4
 
 ## This is a heading 2
 
@@ -34,25 +38,21 @@ I just saw other cats inside the house and nobody ask me before using my litter 
 			"GlossList": {
                 "GlossEntry": {
                     "ID": "SGML",
-					"SortAs": "SGML",
-					"GlossTerm": "Standard Generalized Markup Language",
-					"Acronym": "SGML",
-					"Abbrev": "ISO 8879:1986",
-					"GlossDef": {
-                        "para": "A meta-markup language, used to create markup languages such as DocBook.",
-						"GlossSeeAlso": ["GML", "XML"]
                     },
-					"GlossSee": "markup"
                 }
             }
         }
     }
-}
 ````
 
 ## Another heading 2
 
-Cat cat moo moo lick ears lick paws why use post when this sofa is here so chase imaginary bugs, so chase red laser dot or sleeping in the box, poop on the floor, break a planter, sprint, eat own hair. Ignore the squirrels, you'll never catch them anyway x, find empty spot in cupboard and sleep all day for you have cat to be kitten me right meow so flex claws on the human's belly and purr like a lawnmower eat fish on floor.
+Cat cat moo moo lick ears lick paws why use post when this sofa is here so chase imaginary bugs, so chase red laser dot or sleeping in the box, poop on the floor, break a planter, sprint, eat own hair. Ignore the squirrels, you'll never catch them anyway x, find empty spot in cupboard and sleep all day for you have cat to be kitten me right meow so flex claws on the human's belly.
+
+Purr like a lawnmower eat fish on floor:
+1. meh slap kitten brother with paw lick the plastic bag. Cat snacks pretend not to be evil.
+2. Lick plastic bags have a lot of grump in yourself because you can't forget to be grumpy and not be like king grumpy cat fish i must find my red catnip fishy fish.
+3. Carefully drink from water glass and then spill it everywhere and proceed to lick the puddle scratch the box yet waffles jump on human and sleep on her all night long be long in the bed.
 
 Scratch at fleas, meow until belly rubs, hide behind curtain when vacuum cleaner is on scratch strangers and poo on owners food lounge in doorway but run at 3am, feels good i is not fat, i is fluffy.
 
