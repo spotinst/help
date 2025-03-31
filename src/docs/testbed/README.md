@@ -6,7 +6,12 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 
 
 
-<embed src="/reusables/reusable-sample.md" />
+<embed src="/reusables/readme.md" />
+
+PLUS ROOT
+
+
+<embed src="/reusables/" />
 
 
 
