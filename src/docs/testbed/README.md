@@ -6,7 +6,7 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 
 
 
-<embed src="/reusables/readme.md" />
+<embed src="https://docs.spot.io/reusables" />
 
 PLUS ROOT
 
