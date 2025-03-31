@@ -79,6 +79,26 @@
     <div id="app"></div>
 
     <script type="text/javascript">
+      // Assuming you have already initialized Docsify somewhere above
+
+      fetch("/paths.json")
+        .then((response) => response.json())
+        .then((data) => {
+          // Ensure Docsify has finished loading before updating the search.paths
+          window.$docsify = window.$docsify || {}; // Initialize if not already set
+
+          // Use Docsify's afterReady hook to modify search.paths dynamically
+          window.$docsify.afterReady = function () {
+            // Update the paths for search
+            window.$docsify.search = window.$docsify.search || {}; // Initialize search object if not present
+            window.$docsify.search.paths = data; // Set paths from the loaded JSON
+            console.log("Search paths updated:", window.$docsify.search.paths);
+          };
+
+          console.log("Loaded paths.json:", data);
+        })
+        .catch((error) => console.error("Error loading paths.json:", error));
+
       /**
        * Single Page Apps for GitHub Pages
        *
@@ -131,15 +151,6 @@
       src="//cdn.jsdelivr.net/npm/docsify@4.13.0/lib/docsify.min.js"
     ></script>
 
-    <script>
-      fetch("/paths.json")
-        .then((response) => response.json())
-        .then((paths) => {
-          window.$docsify.search.paths = paths;
-        })
-        .catch((error) => console.error("Failed to load search paths:", error));
-    </script>
-
     <!-- Docsify Plugins -->
     <script
       type="text/javascript"
@@ -159,7 +170,7 @@
     ></script>
     <script
       type="text/javascript"
-      src="//cdn.jsdelivr.net/gh/UpTrendingLLC/docsify/search.1.8.js"
+      src="//cdn.jsdelivr.net/gh/UpTrendingLLC/docsify/search.2.1.js"
     ></script>
     <script
       type="text/javascript"

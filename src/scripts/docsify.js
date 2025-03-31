@@ -30,7 +30,7 @@ window.$docsify = {
   // Search
   // ---------------------------------------------------------------------------
   search: {
-    paths: [],
+    paths: "/paths.json", // Reference the correct path for paths.json in the build
     placeholder: `Type here to search...`,
     noData: "No results.",
     depth: 4,
