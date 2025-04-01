@@ -190,7 +190,7 @@ Set For virtual node groups: Under launchSpecification: { instanceStorePolicy: {
 * [Create virtual node groups](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecCreate)
 * [Update virtual node group](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSLaunchSpecUpdate)
 
->Note: For clusters and virtual node groups, you must also enable `raid0` in your `userData`.
+>Note: When you enable machine ephemeral storage for specific virtual node groups or the cluster, you must also enable `raid0` under `userData` for virtual node groups
 
 ## Configure an Ocean AKS Cluster with Multiple VNG Subnets
 
