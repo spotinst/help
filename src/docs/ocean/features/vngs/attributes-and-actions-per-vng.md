@@ -180,7 +180,7 @@ The Machine Ephemeral Storage feature lets you use these volumes for faster node
 
 As a result, the scaling process considers the increased available storage for better node utilization.
 
-Set for clusters: Under compute > instanceTypes > launchSpecification: { instanceStorePolicy: { type: RAID0 } }
+Set for clusters: Under compute > instanceTypes > launchSpecification: { instanceStorePolicy: { type: RAID0 } } 
 
 * [Create Cluster](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterCreate)
 * [Update Cluster](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterUpdate)
