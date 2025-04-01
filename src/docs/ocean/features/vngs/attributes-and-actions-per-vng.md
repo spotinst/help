@@ -33,7 +33,7 @@ In the Spot API, under **Virtual Node Groups > strategy**, you can configure the
 
  * `utilizeCommitments`: If savings plan commitments have available capacity, Ocean will utilize them alongside existing reserved instances to maximize cost efficiency. The initial default value is inherited from the identical attribute at the cluster level. 
 
-Any change you make at the Virtual Node Group level will override the value set at the cluster level.
+Any change you make at the virtual node group level will override the value set at the cluster level.
 
 <p id=restrict-scale-down-per-virtual-node-group></p>
 
